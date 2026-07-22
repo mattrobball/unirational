@@ -1,0 +1,636 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{convention}[theorem]{Convention}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+
+\newcommand{\PP}{\mathbf{P}}
+\newcommand{\CC}{\mathbf{C}}
+\newcommand{\ZZ}{\mathbf{Z}}
+\newcommand{\QQ}{\mathbf{Q}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\adj}{\operatorname{adj}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\Br}{\operatorname{Br}}
+\newcommand{\divi}{\operatorname{div}}
+\newcommand{\Hx}{H_x}
+\newcommand{\Hy}{H_y}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\repo}{\texttt{github.com/mattrobball/unirational}}
+
+\title[Unirationality of general $(2,3)$ hypersurfaces in $\PP^2\times\PP^2$]
+{Unirationality of the general $(2,3)$ hypersurface in $\PP^2\times\PP^2$
+by tangent residuals:\\ the construction and its verification artifacts}
+\date{July 22, 2026}
+
+\begin{document}
+
+\begin{abstract}
+Let $X\subset\PP^2_x\times\PP^2_y$ be a general hypersurface of bidegree
+$(2,3)$ over $\CC$.  Projection to the second factor makes $X$ a standard
+conic bundle over $\PP^2$ with smooth discriminant curve of degree $9$ ---
+the smallest discriminant degree for which unirationality of conic bundles
+over $\PP^2$ was not previously known, and a case that published heuristics
+expected to be non-unirational.  We give a complete account of an explicit
+construction proving that $X$ is unirational of degree $20$: the vertical
+surface $S=X\cap(\PP^2\times L)$, rational by Tsen's theorem, is mapped
+birationally onto a \emph{horizontal} divisor $T\sim 10\Hx+\Hy$ by taking
+fiberwise tangent residuals in the second fibration of $X$, whose fibers are
+plane cubics.  The key algebraic input is a universal resultant identity
+producing a covariant line through the three tangent residuals.  Combined
+with known results, the construction yields smooth threefolds that are
+unirational, irrational, and not stably rational, with trivial Brauer group
+and trivial degree-three unramified cohomology.  These notes are
+self-contained on the mathematics and additionally document every machine
+computation the proof relies on, with pointers to the certificate files in
+the accompanying repository.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+\section{Introduction and statement}\label{sec:intro}
+
+A \emph{standard conic bundle} over $\PP^2$ is a smooth projective threefold
+$X$ with a flat morphism $\pi\colon X\to\PP^2$ whose fibers are plane
+conics, with relative Picard rank one.  Its discriminant
+$\Delta\subset\PP^2$ is a curve; the birational geometry of $X$ is largely
+governed by $\deg\Delta$.  Rationality is classical: $X$ is rational iff
+$\deg\Delta\le 4$, or $\deg\Delta=5$ with even theta-characteristic
+(Beauville, Shokurov; see \cite{Prokhorov} for a survey), and irrational for
+smooth $\Delta$ of degree $\ge 6$ by the intermediate Jacobian/Prym
+criterion \cite[Th\'eor\`eme~4.9]{Beauville}.  \emph{Unirationality} is far
+more delicate.  The published record reaches discriminant degree $8$:
+conic bundles over $\PP^2$ with $\deg\Delta\le 8$ are unirational
+(Koll\'ar--Mella \cite{KollarMella} together with
+\cite[\S14.3]{Prokhorov}; also the preprint \cite{Mella}, which further
+covers degree $9$ with \emph{singular} discriminant).  For large general
+discriminants the expectation in the literature was negative:
+``\emph{It is likely that a conic bundle with sufficiently large and
+general discriminant curve is not unirational}''
+\cite[\S14.3]{Prokhorov}, echoed in \cite{MassarentiMella}.
+
+The general hypersurface $X$ of bidegree $(2,3)$ in $\PP^2\times\PP^2$ is a
+standard conic bundle over the second factor with \emph{smooth} discriminant
+of degree $9$: precisely the first case beyond the published boundary.
+These notes give a complete, explicit proof of:
+
+\begin{theorem}\label{thm:main}
+The general hypersurface $X\subset\PP^2_x\times\PP^2_y$ of bidegree $(2,3)$
+over $\CC$ is unirational: there is a dominant rational map
+$\PP^3\dashrightarrow X$ of degree $20$, produced by an explicit
+construction (Construction~\ref{con:map}).
+\end{theorem}
+
+\begin{corollary}\label{cor:invisible}
+The very general $(2,3)$ hypersurface $X$ is simultaneously unirational
+{\rm(Theorem~\ref{thm:main})}, irrational
+{\rm\cite[Th\'eor\`eme~4.9]{Beauville}}, and not stably rational
+{\rm\cite[Theorem~1.1]{BvB}}.  Moreover $\Br(X)=0$ and
+$H^3_{\mathrm{nr}}(X,\QQ/\ZZ(2))=0$ {\rm\cite{CTV}}, so the failure of
+stable rationality is invisible to the classical unramified invariants;
+unlike the Artin--Mumford threefold {\rm\cite{ArtinMumford}}, whose
+non-stable-rationality is detected by $\Br$, these examples are detected
+only by degeneration of the diagonal {\rm\cite{BvB}}.
+\end{corollary}
+
+The construction is elementary in style and could have been carried out
+classically; the nearest antecedent is the 1980 note of Del Centina--Verdi
+\cite{DCV}, which asserted a \emph{special} smooth unirational $(3,2)$
+example by an entirely different method (rationality of one double plane
+with special branch sextic).  Their displayed data contain
+inconsistencies; a corrected pencil is certified in the repository
+(\S\ref{sec:artifacts}).  The fiberwise tangent-residual mechanism used
+here appears to be new.
+
+\subsection*{Provenance of these notes}
+The construction and proof below were produced and mechanically verified in
+a computational project archived at \repo.  The mathematical exposition is
+self-contained; \S\ref{sec:artifacts} is a complete ledger of the machine
+artifacts the proof relies on, what each verifies, and which steps rest on
+standard prose mathematics instead.
+
+\section{Setup}\label{sec:setup}
+
+\begin{convention}
+We work over $\CC$ (any algebraically closed field of characteristic $0$
+works verbatim).  Coordinates $x=(x_0{:}x_1{:}x_2)$ on $\PP^2_x$ and
+$y=(U{:}V{:}W)$ on $\PP^2_y$.  A bidegree-$(2,3)$ form is written
+\[
+F(x,y)=x^{\mathsf T}A(y)\,x,
+\]
+with $A(y)$ a symmetric $3\times3$ matrix of cubic forms in $y$.  We write
+$X=\{F=0\}$ and let $\Hx,\Hy$ denote the restrictions of the two hyperplane
+classes.  ``General'' always means: in a dense Zariski-open subset of the
+parameter space $\PP^{59}=\PP H^0(\mathcal O_{\PP^2\times\PP^2}(2,3))$,
+intersected with the smooth locus.
+\end{convention}
+
+The threefold $X$ carries \emph{two} fibrations:
+\begin{itemize}
+\item $\pi=\mathrm{pr}_y\colon X\to\PP^2_y$, a conic bundle with
+discriminant $\Delta=\{\det A(y)=0\}$ of degree $9$, smooth for general
+$F$;
+\item $\rho=\mathrm{pr}_x\colon X\to\PP^2_x$, a fibration whose fiber over
+$x$ is the plane cubic $C_x=\{F(x,-)=0\}\subset\PP^2_y$, smooth for
+general $x$.
+\end{itemize}
+The interplay of the two is the whole story.
+
+\begin{lemma}\label{lem:pic}
+For smooth $X$: $\Pic(X)=\ZZ \Hx\oplus\ZZ \Hy$ and
+$K_X=\mathcal O_X(-1,0)$.  Every effective divisor class $a\Hx+b\Hy$ has
+$a,b\ge0$.  Writing $f_y$ (a conic fiber of $\pi$) and $c_x$ (a cubic fiber
+of $\rho$) for the two curve classes,
+\[
+\Hx\cdot f_y=2,\quad \Hy\cdot f_y=0,\qquad
+\Hx\cdot c_x=0,\quad \Hy\cdot c_x=3 .
+\]
+Consequently a surface $S\in|a\Hx+b\Hy|$ has degree $2a$ over $\PP^2_y$ and
+degree $3b$ over $\PP^2_x$.  In particular every multisection of the conic
+bundle has even degree, and $\rho$ has no rational section.
+\end{lemma}
+
+\begin{proof}
+Grothendieck--Lefschetz for the ample divisor $X$ in $\PP^2\times\PP^2$
+($\dim X=3$) gives $\Pic$; adjunction gives $K_X$.  Effectivity: from
+$0\to\mathcal O(a-2,b-3)\to\mathcal O(a,b)\to\mathcal O_X(a,b)\to0$ and
+$H^1(\PP^2\times\PP^2,\mathcal O(m,n))=0$ for all $m,n$, one gets
+$h^0(\mathcal O_X(a,b))=h^0(\mathcal O(a,b))-h^0(\mathcal O(a-2,b-3))$,
+nonzero only if $a,b\ge0$.  The intersection numbers are immediate.  The
+parity statement is consistent with, and geometrically explains, the
+nontriviality of the $2$-torsion Brauer class of the generic conic
+(restriction--corestriction).
+\end{proof}
+
+\begin{remark}
+Since every surface in the threefold $X$ is a divisor,
+Lemma~\ref{lem:pic} constrains all of them.  Adjunction gives
+$K_S=((a-1)\Hx+b\Hy)|_S$ for $S\in|a\Hx+b\Hy|$; for a \emph{horizontal}
+class ($a\ge1$) this is effective or trivial, so \emph{no smooth member of
+any horizontal linear system is rational}.  Any horizontal surface with
+rational normalization --- which Theorem~\ref{thm:main} requires, by
+Proposition~\ref{prop:engine} below --- is necessarily a singular member of
+its system.  This is the precise sense in which the problem resists naive
+searches, and why the construction below must produce a highly singular
+divisor.
+\end{remark}
+
+\begin{proposition}[Multisection principle]\label{prop:engine}
+Let $T\subset X$ be an irreducible surface dominating $\PP^2_y$ with
+rational normalization $\widetilde T$, of degree $N$ over $\PP^2_y$.  Then
+$X$ is unirational of degree $N$.  Conversely, if $X$ is unirational it
+contains such surfaces.
+\end{proposition}
+
+\begin{proof}
+Base-change: $X\times_{\PP^2_y}\widetilde T\to\widetilde T$ is a conic
+bundle over a rational surface carrying the tautological section
+$t\mapsto(t,t)$.  A conic with a rational point over the field
+$\CC(\widetilde T)$ is isomorphic to $\PP^1$, so
+$X\times_{\PP^2_y}\widetilde T$ is birational to
+$\widetilde T\times\PP^1$, a rational threefold; the projection to $X$ is
+dominant of degree $N$.  For the converse, the image of a general plane
+under a dominant map $\PP^3\dashrightarrow X$ is a horizontal surface with
+rational (indeed unirational, hence by Castelnuovo rational)
+normalization.
+\end{proof}
+
+Harris's formulation of the problem
+--- find rational surfaces in $X$ \emph{other than} the preimages of
+rational curves in $\PP^2_y$ \cite[p.~24]{Harris} --- asks exactly for the
+horizontality in Proposition~\ref{prop:engine}: the preimage
+$\pi^{-1}(\text{curve})$ is vertical and useless.  The point of the
+construction below is that one of these ``useless'' vertical surfaces can
+be \emph{converted} into a horizontal one using the second fibration
+$\rho$.
+
+\section{The construction}\label{sec:construction}
+
+\begin{construction}\label{con:map}
+Fix a general line $L\subset\PP^2_y$ and choose coordinates with
+$L=\{W=0\}$.
+\begin{enumerate}
+\item[\textbf{(I)}] \textbf{The vertical seed.}  Let
+$S=X\cap(\PP^2_x\times L)\in|\mathcal O_X(0,1)|$.  Projection to
+$L\simeq\PP^1$ makes $S$ a conic bundle over $\PP^1$; its generic fiber is
+a smooth conic over the $C_1$ field $\CC(L)\simeq\CC(t)$, hence has a
+rational point by Tsen's theorem, and $S$ is a \emph{rational} surface
+(irreducible, since the generic fiber is geometrically integral).  Under
+the other projection, $S$ is a \emph{trisection} of $\rho$: for general
+$x$, the fiber is $C_x\cap L=\{p_1,p_2,p_3\}$.
+\item[\textbf{(II)}] \textbf{Tangent residuals.}  For general $x$ the
+cubic $C_x$ is smooth at each $p_i$ (this needs only that the binary cubic
+$g_x=F(x,-)|_L$ has distinct roots).  Define
+\[
+\tau\colon S\dashrightarrow X,\qquad
+(x,p)\longmapsto\bigl(x,\ \tau_x(p)\bigr),\qquad
+T_pC_x\cdot C_x=2p+\tau_x(p).
+\]
+In the group law of $C_x$ (any flex as origin) this is $p\mapsto -2p$.
+\item[\textbf{(III)}] \textbf{The horizontal image.}  Let
+$T=\overline{\tau(S)}$.  Theorem~\ref{thm:class} below shows
+$T\in|10\Hx+\Hy|$ and $\tau\colon S\dashrightarrow T$ is birational.  By
+Lemma~\ref{lem:pic}, $T$ has degree $T\cdot f_y=20$ over $\PP^2_y$; it is
+horizontal with rational normalization, so Proposition~\ref{prop:engine}
+gives a dominant degree-$20$ map
+$\widetilde T\times\PP^1\dashrightarrow X$, proving
+Theorem~\ref{thm:main}.
+\end{enumerate}
+\end{construction}
+
+Everything therefore rests on identifying the image divisor exactly.  This
+is done by a universal polynomial identity.
+
+\subsection{The universal resultant identity}
+
+Write a ternary cubic in the coordinates adapted to $L=\{W=0\}$ as
+\begin{equation}\label{eq:f}
+f(U,V,W)=g(U,V)+W\,h(U,V)+W^2(iU+jV)+kW^3,
+\end{equation}
+with $g$ a binary cubic and $h$ a binary quadratic.  For
+$p=[u{:}v{:}0]$ with $g(u,v)=0$, the tangent line to $\{f=0\}$ at $p$,
+evaluated at $[U{:}V{:}W]$, is
+\[
+P_{U,V,W}(u,v)=U\,g_u(u,v)+V\,g_v(u,v)+W\,h(u,v),
+\]
+because $f_U,f_V,f_W$ restrict on $W=0$ to $g_u,g_v,h$.  Set
+\[
+\calR_f(U,V,W)=\Res_{u,v}\bigl(g,\;P_{U,V,W}\bigr),
+\]
+the resultant of binary forms of degrees $3$ and $2$; up to the standard
+normalization, $\calR_f$ is the product of the three tangent lines at the
+points of $\{g=0\}$, a cubic in $(U,V,W)$.
+
+\begin{theorem}[Universal identity]\label{thm:identity}
+Let $\Delta(g)$ denote the classical discriminant of the binary cubic
+$(18abcd-4b^3d+b^2c^2-4ac^3-27a^2d^2$ for $g=au^3+bu^2v+cuv^2+dv^3)$.
+Then, identically in the ten coefficients of $f$,
+\begin{equation}\label{eq:identity}
+\calR_f+\Delta(g)\,f=W^2\,q_f,
+\end{equation}
+where $q_f$ is a \emph{linear} form in $(U,V,W)$ whose three coefficients
+are homogeneous of degree $5$ in the coefficients of $f$ and have greatest
+common divisor $1$ in the universal coefficient ring.
+\end{theorem}
+
+\begin{proof}
+Expand the left side in $W$.  The $W^0$ term is
+$\Res(g,\,Ug_u+Vg_v)+\Delta(g)g(U,V)$.  By Euler's relation
+$ug_u+vg_v=3g$, each factor $Ug_u(p_i)+Vg_v(p_i)$ of the resultant is a
+linear form vanishing at the root $p_i$, so the product is proportional to
+$g(U,V)$; the constant is $-\Delta(g)$ (a classical covariant identity,
+verified symbolically in the artifacts).  The $W^1$ coefficient of
+$\calR_f$ is a binary quadratic in $(U,V)$; evaluating at a root $p_k$ of
+$g$ kills every term of the root-expansion except the one attached to
+$p_k$, and comparison at the three roots identifies it with
+$-\Delta(g)h(U,V)$ (two binary quadratics agreeing at three distinct
+points are equal; the case $\Delta(g)=0$ follows by continuity of a
+polynomial identity).  Hence the left side of \eqref{eq:identity} is
+divisible by $W^2$, and being cubic, the quotient $q_f$ is linear.  The
+coefficient degrees: $\Res_{3,2}$ has bidegree $(2,3)$ in the coefficients
+of its two arguments, and the coefficients of $P$ are linear in those of
+$f$, giving degree $2+3=5$; likewise $\deg\Delta(g)\cdot f=4+1$.
+Primitivity ($\gcd=1$) is a machine fact
+(\S\ref{sec:artifacts}, artifact~A1/A4).
+\end{proof}
+
+\begin{remark}[Geometric content]\label{rem:geom}
+Restricted to the cubic $C=\{f=0\}$, the product of the three tangent
+lines has divisor $\sum_i(2p_i+r_i)$ where $r_i=\tau(p_i)$, while $W$ has
+divisor $p_1+p_2+p_3$.  On the cubic, $2p_i+r_i\sim \Hy|_C$ and
+$\sum p_i\sim \Hy|_C$, whence
+\[
+r_1+r_2+r_3\;\sim\;3\Hy|_C-2\Hy|_C=\Hy|_C .
+\]
+A degree-$3$ effective divisor on a smooth plane cubic lying in $|\Hy|_C|$
+is a line section: \emph{the three tangent residuals are collinear}, and
+$\{q_f=0\}$ is the line through them.  (Group-law formulation: the
+residual map is $p\mapsto-2p$ and
+$(-2p_1)+(-2p_2)+(-2p_3)=-2(p_1+p_2+p_3)=0$.)
+\end{remark}
+
+\subsection{The image divisor and its class}
+
+Now let the coefficients of $f=F(x,-)$ vary: they are \emph{quadratic}
+forms in $x$.  Then $\Delta(g_x)$ has bidegree $(8,0)$, $\calR$ has
+bidegree $(10,3)$, and the covariant line $q=q_{F(x,-)}(y)$ has bidegree
+$(10,1)$ --- linear in $y$, with three coefficient forms
+$q_U,q_V,q_W\in\CC[x]_{10}$.
+
+\begin{theorem}\label{thm:class}
+For general $F$:
+\begin{enumerate}
+\item On $X$ the identity \eqref{eq:identity} reads $\calR=W^2q$, giving
+the exact divisor equality
+\[
+\divi_X(\calR)=2S+T_q,\qquad
+T_q:=\divi_X(q)\in|10\Hx+\Hy|,\qquad (10,3)=2\,(0,1)+(10,1).
+\]
+\item $T_q$ has no component vertical over $\PP^2_x$; its fiber over a
+general $x$ is exactly the three distinct tangent residuals
+$\{r_1,r_2,r_3\}$, reduced.
+\item $T_q=T=\overline{\tau(S)}$ is irreducible and
+$\tau\colon S\dashrightarrow T$ is birational.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) $q|_X\not\equiv0$ since bidegree $(10,1)$ admits no factor of bidegree
+$(2,3)$, and then $\calR|_X=W^2q|_X\not\equiv0$; $W$ cuts $S$ (reduced and
+irreducible for general $F,L$).
+
+(2) A component of $T_q$ vertical over $\PP^2_x$ (i.e.\ of class $(a,0)$)
+would force $q(x,-)\equiv0$ along a curve of $x$'s, i.e.\ a common factor
+of $q_U,q_V,q_W$.  For each potential common-factor degree $e\ge1$, the
+locus of coefficient triples with such a factor is the image of the proper
+multiplication map
+$\PP(\CC[x]_e)\times\PP(\CC[x]_{10-e})^{?}\to\PP(\CC[x]_{10})^{3}$-incidence,
+hence closed; there are finitely many $e$; so
+$\{F:\gcd(q_U,q_V,q_W)=1\}$ is open.  It is nonempty by an explicit
+witness (artifact A1/A4), hence dense.  Then $q(x,-)\equiv 0$ for only
+finitely many $x$, and no vertical divisorial component exists.  For the
+fiber: over general $x$, $C_x\cap\{q(x,-)=0\}$ is three points by
+B\'ezout, and by Remark~\ref{rem:geom} the three residuals $r_i$ lie
+there; that they are pairwise distinct and off $L$ for general $x$ is an
+open condition on $F$ satisfied at an explicit witness (see
+Lemma~\ref{lem:openness} and artifact A1/A4), so the fiber is exactly
+$\{r_1,r_2,r_3\}$, reduced.
+
+(3) $\overline{\tau(S)}\subseteq T_q$ by \eqref{eq:identity}; both have
+degree $3$ over $\PP^2_x$ ($T_q\cdot c_x=3$ by Lemma~\ref{lem:pic}), and
+by (2) the generic fiber of $T_q$ is exactly the injective image of the
+generic fiber of $S$.  Hence $T_q$ is the closure of the image of the
+irreducible surface $S$ (irreducible), and $\tau$ is generically injective
+of degree $1$.
+\end{proof}
+
+\begin{lemma}[Openness by properness]\label{lem:openness}
+Let $\mathcal U\subset\PP^{59}\times\PP^2_x$ be the open locus of pairs
+$(F,x)$ where $g_x$ has distinct roots, $q_{F(x,-)}\ne0$, the three
+residuals are pairwise distinct, and none lies on $L$.  Then
+$\{F:\exists x,\ (F,x)\in\mathcal U\}$ is open in $\PP^{59}$: it is the
+complement of the image of the closed set
+$(\PP^{59}\times\PP^2)\smallsetminus\mathcal U$ under the proper
+projection to $\PP^{59}$.  A single explicit pair $(F_0,x_0)\in\mathcal U$
+therefore certifies the condition for general $F$.  Concretely, all four
+conditions are checked at a witness by: $\operatorname{disc}(g_{x_0})\ne0$;
+$q\neq0$; $\operatorname{disc}\bigl(F(x_0,-)|_{\{q=0\}}\bigr)\ne0$ (three
+distinct residuals, no root extraction needed); and
+$F(x_0,-)\ne0$ at the point $\{q=0\}\cap L$.
+\qed
+\end{lemma}
+
+\begin{remark}[Independent Chow-theoretic check of the class]
+In $\PP^2_x\times L_p\times\PP^2_r$ with hyperplane classes $H,P,R$, the
+incidence $\{p\in C_x\cap L,\ r\in T_pC_x\cap C_x\}$ is a complete
+intersection of classes $(2H{+}3P)$, $(2H{+}2P{+}R)$, $(2H{+}3R)$; pushing
+down $L_p$ gives $20H^2+36HR+9R^2$.  Subtracting twice the pushed diagonal
+(tangency multiplicity $2$) leaves
+\[
+20H^2+32HR+3R^2=(2H+3R)(10H+R),
+\]
+i.e.\ the residual cycle is a divisor of class $(10,1)$ on the
+$(2,3)$ hypersurface --- the same answer by an independent route.
+\end{remark}
+
+\subsection{The explicit parametrization}\label{sec:explicit}
+
+For computations (and for the external verification of
+\S\ref{sec:artifacts}) it is convenient to have the composite map in
+closed staged form.  With $L=\{W=0\}$, parametrize $L$ by
+$y(t)=(t{:}1{:}0)$, and suppose (after the harmless linear specialization
+described in \S\ref{sec:artifacts}, A4) that $e=(1{:}0{:}0)$ lies on every
+conic $F(-,y(t))$.  Writing $A_{ij}(t)$ for the restricted coefficients of
+the conic:
+\begin{align*}
+\textbf{(I)}\quad
+&x^*(t,m)=\bigl(A_{11}+mA_{12}+m^2A_{22},\ -(A_{01}+mA_{02}),\
+-m(A_{01}+mA_{02})\bigr)
+\end{align*}
+is the second intersection of the chord of direction $(0,1,m)$ through
+$e$ --- a birational parametrization of $S$ by $(t,m)$.
+\begin{align*}
+\textbf{(II)}\quad
+&f^*=F(x^*(t,m),-),\qquad
+(\alpha,\beta,\gamma)=\nabla_y f^*\big|_{y(t)},\qquad
+z^*=(\gamma,0,-\alpha),\\
+&f^*\bigl(s\,y(t)+u\,z^*\bigr)=u^2\bigl(\mathsf A\,s+\mathsf B\,u\bigr),
+\qquad
+r(t,m)=\mathsf B\,y(t)-\mathsf A\,z^*
+\end{align*}
+($z^*$ is a second point of the tangent line, since
+$\alpha\gamma+\gamma(-\alpha)=0$; the two leading coefficients vanish
+identically, expressing tangency, and $r$ is the residual).
+\begin{align*}
+\textbf{(III)}\quad
+&d=(0,1,n),\qquad Q=F(-,r),\qquad
+x'(t,m,n)=Q(d)\,x^*-\bigl(Q(x^*{+}d)-Q(x^*)-Q(d)\bigr)\,d .
+\end{align*}
+Then $\Phi(t,m,n)=(x'(t,m,n);\,r(t,m))$ is a dominant rational map
+$\mathbf A^3\dashrightarrow X$ of degree $20$.  Stage (III) is the chord
+construction on the conic fiber through the marked point $x^*$, and its
+correctness is the one-line \emph{reflection identity} for any ternary
+quadratic form $Q$ with polarization $B_Q$:
+\[
+Q\bigl(Q(d)\,x-B_Q(x,d)\,d\bigr)=Q(d)^2\,Q(x),
+\]
+so $F(x',r)=Q(d)^2F(x^*,r)=0$.
+The degree over $X$ equals $\deg(T/\PP^2_y)=T\cdot f_y=20$.
+
+\begin{remark}[Scope]\label{rem:scope}
+The construction uses the plane-cubic fibration $\rho$, which exists
+precisely because the second degree is $3$.  It therefore says nothing
+about arbitrary standard conic bundles with smooth degree-$9$ discriminant
+(the matrix entries need not be all cubic), nor about bidegrees $(2,d)$,
+$d\ge4$, where the fibers of $\rho$ have genus $>1$ and the tangent line
+meets the fiber in $d-2>1$ residual points (a correspondence, not a map).
+Harris's question for $d$ large \cite[p.~24]{Harris} remains open.
+\end{remark}
+
+\begin{remark}[Byproducts in the repository]
+Two independent negative results certified in the same project delimit how
+sharp the construction is: on a general $X$, \emph{every} member of
+$|\Hx|$ is a $K3$ double plane (its branch sextic never acquires a point
+of multiplicity $\ge3$), and \emph{no} member of $|\Hx+\Hy|$ has rational
+normalization.  So the minimal-class searches fail provably, and the first
+horizontal rational surface found lives in $|10\Hx+\Hy|$ --- a singular
+member, as forced by adjunction (Lemma~\ref{lem:pic} ff.).
+\end{remark}
+
+\section{Verification artifacts}\label{sec:artifacts}
+
+The proof above is complete as mathematics except where it invokes three
+kinds of finite algebraic facts: the universal identity
+(Theorem~\ref{thm:identity}), the primitivity of $q$, and the existence of
+explicit witnesses (Lemma~\ref{lem:openness}).  These are machine-checked.
+This section is a complete ledger.  All paths are relative to the
+repository \repo; logs of every run are committed beside the scripts.
+
+\subsection*{A1 --- the certificate of record}
+\texttt{problems/B-conic-bundle-multisections/certificates/}
+\texttt{tangent\_residual\_local\_checks.py} (with \texttt{.log}):
+\begin{itemize}
+\item verifies \eqref{eq:identity} \emph{fully symbolically} over the
+universal ring $\ZZ[a_3,\dots,k]$ in ten independent coefficient symbols
+(the $W^0,W^1$ coefficients of $\calR+\Delta f$ vanish identically; the
+quotient by $W^2$ is linear);
+\item verifies each coefficient of $q_f$ is homogeneous of degree $5$ and
+that the three have $\gcd 1$ universally, and again after a recorded
+substitution by ten quadratic forms (so the general $(2,3)$ equation has
+primitive $q$);
+\item supplies the smooth-fiber witness of Lemma~\ref{lem:openness}:
+an explicit $(F_0,x_0)$ with the cubic smooth (unit Gr\"obner bases in
+three charts), three residual points computed, verified to lie on the
+cubic, on the tangent lines, on $\{q=0\}$, off $L$, pairwise distinct;
+\item records the divisor arithmetic $(10,3)-2(0,1)=(10,1)$, degree $20$.
+\end{itemize}
+The full prose proof with all genericity qualifications is
+\texttt{certificates/tangent\_residual\_theorem.md}.
+
+\subsection*{A2 --- independent re-derivation (audit)}
+During the audit of this session, the identity was re-derived from scratch
+in a fresh SymPy session sharing no code with A1: the $W^0$ divisibility,
+the cofactor being the \emph{classical} discriminant (both sign
+conventions tested), degree-$5$ homogeneity, and universal $\gcd=1$ were
+reconfirmed independently.
+% (transcript: session audit, 2026-07-22)
+
+\subsection*{A3 --- independent end-to-end geometric check (audit)}
+On an explicit cubic with rational points on $L$
+($g=(u-v)(u-2v)(u+v)$, generic $h,i,j,k$), the three tangent residuals
+were computed \emph{from the raw geometry} (tangent lines; factoring the
+double root out of the restricted cubic) and verified to be distinct, off
+$L$, and to lie on $\{q_f=0\}$ --- confirming the geometric
+interpretation, not merely the algebra.  A second check drew a random
+$(2,3)$ form over $\QQ$ and verified the witness conditions of
+Lemma~\ref{lem:openness} at $x_0=(1,2,3)$, plus $\gcd(q_U,q_V,q_W)=1$ by
+restriction to two lines.
+
+\subsection*{A4 --- external random-coefficient instance}
+\texttt{problems/B-conic-bundle-multisections/external\_check/}: a full
+end-to-end falsification test on coefficients drawn from
+\texttt{/dev/urandom} (recorded), with four coefficients zeroed so that
+the section $e=(1{:}0{:}0)$ exists over $\QQ$ and the composite map has
+exact rational coefficients (a codimension-$4$ linear slice needed only
+because Tsen's theorem is not effective over $\QQ$; over $\CC$ the theorem
+needs no such conditioning).  The harness \texttt{build\_explicit\_map.py}
+constructs the staged map of \S\ref{sec:explicit} and verifies, exactly:
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+check & statement & method\\
+\midrule
+C1 & $F(x^*,y(t))\equiv0$ & symbolic\\
+C2 & tangency (two leading coefficients vanish) & symbolic\\
+C3 & $f^*(r)\equiv0$ & full $100\times53$ grid$^{\dagger}$\\
+C4 & $q_{f^*}(r)\equiv0$ & full $62\times37$ grid$^{\dagger}$\\
+C5 & reflection identity & generic symbols\\
+C6 & $F(\Phi)=0$ at sample rational points & exact evaluation\\
+C7 & Jacobian rank $3$ (dominance) & exact symbolic differentiation\\
+C8 & fiber over random $y_0$: squarefree of degree $20$ & resultant\\
+\bottomrule
+\end{tabular}
+\end{center}
+{\small $^{\dagger}$Deterministic proofs: a polynomial of bidegree at most
+$(D_1,D_2)$ vanishing at a $(D_1{+}1)\times(D_2{+}1)$ grid of distinct
+rational nodes is zero; the bidegree bounds $(99,52)$ and $(61,36)$ are
+derived in the harness.}\\[2pt]
+All eight pass (\texttt{run\_log.txt}); the explicit map instance is
+\texttt{map\_instance.txt}, and \texttt{README\_CHECK.md} gives
+CAS-agnostic instructions for third-party verification with no trust in
+the pipeline.
+
+\subsection*{Prose-only steps}
+For completeness: the steps of the proof resting on standard mathematics
+rather than computation are Tsen's theorem, Bertini/irreducibility of $S$,
+Grothendieck--Lefschetz (Lemma~\ref{lem:pic}), the group-law remark, the
+properness argument of Lemma~\ref{lem:openness}, and the Chow-theoretic
+cross-check.  Each is classical.
+
+\subsection*{Independence and audit trail}
+A1 was rerun in a clean environment during the audit (Macaulay2 1.26.06 /
+SymPy 1.14.0) with output matching the committed logs; A2--A3 share no
+code with A1; A4 takes its input from an external entropy source.  The
+literature verification (the boundary $\deg\Delta\le8$, the status of
+\cite{Mella} as an unpublished preprint whose degree-$\le8$ consequence
+has published backing via \cite{KollarMella,Prokhorov}, the method and
+status of \cite{DCV}, and the absence of any prior statement of
+Theorem~\ref{thm:main}) was performed against primary sources on
+2026-07-22.
+
+\begin{thebibliography}{99}
+
+\bibitem{ArtinMumford}
+M.~Artin, D.~Mumford,
+\emph{Some elementary examples of unirational varieties which are not
+rational}, Proc.\ London Math.\ Soc.\ (3) \textbf{25} (1972), 75--95.
+
+\bibitem{Beauville}
+A.~Beauville,
+\emph{Vari\'et\'es de Prym et jacobiennes interm\'ediaires},
+Ann.\ Sci.\ \'Ecole Norm.\ Sup.\ (4) \textbf{10} (1977), 309--391.
+
+\bibitem{BvB}
+C.~B\"ohning, H.-C.~Graf von Bothmer,
+\emph{On stable rationality of some conic bundles and moduli spaces of
+Prym curves}, Comment.\ Math.\ Helv.\ \textbf{93} (2018), 133--155.
+
+\bibitem{CGM}
+L.~Casarotti, S.~Gammelgaard, A.~Massarenti,
+\emph{On the unirationality of conic bundles with discriminant of degree
+eight}, preprint, \href{https://arxiv.org/abs/2511.17213}{arXiv:2511.17213}
+(2025).
+
+\bibitem{CTV}
+J.-L.~Colliot-Th\'el\`ene, C.~Voisin,
+\emph{Cohomologie non ramifi\'ee et conjecture de Hodge enti\`ere},
+Duke Math.\ J.\ \textbf{161} (2012), 735--801.
+
+\bibitem{DCV}
+A.~Del Centina, L.~Verdi,
+\emph{Su alcune variet\`a unirazionali di dimensione tre},
+Atti Accad.\ Naz.\ Lincei Rend.\ Cl.\ Sci.\ Fis.\ Mat.\ Nat.\ (8)
+\textbf{69} (1980), no.~6, 338--345.
+
+\bibitem{Harris}
+J.~Harris,
+\emph{Rationality, unirationality and rational connectivity},
+lecture notes, AMS Summer Institute in Algebraic Geometry (Seattle),
+\url{https://www.math.columbia.edu/~thaddeus/seattle/harris1.pdf}.
+
+\bibitem{KollarMella}
+J.~Koll\'ar, M.~Mella,
+\emph{Quadratic families of elliptic curves and unirationality of degree
+1 conic bundles}, Amer.\ J.\ Math.\ \textbf{139} (2017), 915--936.
+
+\bibitem{MassarentiMella}
+A.~Massarenti, M.~Mella,
+\emph{On the birational geometry of conic bundles over the projective
+space}, Math.\ Nachr.\ \textbf{297} (2024), 1208--1220.
+
+\bibitem{Mella}
+M.~Mella,
+\emph{On the unirationality of 3-fold conic bundles}, preprint,
+\href{https://arxiv.org/abs/1403.7055}{arXiv:1403.7055} (2014).
+
+\bibitem{Prokhorov}
+Yu.~Prokhorov,
+\emph{The rationality problem for conic bundles},
+Russian Math.\ Surveys \textbf{73} (2018), no.~3, 375--456.
+
+\end{thebibliography}
+
+\end{document}
