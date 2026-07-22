@@ -185,61 +185,25 @@ for (tv, mv, nv) in samples:
     print(f"C6 (t,m,n)=({tv},{mv},{nv}): F(Phi)=0: {val == 0}; "
           f"nondegenerate: {any(c != 0 for c in xp) and any(c != 0 for c in rv)}")
 
-# ---------------- C7 Jacobian rank via exact finite differences? no: symbolic diff of staged evaluator ----
-# Use exact rational-derivative via automatic differentiation on dual numbers.
-class Dual:
-    __slots__ = ('a', 'b')
-    def __init__(self, a, b=(0, 0, 0)):
-        self.a, self.b = sp.nsimplify(a), tuple(sp.nsimplify(x) for x in b)
-    def __add__(self, o):
-        o = o if isinstance(o, Dual) else Dual(o)
-        return Dual(self.a+o.a, tuple(self.b[i]+o.b[i] for i in range(3)))
-    __radd__ = __add__
-    def __sub__(self, o):
-        o = o if isinstance(o, Dual) else Dual(o)
-        return Dual(self.a-o.a, tuple(self.b[i]-o.b[i] for i in range(3)))
-    def __rsub__(self, o):
-        return Dual(o) - self
-    def __mul__(self, o):
-        o = o if isinstance(o, Dual) else Dual(o)
-        return Dual(self.a*o.a, tuple(self.a*o.b[i]+o.a*self.b[i] for i in range(3)))
-    __rmul__ = __mul__
-    def __truediv__(self, o):
-        o = o if isinstance(o, Dual) else Dual(o)
-        inv = 1/o.a
-        return Dual(self.a*inv, tuple((self.b[i]*o.a - self.a*o.b[i])*inv*inv for i in range(3)))
-    def __pow__(self, k):
-        out = Dual(1)
-        for _ in range(k):
-            out = out*self
-        return out
-def poly_dual(P, args):
-    tot = Dual(0)
-    for mono, coef in P.terms():
-        term = Dual(coef)
-        for base, e in zip(args, mono):
-            term = term*(base**e)
-        tot = tot + term
-    return tot
-tv, mv, nv = sp.Rational(2, 3), sp.Rational(-1, 2), sp.Integer(3)
-Td = Dual(tv, (1, 0, 0)); Md = Dual(mv, (0, 1, 0)); Nd = Dual(nv, (0, 0, 1))
-xs_d = [poly_dual(p, (Td, Md)) for p in xstar_polys]
-rv_d = [poly_dual(p, (Td, Md)) for p in r_polys]
-d_d = [Dual(0), Dual(1), Nd]
-def F_dual(xv, yv):
-    tot = Dual(0)
-    for mono, coef in Fpoly.terms():
-        term = Dual(coef)
-        for base, e in zip(list(xv)+list(yv), mono):
-            term = term*(base**e)
-        tot = tot + term
-    return tot
-Qd2_d = F_dual(d_d, rv_d)
-Bp_d = F_dual([xs_d[k]+d_d[k] for k in range(3)], rv_d) - F_dual(xs_d, rv_d) - Qd2_d
-xp_d = [Qd2_d*xs_d[k] - Bp_d*d_d[k] for k in range(3)]
-charts = [xp_d[1]/xp_d[0], xp_d[2]/xp_d[0], rv_d[1]/rv_d[0], rv_d[2]/rv_d[0]]
-J = sp.Matrix([[c.b[i] for i in range(3)] for c in charts])
-print("C7 Jacobian rank at sample:", J.rank(), "(need 3 => dominant onto X)")
+# ---------------- C7 Jacobian rank: exact symbolic diff of staged expressions ----------------
+d2s = (sp.Integer(0), sp.Integer(1), n)
+Qd2s = F_at(d2s, r_pt)                       # expressions in t,m,n (unexpanded)
+Bps = F_at((xstar[0], xstar[1]+1, xstar[2]+n), r_pt) - F_at(xstar, r_pt) - Qd2s
+xps = [Qd2s*xstar[k] - Bps*d2s[k] for k in range(3)]
+c7_rank = None
+for sample in [(sp.Rational(2, 3), sp.Rational(-1, 2), sp.Integer(3)),
+               (sp.Integer(2), sp.Integer(3), sp.Integer(5)),
+               (sp.Integer(-1), sp.Integer(4), sp.Rational(1, 2))]:
+    sub = dict(zip((t, m, n), sample))
+    if sp.nsimplify(xps[0].subs(sub)) == 0 or sp.nsimplify(r_pt[0].subs(sub)) == 0:
+        continue                              # chart denominator vanishes; next sample
+    charts = [xps[1]/xps[0], xps[2]/xps[0], r_pt[1]/r_pt[0], r_pt[2]/r_pt[0]]
+    J = sp.nsimplify(sp.Matrix([[sp.diff(f, v).subs(sub) for v in (t, m, n)]
+                                for f in charts]))
+    c7_rank = J.rank()
+    print(f"C7 Jacobian rank at {sample}:", c7_rank, "(need 3 => dominant onto X)")
+    break
+assert c7_rank == 3
 
 # ---------------- C8 degree-20 fiber over y0 ----------------
 xq = {a3s: 0, a2s: 0}  # placeholder; build substitution from F's y-coefficients (quadratics in x)
@@ -253,8 +217,10 @@ qW_x = sp.expand(qW_u.as_expr().subs(dict(zip(UNIV, xvals))))
 G10 = sp.expand(Y0[0]*qU_x + Y0[1]*qV_x + Y0[2]*qW_x).subs(x1, 1)
 C2f = sp.expand(F.subs({U: Y0[0], V: Y0[1], W: Y0[2], x1: 1}))
 res1 = sp.Poly(sp.expand(sp.resultant(sp.Poly(C2f, x2), sp.Poly(G10, x2))), x0)
-sqf = sp.gcd(res1, res1.diff(x0)) == 1
+g8 = sp.Poly(sp.gcd(res1, res1.diff(x0)), x0)
+sqf = g8.degree() == 0                        # degree-0 gcd = integer content only
 print("C8 fiber resultant: degree", res1.degree(), "(need 20); squarefree:", sqf)
+assert res1.degree() == 20 and sqf
 
 # ---------------- artifacts ----------------
 here = pathlib.Path(__file__).resolve().parent
