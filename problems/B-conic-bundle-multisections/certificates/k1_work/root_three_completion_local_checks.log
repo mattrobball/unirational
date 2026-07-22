@@ -1,0 +1,11 @@
+A-F prime coefficients: [1, 2, 2, 3]
+proper F-F prime coefficients: [1, 1, 2, 2, 3]
+A-S prime coefficients: [1, 2, 2, 5]
+nonproper F-F D coefficients: [0, 1, 1, 2, 2, 3]
+nonproper F-F 2D coefficients: [0, 2, 2, 4, 4, 6]
+rank-three normalization-only bad dimension: 21
+rank-three M=0 glued bad dimension: 19
+rank-three rank-one-M glued bad dimension: 20
+rank-three codimension: 9
+rank-two codimensions: [8, 9, 9, 8]
+all root-three completion arithmetic checks passed

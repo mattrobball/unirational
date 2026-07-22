@@ -1,0 +1,34 @@
+conic rank3 bounds c=11,13,14,15,16: {11: 16, 13: 14, 14: 13, 15: 12, 16: 11}
+conic rank2 off/marked/unmarked:
+  {11: 16, 13: 14, 14: 13, 15: 12, 16: 12}
+  {11: 15, 13: 13, 14: 12, 15: 11, 16: 10}
+  {11: 13, 13: 11, 14: 10, 15: 9, 16: 9}
+line off/marked/unmarked c=6,7,8:
+  {6: 9, 7: 8, 8: 7} {6: 8, 7: 7, 8: 6} {6: 6, 7: 5, 8: 5}
+rank3 codimensions:
+  F-P noncontinuation, P singleton: 9
+  F-P noncontinuation, N generic: 10
+  F-P noncontinuation, N side: 10
+  F-P continuation, P singleton: 9
+  F-P continuation, N side: 10
+  F-P continuation, N generic: 10
+  F-N noncontinuation, P singleton: 9
+  F-N noncontinuation, N generic: 10
+  F-N noncontinuation, N side: 11
+  S, P singleton: 9
+  S, N off-root-line: 9
+  S, N root-on-tangent: 9
+rank2 codimension tables:
+  F-P noncontinuation, P singleton: [9, 10, 10, 9, 9]
+  F-P noncontinuation, N generic: [9, 10, 10, 10, 10]
+  F-P noncontinuation, N side: [10, 9, 11, 10]
+  F-P continuation, P singleton: [9, 8, 9, 9, 9]
+  F-P continuation, N side: [10, 9, 9, 10, 10]
+  F-P continuation, N generic: [10, 9, 11, 10, 10]
+  F-N noncontinuation, P singleton: [8, 9, 9, 9, 9]
+  F-N noncontinuation, N generic: [10, 11, 10]
+  F-N noncontinuation, N side: [11, 10, 12, 11]
+  S, P singleton: [9, 8, 10, 9]
+  S, N off-root-line: [9, 9, 10, 9]
+  S, N root-on-tangent: [9, 8, 10, 9]
+all root-[2,1] one-separator arithmetic checks passed

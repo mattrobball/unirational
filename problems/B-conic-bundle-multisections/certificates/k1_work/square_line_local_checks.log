@@ -1,0 +1,22 @@
+Command:
+  python3 certificates/k1_work/square_line_local_checks.py
+
+Output:
+  rank-3 d=1 normal map: rank 7
+  rank-3 d=3 normal map: rank 5
+  rank-3 diagonal boundaries: ranks 3 and 5
+  rank-2 through-basepoint d=1 normal map: minimum rank 5
+  rank-2 through-basepoint d=3 normal map: rank 4
+  rank-2 through-basepoint diagonal boundaries: ranks 3 and 4
+  double-line restriction dimension: 27
+  all squared-line local checks passed
+
+Environment:
+  Python 3.14.6
+  SymPy 1.14.0
+
+Scope:
+  The multiplication and quotient matrices have integer entries and their
+  ranks are computed exactly over Q.  These checks support the polynomial-span calculations in
+  square_line_theorem.md; they are not a replacement for its uniform
+  characteristic-zero dimension argument.

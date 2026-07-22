@@ -1,0 +1,14 @@
+Command: M2 --script certificates/special_unirational_example.m2
+Macaulay2 version: 1.26.06
+Date: 2026-07-22
+
+special (2,3) hypersurface smooth: true
+degree-9 discriminant smooth: true
+branch singular cluster: (3,3), canonical multiplicities (3,4)
+resolved branch smooth after two blowups: true
+canonical-resolution formula values: pg=0, chi=1, q=0, P2=0
+conclusion over C: rational bisection, hence X unirational
+generic lambda branch cluster and resolution: verified
+lambda=1 is a smooth witness in the pencil
+
+All assertions passed.

@@ -1,0 +1,6 @@
+universal resultant identity: PASS
+residual line coefficients: degree 5 and primitive: PASS
+general-quadratic specialization: degrees (10,10,10), gcd 1: PASS
+smooth cubic with three distinct collinear residuals: PASS
+divisor arithmetic: (10,3)-2(0,1)=(10,1), base degree 20: PASS
+all tangent-residual local checks passed

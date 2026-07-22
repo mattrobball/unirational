@@ -1,0 +1,31 @@
+Command: M2 --script certificates/k0_no_triple.m2
+Macaulay2 version: 1.26.06
+Date: 2026-07-22
+
+prime 32003
+  (sigma_0 != 0, y_0 != 0): -1
+  (sigma_0 != 0, y_1 != 0): -1
+  (sigma_0 != 0, y_2 != 0): -1
+  (sigma_1 != 0, y_0 != 0): -1
+  (sigma_1 != 0, y_1 != 0): -1
+  (sigma_1 != 0, y_2 != 0): -1
+  (sigma_2 != 0, y_0 != 0): -1
+  (sigma_2 != 0, y_1 != 0): -1
+  (sigma_2 != 0, y_2 != 0): -1
+  discriminant smooth: true
+  X smooth: true
+prime 65537
+  (sigma_0 != 0, y_0 != 0): -1
+  (sigma_0 != 0, y_1 != 0): -1
+  (sigma_0 != 0, y_2 != 0): -1
+  (sigma_1 != 0, y_0 != 0): -1
+  (sigma_1 != 0, y_1 != 0): -1
+  (sigma_1 != 0, y_2 != 0): -1
+  (sigma_2 != 0, y_0 != 0): -1
+  (sigma_2 != 0, y_1 != 0): -1
+  (sigma_2 != 0, y_2 != 0): -1
+  discriminant smooth: true
+  X smooth: true
+
+All assertions passed. In Macaulay2, dimension -1 is the dimension of the
+zero ring, so every listed affine chart is empty.

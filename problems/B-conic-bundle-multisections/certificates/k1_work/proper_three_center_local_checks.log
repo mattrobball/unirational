@@ -1,0 +1,7 @@
+V_(5,4,3) fixed nonzero determinant fiber bound: 6
+V_(5,4,3) zero fiber / weighted edge bounds: 6/7
+V_(3,3,3) fixed nonzero determinant fiber bound: 5
+V_(3,3,3) zero fiber / weighted edge bounds: 5/6
+fixed-triangle codimensions: 15, 15, 14, 13
+after center motion: (9, 9, 9, 9)
+all proper-three-center local checks passed

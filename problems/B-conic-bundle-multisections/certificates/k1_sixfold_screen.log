@@ -1,0 +1,60 @@
+Proper-sixfold-point sub-incidence for class (1,1)
+Date: 2026-07-22
+Generator: certificates/generate_k1_sixfold.py
+Generator environment: Python 3.14.6, SymPy 1.14.0
+Solver: msolve 0.10.1
+Prime: 1073741827
+Record type: curated summary; raw solver stdout was not retained
+
+Every input below has 10 affine variables and the 21 fifth-derivative
+equations for multiplicity at least six.  The sigma chart fixes one of the
+nine coefficients of the linear triple to 1; the point chart fixes one of
+the three projective point coordinates to 1.
+
+Exact result
+------------
+
+Chart: sigma 0, point 0
+Generator command:
+  python3 certificates/generate_k1_sixfold.py --prime 1073741827 \
+    --sigma-chart 0 --point-chart 0 \
+    --output /tmp/k1-sixfold-big-0-0.in
+Input SHA-256:
+  b82cea52c1b5200da54b31800effb802edd42e3246e17a9510fbe378565f4ed2
+Command:
+  msolve -f /tmp/k1-sixfold-big-0-0.in -g 1 -t 8 -l 2 -v 1
+Linear algebra: exact sparse
+Invalid equations: 0
+Elapsed: 651.80 seconds
+Pairs reduced: 49002
+Largest matrix: 52898 x 35533 (25.101 percent)
+Reduced Groebner basis: [1]
+Conclusion: this one affine chart is empty over the algebraic closure of
+F_1073741827.
+
+Probabilistic screens
+---------------------
+
+The following runs used msolve option -l 44 (probabilistic sparse
+linearization).  They are screens, not formal certificates.
+The time-based random seeds and raw stdout were not retained, so these runs
+are reported only as nonreproducible screening evidence.
+
+  sigma 0, point 0: [1], 367.47 seconds
+  sigma 0, point 1: [1], 425.11 seconds
+  sigma 0, point 2: [1], 422.19 seconds
+  sigma 1, point 0: [1], 346.27 seconds
+  sigma 1, point 1: [1], 551.71 seconds
+
+The attempted sigma 4, point 0 run was terminated for resource contention
+before producing output.  Sigma 1, point 2 and every chart with sigma index
+2 through 8 were not completed.
+
+Scope
+-----
+
+There are 27 affine charts in the projective cover.  Even completing all 27
+would address only a proper sixfold point on the degree-eight branch.  It
+would not address the three-t=2 cluster strata (including their
+infinitely-near possibilities), or residual branches of degrees 6, 4, and 2
+after square factors.  No general class-(1,1) exclusion is claimed here.

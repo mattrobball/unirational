@@ -1,0 +1,20 @@
+Command:
+  M2 --script certificates/k1_work/proper_sixfold_local_checks.m2
+
+Output:
+  V_(5,4,3), order 6: codimension 6
+  V_(5,4,3), order 6 over q(0)=0: tail codimension 4
+  V_(3,3,3), order 6: codimension 6
+  V_(3,3,3), order 6 over q(0)=0: tail codimension 4
+  V_(3,3,3), order 4 with one diagonal constant zero: codimension 4
+  all local determinant-contact checks passed
+
+Environment:
+  Macaulay2 1.26.06
+  prime 32003
+
+Scope:
+  These exact ideal-height checks support the local determinant-contact
+  lemmas in proper_sixfold_theorem.md.  The theorem itself is a
+  characteristic-zero dimension argument; it does not infer a
+  characteristic-zero result merely from this finite-field run.

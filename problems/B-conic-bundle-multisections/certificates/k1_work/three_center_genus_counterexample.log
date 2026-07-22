@@ -1,0 +1,9 @@
+mod 5: one irreducible degree-7 factor and smooth point [1:2:1]
+characteristic 0: the singular support of H and C is exactly p1,p2,p3
+H.L: multiplicities 3 at p2 and 4 at p3, with no other intersections
+p1: square-free quartic tangent cone (ordinary quadruple, delta 6)
+p2: H ordinary triple and C ordinary quadruple (delta_H 3)
+p3: H is A3 (delta 2); corrected sequence is r=(3,4)
+cluster systems: H^0(J_D(1))=0 and H^0(J_(2D)(2))=0
+normalization genus: g(H)+g(L)=4; delta(C)-2+1=17
+all three-center genus-counterexample checks passed

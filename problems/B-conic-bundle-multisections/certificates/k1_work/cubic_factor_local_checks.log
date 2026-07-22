@@ -1,0 +1,9 @@
+node component restriction ranks: [12, 11, 9]; total 32
+cusp component restriction ranks: [12, 11, 9]; total 32
+elliptic, deg(F)=3: rank-one dimension bound 15
+elliptic, deg(F)=2: rank-one dimension bound 13
+P1, deg(F)=3: rank-one dimension bound 16
+P1, deg(F)=2: rank-one dimension bound 14
+P1, deg(F)=1: rank-one dimension bound 12
+singular-at-b normalization target/image: 33/32
+all cubic-factor local checks passed

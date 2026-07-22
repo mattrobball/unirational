@@ -1,0 +1,21 @@
+Command:
+  python3 certificates/k1_work/conic_factor_local_checks.py
+
+Output:
+  rank-3 and rank-2-away reduced-conic quotient dimensions: 27
+  rank-2 away component ranks: 11 + 9 + 7 = 27
+  rank-2 through-basepoint component ranks: 9 + 8 + 7 = 24
+  determinant-zero codimensions: 17, 16, 15
+  all conic-factor local checks passed
+
+Environment:
+  Python 3.14.6
+  SymPy 1.14.0
+
+Scope:
+  The quotient and multiplication matrices have integer entries and are
+  computed exactly over Q.  The printed determinant codimensions are an
+  arithmetic consistency check using the UFD dimensions proved in
+  conic_factor_theorem.md, not a separate ideal-dimension computation.  The
+  theorem itself is the uniform characteristic-zero orbit argument recorded
+  there.
