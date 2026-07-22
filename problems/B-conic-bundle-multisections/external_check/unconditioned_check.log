@@ -1,0 +1,11 @@
+/Users/worker/unirational/problems/B-conic-bundle-multisections/external_check/unconditioned_check.py:13: SyntaxWarning: "\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
+  whose three roots are the three points of C_{x0} \cap L.  All identities are
+unconditioned coefficients: [-8, 1, 0, -3, 19, -16, -1, -9, 2, -16, 7, -6, -17, -11, -9, 10, -20, -1, 8, -3, -10, -12, -17, 1, -19, -8, 9, -1, 8, -15, -7, -10, -16, 9, -6, 18, 6, 16, 0, 14, -13, -8, 3, -1, 16, -20, -8, -7, -11, 10, 6, 9, -9, -16, 17, 0, 15, 18, 18, -18]
+U1 gcd(qU,qV,qW) on two restriction lines: [1, 1] -> primitive: True
+U2 witness x0=(1, 2, 3): disc(g0)=-3605765312!=0; q0 nonzero; disc(f0|q-line)!=0: True; residuals off L: True
+U3 tangency: s^3, s^2u coefficients == 0 mod g0: True True
+U3 residual on cubic (F(x0,r)==0 mod g0): True
+U3 residual on covariant line (q0(r)==0 mod g0): True
+U3 Res(g0, r_W) != 0 (off L for all three conjugates): True
+U3 stage-3 point on X (F(x',r)==0 mod g0): True ; x' nondegenerate: True
+U4 fiber resultant degree: 20 (need 20); squarefree: True

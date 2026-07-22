@@ -71,6 +71,34 @@ in the generator**.
    can also re-derive x*, r, x' yourself from the three-stage description
    and compare.
 
+## Does the conditioning hide anything?  (No — and here is the proof.)
+
+A fair objection: maybe the checks pass only on the conditioned
+codimension-4 slice.  Three facts close this:
+
+1. The conditioning is used ONLY to give stage 1 a rational point (Tsen's
+   theorem is not effective over Q).  It appears nowhere in the theorem,
+   whose two machine inputs — the universal identity (verified with all
+   ten coefficients symbolic, i.e. for every F) and the genericity
+   witnesses — are conditioning-free.
+2. `unconditioned_check.py` (+ `.log`) runs the full mechanism on a fresh
+   /dev/urandom draw with NO coefficient zeroed.  Since no rational point
+   exists, it works in the cubic etale algebra K = Q[th]/(g0), where the
+   three marked points of C_{x0} ∩ L actually live; reduction mod the FULL
+   cubic verifies every identity at all three conjugate points at once.
+   Checks U1–U4: primitivity of q_F; the witness conditions; tangency,
+   residual-on-cubic, residual-on-covariant-line, off-L (via
+   Res(g0, r_W) ≠ 0), and the stage-3 chord point, all mod g0; and the
+   squarefree degree-20 fiber.  All pass.
+3. Geometrically the conditioned family is just {X : X ⊇ {e} x L} for one
+   point e, and PGL_3 x PGL_3 moves (e, L) anywhere; the construction is
+   equivariant, so the slice is not a special position for anything the
+   theorem uses.
+
+What genuinely cannot be done without SOME rational point is writing the
+composite parametrization with Q-coefficients — an arithmetic statement
+about Q, not a geometric gap over C.
+
 ## What passing means / doesn't mean
 
 Passing certifies: for THIS randomly drawn F, the construction yields an

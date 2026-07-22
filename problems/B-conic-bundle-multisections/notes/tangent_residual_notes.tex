@@ -553,6 +553,24 @@ All eight pass (\texttt{run\_log.txt}); the explicit map instance is
 CAS-agnostic instructions for third-party verification with no trust in
 the pipeline.
 
+\subsection*{A5 --- unconditioned instance (no slice)}
+\texttt{external\_check/unconditioned\_check.py} (with \texttt{.log})
+addresses the natural objection that the codimension-$4$ slice in A4 might
+matter: it runs the full mechanism on a fresh entropy draw with \emph{no}
+coefficient zeroed.  With no rational point available, it works in the
+cubic \'etale algebra $K=\QQ[\theta]/(g_0)$, $g_0=F(x_0,-)|_L$, where the
+three marked points live; reduction modulo the full cubic verifies each
+identity at all three conjugate points simultaneously.  It checks:
+primitivity of $q_F$; the witness conditions of Lemma~\ref{lem:openness};
+tangency, $F(x_0,r)=0$, $q(r)=0$, and $r\notin L$ (via
+$\Res(g_0,r_W)\ne0$) in $K$; the stage-(III) point $F(x',r)=0$ in $K$; and
+the squarefree degree-$20$ fiber.  All pass.  The slice in A4 is thereby
+confirmed to play no role beyond supplying $\QQ$-rationality of the
+composite parametrization (Tsen's theorem being non-effective over
+$\QQ$); by $\mathrm{PGL}_3\times\mathrm{PGL}_3$-equivariance the sliced
+family $\{X\supseteq\{e\}\times L\}$ is in no special position for
+anything the proof uses.
+
 \subsection*{Prose-only steps}
 For completeness: the steps of the proof resting on standard mathematics
 rather than computation are Tsen's theorem, Bertini/irreducibility of $S$,
