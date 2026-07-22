@@ -4,9 +4,10 @@
 
 This note records three shortcuts that did not settle the question before the
 tangent--residual construction in
-[`../tangent_residual_theorem.md`](../tangent_residual_theorem.md).  That
-theorem now proves unirationality affirmatively and bypasses every limitation
-below.  The scope here is the independent audit of the following strategies
+[`../all_smooth_tangent_residual_theorem.md`](../all_smooth_tangent_residual_theorem.md).
+That theorem now proves unirationality for every smooth member and bypasses
+every limitation below.  The scope here is the independent audit of the
+following strategies
 for a smooth general
 
 \[
@@ -382,8 +383,8 @@ a positive-genus extension in some different way.
    splitting field does not supply that certificate without additional
    descent geometry.
 
-Accordingly, a genuine resolution still requires either a new positive
-construction producing a rational horizontal surface, or a new negative
-invariant controlling generically finite domination in every degree.  The
-finite divisor-class census and the existing stable-rationality invariants do
-not have that scope.
+Accordingly, none of these routes could have supplied a resolution by itself.
+The needed new positive construction is now the tangent-residual/Lattès
+argument, which produces a rational horizontal surface for every smooth
+member.  The finite divisor-class census and the existing stable-rationality
+invariants still do not have comparable scope.

@@ -1,21 +1,27 @@
-# Problem B — Rational multisections on general (2,3) hypersurfaces in P^2 x P^2
+# Problem B — Rational multisections on every smooth (2,3) hypersurface in P^2 x P^2
 
 > **Resolution update (2026-07-22).** The headline question has an affirmative
-> answer.  For a general line \(L\subset\mathbf P^2_y\), the vertical surface
+> answer for every smooth member.  For a suitable line
+> \(L\subset\mathbf P^2_y\), the vertical surface
 > \(S=X\cap(\mathbf P^2_x\times L)\) is rational.  Taking the third point on
 > the tangent line to each cubic fiber of
 > \(X\to\mathbf P^2_x\) maps \(S\) birationally to a horizontal rational
-> divisor of class \((10,1)\).  Its degree over \(\mathbf P^2_y\) is \(20\),
-> so it gives a degree-20 unirational parametrization of a general \(X\).
-> The complete proof and universal resultant check are in
+> divisor of class \((a,1)\), with \(1\le a\le10\).  Its degree over
+> \(\mathbf P^2_y\) is \(2a\le20\).  For a general equation, \(a=10\) and
+> the degree is exactly `20`.  The all-smooth proof and the generic universal
+> resultant check are in
+> [`certificates/all_smooth_tangent_residual_theorem.md`](certificates/all_smooth_tangent_residual_theorem.md)
+> and
 > [`certificates/tangent_residual_theorem.md`](certificates/tangent_residual_theorem.md),
 > with the corrected earlier program and its independent results synthesized
 > in [RESOLUTION.md](RESOLUTION.md).
 
 ## Setup and convention
 
-X ⊂ P^2_x × P^2_y a general hypersurface of bidegree (2, d): degree 2 in the
-x-variables, degree d in the y-variables. dim X = 3. Write
+X ⊂ P^2_x × P^2_y is a smooth hypersurface of bidegree (2, d): degree 2 in
+the x-variables, degree d in the y-variables. dim X = 3.  Statements about
+the low-class exclusion program below retain an explicit "general X"
+hypothesis where needed.  Write
 F(x, y) = x^T A(y) x with A(y) a symmetric 3×3 matrix of degree-d forms in y.
 
 - π = pr_y : X → P^2_y is a **conic bundle** (Harris's third variety, notes
@@ -27,12 +33,14 @@ F(x, y) = x^T A(y) x with A(y) a symmetric 3×3 matrix of degree-d forms in y.
   multisection degree a multiple of 3, so there is no section.
 - Primary target: **d = 3** (discriminant degree 9). d = 2 is the calibration
   case (known unirational, see below).  The tangent--residual theorem in fact 5
-  below now proves that the general \(d=3\) member is unirational.  Ordinary
-  rationality still fails, and a very general member is not stably rational;
-  these statements are compatible with the positive unirationality theorem.
+  below now proves that every smooth \(d=3\) member is unirational.  Ordinary
+  rationality fails for every smooth member, and a very general member is not
+  stably rational; these statements are compatible with the positive
+  unirationality theorem.
 
 Status context: unirationality of conic bundle threefolds is broadly open, but
-this particular \((2,3)\) family is now settled affirmatively;
+all smooth members of this particular \((2,3)\) family are now settled
+affirmatively;
 the classical expectation "large discriminant ⟹ not unirational" was
 recently dented by unirational conic bundles with arbitrarily large
 discriminant degree (special families). Stable irrationality results
@@ -120,7 +128,8 @@ a resolution), and the dominant map P^2 × P^1 ⇢ X can be written down.
    L0 must separately produce a rational point/unirational map. The pipeline
    MUST reproduce this: find S, certify q = P_2 = 0, and emit the dominant map.
 
-5. **Tangent residuals solve the primary \(d=3\) case.**  Fix a general line
+5. **Tangent residuals solve every smooth primary \(d=3\) case.**  For each
+   smooth `X`, choose a suitable line
    \(L\subset\mathbf P^2_y\).  The surface
    \(S=X\cap(\mathbf P^2_x\times L)\) is a conic bundle over
    \(L\simeq\mathbf P^1\), hence is rational by Tsen.  On a smooth cubic fiber
@@ -131,16 +140,21 @@ a resolution), and the dominant map P^2 × P^1 ⇢ X can be written down.
 
    The universal binary resultant identity shows that the residual line is
    degree five in the coefficients of the cubic.  Those coefficients are
-   quadratic in \(x\), so
+   quadratic in \(x\), so after removing common and special vertical factors
 
    \[
-   [T]=10H_x+H_y.
+   [T]=aH_x+H_y,\qquad1\le a\le10.
    \]
 
    The residual map \(S\dashrightarrow T\) is birational, while
-   \(T\to\mathbf P^2_y\) has degree \(20\).  Thus \(T\) is the required
-   horizontal rational surface and base change gives a dominant degree-20
-   rational map to \(X\).  See the exact theorem and checker in
+   \(T\to\mathbf P^2_y\) has degree \(2a\le20\).  Thus \(T\) is the required
+   horizontal rational surface.  Horizontality for every smooth equation is
+   forced by the quartic residual-line Lattès map: its critical-value sextic
+   recovers the generic cubic, so it cannot be constant in a smooth
+   nonconstant family.  For a general equation the residual coefficients are
+   coprime, \(a=10\), and the map has degree `20`.  See the uniform theorem,
+   generic refinement, and checker in
+   `certificates/all_smooth_tangent_residual_theorem.md`,
    `certificates/tangent_residual_theorem.md` and
    `certificates/tangent_residual_local_checks.py`.
 
@@ -272,13 +286,15 @@ finite row without using the failed uniform-genus shortcut.
 of rationality of S (both Castelnuovo invariants and an explicit birational
 parametrization if possible) → write out the dominant degree-2a map
 P^2 × P^1 ⇢ X. This proves that the lifted **individual X** is unirational.
-Absent the universal theorem above, resolving the general case would also
+Absent the universal theorem above, resolving even the general case would
 have required proving that a characteristic-zero
 incidence component of rational multisections dominates the full P^59 of X's,
 with rationality persisting in the family (or give a universal construction on
 a dense open).  The tangent--residual construction supplies the latter
 directly.  Two primes and an exact lift would not have replaced this dominance
-step.
+step.  The all-smooth extension additionally proves that for each smooth
+equation some constant line has nonconstant residual-line image; this is the
+Lattès/biduality argument, not a consequence of sampling.
 
 ## Pitfalls
 
@@ -296,12 +312,12 @@ step.
 
 ## Success criteria
 
-- The headline criterion is now met by the universal tangent--residual
-  construction: it works on a dense open of the characteristic-zero
-  coefficient space, its source surface is rational, and its image is
-  horizontal of certified degree 20.
+- The headline criterion is now met for every smooth characteristic-zero
+  member.  The residual-line Lattès map supplies a suitable line for each
+  smooth equation; its source surface is rational and its image is horizontal
+  of certified even degree at most `20`.
 - The exact resultant identity, divisor class, generic birationality, and
-  degree calculation must rerun from
+  degree-`20` calculation for the general refinement must rerun from
   `certificates/tangent_residual_local_checks.py` and match its log.
 - L0 and every L1 exclusion remain scoped independent results.  In particular,
   the complete `(1,1)` exclusion is compatible with the positive theorem,
@@ -313,6 +329,10 @@ step.
 ## References
 
 - Harris notes pp. 23–24 (the three varieties; Question and refinement 11b).
+- The residual-line Lattès map, degree `4`, and its dual-sextic critical
+  values: McMullen--Mukamel--Wright, Ann. of Math. 185 (2017), p. 964,
+  https://doi.org/10.4007/annals.2017.185.3.6; Dabija--Jonsson, Publ. Mat. 54
+  (2010), §4.3, https://doi.org/10.5565/PUBLMAT_54110_07.
 - Unirationality of conic bundles: activity through 2025 —
   https://arxiv.org/pdf/2110.10057 (high-discriminant unirational families),
   https://arxiv.org/pdf/2511.17213 (discriminant degree 8, surface case).

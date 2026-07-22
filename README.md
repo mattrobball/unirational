@@ -11,13 +11,15 @@ three problems with machine-verified certificates.
   resolution also documents why fiberwise-saturation finite-field
   certificates are invalid without a base-change check.
 - **[Problem B](problems/B-conic-bundle-multisections/)** — unirationality of
-  general bidegree-(2,3) hypersurfaces in P^2 x P^2 (conic bundles with
-  smooth degree-9 discriminant, the first case beyond the published
-  degree-≤8 boundary).  **Affirmatively resolved here** by the
-  tangent-residual construction: the Tsen-rational vertical surface
+  smooth bidegree-(2,3) hypersurfaces in P^2 x P^2 (conic bundles of
+  discriminant degree 9, the first case beyond the published degree-≤8
+  boundary).  **Affirmatively resolved here for every smooth member** by the
+  tangent-residual construction: a Tsen-rational vertical surface
   X ∩ (P^2 x L) maps birationally, via fiberwise tangent residuals in the
   plane-cubic fibration X → P^2_x, to a horizontal rational surface of class
-  10H_x + H_y, giving a dominant degree-20 parametrization.  Includes
+  aH_x + H_y with 1 ≤ a ≤ 10, giving a parametrization of even degree at
+  most 20.  For a general equation, a = 10 and the degree is exactly 20.
+  Includes
   symbolic and finite-field certificates, a complete class-(1,1)
   nonexistence theorem, a corrected rehabilitation of the Del Centina–Verdi
   1980 special example, and an external end-to-end check on

@@ -1,7 +1,7 @@
 # External sanity check: explicit unirational parametrization of a random (2,3)
 
-Purpose: end-to-end falsification test of the tangent-residual theorem
-(RESOLUTION.md, "Affirmative resolution by tangent residuals") on externally
+Purpose: end-to-end falsification test of the generic degree-20 refinement of
+the tangent-residual theorem (RESOLUTION.md) on externally
 drawn random coefficients.  The generator follows the construction
 mechanically; everything below can be re-verified in any CAS with **no trust
 in the generator**.
@@ -104,8 +104,10 @@ about Q, not a geometric gap over C.
 Passing certifies: for THIS randomly drawn F, the construction yields an
 explicit rational dominant degree-20 map P^3 --> X, i.e. this X is
 unirational, exactly as the theorem's mechanism predicts, with no human in
-the loop choosing F.  It does not by itself prove the "general X" statement
-(that needs the openness/properness arguments and the universal identity,
-which are proven in tangent_residual_theorem.md and independently verified);
-it is a strong falsification test that would have failed loudly if any step
-of the construction were wrong.
+the loop choosing F.  It does not by itself prove either the all-smooth
+theorem or the general degree-20 refinement.  Those require respectively the
+Lattès/biduality argument in
+`certificates/all_smooth_tangent_residual_theorem.md` and the universal
+identity plus open-locus argument in `certificates/tangent_residual_theorem.md`.
+This instance is a strong falsification test that would have failed loudly if
+any explicit step of the construction were wrong.

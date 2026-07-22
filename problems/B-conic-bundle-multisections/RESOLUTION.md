@@ -2,39 +2,45 @@
 
 ## Bottom line
 
-As of 22 July 2026, the unirationality of a general smooth hypersurface
+As of 22 July 2026, the unirationality of **every** smooth hypersurface
 
 \[
 X_{2,3}\subset \mathbf P^2_x\times \mathbf P^2_y
 \]
 
-has an affirmative answer.  Fix a general line
-\(L\subset\mathbf P^2_y\).  The surface
-\(S=X\cap(\mathbf P^2_x\times L)\) is rational, and fiberwise tangent
+has an affirmative answer.  There is a line
+\(L\subset\mathbf P^2_y\) such that the surface
+\(S_L=X\cap(\mathbf P^2_x\times L)\) is rational and fiberwise tangent
 residuals in the plane-cubic fibration \(X\to\mathbf P^2_x\) map it
 birationally to a horizontal divisor
 
 \[
-T\sim10H_x+H_y.
+T_L\sim aH_x+H_y,\qquad 1\leq a\leq10.
 \]
 
-The map \(T\to\mathbf P^2_y\) has degree \(20\).  Base-changing the conic
-bundle by \(T\) therefore gives a dominant degree-20 rational map to \(X\).
-The complete proof and exact universal resultant check are in
+The map \(T_L\to\mathbf P^2_y\) has even degree \(2a\leq20\).
+Base-changing the conic bundle by \(T_L\) therefore gives a dominant
+rational map to \(X\).  For a general equation, \(a=10\) and the degree is
+exactly `20`.  The uniform proof is in
+[`all_smooth_tangent_residual_theorem.md`](certificates/all_smooth_tangent_residual_theorem.md);
+the exact universal resultant and the generic degree-20 refinement are in
 [`tangent_residual_theorem.md`](certificates/tangent_residual_theorem.md).
 
-Ordinary rationality is still settled negatively for a general member, and a
+Ordinary rationality is settled negatively for every smooth member, while a
 family-specific theorem shows that a very general member is not stably
-rational.  Thus the result also gives very general examples that are
-unirational but neither rational nor stably rational.
+rational.  Thus every smooth member is unirational but irrational, and very
+general members are additionally not stably rational.
 
 The proposed computation in `SPEC.md` could not be used as written.  Its
 principal singularity count was wrong: an ordinary triple point of the
 double-plane branch produces a \(D_4\) rational double point and does **not**
 lower \(p_g\).  In addition, a rational surface on one sampled hypersurface
 would prove only that the sample is unirational.  The tangent--residual
-construction instead works universally on a dense open of the full
-59-dimensional parameter space.
+construction first gives degree `20` on a dense open of the full
+59-dimensional parameter space.  The residual-line Lattès map of the generic
+plane cubic then removes the genericity assumption: its critical-value curve
+recovers that cubic, so the residual line cannot stay constant for every
+choice of `L` on a smooth nonconstant family.
 
 This note records the affirmative proof, the corrected earlier mathematics,
 certified low-class exclusions, a certified special positive example, and the
@@ -43,32 +49,34 @@ alternative degree-eight descent route together with its exact limitations.
 An independent negative byproduct is complete nonexistence of a rational
 normalized horizontal divisor of class `(1,1)` on a general `X`.  This settles
 that one degree-two class.  Classes `(1,k)` with `k>=2` and many higher-degree
-classification questions remain open, but they are no longer needed for the
-headline: the positive surface has class `(10,1)`.
+classification questions remain open for a general `X`, but they are no
+longer needed for the headline: the all-smooth construction produces a class
+`(a,1)` with `1 <= a <= 10`, and the general class is `(10,1)`.
 
 ## Literature boundary
 
 - Over an algebraically closed field of characteristic zero, Mella proves that
   a standard conic bundle over \(\mathbf P^2\) is
   unirational when its discriminant has degree at most 8, and also in degree 9
-  when the discriminant is singular.  A general \((2,3)\) hypersurface has a
-  smooth degree-9 discriminant, so this is the first smooth-discriminant degree
-  not covered by Corollary 1.2.  See [Mella, Theorem 1.1 and Corollary
+  when the discriminant is singular.  Thus that result already covers smooth
+  `(2,3)` total spaces with singular discriminant.  The remaining boundary was
+  the smooth degree-9 discriminant case, not covered by Corollary 1.2.  See
+  [Mella, Theorem 1.1 and Corollary
   1.2](https://arxiv.org/abs/1403.7055).
 - Over \(\mathbf C\), Böhning and Graf von Bothmer prove that for every
   \(n\geq2\), a very general \((2,n)\) hypersurface in
   \(\mathbf P^2\times\mathbf P^2\) is not stably rational.  See [Theorem
   1.1](https://ems.press/journals/cmh/articles/15336).
-- Over \(\mathbf C\), the ordinary rationality obstruction is classical: a
-  standard conic bundle
-  over \(\mathbf P^2\) with smooth discriminant of degree 9 is irrational by
-  the intermediate-Jacobian/Prym criterion.  See [Beauville, Théorème
+- Over \(\mathbf C\), every smooth `(2,3)` member is irrational.  Its conic
+  projection is flat with relative Picard rank one and has degree-9
+  discriminant (possibly nodal); Beauville's conic-bundle criterion applies
+  once the discriminant degree is at least `6`.  See [Beauville, Théorème
   4.9](https://www.numdam.org/articles/10.24033/asens.1329/) and [Prokhorov,
   Theorem 9.1](https://arxiv.org/abs/1712.05564).
 - The high-discriminant unirational examples of
   [Massarenti--Mella](https://arxiv.org/abs/2110.10057) are special families in
-  nontrivial projective bundles; they do not settle this general trivial-bundle
-  family.
+  nontrivial projective bundles; they did not settle this full
+  trivial-bundle family.
 - Del Centina and Verdi give an explicit \((3,2)\) equation and argue that it
   is a smooth unirational ordinary conic bundle, hence after interchanging the
   factors a special \((2,3)\) example.  Their displayed hypersurface, branch,
@@ -91,7 +99,88 @@ Stable irrationality does not obstruct unirationality: the
 [Artin--Mumford threefold](https://doi.org/10.1112/plms/s3-25.1.75) is the
 standard counterexample.
 
-## Affirmative resolution by tangent residuals
+## Extension from general to every smooth member
+
+Let `X` now be an arbitrary smooth `(2,3)` hypersurface and put
+
+\[
+K=\mathbf C(\mathbf P^2_x),\qquad
+C=X_K\subset\mathbf P^2_{y,K}.
+\]
+
+Generic smoothness makes `C` a smooth plane cubic.  It is not a constant
+embedded cubic: otherwise its equation over `K` would be proportional to a
+fixed cubic \(f_0(y)\), and homogeneity would give
+\(F(x,y)=Q(x)f_0(y)\), contradicting smoothness of `X`.
+
+For any smooth plane cubic `C`, tangent residuals define the quartic Lattès
+morphism
+
+\[
+\delta_C:(\mathbf P^2_y)^\vee\longrightarrow(\mathbf P^2_y)^\vee,
+\qquad
+L\cap C=p+q+r\longmapsto
+\overline{(-2p)(-2q)(-2r)}.
+\]
+
+Its reduced critical-value curve is exactly the dual sextic \(C^\vee\).
+One algebraic proof writes the line-section plane as the quotient
+\(C^2/S_3\).  If \(\pi:C^2\to(\mathbf P^2_y)^\vee\) is the quotient and
+\(\mu=[-2]^2\), then
+
+\[
+\pi\mu=\delta_C\pi,
+\qquad
+\pi^*R_{\delta_C}=\mu^*R_\pi-R_\pi.
+\]
+
+The ramification of `pi` consists of the three reflection curves where two
+points of a line section coincide.  Pullback by `mu` adds their translates by
+the three nonzero two-torsion points.  Those translated curves are precisely
+the ramification of \(\delta_C\), and their images are \(C^\vee\).  Therefore
+\(\delta_C\) determines the embedded cubic by biduality.  This Lattès map and
+its critical values are also recorded explicitly by
+[McMullen--Mukamel--Wright, equation (2.6)](https://doi.org/10.4007/annals.2017.185.3.6)
+and [Dabija--Jonsson, Section 4.3](https://doi.org/10.5565/PUBLMAT_54110_07).
+
+It follows that \(\delta_C\) is not defined over the constant field
+\(\mathbf C\): otherwise its critical-value sextic, and hence `C`, would be
+constant.  A morphism over \(K=\mathbf C(s,t)\) that takes a Zariski-dense
+set of constant points to constant points descends to \(\mathbf C\) (apply
+the two \(\mathbf C\)-derivations of `K` to affine coordinate ratios).
+Consequently there is a constant line `L`, chosen simultaneously away from
+the tangent and two-torsion chord loci, such that
+
+\[
+\delta_C(L)\notin(\mathbf P^2_y)^\vee(\mathbf C).
+\]
+
+For this `L`, the surface \(S_L\) is integral and rational by Tsen, and
+tangent residuals map it birationally to an irreducible surface \(T_L\) of
+degree three over \(\mathbf P^2_x\).  If `T_L` were vertical over
+\(\mathbf P^2_y\), Grothendieck--Lefschetz and the two fiber intersections
+would give
+
+\[
+[T_L]=H_y.
+\]
+
+It would therefore be the inverse image of a constant line `M`, forcing
+\(\delta_C(L)=M\), a contradiction.  Thus `T_L` is horizontal.
+
+Finally, the universal residual line has coefficients of degree ten in `x`.
+After removing their common factor and any components over special
+\(x\)-curves, the image has class
+
+\[
+[T_L]=aH_x+H_y,\qquad1\le a\le10.
+\]
+
+It is rational and has degree \(2a\le20\) over the conic-bundle base, so the
+multisection principle proves unirationality.  Full details are in
+[`all_smooth_tangent_residual_theorem.md`](certificates/all_smooth_tangent_residual_theorem.md).
+
+## Generic degree-20 refinement by tangent residuals
 
 Fix a general line \(L\subset\mathbf P^2_y\) and set
 
@@ -918,24 +1007,30 @@ and qualifications are in
 
 ## Completion criteria and how they are met
 
-1. The construction must work for a general characteristic-zero equation, not
-   one sample.  The tangent--residual operation is universal, and the required
-   smoothness, irreducibility, distinctness, and primitivity conditions are
-   nonempty Zariski-open conditions in the irreducible coefficient space.
+1. The construction must work for every smooth characteristic-zero equation,
+   not one sample or merely a coefficient-space open.  The generic cubic is
+   smooth and nonconstant; its residual-line Lattès map cannot descend to the
+   constant field because its critical-value sextic recovers that cubic.
+   Hence a suitable constant line `L` always exists.
 2. The source of the horizontal map must be rational.  Here
    \(S\to L\simeq\mathbf P^1\) has a rational generic conic by Tsen, so
    \(\mathbf C(S)=\mathbf C(t)(z)\).
-3. Horizontality must be proved, not inferred from a sample.  The universal
-   resultant and the independent Chow calculation give
-   \([T]=10H_x+H_y\), hence degree 20 over \(\mathbf P^2_y\).
-4. The rational source must actually supply a point on the pulled-back conic.
+3. Horizontality must be proved, not inferred from a sample.  If the residual
+   image for the selected `L` were vertical, its fiber degrees and
+   \(\operatorname{Pic}(X)=\mathbf ZH_x\oplus\mathbf ZH_y\) would force it
+   to be a constant line section, contradicting the choice of `L`.
+4. The parametrization degree must remain bounded after specialization.  The
+   universal resultant gives a divisor of nominal class `(10,1)`; removing
+   common factors and special vertical components leaves
+   \([T]=aH_x+H_y\) with \(1\le a\le10\), hence degree \(2a\le20\).
+5. The rational source must actually supply a point on the pulled-back conic.
    The map \(S\dashrightarrow T\subset X\) is birational, and the inclusion of
    \(T\) is the tautological point after base change.
-5. Exact verification must cover the identities used by the proof.  The
+6. The exact generic refinement must still be verified.  The
    tangent--residual checker verifies the universal resultant identity,
    coefficient degree and primitivity, a base-factor-free specialization, the
-   smooth distinct-residual witness, and the degree-20 divisor arithmetic; its
-   output matches the committed log.
+   smooth distinct-residual witness, and the generic degree-20 divisor
+   arithmetic; its output matches the committed log.
 
 The earlier standards remain relevant to the independent exclusion
 certificates: a single finite-field hit does not establish generality, and

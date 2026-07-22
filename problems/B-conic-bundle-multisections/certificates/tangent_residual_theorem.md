@@ -1,6 +1,33 @@
-# Tangent residuals give a horizontal rational surface
+# Tangent residuals give horizontal rational surfaces
 
-## The theorem
+## The all-smooth theorem
+
+Every smooth hypersurface
+
+\[
+X\subset\mathbf P^2_x\times\mathbf P^2_y
+\]
+
+of bidegree \((2,3)\) over an algebraically closed field of characteristic
+zero is unirational.  For a suitable line \(L\subset\mathbf P^2_y\), the
+tangent-residual construction below maps the rational vertical surface
+\(S_L\) birationally to a horizontal divisor
+
+\[
+T_L\sim aH_x+H_y,\qquad 1\leq a\leq10,
+\]
+
+and hence gives a dominant rational parametrization of even degree
+\(2a\leq20\).  The new uniform step is the quartic residual-line Lattès
+map of the generic plane cubic: its critical-value curve is the dual sextic,
+so it cannot be constant in a smooth nonconstant family.  The complete
+argument is in
+[`all_smooth_tangent_residual_theorem.md`](all_smooth_tangent_residual_theorem.md).
+
+The remainder of this file proves the sharper generic statement in which
+\(a=10\) and the degree is exactly `20`.
+
+## The generic degree-20 refinement
 
 Let
 
