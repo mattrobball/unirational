@@ -10,6 +10,7 @@ example/counterexample hunting. Ordered by expected theorem-yield per CPU-hour:
 | [A](A-expected-dimension-curves/SPEC.md) | Expected dimension of spaces of degree-e rational curves on general hypersurfaces, at the open boundary d = n, n+1 | Notes p. 27 "Open problem" (Coskun–Harris–Starr conjecture) | Steady stream of small rigorous theorems; each instance fully decidable |
 | [B](B-conic-bundle-multisections/SPEC.md) | Rational multisections on general bidegree-(2,3) hypersurfaces in P^2 x P^2 (unirationality of conic bundles) | Notes pp. 23–24, Question on the third variety + refinement 11b | Certified exclusion frontier; a hit = unirationality theorem (long odds) |
 | [C](C-lines-debarre-de-jong/SPEC.md) | Counterexample sweep for the Debarre–de Jong conjecture at degree 9 | Notes p. 27, "Question (de Jong)" | Likely null result (conjecture believed); a hit = full refutation, major |
+| [D](D-2d-conic-bundles/SPEC.md) | Unirationality of general (2,d) hypersurfaces, d ≥ 4; primary target d = 4 via the tangent-residual double cover | Notes pp. 23–24 ("d large"), continuation of B | Crisp reduction: rationality of an explicit double cover Z → S decides (2,4) |
 
 ## Shared conventions
 
