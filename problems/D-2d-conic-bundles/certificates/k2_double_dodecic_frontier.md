@@ -35,12 +35,12 @@ The case is **not closed** here.  The exact conclusions are:
    primitive isolated base schemes are now classified exactly, the
    primitive \(e=2\) and isolated-base \(e=3,4\) rows are absent, and the
    connected isolated-base integral-quintic square-root row is absent; and
-7. in the proper-high seven-singleton \([3,2^7]\) row, the full
-   exactly-two-nonproper stratum is absent: the common-support jet theorem
-   reduces it to rank-zero or reducible-residual boundaries, and the
-   residual-boundary theorem excludes all of them, including mixed
-   mismatches.  The \(n=3\) singleton row remains at the exact zero-margin
-   simultaneous-jet boundary.
+7. the entire proper-high seven-distinct-singleton \([3,2^7]\) row is
+   absent.  For \(n=2\), the common-support jet theorem reduces to rank-zero
+   or reducible-residual boundaries and the residual-boundary theorem
+   excludes them.  For \(n=3\), the fixed-fiber simultaneous-jet theorem
+   excludes every integral deleted cubic and the nonintegral-block theorem
+   excludes the complete complement.
 
 The vector-bundle ledger below does not itself cover primitive triples with
 a zero-dimensional base scheme or perform combined Enriques-diagram
@@ -474,9 +474,13 @@ The companion certificates sharpen Section 6 as follows.
     The two-line jet theorem reduces these supports to rank-zero or
     reducible-residual boundaries; the residual-boundary theorem excludes
     all of them, including mixed mismatches.  Therefore that entire scoped
-    \(n=2\) row is absent.  With three nonproper lows, the corresponding
-    one-line count has exact margin zero; simultaneous tangent-jet additivity
-    remains open.
+    \(n=2\) row is absent.  With three nonproper lows, the fixed-fiber
+    simultaneous-jet theorem excludes all seven integral deleted-adjoint
+    cubics.  The nonintegral-block theorem then excludes every line--conic
+    and three-line distribution, forces and eliminates the only possible
+    common low-degree branch factor, and excludes the final integral and
+    reducible residual-conic boundaries.  Therefore the scoped \(n=3\) row,
+    and hence the entire proper-high seven-distinct-singleton row, is absent.
 
 Consequently the current primitive squarefree arithmetic frontier is
 
@@ -499,9 +503,10 @@ infinitely-near \(t=2\) center, while a survivor in the second must have an
 infinitely-near essential center.  In their distinct-singleton subrows,
 both require at least two nonproper low trees.  In the proper-high
 seven-distinct-singleton \([3,2^7]\) subrow there are exactly two or three;
-its two-nonproper row is absent by item 13, while its three-nonproper row
-remains at the exact zero-margin simultaneous-jet frontier.  Other
-\([3,2^7]\) cluster types are outside that conclusion.
+both rows are absent by item 13.  Thus the entire proper-high
+seven-distinct-singleton subrow is absent.  Nonproper-high, repeated
+essential-tree, isolated-base, and other \([3,2^7]\) cluster types are
+outside that conclusion.
 
 The base-point-free square-factor locus is now closed.  Separately, the
 conductor-safe component theorem closes the isolated-base \(e=3,4\) rows;
@@ -534,6 +539,8 @@ The proofs and replays are
 [`k2_profile327_multiple_nonproper_frontier.md`](k2_profile327_multiple_nonproper_frontier.md),
 [`k2_profile327_n2_common_support_jet_reduction.md`](k2_profile327_n2_common_support_jet_reduction.md),
 [`k2_profile327_n2_residual_boundary_exclusion.md`](k2_profile327_n2_residual_boundary_exclusion.md),
+[`k2_profile327_n3_simultaneous_jet_frontier.md`](k2_profile327_n3_simultaneous_jet_frontier.md),
+[`k2_profile327_n3_nonintegral_block_exclusion.md`](k2_profile327_n3_nonintegral_block_exclusion.md),
 [`k2_profile327_nonproper_high_reduction.md`](k2_profile327_nonproper_high_reduction.md),
 and
 [`k2_one_nonproper_singleton_offbase_exclusion.md`](k2_one_nonproper_singleton_offbase_exclusion.md).

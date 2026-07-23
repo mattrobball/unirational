@@ -95,8 +95,13 @@ a shared proper-low line or conic support for its two deleted cubics.  The
 two-line jet theorem reduces these supports to rank-zero or
 reducible-residual boundaries, and the residual-boundary theorem excludes
 all of them, including the mixed mismatches.  Hence that full scoped \(n=2\)
-singleton row is absent.  Its three-nonproper row has an exact zero-margin
-simultaneous-jet boundary.
+singleton row is absent.  In its three-nonproper row, a fixed-fiber
+simultaneous-jet argument excludes all seven integral deleted-adjoint
+cubics; the nonintegral-block theorem then excludes every remaining
+factorization and residual boundary.  Hence the entire proper-high
+seven-distinct-singleton \([3,2^7]\) row is absent.  This scoped closure
+does not include nonproper-high, repeated-essential-tree, isolated-base, or
+other cluster rows.
 The conductor-safe theorem closes the isolated-base \(e=3,4\) rows.
 Together with primitive \(e=2\) and the connected isolated-base \(e=5\)
 theorem, this leaves only isolated \(e=1\) and combined branch/base clusters
@@ -187,6 +192,8 @@ Its subsequent geometric reductions are
 [k2_profile327_multiple_nonproper_frontier.md](certificates/k2_profile327_multiple_nonproper_frontier.md),
 [k2_profile327_n2_common_support_jet_reduction.md](certificates/k2_profile327_n2_common_support_jet_reduction.md),
 [k2_profile327_n2_residual_boundary_exclusion.md](certificates/k2_profile327_n2_residual_boundary_exclusion.md),
+[k2_profile327_n3_simultaneous_jet_frontier.md](certificates/k2_profile327_n3_simultaneous_jet_frontier.md),
+[k2_profile327_n3_nonintegral_block_exclusion.md](certificates/k2_profile327_n3_nonintegral_block_exclusion.md),
 [k2_one_nonproper_singleton_offbase_exclusion.md](certificates/k2_one_nonproper_singleton_offbase_exclusion.md),
 and
 [k2_profile327_nonproper_high_reduction.md](certificates/k2_profile327_nonproper_high_reduction.md).
@@ -892,18 +899,24 @@ proper-low line or conic support.  The two-line jet theorem reduces these
 supports to rank-zero or reducible-residual boundaries, and the
 residual-boundary theorem excludes every one, including the mixed
 mismatches.  Thus that entire scoped \(n=2\) singleton row is absent.  With three,
-the analogous one-line count has margin zero, and simultaneous
-tangent-jet additivity remains open.  Away from an isolated base
+the fixed-fiber simultaneous-jet theorem excludes every integral
+deleted-adjoint cubic.  The nonintegral-block theorem then excludes all
+remaining line--conic and three-line distributions, common low-degree
+branch factors, and integral or reducible residual-conic boundaries.  Thus
+the entire proper-high seven-distinct-singleton \([3,2^7]\) row is absent.
+Away from an isolated base
 support the same one-nonproper exclusions hold; any survivor must align the
 base with a selected adjoint cubic or the marked tangent line.  Beyond
-these rows, a nonproper \(t=3\) center in \([3,2^7]\) is uniquely a free
+this scoped row, a nonproper \(t=3\) center in \([3,2^7]\) is uniquely a free
 first-near successor of a proper \(t=2\) center, with
 \((r_p,r_q;m_p,m_q)=(5,6;5,5)\); under the six-singleton hypothesis at
 most two of the other lows are nonproper.  The conductor-safe component
 incidence excludes every positive-quotient and rank-zero integral cubic or
 quartic factor across isolated bases.  Its degree-zero boundary routes to a
 disconnected pure square, while the remaining reducible roots route to the
-settled degree-two theorem.  Thus, outside these squarefree strata, only the
+settled degree-two theorem.  Nonproper-high, repeated-essential-tree,
+isolated-base, and other cluster rows remain among the squarefree profiles.
+Thus, outside these squarefree strata, only the
 isolated squared-line row \(e=1\) and combined branch/base clusters remain.  No surviving
 stratum is asserted to exist.  The arithmetic ledger and all geometric
 sharpenings are in
@@ -932,6 +945,8 @@ sharpenings are in
 [k2_profile327_multiple_nonproper_frontier.md](certificates/k2_profile327_multiple_nonproper_frontier.md),
 [k2_profile327_n2_common_support_jet_reduction.md](certificates/k2_profile327_n2_common_support_jet_reduction.md),
 [k2_profile327_n2_residual_boundary_exclusion.md](certificates/k2_profile327_n2_residual_boundary_exclusion.md),
+[k2_profile327_n3_simultaneous_jet_frontier.md](certificates/k2_profile327_n3_simultaneous_jet_frontier.md),
+[k2_profile327_n3_nonintegral_block_exclusion.md](certificates/k2_profile327_n3_nonintegral_block_exclusion.md),
 [k2_profile327_nonproper_high_reduction.md](certificates/k2_profile327_nonproper_high_reduction.md),
 and
 [k2_one_nonproper_singleton_offbase_exclusion.md](certificates/k2_one_nonproper_singleton_offbase_exclusion.md).
@@ -1028,6 +1043,8 @@ python3 problems/D-2d-conic-bundles/certificates/k2_profile327_one_nonproper_sin
 python3 problems/D-2d-conic-bundles/certificates/k2_profile327_multiple_nonproper_checks.py
 python3 problems/D-2d-conic-bundles/certificates/k2_profile327_n2_common_support_jet_checks.py
 python3 problems/D-2d-conic-bundles/certificates/k2_profile327_n2_residual_boundary_checks.py
+python3 problems/D-2d-conic-bundles/certificates/k2_profile327_n3_simultaneous_jet_checks.py
+python3 problems/D-2d-conic-bundles/certificates/k2_profile327_n3_nonintegral_block_checks.py
 python3 problems/D-2d-conic-bundles/certificates/k2_one_nonproper_singleton_offbase_checks.py
 python3 problems/D-2d-conic-bundles/certificates/k2_profile327_nonproper_high_checks.py
 ~~~
@@ -1042,7 +1059,7 @@ arithmetic.  The sixth checks the double-residual Chow, ramification, and
 first-jet calculations.  The seventh records the restricted-family multijet
 rank atlas, the eighth checks the saturated multiplier boundary, the ninth
 checks its ramification comparison and two-point ranks, and the tenth checks
-the quartic multiplier-boundary fold theorem.  The remaining thirty-seven
+the quartic multiplier-boundary fold theorem.  The remaining thirty-nine
 replay the class-\((1,1)\) double-decic table,
 all-proper, singleton, quintic, repeated-tree, and uniform conic analyses;
 the class-\((1,2)\) arithmetic ledger; and all subsequent geometric

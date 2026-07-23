@@ -43,6 +43,14 @@ in Sections 4--5 of the multiple-nonproper frontier note.  No assertion is
 made about repeated essential trees, a nonproper high center, or isolated
 base schemes.
 
+> **Subsequent closure.**  This theorem alone excludes only the integral
+> deleted-adjoint cubics.  The nonintegral-block theorem
+> [`k2_profile327_n3_nonintegral_block_exclusion.md`](k2_profile327_n3_nonintegral_block_exclusion.md)
+> excludes the complete nonintegral complement and therefore closes the full
+> proper-high seven-distinct-singleton \(n=3\) row.  It makes no claim about
+> repeated essential trees, a nonproper high center, isolated base schemes,
+> or other cluster rows.
+
 ## 1. The shared extension space
 
 Fix an integral selected cubic \(C\), and put
@@ -126,24 +134,44 @@ of those two-point certificates.
 
 ## 2. The two-line effective bound
 
-Take two distinct selected lines.  If one selected value has rank zero,
-put that line first.  By (1.4) its condition costs four in either
-splitting.  If the second value has rank one, (1.5), together with its
-unbalanced, ramification, or cross cost when needed, supplies effective
-contribution four.  If the second value has rank zero, (1.5) supplies
-effective contribution three without charging unbalancedness: the
-unramified rows give three raw, while ramification or cross-incidence pays
-for the one-condition drop.
+Take two distinct selected lines.  Let \(c_{12}\) denote only the raw jet
+codimension inside the extension fiber.  It includes neither splitting
+conditions nor configuration costs.  Let \(e_{12}\) be the actual
+codimension of the joint unbalanced-line condition for this pair, and let
+\(d_{12}\) collect ramification and cross-incidence costs not included in
+\(e_{12}\).  Thus the three ledgers are disjoint, and the target is
+equivalently
 
-If both selected values have rank one, use (1.4) followed by (1.5).
-Every balanced line contributes four.  An unramified unbalanced line
-loses one jet condition and contributes one independent splitting
-condition.  The ramified-flat row loses one more and contributes
-ramification; a cross row loses one and contributes the cross-incidence.
+\[
+c_{12}+d_{12}\ge8-e_{12}
+\quad\Longleftrightarrow\quad
+c_{12}+e_{12}+d_{12}\ge8.
+\tag{2.1a}
+\]
 
-Let \(e_{12}\) be the actual codimension of the joint unbalanced-line
-condition for this pair, and let \(d_{12}\) collect ramification and
-cross-incidence costs not included in \(e_{12}\).  The resulting bound is
+The worst raw rows illustrate the separation:
+
+\[
+\begin{array}{c|c|c|c|c|c}
+\text{ranks}&\text{row}&c_{12}&e_{12}&d_{12}&
+c_{12}+d_{12}\ \text{versus}\ 8-e_{12}\\ \hline
+(1,1)&\text{balanced ordinary}&8&0&0&8=8\\
+(1,1)&\text{one unbalanced ordinary}&7&1&0&7=7\\
+(1,1)&\text{two unbalanced ordinary}&6&2&0&6=6\\
+(1,1)&\text{one unbalanced, ramified-flat}&6&1&1&7=7\\
+(1,1)&\text{balanced cross}&7&0&1&8=8\\
+(0,1)&\text{balanced ordinary}&8&0&0&8=8\\
+(0,1)&\text{second unbalanced ordinary}&7&1&0&7=7\\
+(0,1)&\text{second unbalanced, ramified}&6&1&1&7=7.
+\end{array}
+\tag{2.1b}
+\]
+
+Here a rank-zero value is ordered first.  Its full condition costs four in
+either splitting.  If both values have rank zero, the ordinary second-line
+condition costs three raw; ramification or a cross can lower it to two but
+then contributes one to \(d_{12}\).  Consequently the uniform conclusion
+is
 
 \[
 c_{12}+d_{12}\ge
@@ -155,14 +183,16 @@ c_{12}+d_{12}\ge
 \]
 
 In the second row, if either line is unbalanced then \(e_{12}\ge1\), so
-seven is again at least \(8-e_{12}\).  Therefore the only two-line loss
-relative to the three-point target is a balanced rank-zero/rank-zero pair.
+seven is again at least \(8-e_{12}\).  A balanced cross row is handled by
+reverse ordering in Section 3.  Therefore the only genuine two-line loss
+relative to the three-point target is a balanced rank-zero/rank-zero pair
+with no available external configuration cost.
 
 For the two-point target itself, the requirement from the incidence
 ledger is only
 
 \[
-c_{12}\ge6-e_{12}.
+c_{12}+d_{12}\ge6-e_{12}.
 \tag{2.2}
 \]
 
@@ -200,8 +230,16 @@ third line in (2.1); the unused coincidence cost only improves the bound.
 For distinct lines a cross-incidence \(a_j\in T_i\) lowers the
 constant-matrix contribution by at most one, exactly as in (1.5), and
 costs one configuration parameter.  Two opposite cross-incidences force
-the lines to coincide, which was just handled.  Hence cross rows never
-worsen the effective bounds.
+the lines to coincide, which was just handled.  In the all-rank-zero
+three-point row, order the pair in the direction opposite to a directed
+cross \(a_j\in T_i\): impose the full condition on \(T_j\), then the
+constant-matrix condition on \(T_i\).  Pairwise distinctness rules out
+\(a_i\in T_j\), so this ordered pair is noncross and contributes
+\(4+3=7\); the unused incidence \(a_j\in T_i\) supplies the eighth
+configuration condition.  If both directed crosses occur, the lines
+coincide.  Extra cross-incidences only improve the count.  Hence cross
+rows never worsen the effective bounds, including the sole rank-zero
+three-point boundary.
 
 ## 4. Deleting a nonproper label when \(n=3\)
 
@@ -248,7 +286,7 @@ nonproper origins remain, the fixed cubic codimension and moving dimension
 are
 
 \[
-30-s,\qquad31+s-e.
+30-s,\qquad 31+s-e.
 \tag{5.1}
 \]
 
@@ -346,9 +384,9 @@ and the three entries of the restricted symmetric form have degrees
 \]
 
 Fix a nonzero determinant target \(f\).  The zero target is not an omitted
-fiber case: it would make the integral
-cubic \(C\) a component of the branch divisor, which is already excluded by
-the degree-three factor margin cited in that proof.
+fiber case: it would make the integral cubic \(C\) a component of the
+branch divisor, which is already excluded by the degree-three factor margin
+cited in that proof.
 
 Choose the lower-degree diagonal entry \(c\).  The complete nonzero-fiber
 proof in
@@ -408,7 +446,15 @@ one larger than the unrefined \(30-3=27\).
 
 Apply (7.7) in the sole local boundary from Section 5.  Any two balanced
 rank-zero selected lines give the seven conditions in (6.1), while the
-moving dimension is thirty-four.  The final margin is
+moving dimension is thirty-four.
+
+There is no double counting here.  The rank-zero cut in (7.5)--(7.7)
+stratifies the fixed cubic restriction, whereas the seven conditions in
+(6.1) are uniform codimensions in the eighteen-dimensional extension fiber
+after that restriction has been fixed.  Their sum is therefore the usual
+base-plus-fiber dimension bound.
+
+The final margin is
 
 \[
 28+7-34=\boxed1.

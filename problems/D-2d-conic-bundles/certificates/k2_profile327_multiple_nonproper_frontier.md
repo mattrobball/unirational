@@ -65,10 +65,18 @@ including the mixed mismatches; see
 [`k2_profile327_n2_residual_boundary_exclusion.md`](k2_profile327_n2_residual_boundary_exclusion.md).
 Consequently the full \(n=2\) stratum in this note's scope is absent.
 
-Items 3--5 remain frontier statements, not exclusions.  In particular the
-\(n=3\) stratum is not closed here.  This note also makes no claim about
-repeated essential trees, a
-nonproper high center, or an isolated base scheme.
+Two further subsequent theorems close \(n=3\).  The fixed-fiber
+simultaneous-jet theorem
+[`k2_profile327_n3_simultaneous_jet_frontier.md`](k2_profile327_n3_simultaneous_jet_frontier.md)
+excludes all seven integral deleted-adjoint cubics.  The nonintegral-block
+theorem
+[`k2_profile327_n3_nonintegral_block_exclusion.md`](k2_profile327_n3_nonintegral_block_exclusion.md)
+excludes the complete nonintegral complement.  Consequently the full
+\(n=3\) stratum in this note's scope is also absent.  Items 3--5 remain the
+historical frontier statements proved by this note, not exclusions by
+themselves.  No assertion here or in the successor theorems concerns
+repeated essential trees, a nonproper high center, isolated base schemes,
+or other cluster rows.
 
 The local six-jet bounds used below are proved, including every rank
 boundary, in
@@ -175,7 +183,7 @@ The calculation applies to either nonproper label.  Hence both deleted
 cubics which omit a nonproper label are nonintegral for a general equation.
 No simultaneous multijet assertion is used.
 
-## 3. Why \(n=3\) and the other deleted cubics remain open
+## 3. Why this note's original count leaves \(n=3\) open
 
 If \(n=3\) and a nonproper label is omitted, then \(s=2\), so the fixed
 cubic codimension is twenty-eight.  Forget both selected marked tangent
@@ -477,8 +485,16 @@ the low-degree factor-pair theorem are used.
 > The residual-boundary theorem in
 > [`k2_profile327_n2_residual_boundary_exclusion.md`](k2_profile327_n2_residual_boundary_exclusion.md)
 > excludes this entire complement, including the mixed mismatches.  Thus the
-> full \(n=2\) row is absent; only the \(n=3\) frontier remains in the present
-> singleton problem.
+> full \(n=2\) row is absent.
+>
+> For \(n=3\), the fixed-fiber repair in
+> [`k2_profile327_n3_simultaneous_jet_frontier.md`](k2_profile327_n3_simultaneous_jet_frontier.md)
+> excludes all seven integral deleted-adjoint cubics.  The remaining
+> nonintegral-cubic block combinatorics are excluded in
+> [`k2_profile327_n3_nonintegral_block_exclusion.md`](k2_profile327_n3_nonintegral_block_exclusion.md).
+> Thus the full \(n=3\) row is absent as well.  Together with the prior
+> all-proper and exactly-one-nonproper exclusions, this closes the entire
+> proper-high seven-distinct-singleton \([3,2^7]\) row.
 
 The incidence margins, the simultaneous-jet thresholds, the weak-block
 table, the residual contacts, and the common-support inequalities are

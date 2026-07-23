@@ -62,15 +62,20 @@
 > conic support.  The two-line jet theorem reduces these supports to
 > rank-zero or reducible-residual boundaries, and the residual-boundary
 > theorem excludes every one of them, including the mixed mismatches.
-> Hence that entire scoped \(n=2\) singleton row is absent.  With three, the direct
-> omitted-label count has exact margin zero and the
-> simultaneous-jet additivity remains open.  The same
+> Hence that entire scoped \(n=2\) singleton row is absent.  With three, the
+> fixed-fiber simultaneous-jet theorem excludes every integral
+> deleted-adjoint cubic, and the nonintegral-block theorem excludes the
+> remaining line--conic and three-line factorizations, common factors, and
+> integral or reducible residual-conic boundaries.  Thus the entire
+> proper-high seven-distinct-singleton \([3,2^7]\) subrow is absent.  The same
 > one-nonproper exclusions hold for isolated bases away
 > from selected cubics and the marked tangent line, leaving only explicit
 > branch/base alignments.  A nonproper \(t=3\) center is forced to be the
 > immediate free successor of a proper \(t=2\) center, with strict
 > multiplicities \((5,5)\); in the remaining six-singleton subrow at most
-> two lows are nonproper.  The rest of the \(k=2\) boundary consists of
+> two lows are nonproper.  The rest of the \(k=2\) boundary includes
+> nonproper-high, repeated-essential-tree, isolated-base, and other cluster
+> rows, together with
 > six explicit through-base squared-line positions and one off-base
 > high-diagonal row for a rank-three net with two distinct base points,
 > the remaining isolated-base square-factor row \(e=1\), and combined branch/base
@@ -121,6 +126,8 @@
 > [`certificates/k2_profile327_multiple_nonproper_frontier.md`](certificates/k2_profile327_multiple_nonproper_frontier.md),
 > [`certificates/k2_profile327_n2_common_support_jet_reduction.md`](certificates/k2_profile327_n2_common_support_jet_reduction.md),
 > [`certificates/k2_profile327_n2_residual_boundary_exclusion.md`](certificates/k2_profile327_n2_residual_boundary_exclusion.md),
+> [`certificates/k2_profile327_n3_simultaneous_jet_frontier.md`](certificates/k2_profile327_n3_simultaneous_jet_frontier.md),
+> [`certificates/k2_profile327_n3_nonintegral_block_exclusion.md`](certificates/k2_profile327_n3_nonintegral_block_exclusion.md),
 > [`certificates/k2_one_nonproper_singleton_offbase_exclusion.md`](certificates/k2_one_nonproper_singleton_offbase_exclusion.md),
 > [`certificates/k2_profile327_nonproper_high_reduction.md`](certificates/k2_profile327_nonproper_high_reduction.md),
 > and
@@ -435,8 +442,12 @@ omitted-label cubics force a common proper-low line or conic support.  The
 two-line jet theorem reduces these supports to rank-zero or
 reducible-residual boundaries; the residual-boundary theorem excludes all
 of them, including the mixed mismatches.  Thus that entire scoped \(n=2\)
-singleton row is absent.  Its three-nonproper row remains at an exact
-zero-margin simultaneous-jet boundary.
+singleton row is absent.  In the three-nonproper row, the fixed-fiber
+simultaneous-jet theorem excludes all seven integral deleted-adjoint
+cubics.  The nonintegral-block theorem then excludes every remaining
+line--conic and three-line distribution, common low-degree branch factor,
+and integral or reducible residual-conic boundary.  Hence the entire
+proper-high seven-distinct-singleton \([3,2^7]\) subrow is absent.
 
 The two extremal first-neighborhood strata in base-point-free \(e=1\)
 have inverse elementary transforms with \(c_2=3\) or \(2\), rather than the
@@ -593,8 +604,8 @@ D-specific certificates now supplied:
 - `certificates/k2_profile327_multiple_nonproper_frontier.md`, with its
   checker and log, proves that both nonproper-label-deleted cubics are
   nonintegral when \(n=2\), reduces survivors to two common-support
-  alignments, records the exact zero-margin \(n=3\) row, and isolates the
-  simultaneous-jet boundary without claiming either row closed;
+  alignments, and records the historical exact zero-margin \(n=3\)
+  simultaneous-jet boundary;
 - `certificates/k2_profile327_n2_common_support_jet_reduction.md`, with its
   checker and log, excludes every rank-one integral-residual selected pair
   in those two \(n=2\) alignments and records the exact mixed rank-zero or
@@ -603,6 +614,13 @@ D-specific certificates now supplied:
   checker and log, excludes the remaining rank-zero and reducible-residual
   complement, including mixed mismatches, and closes the proper-high
   seven-distinct-singleton \(n=2\) row;
+- `certificates/k2_profile327_n3_simultaneous_jet_frontier.md`, with its
+  checker and log, repairs the zero-margin count on the fixed integral-cubic
+  fiber and excludes all seven integral deleted-adjoint cubics in the
+  proper-high seven-distinct-singleton \(n=3\) row;
+- `certificates/k2_profile327_n3_nonintegral_block_exclusion.md`, with its
+  checker and log, excludes the entire nonintegral-cubic complement and
+  closes that scoped \(n=3\) row;
 - `certificates/k2_one_nonproper_singleton_offbase_exclusion.md`, with its
   checker and log, extends both exclusions to isolated bases away from
   selected cubics and the marked tangent line;
@@ -644,11 +662,13 @@ For d = 4 the equation space is P^{89}, since
   classification, and first combined incidences reduce the primitive
   arithmetic squarefree list to four profiles, then exclude two of them
   on every primitive stratum; the actual primitive frontier is
-  \([3^2,2^4]\), \([3,2^7]\).  The primitive \(e=2\), isolated-base
+  \([3^2,2^4]\), \([3,2^7]\).  The entire proper-high
+  seven-distinct-singleton \([3,2^7]\) row is absent.  The primitive \(e=2\), isolated-base
   \(e=3,4\), connected isolated-base \(e=5\), and the entire
-  base-point-free square-factor locus are also absent.  Precisely scoped strata of the two
-  remaining profiles, the isolated-base squared-line row \(e=1\), and combined branch/base
-  clusters remain.  All \(k\ge2\) remain open.
+  base-point-free square-factor locus are also absent.  Nonproper-high,
+  repeated-essential-tree, isolated-base, and other cluster strata of the
+  two remaining profiles, the isolated-base squared-line row \(e=1\), and
+  combined branch/base clusters remain.  All \(k\ge2\) remain open.
 
 Precision note (from review): Z_4 rational is SUFFICIENT for
 unirationality of the general (2,4), not equivalent to it — a negative D2

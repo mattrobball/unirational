@@ -57,10 +57,12 @@ four problems with machine-verified certificates.
   squarefree profiles require infinitely-near low/essential centers; in
   their singleton subrows at least two lows must be nonproper.  In the
   proper-high seven-distinct-singleton [3,2^7] subrow, exactly two or three
-  lows are nonproper: that scoped two-nonproper row is excluded after the
-  common-support rank-zero and reducible-residual boundaries are closed,
-  while the three-nonproper row is an exact zero-margin simultaneous-jet
-  boundary.  Separately, a nonproper high center is uniquely a free
+  lows are nonproper.  The two-nonproper row is excluded after the
+  common-support rank-zero and reducible-residual boundaries are closed.
+  In the three-nonproper row, a fixed-fiber simultaneous-jet argument
+  excludes all integral deleted cubics, and the remaining nonintegral-block
+  analysis excludes every factorization; hence this entire scoped subrow is
+  absent.  Separately, a nonproper high center is uniquely a free
   first-near successor with local strict multiplicities (5,5).
   The two transformed-bundle first-neighborhood strata are excluded, so
   every base-point-free square-factor row e = 1,...,5 is absent.  Isolated
@@ -71,8 +73,10 @@ four problems with machine-verified certificates.
   through-base boundary is an explicit six-position cluster table.
   The conductor-safe component theorem also closes isolated square-factor
   degrees 3 and 4, so the only isolated square-factor degree left is e = 1.
-  Retained strata of the two squarefree profiles, that squared-line row, and combined
-  branch/base clusters keep this case open.  The
+  Retained strata of the two squarefree profiles with nonproper high centers,
+  repeated essential trees, isolated bases, or other cluster types, together
+  with that squared-line row and combined branch/base clusters, keep this
+  case open.  The
   non-tangent bitangent incidence is also general
   type, with K^2 = 1728, and the direct
   flex/Hessian incidence has ample canonical class in every d ≥ 4.  Other

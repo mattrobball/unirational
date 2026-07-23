@@ -1,0 +1,62 @@
+selected low contact weight: PASS
+branch-free line-conic contact distributions: PASS
+line-conic component target dimensions: PASS
+line-conic glued target dimension: PASS
+line-conic balanced fixed codimension: PASS
+line-conic unbalanced raw fixed codimension: PASS
+line-conic effective fixed codimension: PASS
+tangent line-conic effective fixed codimension: PASS
+unique branch-free three-line distribution: PASS
+three-line glued target dimension: PASS
+three-line raw fixed codimension j=0: PASS
+three-line raw fixed codimension j=1: PASS
+three-line raw fixed codimension j=2: PASS
+three-line raw fixed codimension j=3: PASS
+three-line effective fixed codimension: PASS
+double support with three lows forces a second branch copy: PASS
+four proper lows force a second residual-line copy: PASS
+mixed two-low double support gives two branch lines: PASS
+five-low residual line forces a second branch copy: PASS
+four proper lows double a common non-p line: PASS
+three proper lows double a common p-line: PASS
+h=0 common p-line residual contact: PASS
+h=1 common p-line residual plus gluing contact: PASS
+common-line integral residual visible contact: PASS
+common-line integral residual target dimension: PASS
+common-line integral residual balanced fixed codimension: PASS
+common-line integral residual unbalanced raw fixed codimension: PASS
+common-line reducible residual distributions: PASS
+common-line reducible residual glued target dimension: PASS
+reducible residual raw fixed codimension j=0: PASS
+reducible residual raw fixed codimension j=1: PASS
+reducible residual raw fixed codimension j=2: PASS
+reducible residual raw fixed codimension j=3: PASS
+reducible residual selected-tangent target dimension: PASS
+reducible residual tangent raw codimension j=0: PASS
+reducible residual tangent raw codimension j=1: PASS
+reducible residual tangent raw codimension j=2: PASS
+reducible residual tangent raw codimension j=3: PASS
+nonconcurrent linear-syzygy dimension: PASS
+concurrent linear-syzygy dimension: PASS
+net Grassmannian dimension: PASS
+independent three-line incidence dimension: PASS
+nonconcurrent dependent incidence dimension: PASS
+concurrent dependent incidence dimension: PASS
+three distinct jumping lines have codimension three: PASS
+ramification is nonautomatic on independent incidence: PASS
+ramification is nonautomatic on concurrent incidence: PASS
+ramified three-line jumping locus has codimension four: PASS
+single-cubic retained moving dimension: PASS
+branch-free factorization moving dimensions: PASS
+integral nonproper-deleted cubic margin: PASS
+branch-free line-conic margin: PASS
+tangent branch-free line-conic margin: PASS
+branch-free three-line margin: PASS
+common p-line moving dimension: PASS
+common-line integral residual rank-zero margin: PASS
+common-line integral residual all-rank-one margin: PASS
+common-line selected-tangent residual margin: PASS
+common-line reducible residual margin: PASS
+reducible residual selected-tangent margin: PASS
+reducible residual ramified splitting ledger: PASS
+n=3 nonintegral-block exclusion: PASS

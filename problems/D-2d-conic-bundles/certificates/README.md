@@ -15,7 +15,7 @@ On the machine used for the committed run, the SymPy-enabled interpreter is
 SymPy.  A different Python 3 installation is fine once `import sympy`
 succeeds.
 
-The remaining forty-six checkers use only the Python standard library:
+The remaining forty-eight checkers use only the Python standard library:
 
 ```bash
 python3 problems/D-2d-conic-bundles/certificates/quartic_residual_cover_invariants.py
@@ -62,11 +62,13 @@ python3 problems/D-2d-conic-bundles/certificates/k2_profile327_one_nonproper_sin
 python3 problems/D-2d-conic-bundles/certificates/k2_profile327_multiple_nonproper_checks.py
 python3 problems/D-2d-conic-bundles/certificates/k2_profile327_n2_common_support_jet_checks.py
 python3 problems/D-2d-conic-bundles/certificates/k2_profile327_n2_residual_boundary_checks.py
+python3 problems/D-2d-conic-bundles/certificates/k2_profile327_n3_simultaneous_jet_checks.py
+python3 problems/D-2d-conic-bundles/certificates/k2_profile327_n3_nonintegral_block_checks.py
 python3 problems/D-2d-conic-bundles/certificates/k2_one_nonproper_singleton_offbase_checks.py
 python3 problems/D-2d-conic-bundles/certificates/k2_profile327_nonproper_high_checks.py
 ```
 
-The forty-seven `.log` files beside the scripts are the exact captured
+The forty-nine `.log` files beside the scripts are the exact captured
 outputs.  The scripts certify symbolic and numerical arithmetic.  The
 geometric arguments are proved in the adjacent theorem notes:
 `tangent_residual_limits_theorem.md`,
@@ -115,6 +117,8 @@ ledger and current frontier are `k2_double_dodecic_frontier.md`,
 `k2_profile327_multiple_nonproper_frontier.md`,
 `k2_profile327_n2_common_support_jet_reduction.md`,
 `k2_profile327_n2_residual_boundary_exclusion.md`,
+`k2_profile327_n3_simultaneous_jet_frontier.md`,
+`k2_profile327_n3_nonintegral_block_exclusion.md`,
 `k2_one_nonproper_singleton_offbase_exclusion.md`, and
 `k2_profile327_nonproper_high_reduction.md`.
 The isolated-line base-aligned note is a strict frontier theorem: it removes

@@ -4,13 +4,18 @@ two-line restrictions are coupled: PASS
 full selected-line raw minimum: PASS
 rank-one constant-matrix raw minimum: PASS
 rank-zero constant-matrix raw minimum: PASS
-balanced rank-one pair: PASS
-one unbalanced rank-one pair: PASS
-two unbalanced rank-one pair: PASS
-ramified-flat rank-one second line: PASS
+raw ledger balanced rank-one pair: PASS
+raw ledger one unbalanced rank-one pair: PASS
+raw ledger two unbalanced rank-one pair: PASS
+raw ledger ramified-flat rank-one second line: PASS
+raw ledger balanced cross rank-one second line: PASS
+raw ledger rank-zero then balanced rank-one: PASS
+raw ledger rank-zero then unbalanced rank-one: PASS
+raw ledger rank-zero then ramified rank-one: PASS
 balanced rank-zero pair: PASS
 ramified rank-zero second line: PASS
 cross rank-zero second line: PASS
+reverse-ordered rank-zero pair plus unused directed cross: PASS
 two-point threshold e=0: PASS
 two-point threshold e=1: PASS
 two-point threshold e=2: PASS

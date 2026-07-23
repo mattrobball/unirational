@@ -45,15 +45,34 @@ check(min(value for key, value in constant_selected.items()
           if key[0] == 0) == 1,
       "rank-zero constant-matrix raw minimum")
 
-# Effective two-line totals.  Cross and ramification restore each raw loss.
-check(4 + 4 == 8, "balanced rank-one pair")
-check(4 + 3 + 1 == 8, "one unbalanced rank-one pair")
-check(3 + 3 + 2 == 8, "two unbalanced rank-one pair")
-check(4 + 2 + 1 + 1 == 8,
-      "ramified-flat rank-one second line")
+# Raw two-line jet codimension c, splitting codimension e, and ancillary
+# ramification/cross cost d are disjoint.  The target is c+d >= 8-e.
+def meets_three_point_target(c_raw: int, e_split: int,
+                             d_ancillary: int) -> bool:
+    return c_raw + d_ancillary >= 8 - e_split
+
+
+check(meets_three_point_target(8, 0, 0),
+      "raw ledger balanced rank-one pair")
+check(meets_three_point_target(7, 1, 0),
+      "raw ledger one unbalanced rank-one pair")
+check(meets_three_point_target(6, 2, 0),
+      "raw ledger two unbalanced rank-one pair")
+check(meets_three_point_target(6, 1, 1),
+      "raw ledger ramified-flat rank-one second line")
+check(meets_three_point_target(7, 0, 1),
+      "raw ledger balanced cross rank-one second line")
+check(meets_three_point_target(8, 0, 0),
+      "raw ledger rank-zero then balanced rank-one")
+check(meets_three_point_target(7, 1, 0),
+      "raw ledger rank-zero then unbalanced rank-one")
+check(meets_three_point_target(6, 1, 1),
+      "raw ledger rank-zero then ramified rank-one")
 check(4 + 3 == 7, "balanced rank-zero pair")
 check(4 + 2 + 1 == 7, "ramified rank-zero second line")
 check(4 + 2 + 1 == 7, "cross rank-zero second line")
+check(4 + 3 + 1 == 8,
+      "reverse-ordered rank-zero pair plus unused directed cross")
 
 # Required simultaneous codimensions.
 for unbalanced_codim in range(3):
