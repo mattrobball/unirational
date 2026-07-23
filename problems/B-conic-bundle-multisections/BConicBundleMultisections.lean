@@ -1,0 +1,42 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.Basic
+public import BConicBundleMultisections.BinaryCubicResidual
+public import BConicBundleMultisections.BinaryResultant
+public import BConicBundleMultisections.BiprojectiveAffineChart
+public import BConicBundleMultisections.BiprojectiveAffineChartDegree
+public import BConicBundleMultisections.BiprojectiveAffineJacobian
+public import BConicBundleMultisections.BiprojectiveAffineZeroLocus
+public import BConicBundleMultisections.BiprojectiveChartDimension
+public import BConicBundleMultisections.BiprojectiveFiberPolynomial
+public import BConicBundleMultisections.BiprojectiveFiberTangent
+public import BConicBundleMultisections.BiprojectiveFiberTangentIncidence
+public import BConicBundleMultisections.BiprojectiveProjectionFiber
+public import BConicBundleMultisections.BiprojectiveWholeFiberGradient
+public import BConicBundleMultisections.BiprojectiveZeroLocus
+public import BConicBundleMultisections.BiprojectiveZeroLocusSmooth
+public import BConicBundleMultisections.DeterminantHomogeneous
+public import BConicBundleMultisections.MvPolynomialDimension
+public import BConicBundleMultisections.MvPolynomialHomogeneousEvaluation
+public import BConicBundleMultisections.PlaneCubicTangentForm
+public import BConicBundleMultisections.ProjectiveCommonZero
+public import BConicBundleMultisections.ProjectiveCoordinateNormalization
+public import BConicBundleMultisections.ProjectiveHypersurfacePoints
+public import BConicBundleMultisections.ProjectiveLineRestriction
+public import BConicBundleMultisections.ProjectiveResidualPoint
+public import BConicBundleMultisections.ProjectiveTangentHyperplane
+public import BConicBundleMultisections.ProjectivePlane
+public import BConicBundleMultisections.ResultantHomogeneous
+public import BConicBundleMultisections.SchemeFiberClosedSubscheme
+
+/-!
+# BConicBundleMultisections
+
+Formalization workspace for the tangent-residual proof that every smooth bidegree `(2, 3)`
+threefold in `ℙ² × ℙ²` over an algebraically closed field of characteristic zero is unirational.
+-/
