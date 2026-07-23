@@ -1,0 +1,6 @@
+three-line restriction image 72-18=54: PASS
+balanced/unbalanced line domains and determinant target: PASS
+all-unbalanced rank-one first-jet stratum dimension 15: PASS
+r=10: balanced remaining codim=2, all-unbalanced remaining codim=3
+r=11: balanced remaining codim=5, all-unbalanced remaining codim=6
+base-point-free [5] three-line exclusion: PASS

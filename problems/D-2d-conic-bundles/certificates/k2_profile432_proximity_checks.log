@@ -1,0 +1,5 @@
+essential spans with zero/one negligible center: 55 + 30 = 85: PASS
+two-negligible essential spans: none: PASS
+six exhaustive high-core classes with counts 40,2,34,7,1,1: PASS
+parity jumps, free/satellite chains, and line obstructions: PASS
+squarefree [4,3,2] proximity exclusion: PASS

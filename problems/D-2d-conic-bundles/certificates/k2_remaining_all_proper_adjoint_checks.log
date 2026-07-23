@@ -1,0 +1,11 @@
+[3^2,2^4] adjoint lengths 10/9 and unique cubics: PASS
+two-high-center dichotomy 4-dimensional versus double-line 3-space: PASS
+degree-three restriction image 72-18=54: PASS
+integral-conic ordinary/all-pencil margins 1/1: PASS
+free-first-near high-center integral-conic margins 2/2: PASS
+split-conic balanced/unbalanced/all-pencil margins: PASS
+four split adjoint conics require two collinearities: PASS
+42 blocks and 105+21 exact two-block covers: PASS
+integral matched line-conic block margin 4: PASS
+low-degree branch-component pair margins 2/5/5: PASS
+remaining proper-low/all-proper squarefree rows excluded: PASS

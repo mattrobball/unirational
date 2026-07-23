@@ -1,0 +1,23 @@
+(s2,W)=(e2,e3) by a unit triangular change: PASS
+det D(s,W)=U*det D_(A,B,L)(s) formally: PASS
+QQ two-point rank 14: distinct x, distinct y-flags: PASS
+QQ two-point rank 13: distinct x, same y-flag and multiplier: PASS
+QQ two-point rank 14: distinct x, same y-flag but different multiplier: PASS
+QQ two-point rank 13: same x, distinct lines: PASS
+QQ two-point rank 13: same x, distinct lines, one diagonal: PASS
+QQ two-point rank 12: same x, distinct lines, both diagonal: PASS
+QQ two-point rank 11: same x and line, distinct residual points: PASS
+F3 all 81 multiplier pairs: rank 14, distinct x and distinct y-flags: PASS
+F3 same y-flag: rank 13 exactly for equal multipliers: PASS
+F3 all 81 multiplier pairs: rank 13, same x, distinct lines: PASS
+F3 all 81 multiplier pairs: rank 13, same x, distinct lines, one diagonal: PASS
+F3 all 81 multiplier pairs: rank 12, same x, distinct lines, both diagonal: PASS
+F3 all 81 multiplier pairs: rank 11, same x and line, distinct residual points: PASS
+F5 all 625 multiplier pairs: rank 14, distinct x and distinct y-flags: PASS
+F5 same y-flag: rank 13 exactly for equal multipliers: PASS
+F5 all 625 multiplier pairs: rank 13, same x, distinct lines: PASS
+F5 all 625 multiplier pairs: rank 13, same x, distinct lines, one diagonal: PASS
+F5 all 625 multiplier pairs: rank 12, same x, distinct lines, both diagonal: PASS
+F5 all 625 multiplier pairs: rank 11, same x and line, distinct residual points: PASS
+all off-diagonal incidence margins are nonpositive: PASS
+special-seed ramification comparison checks: PASS

@@ -1,0 +1,28 @@
+h0 Q2(-3): PASS
+h0 Q2(-4): PASS
+line restriction dimension: PASS
+common-line residual-conic target: PASS
+common-conic residual-line target: PASS
+common-line bad restriction dimension: PASS
+common-conic bad restriction dimension: PASS
+fixed reducible-cubic codimension: PASS
+balanced selected constant-matrix codimension: PASS
+unramified unbalanced selected codimension: PASS
+ramified flat selected codimension: PASS
+ramification divisor inside unbalanced line locus: PASS
+T1 variations vanishing at the T1-T2 intersection: PASS
+balanced noncross margin b1=0: PASS
+balanced cross margin b1=0: PASS
+unbalanced unramified margin b1=0: PASS
+unbalanced ramified flat margin b1=0: PASS
+unbalanced cross margin b1=0: PASS
+balanced noncross margin b1=1: PASS
+balanced cross margin b1=1: PASS
+unbalanced unramified margin b1=1: PASS
+unbalanced ramified flat margin b1=1: PASS
+unbalanced cross margin b1=1: PASS
+tangent common--residual intersection gives order seven: PASS
+coincident marked line forces second branch line: PASS
+tangent residual conic is forced: PASS
+tangent residual line is forced: PASS
+n=2 common-support two-point jet reduction: PASS

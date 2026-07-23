@@ -1,0 +1,9 @@
+raw quintic-adjoint arithmetic: PASS
+singleton unloading self-intersections: PASS
+canonical branch-genus identity: PASS
+essential-center charge lower bound: PASS
+global curve-dimension arithmetic: PASS
+sharp repeated-chain ranks and D1 comparison: PASS
+fixed-determinant shortcut margins: PASS
+first repeated root partition: PASS
+all repeated-root frontier checks: PASS

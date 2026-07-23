@@ -1,0 +1,3 @@
+global determinant and adjunction coefficients: PASS
+all tested d>=4,e>=1 seed polarizations are positive: PASS
+critical-curve degree, genus, and nonconstant projection: PASS

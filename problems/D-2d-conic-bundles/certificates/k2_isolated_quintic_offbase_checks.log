@@ -1,0 +1,4 @@
+off-base quintic restriction dimension 72: PASS
+isolated-base quintic rank-one margins 3/2/2/3: PASS
+degree-zero quotient routes to rank-two pure square: PASS
+isolated-base off-base integral-quintic square exclusion: PASS

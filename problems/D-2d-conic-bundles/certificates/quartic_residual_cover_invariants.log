@@ -1,0 +1,8 @@
+intersection ring (including E_i) and K_S=-H+2F: PASS
+lci base-scheme intersection length 36: PASS
+branch, half-branch, and canonical E-corrections: PASS
+corrected branch adjunction genus 407: PASS
+double-cover invariants K^2=608 and chi=127: PASS
+lci-square resolution gives p_g=126 and q=0: PASS
+RR/Kodaira arithmetic gives P_2=735: PASS
+scope: numerical checks only; geometric regularity/smoothness not certified

@@ -71,11 +71,20 @@ $\deg\Delta\le 4$, or $\deg\Delta=5$ with even theta-characteristic
 (Beauville, Shokurov; see \cite{Prokhorov} for a survey), while a conic
 bundle with $\deg\Delta\ge 6$ is irrational by the Chow/Prym criterion
 \cite[Th\'eor\`eme~4.9]{Beauville}.  \emph{Unirationality} is far
-more delicate.  The published record reaches discriminant degree $8$:
-conic bundles over $\PP^2$ with $\deg\Delta\le 8$ are unirational
-(Koll\'ar--Mella \cite{KollarMella} together with
-\cite[\S14.3]{Prokhorov}; also the preprint \cite{Mella}, which further
-covers degree $9$ with \emph{singular} discriminant).  For large general
+more delicate.  The sharpest published statement is
+\cite[Corollary~4.9]{Massarenti}: over an algebraically closed field, a
+smooth conic bundle $Q^1\to\PP^2$ whose discriminant carries a point of
+multiplicity $m_p$ with
+\[
+\delta\;\le\;m_p+7
+\]
+is unirational.  The mechanism is projection from that point, which drops
+the residual discriminant degree by $m_p$; consequently a \emph{smooth}
+discriminant ($m_p=1$) is covered only up to $\delta\le 8$, and degree $9$
+only when $\Delta$ is singular.  The unpublished preprint \cite{Mella}
+reaches the same boundary in the same shape.  (The frequently quoted bound
+$\delta\le7$ of \cite{KollarMella} concerns conic bundle \emph{surfaces},
+where $(-K)^2=8-\delta$, not threefolds over $\PP^2$.)  For large general
 discriminants the expectation in the literature was negative:
 ``\emph{It is likely that a conic bundle with sufficiently large and
 general discriminant curve is not unirational}''
@@ -83,9 +92,9 @@ general discriminant curve is not unirational}''
 
 Every smooth hypersurface $X$ of bidegree $(2,3)$ in
 $\PP^2\times\PP^2$ is a standard conic bundle over the second factor with
-discriminant of degree $9$; the general discriminant is smooth.  This is
-precisely the first smooth-discriminant case beyond the earlier published
-boundary.  These notes give a complete proof of:
+discriminant of degree $9$; the general discriminant is smooth.  It
+therefore misses the published boundary by exactly one unit.  These notes
+give a complete proof of:
 
 \begin{theorem}\label{thm:main}
 Every smooth hypersurface $X\subset\PP^2_x\times\PP^2_y$ of bidegree
@@ -768,12 +777,21 @@ Each is supplied in the proof or cited to a primary source.
 A1 was rerun in a clean environment during the audit (Macaulay2 1.26.06 /
 SymPy 1.14.0) with output matching the committed logs; A2--A3 share no
 code with A1; A4 takes its input from an external entropy source.  The
-literature verification (the boundary $\deg\Delta\le8$, the status of
-\cite{Mella} as an unpublished preprint whose degree-$\le8$ consequence
-has published backing via \cite{KollarMella,Prokhorov}, the method and
-status of \cite{DCV}, and the residual-line Latt\`es statements in
-\cite{MMW,DabijaJonsson}) was performed against primary sources on
-2026-07-22.
+literature verification was performed against primary sources on
+2026-07-22 and re-confirmed on 2026-07-23 by reading the relevant papers
+directly.  Specifically checked: \cite[Corollary~4.9]{Massarenti} and its
+definition $\delta:=\deg D$, which places the published boundary for a
+\emph{smooth} discriminant at $\delta\le8$ and leaves our $\delta=9$
+uncovered by exactly one unit; \cite[Corollary~4.10]{Massarenti}
+($\delta\le12$ for quadric surface bundles over $\PP^2$, which subsumes the
+$\PP^3\times\PP^2$ analogue of Theorem~\ref{thm:main});
+\cite[Remark~2.9]{Massarenti} for Lang's theorem in the form
+$h>2^{r+n-h}-2$; \cite[Theorem~1.1]{BvB}; \cite[Corollary~1.2]{Mella};
+the method and status of \cite{DCV}; and the residual-line Latt\`es
+statements in \cite{MMW,DabijaJonsson}.  One caution recorded for future
+searches: the bidegree-$(2,3)$ hypersurfaces in $\PP^2\times\PP^3$ of
+Auel--Böhning--Pirutka are \emph{cubic surface bundles} over $\PP^2$, a
+different family from the one studied here.
 
 \begin{thebibliography}{99}
 
@@ -826,6 +844,12 @@ lecture notes, AMS Summer Institute in Algebraic Geometry (Seattle),
 J.~Koll\'ar, M.~Mella,
 \emph{Quadratic families of elliptic curves and unirationality of degree
 1 conic bundles}, Amer.\ J.\ Math.\ \textbf{139} (2017), 915--936.
+
+\bibitem{Massarenti}
+A.~Massarenti,
+\emph{On the unirationality of quadric bundles},
+Adv. Math. \textbf{431} (2023), 109235;
+\href{https://arxiv.org/abs/2204.08793}{arXiv:2204.08793}.
 
 \bibitem{MassarentiMella}
 A.~Massarenti, M.~Mella,

@@ -1,0 +1,17 @@
+QQ T=0, middle a=0: all three fold ranks: PASS
+QQ T=0, middle a=2: all three fold ranks: PASS
+QQ T=0, bottom: all three fold ranks: PASS
+QQ T=1, middle a=0: all three fold ranks: PASS
+QQ T=1, middle a=2: all three fold ranks: PASS
+QQ T=1, bottom: all three fold ranks: PASS
+F3 T=0, middle: all projective multiplier/kernel ranks: PASS
+F3 T=0, bottom: all projective multiplier/kernel ranks: PASS
+F3 T=1, middle: all projective multiplier/kernel ranks: PASS
+F3 T=1, bottom: all projective multiplier/kernel ranks: PASS
+F5 T=0, middle: all projective multiplier/kernel ranks: PASS
+F5 T=0, bottom: all projective multiplier/kernel ranks: PASS
+F5 T=1, middle: all projective multiplier/kernel ranks: PASS
+F5 T=1, bottom: all projective multiplier/kernel ranks: PASS
+all six degenerate-fold incidence margins are strict: PASS
+node-with-branch coordinate identities: PASS
+special-seed saturated-boundary fold checks: PASS

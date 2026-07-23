@@ -1,0 +1,10 @@
+six repeated-tree cores, unloadings, and node contacts: PASS
+singleton doubled lengths and proper contacts: PASS
+paired-core orientation inequality: PASS
+108 quartic-admissible parity rows have conic contact at least 18: PASS
+double-line support contact is always greater than 10: PASS
+smooth-conic fixed-rank margins: PASS
+nodal fixed-fiber bounds: PASS
+all nodal determinant-target bounds: PASS
+all nodal and rank-two base-point margins: PASS
+all [2,2,1,1] exclusion checks: PASS

@@ -1,0 +1,40 @@
+balanced rank-zero factored space: PASS
+unbalanced rank-zero factored space: PASS
+outside rank-zero codimensions: PASS
+effective outside rank-zero codimension: PASS
+selected rank-zero raw minimum: PASS
+unbalanced_unramified effective noncross contribution: PASS
+unbalanced_unramified effective cross contribution: PASS
+unbalanced_ramified effective noncross contribution: PASS
+unbalanced_ramified effective cross contribution: PASS
+balanced effective cross contribution: PASS
+F3 determinant-zero translate census: PASS
+F3 exhaustive balanced outside-tail corroboration: PASS
+F3 exhaustive unbalanced outside-tail corroboration: PASS
+F3 exhaustive balanced affine-fiber corroboration: PASS
+F3 exhaustive balanced_cross affine-fiber corroboration: PASS
+F3 exhaustive unramified affine-fiber corroboration: PASS
+F3 exhaustive unramified_cross affine-fiber corroboration: PASS
+F3 exhaustive ramified affine-fiber corroboration: PASS
+F3 exhaustive ramified_cross affine-fiber corroboration: PASS
+three choices of exact reducible residual distribution: PASS
+p-line contains exactly one proper low: PASS
+exact residual line contacts: PASS
+double residual line is forced: PASS
+three-line fixed codimension j=0: PASS
+three-line fixed codimension j=1: PASS
+three-line fixed codimension j=2: PASS
+three-line fixed codimension j=3: PASS
+all-unbalanced effective fixed codimension: PASS
+two-rank-zero common-support margin: PASS
+reducible-residual rank-zero margin: PASS
+reducible-residual rank-one margin: PASS
+rank-zero pair balanced b1=0: PASS
+rank-zero pair balanced cross b1=0: PASS
+rank-zero pair unbalanced b1=0: PASS
+rank-zero pair unbalanced cross b1=0: PASS
+rank-zero pair balanced b1=1: PASS
+rank-zero pair balanced cross b1=1: PASS
+rank-zero pair unbalanced b1=1: PASS
+rank-zero pair unbalanced cross b1=1: PASS
+n=2 common-support residual boundary exclusion: PASS

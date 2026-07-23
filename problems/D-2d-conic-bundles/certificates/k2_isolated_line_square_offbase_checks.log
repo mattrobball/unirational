@@ -1,0 +1,3 @@
+isolated-base balanced off-base-line margins are strict: PASS
+only the unbalanced high-diagonal off-base-line boundary remains: PASS
+isolated-base off-base squared-line sharp reduction: PASS

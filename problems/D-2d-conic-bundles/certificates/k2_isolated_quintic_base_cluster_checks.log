@@ -1,0 +1,6 @@
+simple-cluster quotient margins 3/2/1/1 or better: PASS
+proper, free, and satellite cluster dimension compensation: PASS
+multiplicity-two quotient margins 2/2/2/2 or better: PASS
+zero-form margins at least 25/26: PASS
+degree-zero quotient routes to rank-two pure square: PASS
+isolated-base integral-quintic square-root exclusion: PASS

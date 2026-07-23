@@ -3,6 +3,7 @@ __pycache__/
 .DS_Store
 *.aux
 *.log
+!problems/D-2d-conic-bundles/certificates/*.log
 *.out
 *.toc
 *.bbl

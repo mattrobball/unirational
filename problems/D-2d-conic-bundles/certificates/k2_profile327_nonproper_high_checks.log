@@ -1,0 +1,6 @@
+numerical predecessor candidates: PASS
+satellite candidates violate older-parent proximity: PASS
+cubic unloaded length: PASS
+doubled unloaded defect one: PASS
+remaining singleton bound n<=2: PASS
+nonproper-high [3,2^7] reduction: PASS

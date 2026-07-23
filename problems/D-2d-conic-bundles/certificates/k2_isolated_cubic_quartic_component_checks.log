@@ -1,0 +1,8 @@
+matrix-vanishing kernels 18/6 and starting images 54/66: PASS
+conductor-safe saturation loss is applied after the T-kernel: PASS
+simple proper/free/satellite cubic margins 7 or better: PASS
+simple proper/free/satellite quartic margins 7 or better: PASS
+multiplicity-two cubic/quartic margins 9 or better: PASS
+rank-zero cubic/quartic margins 23/26 and 28/29: PASS
+degree-zero square-root boundary routes to rank-two pure square: PASS
+isolated-base e=3,4 factor routing: PASS

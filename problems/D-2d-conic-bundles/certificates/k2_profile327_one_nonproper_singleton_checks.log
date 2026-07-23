@@ -1,0 +1,22 @@
+cubic adjoint colength: PASS
+nonproper singleton tangent contact: PASS
+doubled-adjoint singleton bound n<=3: PASS
+unbalanced outside-cubic valuation table: PASS
+unbalanced outside-cubic zero boundary: PASS
+balanced outside-cubic six-jet codimension: PASS
+balanced transverse six-jet codimension: PASS
+unbalanced transverse six-jet codimension: PASS
+cubic contact with nonproper label omitted: PASS
+omitted nonproper balanced margin: PASS
+omitted nonproper unbalanced margin: PASS
+transverse selected-nonproper contact: PASS
+tangent selected-nonproper contact: PASS
+selected-nonproper cubic codimension: PASS
+selected-nonproper balanced margin: PASS
+selected-nonproper unbalanced margin: PASS
+every P block is a branch line: PASS
+every integral Q block is a branch conic: PASS
+six-low conic would be doubled: PASS
+exceptional four-low line is a component: PASS
+one component cannot cover seven labels: PASS
+one-nonproper-singleton [3,2^7] exclusion: PASS

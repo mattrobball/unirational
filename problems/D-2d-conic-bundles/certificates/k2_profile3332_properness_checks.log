@@ -1,0 +1,5 @@
+adjoint lengths 10/9 and unique deleted-cluster cubic: PASS
+reduced cubic: three double centers force a proper triangle: PASS
+nonreduced cubic contradicts uniqueness by dimension 3 > 1: PASS
+three-line fixed/remaining codimensions 24/1: PASS
+base-point-free [3^3,2] profile exclusion: PASS

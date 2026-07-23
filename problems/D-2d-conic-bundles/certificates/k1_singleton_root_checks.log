@@ -1,0 +1,7 @@
+fixed binary determinant-fiber bounds: PASS
+singleton doubled-cluster colength bound: PASS
+one-nonproper conic margins: PASS
+two-nonproper two-conic margins: PASS
+three-nonproper tangent-conic margins: PASS
+three-nonproper tangent-line margins: PASS
+all singleton-root checks: PASS

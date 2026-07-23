@@ -1,6 +1,6 @@
 # Problems: CAS hunts around Harris's Seattle questions
 
-Three computational problems extracted from the open questions in Joe Harris,
+Four computational problems extracted from the open questions in Joe Harris,
 *Rationality, Unirationality and Rational Connectivity* (Seattle AG institute
 lecture notes), selected and ranked for amenability to computer-algebra
 example/counterexample hunting. Ordered by expected theorem-yield per CPU-hour:
@@ -10,7 +10,7 @@ example/counterexample hunting. Ordered by expected theorem-yield per CPU-hour:
 | [A](A-expected-dimension-curves/SPEC.md) | Expected dimension of spaces of degree-e rational curves on general hypersurfaces, at the open boundary d = n, n+1 | Notes p. 27 "Open problem" (Coskun–Harris–Starr conjecture) | Steady stream of small rigorous theorems; each instance fully decidable |
 | [B](B-conic-bundle-multisections/SPEC.md) | Rational multisections on every smooth bidegree-(2,3) hypersurface in P^2 x P^2 (unirationality of conic bundles) | Notes pp. 23–24, Question on the third variety + refinement 11b | Resolved: tangent residuals give a horizontal rational surface of even degree at most 20 |
 | [C](C-lines-debarre-de-jong/SPEC.md) | Counterexample sweep for the Debarre–de Jong conjecture at degree 9 | Notes p. 27, "Question (de Jong)" | Likely null result (conjecture believed); a hit = full refutation, major |
-| [D](D-2d-conic-bundles/SPEC.md) | Unirationality of general (2,d) hypersurfaces, d ≥ 4; primary target d = 4 via the tangent-residual double cover | Notes pp. 23–24 ("d large"), continuation of B | Crisp reduction: rationality of an explicit double cover Z → S decides (2,4) |
+| [D](D-2d-conic-bundles/SPEC.md) | Unirationality of general (2,d) hypersurfaces, d ≥ 4; primary target d = 4 via the tangent-residual double cover | Notes pp. 23–24 ("d large"), continuation of B | Tangent, bitangent, and flex routes are general type; D4 classes (1,0) and (1,1) are excluded, with a two-profile primitive class-(1,2) frontier; headline open |
 
 ## Shared conventions
 
@@ -35,7 +35,7 @@ Keep every run scripted and logged: one `.m2`/input file + one log per
 ## The three master certificates
 
 These are what turn F_p computations into characteristic-0 theorems, and they
-are the backbone of all three specs.
+are the backbone of all four specs.
 
 1. **Krull lower bound (free).** A subscheme of P^{M} (or A^M) cut by c
    equations has every component of dimension ≥ M − c. So "actual dim ≥
@@ -79,8 +79,9 @@ with an honest Grobner/`dim` run before logging them as results.
 | Problem | Stage | Last update |
 |---------|-------|-------------|
 | A | CLOSED — all target rows settled (Coskun–Starr + new deg-2/3 proofs); fiberwise-saturation certificate found invalid, see RESOLUTION.md | 2026-07-22 |
-| B | OPEN, advanced — certified special unirational pencil; (1,0) excluded, (1,1) frontier down to one stratum; degree-8 descent route live; triple-point count in SPEC corrected (D4, no p_g drop) | 2026-07-22 |
+| B | CLOSED affirmatively for every smooth member — tangent residuals give a horizontal rational surface and a parametrization of even degree at most 20 | 2026-07-22 |
 | C | Field-free statement REFUTED (char-2 Fermat, dim 12 vs 6); char-0 case open, reduced to N=9 singular line-rich sixfolds + LT remainder cases | 2026-07-22 |
+| D | D1/D2 CLOSED; D3 tangent limits, uniform special-seed dualizing positivity, smooth ramification comparison, generic two-point separation, quartic middle/bottom multiplier-boundary folds, bitangent, and flex complete; D4 k=0 and k=1 excluded, k=2 reduced to two primitive squarefree profiles with the proper-high [3,2^7] exactly-two-nonproper singleton row, the base-point-free square-factor locus, isolated-base rows e=2,3,4, and the connected e=5 row closed, leaving e=1. Open-residual local singularities, other covariants, k>=2, and headline remain open | 2026-07-23 |
 
 ## Provenance
 
@@ -96,6 +97,6 @@ the session that produced these specs. Key status facts used:
   partial results), with the covers-of-lines component making the literal
   statement fail at d = N (index 1).
 - Unirationality open for: general quintic fourfold, sextic double solid,
-  general (2,d) conic bundles in P^2 x P^2 for d ≥ 3.
+  general (2,d) conic bundles in P^2 x P^2 for d ≥ 4.
 - Very general quartic fourfolds not stably rational (Totaro; Schreieder);
   existence of any smooth rational hypersurface of degree ≥ 4 open.

@@ -1,0 +1,6 @@
+eight three-essential cores and unloadings: PASS
+quartic-colength bounds and 68 initial rows: PASS
+degree<=5 component pruning, 68 -> 14 rows: PASS
+sharp AA444 + N^3 conic margins: PASS
+integral genus and 13-row terminal bounds: PASS
+all three-essential-tree checks: PASS

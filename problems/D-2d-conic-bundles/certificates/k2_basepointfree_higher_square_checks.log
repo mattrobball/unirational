@@ -1,0 +1,4 @@
+e=3: 3 shapes; survivors=[]: PASS
+e=4: 5 shapes; survivors=[]: PASS
+e=5: 7 shapes; survivors=[(5,)]: PASS
+base-point-free e=3,4 exclusion and e=5 reduction: PASS

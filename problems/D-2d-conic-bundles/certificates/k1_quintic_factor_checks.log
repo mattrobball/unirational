@@ -1,0 +1,6 @@
+quintic rank-one cone bounds: PASS
+rank-three quintic-factor margin: PASS
+rank-two off-base quintic-factor margin: PASS
+rank-two through-base quintic-factor margins: PASS
+reduced-decic integrality consequence: PASS
+all integral-quintic factor checks: PASS

@@ -1,0 +1,6 @@
+off-base high-diagonal base-stratum margins: PASS
+through-base simple-cluster margins: PASS
+multiplicity-two through-base margins: PASS
+off-base transform dimensions and one-point exclusion: PASS
+principalized transform Chern ledger and split exceptions: PASS
+isolated-base squared-line base-aligned frontier: PASS

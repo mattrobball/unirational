@@ -1,0 +1,11 @@
+two length-ten cubic adjoint clusters: PASS
+three-line restriction image 72-18=54: PASS
+worst three-line determinant codimension 54-30=24: PASS
+univariate determinant four-jet codimension 4: PASS
+[4,2^4]: ordinary margin=1, all-unbalanced margin=1
+[3^3,2]: ordinary margin=3, all-unbalanced margin=3
+proper-center cubic margins: PASS
+uniform [4,2^4] cubic subcluster Hilbert function: PASS
+uniform [4,2^4] four-line margins all equal 3: PASS
+integral-cubic [3,2^7] margins both equal 1: PASS
+combined cubic exclusions: PASS

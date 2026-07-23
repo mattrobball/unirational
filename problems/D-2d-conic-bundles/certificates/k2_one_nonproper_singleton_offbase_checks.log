@@ -1,0 +1,5 @@
+off-base restriction ranks: PASS
+two-line isolated-base margin: PASS
+line-conic isolated-base margin: PASS
+two-conic isolated-base margin: PASS
+off-base one-nonproper-singleton reduction: PASS

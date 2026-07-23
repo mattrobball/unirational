@@ -1,0 +1,6 @@
+two-essential and singleton unloadings: PASS
+quartic-colength bounds on N singletons: PASS
+smooth-conic fixed-rank margins: PASS
+nodal-conic fixed-fiber bounds: PASS
+exceptional nodal-conic base-point margins: PASS
+all two-essential-partition checks: PASS

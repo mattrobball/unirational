@@ -1,0 +1,25 @@
+integral cubic row s=0: PASS
+integral cubic row s=1: PASS
+integral cubic row s=2: PASS
+integral cubic row s=3: PASS
+n=2 omitted-N balanced margin: PASS
+n=2 omitted-N unbalanced margin: PASS
+n=3 omitted-N balanced boundary: PASS
+n=3 omitted-N unbalanced boundary: PASS
+simultaneous tangent threshold s=2, j=0: PASS
+simultaneous tangent threshold s=2, j=1: PASS
+simultaneous tangent threshold s=2, j=2: PASS
+simultaneous tangent threshold s=3, j=0: PASS
+simultaneous tangent threshold s=3, j=1: PASS
+simultaneous tangent threshold s=3, j=2: PASS
+simultaneous tangent threshold s=3, j=3: PASS
+weak NN P-block target: PASS
+integral Q-block target table: PASS
+repeated P-support residual contacts: PASS
+repeated integral-Q support boundary: PASS
+n=2 selected P-line is forced: PASS
+n=2 selected Q-conic is forced: PASS
+n=2 three-low P-line doubles: PASS
+n=2 four-low line is forced: PASS
+n=2 repeated integral-Q support doubles: PASS
+multiple-nonproper [3,2^7] frontier: PASS

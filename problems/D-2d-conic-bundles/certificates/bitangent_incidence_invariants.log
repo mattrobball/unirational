@@ -1,0 +1,6 @@
+symmetric-power Chern classes: PASS
+relative square-quartic class (4,16,28): PASS
+bitangent surface class and generic degree 28: PASS
+canonical class 4(H+J) and K^2=1728: PASS
+general line slice: C^2=28, K.C=240, genus=135: PASS
+theta-monodromy/Riemann-Hurwitz check genus=135: PASS

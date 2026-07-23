@@ -1,0 +1,10 @@
+resolved-line domains and determinant-fiber bounds: PASS
+isolated-base stratum codimensions: PASS
+ordinary four-line isolated-base margins: PASS
+all-unbalanced four-line margins: PASS
+four-line central-base local ranks and margins 6/4/4/4: PASS
+triangle central-base exceptional margins 4/4: PASS
+simultaneous triangle-vertex margins: PASS
+unified triangle central/side ledger without double counting: PASS
+triangle-side isolated-base margins: PASS
+isolated-base [4,2^4] and [3^3,2] exclusions: PASS

@@ -55,18 +55,47 @@ longer needed for the headline: the all-smooth construction produces a class
 
 ## Literature boundary
 
-- Over an algebraically closed field of characteristic zero, Mella proves that
-  a standard conic bundle over \(\mathbf P^2\) is
-  unirational when its discriminant has degree at most 8, and also in degree 9
-  when the discriminant is singular.  Thus that result already covers smooth
-  `(2,3)` total spaces with singular discriminant.  The remaining boundary was
-  the smooth degree-9 discriminant case, not covered by Corollary 1.2.  See
-  [Mella, Theorem 1.1 and Corollary
-  1.2](https://arxiv.org/abs/1403.7055).
+- **The published boundary is Massarenti, Corollary 4.9** (*On the
+  unirationality of quadric bundles*, Adv. Math. **431** (2023) 109235,
+  [arXiv:2204.08793](https://arxiv.org/abs/2204.08793)): over an
+  algebraically closed field, a smooth conic bundle \(Q^1\to\mathbf P^2\)
+  whose discriminant has a point of multiplicity \(m_p\) with
+  \(\delta\le m_p+7\) is unirational.  A **smooth** discriminant has
+  \(m_p=1\), so this caps at \(\delta\le 8\); the mechanism is projection
+  from a point of the discriminant, which drops the residual degree by
+  \(m_p\).  Our family has \(\delta=9\) with smooth discriminant and is
+  therefore **not covered, by exactly one unit**.  (Verified against the
+  paper's own text, 2026-07-23, together with its definition
+  \(\delta:=\deg D\) as the rank-drop divisor.)
+- Mella's earlier preprint reaches the same boundary in the same shape ---
+  \(\deg\Delta\le 8\), or \(\deg\Delta=9\) with \(\Delta\) **singular** ---
+  see [Mella, Corollary 1.2](https://arxiv.org/abs/1403.7055).  That
+  preprint was never published, but it is no longer the load-bearing
+  citation: Massarenti's published corollary subsumes it.
+- Not to be confused: [Kollár--Mella](https://arxiv.org/abs/1412.3673),
+  Corollary 8, quoted as "\(\delta\le 7\)", concerns conic bundle
+  **surfaces** (there \((-K)^2=8-\delta\)), not threefolds over
+  \(\mathbf P^2\).
 - Over \(\mathbf C\), Böhning and Graf von Bothmer prove that for every
   \(n\geq2\), a very general \((2,n)\) hypersurface in
   \(\mathbf P^2\times\mathbf P^2\) is not stably rational.  See [Theorem
-  1.1](https://ems.press/journals/cmh/articles/15336).
+  1.1](https://ems.press/journals/cmh/articles/15336) (statement verified
+  against the paper, 2026-07-23; their \(H_{2,n}\) is literally our family,
+  and they note the Prym datum here is *non-generic*, which is why a bespoke
+  Koszul argument was needed).  The same conclusion follows independently
+  from [Hassett--Kresch--Tschinkel](https://arxiv.org/abs/1503.08497) via
+  [Prokhorov, Corollary 14.4.4](https://arxiv.org/abs/1712.05564): a very
+  general conic bundle over \(\mathbf P^2\) with discriminant of degree
+  \(\ge 6\) is not stably rational.  So the corollary is double-sourced.
+- **Ordering trap, recorded deliberately.**  Auel--Böhning--Pirutka,
+  *Stable rationality of quadric and cubic surface bundle fourfolds*
+  ([arXiv:1710.07270](https://arxiv.org/abs/1710.07270)), prove that a very
+  general hypersurface of bidegree \((2,3)\) in
+  \(\mathbf P^2\times\mathbf P^3\) is not stably rational.  Despite the
+  identical bidegree label this is **a different family**: there the degree
+  2 sits on the \(\mathbf P^2\) factor, making it a *cubic surface bundle*
+  over \(\mathbf P^2\).  Any literature search on "bidegree (2,3)" will hit
+  it; check which factor carries which degree before comparing.
 - Over \(\mathbf C\), every smooth `(2,3)` member is irrational.  Its conic
   projection is flat with relative Picard rank one and has degree-9
   discriminant (possibly nodal); Beauville's conic-bundle criterion applies
@@ -98,6 +127,47 @@ longer needed for the headline: the all-smooth construction produces a class
 Stable irrationality does not obstruct unirationality: the
 [Artin--Mumford threefold](https://doi.org/10.1112/plms/s3-25.1.75) is the
 standard counterexample.
+
+### Neighbouring families (for the record, all verified 2026-07-23)
+
+Raising the first factor to \(\mathbf P^m\) keeps the plane-cubic fibration
+intact and the construction runs verbatim, but the outcome is already known
+away from \(m=2\):
+
+- \(m=3\) (quadric surface bundle over \(\mathbf P^2\), \(\delta=12\)) is
+  **covered by Massarenti, Corollary 4.10**: any smooth
+  \(Q^2\to\mathbf P^2\) with \(\delta\le12\) is unirational.  Combined with
+  [Bini--Kapustka--Kapustka](https://arxiv.org/abs/2005.02092), Corollary
+  1.3, he notes a very general such bundle with \(10\le\delta\le12\) is
+  unirational but not stably rational --- the exact analogue of our
+  threefold statement one dimension up.  Non-stable-rationality here is also
+  [Schreieder](https://arxiv.org/abs/1706.01358), Corollary 2(I).
+- \(m\ge4\) is **rational** outright: Massarenti's Remark 2.9 states Lang's
+  theorem as "\(h>2^{r+n-h}-2\Rightarrow Q^h_\eta\) has an \(F\)-point",
+  which over an algebraically closed field with base \(\mathbf P^2\) means
+  fiber dimension \(\ge3\), i.e. \(m\ge4\).  Same threshold in
+  [Schreieder](https://arxiv.org/abs/1706.01356), introduction: "a section
+  exists whenever \(r>2^n-2\)".
+- Replacing the first \(\mathbf P^2\) by a del Pezzo surface yields nothing
+  new: for the fibers of \(\pi\) to be rational curves *and* the bundle to
+  be standard, monodromy forces the fiber class to be \(2L\) with
+  \(p_a(2L)=0\), whence \(L^2=1\), \(-K\cdot L=3\), and \(|L|\) is a
+  birational morphism \(S\to\mathbf P^2\) --- so \(F\) is pulled back from
+  \(\mathbf P^2\times\mathbf P^2\).  Enumeration over all
+  \(\mathrm{Bl}_r\mathbf P^2\), \(r\le8\), returns only these line classes.
+- \(d=2\) (Verra threefolds) is classically unirational because *both*
+  projections are conic bundles; \(d=3\) is exactly where the second
+  fibration jumps to genus one, which is what the construction exploits.
+
+The mechanism itself has no located antecedent.  The tangent/group-law
+technique exists --- [Bogomolov--Tschinkel](https://arxiv.org/abs/math/9811043)
+and successors --- but is always used to produce *more multisections of the
+same fibration*, over a curve base, for density of rational points.  Using
+the group law of one fibration to build a multisection of a *second,
+coexisting* fibration was not found anywhere.  Distinct from this is the
+Segre--Morin tangent-line tradition for hypersurfaces, recently generalized
+by [Cheng](https://arxiv.org/abs/2511.07545); the two should not be
+conflated.
 
 ## Extension from general to every smooth member
 

@@ -1,0 +1,34 @@
+h0 Q2(-3): PASS
+single-line restriction dimension: PASS
+two-line restrictions are coupled: PASS
+full selected-line raw minimum: PASS
+rank-one constant-matrix raw minimum: PASS
+rank-zero constant-matrix raw minimum: PASS
+balanced rank-one pair: PASS
+one unbalanced rank-one pair: PASS
+two unbalanced rank-one pair: PASS
+ramified-flat rank-one second line: PASS
+balanced rank-zero pair: PASS
+ramified rank-zero second line: PASS
+cross rank-zero second line: PASS
+two-point threshold e=0: PASS
+two-point threshold e=1: PASS
+two-point threshold e=2: PASS
+rank-zero pair with an unbalanced line: PASS
+balanced rank-zero pair is one condition short: PASS
+two balanced coincident lines: PASS
+two unbalanced coincident lines: PASS
+three balanced coincident lines: PASS
+three unbalanced coincident lines: PASS
+nonproper-deleted fixed cubic codimension: PASS
+n=3 full moving dimension: PASS
+nonproper-deleted integral cubic margin: PASS
+two-selected proper-deleted margin: PASS
+three-selected generic margin: PASS
+three-balanced-rank-zero local zero margin: PASS
+flat constant rank-one cone codimension: PASS
+integral-cubic splitting and rank-zero fibers: PASS
+uniform fixed rank-zero fiber bound: PASS
+rank-zero fixed cubic codimension: PASS
+three-balanced-rank-zero repaired margin: PASS
+n=3 simultaneous-jet and fixed-fiber reduction: PASS

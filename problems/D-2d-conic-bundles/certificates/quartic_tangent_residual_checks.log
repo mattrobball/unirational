@@ -1,0 +1,6 @@
+universal quartic identity with corrected sign: PASS
+six quadric coefficients: degree 7 and gcd 1: PASS
+seed-17 quadratic specialization: six degree-14 coefficients, gcd 1: PASS
+smooth quartic/no junk/eight distinct residual points: PASS
+divisor arithmetic: (14,4)-2(0,1)=(14,2), base degree 28: PASS
+all quartic tangent-residual checks passed

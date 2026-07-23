@@ -1,0 +1,11 @@
+canonical-resolution correction profiles: PASS
+factor-degree and adjoint-system table: PASS
+smooth double-decic invariants: PASS
+proper multiplicity-six orbit margins: PASS
+squared-line orbit margins: PASS
+irreducible-conic orbit margins: PASS
+rank-one cone bounds: PASS
+integral-cubic restriction ranks and margins: PASS
+integral-quartic restriction ranks and margins: PASS
+nested profile forced local type: PASS
+nested profile restriction ranks and orbit margins: PASS

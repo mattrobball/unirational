@@ -1,0 +1,15 @@
+cubic adjoint colength: PASS
+integral conic contact with N omitted: PASS
+full-contact line-conic codimension: PASS
+N-omitted worst margin: PASS
+transverse selected-N conic contact: PASS
+selected-N line-conic codimension: PASS
+selected-N balanced margin: PASS
+selected-N unbalanced margin: PASS
+tangent selected-N conic is a component: PASS
+line plus conic-component codimension: PASS
+tangent conic ordinary omitted-point margin: PASS
+tangent conic all-unbalanced omitted-point margin: PASS
+non-L split conic supplies a branch line: PASS
+one fixed branch-line pair cannot cover four omissions: PASS
+one-nonproper-singleton [3^2,2^4] exclusion: PASS

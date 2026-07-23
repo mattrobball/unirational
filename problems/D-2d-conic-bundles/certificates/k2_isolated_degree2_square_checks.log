@@ -1,0 +1,7 @@
+k=2 isolated-base degree-two square-root exclusion checks: PASS
+first-neighborhood bad dimensions: 20, 23, 20, 18, 16
+fourth-neighborhood ambient bad dimensions: 38, 45, 46, 48, 36
+fourth-line moving margins (off, h=1, h=2, m=2): 3, 1, 1, 5
+lower-twist bad dimensions: 14, 17, 14, 12, 10
+simple-cluster sequential margins: 6, 6, 5, 6, 5, 7, 7, 6, 7, 7, 9
+multiplicity-two two-line margins (0, 1, 2 incident lines): 12, 10, 6

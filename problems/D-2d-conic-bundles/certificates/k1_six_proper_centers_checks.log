@@ -1,0 +1,4 @@
+binary determinant-zero cone dimensions: PASS
+line-component orbit margins: PASS
+five-point conic restriction margins: PASS
+all line-factor and six-proper-center checks: PASS

@@ -1,0 +1,5 @@
+all-d degree, canonical-square, and slice-genus formulas: PASS
+length-three jet-bundle top Chern class: PASS
+generic flex degree 24: PASS
+canonical class 3H+4P+J and K^2=1872: PASS
+general line slice: C^2=24, K.C=264, genus=145: PASS

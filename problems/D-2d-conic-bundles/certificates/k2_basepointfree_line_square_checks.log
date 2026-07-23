@@ -1,0 +1,4 @@
+balanced first-neighborhood strata and margins: PASS
+unbalanced first-neighborhood strata and margins: PASS
+elementary-transform Chern classes (c2=3,2 versus k1 c2=1): PASS
+base-point-free k=2 squared-line sharp reduction: PASS

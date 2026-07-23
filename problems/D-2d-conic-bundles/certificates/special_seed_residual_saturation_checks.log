@@ -1,0 +1,4 @@
+T=0: row splitting, unsaturated/saturated ranks, and eight-row node locus: PASS
+T=1: row splitting, unsaturated/saturated ranks, and eight-row node locus: PASS
+lambda1*l1 + lambda2*l2 is an irreducible rank-four quadric: PASS
+special-seed residual saturation checks: PASS
