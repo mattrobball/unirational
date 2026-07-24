@@ -301,6 +301,41 @@ theorem residualComponentMultisection_toBase :
     (residualComponentMultisection F hF v hv i j).toBase =
       residualComponentToBase F hF v hv i j := rfl
 
+/-! ### Reduction of component horizontality
+
+`IsDominant (residualComponentMultisection …).baseChangeFst` is the one geometric input
+that the multisection principle still needs from this side.  Because the corestricted
+residual map `residualComponentPoint` is dominant, horizontality of the component is
+*equivalent* to a statement with no scheme-theoretic image in it at all: dominance of the
+explicit localized residual map onto the conic-bundle base.  That is a concrete assertion
+about the residual coordinates — the residual surface is not contained in a fibre — rather
+than a statement about `T_L` as a subscheme.
+-/
+
+/-- Going to the base through the component agrees with the localized residual map. -/
+@[reassoc]
+theorem residualComponentPoint_toBase :
+    residualComponentPoint F hF v hv i j ≫ residualComponentToBase F hF v hv i j =
+      residualImagePointOfNormalizedLoc F hF v hv i j ≫ residualImageToBase F := by
+  rw [residualComponentToBase, ← Category.assoc, residualComponentPoint_ι]
+
+/-- **Horizontality of the component reduces to a concrete coordinate statement.**  The
+component dominates the conic-bundle base iff the localized residual map does. -/
+theorem isDominant_residualComponentToBase_iff :
+    IsDominant (residualComponentToBase F hF v hv i j) ↔
+      IsDominant (residualImagePointOfNormalizedLoc F hF v hv i j ≫
+        residualImageToBase F) := by
+  rw [← residualComponentPoint_toBase]
+  exact (IsDominant.comp_iff (residualComponentPoint F hF v hv i j)
+    (residualComponentToBase F hF v hv i j)).symm
+
+/-- Forward form: the concrete statement supplies component horizontality. -/
+theorem isDominant_residualComponentToBase
+    (h : IsDominant (residualImagePointOfNormalizedLoc F hF v hv i j ≫
+      residualImageToBase F)) :
+    IsDominant (residualComponentToBase F hF v hv i j) :=
+  (isDominant_residualComponentToBase_iff F hF v hv i j).mpr h
+
 end
 
 end BConicBundleMultisections
