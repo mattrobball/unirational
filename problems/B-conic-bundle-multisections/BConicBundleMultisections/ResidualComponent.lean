@@ -336,6 +336,72 @@ theorem isDominant_residualComponentToBase
     IsDominant (residualComponentToBase F hF v hv i j) :=
   (isDominant_residualComponentToBase_iff F hF v hv i j).mpr h
 
+/-! ### From component horizontality to base-change dominance
+
+The step the multisection principle actually consumes is dominance of `baseChangeFst`, not of
+`toBase`.  For `residualMultisection` that step goes through *surjectivity* of the base map
+(`isDominant_residualMultisection_baseChangeFst_of_smooth_bidegree23`), which avoids needing
+flatness of the conic bundle — nowhere proved in this development.  The same route works for the
+component: `residualComponentToBase` is proper (a closed immersion followed by the proper
+projection `ℙ² × ℙ² → ℙ²`), so dominance upgrades to surjectivity, and surjectivity is stable
+under base change.
+-/
+
+/-- The component immersion is a closed immersion: it is the subscheme inclusion of the kernel
+ideal sheaf of the localized residual map. -/
+instance residualComponentι_isClosedImmersion :
+    IsClosedImmersion (residualComponentι F hF v hv i j) :=
+  inferInstanceAs
+    (IsClosedImmersion
+      (Scheme.Hom.ker (residualImagePointOfNormalizedLoc F hF v hv i j)).subschemeι)
+
+/-- The component's map to the conic-bundle base is proper. -/
+instance residualComponentToBase_isProper :
+    IsProper (residualComponentToBase F hF v hv i j) := by
+  unfold residualComponentToBase
+  infer_instance
+
+/-- A proper dominant morphism is surjective: the range is dense and closed. -/
+theorem surjective_residualComponentToBase
+    (hdom : IsDominant (residualComponentToBase F hF v hv i j)) :
+    Surjective (residualComponentToBase F hF v hv i j) := by
+  haveI := hdom
+  exact Surjective.of_universallyClosed_of_isDominant _
+
+/-- **Component horizontality upgrades to base-change dominance.**  This is the input
+`Multisection.hasUnirationalParametrization_of_baseChange` requires, obtained without any
+flatness hypothesis on the conic bundle. -/
+theorem isDominant_residualComponentMultisection_baseChangeFst
+    (hdom : IsDominant (residualComponentToBase F hF v hv i j)) :
+    IsDominant (residualComponentMultisection F hF v hv i j).baseChangeFst := by
+  haveI : Surjective (residualComponentToBase F hF v hv i j) :=
+    surjective_residualComponentToBase F hF v hv i j hdom
+  haveI : Surjective (residualComponentMultisection F hF v hv i j).baseChangeFst := by
+    change Surjective (Limits.pullback.fst (biprojectiveZeroLocusSnd 2 2 k F)
+      (residualComponentToBase F hF v hv i j))
+    infer_instance
+  infer_instance
+
+/-! ### Pointed-conic rationality over the component -/
+
+/-- Pointed-conic rationality of the conic bundle base-changed to the residual component `T_L`.
+
+Component analogue of `IsResidualPointedConicRational`.  Unfolded: the base change
+`X ×_{ℙ²_y} T_L → T_L` is birational over `T_L` to relative affine `1`-space.  The point on the
+generic fibre is the tautological section carried by the multisection. -/
+def IsResidualComponentPointedConicRational : Prop :=
+  IsPointedConicRationalOver
+    (biprojectiveZeroLocusSnd 2 2 k F)
+    (residualComponentToBase F hF v hv i j)
+    (residualComponentMultisection F hF v hv i j).tautologicalPullbackSection
+
+/-- Pointed-conic rationality supplies the fibre-direction (dimension one) parametrization. -/
+theorem hasUnirationalParametrization1_residualComponentBaseChangeSnd
+    (h : IsResidualComponentPointedConicRational F hF v hv i j) :
+    HasUnirationalParametrization 1
+      (residualComponentMultisection F hF v hv i j).baseChangeSnd :=
+  ⟨UnirationalParametrization.ofBirationalOverAffine h⟩
+
 end
 
 end BConicBundleMultisections

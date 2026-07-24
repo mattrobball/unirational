@@ -2382,21 +2382,6 @@ theorem eval_evalAffineTwoPoint_residualImageXCoords
       eval (fun i => evalAffineTwoPoint t s (residualImageXCoords F v i)) H :=
   eval_evalAffineTwoPoint_of_map_C t s H (residualImageXCoords F v)
 
-/-- Map of `specializeSecondCoordinates` under a coefficient ring hom. -/
-theorem map_specializeSecondCoordinates
-    {k : Type u} [CommRing k]
-    (y : Fin 3 → affineTwoRing k) (phi : affineTwoRing k →+* k)
-    (H : MvPolynomial (BiprojectiveCoordinate 2 2) (affineTwoRing k)) :
-    map phi (specializeSecondCoordinates (m := 2) y H) =
-      specializeSecondCoordinates (m := 2) (fun i => phi (y i)) (map phi H) := by
-  induction H using MvPolynomial.induction_on with
-  | C c => simp [map_C]
-  | add f g hf hg => simp [map_add, hf, hg]
-  | mul_X f i hf =>
-      cases i with
-      | inl j => simp [map_mul, map_X, hf, specializeSecondCoordinates_X_inl]
-      | inr j => simp [map_mul, map_C, map_X, hf, specializeSecondCoordinates_X_inr]
-
 /-- Specialize the specialized-conic pullback along the affine plane at `(t, _)`. -/
 theorem map_evalAffineTwoPoint_specializedConicPullback
     {k : Type u} [Field k]

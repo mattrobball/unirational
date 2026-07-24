@@ -155,6 +155,30 @@ theorem specializeSecondCoordinates_X_inr {m n : ℕ} {R : Type*} [CommSemiring 
     specializeSecondCoordinates (m := m) y (X (.inr j)) = C (y j) := by
   simp [specializeSecondCoordinates]
 
+/-- **A change of coefficient ring commutes with second-block specialization**, provided the
+specialization point is transported along the same map.
+
+Both sides are ring homomorphisms out of a polynomial ring, so it suffices to compare them on
+constants and on the two kinds of variable. -/
+theorem map_specializeSecondCoordinates {m n : ℕ} {R S : Type*} [CommSemiring R] [CommSemiring S]
+    (f : R →+* S) (y : Fin (n + 1) → R) (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    map f (specializeSecondCoordinates y F)
+      = specializeSecondCoordinates (fun j => f (y j)) (map f F) := by
+  revert F
+  suffices h : (map f).comp (specializeSecondCoordinates (m := m) y).toRingHom
+      = ((specializeSecondCoordinates (m := m) fun j => f (y j)).toRingHom).comp (map f) from
+    fun F => congrFun (congrArg (fun g => (g : _ →+* _).toFun) h) F
+  refine MvPolynomial.ringHom_ext (fun r => ?_) (fun z => ?_)
+  · simp only [RingHom.comp_apply, AlgHom.toRingHom_eq_coe, AlgHom.coe_toRingHom,
+      specializeSecondCoordinates_C, map_C]
+  · cases z with
+    | inl i =>
+        simp only [RingHom.comp_apply, AlgHom.toRingHom_eq_coe, AlgHom.coe_toRingHom,
+          specializeSecondCoordinates_X_inl, map_X]
+    | inr j =>
+        simp only [RingHom.comp_apply, AlgHom.toRingHom_eq_coe, AlgHom.coe_toRingHom,
+          specializeSecondCoordinates_X_inr, map_X, map_C]
+
 /-- Partial evaluation in the first coordinate block commutes with differentiation in the
 second block. -/
 theorem specializeFirstCoordinates_pderiv_inr

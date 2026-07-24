@@ -1,0 +1,117 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.GoodLine
+public import BConicBundleMultisections.MainTheorem
+
+/-!
+# Guards on the headline theorem
+
+Mechanical checks that the main theorem still says what it is supposed to say, and that the
+results advertised as proved are still proved.  Every check here is a compile-time failure, so the
+existing `lake build` CI enforces them on each push with no extra configuration.
+
+## Why this file exists
+
+The failure mode this project has already suffered is not an unsound proof — it is a *statement*
+that drifted.  An earlier version of the main theorem type-checked, contained no `sorry`, and
+reported only the three standard axioms, while carrying a hypothesis
+`HasResidualBaseChangeUnirationalParametrization3` that is false whenever the residual image is
+reducible.  Neither an axiom check nor a `sorry` census detects that; only reading the statement
+does.  So:
+
+* `headline_statement_guard` pins the exact type of the main theorem.  Adding a hypothesis breaks
+  the build here, which forces the change to appear in the diff of a file whose whole purpose is
+  to be read.
+* `#guard_no_sorry` pins the results that must stay independent of the outstanding obligations.
+  These are load-bearing: if one of them silently came to depend on an obligation, the remaining
+  work would look smaller than it is.
+* `#guard_axioms_standard` allows `sorryAx` but nothing else, so no new axiom can enter unnoticed
+  while obligations remain.
+
+When the obligations are discharged, tighten the main theorem's check from
+`#guard_axioms_standard` to `#guard_no_sorry`.  That single edit is the definition of done.
+-/
+
+open Lean Elab Command in
+/-- Fail unless the named constant's axiom set is contained in
+`{propext, Classical.choice, Quot.sound, sorryAx}`. -/
+elab "#guard_axioms_standard " id:ident : command => do
+  let n ← liftCoreM <| realizeGlobalConstNoOverloadWithInfo id
+  let axs ← liftCoreM <| collectAxioms n
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound, ``sorryAx]
+  let bad := axs.filter fun a => !allowed.contains a
+  unless bad.isEmpty do
+    throwError "{n} depends on unexpected axioms: {bad}"
+
+open Lean Elab Command in
+/-- Fail unless the named constant is fully proved: axiom set contained in the three standard
+axioms, with no `sorryAx`. -/
+elab "#guard_no_sorry " id:ident : command => do
+  let n ← liftCoreM <| realizeGlobalConstNoOverloadWithInfo id
+  let axs ← liftCoreM <| collectAxioms n
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let bad := axs.filter fun a => !allowed.contains a
+  unless bad.isEmpty do
+    throwError "{n} was expected to be fully proved but depends on: {bad}"
+
+@[expose] public section
+
+open scoped AlgebraicGeometry
+
+namespace BConicBundleMultisections
+
+universe u
+
+open AlgebraicGeometry MvPolynomial
+
+/-- **Statement guard.**  Fails to compile if the headline theorem acquires a hypothesis, changes
+its conclusion, or weakens its dimension.  The right-hand side is the theorem itself; the
+left-hand side is the statement we intend it to have, written out.
+
+Do not "fix" a failure here by editing the expected type.  A failure means the theorem changed;
+decide whether that change was intended before touching this file. -/
+theorem headline_statement_guard :
+    ∀ (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+      (F : MvPolynomial (BiprojectiveCoordinate 2 2) k),
+      IsBidegree23 F → F ≠ 0 →
+        ∀ [Smooth (Bidegree23ZeroLocus.toSpec k F)],
+          HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) :=
+  smooth_bidegree23_hasUnirationalParametrization
+
+end BConicBundleMultisections
+
+/-! ### Axiom guards -/
+
+-- The main theorem: `sorryAx` is expected while obligations remain; nothing else is.
+-- Tighten this to `#guard_no_sorry` when the last obligation is discharged.
+#guard_axioms_standard BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization
+#guard_axioms_standard BConicBundleMultisections.headline_statement_guard
+
+-- Load-bearing results that must remain fully proved.  If one of these starts depending on an
+-- obligation, the remaining work is larger than the obligation list suggests.
+#guard_no_sorry BConicBundleMultisections.exists_isotropic_ternary_quadratic_poly
+#guard_no_sorry BConicBundleMultisections.residualImageXCoords_ne_zero_of_smooth
+#guard_no_sorry BConicBundleMultisections.specializedConicFreeDirForm_ne_zero_of_smooth
+#guard_no_sorry BConicBundleMultisections.hasUnirationalParametrization2_residualComponent
+#guard_no_sorry BConicBundleMultisections.isDominant_residualComponentMultisection_baseChangeFst
+#guard_no_sorry BConicBundleMultisections.isDominant_residualComponentToBase_iff
+#guard_no_sorry BConicBundleMultisections.residual_baseChange_package_summary
+#guard_no_sorry
+  BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization_of_multisection_dominant
+
+-- Obligation 1 must reduce to the single nonsingular-stereo obligation and nothing else.
+#guard_axioms_standard BConicBundleMultisections.residualYCoords_ne_zero_of_smooth
+
+-- WP-4 is closed: the tower and its residual-component instance are fully proved.
+#guard_no_sorry BConicBundleMultisections.hasUnirationalParametrization_succ_of_tower
+#guard_no_sorry BConicBundleMultisections.hasUnirationalParametrization3_of_component_tower
+#guard_no_sorry BConicBundleMultisections.comp_hom_over
+#guard_no_sorry BConicBundleMultisections.mapPartialMap_hom_over
+
+-- §1(b) of the source proof is fully proved and must stay that way.
+#guard_no_sorry BConicBundleMultisections.not_eq_rename_mul_rename_of_smooth

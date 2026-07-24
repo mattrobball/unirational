@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.MultisectionLine
 public import BConicBundleMultisections.AffineSpaceProduct
 public import BConicBundleMultisections.BiprojectiveNoWholeFiber
 public import BConicBundleMultisections.HomogeneousQuadraticEval
@@ -139,6 +140,90 @@ theorem coordinateLineSpecializedConic_ne_zero_of_smooth
     coordinateLineSpecializedConic F t ≠ 0 :=
   not_specializeSecondCoordinates_eq_zero_of_smooth_bidegree23 K F hF hF0 0
     (coordinateLinePoint K t) (by simp [coordinateLinePoint])
+
+/-! ### The specialized conic along an arbitrary line
+
+The source proof runs the residual construction along a line `L` chosen in §3, and only normalises
+`L` to `{W = 0}` afterwards.  The definitions above hardcode that normalisation; the ones here take
+the line as a parameter, given by two spanning vectors `p, q`, with the point at parameter `t` being
+`p + t·q` (`linePointOf`).
+
+They are stated over an arbitrary commutative ring, exactly as the coordinate versions are, so they
+are strictly more general and no downstream generality is lost.  `MultisectionLine.mapVecs` produces
+`p, q` from a line over the base field. -/
+
+/-- The conic cut out on the fiber over the point of `L` at parameter `t`. -/
+def lineSpecializedConic
+    {R : Type u} [CommRing R] (p q : Fin 3 → R)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) R) (t : R) :
+    MvPolynomial (Fin 3) R :=
+  specializeSecondCoordinates (m := 2) (linePointOf p q t) F
+
+theorem lineSpecializedConic_isHomogeneous
+    {R : Type u} [CommRing R] (p q : Fin 3 → R)
+    {F : MvPolynomial (BiprojectiveCoordinate 2 2) R}
+    (hF : IsBidegree23 F) (t : R) :
+    (lineSpecializedConic p q F t).IsHomogeneous 2 :=
+  hF.specializeSecondCoordinates_isHomogeneous (linePointOf p q t)
+
+/-- The generic conic along `L`: the specialization at the indeterminate `t`, with coefficients in
+`K[t]`.  This is the ternary quadratic form to which Tsen's theorem is applied. -/
+def lineSpecializedConicPoly
+    {K : Type u} [Field K] (p q : Fin 3 → K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) :
+    MvPolynomial (Fin 3) (Polynomial K) :=
+  specializeSecondCoordinates (m := 2)
+    (linePointOf (fun a => Polynomial.C (p a)) (fun a => Polynomial.C (q a)) Polynomial.X)
+    (map (Polynomial.C : K →+* Polynomial K) F)
+
+theorem lineSpecializedConicPoly_isHomogeneous
+    {K : Type u} [Field K] (p q : Fin 3 → K)
+    {F : MvPolynomial (BiprojectiveCoordinate 2 2) K}
+    (hF : IsBidegree23 F) :
+    (lineSpecializedConicPoly p q F).IsHomogeneous 2 := by
+  have hmap : IsBidegree23 (map (Polynomial.C : K →+* Polynomial K) F) :=
+    hF.map_coefficients (Polynomial.C : K →+* Polynomial K)
+  exact hmap.specializeSecondCoordinates_isHomogeneous _
+
+/-- The generic conic along `L`, as a matrix-valued ternary quadratic over `K[t]`. -/
+def lineTernaryQuadraticPoly
+    {K : Type u} [Field K] (p q : Fin 3 → K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) :
+    @TernaryQuadraticPoly K _ :=
+  fun i j => ternaryQuadraticCoeff (lineSpecializedConicPoly p q F) i j
+
+/-- **Tsen's theorem along `L`**: the generic conic has a nonzero isotropic vector over `K[t]`. -/
+theorem exists_isotropic_line_conic
+    (K : Type u) [Field K] [IsAlgClosed K] (p q : Fin 3 → K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) :
+    ∃ v : Fin 3 → Polynomial K, v ≠ 0 ∧
+      TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p q F) v = 0 :=
+  exists_isotropic_ternary_quadratic_poly (lineTernaryQuadraticPoly p q F)
+
+/-- The coordinate line is the case `p = (1,0,0)`, `q = (0,1,0)`.  Nothing downstream has to change
+until it is migrated. -/
+theorem coordinateLineSpecializedConic_eq
+    {R : Type u} [CommRing R] (F : MvPolynomial (BiprojectiveCoordinate 2 2) R) (t : R) :
+    coordinateLineSpecializedConic F t = lineSpecializedConic ![1, 0, 0] ![0, 1, 0] F t := by
+  have : coordinateLinePoint R t = linePointOf ![1, 0, 0] ![(0 : R), 1, 0] t := by
+    funext a; fin_cases a <;> simp [coordinateLinePoint, linePointOf]
+  rw [coordinateLineSpecializedConic, lineSpecializedConic, this]
+
+theorem coordinateLineSpecializedConicPoly_eq
+    {K : Type u} [Field K] (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) :
+    coordinateLineSpecializedConicPoly F = lineSpecializedConicPoly ![1, 0, 0] ![0, 1, 0] F := by
+  have : coordinateLinePoint (Polynomial K) Polynomial.X
+      = linePointOf (fun a => Polynomial.C (![1, 0, 0] a))
+          (fun a => Polynomial.C (![(0 : K), 1, 0] a)) Polynomial.X := by
+    funext a; fin_cases a <;> simp [coordinateLinePoint, linePointOf]
+  rw [coordinateLineSpecializedConicPoly, lineSpecializedConicPoly, this]
+
+theorem coordinateLineTernaryQuadraticPoly_eq
+    {K : Type u} [Field K] (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) :
+    coordinateLineTernaryQuadraticPoly F = lineTernaryQuadraticPoly ![1, 0, 0] ![0, 1, 0] F := by
+  funext i j
+  rw [coordinateLineTernaryQuadraticPoly, lineTernaryQuadraticPoly,
+    coordinateLineSpecializedConicPoly_eq]
 
 /-- Specializing a matrix-valued ternary quadratic at `t` recovers the numerical double sum. -/
 theorem TernaryQuadraticPoly.eval_eval
@@ -417,6 +502,53 @@ theorem map_eval_coordinateLineSpecializedConicPoly
             have hmul :=
               congrArg (fun g => g * (C (0 : K) : MvPolynomial (Fin 3) K)) hp
             convert hmul using 1 <;> simp [map_mul]
+
+/-- **Specializing the generic conic along `L` at `t` gives the conic at the point of `L` at `t`.**
+
+For a general line this is uniform in the second-block index: the generic point has coordinate
+`C (p j) + X · C (q j)`, which `evalRingHom t` sends to `p j + t · q j`.  The coordinate-line
+version below instead splits into the three cases `1`, `t`, `0`; that case split was an artefact of
+the normalisation, and it disappears here. -/
+theorem map_eval_lineSpecializedConicPoly
+    {K : Type u} [Field K] (p q : Fin 3 → K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (t : K) :
+    map (Polynomial.evalRingHom t) (lineSpecializedConicPoly p q F)
+      = lineSpecializedConic p q F t := by
+  rw [lineSpecializedConicPoly, map_specializeSecondCoordinates, lineSpecializedConic,
+    map_map]
+  have hC : (Polynomial.evalRingHom t).comp (Polynomial.C : K →+* Polynomial K)
+      = RingHom.id K := by
+    ext a; simp
+  have hpt : (fun j => Polynomial.evalRingHom t
+        (linePointOf (fun a => Polynomial.C (p a)) (fun a => Polynomial.C (q a)) Polynomial.X j))
+      = linePointOf p q t := by
+    funext j
+    simp only [linePointOf, map_add, map_mul, Polynomial.eval_mul, Polynomial.eval_C,
+      Polynomial.eval_X, Polynomial.coe_evalRingHom]
+  rw [hpt, hC, map_id]
+
+/-- Tsen section specialization is isotropic for the conic at the point of `L` at `t`. -/
+theorem evalPolySection_isotropic_lineSpecializedConic
+    {K : Type u} [Field K] (p q : Fin 3 → K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
+    (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial K)
+    (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p q F) v = 0)
+    (t : K) :
+    eval (evalPolySection v t) (lineSpecializedConic p q F t) = 0 := by
+  refine evalPolySection_isotropic_of_TernaryQuadraticPoly
+    (lineTernaryQuadraticPoly p q F) v hv t
+    (lineSpecializedConic p q F t)
+    (lineSpecializedConic_isHomogeneous p q hF t) ?_
+  intro i j
+  calc
+    Polynomial.eval t (lineTernaryQuadraticPoly p q F i j)
+        = ternaryQuadraticCoeff
+            (map (Polynomial.evalRingHom t) (lineSpecializedConicPoly p q F)) i j := by
+          simpa [lineTernaryQuadraticPoly] using
+            ternaryQuadraticCoeff_map_eval (lineSpecializedConicPoly p q F) t i j
+    _ = ternaryQuadraticCoeff (lineSpecializedConic p q F t) i j := by
+          rw [map_eval_lineSpecializedConicPoly]
 
 /-- Tsen section specialization is isotropic for the numerical specialized conic. -/
 theorem evalPolySection_isotropic_coordinateLineSpecializedConic

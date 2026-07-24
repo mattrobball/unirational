@@ -12,6 +12,7 @@ public import BConicBundleMultisections.MultisectionPrinciple
 public import BConicBundleMultisections.ResidualDivisor
 public import BConicBundleMultisections.ResidualImage
 public import BConicBundleMultisections.ResidualBaseChangeUnirational
+public import BConicBundleMultisections.ResidualComponentAssembly
 public import BConicBundleMultisections.ResidualMultisectionDominant
 public import BConicBundleMultisections.Unirationality
 public import BConicBundleMultisections.UniversalResidualIdentity
@@ -271,28 +272,61 @@ theorem residual_baseChange_vertical_surface_package
   vertical_surface_stereo_package F hF hF0
 
 /--
-**Main theorem (conditional on residual base-change dim-3 unirationality).**
+**Main theorem.**  Every smooth bidegree-`(2,3)` hypersurface in `ℙ² × ℙ²` over an algebraically
+closed field of characteristic zero is unirational: it admits a dominant rational map from affine
+`3`-space over the base.
 
-All geometric reductions except the dim-3 unirational parametrization of the residual base change
-`X_T` are complete: projection dominance, residual multisection surjectivity/horizontality, and
-base-change dominance.  The remaining input is `HasResidualBaseChangeUnirationalParametrization3`,
-classically obtained from residual-image rationality (via the residual map from the vertical
-surface `S_L`, using Tsen on the coordinate-line conic) and pointed-conic rationality of `X_T/T`.
+This is the faithful statement of the target — no auxiliary hypotheses beyond smoothness,
+bidegree, and `F ≠ 0`.  It is **not** fully proved: the proof below is complete except for the
+outstanding obligations inventoried in `ResidualComponentAssembly.lean`, one module per work
+package.  Each carries a `sorry` and a docstring recording its status.  Nothing else in the
+development is incomplete, so
+`#print axioms smooth_bidegree23_hasUnirationalParametrization` reporting `sorryAx` is an exact
+measure of what is owed.
 
-Algebraic stereo for `S_L` and the affine-space product isomorphism
-`𝔸¹_{𝔸²} ≃ 𝔸³` are available; the residual-image and pointed-conic scheme maps remain.
+The argument: pick a Tsen isotropic section `v` of the coordinate-line conic (proved, from Tsen
+for ternary quadratics over `k[t]`) and a chart in which the residual chart denominator does not
+vanish (residual `X`-coordinates nonzero is proved from smoothness; residual `Y`-coordinates is
+obligation 1).  The residual component `T_L` — the scheme-theoretic image of the localized
+residual chart map — is then a multisection of the conic bundle; its horizontality (obligation 2)
+upgrades to dominance of `baseChangeFst` without any flatness hypothesis, and its base change is
+unirational in dimension `2 + 1 = 3` (obligations 3 and 4).  The multisection principle transports
+that parametrization back to `X`.
 -/
 theorem smooth_bidegree23_hasUnirationalParametrization
     (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
-    [Smooth (Bidegree23ZeroLocus.toSpec k F)]
-    (hXT : HasResidualBaseChangeUnirationalParametrization3 F) :
-    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) :=
-  smooth_bidegree23_hasUnirationalParametrization_of_residualBaseChange k F hF hF0 hXT
+    [Smooth (Bidegree23ZeroLocus.toSpec k F)] :
+    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) := by
+  obtain ⟨v, hv0, hv, i, j, hdenom⟩ := exists_residualChart_of_smooth F hF hF0
+  haveI : IsDominant (residualComponentMultisection F hF v hv i j).baseChangeFst :=
+    isDominant_residualComponentMultisection_baseChangeFst F hF v hv i j
+      (isDominant_residualComponentToBase F hF v hv i j
+        (isDominant_residualImagePointOfNormalizedLoc_toBase
+          F hF hF0 v hv0 hv i j hdenom))
+  exact smooth_bidegree23_hasUnirationalParametrization_of_multisection_dominant
+    k F hF hF0 (residualComponentMultisection F hF v hv i j)
+    (hasUnirationalParametrization3_residualComponentBaseChange
+      F hF hF0 v hv0 hv i j hdenom)
 
-/-- Unconditional packaging once residual-image unirationality and pointed-conic rationality are
-supplied, together with their composition bridge (dimension `2 + 1 = 3`). -/
+/-- Existential form of the main theorem. -/
+theorem smooth_bidegree23_isUnirationalOver
+    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (Bidegree23ZeroLocus.toSpec k F)] :
+    IsUnirationalOver (Bidegree23ZeroLocus.toSpec k F) :=
+  (smooth_bidegree23_hasUnirationalParametrization k F hF hF0).isUnirationalOver
+
+/-- Packaging on the `residualImage` track, retained for reference.
+
+**This route is superseded.**  `HasResidualImageUnirationalParametrization2 F` and
+`HasResidualBaseChangeUnirationalParametrization3 F` are statements about the complete
+intersection `residualImage F = V(F) ∩ V(q_F)`, which is reducible whenever the degree-ten
+coefficients of `q_F` share a common factor.  Both are then *false*, not merely unproved, because
+no dominant rational map from irreducible affine space onto a reducible target exists.  The live
+argument runs on `residualComponent` instead; see `ResidualComponentAssembly.lean`. -/
 theorem smooth_bidegree23_hasUnirationalParametrization_of_residual_image_and_pointed
     (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -305,7 +339,7 @@ theorem smooth_bidegree23_hasUnirationalParametrization_of_residual_image_and_po
         IsResidualPointedConicRational F →
           HasResidualBaseChangeUnirationalParametrization3 F) :
     HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) :=
-  smooth_bidegree23_hasUnirationalParametrization k F hF hF0
+  smooth_bidegree23_hasUnirationalParametrization_of_residualBaseChange k F hF hF0
     (hasResidualBaseChangeUnirationalParametrization3_of_image_and_pointed F hT hP hbridge)
 
 end
