@@ -313,7 +313,7 @@ theorem affineChartQuotient_smooth_of_global
     {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) K)
     (hF : IsBihomogeneousOfBidegree d e F)
     (i : Fin (m + 1)) (j : Fin (n + 1))
-    [Smooth (biprojectiveZeroLocusToSpec m n K F hF)] :
+    [Smooth (biprojectiveZeroLocusToSpec m n K F)] :
     RingHom.Smooth
       (algebraMap K
         (MvPolynomial (Fin m ⊕ Fin n) K ⧸
@@ -338,7 +338,7 @@ theorem exists_affineChartEquation_pderiv_ne_zero_at_of_global_smooth
     (hF : IsBihomogeneousOfBidegree d e F)
     (i : Fin (m + 1)) (j : Fin (n + 1))
     (hne : affineChartEquation m n K i j F ≠ 0)
-    [Smooth (biprojectiveZeroLocusToSpec m n K F hF)]
+    [Smooth (biprojectiveZeroLocusToSpec m n K F)]
     (a : (Fin m ⊕ Fin n) → K)
     (ha : MvPolynomial.aeval a (affineChartEquation m n K i j F) = 0) :
     ∃ k : Fin m ⊕ Fin n,
@@ -356,7 +356,7 @@ theorem no_common_zero_affineChartEquation_and_pderiv_of_global_smooth
     (hF : IsBihomogeneousOfBidegree d e F)
     (i : Fin (m + 1)) (j : Fin (n + 1))
     (hne : affineChartEquation m n K i j F ≠ 0)
-    [Smooth (biprojectiveZeroLocusToSpec m n K F hF)]
+    [Smooth (biprojectiveZeroLocusToSpec m n K F)]
     (a : (Fin m ⊕ Fin n) → K) :
     ¬ (MvPolynomial.aeval a (affineChartEquation m n K i j F) = 0 ∧
       ∀ k : Fin m ⊕ Fin n,

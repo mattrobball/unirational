@@ -11,3 +11,6 @@ __pycache__/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# Claude Code local harness state
+.claude/

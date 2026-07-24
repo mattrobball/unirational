@@ -6,6 +6,7 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import Mathlib.AlgebraicGeometry.AffineSpace
+public import Mathlib.AlgebraicGeometry.Birational.Birational
 public import Mathlib.AlgebraicGeometry.Birational.Dominant
 public import Mathlib.Tactic.MkIffOfInductiveProp
 
@@ -13,7 +14,8 @@ public import Mathlib.Tactic.MkIffOfInductiveProp
 # Unirational parametrizations of schemes
 
 This file defines chosen fixed-dimensional unirational parametrizations, their existence, and
-finite-dimensional unirationality over a base scheme.
+finite-dimensional unirationality over a base scheme.  It also records transfer of fixed-dimensional
+parametrizations along dominant morphisms and finite-dimensional birational models over the base.
 -/
 
 @[expose] public section
@@ -111,6 +113,80 @@ theorem toHasUnirationalParametrization (p : UnirationalParametrization n sX) :
     HasUnirationalParametrization n sX :=
   ⟨p⟩
 
+/--
+Postcompose a unirational parametrization of `Y → S` by a dominant `S`-morphism `Y → X`.
+
+This is the composition step in the multisection principle: a dominant map from a rational
+source to a base change of `X`, followed by the projection of that base change to `X`, yields a
+unirational parametrization of `X`.
+-/
+def postcomp {Y : Scheme.{u}} {sY : Y ⟶ S} (p : UnirationalParametrization n sY)
+    (f : Y ⟶ X) [IsDominant f] (hf : f ≫ sX = sY) :
+    UnirationalParametrization n sX where
+  map := p.map.compHom f
+  isDominant := Scheme.RationalMap.isDominant_compHom p.map f
+  isOver := by
+    rw [Scheme.RationalMap.compHom_compHom, hf]
+    exact p.isOver
+
+open Scheme
+
+/-- The rational map associated to a partial isomorphism is dominant. -/
+instance (priority := 100) {X Y : Scheme.{u}} (φ : PartialIso X Y) :
+    φ.toRationalMap.IsDominant := by
+  have : IsDominant φ.target.ι := Opens.isDominant_ι φ.dense_target
+  have : IsDominant φ.toPartialMap.hom := by
+    dsimp [PartialIso.toPartialMap]
+    infer_instance
+  exact φ.toPartialMap.isDominant_toRationalMap_iff.mpr ‹_›
+
+/--
+A partial isomorphism over `S` from finite-dimensional relative affine space supplies a
+unirational parametrization.
+
+This converts a finite-dimensional `BirationalOver` witness into the project's fixed-dimension
+parametrization API (U08 bridge).  The `IsOver` identity is compared as an equivalence of partial
+maps on the dense source of `φ`.
+-/
+def ofPartialIso (φ : PartialIso (𝔸(ULift.{u} (Fin n); S)) X)
+    (hφ : φ.IsOver (𝔸(ULift.{u} (Fin n); S) ↘ S) sX) :
+    UnirationalParametrization n sX where
+  map := φ.toRationalMap
+  isDominant := inferInstance
+  isOver := by
+    let A : Scheme.{u} := 𝔸(ULift.{u} (Fin n); S)
+    -- Compare `φ.toPartialMap.compHom sX` with `(A ↘ S).toPartialMap` on `φ.source`.
+    change φ.toPartialMap.toRationalMap.compHom sX = (A ↘ S).toPartialMap.toRationalMap
+    rw [← Scheme.RationalMap.compHom_toRationalMap]
+    refine PartialMap.toRationalMap_eq_iff.mpr ?_
+    refine ⟨φ.source, φ.dense_source, le_rfl, le_top, ?_⟩
+    -- Left restriction: `iso.hom ≫ target.ι ≫ sX`.
+    -- Right restriction: `homOfLE le_top ≫ topIso.hom ≫ (A ↘ S)`.
+    -- `PartialIso.IsOver` and `U.ι = homOfLE (U ≤ ⊤) ≫ topIso.hom` finish the proof.
+    have hφ' : φ.iso.hom ≫ φ.target.ι ≫ sX = φ.source.ι ≫ A ↘ S := hφ
+    -- Unfold both restricted homs.
+    -- Left domain equals `φ.source`, so `homOfLE le_rfl` is the identity.
+    -- Right is the restriction of the total structure map of affine space.
+    dsimp [PartialMap.restrict, PartialMap.compHom, Hom.toPartialMap, PartialIso.toPartialMap]
+    rw [Scheme.homOfLE_rfl, Category.id_comp, Category.assoc, hφ']
+    -- `topIso.hom = ⊤.ι`, and `homOfLE_ι` says `homOfLE (U ≤ ⊤) ≫ ⊤.ι = U.ι`.
+    have hι : φ.source.ι =
+        A.homOfLE (le_top : φ.source ≤ ⊤) ≫ A.topIso.hom := by
+      rw [Scheme.topIso_hom]
+      exact (Scheme.homOfLE_ι A (le_top : φ.source ≤ ⊤)).symm
+    rw [hι, Category.assoc]
+
+/-- From a finite-dimensional birationality witness over `S` to affine space, extract a
+unirational parametrization.
+
+`BirationalOver sX (A ↘ S)` chooses a partial iso `X → A`; its inverse is a partial iso
+`A → X` and is the oriented witness used by `ofPartialIso`.
+-/
+def ofBirationalOverAffine
+    (h : BirationalOver sX (𝔸(ULift.{u} (Fin n); S) ↘ S)) :
+    UnirationalParametrization n sX :=
+  ofPartialIso h.partialIso.symm h.partialIso_isOver.symm
+
 end UnirationalParametrization
 
 /-- Admitting a fixed-dimensional unirational parametrization is invariant under an isomorphism
@@ -125,6 +201,14 @@ theorem hasUnirationalParametrization_iff_of_iso
       rw [← he]
       simp
     exact Nonempty.map (fun p ↦ p.targetIso e.symm he')
+
+/-- Postcompose an existence statement for a unirational parametrization by a dominant
+`S`-morphism. -/
+theorem HasUnirationalParametrization.postcomp {S X Y : Scheme.{u}} {n : ℕ}
+    {sX : X ⟶ S} {sY : Y ⟶ S} (h : HasUnirationalParametrization n sY)
+    (f : Y ⟶ X) [IsDominant f] (hf : f ≫ sX = sY) :
+    HasUnirationalParametrization n sX :=
+  h.map fun p ↦ p.postcomp f hf
 
 /--
 A scheme `X → S` is unirational over `S` if it admits a parametrization by some
@@ -155,6 +239,26 @@ theorem HasUnirationalParametrization.isUnirationalOver {S X : Scheme.{u}} {n : 
 theorem UnirationalParametrization.isUnirationalOver {S X : Scheme.{u}} {n : ℕ}
     {sX : X ⟶ S} (p : UnirationalParametrization n sX) : IsUnirationalOver sX :=
   p.toHasUnirationalParametrization.isUnirationalOver
+
+/-- Postcomposing an unirational scheme by a dominant morphism over the base preserves
+unirationality. -/
+theorem IsUnirationalOver.postcomp {S X Y : Scheme.{u}} {sX : X ⟶ S} {sY : Y ⟶ S}
+    [IsUnirationalOver sY] (f : Y ⟶ X) [IsDominant f] (hf : f ≫ sX = sY) :
+    IsUnirationalOver sX := by
+  obtain ⟨n, hn⟩ := IsUnirationalOver.exists_parametrization (sX := sY)
+  exact (hn.postcomp f hf).isUnirationalOver
+
+/-- Finite-dimensional birationality of `X` over `S` to relative affine `n`-space implies a
+unirational parametrization of dimension `n`.
+
+The partial isomorphism is oriented as a map **from** affine space **to** `X`, matching the
+direction of a parametrization.
+-/
+theorem HasUnirationalParametrization.of_partialIso {S X : Scheme.{u}} {n : ℕ}
+    {sX : X ⟶ S} (φ : Scheme.PartialIso (𝔸(ULift.{u} (Fin n); S)) X)
+    (hφ : φ.IsOver (𝔸(ULift.{u} (Fin n); S) ↘ S) sX) :
+    HasUnirationalParametrization n sX :=
+  ⟨UnirationalParametrization.ofPartialIso φ hφ⟩
 
 end BConicBundleMultisections
 

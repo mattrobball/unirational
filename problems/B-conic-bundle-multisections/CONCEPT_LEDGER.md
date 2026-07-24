@@ -57,29 +57,28 @@ theorem smooth_bidegree23_hasUnirationalParametrization
     (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
-    [Smooth (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F hF)] :
+    [Smooth (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F)] :
     HasUnirationalParametrization 3
-      (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F hF) := by
+      (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F) := by
   ...
 
 theorem smooth_bidegree23_isUnirational
     (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
-    [Smooth (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F hF)] :
+    [Smooth (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F)] :
     IsUnirationalOver
-      (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F hF) :=
+      (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F) :=
   (smooth_bidegree23_hasUnirationalParametrization k F hF hF0).isUnirationalOver
 ```
 
 Here `biprojectiveZeroLocus` is the constructed canonical closed subscheme, not an assumed
 parameter. Its ideal, subscheme, immersion, projections, and structure morphism are indexed by
-both `F` and `hF`. The proof is a semantic guard: it prevents the public projective-zero-locus
-API from accepting a non-bihomogeneous equation even though the underlying chartwise ideal
-construction does not inspect the proof term. The embedding-indexed property
-`IsBiprojectiveZeroLocus m n R F hF ι` is an explicit structure, not a typeclass; it identifies
-any chosen presentation with the canonical one and supplies the flexible companion form of the
-theorem.
+`F` alone (proof-independent constructors). Bihomogeneity hypotheses such as `hF` appear only
+on theorems that need them for descent or local–global comparison. The embedding-indexed
+property `IsBiprojectiveZeroLocus m n R F ι` is an explicit structure, not a typeclass; it
+identifies any chosen presentation with the canonical one and supplies the flexible companion
+form of the theorem.
 The public theorem may use a bundled `Bidegree23Hypersurface`; the unbundled equation-level
 fixed-dimension statement above is the acceptance test; `IsUnirationalOver` is its
 dimension-forgetting corollary.  A companion theorem should expose the stronger output

@@ -114,136 +114,135 @@ theorem sndFiberIsoBaseChange_hom_snd (m n : ℕ) (R : Type u) [CommRing R]
 /-! ## Fibers as closed subschemes of the ambient fibers -/
 
 variable (m n : ℕ) (R : Type u) [CommRing R]
-variable {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-variable (hF : IsBihomogeneousOfBidegree d e F)
+variable (F : MvPolynomial (BiprojectiveCoordinate m n) R)
 
 /-- The fiber of the first restricted projection as a closed subscheme of the corresponding
 ambient fiber. -/
 abbrev zeroLocusFstFiberι (x : ProjectiveSpace m R) :
-    (biprojectiveZeroLocusFst m n R F hF).fiber x ⟶ (fst m n R).fiber x :=
+    (biprojectiveZeroLocusFst m n R F).fiber x ⟶ (fst m n R).fiber x :=
   Scheme.Hom.fiberCompToFiber
-    (biprojectiveZeroLocusι m n R F hF) (fst m n R) x
+    (biprojectiveZeroLocusι m n R F) (fst m n R) x
 
 instance (x : ProjectiveSpace m R) :
-    IsClosedImmersion (zeroLocusFstFiberι m n R F hF x) := by
+    IsClosedImmersion (zeroLocusFstFiberι m n R F x) := by
   change IsClosedImmersion
     (Scheme.Hom.fiberCompToFiber
-      (biprojectiveZeroLocusι m n R F hF) (fst m n R) x)
+      (biprojectiveZeroLocusι m n R F) (fst m n R) x)
   infer_instance
 
 @[reassoc (attr := simp)]
 theorem zeroLocusFstFiberι_fiberι (x : ProjectiveSpace m R) :
-    zeroLocusFstFiberι m n R F hF x ≫ (fst m n R).fiberι x =
-      (biprojectiveZeroLocusFst m n R F hF).fiberι x ≫
-        biprojectiveZeroLocusι m n R F hF :=
+    zeroLocusFstFiberι m n R F x ≫ (fst m n R).fiberι x =
+      (biprojectiveZeroLocusFst m n R F).fiberι x ≫
+        biprojectiveZeroLocusι m n R F :=
   Scheme.Hom.fiberCompToFiber_fiberι _ _ _
 
 @[reassoc (attr := simp)]
 theorem zeroLocusFstFiberι_toSpecResidueField (x : ProjectiveSpace m R) :
-    zeroLocusFstFiberι m n R F hF x ≫
+    zeroLocusFstFiberι m n R F x ≫
         (fst m n R).fiberToSpecResidueField x =
-      (biprojectiveZeroLocusFst m n R F hF).fiberToSpecResidueField x :=
+      (biprojectiveZeroLocusFst m n R F).fiberToSpecResidueField x :=
   Scheme.Hom.fiberCompToFiber_fiberToSpecResidueField _ _ _
 
 /-- The ideal cutting out a fiber of the first restricted projection inside the corresponding
 ambient fiber. -/
 def zeroLocusFstFiberIdeal (x : ProjectiveSpace m R) :
     ((fst m n R).fiber x).IdealSheafData :=
-  (biprojectiveZeroLocusIdeal m n R F hF).comap ((fst m n R).fiberι x)
+  (biprojectiveZeroLocusIdeal m n R F).comap ((fst m n R).fiberι x)
 
 theorem ker_zeroLocusFstFiberι (x : ProjectiveSpace m R) :
-    (zeroLocusFstFiberι m n R F hF x).ker =
-      zeroLocusFstFiberIdeal m n R F hF x := by
+    (zeroLocusFstFiberι m n R F x).ker =
+      zeroLocusFstFiberIdeal m n R F x := by
   change (Scheme.Hom.fiberCompToFiber
-      (biprojectiveZeroLocusι m n R F hF) (fst m n R) x).ker = _
+      (biprojectiveZeroLocusι m n R F) (fst m n R) x).ker = _
   rw [Scheme.Hom.ker_fiberCompToFiber]
   exact congrArg (fun I ↦ I.comap ((fst m n R).fiberι x))
-    (ker_biprojectiveZeroLocusι m n R F hF)
+    (ker_biprojectiveZeroLocusι m n R F)
 
 /-- A fiber of the first restricted projection is canonically the subscheme of the ambient fiber
 defined by the pulled-back biprojective ideal. -/
 def zeroLocusFstFiberIsoSubscheme (x : ProjectiveSpace m R) :
-    (biprojectiveZeroLocusFst m n R F hF).fiber x ≅
-      (zeroLocusFstFiberIdeal m n R F hF x).subscheme :=
-  (biprojectiveZeroLocusIdeal m n R F hF).fiberIsoComapSubscheme (fst m n R) x
+    (biprojectiveZeroLocusFst m n R F).fiber x ≅
+      (zeroLocusFstFiberIdeal m n R F x).subscheme :=
+  (biprojectiveZeroLocusIdeal m n R F).fiberIsoComapSubscheme (fst m n R) x
 
 @[reassoc]
 theorem zeroLocusFstFiberIsoSubscheme_hom_subschemeι
     (x : ProjectiveSpace m R) :
-    (zeroLocusFstFiberIsoSubscheme m n R F hF x).hom ≫
-        (zeroLocusFstFiberIdeal m n R F hF x).subschemeι =
-      zeroLocusFstFiberι m n R F hF x := by
+    (zeroLocusFstFiberIsoSubscheme m n R F x).hom ≫
+        (zeroLocusFstFiberIdeal m n R F x).subschemeι =
+      zeroLocusFstFiberι m n R F x := by
   exact Scheme.IdealSheafData.fiberIsoComapSubscheme_hom_subschemeι _ _ _
 
 /-- The first restricted projection has its whole ambient fiber at `x` exactly when the
 pulled-back defining ideal is zero. -/
 theorem isIso_zeroLocusFstFiberι_iff (x : ProjectiveSpace m R) :
-    IsIso (zeroLocusFstFiberι m n R F hF x) ↔
-      zeroLocusFstFiberIdeal m n R F hF x = ⊥ := by
+    IsIso (zeroLocusFstFiberι m n R F x) ↔
+      zeroLocusFstFiberIdeal m n R F x = ⊥ := by
   rw [IsClosedImmersion.isIso_iff_ker_eq_bot, ker_zeroLocusFstFiberι]
 
 /-- The fiber of the second restricted projection as a closed subscheme of the corresponding
 ambient fiber. -/
 abbrev zeroLocusSndFiberι (y : ProjectiveSpace n R) :
-    (biprojectiveZeroLocusSnd m n R F hF).fiber y ⟶ (snd m n R).fiber y :=
+    (biprojectiveZeroLocusSnd m n R F).fiber y ⟶ (snd m n R).fiber y :=
   Scheme.Hom.fiberCompToFiber
-    (biprojectiveZeroLocusι m n R F hF) (snd m n R) y
+    (biprojectiveZeroLocusι m n R F) (snd m n R) y
 
 instance (y : ProjectiveSpace n R) :
-    IsClosedImmersion (zeroLocusSndFiberι m n R F hF y) := by
+    IsClosedImmersion (zeroLocusSndFiberι m n R F y) := by
   change IsClosedImmersion
     (Scheme.Hom.fiberCompToFiber
-      (biprojectiveZeroLocusι m n R F hF) (snd m n R) y)
+      (biprojectiveZeroLocusι m n R F) (snd m n R) y)
   infer_instance
 
 @[reassoc (attr := simp)]
 theorem zeroLocusSndFiberι_fiberι (y : ProjectiveSpace n R) :
-    zeroLocusSndFiberι m n R F hF y ≫ (snd m n R).fiberι y =
-      (biprojectiveZeroLocusSnd m n R F hF).fiberι y ≫
-        biprojectiveZeroLocusι m n R F hF :=
+    zeroLocusSndFiberι m n R F y ≫ (snd m n R).fiberι y =
+      (biprojectiveZeroLocusSnd m n R F).fiberι y ≫
+        biprojectiveZeroLocusι m n R F :=
   Scheme.Hom.fiberCompToFiber_fiberι _ _ _
 
 @[reassoc (attr := simp)]
 theorem zeroLocusSndFiberι_toSpecResidueField (y : ProjectiveSpace n R) :
-    zeroLocusSndFiberι m n R F hF y ≫
+    zeroLocusSndFiberι m n R F y ≫
         (snd m n R).fiberToSpecResidueField y =
-      (biprojectiveZeroLocusSnd m n R F hF).fiberToSpecResidueField y :=
+      (biprojectiveZeroLocusSnd m n R F).fiberToSpecResidueField y :=
   Scheme.Hom.fiberCompToFiber_fiberToSpecResidueField _ _ _
 
 /-- The ideal cutting out a fiber of the second restricted projection inside the corresponding
 ambient fiber. -/
 def zeroLocusSndFiberIdeal (y : ProjectiveSpace n R) :
     ((snd m n R).fiber y).IdealSheafData :=
-  (biprojectiveZeroLocusIdeal m n R F hF).comap ((snd m n R).fiberι y)
+  (biprojectiveZeroLocusIdeal m n R F).comap ((snd m n R).fiberι y)
 
 theorem ker_zeroLocusSndFiberι (y : ProjectiveSpace n R) :
-    (zeroLocusSndFiberι m n R F hF y).ker =
-      zeroLocusSndFiberIdeal m n R F hF y := by
+    (zeroLocusSndFiberι m n R F y).ker =
+      zeroLocusSndFiberIdeal m n R F y := by
   change (Scheme.Hom.fiberCompToFiber
-      (biprojectiveZeroLocusι m n R F hF) (snd m n R) y).ker = _
+      (biprojectiveZeroLocusι m n R F) (snd m n R) y).ker = _
   rw [Scheme.Hom.ker_fiberCompToFiber]
   exact congrArg (fun I ↦ I.comap ((snd m n R).fiberι y))
-    (ker_biprojectiveZeroLocusι m n R F hF)
+    (ker_biprojectiveZeroLocusι m n R F)
 
 /-- A fiber of the second restricted projection is canonically the subscheme of the ambient
 fiber defined by the pulled-back biprojective ideal. -/
 def zeroLocusSndFiberIsoSubscheme (y : ProjectiveSpace n R) :
-    (biprojectiveZeroLocusSnd m n R F hF).fiber y ≅
-      (zeroLocusSndFiberIdeal m n R F hF y).subscheme :=
-  (biprojectiveZeroLocusIdeal m n R F hF).fiberIsoComapSubscheme (snd m n R) y
+    (biprojectiveZeroLocusSnd m n R F).fiber y ≅
+      (zeroLocusSndFiberIdeal m n R F y).subscheme :=
+  (biprojectiveZeroLocusIdeal m n R F).fiberIsoComapSubscheme (snd m n R) y
 
 @[reassoc]
 theorem zeroLocusSndFiberIsoSubscheme_hom_subschemeι
     (y : ProjectiveSpace n R) :
-    (zeroLocusSndFiberIsoSubscheme m n R F hF y).hom ≫
-        (zeroLocusSndFiberIdeal m n R F hF y).subschemeι =
-      zeroLocusSndFiberι m n R F hF y := by
+    (zeroLocusSndFiberIsoSubscheme m n R F y).hom ≫
+        (zeroLocusSndFiberIdeal m n R F y).subschemeι =
+      zeroLocusSndFiberι m n R F y := by
   exact Scheme.IdealSheafData.fiberIsoComapSubscheme_hom_subschemeι _ _ _
 
 /-- The analogous whole-fiber criterion for the second restricted projection. -/
 theorem isIso_zeroLocusSndFiberι_iff (y : ProjectiveSpace n R) :
-    IsIso (zeroLocusSndFiberι m n R F hF y) ↔
-      zeroLocusSndFiberIdeal m n R F hF y = ⊥ := by
+    IsIso (zeroLocusSndFiberι m n R F y) ↔
+      zeroLocusSndFiberIdeal m n R F y = ⊥ := by
   rw [IsClosedImmersion.isIso_iff_ker_eq_bot, ker_zeroLocusSndFiberι]
 
 /-! ## Transport to the residue-field base changes -/
@@ -260,11 +259,11 @@ private lemma ker_comp_iso_hom
 /-- The first restricted fiber embedded in the residue-field base change of the second
 projective factor. -/
 abbrev zeroLocusFstFiberToBaseChange (x : ProjectiveSpace m R) :
-    (biprojectiveZeroLocusFst m n R F hF).fiber x ⟶ fstFiberBaseChange m n R x :=
-  zeroLocusFstFiberι m n R F hF x ≫ (fstFiberIsoBaseChange m n R x).hom
+    (biprojectiveZeroLocusFst m n R F).fiber x ⟶ fstFiberBaseChange m n R x :=
+  zeroLocusFstFiberι m n R F x ≫ (fstFiberIsoBaseChange m n R x).hom
 
 instance (x : ProjectiveSpace m R) :
-    IsClosedImmersion (zeroLocusFstFiberToBaseChange m n R F hF x) := by
+    IsClosedImmersion (zeroLocusFstFiberToBaseChange m n R F x) := by
   dsimp only [zeroLocusFstFiberToBaseChange]
   infer_instance
 
@@ -272,33 +271,33 @@ instance (x : ProjectiveSpace m R) :
 second projective factor. -/
 def zeroLocusFstFiberIdealOnBaseChange (x : ProjectiveSpace m R) :
     (fstFiberBaseChange m n R x).IdealSheafData :=
-  (biprojectiveZeroLocusIdeal m n R F hF).comap
+  (biprojectiveZeroLocusIdeal m n R F).comap
     ((fstFiberIsoBaseChange m n R x).inv ≫ (fst m n R).fiberι x)
 
 theorem ker_zeroLocusFstFiberToBaseChange (x : ProjectiveSpace m R) :
-    (zeroLocusFstFiberToBaseChange m n R F hF x).ker =
-      zeroLocusFstFiberIdealOnBaseChange m n R F hF x := by
+    (zeroLocusFstFiberToBaseChange m n R F x).ker =
+      zeroLocusFstFiberIdealOnBaseChange m n R F x := by
   rw [ker_comp_iso_hom]
   rw [ker_zeroLocusFstFiberι]
   exact (Scheme.IdealSheafData.comap_comp
-    (biprojectiveZeroLocusIdeal m n R F hF)
+    (biprojectiveZeroLocusIdeal m n R F)
     (fstFiberIsoBaseChange m n R x).inv ((fst m n R).fiberι x)).symm
 
 /-- The first restricted fiber fills its residue-field base-changed ambient projective space
 exactly when its transported ideal is zero. -/
 theorem isIso_zeroLocusFstFiberToBaseChange_iff (x : ProjectiveSpace m R) :
-    IsIso (zeroLocusFstFiberToBaseChange m n R F hF x) ↔
-      zeroLocusFstFiberIdealOnBaseChange m n R F hF x = ⊥ := by
+    IsIso (zeroLocusFstFiberToBaseChange m n R F x) ↔
+      zeroLocusFstFiberIdealOnBaseChange m n R F x = ⊥ := by
   rw [IsClosedImmersion.isIso_iff_ker_eq_bot,
     ker_zeroLocusFstFiberToBaseChange]
 
 /-- The first restricted fiber is canonically the subscheme cut out by its transported ideal on
 the residue-field base change of the second projective factor. -/
 def zeroLocusFstFiberIsoBaseChangeSubscheme (x : ProjectiveSpace m R) :
-    (biprojectiveZeroLocusFst m n R F hF).fiber x ≅
-      (zeroLocusFstFiberIdealOnBaseChange m n R F hF x).subscheme := by
-  let j := zeroLocusFstFiberToBaseChange m n R F hF x
-  let ι := (zeroLocusFstFiberIdealOnBaseChange m n R F hF x).subschemeι
+    (biprojectiveZeroLocusFst m n R F).fiber x ≅
+      (zeroLocusFstFiberIdealOnBaseChange m n R F x).subscheme := by
+  let j := zeroLocusFstFiberToBaseChange m n R F x
+  let ι := (zeroLocusFstFiberIdealOnBaseChange m n R F x).subschemeι
   have hker : j.ker = ι.ker := by
     rw [ker_zeroLocusFstFiberToBaseChange,
       Scheme.IdealSheafData.ker_subschemeι]
@@ -309,20 +308,20 @@ def zeroLocusFstFiberIsoBaseChangeSubscheme (x : ProjectiveSpace m R) :
 @[reassoc]
 theorem zeroLocusFstFiberIsoBaseChangeSubscheme_hom_subschemeι
     (x : ProjectiveSpace m R) :
-    (zeroLocusFstFiberIsoBaseChangeSubscheme m n R F hF x).hom ≫
-        (zeroLocusFstFiberIdealOnBaseChange m n R F hF x).subschemeι =
-      zeroLocusFstFiberToBaseChange m n R F hF x := by
+    (zeroLocusFstFiberIsoBaseChangeSubscheme m n R F x).hom ≫
+        (zeroLocusFstFiberIdealOnBaseChange m n R F x).subschemeι =
+      zeroLocusFstFiberToBaseChange m n R F x := by
   change IsClosedImmersion.lift _ _ _ ≫ _ = _
   exact IsClosedImmersion.lift_fac _ _ _
 
 /-- The second restricted fiber embedded in the residue-field base change of the first
 projective factor. -/
 abbrev zeroLocusSndFiberToBaseChange (y : ProjectiveSpace n R) :
-    (biprojectiveZeroLocusSnd m n R F hF).fiber y ⟶ sndFiberBaseChange m n R y :=
-  zeroLocusSndFiberι m n R F hF y ≫ (sndFiberIsoBaseChange m n R y).hom
+    (biprojectiveZeroLocusSnd m n R F).fiber y ⟶ sndFiberBaseChange m n R y :=
+  zeroLocusSndFiberι m n R F y ≫ (sndFiberIsoBaseChange m n R y).hom
 
 instance (y : ProjectiveSpace n R) :
-    IsClosedImmersion (zeroLocusSndFiberToBaseChange m n R F hF y) := by
+    IsClosedImmersion (zeroLocusSndFiberToBaseChange m n R F y) := by
   dsimp only [zeroLocusSndFiberToBaseChange]
   infer_instance
 
@@ -330,33 +329,33 @@ instance (y : ProjectiveSpace n R) :
 first projective factor. -/
 def zeroLocusSndFiberIdealOnBaseChange (y : ProjectiveSpace n R) :
     (sndFiberBaseChange m n R y).IdealSheafData :=
-  (biprojectiveZeroLocusIdeal m n R F hF).comap
+  (biprojectiveZeroLocusIdeal m n R F).comap
     ((sndFiberIsoBaseChange m n R y).inv ≫ (snd m n R).fiberι y)
 
 theorem ker_zeroLocusSndFiberToBaseChange (y : ProjectiveSpace n R) :
-    (zeroLocusSndFiberToBaseChange m n R F hF y).ker =
-      zeroLocusSndFiberIdealOnBaseChange m n R F hF y := by
+    (zeroLocusSndFiberToBaseChange m n R F y).ker =
+      zeroLocusSndFiberIdealOnBaseChange m n R F y := by
   rw [ker_comp_iso_hom]
   rw [ker_zeroLocusSndFiberι]
   exact (Scheme.IdealSheafData.comap_comp
-    (biprojectiveZeroLocusIdeal m n R F hF)
+    (biprojectiveZeroLocusIdeal m n R F)
     (sndFiberIsoBaseChange m n R y).inv ((snd m n R).fiberι y)).symm
 
 /-- The second restricted fiber fills its residue-field base-changed ambient projective space
 exactly when its transported ideal is zero. -/
 theorem isIso_zeroLocusSndFiberToBaseChange_iff (y : ProjectiveSpace n R) :
-    IsIso (zeroLocusSndFiberToBaseChange m n R F hF y) ↔
-      zeroLocusSndFiberIdealOnBaseChange m n R F hF y = ⊥ := by
+    IsIso (zeroLocusSndFiberToBaseChange m n R F y) ↔
+      zeroLocusSndFiberIdealOnBaseChange m n R F y = ⊥ := by
   rw [IsClosedImmersion.isIso_iff_ker_eq_bot,
     ker_zeroLocusSndFiberToBaseChange]
 
 /-- The second restricted fiber is canonically the subscheme cut out by its transported ideal on
 the residue-field base change of the first projective factor. -/
 def zeroLocusSndFiberIsoBaseChangeSubscheme (y : ProjectiveSpace n R) :
-    (biprojectiveZeroLocusSnd m n R F hF).fiber y ≅
-      (zeroLocusSndFiberIdealOnBaseChange m n R F hF y).subscheme := by
-  let j := zeroLocusSndFiberToBaseChange m n R F hF y
-  let ι := (zeroLocusSndFiberIdealOnBaseChange m n R F hF y).subschemeι
+    (biprojectiveZeroLocusSnd m n R F).fiber y ≅
+      (zeroLocusSndFiberIdealOnBaseChange m n R F y).subscheme := by
+  let j := zeroLocusSndFiberToBaseChange m n R F y
+  let ι := (zeroLocusSndFiberIdealOnBaseChange m n R F y).subschemeι
   have hker : j.ker = ι.ker := by
     rw [ker_zeroLocusSndFiberToBaseChange,
       Scheme.IdealSheafData.ker_subschemeι]
@@ -367,9 +366,9 @@ def zeroLocusSndFiberIsoBaseChangeSubscheme (y : ProjectiveSpace n R) :
 @[reassoc]
 theorem zeroLocusSndFiberIsoBaseChangeSubscheme_hom_subschemeι
     (y : ProjectiveSpace n R) :
-    (zeroLocusSndFiberIsoBaseChangeSubscheme m n R F hF y).hom ≫
-        (zeroLocusSndFiberIdealOnBaseChange m n R F hF y).subschemeι =
-      zeroLocusSndFiberToBaseChange m n R F hF y := by
+    (zeroLocusSndFiberIsoBaseChangeSubscheme m n R F y).hom ≫
+        (zeroLocusSndFiberIdealOnBaseChange m n R F y).subschemeι =
+      zeroLocusSndFiberToBaseChange m n R F y := by
   change IsClosedImmersion.lift _ _ _ ≫ _ = _
   exact IsClosedImmersion.lift_fac _ _ _
 

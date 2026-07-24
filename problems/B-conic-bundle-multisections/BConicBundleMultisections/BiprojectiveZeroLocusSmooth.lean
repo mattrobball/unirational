@@ -41,10 +41,10 @@ def chartZeroLocusToGlobal
     (hF : IsBihomogeneousOfBidegree d e F)
     (i : Fin (m + 1)) (j : Fin (n + 1)) :
     (chartIdealSheaf m n R i j F).subscheme ⟶
-      biprojectiveZeroLocus m n R F hF :=
+      biprojectiveZeroLocus m n R F :=
   (chartZeroLocusIsoPullback m n R F hF i j).hom ≫
     pullback.snd (standardChartι m n R i j)
-      (biprojectiveZeroLocusι m n R F hF)
+      (biprojectiveZeroLocusι m n R F)
 
 /-- The chartwise open immersion is compatible with the two closed immersions into the ambient
 standard chart and biprojective space. -/
@@ -55,7 +55,7 @@ theorem chartZeroLocusToGlobal_ι
     (hF : IsBihomogeneousOfBidegree d e F)
     (i : Fin (m + 1)) (j : Fin (n + 1)) :
     chartZeroLocusToGlobal m n R F hF i j ≫
-        biprojectiveZeroLocusι m n R F hF =
+        biprojectiveZeroLocusι m n R F =
       (chartIdealSheaf m n R i j F).subschemeι ≫
         standardChartι m n R i j := by
   unfold chartZeroLocusToGlobal
@@ -81,7 +81,7 @@ def chartZeroLocusToSpec
     (i : Fin (m + 1)) (j : Fin (n + 1)) :
     (chartIdealSheaf m n R i j F).subscheme ⟶ Spec (.of R) :=
   chartZeroLocusToGlobal m n R F hF i j ≫
-    biprojectiveZeroLocusToSpec m n R F hF
+    biprojectiveZeroLocusToSpec m n R F
 
 /-- Smoothness of the global zero locus restricts to each chartwise zero locus. -/
 instance
@@ -89,7 +89,7 @@ instance
     {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
     (hF : IsBihomogeneousOfBidegree d e F)
     (i : Fin (m + 1)) (j : Fin (n + 1))
-    [Smooth (biprojectiveZeroLocusToSpec m n R F hF)] :
+    [Smooth (biprojectiveZeroLocusToSpec m n R F)] :
     Smooth (chartZeroLocusToSpec m n R F hF i j) := by
   unfold chartZeroLocusToSpec
   infer_instance
@@ -110,7 +110,7 @@ theorem chartZeroLocus_appTop_smooth
     {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
     (hF : IsBihomogeneousOfBidegree d e F)
     (i : Fin (m + 1)) (j : Fin (n + 1))
-    [Smooth (biprojectiveZeroLocusToSpec m n R F hF)] :
+    [Smooth (biprojectiveZeroLocusToSpec m n R F)] :
     RingHom.Smooth
       ((chartZeroLocusToSpec m n R F hF i j).appTop).hom := by
   exact HasRingHomProperty.appTop @Smooth _ inferInstance

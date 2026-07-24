@@ -5,7 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
-public import BConicBundleMultisections.BiprojectiveAffineJacobian
+public import BConicBundleMultisections.BiprojectiveAffineChartJacobian
 public import BConicBundleMultisections.BiprojectiveFiberPolynomial
 public import BConicBundleMultisections.ProjectiveCommonZero
 public import BConicBundleMultisections.ProjectiveCoordinateNormalization

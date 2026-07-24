@@ -50,7 +50,8 @@ not yet available.  The lint command is wired to the same Batteries lint driver 
   comparison.
 - `BConicBundleMultisections/IdealSheafDescent.lean`,
   `BiprojectiveDehomogenization.lean`, and `BiprojectiveZeroLocus.lean`: ideal-sheaf descent,
-  injectivity of chart dehomogenization, and the canonical `F hF`-indexed global zero locus.
+  injectivity of chart dehomogenization, and the canonical `F`-indexed global zero locus
+  (bihomogeneity is a hypothesis on descent theorems, not a constructor index).
 - `BConicBundleMultisections/BiprojectiveAffineZeroLocus.lean` and
   `BiprojectiveZeroLocusSmooth.lean`: affine quotient presentations and restriction of global
   smoothness to explicit affine zero-locus charts.
@@ -71,9 +72,11 @@ not yet available.  The lint command is wired to the same Batteries lint driver 
 - `BConicBundleMultisections/ProjectiveHypersurfacePoints.lean`: point-level projective
   hypersurface and coordinate-nonsingularity predicates, kept explicitly separate from the
   scheme-theoretic smoothness API.
-- `BConicBundleMultisections/ProjectiveLineRestriction.lean`, `BinaryResultant.lean`, and
-  `BinaryCubicResidual.lean`: restriction to a projective line, fixed-degree binary resultants,
-  and exact cubic tangent-residual polynomial identities.
+- `BConicBundleMultisections/ProjectiveLineRestriction.lean`, `BinaryResultant.lean`,
+  `BinaryCubicResidual.lean`, `BinaryCubicDiscriminant.lean`, `CubicQuadraticResultant.lean`,
+  and `CoordinateLineResultant.lean`: restriction to a projective line, fixed-degree binary
+  resultants and discriminants, the explicit cubic–quadratic Sylvester formula, and the
+  coordinate-line first-polar resultant setup for the universal residual identity.
 - `BConicBundleMultisections/Basic.lean`: compatibility import for the basic polynomial and
   unirationality vocabulary.
 - `CONCEPT_LEDGER.md`: 199-item natural-language-to-Mathlib API ledger, 14 ordered work packages,

@@ -231,135 +231,124 @@ theorem chartIdealSheaf_comap_overlap_eq
   exact hback
 
 /-- The ideal sheaf obtained by extending the local chart equations to the ambient
-biprojective space and taking their finite infimum. -/
+biprojective space and taking their finite infimum.
+
+This constructor is proof-independent: it does not require bihomogeneity of `F`.  Descent of
+the local ideals to the expected chart ideals, and hence the local-to-global comparison with
+the geometric zero locus of a bihomogeneous equation, is proved separately under that
+hypothesis. -/
 def biprojectiveZeroLocusIdeal (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (_hF : IsBihomogeneousOfBidegree d e F) :
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
     (BiprojectiveSpace m n R).IdealSheafData :=
   ⨅ ij : Fin (m + 1) × Fin (n + 1),
     (chartIdealSheaf m n R ij.1 ij.2 F).map
       (standardChartι m n R ij.1 ij.2)
 
-/-- The closed subscheme of biprojective space cut out by a bihomogeneous equation. -/
+/-- The closed subscheme of biprojective space cut out by the chart equations of `F`. -/
 abbrev biprojectiveZeroLocus (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) : Scheme :=
-  (biprojectiveZeroLocusIdeal m n R F hF).subscheme
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) : Scheme :=
+  (biprojectiveZeroLocusIdeal m n R F).subscheme
 
 /-- The canonical closed immersion of a biprojective zero locus into its ambient space. -/
 abbrev biprojectiveZeroLocusι (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    biprojectiveZeroLocus m n R F hF ⟶ BiprojectiveSpace m n R :=
-  (biprojectiveZeroLocusIdeal m n R F hF).subschemeι
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    biprojectiveZeroLocus m n R F ⟶ BiprojectiveSpace m n R :=
+  (biprojectiveZeroLocusIdeal m n R F).subschemeι
 
 /-- The structure morphism from a biprojective zero locus to the base affine scheme. -/
 def biprojectiveZeroLocusToSpec (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    biprojectiveZeroLocus m n R F hF ⟶ Spec (.of R) :=
-  biprojectiveZeroLocusι m n R F hF ≫ toSpec m n R
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    biprojectiveZeroLocus m n R F ⟶ Spec (.of R) :=
+  biprojectiveZeroLocusι m n R F ≫ toSpec m n R
 
 instance (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    (biprojectiveZeroLocus m n R F hF).CanonicallyOver (Spec (.of R)) where
-  hom := biprojectiveZeroLocusToSpec m n R F hF
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    (biprojectiveZeroLocus m n R F).CanonicallyOver (Spec (.of R)) where
+  hom := biprojectiveZeroLocusToSpec m n R F
 
 @[reassoc]
 theorem biprojectiveZeroLocusι_toSpec
     (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    biprojectiveZeroLocusι m n R F hF ≫ toSpec m n R =
-      biprojectiveZeroLocusToSpec m n R F hF :=
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    biprojectiveZeroLocusι m n R F ≫ toSpec m n R =
+      biprojectiveZeroLocusToSpec m n R F :=
   rfl
 
 /-- The restriction of the first ambient projection to a biprojective zero locus. -/
 def biprojectiveZeroLocusFst (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    biprojectiveZeroLocus m n R F hF ⟶ ProjectiveSpace m R :=
-  biprojectiveZeroLocusι m n R F hF ≫ fst m n R
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    biprojectiveZeroLocus m n R F ⟶ ProjectiveSpace m R :=
+  biprojectiveZeroLocusι m n R F ≫ fst m n R
 
 /-- The restriction of the second ambient projection to a biprojective zero locus. -/
 def biprojectiveZeroLocusSnd (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    biprojectiveZeroLocus m n R F hF ⟶ ProjectiveSpace n R :=
-  biprojectiveZeroLocusι m n R F hF ≫ snd m n R
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    biprojectiveZeroLocus m n R F ⟶ ProjectiveSpace n R :=
+  biprojectiveZeroLocusι m n R F ≫ snd m n R
 
 @[reassoc]
 theorem biprojectiveZeroLocusFst_toSpec
     (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    biprojectiveZeroLocusFst m n R F hF ≫ ProjectiveSpace.toSpec m R =
-      biprojectiveZeroLocusToSpec m n R F hF := by
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    biprojectiveZeroLocusFst m n R F ≫ ProjectiveSpace.toSpec m R =
+      biprojectiveZeroLocusToSpec m n R F := by
   rw [biprojectiveZeroLocusFst, Category.assoc, fst_toSpec]
   rfl
 
 @[reassoc]
 theorem biprojectiveZeroLocusSnd_toSpec
     (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    biprojectiveZeroLocusSnd m n R F hF ≫ ProjectiveSpace.toSpec n R =
-      biprojectiveZeroLocusToSpec m n R F hF := by
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    biprojectiveZeroLocusSnd m n R F ≫ ProjectiveSpace.toSpec n R =
+      biprojectiveZeroLocusToSpec m n R F := by
   rw [biprojectiveZeroLocusSnd, Category.assoc, snd_toSpec]
   rfl
 
 /-- The first projection of a biprojective zero locus is proper. -/
 instance (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    IsProper (biprojectiveZeroLocusFst m n R F hF) := by
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    IsProper (biprojectiveZeroLocusFst m n R F) := by
   unfold biprojectiveZeroLocusFst
   infer_instance
 
 /-- The second projection of a biprojective zero locus is proper. -/
 instance (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    IsProper (biprojectiveZeroLocusSnd m n R F hF) := by
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    IsProper (biprojectiveZeroLocusSnd m n R F) := by
   unfold biprojectiveZeroLocusSnd
   infer_instance
 
 /-- A biprojective zero locus is proper over its affine base scheme. -/
 instance (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    IsProper (biprojectiveZeroLocusToSpec m n R F hF) := by
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    IsProper (biprojectiveZeroLocusToSpec m n R F) := by
   unfold biprojectiveZeroLocusToSpec
   infer_instance
 
 theorem ker_biprojectiveZeroLocusι
     (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    (biprojectiveZeroLocusι m n R F hF).ker =
-      biprojectiveZeroLocusIdeal m n R F hF :=
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    (biprojectiveZeroLocusι m n R F).ker =
+      biprojectiveZeroLocusIdeal m n R F :=
   Scheme.IdealSheafData.ker_subschemeι _
 
 /-- A chosen closed immersion presents a scheme as the zero locus of `F` when its kernel is the
 canonical ideal sheaf obtained from the standard chart equations. This is deliberately a
 structure, rather than a typeclass: the equation cannot be inferred from an arbitrary embedding. -/
 structure IsBiprojectiveZeroLocus (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) {X : Scheme}
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) {X : Scheme}
     (ι : X ⟶ BiprojectiveSpace m n R) : Prop where
   /-- The chosen presentation is a closed immersion into the ambient space. -/
   isClosedImmersion : IsClosedImmersion ι
   /-- The presentation has the canonical ideal sheaf defined by the chart equations. -/
-  ker_eq : ι.ker = biprojectiveZeroLocusIdeal m n R F hF
+  ker_eq : ι.ker = biprojectiveZeroLocusIdeal m n R F
 
 /-- The canonical immersion presents the canonical subscheme as the zero locus. -/
 theorem isBiprojectiveZeroLocus_biprojectiveZeroLocusι
     (m n : ℕ) (R : Type u) [CommRing R]
-    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
-    (hF : IsBihomogeneousOfBidegree d e F) :
-    IsBiprojectiveZeroLocus m n R F hF
-      (biprojectiveZeroLocusι m n R F hF) where
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    IsBiprojectiveZeroLocus m n R F
+      (biprojectiveZeroLocusι m n R F) where
   isClosedImmersion := inferInstance
   ker_eq := Scheme.IdealSheafData.ker_subschemeι _
 
@@ -369,34 +358,32 @@ namespace IsBiprojectiveZeroLocus
 the chart equations. -/
 noncomputable def isoBiprojectiveZeroLocus
     {m n : ℕ} {R : Type u} [CommRing R]
-    {d e : ℕ} {F : MvPolynomial (BiprojectiveCoordinate m n) R}
-    {hF : IsBihomogeneousOfBidegree d e F} {X : Scheme}
-    {ι : X ⟶ BiprojectiveSpace m n R}
-    (hι : IsBiprojectiveZeroLocus m n R F hF ι) :
-    X ≅ biprojectiveZeroLocus m n R F hF := by
+    {F : MvPolynomial (BiprojectiveCoordinate m n) R}
+    {X : Scheme} {ι : X ⟶ BiprojectiveSpace m n R}
+    (hι : IsBiprojectiveZeroLocus m n R F ι) :
+    X ≅ biprojectiveZeroLocus m n R F := by
   letI : IsClosedImmersion ι := hι.isClosedImmersion
-  have hker : (biprojectiveZeroLocusι m n R F hF).ker = ι.ker := by
+  have hker : (biprojectiveZeroLocusι m n R F).ker = ι.ker := by
     rw [ker_biprojectiveZeroLocusι, hι.ker_eq]
   let f := IsClosedImmersion.lift
-    (biprojectiveZeroLocusι m n R F hF) ι hker.le
+    (biprojectiveZeroLocusι m n R F) ι hker.le
   letI : IsIso f := IsClosedImmersion.isIso_lift
-    (biprojectiveZeroLocusι m n R F hF) ι hker
+    (biprojectiveZeroLocusι m n R F) ι hker
   exact asIso f
 
 @[reassoc]
 theorem isoBiprojectiveZeroLocus_hom_comp
     {m n : ℕ} {R : Type u} [CommRing R]
-    {d e : ℕ} {F : MvPolynomial (BiprojectiveCoordinate m n) R}
-    {hF : IsBihomogeneousOfBidegree d e F} {X : Scheme}
-    {ι : X ⟶ BiprojectiveSpace m n R}
-    (hι : IsBiprojectiveZeroLocus m n R F hF ι) :
+    {F : MvPolynomial (BiprojectiveCoordinate m n) R}
+    {X : Scheme} {ι : X ⟶ BiprojectiveSpace m n R}
+    (hι : IsBiprojectiveZeroLocus m n R F ι) :
     (isoBiprojectiveZeroLocus (m := m) (n := n) (R := R)
       (F := F) (X := X) (ι := ι) hι).hom ≫
-        biprojectiveZeroLocusι m n R F hF = ι := by
+        biprojectiveZeroLocusι m n R F = ι := by
   letI : IsClosedImmersion ι := hι.isClosedImmersion
   change IsClosedImmersion.lift
-    (biprojectiveZeroLocusι m n R F hF) ι _ ≫
-      biprojectiveZeroLocusι m n R F hF = ι
+    (biprojectiveZeroLocusι m n R F) ι _ ≫
+      biprojectiveZeroLocusι m n R F = ι
   exact IsClosedImmersion.lift_fac _ _ _
 
 /-- The canonical isomorphism from a chosen presentation also respects the structure morphisms
@@ -404,13 +391,12 @@ to the affine base. -/
 @[reassoc]
 theorem isoBiprojectiveZeroLocus_hom_comp_toSpec
     {m n : ℕ} {R : Type u} [CommRing R]
-    {d e : ℕ} {F : MvPolynomial (BiprojectiveCoordinate m n) R}
-    {hF : IsBihomogeneousOfBidegree d e F} {X : Scheme}
-    {ι : X ⟶ BiprojectiveSpace m n R}
-    (hι : IsBiprojectiveZeroLocus m n R F hF ι) :
+    {F : MvPolynomial (BiprojectiveCoordinate m n) R}
+    {X : Scheme} {ι : X ⟶ BiprojectiveSpace m n R}
+    (hι : IsBiprojectiveZeroLocus m n R F ι) :
     (isoBiprojectiveZeroLocus (m := m) (n := n) (R := R)
       (F := F) (X := X) (ι := ι) hι).hom ≫
-        biprojectiveZeroLocusToSpec m n R F hF =
+        biprojectiveZeroLocusToSpec m n R F =
       ι ≫ toSpec m n R := by
   unfold biprojectiveZeroLocusToSpec
   rw [← Category.assoc, isoBiprojectiveZeroLocus_hom_comp hι]
@@ -443,7 +429,7 @@ theorem biprojectiveZeroLocusIdeal_comap_standardChartι
     {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
     (hF : IsBihomogeneousOfBidegree d e F)
     (i : Fin (m + 1)) (j : Fin (n + 1)) :
-    (biprojectiveZeroLocusIdeal m n R F hF).comap
+    (biprojectiveZeroLocusIdeal m n R F).comap
         (standardChartι m n R i j) =
       chartIdealSheaf m n R i j F := by
   apply Scheme.IdealSheafData.finiteOpenClosure_comap_eq
@@ -463,9 +449,9 @@ noncomputable def chartZeroLocusIsoPullback
     (i : Fin (m + 1)) (j : Fin (n + 1)) :
     (chartIdealSheaf m n R i j F).subscheme ≅
       pullback (standardChartι m n R i j)
-        (biprojectiveZeroLocusι m n R F hF) := by
+        (biprojectiveZeroLocusι m n R F) := by
   let ι := pullback.fst (standardChartι m n R i j)
-    (biprojectiveZeroLocusι m n R F hF)
+    (biprojectiveZeroLocusι m n R F)
   let ι' := (chartIdealSheaf m n R i j F).subschemeι
   have hker : ι.ker = ι'.ker := by
     rw [Scheme.IdealSheafData.ker_fst_of_isClosedImmersion,
@@ -529,7 +515,7 @@ theorem eq_biprojectiveZeroLocusIdeal_of_comap_standardChartι_eq
     (hI : ∀ i : Fin (m + 1), ∀ j : Fin (n + 1),
       I.comap (standardChartι m n R i j) =
         chartIdealSheaf m n R i j F) :
-    I = biprojectiveZeroLocusIdeal m n R F hF := by
+    I = biprojectiveZeroLocusIdeal m n R F := by
   apply idealSheafData_eq_of_comap_standardChartι_eq m n R
   intro i j
   rw [biprojectiveZeroLocusIdeal_comap_standardChartι m n R F hF]
