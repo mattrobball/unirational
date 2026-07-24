@@ -1291,6 +1291,38 @@ theorem hasResidualImageUnirationalParametrization2_of_ne_zero_coords_and_domina
   haveI : IsDominant (residualImagePointOfNormalizedLoc F hF v hv i j) := hdom i j hdenom
   exact isDominant_residualImageRationalMapAffine_of_isDominant_point F hF v hv i j hdenom
 
+/-! ### ofhom-dom: IsDominant residualImageRationalMapAffine from localized point
+
+Full geometric dominance of the residual map of the vertical surface `S_L` onto residual image
+is the remaining input that supplies `IsDominant residualImagePointOfNormalizedLoc`.  The
+transport from that point morphism to `residualImageRationalMapAffine` is complete below.
+-/
+
+/-- **ofhom-dom.** `residualImageRationalMapAffine` is dominant once the localized residual
+point morphism is (basic-open iso + SpecIso are isomorphisms). -/
+theorem isDominant_residualImageRationalMapAffine
+    {k : Type u} [Field k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial k)
+    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (i j : Fin 3)
+    (hdenom : residualChartDenom F v i j ≠ 0)
+    [IsDominant (residualImagePointOfNormalizedLoc F hF v hv i j)] :
+    (residualImageRationalMapAffine F hF v hv i j hdenom).IsDominant :=
+  isDominant_residualImageRationalMapAffine_of_isDominant_point F hF v hv i j hdenom
+
+/-- Explicit non-instance form of ofhom-dom (handy for packaging). -/
+theorem isDominant_residualImageRationalMapAffine'
+    {k : Type u} [Field k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial k)
+    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (i j : Fin 3)
+    (hdenom : residualChartDenom F v i j ≠ 0)
+    (hdom : IsDominant (residualImagePointOfNormalizedLoc F hF v hv i j)) :
+    (residualImageRationalMapAffine F hF v hv i j hdenom).IsDominant := by
+  haveI := hdom
+  exact isDominant_residualImageRationalMapAffine F hF v hv i j hdenom
 
 end
 

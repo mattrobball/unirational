@@ -345,6 +345,7 @@ theorem residualImagePointOfNormalizedAlgebra_toSpec
     _ = Spec.map (CommRingCat.ofHom (algebraMap R S)) := by
       rw [hring]
 
+
 end
 
 end BConicBundleMultisections
