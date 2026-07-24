@@ -49,7 +49,7 @@ which must contain only `Field`/`IsAlgClosed`/`CharZero`, `IsBidegree23`, `F ≠
 | # | Obligation | Status | Difficulty |
 |---|---|---|---|
 | 1 | `IsDominant (residualComponentMultisection …).baseChangeFst` | reduced, not proved | coordinate computation |
-| 2 | `residualYCoords ≠ 0` off the pure-`t` branch | open | **mathematics, possibly false as stated** |
+| 2 | `residualYCoords ≠ 0` off the pure-`t` branch | open | **mathematics: true target, one branch missing** |
 | 3 | `IsResidualPointedConicRational` | not started | substantial scheme theory |
 
 **(1)** is now reduced by `isDominant_residualComponentToBase_iff`: because
@@ -58,12 +58,26 @@ which must contain only `Field`/`IsAlgClosed`/`CharZero`, `IsBidegree23`, `F ≠
 assertion about the residual coordinates (the residual surface is not contained in a
 fibre) with no scheme-theoretic image in it.
 
-**(2) is the load-bearing blocker.** Residual Y-nonvanishing is proved only on the
-pure-`t` L-branch (`freeDirPureT`). `HANDOFF.md` §4.7 lists unconditional `freeDirPureT`
-under *"Suspect FALSE or overstated as currently targeted"*, and §3 records that the
-complementary branch is unhandled with no parallel argument. If it is false as stated,
-this is not a matter of more effort: a different argument is required. This is the item to
-put to a human expert.
+**(2) is the load-bearing blocker**, but the shape of the difficulty is worth stating
+precisely, because it is easy to overstate.
+
+The *target* — `residualYCoords F v ≠ 0` for smooth `F` — is expected to be **true**. The
+residual points are genuine points of `P²_y`, so their coordinate vector is not identically
+zero. Nothing suggests otherwise.
+
+What is suspect is the *branch condition* used to reach it. `HANDOFF.md` §4.7 lists
+*"Unconditional `freeDirPureT F` for all smooth F — likely false; pure-t is a branch"*.
+`freeDirPureT` says the free-direction form does not depend on the stereographic slope `s`;
+it is a technical device that lets a denseness argument reduce to a univariate condition in
+`t`. It is not part of the statement being proved.
+
+So obligation (2) is: **a true statement whose current proof covers only one of two
+branches.** Discharging it means supplying a parallel argument for the case
+`freeDirCoeffT F 0 1 ≠ 0` or `freeDirCoeffT F 1 1 ≠ 0`, where the free-direction form is a
+genuine pencil in `s` with `t`-dependent coefficients. `HANDOFF.md` §3 sketches what that
+argument would have to establish (existence of a freeDir root `s(t)` for general `t`, polar
+nonvanishing along it, and denseness without reducing to a univariate). No one has written
+it. This is the item to put to a human expert.
 
 **(3)** was previously described as "packaging, not mathematics." **That was wrong.**
 `PointedConicRational.lean` contains field-level statements about `K`-points of one model
