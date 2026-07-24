@@ -275,6 +275,32 @@ theorem hasUnirationalParametrization2_residualComponent
      isDominant := isDominant_residualComponentRationalMapAffine F hF v hv i j hdenom
      isOver := residualComponentRationalMapAffine_compHom_toSpec F hF v hv i j hdenom }⟩
 
+/-! ### The component as a multisection -/
+
+/-- The residual component, viewed as a multisection of the conic bundle
+`biprojectiveZeroLocusSnd`.  Same shape as `residualMultisection`, but carried by the
+component that the residual map actually dominates. -/
+def residualComponentMultisection :
+    Multisection (biprojectiveZeroLocusSnd 2 2 k F) where
+  carrier := residualComponent F hF v hv i j
+  toBase := residualComponentToBase F hF v hv i j
+  toTotal := residualComponentι F hF v hv i j ≫ residualImageToZeroLocus F
+  toTotal_comp := by
+    have h : residualImageToZeroLocus F ≫ biprojectiveZeroLocusSnd 2 2 k F =
+        residualImageToBase F := (residualMultisection F).toTotal_comp
+    rw [Category.assoc, h]
+    rfl
+
+@[simp]
+theorem residualComponentMultisection_carrier :
+    (residualComponentMultisection F hF v hv i j).carrier =
+      residualComponent F hF v hv i j := rfl
+
+@[simp]
+theorem residualComponentMultisection_toBase :
+    (residualComponentMultisection F hF v hv i j).toBase =
+      residualComponentToBase F hF v hv i j := rfl
+
 end
 
 end BConicBundleMultisections
