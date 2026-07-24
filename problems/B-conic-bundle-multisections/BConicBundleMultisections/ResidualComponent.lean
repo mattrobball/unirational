@@ -112,6 +112,169 @@ def residualComponentToBase :
     residualComponent F hF v hv i j ⟶ ProjectiveSpace 2 k :=
   residualComponentι F hF v hv i j ≫ residualImageToBase F
 
+/-! ### Transport to affine `2`-space
+
+Mirrors the chain in `ResidualImageRationalParam` with the component as target.  Every step is
+the same construction; only the codomain changes, and the dominance input is now the free
+instance `residualComponentPoint_isDominant` rather than an assumed one.
+-/
+
+/-- Partial map from the affine plane onto the residual component. -/
+def residualComponentPartialMap (hdenom : residualChartDenom F v i j ≠ 0) :
+    (Spec (.of (affineTwoRing k))).PartialMap (residualComponent F hF v hv i j) where
+  domain := residualChartBasicOpen F v i j
+  dense_domain := dense_residualChartBasicOpen F v i j hdenom
+  hom :=
+    (basicOpenIsoSpecAway
+        (R := CommRingCat.of (affineTwoRing k))
+        (residualChartDenom F v i j)).hom ≫
+      residualComponentPoint F hF v hv i j
+
+/-- Composing the component partial map with the closed immersion recovers the
+`residualImage`-targeted partial map. -/
+theorem residualComponentPartialMap_hom_ι (hdenom : residualChartDenom F v i j ≠ 0) :
+    (residualComponentPartialMap F hF v hv i j hdenom).hom ≫
+        residualComponentι F hF v hv i j =
+      (residualImagePartialMap F hF v hv i j hdenom).hom := by
+  show ((basicOpenIsoSpecAway
+      (R := CommRingCat.of (affineTwoRing k))
+      (residualChartDenom F v i j)).hom ≫ residualComponentPoint F hF v hv i j) ≫
+        residualComponentι F hF v hv i j = _
+  rw [Category.assoc, residualComponentPoint_ι]
+  rfl
+
+instance isDominant_residualComponentPartialMap_hom
+    (hdenom : residualChartDenom F v i j ≠ 0) :
+    IsDominant (residualComponentPartialMap F hF v hv i j hdenom).hom := by
+  show IsDominant ((basicOpenIsoSpecAway
+      (R := CommRingCat.of (affineTwoRing k))
+      (residualChartDenom F v i j)).hom ≫ residualComponentPoint F hF v hv i j)
+  infer_instance
+
+/-- Rational map `Spec(k[t,s]) ⤏ T_L`. -/
+def residualComponentRationalMap (hdenom : residualChartDenom F v i j ≠ 0) :
+    Spec (.of (affineTwoRing k)) ⤏ residualComponent F hF v hv i j :=
+  (residualComponentPartialMap F hF v hv i j hdenom).toRationalMap
+
+instance isDominant_residualComponentRationalMap
+    (hdenom : residualChartDenom F v i j ≠ 0) :
+    (residualComponentRationalMap F hF v hv i j hdenom).IsDominant :=
+  (residualComponentPartialMap F hF v hv i j hdenom).isDominant_toRationalMap_iff.mpr
+    inferInstance
+
+/-- Rational map `𝔸² ⤏ T_L`, transported along `AffineSpace.SpecIso`. -/
+def residualComponentRationalMapAffine (hdenom : residualChartDenom F v i j ≠ 0) :
+    𝔸(ULift.{u} (Fin 2); Spec (.of k)) ⤏ residualComponent F hF v hv i j :=
+  let e := AffineSpace.SpecIso (ULift.{u} (Fin 2)) (CommRingCat.of k)
+  haveI : IsDominant e.hom := inferInstance
+  haveI : e.hom.toRationalMap.IsDominant := inferInstance
+  Scheme.RationalMap.comp e.hom.toRationalMap
+    (residualComponentRationalMap F hF v hv i j hdenom)
+
+instance isDominant_residualComponentRationalMapAffine
+    (hdenom : residualChartDenom F v i j ≠ 0) :
+    (residualComponentRationalMapAffine F hF v hv i j hdenom).IsDominant := by
+  dsimp only [residualComponentRationalMapAffine]
+  infer_instance
+
+/-! ### `IsOver`: the component parametrization lies over `Spec k` -/
+
+/-- The component partial map, postcomposed with the closed immersion, is the
+`residualImage`-targeted partial map. -/
+theorem residualComponentPartialMap_compHom_ι (hdenom : residualChartDenom F v i j ≠ 0) :
+    (residualComponentPartialMap F hF v hv i j hdenom).compHom
+        (residualComponentι F hF v hv i j) =
+      residualImagePartialMap F hF v hv i j hdenom := by
+  refine Scheme.PartialMap.ext _ _ rfl ?_
+  change (residualComponentPartialMap F hF v hv i j hdenom).hom ≫
+      residualComponentι F hF v hv i j =
+    ((Spec (CommRingCat.of (affineTwoRing k))).isoOfEq
+        (rfl : ((residualComponentPartialMap F hF v hv i j hdenom).compHom
+            (residualComponentι F hF v hv i j)).domain =
+          (residualImagePartialMap F hF v hv i j hdenom).domain)).hom ≫
+      (residualImagePartialMap F hF v hv i j hdenom).hom
+  simp only [Scheme.isoOfEq_rfl, Iso.refl_hom, Category.id_comp]
+  exact residualComponentPartialMap_hom_ι F hF v hv i j hdenom
+
+/-- Spec-plane level: the component rational map is a section over `Spec k`. -/
+theorem residualComponentRationalMap_compHom_toSpec
+    (hdenom : residualChartDenom F v i j ≠ 0) :
+    (residualComponentRationalMap F hF v hv i j hdenom).compHom
+        (residualComponentToSpec F hF v hv i j) =
+      (Spec.map (CommRingCat.ofHom (C : k →+* affineTwoRing k))).toRationalMap := by
+  have hι :
+      (residualComponentRationalMap F hF v hv i j hdenom).compHom
+          (residualComponentι F hF v hv i j) =
+        residualImageRationalMap F hF v hv i j hdenom := by
+    rw [residualComponentRationalMap, ← Scheme.RationalMap.compHom_toRationalMap,
+      residualComponentPartialMap_compHom_ι]
+    rfl
+  rw [residualComponentToSpec, ← Scheme.RationalMap.compHom_compHom, hι]
+  exact residualImageRationalMap_compHom_residualImageToSpec F hF v hv i j hdenom
+
+/-- Affine level: transport of `IsOver` along `AffineSpace.SpecIso`. -/
+theorem residualComponentRationalMapAffine_compHom_toSpec
+    (hdenom : residualChartDenom F v i j ≠ 0) :
+    (residualComponentRationalMapAffine F hF v hv i j hdenom).compHom
+        (residualComponentToSpec F hF v hv i j) =
+      (𝔸(ULift.{u} (Fin 2); Spec (.of k)) ↘ Spec (.of k)).toRationalMap := by
+  dsimp only [residualComponentRationalMapAffine, residualComponentRationalMap]
+  let e := AffineSpace.SpecIso (ULift.{u} (Fin 2)) (CommRingCat.of k)
+  haveI : IsDominant e.hom := inferInstance
+  have hcomp :
+      e.hom.toRationalMap.comp
+          (residualComponentPartialMap F hF v hv i j hdenom).toRationalMap =
+        (e.hom.toPartialMap.comp
+          (residualComponentPartialMap F hF v hv i j hdenom)).toRationalMap :=
+    Scheme.RationalMap.toRationalMap_comp e.hom.toPartialMap
+      (residualComponentPartialMap F hF v hv i j hdenom)
+  rw [hcomp, ← Scheme.RationalMap.compHom_toRationalMap]
+  have hreassoc :
+      ((e.hom.toPartialMap.comp
+          (residualComponentPartialMap F hF v hv i j hdenom)).compHom
+        (residualComponentToSpec F hF v hv i j)) =
+      e.hom.toPartialMap.comp
+        ((residualComponentPartialMap F hF v hv i j hdenom).compHom
+          (residualComponentToSpec F hF v hv i j)) :=
+    partialMap_comp_compHom_eq _ _ _
+  rw [hreassoc]
+  have h1 :
+      ((residualComponentPartialMap F hF v hv i j hdenom).compHom
+          (residualComponentToSpec F hF v hv i j)).toRationalMap =
+        (Spec.map (CommRingCat.ofHom
+          (C : k →+* affineTwoRing k))).toRationalMap := by
+    simpa [residualComponentRationalMap, Scheme.RationalMap.compHom_toRationalMap] using
+      residualComponentRationalMap_compHom_toSpec F hF v hv i j hdenom
+  have hequiv :
+      ((residualComponentPartialMap F hF v hv i j hdenom).compHom
+          (residualComponentToSpec F hF v hv i j)).equiv
+        (Spec.map (CommRingCat.ofHom
+          (C : k →+* affineTwoRing k))).toPartialMap :=
+    Scheme.PartialMap.toRationalMap_eq_iff.mp h1
+  have hequiv' :
+      (e.hom.toPartialMap.comp
+          ((residualComponentPartialMap F hF v hv i j hdenom).compHom
+            (residualComponentToSpec F hF v hv i j))).equiv
+        (e.hom.toPartialMap.comp
+          (Spec.map (CommRingCat.ofHom
+            (C : k →+* affineTwoRing k))).toPartialMap) :=
+    Scheme.PartialMap.comp_equiv_of_equiv_right _ hequiv
+  rw [Scheme.PartialMap.toRationalMap_eq_iff.mpr hequiv',
+    Scheme.PartialMap.comp_toPartialMap, Scheme.Hom.toPartialMap_compHom,
+    SpecIso_hom_comp_map_C]
+
+/-! ### Unirationality of the residual component -/
+
+/-- **The residual component is unirational over `Spec k`, unconditionally.**  Dominance is
+Mathlib's `toImage` instance and `IsOver` is transported; the only input is a nonvanishing
+chart denominator. -/
+theorem hasUnirationalParametrization2_residualComponent
+    (hdenom : residualChartDenom F v i j ≠ 0) :
+    HasUnirationalParametrization 2 (residualComponentToSpec F hF v hv i j) :=
+  ⟨{ map := residualComponentRationalMapAffine F hF v hv i j hdenom
+     isDominant := isDominant_residualComponentRationalMapAffine F hF v hv i j hdenom
+     isOver := residualComponentRationalMapAffine_compHom_toSpec F hF v hv i j hdenom }⟩
+
 end
 
 end BConicBundleMultisections
