@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.AlgebraicIndependenceJacobian
 public import BConicBundleMultisections.Basic
 public import BConicBundleMultisections.BinaryCubicDiscriminant
 public import BConicBundleMultisections.BinaryCubicResidual
