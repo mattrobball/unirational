@@ -47,9 +47,18 @@ identically in the parameters — cannot arise at all once the fibre is known to
    independence of the residual-line endpoints, and the choice of a specialization point are now
    *proved* here, from a single remaining input:
    `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`, which says that the parameters `(t,s)`
-   whose cubic fibre is singular form a proper closed subset of the parameter plane.  That is the
-   whole of what generic smoothness has to supply, written on explicit polynomials rather than on
-   schemes.
+   whose cubic fibre is singular form a proper closed subset of the parameter plane.
+
+3. **That remaining input is FALSE as stated**, and generic smoothness is not what fails.  The
+   obligation quantifies over every legal Tsen section `v`, and when the conic family along the
+   hardcoded line `L = {Y₂ = 0}` has a base point, taking `v` to *be* that base point makes the
+   stereographic map constant, with a reducible — hence singular — cubic fibre.  An explicit
+   linear system of smooth `F` realizing this is written out in the obligation's docstring, which
+   also shows the same `F` and `v` make `residualYCoords_ne_zero_of_smooth` false.  This is the
+   hardcoded-line deviation (`PLAN.md` WP-G) biting, now with a concrete witness rather than a
+   suspicion.  **The repair is upstream of this module**: either the chooser of `v`
+   (`ResidualComponentAssembly.exists_residualChart_of_smooth`) must pick a `v` that is not a base
+   point of the conic family, or the line `L` must be chosen as the source proof chooses it.
 -/
 
 @[expose] public section
@@ -68,6 +77,56 @@ open _root_.MvPolynomial
 
 /--
 **Obligation 1, narrowed: the singular stereo parameters are a proper closed subset.**
+
+## ⚠ THIS STATEMENT IS FALSE AS IT STANDS.  Do not attempt to prove it.
+
+It quantifies over *every* nonzero isotropic section `v` of the conic bundle along the hardcoded
+coordinate line `L = {Y₂ = 0}`, and there are smooth `F` for which a legal `v` makes the
+stereographic map **constant**.
+
+*The counterexample.*  Write `F = Σ_{i ≤ j} a_{ij}(y) x_i x_j` with `a_{ij}` cubic in `y`, and take
+the linear system
+
+```
+a₀₁ = 0,        a₁₁ = y₂ · h   (h a quadratic),      a₀₀, a₀₂, a₁₂, a₂₂ free.
+```
+
+Geometrically: every conic `Q_y = {x : F(x,y) = 0}`, `y ∈ L`, passes through the *fixed* point
+`(0 : 1 : 0)` of `ℙ²_x` — the line `L` meets the locus over which the conic family has a base
+point.  Then:
+
+* `v := (0, 1, 0)`, constant, is a legal Tsen section: `Q_y(v) = a₁₁(y) = 0` for `y ∈ L`, and
+  `v ≠ 0`.  So `hv0` and `hv` hold.
+* The polar form vanishes: with `w := affineTwoStereoDir = (1, s, 0)`,
+  `polarEval Q v w = a₀₁ + 2 a₁₁ s = 0` on `L`.  Hence
+  `stereoAlg Q v w = Q(w) · v − polarEval Q v w · w = A(t) · (0,1,0)`, with
+  `A(t) = a₀₀(1,t,0)`.  **`residualImageXCoords F v = (0, A(t), 0)`: the image is the single point
+  `(0 : 1 : 0)`, independent of `s` and, projectively, of `t`.**
+* The cubic fibre there is `specializeFirstCoordinates (0, A, 0) F = A² · a₁₁(y) = A² · y₂ · h(y)`
+  — a line union a conic.  A line and a conic in `ℙ²` always meet, and at a common zero `r` of
+  `y₂` and `h` one has `∇(y₂h)(r) = h(r)·e₂ + r₂·∇h(r) = 0`.  So the fibre is **singular for every
+  `(t, s)`**, and when `A(t) = 0` it is the zero polynomial, which fails the condition too.
+
+*Such an `F` is smooth.*  The base locus of the system is `{(0:1:0)} × L`, so by Bertini in
+characteristic zero the generic member is smooth away from it; along it the gradient at
+`((0,1,0), y)`, `y₂ = 0`, is `(0, 0, a₁₂(y); 0, 0, h(y))`, and `a₁₂|_L`, `h|_L` are a generic
+binary cubic and a generic binary quadratic, which have no common zero.  So the generic member is
+smooth everywhere.
+
+*What this kills.*  The same `F` and `v` make `exists_nonsingular_stereo_cubicFiber_of_smooth`
+false, and also `residualYCoords_ne_zero_of_smooth`: with `p = (1,t,0)` and
+`∇G(p) = (0, 0, A²h(p))`, the complementary direction is `q = p × ∇G(p) = (tA²h(p), −A²h(p), 0)`,
+so `p` and `q` both lie in `{y₂ = 0}`, the whole residual line lies in `{y₂ = 0}`, and
+`G = A² y₂ h` restricts to `0` there; `residualAmbientRep p q 0 = 0`, so `residualYCoords F v = 0`.
+
+*What this does not kill.*  Only *some* `v` need be good, and the chooser
+`ResidualComponentAssembly.exists_residualChart_of_smooth` picks `v` itself.  The repair is to
+strengthen the choice of `v` — the precise degeneracy is `polarEval Q v w = 0`, i.e. the stereo map
+is constant, equivalently `v` is a base point of the conic family along `L` — or to choose the line
+`L` as the source does (§3–§4, `PLAN.md` WP-G) rather than hardcoding it.  Nothing here casts doubt
+on generic smoothness itself, which is the *other* input and is not what fails.
+
+## The original intent, for the record
 
 The stereographic parameterization of the vertical surface `S_L` over the coordinate line
 `L = {Y₂ = 0}` sends a parameter pair `(t, s) ∈ 𝔸²` to the point
@@ -128,6 +187,11 @@ theorem exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth
 **Obligation 1, in the shape the proved reduction consumes.**  Some stereographic specialization
 of the residual cubic fibre is a nonsingular plane cubic whose residual-line endpoints are linearly
 independent.
+
+⚠ **This statement is false as it stands**, for the same reason and by the same counterexample as
+`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`: read that docstring first.  The
+derivation below is sound — it is the input that is false — so the derivation survives whatever
+non-degeneracy hypothesis on `v` (or on the line `L`) is added to repair the input.
 
 *Status: proved*, from `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`.  Three of the four
 things this statement asserts are discharged here and no longer stand as assumptions:

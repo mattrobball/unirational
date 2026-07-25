@@ -41,25 +41,25 @@ It is used by `certificates/all_smooth_tangent_residual_theorem.md` §1 to make 
 cubic fibre of `ρ : X → ℙ²_x` smooth, which is what makes the tangent-residual construction
 nondegenerate.
 
-## This form is **not** the one the development consumes
+## Consumers
 
-The scheme-level statement below is heavier than the thing that feeds off it.  What WP-2 actually
-needs of the plane cubic fibre `Gs` is
+`PointedConicRationalFamilies.exists_dense_open_smooth_biprojectiveZeroLocusSnd` uses the statement
+below directly, for the **second** projection `X → ℙ²_y`, on the way to obligation 3.  It is on the
+critical path.
+
+The **first**-projection use in WP-2 is different: what the plane-cubic consumers need of a fibre
+`Gs` is
 
 ```
 ∀ r : Fin 3 → k, r ≠ 0 → eval r Gs = 0 → ∃ i, eval r (pderiv i Gs) ≠ 0
 ```
 
 — the Jacobian criterion already written out on explicit polynomials, with no morphisms and no
-relative differentials.  So the consumed obligation is the coordinate-level
-`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth` in `ResidualYNonvanishing`, which says
-that the parameters whose fibre is singular form a proper closed subset of the parameter plane.
-Its mathematical content is exactly the theorem below — this is a change of packaging, not a way
-around the mathematics — but it is stated where it is used and in the vocabulary it is used in,
-and it does not need machinery Mathlib lacks in order to be *stated*.
-
-This declaration is kept because it is the parent statement and `PLAN.md` inventories it by name.
-It is no longer on the critical path.
+relative differentials.  That first-projection obligation lives in `ResidualYNonvanishing`, stated
+in the vocabulary it is used in.  **Warning:** generic smoothness is *not* by itself enough for it;
+see `ResidualYNonvanishing.exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`, which is false
+as stated, and the counterexample recorded there.  Nothing about the theorem below is in doubt —
+the gap is on the other input, the choice of the multisection line and of the Tsen section.
 
 ## What Mathlib has, at the pinned revision
 
