@@ -88,6 +88,33 @@ section
 
 variable {K : Type u} [Field K]
 
+/-- **A constant residual line kills horizontality.**
+
+If the residual line along `L` is, at the stereo point, a multiple of a linear form whose
+coefficients are *constants* — no dependence on the parameters of `S_L` — then that form vanishes
+identically on the residual `Y`-coordinates.  The degree-one case of horizontality then fails, and
+with it horizontality.
+
+This is why condition **G3** is a hypothesis of
+`eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous` and not something to be derived: for a line
+where the residual line does not move, the conclusion is false.  An earlier version of the plan
+recorded G3 as "verified unnecessary"; this lemma is the standing refutation of that. -/
+theorem sum_smul_residualYCoordsOn_eq_zero_of_constant_residualLine
+    (p₀ q₀ r : Fin 3 → K) (N : Matrix (Fin 3) (Fin 3) K)
+    (hMN : lineFrame p₀ q₀ r * N = 1)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial K)
+    (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p₀ q₀ F) v = 0)
+    (h : affineTwoRing K) (hh : h ≠ 0) (c : Fin 3 → K)
+    (hline : residualLinearFormOn (affineTwoLineFrame p₀ q₀ r) (N.map C)
+          (cubicFiberPullback F (stereoFirstCoordsOn p₀ q₀ F v))
+        = C h * ∑ a : Fin 3, C (C (c a)) * X a) :
+    ∑ a : Fin 3, C (c a) * residualYCoordsOn p₀ q₀ r N F v a = 0 := by
+  have hzero := eval_residualYCoordsOn_residualLinearFormOn p₀ q₀ r N hMN F hF v hv
+  rw [hline] at hzero
+  simp only [map_mul, map_sum, eval_C, eval_X] at hzero
+  exact (mul_eq_zero.mp hzero).resolve_left hh
+
 /--
 **No nonzero form vanishes on the residual `Y`-coordinates along `L`.**
 
