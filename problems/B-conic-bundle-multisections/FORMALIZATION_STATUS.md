@@ -124,7 +124,7 @@ documented at its site; `PLAN.md` has the work packages and the corrections log.
 | `ResidualYNonvanishing` | `exists_isotropic_stereoNondegenerate` | §4(1); the good line |
 | `ResidualYNonvanishing` | `exists_stereo_param_nonsingularCubicFiber` | §4(1); the good line |
 | `PointedConicRationalFamilies` | `isIntegral_pullback_biprojectiveZeroLocusSnd` | two dimension estimates Mathlib lacks |
-| `PointedConicRationalFamilies` | `exists_conicChart_openImmersion` | chart bookkeeping; two conditions left of four |
+| `PointedConicRationalFamilies` | `exists_chartEquation_openImmersion` | the chart identification, in raw/support form; all normalisation stripped out and proved |
 | `ResidualComponentHorizontality` | `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` | **superseded and unprovable** — coordinate line, no hypothesis on `L`. Retire once call sites thread `L` |
 
 **Closed since the last revision:** projective elimination on points
