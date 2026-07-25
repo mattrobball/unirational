@@ -6,6 +6,7 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import BConicBundleMultisections.CubicFiberSingularLocus
+public import BConicBundleMultisections.GoodLineCondition
 public import BConicBundleMultisections.ResidualYCoordsPureT
 
 /-!
@@ -130,27 +131,29 @@ def StereoNondegenerate {k : Type u} [Field k]
 /--
 **Some isotropic section is stereo-non-degenerate.**
 
-*Status.* Obligation. This is the repair the counterexample forces: the residual construction must
-*choose* its Tsen section, not accept an arbitrary one.
+*Status: derived*, in `GoodLineCondition.lean`, from one root:
+`coordinateLineConicDiscriminant_ne_zero_of_smooth` — the generic conic along the line is smooth.
+This was the repair the counterexample forced (the residual construction must *choose* its Tsen
+section, not accept an arbitrary one), and it is now a consequence of a statement about the conic
+family alone, with no reference to the stereo map.
 
-*Why it is true.*  Degeneracy is a strong condition on a *single* `v`, not on `F`.  With
-`w = (1, s, 0)` the polar is linear in `s`, so it vanishes identically only if two coefficient
-conditions hold simultaneously; a section avoiding them is what is asserted here.
+*Why it is true, and what it really needs.*  Tsen supplies one isotropic section `v`.  If its polar
+against `e₀` or `e₁` is nonzero, it is already good.  Otherwise isotropy forces `v₂ = 0`, and the
+stereographic second intersection `stereoAlg Q v e₂` is good — unless the whole last row of the
+polar matrix vanishes, which would put `v` in the radical.  So the *only* obstruction is a conic
+whose isotropic sections all lie in its radical, and nondegeneracy of the polar matrix excludes
+exactly that.  See `exists_isotropic_polarEval_ne_zero`.
 
-*It is NOT refuted by the counterexample below.*  That family kills the earlier `∀ v` form, and this
-one is `∃ v` — the distinction matters and an earlier version of this docstring got it wrong.  On
-that very family a good section exists: with `a₀₁ = 0` and `a₁₁ = y₂·h`, the conic along `L` is
-`a₀₀x₀² + a₀₂x₀x₂ + a₁₂x₁x₂ + a₂₂x₂²`, the polar against `w = (1, s, 0)` is
-`2a₀₀v₀ + a₀₂v₂ + a₁₂v₂·s`, and `v = (0, −a₂₂, a₁₂)` is isotropic with `s`-coefficient `a₁₂²`, which
-is nonzero because that family's own smoothness argument requires `a₁₂|_L ≢ 0`.
+*This is a genuine condition, not decoration.*  `specializedConicFreeDirForm_ne_zero_of_smooth`
+(`Q(1, s, 0) ≠ 0`) does **not** suffice: over `k(t)` the rank-two conic `x₀² − t·x₁²` has its two
+lines conjugate, so its only rational point is the vertex, every polar `B(v, ·)` vanishes, and yet
+`Q(1, s, 0) = 1 − t s² ≠ 0`.  For such a conic family this statement is false.
 
-*What is genuinely open.*  Whether this can fail for the hardcoded coordinate line is **not known**.
-Failure needs *every* isotropic section degenerate, which requires at least `a₁₂|_L ≡ 0`.  For a
-line chosen as `certificates/all_smooth_tangent_residual_theorem.md` §3–§4 chooses it — outside the
-bad loci, `S_L` integral, generic conic smooth — the family has no base point and the obligation is
-clear.  So the safe discharge is alongside `ResidualLineNonconstantOn`, and this should not be
-attacked for the coordinate line in isolation.  Stated here because this is where the construction
-consumes it.
+*It is not refuted by the counterexample recorded below*, which kills the earlier `∀ v` form; this
+one is `∃ v`, and on that family `v = (0, −a₂₂, a₁₂)` is isotropic with `s`-coefficient `a₁₂²`.
+
+*And it is not a condition on `L`.*  For smooth `X` no line lies in the conic discriminant — see the
+root's docstring — so the hardcoded coordinate line is as good as any.
 -/
 theorem exists_isotropic_stereoNondegenerate
     {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
@@ -160,7 +163,8 @@ theorem exists_isotropic_stereoNondegenerate
     ∃ v : Fin 3 → Polynomial k, v ≠ 0 ∧
       TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0 ∧
       StereoNondegenerate F v :=
-  sorry
+  exists_isotropic_stereoNondegenerate_of_disc_ne_zero F hF
+    (coordinateLineConicDiscriminant_ne_zero_of_smooth F hF hF0)
 
 /-- **Specializing the parameters commutes with pulling a form back along the stereo family.**
 
@@ -234,19 +238,18 @@ theorem exists_defining_set_nonsingularCubicFiber
 /--
 **Input (ii): the stereographic image is not contained in the locus of singular fibres.**
 
-*Status.* Obligation, and **all of the risk of the old fused statement now lives here**.  This is
-§4(1) of `certificates/all_smooth_tangent_residual_theorem.md` — a condition on the choice of the
-line `L` — together with §1 generic smoothness.  **Do not attack it for the hardcoded coordinate
-line**: it is the good-line condition, `PLAN.md` WP-G, and belongs with
-`exists_isotropic_stereoNondegenerate` and `ResidualLineNonconstantOn`, not on its own.
+*Status.* Obligation, and **all of the risk of the old fused statement now lives here**.  It is
+§4(1) of `certificates/all_smooth_tangent_residual_theorem.md` together with §1 generic smoothness.
+Unlike its former companion `exists_isotropic_stereoNondegenerate`, which is now *derived* from a
+statement about the conic family alone, this one is **not** a consequence of the conic root: its
+content is in `ℙ²_x`, about the cubic discriminant, and the conic root says nothing about it.
 
 *What it says.*  Some single parameter pair `(t, s)` has a nonsingular cubic fibre over the
 stereographic point `x(t, s) = residualImageXCoords F v`.  Equivalently: the stereographic family
 does not lie inside the discriminant locus.  Nothing more is needed — input (i) upgrades one good
 parameter to a Zariski-open set of them.
 
-*Why it is true, for a line chosen as the source chooses it.*  Two ingredients, exactly the two the
-old fused statement listed.
+*Why it is true, and what a proof needs.*  Two ingredients.
 
 1. **Generic smoothness** (§1).  `X` is smooth and `char k = 0`, so the plane cubic fibre of `ρ` is
    nonsingular over a nonempty open subset of `ℙ²_x`; the complement is the discriminant locus, a
@@ -255,17 +258,38 @@ old fused statement listed.
    singular over a smooth total space is not excluded (quasi-elliptic fibrations in characteristics
    `2` and `3` realize this).  This is the coordinate form of
    `Standard.exists_nonempty_open_smooth_restrict` (Hartshorne III.10.7).
-2. **The image avoids that locus** (§4(1)), where `L` is chosen off the conic discriminant so that
-   `S_L` is integral.  `hnd` is necessary for this and not sufficient: without it the stereographic
-   map is constant (see the counterexample recorded on
-   `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`) and its single image point may be a
-   singular one; with it the image is a curve, but a curve can still lie inside the discriminant
-   curve, and ruling that out is precisely what choosing `L` generically does.
+2. **The stereo image is not swallowed by that locus.**  This splits into two genuinely different
+   cases, according to the Tsen section `v` the construction was handed.
 
-Note that (2) cannot be strengthened to "the stereographic family is dominant onto `ℙ²_x`": `v` is
-an isotropic section of the conic bundle along `L`, and for a `v` lying in `{x₂ = 0}` the
-stereographic direction `(1, s, 0)` is coplanar with it and the family degenerates to a curve.  What
-is needed, and all that is needed, is that the family avoids the discriminant. -/
+   *Case `v₂ ≢ 0`.*  For fixed `t` the lines through `v(t)` meeting `{x₂ = 0}` are all the lines
+   through `v(t)`, so `s ↦ x(t, s)` sweeps the whole conic `Q_t`; and the conics `Q_y`, `y ∈ L`, are
+   not all proportional — if `Q_y = a(y)·Q₀` then the binary cubic `a|_L` has a root `y*`, and the
+   whole fibre `ℙ²_x` over `y*` would lie in `X`, which smoothness forbids
+   (`BiprojectiveNoWholeFiber`).  So the image is dense in `ℙ²_x` and (1) finishes.  In Lean this is
+   `AlgebraicIndependenceJacobian.eq_zero_of_isHomogeneous_of_aeval_eq_zero` applied to
+   `Y = residualImageXCoords F v` and a certificate `Δ` from input (i): a nonzero `3 × 3` Jacobian
+   determinant `[Y, ∂Y/∂t, ∂Y/∂s]` gives `aeval Y Δ ≠ 0`, and `k` infinite then supplies `(t, s)`.
+   That route needs the certificates of input (i) to be *homogeneous*, which they are — every entry
+   of `famMatrix` is a coefficient of the fibre, hence a quadratic form in `x` — but this has not
+   been proved.
+
+   *Case `v₂ ≡ 0`.*  Then `v` and `w = (1, s, 0)` are coplanar, `x(t, s) = Q(w)·v − B(v,w)·w` stays
+   in the line `{x₂ = 0} ⊂ ℙ²_x`, and the image is at most that line — dense in it by `hnd`, but
+   never dense in `ℙ²_x`.  Here the Jacobian determinant *vanishes* and the route above cannot work.
+   What is needed instead is that `{x₂ = 0}` is not contained in the cubic discriminant, which for
+   smooth `X` follows by **the same argument as the conic root**
+   (`GoodLineCondition.coordinateLineConicDiscriminant_ne_zero_of_smooth`) with the two factors
+   exchanged: a line of singular fibres carries a section of singular points, differentiating along
+   the line makes the other gradient a multiple of the line's equation, and that multiple is a form
+   of positive degree on `ℙ¹`, hence has a zero — a singular point of `X`.
+
+*The cheap repair, not taken here.*  Case `v₂ ≡ 0` disappears if the section is chosen with
+`v₂ ≠ 0`, and the conic root already gives that: in the branch where `v₂ = 0` the vector
+`stereoAlg Q v e₂` has last coordinate `−B(v, e₂) ≠ 0`, which is the same construction that proves
+`exists_isotropic_stereoNondegenerate`.  So adding `v 2 ≠ 0` to that obligation's conclusion would
+reduce this one to case `v₂ ≢ 0` alone.  It is **not** done here because the extra conjunct has to
+be threaded through `ResidualComponentAssembly.exists_residualChart_of_smooth` and this module does
+not own that file. -/
 theorem exists_stereo_param_nonsingularCubicFiber
     {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)

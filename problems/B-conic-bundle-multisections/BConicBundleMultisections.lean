@@ -37,6 +37,7 @@ public import BConicBundleMultisections.CubicQuadraticResultant
 public import BConicBundleMultisections.DeterminantHomogeneous
 public import BConicBundleMultisections.AffineSpaceProduct
 public import BConicBundleMultisections.GoodLine
+public import BConicBundleMultisections.GoodLineCondition
 public import BConicBundleMultisections.GoodLineExistence
 public import BConicBundleMultisections.Standard.ResidualLineMapInjective
 public import BConicBundleMultisections.HomogeneousQuadraticEval
