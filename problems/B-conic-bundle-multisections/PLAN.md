@@ -268,22 +268,48 @@ of the three forms. Recorded in the module rather than guessed at.
 is not type correct"). `LinearCoordinateChange.proj_map_congr` handles it — `subst` the ring-hom
 equality, then `rfl` by proof irrelevance. Anything built on `Proj.map` will hit this.
 
-**Next: lift the automorphism to `ℙ²×ℙ²`.** `BiprojectiveSpace m n R` is
-`pullback (toSpec m R) (toSpec n R)`, so acting on the second factor alone is `pullback.map` with
-the identity on the first — *provided* the automorphism is over `Spec R`, i.e.
+**Scheme-level transport: parked.** Lifting `mapLinearSubstIso` to `ℙ²×ℙ²` needs
+`mapLinearSubst n M N h ≫ ProjectiveSpace.toSpec n k = ProjectiveSpace.toSpec n k`, i.e. a
+`Proj.map`/`Proj.toSpecZero` compatibility Mathlib does not have, and then carrying the zero locus
+at the ideal-sheaf level. Both are real digs. **Neither is needed** — see below.
 
-```
-mapLinearSubst n M N h ≫ ProjectiveSpace.toSpec n k = ProjectiveSpace.toSpec n k
-```
+### The line is a parameter; the transport is on the cubic, not the scheme
 
-That reduces to a **`Proj.map` / `Proj.toSpecZero` compatibility that Mathlib does not have** —
-there is no such lemma in `ProjectiveSpectrum/Functor.lean`. It should follow the same pattern
-Mathlib uses for `map_comp` and `map_id`: `mapAffineOpenCover … |>.openCover.hom_ext`, reducing to
-the away charts, with `Proj.awayι_toSpecZero` (`ProjectiveSpectrum/Basic.lean:206`) as the local
-input. No mathematics, but a genuine dig into `Proj` internals.
+Landed, all proved and axiom-clean:
 
-**Then: carry the zero locus** — the automorphism sends `V(F)` to `V(M·F)`, at the ideal-sheaf
-level. This is the substantial remaining step, and the one everything else in WP-5 serves.
+* `MultisectionLine.lean` — a line as two independent spanning vectors with `t ↦ base + t·dir`, its
+  points over any `k`-algebra, and `coordinateLine` as the hardcoded instance.
+* `ResidualBaseChangeUnirational` — `line{SpecializedConic, SpecializedConicPoly,
+  TernaryQuadraticPoly}` over an arbitrary commutative ring, with `coordinateLine*` identified as
+  the `p = (1,0,0)`, `q = (0,1,0)` case. `map_eval_lineSpecializedConicPoly` is *uniform* in the
+  second-block index; the coordinate version's three-way `fin_cases` on `1, t, 0` was an artefact.
+* `BiprojectiveFiberPolynomial.map_specializeSecondCoordinates` — coefficient change commutes with
+  second-block specialization, any `m, n`. Subsumed a `Fin 3`-only copy inside `SpecializedConicFreeDir`.
+* `LinearSubstitution.lean` — the polynomial half of `LinearCoordinateChange`, split off so it does
+  not drag in `Proj`. `eval_aeval_linearSubst` (substitution is precomposition with the matrix) and
+  `binaryLineRestriction_aeval_linearSubst` (restricting the substituted polynomial to a line is
+  restricting the original to the image line).
+* `PlaneCubicResidualEquivariance.lean` — `binaryLineRestriction_reparam` and
+  `residualAmbientRep_reparam`: rescaling the direction `q ↦ α·q + β·p` scales the residual point by
+  `α³`, so it is unchanged projectively.
+
+**Where the hardcoding actually lives.** Not in the coordinate arithmetic: a probe making both
+hardcoded line definitions opaque to `simp` broke exactly one proof in the tree. It is
+`PlaneCubicResidual.residualLinearForm`, built from the `U, V, W` monomial basis — the residual line
+`δ_C(L)` for the one line `{W = 0}`. That dependence is carried as `p 0 = 1` / `p 2 = 0` hypotheses
+through ~60 sites in `PlaneCubicResidualVanishing` (527 lines) and `PlaneCubicResidualIdentity`
+(463 lines), which end in `UniversalResidual.residualLinear_complementary_eq_zero`.
+
+Everything else is already frame-independent: `binaryLineRestriction p q` takes arbitrary vectors,
+`complementaryTangentDir G p = cross3 p (tangentGradient G p)`, `residualAmbientRep p q`.
+
+**Remaining step: `residualLinearFormOn`.** Define the residual line for a general `L` by carrying
+the *plane cubic fiber* into the frame where `L = {W = 0}` via `linearSubst`, applying the existing
+`residualLinearForm`, and carrying back. Every existing identity then applies verbatim. This
+substitutes a three-variable cubic — the ambient biprojective scheme is never transported — so it
+needs no `Proj.map` or ideal-sheaf work. The two equivariances it rests on are landed; what is left
+is the frame matrix (columns `p, q`, completed to a basis) and assembling the general form of
+`eval_residualAmbientRep_residualLinearForm`.
 
 **Only then** thread `IsGoodLine` down, so that `MainTheorem` *produces* a good line rather than
 assuming one. Threading earlier just relocates a false statement upward.
@@ -400,7 +426,7 @@ Check 3 and 4 **together**.
 
 ## Appendix: corrections log
 
-Three errors, all the same shape — adopting the source's *machinery* instead of asking what our
+Five errors. The first four are the same shape — adopting the source's *machinery* instead of asking what our
 *statement* requires. Each was caught by an outside question, not by internal checking.
 
 1. **`hXT` was false, not unproved.** It assumed a dim-3 parametrization of the base change of the
@@ -417,3 +443,12 @@ Three errors, all the same shape — adopting the source's *machinery* instead o
    also unneeded, and recorded it "verified unnecessary". It is an equivalence with the conclusion,
    so it makes the condition necessary. Caught by a subagent that was instructed to read the source
    for its step — the instruction working as intended, on the author of the instruction.
+5. **The parameterise-by-`L` refactor was scoped in the wrong place.** The scoping pass counted
+   `simp` sites unfolding the two hardcoded line definitions — 108 of them in the 4208-line
+   `SpecializedConicFreeDir` alone — and predicted a large, fragile migration. A probe replacing both
+   definitions by `simp`-opaque equivalents broke **one** proof in the whole tree, and generalising
+   that proof shortened it. Counting *syntactic occurrences* measured how often the definitions are
+   mentioned, not how much anything depends on their content. The real dependence was in
+   `residualLinearForm`'s monomial basis, which the occurrence count never touched, and which was
+   found by reading the definitions instead. Corrected before the migration started, so nothing was
+   built on the bad estimate.
