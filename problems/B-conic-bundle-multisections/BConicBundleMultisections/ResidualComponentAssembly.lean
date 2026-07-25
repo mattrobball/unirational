@@ -122,11 +122,14 @@ theorem exists_residualChart_of_smooth
     ∃ (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
       (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
       (i j : Fin 3), residualChartDenom F v i j ≠ 0 := by
-  obtain ⟨v, hv0, hv⟩ := exists_isotropic_coordinateLine_conic k F
+  -- The section must be CHOSEN, not taken arbitrarily: an isotropic `v` that is a base point of
+  -- the conic family along `L` collapses the stereographic map to a point.  See the counterexample
+  -- on `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`.
+  obtain ⟨v, hv0, hv, hnd⟩ := exists_isotropic_stereoNondegenerate F hF hF0
   have hX : residualImageXCoords F v ≠ 0 :=
     residualImageXCoords_ne_zero_of_smooth F hF hF0 v hv0 hv
   have hY : residualYCoords F v ≠ 0 :=
-    residualYCoords_ne_zero_of_smooth F hF hF0 v hv0 hv
+    residualYCoords_ne_zero_of_smooth F hF hF0 v hv0 hv hnd
   obtain ⟨i, j, hdenom⟩ := exists_residualChartDenom_ne_zero F v hX hY
   exact ⟨v, hv0, hv, i, j, hdenom⟩
 

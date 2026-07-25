@@ -75,6 +75,47 @@ universe u
 open AlgebraicGeometry MvPolynomial BiprojectiveSpace
 open _root_.MvPolynomial
 
+/-- **The stereographic map along `L` is non-constant.**
+
+`stereoAlg Q v w = Q(w)·v − B(v,w)·w`.  When the polar `B(v, w)` vanishes identically the second
+term disappears and the stereo point is a multiple of the fixed vector `v` — the image collapses to
+the single point `[v]` of `ℙ²_x` and no longer sweeps a surface.  That happens exactly when `v` is a
+base point of the conic family along `L`.
+
+This is the non-degeneracy the obligations below were missing.  See the counterexample recorded on
+`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`: for `a₀₁ = 0` and `a₁₁ = y₂·h`, the
+section `v = (0,1,0)` is isotropic along `L` and makes this polar vanish. -/
+def StereoNondegenerate {k : Type u} [Field k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) : Prop :=
+  polarEval (specializedConicPullback F) (liftTsenSection v) affineTwoStereoDir ≠ 0
+
+/--
+**Some isotropic section is stereo-non-degenerate.**
+
+*Status.* Obligation. This is the repair the counterexample forces: the residual construction must
+*choose* its Tsen section, not accept an arbitrary one.
+
+*Why it is true, and what it depends on.*  `v` is a base point of the conic family along `L` exactly
+when every conic `Q_y`, `y ∈ L`, passes through `[v]`.  For a line `L` chosen as
+`certificates/all_smooth_tangent_residual_theorem.md` §3–§4 chooses it — outside the bad loci, with
+`S_L` integral and its generic conic smooth — the family has no base point, so no isotropic section
+is degenerate.  For the hardcoded coordinate line this can fail, which is precisely the
+counterexample.
+
+*So this obligation is the good-line deviation again*, and it should be discharged together with
+`ResidualLineNonconstantOn` rather than separately.  Stated here because this is where the
+construction consumes it.
+-/
+theorem exists_isotropic_stereoNondegenerate
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
+    ∃ v : Fin 3 → Polynomial k, v ≠ 0 ∧
+      TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0 ∧
+      StereoNondegenerate F v :=
+  sorry
+
 /--
 **Obligation 1, narrowed: the singular stereo parameters are a proper closed subset.**
 
@@ -172,7 +213,8 @@ theorem exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
-    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0) :
+    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (hnd : StereoNondegenerate F v) :
     ∃ D : affineTwoRing k, D ≠ 0 ∧
       ∀ t s : k, evalAffineTwoPoint t s D ≠ 0 →
         ∀ r : Fin 3 → k, r ≠ 0 →
@@ -220,7 +262,8 @@ theorem exists_nonsingular_stereo_cubicFiber_of_smooth
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
-    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0) :
+    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (hnd : StereoNondegenerate F v) :
     ∃ t s : k,
       let x := residualImageXCoords F v
       let p := affineTwoCoordinateLineY k
@@ -236,7 +279,7 @@ theorem exists_nonsingular_stereo_cubicFiber_of_smooth
           LinearIndependent k ![ps, qs] := by
   classical
   obtain ⟨D, hD0, hDns⟩ :=
-    exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth F hF hF0 v hv0 hv
+    exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth F hF hF0 v hv0 hv hnd
   set x := residualImageXCoords F v
   set p := affineTwoCoordinateLineY k
   set G := cubicFiberPullback F x
@@ -302,10 +345,11 @@ theorem residualYCoords_ne_zero_of_smooth
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
-    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0) :
+    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (hnd : StereoNondegenerate F v) :
     residualYCoords F v ≠ 0 :=
   residualYCoords_ne_zero_of_exists_nonsingular_stereo F hF v hv
-    (exists_nonsingular_stereo_cubicFiber_of_smooth F hF hF0 v hv0 hv)
+    (exists_nonsingular_stereo_cubicFiber_of_smooth F hF hF0 v hv0 hv hnd)
 
 end
 
