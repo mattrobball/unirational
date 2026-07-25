@@ -72,9 +72,20 @@ main tree     the tangent-residual argument. Ours, proved outright. Obligations 
 
 ## Current state
 
-`lake build` green, 3081 jobs, Lean/Mathlib `v4.32.1`. **Five** `sorry`s in five modules, no
-`axiom`. WP-4 closed; WP-5's line parameterisation and the arbitrary-line residual construction
-landed; chart density proved.
+`lake build` green, 3088 jobs, Lean/Mathlib `v4.32.1`. **Ten** `sorry`s, all leaves, no `axiom`.
+
+**WP-6 is closed: the theorem is not vacuous.** `Bidegree23Example.smooth_F` is a concrete smooth
+bidegree-(2,3) hypersurface with an axiom-clean `Smooth` instance, pinned in `MainTheoremGuard`.
+The obvious Fermat candidate is *singular* — machine-checked — and the witness has to couple every
+`x` to every `y` through a Vandermonde matrix.
+
+Also closed: WP-4; chart density (`isDominant_standardChartι`); the arbitrary-line residual
+construction; base-point-freeness of the residual line; substitution-invariance of nonsingularity;
+the classical mathematics of pointed conics in families; and good-line existence, assembled
+(`exists_good_line`, no auxiliary hypotheses).
+
+The count rose from five because obligations were **split and repaired**, which is the intended
+direction. Four statements were found false and fixed in one session — see corrections 6–8.
 
 **Proved and load-bearing:** Tsen for ternary quadratics over `k[t]`; the universal residual
 identity; no whole fibre in either projection; `residualImageXCoords_ne_zero_of_smooth`;
