@@ -89,6 +89,29 @@ intersection point degenerates back to the origin. -/
 def slopeLin (d e : A) : Polynomial A :=
   Polynomial.C d + Polynomial.C e * Polynomial.X
 
+/-- The slope polynomial `L` vanishes exactly when both its coefficients do: it is the linear
+polynomial `d + e z`, so its coefficients at `0` and `1` are `d` and `e`. -/
+theorem slopeLin_eq_zero_iff (d e : A) : slopeLin d e = 0 ↔ d = 0 ∧ e = 0 := by
+  constructor
+  · intro h
+    refine ⟨?_, ?_⟩
+    · simpa [slopeLin] using congrArg (fun q => Polynomial.coeff q 0) h
+    · simpa [slopeLin] using congrArg (fun q => Polynomial.coeff q 1) h
+  · rintro ⟨rfl, rfl⟩
+    simp [slopeLin]
+
+/-- The slope polynomial `Q` vanishes exactly when all three of its coefficients do. -/
+theorem slopeQuad_eq_zero_iff (a b c : A) :
+    slopeQuad a b c = 0 ↔ a = 0 ∧ b = 0 ∧ c = 0 := by
+  constructor
+  · intro h
+    refine ⟨?_, ?_, ?_⟩
+    · simpa [slopeQuad] using congrArg (fun q => Polynomial.coeff q 0) h
+    · simpa [slopeQuad] using congrArg (fun q => Polynomial.coeff q 1) h
+    · simpa [slopeQuad] using congrArg (fun q => Polynomial.coeff q 2) h
+  · rintro ⟨rfl, rfl, rfl⟩
+    simp [slopeQuad]
+
 /-- **The line expansion.**  Restricting the conic to the line `y = z x` gives
 `f (x, z x) = x² Q(z) + x L(z)`.
 

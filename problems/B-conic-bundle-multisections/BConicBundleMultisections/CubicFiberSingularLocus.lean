@@ -7,8 +7,10 @@ module
 
 public import Mathlib.RingTheory.Nullstellensatz
 public import Mathlib.Algebra.Order.Antidiag.Finsupp
+public import Mathlib.Algebra.MvPolynomial.Funext
 public import Mathlib.LinearAlgebra.Determinant
 public import BConicBundleMultisections.BiprojectiveFiberEquationBaseChange
+public import BConicBundleMultisections.MvPolynomialHomogeneousEvaluation
 
 /-!
 # Projective elimination on points: the locus of a nontrivial common zero is closed
@@ -521,6 +523,138 @@ theorem map_eval_cubicFiberJacobianFamily (F : MvPolynomial (BiprojectiveCoordin
   simp only [cubicFiberJacobianFamily, Fin.cases_succ]
   rw [← pderiv_map, map_eval_universalCubicFiber]
 
+/-! ### The certificates are homogeneous
+
+The Jacobian criterion of `AlgebraicIndependenceJacobian.lean` — which is what turns "the stereo
+image is two-dimensional" into "the image meets the nonsingular locus" — applies only to
+*homogeneous* forms.  The certificates are: every entry of `famMatrix` is a coefficient of the cubic
+fibre, hence a quadratic form in the parameters, so a maximal minor is homogeneous of degree twice
+the size of the matrix. -/
+
+/-- **A polynomial whose values scale by `r^d` is homogeneous of degree `d`**, over an infinite
+field.  The converse of `eval_smul_point_of_isHomogeneous`, and the cheapest way to read off
+homogeneity of the coefficients of the cubic fibre from bihomogeneity of `F`. -/
+theorem isHomogeneous_of_eval_smul [Infinite k] {σ' : Type v}
+    {p : MvPolynomial σ' k} {d : ℕ}
+    (h : ∀ (r : k) (x : σ' → k), eval (fun i => r * x i) p = r ^ d * eval x p) :
+    p.IsHomogeneous d := by
+  classical
+  set N := p.totalDegree with hN
+  -- every component other than the `d`-th vanishes
+  have hcomp : ∀ n, n ≠ d → homogeneousComponent n p = 0 := by
+    intro n hn
+    by_cases hnN : n ≤ N
+    · refine MvPolynomial.funext fun x => ?_
+      -- the two univariate polynomials in the scaling parameter agree at every point
+      set P₁ : Polynomial k :=
+        ∑ m ∈ Finset.range (N + 1), Polynomial.monomial m (eval x (homogeneousComponent m p))
+        with hP₁
+      set P₂ : Polynomial k := Polynomial.monomial d (eval x p) with hP₂
+      have hev : ∀ r : k, P₁.eval r = P₂.eval r := by
+        intro r
+        have hexp : eval (fun i => r * x i) p
+            = ∑ m ∈ Finset.range (N + 1), r ^ m * eval x (homogeneousComponent m p) := by
+          conv_lhs => rw [← sum_homogeneousComponent p]
+          rw [map_sum]
+          exact Finset.sum_congr rfl fun m _ =>
+            eval_smul_point_of_isHomogeneous (homogeneousComponent_isHomogeneous m p) r x
+        rw [hP₁, hP₂]
+        simp only [Polynomial.eval_finsetSum, Polynomial.eval_monomial]
+        calc ∑ m ∈ Finset.range (N + 1), eval x (homogeneousComponent m p) * r ^ m
+            = ∑ m ∈ Finset.range (N + 1), r ^ m * eval x (homogeneousComponent m p) :=
+              Finset.sum_congr rfl fun m _ => mul_comm _ _
+          _ = r ^ d * eval x p := by rw [← hexp]; exact h r x
+          _ = eval x p * r ^ d := mul_comm _ _
+      have hPeq : P₁ = P₂ := Polynomial.funext hev
+      have hc := congrArg (fun q : Polynomial k => q.coeff n) hPeq
+      simp only [hP₁, hP₂, Polynomial.finsetSum_coeff, Polynomial.coeff_monomial] at hc
+      rw [Finset.sum_eq_single n (fun m _ hm => by simp [hm])
+        (fun hmem => absurd (Finset.mem_range.mpr (by omega)) hmem)] at hc
+      simpa [Ne.symm hn] using hc
+    · exact homogeneousComponent_eq_zero n p (by omega)
+  -- so `p` is its `d`-th component
+  have hpd : p = homogeneousComponent d p := by
+    by_cases hdN : d ≤ N
+    · conv_lhs => rw [← sum_homogeneousComponent p]
+      refine Finset.sum_eq_single d (fun m _ hm => hcomp m hm) fun hmem => ?_
+      exact absurd (Finset.mem_range.mpr (by omega)) hmem
+    · have hp0 : p = 0 := by
+        conv_lhs => rw [← sum_homogeneousComponent p]
+        refine Finset.sum_eq_zero fun m hm => hcomp m ?_
+        have hm' := Finset.mem_range.mp hm
+        omega
+      rw [hp0]
+      simp
+  rw [hpd]
+  exact homogeneousComponent_isHomogeneous d p
+
+/-- **The determinant of a matrix of forms of a fixed degree is a form.** -/
+theorem isHomogeneous_det {ι : Type*} [Fintype ι] [DecidableEq ι] {σ' : Type*}
+    (M : Matrix ι ι (MvPolynomial σ' k)) (e : ℕ) (h : ∀ i j, (M i j).IsHomogeneous e) :
+    M.det.IsHomogeneous (e * Fintype.card ι) := by
+  rw [Matrix.det_apply']
+  refine IsHomogeneous.sum _ _ _ fun τ _ => ?_
+  have hprod : (∏ i, M (τ i) i).IsHomogeneous (e * Fintype.card ι) := by
+    have hp := IsHomogeneous.prod Finset.univ (fun i => M (τ i) i) (fun _ => e)
+      fun i _ => h _ _
+    simpa [Finset.sum_const, Finset.card_univ, smul_eq_mul, mul_comm] using hp
+  have hsign : ((Equiv.Perm.sign τ : ℤ) : MvPolynomial σ' k)
+      = C ((Equiv.Perm.sign τ : ℤ) : k) := (map_intCast (C : k →+* MvPolynomial σ' k) _).symm
+  rw [hsign]
+  simpa using (isHomogeneous_C σ' ((Equiv.Perm.sign τ : ℤ) : k)).mul hprod
+
+/-- **Each coefficient of the cubic fibre, and of its partial derivatives, is a quadratic form in
+the parameters.**
+
+This is bihomogeneity of `F` read through the fibre: the fibre over `r · x` is `r²` times the fibre
+over `x`, so each of its coefficients scales by `r²`, and over an infinite field that characterises
+a quadratic form (`isHomogeneous_of_eval_smul`).  Differentiating in the second block commutes with
+the scaling, so the partials behave the same way. -/
+theorem coeff_cubicFiberJacobianFamily_isHomogeneous [Infinite k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (j : Fin 4) (e : Fin 3 →₀ ℕ) :
+    (coeff e (cubicFiberJacobianFamily F j)).IsHomogeneous 2 := by
+  refine isHomogeneous_of_eval_smul fun r x => ?_
+  have hcm : ∀ y : Fin 3 → k, eval y (coeff e (cubicFiberJacobianFamily F j))
+      = coeff e (map (eval y) (cubicFiberJacobianFamily F j)) := fun y => (coeff_map _ _ _).symm
+  have hsmul : specializeFirstCoordinates (n := 2) (fun i => r * x i) F
+      = C (r ^ 2) * specializeFirstCoordinates (n := 2) x F := by
+    have h := hF.specializeFirstCoordinates_smul r x
+    rwa [show (r • x : Fin 3 → k) = fun i => r * x i from
+      funext fun i => by simp [Pi.smul_apply, smul_eq_mul]] at h
+  rw [hcm (fun i => r * x i), hcm x]
+  obtain ⟨h0, hsucc⟩ := map_eval_cubicFiberJacobianFamily F (fun i => r * x i)
+  obtain ⟨h0', hsucc'⟩ := map_eval_cubicFiberJacobianFamily F x
+  refine Fin.cases ?_ (fun i => ?_) j
+  · rw [h0, h0', hsmul, coeff_C_mul]
+  · rw [hsucc i, hsucc' i, hsmul, pderiv_C_mul, coeff_C_mul]
+
+/-- Every entry of the elimination matrix of the cubic-fibre family is a quadratic form. -/
+theorem famMatrix_cubicFiber_isHomogeneous [Infinite k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (N : ℕ)
+    (c : monomsOfDeg (Fin 3) N → famIndex (Fin 3) ![3, 2, 2, 2] N)
+    (μ ν : monomsOfDeg (Fin 3) N) :
+    (famMatrix (cubicFiberJacobianFamily F) ![3, 2, 2, 2] N c μ ν).IsHomogeneous 2 := by
+  rw [famMatrix, Matrix.of_apply, famPoly, coeff_monomial_mul']
+  split_ifs
+  · rw [one_mul]
+    exact coeff_cubicFiberJacobianFamily_isHomogeneous F hF _ _
+  · exact isHomogeneous_zero _ _ _
+
+/-- **The elimination certificates are homogeneous.**
+
+A certificate is a maximal minor of a matrix all of whose entries are quadratic forms in the
+parameters, so it is a form of degree twice the size of the matrix.  This is what lets the Jacobian
+criterion of `AlgebraicIndependenceJacobian.lean` be applied to a certificate. -/
+theorem elimCertificates_isHomogeneous [Infinite k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    {Δ : MvPolynomial (Fin 3) k}
+    (hΔ : Δ ∈ elimCertificates (cubicFiberJacobianFamily F) ![3, 2, 2, 2]) :
+    ∃ n : ℕ, Δ.IsHomogeneous n := by
+  obtain ⟨N, -, c, rfl⟩ := hΔ
+  exact ⟨2 * Fintype.card (monomsOfDeg (Fin 3) N),
+    isHomogeneous_det _ 2 fun μ ν => famMatrix_cubicFiber_isHomogeneous F hF N c μ ν⟩
+
 /-- **The singular cubic fibres of a bidegree-`(2,3)` equation are a Zariski-closed subset of the
 first-block affine space.**
 
@@ -534,13 +668,15 @@ coefficients are quadratic forms in `x` — have a common zero other than the or
 smoothness of the total space, and nothing about the multisection line is used. -/
 theorem exists_defining_set_nonsingular_cubicFiber_of_bidegree23 [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) :
-    ∃ S : Set (MvPolynomial (Fin 3) k), ∀ x : Fin 3 → k,
+    ∃ S : Set (MvPolynomial (Fin 3) k), (∀ Δ ∈ S, ∃ n : ℕ, Δ.IsHomogeneous n) ∧
+      ∀ x : Fin 3 → k,
       ((∃ Δ ∈ S, eval x Δ ≠ 0) ↔
         ∀ r : Fin 3 → k, r ≠ 0 → eval r (specializeFirstCoordinates (n := 2) x F) = 0 →
           ∃ i : Fin 3, eval r (pderiv i (specializeFirstCoordinates (n := 2) x F)) ≠ 0) := by
-  obtain ⟨S, hS⟩ := exists_defining_set_forms_no_common_zero (k := k)
+  have hS := elimCertificates_spec (k := k)
     (cubicFiberJacobianFamily F) ![3, 2, 2, 2] (cubicFiberJacobianFamily_isHomogeneous hF)
-  refine ⟨S, fun x => ?_⟩
+  refine ⟨elimCertificates (cubicFiberJacobianFamily F) ![3, 2, 2, 2],
+    fun Δ hΔ => elimCertificates_isHomogeneous F hF hΔ, fun x => ?_⟩
   obtain ⟨h0, hsucc⟩ := map_eval_cubicFiberJacobianFamily F x
   rw [hS (eval x)]
   constructor

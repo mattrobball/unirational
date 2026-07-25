@@ -7,6 +7,7 @@ module
 
 public import BConicBundleMultisections.CubicFiberSingularLocus
 public import BConicBundleMultisections.GoodLineCondition
+public import BConicBundleMultisections.StereoJacobian
 public import BConicBundleMultisections.ResidualYCoordsPureT
 
 /-!
@@ -166,21 +167,6 @@ theorem exists_isotropic_stereoNondegenerate
   exists_isotropic_stereoNondegenerate_of_disc_ne_zero F hF
     (coordinateLineConicDiscriminant_ne_zero_of_smooth F hF hF0)
 
-/-- **Specializing the parameters commutes with pulling a form back along the stereo family.**
-
-`aeval x Δ ∈ k[t,s]` is the pullback of a form `Δ` in the first-block coordinates along the
-parameterization `x : 𝔸² → 𝔸³`; evaluating that pullback at `(t, s)` is evaluating `Δ` at the image
-point.  This is what turns a form cutting out a locus in `ℙ²_x` into an element of `k[t,s]` cutting
-out the bad parameters. -/
-theorem evalAffineTwoPoint_aeval {k : Type u} [CommRing k] (t s : k)
-    (x : Fin 3 → affineTwoRing k) (Δ : MvPolynomial (Fin 3) k) :
-    evalAffineTwoPoint t s ((aeval x : MvPolynomial (Fin 3) k →ₐ[k] affineTwoRing k) Δ)
-      = eval (fun i => evalAffineTwoPoint t s (x i)) Δ := by
-  induction Δ using MvPolynomial.induction_on with
-  | C a => simp [evalAffineTwoPoint, MvPolynomial.algebraMap_eq]
-  | add p q hp hq => simp only [map_add, hp, hq]
-  | mul_X p j hp => simp only [map_mul, aeval_X, eval_X, hp]
-
 /--
 **Input (i): the singular cubic fibres are a Zariski-closed subset of `𝔸³_x`.**
 
@@ -231,18 +217,20 @@ of those minors.  Mathlib has no multivariate resultant, and none is needed. -/
 theorem exists_defining_set_nonsingularCubicFiber
     {k : Type u} [Field k] [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) :
-    ∃ S : Set (MvPolynomial (Fin 3) k),
+    ∃ S : Set (MvPolynomial (Fin 3) k), (∀ Δ ∈ S, ∃ n : ℕ, Δ.IsHomogeneous n) ∧
       ∀ x : Fin 3 → k, (∃ Δ ∈ S, eval x Δ ≠ 0) ↔ NonsingularCubicFiber F x :=
   exists_defining_set_nonsingular_cubicFiber_of_bidegree23 F hF
 
 /--
 **Input (ii): the stereographic image is not contained in the locus of singular fibres.**
 
-*Status.* Obligation, and **all of the risk of the old fused statement now lives here**.  It is
-§4(1) of `certificates/all_smooth_tangent_residual_theorem.md` together with §1 generic smoothness.
-Unlike its former companion `exists_isotropic_stereoNondegenerate`, which is now *derived* from a
-statement about the conic family alone, this one is **not** a consequence of the conic root: its
-content is in `ℙ²_x`, about the cubic discriminant, and the conic root says nothing about it.
+*Status: derived*, in `StereoJacobian.lean`, from two inputs:
+`exists_nonsingularCubicFiber_of_smooth` (generic smoothness, borrowed and standard) and
+`stereoJacobianDet_ne_zero_of_smooth` (the stereo family sweeps a surface).  It is §4(1) of
+`certificates/all_smooth_tangent_residual_theorem.md` together with §1.  Unlike its former companion
+`exists_isotropic_stereoNondegenerate`, which is derived from a statement about the conic family
+alone, this one is **not** a consequence of the conic root: its content is in `ℙ²_x`, about the cubic
+discriminant, and the conic root says nothing about it.
 
 *What it says.*  Some single parameter pair `(t, s)` has a nonsingular cubic fibre over the
 stereographic point `x(t, s) = residualImageXCoords F v`.  Equivalently: the stereographic family
@@ -275,17 +263,15 @@ exchanged, but a separate development.  `exists_isotropic_stereoNondegenerate` n
 along with the section, so this case never reaches here; the conjunct is threaded through
 `ResidualComponentAssembly.exists_residualChart_of_smooth`.
 
-*The route, and what it still needs.*  Apply
-`AlgebraicIndependenceJacobian.eq_zero_of_isHomogeneous_of_aeval_eq_zero` to
+*The route.*  Apply `AlgebraicIndependenceJacobian.eq_zero_of_isHomogeneous_of_aeval_eq_zero` to
 `Y = residualImageXCoords F v` and a certificate `Δ` from input (i): a nonzero `3 × 3` Jacobian
 determinant `[Y, ∂Y/∂t, ∂Y/∂s]` forces `aeval Y Δ ≠ 0`, and `k` infinite then supplies a parameter
-pair where `Δ` does not vanish, which by input (i) has a nonsingular fibre.  Two gaps remain:
-
-* the certificates of input (i) must be **homogeneous** — they are, since every entry of `famMatrix`
-  is a coefficient of the cubic fibre, hence a quadratic form in `x`, so the determinant is
-  homogeneous of degree twice the matrix size — but this is not yet proved;
-* the **Jacobian determinant of the stereo map must be nonzero**, which is the concrete polynomial
-  form of "the image is two-dimensional" and is where `hv2` and smoothness are consumed. -/
+pair where `Δ` does not vanish, which by input (i) has a nonsingular fibre.  The certificates are
+homogeneous, as that criterion requires — `CubicFiberSingularLocus.elimCertificates_isHomogeneous`,
+proved: every entry of `famMatrix` is a coefficient of the cubic fibre, hence a quadratic form in
+`x`, so a maximal minor is homogeneous of degree twice the matrix size.  What is left is the Jacobian
+determinant itself, which is where `hv2` and smoothness are consumed; see
+`StereoJacobian.stereoJacobianDet_ne_zero_of_smooth`. -/
 theorem exists_stereo_param_nonsingularCubicFiber
     {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -296,7 +282,9 @@ theorem exists_stereo_param_nonsingularCubicFiber
     (hv2 : v 2 ≠ 0) (hnd : StereoNondegenerate F v) :
     ∃ t s : k,
       NonsingularCubicFiber F (fun i => evalAffineTwoPoint t s (residualImageXCoords F v i)) :=
-  sorry
+  exists_stereo_param_nonsingular_cubicFiber F hF v
+    (exists_nonsingularCubicFiber_of_smooth F hF hF0)
+    (stereoJacobianDet_ne_zero_of_smooth F hF hF0 v hv0 hv hv2 hnd)
 
 /-- **The split strengthened nothing: input (ii) is exactly the residue of the fused obligation.**
 
@@ -447,7 +435,7 @@ theorem exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth
               eval r (pderiv i (map (evalAffineTwoPoint t s)
                 (cubicFiberPullback F (residualImageXCoords F v)))) ≠ 0 := by
   classical
-  obtain ⟨S, hS⟩ := exists_defining_set_nonsingularCubicFiber F hF
+  obtain ⟨S, -, hS⟩ := exists_defining_set_nonsingularCubicFiber F hF
   obtain ⟨t₀, s₀, hgood⟩ :=
     exists_stereo_param_nonsingularCubicFiber F hF hF0 v hv0 hv hv2 hnd
   obtain ⟨Δ, hΔS, hΔ⟩ := (hS _).mpr hgood

@@ -250,6 +250,29 @@ theorem birationalOver_affineSpace_comp {S T : Scheme.{u}} (n : Type u) (ψ : S 
     ((𝔸(n; S) ↘ S) ≫ ψ) (AffineSpace.map_over (n := n) ψ)
 
 
+/-! ### Dominance gives injectivity on a reduced target
+
+The join in the light route for the quadratic condition: the coefficient forms of `F` are seen to
+vanish only *at the generic point* of `T`, and one needs them to vanish identically.  Dominance
+gives density of the image, and density of the image of `Spec S ⟶ Spec R` is exactly
+`RingHom.ker φ ≤ nilradical R` — so for reduced `R`, injectivity.  Mathlib supplies the
+equivalence; only the passage from `IsDominant` to `DenseRange (PrimeSpectrum.comap φ)` is added
+here.
+-/
+
+/-- **A dominant morphism of affine schemes comes from an injective ring map, when the target ring
+is reduced.** -/
+theorem injective_of_isDominant_specMap {R S : Type u} [CommRing R] [CommRing S]
+    [_root_.IsReduced R]
+    (φ : R →+* S) [IsDominant (Spec.map (CommRingCat.ofHom φ))] :
+    Function.Injective φ := by
+  have hd : DenseRange (PrimeSpectrum.comap φ) :=
+    IsDominant.denseRange (f := Spec.map (CommRingCat.ofHom φ))
+  have hker : RingHom.ker φ ≤ _root_.nilradical R :=
+    (PrimeSpectrum.denseRange_comap_iff_ker_le_nilRadical φ).mp hd
+  rw [nilradical_eq_zero] at hker
+  exact (RingHom.injective_iff_ker_eq_bot φ).mpr (le_antisymm hker bot_le)
+
 /-! ### Enlarging the base of a pullback square along a mono
 
 The chart computation produces its fibre-product square over an *affine chart* of `ℙ²_y`, whereas
@@ -469,6 +492,89 @@ theorem exists_affine_base_of_chart {k : Type u} [Field k]
   Scheme.exists_isOpenImmersion_isDominant_range_subset _
     (nonempty_preimage_inf_standardChart t U hU j)
 
+/-! ### The quadratic nondegeneracy condition
+
+The first of the two conditions `exists_chartEquation_openImmersion` must produce, isolated as a
+statement about `F` alone.  Saying that the quadratic part of the dehomogenized chart equation
+vanishes is saying that every monomial of `F` carries the coordinate `Xᵢ`; and a smooth
+bidegree-`(2,3)` form has no such factor, because a whole cubic fibre would then lie in `X`.
+
+This is the *light* route.  The heavy one — the projective fibre is smooth, hence irreducible,
+hence a nondegenerate form, hence contains no line — is blocked: Mathlib's
+`RingTheory/MvPolynomial/IrreducibleQuadratic.lean` lists exactly the needed statement, *"over a
+field, a polynomial of degree at most 2 whose quadratic part has rank at least 3 is irreducible"*,
+among its TODOs.  Nothing below uses irreducibility, and nothing below uses `hsmooth`: the
+quadratic and linear conditions really are independent, and must not be discharged by one appeal.
+
+The argument is the one `not_eq_rename_mul_rename_of_smooth` (`GoodLine.lean`) runs for the sibling
+degeneration `F = Q(x) f₀(y)`; only the shape of the factor differs.
+-/
+
+/-- **No first-block coordinate divides a smooth bidegree-`(2,3)` form.**
+
+If `Xᵢ ∣ F` then `F` vanishes on the whole cubic fibre over any point with `i`-th coordinate zero —
+take the unit vector at another index, which is already normalized — and
+`BiprojectiveSpace.not_specializeFirstCoordinates_eq_zero_of_smooth_bidegree23` forbids a whole
+fibre for smooth `F`.
+
+Equivalently: the coefficients of `F` at the monomials `x^a` with `aᵢ = 0` do not all vanish.  That
+is precisely the assertion that the quadratic part of the `i`-th dehomogenization of `F(·, y)` is
+not identically zero, which is the quadratic nondegeneracy condition of
+`exists_chartEquation_openImmersion`. -/
+theorem not_X_inl_dvd_of_smooth {k : Type u} [Field k] [IsAlgClosed k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (i : Fin 3) :
+    ¬ (MvPolynomial.X (Sum.inl i) ∣ F) := by
+  rintro ⟨G, hG⟩
+  -- A first-block index different from `i`, at which to normalize.
+  set l : Fin 3 := if i = 0 then 1 else 0 with hl_def
+  have hli : l ≠ i := by
+    rw [hl_def]
+    split <;> omega
+  set x : Fin 3 → k := fun a => if a = l then 1 else 0 with hx_def
+  have hxl : x l = 1 := by simp [hx_def]
+  have hxi : x i = 0 := by simp [hx_def, Ne.symm hli]
+  refine BiprojectiveSpace.not_specializeFirstCoordinates_eq_zero_of_smooth_bidegree23
+    k F hF hF0 l x hxl ?_
+  rw [hG, map_mul]
+  have : specializeFirstCoordinates (m := 2) (n := 2) x
+      (MvPolynomial.X (Sum.inl i)) = 0 := by
+    simp [specializeFirstCoordinates, hxi]
+  rw [this, zero_mul]
+
+/-! ### The linear nondegeneracy condition
+
+The second condition, and — unlike the quadratic one — it genuinely needs smoothness of the
+*fibre*.  The tree's global-smoothness Jacobian statement,
+`exists_affineChartEquation_pderiv_ne_zero_at_of_global_smooth`, produces a nonzero partial
+derivative among *all four* chart variables, which permits the two `y`-partials to carry it: that
+is precisely the situation where the point is smooth on `X` but singular on its own fibre.  So the
+two conditions are established from different inputs, and cannot be collapsed.
+-/
+
+/-- **The marked point of a smooth affine conic is a smooth point of it.**
+
+Applied over `K = Frac A` to the generic fibre, this is the linear nondegeneracy condition of
+`exists_chartEquation_openImmersion`: the gradient of the fibre equation at the section does not
+vanish, equivalently the translated linear part is nonzero
+(`PointedConic.eval_pderiv_zero_affineConicPoly` and its sibling). -/
+theorem slopeLin_ne_zero_of_smooth {K : Type u} [Field K]
+    (g : MvPolynomial (Fin 2) K) (hg : g ≠ 0)
+    (hsm : RingHom.Smooth (algebraMap K (MvPolynomial (Fin 2) K ⧸ Ideal.span {g})))
+    (p₁ p₂ : K) (hp : MvPolynomial.eval ![p₁, p₂] g = 0) :
+    PointedConic.slopeLin (MvPolynomial.eval ![p₁, p₂] (MvPolynomial.pderiv 0 g))
+      (MvPolynomial.eval ![p₁, p₂] (MvPolynomial.pderiv 1 g)) ≠ 0 := by
+  have hp' : MvPolynomial.aeval ![p₁, p₂] g = 0 := by simpa using hp
+  obtain ⟨i, hi⟩ :=
+    Hypersurface.exists_pderiv_ne_zero_at_of_smooth g hg hsm ![p₁, p₂] hp'
+  intro hzero
+  obtain ⟨h0, h1⟩ := (PointedConic.slopeLin_eq_zero_iff _ _).mp hzero
+  revert hi
+  fin_cases i
+  · simpa using h0
+  · simpa using h1
+
 /-! ### The two remaining leaves
 
 The spreading-out step splits cleanly in two, and the passage between them is proved.
@@ -670,7 +776,9 @@ blocked: Mathlib's `RingTheory/MvPolynomial/IrreducibleQuadratic.lean` covers li
 degree at most 2 whose quadratic part has rank at least 3 is irreducible"* among its **TODOs**.  It
 is the right file and the theorem is not in it.
 
-*The light route, which is the one to take.*  Unfold what the condition says.  `F` is bihomogeneous
+*The light route — now taken.*  `not_X_inl_dvd_of_smooth` above is the polynomial-level content,
+and `Scheme.injective_of_isDominant_specMap` is the join from generic-point vanishing to identical
+vanishing.  In outline, unfold what the condition says.  `F` is bihomogeneous
 of bidegree `(2,3)`, so `F = Σ_{|a| = 2} c_a(y) x^a`, and dehomogenizing at `xᵢ = 1` makes the
 quadratic part of `g` the sum of the terms with `aᵢ = 0`.  Hence `slopeQuad = 0` says exactly that
 `c_a = 0` for every `a` with `aᵢ = 0`, *at the generic point of `T`* — and `t` is dominant, so those
@@ -686,6 +794,23 @@ So the quadratic condition needs only `hF`, `hF0`, `[IsAlgClosed k]`,
 irreducibility of quadratic forms.  This is the same argument, and the same tree theorem, that
 `not_eq_rename_mul_rename_of_smooth` (`GoodLine.lean`) uses for the sibling degeneration
 `F = Q(x) f₀(y)`; only the shape of the factor differs.
+
+The step "vanishes at the generic point, hence identically" is
+`Scheme.injective_of_isDominant_specMap`: dominance of `Spec A ⟶ Spec k[u₁,u₂]` says the kernel of
+the coordinate map lies in the nilradical (`PrimeSpectrum.denseRange_comap_iff_ker_le_nilRadical`),
+and `k[u₁,u₂]` is reduced, so the map is injective.  The target being reduced is what makes this
+work; it is not an extra hypothesis, since the target is a polynomial ring over a field.
+
+*The linear condition* is `slopeLin_ne_zero_of_smooth` above, and it uses smoothness of the
+**fibre**, not of `X`: the tree's global-smoothness Jacobian statement
+`exists_affineChartEquation_pderiv_ne_zero_at_of_global_smooth` yields a nonzero partial among all
+four chart variables, and the two `y`-partials may carry it — exactly the case of a point smooth on
+`X` but singular on its own fibre.  So the two conditions are genuinely established from different
+inputs.
+
+What is left for both is only the chart bookkeeping: identifying the coefficients of the
+substituted equation `g` with those of `F`, and the fibre of the model over `Frac A` with the
+generic fibre of `π`.
 `PointedConic.eval_pderiv_zero_affineConicPoly` and its sibling identify that gradient with the
 translated linear part, so nothing has to be translated by hand here either.
 
