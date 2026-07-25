@@ -358,6 +358,45 @@ difficulty remains.
 **Only then** thread `IsGoodLine` down, so that `MainTheorem` *produces* a good line rather than
 assuming one. Threading earlier just relocates a false statement upward.
 
+### WP-5's last step: good-line *existence*
+
+This is the only research-scale item left in the project. Its content reduces further than the
+source's packaging suggests.
+
+**The reduction.** A line `L` is *bad* when `x ↦ δ_{C_x}(L)` is constant — `ResidualLineConstant`.
+Suppose **every** `k`-rational `L` is bad. Then for each such `L` and all `x, x' ∈ ℙ²_x(k)`,
+`δ_{C_x}(L) = δ_{C_{x'}}(L)`. Both are morphisms `(ℙ²_y)^∨ → (ℙ²_y)^∨` and `k` is algebraically
+closed, so `(ℙ²_y)^∨(k)` is dense and they agree as morphisms: `δ_{C_x} = δ_{C_{x'}}`. Lemma 2.1
+(`δ_C` determines `C`) then gives `C_x = C_{x'}` for all `x, x'` in the dense open where `C_x` is
+smooth, so the cubic fibration is constant. §1 turns that into `F(x, y) = Q(x)·f₀(y)` by comparing
+one nonzero coefficient — and `not_eq_rename_mul_rename_of_smooth` (**proved**) says a smooth `F` is
+not of that form. Contradiction, so some `L` is good.
+
+**What this drops.** The source reaches the same contradiction through §3: it proves `δ_C` is not
+defined over `k`, and applies Lemma 3.1 (constant-values descent, via `k`-derivations of `K/k`) to
+extract a good `L`. The reduction above replaces Lemma 3.1 by density of `k`-points and works with
+honest fibres `C_x` rather than the generic fibre `C_η`. **Lemma 3.1 is then not needed at all.**
+
+Consistent with principle 2 — Lemma 3.1 is doing work for §5's degree bookkeeping over `k`, which we
+do not claim. *Verify this against §1 and §3 once more before building on it*: dropping a step the
+source uses is exactly the shape of corrections 3 and 4.
+
+**What remains: Lemma 2.1 only.** `δ_C` determines the embedded smooth plane cubic `C`. The source
+proves it via: the flex-origin group law with `g = [-2]`; `π : C × C → (ℙ²)^∨` as the `S₃`-quotient;
+`μ = [-2] × [-2]` étale with `π ∘ μ = δ_C ∘ π`; the ramification formula, giving that the
+critical-value curve of `δ_C` is the dual sextic `C^∨`; then biduality `(C^∨)^∨ = C`.
+
+Mathlib has the elliptic-curve group law but not: the plane-cubic ↔ elliptic-curve dictionary in
+usable projective form, dual varieties, biduality, or ramification/branch divisors for a degree-four
+map of surfaces. Formalised directly this is research-scale.
+
+**Before attempting it, probe for a cheaper injectivity argument.** What is needed is only that
+`C ↦ δ_C` is *injective*, not the identification of the critical-value curve. Worth asking an
+expert: *is there a direct argument that `δ_C = δ_{C'}` forces `C = C'` for smooth plane cubics in
+characteristic zero, avoiding dual curves and the ramification computation?* If not, Lemma 2.1 is
+the project's remaining research content and should be `sorry`ed in `Standard/` with this docstring
+while everything else is completed around it.
+
 ---
 
 ## WP-6 — Non-vacuity
