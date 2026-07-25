@@ -117,15 +117,26 @@ documented at its site; `PLAN.md` has the work packages and the corrections log.
 
 | Module | Obligation | Nature |
 |--------|-----------|--------|
-| `Standard/ResidualLineMapInjective` | `exists_pencil_of_hasCommonResidualLineMap` | **borrowed** — Lemma 2.1 in pencil form. Do not attempt |
+| `Standard/ResidualLineMapInjective` | `exists_pencil_of_hasCommonResidualLineMap` | **borrowed** — Lemma 2.1, pencil form. Do not attempt |
 | `Standard/GenericSmoothness` | `exists_nonempty_open_smooth_restrict` | **borrowed** — Hartshorne III.10.7. Do not attempt |
+| `StereoJacobian` | `exists_nonsingularCubicFiber_of_smooth` | generic smoothness, concrete form. Borrowed |
 | `GoodLineExistence` | `exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates` | generic smoothness in coordinates |
+| `GoodLineCondition` | `coordinateLineConicDiscriminant_ne_zero_of_smooth` | the conic root. **Complete written proof in its docstring** |
+| `StereoJacobian` | `stereoJacobianDet_ne_zero_of_smooth` | reduced to two conic-level statements plus one Mathlib gap |
 | `ResidualHorizontalityLine` | `det_residualYCoordsOn_ne_zero` | **§4** — the last mathematical content of horizontality |
-| `ResidualYNonvanishing` | `exists_isotropic_stereoNondegenerate` | §4(1); the good line |
-| `ResidualYNonvanishing` | `exists_stereo_param_nonsingularCubicFiber` | §4(1); the good line |
 | `PointedConicRationalFamilies` | `isIntegral_pullback_biprojectiveZeroLocusSnd` | two dimension estimates Mathlib lacks |
-| `PointedConicRationalFamilies` | `exists_chartEquation_openImmersion` | the chart identification, in raw/support form; all normalisation stripped out and proved |
-| `ResidualComponentHorizontality` | `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` | **superseded and unprovable** — coordinate line, no hypothesis on `L`. Retire once call sites thread `L` |
+| `PointedConicRationalFamilies` | `exists_chartEquation_openImmersion` | interface item plus chart plumbing; both conditions themselves proved |
+| `ResidualComponentHorizontality` | `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` | **superseded and unprovable**; retire once call sites thread `L` |
+
+**Obligation 1 is fully derived.** `ResidualYNonvanishing.lean` is sorry-free: the chain from
+`residualYCoords_ne_zero_of_smooth` down through the split, the elimination theory and the good-line
+conditions rests entirely on named leaves above.
+
+**Two structural risks are closed by construction rather than by care.** The linear and quadratic
+nondegeneracy conditions provably draw on *different* inputs — fibre smoothness versus global
+smoothness — so they can never be collapsed into one appeal to `hsmooth`. And `hv2` is load-bearing
+exactly where it sits: without it the stereo family stays inside `{x₂ = 0}` and the Jacobian
+determinant is identically zero, so the obligation carrying it would be false.
 
 **Closed since the last revision:** projective elimination on points
 (`CubicFiberSingularLocus.lean`) — the singular cubic fibres form a closed set, unconditionally,
