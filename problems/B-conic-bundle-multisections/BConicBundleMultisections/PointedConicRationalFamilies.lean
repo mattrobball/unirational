@@ -322,8 +322,9 @@ The spreading-out step splits cleanly in two, and the passage between them is pr
   what the counterexample of the module docstring destroys.
 * `exists_conicChart_openImmersion` — the chart computation: over a dense affine open of `T` the
   base change *contains* an affine conic with a marked `A`-point as an open subscheme, compatibly
-  with the maps to `T`.  The marked point need not be at the origin: putting it there is
-  `PointedConic.affineConicSchemeIso`, which is proved.
+  with the maps to `T`.  Two things it does **not** have to supply: the marked point need not be at
+  the origin (`PointedConic.affineConicSchemeIso` translates it, unconditionally), and neither `A`
+  nor the conic ring has to be a domain (both follow from integrality of the base change).
 
 Given both, `exists_pointedConicAffineModel` is one application of Mathlib's
 `Scheme.Hom.birationalOver`: an open immersion into an irreducible scheme with nonempty source has
@@ -331,7 +332,7 @@ dense range, hence is dominant, hence is a birational equivalence onto its targe
 -/
 
 /--
-**The base change of the conic bundle to an integral base is irreducible.**
+**The base change of the conic bundle to an integral base is integral.**
 
 *Why it is true.*  `Y := X ×_{ℙ²_y} T` is cut out in `ℙ²_x × T` by the pullback of `F`, so every
 irreducible component of `Y` has codimension at most one, i.e. dimension at least `dim T + 1`.  A
@@ -343,7 +344,15 @@ only place the ambient smoothness of `X` is used.  So such a component has dimen
 `1 + (dim T - 1) = dim T`, a contradiction; every component dominates `T`.  Over the generic point
 of `T` the fibre is a *smooth* plane conic (`hU`, `hsmooth`, `[IsDominant t]`, `hF0` — see
 `exists_conicChart_openImmersion`), and a smooth plane conic is geometrically integral, so there is
-exactly one component through the generic fibre.  Hence `Y` is irreducible.
+exactly one component through the generic fibre, with multiplicity one.  `ℙ²_x ×_k T` is integral
+(`k` is algebraically closed and `ℙ²` is geometrically integral), and `Y` is the zero locus in it of
+a single element which is therefore prime; hence `Y` is integral.
+
+*Why integral and not merely irreducible.*  Integrality is what lets the chart leaf drop two of its
+four conditions: an open subscheme of an integral scheme is integral, so the affine model's
+coordinate ring is automatically a domain, and so is the base ring `A`.  Neither has to be produced
+by hand, and in particular the "invert a leading coefficient, use freeness over `A[y]`" spreading
+argument is not needed anywhere.
 
 *What is missing.*  Only the dimension bookkeeping.  Mathlib has `Order.krullDim` for schemes but
 no "a hypersurface in an irreducible scheme has pure codimension one" and no fibre-dimension
@@ -355,27 +364,31 @@ no fibre is `2`-dimensional.
 the counterexample `F = Y₀³ (X₀X₁ − X₂²)` in the module docstring, where `Y` acquires the vertical
 component `ℙ²_x × {Y₀ = 0}`.
 -/
-theorem irreducibleSpace_pullback_biprojectiveZeroLocusSnd
+theorem isIntegral_pullback_biprojectiveZeroLocusSnd
     {k : Type u} [Field k] [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
     (U : (ProjectiveSpace 2 k).Opens) (hU : Dense (U : Set (ProjectiveSpace 2 k)))
     (hsmooth : Smooth (biprojectiveZeroLocusSnd 2 2 k F ∣_ U)) :
-    IrreducibleSpace
-      (Limits.pullback (C := Scheme.{u}) (biprojectiveZeroLocusSnd 2 2 k F) t) :=
+    IsIntegral (Limits.pullback (C := Scheme.{u}) (biprojectiveZeroLocusSnd 2 2 k F) t) :=
   sorry
 
 /--
 **The chart computation: the pointed affine conic sits inside the base change as an open
 subscheme** (source §4–§5; `PLAN.md` WP-3e).
 
-*Statement.*  There are a domain `A`, a dominant open immersion `ψ : Spec A ⟶ T`, coefficients
+*Statement.*  There are a ring `A`, a dominant open immersion `ψ : Spec A ⟶ T`, coefficients
 `α, β, γ, δ, ε, ζ` and a point `(p₁, p₂)` **on** the conic
 `α x² + β x y + γ y² + δ x + ε y + ζ = 0` — the marked point may be anywhere, no translation is
-asked for — with integral conic ring and nonzero slope polynomials at the marked point, together
-with an **open immersion** of that conic over `Spec A` into the base change `X ×_{ℙ²_y} T`,
-commuting with the two maps to `T`.
+asked for — with nonzero slope polynomials at the marked point, together with an **open immersion**
+of that conic over `Spec A` into the base change `X ×_{ℙ²_y} T`, commuting with the two maps to
+`T`.
+
+Neither `A` nor the conic ring has to be shown to be a domain: both are *derived* in
+`exists_pointedConicAffineModel` from integrality of the base change, since an open subscheme of an
+integral scheme is integral and the marked point makes the affine model nonempty
+(`PointedConic.nontrivial_affineConicRing`).
 
 *Why it is true.*  `T` is integral and `t` is dominant, so the generic point `η` of `T` maps to the
 generic point of `ℙ²_y`, which lies in the dense open `U`; hence the generic fibre is smooth.  It
@@ -406,14 +419,56 @@ The three algebraic conditions:
 * `slopeLin (2αp₁+βp₂+δ) (βp₁+2γp₂+ε) ≠ 0`: that pair is the gradient of `g` at the marked point,
   i.e. the tangent line there, and it vanishes only if the marked point is a singular point of the
   conic.
-* `IsDomain (affineConicRing α β γ δ ε ζ)`: after a further shrinking.  Over `Frac A` the conic is
-  integral, so `g` is irreducible there; inverting whichever of `α, β, γ` is nonzero makes `g`
-  monic of degree two in one of the variables, so `A[x,y]/(g)` is a free module over `A[y]` and
-  therefore embeds into `Frac A [x,y]/(g)`, which is a domain.
+No further shrinking is needed: the integrality that would have been obtained by inverting a
+leading coefficient and using freeness over `A[y]` comes for free from
+`isIntegral_pullback_biprojectiveZeroLocusSnd`.
 
-*What is missing.*  Only bookkeeping: choosing the charts and running the existing chart
-identification.  No new mathematics, and Mathlib is not the obstacle here — this development's own
-chart machinery is.
+*What is missing, precisely.*  No new mathematics; Mathlib is not the obstacle, the chain below is.
+Each step names the declaration that supplies it, so the remaining work is mechanical.
+
+1. *The chart of `X` is an explicit affine scheme.*
+   `BiprojectiveSpace.chartZeroLocusIsoSpecAffineQuotient 2 2 k i j F`
+   (`BiprojectiveAffineZeroLocus.lean`) gives
+   `(chartIdealSheaf 2 2 k i j F).subscheme ≅ Spec (k[x₁,x₂,u,v] ⧸ (affineChartEquation …))`, with
+   no bihomogeneity hypothesis, and `affineChartEquation` is literally `F` with `Xᵢ ↦ 1`,
+   `Yⱼ ↦ 1` (`BiprojectiveAffineChart.lean`).
+2. *That chart is an open subscheme of `X`.*  `chartZeroLocusToGlobal 2 2 k F hF i j`
+   (`BiprojectiveZeroLocusSmooth.lean`) carries an `IsOpenImmersion` instance, and
+   `opensRange_chartZeroLocusToGlobal` identifies its image.
+3. *Base change.*  An open immersion stays one after base change, so
+   `pullback (chartZeroLocusToGlobal ≫ π) t ⟶ pullback π t` is an open immersion — this is the `r`
+   asked for, once its source has been identified.
+4. *Factor `t` through the `y`-chart.*  On the open `t ⁻¹ᵁ (standardChart 2 k j)` the map `t`
+   factors through `ProjectiveSpace.standardChartι 2 k j`.  **No lemma does this for a general
+   base**; the pattern to imitate is `standardChartResidueLift`
+   (`BiprojectiveFiberEquationBaseChange.lean`), which is `IsOpenImmersion.lift` applied to
+   `standardChartι`.
+5. *Shrink.*  Take an affine open `Spec A` inside `t ⁻¹ᵁ (U ⊓ standardChart 2 k j)` on which the
+   section lands in `D₊(Xᵢ)`; both opens are nonempty because they contain the generic point of
+   `T`, and a nonempty open of an irreducible space is dense.  Which `i`, `j` to use comes from
+   `ProjectiveSpace.exists_mem_standardChart`.
+6. *The substituted equation.*  `sndFiberChartMap` and `map_span_chartEquation_sndFiberChartMap`
+   (`BiprojectiveFiberEquationBaseChange.lean`) compute, for an arbitrary `k`-algebra point of the
+   `j`-th chart, the image of the chart-equation ideal as the ideal generated by
+   `specializeSecondCoordinates (secondNormalizedCoordinates y) (F.map (algebraMap k A))`.  That is
+   the conic `α x² + β x y + γ y² + δ x + ε y + ζ` over `A`, and its coefficients are the five
+   sought, `ζ` included.
+7. *The one genuinely missing small lemma.*  That the substituted equation *has* the
+   `affineConicPoly` shape, i.e. that a polynomial of total degree at most two in two variables
+   equals `affineConicPoly` of its six coefficients.  The degree bound itself is
+   `IsBihomogeneousOfBidegree.affineChartEquation_leftDegree_le`
+   (`BiprojectiveAffineChartDegree.lean`); what is missing is the enumeration of the six monomials
+   of degree at most two in `Fin 2 →₀ ℕ`.  This is elementary but `Finsupp`-fiddly and is the
+   natural next target.
+
+*On the hypotheses.*  `[IsAlgClosed k]` and `[Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]` appear
+not to be needed for *this* statement: the argument above uses only `hF`, `hF0`, integrality of `T`,
+dominance of `t`, density of `U`, `hsmooth` and the section, and the counterexample of the module
+docstring — which is what ambient smoothness exists to exclude — leaves this conclusion intact,
+breaking only the sibling leaf.  They are nevertheless **kept**.  Removing a hypothesis makes a
+statement stronger and is exactly the move that made the previous version of this leaf false; the
+hypotheses cost nothing, since the call site supplies them, and ambient smoothness is genuinely
+needed one level up.
 -/
 theorem exists_conicChart_openImmersion
     {k : Type u} [Field k] [IsAlgClosed k]
@@ -423,9 +478,8 @@ theorem exists_conicChart_openImmersion
     (s : PullbackSection (biprojectiveZeroLocusSnd 2 2 k F) t)
     (U : (ProjectiveSpace 2 k).Opens) (hU : Dense (U : Set (ProjectiveSpace 2 k)))
     (hsmooth : Smooth (biprojectiveZeroLocusSnd 2 2 k F ∣_ U)) :
-    ∃ (A : Type u) (_ : CommRing A) (_ : IsDomain A) (α β γ δ ε ζ p₁ p₂ : A)
+    ∃ (A : Type u) (_ : CommRing A) (α β γ δ ε ζ p₁ p₂ : A)
       (hp : MvPolynomial.eval ![p₁, p₂] (PointedConic.affineConicPoly α β γ δ ε ζ) = 0)
-      (_ : IsDomain (PointedConic.affineConicRing α β γ δ ε ζ))
       (_ : PointedConic.slopeQuad α β γ ≠ 0)
       (_ : PointedConic.slopeLin (2 * α * p₁ + β * p₂ + δ) (β * p₁ + 2 * γ * p₂ + ε) ≠ 0)
       (ψ : Spec (CommRingCat.of A) ⟶ T) (_ : IsOpenImmersion ψ) (_ : IsDominant ψ)
@@ -459,15 +513,31 @@ theorem exists_pointedConicAffineModel
       Scheme.BirationalOver
         (Limits.pullback.snd (biprojectiveZeroLocusSnd 2 2 k F) t)
         (PointedConic.conicSchemeToSpec a b c d e' ≫ ψ) := by
-  obtain ⟨A, instCR, instID, α, β, γ, δ, ε, ζ, p₁, p₂, hp, instACD, hQ, hL,
+  obtain ⟨A, instCR, α, β, γ, δ, ε, ζ, p₁, p₂, hp, hQ, hL,
     ψ, instOI, instDom, r₀, instR₀, hr₀⟩ :=
     exists_conicChart_openImmersion F hF hF0 t s U hU hsmooth
   letI := instCR
-  letI := instID
-  letI := instACD
   haveI := instOI
   haveI := instDom
   haveI := instR₀
+  -- The base change is integral, so both `A` and the affine model's ring are domains: an open
+  -- subscheme of an integral scheme is integral, and the affine model is nonempty because the
+  -- section gives it an `A`-point.
+  haveI : IsIntegral (Limits.pullback (C := Scheme.{u}) (biprojectiveZeroLocusSnd 2 2 k F) t) :=
+    isIntegral_pullback_biprojectiveZeroLocusSnd F hF hF0 t U hU hsmooth
+  haveI : Nonempty (Spec (CommRingCat.of A)) := by
+    have hd : Dense (Set.range ψ.base) := IsDominant.denseRange (f := ψ)
+    exact Set.range_nonempty_iff_nonempty.mp hd.nonempty
+  letI : IsIntegral (Spec (CommRingCat.of A)) := isIntegral_of_isOpenImmersion ψ
+  letI instID : IsDomain A := (affine_isIntegral_iff (CommRingCat.of A)).mp ‹_›
+  haveI : Nontrivial (PointedConic.affineConicRing α β γ δ ε ζ) :=
+    PointedConic.nontrivial_affineConicRing α β γ δ ε ζ p₁ p₂ hp
+  haveI : Nonempty (PointedConic.affineConicScheme α β γ δ ε ζ) :=
+    PrimeSpectrum.nonempty_iff_nontrivial.mpr inferInstance
+  letI : IsIntegral (PointedConic.affineConicScheme α β γ δ ε ζ) :=
+    isIntegral_of_isOpenImmersion r₀
+  letI instACD : IsDomain (PointedConic.affineConicRing α β γ δ ε ζ) :=
+    (affine_isIntegral_iff (CommRingCat.of (PointedConic.affineConicRing α β γ δ ε ζ))).mp ‹_›
   -- Translate the marked point to the origin; this is `affineConicSchemeIso`.
   haveI : IsDomain (PointedConic.conicRing α β γ
       (2 * α * p₁ + β * p₂ + δ) (β * p₁ + 2 * γ * p₂ + ε)) :=
@@ -482,9 +552,6 @@ theorem exists_pointedConicAffineModel
         (2 * α * p₁ + β * p₂ + δ) (β * p₁ + 2 * γ * p₂ + ε) ≫ ψ := by
     rw [hr_def, Category.assoc, hr₀, ← Category.assoc,
       PointedConic.affineConicSchemeIso_hom_over]
-  haveI : IrreducibleSpace
-      (Limits.pullback (C := Scheme.{u}) (biprojectiveZeroLocusSnd 2 2 k F) t) :=
-    irreducibleSpace_pullback_biprojectiveZeroLocusSnd F hF hF0 t U hU hsmooth
   haveI : Nonempty (PointedConic.conicScheme α β γ
       (2 * α * p₁ + β * p₂ + δ) (β * p₁ + 2 * γ * p₂ + ε)) :=
     PrimeSpectrum.nonempty_iff_nontrivial.mpr inferInstance

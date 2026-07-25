@@ -297,6 +297,23 @@ abbrev affineConicRing (α β γ δ ε ζ : A) : Type u :=
 def affineConicMk (α β γ δ ε ζ : A) :
     MvPolynomial (Fin 2) A →+* affineConicRing α β γ δ ε ζ := Ideal.Quotient.mk _
 
+/-- **A conic with an `A`-point has nontrivial coordinate ring.**
+
+Evaluation at the point kills the defining polynomial, hence descends to a ring homomorphism
+`affineConicRing → A`; no ring homomorphism leaves a trivial ring for a nontrivial one.  This is
+what makes the affine model *nonempty*, and it is the only thing the marked point is needed for
+besides the translation. -/
+theorem nontrivial_affineConicRing [Nontrivial A] (α β γ δ ε ζ p₁ p₂ : A)
+    (hp : MvPolynomial.eval ![p₁, p₂] (affineConicPoly α β γ δ ε ζ) = 0) :
+    Nontrivial (affineConicRing α β γ δ ε ζ) := by
+  have hmem : ∀ f ∈ Ideal.span {affineConicPoly α β γ δ ε ζ},
+      MvPolynomial.eval ![p₁, p₂] f = 0 := by
+    intro f hf
+    obtain ⟨g, rfl⟩ := Ideal.mem_span_singleton.mp hf
+    rw [map_mul, hp, zero_mul]
+  exact (Ideal.Quotient.lift (Ideal.span {affineConicPoly α β γ δ ε ζ})
+    (MvPolynomial.eval ![p₁, p₂]) hmem).domain_nontrivial
+
 /-- **The coordinate ring of a conic with a marked point is the pointed conic ring.**
 
 This is the translation `x ↦ x + p₁`, `y ↦ y + p₂`, which is an automorphism of the plane carrying
