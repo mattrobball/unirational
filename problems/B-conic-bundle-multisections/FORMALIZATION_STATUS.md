@@ -122,11 +122,18 @@ documented at its site; `PLAN.md` has the work packages and the corrections log.
 | `ResidualYNonvanishing` | `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth` | singular stereo parameters are a proper closed subset of `𝔸²` |
 | `ResidualComponentHorizontality` | `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` | **superseded**; coordinate line, no hypothesis on `L`, unprovable. Retire once call sites thread `L` |
 | `ResidualHorizontalityLine` | `eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous` | general line, condition G3 explicit. Reduced to one determinant by `AlgebraicIndependenceJacobian` |
-| `PointedConicRationalFamilies` | `isPointedConicRationalOver_of_dense_open_smooth` | spreading out a function-field birational equivalence |
+| `PointedConicRationalFamilies` | `exists_pointedConicAffineModel` | spreading the generic-fibre conic out to an affine of the base. Bookkeeping with existing chart machinery |
 
 **Closed since the last revision:** `ProjectiveSpace.isDominant_standardChartι`, sorry-free
 (`ProjectiveSpaceChartDominance.lean`), together with a general `Proj.irreducibleSpace` for graded
-domains that Mathlib lacks.
+domains that Mathlib lacks; and the whole classical content of obligation 3 —
+`PointedConicAffineModel.lean`, 738 lines and zero sorries, proving that a pointed affine conic over
+a domain is relatively birational to the affine line, with **no normal form and no Witt
+decomposition**. Obligation 3 now rests on one bookkeeping leaf.
+
+Four results there are Mathlib-shaped and absent upstream: scheme-theoretic images of integral
+schemes; `BirationalOver` base-change (`Birational.lean` has `refl/symm/trans` and no transport);
+the pointed-conic material itself, stated for an arbitrary `CommRing`; and `dense_basicOpen`.
 
 ### The one thing to read first
 
