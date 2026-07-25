@@ -84,7 +84,7 @@ theorem polarEval_eq_sum_pderiv {Q : MvPolynomial (Fin 3) R} (hQ : Q.IsHomogeneo
     simp only [ternaryQuadraticCoeff_map', hY]
     rw [eval_eq_ternaryQuadraticCoeff_sum hQ n, eval_eq_ternaryQuadraticCoeff_sum hQ w,
       polarEval_eq_coeff_sum Q hQ]
-    simp only [Fin.sum_univ_three, map_add, map_mul, C_add, C_mul]
+    simp only [Fin.sum_univ_three, map_add, map_mul]
     ring
   -- the chain rule for the same substitution
   have hchain : pderiv 0 (A Q) = ∑ a : Fin 3, A (pderiv a Q) * C (w a) := by
@@ -118,7 +118,7 @@ theorem eval_pderiv_eq_polarEval_single {Q : MvPolynomial (Fin 3) R} (hQ : Q.IsH
     eval n (pderiv i Q) = polarEval Q n (Pi.single i 1) := by
   classical
   rw [polarEval_eq_sum_pderiv hQ]
-  rw [Finset.sum_eq_single i (fun b _ hb => by simp [Pi.single_apply, hb]) (by simp)]
+  rw [Finset.sum_eq_single i (fun b _ hb => by simp [hb]) (by simp)]
   simp
 
 end

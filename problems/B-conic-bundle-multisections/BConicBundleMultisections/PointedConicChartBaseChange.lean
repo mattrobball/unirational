@@ -59,6 +59,32 @@ attribute [local instance] _root_.MvPolynomial.gradedAlgebra
 variable {m n : ℕ} {R K : Type u} [CommRing R] [CommRing K] [Algebra R K]
 variable {i : Fin (m + 1)} {j : Fin (n + 1)}
 
+/-! ### The base-changed `x`-chart is an affine plane over `A`
+
+`isPullback_SpecMap_chartQuotient` presents the affine model as a quotient of `A ⊗[k] Sₓ`, where
+`Sₓ` is the coordinate ring of the `i`-th chart of `ℙᵐ_k`.  The statement of
+`exists_chartEquation_openImmersion` wants it as a quotient of `MvPolynomial (Fin m) A`.  The two
+agree, `A`-linearly: the chart ring is a polynomial ring
+(`ProjectiveSpace.standardChartRingEquivMvPolynomial`) and polynomial rings commute with base change
+(`MvPolynomial.algebraTensorAlgEquiv`).
+-/
+
+/-- **`A ⊗[k] Sₓ ≅ A[x₁, …, xₘ]` as `A`-algebras.** -/
+noncomputable def tensorStandardChartEquivMvPolynomial (m : ℕ) (k : Type u) [CommRing k]
+    (A : Type u) [CommRing A] [Algebra k A] (i : Fin (m + 1)) :
+    A ⊗[k] ProjectiveSpace.StandardChartRing m k i ≃ₐ[A] MvPolynomial (Fin m) A :=
+  AlgEquiv.ofRingEquiv
+    (f := ((Algebra.TensorProduct.congr (AlgEquiv.refl (R := k) (A₁ := A))
+        (ProjectiveSpace.standardChartRingEquivMvPolynomial m k i)).toRingEquiv.trans
+      (MvPolynomial.algebraTensorAlgEquiv k A).toRingEquiv))
+    (fun a => by
+      show (MvPolynomial.algebraTensorAlgEquiv k A)
+        ((Algebra.TensorProduct.congr (AlgEquiv.refl (R := k) (A₁ := A))
+          (ProjectiveSpace.standardChartRingEquivMvPolynomial m k i))
+            (algebraMap A (A ⊗[k] ProjectiveSpace.StandardChartRing m k i) a)) = _
+      rw [Algebra.TensorProduct.algebraMap_apply]
+      simp [MvPolynomial.algebraTensorAlgEquiv_tmul, Algebra.smul_def])
+
 /-! ### A missing reassociation
 
 `Scheme.IdealSheafData.subschemeCover_map_subschemeι` has no `_assoc` variant in Mathlib, and the
