@@ -327,11 +327,33 @@ eval_residualAmbientRep_residualLinearFormOn_linePointOf
 None of the ~990 lines of §5 coefficient identities were re-derived; they are used verbatim in the
 normalised frame.
 
-**Remaining: thread it through.** `residualYCoords`, `residualEquation` and the residual image are
-still built from the coordinate-line versions. Each is a substitution of `residualLinearFormOn` for
-`residualLinearForm` and of `linePointOf` for `coordinateLinePoint`, with the transport theorem
-supplying the vanishing that the coordinate version got from
-`eval_residualAmbientRep_residualLinearForm`.
+**The residual chart chain is general too.** The Tsen/stereo half was threaded in the same pass, so
+nothing in the chain below assumes the coordinate line:
+
+| general | coordinate-line original |
+|---|---|
+| `affineTwoLinePoint` | `affineTwoCoordinateLineY` |
+| `lineSpecializedConicPullback` | `specializedConicPullback` |
+| `stereoFirstCoordsOn` | `stereoFirstCoords` |
+| `eval_cubicFiber_line_of_stereo` | `eval_cubicFiber_coordinateLine_of_stereo` |
+| `residualYCoordsOn` | `residualYCoords` |
+| `eval_residualYCoordsOn_residualLinearFormOn` | `eval_residualYCoords_residualLinearForm` |
+
+`lineSpecializedConicPullback_eq_map` — the affine-plane conic along `L` is the base change of the
+generic conic along `L` — is again `map_specializeSecondCoordinates`, the third place that one
+general lemma has paid for itself.
+
+Two facts make the hypotheses come out right rather than accumulating: `mulVec_affineTwoLinePoint`
+(in `L`'s own frame the generic point of `L` *is* `(1, t, 0)`, so no normalisation hypothesis
+survives the transport) and `frameTangentDir` (the direction is transported, so no span hypothesis
+survives either).
+
+**Remaining: the residual image and component.** `residualEquation`, `residualImage` and
+`residualComponent` are still built from the coordinate-line chart. The chart-level inputs they
+consume now exist in general form, so this is substitution rather than new mathematics.
+
+**Then: good-line existence** (§3, Lemma 2.1 + biduality) — still open, and the one place real
+difficulty remains.
 
 **Only then** thread `IsGoodLine` down, so that `MainTheorem` *produces* a good line rather than
 assuming one. Threading earlier just relocates a false statement upward.
