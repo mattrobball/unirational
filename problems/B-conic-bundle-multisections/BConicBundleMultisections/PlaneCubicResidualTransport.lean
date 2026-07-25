@@ -216,6 +216,37 @@ theorem eval_residualAmbientRep_residualLinearFormOn_linePointOf
   · rw [hcoord]; simp
   · rw [hcoord]; simp
 
+/-! ### Moving the frame between coefficient rings
+
+The multisection line is a line in `ℙ²` over the base field, but the residual chart computes over
+the affine plane ring.  Its frame therefore has to be pushed along `C`, and the inverse relation
+has to survive the push. -/
+
+/-- Pushing a frame along a ring homomorphism pushes its spanning vectors. -/
+theorem lineFrame_map {S : Type u} [CommRing S] (f : R →+* S) (p q r : Fin 3 → R) :
+    (lineFrame p q r).map f = lineFrame (fun i => f (p i)) (fun i => f (q i))
+      (fun i => f (r i)) := by
+  ext j l
+  fin_cases l <;> simp [lineFrame]
+
+/-- A frame inverse relation survives a change of coefficient ring. -/
+theorem lineFrame_map_mul_map {S : Type u} [CommRing S] (f : R →+* S)
+    (p q r : Fin 3 → R) (N : Matrix (Fin 3) (Fin 3) R)
+    (hMN : lineFrame p q r * N = 1) :
+    lineFrame (fun i => f (p i)) (fun i => f (q i)) (fun i => f (r i)) * N.map f = 1 := by
+  rw [← lineFrame_map f p q r, ← Matrix.map_mul, hMN]
+  ext j l
+  simp [Matrix.one_apply, apply_ite f]
+
+/-- The point of `L` at parameter `t` transports along a ring homomorphism, with the line's
+spanning vectors and the parameter transported too. -/
+theorem map_linePointOf_apply {S : Type u} [CommRing S] (f : R →+* S)
+    (p q : Fin 3 → R) (t : R) :
+    (fun i => f (linePointOf p q t i))
+      = linePointOf (fun i => f (p i)) (fun i => f (q i)) (f t) := by
+  funext i
+  simp [linePointOf]
+
 /-! ### Reduction to the coordinate line
 
 The general construction must agree with the existing one on the line the development hardcoded,
