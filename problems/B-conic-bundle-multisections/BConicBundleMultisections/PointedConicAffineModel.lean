@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import Mathlib.Algebra.MvPolynomial.PDeriv
 public import Mathlib.AlgebraicGeometry.AffineSpace
 public import Mathlib.AlgebraicGeometry.Birational.Birational
 public import Mathlib.RingTheory.Localization.Away.Basic
@@ -288,6 +289,38 @@ def conicMk : MvPolynomial (Fin 2) A →+* conicRing a b c d e := Ideal.Quotient
 
 theorem conicMk_conicPoly : conicMk a b c d e (conicPoly a b c d e) = 0 :=
   Ideal.Quotient.eq_zero_iff_mem.mpr (Ideal.subset_span rfl)
+
+/-- The `x`-partial of the general affine conic. -/
+theorem pderiv_zero_affineConicPoly (α β γ δ ε ζ : A) :
+    MvPolynomial.pderiv 0 (affineConicPoly α β γ δ ε ζ) =
+      C (2 * α) * X 0 + C β * X 1 + C δ := by
+  simp [affineConicPoly, map_ofNat]
+  ring
+
+/-- The `y`-partial of the general affine conic. -/
+theorem pderiv_one_affineConicPoly (α β γ δ ε ζ : A) :
+    MvPolynomial.pderiv 1 (affineConicPoly α β γ δ ε ζ) =
+      C β * X 0 + C (2 * γ) * X 1 + C ε := by
+  simp [affineConicPoly, map_ofNat]
+  ring
+
+/-- **The translated linear coefficients are the partial derivatives at the marked point.**
+
+`conicTranslate_affineConicPoly` produces the pair `(2αp₁ + βp₂ + δ, βp₁ + 2γp₂ + ε)` as the linear
+part after translation; these two lemmas identify it with the gradient of the conic at the marked
+point.  So "the translated linear part is nonzero" is literally "the marked point is a smooth point
+of the conic", which is the form in which a chart computation produces the condition. -/
+theorem eval_pderiv_zero_affineConicPoly (α β γ δ ε ζ p₁ p₂ : A) :
+    MvPolynomial.eval ![p₁, p₂] (MvPolynomial.pderiv 0 (affineConicPoly α β γ δ ε ζ)) =
+      2 * α * p₁ + β * p₂ + δ := by
+  rw [pderiv_zero_affineConicPoly]
+  simp
+
+theorem eval_pderiv_one_affineConicPoly (α β γ δ ε ζ p₁ p₂ : A) :
+    MvPolynomial.eval ![p₁, p₂] (MvPolynomial.pderiv 1 (affineConicPoly α β γ δ ε ζ)) =
+      β * p₁ + 2 * γ * p₂ + ε := by
+  rw [pderiv_one_affineConicPoly]
+  simp
 
 /-- The coordinate ring of the general affine conic. -/
 abbrev affineConicRing (α β γ δ ε ζ : A) : Type u :=
