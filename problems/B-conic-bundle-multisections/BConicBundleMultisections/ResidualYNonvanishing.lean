@@ -95,16 +95,24 @@ def StereoNondegenerate {k : Type u} [Field k]
 *Status.* Obligation. This is the repair the counterexample forces: the residual construction must
 *choose* its Tsen section, not accept an arbitrary one.
 
-*Why it is true, and what it depends on.*  `v` is a base point of the conic family along `L` exactly
-when every conic `Q_y`, `y ∈ L`, passes through `[v]`.  For a line `L` chosen as
-`certificates/all_smooth_tangent_residual_theorem.md` §3–§4 chooses it — outside the bad loci, with
-`S_L` integral and its generic conic smooth — the family has no base point, so no isotropic section
-is degenerate.  For the hardcoded coordinate line this can fail, which is precisely the
-counterexample.
+*Why it is true.*  Degeneracy is a strong condition on a *single* `v`, not on `F`.  With
+`w = (1, s, 0)` the polar is linear in `s`, so it vanishes identically only if two coefficient
+conditions hold simultaneously; a section avoiding them is what is asserted here.
 
-*So this obligation is the good-line deviation again*, and it should be discharged together with
-`ResidualLineNonconstantOn` rather than separately.  Stated here because this is where the
-construction consumes it.
+*It is NOT refuted by the counterexample below.*  That family kills the earlier `∀ v` form, and this
+one is `∃ v` — the distinction matters and an earlier version of this docstring got it wrong.  On
+that very family a good section exists: with `a₀₁ = 0` and `a₁₁ = y₂·h`, the conic along `L` is
+`a₀₀x₀² + a₀₂x₀x₂ + a₁₂x₁x₂ + a₂₂x₂²`, the polar against `w = (1, s, 0)` is
+`2a₀₀v₀ + a₀₂v₂ + a₁₂v₂·s`, and `v = (0, −a₂₂, a₁₂)` is isotropic with `s`-coefficient `a₁₂²`, which
+is nonzero because that family's own smoothness argument requires `a₁₂|_L ≢ 0`.
+
+*What is genuinely open.*  Whether this can fail for the hardcoded coordinate line is **not known**.
+Failure needs *every* isotropic section degenerate, which requires at least `a₁₂|_L ≡ 0`.  For a
+line chosen as `certificates/all_smooth_tangent_residual_theorem.md` §3–§4 chooses it — outside the
+bad loci, `S_L` integral, generic conic smooth — the family has no base point and the obligation is
+clear.  So the safe discharge is alongside `ResidualLineNonconstantOn`, and this should not be
+attacked for the coordinate line in isolation.  Stated here because this is where the construction
+consumes it.
 -/
 theorem exists_isotropic_stereoNondegenerate
     {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
