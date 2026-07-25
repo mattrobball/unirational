@@ -527,7 +527,7 @@ Check 3 and 4 **together**.
 
 ## Appendix: corrections log
 
-Seven errors. Six of them are the same shape — adopting the source's *machinery* instead of asking what our
+Eight errors. Six are the same shape — adopting the source's *machinery* instead of asking what our
 *statement* requires. Each was caught by an outside question, not by internal checking.
 
 1. **`hXT` was false, not unproved.** It assumed a dim-3 parametrization of the base change of the
@@ -559,7 +559,22 @@ Seven errors. Six of them are the same shape — adopting the source's *machiner
    rule working as intended. Repaired by `StereoNondegenerate` plus
    `exists_isotropic_stereoNondegenerate`: the construction must **choose** its section. This is the
    good-line deviation for the **fourth** time.
-7. **The parameterise-by-`L` refactor was scoped in the wrong place.** The scoping pass counted
+7. **Obligation 3's leaf was false: a standing hypothesis was dropped on lifting.** When the
+   classical pointed-conic statement was lifted out of its setting it kept *"smooth over a dense open
+   of the base"* — which constrains no fibre outside that open — and silently dropped the ambient
+   `[Smooth …]` on `X`. Counterexample `F = Y₀³·(X₀X₁ − X₂²)`: on `D(Y₀)` the bundle is a constant
+   smooth conic, yet `V(F)` is non-reduced along `Y₀ = 0`, so no `BirationalOver` with anything
+   integral exists. Found by the agent auditing **its own** statement from the previous round before
+   building on it. Repaired by restoring the ambient hypothesis; the consumer supplies it, so the
+   obligation above was unchanged.
+
+   **The distinct lesson.** Corrections 6 and 7 were quantifier faults — the statement said `∀`
+   where the construction needed a *chosen* object. This one is a *lifting* fault: a true statement
+   became false when moved to a more general setting because an input its original context supplied
+   for free was not carried along. Both share a root: **when a statement is restated, re-derive its
+   hypotheses from the new context rather than transcribing them.** Smoothness of a morphism over a
+   dense open says nothing about the total space, and birationality is about the total space.
+8. **The parameterise-by-`L` refactor was scoped in the wrong place.** The scoping pass counted
    `simp` sites unfolding the two hardcoded line definitions — 108 of them in the 4208-line
    `SpecializedConicFreeDir` alone — and predicted a large, fragile migration. A probe replacing both
    definitions by `simp`-opaque equivalents broke **one** proof in the whole tree, and generalising
