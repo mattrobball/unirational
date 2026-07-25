@@ -203,4 +203,14 @@ theorem binaryLineRestriction_eq_X_one_sq_mul_residualLinearForm
 
 end
 
+/-- Binary residual representative `[-d, c]` of a binary cubic (CommRing form). -/
+noncomputable def residualBinaryRep {R : Type u} [CommRing R]
+    (f : MvPolynomial (Fin 2) R) : Fin 2 → R :=
+  ![-coeff (binaryExponent 0 3) f, coeff (binaryExponent 1 2) f]
+
+/-- Ambient residual representative along the line through `p` and `q`. -/
+noncomputable def residualAmbientRep {R : Type u} [CommRing R] {σ : Type*}
+    (p q : σ → R) (f : MvPolynomial (Fin 2) R) : σ → R :=
+  fun i => residualBinaryRep f 0 * p i + residualBinaryRep f 1 * q i
+
 end BConicBundleMultisections
