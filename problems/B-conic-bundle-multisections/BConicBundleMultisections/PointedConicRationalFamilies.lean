@@ -248,6 +248,54 @@ theorem birationalOver_affineSpace_comp {S T : Scheme.{u}} (n : Type u) (ψ : S 
   exact Scheme.Hom.birationalOver (AffineSpace.map n ψ) (𝔸(n; T) ↘ T)
     ((𝔸(n; S) ↘ S) ≫ ψ) (AffineSpace.map_over (n := n) ψ)
 
+
+/-! ### Nonemptiness of the opens the chart computation works over
+
+Step 3 of the chart computation.  Both are general and elementary, and both are what makes the
+choice of chart possible at all: the open of `T` on which everything happens has to be nonempty
+before it can be shrunk to an affine.
+-/
+
+/-- **A dominant morphism pulls a nonempty open back to a nonempty open.** -/
+theorem nonempty_preimage_of_isDominant {X Y : Scheme.{u}} (f : X ⟶ Y) [IsDominant f]
+    (W : Y.Opens) (hW : (W : Set Y).Nonempty) :
+    ((f ⁻¹ᵁ W : X.Opens) : Set X).Nonempty := by
+  have hd : Dense (Set.range f.base) := IsDominant.denseRange (f := f)
+  obtain ⟨y, hyW, hyr⟩ := hd.inter_open_nonempty _ W.isOpen hW
+  obtain ⟨x, rfl⟩ := hyr
+  exact ⟨x, hyW⟩
+
+/-- **Two nonempty opens of an irreducible scheme meet.**
+
+Applied to `U` (dense, where the conic bundle is smooth) and a standard chart of `ℙ²_y`. -/
+theorem nonempty_inf_opens {X : Scheme.{u}} [IrreducibleSpace X] (U W : X.Opens)
+    (hU : (U : Set X).Nonempty) (hW : (W : Set X).Nonempty) :
+    ((U ⊓ W : X.Opens) : Set X).Nonempty :=
+  nonempty_preirreducible_inter U.isOpen W.isOpen hU hW
+
+/-! ### Dense affine opens of an integral scheme
+
+Step 4 of the chart computation: the affine base `Spec A` over which the affine model lives.
+-/
+
+/-- **A nonempty open of an integral scheme contains a dense affine open**, packaged as a dominant
+open immersion from an affine scheme with prescribed range.
+
+This is the form `exists_chartEquation_openImmersion` has to produce its base in.  Density is
+automatic: an integral scheme is irreducible, so every nonempty open is dense. -/
+theorem exists_isOpenImmersion_isDominant_range_subset {T : Scheme.{u}} [IsIntegral T]
+    (V : T.Opens) (hV : (V : Set T).Nonempty) :
+    ∃ (A : Type u) (_ : CommRing A) (ψ : Spec (CommRingCat.of A) ⟶ T),
+      IsOpenImmersion ψ ∧ IsDominant ψ ∧ Set.range ψ.base ⊆ (V : Set T) := by
+  obtain ⟨x, hx⟩ := hV
+  obtain ⟨_, ⟨W, hW, rfl⟩, hxW, hWV⟩ :=
+    T.isBasis_affineOpens.exists_subset_of_mem_open hx V.isOpen
+  refine ⟨Γ(T, W), inferInstance, hW.fromSpec, inferInstance, ⟨?_⟩, ?_⟩
+  · rw [DenseRange, hW.range_fromSpec]
+    exact W.isOpen.dense ⟨x, hxW⟩
+  · rw [hW.range_fromSpec]
+    exact hWV
+
 end AlgebraicGeometry.Scheme
 
 namespace BConicBundleMultisections
@@ -313,6 +361,42 @@ theorem exists_dense_open_smooth_biprojectiveZeroLocusSnd
       (biprojectiveZeroLocusSnd 2 2 k F) (biprojectiveZeroLocusSnd_toSpec 2 2 k F)
   refine ⟨U, ?_, hsmooth⟩
   exact U.isOpen.dense (Set.nonempty_coe_sort.mp hU)
+
+/-! ### The base of the chart computation
+
+Steps 3 and 4 of `exists_chartEquation_openImmersion` assembled: the affine open `Spec A ⊆ T` over
+which the affine model lives, together with the guarantee that it sits inside the locus where the
+conic bundle is smooth and where `t` lands in the `j`-th chart of `ℙ²_y`.  Note that *every* `j`
+works: the generic point of `ℙ²_k` lies in every standard chart.
+-/
+
+/-- The open of `T` on which the chart computation takes place is nonempty, for every choice of
+`y`-chart. -/
+theorem nonempty_preimage_inf_standardChart {k : Type u} [Field k]
+    {T : Scheme.{u}} (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
+    (U : (ProjectiveSpace 2 k).Opens) (hU : Dense (U : Set (ProjectiveSpace 2 k)))
+    (j : Fin 3) :
+    ((t ⁻¹ᵁ (U ⊓ ProjectiveSpace.standardChart 2 k j) : T.Opens) : Set T).Nonempty := by
+  haveI : IrreducibleSpace (ProjectiveSpace 2 k) := inferInstance
+  refine Scheme.nonempty_preimage_of_isDominant t _ (Scheme.nonempty_inf_opens _ _ ?_ ?_)
+  · exact hU.nonempty
+  · exact ⟨ProjectiveSpace.genericPoint 2 k, ProjectiveSpace.genericPoint_mem_standardChart 2 k j⟩
+
+/-- **The affine base of the chart computation.**
+
+A dense affine open of `T` inside the locus where the conic bundle is smooth and where `t` lands in
+the `j`-th standard chart of `ℙ²_y`.  This is what `exists_chartEquation_openImmersion` must take
+as its `A` and `ψ`. -/
+theorem exists_affine_base_of_chart {k : Type u} [Field k]
+    {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
+    (U : (ProjectiveSpace 2 k).Opens) (hU : Dense (U : Set (ProjectiveSpace 2 k)))
+    (j : Fin 3) :
+    ∃ (A : Type u) (_ : CommRing A) (ψ : Spec (CommRingCat.of A) ⟶ T),
+      IsOpenImmersion ψ ∧ IsDominant ψ ∧
+        Set.range ψ.base ⊆
+          ((t ⁻¹ᵁ (U ⊓ ProjectiveSpace.standardChart 2 k j) : T.Opens) : Set T) :=
+  Scheme.exists_isOpenImmersion_isDominant_range_subset _
+    (nonempty_preimage_inf_standardChart t U hU j)
 
 /-! ### The two remaining leaves
 
@@ -444,16 +528,38 @@ Each step names the declaration that supplies it, so the remaining work is mecha
    base**; the pattern to imitate is `standardChartResidueLift`
    (`BiprojectiveFiberEquationBaseChange.lean`), which is `IsOpenImmersion.lift` applied to
    `standardChartι`.
-5. *Shrink.*  Take an affine open `Spec A` inside `t ⁻¹ᵁ (U ⊓ standardChart 2 k j)` on which the
-   section lands in `D₊(Xᵢ)`; both opens are nonempty because they contain the generic point of
-   `T`, and a nonempty open of an irreducible space is dense.  Which `i`, `j` to use comes from
-   `exists_mem_standardChart` (`BiprojectiveZeroLocusClosedPoints.lean`).
-6. *The substituted equation.*  `sndFiberChartMap` and `map_span_chartEquation_sndFiberChartMap`
-   (`BiprojectiveFiberEquationBaseChange.lean`) compute, for an arbitrary `k`-algebra point of the
-   `j`-th chart, the image of the chart-equation ideal as the ideal generated by
-   `specializeSecondCoordinates (secondNormalizedCoordinates y) (F.map (algebraMap k A))`.  That is
-   the conic `α x² + β x y + γ y² + δ x + ε y + ζ` over `A`, and its coefficients are the five
-   sought, `ζ` included.
+5. *Shrink* — **done**.  `exists_affine_base_of_chart` above produces `A` and `ψ` with
+   `Set.range ψ ⊆ t ⁻¹ᵁ (U ⊓ standardChart 2 k j)`, for *every* `j`: the generic point of `ℙ²_k`
+   lies in every standard chart (`ProjectiveSpace.genericPoint_mem_standardChart`), so no choice of
+   `j` has to be made.  It rests on three general lemmas proved above —
+   `Scheme.nonempty_preimage_of_isDominant`, `Scheme.nonempty_inf_opens` and
+   `Scheme.exists_isOpenImmersion_isDominant_range_subset` (a nonempty open of an integral scheme
+   contains a dense affine open, packaged as a dominant open immersion).  Only the choice of the
+   `x`-chart index `i` is left: the section's image at the generic point lies in some `D₊(Xᵢ)`
+   because the standard charts cover `ℙ²_x`.
+6. *The substituted equation, and the pullback square.*  This is the crux, and it is **not blocked
+   by Mathlib** — every piece exists; what is left is assembly.  `sndFiberChartMap` and
+   `map_span_chartEquation_sndFiberChartMap` (`BiprojectiveFiberEquationBaseChange.lean`) already
+   compute, for an arbitrary `k`-algebra point `y` of the `j`-th chart, the ring map and the image
+   of the chart-equation ideal, namely the ideal generated by
+   `specializeSecondCoordinates (secondNormalizedCoordinates y) (F.map (algebraMap k A))` — which is
+   the conic `α x² + β x y + γ y² + δ x + ε y + ζ` over `A`, `ζ` included.  What has to be added is
+   that the resulting square of rings is a **pushout**, i.e. that
+
+   `(StandardChartRing 2 2 k i j ⧸ (chartEquation)) ⊗[StandardChartRing 2 k j] A` is
+   `(A ⊗[k] StandardChartRing 2 k i) ⧸ (substituted equation)`,
+
+   for which the three Mathlib ingredients are `AlgebraTensorModule.cancelBaseChange` /
+   `IsPushout.cancelBaseChange` (`RingTheory/IsTensorProduct.lean`) for
+   `(A ⊗[R] B) ⊗[B] C ≅ A ⊗[R] C`, `Algebra.TensorProduct.quotIdealMapEquivQuotTensor` for
+   commuting the quotient past the base change, and finally
+   `AlgebraicGeometry.isPullback_SpecMap_of_isPushout` (`AlgebraicGeometry/Pullbacks.lean`) to turn
+   the pushout of rings into the pullback square of schemes.  That square, pasted with
+   `Limits.pullbackRightPullbackFstIso` and the open-immersion stability of base change, is exactly
+   the `r` this statement asks for.  (For the point-constructing direction, which is *not* what is
+   needed here but is the natural sanity check, the tree already has
+   `chartZeroLocusPointOfNormalizedAlgebra` and `affineChartQuotientEvalAlgebra` in
+   `ResidualImageAlgebraPoint.lean`.)
 7. *Putting it in normal form* — **done**, and that is why this statement hands back the raw
    equation `g` rather than the six coefficients.  `BinaryQuadraticNormalForm` proves
    `eq_affineConicPoly_of_totalDegree_le_two`, and `exists_conicChart_openImmersion` below applies
@@ -466,7 +572,18 @@ Each step names the declaration that supplies it, so the remaining work is mecha
 The two nondegeneracy conditions are likewise stated intrinsically, on the raw `g`: the quadratic
 part is the triple of coefficients at the exponents `(2,0), (1,1), (0,2)`, and the linear condition
 is that the **gradient of `g` at the marked point** is nonzero, i.e. that the marked point is a
-smooth point of the conic.  `PointedConic.eval_pderiv_zero_affineConicPoly` and its sibling
+smooth point of the conic.
+
+*Where each comes from — and a trap.*  The linear condition is smoothness of the generic fibre at
+the section, for which `Hypersurface.exists_pderiv_ne_zero_at_of_smooth`
+(`BiprojectiveAffineJacobian.lean`) is the field-level statement to base change to `Frac A`.  The
+quadratic condition is **not** a consequence of smoothness of the *affine* model: an affine line is
+smooth and has zero quadratic part.  It says that the line at infinity of the `x`-chart is not
+contained in the conic, and that needs the *projective* fibre to be a smooth — hence irreducible,
+hence nondegenerate — plane conic.  The two must not be collapsed into a single appeal to
+`hsmooth`: `hsmooth` is smoothness of `π ∣_ U`, whose fibres are projective conics, and it is the
+projective fibre that has to be used for the quadratic condition.
+`PointedConic.eval_pderiv_zero_affineConicPoly` and its sibling
 identify that gradient with the translated linear part, so nothing has to be translated by hand
 here either.
 
