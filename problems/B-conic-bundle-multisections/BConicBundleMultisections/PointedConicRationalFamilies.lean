@@ -250,6 +250,32 @@ theorem birationalOver_affineSpace_comp {S T : Scheme.{u}} (n : Type u) (ψ : S 
     ((𝔸(n; S) ↘ S) ≫ ψ) (AffineSpace.map_over (n := n) ψ)
 
 
+/-! ### Enlarging the base of a pullback square along a mono
+
+The chart computation produces its fibre-product square over an *affine chart* of `ℙ²_y`, whereas
+`exists_isOpenImmersion_to_pullback` consumes one over `ℙ²_y` itself.  The two differ by
+postcomposing both legs with the chart inclusion, which is an open immersion and in particular a
+monomorphism — and that does not disturb a pullback square.
+-/
+
+/-- **A pullback square stays a pullback after postcomposing both legs with a monomorphism.**
+
+Purely categorical.  The universal property transfers because a cone for the enlarged square is
+already a cone for the original one: `u` may be cancelled from `a ≫ f ≫ u = b ≫ g ≫ u`. -/
+theorem isPullback_comp_mono {C : Type*} [Category C] {P X Y V B : C} {fst : P ⟶ X} {snd : P ⟶ Y}
+    {f : X ⟶ V} {g : Y ⟶ V} (h : IsPullback fst snd f g) (u : V ⟶ B) [Mono u] :
+    IsPullback fst snd (f ≫ u) (g ≫ u) := by
+  refine IsPullback.of_isLimit' ⟨by rw [← Category.assoc, ← Category.assoc, h.w]⟩
+    (Limits.PullbackCone.isLimitAux' _ fun s => ?_)
+  have hs : (Limits.PullbackCone.fst s) ≫ f = (Limits.PullbackCone.snd s) ≫ g := by
+    rw [← cancel_mono u, Category.assoc, Category.assoc]
+    exact s.condition
+  refine ⟨h.lift (Limits.PullbackCone.fst s) (Limits.PullbackCone.snd s) hs, h.lift_fst _ _ _,
+    h.lift_snd _ _ _, fun {m} hm₁ hm₂ => ?_⟩
+  apply h.hom_ext
+  · rw [h.lift_fst]; exact hm₁
+  · rw [h.lift_snd]; exact hm₂
+
 /-! ### Pasting a chart square into the base change
 
 The last structural step of the chart computation.  If a scheme `W` is the fibre product, over the
@@ -629,13 +655,37 @@ smooth point of the conic.
 
 *Where each comes from — and a trap.*  The linear condition is smoothness of the generic fibre at
 the section, for which `Hypersurface.exists_pderiv_ne_zero_at_of_smooth`
-(`BiprojectiveAffineJacobian.lean`) is the field-level statement to base change to `Frac A`.  The
-quadratic condition is **not** a consequence of smoothness of the *affine* model: an affine line is
-smooth and has zero quadratic part.  It says that the line at infinity of the `x`-chart is not
-contained in the conic, and that needs the *projective* fibre to be a smooth — hence irreducible,
-hence nondegenerate — plane conic.  The two must not be collapsed into a single appeal to
-`hsmooth`: `hsmooth` is smoothness of `π ∣_ U`, whose fibres are projective conics, and it is the
-projective fibre that has to be used for the quadratic condition.
+(`BiprojectiveAffineJacobian.lean`) is the field-level statement to base change to `Frac A`.
+
+The quadratic condition is a different matter and must **not** be discharged by the same appeal.
+It is not a consequence of smoothness of the *affine* model — an affine line is smooth and has zero
+quadratic part — so `hsmooth` cannot be used twice.
+
+*The heavy route, and why not to take it.*  One may argue that the quadratic condition says the
+line at infinity of the `x`-chart is not contained in the conic, which holds because the
+*projective* fibre is smooth, hence irreducible, hence a nondegenerate form.  That route is
+blocked: Mathlib's `RingTheory/MvPolynomial/IrreducibleQuadratic.lean` covers linear forms
+(`irreducible_of_totalDegree_eq_one`, `irreducible_sumSMulX`) and quadratics of the special shape
+`Σ cᵢ XᵢYᵢ` (`irreducible_sumSMulXSMulY`), and lists *"prove, over a field, that a polynomial of
+degree at most 2 whose quadratic part has rank at least 3 is irreducible"* among its **TODOs**.  It
+is the right file and the theorem is not in it.
+
+*The light route, which is the one to take.*  Unfold what the condition says.  `F` is bihomogeneous
+of bidegree `(2,3)`, so `F = Σ_{|a| = 2} c_a(y) x^a`, and dehomogenizing at `xᵢ = 1` makes the
+quadratic part of `g` the sum of the terms with `aᵢ = 0`.  Hence `slopeQuad = 0` says exactly that
+`c_a = 0` for every `a` with `aᵢ = 0`, *at the generic point of `T`* — and `t` is dominant, so those
+cubic forms in `y` vanish identically.  That is to say every monomial of `F` is divisible by `xᵢ`.
+But then for any `x₀` with `(x₀)ᵢ = 0` — take the unit vector at any index `≠ i`, which is already
+normalized — the whole cubic fibre over `x₀` lies in `X`, i.e.
+`specializeFirstCoordinates x₀ F = 0`, which
+`BiprojectiveSpace.not_specializeFirstCoordinates_eq_zero_of_smooth_bidegree23` forbids for smooth
+`F`.
+
+So the quadratic condition needs only `hF`, `hF0`, `[IsAlgClosed k]`,
+`[Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]` and dominance of `t` — **not** `hsmooth`, and no
+irreducibility of quadratic forms.  This is the same argument, and the same tree theorem, that
+`not_eq_rename_mul_rename_of_smooth` (`GoodLine.lean`) uses for the sibling degeneration
+`F = Q(x) f₀(y)`; only the shape of the factor differs.
 `PointedConic.eval_pderiv_zero_affineConicPoly` and its sibling identify that gradient with the
 translated linear part, so nothing has to be translated by hand here either.
 
