@@ -85,6 +85,20 @@ noncomputable def tensorStandardChartEquivMvPolynomial (m : ℕ) (k : Type u) [C
       rw [Algebra.TensorProduct.algebraMap_apply]
       simp [MvPolynomial.algebraTensorAlgEquiv_tmul, Algebra.smul_def])
 
+/-- **The affine model, presented over `A[x₁, …, xₘ]`.**
+
+Transporting the defining ideal along `tensorStandardChartEquivMvPolynomial`: the quotient of
+`A ⊗[k] Sₓ` by the substituted chart equation `q` is the quotient of `A[x₁, …, xₘ]` by its image.
+That image is the `g` of `exists_chartEquation_openImmersion`. -/
+noncomputable def conicChartQuotientEquivMvPolynomial (m : ℕ) (k : Type u) [CommRing k]
+    (A : Type u) [CommRing A] [Algebra k A] (i : Fin (m + 1))
+    (q : A ⊗[k] ProjectiveSpace.StandardChartRing m k i) :
+    ((A ⊗[k] ProjectiveSpace.StandardChartRing m k i) ⧸ Ideal.span {q}) ≃ₐ[A]
+      (MvPolynomial (Fin m) A ⧸
+        Ideal.span {tensorStandardChartEquivMvPolynomial m k A i q}) :=
+  Ideal.quotientEquivAlg _ _ (tensorStandardChartEquivMvPolynomial m k A i)
+    (by rw [Ideal.map_span, Set.image_singleton]; rfl)
+
 /-! ### A missing reassociation
 
 `Scheme.IdealSheafData.subschemeCover_map_subschemeι` has no `_assoc` variant in Mathlib, and the
