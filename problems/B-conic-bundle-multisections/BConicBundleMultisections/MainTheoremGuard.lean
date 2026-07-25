@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.Bidegree23Example
 public import BConicBundleMultisections.GoodLine
 public import BConicBundleMultisections.MainTheorem
 
@@ -115,3 +116,13 @@ end BConicBundleMultisections
 
 -- §1(b) of the source proof is fully proved and must stay that way.
 #guard_no_sorry BConicBundleMultisections.not_eq_rename_mul_rename_of_smooth
+
+-- **Non-vacuity.**  A concrete smooth bidegree-(2,3) hypersurface exists, so the `Smooth`
+-- hypothesis of the headline theorem is satisfiable.  This is the one guard that `#print axioms`
+-- on the main theorem structurally cannot provide: a vacuous theorem passes every axiom check and
+-- every `sorry` census.  If this ever breaks, the main theorem may be about the empty set.
+#guard_no_sorry BConicBundleMultisections.Bidegree23Example.smooth_F
+
+-- The obvious Fermat candidate is singular; that is machine-checked, not assumed, and the
+-- witness above had to couple every `x` to every `y` to avoid it.
+#guard_no_sorry BConicBundleMultisections.Bidegree23Example.not_smooth_fermatF

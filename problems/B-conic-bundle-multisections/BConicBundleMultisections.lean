@@ -7,6 +7,8 @@ module
 
 public import BConicBundleMultisections.AlgebraicIndependenceJacobian
 public import BConicBundleMultisections.Basic
+public import BConicBundleMultisections.Bidegree23Example
+public import BConicBundleMultisections.BiprojectiveSmoothCriterion
 public import BConicBundleMultisections.BinaryCubicDiscriminant
 public import BConicBundleMultisections.BinaryCubicResidual
 public import BConicBundleMultisections.BinaryResultant
