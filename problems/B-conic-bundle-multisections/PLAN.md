@@ -72,7 +72,8 @@ main tree     the tangent-residual argument. Ours, proved outright. Obligations 
 
 ## Current state
 
-`lake build` green, 3067 jobs, Lean/Mathlib `v4.32.1`. **Four** `sorry`s, no `axiom`. WP-4 closed.
+`lake build` green, 3076 jobs, Lean/Mathlib `v4.32.1`. **Five** `sorry`s across four modules, no
+`axiom`. WP-4 closed; WP-5's line parameterisation landed (see WP-5 progress).
 
 **Proved and load-bearing:** Tsen for ternary quadratics over `k[t]`; the universal residual
 identity; no whole fibre in either projection; `residualImageXCoords_ne_zero_of_smooth`;
