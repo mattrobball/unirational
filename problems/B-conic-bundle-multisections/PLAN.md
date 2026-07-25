@@ -527,7 +527,7 @@ Check 3 and 4 **together**.
 
 ## Appendix: corrections log
 
-Six errors. Five of them are the same shape — adopting the source's *machinery* instead of asking what our
+Seven errors. Six of them are the same shape — adopting the source's *machinery* instead of asking what our
 *statement* requires. Each was caught by an outside question, not by internal checking.
 
 1. **`hXT` was false, not unproved.** It assumed a dim-3 parametrization of the base change of the
@@ -551,7 +551,15 @@ Six errors. Five of them are the same shape — adopting the source's *machinery
    deviation surfacing for the **third** time, after `hXT` and after 1c/1d — the recurring structural
    fault of this development is not any individual false statement but the habit of adopting §5's
    normalisation while dropping §3's choice.
-6. **The parameterise-by-`L` refactor was scoped in the wrong place.** The scoping pass counted
+6. **Obligation B was false, with an explicit counterexample.** It quantified over *every* nonzero
+   isotropic Tsen section `v`. For `a₀₁ = 0`, `a₁₁ = y₂·h`, every conic over the coordinate line
+   passes through `(0:1:0)`, so `v = (0,1,0)` is isotropic, the polar vanishes, and the stereographic
+   map collapses to a point; the cubic fibre is then `A²·y₂·h`, a line union a conic, singular for
+   every parameter. Found by an agent told to stop rather than prove a suspect statement — the house
+   rule working as intended. Repaired by `StereoNondegenerate` plus
+   `exists_isotropic_stereoNondegenerate`: the construction must **choose** its section. This is the
+   good-line deviation for the **fourth** time.
+7. **The parameterise-by-`L` refactor was scoped in the wrong place.** The scoping pass counted
    `simp` sites unfolding the two hardcoded line definitions — 108 of them in the 4208-line
    `SpecializedConicFreeDir` alone — and predicted a large, fragile migration. A probe replacing both
    definitions by `simp`-opaque equivalents broke **one** proof in the whole tree, and generalising
