@@ -411,14 +411,53 @@ differentiating `F(n(y), y) ≡ 0` along `L` forces `∇_y F(n(y), y)` to be a m
 form cutting out `L`, and `c` is a form of positive degree on `L ≅ ℙ¹`, hence has a zero — a
 singular point of `X`.
 
-*What is owed.*  The vertex section (a primitive kernel vector of a `3 × 3` symmetric matrix over
-`k[t]`, extended over the point at infinity of `L`), the chain rule along `L` — `pderiv_aeval` of
-`AlgebraicIndependenceJacobian.lean` supplies it — and the tree's smoothness criterion to convert
-the resulting common zero of `F`, `∇_x F` and `∇_y F` into a contradiction.  The one wrinkle is that
-the argument must be run **homogeneously** in `(y₀, y₁)`: in the affine chart `y = (1, t, 0)` the
-form `c` can be a nonzero constant, with its zero at the point at infinity of `L`, so an affine-only
-proof would miss the singular point.  `char k = 0` is used twice: `∇_x F = 2 M x` needs `2 ≠ 0`, and
-`Polynomial.funext`-style arguments need `k` infinite.
+*What is owed*, in four pieces.  This is the decomposition to execute; each piece is stated in the
+vocabulary the tree already has.
+
+1. **The vertex is a singular point of the conic.**  From `M(y)·n = 0` conclude
+   `eval (Sum.elim n y) F = 0` and `eval (Sum.elim n y) (pderiv (.inl i) F) = 0` for every `i`.  The
+   value is free — `2 · Q(n) = B(n, n) = Σ_a n_a B(n, e_a) = 0` and `2 ≠ 0` — and the `x`-partials
+   reduce, through `specializeSecondCoordinates_pderiv_inl`, to the identity
+   `eval n (pderiv i Q) = polarEval Q n (Pi.single i 1)` for a ternary quadratic.  **That identity
+   is
+   not in the tree**; `HomogeneousQuadraticEval` has the value formula
+   (`eval_eq_ternaryQuadraticCoeff_sum`) but no gradient formula.  It is the analogue for quadrics
+   of
+   `PlaneCubicPartials`, provable the same way — `coeff_pderiv` plus the monomial expansion — in
+   perhaps sixty lines.
+
+2. **The family derivative vanishes at the vertex.**  This is the differentiation step, and it does
+   *not* need the chain rule on `F`: writing `Q_t(n(t)) = Σ_{i,j} c_{ij}(t) n_i(t) n_j(t)` and
+   differentiating in `t` gives `(∂_t Q)(n) + B_Q(n, n')`, whose second term is killed by the kernel
+   condition.  So `Polynomial.derivative` of the coefficient sum plus `polarEval_eq_coeff_sum` and
+   `ring` suffice — no `pderiv_aeval`.  Converting `(∂_t Q)(n)` into `∂F/∂y₁(n, y)` is the `y`-chain
+   rule at the linear point `y(t) = (1, t, 0)`, whose derivative is the constant `(0, 1, 0)`.
+
+3. **Euler closes the `y`-gradient.**  `y₀ ∂F/∂y₀ + y₁ ∂F/∂y₁ + y₂ ∂F/∂y₂ = 3F = 0` at the point,
+and
+   `y = (1, t, 0)`, so `∂F/∂y₀ = −t ∂F/∂y₁ = 0`.  Only `∂F/∂y₂` survives — this is the statement
+   that
+   `∇_y F` is a multiple of the equation of `L`.  Then `exists_pderiv_ne_zero_of_smooth`
+   (`BiprojectiveSmoothCriterion`) forces `∂F/∂y₂(n(t), (1,t,0)) ≠ 0` for every `t`, after
+   normalising `n(t)` in a chart.
+
+4. **A point where the last partial vanishes.**  Two sub-pieces.  *(a)* A **primitive** kernel
+   section: take any nonzero kernel vector over `k(t)`, clear denominators, divide by the gcd of the
+   three entries (`k[t]` is a Euclidean domain and Mathlib has `gcd_div_gcd_div_gcd`); primitivity
+   gives `n(t₀) ≠ 0` for every `t₀ ∈ k`.  *(b)* The **point at infinity**.  In the affine chart the
+   function `c(t) = ∂F/∂y₂(n(t), (1,t,0))` has no root, hence — `k` algebraically closed — is a
+   nonzero *constant*, which is not yet a contradiction: the zero of `c` sits at `L`'s point at
+   infinity.  The cheapest repair is not to homogenise everything but to compare **leading
+   coefficients**: with `m = max_i deg n_i` and `n_∞` the vector of degree-`m` coefficients (nonzero
+   by the choice of `m`), the coefficient of `t^{2m+2}` in `c` is `∂F/∂y₂(n_∞, (0,1,0))`, because
+   `∂F/∂y₂` is bihomogeneous of bidegree `(2,2)` and only the `y₁²` term survives at `y = (0,1,0)`.
+   So `c` constant forces that coefficient to vanish, and `(n_∞, (0,1,0))` is the singular point.
+   The same top-coefficient argument transports the kernel condition `M(y) n = 0` and `F(n, y) = 0`
+   to `y = (0,1,0)`.
+
+`char k = 0` is used twice: `∇_x F = 2 M x` needs `2 ≠ 0`, and the `Polynomial.funext` arguments
+need
+`k` infinite.
 -/
 theorem coordinateLineConicDiscriminant_ne_zero_of_smooth
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)

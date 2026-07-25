@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.BiprojectiveAffineZeroLocus
 public import BConicBundleMultisections.BiprojectiveFiberEquationBaseChange
 public import Mathlib.Algebra.Category.Ring.Constructions
 public import Mathlib.AlgebraicGeometry.Pullbacks
@@ -57,6 +58,66 @@ attribute [local instance] _root_.MvPolynomial.gradedAlgebra
 
 variable {m n : ℕ} {R K : Type u} [CommRing R] [CommRing K] [Algebra R K]
 variable {i : Fin (m + 1)} {j : Fin (n + 1)}
+
+/-! ### The second projection of a standard product chart
+
+The `y`-side counterpart of `standardChartIsoSpec_hom_toSpec`.  Under the identification of the
+standard product chart with `Spec (Sₓ ⊗ S_y)`, its map to `ℙⁿ_R` is `Spec` of the second-block
+inclusion followed by the chart inclusion — and that second-block inclusion is exactly the one
+appearing in `isPushout_sndFiberChartMap` below, which is what lets the two be pasted.
+-/
+
+/-- **The standard product chart maps to `ℙⁿ_R` through the second-block inclusion.** -/
+@[reassoc]
+theorem standardChartIsoSpec_hom_snd (m n : ℕ) (R : Type u) [CommRing R]
+    (i : Fin (m + 1)) (j : Fin (n + 1)) :
+    (standardChartIsoSpec m n R i j).hom ≫
+        Spec.map (ofHom (Algebra.TensorProduct.includeRight
+          (R := R) (A := ProjectiveSpace.StandardChartRing m R i)
+          (B := ProjectiveSpace.StandardChartRing n R j)).toRingHom) ≫
+        ProjectiveSpace.standardChartι n R j =
+      standardChartι m n R i j ≫ BConicBundleMultisections.BiprojectiveSpace.snd m n R := by
+  rw [← cancel_epi (standardChartIsoSpec m n R i j).inv]
+  rw [Iso.inv_hom_id_assoc, standardChartι_snd, ← Category.assoc,
+    standardChartIsoSpec_inv_snd]
+
+/-- The map from the second-factor chart ring into the affine chart ring of the zero locus:
+include into the second block, transport to ordinary affine coordinates, and reduce. -/
+def affineChartQuotientYHom (m n : ℕ) (R : Type u) [CommRing R]
+    (i : Fin (m + 1)) (j : Fin (n + 1))
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    ProjectiveSpace.StandardChartRing n R j →+*
+      (MvPolynomial (Fin m ⊕ Fin n) R ⧸
+        Ideal.span {affineChartEquation m n R i j F}) :=
+  ((Ideal.Quotient.mk (Ideal.span {affineChartEquation m n R i j F})).comp
+      (standardChartRingEquivMvPolynomial m n R i j).toRingHom).comp
+    (Algebra.TensorProduct.includeRight
+      (R := R) (A := ProjectiveSpace.StandardChartRing m R i)
+      (B := ProjectiveSpace.StandardChartRing n R j)).toRingHom
+
+/-! **The remaining interface step.**  With `affineChartQuotientYHom` naming the map, what is owed
+is
+
+`(chartZeroLocusIsoSpecAffineQuotient m n R i j F).hom ≫`
+  `Spec.map (ofHom (affineChartQuotientYHom m n R i j F)) ≫ ProjectiveSpace.standardChartι n R j`
+  `= chartZeroLocusToGlobal m n R F hF i j ≫ biprojectiveZeroLocusSnd m n R F`,
+
+the `y`-side counterpart of `chartZeroLocusIsoSpecAffineQuotient_hom_toSpec`
+(`BiprojectiveAffineZeroLocus.lean`), whose proof is the template: rewrite the right side through
+`chartZeroLocusToGlobal_ι_assoc`, cancel the epi
+`(chartIdealSheaf …).subschemeCover.f (chartTopAffineOpen …)`, and push both sides down to a
+`Spec.map` of ring maps using `chartSubschemeCover_comp_chartZeroLocusIsoSpecAffineQuotient`,
+`Scheme.IdealSheafData.subschemeCover_map_subschemeι`,
+`Scheme.IdealSheafData.glueDataObjι_ι`, `standardChartIsoSpec_hom_snd` (above) and
+`chartTopAffineOpen_fromSpec_comp_standardChartIsoSpec_assoc`.  The resulting ring identity is
+definitional, because `affineChartQuotientYHom` is *defined* as the composite that appears.
+
+Two frictions met while following that template, recorded so they are not rediscovered.  The
+declaration needs `set_option backward.isDefEq.respectTransparency false in`, as the model does,
+placed **before** the docstring; without it the rewrites fail with `subschemeCover.I₀` not
+matching `(standardChart …).affineOpens`.  And `subschemeCover_map_subschemeι` has **no** `_assoc`
+variant in Mathlib, so the reassociation before it has to be done by hand rather than by `rw
+[← Category.assoc, …]`, which is where the attempt stalled. -/
 
 /-! ### Quotienting is a base change
 
