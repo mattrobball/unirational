@@ -72,8 +72,9 @@ main tree     the tangent-residual argument. Ours, proved outright. Obligations 
 
 ## Current state
 
-`lake build` green, 3076 jobs, Lean/Mathlib `v4.32.1`. **Five** `sorry`s across four modules, no
-`axiom`. WP-4 closed; WP-5's line parameterisation landed (see WP-5 progress).
+`lake build` green, 3081 jobs, Lean/Mathlib `v4.32.1`. **Five** `sorry`s in five modules, no
+`axiom`. WP-4 closed; WP-5's line parameterisation and the arbitrary-line residual construction
+landed; chart density proved.
 
 **Proved and load-bearing:** Tsen for ternary quadratics over `k[t]`; the universal residual
 identity; no whole fibre in either projection; `residualImageXCoords_ne_zero_of_smooth`;
@@ -84,10 +85,18 @@ base change — **no flatness anywhere**); the multisection principle; the whole
 
 | Module | Obligation | Nature |
 |---|---|---|
-| `Standard/GenericSmoothness` | `exists_nonempty_open_smooth_restrict` | borrowed; Hartshorne III.10.7 |
-| `ResidualYNonvanishing` | `exists_nonsingular_stereo_cubicFiber_of_smooth` | ours, from the above |
-| `ResidualComponentHorizontality` | `isDominant_…_toBase` | ours, concrete |
-| `PointedConicRationalFamilies` | `isResidualComponentPointedConicRational_of_smooth` | ours, classical |
+| `Standard/GenericSmoothness` | `exists_nonempty_open_smooth_restrict` | borrowed; Hartshorne III.10.7. One consumer: WP-3 |
+| `ResidualYNonvanishing` | `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth` | ours. Singular stereo parameters are a proper closed subset of `𝔸²` |
+| `ResidualComponentHorizontality` | `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` | **superseded** — coordinate-line, no hypothesis on `L`, unprovable. Retire once call sites thread `L` |
+| `ResidualHorizontalityLine` | `eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous` | ours. General line, G3 explicit. Reduced to one determinant by `AlgebraicIndependenceJacobian` |
+| `PointedConicRationalFamilies` | `isPointedConicRationalOver_of_dense_open_smooth` | ours. Spreading out a function-field birational equivalence |
+
+**Closed since the last revision:** `ProjectiveSpace.isDominant_standardChartι` (WP-1's chart
+density), sorry-free — see `ProjectiveSpaceChartDominance.lean`.
+
+**Four of the five trace to the good line.** WP-1's obligation needs it; WP-3's needs it (correction
+6); WP-2's remaining leaf has it as its second input. Good-line existence is therefore the single
+highest-value target, and it reduces to Lemma 2.1 in pencil form plus base-point-freeness of `δ_C`.
 
 ---
 
