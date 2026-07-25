@@ -427,9 +427,18 @@ census can detect a vacuous hypothesis.
 
 Integration cost is zero — finishing an obligation means deleting a `sorry`.
 
-Start with **WP-2b** and **WP-4's `isOver`**: bounded, routes written out. WP-1 and WP-3 are
-independent of those and of each other. WP-6 and WP-7 are independent of everything. Useful width
-about four streams; WP-3 is the most divisible.
+Start with **WP-2b** and **WP-4's `isOver`**: bounded, routes written out. WP-6 and WP-7 are
+independent of everything. Useful width about four streams.
+
+**WP-1 and WP-3 are NOT independent**, contrary to what this section said. WP-3's obligation is not
+provable from its stated hypotheses: if the image of `T_L` in `ℙ²_y` were a curve inside the
+conic-bundle discriminant, the generic fibre over `k(T_L)` would be a line pair or a double line,
+and `BirationalOver … (𝔸(1; T_L) ↘ T_L)` would be **false**. Nothing in WP-3's hypotheses excludes
+that. It is therefore discharged modulo WP-1's obligation 2, which costs nothing — `MainTheorem`
+consumes obligation 2 anyway and obligation 2 has exactly WP-3's hypotheses.
+
+Per source §4 the bad configuration is exactly `δ_C(L) ≡ M` constant, i.e. the bad-line case. So
+this is the **good-line gap again**, in a third place.
 
 **Do not point an autonomous loop at anything whose route is not already written in the
 obligation's docstring.** The failure mode is not a wrong proof — the guard catches those — it is a
@@ -509,7 +518,7 @@ Check 3 and 4 **together**.
 
 ## Appendix: corrections log
 
-Five errors. The first four are the same shape — adopting the source's *machinery* instead of asking what our
+Six errors. Five of them are the same shape — adopting the source's *machinery* instead of asking what our
 *statement* requires. Each was caught by an outside question, not by internal checking.
 
 1. **`hXT` was false, not unproved.** It assumed a dim-3 parametrization of the base change of the
@@ -526,7 +535,14 @@ Five errors. The first four are the same shape — adopting the source's *machin
    also unneeded, and recorded it "verified unnecessary". It is an equivalence with the conclusion,
    so it makes the condition necessary. Caught by a subagent that was instructed to read the source
    for its step — the instruction working as intended, on the author of the instruction.
-5. **The parameterise-by-`L` refactor was scoped in the wrong place.** The scoping pass counted
+5. **WP-3 was recorded as independent of WP-1, and is not.** Its obligation is false for a line
+   whose residual line is constant, exactly as obligations 1c/1d were. The plan listed the two work
+   packages as parallel streams, so the dependency would have been discovered only on integration.
+   Found by an agent that was told to check the source for its own step. This is the good-line
+   deviation surfacing for the **third** time, after `hXT` and after 1c/1d — the recurring structural
+   fault of this development is not any individual false statement but the habit of adopting §5's
+   normalisation while dropping §3's choice.
+6. **The parameterise-by-`L` refactor was scoped in the wrong place.** The scoping pass counted
    `simp` sites unfolding the two hardcoded line definitions — 108 of them in the 4208-line
    `SpecializedConicFreeDir` alone — and predicted a large, fragile migration. A probe replacing both
    definitions by `simp`-opaque equivalents broke **one** proof in the whole tree, and generalising

@@ -122,7 +122,7 @@ real proof has to establish, and `PLAN.md` for the work packages.
 | | `residualBinaryLine_ne_zero_of_singular_at_coordinateLinePoint` (1c) | plausibly vacuous | low |
 | | `residualBinaryLine_ne_zero_of_tangent_not_coordinateLine` (1d) | **the crux** | highest |
 | `ResidualComponentHorizontality` | `isDominant_residualImagePointOfNormalizedLoc_toBase` | coordinate computation | medium |
-| `PointedConicRationalFamilies` | `isResidualComponentPointedConicRational_of_smooth` | pointed conics in families | large but classical |
+| `PointedConicRationalFamilies` | `isResidualComponentPointedConicRational_of_smooth` | pointed conics in families; **depends on obligation 2** — false for a bad line | large but classical |
 
 
 `residualYCoords_ne_zero_of_smooth` is no longer an obligation: it is derived from 1a–1d by a
