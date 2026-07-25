@@ -117,17 +117,24 @@ documented at its site; `PLAN.md` has the work packages and the corrections log.
 
 | Module | Obligation | Nature |
 |--------|-----------|--------|
-| `Standard/GenericSmoothness` | `exists_nonempty_open_smooth_restrict` | borrowed, Hartshorne III.10.7. One consumer: obligation 3 |
-| `ResidualYNonvanishing` | `exists_isotropic_stereoNondegenerate` | choose a Tsen section that is not a base point of the conic family |
-| `ResidualYNonvanishing` | `exists_defining_set_nonsingularCubicFiber` | the singular cubic fibres are a closed set. Unconditional — no `CharZero`, no smoothness, nothing about `L` |
-| `ResidualYNonvanishing` | `exists_stereo_param_nonsingularCubicFiber` | some stereo parameter has a nonsingular fibre. §4(1); this is where the good line is needed |
-| `ResidualComponentHorizontality` | `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` | **superseded**; coordinate line, no hypothesis on `L`, unprovable. Retire once call sites thread `L` |
-| `ResidualHorizontalityLine` | `eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous` | general line, condition G3 explicit. Reduced to one determinant by `AlgebraicIndependenceJacobian` |
-| `PointedConicRationalFamilies` | `exists_pointedConicAffineModel` | spreading the generic-fibre conic out to an affine of the base. Bookkeeping with existing chart machinery |
+| `Standard/ResidualLineMapInjective` | `exists_pencil_of_hasCommonResidualLineMap` | **borrowed** — Lemma 2.1 in pencil form. Do not attempt |
+| `Standard/GenericSmoothness` | `exists_nonempty_open_smooth_restrict` | **borrowed** — Hartshorne III.10.7. Do not attempt |
+| `GoodLineExistence` | `exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates` | generic smoothness in coordinates |
+| `ResidualHorizontalityLine` | `det_residualYCoordsOn_ne_zero` | **§4** — the last mathematical content of horizontality |
+| `ResidualYNonvanishing` | `exists_isotropic_stereoNondegenerate` | §4(1); the good line |
+| `ResidualYNonvanishing` | `exists_stereo_param_nonsingularCubicFiber` | §4(1); the good line |
+| `PointedConicRationalFamilies` | `isIntegral_pullback_biprojectiveZeroLocusSnd` | two dimension estimates Mathlib lacks |
+| `PointedConicRationalFamilies` | `exists_conicChart_openImmersion` | chart bookkeeping; two conditions left of four |
+| `ResidualComponentHorizontality` | `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` | **superseded and unprovable** — coordinate line, no hypothesis on `L`. Retire once call sites thread `L` |
 
-**Closed since the last revision:** `ProjectiveSpace.isDominant_standardChartι`, sorry-free
-(`ProjectiveSpaceChartDominance.lean`), together with a general `Proj.irreducibleSpace` for graded
-domains that Mathlib lacks; and the whole classical content of obligation 3 —
+**Closed since the last revision:** projective elimination on points
+(`CubicFiberSingularLocus.lean`) — the singular cubic fibres form a closed set, unconditionally,
+with explicit certificates and **no scheme theory**, where the expected route through relative `Proj`
+was blocked by missing Mathlib machinery; the binary quadratic normal form
+(`BinaryQuadraticNormalForm.lean`); substitution-invariance of nonsingularity
+(`LinearSubstitutionNonsingular.lean`), which discharged `exists_good_line`'s last side hypothesis;
+`ProjectiveSpace.isDominant_standardChartι`, together with a general `Proj.irreducibleSpace` for
+graded domains that Mathlib lacks; and the whole classical content of obligation 3 —
 `PointedConicAffineModel.lean`, 738 lines and zero sorries, proving that a pointed affine conic over
 a domain is relatively birational to the affine line, with **no normal form and no Witt
 decomposition**. Obligation 3 now rests on one bookkeeping leaf.
