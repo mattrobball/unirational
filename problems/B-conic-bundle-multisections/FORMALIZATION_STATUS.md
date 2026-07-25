@@ -33,7 +33,8 @@ discharged. This is a deliberate trade against the previous arrangement, where t
 `sorry`-free but the theorem carried a hypothesis `hXT` that was doing the same job invisibly —
 and, worse, was false in general (see below). **Check the statement and the axiom list together.**
 
-Build: `lake build` green, 3067 jobs, Lean `v4.32.1` / Mathlib `v4.32.1`.
+Build: `lake build` green, 3077 jobs, Lean `v4.32.1` / Mathlib `v4.32.1`. Five `sorry`s across
+four modules; no `axiom`, `admit` or `native_decide` anywhere.
 
 `MainTheoremGuard.lean` mechanises both halves of that check. It pins the headline statement (an
 added hypothesis breaks the build), allows `sorryAx` but no other axiom in the main theorem, and
@@ -92,6 +93,22 @@ Dominance onto it is Mathlib's `IsDominant f.toImage`, not an assumption.
   `𝔸(1; 𝔸(m; S)) → 𝔸(1; T) ⤏ Y` never base-changes the target.
 - `residualComponentMultisection_baseChangeSnd_comp_toSpec` — the component compatibility that
   turns the general tower into the `2 + 1 = 3` instance the main theorem consumes.
+- **The residual construction for an arbitrary multisection line**
+  (`PlaneCubicResidualTransport.lean`). The source chooses the line `L` in §3 and normalises it to
+  `{W = 0}` only in §5; the development had only the normalised form, which is what made two
+  obligations false-or-suspect. Now proved in general:
+  `eval_residualAmbientRep_residualLinearFormOn_linePointOf` — for any line, given its frame, the
+  tangent-residual point of a plane cubic at a point of that line lies on the cubic's residual
+  line. Established by *transport*, without re-deriving any of the ~990 lines of §5 coefficient
+  identities: the plane cubic fibre is carried into the frame where `L = {W = 0}`
+  (`binaryLineRestriction_aeval_linearSubst`), the existing identities are applied there, and the
+  conclusion is carried back. The ambient biprojective scheme is never transported, so none of the
+  parked `Proj.map`/ideal-sheaf machinery is needed. Two supporting facts carry the weight:
+  `residualAmbientRep_reparam` (rescaling the direction scales the residual point by `α³`, so it is
+  projectively unchanged) and the choice to *define* the general tangent direction as the transport
+  of the canonical one (`frameTangentDir`), which avoids cross-product equivariance — that holds
+  only modulo the span of the point. `residualLinearFormOn_coordinateLine` checks the general
+  construction reduces to the existing one on the coordinate line, so nothing was replaced.
 
 ## The remaining obligations
 
