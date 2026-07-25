@@ -98,7 +98,7 @@ theorem binaryLineRestriction_aeval_linearSubst (n : ℕ)
         = C ((M *ᵥ p) j) * X 0 + C ((M *ᵥ q) j) * X 1 := by
     intro j
     simp only [linearSubst, map_sum, map_mul, binaryLineRestriction_C, binaryLineRestriction_X,
-      Matrix.mulVec, dotProduct, map_sum, C_mul]
+      Matrix.mulVec, dotProduct, map_sum]
     simp only [mul_add, ← mul_assoc, Finset.sum_add_distrib, ← Finset.sum_mul]
   suffices h : (binaryLineRestriction p q).comp
       (aeval (linearSubst n M) : MvPolynomial (Fin (n + 1)) R →ₐ[R] _)

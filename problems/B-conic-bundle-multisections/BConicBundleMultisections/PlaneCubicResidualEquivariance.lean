@@ -6,7 +6,9 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import BConicBundleMultisections.BinaryCubicResidual
+public import BConicBundleMultisections.LinearSubstitution
 public import BConicBundleMultisections.MultisectionLine
+public import BConicBundleMultisections.PlaneCubicResidualIdentity
 
 /-!
 # Reparameterizing the residual construction
@@ -152,6 +154,83 @@ theorem residualAmbientRep_reparam {σ : Type*} (p q : σ → R) (α β : R)
   simp only [residualAmbientRep, residualBinaryRep, Matrix.cons_val_zero, Matrix.cons_val_one,
     Matrix.head_cons, hc', hd', ← hc, ← hd]
   ring
+
+/-! ### The frame carrying the coordinate line to `L`
+
+To run the residual construction for a general line `L = span(p, q)` we substitute variables so that
+`L` becomes `{W = 0}`.  The matrix doing this has `p` and `q` as its first two columns: then the
+coordinate line's point `[1 : t : 0]` is carried to `p + t·q`, the point of `L` at parameter `t`. -/
+
+open scoped Matrix
+
+/-- The frame of a line: the matrix whose columns are `p`, `q` and a completion `r`.
+
+Invertibility is not part of the definition — the results below that need it take an explicit
+inverse, so that the frame can be built before a completion is chosen. -/
+def lineFrame (p q r : Fin 3 → R) : Matrix (Fin 3) (Fin 3) R :=
+  Matrix.of fun j l => ![p, q, r] l j
+
+@[simp] theorem lineFrame_apply (p q r : Fin 3 → R) (j l : Fin 3) :
+    lineFrame p q r j l = ![p, q, r] l j := rfl
+
+/-- **The frame carries the coordinate line to `L`.**  This is the defining property: the point of
+the coordinate line at parameter `t` goes to the point of `L` at parameter `t`. -/
+@[simp] theorem lineFrame_mulVec_coordinateLinePoint (p q r : Fin 3 → R) (t : R) :
+    lineFrame p q r *ᵥ ![1, t, 0] = linePointOf p q t := by
+  funext j
+  simp only [Matrix.mulVec, dotProduct, Fin.sum_univ_three, lineFrame_apply,
+    Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Matrix.cons_val_two,
+    Matrix.tail_cons, linePointOf]
+  ring
+
+/-- The frame sends the first basis vector to `p`, the base point of `L`. -/
+@[simp] theorem lineFrame_mulVec_base (p q r : Fin 3 → R) :
+    lineFrame p q r *ᵥ ![1, 0, 0] = p := by
+  have := lineFrame_mulVec_coordinateLinePoint p q r 0
+  simpa using this
+
+/-- The frame sends the second basis vector to `q`, the direction of `L`. -/
+@[simp] theorem lineFrame_mulVec_dir (p q r : Fin 3 → R) :
+    lineFrame p q r *ᵥ ![0, 1, 0] = q := by
+  funext j
+  simp only [Matrix.mulVec, dotProduct, Fin.sum_univ_three, lineFrame_apply,
+    Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Matrix.cons_val_two,
+    Matrix.tail_cons]
+  ring
+
+/-! ### The residual line of a cubic along an arbitrary line
+
+`PlaneCubicResidual.residualLinearForm` is `δ_C(L)` for the single line `{W = 0}`: it is read off
+the `U, V, W` monomial coefficients.  For a general `L` we carry the cubic into the frame of `L`,
+take the residual line there, and carry it back.
+
+Carrying back uses the *inverse* frame, because a point `y` has frame coordinates `N *ᵥ y`. -/
+
+/-- **The residual line `δ_C(L)` of a plane cubic along the line spanned by `p` and `q`.**
+
+`M` is the frame of `L` and `N` its inverse.  Taking both as arguments rather than inverting keeps
+the definition free of `Invertible` instances; the results below state exactly which inverse
+property they use. -/
+def residualLinearFormOn (M N : Matrix (Fin 3) (Fin 3) R) (G : MvPolynomial (Fin 3) R) :
+    MvPolynomial (Fin 3) R :=
+  (aeval (linearSubst 2 N) : MvPolynomial (Fin 3) R →ₐ[R] _)
+    (PlaneCubicResidual.residualLinearForm
+      ((aeval (linearSubst 2 M) : MvPolynomial (Fin 3) R →ₐ[R] _) G))
+
+/-- Evaluating the general residual line at `y` is evaluating the normalized one at the frame
+coordinates of `y`. -/
+theorem eval_residualLinearFormOn (M N : Matrix (Fin 3) (Fin 3) R)
+    (G : MvPolynomial (Fin 3) R) (y : Fin 3 → R) :
+    eval y (residualLinearFormOn M N G)
+      = eval (N *ᵥ y) (PlaneCubicResidual.residualLinearForm
+          ((aeval (linearSubst 2 M) : MvPolynomial (Fin 3) R →ₐ[R] _) G)) :=
+  eval_aeval_linearSubst 2 N _ y
+
+/-- For the identity frame the general residual line is the normalized one, so nothing is lost by
+working with `residualLinearFormOn` throughout. -/
+@[simp] theorem residualLinearFormOn_one (G : MvPolynomial (Fin 3) R) :
+    residualLinearFormOn 1 1 G = PlaneCubicResidual.residualLinearForm G := by
+  simp [residualLinearFormOn, aeval_X_left_apply]
 
 end
 
