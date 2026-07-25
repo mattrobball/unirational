@@ -6,6 +6,7 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import BConicBundleMultisections.ProjectiveSpaceAlgebraPoint
+public import BConicBundleMultisections.ProjectiveSpaceChartDominance
 public import BConicBundleMultisections.ResidualComponent
 public import BConicBundleMultisections.ResidualYFormVanishing
 
@@ -264,27 +265,6 @@ theorem isDominant_residualImagePointOfNormalizedLoc_toBase_of_injective
   exact isDominant_pointOfNormalizedCoordinatesAlgebra 2 j _ hchart hinj
 
 /-! ### The two remaining inputs -/
-
-/--
-**The standard chart of `ℙⁿ_R` is dense.**
-
-*Status.*  True and elementary; scoped to the `ℙⁿ` chart-cover work package, not to obligation 2.
-It is stated here only so that the reduction of obligation 2 can land; whoever supplies the real
-proof deletes this declaration and the call site below picks theirs up unchanged.
-
-*Why it is true.*  `standardChartι` is an open immersion (instance present), so
-`IsOpen.dense` reduces the claim to `IrreducibleSpace (ProjectiveSpace n R)` for `R` a domain.
-That in turn needs three pieces, none currently in Mathlib or in this tree: a space covered by
-pairwise-intersecting irreducible opens is irreducible; a *projective* chart cover (only the
-biprojective one exists, `iSup_standardChartAffineOpen`, `BiprojectiveSpaceProperties.lean:124`);
-and the fact that the charts pairwise intersect, for which `[1 : … : 1]` serves over a field.  Each
-chart is irreducible for free: it is `Spec` of a polynomial ring over a domain, and
-`IrreducibleSpace (PrimeSpectrum R)` for a domain is a Mathlib instance.
--/
-theorem ProjectiveSpace.isDominant_standardChartι
-    (n : ℕ) (R : Type u) [CommRing R] [IsDomain R] (i : Fin (n + 1)) :
-    IsDominant (ProjectiveSpace.standardChartι n R i) :=
-  sorry
 
 /--
 **No nonzero form vanishes on the residual `Y`-coordinates.**
