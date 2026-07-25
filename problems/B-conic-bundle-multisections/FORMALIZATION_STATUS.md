@@ -145,6 +145,21 @@ Four results there are Mathlib-shaped and absent upstream: scheme-theoretic imag
 schemes; `BirationalOver` base-change (`Birational.lean` has `refl/symm/trans` and no transport);
 the pointed-conic material itself, stated for an arbitrary `CommRing`; and `dense_basicOpen`.
 
+**Good-line existence is assembled** (`GoodLineExistence.lean`). `exists_good_line` produces a line
+whose residual line moves with `x` — the condition four of the obligations traced to. It rests on
+two leaves, both known quantities: Lemma 2.1 in **pencil** form, borrowed and documented
+(`Standard/ResidualLineMapInjective.lean`), and generic smoothness packaged in coordinates. Proved
+outright along the way: the pencil finish (`not_eq_pencil_of_smooth` — a *net* would not close it),
+the bridge from condition G3 to the residual line of the fibre, and the `secondBlockCoeff` algebra,
+which nothing in the tree had ever unfolded.
+
+**Lemma 3.1 of the source is not needed.** Its job is to descend a morphism from `k(ℙ²_x)` to `k`,
+and it is needed only because the source argues with the *generic* fibre. This chain never forms the
+generic fibre — it uses honest fibres over closed points, which are already `k`-objects — so nothing
+needs descending. Two costs of that route are made explicit rather than hidden: smoothness is needed
+for a dense set of closed points, not merely generically, and base-point-freeness becomes an
+explicit hypothesis where the source uses it implicitly.
+
 ### The one thing to read first
 
 An obligation of this development was found **false, with an explicit counterexample** — see
