@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.LinearSubstitution
 public import BConicBundleMultisections.ProjectiveSpaceCoeffMap
 public import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
 
@@ -41,17 +42,6 @@ attribute [local instance] MvPolynomial.gradedAlgebra
 
 variable {k : Type u} [CommRing k]
 
-/-- The linear forms substituted for the homogeneous coordinates. -/
-def linearSubst (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n + 1)) k) :
-    Fin (n + 1) → MvPolynomial (Fin (n + 1)) k :=
-  fun j => ∑ l : Fin (n + 1), C (M j l) * X l
-
-/-- Each substituted form is homogeneous of degree one. -/
-theorem isHomogeneous_linearSubst (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n + 1)) k)
-    (j : Fin (n + 1)) : (linearSubst n M j).IsHomogeneous 1 := by
-  refine IsHomogeneous.sum _ _ _ fun l _ => ?_
-  simpa using (isHomogeneous_C _ (M j l)).mul (isHomogeneous_X _ l)
-
 /-- A linear change of homogeneous coordinates, as a graded ring homomorphism.
 
 Homogeneity is preserved because substituting degree-one forms multiplies degrees by one
@@ -76,44 +66,6 @@ theorem linearSubstGradedRingHom_X (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n +
     (j : Fin (n + 1)) :
     (linearSubstGradedRingHom n M).toRingHom (X j) = linearSubst n M j := by
   simp [linearSubstGradedRingHom]
-
-/-- The image of the linear form built from a left inverse of `M` is the coordinate `X i`. -/
-theorem aeval_linearSubst_inverse_row (n : ℕ) (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) k)
-    (h : N * M = 1) (i : Fin (n + 1)) :
-    (aeval (linearSubst n M) : MvPolynomial (Fin (n + 1)) k →ₐ[k] _)
-        (∑ j : Fin (n + 1), C (N i j) * X j) = X i := by
-  classical
-  have step1 : (aeval (linearSubst n M) : MvPolynomial (Fin (n + 1)) k →ₐ[k] _)
-      (∑ j : Fin (n + 1), C (N i j) * X j)
-      = ∑ l : Fin (n + 1), C ((N * M) i l) * X l := by
-    simp only [map_sum, map_mul, aeval_C, aeval_X, linearSubst, Finset.mul_sum,
-      MvPolynomial.algebraMap_eq]
-    rw [Finset.sum_comm]
-    refine Finset.sum_congr rfl fun l _ => ?_
-    rw [Matrix.mul_apply, map_sum, Finset.sum_mul]
-    exact Finset.sum_congr rfl fun x _ => by rw [← mul_assoc, ← C_mul]
-  rw [step1, h]
-  simp [Matrix.one_apply]
-
-/-- Substitution by the identity matrix is the identity substitution. -/
-@[simp]
-theorem linearSubst_one (n : ℕ) :
-    linearSubst n (1 : Matrix (Fin (n + 1)) (Fin (n + 1)) k) = X := by
-  funext j
-  simp [linearSubst, Matrix.one_apply]
-
-/-- Substituting one linear change into another composes the matrices. -/
-theorem aeval_linearSubst_linearSubst (n : ℕ) (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) k)
-    (i : Fin (n + 1)) :
-    (aeval (linearSubst n M) : MvPolynomial (Fin (n + 1)) k →ₐ[k] _) (linearSubst n N i)
-      = linearSubst n (N * M) i := by
-  classical
-  simp only [linearSubst, map_sum, map_mul, aeval_C, aeval_X, Finset.mul_sum,
-    MvPolynomial.algebraMap_eq]
-  rw [Finset.sum_comm]
-  refine Finset.sum_congr rfl fun l _ => ?_
-  rw [Matrix.mul_apply, map_sum, Finset.sum_mul]
-  exact Finset.sum_congr rfl fun x _ => by rw [← mul_assoc, ← C_mul]
 
 /-- The graded ring hom of the identity matrix is the identity. -/
 @[simp]

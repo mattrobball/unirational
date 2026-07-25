@@ -33,6 +33,7 @@ public import BConicBundleMultisections.DeterminantHomogeneous
 public import BConicBundleMultisections.AffineSpaceProduct
 public import BConicBundleMultisections.GoodLine
 public import BConicBundleMultisections.HomogeneousQuadraticEval
+public import BConicBundleMultisections.LinearSubstitution
 public import BConicBundleMultisections.LinearCoordinateChange
 public import BConicBundleMultisections.MainTheorem
 public import BConicBundleMultisections.MainTheoremGuard
