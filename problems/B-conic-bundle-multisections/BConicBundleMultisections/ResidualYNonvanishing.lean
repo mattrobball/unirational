@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.CubicFiberSingularLocus
 public import BConicBundleMultisections.ResidualYCoordsPureT
 
 /-!
@@ -68,7 +69,9 @@ nothing to do with each other:
 
 * `exists_defining_set_nonsingularCubicFiber` — the singular cubic fibres are a Zariski-closed
   subset of `𝔸³_x`.  Elimination theory; unconditionally true; no characteristic hypothesis, no
-  smoothness of `X`, nothing about `L`.  Mathlib-shaped.
+  smoothness of `X`, nothing about `L`.  **Now proved**, in `CubicFiberSingularLocus.lean`, as an
+  instance of a general projective-elimination-on-points theorem stated for an arbitrary finite
+  family of forms with coefficients in a commutative ring.
 * `exists_stereo_param_nonsingularCubicFiber` — *some* stereo parameter pair has a nonsingular
   fibre, i.e. the stereographic image is not contained in the discriminant locus.  This is §4(1)
   together with §1 generic smoothness, and **it is the good-line condition**: it carries all the
@@ -177,9 +180,12 @@ theorem evalAffineTwoPoint_aeval {k : Type u} [CommRing k] (t s : k)
 /--
 **Input (i): the singular cubic fibres are a Zariski-closed subset of `𝔸³_x`.**
 
-*Status.* Obligation — elimination theory.  This is the half of the old fused obligation that is
-**unconditionally true**: no hypothesis on the characteristic, no smoothness of `X`, and nothing
-whatever about the multisection line `L`.  It is Mathlib-shaped and could be upstreamed.
+*Status: proved*, in `CubicFiberSingularLocus.lean`, by classical elimination theory.  This is the
+half of the old fused obligation that is **unconditionally true**: no hypothesis on the
+characteristic, no smoothness of `X`, and nothing whatever about the multisection line `L`.  The
+general statement it instantiates —
+`exists_defining_set_forms_no_common_zero`, projective elimination on points for an arbitrary finite
+family of forms with coefficients in a commutative ring — is Mathlib-shaped and upstreamable.
 
 *The statement.*  `S` is a set of polynomials in the first-block coordinates whose common zero locus
 is *exactly* the locus of singular fibres: off `V(S)` the fibre is nonsingular, and on `V(S)` it is
@@ -208,22 +214,22 @@ downstream and is left out to keep the obligation as weak as possible.  The orig
 trouble: the fibre over `x = 0` is the zero polynomial, which is singular, and `0 ∈ V(S)`
 accordingly.
 
-*What is owed, and where Mathlib stands.*  The properness input **is** available:
-`AlgebraicGeometry.Proj.toSpecZero` is `UniversallyClosed` and `IsProper` for a finite-type graded
-algebra (`Mathlib/AlgebraicGeometry/ProjectiveSpectrum/Proper.lean`).  What is missing is the bridge
-in both directions: building `Z` as a closed subscheme of `Proj` over `Spec k[x₀,x₁,x₂]` from the
-four forms, and converting the closed image back into `V(S)` on `k`-points — that last step is the
-Nullstellensatz, which Mathlib has.  Mathlib has no multivariate resultant (only
-`RingTheory/Polynomial/Resultant/Basic.lean`, univariate), so route (b) — exhibit `S` by iterated
-resultants of the three partials — would have to build its own elimination, and would still need a
-Nullstellensatz argument for the *exactness* of the resulting ideal.  Route (a) is the shorter one,
-and it is standard-borrowed material of the same kind as `Standard/GenericSmoothness.lean`. -/
+*How it is proved, and why not with schemes.*  The properness route — `Z` closed in `𝔸³ × ℙ²`, `ℙ²`
+complete, image closed — needs a bridge Mathlib does not have, even though it has the properness
+itself (`Proj.toSpecZero` is `UniversallyClosed`): `Z` would have to be built as a closed subscheme
+of a relative `Proj`, the fibres of `Proj (A[r]/J) → Spec A` computed, and a closed subset of
+`Spec A` converted back into a condition on `k`-points.  The classical elimination proof needs none
+of it and is what `CubicFiberSingularLocus.lean` formalises: for each degree `N` the products
+`ν · fᵢ` span the degree-`N` part of the ideal iff some maximal minor of an explicit matrix — with
+entries polynomial in `x` — is nonzero, and the Nullstellensatz says the ideal contains all
+monomials of large degree exactly when the forms have no common zero off the origin.  `S` is the set
+of those minors.  Mathlib has no multivariate resultant, and none is needed. -/
 theorem exists_defining_set_nonsingularCubicFiber
     {k : Type u} [Field k] [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) :
     ∃ S : Set (MvPolynomial (Fin 3) k),
       ∀ x : Fin 3 → k, (∃ Δ ∈ S, eval x Δ ≠ 0) ↔ NonsingularCubicFiber F x :=
-  sorry
+  exists_defining_set_nonsingular_cubicFiber_of_bidegree23 F hF
 
 /--
 **Input (ii): the stereographic image is not contained in the locus of singular fibres.**
@@ -399,9 +405,10 @@ cuspidal cubic, total space smooth — are the standard realization of the pheno
 characteristics `2` and `3`.  So this statement must not be asserted without `CharZero`; no
 counterexample of bidegree `(2,3)` is exhibited here, but nothing rules one out either.
 
-*What is owed*, after this split: closedness of the singular locus, which is standard elimination
-theory and Mathlib-shaped; and the good-line condition, which is ours and is the `X`-side of the
-algebraic-independence question `PLAN.md` WP-1 faces on the `Y`-side (WP-2 step 2c).
+*What is owed*, after this split and after `CubicFiberSingularLocus.lean`: only the good-line
+condition, which is ours and is the `X`-side of the algebraic-independence question `PLAN.md` WP-1
+faces on the `Y`-side (WP-2 step 2c).  Closedness of the singular locus — the other half — is
+proved.
 -/
 theorem exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth
     {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
