@@ -286,11 +286,13 @@ theorem eval_residualAmbientRep_residualLinearFormOn_coordinateLine
   rw [residualLinearFormOn_coordinateLine]
   exact eval_residualAmbientRep_residualLinearForm G hG p hp0 hp2 hp
 
-/-! ### The residual `Y`-coordinates along a general line
+/-! ### The residual construction along a general line
 
 `residualYCoords` takes the residual point of the cubic fibre at the coordinate line's generic
 point `(1, t, 0)`.  Here the line is a parameter: its spanning vectors live over the base field and
 are pushed into the affine plane ring, where the parameter is `affineTwoCoord0`. -/
+
+section
 
 variable {k : Type u} [CommRing k]
 
@@ -303,20 +305,9 @@ def affineTwoLinePoint (p₀ q₀ : Fin 3 → k) : Fin 3 → affineTwoRing k :=
 def affineTwoLineFrame (p₀ q₀ r : Fin 3 → k) : Matrix (Fin 3) (Fin 3) (affineTwoRing k) :=
   lineFrame (fun i => C (p₀ i)) (fun i => C (q₀ i)) (fun i => C (r i))
 
-/-- **Tangent-residual second-block coordinates along an arbitrary line.**
-
-The general form of `residualYCoords`: from the stereo point `x` on the vertical surface, take the
-residual point of the cubic fibre along the tangent line at the point of `L`. -/
-def residualYCoordsOn (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
-    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
-    (v : Fin 3 → Polynomial k) : Fin 3 → affineTwoRing k :=
-  let G := cubicFiberPullback F (stereoFirstCoords F v)
-  let pL := affineTwoLinePoint p₀ q₀
-  let qd := frameTangentDir (affineTwoLineFrame p₀ q₀ r) (N.map C) G pL
-  residualAmbientRep pL qd (binaryLineRestriction pL qd G)
-
 /-- In the frame of `L`, the generic point of `L` has coordinates `(1, t, 0)` — the same normalised
-position the coordinate-line development assumed. -/
+position the coordinate-line development assumed.  This is why the transported statement needs no
+extra normalisation hypotheses. -/
 theorem mulVec_affineTwoLinePoint (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1) :
     (N.map (C : k →+* affineTwoRing k)) *ᵥ affineTwoLinePoint p₀ q₀
@@ -324,29 +315,138 @@ theorem mulVec_affineTwoLinePoint (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3
   mulVec_inverse_linePointOf _ _ _ _
     (lineFrame_map_mul_map (C : k →+* affineTwoRing k) p₀ q₀ r N hMN) _
 
+/-- The conic cut out over the point of `L`, with coefficients in the affine plane ring. -/
+def lineSpecializedConicPullback (p₀ q₀ : Fin 3 → k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) : MvPolynomial (Fin 3) (affineTwoRing k) :=
+  specializeSecondCoordinates (m := 2) (affineTwoLinePoint p₀ q₀) (affineTwoPullback F)
+
+theorem eval_lineSpecializedConicPullback (p₀ q₀ : Fin 3 → k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (x : Fin 3 → affineTwoRing k) :
+    eval x (lineSpecializedConicPullback p₀ q₀ F)
+      = eval (Sum.elim x (affineTwoLinePoint p₀ q₀)) (affineTwoPullback F) :=
+  eval_specializeSecondCoordinates (m := 2) x (affineTwoLinePoint p₀ q₀) _
+
+theorem lineSpecializedConicPullback_isHomogeneous (p₀ q₀ : Fin 3 → k)
+    {F : MvPolynomial (BiprojectiveCoordinate 2 2) k} (hF : IsBidegree23 F) :
+    (lineSpecializedConicPullback p₀ q₀ F).IsHomogeneous 2 :=
+  (hF.map_coefficients (C : k →+* affineTwoRing k)).specializeSecondCoordinates_isHomogeneous _
+
+end
+
+section
+
+variable {K : Type u} [Field K]
+
+/-- **The affine-plane conic along `L` is the base change of the generic conic along `L`.**
+
+Both are second-block specializations of `F`; the coefficient map `k[t] → affineTwoRing k` carries
+the generic point of `L` to its affine-plane counterpart, so `map_specializeSecondCoordinates`
+identifies them. -/
+theorem lineSpecializedConicPullback_eq_map (p₀ q₀ : Fin 3 → K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) :
+    lineSpecializedConicPullback p₀ q₀ F
+      = map (liftPolyTHom (k := K)) (lineSpecializedConicPoly p₀ q₀ F) := by
+  have hpt : (fun j => liftPolyTHom (k := K)
+      (linePointOf (fun a => Polynomial.C (p₀ a)) (fun a => Polynomial.C (q₀ a))
+        Polynomial.X j))
+      = affineTwoLinePoint p₀ q₀ := by
+    funext j
+    simp [linePointOf, affineTwoLinePoint, liftPolyTHom, affineTwoCoord0]
+    ring
+  have hC : (liftPolyTHom (k := K)).comp (Polynomial.C : K →+* Polynomial K)
+      = (C : K →+* affineTwoRing K) :=
+    RingHom.ext fun a => by simp [liftPolyTHom]
+  rw [lineSpecializedConicPoly, map_specializeSecondCoordinates, hpt, map_map, hC,
+    lineSpecializedConicPullback, affineTwoPullback]
+
+/-- The lifted Tsen section is isotropic for the conic along `L` over the affine plane. -/
+theorem eval_liftTsenSection_lineSpecializedConicPullback
+    (p₀ q₀ : Fin 3 → K) (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial K)
+    (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p₀ q₀ F) v = 0) :
+    eval (liftTsenSection v) (lineSpecializedConicPullback p₀ q₀ F) = 0 := by
+  have hf := lineSpecializedConicPullback_isHomogeneous p₀ q₀ hF
+  rw [eval_eq_ternaryQuadraticCoeff_sum hf (liftTsenSection v)]
+  have hcoeff (i j : Fin 3) :
+      ternaryQuadraticCoeff (lineSpecializedConicPullback p₀ q₀ F) i j =
+        liftPolyTHom (k := K) (ternaryQuadraticCoeff (lineSpecializedConicPoly p₀ q₀ F) i j) := by
+    rw [lineSpecializedConicPullback_eq_map, ternaryQuadraticCoeff_map]
+  simp only [hcoeff, liftTsenSection, liftPolyT_eq_hom]
+  have hsum : (∑ i : Fin 3, ∑ j : Fin 3,
+      liftPolyTHom (k := K) (ternaryQuadraticCoeff (lineSpecializedConicPoly p₀ q₀ F) i j) *
+        liftPolyTHom (k := K) (v i) * liftPolyTHom (k := K) (v j))
+      = liftPolyTHom (k := K) (∑ i : Fin 3, ∑ j : Fin 3,
+          ternaryQuadraticCoeff (lineSpecializedConicPoly p₀ q₀ F) i j * v i * v j) := by
+    simp [map_sum, map_mul]
+  rw [hsum]
+  have : (∑ i : Fin 3, ∑ j : Fin 3,
+      ternaryQuadraticCoeff (lineSpecializedConicPoly p₀ q₀ F) i j * v i * v j) = 0 := hv
+  rw [this, map_zero]
+
+/-- Stereo first-block coordinates along `L`. -/
+noncomputable def stereoFirstCoordsOn (p₀ q₀ : Fin 3 → K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
+    (v : Fin 3 → Polynomial K) : Fin 3 → affineTwoRing K :=
+  stereoAlg (lineSpecializedConicPullback p₀ q₀ F) (liftTsenSection v) affineTwoStereoDir
+
+/-- The stereo point along `L` lies on the conic along `L`. -/
+theorem eval_stereoFirstCoordsOn_lineSpecializedConicPullback
+    (p₀ q₀ : Fin 3 → K) (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial K)
+    (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p₀ q₀ F) v = 0) :
+    eval (stereoFirstCoordsOn p₀ q₀ F v) (lineSpecializedConicPullback p₀ q₀ F) = 0 :=
+  stereoAlg_isotropic (lineSpecializedConicPullback p₀ q₀ F)
+    (lineSpecializedConicPullback_isHomogeneous p₀ q₀ hF) (liftTsenSection v) affineTwoStereoDir
+    (eval_liftTsenSection_lineSpecializedConicPullback p₀ q₀ F hF v hv)
+
+/-- **The stereo point along `L` has cubic fibre vanishing at the point of `L`.**
+
+The general form of `eval_cubicFiber_coordinateLine_of_stereo`. -/
+theorem eval_cubicFiber_line_of_stereo
+    (p₀ q₀ : Fin 3 → K) (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial K)
+    (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p₀ q₀ F) v = 0) :
+    eval (affineTwoLinePoint p₀ q₀)
+      (cubicFiberPullback F (stereoFirstCoordsOn p₀ q₀ F v)) = 0 := by
+  rw [eval_cubicFiberPullback, ← eval_lineSpecializedConicPullback]
+  exact eval_stereoFirstCoordsOn_lineSpecializedConicPullback p₀ q₀ F hF v hv
+
+/-- **Tangent-residual second-block coordinates along an arbitrary line.**
+
+The general form of `residualYCoords`: from the stereo point along `L`, take the residual point of
+the cubic fibre along the tangent line at the point of `L`. -/
+noncomputable def residualYCoordsOn (p₀ q₀ r : Fin 3 → K) (N : Matrix (Fin 3) (Fin 3) K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
+    (v : Fin 3 → Polynomial K) : Fin 3 → affineTwoRing K :=
+  let G := cubicFiberPullback F (stereoFirstCoordsOn p₀ q₀ F v)
+  let pL := affineTwoLinePoint p₀ q₀
+  let qd := frameTangentDir (affineTwoLineFrame p₀ q₀ r) (N.map C) G pL
+  residualAmbientRep pL qd (binaryLineRestriction pL qd G)
+
 /-- **The residual `Y`-coordinates along `L` lie on the cubic fibre's residual line along `L`.**
 
-This is the general form of `eval_residualYCoords_residualLinearForm`.  The line-dependence is
-isolated in `hp`: the stereo point's cubic fibre vanishes at the point of `L`, which is what the
-Tsen section along `L` supplies. -/
+The general form of `eval_residualYCoords_residualLinearForm`.  Every hypothesis is now about `L`
+and the Tsen section along `L`; nothing assumes the coordinate line. -/
 theorem eval_residualYCoordsOn_residualLinearFormOn
-    {K : Type u} [Field K] (p₀ q₀ r : Fin 3 → K) (N : Matrix (Fin 3) (Fin 3) K)
+    (p₀ q₀ r : Fin 3 → K) (N : Matrix (Fin 3) (Fin 3) K)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
     (v : Fin 3 → Polynomial K)
-    (hp : eval (affineTwoLinePoint p₀ q₀)
-      (cubicFiberPullback F (stereoFirstCoords F v)) = 0) :
+    (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p₀ q₀ F) v = 0) :
     eval (residualYCoordsOn p₀ q₀ r N F v)
         (residualLinearFormOn (affineTwoLineFrame p₀ q₀ r) (N.map C)
-          (cubicFiberPullback F (stereoFirstCoords F v))) = 0 := by
+          (cubicFiberPullback F (stereoFirstCoordsOn p₀ q₀ F v))) = 0 := by
   have hMN' : affineTwoLineFrame p₀ q₀ r * N.map (C : K →+* affineTwoRing K) = 1 :=
     lineFrame_map_mul_map (C : K →+* affineTwoRing K) p₀ q₀ r N hMN
   have hcoord := mulVec_affineTwoLinePoint p₀ q₀ r N hMN
   refine eval_residualAmbientRep_residualLinearFormOn_frameTangentDir
     (affineTwoLineFrame p₀ q₀ r) (N.map C) hMN' _
-    (cubicFiberPullback_isHomogeneous F hF _) (affineTwoLinePoint p₀ q₀) ?_ ?_ hp
+    (cubicFiberPullback_isHomogeneous F hF _) (affineTwoLinePoint p₀ q₀) ?_ ?_
+    (eval_cubicFiber_line_of_stereo p₀ q₀ F hF v hv)
   · rw [hcoord]; simp
   · rw [hcoord]; simp
+
+end
 
 end
 
