@@ -161,7 +161,7 @@ theorem exists_isotropic_stereoNondegenerate
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
     ∃ v : Fin 3 → Polynomial k, v ≠ 0 ∧
-      TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0 ∧
+      TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0 ∧ v 2 ≠ 0 ∧
       StereoNondegenerate F v :=
   exists_isotropic_stereoNondegenerate_of_disc_ne_zero F hF
     (coordinateLineConicDiscriminant_ne_zero_of_smooth F hF hF0)
@@ -258,38 +258,34 @@ parameter to a Zariski-open set of them.
    singular over a smooth total space is not excluded (quasi-elliptic fibrations in characteristics
    `2` and `3` realize this).  This is the coordinate form of
    `Standard.exists_nonempty_open_smooth_restrict` (Hartshorne III.10.7).
-2. **The stereo image is not swallowed by that locus.**  This splits into two genuinely different
-   cases, according to the Tsen section `v` the construction was handed.
+2. **The stereo image is dense in `ℙ²_x`.**  This is what `hv2` buys, and it is why that hypothesis
+   is here.  With `v₂ ≠ 0` the lines through `v(t)` meeting `{x₂ = 0}` are *all* the lines through
+   `v(t)`, so `s ↦ x(t, s)` sweeps the whole conic `Q_t`; and the conics `Q_y`, `y ∈ L`, are not
+   all proportional — if `Q_y = a(y)·Q₀` then the binary cubic `a|_L` has a root `y*` and the whole
+   fibre `ℙ²_x` over `y*` would lie in `X`, which smoothness forbids
+   (`BiprojectiveNoWholeFiber`).  So the image is two-dimensional, and (1) finishes.
 
-   *Case `v₂ ≢ 0`.*  For fixed `t` the lines through `v(t)` meeting `{x₂ = 0}` are all the lines
-   through `v(t)`, so `s ↦ x(t, s)` sweeps the whole conic `Q_t`; and the conics `Q_y`, `y ∈ L`, are
-   not all proportional — if `Q_y = a(y)·Q₀` then the binary cubic `a|_L` has a root `y*`, and the
-   whole fibre `ℙ²_x` over `y*` would lie in `X`, which smoothness forbids
-   (`BiprojectiveNoWholeFiber`).  So the image is dense in `ℙ²_x` and (1) finishes.  In Lean this is
-   `AlgebraicIndependenceJacobian.eq_zero_of_isHomogeneous_of_aeval_eq_zero` applied to
-   `Y = residualImageXCoords F v` and a certificate `Δ` from input (i): a nonzero `3 × 3` Jacobian
-   determinant `[Y, ∂Y/∂t, ∂Y/∂s]` gives `aeval Y Δ ≠ 0`, and `k` infinite then supplies `(t, s)`.
-   That route needs the certificates of input (i) to be *homogeneous*, which they are — every entry
-   of `famMatrix` is a coefficient of the fibre, hence a quadratic form in `x` — but this has not
-   been proved.
+*Why `hv2` is not decoration.*  Without it the statement needs a strictly different argument.  For
+`v₂ = 0` the vector `v` and the direction `w = (1, s, 0)` are coplanar, so
+`x(t, s) = Q(w)·v − B(v,w)·w` never leaves the line `{x₂ = 0} ⊂ ℙ²_x`: the image is at most that
+line, the Jacobian determinant below *vanishes identically*, and one would instead have to show that
+this particular line avoids the cubic discriminant — provable, by the argument of
+`GoodLineCondition.coordinateLineConicDiscriminant_ne_zero_of_smooth` with the two factors
+exchanged, but a separate development.  `exists_isotropic_stereoNondegenerate` now supplies `v₂ ≠ 0`
+along with the section, so this case never reaches here; the conjunct is threaded through
+`ResidualComponentAssembly.exists_residualChart_of_smooth`.
 
-   *Case `v₂ ≡ 0`.*  Then `v` and `w = (1, s, 0)` are coplanar, `x(t, s) = Q(w)·v − B(v,w)·w` stays
-   in the line `{x₂ = 0} ⊂ ℙ²_x`, and the image is at most that line — dense in it by `hnd`, but
-   never dense in `ℙ²_x`.  Here the Jacobian determinant *vanishes* and the route above cannot work.
-   What is needed instead is that `{x₂ = 0}` is not contained in the cubic discriminant, which for
-   smooth `X` follows by **the same argument as the conic root**
-   (`GoodLineCondition.coordinateLineConicDiscriminant_ne_zero_of_smooth`) with the two factors
-   exchanged: a line of singular fibres carries a section of singular points, differentiating along
-   the line makes the other gradient a multiple of the line's equation, and that multiple is a form
-   of positive degree on `ℙ¹`, hence has a zero — a singular point of `X`.
+*The route, and what it still needs.*  Apply
+`AlgebraicIndependenceJacobian.eq_zero_of_isHomogeneous_of_aeval_eq_zero` to
+`Y = residualImageXCoords F v` and a certificate `Δ` from input (i): a nonzero `3 × 3` Jacobian
+determinant `[Y, ∂Y/∂t, ∂Y/∂s]` forces `aeval Y Δ ≠ 0`, and `k` infinite then supplies a parameter
+pair where `Δ` does not vanish, which by input (i) has a nonsingular fibre.  Two gaps remain:
 
-*The cheap repair, not taken here.*  Case `v₂ ≡ 0` disappears if the section is chosen with
-`v₂ ≠ 0`, and the conic root already gives that: in the branch where `v₂ = 0` the vector
-`stereoAlg Q v e₂` has last coordinate `−B(v, e₂) ≠ 0`, which is the same construction that proves
-`exists_isotropic_stereoNondegenerate`.  So adding `v 2 ≠ 0` to that obligation's conclusion would
-reduce this one to case `v₂ ≢ 0` alone.  It is **not** done here because the extra conjunct has to
-be threaded through `ResidualComponentAssembly.exists_residualChart_of_smooth` and this module does
-not own that file. -/
+* the certificates of input (i) must be **homogeneous** — they are, since every entry of `famMatrix`
+  is a coefficient of the cubic fibre, hence a quadratic form in `x`, so the determinant is
+  homogeneous of degree twice the matrix size — but this is not yet proved;
+* the **Jacobian determinant of the stereo map must be nonzero**, which is the concrete polynomial
+  form of "the image is two-dimensional" and is where `hv2` and smoothness are consumed. -/
 theorem exists_stereo_param_nonsingularCubicFiber
     {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -297,7 +293,7 @@ theorem exists_stereo_param_nonsingularCubicFiber
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
     (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
-    (hnd : StereoNondegenerate F v) :
+    (hv2 : v 2 ≠ 0) (hnd : StereoNondegenerate F v) :
     ∃ t s : k,
       NonsingularCubicFiber F (fun i => evalAffineTwoPoint t s (residualImageXCoords F v i)) :=
   sorry
@@ -441,7 +437,7 @@ theorem exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
     (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
-    (hnd : StereoNondegenerate F v) :
+    (hv2 : v 2 ≠ 0) (hnd : StereoNondegenerate F v) :
     ∃ D : affineTwoRing k, D ≠ 0 ∧
       ∀ t s : k, evalAffineTwoPoint t s D ≠ 0 →
         ∀ r : Fin 3 → k, r ≠ 0 →
@@ -453,7 +449,7 @@ theorem exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth
   classical
   obtain ⟨S, hS⟩ := exists_defining_set_nonsingularCubicFiber F hF
   obtain ⟨t₀, s₀, hgood⟩ :=
-    exists_stereo_param_nonsingularCubicFiber F hF hF0 v hv0 hv hnd
+    exists_stereo_param_nonsingularCubicFiber F hF hF0 v hv0 hv hv2 hnd
   obtain ⟨Δ, hΔS, hΔ⟩ := (hS _).mpr hgood
   refine ⟨(aeval (residualImageXCoords F v) :
       MvPolynomial (Fin 3) k →ₐ[k] affineTwoRing k) Δ, ?_, ?_⟩
@@ -507,7 +503,7 @@ theorem exists_nonsingular_stereo_cubicFiber_of_smooth
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
     (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
-    (hnd : StereoNondegenerate F v) :
+    (hv2 : v 2 ≠ 0) (hnd : StereoNondegenerate F v) :
     ∃ t s : k,
       let x := residualImageXCoords F v
       let p := affineTwoCoordinateLineY k
@@ -523,7 +519,7 @@ theorem exists_nonsingular_stereo_cubicFiber_of_smooth
           LinearIndependent k ![ps, qs] := by
   classical
   obtain ⟨D, hD0, hDns⟩ :=
-    exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth F hF hF0 v hv0 hv hnd
+    exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth F hF hF0 v hv0 hv hv2 hnd
   set x := residualImageXCoords F v
   set p := affineTwoCoordinateLineY k
   set G := cubicFiberPullback F x
@@ -590,10 +586,10 @@ theorem residualYCoords_ne_zero_of_smooth
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
     (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
-    (hnd : StereoNondegenerate F v) :
+    (hv2 : v 2 ≠ 0) (hnd : StereoNondegenerate F v) :
     residualYCoords F v ≠ 0 :=
   residualYCoords_ne_zero_of_exists_nonsingular_stereo F hF v hv
-    (exists_nonsingular_stereo_cubicFiber_of_smooth F hF hF0 v hv0 hv hnd)
+    (exists_nonsingular_stereo_cubicFiber_of_smooth F hF hF0 v hv0 hv hv2 hnd)
 
 end
 

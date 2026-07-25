@@ -173,87 +173,110 @@ theorem det_polarMatrix_eq_zero_of_polarEval_eq_zero
 
 end PolarAlgebra
 
-/-! ### The core lemma
+/-! ### The core lemmas
 
-Given one isotropic vector, nondegeneracy of the polar matrix produces an isotropic vector whose
-polar against the plane `{x₂ = 0}` — the plane the stereo direction `(1, s, 0)` sweeps — is not
-identically zero.  The second vector, when the first fails, is the stereographic second intersection
-of the line through the first vector and `e₂`. -/
+Two facts about a conic with nondegenerate polar matrix, over any domain.
+
+* An isotropic vector **off the plane `{x₂ = 0}` is automatically stereo-non-degenerate** — the
+  plane the stereo direction `(1, s, 0)` sweeps is exactly where the degenerate isotropic vectors
+  are trapped.
+* From any isotropic vector one gets an isotropic vector **off that plane**, as the stereographic
+  second intersection along a direction chosen to meet it.
+
+Together they give the strengthened section: isotropic, off the plane, and non-degenerate.  The
+second property is what makes the stereographic family sweep a surface rather than a line, which is
+what the cubic-side obligation needs; see `ResidualYNonvanishing`. -/
 
 section Core
 
 variable {R : Type u} [CommRing R] [IsDomain R]
 
-/-- **Some isotropic vector has nonzero polar against the stereo plane.**
+/-- **A degenerate isotropic vector lies in the plane `{x₂ = 0}`.**
 
-If the polar matrix is nonsingular and `v ≠ 0` is isotropic, then either `v` itself or the
-stereographic second intersection `stereoAlg Q v e₂` has nonzero polar against `e₀` or `e₁`. -/
-theorem exists_isotropic_polarEval_ne_zero
+If the polar against `e₀` and `e₁` both vanish then, the polar matrix being nonsingular, the polar
+against `e₂` does not; and `B(v, v) = 2 Q(v) = 0` expands to `v₂ · B(v, e₂)`. -/
+theorem third_eq_zero_of_isotropic_of_polarEval_eq_zero
     {Q : MvPolynomial (Fin 3) R} (hQ : Q.IsHomogeneous 2)
     (hdet : (polarMatrix Q).det ≠ 0)
-    {v : Fin 3 → R} (hv0 : v ≠ 0) (hv : eval v Q = 0) :
-    ∃ u : Fin 3 → R, u ≠ 0 ∧ eval u Q = 0 ∧
-      (polarEval Q u (Pi.single 0 1) ≠ 0 ∨ polarEval Q u (Pi.single 1 1) ≠ 0) := by
+    {v : Fin 3 → R} (hv0 : v ≠ 0) (hv : eval v Q = 0)
+    (h0 : polarEval Q v (Pi.single 0 1) = 0) (h1 : polarEval Q v (Pi.single 1 1) = 0) :
+    v 2 = 0 := by
   classical
-  by_cases hgood :
-      polarEval Q v (Pi.single 0 1) ≠ 0 ∨ polarEval Q v (Pi.single 1 1) ≠ 0
-  · exact ⟨v, hv0, hv, hgood⟩
-  push Not at hgood
-  obtain ⟨hb0, hb1⟩ := hgood
-  -- `v` is not in the radical, since the discriminant is nonzero.
   have hb2 : polarEval Q v (Pi.single 2 1) ≠ 0 := by
     intro hb2z
     refine hdet (det_polarMatrix_eq_zero_of_polarEval_eq_zero hQ hv0 fun a => ?_)
     fin_cases a
-    · exact hb0
-    · exact hb1
+    · exact h0
+    · exact h1
     · exact hb2z
-  -- Isotropy then forces the last coordinate of `v` to vanish.
-  have hv2 : v 2 = 0 := by
-    have hself : polarEval Q v v = 2 * eval v Q := polarEval_self hQ v
-    rw [hv, mul_zero, polarEval_eq_sum_basis hQ v v, Fin.sum_univ_three, hb0, hb1] at hself
-    simp only [mul_zero, zero_add, add_zero] at hself
-    exact (mul_eq_zero.mp hself).resolve_right hb2
-  -- The stereographic second intersection of the line through `v` and `e₂`.
-  set u := stereoAlg Q v (Pi.single 2 1) with hu_def
-  have hstereo : ∀ a : Fin 3, polarEval Q u (Pi.single a 1)
-      = eval (Pi.single 2 1) Q * polarEval Q v (Pi.single a 1)
-        - polarEval Q v (Pi.single 2 1) * polarMatrix Q 2 a := by
-    intro a
-    have hvec : u = fun i =>
-        eval (Pi.single 2 (1 : R)) Q * v i
-          + (-(polarEval Q v (Pi.single 2 1)))
-            * (Pi.single (2 : Fin 3) (1 : R) : Fin 3 → R) i := by
-      funext i
-      simp only [hu_def, stereoAlg]
-      ring
-    rw [hvec, polarEval_linear_left hQ, polarMatrix_apply]
-    ring
-  have hu_iso : eval u Q = 0 := by
-    rw [hu_def, eval_stereoAlg Q hQ v (Pi.single 2 1), hv, mul_zero]
-  have hu_polar :
-      polarEval Q u (Pi.single 0 1) ≠ 0 ∨ polarEval Q u (Pi.single 1 1) ≠ 0 := by
-    by_cases hM : polarMatrix Q 2 0 ≠ 0 ∨ polarMatrix Q 2 1 ≠ 0
-    · rcases hM with hM0 | hM1
-      · refine Or.inl ?_
-        rw [hstereo 0, hb0, mul_zero, zero_sub, neg_ne_zero]
-        exact mul_ne_zero hb2 hM0
-      · refine Or.inr ?_
-        rw [hstereo 1, hb1, mul_zero, zero_sub, neg_ne_zero]
-        exact mul_ne_zero hb2 hM1
-    · -- Both vanish: then `v` had zero polar against `e₂` after all.
-      exfalso
-      push Not at hM
-      obtain ⟨hM0, hM1⟩ := hM
-      refine hb2 ?_
-      rw [polarEval_comm, polarEval_eq_sum_basis hQ, Fin.sum_univ_three]
-      rw [← polarMatrix_apply, ← polarMatrix_apply, ← polarMatrix_apply, hM0, hM1, hv2]
-      ring
-  have hu_ne : u ≠ 0 := by
-    intro hzero
-    rcases hu_polar with h | h <;>
-      exact h (by rw [hzero]; exact polarEval_zero_left hQ _)
-  exact ⟨u, hu_ne, hu_iso, hu_polar⟩
+  have hself : polarEval Q v v = 2 * eval v Q := polarEval_self hQ v
+  rw [hv, mul_zero, polarEval_eq_sum_basis hQ v v, Fin.sum_univ_three, h0, h1] at hself
+  simp only [mul_zero, zero_add, add_zero] at hself
+  exact (mul_eq_zero.mp hself).resolve_right hb2
+
+/-- **An isotropic vector off the plane `{x₂ = 0}` is stereo-non-degenerate**, with no further
+hypothesis: this is the contrapositive of the previous lemma. -/
+theorem polarEval_ne_zero_of_isotropic_of_third_ne_zero
+    {Q : MvPolynomial (Fin 3) R} (hQ : Q.IsHomogeneous 2)
+    (hdet : (polarMatrix Q).det ≠ 0)
+    {v : Fin 3 → R} (hv : eval v Q = 0) (hv2 : v 2 ≠ 0) :
+    polarEval Q v (Pi.single 0 1) ≠ 0 ∨ polarEval Q v (Pi.single 1 1) ≠ 0 := by
+  by_contra hcon
+  push Not at hcon
+  obtain ⟨h0, h1⟩ := hcon
+  have hv0 : v ≠ 0 := fun hz => hv2 (by rw [hz]; rfl)
+  exact hv2 (third_eq_zero_of_isotropic_of_polarEval_eq_zero hQ hdet hv0 hv h0 h1)
+
+/-- **From any isotropic vector, one off the plane `{x₂ = 0}`.**
+
+If `v` is already off the plane there is nothing to do.  Otherwise the stereographic second
+intersection `stereoAlg Q v w` has last coordinate `−B(v, w)·w₂`, so any direction `w` with
+`w₂ ≠ 0` and `B(v, w) ≠ 0` works: take `w = e₂`, or `w = e₂ + eₐ` when the polar against `e₂`
+happens to vanish — some polar is nonzero because `v` is not in the radical. -/
+theorem exists_isotropic_third_ne_zero
+    {Q : MvPolynomial (Fin 3) R} (hQ : Q.IsHomogeneous 2)
+    (hdet : (polarMatrix Q).det ≠ 0)
+    {v : Fin 3 → R} (hv0 : v ≠ 0) (hv : eval v Q = 0) :
+    ∃ u : Fin 3 → R, eval u Q = 0 ∧ u 2 ≠ 0 := by
+  classical
+  by_cases hv2 : v 2 ≠ 0
+  · exact ⟨v, hv, hv2⟩
+  push Not at hv2
+  obtain ⟨w, hw2, hbw⟩ : ∃ w : Fin 3 → R, w 2 = 1 ∧ polarEval Q v w ≠ 0 := by
+    by_cases hb2 : polarEval Q v (Pi.single 2 1) ≠ 0
+    · exact ⟨Pi.single 2 1, by simp, hb2⟩
+    push Not at hb2
+    obtain ⟨a, ha⟩ : ∃ a : Fin 3, polarEval Q v (Pi.single a 1) ≠ 0 := by
+      by_contra hall
+      push Not at hall
+      exact hdet (det_polarMatrix_eq_zero_of_polarEval_eq_zero hQ hv0 hall)
+    have ha2 : a ≠ 2 := by
+      intro h
+      rw [h] at ha
+      exact ha hb2
+    refine ⟨fun i => 1 * (Pi.single (2 : Fin 3) (1 : R) : Fin 3 → R) i
+        + 1 * (Pi.single a (1 : R) : Fin 3 → R) i, ?_, ?_⟩
+    · simp [Ne.symm ha2]
+    · rw [polarEval_linear_right hQ, hb2, one_mul, one_mul, zero_add]
+      exact ha
+  refine ⟨stereoAlg Q v w, ?_, ?_⟩
+  · rw [eval_stereoAlg Q hQ v w, hv, mul_zero]
+  · simp only [stereoAlg, hv2, mul_zero, zero_sub, hw2, mul_one, neg_ne_zero]
+    exact hbw
+
+/-- **The strengthened section.**
+
+An isotropic vector that is nonzero, lies off the plane `{x₂ = 0}`, and is stereo-non-degenerate.
+The last property is free once the second holds. -/
+theorem exists_isotropic_polarEval_ne_zero
+    {Q : MvPolynomial (Fin 3) R} (hQ : Q.IsHomogeneous 2)
+    (hdet : (polarMatrix Q).det ≠ 0)
+    {v : Fin 3 → R} (hv0 : v ≠ 0) (hv : eval v Q = 0) :
+    ∃ u : Fin 3 → R, u ≠ 0 ∧ eval u Q = 0 ∧ u 2 ≠ 0 ∧
+      (polarEval Q u (Pi.single 0 1) ≠ 0 ∨ polarEval Q u (Pi.single 1 1) ≠ 0) := by
+  obtain ⟨u, hu, hu2⟩ := exists_isotropic_third_ne_zero hQ hdet hv0 hv
+  exact ⟨u, fun hz => hu2 (by rw [hz]; rfl), hu, hu2,
+    polarEval_ne_zero_of_isotropic_of_third_ne_zero hQ hdet hu hu2⟩
 
 end Core
 
@@ -341,11 +364,15 @@ variable [IsAlgClosed k] [CharZero k]
 omit [CharZero k] in
 /-- **The first good-line obligation, from the root.**
 
-Some isotropic Tsen section along the coordinate line is stereo-non-degenerate, as soon as the
-generic conic there is smooth.  Tsen's theorem supplies one isotropic section; if it happens to be
-degenerate, the stereographic second intersection with `e₂` is a good one — and nondegeneracy of the
-polar matrix is exactly what rules out the remaining case, in which every isotropic section is a
-multiple of the radical vector.
+Some isotropic Tsen section along the coordinate line lies off the plane `{x₂ = 0}` and is
+stereo-non-degenerate, as soon as the generic conic there is smooth.  Tsen's theorem supplies one
+isotropic section; a stereographic second intersection moves it off the plane if it started there;
+and being off the plane makes non-degeneracy automatic, because nondegeneracy of the polar matrix
+traps every degenerate isotropic vector inside `{x₂ = 0}`.
+
+The third coordinate is what the cubic-side obligation needs: with `v₂ ≠ 0` the stereographic family
+sweeps each conic and its image is dense in `ℙ²_x`, whereas a `v` inside `{x₂ = 0}` would keep the
+whole family inside a line.
 
 `CharZero` is not needed: an algebraically closed field is infinite, which is all the argument
 uses. -/
@@ -353,7 +380,7 @@ theorem exists_isotropic_stereoNondegenerate_of_disc_ne_zero
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (hdisc : coordinateLineConicDiscriminant F ≠ 0) :
     ∃ v : Fin 3 → Polynomial k, v ≠ 0 ∧
-      TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0 ∧
+      TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0 ∧ v 2 ≠ 0 ∧
       polarEval (specializedConicPullback F) (liftTsenSection v) affineTwoStereoDir ≠ 0 := by
   classical
   obtain ⟨v₀, hv₀0, hv₀⟩ := exists_isotropic_coordinateLine_conic k F
@@ -362,9 +389,9 @@ theorem exists_isotropic_stereoNondegenerate_of_disc_ne_zero
   have hv₀' : eval v₀ (coordinateLineSpecializedConicPoly F) = 0 := by
     rw [← ternaryQuadraticPoly_eval_coordinateLine F hF]
     exact hv₀
-  obtain ⟨u, hu0, huiso, hupolar⟩ :=
+  obtain ⟨u, hu0, huiso, hu2, hupolar⟩ :=
     exists_isotropic_polarEval_ne_zero hQhom hdisc hv₀0 hv₀'
-  refine ⟨u, hu0, ?_, polarEval_stereoDir_ne_zero_of_polarEval_ne_zero F hF u hupolar⟩
+  refine ⟨u, hu0, ?_, hu2, polarEval_stereoDir_ne_zero_of_polarEval_ne_zero F hF u hupolar⟩
   rw [ternaryQuadraticPoly_eval_coordinateLine F hF]
   exact huiso
 
