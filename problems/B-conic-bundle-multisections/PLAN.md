@@ -304,12 +304,33 @@ through ~60 sites in `PlaneCubicResidualVanishing` (527 lines) and `PlaneCubicRe
 Everything else is already frame-independent: `binaryLineRestriction p q` takes arbitrary vectors,
 `complementaryTangentDir G p = cross3 p (tangentGradient G p)`, `residualAmbientRep p q`.
 
-**Remaining step: `residualLinearFormOn`.** Define the residual line for a general `L` by carrying
-the *plane cubic fiber* into the frame where `L = {W = 0}` via `linearSubst`, applying the existing
-`residualLinearForm`, and carrying back. Every existing identity then applies verbatim. This
-substitutes a three-variable cubic — the ambient biprojective scheme is never transported — so it
-needs no `Proj.map` or ideal-sheaf work. The two equivariances it rests on are landed; what is left
-is the frame matrix (columns `p, q`, completed to a basis) and assembling the general form of
+**The transport is done** (`PlaneCubicResidualTransport.lean`, all proved and axiom-clean). The §5
+statement now holds for an arbitrary line:
+
+```lean
+eval_residualAmbientRep_residualLinearFormOn_linePointOf
+    (p₀ q₀ r) (N) (hMN : lineFrame p₀ q₀ r * N = 1)
+    (G) (hG : G.IsHomogeneous 3) (t) (hp : eval (linePointOf p₀ q₀ t) G = 0) :
+  eval (residualAmbientRep …) (residualLinearFormOn (lineFrame p₀ q₀ r) N G) = 0
+```
+
+* `residualLinearFormOn M N G` — `δ_C(L)` for general `L`: carry the cubic into `L`'s frame, take
+  the normalised residual line, carry back. Equals the normalised one for the identity frame.
+* `lineFrame p q r` — columns the spanning vectors; carries `[1 : t : 0]` to `p + t·q`.
+* `frameTangentDir` — **the key definitional choice.** Defining the direction as the *transport of*
+  the canonical one, rather than as `p × ∇G(p)`, discharges the span hypothesis outright
+  (`α = 1, β = 0`). Cross-product equivariance holds only modulo the span of `p`, so defining it the
+  other way would have needed a nondegeneracy hypothesis; this way needs none.
+* For `M = lineFrame`, the normalisation hypotheses discharge automatically — in `L`'s own frame the
+  point of `L` at parameter `t` *is* `(1, t, 0)`.
+
+None of the ~990 lines of §5 coefficient identities were re-derived; they are used verbatim in the
+normalised frame.
+
+**Remaining: thread it through.** `residualYCoords`, `residualEquation` and the residual image are
+still built from the coordinate-line versions. Each is a substitution of `residualLinearFormOn` for
+`residualLinearForm` and of `linePointOf` for `coordinateLinePoint`, with the transport theorem
+supplying the vanishing that the coordinate version got from
 `eval_residualAmbientRep_residualLinearForm`.
 
 **Only then** thread `IsGoodLine` down, so that `MainTheorem` *produces* a good line rather than

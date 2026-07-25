@@ -216,6 +216,45 @@ theorem eval_residualAmbientRep_residualLinearFormOn_linePointOf
   · rw [hcoord]; simp
   · rw [hcoord]; simp
 
+/-! ### Reduction to the coordinate line
+
+The general construction must agree with the existing one on the line the development hardcoded,
+or generality would have been bought at the price of a different object.  It does: the coordinate
+line's frame is the identity matrix, and every general notion collapses to its normalised
+counterpart. -/
+
+/-- The frame of the coordinate line is the identity. -/
+@[simp] theorem lineFrame_coordinate :
+    lineFrame ![1, 0, 0] ![0, 1, 0] ![0, 0, (1 : R)] = 1 := by
+  ext j l
+  fin_cases j <;> fin_cases l <;> simp [lineFrame, Matrix.one_apply]
+
+/-- For the identity frame the transported tangent direction is the canonical one. -/
+@[simp] theorem frameTangentDir_one (G : MvPolynomial (Fin 3) R) (p : Fin 3 → R) :
+    frameTangentDir 1 1 G p = complementaryTangentDir G p := by
+  rw [frameTangentDir, Matrix.one_mulVec, linearSubst_one, Matrix.one_mulVec]
+  congr 1
+  exact aeval_X_left_apply G
+
+/-- **On the coordinate line the general residual line is the one the development already had.**
+
+So `residualLinearFormOn` extends `PlaneCubicResidual.residualLinearForm` rather than replacing it,
+and the coordinate-line results remain exactly the special case they were. -/
+theorem residualLinearFormOn_coordinateLine (G : MvPolynomial (Fin 3) R) :
+    residualLinearFormOn (lineFrame ![1, 0, 0] ![0, 1, 0] ![0, 0, (1 : R)]) 1 G
+      = PlaneCubicResidual.residualLinearForm G := by
+  rw [lineFrame_coordinate, residualLinearFormOn_one]
+
+/-- The general vanishing theorem specialises back to the coordinate-line one. -/
+theorem eval_residualAmbientRep_residualLinearFormOn_coordinateLine
+    (G : MvPolynomial (Fin 3) R) (hG : G.IsHomogeneous 3)
+    (p : Fin 3 → R) (hp0 : p 0 = 1) (hp2 : p 2 = 0) (hp : eval p G = 0) :
+    eval (residualAmbientRep p (complementaryTangentDir G p)
+          (binaryLineRestriction p (complementaryTangentDir G p) G))
+        (residualLinearFormOn (lineFrame ![1, 0, 0] ![0, 1, 0] ![0, 0, (1 : R)]) 1 G) = 0 := by
+  rw [residualLinearFormOn_coordinateLine]
+  exact eval_residualAmbientRep_residualLinearForm G hG p hp0 hp2 hp
+
 end
 
 end BConicBundleMultisections
