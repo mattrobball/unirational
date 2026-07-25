@@ -113,6 +113,38 @@ theorem conicParametrization_apply_base (Q : QuadraticForm K V) {p : V} (hp : Q 
   rw [Q.map_smul, polar_smul_right, polar_self Q p, hp]
   simp
 
+/-- **A conic through two polar-orthogonal isotropic vectors contains the line joining them.**
+
+If `Q p = Q q = 0` and `polar Q p q = 0`, then `Q (a • p + b • q) = 0` for all `a b`, because
+`Q (a • p + b • q) = a² Q p + b² Q q + a b · polar Q p q`. -/
+theorem eval_isotropic_of_polar_eq_zero (Q : QuadraticForm K V) {p q : V}
+    (hp : Q p = 0) (hq : Q q = 0) (hpq : polar Q p q = 0) (a b : K) :
+    Q (a • p + b • q) = 0 := by
+  have h := QuadraticMap.map_add Q (a • p) (b • q)
+  rw [Q.map_smul, Q.map_smul, hp, hq, polar_smul_left, polar_smul_right, hpq] at h
+  simpa using h
+
+/-- **Stereographic projection from a point of a conic hits every other point of the conic,
+unless the conic degenerates along a line through that point.**
+
+Let `p` and `q` be isotropic vectors of `Q`.  Either `polar Q p q ≠ 0`, in which case
+`conicParametrization Q p q = -(polar Q p q) • q` is a *nonzero* multiple of `q`, so `q` is in the
+projective image of the stereographic map; or `polar Q p q = 0`, in which case the whole plane
+spanned by `p` and `q` is isotropic, i.e. the conic contains a line through `p`.
+
+For a nondegenerate plane conic the second alternative is impossible, so the stereographic map is
+onto: together with `conicParametrization_is_isotropic` (its image lands on the conic) this is the
+point-level statement that a pointed nondegenerate conic is parametrized by `ℙ¹`.  Unlike
+`exists_veronese_of_model_isotropic`, it needs no normal form — which is what `PLAN.md` WP-3d
+requires, Mathlib having no Witt decomposition at the pinned revision. -/
+theorem conicParametrization_smul_or_isotropic_span (Q : QuadraticForm K V) {p q : V}
+    (hp : Q p = 0) (hq : Q q = 0) :
+    (∃ c : K, c ≠ 0 ∧ conicParametrization Q p q = c • q) ∨
+      ∀ a b : K, Q (a • p + b • q) = 0 := by
+  by_cases h : polar Q p q = 0
+  · exact Or.inr fun a b => eval_isotropic_of_polar_eq_zero Q hp hq h a b
+  · exact Or.inl ⟨-(polar Q p q), neg_ne_zero.mpr h, conicParametrization_apply_self Q hq⟩
+
 /--
 Line-through-base expansion used by stereographic projection:
 `Q(p + t • w) = t * polar(Q)(p,w) + t² * Q(w)` when `Q(p) = 0`.

@@ -220,6 +220,124 @@ def conicMk : MvPolynomial (Fin 2) A →+* conicRing a b c d e := Ideal.Quotient
 theorem conicMk_conicPoly : conicMk a b c d e (conicPoly a b c d e) = 0 :=
   Ideal.Quotient.eq_zero_iff_mem.mpr (Ideal.subset_span rfl)
 
+/-! ### The stereographic chart is nonempty
+
+`x` and `d x + e y` are visibly nonzero *polynomials*, but the chart denominator has to be nonzero
+in the **conic ring**, i.e. `f` must divide neither.  Substituting `y = z x` sends `f` to
+`x² Q(z) + x L(z)`, of degree `2` in `x` as soon as `Q ≠ 0`, while `x` and `d x + e y` go to
+polynomials of degree `1`; degrees add over a domain, so no such division is possible.  Hence this
+condition is *automatic* from integrality of the conic ring and nonvanishing of the two slope
+polynomials.
+-/
+
+/-- Substitution `x ↦ x`, `y ↦ z x` into `A[z][x]`: the line expansion, as a ring map. -/
+def lineSubstHom : MvPolynomial (Fin 2) A →+* Polynomial (Polynomial A) :=
+  eval₂Hom
+    ((Polynomial.C : Polynomial A →+* Polynomial (Polynomial A)).comp
+      (Polynomial.C : A →+* Polynomial A))
+    ![Polynomial.X, Polynomial.C Polynomial.X * Polynomial.X]
+
+/-- Evaluating a polynomial of `A[z]` at `z` inside `A[z][x]` is the constant embedding. -/
+theorem eval₂_lineSubst_base (p : Polynomial A) :
+    Polynomial.eval₂
+        ((Polynomial.C : Polynomial A →+* Polynomial (Polynomial A)).comp
+          (Polynomial.C : A →+* Polynomial A))
+        (Polynomial.C Polynomial.X) p = Polynomial.C p := by
+  have h : (Polynomial.eval₂RingHom
+        ((Polynomial.C : Polynomial A →+* Polynomial (Polynomial A)).comp
+          (Polynomial.C : A →+* Polynomial A))
+        (Polynomial.C Polynomial.X)) =
+      (Polynomial.C : Polynomial A →+* Polynomial (Polynomial A)) :=
+    Polynomial.ringHom_ext (fun r => by simp) (by simp)
+  exact congrArg (fun (φ : Polynomial A →+* Polynomial (Polynomial A)) => φ p) h
+
+@[simp]
+theorem lineSubstHom_conicPoly :
+    lineSubstHom (conicPoly a b c d e) =
+      Polynomial.X ^ 2 * Polynomial.C (slopeQuad a b c) +
+        Polynomial.X * Polynomial.C (slopeLin d e) := by
+  change eval₂ _ ![Polynomial.X, Polynomial.C Polynomial.X * Polynomial.X]
+    (conicPoly a b c d e) = _
+  rw [eval₂_conicPoly_line, eval₂_lineSubst_base, eval₂_lineSubst_base]
+
+@[simp]
+theorem lineSubstHom_X_zero :
+    lineSubstHom (A := A) (MvPolynomial.X 0) = Polynomial.X := by
+  simp [lineSubstHom]
+
+@[simp]
+theorem lineSubstHom_conicTangentForm :
+    lineSubstHom (conicTangentForm d e) =
+      Polynomial.X * Polynomial.C (slopeLin d e) := by
+  change eval₂ _ ![Polynomial.X, Polynomial.C Polynomial.X * Polynomial.X]
+    (conicTangentForm d e) = _
+  rw [eval₂_conicTangentForm_line, eval₂_lineSubst_base]
+
+/-- The line expansion of the conic has degree exactly `2` in `x`, because `Q ≠ 0`. -/
+theorem degree_lineSubstHom_conicPoly [IsDomain A] (hQ : slopeQuad a b c ≠ 0) :
+    (lineSubstHom (conicPoly a b c d e)).degree = 2 := by
+  have hCQ : (Polynomial.C (slopeQuad a b c) :
+      Polynomial (Polynomial A)) ≠ 0 := fun h => hQ (Polynomial.C_eq_zero.mp h)
+  have hlead : (Polynomial.X ^ 2 *
+      Polynomial.C (slopeQuad a b c) : Polynomial (Polynomial A)).degree = 2 := by
+    rw [Polynomial.degree_mul, Polynomial.degree_X_pow, Polynomial.degree_C hQ]
+    rfl
+  have htail : (Polynomial.X *
+      Polynomial.C (slopeLin d e) : Polynomial (Polynomial A)).degree < 2 := by
+    refine lt_of_le_of_lt (Polynomial.degree_mul_le _ _) ?_
+    refine lt_of_le_of_lt (add_le_add Polynomial.degree_X_le Polynomial.degree_C_le) ?_
+    exact by decide
+  rw [lineSubstHom_conicPoly, Polynomial.degree_add_eq_left_of_degree_lt (hlead ▸ htail), hlead]
+
+/-- A plane polynomial whose line expansion is nonzero of degree at most `1` is nonzero in the
+conic ring. -/
+theorem conicMk_ne_zero_of_degree_le_one [IsDomain A] (hQ : slopeQuad a b c ≠ 0)
+    {p : MvPolynomial (Fin 2) A} (hp0 : lineSubstHom p ≠ 0)
+    (hp : (lineSubstHom p).degree ≤ 1) :
+    conicMk a b c d e p ≠ 0 := by
+  intro hzero
+  obtain ⟨g, rfl⟩ := Ideal.mem_span_singleton.mp (Ideal.Quotient.eq_zero_iff_mem.mp hzero)
+  rw [map_mul] at hp0 hp
+  have hg : lineSubstHom g ≠ 0 := fun h => hp0 (by rw [h, mul_zero])
+  rw [Polynomial.degree_mul, degree_lineSubstHom_conicPoly a b c d e hQ] at hp
+  have h0 : (0 : WithBot ℕ) ≤ (lineSubstHom g).degree :=
+    Polynomial.zero_le_degree_iff.mpr hg
+  have h2 : (2 : WithBot ℕ) ≤ 2 + (lineSubstHom g).degree :=
+    calc (2 : WithBot ℕ) = 2 + 0 := by simp
+      _ ≤ 2 + (lineSubstHom g).degree := by gcongr
+  exact absurd (h2.trans hp) (by decide)
+
+/-- **The stereographic chart of an integral pointed conic is nonempty.**
+
+Consequently the last hypothesis of `birationalOver_conicScheme_affineSpace` never has to be
+checked separately. -/
+theorem conicMk_conicChartDenom_ne_zero [IsDomain A] [IsDomain (conicRing a b c d e)]
+    (hQ : slopeQuad a b c ≠ 0) (hL : slopeLin d e ≠ 0) :
+    conicMk a b c d e (conicChartDenom d e) ≠ 0 := by
+  have hCL : (Polynomial.C (slopeLin d e) : Polynomial (Polynomial A)) ≠ 0 :=
+    fun h => hL (Polynomial.C_eq_zero.mp h)
+  have hx : conicMk a b c d e (MvPolynomial.X 0) ≠ 0 := by
+    refine conicMk_ne_zero_of_degree_le_one a b c d e hQ ?_ ?_
+    · rw [lineSubstHom_X_zero]
+      exact (Polynomial.X_ne_zero : (Polynomial.X : Polynomial (Polynomial A)) ≠ 0)
+    · rw [lineSubstHom_X_zero]; exact Polynomial.degree_X_le
+  have ht : conicMk a b c d e (conicTangentForm d e) ≠ 0 := by
+    refine conicMk_ne_zero_of_degree_le_one a b c d e hQ ?_ ?_
+    · rw [lineSubstHom_conicTangentForm]
+      exact mul_ne_zero (Polynomial.X_ne_zero :
+        (Polynomial.X : Polynomial (Polynomial A)) ≠ 0) hCL
+    · rw [lineSubstHom_conicTangentForm]
+      refine le_trans (Polynomial.degree_mul_le _ _) ?_
+      have h1 : (Polynomial.X : Polynomial (Polynomial A)).degree ≤ 1 := Polynomial.degree_X_le
+      have h2 : (Polynomial.C (slopeLin d e) : Polynomial (Polynomial A)).degree ≤ 0 :=
+        Polynomial.degree_C_le
+      calc (Polynomial.X : Polynomial (Polynomial A)).degree +
+            (Polynomial.C (slopeLin d e) : Polynomial (Polynomial A)).degree
+          ≤ 1 + 0 := add_le_add h1 h2
+        _ = 1 := by simp
+  rw [conicChartDenom, map_mul]
+  exact mul_ne_zero hx ht
+
 /-- The **conic chart**: the conic ring localized away from `x · (d x + e y)`. -/
 abbrev conicChart : Type u := Localization.Away (conicMk a b c d e (conicChartDenom d e))
 

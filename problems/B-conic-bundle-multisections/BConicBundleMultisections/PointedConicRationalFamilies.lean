@@ -65,9 +65,46 @@ step — by four groups of results that are proved outright:
    Transport back to `T` is `Scheme.BirationalOver.comp` and
    `Scheme.birationalOver_affineSpace_comp`, both proved here and both absent from Mathlib.
 
-On the abstract-quadratic-form side, `conicParametrization_smul_or_isotropic_span` below supplies
-the surjectivity half of WP-3d for an arbitrary form on an arbitrary module, again with no normal
-form; it belongs in `PointedConicRational.lean` and should migrate there.
+On the abstract-quadratic-form side, `conicParametrization_smul_or_isotropic_span` (now in
+`PointedConicRational.lean`, together with `eval_isotropic_of_polar_eq_zero`) supplies the
+surjectivity half of WP-3d for an arbitrary form on an arbitrary module, again with no normal
+form.
+
+## Correction: the affine-model leaf was false without global smoothness
+
+The first version of `exists_pointedConicAffineModel` (and of
+`isPointedConicRationalOver_of_dense_open_smooth`) assumed only `hF0 : F ≠ 0` together with
+smoothness of `π` over a dense open `U` of `ℙ²_y`.  **That is false.**  Explicit counterexample,
+over an arbitrary field `k`:
+
+```
+F = Y₀³ · (X₀ X₁ − X₂²)          -- bidegree (2,3), nonzero
+U = D(Y₀)                         -- dense open of ℙ²_y
+T = ℙ²_y,  t = 𝟙                  -- integral, dominant
+σ : y ↦ ([1:0:0], y)              -- a section, since 1·0 − 0² = 0
+```
+
+On `U` the ideal `(Y₀³ (X₀X₁ − X₂²))` equals `(X₀X₁ − X₂²)`, so `π ∣_ U` is the constant smooth
+conic bundle `V(X₀X₁ − X₂²) × U → U`: every hypothesis holds.  But `pullback.snd π t ≅ X` is
+`ℙ²_x × {Y₀ = 0}` together with `V(X₀X₁ − X₂²) × ℙ²_y`, and is non-reduced along `Y₀ = 0`.  A dense
+open of a reducible space is reducible, while every nonempty open of `𝔸(1; T)` — and of the
+pointed affine conic over a domain — is integral, so no `BirationalOver` can exist.
+
+The missing hypothesis is exactly the one this development already isolates: a *whole* `ℙ²_x`
+fibre.  `BiprojectiveSpace.not_specializeSecondCoordinates_eq_zero_of_smooth_bidegree23` says that
+global smoothness of `X` over `Spec k` forbids one, and that is the only thing the counterexample
+violates (its `X` is visibly singular along `Y₀ = 0`).  Both statements therefore now carry
+`[IsAlgClosed k]` and `[Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]`, which the obligation's call
+site supplies anyway.  With no whole fibre, every component of `X ×_{ℙ²_y} T` dominates `T`; its
+generic fibre is a smooth plane conic, hence geometrically integral; so the base change is integral
+and the statement is true.
+
+This is the same fault as `PLAN.md` correction 7 and its predecessors: when the classical statement
+was lifted out of its setting, a hypothesis that the source's geometry supplies for free
+(here: `X` is smooth, which is the standing hypothesis of the whole theorem) was silently dropped.
+The lesson recorded for the next generalization: *smoothness of the morphism over a dense open of
+the base does not imply anything about the fibres outside that open*, and birationality is a
+statement about the total space, which those fibres can wreck.
 
 ## Warning: horizontality is not decoration, it is load-bearing
 
@@ -219,54 +256,6 @@ noncomputable section
 open AlgebraicGeometry MvPolynomial BiprojectiveSpace
 open _root_.MvPolynomial
 
-/-! ### Stereographic projection is surjective (`PLAN.md` WP-3d)
-
-These two lemmas belong in `PointedConicRational.lean` and should move there; they are stated here
-only because that module is owned by another work package.  They complete, for an *arbitrary*
-quadratic form and with no normal form, the half of pointed-conic rationality that module proves
-only for the model conic `X₀X₂ = X₁²` — and the plan explicitly prefers this route, because
-Mathlib has no Witt decomposition with which to reduce a general form to the model.
--/
-
-section PointedConic
-
-variable {K V : Type*} [Field K] [AddCommGroup V] [Module K V]
-
-/-- **A conic through two polar-orthogonal isotropic vectors contains the line joining them.**
-
-If `Q p = Q q = 0` and `polar Q p q = 0`, then `Q (a • p + b • q) = 0` for all `a b`, because
-`Q (a • p + b • q) = a² Q p + b² Q q + a b · polar Q p q`. -/
-theorem eval_isotropic_of_polar_eq_zero (Q : QuadraticForm K V) {p q : V}
-    (hp : Q p = 0) (hq : Q q = 0) (hpq : QuadraticMap.polar Q p q = 0) (a b : K) :
-    Q (a • p + b • q) = 0 := by
-  have h := QuadraticMap.map_add Q (a • p) (b • q)
-  rw [Q.map_smul, Q.map_smul, hp, hq, QuadraticMap.polar_smul_left,
-    QuadraticMap.polar_smul_right, hpq] at h
-  simpa using h
-
-/-- **Stereographic projection from a point of a conic hits every other point of the conic,
-unless the conic degenerates along a line through that point.**
-
-Let `p` and `q` be isotropic vectors of `Q`.  Either `polar Q p q ≠ 0`, in which case
-`conicParametrization Q p q = -(polar Q p q) • q` is a *nonzero* multiple of `q`, so `q` is in the
-projective image of the stereographic map; or `polar Q p q = 0`, in which case the whole plane
-spanned by `p` and `q` is isotropic, i.e. the conic contains a line through `p`.
-
-For a nondegenerate plane conic the second alternative is impossible, so the stereographic map is
-onto: together with `conicParametrization_is_isotropic` (its image lands on the conic) this is the
-point-level statement that a pointed nondegenerate conic is parametrized by `ℙ¹`.  Unlike
-`exists_veronese_of_model_isotropic`, it needs no normal form. -/
-theorem conicParametrization_smul_or_isotropic_span (Q : QuadraticForm K V) {p q : V}
-    (hp : Q p = 0) (hq : Q q = 0) :
-    (∃ c : K, c ≠ 0 ∧ conicParametrization Q p q = c • q) ∨
-      ∀ a b : K, Q (a • p + b • q) = 0 := by
-  by_cases h : QuadraticMap.polar Q p q = 0
-  · exact Or.inr fun a b => eval_isotropic_of_polar_eq_zero Q hp hq h a b
-  · exact Or.inl ⟨-(QuadraticMap.polar Q p q), neg_ne_zero.mpr h,
-      conicParametrization_apply_self Q hq⟩
-
-end PointedConic
-
 /-! ### The residual component is integral -/
 
 variable {k : Type u} [Field k]
@@ -354,6 +343,11 @@ through that point and translate it to the origin, and the result is exactly
 polynomials `Q(z) = a + bz + cz²` and `L(z) = d + e' z` hold after further shrinking, because they
 hold at the generic point (an integral conic with a nondegenerate quadratic part).
 
+The stereographic chart is automatically nonempty
+(`PointedConic.conicMk_conicChartDenom_ne_zero`: substituting `y = z x` sends `f` to a polynomial
+of degree `2` in `x` while `x` and `d x + e' y` go to polynomials of degree `1`, and degrees add
+over a domain), so it is not among the data to be produced.
+
 Everything downstream of this statement is *proved*: the pointed affine conic over a domain is
 `Spec A`-birational to `𝔸(1; Spec A)` by stereographic projection
 (`PointedConic.birationalOver_conicScheme_affineSpace`, no `sorry`, no normal form and no Witt
@@ -365,19 +359,33 @@ and no "birational ⇔ isomorphic function fields" bridge, so the reduction abov
 by hand with the biprojective chart machinery of this development
 (`BiprojectiveChart`, `chartZeroLocusIsoPullback`, `BiprojectiveDehomogenization`).
 
-*Hypotheses that are not decoration.*  Each of `hF0`, `[IsDominant t]` and the smoothness of
-`π ∣_ U` is needed for the conclusion to be *true*, not merely for this proof to work.
+*Hypotheses that are not decoration.*  Each of `hF0`, `[Smooth …]`, `[IsDominant t]` and the
+smoothness of `π ∣_ U` is needed for the conclusion to be *true*, not merely for this proof to
+work.
 
 * Without `hF0` there is no affine conic model: for `F = 0` the "zero locus" is all of
   `ℙ²_x × ℙ²_y` and the base change is `ℙ²_T`, which is not `T`-birational to a curve over `T`.
+* Without `[Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]` the statement is **false**, by the
+  explicit counterexample `F = Y₀³ (X₀X₁ − X₂²)` recorded in the module docstring: some fibre of
+  `π` is then the whole of `ℙ²_x`, the base change acquires a vertical component, and no dense open
+  of it is integral.  This hypothesis is used only through
+  `BiprojectiveSpace.not_specializeSecondCoordinates_eq_zero_of_smooth_bidegree23` (whence also
+  `[IsAlgClosed k]`), i.e. only to rule out a whole fibre; every component of `X ×_{ℙ²_y} T` then
+  dominates `T`.
 * `[IsDominant t]` together with density of `U` is what puts the generic point of `T` over a point
   where the conic is nondegenerate.  Over a base whose image lies in the discriminant the generic
   conic is a line pair or a double line, and the base change is respectively reducible,
   non-`K`-rational, or non-reduced — see the module docstring.
+
+*The section is not over-quantified.*  `s` is arbitrary, and that is safe here precisely because
+the generic fibre is a **smooth** conic: stereographic projection from *any* rational point of a
+smooth conic is birational, so no choice of section can collapse it.  (Contrast `PLAN.md`
+correction 7, where an arbitrary Tsen section could be a base point of the family.)
 -/
 theorem exists_pointedConicAffineModel
-    {k : Type u} [Field k]
+    {k : Type u} [Field k] [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
     (s : PullbackSection (biprojectiveZeroLocusSnd 2 2 k F) t)
     (U : (ProjectiveSpace 2 k).Opens) (hU : Dense (U : Set (ProjectiveSpace 2 k)))
@@ -385,7 +393,6 @@ theorem exists_pointedConicAffineModel
     ∃ (A : Type u) (_ : CommRing A) (_ : IsDomain A) (a b c d e' : A)
       (_ : IsDomain (PointedConic.conicRing a b c d e'))
       (_ : PointedConic.slopeQuad a b c ≠ 0) (_ : PointedConic.slopeLin d e' ≠ 0)
-      (_ : PointedConic.conicMk a b c d e' (PointedConic.conicChartDenom d e') ≠ 0)
       (ψ : Spec (CommRingCat.of A) ⟶ T) (_ : IsOpenImmersion ψ) (_ : IsDominant ψ),
       Scheme.BirationalOver
         (Limits.pullback.snd (biprojectiveZeroLocusSnd 2 2 k F) t)
@@ -402,20 +409,23 @@ birationality over `T` (`Scheme.BirationalOver.comp`), and `𝔸(1; Spec A)` ove
 birational over `T` to `𝔸(1; T)` (`Scheme.birationalOver_affineSpace_comp`).
 -/
 theorem isPointedConicRationalOver_of_dense_open_smooth
-    {k : Type u} [Field k]
+    {k : Type u} [Field k] [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
     (s : PullbackSection (biprojectiveZeroLocusSnd 2 2 k F) t)
     (U : (ProjectiveSpace 2 k).Opens) (hU : Dense (U : Set (ProjectiveSpace 2 k)))
     (hsmooth : Smooth (biprojectiveZeroLocusSnd 2 2 k F ∣_ U)) :
     IsPointedConicRationalOver (biprojectiveZeroLocusSnd 2 2 k F) t s := by
-  obtain ⟨A, instCR, instID, a, b, c, d, e', instCD, hQ, hL, hden, ψ, instOI, instDom, hbir⟩ :=
+  obtain ⟨A, instCR, instID, a, b, c, d, e', instCD, hQ, hL, ψ, instOI, instDom, hbir⟩ :=
     exists_pointedConicAffineModel F hF hF0 t s U hU hsmooth
   letI := instCR
   letI := instID
   letI := instCD
   haveI := instOI
   haveI := instDom
+  have hden : PointedConic.conicMk a b c d e' (PointedConic.conicChartDenom d e') ≠ 0 :=
+    PointedConic.conicMk_conicChartDenom_ne_zero a b c d e' hQ hL
   refine hbir.trans (((PointedConic.birationalOver_conicScheme_affineSpace
     a b c d e' hQ hL hden).comp ψ).trans ?_)
   exact Scheme.birationalOver_affineSpace_comp (ULift.{u} (Fin 1)) ψ
