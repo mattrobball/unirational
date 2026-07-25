@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.LinearSubstitutionNonsingular
 public import BConicBundleMultisections.GoodLine
 public import BConicBundleMultisections.ProjectiveCommonZero
 public import BConicBundleMultisections.ResidualHorizontalityLine
@@ -500,12 +501,23 @@ This is the chain rule for the Jacobian criterion: `∇(G ∘ M)(r) = Mᵀ · �
 makes the two gradients vanish together.
 
 It is taken as a hypothesis rather than proved here: it is being supplied separately, and
-duplicating it would fork the statement.  Everything downstream threads it under the name `hsubst`.
+duplicating it would fork the statement.  Everything downstream threads it under the name `(isSmoothPlaneCubicSubstInvariant k)`.
 -/
 def IsSmoothPlaneCubicSubstInvariant (k : Type u) [Field k] : Prop :=
   ∀ M N : Matrix (Fin 3) (Fin 3) k, M * N = 1 →
     ∀ g : MvPolynomial (Fin 3) k, Standard.IsSmoothPlaneCubic g →
       Standard.IsSmoothPlaneCubic ((aeval (linearSubst 2 M) : MvPolynomial (Fin 3) k →ₐ[k] _) g)
+
+/-- **The hypothesis above holds unconditionally**, so it need never be assumed.
+
+An invertible linear substitution preserves homogeneity (`isHomogeneous_aeval_linearSubst`) and
+nonsingularity (`nonsingular_aeval_linearSubst_iff`); the latter is the chain rule
+`∇(G∘M)(r) = Mᵀ · ∇G(M *ᵥ r)` together with invertibility of `M` and of `Mᵀ`. -/
+theorem isSmoothPlaneCubicSubstInvariant (k : Type u) [Field k] :
+    IsSmoothPlaneCubicSubstInvariant k := by
+  intro M N hMN g hg
+  exact ⟨isHomogeneous_aeval_linearSubst M hg.1,
+    (nonsingular_aeval_linearSubst_iff 2 M N hMN g).mpr hg.2⟩
 
 /--
 **The residual line map of a smooth plane cubic is base-point free.**
@@ -516,11 +528,10 @@ that stops `Standard.HasCommonResidualLineMap` from being satisfied vacuously.  
 `residualLinearFormOn_ne_zero_of_nonsingular` — which needs no hypothesis on the characteristic.
 -/
 theorem residualLineMapBasepointFree_of_isSmoothPlaneCubic [IsAlgClosed k]
-    (hsubst : IsSmoothPlaneCubicSubstInvariant k)
     (f : MvPolynomial (Fin 3) k) (hf : Standard.IsSmoothPlaneCubic f) :
     Standard.ResidualLineMapBasepointFree f := by
   intro M N hMN
-  obtain ⟨hhom, hns⟩ := hsubst M N hMN f hf
+  obtain ⟨hhom, hns⟩ := (isSmoothPlaneCubicSubstInvariant k) M N hMN f hf
   exact residualLinearFormOn_ne_zero_of_nonsingular M N hMN f hhom hns
 
 /-! ### §1: the generic cubic fibre is smooth -/
@@ -569,7 +580,6 @@ theorem exists_pencil_basis_of_forall_residualLineConstantOn [IsAlgClosed k] [Ch
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
-    (hsubst : IsSmoothPlaneCubicSubstInvariant k)
     (hbad : ∀ M N : Matrix (Fin 3) (Fin 3) k, M * N = 1 → ResidualLineConstantOn M N F) :
     ∃ D f₀ f₁ : MvPolynomial (Fin 3) k,
       D ≠ 0 ∧ f₀.IsHomogeneous 3 ∧ f₁.IsHomogeneous 3 ∧
@@ -584,7 +594,7 @@ theorem exists_pencil_basis_of_forall_residualLineConstantOn [IsAlgClosed k] [Ch
       (fun s : {x : Fin 3 → k // eval x D ≠ 0} =>
         specializeFirstCoordinates (n := 2) s.1 F)
       (fun s => hDsm s.1 s.2)
-      (fun s => residualLineMapBasepointFree_of_isSmoothPlaneCubic hsubst _ (hDsm s.1 s.2))
+      (fun s => residualLineMapBasepointFree_of_isSmoothPlaneCubic _ (hDsm s.1 s.2))
       (fun M N hMN => by
         obtain ⟨ℓ, hℓ⟩ := hcommon M N hMN
         exact ⟨ℓ, fun s => hℓ s.1⟩)
@@ -791,7 +801,7 @@ meet.
 *What it stands on.*  Exactly two `sorry`s, both borrowed classical statements: generic smoothness
 (`exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates`, source §1) and Lemma 2.1 in its
 pencil form (`Standard.exists_pencil_of_hasCommonResidualLineMap`, source §2).  Plus the one
-explicit hypothesis `hsubst`, `IsSmoothPlaneCubicSubstInvariant`, which is being supplied
+explicit hypothesis `(isSmoothPlaneCubicSubstInvariant k)`, `IsSmoothPlaneCubicSubstInvariant`, which is being supplied
 separately.  Base-point-freeness of the residual-line map is *not* assumed — it is proved in
 `ResidualLineBasePointFree` and discharged by
 `residualLineMapBasepointFree_of_isSmoothPlaneCubic`.  Everything joining these is proved here.
@@ -803,8 +813,7 @@ and what `eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous` consumes; no clai
 theorem exists_good_line [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
-    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
-    (hsubst : IsSmoothPlaneCubicSubstInvariant k) :
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
     ∃ (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k),
       lineFrame p₀ q₀ r * N = 1 ∧ ResidualLineNonconstantOn (lineFrame p₀ q₀ r) N F := by
   by_contra hcon
@@ -816,7 +825,7 @@ theorem exists_good_line [IsAlgClosed k] [CharZero k]
     rw [hframe] at this
     exact not_not.mp this
   obtain ⟨D, f₀, f₁, hD0, hf₀, hf₁, hpencil⟩ :=
-    exists_pencil_basis_of_forall_residualLineConstantOn F hF hF0 hsubst hbad
+    exists_pencil_basis_of_forall_residualLineConstantOn F hF hF0 hbad
   obtain ⟨A, B, g₀, g₁, hA, hB, hcoef⟩ :=
     exists_isHomogeneous_pencil_coefficients F hF D f₀ f₁ hpencil
   exact not_eq_pencil_of_smooth F hF hF0 A B g₀ g₁ hA hB
