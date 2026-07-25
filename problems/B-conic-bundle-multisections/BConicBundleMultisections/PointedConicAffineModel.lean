@@ -198,6 +198,75 @@ theorem eval₂_conicPoly_lineX :
 theorem isUnit_lineX : IsUnit (lineX a b c d e) :=
   ((isUnit_lineL a b c d e).mul (isUnit_lineQ a b c d e).unit⁻¹.isUnit).neg
 
+/-! ### Marking an arbitrary point: translation to the origin
+
+The chart machinery does not hand back a conic through the origin: it hands back the
+dehomogenization `α x² + β x y + γ y² + δ x + ε y + ζ` of the projective conic together with the
+coordinates `(p₁, p₂)` of the section.  Translating by `(p₁, p₂)` puts the section at the origin,
+and kills the constant term precisely because the section lies on the conic.  So *any* affine conic
+with a marked `A`-point is an isomorphic copy of a `conicPoly`, and the caller never has to
+translate.
+-/
+
+/-- The general plane affine conic `α x² + β x y + γ y² + δ x + ε y + ζ`. -/
+def affineConicPoly (α β γ δ ε ζ : A) : MvPolynomial (Fin 2) A :=
+  C α * X 0 ^ 2 + C β * (X 0 * X 1) + C γ * X 1 ^ 2 + C δ * X 0 + C ε * X 1 + C ζ
+
+/-- Translation of the affine plane by `(p₁, p₂)`. -/
+def conicTranslate (p₁ p₂ : A) :
+    MvPolynomial (Fin 2) A →ₐ[A] MvPolynomial (Fin 2) A :=
+  MvPolynomial.aeval ![X 0 + C p₁, X 1 + C p₂]
+
+@[simp]
+theorem conicTranslate_X_zero (p₁ p₂ : A) :
+    conicTranslate p₁ p₂ (X 0) = X 0 + C p₁ := by simp [conicTranslate]
+
+@[simp]
+theorem conicTranslate_X_one (p₁ p₂ : A) :
+    conicTranslate p₁ p₂ (X 1) = X 1 + C p₂ := by simp [conicTranslate]
+
+/-- Translation is an automorphism of the affine plane, with inverse the opposite translation. -/
+def conicTranslateEquiv (p₁ p₂ : A) :
+    MvPolynomial (Fin 2) A ≃ₐ[A] MvPolynomial (Fin 2) A :=
+  AlgEquiv.ofAlgHom (conicTranslate p₁ p₂) (conicTranslate (-p₁) (-p₂))
+    (by
+      refine MvPolynomial.algHom_ext ?_
+      rw [Fin.forall_fin_two]
+      constructor <;> simp)
+    (by
+      refine MvPolynomial.algHom_ext ?_
+      rw [Fin.forall_fin_two]
+      constructor <;> simp)
+
+@[simp]
+theorem conicTranslateEquiv_apply (p₁ p₂ : A) (f : MvPolynomial (Fin 2) A) :
+    conicTranslateEquiv p₁ p₂ f = conicTranslate p₁ p₂ f := rfl
+
+/-- Evaluating the general conic at a point. -/
+theorem eval_affineConicPoly (α β γ δ ε ζ p₁ p₂ : A) :
+    MvPolynomial.eval ![p₁, p₂] (affineConicPoly α β γ δ ε ζ) =
+      α * p₁ ^ 2 + β * (p₁ * p₂) + γ * p₂ ^ 2 + δ * p₁ + ε * p₂ + ζ := by
+  simp [affineConicPoly]
+
+/-- **Translating the general conic.**  The quadratic part is unchanged, the linear part is the
+gradient at the translation point, and the constant term becomes the value there. -/
+theorem conicTranslate_affineConicPoly (α β γ δ ε ζ p₁ p₂ : A) :
+    conicTranslate p₁ p₂ (affineConicPoly α β γ δ ε ζ) =
+      conicPoly α β γ (2 * α * p₁ + β * p₂ + δ) (β * p₁ + 2 * γ * p₂ + ε) +
+        C (MvPolynomial.eval ![p₁, p₂] (affineConicPoly α β γ δ ε ζ)) := by
+  rw [eval_affineConicPoly]
+  simp only [conicTranslate, affineConicPoly, conicPoly, map_add, map_mul, map_pow, aeval_C,
+    aeval_X, Matrix.cons_val_zero, Matrix.cons_val_one,
+    MvPolynomial.algebraMap_eq, map_ofNat]
+  ring
+
+/-- **A conic through a marked `A`-point is a translate of a pointed conic.** -/
+theorem conicTranslate_affineConicPoly_of_mem (α β γ δ ε ζ p₁ p₂ : A)
+    (hp : MvPolynomial.eval ![p₁, p₂] (affineConicPoly α β γ δ ε ζ) = 0) :
+    conicTranslate p₁ p₂ (affineConicPoly α β γ δ ε ζ) =
+      conicPoly α β γ (2 * α * p₁ + β * p₂ + δ) (β * p₁ + 2 * γ * p₂ + ε) := by
+  rw [conicTranslate_affineConicPoly, hp, map_zero, add_zero]
+
 /-! ### The conic chart -/
 
 /-- The quadratic part `a x² + b x y + c y²` of the conic. -/
@@ -219,6 +288,30 @@ def conicMk : MvPolynomial (Fin 2) A →+* conicRing a b c d e := Ideal.Quotient
 
 theorem conicMk_conicPoly : conicMk a b c d e (conicPoly a b c d e) = 0 :=
   Ideal.Quotient.eq_zero_iff_mem.mpr (Ideal.subset_span rfl)
+
+/-- The coordinate ring of the general affine conic. -/
+abbrev affineConicRing (α β γ δ ε ζ : A) : Type u :=
+  MvPolynomial (Fin 2) A ⧸ Ideal.span {affineConicPoly α β γ δ ε ζ}
+
+/-- Reduction to the coordinate ring of the general affine conic. -/
+def affineConicMk (α β γ δ ε ζ : A) :
+    MvPolynomial (Fin 2) A →+* affineConicRing α β γ δ ε ζ := Ideal.Quotient.mk _
+
+/-- **The coordinate ring of a conic with a marked point is the pointed conic ring.**
+
+This is the translation `x ↦ x + p₁`, `y ↦ y + p₂`, which is an automorphism of the plane carrying
+the ideal of the conic onto the ideal of its pointed normal form; `A`-linearly, so the isomorphism
+lies over `Spec A`. -/
+def affineConicRingEquiv (α β γ δ ε ζ p₁ p₂ : A)
+    (hp : MvPolynomial.eval ![p₁, p₂] (affineConicPoly α β γ δ ε ζ) = 0) :
+    affineConicRing α β γ δ ε ζ ≃ₐ[A]
+      conicRing α β γ (2 * α * p₁ + β * p₂ + δ) (β * p₁ + 2 * γ * p₂ + ε) :=
+  Ideal.quotientEquivAlg _ _ (conicTranslateEquiv p₁ p₂) (by
+    rw [Ideal.map_span]
+    congr 1
+    rw [Set.image_singleton]
+    exact congrArg _ (conicTranslate_affineConicPoly_of_mem α β γ δ ε ζ p₁ p₂ hp).symm)
+
 
 /-! ### The stereographic chart is nonempty
 
@@ -707,6 +800,52 @@ abbrev conicScheme : Scheme.{u} := Spec (CommRingCat.of (conicRing a b c d e))
 /-- Structure morphism of the pointed affine conic over `Spec A`. -/
 def conicSchemeToSpec : conicScheme a b c d e ⟶ Spec (CommRingCat.of A) :=
   Spec.map (CommRingCat.ofHom ((conicMk a b c d e).comp MvPolynomial.C))
+
+/-- The general affine conic as a scheme over `Spec A`. -/
+abbrev affineConicScheme (α β γ δ ε ζ : A) : Scheme.{u} :=
+  Spec (CommRingCat.of (affineConicRing α β γ δ ε ζ))
+
+/-- Structure morphism of the general affine conic over `Spec A`. -/
+def affineConicSchemeToSpec (α β γ δ ε ζ : A) :
+    affineConicScheme α β γ δ ε ζ ⟶ Spec (CommRingCat.of A) :=
+  Spec.map (CommRingCat.ofHom ((affineConicMk α β γ δ ε ζ).comp MvPolynomial.C))
+
+/-- **A conic with a marked `A`-point is `Spec A`-isomorphic to a pointed conic.**
+
+`Spec` of the translation isomorphism `affineConicRingEquiv`.  This is the step "translate the
+section to the origin", done once and for all so that a caller producing an affine model never has
+to change coordinates. -/
+def affineConicSchemeIso (α β γ δ ε ζ p₁ p₂ : A)
+    (hp : MvPolynomial.eval ![p₁, p₂] (affineConicPoly α β γ δ ε ζ) = 0) :
+    conicScheme α β γ (2 * α * p₁ + β * p₂ + δ) (β * p₁ + 2 * γ * p₂ + ε) ≅
+      affineConicScheme α β γ δ ε ζ where
+  hom := Spec.map (CommRingCat.ofHom (affineConicRingEquiv α β γ δ ε ζ p₁ p₂ hp).toRingHom)
+  inv := Spec.map (CommRingCat.ofHom
+    (affineConicRingEquiv α β γ δ ε ζ p₁ p₂ hp).symm.toRingHom)
+  hom_inv_id := by
+    rw [← Spec.map_comp, ← CommRingCat.ofHom_comp,
+      show ((affineConicRingEquiv α β γ δ ε ζ p₁ p₂ hp).toRingHom).comp
+          ((affineConicRingEquiv α β γ δ ε ζ p₁ p₂ hp).symm.toRingHom) = RingHom.id _ from
+        RingHom.ext fun x => (affineConicRingEquiv α β γ δ ε ζ p₁ p₂ hp).apply_symm_apply x]
+    simp
+  inv_hom_id := by
+    rw [← Spec.map_comp, ← CommRingCat.ofHom_comp,
+      show ((affineConicRingEquiv α β γ δ ε ζ p₁ p₂ hp).symm.toRingHom).comp
+          ((affineConicRingEquiv α β γ δ ε ζ p₁ p₂ hp).toRingHom) = RingHom.id _ from
+        RingHom.ext fun x => (affineConicRingEquiv α β γ δ ε ζ p₁ p₂ hp).symm_apply_apply x]
+    simp
+
+/-- The translation isomorphism lies over `Spec A`. -/
+@[reassoc]
+theorem affineConicSchemeIso_hom_over (α β γ δ ε ζ p₁ p₂ : A)
+    (hp : MvPolynomial.eval ![p₁, p₂] (affineConicPoly α β γ δ ε ζ) = 0) :
+    (affineConicSchemeIso α β γ δ ε ζ p₁ p₂ hp).hom ≫ affineConicSchemeToSpec α β γ δ ε ζ =
+      conicSchemeToSpec α β γ (2 * α * p₁ + β * p₂ + δ) (β * p₁ + 2 * γ * p₂ + ε) := by
+  rw [affineConicSchemeIso, affineConicSchemeToSpec, conicSchemeToSpec, ← Spec.map_comp,
+    ← CommRingCat.ofHom_comp]
+  congr 1
+  exact congrArg CommRingCat.ofHom
+    (RingHom.ext fun x => (affineConicRingEquiv α β γ δ ε ζ p₁ p₂ hp).commutes x)
 
 /-- Structure morphism of the affine line `Spec A[z]` over `Spec A`. -/
 def lineSchemeToSpec : Spec (CommRingCat.of (Polynomial A)) ⟶ Spec (CommRingCat.of A) :=
