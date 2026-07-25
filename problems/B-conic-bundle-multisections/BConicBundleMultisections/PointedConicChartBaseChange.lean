@@ -59,6 +59,34 @@ attribute [local instance] _root_.MvPolynomial.gradedAlgebra
 variable {m n : ℕ} {R K : Type u} [CommRing R] [CommRing K] [Algebra R K]
 variable {i : Fin (m + 1)} {j : Fin (n + 1)}
 
+/-! ### A missing reassociation
+
+`Scheme.IdealSheafData.subschemeCover_map_subschemeι` has no `_assoc` variant in Mathlib, and the
+reassociation cannot be done inline by `rw [← Category.assoc, …]`: in the situation below that
+fails because the term is not type-correct at `instances` transparency.  Proving the reassociated
+form once, in a generic context where the difficulty does not arise, turns the friction into a
+reusable lemma.
+-/
+
+/-- Reassociated form of `Scheme.IdealSheafData.subschemeCover_map_subschemeι`. -/
+@[reassoc]
+theorem subschemeCover_map_subschemeι_comp {X : Scheme.{u}} (I : X.IdealSheafData)
+    (U : X.affineOpens) {Z : Scheme.{u}} (h : X ⟶ Z) :
+    I.subschemeCover.f U ≫ I.subschemeι ≫ h = I.glueDataObjι U ≫ (U : X.Opens).ι ≫ h := by
+  rw [← Category.assoc, Scheme.IdealSheafData.subschemeCover_map_subschemeι]
+  exact Category.assoc _ _ _
+
+/-- The cover map into the subscheme, followed by the subscheme inclusion, is the quotient map
+followed by the affine open's `fromSpec` — in reassociated form, which is what the chart
+identification needs. -/
+theorem subschemeCover_map_subschemeι_fromSpec {X : Scheme.{u}} (I : X.IdealSheafData)
+    (U : X.affineOpens) {Z : Scheme.{u}} (h : X ⟶ Z) :
+    I.subschemeCover.f U ≫ I.subschemeι ≫ h =
+      Spec.map (ofHom (Ideal.Quotient.mk (I.ideal U))) ≫ U.2.fromSpec ≫ h := by
+  rw [← Category.assoc, Scheme.IdealSheafData.subschemeCover_map_subschemeι,
+    Scheme.IdealSheafData.glueDataObjι_ι]
+  exact Category.assoc _ _ _
+
 /-! ### The second projection of a standard product chart
 
 The `y`-side counterpart of `standardChartIsoSpec_hom_toSpec`.  Under the identification of the
@@ -95,29 +123,65 @@ def affineChartQuotientYHom (m n : ℕ) (R : Type u) [CommRing R]
       (R := R) (A := ProjectiveSpace.StandardChartRing m R i)
       (B := ProjectiveSpace.StandardChartRing n R j)).toRingHom
 
-/-! **The remaining interface step.**  With `affineChartQuotientYHom` naming the map, what is owed
-is
+set_option backward.isDefEq.respectTransparency false in
+/-- **The interface: the affine chart of the zero locus maps to `ℙⁿ_R` through the second-block
+inclusion.**
 
-`(chartZeroLocusIsoSpecAffineQuotient m n R i j F).hom ≫`
-  `Spec.map (ofHom (affineChartQuotientYHom m n R i j F)) ≫ ProjectiveSpace.standardChartι n R j`
-  `= chartZeroLocusToGlobal m n R F hF i j ≫ biprojectiveZeroLocusSnd m n R F`,
-
-the `y`-side counterpart of `chartZeroLocusIsoSpecAffineQuotient_hom_toSpec`
-(`BiprojectiveAffineZeroLocus.lean`), whose proof is the template: rewrite the right side through
-`chartZeroLocusToGlobal_ι_assoc`, cancel the epi
-`(chartIdealSheaf …).subschemeCover.f (chartTopAffineOpen …)`, and push both sides down to a
-`Spec.map` of ring maps using `chartSubschemeCover_comp_chartZeroLocusIsoSpecAffineQuotient`,
-`Scheme.IdealSheafData.subschemeCover_map_subschemeι`,
-`Scheme.IdealSheafData.glueDataObjι_ι`, `standardChartIsoSpec_hom_snd` (above) and
-`chartTopAffineOpen_fromSpec_comp_standardChartIsoSpec_assoc`.  The resulting ring identity is
-definitional, because `affineChartQuotientYHom` is *defined* as the composite that appears.
-
-Two frictions met while following that template, recorded so they are not rediscovered.  The
-declaration needs `set_option backward.isDefEq.respectTransparency false in`, as the model does,
-placed **before** the docstring; without it the rewrites fail with `subschemeCover.I₀` not
-matching `(standardChart …).affineOpens`.  And `subschemeCover_map_subschemeι` has **no** `_assoc`
-variant in Mathlib, so the reassociation before it has to be done by hand rather than by `rw
-[← Category.assoc, …]`, which is where the attempt stalled. -/
+The `y`-side counterpart of `chartZeroLocusIsoSpecAffineQuotient_hom_toSpec`: the chart of the zero
+locus maps to `ℙⁿ_R` the same way whether one goes through the ambient zero locus or through
+`Spec (S_y)`.  With it, `isPullback_SpecMap_chartQuotient` becomes a pullback square over `ℙⁿ_R`
+(via `Scheme.isPullback_comp_mono`, the chart inclusion being an open immersion hence a mono),
+which is what `Scheme.exists_isOpenImmersion_to_pullback` consumes. -/
+theorem chartZeroLocusIsoSpecAffineQuotient_hom_snd
+    (m n : ℕ) (R : Type u) [CommRing R]
+    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
+    (hF : IsBihomogeneousOfBidegree d e F)
+    (i : Fin (m + 1)) (j : Fin (n + 1)) :
+    (chartZeroLocusIsoSpecAffineQuotient m n R i j F).hom ≫
+        Spec.map (ofHom (affineChartQuotientYHom m n R i j F)) ≫
+        ProjectiveSpace.standardChartι n R j =
+      chartZeroLocusToGlobal m n R F hF i j ≫ biprojectiveZeroLocusSnd m n R F := by
+  rw [biprojectiveZeroLocusSnd, chartZeroLocusToGlobal_ι_assoc]
+  rw [← cancel_epi ((chartIdealSheaf m n R i j F).subschemeCover.f
+    (chartTopAffineOpen m n R i j))]
+  rw [← Category.assoc, chartSubschemeCover_comp_chartZeroLocusIsoSpecAffineQuotient]
+  rw [← Category.assoc, ← Spec.map_comp]
+  rw [subschemeCover_map_subschemeι_fromSpec]
+  rw [← standardChartIsoSpec_hom_snd]
+  rw [chartTopAffineOpen_fromSpec_comp_standardChartIsoSpec_assoc]
+  simp only [← Spec.map_comp_assoc]
+  congr 1
+  rw [Spec.map_injective.eq_iff]
+  ext b
+  change (chartIdealQuotientEquivMvPolynomial m n R i j F).symm
+      (affineChartQuotientYHom m n R i j F b) =
+    Ideal.Quotient.mk _ ((standardChartΓIso m n R i j).inv
+      (Algebra.TensorProduct.includeRight
+        (R := R) (A := ProjectiveSpace.StandardChartRing m R i)
+        (B := ProjectiveSpace.StandardChartRing n R j) b))
+  apply (chartIdealQuotientEquivMvPolynomial m n R i j F).injective
+  rw [RingEquiv.apply_symm_apply]
+  unfold chartIdealQuotientEquivMvPolynomial
+  rw [Ideal.quotientEquiv_mk]
+  have h : chartSectionsEquivMvPolynomial m n R i j
+      ((standardChartΓIso m n R i j).inv
+        (Algebra.TensorProduct.includeRight
+          (R := R) (A := ProjectiveSpace.StandardChartRing m R i)
+          (B := ProjectiveSpace.StandardChartRing n R j) b)) =
+      standardChartRingEquivMvPolynomial m n R i j
+        (Algebra.TensorProduct.includeRight
+          (R := R) (A := ProjectiveSpace.StandardChartRing m R i)
+          (B := ProjectiveSpace.StandardChartRing n R j) b) := by
+    unfold chartSectionsEquivMvPolynomial
+    change standardChartRingEquivMvPolynomial m n R i j
+      ((standardChartΓIso m n R i j).hom
+        ((standardChartΓIso m n R i j).inv
+          (Algebra.TensorProduct.includeRight
+            (R := R) (A := ProjectiveSpace.StandardChartRing m R i)
+            (B := ProjectiveSpace.StandardChartRing n R j) b))) = _
+    rw [Iso.inv_hom_id_apply]
+  rw [h]
+  rfl
 
 /-! ### Quotienting is a base change
 
