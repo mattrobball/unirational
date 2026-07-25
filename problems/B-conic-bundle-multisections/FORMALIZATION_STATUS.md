@@ -131,6 +131,16 @@ domains that Mathlib lacks; and the whole classical content of obligation 3 —
 a domain is relatively birational to the affine line, with **no normal form and no Witt
 decomposition**. Obligation 3 now rests on one bookkeeping leaf.
 
+**Base-point-freeness of the residual line is proved** (`ResidualLineBasePointFree.lean`, ~900
+lines, zero sorries). `ResidualLineConstant` and `ResidualLineConstantOn` say the three coefficient
+forms are `C (c a) · g`; both hold **vacuously** at `g = 0`, so every argument concluding something
+from "the residual line is constant" was unsound until this landed. Nothing in the tree covered it —
+the existing nonvanishing results are all about the residual *point*. Proved with **no
+characteristic hypothesis**: algebraic closure alone suffices. Includes a Fermat witness
+(`residualLinearForm = linearForm3 0 0 (-27)`), which independently refutes "the residual
+coefficients vanish identically". The proof reads the tree's universal residual identity backwards:
+each factor of the polar resultant is the tangent line of `G` at a point of `L ∩ C`.
+
 Four results there are Mathlib-shaped and absent upstream: scheme-theoretic images of integral
 schemes; `BirationalOver` base-change (`Birational.lean` has `refl/symm/trans` and no transport);
 the pointed-conic material itself, stated for an arbitrary `CommRing`; and `dense_basicOpen`.
