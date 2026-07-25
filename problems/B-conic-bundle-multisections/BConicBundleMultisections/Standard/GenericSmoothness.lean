@@ -40,6 +40,84 @@ the target.
 It is used by `certificates/all_smooth_tangent_residual_theorem.md` §1 to make the generic plane
 cubic fibre of `ρ : X → ℙ²_x` smooth, which is what makes the tangent-residual construction
 nondegenerate.
+
+## This form is **not** the one the development consumes
+
+The scheme-level statement below is heavier than the thing that feeds off it.  What WP-2 actually
+needs of the plane cubic fibre `Gs` is
+
+```
+∀ r : Fin 3 → k, r ≠ 0 → eval r Gs = 0 → ∃ i, eval r (pderiv i Gs) ≠ 0
+```
+
+— the Jacobian criterion already written out on explicit polynomials, with no morphisms and no
+relative differentials.  So the consumed obligation is the coordinate-level
+`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth` in `ResidualYNonvanishing`, which says
+that the parameters whose fibre is singular form a proper closed subset of the parameter plane.
+Its mathematical content is exactly the theorem below — this is a change of packaging, not a way
+around the mathematics — but it is stated where it is used and in the vocabulary it is used in,
+and it does not need machinery Mathlib lacks in order to be *stated*.
+
+This declaration is kept because it is the parent statement and `PLAN.md` inventories it by name.
+It is no longer on the critical path.
+
+## What Mathlib has, at the pinned revision
+
+Searched: `Mathlib/AlgebraicGeometry/Morphisms/`, `Mathlib/RingTheory/Smooth/`,
+`Mathlib/RingTheory/Kaehler/`, `Mathlib/RingTheory/Extension/`.
+
+*Present, and relevant.*
+
+* `AlgebraicGeometry.Scheme.Hom.smoothLocus` and
+  `AlgebraicGeometry.Scheme.Hom.isOpen_smoothLocus` (`Morphisms/Smooth.lean`) — the smooth locus of
+  a morphism locally of finite presentation is open; `smoothLocus_eq_top_iff` converts it back to
+  `Smooth`.
+* `AlgebraicGeometry.Scheme.Hom.dense_smoothLocus_of_perfectField` and
+  `AlgebraicGeometry.Scheme.Hom.genericPoint_mem_smoothLocus_of_perfectField`
+  (`Morphisms/Smooth.lean`) — generic smoothness **over a field**: for `f : X ⟶ Spec K` with `K`
+  perfect and `X` reduced (resp. integral), the smooth locus is dense (resp. contains the generic
+  point).  This is step (3)–(4) of the classical proof, below, and it is the only "generic
+  smoothness" in Mathlib.
+* `Algebra.FormallySmooth.of_perfectField` (`RingTheory/Smooth/Field.lean`) — the field-theoretic
+  engine of the previous item.
+* `AlgebraicGeometry.Smooth.of_smooth_fiberToSpecResidueField` (`Morphisms/SmoothFiber.lean`) —
+  flat + locally of finite presentation + smooth fibres implies smooth.
+* `Algebra.smoothLocus`, `Algebra.isOpen_smoothLocus`, `Algebra.smoothLocus_eq_compl_support_inter`
+  (`RingTheory/Smooth/Locus.lean`); the Jacobian criterion in the form
+  `Algebra.PreSubmersivePresentation.jacobian` / `SubmersivePresentation`
+  (`RingTheory/Extension/Presentation/Submersive.lean`); the Jacobi–Zariski exact sequence
+  (`RingTheory/Kaehler/JacobiZariski.lean`).
+
+*Absent.*
+
+* Generic smoothness for a morphism over a base that is not a field — the statement below.  Grep
+  for "generic smoothness", "generically smooth", "generic flatness", "Sard" over all of Mathlib
+  returns nothing algebro-geometric.
+* Generic freeness / generic flatness in the Noetherian-domain form (`genericFreeness` and
+  variants: not found).  The nearest is `Module.freeLocus` with `Module.isOpen_freeLocus`
+  (`RingTheory/Spectrum/Prime/FreeLocus.lean`) and
+  `Module.FinitePresentation.exists_free_localizedModule_powers`
+  (`RingTheory/Localization/Free.lean`), both of which already assume finite presentation.
+* A "generic fibre" construction: `Mathlib/AlgebraicGeometry/Fiber.lean` gives `Scheme.Hom.fiber`
+  at an arbitrary point, but nothing packages the fibre at `genericPoint Y`, and there is no
+  spreading-out (limit) machinery for it.
+* A sheaf of relative differentials for schemes.  Any route through `Ω_{X/Y}` as a sheaf is a dead
+  end here; only the affine/ring-level `KaehlerDifferential` exists.
+
+## The classical proof, and where it stops
+
+(1) Replace `Y` by the reduced closure of the image, so `f` is dominant and `Y` integral.
+(2) Let `K = k(Y)` and form the generic fibre `X_K`.
+(3) `X` smooth over `k` implies `X` regular, and the local rings of `X_K` are localizations of
+    local rings of `X`, hence regular.
+(4) `char k = 0` makes `K` perfect, so a regular `K`-scheme of finite type is smooth over `K`.
+    Mathlib supplies the density form of this (`dense_smoothLocus_of_perfectField`) but not
+    "regular over a perfect field implies smooth".
+(5) Spread out: `X_K = lim_V f⁻¹(V)` and smoothness is of finite presentation, so `X_K` smooth
+    over `K` gives `f⁻¹(V) → V` smooth for some nonempty open `V ⊆ Y` (EGA IV 8.10.5, 17.7.8).
+
+Step (5) is the blocker: Mathlib has no limit/spreading-out API for schemes of finite
+presentation, and building one is not a by-product of this project.
 -/
 
 @[expose] public section
@@ -62,9 +140,16 @@ Let `k` be algebraically closed of characteristic zero and let `f : X ⟶ Y` be 
 `k`-schemes of finite type with `X` smooth over `k`.  Then `f` is smooth over some nonempty open
 subset of `Y`.
 
-*Status: standard, `sorry`ed, and ours to prove.*  Mathlib has no generic smoothness for morphisms
-of schemes at the pinned revision.  Characteristic zero is essential — the statement is false in
-positive characteristic (Frobenius is the standard counterexample).
+*Status: standard, `sorry`ed, and ours to prove — but no longer consumed.*  See the module
+docstring: the development takes the coordinate-level form of the same theorem
+(`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`, `ResidualYNonvanishing`), because that
+is what the Jacobian-criterion consumers actually need and it is statable without machinery Mathlib
+lacks.  This declaration records the borrowed statement in its natural generality, together with
+the survey above of what Mathlib does and does not provide towards it.
+
+Mathlib has no generic smoothness for morphisms of schemes over a base other than a field at the
+pinned revision.  Characteristic zero is essential — the statement is false in positive
+characteristic (Frobenius is the standard counterexample).
 
 Dominance of `f` is deliberately **not** assumed: if `f` is not dominant then a nonempty open
 disjoint from its image works, with `f ∣_ U` a morphism out of the empty scheme.  Requiring

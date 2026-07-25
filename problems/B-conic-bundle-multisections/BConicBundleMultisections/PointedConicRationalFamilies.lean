@@ -36,7 +36,9 @@ conclusion.
 ## The decomposition implemented here
 
 The obligation is reduced to **one** new leaf,
-`isPointedConicRationalOver_of_dense_open_smooth`, by three steps that are proved outright:
+`isPointedConicRationalOver_of_dense_open_smooth`, by three steps that are proved outright
+(plus, on the algebra side, `conicParametrization_smul_or_isotropic_span`, which supplies the
+surjectivity half of `PLAN.md` WP-3d for an arbitrary form, with no normal form):
 
 1. `AlgebraicGeometry.Scheme.isIntegral_image` — the scheme-theoretic image of an integral scheme
    under a quasi-compact morphism is integral.  Stated in natural generality; Mathlib has nothing
@@ -69,13 +71,22 @@ fails:
   quadratic extension of `K`, not over `K`;
 * a double line: `X ×_{ℙ²_y} T_L` is non-reduced, while `𝔸(1; T_L)` is reduced.
 
-So the honest content of the obligation is the theorem proved below *from* horizontality.  This is
-the same phenomenon that made obligations 1c and 1d false as stated: the source **chooses** the
-multisection line `L` (§3–§4) and normalises it to `{W = 0}` only in §5, whereas this development
-hardcodes the normalisation.  §4's Picard-group argument for horizontality ends "contrary to the
-choice of `L`", so horizontality genuinely consumes that choice.  Here the dependency is made
-explicit rather than hidden: obligation 3 is discharged *modulo obligation 2*, which is where the
-choice of `L` is owed.
+The bad configuration is exactly the one source §4 excludes.  In the source's geometry: if
+`T_L → ℙ²_y` is not dominant its image cannot be a point (the fibres of `X → ℙ²_y` are curves
+while `T_L` is a surface), so it is a curve `Z`; the fibres of `T_L → Z` are then whole conics, so
+`T_L` is the preimage of `Z`, and §4's class computation `[T_L] = a H_x + H_y` forces `deg Z = 1`.
+So `Z` is a line `M` and `δ_C(L) ≡ M` is constant — precisely what §4 rules out with "contrary to
+the choice of `L`".  A line *can* be a component of the degree-nine discriminant of a conic
+bundle, so non-horizontality does not by itself make the obligation false; but nothing in its
+hypotheses excludes the bad configuration, and there is no proof without doing so.
+
+This is the same phenomenon that made obligations 1c and 1d false as stated: the source
+**chooses** the multisection line `L` (§3–§4) and normalises it to `{W = 0}` only in §5, whereas
+this development hardcodes the normalisation.  Here the dependency is made explicit rather than
+hidden: obligation 3 is discharged *modulo obligation 2*, which is where the choice of `L` is
+owed.  Note that this couples work packages WP-B and WP-D, which were previously independent; it
+costs nothing, because `MainTheorem` consumes both anyway and obligation 2 has exactly the
+hypotheses of obligation 3.
 
 ## What is left
 
@@ -308,13 +319,20 @@ bundle is `Proj (A[x₀,x₁,x₂]/(q))` — `q` the pullback of the ternary qua
 and on which the section is an explicit unimodular isotropic vector `p ∈ A³`, and to write the two
 mutually inverse maps by the formulas of `PointedConicRational.lean`.
 
-*Hypotheses that are not decoration.*  `[IsDominant t]` and the smoothness of `π ∣_ U` together
-are exactly what forces the generic conic over `T` to be nondegenerate; without them the
-conclusion is false, not merely unproved.  See the module docstring.
+*Hypotheses that are not decoration.*  Each of `hF0`, `[IsDominant t]` and the smoothness of
+`π ∣_ U` is needed for the statement to be *true*, not merely for this proof to work.
+
+* Without `hF0` the statement is false: for `F = 0` the "zero locus" is all of `ℙ²_x × ℙ²_y`, `π`
+  is the smooth projection to `ℙ²_y`, sections exist, and the base change is `ℙ²_T`, which is not
+  `T`-birational to `𝔸(1; T)`.
+* `[IsDominant t]` together with density of `U` is what puts the generic point of `T` over a point
+  where the conic is nondegenerate.  Over a base whose image lies in the discriminant the generic
+  conic is a line pair or a double line, and the base change is respectively reducible,
+  non-`K`-rational, or non-reduced — see the module docstring.
 -/
 theorem isPointedConicRationalOver_of_dense_open_smooth
     {k : Type u} [Field k]
-    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
     (s : PullbackSection (biprojectiveZeroLocusSnd 2 2 k F) t)
     (U : (ProjectiveSpace 2 k).Opens) (hU : Dense (U : Set (ProjectiveSpace 2 k)))
@@ -370,11 +388,10 @@ theorem isResidualComponentPointedConicRational_of_smooth
   haveI : IsDominant (residualComponentToBase F hF v hv i j) :=
     isDominant_residualComponentToBase_of_smooth F hF hF0 v hv0 hv i j hdenom
   obtain ⟨U, hU, hsmooth⟩ := exists_dense_open_smooth_biprojectiveZeroLocusSnd F
-  exact isPointedConicRationalOver_of_dense_open_smooth F hF
+  exact isPointedConicRationalOver_of_dense_open_smooth F hF hF0
     (residualComponentToBase F hF v hv i j)
     (residualComponentMultisection F hF v hv i j).tautologicalPullbackSection U hU hsmooth
 
 end
 
 end BConicBundleMultisections
-

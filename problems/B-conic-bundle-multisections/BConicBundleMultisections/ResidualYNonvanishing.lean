@@ -94,9 +94,11 @@ zero of the cubic at which all three partial derivatives vanish.
 `dim Σ ≥ 1`; for every fibre to be singular one needs `Σ ∩ X → ℙ²_x` dominant, i.e.
 `dim (Σ ∩ X) ≥ 2`, and smoothness of `X` then only requires `∇_x F ≠ 0` on that surface, which is
 three further conditions on a two-dimensional locus — expected to be empty.  In characteristic `0`
-Euler's identity in `y` forces `Σ ⊆ X`, and generic smoothness rules the configuration out; in
-characteristic `p` it does not, and quasi-elliptic fibrations realize it.  So this statement must
-not be asserted without `CharZero`.
+Euler's identity in `y` forces `Σ ⊆ X` and generic smoothness rules the configuration out; in
+characteristic `p` Euler gives `0 = 0` and it does not.  Quasi-elliptic fibrations — every fibre a
+cuspidal cubic, total space smooth — are the standard realization of the phenomenon in
+characteristics `2` and `3`.  So this statement must not be asserted without `CharZero`; no
+counterexample of bidegree `(2,3)` is exhibited here, but nothing rules one out either.
 
 *What is owed.*  Input 1 is borrowed and standard; input 2 is ours, and is the `X`-side of the
 algebraic-independence question `PLAN.md` WP-1 faces on the `Y`-side (WP-2 step 2c).  Note that
