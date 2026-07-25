@@ -286,6 +286,68 @@ theorem eval_residualAmbientRep_residualLinearFormOn_coordinateLine
   rw [residualLinearFormOn_coordinateLine]
   exact eval_residualAmbientRep_residualLinearForm G hG p hp0 hp2 hp
 
+/-! ### The residual `Y`-coordinates along a general line
+
+`residualYCoords` takes the residual point of the cubic fibre at the coordinate line's generic
+point `(1, t, 0)`.  Here the line is a parameter: its spanning vectors live over the base field and
+are pushed into the affine plane ring, where the parameter is `affineTwoCoord0`. -/
+
+variable {k : Type u} [CommRing k]
+
+/-- The generic point of `L` over the affine plane ring: the point of `L` at parameter
+`affineTwoCoord0`.  For the coordinate line this is `affineTwoCoordinateLineY`. -/
+def affineTwoLinePoint (p₀ q₀ : Fin 3 → k) : Fin 3 → affineTwoRing k :=
+  linePointOf (fun i => C (p₀ i)) (fun i => C (q₀ i)) (affineTwoCoord0 k)
+
+/-- The frame of `L` over the affine plane ring. -/
+def affineTwoLineFrame (p₀ q₀ r : Fin 3 → k) : Matrix (Fin 3) (Fin 3) (affineTwoRing k) :=
+  lineFrame (fun i => C (p₀ i)) (fun i => C (q₀ i)) (fun i => C (r i))
+
+/-- **Tangent-residual second-block coordinates along an arbitrary line.**
+
+The general form of `residualYCoords`: from the stereo point `x` on the vertical surface, take the
+residual point of the cubic fibre along the tangent line at the point of `L`. -/
+def residualYCoordsOn (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (v : Fin 3 → Polynomial k) : Fin 3 → affineTwoRing k :=
+  let G := cubicFiberPullback F (stereoFirstCoords F v)
+  let pL := affineTwoLinePoint p₀ q₀
+  let qd := frameTangentDir (affineTwoLineFrame p₀ q₀ r) (N.map C) G pL
+  residualAmbientRep pL qd (binaryLineRestriction pL qd G)
+
+/-- In the frame of `L`, the generic point of `L` has coordinates `(1, t, 0)` — the same normalised
+position the coordinate-line development assumed. -/
+theorem mulVec_affineTwoLinePoint (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (hMN : lineFrame p₀ q₀ r * N = 1) :
+    (N.map (C : k →+* affineTwoRing k)) *ᵥ affineTwoLinePoint p₀ q₀
+      = ![1, affineTwoCoord0 k, 0] :=
+  mulVec_inverse_linePointOf _ _ _ _
+    (lineFrame_map_mul_map (C : k →+* affineTwoRing k) p₀ q₀ r N hMN) _
+
+/-- **The residual `Y`-coordinates along `L` lie on the cubic fibre's residual line along `L`.**
+
+This is the general form of `eval_residualYCoords_residualLinearForm`.  The line-dependence is
+isolated in `hp`: the stereo point's cubic fibre vanishes at the point of `L`, which is what the
+Tsen section along `L` supplies. -/
+theorem eval_residualYCoordsOn_residualLinearFormOn
+    {K : Type u} [Field K] (p₀ q₀ r : Fin 3 → K) (N : Matrix (Fin 3) (Fin 3) K)
+    (hMN : lineFrame p₀ q₀ r * N = 1)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial K)
+    (hp : eval (affineTwoLinePoint p₀ q₀)
+      (cubicFiberPullback F (stereoFirstCoords F v)) = 0) :
+    eval (residualYCoordsOn p₀ q₀ r N F v)
+        (residualLinearFormOn (affineTwoLineFrame p₀ q₀ r) (N.map C)
+          (cubicFiberPullback F (stereoFirstCoords F v))) = 0 := by
+  have hMN' : affineTwoLineFrame p₀ q₀ r * N.map (C : K →+* affineTwoRing K) = 1 :=
+    lineFrame_map_mul_map (C : K →+* affineTwoRing K) p₀ q₀ r N hMN
+  have hcoord := mulVec_affineTwoLinePoint p₀ q₀ r N hMN
+  refine eval_residualAmbientRep_residualLinearFormOn_frameTangentDir
+    (affineTwoLineFrame p₀ q₀ r) (N.map C) hMN' _
+    (cubicFiberPullback_isHomogeneous F hF _) (affineTwoLinePoint p₀ q₀) ?_ ?_ hp
+  · rw [hcoord]; simp
+  · rw [hcoord]; simp
+
 end
 
 end BConicBundleMultisections
