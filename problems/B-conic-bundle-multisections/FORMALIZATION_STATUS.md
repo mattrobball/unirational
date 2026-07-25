@@ -112,25 +112,39 @@ Dominance onto it is Mathlib's `IsDominant f.toImage`, not an assumption.
 
 ## The remaining obligations
 
-One per module, inventoried in `ResidualComponentAssembly.lean`; see each docstring for what the
-real proof has to establish, and `PLAN.md` for the work packages.
+Six `sorry`s in five modules, verified by `lake build 2>&1 | grep 'declaration uses'`. Each is
+documented at its site; `PLAN.md` has the work packages and the corrections log.
 
-| Module | Obligation | Nature | Risk |
-|--------|-----------|--------|------|
-| `ResidualYNonvanishing` | `exists_three_freeDir_polar_roots` (1a) | elementary | low |
-| | `residualImageXCoords_two_ne_zero` (1b) | reindexing refactor | low |
-| | `residualBinaryLine_ne_zero_of_singular_at_coordinateLinePoint` (1c) | plausibly vacuous | low |
-| | `residualBinaryLine_ne_zero_of_tangent_not_coordinateLine` (1d) | **the crux** | highest |
-| `ResidualComponentHorizontality` | `isDominant_residualImagePointOfNormalizedLoc_toBase` | coordinate computation | medium |
-| `PointedConicRationalFamilies` | `isResidualComponentPointedConicRational_of_smooth` | pointed conics in families; **depends on obligation 2** — false for a bad line | large but classical |
+| Module | Obligation | Nature |
+|--------|-----------|--------|
+| `Standard/GenericSmoothness` | `exists_nonempty_open_smooth_restrict` | borrowed, Hartshorne III.10.7. One consumer: obligation 3 |
+| `ResidualYNonvanishing` | `exists_isotropic_stereoNondegenerate` | choose a Tsen section that is not a base point of the conic family |
+| `ResidualYNonvanishing` | `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth` | singular stereo parameters are a proper closed subset of `𝔸²` |
+| `ResidualComponentHorizontality` | `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` | **superseded**; coordinate line, no hypothesis on `L`, unprovable. Retire once call sites thread `L` |
+| `ResidualHorizontalityLine` | `eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous` | general line, condition G3 explicit. Reduced to one determinant by `AlgebraicIndependenceJacobian` |
+| `PointedConicRationalFamilies` | `isPointedConicRationalOver_of_dense_open_smooth` | spreading out a function-field birational equivalence |
+
+**Closed since the last revision:** `ProjectiveSpace.isDominant_standardChartι`, sorry-free
+(`ProjectiveSpaceChartDominance.lean`), together with a general `Proj.irreducibleSpace` for graded
+domains that Mathlib lacks.
+
+### The one thing to read first
+
+An obligation of this development was found **false, with an explicit counterexample** — see
+`PLAN.md` corrections log, entry 7, and the docstring on
+`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`. It quantified over *every* nonzero
+isotropic Tsen section, and a section that is a base point of the conic family along `L` collapses
+the stereographic map to a point. It has been repaired by making the construction *choose* its
+section (`StereoNondegenerate`), which is why `ResidualYNonvanishing` now carries two obligations
+where it carried one.
+
+That is the **fourth** appearance of the same fault: adopting §5's normalisation of the line while
+dropping §3's choice of it. It has also appeared as `hXT`, as obligations 1c/1d, and as a hidden
+dependency of WP-3 on WP-1. **Any statement here that mentions the hardcoded coordinate line and
+carries no condition on `L` should be assumed false until checked.** Four of the six remaining
+obligations trace to this root, which makes good-line existence the highest-value target.
 
 
-`residualYCoords_ne_zero_of_smooth` is no longer an obligation: it is derived from 1a–1d by a
-three-way case analysis on the residual tangent direction, with the case the development already
-handled (tangent line *is* the coordinate line) proved outright.
-
-Obligation 1d is the load-bearing blocker and the item to put to a human expert. Phase 0 of
-`PLAN.md` traced what every hypothesis of the one written proof actually feeds and found the
 blocker had been mis-scoped here and in `HANDOFF.md`. What was described as "the `freeDirPureT`
 branch" is obligation 1a, and is elementary: those hypotheses serve *only* to produce three
 distinct free-direction polar roots for a branch-free lemma that is already proved. The real
