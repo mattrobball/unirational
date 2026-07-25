@@ -115,7 +115,7 @@ The section exists by Tsen for ternary quadratics over `k[t]` (proved, `TsenConi
 chart exists because the residual `X`-coordinates are nonzero (proved, from smoothness) and the
 residual `Y`-coordinates are nonzero (obligation 1). -/
 theorem exists_residualChart_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
