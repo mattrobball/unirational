@@ -49,16 +49,37 @@ identically in the parameters — cannot arise at all once the fibre is known to
    `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`, which says that the parameters `(t,s)`
    whose cubic fibre is singular form a proper closed subset of the parameter plane.
 
-3. **That remaining input is FALSE as stated**, and generic smoothness is not what fails.  The
-   obligation quantifies over every legal Tsen section `v`, and when the conic family along the
-   hardcoded line `L = {Y₂ = 0}` has a base point, taking `v` to *be* that base point makes the
-   stereographic map constant, with a reducible — hence singular — cubic fibre.  An explicit
-   linear system of smooth `F` realizing this is written out in the obligation's docstring, which
-   also shows the same `F` and `v` make `residualYCoords_ne_zero_of_smooth` false.  This is the
-   hardcoded-line deviation (`PLAN.md` WP-G) biting, now with a concrete witness rather than a
-   suspicion.  **The repair is upstream of this module**: either the chooser of `v`
-   (`ResidualComponentAssembly.exists_residualChart_of_smooth`) must pick a `v` that is not a base
-   point of the conic family, or the line `L` must be chosen as the source proof chooses it.
+3. **That input was FALSE without a condition on `v`**, and generic smoothness is not what failed.
+   In its unguarded form the obligation quantified over every legal Tsen section `v`, and when the
+   conic family along the hardcoded line `L = {Y₂ = 0}` has a base point, taking `v` to *be* that
+   base point makes the stereographic map constant, with a reducible — hence singular — cubic
+   fibre.  An explicit linear system of smooth `F` realizing this is written out in the obligation's
+   docstring, which also shows the same `F` and `v` made `residualYCoords_ne_zero_of_smooth` false.
+   This is the hardcoded-line deviation (`PLAN.md` WP-G) biting, with a concrete witness rather than
+   a suspicion.  The repair was to make the construction *choose* its section: `StereoNondegenerate`
+   is threaded through the chain and `ResidualComponentAssembly.exists_residualChart_of_smooth`
+   obtains its `v` from `exists_isotropic_stereoNondegenerate`.  The counterexample's `v` has
+   vanishing polar, so it no longer applies.
+
+## The remaining input, split in two
+
+`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth` is now *proved*, from two inputs that have
+nothing to do with each other:
+
+* `exists_defining_set_nonsingularCubicFiber` — the singular cubic fibres are a Zariski-closed
+  subset of `𝔸³_x`.  Elimination theory; unconditionally true; no characteristic hypothesis, no
+  smoothness of `X`, nothing about `L`.  Mathlib-shaped.
+* `exists_stereo_param_nonsingularCubicFiber` — *some* stereo parameter pair has a nonsingular
+  fibre, i.e. the stereographic image is not contained in the discriminant locus.  This is §4(1)
+  together with §1 generic smoothness, and **it is the good-line condition**: it carries all the
+  risk, and it is not to be attacked for the hardcoded coordinate line in isolation.
+
+The split is the point.  A *single* discriminant `Δ` does not work: the two halves compose only if
+`Δ` vanishes **exactly** on the singular locus, since a `Δ` satisfying merely
+`Δ(x) ≠ 0 → nonsingular` is also satisfied by `Δ · X₂`, and the stereo family can sit inside
+`{x₂ = 0}`.  Stating the first half with a *set* `S` and `V(S)` exactly the singular locus removes
+that, at the cost of nothing: the derivation extracts its `Δ ∈ S` from the good parameter that the
+second half supplies, rather than fixing one in advance.
 -/
 
 @[expose] public section
@@ -74,6 +95,20 @@ universe u
 
 open AlgebraicGeometry MvPolynomial BiprojectiveSpace
 open _root_.MvPolynomial
+
+/-- **The plane cubic fibre of `ρ : X → ℙ²_x` over the first-block point `x` is nonsingular.**
+
+Nonsingularity in the form used throughout this development, and the form
+`ResidualLineBasePointFree` consumes: no nonzero point of the cubic annihilates all three partial
+derivatives.
+
+For `F` of bidegree `(2, 3)` every monomial has `x`-degree exactly two, so the fibre over `x = 0` is
+the zero polynomial and this predicate fails there; the locus it cuts out is a cone in `𝔸³_x` minus
+the origin, i.e. a locus in `ℙ²_x`, which is where the source proof's discriminant lives. -/
+def NonsingularCubicFiber {k : Type u} [CommRing k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (x : Fin 3 → k) : Prop :=
+  ∀ r : Fin 3 → k, r ≠ 0 → eval r (specializeFirstCoordinates (n := 2) x F) = 0 →
+    ∃ i : Fin 3, eval r (pderiv i (specializeFirstCoordinates (n := 2) x F)) ≠ 0
 
 /-- **The stereographic map along `L` is non-constant.**
 
@@ -124,14 +159,179 @@ theorem exists_isotropic_stereoNondegenerate
       StereoNondegenerate F v :=
   sorry
 
+/-- **Specializing the parameters commutes with pulling a form back along the stereo family.**
+
+`aeval x Δ ∈ k[t,s]` is the pullback of a form `Δ` in the first-block coordinates along the
+parameterization `x : 𝔸² → 𝔸³`; evaluating that pullback at `(t, s)` is evaluating `Δ` at the image
+point.  This is what turns a form cutting out a locus in `ℙ²_x` into an element of `k[t,s]` cutting
+out the bad parameters. -/
+theorem evalAffineTwoPoint_aeval {k : Type u} [CommRing k] (t s : k)
+    (x : Fin 3 → affineTwoRing k) (Δ : MvPolynomial (Fin 3) k) :
+    evalAffineTwoPoint t s ((aeval x : MvPolynomial (Fin 3) k →ₐ[k] affineTwoRing k) Δ)
+      = eval (fun i => evalAffineTwoPoint t s (x i)) Δ := by
+  induction Δ using MvPolynomial.induction_on with
+  | C a => simp [evalAffineTwoPoint, MvPolynomial.algebraMap_eq]
+  | add p q hp hq => simp only [map_add, hp, hq]
+  | mul_X p j hp => simp only [map_mul, aeval_X, eval_X, hp]
+
+/--
+**Input (i): the singular cubic fibres are a Zariski-closed subset of `𝔸³_x`.**
+
+*Status.* Obligation — elimination theory.  This is the half of the old fused obligation that is
+**unconditionally true**: no hypothesis on the characteristic, no smoothness of `X`, and nothing
+whatever about the multisection line `L`.  It is Mathlib-shaped and could be upstreamed.
+
+*The statement.*  `S` is a set of polynomials in the first-block coordinates whose common zero locus
+is *exactly* the locus of singular fibres: off `V(S)` the fibre is nonsingular, and on `V(S)` it is
+singular.  Both directions are used below, and the **iff is the point**.  Suppose instead one fixed
+a single `Δ` with only the implication `Δ(x) ≠ 0 → nonsingular`, and phrased the good-line half as
+"`Δ` pulls back to a nonzero element of `k[t,s]`".  Then `Δ · X₂` also satisfies the implication
+while the stereographic family can sit inside `{x₂ = 0}`, so the good-line half would be false for
+that `Δ` and the two would not compose; only a genuine ternary-cubic discriminant, vanishing
+*exactly* on the singular locus, would do.  With `V(S)` exactly the singular locus that disappears:
+(ii) becomes a statement about the family alone — "some parameter has a nonsingular fibre" — and the
+`Δ ∈ S` witnessing it is produced here rather than chosen in advance.  So what is required is
+*closedness* of the singular locus, not a degree-twelve invariant.
+
+*Why it is true.*  The incidence locus
+
+```
+Z = {(x, [r]) ∈ 𝔸³ × ℙ² : F(x, r) = 0 and ∇_r F(x, r) = 0}
+```
+
+is closed, being cut out by four forms bihomogeneous in `(x, r)` — this is where bidegree `(2,3)` is
+used, and all that is used of it is that the fibre is a *form* in `r`.  Projective space is
+complete, so the projection `𝔸³ × ℙ² → 𝔸³` is a closed map, and the singular locus is the image of
+`Z`, hence closed.  Over an algebraically closed field a closed set is `V(I)` for `I` its ideal, and
+`S := I` works; `S` may be taken finite by Hilbert's basis theorem, but finiteness is not used
+downstream and is left out to keep the obligation as weak as possible.  The origin causes no
+trouble: the fibre over `x = 0` is the zero polynomial, which is singular, and `0 ∈ V(S)`
+accordingly.
+
+*What is owed, and where Mathlib stands.*  The properness input **is** available:
+`AlgebraicGeometry.Proj.toSpecZero` is `UniversallyClosed` and `IsProper` for a finite-type graded
+algebra (`Mathlib/AlgebraicGeometry/ProjectiveSpectrum/Proper.lean`).  What is missing is the bridge
+in both directions: building `Z` as a closed subscheme of `Proj` over `Spec k[x₀,x₁,x₂]` from the
+four forms, and converting the closed image back into `V(S)` on `k`-points — that last step is the
+Nullstellensatz, which Mathlib has.  Mathlib has no multivariate resultant (only
+`RingTheory/Polynomial/Resultant/Basic.lean`, univariate), so route (b) — exhibit `S` by iterated
+resultants of the three partials — would have to build its own elimination, and would still need a
+Nullstellensatz argument for the *exactness* of the resulting ideal.  Route (a) is the shorter one,
+and it is standard-borrowed material of the same kind as `Standard/GenericSmoothness.lean`. -/
+theorem exists_defining_set_nonsingularCubicFiber
+    {k : Type u} [Field k] [IsAlgClosed k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) :
+    ∃ S : Set (MvPolynomial (Fin 3) k),
+      ∀ x : Fin 3 → k, (∃ Δ ∈ S, eval x Δ ≠ 0) ↔ NonsingularCubicFiber F x :=
+  sorry
+
+/--
+**Input (ii): the stereographic image is not contained in the locus of singular fibres.**
+
+*Status.* Obligation, and **all of the risk of the old fused statement now lives here**.  This is
+§4(1) of `certificates/all_smooth_tangent_residual_theorem.md` — a condition on the choice of the
+line `L` — together with §1 generic smoothness.  **Do not attack it for the hardcoded coordinate
+line**: it is the good-line condition, `PLAN.md` WP-G, and belongs with
+`exists_isotropic_stereoNondegenerate` and `ResidualLineNonconstantOn`, not on its own.
+
+*What it says.*  Some single parameter pair `(t, s)` has a nonsingular cubic fibre over the
+stereographic point `x(t, s) = residualImageXCoords F v`.  Equivalently: the stereographic family
+does not lie inside the discriminant locus.  Nothing more is needed — input (i) upgrades one good
+parameter to a Zariski-open set of them.
+
+*Why it is true, for a line chosen as the source chooses it.*  Two ingredients, exactly the two the
+old fused statement listed.
+
+1. **Generic smoothness** (§1).  `X` is smooth and `char k = 0`, so the plane cubic fibre of `ρ` is
+   nonsingular over a nonempty open subset of `ℙ²_x`; the complement is the discriminant locus, a
+   proper closed subset.  `CharZero` is load-bearing here and nowhere else in this chain: in
+   characteristic `p`, Euler's identity in `y` degenerates and a fibration all of whose fibres are
+   singular over a smooth total space is not excluded (quasi-elliptic fibrations in characteristics
+   `2` and `3` realize this).  This is the coordinate form of
+   `Standard.exists_nonempty_open_smooth_restrict` (Hartshorne III.10.7).
+2. **The image avoids that locus** (§4(1)), where `L` is chosen off the conic discriminant so that
+   `S_L` is integral.  `hnd` is necessary for this and not sufficient: without it the stereographic
+   map is constant (see the counterexample recorded on
+   `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`) and its single image point may be a
+   singular one; with it the image is a curve, but a curve can still lie inside the discriminant
+   curve, and ruling that out is precisely what choosing `L` generically does.
+
+Note that (2) cannot be strengthened to "the stereographic family is dominant onto `ℙ²_x`": `v` is
+an isotropic section of the conic bundle along `L`, and for a `v` lying in `{x₂ = 0}` the
+stereographic direction `(1, s, 0)` is coplanar with it and the family degenerates to a curve.  What
+is needed, and all that is needed, is that the family avoids the discriminant. -/
+theorem exists_stereo_param_nonsingularCubicFiber
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
+    (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
+    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (hnd : StereoNondegenerate F v) :
+    ∃ t s : k,
+      NonsingularCubicFiber F (fun i => evalAffineTwoPoint t s (residualImageXCoords F v i)) :=
+  sorry
+
+/-- **The split strengthened nothing: input (ii) is exactly the residue of the fused obligation.**
+
+Read the hypothesis as the fused statement `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`.
+It implies the second input, because `k` is infinite and so `D` has a non-root.  Together with the
+derivation of the fused statement from the two inputs, this says the split is an *equivalence*
+modulo the unconditionally true first input: nothing riskier than what was already assumed has been
+introduced, and any refutation of input (ii) would refute the statement it replaces.  Stated with
+the fused statement as an explicit hypothesis so that the two directions do not depend on each
+other. -/
+theorem exists_stereo_param_nonsingularCubicFiber_of_exists_ne_zero
+    {k : Type u} [Field k] [IsAlgClosed k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k)
+    (h : ∃ D : affineTwoRing k, D ≠ 0 ∧
+      ∀ t s : k, evalAffineTwoPoint t s D ≠ 0 →
+        ∀ r : Fin 3 → k, r ≠ 0 →
+          eval r (map (evalAffineTwoPoint t s)
+              (cubicFiberPullback F (residualImageXCoords F v))) = 0 →
+            ∃ i : Fin 3,
+              eval r (pderiv i (map (evalAffineTwoPoint t s)
+                (cubicFiberPullback F (residualImageXCoords F v)))) ≠ 0) :
+    ∃ t s : k,
+      NonsingularCubicFiber F (fun i => evalAffineTwoPoint t s (residualImageXCoords F v i)) := by
+  classical
+  obtain ⟨D, hD0, hD⟩ := h
+  haveI : Infinite k := inferInstance
+  obtain ⟨t, s, hts⟩ := exists_eval_ne_zero_affineTwoRing D hD0
+  refine ⟨t, s, ?_⟩
+  have hns := hD t s (by simpa [evalAffineTwoPoint] using hts)
+  rwa [map_cubicFiberPullback_eq_specializeFirst] at hns
+
 /--
 **Obligation 1, narrowed: the singular stereo parameters are a proper closed subset.**
 
-## ⚠ THIS STATEMENT IS FALSE AS IT STANDS.  Do not attempt to prove it.
+*Status: proved*, from two separately stated inputs, neither of which is this statement:
 
-It quantifies over *every* nonzero isotropic section `v` of the conic bundle along the hardcoded
-coordinate line `L = {Y₂ = 0}`, and there are smooth `F` for which a legal `v` makes the
-stereographic map **constant**.
+* `exists_defining_set_nonsingularCubicFiber` — the singular fibres are Zariski-closed in `𝔸³_x`
+  (elimination theory, unconditionally true, nothing about `L`); and
+* `exists_stereo_param_nonsingularCubicFiber` — *some* parameter pair has a nonsingular fibre
+  (§4(1) generic choice of `L`, plus §1 generic smoothness).
+
+The split matters because those two have different difficulty and different owners: the first is
+Mathlib-shaped elimination theory, the second is the good-line condition `PLAN.md` WP-G.  Fused into
+one statement neither could be attacked.  **All the risk sits in the second**; see its docstring for
+what is and is not known.
+
+*The derivation.*  Take `Δ ∈ S` not vanishing at the one good parameter point supplied by the
+second input — this is where the *iff* in the first input is used, and it is the reason a bare
+"`Δ ≠ 0` cuts out singular fibres" would not compose.  Then `D := Δ(x(t,s))`, the pullback of `Δ`
+along the stereographic parameterization (`evalAffineTwoPoint_aeval`), is nonzero because it is
+nonzero at that point, and wherever `D` is nonzero the other direction of the iff makes the fibre
+nonsingular.  The identification of the specialized pullback fibre with the fibre over the
+specialized point is `map_cubicFiberPullback_eq_specializeFirst`.
+
+## Why the hypothesis `hnd` is there: the counterexample
+
+Without `hnd` this statement is **false**, and the counterexample is worth keeping: it is what
+forced `StereoNondegenerate` into the whole chain (commit `13a245c`, repaired in `d0dc40d`).  In
+its unguarded form the statement quantified over *every* nonzero isotropic section `v` of the conic
+bundle along the hardcoded coordinate line `L = {Y₂ = 0}`, and there are smooth `F` for which a
+legal `v` makes the stereographic map **constant**.
 
 *The counterexample.*  Write `F = Σ_{i ≤ j} a_{ij}(y) x_i x_j` with `a_{ij}` cubic in `y`, and take
 the linear system
@@ -162,42 +362,33 @@ characteristic zero the generic member is smooth away from it; along it the grad
 binary cubic and a generic binary quadratic, which have no common zero.  So the generic member is
 smooth everywhere.
 
-*What this kills.*  The same `F` and `v` make `exists_nonsingular_stereo_cubicFiber_of_smooth`
-false, and also `residualYCoords_ne_zero_of_smooth`: with `p = (1,t,0)` and
-`∇G(p) = (0, 0, A²h(p))`, the complementary direction is `q = p × ∇G(p) = (tA²h(p), −A²h(p), 0)`,
-so `p` and `q` both lie in `{y₂ = 0}`, the whole residual line lies in `{y₂ = 0}`, and
-`G = A² y₂ h` restricts to `0` there; `residualAmbientRep p q 0 = 0`, so `residualYCoords F v = 0`.
+*What the unguarded form killed.*  The same `F` and `v` make the unguarded
+`exists_nonsingular_stereo_cubicFiber_of_smooth` false, and also
+`residualYCoords_ne_zero_of_smooth`: with `p = (1,t,0)` and `∇G(p) = (0, 0, A²h(p))`, the
+complementary direction is `q = p × ∇G(p) = (tA²h(p), −A²h(p), 0)`, so `p` and `q` both lie in
+`{y₂ = 0}`, the whole residual line lies in `{y₂ = 0}`, and `G = A² y₂ h` restricts to `0` there;
+`residualAmbientRep p q 0 = 0`, so `residualYCoords F v = 0`.
 
-*What this does not kill.*  Only *some* `v` need be good, and the chooser
-`ResidualComponentAssembly.exists_residualChart_of_smooth` picks `v` itself.  The repair is to
-strengthen the choice of `v` — the precise degeneracy is `polarEval Q v w = 0`, i.e. the stereo map
-is constant, equivalently `v` is a base point of the conic family along `L` — or to choose the line
-`L` as the source does (§3–§4, `PLAN.md` WP-G) rather than hardcoding it.  Nothing here casts doubt
-on generic smoothness itself, which is the *other* input and is not what fails.
+*Why `hnd` excludes it.*  For that `v` the polar `polarEval Q v w` vanishes identically, which is
+the negation of `StereoNondegenerate F v`.  So the counterexample does not refute the statement as
+it now stands, and the chooser `ResidualComponentAssembly.exists_residualChart_of_smooth` obtains a
+non-degenerate section from `exists_isotropic_stereoNondegenerate`.  What the counterexample does
+not settle is whether a *non-degenerate* section can still have its whole stereographic image
+inside the discriminant locus for the hardcoded line; that is open, and it is exactly
+`exists_stereo_param_nonsingularCubicFiber`.  Nothing here casts doubt on generic smoothness
+itself.
 
-## The original intent, for the record
+## The geometry, for the record
 
 The stereographic parameterization of the vertical surface `S_L` over the coordinate line
 `L = {Y₂ = 0}` sends a parameter pair `(t, s) ∈ 𝔸²` to the point
 `x(t,s) = residualImageXCoords F v` of `ℙ²_x`, and `cubicFiberPullback F x` is the plane cubic
-fibre of `ρ : X → ℙ²_x` over it, with coefficients in `k[t,s]`.  The claim is that there is a
+fibre of `ρ : X → ℙ²_x` over it, with coefficients in `k[t,s]`.  The statement is that there is a
 nonzero `D ∈ k[t,s]` such that off `{D = 0}` that plane cubic is nonsingular: no nonzero `r` is a
 zero of the cubic at which all three partial derivatives vanish.
 
-*Why it is true.*  Two inputs, exactly the two the previous formulation of obligation 1 listed:
-
-1. **Generic smoothness** (`certificates/all_smooth_tangent_residual_theorem.md` §1).  `X` is
-   smooth and `char k = 0`, so the plane cubic fibre of `ρ` is nonsingular over a nonempty open
-   subset of `ℙ²_x`; its complement, the discriminant locus, is cut out by the discriminant `Δ` of
-   the ternary cubic, a form in `x` which is *not* identically zero.  `Δ ≢ 0` is the entire content
-   of generic smoothness here, and it is what fails in positive characteristic.  This is the
-   coordinate form of `Standard.exists_nonempty_open_smooth_restrict` (Hartshorne III.10.7); see
-   that module for why the scheme-level form is not the one consumed.
-2. **The stereographic image is not contained in the discriminant locus** — §4(1) of the source,
-   where the line `L` is chosen off the conic discriminant so that `S_L` is integral.  Then
-   `D := Δ(x(t,s)) ∈ k[t,s]` is nonzero and works.
-
-*Why `char k = 0` is load-bearing.*  In characteristic `p` the singular locus of the fibration,
+*Why `char k = 0` is load-bearing* — it is used in the second input and nowhere else in this
+chain.  In characteristic `p` the singular locus of the fibration,
 `Σ = {(x,y) : ∇_y F(x,y) = 0}`, is cut by `n+1 = 3` equations in the fourfold `ℙ² × ℙ²`, so
 `dim Σ ≥ 1`; for every fibre to be singular one needs `Σ ∩ X → ℙ²_x` dominant, i.e.
 `dim (Σ ∩ X) ≥ 2`, and smoothness of `X` then only requires `∇_x F ≠ 0` on that surface, which is
@@ -208,12 +399,9 @@ cuspidal cubic, total space smooth — are the standard realization of the pheno
 characteristics `2` and `3`.  So this statement must not be asserted without `CharZero`; no
 counterexample of bidegree `(2,3)` is exhibited here, but nothing rules one out either.
 
-*What is owed.*  Input 1 is borrowed and standard; input 2 is ours, and is the `X`-side of the
-algebraic-independence question `PLAN.md` WP-1 faces on the `Y`-side (WP-2 step 2c).  Note that
-input 2 cannot be strengthened to "the stereographic family is dominant onto `ℙ²_x`": `v` is an
-*arbitrary* isotropic section of the conic bundle along `L`, and for a `v` lying in the line
-`{x₂ = 0}` the stereographic direction `(1, s, 0)` is coplanar with it and the family degenerates
-to a curve.  What is needed, and all that is needed, is that the family avoids the discriminant.
+*What is owed*, after this split: closedness of the singular locus, which is standard elimination
+theory and Mathlib-shaped; and the good-line condition, which is ours and is the `X`-side of the
+algebraic-independence question `PLAN.md` WP-1 faces on the `Y`-side (WP-2 step 2c).
 -/
 theorem exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth
     {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
@@ -230,18 +418,35 @@ theorem exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth
               (cubicFiberPullback F (residualImageXCoords F v))) = 0 →
             ∃ i : Fin 3,
               eval r (pderiv i (map (evalAffineTwoPoint t s)
-                (cubicFiberPullback F (residualImageXCoords F v)))) ≠ 0 :=
-  sorry
+                (cubicFiberPullback F (residualImageXCoords F v)))) ≠ 0 := by
+  classical
+  obtain ⟨S, hS⟩ := exists_defining_set_nonsingularCubicFiber F hF
+  obtain ⟨t₀, s₀, hgood⟩ :=
+    exists_stereo_param_nonsingularCubicFiber F hF hF0 v hv0 hv hnd
+  obtain ⟨Δ, hΔS, hΔ⟩ := (hS _).mpr hgood
+  refine ⟨(aeval (residualImageXCoords F v) :
+      MvPolynomial (Fin 3) k →ₐ[k] affineTwoRing k) Δ, ?_, ?_⟩
+  · -- `D` is nonzero because it is nonzero at the good parameter pair.
+    intro hzero
+    exact hΔ (by rw [← evalAffineTwoPoint_aeval, hzero, map_zero])
+  · -- Off `{D = 0}` the image point avoids `V(S)`, so its fibre is nonsingular.
+    intro t s hts
+    have hns : NonsingularCubicFiber F
+        (fun i => evalAffineTwoPoint t s (residualImageXCoords F v i)) :=
+      (hS _).mp ⟨Δ, hΔS, by rwa [← evalAffineTwoPoint_aeval]⟩
+    rw [map_cubicFiberPullback_eq_specializeFirst]
+    exact hns
 
 /--
 **Obligation 1, in the shape the proved reduction consumes.**  Some stereographic specialization
 of the residual cubic fibre is a nonsingular plane cubic whose residual-line endpoints are linearly
 independent.
 
-⚠ **This statement is false as it stands**, for the same reason and by the same counterexample as
-`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`: read that docstring first.  The
-derivation below is sound — it is the input that is false — so the derivation survives whatever
-non-degeneracy hypothesis on `v` (or on the line `L`) is added to repair the input.
+Without `hnd` this statement is false, by the counterexample recorded on
+`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`; read that docstring for what the
+counterexample does and does not settle.  With `hnd` the derivation below rests, through that
+statement, on `exists_defining_set_nonsingularCubicFiber` and
+`exists_stereo_param_nonsingularCubicFiber` — the second of which is the open one.
 
 *Status: proved*, from `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`.  Three of the four
 things this statement asserts are discharged here and no longer stand as assumptions:

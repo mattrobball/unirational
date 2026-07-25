@@ -119,7 +119,8 @@ documented at its site; `PLAN.md` has the work packages and the corrections log.
 |--------|-----------|--------|
 | `Standard/GenericSmoothness` | `exists_nonempty_open_smooth_restrict` | borrowed, Hartshorne III.10.7. One consumer: obligation 3 |
 | `ResidualYNonvanishing` | `exists_isotropic_stereoNondegenerate` | choose a Tsen section that is not a base point of the conic family |
-| `ResidualYNonvanishing` | `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth` | singular stereo parameters are a proper closed subset of `𝔸²` |
+| `ResidualYNonvanishing` | `exists_defining_set_nonsingularCubicFiber` | the singular cubic fibres are a closed set. Unconditional — no `CharZero`, no smoothness, nothing about `L` |
+| `ResidualYNonvanishing` | `exists_stereo_param_nonsingularCubicFiber` | some stereo parameter has a nonsingular fibre. §4(1); this is where the good line is needed |
 | `ResidualComponentHorizontality` | `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` | **superseded**; coordinate line, no hypothesis on `L`, unprovable. Retire once call sites thread `L` |
 | `ResidualHorizontalityLine` | `eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous` | general line, condition G3 explicit. Reduced to one determinant by `AlgebraicIndependenceJacobian` |
 | `PointedConicRationalFamilies` | `exists_pointedConicAffineModel` | spreading the generic-fibre conic out to an affine of the base. Bookkeeping with existing chart machinery |
@@ -162,13 +163,24 @@ explicit hypothesis where the source uses it implicitly.
 
 ### The one thing to read first
 
-An obligation of this development was found **false, with an explicit counterexample** — see
-`PLAN.md` corrections log, entry 7, and the docstring on
-`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`. It quantified over *every* nonzero
-isotropic Tsen section, and a section that is a base point of the conic family along `L` collapses
-the stereographic map to a point. It has been repaired by making the construction *choose* its
-section (`StereoNondegenerate`), which is why `ResidualYNonvanishing` now carries two obligations
-where it carried one.
+**The `[Smooth …]` hypothesis is satisfiable and the theorem is not vacuous.**
+`Bidegree23Example.smooth_F` exhibits a concrete smooth bidegree-(2,3) hypersurface with a proved,
+**axiom-clean** `Smooth` instance, pinned in `MainTheoremGuard`. This is the one guard `#print
+axioms` on the headline theorem structurally cannot give: a vacuous theorem passes every axiom check
+and every `sorry` census. The obvious Fermat candidate is *singular* — machine-checked, not assumed
+(`not_smooth_fermatF`) — and the working witness has to couple every `x` to every `y` via a
+Vandermonde matrix.
+
+**Four statements in this development were found false during one working session**, each by
+counterexample or by explicit degeneration; see `PLAN.md` corrections 6–8 and the docstrings on
+`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth` and
+`eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous`. Two were quantifier faults, one was a lifting
+fault. All are repaired, and the repairs *converged*: obligation B's counterexample and obligation
+D's degeneration analysis independently produced the **same** condition — that the polar
+`B_Q(v, w)` of the Tsen section against the stereo direction must not vanish
+(`StereoNondegenerate`, and its general-line form `lineStereoPolarForm ≠ 0`). Two routes reaching
+one hypothesis from opposite directions is the strongest evidence available here that the repairs
+are right.
 
 That is the **fourth** appearance of the same fault: adopting §5's normalisation of the line while
 dropping §3's choice of it. It has also appeared as `hXT`, as obligations 1c/1d, and as a hidden

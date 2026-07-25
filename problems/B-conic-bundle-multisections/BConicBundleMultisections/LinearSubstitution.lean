@@ -78,6 +78,12 @@ theorem eval_aeval_linearSubst (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n + 1))
   rw [hstep]
   exact congrArg (fun y => eval y G) (funext fun j => eval_linearSubst n M x j)
 
+/-- Substituting linear forms preserves the degree of a homogeneous polynomial. -/
+theorem isHomogeneous_aeval_linearSubst {n d : ℕ} (M : Matrix (Fin (n + 1)) (Fin (n + 1)) R)
+    {G : MvPolynomial (Fin (n + 1)) R} (hG : G.IsHomogeneous d) :
+    ((aeval (linearSubst n M) : MvPolynomial (Fin (n + 1)) R →ₐ[R] _) G).IsHomogeneous d := by
+  simpa using hG.aeval (linearSubst n M) (isHomogeneous_linearSubst n M)
+
 /-! ### Restriction to a line commutes with substitution -/
 
 /-- **Restricting the substituted polynomial to a line is restricting the original to the image

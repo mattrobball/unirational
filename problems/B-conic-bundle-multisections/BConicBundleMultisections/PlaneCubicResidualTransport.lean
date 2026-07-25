@@ -107,12 +107,6 @@ theorem mulVec_residualAmbientRep (N : Matrix (Fin 3) (Fin 3) R) (p q : Fin 3 �
   rw [← Finset.sum_add_distrib]
   exact Finset.sum_congr rfl fun i _ => by ring
 
-/-- Substituting linear forms preserves the degree of a homogeneous polynomial. -/
-theorem isHomogeneous_aeval_linearSubst {n d : ℕ} (M : Matrix (Fin (n + 1)) (Fin (n + 1)) R)
-    {G : MvPolynomial (Fin (n + 1)) R} (hG : G.IsHomogeneous d) :
-    ((aeval (linearSubst n M) : MvPolynomial (Fin (n + 1)) R →ₐ[R] _) G).IsHomogeneous d := by
-  simpa using hG.aeval (linearSubst n M) (isHomogeneous_linearSubst n M)
-
 /-- **The residual point lies on the residual line, for an arbitrary line.**
 
 `M` is the frame of the line (`lineFrame`, columns the spanning vectors) and `N` its inverse.  The
