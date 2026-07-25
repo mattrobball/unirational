@@ -250,6 +250,36 @@ theorem birationalOver_affineSpace_comp {S T : Scheme.{u}} (n : Type u) (ψ : S 
     ((𝔸(n; S) ↘ S) ≫ ψ) (AffineSpace.map_over (n := n) ψ)
 
 
+/-! ### Pasting a chart square into the base change
+
+The last structural step of the chart computation.  If a scheme `W` is the fibre product, over the
+conic-bundle base `B`, of an *open* piece `C` of the total space with an *open* piece `S` of the
+multisection base, then `W` is an open subscheme of the base change `X ×_B T`, compatibly with the
+projections.  Both open immersions are handled at once by Mathlib's
+`Scheme.pullback_map_isOpenImmersion`, taking the third comparison map to be the identity of `B`.
+-/
+
+/-- **A fibre product of open pieces is an open subscheme of the base change.**
+
+Given `π : X ⟶ B`, `t : T ⟶ B`, an open immersion `c : C ⟶ X` and an open immersion
+`ψ : S ⟶ T`, any `W` realising the fibre product of `c ≫ π` and `ψ ≫ t` maps by an open immersion
+into `X ×_B T`, and that map commutes with the projections to `T`.
+
+This is exactly the shape in which `exists_chartEquation_openImmersion` needs its `r`: `C` is the
+standard chart of the biprojective zero locus, `S = Spec A` is the affine base, and `W` is the
+affine model, whose fibre-product property is `BiprojectiveSpace.isPullback_SpecMap_chartQuotient`
+in `PointedConicChartBaseChange.lean`. -/
+theorem exists_isOpenImmersion_to_pullback {X B T C S W : Scheme.{u}} (π : X ⟶ B) (t : T ⟶ B)
+    (c : C ⟶ X) [IsOpenImmersion c] (ψ : S ⟶ T) [IsOpenImmersion ψ]
+    {w₁ : W ⟶ C} {w₂ : W ⟶ S} (hW : IsPullback w₁ w₂ (c ≫ π) (ψ ≫ t)) :
+    ∃ r : W ⟶ Limits.pullback π t, IsOpenImmersion r ∧
+      r ≫ Limits.pullback.snd π t = w₂ ≫ ψ := by
+  refine ⟨hW.isoPullback.hom ≫
+      Limits.pullback.map (c ≫ π) (ψ ≫ t) π t c ψ (𝟙 B) (by simp) (by simp),
+    inferInstance, ?_⟩
+  rw [Category.assoc, Limits.pullback.lift_snd, ← Category.assoc,
+    hW.isoPullback_hom_snd]
+
 /-! ### Nonemptiness of the opens the chart computation works over
 
 Step 3 of the chart computation.  Both are general and elementary, and both are what makes the
@@ -362,6 +392,20 @@ theorem exists_dense_open_smooth_biprojectiveZeroLocusSnd
       (biprojectiveZeroLocusSnd 2 2 k F) (biprojectiveZeroLocusSnd_toSpec 2 2 k F)
   refine ⟨U, ?_, hsmooth⟩
   exact U.isOpen.dense (Set.nonempty_coe_sort.mp hU)
+
+/-- **A morphism into projective space meets some standard chart on a nonempty open.**
+
+Step 2 of the chart computation: the choice of the `x`-chart index `i`.  Unlike the `y`-chart
+index, which may be arbitrary, this one has to be chosen — but only because the section could a
+priori avoid any *particular* chart, not for any deeper reason: the standard charts cover, so some
+chart is met. -/
+theorem exists_nonempty_preimage_standardChart {T : Scheme.{u}} [Nonempty T] {n : ℕ}
+    {R : Type u} [CommRing R] (f : T ⟶ ProjectiveSpace n R) :
+    ∃ i : Fin (n + 1),
+      ((f ⁻¹ᵁ ProjectiveSpace.standardChart n R i : T.Opens) : Set T).Nonempty := by
+  obtain ⟨x⟩ := ‹Nonempty T›
+  obtain ⟨i, hi⟩ := ProjectiveSpace.exists_mem_standardChart n R (f.base x)
+  exact ⟨i, ⟨x, hi⟩⟩
 
 /-! ### The base of the chart computation
 
@@ -535,9 +579,9 @@ Each step names the declaration that supplies it, so the remaining work is mecha
    `j` has to be made.  It rests on three general lemmas proved above —
    `Scheme.nonempty_preimage_of_isDominant`, `Scheme.nonempty_inf_opens` and
    `Scheme.exists_isOpenImmersion_isDominant_range_subset` (a nonempty open of an integral scheme
-   contains a dense affine open, packaged as a dominant open immersion).  Only the choice of the
-   `x`-chart index `i` is left: the section's image at the generic point lies in some `D₊(Xᵢ)`
-   because the standard charts cover `ℙ²_x`.
+   contains a dense affine open, packaged as a dominant open immersion).  The choice of the
+   `x`-chart index `i` is `exists_nonempty_preimage_standardChart` above, from
+   `ProjectiveSpace.exists_mem_standardChart`.
 6. *The substituted equation, and the pullback square.*  This is the crux, and it is **not blocked
    by Mathlib** — every piece exists; what is left is assembly.  `sndFiberChartMap` and
    `map_span_chartEquation_sndFiberChartMap` (`BiprojectiveFiberEquationBaseChange.lean`) already
@@ -559,11 +603,14 @@ Each step names the declaration that supplies it, so the remaining work is mecha
    — itself two tensor-product pushouts pasted, with no hand computation) on top of
    `isPushout_quotientMk` (**quotienting by an ideal is a base change**, which Mathlib does not have
    categorically and which is proved there from the universal property).  What remains of this step
-   is only to paste that pullback square with the open immersion of the chart into the zero locus
-   and with the base change of `ψ`, using `Limits.pullbackRightPullbackFstIso` and open-immersion
-   stability of base change, to obtain the `r` this statement asks for.  (For the
-   point-constructing direction, which is *not* what is needed here but is the natural sanity
-   check, the tree already has
+   is only the tree-specific *interface*: to read
+   `BiprojectiveSpace.isPullback_SpecMap_chartQuotient` as an `IsPullback` over `ℙ²_y` for the two
+   composites `chartZeroLocusToGlobal ≫ π` and `ψ ≫ t`.  The pasting itself is **done**:
+   `Scheme.exists_isOpenImmersion_to_pullback` above turns any such square into the `r` this
+   statement asks for, open immersion and compatibility square included, using Mathlib's
+   `Scheme.pullback_map_isOpenImmersion` with the identity of `ℙ²_y` as the third comparison map.
+   (For the point-constructing direction, which is *not* what is needed here but is the natural
+   sanity check, the tree already has
    `chartZeroLocusPointOfNormalizedAlgebra` and `affineChartQuotientEvalAlgebra` in
    `ResidualImageAlgebraPoint.lean`.)
 7. *Putting it in normal form* — **done**, and that is why this statement hands back the raw
