@@ -5,6 +5,11 @@ decide the headline equivariant-unirationality problem.
 
 The dated successful output is recorded in `CHECKS.md`.
 
+This directory is the portable subset published in Git. Newer degree-13/14,
+mixed-locus, Pfaffian, and descent reports live in the intentionally ignored
+2.4 GB sibling `tmp/` tree; citations to those files elsewhere in Problem E
+are local provenance pointers, not dependencies of the commands below.
+
 Run from the problem directory with Python 3 and SymPy/NumPy installed:
 
 ```sh

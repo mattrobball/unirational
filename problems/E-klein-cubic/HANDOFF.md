@@ -82,9 +82,21 @@ The current two-axis ranking and the four-path audit are in
    \(\det[a,\nabla_1a,\ldots,\nabla_4a]=0\) on
    \(\mathbf P^4(\mathbf C(\mathbf P(W))^G)\) for the flat connection defined
    by the generic frame.  No solution or universal-nonvanishing theorem is
-   known. All 15 canonical gradient-cross-product covariants from the explicit
+   known.  The field arithmetic needed to make this explicit is certified:
+   the five primaries are algebraically independent, Adler's twelve
+   secondaries form a free Hironaka basis, the full multiplication table is
+   checked, and the \(\tau\)-normalized degree-12 model implements exact
+   addition, inversion, trace, and norm.  The four \(\Gamma_r\) are compiled
+   as exact arithmetic circuits backed by 121 characteristic-zero reduction
+   identities.  Their exact specialization verifies the horizontal rank 48,
+   frame-determinant inverse, all 100 matrix entries, all twelve basis
+   derivatives, and Leibniz on 78 products.  Rank certificates exclude 121
+   projective constant and 440 ordered Hironaka-linear ansätze, with no
+   survivor; the universal PDE remains open.  All 15 canonical
+   gradient-cross-product covariants from the explicit
    invariants of degrees 3--9 also fail to land. See
-   `tmp/covariant_module/REPORT.md` and
+   `tmp/kproj_arithmetic/REPORT.md`, `tmp/kproj_connection/REPORT.md`,
+   `tmp/covariant_module/REPORT.md`, and
    `tmp/ed_binary_attack/ALL_DEGREE_MODULE_AUDIT.md`.
 
 7. The nonsplit Pfaffian branch has been reduced to five simultaneous
@@ -113,9 +125,14 @@ The current two-axis ranking and the four-path audit are in
    The exact degree-10 ideal has rank 470 and Hilbert function
    \([1,21,231,1301,889,0]\). Arbitrary rational coefficient ratios are
    described exhaustively by a five-vector degree-eight frame. Its full
-   degree-six pencil and all ten rational coordinate lines are excluded, but
-   ternary and larger rational supports remain open. In degree 12 the
-   16-dimensional decomposable sector, all decomposable-plus-one-primitive
+   degree-six pencil and all ten rational coordinate lines are excluded.  On
+   the ten ternary planes, all invariant-coefficient ansätze through degrees
+   0, 4, 6, 8, and 10, the degree-12 space \(S_{12}\), and all 90 spaces
+   \(S_{12}+\langle p_j\rangle\) are excluded.  One two-direction gate is
+   also empty; its measured cost stopped the other 359.  Unrestricted ternary
+   and larger rational supports remain open. In degree 12 the
+   16-dimensional decomposable sector \(D_{12}^{V_6}\), all
+   decomposable-plus-one-primitive
    slices, and all 496 decomposable-plus-two-primitive slices are excluded;
    equivalently, a landing point needs at least three primitive coordinates
    in that fixed quotient basis. In a fixed complete 48-vector Reynolds basis every
@@ -131,9 +148,14 @@ The current two-axis ranking and the four-path audit are in
    parts. Exact probes on charts 0 and 47 reproduce the same
    \(36595\times244805\) degree-four bottleneck. Hence no identical retry or
    standard-chart sweep is justified without a structural or solver-level
-   change. See
+   change.  The transformed decomposable-plus-primitive gate \(p_0=1\) also
+   times out, at `44328 x 245460` on a worse trajectory, so the other 31
+   transformed charts are stopped.  The length-439 decomposable quotient is
+   only an anchor for relative elimination with exceptional strata, not a
+   mixed-locus theorem. See
    `tmp/projective_source/REPORT.md`,
-   `tmp/projective_source/DEGREE8_RATIONAL_FRAME_REPORT.md`, and the reports
+    `tmp/projective_source/DEGREE8_RATIONAL_FRAME_REPORT.md`,
+    `tmp/schur_ternary_planes/one_primitive/REPORT.md`, and the reports
    under `tmp/projective_source_degree12*` and
    `tmp/step4_degree12_solver_terminal/REPORT.md`.
 
@@ -146,33 +168,48 @@ The current two-axis ranking and the four-path audit are in
     obtains the complete rank-496 Jacobian-quintic span, and finds unit ideals
     on all twelve charts of \(\mathbf P^{11}\). See
     `tmp/degree10_jacobian/REPORT.md` and
-    `tmp/degree11_jacobian/REPORT.md`.
-    The exact all-degree replacement for continuing blind degree scans is the
-    flat-connection determinant in item 6; degree 12 remains the first
-    unresolved bounded KLS degree.
+    `tmp/degree11_jacobian/REPORT.md`.  Degree twelve is reconstructed
+    completely: \(\dim M_{12}=16\), and the universal coefficient span has
+    rank 721 in 15,504 quintic monomials.  In the exact 12+4
+    decomposable/primitive splitting, both pure projective strata are empty.
+    The first genuinely mixed chart times out at `104836 x 166810`, so the
+    other three were not launched.  Degree twelve remains open exactly on the
+    mixed locus. See `tmp/degree12_jacobian/REPORT.md` and
+    `tmp/degree12_jacobian_structural/REPORT.md`.
+    The exact all-degree replacement for blind degree scans is the
+    flat-connection determinant in item 6.
     Voisin's current construction proves \(C^{[3]}\) is \(G\)-very-versal,
     but pulling the universal marked cover back along her parameterization
     gives a source birationally fibered over \(C\) and is therefore circular
     for the missing point. See
     `tmp/ed_binary_attack/REPORT.md`.
 
-11. The `xCD` frame plane now has an exact characteristic-zero ternary cubic,
-    universal \(c_4,c_6\), and a certified flex-torsor presentation on a
-    finite-field source line. This does not yet implement genuine Kummer
-    descent: the flex torsor algebra is not the coordinate algebra of
-    \(E[3]\), and true second descent also needs the degree-twelve
-    three-flex-line algebra. The only complete \(9\)-by-\(9\) multiplication
-    packet is the \(s=1\) control fiber, where a rational flex makes the class
-    trivial. Public L-function and 2-Selmer attempts are strict nonverdicts,
-    and no finite-field line result transfers to the generic
-    characteristic-zero plane. Exact primitive formulas for the formerly
-    missing \(f_{10},f_{11},f_{12},f_{14}\) are now installed; the remaining
-    generic prerequisite is the certified Hironaka basis and multiplication
-    table for arithmetic in \(K_{\rm proj}\), as specified in
-    `tmp/xcd_invariant_field/REPORT.md`; the descent boundary is in
-    `tmp/xcd_descent_math/REPORT.md`.
+11. The `xCD` frame plane has an exact characteristic-zero ternary cubic,
+    universal \(c_4,c_6,\Delta\), and all ten coefficients evaluated in the
+    certified \(K_{\rm proj}\) arithmetic.  The genuine generic rank-nine
+    \(E[3]\) algebra
+    \(\mathcal R=\operatorname{Map}_{K_{\rm proj}}(E[3],\overline K_{\rm proj})\)
+    and normalized group/difference/Kummer functions are
+    installed and kept distinct from the flex torsor.  At \(s=1\), the true
+    degree-12 three-flex-line algebra has orbit degrees `4+8` and satisfies
+    all incidence and norm identities, but the rational flex makes this
+    class trivial.  A separate low-height coordinate-line control has rational
+    point \(O=[1:0:1]\) and irreducible flex cover, proving a nonzero class
+    abstractly equal to \(\delta([H-3O])\), where \(H\) is a hyperplane
+    section.  No explicit coordinates for \(Q=[H-3O]\) in the saved Jacobian model, translation algebra,
+    determinant representative, or \(G(Q)\)
+    comparison were obtained.  The generic first-descent boundary is the
+    Galois-equivariant \(\operatorname{GL}_3(\mathcal R)\) lift \(M_T\) giving
+    \(\alpha_{\mathcal R}=\det(M_T)\bmod \mathcal R^{\times3}\); generic true second descent still
+    needs the twisted three-flex-line algebra, line forms, and constants. See
+    `tmp/kproj_arithmetic/REPORT.md`, `tmp/xcd_genuine_descent/REPORT.md`, and
+    `tmp/xcd_nonzero_kummer/REPORT.md`.
 
 ## Verification
+
+The initial `certificates/...` commands below form the portable checked-in
+suite. Every later command under `tmp/...` requires the intentionally ignored
+2.4 GB local artifact tree and will not be available in a fresh clone.
 
 From this directory run:
 
@@ -213,6 +250,10 @@ python3 tmp/projective_source_degree12_extension_independent/verify.py
 python3 tmp/projective_source_degree12_extension_independent/landing_verify.py
 python3 tmp/projective_source_degree12_extension/verify_landing.py
 python3 tmp/projective_source_degree12_chart_probe/audit_and_probe.py --verify
+python3 tmp/projective_source_degree12_primitive_chart/verify.py
+python3 tmp/projective_source_degree12_primitive_chart/analyze_relative.py
+python3 tmp/schur_ternary_planes/verify.py
+python3 tmp/schur_ternary_planes/one_primitive/verify.py
 python3 tmp/d12_solver_strategy/verify.py
 python3 tmp/step4_degree12_solver_terminal/verify_terminal.py
 python3 tmp/ed_binary_attack/projective_pencil_root_test.py --skip-factor
@@ -220,8 +261,14 @@ python3 tmp/ed_binary_attack/covdim_dominance_scan.py
 python3 tmp/ed_binary_attack/covdim_degree8_scan.py
 python3 tmp/degree10_jacobian/verify_outputs.py
 python3 tmp/degree11_jacobian/verify_outputs.py
+python3 tmp/degree12_jacobian/verify_outputs.py --require-gate
+python3 tmp/degree12_jacobian_structural/verify.py
+python3 tmp/degree12_jacobian_structural/verify_decomposable_cover.py
+python3 tmp/degree12_jacobian_structural/verify_mixed_gate.py
 python3 tmp/ed_binary_attack/verify_all_degree_module_pde.py
 python3 tmp/step4_essential_dimension/verify_reductions.py
+python3 tmp/kproj_arithmetic/verify.py
+python3 tmp/kproj_connection/verify.py
 python3 tmp/fano14_degree12/degree12_msolve.py \
   --degree 15 --verify-leading tmp/fano14_degree12/leading15.out
 python3 tmp/structural_degree13/verify.py
@@ -237,6 +284,8 @@ python3 tmp/xcd_invariant_field/f10_probe/verify.py
 python3 tmp/xcd_descent_algebra/verify_xcd.py
 python3 tmp/xcd_descent_math/verify_fiber_flex_algebra.py
 python3 tmp/xcd_descent_math/verify_hesse_norms.py
+PYTHONPATH=tmp/xcd_genuine_descent python3 tmp/xcd_genuine_descent/verify.py
+python3 tmp/xcd_nonzero_kummer/verify.py
 python3 tmp/xcd_magma_rank_audit/verify_audit.py
 python3 tmp/xcd_low_height/verify.py
 ```
@@ -262,30 +311,39 @@ certificate; neither bounded theorem gives an all-degree cutoff.
 
 ## Current ranking
 
-For the fastest exact calculations: (1) a structurally planned degree-twelve
-Jacobian computation, (2) one gate calculation after changing the degree-12
-Schur basis to the exact decomposable-plus-primitive splitting, and (3)
-Pfaffian degree sixteen only after a structural reduction.  The unchanged
-homogeneous Schur solve and its 48 standard-coordinate charts have reached a
-terminal stopping rule and are not ranked. For headline leverage: (1) exact \(K_{\rm proj}\)
-arithmetic followed by honest generic `xCD` descent and point searches, (2)
-the exact flat-connection KLS equation, (3) a rational
-point using at least three coordinates of the exhaustive degree-eight Schur
-frame, and (4) structural use of the Pfaffian Hermitian model.
+For the fastest exact calculations: (1) use the checked flat-connection
+circuit on a theoretically motivated nonconstant ansatz, (2) compute
+\(Q_{\rm ctl}\) in the saved Jacobian model and construct the
+Galois-equivariant translation lift \(M_{T,\rm ctl}\) on the nontrivial
+characteristic-23 function-field control, (3)
+attempt either degree-12 mixed locus only
+through a certified relative/Fitting elimination, and (4) Pfaffian degree
+sixteen only after a structural reduction.  Both authorized degree-12 chart
+gates have already worsened; the remaining three Jacobian and 31 Schur charts
+must not be launched unchanged. For headline leverage: (1) the exact
+flat-connection KLS equation, (2) honest generic `xCD` descent and point
+searches using the completed \(K_{\rm proj}\) arithmetic, (3) an unrestricted
+rational point in the exhaustive degree-eight Schur frame, and (4) structural
+use of the Pfaffian Hermitian model.
 See `CURRENT_PATHS.md` for costs, implications, and stopping rules.
 
 ## Best re-entry points
 
-- **Generic twist.** The missing exact invariants
-  \(f_{10},f_{11},f_{12},f_{14}\) are now reconstructed in
-  `tmp/xcd_invariant_field/f10_probe/REPORT.md`. Next certify algebraic
-  independence of the proposed parameters, the rank-twelve Hironaka basis
-  and multiplication table, and normalize them to a degree-twelve model of
-  \(K_{\rm proj}\) over its rational parameter field. This is the first
-  prerequisite for an exhaustive generic descent, not the last one: genuine
-  first descent still needs the \(E[3]\) algebra, its class representative,
-  and normalized Kummer functions; true second descent needs the twisted
-  three-flex-line algebra and constants. Positive candidate searches may
+- **Generic twist.** The exact invariants, algebraically independent
+  primaries, rank-twelve Hironaka basis and multiplication table, normalized
+  \(K_{\rm proj}\) arithmetic, and genuine rank-nine \(E[3]\) algebra are all
+  certified.  Generic first descent still needs a Galois-equivariant
+  \(\operatorname{GL}_3(\mathcal R)\) translation lift \(M_{T,\rm gen}\) and
+  the class representative
+  \(\alpha_{\mathcal R}=\det(M_{T,\rm gen})\bmod \mathcal R^{\times3}\); true
+  second descent needs the generic twisted three-flex-line algebra, line
+  forms, and constants.  Separately, validating the soluble coordinate-line
+  control explicitly requires computing \(Q_{\rm ctl}=[H-3O]\) in its saved
+  Jacobian model, then comparing \(\det(M_{T,\rm ctl})\) with
+  \(G(Q_{\rm ctl})\).  The control proves its
+  nonzero flex class is abstractly Kummer but supplies none of those explicit
+  data. Positive
+  candidate searches may
   proceed immediately in the ambient rational-function field if invariance
   and the cleared cubic identity are checked exactly. Continue the ten
   three-coordinate planes of
@@ -336,27 +394,34 @@ See `CURRENT_PATHS.md` for costs, implications, and stopping rules.
   with no leading ideal, so there is still no projective-locus verdict. The
   terminal audit excludes more source sampling and identical retries: all 48
   standard chart leading-cubic restrictions have rank 1,124, and two exact
-  chart probes reproduce the same degree-four bottleneck.  If this bounded
-  route is resumed, first change coordinates to
-  \(D_{12}\oplus\langle p_0,\ldots,p_{31}\rangle\).  Emptiness on \(D_{12}\)
-  makes the 32 primitive-coordinate charts a complete cover; use one chart as
-  a stopping gate before any sweep, and otherwise pursue relative elimination
-  of the 16 decomposable variables. The rational
+  chart probes reproduce the same degree-four bottleneck.  The equations have
+  now been changed to
+  \(D_{12}^{V_6}\oplus\langle p_0,\ldots,p_{31}\rangle\), and the authorized
+  \(p_0=1\) gate timed out on a worse trajectory.  Do not run the other 31
+  charts; resume only through relative elimination of the 16 decomposable
+  variables with explicit exceptional-stratum control. The rational
   problem has an exhaustive degree-eight frame over the invariant quotient
-  field. Search next on its ternary coordinate planes, since all ten
-  coordinate lines are excluded. Finite scans still cannot prove a negative
+  field.  Its ten coordinate lines and the bounded ternary envelopes through
+  all 90 spaces \(S_{12}+\langle p_j\rangle\) are excluded.  Unrestricted
+  ternary points remain open; the other 359 two-direction degree-12 slices
+  are not budget-justified. Finite scans still cannot prove a negative
   answer. See the reports under `tmp/projective_source_degree12*`,
   `tmp/step4_degree12_solver_terminal/REPORT.md`, and
   `tmp/projective_source/DEGREE8_RATIONAL_FRAME_REPORT.md`.
 - **Covariant dimension.** Search directly for a Jacobian-zero
   self-covariant \(W\to W\). Such a map is equivalent to
   \(\operatorname{ed}(G)=3\), even if its image is not initially presented as
-  the Klein cone. Degrees through 11 are excluded, so degree 12 is next for a
-  bounded search.  Strategically, compute the rank-twelve Hironaka
-  multiplication table and the four connection matrices, then attack the
-  exact equation \(\mathcal J_\nabla(a)=0\) over the invariant field. See
-  `tmp/ed_binary_attack/ALL_DEGREE_MODULE_AUDIT.md` and
-  `tmp/degree11_jacobian/REPORT.md`.
+  the Klein cone. Degrees through 11 are excluded; in degree 12 the pure
+  decomposable and pure primitive strata are also excluded, while the mixed
+  chart gate timed out and stopped the other three.  The Hironaka arithmetic
+  and all four connection circuits are complete; the 561 constant and
+  Hironaka-linear ansätze are excluded.  Attack the exact equation
+  \(\mathcal J_\nabla(a)=0\) over the invariant field through a structural
+  rational-function family or differential-algebraic argument. See
+  `tmp/ed_binary_attack/ALL_DEGREE_MODULE_AUDIT.md`,
+  `tmp/degree11_jacobian/REPORT.md`, `tmp/degree12_jacobian/REPORT.md`,
+  `tmp/degree12_jacobian_structural/REPORT.md`, and
+  `tmp/kproj_connection/REPORT.md`.
 - **Essential dimension.** Any unconditional proof that
   \(\operatorname{ed}(G)=3\) or \(4\) now settles the headline in the
   corresponding direction.  The canonical target is the generic Klein twist
@@ -383,14 +448,16 @@ See `CURRENT_PATHS.md` for costs, implications, and stopping rules.
   dominant map of higher degree.
 - The three bounded covariant statements have different sources and cutoffs:
   landing \(W\to W\) is excluded through degree 14; Jacobian degeneracy for
-  \(W\to W\) only through degree 11; and constant-coefficient landing
-  \(V_6\to W\) completely only in degrees 4, 6, 8, and 10. Degree 12 has only
-  the scoped decomposable and coordinate-support exclusions stated above.
-  Its rank 1,124 is an exact special-fiber equation-span statement, not a
-  degree-twelve landing exclusion.
+  \(W\to W\) completely only through degree 11, with the two pure degree-12
+  strata also excluded and its mixed locus open; and constant-coefficient
+  landing \(V_6\to W\) completely only in degrees 4, 6, 8, and 10. Its
+  degree 12 has only the scoped decomposable and coordinate-support
+  exclusions stated above.  Rank 721 or 1,124 is an exact special-fiber
+  equation-span statement, not projective emptiness by itself.
   Rational coefficients on the last source have an exhaustive five-vector
-  degree-eight frame, but are excluded only in the full degree-six pencil and
-  on the ten coordinate lines of that frame.
+  degree-eight frame.  The full degree-six pencil, all ten coordinate lines,
+  and the bounded ternary envelopes through all 90 one-direction degree-12
+  slices are excluded; arbitrary invariant-field points remain open.
 - Very versality of \(C^{[3]}\) does not give very versality of \(C\): no
   rational equivariant operation selecting one point of the degree-three
   cycle is known, and Voisin's marked parameter space is already fibered over

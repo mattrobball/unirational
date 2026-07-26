@@ -1,0 +1,421 @@
+# formalization.yaml (v0.3): repository metadata for the Mathlib Initiative.
+# Schema: https://github.com/mathlib-initiative/formalization.yaml
+
+version: "v0.3"
+
+project:
+  name: "Unirationality of smooth bidegree-(2,3) hypersurfaces in P^2 x P^2"
+  authors:
+    - "Matthew Robert Ballard"
+  license: "Apache-2.0"
+  license_note: >-
+    Lean source headers declare Apache 2.0, but the encompassing repository
+    does not currently contain a tracked LICENSE or COPYING file.
+
+sources:
+  - title: "Tangent residuals prove unirationality for every smooth (2,3) member"
+    authors:
+      - "Matthew Robert Ballard"
+    id: "https://github.com/mattrobball/unirational/blob/4e001458de03b07038b414a95dd02380fdd65080/problems/B-conic-bundle-multisections/certificates/all_smooth_tangent_residual_theorem.md"
+    type: "project proof certificate"
+    author_contacted: "n/a"
+
+  - title: "Tangent residuals give horizontal rational surfaces"
+    authors:
+      - "Matthew Robert Ballard"
+    id: "https://github.com/mattrobball/unirational/blob/4e001458de03b07038b414a95dd02380fdd65080/problems/B-conic-bundle-multisections/certificates/tangent_residual_theorem.md"
+    type: "project proof certificate"
+    author_contacted: "n/a"
+
+  - title: "Rationality, Unirationality and Rational Connectivity"
+    authors:
+      - "Joe Harris"
+    id: "https://www.math.columbia.edu/~thaddeus/seattle/harris1.pdf"
+    type: "lecture notes"
+
+  - title: "Cubic curves and totally geodesic subvarieties of moduli space"
+    authors:
+      - "Curtis T. McMullen"
+      - "Ronen E. Mukamel"
+      - "Alex Wright"
+    id: "https://doi.org/10.4007/annals.2017.185.3.6"
+    type: "journal article"
+
+  - title: "Algebraic webs invariant under endomorphisms"
+    authors:
+      - "M. Dabija"
+      - "Mattias Jonsson"
+    id: "https://doi.org/10.5565/PUBLMAT_54110_07"
+    type: "journal article"
+
+status:
+  scope: >-
+    Formalizes the headline existence theorem that every nonzero smooth
+    bidegree-(2,3) hypersurface in P^2 x P^2 over an algebraically closed
+    field of characteristic zero admits a dominant rational map from
+    relative affine 3-space. The project also proves its existential
+    IsUnirationalOver wrapper and gives a concrete smooth example establishing
+    non-vacuity. It does not formalize the source proof's divisor-class
+    calculation, the uniform degree bound 2a <= 20, or the general
+    exact-degree-20 refinement. Two direct sorries remain in legacy modules
+    outside the headline dependency closure. The trusted Statement.lean
+    comparator placeholder is not counted as an implementation sorry.
+  sorry_count: 2
+  sorry_in_definitions: 0
+  axioms:
+    - "propext"
+    - "Classical.choice"
+    - "Quot.sound"
+    - "sorryAx"
+  main_results:
+    - declaration: "Bidegree23Unirationality.smooth_bidegree23_hasUnirationalParametrization"
+      file: "Solution.lean"
+      sorry_count: 0
+      axioms:
+        - "propext"
+        - "Classical.choice"
+        - "Quot.sound"
+      comparator_config: "comparator/smooth_bidegree23_unirationality.json"
+      literature_dependencies: []
+    - declaration: "BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization"
+      file: "BConicBundleMultisections/MainTheorem.lean"
+      sorry_count: 0
+      axioms:
+        - "propext"
+        - "Classical.choice"
+        - "Quot.sound"
+      literature_dependencies: []
+    - declaration: "BConicBundleMultisections.smooth_bidegree23_isUnirationalOver"
+      file: "BConicBundleMultisections/MainTheorem.lean"
+      sorry_count: 0
+      axioms:
+        - "propext"
+        - "Classical.choice"
+        - "Quot.sound"
+      literature_dependencies: []
+
+automation:
+  methods:
+    - method: "agent"
+      models:
+        - "claude-fable-5"
+      framework: "Claude Code 2.1.217"
+      sessions:
+        - "fde048de-9d41-4384-9502-f082ef6dbf95"
+      tool_setup: >-
+        Multi-agent extraction of the Harris problem, literature search, proof
+        discovery, Python and SymPy checks, Macaulay2 checks, executable
+        certificates, random-coefficient tests, and Git.
+      cost:
+        wall_time: >-
+          Approximately 12 elapsed hours on 2026-07-22; the session included
+          other repository work and active time was not recorded.
+        spend_usd: "Subscription-based usage; marginal spend not recorded."
+        hardware: >-
+          Hosted model API; local symbolic checks on an arm64 Apple Silicon
+          Mac running macOS. Exact chip and RAM were not recorded.
+      prompting_notes: >-
+        Extract the exact Harris questions, construct and adversarially check
+        the tangent-residual proof, and require executable certificates and
+        explicit-map sanity checks before accepting the informal theorem.
+      resulting_state: >-
+        Produced the informal all-smooth tangent-residual proof, symbolic and
+        finite-field certificates, explicit random instances, expository
+        notes, and the literature audit. The durable Git sequence runs from
+        588071f through 3d0238c.
+
+    - method: "agent"
+      models:
+        - "gpt-5.6-sol"
+      framework: "Codex Desktop / Codex CLI 0.144.2"
+      sessions:
+        - "019f8ed0-05f1-7473-b31d-2839829bc5bc"
+      tool_setup: >-
+        Proactive subagents, Loogle and direct Mathlib source search,
+        Lean/Lake with Mathlib v4.32.1, rational-map API reconnaissance,
+        scratch compilation, and statement and axiom checks.
+      cost:
+        wall_time: >-
+          Approximately 7 hours 55 minutes elapsed on 2026-07-23; active time
+          was not recorded.
+        spend_usd: "Subscription-based usage; marginal spend not recorded."
+        hardware: >-
+          Hosted model API; Lean compilation on an arm64 Apple Silicon Mac.
+          Exact chip and RAM were not recorded.
+      prompting_notes: >-
+        Build a Mathlib-idiomatic formalization, maximize library reuse, use
+        generic dimensions and flexible scheme rational-map interfaces, and
+        distinguish project setup or scratch compilation from a verified
+        repository theorem.
+      resulting_state: >-
+        Bootstrapped the Lake project and initial scheme/rational-map
+        vocabulary. Commit e71a557 was a limit-triggered save point, not a
+        completed formalization.
+
+    - method: "autonomous"
+      models:
+        - "grok-4.5"
+      framework: "Grok Build 0.2.111"
+      sessions:
+        - "019f9084-7993-73d1-aaa7-e7d3f7923332"
+      tool_setup: >-
+        Resumed the Codex state through the Grok goal-plan harness, used a
+        parallel subagent swarm, worked on residual-line maps, Tsen/conic
+        infrastructure and the residual image, and repeatedly ran Lean and
+        Lake checks.
+      cost:
+        wall_time: >-
+          22 hours 19 minutes elapsed, 2026-07-23 19:47 to 2026-07-24 18:06
+          UTC; idle and background time were not separated.
+        spend_usd: "Subscription-based usage; marginal spend not recorded."
+        hardware: >-
+          Hosted model API; Lean compilation on an arm64 Apple Silicon Mac.
+          Exact chip and RAM were not recorded.
+      prompting_notes: >-
+        Finish a faithful proof with a formal plan, task ledger, real
+        verification, saved evidence, and no manual follow-up; preserve
+        definitions and leave a detailed handoff when stopped.
+      resulting_state: >-
+        Reached a 70-plus-module green tree and proved substantial residual
+        geometry, but the headline remained conditional on a residual
+        base-change hypothesis. Checkpoints 97000c8 and 404658c record that
+        boundary and the partially implemented dominance route.
+
+    - method: "agent"
+      models:
+        - "claude-opus-4-8"
+      framework: "Claude Code 2.1.217"
+      sessions:
+        - "fde048de-9d41-4384-9502-f082ef6dbf95"
+      tool_setup: >-
+        Monitored Grok Build logs, audited theorem boundaries and sorry/axiom
+        state, diagnosed stalled routes, supplied mathematical direction, ran
+        Lean/Lake checks, and committed integration checkpoints when the Grok
+        sandbox held the Git lock.
+      cost:
+        wall_time: >-
+          Approximately 31 hours 15 minutes of overlapping session span,
+          2026-07-23 10:33 to 2026-07-24 17:48 UTC; this was not continuous
+          active time.
+        spend_usd: "Subscription-based usage; marginal spend not recorded."
+        hardware: >-
+          Hosted model API; Lean and Git integration on an arm64 Apple Silicon
+          Mac. Exact chip and RAM were not recorded.
+      prompting_notes: >-
+        Check whether the mathematical headline is formalized rather than
+        merely whether files compile; make the residual surface
+        base-dominating; prefer explicit theorem-level boundaries over hidden
+        hypotheses or a weakened headline.
+      resulting_state: >-
+        Found that dominance onto the full residual image can be false when
+        that image is reducible, retargeted the construction to the
+        scheme-theoretic image component, and made the remaining
+        horizontality boundary explicit. Commits 1731498 through 0a6787c
+        record this repair; the headline was still conditional.
+
+    - method: "agent"
+      models:
+        - "claude-opus-5"
+      framework: "Claude Code 2.1.219"
+      sessions:
+        - "46434846-629e-456f-8d4c-5242f28faace"
+      tool_setup: >-
+        Goal-mode phase decomposition, high-effort long-context model use,
+        parallel subagents with explicit file ownership, direct Lake builds,
+        comparison with the informal source proof, exact statement guards,
+        non-vacuity guards, and frequent Git checkpoints.
+      cost:
+        wall_time: >-
+          Approximately 16 elapsed hours across takeover and the productive
+          fresh session; active and background time were not separated.
+        spend_usd: "Subscription-based usage; marginal spend not recorded."
+        hardware: >-
+          Hosted model API; Lean compilation on an arm64 Apple Silicon Mac.
+          Exact chip and RAM were not recorded.
+      prompting_notes: >-
+        Survey the repository before acting, use the source proof as the
+        routing tiebreaker, allow sorry but never new axioms, do not add
+        hypotheses to the headline, and inspect both its type and printed
+        axioms.
+      resulting_state: >-
+        Rebuilt the construction for an arbitrary line, exposed and repaired
+        several false intermediate statements, formalized pointed-conic and
+        good-line infrastructure, and restored the faithful unconditional
+        theorem signature. At d0adc21 the 3,077-job build was green but the
+        headline still depended on sorryAx through six direct obligations.
+
+    - method: "autonomous"
+      models:
+        - "grok-4.5"
+      framework: "Grok Build 0.2.111"
+      sessions:
+        - "019f98a7-2f4a-7511-87ff-b3ebd6bd220b"
+      tool_setup: >-
+        A second goal-plan run with a disjoint subagent swarm,
+        implementation-first sorry closure, direct Lean/Lake checks, and work
+        on integrality, negative twists, generic smoothness, and remaining
+        dependency leaves.
+      cost:
+        wall_time: >-
+          12 hours 43 minutes elapsed, 2026-07-25 09:42 to 22:25 UTC; idle and
+          background time were not separated.
+        spend_usd: "Subscription-based usage; marginal spend not recorded."
+        hardware: >-
+          Hosted model API; Lean compilation on an arm64 Apple Silicon Mac.
+          Exact chip and RAM were not recorded.
+      prompting_notes: >-
+        Close remaining sorries without changing the mathematical approach
+        unless revision is necessary, prioritize direct implementations, and
+        independently verify subagent work.
+      resulting_state: >-
+        Closed most remaining leaves and developed the negative-twist route,
+        but ended in a state that was not accepted: the final assembly was
+        broken and a fixed-coordinate-line shortcut used by that state was
+        false for some smooth equations.
+
+    - method: "agent"
+      models:
+        - "gpt-5.6-sol"
+      framework: "Codex CLI 0.145.0"
+      sessions:
+        - "019f9b45-e30a-7e81-8d2f-db24bc0b356d"
+        - "019f9b62-1247-7a51-acc0-f4cd5d91c558"
+      tool_setup: >-
+        Proactive subagents, adversarial false-statement and source-fidelity
+        audit, full 3,305-job Lake builds, exact statement/no-sorry/non-vacuity
+        guards, axiom checks, scoped Git integration and publication, followed
+        by Mathlib-only comparator packaging.
+      cost:
+        wall_time: >-
+          Approximately 12 hours 11 minutes through commit 4e001458, from
+          2026-07-25 21:54 to 2026-07-26 10:05 UTC; comparator packaging and
+          validation continued afterward, and incremental elapsed time was
+          not recorded.
+        spend_usd: "Subscription-based usage; marginal spend not recorded."
+        hardware: >-
+          Hosted model API; Lean compilation on an arm64 Apple Silicon Mac.
+          Exact chip and RAM were not recorded.
+      prompting_notes: >-
+        Adversarially locate false or unfaithful statements, reconstruct the
+        exact state left by prior agents, preserve the theorem boundary,
+        verify the complete repository build and printed axioms, and commit
+        only intentional scope.
+      resulting_state: >-
+        Produced a counterexample to the fixed-line shortcut, replaced it with
+        frame-incidence line selection and compatible negative-twist gluing,
+        closed the headline without sorryAx, verified eight endpoint axiom
+        sets and the complete build, and published commit 4e001458. Commit
+        dfd9208c then published the Mathlib-only Statement, Solution,
+        duplicated trusted definitions, comparator configuration, Lake
+        targets and this production ledger. Upstream Comparator v4.32.0,
+        retargeted to the project's exact Lean v4.32.1, subsequently accepted
+        the byte-identical committed files on macOS and Linux.
+
+  spend_usd: >-
+    Subscription-based usage across Claude Code, Codex and Grok Build; no
+    dollar total was recorded.
+  notes: >-
+    The seven entries are successive logical phases, but several session
+    spans overlap and include idle or background time. Their elapsed wall
+    times must not be summed as person-hours or compute-hours. Human
+    mathematical direction and acceptance decisions were supplied throughout
+    by Matthew Robert Ballard. Session logs, rather than commit trailers alone,
+    were used to allocate model work across overlapping handoffs. Local checks
+    ran on an arm64 Apple Silicon Mac with macOS 26.5.2 build 25F84; the exact
+    chip and RAM were not recorded.
+
+fidelity:
+  divergences: >-
+    The Lean headline matches the source's field, smoothness, nonzero and
+    bidegree hypotheses and proves unirationality by a dominant rational map
+    from relative affine 3-space. The implementation represents P^2 x P^2
+    and its hypersurface through explicit standard charts, ideal sheaves and
+    chart gluing because the needed product-Proj interface is not available
+    directly in the pinned Mathlib. It does not formalize the source's
+    divisor-class identity T_L ~ aH_x + H_y, the bounds 1 <= a <= 10 and
+    2a <= 20, or the general exact-degree-20 refinement. The comparator-facing
+    theorem in Solution.lean restates the project's
+    Nonempty UnirationalParametrization package as the equivalent direct
+    existential dominant rational map. Its vocabulary is defined independently
+    from Mathlib in Statement.lean and Solution/Definitions.lean so the
+    comparator uses no unchecked definition holes. Two legacy sorries remain
+    outside the headline dependency closure.
+
+review:
+  status: "self-assessed; agent-reviewed"
+  reviewers:
+    - "Matthew Robert Ballard (project direction and acceptance)"
+    - "Independent source-only AI-agent review (2026-07-26)"
+  notes: >-
+    This is not independent external peer review or source-author
+    verification. Review included an exact theorem-statement guard,
+    no-sorry/no-sorryAx guards for the headline, eight direct #print axioms
+    checks, a concrete smooth non-vacuity witness, a counterexample to the
+    rejected fixed-coordinate-line route, a 3,305-job whole-project build,
+    and an independent read-only audit of the family quantifiers, transition
+    orientation, factor cancellation, coefficient invariance and circularity.
+    The comparator modules and an exact comparator-faithful traversal matched
+    all reachable constants. Upstream Comparator v4.32.0, retargeted to Lean
+    v4.32.1, accepted byte-identical committed files on macOS and Linux,
+    including theorem-closure comparison, permitted-axiom checking and Lean
+    default-kernel replay. This did not establish adversarial sandbox security:
+    macOS used Comparator's insecure fake-landrun shim, while the
+    Apple-container Linux run used real landrun through a command-separator
+    adapter, but its kernel had CONFIG_SECURITY_LANDLOCK unset and
+    Comparator's --best-effort mode degraded to no Landlock restrictions.
+
+alignment:
+  namespace: "BConicBundleMultisections"
+  statements:
+    - source: "Every smooth bidegree-(2,3) hypersurface in P^2 x P^2 is unirational"
+      lean: "BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization"
+      module: "BConicBundleMultisections.MainTheorem"
+      status: "proved"
+      note: >-
+        The project headline packages a dominant rational map from relative
+        affine 3-space as Nonempty UnirationalParametrization.
+
+    - source: "Comparator-facing form of the headline theorem"
+      lean: "Bidegree23Unirationality.smooth_bidegree23_hasUnirationalParametrization"
+      module: "Solution"
+      status: "proved"
+      note: >-
+        An equivalent direct existential formulation with a Mathlib-only
+        trusted statement and no comparator definition holes.
+
+    - source: "Existential IsUnirationalOver wrapper"
+      lean: "BConicBundleMultisections.smooth_bidegree23_isUnirationalOver"
+      module: "BConicBundleMultisections.MainTheorem"
+      status: "proved"
+
+    - source: "Choose a line with the required G3/G4 section data"
+      lean: "BConicBundleMultisections.Standard.exists_actualG3G4LineSection_via_frameIncidence"
+      module: "BConicBundleMultisections.Standard.G3FrameIncidenceSelection"
+      status: "proved"
+
+    - source: "Assemble the residual component and conic tower into an affine 3-space parametrization"
+      lean: "BConicBundleMultisections.hasUnirationalParametrization3_biprojectiveZeroLocus"
+      module: "BConicBundleMultisections.MainTheoremTargetReduction"
+      status: "proved"
+
+    - source: "The divisor class T_L ~ aH_x + H_y with 1 <= a <= 10 and degree 2a <= 20"
+      lean: ""
+      module: ""
+      status: "not-formalized"
+      note: "Retained at certificate level only."
+
+    - source: "For a general equation, a = 10 and the parametrization has exact degree 20"
+      lean: ""
+      module: ""
+      status: "not-formalized"
+      note: "Retained at certificate level only."
+
+acknowledgements: >-
+  Thanks to the Mathlib community and contributors, especially the
+  algebraic-geometry and commutative-algebra infrastructure and Loogle; to
+  Joe Harris for the source question; and to the authors of the cited
+  residual-line Lattes-map literature. The formalization was developed under
+  Matthew Robert Ballard's mathematical direction with AI assistance from
+  Claude Fable 5 and Claude Opus 4.8/5 through Claude Code, GPT-5.6-sol
+  through Codex, and Grok 4.5 through Grok Build; phase details and accepted
+  boundaries are recorded above.

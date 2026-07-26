@@ -1,8 +1,10 @@
 # unirational
 
-Computational attacks on open questions from Joe Harris's Seattle lecture
-notes *Rationality, Unirationality and Rational Connectivity*, organized as
-four problems with machine-verified certificates.
+Computational attacks on unirationality and related birational-geometry
+questions, organized as five problems with machine-verified certificates.
+Problems A--D originate in Joe Harris's Seattle lecture notes
+*Rationality, Unirationality and Rational Connectivity*; Problem E studies
+the exceptional Klein-cubic action of \(\operatorname{PSL}_2(\mathbf F_{11})\).
 
 - **[Problem A](problems/A-expected-dimension-curves/)** — expected dimension
   of spaces of degree-e rational curves on general hypersurfaces at the
@@ -23,7 +25,10 @@ four problems with machine-verified certificates.
   symbolic and finite-field certificates, a complete class-(1,1)
   nonexistence theorem, a corrected rehabilitation of the Del Centina–Verdi
   1980 special example, and an external end-to-end check on
-  /dev/urandom-drawn coefficients (`external_check/`).
+  /dev/urandom-drawn coefficients (`external_check/`).  The headline theorem
+  is fully formalized in Lean/Mathlib v4.32.1, with exact no-`sorryAx` guards;
+  its Mathlib-only comparator package has been accepted by Comparator on
+  macOS and Linux.
 - **[Problem C](problems/C-lines-debarre-de-jong/)** — the Debarre–de Jong
   conjecture at the open frontier d = 9.  The field-free statement is
   **refuted** (the degree-9 Fermat over F_2 is smooth with 12-dimensional
@@ -78,8 +83,17 @@ four problems with machine-verified certificates.
   flex/Hessian incidence has ample canonical class in every d ≥ 4.  Other
   covariants, special-seed normalization/singularity control, classes
   (1,k) for k ≥ 2, and the headline remain open.
+- **[Problem E](problems/E-klein-cubic/)** —
+  \(\operatorname{PSL}_2(\mathbf F_{11})\)-equivariant unirationality of the
+  Klein cubic threefold.  **Open**: the exact reduction proved here is
+  \(C\) is \(G\)-unirational if and only if
+  \(\operatorname{ed}_{\mathbf C}(G)=3\), while a negative answer is
+  equivalent to essential dimension 4.  The repository records the exact
+  action and generic frame, a portable certificate suite, and scoped
+  exclusions for several bounded covariant constructions; none is an
+  all-degree negative result.
 
-`problems/README.md` records the shared conventions and the three
+`problems/README.md` records the A--D shared conventions and the three
 semicontinuity/properness certificates that turn single finite-field
 computations into characteristic-zero theorems.
 

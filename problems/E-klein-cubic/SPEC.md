@@ -27,6 +27,11 @@ generically free.
 > the \(G\)-action on the Klein cubic as an exception whose equivariant
 > unirationality is unknown.
 
+The portable `certificates/` package and the documentation in this directory
+are tracked. The 2.4 GB `tmp/` computation tree cited below is intentionally
+ignored; those paths record local provenance for newer solver outputs and are
+not artifacts available from a fresh clone.
+
 Older papers sometimes call the property below *linearizability*.  In this
 file, *\(G\)-linearizable* is reserved for equivariant birationality to a
 linear action; that stronger property is known to fail.  The target here is
@@ -250,7 +255,14 @@ without resolving the binary headline:
    a flat connection \(\nabla\), and the KLS alternative is exactly whether
    \(\det[a,\nabla_1a,\ldots,\nabla_4a]=0\) has a point
    \([a]\in\mathbf P^4(K)\).  The reduction is exact but neither solvability
-   nor universal nonvanishing is known;
+   nor universal nonvanishing is known.  The required invariant-field
+   arithmetic is now certified: the Hironaka basis has rank 12, its complete
+   multiplication table and \(\tau\)-normalized projective model are checked,
+   and exact addition, inversion, trace, and norm are implemented.  The four
+   matrices \(\Gamma_r\) are compiled as exact arithmetic circuits, with 121
+   characteristic-zero reduction identities and a semantic specialization
+   check.  Exact rank certificates exclude 121 projective constant and 440
+   Hironaka-linear ansätze, but do not decide the full PDE;
 8. an exact Pfaffian-twist reduction: the nonsplit \(F_{14}\) section is five
    simultaneous quaternionic-Hermitian isotropy equations, and the quaternion
    class persists over its function field, so ambient rationality does not
@@ -270,32 +282,51 @@ without resolving the binary headline:
    terminal solver audit rules out further source sampling and identical
    retries: no resumable basis was saved, all 48 standard affine charts retain
    1,124 independent cubic leading parts, and exact chart probes reproduce the
-   homogeneous degree-four bottleneck.  A future bounded continuation must
-   first use the decomposable-plus-primitive coordinate splitting or a
-   checkpoint-capable solver; a standard chart sweep is stopped.
+   homogeneous degree-four bottleneck.  The exact decomposable-plus-primitive
+   chart \(p_0=1\) has now also been run; it times out at a
+   `44328 x 245460` matrix on a worse trajectory, so the other 31 transformed
+   charts are stopped.  A future bounded continuation requires relative
+   elimination with its exceptional strata, not another chart sweep.
    Five explicit degree-eight covariants give a
    generic frame over \(\mathbf C(\mathbf P(V_6))^G\), hence an all-degree
    normal form for rational projective-source maps; all ten coordinate lines
-   in that frame are empty, but points using at least three coordinates remain
-   open;
+   in that frame are empty.  On its ten ternary coordinate planes, every
+   invariant-coefficient ansatz through degrees 0, 4, 6, 8, and 10, the
+   five-dimensional space \(S_{12}\), and all 90 spaces
+   \(S_{12}+\langle p_j\rangle\) are empty; one two-direction gate is also
+   empty and the other 359 were stopped by the measured budget.  Unrestricted
+   points using at least three coordinates remain open;
 10. the exact Kraft--Loetscher--Schwarz criterion
    \(\operatorname{ed}(G)=3\) iff some nonzero homogeneous self-covariant has
    identically zero Jacobian, together with a complete dominance exclusion
    through degree eleven.  In degree eleven the complete 12-dimensional
    space gives 496 exact Jacobian quintics, and all twelve projective charts
-   are unit ideals at the good prime 67.  Voisin's current construction makes \(X^{[3]}\)
+   are unit ideals at the good prime 67.  In degree twelve the complete
+   16-dimensional space gives the full rank-721 coefficient system.  Its
+   12-dimensional decomposable projective locus and four-dimensional pure
+   primitive projective locus are empty, while the first genuinely mixed
+   chart times out at `104836 x 166810`; the other three mixed charts were
+   not launched.  Voisin's current construction makes \(X^{[3]}\)
    \(G\)-very-versal, but after pulling the universal marked cover back along
    her parameterization, the marked source is birationally fibered over \(X\)
    itself and hence does not solve the required point-selection problem. This
    finite dominance exclusion has no all-degree cutoff; and
-11. an exact `xCD` ternary-cubic and Jacobian model, a certified
-   finite-field flex-torsor presentation, and a genuine-versus-fake descent
-   audit. The finite-field rank computations are nonverdicts and do not
-   transfer to the generic characteristic-zero plane. Exhaustive generic
-   descent now has exact formulas for all ten invariant generators, but still
-   requires the certified Hironaka basis and invariant-field multiplication
-   table, followed by the distinct \(E[3]\) Kummer algebra or the
-   three-flex-line algebra for true second descent.
+11. an exact `xCD` ternary-cubic and Jacobian model over the certified
+   \(K_{\rm proj}\) arithmetic, together with the genuine rank-nine \(E[3]\)
+   algebra \(\mathcal R=\operatorname{Map}_{K_{\rm proj}}
+   (E[3],\overline K_{\rm proj})\) and normalized
+   group/difference/Kummer-function formulas.  An
+   independent \(s=1\) control also certifies the distinct flex torsor and
+   true degree-12 three-flex-line algebra, but its rational flex makes the
+   class trivial.  A separate low-height coordinate-line control with rational point
+   \(O=[1:0:1]\) and irreducible flex cover proves a nonzero class that is
+   abstractly Kummer, \(\delta([H-3O])\), where \(H\) is a hyperplane
+   section, but does not compute its explicit
+   representative.  The remaining first-descent datum is the generic class
+   \(\alpha_{\mathcal R}=\det(M_T)\bmod \mathcal R^{\times3}\), requiring a Galois-equivariant
+   \(\operatorname{GL}_3(\mathcal R)\) lift \(M_T\) of the projective translation
+   action; true second descent still requires the generic twisted
+   three-flex-line algebra, line forms, and constants.
 
 The generic-twist frame reduces E2 to finding a nonzero invariant-field
 solution of \(F([x\ C\ D\ E\ K]a)=0\).  The degree bound in item 4 is finite
@@ -306,8 +337,9 @@ Degree thirteen is excluded by a separate scalar-quotient reduction: 48
 necessary cubics on \(M_{13}/fM_{10}\) force the scalar plane, and exact
 degree-ten and tangent leading ideals eliminate both possible lifts. An
 independent completed 21-variable q67 Gröbner calculation gives an Artinian
-leading ideal and corroborates the same bounded exclusion. The next
-unrestricted homogeneous degree is fourteen. On the projective
+leading ideal and corroborates the same bounded exclusion. Degree fourteen is
+excluded by its structural successor, so the next unrestricted homogeneous
+degree is fifteen. On the projective
 Schur source, degree ten is now completely excluded with quotient Hilbert
 function \([1,21,231,1301,889,0]\). In degree twelve the decomposable sector
 has dimension 16 inside the full 48-dimensional covariant space and is
@@ -322,9 +354,12 @@ degree-four matrix with no leading output. Its terminal audit proves that the
 saved work is not resumable, all standard-chart leading-cubic ranks stay
 1,124, and two exact chart probes hit the same first degree-four matrix.
 Accordingly more sampling, an identical retry, and an unmodified standard
-chart sweep are stopped; the degree-twelve locus remains undecided. The degree-eight rational
-frame is exhaustive in all degrees, but only its ten coordinate lines are
-excluded; its ternary and larger supports remain open. On the Pfaffian target the full
+chart sweep are stopped.  The transformed \(p_0=1\) chart also times out on a
+worse terminal matrix, so its other 31 charts are stopped; the degree-twelve
+locus remains undecided. The degree-eight rational frame is exhaustive in all
+degrees.  Its ten coordinate lines and the bounded ternary coefficient
+envelopes through all 90 spaces \(S_{12}+\langle p_j\rangle\) are excluded,
+but unrestricted ternary and larger supports remain open. On the Pfaffian target the full
 degree-sixteen space has been reconstructed, but its exact solve timed out
 without a geometric verdict, so the exclusion remains through degree fifteen.
 The three-column bound is likewise finite; a point in one of those planes
@@ -458,7 +493,9 @@ index-at-most-two splitting and quadratic descent, even though
 \(\mathbf P(V_6)\) itself is not weakly versal. Constant-coefficient
 covariants have been excluded only in degrees \(4,6,8,10\). For rational
 coefficients, the complete degree-six pencil and the ten coordinate lines of
-the exhaustive degree-eight frame are excluded; ternary and larger frame
+the exhaustive degree-eight frame are excluded.  The ten ternary planes also
+have exact bounded coefficient exclusions through all 90 spaces
+\(S_{12}+\langle p_j\rangle\), but unrestricted ternary and larger frame
 supports remain open.
 
 ## Verification and evidence standards

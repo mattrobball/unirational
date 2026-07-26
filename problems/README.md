@@ -1,9 +1,10 @@
-# Problems: CAS hunts around Harris's Seattle questions
+# Problems: CAS hunts in unirationality and equivariant birational geometry
 
-Four computational problems extracted from the open questions in Joe Harris,
+Five computational problems selected for exact computer-algebra and formal
+verification. Problems A--D were extracted from open questions in Joe Harris,
 *Rationality, Unirationality and Rational Connectivity* (Seattle AG institute
-lecture notes), selected and ranked for amenability to computer-algebra
-example/counterexample hunting. Ordered by expected theorem-yield per CPU-hour:
+lecture notes). Problem E is the outstanding Klein-cubic exception in
+equivariant birational geometry.
 
 | ID | Problem | Source question | Expected outcome |
 |----|---------|-----------------|------------------|
@@ -11,8 +12,9 @@ example/counterexample hunting. Ordered by expected theorem-yield per CPU-hour:
 | [B](B-conic-bundle-multisections/SPEC.md) | Rational multisections on every smooth bidegree-(2,3) hypersurface in P^2 x P^2 (unirationality of conic bundles) | Notes pp. 23–24, Question on the third variety + refinement 11b | Resolved: tangent residuals give a horizontal rational surface of even degree at most 20 |
 | [C](C-lines-debarre-de-jong/SPEC.md) | Counterexample sweep for the Debarre–de Jong conjecture at degree 9 | Notes p. 27, "Question (de Jong)" | Likely null result (conjecture believed); a hit = full refutation, major |
 | [D](D-2d-conic-bundles/SPEC.md) | Unirationality of general (2,d) hypersurfaces, d ≥ 4; primary target d = 4 via the tangent-residual double cover | Notes pp. 23–24 ("d large"), continuation of B | Tangent, bitangent, and flex routes are general type; D4 classes (1,0) and (1,1) are excluded, with a two-profile primitive class-(1,2) frontier; headline open |
+| [E](E-klein-cubic/SPEC.md) | \(\operatorname{PSL}_2(\mathbf F_{11})\)-equivariant unirationality of the Klein cubic threefold | Klein-cubic exceptional action retained in the current literature | Open; exactly equivalent here to \(\operatorname{ed}_{\mathbf C}(G)=3\), with bounded covariant and descent routes sharply delimited |
 
-## Shared conventions
+## Shared conventions for A--D
 
 **Ambient notation.** The notes use `X ⊂ P^{n+1}` a hypersurface of degree d
 (so dim X = n). Much of the literature (Debarre–de Jong, Riedl–Yang) uses
@@ -35,7 +37,8 @@ Keep every run scripted and logged: one `.m2`/input file + one log per
 ## The three master certificates
 
 These are what turn F_p computations into characteristic-0 theorems, and they
-are the backbone of all four specs.
+are the shared backbone of Problems A--D. Problem E has its own exact
+cyclotomic, good-reduction, and torsor conventions in its specification.
 
 1. **Krull lower bound (free).** A subscheme of P^{M} (or A^M) cut by c
    equations has every component of dimension ≥ M − c. So "actual dim ≥
@@ -79,9 +82,10 @@ with an honest Grobner/`dim` run before logging them as results.
 | Problem | Stage | Last update |
 |---------|-------|-------------|
 | A | CLOSED — all target rows settled (Coskun–Starr + new deg-2/3 proofs); fiberwise-saturation certificate found invalid, see RESOLUTION.md | 2026-07-22 |
-| B | CLOSED affirmatively for every smooth member — tangent residuals give a horizontal rational surface and a parametrization of even degree at most 20 | 2026-07-22 |
+| B | CLOSED affirmatively for every smooth member — tangent residuals give a horizontal rational surface and a parametrization of even degree at most 20; the headline is formalized in Lean/Mathlib v4.32.1 and its Mathlib-only Comparator package is accepted | 2026-07-26 |
 | C | Field-free statement REFUTED (char-2 Fermat, dim 12 vs 6); char-0 case open, reduced to N=9 singular line-rich sixfolds + LT remainder cases | 2026-07-22 |
 | D | D1/D2 CLOSED; D3 tangent limits, uniform special-seed dualizing positivity, smooth ramification comparison, generic two-point separation, quartic middle/bottom multiplier-boundary folds, bitangent, and flex complete; D4 k=0 and k=1 excluded, k=2 reduced to two primitive squarefree profiles with the proper-high [3,2^7] exactly-two-nonproper singleton row, the base-point-free square-factor locus, isolated-base rows e=2,3,4, and the connected e=5 row closed, leaving e=1. Open-residual local singularities, other covariants, k>=2, and headline remain open | 2026-07-23 |
+| E | OPEN — exact reduction \(C\) is \(G\)-unirational iff \(\operatorname{ed}_{\mathbf C}(G)=3\); exact action/frame and scoped bounded covariant exclusions certified, with no all-degree cutoff | 2026-07-26 |
 
 ## Provenance
 
@@ -100,3 +104,6 @@ the session that produced these specs. Key status facts used:
   general (2,d) conic bundles in P^2 x P^2 for d ≥ 4.
 - Very general quartic fourfolds not stably rational (Totaro; Schreieder);
   existence of any smooth rational hypersurface of degree ≥ 4 open.
+
+Problem E is not part of the Harris numbering. Its source trail and the exact
+current literature boundary are recorded in `E-klein-cubic/SPEC.md`.

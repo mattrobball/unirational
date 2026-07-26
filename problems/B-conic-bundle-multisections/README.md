@@ -4,8 +4,18 @@ Lean 4 / Mathlib workspace for an idiomatic formalization of the tangent-residua
 every smooth bidegree `(2, 3)` hypersurface in `ℙ² × ℙ²` over an algebraically closed field of
 characteristic zero is unirational.
 
-This initial milestone supplies a reproducible project and an API-by-API formalization ledger;
-it does **not** claim that the unirationality theorem has already been formalized.
+The faithful headline theorem is fully formalized. Its exact type is pinned by
+`BConicBundleMultisections/MainTheoremGuard.lean`, and both the theorem and its existential
+wrapper depend only on `propext`, `Classical.choice`, and `Quot.sound`, not `sorryAx`. Two direct
+legacy `sorry` declarations remain in modules outside the headline dependency closure; see
+`FORMALIZATION_STATUS.md` for the exact boundary. Separately, trusted `Statement.lean` contains
+the intentional challenge placeholder that Comparator replaces with `Solution.lean`.
+
+The comparator-facing package uses a `Statement.lean` that imports only Mathlib. Upstream
+Comparator v4.32.0, retargeted to this project's exact Lean v4.32.1 toolchain, accepted the
+committed statement and solution on macOS and Linux. Those runs validate theorem closure,
+permitted axioms, export, and Lean default-kernel replay; they do not establish adversarial
+sandboxing on either host configuration.
 
 ## Toolchain
 
@@ -14,17 +24,27 @@ it does **not** claim that the unirationality theorem has already been formalize
   `520045ab14e26149ee970e2e617ca04b09bde5d6`, pinned by `lake-manifest.json`
 - Root module: `BConicBundleMultisections`
 
-Build and lint from this directory with:
+Reproduce the main build and direct audit from this directory with:
 
 ```sh
-lake --wfail build
-lake lint
+lake -q --log-level=error build
+lake env lean MainTheoremAxiomAudit.lean
+lake -q --log-level=error build Statement Solution
 ```
 
-The first build may compile Mathlib from source when a binary cache for this exact release is
-not yet available.  The lint command is wired to the same Batteries lint driver used by Mathlib.
+The first build may compile Mathlib from source when a binary cache for this exact release is not
+yet available.
 
-## Files
+## Selected files
+
+- `Statement.lean`: trusted Mathlib-only comparator statement.
+- `Solution.lean` and `Solution/Definitions.lean`: comparator proof and independently duplicated
+  trusted vocabulary.
+- `comparator/smooth_bidegree23_unirationality.json` and `formalization.yaml`: comparator
+  configuration and provenance.
+- `BConicBundleMultisections/MainTheorem.lean`, `MainTheoremGuard.lean`, and
+  `MainTheoremAxiomAudit.lean`: public theorem, exact statement/no-`sorry` guards, and direct axiom
+  audit.
 
 - `BConicBundleMultisections/BigradedPolynomial.lean`: generic biprojective coordinates,
   bihomogeneity, and the two Euler identities.

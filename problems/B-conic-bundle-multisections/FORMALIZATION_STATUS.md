@@ -39,8 +39,8 @@ Environment:
 
 - Lean `4.32.1`
 - Mathlib `v4.32.1`
-- publication branch `agent/formalize-conic-bundle-and-audit-klein-cubic`, based on
-  `origin/main` at `d0adc218e9116e300c4a6219df70c3995289b612`
+- publication target `main`, fast-forwarded from
+  `agent/formalize-conic-bundle-and-audit-klein-cubic`
 
 Checks run from this problem directory:
 
@@ -61,6 +61,13 @@ lake build
 The build emits existing style/linter warnings, but no errors. Focused source-and-axiom-audit
 builds also passed for the chart transition, factor transition, automatic gluing, projective
 integrality, and final target-reduction layers.
+
+The Mathlib-only `Statement.lean`/`Solution.lean` package was also accepted by upstream Comparator
+v4.32.0 retargeted to Lean v4.32.1 on macOS and Linux. Both runs reached theorem-closure,
+permitted-axiom, export, and Lean default-kernel acceptance. The macOS run used Comparator's
+insecure fake-landrun shim; the Apple-container Linux kernel had Landlock disabled, so its
+`--best-effort` sandbox degraded to no Landlock restrictions. This is a proof-validation result,
+not an adversarial sandbox-security claim.
 
 The commit containing this file publishes the result together with its axiom-audit corpus and the
 separate, explicitly open Klein-cubic research dossier. Exploratory B-side files outside the live
@@ -114,10 +121,11 @@ The main assembly lives in:
 Each new load-bearing endpoint has a neighboring `AxiomAudit.lean` file and was checked to depend
 only on `propext`, `Classical.choice`, and `Quot.sound`.
 
-## The exact remaining `sorry` boundary
+## The exact remaining project-module `sorry` boundary
 
-The repository is not globally `sorry`-free. An anchored source census finds exactly two direct
-legacy declarations:
+Excluding trusted comparator input `Statement.lean`, whose theorem body is intentionally the
+challenge placeholder, an anchored source census finds exactly two direct legacy declarations in
+the project modules:
 
 | Module | Declaration | Current role |
 |---|---|---|
@@ -163,11 +171,12 @@ lake build BConicBundleMultisections.MainTheoremGuard
 lake env lean MainTheoremAxiomAudit.lean
 lake build BConicBundleMultisections
 lake build
-rg -n '^[[:space:]]*sorry\b' --glob '*.lean' .
+rg -n '^[[:space:]]*sorry\b' --glob '*.lean' --glob '!Statement.lean' .
 rg -n '^[[:space:]]*(public[[:space:]]+)?(admit|axiom|axioms|opaque)[[:space:]]+[A-Za-z_]' \
   --glob '*.lean' .
 git diff --check
 ```
 
-The `sorry` census should show only the two legacy declarations listed above. The declaration
-census should find no `admit` or source `axiom` declaration.
+The filtered `sorry` census should show only the two legacy declarations listed above. An
+unfiltered census also shows the intentional comparator challenge hole in `Statement.lean`. The
+declaration census should find no `admit` or source `axiom` declaration.

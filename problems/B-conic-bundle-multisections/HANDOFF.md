@@ -26,22 +26,22 @@ The theorem and its existential wrapper both depend on exactly:
 In particular, neither depends on `sorryAx`. The exact type and no-`sorry` status are pinned by
 `BConicBundleMultisections/MainTheoremGuard.lean`.
 
-The repository is not globally `sorry`-free: it contains exactly two direct placeholders in
-legacy modules, both outside the headline dependency closure. See “Remaining source boundary”
-below. This is repository cleanup, not an open boundary of the main theorem.
+Excluding trusted comparator input `Statement.lean`, whose theorem body is intentionally the
+challenge placeholder, the project modules contain exactly two direct placeholders, both outside
+the headline dependency closure. See “Remaining source boundary” below. This is repository
+cleanup, not an open boundary of the main theorem.
 
 ## Identity and verified state
 
 | Item | Value |
 |---|---|
-| Publication branch | `agent/formalize-conic-bundle-and-audit-klein-cubic` |
-| Base commit | `d0adc218e9116e300c4a6219df70c3995289b612` (`origin/main`) |
+| Publication | `main`, fast-forwarded from `agent/formalize-conic-bundle-and-audit-klein-cubic` |
 | Lean / Mathlib | `v4.32.1` / `v4.32.1` |
-| Publication | The commit containing this handoff is pushed on the branch above |
 | Final focused build | passed, 3,291 jobs |
 | Umbrella build | passed, 3,305 jobs |
 | Default build | passed, 3,305 jobs |
 | Direct headline audit | standard three axioms only |
+| Comparator | accepted on macOS and Apple-container Linux; sandbox caveats in `FORMALIZATION_STATUS.md` |
 | `git diff --check` | passed |
 
 The working tree was already broad and dirty. The publication commit is intentionally scoped to
@@ -187,12 +187,12 @@ lake build BConicBundleMultisections.MainTheoremGuard
 lake env lean MainTheoremAxiomAudit.lean
 lake build BConicBundleMultisections
 lake build
-rg -n '^[[:space:]]*sorry\b' --glob '*.lean' .
+rg -n '^[[:space:]]*sorry\b' --glob '*.lean' --glob '!Statement.lean' .
 rg -n '^[[:space:]]*(public[[:space:]]+)?(admit|axiom|axioms|opaque)[[:space:]]+[A-Za-z_]' \
   --glob '*.lean' .
 git diff --check
 ```
 
 No Lean build process was left running. This handoff is published with the conic-bundle
-formalization and the explicitly open Klein-cubic research dossier on
+formalization and the explicitly open Klein-cubic research dossier on `main`, fast-forwarded from
 `agent/formalize-conic-bundle-and-audit-klein-cubic`.

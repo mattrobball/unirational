@@ -14,6 +14,12 @@ dimension dichotomy, an explicit generic-twist trivialization, and a certified
 bounded covariant exclusion. None of the bounded computations is a negative
 solution.
 
+Artifact scope matters when replaying the ledger: the tracked
+`certificates/` directory is the portable verification subset. The 2.4 GB
+`tmp/` tree containing newer solver outputs and intermediate matrices is
+intentionally ignored, so `tmp/...` citations below are local provenance
+pointers rather than remotely published files.
+
 ## Exact reduction to essential dimension
 
 Let
@@ -403,9 +409,28 @@ x=e_0+s(1,1,1,1,1)
 whose expected L-polynomial degree is 86 instead of 116. Its degree-nine flex
 class is still nonzero and a good fiber again excludes 3-torsion. Frozen
 L-function and 2-Selmer inputs exist but have not been run. Even a completed
-rank-zero calculation would concern only this finite-field, codimension-four
-specialization; no theorem currently transfers it to the generic
-characteristic-zero plane.
+rank-zero calculation would concern only this characteristic-23,
+codimension-four specialization; no theorem currently transfers it to the
+generic characteristic-zero plane.
+
+A separate low-height coordinate-line plane over \(\mathbf F_{23}(t)\) has
+the rational point \(O=[1:0:1]\), while its degree-nine flex eliminant remains
+one exponent-one factor over the cubic constant extension.  Hence this
+distinct flex torsor is nonzero but abstractly Kummer:
+
+\[
+\operatorname{Flex}(C)=[3]^{-1}(Q),\qquad Q=[H-3O],
+\]
+
+where \(H\) is a hyperplane section.
+
+This is a positive control for the cohomological statement, not an explicit
+descent computation: no coordinates for \(Q\) in the saved Jacobian model,
+translation algebra,
+determinant representative, or \(G(Q)\) comparison were obtained.  A
+30-second exact translation-matrix probe timed out before a degree marker.
+No theorem transfers this characteristic-23 function-field control to the generic
+characteristic-zero plane.  See `tmp/xcd_nonzero_kummer/REPORT.md`.
 
 The implementation audit also separates genuine from fake descent. If
 \(F_{\rm flex}\) is the coordinate algebra of the nine flexes, tangent forms
@@ -418,19 +443,35 @@ F_{\rm flex}^{\times}/K^{\times}F_{\rm flex}^{\times3}.
 The genuine first-Kummer equation instead uses the distinct algebra
 
 \[
-R=\operatorname{Map}_K(E[3],\overline K)
+\mathcal R=\operatorname{Map}_{K_{\rm proj}}
+  (E[3],\overline K_{\rm proj})
 \]
 
-together with a representative \(\alpha_R\) and normalized functions
-\(G_T\). A true second 3-descent also needs the degree-twelve algebra of the
-twelve lines through triples of flexes, its line forms, and the fixed curve
-constants. Finishing the current flex-algebra denominator inversion would
-therefore not, by itself, decide Kummer membership.
+together with a representative \(\alpha_{\mathcal R}\) and normalized functions
+\(G_T\).  This algebra is now installed generically over the projective
+invariant field as
 
-An exhaustive calculation over
-\(K_{\rm proj}=\mathbf C(\mathbf P(W))^G\) first needs honest arithmetic in
-that field. Exact primitive integral invariants of degrees 10, 11, 12, and 14
-are now installed. Their constructions are
+\[
+K_{\rm proj}\times
+K_{\rm proj}[x,y]/(\psi_3(x),y^2-x^3-Ax-B),
+\]
+
+with exact group, difference, and normalized Kummer-function formulas.  The
+generic torsor class is not yet installed.  The correct target is
+
+\[
+\alpha_{\mathcal R}=\det(M_T)\pmod {\mathcal R^{\times3}},
+\]
+
+where \(M_T\in\operatorname{GL}_3(\mathcal R)\) is a Galois-equivariant lift of the
+projective translation action of \(T\in E[3]\) on the cubic.  Constructing
+this universal matrix is the remaining first-descent boundary.  A true second 3-descent also needs the
+degree-twelve algebra of the twelve lines through triples of flexes, its line
+forms, and the fixed curve constants.
+
+Honest arithmetic in the projective invariant field is now complete. Exact
+primitive integral invariants of degrees 10, 11, 12, and 14 are installed.
+Their constructions are
 
 \[
 \langle df_5,E\rangle,\quad
@@ -439,17 +480,23 @@ are now installed. Their constructions are
 \]
 
 and exact indecomposable-rank and invariance certificates are in
-`tmp/xcd_invariant_field/f10_probe/REPORT.md`. The remaining finite target is
-to certify the proposed parameter system and rank-twelve Hironaka basis over
-\(\mathbf C[f_3,f_5,f_6,f_8,f_{11}]\), compute its multiplication table, and
-normalize it by \(\tau=f_3^2/f_5\). This gives a degree-twelve model of
-\(K_{\rm proj}\) over a rational four-variable field and hence exact
-inversion, trace, and norm. Factoring over the ambient 660-fold cover
-\(\mathbf C(\mathbf P(W))\) is not a substitute. Positive candidates may be
-searched for there, but must be certified by exact invariance of the
-coordinate ratios and the cleared cubic identity. See
-`tmp/xcd_descent_math/REPORT.md` and
-`tmp/xcd_invariant_field/REPORT.md`.
+`tmp/xcd_invariant_field/f10_probe/REPORT.md`.  The primaries
+\(f_3,f_5,f_6,f_8,f_{11}\) are certified algebraically independent; Adler's
+twelve secondaries form a certified free Hironaka basis; the complete
+12-by-12 multiplication table is checked; and normalization by
+\(\tau=f_3^2/f_5\) gives a degree-twelve model over a rational four-variable
+field with exact addition, inversion, trace, and norm.
+
+All ten generic `xCD` coefficients, and the universal \(c_4,c_6,\Delta\),
+have been evaluated exactly in this model.  At the independent \(s=1\)
+control fiber, the genuine \(E[3]\) algebra, distinct flex torsor, and true
+three-flex-line algebra with Frobenius orbit degrees `4+8` satisfy all group,
+incidence, norm, and Frobenius identities.  Its rational flex makes the class
+trivial, so it does not validate a nonzero generic
+\(\alpha_{\mathcal R}\).  The generic twisted line algebra, line forms, and
+constants also remain open.  See
+`tmp/kproj_arithmetic/REPORT.md`, `tmp/xcd_genuine_descent/REPORT.md`, and
+`tmp/xcd_descent_math/REPORT.md`.
 
 ## Certified covariant exclusion through degree 14
 
@@ -708,16 +755,36 @@ of the ten coordinate lines \(Kq_i+Kq_j\) contains such a point. Any solution
 in this frame must use at least three coordinates. This support exclusion is
 not an exclusion of ternary or larger rational combinations.
 
+There is nevertheless a substantial bounded ternary exclusion.  On each of
+the ten coordinate planes, the full invariant-coefficient ansätze in degrees
+0, 4, 6, 8, and 10 are projectively empty.  In degree 12 put
+
+\[
+S_{12}=f_4R_8+\langle f_6^2\rangle,\qquad
+\dim S_{12}=5,\quad \dim(R_{12}/S_{12})=9.
+\]
+
+All ten \(S_{12}\) systems and all 90 enlargements
+\(S_{12}+\langle p_j\rangle\) have exact Artinian leading ideals at the good
+prime 23 and are therefore empty in characteristic zero.  The single tested
+two-direction slice \(L(012,S_{12}+\langle p_0,p_1\rangle)\) is also empty.
+Its 47.288-second gate projects all 360 such slices to 4.73 hours, beyond the
+authorized 20-minute budget, so the other 359 were not run.  Those other
+two-direction slices, all combinations of three or more quotient directions, the full
+\(R_{12}\), higher coefficient degrees, and unrestricted ternary
+\(K\)-points remain open.  See `tmp/schur_ternary_planes/REPORT.md` and
+`tmp/schur_ternary_planes/one_primitive/REPORT.md`.
+
 The full degree-twelve constant-coefficient space has dimension 48. Its
 decomposable part
 
 \[
-D_{12}=R_4M_8+R_6M_6+R_8M_4=(R_+M)_{12}
+D_{12}^{V_6}=R_4M_8+R_6M_6+R_8M_4=(R_+M)_{12}
 \]
 
 has exact dimension 16, leaving a 32-dimensional primitive quotient. Exact
-leading ideals exclude the complete projective landing locus in \(D_{12}\)
-and in each of the 32 spaces \(D_{12}+\langle p_j\rangle\) for one explicit
+leading ideals exclude the complete projective landing locus in \(D_{12}^{V_6}\)
+and in each of the 32 spaces \(D_{12}^{V_6}+\langle p_j\rangle\) for one explicit
 primitive quotient basis. A separate complete 48-vector Reynolds basis first
 gave 1,093 independent necessary cubics on the saved prime-field evaluations.
 Restricting those equations to every coordinate support of size at most five
@@ -795,13 +862,16 @@ three primitive coordinates in this fixed quotient basis.  This still does
 not justify a general quotient, arbitrary-plane exclusion, or mixed-variable
 elimination.  It does, however, give the exact next chart cover: any landing
 point has a nonzero primitive quotient coordinate, so the 32 opens
-\(p_j\ne0\) cover the full locus.  The complete equations have not yet been
-transformed to the \(D_{12},p_0,\ldots,p_{31}\) basis and none of these full
-charts has been solved.  The justified gate is to build only \(p_0=1\) and
-continue the cover only if that exact pilot is materially smaller; otherwise
-use the length-439 Artinian \(D_{12}\) fiber as an anchor for relative
-elimination while explicitly tracking exceptional primitive strata.  See
-`tmp/projective_source_degree12_chart_probe/REPORT.md`.
+\(p_j\ne0\) cover the full locus.  The complete 1,124 equations have now been
+transformed to the \(D_{12}^{V_6},p_0,\ldots,p_{31}\) basis and the authorized gate
+\(p_0=1\) has been run.  It timed out after 600.877 seconds with zero leading
+output at a `44328 x 245460` matrix, a worse trajectory than the original
+standard chart.  The other 31 charts were therefore not launched.  The
+decomposable quotient has Hilbert function `[1,16,136,286,0]` and length 439,
+but using it for relative elimination requires monic reductions and explicit
+control of determinant, Fitting, and rank-drop exceptional strata.  It is not
+a flatness theorem and cannot simply be imposed on mixed charts.  See
+`tmp/projective_source_degree12_primitive_chart/REPORT.md`.
 
 ## Covariant-dimension criterion and the third symmetric power
 
@@ -835,10 +905,30 @@ retained Jacobian quintics span the complete determinant-coefficient space.
 Exact `msolve` calculations return the unit ideal on all twelve triangular
 charts of \(\mathbf P^{11}\); the two hardest charts take 85.89 and 18.57
 seconds. Proper specialization transfers both exclusions to characteristic
-zero. Neither the KLS theorem nor finite
-generation of the covariant module gives an all-degree cutoff; an explicit
-\(S_5\)-module counterexample rules out that shortcut. Degree twelve and
-above remain open for this Jacobian test.
+zero.
+
+Degree twelve has also been reconstructed completely.  The covariant space
+has dimension 16, the determinant has source degree 55, and 728 deterministic
+source points produce the full rank-721 universal coefficient span inside
+the 721-dimensional invariant space \(R_{55}\).  In the exact splitting
+
+\[
+M_{12}^{W}=D_{12}^{W}\oplus P_{12}^{W},\qquad \dim D_{12}^{W}=12,
+\quad \dim P_{12}^{W}=4,
+\]
+
+the pure primitive restriction has rank 56, all quintics in four variables,
+and hence empty projective locus.  All twelve triangular charts of
+\(\mathbf P(D_{12}^{W})\) are unit ideals.  The genuinely mixed chart
+\(p_0=1\) times out at a degree-seven matrix `104836 x 166810`; it is worse
+than the original chart gate, so \(p_1,p_2,p_3\) were not launched.  Thus
+degree twelve remains open exactly on the mixed locus, not on either pure
+stratum.  See `tmp/degree12_jacobian/REPORT.md` and
+`tmp/degree12_jacobian_structural/REPORT.md`.
+
+Neither the KLS theorem nor finite generation of the covariant module gives
+an all-degree cutoff; an explicit \(S_5\)-module counterexample rules out that
+shortcut. All higher degrees also remain open for this Jacobian test.
 
 Voisin's current construction is equivariant for every projective
 automorphism of a smooth cubic threefold and gives a dominant map from a
@@ -940,13 +1030,25 @@ point. Equivalently, one seeks a \(K\)-line preserved by the connection along
 one nonzero rational vector field. Irreducibility only forbids preservation
 in all four directions and therefore does not settle this condition.
 
-The next finite infrastructure is the certified rank-12 Hironaka
-multiplication table and the four explicit matrices \(\Gamma_r\).  Even after
-that computation, rational solvability or universal nonvanishing of the PDE
-is a new theorem, not a finite-degree Gröbner calculation.  The exact
-derivation and checker are in
-`tmp/ed_binary_attack/ALL_DEGREE_MODULE_AUDIT.md` and
-`tmp/ed_binary_attack/verify_all_degree_module_pde.py`.
+The finite infrastructure is now complete.  The rank-12 Hironaka basis and
+all 78 products are certified, and the four \(\Gamma_r\) are compiled as
+exact arithmetic circuits over that field.  Their inputs comprise 101 exact
+frame/structure reductions and 20 secondary-derivative reductions over
+\(\mathbf Q\).  At the regular specialization
+\((t_3,t_6,t_8,t_{11})=(1,2,3,4)\), the horizontal operator has rank 48,
+the frame determinant has an exact inverse, all 100 matrix entries and all
+twelve basis derivatives are reconstructed, and Leibniz is checked on all 78
+products.
+
+The executable circuit gives two sound bounded exclusions.  A good-prime
+rank-60 certificate for the 60-by-60 regular block determinant excludes all
+121 projective constant directions in \(\{-1,0,1\}^5\) and all 440 ordered
+directions \(e_i\pm b_s e_j\), with no survivor.  These are exactly 561
+literal ansätze, not an exhaustive subset of the infinite field.  Rational
+solvability or universal nonvanishing of the PDE remains a new theorem, not a
+finite-degree Gröbner calculation.  The exact derivation and certificates are
+in `tmp/ed_binary_attack/ALL_DEGREE_MODULE_AUDIT.md`,
+`tmp/kproj_arithmetic/REPORT.md`, and `tmp/kproj_connection/REPORT.md`.
 
 ## Finite-orbit and secant audit
 
@@ -1076,24 +1178,26 @@ another form of the unresolved varying-covariant problem.
 
 A complete solution must still do at least one of the following:
 
-- find a landing self-covariant in degree at least 14, or another dominant
+- find a landing self-covariant in degree at least 15, or another dominant
   equivariant parametrization;
 - find a landing covariant into the associated \(F_{14}\) Pfaffian cone in
   degree at least 16;
-- find a projective-source map \(\mathbf P(V_6)\dashrightarrow C\), starting
-  with the degree-twelve constant-coefficient space or with a ternary-or-larger
-  support in the exhaustive degree-eight rational frame;
-- find a Jacobian-zero self-covariant in degree at least 12, equivalently a
-  four-dimensional faithful covariant image;
+- find a projective-source map \(\mathbf P(V_6)\dashrightarrow C\), on the
+  genuinely mixed/large-primitive-support part of the degree-twelve
+  constant-coefficient space or on an unrestricted ternary-or-larger support
+  in the exhaustive degree-eight rational frame;
+- find a Jacobian-zero self-covariant on the genuinely mixed degree-twelve
+  locus or in a higher degree, equivalently a four-dimensional faithful
+  covariant image;
 - solve the equivalent degree-free connection equation
   \(\mathcal J_\nabla(a)=0\) over \(K=\mathbf C(\mathbf P(W))^G\), or prove
   its universal nonvanishing;
 - find a \(K_0\)-point on the explicit generic twisted cubic \(\Phi=0\);
-- for an exhaustive generic `xCD` descent, first reconstruct
-  the certified rank-twelve Hironaka basis and multiplication table from the
-  now-installed generators, and its \(\tau\)-normalized
-  \(K_{\rm proj}/P_0\) model; then construct the genuine \(E[3]\) Kummer algebra and data, or the
-  twisted three-flex-line algebra required for true second descent;
+- for an exhaustive generic `xCD` descent, construct Galois-equivariant
+  \(\operatorname{GL}_3(\mathcal R)\) translation lifts giving
+  \(\alpha_{\mathcal R}=\det(M_T)\bmod \mathcal R^{\times3}\) in the installed genuine \(E[3]\)
+  algebra, then construct the generic twisted three-flex-line algebra, line
+  forms, and constants required for true second descent;
 - construct a torsor-dependent semilinear degree-74 curve through the
   degree-220 orbit point, leaving a quadratic residual cycle;
 - find such a point in a three-column frame plane in total degree at least 15;
