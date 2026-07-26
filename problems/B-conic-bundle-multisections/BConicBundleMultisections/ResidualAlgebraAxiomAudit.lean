@@ -1,0 +1,14 @@
+module
+
+public import BConicBundleMultisections.ResidualDiscriminantGenericConic
+public import BConicBundleMultisections.ResidualRelationBigrading
+
+open BConicBundleMultisections
+
+#print axioms evalAffineTwoPoint_residualConicDiscriminantOn
+#print axioms exists_eval_ne_zero_of_residualAvoidsConicDiscriminantOn
+#print axioms aeval_sndConicDiscriminant_ne_zero_iff_smul
+#print axioms det_polarMatrix_sndConicAt
+#print axioms sndConicAt_fraction_nonsingular_of_discriminant_ne_zero
+#print axioms secondDegree_one_factor_of_mem_span_pair
+#print axioms residualEquationOn_secondBlock_comap_radical_eq_bot

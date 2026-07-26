@@ -1,0 +1,5 @@
+module
+
+public import BConicBundleMultisections.Standard.ResidualLineMapInjective
+
+#print axioms BConicBundleMultisections.Standard.exists_pencil_of_hasCommonResidualLineMap

@@ -1,0 +1,24 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.Standard.G3G4ActualLineSelection
+
+/-! Focused axiom audit for the clean common-line boundary. -/
+
+open BConicBundleMultisections.Standard
+
+#print axioms exists_G3_section_and_pointwiseG4_section_of_smooth
+#print axioms exists_coeff_minor_ne_zero_of_residualLineNonconstantOn
+#print axioms residualLineNonconstantOn_iff_exists_coeff_minor_ne_zero
+#print axioms inverseStereo_open_of_pointwiseG4StereoCertificateAt_ne_zero
+#print axioms residualAvoidsConicDiscriminantOn_of_stereoAccessiblePointwiseG4
+#print axioms hasNondegenerateLineStereoSection_of_isotropic_of_stereoAccessiblePointwiseG4
+#print axioms hasActualG3G4LineSection_of_stereoAccessiblePointwiseG4
+#print axioms hasActualG3G4LineSection_of_isotropic_of_stereoAccessiblePointwiseG4
+#print axioms hasActualG3G4LineSection_of_coeffMinor_of_stereoCertificate
+#print axioms exists_actualG3G4LineSection_of_exists_stereoAccessible_goodLine
+#print axioms exists_actualG3G4LineSection_of_exists_isotropic_stereoAccessible_goodLine

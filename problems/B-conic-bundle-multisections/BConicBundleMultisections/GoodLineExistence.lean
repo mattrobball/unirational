@@ -10,6 +10,7 @@ public import BConicBundleMultisections.GoodLine
 public import BConicBundleMultisections.ProjectiveCommonZero
 public import BConicBundleMultisections.ResidualHorizontalityLine
 public import BConicBundleMultisections.ResidualLineBasePointFree
+public import BConicBundleMultisections.StereoJacobian
 public import BConicBundleMultisections.Standard.ResidualLineMapInjective
 public import Mathlib.Algebra.MvPolynomial.Funext
 
@@ -42,10 +43,12 @@ line `L` is bad, i.e. `ResidualLineConstantOn` holds for every frame (every matr
    Badness of `L` says the three degree-ten coefficient forms of `δ_{C_x}(L)` are
    `c_a · g` for constants `c_a`; evaluating at `x` makes `δ_{C_x}(L)` the fixed linear form
    `∑ c_a y_a` scaled by `g(x)`.  So all the cubic fibres have the same residual-line map.
-2. **Generic smoothness** (§1, borrowed).  Off a nonzero discriminant `D` the fibre `C_x` is a
-   smooth plane cubic.
-3. **Lemma 2.1, pencil form** (§2, borrowed — `Standard.exists_pencil_of_hasCommonResidualLineMap`).
-   Smooth plane cubics with a common residual-line map lie in one pencil.
+2. **Generic smoothness** (§1, proved).  Off a nonzero certificate polynomial `D` the fibre `C_x`
+   is a smooth plane cubic.
+3. **Residual-map rigidity** (§2, proved —
+   `Standard.exists_pencil_of_hasCommonResidualLineMap`).  A checked Hesse-normal-form and finite
+   residual-covariant certificate put smooth plane cubics with a common residual-line map in one
+   pencil (in fact in one projective scalar class).
 4. **Pencil coordinates are quadratic forms** (`exists_isHomogeneous_pencil_coefficients`, proved).
    A dual basis for the pencil reads the coordinates off as second-block coefficients of `F`, which
    are homogeneous of degree two because `F` has bidegree `(2,3)`.
@@ -59,6 +62,11 @@ what replaces it is that the *hypothesis* being contradicted already quantifies 
 lines, and `ResidualLineConstantOn` is a statement about polynomials in `x`, not about a single
 fibre.  Lemma 3.1 is doing work in the source for §5's degree bookkeeping over `k`, which this
 development does not claim.
+
+The conclusion supplied here is condition **G3** only.  The source's separate conditions (2) and
+(3), that the generic intersection `C ∩ L` be reduced and that `[-2]` be injective on its three
+points, are neither stated nor proved by `exists_good_line`; they remain a separate strengthening
+if source-faithful birationality of the vertical surface is required.
 -/
 
 @[expose] public section
@@ -537,25 +545,21 @@ theorem residualLineMapBasepointFree_of_isSmoothPlaneCubic [IsAlgClosed k]
 /-! ### §1: the generic cubic fibre is smooth -/
 
 /--
-**Generic smoothness of the cubic fibration, in coordinates.**
+**A principal open of smooth cubic fibres, in coordinates.**
 
 *What it says.*  For a smooth `(2,3)` hypersurface there is a nonzero form `D` in `x` — the
 discriminant of the cubic fibration — off whose zero locus every plane cubic fibre
 `C_x = specializeFirstCoordinates x F` is a smooth plane cubic.
 
-*Why it is true.*  `certificates/all_smooth_tangent_residual_theorem.md` §1: `ρ : X → ℙ²_x` is
-dominant, `X` is smooth and `char k = 0`, so generic smoothness (Hartshorne III.10.7, borrowed in
-`Standard.exists_nonempty_open_smooth_restrict`) makes the generic fibre a smooth plane cubic; the
-singular locus of the fibration is closed and proper, and any nonzero form vanishing on it will do.
-Such a `D` is homogeneous of positive degree, so `eval x D ≠ 0` already forces `x ≠ 0` — which it
-must, since the fibre over `x = 0` is the zero polynomial and hence not a smooth plane cubic.
+*Why it is true.*  `FirstProjectionSmoothFiber` proves directly that at least one fibre is
+nonsingular.  If every fibre were singular, projective elimination at the generic parameter point
+would produce a singular cubic point over an algebraic closure of the rational function field.
+Extending the three coordinate derivations and differentiating the fibre equation forces the
+first-block derivatives to vanish as well, contradicting the total-space smoothness certificate.
 
-*Status: `sorry`ed.*  This is the coordinate-level packaging of generic smoothness that
-`Standard/GenericSmoothness.lean` discusses at length: the scheme-level statement is not usable
-here, and `ResidualYNonvanishing.exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth` is the same
-theorem in the vocabulary of the stereographic chart.  Discharging either should discharge this;
-they are not stated in a form where one is literally an instance of the other, because that module
-works with the cubic fibre over a *stereo* parameter rather than over a point of `ℙ²_x`.
+The finite elimination-certificate set in `CubicFiberSingularLocus` cuts out the singular-fibre
+locus.  The nonsingular fibre therefore supplies one certificate polynomial that is not identically
+zero; its principal open is the required locus.
 -/
 theorem exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -563,8 +567,18 @@ theorem exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates [IsAlgClose
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
     ∃ D : MvPolynomial (Fin 3) k, D ≠ 0 ∧
       ∀ x : Fin 3 → k, eval x D ≠ 0 →
-        Standard.IsSmoothPlaneCubic (specializeFirstCoordinates (n := 2) x F) :=
-  sorry
+        Standard.IsSmoothPlaneCubic (specializeFirstCoordinates (n := 2) x F) := by
+  obtain ⟨S, _, hS⟩ := exists_defining_set_nonsingular_cubicFiber_of_bidegree23 F hF
+  obtain ⟨x₀, hx₀⟩ := exists_nonsingularCubicFiber_of_smooth F hF hF0
+  obtain ⟨D, hDS, hxD⟩ := (hS x₀).mpr hx₀
+  have hD0 : D ≠ 0 := by
+    intro hD
+    rw [hD, map_zero] at hxD
+    exact hxD rfl
+  refine ⟨D, hD0, ?_⟩
+  intro x hx
+  exact ⟨hF.specializeFirstCoordinates_isHomogeneous x,
+    (hS x).mp ⟨D, hDS, hx⟩⟩
 
 /-! ### §3: every line bad forces the cubic fibration into a pencil -/
 
@@ -573,8 +587,9 @@ theorem exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates [IsAlgClose
 
 This is the source's §3 with Lemma 3.1 replaced by density of `k`-points; see the module docstring
 of `Standard/ResidualLineMapInjective.lean`.  The three inputs are: the bridge
-`hasCommonResidualLineMap_specializeFirstCoordinates_of_forall_residualLineConstantOn` (proved),
-generic smoothness (borrowed), and Lemma 2.1 in its pencil form (borrowed).
+`hasCommonResidualLineMap_specializeFirstCoordinates_of_forall_residualLineConstantOn`, the
+principal-open smooth-fibre theorem, and the axiom-clean Hesse residual-map rigidity theorem.  All
+three inputs are proved in the current tree.
 -/
 theorem exists_pencil_basis_of_forall_residualLineConstantOn [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -798,13 +813,11 @@ cubics; the pencil coordinates are quadratic forms in `x`, so `F = A(x)·f₀(y)
 `not_eq_pencil_of_smooth` says a smooth `F` is not of that shape, because the two conics `A` and `B`
 meet.
 
-*What it stands on.*  Exactly two `sorry`s, both borrowed classical statements: generic smoothness
-(`exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates`, source §1) and Lemma 2.1 in its
-pencil form (`Standard.exists_pencil_of_hasCommonResidualLineMap`, source §2).  Plus the one
-explicit hypothesis `(isSmoothPlaneCubicSubstInvariant k)`, `IsSmoothPlaneCubicSubstInvariant`, which is being supplied
-separately.  Base-point-freeness of the residual-line map is *not* assumed — it is proved in
-`ResidualLineBasePointFree` and discharged by
-`residualLineMapBasepointFree_of_isSmoothPlaneCubic`.  Everything joining these is proved here.
+*What it stands on.*  The concrete principal-open smooth-fibre theorem
+`exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates`, the Hesse-normal-form residual
+rigidity theorem `Standard.exists_pencil_of_hasCommonResidualLineMap`, invertible-substitution
+invariance, and residual-line base-point-freeness.  These dependencies are proved and the focused
+audit `GoodLineExistenceAxiomAudit.lean` checks the final theorem without `sorryAx`.
 
 *The line produced is not canonical.*  The conclusion is `∃` a good line, which is what §3 asks for
 and what `eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous` consumes; no claim is made about

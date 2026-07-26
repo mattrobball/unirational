@@ -246,6 +246,51 @@ theorem mvPolynomialToStandardChart_chartDehomogenization_of_isHomogeneous
   rw [map_pow]
   simpa [x, mul_comm] using hscale.symm
 
+/-- **Injectivity of chart dehomogenization on homogeneous polynomials.**
+
+If a homogeneous form of degree `d` dehomogenizes to zero on the `i`-th standard chart, then it
+was already zero.  Route: `mvPolynomialToStandardChart (chartDehomogenization p) = Away.mk p`,
+so dehomogenization zero forces `Away.mk p = 0`, hence some power of `Xᵢ` annihilates `p` in the
+localization; the ambient polynomial ring over a field is a domain, so `p = 0`.
+
+Used by I1-GI route (B): irreducibility of `chartDehomogenization Q` from irreducibility of the
+homogeneous ternary quadratic `Q`. -/
+theorem chartDehomogenization_eq_zero_of_isHomogeneous
+    {K : Type u} [Field K] (n : ℕ) (i : Fin (n + 1)) (d : ℕ)
+    (p : MvPolynomial (Fin (n + 1)) K) (hp : p.IsHomogeneous d)
+    (h : chartDehomogenization n K i p = 0) : p = 0 := by
+  have hmk :
+      HomogeneousLocalization.Away.mk
+          (MvPolynomial.homogeneousSubmodule (Fin (n + 1)) K)
+          (MvPolynomial.isHomogeneous_X K i) d p (by simpa using hp) = 0 := by
+    have := mvPolynomialToStandardChart_chartDehomogenization_of_isHomogeneous n K i hp
+    rw [h, map_zero] at this
+    exact this.symm
+  have hval :
+      HomogeneousLocalization.val
+        (HomogeneousLocalization.Away.mk
+          (MvPolynomial.homogeneousSubmodule (Fin (n + 1)) K)
+          (MvPolynomial.isHomogeneous_X K i) d p (by simpa using hp)) = 0 := by
+    rw [hmk, HomogeneousLocalization.val_zero]
+  have hmk_loc :
+      Localization.mk p
+        (⟨MvPolynomial.X i ^ d, ⟨d, rfl⟩⟩ :
+          Submonoid.powers (MvPolynomial.X i : MvPolynomial (Fin (n + 1)) K)) = 0 := by
+    simpa [HomogeneousLocalization.Away.val_mk] using hval
+  have hmk' :
+      IsLocalization.mk'
+        (Localization.Away (MvPolynomial.X i : MvPolynomial (Fin (n + 1)) K)) p
+        (⟨MvPolynomial.X i ^ d, ⟨d, rfl⟩⟩ :
+          Submonoid.powers (MvPolynomial.X i : MvPolynomial (Fin (n + 1)) K)) = 0 := by
+    rwa [← Localization.mk_eq_mk'_apply]
+  rw [IsLocalization.mk'_eq_zero_iff] at hmk'
+  obtain ⟨⟨t, ht⟩, htp⟩ := hmk'
+  obtain ⟨k, rfl⟩ := ht
+  have : (MvPolynomial.X i : MvPolynomial (Fin (n + 1)) K) ^ k * p = 0 := htp
+  have hXi : (MvPolynomial.X i : MvPolynomial (Fin (n + 1)) K) ^ k ≠ 0 :=
+    pow_ne_zero k (MvPolynomial.X_ne_zero i)
+  exact (mul_eq_zero.mp this).resolve_left hXi
+
 theorem mvPolynomialToStandardChart_standardChartToMvPolynomial
     (n : ℕ) (R : Type u) [CommRing R] (i : Fin (n + 1))
     (z : StandardChartRing n R i) :

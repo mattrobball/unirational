@@ -1,0 +1,6 @@
+import BConicBundleMultisections.ProperIntegralGlobalSections
+
+open BConicBundleMultisections
+
+#print axioms globalSectionsMapFromBase_bijective_of_isIntegral_of_universallyClosed
+#print axioms exists_scalar_eq_globalSection_of_isIntegral_of_universallyClosed

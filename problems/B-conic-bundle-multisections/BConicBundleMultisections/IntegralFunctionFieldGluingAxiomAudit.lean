@@ -1,0 +1,5 @@
+import BConicBundleMultisections.IntegralFunctionFieldGluing
+
+open BConicBundleMultisections
+
+#print axioms exists_globalSection_of_eq_germToFunctionField_on_cover

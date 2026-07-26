@@ -1,0 +1,5 @@
+import BConicBundleMultisections.ResidualTargetRelationConstantLine
+
+open BConicBundleMultisections
+
+#print axioms residualLineConstantOn_of_mem_targetRelation

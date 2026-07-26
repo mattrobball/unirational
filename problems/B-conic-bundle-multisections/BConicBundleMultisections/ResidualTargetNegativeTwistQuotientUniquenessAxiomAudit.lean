@@ -1,0 +1,6 @@
+import BConicBundleMultisections.ResidualTargetNegativeTwistQuotientUniqueness
+
+open BConicBundleMultisections.BiprojectiveSpace
+
+#print axioms affineChartEquationOverTargetRelationBase_ne_zero_of_smooth_irreducible
+#print axioms factor_over_targetRelationBase_unique_of_smooth_irreducible

@@ -1,0 +1,10 @@
+import BConicBundleMultisections.MainTheoremTargetReduction
+
+open BConicBundleMultisections
+
+#print axioms
+  hasUnirationalParametrization3_biprojectiveZeroLocus_of_uniformTargetGeometry
+#print axioms
+  hasUnirationalParametrization3_biprojectiveZeroLocus_of_uniformNegativeTwistGluing
+#print axioms
+  hasUnirationalParametrization3_biprojectiveZeroLocus

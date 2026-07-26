@@ -1,0 +1,25 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.Standard.G3G4NonsingularLineSelectionEndpoint
+
+namespace BConicBundleMultisections.Standard
+
+#print axioms frameTangentDir_C_mul
+#print axioms frameTangentDir_mem_tangentHyperplaneCone
+#print axioms linearIndependent_pair_frameTangentDir_of_isSmoothPlaneCubic
+#print axioms eval_frameTangentResidual_ne_zero_of_chartTangent
+#print axioms frameTangentResidual_C_mul
+#print axioms eval_frameTangentResidual_C_mul_ne_zero
+#print axioms lineSpecializedConic_zero_nonsingular_of_sndConicDiscriminant_ne_zero
+#print axioms exists_smoothCubicFiber_in_stereoChart_point_avoids_sndConicDiscriminant
+#print axioms exists_smoothCubicFiber_chartTangent_point_avoids_two_discriminants
+#print axioms exists_G3_nonsingularFramedPointwiseG4Witness_of_incidenceOpen
+#print axioms exists_actualG3G4LineSection_of_G3_of_nonsingularFramedPointwiseG4Witness
+#print axioms exists_actualG3G4LineSection_of_incidenceOpen
+
+end BConicBundleMultisections.Standard

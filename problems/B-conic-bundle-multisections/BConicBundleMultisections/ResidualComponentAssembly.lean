@@ -97,8 +97,11 @@ theorem hasUnirationalParametrization3_residualComponentBaseChange
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
+    (hgood : ResidualLineNonconstant F)
     (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
     (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (hv2 : v 2 ≠ 0)
+    (hpolar : lineStereoPolarForm ![1, 0, 0] ![0, 1, 0] F v ≠ 0)
     (i j : Fin 3) (hdenom : residualChartDenom F v i j ≠ 0) :
     HasUnirationalParametrization 3
       ((residualComponentMultisection F hF v hv i j).baseChangeFst ≫
@@ -107,21 +110,30 @@ theorem hasUnirationalParametrization3_residualComponentBaseChange
     (hasUnirationalParametrization2_residualComponent F hF v hv i j hdenom)
     (hasUnirationalParametrization1_residualComponentBaseChangeSnd F hF v hv i j
       (isResidualComponentPointedConicRational_of_smooth
-        F hF hF0 v hv0 hv i j hdenom))
+        F hF hF0 hgood v hv0 hv hv2 hpolar i j hdenom))
 
-/-- A Tsen isotropic section and a chart in which the residual chart denominator does not vanish.
+/-- A stereo-nondegenerate Tsen section, residual chart, and polar nondegeneracy for the coordinate
+line, assuming that this particular line satisfies G3.
 
-The section exists by Tsen for ternary quadratics over `k[t]` (proved, `TsenConic.lean`); the
-chart exists because the residual `X`-coordinates are nonzero (proved, from smoothness) and the
-residual `Y`-coordinates are nonzero (obligation 1). -/
-theorem exists_residualChart_of_smooth
+The section exists by Tsen + conic discriminant (`exists_isotropic_stereoNondegenerate`); the chart
+exists from residual `X`/`Y` nonvanishing; polar is the same form as `StereoNondegenerate` on the
+coordinate frame (`lineStereoPolarForm_coordinate`).
+
+The G3 hypothesis is deliberately explicit.  It cannot be inferred from smoothness: the smooth
+diagonal example has a constant residual line along `Y₂ = 0`.  The unconditioned theorem must use
+the arbitrary line produced by `exists_good_line`. -/
+theorem exists_residualChart_of_smooth_of_residualLineNonconstant
     {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
-    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
+    (hgood : ResidualLineNonconstant F) :
     ∃ (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
       (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
-      (i j : Fin 3), residualChartDenom F v i j ≠ 0 := by
+      (hv2 : v 2 ≠ 0)
+      (hpolar : lineStereoPolarForm ![1, 0, 0] ![0, 1, 0] F v ≠ 0)
+      (i j : Fin 3) (_hdenom : residualChartDenom F v i j ≠ 0),
+        ResidualLineNonconstant F := by
   -- The section must be CHOSEN, not taken arbitrarily: an isotropic `v` that is a base point of
   -- the conic family along `L` collapses the stereographic map to a point.  See the counterexample
   -- on `exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth`.
@@ -131,7 +143,9 @@ theorem exists_residualChart_of_smooth
   have hY : residualYCoords F v ≠ 0 :=
     residualYCoords_ne_zero_of_smooth F hF hF0 v hv0 hv hv2 hnd
   obtain ⟨i, j, hdenom⟩ := exists_residualChartDenom_ne_zero F v hX hY
-  exact ⟨v, hv0, hv, i, j, hdenom⟩
+  have hpolar : lineStereoPolarForm ![1, 0, 0] ![0, 1, 0] F v ≠ 0 :=
+    lineStereoPolarForm_coordinate_ne_zero_of F v hnd
+  exact ⟨v, hv0, hv, hv2, hpolar, i, j, hdenom, hgood⟩
 
 end
 

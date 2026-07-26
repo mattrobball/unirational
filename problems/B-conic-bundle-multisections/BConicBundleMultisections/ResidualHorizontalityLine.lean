@@ -35,7 +35,7 @@ determinant is §4 of the source and is the frontier: the source's proof is Grot
 plus a Picard computation, which this development does not have, and `PLAN.md` WP-1's proxy route
 terminates at the same determinant.
 
-## A second hypothesis on the data was missing, and has been added
+## Two nondegeneracy hypotheses on the section are necessary
 
 `hgood` alone is **not** enough, and the gap is not about `L`: it is about the Tsen section `v`,
 which the statement quantifies over universally.  The stereo point is
@@ -48,12 +48,17 @@ a scalar multiple of `v`, which depends on `t` alone
 sweeps a curve rather than a surface.  Three polynomials in one variable always satisfy a nonzero
 homogeneous relation, so the conclusion is then false regardless of `L`.
 
+Independently, one must require `v 2 ≠ 0`.  If `v 2 = 0`, both `v` and every stereo direction
+`w = (1,s,0)` lie on the fixed line `{x₂ = 0}`.  Over `k(t)` the restricted binary quadratic has
+`v` as one root, so the stereo formula is a scalar multiple of its other root.  The residual point
+is therefore projectively a function of `t` alone and its Jacobian determinant vanishes.  Polar
+nonvanishing only prevents the produced vector from being zero; it does not prevent this collapse.
+
 The source excludes this with its condition (1) on `L` — "`S_L` is integral and its generic conic
 over `k(L)` is smooth" — which the previous statement of the theorem had dropped when it was lifted
-from the coordinate line to a general one.  The condition is recorded here as `lineStereoPolarForm
-… ≠ 0`, which is the exact algebraic form the formulas consume, and it is a hypothesis of both
-`det_residualYCoordsOn_ne_zero` and the theorem above it.  **A caller must now supply it**; nothing
-in the tree does yet, and `exists_good_line` does not produce it.
+from the coordinate line to a general one.  The formulas consume the two explicit conditions
+`v 2 ≠ 0` and `lineStereoPolarForm … ≠ 0`; both are hypotheses below and both are supplied by
+`exists_isotropic_line_stereoNondegenerate_of_disc_ne_zero`.
 -/
 
 @[expose] public section
@@ -258,9 +263,19 @@ Jacobian criterion); steps 1a–1c and the Jacobian criterion itself are all don
 *terminates here*, at this determinant.  So this is not a packaging problem that a different
 reduction would dissolve: it is the mathematical content of §4.
 
+*Reductions achieved (not a proof of the det).*
+* Homogeneous vanishing ⟺ this det, via `eq_zero_of_isHomogeneous_of_aeval_eq_zero` (proved).
+* Coordinate-line special case: `residualYCoordsOn_coordinateLine` identifies
+  `residualYCoordsOn ![1,0,0] ![0,1,0] ![0,0,1] 1` with `residualYCoords`, so the coordinate-line
+  det leaf `det_residualYCoords_ne_zero` is the same matrix; under G3, `v₂ ≠ 0`, and polar
+  nonvanishing it follows from *this* theorem
+  (`det_residualYCoords_ne_zero_of_residualLineNonconstant`).  Closing *this* statement
+  still needs the geometric content of §4 (or an algebraic substitute).
+
 *Hypotheses.*  `hgood` is necessary — `sum_smul_residualYCoordsOn_eq_zero_of_constant_residualLine`
-is the standing refutation of dropping it.  `hpolar` is necessary too, and for an independent
-reason — see `stereoFirstCoordsOn_eq_smul_of_lineStereoPolarForm_eq_zero`.  The source's conditions
+is the standing refutation of dropping it.  Both `hv2` and `hpolar` are necessary section
+nondegeneracy conditions; see the module discussion above and
+`stereoFirstCoordsOn_eq_smul_of_lineStereoPolarForm_eq_zero`.  The source's conditions
 (2) `C ∩ L` reduced and (3) `[-2]` injective on `C ∩ L` are deliberately *not* assumed: they make
 `S_L ⇢ T_L` birational, which is what §5's degree bookkeeping needs, whereas horizontality only
 needs the image to be two-dimensional.  If a proof turns out to need them, they must be added here
@@ -276,11 +291,27 @@ theorem det_residualYCoordsOn_ne_zero
     (hgood : ResidualLineNonconstantOn (lineFrame p₀ q₀ r) N F)
     (v : Fin 3 → Polynomial K) (hv0 : v ≠ 0)
     (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p₀ q₀ F) v = 0)
+    (hv2 : v 2 ≠ 0)
     (hpolar : lineStereoPolarForm p₀ q₀ F v ≠ 0) :
     (Matrix.of ![residualYCoordsOn p₀ q₀ r N F v,
         fun a => pderiv (ULift.up 0) (residualYCoordsOn p₀ q₀ r N F v a),
         fun a => pderiv (ULift.up 1) (residualYCoordsOn p₀ q₀ r N F v a)]).det ≠ 0 :=
   sorry
+
+/-- Horizontality in Jacobian form already guarantees that the residual point is a genuine
+projective point: its coordinate triple cannot vanish identically. -/
+theorem residualYCoordsOn_ne_zero_of_det
+    (p₀ q₀ r : Fin 3 → K) (N : Matrix (Fin 3) (Fin 3) K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
+    (v : Fin 3 → Polynomial K)
+    (hdet :
+      (Matrix.of ![residualYCoordsOn p₀ q₀ r N F v,
+          fun a => pderiv (ULift.up 0) (residualYCoordsOn p₀ q₀ r N F v a),
+          fun a => pderiv (ULift.up 1) (residualYCoordsOn p₀ q₀ r N F v a)]).det ≠ 0) :
+    residualYCoordsOn p₀ q₀ r N F v ≠ 0 := by
+  intro hzero
+  apply hdet
+  simp [hzero, Matrix.det_fin_three]
 
 /--
 **No nonzero form vanishes on the residual `Y`-coordinates along `L`.**
@@ -300,8 +331,8 @@ the choice of `L`"* and §5 states the equivalence outright.  The coordinate-lin
 `ResidualComponentHorizontality`, which carries no hypothesis on `L`, is unprovable for that
 reason, and this statement supersedes it.
 
-*The second hypothesis on the data, `hpolar`, is new and it is not optional either.*  It is a
-condition on the *Tsen section* `v`, not on `L`, and it is independent of `hgood`: if the polar form
+*The section hypotheses `hv2` and `hpolar` are not optional.*  They are conditions on the *Tsen
+section* `v`, not on `L`, and they are independent of `hgood`: if the polar form
 `lineStereoPolarForm` vanishes then the stereographic parametrisation collapses onto a curve
 (`stereoFirstCoordsOn_eq_smul_of_lineStereoPolarForm_eq_zero`), the residual point becomes a scalar
 multiple of a vector in `t` alone, and three polynomials in one variable always satisfy a nonzero
@@ -310,6 +341,10 @@ by its condition (1) on `L`, "`S_L` is integral and its generic conic over `k(L)
 the earlier statement of this theorem dropped.  `v` is *universally* quantified here, so a condition
 on `v` is genuinely needed: even a line whose generic conic is smooth admits a bad section if the
 coordinate line `{x₂ = 0} ⊂ ℙ²_x` happens to be tangent to every `Q_t` at `v(t)`.
+
+If instead `v 2 = 0`, the section and the whole stereo pencil lie on that coordinate line.  The
+stereo point, and hence the tangent-residual point, is projectively a function of `t` alone even
+when the polar form is nonzero.  This is the distinct reason for the `hv2` hypothesis.
 
 `hpolar` does **not** follow from smoothness of `X`.  Its sibling `Q(w) ≠ 0` does
 (`specializedConicFreeDirForm_ne_zero_of_smooth`), because `Q(w) ≡ 0` says a whole line lies in the
@@ -329,13 +364,41 @@ theorem eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous
     (hgood : ResidualLineNonconstantOn (lineFrame p₀ q₀ r) N F)
     (v : Fin 3 → Polynomial K) (hv0 : v ≠ 0)
     (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p₀ q₀ F) v = 0)
+    (hv2 : v 2 ≠ 0)
     (hpolar : lineStereoPolarForm p₀ q₀ F v ≠ 0)
     (d : ℕ) (Ψ : MvPolynomial (Fin 3) K) (hΨ : Ψ.IsHomogeneous d)
     (hvan : aeval (residualYCoordsOn p₀ q₀ r N F v) Ψ = 0) :
     Ψ = 0 :=
   eq_zero_of_isHomogeneous_of_aeval_eq_zero (residualYCoordsOn p₀ q₀ r N F v)
     (ULift.up 0) (ULift.up 1)
-    (det_residualYCoordsOn_ne_zero p₀ q₀ r N hMN F hF hF0 hgood v hv0 hv hpolar) d Ψ hΨ hvan
+    (det_residualYCoordsOn_ne_zero
+      p₀ q₀ r N hMN F hF hF0 hgood v hv0 hv hv2 hpolar) d Ψ hΨ hvan
+
+/-- Horizontality in particular guarantees that the residual second-block coordinate triple is
+not the zero vector.  This is the exact chart-existence consequence used by the arbitrary-line
+component construction. -/
+theorem residualYCoordsOn_ne_zero_of_good_line
+    [IsAlgClosed K] [CharZero K]
+    (p₀ q₀ r : Fin 3 → K) (N : Matrix (Fin 3) (Fin 3) K)
+    (hMN : lineFrame p₀ q₀ r * N = 1)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)]
+    (hgood : ResidualLineNonconstantOn (lineFrame p₀ q₀ r) N F)
+    (v : Fin 3 → Polynomial K) (hv0 : v ≠ 0)
+    (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p₀ q₀ F) v = 0)
+    (hv2 : v 2 ≠ 0)
+    (hpolar : lineStereoPolarForm p₀ q₀ F v ≠ 0) :
+    residualYCoordsOn p₀ q₀ r N F v ≠ 0 := by
+  intro hzero
+  have hvan : aeval (residualYCoordsOn p₀ q₀ r N F v)
+      (X (0 : Fin 3) : MvPolynomial (Fin 3) K) = 0 := by
+    rw [hzero]
+    simp
+  have hXzero := eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous
+    p₀ q₀ r N hMN F hF hF0 hgood v hv0 hv hv2 hpolar 1
+    (X (0 : Fin 3)) (isHomogeneous_X K 0) hvan
+  exact (X_ne_zero (R := K) (0 : Fin 3)) hXzero
 
 end
 

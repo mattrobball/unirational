@@ -1,0 +1,3 @@
+import BConicBundleMultisections.ResidualTargetProjectiveChartMembership
+
+#print axioms BConicBundleMultisections.BiprojectiveSpace.affineChartEquation_residualEquationOn_mem_targetRelationChart_of_isIso

@@ -26,6 +26,22 @@ exactly `20`.  The uniform proof is in
 the exact universal resultant and the generic degree-20 refinement are in
 [`tangent_residual_theorem.md`](certificates/tangent_residual_theorem.md).
 
+### Lean formalization status
+
+As of 26 July 2026, the headline existence result is formally proved in Lean:
+`BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization` constructs a dominant
+rational map from affine `3`-space under exactly the smooth, nonzero, bidegree-`(2,3)`,
+algebraically closed, characteristic-zero hypotheses above. Its existential wrapper
+`smooth_bidegree23_isUnirationalOver` is proved as well. Both declarations depend only on
+`propext`, `Classical.choice`, and `Quot.sound`; the exact statement and absence of `sorryAx` are
+pinned in `MainTheoremGuard.lean`. The full `lake build` passes all 3305 jobs.
+
+This Lean result is the headline unirationality statement. It does **not** claim to formalize the
+separate class calculation, the uniform degree bound, or the generic exact-degree-20 refinement;
+those remain the certificate-level results cited above. Two legacy declarations elsewhere in the
+tree still contain unused direct `sorry`s, but neither is in the headline dependency closure; see
+`FORMALIZATION_STATUS.md` for the exact boundary.
+
 Ordinary rationality is settled negatively for every smooth member, while a
 family-specific theorem shows that a very general member is not stably
 rational.  Thus every smooth member is unirational but irrational, and very
@@ -1096,8 +1112,8 @@ and qualifications are in
 5. The rational source must actually supply a point on the pulled-back conic.
    The map \(S\dashrightarrow T\subset X\) is birational, and the inclusion of
    \(T\) is the tautological point after base change.
-6. The exact generic refinement must still be verified.  The
-   tangent--residual checker verifies the universal resultant identity,
+6. The exact generic refinement is separately verified by the
+   tangent--residual checker, which checks the universal resultant identity,
    coefficient degree and primitivity, a base-factor-free specialization, the
    smooth distinct-residual witness, and the generic degree-20 divisor
    arithmetic; its output matches the committed log.

@@ -1,0 +1,16 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.ResidualTargetExhaustionMembership
+
+/-! # Axiom audit for residual-target exhaustion membership -/
+
+#print axioms BConicBundleMultisections.aeval_eq_zero_of_biprojectiveZeroLocusIdeal_le_biprojectiveChartPointAlgebra_ker
+#print axioms BConicBundleMultisections.biprojectiveZeroLocusIdeal_residualEquationOn_le_targetRelationIdeal_of_isIso
+#print axioms BConicBundleMultisections.aeval_residualEquationOn_eq_zero_of_targetRelation_isIso
+#print axioms BConicBundleMultisections.residualEquationOn_mem_span_targetRelation_of_isIso_of_isRadical
+#print axioms BConicBundleMultisections.residualEquationOn_mem_span_targetRelation_of_isIso_of_isPrime

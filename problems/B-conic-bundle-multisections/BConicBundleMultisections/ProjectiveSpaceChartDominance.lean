@@ -8,6 +8,10 @@ module
 public import BConicBundleMultisections.ProjectiveSpace
 public import BConicBundleMultisections.Standard.GenericPoint
 public import Mathlib.AlgebraicGeometry.Morphisms.UnderlyingMap
+public import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.StructureSheaf
+public import Mathlib.AlgebraicGeometry.Properties
+public import Mathlib.RingTheory.GradedAlgebra.HomogeneousLocalization
+public import Mathlib.RingTheory.Localization.AtPrime.Basic
 
 /-!
 # Density of the standard charts of `ℙⁿ`
@@ -121,6 +125,37 @@ theorem Proj.irreducibleSpace [IsDomain A]
     (h : HomogeneousIdeal.irrelevant 𝒜 ≠ ⊥) : IrreducibleSpace (Proj 𝒜) :=
   ProjectiveSpectrum.irreducibleSpace 𝒜 h
 
+/-- Homogeneous localization of a domain at a prime is a domain: it injects into the ordinary
+localization at that prime, which is a domain. -/
+instance Proj.isDomain_homogeneousLocalization_atPrime [IsDomain A]
+    (𝔭 : Ideal A) [𝔭.IsPrime] :
+    IsDomain (HomogeneousLocalization.AtPrime 𝒜 𝔭) := by
+  haveI : IsDomain (Localization.AtPrime 𝔭) := inferInstance
+  exact Function.Injective.isDomain
+    (algebraMap (HomogeneousLocalization.AtPrime 𝒜 𝔭) (Localization.AtPrime 𝔭))
+    (HomogeneousLocalization.val_injective 𝔭.primeCompl)
+
+/-- Stalks of `Proj` of a graded domain are domains (via `Proj.stalkIso'`). -/
+instance Proj.isDomain_stalk [IsDomain A] (x : Proj 𝒜) :
+    IsDomain ↑((Proj 𝒜).presheaf.stalk x) := by
+  have e := Proj.stalkIso' 𝒜 x
+  haveI : IsDomain (HomogeneousLocalization.AtPrime 𝒜 x.asHomogeneousIdeal.toIdeal) :=
+    Proj.isDomain_homogeneousLocalization_atPrime 𝒜 _
+  exact e.toMulEquiv.isDomain _
+
+/-- **`Proj` of a graded domain is reduced.**  Stalks are domains, hence reduced. -/
+theorem Proj.isReduced [IsDomain A] : IsReduced (Proj 𝒜) :=
+  isReduced_of_isReduced_stalk _
+
+/-- **`Proj` of a graded domain is an integral scheme**, provided its irrelevant ideal is nonzero.
+
+Combines `Proj.irreducibleSpace` with `Proj.isReduced`. -/
+theorem Proj.isIntegral [IsDomain A]
+    (h : HomogeneousIdeal.irrelevant 𝒜 ≠ ⊥) : IsIntegral (Proj 𝒜) := by
+  haveI : IrreducibleSpace (Proj 𝒜) := Proj.irreducibleSpace 𝒜 h
+  haveI : IsReduced (Proj 𝒜) := Proj.isReduced 𝒜
+  exact isIntegral_of_irreducibleSpace_of_isReduced _
+
 end Proj
 
 noncomputable section
@@ -160,6 +195,16 @@ theorem genericPoint_mem_standardChart (n : ℕ) (R : Type u) [CommRing R] [IsDo
 instance irreducibleSpace (n : ℕ) (R : Type u) [CommRing R] [IsDomain R] :
     IrreducibleSpace (ProjectiveSpace n R) :=
   Proj.irreducibleSpace _ (irrelevant_ne_bot n R)
+
+/-- **`ℙⁿ_R` is reduced** for `R` a domain. -/
+instance isReduced (n : ℕ) (R : Type u) [CommRing R] [IsDomain R] :
+    IsReduced (ProjectiveSpace n R) :=
+  Proj.isReduced _
+
+/-- **`ℙⁿ_R` is an integral scheme** for `R` a domain. -/
+instance isIntegral (n : ℕ) (R : Type u) [CommRing R] [IsDomain R] :
+    IsIntegral (ProjectiveSpace n R) :=
+  Proj.isIntegral _ (irrelevant_ne_bot n R)
 
 /-- **The standard chart of `ℙⁿ_R` is dense**, for `R` a domain.
 

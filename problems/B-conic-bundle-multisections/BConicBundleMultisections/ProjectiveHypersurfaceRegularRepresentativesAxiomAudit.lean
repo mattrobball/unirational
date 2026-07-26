@@ -1,0 +1,7 @@
+import BConicBundleMultisections.ProjectiveHypersurfaceRegularRepresentatives
+
+open BConicBundleMultisections
+
+#print axioms ProjectiveSpace.HasRegularRetainedChartRepresentatives
+#print axioms ProjectiveSpace.exists_globalSection_restrict_eq_of_eq_functionField_on_retainedCharts
+#print axioms ProjectiveSpace.exists_globalSection_of_hasRegularRetainedChartRepresentatives

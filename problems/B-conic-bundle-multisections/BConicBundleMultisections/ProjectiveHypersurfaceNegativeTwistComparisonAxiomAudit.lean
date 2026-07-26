@@ -1,0 +1,8 @@
+import BConicBundleMultisections.ProjectiveHypersurfaceNegativeTwistComparison
+
+open BConicBundleMultisections
+open BConicBundleMultisections.ProjectiveSpace
+
+#print axioms hypersurfaceChartIsoSpecAffineQuotient_inv_toSpec
+#print axioms globalSectionsToHypersurfaceFunctionField_map_base
+#print axioms canonicalGlobalSectionsToHypersurfaceFunctionFieldComparison

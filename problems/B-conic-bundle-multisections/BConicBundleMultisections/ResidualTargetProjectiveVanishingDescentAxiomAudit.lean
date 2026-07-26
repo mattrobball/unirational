@@ -1,0 +1,9 @@
+import BConicBundleMultisections.ResidualTargetProjectiveVanishingDescent
+
+open BConicBundleMultisections.BiprojectiveSpace
+
+#print axioms BConicBundleMultisections.IsBihomogeneousOfBidegree.eval_smul_both
+#print axioms targetRelationBaseChartEval
+#print axioms eval_map_targetRelationBaseChartEval_affineChartToTargetRelationBase
+#print axioms prime_rename_inr_of_irreducible
+#print axioms mem_span_zero_rename_inr_of_targetRelation_chart_zero

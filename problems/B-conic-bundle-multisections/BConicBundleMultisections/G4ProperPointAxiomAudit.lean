@@ -1,0 +1,10 @@
+module
+
+public import BConicBundleMultisections.G4ProperPoint
+
+/-! # Axiom audit for the G4 proper-point witness -/
+
+#print axioms BConicBundleMultisections.ProjectiveSpace.pointOfNormalizedCoordinates_mem_basicOpen_iff
+#print axioms BConicBundleMultisections.exists_positive_homogeneous_smoothCubicFiber_open
+#print axioms BConicBundleMultisections.exists_normalized_coordinates_of_closedPoint_zeroLocus
+#print axioms BConicBundleMultisections.exists_smoothCubicFiber_point_avoids_sndConicDiscriminant

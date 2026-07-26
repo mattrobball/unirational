@@ -1,12 +1,11 @@
 # Formalization status
 
-Authoritative statement of what the Lean development does and does not prove.
-Supersedes the status claims in `HANDOFF.md` wherever they conflict — `HANDOFF.md` is
-substantially stale (it is written around `ResidualImageDominance.lean`, deleted in `cb34fbf`).
+Current as of 26 July 2026. This file is the authoritative Lean status; it supersedes older
+progress notes and historical blocker lists.
 
-## Headline
+## Headline: fully proved
 
-The main theorem is now stated **faithfully** — no auxiliary hypotheses:
+The faithful theorem has no auxiliary geometric hypotheses:
 
 ```lean
 theorem smooth_bidegree23_hasUnirationalParametrization
@@ -17,226 +16,158 @@ theorem smooth_bidegree23_hasUnirationalParametrization
     HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F)
 ```
 
-It is **not fully proved**. The outstanding obligations are collected in four modules, one per
-work package, inventoried in `BConicBundleMultisections/ResidualComponentAssembly.lean`, and
-appear nowhere else. They are ordinary declarations named for their mathematical content, so
-discharging one means deleting its `sorry` with no call site changing. Everything else in the tree
-is complete, so
+It is proved in `BConicBundleMultisections/MainTheorem.lean`. The existential wrapper
+`smooth_bidegree23_isUnirationalOver` is proved as well.
 
+The direct audit reports:
+
+```text
+'BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization' depends on axioms:
+[propext, Classical.choice, Quot.sound]
+
+'BConicBundleMultisections.smooth_bidegree23_isUnirationalOver' depends on axioms:
+[propext, Classical.choice, Quot.sound]
 ```
-#print axioms smooth_bidegree23_hasUnirationalParametrization
-  → [propext, sorryAx, Classical.choice, Quot.sound]
+
+`MainTheoremGuard.lean` pins the exact theorem type and applies `#guard_no_sorry` both to the
+headline theorem and to its statement guard. Adding an auxiliary hypothesis, weakening the
+dimension, changing the target, or reintroducing `sorryAx` now breaks the build.
+
+## Verified build state
+
+Environment:
+
+- Lean `4.32.1`
+- Mathlib `v4.32.1`
+- publication branch `agent/formalize-conic-bundle-and-audit-klein-cubic`, based on
+  `origin/main` at `d0adc218e9116e300c4a6219df70c3995289b612`
+
+Checks run from this problem directory:
+
+```text
+focused final dependency-and-audit build
+  Build completed successfully (3291 jobs).
+
+lake env lean MainTheoremAxiomAudit.lean
+  all eight selected endpoints: standard three axioms only
+
+lake build BConicBundleMultisections
+  Build completed successfully (3305 jobs).
+
+lake build
+  Build completed successfully (3305 jobs).
 ```
 
-is now an exact measure of what is owed: `sorryAx` disappears precisely when the obligations are
-discharged. This is a deliberate trade against the previous arrangement, where the tree was
-`sorry`-free but the theorem carried a hypothesis `hXT` that was doing the same job invisibly —
-and, worse, was false in general (see below). **Check the statement and the axiom list together.**
+The build emits existing style/linter warnings, but no errors. Focused source-and-axiom-audit
+builds also passed for the chart transition, factor transition, automatic gluing, projective
+integrality, and final target-reduction layers.
 
-Build: `lake build` green, 3077 jobs, Lean `v4.32.1` / Mathlib `v4.32.1`. Five `sorry`s across
-four modules; no `axiom`, `admit` or `native_decide` anywhere.
+The commit containing this file publishes the result together with its axiom-audit corpus and the
+separate, explicitly open Klein-cubic research dossier. Exploratory B-side files outside the live
+theorem and audit closure remain uncommitted.
 
-`MainTheoremGuard.lean` mechanises both halves of that check. It pins the headline statement (an
-added hypothesis breaks the build), allows `sorryAx` but no other axiom in the main theorem, and
-asserts that the load-bearing proved results stay fully proved. Both guards are negative-tested.
+## Mathematical route formalized
 
-## Why the argument runs on the residual *component*
+The proof no longer tries to prove that one hardcoded coordinate line is good. Its live route is:
 
-`residualImage F` is the complete intersection `V(F) ∩ V(q_F)`. When the degree-ten coefficients
-of `q_F` share a common factor, `V(q_F)` acquires a vertical divisor and `residualImage F` gains
-components the residual map never meets. Since affine space is irreducible, the closure of its
-image under any rational map is irreducible, so no dominant rational map onto a reducible target
-exists. Hence, in that case:
+1. `Standard.exists_actualG3G4LineSection_via_frameIncidence` chooses one actual framed line that
+   simultaneously carries G3, a nondegenerate Tsen section, and G4.
+2. `targetRelationsProjectivelyIntegralAwayDiscriminant_of_smooth` proves the retained target
+   relations projectively integral away from the conic discriminant.
+3. Local residual factors are constructed on every retained target chart. For two charts, target
+   bihomogeneity gives
 
-- `HasUnirationalParametrization 2 (residualImageToSpec F)` is **false**, and
-- so is `HasResidualBaseChangeUnirationalParametrization3 F`, because the base change
-  `X ×_{ℙ²_y} residualImage F` inherits the extra components (the conic fibres over them are
-  nonempty, `BiprojectiveFiberNonempty`).
+   ```text
+   F_b = T^3 F_b',    Q_b = T Q_b'.
+   ```
 
-The former was recorded here previously; the latter was not, and it is the more serious of the
-two, because `hXT` was the hypothesis of the main theorem. The old headline theorem was therefore
-*vacuous* in exactly the cases the tangent-residual argument is needed for.
+   From `R_b F_b = Q_b` and `R_b' F_b' = Q_b'`, nonvanishing of the conic equation permits
+   cancellation and yields the intrinsic degree-minus-two law
 
-`RESOLUTION.md:246` already took the class `aH_x + H_y` only "after removing their common factor
-and any components over special x-curves"; the Lean definition never performed that removal.
+   ```text
+   R_b' = T^2 R_b.
+   ```
 
-The live argument instead runs on `residualComponent F hF v hv i j` — the scheme-theoretic image
-of the localized residual chart map, i.e. the component the residual map actually dominates.
-Dominance onto it is Mathlib's `IsDominant f.toImage`, not an assumption.
+   A homogeneous target quadratic satisfies `P_b = T^2 P_b'`, so the two square laws give
+   `P_b R_b = P_b' R_b'`; the product is independent of the retained chart.
+4. `targetRelationsResidualNegativeTwistGluingAwayDiscriminantOn` turns that coefficientwise
+   compatibility into global regular functions on the integral projective target curve. Proper
+   integral global functions are constant, and the negative-twist argument forces the residual
+   relation coefficients to vanish.
+5. `hasUnirationalParametrization3_biprojectiveZeroLocus` assembles the actual G3/G4 line,
+   projective integrality, and automatic gluing into the residual-component/unirational-tower
+   construction. `MainTheorem.smooth_bidegree23_hasUnirationalParametrization` is definitionally
+   the same raw biprojective statement and delegates to this endpoint.
 
-## Proved unconditionally
+The main assembly lives in:
 
-- **Tsen for ternary quadratics over `k[t]`**, `k` algebraically closed —
-  `exists_isotropic_ternary_quadratic_poly` (`TsenConic.lean`). A full undetermined-coefficients
-  proof; this is the substantive classical input and it is done.
-- **The universal residual identity** `polarResultant + disc · cubicValue = W² · residualLinear`
-  (`UniversalResidualIdentity.lean`).
-- **No whole fibre in either projection** for smooth `F`, and surjectivity/dominance of both
-  projections (WP2: `BiprojectiveNoWholeFiber`, `BiprojectiveProjectionDominant`).
-- `residualImageXCoords_ne_zero_of_smooth` — residual `X`-coordinates nonvanishing from
-  smoothness alone, via `specializedConicFreeDirForm_ne_zero_of_smooth`.
-- `residual_baseChange_package_summary` — dominance of the residual multisection base change plus
-  existence of a Tsen section.
-- `hasUnirationalParametrization2_residualComponent` — the residual component `T_L` is unirational
-  over `Spec k`, given a nonvanishing chart denominator (obligation 1 supplies that).
-- `isDominant_residualComponentMultisection_baseChangeFst` — component horizontality upgrades to
-  base-change dominance, via properness ⇒ surjectivity ⇒ stability under base change. **No
-  flatness hypothesis on the conic bundle is used anywhere**; `Flat` is nowhere proved in the tree.
-- The multisection principle and its dominance-form reduction.
-- **The unirational tower** `hasUnirationalParametrization_succ_of_tower` (WP-A, closed), with
-  `mapPartialMap`, `comp_hom_over`, `exists_isOver_representative` and
-  `UnirationalParametrization.ofPartialMapOver`.
-- `mapPartialMap` — transport of a *partial* map along `𝔸(n; -)`, which Mathlib provides only for
-  morphisms, together with `range_affineSpace_map`, `isOpenImmersion_affineSpace_map` and
-  `isDominant_mapPartialMap_hom`. This is the dominance half of the unirational tower, and the
-  reason the tower needs no integrality hypotheses: the composite
-  `𝔸(1; 𝔸(m; S)) → 𝔸(1; T) ⤏ Y` never base-changes the target.
-- `residualComponentMultisection_baseChangeSnd_comp_toSpec` — the component compatibility that
-  turns the general tower into the `2 + 1 = 3` instance the main theorem consumes.
-- **The residual construction for an arbitrary multisection line**
-  (`PlaneCubicResidualTransport.lean`). The source chooses the line `L` in §3 and normalises it to
-  `{W = 0}` only in §5; the development had only the normalised form, which is what made two
-  obligations false-or-suspect. Now proved in general:
-  `eval_residualAmbientRep_residualLinearFormOn_linePointOf` — for any line, given its frame, the
-  tangent-residual point of a plane cubic at a point of that line lies on the cubic's residual
-  line. Established by *transport*, without re-deriving any of the ~990 lines of §5 coefficient
-  identities: the plane cubic fibre is carried into the frame where `L = {W = 0}`
-  (`binaryLineRestriction_aeval_linearSubst`), the existing identities are applied there, and the
-  conclusion is carried back. The ambient biprojective scheme is never transported, so none of the
-  parked `Proj.map`/ideal-sheaf machinery is needed. Two supporting facts carry the weight:
-  `residualAmbientRep_reparam` (rescaling the direction scales the residual point by `α³`, so it is
-  projectively unchanged) and the choice to *define* the general tangent direction as the transport
-  of the canonical one (`frameTangentDir`), which avoids cross-product equivariance — that holds
-  only modulo the span of the point. `residualLinearFormOn_coordinateLine` checks the general
-  construction reduces to the existing one on the coordinate line, so nothing was replaced.
+| Layer | Principal module / endpoint |
+|---|---|
+| Simultaneous line and section | `Standard/G3FrameIncidenceSelection.lean` / `exists_actualG3G4LineSection_via_frameIncidence` |
+| Target integrality | `TargetRelationTotalSpaceIntegral.lean` / `targetRelationsProjectivelyIntegralAwayDiscriminant_of_smooth` |
+| Intrinsic chart transition | `ProjectiveHypersurfaceChartTransition.lean` and `ResidualTargetNegativeTwistChartEquationTransport.lean` |
+| Residual factor transition | `ResidualTargetNegativeTwistFactorTransition.lean` / `residualTargetNegativeTwistFactor_coeff_intrinsic_transition` |
+| Automatic gluing | `ResidualTargetNegativeTwistAutomaticGluing.lean` / `targetRelationsResidualNegativeTwistGluingAwayDiscriminantOn` |
+| Final clean reduction | `MainTheoremTargetReduction.lean` / `hasUnirationalParametrization3_biprojectiveZeroLocus` |
+| Exact public theorem | `MainTheorem.lean` / `smooth_bidegree23_hasUnirationalParametrization` |
 
-## The remaining obligations
+Each new load-bearing endpoint has a neighboring `AxiomAudit.lean` file and was checked to depend
+only on `propext`, `Classical.choice`, and `Quot.sound`.
 
-Six `sorry`s in five modules, verified by `lake build 2>&1 | grep 'declaration uses'`. Each is
-documented at its site; `PLAN.md` has the work packages and the corrections log.
+## The exact remaining `sorry` boundary
 
-| Module | Obligation | Nature |
-|--------|-----------|--------|
-| `Standard/ResidualLineMapInjective` | `exists_pencil_of_hasCommonResidualLineMap` | **borrowed** — Lemma 2.1, pencil form. Do not attempt |
-| `Standard/GenericSmoothness` | `exists_nonempty_open_smooth_restrict` | **borrowed** — Hartshorne III.10.7. Do not attempt |
-| `StereoJacobian` | `exists_nonsingularCubicFiber_of_smooth` | generic smoothness, concrete form. Borrowed |
-| `GoodLineExistence` | `exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates` | generic smoothness in coordinates |
-| `GoodLineCondition` | `coordinateLineConicDiscriminant_ne_zero_of_smooth` | the conic root. **Complete written proof in its docstring** |
-| `StereoJacobian` | `stereoJacobianDet_ne_zero_of_smooth` | reduced to two conic-level statements plus one Mathlib gap |
-| `ResidualHorizontalityLine` | `det_residualYCoordsOn_ne_zero` | **§4** — the last mathematical content of horizontality |
-| `PointedConicRationalFamilies` | `isIntegral_pullback_biprojectiveZeroLocusSnd` | two dimension estimates Mathlib lacks |
-| `PointedConicRationalFamilies` | `exists_chartEquation_openImmersion` | interface item plus chart plumbing; both conditions themselves proved |
-| `ResidualComponentHorizontality` | `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` | **superseded and unprovable**; retire once call sites thread `L` |
+The repository is not globally `sorry`-free. An anchored source census finds exactly two direct
+legacy declarations:
 
-**Obligation 1 is fully derived.** `ResidualYNonvanishing.lean` is sorry-free: the chain from
-`residualYCoords_ne_zero_of_smooth` down through the split, the elimination theory and the good-line
-conditions rests entirely on named leaves above.
+| Module | Declaration | Current role |
+|---|---|---|
+| `Standard/GenericSmoothness.lean` | `exists_nonempty_open_smooth_restrict` | Strengthened legacy generic-smoothness interface; orphaned and unused by the headline route |
+| `ResidualHorizontalityLine.lean` | `det_residualYCoordsOn_ne_zero` | Old isolated-determinant route; retained for reference and unused by the headline route |
 
-**Two structural risks are closed by construction rather than by care.** The linear and quadratic
-nondegeneracy conditions provably draw on *different* inputs — fibre smoothness versus global
-smoothness — so they can never be collapsed into one appeal to `hsmooth`. And `hv2` is load-bearing
-exactly where it sits: without it the stereo family stays inside `{x₂ = 0}` and the Jacobian
-determinant is identically zero, so the obligation carrying it would be false.
+Neither declaration is in the dependency closure of the headline theorem. This separation is
+machine-checked by `#guard_no_sorry` and confirmed by the explicit axiom printout above. These are
+cleanup tasks, not open boundaries of the formalized main theorem.
 
-**Closed since the last revision:** projective elimination on points
-(`CubicFiberSingularLocus.lean`) — the singular cubic fibres form a closed set, unconditionally,
-with explicit certificates and **no scheme theory**, where the expected route through relative `Proj`
-was blocked by missing Mathlib machinery; the binary quadratic normal form
-(`BinaryQuadraticNormalForm.lean`); substitution-invariance of nonsingularity
-(`LinearSubstitutionNonsingular.lean`), which discharged `exists_good_line`'s last side hypothesis;
-`ProjectiveSpace.isDominant_standardChartι`, together with a general `Proj.irreducibleSpace` for
-graded domains that Mathlib lacks; and the whole classical content of obligation 3 —
-`PointedConicAffineModel.lean`, 738 lines and zero sorries, proving that a pointed affine conic over
-a domain is relatively birational to the affine line, with **no normal form and no Witt
-decomposition**. Obligation 3 now rests on one bookkeeping leaf.
+The old determinant-dependent chain remains available as a legacy conditional development, but
+the following declarations no longer feed the headline:
 
-**Base-point-freeness of the residual line is proved** (`ResidualLineBasePointFree.lean`, ~900
-lines, zero sorries). `ResidualLineConstant` and `ResidualLineConstantOn` say the three coefficient
-forms are `C (c a) · g`; both hold **vacuously** at `g = 0`, so every argument concluding something
-from "the residual line is constant" was unsound until this landed. Nothing in the tree covered it —
-the existing nonvanishing results are all about the residual *point*. Proved with **no
-characteristic hypothesis**: algebraic closure alone suffices. Includes a Fermat witness
-(`residualLinearForm = linearForm3 0 0 (-27)`), which independently refutes "the residual
-coefficients vanish identically". The proof reads the tree's universal residual identity backwards:
-each factor of the polar resultant is the tangent line of `G` at a point of `L ∩ C`.
+- `det_residualYCoordsOn_ne_zero`
+- `eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous`
+- `residualYCoordsOn_ne_zero_of_good_line`
+- `isDominant_residualZeroLocusPointOn_toBase`
+- `isDominant_residualComponentOnToBase`
+- `exists_isDominant_residualComponentOnToBase`
+- `smooth_bidegree23_hasUnirationalParametrization_of_good_line_section`
 
-Four results there are Mathlib-shaped and absent upstream: scheme-theoretic images of integral
-schemes; `BirationalOver` base-change (`Birational.lean` has `refl/symm/trans` and no transport);
-the pointed-conic material itself, stated for an arbitrary `CommRing`; and `dense_basicOpen`.
+## Statement fidelity and non-vacuity
 
-**Good-line existence is assembled** (`GoodLineExistence.lean`). `exists_good_line` produces a line
-whose residual line moves with `x` — the condition four of the obligations traced to. It rests on
-two leaves, both known quantities: Lemma 2.1 in **pencil** form, borrowed and documented
-(`Standard/ResidualLineMapInjective.lean`), and generic smoothness packaged in coordinates. Proved
-outright along the way: the pencil finish (`not_eq_pencil_of_smooth` — a *net* would not close it),
-the bridge from condition G3 to the residual line of the fibre, and the `secondBlockCoeff` algebra,
-which nothing in the tree had ever unfolded.
+`Bidegree23Example.smooth_F` gives a concrete, axiom-clean smooth bidegree-`(2,3)` example, and
+`MainTheoremGuard.lean` pins it. Thus the `Smooth` hypothesis in the universal theorem is
+satisfiable; the proof is not vacuous.
 
-**Lemma 3.1 of the source is not needed.** Its job is to descend a morphism from `k(ℙ²_x)` to `k`,
-and it is needed only because the source argues with the *generic* fibre. This chain never forms the
-generic fibre — it uses honest fibres over closed points, which are already `k`-objects — so nothing
-needs descending. Two costs of that route are made explicit rather than hidden: smoothness is needed
-for a dense set of closed points, not merely generically, and base-point-freeness becomes an
-explicit hypothesis where the source uses it implicitly.
+`CoordinateLineCounterexample.lean` records the complementary warning:
+`Bidegree23Example.residualLineConstant` proves that the hardcoded coordinate line can have
+constant residual line even for a smooth example. This is why the final proof uses an actual line
+selected by frame incidence rather than silently normalizing an arbitrary fixed line.
 
-### The one thing to read first
+The obsolete full-`residualImage` route is also not the headline route. The complete intersection
+`V(F) ∩ V(q_F)` can acquire vertical components when the coefficients of `q_F` have a common
+factor, so a claim of domination by irreducible affine space would be false for that full reducible
+scheme. The formal proof works with the residual component actually reached by the residual map.
 
-**The `[Smooth …]` hypothesis is satisfiable and the theorem is not vacuous.**
-`Bidegree23Example.smooth_F` exhibits a concrete smooth bidegree-(2,3) hypersurface with a proved,
-**axiom-clean** `Smooth` instance, pinned in `MainTheoremGuard`. This is the one guard `#print
-axioms` on the headline theorem structurally cannot give: a vacuous theorem passes every axiom check
-and every `sorry` census. The obvious Fermat candidate is *singular* — machine-checked, not assumed
-(`not_smooth_fermatF`) — and the working witness has to couple every `x` to every `y` via a
-Vandermonde matrix.
+## Reproduction commands
 
-**Four statements in this development were found false during one working session**, each by
-counterexample or by explicit degeneration; see `PLAN.md` corrections 6–8 and the docstrings on
-`exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth` and
-`eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous`. Two were quantifier faults, one was a lifting
-fault. All are repaired, and the repairs *converged*: obligation B's counterexample and obligation
-D's degeneration analysis independently produced the **same** condition — that the polar
-`B_Q(v, w)` of the Tsen section against the stereo direction must not vanish
-(`StereoNondegenerate`, and its general-line form `lineStereoPolarForm ≠ 0`). Two routes reaching
-one hypothesis from opposite directions is the strongest evidence available here that the repairs
-are right.
+```bash
+cd /Users/worker/unirational/problems/B-conic-bundle-multisections
+lake build BConicBundleMultisections.MainTheoremGuard
+lake env lean MainTheoremAxiomAudit.lean
+lake build BConicBundleMultisections
+lake build
+rg -n '^[[:space:]]*sorry\b' --glob '*.lean' .
+rg -n '^[[:space:]]*(public[[:space:]]+)?(admit|axiom|axioms|opaque)[[:space:]]+[A-Za-z_]' \
+  --glob '*.lean' .
+git diff --check
+```
 
-That is the **fourth** appearance of the same fault: adopting §5's normalisation of the line while
-dropping §3's choice of it. It has also appeared as `hXT`, as obligations 1c/1d, and as a hidden
-dependency of WP-3 on WP-1. **Any statement here that mentions the hardcoded coordinate line and
-carries no condition on `L` should be assumed false until checked.** Four of the six remaining
-obligations trace to this root, which makes good-line existence the highest-value target.
-
-
-blocker had been mis-scoped here and in `HANDOFF.md`. What was described as "the `freeDirPureT`
-branch" is obligation 1a, and is elementary: those hypotheses serve *only* to produce three
-distinct free-direction polar roots for a branch-free lemma that is already proved. The real
-blocker is `hq2`, which by Euler's identity is equivalent to `g₁ = 0` — i.e. to the tangent line of
-the residual cubic at the coordinate-line point *being* the coordinate line. That is non-generic,
-it is the only case the written argument covers, and the generic case `g₁ ≢ 0` (obligation 1d) has
-no argument at all.
-
-**Correction (superseding the above).** Checking the natural-language proof shows this diagnosis
-was wrong. `certificates/all_smooth_tangent_residual_theorem.md` §3–4 **chooses** the line `L`
-subject to four nonempty open conditions, and normalises coordinates to `L = {W = 0}` only
-afterwards (§5); its introduction states explicitly that "a fixed `L` can have a nontrivial common
-factor". This development hardcodes `L = {Y₂ = 0}` with no genericity predicate anywhere.
-
-So obligations 1c and 1d — which quantify over all smooth `F` with a fixed line — are not what the
-paper proves and are plausibly false. Gap B is not research-level mathematics: §1 makes the generic
-cubic fibre **smooth** by generic smoothness, and a smooth plane cubic contains no line, so the
-degeneracy cannot arise for a general line. Generic smoothness is therefore **required**, as the
-paper's first step, not avoidable. See `PLAN.md`, "Correction: the missing good line", and the new
-work package WP-G.
-
-## Not verified
-
-No concrete `F` is exhibited in Lean together with a proof of
-`Smooth (biprojectiveZeroLocusToSpec 2 2 k F)`. Every `_of_smooth` theorem is conditional on an
-instance nobody has constructed, and an axiom check cannot detect a vacuous hypothesis. External
-Macaulay2 certificates exist under `certificates/`, but there is no Lean-level witness. See
-`PLAN.md` WP-E.
-
-## Provenance
-
-Lean sources are machine-generated. The claims above were checked by reading the statements, by
-`#print axioms`, and by confirming compilation; the whole tree has not been line-by-line reviewed.
+The `sorry` census should show only the two legacy declarations listed above. The declaration
+census should find no `admit` or source `axiom` declaration.

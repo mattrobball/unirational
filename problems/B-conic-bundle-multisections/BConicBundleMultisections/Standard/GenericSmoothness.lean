@@ -136,9 +136,9 @@ open AlgebraicGeometry
 /--
 **Generic smoothness** (Hartshorne III.10.7).
 
-Let `k` be algebraically closed of characteristic zero and let `f : X ⟶ Y` be a morphism of
-`k`-schemes of finite type with `X` smooth over `k`.  Then `f` is smooth over some nonempty open
-subset of `Y`.
+Let `k` be algebraically closed of characteristic zero, let `Y` be an integral `k`-scheme of finite
+type, and let `f : X ⟶ Y` be a morphism of finite type with `X` smooth over `k`.  Then `f` is smooth
+over some nonempty open subset of `Y`.
 
 *Status: standard, `sorry`ed, and ours to prove — but no longer consumed.*  See the module
 docstring: the development takes the coordinate-level form of the same theorem
@@ -151,9 +151,11 @@ Mathlib has no generic smoothness for morphisms of schemes over a base other tha
 pinned revision.  Characteristic zero is essential — the statement is false in positive
 characteristic (Frobenius is the standard counterexample).
 
-Dominance of `f` is deliberately **not** assumed: if `f` is not dominant then a nonempty open
-disjoint from its image works, with `f ∣_ U` a morphism out of the empty scheme.  Requiring
-dominance would be a stronger hypothesis for no gain.
+The integrality and finite-type hypotheses on `Y` are load-bearing.  Without integrality the
+statement is false: `Spec k → Spec(k[ε]/ε²)` is a finite morphism from a smooth `k`-scheme, but the
+target has no smaller nonempty open and the map is not flat.  They also rule out the vacuous
+counterexample `Y = ∅`.  Dominance of `f` is deliberately not assumed: over an integral target the
+nondominant case may be handled on an open disjoint from the closure of the image.
 
 The conclusion is stated as *nonempty* rather than *dense* because that is the honest content;
 when `Y` is irreducible — as `ℙ²_x` is — nonempty open implies dense, and the caller derives it.
@@ -162,7 +164,9 @@ theorem exists_nonempty_open_smooth_restrict
     {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     {X Y : Scheme.{u}} (sX : X ⟶ Spec (.of k)) (sY : Y ⟶ Spec (.of k))
     (f : X ⟶ Y) (hf : f ≫ sY = sX)
-    [Smooth sX] [LocallyOfFiniteType f] :
+    [Smooth sX] [IsIntegral Y]
+    [LocallyOfFiniteType sY] [QuasiCompact sY]
+    [LocallyOfFiniteType f] [QuasiCompact f] :
     ∃ U : Y.Opens, Nonempty U ∧ Smooth (f ∣_ U) :=
   sorry
 

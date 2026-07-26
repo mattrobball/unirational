@@ -1,0 +1,31 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.TargetRelationGenericFiberArtinian
+
+/-! # Axiom audit for the effective Artinian target-relation generic fibre -/
+
+open BConicBundleMultisections
+open BConicBundleMultisections.BiprojectiveSpace
+
+#print axioms twoEquationChartIsoSpecAffineQuotient_hom_fst
+#print axioms twoEquationChartToGlobal_comp_ι
+#print axioms range_twoEquationStandardQuotientToGlobal
+#print axioms twoEquationStandardQuotientToGlobal_comp_fst
+#print axioms map_twoEquationStandardChartIdeal_fstFiber
+#print axioms exists_openImmersion_twoEquationFstChart_into_fiber
+#print axioms twoEquationFstFiber_isLocallyArtinian_of_affineChartRings
+#print axioms twoEquationFstFiber_isLocallyArtinian_of_isCoprimeOverFractionField
+#print axioms fstBaseChangedChartEquation_rename_inr
+#print axioms isCoprimeOverFractionFieldInOrder_of_irreducible_not_dvd
+#print axioms eliminationDegree_or_span_eq_top_of_irreducible_not_dvd
+#print axioms affinePlaneIntersectionRing_isArtinian_of_span_eq_top
+#print axioms affinePlaneIntersectionRing_isArtinian_of_isUnit_or_irreducible_not_dvd
+#print axioms twoEquationFstFiber_isLocallyArtinian_of_irreducibleSecondEquation
+#print axioms targetRelationFstFiber_isLocallyArtinian_of_hasThreeChartCoprimality
+#print axioms targetRelation_genericFiber_isLocallyArtinian_of_chartwiseCoprime
+#print axioms targetRelation_genericFiber_isLocallyArtinian_of_irreducibleChartEquation

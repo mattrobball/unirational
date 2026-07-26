@@ -440,6 +440,61 @@ theorem eval_residualYCoordsOn_residualLinearFormOn
   · rw [hcoord]; simp
   · rw [hcoord]; simp
 
+/-! ### Specialisation to the coordinate line
+
+The general residual construction recovers the coordinate-line one for the standard frame
+`p₀ = (1,0,0)`, `q₀ = (0,1,0)`, `r = (0,0,1)`, `N = 1`.  These lemmas make that exact rather than
+informal, so the Jacobian determinant on `residualYCoords` is literally the one on
+`residualYCoordsOn` for that frame. -/
+
+/-- The generic point of the coordinate line is the standard affine-plane representative
+`(1, t, 0)`. -/
+theorem affineTwoLinePoint_coordinate :
+    affineTwoLinePoint ![1, 0, 0] ![0, 1, 0] = affineTwoCoordinateLineY K := by
+  funext a
+  fin_cases a <;> simp [affineTwoLinePoint, linePointOf, affineTwoCoordinateLineY]
+
+/-- The frame of the coordinate line, over the affine plane ring, is the identity. -/
+theorem affineTwoLineFrame_coordinate :
+    affineTwoLineFrame ![1, 0, 0] ![0, 1, 0] ![0, 0, (1 : K)] = 1 := by
+  have hp : (fun i => (C : K →+* affineTwoRing K) (![1, 0, 0] i)) = ![1, 0, 0] := by
+    funext i; fin_cases i <;> simp
+  have hq : (fun i => (C : K →+* affineTwoRing K) (![0, 1, 0] i)) = ![0, 1, 0] := by
+    funext i; fin_cases i <;> simp
+  have hr : (fun i => (C : K →+* affineTwoRing K) (![0, 0, (1 : K)] i)) = ![0, 0, 1] := by
+    funext i; fin_cases i <;> simp
+  simp only [affineTwoLineFrame, hp, hq, hr, lineFrame_coordinate]
+
+/-- The specialized conic along the coordinate line is the original specialized conic. -/
+theorem lineSpecializedConicPullback_coordinate
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) :
+    lineSpecializedConicPullback ![1, 0, 0] ![0, 1, 0] F = specializedConicPullback F := by
+  simp only [lineSpecializedConicPullback, specializedConicPullback,
+    affineTwoLinePoint_coordinate]
+
+/-- Stereo first-block coordinates along the coordinate line recover `stereoFirstCoords`. -/
+theorem stereoFirstCoordsOn_coordinate
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (v : Fin 3 → Polynomial K) :
+    stereoFirstCoordsOn ![1, 0, 0] ![0, 1, 0] F v = stereoFirstCoords F v := by
+  simp only [stereoFirstCoordsOn, stereoFirstCoords, lineSpecializedConicPullback_coordinate]
+
+/-- **On the coordinate line, `residualYCoordsOn` is `residualYCoords`.**
+
+Standard frame `p₀ = (1,0,0)`, `q₀ = (0,1,0)`, `r = (0,0,1)`, inverse `N = 1`: the general residual
+point construction specialises definitionally to the original one. -/
+theorem residualYCoordsOn_coordinateLine
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (v : Fin 3 → Polynomial K) :
+    residualYCoordsOn ![1, 0, 0] ![0, 1, 0] ![0, 0, (1 : K)] 1 F v =
+      residualYCoords F v := by
+  have hN : ((1 : Matrix (Fin 3) (Fin 3) K).map (C : K →+* affineTwoRing K)) =
+      (1 : Matrix (Fin 3) (Fin 3) (affineTwoRing K)) := by
+    ext i j
+    by_cases hij : i = j <;> simp [Matrix.map_apply, Matrix.one_apply, hij]
+  -- Unfold both residual constructions and discharge via the specialisation lemmas.
+  dsimp only [residualYCoordsOn, residualYCoords]
+  simp only [stereoFirstCoordsOn_coordinate, affineTwoLinePoint_coordinate,
+    affineTwoLineFrame_coordinate, hN, frameTangentDir_one]
+
 end
 
 end

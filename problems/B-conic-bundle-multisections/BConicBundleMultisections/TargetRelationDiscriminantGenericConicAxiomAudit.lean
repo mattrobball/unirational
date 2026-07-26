@@ -1,0 +1,27 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.TargetRelationDiscriminantGenericConic
+
+/-! Dependency audit for the target-relation generic-conic and saturation boundary. -/
+
+#print axioms
+  BConicBundleMultisections.universalSndConicModulo_fraction_nonsingular_of_irreducible_not_dvd_discriminant
+#print axioms
+  BConicBundleMultisections.irreducible_fraction_universalSndConicModulo_of_irreducible_not_dvd_discriminant
+#print axioms
+  BConicBundleMultisections.isPrime_span_fraction_universalSndConicModulo_of_irreducible_not_dvd_discriminant
+#print axioms
+  BConicBundleMultisections.isPrime_span_universalSndConicModulo_of_generic_injective
+#print axioms
+  BConicBundleMultisections.isPrime_span_F_rename_inr_of_irreducible_not_dvd_discriminant_of_generic_injective
+#print axioms
+  BConicBundleMultisections.injective_targetRelationConeConicToGeneric_of_flat
+#print axioms
+  BConicBundleMultisections.isPrime_span_universalSndConicModulo_of_irreducible_not_dvd_discriminant_of_flat
+#print axioms
+  BConicBundleMultisections.isPrime_span_F_rename_inr_of_irreducible_not_dvd_discriminant_of_flat

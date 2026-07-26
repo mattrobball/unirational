@@ -1,0 +1,21 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.Standard.G3FrameIncidenceSelection
+
+namespace BConicBundleMultisections.Standard
+
+#print axioms residualLinearFormOn_lineReframe
+#print axioms residualLinearFormOn_lineBasisSwap
+#print axioms residualLineNonconstantOn_mul_lineReframe
+#print axioms residualLineNonconstantOn_mul_lineBasisSwap
+#print axioms exists_G3_frame_point_on_isSmoothPlaneCubic
+#print axioms exists_genericG3MinorTarget_ne_zero_on_isSmoothPlaneCubic
+#print axioms g3FrameMeetsEveryNonemptyPrincipalOpenOnSmoothCubic_of_smooth
+#print axioms exists_actualG3G4LineSection_via_frameIncidence
+
+end BConicBundleMultisections.Standard

@@ -1,0 +1,32 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.Standard.G3G4FrameIncidence
+
+namespace BConicBundleMultisections.Standard
+
+#print axioms prime_frameIncidenceEquation_of_prime
+#print axioms isPrime_span_frameIncidenceEquation_of_isSmoothPlaneCubic
+#print axioms residualLineCoeffOn_eq_matrix_sum
+#print axioms residualLineCoeffOn_smul_right
+#print axioms residualLineCoeffMinor_smul_right
+#print axioms frameTangentDir_smul_right
+#print axioms frameTangentResidual_smul_inverse
+#print axioms map_residualLineCoeffOn
+#print axioms eval_genericG3MinorTarget
+#print axioms exists_genericG3MinorTarget_ne_zero_at_G3_incidencePoint
+#print axioms exists_inverse_residualLineNonconstantOn_of_genericG3MinorTarget_ne_zero
+#print axioms eval_genericFrameTangentResidualTarget
+#print axioms eval_frameTangentResidual_adjugate
+#print axioms genericFrameTangentResidualTarget_ne_zero_at_incidencePoint
+#print axioms eval_frameTangentResidual_ne_zero_of_genericTarget
+#print axioms exists_affine_point_off_four_targets_of_prime_hypersurface
+#print axioms exists_commonFrame_of_G3_incidencePoint_of_frameTangent_targetPoint
+#print axioms exists_nonsingularFrameOpenPoint_on_smooth_cubic
+#print axioms hasG3NonsingularFrameIntersectionAt_of_G3_incidencePoint
+
+end BConicBundleMultisections.Standard

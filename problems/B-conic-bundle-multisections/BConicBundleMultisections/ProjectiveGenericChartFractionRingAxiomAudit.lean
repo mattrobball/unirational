@@ -1,0 +1,3 @@
+import BConicBundleMultisections.ProjectiveGenericChartFractionRing
+
+#print axioms BConicBundleMultisections.BiprojectiveSpace.standardChartResidueRingHom_isFractionRing_generic

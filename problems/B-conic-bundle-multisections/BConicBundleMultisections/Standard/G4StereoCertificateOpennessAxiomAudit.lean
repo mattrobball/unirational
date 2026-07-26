@@ -1,0 +1,25 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.Standard.G4StereoCertificateOpenness
+
+/-! Focused axiom audit for polynomial openness of the inverse-stereo certificate. -/
+
+open BConicBundleMultisections.Standard
+
+#print axioms eval_pointwiseG4StereoCertificatePoly
+#print axioms hasPolynomialOpenCertificate_pointwiseG4StereoCertificateAt
+#print axioms exists_inverseStereo_open_of_certificatePoly_ne_zero
+#print axioms pointwiseG4StereoCertificateAt_ne_zero_of_inverseStereo_open
+#print axioms exists_isotropic_section_nonzero_at_zero
+#print axioms pointwiseG4StereoCertificateAt_ne_zero_of_realizes_center
+#print axioms pointwiseG4StereoCertificatePoly_ne_zero_of_realizes_center
+#print axioms exists_inverseStereo_center_open_of_nonsingular_conic
+#print axioms exists_inverseStereo_center_open_avoiding_base_of_nonsingular_conic
+#print axioms exists_isotropic_section_realizing_inverseStereo_center_at_zero
+#print axioms exists_actualG3G4LineSection_of_G3_of_nonsingularPointwiseG4Witness
+#print axioms exists_actualG3G4LineSection_of_exists_G3_nonsingularPointwiseG4Witness

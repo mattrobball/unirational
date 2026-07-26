@@ -1,0 +1,22 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.Standard.G3G4NonsingularLineSelection
+
+/-! Focused axiom audit for corrected arbitrary-frame G3--G4 selection. -/
+
+open BConicBundleMultisections.Standard
+
+#print axioms frameTangentDir_mem_tangentHyperplaneCone
+#print axioms frameTangentResidual_C_mul
+#print axioms eval_frameTangentResidual_C_mul_ne_zero
+#print axioms lineSpecializedConic_zero_nonsingular_of_sndConicDiscriminant_ne_zero
+#print axioms exists_smoothCubicFiber_in_stereoChart_point_avoids_sndConicDiscriminant
+#print axioms exists_nonsingularFramedPointwiseG4Witness_on_smooth_cubic
+#print axioms exists_nonsingularFramedPointwiseG4Witness_of_smooth
+#print axioms exists_actualG3G4LineSection_of_G3_of_nonsingularFramedPointwiseG4Witness
+#print axioms exists_actualG3G4LineSection_of_hasG3NonsingularFrameIntersectionAt

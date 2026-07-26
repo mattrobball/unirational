@@ -1,0 +1,26 @@
+/-
+Copyright (c) 2026 BConicBundleMultisections contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BConicBundleMultisections contributors
+-/
+module
+
+public import BConicBundleMultisections.PlaneCurveIntersectionArtinian
+
+/-!
+# Axiom audit for plane-curve intersection Artinian certificates
+-/
+
+open BConicBundleMultisections
+open BConicBundleMultisections.PlaneCurveIntersectionArtinian
+
+#print axioms quotient_isIntegral_of_coordinate_isIntegral
+#print axioms quotient_isArtinian_of_coordinate_eliminants
+#print axioms exists_coordinateEliminant_of_orderedResultant
+#print axioms affinePlaneIntersectionRing_isArtinian_of_orderedResultants
+#print axioms hasNonzeroOrderedResultant_of_isCoprimeOverFractionField
+#print axioms affinePlaneIntersectionRing_isArtinian_of_isCoprimeOverFractionField
+#print axioms isLocallyArtinian_of_affinePlaneIntersectionCover
+#print axioms isLocallyArtinian_of_affinePlaneIntersectionCover_of_isCoprimeOverFractionField
+#print axioms fiber_isLocallyArtinian_of_finite_preimage
+#print axioms targetRelation_genericFiber_isLocallyArtinian_of_finite_pointFiber

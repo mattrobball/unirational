@@ -1,0 +1,7 @@
+import BConicBundleMultisections.ProjectiveHypersurfaceFunctionField
+
+open BConicBundleMultisections
+open BConicBundleMultisections.ProjectiveSpace
+
+#print axioms hypersurfaceChartQuotientEquivSections
+#print axioms hypersurfaceFunctionFieldEquivSchemeFunctionField_algebraMap

@@ -9,6 +9,11 @@ public import BConicBundleMultisections.BiprojectiveAffineZeroLocus
 public import BConicBundleMultisections.BiprojectiveFiberEquationBaseChange
 public import Mathlib.Algebra.Category.Ring.Constructions
 public import Mathlib.AlgebraicGeometry.Pullbacks
+public import Mathlib.RingTheory.TensorProduct.MvPolynomial
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Data.Finsupp.Weight
+public import Mathlib.Algebra.MvPolynomial.Degrees
+public import BConicBundleMultisections.BiprojectiveAffineChartDegree
 
 /-!
 # Base change of a biprojective standard chart along a point of the second factor
@@ -433,6 +438,178 @@ theorem isPullback_SpecMap_sndFiberChartMap
         (A := ProjectiveSpace.StandardChartRing m R i)
         (B := ProjectiveSpace.StandardChartRing n R j)).toRingHom)) :=
   isPullback_SpecMap_of_isPushout _ _ _ _ (isPushout_sndFiberChartMap (i := i) y)
+
+
+/-! ### Affine presentation of the base-changed chart equation -/
+
+/-- Substituting `y` into the chart equation, then transporting `A ⊗ Sₓ ≅ A[x₁,…,xₘ]`, yields the
+polynomial that cuts out the affine model of the base-changed chart. -/
+noncomputable def baseChangedChartEquation
+    (y : ProjectiveSpace.StandardChartRing n R j →ₐ[R] K)
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    MvPolynomial (Fin m) K :=
+  tensorStandardChartEquivMvPolynomial m R K i
+    (sndFiberChartMap (i := i) y (chartEquation m n R i j F))
+
+/-- The principal ideal of the substituted chart equation is the image of the chart ideal. -/
+theorem map_span_chartEquation_eq_span_sndFiber
+    (y : ProjectiveSpace.StandardChartRing n R j →ₐ[R] K)
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    Ideal.map (sndFiberChartMap (i := i) y).toRingHom
+        (Ideal.span {chartEquation m n R i j F}) =
+      Ideal.span {sndFiberChartMap (i := i) y (chartEquation m n R i j F)} := by
+  rw [Ideal.map_span, Set.image_singleton]
+  rfl
+
+/-- Ring equivalence identifying the two presentations of a zero-locus chart. -/
+noncomputable def standardChartQuotientEquivAffineQuotient
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    (StandardChartRing m n R i j ⧸ Ideal.span {chartEquation m n R i j F}) ≃+*
+      (MvPolynomial (Fin m ⊕ Fin n) R ⧸
+        Ideal.span {affineChartEquation m n R i j F}) :=
+  Ideal.quotientEquiv _ _ (standardChartRingEquivMvPolynomial m n R i j).toRingEquiv <| by
+    rw [Ideal.map_span, Set.image_singleton]
+    apply congr_arg (fun z : MvPolynomial (Fin m ⊕ Fin n) R => Ideal.span ({z} : Set _))
+    simpa using (standardChartRingEquivMvPolynomial_chartEquation m n R i j F).symm
+
+/-! ### Interface lemmas for the chart-quotient open immersion (C₂) -/
+
+open MvPolynomial
+
+/-- The y-structure map into the product-chart quotient is the includeRight-then-mk map,
+transported along `standardChartQuotientEquivAffineQuotient`. -/
+theorem affineChartQuotientYHom_eq_equiv_comp_includeRight_mk
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    affineChartQuotientYHom m n R i j F =
+      (standardChartQuotientEquivAffineQuotient (R := R) (i := i) (j := j) F).toRingHom.comp
+        ((Ideal.Quotient.mk (Ideal.span {chartEquation m n R i j F})).comp
+          (Algebra.TensorProduct.includeRight
+              (R := R)
+              (A := ProjectiveSpace.StandardChartRing m R i)
+              (B := ProjectiveSpace.StandardChartRing n R j)).toRingHom) := by
+  ext b
+  unfold affineChartQuotientYHom standardChartQuotientEquivAffineQuotient
+  simp only [RingHom.comp_apply, Ideal.quotientEquiv_mk, RingEquiv.toRingHom_eq_coe,
+    RingEquiv.coe_toRingHom, AlgEquiv.coe_ringEquiv]
+
+/-- Scheme-level form of `affineChartQuotientYHom_eq_equiv_comp_includeRight_mk`. -/
+theorem Spec_map_affineChartQuotientYHom
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    Spec.map (ofHom (affineChartQuotientYHom m n R i j F)) =
+      Spec.map
+          (ofHom
+            (standardChartQuotientEquivAffineQuotient (R := R) (i := i) (j := j) F).toRingHom) ≫
+        Spec.map
+          (ofHom
+              (Algebra.TensorProduct.includeRight
+                  (R := R)
+                  (A := ProjectiveSpace.StandardChartRing m R i)
+                  (B := ProjectiveSpace.StandardChartRing n R j)).toRingHom ≫
+                ofHom
+                  (Ideal.Quotient.mk (Ideal.span {chartEquation m n R i j F}))) := by
+  rw [affineChartQuotientYHom_eq_equiv_comp_includeRight_mk]
+  have hcomp :
+      ofHom
+          ((standardChartQuotientEquivAffineQuotient (R := R) (i := i) (j := j) F).toRingHom.comp
+            ((Ideal.Quotient.mk (Ideal.span {chartEquation m n R i j F})).comp
+              (Algebra.TensorProduct.includeRight
+                  (R := R)
+                  (A := ProjectiveSpace.StandardChartRing m R i)
+                  (B := ProjectiveSpace.StandardChartRing n R j)).toRingHom)) =
+        (ofHom
+            (Algebra.TensorProduct.includeRight
+                (R := R)
+                (A := ProjectiveSpace.StandardChartRing m R i)
+                (B := ProjectiveSpace.StandardChartRing n R j)).toRingHom ≫
+              ofHom
+                (Ideal.Quotient.mk (Ideal.span {chartEquation m n R i j F}))) ≫
+          ofHom
+            (standardChartQuotientEquivAffineQuotient (R := R) (i := i) (j := j) F).toRingHom := by
+    ext x
+    rfl
+  rw [hcomp, Spec.map_comp]
+
+set_option backward.isDefEq.respectTransparency false in
+/-- Key interface: the product-chart quotient maps to `ℙⁿ` the same way as the chart zero locus. -/
+theorem chartQuotient_to_projective_eq
+    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) R)
+    (hF : IsBihomogeneousOfBidegree d e F) :
+    let I := Ideal.span {chartEquation m n R i j F}
+    Spec.map
+          (ofHom
+            (standardChartQuotientEquivAffineQuotient (R := R) (i := i) (j := j) F).symm.toRingHom) ≫
+        (chartZeroLocusIsoSpecAffineQuotient m n R i j F).inv ≫
+          chartZeroLocusToGlobal m n R F hF i j ≫ biprojectiveZeroLocusSnd m n R F =
+      Spec.map
+          (ofHom
+              (Algebra.TensorProduct.includeRight
+                  (R := R)
+                  (A := ProjectiveSpace.StandardChartRing m R i)
+                  (B := ProjectiveSpace.StandardChartRing n R j)).toRingHom ≫
+                ofHom (Ideal.Quotient.mk I)) ≫
+        ProjectiveSpace.standardChartι n R j := by
+  intro I
+  have h_inv :
+      (chartZeroLocusIsoSpecAffineQuotient m n R i j F).inv ≫
+          chartZeroLocusToGlobal m n R F hF i j ≫ biprojectiveZeroLocusSnd m n R F =
+        Spec.map (ofHom (affineChartQuotientYHom m n R i j F)) ≫
+          ProjectiveSpace.standardChartι n R j := by
+    have h := chartZeroLocusIsoSpecAffineQuotient_hom_snd m n R F hF i j
+    rw [← cancel_epi (chartZeroLocusIsoSpecAffineQuotient m n R i j F).hom]
+    simpa [Category.assoc, Iso.hom_inv_id_assoc] using h.symm
+  calc
+    Spec.map
+          (ofHom
+            (standardChartQuotientEquivAffineQuotient (R := R) (i := i) (j := j) F).symm.toRingHom) ≫
+        (chartZeroLocusIsoSpecAffineQuotient m n R i j F).inv ≫
+          chartZeroLocusToGlobal m n R F hF i j ≫ biprojectiveZeroLocusSnd m n R F
+        = Spec.map
+              (ofHom
+                (standardChartQuotientEquivAffineQuotient (R := R) (i := i) (j := j) F).symm.toRingHom) ≫
+            (Spec.map (ofHom (affineChartQuotientYHom m n R i j F)) ≫
+              ProjectiveSpace.standardChartι n R j) := by
+            rw [← Category.assoc, Category.assoc (Spec.map _), h_inv]
+    _ = Spec.map
+            (ofHom
+              (standardChartQuotientEquivAffineQuotient (R := R) (i := i) (j := j) F).symm.toRingHom) ≫
+          Spec.map
+              (ofHom
+                (standardChartQuotientEquivAffineQuotient (R := R) (i := i) (j := j) F).toRingHom) ≫
+            Spec.map
+                (ofHom
+                    (Algebra.TensorProduct.includeRight
+                        (R := R)
+                        (A := ProjectiveSpace.StandardChartRing m R i)
+                        (B := ProjectiveSpace.StandardChartRing n R j)).toRingHom ≫
+                      ofHom (Ideal.Quotient.mk I)) ≫
+              ProjectiveSpace.standardChartι n R j := by
+            rw [Spec_map_affineChartQuotientYHom, Category.assoc]
+    _ = Spec.map
+            (ofHom
+                (Algebra.TensorProduct.includeRight
+                    (R := R)
+                    (A := ProjectiveSpace.StandardChartRing m R i)
+                    (B := ProjectiveSpace.StandardChartRing n R j)).toRingHom ≫
+                  ofHom (Ideal.Quotient.mk I)) ≫
+          ProjectiveSpace.standardChartι n R j := by
+            have h_id :
+                Spec.map
+                      (ofHom
+                        (standardChartQuotientEquivAffineQuotient
+                          (R := R) (i := i) (j := j) F).symm.toRingHom) ≫
+                    Spec.map
+                      (ofHom
+                        (standardChartQuotientEquivAffineQuotient
+                          (R := R) (i := i) (j := j) F).toRingHom) =
+                  𝟙 _ := by
+              let e := standardChartQuotientEquivAffineQuotient
+                (R := R) (i := i) (j := j) F
+              rw [← Spec.map_comp]
+              have he : ofHom e.toRingHom ≫ ofHom e.symm.toRingHom = 𝟙 _ :=
+                e.toCommRingCatIso.hom_inv_id
+              rw [he, Spec.map_id]
+            rw [← Category.assoc (Spec.map _), h_id, Category.id_comp]
+
 
 end
 

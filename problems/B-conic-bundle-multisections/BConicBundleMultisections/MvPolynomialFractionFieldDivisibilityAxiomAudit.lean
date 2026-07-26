@@ -1,0 +1,7 @@
+import BConicBundleMultisections.MvPolynomialFractionFieldDivisibility
+
+#print axioms Ideal.isPrime_map_C_mvPolynomial
+#print axioms MvPolynomial.commAlgEquiv_map_C
+#print axioms isPrime_span_map_coefficients_of_prime
+#print axioms disjoint_nonZeroDivisors_map_C_span_map_coefficients_of_homogeneous
+#print axioms dvd_of_map_dvd_map_of_isFractionRing

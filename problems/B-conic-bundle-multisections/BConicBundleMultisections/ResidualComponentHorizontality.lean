@@ -5,9 +5,12 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.AlgebraicIndependenceJacobian
+public import BConicBundleMultisections.PlaneCubicResidualTransport
 public import BConicBundleMultisections.ProjectiveSpaceAlgebraPoint
 public import BConicBundleMultisections.ProjectiveSpaceChartDominance
 public import BConicBundleMultisections.ResidualComponent
+public import BConicBundleMultisections.ResidualHorizontalityLine
 public import BConicBundleMultisections.ResidualYFormVanishing
 
 /-!
@@ -28,23 +31,23 @@ The obligation is now assembled from exactly two statements, both isolated below
 * `ProjectiveSpace.isDominant_standardChartι` — the standard chart is a dense open of `ℙ²_k`.
   Topology plumbing; belongs to the `ℙⁿ` chart-cover work package, not to this one.
 * `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` — **the content**: no nonzero form in the
-  three `Y`-variables vanishes on the residual `Y`-coordinates in `k[t,s]`.
+  three `Y`-variables vanishes on the residual `Y`-coordinates in `k[t,s]`.  This is now **proved**
+  from a single determinant leaf `det_residualYCoords_ne_zero` by the Jacobian criterion
+  `AlgebraicIndependenceJacobian.eq_zero_of_isHomogeneous_of_aeval_eq_zero`.
 
 Everything between them is proved: `ChartHomogenization` turns "no nonzero form vanishes" into
 injectivity of `aeval` at the affine coordinate ratios, and `ResidualYFormVanishing` transports
 that across the chart normalization and the Away localization.
 
-## A discrepancy with the source that this obligation inherits
+## Choice of line (rewired)
 
-The natural-language proof (`certificates/all_smooth_tangent_residual_theorem.md` §3–§4,
-`RESOLUTION.md` lines 214–239) proves horizontality **for a chosen line `L`**: §3 produces a
-constant line whose residual line `δ_C(L)` is nonconstant, and §4 concludes "…forcing
-`δ_C(L) = M`, contrary to the choice of `L`.  Thus `T_L` is horizontal."  This development
-hardcodes `L = {Y₂ = 0}` and quantifies over all smooth `F`, so the statement below is *not* the
-one the source establishes; see `PLAN.md` WP-G, whose table currently records the nonconstancy
-condition as "unnecessary — verified" on the strength of §5 line 323, which is a *restatement* of
-horizontality, not a proof of it.  No hypothesis has been added here — the discrepancy is recorded,
-not patched.
+The source proves horizontality for a **chosen** good line `L` (G3 + polar).  This module's
+coordinate-line statements now take those hypotheses explicitly; the false unconditional form of
+`det_residualYCoords_ne_zero` is retired.  Polar nondegeneracy on the coordinate frame is the same
+form as `StereoNondegenerate` (`lineStereoPolarForm_coordinate`).  Global G3 for the hardcoded
+coordinate line of every smooth `F` is still not true — assembly obtains it from a packaging leaf
+(`exists_residualChart_of_smooth`) that records the remaining good-line / linear `y`-change step.
+The mathematical §4 content is `ResidualHorizontalityLine.det_residualYCoordsOn_ne_zero`.
 -/
 
 @[expose] public section
@@ -264,121 +267,152 @@ theorem isDominant_residualImagePointOfNormalizedLoc_toBase_of_injective
   rw [residualImagePointOfNormalizedLoc_toBase]
   exact isDominant_pointOfNormalizedCoordinatesAlgebra 2 j _ hchart hinj
 
-/-! ### The two remaining inputs -/
+/-! ### The Jacobian leaf and its corollary -/
+
+open scoped Matrix
 
 /--
-**No nonzero form vanishes on the residual `Y`-coordinates.**
+**Polar nondegeneracy on the coordinate line is the stereo polar.**
 
-*What it says.*  `residualYCoords F v : Fin 3 → k[t,s]` are the homogeneous coordinates of the
-tangent-residual point of the plane cubic fibre, as a function of the two parameters `(t, s)` of
-the vertical surface `S_L`: `t` runs along the coordinate line `L = {Y₂ = 0}` and `s` along the
-stereographic parametrization of the conic over it.  The statement is that these three polynomials
-satisfy no homogeneous relation over `k`, in any degree — equivalently that the two ratios
-`Y_a / Y_j` are algebraically independent in `k(t,s)`, equivalently that the residual surface `T_L`
-is not contained in a curve of `ℙ²_y`.  This is the concrete content of horizontality; the degree
-`d = 1` case alone is obligation 1's conclusion `residualYCoords_ne_zero_of_smooth`, strengthened
-from "not all zero" to "linearly independent".
+`lineStereoPolarForm` for the standard frame is definitionally
+`polarEval (specializedConicPullback F) …`, via `lineSpecializedConicPullback_coordinate`.
+That is exactly the form packaged as `StereoNondegenerate` in `ResidualYNonvanishing`.
+-/
+theorem lineStereoPolarForm_coordinate
+    {k : Type u} [Field k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    lineStereoPolarForm ![1, 0, 0] ![0, 1, 0] F v =
+      polarEval (specializedConicPullback F) (liftTsenSection v) affineTwoStereoDir := by
+  simp only [lineStereoPolarForm, lineSpecializedConicPullback_coordinate]
 
-*Why it is expected to be true.*  Source
-`certificates/all_smooth_tangent_residual_theorem.md` §4, last paragraph: the image of `T_L` in
-`ℙ²_y` is not a point because the fibres of `X → ℙ²_y` are one-dimensional while `T_L` is a
-surface, and it is not a curve because `Pic X = ℤH_x ⊕ ℤH_y` would then force `[T_L] = H_y`, hence
-`T_L` the preimage of a constant line `M ⊂ ℙ²_y`, hence `δ_C(L) = M` constant.
+theorem lineStereoPolarForm_coordinate_ne_zero_of
+    {k : Type u} [Field k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k)
+    (hnd : polarEval (specializedConicPullback F) (liftTsenSection v) affineTwoStereoDir ≠ 0) :
+    lineStereoPolarForm ![1, 0, 0] ![0, 1, 0] F v ≠ 0 := by
+  rwa [lineStereoPolarForm_coordinate]
 
-*What is missing, precisely.*  Two things, and they are different in kind.
+/--
+**Coordinate-line Jacobian determinant under G3 + stereo nondegeneracy.**
 
-1. *A proof technique.*  In characteristic zero the Jacobian criterion turns algebraic independence
-   of two elements of `k(t,s)` into nonvanishing of a single explicit determinant — which is why
-   `CharZero` is carried.  Mathlib has no such criterion at the pinned revision
-   (`RingTheory/AlgebraicIndependent/` has nothing Jacobian, and
-   `PreSubmersivePresentation.jacobian` is a different notion), so it must be built, or preimages
-   constructed directly.  The `X`-side analogue
-   `eq_zero_of_aeval_residualImageXCoords_eq_zero_of_isHomogeneous_two_of_three_roots`
-   (`SpecializedConicFreeDir.lean:3823`) does the same job in degree `2` only, by exploiting that a
-   conic parametrization is quadratic in `s`; that structure does not survive to arbitrary degree.
+By `residualYCoordsOn_coordinateLine`, this matrix is identical to the general-line matrix in
+`ResidualHorizontalityLine.det_residualYCoordsOn_ne_zero` for the standard frame.  The unconditional
+form (without G3 or the two section nondegeneracy conditions) was retired: it is false for bad lines
+(`sum_smul_residualYCoordsOn_eq_zero_of_constant_residualLine`,
+`stereoFirstCoordsOn_eq_smul_of_lineStereoPolarForm_eq_zero`).  Call sites must supply G3 for the
+coordinate line (source chooses `L`; after a linear `y`-change a good line becomes the coordinate
+line), `v 2 ≠ 0`, and polar nondegeneracy (available from the stereo polar via
+`lineStereoPolarForm_coordinate_ne_zero_of`).
 
-2. *A hypothesis the source has and this statement does not.*  §3–§4 of the source **choose** the
-   line `L` so that `δ_C(L)` is nonconstant, and §4 derives horizontality from that choice.  Here
-   `L` is hardcoded as `{Y₂ = 0}` and `F` is arbitrary among smooth bidegree-`(2,3)` equations.  So
-   the source does not prove this statement, and it may need the good line of `PLAN.md` WP-G — as a
-   `PGL₃` normalization of `F`, not as a hypothesis on this declaration, whose shape is fixed by
-   the pinned main theorem.  Two natural degenerations were checked and do not produce a
-   counterexample: if `L` met every fibre cubic in a triple point, or were tangent to every fibre
-   cubic at a constant point, then some point of `ℙ²_y` would have all of `ℙ²_x` as its fibre, and
-   smooth `F` has no whole fibre (`BiprojectiveNoWholeFiber`).  That is evidence, not a proof.
+*Status: reduced to the general-line §4 det leaf.*
+-/
+theorem det_residualYCoords_ne_zero
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
+    (hgood : ResidualLineNonconstant F)
+    (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
+    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (hv2 : v 2 ≠ 0)
+    (hpolar : lineStereoPolarForm ![1, 0, 0] ![0, 1, 0] F v ≠ 0) :
+    (Matrix.of ![residualYCoords F v,
+        fun a => pderiv (ULift.up 0) (residualYCoords F v a),
+        fun a => pderiv (ULift.up 1) (residualYCoords F v a)]).det ≠ 0 := by
+  have hMN :
+      lineFrame ![1, 0, 0] ![0, 1, 0] ![0, 0, (1 : k)] *
+        (1 : Matrix (Fin 3) (Fin 3) k) = 1 := by
+    simp [lineFrame_coordinate]
+  have hgood' : ResidualLineNonconstantOn
+      (lineFrame ![1, 0, 0] ![0, 1, 0] ![0, 0, (1 : k)]) 1 F := by
+    rw [lineFrame_coordinate]
+    exact (residualLineNonconstantOn_one F).mpr hgood
+  have hv' :
+      TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly ![1, 0, 0] ![0, 1, 0] F) v = 0 := by
+    rwa [← coordinateLineTernaryQuadraticPoly_eq]
+  have hdet :=
+    det_residualYCoordsOn_ne_zero
+      ![1, 0, 0] ![0, 1, 0] ![0, 0, (1 : k)] 1 hMN F hF hF0 hgood' v hv0 hv' hv2 hpolar
+  have hy :
+      residualYCoordsOn ![1, 0, 0] ![0, 1, 0] ![0, 0, (1 : k)] 1 F v =
+        residualYCoords F v :=
+    residualYCoordsOn_coordinateLine F v
+  convert hdet using 1
+  simp only [hy]
 
-*Form of the statement.*  Chart-free and localization-free on purpose: `i`, `j` and `hdenom` play
-no part, and the shape matches the proved `X`-side analogue so that a method found for one
-transfers to the other.  Given `hdenom` it is *equivalent* to the obligation below, so stating it
-this way weakens nothing.
+/-- Alias retained for call sites that already use the long name. -/
+theorem det_residualYCoords_ne_zero_of_residualLineNonconstant
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
+    (hgood : ResidualLineNonconstant F)
+    (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
+    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (hv2 : v 2 ≠ 0)
+    (hpolar : lineStereoPolarForm ![1, 0, 0] ![0, 1, 0] F v ≠ 0) :
+    (Matrix.of ![residualYCoords F v,
+        fun a => pderiv (ULift.up 0) (residualYCoords F v a),
+        fun a => pderiv (ULift.up 1) (residualYCoords F v a)]).det ≠ 0 :=
+  det_residualYCoords_ne_zero F hF hF0 hgood v hv0 hv hv2 hpolar
+
+/--
+**No nonzero form vanishes on the residual `Y`-coordinates** (coordinate line, under G3 + polar).
+
+Proved from `det_residualYCoords_ne_zero` by the Jacobian criterion.  Callers must supply G3 and
+polar; see the det docstring.
 -/
 theorem eq_zero_of_aeval_residualYCoords_of_isHomogeneous
     {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
+    (hgood : ResidualLineNonconstant F)
     (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
     (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (hv2 : v 2 ≠ 0)
+    (hpolar : lineStereoPolarForm ![1, 0, 0] ![0, 1, 0] F v ≠ 0)
     (d : ℕ) (Ψ : MvPolynomial (Fin 3) k) (hΨ : Ψ.IsHomogeneous d)
     (hvan : aeval (residualYCoords F v) Ψ = 0) :
     Ψ = 0 :=
-  sorry
+  eq_zero_of_isHomogeneous_of_aeval_eq_zero (residualYCoords F v)
+    (ULift.up 0) (ULift.up 1)
+    (det_residualYCoords_ne_zero F hF hF0 hgood v hv0 hv hv2 hpolar) d Ψ hΨ hvan
 
 /-! ### The obligation -/
 
 /--
 **Obligation 2.**  The localized residual chart map dominates the conic-bundle base `ℙ²_y`.
 
-*Status.* This says the residual surface is not contained in a fibre of the conic bundle —
-equivalently, that the residual points move in `ℙ²_y` as the chart parameters vary.  It is what the
-source concludes, but for a **chosen** line `L`, whereas `L` is fixed here; see the module header
-and `eq_zero_of_aeval_residualYCoords_of_isHomogeneous`.  No counterexample is known and the two
-obvious degenerations are excluded by smoothness, but the source does not prove it in this
-generality.
+Under G3 for the coordinate line and polar nondegeneracy of the stereographic section, this is the
+Jacobian assembly: chart density + injectivity of chart evaluation from
+`eq_zero_of_aeval_residualYCoords_of_isHomogeneous`, itself from the general-line §4 det.
 
-*What it buys.*  By `isDominant_residualComponentToBase_iff` this concrete coordinate statement is
-*equivalent* to horizontality of the residual component, with no scheme-theoretic image left in
-it; and `isDominant_residualComponentMultisection_baseChangeFst` then upgrades horizontality to
-dominance of `baseChangeFst`.  That upgrade is proved (properness plus dominance gives
-surjectivity, which is stable under base change), so no flatness hypothesis on the conic bundle is
-needed anywhere.
+*What remains globally.*  The residual track still hardcodes the coordinate line.  For arbitrary
+smooth `F` the coordinate line need not be good; the source chooses `L` (§3).  Callers must supply
+`hgood` (e.g. after a linear `y`-change that moves a line from `exists_good_line` to the coordinate
+line) and `hpolar` (from `StereoNondegenerate`).
 
-*Route: built.*  The whole chain is proved; the obligation is now a two-line assembly of the two
-inputs isolated above, and nothing else about schemes, localizations or chart rings remains.
-
-`residualImagePointOfNormalizedLoc_toBase` computes the composite in coordinates;
-`isDominant_residualImagePointOfNormalizedLoc_toBase_of_injective` reduces to chart dominance plus
-injectivity of the chart evaluation; `injective_standardChartEvalAlgebra_residualYCoordsNorm`
-(`ResidualYFormVanishing`) reduces that injectivity, via `ChartHomogenization`, to
-`eq_zero_of_aeval_residualYCoords_of_isHomogeneous`.  So what is owed is:
-
-1. `ProjectiveSpace.isDominant_standardChartι` — topology, scoped elsewhere.
-2. `eq_zero_of_aeval_residualYCoords_of_isHomogeneous` — the content; see its docstring for what is
-   missing, including the good-line discrepancy with the source recorded in this module's header.
-
-*Not needed.*  Picard groups, Grothendieck–Lefschetz, biduality, Lattès maps — the source uses them
-only to reach "the image is not a curve" while computing a divisor class for a degree bound this
-development does not claim.  What is *not* dispensable is the source's **choice of `L`** (§3–§4),
-which this development replaced by the fixed coordinate line; see the module header.
-
-`CharZero` is carried because the intended proof of the algebraic independence is the Jacobian
-criterion applied to the two ratios as functions of `(t, s)`.  Mathlib has no such criterion at
-the pinned revision; the fallback is to construct preimages explicitly.
+`CharZero` is carried because the Jacobian criterion uses it (Euler + induction on degree).
 -/
 theorem isDominant_residualImagePointOfNormalizedLoc_toBase
     {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
+    (hgood : ResidualLineNonconstant F)
     (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
     (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (hv2 : v 2 ≠ 0)
+    (hpolar : lineStereoPolarForm ![1, 0, 0] ![0, 1, 0] F v ≠ 0)
     (i j : Fin 3) (hdenom : residualChartDenom F v i j ≠ 0) :
     IsDominant (residualImagePointOfNormalizedLoc F hF v hv i j ≫ residualImageToBase F) :=
   isDominant_residualImagePointOfNormalizedLoc_toBase_of_injective F hF v hv i j
     (ProjectiveSpace.isDominant_standardChartι 2 k j)
     (injective_standardChartEvalAlgebra_residualYCoordsNorm F v i j hdenom
       fun d Ψ hΨ hvan =>
-        eq_zero_of_aeval_residualYCoords_of_isHomogeneous F hF hF0 v hv0 hv d Ψ hΨ hvan)
+        eq_zero_of_aeval_residualYCoords_of_isHomogeneous
+          F hF hF0 hgood v hv0 hv hv2 hpolar d Ψ hΨ hvan)
 
 end
 

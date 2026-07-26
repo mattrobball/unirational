@@ -31,11 +31,10 @@ does.  So:
 * `#guard_no_sorry` pins the results that must stay independent of the outstanding obligations.
   These are load-bearing: if one of them silently came to depend on an obligation, the remaining
   work would look smaller than it is.
-* `#guard_axioms_standard` allows `sorryAx` but nothing else, so no new axiom can enter unnoticed
-  while obligations remain.
-
-When the obligations are discharged, tighten the main theorem's check from
-`#guard_axioms_standard` to `#guard_no_sorry`.  That single edit is the definition of done.
+* `#guard_axioms_standard` allows `sorryAx` but nothing else, so legacy results whose old proof
+  routes still contain isolated obligations cannot silently acquire any further axiom.
+* `#guard_no_sorry` on the headline theorem is the mechanical definition of completion: the exact
+  statement above must depend on no axiom beyond the standard three.
 -/
 
 open Lean Elab Command in
@@ -88,10 +87,24 @@ end BConicBundleMultisections
 
 /-! ### Axiom guards -/
 
--- The main theorem: `sorryAx` is expected while obligations remain; nothing else is.
--- Tighten this to `#guard_no_sorry` when the last obligation is discharged.
-#guard_axioms_standard BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization
-#guard_axioms_standard BConicBundleMultisections.headline_statement_guard
+-- The exact headline statement and its statement guard are fully proved.
+#guard_no_sorry BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization
+#guard_no_sorry BConicBundleMultisections.headline_statement_guard
+
+-- The new unconditional assembly chain is guarded explicitly, so a future refactor cannot hide a
+-- `sorry` below the already-guarded headline theorem.
+#guard_no_sorry
+  BConicBundleMultisections.Standard.exists_actualG3G4LineSection_via_frameIncidence
+#guard_no_sorry
+  BConicBundleMultisections.targetRelationsProjectivelyIntegralAwayDiscriminant_of_smooth
+#guard_no_sorry
+  BConicBundleMultisections.targetRelationsResidualNegativeTwistGluingAwayDiscriminantOn
+#guard_no_sorry
+  BConicBundleMultisections.BiprojectiveSpace.residualEquationOn_mem_span_targetRelation_of_isIso_of_negativeTwist
+#guard_no_sorry
+  BConicBundleMultisections.hasUnirationalParametrization3_biprojectiveZeroLocus_of_projectivelyIntegralTargetRelations
+#guard_no_sorry
+  BConicBundleMultisections.hasUnirationalParametrization3_biprojectiveZeroLocus
 
 -- Load-bearing results that must remain fully proved.  If one of these starts depending on an
 -- obligation, the remaining work is larger than the obligation list suggests.
@@ -105,7 +118,7 @@ end BConicBundleMultisections
 #guard_no_sorry
   BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization_of_multisection_dominant
 
--- Obligation 1 must reduce to the single nonsingular-stereo obligation and nothing else.
+-- Legacy determinant-backed route, retained for reference but not consumed by the headline.
 #guard_axioms_standard BConicBundleMultisections.residualYCoords_ne_zero_of_smooth
 
 -- WP-4 is closed: the tower and its residual-component instance are fully proved.

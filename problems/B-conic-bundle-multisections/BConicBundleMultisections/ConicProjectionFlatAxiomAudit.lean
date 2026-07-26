@@ -1,0 +1,13 @@
+import BConicBundleMultisections.ConicProjectionFlat
+
+/-! Focused axiom audit for flatness of the smooth conic projection. -/
+
+open BConicBundleMultisections.PrimitiveHypersurfaceFlatness
+open BConicBundleMultisections.BiprojectiveSpace
+
+#print axioms flat_mvPolynomial_quotient_span_singleton_of_span_range_coeff_eq_top
+#print axioms baseChangedChartEquation_eq_chartDehomogenization
+#print axioms span_range_coeff_baseChangedChartEquation_id_eq_top
+#print axioms flat_affineChartQuotientYHom_of_smooth_bidegree23
+#print axioms flat_biprojectiveZeroLocusSnd_of_flat_affineChartQuotientYHom
+#print axioms flat_biprojectiveZeroLocusSnd_of_smooth_bidegree23

@@ -1,0 +1,10 @@
+module
+
+public import BConicBundleMultisections.SndConicDiscriminant
+
+open BConicBundleMultisections
+
+#print axioms eval_universalSndConic
+#print axioms sndConicDiscriminant_isHomogeneous
+#print axioms map_universalSndConic_standardChart
+#print axioms sndConicDiscriminant_ne_zero_of_smooth

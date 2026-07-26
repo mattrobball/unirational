@@ -8,12 +8,16 @@ module
 public import BConicBundleMultisections.BiprojectiveFiberNonempty
 public import BConicBundleMultisections.BiprojectiveNoWholeFiber
 public import BConicBundleMultisections.BiprojectiveZeroLocus
+public import BConicBundleMultisections.GoodLineConic
+public import BConicBundleMultisections.GoodLineExistence
 public import BConicBundleMultisections.MultisectionPrinciple
 public import BConicBundleMultisections.ResidualDivisor
 public import BConicBundleMultisections.ResidualImage
 public import BConicBundleMultisections.ResidualBaseChangeUnirational
 public import BConicBundleMultisections.ResidualComponentAssembly
+public import BConicBundleMultisections.ResidualComponentOnAssembly
 public import BConicBundleMultisections.ResidualMultisectionDominant
+public import BConicBundleMultisections.MainTheoremTargetReduction
 public import BConicBundleMultisections.Unirationality
 public import BConicBundleMultisections.UniversalResidualIdentity
 public import BConicBundleMultisections.VerticalSurface
@@ -271,18 +275,7 @@ theorem residual_baseChange_vertical_surface_package
         IsDominant (residualMultisection_bidegree23 F).baseChangeFst :=
   vertical_surface_stereo_package F hF hF0
 
-/--
-**Main theorem.**  Every smooth bidegree-`(2,3)` hypersurface in `ℙ² × ℙ²` over an algebraically
-closed field of characteristic zero is unirational: it admits a dominant rational map from affine
-`3`-space over the base.
-
-This is the faithful statement of the target — no auxiliary hypotheses beyond smoothness,
-bidegree, and `F ≠ 0`.  It is **not** fully proved: the proof below is complete except for the
-outstanding obligations inventoried in `ResidualComponentAssembly.lean`, one module per work
-package.  Each carries a `sorry` and a docstring recording its status.  Nothing else in the
-development is incomplete, so
-`#print axioms smooth_bidegree23_hasUnirationalParametrization` reporting `sorryAx` is an exact
-measure of what is owed.
+/-- Every smooth bidegree-`(2,3)` hypersurface whose coordinate line satisfies G3 is unirational.
 
 The argument: pick a Tsen isotropic section `v` of the coordinate-line conic (proved, from Tsen
 for ternary quadratics over `k[t]`) and a chart in which the residual chart denominator does not
@@ -292,23 +285,77 @@ residual chart map — is then a multisection of the conic bundle; its horizonta
 upgrades to dominance of `baseChangeFst` without any flatness hypothesis, and its base change is
 unirational in dimension `2 + 1 = 3` (obligations 3 and 4).  The multisection principle transports
 that parametrization back to `X`.
+
+The G3 hypothesis is essential for this coordinate normalization.  It cannot be inferred from
+smoothness: `Bidegree23Example.residualLineConstant` records a smooth counterexample.  The
+unconditioned theorem below must instead run this construction along a chosen good line.
+-/
+theorem smooth_bidegree23_hasUnirationalParametrization_of_residualLineNonconstant
+    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (Bidegree23ZeroLocus.toSpec k F)]
+    (hgood : ResidualLineNonconstant F) :
+    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) := by
+  obtain ⟨v, hv0, hv, hv2, hpolar, i, j, hdenom, _⟩ :=
+    exists_residualChart_of_smooth_of_residualLineNonconstant F hF hF0 hgood
+  haveI : IsDominant (residualComponentMultisection F hF v hv i j).baseChangeFst :=
+    isDominant_residualComponentMultisection_baseChangeFst F hF v hv i j
+      (isDominant_residualComponentToBase F hF v hv i j
+        (isDominant_residualImagePointOfNormalizedLoc_toBase
+          F hF hF0 hgood v hv0 hv hv2 hpolar i j hdenom))
+  exact smooth_bidegree23_hasUnirationalParametrization_of_multisection_dominant
+    k F hF hF0 (residualComponentMultisection F hF v hv i j)
+    (hasUnirationalParametrization3_residualComponentBaseChange
+      F hF hF0 hgood v hv0 hv hv2 hpolar i j hdenom)
+
+/-- The arbitrary-line tangent-residual construction, once a good framed line and a
+stereo-nondegenerate polynomial point on its generic conic have been chosen. -/
+theorem smooth_bidegree23_hasUnirationalParametrization_of_good_line_section
+    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (Bidegree23ZeroLocus.toSpec k F)]
+    (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (hMN : lineFrame p₀ q₀ r * N = 1)
+    (hgood : ResidualLineNonconstantOn (lineFrame p₀ q₀ r) N F)
+    (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
+    (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p₀ q₀ F) v = 0)
+    (hv2 : v 2 ≠ 0)
+    (hpolar : lineStereoPolarForm p₀ q₀ F v ≠ 0) :
+    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) := by
+  obtain ⟨i, j, hdenom, hdom⟩ :=
+    exists_isDominant_residualComponentOnToBase
+      p₀ q₀ r N hMN F hF hF0 hgood v hv0 hv hv2 hpolar
+  let m := residualComponentOnMultisection p₀ q₀ r N hMN F hF v hv i j
+  haveI : IsDominant m.baseChangeFst :=
+    isDominant_residualComponentOnMultisection_baseChangeFst
+      p₀ q₀ r N hMN F hF v hv i j hdom
+  exact smooth_bidegree23_hasUnirationalParametrization_of_multisection_dominant
+    k F hF hF0 m
+    (hasUnirationalParametrization3_residualComponentOnBaseChange
+      p₀ q₀ r N hMN F hF v hv i j hF0 hdenom hdom)
+
+/--
+**Main theorem.**  Every smooth bidegree-`(2,3)` hypersurface in `ℙ² × ℙ²` over an algebraically
+closed field of characteristic zero is unirational: it admits a dominant rational map from affine
+`3`-space over the base.
+
+The statement is faithful and has no auxiliary geometric hypotheses.  The proof uses the
+frame-incidence construction to choose one actual line carrying G3, a nondegenerate Tsen section,
+and G4 simultaneously.  Retained-chart projective integrality and the degree `-2` transition law
+for the residual quotient are automatic under smoothness; the latter turns homogeneous quadratic
+multiples into compatible global functions on every target curve.  The resulting target-geometry
+assembly feeds the arbitrary-line residual-component tower without using the obsolete isolated
+horizontality determinant obligation.
 -/
 theorem smooth_bidegree23_hasUnirationalParametrization
     (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)] :
-    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) := by
-  obtain ⟨v, hv0, hv, i, j, hdenom⟩ := exists_residualChart_of_smooth F hF hF0
-  haveI : IsDominant (residualComponentMultisection F hF v hv i j).baseChangeFst :=
-    isDominant_residualComponentMultisection_baseChangeFst F hF v hv i j
-      (isDominant_residualComponentToBase F hF v hv i j
-        (isDominant_residualImagePointOfNormalizedLoc_toBase
-          F hF hF0 v hv0 hv i j hdenom))
-  exact smooth_bidegree23_hasUnirationalParametrization_of_multisection_dominant
-    k F hF hF0 (residualComponentMultisection F hF v hv i j)
-    (hasUnirationalParametrization3_residualComponentBaseChange
-      F hF hF0 v hv0 hv i j hdenom)
+    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) :=
+  hasUnirationalParametrization3_biprojectiveZeroLocus k F hF hF0
 
 /-- Existential form of the main theorem. -/
 theorem smooth_bidegree23_isUnirationalOver
