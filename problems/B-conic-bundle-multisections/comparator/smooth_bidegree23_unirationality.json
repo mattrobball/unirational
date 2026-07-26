@@ -1,0 +1,13 @@
+{
+  "challenge_module": "Statement",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "Bidegree23Unirationality.smooth_bidegree23_hasUnirationalParametrization"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": false
+}

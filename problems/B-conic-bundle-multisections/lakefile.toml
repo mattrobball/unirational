@@ -18,3 +18,9 @@ rev = "v4.32.1"
 
 [[lean_lib]]
 name = "BConicBundleMultisections"
+
+[[lean_lib]]
+name = "Statement"
+
+[[lean_lib]]
+name = "Solution"
