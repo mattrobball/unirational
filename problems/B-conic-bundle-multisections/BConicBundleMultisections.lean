@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.AbsolutelyIrreducibleRelation
 public import BConicBundleMultisections.AlgebraicIndependenceJacobian
 public import BConicBundleMultisections.Basic
 public import BConicBundleMultisections.Bidegree23Example
