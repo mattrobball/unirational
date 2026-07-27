@@ -235,7 +235,7 @@ theorem ternaryQuadraticPoly_eval_line
 
 /-- A nonzero polar against `e₀` or `e₁` remains nonzero after passage from `k[t]` to the
 affine-plane ring and pairing with the stereo direction `(1,s,0)`. -/
-theorem polarEval_lineStereoDir_ne_zero_of_polarEval_ne_zero [Infinite k]
+theorem polarEval_lineStereoDir_ne_zero_of_polarEval_ne_zero
     (p₀ q₀ : Fin 3 → k)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (v : Fin 3 → Polynomial k)
@@ -264,23 +264,33 @@ theorem polarEval_lineStereoDir_ne_zero_of_polarEval_ne_zero [Infinite k]
       polarEval_map, polarEval_map, one_mul]
   rw [hexp]
   intro hzero
-  have hval : ∀ t₀ s₀ : k,
-      Polynomial.eval t₀ (polarEval Q v (Pi.single 0 1)) +
-        s₀ * Polynomial.eval t₀ (polarEval Q v (Pi.single 1 1)) = 0 := by
-    intro t₀ s₀
-    have hs1 : evalAffineTwoPoint t₀ s₀ (affineTwoCoord1 k) = s₀ := by
-      simp [evalAffineTwoPoint, affineTwoCoord1]
-    have hz := congrArg (evalAffineTwoPoint t₀ s₀) hzero
-    simpa [hφ, map_add, map_mul, ← liftPolyT_eq_hom, evalAffineTwoPoint_liftPolyT, hs1]
-      using hz
+  -- The retraction `s ↦ 0` of `k[t] → k[t,s]`.  It replaces the pointwise argument that
+  -- needed `k` infinite: the two coefficients are separated by a ring map, not by evaluation.
+  set ρ : affineTwoRing k →+* Polynomial k :=
+    eval₂Hom (Polynomial.C : k →+* Polynomial k)
+      (fun i : ULift (Fin 2) => if i.down = 0 then Polynomial.X else 0) with hρ
+  have hρφ : ∀ p : Polynomial k, ρ (φ p) = p := by
+    intro p
+    have hcomp : (ρ : affineTwoRing k →+* Polynomial k).comp
+        (C : k →+* affineTwoRing k) = (Polynomial.C : k →+* Polynomial k) :=
+      RingHom.ext fun a => by simp [hρ]
+    have hX : ρ (affineTwoCoord0 k) = Polynomial.X := by
+      simp [hρ, affineTwoCoord0]
+    calc ρ (φ p) = Polynomial.eval₂ (ρ.comp (C : k →+* affineTwoRing k))
+          (ρ (affineTwoCoord0 k)) p := by
+          rw [hφ, liftPolyTHom, Polynomial.coe_eval₂RingHom, Polynomial.hom_eval₂]
+      _ = p := by rw [hcomp, hX, Polynomial.eval₂_C_X]
+  have hρ1 : ρ (affineTwoCoord1 k) = 0 := by simp [hρ, affineTwoCoord1]
   have h0 : polarEval Q v (Pi.single 0 1) = 0 := by
-    refine Polynomial.funext fun t₀ => ?_
-    simpa using hval t₀ 0
+    have hz := congrArg ρ hzero
+    rwa [map_add, map_mul, hρφ, hρφ, hρ1, zero_mul, add_zero, map_zero] at hz
   have h1 : polarEval Q v (Pi.single 1 1) = 0 := by
-    refine Polynomial.funext fun t₀ => ?_
-    have hz := hval t₀ 1
-    rw [h0] at hz
-    simpa using hz
+    rw [h0, map_zero, zero_add] at hzero
+    have hcoord : affineTwoCoord1 k ≠ 0 := by
+      simp [affineTwoCoord1, MvPolynomial.X_ne_zero]
+    have hmul := (mul_eq_zero.mp hzero).resolve_left hcoord
+    have hz := congrArg ρ hmul
+    rwa [hρφ, map_zero] at hz
   rcases h with h | h
   · exact h (by simpa [Q] using h0)
   · exact h (by simpa [Q] using h1)
