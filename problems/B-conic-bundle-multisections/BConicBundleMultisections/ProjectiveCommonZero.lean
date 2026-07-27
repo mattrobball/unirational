@@ -52,7 +52,11 @@ private theorem eval_zero_of_isHomogeneous_of_pos
   rw [MvPolynomial.eval_zero, MvPolynomial.constantCoeff_eq]
   exact hf.coeff_eq_zero (by simpa using hd.ne)
 
-variable [IsAlgClosed K] [Finite σ]
+variable [Finite σ]
+
+section AlgClosed
+
+variable [IsAlgClosed K]
 
 /-- Fewer positive-degree homogeneous equations than homogeneous coordinates have a common
 nonzero zero over an algebraically closed field. -/
@@ -112,6 +116,58 @@ theorem exists_common_nonzero_zero_pair
     ∃ x : σ → K, x ≠ 0 ∧ eval x f = 0 ∧ eval x g = 0 := by
   classical
   obtain ⟨x, hx, hzero⟩ := exists_common_nonzero_zero_of_card_lt
+    ({f, g} : Finset (MvPolynomial σ K))
+    (by
+      intro p hp
+      simp only [Finset.mem_insert, Finset.mem_singleton] at hp
+      rcases hp with rfl | rfl
+      · exact ⟨d, hd, hf⟩
+      · exact ⟨e, he, hg⟩)
+    (Finset.card_le_two.trans_lt (by omega))
+  exact ⟨x, hx, hzero f (by simp), hzero g (by simp)⟩
+
+end AlgClosed
+
+/-! ### The same count, with the point taken over an algebraically closed extension
+
+The coefficients need not be closed; the *point* is what the closure is for.  This is the third
+kind of hypothesis in the descent trichotomy — existence of a rational point — and it is the one
+that does not descend: over `ℝ` the single form `x² + y²` has no nonzero real zero at all.  What
+is available over an arbitrary field is the zero over an algebraic closure, and that is what the
+statement below produces.  The count is unchanged, since a ring map cannot increase the
+cardinality of a finite generating set. -/
+
+/-- **Fewer positive-degree homogeneous equations than coordinates have a common nonzero
+geometric zero.**  The coefficients lie in an arbitrary field `k`; the point lies in an
+algebraically closed extension `L`. -/
+theorem exists_common_nonzero_zero_of_card_lt_of_geometric
+    {L : Type*} [Field L] [IsAlgClosed L] [Algebra K L]
+    (s : Finset (MvPolynomial σ K))
+    (hs : ∀ f ∈ s, ∃ d : ℕ, 0 < d ∧ f.IsHomogeneous d)
+    (hcard : s.card < Nat.card σ) :
+    ∃ x : σ → L, x ≠ 0 ∧ ∀ f ∈ s, eval x (map (algebraMap K L) f) = 0 := by
+  classical
+  obtain ⟨x, hx, hxs⟩ := exists_common_nonzero_zero_of_card_lt (K := L)
+    (s.image (map (algebraMap K L)))
+    (by
+      intro p hp
+      obtain ⟨f, hf, rfl⟩ := Finset.mem_image.mp hp
+      obtain ⟨d, hd, hfd⟩ := hs f hf
+      exact ⟨d, hd, hfd.map _⟩)
+    (lt_of_le_of_lt Finset.card_image_le hcard)
+  exact ⟨x, hx, fun f hf => hxs _ (Finset.mem_image_of_mem _ hf)⟩
+
+/-- Two positive-degree homogeneous polynomials in at least three coordinates have a common
+nonzero zero over an algebraically closed extension of the field of coefficients. -/
+theorem exists_common_nonzero_zero_pair_of_geometric
+    {L : Type*} [Field L] [IsAlgClosed L] [Algebra K L]
+    {f g : MvPolynomial σ K} {d e : ℕ}
+    (hf : f.IsHomogeneous d) (hg : g.IsHomogeneous e)
+    (hd : 0 < d) (he : 0 < e) (hσ : 3 ≤ Nat.card σ) :
+    ∃ x : σ → L, x ≠ 0 ∧ eval x (map (algebraMap K L) f) = 0 ∧
+      eval x (map (algebraMap K L) g) = 0 := by
+  classical
+  obtain ⟨x, hx, hzero⟩ := exists_common_nonzero_zero_of_card_lt_of_geometric (L := L)
     ({f, g} : Finset (MvPolynomial σ K))
     (by
       intro p hp

@@ -505,22 +505,6 @@ theorem exists_smul_of_totally_isotropic {R : Type u} [Field R]
   ext i
   simpa [Pi.smul_apply, smul_eq_mul] using (congr_fun hμ i).symm
 
-/-- Polar matrix commutes with coefficient ring maps (same universe). -/
-theorem polarMatrix_map {R S : Type u} [CommRing R] [CommRing S]
-    (φ : R →+* S) (Q : MvPolynomial (Fin 3) R) :
-    polarMatrix (map φ Q) = (polarMatrix Q).map φ := by
-  ext i j
-  simp only [polarMatrix_apply, Matrix.map_apply]
-  have hsingle (a : Fin 3) :
-      (fun b : Fin 3 => φ ((Pi.single a (1 : R) : Fin 3 → R) b)) =
-        (Pi.single a (1 : S) : Fin 3 → S) := by
-    ext b
-    by_cases h : b = a
-    · subst h; simp [Pi.single_eq_same, map_one]
-    · simp [Pi.single_eq_of_ne h, map_zero]
-  rw [← hsingle i, ← hsingle j]
-  exact polarEval_map φ Q (Pi.single i (1 : R)) (Pi.single j (1 : R))
-
 /-- Scaled form of `false_of_pderiv_s_eq_smul`: `d · Ys = n · Y` with `d ≠ 0` is impossible. -/
 theorem false_of_pderiv_s_eq_smul_div {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (_hF : IsBidegree23 F)

@@ -146,6 +146,29 @@ theorem eq_C_of_forall_eval_ne_zero {k : Type u} [Field k] [IsAlgClosed k]
   rw [heq] at h0
   simpa using h0
 
+/-- **The same conclusion from rootlessness over an algebraically closed extension.**
+
+`k` is arbitrary; only `L` is closed.  Moving the hypothesis to `L`-points is forced, not
+incidental: over `ℝ` the polynomial `t² + 1` has no real root and is not constant.  What the real
+hypothesis fails to see is the pair of roots `±i`.
+
+The conclusion is an identity of polynomials over `k`, so it comes back down by injectivity alone
+— the second row of the descent table in `GeometricPointDescent`. -/
+theorem eq_C_of_forall_eval_ne_zero_of_geometric {k : Type u} [Field k]
+    {L : Type*} [Field L] [IsAlgClosed L] [Algebra k L]
+    (p : Polynomial k) (hp : ∀ t : L, (p.map (algebraMap k L)).eval t ≠ 0) :
+    ∃ c : k, c ≠ 0 ∧ p = Polynomial.C c := by
+  obtain ⟨c, hc, hcC⟩ := eq_C_of_forall_eval_ne_zero (p.map (algebraMap k L)) hp
+  have hdeg : p.natDegree = 0 := by
+    have h := congrArg Polynomial.natDegree hcC
+    rwa [Polynomial.natDegree_map_eq_of_injective (algebraMap k L).injective,
+      Polynomial.natDegree_C] at h
+  refine ⟨p.coeff 0, ?_, Polynomial.eq_C_of_natDegree_eq_zero hdeg⟩
+  intro h0
+  refine hc ?_
+  have h := congrArg (fun q : Polynomial L => q.coeff 0) hcC
+  simpa [Polynomial.coeff_map, h0] using h.symm
+
 /-- Degree-`m` coefficient vector of a nonzero polynomial vector of max degree `m`. -/
 theorem leading_vector_ne_zero {k : Type u} [Field k]
     (n : Fin 3 → Polynomial k) (hn0 : n ≠ 0)

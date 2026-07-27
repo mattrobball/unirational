@@ -49,6 +49,27 @@ theorem exists_nonzero_zero_of_isHomogeneous
     (by simpa using hσ)
   exact ⟨x, hx, hxs f (Finset.mem_singleton_self _)⟩
 
+/-- The same, with the coefficients over an arbitrary field and the zero taken in an
+algebraically closed extension.  A single positive-degree form need not have a nonzero zero over
+its own field of definition — `x² + y²` over `ℝ` has none — so the point is where the closure is
+irreducibly used. -/
+theorem exists_nonzero_zero_of_isHomogeneous_of_geometric
+    {K : Type u} {σ : Type*} [Field K] [Finite σ]
+    {L : Type*} [Field L] [IsAlgClosed L] [Algebra K L]
+    {f : MvPolynomial σ K} {d : ℕ}
+    (hf : f.IsHomogeneous d) (hd : 0 < d) (hσ : 1 < Nat.card σ) :
+    ∃ x : σ → L, x ≠ 0 ∧ eval x (map (algebraMap K L) f) = 0 := by
+  classical
+  obtain ⟨x, hx, hxs⟩ := exists_common_nonzero_zero_of_card_lt_of_geometric (L := L)
+    ({f} : Finset (MvPolynomial σ K))
+    (by
+      intro g hg
+      simp only [Finset.mem_singleton] at hg
+      subst g
+      exact ⟨d, hd, hf⟩)
+    (by simpa using hσ)
+  exact ⟨x, hx, hxs f (Finset.mem_singleton_self _)⟩
+
 /-- On a smooth nonzero bidegree-`(2,3)` threefold, every normalized specialization of the first
 coordinate block has a nonzero second-block zero of the equation. -/
 theorem exists_secondCoordinates_zero_of_smooth_bidegree23

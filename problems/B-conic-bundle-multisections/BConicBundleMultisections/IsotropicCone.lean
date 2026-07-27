@@ -384,6 +384,63 @@ theorem eq_smul_of_eval_eq_zero_on_isotropic_cone
   have hP0 : P = 0 := (mul_eq_zero.mp hprod0).resolve_left hΔne
   exact ⟨c, sub_eq_zero.mp hP0⟩
 
+/-- **The cone theorem with algebraic closure moved onto the points.**
+
+`k` is arbitrary; the isotropic cone is the one cut out over an algebraically closed extension
+`L`, which is the only cone that carries the information — over `ℝ` the cone of `x² + y² + z²`
+is a single point and imposes nothing.
+
+The conclusion is an identity of polynomials over `k`, so it descends by injectivity alone: the
+second row of the table in `GeometricPointDescent`.  The proportionality constant is produced
+upstairs and then recognised as the ratio of two coefficients of `R` and `Q`, hence as an element
+of `k`. -/
+theorem eq_smul_of_eval_eq_zero_on_isotropic_cone_of_geometric
+    [NeZero (2 : K)] [NeZero (3 : K)]
+    {L : Type u} [Field L] [IsAlgClosed L] [Algebra K L]
+    (Q R : MvPolynomial (Fin 3) K)
+    (hQ : Q.IsHomogeneous 2) (hR : R.IsHomogeneous 2)
+    (hdisc : (polarMatrix Q).det ≠ 0)
+    (hcone : ∀ x : Fin 3 → L, eval x (map (algebraMap K L) Q) = 0 →
+      eval x (map (algebraMap K L) R) = 0) :
+    ∃ c : K, R = C c * Q := by
+  classical
+  set φ : K →+* L := algebraMap K L with hφdef
+  have hφ : Function.Injective φ := (algebraMap K L).injective
+  haveI : NeZero (2 : L) := ⟨by
+    intro h
+    exact NeZero.ne (2 : K) (hφ (by rw [map_ofNat, map_zero, h]))⟩
+  haveI : NeZero (3 : L) := ⟨by
+    intro h
+    exact NeZero.ne (3 : K) (hφ (by rw [map_ofNat, map_zero, h]))⟩
+  have hdetmap : ((polarMatrix Q).map φ).det = φ ((polarMatrix Q).det) := by
+    change (φ.mapMatrix (polarMatrix Q)).det = φ ((polarMatrix Q).det)
+    exact (RingHom.map_det φ (polarMatrix Q)).symm
+  have hdiscL : (polarMatrix (map φ Q)).det ≠ 0 := by
+    rw [polarMatrix_map, hdetmap]
+    intro h
+    exact hdisc (hφ (by rw [map_zero]; exact h))
+  obtain ⟨c', hc'⟩ := eq_smul_of_eval_eq_zero_on_isotropic_cone (map φ Q) (map φ R)
+    (hQ.map φ) (hR.map φ) hdiscL hcone
+  -- `Q ≠ 0`, so some coefficient of `Q` is nonzero and pins the constant down inside `K`.
+  have hQ0 : Q ≠ 0 := by
+    intro h
+    refine hdisc ?_
+    have hzero : polarMatrix (0 : MvPolynomial (Fin 3) K) = 0 := by
+      ext i j; simp [polarMatrix_apply, polarEval]
+    simp [h, hzero]
+  obtain ⟨d, hd⟩ : ∃ d, Q.coeff d ≠ 0 := by
+    by_contra hall
+    push Not at hall
+    exact hQ0 (MvPolynomial.ext _ _ fun d => by simpa using hall d)
+  have hQd : φ (Q.coeff d) ≠ 0 := fun h => hd (hφ (by rw [map_zero]; exact h))
+  have hcoeff := congrArg (fun p : MvPolynomial (Fin 3) L => p.coeff d) hc'
+  simp only [MvPolynomial.coeff_map, MvPolynomial.coeff_C_mul] at hcoeff
+  have hc'eq : c' = φ (R.coeff d / Q.coeff d) := by
+    rw [map_div₀, hcoeff, mul_div_assoc, div_self hQd, mul_one]
+  refine ⟨R.coeff d / Q.coeff d, MvPolynomial.map_injective φ hφ ?_⟩
+  rw [map_mul, MvPolynomial.map_C, ← hc'eq]
+  exact hc'
+
 
 end
 

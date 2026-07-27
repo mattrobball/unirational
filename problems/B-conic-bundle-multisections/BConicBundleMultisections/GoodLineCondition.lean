@@ -170,6 +170,22 @@ def polarMatrix (Q : MvPolynomial (Fin 3) R) : Matrix (Fin 3) (Fin 3) R :=
 theorem polarMatrix_apply (Q : MvPolynomial (Fin 3) R) (i j : Fin 3) :
     polarMatrix Q i j = polarEval Q (Pi.single i 1) (Pi.single j 1) := rfl
 
+/-- Polar matrix commutes with coefficient ring maps (same universe). -/
+theorem polarMatrix_map {S : Type u} [CommRing S]
+    (φ : R →+* S) (Q : MvPolynomial (Fin 3) R) :
+    polarMatrix (map φ Q) = (polarMatrix Q).map φ := by
+  ext i j
+  simp only [polarMatrix_apply, Matrix.map_apply]
+  have hsingle (a : Fin 3) :
+      (fun b : Fin 3 => φ ((Pi.single a (1 : R) : Fin 3 → R) b)) =
+        (Pi.single a (1 : S) : Fin 3 → S) := by
+    ext b
+    by_cases h : b = a
+    · subst h; simp [Pi.single_eq_same, map_one]
+    · simp [Pi.single_eq_of_ne h, map_zero]
+  rw [← hsingle i, ← hsingle j]
+  exact polarEval_map φ Q (Pi.single i (1 : R)) (Pi.single j (1 : R))
+
 /-- Polar against a basis vector is a row of the polar matrix applied to the vector. -/
 theorem polarEval_basis_eq_mulVec {Q : MvPolynomial (Fin 3) R} (hQ : Q.IsHomogeneous 2)
     (v : Fin 3 → R) (a : Fin 3) :
