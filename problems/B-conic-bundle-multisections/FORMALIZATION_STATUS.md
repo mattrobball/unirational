@@ -366,9 +366,145 @@ genuine alternative is `MvPolynomial.eq_zero_of_eval_zero_at_prod_finset` (Alon�
 infiniteness for degree bounds and would apply here, but buys a theorem over small finite fields that
 the source argument cannot support anyway.
 
-### The core/corollary split over `IsAlgClosed` is **not** reachable from the present tree
+### The `IsAlgClosed` surface, re-measured on the proof term — 27 July 2026
 
-**Attempted and measured, 27 July 2026; result negative, no code change.** The goal was to split the
+**This subsection supersedes the two that follow it.** The earlier "257 binders, 243 genuinely
+needed" figure was taken on the endpoint's **import closure**. The import closure is not the proof:
+of the 161 modules it contains, most contribute nothing to the live argument, and inside a module a
+single `variable [IsAlgClosed k]` line attaches the binder to every declaration that mentions `k`
+whether or not the proof uses it. Measured on the **proof term** instead — walk the value of
+`hasUnirationalParametrization3_biprojectiveZeroLocus_of_negativeTwistTargetGeometry` transitively —
+the surface is an order of magnitude smaller.
+
+Two corrections that change the plan, both machine-checked.
+
+**1. `smooth_bidegree23_hasUnirationalParametrization_of_good_line_section` is `sorry`-tainted.**
+
+```text
+'BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization_of_good_line_section'
+  depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+```
+
+It is the obvious place to start a weakening pass — it already takes the good line and the Tsen
+section explicitly — but it routes through `exists_isDominant_residualComponentOnToBase` →
+`residualYCoordsOn_ne_zero_of_good_line` → `det_residualYCoordsOn_ne_zero`, the legacy
+determinant `sorry` at `ResidualHorizontalityLine:300`. It is on the list of superseded
+declarations above; that list is right, and anything built on it inherits `sorryAx`. The
+`sorry`-free endpoint with the same shape is
+`hasUnirationalParametrization3_biprojectiveZeroLocus_of_negativeTwistTargetGeometry`
+(`ResidualTargetRelationGeometryNegativeTwist.lean:155`), which additionally takes G4, projective
+integrality and negative-twist gluing — the last two being *proved* from smoothness one layer up,
+so they are not extra assumptions of the headline.
+
+**2. The live surface is 118 declarations with 15 roots, not 243.**
+
+| measurement (proof-term closure of the `sorry`-free core) | value |
+| --- | --- |
+| project declarations in the closure | 1975 |
+| of those, carrying `IsAlgClosed`, `Infinite` or `PerfectField` | **118** |
+| of those, **minimal** — nothing else in the set is below them | **15** |
+| minimal and carrying `IsAlgClosed` | **7** |
+| minimal and carrying `Infinite` | **7** |
+| minimal and carrying `PerfectField` | **1** |
+
+`Infinite` and `PerfectField` have to be counted with `IsAlgClosed`: an arbitrary field supplies
+neither, and both are currently obtained from closure by instance search, so a census that greps
+for `IsAlgClosed` alone understates the job. The 118 was 128 before the free deletions committed
+below; the 15 was 24.
+
+**3. Block 1 — dominance by closed points — is not in the live core at all.** Machine-checked
+against the same proof term:
+
+```text
+AlgebraicGeometry.residueFieldIsoBase                        in closure: false
+ProjectiveSpace.closedPointNormalizedCoordinates             in closure: false
+closedPoint_mem_range_biprojectiveZeroLocusSnd               in closure: false
+isDominant_biprojectiveZeroLocusSnd_of_smooth_bidegree23     in closure: false
+sorryAx                                                      in closure: false
+```
+
+The `residueFieldIsoBase` apparatus — the hardest of the four blocks, ≈46 import-closure binders,
+and the one whose fix was thought to require base-change comparison isomorphisms the project does
+not have — is reached only from the **line-selection** layer (`Standard/*`,
+`PointedConicOpenDominance`, `TargetRelationTotalSpaceIntegral`), which is exactly what the core
+endpoint replaces by hypotheses. Dominance inside the core is established by injectivity of an
+explicit coordinate-ring map (`injective_standardChartEvalAlgebra_residualComponentOnYCoordsNorm`),
+not by exhibiting `k`-rational closed points. The same census on the *headline* theorem gives 201
+`IsAlgClosed`-typed declarations against the core's 97, and `PointedConicOpenDominance` contributes
+23 of the difference: those binders are the price of *choosing* the line, not of using it.
+
+The seven `IsAlgClosed` roots, and what each consumes:
+
+| root | Mathlib API | replacement |
+| --- | --- | --- |
+| `Hypersurface.sup_span_pderiv_eq_top_of_exists_pderiv_ne_zero` | `vanishingIdeal_zeroLocus_eq_radical` | `…_of_geometric`, built |
+| `eq_C_of_forall_eval_ne_zero` | `IsAlgClosed.exists_root` | `…_of_geometric`, built |
+| `exists_det_ne_zero_of_forall_ne_zero` | `vanishingIdeal_zeroLocus_eq_radical` | `…_of_geometric`, built and **wired** |
+| `mul_eval_eq_of_disc_ne_zero` | `IsAlgClosed.splits` | `eq_smul_…_of_geometric`, built |
+| `exists_common_nonzero_zero_of_card_lt` | `vanishingIdeal_zeroLocus_eq_radical` | `…_of_geometric`, built |
+| `globalSectionsMapFromBase_bijective_of_isIntegral_of_universallyClosed` | `IsAlgClosed.ringHom_bijective_of_isIntegral` | `RelativelyAlgClosedRationalFunctionField`, built |
+| `mem_radical_span_pair_of_vanishes_on_common_zero` | `vanishingIdeal_zeroLocus_eq_radical` | `…_of_isRadical` geometric form, built |
+
+The seven `Infinite` roots — `isHomogeneous_of_eval_smul`,
+`polarEval_lineStereoDir_ne_zero_of_polarEval_ne_zero`, `pencilDiscPoly_ne_zero`,
+`binaryLineRestriction_eq_zero_of_dir_eq_zero`, `eq_X2_mul_of_eval_on_X2_zero`,
+`exists_eval_ne_zero_affineTwoRing`, `eval_stereoAlg_inf_eq_zero` — are all
+`MvPolynomial.funext` / `Polynomial.funext` sites, and
+`GeometricPointDescent.funext_of_forall_eval_eq_algebraicClosure` discharges them with **no
+hypothesis on `k` at all**. `isHomogeneous_of_eval_smul` is discharged in the tree already: see
+`coeff_cubicFiberJacobianFamily_isHomogeneous_of_geometric` below.
+
+The single `PerfectField` root is
+`JacobianCriterionCharFree.eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField`. Perfectness
+is genuinely used there and is genuinely false for an imperfect field of characteristic `p`, so
+this is the one place where a fallback statement would carry a **(T)**, namely `[PerfectField k]`.
+It is free in characteristic zero and for finite fields.
+
+**Consequence for the ask.** Every remaining root is a *descent* problem — conclusions over `k`
+reached after working over `k̄`, with hypotheses that ascend and are supplied by `Smooth` through
+`SmoothExtensionJacobian` — and **not** a rational-point problem. The two genuine
+rational-point inputs, the good line and the Tsen section, are already explicit hypotheses of the
+core endpoint. So the projected hypothesis inventory of a closure-free core is:
+
+* **(P)** the framed line `p₀ q₀ r N`, `hMN`, and `hgood : ResidualLineNonconstantOn …` — already there;
+* **(P)** the Tsen section `v`, `hv0`, `hv`, `hv2`, `hpolar` — already there;
+* **(P)** `havoid : ResidualAvoidsConicDiscriminantOn …` (G4) — already there;
+* **(T)** `[PerfectField k]`, unless the Jacobian criterion is rerouted through the separable closure;
+* nothing else.
+
+`hintegral` and `hglue` must **not** appear: they are proved from smoothness by
+`targetRelationsProjectivelyIntegralAwayDiscriminant_of_smooth` and
+`targetRelationsResidualNegativeTwistGluingAwayDiscriminantOn`, so hypothesising them would be the
+dishonest move recorded at the end of this section.
+
+**What is done, 27 July 2026.** Two commits, both purely additive or binder-only, tree green at
+3315 / 8865 jobs, headline axioms unchanged, sorry census still 2.
+
+* `CubicFiberSingularLocus` has a complete base-field-free interface:
+  `elimCertificates_spec_of_geometric`, `exists_defining_set_forms_no_common_zero_of_geometric`,
+  `exists_defining_set_nonsingular_cubicFiber_of_bidegree23_of_geometric`, and — removing the
+  `Infinite` axis from that chain — `isHomogeneous_of_map_isHomogeneous`,
+  `map_map_universalCubicFiber`, `map_map_cubicFiberJacobianFamily`,
+  `coeff_cubicFiberJacobianFamily_isHomogeneous_of_geometric`,
+  `famMatrix_cubicFiber_isHomogeneous_of_geometric`,
+  `elimCertificates_isHomogeneous_of_geometric`. Homogeneity is a support statement, so it descends
+  along the injective coefficient extension; the universal cubic fibre commutes with base change.
+* Nine free `IsAlgClosed` deletions: seven in `GoodLineCondition` (one `variable` line that only two
+  declarations in the section actually need), plus
+  `StereoJacobian.eval_eq_zero_of_free_polar_root` and
+  `PointedConicRationalFamilies.exists_chartQuotient_openImmersion`.
+
+**What is not done.** The 103 non-minimal declarations have not been rethreaded, so the core
+endpoint still carries `[IsAlgClosed k]` and no closure-free theorem exists yet. The work is
+bounded and mapped, but it is a sweep of about a hundred proofs, not a threading pass.
+
+### The core/corollary split over `IsAlgClosed` — the earlier, import-closure measurement
+
+**Superseded by the subsection above; the numbers here are import-closure numbers and overstate the
+job.** Retained because the four-block decomposition and the negative results about
+`residueFieldIsoBase` and `finiteExtensionCoordinateDifferential` are still correct.
+
+**Attempted and measured, 27 July 2026.** The goal was to split the
 headline into a core theorem over an arbitrary field, hypothesising the good line, the Tsen section
 and G4, plus a corollary supplying them from algebraic closure. The natural core is
 `hasUnirationalParametrization3_biprojectiveZeroLocus_of_negativeTwistTargetGeometry`
