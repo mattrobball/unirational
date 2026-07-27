@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.AbsolutelyIrreducibleRelation
 public import BConicBundleMultisections.ResidualTargetExhaustionMembership
 public import BConicBundleMultisections.ResidualDiscriminantConsumer
 public import BConicBundleMultisections.ResidualDiscriminantHorizontality
@@ -15,8 +16,8 @@ public import BConicBundleMultisections.TargetRelationGenericFiber
 # Geometry sufficient for residual target-relation membership
 
 This module records the exact geometric input needed by the discriminant route to residual
-horizontality.  For every irreducible homogeneous relation `H(y)` which does not divide the conic
-discriminant, three facts are required:
+horizontality.  For every **absolutely** irreducible homogeneous relation `H(y)` which does not
+divide the conic discriminant, three facts are required:
 
 * the projective complete intersection `V(F, H(y))` is integral;
 * its generic fibre over the first projective plane is locally Artinian;
@@ -27,6 +28,17 @@ projective complete intersection.  The third fact then converts projective vanis
 polynomial-ideal membership.  Keeping these properties separate is important: integrality of the
 projective complete intersection does not by itself assert reducedness at the irrelevant vertex of
 its affine cone.  A prime Cox ideal is retained below as a stronger sufficient interface.
+
+## Why absolute irreducibility
+
+The four properties below are quantified over `IsAbsolutelyIrreducible H` rather than
+`Irreducible H`.  This makes each property *weaker*, so every producer of one of them is only
+asked for less; the change costs a single `.irreducible` at each producer.  What it buys is that
+the quantifier ascends along a field extension — `Irreducible H` does not — which is what allows
+these geometric properties to be established after base change to an algebraically closed field
+and then transported back.  The relation actually supplied to them downstream is the least-degree
+homogeneous relation of `exists_isAbsolutelyIrreducible_homogeneous_aeval_eq_zero`, which is
+absolutely irreducible unconditionally.
 -/
 
 @[expose] public section
@@ -49,7 +61,7 @@ def TargetRelationsProjectivelyIntegralAwayDiscriminant
     {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) : Prop :=
   ∀ (H : MvPolynomial (Fin 3) k) (d : ℕ),
-    Irreducible H → H.IsHomogeneous d → 0 < d →
+    IsAbsolutelyIrreducible H → H.IsHomogeneous d → 0 < d →
       ¬ H ∣ sndConicDiscriminant F →
         IsIntegral (targetRelationZeroLocus F H)
 
@@ -59,7 +71,7 @@ def TargetRelationsGenericFiberArtinianAwayDiscriminant
     {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) : Prop :=
   ∀ (H : MvPolynomial (Fin 3) k) (d : ℕ),
-    Irreducible H → H.IsHomogeneous d → 0 < d →
+    IsAbsolutelyIrreducible H → H.IsHomogeneous d → 0 < d →
       ¬ H ∣ sndConicDiscriminant F →
         IsLocallyArtinian
           ((targetRelationToFirst F H).fiber
@@ -72,7 +84,7 @@ def TargetRelationsCoxRadicalAwayDiscriminant
     {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) : Prop :=
   ∀ (H : MvPolynomial (Fin 3) k) (d : ℕ),
-    Irreducible H → H.IsHomogeneous d → 0 < d →
+    IsAbsolutelyIrreducible H → H.IsHomogeneous d → 0 < d →
       ¬ H ∣ sndConicDiscriminant F →
         (Ideal.span {F, MvPolynomial.rename Sum.inr H}).IsRadical
 
@@ -81,7 +93,7 @@ def TargetRelationsCoxPrimeAwayDiscriminant
     {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) : Prop :=
   ∀ (H : MvPolynomial (Fin 3) k) (d : ℕ),
-    Irreducible H → H.IsHomogeneous d → 0 < d →
+    IsAbsolutelyIrreducible H → H.IsHomogeneous d → 0 < d →
       ¬ H ∣ sndConicDiscriminant F →
         (Ideal.span {F, MvPolynomial.rename Sum.inr H}).IsPrime
 
@@ -115,9 +127,9 @@ theorem residualTargetRelationMembershipAwayDiscriminantOn_of_reducedGeometry
       p₀ q₀ r N hMN F hF hF0 v hv0 hv hv2 hpolar
   obtain ⟨i, j, hdenom⟩ :=
     exists_residualComponentOnDenom_ne_zero p₀ q₀ r N F v hX hY
-  intro H d hHirr hHhom hd hvan hdisc
+  intro H d hHabs hHhom hd hvan hdisc
   letI : IsIntegral (targetRelationZeroLocus F H) :=
-    hintegral H d hHirr hHhom hd hdisc
+    hintegral H d hHabs hHhom hd hdisc
   have hdom : IsDominant
       (residualTargetComponentOnToFirst
         p₀ q₀ r N hMN F hF v hv i j H hHhom hvan) :=
@@ -131,7 +143,7 @@ theorem residualTargetRelationMembershipAwayDiscriminantOn_of_reducedGeometry
   letI : IsLocallyArtinian
       ((targetRelationToFirst F H).fiber
         (genericPoint (ProjectiveSpace 2 k))) :=
-    hartinian H d hHirr hHhom hd hdisc
+    hartinian H d hHabs hHhom hd hdisc
   letI : IsIso
       (residualTargetComponentOnι
         p₀ q₀ r N hMN F hF v hv i j H hHhom hvan) :=
@@ -139,7 +151,7 @@ theorem residualTargetRelationMembershipAwayDiscriminantOn_of_reducedGeometry
         p₀ q₀ r N hMN F hF v hv i j H hHhom hvan
   exact residualEquationOn_mem_span_targetRelation_of_isIso_of_isRadical
     p₀ q₀ r N hMN F hF v hv i j H hHhom hvan
-      (hradical H d hHirr hHhom hd hdisc)
+      (hradical H d hHabs hHhom hd hdisc)
 
 /-- Prime Cox ideals supply the reduced affine-cone input in the preceding theorem. -/
 theorem residualTargetRelationMembershipAwayDiscriminantOn_of_geometry
@@ -159,8 +171,8 @@ theorem residualTargetRelationMembershipAwayDiscriminantOn_of_geometry
     ResidualTargetRelationMembershipAwayDiscriminantOn p₀ q₀ r N F v := by
   apply residualTargetRelationMembershipAwayDiscriminantOn_of_reducedGeometry
     p₀ q₀ r N hMN F hF hF0 v hv0 hv hv2 hpolar hintegral hartinian
-  intro H d hHirr hHhom hd hdisc
-  exact (hprime H d hHirr hHhom hd hdisc).isRadical
+  intro H d hHabs hHhom hd hdisc
+  exact (hprime H d hHabs hHhom hd hdisc).isRadical
 
 /-- Full tangent-residual consumer under the three target-relation geometry properties.
 

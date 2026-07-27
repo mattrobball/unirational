@@ -676,9 +676,9 @@ theorem targetRelationsProjectivelyIntegralAwayDiscriminant_of_smooth
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F)] :
     TargetRelationsProjectivelyIntegralAwayDiscriminant F := by
-  intro H d hHirr hH hd hdisc
+  intro H d hHabs hH hd hdisc
   exact BiprojectiveSpace.isIntegral_targetRelationZeroLocus_of_smooth_irreducible_awayDiscriminant
-    F hF hF0 H hH hd hHirr hdisc
+    F hF hF0 H hH hd hHabs.irreducible hdisc
 
 end
 

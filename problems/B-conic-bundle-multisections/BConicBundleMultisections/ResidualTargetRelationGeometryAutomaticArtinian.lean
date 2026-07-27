@@ -40,10 +40,10 @@ theorem targetRelationsGenericFiberArtinianAwayDiscriminant_of_bidegree23
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) :
     TargetRelationsGenericFiberArtinianAwayDiscriminant F := by
-  intro H d hHirr hHhom hd hdisc
+  intro H d hHabs hHhom hd hdisc
   exact
     targetRelation_genericFiber_isLocallyArtinian_of_irreducible_not_dvd_discriminant
-      F hF H hHhom hd hHirr hdisc 0
+      F hF H hHhom hd hHabs.irreducible hdisc 0
 
 /-- Projective integrality and Cox reducedness imply residual target-relation membership; the
 generic-fibre Artinianness hypothesis is automatic from bidegree and discriminant avoidance. -/

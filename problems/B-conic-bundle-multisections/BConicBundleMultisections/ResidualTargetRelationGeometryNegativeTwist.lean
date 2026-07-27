@@ -100,9 +100,10 @@ theorem residualTargetRelationMembershipAwayDiscriminantOn_of_negativeTwistGeome
       p₀ q₀ r N hMN F hF hF0 v hv0 hv hv2 hpolar
   obtain ⟨i, j, hdenom⟩ :=
     exists_residualComponentOnDenom_ne_zero p₀ q₀ r N F v hX hY
-  intro H d hHirr hHhom hd hvan hdisc
+  intro H d hHabs hHhom hd hvan hdisc
+  have hHirr : Irreducible H := hHabs.irreducible
   letI : IsIntegral (targetRelationZeroLocus F H) :=
-    hintegral H d hHirr hHhom hd hdisc
+    hintegral H d hHabs hHhom hd hdisc
   have hdom : IsDominant
       (residualTargetComponentOnToFirst
         p₀ q₀ r N hMN F hF v hv i j H hHhom hvan) :=

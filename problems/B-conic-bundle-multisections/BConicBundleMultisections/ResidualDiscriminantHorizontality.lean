@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.AbsolutelyIrreducibleRelation
 public import BConicBundleMultisections.ResidualDiscriminantAvoidance
 public import BConicBundleMultisections.ResidualTargetRelationConstantLine
 
@@ -19,6 +20,18 @@ known, bidegree forces the residual line to be constant, contradicting G3.
 
 The predicate below is the exact algebraic output expected from the target-relation integrality
 and generic-fibre-exhaustion argument.  It does not hide those geometric inputs.
+
+## Absolute, not merely relative, irreducibility
+
+The relation is quantified over `IsAbsolutelyIrreducible H`, not over `Irreducible H`.  This is a
+*weakening* of the predicate — it is asked of fewer `H` — and it is what lets the predicate be
+proved after base change: `Irreducible H` does not ascend from `k` to `k̄`, whereas
+`IsAbsolutelyIrreducible H` gives irreducibility over every extension by definition.  Nothing is
+lost downstream, because the relation actually fed to the predicate is produced by
+`exists_isAbsolutelyIrreducible_homogeneous_aeval_eq_zero`: a nonzero homogeneous relation of
+*least* positive degree, which is absolutely irreducible with no hypothesis at all.  The old
+extraction lemma `MvPolynomial.exists_irreducible_isHomogeneous_dvd_aeval_eq_zero` also returned
+the divisibility `H ∣ Psi`, which this argument never used.
 -/
 
 @[expose] public section
@@ -39,7 +52,7 @@ def ResidualTargetRelationMembershipAwayDiscriminantOn
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (v : Fin 3 → Polynomial K) : Prop :=
   ∀ (H : MvPolynomial (Fin 3) K) (d : ℕ),
-    Irreducible H → H.IsHomogeneous d → 0 < d →
+    IsAbsolutelyIrreducible H → H.IsHomogeneous d → 0 < d →
       aeval (residualYCoordsOn p₀ q₀ r N F v) H = 0 →
         ¬ H ∣ sndConicDiscriminant F →
         residualEquationOn (lineFrame p₀ q₀ r) N F ∈
@@ -64,13 +77,13 @@ theorem eq_zero_of_aeval_residualYCoordsOn_of_membershipAwayDiscriminant
     rw [hPsi] at hvan ⊢
     simpa using hvan
   · by_contra hPsi0
-    obtain ⟨H, e, hHirr, hHhom, he, _hHdPsi, hHvan⟩ :=
-      MvPolynomial.exists_irreducible_isHomogeneous_dvd_aeval_eq_zero
-        hPsi hPsi0 hd (residualYCoordsOn p₀ q₀ r N F v) hvan
+    obtain ⟨H, e, he, _hed, hHhom, _hH0, hHvan, hHabs⟩ :=
+      exists_isAbsolutelyIrreducible_homogeneous_aeval_eq_zero
+        (residualYCoordsOn p₀ q₀ r N F v) hPsi hPsi0 hd hvan
     have hHdisc : ¬ H ∣ sndConicDiscriminant F :=
       not_dvd_sndConicDiscriminant_of_aeval_residualYCoordsOn_eq_zero
         p₀ q₀ r N F v H hHvan havoid
-    have hmem := hmembership H e hHirr hHhom he hHvan hHdisc
+    have hmem := hmembership H e hHabs hHhom he hHvan hHdisc
     apply hgood
     exact residualLineConstantOn_of_mem_targetRelation
       (lineFrame p₀ q₀ r) N hF
