@@ -5,6 +5,30 @@ progress notes and historical blocker lists.
 
 ## Headline: fully proved
 
+### Independently verified, 26 July 2026
+
+Checked from the committed tree rather than taken from any agent's report:
+
+| check | result |
+|---|---|
+| `#guard_no_sorry` on the headline theorem (`MainTheoremGuard:91`) | builds — that elaborator errors on `sorryAx`, so building **is** the check |
+| `Statement.lean` diff vs. last commit | one blank line added, zero deletions — `HasUnirationalParametrization`, `Bidegree23ZeroLocus.toSpec` and `IsBidegree23` are byte-identical, so the statement was **not weakened** |
+| `#check` on the theorem | matches the statement pinned at the top of `PLAN.md` |
+| `#print axioms` on the theorem | `[propext, Classical.choice, Quot.sound]` — no `sorryAx` |
+| non-vacuity: `Bidegree23Example.smooth_F` | axiom-clean, so `[Smooth …]` is satisfiable |
+| `axiom` / `admit` / `native_decide` | none anywhere in the tree |
+| `lake build` | green, 3305 jobs |
+
+The non-vacuity check is not redundant: a vacuous theorem passes every axiom check and every `sorry`
+census. `smooth_F` is what separates "proved" from "proved about nothing" — and the obvious Fermat
+candidate is *singular*, machine-checked, so the witness had to couple every `x` to every `y`
+through a Vandermonde matrix.
+
+**One `sorry` remains in the tree** — `det_residualYCoordsOn_ne_zero` in `ResidualHorizontalityLine`
+— and it is **not on the theorem's dependency path**, which is precisely what the clean axiom check
+establishes. Horizontality was reached by another route; the declaration is vestigial and is kept
+only because its docstring records why `hgood`, `hv2` and `hpolar` are each necessary.
+
 The faithful theorem has no auxiliary geometric hypotheses:
 
 ```lean
