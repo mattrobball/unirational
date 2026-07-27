@@ -77,7 +77,9 @@ universe u
 
 open MvPolynomial ResidualDivisor
 open _root_.MvPolynomial
-open scoped Matrix
+-- `DeterminantHomogeneous` puts `Matrix.det_isHomogeneous` inside `BConicBundleMultisections`, so
+-- plain `open scoped Matrix` resolves to that empty namespace and loses the `*ᵥ` notation.
+open scoped _root_.Matrix
 
 /-! ## Rank ≤ 1 for a family of polynomials
 
@@ -92,7 +94,7 @@ The left-hand side is the shape of `ResidualLineConstantOn`; the right-hand side
 polynomial identities in the coefficients, hence descends and ascends along an injective
 coefficient map.  Note that the `←` direction genuinely uses the field: the witness `g` is one of
 the `q a`, chosen by a nonvanishing coefficient. -/
-theorem exists_C_mul_iff_coeff_minor_eq_zero
+theorem exists_C_mul_iff_coeff_minors_vanish
     {k : Type u} [Field k] {σ ι : Type*} (q : ι → MvPolynomial σ k) :
     (∃ (g : MvPolynomial σ k) (c : ι → k), ∀ a : ι, q a = C (c a) * g) ↔
       ∀ (a b : ι) (m n : σ →₀ ℕ),
@@ -125,7 +127,7 @@ def affineTwoBaseChange {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K
     affineTwoRing k →+* affineTwoRing K :=
   MvPolynomial.map φ
 
-@[simp] theorem affineTwoBaseChange_apply {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
+theorem affineTwoBaseChange_apply {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
     (f : affineTwoRing k) : affineTwoBaseChange φ f = MvPolynomial.map φ f := rfl
 
 @[simp] theorem affineTwoBaseChange_C {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
@@ -196,12 +198,12 @@ def ResidualLineCoeffMinorsVanish (M N : Matrix (Fin 3) (Fin 3) k)
     coeff m (residualLineCoeffOn M N F a) * coeff n (residualLineCoeffOn M N F b)
       = coeff n (residualLineCoeffOn M N F a) * coeff m (residualLineCoeffOn M N F b)
 
-/-- **G3's negation is a rank condition.**  Over a field, "the residual line is constant" is
-exactly "the coefficient matrix of `q_U, q_V, q_W` has rank ≤ 1". -/
+/-- **Failure of G3 is a rank condition.**  Over a field, "the residual line along `L` is constant"
+is exactly "the coefficient matrix of `q_U, q_V, q_W` has rank ≤ 1". -/
 theorem residualLineConstantOn_iff_minorsVanish {k : Type u} [Field k]
     (M N : Matrix (Fin 3) (Fin 3) k) (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
     ResidualLineConstantOn M N F ↔ ResidualLineCoeffMinorsVanish M N F :=
-  exists_C_mul_iff_coeff_minor_eq_zero (residualLineCoeffOn M N F)
+  exists_C_mul_iff_coeff_minors_vanish (residualLineCoeffOn M N F)
 
 /-- The minor conditions transfer both ways along an injective coefficient map. -/
 theorem residualLineCoeffMinorsVanish_map_iff {φ : k →+* K} (hφ : Function.Injective φ)
@@ -247,6 +249,390 @@ theorem residualLineNonconstantOn_of_map {k K : Type u} [Field k] [Field K] (φ 
   (residualLineNonconstantOn_map_iff φ M N F).mp h
 
 end G3
+
+/-! ## Elementary commutations over the affine plane
+
+The residual coordinates live in `affineTwoRing k = k[t, s]`, and the objects built from them are
+polynomials whose *coefficients* are elements of that ring.  So two levels of `map` are in play:
+`affineTwoBaseChange φ` on the coefficients, and `MvPolynomial.map (affineTwoBaseChange φ)` on the
+polynomials.  The lemmas here are the elementary commutations, stated once so that the two levels
+never have to be untangled again. -/
+
+section Elementary
+
+variable {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
+
+/-- A change of coefficient ring commutes with first-block specialization. -/
+theorem map_specializeFirstCoords {R S : Type*} [CommRing R] [CommRing S] (ψ : R →+* S)
+    (x : Fin 3 → R) (H : MvPolynomial (BiprojectiveCoordinate 2 2) R) :
+    map ψ (specializeFirstCoordinates (n := 2) x H)
+      = specializeFirstCoordinates (n := 2) (fun i => ψ (x i)) (map ψ H) := by
+  induction H using MvPolynomial.induction_on with
+  | C c => simp
+  | add f g hf hg => simp [hf, hg]
+  | mul_X f z hf =>
+      cases z with
+      | inl j => simp [hf]
+      | inr j => simp [hf]
+
+/-- Restriction to a line commutes with coefficient maps, in `fun`-form. -/
+theorem map_binaryLineRestrictionFun {R S : Type u} [CommRing R] [CommRing S] (ψ : R →+* S)
+    {σ : Type*} (p q : σ → R) (G : MvPolynomial σ R) :
+    map ψ (binaryLineRestriction p q G)
+      = binaryLineRestriction (fun i => ψ (p i)) (fun i => ψ (q i)) (map ψ G) :=
+  map_binaryLineRestriction ψ p q G
+
+/-- The ambient residual representative commutes with coefficient maps. -/
+theorem map_residualAmbientRepGen {R S : Type u} [CommRing R] [CommRing S] (ψ : R →+* S)
+    {σ : Type*} (p q : σ → R) (g : MvPolynomial (Fin 2) R) :
+    (fun i => ψ (residualAmbientRep p q g i))
+      = residualAmbientRep (fun j => ψ (p j)) (fun j => ψ (q j)) (map ψ g) := by
+  funext i
+  simp [residualAmbientRep, residualBinaryRep, coeff_map]
+
+/-- Linear substitution commutes with a change of coefficient ring. -/
+theorem map_aevalLinearSubst {R S : Type u} [CommRing R] [CommRing S] (ψ : R →+* S) (n : ℕ)
+    (M : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (G : MvPolynomial (Fin (n + 1)) R) :
+    map ψ ((aeval (linearSubst n M) : MvPolynomial (Fin (n + 1)) R →ₐ[R] _) G)
+      = (aeval (linearSubst n (M.map ψ)) : MvPolynomial (Fin (n + 1)) S →ₐ[S] _) (map ψ G) := by
+  induction G using MvPolynomial.induction_on with
+  | C a => simp
+  | add P Q hP hQ => simpa only [map_add] using congrArg₂ (fun A B => A + B) hP hQ
+  | mul_X P i hP =>
+      simp only [map_mul, aeval_X, hP]
+      congr 1
+      simp [linearSubst, map_sum, Matrix.map_apply]
+
+/-- The frame-defined tangent direction commutes with a change of coefficient ring. -/
+theorem map_frameTangentDirGen {R S : Type u} [CommRing R] [CommRing S] (ψ : R →+* S)
+    (M N : Matrix (Fin 3) (Fin 3) R) (G : MvPolynomial (Fin 3) R) (p : Fin 3 → R) :
+    (fun i => ψ (frameTangentDir M N G p i))
+      = frameTangentDir (M.map ψ) (N.map ψ) (map ψ G) (fun i => ψ (p i)) := by
+  have hG : map ψ ((aeval (linearSubst 2 M) : MvPolynomial (Fin 3) R →ₐ[R] _) G)
+      = (aeval (linearSubst 2 (M.map ψ)) : MvPolynomial (Fin 3) S →ₐ[S] _) (map ψ G) :=
+    map_aevalLinearSubst ψ 2 M G
+  have hp : (fun i => ψ ((N *ᵥ p) i)) = (N.map ψ) *ᵥ (fun i => ψ (p i)) := by
+    funext i
+    exact RingHom.map_mulVec ψ N p i
+  have hdir := map_complementaryTangentDir ψ
+    ((aeval (linearSubst 2 M) : MvPolynomial (Fin 3) R →ₐ[R] _) G) (N *ᵥ p)
+  funext i
+  simp only [frameTangentDir]
+  rw [RingHom.map_mulVec]
+  have : (fun j => ψ (complementaryTangentDir
+      ((aeval (linearSubst 2 M) : MvPolynomial (Fin 3) R →ₐ[R] _) G) (N *ᵥ p) j))
+      = complementaryTangentDir
+        ((aeval (linearSubst 2 (M.map ψ)) : MvPolynomial (Fin 3) S →ₐ[S] _) (map ψ G))
+        ((N.map ψ) *ᵥ (fun i => ψ (p i))) := by
+    rw [← hG, ← hp]
+    exact hdir
+  exact congrFun (congrArg (fun z => (M.map ψ) *ᵥ z) this) i
+
+end Elementary
+
+/-! ## Base change of the affine-plane data
+
+`affineTwoBaseChange φ` transports each ingredient of the residual construction: the generic point
+of `L`, the frame of `L`, the conic along `L`, the lifted Tsen section, and the stereographic
+direction. -/
+
+section AffinePlane
+
+variable {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
+
+/-- The lift of a univariate polynomial to `k[t, s]` commutes with base change. -/
+theorem affineTwoBaseChange_liftPolyT (p : Polynomial k) :
+    affineTwoBaseChange φ (liftPolyT p) = liftPolyT (p.map φ) := by
+  rw [liftPolyT, liftPolyT, Polynomial.hom_eval₂, affineTwoBaseChange_coord0,
+    Polynomial.eval₂_map]
+  congr 1
+  exact affineTwoBaseChange_comp_C φ
+
+/-- The lifted Tsen section commutes with base change. -/
+theorem affineTwoBaseChange_liftTsenSection (v : Fin 3 → Polynomial k) :
+    (fun i => affineTwoBaseChange φ (liftTsenSection v i))
+      = liftTsenSection (fun i => (v i).map φ) := by
+  funext i
+  exact affineTwoBaseChange_liftPolyT φ (v i)
+
+/-- The stereographic direction `(1, s, 0)` is defined over the prime field. -/
+theorem affineTwoBaseChange_stereoDir :
+    (fun i => affineTwoBaseChange φ (affineTwoStereoDir (k := k) i))
+      = affineTwoStereoDir (k := K) := by
+  funext i
+  fin_cases i <;> simp [affineTwoStereoDir]
+
+/-- The generic point of `L` over `k[t, s]` commutes with base change. -/
+theorem affineTwoBaseChange_linePoint (p₀ q₀ : Fin 3 → k) :
+    (fun i => affineTwoBaseChange φ (affineTwoLinePoint p₀ q₀ i))
+      = affineTwoLinePoint (fun j => φ (p₀ j)) (fun j => φ (q₀ j)) := by
+  funext i
+  rw [affineTwoLinePoint, affineTwoLinePoint, map_linePointOf]
+  simp
+
+/-- The frame of `L` over `k[t, s]` commutes with base change. -/
+theorem affineTwoBaseChange_lineFrame (p₀ q₀ r : Fin 3 → k) :
+    (affineTwoLineFrame p₀ q₀ r).map (affineTwoBaseChange φ)
+      = affineTwoLineFrame (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (fun i => φ (r i)) := by
+  rw [affineTwoLineFrame, lineFrame_map, affineTwoLineFrame]
+  simp
+
+/-- The inverse frame, pushed into `k[t, s]`, commutes with base change. -/
+theorem affineTwoBaseChange_mapC_matrix (N : Matrix (Fin 3) (Fin 3) k) :
+    (N.map (C : k →+* affineTwoRing k)).map (affineTwoBaseChange φ)
+      = (N.map φ).map (C : K →+* affineTwoRing K) := by
+  ext i j
+  simp
+
+/-- The coefficient pullback of `F` to `k[t, s]` commutes with base change. -/
+theorem map_affineTwoPullback (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    map (affineTwoBaseChange φ) (affineTwoPullback F) = affineTwoPullback (map φ F) := by
+  rw [affineTwoPullback, affineTwoPullback, MvPolynomial.map_map, MvPolynomial.map_map,
+    affineTwoBaseChange_comp_C]
+
+/-- **The conic along `L` commutes with base change.** -/
+theorem map_lineSpecializedConicPullback (p₀ q₀ : Fin 3 → k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    map (affineTwoBaseChange φ) (lineSpecializedConicPullback p₀ q₀ F)
+      = lineSpecializedConicPullback (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (map φ F) := by
+  rw [lineSpecializedConicPullback, lineSpecializedConicPullback,
+    map_specializeSecondCoordinates, map_affineTwoPullback,
+    affineTwoBaseChange_linePoint]
+
+/-- The cubic fibre over a point of `k[t, s]` commutes with base change. -/
+theorem map_cubicFiberPullback (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (x : Fin 3 → affineTwoRing k) :
+    map (affineTwoBaseChange φ) (cubicFiberPullback F x)
+      = cubicFiberPullback (map φ F) (fun i => affineTwoBaseChange φ (x i)) := by
+  rw [cubicFiberPullback, cubicFiberPullback, map_specializeFirstCoords, map_affineTwoPullback]
+
+end AffinePlane
+
+/-! ## Transfer of the stereographic nondegeneracy hypothesis `hpolar` -/
+
+section Polar
+
+variable {k K : Type u} [Field k] [Field K] (φ : k →+* K)
+
+/-- **The stereographic polar form along `L` commutes with base change.** -/
+theorem lineStereoPolarForm_map (p₀ q₀ : Fin 3 → k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    lineStereoPolarForm (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (map φ F)
+        (fun i => (v i).map φ)
+      = affineTwoBaseChange φ (lineStereoPolarForm p₀ q₀ F v) := by
+  rw [lineStereoPolarForm, lineStereoPolarForm,
+    ← map_lineSpecializedConicPullback φ p₀ q₀ F,
+    ← affineTwoBaseChange_liftTsenSection φ v,
+    ← affineTwoBaseChange_stereoDir φ (k := k)]
+  exact polarEval_map (affineTwoBaseChange φ) _ _ _
+
+/-- **Stereographic nondegeneracy is invariant under field extension.**
+
+Nonvanishing reflects along any ring hom and ascends along an injective one; a field extension is
+injective, so this costs nothing. -/
+theorem lineStereoPolarForm_ne_zero_map_iff (p₀ q₀ : Fin 3 → k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    lineStereoPolarForm (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (map φ F)
+        (fun i => (v i).map φ) ≠ 0
+      ↔ lineStereoPolarForm p₀ q₀ F v ≠ 0 := by
+  rw [lineStereoPolarForm_map]
+  exact not_congr (map_eq_zero_iff _ (affineTwoBaseChange_injective φ.injective))
+
+/-- **`v 2 ≠ 0` is invariant under field extension.**  The same trivial pattern, one level down. -/
+theorem tsenSection_two_ne_zero_map_iff (v : Fin 3 → Polynomial k) :
+    (fun i => (v i).map φ) 2 ≠ 0 ↔ v 2 ≠ 0 :=
+  not_congr (Polynomial.map_eq_zero_iff φ.injective)
+
+end Polar
+
+/-! ## Transfer of G4
+
+`residualConicDiscriminantOn` is `aeval (residualYCoordsOn …) (sndConicDiscriminant F)`, so two
+commutations are needed: the residual `Y`-coordinates, and the degree-nine discriminant. -/
+
+section G4
+
+variable {k K : Type u} [Field k] [Field K] (φ : k →+* K)
+
+/-- **The stereographic first-block coordinates along `L` commute with base change.** -/
+theorem map_stereoFirstCoordsOn (p₀ q₀ : Fin 3 → k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    (fun i => affineTwoBaseChange φ (stereoFirstCoordsOn p₀ q₀ F v i))
+      = stereoFirstCoordsOn (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (map φ F)
+          (fun i => (v i).map φ) := by
+  rw [stereoFirstCoordsOn, stereoFirstCoordsOn, map_stereoAlg,
+    map_lineSpecializedConicPullback, affineTwoBaseChange_liftTsenSection,
+    affineTwoBaseChange_stereoDir]
+
+/-- **The tangent-residual `Y`-coordinates along `L` commute with base change.**
+
+Every ingredient — the stereo point, the cubic fibre, the frame of `L`, the frame tangent
+direction, the restriction to the tangent line, and the residual representative — transports, and
+this is their composite. -/
+theorem residualYCoordsOn_map (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    (fun a => affineTwoBaseChange φ (residualYCoordsOn p₀ q₀ r N F v a))
+      = residualYCoordsOn (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (fun i => φ (r i))
+          (N.map φ) (map φ F) (fun i => (v i).map φ) := by
+  set Φ := affineTwoBaseChange φ
+  -- the cubic fibre of the stereo point
+  have hG : map Φ (cubicFiberPullback F (stereoFirstCoordsOn p₀ q₀ F v))
+      = cubicFiberPullback (map φ F)
+        (stereoFirstCoordsOn (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (map φ F)
+          (fun i => (v i).map φ)) := by
+    rw [map_cubicFiberPullback, map_stereoFirstCoordsOn]
+  -- the generic point of `L`
+  have hp : (fun i => Φ (affineTwoLinePoint p₀ q₀ i))
+      = affineTwoLinePoint (fun j => φ (p₀ j)) (fun j => φ (q₀ j)) :=
+    affineTwoBaseChange_linePoint φ p₀ q₀
+  -- the frame of `L` and its inverse
+  have hM : (affineTwoLineFrame p₀ q₀ r).map Φ
+      = affineTwoLineFrame (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (fun i => φ (r i)) :=
+    affineTwoBaseChange_lineFrame φ p₀ q₀ r
+  have hN : (N.map (C : k →+* affineTwoRing k)).map Φ
+      = (N.map φ).map (C : K →+* affineTwoRing K) :=
+    affineTwoBaseChange_mapC_matrix φ N
+  -- the tangent direction in the frame
+  have hq : (fun i => Φ (frameTangentDir (affineTwoLineFrame p₀ q₀ r) (N.map C)
+        (cubicFiberPullback F (stereoFirstCoordsOn p₀ q₀ F v)) (affineTwoLinePoint p₀ q₀) i))
+      = frameTangentDir
+          (affineTwoLineFrame (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (fun i => φ (r i)))
+          ((N.map φ).map C)
+          (cubicFiberPullback (map φ F)
+            (stereoFirstCoordsOn (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (map φ F)
+              (fun i => (v i).map φ)))
+          (affineTwoLinePoint (fun j => φ (p₀ j)) (fun j => φ (q₀ j))) := by
+    rw [← hG, ← hp, ← hM, ← hN]
+    exact map_frameTangentDirGen Φ _ _ _ _
+  unfold residualYCoordsOn
+  rw [map_residualAmbientRepGen, map_binaryLineRestrictionFun, hp, hq, hG]
+
+/-- **The universal second-projection conic commutes with base change.** -/
+theorem map_universalSndConic (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    map (MvPolynomial.map φ : MvPolynomial (Fin 3) k →+* MvPolynomial (Fin 3) K)
+        (universalSndConic F)
+      = universalSndConic (map φ F) := by
+  rw [universalSndConic, universalSndConic, map_specializeSecondCoordinates,
+    MvPolynomial.map_map, MvPolynomial.map_map]
+  have hX : (fun j : Fin 3 =>
+      (MvPolynomial.map φ : MvPolynomial (Fin 3) k →+* MvPolynomial (Fin 3) K) (X j))
+      = fun j : Fin 3 => (X j : MvPolynomial (Fin 3) K) := by
+    funext j; simp
+  have hC : ((MvPolynomial.map φ : MvPolynomial (Fin 3) k →+* MvPolynomial (Fin 3) K).comp
+      (C : k →+* MvPolynomial (Fin 3) k))
+      = (C : K →+* MvPolynomial (Fin 3) K).comp φ :=
+    RingHom.ext fun a => by simp
+  rw [hX, hC]
+
+/-- **The degree-nine conic discriminant commutes with base change.** -/
+theorem sndConicDiscriminant_map (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    sndConicDiscriminant (map φ F) = map φ (sndConicDiscriminant F) := by
+  rw [sndConicDiscriminant, sndConicDiscriminant, ← map_universalSndConic φ F, polarMatrix_map]
+  exact (RingHom.map_det _ _).symm
+
+/-- Base change commutes with `aeval` at a point of the affine plane ring. -/
+theorem affineTwoBaseChange_aeval (y : Fin 3 → affineTwoRing k) (P : MvPolynomial (Fin 3) k) :
+    affineTwoBaseChange φ (aeval y P)
+      = aeval (fun i => affineTwoBaseChange φ (y i)) (map φ P) := by
+  induction P using MvPolynomial.induction_on with
+  | C a => simp only [aeval_C, map_C, MvPolynomial.algebraMap_eq, affineTwoBaseChange_C]
+  | add p q hp hq => simp only [_root_.map_add, hp, hq]
+  | mul_X p i hp => simp only [_root_.map_mul, map_X, aeval_X, hp]
+
+/-- **The pulled-back conic discriminant commutes with base change.** -/
+theorem residualConicDiscriminantOn_map (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    residualConicDiscriminantOn (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (fun i => φ (r i))
+        (N.map φ) (map φ F) (fun i => (v i).map φ)
+      = affineTwoBaseChange φ (residualConicDiscriminantOn p₀ q₀ r N F v) := by
+  rw [residualConicDiscriminantOn, residualConicDiscriminantOn, sndConicDiscriminant_map,
+    ← residualYCoordsOn_map, affineTwoBaseChange_aeval]
+
+/-- **G4 is invariant under field extension.**
+
+Like `hpolar`, G4 is a nonvanishing statement, so it reflects along any ring hom and ascends along
+an injective one.  A user may therefore verify it over `k̄`, where genericity arguments are
+available, and pull it back to `k`. -/
+theorem residualAvoidsConicDiscriminantOn_map_iff (p₀ q₀ r : Fin 3 → k)
+    (N : Matrix (Fin 3) (Fin 3) k) (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (v : Fin 3 → Polynomial k) :
+    ResidualAvoidsConicDiscriminantOn (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (fun i => φ (r i))
+        (N.map φ) (map φ F) (fun i => (v i).map φ)
+      ↔ ResidualAvoidsConicDiscriminantOn p₀ q₀ r N F v := by
+  rw [ResidualAvoidsConicDiscriminantOn, ResidualAvoidsConicDiscriminantOn,
+    residualConicDiscriminantOn_map]
+  exact not_congr (map_eq_zero_iff _ (affineTwoBaseChange_injective φ.injective))
+
+end G4
+
+/-! ## The packaged transfer
+
+The five conditions the closure-free theorem carries, sorted by which way they move.  The frame
+relation `lineFrame p₀ q₀ r * N = 1` moves *up* for free (`lineFrame_map_mul_map`), because it is
+an identity; the other four move *down*, by the iffs above; and the Tsen section moves neither way.
+-/
+
+section Package
+
+variable {k K : Type u} [Field k] [Field K] (φ : k →+* K)
+
+/-- G3 for a line presented by its spanning vectors, the shape
+`det_residualYCoordsOn_ne_zero` takes it in. -/
+theorem residualLineNonconstantOn_lineFrame_map_iff (p₀ q₀ r : Fin 3 → k)
+    (N : Matrix (Fin 3) (Fin 3) k) (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    ResidualLineNonconstantOn
+        (lineFrame (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (fun i => φ (r i))) (N.map φ) (map φ F)
+      ↔ ResidualLineNonconstantOn (lineFrame p₀ q₀ r) N F := by
+  rw [← lineFrame_map φ p₀ q₀ r]
+  exact residualLineNonconstantOn_map_iff φ (lineFrame p₀ q₀ r) N F
+
+/-- **Four of the five good-line conditions descend along a field extension.**
+
+Verify G3, `v 2 ≠ 0`, stereographic nondegeneracy and G4 over any extension field `K` — for
+instance over `k̄`, where genericity arguments are available — and they hold over `k`.
+
+What is *not* here is the Tsen section: `v` is an input over `k` in both the hypothesis and the
+conclusion.  A section over `K(t)` says nothing about `k(t)`, and no base change repairs that.  The
+frame relation is likewise absent, because it travels the other way for free
+(`lineFrame_map_mul_map`). -/
+theorem goodLineData_of_map (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k)
+    (hgood : ResidualLineNonconstantOn
+      (lineFrame (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (fun i => φ (r i))) (N.map φ) (map φ F))
+    (hv2 : (fun i => (v i).map φ) 2 ≠ 0)
+    (hpolar : lineStereoPolarForm (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (map φ F)
+      (fun i => (v i).map φ) ≠ 0)
+    (hG4 : ResidualAvoidsConicDiscriminantOn (fun i => φ (p₀ i)) (fun i => φ (q₀ i))
+      (fun i => φ (r i)) (N.map φ) (map φ F) (fun i => (v i).map φ)) :
+    ResidualLineNonconstantOn (lineFrame p₀ q₀ r) N F ∧ v 2 ≠ 0 ∧
+      lineStereoPolarForm p₀ q₀ F v ≠ 0 ∧
+      ResidualAvoidsConicDiscriminantOn p₀ q₀ r N F v :=
+  ⟨(residualLineNonconstantOn_lineFrame_map_iff φ p₀ q₀ r N F).mp hgood,
+    (tsenSection_two_ne_zero_map_iff φ v).mp hv2,
+    (lineStereoPolarForm_ne_zero_map_iff φ p₀ q₀ F v).mp hpolar,
+    (residualAvoidsConicDiscriminantOn_map_iff φ p₀ q₀ r N F v).mp hG4⟩
+
+/-- The same, along the structure map of a field extension. -/
+theorem goodLineData_of_algebraMap [Algebra k K] (p₀ q₀ r : Fin 3 → k)
+    (N : Matrix (Fin 3) (Fin 3) k) (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (v : Fin 3 → Polynomial k)
+    (hgood : ResidualLineNonconstantOn
+      (lineFrame (fun i => algebraMap k K (p₀ i)) (fun i => algebraMap k K (q₀ i))
+        (fun i => algebraMap k K (r i)))
+      (N.map (algebraMap k K)) (map (algebraMap k K) F))
+    (hv2 : (fun i => (v i).map (algebraMap k K)) 2 ≠ 0)
+    (hpolar : lineStereoPolarForm (fun i => algebraMap k K (p₀ i))
+      (fun i => algebraMap k K (q₀ i)) (map (algebraMap k K) F)
+      (fun i => (v i).map (algebraMap k K)) ≠ 0)
+    (hG4 : ResidualAvoidsConicDiscriminantOn (fun i => algebraMap k K (p₀ i))
+      (fun i => algebraMap k K (q₀ i)) (fun i => algebraMap k K (r i)) (N.map (algebraMap k K))
+      (map (algebraMap k K) F) (fun i => (v i).map (algebraMap k K))) :
+    ResidualLineNonconstantOn (lineFrame p₀ q₀ r) N F ∧ v 2 ≠ 0 ∧
+      lineStereoPolarForm p₀ q₀ F v ≠ 0 ∧
+      ResidualAvoidsConicDiscriminantOn p₀ q₀ r N F v :=
+  goodLineData_of_map (algebraMap k K) p₀ q₀ r N F v hgood hv2 hpolar hG4
+
+end Package
 
 end
 
