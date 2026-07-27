@@ -18,10 +18,11 @@ over *every* extension field of `k`.
 
 ## Why this is the right hypothesis
 
-The naive statement is false.  `Irreducible H` alone never ascends: over `ℝ`, the relation
-`H = y₀² + y₁²` is irreducible, homogeneous, and vanishes on the constant family
-`Y = (0, 0, 1)`, but factors over `ℂ`.  What repairs it is not the base field, and not any
-geometric hypothesis on the parametrization — it is *minimality of the degree*.
+The naive statement is false: "a homogeneous relation of `Y` which is irreducible over `k` is
+irreducible over `k̄`" has counterexamples.  Over `ℝ`, take `Y = (0, 0, 1)` — a nonzero family —
+and `H = y₀² + y₁²`.  Then `H` is homogeneous, irreducible over `ℝ`, and `H(Y) = 0`, yet `H`
+factors over `ℂ`.  So no amount of nonvanishing of `Y` repairs the statement, and neither does
+any hypothesis on `k`.  What repairs it is *minimality of the degree*.
 
 The reason minimality works is a one-line dimension count that costs nothing.  For each `e`, the
 map "coefficient vector of a degree-`e` form" `↦` "its value at `Y`" is `k`-**linear**, so its
