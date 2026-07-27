@@ -41,13 +41,14 @@ From them the transfer statements follow by the trichotomy of `GeometricPointDes
 
 * **Nonvanishing** (`hpolar`, `hv2`, G4) reflects along *any* ring hom and ascends along an
   injective one, so along a field extension it is an **iff** and costs nothing.
-* **G3** is not a nonvanishing statement: it says that the three coefficient forms
-  `q_U, q_V, q_W` span a line, i.e. that their coefficient matrix has **rank ≤ 1**.  Rank is
-  invariant under field extension, so this too is an **iff** — but the proof is not a pullback of
-  a witness: from a witness `(g, c)` over `K` one cannot in general read off one over `k` (the `K`
-  chosen `g` need not be defined over `k`).  What descends is the vanishing of all `2 × 2` minors
-  of the coefficient matrix, and rank-≤-1 is *equivalent* to that vanishing over any field.  This
-  is `residualLineConstantOn_iff_minorsVanish` below.
+* **G3** is not a nonvanishing statement.  Its negation, `ResidualLineConstantOn`, says that the
+  three coefficient forms `q_U, q_V, q_W` all lie on one line of the coefficient space — that
+  their coefficient matrix has **rank ≤ 1**.  Rank is invariant under field extension, so G3 too
+  is an **iff** — but the proof is not a pullback of a witness: from a witness `(g, c)` over `K`
+  one cannot in general read off one over `k`, since the chosen `g` need not be defined over `k`.
+  What descends is the vanishing of all `2 × 2` minors of the coefficient matrix, and rank-≤-1 is
+  *equivalent* to that vanishing over any field.  This is
+  `residualLineConstantOn_iff_minorsVanish` below.
 
 The packaged form is `goodLineData_of_map`; the frame relation is `lineFrame_map_mul_map_of`.
 
