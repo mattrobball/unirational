@@ -405,7 +405,7 @@ theorem polarEval_stereoDir_ne_zero_of_polarEval_ne_zero [Infinite k]
   · exact h h0
   · exact h h1
 
-variable [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+variable [NeZero (2 : k)] [NeZero (3 : k)]
 
 omit [NeZero (2 : k)] [NeZero (3 : k)] in
 /-- **The first good-line obligation, from the root.**
@@ -422,7 +422,7 @@ whole family inside a line.
 
 `CharZero` is not needed: an algebraically closed field is infinite, which is all the argument
 uses. -/
-theorem exists_isotropic_stereoNondegenerate_of_disc_ne_zero
+theorem exists_isotropic_stereoNondegenerate_of_disc_ne_zero [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (hdisc : coordinateLineConicDiscriminant F ≠ 0) :
     ∃ v : Fin 3 → Polynomial k, v ≠ 0 ∧
@@ -1158,7 +1158,7 @@ theorem false_of_kernel_path_constant_last_partial
         | ⟨2, _⟩ => exact hypInf2
       rw [hvan, mul_zero]
 
-theorem coordinateLineConicDiscriminant_ne_zero_of_smooth
+theorem coordinateLineConicDiscriminant_ne_zero_of_smooth [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
     coordinateLineConicDiscriminant F ≠ 0 := by

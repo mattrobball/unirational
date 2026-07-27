@@ -875,7 +875,7 @@ theorem det_polarMatrix_coordinateLineSpecializedConic {k : Type u} [Field k]
   rfl
 
 /-- `R(p)=0` when free polar of `p` is non-constant (has a root). -/
-theorem eval_eq_zero_of_free_polar_root {k : Type u} [Field k] [IsAlgClosed k]
+theorem eval_eq_zero_of_free_polar_root {k : Type u} [Field k]
     (Q R : MvPolynomial (Fin 3) k) (hQ : Q.IsHomogeneous 2) (hR : R.IsHomogeneous 2)
     (hdisc : (polarMatrix Q).det ≠ 0)
     (p : Fin 3 → k) (hp : eval p Q = 0) (hp2 : p 2 ≠ 0) (hp0 : p ≠ 0)

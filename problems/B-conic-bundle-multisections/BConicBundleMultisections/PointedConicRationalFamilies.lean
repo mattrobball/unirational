@@ -2722,7 +2722,7 @@ theorem range_standardChartι (k : Type u) [CommRing k] (i j : Fin 3) :
 -- Heavy chart/quotient pasting plus range identification for the section.
 set_option maxHeartbeats 2000000 in
 theorem exists_chartQuotient_openImmersion
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (_hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
