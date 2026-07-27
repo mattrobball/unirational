@@ -157,7 +157,7 @@ The target relation's discriminant-avoidance hypothesis is not used in the trans
 calculation itself.  It remains part of the consumer interface because it supplies projective
 integrality and generic-fibre Artinianness elsewhere in the argument. -/
 theorem targetRelationsResidualNegativeTwistGluingAwayDiscriminantOn
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (M N : Matrix (Fin 3) (Fin 3) k)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)

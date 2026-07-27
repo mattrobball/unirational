@@ -129,7 +129,7 @@ abbrev TargetRelationAffineChartQuotient
 /-- Every product chart lying above a nonempty chart of the irreducible relation curve has a
 domain as its explicit coordinate ring. -/
 theorem isDomain_targetRelationAffineChartQuotient
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -148,7 +148,7 @@ theorem isDomain_targetRelationAffineChartQuotient
 
 /-- Every normalized first-factor coordinate is nonzero in a retained target-relation chart. -/
 theorem quotient_affineChartVariable_inl_ne_zero_targetRelation
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -175,7 +175,7 @@ theorem quotient_affineChartVariable_inl_ne_zero_targetRelation
 /-- Every normalized coordinate belonging to another retained second-factor chart is nonzero in
 the source target-relation chart. -/
 theorem quotient_affineChartVariable_inr_ne_zero_targetRelation
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -205,7 +205,7 @@ theorem quotient_affineChartVariable_inr_ne_zero_targetRelation
 
 /-- The generic point of an explicit retained affine target-relation chart. -/
 noncomputable def targetRelationAffineChartGenericPoint
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -226,7 +226,7 @@ noncomputable def targetRelationAffineChartGenericPoint
 /-- Under the first-factor chart map, a retained target-relation chart's generic point lies in
 every projective standard chart. -/
 theorem targetRelationAffineChartGenericPoint_fst_mem_standardChart_range
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -303,7 +303,7 @@ theorem targetRelationAffineChartGenericPoint_fst_mem_standardChart_range
 /-- Under the second-factor chart map, a retained target-relation chart's generic point lies in
 every other retained projective standard chart. -/
 theorem targetRelationAffineChartGenericPoint_snd_mem_standardChart_range
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -382,7 +382,7 @@ theorem targetRelationAffineChartGenericPoint_snd_mem_standardChart_range
 
 /-- The image in the global target relation of a retained affine chart's generic point. -/
 noncomputable def targetRelationGlobalChartGenericPoint
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -403,7 +403,7 @@ noncomputable def targetRelationGlobalChartGenericPoint
 /-- A retained chart's global generic point belongs to every retained target-relation product
 chart. -/
 theorem targetRelationGlobalChartGenericPoint_mem_chart_range
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -593,7 +593,7 @@ noncomputable def targetRelationRetainedOpenCover
 
 /-- Every member of the retained target-relation cover is integral. -/
 theorem isIntegral_targetRelationRetainedChart
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -615,7 +615,7 @@ theorem isIntegral_targetRelationRetainedChart
 /-- The target relation cut out by an irreducible positive-degree relation away from the conic
 discriminant is integral. -/
 theorem isIntegral_targetRelationZeroLocus_of_smooth_irreducible_awayDiscriminant
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -671,7 +671,7 @@ end BiprojectiveSpace
 /-- Smooth nonzero bidegree `(2,3)` conic bundles have integral target relations for every
 irreducible positive-degree relation away from the discriminant. -/
 theorem targetRelationsProjectivelyIntegralAwayDiscriminant_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F)] :

@@ -36,7 +36,7 @@ namespace BiprojectiveSpace
 /-- Two local factors on retained target charts differ by the square of the intrinsic target
 transition.  The first projective chart `a` is fixed throughout. -/
 theorem map_factor_eq_transitionSquare_mul_of_factorizations
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -109,7 +109,7 @@ theorem map_factor_eq_transitionSquare_mul_of_factorizations
 /-- Multiplication by a homogeneous target quadratic cancels the residual factor's negative
 transition degree, coefficient by coefficient. -/
 theorem mapped_quadratic_mul_factor_coeff_eq
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -183,7 +183,7 @@ quadratic products in the intrinsic target-curve function field.
 The anchor `i` is used only to state the common representative.  The proof applies the
 two-chart transition theorem to the family members on `b` and `i`; no global gluing is used. -/
 theorem residualTargetNegativeTwistFactor_coeff_intrinsic_transition
-    {k : Type u} [Field k] [IsAlgClosed k] [Infinite k]
+    {k : Type u} [Field k]
     (M N : Matrix (Fin 3) (Fin 3) k)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
