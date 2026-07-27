@@ -28,6 +28,15 @@ of the parameter ring extend first to the fraction field and then to its separab
 closure.  Differentiating the equation at that point shows that its first-block derivatives vanish;
 the fibre singularity already says that its second-block derivatives vanish.  This contradicts the
 affine-chart Jacobian certificate supplied by smoothness of the total hypersurface.
+
+Derivations extend along *separable* extensions and along nothing wider: in characteristic `p` the
+fraction field `k(x₀,x₁,x₂)` is imperfect and `∂/∂xᵢ` does not reach `K^{1/p}`.  So the endgame is
+run over `separableClosure K (AlgebraicClosure K)`, not over the algebraic closure, and the whole
+characteristic hypothesis of this file is concentrated in one lemma:
+`exists_separableClosure_singularPoint_of_cubic`, which moves the singular point produced by
+elimination from the algebraic closure to the separable closure.  See the section docstring there
+for what is true in characteristic `p ≥ 5`, why characteristics `2` and `3` are genuine
+counterexamples, and what is missing to formalize it.
 -/
 
 @[expose] public section
@@ -199,26 +208,75 @@ theorem exists_separable_coordinateDerivation
 
 The elimination certificates produce a singular point of the generic cubic fibre over the
 *algebraic* closure `Ω` of `K = Frac k[x₀,x₁,x₂]`.  The derivation argument needs it over a
-*separable* extension.  The following lemma is the exact bridge, and it is the one place in this
-file where the characteristic still matters.
+*separable* extension.  `exists_separableClosure_singularPoint_of_cubic` below is the exact bridge,
+and it is now the **only** place in the whole `CharZero`-carrying chain where the characteristic is
+load-bearing; every other `CharZero` in the tree is propagation of this one.
 
-In characteristic `0` it is trivial: `Ω/K` is separable, so `separableClosure K Ω = ⊤`.
+### What is true, and in which characteristic
 
-In characteristic `p ≥ 5` it is a theorem — the singular subscheme `Z = V(∂₀G, ∂₁G, ∂₂G)` of a
-plane cubic (in characteristic `≠ 3`, Euler makes `G` itself redundant) is cut out by three conics,
-so when `Z` is finite it has a closed point of degree `≤ 4` over `K`, and a residue field of degree
-`≤ 4 < p` has inseparable degree a power of `p` dividing `4`, hence is separable; when `Z` is
-positive-dimensional it contains a `K`-line or a `K`-conic, and restricting such to a coordinate
-line produces a point of degree `≤ 2 < p`.  Neither half is formalized here.
+Write `Z = V(∂₀G, ∂₁G, ∂₂G) ⊆ ℙ²` for the singular subscheme.  In characteristic `≠ 3` Euler's
+identity `3G = Σ yⱼ ∂ⱼG` makes `G` itself redundant, so `Z` is cut out by three *conics*.
 
-In characteristic `2` or `3` the statement is genuinely false: quasi-elliptic fibrations exist
-exactly there, and their generic fibre is a regular but non-smooth plane cubic whose singular point
-is purely inseparable over `K`. -/
+* **Characteristic `0`.**  Trivial: `Ω/K` is separable, so `separableClosure K Ω = ⊤` and the given
+  point already qualifies.  This is what is proved below.
+* **Characteristic `p ≥ 5`.**  True; see the outline below.  Not formalized.
+* **Characteristic `2` or `3`.**  Genuinely false.  Quasi-elliptic fibrations live exactly there:
+  their generic fibre is a plane cubic that is *regular* as a `K`-scheme but not smooth, and its
+  unique geometric singular point is purely inseparable over `K`.  The numerical shadow of this is
+  `p^m ≤ 4` with `m ≥ 1`, which forces `p ∈ {2, 3}`.
+
+### Outline of the characteristic `p ≥ 5` proof, with the degenerate cases
+
+A **correction** to the obvious route is needed first.  It is *not* enough to say "an integral
+plane cubic has arithmetic genus `1`, hence a unique singular point, which is therefore Galois
+fixed and so purely inseparable over `K`".  A cubic that is integral over `K` need not be
+geometrically integral: it can be three Galois-conjugate lines, or a `K`-conic meeting a `K`-line
+in two conjugate points.  Those have three, resp. two, geometric singular points and *no*
+`K`-rational one.  What survives — and what is all the derivation argument needs — is
+**separability**, not rationality.
+
+Reduction (elementary, and the reason only one degree bound is needed).  `separableClosure K Ω` is
+separably closed, and `p ≥ 5 > 2`.  So if some coordinate ratio of the point already lies in
+`separableClosure K Ω`, say `y = (y₀, y₁, 1)` with `y₁ ∈ separableClosure K Ω`, then either some
+`∂ⱼG(t, y₁, 1)` is a nonconstant polynomial in `t` over `separableClosure K Ω`, of degree `≤ 2`, so
+its root `y₀` is separable over a separably closed field and hence already in it; or all three are
+constant, hence identically `0`, and `(0, y₁, 1)` is a common zero.  Either way the whole point
+descends.  So it suffices to place **one** ratio in `separableClosure K Ω`.
+
+Main bound.  Let `h = gcd(∂₀G, ∂₁G, ∂₂G)`, homogeneous because a divisor of a nonzero homogeneous
+form is homogeneous.
+
+* If `h` is not a unit it has degree `1` or `2`, and `V(h) ⊆ Z`.  Restricting `h` to a coordinate
+  line gives a binary form of degree `≤ 2`; a root of it has degree `≤ 2 < p` over `K`, hence is
+  separable, so `Z` has a point in `separableClosure K Ω`.
+* If `h` is a unit, choose coordinates with `∂₀G(1,0,0) ≠ 0` (possible: `K` is infinite here) and
+  eliminate `y₀` between two of the conics.  The resultant is a binary form of degree `4` in
+  `(y₁, y₂)` lying in the elimination ideal, so it vanishes at the point; if it is nonzero the
+  ratio `y₁/y₂` has degree `≤ 4 < p` over `K` and the reduction above finishes.  If instead every
+  pair shares a factor while the triple gcd is trivial, the shared factors are two non-associate
+  `K`-lines `ℓ₁, ℓ₂` with `∂₀G = c·ℓ₁ℓ₂`, and the given point lies on an intersection of two
+  `K`-lines, which is a single `K`-rational point (the cross product of the two coefficient
+  vectors).  The triangle `G = y₀y₁y₂`, whose three partials are pairwise non-coprime, is exactly
+  this case, and its singular points are rational.
+
+Degree `< p` implies separable because the minimal polynomial of an inseparable element lies in
+`K[t^p]`, so `p` divides its degree.
+
+### Why it is not formalized here
+
+The elimination step needs a Bézout-type degree bound for two conics.  Mathlib has
+`Polynomial.resultant` with a Sylvester Bézout identity, but no projective intersection degree and
+no statement that a divisor of a homogeneous polynomial is homogeneous; `PlaneCurveIntersectionArtinian`
+in this tree records the same gap ("this avoids pretending that Mathlib currently contains a
+projective Bezout theorem") and supplies only *nonvanishing*, never a degree.  The degenerate branch
+additionally needs `gcd` and factorization bookkeeping in `MvPolynomial (Fin 3) K`.  That is a
+self-contained formalization project, not a rethreading. -/
 
 /-- **A singular point of a plane cubic can be taken separable over the base field.**
 
 Currently proved only in characteristic zero.  See the section docstring for the characteristic
-`p ≥ 5` argument and for why `p ∈ {2, 3}` must be excluded. -/
+`p ≥ 5` argument, for the correction it needs (separability, not rationality, is what is true), and
+for why `p ∈ {2, 3}` must be excluded. -/
 theorem exists_separableClosure_singularPoint_of_cubic
     {K : Type u} [Field K] [CharZero K]
     (G : MvPolynomial (Fin 3) K) (_hG : G.IsHomogeneous 3)
