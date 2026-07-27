@@ -366,6 +366,103 @@ genuine alternative is `MvPolynomial.eq_zero_of_eval_zero_at_prod_finset` (Alon�
 infiniteness for degree bounds and would apply here, but buys a theorem over small finite fields that
 the source argument cannot support anyway.
 
+### The core/corollary split over `IsAlgClosed` is **not** reachable from the present tree
+
+**Attempted and measured, 27 July 2026; result negative, no code change.** The goal was to split the
+headline into a core theorem over an arbitrary field, hypothesising the good line, the Tsen section
+and G4, plus a corollary supplying them from algebraic closure. The natural core is
+`hasUnirationalParametrization3_biprojectiveZeroLocus_of_negativeTwistTargetGeometry`
+(`ResidualTargetRelationGeometryNegativeTwist.lean:155`), which already takes exactly those inputs
+and carries `[IsAlgClosed k]`. **That binder cannot be removed without rebuilding most of the
+development**, and the measurements below are what establish it. They were taken by machine, not by
+reading.
+
+Method: strip every `[IsAlgClosed …]` binder in the endpoint's import closure, then let the compiler
+restore the binder on every declaration whose proof breaks, to a fixed point. A restored declaration
+is one that consumes algebraic closure *as currently written*; a surviving strip is one that never
+did.
+
+| measurement | value |
+| --- | --- |
+| project modules in the endpoint's import closure | 161 |
+| of those, modules carrying `[IsAlgClosed …]` binders | 53 |
+| `[IsAlgClosed …]` binders in them | 257 |
+| binders deletable outright, no proof change | **9** |
+| binders weakenable to `[Infinite …]`, no proof change | **14** |
+| binders that still need `IsAlgClosed` verbatim | **243** |
+| direct `IsAlgClosed`-API call sites in the closure | 35, in 14 modules |
+
+So `Infinite` is *not* the bottleneck: it accounts for 14 of 257 binders, and `StereoJacobian` for a
+further 10. Together the two items previously believed to be the whole remaining job cover under 10%
+of the surface.
+
+The 35 direct API sites break down as `residueFieldIsoBase` ×20,
+`vanishingIdeal_zeroLocus_eq_radical` ×8, `IsAlgClosed.exists_root` ×3, and one each of
+`isCoprime_iff_aeval_ne_zero_of_isAlgClosed`, `IsAlgClosed.exists_aeval_eq_zero`,
+`IsAlgClosed.splits`, `IsAlgClosed.ringHom_bijective_of_isIntegral`. The remaining ~208 restored
+declarations are transitive consumers, each of which would have to be restated with the ascended
+(geometric) hypothesis before its own binder could go.
+
+**The geometric twins are built but unwired.** Every `_of_geometric` / `_of_embedding` variant was
+checked for consumers outside its own defining module:
+`smooth_biprojectiveZeroLocusToSpec_of_gradient_of_geometric`,
+`flat_biprojectiveZeroLocusSnd_of_geometric`, `eq_C_of_forall_eval_ne_zero_of_geometric`,
+`eq_smul_of_eval_eq_zero_on_isotropic_cone_of_geometric`,
+`exists_det_ne_zero_of_forall_ne_zero_of_geometric`,
+`mem_span_pair_of_vanishes_on_common_geometric_zero_of_isRadical`,
+`exists_common_nonzero_zero_pair_of_geometric`, `exists_nonzero_zero_of_isHomogeneous_of_geometric`
+have **zero**. Nothing on the headline path has been rethreaded through any of them. The prior
+passes added the descent leaves; they did not move the chain onto them, which is why the binder
+count did not fall.
+
+Four methodological rebuilds stand between here and the core theorem, in rough order of cost.
+
+1. **The dominance layer is closed-point based, and that method is only valid over an algebraically
+   closed field.** `residueFieldIsoBase` (Mathlib, `AlgebraicGeometry/AlgClosed/Basic.lean`) says the
+   residue field at a closed point of a finite-type `k`-scheme *is* `k`; over a general field it is a
+   finite extension and the statement is false. The whole
+   `ProjectiveSpaceClosedPoints.closedPointNormalizedCoordinates` apparatus is built on it, and
+   `closedPoint_mem_range_biprojectiveZeroLocusSnd` → `surjective_…` →
+   `isDominant_biprojectiveZeroLocusSnd_of_smooth_bidegree23` proves dominance by exhibiting
+   `k`-rational closed points, as does `closedPoint_mem_range_residualImageToBase` in
+   `ResidualMultisectionDominant`. Note these are `def`s as well as theorems, so the fix is not a
+   hypothesis edit. Replacing them means either a generic-fibre nonemptiness argument or descending
+   dominance from `k̄`, and the latter needs base-change comparison isomorphisms
+   `X ×_{Spec k} Spec k̄ ≅ X_{k̄}` for the project's `Proj`-based schemes, which neither the project
+   nor Mathlib currently provides in this presentation. ≈46 binders.
+2. **The pointed-conic rationality layer.** `PointedConicOpenDominance` (27 binders, incl.
+   `irreducible_genericConicAffineChart`, `isDomain_genericConicAffineChart`,
+   `isIntegral_biprojectiveZeroLocus_of_smooth_bidegree23`) and `PointedConicRationalFamilies` (16,
+   3751 lines). The mathematics survives — a nondegenerate conic is geometrically integral over any
+   field — but the proofs route irreducibility through closure. ≈53 binders.
+3. **The stereographic / free-direction layer.** `SpecializedConicFreeDir` (24 binders, 4194 lines),
+   `StereoJacobian` (10), `ResidualYNonvanishing` (6), `ResidualYCoordsPureT` (5) and neighbours use
+   `IsAlgClosed.exists_root` to produce a root of an auxiliary univariate polynomial, and
+   `IsAlgClosed.splits` in `IsotropicCone`. These are the "hypotheses ascend" cases and are the most
+   mechanical of the four, but they are also where the line count is. ≈69 binders.
+4. **The Nullstellensatz and proper-global-sections layers.** ≈65 binders across
+   `BiprojectiveSmoothCriterion`, `ConicProjectionFlat`, `ResidualTargetRelationNullstellensatz`,
+   `ProjectiveHypersurfaceNegativeTwist`, `ProperIntegralGlobalSections` and the target-relation
+   assembly. This is the layer where the replacements already exist
+   (`…_of_geometric`, `…_of_embedding`, `RelativelyAlgClosedRationalFunctionField`) and only the
+   wiring is missing — but the wiring changes the *statement* of
+   `TargetRelationsResidualNegativeTwistGluingAwayDiscriminantOn`, which is a hypothesis of the
+   endpoint, so it cannot be done in isolation.
+
+One enabling piece *is* already in place and should not be rebuilt: `SmoothExtensionJacobian.lean`
+gives `Smooth` over `K` ⟹ no singular point over an arbitrary extension `L`
+(`Hypersurface.exists_pderiv_ne_zero_at_of_smooth_extension`,
+`no_common_zero_affineChartEquation_and_pderiv_of_global_smooth_extension`), with no closure
+hypothesis anywhere. That is exactly the ascent every geometric restatement needs, and it means the
+`Smooth` hypothesis on the headline is strong enough to feed the whole geometric route once the
+route exists.
+
+What was explicitly *not* done, because it would be dishonest: a "core" theorem that keeps the
+present proof and simply hypothesises the facts the closure is used for — dominance of the residual
+component, integrality of the generic conic, nonvanishing of the residual coordinates. Those are
+established from `Smooth` today, and assuming them would make the core weaker than it looks while
+appearing to generalise it.
+
 ## Reproduction commands
 
 ```bash
