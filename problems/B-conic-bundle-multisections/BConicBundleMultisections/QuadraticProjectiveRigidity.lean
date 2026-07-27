@@ -6,8 +6,8 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import BConicBundleMultisections.GoodLineCondition
+public import BConicBundleMultisections.NeZeroTwoThree
 public import Mathlib.Algebra.MvPolynomial.Funext
-public import Mathlib.Algebra.CharZero.Infinite
 
 /-!
 # Projective rigidity for a family of ternary quadratics
@@ -32,7 +32,7 @@ universe u
 
 open _root_.MvPolynomial
 
-variable {k : Type u} [Field k] [CharZero k]
+variable {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-- Projectively equal gradients force two ternary quadratic forms to be scalar multiples. -/
 theorem eq_C_mul_of_mul_pderiv_eq_mul_pderiv
@@ -73,7 +73,7 @@ theorem eq_C_mul_of_mul_pderiv_eq_mul_pderiv
       polarEval_linear_left hp 1 (-1) z x x,
       polarEval_linear_left hq 1 (-1) z x x,
       polarEval_self hp, polarEval_self hq] at hminus
-    linear_combination (1 / 4 : k) * hplus - (1 / 4 : k) * hminus
+    linear_combination₆ (1 / 4 : k) * hplus - (1 / 4 : k) * hminus
   refine ⟨eval z q / eval z p, ?_⟩
   apply MvPolynomial.funext
   intro x

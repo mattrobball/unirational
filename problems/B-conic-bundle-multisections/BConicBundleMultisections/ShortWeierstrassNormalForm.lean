@@ -31,13 +31,13 @@ namespace BConicBundleMultisections.ShortWeierstrassNormalForm
 
 universe u
 
-variable {k : Type u} [Field k] [CharZero k]
+variable {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-- The short Weierstrass ternary cubic used by the infinitesimal residual certificate. -/
 noncomputable def shortWeierstrassCubic (A B : k) : MvPolynomial (Fin 3) k :=
   -(X 0) ^ 3 + (X 1) ^ 2 * X 2 - C A * X 0 * (X 2) ^ 2 - C B * (X 2) ^ 3
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 /-- Evaluation of the short Weierstrass equation. -/
 @[simp]
 theorem eval_shortWeierstrassCubic (A B : k) (x : Fin 3 → k) :
@@ -45,7 +45,7 @@ theorem eval_shortWeierstrassCubic (A B : k) (x : Fin 3 → k) :
       -(x 0) ^ 3 + (x 1) ^ 2 * x 2 - A * x 0 * (x 2) ^ 2 - B * (x 2) ^ 3 := by
   simp [shortWeierstrassCubic]
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 /-- The short Weierstrass equation is a homogeneous cubic. -/
 theorem shortWeierstrassCubic_isHomogeneous (A B : k) :
     (shortWeierstrassCubic A B).IsHomogeneous 3 := by
@@ -64,7 +64,7 @@ theorem shortWeierstrassCubic_isHomogeneous (A B : k) :
       ((isHomogeneous_X k (2 : Fin 3)).pow 3)
   exact ((hU.neg.add hV).sub hA).sub hB
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 @[simp]
 theorem eval_pderiv_zero_shortWeierstrassCubic (A B : k) (x : Fin 3 → k) :
     eval x (pderiv 0 (shortWeierstrassCubic A B)) =
@@ -72,7 +72,7 @@ theorem eval_pderiv_zero_shortWeierstrassCubic (A B : k) (x : Fin 3 → k) :
   simp [shortWeierstrassCubic]
   ring
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 @[simp]
 theorem eval_pderiv_one_shortWeierstrassCubic (A B : k) (x : Fin 3 → k) :
     eval x (pderiv 1 (shortWeierstrassCubic A B)) =
@@ -80,7 +80,7 @@ theorem eval_pderiv_one_shortWeierstrassCubic (A B : k) (x : Fin 3 → k) :
   simp [shortWeierstrassCubic]
   ring
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 @[simp]
 theorem eval_pderiv_two_shortWeierstrassCubic (A B : k) (x : Fin 3 → k) :
     eval x (pderiv 2 (shortWeierstrassCubic A B)) =
@@ -212,7 +212,7 @@ theorem reduce_weierstrassSupport
   field_simp [ha]
   ring
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 /-- Multiplying a smooth homogeneous equation by a nonzero scalar preserves the coordinate
 Jacobian criterion. -/
 theorem isSmoothPlaneCubic_C_mul (c : k) (hc : c ≠ 0)

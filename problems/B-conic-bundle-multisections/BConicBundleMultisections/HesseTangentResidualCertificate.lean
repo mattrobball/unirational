@@ -84,7 +84,7 @@ theorem hesseTangentResidualRep_standard_flexes :
 
 section Field
 
-variable {K : Type u} [Field K] [CharZero K]
+variable {K : Type u} [Field K] [NeZero (2 : K)] [NeZero (3 : K)]
 
 /-- On a smooth Hesse cubic the three quartics defining the tangent-residual point map have no
 projective common zero. -/

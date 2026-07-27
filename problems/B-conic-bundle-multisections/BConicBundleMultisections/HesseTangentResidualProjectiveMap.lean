@@ -43,7 +43,7 @@ theorem hesseTangentResidualRep_smul (a : R) (p : Fin 3 -> R) :
 
 section Field
 
-variable {K : Type u} [Field K] [CharZero K]
+variable {K : Type u} [Field K] [NeZero (2 : K)] [NeZero (3 : K)]
 
 /-- Point-level projective points of the Hesse cubic. -/
 abbrev HessePoint (lam : K) :=

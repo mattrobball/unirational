@@ -161,7 +161,7 @@ The conclusion is stated as *nonempty* rather than *dense* because that is the h
 when `Y` is irreducible — as `ℙ²_x` is — nonempty open implies dense, and the caller derives it.
 -/
 theorem exists_nonempty_open_smooth_restrict
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     {X Y : Scheme.{u}} (sX : X ⟶ Spec (.of k)) (sY : Y ⟶ Spec (.of k))
     (f : X ⟶ Y) (hf : f ≫ sY = sX)
     [Smooth sX] [IsIntegral Y]

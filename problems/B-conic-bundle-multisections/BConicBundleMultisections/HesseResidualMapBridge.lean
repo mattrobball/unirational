@@ -9,6 +9,7 @@ public import BConicBundleMultisections.Standard.ResidualLineMapDefinitions
 public import BConicBundleMultisections.HesseProjectiveResidualRigidity
 public import BConicBundleMultisections.HesseNormalForm
 public import BConicBundleMultisections.PlaneCubicResidualLineMap
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # From a common residual-line map to Hesse coefficient rigidity
@@ -32,7 +33,7 @@ open scoped Matrix
 namespace BConicBundleMultisections.HesseResidualMapBridge
 
 universe u v
-variable {k : Type u} [Field k] [CharZero k]
+variable {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
 
 def affineDualFrame (s t : k) : Matrix (Fin 3) (Fin 3) k :=
   !![1, 0, 0; 0, 1, 0; s, t, 1]
@@ -40,7 +41,7 @@ def affineDualFrame (s t : k) : Matrix (Fin 3) (Fin 3) k :=
 def affineDualFrameInv (s t : k) : Matrix (Fin 3) (Fin 3) k :=
   !![1, 0, 0; 0, 1, 0; -s, -t, 1]
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 theorem affineDualFrame_mul_inv (s t : k) :
     affineDualFrame s t * affineDualFrameInv s t = 1 := by
   ext i j
@@ -54,32 +55,32 @@ theorem ternaryCubic_coefficients_eq_zero
         e*U^2*W + f*U*V*W + h*V^2*W + i*U*W^2 + j*V*W^2 + kk*W^3 = 0) :
     a = 0 ∧ b = 0 ∧ c = 0 ∧ d = 0 ∧ e = 0 ∧ f = 0 ∧ h = 0 ∧ i = 0 ∧ j = 0 ∧ kk = 0 := by
   have ha : a = 0 := by
-    linear_combination (-1/6) * hz 0 0 1 + (1/2) * hz 1 0 1 +
+    linear_combination₆ (-1/6) * hz 0 0 1 + (1/2) * hz 1 0 1 +
       (-1/2) * hz 2 0 1 + (1/6) * hz 3 0 1
   have hb : b = 0 := by
-    linear_combination (-1/2) * hz 0 0 1 + (1/2) * hz 0 1 1 +
+    linear_combination₆ (-1/2) * hz 0 0 1 + (1/2) * hz 0 1 1 +
       hz 1 0 1 - hz 1 1 1 + (-1/2) * hz 2 0 1 + (1/2) * hz 2 1 1
   have hc : c = 0 := by
-    linear_combination (-1/2) * hz 0 0 1 + hz 0 1 1 + (-1/2) * hz 0 2 1 +
+    linear_combination₆ (-1/2) * hz 0 0 1 + hz 0 1 1 + (-1/2) * hz 0 2 1 +
       (1/2) * hz 1 0 1 - hz 1 1 1 + (1/2) * hz 1 2 1
   have hd : d = 0 := by
-    linear_combination (-1/6) * hz 0 0 1 + (1/2) * hz 0 1 1 +
+    linear_combination₆ (-1/6) * hz 0 0 1 + (1/2) * hz 0 1 1 +
       (-1/2) * hz 0 2 1 + (1/6) * hz 0 3 1
   have he : e = 0 := by
-    linear_combination hz 0 0 1 + (-5/2) * hz 1 0 1 + 2 * hz 2 0 1 +
+    linear_combination₆ hz 0 0 1 + (-5/2) * hz 1 0 1 + 2 * hz 2 0 1 +
       (-1/2) * hz 3 0 1
   have hf : f = 0 := by
-    linear_combination 2 * hz 0 0 1 + (-5/2) * hz 0 1 1 + (1/2) * hz 0 2 1 +
+    linear_combination₆ 2 * hz 0 0 1 + (-5/2) * hz 0 1 1 + (1/2) * hz 0 2 1 +
       (-5/2) * hz 1 0 1 + 3 * hz 1 1 1 + (-1/2) * hz 1 2 1 +
       (1/2) * hz 2 0 1 + (-1/2) * hz 2 1 1
   have hh : h = 0 := by
-    linear_combination hz 0 0 1 + (-5/2) * hz 0 1 1 + 2 * hz 0 2 1 +
+    linear_combination₆ hz 0 0 1 + (-5/2) * hz 0 1 1 + 2 * hz 0 2 1 +
       (-1/2) * hz 0 3 1
   have hi : i = 0 := by
-    linear_combination (-11/6) * hz 0 0 1 + 3 * hz 1 0 1 +
+    linear_combination₆ (-11/6) * hz 0 0 1 + 3 * hz 1 0 1 +
       (-3/2) * hz 2 0 1 + (1/3) * hz 3 0 1
   have hj : j = 0 := by
-    linear_combination (-11/6) * hz 0 0 1 + 3 * hz 0 1 1 +
+    linear_combination₆ (-11/6) * hz 0 0 1 + 3 * hz 0 1 1 +
       (-3/2) * hz 0 2 1 + (1/3) * hz 0 3 1
   have hk : kk = 0 := by
     linear_combination hz 0 0 1
@@ -402,7 +403,7 @@ theorem eq_C_mul_hesse_of_coefficients (G : MvPolynomial (Fin 3) k)
   simp only [mul_add, C_mul_monomial, mul_one]
   congr 1 <;> ring
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 theorem residualLinearForm_C_mul (r : k) (G : MvPolynomial (Fin 3) k) :
     PlaneCubicResidual.residualLinearForm (C r * G) =
       C (r ^ 5) * PlaneCubicResidual.residualLinearForm G := by
@@ -418,7 +419,7 @@ theorem residualLinearForm_C_mul (r : k) (G : MvPolynomial (Fin 3) k) :
   simp only [map_mul, map_pow]
   ring
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 theorem residualLinearFormOn_C_mul (M N : Matrix (Fin 3) (Fin 3) k)
     (r : k) (G : MvPolynomial (Fin 3) k) :
     residualLinearFormOn M N (C r * G) = C (r ^ 5) * residualLinearFormOn M N G := by
@@ -430,7 +431,7 @@ theorem residualLinearFormOn_C_mul (M N : Matrix (Fin 3) (Fin 3) k)
   rw [aeval_C]
   simp only [MvPolynomial.algebraMap_eq]
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 theorem hasCommonResidualLineMap_C_mul {ι : Type v}
     (g : ι → MvPolynomial (Fin 3) k) (r : k)
     (hcommon : Standard.HasCommonResidualLineMap g) :
@@ -443,7 +444,7 @@ theorem hasCommonResidualLineMap_C_mul {ι : Type v}
   rw [residualLinearFormOn_C_mul, ha]
   simp only [C_mul, mul_assoc]
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 theorem residualLineMapBasepointFree_C_mul (G : MvPolynomial (Fin 3) k)
     (r : k) (hr : r ≠ 0) (hbpf : Standard.ResidualLineMapBasepointFree G) :
     Standard.ResidualLineMapBasepointFree (C r * G) := by

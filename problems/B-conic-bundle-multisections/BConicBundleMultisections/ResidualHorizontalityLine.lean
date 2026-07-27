@@ -283,7 +283,7 @@ needs the image to be two-dimensional.  If a proof turns out to need them, they 
 and supplied by a strengthened `exists_good_line`.
 -/
 theorem det_residualYCoordsOn_ne_zero
-    [IsAlgClosed K] [CharZero K]
+    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (p₀ q₀ r : Fin 3 → K) (N : Matrix (Fin 3) (Fin 3) K)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
@@ -356,7 +356,7 @@ the chosen stereographic pencil and on `v`.
 `eq_zero_of_isHomogeneous_of_aeval_eq_zero` finishes, and that is what the proof below does.
 -/
 theorem eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous
-    [IsAlgClosed K] [CharZero K]
+    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (p₀ q₀ r : Fin 3 → K) (N : Matrix (Fin 3) (Fin 3) K)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
@@ -379,7 +379,7 @@ theorem eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous
 not the zero vector.  This is the exact chart-existence consequence used by the arbitrary-line
 component construction. -/
 theorem residualYCoordsOn_ne_zero_of_good_line
-    [IsAlgClosed K] [CharZero K]
+    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (p₀ q₀ r : Fin 3 → K) (N : Matrix (Fin 3) (Fin 3) K)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)

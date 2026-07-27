@@ -119,7 +119,7 @@ noncomputable def shortWeierstrassCurve (A B : k) : WeierstrassCurve k :=
   ⟨0, 0, 0, A, B⟩
 
 /-- The locally defined short cubic is exactly Mathlib's projective Weierstrass polynomial. -/
-theorem shortWeierstrassCubic_eq_projectivePolynomial [CharZero k] (A B : k) :
+theorem shortWeierstrassCubic_eq_projectivePolynomial [NeZero (2 : k)] [NeZero (3 : k)] (A B : k) :
     ShortWeierstrassNormalForm.shortWeierstrassCubic A B =
       WeierstrassCurve.Projective.polynomial (shortWeierstrassCurve A B) := by
   apply MvPolynomial.funext
@@ -139,7 +139,7 @@ theorem shortWeierstrassCurve_discriminant (A B : k) :
   ring
 
 /-- A nonzero local short discriminant makes the corresponding Mathlib equation elliptic. -/
-theorem shortWeierstrassCurve_isElliptic [CharZero k]
+theorem shortWeierstrassCurve_isElliptic [NeZero (2 : k)] [NeZero (3 : k)]
     (A B : k) (hdisc : WeierstrassResidualInfinitesimalCertificate.discr A B ≠ 0) :
     (shortWeierstrassCurve A B).IsElliptic := by
   rw [WeierstrassCurve.isElliptic_iff, shortWeierstrassCurve_discriminant]
@@ -148,7 +148,7 @@ theorem shortWeierstrassCurve_isElliptic [CharZero k]
 /-- Applying the inverse explicit Hesse-to-Weierstrass matrix to its Weierstrass polynomial
 recovers one third of the Hesse equation. -/
 theorem aeval_weierstrassToHesseMatrix_hesseWeierstrassPolynomial
-    [CharZero k] (lam scale : k) (hscale : (lam ^ 3 - 1) * scale ^ 3 = 3) :
+    [NeZero (2 : k)] [NeZero (3 : k)] (lam scale : k) (hscale : (lam ^ 3 - 1) * scale ^ 3 = 3) :
     (aeval (linearSubst 2 (weierstrassToHesseMatrix lam scale)) :
         MvPolynomial (Fin 3) k →ₐ[k] _)
         (WeierstrassCurve.Projective.polynomial (hesseWeierstrass lam scale)) =
@@ -174,7 +174,7 @@ coordinate change.
 
 The matrices `M` and `N` are returned with both multiplication identities so consumers do not need
 to recover invertibility from a determinant. -/
-theorem exists_hesseNormalForm_coordinates [CharZero k] [IsAlgClosed k]
+theorem exists_hesseNormalForm_coordinates [NeZero (2 : k)] [NeZero (3 : k)] [IsAlgClosed k]
     (f : MvPolynomial (Fin 3) k) (hsmooth : Standard.IsSmoothPlaneCubic f) :
     ∃ (lam c : k) (M N : Matrix (Fin 3) (Fin 3) k),
       lam ^ 3 ≠ 1 ∧ c ≠ 0 ∧ M * N = 1 ∧ N * M = 1 ∧

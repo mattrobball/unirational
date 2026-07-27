@@ -79,7 +79,7 @@ independent assumption.
 /-- For a smooth total hypersurface, an isotropic section with nonzero third coordinate is
 automatically nondegenerate against the stereographic direction. -/
 theorem lineStereoPolarForm_ne_zero_of_smooth_of_two_ne_zero
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -139,7 +139,7 @@ matrix `[x, d_t x, d_s x]` is nonsingular.  The still-open matrix
 `[y_res, d_t y_res, d_s y_res]` therefore contains the genuine horizontal-divisor content of
 Section 4 of the certificate. -/
 theorem det_stereoFirstCoordsOn_ne_zero_of_smooth
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -180,7 +180,7 @@ theorem det_stereoFirstCoordsOn_ne_zero_of_smooth
 stereo coordinates sweep `P²_x`.  The nonzero-vector and polar hypotheses in the preceding API are
 both consequences of the nonzero third coordinate. -/
 theorem det_stereoFirstCoordsOn_ne_zero_of_smooth_of_two_ne_zero
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)

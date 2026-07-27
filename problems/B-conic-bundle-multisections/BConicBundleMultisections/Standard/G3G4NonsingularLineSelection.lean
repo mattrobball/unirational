@@ -257,7 +257,7 @@ theorem lineSpecializedConic_zero_nonsingular_of_sndConicDiscriminant_ne_zero
 zeroth coordinate.  In the total-space proof, replace the smooth-fibre principal open `D` by the
 still nonempty principal open `D * X₀` before intersecting it with the conic-discriminant open. -/
 theorem exists_smoothCubicFiber_in_stereoChart_point_avoids_sndConicDiscriminant
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)] :
@@ -387,7 +387,7 @@ the conic discriminant and have tangent residual avoiding that discriminant.  Th
 is expressed by one of the polynomial coordinate-chart directions, so both conditions are honest
 homogeneous principal opens on the smooth cubic. -/
 theorem exists_smoothCubicFiber_chartTangent_point_avoids_two_discriminants
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)] :
@@ -495,7 +495,7 @@ def G3FrameMeetsEveryNonemptyPrincipalOpenOnSmoothCubic
 
 /-- The incidence-open principle produces exactly the corrected common-line witness. -/
 theorem exists_G3_nonsingularFramedPointwiseG4Witness_of_incidenceOpen
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)]
@@ -551,7 +551,7 @@ For this one witness we may take the second frame column to be the tangent direc
 tangent-residual surjectivity.  The point is only to prove nonemptiness; the definition above and
 the common-open argument impose no tangency condition on a general vertical line. -/
 theorem exists_nonsingularFramedPointwiseG4Witness_on_smooth_cubic
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
     (x : Fin 3 → K) (hx0 : x ≠ 0)
     (hsmooth : IsSmoothPlaneCubic (specializeFirstCoordinates (n := 2) x F))
@@ -584,7 +584,7 @@ theorem exists_nonsingularFramedPointwiseG4Witness_on_smooth_cubic
 The preceding proper-point theorem supplies a smooth cubic in the fixed stereographic chart, and
 simultaneous principal-open avoidance supplies the framed tangent-residual witness on it. -/
 theorem exists_nonsingularFramedPointwiseG4Witness_of_smooth
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)] :
@@ -603,7 +603,7 @@ polynomial Tsen section satisfying the actual G3 and polynomial G4 predicates on
 No tangency condition is imposed on the vertical line: only its frame-defined tangent direction
 appears in the avoidance hypothesis. -/
 theorem exists_actualG3G4LineSection_of_G3_of_nonsingularFramedPointwiseG4Witness
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth
@@ -721,7 +721,7 @@ def HasG3NonsingularFrameIntersectionAt
 actual G3--G4 line and polynomial Tsen section follow with no further geometric or interpolation
 input. -/
 theorem exists_actualG3G4LineSection_of_hasG3NonsingularFrameIntersectionAt
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth

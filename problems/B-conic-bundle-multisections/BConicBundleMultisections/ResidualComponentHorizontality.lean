@@ -308,7 +308,7 @@ line), `v 2 ≠ 0`, and polar nondegeneracy (available from the stereo polar via
 *Status: reduced to the general-line §4 det leaf.*
 -/
 theorem det_residualYCoords_ne_zero
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -343,7 +343,7 @@ theorem det_residualYCoords_ne_zero
 
 /-- Alias retained for call sites that already use the long name. -/
 theorem det_residualYCoords_ne_zero_of_residualLineNonconstant
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -364,7 +364,7 @@ Proved from `det_residualYCoords_ne_zero` by the Jacobian criterion.  Callers mu
 polar; see the det docstring.
 -/
 theorem eq_zero_of_aeval_residualYCoords_of_isHomogeneous
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -397,7 +397,7 @@ line) and `hpolar` (from `StereoNondegenerate`).
 `CharZero` is carried because the Jacobian criterion uses it (Euler + induction on degree).
 -/
 theorem isDominant_residualImagePointOfNormalizedLoc_toBase
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]

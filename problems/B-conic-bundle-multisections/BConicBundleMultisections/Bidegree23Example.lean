@@ -155,7 +155,7 @@ theorem F_ne_zero : F k ≠ 0 := by
 
 section Algebra
 
-variable {k} [CharZero k]
+variable {k} [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-- The Vandermonde system of the nodes `1, 2, 3` in the `y`-cubes has only the trivial
 solution. -/
@@ -178,7 +178,7 @@ private theorem solveB {s t w : k}
   have hs : s = 0 := by linear_combination h0 - ht - hw
   exact ⟨hs, ht, hw⟩
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 /-- Coordinatewise vanishing gives vanishing of a vector in `Fin 3 → k`. -/
 private theorem fin3_eq_zero {x : Fin 3 → k}
     (h0 : x 0 = 0) (h1 : x 1 = 0) (h2 : x 2 = 0) : x = 0 := by
@@ -188,7 +188,7 @@ private theorem fin3_eq_zero {x : Fin 3 → k}
   · exact h1
   · exact h2
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 /-- Vanishing of the squares gives vanishing of a vector in `Fin 3 → k`. -/
 private theorem fin3_eq_zero_of_sq {x : Fin 3 → k}
     (h0 : x 0 ^ 2 = 0) (h1 : x 1 ^ 2 = 0) (h2 : x 2 ^ 2 = 0) : x = 0 :=
@@ -213,7 +213,7 @@ end Algebra
 
 section Witness
 
-variable {k} [CharZero k]
+variable {k} [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-- **The gradient of the example form vanishes only on the two forbidden coordinate
 subspaces.**

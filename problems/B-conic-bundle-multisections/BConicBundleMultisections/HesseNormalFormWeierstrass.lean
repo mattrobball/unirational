@@ -6,7 +6,6 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import BConicBundleMultisections.HesseNormalForm
-public import Mathlib.Algebra.CharZero.Infinite
 public import Mathlib.Algebra.MvPolynomial.Funext
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Projective.Basic
 
@@ -83,7 +82,7 @@ theorem hesseToWeierstrassMatrix_mul_weierstrassToHesseMatrix
 def hesseWeierstrass (lam scale : k) : WeierstrassCurve k :=
   ⟨-lam * scale, -lam ^ 2 * scale ^ 2, -1, 0, -(1 / 3)⟩
 
-variable [CharZero k]
+variable [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-- Direct polynomial identity between a Hesse cubic and its explicit Weierstrass equation. -/
 theorem aeval_hesseToWeierstrassMatrix_hesseCubic

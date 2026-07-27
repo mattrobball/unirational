@@ -30,7 +30,7 @@ universe u
 
 open BiprojectiveSpace MvPolynomial ResidualDivisor
 
-variable (k : Type u) [Field k] [IsAlgClosed k] [CharZero k] [Infinite k]
+variable (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)] [Infinite k]
 
 private theorem residualCoeffU_example_eq_zero :
     residualCoeffU_of (Bidegree23Example.F k) = 0 := by

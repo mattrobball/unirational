@@ -307,7 +307,7 @@ noncomputable def coordinateDifferential (i : sigma) :
 the expected base differential. -/
 @[reducible]
 noncomputable def finiteExtensionCoordinateDifferential
-    [CharZero k]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (i : sigma)
     (L : Type w) [Field L]
     [Algebra (FunctionField (k := k) (sigma := sigma)) L]
@@ -321,7 +321,7 @@ noncomputable def finiteExtensionCoordinateDifferential
 /-- The finite-extension differential is a differential algebra over the coordinate differential
 on the rational function field. -/
 theorem finiteExtensionCoordinateDifferentialAlgebra
-    [CharZero k]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (i : sigma)
     (L : Type w) [Field L]
     [Algebra (FunctionField (k := k) (sigma := sigma)) L]
@@ -338,7 +338,7 @@ theorem finiteExtensionCoordinateDifferentialAlgebra
 /-- Mathlib's canonical extension of the coordinate differential to a finite field extension has
 the expected value on every polynomial from `k[X_sigma]`. -/
 theorem finiteExtension_deriv_algebraMap
-    [CharZero k]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (i : sigma)
     {L : Type w} [Field L]
     [Algebra (FunctionField (k := k) (sigma := sigma)) L]

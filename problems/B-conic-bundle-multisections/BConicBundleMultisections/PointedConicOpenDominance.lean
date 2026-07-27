@@ -124,7 +124,7 @@ theorem map_genericSndConicChart_line
 /-- A genuine line contained in `Y_j ≠ 0` detects that the polar determinant of the universal
 chart conic is nonzero. -/
 theorem det_polarMatrix_genericSndConicChart_ne_zero_of_line
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (j : Fin 3) (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p q r * N = 1) (hp : p j = 1) (hq : q j = 0)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -168,7 +168,7 @@ theorem det_polarMatrix_genericSndConicChart_ne_zero_of_line
 
 /-- The universal conic has nonzero polar determinant on every second-factor standard chart. -/
 theorem det_polarMatrix_genericSndConicChart_ne_zero_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (j : Fin 3) :
@@ -284,7 +284,7 @@ theorem baseChangedChartEquation_eq_chartDehomogenization_genericChart
 /-- A dominant map out of any second-factor chart preserves the nonzero polar determinant. -/
 theorem det_polarMatrix_map_genericSndConicChart_ne_zero
     {k A : Type u} [Field k] [CommRing A] [IsDomain A] [Algebra k A]
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (j : Fin 3)
@@ -473,7 +473,7 @@ uses only injectivity of the dominant base-chart map and the explicit nonzero po
 from `GenericConicNondegeneracy`; there is no flatness or whole-pullback integrality hypothesis. -/
 theorem isDomain_fractionRing_genericConicAffineChart
     {k A : Type u} [Field k] [CommRing A] [IsDomain A] [Algebra k A]
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -537,7 +537,7 @@ theorem isDomain_fractionRing_genericConicAffineChart
 /-- Arbitrary-base-chart form of `isDomain_fractionRing_genericConicAffineChart`. -/
 theorem isDomain_fractionRing_genericConicAffineChart_of_chart
     {k A : Type u} [Field k] [CommRing A] [IsDomain A] [Algebra k A]
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (j : Fin 3)
@@ -754,7 +754,7 @@ Generic irreducibility comes from the nonzero polar determinant.  The only possi
 to descending irreducibility from the fraction field is a scalar factor in the base ring, and
 `isUnit_of_C_dvd_genericConicAffineChart` excludes exactly that obstruction using smoothness. -/
 theorem irreducible_genericConicAffineChart
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -815,7 +815,7 @@ theorem irreducible_genericConicAffineChart
 a domain coordinate ring.  This is the affine target-chart integrality needed by the direct
 stereographic dominance argument, proved without flatness. -/
 theorem isDomain_genericConicAffineChart
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -842,7 +842,7 @@ theorem isDomain_genericConicAffineChart
 /-- Every affine chart of the universal conic, over every second-factor standard chart, has an
 irreducible defining equation. -/
 theorem irreducible_genericConicAffineChart_of_chart
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (i j : Fin 3) :
@@ -902,7 +902,7 @@ theorem irreducible_genericConicAffineChart_of_chart
 /-- All nine affine product charts of the universal hypersurface have domain coordinate rings,
 proved directly from the generic conic rather than from flatness of the global pullback. -/
 theorem isDomain_genericConicAffineChart_of_chart
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (i j : Fin 3) :
@@ -1089,7 +1089,7 @@ theorem quotient_C_ne_zero_of_fraction_irreducible
 /-- The polar determinant of the universal chart conic stays nonzero over the fraction field of
 the base chart. -/
 theorem det_polarMatrix_fraction_genericSndConicChart_ne_zero
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (j : Fin 3) :
@@ -1112,7 +1112,7 @@ theorem det_polarMatrix_fraction_genericSndConicChart_ne_zero
 
 /-- The fraction-field affine equation of every universal conic chart is irreducible. -/
 theorem irreducible_fraction_genericConicAffineChart_of_chart
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (i j : Fin 3) :
@@ -1162,7 +1162,7 @@ theorem irreducible_fraction_genericConicAffineChart_of_chart
 
 /-- Every first-block transition coordinate is nonzero in the universal affine chart quotient. -/
 theorem quotient_genericConicChart_X_ne_zero
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1203,7 +1203,7 @@ theorem normalizedCoordinate_ne_zero
 
 /-- Every second-block transition coordinate is nonzero in the universal affine chart quotient. -/
 theorem quotient_genericConicChart_C_normalizedCoordinate_ne_zero
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1352,7 +1352,7 @@ noncomputable def affineChartQuotientEquivConicChart
 /-- Every normalized homogeneous coordinate is nonzero at the generic point of the iterated
 conic-chart quotient. -/
 theorem quotient_conicAffineChartVariable_ne_zero
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1389,7 +1389,7 @@ theorem quotient_conicAffineChartVariable_ne_zero
 chart quotient.  Equivalently, the generic point of one zero-locus chart lies in every ambient
 standard product chart. -/
 theorem quotient_affineChartVariable_ne_zero
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1463,7 +1463,7 @@ theorem away_isLocalizationElem_X_eq_normalizedCoordinate
 
 /-- The explicit coordinate ring of every affine product chart of the hypersurface is a domain. -/
 theorem isDomain_affineChartQuotient
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (i j : Fin 3) :
@@ -1483,7 +1483,7 @@ theorem isDomain_affineChartQuotient
 internally from the generic-conic argument, so downstream statements do not need to carry it as
 an extra parameter. -/
 noncomputable def affineChartGenericPoint
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1499,7 +1499,7 @@ noncomputable def affineChartGenericPoint
 /-- Under the first-factor chart map, the affine chart's generic point lies in every projective
 standard chart. -/
 theorem affineChartGenericPoint_fst_mem_standardChart_range
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1568,7 +1568,7 @@ theorem affineChartGenericPoint_fst_mem_standardChart_range
 /-- Under the second-factor chart map, the affine chart's generic point lies in every projective
 standard chart. -/
 theorem affineChartGenericPoint_snd_mem_standardChart_range
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1636,7 +1636,7 @@ theorem affineChartGenericPoint_snd_mem_standardChart_range
 
 /-- The image in the global biprojective zero locus of the generic point of one affine chart. -/
 noncomputable def globalChartGenericPoint
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1648,7 +1648,7 @@ noncomputable def globalChartGenericPoint
 /-- The generic point coming from any one affine chart belongs to every one of the nine global
 chart opens.  This is the pairwise-overlap witness needed by the integral-open-cover argument. -/
 theorem globalChartGenericPoint_mem_chart_range
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1733,7 +1733,7 @@ noncomputable def zeroLocusStandardOpenCover
 
 /-- Every chartwise zero locus in the standard nine-chart cover is integral. -/
 theorem isIntegral_chartZeroLocus
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (i j : Fin 3) :
@@ -1749,7 +1749,7 @@ theorem isIntegral_chartZeroLocus
 flatness-free: the nine affine charts are domains, and their generic points give explicit
 witnesses that every pair of chart opens meets. -/
 theorem isIntegral_biprojectiveZeroLocus_of_smooth_bidegree23
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -1803,7 +1803,7 @@ theorem isDominant_chartZeroLocusToGlobal_of_preirreducible
 hypersurface.  This is the global target-chart density theorem needed by the direct
 stereographic-open route. -/
 theorem isDominant_chartZeroLocusToGlobal_of_smooth_bidegree23
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (i j : Fin 3) :

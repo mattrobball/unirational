@@ -155,7 +155,7 @@ theorem residualZeroLocusPointOn_toBase
 /-- The explicit localized arbitrary-line residual map dominates `P^2_y` under exactly the
 general-line Jacobian hypotheses and a nonzero chart denominator. -/
 theorem isDominant_residualZeroLocusPointOn_toBase
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -182,7 +182,7 @@ theorem isDominant_residualZeroLocusPointOn_toBase
 
 /-- The scheme-theoretic arbitrary-line residual component dominates the conic-bundle base. -/
 theorem isDominant_residualComponentOnToBase
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -204,7 +204,7 @@ theorem isDominant_residualComponentOnToBase
 residual component.  This packages the nonvanishing consequences of the determinant and polar
 conditions without adding any hypothesis. -/
 theorem exists_isDominant_residualComponentOnToBase
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)

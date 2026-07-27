@@ -780,7 +780,7 @@ theorem exists_commonFrame_of_G3_incidencePoint_of_frameTangent_targetPoint
 /-- The pointwise-G4 construction gives a nonempty point of both concrete discriminant opens on
 the fixed smooth-cubic frame incidence. -/
 theorem exists_nonsingularFrameOpenPoint_on_smooth_cubic
-    [IsAlgClosed K] [CharZero K]
+    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
     (x : Fin 3 → K)
     (hsmooth : IsSmoothPlaneCubic (specializeFirstCoordinates (n := 2) x F))
@@ -822,7 +822,7 @@ theorem exists_nonsingularFrameOpenPoint_on_smooth_cubic
 /-- A single G3 frame whose first column lies on the fixed smooth cubic is enough: the explicit
 prime-incidence intersection above combines it with the already-proved nonempty G4 frame open. -/
 theorem hasG3NonsingularFrameIntersectionAt_of_G3_incidencePoint
-    [IsAlgClosed K] [CharZero K]
+    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
     (x : Fin 3 → K)
     (hsmooth : IsSmoothPlaneCubic (specializeFirstCoordinates (n := 2) x F))

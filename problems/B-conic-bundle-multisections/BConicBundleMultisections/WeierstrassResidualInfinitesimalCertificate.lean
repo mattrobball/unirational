@@ -6,6 +6,7 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import BConicBundleMultisections.UniversalResidualIdentity
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # Infinitesimal residual-map rigidity in short Weierstrass coordinates
@@ -29,7 +30,7 @@ namespace BConicBundleMultisections.WeierstrassResidualInfinitesimalCertificate
 
 universe u
 
-variable {K : Type u} [Field K] [CharZero K]
+variable {K : Type u} [Field K] [NeZero (2 : K)] [NeZero (3 : K)]
 
 open BConicBundleMultisections.UniversalResidual
 
@@ -130,30 +131,30 @@ theorem tangent_eq_smul_of_cross_equations
     (hcVWt03 : -16 * (2 * A ^ 2 * dc - A * de + 9 * B * dh + 9 * dk) = 0) :
     da = -dh ∧ db = 0 ∧ dc = 0 ∧ dd = 0 ∧ de = 0 ∧ df = 0 ∧
       di = -A * dh ∧ dj = 0 ∧ dk = -B * dh := by
-  have hdc : dc = 0 := by linear_combination (24 : K)⁻¹ * hc01
-  have hdd : dd = 0 := by linear_combination (-36 : K)⁻¹ * hc10
-  have hdb : db = 0 := by linear_combination (-16 : K)⁻¹ * hc20
+ linear_combination₆ (24 : K)⁻¹ * hc01
+ linear_combination₆ (-36 : K)⁻¹ * hc10
+ linear_combination₆ (-16 : K)⁻¹ * hc20
   have hde : de = 0 := by
     rw [hdc] at hcUWs20
-    linear_combination (-4 : K)⁻¹ * hcUWs20
+    linear_combination₆ (-4 : K)⁻¹ * hcUWs20
   have hdf : df = 0 := by
     rw [hdd] at hcUWt01
-    linear_combination (-6 : K)⁻¹ * hcUWt01
+    linear_combination₆ (-6 : K)⁻¹ * hcUWt01
   have hdi : di = -A * dh := by
     rw [hdc] at hcUWt02
-    linear_combination (12 : K)⁻¹ * hcUWt02
+    linear_combination₆ (12 : K)⁻¹ * hcUWt02
   have hdj : dj = 0 := by
     rw [hdb, hdd] at hcUWs11
-    linear_combination (-18 : K)⁻¹ * hcUWs11
+    linear_combination₆ (-18 : K)⁻¹ * hcUWs11
   have hdk_da : dk = B * da := by
     rw [hde] at hcVWs31
-    linear_combination (72 : K)⁻¹ * hcVWs31
+    linear_combination₆ (72 : K)⁻¹ * hcVWs31
   have hAda : A * (da + dh) = 0 := by
     rw [hdc, hdi] at hcUWs30
-    linear_combination (12 : K)⁻¹ * hcUWs30
+    linear_combination₆ (12 : K)⁻¹ * hcUWs30
   have hBda : B * (da + dh) = 0 := by
     rw [hdc, hde, hdk_da] at hcVWt03
-    linear_combination (-144 : K)⁻¹ * hcVWt03
+    linear_combination₆ (-144 : K)⁻¹ * hcVWt03
   have hda : da = -dh := by
     rcases hAB with hA | hB
     · exact eq_neg_of_add_eq_zero_left ((mul_eq_zero.mp hAda).resolve_left hA)
@@ -186,35 +187,35 @@ theorem tangent_eq_smul_of_residualU_equations
     da = -dh /\ db = 0 /\ dc = 0 /\ dd = 0 /\ de = 0 /\ df = 0 /\
       di = -A * dh /\ dj = 0 /\ dk = -B * dh /\ mu = 5 * dh := by
   have hdc : dc = 0 := by
-    linear_combination (-3 : K)⁻¹ * h00
+    linear_combination₆ (-3 : K)⁻¹ * h00
   have hdf : df = -6 * A * dd := by
-    linear_combination (6 : K)⁻¹ * h01
+    linear_combination₆ (6 : K)⁻¹ * h01
   have hmu : mu = -2 * da + 3 * dh := by
-    linear_combination (4 : K)⁻¹ * h10
+    linear_combination₆ (4 : K)⁻¹ * h10
   have hdi : di = -A * dh := by
     rw [hdc, hmu] at h02
-    linear_combination (-12 : K)⁻¹ * h02
+    linear_combination₆ (-12 : K)⁻¹ * h02
   have hde : de = 0 := by
     rw [hdc] at h20
-    linear_combination (4 : K)⁻¹ * h20
+    linear_combination₆ (4 : K)⁻¹ * h20
   have hdk : dk = -B * dh := by
     rw [hdc, hde, hmu] at h12
-    linear_combination (-36 : K)⁻¹ * h12
+    linear_combination₆ (-36 : K)⁻¹ * h12
   have hdj : dj = (5 * A * db) / 3 + 9 * B * dd := by
-    linear_combination (-6 : K)⁻¹ * h11
+    linear_combination₆ (-6 : K)⁻¹ * h11
   have hrel21 : B * db = 2 * A ^ 2 * dd := by
     rw [hdf] at h21
-    linear_combination (24 : K)⁻¹ * h21
+    linear_combination₆ (24 : K)⁻¹ * h21
   have hdd_disc : discr A B * dd = 0 := by
     rw [hdf, hdj] at h13
-    linear_combination (1 / 8 : K) * h13 - 3 * A * hrel21
+    linear_combination₆ (1 / 8 : K) * h13 - 3 * A * hrel21
   have hdd : dd = 0 := (mul_eq_zero.mp hdd_disc).resolve_left hdisc
   have hdf0 : df = 0 := by simp [hdf, hdd]
   have hBdb : B * db = 0 := by rw [hrel21, hdd, mul_zero]
   have hA2db : A ^ 2 * db = 0 := by
     rw [hdf0, hdj, hdd] at h03
     norm_num at h03
-    linear_combination (16 : K)⁻¹ * h03
+    linear_combination₆ (16 : K)⁻¹ * h03
   have hdb : db = 0 := by
     by_cases hA : A = 0
     · have hB : B ≠ 0 := by
@@ -227,10 +228,10 @@ theorem tangent_eq_smul_of_residualU_equations
   have hdj0 : dj = 0 := by rw [hdj, hdb, hdd]; norm_num
   have hAda : A ^ 2 * (da + dh) = 0 := by
     rw [hdc, hde, hdi, hmu] at h22
-    linear_combination (-1 / 4 : K) * h22
+    linear_combination₆ (-1 / 4 : K) * h22
   have hBda : B * (da + dh) = 0 := by
     rw [hdc, hdk, hmu] at h40
-    linear_combination (-1 / 4 : K) * h40
+    linear_combination₆ (-1 / 4 : K) * h40
   have hda : da = -dh := by
     by_cases hA : A = 0
     · have hB : B ≠ 0 := by

@@ -216,7 +216,7 @@ end PointedConicOpenChartData
 headline open-chart route.  This theorem uses neither generic-fibre integrality nor integrality of
 the whole pullback. -/
 theorem exists_pointedConicOpenChartData
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -271,7 +271,7 @@ three-dimensional parametrization from global flatness and irreducibility of the
 fibre.  In particular, no integrality (or reducedness) assertion about the whole pullback occurs
 in the statement or proof. -/
 theorem hasUnirationalParametrization3_of_pointedConicOpen_of_flat
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]

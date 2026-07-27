@@ -537,7 +537,7 @@ This is pointwise G4.  It does not claim yet that the particular Tsen--stereogra
 surface attached to this line passes through the witness; that realization statement is isolated
 below. -/
 theorem exists_framed_tangentResidual_avoids_sndConicDiscriminant_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -566,7 +566,7 @@ theorem exists_framed_tangentResidual_avoids_sndConicDiscriminant_of_smooth
 
 /-- Pointwise G4 is nonempty on the space of framed lines. -/
 theorem exists_pointwiseG4TangentLine_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -581,7 +581,7 @@ theorem exists_pointwiseG4TangentLine_of_smooth
 Tsen--stereographic section.  Consequently, neither existence of a suitable constant tangent
 line nor existence/nondegeneracy of its conic section remains in the G4 bridge. -/
 theorem exists_pointwiseG4TangentLine_with_stereoSection_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -603,7 +603,7 @@ The two existential witnesses are deliberately not identified.  Upgrading this c
 one common line is exactly the open-intersection/interpolation step, not a consequence of the two
 nonemptiness theorems alone. -/
 theorem exists_G3_line_and_pointwiseG4_line_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :

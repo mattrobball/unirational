@@ -87,7 +87,7 @@ theorem eval_pderiv_two_hesseCubic (lam : R) (r : Fin 3 → R) :
   simp [hesseCubic]
   ring
 
-variable {k : Type u} [Field k] [CharZero k]
+variable {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-- If `λ³ ≠ 1`, the Hesse cubic is smooth by the projective Jacobian criterion. -/
 theorem isSmoothPlaneCubic_hesseCubic (lam : k) (hlam : lam ^ 3 ≠ 1) :

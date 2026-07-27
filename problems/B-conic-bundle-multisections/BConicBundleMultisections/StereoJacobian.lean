@@ -230,7 +230,7 @@ theorem det_polarMatrix_specializedConicPullback {k : Type u} [Field k]
 
 /-- Smoothness forces the specialized polar discriminant to be nonzero in `k[t,s]`. -/
 theorem det_polarMatrix_specializedConicPullback_ne_zero_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -944,7 +944,8 @@ theorem eval_eq_zero_of_free_polar_root {k : Type u} [Field k] [IsAlgClosed k]
   exact (mul_eq_zero.mp this).resolve_left (pow_ne_zero 2 hQw0)
 
 /-- At good `t`, `Qt(t)` vanishes on the full isotropic cone of `Q(t)`. -/
-theorem eval_dt_eq_zero_of_isotropic {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+theorem eval_dt_eq_zero_of_isotropic {k : Type u} [Field k] [IsAlgClosed k]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (v : Fin 3 → Polynomial k)
     (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
@@ -1075,7 +1076,7 @@ noncomputable def polyWronskian {k : Type u} [CommRing k]
   Polynomial.derivative f * g - Polynomial.derivative g * f
 
 /-- If `f'g = g'f` and `g ≠ 0`, then `f = c · g` for some constant `c`. -/
-theorem exists_C_mul_of_wronskian_eq_zero {k : Type u} [Field k] [CharZero k]
+theorem exists_C_mul_of_wronskian_eq_zero {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (f g : Polynomial k) (hg : g ≠ 0)
     (hw : Polynomial.derivative f * g = Polynomial.derivative g * f) :
     ∃ c : k, f = Polynomial.C c * g := by
@@ -1156,7 +1157,8 @@ theorem exists_C_mul_of_wronskian_eq_zero {k : Type u} [Field k] [CharZero k]
   exact hL.trans hR.symm
 
 /-- Pointwise proportionality at a good specialization. -/
-theorem exists_smul_dt_of_good_t {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+theorem exists_smul_dt_of_good_t {k : Type u} [Field k] [IsAlgClosed k]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (v : Fin 3 → Polynomial k)
     (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
@@ -1268,7 +1270,7 @@ theorem ternaryQuadraticCoeff_lower_eq_zero
 
 /-- At good `t`, every pure-`t` coefficient satisfies the scalar relation. -/
 theorem exists_smul_all_coeffs_dt_of_good_t
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (v : Fin 3 → Polynomial k)
     (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
@@ -1369,7 +1371,7 @@ minors therefore vanish identically, so `Q` is a pure-`t` scalar times a constan
 scalar either has a root (whole second fibre, contradicting smoothness) or is constant, in
 which case the degree-3 line restriction vanishes at `(0:1:0)` (again a whole fibre). -/
 theorem polarEval_stereo_pderiv_t_ne_zero
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1595,7 +1597,7 @@ theorem polarEval_stereo_pderiv_t_ne_zero
 On a smooth conic the only null direction in `Y^⊥` is `span{Y}`.  Combined with
 `false_of_pderiv_s_eq_smul_div`, the stereo `s`-derivative is not null. -/
 theorem polarEval_stereo_pderiv_s_self_ne_zero
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1681,7 +1683,7 @@ with the three factors on the right nonzero by smoothness of the generic conic, 
 and immersion of the stereo parameterisation.
 -/
 theorem stereoJacobianDet_ne_zero_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1758,7 +1760,7 @@ would produce a common zero of the total equation and all six partial derivative
 smoothness of the total hypersurface.
 -/
 theorem exists_nonsingularCubicFiber_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -1769,7 +1771,7 @@ theorem exists_nonsingularCubicFiber_of_smooth
 
 /-- **Input (ii), derived.** -/
 theorem exists_stereo_param_nonsingular_cubicFiber
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (v : Fin 3 → Polynomial k)
     (hgen : ∃ x : Fin 3 → k, ∀ r : Fin 3 → k, r ≠ 0 →

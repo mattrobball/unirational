@@ -61,7 +61,7 @@ The hypotheses `hproper` and `hxcoord` are precisely the two base choices not in
 smooth-cubic argument: the discriminant open must meet the cubic, and the selected first-block
 point must avoid the one fixed omitted coordinate point of the affine stereographic chart. -/
 theorem exists_nonsingularPointwiseG4Witness_on_smooth_cubic
-    {K : Type u} [Field K] [CharZero K] [IsAlgClosed K]
+    {K : Type u} [Field K] [NeZero (2 : K)] [NeZero (3 : K)] [IsAlgClosed K]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
     (x : Fin 3 → K) (hx0 : x ≠ 0)
     (hsmooth : IsSmoothPlaneCubic (specializeFirstCoordinates (n := 2) x F))

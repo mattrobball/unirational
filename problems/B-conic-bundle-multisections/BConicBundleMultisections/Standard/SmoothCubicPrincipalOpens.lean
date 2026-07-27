@@ -594,7 +594,7 @@ target is nonzero.  The principal-open intersection theorem then moves the base 
 chart while simultaneously keeping both the original target and its residual pullback nonzero.
 Thus the two avoidance conditions hold at one and the same tangent base point. -/
 theorem exists_tangentResidual_base_and_image_avoid_homogeneous_target
-    [CharZero K] [IsAlgClosed K]
+    [NeZero (2 : K)] [NeZero (3 : K)] [IsAlgClosed K]
     (g : MvPolynomial (Fin 3) K) (hsmooth : IsSmoothPlaneCubic g)
     (H : MvPolynomial (Fin 3) K) {d : ℕ} (hH : H.IsHomogeneous d) (hd : 0 < d)
     (hproper : ∃ y : Fin 3 → K, y ≠ 0 ∧ eval y g = 0 ∧ eval y H ≠ 0) :

@@ -43,11 +43,11 @@ universe u
 
 open _root_.MvPolynomial
 
-variable {k : Type u} [Field k] [CharZero k]
+variable {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-! ## Scaling the restricted equation -/
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 /-- Restriction to a line commutes with multiplying the equation by a scalar. -/
 theorem binaryLineRestriction_C_mul (c : k) (p q : Fin 3 → k)
     (f : MvPolynomial (Fin 3) k) :
@@ -55,14 +55,14 @@ theorem binaryLineRestriction_C_mul (c : k) (p q : Fin 3 → k)
       C c * binaryLineRestriction p q f := by
   rw [map_mul, binaryLineRestriction_C]
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 /-- The binary residual representative is linear in the binary cubic. -/
 theorem residualBinaryRep_C_mul (c : k) (f : MvPolynomial (Fin 2) k) :
     residualBinaryRep (C c * f) = fun i => c * residualBinaryRep f i := by
   funext i
   fin_cases i <;> simp [residualBinaryRep, coeff_C_mul]
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 /-- The ambient residual representative is linear in the restricted cubic. -/
 theorem residualAmbientRep_C_mul (c : k) (p q : Fin 3 → k)
     (f : MvPolynomial (Fin 2) k) :

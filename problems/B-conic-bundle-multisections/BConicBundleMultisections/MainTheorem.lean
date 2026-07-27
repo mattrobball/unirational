@@ -96,7 +96,7 @@ This is pure composition: flatness/horizontality are used only to *produce* domi
 proof of that dominance.
 -/
 theorem smooth_bidegree23_hasUnirationalParametrization_of_multisection_dominant
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (_hF : IsBidegree23 F) (_hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)]
@@ -114,7 +114,7 @@ Specializes the dominance form when `π` is flat and the multisection is scheme-
 horizontal, so `baseChangeFst` is automatically dominant.
 -/
 theorem smooth_bidegree23_hasUnirationalParametrization_of_multisection
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)]
@@ -134,7 +134,7 @@ base change of dimension 3 (pointed conics + rationality of the residual image),
 the conic projection (or an independent proof that `baseChangeFst` is dominant).
 -/
 theorem smooth_bidegree23_hasUnirationalParametrization_of_residualMultisection
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)]
@@ -155,7 +155,7 @@ map, stable under pullback).  The remaining geometric input is a 3-dimensional u
 parametrization of the residual base change.
 -/
 theorem smooth_bidegree23_hasUnirationalParametrization_of_residualMultisection_dominant
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)]
@@ -199,7 +199,7 @@ theorem residualMultisection_bidegree23_toBase_quasiCompact
 /-- Dominance form specialized with residual base-change dominance proved for smooth bidegree
 `(2,3)`.  Remaining input: unirationality of the residual base change in dimension 3. -/
 theorem smooth_bidegree23_hasUnirationalParametrization_of_residualBaseChange
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)]
@@ -291,7 +291,7 @@ smoothness: `Bidegree23Example.residualLineConstant` records a smooth counterexa
 unconditioned theorem below must instead run this construction along a chosen good line.
 -/
 theorem smooth_bidegree23_hasUnirationalParametrization_of_residualLineNonconstant
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)]
@@ -312,7 +312,7 @@ theorem smooth_bidegree23_hasUnirationalParametrization_of_residualLineNonconsta
 /-- The arbitrary-line tangent-residual construction, once a good framed line and a
 stereo-nondegenerate polynomial point on its generic conic have been chosen. -/
 theorem smooth_bidegree23_hasUnirationalParametrization_of_good_line_section
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)]
@@ -350,7 +350,7 @@ assembly feeds the arbitrary-line residual-component tower without using the obs
 horizontality determinant obligation.
 -/
 theorem smooth_bidegree23_hasUnirationalParametrization
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)] :
@@ -359,7 +359,7 @@ theorem smooth_bidegree23_hasUnirationalParametrization
 
 /-- Existential form of the main theorem. -/
 theorem smooth_bidegree23_isUnirationalOver
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)] :
@@ -375,7 +375,7 @@ coefficients of `q_F` share a common factor.  Both are then *false*, not merely 
 no dominant rational map from irreducible affine space onto a reducible target exists.  The live
 argument runs on `residualComponent` instead; see `ResidualComponentAssembly.lean`. -/
 theorem smooth_bidegree23_hasUnirationalParametrization_of_residual_image_and_pointed
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)]

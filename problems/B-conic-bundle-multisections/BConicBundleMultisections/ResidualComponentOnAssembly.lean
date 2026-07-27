@@ -127,7 +127,7 @@ theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_residualComponen
 
 /-- The pointed conic over a horizontal integral arbitrary-line component is rational. -/
 theorem isPointedConicRationalOver_residualComponentOn_of_smooth
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     (hdenom : residualComponentOnDenom p₀ q₀ r N F v i j ≠ 0)
@@ -149,7 +149,7 @@ theorem isPointedConicRationalOver_residualComponentOn_of_smooth
 
 /-- The arbitrary-line residual base change is unirational in dimension three. -/
 theorem hasUnirationalParametrization3_residualComponentOnBaseChange
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     (hdenom : residualComponentOnDenom p₀ q₀ r N F v i j ≠ 0)
@@ -170,7 +170,7 @@ entire pointed-conic pullback is rational or integral.  Global flatness and the 
 integrality of the generic conic fibre make the explicit stereographic open dense, which is all
 the unirationality argument needs. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_residualComponentOn_open
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     [Flat (biprojectiveZeroLocusSnd 2 2 k F)]
@@ -215,7 +215,7 @@ zero locus, not only its base change.  Properness upgrades `hdom` to surjectivit
 component over `P²_y`; surjectivity survives base change, so the first pullback projection is
 dominant and the general multisection composition theorem applies. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_residualComponentOn
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     (hdenom : residualComponentOnDenom p₀ q₀ r N F v i j ≠ 0)
@@ -239,7 +239,7 @@ horizontality theorem chooses a nonzero chart and proves dominance; the precedin
 assembles the rational surface, pointed conic, tower, and dominant projection to the original
 threefold. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_goodLineOn
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     (hgood : ResidualLineNonconstantOn (lineFrame p₀ q₀ r) N F)

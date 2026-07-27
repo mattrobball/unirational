@@ -104,7 +104,7 @@ theorem and by finite polynomial interpolation.  `hbpf` is essential and not dec
 module docstring.  The index type is arbitrary; the empty family is handled separately.
 -/
 theorem exists_pencil_of_hasCommonResidualLineMap
-    [IsAlgClosed k] [CharZero k] {ι : Type v} (f : ι → MvPolynomial (Fin 3) k)
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)] {ι : Type v} (f : ι → MvPolynomial (Fin 3) k)
     (hsmooth : ∀ i, IsSmoothPlaneCubic (f i))
     (hbpf : ∀ i, ResidualLineMapBasepointFree (f i))
     (hcommon : HasCommonResidualLineMap f) :

@@ -13,6 +13,7 @@ public import BConicBundleMultisections.PrimeSpanPairDescent
 public import BConicBundleMultisections.PointedConicOpenDominance
 public import BConicBundleMultisections.ResidualTargetNegativeTwistLocal
 public import BConicBundleMultisections.TargetRelationChartGenericConic
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # Integral affine charts of a target relation
@@ -386,7 +387,7 @@ set_option maxHeartbeats 800000 in
 /-- Every first-block affine coordinate remains nonzero in a retained target-relation chart.
 This is the algebraic overlap input for changing the first projective standard chart. -/
 theorem quotient_X_inl_ne_zero_twoEquationAffineChartIdeal_targetRelation
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -405,8 +406,11 @@ theorem quotient_X_inl_ne_zero_twoEquationAffineChartIdeal_targetRelation
   letI : IsDomain A :=
     ProjectiveSpace.isDomain_chartDehomogenization_quotient_of_irreducible
       j H hH hHirr hnonempty
-  letI : CharZero A :=
-    charZero_of_injective_algebraMap
+  letI : NeZero (2 : A) :=
+    neZero_two_of_injective_algebraMap
+      (FaithfulSMul.algebraMap_injective k A)
+  letI : NeZero (3 : A) :=
+    neZero_three_of_injective_algebraMap
       (FaithfulSMul.algebraMap_injective k A)
   let Q : MvPolynomial (Fin 3) A :=
     sndConicAt F (targetRelationChartCoordinates j H)

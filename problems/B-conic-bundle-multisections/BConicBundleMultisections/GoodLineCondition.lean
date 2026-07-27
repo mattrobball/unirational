@@ -389,9 +389,9 @@ theorem polarEval_stereoDir_ne_zero_of_polarEval_ne_zero [Infinite k]
   · exact h h0
   · exact h h1
 
-variable [IsAlgClosed k] [CharZero k]
+variable [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
 
-omit [CharZero k] in
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 /-- **The first good-line obligation, from the root.**
 
 Some isotropic Tsen section along the coordinate line lies off the plane `{x₂ = 0}` and is

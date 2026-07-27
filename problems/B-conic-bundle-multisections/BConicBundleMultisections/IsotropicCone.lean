@@ -124,7 +124,7 @@ theorem eval_pencilDiscPoly
   simp only [pencilDiscPoly, eval_sub, eval_mul, eval_C, eval_pow, hlin,
     polarEval_eq_dot_mulVec Q hQ z x]
 
-theorem pencilDiscPoly_ne_zero [CharZero K] [Infinite K]
+theorem pencilDiscPoly_ne_zero [NeZero (2 : K)] [NeZero (3 : K)] [Infinite K]
     (Q : MvPolynomial (Fin 3) K) (hQ : Q.IsHomogeneous 2)
     (hdisc : (polarMatrix Q).det ≠ 0)
     (z : Fin 3 → K) (hzQ : eval z Q ≠ 0) :
@@ -170,7 +170,7 @@ theorem pencilDiscPoly_ne_zero [CharZero K] [Infinite K]
     ring
   exact hdisc hdet0
 
-theorem mul_eval_eq_of_disc_ne_zero [IsAlgClosed K] [CharZero K]
+theorem mul_eval_eq_of_disc_ne_zero [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (Q R : MvPolynomial (Fin 3) K)
     (hQ : Q.IsHomogeneous 2) (hR : R.IsHomogeneous 2)
     (hcone : ∀ v : Fin 3 → K, eval v Q = 0 → eval v R = 0)
@@ -335,7 +335,7 @@ theorem mul_eval_eq_of_disc_ne_zero [IsAlgClosed K] [CharZero K]
 /-! ## Main cone theorem -/
 
 theorem eq_smul_of_eval_eq_zero_on_isotropic_cone
-    [IsAlgClosed K] [CharZero K]
+    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (Q R : MvPolynomial (Fin 3) K)
     (hQ : Q.IsHomogeneous 2) (hR : R.IsHomogeneous 2)
     (hdisc : (polarMatrix Q).det ≠ 0)

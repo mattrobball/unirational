@@ -63,7 +63,7 @@ theorem lineSwapReframe_mul_inv (t : K) (ht : t ≠ 0) :
 
 set_option maxRecDepth 10000 in
 /-- Coefficients of a cubic after the triangular change of its first two coordinates. -/
-theorem coefficients_lineReframe [CharZero K]
+theorem coefficients_lineReframe [NeZero (2 : K)] [NeZero (3 : K)]
     (G : MvPolynomial (Fin 3) K) (hG : G.IsHomogeneous 3) (s t : K) :
     let T := (aeval (linearSubst 2 (lineReframe s t)) :
       MvPolynomial (Fin 3) K →ₐ[K] _) G
@@ -154,7 +154,7 @@ theorem coefficients_lineReframe [CharZero K]
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 1000000 in
 /-- The residual covariant has weight six under the triangular reparameterization of a line. -/
-theorem residualLinearFormOn_lineReframe [CharZero K]
+theorem residualLinearFormOn_lineReframe [NeZero (2 : K)] [NeZero (3 : K)]
     (G : MvPolynomial (Fin 3) K) (hG : G.IsHomogeneous 3)
     (s t : K) (hs : s ≠ 0) :
     residualLinearFormOn (lineReframe s t) (lineReframeInv s t) G =
@@ -184,7 +184,7 @@ theorem lineBasisSwap_mul_self :
 
 set_option maxRecDepth 10000 in
 /-- Coefficients of a cubic after swapping its first two coordinates. -/
-theorem coefficients_lineBasisSwap [CharZero K]
+theorem coefficients_lineBasisSwap [NeZero (2 : K)] [NeZero (3 : K)]
     (G : MvPolynomial (Fin 3) K) (hG : G.IsHomogeneous 3) :
     let T := (aeval (linearSubst 2 (lineBasisSwap : Matrix (Fin 3) (Fin 3) K)) :
       MvPolynomial (Fin 3) K →ₐ[K] _) G
@@ -245,7 +245,7 @@ theorem coefficients_lineBasisSwap [CharZero K]
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 1000000 in
 /-- Swapping the two spanning vectors does not change the ambient residual line. -/
-theorem residualLinearFormOn_lineBasisSwap [CharZero K]
+theorem residualLinearFormOn_lineBasisSwap [NeZero (2 : K)] [NeZero (3 : K)]
     (G : MvPolynomial (Fin 3) K) (hG : G.IsHomogeneous 3) :
     residualLinearFormOn
         (lineBasisSwap : Matrix (Fin 3) (Fin 3) K) lineBasisSwap G =
@@ -266,7 +266,7 @@ theorem residualLinearFormOn_lineBasisSwap [CharZero K]
 
 /-- Reframing the two spanning vectors by the triangular matrix scales the transported residual
 line by the sixth power of its determinant. -/
-theorem residualLinearFormOn_mul_lineReframe [CharZero K]
+theorem residualLinearFormOn_mul_lineReframe [NeZero (2 : K)] [NeZero (3 : K)]
     (M N : Matrix (Fin 3) (Fin 3) K)
     (G : MvPolynomial (Fin 3) K) (hG : G.IsHomogeneous 3)
     (s t : K) (hs : s ≠ 0) :
@@ -292,7 +292,7 @@ theorem residualLinearFormOn_mul_lineReframe [CharZero K]
 
 /-- Swapping the two spanning vectors of an arbitrary frame leaves its transported residual line
 unchanged. -/
-theorem residualLinearFormOn_mul_lineBasisSwap [CharZero K]
+theorem residualLinearFormOn_mul_lineBasisSwap [NeZero (2 : K)] [NeZero (3 : K)]
     (M N : Matrix (Fin 3) (Fin 3) K)
     (G : MvPolynomial (Fin 3) K) (hG : G.IsHomogeneous 3) :
     residualLinearFormOn
@@ -331,7 +331,7 @@ theorem eval_residualLineCoeffOn_eq_eval_residualLinearFormOn_basis
   simpa [Pi.single_apply] using hsum.symm
 
 /-- Coefficient forms inherit the sixth-power triangular covariance. -/
-theorem residualLineCoeffOn_mul_lineReframe [CharZero K]
+theorem residualLineCoeffOn_mul_lineReframe [NeZero (2 : K)] [NeZero (3 : K)]
     (M N : Matrix (Fin 3) (Fin 3) K)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
     (s t : K) (hs : s ≠ 0) (a : Fin 3) :
@@ -346,7 +346,7 @@ theorem residualLineCoeffOn_mul_lineReframe [CharZero K]
   rw [eval_residualLineCoeffOn_eq_eval_residualLinearFormOn_basis]
 
 /-- Coefficient forms are unchanged when the two spanning vectors are swapped. -/
-theorem residualLineCoeffOn_mul_lineBasisSwap [CharZero K]
+theorem residualLineCoeffOn_mul_lineBasisSwap [NeZero (2 : K)] [NeZero (3 : K)]
     (M N : Matrix (Fin 3) (Fin 3) K)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
     (a : Fin 3) :
@@ -361,7 +361,7 @@ theorem residualLineCoeffOn_mul_lineBasisSwap [CharZero K]
       (hF.specializeFirstCoordinates_isHomogeneous x)]
 
 /-- G3 is preserved when the first spanning vector is replaced by `s p + t q`, with `s ≠ 0`. -/
-theorem residualLineNonconstantOn_mul_lineReframe [CharZero K]
+theorem residualLineNonconstantOn_mul_lineReframe [NeZero (2 : K)] [NeZero (3 : K)]
     (M N : Matrix (Fin 3) (Fin 3) K)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
     (s t : K) (hs : s ≠ 0)
@@ -387,7 +387,7 @@ theorem residualLineNonconstantOn_mul_lineReframe [CharZero K]
   exact mul_ne_zero hscale hminor
 
 /-- G3 is preserved by swapping the two spanning vectors. -/
-theorem residualLineNonconstantOn_mul_lineBasisSwap [CharZero K]
+theorem residualLineNonconstantOn_mul_lineBasisSwap [NeZero (2 : K)] [NeZero (3 : K)]
     (M N : Matrix (Fin 3) (Fin 3) K)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
     (hG3 : ResidualLineNonconstantOn M N F) :
@@ -447,7 +447,7 @@ theorem lineFrame_mul_lineBasisSwap
 it with the cubic, and use a swap followed by a triangular reframe to put that intersection point
 in the first column. -/
 theorem exists_G3_frame_point_on_isSmoothPlaneCubic
-    [IsAlgClosed K] [CharZero K]
+    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth
@@ -542,7 +542,7 @@ theorem exists_G3_frame_point_on_isSmoothPlaneCubic
 /-- The adjugate-cleared G3 principal open is nonempty on the frame incidence over every smooth
 cubic. -/
 theorem exists_genericG3MinorTarget_ne_zero_on_isSmoothPlaneCubic
-    [IsAlgClosed K] [CharZero K]
+    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth
@@ -561,7 +561,7 @@ theorem exists_genericG3MinorTarget_ne_zero_on_isSmoothPlaneCubic
 /-- A smooth bidegree-`(2,3)` hypersurface satisfies the frame-incidence principle used by the
 nonsingular G3--G4 line-selection endpoint. -/
 theorem g3FrameMeetsEveryNonemptyPrincipalOpenOnSmoothCubic_of_smooth
-    [IsAlgClosed K] [CharZero K]
+    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth
@@ -615,7 +615,7 @@ theorem g3FrameMeetsEveryNonemptyPrincipalOpenOnSmoothCubic_of_smooth
 /-- Unconditional certificate-rich G3--G4 line-section endpoint for every smooth bidegree-`(2,3)`
 hypersurface. -/
 theorem exists_actualG3G4LineSection_via_frameIncidence
-    [IsAlgClosed K] [CharZero K]
+    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth

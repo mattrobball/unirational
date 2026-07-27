@@ -53,7 +53,7 @@ def HasActualG3G4LineSection
 Both lines carry all section data needed downstream, but the witnesses are deliberately kept
 separate.  Identifying them requires the missing open-intersection/dominant-stereo bridge. -/
 theorem exists_G3_section_and_pointwiseG4_section_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -254,7 +254,7 @@ theorem residualAvoidsConicDiscriminantOn_of_stereoAccessiblePointwiseG4
 section to the full nondegenerate-section package.  In particular, section nondegeneracy is not a
 second missing input beside the cleared scalar certificate. -/
 theorem hasNondegenerateLineStereoSection_of_isotropic_of_stereoAccessiblePointwiseG4
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)]
@@ -307,7 +307,7 @@ theorem hasActualG3G4LineSection_of_stereoAccessiblePointwiseG4
 /-- Stronger smooth fixed-line endpoint: after G3, isotropy and the one cleared pointwise-G4
 certificate are sufficient for the complete actual package. -/
 theorem hasActualG3G4LineSection_of_isotropic_of_stereoAccessiblePointwiseG4
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)]
@@ -328,7 +328,7 @@ theorem hasActualG3G4LineSection_of_isotropic_of_stereoAccessiblePointwiseG4
 minor; `HasStereoAccessiblePointwiseG4` contains the second, the cleared inverse-stereo scalar at
 one pointwise-G4 witness. -/
 theorem hasActualG3G4LineSection_of_coeffMinor_of_stereoCertificate
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)]
@@ -372,7 +372,7 @@ theorem exists_actualG3G4LineSection_of_exists_stereoAccessible_goodLine
 /-- Smooth existential endpoint with the irredundant input: a framed G3 line, an isotropic
 polynomial section, and one pointwise witness where the cleared scalar certificate is nonzero. -/
 theorem exists_actualG3G4LineSection_of_exists_isotropic_stereoAccessible_goodLine
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)]

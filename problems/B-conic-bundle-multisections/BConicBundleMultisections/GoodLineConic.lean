@@ -411,7 +411,7 @@ theorem exists_isotropic_line_stereoNondegenerate_of_disc_ne_zero
   rw [ternaryQuadraticPoly_eval_line p₀ q₀ F hF]
   exact hviso
 
-variable [CharZero k]
+variable [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-- The arbitrary-line nonvanishing theorem once smoothness of the equation transported into the
 line frame has been supplied.  This statement deliberately keeps that scheme-level transport

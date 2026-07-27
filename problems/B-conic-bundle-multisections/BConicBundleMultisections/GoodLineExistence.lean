@@ -561,7 +561,8 @@ The finite elimination-certificate set in `CubicFiberSingularLocus` cuts out the
 locus.  The nonsingular fibre therefore supplies one certificate polynomial that is not identically
 zero; its principal open is the required locus.
 -/
-theorem exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates [IsAlgClosed k] [CharZero k]
+theorem exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates [IsAlgClosed k]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -591,7 +592,8 @@ of `Standard/ResidualLineMapInjective.lean`.  The three inputs are: the bridge
 principal-open smooth-fibre theorem, and the axiom-clean Hesse residual-map rigidity theorem.  All
 three inputs are proved in the current tree.
 -/
-theorem exists_pencil_basis_of_forall_residualLineConstantOn [IsAlgClosed k] [CharZero k]
+theorem exists_pencil_basis_of_forall_residualLineConstantOn [IsAlgClosed k]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -823,7 +825,7 @@ audit `GoodLineExistenceAxiomAudit.lean` checks the final theorem without `sorry
 and what `eq_zero_of_aeval_residualYCoordsOn_of_isHomogeneous` consumes; no claim is made about
 *which* lines are good, and in particular the coordinate line `{Y₂ = 0}` need not be one.
 -/
-theorem exists_good_line [IsAlgClosed k] [CharZero k]
+theorem exists_good_line [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :

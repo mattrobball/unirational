@@ -12,7 +12,6 @@ public import BConicBundleMultisections.PlaneCubicTangentForm
 public import BConicBundleMultisections.PlaneCubicPartials
 public import BConicBundleMultisections.ResidualLineBasePointFree
 public import BConicBundleMultisections.LinearSubstitutionNonsingular
-public import Mathlib.Algebra.CharZero.Infinite
 public import Mathlib.Algebra.MvPolynomial.Funext
 public import Mathlib.LinearAlgebra.Basis.VectorSpace
 public import Mathlib.LinearAlgebra.Matrix.Basis
@@ -314,7 +313,7 @@ noncomputable def pderivTwoNormalForm (f : MvPolynomial (Fin 3) k) :
       C (2 * PlaneCubicResidual.coeffVW2 f) * X 1) +
     C (3 * PlaneCubicResidual.coeffW3 f) * X 2 ^ 2
 
-theorem pderiv_zero_eq_normalForm [CharZero k]
+theorem pderiv_zero_eq_normalForm [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     pderiv 0 f = pderivZeroNormalForm f := by
   apply MvPolynomial.funext
@@ -323,7 +322,7 @@ theorem pderiv_zero_eq_normalForm [CharZero k]
   simp [pderivZeroNormalForm]
   try ring
 
-theorem pderiv_one_eq_normalForm [CharZero k]
+theorem pderiv_one_eq_normalForm [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     pderiv 1 f = pderivOneNormalForm f := by
   apply MvPolynomial.funext
@@ -332,7 +331,7 @@ theorem pderiv_one_eq_normalForm [CharZero k]
   simp [pderivOneNormalForm]
   try ring
 
-theorem pderiv_two_eq_normalForm [CharZero k]
+theorem pderiv_two_eq_normalForm [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     pderiv 2 f = pderivTwoNormalForm f := by
   apply MvPolynomial.funext
@@ -340,7 +339,7 @@ theorem pderiv_two_eq_normalForm [CharZero k]
   rw [PlaneCubicResidual.eval_pderiv2_planeCubic f hf]
   simp [pderivTwoNormalForm]
 
-theorem eval_hessianMatrix_zero_zero [CharZero k]
+theorem eval_hessianMatrix_zero_zero [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     eval (weierstrassInfinity (k := k)) (hessianMatrix f 0 0) =
       2 * PlaneCubicResidual.coeffU2V f := by
@@ -349,7 +348,7 @@ theorem eval_hessianMatrix_zero_zero [CharZero k]
   simp [pderivZeroNormalForm, weierstrassInfinity]
   try ring
 
-theorem eval_hessianMatrix_zero_one [CharZero k]
+theorem eval_hessianMatrix_zero_one [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     eval (weierstrassInfinity (k := k)) (hessianMatrix f 0 1) =
       2 * PlaneCubicResidual.coeffUV2 f := by
@@ -358,7 +357,7 @@ theorem eval_hessianMatrix_zero_one [CharZero k]
   simp [pderivOneNormalForm, weierstrassInfinity]
   try ring
 
-theorem eval_hessianMatrix_zero_two [CharZero k]
+theorem eval_hessianMatrix_zero_two [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     eval (weierstrassInfinity (k := k)) (hessianMatrix f 0 2) =
       PlaneCubicResidual.coeffUVW f := by
@@ -367,7 +366,7 @@ theorem eval_hessianMatrix_zero_two [CharZero k]
   simp [pderivTwoNormalForm, weierstrassInfinity]
   try ring
 
-theorem eval_hessianMatrix_one_zero [CharZero k]
+theorem eval_hessianMatrix_one_zero [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     eval (weierstrassInfinity (k := k)) (hessianMatrix f 1 0) =
       2 * PlaneCubicResidual.coeffUV2 f := by
@@ -376,7 +375,7 @@ theorem eval_hessianMatrix_one_zero [CharZero k]
   simp [pderivZeroNormalForm, weierstrassInfinity]
   ring
 
-theorem eval_hessianMatrix_one_one [CharZero k]
+theorem eval_hessianMatrix_one_one [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     eval (weierstrassInfinity (k := k)) (hessianMatrix f 1 1) =
       6 * PlaneCubicResidual.coeffV3 f := by
@@ -385,7 +384,7 @@ theorem eval_hessianMatrix_one_one [CharZero k]
   simp [pderivOneNormalForm, weierstrassInfinity]
   ring
 
-theorem eval_hessianMatrix_one_two [CharZero k]
+theorem eval_hessianMatrix_one_two [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     eval (weierstrassInfinity (k := k)) (hessianMatrix f 1 2) =
       2 * PlaneCubicResidual.coeffV2W f := by
@@ -394,7 +393,7 @@ theorem eval_hessianMatrix_one_two [CharZero k]
   simp [pderivTwoNormalForm, weierstrassInfinity]
   ring
 
-theorem eval_hessianMatrix_two_zero [CharZero k]
+theorem eval_hessianMatrix_two_zero [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     eval (weierstrassInfinity (k := k)) (hessianMatrix f 2 0) =
       PlaneCubicResidual.coeffUVW f := by
@@ -402,7 +401,7 @@ theorem eval_hessianMatrix_two_zero [CharZero k]
   rw [pderiv_zero_eq_normalForm f hf]
   simp [pderivZeroNormalForm, weierstrassInfinity]
 
-theorem eval_hessianMatrix_two_one [CharZero k]
+theorem eval_hessianMatrix_two_one [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     eval (weierstrassInfinity (k := k)) (hessianMatrix f 2 1) =
       2 * PlaneCubicResidual.coeffV2W f := by
@@ -410,7 +409,7 @@ theorem eval_hessianMatrix_two_one [CharZero k]
   rw [pderiv_one_eq_normalForm f hf]
   simp [pderivOneNormalForm, weierstrassInfinity]
 
-theorem eval_hessianMatrix_two_two [CharZero k]
+theorem eval_hessianMatrix_two_two [NeZero (2 : k)] [NeZero (3 : k)]
     (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     eval (weierstrassInfinity (k := k)) (hessianMatrix f 2 2) =
       2 * PlaneCubicResidual.coeffVW2 f := by
@@ -421,7 +420,7 @@ theorem eval_hessianMatrix_two_two [CharZero k]
 /-- Evaluation of the cubic Hessian at the Weierstrass point at infinity, in terms of the six
 coefficients which can contribute there. -/
 theorem eval_hessian_weierstrassInfinity
-    [CharZero k] (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
+    [NeZero (2 : k)] [NeZero (3 : k)] (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3) :
     eval (weierstrassInfinity (k := k)) (hessian f) =
       24 * PlaneCubicResidual.coeffU2V f * PlaneCubicResidual.coeffV3 f *
           PlaneCubicResidual.coeffVW2 f
@@ -443,7 +442,7 @@ theorem eval_hessian_weierstrassInfinity
 /-- At a Hessian-zero point normalized to `(0:1:0)` with tangent functional `Z`, the three
 non-Weierstrass coefficients vanish and the coefficient of `Y²Z` is one. -/
 theorem normalized_hessianZero_coefficients
-    [CharZero k] (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3)
+    [NeZero (2 : k)] [NeZero (3 : k)] (f : MvPolynomial (Fin 3) k) (hf : f.IsHomogeneous 3)
     (hpoint : eval (weierstrassInfinity (k := k)) f = 0)
     (hgradX : eval (weierstrassInfinity (k := k)) (pderiv 0 f) = 0)
     (hgradZ : eval (weierstrassInfinity (k := k)) (pderiv 2 f) = 1)
@@ -559,7 +558,7 @@ invertible projective coordinate matrix in which the point at infinity is a flex
 `Y³ = XY² = X²Y = 0` and `Y²Z = 1`.
 
 This is the explicit plane-embedding endpoint missing from an abstract same-`j` comparison. -/
-theorem exists_weierstrassSupport_coordinates [CharZero k] [IsAlgClosed k]
+theorem exists_weierstrassSupport_coordinates [NeZero (2 : k)] [NeZero (3 : k)] [IsAlgClosed k]
     (f : MvPolynomial (Fin 3) k) (hsmooth : Standard.IsSmoothPlaneCubic f) :
     ∃ M N : Matrix (Fin 3) (Fin 3) k,
       M * N = 1 ∧ N * M = 1 ∧

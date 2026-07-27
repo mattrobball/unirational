@@ -93,7 +93,7 @@ Combines the *proved* dimension-two unirationality of the component
 (`hasUnirationalParametrization2_residualComponent`, whose dominance comes from Mathlib's
 `IsDominant f.toImage`) with obligations 3 and 4. -/
 theorem hasUnirationalParametrization3_residualComponentBaseChange
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -123,7 +123,7 @@ The G3 hypothesis is deliberately explicit.  It cannot be inferred from smoothne
 diagonal example has a constant residual line along `Y₂ = 0`.  The unconditioned theorem must use
 the arbitrary line produced by `exists_good_line`. -/
 theorem exists_residualChart_of_smooth_of_residualLineNonconstant
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]

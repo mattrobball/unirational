@@ -76,7 +76,7 @@ left-hand side is the statement we intend it to have, written out.
 Do not "fix" a failure here by editing the expected type.  A failure means the theorem changed;
 decide whether that change was intended before touching this file. -/
 theorem headline_statement_guard :
-    ∀ (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    ∀ (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
       (F : MvPolynomial (BiprojectiveCoordinate 2 2) k),
       IsBidegree23 F → F ≠ 0 →
         ∀ [Smooth (Bidegree23ZeroLocus.toSpec k F)],

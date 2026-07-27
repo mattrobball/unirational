@@ -626,7 +626,7 @@ This is the strongest direct one-line bridge: its remaining geometric input is e
 of a G3 line with `HasNonsingularPointwiseG4Witness`; there is no additional section-interpolation
 or weak-approximation assumption. -/
 theorem exists_actualG3G4LineSection_of_G3_of_nonsingularPointwiseG4Witness
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth
@@ -685,7 +685,7 @@ theorem exists_actualG3G4LineSection_of_G3_of_nonsingularPointwiseG4Witness
 argument that produces one framed G3 line with `HasNonsingularPointwiseG4Witness` immediately
 produces the actual G3--G4 line and Tsen section required downstream. -/
 theorem exists_actualG3G4LineSection_of_exists_G3_nonsingularPointwiseG4Witness
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth

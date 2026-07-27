@@ -23,6 +23,7 @@ public import BConicBundleMultisections.GenericConicProjectivePoint
 public import BConicBundleMultisections.IntegralOpenCover
 public import BConicBundleMultisections.SndResidueFiberNonzero
 public import BConicBundleMultisections.TernaryQuadraticGradient
+public import BConicBundleMultisections.NeZeroTwoThree
 public import Mathlib.Algebra.BigOperators.Fin
 public import Mathlib.Algebra.MvPolynomial.Division
 public import Mathlib.AlgebraicGeometry.Fiber
@@ -801,7 +802,7 @@ If the polar matrix had a nonzero kernel vector `v`, then all first derivatives 
 `v`. Euler's identity, in the form `B(v,v) = 2 Q(v)`, would also give `Q(v) = 0`, contradicting
 nonsingularity. -/
 theorem det_polarMatrix_ne_zero_of_nonsingular
-    {K : Type u} [Field K] [CharZero K]
+    {K : Type u} [Field K] [NeZero (2 : K)] [NeZero (3 : K)]
     (Q : MvPolynomial (Fin 3) K) (hQ : Q.IsHomogeneous 2)
     (hnonsing : ∀ v : Fin 3 → K, v ≠ 0 → MvPolynomial.eval v Q = 0 →
       ∃ i, MvPolynomial.eval v (MvPolynomial.pderiv i Q) ≠ 0) :
@@ -829,7 +830,7 @@ nonsingular after mapping coefficients. Consequently its homogeneous-coordinate 
 domain after every such extension. This is essential because `κ(genericPoint T)` need not equal
 `κ(genericPoint (ProjectiveSpace 2 k))`. -/
 theorem isDomain_map_of_nonsingular_ternary
-    {K L : Type u} [Field K] [Field L] [CharZero K]
+    {K L : Type u} [Field K] [Field L] [NeZero (2 : K)] [NeZero (3 : K)]
     (f : K →+* L) (Q : MvPolynomial (Fin 3) K)
     (hQ : Q.IsHomogeneous 2) (hQ0 : Q ≠ 0)
     (hnonsing : ∀ v : Fin 3 → K, v ≠ 0 → MvPolynomial.eval v Q = 0 →
@@ -1737,7 +1738,7 @@ field extension.  The proof base-changes the three standard affine charts, prove
 integral from the mapped nonsingular quadratic, and uses the generic point of the homogeneous
 coordinate ring to give a common point in all three charts. -/
 theorem geometricallyIntegral_fiber_of_nonsingular_ternary
-    {k : Type u} [Field k] [CharZero k]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (y : ProjectiveSpace 2 k) (j : Fin 3)
     (hy : y ∈ ProjectiveSpace.standardChart 2 k j)
@@ -1753,7 +1754,10 @@ theorem geometricallyIntegral_fiber_of_nonsingular_ternary
   letI : Algebra k ((ProjectiveSpace 2 k).residueField y) :=
     ProjectiveSpace.residueAlgebra 2 k y
   let A : Type u := (ProjectiveSpace 2 k).residueField y
-  letI : CharZero A := Algebra.charZero_of_charZero k A
+  letI : NeZero (2 : A) :=
+    neZero_two_of_injective_algebraMap (FaithfulSMul.algebraMap_injective k A)
+  letI : NeZero (3 : A) :=
+    neZero_three_of_injective_algebraMap (FaithfulSMul.algebraMap_injective k A)
   let Q : MvPolynomial (Fin 3) A :=
     BiprojectiveSpace.sndResidueFiberPolynomial F y j hy
   have hQ : Q.IsHomogeneous 2 :=
@@ -1846,7 +1850,10 @@ theorem geometricallyIntegral_fiber_of_nonsingular_ternary
   intro K hK hAK Z fstZ sndZ hpbZ
   letI : Field K := hK
   letI : Algebra A K := hAK
-  letI : CharZero K := Algebra.charZero_of_charZero A K
+  letI : NeZero (2 : K) :=
+    neZero_two_of_injective_algebraMap (FaithfulSMul.algebraMap_injective A K)
+  letI : NeZero (3 : K) :=
+    neZero_three_of_injective_algebraMap (FaithfulSMul.algebraMap_injective A K)
   let s : Spec (.of K) ⟶ Spec (.of A) :=
     Spec.map (CommRingCat.ofHom (algebraMap A K))
   let Xₖ : Scheme := Limits.pullback f₀ s
@@ -2042,7 +2049,7 @@ theorem geometricallyIntegral_fiber_of_nonsingular_ternary
 
 /-- Smooth-fibre wrapper retained for callers that obtain nonsingularity from smoothness. -/
 theorem geometricallyIntegral_fiber_of_smooth_nonsingular_ternary
-    {k : Type u} [Field k] [CharZero k]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (y : ProjectiveSpace 2 k) (j : Fin 3)
     (hy : y ∈ ProjectiveSpace.standardChart 2 k j)
@@ -2079,7 +2086,7 @@ charts.  Hence the base-changed chart cover is irreducible and reduced.
 
 *Status: closed.* -/
 theorem isIntegral_genericFiber_pullback_biprojectiveZeroLocusSnd
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
@@ -2163,7 +2170,7 @@ to the generic point of any integral dominant base.  Unlike the preceding
 open-restriction theorem, this uses the explicit generic discriminant
 calculation and therefore needs no chosen smooth open. -/
 theorem isIntegral_genericFiber_pullback_biprojectiveZeroLocusSnd_direct
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -2359,7 +2366,7 @@ the counterexample `F = Y₀³ (X₀X₁ − X₂²)` in the module docstring, w
 component `ℙ²_x × {Y₀ = 0}`.
 -/
 theorem isIntegral_pullback_biprojectiveZeroLocusSnd
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t] :
@@ -3452,7 +3459,7 @@ set_option maxHeartbeats 400000 in
 /-- **C₄ assembled.** Quadratic half from `chartEquation_slopeQuad_ne_zero`; linear half from
 the bidegree-specific generic-conic determinant on the standard base chart. -/
 theorem chartEquation_nondegenerate
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {A : Type u} [CommRing A] [IsDomain A] [Algebra k A]
@@ -3489,7 +3496,7 @@ The linear nondegeneracy now comes from the explicit polar determinant of the un
 the standard base chart, so this statement needs no smooth-open witness for the projection.
 -/
 theorem exists_chartEquation_openImmersion
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
@@ -3554,7 +3561,7 @@ substituted away and the two nondegeneracy conditions become conditions on `α, 
 translated linear part — the latter by `eval_pderiv_zero_affineConicPoly` and its sibling, which
 identify that part with the gradient at the marked point. -/
 theorem exists_conicChart_openImmersion
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
@@ -3590,7 +3597,7 @@ dominant; Mathlib's `Scheme.Hom.birationalOver` then turns it into a birational 
 `T`.  The source is nonempty because the conic ring is a domain, hence nontrivial.
 -/
 theorem exists_pointedConicAffineModel
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
@@ -3660,7 +3667,7 @@ birationality over `T` (`Scheme.BirationalOver.comp`), and `𝔸(1; Spec A)` ove
 birational over `T` to `𝔸(1; T)` (`Scheme.birationalOver_affineSpace_comp`).
 -/
 theorem isPointedConicRationalOver_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
@@ -3689,7 +3696,7 @@ the concrete coordinate statement that the localized residual map dominates `ℙ
 exactly the hypotheses of obligation 3, so this adds no assumption — but obligation 3 now depends
 on obligation 2, which is where the source's **choice of the multisection line** is owed. -/
 theorem isDominant_residualComponentToBase_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -3718,7 +3725,7 @@ Downstream of this obligation everything is already wired:
 `hasUnirationalParametrization1_residualComponentBaseChangeSnd` consumes it directly.
 -/
 theorem isResidualComponentPointedConicRational_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]

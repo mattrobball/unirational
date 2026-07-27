@@ -225,7 +225,7 @@ theorem exists_lineFrame_inverse_of_pair_linearIndependent
 /-- A smooth cubic has a framed tangent line whose residual point avoids every positive-degree
 homogeneous target not contained in the cubic in the principal-radical sense. -/
 theorem exists_framed_tangentResidual_avoids_target_of_not_mem_radical
-    {K : Type u} [Field K] [CharZero K] [IsAlgClosed K]
+    {K : Type u} [Field K] [NeZero (2 : K)] [NeZero (3 : K)] [IsAlgClosed K]
     (g : MvPolynomial (Fin 3) K) (hsmooth : IsSmoothPlaneCubic g)
     (H : MvPolynomial (Fin 3) K) {d : ℕ}
     (hH : H.IsHomogeneous d) (hd : 0 < d)
@@ -250,7 +250,7 @@ theorem exists_framed_tangentResidual_avoids_target_of_not_mem_radical
 Once the generic cubic is known not to be contained in the constant conic discriminant, there is
 a framed tangent line whose residual point lies outside that discriminant. -/
 theorem exists_framed_tangentResidual_avoids_sndConicDiscriminant
-    {K : Type u} [Field K] [CharZero K] [IsAlgClosed K]
+    {K : Type u} [Field K] [NeZero (2 : K)] [NeZero (3 : K)] [IsAlgClosed K]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
     (g : MvPolynomial (Fin 3) K) (hsmooth : IsSmoothPlaneCubic g)
     (hnot : sndConicDiscriminant F ∉
@@ -275,7 +275,7 @@ tangent whose residual point avoids the actual base-changed conic discriminant. 
 theorem, the family-specific pointwise task is exactly the radical-noncontainment hypothesis (and
 the separately stated generic smoothness hypothesis); there is no further tangent geometry. -/
 theorem exists_genericFst_framed_tangentResidual_avoids_sndConicDiscriminant
-    {k : Type u} [Field k] [CharZero k]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (i : Fin 3)
     (hsmooth : IsSmoothPlaneCubic (genericFstCubicOverClosure F i))

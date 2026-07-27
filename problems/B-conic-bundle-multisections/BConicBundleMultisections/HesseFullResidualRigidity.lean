@@ -6,6 +6,7 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import BConicBundleMultisections.HesseResidualCertificate
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # Full residual-map rigidity in Hesse coordinates
@@ -334,7 +335,7 @@ structure RecoveryEquations (a b c d e f h i j k lam rho : R) : Prop where
   h43 : recoveryCoeff43 a b c d e f h i j k lam rho = 0
   h44 : recoveryCoeff44 a b c d e f h i j k lam rho = 0
 
-variable {R : Type u} [Field R] [CharZero R]
+variable {R : Type u} [Field R] [NeZero (2 : R)] [NeZero (3 : R)]
 
 /-- Exact interpolation on the fifteen integral points `0 <= s,t` and `s+t <= 4`. -/
 theorem quartic_coefficients_eq_zero (c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 : R)
@@ -356,133 +357,161 @@ theorem quartic_coefficients_eq_zero (c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 
       c14 = 0) :
     c0 = 0 ∧ c1 = 0 ∧ c2 = 0 ∧ c3 = 0 ∧ c4 = 0 ∧ c5 = 0 ∧ c6 = 0 ∧ c7 = 0 ∧ c8 = 0 ∧ c9 = 0 ∧ c10 = 0 ∧ c11 = 0 ∧ c12 = 0 ∧ c13 = 0 ∧ c14 = 0 := by
   have hc0 : c0 = 0 := by
-    linear_combination
-      (1/24) * (hzero 0 0) +
-      (-1/6) * (hzero 1 0) +
-      (1/4) * (hzero 2 0) +
-      (-1/6) * (hzero 3 0) +
-      (1/24) * (hzero 4 0)
+    have hscale : (24 : R) * (c0) = 0 := by
+      linear_combination
+        (1) * (hzero 0 0) +
+        (-4) * (hzero 1 0) +
+        (6) * (hzero 2 0) +
+        (-4) * (hzero 3 0) +
+        (1) * (hzero 4 0)
+    exact (mul_eq_zero.mp hscale).resolve_left twentyfour_ne_zero'
   have hc1 : c1 = 0 := by
-    linear_combination
-      (1/6) * (hzero 0 0) +
-      (-1/2) * (hzero 1 0) +
-      (-1/6) * (hzero 0 1) +
-      (1/2) * (hzero 2 0) +
-      (1/2) * (hzero 1 1) +
-      (-1/6) * (hzero 3 0) +
-      (-1/2) * (hzero 2 1) +
-      (1/6) * (hzero 3 1)
+    have hscale : (6 : R) * (c1) = 0 := by
+      linear_combination
+        (1) * (hzero 0 0) +
+        (-3) * (hzero 1 0) +
+        (-1) * (hzero 0 1) +
+        (3) * (hzero 2 0) +
+        (3) * (hzero 1 1) +
+        (-1) * (hzero 3 0) +
+        (-3) * (hzero 2 1) +
+        (1) * (hzero 3 1)
+    exact (mul_eq_zero.mp hscale).resolve_left six_ne_zero'
   have hc2 : c2 = 0 := by
-    linear_combination
-      (-5/12) * (hzero 0 0) +
-      (3/2) * (hzero 1 0) +
-      (-2) * (hzero 2 0) +
-      (7/6) * (hzero 3 0) +
-      (-1/4) * (hzero 4 0)
+    have hscale : (12 : R) * (c2) = 0 := by
+      linear_combination
+        (-5) * (hzero 0 0) +
+        (18) * (hzero 1 0) +
+        (-24) * (hzero 2 0) +
+        (14) * (hzero 3 0) +
+        (-3) * (hzero 4 0)
+    exact (mul_eq_zero.mp hscale).resolve_left twelve_ne_zero'
   have hc3 : c3 = 0 := by
-    linear_combination
-      (1/4) * (hzero 0 0) +
-      (-1/2) * (hzero 1 0) +
-      (-1/2) * (hzero 0 1) +
-      (1/4) * (hzero 2 0) +
-      (1) * (hzero 1 1) +
-      (1/4) * (hzero 0 2) +
-      (-1/2) * (hzero 2 1) +
-      (-1/2) * (hzero 1 2) +
-      (1/4) * (hzero 2 2)
+    have hscale : (4 : R) * (c3) = 0 := by
+      linear_combination
+        (1) * (hzero 0 0) +
+        (-2) * (hzero 1 0) +
+        (-2) * (hzero 0 1) +
+        (1) * (hzero 2 0) +
+        (4) * (hzero 1 1) +
+        (1) * (hzero 0 2) +
+        (-2) * (hzero 2 1) +
+        (-2) * (hzero 1 2) +
+        (1) * (hzero 2 2)
+    exact (mul_eq_zero.mp hscale).resolve_left four_ne_zero'
   have hc4 : c4 = 0 := by
-    linear_combination
-      (-5/4) * (hzero 0 0) +
-      (3) * (hzero 1 0) +
-      (3/2) * (hzero 0 1) +
-      (-9/4) * (hzero 2 0) +
-      (-7/2) * (hzero 1 1) +
-      (-1/4) * (hzero 0 2) +
-      (1/2) * (hzero 3 0) +
-      (5/2) * (hzero 2 1) +
-      (1/2) * (hzero 1 2) +
-      (-1/2) * (hzero 3 1) +
-      (-1/4) * (hzero 2 2)
+    have hscale : (4 : R) * (c4) = 0 := by
+      linear_combination
+        (-5) * (hzero 0 0) +
+        (12) * (hzero 1 0) +
+        (6) * (hzero 0 1) +
+        (-9) * (hzero 2 0) +
+        (-14) * (hzero 1 1) +
+        (-1) * (hzero 0 2) +
+        (2) * (hzero 3 0) +
+        (10) * (hzero 2 1) +
+        (2) * (hzero 1 2) +
+        (-2) * (hzero 3 1) +
+        (-1) * (hzero 2 2)
+    exact (mul_eq_zero.mp hscale).resolve_left four_ne_zero'
   have hc5 : c5 = 0 := by
-    linear_combination
-      (35/24) * (hzero 0 0) +
-      (-13/3) * (hzero 1 0) +
-      (19/4) * (hzero 2 0) +
-      (-7/3) * (hzero 3 0) +
-      (11/24) * (hzero 4 0)
+    have hscale : (24 : R) * (c5) = 0 := by
+      linear_combination
+        (35) * (hzero 0 0) +
+        (-104) * (hzero 1 0) +
+        (114) * (hzero 2 0) +
+        (-56) * (hzero 3 0) +
+        (11) * (hzero 4 0)
+    exact (mul_eq_zero.mp hscale).resolve_left twentyfour_ne_zero'
   have hc6 : c6 = 0 := by
-    linear_combination
-      (1/6) * (hzero 0 0) +
-      (-1/6) * (hzero 1 0) +
-      (-1/2) * (hzero 0 1) +
-      (1/2) * (hzero 1 1) +
-      (1/2) * (hzero 0 2) +
-      (-1/2) * (hzero 1 2) +
-      (-1/6) * (hzero 0 3) +
-      (1/6) * (hzero 1 3)
+    have hscale : (6 : R) * (c6) = 0 := by
+      linear_combination
+        (1) * (hzero 0 0) +
+        (-1) * (hzero 1 0) +
+        (-3) * (hzero 0 1) +
+        (3) * (hzero 1 1) +
+        (3) * (hzero 0 2) +
+        (-3) * (hzero 1 2) +
+        (-1) * (hzero 0 3) +
+        (1) * (hzero 1 3)
+    exact (mul_eq_zero.mp hscale).resolve_left six_ne_zero'
   have hc7 : c7 = 0 := by
-    linear_combination
-      (-5/4) * (hzero 0 0) +
-      (3/2) * (hzero 1 0) +
-      (3) * (hzero 0 1) +
-      (-1/4) * (hzero 2 0) +
-      (-7/2) * (hzero 1 1) +
-      (-9/4) * (hzero 0 2) +
-      (1/2) * (hzero 2 1) +
-      (5/2) * (hzero 1 2) +
-      (1/2) * (hzero 0 3) +
-      (-1/4) * (hzero 2 2) +
-      (-1/2) * (hzero 1 3)
+    have hscale : (4 : R) * (c7) = 0 := by
+      linear_combination
+        (-5) * (hzero 0 0) +
+        (6) * (hzero 1 0) +
+        (12) * (hzero 0 1) +
+        (-1) * (hzero 2 0) +
+        (-14) * (hzero 1 1) +
+        (-9) * (hzero 0 2) +
+        (2) * (hzero 2 1) +
+        (10) * (hzero 1 2) +
+        (2) * (hzero 0 3) +
+        (-1) * (hzero 2 2) +
+        (-2) * (hzero 1 3)
+    exact (mul_eq_zero.mp hscale).resolve_left four_ne_zero'
   have hc8 : c8 = 0 := by
-    linear_combination
-      (35/12) * (hzero 0 0) +
-      (-13/3) * (hzero 1 0) +
-      (-13/3) * (hzero 0 1) +
-      (7/4) * (hzero 2 0) +
-      (6) * (hzero 1 1) +
-      (7/4) * (hzero 0 2) +
-      (-1/3) * (hzero 3 0) +
-      (-2) * (hzero 2 1) +
-      (-2) * (hzero 1 2) +
-      (-1/3) * (hzero 0 3) +
-      (1/3) * (hzero 3 1) +
-      (1/4) * (hzero 2 2) +
-      (1/3) * (hzero 1 3)
+    have hscale : (12 : R) * (c8) = 0 := by
+      linear_combination
+        (35) * (hzero 0 0) +
+        (-52) * (hzero 1 0) +
+        (-52) * (hzero 0 1) +
+        (21) * (hzero 2 0) +
+        (72) * (hzero 1 1) +
+        (21) * (hzero 0 2) +
+        (-4) * (hzero 3 0) +
+        (-24) * (hzero 2 1) +
+        (-24) * (hzero 1 2) +
+        (-4) * (hzero 0 3) +
+        (4) * (hzero 3 1) +
+        (3) * (hzero 2 2) +
+        (4) * (hzero 1 3)
+    exact (mul_eq_zero.mp hscale).resolve_left twelve_ne_zero'
   have hc9 : c9 = 0 := by
-    linear_combination
-      (-25/12) * (hzero 0 0) +
-      (4) * (hzero 1 0) +
-      (-3) * (hzero 2 0) +
-      (4/3) * (hzero 3 0) +
-      (-1/4) * (hzero 4 0)
+    have hscale : (12 : R) * (c9) = 0 := by
+      linear_combination
+        (-25) * (hzero 0 0) +
+        (48) * (hzero 1 0) +
+        (-36) * (hzero 2 0) +
+        (16) * (hzero 3 0) +
+        (-3) * (hzero 4 0)
+    exact (mul_eq_zero.mp hscale).resolve_left twelve_ne_zero'
   have hc10 : c10 = 0 := by
-    linear_combination
-      (1/24) * (hzero 0 0) +
-      (-1/6) * (hzero 0 1) +
-      (1/4) * (hzero 0 2) +
-      (-1/6) * (hzero 0 3) +
-      (1/24) * (hzero 0 4)
+    have hscale : (24 : R) * (c10) = 0 := by
+      linear_combination
+        (1) * (hzero 0 0) +
+        (-4) * (hzero 0 1) +
+        (6) * (hzero 0 2) +
+        (-4) * (hzero 0 3) +
+        (1) * (hzero 0 4)
+    exact (mul_eq_zero.mp hscale).resolve_left twentyfour_ne_zero'
   have hc11 : c11 = 0 := by
-    linear_combination
-      (-5/12) * (hzero 0 0) +
-      (3/2) * (hzero 0 1) +
-      (-2) * (hzero 0 2) +
-      (7/6) * (hzero 0 3) +
-      (-1/4) * (hzero 0 4)
+    have hscale : (12 : R) * (c11) = 0 := by
+      linear_combination
+        (-5) * (hzero 0 0) +
+        (18) * (hzero 0 1) +
+        (-24) * (hzero 0 2) +
+        (14) * (hzero 0 3) +
+        (-3) * (hzero 0 4)
+    exact (mul_eq_zero.mp hscale).resolve_left twelve_ne_zero'
   have hc12 : c12 = 0 := by
-    linear_combination
-      (35/24) * (hzero 0 0) +
-      (-13/3) * (hzero 0 1) +
-      (19/4) * (hzero 0 2) +
-      (-7/3) * (hzero 0 3) +
-      (11/24) * (hzero 0 4)
+    have hscale : (24 : R) * (c12) = 0 := by
+      linear_combination
+        (35) * (hzero 0 0) +
+        (-104) * (hzero 0 1) +
+        (114) * (hzero 0 2) +
+        (-56) * (hzero 0 3) +
+        (11) * (hzero 0 4)
+    exact (mul_eq_zero.mp hscale).resolve_left twentyfour_ne_zero'
   have hc13 : c13 = 0 := by
-    linear_combination
-      (-25/12) * (hzero 0 0) +
-      (4) * (hzero 0 1) +
-      (-3) * (hzero 0 2) +
-      (4/3) * (hzero 0 3) +
-      (-1/4) * (hzero 0 4)
+    have hscale : (12 : R) * (c13) = 0 := by
+      linear_combination
+        (-25) * (hzero 0 0) +
+        (48) * (hzero 0 1) +
+        (-36) * (hzero 0 2) +
+        (16) * (hzero 0 3) +
+        (-3) * (hzero 0 4)
+    exact (mul_eq_zero.mp hscale).resolve_left twelve_ne_zero'
   have hc14 : c14 = 0 := by
     linear_combination
       (1) * (hzero 0 0)
@@ -637,7 +666,7 @@ theorem eq_hesse_of_recoveryEquations (a b c d e f h i j k lam rho : R) (hrho : 
   have e43 := H.h43
   dsimp only [recoveryCoeff43] at e43
   have hj : j = 0 := by
-    linear_combination
+    linear_combination₆
       (e*lam*v/3) * e0 +
       (h*lam*v/6 + i*v/3) * e3 +
       (-j*lam*v/36) * e4 +
@@ -657,7 +686,7 @@ theorem eq_hesse_of_recoveryEquations (a b c d e f h i j k lam rho : R) (hrho : 
       (h*v/3) * e40 +
       (-j) * hv
   have hi : i = 0 := by
-    linear_combination
+    linear_combination₆
       (a*v/6) * e2 +
       (-b*v/18) * e4 +
       (-c*v/6) * e7 +
@@ -671,7 +700,7 @@ theorem eq_hesse_of_recoveryEquations (a b c d e f h i j k lam rho : R) (hrho : 
       (-i*v/3) * e28 +
       (-i) * hv
   have hh : h = 0 := by
-    linear_combination
+    linear_combination₆
       (-e*v/6) * e1 +
       (-h*v/6) * e6 +
       (k*v/6) * e8 +
@@ -682,7 +711,7 @@ theorem eq_hesse_of_recoveryEquations (a b c d e f h i j k lam rho : R) (hrho : 
       (-k*v/3) * e43 +
       (-h) * hv
   have he : e = 0 := by
-    linear_combination
+    linear_combination₆
       (-2*e*v/3) * e0 +
       (-h*v/3) * e3 +
       (j*v/18) * e4 +
@@ -696,7 +725,7 @@ theorem eq_hesse_of_recoveryEquations (a b c d e f h i j k lam rho : R) (hrho : 
       (-5*k*v/6) * e39 +
       (-e) * hv
   have hdk0 : d - k = 0 := by
-    linear_combination
+    linear_combination₆
       (-4*a*v/3) * e0 +
       (-b*v/6) * e1 +
       (e*v/6) * e2 +
@@ -714,7 +743,7 @@ theorem eq_hesse_of_recoveryEquations (a b c d e f h i j k lam rho : R) (hrho : 
       (-j*v/2) * e43 +
       (-d + k) * hv
   have hc : c = 0 := by
-    linear_combination
+    linear_combination₆
       (-e*lam^2*v/6) * e0 +
       (-b*v/6 - h*lam^2*v/12 - i*lam*v/6) * e3 +
       (j*lam^2*v/72) * e4 +
@@ -737,7 +766,7 @@ theorem eq_hesse_of_recoveryEquations (a b c d e f h i j k lam rho : R) (hrho : 
       (-h*lam*v/6) * e40 +
       (-c) * hv
   have hb : b = 0 := by
-    linear_combination
+    linear_combination₆
       (-2*b*v/3) * e0 +
       (-c*v/3) * e1 +
       (-d*v/3) * e3 +
@@ -748,7 +777,7 @@ theorem eq_hesse_of_recoveryEquations (a b c d e f h i j k lam rho : R) (hrho : 
       (j*v/6) * e39 +
       (-b) * hv
   have hak0 : a - k = 0 := by
-    linear_combination
+    linear_combination₆
       (-2*a*v/3) * e0 +
       (-b*v/3) * e1 +
       (e*v/6) * e2 +
@@ -767,7 +796,7 @@ theorem eq_hesse_of_recoveryEquations (a b c d e f h i j k lam rho : R) (hrho : 
       (-j*v/3) * e43 +
       (-a + k) * hv
   have hf0 : 3*k*lam + f = 0 := by
-    linear_combination
+    linear_combination₆
       (-2*f*v/3) * e0 +
       (-2*h*v/3) * e1 +
       (2*j*v/3) * e2 +

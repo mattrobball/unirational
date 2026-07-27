@@ -55,7 +55,7 @@ theorem residualYCoordsOn_ne_zero_of_membershipAwayDiscriminant
 /-- Some standard chart of the residual component is nonempty and dominates the conic-bundle
 base under the discriminant membership package. -/
 theorem exists_isDominant_residualComponentOnToBase_of_membershipAwayDiscriminant
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
@@ -95,7 +95,7 @@ theorem exists_isDominant_residualComponentOnToBase_of_membershipAwayDiscriminan
 /-- Complete clean consumer: the discriminant membership package yields a three-dimensional
 unirational parametrization of the original smooth bidegree-`(2,3)` zero locus. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_membershipAwayDiscriminant
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
