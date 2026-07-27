@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
 public import BConicBundleMultisections.CubicFiberSingularLocus
 
 /-!
@@ -111,7 +112,42 @@ theorem funext_of_forall_eval_eq {k : Type u} [Field k] {K : Type w} [Field K] [
     p = q :=
   funext_of_forall_eval_eq_of_injective _ (algebraMap k K).injective h
 
+/-- **The ready form**: check the identity over the algebraic closure.
+
+No hypothesis on `k` at all — not infinite, not perfect, not closed.  An algebraically closed field
+is infinite, so `AlgebraicClosure k` always supplies what `MvPolynomial.funext` wants, and
+injectivity brings the identity home.  This is the drop-in replacement for a site that currently
+carries `[Infinite k]` only in order to call `MvPolynomial.funext`. -/
+theorem funext_of_forall_eval_eq_algebraicClosure {k : Type u} [Field k] {p q : MvPolynomial σ k}
+    (h : ∀ x : σ → AlgebraicClosure k,
+      eval x (map (algebraMap k (AlgebraicClosure k)) p)
+        = eval x (map (algebraMap k (AlgebraicClosure k)) q)) :
+    p = q :=
+  funext_of_forall_eval_eq h
+
 end Funext
+
+/-! ### The one piece of descent that is not formal
+
+Seven of the eleven Nullstellensatz sites use the *radical-membership* direction — `f` vanishes on
+the zero locus, therefore `f ∈ I.radical` — rather than the point-producing direction.  Descending
+those needs
+
+> `(I.map (algebraMap k K)).comap (algebraMap k K) = I`  for `I : Ideal (MvPolynomial σ k)`,
+
+which is `Ideal.comap_map_eq_self_of_faithfullyFlat` applied to the extension
+`MvPolynomial σ k → MvPolynomial σ K`.  Mathlib has that lemma, but not the instance: there is no
+`Algebra (MvPolynomial σ k) (MvPolynomial σ K)` in scope, let alone `Module.FaithfullyFlat` for it,
+so the chain does not fire.
+
+The elementary route avoids flatness entirely.  `MvPolynomial σ K` is free over `MvPolynomial σ k`
+on any `k`-basis of `K` containing `1`; an element of `I.map` is `∑ aᵢ gᵢ` with `gᵢ ∈ I ⊆
+MvPolynomial σ k`, and expanding the `aᵢ` in that basis exhibits its `1`-component as a member of
+`I`.  An element that already lies downstairs is its own `1`-component.
+
+This is recorded rather than proved because it is a self-contained piece of commutative algebra of
+its own size, and because nothing in the current tree consumes it yet — the four sites that reach
+the main theorem go through `exists_det_ne_zero_of_forall_ne_zero_of_geometric` above. -/
 
 end
 
