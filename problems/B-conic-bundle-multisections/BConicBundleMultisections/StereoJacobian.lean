@@ -6,6 +6,7 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import BConicBundleMultisections.AlgebraicIndependenceJacobian
+public import BConicBundleMultisections.JacobianCriterionCharFree
 public import BConicBundleMultisections.CubicFiberSingularLocus
 public import BConicBundleMultisections.FirstProjectionJacobian
 public import BConicBundleMultisections.FirstProjectionSmoothFiber
@@ -1792,7 +1793,7 @@ theorem exists_stereo_param_nonsingular_cubicFiber
   have hpull : (aeval (residualImageXCoords F v) :
       MvPolynomial (Fin 3) k →ₐ[k] affineTwoRing k) Δ ≠ 0 := by
     intro hzero
-    exact hΔ0 (eq_zero_of_isHomogeneous_of_aeval_eq_zero (residualImageXCoords F v)
+    exact hΔ0 (eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField (residualImageXCoords F v)
       (ULift.up 0) (ULift.up 1) hjac n Δ hn hzero)
   obtain ⟨t, s, hts⟩ := exists_eval_ne_zero_affineTwoRing _ hpull
   refine ⟨t, s, (hS _).mp ⟨Δ, hΔS, ?_⟩⟩

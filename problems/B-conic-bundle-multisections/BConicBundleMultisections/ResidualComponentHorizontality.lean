@@ -6,6 +6,7 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import BConicBundleMultisections.AlgebraicIndependenceJacobian
+public import BConicBundleMultisections.JacobianCriterionCharFree
 public import BConicBundleMultisections.PlaneCubicResidualTransport
 public import BConicBundleMultisections.ProjectiveSpaceAlgebraPoint
 public import BConicBundleMultisections.ProjectiveSpaceChartDominance
@@ -375,7 +376,7 @@ theorem eq_zero_of_aeval_residualYCoords_of_isHomogeneous
     (d : ℕ) (Ψ : MvPolynomial (Fin 3) k) (hΨ : Ψ.IsHomogeneous d)
     (hvan : aeval (residualYCoords F v) Ψ = 0) :
     Ψ = 0 :=
-  eq_zero_of_isHomogeneous_of_aeval_eq_zero (residualYCoords F v)
+  eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField (residualYCoords F v)
     (ULift.up 0) (ULift.up 1)
     (det_residualYCoords_ne_zero F hF hF0 hgood v hv0 hv hv2 hpolar) d Ψ hΨ hvan
 

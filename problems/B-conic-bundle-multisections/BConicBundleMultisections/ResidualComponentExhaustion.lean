@@ -9,6 +9,7 @@ public import BConicBundleMultisections.ResidualComponentOn
 public import BConicBundleMultisections.ResidualEquationBidegree
 public import BConicBundleMultisections.ResidualHorizontalityLineAudit
 public import BConicBundleMultisections.ProjectiveSpaceChartDominance
+public import BConicBundleMultisections.JacobianCriterionCharFree
 public import Mathlib.AlgebraicGeometry.Morphisms.ClosedImmersion
 public import Mathlib.Data.Fintype.EquivFin
 
@@ -568,7 +569,7 @@ theorem isDominant_residualTargetPointOn_toFirst_of_smooth
     (injective_standardChartEvalAlgebra_residualComponentOnXCoordsNorm
       p₀ q₀ r N F v i j hdenom
       (fun d Ψ hΨ hΨvan ↦
-        eq_zero_of_isHomogeneous_of_aeval_eq_zero
+        eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField
           (stereoFirstCoordsOn p₀ q₀ F v) (ULift.up 0) (ULift.up 1)
           (det_stereoFirstCoordsOn_ne_zero_of_smooth_of_two_ne_zero
             p₀ q₀ r N hMN F hF hF0 v hv hv2)
