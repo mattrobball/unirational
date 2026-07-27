@@ -191,7 +191,7 @@ theorem ternary_decomposition {q : MvPolynomial (Fin 3) K} (hq : q.IsHomogeneous
   | 2 => simp [ternaryCoeff]
   | (n + 3) =>
       rw [Polynomial.coeff_eq_zero_of_natDegree_lt (by omega)]
-      simp [ternaryCoeff, Polynomial.coeff_C, Polynomial.coeff_X_pow]
+      simp [ternaryCoeff]
 
 /-- Evaluating the inclusion of a binary form at a ternary point ignores the first coordinate. -/
 theorem aeval_succEmb {L : Type v} [CommRing L] [Algebra K L] (t u v : L)
@@ -199,6 +199,11 @@ theorem aeval_succEmb {L : Type v} [CommRing L] [Algebra K L] (t u v : L)
     MvPolynomial.aeval ![t, u, v] (succEmb w) = MvPolynomial.aeval ![u, v] w := by
   rw [succEmb, MvPolynomial.aeval_rename]
   congr 1
+
+/-- `eval` form of `aeval_succEmb`. -/
+theorem eval_succEmb (t u v : K) (w : MvPolynomial (Fin 2) K) :
+    MvPolynomial.eval ![t, u, v] (succEmb w) = MvPolynomial.eval ![u, v] w :=
+  aeval_succEmb t u v w
 
 /-- The value of a ternary quadratic form at `(t, u, v)`, expanded in `t`. -/
 theorem aeval_ternary_decomposition {L : Type v} [CommRing L] [Algebra K L]
@@ -243,11 +248,395 @@ theorem ternaryCoeff_two_eq_C {q : MvPolynomial (Fin 3) K} (hq : q.IsHomogeneous
   conv_lhs => rw [eq_C_of_isHomogeneous_zero ha]
   congr 1
   rw [hcoeff]
-  show _ = MvPolynomial.aeval ![(1 : K), 0, 0] q
+  change _ = MvPolynomial.aeval ![(1 : K), 0, 0] q
   rw [key, hb, hc]
   ring
 
+/-- `X 0 + e` is never a unit, for `e` a binary form: the two evaluations at `(0, 0, 0)` and
+`(1, 0, 0)` differ. -/
+theorem not_isUnit_X_zero_add_succEmb (e : MvPolynomial (Fin 2) K) :
+    ¬ IsUnit (MvPolynomial.X 0 + succEmb e) := by
+  intro h
+  obtain ⟨k, -, hk⟩ := MvPolynomial.isUnit_iff_eq_C_of_isReduced.mp h
+  have h0 := congrArg (MvPolynomial.eval (![0, 0, 0] : Fin 3 → K)) hk
+  have h1 := congrArg (MvPolynomial.eval (![1, 0, 0] : Fin 3 → K)) hk
+  rw [map_add, eval_succEmb] at h0 h1
+  simp only [MvPolynomial.eval_X, MvPolynomial.eval_C, Matrix.cons_val_zero] at h0 h1
+  exact one_ne_zero (α := K) (by linear_combination h1 - h0)
+
+/-- A nonzero linear form over a field is prime. -/
+theorem prime_of_isHomogeneous_one {σ : Type*} {p : MvPolynomial σ K}
+    (hp : p.IsHomogeneous 1) (hp0 : p ≠ 0) : Prime p := by
+  refine UniqueFactorizationMonoid.irreducible_iff_prime.mp
+    (MvPolynomial.irreducible_of_totalDegree_eq_one (hp.totalDegree hp0) ?_)
+  intro x hx
+  by_contra hxu
+  have hx0 : x = 0 := by
+    by_contra hne
+    exact hxu (isUnit_iff_ne_zero.mpr hne)
+  refine hp0 (MvPolynomial.ext _ _ fun d => ?_)
+  simpa using (zero_dvd_iff.mp (hx0 ▸ hx d))
+
 end Ternary
+
+/-! ### The conic resultant -/
+
+section ConicResultant
+
+variable {K : Type u} [Field K]
+
+/-- The resultant of two ternary quadratic forms with respect to `X 0`.  A binary form of degree
+`4` in `X 1, X 2`. -/
+def conicResultant (q q' : MvPolynomial (Fin 3) K) : MvPolynomial (Fin 2) K :=
+  quadResultant (ternaryCoeff q 2) (ternaryCoeff q 1) (ternaryCoeff q 0)
+    (ternaryCoeff q' 2) (ternaryCoeff q' 1) (ternaryCoeff q' 0)
+
+theorem conicResultant_comm (q q' : MvPolynomial (Fin 3) K) :
+    conicResultant q' q = conicResultant q q' :=
+  quadResultant_comm _ _ _ _ _ _
+
+/-- The resultant of two ternary quadratic forms is a binary quartic. -/
+theorem conicResultant_isHomogeneous {q q' : MvPolynomial (Fin 3) K}
+    (hq : q.IsHomogeneous 2) (hq' : q'.IsHomogeneous 2) :
+    (conicResultant q q').IsHomogeneous 4 := by
+  have ha := ternaryCoeff_isHomogeneous hq 2 0 rfl
+  have hb := ternaryCoeff_isHomogeneous hq 1 1 rfl
+  have hc := ternaryCoeff_isHomogeneous hq 0 2 rfl
+  have ha' := ternaryCoeff_isHomogeneous hq' 2 0 rfl
+  have hb' := ternaryCoeff_isHomogeneous hq' 1 1 rfl
+  have hc' := ternaryCoeff_isHomogeneous hq' 0 2 rfl
+  refine MvPolynomial.IsHomogeneous.sub ?_ ?_
+  · exact ((ha.mul hc').sub (ha'.mul hc)).pow 2
+  · exact ((ha.mul hb').sub (ha'.mul hb)).mul ((hb.mul hc').sub (hb'.mul hc))
+
+/-- **The easy direction.**  A common zero of two ternary quadratic forms over any `K`-algebra
+kills their resultant, evaluated at the last two coordinates. -/
+theorem aeval_conicResultant_eq_zero {L : Type v} [CommRing L] [Algebra K L]
+    {q q' : MvPolynomial (Fin 3) K} (hq : q.IsHomogeneous 2) (hq' : q'.IsHomogeneous 2)
+    {t u v : L} (h : MvPolynomial.aeval ![t, u, v] q = 0)
+    (h' : MvPolynomial.aeval ![t, u, v] q' = 0) :
+    MvPolynomial.aeval ![u, v] (conicResultant q q') = 0 := by
+  have e := aeval_ternary_decomposition hq t u v
+  have e' := aeval_ternary_decomposition hq' t u v
+  rw [h] at e
+  rw [h'] at e'
+  have hrw : MvPolynomial.aeval ![u, v] (conicResultant q q') =
+      quadResultant (MvPolynomial.aeval ![u, v] (ternaryCoeff q 2))
+        (MvPolynomial.aeval ![u, v] (ternaryCoeff q 1))
+        (MvPolynomial.aeval ![u, v] (ternaryCoeff q 0))
+        (MvPolynomial.aeval ![u, v] (ternaryCoeff q' 2))
+        (MvPolynomial.aeval ![u, v] (ternaryCoeff q' 1))
+        (MvPolynomial.aeval ![u, v] (ternaryCoeff q' 0)) := by
+    simp only [conicResultant, quadResultant, map_sub, map_pow, map_mul]
+  rw [hrw]
+  exact quadResultant_eq_zero_of_isRoot e.symm e'.symm
+
+/-! ### The hard direction -/
+
+/-- **The hard direction, in decomposed form.**  If the leading coefficient `a` is nonzero and the
+resultant vanishes, the two quadratics share a non-unit factor.
+
+The proof is elementary: `a * Res = a * s ^ 2 - b * p * s + c * p ^ 2` with `p = a * b' - a' * b`
+and `s = a * c' - a' * c`, so a vanishing resultant says that `-s / p` is a root of the first
+quadratic.  Either `p = 0`, and then `q` and `q'` are proportional; or `p` is a nonzero linear
+form, hence prime, so `p ∣ s` and the root `-s / p` is a genuine binary form `-e`, splitting the
+common factor `X 0 + e` off both. -/
+private theorem not_isRelPrime_of_decomposition
+    {a b c a' b' c' : MvPolynomial (Fin 2) K}
+    (haH : a.IsHomogeneous 0) (hbH : b.IsHomogeneous 1)
+    (ha'H : a'.IsHomogeneous 0) (hb'H : b'.IsHomogeneous 1) (ha : a ≠ 0)
+    {q q' : MvPolynomial (Fin 3) K} (hq : q.IsHomogeneous 2) (hq0 : q ≠ 0)
+    (hdecomp : q = succEmb a * MvPolynomial.X 0 ^ 2 + succEmb b * MvPolynomial.X 0 + succEmb c)
+    (hdecomp' : q' = succEmb a' * MvPolynomial.X 0 ^ 2 + succEmb b' * MvPolynomial.X 0 +
+      succEmb c')
+    (hres : quadResultant a b c a' b' c' = 0) :
+    ¬ IsRelPrime q q' := by
+  intro hrel
+  obtain ⟨p, hp_def⟩ : ∃ p, p = a * b' - a' * b := ⟨_, rfl⟩
+  obtain ⟨s, hs_def⟩ : ∃ s, s = a * c' - a' * c := ⟨_, rfl⟩
+  have hqdeg : q.totalDegree = 2 := hq.totalDegree hq0
+  -- The driving identity, from `mul_quadResultant` and the vanishing of the resultant.
+  have hkey : a * s ^ 2 - b * p * s + c * p ^ 2 = 0 := by
+    have hmul := mul_quadResultant a b c a' b' c'
+    rw [hres, mul_zero] at hmul
+    rw [hp_def, hs_def]
+    linear_combination -hmul
+  -- The relation tying `q` and `q'` together.
+  have hqq' : q' * succEmb a - q * succEmb a' =
+      succEmb p * MvPolynomial.X 0 + succEmb s := by
+    rw [hdecomp, hdecomp', hp_def, hs_def]
+    simp only [map_sub, map_mul]
+    ring
+  have hane : succEmb a ≠ 0 := fun hz => ha (succEmb_injective (by simpa using hz))
+  have hadeg : (succEmb a).totalDegree = 0 := by
+    rw [eq_C_of_isHomogeneous_zero haH]
+    simp
+  by_cases hp0 : p = 0
+  · -- The two forms are proportional, so `q ∣ ι a`, impossible on degrees.
+    have hs0 : s = 0 := by
+      rw [hp0] at hkey
+      have hz : a * s ^ 2 = 0 := by linear_combination hkey
+      rcases mul_eq_zero.mp hz with h | h
+      · exact absurd h ha
+      · exact (pow_eq_zero_iff two_ne_zero).mp h
+    have hmul : q' * succEmb a = q * succEmb a' := by
+      rw [hp0, hs0] at hqq'
+      simp only [map_zero, zero_mul, add_zero] at hqq'
+      exact sub_eq_zero.mp hqq'
+    have hdvd : q ∣ succEmb a := hrel.dvd_of_dvd_mul_left ⟨succEmb a', hmul⟩
+    have := MvPolynomial.totalDegree_le_of_dvd_of_isDomain hdvd hane
+    omega
+  · -- `p` is a nonzero linear form, hence prime, and it divides `s`.
+    have hpH : p.IsHomogeneous 1 := by
+      rw [hp_def]
+      simpa using (haH.mul hb'H).sub (ha'H.mul hbH)
+    have hprime : Prime p := prime_of_isHomogeneous_one hpH hp0
+    have hpdvd : p ∣ s := by
+      have h1 : p ∣ a * (s * s) := ⟨b * s - c * p, by linear_combination hkey⟩
+      rcases hprime.dvd_mul.mp h1 with hpa | hss
+      · exfalso
+        have hle := MvPolynomial.totalDegree_le_of_dvd_of_isDomain hpa ha
+        rw [hpH.totalDegree hp0, haH.totalDegree ha] at hle
+        omega
+      · rcases hprime.dvd_mul.mp hss with h | h <;> exact h
+    obtain ⟨e, he⟩ := hpdvd
+    -- `-e` is a root of the first quadratic.
+    have hroot : a * e ^ 2 - b * e + c = 0 := by
+      rw [he] at hkey
+      have hsq : p ^ 2 * (a * e ^ 2 - b * e + c) = 0 := by linear_combination hkey
+      rcases mul_eq_zero.mp hsq with h | h
+      · exact absurd ((pow_eq_zero_iff two_ne_zero).mp h) hp0
+      · exact h
+    have hrootE : succEmb a * succEmb e ^ 2 - succEmb b * succEmb e + succEmb c = 0 := by
+      simpa using congrArg (succEmb (K := K)) hroot
+    -- `X 0 + ι e` divides `q`.
+    have hfacq : q = (MvPolynomial.X 0 + succEmb e) *
+        (succEmb a * MvPolynomial.X 0 + (succEmb b - succEmb a * succEmb e)) := by
+      rw [hdecomp]
+      exact quadratic_eq_mul_of_root hrootE (MvPolynomial.X (0 : Fin 3))
+    -- `X 0 + ι e` divides `q' * ι a`, and `ι a` is a unit.
+    have hfacq' : q' * succEmb a = (MvPolynomial.X 0 + succEmb e) *
+        ((succEmb a * MvPolynomial.X 0 + (succEmb b - succEmb a * succEmb e)) * succEmb a' +
+          succEmb p) := by
+      have hsub : succEmb s = succEmb p * succEmb e := by rw [he, map_mul]
+      rw [hsub] at hqq'
+      have hq'eq : q' * succEmb a = q' * succEmb a - q * succEmb a' + q * succEmb a' := by ring
+      rw [hq'eq, hqq', hfacq]
+      ring
+    have haunit : IsUnit (succEmb a) := by
+      obtain ⟨k, hk⟩ : ∃ k : K, a = MvPolynomial.C k := ⟨_, eq_C_of_isHomogeneous_zero haH⟩
+      have hk0 : k ≠ 0 := by
+        rintro rfl
+        exact ha (by simpa using hk)
+      rw [hk]
+      simpa using
+        (isUnit_iff_ne_zero.mpr hk0).map (MvPolynomial.C : K →+* MvPolynomial (Fin 3) K)
+    obtain ⟨w, hw⟩ := haunit
+    have hdvdq' : (MvPolynomial.X 0 + succEmb e) ∣ q' := by
+      have hq'w : q' = q' * succEmb a * (↑w⁻¹ : MvPolynomial (Fin 3) K) := by
+        rw [← hw, mul_assoc, Units.mul_inv, mul_one]
+      rw [hq'w]
+      exact Dvd.dvd.mul_right ⟨_, hfacq'⟩ _
+    exact not_isUnit_X_zero_add_succEmb e (hrel ⟨_, hfacq⟩ hdvdq')
+
+/-- **The hard direction.**  Two ternary quadratic forms with no common non-unit factor, not both
+vanishing at the centre of projection `(1 : 0 : 0)`, have nonzero resultant.
+
+The hypothesis at the centre of projection cannot be dropped: see
+`conicResultant_degenerate_counterexample`. -/
+theorem conicResultant_ne_zero {q q' : MvPolynomial (Fin 3) K}
+    (hq : q.IsHomogeneous 2) (hq' : q'.IsHomogeneous 2) (hrel : IsRelPrime q q')
+    (hcentre : MvPolynomial.eval ![1, 0, 0] q ≠ 0 ∨ MvPolynomial.eval ![1, 0, 0] q' ≠ 0) :
+    conicResultant q q' ≠ 0 := by
+  have key : ∀ r r' : MvPolynomial (Fin 3) K, r.IsHomogeneous 2 → r'.IsHomogeneous 2 →
+      IsRelPrime r r' → ternaryCoeff r 2 ≠ 0 → conicResultant r r' ≠ 0 := by
+    intro r r' hr hr' hrr ha hres
+    have hr0 : r ≠ 0 := fun hz => ha (by simp [ternaryCoeff, hz])
+    exact not_isRelPrime_of_decomposition
+      (ternaryCoeff_isHomogeneous hr 2 0 rfl) (ternaryCoeff_isHomogeneous hr 1 1 rfl)
+      (ternaryCoeff_isHomogeneous hr' 2 0 rfl) (ternaryCoeff_isHomogeneous hr' 1 1 rfl)
+      ha hr hr0 (ternary_decomposition hr) (ternary_decomposition hr') hres hrr
+  have hne : ∀ r : MvPolynomial (Fin 3) K, r.IsHomogeneous 2 →
+      MvPolynomial.eval ![1, 0, 0] r ≠ 0 → ternaryCoeff r 2 ≠ 0 := by
+    intro r hr hval hz
+    rw [ternaryCoeff_two_eq_C hr] at hz
+    exact hval (by simpa using congrArg (MvPolynomial.eval (![0, 0] : Fin 2 → K)) hz)
+  rcases hcentre with h | h
+  · exact key q q' hq hq' hrel (hne q hq h)
+  · rw [← conicResultant_comm]
+    exact key q' q hq' hq hrel.symm (hne q' hq' h)
+
+/-! ### The degenerate case
+
+When both forms vanish at the centre of projection `(1 : 0 : 0)` the resultant vanishes
+identically.  What survives is the binary **cubic** `b * c' - b' * c`. -/
+
+/-- The subresultant `b * c' - b' * c`: a binary cubic.  It eliminates `X 0` from two forms that
+are *linear* in `X 0`. -/
+def conicSubresultant (q q' : MvPolynomial (Fin 3) K) : MvPolynomial (Fin 2) K :=
+  ternaryCoeff q 1 * ternaryCoeff q' 0 - ternaryCoeff q' 1 * ternaryCoeff q 0
+
+theorem conicSubresultant_comm (q q' : MvPolynomial (Fin 3) K) :
+    conicSubresultant q' q = -conicSubresultant q q' := by
+  simp only [conicSubresultant]; ring
+
+theorem conicSubresultant_isHomogeneous {q q' : MvPolynomial (Fin 3) K}
+    (hq : q.IsHomogeneous 2) (hq' : q'.IsHomogeneous 2) :
+    (conicSubresultant q q').IsHomogeneous 3 :=
+  ((ternaryCoeff_isHomogeneous hq 1 1 rfl).mul (ternaryCoeff_isHomogeneous hq' 0 2 rfl)).sub
+    ((ternaryCoeff_isHomogeneous hq' 1 1 rfl).mul (ternaryCoeff_isHomogeneous hq 0 2 rfl))
+
+/-- If both forms vanish at the centre of projection, the resultant vanishes identically.  This is
+exactly why `conicResultant_ne_zero` needs its hypothesis there. -/
+theorem conicResultant_eq_zero_of_eval_centre {q q' : MvPolynomial (Fin 3) K}
+    (hq : q.IsHomogeneous 2) (hq' : q'.IsHomogeneous 2)
+    (h : MvPolynomial.eval ![1, 0, 0] q = 0) (h' : MvPolynomial.eval ![1, 0, 0] q' = 0) :
+    conicResultant q q' = 0 := by
+  have ha : ternaryCoeff q 2 = 0 := by rw [ternaryCoeff_two_eq_C hq, h, map_zero]
+  have ha' : ternaryCoeff q' 2 = 0 := by rw [ternaryCoeff_two_eq_C hq', h', map_zero]
+  simp [conicResultant, quadResultant, ha, ha']
+
+/-- The easy direction for the subresultant, in the degenerate case. -/
+theorem aeval_conicSubresultant_eq_zero {L : Type v} [CommRing L] [Algebra K L]
+    {q q' : MvPolynomial (Fin 3) K} (hq : q.IsHomogeneous 2) (hq' : q'.IsHomogeneous 2)
+    (ha : ternaryCoeff q 2 = 0) (ha' : ternaryCoeff q' 2 = 0)
+    {t u v : L} (h : MvPolynomial.aeval ![t, u, v] q = 0)
+    (h' : MvPolynomial.aeval ![t, u, v] q' = 0) :
+    MvPolynomial.aeval ![u, v] (conicSubresultant q q') = 0 := by
+  have e := aeval_ternary_decomposition hq t u v
+  have e' := aeval_ternary_decomposition hq' t u v
+  rw [h, ha, map_zero, zero_mul, zero_add] at e
+  rw [h', ha', map_zero, zero_mul, zero_add] at e'
+  simp only [conicSubresultant, map_sub, map_mul]
+  linear_combination (MvPolynomial.aeval ![u, v] (ternaryCoeff q' 1)) * e -
+    (MvPolynomial.aeval ![u, v] (ternaryCoeff q 1)) * e'
+
+/-- A form coprime to a quadratic form is nonzero. -/
+theorem ne_zero_of_isRelPrime {q q' : MvPolynomial (Fin 3) K} (hq' : q'.IsHomogeneous 2)
+    (hrel : IsRelPrime q q') : q ≠ 0 := by
+  rintro rfl
+  have hunit : IsUnit q' := hrel (dvd_zero q') dvd_rfl
+  have hq'0 : q' ≠ 0 := hunit.ne_zero
+  have hd := (MvPolynomial.isUnit_iff_totalDegree_of_isReduced.mp hunit).2
+  rw [hq'.totalDegree hq'0] at hd
+  exact two_ne_zero hd
+
+private theorem ternaryCoeff_one_eq_zero_of_subresultant
+    {q q' : MvPolynomial (Fin 3) K} (hq : q.IsHomogeneous 2) (hq' : q'.IsHomogeneous 2)
+    (hrel : IsRelPrime q q') (ha : ternaryCoeff q 2 = 0) (ha' : ternaryCoeff q' 2 = 0)
+    (hsub : conicSubresultant q q' = 0) : ternaryCoeff q 1 = 0 := by
+  by_contra hb
+  have hq0 : q ≠ 0 := ne_zero_of_isRelPrime hq' hrel
+  have hcross : q * succEmb (ternaryCoeff q' 1) = q' * succEmb (ternaryCoeff q 1) := by
+    have himg := congrArg (succEmb (K := K)) hsub
+    simp only [conicSubresultant, map_sub, map_mul, map_zero] at himg
+    conv_lhs => rw [ternary_decomposition hq]
+    conv_rhs => rw [ternary_decomposition hq']
+    rw [ha, ha']
+    simp only [map_zero, zero_mul, zero_add]
+    linear_combination -himg
+  have hdvd : q ∣ succEmb (ternaryCoeff q 1) :=
+    hrel.dvd_of_dvd_mul_left ⟨succEmb (ternaryCoeff q' 1), hcross.symm⟩
+  have hne : succEmb (ternaryCoeff q 1) ≠ 0 :=
+    fun hz => hb (succEmb_injective (by simpa using hz))
+  have hdeg : (succEmb (ternaryCoeff q 1)).totalDegree = 1 :=
+    (MvPolynomial.IsHomogeneous.rename_isHomogeneous
+      (ternaryCoeff_isHomogeneous hq 1 1 rfl)).totalDegree hne
+  have hle := MvPolynomial.totalDegree_le_of_dvd_of_isDomain hdvd hne
+  rw [hq.totalDegree hq0, hdeg] at hle
+  omega
+
+/-- In the degenerate case, coprimality forces either a nonzero subresultant, or that both forms
+are independent of `X 0` altogether. -/
+theorem conicSubresultant_ne_zero_or_ternaryCoeff_one_eq_zero
+    {q q' : MvPolynomial (Fin 3) K} (hq : q.IsHomogeneous 2) (hq' : q'.IsHomogeneous 2)
+    (hrel : IsRelPrime q q') (ha : ternaryCoeff q 2 = 0) (ha' : ternaryCoeff q' 2 = 0) :
+    conicSubresultant q q' ≠ 0 ∨ (ternaryCoeff q 1 = 0 ∧ ternaryCoeff q' 1 = 0) := by
+  by_cases hsub : conicSubresultant q q' = 0
+  · refine Or.inr ⟨ternaryCoeff_one_eq_zero_of_subresultant hq hq' hrel ha ha' hsub,
+      ternaryCoeff_one_eq_zero_of_subresultant hq' hq hrel.symm ha' ha ?_⟩
+    rw [conicSubresultant_comm, hsub, neg_zero]
+  · exact Or.inl hsub
+
+/-! ### The packaged statement -/
+
+/-- **The packaged elimination statement.**  If two ternary quadratic forms over `K` have no
+common non-unit factor and a common zero `(t, u, v)` over a `K`-algebra `L`, then `(u, v)` is a
+zero of a **nonzero** binary form over `K` of degree at most `4`.
+
+No hypothesis at the centre of projection is needed here: the degenerate case falls back on the
+binary cubic `conicSubresultant`, and then on the constant-in-`X 0` coefficient itself. -/
+theorem exists_isHomogeneous_ne_zero_aeval_eq_zero {L : Type v} [CommRing L] [Algebra K L]
+    {q q' : MvPolynomial (Fin 3) K} (hq : q.IsHomogeneous 2) (hq' : q'.IsHomogeneous 2)
+    (hrel : IsRelPrime q q') {t u v : L} (h : MvPolynomial.aeval ![t, u, v] q = 0)
+    (h' : MvPolynomial.aeval ![t, u, v] q' = 0) :
+    ∃ (d : ℕ) (P : MvPolynomial (Fin 2) K),
+      d ≤ 4 ∧ P.IsHomogeneous d ∧ P ≠ 0 ∧ MvPolynomial.aeval ![u, v] P = 0 := by
+  by_cases hcentre :
+      MvPolynomial.eval ![1, 0, 0] q ≠ 0 ∨ MvPolynomial.eval ![1, 0, 0] q' ≠ 0
+  · exact ⟨4, conicResultant q q', le_rfl, conicResultant_isHomogeneous hq hq',
+      conicResultant_ne_zero hq hq' hrel hcentre, aeval_conicResultant_eq_zero hq hq' h h'⟩
+  · push Not at hcentre
+    obtain ⟨hc, hc'⟩ := hcentre
+    have ha : ternaryCoeff q 2 = 0 := by rw [ternaryCoeff_two_eq_C hq, hc, map_zero]
+    have ha' : ternaryCoeff q' 2 = 0 := by rw [ternaryCoeff_two_eq_C hq', hc', map_zero]
+    rcases conicSubresultant_ne_zero_or_ternaryCoeff_one_eq_zero hq hq' hrel ha ha' with
+      hsub | ⟨hb, hb'⟩
+    · exact ⟨3, conicSubresultant q q', by norm_num,
+        conicSubresultant_isHomogeneous hq hq', hsub,
+        aeval_conicSubresultant_eq_zero hq hq' ha ha' h h'⟩
+    · -- both forms are independent of `X 0`; use the constant coefficient of `q` itself
+      have hqc : q = succEmb (ternaryCoeff q 0) := by
+        conv_lhs => rw [ternary_decomposition hq]
+        rw [ha, hb]
+        simp
+      have hq0 : q ≠ 0 := ne_zero_of_isRelPrime hq' hrel
+      refine ⟨2, ternaryCoeff q 0, by norm_num, ternaryCoeff_isHomogeneous hq 0 2 rfl, ?_, ?_⟩
+      · intro hz
+        exact hq0 (by rw [hqc, hz, map_zero])
+      · rw [← aeval_succEmb t u v, ← hqc]
+        exact h
+
+/-- **The univariate consequence.**  With `v ≠ 0`, the coordinate ratio `u / v` of a common zero
+is a root of a nonzero polynomial of degree at most `4` over `K`. -/
+theorem exists_polynomial_ne_zero_natDegree_le_four {L : Type v} [Field L] [Algebra K L]
+    {q q' : MvPolynomial (Fin 3) K} (hq : q.IsHomogeneous 2) (hq' : q'.IsHomogeneous 2)
+    (hrel : IsRelPrime q q') {t u v : L} (h : MvPolynomial.aeval ![t, u, v] q = 0)
+    (h' : MvPolynomial.aeval ![t, u, v] q' = 0) (hv : v ≠ 0) :
+    ∃ f : Polynomial K, f ≠ 0 ∧ f.natDegree ≤ 4 ∧ Polynomial.aeval (u / v) f = 0 := by
+  obtain ⟨d, P, hd, hP, hP0, hPz⟩ :=
+    exists_isHomogeneous_ne_zero_aeval_eq_zero hq hq' hrel h h'
+  have hmem : P ∈ MvPolynomial.homogeneousSubmodule (Fin 2) K d :=
+    (MvPolynomial.mem_homogeneousSubmodule d P).mpr hP
+  refine ⟨BinaryForm.dehomogenize (⟨P, hmem⟩ : BinaryForm.Form K d), ?_, ?_, ?_⟩
+  · intro hz
+    refine hP0 ?_
+    have hhd := BinaryForm.homogenize_dehomogenize (⟨P, hmem⟩ : BinaryForm.Form K d)
+    rw [hz] at hhd
+    simpa using hhd.symm
+  · exact le_trans (BinaryForm.natDegree_dehomogenize_le _) hd
+  · -- evaluate: `u / v` is a root because `(u, v)` is a projective zero of `P`
+    have hscale : MvPolynomial.aeval ![u / v, 1] P = 0 := by
+      have hsm := aeval_smul_point_of_isHomogeneous (S := L) hP v ![u / v, 1]
+      have hpt : (fun i => v * (![u / v, 1] : Fin 2 → L) i) = ![u, v] := by
+        funext i
+        fin_cases i
+        · change v * (u / v) = u
+          field_simp
+        · change v * 1 = v
+          ring
+      rw [hpt, hPz] at hsm
+      exact (mul_eq_zero.mp hsm.symm).resolve_left (pow_ne_zero d hv)
+    have hcomp : (Polynomial.aeval (u / v) : Polynomial K →ₐ[K] L).comp
+        (MvPolynomial.aeval ![Polynomial.X, 1]) = MvPolynomial.aeval ![u / v, 1] := by
+      rw [MvPolynomial.comp_aeval]
+      congr 1
+      funext i
+      fin_cases i <;> simp
+    have := congrArg (fun φ => φ P) hcomp
+    simpa [BinaryForm.dehomogenize, hscale] using this
+
+end ConicResultant
 
 end
 
