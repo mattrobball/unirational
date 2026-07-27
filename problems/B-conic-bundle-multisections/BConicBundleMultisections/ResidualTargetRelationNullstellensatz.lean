@@ -5,6 +5,7 @@ Authors: BConicBundleMultisections contributors
 -/
 module
 
+public import BConicBundleMultisections.AbsolutelyIrreducibleRelation
 public import BConicBundleMultisections.ResidualRelationBigrading
 public import Mathlib.RingTheory.Nullstellensatz
 
@@ -31,7 +32,7 @@ namespace BConicBundleMultisections
 
 noncomputable section
 
-open MvPolynomial
+open _root_.MvPolynomial
 
 universe u
 
@@ -85,6 +86,40 @@ theorem mem_radical_span_pair_of_vanishes_on_common_zero
   rw [MvPolynomial.mem_zeroLocus_iff] at hz
   exact hvan z (hz F (Ideal.subset_span (by simp)))
     (hz G (Ideal.subset_span (by simp)))
+
+/-- **The same, with algebraic closure moved off the coefficients and onto the points.**
+
+The Nullstellensatz genuinely needs an algebraically closed field — over `ℝ` the forms `x` and
+`x² + y²` have the same real zero locus but generate different radical ideals — so the hypothesis
+is strengthened to vanishing at every *geometric* zero, over an algebraically closed extension `K`
+of `k`.  That is the "hypotheses ascend" half of the descent.
+
+The conclusion then comes back down to `k`.  This is the "conclusions descend" half, and it is the
+one that needs an actual argument: ideal membership is not reflected by an arbitrary ring map.
+`mem_span_pair_of_map_mem_span_pair` supplies it from a `k`-linear functional `π : K → k` with
+`π 1 = 1`, applied to the coefficients of the certificate — no faithful-flatness instance for
+`k[σ] → K[σ]` is needed. -/
+theorem mem_radical_span_pair_of_vanishes_on_common_geometric_zero
+    {σ : Type*} [Finite σ] {k : Type*} [Field k] {K : Type u} [Field K] [IsAlgClosed K]
+    [Algebra k K] {F G q : MvPolynomial σ k}
+    (hvan : ∀ z : σ → K, aeval z (map (algebraMap k K) F) = 0 →
+      aeval z (map (algebraMap k K) G) = 0 → aeval z (map (algebraMap k K) q) = 0) :
+    q ∈ (Ideal.span {F, G}).radical := by
+  obtain ⟨n, hn⟩ := mem_radical_span_pair_of_vanishes_on_common_zero hvan
+  refine ⟨n, mem_span_pair_of_map_mem_span_pair (K := K) F G _ ?_⟩
+  rwa [map_pow]
+
+/-- Radical-ideal form of the geometric Nullstellensatz bridge: over a radical ideal, vanishing at
+every geometric common zero is literal membership over the base field. -/
+theorem mem_span_pair_of_vanishes_on_common_geometric_zero_of_isRadical
+    {σ : Type*} [Finite σ] {k : Type*} [Field k] {K : Type u} [Field K] [IsAlgClosed K]
+    [Algebra k K] {F G q : MvPolynomial σ k}
+    (hradical : (Ideal.span {F, G}).IsRadical)
+    (hvan : ∀ z : σ → K, aeval z (map (algebraMap k K) F) = 0 →
+      aeval z (map (algebraMap k K) G) = 0 → aeval z (map (algebraMap k K) q) = 0) :
+    q ∈ Ideal.span {F, G} := by
+  have hmem := mem_radical_span_pair_of_vanishes_on_common_geometric_zero (K := K) hvan
+  rwa [hradical.radical] at hmem
 
 /-- Radical-ideal form of the preceding Nullstellensatz bridge. -/
 theorem mem_span_pair_of_vanishes_on_common_zero_of_isRadical
