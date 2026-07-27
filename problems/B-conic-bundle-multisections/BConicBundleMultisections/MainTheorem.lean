@@ -337,6 +337,40 @@ theorem smooth_bidegree23_hasUnirationalParametrization_of_good_line_section
       p₀ q₀ r N hMN F hF v hv i j hF0 hdenom hdom)
 
 /--
+**Main theorem over an arbitrary base field.**  Let `k` be a perfect field of characteristic
+prime to `6`, and let `F` be a nonzero bidegree-`(2,3)` form over `k` whose biprojective zero
+locus is smooth over `k`.  If *some* framed line defined over `k` carries the good-line package —
+`lineFrame p q r * N = 1`, G3 (`ResidualLineNonconstantOn`), a nondegenerate Tsen section of that
+line's generic conic (`HasNondegenerateLineStereoSection`, i.e. `v ≠ 0` isotropic with `v 2 ≠ 0`
+and nonvanishing stereographic polar form), and G4
+(`ResidualAvoidsConicDiscriminantOn`) — then `X = V(F)` is unirational over `k`.
+
+**No algebraic closure anywhere.**  The two projective target-geometry inputs of the
+tangent-residual construction are produced from smoothness over `k` itself:
+`targetRelationsProjectivelyIntegralAwayDiscriminant_of_smooth` (retained-chart integrality of
+every target relation away from the conic discriminant) and
+`targetRelationsResidualNegativeTwistGluingAwayDiscriminantOn` (the degree `-2` transition law
+turning target-quadratic multiples of the local residual quotients into compatible global
+functions).  Neither is a hypothesis, and neither needs `k` algebraically closed.
+
+Consequently the *only* thing the theorem asks of the base field beyond perfectness and
+characteristic is the existence of one good line with a Tsen section over `k`.  Over an
+algebraically closed field that existence is proved (frame incidence, see
+`Standard.exists_actualG3G4LineSection_via_frameIncidence`), which is exactly how the headline
+theorem below is obtained from this one.
+-/
+theorem smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection
+    (k : Type u) [Field k] [PerfectField k] [NeZero (2 : k)] [NeZero (3 : k)]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (Bidegree23ZeroLocus.toSpec k F)]
+    (hline : ∃ (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+      (v : Fin 3 → Polynomial k), Standard.HasActualG3G4LineSection F p q r N v) :
+    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) :=
+  hasUnirationalParametrization3_biprojectiveZeroLocus_of_exists_actualG3G4LineSection
+    k F hF hF0 hline
+
+/--
 **Main theorem.**  Every smooth bidegree-`(2,3)` hypersurface in `ℙ² × ℙ²` over an algebraically
 closed field of characteristic zero is unirational: it admits a dominant rational map from affine
 `3`-space over the base.

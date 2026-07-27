@@ -106,6 +106,17 @@ end BConicBundleMultisections
 #guard_no_sorry
   BConicBundleMultisections.hasUnirationalParametrization3_biprojectiveZeroLocus
 
+-- **Closure-free assembly.**  The tangent-residual construction over an arbitrary perfect field
+-- of characteristic prime to `6`; the existence of one good framed line carrying a nondegenerate
+-- Tsen section over `k` is its only hypothesis, and the headline theorem above is its
+-- specialization to `[IsAlgClosed k]`.
+#guard_no_sorry
+  BConicBundleMultisections.hasUnirationalParametrization3_biprojectiveZeroLocus_of_actualG3G4LineSection
+#guard_no_sorry
+  BConicBundleMultisections.hasUnirationalParametrization3_biprojectiveZeroLocus_of_exists_actualG3G4LineSection
+#guard_no_sorry
+  BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection
+
 -- Load-bearing results that must remain fully proved.  If one of these starts depending on an
 -- obligation, the remaining work is larger than the obligation list suggests.
 #guard_no_sorry BConicBundleMultisections.exists_isotropic_ternary_quadratic_poly
