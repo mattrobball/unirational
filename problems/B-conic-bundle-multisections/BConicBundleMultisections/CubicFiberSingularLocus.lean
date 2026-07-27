@@ -6,6 +6,7 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import Mathlib.RingTheory.Nullstellensatz
+public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
 public import Mathlib.Algebra.Order.Antidiag.Finsupp
 public import Mathlib.Algebra.MvPolynomial.Funext
 public import Mathlib.LinearAlgebra.Determinant
@@ -439,6 +440,44 @@ theorem exists_defining_set_forms_no_common_zero [IsAlgClosed k] [Finite σ] [No
   haveI : Fintype σ := Fintype.ofFinite σ
   exact ⟨elimCertificates f d, elimCertificates_spec f d hf⟩
 
+/-! ### The geometric forms
+
+The base field carries no hypothesis; the points are taken in an algebraically closed extension.
+This is forced, not incidental — over `ℝ` the pair `x, y` of forms `x² + y²` has no nonzero real
+zero, so the `k`-point form of the equivalence would claim a nonzero certificate where none exists.
+The certificates themselves live in `A` and are unchanged: only the field the test points are drawn
+from moves. -/
+
+/-- **Geometric form of `elimCertificates_spec`.**  The certificate lives over `A` and the test
+points over an algebraically closed extension `L` of the specialisation field `k`. -/
+theorem elimCertificates_spec_of_geometric [Nonempty σ]
+    {L : Type*} [Field L] [IsAlgClosed L] [Algebra k L]
+    (f : Fin m → MvPolynomial σ A)
+    (d : Fin m → ℕ) (hf : ∀ i, (f i).IsHomogeneous (d i)) (φ : A →+* k) :
+    (∃ Δ ∈ elimCertificates f d, φ Δ ≠ 0) ↔
+      ∀ r : σ → L, r ≠ 0 →
+        ∃ i, eval r (map ((algebraMap k L).comp φ) (f i)) ≠ 0 := by
+  have hbase := elimCertificates_spec (k := L) f d hf ((algebraMap k L).comp φ)
+  refine Iff.trans ?_ hbase
+  constructor
+  · rintro ⟨Δ, hΔmem, hΔ⟩
+    exact ⟨Δ, hΔmem, fun h => hΔ ((algebraMap k L).injective (by simpa using h))⟩
+  · rintro ⟨Δ, hΔmem, hΔ⟩
+    exact ⟨Δ, hΔmem, fun h => hΔ (by simp [RingHom.comp_apply, h])⟩
+
+omit [Fintype σ] [DecidableEq σ] in
+/-- **Geometric form of `exists_defining_set_forms_no_common_zero`.** -/
+theorem exists_defining_set_forms_no_common_zero_of_geometric [Finite σ] [Nonempty σ]
+    {L : Type*} [Field L] [IsAlgClosed L] [Algebra k L]
+    (f : Fin m → MvPolynomial σ A) (d : Fin m → ℕ) (hf : ∀ i, (f i).IsHomogeneous (d i)) :
+    ∃ S : Set A, ∀ φ : A →+* k,
+      ((∃ Δ ∈ S, φ Δ ≠ 0) ↔
+        ∀ r : σ → L, r ≠ 0 →
+          ∃ i, eval r (map ((algebraMap k L).comp φ) (f i)) ≠ 0) := by
+  classical
+  haveI : Fintype σ := Fintype.ofFinite σ
+  exact ⟨elimCertificates f d, fun φ => elimCertificates_spec_of_geometric f d hf φ⟩
+
 end Family
 
 /-! ### The plane cubic fibre of a bidegree-`(2,3)` equation
@@ -629,6 +668,94 @@ theorem coeff_cubicFiberJacobianFamily_isHomogeneous [Infinite k]
   · rw [h0, h0', hsmul, coeff_C_mul]
   · rw [hsucc i, hsucc' i, hsmul, pderiv_C_mul, coeff_C_mul]
 
+/-! #### Removing `[Infinite k]` from the certificate-homogeneity chain
+
+`isHomogeneous_of_eval_smul` reads homogeneity off a scaling identity checked at every `k`-point,
+which needs `k` infinite.  Homogeneity is a statement about the support, so it descends along any
+injective change of coefficients, and the scaling identity is available over the algebraic closure
+because the whole construction commutes with base change.  So the chain below reaches the same
+conclusions over an arbitrary field. -/
+
+/-- **Homogeneity descends along an injective change of coefficients.**  A support statement, so
+the first row of the descent table applies: no flatness, no infiniteness. -/
+theorem isHomogeneous_of_map_isHomogeneous {R S : Type*} [CommSemiring R] [CommSemiring S]
+    {σ' : Type*} (φ : R →+* S) (hφ : Function.Injective φ)
+    {p : MvPolynomial σ' R} {d : ℕ} (h : (map φ p).IsHomogeneous d) :
+    p.IsHomogeneous d := by
+  intro s hs
+  refine h ?_
+  rw [coeff_map]
+  exact fun hz => hs ((map_eq_zero_iff φ hφ).mp hz)
+
+/-- The universal cubic fibre commutes with a change of coefficient field. -/
+theorem map_map_universalCubicFiber {K : Type*} [Field K] (φ : k →+* K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    map (map φ) (universalCubicFiber F) = universalCubicFiber (map φ F) := by
+  rw [universalCubicFiber, map_specializeFirstCoordinates_general]
+  have hX : (fun i : Fin 3 =>
+      (map φ : MvPolynomial (Fin 3) k →+* MvPolynomial (Fin 3) K) (X i))
+      = fun i : Fin 3 => (X i : MvPolynomial (Fin 3) K) := by
+    funext i; simp
+  have hcomp :
+      ((map φ : MvPolynomial (Fin 3) k →+* MvPolynomial (Fin 3) K).comp
+        (C : k →+* MvPolynomial (Fin 3) k))
+        = ((C : K →+* MvPolynomial (Fin 3) K).comp φ) :=
+    RingHom.ext fun a => by
+      rw [RingHom.comp_apply, RingHom.comp_apply, MvPolynomial.map_C]
+  have hC : map (map φ) (map (C : k →+* MvPolynomial (Fin 3) k) F)
+      = map (C : K →+* MvPolynomial (Fin 3) K) (map φ F) := by
+    rw [MvPolynomial.map_map, hcomp, ← MvPolynomial.map_map]
+  rw [hX, hC, universalCubicFiber]
+
+/-- The Jacobian family commutes with a change of coefficient field. -/
+theorem map_map_cubicFiberJacobianFamily {K : Type*} [Field K] (φ : k →+* K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (j : Fin 4) :
+    map (map φ) (cubicFiberJacobianFamily F j) = cubicFiberJacobianFamily (map φ F) j := by
+  refine Fin.cases ?_ (fun i => ?_) j
+  · simpa [cubicFiberJacobianFamily] using map_map_universalCubicFiber φ F
+  · simp only [cubicFiberJacobianFamily, Fin.cases_succ]
+    rw [← pderiv_map, map_map_universalCubicFiber]
+
+/-- **Each coefficient of the cubic fibre is a quadratic form, over an arbitrary field.**
+
+Same conclusion as `coeff_cubicFiberJacobianFamily_isHomogeneous`, with `[Infinite k]` discharged
+over the algebraic closure rather than assumed. -/
+theorem coeff_cubicFiberJacobianFamily_isHomogeneous_of_geometric
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (j : Fin 4) (e : Fin 3 →₀ ℕ) :
+    (coeff e (cubicFiberJacobianFamily F j)).IsHomogeneous 2 := by
+  classical
+  set φ : k →+* AlgebraicClosure k := algebraMap k (AlgebraicClosure k) with hφdef
+  refine isHomogeneous_of_map_isHomogeneous φ (algebraMap k _).injective ?_
+  have hmapcoeff : map φ (coeff e (cubicFiberJacobianFamily F j))
+      = coeff e (cubicFiberJacobianFamily (map φ F) j) := by
+    rw [← map_map_cubicFiberJacobianFamily φ F j, coeff_map]
+  rw [hmapcoeff]
+  exact coeff_cubicFiberJacobianFamily_isHomogeneous (map φ F) (hF.map_coefficients φ) j e
+
+/-- Every entry of the elimination matrix of the cubic-fibre family is a quadratic form, over an
+arbitrary field. -/
+theorem famMatrix_cubicFiber_isHomogeneous_of_geometric
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (N : ℕ)
+    (c : monomsOfDeg (Fin 3) N → famIndex (Fin 3) ![3, 2, 2, 2] N)
+    (μ ν : monomsOfDeg (Fin 3) N) :
+    (famMatrix (cubicFiberJacobianFamily F) ![3, 2, 2, 2] N c μ ν).IsHomogeneous 2 := by
+  rw [famMatrix, Matrix.of_apply, famPoly, coeff_monomial_mul']
+  split_ifs
+  · rw [one_mul]
+    exact coeff_cubicFiberJacobianFamily_isHomogeneous_of_geometric F hF _ _
+  · exact isHomogeneous_zero _ _ _
+
+/-- **The elimination certificates are homogeneous, over an arbitrary field.** -/
+theorem elimCertificates_isHomogeneous_of_geometric
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    {Δ : MvPolynomial (Fin 3) k}
+    (hΔ : Δ ∈ elimCertificates (cubicFiberJacobianFamily F) ![3, 2, 2, 2]) :
+    ∃ n : ℕ, Δ.IsHomogeneous n := by
+  obtain ⟨N, -, c, rfl⟩ := hΔ
+  exact ⟨2 * Fintype.card (monomsOfDeg (Fin 3) N),
+    isHomogeneous_det _ 2 fun μ ν => famMatrix_cubicFiber_isHomogeneous_of_geometric F hF N c μ ν⟩
+
 /-- Every entry of the elimination matrix of the cubic-fibre family is a quadratic form. -/
 theorem famMatrix_cubicFiber_isHomogeneous [Infinite k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (N : ℕ)
@@ -692,6 +819,55 @@ theorem exists_defining_set_nonsingular_cubicFiber_of_bidegree23 [IsAlgClosed k]
     · obtain ⟨i, hi⟩ := hns r hr hG
       exact ⟨i.succ, by rw [hsucc i]; exact hi⟩
     · exact ⟨0, by rw [h0]; exact hG⟩
+
+/-- **Geometric form: the cubic fibres that are singular over an algebraically closed extension
+are cut out by the same certificates.**
+
+The certificates are unchanged — they are the maximal minors of the same matrix over
+`MvPolynomial (Fin 3) k` — and the parameter `x` still ranges over `k`.  Only the singular points
+move to `L`, which is what makes the equivalence true over a base field that is not closed. -/
+theorem exists_defining_set_nonsingular_cubicFiber_of_bidegree23_of_geometric
+    {L : Type*} [Field L] [IsAlgClosed L] [Algebra k L]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) :
+    ∃ S : Set (MvPolynomial (Fin 3) k), (∀ Δ ∈ S, ∃ n : ℕ, Δ.IsHomogeneous n) ∧
+      ∀ x : Fin 3 → k,
+      ((∃ Δ ∈ S, eval x Δ ≠ 0) ↔
+        ∀ r : Fin 3 → L, r ≠ 0 →
+          eval r (map (algebraMap k L) (specializeFirstCoordinates (n := 2) x F)) = 0 →
+            ∃ i : Fin 3,
+              eval r (pderiv i
+                (map (algebraMap k L) (specializeFirstCoordinates (n := 2) x F))) ≠ 0) := by
+  have hS := elimCertificates_spec_of_geometric (k := k) (L := L)
+    (cubicFiberJacobianFamily F) ![3, 2, 2, 2] (cubicFiberJacobianFamily_isHomogeneous hF)
+  refine ⟨elimCertificates (cubicFiberJacobianFamily F) ![3, 2, 2, 2],
+    fun Δ hΔ => elimCertificates_isHomogeneous_of_geometric F hF hΔ, fun x => ?_⟩
+  obtain ⟨h0, hsucc⟩ := map_eval_cubicFiberJacobianFamily F x
+  have hcomp : ∀ j : Fin 4,
+      map ((algebraMap k L).comp (eval x)) (cubicFiberJacobianFamily F j) =
+        map (algebraMap k L) (map (eval x) (cubicFiberJacobianFamily F j)) :=
+    fun j => (map_map (eval x) (algebraMap k L) (cubicFiberJacobianFamily F j)).symm
+  have h0' : map ((algebraMap k L).comp (eval x)) (cubicFiberJacobianFamily F 0) =
+      map (algebraMap k L) (specializeFirstCoordinates (n := 2) x F) := by
+    rw [hcomp 0, h0]
+  have hsucc' : ∀ i : Fin 3,
+      map ((algebraMap k L).comp (eval x)) (cubicFiberJacobianFamily F i.succ) =
+        pderiv i (map (algebraMap k L) (specializeFirstCoordinates (n := 2) x F)) := by
+    intro i
+    rw [hcomp i.succ, hsucc i, pderiv_map]
+  rw [hS (eval x)]
+  constructor
+  · intro hall r hr hG
+    obtain ⟨j, hj⟩ := hall r hr
+    revert hj
+    refine Fin.cases (fun hj0 => ?_) (fun i hji => ?_) j
+    · rw [h0'] at hj0
+      exact absurd hG hj0
+    · exact ⟨i, by rwa [hsucc' i] at hji⟩
+  · intro hns r hr
+    by_cases hG : eval r (map (algebraMap k L) (specializeFirstCoordinates (n := 2) x F)) = 0
+    · obtain ⟨i, hi⟩ := hns r hr hG
+      exact ⟨i.succ, by rw [hsucc' i]; exact hi⟩
+    · exact ⟨0, by rw [h0']; exact hG⟩
 
 end CubicFibre
 
