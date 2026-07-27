@@ -1,7 +1,12 @@
 # Formalization status
 
-Current as of 26 July 2026. This file is the authoritative Lean status; it supersedes older
+Current as of 27 July 2026. This file is the authoritative Lean status; it supersedes older
 progress notes and historical blocker lists.
+
+Build state on branch `agent/weaken-hypotheses`, 27 July 2026: `lake build` green at **3317 jobs**,
+`lake build Statement Solution` green at **8866 jobs**, every audited endpoint at
+`[propext, Classical.choice, Quot.sound]`, project-module `sorry` census **2**
+(`ResidualHorizontalityLine:300`, `Standard/GenericSmoothness:171`, neither on the headline path).
 
 ## Headline: fully proved
 
@@ -47,6 +52,28 @@ instances of `NeZeroTwoThree.lean`.
 
 It is proved in `BConicBundleMultisections/MainTheorem.lean`. The existential wrapper
 `smooth_bidegree23_isUnirationalOver` is proved as well.
+
+**`[IsAlgClosed k]` is no longer part of the mathematics.** As of 27 July 2026 the headline above is
+a *corollary* of a theorem in the same file that assumes no algebraic closure at all:
+
+```lean
+theorem smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection
+    (k : Type u) [Field k] [PerfectField k] [NeZero (2 : k)] [NeZero (3 : k)]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (Bidegree23ZeroLocus.toSpec k F)]
+    (hline : ∃ (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+      (v : Fin 3 → Polynomial k), Standard.HasActualG3G4LineSection F p q r N v) :
+    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F)
+```
+
+`Standard.HasActualG3G4LineSection F p q r N v` unfolds to exactly the good-line/Tsen-section
+package: `lineFrame p q r * N = 1`, G3 (`ResidualLineNonconstantOn`), `HasNondegenerateLineStereoSection`
+(`v ≠ 0`, isotropic, `v 2 ≠ 0`, nonvanishing stereographic polar form), and G4
+(`ResidualAvoidsConicDiscriminantOn`). Nothing else is assumed of `k` beyond perfectness and
+char ∤ 6. The headline is recovered by supplying `hline` from
+`Standard.exists_actualG3G4LineSection_via_frameIncidence`, which is where — and now only where —
+`[IsAlgClosed k]` is used. See "The closure-free theorem" below.
 
 The direct audit reports:
 
@@ -130,10 +157,13 @@ The proof no longer tries to prove that one hardcoded coordinate line is good. I
    compatibility into global regular functions on the integral projective target curve. Proper
    integral global functions are constant, and the negative-twist argument forces the residual
    relation coefficients to vanish.
-5. `hasUnirationalParametrization3_biprojectiveZeroLocus` assembles the actual G3/G4 line,
-   projective integrality, and automatic gluing into the residual-component/unirational-tower
-   construction. `MainTheorem.smooth_bidegree23_hasUnirationalParametrization` is definitionally
-   the same raw biprojective statement and delegates to this endpoint.
+5. `hasUnirationalParametrization3_biprojectiveZeroLocus_of_actualG3G4LineSection` assembles a
+   given G3/G4 line, projective integrality, and automatic gluing into the
+   residual-component/unirational-tower construction, over an arbitrary perfect field of
+   char ∤ 6. `hasUnirationalParametrization3_biprojectiveZeroLocus` is its specialization: step 1
+   supplies the line, and that is the sole use of `[IsAlgClosed k]`.
+   `MainTheorem.smooth_bidegree23_hasUnirationalParametrization` is definitionally the same raw
+   biprojective statement and delegates to this endpoint.
 
 The main assembly lives in:
 
@@ -144,6 +174,8 @@ The main assembly lives in:
 | Intrinsic chart transition | `ProjectiveHypersurfaceChartTransition.lean` and `ResidualTargetNegativeTwistChartEquationTransport.lean` |
 | Residual factor transition | `ResidualTargetNegativeTwistFactorTransition.lean` / `residualTargetNegativeTwistFactor_coeff_intrinsic_transition` |
 | Automatic gluing | `ResidualTargetNegativeTwistAutomaticGluing.lean` / `targetRelationsResidualNegativeTwistGluingAwayDiscriminantOn` |
+| Closure-free assembly | `MainTheoremTargetReduction.lean` / `hasUnirationalParametrization3_biprojectiveZeroLocus_of_actualG3G4LineSection` |
+| Closure-free public theorem | `MainTheorem.lean` / `smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection` |
 | Final clean reduction | `MainTheoremTargetReduction.lean` / `hasUnirationalParametrization3_biprojectiveZeroLocus` |
 | Exact public theorem | `MainTheorem.lean` / `smooth_bidegree23_hasUnirationalParametrization` |
 
@@ -494,9 +526,59 @@ dishonest move recorded at the end of this section.
   `StereoJacobian.eval_eq_zero_of_free_polar_root` and
   `PointedConicRationalFamilies.exists_chartQuotient_openImmersion`.
 
-**What is not done.** The 103 non-minimal declarations have not been rethreaded, so the core
-endpoint still carries `[IsAlgClosed k]` and no closure-free theorem exists yet. The work is
-bounded and mapped, but it is a sweep of about a hundred proofs, not a threading pass.
+**What is not done.** ~~The 103 non-minimal declarations have not been rethreaded, so the core
+endpoint still carries `[IsAlgClosed k]` and no closure-free theorem exists yet.~~ **Superseded by
+the next subsection: the core endpoint is closure-free and the closure-free theorem exists.**
+
+### The closure-free theorem — 27 July 2026
+
+The projected inventory at the end of the previous subsection is now realised exactly, with no
+extra item. The remaining two binders were on the two *producers*, and both were shed:
+
+| producer | before | after |
+| --- | --- | --- |
+| `targetRelationsProjectivelyIntegralAwayDiscriminant_of_smooth` (`TargetRelationTotalSpaceIntegral:673`) | `[Field k] [IsAlgClosed k] [NeZero 2] [NeZero 3]` | `[Field k] [NeZero 2] [NeZero 3]` |
+| `targetRelationsResidualNegativeTwistGluingAwayDiscriminantOn` (`ResidualTargetNegativeTwistAutomaticGluing:159`) | `[Field k] [IsAlgClosed k]` | `[Field k]` |
+
+Neither needed a proof change. By the time the preceding passes had finished — retained-chart
+domain theorems in `TargetRelationChartDomain` (never carried closure), the smooth-nonvanishing
+lemma `affineChartEquationOverTargetRelationBase_ne_zero_of_smooth_irreducible` and the
+cancellation lemma `factor_over_targetRelationBase_unique_of_smooth_irreducible`
+(`ResidualTargetNegativeTwistQuotientUniqueness`, both already `[Field k]`), and the intrinsic
+transition transport — the `[IsAlgClosed k]` binders on the whole intermediate layer were
+**vestigial**: they had been attached by `variable` lines and by copy-forward, and no proof in
+`ResidualTargetNegativeTwistFactorTransition`, `ResidualTargetNegativeTwistAutomaticGluing` or
+`TargetRelationTotalSpaceIntegral` consumed them. A vestigial `[Infinite k]` on
+`residualTargetNegativeTwistFactor_coeff_intrinsic_transition` went the same way. Both producers
+were then instantiated over `ℚ` as a check that this is not an instance-resolution artefact.
+
+In particular, the descent worry recorded in the hazards — *geometrically* integral ⟹ integral,
+so integrality would have to be proved over `k̄` and descended — never had to be paid. The
+retained-chart cover is built from explicit affine quotients whose primality
+(`isPrime_twoEquationAffineChartIdeal_targetRelation`) is proved over the given field directly;
+the closure binder above it was decoration.
+
+The assembly:
+
+| endpoint | module | binders |
+| --- | --- | --- |
+| `hasUnirationalParametrization3_biprojectiveZeroLocus_of_negativeTwistTargetGeometry` | `ResidualTargetRelationGeometryNegativeTwist` | `[Field] [PerfectField] [NeZero 2] [NeZero 3]` |
+| `hasUnirationalParametrization3_biprojectiveZeroLocus_of_actualG3G4LineSection` | `MainTheoremTargetReduction` | same |
+| `hasUnirationalParametrization3_biprojectiveZeroLocus_of_exists_actualG3G4LineSection` | `MainTheoremTargetReduction` | same |
+| `smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection` | `MainTheorem` | same |
+| `hasUnirationalParametrization3_biprojectiveZeroLocus` | `MainTheoremTargetReduction` | `[IsAlgClosed]`, now re-derived from the row above |
+| `smooth_bidegree23_hasUnirationalParametrization` | `MainTheorem` | unchanged, byte-identical |
+
+`[PerfectField k]` did **not** spread. It was already on the core endpoint and it stays exactly
+where the previous subsection put it: one root,
+`JacobianCriterionCharFree.eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField`, reached
+through `ResidualComponentExhaustion.isDominant_residualTargetPointOn_toFirst_of_smooth`, where
+`p`-th roots of coefficients are taken. It is free in characteristic zero and for finite fields,
+and `IsAlgClosed` supplies it by instance, which is why the headline is unaffected.
+
+`MainTheoremGuard.lean` gained three `#guard_no_sorry` lines and nothing else; the headline
+statement guard and every existing guard are untouched. The two axiom-audit files gained entries
+for the new endpoints. All of them print `[propext, Classical.choice, Quot.sound]`.
 
 ### The core/corollary split over `IsAlgClosed` — the earlier, import-closure measurement
 
