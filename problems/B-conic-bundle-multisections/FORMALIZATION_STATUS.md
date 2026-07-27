@@ -200,18 +200,39 @@ The single *essential* use — the Euler step in the Jacobian criterion, which n
 unbounded `d` — was removed first: `JacobianCriterionCharFree.lean` proves the same criterion from
 `[PerfectField k]`, which `IsAlgClosed` supplies by instance.
 
-Three statements on the headline path are genuinely false in positive characteristic, so the
-headline hypotheses stay at `CharZero`:
+Three statements on the headline path were genuinely false in positive characteristic. **One of the
+three has since been repaired by specialisation**; the other two are separability obstructions and
+stand, so the headline hypotheses stay at `CharZero`:
 
 1. `FirstProjectionSmoothFiber.exists_algebraicClosure_coordinateDerivation` extends `∂/∂xᵢ` to
    `AlgebraicClosure (Frac k[x])` via formal étaleness. In char `p` no such extension exists:
    `yᵖ = x₀` forces `D x₀ = p·y^(p−1)·D y = 0`. This is algebraic Sard. The *statement* is
    plausible for char ∤ 6 — quasi-elliptic fibrations exist only in char 2 and 3 — but this proof
    caps at char 0 and repairing it is research-sized, not a threading job.
-2. `StereoJacobian.exists_C_mul_of_wronskian_eq_zero` (`f'g = g'f → f = c·g`) is flatly false in
-   char `p`: take `f = Xᵖ`, `g = 1`.
+2. ~~`StereoJacobian.exists_C_mul_of_wronskian_eq_zero`~~ — **repaired.** The lemma
+   (`f'g = g'f → f = c·g`) really is false in char `p` (`f = Xᵖ`, `g = 1`), but the generality is
+   what forced char 0: its only consumer applies it to the pure-`t` coefficients of the generic
+   conic along `L = {Y₂ = 0}`, and those are cubics in `t`
+   (`natDegree_ternaryQuadraticCoeff_coordinateLineSpecializedConicPoly_le`, proved from
+   bidegree `(2,3)` via `natDegree_coeff_specializeSecondCoordinates_map_C_le`). At degree `≤ 3` the
+   obstruction disappears for char `≥ 5`, which char ∤ 6 supplies. `[CharZero k]` is replaced by
+   `∀ N, 0 < N → N ≤ max f.natDegree g.natDegree → (N : k) ≠ 0` — exactly what the proof consumes,
+   through `natCast_natDegree_eq_zero_of_derivative_eq_zero`. `polarEval_stereo_pderiv_t_ne_zero`,
+   `stereoJacobianDet_ne_zero_of_smooth` and the two arbitrary-line audit theorems in
+   `ResidualHorizontalityLineAudit.lean` moved to `[NeZero (2 : k)] [NeZero (3 : k)]` with it.
+   Generic smoothness (item 1) is now the *only* `CharZero` in that chain.
 3. `GenericCubicNondegeneracy.finiteExtensionCoordinateDifferential` extends a differential along a
-   finite field extension — the same separability obstruction.
+   finite field extension — the same separability obstruction, and it does **not** yield to the
+   move that fixed item 2. It quantifies over an arbitrary finite extension `L` of `k(X_σ)`, and
+   every field of characteristic `p` has purely inseparable ones: for `L = K(X_i^{1/p})`, writing
+   `X_i = uᵖ` gives `D(X_i) = p·u^(p−1)·D u = 0` for *any* derivation of `L`, while
+   `finiteExtension_deriv_algebraMap` asserts `D(X_i) = pderiv i X_i = 1`. So the accompanying
+   theorems are false, not merely unproved. There is no degree bound to exploit: the offending
+   extension has degree exactly `p`, so it exists precisely in the range char ∤ 6 permits.
+   Mathlib is gated the same way — the whole section containing
+   `Differential.differentialFiniteDimensional` carries `[CharZero F]` — so even adding
+   `[Algebra.IsSeparable K L]` would not make the construction available without new Mathlib-side
+   work. These three declarations are currently consumed by nothing.
 
 Two modules looked worse than char ∤ 6 and were not:
 
