@@ -1,0 +1,6 @@
+import BConicBundleMultisections.ResidualTargetNegativeTwistConsumer
+
+open BConicBundleMultisections.BiprojectiveSpace
+
+#print axioms residualLineConstantOn_of_targetRelation_chart_zero
+#print axioms exists_targetRelation_chart_ne_zero_of_residualLineNonconstantOn

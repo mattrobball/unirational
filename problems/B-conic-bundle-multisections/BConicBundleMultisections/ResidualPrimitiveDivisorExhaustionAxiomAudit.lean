@@ -1,0 +1,8 @@
+module
+
+public import BConicBundleMultisections.ResidualPrimitiveDivisorExhaustion
+
+/-! Axiom audit for the conditional primitive-divisor exhaustion endpoint. -/
+
+#print axioms BConicBundleMultisections.eq_zero_of_aeval_residualYCoordsOn_of_primitiveDivisorExhausted
+#print axioms BConicBundleMultisections.eq_zero_of_aeval_residualYCoordsOn_of_sourceFaithfulGoodLine

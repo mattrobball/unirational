@@ -1,0 +1,14 @@
+module
+
+public import BConicBundleMultisections.ResidualPrimitiveDivisorConsumer
+
+/-! Axiom audit for the source-faithful arbitrary-line residual-component consumer. -/
+
+#print axioms
+  BConicBundleMultisections.residualYCoordsOn_ne_zero_of_sourceFaithfulGoodLine
+#print axioms
+  BConicBundleMultisections.isDominant_residualZeroLocusPointOn_toBase_of_sourceFaithfulGoodLine
+#print axioms
+  BConicBundleMultisections.isDominant_residualComponentOnToBase_of_sourceFaithfulGoodLine
+#print axioms
+  BConicBundleMultisections.exists_isDominant_residualComponentOnToBase_of_sourceFaithfulGoodLine

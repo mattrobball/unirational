@@ -1,0 +1,5 @@
+import BConicBundleMultisections.TargetRelationProjectivePullback
+
+#print axioms BConicBundleMultisections.BiprojectiveSpace.projectiveZeroLocusIdeal_comap_snd
+#print axioms BConicBundleMultisections.ker_inclusion_eq_comap
+#print axioms BConicBundleMultisections.targetRelation_projectiveZeroLocus_isPullback

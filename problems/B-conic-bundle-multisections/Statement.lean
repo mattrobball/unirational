@@ -469,6 +469,7 @@ abbrev Bidegree23ZeroLocus.toSpec (k : Type u) [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
     Bidegree23ZeroLocus k F ⟶ Spec (.of k) :=
   biprojectiveZeroLocusToSpec 2 2 k F
+
 /-- A dominant rational parametrization by relative affine space of fixed dimension. -/
 def HasUnirationalParametrization {S X : Scheme.{u}} (n : ℕ) (sX : X ⟶ S) : Prop :=
   ∃ f : 𝔸(ULift.{u} (Fin n); S) ⤏ X,

@@ -1,0 +1,6 @@
+import BConicBundleMultisections.GoodLineExistence
+
+#print axioms BConicBundleMultisections.exists_nonsingularCubicFiber_of_smooth_coordinate
+#print axioms BConicBundleMultisections.exists_nonsingularCubicFiber_of_smooth
+#print axioms BConicBundleMultisections.exists_ne_zero_isSmoothPlaneCubic_specializeFirstCoordinates
+#print axioms BConicBundleMultisections.exists_good_line

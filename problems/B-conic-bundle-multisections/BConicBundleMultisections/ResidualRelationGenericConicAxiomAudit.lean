@@ -1,0 +1,13 @@
+module
+
+public import BConicBundleMultisections.ResidualRelationGenericConic
+
+open BConicBundleMultisections
+
+#print axioms not_dvd_of_aeval_eq_zero_of_aeval_ne_zero
+#print axioms not_dvd_sndConicDiscriminant_of_residual_relation
+#print axioms exists_irreducible_homogeneous_residual_relation_not_dvd_discriminant
+#print axioms isPrime_span_singleton_of_irreducible
+#print axioms quotient_mk_ne_zero_of_irreducible_of_not_dvd
+#print axioms aeval_quotient_mk_X
+#print axioms sndConicAt_relationCone_fraction_nonsingular
