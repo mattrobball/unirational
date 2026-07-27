@@ -328,6 +328,108 @@ theorem exists_normalizedCoordinate_not_baseScalar
     · exact ⟨l, hli, hlscalar⟩
   · exact ⟨j, hji, hjscalar⟩
 
+/-! ## A transcendental affine coordinate
+
+Being a scalar is not the only obstruction the negative-twist argument can use: over a base field
+that is not algebraically closed, a global regular function need only be *integral* over `k`, and
+what kills the twisted section is a normalized coordinate that is not even algebraic over `k`.
+On a plane curve such a coordinate always exists, because a chart equation with both coordinates
+algebraic would have degree zero in both variables, hence be a constant. -/
+
+/-- A polynomial in a single multivariate variable has degree zero in every other variable. -/
+theorem degreeOf_aeval_X_of_ne {σ : Type*} {a b : σ} (hb : b ≠ a) (p : Polynomial k) :
+    MvPolynomial.degreeOf b (Polynomial.aeval (MvPolynomial.X a : MvPolynomial σ k) p) = 0 := by
+  induction p using Polynomial.induction_on' with
+  | add p q hp hq =>
+      rw [map_add]
+      exact Nat.le_zero.mp ((MvPolynomial.degreeOf_add_le _ _ _).trans (by simp [hp, hq]))
+  | monomial n c =>
+      rw [Polynomial.aeval_monomial]
+      refine Nat.le_zero.mp ((MvPolynomial.degreeOf_mul_le _ _ _).trans ?_)
+      rw [MvPolynomial.algebraMap_eq, MvPolynomial.degreeOf_C,
+        MvPolynomial.degreeOf_X_pow_of_ne n hb]
+
+/-- **An affine plane curve has a transcendental coordinate.**  If the equation `h` is a nonzero
+nonunit, then in `k[x,y]/(h)` at least one of the two coordinates fails to be integral over `k`.
+
+Otherwise `h` would divide a nonzero polynomial in `x` alone and a nonzero polynomial in `y`
+alone, hence would have degree zero in both variables, i.e. be a constant. -/
+theorem exists_not_isIntegral_quotient_mk_X
+    (h : MvPolynomial (Fin 2) k) (h0 : h ≠ 0) (hunit : ¬ IsUnit h) :
+    ∃ a : Fin 2, ¬ IsIntegral k
+      (Ideal.Quotient.mk (Ideal.span {h}) (MvPolynomial.X a)) := by
+  by_contra hcon
+  have hcon : ∀ a : Fin 2,
+      IsIntegral k (Ideal.Quotient.mk (Ideal.span {h}) (MvPolynomial.X a)) := by
+    intro a
+    by_contra ha
+    exact hcon ⟨a, ha⟩
+  have key : ∀ a b : Fin 2, b ≠ a → MvPolynomial.degreeOf b h = 0 := by
+    intro a b hb
+    obtain ⟨p, hpm, hpe⟩ := hcon a
+    rw [← Polynomial.aeval_def] at hpe
+    have hq0 : Polynomial.aeval (MvPolynomial.X a : MvPolynomial (Fin 2) k) p ≠ 0 := by
+      intro hzero
+      refine hpm.ne_zero ?_
+      have hret := congrArg
+        (MvPolynomial.aeval fun c : Fin 2 => if c = a then (Polynomial.X : Polynomial k) else 0)
+        hzero
+      rw [← Polynomial.aeval_algHom_apply] at hret
+      simpa using hret
+    have hmk : Ideal.Quotient.mk (Ideal.span {h})
+        (Polynomial.aeval (MvPolynomial.X a) p) = 0 := by
+      rw [← Ideal.Quotient.mkₐ_eq_mk k, ← Polynomial.aeval_algHom_apply]
+      simpa [Ideal.Quotient.mkₐ_eq_mk] using hpe
+    obtain ⟨g, hg⟩ := Ideal.mem_span_singleton.mp (Ideal.Quotient.eq_zero_iff_mem.mp hmk)
+    have hg0 : g ≠ 0 := by
+      rintro rfl
+      rw [mul_zero] at hg
+      exact hq0 hg
+    have hdeg := MvPolynomial.degreeOf_mul_eq (n := b) h0 hg0
+    rw [← hg, degreeOf_aeval_X_of_ne hb p] at hdeg
+    omega
+  have hvars : h.vars = ∅ := by
+    rw [Finset.eq_empty_iff_forall_notMem]
+    intro b hb
+    rw [MvPolynomial.mem_vars_iff_degreeOf_ne_zero] at hb
+    fin_cases b
+    · exact hb (key 1 0 (by decide))
+    · exact hb (key 0 1 (by decide))
+  have hC : h = MvPolynomial.C (MvPolynomial.coeff 0 h) :=
+    MvPolynomial.vars_eq_empty_iff_eq_C.mp hvars
+  have hc0 : MvPolynomial.coeff 0 h ≠ 0 := by
+    intro hzero
+    exact h0 (by rw [hC, hzero, map_zero])
+  exact hunit
+    (hC ▸ (isUnit_iff_ne_zero.mpr hc0).map (MvPolynomial.C : k →+* MvPolynomial (Fin 2) k))
+
+/-- **On a retained standard chart of an irreducible plane hypersurface, one of the two other
+normalized coordinates is transcendental over the base field.**  This strengthens
+`exists_normalizedCoordinate_not_baseScalar`, which only excludes scalars, and it is what
+replaces algebraic closedness of `k` in the negative-twist endpoint. -/
+theorem exists_normalizedCoordinate_not_isIntegralElem
+    (H : MvPolynomial (Fin 3) k) {d : ℕ}
+    (hH : H.IsHomogeneous d) (hHirr : Irreducible H)
+    (i : NonemptyHypersurfaceChart H) :
+    ∃ j : Fin 3, j ≠ i.1 ∧
+      ¬ (hypersurfaceBaseToFunctionField H hH hHirr i).IsIntegralElem
+        (hypersurfaceNormalizedCoordinateInFunctionField H hH hHirr i j) := by
+  letI : IsDomain (HypersurfaceChartQuotient H i.1) :=
+    isDomain_chartDehomogenization_quotient_of_irreducible
+      i.1 H hH hHirr i.2
+  have hirr : Irreducible (chartDehomogenization 2 k i.1 H) :=
+    (irreducible_or_isUnit_chartDehomogenization i.1 H hH hHirr).resolve_right i.2
+  obtain ⟨a, ha⟩ :=
+    exists_not_isIntegral_quotient_mk_X (chartDehomogenization 2 k i.1 H) hirr.ne_zero i.2
+  refine ⟨i.1.succAbove a, Fin.succAbove_ne i.1 a, fun hint => ha ?_⟩
+  have hint' : IsIntegral k
+      (hypersurfaceNormalizedCoordinateInFunctionField H hH hHirr i (i.1.succAbove a)) := hint
+  rw [hypersurfaceNormalizedCoordinateInFunctionField_eq_algebraMap,
+    chartDehomogenization_X_succAbove] at hint'
+  exact IsIntegral.tower_bot
+    (IsFractionRing.injective (HypersurfaceChartQuotient H i.1)
+      (HypersurfaceFunctionField H i)) hint'
+
 /-! ## The field-level negative-twist contradiction -/
 
 /-- A chart-function-field element is a scalar if it lies in the image of the named base map. -/
@@ -511,13 +613,20 @@ def QuadraticMultiplesExtendToGlobal
         comparison.toFunctionField t =
           hypersurfaceNormalizedCoordinateInFunctionField H hH hHirr i j * s
 
+-- `hd` is no longer used by the proof (positivity of the degree follows from irreducibility of
+-- `H`), but the hypothesis is kept so that the statement and its call sites are unchanged.
+set_option linter.unusedVariables false in
 /-- Faithful negative-twist endpoint on the irreducible projective curve.
 
 Once the explicit comparison and the global extension of the quadratic multiples are supplied,
-properness makes all those global functions scalar.  A nonscalar normalized coordinate then
-forces `s = 0` in the curve's function field. -/
+properness makes all those global functions integral over the base field.  A normalized
+coordinate transcendental over the base field then forces `s = 0` in the curve's function field:
+if `s ≠ 0`, that coordinate would be the quotient of two elements algebraic over `k`.
+
+**No algebraic closedness of `k` is used.**  Properness alone gives integrality, and the
+transcendental coordinate provided by `exists_normalizedCoordinate_not_isIntegralElem` replaces
+the scalarity of global functions that algebraic closure used to supply. -/
 theorem hypersurfaceFunctionField_eq_zero_of_quadraticMultiples_extendToGlobal
-    [IsAlgClosed k]
     (H : MvPolynomial (Fin 3) k) {d : ℕ}
     (hH : H.IsHomogeneous d) (hd : 0 < d) (hHirr : Irreducible H)
     (i : NonemptyHypersurfaceChart H)
@@ -526,23 +635,37 @@ theorem hypersurfaceFunctionField_eq_zero_of_quadraticMultiples_extendToGlobal
     (s : HypersurfaceFunctionField H i)
     (hext : QuadraticMultiplesExtendToGlobal H hH hHirr i comparison s) :
     s = 0 := by
-  letI : IsIntegral (projectiveZeroLocus 2 k H) :=
-    isIntegral_projectiveZeroLocus_of_irreducible H hH hd hHirr
-  apply hypersurfaceFunctionField_eq_zero_of_all_quadraticMultiples_scalar
-    H hH hd hHirr i s
-  · obtain ⟨t, ht⟩ := hext.1
-    obtain ⟨c, hc⟩ :=
-      exists_scalar_eq_projectiveZeroLocus_globalSection H hH hd hHirr t
-    refine ⟨c, ?_⟩
-    rw [← ht, ← hc]
-    exact comparison.map_base c
-  · intro j hji
-    obtain ⟨t, ht⟩ := hext.2 j hji
-    obtain ⟨c, hc⟩ :=
-      exists_scalar_eq_projectiveZeroLocus_globalSection H hH hd hHirr t
-    refine ⟨c, ?_⟩
-    rw [← ht, ← hc]
-    exact comparison.map_base c
+  letI : IsDomain (HypersurfaceChartQuotient H i.1) :=
+    isDomain_chartDehomogenization_quotient_of_irreducible
+      i.1 H hH hHirr i.2
+  have hint : ∀ t : Γ(projectiveZeroLocus 2 k H, ⊤),
+      IsIntegral k (comparison.toFunctionField t) := by
+    intro t
+    obtain ⟨p, hpm, hpe⟩ :=
+      isIntegral_globalSectionsMapFromBase k (projectiveZeroLocusToSpec H) t
+    refine ⟨p, hpm, ?_⟩
+    have hmap := congrArg comparison.toFunctionField hpe
+    rw [Polynomial.hom_eval₂, map_zero,
+      show comparison.toFunctionField.comp
+            (globalSectionsMapFromBase k (projectiveZeroLocusToSpec H)) =
+          algebraMap k (HypersurfaceFunctionField H i) from
+        RingHom.ext comparison.map_base] at hmap
+    exact hmap
+  obtain ⟨j, hji, hj⟩ := exists_normalizedCoordinate_not_isIntegralElem H hH hHirr i
+  by_contra hs0
+  apply hj
+  obtain ⟨t₁, ht₁⟩ := hext.1
+  obtain ⟨t₂, ht₂⟩ := hext.2 j hji
+  have h1 : IsIntegral k s := ht₁ ▸ hint t₁
+  have h2 : IsIntegral k
+      (hypersurfaceNormalizedCoordinateInFunctionField H hH hHirr i j * s) := ht₂ ▸ hint t₂
+  have hquot : hypersurfaceNormalizedCoordinateInFunctionField H hH hHirr i j =
+      (hypersurfaceNormalizedCoordinateInFunctionField H hH hHirr i j * s) * s⁻¹ := by
+    rw [mul_assoc, mul_inv_cancel₀ hs0, mul_one]
+  change IsIntegral k (hypersurfaceNormalizedCoordinateInFunctionField H hH hHirr i j)
+  rw [hquot]
+  exact mem_algebraicClosure_iff'.1
+    (mul_mem (mem_algebraicClosure_iff'.2 h2) (inv_mem (mem_algebraicClosure_iff'.2 h1)))
 
 /-- **The negative-twist endpoint without `[IsAlgClosed k]`.**
 
@@ -583,9 +706,9 @@ theorem hypersurfaceFunctionField_eq_zero_of_quadraticMultiples_extendToGlobal_o
     exact comparison.map_base c
 
 /-- Invariant negative-twist vanishing theorem.  If all homogeneous quadratic multiples of `s`
-extend globally, then `s` vanishes in the function field of the projective curve. -/
+extend globally, then `s` vanishes in the function field of the projective curve.  Like the
+theorem it specializes, this needs no algebraic closedness of the base field. -/
 theorem hypersurfaceFunctionField_eq_zero_of_homogeneousQuadraticMultiples_extendToGlobal
-    [IsAlgClosed k]
     (H : MvPolynomial (Fin 3) k) {d : ℕ}
     (hH : H.IsHomogeneous d) (hd : 0 < d) (hHirr : Irreducible H)
     (i : NonemptyHypersurfaceChart H)

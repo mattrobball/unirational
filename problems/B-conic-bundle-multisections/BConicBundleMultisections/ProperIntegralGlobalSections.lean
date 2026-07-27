@@ -53,20 +53,25 @@ def globalSectionsMapFromBase
     k →+* Γ(X, ⊤) :=
   ((Scheme.ΓSpecIso (.of k)).inv ≫ f.appTop).hom
 
+/-- **Global regular functions on a scheme universally closed over `k` are integral over `k`.**
+This is the only thing the arguments below take from properness. -/
+theorem isIntegral_globalSectionsMapFromBase
+    (k : Type u) [Field k] {X : Scheme.{u}}
+    (f : X ⟶ Spec (.of k)) [UniversallyClosed f] :
+    (globalSectionsMapFromBase k f).IsIntegral := by
+  apply RingHom.isIntegral_respectsIso.2
+    (e := (Scheme.ΓSpecIso (.of k)).symm.commRingCatIsoToRingEquiv)
+  exact isIntegral_appTop_of_universallyClosed f
+
 /-- Every global function on an integral scheme universally closed over an algebraically closed
 field comes from a unique scalar in the base field. -/
 theorem globalSectionsMapFromBase_bijective_of_isIntegral_of_universallyClosed
     (k : Type u) [Field k] [IsAlgClosed k] {X : Scheme.{u}}
     (f : X ⟶ Spec (.of k)) [IsIntegral X] [UniversallyClosed f] :
     Function.Bijective (globalSectionsMapFromBase k f) := by
-  let F := (Scheme.ΓSpecIso (.of k)).inv ≫ f.appTop
-  have hFint : F.hom.IsIntegral := by
-    apply RingHom.isIntegral_respectsIso.2
-      (e := (Scheme.ΓSpecIso (.of k)).symm.commRingCatIsoToRingEquiv)
-    exact isIntegral_appTop_of_universallyClosed f
   letI : IsField Γ(X, ⊤) := isField_of_universallyClosed k f
-  change Function.Bijective F.hom
-  exact IsAlgClosed.ringHom_bijective_of_isIntegral F.hom hFint
+  exact IsAlgClosed.ringHom_bijective_of_isIntegral (globalSectionsMapFromBase k f)
+    (isIntegral_globalSectionsMapFromBase k f)
 
 /-- Surjective form: every global regular function is a scalar. -/
 theorem exists_scalar_eq_globalSection_of_isIntegral_of_universallyClosed
@@ -89,12 +94,9 @@ theorem globalSectionsMapFromBase_bijective_of_isIntegral_of_universallyClosed_o
     {L : Type*} [Field L] [Algebra k L] (hL : algebraicClosure k L = ⊥)
     (g : Γ(X, ⊤) →+* L) (hg : Function.Injective g)
     (hgf : g.comp (globalSectionsMapFromBase k f) = algebraMap k L) :
-    Function.Bijective (globalSectionsMapFromBase k f) := by
-  have hFint : (globalSectionsMapFromBase k f).IsIntegral := by
-    apply RingHom.isIntegral_respectsIso.2
-      (e := (Scheme.ΓSpecIso (.of k)).symm.commRingCatIsoToRingEquiv)
-    exact isIntegral_appTop_of_universallyClosed f
-  exact ringHom_bijective_of_isIntegral_of_injective hL _ hFint g hg hgf
+    Function.Bijective (globalSectionsMapFromBase k f) :=
+  ringHom_bijective_of_isIntegral_of_injective hL _
+    (isIntegral_globalSectionsMapFromBase k f) g hg hgf
 
 /-- Surjective form of the `IsAlgClosed`-free statement. -/
 theorem exists_scalar_eq_globalSection_of_isIntegral_of_universallyClosed_of_embedding
