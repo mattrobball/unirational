@@ -439,6 +439,26 @@ theorem exists_scalar_eq_projectiveZeroLocus_globalSection
   exact exists_scalar_eq_globalSection_of_isIntegral_of_universallyClosed
     k (projectiveZeroLocusToSpec H) t
 
+/-- **The same, without `[IsAlgClosed k]`.**
+
+Properness makes the global sections integral over `k`; all that is then needed is that `k` is
+relatively algebraically closed *in* them, and any `k`-compatible embedding of `Γ(V(H), 𝒪)` into
+a field `L` with `algebraicClosure k L = ⊥` supplies that.  For a plane curve dominated by
+`𝔸²_k` one takes `L = k(t,s)`. -/
+theorem exists_scalar_eq_projectiveZeroLocus_globalSection_of_embedding
+    (H : MvPolynomial (Fin 3) k) {d : ℕ}
+    (hH : H.IsHomogeneous d) (hd : 0 < d) (hHirr : Irreducible H)
+    {L : Type*} [Field L] [Algebra k L] (hL : algebraicClosure k L = ⊥)
+    (g : Γ(projectiveZeroLocus 2 k H, ⊤) →+* L) (hg : Function.Injective g)
+    (hgf : g.comp (globalSectionsMapFromBase k (projectiveZeroLocusToSpec H))
+      = algebraMap k L)
+    (t : Γ(projectiveZeroLocus 2 k H, ⊤)) :
+    ∃ c : k, globalSectionsMapFromBase k (projectiveZeroLocusToSpec H) c = t := by
+  letI : IsIntegral (projectiveZeroLocus 2 k H) :=
+    isIntegral_projectiveZeroLocus_of_irreducible H hH hd hHirr
+  exact exists_scalar_eq_globalSection_of_isIntegral_of_universallyClosed_of_embedding
+    k (projectiveZeroLocusToSpec H) hL g hg hgf t
+
 /-- The minimal comparison datum between global sections of the projective model and the
 explicit chart presentation of its function field.
 
@@ -524,6 +544,44 @@ theorem hypersurfaceFunctionField_eq_zero_of_quadraticMultiples_extendToGlobal
     rw [← ht, ← hc]
     exact comparison.map_base c
 
+/-- **The negative-twist endpoint without `[IsAlgClosed k]`.**
+
+Only one step of the argument ever used algebraic closure: turning a global regular function into
+a scalar.  A `k`-compatible embedding of the global sections into a field where `k` is relatively
+algebraically closed does the same job, so the whole endpoint survives verbatim. -/
+theorem hypersurfaceFunctionField_eq_zero_of_quadraticMultiples_extendToGlobal_of_embedding
+    (H : MvPolynomial (Fin 3) k) {d : ℕ}
+    (hH : H.IsHomogeneous d) (hd : 0 < d) (hHirr : Irreducible H)
+    (i : NonemptyHypersurfaceChart H)
+    (comparison :
+      GlobalSectionsToHypersurfaceFunctionFieldComparison H hH hHirr i)
+    {L : Type*} [Field L] [Algebra k L] (hL : algebraicClosure k L = ⊥)
+    (g : Γ(projectiveZeroLocus 2 k H, ⊤) →+* L) (hg : Function.Injective g)
+    (hgf : g.comp (globalSectionsMapFromBase k (projectiveZeroLocusToSpec H))
+      = algebraMap k L)
+    (s : HypersurfaceFunctionField H i)
+    (hext : QuadraticMultiplesExtendToGlobal H hH hHirr i comparison s) :
+    s = 0 := by
+  letI : IsIntegral (projectiveZeroLocus 2 k H) :=
+    isIntegral_projectiveZeroLocus_of_irreducible H hH hd hHirr
+  apply hypersurfaceFunctionField_eq_zero_of_all_quadraticMultiples_scalar
+    H hH hd hHirr i s
+  · obtain ⟨t, ht⟩ := hext.1
+    obtain ⟨c, hc⟩ :=
+      exists_scalar_eq_projectiveZeroLocus_globalSection_of_embedding
+        H hH hd hHirr hL g hg hgf t
+    refine ⟨c, ?_⟩
+    rw [← ht, ← hc]
+    exact comparison.map_base c
+  · intro j hji
+    obtain ⟨t, ht⟩ := hext.2 j hji
+    obtain ⟨c, hc⟩ :=
+      exists_scalar_eq_projectiveZeroLocus_globalSection_of_embedding
+        H hH hd hHirr hL g hg hgf t
+    refine ⟨c, ?_⟩
+    rw [← ht, ← hc]
+    exact comparison.map_base c
+
 /-- Invariant negative-twist vanishing theorem.  If all homogeneous quadratic multiples of `s`
 extend globally, then `s` vanishes in the function field of the projective curve. -/
 theorem hypersurfaceFunctionField_eq_zero_of_homogeneousQuadraticMultiples_extendToGlobal
@@ -539,6 +597,40 @@ theorem hypersurfaceFunctionField_eq_zero_of_homogeneousQuadraticMultiples_exten
     s = 0 := by
   apply hypersurfaceFunctionField_eq_zero_of_quadraticMultiples_extendToGlobal
     H hH hd hHirr i comparison s
+  constructor
+  · have hhom : (MvPolynomial.X i.1 ^ 2 : MvPolynomial (Fin 3) k).IsHomogeneous 2 := by
+      simpa using (MvPolynomial.isHomogeneous_X k i.1).pow 2
+    obtain ⟨t, ht⟩ := hext (MvPolynomial.X i.1 ^ 2) hhom
+    refine ⟨t, ?_⟩
+    simpa using ht
+  · intro j _hji
+    have hhom : (MvPolynomial.X i.1 * MvPolynomial.X j :
+        MvPolynomial (Fin 3) k).IsHomogeneous 2 := by
+      simpa using
+        (MvPolynomial.isHomogeneous_X k i.1).mul
+          (MvPolynomial.isHomogeneous_X k j)
+    obtain ⟨t, ht⟩ := hext (MvPolynomial.X i.1 * MvPolynomial.X j) hhom
+    refine ⟨t, ?_⟩
+    simpa using ht
+
+/-- The invariant negative-twist vanishing theorem without `[IsAlgClosed k]`. -/
+theorem
+    hypersurfaceFunctionField_eq_zero_of_homogeneousQuadraticMultiples_extendToGlobal_of_embedding
+    (H : MvPolynomial (Fin 3) k) {d : ℕ}
+    (hH : H.IsHomogeneous d) (hd : 0 < d) (hHirr : Irreducible H)
+    (i : NonemptyHypersurfaceChart H)
+    (comparison :
+      GlobalSectionsToHypersurfaceFunctionFieldComparison H hH hHirr i)
+    {L : Type*} [Field L] [Algebra k L] (hL : algebraicClosure k L = ⊥)
+    (g : Γ(projectiveZeroLocus 2 k H, ⊤) →+* L) (hg : Function.Injective g)
+    (hgf : g.comp (globalSectionsMapFromBase k (projectiveZeroLocusToSpec H))
+      = algebraMap k L)
+    (s : HypersurfaceFunctionField H i)
+    (hext :
+      HomogeneousQuadraticMultiplesExtendToGlobal H hH hHirr i comparison s) :
+    s = 0 := by
+  apply hypersurfaceFunctionField_eq_zero_of_quadraticMultiples_extendToGlobal_of_embedding
+    H hH hd hHirr i comparison hL g hg hgf s
   constructor
   · have hhom : (MvPolynomial.X i.1 ^ 2 : MvPolynomial (Fin 3) k).IsHomogeneous 2 := by
       simpa using (MvPolynomial.isHomogeneous_X k i.1).pow 2
