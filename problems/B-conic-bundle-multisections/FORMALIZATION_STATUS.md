@@ -207,11 +207,50 @@ Three statements on the headline path were genuinely false in positive character
 three has since been repaired by specialisation**; the other two are separability obstructions and
 stand, so the headline hypotheses stay at `CharZero`:
 
-1. `FirstProjectionSmoothFiber.exists_algebraicClosure_coordinateDerivation` extends `∂/∂xᵢ` to
-   `AlgebraicClosure (Frac k[x])` via formal étaleness. In char `p` no such extension exists:
-   `yᵖ = x₀` forces `D x₀ = p·y^(p−1)·D y = 0`. This is algebraic Sard. The *statement* is
-   plausible for char ∤ 6 — quasi-elliptic fibrations exist only in char 2 and 3 — but this proof
-   caps at char 0 and repairing it is research-sized, not a threading job.
+1. ~~`FirstProjectionSmoothFiber.exists_algebraicClosure_coordinateDerivation`~~ — **reduced to one
+   isolated lemma.** The derivation extension went through `Algebra.FormallyEtale.of_isSeparable`,
+   and `CharZero` was supplying exactly one thing: `Algebra.IsSeparable K (AlgebraicClosure K)`,
+   free in char 0 and false in char `p`. It is *not* the perfect closure that repairs this — a
+   perfect field of char `p` has **no nonzero derivations at all** (`D z = D((z^{1/p})^p) = 0`), so
+   passing there destroys the tool. It is the **separable** closure:
+   `Algebra.FormallyEtale K (SeparableClosure K)` holds with no characteristic hypothesis.
+   `exists_separable_coordinateDerivation` is now stated for an arbitrary separable extension and
+   carries none.
+
+   The entire remaining char-0 dependence of the project is therefore concentrated in
+   `FirstProjectionSmoothFiber.exists_separableClosure_singularPoint_of_cubic` — a self-contained
+   statement about plane cubics, referencing nothing else in the development: *a singular point of a
+   plane cubic can be taken separable over the base field.* Proved so far only in char 0, where it
+   is trivial.
+
+   For `p ≥ 5` the argument is known and written out in the module docstring. In char ∤ 3, Euler
+   gives `Z = V(∂₀G, ∂₁G, ∂₂G)`, cut by three conics; a point of `Z` has degree ≤ 4 over `K`, so its
+   inseparability degree `p^m` divides 4, and `p ≥ 5` forces `m = 0`. That `p^m ≤ 4` with `m ≥ 1`
+   needs `p ∈ {2,3}` is why quasi-elliptic fibrations live exactly there — the degree bound replaces
+   the classification in the only case needed.
+
+   Two corrections to earlier drafts of this argument, both recorded because they were load-bearing:
+
+   * **Separability, not rationality, is what is true.** An integral plane cubic over `K` need not
+     be *geometrically* integral — `G = N_{L/K}(ℓ)` with `[L:K] = 3` is three Galois-conjugate
+     lines with three conjugate singular points, none `K`-rational. The genus-1 uniqueness argument
+     applies only to geometrically integral curves. Degree ≤ 4 still gives separability at `p ≥ 5`,
+     which is all the derivation needs.
+   * **Two partials need not be coprime.** The triangle `G = y₀y₁y₂` has partials `y₁y₂, y₀y₂,
+     y₀y₁`, pairwise non-coprime, so naive Bézout does not apply. There the shared factors are two
+     non-associate `K`-lines and the point is their intersection, a single `K`-rational point. The
+     nontrivial-gcd branch (`G = y₀³`, `Z = V(y₀²)`) restricts a degree-≤2 form to a coordinate
+     line, whose root is separable for `p > 2`.
+
+   What blocks formalisation is a Mathlib gap, not the mathematics: there is no projective Bézout,
+   no determinant degree bound, and no lemma that a divisor of a homogeneous polynomial is
+   homogeneous. `PlaneCurveIntersectionArtinian.lean` documents the identical gap and supplies only
+   nonvanishing. Estimated 1000–1500 lines with `gcd`/factorisation bookkeeping in
+   `MvPolynomial (Fin 3) K`. One shortcut is known: the resultant of two conics
+   `q = a t² + b t + c`, `q' = a't² + b't + c'` over `K[y₁,y₂]` is explicitly the binary quartic
+   `(ac'−a'c)² − (ab'−a'b)(bc'−b'c)`, and "common root ⟹ it vanishes" is a `ring` identity after
+   splitting on `t = 0` — sidestepping Sylvester matrices and `Polynomial.resultant` entirely. Only
+   the nonvanishing direction still needs gcd theory.
 2. ~~`StereoJacobian.exists_C_mul_of_wronskian_eq_zero`~~ — **repaired.** The lemma
    (`f'g = g'f → f = c·g`) really is false in char `p` (`f = Xᵖ`, `g = 1`), but the generality is
    what forced char 0: its only consumer applies it to the pure-`t` coefficients of the generic
