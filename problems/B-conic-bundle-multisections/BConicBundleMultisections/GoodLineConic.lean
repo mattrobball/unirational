@@ -9,6 +9,7 @@ public import BConicBundleMultisections.GoodLineCondition
 public import BConicBundleMultisections.PlaneCubicResidualTransport
 public import BConicBundleMultisections.ResidualEquationLine
 public import BConicBundleMultisections.AlgebraicIndependenceJacobian
+public import BConicBundleMultisections.BiprojectiveSmoothBaseChange
 
 /-!
 # The conic discriminant along an arbitrary line
@@ -284,11 +285,24 @@ theorem polarEval_lineStereoDir_ne_zero_of_polarEval_ne_zero [Infinite k]
   · exact h (by simpa [Q] using h0)
   · exact h (by simpa [Q] using h1)
 
-variable [IsAlgClosed k]
-
 /-! ### Smoothness transport for an invertible line frame -/
 
-omit [IsAlgClosed k] in
+/-- Second-block linear substitution commutes with a change of coefficient ring. -/
+theorem secondBlockSubst_map
+    {R S : Type u} [CommRing R] [CommRing S] (φ : R →+* S)
+    (M : Matrix (Fin 3) (Fin 3) R)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) R) :
+    MvPolynomial.map φ (secondBlockSubst M F) = secondBlockSubst (M.map φ) (MvPolynomial.map φ F) := by
+  induction F using MvPolynomial.induction_on with
+  | C a => simp [secondBlockSubst]
+  | add P Q hP hQ => simp [map_add, hP, hQ]
+  | mul_X P z hP =>
+      cases z with
+      | inl i => simp [map_mul, hP]
+      | inr j =>
+          simp only [map_mul, hP, secondBlockSubst_X_inr, map_sum, map_C, map_X,
+            Matrix.map_apply]
+
 /-- Smoothness of a nonzero bihomogeneous hypersurface gives the global Cox-coordinate Jacobian
 condition: a common zero of the equation and all partials lies in one of the two irrelevant
 coordinate subspaces. -/
@@ -351,44 +365,57 @@ theorem smooth_secondBlockSubst_of_smooth
     Smooth (biprojectiveZeroLocusToSpec 2 2 k (secondBlockSubst M F)) := by
   classical
   have hFM : IsBidegree23 (secondBlockSubst M F) := isBidegree23_secondBlockSubst M hF
-  refine BiprojectiveSpace.smooth_biprojectiveZeroLocusToSpec_of_gradient
-    2 2 k (secondBlockSubst M F) hFM ?_
+  set φ : k →+* AlgebraicClosure k := algebraMap k (AlgebraicClosure k) with hφ
+  refine BiprojectiveSpace.smooth_biprojectiveZeroLocusToSpec_of_gradient_of_geometric
+    (L := AlgebraicClosure k) 2 2 k (secondBlockSubst M F) hFM ?_
   intro x y hzero hgrad
-  have hzeroF : eval (Sum.elim x (M *ᵥ y)) F = 0 := by
+  rw [secondBlockSubst_map φ M F] at hzero hgrad
+  set M' : Matrix (Fin 3) (Fin 3) (AlgebraicClosure k) := M.map φ with hM'
+  set N' : Matrix (Fin 3) (Fin 3) (AlgebraicClosure k) := N.map φ with hN'
+  have hMN' : M' * N' = 1 := by
+    rw [hM', hN', ← Matrix.map_mul, hMN]
+    ext a b
+    by_cases hab : a = b <;> simp [Matrix.one_apply, hab]
+  have hzeroF : eval (Sum.elim x (M' *ᵥ y)) (MvPolynomial.map φ F) = 0 := by
     rw [← eval_secondBlockSubst]
     exact hzero
-  have hxinl (i : Fin 3) : eval (Sum.elim x (M *ᵥ y)) (pderiv (.inl i) F) = 0 := by
+  have hxinl (i : Fin 3) :
+      eval (Sum.elim x (M' *ᵥ y)) (pderiv (.inl i) (MvPolynomial.map φ F)) = 0 := by
     have h := hgrad (.inl i)
     rw [pderiv_inl_secondBlockSubst, eval_secondBlockSubst] at h
     exact h
-  set w : Fin 3 → k := fun a => eval (Sum.elim x (M *ᵥ y)) (pderiv (.inr a) F)
-  have hMtw : Mᵀ *ᵥ w = 0 := by
+  set w : Fin 3 → AlgebraicClosure k :=
+    fun a => eval (Sum.elim x (M' *ᵥ y)) (pderiv (.inr a) (MvPolynomial.map φ F))
+  have hMtw : M'ᵀ *ᵥ w = 0 := by
     funext i
     have h := hgrad (.inr i)
     rw [pderiv_inr_secondBlockSubst, map_sum] at h
     simpa [Matrix.mulVec, dotProduct, w, eval_secondBlockSubst, mul_comm] using h
-  have htrans : Nᵀ * Mᵀ = 1 := by
-    rw [← Matrix.transpose_mul, hMN, Matrix.transpose_one]
+  have htrans : N'ᵀ * M'ᵀ = 1 := by
+    rw [← Matrix.transpose_mul, hMN', Matrix.transpose_one]
   have hw : w = 0 := by
-    have h := congrArg (fun v => Nᵀ *ᵥ v) hMtw
+    have h := congrArg (fun v => N'ᵀ *ᵥ v) hMtw
     rwa [Matrix.mulVec_mulVec, htrans, Matrix.one_mulVec, Matrix.mulVec_zero] at h
-  have hyinr (a : Fin 3) : eval (Sum.elim x (M *ᵥ y)) (pderiv (.inr a) F) = 0 := by
+  have hyinr (a : Fin 3) :
+      eval (Sum.elim x (M' *ᵥ y)) (pderiv (.inr a) (MvPolynomial.map φ F)) = 0 := by
     simpa [w] using congrFun hw a
   have hgradF : ∀ z : BiprojectiveCoordinate 2 2,
-      eval (Sum.elim x (M *ᵥ y)) (pderiv z F) = 0 := by
+      eval (Sum.elim x (M' *ᵥ y)) (pderiv z (MvPolynomial.map φ F)) = 0 := by
     rintro (i | a)
     · exact hxinl i
     · exact hyinr a
-  rcases gradient_condition_of_smooth F hF hF0 x (M *ᵥ y) hzeroF hgradF with hx | hMy
+  rcases BiprojectiveSpace.gradient_condition_of_smooth_of_geometric
+    (L := AlgebraicClosure k) 2 2 k F hF hF0 (by norm_num) (by norm_num)
+    x (M' *ᵥ y) hzeroF hgradF with hx | hMy
   · exact Or.inl hx
   · right
-    have hNM : N * M = 1 := mul_eq_one_comm.mp hMN
-    have h := congrArg (fun v => N *ᵥ v) hMy
+    have hNM : N' * M' = 1 := mul_eq_one_comm.mp hMN'
+    have h := congrArg (fun v => N' *ᵥ v) hMy
     rwa [Matrix.mulVec_mulVec, hNM, Matrix.one_mulVec, Matrix.mulVec_zero] at h
 
 /-- A nonzero arbitrary-line discriminant gives a polynomial Tsen section which is isotropic,
 lies off `{x₂ = 0}`, and is nondegenerate for the stereo pencil. -/
-theorem exists_isotropic_line_stereoNondegenerate_of_disc_ne_zero
+theorem exists_isotropic_line_stereoNondegenerate_of_disc_ne_zero [IsAlgClosed k]
     (p₀ q₀ : Fin 3 → k)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (hdisc : lineConicDiscriminant p₀ q₀ F ≠ 0) :
@@ -449,7 +476,7 @@ theorem lineConicDiscriminant_ne_zero_of_smooth
 
 /-- The chosen arbitrary-line Tsen section, with all stereo nondegeneracy properties, follows
 unconditionally from smoothness of the total hypersurface and invertibility of the line frame. -/
-theorem exists_isotropic_line_stereoNondegenerate_of_smooth
+theorem exists_isotropic_line_stereoNondegenerate_of_smooth [IsAlgClosed k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)

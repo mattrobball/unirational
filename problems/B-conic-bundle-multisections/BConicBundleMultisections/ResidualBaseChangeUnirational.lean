@@ -118,6 +118,27 @@ theorem coordinateLineSpecializedConicPoly_isHomogeneous
   exact hmap.specializeSecondCoordinates_isHomogeneous
     (coordinateLinePoint (Polynomial K) Polynomial.X)
 
+/-- **The generic conic along the coordinate line commutes with a change of base field.** -/
+theorem map_coordinateLineSpecializedConicPoly
+    {K : Type u} [Field K] {L : Type u} [Field L] (φ : K →+* L)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) :
+    map (Polynomial.mapRingHom φ) (coordinateLineSpecializedConicPoly F) =
+      coordinateLineSpecializedConicPoly (map φ F) := by
+  rw [coordinateLineSpecializedConicPoly, coordinateLineSpecializedConicPoly,
+    map_specializeSecondCoordinates]
+  have hpt : (fun j => Polynomial.mapRingHom φ (coordinateLinePoint (Polynomial K) Polynomial.X j))
+      = coordinateLinePoint (Polynomial L) Polynomial.X := by
+    funext j
+    fin_cases j <;> simp [coordinateLinePoint]
+  have hcoeff : map (Polynomial.mapRingHom φ) (map (Polynomial.C : K →+* Polynomial K) F)
+      = map (Polynomial.C : L →+* Polynomial L) (map φ F) := by
+    rw [MvPolynomial.map_map, MvPolynomial.map_map]
+    have hcomp : (Polynomial.mapRingHom φ).comp (Polynomial.C : K →+* Polynomial K)
+        = (Polynomial.C : L →+* Polynomial L).comp φ :=
+      RingHom.ext fun a => by simp
+    rw [hcomp]
+  rw [hpt, hcoeff]
+
 def coordinateLineTernaryQuadraticPoly
     {K : Type u} [Field K]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) :

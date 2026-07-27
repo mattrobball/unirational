@@ -30,9 +30,16 @@ open UniversalResidual
 
 universe u
 
-/-! ### The universal degree-five covariants -/
+/-! ### The universal degree-five covariants
 
-theorem residualCoeffU_poly_isHomogeneous
+`isHomogeneous_of_eval_smul` reads homogeneity off a scaling identity checked at every `K`-point,
+which needs `K` infinite.  Homogeneity is a statement about the support, so it descends along any
+injective change of coefficients, and the scaling identity is available over the algebraic closure
+because `residualCoeff*_poly` is a fixed integer polynomial in its arguments, hence commutes with
+base change (`map_residualCoeff*_poly`).  So the theorems below hold over an arbitrary field, with
+`[Infinite K]` discharged over `AlgebraicClosure K` rather than assumed. -/
+
+private theorem residualCoeffU_poly_isHomogeneous_of_infinite
     {K : Type u} [Field K] [Infinite K]
     {a b c d e f hh i : MvPolynomial (Fin 3) K}
     (ha : a.IsHomogeneous 2) (hb : b.IsHomogeneous 2) (hc : c.IsHomogeneous 2)
@@ -48,7 +55,7 @@ theorem residualCoeffU_poly_isHomogeneous
   simp only [residualCoeffU]
   ring
 
-theorem residualCoeffV_poly_isHomogeneous
+private theorem residualCoeffV_poly_isHomogeneous_of_infinite
     {K : Type u} [Field K] [Infinite K]
     {a b c d e f hh j : MvPolynomial (Fin 3) K}
     (ha : a.IsHomogeneous 2) (hb : b.IsHomogeneous 2) (hc : c.IsHomogeneous 2)
@@ -64,7 +71,7 @@ theorem residualCoeffV_poly_isHomogeneous
   simp only [residualCoeffV]
   ring
 
-theorem residualCoeffW_poly_isHomogeneous
+private theorem residualCoeffW_poly_isHomogeneous_of_infinite
     {K : Type u} [Field K] [Infinite K]
     {a b c d e f hh k : MvPolynomial (Fin 3) K}
     (ha : a.IsHomogeneous 2) (hb : b.IsHomogeneous 2) (hc : c.IsHomogeneous 2)
@@ -80,10 +87,52 @@ theorem residualCoeffW_poly_isHomogeneous
   simp only [residualCoeffW]
   ring
 
+theorem residualCoeffU_poly_isHomogeneous
+    {K : Type u} [Field K]
+    {a b c d e f hh i : MvPolynomial (Fin 3) K}
+    (ha : a.IsHomogeneous 2) (hb : b.IsHomogeneous 2) (hc : c.IsHomogeneous 2)
+    (hd : d.IsHomogeneous 2) (he : e.IsHomogeneous 2) (hf : f.IsHomogeneous 2)
+    (hhh : hh.IsHomogeneous 2) (hi : i.IsHomogeneous 2) :
+    (residualCoeffU_poly a b c d e f hh i).IsHomogeneous 10 := by
+  classical
+  set φ : K →+* AlgebraicClosure K := algebraMap K (AlgebraicClosure K) with hφ
+  refine isHomogeneous_of_map_isHomogeneous φ (algebraMap K _).injective ?_
+  rw [← map_residualCoeffU_poly φ]
+  exact residualCoeffU_poly_isHomogeneous_of_infinite (ha.map φ) (hb.map φ) (hc.map φ)
+    (hd.map φ) (he.map φ) (hf.map φ) (hhh.map φ) (hi.map φ)
+
+theorem residualCoeffV_poly_isHomogeneous
+    {K : Type u} [Field K]
+    {a b c d e f hh j : MvPolynomial (Fin 3) K}
+    (ha : a.IsHomogeneous 2) (hb : b.IsHomogeneous 2) (hc : c.IsHomogeneous 2)
+    (hd : d.IsHomogeneous 2) (he : e.IsHomogeneous 2) (hf : f.IsHomogeneous 2)
+    (hhh : hh.IsHomogeneous 2) (hj : j.IsHomogeneous 2) :
+    (residualCoeffV_poly a b c d e f hh j).IsHomogeneous 10 := by
+  classical
+  set φ : K →+* AlgebraicClosure K := algebraMap K (AlgebraicClosure K) with hφ
+  refine isHomogeneous_of_map_isHomogeneous φ (algebraMap K _).injective ?_
+  rw [← map_residualCoeffV_poly φ]
+  exact residualCoeffV_poly_isHomogeneous_of_infinite (ha.map φ) (hb.map φ) (hc.map φ)
+    (hd.map φ) (he.map φ) (hf.map φ) (hhh.map φ) (hj.map φ)
+
+theorem residualCoeffW_poly_isHomogeneous
+    {K : Type u} [Field K]
+    {a b c d e f hh k : MvPolynomial (Fin 3) K}
+    (ha : a.IsHomogeneous 2) (hb : b.IsHomogeneous 2) (hc : c.IsHomogeneous 2)
+    (hd : d.IsHomogeneous 2) (he : e.IsHomogeneous 2) (hf : f.IsHomogeneous 2)
+    (hhh : hh.IsHomogeneous 2) (hk : k.IsHomogeneous 2) :
+    (residualCoeffW_poly a b c d e f hh k).IsHomogeneous 10 := by
+  classical
+  set φ : K →+* AlgebraicClosure K := algebraMap K (AlgebraicClosure K) with hφ
+  refine isHomogeneous_of_map_isHomogeneous φ (algebraMap K _).injective ?_
+  rw [← map_residualCoeffW_poly φ]
+  exact residualCoeffW_poly_isHomogeneous_of_infinite (ha.map φ) (hb.map φ) (hc.map φ)
+    (hd.map φ) (he.map φ) (hf.map φ) (hhh.map φ) (hk.map φ)
+
 /-! ### Degree ten for the residual-line coefficients -/
 
 theorem residualCoeffU_of_isHomogeneous
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     {F : MvPolynomial (BiprojectiveCoordinate 2 2) K} (hF : IsBidegree23 F) :
     (residualCoeffU_of F).IsHomogeneous 10 := by
   let c := cubicCoefficients F
@@ -98,7 +147,7 @@ theorem residualCoeffU_of_isHomogeneous
     (cubicCoefficients_isHomogeneous_of_bidegree23 hF ⟨7, by omega⟩)
 
 theorem residualCoeffV_of_isHomogeneous
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     {F : MvPolynomial (BiprojectiveCoordinate 2 2) K} (hF : IsBidegree23 F) :
     (residualCoeffV_of F).IsHomogeneous 10 := by
   exact residualCoeffV_poly_isHomogeneous
@@ -112,7 +161,7 @@ theorem residualCoeffV_of_isHomogeneous
     (cubicCoefficients_isHomogeneous_of_bidegree23 hF ⟨8, by omega⟩)
 
 theorem residualCoeffW_of_isHomogeneous
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     {F : MvPolynomial (BiprojectiveCoordinate 2 2) K} (hF : IsBidegree23 F) :
     (residualCoeffW_of F).IsHomogeneous 10 := by
   exact residualCoeffW_poly_isHomogeneous
@@ -180,7 +229,7 @@ theorem liftSecondLinear_isBihomogeneous
 
 /-- The residual divisor equation of a bidegree-`(2,3)` form has bidegree `(10,1)`. -/
 theorem residualEquation_isBihomogeneous
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     {F : MvPolynomial (BiprojectiveCoordinate 2 2) K} (hF : IsBidegree23 F) :
     IsBihomogeneousOfBidegree 10 1 (residualEquation F) := by
   unfold residualEquation
@@ -208,7 +257,7 @@ theorem secondBlockSubst_isBihomogeneous
 
 /-- The arbitrary-frame residual equation retains bidegree `(10,1)`. -/
 theorem residualEquationOn_isBihomogeneous
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     (M N : Matrix (Fin 3) (Fin 3) K)
     {F : MvPolynomial (BiprojectiveCoordinate 2 2) K} (hF : IsBidegree23 F) :
     IsBihomogeneousOfBidegree 10 1 (residualEquationOn M N F) := by
@@ -238,7 +287,7 @@ theorem secondBlockCoeff_isHomogeneous_of_bidegree
 
 /-- Every coefficient of the arbitrary-line residual form is homogeneous of degree ten in `x`. -/
 theorem residualLineCoeffOn_isHomogeneous
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     (M N : Matrix (Fin 3) (Fin 3) K)
     {F : MvPolynomial (BiprojectiveCoordinate 2 2) K} (hF : IsBidegree23 F)
     (j : Fin 3) :

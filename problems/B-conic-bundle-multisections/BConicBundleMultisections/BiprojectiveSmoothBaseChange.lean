@@ -171,6 +171,43 @@ theorem smooth_biprojectiveZeroLocusToSpec_map_of_smooth_bidegree23
   smooth_biprojectiveZeroLocusToSpec_map_of_smooth 2 2 K F hF hF0
     (by norm_num) (by norm_num)
 
+/-- **The Cox-coordinate Jacobian condition from smoothness, in the general bidegree.**
+
+`GoodLineConic.gradient_condition_of_smooth` is this for bidegree `(2,3)`; the general form is
+the `L = K` case of the geometric statement above. -/
+theorem gradient_condition_of_smooth_general
+    (m n : ℕ) (K : Type u) [Field K]
+    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) K)
+    (hF : IsBihomogeneousOfBidegree d e F) (hF0 : F ≠ 0) (hd : 0 < d) (he : 0 < e)
+    [Smooth (biprojectiveZeroLocusToSpec m n K F)] :
+    ∀ (x : Fin (m + 1) → K) (y : Fin (n + 1) → K),
+      eval (Sum.elim x y) F = 0 →
+      (∀ z : BiprojectiveCoordinate m n, eval (Sum.elim x y) (MvPolynomial.pderiv z F) = 0) →
+      x = 0 ∨ y = 0 := by
+  have h := gradient_condition_of_smooth_of_geometric (L := K) m n K F hF hF0 hd he
+  have hid : MvPolynomial.map (algebraMap K K) F = F := by
+    simpa using MvPolynomial.map_id F
+  rw [hid] at h
+  exact h
+
+/-- **Smoothness descends from an algebraically closed extension.**
+
+The converse of `smooth_biprojectiveZeroLocusToSpec_map_of_smooth`.  Together the two say that
+for a nonzero bihomogeneous equation smoothness of the biprojective zero locus is insensitive to
+enlarging the base field. -/
+theorem smooth_biprojectiveZeroLocusToSpec_of_smooth_map
+    (m n : ℕ) (K : Type u) [Field K] {L : Type u} [Field L] [IsAlgClosed L] [Algebra K L]
+    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) K)
+    (hF : IsBihomogeneousOfBidegree d e F) (hF0 : F ≠ 0) (hd : 0 < d) (he : 0 < e)
+    (h : Smooth (biprojectiveZeroLocusToSpec m n L (MvPolynomial.map (algebraMap K L) F))) :
+    Smooth (biprojectiveZeroLocusToSpec m n K F) := by
+  haveI := h
+  refine smooth_biprojectiveZeroLocusToSpec_of_gradient_of_geometric (L := L) m n K F hF ?_
+  have hF0L : MvPolynomial.map (algebraMap K L) F ≠ 0 := fun hz =>
+    hF0 (MvPolynomial.map_injective _ (algebraMap K L).injective (by rw [hz, map_zero]))
+  exact gradient_condition_of_smooth_general m n L
+    (MvPolynomial.map (algebraMap K L) F) (hF.map_coefficients _) hF0L hd he
+
 end BiprojectiveSpace
 
 end

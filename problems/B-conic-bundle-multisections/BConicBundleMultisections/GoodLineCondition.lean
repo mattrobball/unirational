@@ -10,6 +10,7 @@ public import BConicBundleMultisections.ConicDiscriminantAssembly
 public import BConicBundleMultisections.ConicDiscriminantKernel
 public import BConicBundleMultisections.TernaryQuadraticGradient
 public import BConicBundleMultisections.BiprojectiveSmoothCriterion
+public import BConicBundleMultisections.BiprojectiveSmoothBaseChange
 
 /-!
 # The good-line conditions, and the single root they share
@@ -1158,7 +1159,18 @@ theorem false_of_kernel_path_constant_last_partial
         | ⟨2, _⟩ => exact hypInf2
       rw [hvan, mul_zero]
 
-theorem coordinateLineConicDiscriminant_ne_zero_of_smooth [IsAlgClosed k]
+/-- **The coordinate-line conic discriminant commutes with a change of base field.** -/
+theorem map_coordinateLineConicDiscriminant {L : Type u} [Field L] (φ : k →+* L)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    Polynomial.map φ (coordinateLineConicDiscriminant F) =
+      coordinateLineConicDiscriminant (MvPolynomial.map φ F) := by
+  rw [coordinateLineConicDiscriminant, coordinateLineConicDiscriminant,
+    ← map_coordinateLineSpecializedConicPoly φ F,
+    polarMatrix_map (Polynomial.mapRingHom φ), ← RingHom.mapMatrix_apply,
+    ← RingHom.map_det]
+  rfl
+
+private theorem coordinateLineConicDiscriminant_ne_zero_of_smooth_of_isAlgClosed [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
     coordinateLineConicDiscriminant F ≠ 0 := by
@@ -1177,6 +1189,30 @@ theorem coordinateLineConicDiscriminant_ne_zero_of_smooth [IsAlgClosed k]
   obtain ⟨c0, hc0, hcC⟩ := eq_C_of_forall_eval_ne_zero c hc_ne
   exact false_of_kernel_path_constant_last_partial F hF hF0 n hn0 hnocom hFpoly hxpderiv hy0 hy1
     c0 hc0 (by simpa [c] using hcC)
+
+/-- **The generic conic along the coordinate line is nondegenerate**, over an arbitrary base
+field.  The closed-field argument is run over `AlgebraicClosure k` — where
+`BiprojectiveSpace.smooth_biprojectiveZeroLocusToSpec_map_of_smooth_bidegree23` supplies the
+smoothness hypothesis — and the conclusion, a nonvanishing of a polynomial over `k`, reflects
+along the (injective) coefficient extension. -/
+theorem coordinateLineConicDiscriminant_ne_zero_of_smooth
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
+    coordinateLineConicDiscriminant F ≠ 0 := by
+  intro hdisc
+  haveI : NeZero (2 : AlgebraicClosure k) :=
+    neZero_two_of_injective_algebraMap (algebraMap k (AlgebraicClosure k)).injective
+  haveI : NeZero (3 : AlgebraicClosure k) :=
+    neZero_three_of_injective_algebraMap (algebraMap k (AlgebraicClosure k)).injective
+  haveI : Smooth (biprojectiveZeroLocusToSpec 2 2 (AlgebraicClosure k)
+      (MvPolynomial.map (algebraMap k (AlgebraicClosure k)) F)) :=
+    BiprojectiveSpace.smooth_biprojectiveZeroLocusToSpec_map_of_smooth_bidegree23 k F hF hF0
+  refine coordinateLineConicDiscriminant_ne_zero_of_smooth_of_isAlgClosed
+    (MvPolynomial.map (algebraMap k (AlgebraicClosure k)) F)
+    (hF.map_coefficients _)
+    (fun h => hF0 (MvPolynomial.map_injective _ (algebraMap k _).injective
+      (by rw [h, map_zero]))) ?_
+  rw [← map_coordinateLineConicDiscriminant, hdisc, Polynomial.map_zero]
 
 end CoordinateLine
 
