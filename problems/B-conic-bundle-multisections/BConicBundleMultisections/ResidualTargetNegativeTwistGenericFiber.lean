@@ -48,7 +48,7 @@ the hypersurface function field, has all required quadratic multiples extending 
 This is the coefficientwise generic-fibre/projective-degree endpoint.  It uses only the
 integrality of the retained chart and the negative-twist theorem on the projective curve. -/
 theorem mvPolynomial_eq_zero_of_coeff_quadraticMultiples_extendToGlobal
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     {σ : Type*}
     (H : MvPolynomial (Fin 3) k) {d : ℕ}
     (hH : H.IsHomogeneous d) (hd : 0 < d) (hHirr : Irreducible H)
@@ -76,7 +76,7 @@ theorem mvPolynomial_eq_zero_of_coeff_quadraticMultiples_extendToGlobal
 /-- Invariant version of the coefficientwise endpoint: it is enough that multiplication by
 every homogeneous target quadratic extends globally. -/
 theorem mvPolynomial_eq_zero_of_coeff_homogeneousQuadraticMultiples_extendToGlobal
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     {σ : Type*}
     (H : MvPolynomial (Fin 3) k) {d : ℕ}
     (hH : H.IsHomogeneous d) (hd : 0 < d) (hHirr : Irreducible H)
@@ -108,7 +108,7 @@ namespace BiprojectiveSpace
 /-- A local factorization by the conic has zero right-hand side once the local quotient's
 coefficients satisfy the projective degree `-2` extension condition. -/
 theorem eq_zero_of_exists_factor_and_coeff_quadraticMultiples_extendToGlobal
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (H : MvPolynomial (Fin 3) k) {d : ℕ}
     (hH : H.IsHomogeneous d) (hd : 0 < d) (hHirr : Irreducible H)
     (i : ProjectiveSpace.NonemptyHypersurfaceChart H)
@@ -133,19 +133,23 @@ degree `-2` extension property, implies literal Cox membership of `Q` in `(F,H(y
 
 The proof first kills every local quotient by the generic-function-field negative-twist theorem.
 It then descends chartwise vanishing using only the prime vertical ideal `(H(y))`; the possibly
-nonradical affine complete-intersection cone `(F,H(y))` never enters. -/
+nonradical affine complete-intersection cone `(F,H(y))` never enters.
+
+Absolute irreducibility of `H` is used only by the chartwise-vanishing descent, which runs the
+Nullstellensatz over an algebraic closure and therefore needs `H` to stay irreducible there.
+Every consumer in this project quantifies over `IsAbsolutelyIrreducible H` already. -/
 theorem mem_span_targetRelation_of_local_factors_quadraticMultiples_extendToGlobal
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (F Q : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     {aF eF aQ eQ d : ℕ}
     (_hF : IsBihomogeneousOfBidegree aF eF F)
     (hQ : IsBihomogeneousOfBidegree aQ eQ Q)
     (haQ : 0 < aQ) (heQ : 0 < eQ)
     (H : MvPolynomial (Fin 3) k)
-    (hH : H.IsHomogeneous d) (hd : 0 < d) (hHirr : Irreducible H)
+    (hH : H.IsHomogeneous d) (hd : 0 < d) (hHabs : IsAbsolutelyIrreducible H)
     (comparison : (i : ProjectiveSpace.NonemptyHypersurfaceChart H) →
       ProjectiveSpace.GlobalSectionsToHypersurfaceFunctionFieldComparison
-        H hH hHirr i)
+        H hH hHabs.irreducible i)
     (hfactor : ∀ (a : Fin 3)
         (i : ProjectiveSpace.NonemptyHypersurfaceChart H),
       ∃ R : MvPolynomial (Fin 2) (targetRelationBaseChartRing k H i.1),
@@ -157,10 +161,11 @@ theorem mem_span_targetRelation_of_local_factors_quadraticMultiples_extendToGlob
       R * affineChartEquationOverTargetRelationBase k H a i.1 F =
           affineChartEquationOverTargetRelationBase k H a i.1 Q →
         ∀ e : Fin 2 →₀ ℕ,
-          ProjectiveSpace.QuadraticMultiplesExtendToGlobal H hH hHirr i
+          ProjectiveSpace.QuadraticMultiplesExtendToGlobal H hH
+            hHabs.irreducible i
             (comparison i)
             (ProjectiveSpace.hypersurfaceChartQuotientToFunctionField
-              H hH hHirr i (R.coeff e))) :
+              H hH hHabs.irreducible i (R.coeff e))) :
     Q ∈ Ideal.span {F, MvPolynomial.rename Sum.inr H} := by
   have hzero : ∀ (a b : Fin 3),
       ¬ IsUnit (ProjectiveSpace.chartDehomogenization 2 k b H) →
@@ -169,7 +174,7 @@ theorem mem_span_targetRelation_of_local_factors_quadraticMultiples_extendToGlob
     let i : ProjectiveSpace.NonemptyHypersurfaceChart H := ⟨b, hb⟩
     obtain ⟨R, hR⟩ := hfactor a i
     exact eq_zero_of_exists_factor_and_coeff_quadraticMultiples_extendToGlobal
-      H hH hd hHirr i (comparison i)
+      H hH hd hHabs.irreducible i (comparison i)
       (affineChartEquationOverTargetRelationBase k H a i.1 F)
       (affineChartEquationOverTargetRelationBase k H a i.1 Q)
       R hR (hext a i R hR)
@@ -177,7 +182,7 @@ theorem mem_span_targetRelation_of_local_factors_quadraticMultiples_extendToGlob
       {(0 : MvPolynomial (BiprojectiveCoordinate 2 2) k),
         MvPolynomial.rename Sum.inr H} :=
     mem_span_zero_rename_inr_of_targetRelation_chart_zero
-      Q hQ haQ heQ H hH hHirr hzero
+      Q hQ haQ heQ H hH hHabs hzero
   rw [Ideal.span_pair_comm, Ideal.span_pair_zero] at hvertical
   exact (Ideal.span_mono (by simp)) hvertical
 
@@ -185,20 +190,20 @@ theorem mem_span_targetRelation_of_local_factors_quadraticMultiples_extendToGlob
 the preceding theorem.  Thus the sole remaining negative-twist input is coefficientwise gluing
 of their target-quadratic multiples. -/
 theorem residualEquationOn_mem_span_targetRelation_of_isIso_of_quadraticMultiples_extendToGlobal
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
     (v : Fin 3 → Polynomial k)
     (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p₀ q₀ F) v = 0)
     (i j : Fin 3) {d : ℕ} (H : MvPolynomial (Fin 3) k)
-    (hH : H.IsHomogeneous d) (hd : 0 < d) (hHirr : Irreducible H)
+    (hH : H.IsHomogeneous d) (hd : 0 < d) (hHabs : IsAbsolutelyIrreducible H)
     (hvan : aeval (residualYCoordsOn p₀ q₀ r N F v) H = 0)
     [IsIso (residualTargetComponentOnι
       p₀ q₀ r N hMN F hF v hv i j H hH hvan)]
     (comparison : (b : ProjectiveSpace.NonemptyHypersurfaceChart H) →
       ProjectiveSpace.GlobalSectionsToHypersurfaceFunctionFieldComparison
-        H hH hHirr b)
+        H hH hHabs.irreducible b)
     (hext : ∀ (a : Fin 3)
         (b : ProjectiveSpace.NonemptyHypersurfaceChart H)
         (R : MvPolynomial (Fin 2) (targetRelationBaseChartRing k H b.1)),
@@ -206,17 +211,18 @@ theorem residualEquationOn_mem_span_targetRelation_of_isIso_of_quadraticMultiple
           affineChartEquationOverTargetRelationBase k H a b.1
             (residualEquationOn (lineFrame p₀ q₀ r) N F) →
         ∀ e : Fin 2 →₀ ℕ,
-          ProjectiveSpace.QuadraticMultiplesExtendToGlobal H hH hHirr b
+          ProjectiveSpace.QuadraticMultiplesExtendToGlobal H hH
+            hHabs.irreducible b
             (comparison b)
             (ProjectiveSpace.hypersurfaceChartQuotientToFunctionField
-              H hH hHirr b (R.coeff e))) :
+              H hH hHabs.irreducible b (R.coeff e))) :
     residualEquationOn (lineFrame p₀ q₀ r) N F ∈
       Ideal.span {F, MvPolynomial.rename Sum.inr H} := by
   apply mem_span_targetRelation_of_local_factors_quadraticMultiples_extendToGlobal
     F (residualEquationOn (lineFrame p₀ q₀ r) N F)
       hF (ResidualDivisor.residualEquationOn_isBihomogeneous
         (lineFrame p₀ q₀ r) N hF)
-      (by norm_num) (by norm_num) H hH hd hHirr comparison
+      (by norm_num) (by norm_num) H hH hd hHabs comparison
   · intro a b
     exact exists_residualEquationOn_factor_over_targetRelationBase_of_isIso
       p₀ q₀ r N hMN F hF v hv i j H hH hvan a b.1

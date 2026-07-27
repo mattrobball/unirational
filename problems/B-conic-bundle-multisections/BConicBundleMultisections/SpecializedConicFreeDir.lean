@@ -4188,6 +4188,148 @@ L-branch geometry (`eval_on_L_*`, `cubicFiberPullback_stereo_eq_X2_mul_of_eval_o
 `specializeSecond_e0_ne_zero_of_smooth_bidegree23`). Deferred as a thin wrapper to avoid
 elaborator timeouts in this module; all supporting lemmas are green above. -/
 
+/-! ### Base change of the whole coordinate-line stereo package
+
+Every construction that enters the two nonvanishing statements
+`stereoJacobianDet_ne_zero_of_smooth` and `residualYCoords_ne_zero_of_smooth` is a *polynomial*
+in the coefficients of `F` and of the Tsen section `v`, so each commutes with an extension of the
+base field.  These lemmas record that, and they are what lets both statements be proved over
+`AlgebraicClosure k` and reflected back along the (injective) coefficient extension.
+
+The coefficient map on the affine plane ring `affineTwoRing k = k[t, s]` is just
+`MvPolynomial.map φ`; it is injective when `φ` is. -/
+
+/-- The lift `k[t] → k[t, s]` commutes with a change of coefficient ring. -/
+theorem map_liftPolyT {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
+    (p : Polynomial k) :
+    map φ (liftPolyT p) = liftPolyT (Polynomial.map φ p) := by
+  have hC : (map φ : affineTwoRing k →+* affineTwoRing K).comp
+      (C : k →+* affineTwoRing k) = (C : K →+* affineTwoRing K).comp φ :=
+    RingHom.ext fun a => by simp
+  have hX : (map φ : affineTwoRing k →+* affineTwoRing K) (affineTwoCoord0 k)
+      = affineTwoCoord0 K := by
+    simp [affineTwoCoord0]
+  rw [liftPolyT, liftPolyT, Polynomial.hom_eval₂, hC, hX, Polynomial.eval₂_map]
+
+/-- The lifted Tsen section commutes with a change of coefficient ring. -/
+theorem map_liftTsenSection {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
+    (v : Fin 3 → Polynomial k) :
+    (fun i => map φ (liftTsenSection v i))
+      = liftTsenSection (fun i => Polynomial.map φ (v i)) :=
+  funext fun i => map_liftPolyT φ (v i)
+
+/-- The stereographic direction `(1, s, 0)` is defined over the prime ring. -/
+theorem map_affineTwoStereoDir {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K) :
+    (fun i => map φ (affineTwoStereoDir (k := k) i)) = affineTwoStereoDir (k := K) := by
+  funext i
+  fin_cases i <;> simp [affineTwoStereoDir, affineTwoCoord1]
+
+/-- The coordinate-line second-block point `(1, t, 0)` is defined over the prime ring. -/
+theorem map_affineTwoCoordinateLineY {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K) :
+    (fun i => map φ (affineTwoCoordinateLineY k i)) = affineTwoCoordinateLineY K := by
+  funext i
+  fin_cases i <;> simp [affineTwoCoordinateLineY, affineTwoCoord0]
+
+/-- The coefficient pullback of `F` to `k[t, s]` commutes with a change of coefficient ring. -/
+theorem map_affineTwoPullbackCoeff {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    map (map φ : affineTwoRing k →+* affineTwoRing K) (affineTwoPullback F)
+      = affineTwoPullback (map φ F) := by
+  have hC : (map φ : affineTwoRing k →+* affineTwoRing K).comp
+      (C : k →+* affineTwoRing k) = (C : K →+* affineTwoRing K).comp φ :=
+    RingHom.ext fun a => by simp
+  rw [affineTwoPullback, affineTwoPullback, MvPolynomial.map_map, MvPolynomial.map_map, hC]
+
+/-- The conic along the coordinate line over `k[t, s]` commutes with a change of coefficient
+ring. -/
+theorem map_specializedConicPullback {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    map (map φ : affineTwoRing k →+* affineTwoRing K) (specializedConicPullback F)
+      = specializedConicPullback (map φ F) := by
+  rw [specializedConicPullback, specializedConicPullback, map_specializeSecondCoordinates,
+    map_affineTwoPullbackCoeff, map_affineTwoCoordinateLineY]
+
+/-- The stereographic first-block coordinates commute with a change of coefficient ring. -/
+theorem map_stereoFirstCoords {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    (fun i => map φ (stereoFirstCoords F v i))
+      = stereoFirstCoords (map φ F) (fun i => Polynomial.map φ (v i)) := by
+  rw [stereoFirstCoords, stereoFirstCoords,
+    map_stereoAlg (map φ : affineTwoRing k →+* affineTwoRing K),
+    map_specializedConicPullback, map_liftTsenSection, map_affineTwoStereoDir]
+
+/-- The residual-image first-block coordinates commute with a change of coefficient ring. -/
+theorem map_residualImageXCoords {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    (fun i => map φ (residualImageXCoords F v i))
+      = residualImageXCoords (map φ F) (fun i => Polynomial.map φ (v i)) :=
+  map_stereoFirstCoords φ F v
+
+/-- The cubic fibre over a point of `k[t, s]` commutes with a change of coefficient ring. -/
+theorem map_cubicFiberPullbackCoeff {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (x : Fin 3 → affineTwoRing k) :
+    map (map φ : affineTwoRing k →+* affineTwoRing K) (cubicFiberPullback F x)
+      = cubicFiberPullback (map φ F) (fun i => map φ (x i)) := by
+  rw [cubicFiberPullback, cubicFiberPullback, map_specializeFirstCoordinates_general,
+    map_affineTwoPullbackCoeff]
+
+/-- The ambient residual representative commutes with a change of coefficient ring. -/
+theorem map_residualAmbientRepCoeff {R S : Type u} [CommRing R] [CommRing S] (ψ : R →+* S)
+    {σ : Type*} (p q : σ → R) (f : MvPolynomial (Fin 2) R) :
+    (fun i => ψ (residualAmbientRep p q f i))
+      = residualAmbientRep (fun j => ψ (p j)) (fun j => ψ (q j)) (map ψ f) := by
+  funext i
+  simp [residualAmbientRep, residualBinaryRep, coeff_map]
+
+/-- **The residual `y`-coordinates commute with a change of coefficient ring.** -/
+theorem map_residualYCoords {k K : Type u} [CommRing k] [CommRing K] (φ : k →+* K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    (fun i => map φ (residualYCoords F v i))
+      = residualYCoords (map φ F) (fun i => Polynomial.map φ (v i)) := by
+  set Φ : affineTwoRing k →+* affineTwoRing K := map φ with hΦ
+  set x := stereoFirstCoords F v with hx
+  set p := affineTwoCoordinateLineY k with hp
+  set G := cubicFiberPullback F x with hG
+  set q := complementaryTangentDir G p with hq
+  have hpK : (fun i => Φ (p i)) = affineTwoCoordinateLineY K := map_affineTwoCoordinateLineY φ
+  have hxK : (fun i => Φ (x i)) = stereoFirstCoords (map φ F) (fun i => Polynomial.map φ (v i)) :=
+    map_stereoFirstCoords φ F v
+  have hGK : map Φ G
+      = cubicFiberPullback (map φ F)
+        (stereoFirstCoords (map φ F) fun i => Polynomial.map φ (v i)) := by
+    rw [hG, map_cubicFiberPullbackCoeff]
+    exact congrArg _ hxK
+  have hqK : (fun i => Φ (q i)) = complementaryTangentDir (map Φ G) (fun i => Φ (p i)) :=
+    map_complementaryTangentDir Φ G p
+  rw [residualYCoords, residualYCoords, map_residualAmbientRepCoeff Φ p q _,
+    map_binaryLineRestriction Φ p q G]
+  simp only [Function.comp_def]
+  rw [hqK, hpK, hGK]
+
+/-- The coefficients of the generic conic along the coordinate line commute with a change of
+base field. -/
+theorem map_coordinateLineTernaryQuadraticPoly {k K : Type u} [Field k] [Field K] (φ : k →+* K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (i j : Fin 3) :
+    coordinateLineTernaryQuadraticPoly (map φ F) i j
+      = Polynomial.map φ (coordinateLineTernaryQuadraticPoly F i j) := by
+  rw [coordinateLineTernaryQuadraticPoly, coordinateLineTernaryQuadraticPoly,
+    ← map_coordinateLineSpecializedConicPoly φ F,
+    ternaryQuadraticCoeff_map (Polynomial.mapRingHom φ)]
+  rfl
+
+/-- **Isotropy of a Tsen section along the coordinate line commutes with a change of base
+field.** -/
+theorem map_ternaryQuadraticPolyEval_coordinateLine {k K : Type u} [Field k] [Field K]
+    (φ : k →+* K) (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly (map φ F))
+        (fun i => Polynomial.map φ (v i))
+      = Polynomial.map φ (TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v) := by
+  change _ = Polynomial.mapRingHom φ _
+  simp only [TernaryQuadraticPoly.eval, map_sum, map_mul]
+  refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => ?_
+  rw [map_coordinateLineTernaryQuadraticPoly]
+  rfl
+
 end
 
 end BConicBundleMultisections

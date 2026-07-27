@@ -1806,14 +1806,17 @@ theorem polarEval_stereo_pderiv_s_self_ne_zero
   exact false_of_pderiv_s_eq_smul_div F hF v hv2 hnd d n hd0 (by simpa [Y, Z] using hμpoly)
 
 /--
-**The stereographic family sweeps a surface.**
+**The stereographic family sweeps a surface**, over an algebraically closed field.
 
 Assembled from the polar Gram identity:
 `det Gram = det(polarMatrix) · det(V)² = −B(Y,∂Y/∂t)² · B(∂Y/∂s, ∂Y/∂s)`,
 with the three factors on the right nonzero by smoothness of the generic conic, motion of the family,
 and immersion of the stereo parameterisation.
+
+This is the geometric core; `stereoJacobianDet_ne_zero_of_smooth` below removes `[IsAlgClosed k]`
+by running this argument over `AlgebraicClosure k`.
 -/
-theorem stereoJacobianDet_ne_zero_of_smooth
+private theorem stereoJacobianDet_ne_zero_of_smooth_of_isAlgClosed
     {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
@@ -1881,6 +1884,82 @@ theorem stereoJacobianDet_ne_zero_of_smooth
     · exact hYYt (sq_eq_zero_iff.mp h1)
     · exact hYsYs h2
   exact hGne hG0
+
+/-- **The stereographic Jacobian determinant commutes with a change of base field.**
+
+Its three rows are the stereo coordinates and their two parameter derivatives, all of which are
+polynomial in the coefficients of `F` and `v`; `pderiv` and `Matrix.det` commute with any
+coefficient ring hom. -/
+theorem map_stereoJacobianDet {k K : Type u} [Field k] [Field K] (φ : k →+* K)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    map φ (stereoJacobianDet F v)
+      = stereoJacobianDet (map φ F) (fun i => Polynomial.map φ (v i)) := by
+  set Φ : affineTwoRing k →+* affineTwoRing K := map φ with hΦ
+  set X := residualImageXCoords F v with hX
+  set X' := residualImageXCoords (map φ F) (fun i => Polynomial.map φ (v i)) with hX'
+  have hXK : (fun i => Φ (X i)) = X' := map_residualImageXCoords φ F v
+  have hmat :
+      (Matrix.of ![X, fun a => pderiv (ULift.up 0) (X a),
+          fun a => pderiv (ULift.up 1) (X a)]).map Φ
+        = Matrix.of ![X', fun a => pderiv (ULift.up 0) (X' a),
+            fun a => pderiv (ULift.up 1) (X' a)] := by
+    rw [← hXK]
+    ext i j
+    fin_cases i <;>
+      simp only [Matrix.map_apply, Matrix.of_apply, hΦ] <;>
+      simp [pderiv_map]
+  rw [stereoJacobianDet, stereoJacobianDet, ← hX, ← hX', ← hmat, RingHom.map_det,
+    RingHom.mapMatrix_apply]
+
+/--
+**The stereographic family sweeps a surface**, over an arbitrary base field.
+
+The conclusion is the nonvanishing of one explicitly constructed element of `k[t, s]`, and
+nonvanishing reflects along any injective coefficient map.  So the closed-field argument
+`stereoJacobianDet_ne_zero_of_smooth_of_isAlgClosed` is run over `AlgebraicClosure k` — where
+`BiprojectiveSpace.smooth_biprojectiveZeroLocusToSpec_map_of_smooth_bidegree23` supplies the
+smoothness hypothesis and `map_ternaryQuadraticPolyEval_coordinateLine`,
+`map_specializedConicPullback`, `map_liftTsenSection` transport the data — and the conclusion is
+pulled back along `map_stereoJacobianDet`.
+-/
+theorem stereoJacobianDet_ne_zero_of_smooth
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
+    (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
+    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (hv2 : v 2 ≠ 0)
+    (hnd : polarEval (specializedConicPullback F) (liftTsenSection v) affineTwoStereoDir ≠ 0) :
+    stereoJacobianDet F v ≠ 0 := by
+  intro hdet
+  set φ : k →+* AlgebraicClosure k := algebraMap k (AlgebraicClosure k) with hφ
+  have hinj : Function.Injective φ := (algebraMap k (AlgebraicClosure k)).injective
+  haveI : NeZero (2 : AlgebraicClosure k) := neZero_two_of_injective_algebraMap hinj
+  haveI : NeZero (3 : AlgebraicClosure k) := neZero_three_of_injective_algebraMap hinj
+  haveI : Smooth (biprojectiveZeroLocusToSpec 2 2 (AlgebraicClosure k) (map φ F)) :=
+    BiprojectiveSpace.smooth_biprojectiveZeroLocusToSpec_map_of_smooth_bidegree23 k F hF hF0
+  set v' : Fin 3 → Polynomial (AlgebraicClosure k) := fun i => Polynomial.map φ (v i) with hv'
+  have hF'0 : map φ F ≠ 0 := fun h =>
+    hF0 (MvPolynomial.map_injective φ hinj (by rw [h, map_zero]))
+  have hv2' : v' 2 ≠ 0 := fun h =>
+    hv2 (Polynomial.map_injective φ hinj (by rw [Polynomial.map_zero]; exact h))
+  have hv0' : v' ≠ 0 := fun h =>
+    hv0 (funext fun i => Polynomial.map_injective φ hinj
+      (show Polynomial.map φ (v i) = Polynomial.map φ 0 by
+        rw [Polynomial.map_zero]; exact congrFun h i))
+  have hviso :
+      TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly (map φ F)) v' = 0 := by
+    rw [hv', map_ternaryQuadraticPolyEval_coordinateLine, hv, Polynomial.map_zero]
+  have hnd' : polarEval (specializedConicPullback (map φ F))
+      (liftTsenSection v') affineTwoStereoDir ≠ 0 := by
+    rw [← map_specializedConicPullback φ F, ← map_liftTsenSection φ v,
+      ← map_affineTwoStereoDir (k := k) φ, polarEval_map]
+    intro h
+    exact hnd (MvPolynomial.map_injective φ hinj (by rw [h, map_zero]))
+  refine stereoJacobianDet_ne_zero_of_smooth_of_isAlgClosed (map φ F) (hF.map_coefficients φ)
+    hF'0 v' hv0' hviso hv2' hnd' ?_
+  rw [hv', ← map_stereoJacobianDet φ F v, hdet, map_zero]
 
 /--
 **A nonsingular cubic fibre, in pointwise form.**

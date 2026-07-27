@@ -572,8 +572,13 @@ residual point is that binary cubic's third root.
 
 `[NeZero (2 : k)] [NeZero (3 : k)]` is carried because the statement it rests on, generic smoothness
 for the plane-cubic fibration, is false without it: quasi-elliptic fibrations live exactly in
-characteristics `2` and `3`. -/
-theorem residualYCoords_ne_zero_of_smooth
+characteristics `2` and `3`.
+
+This is the closed-field form; `residualYCoords_ne_zero_of_smooth` below removes
+`[IsAlgClosed k]` by running it over `AlgebraicClosure k`.  Closedness is genuinely needed *here*:
+the proof produces a rational point — a nonsingular stereo cubic fibre — and that is exactly the
+kind of statement that does not descend. -/
+private theorem residualYCoords_ne_zero_of_smooth_of_isAlgClosed
     {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
@@ -584,6 +589,62 @@ theorem residualYCoords_ne_zero_of_smooth
     residualYCoords F v ≠ 0 :=
   residualYCoords_ne_zero_of_exists_nonsingular_stereo F hF v hv
     (exists_nonsingular_stereo_cubicFiber_of_smooth F hF hF0 v hv0 hv hv2 hnd)
+
+/-- **Obligation 1, over an arbitrary base field.**
+
+The conclusion is the nonvanishing of three explicitly constructed elements of `k[t, s]`, and
+nonvanishing reflects along any injective coefficient map.  So the closed-field argument
+`residualYCoords_ne_zero_of_smooth_of_isAlgClosed` is run over `AlgebraicClosure k` — where
+`BiprojectiveSpace.smooth_biprojectiveZeroLocusToSpec_map_of_smooth_bidegree23` supplies the
+smoothness hypothesis, and `map_ternaryQuadraticPolyEval_coordinateLine`,
+`map_specializedConicPullback` and `map_liftTsenSection` transport the isotropy and
+non-degeneracy of the Tsen section — and the conclusion is pulled back along
+`map_residualYCoords`.
+
+`[NeZero (2 : k)] [NeZero (3 : k)]` stays: it is the characteristic hypothesis of generic
+smoothness for the plane-cubic fibration, and it is inherited by `AlgebraicClosure k` rather than
+supplied by it. -/
+theorem residualYCoords_ne_zero_of_smooth
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
+    (v : Fin 3 → Polynomial k) (hv0 : v ≠ 0)
+    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0)
+    (hv2 : v 2 ≠ 0) (hnd : StereoNondegenerate F v) :
+    residualYCoords F v ≠ 0 := by
+  intro hy
+  set φ : k →+* AlgebraicClosure k := algebraMap k (AlgebraicClosure k) with hφ
+  have hinj : Function.Injective φ := (algebraMap k (AlgebraicClosure k)).injective
+  haveI : NeZero (2 : AlgebraicClosure k) := neZero_two_of_injective_algebraMap hinj
+  haveI : NeZero (3 : AlgebraicClosure k) := neZero_three_of_injective_algebraMap hinj
+  haveI : Smooth (biprojectiveZeroLocusToSpec 2 2 (AlgebraicClosure k) (map φ F)) :=
+    BiprojectiveSpace.smooth_biprojectiveZeroLocusToSpec_map_of_smooth_bidegree23 k F hF hF0
+  set v' : Fin 3 → Polynomial (AlgebraicClosure k) := fun i => Polynomial.map φ (v i) with hv'
+  have hF'0 : map φ F ≠ 0 := fun h =>
+    hF0 (MvPolynomial.map_injective φ hinj (by rw [h, map_zero]))
+  have hv2' : v' 2 ≠ 0 := fun h =>
+    hv2 (Polynomial.map_injective φ hinj (by rw [Polynomial.map_zero]; exact h))
+  have hv0' : v' ≠ 0 := fun h =>
+    hv0 (funext fun i => Polynomial.map_injective φ hinj
+      (show Polynomial.map φ (v i) = Polynomial.map φ 0 by
+        rw [Polynomial.map_zero]; exact congrFun h i))
+  have hviso :
+      TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly (map φ F)) v' = 0 := by
+    rw [hv', map_ternaryQuadraticPolyEval_coordinateLine, hv, Polynomial.map_zero]
+  have hnd' : StereoNondegenerate (map φ F) v' := by
+    change polarEval (specializedConicPullback (map φ F))
+      (liftTsenSection v') affineTwoStereoDir ≠ 0
+    rw [hv', ← map_specializedConicPullback φ F, ← map_liftTsenSection φ v,
+      ← map_affineTwoStereoDir (k := k) φ, polarEval_map]
+    intro h
+    exact hnd (MvPolynomial.map_injective φ hinj (by rw [h, map_zero]))
+  refine residualYCoords_ne_zero_of_smooth_of_isAlgClosed (map φ F) (hF.map_coefficients φ)
+    hF'0 v' hv0' hviso hv2' hnd' ?_
+  rw [hv', ← map_residualYCoords φ F v]
+  funext i
+  rw [hy]
+  simp
 
 end
 

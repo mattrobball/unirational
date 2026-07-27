@@ -48,7 +48,7 @@ theorem residualLineConstantOn_of_targetRelation_chart_zero
     residualEquationOn_isBihomogeneous M N hF
   have hmem0 : Q ∈ Ideal.span
       {(0 : MvPolynomial (BiprojectiveCoordinate 2 2) K), rename Sum.inr H} :=
-    mem_span_zero_rename_inr_of_targetRelation_chart_zero
+    mem_span_zero_rename_inr_of_targetRelation_chart_zero_of_isAlgClosed
       Q hQ (by norm_num) (by norm_num) H hH hHirr hzero
   obtain ⟨A, B, hAB⟩ := Ideal.mem_span_pair.mp hmem0
   have hmem : Q ∈ Ideal.span {F, rename Sum.inr H} := by

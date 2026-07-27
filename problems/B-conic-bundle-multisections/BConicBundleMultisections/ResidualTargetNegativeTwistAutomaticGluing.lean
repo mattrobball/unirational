@@ -189,12 +189,13 @@ theorem residualEquationOn_mem_span_targetRelation_of_isIso_of_negativeTwist
     (v : Fin 3 → Polynomial k)
     (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p₀ q₀ F) v = 0)
     (i j : Fin 3) {d : ℕ} (H : MvPolynomial (Fin 3) k)
-    (hH : H.IsHomogeneous d) (hd : 0 < d) (hHirr : Irreducible H)
+    (hH : H.IsHomogeneous d) (hd : 0 < d) (hHabs : IsAbsolutelyIrreducible H)
     (hvan : aeval (residualYCoordsOn p₀ q₀ r N F v) H = 0)
     [IsIso (residualTargetComponentOnι
       p₀ q₀ r N hMN F hF v hv i j H hH hvan)] :
     residualEquationOn (lineFrame p₀ q₀ r) N F ∈
       Ideal.span {F, MvPolynomial.rename Sum.inr H} := by
+  have hHirr : Irreducible H := hHabs.irreducible
   let comparison :
       (b : ProjectiveSpace.NonemptyHypersurfaceChart H) →
         ProjectiveSpace.GlobalSectionsToHypersurfaceFunctionFieldComparison
@@ -218,7 +219,7 @@ theorem residualEquationOn_mem_span_targetRelation_of_isIso_of_negativeTwist
         p₀ q₀ r N hMN F hF v hv i j H hH hvan a b.1)
   exact
     residualEquationOn_mem_span_targetRelation_of_isIso_of_quadraticMultiples_extendToGlobal
-      p₀ q₀ r N hMN F hF v hv i j H hH hd hHirr hvan comparison (by
+      p₀ q₀ r N hMN F hF v hv i j H hH hd hHabs hvan comparison (by
         intro a b R hR e
         have hReq : R = localFactor a b :=
           factor_over_targetRelationBase_unique_of_smooth_irreducible

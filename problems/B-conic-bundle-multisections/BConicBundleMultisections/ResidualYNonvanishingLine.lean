@@ -150,7 +150,7 @@ theorem residualYCoordsOn_eq_mulVec_residualYCoords_secondBlockSubst
 coordinate-line nonvanishing theorem transported through the line frame; no moving-residual-line
 or horizontality hypothesis is involved. -/
 theorem residualYCoordsOn_ne_zero_of_smooth_transport
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
