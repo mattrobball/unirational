@@ -53,7 +53,7 @@ def HasActualG3G4LineSection
 Both lines carry all section data needed downstream, but the witnesses are deliberately kept
 separate.  Identifying them requires the missing open-intersection/dominant-stereo bridge. -/
 theorem exists_G3_section_and_pointwiseG4_section_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :

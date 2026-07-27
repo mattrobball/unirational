@@ -48,7 +48,7 @@ theorem targetRelationsGenericFiberArtinianAwayDiscriminant_of_bidegree23
 /-- Projective integrality and Cox reducedness imply residual target-relation membership; the
 generic-fibre Artinianness hypothesis is automatic from bidegree and discriminant avoidance. -/
 theorem residualTargetRelationMembershipAwayDiscriminantOn_of_reducedGeometry_autoArtinian
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -69,7 +69,7 @@ theorem residualTargetRelationMembershipAwayDiscriminantOn_of_reducedGeometry_au
 /-- Full residual target-geometry consumer with the generic-fibre Artinianness input discharged
 automatically. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_targetRelationGeometry_autoArtinian
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)

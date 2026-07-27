@@ -12,6 +12,7 @@ public import BConicBundleMultisections.GenericCubicNondegeneracy
 public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
 public import Mathlib.LinearAlgebra.Dimension.RankNullity
 public import Mathlib.RingTheory.Nullstellensatz
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # The G3--G4 line-selection interface
@@ -84,6 +85,19 @@ theorem map_sndConicDiscriminant
 /-- The algebraic closure of the rational function field of a standard first-projective chart. -/
 abbrev FstGenericAlgebraicClosure (k : Type u) [Field k] :=
   AlgebraicClosure (MvPolynomialFractionRing.FstFunctionField (k := k))
+
+/-- `ringChar k ∤ 6` passes to the generic algebraic closure: the structure map out of a field is
+injective, so `2` stays nonzero. -/
+instance neZeroTwo_fstGenericAlgebraicClosure {k : Type u} [Field k] [NeZero (2 : k)] :
+    NeZero (2 : FstGenericAlgebraicClosure k) :=
+  neZero_two_of_injective_algebraMap
+    (algebraMap k (FstGenericAlgebraicClosure k)).injective
+
+/-- Likewise for `3`. -/
+instance neZeroThree_fstGenericAlgebraicClosure {k : Type u} [Field k] [NeZero (3 : k)] :
+    NeZero (3 : FstGenericAlgebraicClosure k) :=
+  neZero_three_of_injective_algebraMap
+    (algebraMap k (FstGenericAlgebraicClosure k)).injective
 
 /-- The generic first-projection cubic, base changed to an algebraically closed field. -/
 def genericFstCubicOverClosure

@@ -26,12 +26,14 @@ The project used to carry `[CharZero k]`.  What its proofs actually consume is m
   short-Weierstrass residual certificates.
 
 Both are `NeZero` statements about a numeral, so both are typeclass hypotheses:
-`[NeZero (2 : k)] [NeZero (3 : k)]`.  Together they say exactly that `ringChar k ∤ 6`.  Mathlib's
-`two_ne_zero` and `three_ne_zero` are stated with precisely these instances, and
-`NeZero.ofNat` derives them from `CharZero`, so this is a strict weakening: every consumer that
-has `[CharZero k]` still applies.
+`[NeZero (2 : k)] [NeZero (3 : k)]`.  Together they say exactly that `ringChar k ∤ 6`, and
+Mathlib's `two_ne_zero` and `three_ne_zero` are stated with precisely these instances, so they
+fire without any glue.
 
-This file collects the two pieces of glue that `CharZero` used to provide for free.
+For this to be a genuine weakening, `[CharZero k]` must still imply both — see the next section:
+it does for `2` out of the box, and for `3` only after the instance added below.
+
+This file collects the glue that `CharZero` used to provide for free.
 
 ## Numerals beyond `2` and `3`
 
@@ -52,6 +54,27 @@ chart ring.
 @[expose] public section
 
 namespace BConicBundleMultisections
+
+/-! ### `CharZero` really is stronger
+
+Mathlib has `CharZero.NeZero.two : NeZero (2 : R)` as an instance, and `NeZero.charZero_ofNat`
+covers every numeral — but the latter is stated for the `OfNat` instance that
+`AddMonoidWithOne` provides, and does not fire for `(3 : k)` as elaborated over a field in this
+development (checked: `example (k) [Field k] [CharZero k] : NeZero (3 : k) := inferInstance`
+fails).  Without the instance below, `[CharZero k]` would *not* imply `[NeZero (3 : k)]` for
+instance resolution, and the declarations that still carry `CharZero` — together with the
+comparator wrapper in `Solution.lean` — could not call the ones that carry `NeZero (3 : k)`.
+So the weakening really would not be a weakening.  This restores that. -/
+
+instance (priority := 100) NeZero.charZeroThree {R : Type*} [AddMonoidWithOne R] [CharZero R] :
+    NeZero (3 : R) where
+  out := by rw [← Nat.cast_ofNat, Nat.cast_ne_zero]; decide
+
+/-- The same for `5`, which the concrete bidegree-`(2,3)` witness of `Bidegree23Example` needs:
+its Vandermonde elimination produces the relation `3 x₀² = 5 x₂²`. -/
+instance (priority := 100) NeZero.charZeroFive {R : Type*} [AddMonoidWithOne R] [CharZero R] :
+    NeZero (5 : R) where
+  out := by rw [← Nat.cast_ofNat, Nat.cast_ne_zero]; decide
 
 /-! ### Transfer along an injective algebra map -/
 
@@ -139,6 +162,16 @@ theorem thirtysix_ne_zero' [NeZero (2 : k)] [NeZero (3 : k)] : (36 : k) ≠ 0 :=
   have h : (36 : k) = 4 * 9 := by norm_num
   rw [h]; exact mul_ne_zero four_ne_zero' nine_ne_zero'
 
+/-- `54 = 27 * 2`. -/
+theorem fiftyfour_ne_zero' [NeZero (2 : k)] [NeZero (3 : k)] : (54 : k) ≠ 0 := by
+  have h : (54 : k) = 27 * 2 := by norm_num
+  rw [h]; exact mul_ne_zero twentyseven_ne_zero' two_ne_zero
+
+/-- `108 = 4 * 27`. -/
+theorem onehundredeight_ne_zero' [NeZero (2 : k)] [NeZero (3 : k)] : (108 : k) ≠ 0 := by
+  have h : (108 : k) = 4 * 27 := by norm_num
+  rw [h]; exact mul_ne_zero four_ne_zero' twentyseven_ne_zero'
+
 /-- `48 = 16 * 3`. -/
 theorem fortyeight_ne_zero' [NeZero (2 : k)] [NeZero (3 : k)] : (48 : k) ≠ 0 := by
   have h : (48 : k) = 16 * 3 := by norm_num
@@ -178,7 +211,8 @@ macro "field_simp₆" : tactic =>
   `(tactic| field_simp [two_ne_zero, three_ne_zero, four_ne_zero', six_ne_zero', eight_ne_zero',
       nine_ne_zero', twelve_ne_zero', sixteen_ne_zero', eighteen_ne_zero', twentyfour_ne_zero',
       twentyseven_ne_zero', thirtytwo_ne_zero', thirtysix_ne_zero', fortyeight_ne_zero',
-      sixtyfour_ne_zero', seventytwo_ne_zero', onehundredfortyfour_ne_zero'])
+      fiftyfour_ne_zero', sixtyfour_ne_zero', seventytwo_ne_zero',
+      onehundredeight_ne_zero', onehundredfortyfour_ne_zero'])
 
 /-- `linear_combination` whose normalizer clears numeral denominators built from `2` and `3`. -/
 macro "linear_combination₆" e:term : tactic =>

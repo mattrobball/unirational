@@ -414,6 +414,10 @@ theorem quotient_X_inl_ne_zero_twoEquationAffineChartIdeal_targetRelation
       (FaithfulSMul.algebraMap_injective k A)
   let Q : MvPolynomial (Fin 3) A :=
     sndConicAt F (targetRelationChartCoordinates j H)
+  letI : NeZero (2 : FractionRing A) :=
+    neZero_two_of_injective_algebraMap (IsFractionRing.injective A (FractionRing A))
+  letI : NeZero (3 : FractionRing A) :=
+    neZero_three_of_injective_algebraMap (IsFractionRing.injective A (FractionRing A))
   let QK : MvPolynomial (Fin 3) (FractionRing A) :=
     MvPolynomial.map (algebraMap A (FractionRing A)) Q
   obtain ⟨hQKhom, _hQK0, hQKnonsing⟩ :=

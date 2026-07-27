@@ -131,9 +131,9 @@ theorem tangent_eq_smul_of_cross_equations
     (hcVWt03 : -16 * (2 * A ^ 2 * dc - A * de + 9 * B * dh + 9 * dk) = 0) :
     da = -dh ∧ db = 0 ∧ dc = 0 ∧ dd = 0 ∧ de = 0 ∧ df = 0 ∧
       di = -A * dh ∧ dj = 0 ∧ dk = -B * dh := by
- linear_combination₆ (24 : K)⁻¹ * hc01
- linear_combination₆ (-36 : K)⁻¹ * hc10
- linear_combination₆ (-16 : K)⁻¹ * hc20
+  have hdc : dc = 0 := by linear_combination₆ (24 : K)⁻¹ * hc01
+  have hdd : dd = 0 := by linear_combination₆ (-36 : K)⁻¹ * hc10
+  have hdb : db = 0 := by linear_combination₆ (-16 : K)⁻¹ * hc20
   have hde : de = 0 := by
     rw [hdc] at hcUWs20
     linear_combination₆ (-4 : K)⁻¹ * hcUWs20

@@ -16,6 +16,7 @@ public import Mathlib.Algebra.MvPolynomial.Funext
 public import Mathlib.LinearAlgebra.Basis.VectorSpace
 public import Mathlib.LinearAlgebra.Matrix.Basis
 public import Mathlib.LinearAlgebra.Matrix.ToLin
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # Flex candidates and tangent-adapted bases for plane cubics
@@ -40,7 +41,7 @@ namespace BConicBundleMultisections.HesseNormalForm
 
 universe u
 
-variable {k : Type u} [Field k]
+variable {k : Type u} [Field k] [Infinite k]
 
 /-- The projective point at infinity in homogeneous Weierstrass coordinates. -/
 def weierstrassInfinity : Fin 3 → k := ![0, 1, 0]
@@ -459,7 +460,7 @@ theorem normalized_hessianZero_coefficients
     rwa [eval_pderiv_two_weierstrassInfinity f hf] at hgradZ
   have hH := eval_hessian_weierstrassInfinity f hf
   rw [hhessian, hV3, hUV2, hV2W] at hH
-  norm_num at hH
+  norm_num [eight_ne_zero'] at hH
   exact ⟨hV3, hUV2, hV2W, hH⟩
 
 /-- On the coordinate line `X₂ = 0`, the product `X₂ Q` and its first two partials vanish;

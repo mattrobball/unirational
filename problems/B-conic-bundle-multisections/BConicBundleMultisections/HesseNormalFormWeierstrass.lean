@@ -8,6 +8,7 @@ module
 public import BConicBundleMultisections.HesseNormalForm
 public import Mathlib.Algebra.MvPolynomial.Funext
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Projective.Basic
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # An explicit Weierstrass equation for a Hesse cubic
@@ -82,7 +83,7 @@ theorem hesseToWeierstrassMatrix_mul_weierstrassToHesseMatrix
 def hesseWeierstrass (lam scale : k) : WeierstrassCurve k :=
   ⟨-lam * scale, -lam ^ 2 * scale ^ 2, -1, 0, -(1 / 3)⟩
 
-variable [NeZero (2 : k)] [NeZero (3 : k)]
+variable [Infinite k] [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-- Direct polynomial identity between a Hesse cubic and its explicit Weierstrass equation. -/
 theorem aeval_hesseToWeierstrassMatrix_hesseCubic
@@ -97,10 +98,7 @@ theorem aeval_hesseToWeierstrassMatrix_hesseCubic
   simp [hesseToWeierstrassMatrix, Matrix.mulVec, dotProduct, Fin.sum_univ_three,
     hesseWeierstrass]
   norm_num
-  rw [← sub_eq_zero]
-  calc
-    _ = -(r 0) ^ 3 * (((lam ^ 3 - 1) * scale ^ 3) - 3) := by ring
-    _ = 0 := by rw [hscale]; ring
+  linear_combination₆ (-(r 0) ^ 3) * hscale
 
 /-- The discriminant of the explicit Weierstrass equation is its scale cubed. -/
 theorem hesseWeierstrass_discriminant
@@ -108,7 +106,7 @@ theorem hesseWeierstrass_discriminant
     (hesseWeierstrass lam scale).Δ = scale ^ 3 := by
   simp [hesseWeierstrass, WeierstrassCurve.Δ, WeierstrassCurve.b₂,
     WeierstrassCurve.b₄, WeierstrassCurve.b₆, WeierstrassCurve.b₈]
-  linear_combination hscale
+  linear_combination₆ hscale
 
 /-- The `c₄` invariant of the explicit Weierstrass equation. -/
 theorem hesseWeierstrass_c₄
@@ -126,7 +124,7 @@ theorem hesseWeierstrass_isElliptic
   apply (isUnit_iff_ne_zero).2
   intro hz
   rw [hz, mul_zero] at hscale
-  norm_num at hscale
+  exact three_ne_zero hscale.symm
 
 /-- The `j`-invariant computed from the explicit Hesse-to-Weierstrass coordinate change. -/
 theorem hesseWeierstrass_j
@@ -140,12 +138,12 @@ theorem hesseWeierstrass_j
     hesseWeierstrass_c₄ lam scale hscale]
   have hscale0 : scale ≠ 0 := by
     intro hz
-    rw [hz, zero_pow (by norm_num : 3 ≠ 0)] at hscale
-    norm_num at hscale
+    rw [hz, zero_pow (by norm_num : 3 ≠ 0), mul_zero] at hscale
+    exact three_ne_zero hscale.symm
   have hlam0 : lam ^ 3 - 1 ≠ 0 := by
     intro hlam
     rw [hlam, zero_mul] at hscale
-    norm_num at hscale
+    exact three_ne_zero hscale.symm
   rw [hesseJValue, inv_mul_eq_div, div_eq_div_iff (pow_ne_zero 3 hscale0)
     (pow_ne_zero 3 hlam0)]
   have hscaleCubed : (lam ^ 3 - 1) ^ 3 * scale ^ 9 = 27 := by
@@ -171,8 +169,8 @@ theorem exists_hesseWeierstrassModel [IsAlgClosed k] (lam : k) (hlam : lam ^ 3 �
     exact mul_div_cancel₀ 3 hlam0
   have hscale0 : scale ≠ 0 := by
     intro hz
-    rw [hz, zero_pow (by norm_num : 3 ≠ 0)] at hscale
-    norm_num at hscale
+    rw [hz, zero_pow (by norm_num : 3 ≠ 0), mul_zero] at hscale
+    exact three_ne_zero hscale.symm
   refine ⟨scale, hscale0, hscale, hesseWeierstrass_isElliptic lam scale hscale, ?_⟩
   exact hesseWeierstrass_j lam scale hscale
 

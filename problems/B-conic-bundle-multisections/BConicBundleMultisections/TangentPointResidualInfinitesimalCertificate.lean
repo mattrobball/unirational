@@ -94,7 +94,7 @@ theorem normalized_tangent_eq_zero_of_cross_equations
       linear_combination h200
     have hxc : xc = 0 := by
       rw [hP, hxa, hxd] at h020
- linear_combination₆ h020
+      have hSxc : (-4 * S) * xc = 0 := by linear_combination h020
       exact (mul_eq_zero.mp hSxc).resolve_left (mul_ne_zero (by norm_num) hS)
     have hxi : xi = 0 := by
       rw [hP, hxa, hxd] at h001
@@ -104,15 +104,15 @@ theorem normalized_tangent_eq_zero_of_cross_equations
       linear_combination₆ (-4 : K)⁻¹ * h201
     have hxb : xb = 0 := by
       rw [hP, hxa, hxc, hxd, hxk] at h220
- linear_combination₆ h220
+      have hSxb : (-4 * S) * xb = 0 := by linear_combination h220
       exact (mul_eq_zero.mp hSxb).resolve_left (mul_ne_zero (by norm_num) hS)
     have hxf : xf = 0 := by
       rw [hP, hxa, hxb, hxc, hxd, hxe, hxi] at h021
- linear_combination₆ h021
+      have hSxf : (-8 * S) * xf = 0 := by linear_combination h021
       exact (mul_eq_zero.mp hSxf).resolve_left (mul_ne_zero (by norm_num) hS)
     have hxj : xj = 0 := by
       rw [hP, hxa, hxc, hxd, hxe, hxk] at h202
- linear_combination₆ h202
+      have hSxj : (-4 * S) * xj = 0 := by linear_combination h202
       exact (mul_eq_zero.mp hSxj).resolve_left (mul_ne_zero (by norm_num) hS)
     exact by simp [hxa, hxb, hxc, hxd, hxe, hxf, hxi, hxj, hxk]
   · by_cases hE : 3 * P ^ 2 * Q + 4 * S ^ 2 = 0
@@ -139,25 +139,25 @@ theorem normalized_tangent_eq_zero_of_cross_equations
         linear_combination h200
       have hxc : xc = 0 := by
         rw [hxd] at h010
- linear_combination₆ h010
+        have hPxc : (-2 * P) * xc = 0 := by linear_combination h010
         exact (mul_eq_zero.mp hPxc).resolve_left (mul_ne_zero (by norm_num) hP)
       have hxi : xi = 0 := by
         rw [hxa, hxd] at h001
         linear_combination₆ (4 : K)⁻¹ * h001
       have hxb : xb = 0 := by
         rw [hxa, hxc, hxd, hxi] at h210
- linear_combination₆ h210
+        have hPxb : (-2 * P) * xb = 0 := by linear_combination h210
         exact (mul_eq_zero.mp hPxb).resolve_left (mul_ne_zero (by norm_num) hP)
       have hxk : xk = 0 := by
         rw [hxa, hxd, hxe] at h201
         linear_combination₆ (-4 : K)⁻¹ * h201
       have hxf : xf = 0 := by
         rw [hxc, hxd, hxe, hxk] at h011
- linear_combination₆ h011
+        have hPxf : (-6 * P) * xf = 0 := by linear_combination h011
         exact (mul_eq_zero.mp hPxf).resolve_left (mul_ne_zero (by norm_num) hP)
       have hxj : xj = 0 := by
         rw [hxa, hxc, hxd, hxe, hxi] at h002
- linear_combination₆ h002
+        have hPxj : (4 * P) * xj = 0 := by linear_combination h002
         exact (mul_eq_zero.mp hPxj).resolve_left (mul_ne_zero (by norm_num) hP)
       exact by simp [hxa, hxb, hxc, hxd, hxe, hxf, hxi, hxj, hxk]
     · have hExd : -4 * (3 * P ^ 2 * Q + 4 * S ^ 2) * xd = 0 := by
@@ -172,14 +172,14 @@ theorem normalized_tangent_eq_zero_of_cross_equations
         linear_combination h200
       have hxc : xc = 0 := by
         rw [hxd] at h010
- linear_combination₆ h010
+        have hPxc : (-2 * P) * xc = 0 := by linear_combination h010
         exact (mul_eq_zero.mp hPxc).resolve_left (mul_ne_zero (by norm_num) hP)
       have hxi : xi = 0 := by
         rw [hxa, hxd] at h001
         linear_combination₆ (4 : K)⁻¹ * h001
       have hxb : xb = 0 := by
         rw [hxa, hxc, hxd, hxi] at h210
- linear_combination₆ h210
+        have hPxb : (-2 * P) * xb = 0 := by linear_combination h210
         exact (mul_eq_zero.mp hPxb).resolve_left (mul_ne_zero (by norm_num) hP)
       have hxk : xk = 0 := by
         rw [hxa, hxd, hxe] at h201

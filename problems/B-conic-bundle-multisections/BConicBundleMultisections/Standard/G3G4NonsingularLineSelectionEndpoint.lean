@@ -28,7 +28,7 @@ open _root_.MvPolynomial
 
 /-- Certificate-rich common-line endpoint from the natural incidence-open principle. -/
 theorem exists_actualG3G4LineSection_of_incidenceOpen
-    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
+    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)]

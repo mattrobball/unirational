@@ -7,6 +7,7 @@ module
 
 public import BConicBundleMultisections.HesseNormalFormWeierstrass
 public import BConicBundleMultisections.ShortWeierstrassNormalForm
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # Projective Hesse normal form for smooth plane cubics
@@ -35,7 +36,7 @@ namespace BConicBundleMultisections.HesseNormalForm
 
 universe u
 
-variable {k : Type u} [Field k]
+variable {k : Type u} [Field k] [Infinite k]
 
 /-! ## Projectivizing Mathlib's Weierstrass variable changes -/
 
@@ -143,7 +144,8 @@ theorem shortWeierstrassCurve_isElliptic [NeZero (2 : k)] [NeZero (3 : k)]
     (A B : k) (hdisc : WeierstrassResidualInfinitesimalCertificate.discr A B ≠ 0) :
     (shortWeierstrassCurve A B).IsElliptic := by
   rw [WeierstrassCurve.isElliptic_iff, shortWeierstrassCurve_discriminant]
-  exact (isUnit_iff_ne_zero).2 (mul_ne_zero (by norm_num) hdisc)
+  exact (isUnit_iff_ne_zero).2
+    (mul_ne_zero (neg_ne_zero.mpr sixteen_ne_zero') hdisc)
 
 /-- Applying the inverse explicit Hesse-to-Weierstrass matrix to its Weierstrass polynomial
 recovers one third of the Hesse equation. -/
@@ -156,7 +158,7 @@ theorem aeval_weierstrassToHesseMatrix_hesseWeierstrassPolynomial
   have hscale0 : scale ≠ 0 := by
     intro hs
     rw [hs, zero_pow (by norm_num : 3 ≠ 0), mul_zero] at hscale
-    norm_num at hscale
+    exact three_ne_zero hscale.symm
   apply MvPolynomial.funext
   intro r
   rw [eval_aeval_linearSubst, WeierstrassCurve.Projective.eval_polynomial,
@@ -222,7 +224,7 @@ theorem exists_hesseNormalForm_coordinates [NeZero (2 : k)] [NeZero (3 : k)] [Is
       aeval_weierstrassToHesseMatrix_hesseWeierstrassPolynomial lam scale hscale
   have hc : c ≠ 0 := by
     exact div_ne_zero (mul_ne_zero (inv_ne_zero hc₀)
-      (pow_ne_zero 6 (Units.ne_zero D.u))) (by norm_num)
+      (pow_ne_zero 6 (Units.ne_zero D.u))) three_ne_zero
   have hpoly :
       (aeval (linearSubst 2 M) : MvPolynomial (Fin 3) k →ₐ[k] _) f =
         C c * hesseCubic lam := by

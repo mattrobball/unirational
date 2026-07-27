@@ -93,7 +93,7 @@ transported residual-point nonvanishing theorem.  For each `H`, dominance over `
 surjectivity by properness; integrality and the Artinian generic fibre then make the residual
 closed immersion an isomorphism. -/
 theorem residualTargetRelationMembershipAwayDiscriminantOn_of_reducedGeometry
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -143,7 +143,7 @@ theorem residualTargetRelationMembershipAwayDiscriminantOn_of_reducedGeometry
 
 /-- Prime Cox ideals supply the reduced affine-cone input in the preceding theorem. -/
 theorem residualTargetRelationMembershipAwayDiscriminantOn_of_geometry
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -169,7 +169,7 @@ inputs: one line satisfying G3 and G4, a nondegenerate Tsen section on that line
 integrality/Artinianness/Cox-reducedness for the target relations encountered in a putative
 homogeneous dependence. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_targetRelationGeometry
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)

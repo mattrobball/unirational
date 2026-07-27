@@ -7,6 +7,7 @@ module
 
 public import BConicBundleMultisections.BiprojectiveSmoothCriterion
 public import BConicBundleMultisections.MainTheorem
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # An explicit smooth bidegree-`(2,3)` hypersurface in `ℙ² × ℙ²`
@@ -155,7 +156,7 @@ theorem F_ne_zero : F k ≠ 0 := by
 
 section Algebra
 
-variable {k} [NeZero (2 : k)] [NeZero (3 : k)]
+variable {k} [NeZero (2 : k)] [NeZero (3 : k)] [NeZero (5 : k)]
 
 /-- The Vandermonde system of the nodes `1, 2, 3` in the `y`-cubes has only the trivial
 solution. -/
@@ -206,14 +207,14 @@ private theorem two_mul_mul_eq_zero {a b : k} (h : 2 * a * b = 0) : a = 0 ∨ b 
 private theorem three_sq_mul_eq_zero {a b : k} (h : 3 * a ^ 2 * b = 0) : a = 0 ∨ b = 0 := by
   rcases mul_eq_zero.mp h with h' | h'
   · exact Or.inl (pow_eq_zero_iff (two_ne_zero' ℕ) |>.mp
-      ((mul_eq_zero.mp h').resolve_left (by norm_num)))
+      ((mul_eq_zero.mp h').resolve_left three_ne_zero))
   · exact Or.inr h'
 
 end Algebra
 
 section Witness
 
-variable {k} [NeZero (2 : k)] [NeZero (3 : k)]
+variable {k} [NeZero (2 : k)] [NeZero (3 : k)] [NeZero (5 : k)]
 
 /-- **The gradient of the example form vanishes only on the two forbidden coordinate
 subspaces.**
@@ -262,8 +263,8 @@ theorem gradient_eq_zero_imp (x y : Fin 3 → k)
         refine Or.inl (fin3_eq_zero (hA0.resolve_right ?_) (hA1.resolve_right ?_)
           (hA2.resolve_right ?_))
         · exact fun hc => hr (by linear_combination hc - hp - hq)
-        · exact fun hc => hr (by linear_combination (hc - hp - 2 * hq) / 4)
-        · exact fun hc => hr (by linear_combination (hc - hp - 3 * hq) / 9)
+        · exact fun hc => hr (by linear_combination₆ (hc - hp - 2 * hq) / 4)
+        · exact fun hc => hr (by linear_combination₆ (hc - hp - 3 * hq) / 9)
     · rcases eq_or_ne (y 2) 0 with hy2 | hy2
       · -- only `y₁ ≠ 0`: the second column `(1,2,3)` of `C` has no zero entry.
         have hp : y 0 ^ 3 = 0 := by rw [hy0]; ring
@@ -272,27 +273,27 @@ theorem gradient_eq_zero_imp (x y : Fin 3 → k)
         refine Or.inl (fin3_eq_zero (hA0.resolve_right ?_) (hA1.resolve_right ?_)
           (hA2.resolve_right ?_))
         · exact fun hc => hq (by linear_combination hc - hp - hr)
-        · exact fun hc => hq (by linear_combination (hc - hp - 4 * hr) / 2)
-        · exact fun hc => hq (by linear_combination (hc - hp - 9 * hr) / 3)
+        · exact fun hc => hq (by linear_combination₆ (hc - hp - 4 * hr) / 2)
+        · exact fun hc => hq (by linear_combination₆ (hc - hp - 9 * hr) / 3)
       · -- `y₁ ≠ 0` and `y₂ ≠ 0`: rows `1` and `2` of `Cᵀ` pin the `x`-squares to a line.
         have hb1 := hB1.resolve_left hy1
         have hb2 := hB2.resolve_left hy2
         rcases eq_or_ne (x 2) 0 with hx2 | hx2
         · have hw : x 2 ^ 2 = 0 := by rw [hx2]; ring
-          have ht : x 1 ^ 2 = 0 := by linear_combination (hb2 - hb1 - 6 * hw) / 2
+          have ht : x 1 ^ 2 = 0 := by linear_combination₆ (hb2 - hb1 - 6 * hw) / 2
           have hs : x 0 ^ 2 = 0 := by linear_combination hb1 - 2 * ht - 3 * hw
           exact Or.inl (fin3_eq_zero_of_sq hs ht hw)
         · have hw : x 2 ^ 2 ≠ 0 := pow_ne_zero 2 hx2
           have hs : x 0 ^ 2 = 3 * x 2 ^ 2 := by linear_combination 2 * hb1 - hb2
-          have ht : x 1 ^ 2 = -3 * x 2 ^ 2 := by linear_combination (hb2 - hb1) / 2
+          have ht : x 1 ^ 2 = -3 * x 2 ^ 2 := by linear_combination₆ (hb2 - hb1) / 2
           have hx0 : x 0 ≠ 0 := by
             intro hz
             have hz2 : x 0 ^ 2 = 0 := by rw [hz]; ring
-            exact hw (by linear_combination (hz2 - hs) / 3)
+            exact hw (by linear_combination₆ (hz2 - hs) / 3)
           have hx1 : x 1 ≠ 0 := by
             intro hz
             have hz2 : x 1 ^ 2 = 0 := by rw [hz]; ring
-            exact hw (by linear_combination (ht - hz2) / 3)
+            exact hw (by linear_combination₆ (ht - hz2) / 3)
           exact absurd (hallx hx0 hx1 hx2).2.1 (pow_ne_zero 3 hy1)
   · rcases eq_or_ne (y 1) 0 with hy1 | hy1
     · rcases eq_or_ne (y 2) 0 with hy2 | hy2
@@ -310,7 +311,7 @@ theorem gradient_eq_zero_imp (x y : Fin 3 → k)
         have hb2 := hB2.resolve_left hy2
         rcases eq_or_ne (x 2) 0 with hx2 | hx2
         · have hw : x 2 ^ 2 = 0 := by rw [hx2]; ring
-          have ht : x 1 ^ 2 = 0 := by linear_combination (hb2 - hb0 - 8 * hw) / 3
+          have ht : x 1 ^ 2 = 0 := by linear_combination₆ (hb2 - hb0 - 8 * hw) / 3
           have hs : x 0 ^ 2 = 0 := by linear_combination hb0 - ht - hw
           exact Or.inl (fin3_eq_zero_of_sq hs ht hw)
         · have hw : x 2 ^ 2 ≠ 0 := pow_ne_zero 2 hx2
@@ -319,11 +320,14 @@ theorem gradient_eq_zero_imp (x y : Fin 3 → k)
           have hx0 : x 0 ≠ 0 := by
             intro hz
             have hz2 : x 0 ^ 2 = 0 := by rw [hz]; ring
-            exact hw (by linear_combination (3 * hz2 - hs) / 5)
+            -- The eliminant of this branch is `3 x₀² = 5 x₂²`, so here — and only here — the
+            -- witness needs `5 ≠ 0` as well.
+            have h5 : (5 : k) * x 2 ^ 2 = 0 := by linear_combination 3 * hz2 - hs
+            exact hw ((mul_eq_zero.mp h5).resolve_left (NeZero.ne (5 : k)))
           have hx1 : x 1 ≠ 0 := by
             intro hz
             have hz2 : x 1 ^ 2 = 0 := by rw [hz]; ring
-            exact hw (by linear_combination (ht - 3 * hz2) / 8)
+            exact hw (by linear_combination₆ (ht - 3 * hz2) / 8)
           exact absurd (hallx hx0 hx1 hx2).1 (pow_ne_zero 3 hy0)
     · rcases eq_or_ne (y 2) 0 with hy2 | hy2
       · -- `y₀ ≠ 0` and `y₁ ≠ 0`.
@@ -344,7 +348,7 @@ theorem gradient_eq_zero_imp (x y : Fin 3 → k)
           have hx1 : x 1 ≠ 0 := by
             intro hz
             have hz2 : x 1 ^ 2 = 0 := by rw [hz]; ring
-            exact hw (by linear_combination (ht - hz2) / 2)
+            exact hw (by linear_combination₆ (ht - hz2) / 2)
           exact absurd (hallx hx0 hx1 hx2).1 (pow_ne_zero 3 hy0)
       · -- all three `y`-coordinates nonzero: the full transposed Vandermonde system.
         obtain ⟨hs, ht, hw⟩ :=
@@ -364,7 +368,7 @@ instance smooth_F [IsAlgClosed k] :
 
 /-- **The headline theorem applied to a genuine object.**  The zero locus of `F` in `ℙ² × ℙ²` is
 a smooth bidegree-`(2,3)` threefold admitting a dominant rational map from `𝔸³`. -/
-theorem hasUnirationalParametrization_F [IsAlgClosed k] :
+theorem hasUnirationalParametrization_F [IsAlgClosed k] [CharZero k] :
     HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k (F k)) :=
   smooth_bidegree23_hasUnirationalParametrization k (F k) (isBidegree23_F k) (F_ne_zero k)
 

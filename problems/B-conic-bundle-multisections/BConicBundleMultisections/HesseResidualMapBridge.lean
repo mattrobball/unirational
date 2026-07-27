@@ -33,7 +33,7 @@ open scoped Matrix
 namespace BConicBundleMultisections.HesseResidualMapBridge
 
 universe u v
-variable {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
+variable {k : Type u} [Field k] [Infinite k] [NeZero (2 : k)] [NeZero (3 : k)]
 
 def affineDualFrame (s t : k) : Matrix (Fin 3) (Fin 3) k :=
   !![1, 0, 0; 0, 1, 0; s, t, 1]
@@ -463,7 +463,7 @@ theorem eq_C_mul_hesse_of_hasCommonResidualLineMap {ι : Type v}
     (hlam : lam ^ 3 ≠ 1) :
     g i = C (PlaneCubicResidual.coeffU3 (g i)) * HesseNormalForm.hesseCubic lam := by
   have hscale : (27 : k) * (lam ^ 3 - 1) ≠ 0 :=
-    mul_ne_zero (by norm_num) (sub_ne_zero.mpr hlam)
+    mul_ne_zero twentyseven_ne_zero' (sub_ne_zero.mpr hlam)
   have hU : ∀ s t,
       HesseFullResidualRigidity.ambientCoeffU
           (PlaneCubicResidual.coeffU3 (g i)) (PlaneCubicResidual.coeffU2V (g i))

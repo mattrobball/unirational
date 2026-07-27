@@ -7,6 +7,7 @@ module
 
 public import Mathlib.RingTheory.MvPolynomial.EulerIdentity
 public import Mathlib.LinearAlgebra.Matrix.Adjugate
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # A Jacobian criterion for homogeneous relations

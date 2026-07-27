@@ -13,6 +13,7 @@ public import Mathlib.Algebra.QuadraticDiscriminant
 public import Mathlib.LinearAlgebra.Matrix.ToLinearEquiv
 public import Mathlib.FieldTheory.IsAlgClosed.Basic
 public import Mathlib.Tactic.LinearCombination
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # Homogeneous quadratics vanishing on a nondegenerate isotropic cone
@@ -140,7 +141,7 @@ theorem pencilDiscPoly_ne_zero [NeZero (2 : K)] [NeZero (3 : K)] [Infinite K]
   set c : K := (4 * eval z Q)⁻¹
   set Lvec : Fin 3 → K := (polarMatrix Q).mulVec z
   set ℓ : MvPolynomial (Fin 3) K := ∑ i : Fin 3, C (Lvec i) * X i
-  have h4 : (4 : K) ≠ 0 := by norm_num
+  have h4 : (4 : K) ≠ 0 := four_ne_zero'
   have h4z : 4 * eval z Q ≠ 0 := mul_ne_zero h4 hzQ
   have hQeq : Q = C c * ℓ ^ 2 := by
     refine MvPolynomial.funext fun x => ?_

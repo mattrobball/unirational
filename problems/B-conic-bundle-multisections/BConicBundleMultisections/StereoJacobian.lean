@@ -21,6 +21,7 @@ public import Mathlib.LinearAlgebra.Dimension.Constructions
 public import Mathlib.LinearAlgebra.FiniteDimensional.Basic
 public import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
 public import Mathlib.RingTheory.Localization.FractionRing
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # The stereographic family sweeps a surface
@@ -1076,7 +1077,7 @@ noncomputable def polyWronskian {k : Type u} [CommRing k]
   Polynomial.derivative f * g - Polynomial.derivative g * f
 
 /-- If `f'g = g'f` and `g ≠ 0`, then `f = c · g` for some constant `c`. -/
-theorem exists_C_mul_of_wronskian_eq_zero {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
+theorem exists_C_mul_of_wronskian_eq_zero {k : Type u} [Field k] [CharZero k]
     (f g : Polynomial k) (hg : g ≠ 0)
     (hw : Polynomial.derivative f * g = Polynomial.derivative g * f) :
     ∃ c : k, f = Polynomial.C c * g := by
@@ -1371,7 +1372,7 @@ minors therefore vanish identically, so `Q` is a pure-`t` scalar times a constan
 scalar either has a root (whole second fibre, contradicting smoothness) or is constant, in
 which case the degree-3 line restriction vanishes at `(0:1:0)` (again a whole fibre). -/
 theorem polarEval_stereo_pderiv_t_ne_zero
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1683,7 +1684,7 @@ with the three factors on the right nonzero by smoothness of the generic conic, 
 and immersion of the stereo parameterisation.
 -/
 theorem stereoJacobianDet_ne_zero_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1760,7 +1761,7 @@ would produce a common zero of the total equation and all six partial derivative
 smoothness of the total hypersurface.
 -/
 theorem exists_nonsingularCubicFiber_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :

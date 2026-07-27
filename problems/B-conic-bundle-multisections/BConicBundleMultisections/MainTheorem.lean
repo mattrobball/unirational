@@ -291,7 +291,7 @@ smoothness: `Bidegree23Example.residualLineConstant` records a smooth counterexa
 unconditioned theorem below must instead run this construction along a chosen good line.
 -/
 theorem smooth_bidegree23_hasUnirationalParametrization_of_residualLineNonconstant
-    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)]
@@ -350,7 +350,7 @@ assembly feeds the arbitrary-line residual-component tower without using the obs
 horizontality determinant obligation.
 -/
 theorem smooth_bidegree23_hasUnirationalParametrization
-    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)] :
@@ -359,7 +359,7 @@ theorem smooth_bidegree23_hasUnirationalParametrization
 
 /-- Existential form of the main theorem. -/
 theorem smooth_bidegree23_isUnirationalOver
-    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)] :

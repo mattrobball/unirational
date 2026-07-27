@@ -246,7 +246,7 @@ end BiprojectiveSpace
 The residual negative-twist gluing law is automatic for a smooth nonzero bidegree-`(2,3)`
 equation and is therefore absent from the statement. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_projectivelyIntegralTargetRelations
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)

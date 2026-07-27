@@ -31,7 +31,7 @@ open _root_.MvPolynomial
 open ResidualDivisor
 open scoped Matrix
 
-variable {K : Type u} [Field K]
+variable {K : Type u} [Field K] [Infinite K]
 
 /-- Change the first line-basis vector from `p` to `s p + t q`, keeping `q` fixed. -/
 def lineReframe (s t : K) : Matrix (Fin 3) (Fin 3) K :=
@@ -447,7 +447,7 @@ theorem lineFrame_mul_lineBasisSwap
 it with the cubic, and use a swap followed by a triangular reframe to put that intersection point
 in the first column. -/
 theorem exists_G3_frame_point_on_isSmoothPlaneCubic
-    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
+    [IsAlgClosed K] [CharZero K]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth
@@ -542,7 +542,7 @@ theorem exists_G3_frame_point_on_isSmoothPlaneCubic
 /-- The adjugate-cleared G3 principal open is nonempty on the frame incidence over every smooth
 cubic. -/
 theorem exists_genericG3MinorTarget_ne_zero_on_isSmoothPlaneCubic
-    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
+    [IsAlgClosed K] [CharZero K]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth
@@ -561,7 +561,7 @@ theorem exists_genericG3MinorTarget_ne_zero_on_isSmoothPlaneCubic
 /-- A smooth bidegree-`(2,3)` hypersurface satisfies the frame-incidence principle used by the
 nonsingular G3--G4 line-selection endpoint. -/
 theorem g3FrameMeetsEveryNonemptyPrincipalOpenOnSmoothCubic_of_smooth
-    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
+    [IsAlgClosed K] [CharZero K]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth
@@ -615,7 +615,7 @@ theorem g3FrameMeetsEveryNonemptyPrincipalOpenOnSmoothCubic_of_smooth
 /-- Unconditional certificate-rich G3--G4 line-section endpoint for every smooth bidegree-`(2,3)`
 hypersurface. -/
 theorem exists_actualG3G4LineSection_via_frameIncidence
-    [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
+    [IsAlgClosed K] [CharZero K]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth

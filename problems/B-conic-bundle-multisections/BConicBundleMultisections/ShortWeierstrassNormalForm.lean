@@ -7,6 +7,7 @@ module
 
 public import BConicBundleMultisections.HesseNormalFormFlex
 public import BConicBundleMultisections.WeierstrassResidualInfinitesimalCertificate
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # Short Weierstrass normal form for a smooth plane cubic
@@ -31,7 +32,7 @@ namespace BConicBundleMultisections.ShortWeierstrassNormalForm
 
 universe u
 
-variable {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
+variable {k : Type u} [Field k] [Infinite k] [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-- The short Weierstrass ternary cubic used by the infinitesimal residual certificate. -/
 noncomputable def shortWeierstrassCubic (A B : k) : MvPolynomial (Fin 3) k :=
@@ -97,7 +98,7 @@ theorem discr_ne_zero_of_isSmoothPlaneCubic (A B : k)
   by_cases hA : A = 0
   · have hB : B = 0 := by
       rw [WeierstrassResidualInfinitesimalCertificate.discr, hA] at hdisc
-      norm_num at hdisc
+      norm_num [twentyseven_ne_zero'] at hdisc
       exact hdisc
     let x : Fin 3 → k := ![0, 0, 1]
     have hx0 : x ≠ 0 := by
@@ -175,7 +176,8 @@ theorem reductionMatrix_mul_inv (a e f j : k) (ha : a ≠ 0) :
   ext r s
   fin_cases r <;> fin_cases s <;>
     simp [reductionMatrix, reductionMatrixInv, Matrix.mul_apply, Fin.sum_univ_three,
-      squareReducedU2W, ha] <;> field_simp [ha] <;> ring
+      squareReducedU2W, ha] <;>
+    field_simp [ha, two_ne_zero, three_ne_zero, four_ne_zero', six_ne_zero'] <;> ring
 
 theorem reductionMatrixInv_mul (a e f j : k) (ha : a ≠ 0) :
     reductionMatrixInv a e f j * reductionMatrix a e f j = 1 := by
@@ -209,7 +211,9 @@ theorem reduce_weierstrassSupport
   simp [reductionMatrix, Matrix.mulVec, dotProduct, Fin.sum_univ_three]
   simp [UniversalResidual.planeCubicValue, hV3, hUV2, hV2W, hU2V,
     reducedA, reducedB, squareReducedU2W, squareReducedUW2, squareReducedW3]
-  field_simp [ha]
+  field_simp [ha, two_ne_zero, three_ne_zero, four_ne_zero', six_ne_zero', nine_ne_zero',
+    twelve_ne_zero', eighteen_ne_zero', twentyseven_ne_zero', thirtysix_ne_zero',
+    fiftyfour_ne_zero', onehundredeight_ne_zero']
   ring
 
 omit [NeZero (2 : k)] [NeZero (3 : k)] in

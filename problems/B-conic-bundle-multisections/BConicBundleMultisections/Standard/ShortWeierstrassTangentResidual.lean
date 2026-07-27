@@ -50,7 +50,7 @@ universe u
 
 open _root_.MvPolynomial
 
-variable {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
+variable {k : Type u} [Field k] [Infinite k] [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-- The homogeneous short Weierstrass cubic. -/
 def shortWeierstrassCubic (A B : k) : MvPolynomial (Fin 3) k :=
@@ -183,9 +183,9 @@ theorem eval_shortWeierstrassCubic_shortHalfPoint
   rw [eval_shortWeierstrassCubic]
   simp only [shortHalfPoint, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons,
     Matrix.cons_val_two, Matrix.tail_cons, one_pow, mul_one]
- linear_combination₆ hu
- linear_combination₆ hv
- linear_combination₆ hw
+  have he1 : e1 = a - u ^ 2 := by linear_combination hu
+  have he2 : e2 = a - v ^ 2 := by linear_combination hv
+  have he3 : e3 = a - w ^ 2 := by linear_combination hw
   have ha : a = (u ^ 2 + v ^ 2 + w ^ 2) / 3 := by
     rw [he1, he2, he3] at hsum
     linear_combination₆ (1 / 3) * hsum
@@ -195,6 +195,7 @@ theorem eval_shortWeierstrassCubic_shortHalfPoint
   have hB : B = -((a - u ^ 2) * (a - v ^ 2) * (a - w ^ 2)) := by
     rw [← neg_eq_iff_eq_neg, ← hprod, he1, he2, he3]
   rw [← huvw, hA, hB, ha]
+  field_simp₆
   ring
 
 /-- The explicit tangent residual of the half-point is the prescribed target, up to `8*y^3`. -/
@@ -214,9 +215,9 @@ theorem shortWeierstrassResidualRep_shortHalfPoint
       hsum hpair hprod hu hv hw huvw
     rw [eval_shortWeierstrassCubic] at hcurve
     simpa [p, shortHalfPoint, sub_eq_zero] using hcurve
- linear_combination₆ hu
- linear_combination₆ hv
- linear_combination₆ hw
+  have he1 : e1 = a - u ^ 2 := by linear_combination hu
+  have he2 : e2 = a - v ^ 2 := by linear_combination hv
+  have he3 : e3 = a - w ^ 2 := by linear_combination hw
   have ha : a = (u ^ 2 + v ^ 2 + w ^ 2) / 3 := by
     have hsum' := hsum
     rw [he1, he2, he3] at hsum'
@@ -232,6 +233,7 @@ theorem shortWeierstrassResidualRep_shortHalfPoint
     simp only [p, shortHalfPoint, Matrix.cons_val_zero, Matrix.cons_val_one,
       Matrix.head_cons]
     rw [← huvw, hA, hB, ha]
+    field_simp₆
     ring
   have hres1 : shortWeierstrassResidualRep A B (p 0) (p 1) 1 =
       (8 * (p 1) ^ 3) * b := by
@@ -239,6 +241,7 @@ theorem shortWeierstrassResidualRep_shortHalfPoint
     simp only [p, shortHalfPoint, Matrix.cons_val_zero, Matrix.cons_val_one,
       Matrix.head_cons]
     rw [← huvw, hA, hB, ha]
+    field_simp₆
     ring
   have hres2 : shortWeierstrassResidualRep A B (p 0) (p 1) 2 =
       (8 * (p 1) ^ 3) * 1 := by
@@ -391,7 +394,7 @@ theorem exists_tangentResidualRep_eq_smul_affineTarget [IsAlgClosed k]
     simp [p, shortHalfPoint] at this
   have hq0 : q 0 ≠ 0 := by
     simp only [q, shortWeierstrassTangentDir, Matrix.cons_val_zero]
-    exact mul_ne_zero (by norm_num) hp1
+    exact mul_ne_zero two_ne_zero hp1
   have hpq : LinearIndependent k ![p, q] := by
     rw [LinearIndependent.pair_iff]
     intro s t hst
@@ -407,7 +410,7 @@ theorem exists_tangentResidualRep_eq_smul_affineTarget [IsAlgClosed k]
   have hqT : q ∈ tangentHyperplaneCone (shortWeierstrassCubic A B) p := by
     exact shortWeierstrassTangentDir_mem_tangentHyperplaneCone A B (p 0) (p 1)
   have hc0 : c ≠ 0 := by
-    exact mul_ne_zero (by norm_num) (pow_ne_zero 3 hp1)
+    exact mul_ne_zero eight_ne_zero' (pow_ne_zero 3 hp1)
   refine ⟨p, q, c, hp0, hpcurve, hpq, hqT, hc0, ?_⟩
   change shortWeierstrassResidualRep A B (p 0) (p 1) = _
   exact hres

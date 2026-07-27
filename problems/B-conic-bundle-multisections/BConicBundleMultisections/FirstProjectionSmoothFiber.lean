@@ -12,6 +12,7 @@ public import Mathlib.Algebra.TrivSqZeroExt.Ideal
 public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
 public import Mathlib.RingTheory.Etale.Field
 public import Mathlib.RingTheory.Localization.FractionRing
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # A nonsingular fibre of the first projection
