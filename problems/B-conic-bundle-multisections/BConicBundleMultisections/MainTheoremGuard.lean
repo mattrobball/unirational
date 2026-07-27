@@ -136,6 +136,16 @@ end BConicBundleMultisections
 -- every `sorry` census.  If this ever breaks, the main theorem may be about the empty set.
 #guard_no_sorry BConicBundleMultisections.Bidegree23Example.smooth_F
 
+-- **Non-vacuity without characteristic zero.**  `smooth_F` above is the Vandermonde witness at the
+-- nodes `1, 2, 3`, and it carries `[NeZero (5 : k)]` — which is not slack: in characteristic five
+-- its zero locus really is singular.  So on its own it leaves the characteristic-five case of a
+-- characteristic-prime-to-`6` theorem unwitnessed.  These three pin the repair: a smooth
+-- bidegree-`(2,3)` form over *every* algebraically closed field in which `2 ≠ 0` and `3 ≠ 0`, the
+-- failure of the old witness in characteristic five, and the characteristic-five case explicitly.
+#guard_no_sorry BConicBundleMultisections.Bidegree23Example.exists_smooth_bidegree23
+#guard_no_sorry BConicBundleMultisections.Bidegree23Example.not_smooth_F_of_ringChar_five
+#guard_no_sorry BConicBundleMultisections.Bidegree23Example.exists_smooth_bidegree23_of_ringChar_five
+
 -- The obvious Fermat candidate is singular; that is machine-checked, not assumed, and the
 -- witness above had to couple every `x` to every `y` to avoid it.
 #guard_no_sorry BConicBundleMultisections.Bidegree23Example.not_smooth_fermatF

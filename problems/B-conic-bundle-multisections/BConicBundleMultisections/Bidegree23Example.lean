@@ -55,12 +55,16 @@ Nineteen conditions in all, and none is decorative.  Organised by the support `T
   then all three rows of `M` bear on `v`, so `det M ≠ 0` forces `v = 0`.
 * `|T| = 3`: `Mᵀ u = 0` with `det M ≠ 0`, so `u = 0`.
 
-The conditions are also necessary, which is why they cannot be trimmed: if a `2 × 2` minor
-`M_{il}M_{jm} − M_{im}M_{jl}` vanishes while the four entries do not, then `u = (M_{jl}, −M_{il})`
-and `v = (M_{im}, −M_{il})` supported on `{i,j}` and `{l,m}` give a singular point; if `det M = 0`
-while every `2 × 2` minor is nonzero, the kernel and cokernel of `M` are spanned by vectors of
-cofactors, all nonzero.  (Only sufficiency is formalised here — that is the direction the witness
-needs.)
+The conditions are also necessary, which is why they cannot be trimmed.  Over an algebraically
+closed base every scalar is a square and a cube, so any such `u` and `v` come from an honest point
+of `ℙ² × ℙ²`; and if a `2 × 2` minor `M_{il}M_{jm} − M_{im}M_{jl}` vanishes while the four entries
+do not, then `u = (M_{jl}, −M_{il})` supported on `{i,j}` and `v = (M_{im}, −M_{il})` supported on
+`{l,m}` are a left kernel and a kernel vector of that `2 × 2` block, both with no zero entry; if
+`det M = 0` while every `2 × 2` minor is nonzero, the kernel of `M` and of `Mᵀ` are spanned by
+columns and rows of the adjugate, whose entries are the `2 × 2` minors.  (Only sufficiency is
+formalised here — that is the direction a witness needs.  What *is* formalised on the other side
+is the concrete failure of the Vandermonde witness in characteristic five; see
+`not_smooth_F_of_ringChar_five`.)
 
 Only `2 ≠ 0` and `3 ≠ 0` enter, from the factors `2xᵢ` and `3y_l²` in the Cox partials.
 
@@ -502,9 +506,10 @@ theorem F_ne_zero : F k ≠ 0 :=
 
 variable {k}
 
-/-- The Vandermonde matrix of `1, 2, 3` is nondegenerate exactly when `2`, `3` and `5` are
-invertible: its nineteen scalars are `1, 2, 3, 4, 5, 6, 8, 9`, and `5` occurs once, as the minor
-on rows `{1,2}` and columns `{0,2}`. -/
+/-- The Vandermonde matrix of `1, 2, 3` is nondegenerate as soon as `2`, `3` and `5` are
+invertible: its nineteen scalars take the values `1, 2, 3, 4, 5, 6, 8, 9`, and `5` occurs once, as
+the minor on rows `{1,2}` and columns `{0,2}`.  For the converse in characteristic five see
+`not_isSmoothCoefficientMatrix_vandermonde123`. -/
 theorem isSmoothCoefficientMatrix_vandermonde123
     [NeZero (2 : k)] [NeZero (3 : k)] [NeZero (5 : k)] :
     IsSmoothCoefficientMatrix (vandermonde123 k) := by

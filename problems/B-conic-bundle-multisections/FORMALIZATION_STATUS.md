@@ -16,6 +16,7 @@ Checked from the committed tree rather than taken from any agent's report:
 | `#check` on the theorem | matches the statement pinned at the top of `PLAN.md` |
 | `#print axioms` on the theorem | `[propext, Classical.choice, Quot.sound]` — no `sorryAx` |
 | non-vacuity: `Bidegree23Example.smooth_F` | axiom-clean, so `[Smooth …]` is satisfiable |
+| non-vacuity in every char ∤ 6: `Bidegree23Example.exists_smooth_bidegree23` | axiom-clean; explicit witness, no genericity argument |
 | `axiom` / `admit` / `native_decide` | none anywhere in the tree |
 | `lake build` | green, 3305 jobs |
 
@@ -175,7 +176,9 @@ the following declarations no longer feed the headline:
 
 `Bidegree23Example.smooth_F` gives a concrete, axiom-clean smooth bidegree-`(2,3)` example, and
 `MainTheoremGuard.lean` pins it. Thus the `Smooth` hypothesis in the universal theorem is
-satisfiable; the proof is not vacuous.
+satisfiable; the proof is not vacuous. `Bidegree23Example.exists_smooth_bidegree23` extends this
+to every algebraically closed field with `2 ≠ 0` and `3 ≠ 0`, so non-vacuity now covers exactly the
+characteristic range the rest of the development assumes — see the char-∤-6 section below.
 
 `CoordinateLineCounterexample.lean` records the complementary warning:
 `Bidegree23Example.residualLineConstant` proves that the hardcoded coordinate line can have
@@ -253,11 +256,28 @@ A trap worth recording: `[CharZero k]` does **not** give `[NeZero (3 : k)]` by i
 dedicated instance. Without `NeZeroTwoThree.NeZero.charZeroThree` the "weakening" would not have
 been one, and `Solution.lean` could not have called the main theorem.
 
-### The non-vacuity witness is char ∉ {2,3,5}, not char ∤ 6
+### The non-vacuity witness was char ∉ {2,3,5}; it is now char ∤ 6 — *fixed*
 
-`Bidegree23Example.smooth_F` now carries an explicit `[NeZero (5 : k)]`: in one branch the
-Vandermonde elimination yields `3x₀² = 5x₂²`. That is a property of the polynomial chosen, not of
-the theorem, and it was previously hidden inside `CharZero`.
+`Bidegree23Example.smooth_F` carries an explicit `[NeZero (5 : k)]`, and that is not slack:
+`Bidegree23Example.not_smooth_F_of_ringChar_five` proves that in characteristic five the zero locus
+of `F` is genuinely singular, at `([0:1:2], [1:0:1])`. So the witness really was a property of the
+polynomial chosen, not of the theorem, and it left the characteristic-five case of a
+characteristic-∤-6 theorem unwitnessed.
+
+That gap is closed. `Bidegree23Example` is now parameterised by the coefficient matrix:
+`exampleForm M` is `∑_{i,l} M_{i l} xᵢ² y_l³`, and `IsSmoothCoefficientMatrix M` — every entry,
+every `2 × 2` minor, and `det M` nonzero, nineteen scalars — is exactly what
+`gradient_eq_zero_imp_exampleForm` consumes, together with `2 ≠ 0` and `3 ≠ 0`. The nineteen
+conditions are also necessary; only sufficiency is formalised.
+
+`F` is the instance at the Vandermonde matrix of the nodes `1, 2, 3` and is unchanged, so
+`MainTheoremGuard` and `CoordinateLineCounterexample` are untouched. The new
+`Bidegree23Example.universalMatrix = !![1,1,1; 1,2,3; 1,3,4]` has all nineteen scalars in
+`{±1, ±2, ±3, ±4}`, so `Bidegree23Example.exists_smooth_bidegree23` gives a smooth
+bidegree-`(2,3)` form over **every** algebraically closed field with `2 ≠ 0` and `3 ≠ 0` — no
+genericity argument, no appeal to the base field being infinite. Characteristic five is recorded
+separately as `Bidegree23Example.exists_smooth_bidegree23_of_ringChar_five`. All three are pinned
+in `MainTheoremGuard.lean`.
 
 ### `IsAlgClosed` splits three ways
 
