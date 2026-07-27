@@ -466,6 +466,7 @@ theorem conicResultant_ne_zero {q q' : MvPolynomial (Fin 3) K}
   · rw [← conicResultant_comm]
     exact key q' q hq' hq hrel.symm (hne q' hq' h)
 
+
 /-! ### The degenerate case
 
 When both forms vanish at the centre of projection `(1 : 0 : 0)` the resultant vanishes
@@ -635,6 +636,61 @@ theorem exists_polynomial_ne_zero_natDegree_le_four {L : Type v} [Field L] [Alge
       fin_cases i <;> simp
     have := congrArg (fun φ => φ P) hcomp
     simpa [BinaryForm.dehomogenize, hscale] using this
+
+/-! ### The hypothesis at the centre of projection is necessary
+
+The statement "no common irreducible factor implies nonvanishing resultant" is **false** without
+a hypothesis at the centre of projection.  Here is an explicit counterexample, over an arbitrary
+field: two irreducible, non-associate conics both passing through `(1 : 0 : 0)`. -/
+
+private theorem irreducible_X_of_field {K : Type u} [Field K] (i : Fin 3) :
+    Irreducible (MvPolynomial.X i : MvPolynomial (Fin 3) K) :=
+  (prime_of_isHomogeneous_one (MvPolynomial.isHomogeneous_X K i)
+    (MvPolynomial.X_ne_zero i)).irreducible
+
+/-- `X 1 * X 0 + X 2 ^ 2` and `X 2 * X 0 + X 1 ^ 2` are irreducible and coprime, yet both vanish
+at `(1 : 0 : 0)`, so their resultant is identically zero.  Hence `conicResultant_ne_zero` really
+does need its hypothesis `hcentre`. -/
+theorem conicResultant_degenerate_counterexample (K : Type u) [Field K] :
+    ∃ q q' : MvPolynomial (Fin 3) K,
+      q.IsHomogeneous 2 ∧ q'.IsHomogeneous 2 ∧ Irreducible q ∧ Irreducible q' ∧
+        IsRelPrime q q' ∧ conicResultant q q' = 0 := by
+  classical
+  -- the two conics
+  set q : MvPolynomial (Fin 3) K :=
+    MvPolynomial.X 1 * MvPolynomial.X 0 + MvPolynomial.X 2 ^ 2 with hq_def
+  set q' : MvPolynomial (Fin 3) K :=
+    MvPolynomial.X 2 * MvPolynomial.X 0 + MvPolynomial.X 1 ^ 2 with hq'_def
+  -- irreducibility, by the two-monomial criterion
+  have hrel : ∀ i j : Fin 3, i ≠ j →
+      IsRelPrime (MvPolynomial.X i : MvPolynomial (Fin 3) K) (MvPolynomial.X j ^ 2) := by
+    intro i j hij
+    refine (irreducible_X_of_field i).isRelPrime_iff_not_dvd.mpr ?_
+    rintro ⟨w, hw⟩
+    have := congrArg (MvPolynomial.eval (Function.update (0 : Fin 3 → K) j 1)) hw
+    simp [hij] at this
+  have hirr : Irreducible q :=
+    MvPolynomial.irreducible_mul_X_add _ _ 0 (MvPolynomial.X_ne_zero 1)
+      (by simp) (fun hmem => by simpa using MvPolynomial.vars_pow _ 2 hmem)
+      (hrel 1 2 (by decide))
+  have hirr' : Irreducible q' :=
+    MvPolynomial.irreducible_mul_X_add _ _ 0 (MvPolynomial.X_ne_zero 2)
+      (by simp) (fun hmem => by simpa using MvPolynomial.vars_pow _ 2 hmem)
+      (hrel 2 1 (by decide))
+  have hhom : q.IsHomogeneous 2 :=
+    ((MvPolynomial.isHomogeneous_X K 1).mul (MvPolynomial.isHomogeneous_X K 0)).add
+      ((MvPolynomial.isHomogeneous_X K 2).pow 2)
+  have hhom' : q'.IsHomogeneous 2 :=
+    ((MvPolynomial.isHomogeneous_X K 2).mul (MvPolynomial.isHomogeneous_X K 0)).add
+      ((MvPolynomial.isHomogeneous_X K 1).pow 2)
+  refine ⟨q, q', hhom, hhom', hirr, hirr', ?_, ?_⟩
+  · -- coprime: `q` is irreducible and does not divide `q'`, as `(0, 1, 0)` separates them
+    refine hirr.isRelPrime_iff_not_dvd.mpr ?_
+    rintro ⟨w, hw⟩
+    have := congrArg (MvPolynomial.eval (![0, 1, 0] : Fin 3 → K)) hw
+    simp [hq_def, hq'_def] at this
+  · -- both vanish at the centre of projection
+    refine conicResultant_eq_zero_of_eval_centre hhom hhom' ?_ ?_ <;> simp [hq_def, hq'_def]
 
 end ConicResultant
 
