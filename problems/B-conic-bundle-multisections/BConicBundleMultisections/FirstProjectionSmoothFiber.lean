@@ -10,6 +10,7 @@ public import BConicBundleMultisections.SmoothExtensionJacobian
 public import BConicBundleMultisections.SpecializedConicFreeDir
 public import Mathlib.Algebra.TrivSqZeroExt.Ideal
 public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
+public import Mathlib.FieldTheory.SeparableClosure
 public import Mathlib.RingTheory.Etale.Field
 public import Mathlib.RingTheory.Localization.FractionRing
 public import BConicBundleMultisections.NeZeroTwoThree
@@ -162,30 +163,102 @@ theorem exists_fractionRing_coordinateDerivation
   exact MvPolynomial.mkDerivation_X (R := k) (A := K)
     (fun j : Fin 3 => if j = i then 1 else 0) j
 
-/-- The coordinate derivations extend further to the algebraic closure of the fraction field. -/
-theorem exists_algebraicClosure_coordinateDerivation
-    {k : Type u} [Field k] [CharZero k] (i : Fin 3) :
-    let A := MvPolynomial (Fin 3) k
-    let K := FractionRing A
-    let Ω := AlgebraicClosure K
-    ∃ D : Derivation k Ω Ω, ∀ j : Fin 3,
-      D (algebraMap A Ω (X j)) = if j = i then 1 else 0 := by
-  dsimp only
-  let A := MvPolynomial (Fin 3) k
-  let K := FractionRing A
-  let Ω := AlgebraicClosure K
+/-- **The coordinate derivations extend along any separable algebraic extension** of the fraction
+field.  No hypothesis on the characteristic is needed: separability is exactly what makes the
+extension formally étale, hence formally smooth, hence a target for
+`exists_derivation_extension_of_formallySmooth`.
+
+This replaces the earlier `exists_algebraicClosure_coordinateDerivation`, which took
+`E = AlgebraicClosure K` and needed `CharZero` for the single purpose of supplying
+`Algebra.IsSeparable K (AlgebraicClosure K)`.  In characteristic `p` that instance is false —
+`K = k(x₀,x₁,x₂)` is imperfect and `∂/∂xᵢ` does not extend to `K^{1/p}` — so the algebraic closure
+had to be replaced by a separable subextension. -/
+theorem exists_separable_coordinateDerivation
+    {k : Type u} [Field k] {E : Type u} [Field E]
+    [Algebra (FractionRing (MvPolynomial (Fin 3) k)) E]
+    [Algebra.IsSeparable (FractionRing (MvPolynomial (Fin 3) k)) E]
+    [Algebra k E] [IsScalarTower k (FractionRing (MvPolynomial (Fin 3) k)) E]
+    (i : Fin 3) :
+    ∃ D : Derivation k E E, ∀ j : Fin 3,
+      D (algebraMap (FractionRing (MvPolynomial (Fin 3) k)) E
+          (algebraMap (MvPolynomial (Fin 3) k) (FractionRing (MvPolynomial (Fin 3) k)) (X j)))
+        = if j = i then 1 else 0 := by
   obtain ⟨dK, hdK⟩ := exists_fractionRing_coordinateDerivation (k := k) i
-  let dKΩ : Derivation k K Ω :=
-    Derivation.llcomp (Algebra.linearMap K Ω) dK
-  letI : Algebra.FormallyEtale K Ω := Algebra.FormallyEtale.of_isSeparable K Ω
-  letI : Algebra.FormallySmooth K Ω := inferInstance
-  obtain ⟨D, hD⟩ := exists_derivation_extension_of_formallySmooth dKΩ
+  set K := FractionRing (MvPolynomial (Fin 3) k) with hK
+  let dKE : Derivation k K E := Derivation.llcomp (Algebra.linearMap K E) dK
+  letI : Algebra.FormallyEtale K E := Algebra.FormallyEtale.of_isSeparable K E
+  letI : Algebra.FormallySmooth K E := inferInstance
+  obtain ⟨D, hD⟩ := exists_derivation_extension_of_formallySmooth dKE
   refine ⟨D, fun j => ?_⟩
-  rw [show algebraMap A Ω (X j) = algebraMap K Ω (algebraMap A K (X j)) from
-    (IsScalarTower.algebraMap_apply A K Ω (X j)).symm, hD]
-  change algebraMap K Ω (dK (algebraMap A K (X j))) = _
+  rw [hD]
+  change algebraMap K E (dK (algebraMap (MvPolynomial (Fin 3) k) K (X j))) = _
   rw [hdK]
   split <;> simp_all
+
+/-! ## The singular point of the generic plane cubic, over a separable extension
+
+The elimination certificates produce a singular point of the generic cubic fibre over the
+*algebraic* closure `Ω` of `K = Frac k[x₀,x₁,x₂]`.  The derivation argument needs it over a
+*separable* extension.  The following lemma is the exact bridge, and it is the one place in this
+file where the characteristic still matters.
+
+In characteristic `0` it is trivial: `Ω/K` is separable, so `separableClosure K Ω = ⊤`.
+
+In characteristic `p ≥ 5` it is a theorem — the singular subscheme `Z = V(∂₀G, ∂₁G, ∂₂G)` of a
+plane cubic (in characteristic `≠ 3`, Euler makes `G` itself redundant) is cut out by three conics,
+so when `Z` is finite it has a closed point of degree `≤ 4` over `K`, and a residue field of degree
+`≤ 4 < p` has inseparable degree a power of `p` dividing `4`, hence is separable; when `Z` is
+positive-dimensional it contains a `K`-line or a `K`-conic, and restricting such to a coordinate
+line produces a point of degree `≤ 2 < p`.  Neither half is formalized here.
+
+In characteristic `2` or `3` the statement is genuinely false: quasi-elliptic fibrations exist
+exactly there, and their generic fibre is a regular but non-smooth plane cubic whose singular point
+is purely inseparable over `K`. -/
+
+/-- **A singular point of a plane cubic can be taken separable over the base field.**
+
+Currently proved only in characteristic zero.  See the section docstring for the characteristic
+`p ≥ 5` argument and for why `p ∈ {2, 3}` must be excluded. -/
+theorem exists_separableClosure_singularPoint_of_cubic
+    {K : Type u} [Field K] [CharZero K]
+    (G : MvPolynomial (Fin 3) K) (_hG : G.IsHomogeneous 3)
+    (y : Fin 3 → AlgebraicClosure K) (hy0 : y ≠ 0)
+    (hval : eval y (map (algebraMap K (AlgebraicClosure K)) G) = 0)
+    (hgrad : ∀ j : Fin 3,
+      eval y (map (algebraMap K (AlgebraicClosure K)) (pderiv j G)) = 0) :
+    ∃ z : Fin 3 → ↥(separableClosure K (AlgebraicClosure K)), z ≠ 0 ∧
+      eval z (map (algebraMap K
+        ↥(separableClosure K (AlgebraicClosure K))) G) = 0 ∧
+      ∀ j : Fin 3, eval z (map (algebraMap K
+        ↥(separableClosure K (AlgebraicClosure K))) (pderiv j G)) = 0 := by
+  classical
+  have hmem : ∀ i, y i ∈ separableClosure K (AlgebraicClosure K) := fun i =>
+    mem_separableClosure_iff.mpr (Algebra.IsSeparable.isSeparable K (y i))
+  refine ⟨fun i => ⟨y i, hmem i⟩, ?_, ?_, ?_⟩
+  · intro h
+    apply hy0
+    funext i
+    have hi := congrFun h i
+    have := congrArg (algebraMap ↥(separableClosure K (AlgebraicClosure K))
+      (AlgebraicClosure K)) hi
+    simpa using this
+  · refine (algebraMap ↥(separableClosure K (AlgebraicClosure K))
+      (AlgebraicClosure K)).injective ?_
+    rw [map_zero, MvPolynomial.eval_map,
+      MvPolynomial.eval₂_comp_left (algebraMap ↥(separableClosure K (AlgebraicClosure K))
+        (AlgebraicClosure K)),
+      ← IsScalarTower.algebraMap_eq K ↥(separableClosure K (AlgebraicClosure K))
+        (AlgebraicClosure K), ← MvPolynomial.eval_map]
+    exact hval
+  · intro j
+    refine (algebraMap ↥(separableClosure K (AlgebraicClosure K))
+      (AlgebraicClosure K)).injective ?_
+    rw [map_zero, MvPolynomial.eval_map,
+      MvPolynomial.eval₂_comp_left (algebraMap ↥(separableClosure K (AlgebraicClosure K))
+        (AlgebraicClosure K)),
+      ← IsScalarTower.algebraMap_eq K ↥(separableClosure K (AlgebraicClosure K))
+        (AlgebraicClosure K), ← MvPolynomial.eval_map]
+    exact hgrad j
 
 /-! ## Algebraic Sard for the bidegree-`(2,3)` first projection -/
 
@@ -381,9 +454,11 @@ theorem exists_nonsingularCubicFiber_of_smooth_coordinate
   let A := MvPolynomial (Fin 3) k
   let K := FractionRing A
   let Ω := AlgebraicClosure K
+  let E := ↥(separableClosure K Ω)
   let φ : A →+* Ω := algebraMap A Ω
-  let xΩ : Fin 3 → Ω := fun i => φ (X i)
-  let FΩ : MvPolynomial (BiprojectiveCoordinate 2 2) Ω := map (algebraMap k Ω) F
+  let ψ : A →+* E := (algebraMap K E).comp (algebraMap A K)
+  let xE : Fin 3 → E := fun i => ψ (X i)
+  let FE : MvPolynomial (BiprojectiveCoordinate 2 2) E := map (algebraMap k E) F
   let ℱ := cubicFiberJacobianFamily F
   let d : Fin 4 → ℕ := ![3, 2, 2, 2]
   let S : Set A := elimCertificates ℱ d
@@ -425,60 +500,74 @@ theorem exists_nonsingularCubicFiber_of_smooth_coordinate
     exact hΔφ rfl
   push Not at hbad
   obtain ⟨y, hy0, hy⟩ := hbad
-  have hφC : φ.comp (C : k →+* A) = algebraMap k Ω := by
-    ext c
-    exact (IsScalarTower.algebraMap_apply k A Ω c).symm
-  have hgeneric : map φ (universalCubicFiber F) =
-      specializeFirstCoordinates (n := 2) xΩ FΩ := by
-    rw [universalCubicFiber, map_specializeFirstCoordinates_general, MvPolynomial.map_map, hφC]
-  have hfibre : eval y (specializeFirstCoordinates (n := 2) xΩ FΩ) = 0 := by
-    rw [← hgeneric]
+  -- `y` is a singular point over `Ω` of the generic cubic fibre, read over `K`.
+  haveI : CharZero K := inferInstanceAs (CharZero (FractionRing (MvPolynomial (Fin 3) k)))
+  have hAKΩ : (algebraMap K Ω).comp (algebraMap A K) = φ :=
+    RingHom.ext fun a => (IsScalarTower.algebraMap_apply A K Ω a).symm
+  have hvalΩ : eval y (map (algebraMap K Ω)
+      (map (algebraMap A K) (universalCubicFiber F))) = 0 := by
     have h := hy 0
     change eval y (map φ (universalCubicFiber F)) = 0 at h
-    exact h
+    rwa [MvPolynomial.map_map, hAKΩ]
+  have hgradΩ : ∀ j : Fin 3, eval y (map (algebraMap K Ω)
+      (pderiv j (map (algebraMap A K) (universalCubicFiber F)))) = 0 := by
+    intro j
+    have h := hy j.succ
+    change eval y (map φ (pderiv j (universalCubicFiber F))) = 0 at h
+    rwa [pderiv_map, MvPolynomial.map_map, hAKΩ]
+  -- Move it to the separable closure.  This is the only characteristic-dependent step.
+  obtain ⟨z, hz0, hzval, hzgrad⟩ :=
+    exists_separableClosure_singularPoint_of_cubic (K := K)
+      (map (algebraMap A K) (universalCubicFiber F))
+      ((universalCubicFiber_isHomogeneous hF).map _) y hy0 hvalΩ hgradΩ
+  -- From here the argument runs over `E = separableClosure K Ω` exactly as it used to run over `Ω`.
+  have hψeq : (algebraMap K E).comp (algebraMap A K) = ψ := rfl
+  have hψC : ψ.comp (C : k →+* A) = algebraMap k E := by
+    refine RingHom.ext fun c => ?_
+    show algebraMap K E (algebraMap A K (C c)) = algebraMap k E c
+    rw [show (C c : A) = algebraMap k A c from rfl,
+      ← IsScalarTower.algebraMap_apply k A K c, ← IsScalarTower.algebraMap_apply k K E c]
+  have hgeneric : map ψ (universalCubicFiber F) =
+      specializeFirstCoordinates (n := 2) xE FE := by
+    rw [universalCubicFiber, map_specializeFirstCoordinates_general, MvPolynomial.map_map, hψC]
+  have hfibre : eval z (specializeFirstCoordinates (n := 2) xE FE) = 0 := by
+    rw [← hgeneric, ← hψeq, ← MvPolynomial.map_map]
+    exact hzval
   have hyfibre (i : Fin 3) :
-      eval y (pderiv i (specializeFirstCoordinates (n := 2) xΩ FΩ)) = 0 := by
-    rw [← hgeneric, pderiv_map]
-    have h := hy i.succ
-    change eval y (map φ (pderiv i (universalCubicFiber F))) = 0 at h
-    exact h
-  have hFxy : eval (Sum.elim xΩ y) FΩ = 0 := by
+      eval z (pderiv i (specializeFirstCoordinates (n := 2) xE FE)) = 0 := by
+    rw [← hgeneric, pderiv_map, ← hψeq, ← MvPolynomial.map_map, ← pderiv_map]
+    exact hzgrad i
+  have hFxy : eval (Sum.elim xE z) FE = 0 := by
     rw [← eval_specializeFirstCoordinates]
     exact hfibre
-  have hygrad (i : Fin 3) : eval (Sum.elim xΩ y) (pderiv (.inr i) FΩ) = 0 := by
+  have hygrad (i : Fin 3) : eval (Sum.elim xE z) (pderiv (.inr i) FE) = 0 := by
     rw [← eval_specializeFirstCoordinates, specializeFirstCoordinates_pderiv_inr]
     exact hyfibre i
-  have hFxyA : aeval (Sum.elim xΩ y) F = 0 := by
-    simpa [FΩ, aeval_def] using hFxy
-  have hygradA (i : Fin 3) : aeval (Sum.elim xΩ y) (pderiv (.inr i) F) = 0 := by
-    simpa [FΩ, aeval_def, pderiv_map] using hygrad i
-  have hxgradA (i : Fin 3) : aeval (Sum.elim xΩ y) (pderiv (.inl i) F) = 0 := by
-    obtain ⟨D, hD⟩ := exists_algebraicClosure_coordinateDerivation (k := k) i
-    have hDx (j : Fin 3) : D (xΩ j) = if j = i then 1 else 0 := by
-      simpa [xΩ, φ, A, K, Ω] using hD j
-    have hchain := derivation_aeval_eq_sum D (Sum.elim xΩ y) F
-    have hsum : (∑ z : BiprojectiveCoordinate 2 2,
-        aeval (Sum.elim xΩ y) (pderiv z F) * D (Sum.elim xΩ y z)) = 0 := by
+  have hFxyA : aeval (Sum.elim xE z) F = 0 := by
+    simpa [FE, aeval_def] using hFxy
+  have hygradA (i : Fin 3) : aeval (Sum.elim xE z) (pderiv (.inr i) F) = 0 := by
+    simpa [FE, aeval_def, pderiv_map] using hygrad i
+  have hxgradA (i : Fin 3) : aeval (Sum.elim xE z) (pderiv (.inl i) F) = 0 := by
+    obtain ⟨D, hD⟩ := exists_separable_coordinateDerivation (k := k) (E := E) i
+    have hDx (j : Fin 3) : D (xE j) = if j = i then 1 else 0 := hD j
+    have hchain := derivation_aeval_eq_sum D (Sum.elim xE z) F
+    have hsum : (∑ w : BiprojectiveCoordinate 2 2,
+        aeval (Sum.elim xE z) (pderiv w F) * D (Sum.elim xE z w)) = 0 := by
       rw [← hchain, hFxyA, map_zero]
     rw [Fintype.sum_sum_type] at hsum
     simpa [hDx, hygradA] using hsum
-  have hgradΩ : ∀ z : BiprojectiveCoordinate 2 2, eval (Sum.elim xΩ y) (pderiv z FΩ) = 0 := by
+  have hgradE : ∀ w : BiprojectiveCoordinate 2 2, eval (Sum.elim xE z) (pderiv w FE) = 0 := by
     rintro (i | j)
-    · simpa [FΩ, aeval_def, pderiv_map] using hxgradA i
+    · simpa [FE, aeval_def, pderiv_map] using hxgradA i
     · exact hygrad j
-  have hxΩ0 : xΩ ≠ 0 := by
+  have hxE0 : xE ≠ 0 := by
     intro hx
-    have hx0 := congrFun hx 0
-    have hX0 : (X (0 : Fin 3) : A) ≠ 0 := X_ne_zero (R := k) 0
-    have hx0' : algebraMap K Ω (algebraMap A K (X (0 : Fin 3))) = 0 := by
-      rw [← IsScalarTower.algebraMap_apply A K Ω]
-      simpa [xΩ, φ] using hx0
-    have hx0K : algebraMap A K (X (0 : Fin 3)) = 0 := by
-      apply (algebraMap K Ω).injective
-      simpa only [map_zero] using hx0'
-    exact hX0 (IsFractionRing.to_map_eq_zero_iff.mp hx0K)
+    have hx0 : algebraMap K E (algebraMap A K (X (0 : Fin 3))) = 0 := congrFun hx 0
+    have hx0K : algebraMap A K (X (0 : Fin 3)) = 0 :=
+      (algebraMap K E).injective (by simpa only [map_zero] using hx0)
+    exact X_ne_zero (R := k) 0 (IsFractionRing.to_map_eq_zero_iff.mp hx0K)
   exact false_of_baseChanged_common_zero_of_smooth
-    F hF hF0 xΩ y hxΩ0 hy0 hFxy hgradΩ
+    F hF hF0 xE z hxE0 hz0 hFxy hgradE
 
 end
 
