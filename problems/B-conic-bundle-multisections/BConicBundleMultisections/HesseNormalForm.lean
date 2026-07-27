@@ -9,6 +9,7 @@ public import BConicBundleMultisections.Standard.ResidualLineMapDefinitions
 public import Mathlib.AlgebraicGeometry.EllipticCurve.IsomOfJ
 public import Mathlib.AlgebraicGeometry.EllipticCurve.ModelsWithJ
 public import Mathlib.Algebra.Polynomial.Monic
+public import BConicBundleMultisections.NeZeroTwoThree
 
 /-!
 # Elementary algebra for the Hesse family of plane cubics
@@ -96,7 +97,7 @@ theorem isSmoothPlaneCubic_hesseCubic (lam : k) (hlam : lam ^ 3 ≠ 1) :
   intro r hr _
   by_contra hgrad
   push Not at hgrad
-  have hthree : (3 : k) ≠ 0 := by norm_num
+  have hthree : (3 : k) ≠ 0 := three_ne_zero
   have h0 : r 0 ^ 2 = lam * r 1 * r 2 := by
     have h := hgrad (0 : Fin 3)
     rw [eval_pderiv_zero_hesseCubic] at h
@@ -161,15 +162,15 @@ theorem not_isSmoothPlaneCubic_hesseCubic_of_cube_eq_one (lam : k) (hlam : lam ^
   apply hi
   have hcube : lam ^ 3 - 1 = 0 := sub_eq_zero.mpr hlam
   fin_cases i
-  · simp [r]
+  · simp [r, three_ne_zero]
     calc
       1 - lam * lam ^ 2 = -(lam ^ 3 - 1) := by ring
       _ = 0 := by rw [hcube]; ring
-  · simp [r]
+  · simp [r, three_ne_zero]
     calc
       1 - lam * lam ^ 2 = -(lam ^ 3 - 1) := by ring
       _ = 0 := by rw [hcube]; ring
-  · simp [r]
+  · simp [r, three_ne_zero]
     calc
       (lam ^ 2) ^ 2 - lam = lam * (lam ^ 3 - 1) := by ring
       _ = 0 := by rw [hcube, mul_zero]
@@ -193,11 +194,13 @@ noncomputable def hesseJPolynomial (j : k) : Polynomial k :=
   Polynomial.X * (Polynomial.X + Polynomial.C 8) ^ 3 -
     Polynomial.C (j / 27) * (Polynomial.X - Polynomial.C 1) ^ 3
 
+omit [NeZero (2 : k)] [NeZero (3 : k)] in
 /-- The prescribed-`j` polynomial has degree four. -/
 theorem hesseJPolynomial_degree (j : k) : (hesseJPolynomial j).degree = 4 := by
   unfold hesseJPolynomial
   compute_degree!
 
+omit [NeZero (2 : k)] in
 /-- Every scalar is represented by the classical Hesse `j`-parameter, and the representing
 parameter lies in the smooth locus `λ³ ≠ 1`. -/
 theorem exists_hesseParameter_jValue_eq [IsAlgClosed k] (j : k) :
@@ -211,6 +214,8 @@ theorem exists_hesseParameter_jValue_eq [IsAlgClosed k] (j : k) :
     intro ht1
     subst t
     norm_num at ht'
+    have h729 : (729 : k) = 3 ^ 6 := by norm_num
+    exact pow_ne_zero 6 three_ne_zero (h729 ▸ ht')
   obtain ⟨lam, hlam⟩ := IsAlgClosed.exists_pow_nat_eq t (by norm_num : 0 < 3)
   have hlam_ne_one : lam ^ 3 ≠ 1 := by
     intro h
@@ -222,7 +227,8 @@ theorem exists_hesseParameter_jValue_eq [IsAlgClosed k] (j : k) :
     calc
       27 * t * (t + 8) ^ 3 = 27 * (t * (t + 8) ^ 3) := by ring
       _ = 27 * ((j / 27) * (t - 1) ^ 3) := by rw [hbase]
-      _ = j * (t - 1) ^ 3 := by field_simp
+      _ = j * (t - 1) ^ 3 := by
+        field_simp [twentyseven_ne_zero']
   rw [hesseJValue, hlam]
   rw [div_eq_iff (pow_ne_zero 3 (sub_ne_zero.mpr ht_ne_one))]
   exact heq

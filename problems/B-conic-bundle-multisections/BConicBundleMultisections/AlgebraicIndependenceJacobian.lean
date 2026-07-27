@@ -86,7 +86,7 @@ theorem pderiv_aeval {σ : Type*} [Fintype σ] [DecidableEq σ]
 If the three rows `Y`, `∂Y/∂i₁`, `∂Y/∂i₂` are linearly independent — witnessed by a nonzero
 determinant — then no nonzero homogeneous form vanishes on `Y`. -/
 theorem eq_zero_of_isHomogeneous_of_aeval_eq_zero
-    [IsDomain k] [NeZero (2 : k)] [NeZero (3 : k)]
+    [IsDomain k] [CharZero k]
     (Y : Fin 3 → MvPolynomial τ k) (i₁ i₂ : τ)
     (hdet : (Matrix.of ![Y, fun a => pderiv i₁ (Y a), fun a => pderiv i₂ (Y a)]).det ≠ 0)
     (d : ℕ) (Ψ : MvPolynomial (Fin 3) k) (hΨ : Ψ.IsHomogeneous d)

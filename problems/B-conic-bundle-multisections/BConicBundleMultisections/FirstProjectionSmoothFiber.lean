@@ -163,7 +163,7 @@ theorem exists_fractionRing_coordinateDerivation
 
 /-- The coordinate derivations extend further to the algebraic closure of the fraction field. -/
 theorem exists_algebraicClosure_coordinateDerivation
-    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)] (i : Fin 3) :
+    {k : Type u} [Field k] [CharZero k] (i : Fin 3) :
     let A := MvPolynomial (Fin 3) k
     let K := FractionRing A
     let Ω := AlgebraicClosure K
@@ -369,7 +369,7 @@ theorem false_of_baseChanged_common_zero_of_smooth
 This is the exact coordinate conclusion previously obtained from the unformalized
 scheme-theoretic generic-smoothness theorem. -/
 theorem exists_nonsingularCubicFiber_of_smooth_coordinate
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
