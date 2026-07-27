@@ -1650,16 +1650,12 @@ theorem polarEval_stereo_pderiv_t_ne_zero
     exact coordinateLineSpecializedConic_ne_zero_of_smooth k F hF hF0 t0 this
   · -- Constant family case: pure-t coeffs constant ⇒ F vanishes on the fibre over (0:1:0)
     push Not at hroot
-    have hdeg0 : f.natDegree = 0 := by
-      by_contra hpos
-      have hdeg_ne : f.degree ≠ 0 := by
-        intro hdeg0'
-        apply hpos
-        rw [Polynomial.natDegree, hdeg0']
-        simp
-      obtain ⟨t0, ht0⟩ := IsAlgClosed.exists_root f hdeg_ne
-      exact hroot t0 ht0
-    have hfC : f = Polynomial.C (f.coeff 0) := Polynomial.eq_C_of_natDegree_eq_zero hdeg0
+    -- Rootless implies constant.  This is the only place in the motion leaf where algebraic
+    -- closure is consumed directly, and it is not a leaf of its own: it is
+    -- `eq_C_of_forall_eval_ne_zero`, whose geometric twin
+    -- `eq_C_of_forall_eval_ne_zero_of_geometric` asks only that the field the root is looked for
+    -- in be closed.  Routing through the named lemma keeps the two in step.
+    obtain ⟨c0, _hc0, hfC⟩ := eq_C_of_forall_eval_ne_zero f hroot
     -- Remaining pure-t packaging at infinity
     have hinf : specializeSecondCoordinates (m := 2) (![0, 1, (0 : k)]) F = 0 := by
       -- All q_ij are constant (proportional to constant f), so the specialized conic
@@ -1675,7 +1671,7 @@ theorem polarEval_stereo_pderiv_t_ne_zero
       have hpath :
           MvPolynomial.eval (Sum.elim n (coordinateLinePoint (Polynomial k) Polynomial.X))
               (MvPolynomial.map (Polynomial.C : k →+* Polynomial k) F) =
-            Polynomial.C (f.coeff 0 * MvPolynomial.eval x Q0) := by
+            Polynomial.C (c0 * MvPolynomial.eval x Q0) := by
         refine Polynomial.funext fun t => ?_
         have hspec :
             MvPolynomial.eval (Sum.elim x (coordinateLinePoint k t)) F =

@@ -54,6 +54,22 @@ them in an arbitrary commutative ring, along an arbitrary ring hom.
 `elimCertificates_spec` and `exists_defining_set_forms_no_common_zero` above it already took
 coefficients in an arbitrary commutative ring, so the elimination theorem was stated in the
 descended form from the start.  The gap was one level down.
+
+## What consumes each row
+
+* Row 1 (nonvanishing, free) — `exists_det_ne_zero_of_forall_ne_zero_of_geometric` below.
+* Row 2 (injectivity) — `Hypersurface.ne_zero_of_exists_pderiv_ne_zero_of_geometric`,
+  `eq_C_of_forall_eval_ne_zero_of_geometric`,
+  `eq_smul_of_eval_eq_zero_on_isotropic_cone_of_geometric`.  In each the conclusion is an identity
+  or a nonvanishing over the small field, reached after the work is done over the large one.
+* Row 3 (ideal membership) — `Hypersurface.sup_span_pderiv_eq_top_of_exists_pderiv_ne_zero_of_geometric`
+  and `BiprojectiveSpace.span_range_coeff_baseChangedChartEquation_id_eq_top_of_geometric`, both via
+  `ideal_eq_top_of_map_eq_top` below.
+
+The third kind of hypothesis — existence of a rational point — has no row, because it does not
+descend at all.  `exists_common_nonzero_zero_of_card_lt_of_geometric` and the Tsen section are of
+that kind: the best available over a general field is the point over an algebraic closure, and
+anything wanting a point over the base field has to be given one.
 -/
 
 @[expose] public section
