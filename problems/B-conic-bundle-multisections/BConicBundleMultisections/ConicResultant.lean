@@ -40,19 +40,27 @@ in the concrete form needed downstream: a common projective zero of `q` and `q'`
 * `exists_isHomogeneous_ne_zero_aeval_eq_zero` — the packaged form.  Coprimality alone (no
   hypothesis at the centre of projection) already forces a nonzero binary form of degree `≤ 4`
   over `K` to vanish at the last two coordinates of any common zero.
-* `exists_polynomial_ne_zero_natDegree_le_four` — the univariate consequence: the coordinate
-  ratio is a root of a nonzero polynomial of degree at most `4` over `K`.
+* `exists_polynomial_ne_zero_natDegree_le_four` — the univariate consequence: for `v ≠ 0` the
+  coordinate ratio `u / v` is a root of a nonzero polynomial of degree at most `4` over `K`;
+  `exists_polynomial_ne_zero_natDegree_le_four_of_ratio` covers `v = 0` as well.
+* `MvPolynomial.exists_isHomogeneous_of_dvd_isHomogeneous` — a divisor of a nonzero homogeneous
+  polynomial over a domain is homogeneous.  The substance is
+  `MvPolynomial.exists_isHomogeneous_of_mul_isHomogeneous`, already in
+  `BConicBundleMultisections.HomogeneousFactor`; this is only the `∣` phrasing.
 
 ## The hypothesis at the centre of projection is necessary
 
 `conicResultant_ne_zero` needs `q` or `q'` to be nonzero at `(1 : 0 : 0)`, i.e. `a ≠ 0` or
-`a' ≠ 0`.  This is not an artefact.  Both `X 0 * X 1 + X 2 ^ 2` and `X 0 * X 2 + X 1 ^ 2` are
-irreducible and non-associate, yet both have `a = 0`, so their resultant vanishes identically.
-See `conicResultant_degenerate_counterexample`.  Geometrically, the resultant of the projection
-away from a point that lies on *both* conics carries no information.
+`a' ≠ 0`.  This is not an artefact of the proof: the statement is **false** without it.
+`conicResultant_degenerate_counterexample` exhibits, over an arbitrary field, the irreducible and
+non-associate pair `X 1 * X 0 + X 2 ^ 2`, `X 2 * X 0 + X 1 ^ 2`, both of which have `a = 0`, so
+their resultant vanishes identically.  Geometrically, projection away from a point lying on
+*both* conics carries no information: `conicResultant_eq_zero_of_eval_centre` shows the resultant
+is identically zero on that whole locus.
 
 The packaged statement `exists_isHomogeneous_ne_zero_aeval_eq_zero` survives that degeneration by
-falling back on the binary **cubic** `b * c' - b' * c`, and then on `c` itself.
+falling back on the binary **cubic** `b * c' - b' * c` (`conicSubresultant`), and then, when that
+too vanishes, on `c` itself.
 -/
 
 @[expose] public section
@@ -160,13 +168,6 @@ theorem finSuccEquiv_succEmb (u : MvPolynomial (Fin 2) K) :
   | C r => simp [MvPolynomial.finSuccEquiv_apply]
   | add p q hp hq => simp [hp, hq]
   | mul_X p i hp => simp [hp, MvPolynomial.finSuccEquiv_X_succ]
-
-@[simp]
-theorem ternaryCoeff_succEmb_mul_X_pow (u : MvPolynomial (Fin 2) K) (k i : ℕ) :
-    ternaryCoeff (succEmb u * MvPolynomial.X 0 ^ k) i = if i = k then u else 0 := by
-  simp only [ternaryCoeff, map_mul, map_pow, finSuccEquiv_succEmb,
-    MvPolynomial.finSuccEquiv_X_zero, Polynomial.coeff_C_mul, Polynomial.coeff_X_pow]
-  split <;> simp_all
 
 theorem ternaryCoeff_isHomogeneous {q : MvPolynomial (Fin 3) K} {n : ℕ}
     (hq : q.IsHomogeneous n) (i j : ℕ) (h : i + j = n) :
@@ -636,6 +637,22 @@ theorem exists_polynomial_ne_zero_natDegree_le_four {L : Type v} [Field L] [Alge
       fin_cases i <;> simp
     have := congrArg (fun φ => φ P) hcomp
     simpa [BinaryForm.dehomogenize, hscale] using this
+
+/-- **The `v = 0` chart.**  Without any nonvanishing hypothesis, one of the two coordinate ratios
+of a common zero is a root of a nonzero polynomial of degree at most `4` over `K`.  When `v = 0`
+the other ratio `v / u` is `0`, which is the trivial case; the content is
+`exists_polynomial_ne_zero_natDegree_le_four`. -/
+theorem exists_polynomial_ne_zero_natDegree_le_four_of_ratio {L : Type v} [Field L] [Algebra K L]
+    {q q' : MvPolynomial (Fin 3) K} (hq : q.IsHomogeneous 2) (hq' : q'.IsHomogeneous 2)
+    (hrel : IsRelPrime q q') {t u v : L} (h : MvPolynomial.aeval ![t, u, v] q = 0)
+    (h' : MvPolynomial.aeval ![t, u, v] q' = 0) :
+    ∃ f : Polynomial K, f ≠ 0 ∧ f.natDegree ≤ 4 ∧
+      (Polynomial.aeval (u / v) f = 0 ∨ Polynomial.aeval (v / u) f = 0) := by
+  by_cases hv : v = 0
+  · exact ⟨Polynomial.X, Polynomial.X_ne_zero, by simp, Or.inr (by simp [hv])⟩
+  · obtain ⟨f, hf0, hfd, hfz⟩ :=
+      exists_polynomial_ne_zero_natDegree_le_four hq hq' hrel h h' hv
+    exact ⟨f, hf0, hfd, Or.inl hfz⟩
 
 /-! ### The hypothesis at the centre of projection is necessary
 
