@@ -101,7 +101,7 @@ theorem baseChangedChartEquation_eq_chartDehomogenization
 /-- On every product chart, the coefficients (over the base chart ring) of the affine conic
 equation generate the unit ideal.  Otherwise the Nullstellensatz produces a base point at which
 that whole conic chart, hence the homogeneous conic, vanishes. -/
-theorem span_range_coeff_baseChangedChartEquation_id_eq_top
+private theorem span_range_coeff_baseChangedChartEquation_id_eq_top_of_isAlgClosed
     {k : Type u} [Field k] [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
@@ -379,6 +379,24 @@ theorem flat_affineChartQuotientYHom_of_span_range_coeff_eq_top
   exact (RingHom.Flat.comp_iff_of_bijective_left
     (standardChartQuotientEquivAffineQuotient
       (R := k) (i := i) (j := j) F).bijective).mpr hf₀
+
+/-- **On every product chart the coefficients of the affine conic equation generate the unit
+ideal**, over an arbitrary base field.  The Nullstellensatz is run over `AlgebraicClosure k`,
+where the no-whole-fibre input is supplied by smoothness over `k` alone. -/
+theorem span_range_coeff_baseChangedChartEquation_id_eq_top
+    {k : Type u} [Field k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
+    (i j : Fin 3) :
+    Ideal.span (Set.range fun d ↦
+      (baseChangedChartEquation (i := i) (j := j)
+        (AlgHom.id k (ProjectiveSpace.StandardChartRing 2 k j)) F).coeff d) = ⊤ :=
+  span_range_coeff_baseChangedChartEquation_id_eq_top_of_geometric
+    (L := AlgebraicClosure k) F hF i j
+    (fun y hy =>
+      not_specializeSecondCoordinates_map_eq_zero_of_smooth_bidegree23_of_geometric
+        k F hF hF0 y hy)
 
 /-- The chart quotient map is flat over an arbitrary base field, from the geometric
 no-whole-fibre hypothesis. -/

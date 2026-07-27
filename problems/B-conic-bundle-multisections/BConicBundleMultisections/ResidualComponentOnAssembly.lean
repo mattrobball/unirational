@@ -170,7 +170,7 @@ entire pointed-conic pullback is rational or integral.  Global flatness and the 
 integrality of the generic conic fibre make the explicit stereographic open dense, which is all
 the unirationality argument needs. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_residualComponentOn_open
-    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     [Flat (biprojectiveZeroLocusSnd 2 2 k F)]

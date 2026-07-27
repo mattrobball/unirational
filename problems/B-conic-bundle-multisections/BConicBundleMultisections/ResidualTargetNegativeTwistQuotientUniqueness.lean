@@ -70,7 +70,7 @@ The coefficient-span theorem makes this polynomial primitive.  The retained-char
 instance rules out the only exceptional case in which the zero polynomial could have unit
 coefficient ideal, namely a trivial coefficient ring. -/
 theorem affineChartEquationOverTargetRelationBase_ne_zero_of_smooth_irreducible
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -94,7 +94,7 @@ theorem affineChartEquationOverTargetRelationBase_ne_zero_of_smooth_irreducible
 The right-hand side `Q` is arbitrary, so this applies both to residual equations and to any
 other chartwise divisibility construction. -/
 theorem factor_over_targetRelationBase_unique_of_smooth_irreducible
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]

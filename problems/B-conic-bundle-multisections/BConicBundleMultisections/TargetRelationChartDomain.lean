@@ -182,7 +182,6 @@ theorem sumAlgEquiv_affineChartEquation_rename_inr
 /-- Smoothness makes the restricted conic equation primitive over every nonempty chart of
 `V(H)`. -/
 theorem span_range_coeff_affineChartEquationOverTargetRelationBase_eq_top
-    [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -218,7 +217,6 @@ theorem span_range_coeff_affineChartEquationOverTargetRelationBase_eq_top
 /-- The restricted affine conic equation generates a prime ideal over every nonempty
 target-relation chart. -/
 theorem isPrime_span_affineChartEquationOverTargetRelationBase
-    [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -267,7 +265,6 @@ set_option maxHeartbeats 2000000 in
 /-- Splitting the two affine variable blocks and quotienting the `y`-equation identifies the
 two-equation chart ideal with the integral affine conic above. -/
 theorem isPrime_twoEquationAffineChartIdeal_targetRelation
-    [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -387,7 +384,7 @@ set_option maxHeartbeats 800000 in
 /-- Every first-block affine coordinate remains nonzero in a retained target-relation chart.
 This is the algebraic overlap input for changing the first projective standard chart. -/
 theorem quotient_X_inl_ne_zero_twoEquationAffineChartIdeal_targetRelation
-    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -448,7 +445,6 @@ set_option maxHeartbeats 800000 in
 /-- A retained second-block affine coordinate remains nonzero in the target-relation chart.
 The hypothesis is the homogeneous nondivisibility statement for that coordinate. -/
 theorem quotient_X_inr_ne_zero_twoEquationAffineChartIdeal_targetRelation
-    [IsAlgClosed k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
