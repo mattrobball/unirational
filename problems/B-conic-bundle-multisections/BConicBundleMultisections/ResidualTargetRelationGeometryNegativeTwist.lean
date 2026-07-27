@@ -54,12 +54,12 @@ def TargetRelationsResidualNegativeTwistGluingAwayDiscriminantOn
     (M N : Matrix (Fin 3) (Fin 3) k)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) : Prop :=
   ∀ (H : MvPolynomial (Fin 3) k) (d : ℕ),
-    ∀ (hHirr : Irreducible H) (hHhom : H.IsHomogeneous d) (_hd : 0 < d),
+    ∀ (hHabs : IsAbsolutelyIrreducible H) (hHhom : H.IsHomogeneous d) (_hd : 0 < d),
       ∀ (_hdisc : ¬ H ∣ sndConicDiscriminant F),
         ∃ comparison :
             (b : ProjectiveSpace.NonemptyHypersurfaceChart H) →
               ProjectiveSpace.GlobalSectionsToHypersurfaceFunctionFieldComparison
-                H hHhom hHirr b,
+                H hHhom hHabs.irreducible b,
           ∀ (a : Fin 3)
               (R : (b : ProjectiveSpace.NonemptyHypersurfaceChart H) →
                 MvPolynomial (Fin 2) (targetRelationBaseChartRing k H b.1)),
@@ -70,9 +70,9 @@ def TargetRelationsResidualNegativeTwistGluingAwayDiscriminantOn
               ∀ (b : ProjectiveSpace.NonemptyHypersurfaceChart H)
                   (e : Fin 2 →₀ ℕ),
                 ProjectiveSpace.QuadraticMultiplesExtendToGlobal
-                  H hHhom hHirr b (comparison b)
+                  H hHhom hHabs.irreducible b (comparison b)
                   (ProjectiveSpace.hypersurfaceChartQuotientToFunctionField
-                    H hHhom hHirr b ((R b).coeff e))
+                    H hHhom hHabs.irreducible b ((R b).coeff e))
 
 /-- Projective integrality plus negative-twist gluing imply the exact residual target-relation
 membership package.  No reducedness hypothesis on the affine complete-intersection cone is
@@ -125,7 +125,7 @@ theorem residualTargetRelationMembershipAwayDiscriminantOn_of_negativeTwistGeome
     TargetRelationGenericFiber.residualTargetComponentOnι_isIso_of_isLocallyArtinian_genericFiber
       p₀ q₀ r N hMN F hF v hv i j H hHhom hvan
   obtain ⟨comparison, hext⟩ :=
-    hglue H d hHirr hHhom hd hdisc
+    hglue H d hHabs hHhom hd hdisc
   let localFactor :
       (a : Fin 3) → (b : ProjectiveSpace.NonemptyHypersurfaceChart H) →
         MvPolynomial (Fin 2) (targetRelationBaseChartRing k H b.1) :=

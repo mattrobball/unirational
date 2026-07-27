@@ -89,7 +89,8 @@ theorem targetRelationsResidualNegativeTwistGluingAwayDiscriminantOn_of_compatib
                     ProjectiveSpace.hypersurfaceChartQuotientToFunctionField
                       H hHhom hHirr b ((R b).coeff e))) :
     TargetRelationsResidualNegativeTwistGluingAwayDiscriminantOn M N F := by
-  intro H d hHirr hHhom hd _hdisc
+  intro H d hHabs hHhom hd _hdisc
+  have hHirr : Irreducible H := hHabs.irreducible
   refine ⟨fun b =>
     ProjectiveSpace.canonicalGlobalSectionsToHypersurfaceFunctionFieldComparison
       H hHhom hHirr b, ?_⟩
