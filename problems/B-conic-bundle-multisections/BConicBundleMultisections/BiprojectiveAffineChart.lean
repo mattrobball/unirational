@@ -413,6 +413,30 @@ def affineChartEquation (m n : ℕ) (R : Type u) [CommRing R]
     MvPolynomial (Fin m ⊕ Fin n) R :=
   affineChartEvaluation m n R i j F
 
+/-- **Formation of an explicit affine chart equation commutes with a change of coefficient
+ring.**  Same statement as `MvPolynomialFractionRing.map_affineChartEquation`, placed next to the
+definition so that it is available to the low-level base-change arguments. -/
+theorem map_affineChartEquation
+    {m n : ℕ} {R : Type u} {S : Type u} [CommRing R] [CommRing S]
+    (φ : R →+* S) (i : Fin (m + 1)) (j : Fin (n + 1))
+    (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    MvPolynomial.map φ (affineChartEquation m n R i j F) =
+      affineChartEquation m n S i j (MvPolynomial.map φ F) := by
+  unfold affineChartEquation affineChartEvaluation
+  induction F using MvPolynomial.induction_on with
+  | C a => simp
+  | add f g hf hg => simp_all
+  | mul_X f z hf =>
+      cases z with
+      | inl l =>
+          simp only [map_mul, MvPolynomial.map_X, MvPolynomial.aeval_X, hf]
+          rcases Fin.eq_self_or_eq_succAbove i l with rfl | ⟨r, rfl⟩ <;>
+            simp [affineChartVariable]
+      | inr l =>
+          simp only [map_mul, MvPolynomial.map_X, MvPolynomial.aeval_X, hf]
+          rcases Fin.eq_self_or_eq_succAbove j l with rfl | ⟨r, rfl⟩ <;>
+            simp [affineChartVariable]
+
 /-- Transporting the chart equation through the product-chart coordinate equivalence gives its
 explicit affine dehomogenization. -/
 theorem standardChartRingEquivMvPolynomial_chartEquation

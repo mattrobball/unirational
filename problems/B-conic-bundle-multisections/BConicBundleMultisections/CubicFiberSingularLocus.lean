@@ -489,24 +489,6 @@ section CubicFibre
 
 variable {k : Type u} [Field k]
 
-/-- A change of coefficient ring commutes with first-block specialisation, provided the
-specialisation point is transported along the same map.
-
-The tree has this for the affine-plane ring
-(`SpecializedConicFreeDir.map_specializeFirstCoordinates`); this is the same induction with the
-coefficient rings left general. -/
-theorem map_specializeFirstCoordinates_general {m n : ℕ} {R S : Type*} [CommRing R] [CommRing S]
-    (x : Fin (m + 1) → R) (φ : R →+* S) (H : MvPolynomial (BiprojectiveCoordinate m n) R) :
-    map φ (specializeFirstCoordinates (n := n) x H)
-      = specializeFirstCoordinates (n := n) (fun i => φ (x i)) (map φ H) := by
-  induction H using MvPolynomial.induction_on with
-  | C c => simp [map_C]
-  | add f g hf hg => simp [map_add, hf, hg]
-  | mul_X f i hf =>
-      cases i with
-      | inl j => simp [map_mul, map_C, map_X, hf, specializeFirstCoordinates_X_inl]
-      | inr j => simp [map_mul, map_X, hf, specializeFirstCoordinates_X_inr]
-
 /-- **The universal cubic fibre**: `F` read as a ternary cubic whose ten coefficients are the
 quadratic forms in the first-block coordinates that they are.  Specialising the coefficients at a
 point `x` gives the cubic fibre over `x`. -/

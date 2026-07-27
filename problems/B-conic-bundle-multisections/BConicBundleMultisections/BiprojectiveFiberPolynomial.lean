@@ -179,6 +179,28 @@ theorem map_specializeSecondCoordinates {m n : ℕ} {R S : Type*} [CommSemiring 
         simp only [RingHom.comp_apply, AlgHom.toRingHom_eq_coe, AlgHom.coe_toRingHom,
           specializeSecondCoordinates_X_inr, map_X, map_C]
 
+/-- **A change of coefficient ring commutes with first-block specialization**, provided the
+specialization point is transported along the same map. -/
+theorem map_specializeFirstCoordinates_general
+    {m n : ℕ} {R S : Type*} [CommSemiring R] [CommSemiring S]
+    (f : R →+* S) (x : Fin (m + 1) → R) (F : MvPolynomial (BiprojectiveCoordinate m n) R) :
+    map f (specializeFirstCoordinates (n := n) x F)
+      = specializeFirstCoordinates (n := n) (fun i => f (x i)) (map f F) := by
+  revert F
+  suffices h : (map f).comp (specializeFirstCoordinates (n := n) x).toRingHom
+      = ((specializeFirstCoordinates (n := n) fun i => f (x i)).toRingHom).comp (map f) from
+    fun F => congrFun (congrArg (fun g => (g : _ →+* _).toFun) h) F
+  refine MvPolynomial.ringHom_ext (fun r => ?_) (fun z => ?_)
+  · simp only [RingHom.comp_apply, AlgHom.toRingHom_eq_coe, AlgHom.coe_toRingHom,
+      specializeFirstCoordinates_C, map_C]
+  · cases z with
+    | inl i =>
+        simp only [RingHom.comp_apply, AlgHom.toRingHom_eq_coe, AlgHom.coe_toRingHom,
+          specializeFirstCoordinates_X_inl, map_X, map_C]
+    | inr j =>
+        simp only [RingHom.comp_apply, AlgHom.toRingHom_eq_coe, AlgHom.coe_toRingHom,
+          specializeFirstCoordinates_X_inr, map_X]
+
 /-- Partial evaluation in the first coordinate block commutes with differentiation in the
 second block. -/
 theorem specializeFirstCoordinates_pderiv_inr
