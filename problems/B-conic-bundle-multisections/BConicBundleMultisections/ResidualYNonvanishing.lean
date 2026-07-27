@@ -245,7 +245,9 @@ parameter to a Zariski-open set of them.
    characteristic `p`, Euler's identity in `y` degenerates and a fibration all of whose fibres are
    singular over a smooth total space is not excluded (quasi-elliptic fibrations in characteristics
    `2` and `3` realize this).  This is the coordinate form of
-   `Standard.exists_nonempty_open_smooth_restrict` (Hartshorne III.10.7).
+   `Standard.exists_nonempty_open_smooth_restrict` (Hartshorne III.10.7).  It is now the *only*
+   `CharZero` in this chain: `stereoJacobianDet_ne_zero_of_smooth` used to need it too, through the
+   wronskian lemma, and no longer does — see `StereoJacobian.exists_C_mul_of_wronskian_eq_zero`.
 2. **The stereo image is dense in `ℙ²_x`.**  This is what `hv2` buys, and it is why that hypothesis
    is here.  With `v₂ ≠ 0` the lines through `v(t)` meeting `{x₂ = 0}` are *all* the lines through
    `v(t)`, so `s ↦ x(t, s)` sweeps the whole conic `Q_t`; and the conics `Q_y`, `y ∈ L`, are not
