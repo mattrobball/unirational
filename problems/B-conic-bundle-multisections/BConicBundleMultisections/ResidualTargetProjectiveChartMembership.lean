@@ -40,7 +40,7 @@ namespace BiprojectiveSpace
 /-- Scheme-theoretic exhaustion gives literal two-equation membership after dehomogenizing on
 any standard biprojective chart. -/
 theorem affineChartEquation_residualEquationOn_mem_targetRelationChart_of_isIso
-    {k : Type u} [Field k] [Infinite k]
+    {k : Type u} [Field k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)

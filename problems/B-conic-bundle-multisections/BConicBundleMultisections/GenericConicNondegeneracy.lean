@@ -97,7 +97,7 @@ theorem map_genericSndConicChartZero_coordinateLine
 
 /-- The universal chart conic has nonzero polar determinant. -/
 theorem det_polarMatrix_genericSndConicChartZero_ne_zero_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -137,7 +137,7 @@ theorem det_polarMatrix_genericSndConicChartZero_ne_zero_of_smooth
 /-- Dominant base-chart maps preserve nondegeneracy of the generic conic. -/
 theorem det_polarMatrix_map_genericSndConicChartZero_ne_zero
     {k A : Type u} [Field k] [CommRing A] [IsDomain A] [Algebra k A]
-    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -286,7 +286,7 @@ theorem exists_eval_pderiv_ne_zero_of_det_polarMatrix_ne_zero
 This is the exact replacement for the old appeal to a smooth dense open. -/
 theorem slopeLin_baseChangedChartEquation_ne_zero_of_smooth
     {k A : Type u} [Field k] [CommRing A] [IsDomain A] [Algebra k A]
-    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]

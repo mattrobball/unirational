@@ -31,7 +31,7 @@ universe u
 /-- Membership of the residual equation in a nonconstant vertical target-relation ideal forces
 the residual line to be constant. -/
 theorem residualLineConstantOn_of_mem_targetRelation
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     (M N : Matrix (Fin 3) (Fin 3) K)
     {F : MvPolynomial (BiprojectiveCoordinate 2 2) K} (hF : IsBidegree23 F)
     (hq0 : residualEquationOn M N F ≠ 0)

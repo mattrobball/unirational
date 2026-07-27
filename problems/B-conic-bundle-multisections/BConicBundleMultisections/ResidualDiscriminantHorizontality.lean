@@ -61,7 +61,7 @@ def ResidualTargetRelationMembershipAwayDiscriminantOn
 /-- G3, discriminant avoidance, and target-relation membership exclude every nonzero
 homogeneous relation on the residual target coordinates. -/
 theorem eq_zero_of_aeval_residualYCoordsOn_of_membershipAwayDiscriminant
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     (p₀ q₀ r : Fin 3 → K) (N : Matrix (Fin 3) (Fin 3) K)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K) (hF : IsBidegree23 F)
     (v : Fin 3 → Polynomial K)

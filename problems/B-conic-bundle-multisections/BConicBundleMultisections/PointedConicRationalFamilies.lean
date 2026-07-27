@@ -587,7 +587,7 @@ Equivalently: the coefficients of `F` at the monomials `x^a` with `aᵢ = 0` do 
 is precisely the assertion that the quadratic part of the `i`-th dehomogenization of `F(·, y)` is
 not identically zero, which is the quadratic nondegeneracy condition of
 `exists_chartEquation_openImmersion`. -/
-theorem not_X_inl_dvd_of_smooth {k : Type u} [Field k] [IsAlgClosed k]
+theorem not_X_inl_dvd_of_smooth {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] (i : Fin 3) :
@@ -2170,7 +2170,7 @@ to the generic point of any integral dominant base.  Unlike the preceding
 open-restriction theorem, this uses the explicit generic discriminant
 calculation and therefore needs no chosen smooth open. -/
 theorem isIntegral_genericFiber_pullback_biprojectiveZeroLocusSnd_direct
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -3290,7 +3290,7 @@ set_option maxHeartbeats 1200000 in
 /-- **Quadratic half of C₄.**  Nonvanishing of the slope-quadratic of the base-changed chart
 equation, from global smoothness forbidding `Xᵢ ∣ F`.  No fibre-smoothness input. -/
 theorem chartEquation_slopeQuad_ne_zero
-    {k : Type u} [Field k] [IsAlgClosed k]
+    {k : Type u} [Field k]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {A : Type u} [CommRing A] [IsDomain A] [Algebra k A]
@@ -3459,7 +3459,7 @@ set_option maxHeartbeats 400000 in
 /-- **C₄ assembled.** Quadratic half from `chartEquation_slopeQuad_ne_zero`; linear half from
 the bidegree-specific generic-conic determinant on the standard base chart. -/
 theorem chartEquation_nondegenerate
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {A : Type u} [CommRing A] [IsDomain A] [Algebra k A]
@@ -3496,7 +3496,7 @@ The linear nondegeneracy now comes from the explicit polar determinant of the un
 the standard base chart, so this statement needs no smooth-open witness for the projection.
 -/
 theorem exists_chartEquation_openImmersion
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]
@@ -3561,7 +3561,7 @@ substituted away and the two nondegeneracy conditions become conditions on `α, 
 translated linear part — the latter by `eval_pderiv_zero_affineConicPoly` and its sibling, which
 identify that part with the gradient at the marked point. -/
 theorem exists_conicChart_openImmersion
-    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
     {T : Scheme.{u}} [IsIntegral T] (t : T ⟶ ProjectiveSpace 2 k) [IsDominant t]

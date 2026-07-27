@@ -123,7 +123,7 @@ theorem aeval_residualCoordsOn_residualEquationOn
 /-- The localized and separately normalized coordinates used by the residual scheme morphism
 still annihilate the arbitrary-line residual equation. -/
 theorem aeval_residualComponentOnCoordsNorm_residualEquationOn
-    {k : Type u} [Field k] [Infinite k]
+    {k : Type u} [Field k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
@@ -157,7 +157,7 @@ theorem aeval_residualComponentOnCoordsNorm_residualEquationOn
 /-- If the scheme-theoretic residual component exhausts `X_H`, then the global ideal sheaf of
 the residual equation is contained in the ideal sheaf of `X_H` in biprojective space. -/
 theorem biprojectiveZeroLocusIdeal_residualEquationOn_le_targetRelationIdeal_of_isIso
-    {k : Type u} [Field k] [Infinite k]
+    {k : Type u} [Field k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
@@ -217,7 +217,7 @@ theorem biprojectiveZeroLocusIdeal_residualEquationOn_le_targetRelationIdeal_of_
 /-- Scheme-theoretic exhaustion of `X_H` forces the residual equation to vanish at every
 nonzero common projective zero of `F` and `H(y)`. -/
 theorem aeval_residualEquationOn_eq_zero_of_targetRelation_isIso
-    {k : Type u} [Field k] [Infinite k]
+    {k : Type u} [Field k]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)

@@ -396,7 +396,7 @@ relation, then that relation is linear and the residual equation has a common fa
 degree zero.  Thus its three line coefficients are proportional after identifying a right-degree
 zero Cox polynomial with a first-block polynomial. -/
 theorem residualEquationOn_factor_of_mem_targetRelation
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     (M N : Matrix (Fin 3) (Fin 3) K)
     {F : MvPolynomial (BiprojectiveCoordinate 2 2) K} (hF : IsBidegree23 F)
     (hq0 : residualEquationOn M N F ≠ 0)
@@ -413,7 +413,7 @@ theorem residualEquationOn_factor_of_mem_targetRelation
 /-- Primitive form of the preceding theorem: the residual equation itself is a scalar multiple
 of the constant target line. -/
 theorem residualEquationOn_eq_C_mul_targetRelation_of_primitive
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     (M N : Matrix (Fin 3) (Fin 3) K)
     {F : MvPolynomial (BiprojectiveCoordinate 2 2) K} (hF : IsBidegree23 F)
     (hq0 : residualEquationOn M N F ≠ 0)
@@ -435,7 +435,7 @@ This statement concerns the whole complete intersection.  Passing from a relatio
 irreducible component to membership in this radical is the separate geometric input discussed in
 the module docstring. -/
 theorem residualEquationOn_rename_inr_not_mem_radical
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     (M N : Matrix (Fin 3) (Fin 3) K)
     {F : MvPolynomial (BiprojectiveCoordinate 2 2) K} (hF : IsBidegree23 F)
     {P : MvPolynomial (Fin 3) K} (hP : P ≠ 0) :
@@ -447,7 +447,7 @@ theorem residualEquationOn_rename_inr_not_mem_radical
 /-- The complete-intersection ideal `(F, residualEquationOn M N F)` contracts trivially to the
 second Cox block. -/
 theorem residualEquationOn_secondBlock_comap_radical_eq_bot
-    {K : Type u} [Field K] [Infinite K]
+    {K : Type u} [Field K]
     (M N : Matrix (Fin 3) (Fin 3) K)
     {F : MvPolynomial (BiprojectiveCoordinate 2 2) K} (hF : IsBidegree23 F) :
     Ideal.comap (rename (R := K) Sum.inr)
