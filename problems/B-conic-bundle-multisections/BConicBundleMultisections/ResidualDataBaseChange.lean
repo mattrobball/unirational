@@ -21,8 +21,9 @@ The closure-free form of the main theorem hypothesises a line `L = span(p₀, q�
 4. `lineStereoPolarForm p₀ q₀ F v ≠ 0` — stereographic nondegeneracy;
 5. **G4**, `ResidualAvoidsConicDiscriminantOn p₀ q₀ r N F v`;
 
-plus the isotropy of `v` itself.  Four of the five — (1)–(4) minus the isotropy, i.e. (1), (2), (3),
-(4) and (5) — are *checkable after enlarging the field*.  This module proves that.
+plus the isotropy of `v` itself.  Four of the five — (2), (3), (4), (5) — are *checkable after
+enlarging the field*: verify them over any extension `K ⊇ k` and they hold over `k`.  Condition (1)
+moves the other way, and for free, being an identity.  This module proves both.
 
 ## What is transferred and why it is legitimate
 
@@ -46,7 +47,9 @@ From them the transfer statements follow by the trichotomy of `GeometricPointDes
   a witness: from a witness `(g, c)` over `K` one cannot in general read off one over `k` (the `K`
   chosen `g` need not be defined over `k`).  What descends is the vanishing of all `2 × 2` minors
   of the coefficient matrix, and rank-≤-1 is *equivalent* to that vanishing over any field.  This
-  is `residualLineConstantOn_iff_coeffMinorsVanish` below.
+  is `residualLineConstantOn_iff_minorsVanish` below.
+
+The packaged form is `goodLineData_of_map`; the frame relation is `lineFrame_map_mul_map_of`.
 
 ## What does **not** transfer
 
@@ -54,15 +57,12 @@ The Tsen section `v` itself.  A section of the conic bundle over `K(t)` says not
 `k(t)`, and no base change repairs that: it is the arithmetic input, and the closure-free theorem
 must take it as a hypothesis over `k`.  Nothing in this module produces a section.
 
-Note also that the *frame relation* (1) transfers by `lineFrame_map_mul_map`, which already exists;
-it is recalled here only inside the packaged transfer theorem.
-
 ## Namespace
 
-Everything lives in `BConicBundleMultisections.ResidualDataBaseChange`.  Several of the elementary
+Everything lives in `BConicBundleMultisections.ResidualDataBaseChange`.  A few of the elementary
 commutation lemmas below already exist elsewhere in the development under the same names but in
 modules this one deliberately does not import (`ResidualComponentExhaustion`,
-`Standard.G4PointwiseLine`); the private namespace keeps both readable in one root module.
+`Standard.G4PointwiseLine`); the sub-namespace lets both be present in one root module.
 -/
 
 @[expose] public section
@@ -576,6 +576,14 @@ section Package
 
 variable {k K : Type u} [Field k] [Field K] (φ : k →+* K)
 
+/-- **The frame relation travels the other way, and for free**: it is a polynomial identity, so it
+ascends along any ring hom.  Recorded here so that the whole five-condition package can be moved
+with lemmas from this one module. -/
+theorem lineFrame_map_mul_map_of (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (hMN : lineFrame p₀ q₀ r * N = 1) :
+    lineFrame (fun i => φ (p₀ i)) (fun i => φ (q₀ i)) (fun i => φ (r i)) * N.map φ = 1 :=
+  lineFrame_map_mul_map φ p₀ q₀ r N hMN
+
 /-- G3 for a line presented by its spanning vectors, the shape
 `det_residualYCoordsOn_ne_zero` takes it in. -/
 theorem residualLineNonconstantOn_lineFrame_map_iff (p₀ q₀ r : Fin 3 → k)
@@ -633,6 +641,56 @@ theorem goodLineData_of_algebraMap [Algebra k K] (p₀ q₀ r : Fin 3 → k)
   goodLineData_of_map (algebraMap k K) p₀ q₀ r N F v hgood hv2 hpolar hG4
 
 end Package
+
+/-! ## The intended instance: verify over `k̄`
+
+`GoodLineExistence` and the genericity arguments that produce a good line all live over an
+algebraically closed field.  This is the statement that lets them be used from a base field that is
+not closed: the frame relation goes up, the four checkable conditions come back down, and only the
+Tsen section has to be supplied over `k`. -/
+
+section AlgClosure
+
+variable {k : Type u} [Field k]
+
+/-- **All that base change can do for the good-line data, in one statement.**
+
+Given a frame relation over `k`, a verification of G3, `v 2 ≠ 0`, stereographic nondegeneracy and
+G4 for the base-changed data over `k̄` yields those four conditions over `k` — and the frame
+relation over `k̄` comes along for free, so nothing has to be re-established upstairs.
+
+The Tsen section `v` is quantified over `k` on both sides.  That is the whole point: it is the one
+input this theorem cannot manufacture. -/
+theorem goodLineData_of_algebraicClosure (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k)
+    (hMN : lineFrame p₀ q₀ r * N = 1)
+    (hgood : ResidualLineNonconstantOn
+      (lineFrame (fun i => algebraMap k (AlgebraicClosure k) (p₀ i))
+        (fun i => algebraMap k (AlgebraicClosure k) (q₀ i))
+        (fun i => algebraMap k (AlgebraicClosure k) (r i)))
+      (N.map (algebraMap k (AlgebraicClosure k))) (map (algebraMap k (AlgebraicClosure k)) F))
+    (hv2 : (fun i => (v i).map (algebraMap k (AlgebraicClosure k))) 2 ≠ 0)
+    (hpolar : lineStereoPolarForm (fun i => algebraMap k (AlgebraicClosure k) (p₀ i))
+      (fun i => algebraMap k (AlgebraicClosure k) (q₀ i))
+      (map (algebraMap k (AlgebraicClosure k)) F)
+      (fun i => (v i).map (algebraMap k (AlgebraicClosure k))) ≠ 0)
+    (hG4 : ResidualAvoidsConicDiscriminantOn
+      (fun i => algebraMap k (AlgebraicClosure k) (p₀ i))
+      (fun i => algebraMap k (AlgebraicClosure k) (q₀ i))
+      (fun i => algebraMap k (AlgebraicClosure k) (r i))
+      (N.map (algebraMap k (AlgebraicClosure k))) (map (algebraMap k (AlgebraicClosure k)) F)
+      (fun i => (v i).map (algebraMap k (AlgebraicClosure k)))) :
+    lineFrame (fun i => algebraMap k (AlgebraicClosure k) (p₀ i))
+          (fun i => algebraMap k (AlgebraicClosure k) (q₀ i))
+          (fun i => algebraMap k (AlgebraicClosure k) (r i))
+        * N.map (algebraMap k (AlgebraicClosure k)) = 1
+      ∧ ResidualLineNonconstantOn (lineFrame p₀ q₀ r) N F ∧ v 2 ≠ 0 ∧
+        lineStereoPolarForm p₀ q₀ F v ≠ 0 ∧
+        ResidualAvoidsConicDiscriminantOn p₀ q₀ r N F v :=
+  ⟨lineFrame_map_mul_map_of _ p₀ q₀ r N hMN,
+    goodLineData_of_algebraMap (K := AlgebraicClosure k) p₀ q₀ r N F v hgood hv2 hpolar hG4⟩
+
+end AlgClosure
 
 end
 
