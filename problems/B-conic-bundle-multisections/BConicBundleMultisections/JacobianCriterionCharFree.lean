@@ -7,7 +7,9 @@ module
 
 public import Mathlib.FieldTheory.IsAlgClosed.Basic
 public import Mathlib.FieldTheory.Perfect
+public import Mathlib.FieldTheory.PerfectClosure
 public import Mathlib.RingTheory.MvPolynomial.Expand
+public import Mathlib.RingTheory.SimpleRing.Basic
 public import BConicBundleMultisections.AlgebraicIndependenceJacobian
 
 /-!
@@ -15,8 +17,7 @@ public import BConicBundleMultisections.AlgebraicIndependenceJacobian
 
 `AlgebraicIndependenceJacobian.lean` proves that a nonzero `3 × 3` Jacobian determinant rules out
 nonzero homogeneous relations among `Y₀, Y₁, Y₂`, but only over a domain of characteristic zero.
-This file removes that hypothesis, replacing it by *perfectness* of the coefficient field — which
-the project always has, since it works over an algebraically closed field.
+This file removes that hypothesis: the criterion holds over an arbitrary field.
 
 ## Why the characteristic-zero proof breaks, and what replaces it
 
@@ -34,6 +35,12 @@ a perfect field one may extract `p`-th roots of the coefficients, so `Ψ = Θ ^ 
 `pderiv a Ψ = 0` also supplies `Θ = 0`, hence `Ψ = 0`.  No separate minimal counterexample is
 needed: one strong induction on the degree serves both descents.
 
+Perfectness is used only inside that positive-characteristic descent.  Over a general field one
+base-changes to the perfect closure (`PerfectClosure k p`): every hypothesis ascends along
+`MvPolynomial.map (PerfectClosure.of k p)`, the perfect-field argument applies upstairs, and the
+conclusion `Ψ = 0` descends by injectivity of the coefficient map (row 2 of the
+`GeometricPointDescent` trichotomy).
+
 ## Main results
 
 * `MvPolynomial.exists_expand_eq_of_forall_pderiv_eq_zero`: in characteristic `p`, a polynomial all
@@ -41,22 +48,10 @@ needed: one strong induction on the degree serves both descents.
 * `MvPolynomial.expand_eq_map_frobeniusEquiv_symm_pow`: over a perfect ring, `expand p` lands in
   `p`-th powers.  This is the multivariate analogue of `PerfectRing.polynomial_expand_eq`.
 * `BConicBundleMultisections.eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField`: the
-  headline statement, `CharZero` traded for `PerfectField`.
+  headline statement, over an arbitrary field (perfectness is intermediate, not a hypothesis).
 
 Neither of the two `MvPolynomial` lemmas is in Mathlib; both are stated in the generality they
 deserve, so that they could be upstreamed as they stand.
-
-## Is perfectness necessary?
-
-Probably not — but removing it is real extra work, and is *not* done here.  Perfectness is used at
-exactly one point, to write the coefficients of `Φ` as `p`-th powers.  Without it one can still
-descend, at the cost of a linear-algebra argument over `k ^ p`: the relation `Φ(Y ^ p) = 0` reads,
-coefficient by coefficient, as `∑ m, c_m · a_{m,α} ^ p = 0` with `c_m ∈ k` and `a_{m,α} ∈ k`;
-expanding the `c_m` in a `k ^ p`-basis of their span and extracting `p`-th roots of the (now
-`k ^ p`) coordinates produces several forms of degree `d / p` vanishing on `Y`, all of which the
-induction kills, forcing `Φ = 0`.  So no counterexample over an imperfect field is expected.  The
-statement below is the one the project needs, and is stated with the hypothesis that makes the
-proof short.
 -/
 
 @[expose] public section
@@ -247,13 +242,12 @@ theorem aeval_pderiv_eq_zero {k : Type u} [CommRing k] [IsDomain k]
 
 /-- **A nonzero Jacobian determinant rules out homogeneous relations, over any perfect field.**
 
-This is `eq_zero_of_isHomogeneous_of_aeval_eq_zero` of `AlgebraicIndependenceJacobian.lean` with
-`[CharZero k]` traded for `[PerfectField k]`.  Every algebraically closed field is perfect, so this
-covers the project's setting, and in addition every positive characteristic.
-
-Perfectness enters only through `MvPolynomial.exists_isHomogeneous_pow_eq_of_forall_pderiv_eq_zero`,
-where `p`-th roots of the coefficients of `Ψ` are taken. -/
-theorem eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField
+Internal engine: perfectness is used through
+`MvPolynomial.exists_isHomogeneous_pow_eq_of_forall_pderiv_eq_zero`, where `p`-th roots of the
+coefficients of `Ψ` are taken.  The public statement
+`eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField` removes this hypothesis by
+base-changing to a perfect closure. -/
+theorem eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField_of_perfect
     {k : Type u} [Field k] [PerfectField k] {τ : Type v} [Fintype τ] [DecidableEq τ]
     (Y : Fin 3 → MvPolynomial τ k) (i₁ i₂ : τ)
     (hdet : (Matrix.of ![Y, fun a => pderiv i₁ (Y a), fun a => pderiv i₂ (Y a)]).det ≠ 0)
@@ -302,8 +296,62 @@ theorem eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField
       rw [nsmul_eq_mul] at h
       exact hne ((mul_eq_zero.mp h.symm).resolve_left hcast)
 
-/-- The project's setting: over an algebraically closed field `PerfectField` is automatic
-(`IsAlgClosed.perfectField`), so the theorem above is a literal drop-in replacement for
+/-- **A nonzero Jacobian determinant rules out homogeneous relations, over any field.**
+
+This is `eq_zero_of_isHomogeneous_of_aeval_eq_zero` of `AlgebraicIndependenceJacobian.lean` with
+`[CharZero k]` deleted entirely.  Perfectness is intermediate, not a hypothesis: in characteristic
+zero every field is perfect (`PerfectField.ofCharZero`); in characteristic `p` one base-changes to
+the perfect closure `PerfectClosure k p`, applies the perfect-field criterion upstairs, and
+descends the vanishing of `Ψ` by injectivity of the coefficient map.
+
+The historical name keeps every existing call site valid. -/
+theorem eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField
+    {k : Type u} [Field k] {τ : Type v} [Fintype τ] [DecidableEq τ]
+    (Y : Fin 3 → MvPolynomial τ k) (i₁ i₂ : τ)
+    (hdet : (Matrix.of ![Y, fun a => pderiv i₁ (Y a), fun a => pderiv i₂ (Y a)]).det ≠ 0)
+    (d : ℕ) (Ψ : MvPolynomial (Fin 3) k) (hΨ : Ψ.IsHomogeneous d)
+    (hvan : aeval Y Ψ = 0) : Ψ = 0 := by
+  classical
+  obtain ⟨p, hp⟩ := CharP.exists k
+  rcases CharP.char_is_prime_or_zero k p with hpprime | hp0
+  · -- Characteristic `p` prime: base-change to the perfect closure.
+    haveI : Fact p.Prime := ⟨hpprime⟩
+    let L := PerfectClosure k p
+    let φ : k →+* L := PerfectClosure.of k p
+    have hφ : Function.Injective φ := RingHom.injective φ
+    set YL : Fin 3 → MvPolynomial τ L := fun a => map φ (Y a) with hYL
+    set M := Matrix.of ![Y, fun a => pderiv i₁ (Y a), fun a => pderiv i₂ (Y a)] with hM
+    set ML := Matrix.of ![YL, fun a => pderiv i₁ (YL a), fun a => pderiv i₂ (YL a)] with hML
+    have hMmap : ML = M.map (map φ) := by
+      ext i j
+      fin_cases i <;>
+        simp [hML, hM, hYL, Matrix.map_apply, Matrix.of_apply, pderiv_map]
+    have hdetL : ML.det ≠ 0 := by
+      intro h0
+      have hmap0 : map φ M.det = 0 := by
+        rw [RingHom.map_det, RingHom.mapMatrix_apply, ← hMmap, h0]
+      exact hdet ((map_eq_zero_iff _ (map_injective φ hφ)).mp hmap0)
+    have hΨL : (map φ Ψ).IsHomogeneous d := hΨ.map φ
+    have hvanL : aeval YL (map φ Ψ) = 0 := by
+      have hcomm : aeval YL (map φ Ψ) = map φ (aeval Y Ψ) := by
+        rw [map_aeval, aeval_def, eval₂_map]
+        simp only [coe_eval₂Hom, hYL]
+        congr 1
+        ext a
+        simp [MvPolynomial.algebraMap_eq]
+      rw [hcomm, hvan, map_zero]
+    have hmap0 : map φ Ψ = 0 :=
+      eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField_of_perfect
+        YL i₁ i₂ hdetL d (map φ Ψ) hΨL hvanL
+    exact (map_eq_zero_iff _ (map_injective φ hφ)).mp hmap0
+  · -- Characteristic zero: every field is perfect.
+    subst hp0
+    haveI : CharZero k := CharP.charP_to_charZero k
+    haveI : PerfectField k := PerfectField.ofCharZero
+    exact eq_zero_of_isHomogeneous_of_aeval_eq_zero_of_perfectField_of_perfect
+      Y i₁ i₂ hdet d Ψ hΨ hvan
+
+/-- Over an algebraically closed field the theorem above is a literal drop-in replacement for
 `eq_zero_of_isHomogeneous_of_aeval_eq_zero` at every call site — with `[CharZero k]` simply
 deleted from the hypotheses. -/
 example {k : Type u} [Field k] [IsAlgClosed k] {τ : Type v} [Fintype τ] [DecidableEq τ]
