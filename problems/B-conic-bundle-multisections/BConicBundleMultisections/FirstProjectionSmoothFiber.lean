@@ -6,6 +6,7 @@ Authors: BConicBundleMultisections contributors
 module
 
 public import BConicBundleMultisections.CubicFiberSingularLocus
+public import BConicBundleMultisections.CubicSingularSeparable
 public import BConicBundleMultisections.SmoothExtensionJacobian
 public import BConicBundleMultisections.SpecializedConicFreeDir
 public import Mathlib.Algebra.TrivSqZeroExt.Ideal
@@ -34,9 +35,10 @@ fraction field `k(x₀,x₁,x₂)` is imperfect and `∂/∂xᵢ` does not reach
 run over `separableClosure K (AlgebraicClosure K)`, not over the algebraic closure, and the whole
 characteristic hypothesis of this file is concentrated in one lemma:
 `exists_separableClosure_singularPoint_of_cubic`, which moves the singular point produced by
-elimination from the algebraic closure to the separable closure.  See the section docstring there
-for what is true in characteristic `p ≥ 5`, why characteristics `2` and `3` are genuine
-counterexamples, and what is missing to formalize it.
+elimination from the algebraic closure to the separable closure.  That lemma now lives in
+`BConicBundleMultisections.CubicSingularSeparable` and is proved under `ringChar k ∤ 6`, that is,
+under `[NeZero (2 : k)] [NeZero (3 : k)]`; see its module docstring for the argument and for why
+characteristics `2` and `3` are genuine counterexamples.
 -/
 
 @[expose] public section
@@ -208,115 +210,21 @@ theorem exists_separable_coordinateDerivation
 
 The elimination certificates produce a singular point of the generic cubic fibre over the
 *algebraic* closure `Ω` of `K = Frac k[x₀,x₁,x₂]`.  The derivation argument needs it over a
-*separable* extension.  `exists_separableClosure_singularPoint_of_cubic` below is the exact bridge,
-and it is now the **only** place in the whole `CharZero`-carrying chain where the characteristic is
-load-bearing; every other `CharZero` in the tree is propagation of this one.
+*separable* extension.  `exists_separableClosure_singularPoint_of_cubic`, in
+`BConicBundleMultisections.CubicSingularSeparable`, is the exact bridge, and it is the **only**
+place in this chain where the characteristic is load-bearing; every characteristic hypothesis
+downstream is propagation of that one.  It holds whenever `ringChar k ∤ 6`, which is exactly
+`[NeZero (2 : k)] [NeZero (3 : k)]`; in characteristics `2` and `3` it is false, because
+quasi-elliptic fibrations live there.
 
-### What is true, and in which characteristic
-
-Write `Z = V(∂₀G, ∂₁G, ∂₂G) ⊆ ℙ²` for the singular subscheme.  In characteristic `≠ 3` Euler's
-identity `3G = Σ yⱼ ∂ⱼG` makes `G` itself redundant, so `Z` is cut out by three *conics*.
-
-* **Characteristic `0`.**  Trivial: `Ω/K` is separable, so `separableClosure K Ω = ⊤` and the given
-  point already qualifies.  This is what is proved below.
-* **Characteristic `p ≥ 5`.**  True; see the outline below.  Not formalized.
-* **Characteristic `2` or `3`.**  Genuinely false.  Quasi-elliptic fibrations live exactly there:
-  their generic fibre is a plane cubic that is *regular* as a `K`-scheme but not smooth, and its
-  unique geometric singular point is purely inseparable over `K`.  The numerical shadow of this is
-  `p^m ≤ 4` with `m ≥ 1`, which forces `p ∈ {2, 3}`.
-
-### Outline of the characteristic `p ≥ 5` proof, with the degenerate cases
-
-A **correction** to the obvious route is needed first.  It is *not* enough to say "an integral
-plane cubic has arithmetic genus `1`, hence a unique singular point, which is therefore Galois
-fixed and so purely inseparable over `K`".  A cubic that is integral over `K` need not be
-geometrically integral: it can be three Galois-conjugate lines, or a `K`-conic meeting a `K`-line
-in two conjugate points.  Those have three, resp. two, geometric singular points and *no*
-`K`-rational one.  What survives — and what is all the derivation argument needs — is
-**separability**, not rationality.
-
-Reduction (elementary, and the reason only one degree bound is needed).  `separableClosure K Ω` is
-separably closed, and `p ≥ 5 > 2`.  So if some coordinate ratio of the point already lies in
-`separableClosure K Ω`, say `y = (y₀, y₁, 1)` with `y₁ ∈ separableClosure K Ω`, then either some
-`∂ⱼG(t, y₁, 1)` is a nonconstant polynomial in `t` over `separableClosure K Ω`, of degree `≤ 2`, so
-its root `y₀` is separable over a separably closed field and hence already in it; or all three are
-constant, hence identically `0`, and `(0, y₁, 1)` is a common zero.  Either way the whole point
-descends.  So it suffices to place **one** ratio in `separableClosure K Ω`.
-
-Main bound.  Let `h = gcd(∂₀G, ∂₁G, ∂₂G)`, homogeneous because a divisor of a nonzero homogeneous
-form is homogeneous.
-
-* If `h` is not a unit it has degree `1` or `2`, and `V(h) ⊆ Z`.  Restricting `h` to a coordinate
-  line gives a binary form of degree `≤ 2`; a root of it has degree `≤ 2 < p` over `K`, hence is
-  separable, so `Z` has a point in `separableClosure K Ω`.
-* If `h` is a unit, choose coordinates with `∂₀G(1,0,0) ≠ 0` (possible: `K` is infinite here) and
-  eliminate `y₀` between two of the conics.  The resultant is a binary form of degree `4` in
-  `(y₁, y₂)` lying in the elimination ideal, so it vanishes at the point; if it is nonzero the
-  ratio `y₁/y₂` has degree `≤ 4 < p` over `K` and the reduction above finishes.  If instead every
-  pair shares a factor while the triple gcd is trivial, the shared factors are two non-associate
-  `K`-lines `ℓ₁, ℓ₂` with `∂₀G = c·ℓ₁ℓ₂`, and the given point lies on an intersection of two
-  `K`-lines, which is a single `K`-rational point (the cross product of the two coefficient
-  vectors).  The triangle `G = y₀y₁y₂`, whose three partials are pairwise non-coprime, is exactly
-  this case, and its singular points are rational.
-
-Degree `< p` implies separable because the minimal polynomial of an inseparable element lies in
-`K[t^p]`, so `p` divides its degree.
-
-### Why it is not formalized here
-
-The elimination step needs a Bézout-type degree bound for two conics.  Mathlib has
-`Polynomial.resultant` with a Sylvester Bézout identity, but no projective intersection degree and
-no statement that a divisor of a homogeneous polynomial is homogeneous; `PlaneCurveIntersectionArtinian`
-in this tree records the same gap ("this avoids pretending that Mathlib currently contains a
-projective Bezout theorem") and supplies only *nonvanishing*, never a degree.  The degenerate branch
-additionally needs `gcd` and factorization bookkeeping in `MvPolynomial (Fin 3) K`.  That is a
-self-contained formalization project, not a rethreading. -/
-
-/-- **A singular point of a plane cubic can be taken separable over the base field.**
-
-Currently proved only in characteristic zero.  See the section docstring for the characteristic
-`p ≥ 5` argument, for the correction it needs (separability, not rationality, is what is true), and
-for why `p ∈ {2, 3}` must be excluded. -/
-theorem exists_separableClosure_singularPoint_of_cubic
-    {K : Type u} [Field K] [CharZero K]
-    (G : MvPolynomial (Fin 3) K) (_hG : G.IsHomogeneous 3)
-    (y : Fin 3 → AlgebraicClosure K) (hy0 : y ≠ 0)
-    (hval : eval y (map (algebraMap K (AlgebraicClosure K)) G) = 0)
-    (hgrad : ∀ j : Fin 3,
-      eval y (map (algebraMap K (AlgebraicClosure K)) (pderiv j G)) = 0) :
-    ∃ z : Fin 3 → ↥(separableClosure K (AlgebraicClosure K)), z ≠ 0 ∧
-      eval z (map (algebraMap K
-        ↥(separableClosure K (AlgebraicClosure K))) G) = 0 ∧
-      ∀ j : Fin 3, eval z (map (algebraMap K
-        ↥(separableClosure K (AlgebraicClosure K))) (pderiv j G)) = 0 := by
-  classical
-  have hmem : ∀ i, y i ∈ separableClosure K (AlgebraicClosure K) := fun i =>
-    mem_separableClosure_iff.mpr (Algebra.IsSeparable.isSeparable K (y i))
-  refine ⟨fun i => ⟨y i, hmem i⟩, ?_, ?_, ?_⟩
-  · intro h
-    apply hy0
-    funext i
-    have hi := congrFun h i
-    have := congrArg (algebraMap ↥(separableClosure K (AlgebraicClosure K))
-      (AlgebraicClosure K)) hi
-    simpa using this
-  · refine (algebraMap ↥(separableClosure K (AlgebraicClosure K))
-      (AlgebraicClosure K)).injective ?_
-    rw [map_zero, MvPolynomial.eval_map,
-      MvPolynomial.eval₂_comp_left (algebraMap ↥(separableClosure K (AlgebraicClosure K))
-        (AlgebraicClosure K)),
-      ← IsScalarTower.algebraMap_eq K ↥(separableClosure K (AlgebraicClosure K))
-        (AlgebraicClosure K), ← MvPolynomial.eval_map]
-    exact hval
-  · intro j
-    refine (algebraMap ↥(separableClosure K (AlgebraicClosure K))
-      (AlgebraicClosure K)).injective ?_
-    rw [map_zero, MvPolynomial.eval_map,
-      MvPolynomial.eval₂_comp_left (algebraMap ↥(separableClosure K (AlgebraicClosure K))
-        (AlgebraicClosure K)),
-      ← IsScalarTower.algebraMap_eq K ↥(separableClosure K (AlgebraicClosure K))
-        (AlgebraicClosure K), ← MvPolynomial.eval_map]
-    exact hgrad j
+A **correction** to the obvious route, recorded here because two earlier attempts got it wrong.
+It is *not* enough to say "an integral plane cubic has arithmetic genus `1`, hence a unique singular
+point, which is therefore Galois fixed and so purely inseparable over `K`".  A cubic that is
+integral over `K` need not be geometrically integral: it can be three Galois-conjugate lines, or a
+`K`-conic meeting a `K`-line in two conjugate points.  Those have three, resp. two, geometric
+singular points and *no* `K`-rational one.  What survives — and what is all the derivation argument
+needs — is **separability**, not rationality.
+-/
 
 /-! ## Algebraic Sard for the bidegree-`(2,3)` first projection -/
 
@@ -501,7 +409,7 @@ theorem false_of_baseChanged_common_zero_of_smooth
 This is the exact coordinate conclusion previously obtained from the unformalized
 scheme-theoretic generic-smoothness theorem. -/
 theorem exists_nonsingularCubicFiber_of_smooth_coordinate
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [AlgebraicGeometry.Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -559,7 +467,8 @@ theorem exists_nonsingularCubicFiber_of_smooth_coordinate
   push Not at hbad
   obtain ⟨y, hy0, hy⟩ := hbad
   -- `y` is a singular point over `Ω` of the generic cubic fibre, read over `K`.
-  haveI : CharZero K := inferInstanceAs (CharZero (FractionRing (MvPolynomial (Fin 3) k)))
+  haveI : NeZero (2 : K) := neZero_two_of_injective_algebraMap (algebraMap k K).injective
+  haveI : NeZero (3 : K) := neZero_three_of_injective_algebraMap (algebraMap k K).injective
   have hAKΩ : (algebraMap K Ω).comp (algebraMap A K) = φ :=
     RingHom.ext fun a => (IsScalarTower.algebraMap_apply A K Ω a).symm
   have hvalΩ : eval y (map (algebraMap K Ω)

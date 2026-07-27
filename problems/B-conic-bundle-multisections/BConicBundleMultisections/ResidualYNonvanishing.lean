@@ -275,7 +275,7 @@ proved: every entry of `famMatrix` is a coefficient of the cubic fibre, hence a 
 determinant itself, which is where `hv2` and smoothness are consumed; see
 `StereoJacobian.stereoJacobianDet_ne_zero_of_smooth`. -/
 theorem exists_stereo_param_nonsingularCubicFiber
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -421,7 +421,7 @@ faces on the `Y`-side (WP-2 step 2c).  Closedness of the singular locus — the 
 proved.
 -/
 theorem exists_ne_zero_nonsingular_stereo_cubicFiber_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -487,7 +487,7 @@ statement it consumes, and is required there.
 outright with no further glue.
 -/
 theorem exists_nonsingular_stereo_cubicFiber_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -570,7 +570,7 @@ residual point is that binary cubic's third root.
 `CharZero` is carried because the statement it rests on, generic smoothness for the plane-cubic
 fibration, is false without it. -/
 theorem residualYCoords_ne_zero_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]

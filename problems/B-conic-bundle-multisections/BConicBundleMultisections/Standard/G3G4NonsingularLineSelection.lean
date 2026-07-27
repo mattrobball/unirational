@@ -257,7 +257,7 @@ theorem lineSpecializedConic_zero_nonsingular_of_sndConicDiscriminant_ne_zero
 zeroth coordinate.  In the total-space proof, replace the smooth-fibre principal open `D` by the
 still nonempty principal open `D * X₀` before intersecting it with the conic-discriminant open. -/
 theorem exists_smoothCubicFiber_in_stereoChart_point_avoids_sndConicDiscriminant
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)] :
@@ -387,7 +387,7 @@ the conic discriminant and have tangent residual avoiding that discriminant.  Th
 is expressed by one of the polynomial coordinate-chart directions, so both conditions are honest
 homogeneous principal opens on the smooth cubic. -/
 theorem exists_smoothCubicFiber_chartTangent_point_avoids_two_discriminants
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)] :
@@ -495,7 +495,7 @@ def G3FrameMeetsEveryNonemptyPrincipalOpenOnSmoothCubic
 
 /-- The incidence-open principle produces exactly the corrected common-line witness. -/
 theorem exists_G3_nonsingularFramedPointwiseG4Witness_of_incidenceOpen
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)]
@@ -584,7 +584,7 @@ theorem exists_nonsingularFramedPointwiseG4Witness_on_smooth_cubic
 The preceding proper-point theorem supplies a smooth cubic in the fixed stereographic chart, and
 simultaneous principal-open avoidance supplies the framed tangent-residual witness on it. -/
 theorem exists_nonsingularFramedPointwiseG4Witness_of_smooth
-    {K : Type u} [Field K] [IsAlgClosed K] [CharZero K]
+    {K : Type u} [Field K] [IsAlgClosed K] [NeZero (2 : K)] [NeZero (3 : K)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)] :

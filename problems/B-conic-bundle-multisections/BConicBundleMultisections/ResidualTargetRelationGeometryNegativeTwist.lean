@@ -78,7 +78,7 @@ def TargetRelationsResidualNegativeTwistGluingAwayDiscriminantOn
 membership package.  No reducedness hypothesis on the affine complete-intersection cone is
 used, and generic-fibre Artinianness is automatic. -/
 theorem residualTargetRelationMembershipAwayDiscriminantOn_of_negativeTwistGeometry
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -153,7 +153,7 @@ theorem residualTargetRelationMembershipAwayDiscriminantOn_of_negativeTwistGeome
 gluing property.  Both the generic-fibre Artinianness and the Cox-radical hypotheses have
 disappeared from the statement. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_negativeTwistTargetGeometry
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)

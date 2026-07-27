@@ -1911,7 +1911,7 @@ would produce a common zero of the total equation and all six partial derivative
 smoothness of the total hypersurface.
 -/
 theorem exists_nonsingularCubicFiber_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :

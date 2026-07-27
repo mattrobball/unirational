@@ -125,7 +125,7 @@ end ProjectiveSpace
 degree.  Multiplication by one coordinate makes the degree positive without changing the
 implication from nonvanishing to smoothness. -/
 theorem exists_positive_homogeneous_smoothCubicFiber_open [IsAlgClosed k]
-    [CharZero k]
+    [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -341,7 +341,7 @@ theorem eval_normalize_second_eq_zero_of_isBihomogeneous
 /-- **G4 properness witness.**  Some smooth cubic fibre contains a point away from the conic
 discriminant. -/
 theorem exists_smoothCubicFiber_point_avoids_sndConicDiscriminant
-    [IsAlgClosed k] [CharZero k]
+    [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :

@@ -38,7 +38,7 @@ open AlgebraicGeometry BiprojectiveSpace
 /-- The main tangent-residual construction, reduced only to the two uniform projective target
 properties.  The selected framed line already satisfies G3, section nondegeneracy, and G4. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_uniformTargetGeometry
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -59,7 +59,7 @@ theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_uniformTargetGeo
 /-- After the retained-chart integrality theorem, uniform negative-twist gluing is the only
 remaining projective target input to the main tangent-residual construction. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_uniformNegativeTwistGluing
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -76,7 +76,7 @@ field of characteristic zero admits a unirational parametrization by affine `3`-
 The retained-chart integrality and negative-twist gluing inputs of the target-reduction theorem
 are both automatic under these headline assumptions. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
