@@ -10,12 +10,18 @@ auxiliary line, section, integrality, gluing, or residual-image hypotheses:
 
 ```lean
 theorem smooth_bidegree23_hasUnirationalParametrization
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)] :
     HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F)
 ```
+
+The characteristic hypothesis is `ringChar k ∤ 6`, not characteristic zero: it was weakened once
+`exists_separableClosure_singularPoint_of_cubic` was proved in
+`BConicBundleMultisections/CubicSingularSeparable.lean`. `Statement.lean` and `Solution.lean` still
+ask for `[CharZero k]`, which this proves a fortiori through the bridging instances of
+`NeZeroTwoThree.lean`; do not "repair" them.
 
 The theorem and its existential wrapper both depend on exactly:
 

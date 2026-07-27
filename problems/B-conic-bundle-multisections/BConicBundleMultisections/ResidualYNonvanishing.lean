@@ -39,7 +39,8 @@ identically in the parameters — cannot arise at all once the fibre is known to
 
 ## Two corrections to obligation 1, made here
 
-1. **`CharZero` was missing.**  `exists_nonsingular_stereo_cubicFiber_of_smooth` asserts that some
+1. **The characteristic hypothesis was missing.**  `exists_nonsingular_stereo_cubicFiber_of_smooth`
+   asserts that some
    cubic fibre of `ρ` is *smooth*, which is generic smoothness for this fibration.  Generic
    smoothness is false in positive characteristic, and there is no dimension-theoretic obstruction
    to a smooth `X` over a field of characteristic `3` all of whose plane-cubic fibres are singular
@@ -241,12 +242,14 @@ parameter to a Zariski-open set of them.
 
 1. **Generic smoothness** (§1).  `X` is smooth and `char k = 0`, so the plane cubic fibre of `ρ` is
    nonsingular over a nonempty open subset of `ℙ²_x`; the complement is the discriminant locus, a
-   proper closed subset.  `CharZero` is load-bearing here and nowhere else in this chain: in
+   proper closed subset.  The characteristic hypothesis `[NeZero (2 : k)] [NeZero (3 : k)]` —
+   that is, `ringChar k ∤ 6` — is load-bearing here and nowhere else in this chain: in
    characteristic `p`, Euler's identity in `y` degenerates and a fibration all of whose fibres are
    singular over a smooth total space is not excluded (quasi-elliptic fibrations in characteristics
    `2` and `3` realize this).  This is the coordinate form of
    `Standard.exists_nonempty_open_smooth_restrict` (Hartshorne III.10.7).  It is now the *only*
-   `CharZero` in this chain: `stereoJacobianDet_ne_zero_of_smooth` used to need it too, through the
+   characteristic hypothesis in this chain: `stereoJacobianDet_ne_zero_of_smooth` used to need one
+   too, through the
    wronskian lemma, and no longer does — see `StereoJacobian.exists_C_mul_of_wronskian_eq_zero`.
 2. **The stereo image is dense in `ℙ²_x`.**  This is what `hv2` buys, and it is why that hypothesis
    is here.  With `v₂ ≠ 0` the lines through `v(t)` meeting `{x₂ = 0}` are *all* the lines through
@@ -412,7 +415,7 @@ three further conditions on a two-dimensional locus — expected to be empty.  I
 Euler's identity in `y` forces `Σ ⊆ X` and generic smoothness rules the configuration out; in
 characteristic `p` Euler gives `0 = 0` and it does not.  Quasi-elliptic fibrations — every fibre a
 cuspidal cubic, total space smooth — are the standard realization of the phenomenon in
-characteristics `2` and `3`.  So this statement must not be asserted without `CharZero`; no
+characteristics `2` and `3`.  So this statement must not be asserted without `ringChar k ∤ 6`; no
 counterexample of bidegree `(2,3)` is exhibited here, but nothing rules one out either.
 
 *What is owed*, after this split and after `CubicFiberSingularLocus.lean`: only the good-line
@@ -479,8 +482,8 @@ things this statement asserts are discharged here and no longer stand as assumpt
   `eval_cubicFiber_coordinateLine_of_stereo`.  The exclusion `1 + t² ≠ 0` is genuinely needed: at
   `t² = -1` the vector `ps × ∇Gs(ps)` is proportional to `ps` whatever the gradient is.
 
-`CharZero` is new; see the previous declaration.  It is not used in this proof — it is used in the
-statement it consumes, and is required there.
+The characteristic hypothesis is new; see the previous declaration.  It is not used in this proof —
+it is used in the statement it consumes, and is required there.
 
 *Why the statement has this shape.*  It is verbatim the hypothesis of the proved reduction
 `residualYCoords_ne_zero_of_exists_nonsingular_stereo`, so discharging it closes obligation 1
@@ -567,8 +570,9 @@ theorem exists_nonsingular_stereo_cubicFiber_of_smooth
 contains no line, so its restriction to the residual line is a nonzero binary cubic, and the
 residual point is that binary cubic's third root.
 
-`CharZero` is carried because the statement it rests on, generic smoothness for the plane-cubic
-fibration, is false without it. -/
+`[NeZero (2 : k)] [NeZero (3 : k)]` is carried because the statement it rests on, generic smoothness
+for the plane-cubic fibration, is false without it: quasi-elliptic fibrations live exactly in
+characteristics `2` and `3`. -/
 theorem residualYCoords_ne_zero_of_smooth
     {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)

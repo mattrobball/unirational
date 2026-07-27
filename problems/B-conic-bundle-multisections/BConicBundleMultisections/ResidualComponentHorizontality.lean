@@ -394,7 +394,7 @@ smooth `F` the coordinate line need not be good; the source chooses `L` (§3).  
 `hgood` (e.g. after a linear `y`-change that moves a line from `exists_good_line` to the coordinate
 line) and `hpolar` (from `StereoNondegenerate`).
 
-`CharZero` is carried because the Jacobian criterion uses it (Euler + induction on degree).
+`[NeZero (2 : k)] [NeZero (3 : k)]` is carried because the Jacobian criterion uses it (Euler).
 -/
 theorem isDominant_residualImagePointOfNormalizedLoc_toBase
     {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]

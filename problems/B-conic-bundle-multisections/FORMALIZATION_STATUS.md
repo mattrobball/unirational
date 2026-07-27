@@ -34,12 +34,16 @@ The faithful theorem has no auxiliary geometric hypotheses:
 
 ```lean
 theorem smooth_bidegree23_hasUnirationalParametrization
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)] :
     HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F)
 ```
+
+The characteristic hypothesis is `ringChar k ∤ 6`, not characteristic zero; `Statement.lean` and
+`Solution.lean` still ask for `[CharZero k]`, which this proves a fortiori through the bridging
+instances of `NeZeroTwoThree.lean`.
 
 It is proved in `BConicBundleMultisections/MainTheorem.lean`. The existential wrapper
 `smooth_bidegree23_isUnirationalOver` is proved as well.
@@ -192,42 +196,66 @@ scheme. The formal proof works with the residual component actually reached by t
 
 ## Hypothesis audit: how far the headline hypotheses can be weakened
 
-Recorded on branch `agent/weaken-hypotheses`. The headline statement on `main` is unchanged, and
-the guard in `MainTheoremGuard.lean` still pins it byte-for-byte; this section records what was
-measured, not a change to the theorem.
+Recorded on branch `agent/weaken-hypotheses`. The headline statement **has** changed on this
+branch: `[CharZero k]` is now `[NeZero (2 : k)] [NeZero (3 : k)]`, and
+`MainTheoremGuard.headline_statement_guard` was updated to pin the new type byte-for-byte. That is
+the one guard edit this weakening legitimises; no other guard was touched.
 
-### `CharZero` → char ∤ 6: the infrastructure moves, the theorem does not
+### `CharZero` → char ∤ 6: done, headline included
 
-191 of the 254 declarations that carried `[CharZero k]` now run on `[NeZero (2 : k)] [NeZero (3 : k)]`.
+Every `[CharZero k]` on the headline path is gone. The theorem runs on `[NeZero (2 : k)]
+[NeZero (3 : k)]`, and exactly five `[CharZero]` binders survive in the library, none of them
+reachable from the headline: three in `GenericCubicNondegeneracy` (item 3 below), one in
+`AlgebraicIndependenceJacobian.eq_zero_of_isHomogeneous_of_aeval_eq_zero` (Euler division by an
+unbounded degree `d`; the headline uses the `[PerfectField k]` version in
+`JacobianCriterionCharFree` instead), and one in `Bidegree23Example.hasUnirationalParametrization_F`,
+where it is only a convenient way to supply `NeZero` of `2`, `3` and `5` at once.
+
 The single *essential* use — the Euler step in the Jacobian criterion, which needs `(d : k) ≠ 0` for
 unbounded `d` — was removed first: `JacobianCriterionCharFree.lean` proves the same criterion from
 `[PerfectField k]`, which `IsAlgClosed` supplies by instance.
 
-Three statements on the headline path were genuinely false in positive characteristic. **One of the
-three has since been repaired by specialisation**; the other two are separability obstructions and
-stand, so the headline hypotheses stay at `CharZero`:
+Three statements on the headline path were genuinely false in positive characteristic. **All three
+are now settled**: two were repaired, and the third is confined to declarations nothing consumes.
 
-1. ~~`FirstProjectionSmoothFiber.exists_algebraicClosure_coordinateDerivation`~~ — **reduced to one
-   isolated lemma.** The derivation extension went through `Algebra.FormallyEtale.of_isSeparable`,
-   and `CharZero` was supplying exactly one thing: `Algebra.IsSeparable K (AlgebraicClosure K)`,
-   free in char 0 and false in char `p`. It is *not* the perfect closure that repairs this — a
-   perfect field of char `p` has **no nonzero derivations at all** (`D z = D((z^{1/p})^p) = 0`), so
-   passing there destroys the tool. It is the **separable** closure:
+1. ~~`FirstProjectionSmoothFiber.exists_algebraicClosure_coordinateDerivation`~~ — **repaired, in
+   two steps.** The derivation extension went through `Algebra.FormallyEtale.of_isSeparable`, and
+   `CharZero` was supplying exactly one thing: `Algebra.IsSeparable K (AlgebraicClosure K)`, free in
+   char 0 and false in char `p`. It is *not* the perfect closure that repairs this — a perfect field
+   of char `p` has **no nonzero derivations at all** (`D z = D((z^{1/p})^p) = 0`), so passing there
+   destroys the tool. It is the **separable** closure:
    `Algebra.FormallyEtale K (SeparableClosure K)` holds with no characteristic hypothesis.
-   `exists_separable_coordinateDerivation` is now stated for an arbitrary separable extension and
+   `exists_separable_coordinateDerivation` is stated for an arbitrary separable extension and
    carries none.
 
-   The entire remaining char-0 dependence of the project is therefore concentrated in
-   `FirstProjectionSmoothFiber.exists_separableClosure_singularPoint_of_cubic` — a self-contained
-   statement about plane cubics, referencing nothing else in the development: *a singular point of a
-   plane cubic can be taken separable over the base field.* Proved so far only in char 0, where it
-   is trivial.
+   That concentrated the whole char-0 dependence of the project in one self-contained statement
+   about plane cubics: *a singular point of a plane cubic can be taken separable over the base
+   field*, `exists_separableClosure_singularPoint_of_cubic`. It is now **proved** under
+   `[NeZero (2 : K)] [NeZero (3 : K)]`, in the new module
+   `BConicBundleMultisections/CubicSingularSeparable.lean`, and that is what removed `CharZero`
+   from the headline. In char ∤ 3, Euler gives `Z = V(∂₀G, ∂₁G, ∂₂G)`, cut by three conics, and the
+   proof runs:
 
-   For `p ≥ 5` the argument is known and written out in the module docstring. In char ∤ 3, Euler
-   gives `Z = V(∂₀G, ∂₁G, ∂₂G)`, cut by three conics; a point of `Z` has degree ≤ 4 over `K`, so its
-   inseparability degree `p^m` divides 4, and `p ≥ 5` forces `m = 0`. That `p^m ≤ 4` with `m ≥ 1`
-   needs `p ∈ {2,3}` is why quasi-elliptic fibrations live exactly there — the degree bound replaces
-   the classification in the only case needed.
+   * **the descent** — `separableClosure K Ω` is separably closed and `2 ≠ 0`, so *one* coordinate
+     ratio in it already forces the whole point in: the free coordinate is a root of a quadratic
+     over that field, or all three quadratics vanish identically and the point with that coordinate
+     `0` is already a common zero. Only one degree bound is ever needed.
+   * **the main branch** — two coprime partials feed
+     `ConicResultant.exists_polynomial_ne_zero_natDegree_le_four`, and
+     `SeparableLowDegree.mem_separableClosure_algebraicClosure_of_natDegree_le_four` makes the ratio
+     separable. The chart `y₂ = 0` needs no elimination: the last two coordinates are `(1,0)`, or
+     the point is `(1 : 0 : 0)` and already rational.
+   * **the degenerate branch** — no pair coprime. It never uses the given point; it builds one.
+     Either an irreducible factor `h` common to all three, so `V(h) ⊆ Z`: for `deg h = 2` restrict
+     to `X₂ = 0` and take a root of the resulting quadratic, or, if that quadratic degenerates,
+     take `(1 : 0 : 0)`, which is then on `V(h)`. Or `h₀₁ ∤ q₂`, in which case `h₀₁` and `h₀₂` are
+     relatively prime, their product divides the conic `q₀`, both are linear, every `qⱼ` is
+     divisible by one of them, and two linear forms in three variables have a nonzero common zero
+     already over `K` — a rank count, no cross-product minors.
+
+   The `p^m ≤ 4` with `m ≥ 1` numerology is why quasi-elliptic fibrations live exactly in
+   characteristics `2` and `3`: the degree bound replaces the classification in the only case
+   needed.
 
    Two corrections to earlier drafts of this argument, both recorded because they were load-bearing:
 
@@ -237,20 +265,14 @@ stand, so the headline hypotheses stay at `CharZero`:
      applies only to geometrically integral curves. Degree ≤ 4 still gives separability at `p ≥ 5`,
      which is all the derivation needs.
    * **Two partials need not be coprime.** The triangle `G = y₀y₁y₂` has partials `y₁y₂, y₀y₂,
-     y₀y₁`, pairwise non-coprime, so naive Bézout does not apply. There the shared factors are two
-     non-associate `K`-lines and the point is their intersection, a single `K`-rational point. The
-     nontrivial-gcd branch (`G = y₀³`, `Z = V(y₀²)`) restricts a degree-≤2 form to a coordinate
-     line, whose root is separable for `p > 2`.
+     y₀y₁`, pairwise non-coprime, so naive Bézout does not apply. That is the second bullet of the
+     degenerate branch above. The nontrivial-gcd branch (`G = y₀³`, `Z = V(y₀²)`) is the first.
 
-   What blocks formalisation is a Mathlib gap, not the mathematics: there is no projective Bézout,
-   no determinant degree bound, and no lemma that a divisor of a homogeneous polynomial is
-   homogeneous. `PlaneCurveIntersectionArtinian.lean` documents the identical gap and supplies only
-   nonvanishing. Estimated 1000–1500 lines with `gcd`/factorisation bookkeeping in
-   `MvPolynomial (Fin 3) K`. One shortcut is known: the resultant of two conics
-   `q = a t² + b t + c`, `q' = a't² + b't + c'` over `K[y₁,y₂]` is explicitly the binary quartic
-   `(ac'−a'c)² − (ab'−a'b)(bc'−b'c)`, and "common root ⟹ it vanishes" is a `ring` identity after
-   splitting on `t = 0` — sidestepping Sylvester matrices and `Polynomial.resultant` entirely. Only
-   the nonvanishing direction still needs gcd theory.
+   The Mathlib gaps that blocked earlier attempts were closed inside the project rather than
+   waited on: `HomogeneousFactor.lean` gives that a divisor of a nonzero homogeneous polynomial is
+   homogeneous, and `ConicResultant.lean` gives the conic resultant with both directions —
+   including the packaged form that survives the centre-of-projection degeneracy, where the naive
+   resultant vanishes identically.
 2. ~~`StereoJacobian.exists_C_mul_of_wronskian_eq_zero`~~ — **repaired.** The lemma
    (`f'g = g'f → f = c·g`) really is false in char `p` (`f = Xᵖ`, `g = 1`), but the generality is
    what forced char 0: its only consumer applies it to the pure-`t` coefficients of the generic
@@ -262,7 +284,7 @@ stand, so the headline hypotheses stay at `CharZero`:
    through `natCast_natDegree_eq_zero_of_derivative_eq_zero`. `polarEval_stereo_pderiv_t_ne_zero`,
    `stereoJacobianDet_ne_zero_of_smooth` and the two arbitrary-line audit theorems in
    `ResidualHorizontalityLineAudit.lean` moved to `[NeZero (2 : k)] [NeZero (3 : k)]` with it.
-   Generic smoothness (item 1) is now the *only* `CharZero` in that chain.
+   With item 1 proved, that chain now carries no `CharZero` at all.
 3. `GenericCubicNondegeneracy.finiteExtensionCoordinateDifferential` extends a differential along a
    finite field extension — the same separability obstruction, and it does **not** yield to the
    move that fixed item 2. It quantifies over an arbitrary finite extension `L` of `k(X_σ)`, and

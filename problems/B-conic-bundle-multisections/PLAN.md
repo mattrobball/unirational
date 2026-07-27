@@ -4,7 +4,7 @@
 
 ```lean
 theorem smooth_bidegree23_hasUnirationalParametrization
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)] :
@@ -12,7 +12,8 @@ theorem smooth_bidegree23_hasUnirationalParametrization
 ```
 
 Pinned by `MainTheoremGuard.lean`. `#print axioms` must end at
-`propext, Classical.choice, Quot.sound`.
+`propext, Classical.choice, Quot.sound`. The characteristic hypothesis is `ringChar k ∤ 6`;
+`Statement.lean` asks for `[CharZero k]`, which this proves a fortiori.
 
 **It claims a dominant rational map from `𝔸³`. Nothing more** — no degree bound, no divisor class,
 no birational model. This is the most load-bearing sentence here: three routing mistakes came from

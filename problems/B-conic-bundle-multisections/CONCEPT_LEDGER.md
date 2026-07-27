@@ -54,7 +54,7 @@ open scoped AlgebraicGeometry
 open AlgebraicGeometry
 
 theorem smooth_bidegree23_hasUnirationalParametrization
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -63,7 +63,7 @@ theorem smooth_bidegree23_hasUnirationalParametrization
   ...
 
 theorem smooth_bidegree23_isUnirational
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (BiprojectiveSpace.biprojectiveZeroLocusToSpec 2 2 k F)] :
@@ -99,8 +99,8 @@ The source links in this section are the precise Mathlib instantiations:
 |---|---|---|---|
 | F01 | Ground field | `(k : Type u) [Field k]` | **R** |
 | F02 | Algebraically closed | `[IsAlgClosed k]` | **R**; do not specialize the main theorem to `ℂ`. |
-| F03 | Characteristic zero | `[CharZero k]` | **R** |
-| F04 | Perfect ground field | `PerfectField k`, inferred from `CharZero k` | **R**; needed by generic-smoothness results. |
+| F03 | Characteristic zero | `[CharZero k]` in `Statement.lean`; the library proves the stronger `[NeZero (2 : k)] [NeZero (3 : k)]` form (`ringChar k ∤ 6`) | **R**, satisfied a fortiori |
+| F04 | Perfect ground field | `PerfectField k`, inferred from `IsAlgClosed k` | **R**; needed by generic-smoothness results. |
 | F05 | Infinite ground field | `Infinite k`, inferred from `IsAlgClosed k` in the nontrivial field case | **R**; used to choose a constant line outside finitely many proper loci. |
 | F06 | Base scheme | `AlgebraicGeometry.Spec (CommRingCat.of k)`; usually `Spec (.of k)` | **R** |
 | F07 | Scheme and morphism | `AlgebraicGeometry.Scheme.{u}` and `X ⟶ Y` | **R** |
@@ -622,7 +622,9 @@ theorem.  These results corroborate §13 but do not replace the semantic source 
 
 ## 16. Acceptance checklist for the complete formalization
 
-- [ ] The public theorem quantifies over `[Field k] [IsAlgClosed k] [CharZero k]`.
+- [ ] The public theorem quantifies over `[Field k] [IsAlgClosed k] [CharZero k]`.  (Met: the
+      library theorem quantifies over the weaker `[NeZero (2 : k)] [NeZero (3 : k)]`, and
+      `Solution.lean` derives the `CharZero` form from it.)
 - [ ] `F ≠ 0` and exact weighted bidegree `(2,3)` are explicit.
 - [ ] `X_F` is constructed from `F` and proved to be the intended closed subscheme.
 - [ ] Smoothness is a hypothesis on the constructed structure morphism; relative dimension `3`
