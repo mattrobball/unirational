@@ -164,11 +164,11 @@ theorem funext_of_forall_eval_eq_algebraicClosure {k : Type u} [Field k] {p q : 
 
 end Funext
 
-/-! ### The third row of the table, which is not formal
+/-! ### The third row of the table
 
-Seven of the eleven Nullstellensatz sites use the *radical-membership* direction — `f` vanishes on
-the zero locus, therefore `f ∈ I.radical` — rather than the point-producing direction.  That is an
-ideal-theoretic conclusion, so injectivity is not enough; what descends it is
+Several of the Nullstellensatz sites conclude `1 ∈ J` for an ideal `J` of a polynomial ring, having
+proved it after enlarging the coefficient field.  That is an ideal-theoretic conclusion, so
+injectivity is not enough; what descends it is
 
 > `(I.map (algebraMap A B)).comap (algebraMap A B) = I`,
 
@@ -177,14 +177,128 @@ that lemma, and it is exactly the third row of the table above.  What is missing
 the case wanted here: there is no `Algebra (MvPolynomial σ k) (MvPolynomial σ K)` in scope, let
 alone `Module.FaithfullyFlat` for it, so the chain does not fire.
 
-The elementary route avoids flatness.  `MvPolynomial σ K` is free over `MvPolynomial σ k` on any
-`k`-basis of `K` containing `1`; an element of `I.map` is `∑ aᵢ gᵢ` with `gᵢ` drawn from
-`I ⊆ MvPolynomial σ k`, and expanding the `aᵢ` in that basis exhibits its `1`-component as a member
-of `I`.  An element that already lies downstairs is its own `1`-component.
+The route taken below avoids flatness, and is cheaper than either exhibiting the free basis or
+building the missing instances.  Faithful flatness is only ever used through the existence of a
+`MvPolynomial σ k`-linear **retraction** of the coefficient extension, and one such retraction is
+completely explicit: choose a `k`-linear `π : K → k` with `π 1 = 1` — which exists because `K` is a
+`k`-vector space and `k → K` is a split injection of vector spaces — and apply it to every
+coefficient.  The resulting `coeffProj π` is not a ring map, but it satisfies the projection formula
+`coeffProj π (map φ a * q) = a * coeffProj π q`, which is all that a descent of ideal membership
+needs, and it fixes `MvPolynomial σ k` pointwise.  No basis is chosen, no freeness is proved, and
+the full `comap ∘ map = id` identity comes out, not merely the `1 ∈ I` case. -/
 
-Recorded rather than proved, because it is a self-contained piece of commutative algebra of its own
-size and nothing in the current tree consumes it: the sites reaching the main theorem go through
-`exists_det_ne_zero_of_forall_ne_zero_of_geometric` above, which needs nothing of the map. -/
+section IdealDescent
+
+variable {k : Type u} [Field k] {K : Type w} [Field K] [Algebra k K] {σ : Type v}
+
+/-- Apply a `k`-linear functional to every coefficient of a polynomial over `K`.
+
+This is `MvPolynomial.map` for a map that is only linear, not multiplicative; it is a homomorphism
+of additive groups and of `MvPolynomial σ k`-modules, which is what the descent below consumes. -/
+noncomputable def coeffProj (π : K →ₗ[k] k) (p : MvPolynomial σ K) : MvPolynomial σ k :=
+  ∑ d ∈ p.support, MvPolynomial.monomial d (π (p.coeff d))
+
+@[simp] theorem coeff_coeffProj (π : K →ₗ[k] k) (p : MvPolynomial σ K) (e : σ →₀ ℕ) :
+    (coeffProj π p).coeff e = π (p.coeff e) := by
+  classical
+  rw [coeffProj, MvPolynomial.coeff_sum]
+  by_cases h : e ∈ p.support
+  · refine (Finset.sum_eq_single e ?_ ?_).trans ?_
+    · intro d _ hd
+      rw [MvPolynomial.coeff_monomial, if_neg hd]
+    · intro hne
+      exact absurd h hne
+    · rw [MvPolynomial.coeff_monomial, if_pos rfl]
+  · refine (Finset.sum_eq_zero ?_).trans ?_
+    · intro d hd
+      rw [MvPolynomial.coeff_monomial, if_neg]
+      rintro rfl
+      exact h hd
+    · rw [MvPolynomial.notMem_support_iff.mp h, map_zero]
+
+theorem coeffProj_zero (π : K →ₗ[k] k) : coeffProj π (0 : MvPolynomial σ K) = 0 := by
+  ext e; simp
+
+theorem coeffProj_add (π : K →ₗ[k] k) (p q : MvPolynomial σ K) :
+    coeffProj π (p + q) = coeffProj π p + coeffProj π q := by
+  ext e; simp
+
+/-- `coeffProj π` fixes the coefficient subring, provided `π` retracts `k → K`. -/
+theorem coeffProj_one (π : K →ₗ[k] k) (hπ : π (1 : K) = 1) :
+    coeffProj π (1 : MvPolynomial σ K) = 1 := by
+  classical
+  ext e
+  rw [coeff_coeffProj, MvPolynomial.coeff_one, MvPolynomial.coeff_one]
+  split_ifs with h
+  · exact hπ
+  · exact map_zero π
+
+/-- **The projection formula.**  `coeffProj π` is `MvPolynomial σ k`-linear when the base ring acts
+through the coefficient extension.  No hypothesis on `π` beyond `k`-linearity. -/
+theorem coeffProj_map_mul (π : K →ₗ[k] k) (a : MvPolynomial σ k) (q : MvPolynomial σ K) :
+    coeffProj π (MvPolynomial.map (algebraMap k K) a * q) = a * coeffProj π q := by
+  classical
+  ext e
+  rw [coeff_coeffProj, MvPolynomial.coeff_mul, MvPolynomial.coeff_mul, map_sum]
+  refine Finset.sum_congr rfl fun x _ => ?_
+  rw [MvPolynomial.coeff_map, coeff_coeffProj, ← Algebra.smul_def, map_smul, smul_eq_mul]
+
+/-- **Ideal membership descends along a coefficient field extension.**
+
+This is the third row of the table, proved without flatness: the elementary retraction above is
+enough.  Compare `Ideal.comap_map_eq_self_of_faithfullyFlat`, which would give the same conclusion
+from `Module.FaithfullyFlat (MvPolynomial σ k) (MvPolynomial σ K)` — an instance Mathlib does not
+have, and which cannot even be stated without first supplying the missing `Algebra`. -/
+theorem comap_map_mvPolynomial_eq_self (I : Ideal (MvPolynomial σ k)) :
+    (I.map (MvPolynomial.map (algebraMap k K))).comap (MvPolynomial.map (algebraMap k K)) = I := by
+  classical
+  refine le_antisymm ?_ Ideal.le_comap_map
+  obtain ⟨π, hπ⟩ := (Algebra.linearMap k K).exists_leftInverse_of_injective
+    (LinearMap.ker_eq_bot.mpr (algebraMap k K).injective)
+  have hπ1 : π (1 : K) = 1 := by
+    have h := congrArg (fun f : k →ₗ[k] k => f 1) hπ
+    simpa using h
+  -- The elements whose every multiple projects into `I`.  This is an ideal upstairs, and it
+  -- contains the image of `I`, hence the whole extension of `I`.
+  set J : Ideal (MvPolynomial σ K) :=
+    { carrier := {p | ∀ a : MvPolynomial σ K, coeffProj π (a * p) ∈ I}
+      add_mem' := by
+        intro p q hp hq a
+        rw [mul_add, coeffProj_add]
+        exact I.add_mem (hp a) (hq a)
+      zero_mem' := by
+        intro a
+        rw [mul_zero, coeffProj_zero]
+        exact I.zero_mem
+      smul_mem' := by
+        intro c p hp a
+        rw [smul_eq_mul, ← mul_assoc]
+        exact hp _ } with hJ
+  have hle : I.map (MvPolynomial.map (algebraMap k K)) ≤ J := by
+    rw [Ideal.map_le_iff_le_comap]
+    intro g hg a
+    rw [mul_comm, coeffProj_map_mul]
+    exact I.mul_mem_right _ hg
+  intro y hy
+  have hyJ : MvPolynomial.map (algebraMap k K) y ∈ J := hle hy
+  have h1 := hyJ 1
+  rw [one_mul] at h1
+  rwa [show MvPolynomial.map (algebraMap k K) y
+        = MvPolynomial.map (algebraMap k K) y * 1 from (mul_one _).symm,
+    coeffProj_map_mul, coeffProj_one π hπ1, mul_one] at h1
+
+/-- The `1 ∈ I` case, which is what the Nullstellensatz sites need: a polynomial ideal that becomes
+the unit ideal after a coefficient field extension was already the unit ideal. -/
+theorem ideal_eq_top_of_map_eq_top {I : Ideal (MvPolynomial σ k)}
+    (h : I.map (MvPolynomial.map (algebraMap k K)) = ⊤) : I = ⊤ := by
+  refine (Ideal.eq_top_iff_one _).mpr ?_
+  have h1 : (1 : MvPolynomial σ K) ∈ I.map (MvPolynomial.map (algebraMap k K)) := by
+    rw [h]; trivial
+  have := (comap_map_mvPolynomial_eq_self (K := K) I).le (show (1 : MvPolynomial σ k) ∈ _ by
+    simpa using h1)
+  exact this
+
+end IdealDescent
 
 end
 
