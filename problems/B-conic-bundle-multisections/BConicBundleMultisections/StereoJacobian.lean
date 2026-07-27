@@ -1069,6 +1069,106 @@ theorem eval_dt_eq_zero_of_isotropic {k : Type u} [Field k] [IsAlgClosed k]
     rw [hsmul, eval_smul_of_isHomogeneous_two' R0 hRhom, hRp, mul_zero]
 
 
+/-! ### Degree of the pure-`t` conic coefficients
+
+The pure-`t` coefficients `q i j` of the generic conic along `L = {Y₂ = 0}` are polynomials in `t`
+of degree at most `3`.  This is not decoration: it is what makes the wronskian lemma below
+available at `ringChar k ∤ 6` rather than only in characteristic `0` — see its docstring. -/
+
+/-- The right-block degree of a multiindex is the sum of its second-block exponents. -/
+theorem weight_rightDegreeWeight_eq_sum {m n : ℕ}
+    (s : BiprojectiveCoordinate m n →₀ ℕ) :
+    Finsupp.weight (rightDegreeWeight (m := m) (n := n)) s =
+      ∑ j : Fin (n + 1), s (.inr j) := by
+  classical
+  simp only [Finsupp.weight_apply, rightDegreeWeight]
+  rw [Finsupp.sum_fintype _ _ (by intro; simp)]
+  simp [Fintype.sum_sum_type]
+
+/-- Image of a single monomial under second-block specialization at polynomial arguments: the
+second-block exponents produce a scalar factor in `k[t]`, the first-block ones a monomial with
+constant coefficients. -/
+private theorem specializeSecondCoordinates_map_C_monomial
+    {m n : ℕ} {K : Type u} [CommRing K]
+    (y : Fin (n + 1) → Polynomial K)
+    (d : BiprojectiveCoordinate m n →₀ ℕ) (a : K) :
+    specializeSecondCoordinates (m := m) y
+        (MvPolynomial.map (Polynomial.C : K →+* Polynomial K) (MvPolynomial.monomial d a)) =
+      MvPolynomial.C (Polynomial.C a * ∏ j : Fin (n + 1), y j ^ d (.inr j)) *
+        MvPolynomial.map (Polynomial.C : K →+* Polynomial K)
+          (∏ i : Fin (m + 1), (MvPolynomial.X i : MvPolynomial (Fin (m + 1)) K) ^ d (.inl i)) := by
+  classical
+  rw [MvPolynomial.map_monomial, specializeSecondCoordinates, MvPolynomial.aeval_monomial,
+    Finsupp.prod_fintype _ _ (by intro; simp), Fintype.prod_sum_type]
+  simp only [MvPolynomial.algebraMap_eq, map_prod, map_pow, MvPolynomial.map_X, map_mul]
+  ring
+
+/-- **Degree bound for a second-block specialization.**  If `G` is homogeneous of degree `e` in the
+second block of Cox coordinates and the specialization point `y` has entries of degree at most `c`
+in `t`, then every coefficient of `G(x, y(t))` is a polynomial in `t` of degree at most `e * c`.
+
+Only the second-block homogeneity is used; the first block is untouched by the substitution. -/
+theorem natDegree_coeff_specializeSecondCoordinates_map_C_le
+    {m n e c : ℕ} {K : Type u} [CommRing K]
+    (G : MvPolynomial (BiprojectiveCoordinate m n) K)
+    (hG : G.IsWeightedHomogeneous rightDegreeWeight e)
+    (y : Fin (n + 1) → Polynomial K) (hy : ∀ j, (y j).natDegree ≤ c)
+    (s : Fin (m + 1) →₀ ℕ) :
+    ((specializeSecondCoordinates (m := m) y
+        (MvPolynomial.map (Polynomial.C : K →+* Polynomial K) G)).coeff s).natDegree ≤ e * c := by
+  classical
+  rw [MvPolynomial.as_sum G, map_sum, map_sum, MvPolynomial.coeff_sum]
+  refine Polynomial.natDegree_sum_le_of_forall_le _ _ fun d hd => ?_
+  have hne : MvPolynomial.coeff d G ≠ 0 := MvPolynomial.mem_support_iff.mp hd
+  have hwt : ∑ j : Fin (n + 1), d (.inr j) = e := by
+    rw [← weight_rightDegreeWeight_eq_sum]; exact hG hne
+  rw [specializeSecondCoordinates_map_C_monomial, MvPolynomial.coeff_C_mul,
+    MvPolynomial.coeff_map]
+  refine Polynomial.natDegree_mul_le.trans ?_
+  rw [Polynomial.natDegree_C, add_zero]
+  refine Polynomial.natDegree_mul_le.trans ?_
+  rw [Polynomial.natDegree_C, zero_add]
+  refine le_trans (Polynomial.natDegree_prod_le _ _) ?_
+  calc ∑ j : Fin (n + 1), (y j ^ d (.inr j)).natDegree
+      ≤ ∑ j : Fin (n + 1), d (.inr j) * c :=
+        Finset.sum_le_sum fun j _ =>
+          Polynomial.natDegree_pow_le.trans (Nat.mul_le_mul_left _ (hy j))
+    _ = (∑ j : Fin (n + 1), d (.inr j)) * c := by rw [Finset.sum_mul]
+    _ = e * c := by rw [hwt]
+
+/-- **The pure-`t` conic coefficients have degree at most `3`.**  The coordinate line
+`L = {Y₂ = 0}` is parameterised by `y(t) = (1, t, 0)`, whose entries have degree at most `1`, and
+`F` is cubic in the second block; so each entry of the generic conic `Q_t` is a cubic in `t`. -/
+theorem natDegree_ternaryQuadraticCoeff_coordinateLineSpecializedConicPoly_le
+    {K : Type u} [Field K] (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
+    (hF : IsBidegree23 F) (i j : Fin 3) :
+    (ternaryQuadraticCoeff (coordinateLineSpecializedConicPoly F) i j).natDegree ≤ 3 := by
+  classical
+  have hy : ∀ l : Fin 3, (coordinateLinePoint (Polynomial K) Polynomial.X l).natDegree ≤ 1 := by
+    intro l
+    fin_cases l <;> simp [coordinateLinePoint]
+  have hcoeff : ∀ s : Fin 3 →₀ ℕ,
+      ((coordinateLineSpecializedConicPoly F).coeff s).natDegree ≤ 3 := by
+    intro s
+    have := natDegree_coeff_specializeSecondCoordinates_map_C_le (m := 2) (n := 2) (e := 3)
+      (c := 1) F hF.isWeightedHomogeneous_right (coordinateLinePoint (Polynomial K) Polynomial.X)
+      hy s
+    simpa [coordinateLineSpecializedConicPoly] using this
+  simp only [ternaryQuadraticCoeff]
+  split_ifs
+  · exact hcoeff _
+  · exact hcoeff _
+  · simp
+
+/-- Under `ringChar k ∤ 6` every positive natural number at most `3` is nonzero in `k`. -/
+private theorem natCast_ne_zero_of_le_three {k : Type u} [Field k]
+    [NeZero (2 : k)] [NeZero (3 : k)] (N : ℕ) (hN : 0 < N) (hN3 : N ≤ 3) : (N : k) ≠ 0 := by
+  interval_cases N
+  · simp
+  · simpa using (two_ne_zero (α := k))
+  · simpa using (three_ne_zero (α := k))
+
+
 /-! ### Wronskian of coefficient polynomials (pure-`t` proportionality) -/
 
 /-- Wronskian of two univariate polynomials. -/
@@ -1076,9 +1176,44 @@ noncomputable def polyWronskian {k : Type u} [CommRing k]
     (f g : Polynomial k) : Polynomial k :=
   Polynomial.derivative f * g - Polynomial.derivative g * f
 
-/-- If `f'g = g'f` and `g ≠ 0`, then `f = c · g` for some constant `c`. -/
-theorem exists_C_mul_of_wronskian_eq_zero {k : Type u} [Field k] [CharZero k]
+/-- **The leading-coefficient obstruction to `p' = 0`.**  If `p ≠ 0` has vanishing derivative then
+`deg p` is zero *in the coefficient ring*: the coefficient of `t^{deg p − 1}` in `p'` is
+`(deg p) · lc p`, and `lc p ≠ 0`.
+
+This is the whole characteristic input of `exists_C_mul_of_wronskian_eq_zero`.  In characteristic
+`0` it forces `deg p = 0`; in characteristic `p` it only forces `p ∣ deg p`, which is why the
+wronskian lemma needs a degree bound there. -/
+theorem natCast_natDegree_eq_zero_of_derivative_eq_zero
+    {R : Type u} [CommRing R] [NoZeroDivisors R] {p : Polynomial R} (hp : p ≠ 0)
+    (hd : Polynomial.derivative p = 0) : (p.natDegree : R) = 0 := by
+  rcases Nat.eq_zero_or_pos p.natDegree with h | h
+  · rw [h]; simp
+  · have hidx : p.natDegree - 1 + 1 = p.natDegree := Nat.succ_pred_eq_of_pos h
+    have hcoeff := Polynomial.coeff_derivative p (p.natDegree - 1)
+    rw [hd, Polynomial.coeff_zero, hidx] at hcoeff
+    have hcast : ((p.natDegree - 1 : ℕ) : R) + 1 = (p.natDegree : R) := by
+      rw [show ((p.natDegree - 1 : ℕ) : R) + 1 = ((p.natDegree - 1 + 1 : ℕ) : R) by push_cast; ring,
+        hidx]
+    rw [hcast] at hcoeff
+    exact (mul_eq_zero.mp hcoeff.symm).resolve_left (Polynomial.leadingCoeff_ne_zero.mpr hp)
+
+/-- If `f'g = g'f` and `g ≠ 0`, then `f = c · g` for some constant `c`.
+
+**This is false in characteristic `p` without a degree hypothesis**: `f = X^p`, `g = 1` satisfy
+`f' g = 0 = g' f` and `f` is not constant.  What the proof consumes is exactly the hypothesis
+`hchar`, through `natCast_natDegree_eq_zero_of_derivative_eq_zero`: after dividing out `gcd f g`
+the cofactors `f₁, g₁` have vanishing derivative, and `hchar` is what turns that into
+`deg f₁ = deg g₁ = 0`.
+
+The hypothesis is stated as "every positive natural number up to `max (deg f) (deg g)` is nonzero
+in `k`" rather than as `ringChar k = 0 ∨ max (deg f) (deg g) < ringChar k`.  The two are equivalent
+over a field — `(N : k) = 0 ↔ ringChar k ∣ N`, and `ringChar` of a field is `0` or prime — but the
+form used here is what the proof literally needs, it follows from `CharZero` by `Nat.cast_ne_zero`,
+and at the one call site (where the degrees are at most `3`) it is discharged directly from
+`[NeZero (2 : k)] [NeZero (3 : k)]` without having to know that `ringChar k` is prime. -/
+theorem exists_C_mul_of_wronskian_eq_zero {k : Type u} [Field k]
     (f g : Polynomial k) (hg : g ≠ 0)
+    (hchar : ∀ N : ℕ, 0 < N → N ≤ max f.natDegree g.natDegree → (N : k) ≠ 0)
     (hw : Polynomial.derivative f * g = Polynomial.derivative g * f) :
     ∃ c : k, f = Polynomial.C c * g := by
   classical
@@ -1095,6 +1230,7 @@ theorem exists_C_mul_of_wronskian_eq_zero {k : Type u} [Field k] [CharZero k]
   obtain ⟨g1, hg1⟩ : ∃ g1, g = d * g1 := by
     obtain ⟨g1, h⟩ := exists_eq_mul_right_of_dvd (gcd_dvd_right f g)
     exact ⟨g1, h⟩
+  have hf1_ne : f1 ≠ 0 := fun h => hf0 (by rw [hf1, h, mul_zero])
   have hg1_ne : g1 ≠ 0 := fun h => hg (by rw [hg1, h, mul_zero])
   have hcop : IsCoprime f1 g1 := by
     have hf1' : f1 = f / d := by
@@ -1130,17 +1266,26 @@ theorem exists_C_mul_of_wronskian_eq_zero {k : Type u} [Field k] [CharZero k]
     have hmul : g1 ∣ Polynomial.derivative f1 * g1 := dvd_mul_left _ _
     have hmul' : g1 ∣ Polynomial.derivative g1 * f1 := by rwa [hderiv1] at hmul
     exact Polynomial.dvd_derivative_iff.mp (IsCoprime.dvd_of_dvd_mul_right hcop.symm hmul')
-  set bg : k := Polynomial.coeff g1 0
-  have hg1C : g1 = Polynomial.C bg := Polynomial.eq_C_of_derivative_eq_zero hg1'0
-  have hb : bg ≠ 0 := fun h => hg1_ne (by rw [hg1C, h, map_zero])
   have hf1'0 : Polynomial.derivative f1 = 0 := by
-    by_cases h : f1 = 0
-    · simp [h]
-    · have hmul : f1 ∣ Polynomial.derivative g1 * f1 := dvd_mul_left _ _
-      have hmul' : f1 ∣ Polynomial.derivative f1 * g1 := by rwa [← hderiv1] at hmul
-      exact Polynomial.dvd_derivative_iff.mp (IsCoprime.dvd_of_dvd_mul_right hcop hmul')
+    have hmul : f1 ∣ Polynomial.derivative g1 * f1 := dvd_mul_left _ _
+    have hmul' : f1 ∣ Polynomial.derivative f1 * g1 := by rwa [← hderiv1] at hmul
+    exact Polynomial.dvd_derivative_iff.mp (IsCoprime.dvd_of_dvd_mul_right hcop hmul')
+  -- The characteristic input: a nonconstant `f₁` or `g₁` would force its degree to vanish in `k`.
+  have hf1deg : f1.natDegree = 0 := by
+    by_contra hpos
+    exact hchar f1.natDegree (Nat.pos_of_ne_zero hpos)
+      ((Polynomial.natDegree_le_of_dvd ⟨d, by rw [hf1, mul_comm]⟩ hf0).trans (le_max_left _ _))
+      (natCast_natDegree_eq_zero_of_derivative_eq_zero hf1_ne hf1'0)
+  have hg1deg : g1.natDegree = 0 := by
+    by_contra hpos
+    exact hchar g1.natDegree (Nat.pos_of_ne_zero hpos)
+      ((Polynomial.natDegree_le_of_dvd ⟨d, by rw [hg1, mul_comm]⟩ hg).trans (le_max_right _ _))
+      (natCast_natDegree_eq_zero_of_derivative_eq_zero hg1_ne hg1'0)
+  set bg : k := Polynomial.coeff g1 0
+  have hg1C : g1 = Polynomial.C bg := Polynomial.eq_C_of_natDegree_eq_zero hg1deg
+  have hb : bg ≠ 0 := fun h => hg1_ne (by rw [hg1C, h, map_zero])
   set bf : k := Polynomial.coeff f1 0
-  have hf1C : f1 = Polynomial.C bf := Polynomial.eq_C_of_derivative_eq_zero hf1'0
+  have hf1C : f1 = Polynomial.C bf := Polynomial.eq_C_of_natDegree_eq_zero hf1deg
   set c : k := bf * bg⁻¹
   refine ⟨c, ?_⟩
   have hL : f = d * Polynomial.C bf := hf1.trans (congrArg (fun p => d * p) hf1C)
@@ -1372,7 +1517,7 @@ minors therefore vanish identically, so `Q` is a pure-`t` scalar times a constan
 scalar either has a root (whole second fibre, contradicting smoothness) or is constant, in
 which case the degree-3 line restriction vanishes at `(0:1:0)` (again a whole fibre). -/
 theorem polarEval_stereo_pderiv_t_ne_zero
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -1465,11 +1610,16 @@ theorem polarEval_stereo_pderiv_t_ne_zero
   obtain ⟨i0, j0, hf0⟩ := hQpoly_ne
   set f := q i0 j0
   have hf_ne : f ≠ 0 := hf0
+  -- Every `q i j` is a cubic in `t`, so `ringChar k ∤ 6` supplies the wronskian lemma's hypothesis.
+  have hqdeg (i j : Fin 3) : (q i j).natDegree ≤ 3 :=
+    natDegree_ternaryQuadraticCoeff_coordinateLineSpecializedConicPoly_le F hF i j
   have hprop_coeff (i j : Fin 3) : ∃ c : k, q i j = Polynomial.C c * f := by
     have hw := hwronsk i j i0 j0
     have hmul : Polynomial.derivative (q i j) * f = Polynomial.derivative f * q i j := by
       simpa [f, sub_eq_zero] using hw
-    exact exists_C_mul_of_wronskian_eq_zero (q i j) f hf_ne hmul
+    refine exists_C_mul_of_wronskian_eq_zero (q i j) f hf_ne (fun N hN hNle => ?_) hmul
+    exact natCast_ne_zero_of_le_three N hN
+      (hNle.trans (max_le (hqdeg i j) (hqdeg i0 j0)))
   choose c_ij hc_ij using hprop_coeff
   set Q0 : MvPolynomial (Fin 3) k :=
     ∑ i : Fin 3, ∑ j : Fin 3,
@@ -1684,7 +1834,7 @@ with the three factors on the right nonzero by smoothness of the generic conic, 
 and immersion of the stereo parameterisation.
 -/
 theorem stereoJacobianDet_ne_zero_of_smooth
-    {k : Type u} [Field k] [IsAlgClosed k] [CharZero k]
+    {k : Type u} [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
