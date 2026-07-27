@@ -19,7 +19,9 @@ If two nonzero homogeneous quadratics have proportional gradients in the project
 then they are scalar multiples.  The proof is elementary and avoids fraction-field derivations.
 Choose `z` with `p(z) ≠ 0`, pair the gradient identities with an arbitrary direction `x`, and
 apply the resulting polar identity at `z + x` and `z - x`.  Their difference is
-`4 * (p(z)q(x) - q(z)p(x))`, so characteristic zero gives proportionality at every point.
+`4 * (p(z)q(x) - q(z)p(x))`, so `2 ≠ 0` (hence `4 ≠ 0`) gives proportionality at every point.
+The hypothesis `[Infinite k]` is needed to locate a non-vanishing evaluation of `p` and to apply
+`MvPolynomial.funext`; under the former `[CharZero k]` it was free.
 -/
 
 @[expose] public section
@@ -32,7 +34,7 @@ universe u
 
 open _root_.MvPolynomial
 
-variable {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
+variable {k : Type u} [Field k] [Infinite k] [NeZero (2 : k)] [NeZero (3 : k)]
 
 /-- Projectively equal gradients force two ternary quadratic forms to be scalar multiples. -/
 theorem eq_C_mul_of_mul_pderiv_eq_mul_pderiv
@@ -40,7 +42,6 @@ theorem eq_C_mul_of_mul_pderiv_eq_mul_pderiv
     (hp : p.IsHomogeneous 2) (hq : q.IsHomogeneous 2) (hp0 : p ≠ 0)
     (hwedge : ∀ i : Fin 3, p * pderiv i q = q * pderiv i p) :
     ∃ c : k, q = C c * p := by
-  haveI : Infinite k := inferInstance
   have hex : ∃ z : Fin 3 → k, eval z p ≠ 0 := by
     by_contra h
     push Not at h

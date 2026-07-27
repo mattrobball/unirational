@@ -137,7 +137,7 @@ theorem hesseTangentResidualRep_ne_zero_of_hesseCubic
   have hxy : p 0 ^ 3 = p 1 ^ 3 :=
     sub_eq_zero.mp ((mul_eq_zero.mp h2).resolve_left hz)
   have hrel : p 0 ^ 3 = lam * p 0 * p 1 * p 2 := by
-    have hthree : (3 : K) ≠ 0 := by norm_num
+    have hthree : (3 : K) ≠ 0 := three_ne_zero
     apply (mul_left_cancel₀ hthree)
     rw [← hxy, hzx] at hp'
     linear_combination hp'
