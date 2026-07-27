@@ -602,7 +602,7 @@ instance over `k̄`, where genericity arguments are available — and they hold 
 What is *not* here is the Tsen section: `v` is an input over `k` in both the hypothesis and the
 conclusion.  A section over `K(t)` says nothing about `k(t)`, and no base change repairs that.  The
 frame relation is likewise absent, because it travels the other way for free
-(`lineFrame_map_mul_map`). -/
+(`lineFrame_map_mul_map_of`). -/
 theorem goodLineData_of_map (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k)
     (hgood : ResidualLineNonconstantOn
