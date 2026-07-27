@@ -132,7 +132,7 @@ theorem exists_isotropic_coordinateLine_conic
   exists_isotropic_ternary_quadratic_poly (coordinateLineTernaryQuadraticPoly F)
 
 theorem coordinateLineSpecializedConic_ne_zero_of_smooth
-    (K : Type u) [Field K] [IsAlgClosed K]
+    (K : Type u) [Field K]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)]

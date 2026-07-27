@@ -44,7 +44,7 @@ with `SmoothExtensionJacobian`: a smooth hypersurface over `K` has no singular p
 *any* extension of `K`, which is exactly what makes the closure hypothesis on `K` unnecessary. -/
 
 /-- Evaluating a `K`-chart equation at an `L`-point is evaluating its base change. -/
-private theorem aeval_affineChartEquation_eq_eval_map
+theorem aeval_affineChartEquation_eq_eval_map
     {m n : ℕ} {K L : Type u} [Field K] [Field L] [Algebra K L]
     (i : Fin (m + 1)) (j : Fin (n + 1))
     (a : Fin m ⊕ Fin n → L) (p : MvPolynomial (BiprojectiveCoordinate m n) K) :
@@ -55,7 +55,7 @@ private theorem aeval_affineChartEquation_eq_eval_map
     MvPolynomial.aeval_def]
 
 /-- The same comparison for a partial derivative of the chart equation. -/
-private theorem aeval_pderiv_affineChartEquation_eq_eval_map
+theorem aeval_pderiv_affineChartEquation_eq_eval_map
     {m n : ℕ} {K L : Type u} [Field K] [Field L] [Algebra K L]
     (i : Fin (m + 1)) (j : Fin (n + 1)) (q : Fin m ⊕ Fin n)
     (a : Fin m ⊕ Fin n → L) (p : MvPolynomial (BiprojectiveCoordinate m n) K) :
@@ -64,6 +64,33 @@ private theorem aeval_pderiv_affineChartEquation_eq_eval_map
         (affineChartEquation m n L i j (MvPolynomial.map (algebraMap K L) p))) := by
   rw [← map_affineChartEquation (algebraMap K L) i j p, MvPolynomial.pderiv_map,
     MvPolynomial.eval_map, MvPolynomial.aeval_def]
+
+/-- **No whole fiber over a point of an algebraically closed extension.**
+
+The base field `K` is arbitrary and carries only the smoothness instance; the normalized point
+`x` lives in an algebraically closed extension `L`.  This is the form the flatness and
+Nullstellensatz arguments downstream need, since they run over `L`. -/
+theorem not_specializeFirstCoordinates_map_eq_zero_of_global_smooth_of_geometric
+    (m n : ℕ) (K : Type u) [Field K] {L : Type u} [Field L] [IsAlgClosed L] [Algebra K L]
+    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) K)
+    (hF : IsBihomogeneousOfBidegree d e F) (hF0 : F ≠ 0)
+    (hd : 0 < d) (he : 0 < e) (hmn : m < n + 1)
+    [Smooth (biprojectiveZeroLocusToSpec m n K F)]
+    (i : Fin (m + 1)) (x : Fin (m + 1) → L) (hxi : x i = 1) :
+    specializeFirstCoordinates (n := n) x (MvPolynomial.map (algebraMap K L) F) ≠ 0 := by
+  intro hzero
+  obtain ⟨j, y, hyj, hval, hgrad⟩ :=
+    exists_affineChart_singular_point_of_specializeFirst_eq_zero
+      (hF.map_coefficients (algebraMap K L)) hd he i x hxi hzero hmn
+  have hne : affineChartEquation m n K i j F ≠ 0 :=
+    affineChartEquation_ne_zero m n K i j F hF hF0
+  refine no_common_zero_affineChartEquation_and_pderiv_of_global_smooth_extension
+    m n K L F hF i j hne (affineChartPoint i j x y) ⟨?_, ?_⟩
+  · rw [aeval_affineChartEquation_eq_eval_map (L := L)]
+    exact hval
+  · intro q
+    rw [aeval_pderiv_affineChartEquation_eq_eval_map (L := L)]
+    exact hgrad q
 
 /-- Under global smoothness, a nonzero bihomogeneous equation cannot vanish identically after
 specializing the first coordinate block at a normalized point, provided there are fewer left
@@ -80,23 +107,33 @@ theorem not_specializeFirstCoordinates_eq_zero_of_global_smooth
     (i : Fin (m + 1)) (x : Fin (m + 1) → K) (hxi : x i = 1) :
     specializeFirstCoordinates (n := n) x F ≠ 0 := by
   intro hzero
-  set φ : K →+* AlgebraicClosure K := algebraMap K (AlgebraicClosure K) with hφ
-  have hzeroL : specializeFirstCoordinates (n := n) (fun l => φ (x l))
-      (MvPolynomial.map φ F) = 0 := by
-    rw [← map_specializeFirstCoordinates_general, hzero, map_zero]
-  obtain ⟨j, y, hyj, hval, hgrad⟩ :=
-    exists_affineChart_singular_point_of_specializeFirst_eq_zero
-      (hF.map_coefficients φ) hd he i (fun l => φ (x l)) (by simp [hxi]) hzeroL hmn
+  refine not_specializeFirstCoordinates_map_eq_zero_of_global_smooth_of_geometric
+    (L := AlgebraicClosure K) m n K F hF hF0 hd he hmn i
+    (fun l => algebraMap K (AlgebraicClosure K) (x l)) (by simp [hxi]) ?_
+  rw [← map_specializeFirstCoordinates_general, hzero, map_zero]
+
+/-- **No whole fiber of the second projection over a point of an algebraically closed
+extension.**  Companion of the first-block statement. -/
+theorem not_specializeSecondCoordinates_map_eq_zero_of_global_smooth_of_geometric
+    (m n : ℕ) (K : Type u) [Field K] {L : Type u} [Field L] [IsAlgClosed L] [Algebra K L]
+    {d e : ℕ} (F : MvPolynomial (BiprojectiveCoordinate m n) K)
+    (hF : IsBihomogeneousOfBidegree d e F) (hF0 : F ≠ 0)
+    (hd : 0 < d) (he : 0 < e) (hnm : n < m + 1)
+    [Smooth (biprojectiveZeroLocusToSpec m n K F)]
+    (j : Fin (n + 1)) (y : Fin (n + 1) → L) (hyj : y j = 1) :
+    specializeSecondCoordinates (m := m) y (MvPolynomial.map (algebraMap K L) F) ≠ 0 := by
+  intro hzero
+  obtain ⟨i, x, hxi, hval, hgrad⟩ :=
+    exists_affineChart_singular_point_of_specializeSecond_eq_zero
+      (hF.map_coefficients (algebraMap K L)) hd he j y hyj hzero hnm
   have hne : affineChartEquation m n K i j F ≠ 0 :=
     affineChartEquation_ne_zero m n K i j F hF hF0
   refine no_common_zero_affineChartEquation_and_pderiv_of_global_smooth_extension
-    m n K (AlgebraicClosure K) F hF i j hne
-    (affineChartPoint i j (fun l => φ (x l)) y) ⟨?_, ?_⟩
-  · rw [aeval_affineChartEquation_eq_eval_map (L := AlgebraicClosure K)]
+    m n K L F hF i j hne (affineChartPoint i j x y) ⟨?_, ?_⟩
+  · rw [aeval_affineChartEquation_eq_eval_map (L := L)]
     exact hval
   · intro q
-    rw [aeval_pderiv_affineChartEquation_eq_eval_map
-      (L := AlgebraicClosure K)]
+    rw [aeval_pderiv_affineChartEquation_eq_eval_map (L := L)]
     exact hgrad q
 
 /-- Under global smoothness, a nonzero bihomogeneous equation cannot vanish identically after
@@ -113,24 +150,10 @@ theorem not_specializeSecondCoordinates_eq_zero_of_global_smooth
     (j : Fin (n + 1)) (y : Fin (n + 1) → K) (hyj : y j = 1) :
     specializeSecondCoordinates (m := m) y F ≠ 0 := by
   intro hzero
-  set φ : K →+* AlgebraicClosure K := algebraMap K (AlgebraicClosure K) with hφ
-  have hzeroL : specializeSecondCoordinates (m := m) (fun l => φ (y l))
-      (MvPolynomial.map φ F) = 0 := by
-    rw [← map_specializeSecondCoordinates, hzero, map_zero]
-  obtain ⟨i, x, hxi, hval, hgrad⟩ :=
-    exists_affineChart_singular_point_of_specializeSecond_eq_zero
-      (hF.map_coefficients φ) hd he j (fun l => φ (y l)) (by simp [hyj]) hzeroL hnm
-  have hne : affineChartEquation m n K i j F ≠ 0 :=
-    affineChartEquation_ne_zero m n K i j F hF hF0
-  refine no_common_zero_affineChartEquation_and_pderiv_of_global_smooth_extension
-    m n K (AlgebraicClosure K) F hF i j hne
-    (affineChartPoint i j x (fun l => φ (y l))) ⟨?_, ?_⟩
-  · rw [aeval_affineChartEquation_eq_eval_map (L := AlgebraicClosure K)]
-    exact hval
-  · intro q
-    rw [aeval_pderiv_affineChartEquation_eq_eval_map
-      (L := AlgebraicClosure K)]
-    exact hgrad q
+  refine not_specializeSecondCoordinates_map_eq_zero_of_global_smooth_of_geometric
+    (L := AlgebraicClosure K) m n K F hF hF0 hd he hnm j
+    (fun l => algebraMap K (AlgebraicClosure K) (y l)) (by simp [hyj]) ?_
+  rw [← map_specializeSecondCoordinates, hzero, map_zero]
 
 /-- On a smooth nonzero bidegree-`(2,3)` threefold, no first-projection fiber is the whole
 second projective plane. -/
@@ -155,6 +178,46 @@ theorem not_specializeSecondCoordinates_eq_zero_of_smooth_bidegree23
     specializeSecondCoordinates (m := 2) y F ≠ 0 :=
   not_specializeSecondCoordinates_eq_zero_of_global_smooth
     2 2 K F hF hF0 (by norm_num) (by norm_num) (by norm_num) j y hyj
+
+/-- **On a smooth nonzero bidegree-`(2,3)` threefold no second-projection fiber over a nonzero
+point of an algebraically closed extension is the whole first projective plane.**
+
+This is the hypothesis `span_range_coeff_baseChangedChartEquation_id_eq_top_of_geometric` asks
+for.  The point is not assumed normalized: bihomogeneity rescales it. -/
+theorem not_specializeSecondCoordinates_map_eq_zero_of_smooth_bidegree23_of_geometric
+    (K : Type u) [Field K] {L : Type u} [Field L] [IsAlgClosed L] [Algebra K L]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)]
+    (y : Fin 3 → L) (hy : y ≠ 0) :
+    specializeSecondCoordinates (m := 2) y (MvPolynomial.map (algebraMap K L) F) ≠ 0 := by
+  intro hzero
+  obtain ⟨j, hj⟩ := _root_.BConicBundleMultisections.exists_normalizing_coordinate y hy
+  refine not_specializeSecondCoordinates_map_eq_zero_of_global_smooth_of_geometric
+    (L := L) 2 2 K F hF hF0 (by norm_num) (by norm_num) (by norm_num) j
+    (_root_.BConicBundleMultisections.normalizeCoordinateRepresentative y j)
+    (_root_.BConicBundleMultisections.normalizeCoordinateRepresentative_apply y j hj) ?_
+  have hsmul := (hF.map_coefficients (algebraMap K L)).specializeSecondCoordinates_smul
+    (y j)⁻¹ y
+  rw [_root_.BConicBundleMultisections.normalizeCoordinateRepresentative, hsmul, hzero, mul_zero]
+
+/-- The first-block companion of the previous statement. -/
+theorem not_specializeFirstCoordinates_map_eq_zero_of_smooth_bidegree23_of_geometric
+    (K : Type u) [Field K] {L : Type u} [Field L] [IsAlgClosed L] [Algebra K L]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) K)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 K F)]
+    (x : Fin 3 → L) (hx : x ≠ 0) :
+    specializeFirstCoordinates (n := 2) x (MvPolynomial.map (algebraMap K L) F) ≠ 0 := by
+  intro hzero
+  obtain ⟨i, hi⟩ := _root_.BConicBundleMultisections.exists_normalizing_coordinate x hx
+  refine not_specializeFirstCoordinates_map_eq_zero_of_global_smooth_of_geometric
+    (L := L) 2 2 K F hF hF0 (by norm_num) (by norm_num) (by norm_num) i
+    (_root_.BConicBundleMultisections.normalizeCoordinateRepresentative x i)
+    (_root_.BConicBundleMultisections.normalizeCoordinateRepresentative_apply x i hi) ?_
+  have hsmul := (hF.map_coefficients (algebraMap K L)).specializeFirstCoordinates_smul
+    (x i)⁻¹ x
+  rw [_root_.BConicBundleMultisections.normalizeCoordinateRepresentative, hsmul, hzero, mul_zero]
 
 end BiprojectiveSpace
 

@@ -380,19 +380,8 @@ theorem flat_affineChartQuotientYHom_of_span_range_coeff_eq_top
     (standardChartQuotientEquivAffineQuotient
       (R := k) (i := i) (j := j) F).bijective).mpr hf₀
 
-/-- Every explicit standard-chart quotient map for the second projection of a smooth nonzero
-bidegree-`(2,3)` hypersurface is flat. -/
-theorem flat_affineChartQuotientYHom_of_smooth_bidegree23
-    {k : Type u} [Field k] [IsAlgClosed k]
-    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
-    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
-    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
-    (i j : Fin 3) :
-    (affineChartQuotientYHom 2 2 k i j F).Flat :=
-  flat_affineChartQuotientYHom_of_span_range_coeff_eq_top F i j
-    (span_range_coeff_baseChangedChartEquation_id_eq_top F hF hF0 i j)
-
-/-- The same, over an arbitrary base field, from the geometric no-whole-fibre hypothesis. -/
+/-- The chart quotient map is flat over an arbitrary base field, from the geometric
+no-whole-fibre hypothesis. -/
 theorem flat_affineChartQuotientYHom_of_geometric
     {k : Type u} [Field k] {L : Type u} [Field L] [IsAlgClosed L] [Algebra k L]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -403,6 +392,22 @@ theorem flat_affineChartQuotientYHom_of_geometric
     (affineChartQuotientYHom 2 2 k i j F).Flat :=
   flat_affineChartQuotientYHom_of_span_range_coeff_eq_top F i j
     (span_range_coeff_baseChangedChartEquation_id_eq_top_of_geometric (L := L) F hF i j hfib)
+
+/-- Every explicit standard-chart quotient map for the second projection of a smooth nonzero
+bidegree-`(2,3)` hypersurface is flat.  No closure hypothesis on `k`: the whole-fibre exclusion
+is taken over `AlgebraicClosure k`, where smoothness over `k` already supplies it. -/
+theorem flat_affineChartQuotientYHom_of_smooth_bidegree23
+    {k : Type u} [Field k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
+    (i j : Fin 3) :
+    (affineChartQuotientYHom 2 2 k i j F).Flat :=
+  flat_affineChartQuotientYHom_of_geometric (L := AlgebraicClosure k) F hF
+    (fun y hy =>
+      not_specializeSecondCoordinates_map_eq_zero_of_smooth_bidegree23_of_geometric
+        k F hF hF0 y hy)
+    i j
 
 /-- Flatness of all explicit affine chart quotient maps assembles to flatness of the second
 projection of the global biprojective zero locus. -/
@@ -442,19 +447,6 @@ theorem flat_biprojectiveZeroLocusSnd_of_flat_affineChartQuotientYHom
       Flat.SpecMap_iff.mpr (hflat i j)
     infer_instance
 
-/-- The second projection of a smooth nonzero bidegree-`(2,3)` hypersurface
-is flat. -/
-theorem flat_biprojectiveZeroLocusSnd_of_smooth_bidegree23
-    {k : Type u} [Field k] [IsAlgClosed k]
-    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
-    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
-    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
-    Flat (biprojectiveZeroLocusSnd 2 2 k F) := by
-  apply flat_biprojectiveZeroLocusSnd_of_flat_affineChartQuotientYHom
-    2 2 k F hF
-  intro i j
-  exact flat_affineChartQuotientYHom_of_smooth_bidegree23 F hF hF0 i j
-
 /-- **The second projection is flat over an arbitrary base field**, given that no fibre of the
 second projection over a nonzero `L`-point of the second plane is the whole first plane. -/
 theorem flat_biprojectiveZeroLocusSnd_of_geometric
@@ -468,6 +460,19 @@ theorem flat_biprojectiveZeroLocusSnd_of_geometric
     2 2 k F hF
   intro i j
   exact flat_affineChartQuotientYHom_of_geometric (L := L) F hF hfib i j
+
+/-- The second projection of a smooth nonzero bidegree-`(2,3)` hypersurface
+is flat.  No closure hypothesis on `k`. -/
+theorem flat_biprojectiveZeroLocusSnd_of_smooth_bidegree23
+    {k : Type u} [Field k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)] :
+    Flat (biprojectiveZeroLocusSnd 2 2 k F) := by
+  apply flat_biprojectiveZeroLocusSnd_of_flat_affineChartQuotientYHom
+    2 2 k F hF
+  intro i j
+  exact flat_affineChartQuotientYHom_of_smooth_bidegree23 F hF hF0 i j
 
 end BiprojectiveSpace
 
