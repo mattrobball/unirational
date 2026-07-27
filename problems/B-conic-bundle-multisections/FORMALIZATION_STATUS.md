@@ -187,6 +187,83 @@ The obsolete full-`residualImage` route is also not the headline route. The comp
 factor, so a claim of domination by irreducible affine space would be false for that full reducible
 scheme. The formal proof works with the residual component actually reached by the residual map.
 
+## Hypothesis audit: how far the headline hypotheses can be weakened
+
+Recorded on branch `agent/weaken-hypotheses`. The headline statement on `main` is unchanged, and
+the guard in `MainTheoremGuard.lean` still pins it byte-for-byte; this section records what was
+measured, not a change to the theorem.
+
+### `CharZero` → char ∤ 6: the infrastructure moves, the theorem does not
+
+191 of the 254 declarations that carried `[CharZero k]` now run on `[NeZero (2 : k)] [NeZero (3 : k)]`.
+The single *essential* use — the Euler step in the Jacobian criterion, which needs `(d : k) ≠ 0` for
+unbounded `d` — was removed first: `JacobianCriterionCharFree.lean` proves the same criterion from
+`[PerfectField k]`, which `IsAlgClosed` supplies by instance.
+
+Three statements on the headline path are genuinely false in positive characteristic, so the
+headline hypotheses stay at `CharZero`:
+
+1. `FirstProjectionSmoothFiber.exists_algebraicClosure_coordinateDerivation` extends `∂/∂xᵢ` to
+   `AlgebraicClosure (Frac k[x])` via formal étaleness. In char `p` no such extension exists:
+   `yᵖ = x₀` forces `D x₀ = p·y^(p−1)·D y = 0`. This is algebraic Sard. The *statement* is
+   plausible for char ∤ 6 — quasi-elliptic fibrations exist only in char 2 and 3 — but this proof
+   caps at char 0 and repairing it is research-sized, not a threading job.
+2. `StereoJacobian.exists_C_mul_of_wronskian_eq_zero` (`f'g = g'f → f = c·g`) is flatly false in
+   char `p`: take `f = Xᵖ`, `g = 1`.
+3. `GenericCubicNondegeneracy.finiteExtensionCoordinateDifferential` extends a differential along a
+   finite field extension — the same separability obstruction.
+
+Two modules looked worse than char ∤ 6 and were not:
+
+* `HesseProjectiveResidualRigidity.octic_coefficients_eq_zero` interpolated on 45 points and divided
+  by `8! = 40320`, needing char ∉ {2,3,5,7}. Replaced by `CoefficientVanishing.coeffs8_eq_zero`
+  (`Polynomial.funext` over an infinite domain), which divides by nothing: **1082 lines → 56**, and
+  the hypothesis drops to `Infinite R`, free from `IsAlgClosed`. A `maxHeartbeats 16000000` was
+  deleted, not added.
+* The Hesse/Weierstrass and short-Weierstrass normal forms divide only by 2s and 3s.
+
+`linear_combination₆` (`NeZeroTwoThree.lean`) is what found the 5s and 7s: `linear_combination` with
+a normalizer that clears numeral denominators using the char-∤-6 facts instead of `CharZero`. It
+fails loudly on any certificate dividing by 5 or 7, which is how both problems above surfaced rather
+than being silently absorbed.
+
+A trap worth recording: `[CharZero k]` does **not** give `[NeZero (3 : k)]` by instance search —
+`NeZero.charZero_ofNat` does not fire for `(3 : k)` over a field, and `(2 : k)` works only via a
+dedicated instance. Without `NeZeroTwoThree.NeZero.charZeroThree` the "weakening" would not have
+been one, and `Solution.lean` could not have called the main theorem.
+
+### The non-vacuity witness is char ∉ {2,3,5}, not char ∤ 6
+
+`Bidegree23Example.smooth_F` now carries an explicit `[NeZero (5 : k)]`: in one branch the
+Vandermonde elimination yields `3x₀² = 5x₂²`. That is a property of the polynomial chosen, not of
+the theorem, and it was previously hidden inside `CharZero`.
+
+### `IsAlgClosed` splits three ways
+
+Measured by actual API consumption, not by binders: `vanishingIdeal_zeroLocus_eq_radical` ×11,
+`exists_root` ×9, `exists_pow_nat_eq` ×5, `splits` ×1, `ringHom_bijective_of_isIntegral` ×1,
+`perfectField` ×1. `GeometricPointDescent.lean` classifies these and carries out the removable part.
+Conclusions about coefficients descend; hypotheses of the form "no common zero" ascend and must be
+assumed over the big field; existence of a rational point is irreducible — and the construction
+needs a good line and a Tsen section, both points. So the honest generalization is not "drop
+`IsAlgClosed`" but "hypothesise the points", with algebraic closure demoted to a sufficient
+condition.
+
+The three descents need three different strengths of hypothesis on the coefficient map: `a ≠ 0`
+from `φ a ≠ 0` needs nothing; `p = q` from `φ p = φ q` needs exactly injectivity; `x ∈ I` from
+`φ x ∈ I.map φ` needs faithful flatness. Only the middle is a real hypothesis, and it is minimal.
+`Ideal.comap_map_eq_self_of_faithfullyFlat` is the third; what Mathlib lacks is the instance for
+`MvPolynomial σ k → MvPolynomial σ K`.
+
+### `Infinite` is never a hypothesis of the mathematics
+
+It enters only through `MvPolynomial.funext` (~12 sites) and descends;
+`GeometricPointDescent.funext_of_forall_eval_eq_algebraicClosure` is the drop-in, with no hypothesis
+on `k` at all. Mathlib's `funext_set` does not help — infinite test sets force an infinite ring. The
+genuine alternative is `MvPolynomial.eq_zero_of_eval_zero_at_prod_finset` (Alon–Füredi), which trades
+infiniteness for degree bounds and would apply here, but buys a theorem over small finite fields that
+the source argument cannot support anyway.
+
 ## Reproduction commands
 
 ```bash
