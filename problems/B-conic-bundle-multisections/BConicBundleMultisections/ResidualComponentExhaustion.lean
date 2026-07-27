@@ -548,7 +548,7 @@ theorem isDominant_residualTargetComponentOnToFirst_iff
 /-- Smoothness and `v 2 ≠ 0` make the explicit residual chart dominate the first projective
 factor.  This is the scheme-level consumer of the positive first-coordinate Jacobian audit. -/
 theorem isDominant_residualTargetPointOn_toFirst_of_smooth
-    {k : Type u} [Field k] [PerfectField k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
@@ -578,7 +578,7 @@ theorem isDominant_residualTargetPointOn_toFirst_of_smooth
 /-- Under the same hypotheses, the scheme-theoretic residual component inside `X_H` dominates
 `P²_x`. -/
 theorem isDominant_residualTargetComponentOnToFirst_of_smooth
-    {k : Type u} [Field k] [PerfectField k] [NeZero (2 : k)] [NeZero (3 : k)]
+    {k : Type u} [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
     (hMN : lineFrame p₀ q₀ r * N = 1)
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)

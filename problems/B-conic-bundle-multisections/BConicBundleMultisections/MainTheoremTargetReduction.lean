@@ -45,16 +45,16 @@ an algebraically closed field the frame-incidence argument produces such a line;
 field its existence is a hypothesis, and nothing else is.
 -/
 
-/-- **Closure-free assembly.**  A smooth nonzero bidegree-`(2,3)` hypersurface over a perfect
-field of characteristic prime to `6` is unirational as soon as *one* framed line carries G3, a
+/-- **Closure-free assembly.**  A smooth nonzero bidegree-`(2,3)` hypersurface over a field of
+characteristic prime to `6` is unirational as soon as *one* framed line carries G3, a
 nondegenerate Tsen section, and G4.
 
-No algebraic closure is used: retained-chart projective integrality
+No algebraic closure and no perfectness are used: retained-chart projective integrality
 (`targetRelationsProjectivelyIntegralAwayDiscriminant_of_smooth`) and the residual negative-twist
 gluing law (`targetRelationsResidualNegativeTwistGluingAwayDiscriminantOn`) are both supplied
 from smoothness over the given field. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_actualG3G4LineSection
-    (k : Type u) [Field k] [PerfectField k] [NeZero (2 : k)] [NeZero (3 : k)]
+    (k : Type u) [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
@@ -73,10 +73,10 @@ theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_actualG3G4LineSe
           (lineFrame p q r) N F hF hF0)
 
 /-- Existential form of the closure-free assembly: the sole hypothesis on the base field beyond
-perfectness and characteristic prime to `6` is that *some* good framed line with a nondegenerate
-Tsen section exists over `k`. -/
+characteristic prime to `6` is that *some* good framed line with a nondegenerate Tsen section
+exists over `k`. -/
 theorem hasUnirationalParametrization3_biprojectiveZeroLocus_of_exists_actualG3G4LineSection
-    (k : Type u) [Field k] [PerfectField k] [NeZero (2 : k)] [NeZero (3 : k)]
+    (k : Type u) [Field k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (biprojectiveZeroLocusToSpec 2 2 k F)]
