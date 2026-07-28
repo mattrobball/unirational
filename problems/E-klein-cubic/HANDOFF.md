@@ -9,6 +9,228 @@ resolution.
 The current two-axis ranking and the four-path audit are in
 [`CURRENT_PATHS.md`](CURRENT_PATHS.md).
 
+## 2026-07-28 delta
+
+> **Cross-problem import, easy to miss (see the full section near the end
+> of this file):** Problem F — the PSL(2,7) degree-2 del Pezzo — is now
+> RESOLVED NEGATIVE, adversarially audited, by an all-degree V₄-fixed
+> exceptional-path obstruction.  The engine (parity-forced constancy on
+> involution eigenloci + pointwise-fixed exceptional curves + path
+> propagation into fixed loci with no rational curves) is a candidate
+> obstruction mechanism for THIS problem, with five cheap exact first
+> checks listed in "Technique import from Problem F".  Any negative-route
+> plan should evaluate those five checks before its next dispatch.
+
+The headline is still open, but the following next steps were completed and
+replayed.
+
+- The first unexcluded landing degree, 15, is now excluded exactly.  The
+  quotient \(M_{15}/fM_{12}\) has dimension 16; the complete landing image
+  has rank 75 in an independently certified 76-dimensional ambient quotient;
+  all twelve normal charts are unit ideals; and both 16-variable lift
+  branches are Artinian.  The characteristic-zero landing cutoff is now
+  degree **15**, not 14.  Replay with
+  `python3 tmp/degree15_structural/verify.py`.
+- Degree 16 is not excluded, but it is now structurally finite over the scalar
+  base.  The complete
+  quotient has dimension 20 and the complete landing image rank 93.  The
+  pure-normal ideal is Artinian of length `6,169`, so projection to the
+  scalar `P3` is finite.  The scalar locus has a common nine-dimensional
+  normal tangent kernel, and that entire straight kernel stratum is empty by
+  an exact weighted cokernel of length `713`.  The weighted-projective
+  second-order lifting incidence is also empty, so no nonzero normal tangent
+  direction admits a second-order lift.  Global rank 15 is now exactly refuted, since
+  the `93 x 15` weighted matrix has rank five on the tangent-kernel `P8`.
+  That forced rank drop does not meet `y=(Sym^2(s),s,1)`.  Resume at the true
+  Veronese-affine residual incidence, but do not collapse it to `P6`:
+  `Q(n)` and `C(n)` retain all nine kernel coordinates, so the honest base is
+  the blowup of `P15` along `P8`.  The cleared `83 x 5` quotient formulation
+  has 19 variables and 93 equations of degrees 12 and 13, not a smaller
+  solve.  Use the absence of nonzero second-order lifts to split or saturate away the scalar
+  component in the original cubic system.  A full 13-variable `K9+s4` fiber
+  at `t=[1,2,30,32,60,2,48]` is exactly empty: a saved 93-coefficient linear
+  combination of the original cubics equals one, and `msolve` independently
+  returned `[-1]:`.  Properness of the controlled boundary puts all possible
+  survivors over a proper closed subset of `P6`, also in characteristic zero.
+  Target that exceptional image, not more isolated `t` samples.  Do not run
+  more fixed-scalar charts, expand 5-minors, or extend the false weighted-cokernel target.
+  Replay with
+  `python3 -u tmp/degree16_landing_probe/verify.py`,
+  `python3 tmp/degree16_landing_probe/verify_off_k_residual_audit.py`, and
+  `python3 tmp/degree16_landing_probe/verify_off_k_t_fiber_attack.py`.
+- The degree-12 mixed Jacobian incidence is generically empty over its
+  primitive `P^3`.  The exact fiber `[1:1:1:1]` is a unit ideal, and the
+  empty decomposable center makes projection proper.  Remaining solutions,
+  if any, lie on a proper closed exceptional locus.  With
+  `A=F_67[p1,p2,p3]`, the retained `mu7: A^65611 -> A^50388` is only a
+  degree-seven border truncation, not a
+  presentation of that locus: specialized membership of `1` does not lift
+  automatically to a relative annihilator.  The parameter-independent
+  degree-five block has a certified \(721\times721\) minor of determinant
+  \(18\bmod67\), and the completed top-form Groebner calculation has Hilbert
+  function `[1,12,78,364,1365,3647,3726,0,0]` and colength `9,193`.
+  Its full 15,283,769-term reduced basis is audited, proving finite top
+  control and identifying a possible `9,193 x 24,416` Schur target.  The
+  missing object is still a multiplication-stable relative determinant with
+  nonzero value at `(1,1,1)`.  An audited shortcut now reduces this to two
+  exact witnesses: a right inverse/PLU circuit for the
+  `31,824 x 56,238` degree-seven top map and one degree-at-most-two
+  multiplier vector whose lazy rank-18,564 reduced multiplication operator
+  has full rank at the sample point.  A length-65,611 specialized unit vector
+  guarantees such a choice, but a sparse choice may suffice.  Its determinant
+  kills the full quotient over `F_67` without any confluence claim.  A
+  characteristic-zero determinant would still require lifting the pivot
+  minors and replaying the solves over an integral or number-field model.
+  The witnesses are not yet certified.  The ancestor-closed survivor replay
+  has now completed under the `768 MiB` trace-allocation gate: `55,966` roots,
+  `45,751,159` committed operations, `479,691,384` discarded zero-row
+  operations, and `372,506,624` allocated bytes.  Its corrected leaf map
+  records the permutation and normalization of all 721 original generators.
+  Structural replay passes.  A separate exact semantic replay checks every
+  one of the 721 degree-five final rows coefficientwise in 4,368 ambient
+  monomials: 2,882 selected roots, 474,949 trace operations, and zero
+  mismatches.  One full cross-round degree-seven row with 48,255 nonzero
+  source entries also multiplies exactly to `d11^7`.  The verified
+  division plan covers all 31,824 target monomials using 8,181 retained basis
+  rows.  This is the right circuit format, but the selected degree-six and
+  remaining degree-seven roots have not yet been compared coefficientwise
+  with the retained basis, so no full `M7` right inverse or `M7 R = I`
+  certificate is claimed.  Dense expansion is
+  rejected: it would need `782,526,535` live bytes before overhead and about
+  `1.59e12` scalar updates.  The exact next gate is to extend the ambient-
+  polynomial semantic verifier from the completed degree-five layer to the
+  remaining 7,846 degree-six/seven rows (the audited all-row plan uses
+  `478,080,096` peak bytes and about `1.05e12` updates), followed by circuit-level right-inverse and
+  multiplication-rank checks.  Everything remains over `F_67`.  See
+  `tmp/relative_kls_chart/DEGREE_LOWERING_DETERMINANT.md` and
+  `tmp/relative_kls_chart/TRANSFORM_EXTRACTION_GATE.md`, plus
+  `tmp/relative_kls_chart/survivor_trace/REPORT.md`,
+  `tmp/relative_kls_chart/survivor_trace/evaluator/REPORT.md`, and
+  `tmp/relative_kls_chart/survivor_trace/semantic_check/REPORT.md`.
+  Replay with
+  `python3 tmp/relative_kls_chart/verify.py` and
+  `python3 tmp/relative_kls_chart/verify_top_full_gb.py`; replay the extraction
+  gate with
+  `python3 tmp/relative_kls_chart/verify_transform_extraction_gate.py`, and
+  replay the corrected survivor circuit with
+  `python3 -u tmp/relative_kls_chart/survivor_trace/verify_survivor_trace.py`
+  followed by
+  `python3 -u tmp/relative_kls_chart/survivor_trace/evaluator/verify.py --manifest tmp/relative_kls_chart/survivor_trace/evaluator/manifest.json`;
+  replay the degree-five semantic layer with
+  `/opt/homebrew/bin/python3 -u tmp/relative_kls_chart/survivor_trace/semantic_check/verify.py`.
+  A complete triangular cover of the base hyperplane `p3=0` also hit its
+  bounded stop: all three 14/13/12-variable charts timed out in degree seven.
+  A deterministic coordinate-nondegenerate projective line had the same
+  first-matrix sizes and densities, so its solver was not launched.  It was
+  not proved generic relative to the unknown exceptional image.  These are
+  strict non-verdicts: finite
+  projection and even a dimension bound remain unproved.  Replay with
+  `python3 tmp/relative_kls_hyperplane/verify.py` and
+  `python3 tmp/relative_kls_hyperplane/verify_line_pilot.py`.
+- The degree-free KLS connection has exactly the frame and trace-branch polar
+  divisors (away from `t3=0`).  Its norm determinant is
+  \(2^{10}3^8 11^{12}D\Delta/(5^4t_3^{24})\).  The general residue leading
+  systems are now solved and are positive-dimensional rational determinant
+  hypersurfaces, not local obstructions.  In addition to the earlier 140
+  one-parameter families, all 60 smallest constant simultaneous `P2`
+  modifications are excluded exactly.  The complete two-fibre first-jet
+  screen also excludes all `60*4*3=720` projective families in which one of
+  the three coefficients acquires one slope `d*t_q`; every frame triple,
+  base direction, and coefficient role is computed directly.  The stronger
+  `P5` screen gives all three coefficients independent slopes in one common
+  base direction and excludes all `60*4=240` projective families.  The entire
+  constant `P4` is now excluded as well, and the simultaneous constant
+  centralizer is scalar.  The canonical `P8` two-coordinate family for
+  triple `(0,1,2)`, directions `(t3,t6)`, and three regular fibres is also
+  completely empty: seven Macaulay2 charts, one exact msolve chart, and the
+  last point give a complete projective cover.  Do not scale this into more
+  three-support sweeps.  The local KLS determinant hypersurface has dimension
+  19, while all four-direction first jets with fixed three-coordinate support
+  have dimension at most 10; `P3/P5/P8` families cannot be exhaustive.  The
+  first full-support `P9` chart hit the 700 MiB stop with no verdict.  The
+  negative route now needs a global foliation/line-subsheaf theorem or a
+  bounded-pole normal form.  Replay with
+  `python3 tmp/kls_divisor_ansatz/verify.py` and
+  `python3 -u tmp/kls_residue_next/verify.py`, then
+  `python3 tmp/kls_first_jet_two_fiber/verify_manifest.py`,
+  `python3 tmp/kls_first_jet_two_fiber/verify.py --ledger-only`,
+  `python3 tmp/kls_first_jet_two_fiber/verify_manifest_p5.py`, and
+  `python3 tmp/kls_first_jet_two_fiber/verify_p5.py --ledger-only`, then
+  `python3 -u tmp/kls_first_jet_three_fiber/verify_combined_p8.py` and
+  `python3 -u tmp/kls_structural_audit/verify.py`.
+- On the characteristic-23 soluble `xCD` control, \(Q=[H-3O]\), the
+  irreducible nonzero \(E[3]\) field, and the genuine nonzero representative
+  \(G(Q)\) are explicit.  Translation interpolation still times out before a
+  matrix and is no longer the critical control task.  This validates the
+  conventions but does not transfer the control class to characteristic
+  zero.  Replay with
+  `python3 tmp/xcd_control_next/verify.py`.
+  The determinant-free generic construction has now passed the full Cech
+  coordinate gate.  A replay-locked DAG contains the monic degree-nine
+  flex eliminant, first subresultants, their inverse, and the universal flex
+  point over the rank-nine algebra.  A segmented extension contains
+  `Q'^-1` and all 81 coordinates of the diagonal idempotent.  A typed
+  nested-etale circuit executes
+  `lambdaSharp=(lambda+eDelta)^-1*(1-eDelta)` and constructs the actual Cech
+  `X,Y`; rank-81 replay checks the short curve, 3-division, diagonal, and
+  swap identities.  The outputs are typed whole-`K_proj` algebra nodes, not
+  distributed Hironaka coordinates.  The raw determinant ratio fails to
+  descend (rank `108`, augmented rank `109`), but the corrected unit
+  scalar-cochain normalization succeeds.  The exact geometric descent lemma
+  and a selected `9 x 9` solve produce a generic-open rational representative
+  `alpha_R=det(M0)/ell(M0)^3` modulo cubes.  The `GF(101)` full-81 calculation
+  corroborates rather than proves the generic descent.  Cubic scaling and
+  orientation agree.  The saved representative retains
+  `alpha_R(O)=71^-3` and fixes `z_O=71`; equivalently, cube-normalizing the
+  identity coefficient to one would fix `z_O=1`.  The affine first-descent
+  unit chart is now assembled: it has ten variables, nine cubics over the
+  exact `QQ`-model, and the condition `Norm_R8(z_star)!=0`.  Its
+  `3^8`-sheet covering scheme has 729 geometric components, each a
+  degree-nine 3-covering, so do not run an algebraic-closure emptiness solve.
+  A `K_proj,QQ` point suffices positively after base change, but a negative
+  result must hold over
+  \(K_{\mathrm{proj},\mathbf C}=K_{\mathrm{proj},\mathbf Q}
+  \otimes_{\mathbf Q}\mathbf C\).  CFOSS identifies a
+  distinguished base-defined component that is isomorphic as a covering to
+  the original projective `xCD` cubic; use that cubic rather than extracting
+  or closing all 729 components.  Exact Hensel pilots rule out every prime
+  component of `A=0`, `B=0`, and `C=0` as a local-obstruction place.  The
+  degree-120 discriminant packet now rejects every one of its height-one
+  components as well: its pullback is squarefree and gauge-coprime, every
+  normalized discriminant valuation is one, and Poonen--Stoll gives a
+  residue-rational node which lifts to a local point.  The two motivated
+  smooth-reduction primes `f5=0` and `f6=0` are geometrically integral and
+  have alternate unit gauges.  Their coordinate vertices and every complete
+  invariant-polynomial `x,C,D` ansatz through total degree 15 are empty.  This
+  is not a local obstruction; the next negative gate is their actual residue
+  3-descent or a relative unramified 3-Selmer calculation.  Do not use
+  arithmetic-prime or `QQ`-only Selmer
+  results as negative evidence, enter a splitting field, or expand an `81 x 81`
+  determinant.  Even a nonpoint theorem for this component would close only
+  this `xCD` plane construction, not the headline.  Replay with
+  `python3 -u tmp/xcd_generic_cech_next/verify_generic_dag.py` and
+  `python3 -u tmp/xcd_generic_cech_next/verify_cech_extension.py`, then
+  `python3 -u tmp/xcd_generic_cech_next/verify_typed_cech.py`,
+  `python3 -u tmp/xcd_generic_cech_next/verify_alpha_corrected.py`, and
+  `python3 -u tmp/xcd_first_descent_next/verify.py`, then
+  `python3 -u tmp/xcd_arithmetic_next/verify.py`,
+  `python3 -u tmp/xcd_discriminant_divisor/verify.py`, and
+  `/opt/homebrew/bin/python3 -u tmp/xcd_gauge_divisors/verify.py`.
+- The July 2026 level-11 theta/Schwarz construction uses the correct
+  projective representation but does not lie on the Klein cubic:
+  \(F(H\Phi_{11})=\xi_{44}^5u^{11}+O(u^{99})\).  It is also outside the
+  classical Hessian-singular model.  Close this as a headline path.  Replay
+  with `python3 tmp/theta11_test/theta11_test.py`.
+
+The local ignored `tmp/` tree is now about 6.1 GB.  The new material is
+dominated by a 647 MiB gated raw-coordinate Cech prototype, the 373 MiB full
+top Groebner basis, the 351 MiB degree-12 survivor circuit, the 1.3 GiB local
+Julia/Groebner.jl installation and pilot, the degree-12 hyperplane-chart
+inputs, and the degree-16 probe inputs.  The accepted segmented generic DAGs include files of about
+95 MB, 62 MB, and 39 MB; the typed Cech `X,Y` extension is under 1 MB.  They remain under
+`tmp/` and therefore do not enlarge GitHub history unless deliberately
+force-added.
+
 ## Strongest proved progress
 
 1. [RESOLUTION.md](RESOLUTION.md) proves
@@ -54,7 +276,7 @@ The current two-axis ranking and the four-path audit are in
 
 4. Exact characteristic-zero and good-reduction certificates exclude every
    homogeneous polynomial self-covariant \(W\to W\) landing in \(C\) through
-   degree **14**. Degree ten and eleven use dynamically regenerated
+   degree **15**. Degree ten and eleven use dynamically regenerated
    Macaulay2 ideals. Degree twelve reconstructs a 16-dimensional basis and
    143 independent sampled necessary landing cubics; an exact `msolve`
    Gröbner basis has quotient Hilbert function zero in degree five. Degree
@@ -63,8 +285,13 @@ The current two-axis ranking and the four-path audit are in
    functions kill both lifts. Degree fourteen similarly reduces the
    14-dimensional quotient to its scalar line with twelve unit
    Rabinowitsch systems; its two 12-variable branch Hilbert functions vanish
-   in degree five. See `tmp/structural_degree13/REPORT.md` and
-   `tmp/degree14_structural/REPORT.md`.
+   in degree five. Degree fifteen has a 16-dimensional quotient whose
+   complete rank-75 landing system is supported on the scalar four-plane;
+   all twelve normal charts are unit ideals, and both 16-variable lift
+   branches vanish projectively in degree five. See
+   `tmp/structural_degree13/REPORT.md`,
+   `tmp/degree14_structural/REPORT.md`, and
+   `tmp/degree15_structural/REPORT.md`.
 
 5. All ten three-column frame sections are smooth geometrically integral
    plane cubics. A complete good-reduction audit excludes every
@@ -172,10 +399,19 @@ The current two-axis ranking and the four-path audit are in
     completely: \(\dim M_{12}=16\), and the universal coefficient span has
     rank 721 in 15,504 quintic monomials.  In the exact 12+4
     decomposable/primitive splitting, both pure projective strata are empty.
-    The first genuinely mixed chart times out at `104836 x 166810`, so the
-    other three were not launched.  Degree twelve remains open exactly on the
-    mixed locus. See `tmp/degree12_jacobian/REPORT.md` and
-    `tmp/degree12_jacobian_structural/REPORT.md`.
+    The first direct mixed chart timed out at `104836 x 166810`, so the other
+    three were not launched.  Relative specialization has since proved that
+    the fiber `[1:1:1:1]` is a unit ideal.  The empty decomposable center and
+    proper projection imply that the mixed incidence is empty on a nonempty
+    open subset of primitive `P^3`, also in characteristic zero.  Degree
+    twelve remains open only on a proper closed exceptional locus.  The map
+    `mu7: A^65611 -> A^50388` is an exact degree-seven truncation, not a
+    presentation of that locus.  The fixed top ideal has colength `9,193`
+    and no degree-seven standard monomials, but no explicit relative
+    annihilator is installed. See
+    `tmp/degree12_jacobian/REPORT.md`,
+    `tmp/degree12_jacobian_structural/REPORT.md`, and
+    `tmp/relative_kls_chart/TOP_IDEAL_REPORT.md`.
     The exact all-degree replacement for blind degree scans is the
     flat-connection determinant in item 6.
     Voisin's current construction proves \(C^{[3]}\) is \(G\)-very-versal,
@@ -196,20 +432,37 @@ The current two-axis ranking and the four-path audit are in
     class trivial.  A separate low-height coordinate-line control has rational
     point \(O=[1:0:1]\) and irreducible flex cover, proving a nonzero class
     abstractly equal to \(\delta([H-3O])\), where \(H\) is a hyperplane
-    section.  No explicit coordinates for \(Q=[H-3O]\) in the saved Jacobian model, translation algebra,
-    determinant representative, or \(G(Q)\)
-    comparison were obtained.  The generic first-descent boundary is the
-    Galois-equivariant \(\operatorname{GL}_3(\mathcal R)\) lift \(M_T\) giving
-    \(\alpha_{\mathcal R}=\det(M_T)\bmod \mathcal R^{\times3}\); generic true second descent still
-    needs the twisted three-flex-line algebra, line forms, and constants. See
-    `tmp/kproj_arithmetic/REPORT.md`, `tmp/xcd_genuine_descent/REPORT.md`, and
-    `tmp/xcd_nonzero_kummer/REPORT.md`.
+    section.  The tangent residual now gives exact coordinates for
+    \(Q=[H-3O]\) in the saved Jacobian model, and the irreducible nonzero
+    \(E[3]\) field together with \(G_T(Q)\) replays as the genuine nonzero
+    first-Kummer representative.  On the generic side, replay-locked DAGs
+    now install the monic flex eliminant, universal point over the rank-nine
+    flex algebra, and all 81 coordinates of the diagonal idempotent.  A typed
+    quotient-algebra circuit now gives the tangent inverse off the diagonal
+    and the actual Cech `X,Y`, with the curve, 3-torsion, diagonal, and swap
+    identities checked.  A unit scalar-cochain normalization of the induced
+    projective translation lift now gives a generic-open rational rank-nine
+    first-Kummer representative `alpha_R` modulo cubes.  The actual equation
+    `G(P)=alpha_R*z^3` is assembled as a ten-variable, nine-cubic affine unit
+    chart.  Its `3^8` sheets split geometrically into 729 degree-nine
+    components.  Its distinguished base-defined component is isomorphic as a
+    covering to the original projective `xCD` cubic.  The remaining task is a
+    `K_proj,C`-rational point or a geometric-divisor obstruction on that
+    cubic; the pure-coefficient places `A=0`, `B=0`, and `C=0` are already
+    locally soluble.
+    Generic true second descent still needs the
+    twisted three-flex-line algebra, line forms, and constants. See
+    `tmp/kproj_arithmetic/REPORT.md`, `tmp/xcd_genuine_descent/REPORT.md`,
+    `tmp/xcd_control_next/REPORT.md`,
+    `tmp/xcd_generic_cech_next/REPORT.md`, and
+    `tmp/xcd_first_descent_next/REPORT.md`, and
+    `tmp/xcd_arithmetic_next/REPORT.md`.
 
 ## Verification
 
 The initial `certificates/...` commands below form the portable checked-in
 suite. Every later command under `tmp/...` requires the intentionally ignored
-2.4 GB local artifact tree and will not be available in a fresh clone.
+about 6.1 GB local artifact tree and will not be available in a fresh clone.
 
 From this directory run:
 
@@ -269,6 +522,27 @@ python3 tmp/ed_binary_attack/verify_all_degree_module_pde.py
 python3 tmp/step4_essential_dimension/verify_reductions.py
 python3 tmp/kproj_arithmetic/verify.py
 python3 tmp/kproj_connection/verify.py
+python3 tmp/kls_divisor_ansatz/verify.py
+python3 -u tmp/kls_residue_next/verify.py
+python3 tmp/kls_first_jet_two_fiber/verify_manifest.py
+python3 tmp/kls_first_jet_two_fiber/verify.py --ledger-only
+python3 tmp/kls_first_jet_two_fiber/verify_manifest_p5.py
+python3 tmp/kls_first_jet_two_fiber/verify_p5.py --ledger-only
+python3 tmp/relative_kls_chart/verify.py
+python3 tmp/relative_kls_chart/analyze_exceptional.py
+python3 tmp/relative_kls_chart/analyze_top_ideal.py
+python3 tmp/relative_kls_chart/verify_top_full_gb.py
+python3 tmp/relative_kls_chart/verify_degree_lowering_plan.py
+python3 tmp/relative_kls_chart/verify_transform_extraction_gate.py
+python3 -u tmp/relative_kls_chart/survivor_trace/verify_survivor_trace.py
+python3 -u tmp/relative_kls_chart/survivor_trace/evaluator/verify.py \
+  --manifest tmp/relative_kls_chart/survivor_trace/evaluator/manifest.json
+/opt/homebrew/bin/python3 -u \
+  tmp/relative_kls_chart/survivor_trace/semantic_check/verify.py
+python3 tmp/relative_kls_chart/bihomogeneous_pilot.py
+python3 tmp/relative_kls_hyperplane/verify.py
+python3 tmp/relative_kls_hyperplane/verify_line_pilot.py
+python3 tmp/theta11_test/theta11_test.py
 python3 tmp/fano14_degree12/degree12_msolve.py \
   --degree 15 --verify-leading tmp/fano14_degree12/leading15.out
 python3 tmp/structural_degree13/verify.py
@@ -278,6 +552,10 @@ python3 tmp/degree13_step2/verify_certificate.py
 python3 tmp/degree13_opt/verify_q67_terminal.py
 python3 tmp/degree14_feasibility/audit.py
 python3 tmp/degree14_structural/verify.py
+python3 tmp/degree15_structural/verify.py
+python3 -u tmp/degree16_landing_probe/verify.py
+python3 tmp/degree16_landing_probe/verify_off_k_residual_audit.py
+python3 tmp/degree16_landing_probe/verify_off_k_t_fiber_attack.py
 python3 tmp/fano14_degree16/verify_artifacts.py
 python3 tmp/xcd_invariant_field/presentation_audit.py
 python3 tmp/xcd_invariant_field/f10_probe/verify.py
@@ -286,6 +564,17 @@ python3 tmp/xcd_descent_math/verify_fiber_flex_algebra.py
 python3 tmp/xcd_descent_math/verify_hesse_norms.py
 PYTHONPATH=tmp/xcd_genuine_descent python3 tmp/xcd_genuine_descent/verify.py
 python3 tmp/xcd_nonzero_kummer/verify.py
+python3 tmp/xcd_control_next/verify.py
+python3 -u tmp/xcd_generic_cech_next/verify.py
+python3 -u tmp/xcd_generic_cech_next/verify_generic_dag.py
+python3 -u tmp/xcd_generic_cech_next/verify_cech_extension.py
+python3 -u tmp/xcd_generic_cech_next/verify_typed_cech.py
+python3 -u tmp/xcd_generic_cech_next/verify_alpha_corrected.py
+python3 -u tmp/xcd_first_descent_next/verify.py
+python3 -u tmp/xcd_arithmetic_next/verify.py
+python3 -u tmp/xcd_discriminant_divisor/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_gauge_divisors/verify.py
+python3 tmp/groebnerjl_change_matrix_pilot/verify.py
 python3 tmp/xcd_magma_rank_audit/verify_audit.py
 python3 tmp/xcd_low_height/verify.py
 ```
@@ -311,39 +600,84 @@ certificate; neither bounded theorem gives an all-degree cutoff.
 
 ## Current ranking
 
-For the fastest exact calculations: (1) use the checked flat-connection
-circuit on a theoretically motivated nonconstant ansatz, (2) compute
-\(Q_{\rm ctl}\) in the saved Jacobian model and construct the
-Galois-equivariant translation lift \(M_{T,\rm ctl}\) on the nontrivial
-characteristic-23 function-field control, (3)
-attempt either degree-12 mixed locus only
-through a certified relative/Fitting elimination, and (4) Pfaffian degree
-sixteen only after a structural reduction.  Both authorized degree-12 chart
-gates have already worsened; the remaining three Jacobian and 31 Schur charts
-must not be launched unchanged. For headline leverage: (1) the exact
+The ranked bounded attacks are now: (1) pilot the `P8` two-coordinate KLS
+family at three affinely independent regular fibres, after the completed
+`P3` and stronger one-direction `P5` screens, (2)
+attack the original projective `xCD` cubic through a relative unramified
+3-Selmer calculation or the residue 3-descent at `f5=0` or `f6=0`, not the
+now-closed discriminant route or
+the raw 729-component unit-chart union, (3) run the ambient-polynomial semantic
+verifier through the remaining 7,846 degree-six/seven rows and then compose
+and check the `M7` solve circuit before testing the rank-18,564 multiplication operator,
+(4) compute the true degree-16 residual only after a scalar-component
+colon/saturation, and (5) touch Pfaffian degree sixteen only after a structural
+reduction.  The degree-12 trace-extraction step itself is complete; its next
+semantic check is exact but expensive (about `1.05e12` updates), so it no
+longer outranks the two all-degree/geometric routes.  Do not launch unchanged degree-12 mixed
+charts, repeat control translation interpolation, or start a generic flex
+splitting-field computation.  For headline leverage: (1) the exact
 flat-connection KLS equation, (2) honest generic `xCD` descent and point
 searches using the completed \(K_{\rm proj}\) arithmetic, (3) an unrestricted
 rational point in the exhaustive degree-eight Schur frame, and (4) structural
 use of the Pfaffian Hermitian model.
 See `CURRENT_PATHS.md` for costs, implications, and stopping rules.
 
+There is one conditional recent-tool branch: generalized multiplication
+matrices for bihomogeneous systems can compute the degree-12 elimination ideal
+if the exceptional projection is finite or empty and an admissible bidegree
+is certified.  Exact Hilbert counts already rule out all fiber degrees five
+and six; the first merely count-feasible gate is `(2,7)`, a
+`422,484 x 434,763` structured hyperplane-rank problem.  Its dimension is
+currently unknown.  The direct `p3=0` cover timed out on all three charts and
+the tested deterministic coordinate-nondegenerate line showed no structural
+gain, so do not adopt the method or extend those tests without a sparse/block route;
+a proper closed projection need not be finite.
+
+One very recent theorem did materially change the `xCD` boundary:
+Poonen--Stoll, *The valuation of the discriminant of a hypersurface*
+(2026-06-30), Theorem 1.1.  It turns the certified valuation-one statement at
+every degree-120 discriminant component into a residue-rational nondegenerate
+node.  Together with projection and Hensel lifting, this closes those
+components as local-obstruction places; it says nothing about the global
+torsor or smooth-reduction places.
+
+The 2026-07-27 Groebner.jl change-matrix API was installed and tested rather
+than dismissed.  Exact small identities pass, but the fixed two-generator
+change calculation and 512-row parsing already cross the `768 MiB` RSS gate;
+the public high-level route is stopped.  SPQR does allow elimination orders
+for positive-dimensional systems, but Mathematica is unavailable locally and
+its reconstructed candidates would still need independent exact
+verification.  No further broad tool search is justified unless a release
+offers a public memory-efficient raw change-matrix interface or certified
+generic function-field local/Selmer machinery.  See
+`tmp/groebnerjl_change_matrix_pilot/REPORT.md`.
+
 ## Best re-entry points
 
 - **Generic twist.** The exact invariants, algebraically independent
   primaries, rank-twelve Hironaka basis and multiplication table, normalized
   \(K_{\rm proj}\) arithmetic, and genuine rank-nine \(E[3]\) algebra are all
-  certified.  Generic first descent still needs a Galois-equivariant
-  \(\operatorname{GL}_3(\mathcal R)\) translation lift \(M_{T,\rm gen}\) and
-  the class representative
-  \(\alpha_{\mathcal R}=\det(M_{T,\rm gen})\bmod \mathcal R^{\times3}\); true
-  second descent needs the generic twisted three-flex-line algebra, line
-  forms, and constants.  Separately, validating the soluble coordinate-line
-  control explicitly requires computing \(Q_{\rm ctl}=[H-3O]\) in its saved
-  Jacobian model, then comparing \(\det(M_{T,\rm ctl})\) with
-  \(G(Q_{\rm ctl})\).  The control proves its
-  nonzero flex class is abstractly Kummer but supplies none of those explicit
-  data. Positive
-  candidate searches may
+  certified.  The rank-nine flex algebra, its generic universal point, the
+  determinant-free Cech circuit, the triple-overlap/rank-81 markers, and the
+  generic diagonal idempotent are also certified.  The typed
+  `lambdaSharp=(lambda+eDelta)^-1*(1-eDelta)` circuit and its actual Cech
+  `X,Y` packet are certified as well.  The raw determinant ratio is proved
+  not to descend, while a unit scalar-cochain normalization supplies the
+  certified generic-open rank-nine `alpha_R` modulo cubes.  The actual
+  equation `G(P)=alpha_R*z^3` is assembled as a ten-variable, nine-cubic
+  unit-chart interface; a universal translation matrix is no longer required.
+  The unit-open scheme has 729 geometric degree-nine components, with a
+  distinguished base-defined component isomorphic as a covering to the
+  original projective `xCD` cubic.  Generic first descent now needs a
+  `K_proj,C`-rational point search or geometric-divisor obstruction on that
+  cubic.  The three pure-coefficient divisor families are locally soluble;
+  nonexistence only over the saved `QQ`-model is insufficient.
+  True second descent then needs the generic twisted three-flex-line algebra,
+  line forms, and constants.  The soluble coordinate-line control is now
+  explicit: \(Q_{\rm ctl}=[H-3O]\), its irreducible nonzero \(E[3]\) field,
+  and the genuine nonzero \(G_T(Q_{\rm ctl})\) representative all replay
+  exactly.  It validates conventions only and does not transfer to the
+  generic characteristic-zero plane. Positive candidate searches may
   proceed immediately in the ambient rational-function field if invariance
   and the cleared cubic identity are checked exactly. Continue the ten
   three-coordinate planes of
@@ -357,7 +691,7 @@ See `CURRENT_PATHS.md` for costs, implications, and stopping rules.
   excluded in every frame plane; the exact remaining genus-one question is
   whether the flex class lies in the Kummer image. See
   `tmp/plane_genus_one/REPORT.md`.
-- **Higher covariants.** Degrees 13 and 14 are now completely excluded. The structural
+- **Higher covariants.** Degrees 13, 14, and 15 are now completely excluded. The structural
   proof in `tmp/structural_degree13/REPORT.md` forces every quotient class
   modulo the source cubic into the scalar plane and eliminates both possible
   lifts by exact ten-variable leading ideals. The completed direct q67 run in
@@ -365,15 +699,43 @@ See `CURRENT_PATHS.md` for costs, implications, and stopping rules.
   ideal in all 21 coefficient variables. The degree-14 successor in
   `tmp/degree14_structural/REPORT.md` proves scalar support for the
   14-dimensional quotient with twelve unit Rabinowitsch systems and excludes
-  both lift branches by 12-variable Artinian ideals. Degree 15 is the next
-  unrestricted homogeneous degree. A landing point would give a dominant map
+  both lift branches by 12-variable Artinian ideals. The degree-15 successor
+  in `tmp/degree15_structural/REPORT.md` proves scalar support for its
+  16-dimensional quotient with twelve unit normal charts and excludes both
+  lift branches by 16-variable Artinian ideals. Degree 16 is the next
+  unrestricted homogeneous degree.  Its complete quotient/landing system is
+  now reduced to a finite-over-`P3` residual incidence: pure normal infinity,
+  the common nine-dimensional tangent-kernel slice are empty, and no nonzero
+  normal tangent direction admits a second-order lift.  Global rank 15 of the `93 x 15`
+  weighted matrix is refuted, not open: its rank is five on the kernel `P8`.
+  The remaining target must retain the constrained
+  `y=(Sym^2(s),s,1)` locus and all nine kernel coordinates.  `P6` controls
+  only the quotient subspace; the actual base is the blowup of `P15` along
+  `P8`, and the cleared quotient formulation is no smaller than the 93
+  original equations.  The next structural target is a scalar-component
+  colon/saturation using the absence of nonzero second-order lifts.  The first
+  exceptional-image equation has now been found exactly in the mod-67 fibre:
+  a fixed combination of the complete 93 cubics is `59*L^3`, with `L`
+  annihilating the tangent kernel.  Thus the whole residual special-fibre
+  image lies in the explicit hyperplane
+  `t0+38*t1+20*t2+6*t3+8*t4+2*t5+25*t6=0` of `P6`.  Two fixed row
+  combinations vanish there and its generic row rank is 91.  Full solves
+  exclude 264 deterministic fibres on this hyperplane, but this is not an
+  exhaustive cover.  The first complete 18-variable, 91-cubic hyperplane
+  chart hit the 700 MiB watchdog with no verdict at both four and one thread.
+  Continue only with a sparse/block scheme-theoretic image or saturation on
+  this exact stratum; do not add isolated samples.  See
+  `tmp/degree16_landing_probe/REPORT.md` and
+  `tmp/degree16_exceptional_search/REPORT.md`. A landing point would give a dominant map
   automatically; any further finite null search remains only a bounded
   exclusion. The separate direct F4 audit in
   `tmp/degree13_step2/REPORT.md` leaves 26 standard monomials and is explicitly
   only a partial-leading diagnostic, not the source of the exclusion.
   The completed degree-14 calculation uses prime 67 throughout; its quotient
   equation rank is the exact upper bound 64 and both branch Hilbert functions
-  vanish in degree five.
+  vanish in degree five. The degree-15 quotient image has exact rank 75 in
+  its independently checked 76-dimensional ambient quotient, and both
+  branch Hilbert functions again vanish in degree five.
 - **Pfaffian branch.** The exact quaternionic model and the matched-covariant
   checker are in `tmp/fano14_twist/REPORT.md` and
   `tmp/fano14_degree12/REPORT.md`. Degrees 12--15 are excluded. Degree 16 has
@@ -412,16 +774,18 @@ See `CURRENT_PATHS.md` for costs, implications, and stopping rules.
   self-covariant \(W\to W\). Such a map is equivalent to
   \(\operatorname{ed}(G)=3\), even if its image is not initially presented as
   the Klein cone. Degrees through 11 are excluded; in degree 12 the pure
-  decomposable and pure primitive strata are also excluded, while the mixed
-  chart gate timed out and stopped the other three.  The Hironaka arithmetic
+  decomposable and pure primitive strata are also excluded, and the mixed
+  incidence is empty over a certified nonempty open of primitive `P3`; any
+  survivor lies on a proper closed exceptional subset.  No equation or
+  dimension bound for that subset is known.  The Hironaka arithmetic
   and all four connection circuits are complete; the 561 constant and
   Hironaka-linear ansätze are excluded.  Attack the exact equation
   \(\mathcal J_\nabla(a)=0\) over the invariant field through a structural
   rational-function family or differential-algebraic argument. See
   `tmp/ed_binary_attack/ALL_DEGREE_MODULE_AUDIT.md`,
   `tmp/degree11_jacobian/REPORT.md`, `tmp/degree12_jacobian/REPORT.md`,
-  `tmp/degree12_jacobian_structural/REPORT.md`, and
-  `tmp/kproj_connection/REPORT.md`.
+  `tmp/degree12_jacobian_structural/REPORT.md`,
+  `tmp/relative_kls_chart/REPORT.md`, and `tmp/kproj_connection/REPORT.md`.
 - **Essential dimension.** Any unconditional proof that
   \(\operatorname{ed}(G)=3\) or \(4\) now settles the headline in the
   corresponding direction.  The canonical target is the generic Klein twist
@@ -447,9 +811,11 @@ See `CURRENT_PATHS.md` for costs, implications, and stopping rules.
 - Superrigidity rules out equivariant birational linearization, not a
   dominant map of higher degree.
 - The three bounded covariant statements have different sources and cutoffs:
-  landing \(W\to W\) is excluded through degree 14; Jacobian degeneracy for
+  landing \(W\to W\) is excluded through degree 15; Jacobian degeneracy for
   \(W\to W\) completely only through degree 11, with the two pure degree-12
-  strata also excluded and its mixed locus open; and constant-coefficient
+  strata excluded and generic-open emptiness on the mixed primitive
+  parameter space; its proper closed exceptional locus remains open. The
+  constant-coefficient
   landing \(V_6\to W\) completely only in degrees 4, 6, 8, and 10. Its
   degree 12 has only the scoped decomposable and coordinate-support
   exclusions stated above.  Rank 721 or 1,124 is an exact special-fiber
@@ -481,3 +847,82 @@ See `CURRENT_PATHS.md` for costs, implications, and stopping rules.
   its unirationality inference uses ordinary cubic unirationality and supplies
   no equivariant linear source.
 - A search through any finite degree is not a negative resolution.
+
+## 2026-07-28 — Technique import from Problem F (label: AUDIT PASSED, resolution committed)
+
+Problem F (the PSL(2,7) degree-2 del Pezzo, `../F-dp2-psl27/`) is
+RESOLVED NEGATIVE: director review and an independent adversarial audit
+(from-scratch recomputation of all finite inputs) both passed it, and the
+proof in fact shows S is not even G-weakly versal.  The mechanism below
+may now be cited as a working engine; novelty-vs-antecedents positioning
+is under a separate literature sweep.
+
+### The mechanism: a V₄-fixed exceptional-path obstruction
+
+For a hypothetical equivariant map presented by primitive covariants, F's
+capstone (`../F-dp2-psl27/certificates/WP3_ALL_DEGREE_PATH_OBSTRUCTION.md`)
+derives a contradiction from four ingredients, none degree-dependent:
+
+1. **Parity forcing on involution eigenloci.**  For an involution `s` and
+   `v ∈ E₋(s)`, `s·p(v) = p(−v) = ±p(v)` by degree parity, so `p` maps the
+   eigenlocus into `E₊(s)` (even) or `E₋(s)` (odd).  Either way the
+   restriction of the map to a *rational* eigenlocus lands in an involution
+   fixed locus of the target; when that fixed locus contains no rational
+   curve (elliptic-or-points), the restriction is CONSTANT and the constant
+   is centralizer-fixed — often already a contradiction (F's odd case dies
+   on `D₈` having no invariant line).
+2. **Forced basepoints.**  At a point where several involution loci meet
+   with distinct forced constant values, the map cannot be regular.
+3. **Pointwise-fixed exceptional curves.**  Blowing the basepoint orbit:
+   when the stabilizer contains a central involution `z` with SCALAR
+   differential, the exceptional curve is pointwise `z`-fixed, so its image
+   lies in the target's `z`-fixed locus — constant again, with the value's
+   projection pinned by a stabilizer-representation argument
+   (`[H,H] ∋ z` kills invariant lines in `E₋(z)`).
+4. **The path lemma.**  In an equivariant resolution by point blowups, the
+   local total transform over the meeting point of two such curves is a
+   TREE; `K = ⟨z,s⟩ ≅ V₄` fixes the endpoint-to-endpoint path vertexwise;
+   each intermediate exceptional `ℙ¹` is the projectivized tangent rep of a
+   `K`-fixed birth center, so the `ℙ(T_x)`-action factors through one
+   character and some nonidentity involution of `K` acts POINTWISE on it.
+   Every path component therefore maps constantly into an involution fixed
+   locus; adjacency propagates one constant across the path, contradicting
+   the distinct forced endpoints.  This kills ALL degrees at once — the
+   step that degree-by-degree elimination (F went 24–34 before finding it)
+   could not reach.
+
+### Why it plausibly speaks to the Klein cubic
+
+- `PSL₂(𝔽₁₁)` has a single conjugacy class of 55 involutions, and its
+  2-Sylow is `(ℤ/2)²` — exactly the `V₄ = ⟨z,s⟩` the path lemma consumes
+  (Beauville, *Finite simple groups of small essential dimension*, §16.4.5,
+  notes the 2-Sylow fixes points on both Prokhorov threefolds).
+- **(verify)** involution eigenspace dimensions on the 5-dim rep `W`
+  (expected `(dim E₊, dim E₋) = (3,2)` from the character); then
+  `X^t ⊇ X ∩ ℙ(E₊(t))` is a PLANE CUBIC — if smooth for the Klein cubic,
+  that is the genus-one no-rational-curves input, and `X ∩ ℙ(E₋(t))` is a
+  finite set playing the isolated-points role.
+- The parity forcing (1) applies verbatim to covariant quintuples
+  `p : W → W`.
+
+### The honest obstacle to a verbatim transfer
+
+F's path lemma is SURFACE mathematics: point blowups, tree dual graphs.
+On `ℙ(W) = ℙ⁴` an equivariant resolution has positive-dimensional centers
+and 2-complex dual structure; steps (2)–(4) do not port as stated.  The
+candidate workaround is dimensional reduction BEFORE resolving: restrict
+the hypothetical map to a well-chosen `G`- or `K`-stable rational SURFACE
+in `ℙ(W)` (a span-configuration of involution eigenspaces, or a member of
+a stable pencil) on which the forced-value dichotomy already lives, and
+run F's argument on that surface.  Choosing the slice so that both forced
+endpoint values appear on it is the actual work.
+
+### Cheap exact first checks (before any theory)
+
+1. eigen-dimensions of an involution on `W`; 2. smoothness/genus of
+`X ∩ ℙ(E₊(t))`; 3. the finite set `X ∩ ℙ(E₋(t))`; 4. explicit `V₄`-fixed
+points on `X` and the local characters there; 5. stabilizer structure at
+special points of the eigenspace configuration (the `D₈`-analogue), and
+whether two involution loci through such a point carry distinct forced
+values.  All five are `wp1_fixed_loci.py`-style computations; F's script
+is the template.
