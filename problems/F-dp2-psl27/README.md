@@ -1,9 +1,12 @@
 # Problem F — PSL(2,7)-unirationality of the degree-2 del Pezzo surface
 
-**Status: OPEN** (WP-0 triage on record in `RESOLUTION.md`, 2026-07-28:
-Cheltsov–Tschinkel–Zhang explicitly state the degree-2 del Pezzo case of
-equivariant unirationality "remains open"; Duncan's Condition-(A)
-sufficiency stops at degree 3).
+**Status: RESOLVED — NEGATIVE** for this exact
+\(\operatorname{PSL}_2(\mathbf F_7)\)-action (2026-07-28).
+There is no dominant \(G\)-equivariant rational map from any
+representation to \(S\).  The final all-degree proof uses a
+\(V_4\)-stable exceptional path over a quadruple point of the Klein
+21-line arrangement; see
+[WP3_ALL_DEGREE_PATH_OBSTRUCTION.md](certificates/WP3_ALL_DEGREE_PATH_OBSTRUCTION.md).
 
 Let \(G=\operatorname{PSL}_2(\mathbf F_7)\) act through its
 three-dimensional representation \(V\) on
@@ -17,35 +20,35 @@ problem asks whether \(S\) is \(G\)-unirational: whether some
 finite-dimensional representation \(U\) of \(G\) admits a dominant
 \(G\)-equivariant rational map \(U\dashrightarrow S\).
 
-This is the exact analogue, one dimension down, of
+This began as the exact analogue, one dimension down, of
 [Problem E](../E-klein-cubic/README.md) (PSL(2,11) on the Klein cubic
 threefold).  E is equivalent to an *open* essential-dimension computation
 (\(\operatorname{ed}=3\) vs \(4\) for \(\operatorname{PSL}_2(\mathbf
 F_{11})\)); here the essential-dimension invariant is already known
 (\(\operatorname{ed}_{\mathbf C}=2\), Duncan/Beauville) and carries no
-leverage; the problem is instead the first open case of Duncan's
-Condition-(A) sufficiency frontier, which stops at degree 3 — a sharply
-posed question with decisive first computation (the abelian fixed-point
-audit).  Provenance of the problem selection: external suggestion
-(2026-07-28) — an easier case of a very similar problem, still
-publishable, and not entangled with major conjectures.
+leverage.  Duncan's sufficiency theorem for Condition (A) stops at degree
+3.  General sufficiency in degree 2 is already false for other groups, and
+the previously known counterexamples did not settle this simple subgroup.
+The exceptional-path obstruction now settles the exact action directly.
+The earlier exact exclusions through degree 34 remain useful historical
+checks; their former degree-36 frontier is superseded.
 
 ## Start here
 
 - [`SPEC.md`](SPEC.md) — authoritative statement, the action model, the
-  Duncan–Reichstein equivalences with the one genuine change from E (the
-  dP2 point-implies-unirational step replacing Kollár's cubic theorem),
-  the expected ed-reduction, and the resolution standard.
-- [`HANDOFF.md`](HANDOFF.md) — worker-facing work packages, WP-0 first.
-- [`certificates/`](certificates/) — resolution artifacts; empty until
-  something is proved.
-- `RESOLUTION.md` — created by the first worker; dated log of triage
-  results, verified facts, delimited routes.
+  corrected twist equivalences, verified action facts, and binary
+  resolution standard.
+- [`HANDOFF.md`](HANDOFF.md) — final replay path and historical
+  bounded-work summary.
+- [`certificates/`](certificates/) — exact fixed-locus and covariant
+  certificates, each with a scope note.
+- [`RESOLUTION.md`](RESOLUTION.md) — dated log of verified facts,
+  corrections, delimited routes, and the final all-degree theorem.
 
 ## House rules (inherited from B and E)
 
 Never state a lemma you believe might be false — stop and record the
 obstruction; precise negatives are results.  Every "known" fact in
-`SPEC.md` marked **(verify)** must be re-derived or re-cited with an exact
-reference before first use, and the verification logged.  Binary,
-unconditional resolution standard.
+`SPEC.md` must be re-derived or re-cited with an exact reference before
+first use, and the verification logged.  Binary, unconditional resolution
+standard: bounded computations are not the headline resolution.

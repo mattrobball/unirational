@@ -35,24 +35,24 @@ Because \(G\) is simple, \(q_4\) is invariant on the nose (no character
 twist), so the action of \(G\) on \(V\oplus\mathbf C\,w\) (trivial action
 on \(w\)) restricts to an honest action \(G\curvearrowright S\) — an
 action of the group itself, not of a central extension.  The full
-automorphism group is \(\operatorname{Aut}(S)=G\times\langle\sigma\rangle\)
-with \(\sigma\) the Geiser involution \(w\mapsto-w\).  **(verify:** the
-`Aut` computation is classical — Dolgachev–Iskovskikh tables — but re-cite
-it before relying on it.**)**
+automorphism group is \(\operatorname{Aut}(S)=G\times\langle\sigma\rangle\),
+with \(\sigma\) the Geiser involution \(w\mapsto-w\); this is Type I in
+Dolgachev–Iskovskikh, §6.6 and Table 6.
 
-> **Status (WP-0 triage on record, 2026-07-28 — `RESOLUTION.md`).**  OPEN.
-> Cheltsov–Tschinkel–Zhang (July 18, 2026, p. 2) state verbatim that for
-> equivariant unirationality "the cases of del Pezzo surfaces of degree 2
-> and 1 remain open"; Duncan's Condition-(A) sufficiency stops at degree
-> \(\ge 3\).  See "The governing frame" below.
+> **Status (resolved 2026-07-28 — RESOLUTION.md).**  **NEGATIVE** for this
+> exact \(\operatorname{PSL}_2(\mathbf F_7)\)-action: \(S\) is not
+> \(G\)-unirational.  The final proof is the all-degree
+> \(V_4\)-exceptional-path obstruction in
+> certificates/WP3_ALL_DEGREE_PATH_OBSTRUCTION.md.  Condition (A), index
+> one, and the higher-Amitsur tests all pass; the obstruction is strictly
+> finer than those necessary conditions.
 
 As in Problem E, *\(G\)-linearizable* is reserved for equivariant
-birationality to a linear action.  For this \(S\) linearizability is
-expected to FAIL for the classical rigidity reason (minimal del Pezzo
-surface of degree \(\le 3\) with \(G\)-invariant Picard rank 1 —
-**verify** \(\operatorname{rk}\operatorname{Pic}(S)^G=1\) and the
-Dolgachev–Iskovskikh/Cheltsov rigidity citation as part of WP-1).  The
-target here is only \(G\)-unirationality, also called *very versality*.
+birationality to a linear action.  This \(S\) is not \(G\)-linearizable:
+the action is minimal, \(\operatorname{Pic}(S)^G=\mathbf ZK_S\), and the
+Klein degree-2 del Pezzo action is \(G\)-birationally superrigid (see
+Dolgachev–Iskovskikh, §6.6, and das Dores–Mauri, Theorem 1.5).  The target
+here is only \(G\)-unirationality, also called *very versality*.
 
 ## Problem statement
 
@@ -72,58 +72,119 @@ conjecture is proved in the required case.
 Ordinary unirationality of \(S\) is classical (a del Pezzo surface over
 \(\mathbf C\) is rational) and does not address the problem.
 
-## Equivalent formulations (mirror of Problem E, with one genuine change)
+## Equivalent formulations (weak versus very versality)
 
-The Duncan–Reichstein equivalences (their Theorems 1.1, 10.3, 10.5) apply
-to \(S\) exactly as to the Klein cubic: for \(K/\mathbf C\) a field
-extension and \(T\to\operatorname{Spec}K\) a \(G\)-torsor, the twist
-\({}^{T}S\) is again a degree-2 del Pezzo surface over \(K\) (the action
-lifts to the weighted-linear action on \(V\oplus\mathbf C w\)), and
+For a field extension \(K/\mathbf C\) and a \(G\)-torsor
+\(T\to\operatorname{Spec}K\), the twist \({}^{T}S\) is again a degree-2
+del Pezzo surface over \(K\).  Duncan–Reichstein, Theorem 1.1, makes two
+different assertions:
 
 \[
-S\ \text{is } G\text{-unirational}
-\iff S\ \text{very versal}
-\iff {}^{T}S(K)\ne\varnothing\ \ \forall\,(T,K).
+S\ \text{is weakly versal}
+\iff {}^{T}S(K)\ne\varnothing\quad\text{for every }(T,K),
 \]
 
-**The genuine change from E:** the final upgrade "twist has a point
-\(\Rightarrow\) twist is \(K\)-unirational" used Kollár's cubic
-hypersurface theorem in Problem E.  For del Pezzo surfaces of degree 2 the
-corresponding statement is the Salgado–Testa–Várilly-Alvarado /
-Festi–van Luijk circle of results (unirationality of a dP2 with a rational
-point, with hypotheses on the position of the point in the earlier papers
-and unconditional statements in the later literature — **verify the exact
-unconditional statement over an arbitrary field of characteristic 0**
-before using it; every \(K/\mathbf C\) here is infinite of characteristic
-0, the friendly case).  Whether this step is available unconditionally
-changes the shape of WP-2 and must be pinned first.
+whereas
 
-The single generic-torsor reduction of Problem E carries over verbatim in
-one direction and with one open verification in the other:
-\(K_{\mathrm{gen}}=\mathbf C(V)^G\), \(T_{\mathrm{gen}}\) the generic
-torsor; a rational point on \({}^{T_{\mathrm{gen}}}S\) over
-\(K_{\mathrm{gen}}\) is, by twisting adjunction, a \(G\)-equivariant
-rational map \(V\dashrightarrow S\), whose image closure \(Z\) is very
-versal with faithful \(G\)-action (simplicity of \(G\) plus
-\(S^G=\varnothing\), as in E).  The E-argument then used
-\(\operatorname{ed}(G)\ge3\) to force \(Z=X\); here the analogous fork is
-the heart of the problem:
+\[
+S\ \text{is }G\text{-unirational (very versal)}
+\iff {}^{T}S\ \text{is }K\text{-unirational}\quad\text{for every }(T,K).
+\]
 
-- if \(\dim Z=2\) then \(Z=S\) and \(S\) is \(G\)-unirational;
-- if \(\dim Z\le1\): a faithful \(G\)-action on a rational or unirational
-  curve is impossible for noncyclic nonpolyhedral \(G\) — \(G\) is not a
-  subgroup of \(\operatorname{PGL}_2(\mathbf C)\) (**verify:** the finite
-  subgroups of \(\operatorname{PGL}_2\) are cyclic, dihedral, \(A_4\),
-  \(S_4\), \(A_5\); \(\operatorname{PSL}_2(\mathbf F_7)\) is none of
-  these), so \(\dim Z\ne1\) and \(\dim Z\ne0\) (no fixed point).
+There is no known theorem that an arbitrary degree-2 del Pezzo surface over
+an arbitrary characteristic-zero field is unirational as soon as it has a
+rational point.  Salgado–Testa–Várilly-Alvarado prove the implication for a
+point satisfying explicit general-position hypotheses; that result cannot
+be silently upgraded for an arbitrary twist.
 
-Hence, unconditionally once the listed verifications are recorded:
+For this particular simple group and surface, however, the single generic
+torsor already detects dominance.  Put
+\(K_0=\mathbf C(\mathbf P(V))^G\), and let \(T_0\) be the generic
+torsor
+\(\operatorname{Spec}\mathbf C(\mathbf P(V))\to\operatorname{Spec}K_0\).
+By twisting adjunction, a
+\(K_0\)-point of \({}^{T_0}S\) is a
+\(G\)-equivariant rational map \(\mathbf P(V)\dashrightarrow S\).  Let \(Z\) be
+the image closure.  Then:
+
+- \(Z\) cannot be a point, because \(S^G=\varnothing\);
+- if \(Z\) is a curve, it is unirational and hence rational.  The kernel
+  of the induced action on \(Z\) is normal in the simple group \(G\); it
+  cannot be all of \(G\), so the action is faithful.  This would embed
+  \(G\) in \(\operatorname{PGL}_2(\mathbf C)\), impossible by the
+  classification of finite subgroups of \(\operatorname{PGL}_2\);
+- hence \(\dim Z=2\), so the map is dominant.
+
+Consequently the following equivalence is unconditional and specific to
+this action:
 
 \[
 S\ \text{is }G\text{-unirational}
 \iff
-{}^{T_{\mathrm{gen}}}S(K_{\mathrm{gen}})\ne\varnothing .
+{}^{T_0}S(K_0)\ne\varnothing .
 \]
+
+It also implies that weak and very versality coincide for this action:
+weak versality supplies the generic point, and the preceding argument
+makes the resulting map dominant.  This special argument, not a general
+"point implies unirational" theorem for degree-2 del Pezzo surfaces, is
+the reason the all-twists point criterion is valid here.
+
+### Exhaustive homogeneous form and all-degree obstruction
+
+The generic-map criterion turns the problem into an exact invariant-theory
+equation.  Represent the base of a hypothetical
+\(G\)-map \(\mathbf P(V)\dashrightarrow S\) by a primitive homogeneous
+triple \(p\) of degree \(d\).  Projective equivariance makes
+\(p(gv)\) and \(gp(v)\) differ by a constant character of \(G\), hence by
+one because \(G\) is perfect.  The weighted coordinate is a rational
+\(h\) with \(h^2=q_4(p)\); unique factorization makes \(h\) a polynomial,
+and equivariance makes it invariant.  Thus Problem F is equivalent to the
+existence of
+
+\[
+0\ne p\in\operatorname{Cov}_G(V,V)_d,\qquad
+h\in\mathbf C[V]^G_{2d},\qquad q_4(p)=h^2. \tag{*}
+\]
+
+This is exhaustive: other source representations do not create an
+additional case once the projective generic torsor has been used.
+
+The structural certificate proves that a primitive solution of (*) cannot
+have odd degree.  In even degree its Jacobian satisfies
+
+\[
+J_p=Xh\,k,\qquad
+k\in\mathbf C[F,D,C]_{d-24},
+\]
+
+so \(d\ge24\).  The complete degree-24 space is excluded by the exact
+Jacobian/support certificate, and degree 26 is impossible because there is
+no invariant of degree 2.  The exact degree-28, degree-30, degree-32, and
+degree-34 certificates exclude the next four complete spaces.  Before the
+all-degree argument, this left \(d=36\) as the first bounded frontier.
+That frontier is now superseded.
+
+The final certificate excludes every even degree without further
+elimination.  At a quadruple point \(q\) of the 21 involution lines, the
+stabilizer is \(D_8\), with central involution \(z\).  For an incident
+involution \(s\), put \(K=\langle z,s\rangle\simeq V_4\).  In an
+equivariant point-blowup resolution, the central exceptional over \(q\)
+maps constantly over \(E_+(z)\), while the strict involution line maps
+constantly over the distinct eigenline \(E_+(s)\).  The unique dual-tree
+path joining them is fixed componentwise by \(K\).  Every intermediate
+component is born from a \(K\)-fixed point, so its projective tangent
+action has a nontrivial involution kernel.  Its image lies in that
+involution's fixed locus on \(S\), a smooth genus-one curve plus two
+points, and is therefore constant.  Adjacency forces every constant on
+the path to agree, contradicting the distinct endpoint projections.
+
+Thus (*) has no solution in any degree.  See
+certificates/WP3_STRUCTURAL_BOUND.md for the odd-degree theorem and
+certificates/WP3_ALL_DEGREE_PATH_OBSTRUCTION.md, checked by
+certificates/wp3_all_degree_path_obstruction.py, for the all-even theorem.
+The bounded degree-24/28/30/32/34 certificates remain independent
+corroboration and historical progress toward this final obstruction.
 
 ## The governing frame (corrected by WP-0 triage, 2026-07-28 — see RESOLUTION.md)
 
@@ -137,50 +198,56 @@ classification makes the two candidate threefolds birational, welding the
 problem to the open ed computation), the known ed value carries no
 leverage on \(S\).
 
-The correct frame is Duncan's Condition-(A) frontier, quoted in
-Cheltsov–Tschinkel–Zhang (July 18, 2026, p. 2): Condition **(A)** — every
-abelian subgroup has a fixed point — is necessary for
-\(G\)-unirationality; Duncan proved it sufficient for del Pezzo surfaces
-of degree \(\ge3\) [CTZ's ref. 17, Theorem 1.4]; **"the cases of del
-Pezzo surfaces of degree 2 and 1 remain open."**  Problem F is that open
-case at its most symmetric instance:
+Condition **(A)** — every abelian subgroup has a fixed point — is a
+necessary Going-Down condition for \(G\)-unirationality.  Duncan proved it
+sufficient for del Pezzo surfaces of degree \(\ge3\), not for degree 2.
+Moreover, it is already known not to be sufficient for arbitrary degree-2
+actions: Duncan's Remark 1.8 and Example 1.9 use this same surface with the
+larger group
+\(\langle\sigma\rangle\times(C_7\rtimes C_3)\), and
+Tschinkel–Zhang give further \(Q_8\)-examples.  These counterexamples do
+not decide the exact simple subgroup \(G\): the Geiser factor is essential
+in Duncan's example, and \(G\) contains no \(Q_8\).
 
-- if the WP-1 audit finds an abelian \(A\subseteq G\) with
-  \(S^A=\varnothing\), Problem F is resolved NEGATIVELY on the spot;
-- if (A) holds for \((S,G)\), Problem F becomes a sharp test of whether
-  Duncan's sufficiency extends to degree 2 — a positive resolution is the
-  first degree-2 case, a negative one refutes the natural conjecture at
-  its hardest instance.
+WP-1 has now exhaustively verified \(S^A\ne\varnothing\) for every
+abelian \(A\le G\); see certificates/WP1_FIXED_LOCI.md.  WP-2 further
+shows that every twist has index one and that the universal-torsor and all
+higher-Amitsur obstructions vanish.  Those tests did not decide the
+problem.  The all-degree exceptional-path theorem now proves that the
+exhaustive equation (*) has no solution, providing an obstruction specific
+to the projective generic twist and finer than all of those tests.
 
-Either outcome is a publishable unit and neither disturbs a major
-conjecture — the precise cash value of the motivating suggestion.
-
-## Unconditional starting points (to be re-verified before first use)
+## Verified starting points
 
 1. \(S^G=\varnothing\): \(V\) irreducible forces
    \(\mathbf P(V)^G=\varnothing\), and \(S\to\mathbf P(V)\) is
    \(G\)-equivariant.
-2. Sylow and abelian fixed points: for each
-   \(p\in\{2,3,7\}\) and each abelian \(A\subseteq G\)
-   (\(\mathbf Z/7,\ \mathbf Z/4,\ \mathbf Z/3,\ \mathbf Z/2\times\mathbf
-   Z/2,\dots\)), decide whether \(S^{A}\ne\varnothing\).  A single abelian
-   subgroup with \(S^A=\varnothing\) DISPROVES very versality outright
-   (Reichstein–Youssin-type necessary condition — cite the exact statement
-   when used) and resolves the problem negatively.  Note the order-7 and
-   order-3 elements act on the two \(w\)-preimages of a fixed point of
-   \(\mathbf P(V)\) trivially (odd order), so their fixed points lift; the
-   2-groups are where a surprise could hide.
-3. The 56 exceptional curves of \(S\) carry a \(G\)-action; its orbit
-   structure (and \(\operatorname{rk}\operatorname{Pic}(S)^G\)) is
-   computable exactly and is WP-1 material.
+2. The exact WP-1 certificate enumerates every abelian subgroup:
+   \(C_2,C_3,C_4,C_7\), and two conjugacy classes of \(V_4\).  Every one
+   has a nonempty fixed locus on \(S\), so Condition (A) passes.
+3. Dolgachev–Iskovskikh prove that the \(G\)-representation on
+   \(K_S^\perp\cong E_7\) is irreducible.  Hence
+   \(\operatorname{Pic}(S)^G=\mathbf ZK_S\) and the action is minimal.
+4. Every twist has effective zero-cycles of degrees \(2\) and \(21\), so
+   every twist has index one.  On the generic twist this yields a closed
+   point of degree \(1\), \(3\), or \(7\), but not necessarily a rational
+   point.
+5. The equivariant universal-torsor class and all higher Amitsur groups
+   vanish for this action.
+6. The exact Klein arrangement has 21 quadruple points with stabilizer
+   \(D_8\).  The \(V_4\)-stable exceptional path at any incident flag gives
+   the all-even contradiction; combined with the structural odd-degree
+   theorem, it proves that no equivariant map exists.
 
 ## What a resolution consists of
 
 Same standard as Problem E: a `certificates/` package containing either a
 \(G\)-equivariant dominant rational map from a representation (positive
 resolution — explicit polynomials, machine-checkable equivariance and
-dominance), or a proof that some twist has no \(K\)-point / some abelian
-subgroup has empty fixed locus / \(\operatorname{ed}(G)=3\) together with
-the reduction (negative resolution).  Partial results, delimitations of
-routes, and failed-construction post-mortems go to `RESOLUTION.md` with
-dates, in the E house style.
+dominance), or a proof that the generic twist has no
+\(K_0\)-point (negative resolution).  Any proposed
+cohomological, valuation-theoretic, or other obstruction must be checked
+on this exact twist.  Partial results, delimitations of routes, and
+failed-construction post-mortems go to RESOLUTION.md with dates, in the
+E house style.  The negative alternative is achieved by
+certificates/WP3_ALL_DEGREE_PATH_OBSTRUCTION.md and its exact checker.
