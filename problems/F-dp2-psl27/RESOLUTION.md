@@ -57,8 +57,8 @@ Prokhorov's theorem that only two rationally connected threefolds carry
 the \(\operatorname{PSL}_2(\mathbf F_{11})\)-action and they are
 birational to each other; here the two minimal
 \(\operatorname{PSL}_2(\mathbf F_7)\)-surfaces — \(\mathbf P(V)\) and
-\(S\) (Cheltsov–Shramov: \(S\) is one of only two del Pezzo surfaces
-with a faithful Klein-group action) — are NOT \(G\)-birational
+\(S\) (Belousov's theorem: \(S\) is one of only two del Pezzo surfaces
+with a faithful Klein-group action; attribution corrected 2026-07-28) — are NOT \(G\)-birational
 (\(S\) non-linearizable by rigidity, to be re-cited in WP-1), so no
 transfer exists.  SPEC's "expected reduction" section is superseded.
 Condition (A) is a first necessary test, but not the governing equivalence:
@@ -73,11 +73,11 @@ Condition (A) is a first necessary test, but not the governing equivalence:
 **3. Adjacent literature collected for WP-2/WP-3** (from the same
 sweep; to be read before use): CTZ §3 "general unirationality
 constructions in the equivariant context" (the toolbox; their double-cover
-constructions are the closest to \(S\)); Cheltsov–Shramov, *Nonrational
+constructions are the closest to \(S\)); Okada, *Nonrational
 del Pezzo fibrations admitting an action of the Klein simple group*
-(arXiv 1506.05564) and *On conjugacy classes of the Klein simple group in
-the Cremona group* (arXiv 1310.5548) — background on the two minimal
-models and rigidity; Salgado–Testa–Várilly-Alvarado (arXiv 1304.6798) for
+(arXiv 1506.05564) and Abban, *On conjugacy classes of the Klein simple
+group in the Cremona group* (arXiv 1310.5548) — background (attributions
+corrected 2026-07-28; earlier entry misassigned both to Cheltsov–Shramov); Salgado–Testa–Várilly-Alvarado (arXiv 1304.6798) for
 the good-point unirationality theorem.  It is not an unconditional
 arbitrary-point substitute for Kollár's cubic theorem.
 
@@ -802,3 +802,38 @@ equivariant unirationality, against the direction Duncan's `d ≥ 3`
 sufficiency theorem might have suggested.  Write-up positioning (novelty
 of the path-obstruction mechanism vs. antecedents) is under a separate
 literature sweep and will be logged when it lands.
+
+## 2026-07-28 — literature positioning (sweep 1 of 2)
+
+Six-thread antecedent search (full-text reads flagged in the sweep record):
+**no occurrence of the path-obstruction mechanism found under any name.**
+Nearest true ancestor: Reichstein–Youssin (Canad. J. Math. 52 (2000), with
+the Kollár–Szabó appendix) — the Going-Down eigenvector-on-`P(T_x)`
+argument is a genuine antecedent of the fixed-point-forcing skeleton, but
+proves existence of A fixed point on an exceptional divisor only; the
+pointwise-fixed-curve refinement and forced-value propagation along the
+resolution path appear nowhere.  The Kresch–Tschinkel equivariant Burnside
+formalism collects the same `(H, χ₁, χ₂)` birth-center data but sums
+symbols into birational invariants and has produced no unirationality
+obstruction; the 2025–2026 Tschinkel-school unirationality obstructions
+(Amitsur, Bogomolov multipliers) are cohomological and their p-group
+tables exclude this action.  Kollár–Mella is constructive and unrelated.
+
+**Two positioning facts for the write-up, both load-bearing:**
+
+1. **Duncan, Eur. J. Math. 2 (2016), Example 1.9** — same surface, group
+   `C₂×(C₇⋊C₃)` of order 42, Condition (A) holds, not G-unirational, via
+   `ed > 2` (Kraft–Lötscher–Schwarz covariant dimension).  By subgroup
+   monotonicity this already implied the FULL `Aut(S) = C₂×PSL₂(𝔽₇)` is
+   not unirational — an unstated corollary that the write-up must cite.
+   Bare `PSL₂(𝔽₇)` contains no order-42 subgroup (index 4 in a simple
+   group of order 168 is impossible), so the simple-group case was
+   genuinely open — matching CTZ's July 2026 statement — and the present
+   theorem recovers Duncan's corollary and strictly more.
+2. **Duncan's technology provably cannot reach the simple-group case:**
+   `ed_ℂ(PSL₂(𝔽₇)) = 2` (Duncan CMH 2013; Beauville, Prop. 16.3), so no
+   essential-dimension bound obstructs it.  The geometric mechanism is not
+   an alternative proof; for this case it is the only known route.
+
+Sweep 2 (resolution-tree/Burnside-combinatorics focus) still out; to be
+logged on arrival.
