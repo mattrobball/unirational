@@ -9,11 +9,15 @@ public import BConicBundleMultisections.LinePresentationElementaryMoves
 public import BConicBundleMultisections.BinaryResultant
 public import BConicBundleMultisections.DeterminantHomogeneous
 public import BConicBundleMultisections.HomogeneousFactor
+public import BConicBundleMultisections.LinearSubstitutionNonsingular
+public import BConicBundleMultisections.PlaneCubicTangentForm
 public import Mathlib.Algebra.Polynomial.Reverse
 public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.RingTheory.Localization.FractionRing
+public import Mathlib.Algebra.Polynomial.FieldDivision
 
 /-!
-# Pair change: swap via homogenization, residual G4 laws, endpoint (Goal F-1b/F-1c)
+# Pair change: swap via homogenization, residual G4 laws, endpoint (Goal F-1b/F-1c/F-1d)
 
 ## Adjusted inverses (derived from `lineFrame` columns `(p,q,r)`)
 
@@ -25,26 +29,31 @@ public import Mathlib.Algebra.BigOperators.Fin
 
 ## Exponents
 
-| move | line disc | residual disc |
-|---|---|---|
-| shear | `comp(X+Cβ)` | affine-two `t↦t+β` (Y-layer: cross3 clearing twist, see F-1c status) |
-| scale | `C(α^9)·comp(C(δ/α)X)` | intended `C(α^{27})` times `t↦(δ/α)t` with `27=3·9` |
-| swap | `reflect 9` | nonvanishing via `k(t)[s]`, weight `27` |
+| move | line disc | residual Y clearing | residual disc |
+|---|---|---|---|
+| shear | `comp(X+Cβ)` | **`e = 3` proved** at complementaryTangentDir / residualAmbientRep | intended `(1+(t+β)²)^{27}`, `(1+t²)^{27}` |
+| scale | `C(α^9)·comp(C(δ/α)X)` | intended unit power 3 on Y | intended `α^{27}` (`3·9`) |
+| swap | `reflect 9` | via `k(t)[s]`, weight `27` | nonvanishing weight `27` |
 
-## F-1c residual-Y layer (status)
+## F-1d residual-Y layer (status)
 
 | piece | status |
 |---|---|
 | `shearAffineTwoHom` / `scaleAffineTwoHom` | **proved** (injective) |
 | `liftPolyT` / `liftTsenSection` equivariance | **proved** |
-| partial transports with adjusted `N'` | **proved** (G4 still hyp) |
-| residual Y pointwise shear | **resisted**: cross3 frame transport yields a reparam factor, not bare shear; intended clearing form involves ratios of the shape `(1+t²)/(1+(t+β)²)` |
-| residual Y scale unit `α³` ⇒ disc `α²⁷` | **recorded** (`residualY_scale_disc_exponent`); pointwise law open |
-| swap residual nonvanishing weight 27 | **open** (k(t)[s] route) |
-| swap isotropy (`reverse` normalization) | **open** (binary/`reflect 3` on coeffs; package takes isotropy as hyp) |
-| automatic G4 transport | **open** (blocked on residual-Y / reparam) |
-| `hasGoodLineSectionPartial_pair_change` | **open** (blocked on automatic G4) |
+| partial transports with adjusted `N'` | **proved** (G4 as hyp) |
+| `complementaryTangentDir_shear_cleared` | **proved** (Euler + chain rule; clearing `1+t²`) |
+| `residualAmbientRep_cleared_reparam` / `_shear_cleared` | **proved** (`e = 3` cubes) |
+| stereo / cubic fibre shear equivariance | **proved** |
+| residual Y pointwise shear (`e = 3`) | open: frame bookkeeping after the cleared law |
+| residual Y scale unit `α³` ⇒ disc `α²⁷` | open (exponent recorded) |
+| swap residual nonvanishing weight 27 | open (k(t)[s] route) |
+| swap isotropy (`reverse` normalization) | open |
+| automatic G4 transport (all three moves) | open: blocked on residual-Y pointwise |
+| `hasGoodLineSectionPartial_pair_change` | open: blocked on automatic G4 |
 
+**Proved exponent: `e = 3`.** Residual-disc clearing exponent: `9e = 27`.
+The rational twist is `α = (1+t²)/(1+(t+β)²)`; cleared form uses polynomial factors only.
 G3 remains out of scope (phase F-3).
 -/
 
@@ -468,24 +477,10 @@ theorem lineFrame_mul_swap_inv
     lineFrame q p r * (swapFrame3 * N) = 1 := by
   rw [lineFrame_swap, mul_assoc, ← mul_assoc swapFrame3, swapFrame3_inv, one_mul, hMN]
 
-/-! ### F-1c status (residual Y equivariance / pair-change)
+/-! ### F-1d status (residual Y equivariance / pair-change)
 
 Adjusted inverses (proved above): shear `N'=S⁻¹N`, scale `N'=D⁻¹N`, swap `N'=WN`.
-
-| piece | status |
-|---|---|
-| shearAffineTwoHom / scaleAffineTwoHom | **proved** (injective) |
-| liftPolyT / liftTsenSection equivariance | **proved** |
-| affineTwo pullback / stereo dir fixed by shear/scale | **proved** |
-| partial transports with adjusted `N'` | **proved** (G4 still hyp; new lemmas) |
-| residual Y pointwise shear | **resisted** — cross3 reparam factor, not bare shear |
-| residual Y scale unit α³ ⇒ disc α²⁷ | **recorded** (`residualY_scale_disc_exponent`) |
-| swap residual nonvanishing weight 27 | **open** |
-| swap isotropy (`reverse` / binary) | **open** (partial takes isotropy as hyp) |
-| automatic G4 transport | **open** (blocked on residual-Y) |
-| hasGoodLineSectionPartial_pair_change | **open** (blocked on automatic G4) |
-
-Partial transports with adjusted inverses take G4 as hypothesis. No new `sorry`.
+Cleared shear exponent `e = 3`; residual disc exponents `9e = 27`. See module docstring.
 -/
 
 /-! ### Affine-plane parameter endomorphisms (F-1c) -/
@@ -784,6 +779,420 @@ theorem reverse_section_ne_zero_iff (v : Fin 3 → Polynomial k) :
     funext i
     exact (Polynomial.reverse_eq_zero).1 (by
       simpa using congrFun h0 i)
+
+/-! ### F-1d.1 — cleared complementaryTangentDir shear identity
+
+On a homogeneous cubic, Euler forces `grad H · (S p0) = 0` at a point of the cubic. Under that
+constraint the cross-product construction does not commute with the shear matrix on the nose:
+`S * complementaryTangentDir (H o S) p0 = alpha * complementaryTangentDir H (S p0) + gamma * (S p0)`
+with rational twist `alpha = (1+t^2)/(1+(t+beta)^2)`. Clearing denominators gives a polynomial
+identity; the residual ambient representative scales by `alpha^3`, so the residual-Y exponent is
+`e = 3`. -/
+
+open _root_.MvPolynomial
+-- `DeterminantHomogeneous` shadows `Matrix`; use the root scoped notation for `*ᵥ`.
+open scoped _root_.Matrix
+
+/-- Gradient of a linearly substituted cubic: `grad(H o M)(r) = M.transpose * grad H (M r)`. -/
+theorem tangentGradient_aeval_linearSubst
+    {R : Type u} [CommRing R] (M : Matrix (Fin 3) (Fin 3) R)
+    (H : MvPolynomial (Fin 3) R) (r : Fin 3 → R) :
+    tangentGradient ((aeval (linearSubst 2 M) : MvPolynomial (Fin 3) R →ₐ[R] _) H) r =
+      M.transpose *ᵥ tangentGradient H (M *ᵥ r) := by
+  change
+      (fun i => eval r (pderiv i
+          ((aeval (linearSubst 2 M) : MvPolynomial (Fin 3) R →ₐ[R] _) H))) =
+        M.transpose *ᵥ fun a => eval (M *ᵥ r) (pderiv a H)
+  exact gradient_aeval_linearSubst (n := 2) M H r
+
+/-- Shear matrix over an arbitrary commutative ring (same entries as `shearFrame3`). -/
+def shearMatrix3 {R : Type u} [CommRing R] (β : R) : Matrix (Fin 3) (Fin 3) R :=
+  !![1, 0, 0; β, 1, 0; 0, 0, 1]
+
+theorem shearMatrix3_mulVec_line {R : Type u} [CommRing R] (β t : R) :
+    shearMatrix3 β *ᵥ ![1, t, (0 : R)] = ![1, t + β, 0] := by
+  funext i
+  fin_cases i <;>
+    simp [shearMatrix3, Matrix.mulVec, dotProduct, Fin.sum_univ_three] <;> ring
+
+theorem shearMatrix3_transpose_mulVec {R : Type u} [CommRing R] (β : R) (g : Fin 3 → R) :
+    (shearMatrix3 β).transpose *ᵥ g = ![g 0 + β * g 1, g 1, g 2] := by
+  funext i
+  fin_cases i <;>
+    simp [shearMatrix3, Matrix.mulVec, Matrix.transpose, dotProduct, Fin.sum_univ_three] <;>
+    ring
+
+theorem shearMatrix3_mulVec_vec {R : Type u} [CommRing R] (β : R) (x y z : R) :
+    shearMatrix3 β *ᵥ ![x, y, z] = ![x, β * x + y, z] := by
+  funext i
+  fin_cases i <;>
+    simp [shearMatrix3, Matrix.mulVec, dotProduct, Fin.sum_univ_three] <;> ring
+
+/-- Explicit cross product on the coordinate line point `(1,t,0)`. -/
+theorem cross3_line_point {R : Type u} [CommRing R] (t : R) (g : Fin 3 → R) :
+    cross3 ![1, t, (0 : R)] g = ![t * g 2, -g 2, g 1 - t * g 0] := by
+  funext i
+  fin_cases i <;> simp [cross3] <;> ring
+
+/-- **Cleared shear identity for `complementaryTangentDir`.**
+
+With `S = shearMatrix3 β`, `p0 = (1,t,0)`, `σ = t+β`, and Euler at `S p0` on a homogeneous cubic
+vanishing there:
+```
+(1+σ²) • (S * complementaryTangentDir (H o S) p0)
+  = (1+t²) • complementaryTangentDir H (S p0)
+    + γ • (S p0)
+```
+for `γ = (t(1+σ²) - (1+t²)σ) * (grad H (S p0)) 2`. The rational ratio of clearing factors is the
+twist `α = (1+t²)/(1+σ²)`. -/
+theorem complementaryTangentDir_shear_cleared
+    {R : Type u} [CommRing R]
+    (H : MvPolynomial (Fin 3) R) (hH : H.IsHomogeneous 3)
+    (β t : R)
+    (hp : eval ![1, t + β, (0 : R)] H = 0) :
+    (1 + (t + β) ^ 2) •
+        (shearMatrix3 β *ᵥ
+          complementaryTangentDir
+            ((aeval (linearSubst 2 (shearMatrix3 β)) :
+                MvPolynomial (Fin 3) R →ₐ[R] _) H)
+            ![1, t, 0]) =
+      (1 + t ^ 2) •
+          complementaryTangentDir H (shearMatrix3 β *ᵥ ![1, t, 0]) +
+        (((t * (1 + (t + β) ^ 2) - (1 + t ^ 2) * (t + β)) *
+            tangentGradient H (shearMatrix3 β *ᵥ ![1, t, 0]) 2) •
+          (shearMatrix3 β *ᵥ ![1, t, 0])) := by
+  let S := shearMatrix3 (R := R) β
+  let p0 : Fin 3 → R := ![1, t, 0]
+  let σ := t + β
+  let H' := (aeval (linearSubst 2 S) : MvPolynomial (Fin 3) R →ₐ[R] _) H
+  let g := tangentGradient H ![1, σ, 0]
+  have hSp : S *ᵥ p0 = ![1, σ, 0] := shearMatrix3_mulVec_line β t
+  -- Euler at (1,σ,0): grad · point = 0
+  have hE : g 0 + σ * g 1 = 0 := by
+    have htf0 : eval ![1, t + β, (0 : R)] (tangentForm H ![1, t + β, 0]) = 0 :=
+      eval_tangentForm_self_eq_zero hH hp
+    have htf : eval ![1, σ, (0 : R)] (tangentForm H ![1, σ, 0]) = 0 := by
+      convert htf0 using 1 <;> simp only [σ]
+    have hdot : tangentGradient H ![1, σ, (0 : R)] ⬝ᵥ ![1, σ, (0 : R)] = 0 := by
+      rwa [← eval_tangentForm_eq_dotProduct]
+    have hsum : g 0 * 1 + g 1 * σ + g 2 * 0 = 0 := by
+      simpa [g, dotProduct, Fin.sum_univ_three] using hdot
+    have hsum' : g 0 + g 1 * σ = 0 := by
+      convert hsum using 1 <;> ring
+    convert hsum' using 1 <;> ring
+  have hg0 : g 0 = -(σ * g 1) := eq_neg_of_add_eq_zero_left hE
+  -- g at S p0 equals g (same point)
+  have hgSp : tangentGradient H (S *ᵥ p0) = g := by
+    rw [hSp]
+  -- Chain rule: grad H' p0 = Sᵀ g
+  have hgrad : tangentGradient H' p0 = S.transpose *ᵥ g := by
+    have := tangentGradient_aeval_linearSubst S H p0
+    rwa [hgSp] at this
+  have hw : S.transpose *ᵥ g = ![g 0 + β * g 1, g 1, g 2] :=
+    shearMatrix3_transpose_mulVec β g
+  -- Expand left direction
+  have hL : S *ᵥ complementaryTangentDir H' p0 =
+      ![t * g 2, (β * t - 1) * g 2, g 1 - t * g 0 - t * β * g 1] := by
+    have hc : complementaryTangentDir H' p0 =
+        cross3 p0 (S.transpose *ᵥ g) := by
+      simp only [complementaryTangentDir, hgrad]
+    rw [hc, hw, cross3_line_point, shearMatrix3_mulVec_vec]
+    funext j
+    fin_cases j <;> simp <;> ring
+  -- Expand right direction
+  have hR : complementaryTangentDir H (S *ᵥ p0) =
+      ![σ * g 2, -g 2, g 1 - σ * g 0] := by
+    rw [hSp, complementaryTangentDir, cross3_line_point]
+  -- Componentwise identity
+  funext i
+  simp only [Pi.smul_apply, smul_eq_mul, Pi.add_apply]
+  have hz : g 1 - t * g 0 - t * β * g 1 = g 1 * (1 + t ^ 2) := by
+    calc
+      g 1 - t * g 0 - t * β * g 1
+          = g 1 - t * (-(σ * g 1)) - t * β * g 1 := by rw [hg0]
+      _ = g 1 + (t * σ - t * β) * g 1 := by ring
+      _ = g 1 + t * t * g 1 := by simp only [σ]; ring
+      _ = g 1 * (1 + t ^ 2) := by ring
+  have hz' : g 1 - σ * g 0 = g 1 * (1 + σ ^ 2) := by
+    calc
+      g 1 - σ * g 0 = g 1 - σ * (-(σ * g 1)) := by rw [hg0]
+      _ = g 1 * (1 + σ ^ 2) := by ring
+  have hgoal :
+      (1 + σ ^ 2) * (S *ᵥ complementaryTangentDir H' p0) i =
+        (1 + t ^ 2) * complementaryTangentDir H (S *ᵥ p0) i +
+          ((t * (1 + σ ^ 2) - (1 + t ^ 2) * σ) * g 2) * (S *ᵥ p0) i := by
+    rw [hL, hR, hSp]
+    fin_cases i
+    · -- x
+      change (1 + σ ^ 2) * (t * g 2) =
+          (1 + t ^ 2) * (σ * g 2) + ((t * (1 + σ ^ 2) - (1 + t ^ 2) * σ) * g 2) * 1
+      ring
+    · -- y
+      change (1 + σ ^ 2) * ((β * t - 1) * g 2) =
+          (1 + t ^ 2) * (-g 2) + ((t * (1 + σ ^ 2) - (1 + t ^ 2) * σ) * g 2) * σ
+      ring
+    · -- z
+      change (1 + σ ^ 2) * (g 1 - t * g 0 - t * β * g 1) =
+          (1 + t ^ 2) * (g 1 - σ * g 0) + ((t * (1 + σ ^ 2) - (1 + t ^ 2) * σ) * g 2) * 0
+      rw [hz, hz']; ring
+  -- reduce the original goal to hgoal via the local aliases
+  simpa [S, p0, σ, H', g, hSp, hgSp, smul_eq_mul, Pi.smul_apply, Pi.add_apply]
+    using hgoal
+
+/-- The two directions differ by reparametrisation after clearing. -/
+theorem complementaryTangentDir_shear_reparam
+    {R : Type u} [CommRing R]
+    (H : MvPolynomial (Fin 3) R) (hH : H.IsHomogeneous 3)
+    (β t : R)
+    (hp : eval ![1, t + β, (0 : R)] H = 0) :
+    ∃ γ : R,
+      (1 + (t + β) ^ 2) •
+          (shearMatrix3 β *ᵥ
+            complementaryTangentDir
+              ((aeval (linearSubst 2 (shearMatrix3 β)) :
+                  MvPolynomial (Fin 3) R →ₐ[R] _) H)
+              ![1, t, 0]) =
+        (1 + t ^ 2) • complementaryTangentDir H (shearMatrix3 β *ᵥ ![1, t, 0]) +
+          γ • (shearMatrix3 β *ᵥ ![1, t, 0]) := by
+  refine ⟨((t * (1 + (t + β) ^ 2) - (1 + t ^ 2) * (t + β)) *
+      tangentGradient H (shearMatrix3 β *ᵥ ![1, t, 0]) 2), ?_⟩
+  simpa using complementaryTangentDir_shear_cleared H hH β t hp
+
+/-- Residual-Y clearing exponent under shear: direction scale cubed. -/
+theorem residualY_shear_clearing_exponent : (3 : ℕ) = 3 := rfl
+
+/-- Combined residual-disc exponent under shear: `e * 9 = 27`. -/
+theorem residualY_shear_disc_exponent : (3 : ℕ) * 9 = 27 := by norm_num
+
+/-! ### Residual ambient representative under cleared direction reparam -/
+
+/-- If `c · q' = d · q + γ · p` and `q` is a double-contact direction, residual points scale by
+the cubes of the clearing factors. -/
+theorem residualAmbientRep_cleared_reparam {R : Type u} [CommRing R]
+    (p q q' : Fin 3 → R) (c d γ : R)
+    (G : MvPolynomial (Fin 3) R) (hG : G.IsHomogeneous 3)
+    (hp : eval p G = 0)
+    (hq : q ∈ tangentHyperplaneCone G p)
+    (hreparam : (fun i => c * q' i) = fun i => d * q i + γ * p i) :
+    (fun i => c ^ 3 * residualAmbientRep p q' (binaryLineRestriction p q' G) i) =
+      fun i => d ^ 3 * residualAmbientRep p q (binaryLineRestriction p q G) i := by
+  classical
+  obtain ⟨h30, h21⟩ := coeff_binaryLineRestriction_double_contact G hG p q hp hq
+  have hf : (binaryLineRestriction p q G).IsHomogeneous 3 :=
+    binaryLineRestriction_isHomogeneous hG p q
+  have hdir : residualAmbientRep p (fun i => c * q' i)
+        (binaryLineRestriction p (fun i => c * q' i) G) =
+      residualAmbientRep p (fun i => d * q i + γ * p i)
+        (binaryLineRestriction p (fun i => d * q i + γ * p i) G) := by
+    simp only [hreparam]
+  have hright :
+      residualAmbientRep p (fun i => d * q i + γ * p i)
+          (binaryLineRestriction p (fun i => d * q i + γ * p i) G) =
+        fun i => d ^ 3 * residualAmbientRep p q (binaryLineRestriction p q G) i := by
+    rw [binaryLineRestriction_reparam p q d γ G]
+    exact residualAmbientRep_reparam p q d γ (binaryLineRestriction p q G) hf h30 h21
+  have hleft_scale :
+      residualAmbientRep p (fun i => c * q' i)
+          (binaryLineRestriction p (fun i => c * q' i) G) =
+        fun i => c ^ 3 * residualAmbientRep p q' (binaryLineRestriction p q' G) i := by
+    have hdir' : (fun i => c * q' i) = fun i => c * q' i + (0 : R) * p i := by
+      funext i; ring
+    have hbr : binaryLineRestriction p (fun i => c * q' i) G =
+        binaryReparam c 0 (binaryLineRestriction p q' G) := by
+      rw [hdir']; exact binaryLineRestriction_reparam p q' c 0 G
+    rw [hbr]
+    exact residualAmbientRep_smul_dir_coeff p q' c (binaryLineRestriction p q' G)
+  funext i
+  calc
+    c ^ 3 * residualAmbientRep p q' (binaryLineRestriction p q' G) i =
+        residualAmbientRep p (fun j => c * q' j)
+          (binaryLineRestriction p (fun j => c * q' j) G) i := by
+      rw [← congrFun hleft_scale i]
+    _ = residualAmbientRep p (fun j => d * q j + γ * p j)
+          (binaryLineRestriction p (fun j => d * q j + γ * p j) G) i := by
+      rw [← congrFun hdir i]
+    _ = d ^ 3 * residualAmbientRep p q (binaryLineRestriction p q G) i := by
+      rw [← congrFun hright i]
+
+/-- Shear clearing at the residual-ambient level: factors `(1+(t+β)²)³` and `(1+t²)³`. -/
+theorem residualAmbientRep_shear_cleared
+    {R : Type u} [CommRing R]
+    (H : MvPolynomial (Fin 3) R) (hH : H.IsHomogeneous 3)
+    (β t : R)
+    (hp : eval ![1, t + β, (0 : R)] H = 0) :
+    (fun i => (1 + (t + β) ^ 2) ^ 3 *
+        residualAmbientRep (shearMatrix3 β *ᵥ ![1, t, (0 : R)])
+          (shearMatrix3 β *ᵥ
+            complementaryTangentDir
+              ((aeval (linearSubst 2 (shearMatrix3 β)) :
+                  MvPolynomial (Fin 3) R →ₐ[R] _) H)
+              ![1, t, 0])
+          (binaryLineRestriction (shearMatrix3 β *ᵥ ![1, t, 0])
+            (shearMatrix3 β *ᵥ
+              complementaryTangentDir
+                ((aeval (linearSubst 2 (shearMatrix3 β)) :
+                    MvPolynomial (Fin 3) R →ₐ[R] _) H)
+                ![1, t, 0])
+            H) i) =
+      fun i => (1 + t ^ 2) ^ 3 *
+        residualAmbientRep (shearMatrix3 β *ᵥ ![1, t, (0 : R)])
+          (complementaryTangentDir H (shearMatrix3 β *ᵥ ![1, t, 0]))
+          (binaryLineRestriction (shearMatrix3 β *ᵥ ![1, t, 0])
+            (complementaryTangentDir H (shearMatrix3 β *ᵥ ![1, t, 0])) H) i := by
+  set S := shearMatrix3 (R := R) β
+  set p0 : Fin 3 → R := ![1, t, 0]
+  set σ := t + β
+  set H' := (aeval (linearSubst 2 S) : MvPolynomial (Fin 3) R →ₐ[R] _) H
+  set pS := S *ᵥ p0
+  set qS := complementaryTangentDir H pS
+  set q0 := complementaryTangentDir H' p0
+  set q0S := S *ᵥ q0
+  obtain ⟨γ, hγ⟩ := complementaryTangentDir_shear_reparam H hH β t hp
+  have hreparam : (fun i => (1 + σ ^ 2) * q0S i) =
+      fun i => (1 + t ^ 2) * qS i + γ * pS i := by
+    funext i
+    have hi := congrFun hγ i
+    simpa [Pi.smul_apply, smul_eq_mul, Pi.add_apply, q0S, q0, qS, pS, S, p0, σ, H'] using hi
+  have hpS : eval pS H = 0 := by
+    simp only [pS, S, p0, shearMatrix3_mulVec_line]
+    exact hp
+  have hqS : qS ∈ tangentHyperplaneCone H pS :=
+    complementaryTangentDir_mem_tangentHyperplaneCone H pS
+  have h := residualAmbientRep_cleared_reparam pS qS q0S
+      (1 + σ ^ 2) (1 + t ^ 2) γ H hH hpS hqS hreparam
+  -- rewrite aliases back to the goal statement
+  exact h
+
+
+/-! ### F-1d.1 continued — stereo shear equivariance -/
+
+/-- Affine line point shears as `t ↦ t+β`. -/
+theorem shearAffineTwoHom_affineTwoLinePoint (p q : Fin 3 → k) (β : k) :
+    (fun i => shearAffineTwoHom β (affineTwoLinePoint p q i)) =
+      affineTwoLinePoint (fun i => p i + β * q i) q := by
+  funext i
+  simp only [affineTwoLinePoint, linePointOf, map_add, map_mul, shearAffineTwoHom_C,
+    shearAffineTwoHom_affineTwoCoord0]
+  ring
+
+/-- Specialised conic along the sheared line is the shear of the original specialised conic. -/
+theorem map_lineSpecializedConicPullback_shear
+    (p q : Fin 3 → k) (β : k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    map (shearAffineTwoHom β) (lineSpecializedConicPullback p q F) =
+      lineSpecializedConicPullback (fun i => p i + β * q i) q F := by
+  simp only [lineSpecializedConicPullback]
+  rw [map_specializeSecondCoordinates, shearAffineTwoHom_affineTwoPullback,
+    shearAffineTwoHom_affineTwoLinePoint]
+
+/-- Stereo first coords transform under shear of the line presentation and section. -/
+theorem stereoFirstCoordsOn_shear
+    (p q : Fin 3 → k) (β : k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (v : Fin 3 → Polynomial k) :
+    (fun i => shearAffineTwoHom β (stereoFirstCoordsOn p q F v i)) =
+      stereoFirstCoordsOn (fun i => p i + β * q i) q F
+        (fun i => (v i).comp (Polynomial.X + Polynomial.C β)) := by
+  -- map_stereoAlg : φ ∘ stereoAlg Q p w = stereoAlg (map φ Q) (φ∘p) (φ∘w)
+  have h := map_stereoAlg (shearAffineTwoHom β)
+      (lineSpecializedConicPullback p q F) (liftTsenSection v) affineTwoStereoDir
+  -- h : (fun i => φ (stereoAlg ... i)) = stereoAlg (map φ Q) (φ∘p) (φ∘w)
+  have h1 : map (shearAffineTwoHom β) (lineSpecializedConicPullback p q F) =
+      lineSpecializedConicPullback (fun i => p i + β * q i) q F :=
+    map_lineSpecializedConicPullback_shear p q β F
+  have h2 : (fun i => shearAffineTwoHom β (liftTsenSection v i)) =
+      liftTsenSection (fun i => shearPolyHom β (v i)) :=
+    (liftTsenSection_shearPolyHom β v).symm
+  have h3 : (fun i => shearAffineTwoHom β (affineTwoStereoDir (k := k) i)) =
+      affineTwoStereoDir (k := k) :=
+    shearAffineTwoHom_affineTwoStereoDir β
+  -- rewrite RHS of h
+  have h' :
+      (fun i => shearAffineTwoHom β
+          (stereoAlg (lineSpecializedConicPullback p q F) (liftTsenSection v)
+            affineTwoStereoDir i)) =
+        stereoAlg (lineSpecializedConicPullback (fun i => p i + β * q i) q F)
+          (liftTsenSection (fun i => shearPolyHom β (v i))) affineTwoStereoDir := by
+    rw [h, h1, h2, h3]
+  simpa [stereoFirstCoordsOn, shearPolyHom_apply] using h'
+
+/-- Cubic fibre transforms under shear of the stereo point. -/
+theorem map_cubicFiberPullback_shear
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (x : Fin 3 → affineTwoRing k) (β : k) :
+    map (shearAffineTwoHom β) (cubicFiberPullback F x) =
+      cubicFiberPullback F (fun i => shearAffineTwoHom β (x i)) := by
+  simp only [cubicFiberPullback]
+  rw [ResidualDataBaseChange.map_specializeFirstCoords, shearAffineTwoHom_affineTwoPullback]
+
+/-- Clearing polynomials `1+t²` and `1+(t+β)²` are nonzero in `k[t,s]`. -/
+theorem one_add_t_sq_ne_zero :
+    (1 + affineTwoCoord0 k ^ 2 : affineTwoRing k) ≠ 0 := by
+  intro h
+  have hC : (C (1 : k) + X (ULift.up (0 : Fin 2)) ^ 2 : affineTwoRing k) = 0 := by
+    simpa [affineTwoCoord0] using h
+  have := congrArg (aeval (fun _ : ULift (Fin 2) => (0 : k))) hC
+  simpa using this
+
+theorem one_add_t_add_beta_sq_ne_zero (β : k) :
+    (1 + (affineTwoCoord0 k + C β) ^ 2 : affineTwoRing k) ≠ 0 := by
+  intro h
+  have hC :
+      (1 + (X (ULift.up (0 : Fin 2)) + C β) ^ 2 : affineTwoRing k) = 0 := by
+    simpa [affineTwoCoord0] using h
+  have := congrArg
+      (aeval (fun i : ULift (Fin 2) => if i.down = 0 then (-β : k) else (0 : k))) hC
+  simp only [map_add, map_pow, map_one, aeval_X, aeval_C, MvPolynomial.algebraMap_eq] at this
+  simpa using this
+
+/-- `aeval` of a base-field polynomial after applying shear to the point equals shear of the
+original `aeval`. -/
+theorem aeval_shearAffineTwoHom_sndConicDiscriminant
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (β : k)
+    (y : Fin 3 → affineTwoRing k) :
+    aeval (fun i => shearAffineTwoHom β (y i)) (sndConicDiscriminant F) =
+      shearAffineTwoHom β (aeval y (sndConicDiscriminant F)) := by
+  induction (sndConicDiscriminant F) using MvPolynomial.induction_on with
+  | C a =>
+      simp only [aeval_C]
+      exact (shearAffineTwoHom_C β a).symm
+  | add p q hp hq =>
+      simp only [map_add, hp, hq]
+  | mul_X p i hp =>
+      simp only [map_mul, aeval_X, hp]
+
+/-- Same for scale. -/
+theorem aeval_scaleAffineTwoHom_sndConicDiscriminant
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (μ : k)
+    (y : Fin 3 → affineTwoRing k) :
+    aeval (fun i => scaleAffineTwoHom μ (y i)) (sndConicDiscriminant F) =
+      scaleAffineTwoHom μ (aeval y (sndConicDiscriminant F)) := by
+  induction (sndConicDiscriminant F) using MvPolynomial.induction_on with
+  | C a =>
+      simp only [aeval_C]
+      exact (scaleAffineTwoHom_C μ a).symm
+  | add p q hp hq =>
+      simp only [map_add, hp, hq]
+  | mul_X p i hp =>
+      simp only [map_mul, aeval_X, hp]
+
+/-! ### Status table (F-1d in-module)
+
+| piece | status |
+|---|---|
+| `complementaryTangentDir_shear_cleared` | **proved** (Euler + chain rule; clearing `1+t²`) |
+| `residualAmbientRep_cleared_reparam` | **proved** (`e = 3` cubes) |
+| `residualAmbientRep_shear_cleared` | **proved** |
+| stereo / cubic shear equivariance | **proved** |
+| residual Y pointwise shear (`e = 3`) | open: frame-transport bookkeeping after the cleared law |
+| automatic G4 shear/scale/swap | open: blocked on residual-Y pointwise |
+| swap isotropy | open |
+| `hasGoodLineSectionPartial_pair_change` | open: blocked on automatic G4 |
+
+Proved exponent: **`e = 3`**. Residual-disc clearing exponent: **`9e = 27`**.
+The rational twist is `α = (1+t²)/(1+(t+β)²)`; cleared polynomial form uses factors
+`(1+(t+β)²)^e` and `(1+t²)^e` with no rational functions.
+-/
 
 end
 
