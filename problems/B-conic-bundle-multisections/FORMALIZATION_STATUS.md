@@ -681,6 +681,34 @@ component, integrality of the generic conic, nonvanishing of the residual coordi
 established from `Smooth` today, and assuming them would make the core weaker than it looks while
 appearing to generalise it.
 
+## The minimal-hypothesis theorem — 28 July 2026, grok-executed goal chain
+
+Directed as five targeted goals (A–E) plus three follow-ups, executed by Grok Build headless,
+each verified and committed by the director. The standing endpoint family in
+`MinimalLineSection.lean`:
+
+```lean
+-- the bare-section theorem
+smooth_bidegree23_hasUnirationalParametrization_of_lineSection'
+    (k) [Field k] [NeZero (2:k)] [NeZero (3:k)] [Infinite k]
+    (F) (hF : IsBidegree23 F) (hF0 : F ≠ 0) [Smooth (Bidegree23ZeroLocus.toSpec k F)]
+    (h : ∃ p q r N v, Standard.HasGoodLineWithSection F p q r N v) :
+    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F)
+```
+
+`HasGoodLineWithSection` = frame ∧ G3 ∧ `lineConicDiscriminant ≠ 0` ∧ bare isotropic section ∧ G4
+— certificate §4's conditions on `L`, a bare `k(t)`-point, and nothing else. `v 2 ≠ 0` and the
+polar condition are theorems now, not hypotheses (`hpolar` from `v₂ ≠ 0` + disc; `v₂` by pencil
+excision through the given section, G4 riding on the degree-8 homogeneity of `residualYCoordsOn`).
+`[PerfectField k]` was removed by perfect-closure base change. `[Infinite k]` is confined to the
+hard branch (constant excision parameter); the `v 2 ≠ 0` path (`…_of_lineSection_noInfinite`)
+needs none, and the closed-field corollary (`…'_of_isAlgClosed`) carries no `Infinite` binder.
+Dropping `Infinite` on the hard branch is the one named residual: the disc identity for the
+Veronese re-clearing `(d², dn, n²)` at a nonconstant rational parameter.
+
+The original headline and `MainTheoremGuard` are byte-unchanged throughout; every goal was
+additive. All endpoints `[propext, Classical.choice, Quot.sound]`; sorry census 2 throughout.
+
 ## Reproduction commands
 
 ```bash
