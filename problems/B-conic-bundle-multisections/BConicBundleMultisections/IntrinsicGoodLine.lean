@@ -50,6 +50,7 @@ of chart is recorded, and none can be recovered from the bundle.
   `Standard.HasGoodLineWithSection`; it is forced by the frame identity
   `lineFrame p q r * N = 1`, since a right inverse of a square matrix over a field makes it a unit,
   hence its three columns `p`, `q`, `r` independent.  That is
+  `linearIndependent_pair_of_lineFrame_mul_eq_one` below — the `[Infinite k]`-free restatement of
   `Standard.linearIndependent_pair_of_lineFrame_right_inverse`.
 * `smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection''` and its closed-field
   corollary — the unirationality theorem stated against the intrinsic hypothesis.
@@ -86,8 +87,10 @@ supplies the four coefficients; independence of the *target* pair supplies inver
 /-- **Same span ↔ invertible change of pair.**  Two linearly independent pairs span the same
 submodule exactly when an invertible `2 × 2` matrix carries the first to the second.
 
-The `←` direction uses neither independence hypothesis; they are needed only to produce the
-nonvanishing determinant in the `→` direction. -/
+Mathlib has no packaged form of this (its `span_pair_*` family is about ideals), so it is proved
+here.  Only `h'` is load-bearing: it forces `a * d - b * c ≠ 0` in the `→` direction, since
+otherwise all four coefficients vanish and `p' = 0`.  `h` is carried for symmetry — the statement
+is about two *presentations* of one line — and is used by neither direction. -/
 theorem span_pair_eq_iff_exists_gl2 {M : Type v} [AddCommGroup M] [Module k M]
     {p q p' q' : M} (h : LinearIndependent k ![p, q]) (h' : LinearIndependent k ![p', q']) :
     Submodule.span k ({p, q} : Set M) = Submodule.span k ({p', q'} : Set M) ↔
