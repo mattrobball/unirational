@@ -11,6 +11,7 @@ public import BConicBundleMultisections.SectionGeneralPosition
 public import BConicBundleMultisections.Standard.G3FrameIncidenceSelection
 public import BConicBundleMultisections.Standard.G3G4ActualLineSelection
 public import BConicBundleMultisections.ResidualDiscriminantAvoidance
+public import BConicBundleMultisections.ResidualDataBaseChange
 
 /-!
 # Minimal-hypothesis line section (Goal D / D′)
@@ -32,10 +33,12 @@ surface.  Polar nonvanishing is derived from `v 2 ≠ 0` + disc.
 * Third-coordinate content of the polar-adapted residual line is a nonzero univariate
   (`stereoLineParamPoly_third_ne_zero_of_base_third_eq_zero`).
 * G4 at `s = 0` (where `fam(0)` is a nonzero multiple of `v`) is the degree-8 scaling lemma.
-* **Open:** residual-disc content along `fam(s)` as a nonzero univariate in the family parameter,
-  for excision over `RatFunc k` jointly with the third-coordinate content.  Until that package
-  exists, the final `…_of_lineSection'` (no `Infinite`, no `v 2 ≠ 0`) is not claimed; the
-  `v 2 ≠ 0` path without `Infinite` is `…_of_lineSection_noInfinite`.
+* **D″1 done:** residual-disc content along a quadratic section pencil is a finite family of
+  coefficient univariates (`exists_residualDiscContent_of_sectionPencil`), via universal
+  `Φ ∈ (affineTwoRing k)[S]` and coefficient extraction.  Nontriviality from G4 at `s = 0`.
+* **Open for D″2:** clear `stereoLineParamPoly` over `RatFunc k` to a pencil through `v`, joint
+  excision with third-coordinate content, then `…_of_lineSection'`.  The `v 2 ≠ 0` path without
+  `Infinite` is `…_of_lineSection_noInfinite`.
 -/
 
 @[expose] public section
@@ -532,27 +535,416 @@ theorem smooth_bidegree23_hasUnirationalParametrization_of_lineSection_noInfinit
   exact smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection k F hF hF0
     ⟨p, q, r, N, v', hactual⟩
 
+
+/-! ### D″1 — residual-disc content along a quadratic section pencil
+
+`stereoAlg` is linear in the section point, so a quadratic pencil of sections induces a quadratic
+pencil of stereo first-block points.  Running the residual pipeline over
+`Polynomial (affineTwoRing k)` produces `Φ ∈ (affineTwoRing k)[S]` with
+`residualConicDiscriminantOn (fam s) = Φ.eval (C s)`.  Coefficient extraction yields finitely many
+univariates over `k` cutting out the residual-disc vanishing locus; G4 at `s = 0` shows they are
+not all the zero polynomial.
+-/
+
+/-- Quadratic pencil of Tsen sections: `α + s β + s² γ`. -/
+def sectionPencil (α β γ : Fin 3 → Polynomial k) (s : k) : Fin 3 → Polynomial k :=
+  fun i => α i + Polynomial.C s * β i + Polynomial.C s ^ 2 * γ i
+
+/-- Homogeneous combination `φ α + ψ β + ρ γ`. -/
+def sectionPencilHom (α β γ : Fin 3 → Polynomial k) (φ ψ ρ : Polynomial k) :
+    Fin 3 → Polynomial k :=
+  fun i => φ * α i + ψ * β i + ρ * γ i
+
+theorem sectionPencil_zero (α β γ : Fin 3 → Polynomial k) :
+    sectionPencil α β γ 0 = α := by
+  funext i; simp [sectionPencil]
+
+theorem sectionPencilHom_smul_of_const
+    (α β γ : Fin 3 → Polynomial k) (d : Polynomial k) (s : k) :
+    sectionPencilHom α β γ (d ^ 2) (d ^ 2 * Polynomial.C s) (d ^ 2 * Polynomial.C s ^ 2) =
+      fun i => d ^ 2 * sectionPencil α β γ s i := by
+  funext i
+  simp only [sectionPencilHom, sectionPencil, mul_add, mul_assoc]
+
+/-- Residual `Y` from a stereo first-block point. -/
+def residualYCoordsOnOfStereo (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (x : Fin 3 → affineTwoRing k) : Fin 3 → affineTwoRing k :=
+  let G := cubicFiberPullback F x
+  let pL := affineTwoLinePoint p₀ q₀
+  let qd := frameTangentDir (affineTwoLineFrame p₀ q₀ r) (N.map C) G pL
+  residualAmbientRep pL qd (binaryLineRestriction pL qd G)
+
+theorem residualYCoordsOn_eq_ofStereo
+    (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    residualYCoordsOn p₀ q₀ r N F v =
+      residualYCoordsOnOfStereo p₀ q₀ r N F (stereoFirstCoordsOn p₀ q₀ F v) :=
+  rfl
+
+/-- `stereoAlg` is linear in the base point. -/
+theorem stereoAlg_linear_left {R : Type u} [CommRing R]
+    (Q : MvPolynomial (Fin 3) R) (hQ : Q.IsHomogeneous 2)
+    (a b : R) (p w z : Fin 3 → R) :
+    stereoAlg Q (fun i => a * p i + b * w i) z =
+      fun i => a * stereoAlg Q p z i + b * stereoAlg Q w z i := by
+  funext i
+  have hpol := polarEval_linear_left hQ a b p w z
+  simp only [stereoAlg, hpol]
+  ring
+
+theorem liftPolyT_add' (p q : Polynomial k) :
+    liftPolyT (p + q) = liftPolyT p + liftPolyT q := by
+  simp [liftPolyT_eq_hom, map_add]
+
+theorem liftPolyT_C_mul' (c : k) (p : Polynomial k) :
+    liftPolyT (Polynomial.C c * p) = (C c : affineTwoRing k) * liftPolyT p := by
+  simp only [liftPolyT_eq_hom, map_mul]
+  congr 1
+  simp [liftPolyTHom]
+
+theorem liftTsenSection_sectionPencil (α β γ : Fin 3 → Polynomial k) (s : k) :
+    liftTsenSection (sectionPencil α β γ s) =
+      fun i =>
+        liftPolyT (α i) + (C s : affineTwoRing k) * liftPolyT (β i) +
+          (C s : affineTwoRing k) ^ 2 * liftPolyT (γ i) := by
+  funext i
+  have hcs : liftPolyT (Polynomial.C s) = (C s : affineTwoRing k) := by
+    simp [liftPolyT_eq_hom, liftPolyTHom]
+  have h1 : liftPolyT (Polynomial.C s * β i) = (C s : affineTwoRing k) * liftPolyT (β i) :=
+    liftPolyT_C_mul' s (β i)
+  have h2 :
+      liftPolyT (Polynomial.C s ^ 2 * γ i) =
+        (C s : affineTwoRing k) ^ 2 * liftPolyT (γ i) := by
+    have : Polynomial.C s ^ 2 * γ i = Polynomial.C s * (Polynomial.C s * γ i) := by ring
+    rw [this, liftPolyT_C_mul', liftPolyT_C_mul']; ring
+  simp only [liftTsenSection, sectionPencil, liftPolyT_add', h1, h2]
+
+theorem stereoFirstCoordsOn_sectionPencil
+    (p₀ q₀ : Fin 3 → k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (α β γ : Fin 3 → Polynomial k) (s : k) :
+    stereoFirstCoordsOn p₀ q₀ F (sectionPencil α β γ s) =
+      fun i =>
+        stereoFirstCoordsOn p₀ q₀ F α i +
+          (C s : affineTwoRing k) * stereoFirstCoordsOn p₀ q₀ F β i +
+            (C s : affineTwoRing k) ^ 2 * stereoFirstCoordsOn p₀ q₀ F γ i := by
+  have hQ : (lineSpecializedConicPullback p₀ q₀ F).IsHomogeneous 2 :=
+    lineSpecializedConicPullback_isHomogeneous p₀ q₀ hF
+  funext i
+  simp only [stereoFirstCoordsOn, liftTsenSection_sectionPencil]
+  set Lα := liftTsenSection α
+  set Lβ := liftTsenSection β
+  set Lγ := liftTsenSection γ
+  set cs : affineTwoRing k := C s
+  have hcomb :
+      (fun j => liftPolyT (α j) + cs * liftPolyT (β j) + cs ^ 2 * liftPolyT (γ j)) =
+        fun j =>
+          (1 : affineTwoRing k) * Lα j +
+            cs * ((1 : affineTwoRing k) * Lβ j + cs * Lγ j) := by
+    funext j
+    simp only [Lα, Lβ, Lγ, liftTsenSection, cs]
+    ring
+  rw [hcomb]
+  have hlin1 :=
+    congrFun
+      (stereoAlg_linear_left (lineSpecializedConicPullback p₀ q₀ F) hQ
+        (1 : affineTwoRing k) cs Lα
+        (fun j => (1 : affineTwoRing k) * Lβ j + cs * Lγ j) affineTwoStereoDir) i
+  rw [hlin1, one_mul]
+  have hlin2 :=
+    congrFun
+      (stereoAlg_linear_left (lineSpecializedConicPullback p₀ q₀ F) hQ
+        (1 : affineTwoRing k) cs Lβ Lγ affineTwoStereoDir) i
+  rw [hlin2, one_mul]
+  simp only [Lα, Lβ, Lγ, cs]
+  ring
+
+/-- Universal stereo first-block of a section pencil in `(affineTwoRing k)[S]`. -/
+def stereoFirstCoordsOnPencilUniv
+    (p₀ q₀ : Fin 3 → k) (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (α β γ : Fin 3 → Polynomial k) : Fin 3 → Polynomial (affineTwoRing k) :=
+  fun i =>
+    Polynomial.C (stereoFirstCoordsOn p₀ q₀ F α i) +
+      Polynomial.X * Polynomial.C (stereoFirstCoordsOn p₀ q₀ F β i) +
+        Polynomial.X ^ 2 * Polynomial.C (stereoFirstCoordsOn p₀ q₀ F γ i)
+
+theorem eval_stereoFirstCoordsOnPencilUniv
+    (p₀ q₀ : Fin 3 → k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (α β γ : Fin 3 → Polynomial k) (s : k) :
+    (fun i =>
+        Polynomial.eval (C s : affineTwoRing k)
+          (stereoFirstCoordsOnPencilUniv p₀ q₀ F α β γ i)) =
+      stereoFirstCoordsOn p₀ q₀ F (sectionPencil α β γ s) := by
+  funext i
+  simp only [stereoFirstCoordsOnPencilUniv, Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_pow, Polynomial.eval_X, Polynomial.eval_C]
+  exact (congrFun (stereoFirstCoordsOn_sectionPencil p₀ q₀ F hF α β γ s) i).symm
+
+/-- Evaluation at `S ↦ C s` on `(affineTwoRing k)[S]`. -/
+def evalAtC (s : k) : Polynomial (affineTwoRing k) →+* affineTwoRing k :=
+  Polynomial.evalRingHom (C s : affineTwoRing k)
+
+/-- Universal residual `Y` for a stereo point over `(affineTwoRing k)[S]`. -/
+def residualYCoordsOnOfStereoUniv (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (x : Fin 3 → Polynomial (affineTwoRing k)) : Fin 3 → Polynomial (affineTwoRing k) :=
+  let G :=
+    specializeFirstCoordinates (n := 2) x
+      (map (Polynomial.C : affineTwoRing k →+* Polynomial (affineTwoRing k))
+        (affineTwoPullback F))
+  let pL : Fin 3 → Polynomial (affineTwoRing k) :=
+    fun i => Polynomial.C (affineTwoLinePoint p₀ q₀ i)
+  let M := (affineTwoLineFrame p₀ q₀ r).map Polynomial.C
+  let N' := (N.map (C : k →+* affineTwoRing k)).map Polynomial.C
+  residualAmbientRep pL (frameTangentDir M N' G pL)
+    (binaryLineRestriction pL (frameTangentDir M N' G pL) G)
+
+theorem eval_residualYCoordsOnOfStereoUniv
+    (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (x : Fin 3 → Polynomial (affineTwoRing k)) (s : k) :
+    (fun i => (evalAtC s) (residualYCoordsOnOfStereoUniv p₀ q₀ r N F x i)) =
+      residualYCoordsOnOfStereo p₀ q₀ r N F (fun i => (evalAtC s) (x i)) := by
+  let ev := evalAtC s
+  have hcomp : ev.comp (Polynomial.C : affineTwoRing k →+* Polynomial (affineTwoRing k)) =
+      RingHom.id (affineTwoRing k) :=
+    RingHom.ext fun a => by simp [ev, evalAtC]
+  have hG :
+      map ev
+          (specializeFirstCoordinates (n := 2) x
+            (map (Polynomial.C : affineTwoRing k →+* Polynomial (affineTwoRing k))
+              (affineTwoPullback F))) =
+        specializeFirstCoordinates (n := 2) (fun i => ev (x i)) (affineTwoPullback F) := by
+    rw [ResidualDataBaseChange.map_specializeFirstCoords ev, map_map, hcomp, map_id]
+  have hp :
+      (fun i => ev (Polynomial.C (affineTwoLinePoint p₀ q₀ i))) = affineTwoLinePoint p₀ q₀ := by
+    funext i; simp [ev, evalAtC]
+  have hM :
+      ((affineTwoLineFrame p₀ q₀ r).map Polynomial.C).map ev = affineTwoLineFrame p₀ q₀ r := by
+    ext i j; simp [Matrix.map_apply, ev, evalAtC]
+  have hN :
+      (((N.map (C : k →+* affineTwoRing k)).map Polynomial.C).map ev) =
+        N.map (C : k →+* affineTwoRing k) := by
+    ext i j; simp [Matrix.map_apply, ev, evalAtC]
+  simp only [residualYCoordsOnOfStereoUniv, residualYCoordsOnOfStereo, cubicFiberPullback]
+  rw [ResidualDataBaseChange.map_residualAmbientRepGen ev,
+    ResidualDataBaseChange.map_binaryLineRestrictionFun ev,
+    ResidualDataBaseChange.map_frameTangentDirGen ev, hG, hp, hM, hN]
+
+/-- Universal residual-disc of a section pencil. -/
+def residualConicDiscriminantOnPencilUniv
+    (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (α β γ : Fin 3 → Polynomial k) : Polynomial (affineTwoRing k) :=
+  let Y :=
+    residualYCoordsOnOfStereoUniv p₀ q₀ r N F
+      (stereoFirstCoordsOnPencilUniv p₀ q₀ F α β γ)
+  eval₂ (Polynomial.C.comp (C : k →+* affineTwoRing k)) Y (sndConicDiscriminant F)
+
+theorem residualConicDiscriminantOn_sectionPencil
+    (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (α β γ : Fin 3 → Polynomial k) (s : k) :
+    residualConicDiscriminantOn p₀ q₀ r N F (sectionPencil α β γ s) =
+      (evalAtC s) (residualConicDiscriminantOnPencilUniv p₀ q₀ r N F α β γ) := by
+  simp only [residualConicDiscriminantOn, residualYCoordsOn_eq_ofStereo,
+    residualConicDiscriminantOnPencilUniv]
+  set Yuniv :=
+    residualYCoordsOnOfStereoUniv p₀ q₀ r N F
+      (stereoFirstCoordsOnPencilUniv p₀ q₀ F α β γ)
+  have hY :
+      (fun i => (evalAtC s) (Yuniv i)) =
+        residualYCoordsOnOfStereo p₀ q₀ r N F
+          (stereoFirstCoordsOn p₀ q₀ F (sectionPencil α β γ s)) := by
+    rw [eval_residualYCoordsOnOfStereoUniv]
+    congr 1
+    exact eval_stereoFirstCoordsOnPencilUniv p₀ q₀ F hF α β γ s
+  have hcomm :
+      (evalAtC s)
+          (eval₂ (Polynomial.C.comp (C : k →+* affineTwoRing k)) Yuniv
+            (sndConicDiscriminant F)) =
+        aeval (fun i => (evalAtC s) (Yuniv i)) (sndConicDiscriminant F) := by
+    induction sndConicDiscriminant F using MvPolynomial.induction_on with
+    | C a =>
+        simp only [eval₂_C, evalAtC, aeval_C, algebraMap_eq, RingHom.comp_apply]
+        change Polynomial.eval (C s) (Polynomial.C (C a)) = C a
+        simp
+    | add f g hf hg => simp [hf, hg]
+    | mul_X f i hf =>
+        simp only [eval₂_mul, eval₂_X, map_mul, hf, aeval_X]
+  rw [hcomm, hY]
+
+/-- Coefficient univariate of the residual-disc pencil. -/
+def residualDiscContentCoeff
+    (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (α β γ : Fin 3 → Polynomial k) (m : ULift (Fin 2) →₀ ℕ) : Polynomial k :=
+  let Φ := residualConicDiscriminantOnPencilUniv p₀ q₀ r N F α β γ
+  Φ.support.sum fun n =>
+    Polynomial.C (coeff m (Polynomial.coeff Φ n)) * Polynomial.X ^ n
+
+private theorem eval_eq_sum_mul_pow
+    (Φ : Polynomial (affineTwoRing k)) (s : k) :
+    Polynomial.eval (C s : affineTwoRing k) Φ =
+      ∑ n ∈ Φ.support, Polynomial.coeff Φ n * (C s : affineTwoRing k) ^ n := by
+  rw [Polynomial.eval_eq_sum, Polynomial.sum_def]
+  -- `•` is definitionally `*` on this ring, so the goal closes.
+
+theorem eval_residualDiscContentCoeff
+    (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (α β γ : Fin 3 → Polynomial k) (m : ULift (Fin 2) →₀ ℕ) (s : k) :
+    Polynomial.eval s (residualDiscContentCoeff p₀ q₀ r N F α β γ m) =
+      coeff m (residualConicDiscriminantOn p₀ q₀ r N F (sectionPencil α β γ s)) := by
+  classical
+  rw [residualConicDiscriminantOn_sectionPencil p₀ q₀ r N F hF α β γ s]
+  simp only [residualDiscContentCoeff, evalAtC]
+  set Φ := residualConicDiscriminantOnPencilUniv p₀ q₀ r N F α β γ
+  -- `evalAtC s Φ = Polynomial.eval (C s) Φ`
+  change
+      Polynomial.eval s
+          (∑ n ∈ Φ.support,
+            Polynomial.C (coeff m (Polynomial.coeff Φ n)) * Polynomial.X ^ n) =
+        coeff m (Polynomial.eval (C s : affineTwoRing k) Φ)
+  rw [eval_eq_sum_mul_pow Φ s, coeff_sum]
+  simp only [Polynomial.eval_finsetSum, Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_pow, Polynomial.eval_X]
+  refine Finset.sum_congr rfl fun n _ => ?_
+  have hpow : (C s : affineTwoRing k) ^ n = C (s ^ n) := by simp [map_pow]
+  rw [hpow, mul_comm (Polynomial.coeff Φ n), coeff_C_mul, mul_comm]
+
+theorem residualConicDiscriminantOn_sectionPencil_eq_zero_iff
+    (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (α β γ : Fin 3 → Polynomial k) (s : k) :
+    residualConicDiscriminantOn p₀ q₀ r N F (sectionPencil α β γ s) = 0 ↔
+      ∀ m, Polynomial.eval s (residualDiscContentCoeff p₀ q₀ r N F α β γ m) = 0 := by
+  constructor
+  · intro h m
+    rw [eval_residualDiscContentCoeff p₀ q₀ r N F hF α β γ m s, h, coeff_zero]
+  · intro h
+    apply MvPolynomial.ext
+    intro m
+    have := h m
+    rw [eval_residualDiscContentCoeff p₀ q₀ r N F hF α β γ m s] at this
+    simpa using this
+
+/-- Residual-disc pencil universal polynomial is nonzero when G4 holds at `s = 0`. -/
+theorem residualConicDiscriminantOnPencilUniv_ne_zero_of_G4_zero
+    (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (α β γ : Fin 3 → Polynomial k)
+    (h0 : ResidualAvoidsConicDiscriminantOn p₀ q₀ r N F (sectionPencil α β γ 0)) :
+    residualConicDiscriminantOnPencilUniv p₀ q₀ r N F α β γ ≠ 0 := by
+  intro hΦ
+  apply h0
+  have h := residualConicDiscriminantOn_sectionPencil p₀ q₀ r N F hF α β γ 0
+  rw [h, hΦ]
+  exact map_zero (evalAtC (0 : k))
+
+/-- Finite residual-disc content for a quadratic section pencil.
+
+The set `{s | residualConicDiscriminantOn (fam s) = 0}` is the common zero locus of finitely many
+univariates (the nonzero coefficient univariates of `Φ`).  Nontriviality follows from G4 at
+`s = 0`. -/
+theorem exists_residualDiscContent_of_sectionPencil
+    (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (α β γ : Fin 3 → Polynomial k)
+    (h0 : ResidualAvoidsConicDiscriminantOn p₀ q₀ r N F (sectionPencil α β γ 0)) :
+    ∃ (ι : Type) (_ : Fintype ι) (f : ι → Polynomial k),
+      (∀ i, f i ≠ 0) ∧
+        (∀ s : k,
+          residualConicDiscriminantOn p₀ q₀ r N F (sectionPencil α β γ s) = 0 →
+            ∃ i, Polynomial.eval s (f i) = 0) := by
+  classical
+  set Φ := residualConicDiscriminantOnPencilUniv p₀ q₀ r N F α β γ
+  have hΦ0 := residualConicDiscriminantOnPencilUniv_ne_zero_of_G4_zero p₀ q₀ r N F hF α β γ h0
+  -- Pick any multiindex appearing in a nonzero coefficient of Φ.
+  obtain ⟨n, hn⟩ : ∃ n, Polynomial.coeff Φ n ≠ 0 := by
+    by_contra h
+    push Not at h
+    exact hΦ0 (Polynomial.ext fun n => h n)
+  obtain ⟨m, hm⟩ : ∃ m, coeff m (Polynomial.coeff Φ n) ≠ 0 := by
+    by_contra h
+    push Not at h
+    have hzero : Polynomial.coeff Φ n = 0 := by
+      apply MvPolynomial.ext
+      intro m
+      exact h m
+    exact hn hzero
+  have hcontent_ne :
+      residualDiscContentCoeff p₀ q₀ r N F α β γ m ≠ 0 := by
+    intro hf0
+    have hcn :
+        Polynomial.coeff (residualDiscContentCoeff p₀ q₀ r N F α β γ m) n = 0 := by
+      rw [hf0, Polynomial.coeff_zero]
+    have hcn' :
+        Polynomial.coeff (residualDiscContentCoeff p₀ q₀ r N F α β γ m) n =
+          coeff m (Polynomial.coeff Φ n) := by
+      -- `residualDiscContentCoeff` is a support-sum of monomials `C a * X^j`.
+      simp only [residualDiscContentCoeff]
+      rw [Polynomial.finsetSum_coeff]
+      simp only [Polynomial.coeff_C_mul, Polynomial.coeff_X_pow]
+      have hsum :
+          (∑ j ∈ Φ.support,
+              if n = j then coeff m (Polynomial.coeff Φ j) else 0) =
+            coeff m (Polynomial.coeff Φ n) := by
+        by_cases hmem : n ∈ Φ.support
+        · rw [Finset.sum_eq_single n]
+          · simp
+          · intro j _ hjne; simp [Ne.symm hjne]
+          · exact fun h => absurd hmem h
+        · -- If n not in support, both sides vanish.
+          have hcz : Polynomial.coeff Φ n = 0 :=
+            (Polynomial.mem_support_iff).not.mp hmem |> not_not.mp
+          simp only [hcz]
+          refine Finset.sum_eq_zero fun j hj => ?_
+          split_ifs with hnj
+          · subst hnj; exact absurd hj hmem
+          · rfl
+      -- Identify the finset sum with the if-form above.
+      convert hsum using 1
+      refine Finset.sum_congr rfl fun j _ => ?_
+      split_ifs <;> ring
+    exact hm (hcn'.symm ▸ hcn)
+  refine ⟨Unit, inferInstance, fun _ => residualDiscContentCoeff p₀ q₀ r N F α β γ m, ?_, ?_⟩
+  · intro; exact hcontent_ne
+  · intro s hs
+    refine ⟨(), ?_⟩
+    have hforall :=
+      (residualConicDiscriminantOn_sectionPencil_eq_zero_iff p₀ q₀ r N F hF α β γ s).mp hs
+    exact hforall m
+
+/-- G4 for a pencil member from a nonvanishing content coefficient. -/
+theorem ResidualAvoidsConicDiscriminantOn_of_content_eval
+    (p₀ q₀ r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (α β γ : Fin 3 → Polynomial k) (s : k)
+    (h : ∃ m, Polynomial.eval s (residualDiscContentCoeff p₀ q₀ r N F α β γ m) ≠ 0) :
+    ResidualAvoidsConicDiscriminantOn p₀ q₀ r N F (sectionPencil α β γ s) := by
+  intro h0
+  obtain ⟨m, hm⟩ := h
+  exact hm
+    ((residualConicDiscriminantOn_sectionPencil_eq_zero_iff p₀ q₀ r N F hF α β γ s).mp h0 m)
+
 /-
-### Obstruction note (Goal D′, residual-disc content along `fam(s)`)
+### Status note (Goal D″)
 
-The third-coordinate content is a nonzero univariate
-(`stereoLineParamPoly_third_ne_zero_of_base_third_eq_zero`), and G4 is invariant under nonzero
-section scaling (`ResidualAvoidsConicDiscriminantOn_of_mul_section` via degree-8
-`residualYCoordsOn_mul`).  What remains for the double-miss path `v 2 = 0` is to package the
-residual-disc pullback along the residual-line family
-`fam(s) = stereoAlg Q P (W0 + s · W1)` (C1 frame over `RatFunc k`, common denom once) as a
-**nonzero univariate in the family parameter** — nonzero because `fam(0)` is a nonzero multiple of
-`v` so G4 holds at `s = 0` by degree-8 scaling — then avoid it together with the third-coordinate
-content via `exists_eval_ne_zero_of_finite_ne_zero` over `RatFunc k`.
+D″1 core package (above): residual-disc content along a quadratic section pencil is a finite
+family of coefficient univariates, nontrivial when G4 holds at `s = 0`.  Route chosen:
+`Polynomial (affineTwoRing k)` universal residual disc `Φ`, then coefficient univariates over `k`
+(composes with `exists_eval_ne_zero_of_finite_ne_zero`).
 
-That content extraction is the remaining obstruction: residual disc is an element of
-`affineTwoRing k` depending polynomially on the section, but the project does not yet have a
-packaged “polynomial map `s ↦ residualConicDiscriminantOn (fam s)` as an element of
-`(affineTwoRing k)[s]` with an evaluable coefficient univariate over `RatFunc k`”.  Without it the
-final
-`smooth_bidegree23_hasUnirationalParametrization_of_lineSection'`
-(no `Infinite`, no `v 2 ≠ 0`) cannot be completed honestly.  The closed-field corollary is already
-covered by the existing `…_of_lineSection_of_isAlgClosed` (selection supplies `v 2 ≠ 0`).
+Still required for D″2 (`…_of_lineSection'`, no `Infinite`, no `v 2 ≠ 0`):
+1. clear denominators of `stereoLineParamPoly` over `RatFunc k` to a pencil `α,β,γ` with
+   `fam(0)` a nonzero multiple of the given section (G4 at 0 by degree-8 scaling);
+2. joint excision of third-coordinate content and residual-disc content over `RatFunc k`;
+3. assemble the upgraded actual G3G4 section and repoint the closed-field corollary.
+
+Until (1–3) compile, the final theorem is not claimed.
 -/
 
 end
