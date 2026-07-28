@@ -8,6 +8,7 @@ module
 public import BConicBundleMultisections.Bidegree23Example
 public import BConicBundleMultisections.GoodLine
 public import BConicBundleMultisections.MainTheorem
+public import BConicBundleMultisections.IntrinsicGoodLine
 
 /-!
 # Guards on the headline theorem
@@ -116,6 +117,14 @@ end BConicBundleMultisections
   BConicBundleMultisections.hasUnirationalParametrization3_biprojectiveZeroLocus_of_exists_actualG3G4LineSection
 #guard_no_sorry
   BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection
+
+-- **Intrinsic hypothesis (Goal F-4).**  The same conclusion from `Nonempty (GoodLineSection F)`:
+-- a multisection line and a section on it, with the frame completion, the frame inverse and the
+-- choice of spanning pair all removed from the statement.
+#guard_no_sorry
+  BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection''
+#guard_no_sorry
+  BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection''_of_isAlgClosed
 
 -- Load-bearing results that must remain fully proved.  If one of these starts depending on an
 -- obligation, the remaining work is larger than the obligation list suggests.
