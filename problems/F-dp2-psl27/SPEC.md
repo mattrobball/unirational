@@ -40,11 +40,11 @@ with \(\sigma\) the Geiser involution \(w\mapsto-w\).  **(verify:** the
 `Aut` computation is classical — Dolgachev–Iskovskikh tables — but re-cite
 it before relying on it.**)**
 
-> **Status (authored 2026-07-28, not yet triaged).**  Believed open as the
-> exact analogue, one dimension down, of Problem E.  The first work package
-> is a literature triage; see WP-0 in `HANDOFF.md`.  No claim in this
-> paragraph may be cited until that triage is on record in
-> `RESOLUTION.md`.
+> **Status (WP-0 triage on record, 2026-07-28 — `RESOLUTION.md`).**  OPEN.
+> Cheltsov–Tschinkel–Zhang (July 18, 2026, p. 2) state verbatim that for
+> equivariant unirationality "the cases of del Pezzo surfaces of degree 2
+> and 1 remain open"; Duncan's Condition-(A) sufficiency stops at degree
+> \(\ge 3\).  See "The governing frame" below.
 
 As in Problem E, *\(G\)-linearizable* is reserved for equivariant
 birationality to a linear action.  For this \(S\) linearizability is
