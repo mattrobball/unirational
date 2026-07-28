@@ -125,37 +125,35 @@ S\ \text{is }G\text{-unirational}
 {}^{T_{\mathrm{gen}}}S(K_{\mathrm{gen}})\ne\varnothing .
 \]
 
-## The expected reduction, and why this problem should be easier than E
+## The governing frame (corrected by WP-0 triage, 2026-07-28 — see RESOLUTION.md)
 
-The mirror of E's headline reduction is:
+The originally drafted "expected reduction" to an essential-dimension
+computation is WRONG and is withdrawn: Duncan's classification (Comment.
+Math. Helv. 88 (2013); simple-group case restated in Beauville,
+Proposition 16.3) already gives \(\operatorname{ed}_{\mathbf C}(G)=2\),
+realized by \(\mathbf P(V)\) — which is trivially \(G\)-unirational and is
+NOT \(G\)-birational to \(S\).  Unlike Problem E (where Prokhorov's
+classification makes the two candidate threefolds birational, welding the
+problem to the open ed computation), the known ed value carries no
+leverage on \(S\).
 
-> **Expected theorem (to prove, not to assume).**
-> \(S\) is \(G\)-unirational
-> \(\iff \operatorname{ed}_{\mathbf C}(G)=2\).
+The correct frame is Duncan's Condition-(A) frontier, quoted in
+Cheltsov–Tschinkel–Zhang (July 18, 2026, p. 2): Condition **(A)** — every
+abelian subgroup has a fixed point — is necessary for
+\(G\)-unirationality; Duncan proved it sufficient for del Pezzo surfaces
+of degree \(\ge3\) [CTZ's ref. 17, Theorem 1.4]; **"the cases of del
+Pezzo surfaces of degree 2 and 1 remain open."**  Problem F is that open
+case at its most symmetric instance:
 
-Forward direction as in E: a versal \(Z\subseteq S\) of dimension
-\(\le2\) with generically free \(G\)-action gives
-\(\operatorname{ed}(G)\le2\); the interval
-\(2\le\operatorname{ed}_{\mathbf C}(G)\le3\) is unconditional (upper
-bound: the generically free 3-dimensional linear action; lower bound:
-\(G\not\subset\operatorname{PGL}_2\) — **verify** both in WP-1 with
-citations).  The converse direction must argue that an ed-2 witness can be
-compressed onto *this* \(S\); that is where the problem's real content
-sits if the triage does not settle it first.
+- if the WP-1 audit finds an abelian \(A\subseteq G\) with
+  \(S^A=\varnothing\), Problem F is resolved NEGATIVELY on the spot;
+- if (A) holds for \((S,G)\), Problem F becomes a sharp test of whether
+  Duncan's sufficiency extends to degree 2 — a positive resolution is the
+  first degree-2 case, a negative one refutes the natural conjecture at
+  its hardest instance.
 
-**Why easier than E, and why it does not threaten major conjectures:**
-E is exactly equivalent to \(\operatorname{ed}_{\mathbf C}
-(\operatorname{PSL}_2(\mathbf F_{11}))=3\) — an open essential-dimension
-computation.  The present problem's invariant lives one dimension down,
-where the landscape is *classified*: Duncan's classification of finite
-groups of essential dimension 2 (via minimal \(G\)-surfaces and the
-Dolgachev–Iskovskikh tables) is published and complete.  Whether
-\(\operatorname{PSL}_2(\mathbf F_7)\) is on Duncan's ed-2 list is a
-finite lookup plus a versality check — either outcome, combined with the
-expected reduction, resolves Problem F.  That is the precise sense of the
-motivating suggestion (external, 2026-07-28): *still publishable, probably
-easier, an easier case of a very similar problem, and it does not break
-major conjectures*.
+Either outcome is a publishable unit and neither disturbs a major
+conjecture — the precise cash value of the motivating suggestion.
 
 ## Unconditional starting points (to be re-verified before first use)
 

@@ -1,7 +1,9 @@
 # Problem F — PSL(2,7)-unirationality of the degree-2 del Pezzo surface
 
-**Status: AUTHORED 2026-07-28, literature triage not yet run.** Do not cite
-the "open" designation until WP-0 is on record in `RESOLUTION.md`.
+**Status: OPEN** (WP-0 triage on record in `RESOLUTION.md`, 2026-07-28:
+Cheltsov–Tschinkel–Zhang explicitly state the degree-2 del Pezzo case of
+equivariant unirationality "remains open"; Duncan's Condition-(A)
+sufficiency stops at degree 3).
 
 Let \(G=\operatorname{PSL}_2(\mathbf F_7)\) act through its
 three-dimensional representation \(V\) on
@@ -19,11 +21,12 @@ This is the exact analogue, one dimension down, of
 [Problem E](../E-klein-cubic/README.md) (PSL(2,11) on the Klein cubic
 threefold).  E is equivalent to an *open* essential-dimension computation
 (\(\operatorname{ed}=3\) vs \(4\) for \(\operatorname{PSL}_2(\mathbf
-F_{11})\)); the analogous invariant here (\(\operatorname{ed}=2\) vs \(3\)
-for \(\operatorname{PSL}_2(\mathbf F_7)\)) lives in a *classified*
-landscape — Duncan's finite groups of essential dimension 2 — which is the
-concrete reason to expect this case to be decidable with current
-technology.  Provenance of the problem selection: external suggestion
+F_{11})\)); here the essential-dimension invariant is already known
+(\(\operatorname{ed}_{\mathbf C}=2\), Duncan/Beauville) and carries no
+leverage; the problem is instead the first open case of Duncan's
+Condition-(A) sufficiency frontier, which stops at degree 3 — a sharply
+posed question with decisive first computation (the abelian fixed-point
+audit).  Provenance of the problem selection: external suggestion
 (2026-07-28) — an easier case of a very similar problem, still
 publishable, and not entangled with major conjectures.
 
