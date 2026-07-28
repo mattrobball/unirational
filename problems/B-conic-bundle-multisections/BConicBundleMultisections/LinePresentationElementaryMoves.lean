@@ -33,17 +33,19 @@ elementary families (2×2 Gaussian elimination):
 
 Exponent `9 = 3·3`: second-block degree of `F` is 3; polar-`det` is cubic in the entries.
 
-### Not yet proved here (honest remaining work)
+### Landed in `LinePresentationPairChange`
 
-* **Swap** laws (`reflect 9` / `reflect 3`): the univariate presentation forces degree-bounded
-  reflection; the tree's binary-parameter machinery (`binaryReparam`) may give a shorter linear
-  substitution. Either bridge is left for a follow-up.
-* **G4 residual** (`residualYCoordsOn` / `residualConicDiscriminantOn`) under adjusted frames.
-  Same-`(r,N)` residual identities are **false** in general (definition routes through
-  `frameTangentDir (lineFrame p q r) N`). Adjusted inverses: shear uses
-  `S = !![(1),0,0; β,1,0; 0,0,1]`, scale uses `D = !![α,0,0; 0,δ,0; 0,0,1]`, swap uses
-  `W = !![0,1,0; 1,0,0; 0,0,1]`, with `N' = (·)⁻¹ * N`. Partial endpoints take transported G4 as
-  an explicit hypothesis.
+* **Swap disc**: `lineConicDiscriminant q p F = reflect 9 (lineConicDiscriminant p q F)` via the
+  binary polar disc `lineConicDiscBinary` (homogenization route; not bare `reflect` through
+  products). Homogeneous of degree 9; dehomogenizations recover the univariate disc;
+  `p ↔ q` is the variable swap `T₀ ↔ T₁`.
+* **Adjusted inverses** (derived from `lineFrame p' q' r = lineFrame p q r * E`):
+  shear `N' = S⁻¹ N`, scale `N' = D⁻¹ N`, swap `N' = W N`.
+
+### Still open (F-1b.2 residual Y-laws / F-1b.3 endpoint)
+
+* Residual `Y`-coordinate equivariance under shear/scale/swap (with the adjusted inverses).
+* `hasGoodLineSectionPartial_pair_change` once G4 transports without hypothesis.
 -/
 
 @[expose] public section
