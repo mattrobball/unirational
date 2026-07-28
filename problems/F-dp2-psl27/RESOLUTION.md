@@ -837,3 +837,49 @@ tables exclude this action.  Kollár–Mella is constructive and unrelated.
 
 Sweep 2 (resolution-tree/Burnside-combinatorics focus) still out; to be
 logged on arrival.
+
+## 2026-07-28 — literature positioning (sweep 2 of 2): mechanism confirmed unprecedented
+
+Five-thread sweep of the resolution-tree/Burnside side (full-text reads
+flagged in the sweep record).  Same verdict as sweep 1 from independent
+directions: **the path-constancy engine appears intact nowhere**; every
+ingredient has a cousin, the synthesis does not.  Ranked closest three, by
+mechanism proximity — these are the write-up's "related work" spine:
+
+1. **Dolgachev–Iskovskikh, Lemma 5.6 + Thm 5.7(2)** (arXiv:math/0610595):
+   V₄ on a conic bundle, tangent-splitting at a birth node forcing
+   positive-genus fixed curves tied by an arithmetic identity — the
+   closest local match, but single-node, nothing propagated.
+2. **Reichstein–Youssin + Kollár–Szabó appendix, Thm 4.1 / Prop. A.2**
+   (Canad. J. Math. 52 (2000)): the ancestor of character-splitting at a
+   center iterated through a tower — for EXISTENCE of a fixed point, not
+   constancy.  (Correction: "Condition (A)" is not their vocabulary; the
+   apparatus is their "standard form" and Thm 4.1; the label comes from
+   Duncan–Reichstein 2015.)
+3. **Prokhorov–Shramov, Lemmas 3.1.1–3.1.2** (arXiv:1610.02990): the only
+   found source combining explicit tree-dual-graph reasoning with
+   tangent-splitting chained through a blowup tower — propagating one
+   invariant point, never map-constancy to a contradiction.
+
+Reinforcement of the necessity claim: Tschinkel–Zhang's cohomological
+non-unirationality classes for degree-2 del Pezzos (arXiv:2504.10204,
+Thm 3) all have witnessing subgroups (Q₈-type, order 8/16) that cannot
+embed in PSL₂(𝔽₇) (Sylow-2 dihedral), so that toolkit is structurally
+silent here — consistent with sweep 1's ed = 2 point: both prior
+technologies provably cannot reach this case.  Okada (arXiv:1506.05564)
+is the maximal topical-proximity/mechanism-distance point: same group and
+surface, Kollár mod-p on the fibration total space.
+
+Honestly-flagged access gaps, unresolved by two independent attempts:
+Iskovskikh 1979/1980 (mathnet.ru full text gated; abstract consistent
+with UNRELATED) and Manin, *Cubic Forms* (borrow-only; the relevant
+precursor is likely Manin 1967, Mat. Sbornik 72, also inaccessible).
+A referee could reasonably ask for these two to be checked from a
+library copy before a novelty claim is finalized.
+
+Positioning for the write-up, both sweeps combined: cite Duncan Ex. 1.9 +
+monotonicity for the full automorphism group; state the bare simple group
+as the new case (no order-42 subgroup; CTZ-open); present the engine as a
+synthesis with the three ranked cousins as ancestry; note ed = 2 and the
+Sylow-2 obstruction-class exclusion as proof the two prior technologies
+cannot substitute.
