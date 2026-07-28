@@ -14,6 +14,7 @@ public import BConicBundleMultisections.PlaneCubicTangentForm
 public import Mathlib.Algebra.Polynomial.Reverse
 public import Mathlib.Algebra.BigOperators.Fin
 public import Mathlib.RingTheory.Localization.FractionRing
+public import Mathlib.RingTheory.Localization.Away.Basic
 public import Mathlib.Algebra.Polynomial.FieldDivision
 
 /-!
@@ -33,7 +34,7 @@ public import Mathlib.Algebra.Polynomial.FieldDivision
 |---|---|---|---|
 | shear | `comp(X+Cβ)` | **`e = 3` proved** at complementaryTangentDir / residualAmbientRep | intended `(1+(t+β)²)^{27}`, `(1+t²)^{27}` |
 | scale | `C(α^9)·comp(C(δ/α)X)` | intended unit power 3 on Y | intended `α^{27}` (`3·9`) |
-| swap | `reflect 9` | via `k(t)[s]`, weight `27` | nonvanishing weight `27` |
+| swap | `reflect 9` | **proved** in `awayT k = k[t,s][t⁻¹]`: `−t^{8D+34}` | **proved** `−t^{72D+306}` |
 
 ## F-1e residual-Y / G4 layer (status)
 
@@ -53,16 +54,19 @@ public import Mathlib.Algebra.Polynomial.FieldDivision
 | `swapSection` uniform weight + ne_zero | **proved** |
 | `hasGoodLineSectionPartial_swap_of_swapSection` | **proved** (G4 as hyp) |
 | swap isotropy auto (`reflect (2D+3)`) | **proved** |
-| swap residual-Y / auto G4 | open (`k(t)[s]`, weight 27) |
-| `hasGoodLineSectionPartial_swap_auto` | open: blocked on residual G4 |
-| `hasGoodLineSectionPartial_pair_change` | open: blocked on swap auto G4 |
+| swap residual-Y / auto G4 | **proved** (localization `awayT k`, weight `8D+34`) |
+| `hasGoodLineSectionPartial_swap_auto` | **proved** |
+| `hasGoodLineSectionPartial_pair_change` | **proved** — F-1 endpoint |
 
 **Proved exponent: `e = 3`.** Residual-disc clearing exponent: `9e = 27`.
 Shear Y-level law is **literal** after clearing (tangential `γ·p` absorbed at residualAmbientRep).
 **Scale true law:** direction clearing `(α²+δ²t²)³` vs `(αδ(1+t²))³`; stereo chain `α^{24}`;
 point re-id `α^{10}`; residual-Y RHS `(C α)^{34}·(αδ(1+t²))³·φ_μ(Y)`; disc
 `(α²+δ²t²)^{27}` vs `(C α)^{306}·(αδ(1+t²))^{27}·φ_μ(disc)`.
-**Swap weights:** uniform `D`; isotropy **`2D+3` proved**; residual-disc inversion **`27`** recorded.
+**Swap true law:** uniform section reflection weight `D`; isotropy **`2D+3`**; residual-`Y`
+**`−t^{8D+34}`** and residual disc **`−t^{72D+306}`**, both proved after inverting `t` in
+`awayT k = k[t,s][t⁻¹]`.  The `W`-twist on `complementaryTangentDir` is a pure sign (no clearing
+polynomial), so the swap residual law needs no isotropy hypothesis.
 G3 remains out of scope (phase F-3).
 -/
 
@@ -3365,6 +3369,706 @@ True total residual-disc inversion weight may include section-dependent summands
 (`swapSection` / stereo); this records the pure direction contribution. -/
 theorem residualY_swap_disc_exponent : (3 : ℕ) * 9 = 27 := by norm_num
 
+/-! ### F-1g.3 — the inversion `t ↦ 1/t` on a localization of `k[t,s]` -/
+
+theorem affineTwoCoord0_ne_zero : (affineTwoCoord0 k) ≠ 0 := by
+  simp [affineTwoCoord0, X_ne_zero]
+
+/-- Localization of `k[t,s]` away from `t`; the home of the swap substitution `t ↦ 1/t`. -/
+abbrev awayT (k : Type u) [Field k] : Type u := Localization.Away (affineTwoCoord0 k)
+
+/-- The localization map `k[t,s] → k[t,s][t⁻¹]`. -/
+def toAwayT (k : Type u) [Field k] : affineTwoRing k →+* awayT k :=
+  algebraMap (affineTwoRing k) (awayT k)
+
+theorem toAwayT_injective : Function.Injective (toAwayT k) :=
+  IsLocalization.injective _
+    (powers_le_nonZeroDivisors_of_noZeroDivisors (affineTwoCoord0_ne_zero (k := k)))
+
+instance invertible_toAwayT_coord0 : Invertible (toAwayT k (affineTwoCoord0 k)) :=
+  ⟨IsLocalization.Away.invSelf (affineTwoCoord0 k), by
+      rw [mul_comm]; exact IsLocalization.Away.mul_invSelf _,
+    IsLocalization.Away.mul_invSelf _⟩
+
+/-- The substitution `t ↦ 1/t`, `s ↦ s` as a ring hom `k[t,s] → k[t,s][t⁻¹]`. -/
+def invTHom (k : Type u) [Field k] : affineTwoRing k →+* awayT k :=
+  eval₂Hom ((toAwayT k).comp (C : k →+* affineTwoRing k))
+    (fun i => if i.down = 0 then ⅟(toAwayT k (affineTwoCoord0 k))
+      else toAwayT k (X i))
+
+@[simp] theorem invTHom_C (a : k) : invTHom k (C a) = toAwayT k (C a) := by
+  simp [invTHom]
+
+@[simp] theorem invTHom_coord0 :
+    invTHom k (affineTwoCoord0 k) = ⅟(toAwayT k (affineTwoCoord0 k)) := by
+  simp [invTHom, affineTwoCoord0]
+
+@[simp] theorem invTHom_coord1 :
+    invTHom k (affineTwoCoord1 k) = toAwayT k (affineTwoCoord1 k) := by
+  simp [invTHom, affineTwoCoord1]
+
+theorem toAwayT_coord0_ne_zero : toAwayT k (affineTwoCoord0 k) ≠ 0 := fun h0 =>
+  affineTwoCoord0_ne_zero (k := k) (toAwayT_injective (by rw [h0, map_zero]))
+
+theorem isUnit_invTHom_coord0 : IsUnit (invTHom k (affineTwoCoord0 k)) := by
+  rw [invTHom_coord0]; exact isUnit_of_invertible _
+
+/-- The inversion involution of the localization. -/
+def awayTInvolution (k : Type u) [Field k] : awayT k →+* awayT k :=
+  IsLocalization.Away.lift (S := awayT k) (affineTwoCoord0 k)
+    (g := invTHom k) isUnit_invTHom_coord0
+
+theorem awayTInvolution_toAwayT (x : affineTwoRing k) :
+    awayTInvolution k (toAwayT k x) = invTHom k x :=
+  IsLocalization.Away.lift_eq _ _ _
+
+private theorem awayTInvolution_invOf :
+    awayTInvolution k (⅟(toAwayT k (affineTwoCoord0 k))) = toAwayT k (affineTwoCoord0 k) := by
+  have h2 : awayTInvolution k (toAwayT k (affineTwoCoord0 k)) *
+      awayTInvolution k (⅟(toAwayT k (affineTwoCoord0 k))) = 1 := by
+    rw [← map_mul, mul_invOf_self, map_one]
+  rw [awayTInvolution_toAwayT, invTHom_coord0] at h2
+  have h3 : (toAwayT k (affineTwoCoord0 k)) *
+      (⅟(toAwayT k (affineTwoCoord0 k)) *
+        awayTInvolution k (⅟(toAwayT k (affineTwoCoord0 k)))) =
+      toAwayT k (affineTwoCoord0 k) := by
+    rw [h2, mul_one]
+  rw [← mul_assoc, mul_invOf_self, one_mul] at h3
+  exact h3
+
+theorem awayTInvolution_invTHom (x : affineTwoRing k) :
+    awayTInvolution k (invTHom k x) = toAwayT k x := by
+  induction x using MvPolynomial.induction_on with
+  | C a => rw [invTHom_C, awayTInvolution_toAwayT, invTHom_C]
+  | add p q hp hq => rw [map_add, map_add, hp, hq, map_add]
+  | mul_X p i hp =>
+      rw [map_mul, map_mul, map_mul, hp]
+      congr 1
+      rcases i with ⟨i⟩
+      fin_cases i
+      · change awayTInvolution k (invTHom k (affineTwoCoord0 k)) =
+          toAwayT k (affineTwoCoord0 k)
+        rw [invTHom_coord0, awayTInvolution_invOf]
+      · change awayTInvolution k (invTHom k (affineTwoCoord1 k)) =
+          toAwayT k (affineTwoCoord1 k)
+        rw [invTHom_coord1, awayTInvolution_toAwayT, invTHom_coord1]
+
+theorem invTHom_injective : Function.Injective (invTHom k) := by
+  intro a b hab
+  apply toAwayT_injective
+  rw [← awayTInvolution_invTHom a, ← awayTInvolution_invTHom b, hab]
+
+/-! ### The reflected section under `t ↦ 1/t` -/
+
+theorem toAwayT_liftPolyT (f : Polynomial k) :
+    toAwayT k (liftPolyT f) =
+      Polynomial.eval₂ ((toAwayT k).comp (C : k →+* affineTwoRing k))
+        (toAwayT k (affineTwoCoord0 k)) f := by
+  simp only [liftPolyT]
+  rw [Polynomial.hom_eval₂]
+
+theorem invTHom_liftPolyT (f : Polynomial k) :
+    invTHom k (liftPolyT f) =
+      Polynomial.eval₂ ((toAwayT k).comp (C : k →+* affineTwoRing k))
+        (⅟(toAwayT k (affineTwoCoord0 k))) f := by
+  have hC : (invTHom k).comp (C : k →+* affineTwoRing k) =
+      (toAwayT k).comp (C : k →+* affineTwoRing k) := by
+    ext a; simp
+  simp only [liftPolyT]
+  rw [Polynomial.hom_eval₂, hC, invTHom_coord0]
+
+/-- **Reflection is inversion after clearing.**  For a section coordinate of degree `≤ N`,
+the lift of `reflect N f` is `t^N` times the `t ↦ 1/t` substitution of the lift of `f`. -/
+theorem toAwayT_liftPolyT_reflect (N : ℕ) (f : Polynomial k) (hf : f.natDegree ≤ N) :
+    toAwayT k (liftPolyT (Polynomial.reflect N f)) =
+      (toAwayT k (affineTwoCoord0 k)) ^ N * invTHom k (liftPolyT f) := by
+  set x : awayT k := toAwayT k (affineTwoCoord0 k)
+  set i := (toAwayT k).comp (C : k →+* affineTwoRing k)
+  have h := Polynomial.eval₂_reflect_mul_pow (i := i) (x := ⅟x) N f hf
+  rw [invOf_invOf] at h
+  have hinv : ((⅟x : awayT k)) ^ N * x ^ N = 1 := by
+    rw [← mul_pow, invOf_mul_self, one_pow]
+  rw [toAwayT_liftPolyT, invTHom_liftPolyT]
+  calc
+    Polynomial.eval₂ i x (Polynomial.reflect N f) =
+        Polynomial.eval₂ i x (Polynomial.reflect N f) * ((⅟x) ^ N * x ^ N) := by
+      rw [hinv, mul_one]
+    _ = (Polynomial.eval₂ i x (Polynomial.reflect N f) * (⅟x) ^ N) * x ^ N := by ring
+    _ = Polynomial.eval₂ i (⅟x) f * x ^ N := by rw [h]
+    _ = x ^ N * Polynomial.eval₂ i (⅟x) f := by ring
+
+/-! ### Swap matrix over an arbitrary ring, and the cross-product sign law -/
+
+/-- Swap matrix over an arbitrary commutative ring (same entries as `swapFrame3`). -/
+def swapMatrix3 (R : Type u) [CommRing R] : Matrix (Fin 3) (Fin 3) R :=
+  !![0, 1, 0; 1, 0, 0; 0, 0, 1]
+
+theorem swapFrame3_eq_swapMatrix3 : (swapFrame3 : Matrix (Fin 3) (Fin 3) k) = swapMatrix3 k := rfl
+
+theorem swapMatrix3_map {R S : Type u} [CommRing R] [CommRing S] (f : R →+* S) :
+    (swapMatrix3 R).map f = swapMatrix3 S := by
+  ext i j
+  fin_cases i <;> fin_cases j <;> simp [swapMatrix3, Matrix.map_apply]
+
+theorem swapMatrix3_mulVec_vec {R : Type u} [CommRing R] (x y z : R) :
+    swapMatrix3 R *ᵥ ![x, y, z] = ![y, x, z] := by
+  funext i
+  fin_cases i <;> simp [swapMatrix3, Matrix.mulVec, dotProduct, Fin.sum_univ_three]
+
+theorem swapMatrix3_transpose {R : Type u} [CommRing R] :
+    (swapMatrix3 R).transpose = swapMatrix3 R := by
+  ext i j
+  fin_cases i <;> fin_cases j <;> simp [swapMatrix3, Matrix.transpose]
+
+theorem swapMatrix3_mulVec {R : Type u} [CommRing R] (g : Fin 3 → R) :
+    swapMatrix3 R *ᵥ g = ![g 1, g 0, g 2] := by
+  funext i
+  fin_cases i <;> simp [swapMatrix3, Matrix.mulVec, dotProduct, Fin.sum_univ_three]
+
+/-- **Swap sign law for the complementary tangent direction.**
+
+`W` is symmetric, involutive and has determinant `-1`, so the cross-product construction
+anticommutes with it: `W · ctd(H ∘ W)(p) = − ctd(H)(W · p)`.  No clearing polynomial appears
+(unlike the shear); the entire twist is the sign. -/
+theorem swapMatrix3_mulVec_complementaryTangentDir {R : Type u} [CommRing R]
+    (H : MvPolynomial (Fin 3) R) (p : Fin 3 → R) :
+    swapMatrix3 R *ᵥ
+        complementaryTangentDir
+          ((aeval (linearSubst 2 (swapMatrix3 R)) : MvPolynomial (Fin 3) R →ₐ[R] _) H) p =
+      fun i => -complementaryTangentDir H (swapMatrix3 R *ᵥ p) i := by
+  have hg := tangentGradient_aeval_linearSubst (swapMatrix3 R) H p
+  rw [swapMatrix3_transpose] at hg
+  funext i
+  simp only [complementaryTangentDir, hg, swapMatrix3_mulVec, tangentGradient]
+  fin_cases i <;>
+    simp [cross3, Matrix.cons_val_zero, Matrix.cons_val_one]
+
+/-! ### The specialised conic and the stereo point under second-block swap -/
+
+private theorem toAwayT_comp_C_eq_invTHom_comp_C :
+    (toAwayT k).comp (C : k →+* affineTwoRing k) =
+      (invTHom k).comp (C : k →+* affineTwoRing k) := by
+  ext a; simp
+
+private theorem map_affineTwoPullback_toAwayT
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    map (toAwayT k) (affineTwoPullback F) = map (invTHom k) (affineTwoPullback F) := by
+  simp only [affineTwoPullback]
+  rw [map_map, map_map, toAwayT_comp_C_eq_invTHom_comp_C]
+
+private theorem toAwayT_swap_coordinateLineY :
+    (fun j => toAwayT k ((swapMatrix3 (affineTwoRing k) *ᵥ affineTwoCoordinateLineY k) j)) =
+      (toAwayT k (affineTwoCoord0 k)) •
+        (fun j => invTHom k (affineTwoCoordinateLineY k j)) := by
+  funext j
+  fin_cases j <;>
+    simp [affineTwoCoordinateLineY, swapMatrix3_mulVec, Pi.smul_apply, smul_eq_mul]
+
+private theorem swapFrame3_map_C_eq :
+    (swapFrame3 : Matrix (Fin 3) (Fin 3) k).map (C : k →+* affineTwoRing k) =
+      swapMatrix3 (affineTwoRing k) := by
+  rw [swapFrame3_eq_swapMatrix3, swapMatrix3_map]
+
+private theorem specializedConicPullback_secondBlock_swap
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) :
+    specializedConicPullback (secondBlockSubst swapFrame3 F) =
+      specializeSecondCoordinates (m := 2)
+        (swapMatrix3 (affineTwoRing k) *ᵥ affineTwoCoordinateLineY k)
+        (affineTwoPullback F) := by
+  change specializeSecondCoordinates (m := 2) (affineTwoCoordinateLineY k)
+      (affineTwoPullback (secondBlockSubst swapFrame3 F)) = _
+  rw [affineTwoPullback_secondBlockSubst, specializeSecondCoordinates_secondBlockSubst,
+    swapFrame3_map_C_eq]
+
+/-- **Specialised conic under second-block swap**: after inverting `t` the conic along the
+swapped line is `t³` times the inversion of the original conic. -/
+theorem map_specializedConicPullback_secondBlock_swap
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) :
+    map (toAwayT k) (specializedConicPullback (secondBlockSubst swapFrame3 F)) =
+      C ((toAwayT k (affineTwoCoord0 k)) ^ 3) *
+        map (invTHom k) (specializedConicPullback F) := by
+  have hB : IsBidegree23 (map (invTHom k) (affineTwoPullback F)) :=
+    (hF.map_coefficients (C : k →+* affineTwoRing k)).map_coefficients (invTHom k)
+  have hQ : map (invTHom k) (specializedConicPullback F) =
+      specializeSecondCoordinates (m := 2)
+        (fun j => invTHom k (affineTwoCoordinateLineY k j))
+        (map (invTHom k) (affineTwoPullback F)) := by
+    change map (invTHom k)
+        (specializeSecondCoordinates (m := 2) (affineTwoCoordinateLineY k)
+          (affineTwoPullback F)) = _
+    rw [map_specializeSecondCoordinates]
+  rw [specializedConicPullback_secondBlock_swap, map_specializeSecondCoordinates,
+    map_affineTwoPullback_toAwayT, toAwayT_swap_coordinateLineY,
+    hB.specializeSecondCoordinates_smul, hQ]
+
+private theorem toAwayT_liftTsenSection_swapSection
+    (D : ℕ) (v : Fin 3 → Polynomial k) (hdeg : ∀ i, (v i).natDegree ≤ D) :
+    (fun i => toAwayT k (liftTsenSection (swapSection D v) i)) =
+      fun i => (toAwayT k (affineTwoCoord0 k)) ^ D * invTHom k (liftTsenSection v i) := by
+  funext i
+  exact toAwayT_liftPolyT_reflect D (v i) (hdeg i)
+
+private theorem toAwayT_affineTwoStereoDir :
+    (fun i => toAwayT k (affineTwoStereoDir (k := k) i)) =
+      fun i => invTHom k (affineTwoStereoDir (k := k) i) := by
+  funext i
+  fin_cases i <;> simp [affineTwoStereoDir]
+
+/-- **Stereo point under second-block swap**: weight `D + 3` (conic `3`, section `D`). -/
+theorem toAwayT_stereoFirstCoords_secondBlock_swap
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (D : ℕ) (v : Fin 3 → Polynomial k) (hdeg : ∀ i, (v i).natDegree ≤ D) :
+    (fun i => toAwayT k
+        (stereoFirstCoords (secondBlockSubst swapFrame3 F) (swapSection D v) i)) =
+      fun i => (toAwayT k (affineTwoCoord0 k)) ^ (D + 3) *
+        invTHom k (stereoFirstCoords F v i) := by
+  set x : awayT k := toAwayT k (affineTwoCoord0 k) with hx
+  set Q := specializedConicPullback F with hQdef
+  set Qι := map (invTHom k) Q with hQι
+  have hQhom : Qι.IsHomogeneous 2 :=
+    (specializedConicPullback_isHomogeneous F hF).map _
+  have hmap := map_stereoAlg (toAwayT k)
+    (specializedConicPullback (secondBlockSubst swapFrame3 F))
+    (liftTsenSection (swapSection D v)) affineTwoStereoDir
+  have hQ' := map_specializedConicPullback_secondBlock_swap F hF
+  have hsec := toAwayT_liftTsenSection_swapSection D v hdeg
+  have hdir := toAwayT_affineTwoStereoDir (k := k)
+  have hlast := map_stereoAlg (invTHom k) Q (liftTsenSection v) affineTwoStereoDir
+  calc
+    (fun i => toAwayT k
+        (stereoFirstCoords (secondBlockSubst swapFrame3 F) (swapSection D v) i)) =
+        stereoAlg (map (toAwayT k) (specializedConicPullback (secondBlockSubst swapFrame3 F)))
+          (fun j => toAwayT k (liftTsenSection (swapSection D v) j))
+          (fun j => toAwayT k (affineTwoStereoDir j)) := hmap
+    _ = stereoAlg (C (x ^ 3) * Qι)
+          (fun j => x ^ D * invTHom k (liftTsenSection v j))
+          (fun j => invTHom k (affineTwoStereoDir j)) := by
+        rw [hQ', hsec, hdir]
+    _ = fun i => x ^ 3 * stereoAlg Qι
+          (fun j => x ^ D * invTHom k (liftTsenSection v j))
+          (fun j => invTHom k (affineTwoStereoDir j)) i :=
+        stereoAlg_C_mul _ _ _ _
+    _ = fun i => x ^ 3 * ((fun i' => x ^ D * stereoAlg Qι
+          (fun j => invTHom k (liftTsenSection v j))
+          (fun j => invTHom k (affineTwoStereoDir j)) i') i) := by
+        rw [stereoAlg_smul_left Qι hQhom]
+    _ = fun i => x ^ (D + 3) * invTHom k (stereoFirstCoords F v i) := by
+        have hsf : (fun i => invTHom k (stereoFirstCoords F v i)) =
+            stereoAlg Qι (fun j => invTHom k (liftTsenSection v j))
+              (fun j => invTHom k (affineTwoStereoDir j)) := hlast
+        funext i
+        dsimp only
+        rw [show stereoAlg Qι (fun j => invTHom k (liftTsenSection v j))
+              (fun j => invTHom k (affineTwoStereoDir j)) i =
+            invTHom k (stereoFirstCoords F v i) from (congrFun hsf i).symm]
+        ring
+
+/-- **Cubic fibre under second-block swap**: constant weight `2(D+3)` and a `W`-substitution. -/
+theorem map_cubicFiberPullback_secondBlock_swap
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (D : ℕ) (v : Fin 3 → Polynomial k) (hdeg : ∀ i, (v i).natDegree ≤ D) :
+    map (toAwayT k)
+        (cubicFiberPullback (secondBlockSubst swapFrame3 F)
+          (stereoFirstCoords (secondBlockSubst swapFrame3 F) (swapSection D v))) =
+      C ((toAwayT k (affineTwoCoord0 k)) ^ (2 * (D + 3))) *
+        (aeval (linearSubst 2 (swapMatrix3 (awayT k))) :
+            MvPolynomial (Fin 3) (awayT k) →ₐ[awayT k] _)
+          (map (invTHom k) (cubicFiberPullback F (stereoFirstCoords F v))) := by
+  set x : awayT k := toAwayT k (affineTwoCoord0 k) with hx
+  set B : MvPolynomial (BiprojectiveCoordinate 2 2) (awayT k) :=
+    map (invTHom k) (affineTwoPullback F) with hBdef
+  have hBdeg : IsBidegree23 B :=
+    (hF.map_coefficients (C : k →+* affineTwoRing k)).map_coefficients (invTHom k)
+  have hpull : map (toAwayT k) (affineTwoPullback (secondBlockSubst swapFrame3 F)) =
+      secondBlockSubst (swapMatrix3 (awayT k)) B := by
+    rw [affineTwoPullback_secondBlockSubst, map_secondBlockSubst_eq, swapFrame3_map_C_eq,
+      swapMatrix3_map, map_affineTwoPullback_toAwayT]
+  have hcf : ∀ (G : MvPolynomial (BiprojectiveCoordinate 2 2) k) (y : Fin 3 → affineTwoRing k),
+      cubicFiberPullback G y = specializeFirstCoordinates (n := 2) y (affineTwoPullback G) :=
+    fun _ _ => rfl
+  have hsmulform :
+      (fun i => x ^ (D + 3) * invTHom k (stereoFirstCoords F v i)) =
+        (x ^ (D + 3)) • (fun i => invTHom k (stereoFirstCoords F v i)) := by
+    funext i; simp [Pi.smul_apply, smul_eq_mul]
+  rw [hcf, hcf, ResidualDataBaseChange.map_specializeFirstCoords,
+    ResidualDataBaseChange.map_specializeFirstCoords, hpull,
+    toAwayT_stereoFirstCoords_secondBlock_swap F hF D v hdeg, hsmulform,
+    specializeFirstCoordinates_secondBlockSubst, hBdeg.specializeFirstCoordinates_smul,
+    map_mul, aeval_C, ← hBdef]
+  congr 2
+  ring
+
+/-! ### The residual point under second-block swap -/
+
+/-- Scaling the direction alone multiplies the residual representative by the cube. -/
+theorem residualAmbientRep_smul_dir {R : Type u} [CommRing R] {σ : Type*}
+    (p q : σ → R) (c : R) (G : MvPolynomial σ R) :
+    residualAmbientRep p (fun i => c * q i) (binaryLineRestriction p (fun i => c * q i) G) =
+      fun i => c ^ 3 * residualAmbientRep p q (binaryLineRestriction p q G) i := by
+  have hdir : (fun i => c * q i) = fun i => c * q i + (0 : R) * p i := by
+    funext i; ring
+  have hbr : binaryLineRestriction p (fun i => c * q i) G =
+      binaryReparam c 0 (binaryLineRestriction p q G) := by
+    rw [hdir]; exact binaryLineRestriction_reparam p q c 0 G
+  rw [hbr]
+  exact residualAmbientRep_smul_dir_coeff p q c (binaryLineRestriction p q G)
+
+private theorem map_residualAmbientRep_comp {R S : Type u} [CommRing R] [CommRing S]
+    (φ : R →+* S) {σ : Type*} (p q : σ → R) (g : MvPolynomial (Fin 2) R) :
+    φ ∘ residualAmbientRep p q g = residualAmbientRep (φ ∘ p) (φ ∘ q) (map φ g) := by
+  funext i
+  simp [residualAmbientRep, residualBinaryRep, coeff_map, Function.comp_apply]
+
+/-- Coefficient ring homs commute with the whole residual chain at a point. -/
+private theorem map_residualChain {R S : Type u} [CommRing R] [CommRing S]
+    (φ : R →+* S) (p : Fin 3 → R) (G : MvPolynomial (Fin 3) R) :
+    φ ∘ residualAmbientRep p (complementaryTangentDir G p)
+        (binaryLineRestriction p (complementaryTangentDir G p) G) =
+      residualAmbientRep (φ ∘ p) (complementaryTangentDir (map φ G) (φ ∘ p))
+        (binaryLineRestriction (φ ∘ p)
+          (complementaryTangentDir (map φ G) (φ ∘ p)) (map φ G)) := by
+  rw [map_residualAmbientRep_comp, map_complementaryTangentDir, map_binaryLineRestriction,
+    map_complementaryTangentDir]
+
+private theorem residualYCoords_eq_chain
+    (G0 : MvPolynomial (BiprojectiveCoordinate 2 2) k) (w : Fin 3 → Polynomial k) :
+    residualYCoords G0 w =
+      residualAmbientRep (affineTwoCoordinateLineY k)
+        (complementaryTangentDir (cubicFiberPullback G0 (stereoFirstCoords G0 w))
+          (affineTwoCoordinateLineY k))
+        (binaryLineRestriction (affineTwoCoordinateLineY k)
+          (complementaryTangentDir (cubicFiberPullback G0 (stereoFirstCoords G0 w))
+            (affineTwoCoordinateLineY k))
+          (cubicFiberPullback G0 (stereoFirstCoords G0 w))) := rfl
+
+private theorem toAwayT_swapMatrix3_mulVec (Y : Fin 3 → affineTwoRing k) :
+    (fun i => toAwayT k ((swapMatrix3 (affineTwoRing k) *ᵥ Y) i)) =
+      swapMatrix3 (awayT k) *ᵥ (fun j => toAwayT k (Y j)) := by
+  funext i
+  fin_cases i <;> simp [swapMatrix3_mulVec]
+
+private theorem swapMatrix3_mulVec_smul (a : awayT k) (z : Fin 3 → awayT k) :
+    swapMatrix3 (awayT k) *ᵥ (fun i => a * z i) =
+      fun i => a * (swapMatrix3 (awayT k) *ᵥ z) i := by
+  funext i
+  fin_cases i <;> simp [swapMatrix3_mulVec]
+
+private theorem swapMatrix3_mulVec_coordinateLineY_awayT :
+    swapMatrix3 (awayT k) *ᵥ (fun j => toAwayT k (affineTwoCoordinateLineY k j)) =
+      fun i => (toAwayT k (affineTwoCoord0 k)) *
+        (fun j => invTHom k (affineTwoCoordinateLineY k j)) i := by
+  funext i
+  fin_cases i <;>
+    simp [swapMatrix3_mulVec, affineTwoCoordinateLineY]
+
+private theorem map_residualChain' {R S : Type u} [CommRing R] [CommRing S]
+    (φ : R →+* S) (p : Fin 3 → R) (G : MvPolynomial (Fin 3) R) :
+    (fun i => φ (residualAmbientRep p (complementaryTangentDir G p)
+        (binaryLineRestriction p (complementaryTangentDir G p) G) i)) =
+      residualAmbientRep (fun j => φ (p j))
+        (complementaryTangentDir (map φ G) (fun j => φ (p j)))
+        (binaryLineRestriction (fun j => φ (p j))
+          (complementaryTangentDir (map φ G) (fun j => φ (p j))) (map φ G)) :=
+  map_residualChain φ p G
+
+/-- A constant multiple of the cubic multiplies the residual chain by the fourth power. -/
+theorem residualChain_C_mul {R : Type u} [CommRing R]
+    (c : R) (H : MvPolynomial (Fin 3) R) (p : Fin 3 → R) :
+    residualAmbientRep p (complementaryTangentDir (C c * H) p)
+        (binaryLineRestriction p (complementaryTangentDir (C c * H) p) (C c * H)) =
+      fun i => c ^ 4 * residualAmbientRep p (complementaryTangentDir H p)
+        (binaryLineRestriction p (complementaryTangentDir H p) H) i := by
+  rw [complementaryTangentDir_C_mul]
+  exact residualAmbientRep_scale_c4 p (complementaryTangentDir H p) c H
+
+/-- **Swap transport of the residual chain.**  `W` carries the residual point of the
+`W`-substituted cubic at `p` to minus the residual point of the cubic at `W · p`.  The only twist
+is the sign; no clearing polynomial and no isotropy hypothesis is needed. -/
+theorem swapMatrix3_mulVec_residualChain {R : Type u} [CommRing R]
+    (Gi : MvPolynomial (Fin 3) R) (p : Fin 3 → R) :
+    swapMatrix3 R *ᵥ
+        residualAmbientRep p
+          (complementaryTangentDir
+            ((aeval (linearSubst 2 (swapMatrix3 R)) : MvPolynomial (Fin 3) R →ₐ[R] _) Gi) p)
+          (binaryLineRestriction p
+            (complementaryTangentDir
+              ((aeval (linearSubst 2 (swapMatrix3 R)) : MvPolynomial (Fin 3) R →ₐ[R] _) Gi) p)
+            ((aeval (linearSubst 2 (swapMatrix3 R)) : MvPolynomial (Fin 3) R →ₐ[R] _) Gi)) =
+      fun i => -residualAmbientRep (swapMatrix3 R *ᵥ p)
+        (complementaryTangentDir Gi (swapMatrix3 R *ᵥ p))
+        (binaryLineRestriction (swapMatrix3 R *ᵥ p)
+          (complementaryTangentDir Gi (swapMatrix3 R *ᵥ p)) Gi) i := by
+  rw [mulVec_residualAmbientRep, binaryLineRestriction_aeval_linearSubst,
+    swapMatrix3_mulVec_complementaryTangentDir]
+  have hneg : (fun i => -complementaryTangentDir Gi (swapMatrix3 R *ᵥ p) i) =
+      fun i => (-1 : R) * complementaryTangentDir Gi (swapMatrix3 R *ᵥ p) i := by
+    funext i; ring
+  rw [hneg, residualAmbientRep_smul_dir]
+  funext i
+  ring
+
+/-- **Cleared residual-`Y` law under second-block swap.**
+
+After inverting `t`, the residual point of the swapped presentation is `−t^{8D+34}` times the
+inversion of the original residual point: section reflection `8D`, stereo/cubic chain `24`,
+point re-identification `10`, and the cross-product sign. -/
+theorem toAwayT_residualYCoords_secondBlock_swap
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (D : ℕ) (v : Fin 3 → Polynomial k) (hdeg : ∀ i, (v i).natDegree ≤ D) :
+    (fun i => toAwayT k ((swapMatrix3 (affineTwoRing k) *ᵥ
+        residualYCoords (secondBlockSubst swapFrame3 F) (swapSection D v)) i)) =
+      fun i => -((toAwayT k (affineTwoCoord0 k)) ^ (8 * D + 34) *
+        invTHom k (residualYCoords F v i)) := by
+  have hGihom :
+      (map (invTHom k) (cubicFiberPullback F (stereoFirstCoords F v))).IsHomogeneous 3 :=
+    (cubicFiberPullback_isHomogeneous F hF (stereoFirstCoords F v)).map _
+  have hA :
+      (fun j => toAwayT k
+          (residualYCoords (secondBlockSubst swapFrame3 F) (swapSection D v) j)) =
+        fun i => ((toAwayT k (affineTwoCoord0 k)) ^ (2 * (D + 3))) ^ 4 *
+          residualAmbientRep (fun j => toAwayT k (affineTwoCoordinateLineY k j))
+            (complementaryTangentDir
+              ((aeval (linearSubst 2 (swapMatrix3 (awayT k))) :
+                  MvPolynomial (Fin 3) (awayT k) →ₐ[awayT k] _)
+                (map (invTHom k) (cubicFiberPullback F (stereoFirstCoords F v))))
+              (fun j => toAwayT k (affineTwoCoordinateLineY k j)))
+            (binaryLineRestriction (fun j => toAwayT k (affineTwoCoordinateLineY k j))
+              (complementaryTangentDir
+                ((aeval (linearSubst 2 (swapMatrix3 (awayT k))) :
+                    MvPolynomial (Fin 3) (awayT k) →ₐ[awayT k] _)
+                  (map (invTHom k) (cubicFiberPullback F (stereoFirstCoords F v))))
+                (fun j => toAwayT k (affineTwoCoordinateLineY k j)))
+              ((aeval (linearSubst 2 (swapMatrix3 (awayT k))) :
+                  MvPolynomial (Fin 3) (awayT k) →ₐ[awayT k] _)
+                (map (invTHom k) (cubicFiberPullback F (stereoFirstCoords F v))))) i := by
+    rw [residualYCoords_eq_chain, map_residualChain',
+      map_cubicFiberPullback_secondBlock_swap F hF D v hdeg, residualChain_C_mul]
+  have hB := swapMatrix3_mulVec_residualChain
+    (map (invTHom k) (cubicFiberPullback F (stereoFirstCoords F v)))
+    (fun j => toAwayT k (affineTwoCoordinateLineY k j))
+  have hpt := residualAmbientRep_smul_point_ctd
+    (map (invTHom k) (cubicFiberPullback F (stereoFirstCoords F v))) hGihom
+    (fun j => invTHom k (affineTwoCoordinateLineY k j)) (toAwayT k (affineTwoCoord0 k))
+  have hC := (map_residualChain' (invTHom k) (affineTwoCoordinateLineY k)
+    (cubicFiberPullback F (stereoFirstCoords F v))).symm
+  rw [toAwayT_swapMatrix3_mulVec, hA, swapMatrix3_mulVec_smul, hB,
+    swapMatrix3_mulVec_coordinateLineY_awayT, hpt, hC, ← residualYCoords_eq_chain]
+  funext i
+  ring
+
+/-! ### Residual `Y` on a general line, and the discriminant, under swap -/
+
+private theorem hom_mulVec_map_C_apply {S : Type u} [CommRing S] (φ : affineTwoRing k →+* S)
+    (M : Matrix (Fin 3) (Fin 3) k) (z : Fin 3 → affineTwoRing k) (i : Fin 3) :
+    φ ((M.map (C : k →+* affineTwoRing k) *ᵥ z) i) =
+      ((M.map (φ.comp (C : k →+* affineTwoRing k))) *ᵥ (fun j => φ (z j))) i := by
+  simp only [Matrix.mulVec, dotProduct, map_sum, map_mul, Matrix.map_apply, RingHom.comp_apply]
+
+private theorem hom_mulVec_map_C {S : Type u} [CommRing S] (φ : affineTwoRing k →+* S)
+    (M : Matrix (Fin 3) (Fin 3) k) (z : Fin 3 → affineTwoRing k) :
+    (fun i => φ ((M.map (C : k →+* affineTwoRing k) *ᵥ z) i)) =
+      (M.map (φ.comp (C : k →+* affineTwoRing k))) *ᵥ (fun j => φ (z j)) := by
+  funext i
+  exact hom_mulVec_map_C_apply φ M z i
+
+private theorem mulVec_const_mul {S : Type u} [CommRing S]
+    (M : Matrix (Fin 3) (Fin 3) S) (a : S) (z : Fin 3 → S) :
+    M *ᵥ (fun i => a * z i) = fun i => a * (M *ᵥ z) i := by
+  funext i
+  simp only [Matrix.mulVec, dotProduct, Finset.mul_sum]
+  exact Finset.sum_congr rfl fun j _ => by ring
+
+theorem affineTwoLineFrame_swap (p q r : Fin 3 → k) :
+    affineTwoLineFrame q p r =
+      affineTwoLineFrame p q r * (swapFrame3 : Matrix (Fin 3) (Fin 3) k).map C := by
+  have h := congrArg (fun M : Matrix (Fin 3) (Fin 3) k =>
+      M.map (C : k →+* affineTwoRing k)) (lineFrame_swap p q r)
+  simpa [affineTwoLineFrame, lineFrame_map, Matrix.map_mul] using h
+
+/-- **Cleared residual-`Y` swap law on a general line** with the adjusted inverse `N' = W · N`. -/
+theorem toAwayT_residualYCoordsOn_swap
+    (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (hMN : lineFrame p q r * N = 1)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (D : ℕ) (v : Fin 3 → Polynomial k) (hdeg : ∀ i, (v i).natDegree ≤ D) :
+    (fun i => toAwayT k (residualYCoordsOn q p r (swapFrame3 * N) F (swapSection D v) i)) =
+      fun i => -((toAwayT k (affineTwoCoord0 k)) ^ (8 * D + 34) *
+        invTHom k (residualYCoordsOn p q r N F v i)) := by
+  have hMN' := lineFrame_mul_swap_inv p q r N hMN
+  have hY' := residualYCoordsOn_eq_mulVec_residualYCoords_secondBlockSubst q p r
+    (swapFrame3 * N) hMN' F (swapSection D v)
+  have hY := residualYCoordsOn_eq_mulVec_residualYCoords_secondBlockSubst p q r N hMN F v
+  have hFtil : IsBidegree23 (secondBlockSubst (lineFrame p q r) F) :=
+    isBidegree23_secondBlockSubst _ hF
+  have hsub : secondBlockSubst (lineFrame q p r) F =
+      secondBlockSubst swapFrame3 (secondBlockSubst (lineFrame p q r) F) := by
+    rw [lineFrame_swap, secondBlockSubst_secondBlockSubst]
+  have hM : affineTwoLineFrame p q r = (lineFrame p q r).map (C : k →+* affineTwoRing k) := by
+    simp only [affineTwoLineFrame, lineFrame_map]
+  have hkey := toAwayT_residualYCoords_secondBlock_swap
+    (secondBlockSubst (lineFrame p q r) F) hFtil D v hdeg
+  have hsplit :
+      residualYCoordsOn q p r (swapFrame3 * N) F (swapSection D v) =
+        (lineFrame p q r).map (C : k →+* affineTwoRing k) *ᵥ
+          (swapMatrix3 (affineTwoRing k) *ᵥ
+            residualYCoords (secondBlockSubst swapFrame3
+              (secondBlockSubst (lineFrame p q r) F)) (swapSection D v)) := by
+    rw [hY', affineTwoLineFrame_swap, hsub, hM, swapFrame3_map_C_eq, Matrix.mulVec_mulVec]
+  rw [hsplit, hom_mulVec_map_C, hkey]
+  have hneg : (fun i => -((toAwayT k (affineTwoCoord0 k)) ^ (8 * D + 34) *
+        invTHom k (residualYCoords (secondBlockSubst (lineFrame p q r) F) v i))) =
+      fun i => (-(toAwayT k (affineTwoCoord0 k)) ^ (8 * D + 34)) *
+        invTHom k (residualYCoords (secondBlockSubst (lineFrame p q r) F) v i) := by
+    funext i; ring
+  rw [hneg, mulVec_const_mul, hY, hM]
+  funext i
+  rw [hom_mulVec_map_C_apply, ← toAwayT_comp_C_eq_invTHom_comp_C]
+  ring
+
+/-! ### The residual discriminant under swap, and automatic G4 -/
+
+private theorem toAwayT_C_eq_algebraMap (a : k) :
+    toAwayT k (C a) = algebraMap k (awayT k) a := by
+  rw [IsScalarTower.algebraMap_apply k (affineTwoRing k) (awayT k)]
+  rfl
+
+private theorem invTHom_C_eq_algebraMap (a : k) :
+    invTHom k (C a) = algebraMap k (awayT k) a := by
+  rw [invTHom_C, toAwayT_C_eq_algebraMap]
+
+private theorem hom_aeval_of_C {S : Type u} [CommRing S] [Algebra k S]
+    (φ : affineTwoRing k →+* S) (hφ : ∀ a : k, φ (C a) = algebraMap k S a)
+    (P : MvPolynomial (Fin 3) k) (Y : Fin 3 → affineTwoRing k) :
+    φ (aeval Y P) = aeval (fun i => φ (Y i)) P := by
+  induction P using MvPolynomial.induction_on with
+  | C a => simp only [aeval_C]; exact hφ a
+  | add p q hp hq => simp only [map_add, hp, hq]
+  | mul_X p i hp => simp only [map_mul, aeval_X, hp]
+
+/-- **Residual-disc swap law.**  Total inversion weight `9 · (8D + 34) = 72D + 306`. -/
+theorem toAwayT_residualConicDiscriminantOn_swap
+    (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (hMN : lineFrame p q r * N = 1)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (D : ℕ) (v : Fin 3 → Polynomial k) (hdeg : ∀ i, (v i).natDegree ≤ D) :
+    toAwayT k (residualConicDiscriminantOn q p r (swapFrame3 * N) F (swapSection D v)) =
+      -((toAwayT k (affineTwoCoord0 k)) ^ (9 * (8 * D + 34)) *
+        invTHom k (residualConicDiscriminantOn p q r N F v)) := by
+  have hY := toAwayT_residualYCoordsOn_swap p q r N hMN F hF D v hdeg
+  have h1 : toAwayT k (aeval (residualYCoordsOn q p r (swapFrame3 * N) F (swapSection D v))
+        (sndConicDiscriminant F)) =
+      aeval (fun i => toAwayT k
+        (residualYCoordsOn q p r (swapFrame3 * N) F (swapSection D v) i))
+        (sndConicDiscriminant F) :=
+    hom_aeval_of_C (toAwayT k) toAwayT_C_eq_algebraMap _ _
+  have h3 : aeval (fun i => invTHom k (residualYCoordsOn p q r N F v i))
+        (sndConicDiscriminant F) =
+      invTHom k (aeval (residualYCoordsOn p q r N F v) (sndConicDiscriminant F)) :=
+    (hom_aeval_of_C (invTHom k) invTHom_C_eq_algebraMap _ _).symm
+  have h2 : (fun i => -((toAwayT k (affineTwoCoord0 k)) ^ (8 * D + 34) *
+        invTHom k (residualYCoordsOn p q r N F v i))) =
+      fun i => (-(toAwayT k (affineTwoCoord0 k)) ^ (8 * D + 34)) *
+        invTHom k (residualYCoordsOn p q r N F v i) := by
+    funext i; ring
+  simp only [residualConicDiscriminantOn]
+  rw [h1, hY, h2, aeval_sndConicDiscriminant_smul F hF, h3]
+  ring
+
+/-- **Automatic G4 under swap** with the adjusted inverse `N' = W · N` and the uniform section
+reflection `swapSection D v`. -/
+theorem ResidualAvoidsConicDiscriminantOn_swap
+    (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (hMN : lineFrame p q r * N = 1)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (D : ℕ) (v : Fin 3 → Polynomial k) (hdeg : ∀ i, (v i).natDegree ≤ D)
+    (h : ResidualAvoidsConicDiscriminantOn p q r N F v) :
+    ResidualAvoidsConicDiscriminantOn q p r (swapFrame3 * N) F (swapSection D v) := by
+  intro h0
+  apply h
+  have hcl := toAwayT_residualConicDiscriminantOn_swap p q r N hMN F hF D v hdeg
+  rw [h0, map_zero] at hcl
+  have hmul : (toAwayT k (affineTwoCoord0 k)) ^ (9 * (8 * D + 34)) *
+      invTHom k (residualConicDiscriminantOn p q r N F v) = 0 := by
+    have := hcl.symm
+    linear_combination -this
+  have hu : IsUnit ((toAwayT k (affineTwoCoord0 k)) ^ (9 * (8 * D + 34))) :=
+    (isUnit_of_invertible _).pow _
+  have hz : invTHom k (residualConicDiscriminantOn p q r N F v) = 0 :=
+    hu.mul_right_eq_zero.mp hmul
+  exact invTHom_injective (by rw [hz, map_zero])
+
+/-- Swap transport of the partial package with adjusted inverse — G4 automatic. -/
+theorem hasGoodLineSectionPartial_swap_auto
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (hMN : lineFrame p q r * N = 1)
+    (D : ℕ) (v : Fin 3 → Polynomial k) (hdeg : ∀ i, (v i).natDegree ≤ D)
+    (h : HasGoodLineSectionPartial F p q r N v) :
+    HasGoodLineSectionPartial F q p r (swapFrame3 * N) (swapSection D v) := by
+  rcases h with ⟨hdisc, hv0, hviso, hG4⟩
+  exact hasGoodLineSectionPartial_swap_of_swapSection_of_degree F hF p q r N D v hdeg
+    ⟨hdisc, hv0, hviso, hG4⟩
+    (ResidualAvoidsConicDiscriminantOn_swap p q r N hMN F hF D v hdeg hG4)
+
+/-! ### F-1 endpoint: an arbitrary `GL₂` pair change -/
+
+/-- The partial package together with its frame completion, as a property of the pair `(p,q)`.
+Carrying `lineFrame p q r' * N' = 1` is what makes the three elementary transports composable. -/
+def GoodPairFramed (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (p q : Fin 3 → k) : Prop :=
+  ∃ (r' : Fin 3 → k) (N' : Matrix (Fin 3) (Fin 3) k) (v' : Fin 3 → Polynomial k),
+    lineFrame p q r' * N' = 1 ∧ HasGoodLineSectionPartial F p q r' N' v'
+
+/-- **Pair change, framed form.**  `GoodPairFramed` is invariant under every invertible change of
+the spanning pair of the line. -/
+theorem goodPairFramed_pair_change
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (a b c d : k) (hA : a * d - b * c ≠ 0)
+    (p q : Fin 3 → k) (h : GoodPairFramed F p q) :
+    GoodPairFramed F (fun i => a * p i + b * q i) (fun i => c * p i + d * q i) := by
+  refine pair_property_of_elemGL2_invariant (GoodPairFramed F) ?_ ?_ ?_ a b c d hA p q h
+  · rintro p0 q0 β ⟨r0, N0, v0, hMN, hpk⟩
+    exact ⟨r0, shearFrame3 (-β) * N0, _, lineFrame_mul_shear_inv p0 q0 r0 N0 β hMN,
+      hasGoodLineSectionPartial_shear_auto F hF p0 q0 r0 N0 β hMN v0 hpk⟩
+  · rintro p0 q0 α δ hα hδ ⟨r0, N0, v0, hMN, hpk⟩
+    exact ⟨r0, scaleFrame3 α⁻¹ δ⁻¹ * N0, _,
+      lineFrame_mul_scale_inv p0 q0 r0 N0 α δ hα hδ hMN,
+      hasGoodLineSectionPartial_scale_auto F hF p0 q0 r0 N0 α δ hα hδ hMN v0 hpk⟩
+  · rintro p0 q0 ⟨r0, N0, v0, hMN, hpk⟩
+    refine ⟨r0, swapFrame3 * N0,
+      swapSection (Finset.univ.sup fun i : Fin 3 => (v0 i).natDegree) v0,
+      lineFrame_mul_swap_inv p0 q0 r0 N0 hMN, ?_⟩
+    exact hasGoodLineSectionPartial_swap_auto F hF p0 q0 r0 N0 hMN
+      (Finset.univ.sup fun i : Fin 3 => (v0 i).natDegree) v0
+      (fun i => Finset.le_sup (f := fun i : Fin 3 => (v0 i).natDegree) (Finset.mem_univ i))
+      hpk
+
+/-- **F-1 endpoint.**  The minimal (frame-free, G3-free) package survives an arbitrary invertible
+change of the pair spanning the line; the residual frame data and the section are absorbed by the
+existential. -/
+theorem hasGoodLineSectionPartial_pair_change
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (hMN : lineFrame p q r * N = 1)
+    (v : Fin 3 → Polynomial k)
+    (a b c d : k) (hA : a * d - b * c ≠ 0)
+    (h : HasGoodLineSectionPartial F p q r N v) :
+    ∃ (r' : Fin 3 → k) (N' : Matrix (Fin 3) (Fin 3) k) (v' : Fin 3 → Polynomial k),
+      HasGoodLineSectionPartial F (fun i => a * p i + b * q i)
+        (fun i => c * p i + d * q i) r' N' v' := by
+  obtain ⟨r', N', v', _, hpk⟩ :=
+    goodPairFramed_pair_change F hF a b c d hA p q ⟨r, N, v, hMN, h⟩
+  exact ⟨r', N', v', hpk⟩
+
+/-- **True total residual-`Y` inversion weight under swap**: section reflection `8D`, stereo /
+cubic-fibre / residual chain `24`, point re-identification `10`.  Proved as the exponent of
+`toAwayT_residualYCoords_secondBlock_swap`. -/
+theorem residualY_swap_true_weight (D : ℕ) : 8 * D + 24 + 10 = 8 * D + 34 := by omega
+
+/-- **True total residual-disc inversion weight under swap**: the residual-`Y` weight times the
+degree `9` of `sndConicDiscriminant`.  At `D = 0` this is the `306` of the scale law. -/
+theorem residualY_swap_true_disc_weight (D : ℕ) : 9 * (8 * D + 34) = 72 * D + 306 := by ring
+
 /-! ### Status table (F-1f / F-1g)
 
 | piece | status |
@@ -3393,9 +4097,19 @@ theorem residualY_swap_disc_exponent : (3 : ℕ) * 9 = 27 := by norm_num
 | `specializeSecondCoordinates_secondBlockSubst` | **proved** |
 | `coordinateLineSpecializedConicPoly_secondBlock_swapFrame3` | **proved** |
 | ternary coeff under W is `reflect 3` | **proved** |
-| residual G4 under swap (weight 27 nonvanishing) | **open** (stereo→residual-Y chain) |
-| `hasGoodLineSectionPartial_swap_auto` | **open** (blocked on residual G4) |
-| `hasGoodLineSectionPartial_pair_change` | **open** (blocked on swap auto G4) |
+| `awayT` / `toAwayT` / `invTHom` / `awayTInvolution` | **proved** (`invTHom` injective) |
+| `toAwayT_liftPolyT_reflect` (reflection = inversion, weight `D`) | **proved** |
+| `swapMatrix3_mulVec_complementaryTangentDir` (sign law) | **proved** |
+| `map_specializedConicPullback_secondBlock_swap` (weight `3`) | **proved** |
+| `toAwayT_stereoFirstCoords_secondBlock_swap` (weight `D+3`) | **proved** |
+| `map_cubicFiberPullback_secondBlock_swap` (weight `2(D+3)`) | **proved** |
+| `swapMatrix3_mulVec_residualChain` (`W`-transport, sign `−1`) | **proved** |
+| `toAwayT_residualYCoords_secondBlock_swap` (weight `8D+34`) | **proved** |
+| `toAwayT_residualYCoordsOn_swap` (general line) | **proved** |
+| `toAwayT_residualConicDiscriminantOn_swap` (weight `72D+306`) | **proved** |
+| residual G4 under swap | **proved** (`ResidualAvoidsConicDiscriminantOn_swap`) |
+| `hasGoodLineSectionPartial_swap_auto` | **proved** |
+| `hasGoodLineSectionPartial_pair_change` | **proved** (F-1 endpoint) |
 
 **Recorded scale twists (true residual-Y / disc law).**
 Direction reparam clearing is polynomial `(α²+δ²t²)` vs `αδ(1+t²)` (γ-term `t(α²−δ²)(grad)₂`);
@@ -3413,9 +4127,25 @@ remains `residualY_scale_disc_exponent : 3*9=27`.
   law `eval (q,p) (swapSection D v) = reflect (2D+3) (eval (p,q) v)`.
 * Specialised-conic matrix under second-block `W`: **`reflect 3`** on coefficients
   (`ternaryQuadraticCoeff_coordinateLine_secondBlock_swap`).
-* Residual-disc direction inversion weight **`27 = 3·9`** (direction cube × disc degree).
-  True total residual-disc weight under swap may add section-dependent stereo terms
-  (`swapSection` / residual-Y scale-by-φ⁸); full residual-Y identity still open.
+* Residual-disc direction inversion weight **`27 = 3·9`** (direction cube × disc degree) is only
+  the direction contribution (`residualY_swap_disc_exponent`).
+
+**True swap law (proved).**  Route: no `reflectT` on `k[t,s]`; instead the localization
+`awayT k = k[t,s][t⁻¹]`, on which `t ↦ 1/t` is an honest ring hom `invTHom`, made injective by the
+involution `awayTInvolution` (`invTHom_injective`), and `toAwayT` injective by
+`IsLocalization.injective`.  Weights, all as genuine `t`-powers in `awayT k`:
+* section: `reflect D` becomes `t^D · invTHom` (`Polynomial.eval₂_reflect_mul_pow`);
+* specialised conic under `W`: `W·(1,t,0) = (t,1,0) = t·(1,1/t,0)`, second-block degree `3`,
+  so weight `3`; stereo is linear in the section and in the conic, giving stereo weight `D+3`;
+* cubic fibre is degree `2` in the stereo point: weight `2(D+3)`;
+* residual is degree `4` in the cubic: `8(D+3) = 8D+24`;
+* the cross product anticommutes with `W` (`det W = −1`, `Wᵀ = W`, `W² = 1`), contributing the
+  sign `−1` and **no** clearing polynomial — hence no isotropy hypothesis is needed;
+* point re-identification `(t,1,0) = t·(1,1/t,0)` contributes `10`
+  (`residualAmbientRep_smul_point_ctd`).
+Total residual-`Y`: `toAwayT(W ·ᵥ Y') = −t^{8D+34} · invTHom(Y)` (`residualY_swap_true_weight`);
+residual disc: `−t^{9(8D+34)} = −t^{72D+306}` (`residualY_swap_true_disc_weight`), matching the
+scale weight `306` at `D = 0`.
 G3 stays out (F-3).
 -/
 
