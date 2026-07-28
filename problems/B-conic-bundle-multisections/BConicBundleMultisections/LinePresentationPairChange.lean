@@ -35,25 +35,25 @@ public import Mathlib.Algebra.Polynomial.FieldDivision
 | scale | `C(α^9)·comp(C(δ/α)X)` | intended unit power 3 on Y | intended `α^{27}` (`3·9`) |
 | swap | `reflect 9` | via `k(t)[s]`, weight `27` | nonvanishing weight `27` |
 
-## F-1d residual-Y layer (status)
+## F-1e residual-Y / G4 layer (status)
 
 | piece | status |
 |---|---|
 | `shearAffineTwoHom` / `scaleAffineTwoHom` | **proved** (injective) |
-| `liftPolyT` / `liftTsenSection` equivariance | **proved** |
 | partial transports with adjusted `N'` | **proved** (G4 as hyp) |
-| `complementaryTangentDir_shear_cleared` | **proved** (Euler + chain rule; clearing `1+t²`) |
-| `residualAmbientRep_cleared_reparam` / `_shear_cleared` | **proved** (`e = 3` cubes) |
+| `complementaryTangentDir_shear_cleared` | **proved** |
+| `residualAmbientRep_shear_cleared` | **proved** (`e = 3`) |
 | stereo / cubic fibre shear equivariance | **proved** |
-| residual Y pointwise shear (`e = 3`) | open: frame bookkeeping after the cleared law |
-| residual Y scale unit `α³` ⇒ disc `α²⁷` | open (exponent recorded) |
+| `residualYCoordsOn_shear_cleared` | **proved** (frame bookkeeping, `e = 3`) |
+| automatic G4 **shear** | **proved** (`hasGoodLineSectionPartial_shear_auto`) |
+| residual Y scale unit `α³` ⇒ disc `α²⁷` | open |
 | swap residual nonvanishing weight 27 | open (k(t)[s] route) |
 | swap isotropy (`reverse` normalization) | open |
-| automatic G4 transport (all three moves) | open: blocked on residual-Y pointwise |
-| `hasGoodLineSectionPartial_pair_change` | open: blocked on automatic G4 |
+| automatic G4 scale/swap | open |
+| `hasGoodLineSectionPartial_pair_change` | open: blocked on scale/swap G4 + swap isotropy |
 
 **Proved exponent: `e = 3`.** Residual-disc clearing exponent: `9e = 27`.
-The rational twist is `α = (1+t²)/(1+(t+β)²)`; cleared form uses polynomial factors only.
+Shear Y-level law is **literal** after clearing (tangential `γ·p` absorbed at residualAmbientRep).
 G3 remains out of scope (phase F-3).
 -/
 
@@ -1176,22 +1176,625 @@ theorem aeval_scaleAffineTwoHom_sndConicDiscriminant
   | mul_X p i hp =>
       simp only [map_mul, aeval_X, hp]
 
-/-! ### Status table (F-1d in-module)
+/-! ### F-1e.1 — residual Y pointwise shear (frame bookkeeping)
+
+Route: reduce general `residualYCoordsOn` to coordinate-line `residualYCoords` via
+`residualYCoordsOn_eq_mulVec_residualYCoords_secondBlockSubst`, then apply the cleared
+`residualAmbientRep_shear_cleared` identity to the second-block shear of that equation. -/
+
+theorem shearFrame3_map_C (β : k) :
+    (shearFrame3 β).map (C : k →+* affineTwoRing k) =
+      shearMatrix3 (C β) := by
+  ext i j
+  fin_cases i <;> fin_cases j <;> simp [shearFrame3, shearMatrix3, Matrix.map_apply]
+
+theorem affineTwoLineFrame_shear (p q r : Fin 3 → k) (β : k) :
+    affineTwoLineFrame (fun i => p i + β * q i) q r =
+      affineTwoLineFrame p q r * (shearFrame3 β).map C := by
+  have h := congrArg (fun M : Matrix (Fin 3) (Fin 3) k =>
+      M.map (C : k →+* affineTwoRing k)) (lineFrame_shear p q r β)
+  simpa [affineTwoLineFrame, lineFrame_map, Matrix.map_mul] using h
+
+private theorem eval_map_comp {R S : Type u} [CommRing R] [CommRing S]
+    (φ : R →+* S) (p : Fin 3 → R) (G : MvPolynomial (Fin 3) R) :
+    eval (fun i => φ (p i)) (map φ G) = φ (eval p G) := by
+  rw [eval_map]
+  induction G using MvPolynomial.induction_on with
+  | C a => simp
+  | add f g hf hg => simp [hf, hg]
+  | mul_X f i hf => simp [hf]
+
+private theorem map_residualAmbientRep_ringHom {R S : Type u} [CommRing R] [CommRing S]
+    (φ : R →+* S) {σ : Type*} (p q : σ → R) (g : MvPolynomial (Fin 2) R) :
+    (fun i => φ (residualAmbientRep p q g i)) =
+      residualAmbientRep (fun j => φ (p j)) (fun j => φ (q j)) (map φ g) := by
+  funext i
+  simp [residualAmbientRep, residualBinaryRep, coeff_map]
+
+theorem stereoFirstCoords_secondBlock_shear
+    (β : k) (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (v : Fin 3 → Polynomial k) :
+    stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+        (fun i => (v i).comp (Polynomial.X + Polynomial.C β)) =
+      (fun i => shearAffineTwoHom β (stereoFirstCoords F v i)) := by
+  have hline :
+      lineFrame (fun i => (![1, 0, 0] : Fin 3 → k) i + β * (![0, 1, 0] : Fin 3 → k) i)
+          ![0, 1, 0] ![0, 0, 1] =
+        shearFrame3 β := by
+    simpa [lineFrame_coordinate, one_mul] using
+      lineFrame_shear (![1, 0, 0] : Fin 3 → k) ![0, 1, 0] ![0, 0, 1] β
+  calc
+    stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+        (fun i => (v i).comp (Polynomial.X + Polynomial.C β)) =
+      stereoFirstCoordsOn
+        (fun i => (![1, 0, 0] : Fin 3 → k) i + β * (![0, 1, 0] : Fin 3 → k) i)
+        ![0, 1, 0] F
+        (fun i => (v i).comp (Polynomial.X + Polynomial.C β)) := by
+      rw [← hline]
+      exact (stereoFirstCoordsOn_eq_stereoFirstCoords_secondBlockSubst
+        (fun i => (![1, 0, 0] : Fin 3 → k) i + β * (![0, 1, 0] : Fin 3 → k) i)
+        ![0, 1, 0] ![0, 0, 1] F _).symm
+    _ = (fun i => shearAffineTwoHom β
+          (stereoFirstCoordsOn ![1, 0, 0] ![0, 1, 0] F v i)) :=
+      (stereoFirstCoordsOn_shear ![1, 0, 0] ![0, 1, 0] β F v).symm
+    _ = (fun i => shearAffineTwoHom β (stereoFirstCoords F v i)) := by
+      simp only [stereoFirstCoordsOn_coordinate]
+
+/-- `φ` of the coordinate-line residual equals residualAmbientRep of the mapped data. -/
+theorem residualYCoords_map_shear
+    (β : k) (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (v : Fin 3 → Polynomial k) :
+    (fun i => shearAffineTwoHom β (residualYCoords F v i)) =
+      residualAmbientRep
+        (fun j => shearAffineTwoHom β (affineTwoCoordinateLineY k j))
+        (fun j => shearAffineTwoHom β
+          (complementaryTangentDir
+            (cubicFiberPullback F (stereoFirstCoords F v))
+            (affineTwoCoordinateLineY k) j))
+        (map (shearAffineTwoHom β)
+          (binaryLineRestriction (affineTwoCoordinateLineY k)
+            (complementaryTangentDir
+              (cubicFiberPullback F (stereoFirstCoords F v))
+              (affineTwoCoordinateLineY k))
+            (cubicFiberPullback F (stereoFirstCoords F v)))) :=
+  map_residualAmbientRep_ringHom (shearAffineTwoHom β)
+    (affineTwoCoordinateLineY k)
+    (complementaryTangentDir
+      (cubicFiberPullback F (stereoFirstCoords F v))
+      (affineTwoCoordinateLineY k))
+    (binaryLineRestriction (affineTwoCoordinateLineY k)
+      (complementaryTangentDir
+        (cubicFiberPullback F (stereoFirstCoords F v))
+        (affineTwoCoordinateLineY k))
+      (cubicFiberPullback F (stereoFirstCoords F v)))
+
+private theorem shear_affineTwoCoordinateLineY (β : k) :
+    (fun j => shearAffineTwoHom β (affineTwoCoordinateLineY k j)) =
+      shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k := by
+  funext j
+  fin_cases j <;>
+    simp [affineTwoCoordinateLineY, shearAffineTwoHom_C, shearAffineTwoHom_affineTwoCoord0,
+      shearMatrix3_mulVec_line]
+
+private theorem residualYCoords_eq_ambient
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (v : Fin 3 → Polynomial k) :
+    residualYCoords F v =
+      residualAmbientRep (affineTwoCoordinateLineY k)
+        (complementaryTangentDir
+          (cubicFiberPullback F (stereoFirstCoords F v))
+          (affineTwoCoordinateLineY k))
+        (binaryLineRestriction (affineTwoCoordinateLineY k)
+          (complementaryTangentDir
+            (cubicFiberPullback F (stereoFirstCoords F v))
+            (affineTwoCoordinateLineY k))
+          (cubicFiberPullback F (stereoFirstCoords F v))) :=
+  rfl
+
+/-- Cleared residual-`Y` law under second-block shear (coordinate-line residual). -/
+theorem residualYCoords_secondBlock_shear_cleared
+    (β : k) (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial k)
+    (hv : TernaryQuadraticPoly.eval (coordinateLineTernaryQuadraticPoly F) v = 0) :
+    (fun i => (1 + (affineTwoCoord0 k + C β) ^ 2) ^ 3 *
+        (shearMatrix3 (C β) *ᵥ
+          residualYCoords (secondBlockSubst (shearFrame3 β) F)
+            (fun j => (v j).comp (Polynomial.X + Polynomial.C β))) i) =
+      (fun i => (1 + affineTwoCoord0 k ^ 2) ^ 3 *
+        shearAffineTwoHom β (residualYCoords F v i)) := by
+  -- abbreviations used only in local `have`s (no `set`/`let` that block `rw`)
+  have hx' :
+      stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+          (fun j => (v j).comp (Polynomial.X + Polynomial.C β)) =
+        fun i => shearAffineTwoHom β (stereoFirstCoords F v i) :=
+    stereoFirstCoords_secondBlock_shear β F v
+  have hGmap :
+      map (shearAffineTwoHom β) (cubicFiberPullback F (stereoFirstCoords F v)) =
+        cubicFiberPullback F
+          (fun i => shearAffineTwoHom β (stereoFirstCoords F v i)) :=
+    map_cubicFiberPullback_shear F (stereoFirstCoords F v) β
+  have hG' :
+      cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+          (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+            (fun j => (v j).comp (Polynomial.X + Polynomial.C β))) =
+        (aeval (linearSubst 2 (shearMatrix3 (C β))) :
+          MvPolynomial (Fin 3) (affineTwoRing k) →ₐ[affineTwoRing k] _)
+          (map (shearAffineTwoHom β)
+            (cubicFiberPullback F (stereoFirstCoords F v))) := by
+    rw [cubicFiberPullback_secondBlockSubst, shearFrame3_map_C, hx', ← hGmap]
+  have hp0 :
+      eval (affineTwoCoordinateLineY k)
+        (cubicFiberPullback F (stereoFirstCoords F v)) = 0 :=
+    eval_cubicFiber_coordinateLine_of_stereo F hF v hv
+  have hpH :
+      eval ![1, affineTwoCoord0 k + C β, (0 : affineTwoRing k)]
+        (map (shearAffineTwoHom β)
+          (cubicFiberPullback F (stereoFirstCoords F v))) = 0 := by
+    have h1 :=
+      eval_map_comp (shearAffineTwoHom β) (affineTwoCoordinateLineY k)
+        (cubicFiberPullback F (stereoFirstCoords F v))
+    have h2 : (fun i => shearAffineTwoHom β (affineTwoCoordinateLineY k i)) =
+        ![1, affineTwoCoord0 k + C β, 0] := by
+      simpa [shear_affineTwoCoordinateLineY, shearMatrix3_mulVec_line,
+        affineTwoCoordinateLineY] using shear_affineTwoCoordinateLineY β
+    rw [← h2, h1, hp0, map_zero]
+  have hHhom :
+      (map (shearAffineTwoHom β)
+          (cubicFiberPullback F (stereoFirstCoords F v))).IsHomogeneous 3 :=
+    (cubicFiberPullback_isHomogeneous F hF _).map _
+  -- core cleared identity
+  have hcleared :=
+    residualAmbientRep_shear_cleared
+      (map (shearAffineTwoHom β) (cubicFiberPullback F (stereoFirstCoords F v)))
+      hHhom (C β) (affineTwoCoord0 k) hpH
+  -- residualYCoords after second-block shear
+  have hY' :
+      residualYCoords (secondBlockSubst (shearFrame3 β) F)
+          (fun j => (v j).comp (Polynomial.X + Polynomial.C β)) =
+        residualAmbientRep (affineTwoCoordinateLineY k)
+          (complementaryTangentDir
+            (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+              (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+                (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))
+            (affineTwoCoordinateLineY k))
+          (binaryLineRestriction (affineTwoCoordinateLineY k)
+            (complementaryTangentDir
+              (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+                (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+                  (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))
+              (affineTwoCoordinateLineY k))
+            (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+              (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+                (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))) :=
+    residualYCoords_eq_ambient _ _
+  have hbin :
+      binaryLineRestriction (affineTwoCoordinateLineY k)
+          (complementaryTangentDir
+            (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+              (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+                (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))
+            (affineTwoCoordinateLineY k))
+          (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+            (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+              (fun j => (v j).comp (Polynomial.X + Polynomial.C β)))) =
+        binaryLineRestriction
+          (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+          (shearMatrix3 (C β) *ᵥ complementaryTangentDir
+            (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+              (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+                (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))
+            (affineTwoCoordinateLineY k))
+          (map (shearAffineTwoHom β)
+            (cubicFiberPullback F (stereoFirstCoords F v))) := by
+    rw [hG', binaryLineRestriction_aeval_linearSubst]
+  have hmul :
+      shearMatrix3 (C β) *ᵥ residualYCoords (secondBlockSubst (shearFrame3 β) F)
+          (fun j => (v j).comp (Polynomial.X + Polynomial.C β)) =
+        residualAmbientRep
+          (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+          (shearMatrix3 (C β) *ᵥ complementaryTangentDir
+            (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+              (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+                (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))
+            (affineTwoCoordinateLineY k))
+          (binaryLineRestriction
+            (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+            (shearMatrix3 (C β) *ᵥ complementaryTangentDir
+              (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+                (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+                  (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))
+              (affineTwoCoordinateLineY k))
+            (map (shearAffineTwoHom β)
+              (cubicFiberPullback F (stereoFirstCoords F v)))) := by
+    rw [hY', mulVec_residualAmbientRep, hbin]
+  -- rewrite φ(residualYCoords) via mapped complementaryTangentDir
+  have hqφ :
+      (fun j => shearAffineTwoHom β
+          (complementaryTangentDir
+            (cubicFiberPullback F (stereoFirstCoords F v))
+            (affineTwoCoordinateLineY k) j)) =
+        complementaryTangentDir
+          (map (shearAffineTwoHom β)
+            (cubicFiberPullback F (stereoFirstCoords F v)))
+          (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k) := by
+    have h := map_complementaryTangentDir (shearAffineTwoHom β)
+      (cubicFiberPullback F (stereoFirstCoords F v)) (affineTwoCoordinateLineY k)
+    have h' : (fun j => shearAffineTwoHom β
+          (complementaryTangentDir
+            (cubicFiberPullback F (stereoFirstCoords F v))
+            (affineTwoCoordinateLineY k) j)) =
+        complementaryTangentDir
+          (map (shearAffineTwoHom β)
+            (cubicFiberPullback F (stereoFirstCoords F v)))
+          (fun j => shearAffineTwoHom β (affineTwoCoordinateLineY k j)) := by
+      simpa [Function.comp_def] using h
+    rwa [shear_affineTwoCoordinateLineY] at h'
+  have hbinφ :
+      map (shearAffineTwoHom β)
+          (binaryLineRestriction (affineTwoCoordinateLineY k)
+            (complementaryTangentDir
+              (cubicFiberPullback F (stereoFirstCoords F v))
+              (affineTwoCoordinateLineY k))
+            (cubicFiberPullback F (stereoFirstCoords F v))) =
+        binaryLineRestriction
+          (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+          (complementaryTangentDir
+            (map (shearAffineTwoHom β)
+              (cubicFiberPullback F (stereoFirstCoords F v)))
+            (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k))
+          (map (shearAffineTwoHom β)
+            (cubicFiberPullback F (stereoFirstCoords F v))) := by
+    have h := map_binaryLineRestriction (shearAffineTwoHom β)
+      (affineTwoCoordinateLineY k)
+      (complementaryTangentDir
+        (cubicFiberPullback F (stereoFirstCoords F v))
+        (affineTwoCoordinateLineY k))
+      (cubicFiberPullback F (stereoFirstCoords F v))
+    -- rewrite Function.comp points via the two equivariance lemmas
+    have hp :
+        (shearAffineTwoHom β ∘ affineTwoCoordinateLineY k) =
+          shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k := by
+      funext j; simpa [Function.comp_apply] using congrFun (shear_affineTwoCoordinateLineY β) j
+    have hq :
+        (shearAffineTwoHom β ∘ complementaryTangentDir
+            (cubicFiberPullback F (stereoFirstCoords F v))
+            (affineTwoCoordinateLineY k)) =
+          complementaryTangentDir
+            (map (shearAffineTwoHom β)
+              (cubicFiberPullback F (stereoFirstCoords F v)))
+            (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k) := by
+      funext j; simpa [Function.comp_apply] using congrFun hqφ j
+    rw [h, hp, hq]
+  have hYφ :
+      (fun i => shearAffineTwoHom β (residualYCoords F v i)) =
+        residualAmbientRep
+          (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+          (complementaryTangentDir
+            (map (shearAffineTwoHom β)
+              (cubicFiberPullback F (stereoFirstCoords F v)))
+            (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k))
+          (binaryLineRestriction
+            (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+            (complementaryTangentDir
+              (map (shearAffineTwoHom β)
+                (cubicFiberPullback F (stereoFirstCoords F v)))
+              (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k))
+            (map (shearAffineTwoHom β)
+              (cubicFiberPullback F (stereoFirstCoords F v)))) := by
+    rw [residualYCoords_map_shear, shear_affineTwoCoordinateLineY, hqφ, hbinφ]
+  -- connect G' ctd to H∘S ctd
+  have hctd :
+      complementaryTangentDir
+          (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+            (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+              (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))
+          (affineTwoCoordinateLineY k) =
+        complementaryTangentDir
+          ((aeval (linearSubst 2 (shearMatrix3 (C β))) :
+            MvPolynomial (Fin 3) (affineTwoRing k) →ₐ[affineTwoRing k] _)
+            (map (shearAffineTwoHom β)
+              (cubicFiberPullback F (stereoFirstCoords F v))))
+          (affineTwoCoordinateLineY k) := by
+    rw [hG']
+  -- restate hcleared with G' direction and affineTwoCoordinateLineY
+  have hcleared' :
+      (fun i => (1 + (affineTwoCoord0 k + C β) ^ 2) ^ 3 *
+          residualAmbientRep
+            (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+            (shearMatrix3 (C β) *ᵥ complementaryTangentDir
+              (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+                (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+                  (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))
+              (affineTwoCoordinateLineY k))
+            (binaryLineRestriction
+              (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+              (shearMatrix3 (C β) *ᵥ complementaryTangentDir
+                (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+                  (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+                    (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))
+                (affineTwoCoordinateLineY k))
+              (map (shearAffineTwoHom β)
+                (cubicFiberPullback F (stereoFirstCoords F v)))) i) =
+        (fun i => (1 + affineTwoCoord0 k ^ 2) ^ 3 *
+          residualAmbientRep
+            (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+            (complementaryTangentDir
+              (map (shearAffineTwoHom β)
+                (cubicFiberPullback F (stereoFirstCoords F v)))
+              (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k))
+            (binaryLineRestriction
+              (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+              (complementaryTangentDir
+                (map (shearAffineTwoHom β)
+                  (cubicFiberPullback F (stereoFirstCoords F v)))
+                (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k))
+              (map (shearAffineTwoHom β)
+                (cubicFiberPullback F (stereoFirstCoords F v)))) i) := by
+    convert hcleared using 1 <;>
+      (funext i; simp only [affineTwoCoordinateLineY, hctd, hG'])
+  funext i
+  calc
+    (1 + (affineTwoCoord0 k + C β) ^ 2) ^ 3 *
+        (shearMatrix3 (C β) *ᵥ residualYCoords (secondBlockSubst (shearFrame3 β) F)
+          (fun j => (v j).comp (Polynomial.X + Polynomial.C β))) i =
+      (1 + (affineTwoCoord0 k + C β) ^ 2) ^ 3 *
+        residualAmbientRep
+          (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+          (shearMatrix3 (C β) *ᵥ complementaryTangentDir
+            (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+              (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+                (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))
+            (affineTwoCoordinateLineY k))
+          (binaryLineRestriction
+            (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+            (shearMatrix3 (C β) *ᵥ complementaryTangentDir
+              (cubicFiberPullback (secondBlockSubst (shearFrame3 β) F)
+                (stereoFirstCoords (secondBlockSubst (shearFrame3 β) F)
+                  (fun j => (v j).comp (Polynomial.X + Polynomial.C β))))
+              (affineTwoCoordinateLineY k))
+            (map (shearAffineTwoHom β)
+              (cubicFiberPullback F (stereoFirstCoords F v)))) i := by
+      rw [← congrFun hmul i]
+    _ = (1 + affineTwoCoord0 k ^ 2) ^ 3 *
+        residualAmbientRep
+          (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+          (complementaryTangentDir
+            (map (shearAffineTwoHom β)
+              (cubicFiberPullback F (stereoFirstCoords F v)))
+            (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k))
+          (binaryLineRestriction
+            (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k)
+            (complementaryTangentDir
+              (map (shearAffineTwoHom β)
+                (cubicFiberPullback F (stereoFirstCoords F v)))
+              (shearMatrix3 (C β) *ᵥ affineTwoCoordinateLineY k))
+            (map (shearAffineTwoHom β)
+              (cubicFiberPullback F (stereoFirstCoords F v)))) i :=
+      congrFun hcleared' i
+    _ = (1 + affineTwoCoord0 k ^ 2) ^ 3 *
+        shearAffineTwoHom β (residualYCoords F v i) := by
+      rw [← congrFun hYφ i]
+
+private theorem shearAffineTwoHom_mulVec_C
+    (M : Matrix (Fin 3) (Fin 3) k) (β : k) (y : Fin 3 → affineTwoRing k) :
+    (fun i => shearAffineTwoHom β ((M.map (C : k →+* affineTwoRing k) *ᵥ y) i)) =
+      M.map C *ᵥ (fun i => shearAffineTwoHom β (y i)) := by
+  funext i
+  simp only [Matrix.mulVec, dotProduct, map_sum, map_mul, Matrix.map_apply, shearAffineTwoHom_C]
+
+/-- **Cleared residual-`Y` pointwise shear law** (exponent `e = 3`). -/
+theorem residualYCoordsOn_shear_cleared
+    (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k) (β : k)
+    (hMN : lineFrame p q r * N = 1)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial k)
+    (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p q F) v = 0) :
+    (fun i => (1 + (affineTwoCoord0 k + C β) ^ 2) ^ 3 *
+        residualYCoordsOn (fun j => p j + β * q j) q r (shearFrame3 (-β) * N) F
+          (fun j => (v j).comp (Polynomial.X + Polynomial.C β)) i) =
+      (fun i => (1 + affineTwoCoord0 k ^ 2) ^ 3 *
+        shearAffineTwoHom β (residualYCoordsOn p q r N F v i)) := by
+  have hMN' := lineFrame_mul_shear_inv p q r N β hMN
+  have hY := residualYCoordsOn_eq_mulVec_residualYCoords_secondBlockSubst p q r N hMN F v
+  have hY' := residualYCoordsOn_eq_mulVec_residualYCoords_secondBlockSubst
+    (fun j => p j + β * q j) q r (shearFrame3 (-β) * N) hMN' F
+    (fun j => (v j).comp (Polynomial.X + Polynomial.C β))
+  have hframe := lineFrame_shear p q r β
+  have hF' :
+      secondBlockSubst (lineFrame (fun j => p j + β * q j) q r) F =
+        secondBlockSubst (shearFrame3 β) (secondBlockSubst (lineFrame p q r) F) := by
+    rw [hframe, secondBlockSubst_secondBlockSubst]
+  have hQ :
+      coordinateLineTernaryQuadraticPoly (secondBlockSubst (lineFrame p q r) F) =
+        lineTernaryQuadraticPoly p q F := by
+    funext i j
+    simp only [coordinateLineTernaryQuadraticPoly, lineTernaryQuadraticPoly]
+    rw [← lineSpecializedConicPoly_eq_coordinateLine_secondBlockSubst p q r F]
+  have hv0 :
+      TernaryQuadraticPoly.eval
+        (coordinateLineTernaryQuadraticPoly (secondBlockSubst (lineFrame p q r) F)) v = 0 := by
+    rwa [hQ]
+  have hFtil : IsBidegree23 (secondBlockSubst (lineFrame p q r) F) :=
+    isBidegree23_secondBlockSubst _ hF
+  have hkey := residualYCoords_secondBlock_shear_cleared β
+    (secondBlockSubst (lineFrame p q r) F) hFtil v hv0
+  have haff :
+      affineTwoLineFrame (fun j => p j + β * q j) q r =
+        affineTwoLineFrame p q r * shearMatrix3 (C β) := by
+    rw [affineTwoLineFrame_shear, shearFrame3_map_C]
+  have hM : affineTwoLineFrame p q r = (lineFrame p q r).map C := by
+    simp only [affineTwoLineFrame, lineFrame_map]
+  -- Work componentwise from the two mulVec reductions and the key identity
+  funext i
+  -- rewrite LHS residualYCoordsOn via secondBlockSubst reduction
+  have hL0 := congrFun hY' i
+  have hR0 := congrFun hY i
+  -- frame product form
+  have hframe_aff :
+      affineTwoLineFrame (fun j => p j + β * q j) q r =
+        (lineFrame p q r).map C * shearMatrix3 (C β) := by
+    rw [haff, hM]
+  -- residualYCoords of sheared second-block
+  have hYsubst :
+      residualYCoords (secondBlockSubst (lineFrame (fun j => p j + β * q j) q r) F)
+          (fun j => (v j).comp (Polynomial.X + Polynomial.C β)) =
+        residualYCoords
+          (secondBlockSubst (shearFrame3 β) (secondBlockSubst (lineFrame p q r) F))
+          (fun j => (v j).comp (Polynomial.X + Polynomial.C β)) := by
+    rw [hF']
+  -- LHS becomes M *ᵥ (S *ᵥ Y')
+  have hL1 :
+      residualYCoordsOn (fun j => p j + β * q j) q r (shearFrame3 (-β) * N) F
+          (fun j => (v j).comp (Polynomial.X + Polynomial.C β)) i =
+        (((lineFrame p q r).map C) *ᵥ
+          (shearMatrix3 (C β) *ᵥ residualYCoords
+            (secondBlockSubst (shearFrame3 β) (secondBlockSubst (lineFrame p q r) F))
+            (fun j => (v j).comp (Polynomial.X + Polynomial.C β)))) i := by
+    rw [hL0]
+    -- (affineTwoLineFrame' *ᵥ residualYCoords (secondBlockSubst lineFrame' F) v') i
+    have h1 :
+        (affineTwoLineFrame (fun j => p j + β * q j) q r *ᵥ
+            residualYCoords (secondBlockSubst (lineFrame (fun j => p j + β * q j) q r) F)
+              (fun j => (v j).comp (Polynomial.X + Polynomial.C β))) i =
+          (((lineFrame p q r).map C * shearMatrix3 (C β)) *ᵥ
+            residualYCoords (secondBlockSubst (lineFrame (fun j => p j + β * q j) q r) F)
+              (fun j => (v j).comp (Polynomial.X + Polynomial.C β))) i := by
+      rw [hframe_aff]
+    rw [h1]
+    have h2 :
+        (((lineFrame p q r).map C * shearMatrix3 (C β)) *ᵥ
+            residualYCoords (secondBlockSubst (lineFrame (fun j => p j + β * q j) q r) F)
+              (fun j => (v j).comp (Polynomial.X + Polynomial.C β))) i =
+          (((lineFrame p q r).map C * shearMatrix3 (C β)) *ᵥ
+            residualYCoords
+              (secondBlockSubst (shearFrame3 β) (secondBlockSubst (lineFrame p q r) F))
+              (fun j => (v j).comp (Polynomial.X + Polynomial.C β))) i := by
+      rw [hYsubst]
+    rw [h2, Matrix.mulVec_mulVec]
+  -- RHS becomes M *ᵥ (φ ∘ Y)
+  have hR1 :
+      shearAffineTwoHom β (residualYCoordsOn p q r N F v i) =
+        (((lineFrame p q r).map C) *ᵥ
+          (fun j => shearAffineTwoHom β
+            (residualYCoords (secondBlockSubst (lineFrame p q r) F) v j))) i := by
+    rw [hR0, hM]
+    exact congrFun
+      (shearAffineTwoHom_mulVec_C (lineFrame p q r) β
+        (residualYCoords (secondBlockSubst (lineFrame p q r) F) v)) i
+  rw [hL1, hR1]
+  -- factor scalars through mulVec at index i
+  have hfac (c : affineTwoRing k) (y : Fin 3 → affineTwoRing k) :
+      c * ((((lineFrame p q r).map C) *ᵥ y) i) =
+        (((lineFrame p q r).map C) *ᵥ (fun b => c * y b)) i := by
+    simp only [Matrix.mulVec, dotProduct, Finset.mul_sum]
+    refine Finset.sum_congr rfl fun b _ => ?_
+    ring
+  -- LHS: c³ * (M *ᵥ (S *ᵥ Y')) i = (M *ᵥ (c³ • (S *ᵥ Y'))) i
+  rw [hfac ( (1 + (affineTwoCoord0 k + C β) ^ 2) ^ 3 )
+      (shearMatrix3 (C β) *ᵥ residualYCoords
+        (secondBlockSubst (shearFrame3 β) (secondBlockSubst (lineFrame p q r) F))
+        (fun j => (v j).comp (Polynomial.X + Polynomial.C β)))]
+  -- RHS: d³ * (M *ᵥ (φ ∘ Y)) i = (M *ᵥ (d³ • (φ ∘ Y))) i
+  rw [hfac ((1 + affineTwoCoord0 k ^ 2) ^ 3)
+      (fun j => shearAffineTwoHom β
+        (residualYCoords (secondBlockSubst (lineFrame p q r) F) v j))]
+  -- now vectors of scaled coords are equal by hkey
+  have hkey' :
+      (fun b => (1 + (affineTwoCoord0 k + C β) ^ 2) ^ 3 *
+          (shearMatrix3 (C β) *ᵥ residualYCoords
+            (secondBlockSubst (shearFrame3 β) (secondBlockSubst (lineFrame p q r) F))
+            (fun j => (v j).comp (Polynomial.X + Polynomial.C β))) b) =
+        fun b => (1 + affineTwoCoord0 k ^ 2) ^ 3 *
+          shearAffineTwoHom β
+            (residualYCoords (secondBlockSubst (lineFrame p q r) F) v b) := hkey
+  simp only [hkey']
+
+/-! ### F-1e.2 — automatic G4 (shear) -/
+
+theorem residualConicDiscriminantOn_shear_cleared
+    (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k) (β : k)
+    (hMN : lineFrame p q r * N = 1)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial k)
+    (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p q F) v = 0) :
+    (1 + (affineTwoCoord0 k + C β) ^ 2) ^ 27 *
+        residualConicDiscriminantOn (fun j => p j + β * q j) q r
+          (shearFrame3 (-β) * N) F
+          (fun j => (v j).comp (Polynomial.X + Polynomial.C β)) =
+      (1 + affineTwoCoord0 k ^ 2) ^ 27 *
+        shearAffineTwoHom β (residualConicDiscriminantOn p q r N F v) := by
+  have hY := residualYCoordsOn_shear_cleared p q r N β hMN F hF v hv
+  have hsmul (a : affineTwoRing k) (y : Fin 3 → affineTwoRing k) :
+      aeval (fun i => a ^ 3 * y i) (sndConicDiscriminant F) =
+        a ^ 27 * aeval y (sndConicDiscriminant F) := by
+    rw [aeval_sndConicDiscriminant_smul F hF (a ^ 3) y, ← pow_mul]
+  set c : affineTwoRing k := 1 + (affineTwoCoord0 k + C β) ^ 2
+  set d : affineTwoRing k := 1 + affineTwoCoord0 k ^ 2
+  set Y := residualYCoordsOn p q r N F v
+  set Y' := residualYCoordsOn (fun j => p j + β * q j) q r (shearFrame3 (-β) * N) F
+    (fun j => (v j).comp (Polynomial.X + Polynomial.C β))
+  have hY' : (fun i => c ^ 3 * Y' i) = fun i => d ^ 3 * shearAffineTwoHom β (Y i) := by
+    simpa [c, d, Y, Y'] using hY
+  have haeval :
+      aeval (fun i => c ^ 3 * Y' i) (sndConicDiscriminant F) =
+        aeval (fun i => d ^ 3 * shearAffineTwoHom β (Y i)) (sndConicDiscriminant F) := by
+    simp only [hY']
+  simp only [residualConicDiscriminantOn]
+  calc
+    c ^ 27 * aeval Y' (sndConicDiscriminant F) =
+        aeval (fun i => c ^ 3 * Y' i) (sndConicDiscriminant F) := (hsmul c Y').symm
+    _ = aeval (fun i => d ^ 3 * shearAffineTwoHom β (Y i)) (sndConicDiscriminant F) := haeval
+    _ = d ^ 27 * aeval (fun i => shearAffineTwoHom β (Y i)) (sndConicDiscriminant F) :=
+      hsmul d _
+    _ = d ^ 27 * shearAffineTwoHom β (aeval Y (sndConicDiscriminant F)) := by
+      rw [aeval_shearAffineTwoHom_sndConicDiscriminant]
+
+theorem ResidualAvoidsConicDiscriminantOn_shear
+    (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k) (β : k)
+    (hMN : lineFrame p q r * N = 1)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (v : Fin 3 → Polynomial k)
+    (hv : TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p q F) v = 0)
+    (h : ResidualAvoidsConicDiscriminantOn p q r N F v) :
+    ResidualAvoidsConicDiscriminantOn (fun j => p j + β * q j) q r
+      (shearFrame3 (-β) * N) F
+      (fun j => (v j).comp (Polynomial.X + Polynomial.C β)) := by
+  intro h0
+  apply h
+  have hcleared := residualConicDiscriminantOn_shear_cleared p q r N β hMN F hF v hv
+  rw [h0, mul_zero] at hcleared
+  have hd : (1 + affineTwoCoord0 k ^ 2 : affineTwoRing k) ≠ 0 := one_add_t_sq_ne_zero
+  have hφ0 : shearAffineTwoHom β (residualConicDiscriminantOn p q r N F v) = 0 :=
+    (mul_eq_zero.mp hcleared.symm).resolve_left (pow_ne_zero 27 hd)
+  exact shearAffineTwoHom_injective β hφ0
+
+/-- Shear transport of the partial package with adjusted inverse — G4 automatic. -/
+theorem hasGoodLineSectionPartial_shear_auto
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k) (β : k)
+    (hMN : lineFrame p q r * N = 1)
+    (v : Fin 3 → Polynomial k)
+    (h : HasGoodLineSectionPartial F p q r N v) :
+    HasGoodLineSectionPartial F (fun i => p i + β * q i) q r (shearFrame3 (-β) * N)
+      (fun i => (v i).comp (Polynomial.X + Polynomial.C β)) := by
+  rcases h with ⟨hdisc, hv0, hviso, hG4⟩
+  exact hasGoodLineSectionPartial_shear_of_residual F p q r N β v
+    ⟨hdisc, hv0, hviso, hG4⟩
+    (ResidualAvoidsConicDiscriminantOn_shear p q r N β hMN F hF v hviso hG4)
+
+/-! ### Status table (F-1e partial)
 
 | piece | status |
 |---|---|
-| `complementaryTangentDir_shear_cleared` | **proved** (Euler + chain rule; clearing `1+t²`) |
-| `residualAmbientRep_cleared_reparam` | **proved** (`e = 3` cubes) |
-| `residualAmbientRep_shear_cleared` | **proved** |
-| stereo / cubic shear equivariance | **proved** |
-| residual Y pointwise shear (`e = 3`) | open: frame-transport bookkeeping after the cleared law |
-| automatic G4 shear/scale/swap | open: blocked on residual-Y pointwise |
-| swap isotropy | open |
-| `hasGoodLineSectionPartial_pair_change` | open: blocked on automatic G4 |
+| `residualYCoordsOn_shear_cleared` | **proved** (`e = 3`, frame bookkeeping) |
+| `residualConicDiscriminantOn_shear_cleared` | **proved** (disc exponent 27) |
+| `ResidualAvoidsConicDiscriminantOn_shear` | **proved** (automatic G4 shear) |
+| `hasGoodLineSectionPartial_shear_auto` | **proved** (G4 hyp discharged for shear) |
+| automatic G4 scale | open (pointwise unit power α³ / disc α²⁷) |
+| automatic G4 swap | open (k(t)[s] route, weight 27) |
+| swap isotropy (`reverse`) | open (binary `reflect 3` path prepared by disc laws) |
+| `hasGoodLineSectionPartial_pair_change` | open (blocked on scale/swap G4 + swap isotropy) |
 
-Proved exponent: **`e = 3`**. Residual-disc clearing exponent: **`9e = 27`**.
-The rational twist is `α = (1+t²)/(1+(t+β)²)`; cleared polynomial form uses factors
-`(1+(t+β)²)^e` and `(1+t²)^e` with no rational functions.
+G3 stays out (F-3). Endpoint shape is ready once the three elementary auto transports land.
 -/
 
 end
