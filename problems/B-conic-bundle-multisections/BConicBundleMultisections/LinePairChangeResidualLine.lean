@@ -695,7 +695,41 @@ theorem residualLineNonconstantOn_pair_change
 
 /-! ### The three generator laws
 
-Recorded separately: they are the shape in which the transports compose with F-1's. -/
+Recorded separately: they are the shape in which the transports compose with F-1's, and they make
+the three units explicit.  `det` is `1`, `αδ` and `−1`, so the units are `1`, `(αδ)^6` and `1`:
+only the scale move twists the residual-line coefficient triple at all. -/
+
+/-- **Shear coefficient law**: unit `1^6 = 1`, no twist whatsoever. -/
+theorem residualLineCoeffOn_shear
+    (M N N' : Matrix (Fin 3) (Fin 3) k) (β : k)
+    (hEN : shearFrame3 β * N' = N)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (a : Fin 3) :
+    residualLineCoeffOn (M * shearFrame3 β) N' F a = residualLineCoeffOn M N F a := by
+  rw [shearFrame3_eq_gl2] at hEN ⊢
+  rw [residualLineCoeffOn_gl2 M N N' 1 0 β 1 hEN F hF a]
+  norm_num
+
+/-- **Scale coefficient law**: unit `(αδ)^6` — the only generator with a nontrivial twist. -/
+theorem residualLineCoeffOn_scale
+    (M N N' : Matrix (Fin 3) (Fin 3) k) (α δ : k)
+    (hEN : scaleFrame3 α δ * N' = N)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (a : Fin 3) :
+    residualLineCoeffOn (M * scaleFrame3 α δ) N' F a =
+      C ((α * δ) ^ 6) * residualLineCoeffOn M N F a := by
+  rw [scaleFrame3_eq_gl2] at hEN ⊢
+  rw [residualLineCoeffOn_gl2 M N N' α 0 0 δ hEN F hF a]
+  norm_num
+
+/-- **Swap coefficient law**: unit `(−1)^6 = 1`; the block exchanges `(1,0,0)` and `(0,1,0)`, and
+the exchange of `q_U` with `q_V` is undone by the inverse substitution. -/
+theorem residualLineCoeffOn_swap
+    (M N N' : Matrix (Fin 3) (Fin 3) k)
+    (hEN : swapFrame3 * N' = N)
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F) (a : Fin 3) :
+    residualLineCoeffOn (M * swapFrame3) N' F a = residualLineCoeffOn M N F a := by
+  rw [swapFrame3_eq_gl2] at hEN ⊢
+  rw [residualLineCoeffOn_gl2 M N N' 0 1 1 0 hEN F hF a]
+  norm_num
 
 /-- **Shear** `(p,q) ↦ (p + β•q, q)`: block `!![1,0,0; β,1,0; 0,0,1]`, `det = 1`, unit `1`. -/
 theorem residualLineNonconstantOn_shear
