@@ -765,6 +765,66 @@ per-generator. No division anywhere, so the characteristic is unconstrained.
 
 The F campaign is complete: the good-line package depends on the *line*, not on its presentation.
 
+## Intrinsic hypothesis (phase F-4) — closed 28 July 2026
+
+F-1…F-3 proved the invariances; F-4 spends them. `IntrinsicGoodLine.lean` states the hypothesis
+of the closure-free theorem with every gauge choice removed:
+
+```lean
+structure GoodLineSection (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) where
+  L : MultisectionLine k
+  v : Fin 3 → Polynomial k
+  good : ∃ (r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k),
+    Standard.HasGoodLineWithSection F L.base L.dir r N v
+
+theorem smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection''
+    (k : Type u) [Field k] [NeZero (2 : k)] [NeZero (3 : k)] [Infinite k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (Bidegree23ZeroLocus.toSpec k F)]
+    (h : Nonempty (GoodLineSection F)) :
+    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F)
+```
+
+plus `…_of_goodLineSection''_of_isAlgClosed` (same hypothesis, `[IsAlgClosed k]` in place of
+`[Infinite k]`) and `nonempty_goodLineSection_of_isAlgClosed`, which supplies the hypothesis over a
+closed field and so keeps the statement non-vacuous. Both theorems are in `MainTheoremGuard`.
+
+**The frame and the completion are gauge.** `(r, N)` sits under an existential inside the
+structure, and F-2 is what licenses that: no choice of chart is recorded and none can be recovered
+from the bundle. The choice of spanning pair is gauge too —
+
+* `span_pair_eq_iff_exists_gl2`: independent pairs span the same subspace **iff** an invertible
+  `2×2` matrix relates them (membership gives the coefficients; independence of the target pair
+  gives `ad − bc ≠ 0`, since otherwise all four vanish and `p' = 0`);
+* `isGoodMultisectionLine_congr_span` / `goodLineSection_congr_span`: goodness transports along
+  any such change, by F-3's `hasGoodLineWithSection_pair_change`. The **section moves** — F-1's
+  swap normalisation replaces `v` — so the conclusion is `∃ v'`, and that is the honest form.
+
+**The bridge is real.** `Standard.HasGoodLineWithSection` does not list `LinearIndependent k ![p,q]`
+as a conjunct, so the dictionary `goodLineSection_iff` could have failed in the `←` direction. It
+does not: the frame identity `lineFrame p q r * N = 1` makes a square matrix over a field a unit,
+hence its three columns `p, q, r` independent, hence the pair independent. The repo already had
+this as `Standard.linearIndependent_pair_of_lineFrame_right_inverse`, but a file-level
+`variable [Infinite K]` in `Standard/G3FrameIncidenceSelection.lean` attaches a spurious
+infiniteness binder to it, so F-4 restates it as
+`linearIndependent_pair_of_lineFrame_mul_eq_one` — the statement is pure linear algebra over an
+arbitrary field and now says so.
+
+**What is still not intrinsic.** Two layers remain parameterised, and neither is claimed:
+
+* the **section** is a polynomial triple `v : Fin 3 → Polynomial k`, not a scheme-theoretic
+  multisection of the conic bundle;
+* the **line** is a `MultisectionLine k` — a chosen affine parameterisation `t ↦ base + t·dir` —
+  not a point of the dual plane `(ℙ²)ˇ`. `span_pair_eq_iff_exists_gl2` and
+  `isGoodMultisectionLine_congr_span` are exactly the statement that the parameterisation is
+  invisible to goodness, so the quotient by it is *available*; taking it is a separate campaign,
+  as is the multisection layer.
+
+Additive throughout: `Statement.lean`, `Solution.lean` and `comparator/` byte-unchanged,
+`MainTheoremGuard` gained one import and two `#guard_no_sorry` lines and nothing else. All F-4
+endpoints `[propext, Classical.choice, Quot.sound]`; sorry census 2.
+
 ## Reproduction commands
 
 ```bash
