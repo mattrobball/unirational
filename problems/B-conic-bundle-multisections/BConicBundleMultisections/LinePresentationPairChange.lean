@@ -3364,9 +3364,13 @@ theorem ternaryQuadraticCoeff_coordinateLine_secondBlock_swap
   rw [hc]
   exact h
 
-/-- Residual-disc direction inversion weight under swap: `e = 3` times disc degree 9.
-True total residual-disc inversion weight may include section-dependent summands
-(`swapSection` / stereo); this records the pure direction contribution. -/
+/-- Historical bookkeeping: the shear/scale pattern `e = 3` times disc degree `9`.
+
+**Superseded by the proved swap law below.**  Under swap the direction twist is a pure sign
+(`swapMatrix3_mulVec_complementaryTangentDir`), so no `e = 3` direction clearing occurs at all;
+the true residual-disc inversion weight is `9·(8D+34) = 72D+306`
+(`residualY_swap_true_disc_weight`).  This arithmetic identity is kept only because it is quoted
+by the earlier status tables. -/
 theorem residualY_swap_disc_exponent : (3 : ℕ) * 9 = 27 := by norm_num
 
 /-! ### F-1g.3 — the inversion `t ↦ 1/t` on a localization of `k[t,s]` -/
@@ -4127,8 +4131,8 @@ remains `residualY_scale_disc_exponent : 3*9=27`.
   law `eval (q,p) (swapSection D v) = reflect (2D+3) (eval (p,q) v)`.
 * Specialised-conic matrix under second-block `W`: **`reflect 3`** on coefficients
   (`ternaryQuadraticCoeff_coordinateLine_secondBlock_swap`).
-* Residual-disc direction inversion weight **`27 = 3·9`** (direction cube × disc degree) is only
-  the direction contribution (`residualY_swap_disc_exponent`).
+* `residualY_swap_disc_exponent : 3·9 = 27` was a guess extrapolated from shear/scale; it is
+  **superseded** — under swap there is no direction clearing at all, only a sign.
 
 **True swap law (proved).**  Route: no `reflectT` on `k[t,s]`; instead the localization
 `awayT k = k[t,s][t⁻¹]`, on which `t ↦ 1/t` is an honest ring hom `invTHom`, made injective by the
