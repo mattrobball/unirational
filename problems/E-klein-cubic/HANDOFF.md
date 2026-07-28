@@ -528,6 +528,9 @@ python3 tmp/kls_first_jet_two_fiber/verify_manifest.py
 python3 tmp/kls_first_jet_two_fiber/verify.py --ledger-only
 python3 tmp/kls_first_jet_two_fiber/verify_manifest_p5.py
 python3 tmp/kls_first_jet_two_fiber/verify_p5.py --ledger-only
+python3 -u tmp/kls_first_jet_three_fiber/verify_combined_p8.py
+python3 -u tmp/kls_structural_audit/verify.py
+python3 tmp/kls_full_support_p9_msolve/verify_p9.py --ledger-only
 python3 tmp/relative_kls_chart/verify.py
 python3 tmp/relative_kls_chart/analyze_exceptional.py
 python3 tmp/relative_kls_chart/analyze_top_ideal.py
@@ -926,3 +929,65 @@ special points of the eigenspace configuration (the `D₈`-analogue), and
 whether two involution loci through such a point carry distinct forced
 values.  All five are `wp1_fixed_loci.py`-style computations; F's script
 is the template.
+
+## 2026-07-28 — Generalizing the F-engine after the first exact check (director)
+
+The worker's finding is confirmed and sharpened.  For an involution `t`,
+`X^t = E_t ⊔ L_t` with `E_t = X ∩ ℙ(E₊(t))` a smooth genus-one curve and
+`L_t = ℙ(E₋(t))` a LINE CONTAINED IN X — so the F-input "no rational
+curve in the fixed locus" fails.  Worse, and new: for `K = ⟨z,s⟩ ≅ V₄`
+(the 2-Sylow), the trace-1 involution character forces the joint
+`K`-decomposition of `W` to have dimensions **(2,1,1,1)** across the sign
+classes `(++, +−, −+, −−)` **(verify exactly — derived from
+χ(involution) = 1, consistent with the worker's plane/line split)**.
+Hence:
+
+- `L_z ∩ L_s = ℙ(W^{−−})`, and cyclically — the three lines form a
+  **triangle inside X** with vertices the three mixed joint eigenpoints;
+- each `E_t` passes through the vertex opposite its line
+  (`ℙ(W^{+−}) ∈ E_z ∩ L_s ∩ L_{zs}` etc.);
+- the `V₄`-fixed configuration is therefore CONNECTED, so bare
+  constancy-propagation can never reach an F-style contradiction, even
+  where constancy holds.
+
+### The generalized engine to build
+
+Replace "every path component maps constantly" by the corrected local
+dichotomy and track the richer state:
+
+1. **Dichotomy.**  A rational path component `C` pointwise-fixed by
+   `t_C` maps into `E_{t_C} ⊔ L_{t_C}`: either CONSTANT (elliptic side)
+   or into the line `L_{t_C}` — possibly nonconstant.
+2. **Rigidity on the line.**  `C` is `K`-stable and `f` equivariant, so a
+   nonconstant image in `L_{t_C}` is a `K`-stable irreducible curve in a
+   line — the line itself; the residual action of `K/⟨t_C⟩ ≅ C₂` on
+   `L_{t_C}` has exactly two fixed points, and they are two vertices of
+   the triangle **(verify: the mixed eigenpoints on that line)**.
+3. **Transition system.**  Adjacency of path components now propagates a
+   FINITE state — a constant value, or a line with marked vertices —
+   through the configuration (triangle ∪ three elliptic curves).  The
+   obstruction target: show the two forced endpoint values (the E-analogs
+   of F's `a_q`, `b_s`, to be computed) are NOT connectable in this
+   finite transition system, with degree/parity bookkeeping along
+   nonconstant components as the second invariant if pure reachability
+   is not enough.
+4. **Dimension caveat unchanged:** run it on a `K`-stable rational
+   surface slice where both forced values live; the ℙ⁴ resolution issue
+   is unchanged from the original note.
+
+### Cheap exact next checks (all `wp1`-style, ranked)
+
+1. The `(2,1,1,1)` joint decomposition and the triangle, exactly.
+2. The two residual-fixed points on each `L_t` = which triangle vertices.
+3. The incidences `E_t ∩ L_{t'}` for all pairs in one `V₄`, exactly.
+4. The E-analog of F's §2: what values are FORCED on involution-fixed
+   loci by a hypothetical equivariant `p` (parity trick on `E₋(t)`,
+   noting `dim E₋ = 2` now, so "constancy on `L_t`" itself needs the
+   §2-style recomputation, not citation).
+5. Whether the triangle vertices are smooth points of `X` and their
+   stabilizers (the `D₈`-analog data for forced basepoints).
+
+If 4 shows the forced values already land on triangle vertices, the
+transition system may CLOSE rather than obstruct — that outcome would be
+evidence toward a POSITIVE construction attempt along the fixed
+configuration instead, and is worth knowing either way.
