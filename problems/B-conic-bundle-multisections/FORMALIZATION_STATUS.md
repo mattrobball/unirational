@@ -722,7 +722,48 @@ uniform `reflect D` normalization (per-coordinate `reverse` changes the projecti
 `e = 3` bookkeeping — swap G4 runs through the localization `k[t,s][t⁻¹]` at inversion weight
 `72D + 306`, matching the scale route's independently derived weights at `D = 0`. Executed by
 Grok Build (five runs) and Claude Opus 5 (final slice), each verified and committed by the
-director session. Remaining in the F campaign: frame-completion invariance (F-2) and G3 (F-3).
+director session.
+
+## Frame-completion invariance (phase F-2) — closed
+
+The completion block `E = !![1,0,e; 0,1,f; 0,0,g]` (`r ↦ e•p + f•q + g•r`, `g ≠ 0`) fixes `L`
+*pointwise*, so nothing in the residual data mixes: the transversal direction reparametrises with
+no clearing factor, residual `Y` picks up `C (g³)`, the residual discriminant `C (g²⁷)`, and G3
+picks up the pure scalar `C (g²)`. Endpoints `hasGoodLineSectionPartial_completion_change`
+(`LineCompletionChange.lean`) and `residualLineNonconstantOn_completion_change`
+(`LineCompletionResidualLine.lean`).
+
+## G3 under the pair change (phase F-3) — closed 28 July 2026
+
+The last invariance. `LinePairChangeResidualLine.lean` proves `ResidualLineNonconstantOn` invariant
+under every invertible change of the spanning pair, and combines it with F-1 into
+`hasGoodLineWithSection_pair_change`: the **complete** good-line package (frame identity, G3, line
+discriminant, nonzero isotropic section, G4) survives an arbitrary `GL₂` pair change.
+
+Unlike F-2's completion, the `GL₂` block *moves* the points of `L`, and the plane-level residual
+line genuinely mixes. Writing `E` for the block and `E₂` for its `2×2` part,
+
+```
+residualLinearForm (H ∘ E) = C ((det E₂)^6) · (residualLinearForm H) ∘ E,
+```
+
+so the coefficient triple transforms by `q ↦ (det E₂)^6 · Eᵀ q`: the **dual** action, times the
+classical weight-`6` unit of a binary-cubic invariant (`binaryCubicDiscr` and the `(3,2)`-resultant
+`polarResultant` both carry `det^6`, and `polarResultant + Δ·H = W²·q_H` forces the same weight on
+`q_H`). The mixing is `x`-**independent** — the intrinsic claim has no hidden content. Carried back
+by `E⁻¹`, as `residualEquationOn` does, the `Eᵀ` cancels and only the unit survives:
+
+```
+residualEquationOn (M*E) N' F = C ((a*d − b*c)^6) · residualEquationOn M N F,   E * N' = N,
+```
+
+so rank `≤ 1` of the triple — the definition of `ResidualLineConstantOn` — transports both ways.
+The two scalar identities behind the law hold for a **general** `2×2` block and are `ring`
+identities inside the default heartbeat budget, so F-3 needed no shear/scale/swap split; the three
+generator laws (units `1`, `(αδ)^6`, `1`) are recorded as corollaries because F-1's transports are
+per-generator. No division anywhere, so the characteristic is unconstrained.
+
+The F campaign is complete: the good-line package depends on the *line*, not on its presentation.
 
 ## Reproduction commands
 
