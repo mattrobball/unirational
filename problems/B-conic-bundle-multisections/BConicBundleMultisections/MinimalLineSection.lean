@@ -36,9 +36,9 @@ surface.  Polar nonvanishing is derived from `v 2 ≠ 0` + disc.
 * **D″1 done:** residual-disc content along a quadratic section pencil is a finite family of
   coefficient univariates (`exists_residualDiscContent_of_sectionPencil`), via universal
   `Φ ∈ (affineTwoRing k)[S]` and coefficient extraction.  Nontriviality from G4 at `s = 0`.
-* **Open for D″2:** clear `stereoLineParamPoly` over `RatFunc k` to a pencil through `v`, joint
-  excision with third-coordinate content, then `…_of_lineSection'`.  The `v 2 ≠ 0` path without
-  `Infinite` is `…_of_lineSection_noInfinite`.
+* **D‴:** stereo→pencil (`exists_sectionPencil_of_HasGoodLineWithSection`), double excision over
+  infinite fields, `…_of_lineSection'` (requires `[Infinite k]` on the hard branch; the `v 2 ≠ 0`
+  path remains Infinite-free as `…_of_lineSection_noInfinite`), closed-field corollary.
 -/
 
 @[expose] public section
@@ -930,22 +930,355 @@ theorem ResidualAvoidsConicDiscriminantOn_of_content_eval
   exact hm
     ((residualConicDiscriminantOn_sectionPencil_eq_zero_iff p₀ q₀ r N F hF α β γ s).mp h0 m)
 
-/-
-### Status note (Goal D″)
+/-! ### D‴ — stereo→pencil, double excision, assembly
 
-D″1 core package (above): residual-disc content along a quadratic section pencil is a finite
-family of coefficient univariates, nontrivial when G4 holds at `s = 0`.  Route chosen:
-`Polynomial (affineTwoRing k)` universal residual disc `Φ`, then coefficient univariates over `k`
-(composes with `exists_eval_ne_zero_of_finite_ne_zero`).
-
-Still required for D″2 (`…_of_lineSection'`, no `Infinite`, no `v 2 ≠ 0`):
-1. clear denominators of `stereoLineParamPoly` over `RatFunc k` to a pencil `α,β,γ` with
-   `fam(0)` a nonzero multiple of the given section (G4 at 0 by degree-8 scaling);
-2. joint excision of third-coordinate content and residual-disc content over `RatFunc k`;
-3. assemble the upgraded actual G3G4 section and repoint the closed-field corollary.
-
-Until (1–3) compile, the final theorem is not claimed.
+Clear `stereoLineParamPoly` over `RatFunc k` once to a polynomial pencil through a nonzero
+polynomial multiple of the given section.  Jointly excise residual-disc content and
+third-coordinate content over infinite fields (constant parameter).  The easy branch
+`v 2 ≠ 0` remains Infinite-free.
 -/
+
+open Standard
+
+theorem eval_eq_quad_coeffs {R : Type*} [CommRing R] (f : Polynomial R)
+    (hf : f.natDegree ≤ 2) (s : R) :
+    Polynomial.eval s f =
+      Polynomial.coeff f 0 + s * Polynomial.coeff f 1 + s ^ 2 * Polynomial.coeff f 2 := by
+  have hexpand := Polynomial.eval_eq_sum_range' (p := f) (n := 3) (by omega)
+  simp only [hexpand, Finset.sum_range_succ, Finset.sum_range_zero, zero_add, pow_zero, pow_one,
+    pow_two]
+  ring
+
+theorem exists_sectionPencil_of_HasGoodLineWithSection
+    [NeZero (2 : k)]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (v : Fin 3 → Polynomial k)
+    (h : HasGoodLineWithSection F p q r N v) :
+    ∃ (α β γ : Fin 3 → Polynomial k) (φ : Polynomial k),
+      φ ≠ 0 ∧
+        (∀ i, α i = φ * v i) ∧
+          (∀ s : k,
+            TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p q F)
+              (sectionPencil α β γ s) = 0) ∧
+            ResidualAvoidsConicDiscriminantOn p q r N F (sectionPencil α β γ 0) ∧
+              (α 2 ≠ 0 ∨ β 2 ≠ 0 ∨ γ 2 ≠ 0) := by
+  classical
+  rcases h with ⟨_hMN, _hG3, hdisc, hv0, hviso, hG4⟩
+  set p_rf : Fin 3 → RatFunc k := fun i => algebraMap (Polynomial k) (RatFunc k) (v i)
+  have hp0 : p_rf ≠ 0 := (isotropic_ratFunc_of_poly (lineTernaryQuadraticPoly p q F) v hv0 hviso).1
+  have hpiso := (isotropic_ratFunc_of_poly (lineTernaryQuadraticPoly p q F) v hv0 hviso).2
+  obtain ⟨w0, w1, hframe⟩ :=
+    exists_stereoLineFrame_ratFunc p q F hF hdisc p_rf hp0 hpiso
+  set Q : MvPolynomial (Fin 3) (RatFunc k) :=
+    MvPolynomial.map (algebraMap (Polynomial k) (RatFunc k)) (lineSpecializedConicPoly p q F)
+  have hQ : Q.IsHomogeneous 2 := hframe.isHomogeneous
+  set μ : RatFunc k := eval w0 Q
+  have hμ : μ ≠ 0 := hframe.free_not_isotropic
+  set α_rf : Fin 3 → RatFunc k :=
+    fun i => Polynomial.coeff (stereoLineParamPoly Q hQ p_rf w0 w1 i) 0
+  set β_rf : Fin 3 → RatFunc k :=
+    fun i => Polynomial.coeff (stereoLineParamPoly Q hQ p_rf w0 w1 i) 1
+  set γ_rf : Fin 3 → RatFunc k :=
+    fun i => Polynomial.coeff (stereoLineParamPoly Q hQ p_rf w0 w1 i) 2
+  have hα_rf (i : Fin 3) : α_rf i = μ * p_rf i := by
+    have he := eval_stereoLineParamPoly Q hQ p_rf w0 w1 (0 : RatFunc k) i
+    have hp := congr_fun (hframe.param_eq (0 : RatFunc k)) i
+    simp only [zero_mul, add_zero, sub_zero] at hp
+    have hpow : (0 : RatFunc k) ^ 2 = 0 := by ring
+    simp only [hpow, zero_mul, add_zero, sub_zero] at hp
+    have hce : Polynomial.coeff (stereoLineParamPoly Q hQ p_rf w0 w1 i) 0 =
+        Polynomial.eval 0 (stereoLineParamPoly Q hQ p_rf w0 w1 i) :=
+      (stereoLineParamPoly Q hQ p_rf w0 w1 i).coeff_zero_eq_eval_zero
+    change Polynomial.coeff (stereoLineParamPoly Q hQ p_rf w0 w1 i) 0 = μ * p_rf i
+    rw [hce, he, hp]
+  have hparam (s : RatFunc k) (i : Fin 3) :
+      Polynomial.eval s (stereoLineParamPoly Q hQ p_rf w0 w1 i) =
+        α_rf i + s * β_rf i + s ^ 2 * γ_rf i :=
+    eval_eq_quad_coeffs _ (natDegree_stereoLineParamPoly_le Q hQ p_rf w0 w1 i) s
+  obtain ⟨μn, μd, hμdmem, hμeq⟩ :=
+    IsFractionRing.div_surjective (K := RatFunc k) (A := Polynomial k) μ
+  have hμd : μd ≠ 0 := nonZeroDivisors.ne_zero hμdmem
+  have hμn : μn ≠ 0 := by
+    intro hz; apply hμ; rw [← hμeq, hz, map_zero, zero_div]
+  obtain ⟨dβ, hdβ, β0, hβ0⟩ := exists_common_denom_smul β_rf
+  obtain ⟨dγ, hdγ, γ0, hγ0⟩ := exists_common_denom_smul γ_rf
+  let φ : Polynomial k := μn * dβ * dγ
+  let α : Fin 3 → Polynomial k := fun i => φ * v i
+  let β : Fin 3 → Polynomial k := fun i => μd * dγ * β0 i
+  let γ : Fin 3 → Polynomial k := fun i => μd * dβ * γ0 i
+  let D : Polynomial k := μd * dβ * dγ
+  have hD0 : D ≠ 0 := mul_ne_zero (mul_ne_zero hμd hdβ) hdγ
+  have hφ0 : φ ≠ 0 := mul_ne_zero (mul_ne_zero hμn hdβ) hdγ
+  have hμ_scale :
+      algebraMap (Polynomial k) (RatFunc k) μn =
+        algebraMap (Polynomial k) (RatFunc k) μd * μ := by
+    have hφμ : algebraMap (Polynomial k) (RatFunc k) μd ≠ 0 :=
+      (map_ne_zero_iff _ (IsFractionRing.injective (Polynomial k) (RatFunc k))).mpr hμd
+    calc
+      algebraMap (Polynomial k) (RatFunc k) μn =
+          (algebraMap (Polynomial k) (RatFunc k) μn /
+            algebraMap (Polynomial k) (RatFunc k) μd) *
+            algebraMap (Polynomial k) (RatFunc k) μd := by field_simp [hφμ]
+      _ = μ * algebraMap (Polynomial k) (RatFunc k) μd := by rw [hμeq]
+      _ = algebraMap (Polynomial k) (RatFunc k) μd * μ := by ring
+  have hαD (i : Fin 3) :
+      algebraMap (Polynomial k) (RatFunc k) (α i) =
+        algebraMap (Polynomial k) (RatFunc k) D * α_rf i := by
+    rw [hα_rf i]
+    dsimp [α, φ, D, p_rf]
+    calc
+      algebraMap (Polynomial k) (RatFunc k) (μn * dβ * dγ * v i) =
+          algebraMap _ _ μn * algebraMap _ _ dβ * algebraMap _ _ dγ * algebraMap _ _ (v i) := by
+        simp [map_mul]
+      _ = (algebraMap _ _ μd * μ) * algebraMap _ _ dβ * algebraMap _ _ dγ *
+            algebraMap _ _ (v i) := by rw [hμ_scale]
+      _ = algebraMap _ _ (μd * dβ * dγ) * (μ * algebraMap _ _ (v i)) := by
+          simp only [map_mul]; ring
+  have hβD (i : Fin 3) :
+      algebraMap (Polynomial k) (RatFunc k) (β i) =
+        algebraMap (Polynomial k) (RatFunc k) D * β_rf i := by
+    dsimp [β, D]; simp only [map_mul, hβ0]; ring
+  have hγD (i : Fin 3) :
+      algebraMap (Polynomial k) (RatFunc k) (γ i) =
+        algebraMap (Polynomial k) (RatFunc k) D * γ_rf i := by
+    dsimp [γ, D]; simp only [map_mul, hγ0]; ring
+  have hfam (s : k) (i : Fin 3) :
+      algebraMap (Polynomial k) (RatFunc k) (sectionPencil α β γ s i) =
+        algebraMap (Polynomial k) (RatFunc k) D *
+          stereoLineParam Q p_rf w0 w1 (algebraMap k (RatFunc k) s) i := by
+    dsimp only [sectionPencil]
+    simp only [map_add, map_mul, map_pow, hαD, hβD, hγD]
+    have hCs : algebraMap (Polynomial k) (RatFunc k) (Polynomial.C s) =
+        algebraMap k (RatFunc k) s := rfl
+    rw [hCs]
+    trans algebraMap (Polynomial k) (RatFunc k) D *
+        (α_rf i + algebraMap k (RatFunc k) s * β_rf i +
+          (algebraMap k (RatFunc k) s) ^ 2 * γ_rf i)
+    · ring
+    · rw [← hparam (algebraMap k (RatFunc k) s) i, eval_stereoLineParamPoly]
+  have hiso_s (s : k) :
+      TernaryQuadraticPoly.eval (lineTernaryQuadraticPoly p q F)
+        (sectionPencil α β γ s) = 0 := by
+    refine (IsFractionRing.injective (Polynomial k) (RatFunc k)).eq_iff.mp ?_
+    rw [← TernaryQuadraticPoly.evalRatFunc_algebraMap, map_zero]
+    have hx :
+        (fun i => algebraMap (Polynomial k) (RatFunc k) (sectionPencil α β γ s i)) =
+          fun i => algebraMap _ _ D *
+            stereoLineParam Q p_rf w0 w1 (algebraMap k (RatFunc k) s) i :=
+      funext (hfam s)
+    rw [hx, TernaryQuadraticPoly.evalRatFunc_smul]
+    have hQiso := stereoLineParam_isotropic Q hQ p_rf w0 w1 hframe.isotropic
+      (algebraMap k (RatFunc k) s)
+    have hsum := eval_eq_ternaryQuadraticCoeff_sum hQ
+      (stereoLineParam Q p_rf w0 w1 (algebraMap k (RatFunc k) s))
+    have hcoeff (i j : Fin 3) :
+        ternaryQuadraticCoeff Q i j =
+          algebraMap (Polynomial k) (RatFunc k)
+            (ternaryQuadraticCoeff (lineSpecializedConicPoly p q F) i j) := by
+      simp only [ternaryQuadraticCoeff, Q, MvPolynomial.coeff_map]
+      split_ifs <;> simp
+    have hiso_param :
+        TernaryQuadraticPoly.evalRatFunc (lineTernaryQuadraticPoly p q F)
+          (stereoLineParam Q p_rf w0 w1 (algebraMap k (RatFunc k) s)) = 0 := by
+      calc
+        TernaryQuadraticPoly.evalRatFunc (lineTernaryQuadraticPoly p q F)
+              (stereoLineParam Q p_rf w0 w1 (algebraMap k (RatFunc k) s)) =
+            ∑ i, ∑ j,
+              algebraMap (Polynomial k) (RatFunc k)
+                  (ternaryQuadraticCoeff (lineSpecializedConicPoly p q F) i j) *
+                stereoLineParam Q p_rf w0 w1 (algebraMap k (RatFunc k) s) i *
+                  stereoLineParam Q p_rf w0 w1 (algebraMap k (RatFunc k) s) j := by
+          simp only [TernaryQuadraticPoly.evalRatFunc, ternaryQuadraticPolyRatFunc,
+            lineTernaryQuadraticPoly]
+        _ = eval (stereoLineParam Q p_rf w0 w1 (algebraMap k (RatFunc k) s)) Q := by
+          rw [hsum]
+          refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => ?_
+          rw [hcoeff]
+        _ = 0 := hQiso
+    rw [hiso_param]
+    ring
+  have hG4z : ResidualAvoidsConicDiscriminantOn p q r N F (sectionPencil α β γ 0) := by
+    rw [sectionPencil_zero]
+    change ResidualAvoidsConicDiscriminantOn p q r N F (fun i => φ * v i)
+    exact ResidualAvoidsConicDiscriminantOn_of_mul_section p q r N F hF φ hφ0 v hG4
+  have hthird : α 2 ≠ 0 ∨ β 2 ≠ 0 ∨ γ 2 ≠ 0 := by
+    by_cases hv2 : v 2 ≠ 0
+    · exact Or.inl (mul_ne_zero hφ0 hv2)
+    · push Not at hv2
+      have hp2 : p_rf 2 = 0 := by simp [p_rf, hv2]
+      have hne := stereoLineParamPoly_third_ne_zero_of_base_third_eq_zero hframe hp2
+      have hrf : α_rf 2 ≠ 0 ∨ β_rf 2 ≠ 0 ∨ γ_rf 2 ≠ 0 := by
+        by_contra hall
+        push Not at hall
+        obtain ⟨ha, hb, hc⟩ := hall
+        apply hne
+        refine Polynomial.ext fun m => ?_
+        match m with
+        | 0 => simpa [α_rf] using ha
+        | 1 => simpa [β_rf] using hb
+        | 2 => simpa [γ_rf] using hc
+        | m + 3 =>
+          exact Polynomial.coeff_eq_zero_of_natDegree_lt
+            (lt_of_le_of_lt (natDegree_stereoLineParamPoly_le Q hQ p_rf w0 w1 2) (by omega))
+      have hDm : algebraMap (Polynomial k) (RatFunc k) D ≠ 0 :=
+        (map_ne_zero_iff _ (IsFractionRing.injective (Polynomial k) (RatFunc k))).mpr hD0
+      rcases hrf with ha | hb | hc
+      · refine Or.inl fun h0 => ha ?_
+        have := hαD 2
+        rw [h0, map_zero] at this
+        exact (mul_eq_zero.mp this.symm).resolve_left hDm
+      · refine Or.inr (Or.inl fun h0 => hb ?_)
+        have := hβD 2
+        rw [h0, map_zero] at this
+        exact (mul_eq_zero.mp this.symm).resolve_left hDm
+      · refine Or.inr (Or.inr fun h0 => hc ?_)
+        have := hγD 2
+        rw [h0, map_zero] at this
+        exact (mul_eq_zero.mp this.symm).resolve_left hDm
+  exact ⟨α, β, γ, φ, hφ0, fun _ => rfl, hiso_s, hG4z, hthird⟩
+
+def sectionPencilThirdContent (α β γ : Fin 3 → Polynomial k) (n : ℕ) : Polynomial k :=
+  Polynomial.C (Polynomial.coeff (α 2) n) +
+    Polynomial.X * Polynomial.C (Polynomial.coeff (β 2) n) +
+      Polynomial.X ^ 2 * Polynomial.C (Polynomial.coeff (γ 2) n)
+
+theorem eval_sectionPencilThirdContent
+    (α β γ : Fin 3 → Polynomial k) (n : ℕ) (s : k) :
+    Polynomial.eval s (sectionPencilThirdContent α β γ n) =
+      Polynomial.coeff (sectionPencil α β γ s 2) n := by
+  simp only [sectionPencilThirdContent, sectionPencil, Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_pow, Polynomial.eval_X, Polynomial.eval_C]
+  rw [show Polynomial.C s ^ 2 = Polynomial.C (s ^ 2) from
+    (map_pow (Polynomial.C : k →+* Polynomial k) s 2).symm]
+  simp only [Polynomial.coeff_add, Polynomial.coeff_C_mul]
+
+theorem coeff0_thirdContent (α β γ : Fin 3 → Polynomial k) (n : ℕ) :
+    Polynomial.coeff (sectionPencilThirdContent α β γ n) 0 = Polynomial.coeff (α 2) n := by
+  simp [sectionPencilThirdContent]
+
+theorem coeff1_thirdContent (α β γ : Fin 3 → Polynomial k) (n : ℕ) :
+    Polynomial.coeff (sectionPencilThirdContent α β γ n) 1 = Polynomial.coeff (β 2) n := by
+  simp [sectionPencilThirdContent]
+
+theorem coeff2_thirdContent (α β γ : Fin 3 → Polynomial k) (n : ℕ) :
+    Polynomial.coeff (sectionPencilThirdContent α β γ n) 2 = Polynomial.coeff (γ 2) n := by
+  simp [sectionPencilThirdContent]
+
+theorem sectionPencil_third_eq_zero_iff
+    (α β γ : Fin 3 → Polynomial k) (s : k) :
+    sectionPencil α β γ s 2 = 0 ↔
+      ∀ n, Polynomial.eval s (sectionPencilThirdContent α β γ n) = 0 := by
+  constructor
+  · intro h n
+    rw [eval_sectionPencilThirdContent, h, Polynomial.coeff_zero]
+  · intro h
+    refine Polynomial.ext fun n => ?_
+    rw [← eval_sectionPencilThirdContent α β γ n s, h n, Polynomial.coeff_zero]
+
+theorem exists_sectionPencilThirdContent_ne_zero
+    (α β γ : Fin 3 → Polynomial k)
+    (h : α 2 ≠ 0 ∨ β 2 ≠ 0 ∨ γ 2 ≠ 0) :
+    ∃ n, sectionPencilThirdContent α β γ n ≠ 0 := by
+  classical
+  by_contra hall
+  replace hall : ∀ n, sectionPencilThirdContent α β γ n = 0 := by
+    intro n; exact of_not_not (hall ⟨n, ·⟩)
+  have hα : α 2 = 0 := by
+    refine Polynomial.ext fun n => ?_
+    have := congrArg (fun p => Polynomial.coeff p 0) (hall n)
+    rw [Polynomial.coeff_zero, coeff0_thirdContent] at this; exact this
+  have hβ : β 2 = 0 := by
+    refine Polynomial.ext fun n => ?_
+    have := congrArg (fun p => Polynomial.coeff p 1) (hall n)
+    rw [Polynomial.coeff_zero, coeff1_thirdContent] at this; exact this
+  have hγ : γ 2 = 0 := by
+    refine Polynomial.ext fun n => ?_
+    have := congrArg (fun p => Polynomial.coeff p 2) (hall n)
+    rw [Polynomial.coeff_zero, coeff2_thirdContent] at this; exact this
+  rcases h with h | h | h <;> exact h (by assumption)
+
+theorem exists_actualG3G4LineSection_of_HasGoodLineWithSection'
+    [NeZero (2 : k)] [NeZero (3 : k)] [Infinite k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k) (hF : IsBidegree23 F)
+    (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+    (v : Fin 3 → Polynomial k)
+    (h : HasGoodLineWithSection F p q r N v) :
+    ∃ v' : Fin 3 → Polynomial k, HasActualG3G4LineSection F p q r N v' := by
+  classical
+  by_cases hv2 : v 2 ≠ 0
+  · exact exists_actualG3G4LineSection_of_HasGoodLineWithSection_noInfinite F hF p q r N v h hv2
+  · obtain ⟨α, β, γ, _φ, _hφ, _hα, hiso, hG4_0, hthird⟩ :=
+      exists_sectionPencil_of_HasGoodLineWithSection F hF p q r N v h
+    obtain ⟨ι, _, fdisc, hfdisc, hdisc_zero⟩ :=
+      exists_residualDiscContent_of_sectionPencil p q r N F hF α β γ hG4_0
+    obtain ⟨n0, hn0⟩ := exists_sectionPencilThirdContent_ne_zero α β γ hthird
+    let ι' : Type := Option ι
+    let f : ι' → Polynomial k := fun
+      | some i => fdisc i
+      | none => sectionPencilThirdContent α β γ n0
+    have hf : ∀ i, f i ≠ 0 := by
+      intro i; cases i with
+      | some i => exact hfdisc i
+      | none => exact hn0
+    obtain ⟨s0, hs0⟩ := exists_eval_ne_zero_of_finite_ne_zero f hf
+    have hthird_s : sectionPencil α β γ s0 2 ≠ 0 := by
+      intro h0
+      exact hs0 none ((sectionPencil_third_eq_zero_iff α β γ s0).mp h0 n0)
+    have hG4_s : ResidualAvoidsConicDiscriminantOn p q r N F (sectionPencil α β γ s0) := by
+      refine ResidualAvoidsConicDiscriminantOn_of_content_eval p q r N F hF α β γ s0 ?_
+      by_contra hall
+      push Not at hall
+      have hvan : residualConicDiscriminantOn p q r N F (sectionPencil α β γ s0) = 0 := by
+        apply MvPolynomial.ext
+        intro m
+        have := hall m
+        rw [eval_residualDiscContentCoeff p q r N F hF α β γ m s0] at this
+        simpa using this
+      obtain ⟨i, hi⟩ := hdisc_zero s0 hvan
+      exact hs0 (some i) hi
+    have hv0_s : sectionPencil α β γ s0 ≠ 0 := fun h0 => hthird_s (by rw [h0]; rfl)
+    have hQhom : (lineSpecializedConicPoly p q F).IsHomogeneous 2 :=
+      lineSpecializedConicPoly_isHomogeneous p q hF
+    have hviso' : eval (sectionPencil α β γ s0) (lineSpecializedConicPoly p q F) = 0 := by
+      rw [← ternaryQuadraticPoly_eval_line p q F hF]
+      exact hiso s0
+    have hdisc' : lineConicDiscriminant p q F ≠ 0 := h.2.2.1
+    have hpol :=
+      polarEval_ne_zero_of_isotropic_of_third_ne_zero hQhom hdisc' hviso' hthird_s
+    have hpolar :=
+      polarEval_lineStereoDir_ne_zero_of_polarEval_ne_zero p q F hF
+        (sectionPencil α β γ s0) hpol
+    exact exists_actualG3G4LineSection_of_HasGoodLineWithSection_of_GP_G4 F hF p q r N v h
+      (sectionPencil α β γ s0) hv0_s (hiso s0) hthird_s hpolar hG4_s
+
+theorem smooth_bidegree23_hasUnirationalParametrization_of_lineSection'
+    (k : Type u) [Field k] [NeZero (2 : k)] [NeZero (3 : k)] [Infinite k]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (Bidegree23ZeroLocus.toSpec k F)]
+    (h : ∃ (p q r : Fin 3 → k) (N : Matrix (Fin 3) (Fin 3) k)
+      (v : Fin 3 → Polynomial k), Standard.HasGoodLineWithSection F p q r N v) :
+    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) := by
+  obtain ⟨p, q, r, N, v, hG⟩ := h
+  obtain ⟨v', hactual⟩ :=
+    exists_actualG3G4LineSection_of_HasGoodLineWithSection' F hF p q r N v hG
+  exact smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection k F hF hF0
+    ⟨p, q, r, N, v', hactual⟩
+
+theorem smooth_bidegree23_hasUnirationalParametrization_of_lineSection'_of_isAlgClosed
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (Bidegree23ZeroLocus.toSpec k F)] :
+    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) := by
+  obtain ⟨p, q, r, N, _x, v, _u, hactual, _⟩ :=
+    Standard.exists_actualG3G4LineSection_via_frameIncidence F hF hF0
+  have hdisc : lineConicDiscriminant p q F ≠ 0 :=
+    lineConicDiscriminant_ne_zero_of_smooth p q r N hactual.1 F hF hF0
+  exact smooth_bidegree23_hasUnirationalParametrization_of_lineSection' k F hF hF0
+    ⟨p, q, r, N, v, hactual.to_HasGoodLineWithSection F p q r N v hdisc⟩
+
 
 end
 
