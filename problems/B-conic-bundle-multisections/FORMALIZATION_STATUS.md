@@ -709,6 +709,21 @@ Veronese re-clearing `(d², dn, n²)` at a nonconstant rational parameter.
 The original headline and `MainTheoremGuard` are byte-unchanged throughout; every goal was
 additive. All endpoints `[propext, Classical.choice, Quot.sound]`; sorry census 2 throughout.
 
+## Line-presentation invariance (phase F-1) — closed 28 July 2026
+
+`HasGoodLineSectionPartial` (disc ∧ section ∧ isotropy ∧ G4 — G3 excluded, owned by phase F-3) is
+invariant under change of the spanning pair: `hasGoodLineSectionPartial_pair_change` in
+`LinePresentationPairChange.lean`, via the elementary-move decomposition (shear/scale/swap) with
+every transformation law proved at its true twist. The honest surprises, recorded not massaged:
+residual-Y under shear carries the rational twist `(1+t²)/(1+(t+β)²)` cleared at `e = 3`; scale
+carries chain weight beyond the naive `α³` (point re-identification weight 10); swap needs the
+uniform `reflect D` normalization (per-coordinate `reverse` changes the projective point) and then
+*anticommutes* with no clearing at all (`W·ctd(H∘W) = −ctd(H)∘W`), refuting the extrapolated
+`e = 3` bookkeeping — swap G4 runs through the localization `k[t,s][t⁻¹]` at inversion weight
+`72D + 306`, matching the scale route's independently derived weights at `D = 0`. Executed by
+Grok Build (five runs) and Claude Opus 5 (final slice), each verified and committed by the
+director session. Remaining in the F campaign: frame-completion invariance (F-2) and G3 (F-3).
+
 ## Reproduction commands
 
 ```bash
