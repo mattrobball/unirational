@@ -25,7 +25,7 @@ universe u
 open AlgebraicGeometry BiprojectiveSpace
 
 theorem smooth_bidegree23_hasUnirationalParametrization
-    (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
     (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
     (hF : IsBidegree23 F) (hF0 : F ≠ 0)
     [Smooth (Bidegree23ZeroLocus.toSpec k F)] :

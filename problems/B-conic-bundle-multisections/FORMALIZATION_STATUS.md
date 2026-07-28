@@ -125,6 +125,21 @@ insecure fake-landrun shim; the Apple-container Linux kernel had Landlock disabl
 `--best-effort` sandbox degraded to no Landlock restrictions. This is a proof-validation result,
 not an adversarial sandbox-security claim.
 
+**Re-run, 2026-07-28, on the char-∤-6 package.**  `Statement.lean:480` and `Solution.lean:28`
+now ask `[NeZero (2 : k)] [NeZero (3 : k)]` in place of `[CharZero k]` — the characteristic
+assumptions only, nothing else.  Upstream Comparator v4.32.0 (`07bc4ea`, sole local change the
+toolchain retarget to Lean v4.32.1) ACCEPTS the package in an Apple-container Ubuntu 24.04
+(kernel 6.18.15): statement match, permitted axioms, export, and Lean default-kernel replay all
+pass — "Your solution is okay!", exit 0 — identically as root and as uid 1001.  Two sharpened
+caveats supersede the earlier phrasing: (1) the container kernel does not COMPILE Landlock
+(`CONFIG_SECURITY_LANDLOCK` unset; the probe syscall returns ENOSYS), so comparator's hardcoded
+`--best-effort` sandboxing restricts nothing and the acceptance is proof-validation only;
+(2) landrun `main`/v0.1.16–v0.1.18 carry a `--`-swallowing regression from the urfave/cli v3
+upgrade (merged 2026-07-22) that breaks comparator v4.32.0's `safeExport` invocation — the run
+used a real landrun built at the last pre-regression commit (`main@5e9a0d1`, reports 0.1.15).
+Anyone reproducing with a current landrun will see a spurious "unknown module prefix" failure;
+this is upstream-reportable.  Container `b23-comparator` retains the full environment and logs.
+
 The commit containing this file publishes the result together with its axiom-audit corpus and the
 separate, explicitly open Klein-cubic research dossier. Exploratory B-side files outside the live
 theorem and audit closure remain uncommitted.
