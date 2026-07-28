@@ -125,6 +125,8 @@ end BConicBundleMultisections
   BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection''
 #guard_no_sorry
   BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection''_of_isAlgClosed
+#guard_no_sorry
+  BConicBundleMultisections.smooth_bidegree23_hasUnirationalParametrization_via_goodLineSection
 
 -- Load-bearing results that must remain fully proved.  If one of these starts depending on an
 -- obligation, the remaining work is larger than the obligation list suggests.

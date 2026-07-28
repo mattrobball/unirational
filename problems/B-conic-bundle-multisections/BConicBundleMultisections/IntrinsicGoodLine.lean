@@ -343,4 +343,19 @@ theorem smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection''_of_
     HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) :=
   smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection'' k F hF hF0 h
 
+/-- **The headline statement, derived end-to-end through the intrinsic hypothesis.**
+
+Type-identical to `smooth_bidegree23_hasUnirationalParametrization`; the proof runs
+algebraic closure → a good line with section (`nonempty_goodLineSection_of_isAlgClosed`) →
+the intrinsic theorem.  The guard-pinned original keeps its historical proof; this
+declaration is the witness that the main result flows through the line-and-section layer. -/
+theorem smooth_bidegree23_hasUnirationalParametrization_via_goodLineSection
+    (k : Type u) [Field k] [IsAlgClosed k] [NeZero (2 : k)] [NeZero (3 : k)]
+    (F : MvPolynomial (BiprojectiveCoordinate 2 2) k)
+    (hF : IsBidegree23 F) (hF0 : F ≠ 0)
+    [Smooth (Bidegree23ZeroLocus.toSpec k F)] :
+    HasUnirationalParametrization 3 (Bidegree23ZeroLocus.toSpec k F) :=
+  smooth_bidegree23_hasUnirationalParametrization_of_goodLineSection''_of_isAlgClosed k F hF hF0
+    (nonempty_goodLineSection_of_isAlgClosed k F hF hF0)
+
 end BConicBundleMultisections
