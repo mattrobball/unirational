@@ -114,7 +114,7 @@ reasons, the one the Lean phase will implement:
    transfers; rationality needs the birational form, not just dominance
    — say precisely what new definition work Lean will need).
 3. **The corollary ladder.**  State the intended final theorem stack:
-   core conditional theorem over the seven packages → countable-union
+   core conditional theorem over the post-rework six packages → countable-union
    statement → "very general" phrasing — each as one Lean declaration,
    mirroring how Problem B layered its headline and corollaries.
 
