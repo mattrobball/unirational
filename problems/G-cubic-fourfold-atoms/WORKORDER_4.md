@@ -7,6 +7,49 @@ artifact.  **Deliverable:** `certificates/GENERALITY.md` plus table
 edits.  **Gate:** director review; then WP-5 assembles the final
 simplified certificate and the phase ends.
 
+## PRIORITY PREFIX — audit rework (do this before the three parts)
+
+The 2026-07-29 adversarial audit of the WP-1..3 layer (RESOLUTION.md entry)
+found the mathematics sound and the boundary conservative-wrong.  Execute
+its rework list first; Parts 2–3 below MUST build on the corrected state:
+
+1. **Retire SEP-CONV via the Henselian route.**  The analytic local ring
+   `𝒪_{S,b}` of a smooth k-analytic germ at a rigid point is Henselian
+   (pin Bosch 1977 / BGR); ATOM_CORE's Step 1 runs verbatim over any
+   Henselian local ring with residue field `k`, producing the `u = 0`
+   idempotent decomposition analytically with canonical (hence
+   `G`-equivariant) projectors.  Verify the audit's claim that no
+   downstream consumer reads more than `u = 0` data (their grep:
+   Prop 3.3, Lemma 3.2(4), Cor 3.4, R3), then: delete SEP-CONV from the
+   package list; mark ATOM_CORE Theorem 4.1 Steps 2–5 and §5.1 as proved
+   but not load-bearing for Theorem 6.8 (retain them — they are correct
+   and the HYZZ-repair material has independent value); update the
+   trusted base to SIX packages everywhere (ATOM_CORE §§1–2, GW_INPUT
+   row + §7 count, FACTORIZATION §6 display).
+2. **Upgrade FACTORIZATION §3.2** from "not known" to the audit's proofs:
+   horizontality of `f^*f_*` forces `f^*` an isomorphism (the `u = 0`
+   flatness identity makes a horizontal idempotent a multiplication
+   operator fixing 1); Euler-commutation already fails for
+   `Bl_pt ℙ⁴ → ℙ⁴` (`p(κ(1)) = 5H ≠ 5H − 3E`).  E1 is closed by proof.
+3. **Name and pin the eight unnamed inputs** (audit §5): the Hodge
+   numbers of `ℙ⁴`, point, curve; Hodge symmetry `h^{2,0} = h^{0,2}`;
+   `c₁(T_X) = 3h` and `∫_X h⁴ = 3`; the algebra-automorphism clause in
+   GW-1; the Fano-scheme-of-lines expected-dimension input behind the
+   GW-2 FORMALIZE route (pin it as the classical theorem it is, or take
+   the "state Beauville's three numbers directly" fallback both
+   documents already offer and dissolve it); and DEFINE "isomorphism of
+   cover-native data" (§7.3's first generator).
+4. **Write down the flatness identity** that ATOM_CORE Theorem 4.1
+   hypothesizes but never displays; correct D8's consumption list
+   (add Cor 3.4 / GW-1 / HATOM-RAW and the `ℙ⁴` Hodge numbers).
+5. **Hygiene:** rename one of the two "Theorem 4.1"s; fix the
+   REPAIRED_PROOF §2 vs §7 table description; reconcile the
+   `𝒪_S[[u]]`-vs-`B × D_u` typing note; record in GW-3's row that
+   Iritani's *Notes* Prop 8 itself uses HYZZ reconstruction; fix the
+   broken macro at REPAIRED_PROOF:187.
+
+Then proceed to the three parts, against the SIX-package base.
+
 ## Mission, three parts
 
 ### Part 1 — can the theorem ever name ONE cubic?

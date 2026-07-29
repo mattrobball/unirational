@@ -760,3 +760,39 @@ idempotent-lifting TODO.  WORKORDER_4 issued: the explicit-instance
 effectivity assessment (expected NO, argued), per-clause shrinkage of
 NL-CUBIC and HATOM-RAW at their use-sites, and the pinned Lean target
 statement with the corollary ladder mirroring Problem B's layering.
+
+## 2026-07-29 — adversarial audit of the WP-1..3 layer: SOUND with a conservative boundary error; rework folded into WP-4
+
+Full hostile pass over GW_INPUT, FACTORIZATION, ATOM_CORE (the three
+gate-accepted-on-skim deliverables).  The mathematics holds at the
+standard of the audited repair: the new formal separated-projector
+theorem is correct line-by-line (ring-level Sylvester inversion via unit
+resultants; the flatness induction re-derived exactly); all finite
+computations replay; the (6,15,6) triple reproduced by a second route
+(Beauville's closed formula) the certificate does not use; the hash
+chain and primary-source anchors are exact; the worker's two corrections
+to HYZZ's published convergence proof are confirmed real defects in that
+paper.
+
+**Headline: SEP-CONV is over-scoped and in fact retirable.**  Clause 2
+has no use-site (all consumers read u = 0 data only); clause 1 collapses
+to the Henselian property of the analytic local ring at a rigid point
+(Bosch 1977), over which ATOM_CORE's own Step 1 runs verbatim — the
+analytic residue axiom disappears and the trusted base drops to SIX
+packages.  Conservative error: nothing unsound, but TB_G, the package
+count, and the F3 cost estimate were all wrong in the safe direction,
+and the chain was carrying an axiom whose upstream proof it had itself
+shown defective.
+
+Also: the audit PROVED the two facts FACTORIZATION §3.2 left as "not
+known" (horizontal f*f_* forces an isomorphism; Euler-commutation fails
+on Bl_pt P^4), closing E1 by proof; found eight unnamed inputs (the
+substantive one: the Fano-scheme expected-dimension input behind GW-2's
+FORMALIZE route, dissolvable via the Beauville-constants fallback);
+Mathlib spot-checks clean; one false alarm (the primitive Hodge row)
+resolved in the certificate's favor.
+
+Rework (the audit's "a day's work" list) inserted as a PRIORITY PREFIX
+into WORKORDER_4; Parts 2–3 of WP-4 now build on the six-package base.
+Review-depth ledger corrected going forward: no gate closes on a
+structural skim.
