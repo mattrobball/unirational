@@ -11,24 +11,6 @@ The current two-axis ranking and the four-path audit are in
 
 ## 2026-07-28 delta
 
-> **DIRECTOR STOPPING RULE (2026-07-29, supersedes ranking below where they
-> conflict).**  No new `tmp/` sweep whose conclusion has the form "degree /
-> support / chart N excluded" may be dispatched unless it is a step inside
-> a structural, degree-independent theorem.  Problem F ran the same ladder
-> (degrees 24–34, every certificate correct, none decisive) until one
-> structural argument — the all-degree path obstruction — retired the
-> entire ladder at once; your own latest log entry already states the
-> analogous diagnosis here: further negative progress requires a global
-> foliation / line-subsheaf / bounded-pole theorem, not another finite
-> sparse-support sweep.  Act on your own diagnosis.  The next dispatches,
-> in order: (1) the five exact checks of "Generalizing the F-engine"
-> below — all cheap, all still unrun, and they decide whether the
-> transition-system obstruction OR a positive construction along the fixed
-> configuration is the live route; (2) the structural targets you yourself
-> named, formulated as theorems to prove rather than sweeps to run.
-> Bounded sweeps may resume only if (1) and (2) produce a precise
-> delimitation showing they are needed.
-
 > **Cross-problem import, now audited (see the full section near the end of
 > this file):** Problem F — the PSL(2,7) degree-2 del Pezzo — is RESOLVED
 > NEGATIVE by an all-degree V₄-fixed exceptional-path obstruction.  Its
@@ -457,18 +439,37 @@ replayed.
   fibre, while the five coordinate fibres are `a*c^2`: blanket fibrewise
   geometric reducedness and absolute factoriality remain false.  No general
   Grothendieck--Lefschetz/Noether--Lefschetz theorem applies to this fixed
-  special member.  The next gates are the codimension-three local class maps
-  over `Sing(H6)`, local factoriality elsewhere if required, and then the
-  relative quotient or invariant class group.  Replay the normality theorem
-  with `/opt/homebrew/bin/python3 -u tmp/xcd_total_normality/verify.py` and
-  the earlier residue packet with
+  special member.  The first codimension-three class maps are now exact.
+  `Sing(H6)` is one 60-point orbit of `A3` points, with Jacobian-scheme length
+  `60*3=180`.  At the simple fibre line the completed and henselian base map
+  on class groups is an isomorphism.  At the doubled line the total local
+  ring has four henselian branches and the map is
+  `Z -> Z^3`, `1 |-> (1,1,0)`, with cokernel `Z^2`.  Thus the hoped-for
+  completed-local-surjectivity/factoriality shortcut is false.  Exact
+  enumeration gives full stabilizer `C11`; it fixes all four branches, so the
+  invariant henselian defect still has rank two.  The two within-pair branch
+  differences span only an index-four sublattice, so primitive individual
+  branch patterns cannot be discarded.  The recent algebraic splitting lemma
+  upgrades the factors from formal to henselian, but individual Zariski
+  descent and globalization remain unproved: height-one contraction is
+  guaranteed, while re-extension may recover a grouped sum of conjugate
+  branches.  The next structural gate is therefore the image of the global
+  class group in the four boundary valuations of the normalized
+  `G`-equivariant weighted Rees model, followed only then by horizontal fibre
+  degree.  Replay the normality and local/globalization packets with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_total_normality/verify.py`,
+  `/opt/homebrew/bin/python3 -u tmp/xcd_local_class_defect/verify.py`, and
+  `/opt/homebrew/bin/python3 -u tmp/xcd_class_globalization_next/verify.py`;
+  replay the earlier residue packet with
   `/opt/homebrew/bin/python3 -u tmp/xcd_residue_class_gate/verify.py`.
   Its optional `--full` Gröbner recomputation measured about 0.95 GB RSS and
   is outside the 700 MiB execution gate; the default replay checks frozen
   outputs and exact symbolic identities but does not independently rerun
   those bases.  The normality replay itself independently reruns only the
   smaller zero-fibre basis and stays below the cap.  See
-  `tmp/xcd_total_normality/REPORT.md`.
+  `tmp/xcd_total_normality/REPORT.md`,
+  `tmp/xcd_local_class_defect/REPORT.md`, and
+  `tmp/xcd_class_globalization_next/REPORT.md`.
 - The Problem F involution import has an exact correction packet.  For every
   involution, `(dim E_plus,dim E_minus)=(3,2)`, the plus-plane section is a
   smooth genus-one cubic, and `F|E_minus=0`, so the minus fixed locus is a
@@ -929,6 +930,8 @@ python3 -u tmp/xcd_discriminant_divisor/verify.py
 /opt/homebrew/bin/python3 -u tmp/xcd_gauge_divisors/verify.py
 /opt/homebrew/bin/python3 -u tmp/xcd_residue_class_gate/verify.py
 /opt/homebrew/bin/python3 -u tmp/xcd_total_normality/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_local_class_defect/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_class_globalization_next/verify.py
 /opt/homebrew/bin/python3 tmp/involution_exceptional_divisor/verify.py
 /opt/homebrew/bin/python3 tmp/involution_exceptional_divisor/verify_v4.py
 /opt/homebrew/bin/python3 tmp/d12_line_restriction/verify.py
