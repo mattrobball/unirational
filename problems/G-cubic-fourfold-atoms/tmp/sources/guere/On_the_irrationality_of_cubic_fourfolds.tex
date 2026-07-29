@@ -1,0 +1,1906 @@
+\documentclass[10pt]{amsart}
+
+
+\title[On the irrationality of cubic fourfolds]{On the irrationality of cubic fourfolds}
+\author[Gu\'er\'e]{J\'er\'emy Gu\'er\'e}
+\address{Univ. Grenoble Alpes, CNRS, IF, 38000 Grenoble, France}
+\email{jeremy.guere@univ-grenoble-alpes.fr}
+
+
+
+%\usepackage{hyperref}
+\usepackage{amsrefs}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{array}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+%\usepackage{arev}
+%\usepackage{times}
+\usepackage{pifont}
+\usepackage{wasysym}
+
+
+
+
+
+
+
+
+
+
+%\usepackage[latin1]{inputenc}
+%\usepackage[english]{babel}
+%\usepackage{amsmath,amsthm,amsfonts,color,amssymb,latexsym,amscd}
+\usepackage[all]{xy}
+%\usepackage[pdftex]{graphicx}
+%\usepackage{graphics}
+
+
+
+
+\allowdisplaybreaks[3]
+
+%\newcommand{\coeur}{\mbox{\ding{170}}}
+\newcommand{\coeur}{\text{\scalebox{1.16}{\ding{170}}}}
+%\newcommand{\coeur}{\text{\small\varheart}}
+\newcommand{\Stab}{\mathrm{Stab}}
+\newcommand{\bad}{\mathrm{bad}}
+\newcommand{\Result}{\mathrm{Result}}
+\newcommand{\WW}{\mathbb{W}}
+\newcommand{\oo}{\textbf{0}}
+\newcommand{\M}{\mathfrak{m}}
+\newcommand{\pt}{\mathrm{pt}}
+\newcommand{\Contr}{\mathrm{Contr}}
+\newcommand{\ky}{\mathfrak{y}}
+\newcommand{\kf}{\mathfrak{f}}
+\newcommand{\loc}{\mathrm{loc}}
+\newcommand{\Obs}{\mathrm{Obs}}
+\newcommand{\fix}{\mathrm{fix}}
+\newcommand{\mov}{\mathrm{mov}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\fC}{\mathfrak{C}}
+\newcommand{\Graph}{\mathrm{Graph}}
+\newcommand{\TT}{\mathbb{T}}
+\newcommand{\tG}{\widetilde{\Gamma}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\kp}{\mathfrak{p}}
+\newcommand{\kS}{\mathfrak{S}}
+\newcommand{\un}{\textbf{1}}
+\newcommand{\vir}{\mathrm{vir}}
+\newcommand{\rk}{\mathrm{rk}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\ext}{\mathrm{ext}}
+\newcommand{\SL}{\underline{\mathrm{SL}}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\grj}{\mathfrak{j}}
+\newcommand{\gru}{\mathfrak{u}}
+\newcommand{\grv}{\mathfrak{v}}
+\newcommand{\kK}{\mathbf{K}}
+\newcommand{\fc}{\mathfrak{c}}
+\newcommand{\PV}{\mathbf{PV}}
+\newcommand{\JG}{\mathbf{E}}
+\newcommand{\bun}{\mathbf{1}}
+\newcommand{\MF}{matrix factorization }
+\newcommand{\MFs}{matrix factorizations }
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\ccE}{\textrm{e}}
+\newcommand{\du}{\vec{u}} % base canonique de Z^{2N} coordonnée p
+\newcommand{\dv}{\vec{v}} % base canonique de Z^{2N} coordonnée q
+\newcommand{\dw}{\vec{e}} % base canonique de Z^{N+1} coordonnées k,l
+\newcommand{\AB}{\mathfrak{R}}
+\newcommand{\aA}{\mathbb{A}}
+\newcommand{\bB}{\mathfrak{B}}
+\newcommand{\rR}{\mathfrak{C}}
+\newcommand{\ci}{\mathrm{i}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\Cstar}{\CC^\times}
+\newcommand{\HH}{\textrm{H}}
+\newcommand{\HA}{\textrm{H}_\textrm{A}}
+\newcommand{\HB}{\textrm{H}_\textrm{B}}
+\newcommand{\HorbL}{H_{\text{\rm orb}}^\bullet(\stackX;\Lambda)}
+\newcommand{\HorbLinv}{H_{\text{\rm orb}}^\bullet(\stackX;\Lambda[Q^{-1}])}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\ev}{\mathrm{ev}}
+\newcommand{\bt}{\mathbf{t}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\hq}{\widehat{q}}
+\newcommand{\hbeta}{\widehat{\beta}}
+\renewcommand{\(}{\left(}
+\renewcommand{\)}{\right)}
+\newcommand{\fun}{\mathbf{1}}
+\DeclareMathOperator{\age}{age}
+\DeclareMathOperator{\orbdeg}{orbdeg}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\bk}{\boldsymbol{k}}
+\newcommand{\bl}{\boldsymbol{l}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\fb}{\mathfrak{b}}
+\newcommand{\fq}{\mathfrak{q}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cS}{\mathrm{Sym}}
+\newcommand{\sS}{\mathcal{S}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+\newcommand{\cIX}{\mathcal{IX}}
+\newcommand{\cIZ}{\mathcal{IZ}}
+\newcommand{\Ch}{\mathrm{Ch}}
+\newcommand{\Td}{\mathrm{Td}}
+\newcommand{\ww}{\underline{w}}
+\newcommand{\xx}{\underline{x}}
+\newcommand{\st}{\mathbf{H}}
+\newcommand{\est}{\mathbf{H}^{\textrm{ext}}}
+\newcommand{\Hmorb}{H_\textrm{mov,orb}}
+\newcommand{\Hforb}{H_\textrm{fix,orb}}
+\newcommand{\Hmun}{H_\textrm{mov,un}}
+\newcommand{\Hfun}{H_\textrm{fix,un}}
+\newcommand{\cvir}{c_{\mathrm{vir}}}
+\newcommand{\cvirPV}{c_{\mathrm{vir}}^{\mathrm{PV}}}
+\newcommand{\cvirFJRW}{c_{\mathrm{vir}}^{\mathrm{FJRW}}}
+\newcommand{\cvirLG}{c^\mathrm{FJRW}_{\textrm{vir}}}
+\newcommand{\cvirGW}{c^\mathrm{GW}_{\textrm{vir}}}
+\newcommand{\Spec}{\textrm{Spec}}
+\newcommand{\HorbX}{H^\bullet_{\text{\rm orb}}(\cX;\CC)}
+\newcommand{\HorbXL}{H^\bullet_{\text{\rm orb}}(\cX;\Lambda)}
+\newcommand{\HorbTX}{H^\bullet_{T,\text{\rm orb}}(\cX;\CC)}
+\newcommand{\HorblocTX}{H(\cX)}
+\newcommand{\HY}{H^\bullet(Y;\CC)}
+\newcommand{\HTY}{H^\bullet_T(Y;\CC)}
+\newcommand{\HlocTY}{H(Y)}
+\newcommand{\HorbZ}{H^\bullet_{\text{\rm orb}}(\cZ;\CC)}
+\newcommand{\HorbZL}{H^\bullet_{\text{\rm orb}}(\cZ;\Lambda)}
+\newcommand{\correlator}[1]{\left \langle #1 \right \rangle}
+
+\DeclareMathOperator{\Eff}{Eff}
+\newcommand{\EffX}{\Eff(\cX)}
+\newcommand{\EffZ}{\Eff(\cZ)}
+\DeclareMathOperator{\Nett}{NETT}
+\newcommand{\NETTX}{\Nett(\cX)}
+\newcommand{\NETTZ}{\Nett(\cZ)}
+\newcommand{\VHS}{V${\infty \over 2}$HS\ }
+\newcommand{\VHSns}{V${\infty \over 2}$HS}
+
+\DeclareMathOperator{\ch}{ch}
+\newcommand{\fij}{f^{(j)}_i}
+\newcommand{\cHs}{\cH^\tw}
+\newcommand{\Omegas}{\Omega^\tw}
+\newcommand{\cLs}{\cL^\tw}
+\newcommand{\cLzero}{\cL^{\mathbf{0}}}
+\newcommand{\bs}{{\boldsymbol{s}}}
+\newcommand{\bc}{{\boldsymbol{c}}}
+\newcommand{\be}{{\boldsymbol{e}}}
+\newcommand{\bu}{{\boldsymbol{u}}}
+\newcommand{\ff}{\boldsymbol{f}}
+\newcommand{\CharV}{\mathfrak{V}}
+\newcommand{\rank}{\operatorname{rank}}
+\DeclareMathOperator{\Aut}{Aut}
+\newcommand{\OPpair}[2]{\(#1,#2\)_{\text{\rm orb}}}
+\newcommand{\CHpair}[2]{\int_{#2} #1}
+\newcommand{\Ppair}[2]{\(#1,#2\)}
+\def\pair#1#2{\langle #1,#2\rangle}
+\newcommand{\f}{\mathfrak{f}}
+
+%
+% fractional parts and so on
+%
+\newcommand{\fr}[1]{\left\langle #1 \right\rangle}
+\newcommand{\fl}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ce}[1]{\left\lceil #1 \right\rceil}
+
+
+
+\theoremstyle{plain}
+
+\newtheorem{thm}{Theorem}
+\newtheorem*{thm*}{Theorem}
+\newtheorem{pro}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem*{lem*}{Lemma}
+\newtheorem{cla}[thm]{Claim}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{cons}[thm]{Construction}
+\newtheorem*{conv*}{Convention}
+
+\theoremstyle{definition}
+
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem{nt}[thm]{Notation}
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{assumption}[thm]{Assumption}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem*{rem*}{Remark}
+\newtheorem*{rems*}{Remarks}
+\newtheorem{exa}[thm]{Example}
+\newtheorem*{exa*}{Examples}
+\newtheorem*{exait*}{\rm \em Example}
+\newtheorem*{exadefit*}{\rm \em Example/Definition}
+\newtheorem*{cla*}{\rm \em Claim}
+\newtheorem*{exaA}{Example A}
+\newtheorem*{exaB}{Example B}
+\newtheorem*{dfn*}{Definition}
+
+
+%operators
+
+\DeclareMathOperator{\vdim}{vdim}
+
+
+\usepackage{amsxtra} 
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\Z}{\mathbb{Z}} 
+
+\newcommand{\bp}{\boldsymbol{p}} 
+
+\newcommand{\ov}{\overline} 
+
+\newcommand{\Spf}{\operatorname{Spf}} 
+\newcommand{\Hom}{\operatorname{Hom}} 
+
+
+\def\parfrac#1#2{\frac{\partial #1}{\partial #2}}
+\def\corr#1{\left\langle #1 \right\rangle}
+\def\corrr#1{\left\langle\!\!\left\langle #1 \right\rangle\!\!\right\rangle}
+
+\newcommand{\Nov}{\mathrm{Nov}}
+\newcommand{\even}{\mathrm{even}}
+\newcommand{\orb}{\text{\rm orb}}
+\newcommand{\tw}{\text{\rm tw}}
+\newcommand{\Eu}{\mathrm{Eu}}
+\newcommand{\Hdg}{\mathrm{Hdg}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\untw}{\text{\rm un}}
+\def\<{\left\langle}
+\def\>{\right\rangle}
+\newcommand{\ibar}{\bar{\imath}}
+
+
+
+
+
+
+
+
+
+%\newtheorem{theo}{Theorem}[subsection]
+%\newtheorem{lem}[theo]{Lemma}
+%\newtheorem{prop}[theo]{Proposition}
+%\newtheorem{cor}[theo]{Corollary}
+\newtheorem{result}{Result}
+%\theoremstyle{definition}
+%\newtheorem*{defi}{Definition}
+%\newtheorem*{ex}{Example}
+%\theoremstyle{remark}
+%\newtheorem*{rem}{Remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\begin{abstract}
+Following the work of Katzarkov--Kontsevich--Pantev--Yu \cite{KKPY} concerning the irrationality of the very general complex cubic fourfold, we prove the following: for every rational smooth complex cubic fourfold, the primitive cohomology is isomorphic as a Hodge structure to the (twisted) middle cohomology of a projective K3 surface.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+\setcounter{section}{-1}
+
+
+\section{Introduction}
+In \cite{KKPY}, Katzarkov--Kontsevich--Pantev--Yu develop a framework for using Gromov--Witten theory to study birational geometry.
+Since Gromov--Witten theory is deformation
+invariant, its utility in distinguishing between rational and irrational smooth cubic fourfolds may initially seem surprising.
+However, by combining it with Hodge theory, one can define properties of smooth projective complex varieties that remain invariant under blow-ups at smooth centers, at least for complex dimensions up to four.
+This approach is underpinned by \cite[Theorem 1.1]{Iritani}, which describes the behaviour of quantum cohomology under such blow-ups.
+
+In this paper, we adapt the methods of \cite{KKPY} in order to prove the following theorem, which addresses part of Kuznetsov's conjecture \cite{Kuznetsov}.
+
+\begin{thm*}[see Theorem \ref{rat cubic K3}]
+If $X$ is a rational smooth complex cubic fourfold, then there exists a projective K3 surface $S$ and an isomorphism of Hodge structures
+$$H^4(X,\QQ)_\mathrm{primitive} \simeq H^2(S,\QQ)(-1).$$
+\end{thm*}
+
+Our proof relies on a specific property of quantum cohomology that remains invariant under blow-ups.
+To clarify the distinction between our approach and that of \cite{KKPY}, we denote our property by $\coeur$ and their original property by $\clubsuit$ (see Definition \ref{keys}).
+Additionally, for the reader's convenience, we recall the relevant material from \cite{KKPY} and provide an outline of their main result.
+
+\begin{rem*}
+For simplicity's sake we have chosen not to discuss the famous `Hodge atom', since it is not directly necessary for our proof (and would have involved a long digression).
+We refer the interested reader to \cite{KKPY} for further details.
+Nevertheless, the evaluation maps (see Definition \ref{eval}) are closely related to the Hodge atom construction.
+\end{rem*}
+
+%\vspace{0.2cm}
+
+\noindent
+\textbf{Acknowledgement.}
+I would like to thank the organizers of the reading group on \cite{KKPY} in Paris, especially Emanuele Macr\`i and Claire Voisin, where this project originated.
+I am also grateful to Alessandro Chiodo, Hsueh-Yung Lin, Laurent Manivel, Vladimiro Benedetti, Nicolas Perrin, Michel Brion, and Catriona Maclean for many fruitful discussions and their assistance regarding this work.
+Special thanks are due to Hiroshi Iritani for his clarifications on \cite{Iritani} and for his helpful corrections to this manuscript.
+Finally, I would like to thank my wife and children for their patience and support during the completion of this work.
+
+
+\section{Quantum cohomology}
+Throughout this paper, we consider only smooth projective complex varieties.
+Let $X$ be such a variety.
+In this section, we provide basic definitions regarding Hodge structures, followed by a description of Gromov--Witten theory and quantum multiplication.
+
+
+\subsection{Hodge structures}
+\begin{dfn}[Hodge structure]
+Let $V_\QQ$ be a $\QQ$-vector space and $n \in \ZZ$.
+A \textit{Hodge structure} on $V_\QQ$ of weight $n$ is a decomposition
+$$V_\QQ \otimes_\QQ \CC = \bigoplus_{\substack{p,q \in \ZZ \\ p+q=n}} V^{p,q}$$
+such that $V^{p,q} = \overline{V^{q,p}}$ under complex conjugation.
+A \textit{morphism of Hodge structures} $f \colon V_\QQ \to W_\QQ$ is a morphism of $\QQ$-vector spaces whose complexification satisfies
+$$f_\CC\(V^{p,q}\) \subset W^{p,q}.$$
+\end{dfn}
+
+\begin{exa}[Deligne twist]
+Denote by $\QQ(1) := V_\QQ = 2 \pi \ci \QQ \subset \CC$ the one-dimensional $\QQ$-vector space with the decomposition
+$$V_\QQ \otimes_\QQ \CC = V^{-1,-1}.$$
+This is a Hodge structure of weight $-2$ called the \textit{Deligne twist}.
+If $W_\QQ$ is another Hodge structure, we use the notation
+$$W_\QQ(n) := W_\QQ \otimes_\QQ \QQ(1)^{\otimes_\QQ n}$$
+for the \textit{twisted Hodge structure}.
+\end{exa}
+
+\begin{dfn}[Hodge classes and Hochschild degree]
+Let $V_\QQ$ be a $\QQ$-vector space equipped with a Hodge structure of weight $n$. The elements of the subspace
+$$V^\Hdg := \left\lbrace \begin{array}{ll}
+V_\QQ \cap V^{p,p} & \textrm{if $n=2p$ for $p \in \ZZ$,} \\
+0 & \textrm{if $n$ is odd,}
+\end{array} \right. $$
+are called \textit{Hodge classes}.
+For any $k \in \ZZ$, we define the subspace of classes of \textit{Hochschild degree} $k$ as
+$$V^{(k)} := \bigoplus_{\substack{p,q \in \ZZ \\ p-q=k}} V^{p,q}.$$
+\end{dfn}
+
+\begin{exa}
+The rational cohomology $H^n(X,\QQ)$ of $X$ carries a Hodge structure
+$$H^n(X,\CC) = \bigoplus_{\substack{p,q \geq 0 \\ p+q=n}} H^{p,q}(X).$$
+We denote by $H^*(X)^\Hdg$ (resp.~$H^{(k)}(X)$) the subspace of Hodge classes (resp.~classes of Hochschild degree $k$).
+\end{exa}
+
+\subsection{Formal power series}
+We begin with the definition of the Novikov ring.
+\begin{dfn}[Novikov ring]\label{Novikov}
+Let $\mathrm{NE}_\NN(X) \subset H_2(X,\ZZ)$ denote the monoid generated by classes of effective curves in $X$.
+We write $Q^\beta \in \QQ[\mathrm{NE}_\NN(X)]$ for the element corresponding to the curve $\beta \in \mathrm{NE}_\NN(X)$, and define its degree by
+$$\deg \(Q^\beta\) := 2 \int_{\beta} c_1(X).$$
+Let $\omega$ be an ample class in $X$. We denote by
+$$\QQ[[Q]] := \QQ[[\mathrm{NE}_\NN(X)]]$$
+the graded completion of $\QQ[\mathrm{NE}_\NN(X)]$ with respect to the descending chain of submodules
+$$I_k = \langle Q^\beta ~|~\int_{\beta}\omega \geq k \rangle.$$
+This completion is dependent of the choice of $\omega$; we call $\QQ[[Q]]$ the (rational) \textit{Novikov ring} of $X$.
+More generally, for any $\ZZ$-graded module $K$, we define $K[[Q]]$ as the graded completion of $K[Q]$.
+Specifically, we first consider the submodule $R_n \subset K[Q]$ of polynomials homogeneous of degree $n$ for each $n \in \ZZ$, complete $R_n$ into $\widehat{R}_n$ with respect to the descending chain above, and then take the direct sum
+$$K[[Q]] := \bigoplus_{n \in \ZZ} \widehat{R}_n.$$
+In particular, this construction yields a graded $K$-algebra.
+\end{dfn}
+
+We fix a graded basis $$\mathcal{H}:=\(\alpha_0,\dotsc,\alpha_h\)$$
+of the vector space $H^*(X)^{\Hdg}$, with $\alpha_0:=\un_X$, and introduce a formal variable $T_k$ for each $\alpha_k$, with degree defined by
+$$\deg\(T_k\):=2-\deg(\alpha_k).$$
+Following Definition \ref{Novikov}, we obtain a graded $\QQ$-algebra
+$$R^*(X,\QQ) := \QQ[[Q,T_0,\dotsc,T_h]].$$
+Explicitly, an element of $R^*(X,\QQ)$ is a formal power series
+$$\sum_{\substack{-D \leq d \leq D \\ N \geq 0}} \sum_{\substack{n_0,\dotsc,n_h \geq 0 \\ \beta \in \mathrm{NE}_\NN(X)\\n_0+\dotsc+n_h+\int_{\beta}\omega=N \\ n_0 \deg\(T_0\) + \dotsb + n_h \deg\(T_h\) + \deg\(Q^\beta\) = d}} c_{n_0,\dotsc,n_h,\beta} ~ T_0^{n_0} \dotsm T_h^{n_h} Q^\beta,$$
+with $D \geq 0$ and coefficients $c_{n_0,\dotsc,n_h,\beta} \in \QQ$
+such that there are only finitely many non-zero coefficients in the second sum, where $\omega$ is any ample class on $X$.
+
+\begin{dfn}\label{formal Hodge}
+For any field extension $\QQ \subset K \subset \CC$, any graded $K$-algebra $R^*$, and any graded $K$-vector space $V^*$, we define
+$$V^*_R := \bigoplus_{n \in \ZZ} V^n_R ~,\quad V^n_R := \bigoplus_{\substack{p,q \in \ZZ \\ p+2q=n}} V^p \otimes_K R^{2q},$$
+where we restrict $R^*$ to $R^\mathrm{even}$, i.e.~to terms of \textit{even degree}.
+This is a free $R^\mathrm{even}$-module and a graded $K$-algebra.
+Our primary example is $H^*(X,\QQ)_{R(X,\QQ)}$.
+
+Now, let $R^*$ be a graded $\QQ$-algebra and $V^*$ be a graded $\QQ$-vector space such that each $V^p$ carries a Hodge structure.
+For each $q \in \ZZ$, we define a Hodge structure on the $\QQ$-vector space $R^{2q}$ by setting $R^{2q} \otimes_\QQ \CC = V^{q,q}$, i.e.~we take the trivial Hodge structure on $R^{2q}$ and twist it by $(-q)$.
+Then, for any $n \in \ZZ$, we define a Hodge structure on the $\QQ$-vector space 
+$$V^n_R = \bigoplus_{\substack{p,q \in \ZZ \\ p+2q=n}} V^p \otimes_\QQ R^{2q}$$
+by tensoring the Hodge structure of $V^p$ with the twist $(-q)$.
+In particular, the subspace of Hodge classes is $V^\Hdg_R = V^\Hdg \otimes_\QQ R$, and the subspace of classes with Hochschild degree $k$ is $V^{(k)}_R =V^{(k)} \otimes_\CC R_\CC$.
+\end{dfn}
+
+\begin{dfn}[$K$-span of morphisms of Hodge structures]\label{Kspan}
+Let $K$ be a field extension $\QQ \subset K \subset \CC$, $R^*$ be a graded $\QQ$-algebra, and $V^*$ and $W^*$ be two graded $\QQ$-vector spaces equipped with Hodge structures in each degree as in Definition \ref{formal Hodge}.
+Assume we have a morphism of free $R_K^\mathrm{even}$-modules
+$$f \colon V^{*-2k}_{R_K} \to W^*_{R_K}$$
+that is homogeneous of some even degree $2k \in \ZZ$ and defined over $K$.
+We say that $f$ is in the \textit{$K$-span of morphisms of Hodge structures} if there exist finitely many morphisms of free $R^\mathrm{even}$-modules
+$$f_1, \dotsc, f_N \colon V^{*-2k}_R(-k) \to W^*_R$$
+which are also morphisms of Hodge structures, such that
+$$f = s_1 f_1+\dotsb + s_N f_N$$
+for some scalars $s_1, \dotsc, s_N \in K$ that are linearly independent over $\QQ$.
+\end{dfn}
+
+
+
+\subsection{Quantum product}
+We briefly recall several properties of Gromov--Witten invariants.
+For any non-negative integer $n$ and any effective curve class $\beta \in \mathrm{NE}_\NN(X)$ such that $\beta \neq 0$ or $n \geq 3$, there exists a proper Deligne--Mumford stack $\cM_{0,n}(X,\beta)$ parametrizing stable maps $f \colon C \to X$ from an $n$-marked genus-zero nodal curve $C$ to $X$ such that $f_*[C] = \beta \in H_2(X,\ZZ)$.
+Moreover, there exists an algebraic cycle
+$$\left[ \cM_{0,n}(X,\beta)\right]^\vir \in H_{2\vdim}(\cM_{0,n}(X,\beta),\QQ),$$
+called the \textit{virtual fundamental cycle}, of pure complex dimension
+$$\vdim := \dim_\CC(X)-3+n+\int_{\beta}c_1(X) \in \ZZ.$$
+There is also an evaluation map
+$$\ev^* \colon H^*(X,\QQ)^{\otimes n} \to H^*(\cM_{0,n}(X,\beta),\QQ).$$
+For any cohomology classes $\gamma_1, \dotsc, \gamma_n \in H^*(X,\QQ)$, we define the \textit{correlator}
+$$\langle \gamma_1, \dotsc, \gamma_n \rangle_{0,n,\beta}^X := \int_{\left[ \cM_{0,n}(X,\beta)\right]^\vir} \ev^*\(\gamma_1\otimes \dotsm \otimes \gamma_n\) \in \QQ.$$
+In particular, if the correlator is non-zero, the \textit{dimension equation} must hold:
+$$\sum_{i=1}^n \deg\(\gamma_i\) = 2 \vdim.$$
+Correlators are symmetric under permutations of the markings.
+Furthermore, we will repeatedly use the following identities, known as the \textit{string and divisor equations}.
+Whenever $n \geq 3$ or $\beta \neq 0$:
+\begin{eqnarray*}
+\langle \gamma_1, \dotsc, \gamma_n, \un_X \rangle_{0,n+1,\beta}^X & = & 0, \\
+\langle \gamma_1, \dotsc, \gamma_n, \gamma_{n+1} \rangle_{0,n+1,\beta}^X & = & \int_{\beta} \gamma_{n+1} \cdot \langle \gamma_1, \dotsc, \gamma_n \rangle_{0,n,\beta}^X \quad \textrm{if $\gamma_{n+1} \in H^2(X,\QQ)$.}
+\end{eqnarray*}
+
+Next, we define \textit{quantum multiplication}.
+To this end, we fix a graded basis
+$$\mathcal{B}:=(\phi_0,\dotsc,\phi_m)$$
+of the cohomology $H^*(X,\QQ)$, with $\phi_0:=\un_X \in H^0(X,\QQ)$.
+We denote by $\(\phi^k\)$ the (dual) basis defined by the condition
+$$\int_X \phi_i \cup \phi^k = \delta_{i,k} ~,~~\forall ~0 \leq i,k \leq m.$$
+
+\begin{dfn}[Quantum product]
+Let
+$$\tau := \sum_{k=0}^h T_k \alpha_k \in H^*(X)^\Hdg[[T_0,\dotsc,T_h]] \subset H^*(X,\QQ)_{R(X,\QQ)}.$$
+We define the \textit{quantum product} by
+$$\phi_i \star_\tau \phi_j = \sum_{\substack{0 \leq k \leq m, n \geq 0 \\ \beta \in \mathrm{NE}_\NN(X)}} \langle \phi_i,\phi_j,\phi_k,\tau,\dotsc,\tau\rangle_{0,3+n,\beta}^X \cfrac{Q^\beta}{n!} \phi^k \in H^*(X,\QQ) \otimes_\QQ R^*(X,\QQ),$$
+using the genus-zero Gromov--Witten invariants of $X$.
+\end{dfn}
+
+%%%% Well-defined by some homogeneity...
+
+\begin{rem}[Change of variables]\label{change of variables}
+Given a field extension $\QQ \subset K' \subset \CC$, let
+$$f\(Q^\beta\) := \mu Q^\beta,~f(T_0),~\dotsc,~f(T_h) \in R^*(X,K')~,~~\textrm{where }\mu \in K',$$
+such that the function $f$ is homogeneous of degree $0$, i.e.~we have $\deg(f(u))=\deg(u)$ for any $u \in \left\lbrace Q^\beta, T_0, \dotsc, T_h\right\rbrace$. For any $0 \leq k \leq h$, we write
+$$f(T_k) =: \lambda_k + g(T_k),$$
+where the formal power series $g(T_k)$ has no constant term and $\lambda_k \in K'$.
+By the homogeneity of $f$, note that $\deg\(\alpha_k\) \neq 2 \implies \lambda_k=0$.
+We define
+$$g \( Q^\beta \) = e^{\sum_{k=0}^h \lambda_k \int_{\beta} \alpha_k} f\(Q^\beta\),$$
+which belongs to $R^*(X,K)$ for some field extension $K' \subset K \subset \CC$ containing the value of this exponential.
+Since the formal power series
+$g\(Q^\beta\), g(T_0), \dotsc, g(T_h)$
+have no constant terms, we obtain a well-defined (continuous) morphism
+$$g \colon R^*(X,K) \to R^*(X,K)$$
+of graded $K$-algebras given by
+$$\sum_{\substack{n_0,\dotsc,n_h \geq 0 \\ \beta \in \mathrm{NE}_\NN(X)}} c_{n_0,\dotsc,n_h,\beta} ~ T_0^{n_0} \dotsm T_h^{n_h} Q^\beta \mapsto \sum_{\substack{n_0,\dotsc,n_h \geq 0 \\ \beta \in \mathrm{NE}_\NN(X)}} c_{n_0,\dotsc,n_h,\beta} ~ g(T_0)^{n_0} \dotsm g(T_h)^{n_h} g\(Q^\beta\).$$
+\end{rem}
+
+\begin{rem}\label{formal quantum product}
+Throughout this paper, we consider
+$$\tau := \sum_{k=0}^h f_k \alpha_k \in H^2(X)^\Hdg_{R(X,K')} \subset H^2(X,K')_{R(X,K')},$$
+i.e.~homogeneous elements of degree $2$, where $\QQ \subset K' \subset \CC$ is a field extension.
+Then the function $f$ mapping $T_k$ to $f_k$ and $Q$ to $Q$ is homogeneous of degree zero as in Remark \ref{change of variables}.
+Thus we obtain a morphism of graded $K$-algebras
+$$g \colon R^*(X,K) \to R^*(X,K)~,~~T_0 \alpha_0 + \dotsb + T_h \alpha_h \mapsto \tau,$$
+for some field extension $K' \subset K \subset \CC$.
+Consequently, by the divisor equation, we can extend the quantum product as
+$$\phi_i \star_\tau \phi_j := g\(\phi_i \star_{T_0 \alpha_0+\dotsb+T_h \alpha_h} \phi_j\).$$
+\end{rem}
+
+\begin{dfn}[Euler vector field]
+For any element
+$$\tau := \sum_{k=0}^h f_k \alpha_k \in H^2(X)^\Hdg_{R(X,\QQ)},$$
+that is homogeneous of degree $2$, we define the \textit{Euler vector field} as
+$$\Eu_\tau = c_1(X) + \sum_{k=0}^h \(1-\cfrac{\deg \alpha_k}{2}\) f_k \alpha_k \in H^2(X)^\Hdg_{R(X,\QQ)}.$$
+\end{dfn}
+
+
+\begin{dfn}[Endomorphism]\label{matrix}
+For any field extension $\QQ \subset K' \subset \CC$, and any element $\tau \in H^2(X)^\Hdg_{R(X,K')}$, we define
+$$\kappa_\tau := \Eu_\tau \star_\tau \in \mathrm{End}_{R(X,K)}\(H^*(X,K)_{R(X,K)}\),$$
+where $K$ is a field extension $\QQ \subset K \subset \CC$ containing all exponentials
+$e^{\int_{\beta}\tau_2}$ of the integral of the degree-$2$ constant part $\tau_2$ of $\tau$ over any effective curve class $\beta$.
+\end{dfn}
+
+\begin{exa}\label{divisor rescaling}
+In Definition \ref{matrix}, consider the case where
+$$\tau':=\tau + \cfrac{2 \pi \ci p}{q} u ~,~~\quad \textrm{with }u \in H^2(X,\ZZ)~,~~\cfrac{p}{q} \in \QQ,$$
+such that $\tau \in H^2(X)^\Hdg_{R(X,\QQ)}$
+has no constant terms in degree $2$.
+By Remark \ref{change of variables}, the endomorphism $\kappa_{\tau'}$ can be defined by extending our scalars to include $q$-th roots of unity.
+\end{exa}
+
+
+
+
+\begin{pro}\label{preserves HS}
+For any $i \in \ZZ$, the endomorphism $\kappa_{T_0 \alpha_0 + \dotsb + T_h \alpha_h}$ is homogeneous of degree $2$ and is a morphism of Hodge structures
+$$H^i(X,\QQ)_{R(X,\QQ)} \to H^{i+2}(X,\QQ)_{R(X,\QQ)}(1).$$
+In particular, it stabilizes the subspaces $H^*(X)^{\Hdg}_{R(X,\QQ)}$ and $H^{(k)}(X)_{R(X,\QQ)}$.
+\end{pro}
+
+
+\begin{proof}
+Consider a non-zero element
+$$A:=\langle T_{i_0}\alpha_{i_0}, \phi_j, \phi_k, T_{i_1} \alpha_{i_1}, \dotsc, T_{i_n} \alpha_{i_n} \rangle_{0,3+n,\beta}^X \cfrac{Q^\beta}{n!} \phi^k.$$
+By the dimension equation, we have
+$$\sum_{k=0}^n \deg\(\alpha_{i_k}\) + \deg\(\phi_j\) + \deg\(\phi_k\) = 2\(\dim_\CC(X)-3+3+n+\int_{\beta}c_1(X)\),$$
+which implies
+\begin{eqnarray*}
+\deg\(A\) & = & \sum_{k=0}^n \deg\( T_{i_k} \) + \deg \(Q^\beta\) + \deg\(\phi^k\) \\
+& = & \sum_{k=0}^n \(2-\deg\( \alpha_{i_k} \)\) + 2 \int_{\beta} c_1(X) + 2 \dim_\CC(X) -  \deg\(\phi_k\) \\
+& = & \deg\(\phi_j\)+2.
+\end{eqnarray*}
+Since the element $\kappa_\tau(\phi_j)$ is a formal power series with components of this form, $\kappa_\tau$ is homogeneous of degree $2$.
+Furthermore, every constituent in the definition of $\kappa_\tau$ respects Hodge structures; specifically:
+\begin{itemize}
+\item the virtual cycle defining the correlators is an algebraic cycle of pure dimension,
+\item the class $\tau$ and the Euler vector field $\Eu_\tau$ are Hodge classes,
+\item the perfect pairing defining the dual basis is compatible with Hodge structures.
+\end{itemize}
+Hence the linear map
+$$u \mapsto \langle \alpha_{i_0},u,\phi_k,\alpha_{i_1},\dotsc,\alpha_{i_n}\rangle_{0,n+3,\beta}^X \phi^k$$
+is a morphism of Hodge structures
+$$H^i(X,\QQ) \to H^j(X,\QQ)\(\cfrac{i-j}{2}\)~, \quad j:=\deg\(\phi^k\),$$
+where the difference $i-j$ is even by the dimension equation.
+Therefore, the endomorphism
+$$\kappa_\tau \colon H^i(X,\QQ)_{R(X,\QQ)} \to H^{i+2}(X,\QQ)_{R(X,\QQ)}(1)$$
+is a morphism of Hodge structures.
+In particular, it preserves the Hochschild degree and the subspace of Hodge classes.
+\end{proof}
+
+
+\subsection{Examples}
+We compute the endomorphism $\kappa_\tau$ in two important cases: when $X$ is a surface with a nef (numerically effective) canonical class and when $X$ is a cubic fourfold.
+
+\begin{exa}[Surfaces with nef canonical class]\label{Knef}
+Let $S$ be a smooth projective surface with $K_S \geq 0$, i.e.~it is numerically effective.
+We choose a graded basis $\mathcal{H}=\(\alpha_0, \dotsc, \alpha_h\)$ of $H^*(S)^\Hdg$ such that
+\begin{eqnarray*}
+\alpha_0 & = & \un_S \in H^0(S,\CC), \\
+\alpha_h & = & [\pt] \in H^4(S,\CC).
+\end{eqnarray*}
+We fix a graded basis $\mathcal{B} = \(\phi_0, \dotsc, \phi_m\)$ of $H^*(S,\QQ)$ with $\phi_0=\un_S$, $\phi_m=[\pt]$, and
+$$\phi_i \in H^k(S,\CC) \textrm{ for $N_{k-1}<i \leq N_k$},$$
+where $N_0=0$, $N_1 \leq N_2 \leq N_3=m-1$, and $N_4=m$.
+Furthermore, we impose the condition
+$$\phi_{N_2}=c_1(S), \textrm{ whenever }c_1(S) \neq 0.$$
+
+Fix an element $\tau := f_0 \alpha_0 + \dotsb + f_h \alpha_h \in H^2(X)^\Hdg_{R(X,\QQ)}$.
+By the string and divisor equations, we find
+\begin{eqnarray*}
+\kappa_\tau(\phi_j) & = & f_0 \phi_j \\
+& & + \sum_{\beta} \exp \(\int_{\beta}\tau_2\) \(\sum_{k,n} \langle c_1(S),\phi_j,\phi_k,[\pt]^{\otimes n}\rangle_{0,n+3,\beta}^S \cfrac{f_h^n\phi^k}{n!}\) Q^\beta \\
+& & - \sum_{\beta} \exp \(\int_{\beta}\tau_2\) \(\sum_{k,n} \langle [\pt],\phi_j,\phi_k,[\pt]^{\otimes n}\rangle_{0,n+3,\beta}^S \cfrac{f_h^{1+n}\phi^k}{n!}\)Q^\beta,
+\end{eqnarray*}
+where $\tau_2 := f_1 \alpha_1 + \dotsb + f_{h-1} \alpha_{h-1}$ corresponds to the degree-two Hodge classes.
+The virtual dimension formula gives
+$$\vdim = -1+n+3-K_S \cdot \beta,$$
+so that
+\begin{eqnarray*}
+	\langle c_1(S),\phi_j,\phi_k,[\pt]^{\otimes n}\rangle_{0,n+3,\beta}^S \neq 0 & \implies & -1+n+3-K_S \cdot \beta = 1 + \cfrac{\deg(\phi_j)+\deg(\phi_k)}{2}+2n \\
+	& \implies & \cfrac{\deg(\phi_j)+\deg(\phi_k)}{2}+n+K_S \cdot \beta=1, \\
+	\langle [\pt],\phi_j,\phi_k,[\pt]^{\otimes n}\rangle_{0,n+3,\beta}^S \neq 0 & \implies & \cfrac{\deg(\phi_j)+\deg(\phi_k)}{2}+n+K_S \cdot \beta=0,
+\end{eqnarray*}
+resulting in the following possibilities.
+For the first correlator, we must have one of the following:
+\begin{itemize}
+	\item $n=1$, $K_S \cdot \beta=0$, $\phi_j=\phi_k=\un_S$,
+	\item $n=0$, $K_S \cdot \beta = 1$, $\phi_j=\phi_k=\un_S$,
+	\item $n=0$, $K_S \cdot \beta=0$, $(\phi_j=\un_S,\phi_k \in H^2(S))$ or $(\phi_j \in H^2(S),\phi_k=\un_S)$,
+	\item $n=0$, $K_S \cdot \beta=0$, $\phi_j$ and $\phi_k \in H^1(S)$.
+\end{itemize}
+By the string equation, the first and second cases result in vanishing correlators, and the condition $\beta=0$ must hold in the third case.
+Specifically, this yields the contributions
+$$\sum_k \langle c_1(S),\phi_j=\un_S,\phi_k\rangle_{0,3,0}^S \phi^k = c_1(S) \quad \textrm{and} \quad \langle c_1(S),\phi_j,\un_S\rangle_{0,3,0}^S [\pt]= \(\int_S c_1(S) \cup \phi_j\) [\pt].$$
+
+For the second correlator, we must have
+\begin{itemize}
+\item $n=0$, $K_S \cdot \beta = 0$, $\phi_j=\phi_k=\un_S$,
+\end{itemize}
+and so $\beta=0$ by the string equation, yielding the contribution
+$$\langle [\pt],\phi_j=\un_S,\un_S\rangle_{0,3,0}^S f_h [\pt] = f_h [\pt].$$
+To sum up, we find
+$$\(\kappa_\tau-f_0\)(\phi_j) \left\lbrace \begin{array}{lll}
+= & c_1(S) - f_h [\pt] & \textrm{if $\phi_j=\un_S$}, \\
+\in & H^3(S,\CC) & \textrm{if $\phi_j \in H^1(S,\CC)$}, \\
+= & \(\int_S c_1(S) \cup \phi_j\) [\pt] & \textrm{if $\phi_j \in H^2(S,\CC)$}, \\
+= & 0 & \textrm{if $\phi_j \in H^3(S,\CC)$ or if $\phi_j = [\pt]$},
+\end{array}
+\right. $$
+that is, the matrix $\left[ \kappa_\tau - f_0 \right]^{\mathcal{B}}_{\mathcal{B}}$ is of the form
+$$
+\begin{pmatrix}
+0&0&0&0&0\\
+0&0&0&0&0\\
+E&0&0&0&0\\
+0&U&0&0&0\\
+-f_h& 0&F &0&0
+\end{pmatrix},
+$$
+where the blocks correspond to cohomology degrees, $U$ is some square matrix,
+$$E= \begin{pmatrix}
+0\\
+\vdots \\
+0 \\
+\delta_{c_1(S)\neq 0}\\
+\end{pmatrix} ~,\quad \textrm{and} \quad
+F= \begin{pmatrix}
+\int_S c_1(S) \cup \phi_{N_1+1} & \dotsc & \int_S c_1(S) \cup \phi_{N_2} \\
+\end{pmatrix}.
+$$
+In particular, we observe that this matrix is nilpotent.
+\end{exa}
+
+
+
+\begin{exa}[Givental]\label{Givental}
+Let $X$ be a smooth cubic hypersurface in $\PP^5$.
+Its Novikov ring consists of polynomials in a single variable $Q$, as $H_2(X,\ZZ)$ is generated by a single class and $Q$ is assigned a non-zero degree.
+We choose
+$$\tau:=0 \in H^2(X)^\Hdg_{R(X,\QQ)}.$$
+
+The cohomology of $X$ splits as the direct sum of the ambient part (pulled back from $\PP^5$) and the primitive part.
+By the divisor equation, the endomorphism $\kappa_\tau$ vanishes on the primitive part.
+
+Following Givental's computation and \cite[Proof of Theorem 6.8]{KKPY}, the endomorphism $\kappa_{\tau=0}$ on the ambient part equals
+$$M = 3 \begin{pmatrix}
+0 & 0 & 6Q & 0 & 0\\
+1 & 0 & 0 & 15Q & 0\\
+0 & 1 & 0 & 0 & 6Q\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+\end{pmatrix},
+$$
+expressed in the basis $\(1,H,H^2,H^3,H^4\)$, with $H$ the hyperplane class.
+Written in the basis $\(1,H,H^2,H^3-21Q,H^4-6QH\)$, it becomes
+$$M' := 3 \begin{pmatrix}
+0 & 0 & 27Q & 0 & 0\\
+1 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+\end{pmatrix}.
+$$
+We deduce that $0$ is an eigenvalue with a $1$-dimensional eigenspace, and its generalized eigenspace has dimension $2$, given by
+$$\ker\(\kappa_{\tau=0}^m\) = \mathrm{Vect}\(H^3-21Q,H^4-6QH\)~,~~\textrm{for }m \geq 2.$$
+Note that if we extend scalars to $\CC[[Q^{1/3}]]$, we obtain three other eigenvalues $9Q^{1/3}, 9e^{2\ci\pi/3}Q^{1/3},9e^{-2\ci\pi/3}Q^{1/3}$.
+\end{exa}
+
+
+
+\section{Birational transformation}
+In this section, we consider a number field $K$ and a non-Archimedean field $F$ containing $\QQ$ such that the absolute value restricted to $\QQ$ is trivial.
+Specifically, we take $F$ to be the (rational) Levi-Civita field
+$$F:=\QQ((a^\QQ)),$$
+whose elements are series in the formal variable $a$ of the form
+$$\sum_{q \in \QQ} x_q a^q~,~~x_q \in \QQ$$
+where for any rational number $r$ there are only finitely many non-zero coefficients $x_q$ with $q \leq r$. The absolute value is defined by
+$$|\sum_{q \geq p} x_q a^q| := 2^{-p}~,~~x_p \neq 0.$$
+Moreover, we declare that every element of $F$ has degree zero.
+
+We introduce an additional formal variable $b$, which we declare to have degree $1$ and absolute value $|b|=1$. We then define the graded $\QQ$-algebra 
+$$S^*:=F[b^{\pm 1}] = \bigoplus_{k \in \ZZ} S^k ~,\quad \textrm{with } S^k = F \cdot b^k.$$
+We write $S^*_K := S^* \otimes_\QQ K$ for the corresponding graded $K$-algebra.
+
+\begin{lem}\label{conv crit}
+We have the equivalence
+$$\sum_{n \in \NN} x_n \in F_K \iff x_n \to 0,$$
+for any sequence $\(x_n\)_{n \in \NN} \in F_K^\NN$.
+\end{lem}
+
+\begin{proof}
+If $x_n \to 0$, we can write
+$$\forall n \in \NN ~,~~x_n = \sum_{q \geq w_n} y_{n,q} a^q~,~~y_{n,q} \in K,$$
+where the sequence $\(w_n\)_{n \in \NN} \in \QQ^\NN$ tends to infinity.
+This means that for any $Q \in \QQ$, there exists $N \in \NN$ such that for all $n > N$, we have $w_n > Q$.
+It follows that
+$$\sum_{\substack{n \in \NN \\ w_n \leq q \leq Q}} y_{n,q} a^q = \sum_{q \leq Q} z_q a^q~,~~\textrm{where }z_q := \sum_{\substack{0 \leq n \leq N \\ w_n \leq q}} y_{n,q}.$$
+By definition of $F_K$, the sum defining $z_q$ is finite and is non-empty for only finitely many values of $q$.
+Hence, the element $\sum_{n \in \NN} x_n$ is well-defined in $F_K$.
+The converse implication holds in any metric space.
+\end{proof}
+
+\subsection{Invariant properties}
+Let $X \to Z$ be a morphism of varieties.
+We denote the Novikov variable of $Z$ by $Q'$ and an ample class in $Z$ by  $\omega$.
+Let $T_0, \dotsc, T_h$ be the formal variables associated with the basis $\mathcal{H}$ of $H^*(X)^\Hdg$.
+Introducing an additional formal variable $\mathfrak{q}'$ of degree in $\left\lbrace 1,2\right\rbrace$, we define the graded $\QQ$-algebra $R^*_Z$ as
+$$R^*_Z := \QQ[{\mathfrak{q}'}^{\pm 1}][[Q',T_0, \dotsc, T_h]].$$
+
+\begin{rem}
+The morphism $X \to Z$ induces a morphism of Novikov rings $\QQ[[Q]] \to \QQ[[Q']]$. It is important to note that this morphism is not generally homogeneous of degree zero, as will be seen in the case of the blow-up $\widetilde{X} \to X$ in the next section.
+\end{rem}
+
+
+Throughout this paper, we assume that the morphism $X \to Z$ is equipped with a degree-zero morphism $j \colon \QQ[[Q]] \to \QQ[{\mathfrak{q}'}^{\pm 1}][[Q']]$ of the form
+$$Q^\beta \mapsto {Q'}^{j(\beta)} {\mathfrak{q}'}^{j_\beta}.$$
+In particular, this induces a degree-zero homogeneous morphism
+$$R^*(X,K) \to R^*_{Z,K}$$
+between the corresponding graded $K$-algebras.
+
+\begin{rem}
+If $j(Q^\beta)=1$ for some $\beta \neq 0$, then $Q^\beta$ is homogeneous of degree zero.
+However, in this case, the morphism $j$ is not well-defined on the formal power series $\sum_{N \geq 0} Q^{N \beta} \in \QQ[[Q]]$, as the image would involve an infinite sum of constant terms, leading to a contradiction.
+Consequently, if $\beta \neq 0$ and $j(\beta)=0$, it must follow that $j_\beta \neq 0$. 
+\end{rem}
+
+\begin{dfn}[Evaluation function]\label{eval}\label{rescale}
+Let
+$$\ev \colon \left\lbrace \mathfrak{q}', {Q'}^\beta,T_0, \dotsc, T_h\right\rbrace  \to S^*_K$$
+be a degree-zero homogeneous function that is multiplicative in $\beta \in \mathrm{NE}_\NN(Z)$.	
+We say that $\ev$ is a \textit{normalized $K$-evaluation function} for the morphism $X \to Z$ if
+\begin{itemize}
+\item we have $\ev(\mathfrak{q}')=b^{\deg(\mathfrak{q}')}$,
+\item there exists $0<\epsilon<1$ such that for any non-zero curve class $\beta \in \mathrm{NE}_\NN(Z)$, we have
+$$0 \leq |\ev({Q'}^\beta)|<\epsilon^{\int_{\beta} \omega} < 1,$$
+\item for each $0 \leq k \leq h$, we have
+$$0 \leq |\ev(T_k)| <1.$$
+\end{itemize}
+
+For any $\zeta \in F_K$ and any function $\ev$, we define the function $\lambda\ev$ by
+$$\forall ~x \in \left\lbrace \mathfrak{q}', {Q'}^\beta,T_0, \dotsc, T_h\right\rbrace~,~~\lambda\ev(x) := \lambda^{\deg(x)}\ev(x).$$
+We say that $\ev$ is a \textit{$K$-evaluation function} for the morphism $X \to Z$ if there exists $\lambda \in F_K$ such that $\lambda\ev$ is a normalized $K$-evaluation function.
+\end{dfn}
+
+\begin{pro}[{\cite[Lemma 4.6]{KKPY}}]\label{conv}
+Every $K$-evaluation function for the morphism $X \to Z$ can be extended uniquely and continuously to a degree-zero homogeneous morphism of graded $K$-algebras
+$$R^*_{Z,K} \to S^*_K,$$
+that we call a $K$-evaluation map.
+Conversely, every degree-zero homogeneous morphism $\ev \colon R^*_{Z,K} \to S^*_K$ of graded $K$-algebras comes from a $K$-evaluation function.
+\end{pro}
+
+\begin{proof}
+By homogeneity, the statement holds if and only if it holds for all \textit{normalized} $K$-evaluation functions.
+Without loss of generality, we may assume $|\ev(\mathfrak{q}')|=1$ and apply the criterium of Lemma \ref{conv crit} to prove that the element
+$$\sum_{N \in \ZZ} \sum_{\substack{k \in \ZZ \\ \underline{n} \in \NN^{1+h} \\ \beta \in \mathrm{NE}_\NN(Z) \\ \int_{\beta}\omega + |\underline{n}|+k=N}} c_{\beta, \underline{n}, k} \ev\({Q'}^\beta T_0^{n_0} \dotsc T_h^{n_h} {\mathfrak{q}'}^k\)$$
+is well-defined in $F_K$, where we adopt the notation $\underline{n}:=\(n_0, \dotsc, n_{h+l}\) \in \NN^{1+h+l}$ and $|\underline{n}|:=n_0+\dotsb+n_{h+l}$.
+We examine the limit as $N \to \pm \infty$ of
+\begin{eqnarray*}
+|A_N| & := & |\sum_{\substack{k \in \ZZ \\ \beta \in \mathrm{NE}_\NN(Z) \\ \int_{\beta}\omega + |\underline{n}|+k=N}} c_{\beta, \underline{n}, k}~ \ev\({Q'}^\beta T_0^{n_0} \dotsc T_h^{n_h} {\mathfrak{q}'}^k\) | \\
+& \leq & \max \left\lbrace |\ev\({Q'}^\beta\)| \cdot |\ev\(T_0\)|^{n_0} \dotsc |\ev\(T_h\)|^{n_h} \cdot  |\ev\({\mathfrak{q}'}^k\)| \right\rbrace \\
+& \leq & \max \left\lbrace \epsilon^{\int_\beta \omega+|\underline{n}|} \right\rbrace,
+\end{eqnarray*}
+where the maximum is taken over the finite set of all
+$$k \in \ZZ ~,~~ \underline{n} \in \NN^{1+h}~,~~ \beta \in \mathrm{NE}_\NN(Z),$$
+such that $\int_{\beta}\omega + |\underline{n}|+k=N$ and $c_{\beta, \underline{n},k} \neq 0$.
+By the definition of a graded algebra, there exists $D>0$ such that
+$$c_{\beta, \underline{n}, k} \neq 0 \implies -D \leq k \deg\(\mathfrak{q}'\) + 2\int_{\beta}c_1(Z)+ \sum_{i=0}^h n_i \deg\(T_i\) \leq D.$$
+This implies the following bounds:
+\begin{eqnarray*}
+N \leq & \frac{D}{\deg\(\mathfrak{q}'\)}+ \(1-\frac{2\min\(-1,\frac{\int_{\beta_1} c_1(Z)}{\int_{\beta_1}\omega}, \dotsc, \frac{\int_{\beta_l} c_1(Z)}{\int_{\beta_l}\omega}\)}{\deg\(\mathfrak{q}'\)}\) \(\int_\beta \omega+|\underline{n}|\), \\
+-N \leq & \frac{D}{\deg\(\mathfrak{q}'\)}+ \(\frac{2\max\(1, \frac{\int_{\beta_1} c_1(Z)}{\int_{\beta_1}\omega}, \dotsc, \frac{\int_{\beta_l} c_1(Z)}{\int_{\beta_l}\omega}\)}{\deg\(\mathfrak{q}'\)}-1\) \(\int_\beta \omega+|\underline{n}|\), \\
+\end{eqnarray*}
+where $\(\beta_1, \dotsc, \beta_l\)$ is the dual basis to a basis of ample classes $\(\omega_1,\dotsc, \omega_l\)$ for the torsion-free part of the N\'eron--Severi group of $Z$, so that every effective curve is a linear combination of $\beta_1, \dotsc, \beta_l$ with non-negative integer coefficients.
+Consequently, we obtain $A_N \to 0$ as $N \to \pm \infty$.
+
+Conversely, let $\ev \colon R^*_Z \to S^*_K$ be a degree-zero homogeneous morphism of graded $K$-algebras.
+In particular, since $\ev(\mathfrak{q}') \neq 0$, we may assume that $\ev(\mathfrak{q}')=b^{\deg(\mathfrak{q}')}$ after potentially rescaling $\ev$ by the factor $\lambda:=\ev(\mathfrak{q}')^{-\frac{1}{\deg(\mathfrak{q}')}}b$.
+
+Suppose there exists $x \in \left\lbrace {Q'}^\beta,T_0, \dotsc, T_h\right\rbrace$ such that $|\ev(x)|\geq 1$. Then the element $y:=x {\mathfrak{q}'}^{\frac{\deg(x)}{\deg(\mathfrak{q}')}}$ is homogeneous of degree $0$.
+It follows that the formal power series $\sum_{N \geq 0} y^N$ is well-defined in $R^*_Z$, whereas its image $\sum_{N \geq 0} \ev(y)^N$ is not well-defined in $S^*_K$ by Lemma \ref{conv crit}. This yields a contradiction.
+\end{proof}
+
+
+\begin{pro}[Preservation of Hodge structures]\label{span HS}
+Let $\ev$ be a $K$-evaluation function for the morphism $X \to Z$, and let $\(s_1,\dotsc, s_N\)$ be a $\QQ$-basis of $K$, where $N:=\dim_\QQ K$.
+We set $\tau := T_0 \alpha_0 + \dotsb + T_h \alpha_h$.
+
+Then the endomorphism $\ev\(\kappa_\tau\)$ is well-defined and lies in the $K$-linear span of morphisms of Hodge structures (see Definition \ref{Kspan}).
+Specifically, for any $i \in \ZZ$, there exist morphisms of free $S^\mathrm{even}$-modules and of Hodge structures
+$$\kappa_1, \dotsc, \kappa_N \colon H^i(X,\QQ)_S \to H^{i+2}(X,\QQ)_S(1)$$
+such that $\ev\(\kappa_\tau\) = s_1 \kappa_1+ \dotsb + s_N \kappa_N$.
+In particular, $\ev\(\kappa_\tau\)$ stabilizes the subspaces $H^*(X)^{\Hdg}_S$ and $H^{(k)}(X)_{S_\CC}$.
+\end{pro}
+
+\begin{proof}
+By Proposition \ref{conv}, we have a well-defined degree-zero homogeneous morphism $\ev \colon R^*_{Z,K} \to S^*_K$ of graded $K$-algebras and thus a morphism
+$$\ev \colon R^*(X,K) \subset R^*_{X,K} \to R^*_{Z,K} \to S^*_K.$$
+Recall that $\kappa_\tau$ is an endomorphism of $H^*(X,\QQ)_{R(X,\QQ)}$.
+We define an endomorphism $\ev(\kappa_\tau) \in \mathrm{End}_{S^*_K}(H^*(X,K)_{S_K})$ as follows: choose a basis $\mathcal{B}$ of $H^*(X,K)$ and define $[\ev(\kappa_\tau)]^\mathcal{B}_\mathcal{B}:=\ev\([\kappa_\tau]^\mathcal{B}_\mathcal{B}\)$.
+Note that it is independant of the choice of the basis $\mathcal{B}$ of $H^*(X,K)$, because we have $\ev(P)=P$ for any base change matrix $P \in \mathrm{Mat}(K)$.
+
+Every element $\zeta \in F_K$ decomposes uniquely as a sum
+$$\zeta = s_1 \zeta_1 + \dotsb + s_N \zeta_N,$$
+where $\zeta_1, \dotsc, \zeta_N \in F$.
+Let $\ev\(\tau\) = g_0 \alpha_0 + \dotsb + g_h \alpha_h$, where $g_k \in S^{\deg\(T_k\)}_K$ for each $0 \leq k \leq h$.
+We compute
+\begin{eqnarray*}
+\ev\(\kappa_\tau\)(\phi_i) & = & \sum_{\substack{0 \leq k \leq m, n \geq 0 \\ \beta \in \mathrm{NE}_\NN(X)}} \langle c_1(X) + \sum_{l=0}^h \(1-\cfrac{\deg \alpha_l}{2}\) g_l \alpha_l,\phi_i,\phi_k,\(g_0 \alpha_0 + \dotsb + g_h \alpha_h\)^{\otimes n}\rangle_{0,3+n,\beta}^X \cfrac{\ev\(Q^\beta\)}{n!} \phi^k \\
+& = & \sum_{\substack{0 \leq k \leq m \\ n_0, \dotsc, n_h \geq 0 \\ n_0 + \dotsb + n_h = n \\ \beta \in \mathrm{NE}_\NN(X)}} g_0^{n_0} \dotsm g_h^{n_h} \cfrac{\langle c_1(X),\phi_i,\phi_k, \alpha_0^{\otimes n_0},\dotsc,\alpha_h^{\otimes n_h}\rangle_{0,3+n,\beta}^X}{n_0! \dotsm n_h!} \ev\(Q^\beta\) \phi^k \\
+&  & + \sum_{\substack{0 \leq k \leq m \\ 0 \leq l \leq h \\ n_0, \dotsc, n_h \geq 0 \\ n_0 + \dotsb + n_h = n \\ \beta \in \mathrm{NE}_\NN(X)}} \(1-\cfrac{\deg \alpha_l}{2}\) g_l g_0^{n_0} \dotsm g_h^{n_h} \cfrac{\langle \alpha_l,\phi_i,\phi_k, \alpha_0^{\otimes n_0},\dotsc,\alpha_h^{\otimes n_h}\rangle_{0,3+n,\beta}^X}{n_0! \dotsm n_h!} \ev\(Q^\beta\) \phi^k \\
+& = & \sum_{j=1}^N s_j \left(  \sum_{\substack{0 \leq k \leq m \\ n_0, \dotsc, n_h \geq 0 \\ n_0 + \dotsb + n_h = n \\ \beta \in \mathrm{NE}_\NN(X)}} h^{(j)}_{n_0,\dotsc, n_h, \beta} \cfrac{\langle c_1(X),\phi_i,\phi_k, \alpha_0^{\otimes n_0},\dotsc,\alpha_h^{\otimes n_h}\rangle_{0,3+n,\beta}^X}{n_0! \dotsm n_h!} \phi^k \right.  \\
+&  & \left. + \sum_{\substack{0 \leq k \leq m \\ 0 \leq l \leq h \\ n_0, \dotsc, n_h \geq 0 \\ n_0 + \dotsb + n_h = n \\ \beta \in \mathrm{NE}_\NN(X)}} \(1-\cfrac{\deg \alpha_l}{2}\) h^{(j)}_{l;n_0,\dotsc, n_h, \beta} \cfrac{\langle \alpha_l,\phi_i,\phi_k, \alpha_0^{\otimes n_0},\dotsc,\alpha_h^{\otimes n_h}\rangle_{0,3+n,\beta}^X}{n_0! \dotsm n_h!} \phi^k \right),
+\end{eqnarray*}
+with some elements $h^{(j)}_{n_0,\dotsc, n_h, \beta},h^{(j)}_{l;n_0,\dotsc, n_h, \beta} \in S^*$
+and where
+$$\phi_i \mapsto \langle x,\phi_i,\phi_k, \alpha_0^{\otimes n_0},\dotsc,\alpha_h^{\otimes n_h}\rangle_{0,3+n,\beta}^X \phi^k~,~~x \in \left\lbrace c_1(X),\alpha_l\right\rbrace,$$
+is a morphism of Hodge structures from $H^*(X,\QQ)$ to $H^{*+2}(X,\QQ)\(1\)$.
+Hence, denoting by $\kappa_j$ the morphism within the parentheses, we see that it is a morphism of free $S^\mathrm{even}$-modules and of Hodge structures from $H^*(X,\QQ)_S$ to $H^{*+2}(X,\QQ)_S\(1\)$.
+\end{proof}
+
+
+\begin{dfn}[Spectrum]
+For any $K$-evaluation function $\ev$, we define the \textit{spectrum} as
+$$\Sp^X_{\ev} := \left\lbrace \alpha \in S^*_{K_\ev} ~|~~ \det \(\ev\(\kappa_\tau\) -\alpha\)=0 \right\rbrace \subset S^*_{K_\ev},$$
+where $\tau := T_0 \alpha_0 + \dotsb + T_h \alpha_h$ and $K_\ev$ is the splitting field of the characteristic polynomial of $\ev\(\kappa_\tau\)$.
+For any $\alpha \in S^*_{K_\ev}$, we define
+$$E^X_{\ev,\alpha} := \ker \(\ev\(\kappa_\tau\) -\alpha\)^m \subset H^*(X,K_\ev)_{S_{K_\ev}} ~,~~m>>1.$$
+This is the generalized eigenspace when $\alpha \in \Sp_\ev^X$ and it vanishes otherwise.
+\end{dfn}
+
+
+\begin{rem}[String equation]\label{string}
+For any $K$-evaluation function $\ev$ and any element $f_0 \in S^2_K$, we define the $K$-evaluation function $\ev+f_0 \un_X$ by
+$$x \mapsto \left\lbrace \begin{array}{ll}
+\ev(x) & \mathrm{if} ~ x \in \left\lbrace \mathfrak{q}', {Q'}^{\beta'}, T_1, \dotsc, T_h \right\rbrace , \\
+\ev(T_0)+f_0 & \mathrm{if}~x=T_0.
+\end{array}\right.$$
+From this, we obtain
+\begin{eqnarray*}
+\ev\(\Eu_\tau\) & = & (\ev+f_0 \un_X)\(\Eu_{\tau}\) - f_0 ~ \un_X, \\
+\ev\(\kappa_\tau\) & = & (\ev+f_0 \un_X)\(\kappa_\tau\) - f_0 ~, \\
+\Sp^X_\ev & = & \Sp^X_{\ev+f_0 \un_X}-f_0 ~ \subset S^*_{K_\ev},
+\end{eqnarray*}
+and for any $\alpha \in S^*_{K_\ev}$, we obtain
+$$E^X_{\ev,\alpha} = E^X_{\ev+f_0 \un_X,\alpha+f_0} \subset H^*(X,K_\ev)_{S_{K_\ev}}.$$
+\end{rem}
+
+
+
+\begin{dfn}\label{int}
+For any $K$-evaluation function $\ev$ and any $\alpha \in S^*_{K_\ev}$, we define the following \textit{integers}:
+\begin{eqnarray*}
+\rho^X_{\ev,\alpha} & = & \rk_{S^*_{K_\ev}} \(E^X_{\ev,\alpha} \cap \(H^*(X)^\Hdg \otimes_\QQ S^*_{K_\ev}\)\), \\
+\nu^X_{\ev,\alpha} & = & \rk_{S^*_\CC} \(\(E^X_{\ev,\alpha} \otimes_{K_\ev}\CC\) \cap \(H^{(2)}(X) \otimes_\CC S^*_\CC\)\), \\
+{\nu'}^X_{\ev,\alpha} & = & \rk_{S^*_\CC} \(\(E^X_{\ev,\alpha} \otimes_{K_\ev} \CC\) \cap \(H^{(1)}(X) \otimes_\CC S^*_\CC\)\), \\
+\gamma^X_{\ev,\alpha} & = & \rk_{S^*_{K_\ev}} \(\ev\(\kappa_{\tau}\) -\alpha\)_{|E^X_{\ev,\alpha}}, \\
+\end{eqnarray*}
+where $\tau := T_0\alpha_0+\dotsb+T_h\alpha_h$.
+These integers are zero whenever $\alpha \notin \Sp^X_\ev$.
+
+Furthermore, we say that two $K$-evaluation functions $\ev$ and $\ev'$ are \textit{equivalent}, and we write $\ev \sim \ev'$, when we have a bijection $\Phi \colon \Sp^X_\ev \to \Sp^X_{\ev'}$ such that
+$$\epsilon^X_{\ev,\alpha} = \epsilon^X_{\ev',\Phi(\alpha)}$$
+for any $\alpha \in \Sp^X_\ev$ and each $\epsilon \in \left\lbrace \rho, \nu, \nu', \gamma\right\rbrace$.
+\end{dfn}
+
+\begin{exa}\label{equiv}
+By Remark \ref{string}, we have
+$$\ev \sim \ev+f_0\un_X,$$
+for any $K$-evaluation function $\ev$ and any $f_0 \in S^2_K$.
+
+For any $K$-evaluation function $\ev$ and any non-zero element $\lambda \in F_K$, we have
+$$\ev \sim \lambda \ev.$$
+Indeed, if we write these endomorphisms in the bases $\mathcal{B} = \(\phi_0, \dotsc, \phi_m\)$ and
+$$\mathcal{B}' = \(\lambda^{-\deg(\phi_0)}\phi_0, \dotsc, \lambda^{-\deg(\phi_m)}\phi_m\),$$
+then we obtain $[\ev]^\mathcal{B}_\mathcal{B}=[\lambda\ev]^{\mathcal{B}'}_{\mathcal{B}'}$.
+\end{exa}
+
+\begin{dfn}\label{keys}
+We say that a $K$-evaluation map $\ev \colon R^*_{Z,K} \to S^*_K$ \textit{does not vanish on $Q'$} if for every curve class $\beta \in \mathrm{NE}_\NN(Z)$ we have $\ev({Q'}^\beta) \neq 0$.
+
+	
+\noindent
+We say that the variety $X$ satisfies \textit{Property $\clubsuit_{R^*_{Z,K}}$} if there exists a finite set $\mathcal{S}$ of $K$-evaluation maps such that:
+\begin{itemize}
+\item for any $K$-evaluation map $\ev \colon R^*_{Z,K} \to S^*_K$ that does not vanish on $Q'$ and that is not in $\mathcal{S}$, we have
+$$\nu^X_{\ev,\alpha} = 0 \quad \textrm{or} \quad \rho^X_{\ev,\alpha} \geq 3$$
+for all $\alpha \in \Sp_\ev^X$.
+\end{itemize}
+	
+\noindent
+We say that the variety $X$ satisfies \textit{Property $\coeur_{R^*_{Z,K}}$} if there exists a finite set $\mathcal{S}$ of $K$-evaluation maps such that:
+\begin{itemize}
+\item for any $K$-evaluation map $\ev \colon R^*_{Z,K} \to S^*_K$ that does not vanish on $Q'$ and that is not in $\mathcal{S}$, we have
+$$\nu^X_{\ev,\alpha} = 0 \quad \textrm{or} \quad  {\nu'}^X_{\ev,\alpha} \neq 0 \quad \textrm{or} \quad \gamma^X_{\ev,\alpha} \geq 2$$
+for all $\alpha \in \Sp_\ev^X$.
+\end{itemize}
+\end{dfn}
+
+
+
+
+\begin{lem}\label{incr2}
+Let $\ev_0 \colon R^*_{Z,K} \to S^*_K$ be a $K$-evaluation map and $\ev'_0 \colon R^*(X,K) \to  S^*_K$ be the resulting composition. We denote by $i \colon R^*(X,K) \subset R^*_{X,K}$ the natural inclusion, and we distinguish the formal variables $\mathfrak{q}'_X$ and $\mathfrak{q}'_Z$ associated with $R^*_{X,K}$ and $R^*_{Z,K}$, respectively.
+
+Then, there exists a $K$-evaluation map $\ev''_0 \colon R^*_{X,K} \to S^*_K$ such that $\ev'_0 = \ev''_0 \circ i$ if and only if for any non-zero curve classes $\beta_1, \beta_2 \in \mathrm{NE}_\NN(X)$, we have
+$$\(j(Q^{\beta_1}) = {\mathfrak{q}'}_Z^{j_1} \quad \textrm{and} \quad j(Q^{\beta_2}) = {\mathfrak{q}'}_Z^{j_2}\) \implies j_1 j_2 >0.$$
+\end{lem}
+
+\begin{proof}
+Let $\lambda \in F_K$ be such that $\ev:=\lambda\ev_0$ is normalized.
+By composition, we obtain a morphism $\ev' \colon R^*(X,K) \to S^*_K$, which we aim to extend to $R^*_{X,K}$.
+We have $|\ev'(T_k)| = |\ev(T_k)| <1$
+for each $0 \leq k \leq h$, and $|\ev'(Q^\beta)| = |\ev({Q'}^{j(\beta)}| < 1$
+for any curve class $\beta \in \mathrm{NE}_\NN(X)$ such that $j(\beta) \neq 0$.
+
+Suppose there exist $\beta_1$ and $\beta_2$ such that
+$$j(Q^{\beta_1}) = {\mathfrak{q}'}_Z^{j_1} \quad \textrm{and} \quad j(Q^{\beta_2}) = {\mathfrak{q}'}_Z^{j_2}$$
+with $j_1<0<j_2$.
+Then $|\ev'(Q^{\beta_1})|=|\ev'(Q^{\beta_2})|=1$.
+Consequently, for any $\lambda \in F_K$ with $|\lambda| \neq 1$, one of the values $|\lambda\ev'(Q^{\beta_1})|$ or $|\lambda\ev'(Q^{\beta_2})|$ will strictly exceed $1$, making it impossible to obtain a normalized $K$-evaluation function from $\ev'$.
+
+Now assume that for any $\beta_1$ and $\beta_2$ such that $j(Q^{\beta_1}) = {\mathfrak{q}'}_Z^{j_1}$ and $j(Q^{\beta_2}) = {\mathfrak{q}'}_Z^{j_2}$, the integers $j_1$ and $j_2$ have the same sign.
+We treat the case $j_1, j_2 >0$; the other case is analogous.
+
+We may choose $\eta>0$ sufficiently small to define a $K$-evaluation map $\ev''$ for $X$ by setting $\ev''(\mathfrak{q}'_X):=1$ and $\ev'':=a^\eta \ev'$ on $\left\lbrace Q^{\beta}, T_0, \dotsc, T_h \right\rbrace$.
+Indeed, we choose $\eta>0$ such that
+$$|\ev'(Q^{\beta}|<\epsilon^{\int_{\beta}\omega} < 2^{-\eta |\deg(\beta)|}$$
+for any curve class $\beta \in \mathrm{NE}_\NN(X)$ of negative degree. This is satisfied if
+$$0<\eta \frac{|\deg(\beta)|}{\int_{\beta}\omega }< \eta \max\(1,\frac{|\int_{\beta_1} c_1(X)|}{\int_{\beta_1}\omega}, \dotsc, \frac{|\int_{\beta_l} c_1(X)|}{\int_{\beta_l}\omega}\) <\log_2(\epsilon^{-1}),$$
+%%% J'ai bien vérifié cette inégalité
+where $(\beta_1, \dotsc, \beta_l)$ is the basis defined in the proof of Proposition \ref{conv}.
+Finally, we set
+$$\ev''_0:=2^\eta\lambda^{-1}\ev'' \colon R^*_{X,K} \to S^*_K$$
+which provides the desired factorization $\ev'_0 = \ev''_0 \circ i$.
+\end{proof}
+
+\begin{rem}\label{incr}
+Let $\diamondsuit \in \left\lbrace \clubsuit, \coeur \right\rbrace$.
+If every $K$-evaluation map for the morphism $X \to Z$ satisfy the condition of Lemma \ref{incr2}, then we have
+$$\textrm{Property }\diamondsuit_{R^*_{X,K}} \implies \textrm{Property }\diamondsuit_{R^*_{Z,K}},$$
+because every $K$-evaluation map for $(X \to Z)$ would then induce a $K$-evaluation map for $X$.
+Similarly, for a number field extension $K_1 \subset K_2$, we have
+$$\textrm{Property }\diamondsuit_{R^*_{Z,K_2}} \implies \textrm{Property }\diamondsuit_{R^*_{Z,K_1}}$$
+because every $K_1$-evaluation function $\ev_1$ induces a $K_2$-evaluation function $\ev_2$ by extension of scalars, and we have $\Sp^X_{\ev_1} \subset \Sp^X_{\ev_2}$ and $E^X_{\ev_2,\alpha} = E^X_{\ev_1,\alpha} \otimes_{K_1} K_2$, for any $\alpha \in \Sp^X_{\ev_1}$.
+\end{rem}
+
+
+\subsection{Non-archimedean geometry}\label{nonarchi}
+In this section, we consider a matrix
+$$A := \sum_{N \geq 0} A_N t^N \in \mathrm{Mat}_{n,n}(F_K[[t]])$$
+such that the evaluation
+$$A(\zeta) := \sum_{N \geq 0} A_N \zeta^N \in \mathrm{Mat}_{n,n}(F_K)$$
+is well-defined for all $\zeta \in D(0,1)$.
+Here, $D(\zeta_0,r) \subset F_K$ denotes the open disk of center $\zeta_0 \in F_K$ and radius $r>0$, defined by
+$$\zeta \in D(\zeta_0,r) \iff |\zeta - \zeta_0|<r.$$
+Furthermore, for each $0 \leq i \leq p$, we assume there exists a $\CC$-subspace $H_i \subset \mathrm{Mat}_{n,1}(\CC)$
+such that the module $H_i \otimes_{\CC} F_\CC[[t]]$ is stable under multiplication by $A_\CC$.
+
+\begin{lem}\label{rk}
+The determinant function $\det \colon D(0,1) \to F_K$ is either identically zero or has only finitely many zeros.
+Consequently, the rank function $\rk \colon D(0,1) \to \NN$, given by $\zeta \mapsto \rk(A(\zeta))$, is constant except at finitely many points. That is, there exists a finite set $\mathcal{S} \subset D(0,1)$ such that the restriction $\rk_{|D(0,1)-\mathcal{S}}$ is constant.
+Furthemore, the rank function is lower semi-continuous.
+\end{lem}
+
+\begin{proof}
+The determinant $\det(A)$ is a non-zero power series with coefficients in $F_K$ that converges on the disk $D(0,1)$.
+More generally, any non-zero power series with coefficients in a non-archimedean field that converges on a disk has only finitely many zeros within that disk.
+
+The result concerning the rank function follows from the characterization of the rank as the size of a largest invertible sub-matrix.
+\end{proof}
+
+For any $\zeta \in D(0,1)$, let $\Sp(A(\zeta))$ be the set of eigenvalues of $A$ in $F_{\overline{\QQ}}$.
+
+\begin{lem}\label{eigen}
+There is a finite set $\mathcal{S} \subset D(0,1)$ such that the function
+$$\zeta \mapsto \mathrm{card}\(\Sp(A(\zeta))\)$$
+is constant on $D(0,1) - \mathcal{S}$ and lower semi-continuous on $D(0,1)$.
+Furthermore, for any $\zeta_0 \in D(0,1) - \mathcal{S}$ and any $\alpha_0 \in \Sp(A(\zeta_0))$, there exists a power series $\alpha \in F_{\overline{\QQ}}[[t]]$ that converges in some non-empty open disk $D(\zeta_0,r)$ and satisfies
+$$\alpha(\zeta_0)=\alpha_0 \quad \textrm{and} \quad \alpha(\zeta) \in \Sp(A(\zeta)),$$
+for all $\zeta \in D(\zeta_0,r)$.
+\end{lem}
+
+\begin{proof}
+Since $F[[t]]$ is a unique factorization domain, we can write the characteristic polynomial as
+$$\det\(A(t)-X\) = Q_1(t,X)^{k_1} \dotsm Q_m(t,X)^{k_m} \in F[[t]][X], $$
+where $Q_1, \dotsc, Q_m$ are distinct irreducible polynomials in $F[[t]][X]$.
+We set
+$$P(t,X) := Q_1(t,X) \dotsm Q_m(t,X),$$
+so that $\mathrm{Sp}(A(\zeta)) = \left\lbrace \lambda \in F_{\overline{\QQ}} ~|~~P(\zeta,\lambda)=0 \right\rbrace$.
+We claim there is a finite set $\mathcal{S} \subset D(0,1)$ such that for any $\zeta \in D(0,1)- \mathcal{S}$, the polynomials $Q_1(\zeta,X), \dotsc, Q_m(\zeta,X)$ split with distinct roots in $\overline{\QQ}$, all with algebraic multiplicity one.
+In particular, for any $\zeta \in D(0,1)- \mathcal{S}$ we have
+$$\mathrm{card}\(\Sp(A(\zeta))\) = \deg\(P(t,X)\).$$
+
+To prove the claim, for any $1 \leq i < j \leq m$, we consider the resultant $\mathrm{Res}_{i,j}$ of $Q_i$ and $Q_j$ with respect to $X$.
+Since the resultant is defined as the determinant of a matrix with coefficients in the integral domain $F[[t]]$ and since $Q_i$ and $Q_j$ are distinct irreducible polynomials, $\mathrm{Res}_{i,j}$ is a non-zero element of $F[[t]]$.
+Thus, it has only finitely many zeros in $D(0,1)$.
+
+The main property of the resultant is the following: for any $\zeta \in D(0,1)$, we have $\mathrm{Res}_{i,j}(\zeta)=0$ if and only if there exists $\lambda \in \overline{\QQ}$ such that $Q_i(\zeta,\lambda) = Q_j(\zeta,\lambda)=0$.
+Consequently, the set of such values $\zeta \in D(0,1)$ is finite and the polynomials $Q_i(\zeta,X)$ and $Q_j(\zeta,X)$ have no common roots when $\zeta$ is outside this set.
+
+Similarly, for each $1 \leq i \leq m$, the resultant $\mathrm{Res}_i$ of the polynomials $Q_i$ and $\frac{\partial Q_i}{\partial X}$ is a non-zero element of $F[[t]]$, because $Q_i$ is irreducible.
+It follows that $Q_i(\zeta, X)$ has a multiple root only for finitely many $\zeta \in D(0,1)$, because $\mathrm{Res}_i$ has only finitely many zeroes in $D(0,1)$, and for any $\zeta \in D(0,1)$, $\mathrm{Res}_i(\zeta)=0$ if and only if there exists a multiple root of the polynomial $Q_i(\zeta,X)$ in $\overline{\QQ}$.
+
+Next, we prove the second statement.
+Let $\zeta_0 \in D(0,1) - \mathcal{S}$ and $\alpha_0 \in \Sp(A(\zeta_0))$.
+Since $\alpha_0$ is a simple root of $P(\zeta_0,X)$, we have $P(\zeta_0,\alpha_0)=0$ and $\frac{\partial P}{\partial X}(\zeta_0,\alpha_0) \neq 0$.
+The implicit function theorem for formal power series provides a unique $\alpha \in F_{\overline{\QQ}}[[t-\zeta_0]]$ such that $P(t,\alpha(t)) = 0 \in F[[t]]$.
+
+To check the convergence, assume $\zeta_0 = \alpha_0=0$ without loss of generality.
+Write $P(t,X) = \sum_{p, q \geq 0} c_{p,q} t^pX^q$. The conditions $P(\zeta_0,\alpha_0)=0$ and $\frac{\partial P}{\partial X}(\zeta_0,\alpha_0) \neq 0$ imply $c_{0,0} = 0$ and $c_{0,1} \neq 0$.
+The coefficients $\alpha_n$ of $\alpha(t)$ are determined by the recurrence:
+$$\forall ~ N \geq 1 ~,~~ c_{0,1} \alpha_N + \sum_{\substack{p,q \geq 0 \\ (p,q) \neq (0,1) \\ n_1, \dotsc, n_q \geq 0 \\ p+n_1+\dotsb+n_q = N}} c_{p,q} ~ \alpha_{n_1} \dotsm \alpha_{n_q} = 0.$$
+For instance, the first relations are
+\begin{eqnarray*}
+c_{1,0} + c_{0,1} \alpha_1 & = & 0, \\
+c_{2,0} + c_{1,1} \alpha_1 + c_{0,2} \alpha_1^2 + c_{0,1} \alpha_2 & = & 0.
+\end{eqnarray*}
+Since $P(t,X)$ converges on $D(0,1)$, then we must have $|c_{p,q}| <1$ for any $p,q \geq 0$.
+Hence, we obtain $|\alpha_n|< |c_{0,1}|^{-n}$ for any $n \geq 0$, so that the power series $\alpha(t)$ converges in the disk $D(0,\frac{1}{|c_{0,1}|})$.
+\end{proof}
+
+We denote by $U := D(0,1) - \mathcal{S}$ the complement of the finite set from Lemma \ref{eigen}.
+For any $\zeta \in U$, we                                                          define the function
+$\epsilon_\zeta \colon \Sp(A(\zeta)) \to \NN^{p+2}$ as
+$$\epsilon_\zeta \colon \alpha \mapsto \(\(\dim_{F_\CC} \(\(E(\zeta)_\alpha \otimes_{\overline{\QQ}} \CC\) \cap \(H_i \otimes_\CC F_\CC\)\)\)_{0 \leq i \leq p}, \rk_{F_{\overline{\QQ}}} \(A(\zeta) -\alpha\)_{|E(\zeta)_\alpha}\),$$
+where $E(\zeta)_\alpha \subset \mathrm{Mat}_{n,1}(\overline{\QQ})$ denotes the generalized eigenspace
+$$E(\zeta)_\alpha := \ker\(\(A(\zeta)-\alpha\)^m\) ~,~~m>>1.$$
+For each $\zeta \in U$, we define the image set
+$$\mathcal{A}(\zeta) := \epsilon_\zeta\(\Sp(A(\zeta))\) \subset \NN^{p+2}.$$
+By Lemma \ref{rk}, there exists a finite subset $\mathcal{S}' \subset U$ such that for all $\zeta_1, \zeta_2 \in U-\mathcal{S}'$, we have
+$$\mathcal{A}(\zeta_1) = \mathcal{A}(\zeta_2) \subset \NN^{p+2}.$$
+
+
+\subsection{Blow-up formula}
+Let $X$ be a smooth projective complex variety and $X' \subset X$ be a smooth subvariety of codimension $r \geq 2$.
+We denote by $\widetilde{X} = \mathrm{Bl}_{X'} X$ the blow-up of $X$ at the smooth center $X'$ and by $\mathrm{pr} \colon \widetilde{X} \to X$ the projection map.
+Recall that we have an isomorphism of Hodge structures
+$$H^*(\widetilde{X},\QQ) \simeq H^*(X,\QQ) \oplus \bigoplus_{k=1}^{r-1} H^{*-2k}(X',\QQ)(-k),$$
+given by $\mathrm{pr}^*$ on $X$ and by $i_*\circ \(H_E^{k-1} \cup \) \circ \mathrm{pr}_{|E}^*$ on the summands, where $i \colon E \hookrightarrow \widetilde{X}$ is the embedding of the exceptional divisor and $H_E$ is its hyperplane class.
+Hence, we can fix graded bases $\mathcal{B}$, $\mathcal{B}'$, and $\widetilde{\mathcal{B}}$ of the cohomologies of $X$, $X'$, and $\widetilde{X}$ such that
+$$\widetilde{\mathcal{B}} \simeq \mathcal{B} \sqcup \bigsqcup_{k=1}^{r-1} \mathcal{B}'$$
+under the isomorphism. Similarly, we fix graded bases $\mathcal{H}$, $\mathcal{H}'$, and $\widetilde{\mathcal{H}}$ of the Hodge subspaces such that
+$$\widetilde{\mathcal{H}} \simeq \mathcal{H} \sqcup \bigsqcup_{k=1}^{r-1} \mathcal{H}'.$$
+%%%%%% On ne doit pas imposer $\phi_0=\alpha_0=\un_\widetilde{X}$ ici
+Let $h$ be the dimension of $H^*(\widetilde{X})^\Hdg$ and introduce formal variables $T_0,\dotsc, T_h$ associated to the elements $\alpha_0,\dotsc,\alpha_h$ of the equivalent bases $\widetilde{\mathcal{H}} \simeq \mathcal{H} \sqcup \bigsqcup_{k=1}^{r-1} \mathcal{H}'$.
+
+Following Iritani \cite{Iritani}, we define the integer
+$$s := \left\lbrace \begin{array}{ll}
+2(r-1) & \textrm{if $r$ is odd,} \\
+r-1 & \textrm{if $r$ is even.}
+\end{array}\right.$$
+Iritani introduces a ring
+$$\widehat{R} := \CC[\mathfrak{q}^{\pm1/s}][[Q]],$$
+where $Q$ is the Novikov variable of $X$, equipped with ring maps from the Novikov rings of $X$, $X'$, and $\widetilde{X}$, see \cite[Remark 1.3]{Iritani}.
+Furthermore, as in \cite[line above Lemma 3.1]{Iritani}, we assign the degree of $\mathfrak{q}$ to be
+$$\deg\(\mathfrak{q}\) = 2\(r-1\).$$
+We write $\mathfrak{q}':=\mathfrak{q}^{1/s}$, whose degree is in $\left\lbrace 1,2\right\rbrace$.
+
+\begin{nt}
+We introduce the graded $\QQ$-algebra
+$$\QQ[\mathfrak{q}^{\pm 1/s}][[Q,T_0,\dotsc,T_h]] =:\widehat{R}^*(X,\QQ) = \bigoplus_{n \in \ZZ} \widehat{R}^n(X,\QQ).$$
+Similarly, for any field extension $\QQ \subset K \subset \CC$, we write
+$\widehat{R}^*(X,K) := \widehat{R}^*(X,\QQ) \otimes_\QQ K$.
+By \cite[Equation (1.1)]{Iritani}, we have embeddings of graded $K$-algebras
+\begin{eqnarray*}
+R^*(X,K) \hookrightarrow \widehat{R}^*(X,K) & & Q \mapsto Q, \\
+R^*(\widetilde{X},K) \hookrightarrow \widehat{R}^*(X,K) & & \widetilde{Q}^{\widetilde{\beta}} \mapsto Q^{\mathrm{pr}_*(\widetilde{\beta})} \mathfrak{q}^{-[E] \cdot \widetilde{\beta}},
+\end{eqnarray*}
+where $E$ is the exceptional divisor in $\widetilde{X}$ and $\mathrm{pr} \colon \widetilde{X} \to X$ is the projection.
+In particular, we have
+$$\widetilde{Q}^{l_E} \mapsto \mathfrak{q},$$
+where $l_E$ is the `vertical' line in the exceptional divisor $E$ defined by $l_E = H_E^{r-2}$.
+\end{nt}
+
+
+\begin{lem}\label{ext}
+For each $\diamondsuit \in \left\lbrace \clubsuit, \coeur\right\rbrace$, we have
+\begin{eqnarray*}
+X' ~ \mathrm{ satisfies } ~ \diamondsuit_{\widehat{R}^*(X',K)} & \implies & X' ~ \mathrm{ satisfies } ~ \diamondsuit_{\widehat{R}^*(X,K)}, \\
+\widetilde{X} ~ \mathrm{ satisfies } ~ \diamondsuit_{\widehat{R}^*(\widetilde{X},K)} & \iff & \widetilde{X} ~ \mathrm{ satisfies } ~ \diamondsuit_{\widehat{R}^*(X,K)}.
+\end{eqnarray*}
+\end{lem}
+
+\begin{proof}
+By Remark \ref{incr}, proving the implications $\implies$ requires showing that the condition in Lemma \ref{incr2} is satisfied.
+For the variety $X'$, we have the map
+$${Q'}^{\beta'} \mapsto Q^{i_*(\beta')} \mathfrak{q}^{-\frac{\int_{\beta'} c_1(\cN_i)}{r-1}}$$
+where $\beta' \in \mathrm{NE}_\NN(X')$, $i \colon X' \hookrightarrow X$, and $\cN_i$ its normal bundle, see \cite[Equation 1.1]{Iritani}.
+Since $i_*(\beta') \neq 0$ for any non-zero curve class $\beta' \in \mathrm{NE}_\NN(X')$, the condition of Lemma \ref{incr2} is satisfied.
+Similarly, for the variety $\widetilde{X}$, the map is
+$$\widetilde{Q}^{\widetilde{\beta}} \mapsto Q^{\mathrm{pr}_*(\widetilde{\beta})} \mathfrak{q}^{-[E] \cdot \widetilde{\beta}}.$$
+Since $\mathrm{pr}(\widetilde{\beta}) = 0$ implies that $\widetilde{\beta}$ is a positive multiple of $l_E$, the condition of Lemma \ref{incr2} is again satisfied.
+
+Now consider the implication $\impliedby$.
+Assume that the variety $\widetilde{X}$ satisfies Property $\diamondsuit_{\widehat{R}^*(X,K)}$.
+Let $\ev_0'' \colon R^*_{\widetilde{X},K} \to S^*_K$ be a $K$-evaluation map for $\widetilde{X}$ that does not vanish on $\widetilde{Q}$, and let $\ev'_0:= \ev''_0 \circ i \colon R^*(\widetilde{X},K) \to S^*_K$ be the map obtained by dropping the variable $\widetilde{\mathfrak{q}}$.
+We seek a $K$-evaluation map $\ev_0 \colon \widehat{R}^*(X,K) \to S^*_K$ for the morphism $\widetilde{X}\to X$ inducing the map $\ev'_0$.
+
+Since $\ev'_0(\widetilde{Q}^{l_E}) \neq 0$, we can choose $\lambda \in F_K$ such that $\ev':=\lambda \ev'_0$ satisfies $\ev'(\widetilde{Q}^{l_E})=b^{2r-2}$.
+Our strategy is to first define a $K$-evaluation map $\ev \colon \widehat{R}^*(X,K) \to S^*_K$ inducing the map $\ev'$, and then set $\ev_0:=\lambda^{-1}\ev$.
+To this aim, we have to take
+\begin{eqnarray*}
+\ev(T_k) & = & \ev'(T_k)~,~~\forall~0 \leq k \leq h, \\
+\ev(\mathfrak{q}) & = & b^{2r-2}.
+\end{eqnarray*}
+Furthermore, we have to set
+$$\ev\( Q^\beta \) := \ev' \(\widetilde{Q}^{\widetilde{\beta}+\([E]\cdot \widetilde{\beta}\) l_E}\),$$
+where $\beta \in \mathrm{NE}_\NN(X)$ and $\widetilde{\beta} \in \mathrm{NE}_\NN(\widetilde{X})$ such that $\mathrm{pr}_*(\widetilde{\beta})=\beta$.
+This map is well-defined: if two effective curves $\widetilde{\beta}_1$ and $\widetilde{\beta}_2$ satisfy $\mathrm{pr}_*(\widetilde{\beta}_1)=\mathrm{pr}_*(\widetilde{\beta}_2)$, then $\widetilde{\beta}_2=\widetilde{\beta}_1+k \cdot l_E$ for some $k \in \ZZ$. It follows that $[E]\cdot \widetilde{\beta}_2 = [E] \cdot \widetilde{\beta}_1 + k [E] \cdot l_E$.
+Since $[E]\cdot l_E=-1$, we obtain
+\begin{eqnarray*}
+\widetilde{Q}^{\widetilde{\beta}_2+\([E]\cdot \widetilde{\beta}_2\) l_E} & = & \widetilde{Q}^{\widetilde{\beta}_1+k \cdot l_E+\([E]\cdot (\widetilde{\beta}_1+k \cdot l_E)\) l_E} \\
+& = & \widetilde{Q}^{\widetilde{\beta}_1+\([E]\cdot \widetilde{\beta}_1\) l_E
++k \cdot l_E \(1+[E]\cdot l_E\)} \\
+& = & \widetilde{Q}^{\widetilde{\beta}_1+\([E]\cdot \widetilde{\beta}_1\) l_E}.
+\end{eqnarray*}
+Moreover, this map preserves degrees:
+\begin{eqnarray*}
+\deg\(\mathfrak{q}\) = 2 (r-1) & = & 2 \int_{l_E} c_1(\widetilde{X}) = \deg\(\widetilde{Q}^{l_E}\), \\
+\deg\(Q^\beta\) = 2 \int_{\beta} c_1(X)
+& = & 2 \int_{\widetilde{\beta}} \(c_1(\widetilde{X}) + (r-1) [E]\) \\
+&=& \deg\(\widetilde{Q}^{\widetilde{\beta}+\([E]\cdot \widetilde{\beta}\) l_E}\).
+\end{eqnarray*}
+
+While $\ev$ does not vanish on $Q$ and satisfies the conditions $|\ev(\mathfrak{q})|=1$ and $|\ev(T_k)|<1$ for any $0 \leq k \leq h$, we must consider $|\ev(Q^\beta)|$ for any curve class $\beta \in \mathrm{NE}_\NN(X)$.
+There is a potential issue because
+$$|\ev(Q^\beta)| < 1 \iff |\ev''_0(\widetilde{Q}^{\widetilde{\beta}})| < |\ev''_0(\widetilde{Q}^{l_E})|^{\frac{\deg(\widetilde{Q}^{\widetilde{\beta}})}{2r-2}}$$
+and this latter condition is not guaranteed for an arbitrary evaluation map.
+However, if this condition holds, then $\ev$ is a valid $K$-evaluation map for the morphism $\widetilde{X} \to X$ and so is $\ev_0$, which would conclude the proof.
+Thus, it suffices to show that checking Property $\diamondsuit_{\widehat{R}^*(\widetilde{X},K)}$ on $K$-evaluation maps satisfying this extra condition
+$$|\ev''_0(\widetilde{Q}^{\widetilde{\beta}})| < |\ev''_0(\widetilde{Q}^{l_E})|^{\frac{\deg(\widetilde{Q}^{\widetilde{\beta}})}{2r-2}}$$
+for any curve class $\widetilde{\beta} \in \mathrm{NE}_\NN(\widetilde{X})$ is sufficient.
+
+To do this, we apply the results from Section \ref{nonarchi}.
+We choose a normalized $K$-evaluation map $\ev''_0$ and factor it as
+$$\ev''_0=: \ev''_{0,t} \circ \ev''_{0,Q} \colon R^*(\widetilde{X},K) \to S^*_K[[t]] \to S^*_K$$
+using the geometric structure of the blow-up.
+Indeed, every effective curve class $\widetilde{\beta} \in \mathrm{NE}_\NN(\widetilde{X})$ can be written uniquely as $\widetilde{\beta} = \widetilde{\beta}' + n_{\widetilde{\beta}} l_E$, where $\widetilde{\beta}'$ is the strict transform of the effective curve class $\mathrm{pr}_*(\widetilde{\beta}) \in \mathrm{NE}_\NN(X)$ and $n_{\widetilde{\beta}} \in \NN$.
+We define
+$$\ev''_{0,Q} \colon \widetilde{Q}^{\widetilde{\beta}} \mapsto \ev''_0(\widetilde{Q}^{\widetilde{\beta}'}) ~ t^{n_{\widetilde{\beta}}} \quad \textrm{and} \quad \ev''_{0,t} \colon t \mapsto \ev''_0(\widetilde{Q}^{l_E}).$$
+For any $\zeta \in D(0,1)$, we define a family of evaluation maps $\ev''_\zeta \colon R^*(\widetilde{X},K) \to S^*_K$ by setting $\ev''_\zeta=: \ev''_{\zeta,t} \circ \ev''_{0,Q}$ where $\ev''_{\zeta,t} \colon t \mapsto \zeta$.
+This is a $K$-evaluation function once we set $\ev''_\zeta(x):=\ev''_0(x)$, for each $x \in \left\lbrace \widetilde{q}, T_0, \dotsc, T_h\right\rbrace$.
+Obviously, we have $\ev''_{\ev''_0(\widetilde{Q}^{l_E})}=\ev''_0$.
+
+In the basis $\mathcal{B}_b:=\(\phi_0 b^{\deg(\phi_0)-1}, \dotsc, \phi_m b^{\deg(\phi_m)-1}\)$ of $H^*(\widetilde{X},K)_{S_K}$, the endomorphism $\ev''_{0,Q}(\kappa_\tau)$ yields a matrix
+$$A := [\ev''_{0,Q}(\kappa_\tau)]^{\mathcal{B}_b}_{\mathcal{B}_b} \in \mathrm{Mat}(F_K[[t]]).$$
+Note that by homogeneity and our choice of the basis, the coefficients of the matrix $A$ do not involve the variable $b$.
+For any $\zeta \in D(0,1)$, the matrix
+$$A(\zeta) = \ev''_{\zeta,t}(A) \in \mathrm{Mat}(F_K)$$
+is well-defined.
+By Proposition \ref{span HS}, the endomorphism $\ev''_{0,Q}(\kappa_\tau)$ is in the $K$-linear span of morphisms of Hodge structures and therefore it stabilizes the subspaces $H^*(X)^\Hdg_S$ and $H^{(k)}(X)_{S_\CC}$.
+Thus the matrix $A$ stabilizes the subspaces $H_0:=[H^*(X)^\Hdg_S]_{\mathcal{B}_b}$ and $H_k:=[H^{(k)}(X)_{S_\CC}]_{\mathcal{B}_b}$ of the space of column matrices.
+
+Applying the results of Section \ref{nonarchi}, we find a finite subset $\mathcal{S} \subset D(0,1)$ such that, for any $\zeta_1, \zeta_2 \in D(0,1)-\mathcal{S}$, the numerical condition in Property $\diamondsuit_{\widehat{R}^*(\widetilde{X},K)}$ is satisfied by $\ev''_{\zeta_1}$ if and only if it is satisfied by $\ev''_{\zeta_2}$.
+This concludes the proof.
+\end{proof}
+
+
+
+For any element
+$$\tau \in H^2(\widetilde{X})^\Hdg_{R(X,\QQ)} \simeq \(H^*(X)^\Hdg \oplus \bigoplus_{k=1}^{r-1} H^{*-2k}(X')^\Hdg(-k)\)^{*=2}_{R(X,\QQ)},$$
+we denote by $\widetilde{\kappa}_\tau$ (resp.~$\kappa_\tau$, $\kappa'_\tau$) the endomorphism associated to $\widetilde{X}$ (resp.~$X$, $X'$) by Definition \ref{matrix}.
+Precisely, we have
+$$\widetilde{\kappa}_\tau \in \mathrm{End}_{R(\widetilde{X},\QQ)}\(H^*(\widetilde{X},\QQ)_{R(\widetilde{X},\QQ)}\) \subset \mathrm{End}_{\widehat{R}(X,\QQ)^{\mathrm{even}}}\(H^*(\widetilde{X},\QQ)_{\widehat{R}(X,\QQ)}\)$$
+and the endomorphism given by the direct sum
+$$\(\kappa \oplus \bigoplus_{k=1}^{r-1} \kappa' \)_\tau \in \mathrm{End}_{\widehat{R}(X,\QQ)^{\mathrm{even}}}\(H^*(X,\QQ) \oplus \bigoplus_{k=1}^{r-1} H^{*-2k}(X',\QQ)(-k)\)_{\widehat{R}(X,\QQ)}.$$
+
+\begin{rem}\label{conv ev}
+There is a slight abuse of notation here.
+If we write the element $\tau = f_0 \alpha_0 + \dotsc + f_h \alpha_h$, then there are subsets
+$I_k \subset \left\lbrace 0,\dotsc,h\right\rbrace$
+for $k=0, \dotsc, r-1$ such that $\(\alpha_j\)_{j \in I_k}$ corresponds to the basis of the $k$-th copy of $X'$ (or to $X$ for $k=0$).
+Setting $\tau_k := \sum_{j \in I_k} f_j \alpha_j$, we use the notation
+$$\(\kappa \oplus \bigoplus_{k=1}^{r-1} \kappa'\)_\tau := \kappa_{\tau_0} \oplus \bigoplus_{k=1}^{r-1} \kappa'_{\tau_k}.$$
+\end{rem}
+
+\begin{thm}[Iritani, \cite{Iritani}]\label{Bl}
+Let $K$ be the number field obtained by adding the $s$-th roots of unity, the imaginary unit $\ci$, and the square root $\sqrt{r-1}$.
+Furthermore, let
+$$K' := \left\lbrace \begin{array}{ll}
+K(\pi) & \textrm{if $\dim_\CC(X') \geq 3$,} \\
+K & \textrm{if $\dim_\CC(X') \leq 2$.}
+\end{array}\right. $$
+Then there exist formal power series
+$$f(T_0), \dotsc, f(T_h) \quad \textrm{and} \quad \widetilde{f}(T_0), \dotsc, \widetilde{f}(T_h)$$
+in $\widehat{R}^*(X,K)$, such that the functions $f$ and $\widetilde{f}$ are homogeneous of degree zero and satisfy the following.
+Defining $f$ and $\widetilde{f}$ as the identity on Novikov variables and using Remark \ref{change of variables}, we produce two morphisms of graded $K$-algebras of degree zero:
+\begin{itemize}
+\item $g \colon \widehat{R}^*(X,K) \to \widehat{R}^*(X,K)$, $T_k \mapsto g_k$,
+\item $\widetilde{g} \colon \widehat{R}^*(X,K) \to \widehat{R}^*(X,K)$, $T_k \mapsto \widetilde{g}_k$.
+\end{itemize}
+Then there exist two isomorphisms $\Psi$ and $\widetilde{\Psi}$
+$$\Psi, \widetilde{\Psi} ~~\colon \(H^*(X,K') \oplus \bigoplus_{k=1}^{r-1} H^{*-2k}(X',K')\)_{\widehat{R}(X,K')} \to H^*\(\widetilde{X},K'\)_{\widehat{R}(X,K')}$$
+such that
+\begin{eqnarray*}
+\(\kappa \oplus \bigoplus_{k=1}^{r-1} \kappa' \)_\tau & = & \Psi^{-1} \circ \widetilde{\kappa}_{g(\tau)} \circ \Psi, \\
+\(\kappa \oplus \bigoplus_{k=1}^{r-1} \kappa' \)_{\widetilde{g}(\tau)} & = & \widetilde{\Psi}^{-1} \circ \widetilde{\kappa}_\tau \circ \widetilde{\Psi},
+\end{eqnarray*}
+where $\tau :=T_0 \alpha_0+\dotsb+T_h \alpha_h$.
+Moreover, the isomorphisms $\Psi$ and $\widetilde{\Psi}$ are in the $K'$-span of morphisms of Hodge structures, i.e.~there are finitely many morphisms of free $\widehat{R}(X,\QQ)^{\mathrm{even}}$-modules and of Hodge structures
+$$\Psi_1, \dotsc, \Psi_N \colon \(H^*(X,\QQ) \oplus \bigoplus_{k=1}^{r-1} H^{*-2k}(X',\QQ)\(-k\)\)_{\widehat{R}(X,\QQ)} \to H^*\(\widetilde{X},\QQ\)_{\widehat{R}(X,\QQ)}$$
+such that
+$$\Psi = s_1 \Psi_1 + \dotsb + s_N \Psi_N \textrm{ with $s_1, \dotsc, s_N \in K'$,}$$
+and similarly for $\widetilde{\Psi}$.
+%Furthermore, the restrictions of $\Psi$ and $\widetilde{\Psi}$ to the subspace $H^*(X,K)_{\widehat{R}(X,K)}$ are defined over $\QQ$ and are morphisms of Hodge structures
+%$$H^*(X,\QQ)_{\widehat{R}(X,\QQ)} \hookrightarrow H^*\(\widetilde{X},\QQ\)_{\widehat{R}(X,\QQ)}.$$
+\end{thm}
+
+\begin{proof}
+The proof follows from a careful reading of the paper of Iritani \cite{Iritani}. We provide the necessary details here, following the notation established in that paper.
+
+From Section $2$ through Section $4.1$, all results remain valid when the coefficients $\CC$ are replaced by $\QQ$.
+In particular, the discrete Fourier transform is defined over $\QQ$.
+The first instance where a larger field is required is in Section $4.2$, specifically in Equation $(4.5)$.
+In particular, the continuous Fourier transform is not defined over $\QQ$, and Corollary $4.9$ necessitates an extension of $\QQ$.
+
+In Section $4.3$, the discrete and continuous Fourier transforms are compared.
+Corollary $4.11$ holds with $\QQ$ coefficients because it is eventually phrased in terms of the discrete Fourier transform.
+
+In Section $5$, one may replace $\CC$ with $\QQ$ up to Remark $5.6$.
+At this stage, it is important to note that results concerning $X$ and $\widetilde{X}$ are defined over $\QQ$, whereas results concerning $Z$ are defined over $\CC$.
+
+Moreover, since the Kirwan map in Section $3.6$ is defined using pull-backs, it is a morphism of Hodge structures.
+As a consequence, the maps denoted $\widehat{\mathrm{FT}}_{\widetilde{X}}$ and $\widehat{\mathrm{FT}}_X$ are defined over $\QQ$ and are morphisms of Hodge structures.
+The remaining difficulty lies with the map $\widehat{\mathrm{FT}}_{Z,j}$.
+
+The center $Z$ is responsible for both the fractional powers of $\mathfrak{q}$ and the extension of scalars from $\QQ$.
+However, the continuous Fourier transform does not require the full field of complex numbers.
+From the formulae for $\cF_{F,0}$ near Equation $(4.9)$, for $\Phi(u)$ and for $g(u,\lambda_0)$ in the previous page, and for the quantum Riemann--Roch operator in Equation $(2.24)$, we observe that the operator $\cF_{F,0}$ is defined using only algebraic cycles, $s$-th roots of unity, the imaginary unit $\ci$, and the square root $\sqrt{r-1}$ (note that $c_F=1-r$ for $F=Z$).
+One then defines the continuous Fourier transform $\cF_{F,j}$ by
+$$\cF_{F,j} = {\cF_{F,0}}_{|\mathfrak{q} \mapsto e^{2 \pi \ci j} \mathfrak{q}}\quad \textrm{(for $F=Z$, we have $S_F=\mathfrak{q}$)}.$$
+Note that the notation $e^{2 \pi \ci j}$ is somewhat symbolic here; it should not be replaced by the number $1$ because $\cF_{F,0}$ involves $s$-th roots of $\mathfrak{q}$. It is more precise to write the substitution as $\mathfrak{q}^{1/s} \mapsto e^{2 \pi \ci j/s} \mathfrak{q}^{1/s}$.
+Furthermore, $\mathfrak{q}$ appears only in the term $\lambda_0$ defined after Equation $(4.8)$.
+%The term $e^{-g(u,\lambda_0)}$ in $\cF_{F,0}$ does not change more.
+Attention must be paid to the term
+$$\lambda_0^{\frac{1}{2}-\sum_{\alpha} \(\frac{\rho_\alpha}{z} + \frac{r_\alpha}{2}\)} = \lambda_0^{- \frac{c_1\(\cN_{Z \subset W}\)}{z} - \frac{r}{2}},$$
+where $\cN_{Z \subset W}$ is the normal bundle of the blow-up center $Z$ in the space $W:=\mathrm{Bl}_{Z \times 0} \(X \times \PP^1\)$.
+When rescaling $\mathfrak{q} \mapsto e^{2 \pi \ci j} \mathfrak{q}$ to define $\cF_{F,j}$, one must introduce
+$$e^{\frac{2 \pi \ci j}{r-1} \cdot \(\frac{c_1\(\cN_{Z \subset W}\)}{z} + \frac{r}{2}\)},$$
+and specifically the expansion
+$$\sum_{n \geq 0} \(\frac{2 \pi \ci j}{r-1} \cdot c_1\(\cN_{Z \subset W}\)\)^n \cfrac{z^{-n}}{n!}.$$
+This is an algebraic cycle, but it involves the transcendental number $\pi$.
+For $n=1$, we obtain a divisor class which can be transformed into an $s$-th root of unity via Example \ref{divisor rescaling}; thus only terms with $n \geq 2$ create difficulties.
+
+To summarize, the continuous Fourier transform, and thus the main Theorem $5.18$, holds over the field extension $K(\pi)$, where $K$ is the number field containing $s$-th roots of unity, $\ci$, and $\sqrt{r-1}$.
+Since the continuous Fourier transform involves only algebraic cycles (via the quantum Riemann--Roch operator), it lies in the span of morphisms of Hodge structures after extending coefficients to $K(\pi)$.
+To be precise, the fact that it can be written as a \textit{finite} linear combination of such morphisms follows because $K$ is a finite extension of $\QQ$ and only finitely many powers of $\pi$ are used.
+Let us explain this last statement.
+
+First, the number $\pi^n$ always appears with the variable $z^{-n}$ of degree $-2n$. By Example \ref{divisor rescaling}, we may assume $n \geq 2$.
+In Section $5.8$, $\Psi$ and $\varsigma$ are reconstructed from their initial data at $Q=\widetilde{\tau}=0$.
+By Theorem $5.18$, precisely Equations $(4)$ and $(6)$ there, one observes that $\pi$ appears in $h_{Z,j}$ (see Equation $(5.19)$) and potentially in the $O\(\mathfrak{q}^{-\frac{1}{r-1}}\)$ term.
+The former can be handled by Example \ref{divisor rescaling}.
+For the latter, a degree argument suffices.
+Additionally, regarding $\varsigma^\circ$, one may observe from Equation $(5.45)$ that only the coefficient of $z^{-1}$ appears.
+For $\Psi^\circ$, the $Z$-components are homogeneous of degree $-r$, matching the degree of $q_{Z,j}$, so that the term $O\(\mathfrak{q}^{-\frac{1}{r-1}}\)$ has to be homogeneous of degree $0$.
+Since the degrees of $\mathfrak{q}^{-\frac{1}{r-1}}$  and $z^{-1}$ are both $-2$, a term involving $\pi^n z^{-n}$ for $n \geq 2$ must carry a cohomology class of degree $2(n+1)$.
+Consequently, the power $n$ of $\pi$ is bounded by the complex dimension of the blow-up center $Z$.
+In particular, if $\dim_\CC Z \leq 2$, then the cohomology degree is at most $4$, and $\Psi^\circ$ is defined without $\pi$.
+
+Finally, one uses the first equation on page $62$ to reconstruct $\Psi$ and $\widetilde{\tau}$ from the initial data.
+This equation involves the matrix $M$ (defined over $\QQ$), $\lambda_j$ (requiring $s$-th roots of unity), and the initial data.
+As a consequence, we see that only finitely many powers of $\pi$ are involved in $\Psi$ and $\widetilde{\tau}$, and $\pi$ is not required when $\dim_\CC(Z) \leq 2$.
+In particular, in that case at least, one obtains that the main Theorem $5.18$ holds by working over the number field $K$.
+
+In any case, the isomorphisms $\Psi$ and $\widetilde{\Psi}$ are in the $K'$-span of morphisms of Hodge structures, and the variable changes $g$ and $\widetilde{g}$ are defined over $K$, preserving Hodge classes by Proposition \ref{span HS}.
+\end{proof}
+
+\begin{rem}
+According to Iritani, Theorem \ref{Bl} should hold over the number field $K$ obtained by adjoining $s$-th roots of unity, with $K'=K$ regardless of the dimension.
+\end{rem}
+
+\begin{cor}\label{equality2}
+Assume one of the following:
+\begin{itemize}
+\item let $\ev \colon \widehat{R}^*(X,K) \to S^*_K$ be a $K$-evaluation map and denote by
+$$\widetilde{\ev} \colon \widehat{R}^*(X,K) \to S^*_K$$
+the composition $\ev \circ g$, which is a $K$-evaluation map,
+\item let $\widetilde{\ev} \colon \widehat{R}^*(X,K) \to S^*_K$ be a $K$-evaluation map and denote by
+$$\ev \colon \widehat{R}^*(X,K) \to S^*_K$$
+the composition $\widetilde{\ev} \circ \widetilde{g}$, which is a $K$-evaluation map,
+\end{itemize}
+where $K$ is the number field from Theorem \ref{Bl}, and $g$, $\widetilde{g}$ are the changes of variables defined therein.
+Then there exist two isomorphisms
+$$\textrm{$\Psi$ and $\widetilde{\Psi}$} \quad \colon \(H^*(X,K') \oplus \bigoplus_{k=1}^{r-1} H^{*-2k}(X',K')\)_{S_{K'}} \to H^*\(\widetilde{X},K'\)_{S_{K'}}$$
+such that
+\begin{eqnarray*}
+\ev\(\(\kappa \oplus \bigoplus_{k=1}^{r-1} \kappa' \)_\tau\) & = & \Psi^{-1} \circ \widetilde{\ev}\(\widetilde{\kappa}_\tau\) \circ \Psi, \\
+\ev\(\(\kappa \oplus \bigoplus_{k=1}^{r-1} \kappa' \)_\tau\) & = & \widetilde{\Psi}^{-1} \circ \widetilde{\ev}\(\widetilde{\kappa}_\tau\) \circ \widetilde{\Psi},
+\end{eqnarray*}
+where $\tau :=T_0 \alpha_0+\dotsb+T_h \alpha_h$.
+Moreover, the isomorphisms $\Psi$ and $\widetilde{\Psi}$ lie in the $K'$-span of morphisms of Hodge structures
+$$\(H^*(X,\QQ) \oplus \bigoplus_{k=1}^{r-1} H^{*-2k}(X',\QQ)\(-k\)\)_S \to H^*\(\widetilde{X},\QQ\)_S.$$
+%Furthermore, the restrictions of $\Psi$ and $\widetilde{\Psi}$ to the subspace $H^*(X,K)_{S_K}$ are defined over $\QQ$ and are morphisms of Hodge structures
+%$$H^*(X,\QQ)_S \hookrightarrow H^*\(\widetilde{X},\QQ\)_S.$$
+In particular, we have the following equality in $S^*_{\widetilde{K}}$:
+$$\Sp_{\widetilde{\ev}}^{\widetilde{X}} = \Sp_{\ev_0}^X \cup \bigcup_{1 \leq k <r} \Sp_{\ev_k}^{X'},$$
+where the $K$-evaluation maps $\ev_0$ on $X$ and $\ev_k$ on the $k$-th copy of $X'$ are induced by $\ev$, see Remark \ref{conv ev}, and where $\widetilde{K}$ is a number field containing the number fields $K_{\widetilde{\ev}}$ and $K_{\ev_k}$ for each $0 \leq k \leq r-1$.
+Furthermore, for any $\alpha \in S^*_{\widetilde{K}}$, we obtain the equalities
+$$\epsilon^{\widetilde{X}}_{\widetilde{\ev},\alpha} = \epsilon^{X}_{\ev_0,\alpha} + \sum_{k=1}^{r-1} \epsilon^{X'}_{\ev_k,\alpha}~,~~\textrm{for $\epsilon \in \left\lbrace \rho, \gamma, \nu, \nu' \right\rbrace$.}$$
+\end{cor}
+
+\begin{pro}\label{Bl equiv}
+Let $\diamondsuit \in \left\lbrace \clubsuit, \coeur\right\rbrace$ and let $K$ be a number field containing all $s$-th roots of unity, the imaginary unit $\ci$, and $\sqrt{r-1}$.
+Assume that the blow-up center $X'$ satisfies Property $\diamondsuit_{\widehat{R}^*(X',K)}$.
+Then
+$$\widetilde{X} ~ \textrm{satisfies Property} ~ \diamondsuit_{\widehat{R}^*(\widetilde{X},K)}  \iff  X ~ \textrm{satisfies Property} ~ \diamondsuit_{\widehat{R}^*(X,K)}.$$
+Conversely, if $X'$ does not satisfy Property $\diamondsuit_{\widehat{R}^*(X,K)}$, then $\widetilde{X}$ does not satisfy Property $\diamondsuit_{\widehat{R}^*(\widetilde{X},K)}$.
+\end{pro}
+
+\begin{proof}
+Assume that $X'$ satisfies Property $\diamondsuit_{\widehat{R}^*(X',K)}$, and hence Property $\diamondsuit_{\widehat{R}^*(X,K)}$ by Lemma \ref{ext}, and $X$ satisfies Property $\diamondsuit_{\widehat{R}^*(X,K)}$.
+From the equalities in Corollary \ref{equality2}, it follows that $\widetilde{X}$ also satisfies Property $\diamondsuit_{\widehat{R}^*(X,K)}$.
+Applying Lemma \ref{ext}, we conclude that $\widetilde{X}$ satisfies Property $\diamondsuit_{\widehat{R}^*(\widetilde{X},K)}$.
+	
+
+Conversely, assume either that $X$ fails Property $\diamondsuit_{\widehat{R}^*(X,K)}$ or that $X'$ fails Property $\diamondsuit_{\widehat{R}^*(X,K)}$.
+We treat the first case; the second is analogous.
+
+Consider infinitely many pairs of a $K$-evaluation map $\ev_0$ for $X$ and an eigenvalue $\alpha \in \Sp^{X}_{\ev_0}$ such that
+\begin{itemize}
+\item Case $\diamondsuit=\clubsuit$: we have $\nu^{X}_{\ev_0,\alpha} \neq 0 \quad \textrm{and} \quad \rho^{X}_{\ev_0,\alpha} \leq 2,$
+\item Case $\diamondsuit=\coeur$: we have $\nu^{X}_{\ev_0,\alpha} \neq 0 \quad \textrm{and} \quad  {\nu'}^{X}_{\ev_0,\alpha} = 0 \quad \textrm{and} \quad \gamma^{X}_{\ev_0,\alpha} \leq 1$.
+\end{itemize}
+We choose an arbitrary $K$-evaluation map $\ev'$ for $(X' \to X)$.
+Since the spectrum $\Sp^{X'}_{\ev'}$ is a finite subset of $S^*_K$, there certainly exists a homogeneous element $f_0 \in S^2_K$ such that
+$$\alpha \notin f_0+\Sp^{X'}_{\ev'}=\Sp^{X'}_{\ev'+f_0\un_{X'}},$$
+see Proposition \ref{string}.
+By Remark \ref{conv ev}, combining the $K$-evaluation map $\ev_0$ with $r-1$ copies of the $K$-evaluation map $\ev_k:=\ev'+f_0\un_{X'}$ yields a $K$-evaluation map
+$$\ev \colon \widehat{R}^*(X,K) \to S^*_K.$$
+Corollary \ref{equality2} provides a corresponding $K$-evaluation map
+$$\widetilde{\ev}\colon \widehat{R}^*(X,K) \to S^*_K$$
+for $(\widetilde{X} \to X)$ by taking the composition $\ev \circ g$ and and we find equalities for the numbers $\nu, \nu', \rho$, and $\gamma$, as before.
+Because we have
+$$\alpha \in \Sp_{\widetilde{\ev}}^{\widetilde{X}} \quad ,~~ \alpha \in \Sp_{\ev_0}^{X} \quad \textrm{and} \quad \alpha \notin \Sp^{X'}_{\ev_k},$$
+these equalities reduce to
+$$\nu^{\widetilde{X}}_{\widetilde{\ev},\alpha} = \nu^{X}_{\ev_0,\alpha} \quad \textrm{and} \quad {\nu'}^{\widetilde{X}}_{\widetilde{\ev},\alpha} = {\nu'}^{X}_{\ev_0,\alpha} \quad \textrm{and} \quad \rho^{\widetilde{X}}_{\widetilde{\ev},\alpha} = \rho^{X}_{\ev_0,\alpha} \quad \textrm{and} \quad \gamma^{\widetilde{X}}_{\widetilde{\ev},\alpha} = \gamma^{X}_{\ev_0,\alpha}.$$
+Thus, $\widetilde{X}$ fails Property $\diamondsuit_{\widehat{R}^*(X,K)}$, and then Property $\diamondsuit_{\widehat{R}^*(\widetilde{X},K)}$ by Lemma \ref{ext}.
+\end{proof}
+
+\begin{dfn}[Weak factorization]\label{weak}
+Let $X$ and $Y$ be two birational smooth projective varieties.
+A \textit{weak factorization} between $X$ and $Y$ is a sequence of blow-ups and blow-downs at smooth centers
+$$X=:X_0 \leftrightarrow X_1 \leftrightarrow X_2 \leftrightarrow X_3 \leftrightarrow \dotsc \leftrightarrow X_q:=Y,$$
+where each arrow $X_{i-1} \leftrightarrow X_i$ represents either a blow-up $X_{i-1} \leftarrow X_i$ or a blow-down $X_{i-1} \to X_i$.
+Let $Y_i$ denote the smooth center of the birational map $X_{i-1} \leftrightarrow X_i$.
+Specifically, if $X_{i-1} \leftarrow X_i$, then $X_i = \mathrm{Bl}_{Y_i}(X_{i-1})$; if $X_{i-1} \to X_i$, then $X_{i-1} = \mathrm{Bl}_{Y_i}(X_i)$.
+\end{dfn}
+
+\begin{rem}
+If two smooth projective varieties $X$ and $Y$ are birational, then there exists a weak factorization between them, see \cite{paper81}.
+\end{rem}
+
+\begin{cor}\label{main}
+Let $\diamondsuit \in \left\lbrace \clubsuit, \coeur\right\rbrace$ and let $X$ and $Y$ be two birational smooth projective varieties.
+Define the integer
+$$s_{\max} := \mathrm{lcd}\(1, \dotsc,\dim(X)-1\),$$
+and the number field $\QQ_\ext$ obtained by adjoining all $s_{\max}$-th roots of unity, the imaginary unit $\ci$, and the square roots $\sqrt{2}, \dotsc, \sqrt{\dim(X)-1}$.
+Let $K$ be any number field containing $\QQ_\ext$.
+
+If there exists a weak factorization between $X$ and $Y$ for which all centers $Y_i$ satisfy Property $\diamondsuit_{\widehat{R}^*(Y_i,K)}$, then
+$$X ~ \textrm{satisfies Property} ~ \diamondsuit_{\widehat{R}^*(X,K)}  \iff  Y ~ \textrm{satisfies Property} ~ \diamondsuit_{\widehat{R}^*(Y,K)}.$$
+
+Conversely, if $Y$ satisfies Property $\diamondsuit_{\widehat{R}^*(Y,K)}$ but $X$ does not satisfy Property $\diamondsuit_{\widehat{R}^*(X,K)}$, then there must exist a weak factorization involving at least one blow-up center $Y_i$ that does not satisfy Property $\diamondsuit_{\widehat{R}^*(Y_i,K)}$.
+\end{cor}
+
+
+\begin{rem}\label{equality3}
+Let
+$$X_0 \leftrightarrow X_1 \leftrightarrow X_2 \leftrightarrow X_3 \leftrightarrow \dotsc \leftrightarrow X_q$$
+be a weak factorization with blow-up centers $Y_1, \dotsc, Y_q$.
+Let $\ev_0$ be an evaluation map for $X_0$ and $\alpha \in \Sp^{X_0}_{\ev_0,\alpha}$ an eigenvalue.
+By applying Corollary \ref{equality2} along the weak factorization, we obtain $K$-evaluation maps $\ev_i$ for $X_i$ and $\ev'_{i,k}$ for $(Y_i \to X_j)$, where $1 \leq i \leq q$, $j \in \left\lbrace i-1, i\right\rbrace$ and $1 \leq k < \mathrm{codim}(Y_i)$.
+Specifically, for a map in the direction $X_{i-1} \leftarrow X_i$, we have the freedom to choose the evaluation maps for $Y_i$. We choose them such that the intersection of spectra $\Sp^{X_{i-1}}_{\ev_{i-1}} \cap \bigcap_k \Sp^{Y_i}_{\ev'_{i,k}}$ is empty.
+Consequently, we have
+\begin{itemize}
+\item $\Sp^{X_{i-1}}_{\ev_{i-1}} \sqcup \bigsqcup_k \Sp^{Y_i}_{\ev'_{i,k}} = \Sp^{X_i}_{\ev_i}$ if $X_{i-1} \leftarrow X_i$,
+\item $\Sp^{X_i}_{\ev_i} \cup \bigcup_k \Sp^{Y_i}_{\ev'_{i,k}} = \Sp^{X_{i-1}}_{\ev_{i-1}}$ if $X_{i-1} \to X_i$.
+\end{itemize}
+From this, we deduce that
+$$\epsilon^{X_0}_{\ev_0,\alpha} = \epsilon^{X_q}_{\ev_q,\alpha} + \sum_{(i,k) \in I} \epsilon^{Y_i}_{\ev_{i,k},\alpha},$$
+where $\epsilon \in \left\lbrace \rho, \gamma, \nu, \nu'\right\rbrace$ and $I := \left\lbrace 1 \leq i \leq q, k \in \NN ~|~~X_{i-1} \to X_i \textrm{ and } 1 \leq k \leq \mathrm{codim}_{X_i}Y_i \right\rbrace$, generalizing the final equality of Corollary \ref{equality2}.
+Furthermore, if we have an eigenvalue
+$$\alpha \in \Sp^{X_0}_{\ev_0} \cap \Sp^Z_{\ev_Z}~,~~ \(Z,\ev_Z\) \in \left\lbrace \(Y_i,\ev_{i,k}\)_{(i,k) \in I}, \(X_q,\ev_q\) \right\rbrace,$$
+there exists an embedding $E^Z_{\ev_Z,\alpha} \hookrightarrow E^{X_0}_{\ev_0,\alpha}$
+of $S_{\widetilde{\QQ}_\ext}$-modules, where the number field $\widetilde{\QQ}_\ext$ is large enough to contain the number fields $\QQ_{\ext,\bullet}$ of every $\QQ_\ext$-evaluation maps involved.
+We also have a $\QQ$-basis $(s_1,\dotsc,s_N)$ of the number field $\QQ_\ext$ and morphisms of $S$-modules and Hodge structures
+$$f_1,\dotsc,f_N \colon H^*(Z,\QQ)_S \to H^{*+2k}(X_0,\QQ)_S(k),$$
+where $k=0$ if $\ev_Z=\ev_q$ and $k$ is the index in $\ev_Z=\ev_{i,k}$ otherwise, such that the morphism $f_{\QQ_\ext}:=s_1 f_1 + \dotsb + s_N f_N$ is induced from Corollary \ref{equality2} and its extension $f_{\widetilde{\QQ}_\ext}$ restricted to $E^Z_{\ev_Z,\alpha}$ coincides with the embedding $E^Z_{\ev_Z,\alpha} \hookrightarrow E^{X_0}_{\ev_0,\alpha}.$
+Finally, the morphism
+$$f_{\QQ_\ext} \colon H^*(Z,\QQ_\ext)_{S_{\QQ_\ext}} \to H^{*+2k}(X_0,\QQ_\ext)_{S_{\QQ_\ext}}$$
+satisfies the commutation relation
+$$\ev_0\(\kappa^{X_0}_\tau\) \circ f = f \circ \ev_Z\(\kappa^Z_\tau\).$$
+\end{rem}
+
+
+\section{Examples regarding Property $\clubsuit$}
+\subsection{Basic cases}
+\begin{pro}
+Let $X$ be a point, a curve, a surface with vanishing Hodge number $h^{2,0}=0$, or a projective space $\PP^n$.
+Then, for any number field $K$, the variety $X$ satisfies Properties $\clubsuit_{\widehat{R}^*(X,K)}$.
+\end{pro}
+
+\begin{proof}
+This follows from the fact that $h^{2,0}=0$ in all these cases; consequently, the integer $\nu^X_{\ev,\alpha}$ is always zero.
+\end{proof}
+
+\subsection{Surface with non-negative canonical class}
+\begin{pro}\label{nilp}
+Let $\Sigma$ be a surface with $K_\Sigma \geq 0$.
+Then, for any number field $K$, the variety $\Sigma$ satisfies Property $\clubsuit_{\widehat{R}^*(\Sigma,K)}$.
+\end{pro}
+
+\begin{proof}
+Recall from Example \ref{Knef} that the matrix $\left[\kappa_\tau-f_0\right]^{\mathcal{B}}_{\mathcal{B}}$ is nilpotent.
+Thus, for any $K$-evaluation map $\ev$, we have
+\begin{eqnarray*}
+\Sp^\Sigma_{\ev-\ev(T_0)} & = & \left\lbrace 0 \right\rbrace, \\
+E^\Sigma_{{\ev-\ev(T_0)}, 0} & = & H^*(\Sigma,K)_{S_K}.
+\end{eqnarray*}
+As a consequence, we obtain
+$$\rho^\Sigma_{\ev,\ev(T_0)} = \rho^\Sigma_{\ev-\ev(T_0),0} \geq 3,$$
+since $H^*(\Sigma,\CC)$ contains at least the Hodge classes $\un_\Sigma, H$, and $H^2$.
+\end{proof}
+
+
+\subsection{Low dimension}
+\begin{pro}\label{two}
+Every smooth projective variety $X$ of dimension at most $2$ satisfies Property $\clubsuit_{\widehat{R}^*(X,K)}$ for any number field $K$ containing the imaginary unit $\ci$.
+\end{pro}
+
+\begin{proof}
+It remains to verify the case of a surface $X$ with $h^{2,0} \neq 0$.
+Such a surface is birational to a surface $\Sigma$ with $K_\Sigma \geq 0$, which satisfies Property $\clubsuit_{\widehat{R}^*(\Sigma,K)}$ by Proposition \ref{nilp}.
+Since all blow-up centers in a weak factorization between $X$ and $S$ are points, they satisfy Property $\clubsuit_{\widehat{R}^*(\pt,K)}$.
+Therefore, the result follows from Corollary \ref{main}, where $\QQ_\ext=\QQ(\ci)$.
+\end{proof}
+
+
+\begin{cor}\label{rat}
+Every rational smooth projective complex variety $X$ of dimension at most $4$ satisfies Property $\clubsuit_{\widehat{R}^*(X,K)}$ for any finite field $K$ containing $\QQ(e^{2\ci \pi/6}, \sqrt{2}, \sqrt{3})$.
+\end{cor}
+
+\begin{proof}
+Consider a weak factorization between $X$ and $\PP^n$.
+All blow-up centers $Y_i$ have dimension at most two, and thus satisfy Property $\clubsuit_{\widehat{R}^*(Y_i,K)}$ by Proposition \ref{two}.
+Since $\PP^n$ also satisfies Property $\clubsuit_{\widehat{R}^*(\PP^n,K)}$, the claim follows from Corollary \ref{main} with $\QQ_\ext = \QQ(e^{2\ci \pi/6}, \sqrt{2}, \sqrt{3})$.
+\end{proof}
+
+
+
+\subsection{Cubic fourfold}
+Let $X$ be a cubic fourfold.
+Its Hodge diamond decomposes into an ambient part, pulled back from $\PP^5$, and a primitive part.
+We choose a basis $\mathcal{B}$ of $H^*(X,\QQ)$ and a basis $\mathcal{H}$ of $H^*(X)^\Hdg$ that respect this direct sum.
+The main theorem in \cite{KKPY} is the following.
+
+\begin{thm}
+A very general cubic fourfold $X$ is not rational.
+\end{thm}
+
+\begin{proof}
+Let $X$ be a very general cubic fourfold, such that it has no Hodge classes in the primitive part of its cohomology.
+Then $H^*(X)^\Hdg = H^*(X)^\mathrm{amb}$, which has dimension $5$.
+
+For any $\zeta \in D(0,1)$, let $\ev \colon \widehat{R}^*(X,\QQ) \to S^*$ be the $\QQ$-evaluation map defined by
+$$\ev(\mathfrak{q}')=b^{\deg(\mathfrak{q}')}~,~~\ev(Q)= \zeta^3 b^6 ~,~~ \textrm{and} \quad \ev(T_k) = 0,$$
+for each $0 \leq k \leq h$.
+%This map is well-defined because elements in $R^*(X,\QQ)$ are polynomials in $Q$.
+
+Following Example \ref{Givental}, the matrix $\ev\(\kappa_\tau\)$ vanishes on the primitive part and has the following eigenvalues on the ambient part:
+\begin{itemize}
+\item $0$ with algebraic multiplicity $2$,
+\item $9 \zeta b^2$, $9e^{2 \ci \pi/3} \zeta b^2$, $9e^{-2 \ci \pi/3}\zeta b^2$, each with algebraic multiplicity $1$.
+\end{itemize}
+Thus, for the eigenvalue $\alpha=0$, we obtain
+$$\rho^X_{\ev, 0} = 2 \quad \textrm{and} \quad \nu^X_{\ev, 0}=1.$$
+This contradicts Property $\clubsuit_{\widehat{R}^*(X,\QQ)}$.
+By Remark \ref{incr}, it also contradicts Property $\clubsuit_{\widehat{R}^*(X,K)}$ for any number field $K$.
+By Corollary \ref{rat}, we conclude that $X$ cannot be rational.
+\end{proof}
+
+
+\section{Examples regarding Property $\coeur$}
+\subsection{Basic cases}
+\begin{pro}\label{basic}
+Let $X$ be a point, a curve, a surface with vanishing Hodge number $h^{2,0}=0$, or a projective space $\PP^n$.
+Then, for any number field $K$, the variety $X$ satisfies Properties $\coeur_{\widehat{R}^*(X,K)}$.
+\end{pro}
+
+\begin{proof}
+This follows from the fact that $h^{2,0}=0$ in all these cases; consequently, the integer $\nu^X_{\ev,\alpha}$ is always zero.
+\end{proof}
+
+\subsection{Surface with non-negative canonical class}
+\begin{pro}\label{abel}
+Every abelian surface $\Sigma$ satisfies Property $\coeur_{\widehat{R}^*(\Sigma,K)}$ for any number field $K$.
+\end{pro}
+
+\begin{proof}
+Since $K_\Sigma \geq 0$, we recall from the proof of Proposition \ref{nilp} (and Example \ref{Knef}) that for any $K$-evaluation map $\ev$, we have
+\begin{eqnarray*}
+\Sp^\Sigma_\ev & = & \left\lbrace \ev(T_0) \right\rbrace, \\
+E^\Sigma_{\ev, \ev(T_0)} & = & H^*(\Sigma,K)_{S_K}.
+\end{eqnarray*}
+In particular, since $H^{1,0}(\Sigma,\CC) \neq 0$, it follows that ${\nu'}^\Sigma_{\ev,\ev(T_0)} \neq 0$.
+\end{proof}
+
+
+\begin{pro}
+Every surface $\Sigma$ such that
+$K_\Sigma \geq 0$ and $c_1(\Sigma) \neq 0$
+satisfies Property $\coeur_{\widehat{R}^*(\Sigma,K)}$ for any number field $K$.
+\end{pro}
+
+\begin{proof}
+Since $K_\Sigma \geq 0$, we have
+\begin{eqnarray*}
+\Sp^\Sigma_\ev & = & \left\lbrace \ev(T_0) \right\rbrace, \\
+E^\Sigma_{\ev, \ev(T_0)} & = & H^*(\Sigma,K)_{S_K},
+\end{eqnarray*}
+for any $K$-evaluation map $\ev$ as before.
+In Example \ref{Knef}, we computed the matrix $\left[\kappa_\tau-f_0\right]^{\mathcal{B}}_{\mathcal{B}}$, which takes the form
+$$
+\begin{pmatrix}
+0&0&0&0&0\\
+0&0&0&0&0\\
+E&0&0&0&0\\
+0&U&0&0&0\\
+-T_h& 0&F &0&0
+\end{pmatrix},
+$$
+where the blocks correspond to cohomology degrees and $U$ is a square matrix. Here,
+$$E= \begin{pmatrix}
+0\\
+\vdots \\
+0 \\
+\delta_{c_1(\Sigma)\neq 0}\\
+\end{pmatrix} ~, \quad \textrm{and} \quad
+F= \begin{pmatrix}
+\int_\Sigma c_1(\Sigma) \cup \phi_{N_1+1} & \dotsc & \int_\Sigma c_1(\Sigma) \cup \phi_{N_2} \\
+\end{pmatrix}.
+$$
+Given the assumption $c_1(\Sigma) \neq 0$ and the fact that the pairing is perfect, the sub-matrices $E$ and $F$ are non-zero.
+Since these matrices have coefficients in $K$, we obtain
+$$\ev(E)=E \textrm{ and } \ev(F)=F.$$
+Thus, the rank of $\ev\(\left[\kappa_\tau-f_0\right]^{\mathcal{B}}_{\mathcal{B}}\)$ is at least $2$ for any $K$-evaluation map.
+Consequently, we obtain 
+$$\gamma^\Sigma_{\ev,\ev(T_0)} = \gamma^\Sigma_{\ev-\ev(T_0),0} \geq 2,$$
+and $\Sigma$ satisfies Property $\coeur_{\widehat{R}^*(\Sigma,K)}$.
+\end{proof}
+
+\begin{cor}\label{K3}
+If a surface $\Sigma$ with $K_\Sigma \geq 0$ fails Property $\coeur_{\widehat{R}^*(\Sigma,K)}$ for some number field $K$, then $\Sigma$ must satisfy
+$$c_1(K_\Sigma)=0 ~,~~h^{2,0}(\Sigma) \neq 0 ~, ~~h^1(\Sigma,\CC)=0.$$
+Furthermore, such a surface never satisfies Property $\coeur_{\widehat{R}^*(Z,\QQ)}$ for any $(\Sigma \to Z)$.
+\end{cor}
+
+\begin{proof}
+If $\Sigma$ is a surface with $K_\Sigma \neq 0$ failing Property $\coeur_{\widehat{R}^*(\Sigma,K)}$, the previous Proposition implies $c_1(K_\Sigma)=0$.
+Furthermore, we must have $h^{2,0}(\Sigma) \neq 0$ and $h^1(\Sigma,\CC)=0$ because there is only one eigenvalue and we require $\nu \neq 0$ and $\nu'=0$.
+
+
+Conversely, let $\Sigma$ be a surface with $c_1(K_\Sigma)=0$, $h^{2,0}(\Sigma) \neq 0$, and $h^1(\Sigma,\CC)=0$.
+Since $c_1(\Sigma)=0$, the matrix $\left[\kappa_\tau-f_0\right]^{\mathcal{B}}_{\mathcal{B}}$ reduces to
+$$
+\begin{pmatrix}
+0&0&0\\
+0&0&0\\
+-T_h&0&0
+\end{pmatrix},
+$$
+where the blocks correspond to $H^0(\Sigma,\QQ)$, $H^2(\Sigma,\QQ)$, and $H^4(\Sigma,\QQ)$.
+The matrix $\ev\(\left[\kappa_\tau-f_0\right]^{\mathcal{B}}_{\mathcal{B}}\)$ has rank at most one, depending on the value of $\ev(T_h)$.
+Thus, for any $(\Sigma \to Z)$ and any $\QQ$-evaluation map $\ev \colon \widehat{R}^*(Z,\QQ) \to S^*$, we find
+$$\gamma^\Sigma_{\ev, \ev(T_0)} \leq 1 ~,~~ \nu^\Sigma_{\ev, \ev(T_0)}=h^{2,0}(\Sigma) = 1 ~,~~ {\nu'}^\Sigma_{\ev, \ev(T_0)}=h^{1,0}(\Sigma)=0,$$
+contradicting Property $\coeur_{\widehat{R}^*(Z,\QQ)}$.
+\end{proof}
+
+\begin{rem}\label{K3rem}
+Let $\Sigma$ be a minimal surface with
+$$c_1(K_\Sigma)=0 ~,~~h^{2,0}(\Sigma) \neq 0 ~, ~~h^1(\Sigma,\CC)=0.$$
+The Kodaira dimension of $\Sigma$ cannot be $-\infty$ (since $h^{2,0}(\Sigma) \neq 0$) or $2$ (since $c_1(K_\Sigma)=0$).
+If the Kodaira dimension of $\Sigma$ is $0$, $\Sigma$ must be a K3 surface because $h^{2,0}(\Sigma) \neq 0$ and $h^1(\Sigma,\CC)=0$.
+
+If the Kodaira dimension of $\Sigma$ is $1$, $\Sigma$ is an elliptic surface $f \colon \Sigma \to B$ over a smooth curve $B$.
+%The canonical bundle $K_S$ is then a pull-back from $B$, and since its first Chern class vanishes, its degree must be zero.
+%It is of the form
+%$$K_S = f^*(K_B+B_B+M_B),$$
+%where the degrees of $B_B$ and $M_B$ are non-negative.
+%Therefore, the degree of $K_B$ must be non-positive, so that $B$ is either $\PP^1$ or an elliptic curve (in which case $M_B$ must be zero and thus $f$ must be isotrivial).
+%
+By the Leray spectral sequence, $h^1(B,\CC) \neq 0$ implies $h^1(\Sigma,\CC) \neq 0$, so $B = \PP^1$.
+Furthermore, an elliptic surface over $\PP^1$ with $h^{2,0}=1$ is necessarily a K3 elliptic surface.
+%%%%%%%%%%%%%%%%%%%%%%, see \cite{}.
+\end{rem}
+
+\subsection{Other surfaces}
+\begin{pro}\label{mini}
+Let $K$ be a number field containing $\QQ(\ci)$.
+A surface $\Sigma$ fails Property $\coeur_{\widehat{R}^*(\Sigma,K)}$ if and only if its minimal model $\Sigma'$ satisfies
+$$c_1(K_{\Sigma'})=0 ~,~~h^{2,0}(\Sigma') \neq 0 ~, ~~h^1(\Sigma',\CC)=0.$$
+\end{pro}
+
+
+\begin{proof}
+This follows from Corollaries \ref{K3} and \ref{main} (where $\QQ_\ext=\QQ(\ci)$).
+By choosing a weak factorization between $\Sigma$ and its minimal model $\Sigma'$, we observe that all blow-up centers are points, which necessarily satisfy Property $\coeur_{\widehat{R}^*(\pt,K)}$.
+\end{proof}
+
+
+\begin{pro}\label{mini2}
+Let $\Sigma$ be a surface whose minimal model $\Sigma'$ satisfies
+$$c_1(K_{\Sigma'})=0 ~,~~h^{2,0}(\Sigma') \neq 0 ~, ~~h^1(\Sigma',\CC)=0.$$
+Let $\ev$ be a $\QQ(\ci)$-evaluation map and $\alpha \in \Sp^\Sigma_\ev$ be such that
+$$\gamma^\Sigma_{\ev,\alpha} <2 ~, \quad \nu^\Sigma_{\ev,\alpha} \neq 0 \quad \textrm{and} \quad  {\nu'}^\Sigma_{\ev,\alpha} = 0.$$
+Then there exist a number field extension $\QQ(\ci) \subset \widetilde{\QQ}(\ci)$ and an embedding of free $S^\mathrm{even}_{\widetilde{\QQ}(\ci)}$-modules
+$$H^*(\Sigma',\widetilde{\QQ}(\ci))_{S_{\widetilde{\QQ}(\ci)}} \hookrightarrow E^\Sigma_{\ev,\alpha},$$
+that is in the linear span of Hodge structures from $H^*(\Sigma',\QQ)_S$ to $H^*(\Sigma,\QQ)_S$.
+%In particular, if $h^{2,0}(\Sigma) \leq 1$, then
+%$$h^{2,0}(\Sigma) = h^{2,0}(\Sigma') = 1$$
+%and $\Sigma'$ is a K3 surface.
+\end{pro}
+
+\begin{proof}
+Consider the number field $\QQ_\ext = \QQ(\ci)$ as in Corollary \ref{main}, and let
+$$\Sigma=:X_0 \leftrightarrow X_1 \leftrightarrow X_2 \leftrightarrow X_3 \leftrightarrow \dotsc \leftrightarrow X_q:=\Sigma'$$
+be a weak factorization between $\Sigma$ and its minimal model $\Sigma'$ with blow-up centers $Y_1, \dotsc, Y_q$.
+From Remark \ref{equality3}, we have the equality
+$$\nu^\Sigma_{\ev,\alpha} = \nu^{\Sigma'}_{\ev_q,\alpha} + \sum_{i,k} \nu^{Y_i}_{\ev_{i,k},\alpha}.$$
+Since all blow-up centers are points, they have no $h^{2,0}$, so $\nu^{Y_i}_{\ev_{i,k},\alpha} =0$.
+Therefore, $\nu^{\Sigma'}_{\ev_q,\alpha} \neq 0$, which implies $\alpha \in \Sp^\Sigma_\ev \cap \Sp^{\Sigma'}_{\ev_q}$.
+By Remark \ref{equality3}, there exist morphisms of free $S^{\mathrm{even}}$-modules and of Hodge structures
+$f_k \colon H^*(\Sigma',\QQ)_S \to H^*(\Sigma,\QQ)_S~,~~1 \leq k \leq N,$
+such that
+$$\(s_1f_1+\dotsb+s_Nf_N\) \colon H^*(\Sigma',\widetilde{\QQ}(\ci))_{S_{\widetilde{\QQ}(\ci)}} = E^{\Sigma'}_{\ev_q,\alpha} \hookrightarrow E^\Sigma_{\ev,\alpha},$$
+where $(s_1, \dotsc, s_N)$ is a $\QQ$-basis of the number field $\widetilde{\QQ}(\ci)$.
+%Regarding Hodge numbers, this embedding implies $h^{2,0}(\Sigma') \leq h^{2,0}(\Sigma)$. Given the assumptions $h^{2,0}(\Sigma) \leq 1$ and $h^{2,0}(\Sigma') \neq 0$, we deduce that $h^{2,0}(\Sigma')=1$. By Remark \ref{K3rem}, it follows that $\Sigma'$ is a K3 surface.
+\end{proof}
+
+
+\subsection{Cubic fourfolds}
+Let $X$ be a cubic fourfold.
+Its Hodge diamond decomposes into an ambient part, pulled back from $\PP^5$, and a primitive part.
+
+\begin{pro}\label{no coeur}
+A cubic fourfold $X$ fails Property $\coeur_{\widehat{R}^*(X,\QQ)}$.
+\end{pro}
+
+\begin{proof}
+Let $X$ be a cubic fourfold, and for any $\zeta \in D(0,1)$, let $\ev \colon \widehat{R}^*(X,\QQ) \to S^*$ be the $\QQ$-evaluation map defined by
+$$\ev(\mathfrak{q}')=b^{\deg(\mathfrak{q}')}~,~~\ev(Q)= \zeta^3 b^6 ~,~~ \textrm{and} \quad \ev(T_k) = 0,$$
+for each $0 \leq k \leq h$.
+
+Following Example \ref{Givental}, we deduce that the endomorphism $\ev\(\kappa_\tau\)$ vanishes on the primitive part and has the following eigenvalues on the ambient part:
+\begin{itemize}
+\item $0$ with algebraic multiplicity $2$,
+\item $9 \zeta b^2$, $9e^{2 \ci \pi/3} \zeta b^2$, $9e^{-2 \ci \pi/3} \zeta b^2$, each with algebraic multiplicity $1$.
+\end{itemize}
+Furthermore, the matrix representing the action on the ambient part of the generalized eigenspace for the eigenvalue 0 is conjugate over $\QQ$ to the Jordan block
+$$\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}.
+$$
+Since this submatrix has coefficient in $\QQ$, its evaluation is simply the matrix itself, which has rank one.
+Consequently, for the eigenvalue $\alpha=0$, we obtain
+$$\gamma^X_{\ev, 0} = 1 ~, \quad \nu^X_{\ev, 0}=1~, \quad \textrm{and} \quad {\nu'}^X_{\ev, 0}=0.$$
+This contradicts Property $\coeur_{\widehat{R}^*(X,\QQ)}$.
+\end{proof}
+
+
+\begin{thm}\label{rat cubic K3}
+If $X$ is a rational cubic fourfold, then there exists a projective K3 surface $\Sigma$ and an isomorphism of Hodge structures
+$$H^4(X,\QQ)_\mathrm{primitive} \simeq H^2(\Sigma,\QQ)(-1).$$
+\end{thm}
+
+\begin{proof}
+Consider a weak factorization
+$$X=:X_0 \leftrightarrow X_1 \leftrightarrow X_2 \leftrightarrow X_3 \leftrightarrow \dotsc \leftrightarrow X_q:=\PP^4,$$
+with blow-up centers $Y_1,\dotsc,Y_q$ as in Definition \ref{weak}, and let $\QQ_\ext := \QQ(e^{2\ci \pi/6}, \sqrt{2}, \sqrt{3})$ be the number field relevant for Corollary \ref{main}.
+
+For any $\zeta \in D(0,1)$, let $\ev_0$ be the $\QQ$-evaluation map from the proof of Proposition \ref{no coeur}, and let $\alpha=0 \in \Sp^X_{\ev_0}$, so that
+$$\gamma^X_{\ev_0, 0} = 1~, \quad \nu^X_{\ev_0, 0}=1~, \quad \textrm{and} \quad {\nu'}^X_{\ev_0, 0}=0.$$
+Following Remark \ref{equality3}, we choose a number field extension $\widetilde{\QQ}_\ext$ large enough so that, for every $\QQ_\ext$-evaluation map $\ev$ involved in the weak factorization, the characteristic polynomial of $\ev(\kappa_\tau)$ is split.
+Take a $\QQ$-basis $(s_1,\dotsc, s_N)$ of $\widetilde{\QQ}_\ext$.
+Then by Remark \ref{equality3} we have
+$$\epsilon^X_{\ev_0,\alpha} = \epsilon^{\PP^4}_{\ev_q,\alpha} + \sum_{(i,k) \in I} \epsilon^{Y_i}_{\ev_{i,k},\alpha}~, \quad \epsilon \in \left\lbrace \gamma, \nu, \nu'\right\rbrace.$$
+Since $H^{2,0}(\PP^4)=0$, we have $\nu^{\PP^4}_{\ev_q,\alpha}=0$.
+Given $\nu^X_{\ev, \alpha}=1$, there must exist a pair $(i,k) \in I$ such that $\nu^{Y_i}_{\ev_{i,k},\alpha} = 1$.
+This implies
+$\alpha \in \Sp^X_{\ev_0} \cap \Sp^{Y_i}_{\ev_{i,k}}$.
+Furthermore, we must have
+$${\nu'}^{Y_i}_{\ev_{i,k},\alpha} = 0 \quad \textrm{and} \quad \gamma^{Y_i}_{\ev_{i,k},\alpha} <2,$$
+because it is true for $X$, so $Y_i$ fails Property $\coeur_{\widehat{R}^*(Y_i,\QQ_\ext)}$.
+By Propositions \ref{basic} and \ref{mini}, $Y_i$ is a surface whose minimal model $\Sigma$ satisfies $c_1(K_\Sigma)=0$, $h^{2,0}(\Sigma) \neq 0$, and $h^1(\Sigma,\CC)=0$.
+
+Combining Proposition \ref{mini2} and Remark \ref{equality3}, we obtain $N$ morphisms of $S$-modules and of Hodge structures
+$$f_1, \dotsc, f_N \colon H^*(\Sigma,\QQ)_S(-1) \to H^{*+2}(X,\QQ)_S$$
+such that the morphism
+$$f := s_1f_1+ \dotsb + s_N f_N$$
+is the composition of embeddings
+$$H^*(\Sigma,\widetilde{\QQ}_\ext)_{S_{\widetilde{\QQ}_\ext}} \hookrightarrow E^{Y_i}_{\ev_{i,k},\alpha} \hookrightarrow E^X_{\ev_0,\alpha} \subset H^{*+2}(X,\widetilde{\QQ}_\ext)_{S_{\widetilde{\QQ}_\ext}}.$$
+%%% The number field $\widetilde{\QQ}_\ext$ should also contain all $K_\bullet$ for evaluation maps involved in every weak factorizations from every surface blow-up center to its minimal model. This is a finite extension anyway.
+Furthermore, $\Sigma$ is a K3 surface because $h^{3,1}(X)=1$ and thus $h^{2,0}(\Sigma) = 1$, see Remark \ref{K3rem}.
+Since $\ev_0$ is defined over $\QQ$, Example \ref{Givental} implies
+$$E^X_{\ev_0,\alpha} = P^*_S \oplus H^*(X,\QQ)_{\mathrm{primitive},S},$$
+where we set
+$$w_3 := H^3-21 a^3b^6~,~~w_4 := H^4-6 a^3b^6H~,~~P^*_S:= S \cdot \langle w_3, w_4 \rangle \subset H^*(X,\QQ)_S,$$
+with $H$ the hyperplane class in $X$.
+
+\begin{lem}\label{sub}
+For each $1 \leq k \leq N$, the morphism $f_k$ of $S$-modules and of Hodge structures satisfies
+$$f_k \colon H^*(\Sigma,\QQ)_S(-1) \to P^{*+2}_S \oplus H^{*+2}(X,\QQ)_{\mathrm{primitive},S}.$$
+\end{lem}
+
+\begin{proof}
+Let $\bar{f}, \bar{f}_1, \dotsc, \bar{f}_N$ be the projections of $f, f_1, \dotsc, f_N$ onto the ambient cohomology of $X$.
+Recall that the image of $\bar{f}$ lands in $P^*_{S_{\widetilde{\QQ}_\ext}}$.
+We aim to show that for each $1 \leq k \leq N$ the image of $\bar{f}_k$ lies in $P^*_S$.
+
+Consider the basis $\(H^0, \dotsc, H^4\)$ of $H^*(X,\QQ)_{\mathrm{ambient}}$ and a graded basis $\(e_1,\dotsc, e_m\)$ of $H^*(\Sigma,\QQ)$.
+We write
+$$\bar{f}_k(e_j) = \sum_{i=0}^4 \zeta^{(k)}_{i,j} b^{\deg(e_j)+2-2i} H^i ~,~~ \zeta^{(k)}_{i,j} \in F.$$
+Recalling that $\bar{f} = s_1 \bar{f}_1 + \dotsb + s_N \bar{f}_N$ and that the image of $\bar{f}$ lies in $P^*_{S_{\widetilde{\QQ}_\ext}}$, then for each $1 \leq j \leq m$, there exist $x_j,y_j \in S_{\widetilde{\QQ}_\ext}$ such that
+$$\sum_{\substack{1 \leq k \leq N \\ 0 \leq i \leq 4}} s_k \zeta^{(k)}_{i,j} b^{\deg(e_j)+2-2i} H^i = x_j w_3 + y_j w_4.$$
+By identifying the components of $H^0, \dotsc, H^4$ on both sides, we obtain
+\begin{eqnarray*}
+\sum_{1 \leq k \leq N} s_k \zeta^{(k)}_{0,j} b^{\deg(e_j)+2} & = & -21 a^3b^6 x_j, \\
+\sum_{1 \leq k \leq N} s_k \zeta^{(k)}_{1,j} b^{\deg(e_j)} & = & -6 a^3b^6y_j, \\
+\sum_{1 \leq k \leq N} s_k \zeta^{(k)}_{2,j} b^{\deg(e_j)-2} & = & 0, \\
+\sum_{1 \leq k \leq N} s_k \zeta^{(k)}_{3,j} b^{\deg(e_j)-4} & = & x_j, \\
+\sum_{1 \leq k \leq N} s_k \zeta^{(k)}_{4,j} b^{\deg(e_j)-6} & = & y_j.
+\end{eqnarray*}
+By combining the first and the fourth equations, and the second and the fifth equations, and using that $\(s_1, \dotsc, s_N\)$ is a basis of $\widetilde{\QQ}_\ext$ over $\QQ$, we obtain
+\begin{eqnarray*}
+\(21 a^3 \zeta^{(k)}_{3,j} + \zeta^{(k)}_{0,j}\) & = & 0, \\
+\(6 a^3 \zeta^{(k)}_{4,j} + \zeta^{(k)}_{1,j}\) & = & 0, \\
+\zeta^{(k)}_{2,j} & = & 0, \\
+\end{eqnarray*}
+for each $1 \leq k \leq N$.
+These relations confirm that each $\bar{f}_k$ maps into $P^*_S$, as desired.
+\end{proof}
+
+Lemma \ref{sub} implies that we obtain a morphism of Hodge structures
+$$f_k \colon \langle \un_\Sigma b^2, [\pt] b^{-2} \rangle_F(-1) \oplus H^2(\Sigma,\QQ)_F(-1) \to \langle w_3b^{-2},w_4b^{-4} \rangle_F \oplus H^4(X,\QQ)_{\mathrm{primitive},F}.$$
+Our goal is to eliminate the extra copies of $\QQ$ and the non-archimedean field $F$.
+Recall that the $\QQ_\ext$-evaluation map $\ev_{i,k}$ for $Y_i$ corresponds to the evaluation map $\ev_0$ for $X$ under the change of variables along the weak factorization.
+Similarly, there exists a $\QQ_\ext$-evaluation map $\ev'$ for $\Sigma$ corresponding to the evaluation map $\ev_{i,k}$ for $Y_i$ under the change of variables along a weak factorization between $Y_i$ and $\Sigma$.
+By Remark \ref{equality3}, we have the commutation relation
+$$\ev_0\(\kappa^X_\tau\) \circ f = f \circ \ev'\(\kappa^\Sigma_\tau\).$$
+As the dimensions match, the embedding
+$$f \colon \langle \un_\Sigma b^2, [\pt] b^{-2} \rangle_{F_{\widetilde{\QQ}_\ext}} \oplus H^2(\Sigma,\QQ)_{F_{\widetilde{\QQ}_\ext}} \hookrightarrow \langle w_3b^{-2},w_4b^{-4} \rangle_{F_{\widetilde{\QQ}_\ext}} \oplus H^4(X,\QQ)_{\mathrm{primitive},F_{\widetilde{\QQ}_\ext}}$$
+is an isomorphism of $F_{\widetilde{\QQ}_\ext}$-vector spaces.
+Consequently, the endomorphisms $\ev_0\(\kappa^X_\tau\)$ and $\ev'\(\kappa^\Sigma_\tau\)$ are conjugate and share the same rank.
+
+From Example \ref{Givental}, the endomorphism $\ev_0\(\kappa^X_\tau\)$ vanishes on the primitive part of the cohomology and satisfies
+$$\ev_0\(\kappa^X_\tau\)(x w_3+ y w_4) = x w_4~,~~ \forall ~x,y \in \QQ.$$
+From the proof of Corollary \ref{K3}, the endomorphism $\ev'\(\kappa^\Sigma_\tau\)$ vanishes except for
+$$\ev'\(\kappa^\Sigma_\tau\)(\un_\Sigma) = -\ev'(T_p) [\pt].$$
+By homogeneity of $\ev'$, we must have $\ev'(T_p) = \zeta \cdot b^{-2}$ for some $\zeta \neq 0 \in F_{\QQ_\ext}$.
+
+Let $\(u_2,\dotsc, u_{p-1}\)$ of $H^2(\Sigma,\QQ)$ be a basis of $H^2(\Sigma,\QQ)$, and set $u_1:=\un_\Sigma b^2$, $u_p:=[\pt]b^{-2}$.
+For each $1 \leq k \leq N$, we write
+$$f_k(u_j) - \(x^{(k)}_j w_3b^{-2} + y^{(k)}_j w_4b^{-4}\) \in H^4(X,\QQ)_{\mathrm{primitive},F}~,~~x^{(k)}_j,y^{(k)}_j \in F.$$
+Fixing a basis $\(v_1,\dotsc,v_q\)$ of $H^4(X,\QQ)_{\mathrm{primitive}}$, the conjugation relation implies that the matrix $A_k$ of $f_k$, relative to the bases $\(u_1,\dotsc, u_p\)$ and $\(w_3b^{-2},v_1,\dotsc,v_q,w_4b^{-4}\)$, takes the form
+$$A_k := \begin{pmatrix}
+x_1^{(k)} & 0 \dotsc 0 & 0 \\
+\star & A'_k & 0 \\
+\star & \star \dotsc \star & y_p^{(k)}
+\end{pmatrix},$$
+where $\sum_{k=1}^N s_k x_1^{(k)} = -\zeta \sum_{k=1}^N s_k y_p^{(k)}$
+and $A'_k$ is the submatrix with coefficients in $F$ corresponding to the restriction
+$$f'_k \colon H^2(\Sigma,\QQ)_F(-1) \to H^4(X,\QQ)_{\mathrm{primitive},F}.$$
+The matrix of the isomorphism $f$, relative to the above bases, is given by $A=s_1 A_1 + \dotsb + s_N A_N$.
+Since $A$ is invertible and lower block-triangular, the diagonal block $A'=s_1 A'_1 + \dotsb + s_N A'_N$ must also be invertible.
+
+Choose an integer $L \in \NN$ such that, for each $1 \leq k \leq N$, the matrix
+$$B'_k:=\(a^L \cdot A'_k\) \in \mathrm{Mat}\(\QQ[[a^{\QQ^*_+}]]\)$$
+has positive valuation.
+Let $\mathcal{Q}$ be the set of exponents appearing in $B'_1, \dotsc, B'_N$:
+$$\mathcal{Q} = \left\lbrace q \in \QQ ~|~~\exists 1 \leq k \leq N ~\mathrm{st}~~\mathrm{Coeff}_{a^q}\(B'_k\) \neq 0 \right\rbrace \subset \QQ^*_+.$$
+We write
+$$B'_k = \sum_{l \in \mathcal{Q}} B'_{k,l} a^l \quad \textrm{with $B'_{k,l} \in \mathrm{Mat}(\QQ)$},$$
+and denote by $g'_{k,l}$ the morphism of $\QQ$-vector spaces whose matrix in the above basis is $B'_{k,l}$.
+Since the Hodge structure on $H^2(\Sigma,\QQ)_F(-1)$ (resp.~$H^4(X,\QQ)_{\mathrm{primitive},F}$) is obtained from the Hodge structure on $H^2(\Sigma,\QQ)(-1)$ (resp.~$H^4(X,\QQ)_{\mathrm{primitive}}$) by extension of scalars from $\QQ$ to $F$, the linear maps
+$$g'_{k,l} \colon H^2(\Sigma,\QQ)(-1) \to H^4(X,\QQ)_{\mathrm{primitive}}$$
+are morphisms of Hodge structures.
+We seek a $\QQ$-linear combination of these maps that constitutes an isomorphism.
+
+For any $M \geq 0$, fix a positive integer $A_M \in \NN^*$ such that the finite set $\mathcal{Q} \cap \left[ 0,M \right]$ is contained in $\left\lbrace \frac{p}{A_M} ~|~~1 \leq p \leq MA_M \right\rbrace$.
+Suppose that for every $M \geq 0$ and every $\(q_1, \dotsc, q_N\) \in \QQ^N$, we have
+$$\det\( \sum_{l=1}^{M A_M} q_1^l B'_{1,l} + \dotsb + q_N^l B'_{N,l} \)=0.$$
+This would imply that the polynomial
+$$\det\( \sum_{l=1}^{MA_M} X_1^l B'_{1,l} + \dotsb + X_N^l B'_{N,l} \)=0$$
+is identically zero.
+Consequently, for any $M \geq 0$, the following truncation would vanish:
+$$\det\( \sum_{l=1}^{M A_M} \(s_1^{1/l}a^{1/A_M}\)^l B'_{1,l} + \dotsb + \(s_N^{1/l} a^{1/A_M}\)^l B'_{N,l} \)=0.$$
+Let $D \geq 0$ be the valuation of the non-zero determinant
+$$\det \( s_1 B'_1+ \dotsb + s_N B'_N \) \neq 0 \in a^D\cdot \QQ_\ext[[a^{\QQ_+}]].$$
+For $M>D$, the vanishing of the truncation leads to a contradiction.
+Therefore, there must exist some $M \geq 0$ and $\(q_1, \dotsc, q_N\) \in \QQ^N$ such that
+$$\det\( \sum_{l=1}^{MA_M} q_1^l B'_{1,l} + \dotsb + q_N^l B'_{N,l} \) \neq 0.$$
+The resulting $\QQ$-linear combination
+$$\sum_{l=1}^{MA_M} q_1^l g'_{1,l} + \dotsb + q_N^l g'_{N,l}$$
+is thus an isomorphism of Hodge structures, where $\Sigma$ is a projective $K3$ surface.
+\end{proof}
+
+
+\begin{bibdiv}
+	\begin{biblist}
+
+\bib{Iritani}{article}{
+	author={Iritani, Hiroshi},
+	title={Quantum cohomology of blow-ups},
+	journal={to appear in Kyoto Journal of Mathematics, avalaible at arXiv 2307.13555},
+	volume={},
+	date={},
+	number={},
+	pages={},
+}
+		
+\bib{KKPY}{article}{
+author={Katzarkov, Ludmil},
+author={Kontsevich, Maxim},
+author={Pantev, Tony},
+author={Yu Yue, Tony},
+title={Birational invariants from Hodge structures and quantum multiplication},
+journal={avalaible at arXiv 2508.05105},
+volume={},
+date={},
+number={},
+pages={},
+} 
+
+
+
+\bib{Kuznetsov}{article}{
+	author={Kuznetsov, Alexander},
+	title={Derived categories view on rationality problems},
+	journal={Lecture Notes in Math.},
+	volume={2172},
+	date={2016},
+	number={},
+	pages={67-104},
+}
+
+\bib{paper81}{article}{
+	author={Wlodarczyk, Jaroslaw},
+	title={Birational cobordisms and factorization of birational maps},
+	journal={Journal of Algebraic Geometry},
+	volume={9},
+	date={2000},
+	number={(3)},
+	pages={425-449},
+}
+		
+	\end{biblist}
+\end{bibdiv}
+
+\end{document}

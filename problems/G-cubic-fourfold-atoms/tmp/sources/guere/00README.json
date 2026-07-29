@@ -1,0 +1,13 @@
+{
+   "sources" : [
+      {
+         "usage" : "toplevel",
+         "filename" : "On_the_irrationality_of_cubic_fourfolds.tex"
+      }
+   ],
+   "spec_version" : 1,
+   "texlive_version" : "2025",
+   "process" : {
+      "compiler" : "pdflatex"
+   }
+}

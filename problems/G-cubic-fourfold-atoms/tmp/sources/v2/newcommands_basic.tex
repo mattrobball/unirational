@@ -1,0 +1,294 @@
+% personal remarks
+
+\ifpersonal
+\newcommand{\personal}[1]{\textcolor[rgb]{0,0,1}{(Personal: #1)}}
+\newcommand{\question}[1]{\textcolor{red}{(Question: #1)}}
+\newcommand{\todo}[1]{\textcolor{red}{(Todo: #1)}}
+\else
+\newcommand{\personal}[1]{\ignorespaces}
+\newcommand{\discussion}[1]{\ignorespaces}
+%\newcommand{\todo}[1]{\ignorespaces}
+\newcommand{\todo}[1]{\textcolor{red}{(Todo: #1)}}
+\fi
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+% Fonts
+\newcommand{\bbA}{\mathbb A}
+\newcommand{\bbB}{\mathbb B}
+\newcommand{\bbC}{\mathbb C}
+\newcommand{\bbD}{\mathbb D}
+\newcommand{\bbE}{\mathbb E}
+\newcommand{\bbF}{\mathbb F}
+\newcommand{\bbG}{\mathbb G}
+\newcommand{\bbH}{\mathbb H}
+\newcommand{\bbJ}{\mathbb J}
+\newcommand{\bbL}{\mathbb L}
+\newcommand{\bbN}{\mathbb N}
+\newcommand{\bbP}{\mathbb P}
+\newcommand{\bbQ}{\mathbb Q}
+\newcommand{\bbR}{\mathbb R}
+\newcommand{\bbT}{\mathbb T}
+\newcommand{\bbU}{\mathbb U}
+\newcommand{\bbV}{\mathbb V}
+\newcommand{\bbY}{\mathbb Y}
+\newcommand{\bbZ}{\mathbb Z}
+
+\newcommand{\rB}{\mathrm B}
+\newcommand{\rG}{\mathrm G}
+\newcommand{\rH}{\mathrm H}
+\newcommand{\rI}{\mathrm I}
+\newcommand{\rL}{\mathrm L}
+\newcommand{\rR}{\mathrm R}
+
+
+\newcommand{\fA}{\mathfrak A}
+\newcommand{\fB}{\mathfrak B}
+\newcommand{\fC}{\mathfrak C}
+\newcommand{\fD}{\mathfrak D}
+\newcommand{\fE}{\mathfrak E}
+\newcommand{\fF}{\mathfrak F}
+\newcommand{\fG}{\mathfrak G}
+\newcommand{\fH}{\mathfrak H}
+\newcommand{\fL}{\mathfrak L}
+\newcommand{\fM}{\mathfrak M}
+\newcommand{\fP}{\mathfrak P}
+\newcommand{\fR}{\mathfrak R}
+\newcommand{\fS}{\mathfrak S}
+\newcommand{\fT}{\mathfrak T}
+\newcommand{\fU}{\mathfrak U}
+\newcommand{\fV}{\mathfrak V}
+\newcommand{\fW}{\mathfrak W}
+\newcommand{\fX}{\mathfrak X}
+\newcommand{\fY}{\mathfrak Y}
+\newcommand{\fZ}{\mathfrak Z}
+
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cI}{\mathcal I}
+\newcommand{\cJ}{\mathcal J}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cW}{\mathcal W}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\cZ}{\mathcal Z}
+
+
+
+\newcommand{\bA}{\mathbf A}
+\newcommand{\bC}{\mathbf C} 
+\newcommand{\bD}{\mathbf D}
+\newcommand{\bE}{\mathbf E}
+\newcommand{\bG}{\mathbf G}
+\newcommand{\bH}{\mathbf H}
+\newcommand{\bK}{\mathbf K}
+\newcommand{\bP}{\mathbf P}
+\newcommand{\bQ}{\mathbf Q}
+\newcommand{\bT}{\mathbf T}
+\newcommand{\bX}{\mathbf X}
+\newcommand{\bY}{\mathbf Y}
+
+\newcommand{\sC}{\mathscr C}
+\newcommand{\sX}{\mathscr X}
+\newcommand{\sD}{\mathscr D}
+\newcommand{\sU}{\mathscr U}
+
+
+
+\newcommand{\oA}{\widebar A}
+\newcommand{\oB}{\widebar B}
+\newcommand{\oC}{\widebar C}
+\newcommand{\oD}{\widebar D}
+\newcommand{\oE}{\widebar E}
+\newcommand{\oF}{\widebar F}
+\newcommand{\oG}{\widebar G}
+\newcommand{\oI}{\widebar I}
+\newcommand{\oJ}{\widebar J}
+\newcommand{\oK}{\widebar K}
+\newcommand{\oL}{\widebar L}
+\newcommand{\oM}{\widebar M}
+\newcommand{\oN}{\widebar N}
+\newcommand{\oP}{\widebar P}
+\newcommand{\oQ}{\widebar Q}
+\newcommand{\oR}{\widebar R}
+\newcommand{\oS}{\widebar S}
+\newcommand{\oT}{\widebar T}
+\newcommand{\oU}{\widebar U}
+\newcommand{\oV}{\widebar V}
+\newcommand{\oW}{\widebar W}
+\newcommand{\oX}{\widebar X}
+\newcommand{\oY}{\widebar Y}
+\newcommand{\oZ}{\widebar Z}
+
+\newcommand{\oDelta}{\widebar\Delta}
+\newcommand{\oGamma}{\widebar\Gamma}
+\newcommand{\oLambda}{\widebar\Lambda}
+\newcommand{\oPhi}{\widebar\Phi}
+\newcommand{\oPsi}{\widebar\Psi}
+\newcommand{\oSigma}{\widebar\Sigma}
+\newcommand{\oalpha}{\widebar\alpha}
+\newcommand{\obeta}{\widebar\beta}
+\newcommand{\ogamma}{\widebar\gamma}
+\newcommand{\odelta}{\widebar\delta}
+\newcommand{\otau}{\widebar\tau}
+\newcommand{\otheta}{\widebar\theta}
+\newcommand{\ochi}{\widebar\chi}
+
+\newcommand{\hA}{\widehat A}
+\newcommand{\hC}{\widehat C}
+\newcommand{\hD}{\widehat D}
+\newcommand{\hE}{\widehat E}
+\newcommand{\hF}{\widehat F}
+\newcommand{\hI}{\widehat I}
+\newcommand{\hL}{\widehat L}
+\newcommand{\hP}{\widehat P}
+\newcommand{\hR}{\widehat R}
+\newcommand{\hS}{\widehat S}
+\newcommand{\hT}{\widehat T}
+\newcommand{\hU}{\widehat U}
+\newcommand{\hV}{\widehat V}
+\newcommand{\hX}{\widehat X}
+\newcommand{\hY}{\widehat Y}
+\newcommand{\hZ}{\widehat Z}
+\newcommand{\hGamma}{\widehat\Gamma}
+\newcommand{\hTheta}{\widehat\Theta}
+\newcommand{\hLambda}{\widehat\Lambda}
+\newcommand{\hSigma}{\widehat\Sigma}
+
+\newcommand{\tA}{\widetilde A}
+\newcommand{\tB}{\widetilde{B}}
+\newcommand{\tC}{\widetilde C}
+\newcommand{\tD}{\widetilde D}
+\newcommand{\tE}{\widetilde E}
+\newcommand{\tF}{\widetilde F}
+\newcommand{\tG}{\widetilde G}
+\newcommand{\tH}{\widetilde H}
+\newcommand{\tI}{\widetilde I}
+\newcommand{\tJ}{\widetilde J}
+\newcommand{\tL}{\widetilde L}
+\newcommand{\tM}{\widetilde M}
+\newcommand{\tN}{\widetilde N}
+\newcommand{\tP}{\widetilde P}
+\newcommand{\tQ}{\widetilde Q}
+\newcommand{\tR}{\widetilde R}
+\newcommand{\tS}{\widetilde S}
+\newcommand{\tT}{\widetilde T}
+\newcommand{\tU}{\widetilde U}
+%\newcommand{\tU}{\widehat{U}}
+\newcommand{\tV}{\widetilde V}
+\newcommand{\tW}{\widetilde W}
+%\newcommand{\tX}{\widetilde X}
+\newcommand{\tX}{\widehat{X}}
+\newcommand{\tY}{\widetilde Y}
+\newcommand{\tZ}{\widetilde Z}
+\newcommand{\tGamma}{\widetilde\Gamma}
+\newcommand{\tDelta}{\widetilde\Delta}
+\newcommand{\tPhi}{\widetilde\Phi}
+\newcommand{\tPsi}{\widetilde\Psi}
+\newcommand{\tbeta}{\widetilde\beta}
+\newcommand{\ttau}{\widetilde\tau}
+\newcommand{\tgamma}{\widetilde\gamma}
+\newcommand{\tdelta}{\widetilde\delta}
+\newcommand{\tmu}{\widetilde\mu}
+\newcommand{\tchi}{\widetilde\chi}
+
+%% Arrows
+%\newcommand*{\longhookrightarrow}{\ensuremath{\lhook\joinrel\relbar\joinrel\rightarrow}}
+%\newcommand*{\DashedArrow}[1][]{\mathbin{\tikz [baseline=-0.25ex,-latex, dashed,#1] \draw [#1] (0pt,0.5ex) -- (1.3em,0.5ex);}}
+%
+%\usetikzlibrary{decorations.markings} %arrows for open immersions and closed immersions
+%\tikzset{
+%  closed/.style = {decoration = {markings, mark = at position 0.5 with { \node[transform shape, xscale = .8, yscale=.4] {/}; } }, postaction = {decorate} },
+%  open/.style = {decoration = {markings, mark = at position 0.5 with { \node[transform shape, scale = .7] {$\circ$}; } }, postaction = {decorate} }
+%}
+%
+
+
+% Definition of \widebar from http://tex.stackexchange.com/questions/16337/can-i-get-a-widebar-without-using-the-mathabx-package/60253#60253
+\makeatletter
+\let\save@mathaccent\mathaccent
+\newcommand*\if@single[3]{%
+	\setbox0\hbox{${\mathaccent"0362{#1}}^H$}%
+	\setbox2\hbox{${\mathaccent"0362{\kern0pt#1}}^H$}%
+	\ifdim\ht0=\ht2 #3\else #2\fi
+}
+%The bar will be moved to the right by a half of \macc@kerna, which is computed by amsmath:
+\newcommand*\rel@kern[1]{\kern#1\dimexpr\macc@kerna}
+%If there's a superscript following the bar, then no negative kern may follow the bar;
+%an additional {} makes sure that the superscript is high enough in this case:
+\newcommand*\widebar[1]{\@ifnextchar^{{\wide@bar{#1}{0}}}{\wide@bar{#1}{1}}}
+%Use a separate algorithm for single symbols:
+\newcommand*\wide@bar[2]{\if@single{#1}{\wide@bar@{#1}{#2}{1}}{\wide@bar@{#1}{#2}{2}}}
+\newcommand*\wide@bar@[3]{%
+	\begingroup
+	\def\mathaccent##1##2{%
+		%Enable nesting of accents:
+		\let\mathaccent\save@mathaccent
+		%If there's more than a single symbol, use the first character instead (see below):
+		\if#32 \let\macc@nucleus\first@char \fi
+		%Determine the italic correction:
+		\setbox\z@\hbox{$\macc@style{\macc@nucleus}_{}$}%
+		\setbox\tw@\hbox{$\macc@style{\macc@nucleus}{}_{}$}%
+		\dimen@\wd\tw@
+		\advance\dimen@-\wd\z@
+		%Now \dimen@ is the italic correction of the symbol.
+		\divide\dimen@ 3
+		\@tempdima\wd\tw@
+		\advance\@tempdima-\scriptspace
+		%Now \@tempdima is the width of the symbol.
+		\divide\@tempdima 10
+		\advance\dimen@-\@tempdima
+		%Now \dimen@ = (italic correction / 3) - (Breite / 10)
+		\ifdim\dimen@>\z@ \dimen@0pt\fi
+		%The bar will be shortened in the case \dimen@<0 !
+		\rel@kern{0.6}\kern-\dimen@
+		\if#31
+		\overline{\rel@kern{-0.6}\kern\dimen@\macc@nucleus\rel@kern{0.4}\kern\dimen@}%
+		\advance\dimen@0.4\dimexpr\macc@kerna
+		%Place the combined final kern (-\dimen@) if it is >0 or if a superscript follows:
+		\let\final@kern#2%
+		\ifdim\dimen@<\z@ \let\final@kern1\fi
+		\if\final@kern1 \kern-\dimen@\fi
+		\else
+		\overline{\rel@kern{-0.6}\kern\dimen@#1}%
+		\fi
+	}%
+	\macc@depth\@ne
+	\let\math@bgroup\@empty \let\math@egroup\macc@set@skewchar
+	\mathsurround\z@ \frozen@everymath{\mathgroup\macc@group\relax}%
+	\macc@set@skewchar\relax
+	\let\mathaccentV\macc@nested@a
+	%The following initialises \macc@kerna and calls \mathaccent:
+	\if#31
+	\macc@nested@a\relax111{#1}%
+	\else
+	%If the argument consists of more than one symbol, and if the first token is
+	%a letter, use that letter for the computations:
+	\def\gobble@till@marker##1\endmarker{}%
+	\futurelet\first@char\gobble@till@marker#1\endmarker
+	\ifcat\noexpand\first@char A\else
+	\def\first@char{}%
+	\fi
+	\macc@nested@a\relax111{\first@char}%
+	\fi
+	\endgroup
+}
+\makeatother

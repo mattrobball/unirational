@@ -1,0 +1,1497 @@
+Compact Complex Surfaces
+In: Differential Geometry,
+Global Analysis, and Topology
+Proc. Special Session of the Canadian Math. Soc.
+Summer Meeting June 1990
+C.A.M. Peters
+
+2
+
+Introduction
+In these notes we give an elementary introduction to surface theory, i.e the theory
+of compact two-dimensional complex manifolds. We refer freely to [Troika] for
+details. For a more concise treatment and more on related topological questions
+see [FM 2].
+For these notes I have in mind the (differential)-topologist who wants to understand the recent results on the topology of algebraic surfaces, but who is not well
+versed in algebraic geometry.
+I want to present a ’modern’ i.e postciteTroika-point of view. Two new ingredients
+now go into the theory:
+1. Mori’s theory of the interplay between nef-divisors and effective 1-cycles. In
+Chapter II, based on Wilson’s article [Wi], we show how powerful this point
+of view is when dealing with the classification of surfaces.
+2. Reider’s method of constructing rank 2 vector bundles associated to points
+which have a special role with regards to the geometry of a linear system of
+divisors (i.e base points). We sketch in Chapter III how this can be used to
+obtain a nice short and uniform treatment of the topic of pluricanonical maps
+for surfaces of general type.
+In Chapter V on the topology we only look at simply connected algebraic surfaces and gather some of the recent results on the differentiable structures on a
+given surface oriented homeomorphic to a simply connected algebraic surface. The
+Dolgachev surfaces introduced in Chapter I play an important role here. Also Barlow surfaces turn out to give interesting examples. These are treated in Chapter IV,
+where we collect various recent results on the geography of surfaces.
+It goes without saying that many interesting and important topics had to be left
+out. We mention a few of these:
+• Commutative algebra methods to describe the finer classification of surfaces
+with special Chern invariants. We refer to [Cat 1] and [Reid 2] for recent
+surveys.
+• The recent results on obstructed surfaces by Catanese, which show how
+abundant these are. See [Cat 2].
+3
+
+4
+• Reider’s work on irregular surfaces of general type. See [Reider 2].
+• Recent bounds on the size of the automorphism group of surfaces of general
+type. See [Xiao 2, HS, Corti].
+I hope this is enough to convey the beauty and wealth of a subject which has kept
+on developing since the appearance of [Troika].
+
+Chapter 1
+
+Basic material
+1 Invariants
+We let S be a compact connected complex manifold of dimension 2. Since S is an
+oriented compact four- manifold we have
+b0 = b4 = 1
+b1 = b3 .
+The cup product form
+H 2 (S, Z) × H 2 (S, Z) → Z
+defined by a · b = a ∪ b[S], a, b ∈ H 2 (S, Z) is unimodular on H 2 (S, Z)/torsion.
+With b+ , resp b− = number of positive, resp. negative eigenvalues of this form, the
+signature is
+τ(S) = b+ − b− .
+There are further invariants a priori depending on the almost-complex structure:
+the Chern classes c1 and c2 . The Chern numbers c12 [S] and c2 [S] turn out to be
+topological invariants as well. For the second number this is obvious:
+c2 [S] = e(S) (the Euler number) = 2 − 2b1 + b2 .
+while the first Chern number can be expressed in the signature and the Euler number using Hirzebruch’s signature formula :
+τ(S) = 1/3(c12 [S] − 2c2 [S]).
+Let Ω p be the sheaf of holomorphic p-forms on S and set
+h p,q = dim H q (S, Ω p ) (the Hodge numbers) .
+Another important formula is Noether’s formula, which relates the invariants
+q = h0,1 (the irregularity)
+pg = h0,2 =(the geometric genus) .
+5
+
+6
+
+CHAPTER 1. BASIC MATERIAL
+
+In fact Noether’s formula states:
+χ := 1 − h0,1 + h0,2 (the arithmetic genus) = 1/12(c12 [S] + c2 [S]).
+If we eliminate c12 [S] from the signature formula and Noether’s formula, we find
+(b+ − 2pg ) + (2q − b1 ) = 1.
+It is easy to see that both numbers in parenthesis in the above formula are nonnegative, so we have two possibilities
+(i)
+(ii)
+
+b+ = 2pg + 1,
++
+
+b = 2pg ,
+
+b1 = 2q,
+
+b1 = 2q − 1.
+
+From the inequalities b1 ≥ 2h1,0 and h0,1 + h1,0 ≥ b1 it follows that h1,0 = 21 b1 in
+the first case and h1,0 = 21 (b1 − 1) in the second case and so
+b1 = h0,1 + h1,0
+P
+in both cases. Notice that e(S) = 0≤ p,q ≤2 (−1) p+q h p,q = 1 − 2b1 + (h2,0 + h1,1 +
+h0,2 ) (we used Serre-duality to replace h2,1 , resp. h1,2 by h0,1 , resp. h1,0 ). It
+follows that b2 = h2,0 + h1,1 + h0,2 and so
+h1,1 = b2 − 2pg .
+So we see:
+for complex surfaces the Hodge numbers h p,q are topological invariants.
+As a side remark, we note that for Kähler manifolds we have of course the first
+possibility for the invariants. Much less trivial is the converse:
+Theorem 1.1. A compact complex surface is Kähler if and only if the first Betti
+number is even.
+The proof of this theorem goes far beyond this introduction. It really uses the
+classification theory of surfaces to reduce to the case of elliptic surfaces and K3surfaces. In 1974 Miyaoka proved the theorem for elliptic surfaces with elementary
+means([Mi 1]), while the result for K3-surfaces although conjectured already in
+the fifties by André Weil, had to wait untill Siu in 1983 using very sophisticated
+arguments (essentially using Yau’s solution of Calabi’s conjectures) finally proved
+that all K3-surfaces are Kähler (see [Siu]).
+
+2. DIVISORS AND PLURICANONICAL BUNDLES
+
+7
+
+2 Divisors and pluricanonical bundles
+First we recall some generalities about divisors and their associated linear systems.
+By ’divisor’ we always mean Cartier divisors, i.e objects which are locally on
+a coordinate patch Ui are given by one equation f i = 0 ( f i meromorphic and
+nonzero) and such that in overlaps Ui ∩ U j the quotients f i / f j are invertible holomorphic functions. A divisor D defines a line bundle O(D) defined by the transition
+functions f i / f j on intersections Ui ∩ U j and so there is a global section of O(D),
+locally on Ui given by f i , vanishing along D. Sections of this line bundle yield
+divisors D 0 which are said to be linearly equivalent to D. Since two sections that
+are the same up to a multiplicative constant define the same divisor, the projective
+space PH 0 (O(D)) parametrizes effective divisors (i.e. non negative combinations
+of curves) linearly equivalent to D. It is the linear system |D| associated to D. It
+is not true that to any line bundle there corresponds a divisor; indeed, such a line
+bundle would lead to a meromorphic function having a pole along the divisor, but
+there are manifolds without any non-constant meromorphic functions. If however
+S is algebraic, the existence of sufficiently many meromorphic functions shows
+(after some work) that to any line bundle there is a corresponding divisor.
+If |D| is a linear system of divisors, there is a maximal divisor Dfixed , the fixed
+part of |D| with the property that for D 0 ∈ |D| we have D 0 = D 00 + Dfixed , D 00
+effective.
+If L is any line bundle, choose a basis {s0 , s1 , . . . , s N } for the sections of L and
+define the meromorphic map
+f L : S → PN
+s 7→ (s0 (s) : s1 (s) : · · · : s N (s)).
+This is not defined at points where all sections of L vanish. If L = O(D) for some
+divisor D these are the base points of the linear system |D|.
+The canonical bundle K of S is the line bundle associated to the sheaf Ω2 of
+holomorphic 2-forms. In case there is a divisor whose line bundle is K we call it
+the canonical divisor and denote it by K S = K. The m-th tensor power of K is the
+m-th pluricanonical bundle and we set
+Pm (S) = h0 (K⊗m )
+
+the m-th plurigenus of S.
+
+These bundles play an important role in classification.
+Let us next recall that the intersection number of two line bundles L and M is
+defined as
+L · M := c1 (L) · c1 (M)
+and hence intersection numbers of divisors are also defined. Very useful is the
+following formula:
+Adjunction formula:
+
+K · C + C · C = 2 · (g(C̃) + δ − 1),
+
+(1.1)
+
+8
+
+CHAPTER 1. BASIC MATERIAL
+
+where C̃ is a smooth model of a curve C and δ ≥ 0 its defect, which vanishes
+precisely when C is smooth.
+Now, look at irreducible curves C with K · C < 0.
+Proposition 2.1. If there exists a curve C on S with K · C < 0 and C · C ≥ 0,
+all plurigenera of S are zero. If S is a surface with at least one non-vanishing
+plurigenus and C is a curve on S with K · C < 0, the curve C is an exceptional
+curve of the first kind, i.e. C is a smooth rational curve with C · C = −1.
+Proof : Let D be a pluricanonical divisor and separate out the possible part of C
+it contains: D = aC + R. Then mK · C = D · C = aC · C + R · C ≥ aC · C.
+Since this is ≥ 0 in the first case, the plurigenera must all vanish. In the second
+case, if K · C ≤ −2 the adjunction formula gives C · C ≥ 0 and we again have
+a contradiction. So K · C = −1 and the adjunction formula shows that C is an
+exceptional curve of the first kind.
+
+The exceptional curves of the first kind are easy to deal with. Such a curve
+can be blown down to a point q in a new smooth surface T (Castelnuovo’s contractability criterion). Conversely, one can blow up any point in S and the result
+is again a smooth surface T. Topologically T is the connected sum of S and P2
+with orientation reversed (the neighbourhood of the exceptional line in T looks
+like the neighbourhood of a line the complex projective plane with the orientation
+reversed.) It follows that
+b2 (T) = b2 (S) + 1,
+
+e(T) = e(S) + 1,
+
+τ(T) = τ(S) − 1
+
+and hence the arithmetic genus χ(S) = 1/4 (e(S) + τ(S)) is invariant. A simple
+application of Hartog’s theorem shows that the plurigenera are invariant as well.
+One can show that any bimeromorphic map between surfaces can be decomposed
+as a sequence of such blowings down and their inverses. We conclude:
+Proposition 2.2. The plurigenera and the arithmetic genus are bimeromorphic
+invariants.
+If we succesively blow down all exceptional curves we reach a surface which
+by definition is (relatively) minimal. Such a model need not be unique, but in case
+at least one plurigenus is positive, one can show that it is unique.
+Going back to pluricanonical bundles, let us look at the pluricanonical maps f mK S ,
+defined if Pm > 0. The maximal dimension of the image for varying m is called
+the Kodaira dimension κ(S). By definition κ(S) = −∞ if all plurigenera are 0. We
+have seen that a surface with a curve C for which K · C < 0 either can be blown
+down or all the plurigenera of S vanish.
+A divisor D with D · C ≥ 0 for all curves C is called nef.
+So we can paraphrase the preceding proposition as follows
+Suppose S is a surface whose canonical bundle is not nef. Then either S is not
+minimal or κ(S) = −∞.
+
+3. CLASSIFICATION
+
+9
+
+Later we need a characterisation of the Kodaira dimension. In fact, we can define the Kodaira dimension for any line bundle L on a variety X as the maximal
+dimension of dim f L⊗m (X) for growing m. We denote this number by κ(X, L).
+Lemma 2.3. We have bounds
+C 0 mκ(X,L) ≤ dim H 0 (X, L⊗m ) ≤ C 00 mκ(X,L)
+characterizing the Kodaira dimension. Here C 0 and C 00 are positive constants
+
+3
+
+Classification
+
+The Kodaira-dimension is one of the basic invariants used to classify surfaces. To
+explain the main result, we need some terminology.
+A rational surface is a surface which is bimeromorphic to P2 . Apart from P2
+itself there are the Hirzebruch surfaces Fn , n = 0, 1, . . . . These are defined as the
+total space of the projective bundle over P1 obtained from O⊕ O(n). Only F1 has an
+exceptional curve. The other surfaces are minimal and there are no other minimal
+rational surfaces.
+A ruled surface is a P1 -bundle over a curve.
+A properly elliptic surface is a surface of Kodaira-dimension 1 admitting an
+elliptic fibration, i.e. a holomorphic map f : S → C with general fibre an elliptic
+curve.
+A bielliptic surface is a surface with b2 = 2 admitting a holomorphic, locally
+trivial fibre bundle structure over an elliptic curve with fibre an elliptic curve. These
+are all of the form E × C/G, with E and C elliptic, G ⊂ C a finite group of
+translations acting on E not only by translations. There are only 7 possible groups
+G (see [Troika, p.148]) and all surfaces are algebraic.
+A Kodaira-surface is a surface with b1 = 3 and admitting a holomorphic,
+locally trivial fibre bundle structure over an elliptic curve with fibre an elliptic
+curve or quotients of these under the action of a finite group which acts freely (for
+these b1 = 1). Kodaira surfaces are not algebraic.
+A K3-surface is a simply connected surface with trivial canonical bundle.
+Examples: (i) Kummer surfaces, i.e. quotients of tori by the natural involution
+z 7→ −z, or (ii) degree 4 surfaces in P3 .
+A K3-surface is not necessarily algebraic.
+An Enriques surface is a surface with pg = b1 = 0 and K⊗2 trivial. The
+universal cover is a K3-surface which doubly covers the surface. All Enriques surfaces admit elliptic fibrations S → P1 with precisely two double fibres. Examples
+of Enriques surfaces are degree 6 surfaces in P3 passing doubly through the edges
+of a tetrahedron (classical Enriques construction). All of them arise in this way or
+as degenerations of such surfaces; in particular they are all algebraic.
+A surface of class VII is a surface with κ = −∞ and b1 = 1. Such surfaces are
+non-algebraic.
+
+10
+
+CHAPTER 1. BASIC MATERIAL
+
+A surface of general type is by definition a surface with maximal Kodaira
+dimension 2. Examples: surfaces of degree ≥ 5 in P3 .
+Theorem 3.1 (Enriques-Kodaira classification). Every minimal surface belongs to
+one of the following types:
+1. Minimal rational or ruled surfaces (κ = −∞, algebraic),
+2. Minimal class VII surfacess (κ = −∞, non-algebraic),
+3. Tori, K3-surfaces, Enriques surfaces, bielliptic surfaces (κ = 0, Kähler),
+4. Kodaira surfaces (κ = 0, non-Kähler),
+5. Minimal properly elliptic surfaces (κ = 1).
+6. Surfaces of general type (κ = 2.)
+When we deal with the topology we need a classification of the simply connected algebraic surfaces. We need:
+Corollary 3.2. Simply connected minimal Kähler surfaces can be classified as
+follows:
+(a) P2 resp. Fn , n = 0, 2, 3 . . . (κ = −∞ and c12 = 9, c2 = 3 resp. c12 = 8, c2 = 4).
+(b) K3-surfaces (κ = 0 and c12 = 0, c2 = 24)
+(c) Simply connected and minimal properly elliptic surfaces. (κ = 1, c12 = 0).
+(d) Simply connected and minimal surfaces of general type. (κ = 2, c12 > 0).
+Whereas classes (a) and (d) are always algebraic, surfaces in classes (b) and
+(c) can always be deformed into algebraic ones. We recall that S = X0 can be
+deformed into S 0 if there are finitely many surjective holomorphic maps of maximal
+rank f j : X j → T j , j = 1, . . . n of smooth threefolds to connected smooth curves T j
+(we say that f j is a family of surfaces over a curve) such that S is a fibre of the first
+family f 1 , S 0 a fibre of the last family f n and two families f j , f j+1 , j = 1, . . . , n − 1
+have at least one fibre in common. Since each family f j is differentiably a fibre
+bundle we conclude:
+Surfaces which can be deformed into one another are mutually oriented
+diffeomorphic.
+This applies in particular to K3-surfaces (see [Troika, Chapter VIII] ) and so
+The K3-surfaces form the only one diffeomorphism type of simply connected
+Kähler surfaces with κ = 0.
+As for the elliptic surfaces, this is certainly not true, since there are many possible
+Euler numbers.
+
+4. TOOLS: RIEMANN-ROCH, ETC.
+
+11
+
+Example 3.3. Let S k ⊂ P1 × P2 the zero set of a generic bihomogeneous polynomial of bidegree (1 + k, 3), k = 0, 1, . . . . This is a simply connected surface and
+the projection onto the first factor gives it the structure of a minimal elliptic fibration over P1 . For any pair (p, q) of relatively prime integers we can perform the
+logarithmic transforms of multiplicity p and q over two distinct points over which
+the fibre is smooth [Troika, p.164]. The resulting simply connected elliptic surface
+k has two multiple fibres pF and qF . The canonical bundle formula [Troika,
+S p,q
+p
+q
+p.161] gives (here F is a general fibre):
+K  (k − 1)F + (p − 1)Fp + (q − 1)Fq .
+One concludes that for k = 0, min(p, q) = 1 we have a rational surface, that for
+k = p = q = 1 we get a K3-surface and that for all other values the surface is
+properly elliptic with invariants
+k
+pg (S p,q
+) = k,
+
+k
+c2 (S p,q
+) = 12(1 + k).
+
+It is well known that any surface with these invariants can be deformed into one of
+k and so we obtain
+the surfaces S p,q
+The diffeomorphism types of minimal simply connected κ = 1 surfaces are
+k except if k = 0, min(p, q) = 1 or k = p = q = 1.
+precisely those of S p,q
+0 , p ≥ 2, q ≥ 2 are elliptic κ = 1 surfaces with q = p = 0 and
+The surfaces S p,q
+g
+are called Dolgachev surfaces. We come back to the topology in Chapter V.
+
+4 Tools: Riemann-Roch, Vanishing Theorems, Algebraic
+Index Theorem
+The Riemann-Roch theorem is an extension of Noether’s formula:
+Theorem 4.1 (Riemann-Roch). For a line bundle L on a surface S we have:
+χ(L) := dim H 0 (L) − dim H 1 (L) + dim H 2 (L)
+1
+1
+= L · (L − K) + (c12 (S) + c2 (S))
+2
+12
+For a proof we refer e.g. to [Hir].
+Since we are often interested in getting sections for line bundles it is quite helpful
+to know when higher cohomology groups vanish. Recall that a line bundle is called
+ample if the sections of a positive tensor power embed the surface into projective
+space. (i.e the map f m L is an embedding for large m). A standard vanishing
+theorem is:
+Theorem 4.2 (Kodaira Vanishing Theorem). Let L be an ample line bundle on a
+compact complex manifold X. Then H i (X, K ⊗ L) = 0 for i > 0.
+
+12
+
+CHAPTER 1. BASIC MATERIAL
+Often we use Serre-duality in conjunction with Riemann-Roch:
+
+Theorem 4.3 ((Serre Duality Theorem)). Let X be a compact complex manifold of
+dimension n. We have:
+dim H i (X, L) = dim H n−i (X, K ⊗ L∨ ).
+Example 4.4. Let S be a surface H an ample line bundle and C some curve on S.
+Then there exist effective divisors in |mH −C| for m large enough. This can be seen
+as follows: By Serre duality we have dim H 2 (mH −C) = dim H 0 (C + K −mH) = 0,
+since otherwise H would intersect a divisor in |C + K − mH | negatively for large
+m. Then we can apply Riemann-Roch: dim H 0 (mH − C) ≥ χ(mH − C) = 21 (mH −
+C − K) · (mH − C) + χ > 0 for m large enough.
+A second tool, which is used often, is the so-called Algebraic Index Theorem.
+To state it, we recall that a Q-divisor is just a divisor with rational coefficients and
+such a divisor is numerically trivial if and only if it has zero intersection product
+with any divisor. This is the case if and only if its first Chern class is trivial in
+rational cohomology. Chern classes of line bundles are represented by closed forms
+of type (1, 1) and since the intersection product has signature (1, h1,1 − 1) on the
+space H 1,1 spanned by classes of (1, 1)-forms we conclude:
+Theorem 4.5 (Algebraic Index Theorem). Let D and E be Q-divisors on an algebraic surface with D · D > 0 and D · E = 0. Then E · E ≤ 0 with equality if and
+only if E is numerically trivial.
+
+Chapter 2
+
+Mori theory
+5 Cone of effective 1-cycles
+This aspect of the theory only works well in the case of algebraic surfaces and so
+in this section we assume that S is algebraic.
+On a surface any divisor is at the same time a 1-cycle, but for higher dimensions
+the notions are dual under intersection pairing. In Mori theory this is essential. It
+is also essential to work on possibly singular varieties. Two 1-cycles on a (not
+necessarily smooth) algebraic variety X are said to be numerically equivalent if
+they have the same intersection product with any divisor on X. Likewise we define
+numerical equivalence for divisors. This equivalence relation is denoted by ≡. We
+set
+N1 (X) = ({ 1-cycles on X }/ ≡) ⊗ R
+N 1 (X) = ({ divisors on X }/ ≡) ⊗ R
+N E(X) ={ cone generated by effective 1-cycles }
+N E(X) = closure of N E(X) in N1 (X).
+Both real vector spaces are finite-dimensional and are dual under the intersection
+pairing. If X is smooth we have Lefschetz theorem on (1,1)-classes:
+N S(X) := ({ 1-cycles on X }/ ≡)  H 1,1 ∩H 2 (X, Z) (the Néron-Severi group of S),
+which shows that the dimensions of the preceding vector spaces are equal to
+rankN S(X) (the Picard number of X).
+We can formulate Kleiman’s ampleness criterion [Klei] as follows:
+Proposition 5.1 (Kleiman’s Ampleness Criterion). Any Q–divisor D (i.e. a divisor
+with rational coefficients) defines a linear form on N1 (X) with rational coefficients
+which vanishes on a hyperplane through the origin. Ample divisors are precisely
+those divisors which have N E(X) − {0} on the strictly positive side of this hyperplane.
+13
+
+14
+
+CHAPTER 2. MORI THEORY
+Often one uses the following description of the nef -cone:
+
+Corollary 5.2. The nef-cone is the closure of the ample cone, in particular L·L ≥ 0
+for any nef divisor L.
+In the next section we need:
+Lemma 5.3. Let L be a nef divisor on a surface S and suppose that for some ample
+divisor H we have L · H = 0. Then L ≡ 0.
+Proof : By Example 4.4 the system |mH − C| contains a divisor D. Then 0 ≤
+D · L = (mH − C) · L = −C · L ≤ 0 and so C · L = 0 for all curves C.
+
+
+6
+
+Rationality theorem and an application
+
+If a divisor D is not nef it defines a hyperplane in N1 (X) for which part of N E(X)
+is strictly on the negative side. So, if H is some ample divisor, in the connecting
+pencil Ht = H + t D there is a member Hb whose hyperplane just touches the cone
+N E(X).
+Theorem 6.1 (Rationality theorem). If X = S a surface and D = K S is not nef,
+there is a rational b such that the hyperplane corresponding to H + bD touches the
+cone N E(X).
+Proof : We follow [Wi, p.13]. For clarity, we recall
+b := sup{t ∈ R | Ht = H + tK S is nef }.
+Set
+P(v,u) := χ(vH + uK S ).
+By Riemann-Roch (Theorem 4.1) this is a quadratic polynomial in v,u. If u and v
+are positive integers with (u − 1)/v < b the divisor vH + (u − 1)K S is ample and
+so by Kodaira Vanishing (Theorem 4.2) H i (vH + uK S ) = 0 for i = 1, 2. It follows
+that P(v,u) ≥ 0.
+Assume now that b is irrational. Number theory tells us that b can be approximated by rational numbers of the form p/q, p and q arbitrarily large integers in
+such a way that
+p/q − 1/(3q) < b < p/q.
+The polynomial P(kq, k p) is quadratic in k. If it is identically zero, P(v,u) must
+be divisible by (vp − uq). Taking p and q sufficiently large we may assume that
+this is not the case. For k = 1, 2, 3 the numbers v = kq and u = k p satisfy
+(u − 1)/v < b and hence P(kq, k p) ≥ 0 for these three values of k. Since a quadric
+has at most two zeroes, it follows that for at least one pair of positive integers (v,u)
+with t 0 := u/v > b we have dim H 0 (vH + uK S ) > 0. So there is an effective QP
+divisor L := Ht0 = a j Γ j , a j > 0. Now Ht0 is not nef. Since L is effective, it can
+only be negative on the Γ j . But then one can subtract off a rational multiple of K S
+from Ht0 to get Hb and so b would be rational contradicting our assumption.
+
+
+6. RATIONALITY THEOREM AND AN APPLICATION
+
+15
+
+As an application we give a sketch of the classification theorem for algebraic
+surfaces with κ = −∞. First, we prove that minimal surfaces with K not nef are
+rational or ruled and hence have κ = −∞:
+Proposition 6.2. A minimal algebraic surface with K not nef is either a ruled
+surface or P2 .
+Proof : Clearing denominators we have a nef divisor
+L = vH + uK S , b = u/v = sup{t ∈ R | Ht = H + tK S is nef }.
+We have L · L ≥ 0 (see Coroll. 5.2). We conclude from Kleiman’s ampleness criterion 5.1 that mL − K S is ample for all sufficiently large m. Serre duality (Theorem
+4.3) implies that dim H 2 (mL) = dim H 0 (−(mL − K S )) = 0 and so by RiemannRoch 4.1
+dim H 0 (mL) ≥ χ(mL) = χ(S) + mL · (mL − K S )/2.
+We can distinguish two cases:
+i) L · L > 0. Riemann-Roch then shows that dim H 0 (mL) grows like C · m2 and
+hence the sections of a large multiple of L give a map f : S → S 0 onto a surface S 0
+(2.4 ).
+ii) L · L = 0. In this case an application of Lemma 5.3 shows that either L ≡ 0 or
+L · H > 0 and from 0 = 1/u(L · L) = L · (H + bK S ) we infer that L · K S < 0 and so
+dim H 0 (mL) grows like a linear function of m and we get a map f : S → C onto a
+curve C.
+In the first case any irreducible curve D which L · D = 0 is an exceptional
+curve of the first kind. Indeed, from the definition of L we see that K S · D < 0,
+while the algebraic index theorem (Theorem 4.5) applied to L and D shows that
+D · D < 0. In combination with the adjunction formula (1.1) this shows that D has
+to be an exceptional curve of the first kind. By assumption these don’t exist and so
+L · D > 0 for all curves D and L is ample, contradicting the fact that K S is not nef.
+It follows that we are in the second case. If L ≡ 0 we see that −K S is ample and it
+is a nice exercise to show that a minimal surface with −K S ample is the projective
+plane.
+In the second case we observe that f can also be given by the divisor L 0 =
+L − L fixed so that |L 0 | does not have fixed components. Since L is nef and L · L = 0,
+we infer that L 0 · L = 0. Since |L 0 | moves, it must be nef and from L 0 · L = 0 we
+conclude that L 0 · L 0 = 0. But then |L 0 | cannot have fixed points and hence f is a
+morphism. If F is a general fibre we must have L 0 · F = 0 and one easily concludes
+from this that L · F = 0. So for any component D of F we have L · D = 0 and
+hence K S · D < 0. The adjunction formula shows that D is a smooth rational curve.
+Taking the Stein factorization of f we see that S is a ruled surface.
+
+Conversely, we need to show that if K is nef, the Kodaira-dimension is not −∞.
+First we recall (Cor. 5.2) that K · K ≥ 0. Riemann-Roch (plus Serre duality) for
+mK reads:
+1
+dim H 0 (mK) + dim H 0 (−(m − 1)K) ≥ m(m − 1)K · K + 1 − q + pg .
+2
+
+16
+
+CHAPTER 2. MORI THEORY
+
+Fix a very ample H. We distinguish two cases:
+a) K · H > 0. Then H 0 (−(m − 1)K) = 0 for m ≥ 2 and so, we get
+q = 0 =⇒ P2 > 0,
+
+K · K > 0 =⇒ κ = 2.
+
+b) If K · H = 0 the algebraic index theorem implies that K · K ≤ 0 and hence
+K · K = 0 and the second part of the index theorem shows that K ≡ 0. In particular,
+if q = 0 a multiple of K is trivial and so κ = 0.
+This analysis shows that we only have to look at the cases with K · K = 0, q > 0.
+Again, if pg > 0 we are done, so we assume that pg = 0. Noether’s formula now
+gives b2 = 10 − 8q and so q = 1. Next, one needs to do a very detailed analysis of
+the so called Albanese mapping S → C which in this case maps S onto an elliptic
+curve with elliptic fibres. This is done in [Beau, Chapter VI]. The result is:
+Theorem 6.3. Any algebraic surface with K nef, pg = 0, q = 1 is bielliptic and
+has κ = 0.
+This now completes the proof of the classification of algebraic surfaces with
+κ = −∞, but it shows much more:
+1. A surface if rational if and only q = 0 and P2 = 0 (Castelnuovo’s Rationality
+Criterion).
+2. A surface with K nef and K · K > 0 is of general type.
+3. A minimal algebraic surface with κ = 0 and q = 1 is bielliptic.
+I hope that this gives enough evidence of the powerfulness of Mori’s theory even
+in the case of surfaces.
+
+Chapter 3
+
+Reider’s Method
+7
+
+Reider’s Theorem
+
+For this entire section we refer to [Reider 1] for the details and references to literature.
+Zero cycles Z and rank 2 vector bundles on surfaces S are intimately related.
+A result due to Griffiths and Harris says that given a line bundle L = O(L) on S
+and a zero cycle Z, there is a rank two vector bundle E with det(E) = L and a
+section e of E vanishing precisely in Z if and only if Z is special with respect to
+the adjoint system |K S + L|. This means that any divisor in this system passing
+through a subcycle Z 0 of Z with deg Z 0 = deg Z − 1 passes automatically through
+Z.
+Examples 7.1. (i) Z = p is special if and only if it is a basepoint of the adjoint
+system,
+(ii) Z = p + q is special if and only if the adjoint system does not separate p from
+q.
+Let us compute the invariants of E. Since det(E) = L we find c1 (E) · c1 (E) =
+L · L. For the second Chern class we get c2 (E) = Z (indeed E has a section
+vanishing exactly in Z). Recall Bogomolov’s deep theorem (cf. [?] for a short
+proof) :
+If c1 (E) · c1 (E) > 4c2 (E)[S], i.e. if
+L · L > 4 deg Z,
+the bundle E is unstable with respect to any ample line bundle H,
+i.e. there exists a locally free rank 1 subsheaf (’line bundle’) M of E with
+c1 (E)
+· H ≤ M · H.
+2
+17
+
+(3.1)
+
+18
+
+CHAPTER 3. REIDER’S METHOD
+
+This line bundle M fits into a ’destabilizing sequence’
+0 → M → E → E ⊗ IA → 0,
+where E is another line bundle and IA is an ideal sheaf of a zero cycle (points with
+multiplicity) (see [loc. cit.]. The inequality for M is equivalent to
+(M − E) · H ≥ 0.
+
+(3.2)
+
+Observe that for the Chern classes of E this sequence gives the following expressions:
+c1 (E) = L = M + E, c2 (E) = M · E + deg A ≥ M · E.
+(3.3)
+Moreover (loc. cit.)
+(M − E) · (M − E) > 0.
+
+(3.4)
+
+In our situation Reider makes the following observation (not entirely obvious):
+There is an effective divisor in |E| containing Z.
+
+(3.5)
+
+Let us state Reider’s main application (see [Reider 1])
+Theorem 7.2 (Reider’s Theorem). Let L = O(L) be a nef line bundle on an algebraic surface S.
+(i) If L · L ≥ 5 and p is a base point of |K S + L|, there exists an effective divisor E
+passing through p such that
+eitherL · E = 0, E · E = −1
+or L · E = 1, E · E = 0.
+ii) If L · L ≥ 10 and p and q are not separated by the adjoint system for L, there is
+an effective divisor E through p and q such that
+either L · E = 0 and E · E = −1 or − 2
+or L · E = 1 and E · E = −1 or 0
+or L · E = 2 and E · E = 0
+Sketch of proof. Observe that the inequalities for L · L imply (3.2). We take for E
+the effective divisor whose existence is stated in (3.5).
+We have to check the possible intersection numbers. Let us do this for (i).
+Look at the plane in the Néron-Severi group N S(S) spanned by L = M + E and
+M − E. Since L · L > 0, the index theorem implies that the intersection form on
+this plane has signature (1, 1) and hence
+!
+M·M M·E
+det
+≤ 0.
+M·E E·E
+So (M · M)(E · E) ≤ (M · E)2 ≤ 1 (by (3.3)) Now 2M = M − E + L and so
+4M · M = (M − E) · (M − E) + L · L + 2(M − E) · L is positive because of (3.1),
+
+8. AN APPLICATION: PLURICANONICAL MAPS
+
+19
+
+(3.2), (3.4) and the fact that L, being a nef divisor is in the closure of the ample
+cone (Corollary 5.2). It follows that E · E ≤ 0. On the other hand, since L is nef
+we get 0 ≤ L · E = M · E + E · E and so E · E ≥ −M · E ≥ −1. So either E · E = 0
+(and then L · E = 1 or 0, but the last possibility is excluded by the algebraic index
+theorem) or E · E = −1 and L · E = 0.
+
+
+8 An application: pluricanonical maps
+We need the notion of C-isomorphism:
+Definition 8.1. Let L be a line bundle on a surface S. We say that a f L is a
+C-isomorphism if it is a birational morphism onto a surface with finitely many
+rational double points, which is an isomorphism away from the inverse images of
+these rational double points.
+This notion arises naturally for surfaces of general type, because any curve with
+K · C = 0 is a rational curve with self intersection −2 (a so called (−2)-curve) and
+any maximal connected set of (−2)-curves is mapped onto a rational double point
+by a pluricanonical map, if this map is a morphism.
+The following result due to Reider gives an optimal description of pluri-canonical
+mappings. The proof is substantially simpler than the previous proofs and has the
+merit hat it treats all special cases with one method. One thing should be stressed:
+apparently the Bombieri method of producing 1-connected divisors (a technical
+notion- we don’t go into details) seems totally absent in this approach. However,
+Catanese pointed out that the presence of (−2)-curves forces to use a clever combination of Reider’s and Bombieri’s methods (see [Cat 3]).
+Theorem 8.2. Let S be a surface of general type. Let f m = f mK be the m-th
+pluricanonical map. We have:
+i) f m is a C-isomorphism for m ≥ 5.
+ii) f 4 is a C-isomorphism except for K · K = 1.
+iii) f 3 is a morphism for K · K ≥ 2 and an embedding for K · K ≥ 3.
+iv) f 2 is a morphism for K · K ≥ 5 and a birational morphism for K · K ≥ 10
+except when S has a genus two fibration.
+We only give the proof that f m is a morphism for K · K in the given range. This
+proof is however typical for the sort of reasoning that is used.
+We simply apply the previous theorem to L := (m − 1)K. One assumes that f m
+is not a morphism. The inequality we need is (m − 1)2 K · K ≥ 5. The conclusion is the existence of effective divisors E with K · E = 0, E · E = −1 or
+(m − 1)K · E = 1, E · E = 0. The adjunction formula excludes both. This gives the
+required contradiction.
+The proof of the other assertions goes similarly, but there are technical complications due to the presence of −2-curves. See [Cat 3] for complete details.
+
+20
+
+CHAPTER 3. REIDER’S METHOD
+
+Another important application of Reider’s method is the study of the adjoint
+mapping for very ample line bundles. It gives back and completes results previously obtained by Sommese and Van de Ven.
+
+Chapter 4
+
+Surface geography
+9
+
+Overview of surface geography
+
+There are several restrictions on a pair (c12 , c2 ) of positive natural numbers to occur
+as a pair of Chern numbers for a minimal surface of general type (it is well known
+that these numbers must be strictly positive [Troika, p.208–209]. In fact:
+c12 + c2 is divisible by 12 (Noether condition)
+c12 − 1/5c2 + 36/5 ≥ 0
+c12 ≤ 3c2 .
+The first follows from Noether’s formula, the second is a consequence of Noether’s
+inequality pg ≤ 21 c12 +2, while the third is the Bogomolov-Miyaoka-Yau inequality.
+See [Troika, Chapter VII] for details and historical remarks. In fig. 9 one can see
+the region in the (c12 , c2 )-plane given by these inequalities.
+We shall use the self-evident terminology of Noether-line and BMY-line for the
+borderlines. Note another interesting line: the line with c12 = 2c2 is the line with
+signature 0. Above it surfaces have positive signature and below it the signature
+is negative. Let us call these regions positive signature region, resp. negative
+signature region. Surface geography consists of mapping out subregions where
+surfaces have specific properties. There are the following geographic results:
+Theorem 9.1. i) In the region
+1
+(c2 − 36) ≤ c12 < 3c2 − 1388
+5
+every Chern number satisfying the Noether condition can be realized by a minimal
+surface.
+ii) In the region given by (recall that χ = 1/12(c12 + c2 ))
+88
+4661
+c2 + 209.125 χ2/3 < c12 <
+c2 − 1353.26 χ2/3
+179
+1726
+c2 > large constant ,
+21
+
+22
+
+CHAPTER 4. SURFACE GEOGRAPHY
+
+Figure 4.1: The inhabitated region
+we can realize all pairs (c12 , c2 ) satisfying the Noether condition by a simply connected surface.
+A similar assertion holds without a further condition on c2 for the part of the negative signature region given by
+1
+3
+(c2 − 36) ≤ c12 ≤ 2c2 − χ2/3 .
+5
+4
+In particular all rational slopes c12 /c2 ∈ [1/5, 4661/1726) occur and can be realized by simply connected surfaces (observe that 88/179 = 0.49.. and 4661/1726 =
+2.70..).
+iii) Surfaces on the Noether line and on the line c12 − 1/5c2 + 30/5 = 0 immediately
+above it are all double covers of Hirzebruch surfaces and the possible branch-loci
+are classified.
+iv) All rational slopes c2 /c12 ∈ [1/5, 3] occur and can be realized by irregular surfaces.
+A proof of (i) can be found in [Chen 1], where a slightly more precise statement
+is proved. These results supersede earlier work by Persson [Per 1, Xiao 1, Chen 1].
+For (ii) we refer to [Chen 1, Per 2]. Item (iii) is work of Horikawa and is reported
+on in [Troika]. Item (iv) follows from (i) plus the fact that surfaces on the border-
+
+10. HIRZEBRUCH’S EXAMPLE WITH C12 = 3C2
+
+23
+
+line c12 = 3c2 exist. There is a much simpler proof due to Sommese, which we will
+give below.
+Apart from these general results there are many scattered results for which
+we refer the reader to [Per 2]. Below we shall review two spectacular but simple
+constructions, one giving a surface on the BMY-line, the other giving a simply connected surface with pg = 0 in which differential topologists have become interested
+lately (Barlow’s surface).
+
+10
+
+Hirzebruch’s Example with c12 = 3c2
+
+We refer to [BHH, Kap. 3] for details on what follows.
+Start with k homogeneous linear forms l 1 , . . . , l k in three variables z0 , z1 , z2
+defining k lines in P2 and consider the abelian field extension
+p
+
+p
+n
+n
+K
+(l 2 /l 1 ), . . . , (l k /l 1 ) ⊃ K := C(z1 /z0 , z2 /z0 ).
+The group of this extension is G := (Z/nZ)k−1 and it corresponds to a covering
+S 0 → P2 ramified in the k given lines. The surface S 0 has singularities above
+points where three or more of these lines meet. Blowing up P2 at these points we
+get σ : P̃2 → P2 and we can form the covering
+f : S → P̃2
+with group G ramified in the proper transform of these curves. Then S is smooth.
+If p is a point where r lines meet, there are nk−1−r isomorphic curves C p over this
+point in S. Each of these is mapped to the corresponding exceptional curve E p in
+P̃2 with degree nr −1 . There are r branch points on E p over each of which one has
+nr −2 points. The Riemann-Hurwitz formula gives the Euler-number:
+e(C p ) = nr −1 (2 − r) + rnr −2 .
+Above each point of a line where no other lines intersect there are nk−1 /n = nk−2
+points. Above the points were only two of the lines meet there are exactly nk−3
+points. So, if we let L be the union of the k lines, sing L be the singular locus of
+L and
+t r : = number of points where r lines meet
+X
+X
+f 1 :=
+rt r , f 0 :=
+tr
+we get
+e(S 0−sing S 0)
+=nk−1 e(P2 − L) + nk−2 e(L − sing L) + nk−3 (t 2 )
+X
+X
+=nk−1 (3 − 2k +
+(r − 1)t r ) + nk−2 (2k −
+rt r ) + nk−3 t 2 ,
+X
+
+
+e(S) =e(S 0 − sing S 0) +
+nk−1−r t r nr −1 (2 − r) + rnr −2
+r ≥3
+
+=n
+
+k−1
+
+(3 − 2k + f 1 − f 0 ) + 2nk−2 (k − f 1 + f 0 ) + nk−3 ( f 1 − t 2 ).
+
+24
+
+CHAPTER 4. SURFACE GEOGRAPHY
+
+We now specify to the following arrangement: take three distinct non-concurrent
+lines l, m, n and add the lines through the three points l ∩ m, l ∩ n, m ∩ n and a fourth
+point not on l ∩ m ∩ n. So we have t 2 = 3, t 3 = 4 and the other t r vanish. Observe
+that the arrangement is essentially unique. We let n = 5 and we abuse notation by
+letting S be the surface obtained by the preceding construction. We find
+e(S) = 15 · 53 .
+To calculate K · K we use the formula for the canonical divisor on S (H is a line on
+P2 ):
+X
+X
+X
+
+
+K = f ∗ σ ∗ K P2 +
+E p + 4/5(
+E p + σ∗ H − 3
+Ep )
+X
+= f ∗ (σ ∗ (9/5H) − 3/5
+E p ).
+and we get
+K · K = 52 (81 · 52 − 36 · 52 ) = 45 · 53 .
+Comparing the two numbers we see indeed that S is on the line c12 = 3c2 .
+Remark 10.1. i) Ishida [I] calculated the irregularity: q = 30.
+ii) He also found 4 groups of order 52 which operate freely on S giving quotients
+with
+c12 = 3c2 = 225; q = 10, 6, 4, 0
+and a group of order 53 operating freely with quotient having invariants
+c12 = 3c2 = 45;
+
+q = 2.
+
+iii) With arrangements one can find at least two more examples on the borderline:
+• L= the twelve lines in a Hesse pencil with c12 = 3c2 = 48 · 310 ,
+• L= dual of the configuration of the 9 inflection points on a cubic and the
+connecting lines with c12 = 3c2 = 333 · 56 .
+iv) There is an obvious fibration Y → C p , which can be used to construct surfaces
+with given slopes c12 /3c2 in the next section.
+
+11
+
+Surfaces with given slope
+
+The following theorem is due to Sommese, see [Sommese].
+Theorem 11.1. Every rational point in [1/5, 3] occurs as the slope of some irregular algebraic surface of general type.
+Proof : We only consider the interval [2, 3], the remaining interval can be treated
+similarly. See e.g. [BHH, 156–157],
+Let
+s = c12 /c2 (the Chern-slope) .
+
+12. BARLOW’S SIMPLY CONNECTED SURFACE
+
+25
+
+The construction we use is based on the existence of a fibration S → C with connected fibres F over a curve C of genus ≥ 1. Then S is irregular (pull back 1-forms
+from the curve to the surface). If we pull back this fibration by a ramified covering
+C 0 → C of degree d such that the ramification divisor on C 0 has degree ρ we get a
+new irregular surface S 0. Its Chern-slope is easily calculated:
+s(S 0) =
+
+d · c12 (S) − 2ρ · (e(F)
+d · e(S) − ρ · e(F)
+
+= s(S) + (2 − s(S)) ·
+
+−ρ · e(F)
+.
+d · e(S) − ρ · e(F)
+
+If now g(C) ≥ 1 and s(S) ≥ 2 every slope between 2 and s(S) can be realized as
+follows: take
+β
+α
+C 0 −−→ C 00 −−→ C
+with α a double cover with 2y branchpoints and β an unramified cover of degree
+x. Note these do exist! Now d = 2x and ρ = 2y and we find
+s(S 0) = s(S) + (2 − s(S)) ·
+
+−y · e(F)
+,
+x · e(S) − y · e(F)
+
+So if we are given the rational number p/q, 0 ≤ p < q we can take x = −(q−p)e(F)
+and y = pe(S) and we see that the coefficient of 2 − s(S) is exactly p/q.
+We apply this to Hirzebruch’s surface, which has a fibration over a curve of genus
+6.
+
+
+12 Barlow’s simply connected surface
+There is only one known example of a simply connected surface of general type
+with pg = 0. It has been constructed by Barlow and recently has attracted the
+attention of the differential-topologists. See [Barlow] for the construction of the
+surface and [OV 2] for the relation with differential topology .
+Let us outline the construction of this surface. The basic observation is as follows.
+Suppose a finite group G acts on a simply connected variety X and let H := group
+generated by {g ∈ G | g has a fixed point}, then π1 (X/G)  G/H. In particular,
+if G is generated by elements having a fixed point, X/G is simply connected.
+We want to apply this to a simply connected non-singular surface X in a particularly
+simple case, where each g ∈ G − {1} has a finite number t of fixed points with
+isotropy group Z/2Z. The quotient X/G has t ordinary double points. We resolve
+them and call the resulting surface S . If G has order n we easily find:
+c12 (S) = 1/n · c12 (X)
+χ(S) = 1/n · ( χ(X) + 1/4t).
+If X has no exceptional curves, K X is nef and one can easily show that K S then is
+also nef and hence S must be minimal.
+
+26
+
+CHAPTER 4. SURFACE GEOGRAPHY
+
+Example 12.1. Suppose we have a minimal simply connected X with pg = 4, c12 =
+10 which admits an action of the dihedral group D10 = hα, βi (α is an involution
+and β has order 5) such that
+1) β acts freely,
+2) α has finite fixed locus then S is a simply connected surface with pg = 0, c12 = 1.
+Indeed, D10 is generated by 5 conjugate involutions and so S is simply connected. Now we form the quotient in two steps:
+X → X/h βi → X/D10 .
+The first map is a five-fold unramified covering and so is smooth with invariants
+χ = 1, c12 = 2, q = 0 and it follows that pg = 0 and a fortiori this holds for S. Since
+χ(S) > 0 as for any surface of general type, we find from the preceding formulas
+that χ(X/D10 ) = 1 = 21 (1 + 1/4t) and hence t = 4 and c12 (S) = 1.
+To construct X Barlow proceeds as follows: look at the quintic surface Y in P4 with
+homogeneous coordinates z0 , . . . , z4 given by
+X
+zj = 0
+j
+
+X
+j
+
+z 5j − 5/4
+
+X
+j
+
+z 2j
+
+X
+
+z 3j = 0.
+
+j
+
+This surface has an obvious action of the group
+√ A5 and there
+√ are 20 nodes on this
+surface which is the A5 -orbit of (2, 2, 2, −3 − −7, −3 + −7). This surface is the
+canonical model of the Hilbert
+√ modular surface X for the 2-congruence subgroup
+Γ of SL 2 (OK ), K = Q( 21). This surface X is known to be simply connected
+and has the correct invariants. The group SL 2 (OK )/Γ is isomorphic to A5 and acts
+on X. The surface X is the double cover of Y branched in the 20 nodes
+and the
+!
+ 0
+covering involution σ can be identified as the one coming from
+∈ GL where
+0 1
+√
+ = 55 + 12 21 is a positive unit in K. The involution commutes with the A5 action and this explains the action on Y . Now take the dihedral group generated by
+the 5-cycle in A5 and the involution (14)(23)σ. One checks easily that the 5-cycle
+acts freely on Y and hence on X. The two-cycle fixes a line L := {(0, λ, −λ, µ, −µ) |
+λ, µ ∈ C} on the surface and the set S consisting of the five intersection points of
+P
+the line z1 − z4 = 0, z2 − z3 = 0, z j = 0 with the surface Y . The line L splits on X
+into two curves which are interchanged by the involution σ. These curves are fixed
+by a := (14)(23) or by a · σ. In the first case the involution a · σ has fixed locus
+contained in the finite set above S and in the second case this holds for a itself. A
+closer inspection shows that a · σ has a finite fixed point set (but for our example
+it is only necessary to know that some involution exists!).
+
+Chapter 5
+
+Topology of simply connected
+algebraic surfaces
+13 Severi’s question
+A famous question posed by Severi (1954) is :
+Is every algebraic surface homeomorphic to the projective plane biholomorphic to it?
+Since pg is a topological invariant, one can pose the related question:
+Is every surface with pg = q = 0 rational?
+This question was already solved negatively by Castelnuovo in a 1896-paper [Cast]
+in which he presented what is now called Castelnuovo’s Rationality Criterion (see
+the end of Chapter 6: a surface is rational if and only if P2 = q = 0) plus –a
+couple of properly elliptic non-rational surfaces with pg = q = 0. Also Enriques’
+examples of Enriques surfaces were shown to belong to this class.
+It is an amusing exercise to show that Castelnuovo’s Criterion is optimal in the
+sense that any surface with P2 = q = 0, b2 = 1 must be isomorphic to the plane
+[Troika, Chapter V, Theorem 1.1]. Unfortunately it is not clear a priori whether
+the vanishing of P2 is a topological property or not and we need further technology
+if we want to find an answer to Severi’s question. It turns out that Yau’s solution
+to the Calabi Conjectures (1977) finally provided an affirmative answer to Severi’s
+question. We refer to loc.cit. for details.
+
+14 Topological classification
+By Freedman’s fundamental work ([Freedman]) it follows that the oriented homeomorphism type of a simply connected four-manifold having at least one smooth
+structure is completely determined by the integral equivalence class of the unimodular intersection form on H 2 (S, Z). Intersection forms of simply connected
+27
+
+28
+
+CHAPTER 5. TOPOLOGICAL QUESTIONS
+
+algebraic surfaces are always indefinite with the only exception of P2 . The positive
+answer to Severi’s problem deals with this case (see the previous section) and so we
+can assume that the form is indefinite. Such forms are uniquely classified by their
+rank(= b2 ), their signature τ and their parity (a form is even if all self-intersections
+are even and odd otherwise). See [Serre] for details. With the usual notation, any
+such form is isometric to
+ph1i ⊕ qh−1i,
+
+τ = p−q
+
+(odd forms)
+
+r pH ⊕ q(±E8 ),
+
+τ = ±8q
+
+(even forms).
+
+There is an easy way of determining the parity by Wu’s formula [MS, p.132]:
+The intersection is even precisely when K
+is 2-divisible in in the Néron-Severi group.
+
+(5.1)
+
+Examples 14.1. 1. All surfaces with odd intersection form must be homeomorphic
+to connected sums of copies of the projective plane and of the projective plane with
+the orientation reversed.
+2. Any K3-surface has even intersection form of signature −16 and since b2 = 22
+the intersection form must be
+L := H ⊕ H ⊕ H ⊕ ⊕(−E8 ) ⊕ −E8 ).
+3. Any quadric has H as intersection form. Since any Hirzebruch surface Fn with
+n odd is a deformation of a quadric [Troika, p.202.] H is the intersection form
+also for those. All Fn with n odd are deformations of F1 , i.e. of the projective
+plane once blown up and hence diffeomorphic to to P2 #P2 with intersection form
+h1i ⊕ h−1i.
+4. From the previous examples we see that the direct sum of 3a + b copies of H
+and 2a copies of ±E8 can be realized as the connected sum of b quadrics and a
+K3-surfaces or K3’s with reversed orientation.
+Question: Are all simply connected oriented
+differentiable 4-manifolds with even intersection
+form oriented homeomorphic to connected sums of
+quadrics and K3’s or K3’s with orientation reversed?
+This would follow from
+Conjecture 14.2 (The 11/8 Conjecture). If M is a simply connected oriented differentiable four-manifold with even intersection form we have the inequality
+b2 ≥
+
+11
+|τ|.
+8
+
+Indeed, for differentiable four-manifolds Rochlin’s theorem says that the signature for even forms is divisible by 16 and we can take a := |τ|/16 copies of a
+K3-surface (if the signature is negative) or of a K3 with orientation reversed (if
+
+14. TOPOLOGICAL CLASSIFICATION
+
+29
+
+τ ≥ 0) and of b := 1/16(8b2 − 11|τ|) copies of a quadric. The fact that b is an
+integer follows from the fact that the unimodular intersection form is isometric to a
+direct sum of copies of H and ±E8 so that b2 is even. For almost complex surfaces
+we have b2 = c2 − 2 and τ = 1/3(c12 − 2c2 ) and we find that the 11/8-conjecture in
+this case boils down to
+2
+
+
+ 11c1 + 2c2 − 48(= 48b) ≥ 0
+ −11c2 + 46c2 − 48(= 48b) ≥ 0
+1
+
+
+if τ ≤ 0
+if τ ≥ 0.
+
+For algebraic surface the intersection form being even implies that the surface is
+minimal and by the classification results (see Corollary 3.2) we have c12 ≥ 0 and
+c2 ≥ 3 and so if the signature is negative the conjecture follows. If the signature
+is positive, we need the far from trivial Bogomolov-Miyaoka-Yau inequality (see
+chapter 4) to show that in this case the inequality holds. So we have
+Any simply connected algebraic surface with even
+intersection form is homeomorphic to a connected
+sum of quadrics and K3’s or K3’s with orientation
+reversed.
+k from section 3. From the canonical bundle given
+Let us go back to the surfaces S pq
+there we find that the intersection form is even if and only if k, p, q are all odd. The
+other invariants show that
+
+k
+S p,q
+k
+S p,q
+
+1
+(k+1)
+homeo 2
+
+∼
+
+#
+
+homeo 2k+1
+
+∼
+
+1
+2 (k−1)
+
+(K3-surface ) # (P1 × P1 )
+10k+9
+
+# (P2 ) # P2
+
+if k, p, q all odd
+otherwise.
+
+0 are all homeomorphic to P2 blown up in
+In particular, the Dolgachev surfaces S p,q
+9 points.
+5. As a final example, consider a question posed to me by Ronny Lee, Ron Stern
+and Bob Gompf:
+
+If we reverse the orientation of a (simply connected)
+complex surface, does there exist a compatible complex structure on the new manifold?
+There are obvious examples where the answer is ’no’, like P2 and others, where
+the answer is ’yes’, like P1 × P1 or P2 blown up in a point. To put this question
+into perspective, we shall recall [Troika, p. 130] the criterion for an oriented fourmanifold to have an almost complex structure:
+Theorem 14.3. An oriented four-manifold M admits an almost complex structure
+with given c1 = h ∈ H 2 (M, Z) if and only if
+i) h is equal to the second Stiefel- Whitney class in mod 2-cohomology,
+ii) h2 = 3τ(M) + 2e(M).
+
+30
+
+CHAPTER 5. TOPOLOGICAL QUESTIONS
+
+We look first at simply connected four-manifolds with odd intersection form,
+i.e the connected sums of a projective planes and b planes with orientation reversed. A little number theory shows that almost complex structures are only possible if and only if a is odd and positive. This shows :
+a
+
+b
+
+S :=# (P2 ) # P2 as well as S have almost complex
+structures if and only if both a and b are positive
+and odd.
+We now look at complex structures. From the classification (Corollary 3.2) we see
+that 3a − b = c12 ≥ 0 and so a necessary condition for a positive answer to the
+preceding question is
+1/3 · b ≤ a ≤ b.
+(5.2)
+k
+with at least one
+In particular we see that the answer is no for the surfaces S p,q
+of k, p, q even. For surfaces of general type on the other hand the answer is often
+’yes’ as we see from the following
+
+Theorem 14.4. Let S be a simply connected complex surface.
+i) If
+c12 < c2
+the surface S does not admit a complex structure.
+ii) Assume that S has odd intersection form. Then S does not admit an almost
+complex structure if e(S) − τ(S) . 0 mod 4. On the other hand, if e(S) − τ(S) =
+20 χ(S) − 2c12 (S) is divisible by 4, i.e. if c12 (S) is even and if moreover the Chern
+numbers of S satisfy the inequalities
+2935
+c2 + 1353.26(5c2 − c12 )2/3 < c12 ≤3c2
+1726
+c2 >large constant ,
+or if we have
+3
+2c2 + (5c2 − c12 )2/3 ≤ c12 ≤ 3c2
+4
+(without further restrictions on c2 ), the oppositely-oriented surface S admits a complex structure.
+Proof : (i) For any S in the mentioned region, the surface S lies on the wrong side
+of the BMY-line.
+(ii) Since b must be odd (this follows from the observations about almost complex
+structures) we have that e(S) − τ(S) = 2(b + 1) is divisible by four.
+The potential new first Chern number equals −c12 + 4c2 , while c2 remains unchanged. We easily check that the stated inequalities just mean that the potential
+new Chern numbers are in the range where we can apply Theorem 9.(ii) to conclude
+existence of a simply connected complex surface with these new Chern numbers.
+
+15. SOME RESULTS ON THE DIFFERENTIABLE STRUCTURE
+
+31
+
+The surfaces constructed by Chen all have odd intersection form and correspond to
+the first region. Persson’s constructions give odd forms in the region
+1
+3
+(c2 − 30) ≤ c12 ≤ 2c2 − χ2/3 ,
+5
+4
+which corresponds to the second region. These facts can be checked, using the fact
+that the non-negligible singularities used by the aforementioned authors give rize
+to odd forms (use (5.1)). We omit the (tedious) details.
+
+It is much harder to obtain results for surfaces of general type in the case of
+even forms since there are not many surfaces known in the allowed region with
+even intersection form, but clearly a small modification of the preceding argument
+would give a positive answer to the preceding question if existence of such surfaces
+would be established.
+As to the existence of almost complex structures, it is not difficult to show:
+If the 11/8-conjecture is true, any simply connected
+oriented differentiable four-manifold with even intersection form has an almost complex structure and
+if we reverse the orientation, also the new oriented
+manifold has an almost complex structure.
+The inequalities from surface geography tells us that we have restrictions on the
+pairs of numbers (a, b) with a = number of K3-’s (or reversed K3-’s) and b =
+numbers of quadrics in the decomposition of such an almost complex surface in
+order that it be complex. One finds:
+b≥
+
+2
+a − 1 (if τ ≤ 0),
+3
+b ≥ 6a (if τ ≤ 0).
+
+k
+k
+As to ’special’ surfaces S p,q
+with even form, this shows immediately that S p,q
+can have no complex structure. We already noticed that for a simply connected
+surface S of general type with c12 < c2 the surface with orientation reversed has no
+complex structure, but -as remarked previously-it is hard to get positive results in
+the remaining region.
+
+15 Some results on the differentiable structure
+The most striking application of Donaldson-theory is probably to the h-cobordism
+conjecture
+If two simply connected differentiable manifolds are
+h-cobordant they are diffeomorphic.
+Smale’s work [Smale] shows that this is true for dimensions ≥ 5 and Freedman’s theorem implies that h-cobordant simply connected smooth four-manifolds
+
+32
+
+CHAPTER 5. TOPOLOGICAL QUESTIONS
+
+are homeomorphic, so in dimension four one only needs to see whether a given
+homeomorphism-class can contain different diffeomorphism types. Looking for
+0
+have the
+examples in our classification, we see that the Dolgachev surfaces S p,q
+2
+same topological structure as P blown up in 9 points. Donaldson showed [Don0 and so the h-cobordism
+aldson] that this rational surface is not diffeomorphic to S2,3
+conjecture is not true.
+Several authors[FM 1, OV 1] showed that we get countably many distinct differentiable structures when we let p and q vary while k = 0 and so there are infinitely
+m
+
+many differentiable structures on Sm := P2 # P2 when m = 9, a result extended to
+any m ≥ 9 by Friedman and Morgan (see [FM 1]).
+As to m ≤ 8 there is only one known simply connected surface of general type
+homeomorphic to Sm , namely the Barlow surface (see Chapter IV). It has pg =
+0, c12 = 1 and hence m = 8. This surface does not have the differentiable structure of S8 : if we blow up Barlow’s surface once the resulting surface is neither
+0 . See [OV 2, Ko].
+diffeomorphic to S9 nor to S p,q
+Using the Donaldson polynomials plus some information on the monodromygroup of big families of differentiable isomorphic surfaces Ebeling showed (see
+[Ebe]) that complete intersection surfaces of general type which have pg even and
+which are homeomorphic (e.g. with the same c12 and with K = a H a same parity
+mod 2), but whose canonical class has different divisibility properties cannot be
+diffeomorphic. An example of two such surfaces: multidegrees (10, 7, 7, 6, 3, 3) in
+P8 and (9, 5, 3, 3, 3, 3, 3, 2, 2) in P11 . Here c12 = 22 · 39 · 5 · 72 , K = 28H, resp. 22H.
+Salvetti proved that given any natural number n there are n surfaces of general
+type which are all homeomorphic, but mutually not diffeomorphic. See [Sal]. His
+surfaces are not complete intersections, but repeated double covers of P2 .
+k with k ≥ 1, there is a nice result ([FM 1]:
+As to the other surfaces S p,q
+k
+Let k ≥ 1. If a surface S p,q
+blown up in r points
+0
+is diffeomorphic to a surface S pk 0,q 0 blown up in r 0
+points then r = r 0 and pq = p0 q 0.
+
+This gives a negative answer to the differentiable analog of Kodaira’s question
+(which has a positive answer because of Freedman’s results):
+Is any surface with the same homotopy-type of a K3surface homeomorphic to a K3-surface?
+1
+Indeed, take p and q both odd, but > 1, then S p,q
+has the same topology as a K3surface, while the preceding theorem says that it cannot be diffeomorphic to the
+1 . The K3-surfaces have κ = 0, while the other surfaces
+genuine K3-surface S1,1
+1
+S p,q
+have κ = 1. This gives evidence for one of the challenging conjectures that
+remains in this field:
+
+Conjecture 15.1. The Kodaira-dimension of an algebraic surface is a differentiable
+invariant.
+
+Bibliography
+[Barlow]
+
+Barlow, R.: A simply connected surface of general type with pg =
+0., Invent. Math. 79, 293–301 (1987).
+
+[Beau]
+
+Beauville,A.: Complex algebraic surfaces, LMS Lect.Note Ser. 68.
+Cambr. Univ. Press (1983).
+
+[BHH]
+
+Barthel, G., Hirzebruch, F., Höfer, T.: Geradenkonfigurationen und
+Algebraische Flächen, Aspects of Mathematics D4, Vieweg (1987).
+
+[Cast]
+
+Castelnuovo, G.: Sulle superficie di genere zero. Mem. Soc. Ittal.
+Sci. II Ser.. 10 103–126 (1989)=Mem. Scelte, Zanichelli, Bologna,
+501–507 (1937).
+
+[Cat 1]
+
+Catanese, F.: Canonical rings and "special" surfaces of general
+type. In: Proc. Symp. Pure Math. (46-1) Algebraic Geometry Bowdoin 1985 , A.M.S., Providence RI 175–194 (1987) .
+
+[Cat 2]
+
+Catanese, F.: Everywhere non reduced moduli spaces. Invent.
+Math. 98 293–310 (1989).
+
+[Cat 3]
+
+Catanese, F.: Footnotes to a theorem of I. Reider. Preprint (1989).
+
+[Chen 1]
+
+Chen, Z.: On the geography of surfaces (simply connected minimal
+surfaces with positive index). Math. Ann. 277, 141–164 (1987).
+
+[Chen 2]
+
+Chen, Z.: The existence of algebraic surfaces with pre-assigned
+Chern numbers. Math. Z. 206, 241–254 (1991).
+
+[Corti]
+
+Corti, A.: Polynomial bounds for the number of automorphisms of
+a surface of general type, Ann. É.N.Sup. 24, 113–137 (1991).
+
+[Dolgachev]
+
+Dolgachev, I.: Algebraic surfaces with pg = q = 0. In:Algebraic
+surfaces, C.I.M.E., 97–215, Liguori Napoli (1981).
+
+[Donaldson]
+
+Donaldson, S.K.: Irrationality and the h-cobordism conjecture. J.
+Diff. Geo. 24, 275–341 (1986).
+
+[Ebe]
+
+Ebeling, W.: An example of two homeomorphic nondiffeomorphic
+complete intersection surfaces. Invent. Math.99 651–654 (1990).
+33
+
+34
+
+BIBLIOGRAPHY
+
+[Freedman]
+
+Freedman, M.: The topology of 4-manifolds. J. Diff. Geo. 17, 357–
+454 (1982).
+
+[FM 1]
+
+Friedman, M. and J. Morgan: On the diffeomorphism type of certain algebraic surfaces I,II. J. Diff. Geo. 27,297–398 (1988).
+
+[FM 2]
+
+Friedman, M. and J. Morgan: Algebraic surfaces and 4-manifolds:
+some conjectures and speculations, Bull. Am. J. Math. 18, 1–
+19 (1988).
+
+[Hir]
+
+Hirzebruch,F. : Topological Methods in Algebraic Geometry,
+Grundl. Math. Wiss. 131 Springer Verlag, Berlin etc. (1966).
+
+[HS]
+
+Huckleberry, A., M. Sauer: On the order of the automorphism
+group of a surface of general type. Preprint (1989).
+
+[I]
+
+Ishida, M.-N: The irregularity of Hirzebruch’s examples of surfaces
+of general type with c12 = 3c2 , Math. Ann. 262, 407–420 (1983).
+
+[Klei]
+
+Kleiman, S.: Towards a numerical theory of ampleness. Ann. Math.
+84 293–344 (1966).
+
+[Ko]
+
+Kotschik, D: On manifolds homeomorphic to CP2 #8CP2 . Invent.
+Math.95, 591–600 (1989).
+
+[Mi 1]
+
+Miyaoka, Y.: Kähler metrics on elliptic surfaces. Proc. Jap. Acad.
+50 533–536 (1974).
+
+[Mi 2]
+
+Miyaoka, Y.: On the Chern numbers of surfaces of general type.
+Invent. Math. 42 225–237 (1977).
+
+[MS]
+
+Milnor,J., J. Stasheff: Characteristic classes. Ann. Math. studies 76.
+Princeton Un. Press, Princeton (1974).
+
+[OV 1]
+
+Okonek, C., A. Van de Ven: Stable vector bundles and differentiable structures on certain elliptic surfaces. Invent. Math. 86, 357–
+370 (1986).
+
+[OV 2]
+
+Okonek, C., A. Van de Ven: Γ-type invariants associated to PU(2)bundles and the differentiable structure of Barlow’s surface. Invent.
+Math.95, 601–614 (1989).
+
+[Per 1]
+
+Persson,U.: Chern invariants of surfaces of general type. Compos.
+Math. 43, 3–58 (1981).
+
+[Per 2]
+
+Persson,U.:An introduction to the geography of surfaces of general
+type. In: Proc. Symp.Pure Math. (46-1) Algebraic Geometry Bowdoin 1985 , A.M.S., Providence RI, 195–220 (1987)
+
+BIBLIOGRAPHY
+
+35
+
+[Reid 1]
+
+Reid, M.: Bogomolov’s Theorem c12 ≤ 4c2 , Proc. Intern. Symp. on
+Algebraic Geometry, Kyoto, 633–642 (1977).
+
+[Reid 2]
+
+Reid, M.: Campedelli versus Godeaux, Preprint RIMS, Kyoto 1989.
+
+[Reider 1]
+
+Reider, I.: Vector bundles of rank 2 and linear systems on algebraic
+surfaces, Ann. Math., 127, 309–316 (1988).
+
+[Reider 2]
+
+Reider, I.: Bounds for the number of moduli for irregular surfaces
+of general type. Manuscr. Math. 60 221–233 (1988).
+
+[Serre]
+
+Serre,J.-P.: A course in arithmetic, Grad.Texts in Math. 7. Springer
+Verlag, Berlin. etc. (1973).
+
+[Sal]
+
+Salvetti, M.: On the number of non-equivalent differentiable structures on 4-mani- folds. Man. Math. 63, 157–171 (1989).
+
+[Smale]
+
+Smale, S.: On the structure of manifolds. Am. J. Math. 84 387–
+206 (1962).
+
+[Sommese]
+
+Sommese, A.: On the density of ratios of Chern numbers of Chern
+numbers of algebraic surfaces. Math. Ann. 268 207–221 (1984).
+
+[Siu]
+
+Siu, Y.T.: Every K3-surface is Kähler. Invent. Math. 73 139–
+150 (1983).
+
+[Troika]
+
+Barth, W., C. Peters, A. Van de Ven: Compact Complex Surfaces,
+Erg. Math., Ser. 3 4, Springer Verlag, Berlin etc., (1984).
+
+[Xiao 1]
+
+Xiao, G.: Surfaces fibrées en courbes de genre deux. Lect. Notes
+Math. 1137. Springer Verlag, Berlin etc. (1985).
+
+[Xiao 2]
+
+Xiao, G.: On abelian automorphism groups of a surface of general
+type. Preprint (1989).
+
+[Wi]
+
+Wilson, P.M.H.: Towards birational classification of algebraic varieties. Bull. London Math. Soc. 19 1–48 (1987).
+
+

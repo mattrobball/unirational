@@ -2,8 +2,9 @@
 
 **Status: PHASE 0 — WP-0 gate REVIEWED 2026-07-29: all five printed
 defects confirmed by direct read of the primary text; one substantive
-(the maximality mismatch), four repairable-on-sight.  WP-0.5 authorized:
-referee-grade gap report + bounded attempt at the repair lemma.**
+(the maximality mismatch), four repairable-on-sight.  WP-0.5 repair ordered
+(`WORKORDER_0.5_REPAIR.md`): owner judges the defects not serious; Codex
+executes repairs R1-R5, gate on the repaired proof.**
 
 Source: Katzarkov–Kontsevich–Pantev–Yu, *Birational Invariants from Hodge
 Structures and Quantum Multiplication*, arXiv:2508.05105 (v2, 2026-03-06).

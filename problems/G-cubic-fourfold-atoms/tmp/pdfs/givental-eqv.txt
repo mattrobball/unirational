@@ -1,0 +1,2445 @@
+ EQUIVARIANT GROMOV-WITTEN INVARIANTS
+                                 Alexander B. GIVENTAL ∗
+
+                               Department of Mathematics
+                                 University of California
+                           Berkeley, California 94720-3840 USA
+
+
+      The objective of this paper is to describe some construction and applications of the
+equivariant counterpart to the Gromov-Witten (GW) theory, i.e. intersection theory on
+spaces of (pseudo-) holomorphic curves in (almost-) Kahler manifolds.
+   Given a Killing action of a compact Lie group G on a compact Kahler manifold X, the
+equivariant GW-theory provides, as we will show in Section 3, the equivariant cohomology
+space HG∗ (X) with a Frobenius structure (see [2]). We discuss applications of the equivariant
+theory to the computation ([7],[11]) of quantum cohomology algebras of flag manifolds (Sec-
+tion 5), to the simultaneous diagonalization of the quantum cup-product operators (Sections
+7,8), to the S 1-equivariant Floer homology theory on the loop space LX (see Section 6 and
+[10],[9]) and to a “quantum” version of the Serre duality theorem (Section 12).
+    In Sections 9 — 11 we combine the general theory developed in Sections 1 — 6 with the
+fixed point localization technique [3] in order to prove the mirror conjecture (in the form
+suggested in [10]) for projective complete intersections.
+   By the mirror conjecture one usually means some intriguing relations (discovered by
+physicists) between symplectic and complex geometry on a compact Kahler Calabi–Yau n-
+fold and respectively complex and symplectic geometry on another Calabi-Yau n-fold called
+the mirror partner of the former one. The remakable application [16] of the mirror conjecture
+to enumeration of rational curves on Calabi–Yau 3-folds (1991, see the theorem below) raised
+a number of new mathematical problems — challenging maturity tests for modern methods
+of symplectic topology.
+  ∗
+      Supported by Alfred P. Sloan Foundation and by NSF Grant DMS–9321915.
+
+
+                                                 1
+   On the other hand, in 1993 I suggested that the relation between symplectic and complex
+geometry predicted by the mirror conjecture can be extended from the class of Calabi–Yau
+manifolds to more general compact symplectic manifolds if one admits non-constant holo-
+morphic functions on suitable non-compact Calabi–Yau manifolds in the role of the mirror
+partners. According to this generalized form of the mirror conjecture Gromov–Witten in-
+variants of a symplectic manifold can be reinterpreted in terms of oscillating integrals over
+the mirror partner and saddle-point asymptotics of these integrals near critical points of the
+holomorphic function.
+   We refer to [10, 9] for a detailed discussion of the generalized mirror conjecture supported
+there by the examples of complex projective spaces and general toric symplectic manifolds.
+In this paper we prove the conjecture (see Corollary 11.10, Corollary 10.8, Corollary 9.2 and
+the remark following it) for complete intersections in CP n given by r equations of degrees
+(l1, ..., lr) with l1 + ... + lr ≤ n + 1, that is for Fano (<) and Calaby–Yau (=) projective
+complete intersections.
+   In particular we explain in Section 11 how to pass the following maturity test:
+
+   Theorem. Consider the Picard-Fuchs differential equation
+                         d 4            d      d      d      d
+                     (      ) I = 5et (5 + 1)(5 + 2)(5 + 3)(5 + 4)I
+                         dt             dt     dt     dt     dt
+satisfied by the periods
+                                       Z
+                                                     du0 ∧ ... ∧ du4
+                              I(t) =
+                                           γt3 d(u0 + ... + u4 ) ∧ d(u0 ...u4)
+
+of the non-vanishing holomorphic 3-forms on the Calabi-Yau 3-folds Yt with Hodge numbers
+h2,1 = 1, h1,1 = 101 given by the affine equations Yt : u0 + ... + u4 = 1, u0 ...u4 = et.
+    Pick the basis I0 , ..., I3 of solutions to this differential equation determined by
+                                                       ∞
+                                                       X                Π5d
+                                                                         m=1 (5P + m)
+        I0(t) + I1 (t)P + I2 (t)P 2 + I3(t)P 3 =             e(P +d)t                  ( mod P 4 ).
+                                                       d=0
+                                                                        Πdm=1 (P + m)5
+
+   Introduce the new variable T (t) = I1 (t)/I0(t).
+   Then
+                           I0 I1         I2           I3
+                             + (t(T ))P + (t(T ))P 2 + (t(T ))P 3 =
+                           I0 I0         I0           I0
+
+                                                       2
+                                            ∞        ∞
+                                                   X e(P +kd)T
+                                        P2 X     3
+                             e   PT
+                                      +      nd d              2
+                                                                 ( mod P 4 ),
+                                        5           (P + kd)
+                                           d=1      k=1
+where the components of the RHS form the basis of solutions to the differential equation
+                                                           X∞
+                d 2 1        d 2                                    3   qd
+              ( )          (   ) J = 0  with  K(q)   = 5 +     n d d         ,
+               dT K(eT ) dT                                d=1
+                                                                      1 − qd
+and nd is the virtual number of degree d rational curves in CP 4 situated on a generic degree
+5 hypersurface X, a Calabi-Yau 3-fold with Hodge numbers h2,1 = 101, h1,1 = 1.
+      An analogous result holds for any non-singular Calabi-Yau 3-dimensional projective com-
+plete intersection X.
+
+      The virtual numbers of rational curves on a Calabi-Yau 3-fold X are defined in several
+equivalent ways in the quantum cohomology theory 1 and are equal to the algebraic numbers
+of such curves on X provided with a generic almost Kahler structure. It is known that for
+generic quintic hypersurfaces X ⊂ CP 4 the virtual number nd coincides with the number of
+the degree d rational curves in CP 4 situated in X at least for d ≤ 9. The number n1 = 2875 of
+straight lines on a generic quintic 3-fold has been known since the last century, n2 = 609250
+and n3 = 317206375 were found (see [16]) several years ago, while n4 = 242467530000 was
+predicted in [16] and confirmed in [3] (as an illustration of a method that allows in principle
+to find each nd ). The simultaneous description of all the numbers nd given in the theorem
+was conjectured in [16] on the basis of physical ideas of mirror symmetry between the Calabi-
+Yau manifolds X and Y whose Hodge diamonds happened to be mirror-symmetric to one
+another.
+      As far as we know, our Theorem and its generalization to Calabi-Yau projective complete
+intersections given in Section 11 provide the first examples of Calabi-Yau manifolds for which
+predictions of the mirror symmetry are verified for rational curves of all degrees.
+      The results of Sections 9 – 11 can be immediately carried over to complete intersections
+in products of projective spaces. The method can be also applied to complete intersections in
+general toric varieties where however some generalization of our algebraic formalism and some
+refinement in foundations of the equivariant Gromov – Witten theory would be necessary.
+
+   I am thankful to S. Barannikov, I. Grojnowski, B. Kim, D. Morrison, R. Plesser, N.
+Reshetikhin, A. Schwartz, A. Varchenko for numerous stimulating discussions and especially
+  1
+      see for instance [20, 19] and also [15, 14] where the problem of counting multiple covers is resolved.
+
+                                                          3
+to M. Kontsevich who taught me his approach to Gromov – Witten theory. The proof of the
+theorem formulated above has grown out of our joint attempt in Spring 95 to prove it using
+the method [3] of summation over trees. The influence of our discussions on other results of
+this paper is also significant.
+
+
+1     Moduli spaces of stable maps
+It was M. Gromov [8] who first suggested to construct (and constructed some) topological
+invariants of a symplectic manifold X as bordism classes of spaces of pseudo-holomorphic
+curves in X. Recently M. Kontsevich [3] suggested the concept of stable maps which gives
+rise to an adequate compactification of these spaces. We recall here some basic facts from
+[3] about these compactifications.
+   Let (C, p) be a compact connected complex curve with only double singular points and
+with n ordered non-singular marked points (p1 , ..., pn ). Two holomorphic maps (C, p) →
+X, (C ′, p′ ) → X to an almost-Kahler manifold X are called equivalent if they can be identified
+by a holomorphic isomorphism (C, p) → (C ′, p′ ). A holomorphic map (C, p) → X is called
+stable if it does not have infinitesimal automorphisms (or, equivalently, if its automorphism
+group is finite). In other words, a map is unstable if either it is constant on a genus 0
+irreducible component of C with < 3 special (= marked or singular) points or if C is a torus,
+carries no marked points and the map is constant.
+   According to Gromov’s compactness theorem [8], any sequence of holomorphic maps
+C → X of a nonsingular compact curve C has a subsequence Hausdorff-convergent to a
+holomorphic map Ĉ → X of (may be reducible) curve Ĉ of the same genus g and representing
+the same total homology class d ∈ H2 (X, Z). A refinement of this theorem from [3] says
+that equivalence classes of stable maps C → X with given g, n, d form a single compact
+Hausdorff space — the moduli space of stable maps — which we denote Xg,n,d . Here g =
+dim H 1 (C, O) = 1 − χ(C\C sing)/2.
+    In the case X = pt the moduli spaces coincide with Deligne-Mumford compactifications
+M̄g,n of moduli spaces of genus g Riemannian surfaces with n marked points. They are
+compact nonsingular orbifolds (i.e. local quotients of nonsingular manifolds by finite groups)
+and thus bear the rational fundamental cycle which allows one to build up an intersection
+theory. In general, the moduli spaces Xg,n,d are singular and may have “wrong” dimension,
+
+
+                                               4
+and the idea of the program started in [4, 3] is to provide Xg,n,d with virtual fundamental
+cycles insensitive to perturbations of the almost-Kahler structure on X. In some nice cases
+however the spaces X0,n,d are already nonsingular orbifolds of the “right” dimension.
+   Beginning with this point we will use only genus zero stable maps and use the notation
+Xn,d for the moduli spaces X0,n,d .
+    A compact complex manifold is called convex if it is a homogeneous space of its Lie
+algebra of holomorphic vector fields.
+
+Theorem 1.1 ([3, 6]) If X is convex then all non-empty moduli spaces Xn,d of genus 0
+stable maps are compact nonsingular complex orbifolds of “right” dimension hc1 (Tx), di +
+dimC X + n − 3.
+
+    Additionally, there are canonical morphisms Xn,d → Xn−1,d , Xn,d → M̄0,n , Xn,d → X n
+between the moduli spaces Xn,d called forgetful, contraction and evaluation (and defined by
+forgetting one of the marked points, forgetting the map and evaluating the map at marked
+points respectively). We refer to [3, 6] for details of their construction.
+   In the rest of this paper we will stick to convex manifolds; we comment however on
+which results are expected to hold in greater generality. A number of recent preprints by B.
+Behrend – B. Fantechi, J.Li – G. Tian, T. Fukaya – K. Ono shows that Kontsevich’s “virtual
+fundamental cycle” program is being realized successfully and leaves no doubts that these
+generalizations are correct. Still some verifications are necessary in order make them precise
+theorems.
+
+
+2     Equivariant correlators
+The Gromov-Witten theory borrows from the quantum field theory the name (quantum)
+correlators for numerical topological characteristics of the moduli spaces Xn,d (characteris-
+tic numbers) and borrows from the bordism theory the construction of such correlators as
+integrals of suitable wedge-products of various universal cohomology classes (characteristic
+classes of the GW theory) over the fundamental cycle.
+    We list here some such characteristic classes.
+
+    1. Pull-backs of cohomology classes from X n by the evaluation maps e1 ×· · ·×en : Xn,d →
+      X n at the marked points.
+
+                                               5
+   2. Any polynomial of the first Chern classes c(1), . . . , c(n) of the line bundles over Xn,d
+      consisting of tangent lines to the mapped curves at the marked points. One defines
+      these line bundles (by identifying the Cartesian product of the forgetful and evaluation
+      maps Xn+1,d → Xn,d × X with the universal stable map over Xn,d ) as normal line
+      bundles to the n embeddings Xn,d → Xn+1,d defined by the n marked points of the
+      universal stable map. We will call these line bundles the universal tangent lines at the
+      marked points.
+
+   3. Pull-backs of cohomology classes of the Deligne - Mumford spaces by contraction maps
+      π : Xn,d → M̄0,n . We will make use of the classes AI := Ai1 ,...,ik Poincare-dual to
+      fundamental cycles of fibers of forgetful maps M̄0,n → M̄0,k .
+
+   We define the GW-invariant
+                                                 Z
+                       AI hφ1 , ..., φnin,d :=                  π ∗AI ∧ e∗1φ1 ∧ ... ∧ e∗n φn .
+                                                     Xn,d
+
+   It has the following meaning in enumerative geometry: it counts the number of pairs
+“a degree-d holomorphic map CP 1 → X with given k points mapped to given k cycles, a
+configuration of n − k marked points mapped to the n − k given cycles”.
+
+   Suppose now that the convex manifold X is provided with a hamiltonian Killing action
+of a compact Lie group G. Then G act also on the moduli spaces of stable maps. The
+evaluation, forgetful and contraction maps are G-equivariant, and one can define correlators
+AI hφ1, . . . φn in,d of equivariant cohomology classes of X.
+   The equivariant cohomology HG∗ (M) of a G-space M is defined as the ordinary cohomol-
+ogy H ∗ (MG ) of the homotopic quotient MG = EG ×G M — the total space of the M-bundle
+p : MG → BG associated with the universal principal G-bundle EG → BG. The algebra
+H ∗ (BG) = HG∗ (pt) of characteristic classes of principal G-bundles plays the role of the coeffi-
+cient ring of the equivariant theory (so that HG∗ (M) is a HG∗ (pt)-module). If M is a compact
+manifold with smooth G-action, the push-forward p∗ : HG∗ (M) → HG∗ (pt) (“fiberwise inte-
+gration”) provides the equivariant cohomology of M with intersection theory with values in
+HG∗ (pt). In the case of hamiltonian actions the corresponding intersection pairing h·, ·i is
+non-degenerate over HG∗ (pt).
+
+
+                                                            6
+    We introduce the equivariant GW-invariants, AI (hφ1 , . . . , φn in,d , with values in H ∗ (BG),
+where φ1, . . . , φn ∈ HG∗ (X). Values of such invariants on fundamental cycles of maps B →
+BG are accountable for enumeration of rational holomorphic curves in families of complex
+manifolds with the fiber X associated with the principal G-bundles over a finite-dimensional
+manifold B.
+
+
+3     The WDVV equation
+One of the main structural results about Gromov-Witten invariants — the composition rule
+[20],[19] — expresses all genus-0 correlators via the 3-given-marked-point ones, (we denote
+them hφ1 , ..., φnin,d since the corresponding AI = 1) satisfying additionally the so-called
+Witten-Dijkgraaf-Verlinde-Verlinde equation. We will see here that the same result holds
+true for equivariant Gromov-Witten invariants (at least in the convex case).
+   Following [21], introduce the potential
+                                       ∞
+                                      X   1 X d
+                                F =          q ht, . . . , tin,d .                              (1)
+                                      n=0
+                                          n!
+                                                d
+
+It is a formal function on the vector (super -) space HG∗ (X) with values in the coefficient ring
+Λ = HG∗ (pt, C[[q]]). Here C[[q]] stands for some completion of the group algebra C[H2 (X, Z)]
+so that the symbol q d = q1d1 . . . qkdk represents the class (d1 , . . . , dk ) in the lattice Zk =
+H2 (X, Z) of 2-cycles. Fundamental classes of holomorphic curves in X have non-negative
+coordinates with respect to a basis of Kahler forms so that the formal power series algebra
+C[[q]] can be taken on the role of the completion. Strictly speaking, the formula 1 defines F
+up to a quadratic polynomial of t since the spaces Xn,0 are defined only for n ≥ 3.
+   Denote ∇ the gradient operator with respect to the equivariant intersection pairing h , i
+on HG∗ (X). The WDVV equation is an identity between third directional derivatives of F .
+It says that
+
+
+                                          h∇Fα,β , ∇Fγ,δi                                       (2)
+
+    is totally symmetric (up to usual signs) with respect to permutations of the four directions
+α, β, γ, δ ∈ HG∗ (X).
+
+                                                    7
+Theorem 3.1 The WDVV equation holds for convex X.
+
+   Notice that
+                                     Z                  Z
+                                h∇           a ∧ t, ∇          b ∧ ti = ha, bi                   (3)
+                                         X                 X
+                                        R
+has geometrical meaning of integration ∆⊂X×X a ⊗ b over the diagonal in X × X.
+   In order to prove the non-equivariant version of the WDVV equation one interprets the 4-
+point correlators A1234hα, β, γ, δi4,d which are totally symmetric in α, β, γ, δ as integrals over
+the fibers Γλ of the contraction map π : X4,d → M̄4 = CP 1 and specializes the cross-ratio λ
+to 0, 1 or ∞. Stable maps corresponding to generic points of, say, Γ0 are glued from a pair
+of maps f1 : (CP 1 , p1 , p2 , a1) → X, f2 : (CP 1, p3 , p4 , a2) → X of degrees d1 + d2 = d with
+three marked points each, satisfying the diagonal condition f1 (a1) = f2 (a2). One can treat
+such a pair as a point in X3,d1 × X3,d2 situated on the inverse image Γd1 ,d2 of the diagonal
+∆ ⊂ X × X under the evaluation map e3 × e3. The glueing map ⊔d1 +d2 =d Γd1 ,d2 → Γ is an
+isomorphism at generic points and therefore it identifies the analytic fundamental cycles.
+This means that
+                                                X
+                   A1234hα, β, γ, δi4,d =                 h∇hα, β, ti3,d1 , ∇hγ, δ, ti3,d2 i .
+                                              d1 +d2 =d
+
+The above argument applies to the correlators A1234hα, β, γ, δ, t, . . . , tin+4,d with additional
+marked points and gives rise to
+                                      ∞
+                                     X   1 X d
+                  h∇Fα,β , ∇Fγ,δ i =          q A1234hα, β, γ, δ, t . . . ti4+k,d                (4)
+                                     n=0
+                                         n! d
+
+which is totally symmetric in α, β, γ, δ.
+   Convexity of X is used here only in order to make sure that the moduli spaces have
+fundamental cycles and that the diagonal in X ×X consists of regular values of the evaluation
+map e3 × e3.
+   In order to justify the above argument in the equivariant situation, it is convenient to
+reduce the problem to the case of tori actions (using maximal torus of G) and use the De
+Rham version of equivariant cohomology theory.
+   For a torus G = (S 1)r acting on a manifold M the equivariant De Rham complex [1]
+consists of G-invariant differential forms on M with coefficients in C[u1, . . . , ur ] = HG∗ (pt),
+
+                                                          8
+                                                                      Pr
+provided with the coboundary operator dG = d +                            s=1 us is where is are the operators of
+contraction by the vector fields generating the action. Applying the ordinary Stokes formula
+to G-invariant forms and G-invariant chains we obtain well-defined functionals HG∗ (M) →
+C[u] of integration over invariant cycles. The identity 4 follows now from the obvious G-
+invariance of the analytic varieties Γλ , Γ, Γd1 ,d2 .
+    A similar argument proves a composition rule that reduces computation of all equivariant
+correlators AI h...i to that of h...i.
+
+
+4     Convex vector bundles
+The following construction was designed by M. Kontsevich in order to extend the domain of
+applications of WDVV theory to complete intersections in convex Kahler manifolds.
+   Let V → X be a convex bundle, that is, a holomorphic vector bundle spanned by its
+holomorphic sections. For stable f : (C, p) → X (of degree d, genus 0, with n marked points),
+the spaces H 0 (C, f ∗V ) form a holomorphic vector bundle Vn,d over the moduli space Xn,d .
+If f is glued from f1 and f2 as in the proof of (4), then H 0 (C, f ∗ V ) = ker(H 0 (C1, f1∗ V ) ⊕
+                 e1 −e2 ∗
+H 0 (C2 , f2∗V ) −→     e1V = e∗2V ) where ei : H 0 (Ci , fi∗ V ) → e∗i V is defined by evaluation of
+sections at the marked point ai .
+    This allows one to construct a solution F to the WDVV equation starting with a convex
+G-equivariant bundle V and any invertible G-equivariant multiplicative characteristic class
+E (the total Chern class would be a good example).
+    Redefine                                          Z
+                                     ha, bi :=                a ∧ b ∧ E(V ) ,
+                                                          X
+                                                 Z
+                          ht, . . . , tin,d :=                e∗1t ∧ . . . e∗n t ∧ E(Vn,d ) ,
+                                                     Xn,d
+                                             ∞
+                                             X 1 X
+                                 F (t) =                          q dht, . . . , tin,d .
+                                             n=0
+                                                     k!
+                                                              d
+
+Then h∇Fα,β , ∇Fγδ i is totally symmetric in α, β, γ, δ.
+    This construction bears a limit procedure from the total Chern class to the (equivariant)
+Euler class, and the limit of F corresponds to the GW-theory on the submanifold X ′ ⊂ X
+defined by an (equivariant) holomorphic section s of the bundle V . Namely, the section s
+
+
+                                                              9
+induces a holomorphic section sn,d of Vn,d , and the (equivariant) Euler class Euler (Vn,d )
+                                    ′
+becomes represented by some cycle [Xn,d                               ′
+                                        ] situated in the zero locus Xn,d := s−1
+                                                                              n,d (0) of the
+                              ′
+induced section. The variety Xn,d consists of stable maps to X ′ , the Euler cycle [Xn,d
+                                                                                     ′
+                                                                                         ] plays
+                                                   ′
+the role of the virtual fundamental cycle in Xn,d    , and the correlators
+                               Z                                  Z
+                                  ∗           ∗
+             ht, ..., tin,d :=   e1t ∧ ... ∧ en t Euler (Vn,d ) =       e∗1 t ∧ ... ∧ e∗n t
+                                Xn,d                                          ′ ]
+                                                                            [Xn,d
+
+
+are correlators of GW-theory on X ′ between the classes t which come from the ambient space
+X.
+   According to [28] one can consider the GW-theory with these correlators as the GW-
+theory on the super-manifold with the structural sheaf to be the sheaf of exterior forms on
+the dual bundle V ∗.
+
+                                                                                                          ′
+    Another solution of the W DV V -equation can be obtained from the bundles Vd,k                             :=
+                                              R                                       R
+H 1 (C, f ∗ V ∗ ): one should put ha, bi := X a ∧ b ∧ E −1 (V ∗ ), ht, . . . , tin,d = Xn,d e∗1t ∧ · · · ∧ e∗n t ∧
+     ′
+                                            R
+E(Vn,d  ) for d 6= 0 and ht, . . . , tin,0 = Xn,0 e∗1t ∧ · · · ∧ e∗n t ∧ E −1 (V ∗ ).
+   In Section 12 we will prove some duality theorem for the two solutions of the WDVV-
+equations in the case when X = CP n and V is the sum of positive line bundles. Choosing
+the (equivariant) Euler class on the role of E(V ∗) one comes to the GW-theory on the non-
+compact total space of the bundle V ∗ . Using slight modifications of the above correlators
+and the constructions of the next Section one can also define quantum versions of both
+the ordinary and compactly supported cohomology algebras of this manifold. We leave the
+details of this construction to the reader.
+
+
+5      Quantum cohomology
+One interprets the WDVV equation as the associativity identity for the quantum cup-product
+on HG∗ (X) defined by
+                                            hα ∗ β, γi = Fα,β,γ .
+
+It is a deformation of the ordinary cup-product (with t and q in the role of parameters) in
+the category of (skew)-commutative algebras with unity:
+
+                                             hα ∗ 1, γi = hα, γi .                                            (5)
+
+                                                       10
+Indeed, the push-forward by the forgetful map π : Xn,d → Xn−1,d (with n ≥ 3) sends
+1 ∈ HG∗ (Xn,d ) to 0 unless d = 0 and k = 3 in which case Xn,d = X and Xn−1,d is not defined.
+       The structure usually referred in the literature as the quantum cohomology algebra cor-
+responds to the restriction of the deformation ∗t,q to t = 0. As it is shown in [4], in many
+cases the function F can be recovered on the basis of WDVV-equation from the structural
+constants Fα,β,γ |t=0 (q) of the quantum cohomology algebra due to the following symmetry of
+the potential F . Let u ∈ HG2 (X) and (u1 , ..., uk) be its coordinates with respect to the basis
+of the lattice (Zk )∗ = H 2 (X) = HG2 (X)/HG2 (pt) (so that ui ∈ HG∗ (pt)). Then
+                                     k
+                                     X
+                       ∂u Fα,β,γ =         ui qi ∂Fα,β,γ /∂qi   ∀α, β, γ ∈ HG∗ (X) .                   (6)
+                                     i=1
+                                                                                   P
+The identity (6) follows from the obvious push-forward formula π∗ u =                  di ui .
+       The symmetry (6) can be interpreted in the way that the quantum deformation of the
+cup-product restricted to t = 0 is equivalent to the deformation with q = 1 and t restricted
+to the 2-nd cohomology of X (in the equivariant setting it is better however to keep both
+parameters in place — see Sections 7, 8).
+
+       In this paper, we will use the term quantum cup-product for the entire (q, t)-deformation
+and reserve the name quantum cohomology algebra for the restriction of the quantum cup-
+product to t = 0.
+       I have heard some complaints about such terminology because it allows many authors
+to compute quantum cohomology algebras without even mentioning the deformation in t-
+directions. There are some indications however that (despite the equivalence (6)) the q-
+deformation has a somewhat different nature than the t-deformation. The loop space ap-
+proach [9] and our computations in Sections 9 – 11 seem to emphasize this distinction.
+
+       Quantum cohomology algebras of the classical flag manifolds have been computed in [7],
+[11] on the basis of several conjectures about properties of Un -equivariant quantum coho-
+mology (see also [5] where a slightly different formalism was applied). The answer (in terms
+of generators and relations 2 ) for complete flag manifolds Un /T n is strikingly related to
+   2
+    Several weeks after the first version of this paper had been completed some new results arrived: S.
+Fomin, S. Gelfand, A. Postnikov [25] found structural constants of the quantum cohomology algebra of
+the flag manifold with respect to the basis of Schubert polynomials, and B. Kim [13] proved the relation of
+quantum cohomology algebras of generalized flag manifolds G/T with the Toda lattice (of the Langlands-dual
+group G∗).
+
+                                                      11
+conservation laws of Toda lattices. The conjectures named in [7] the product, induction and
+restriction properties and describing behavior of equivariant quantum cohomology under
+some natural constructions, were motivated by interpretation of the quantum cohomology
+in terms of Floer theory on the loop space LX. Although a construction of the equivari-
+ant counterpart of the Floer - Morse theory on LX remains an open problem, the three
+conjectured axioms can be justified within the Gromov-Witten theory. This was done by
+B.Kim [12]. The induction and restriction properties follow directly from definitions given
+in this paper and hold for the entire quantum deformation (not only at t = 0), while the
+“product” axiom (that the G1 × G2 -equivariant quantum cohomology algebra of X1 × X2
+is the tensor product of the Gi -equivariant quantum cohomology algebras of the factors Xi )
+has been verified in [12] for convex manifolds.
+   Behavior of the quantum cup-product at t 6= 0 under the Cartesian product operation
+on the target manifolds is much more complicated than the operation of the tensor product.
+
+   We complete this section with a discussion of some remarkable relation between quantum
+cohomology algebras of manifolds F (n0 , ..., nk) of partial flags Cn0 ⊂ Cn0 +n1 ... ⊂ Cn0 +...+nk =
+Cn (equivariant with respect to the action of Un on Cn ) and the action-angle coordinates of
+the Toda lattice — an integrable system with the Hamilton function p21 /2+...+p2n /2−exp(t1 −
+t2) − ... − exp(tn−1 − tn ) (with respect to the symplectic structure dp1 ∧ dt1 + ... + dpn ∧ dtn ).
+The equivariant quantum cohomology algebras of these manifolds were computed in [11, 12].
+The answer can be formulated as follows.
+    Consider the chain fraction
+                            P (x)                       q1
+                                  := P0 (x) +
+                            Q(x)              P1 (x) + P2 (x)+ q2 ...q
+                                                                ...+      k
+                                                                       Pk (x)
+
+
+where P0 , ..., Pk are monic polynomials of some positive degrees (which we denote n0 , ..., nk )
+and q1, ..., qk are some non-zero constants. Given P0 , ..., Pk and q1, ..., qk, the chain fraction
+uniquely determines the two monic polynomials P, Q of degrees n, n − n0 . Let the coefficient
+                                (i)               (i)
+of the polynomial Pi = xni + c1 xni −1 + ... + cni denote the Chern classes of the tautological
+ni -dimensional vector bundle over F (n0, ..., nk ), (q1 , ..., qk) denote the parameters of the
+quantum deformation in the quantum cohomology algebra of F (n0 , ..., nk) (see [11]). Then
+the relation P = xn + c1 xn−1 + ... + cn expresses a basis of relations between the generators
+  (i)
+(cj ) of the quantum cohomology algebra of the partial flag manifold and the Chern classes
+
+                                                 12
+(c1 , ..., cn) of the tautological vector bundle over BUn (so that C[c1, ..., cn] plays the role of
+the coefficient ring of the Un -equivariant cohomology theory).
+    Notice that in the “classical” equivariant cohomology algebra the same relation holds with
+P = P0 ...Pk . This indicates that a quantum generalization of the multiplicative property of
+the total Chern class should involve chain fractions.
+    Consider now the reduced rational function Q/P with monic Q. For a generic P it can
+be written as the sum of simple fractions
+                                 a1             an     X
+                                      + ... +        ,   ai = 1.
+                               x − x1         x − xn
+Introduce the following n commuting flows with time variables τ1 , ..., τn:
+                                                         a i e xi τ i
+                             xi 7→ xi , ai 7→                              .
+                                                a1ex1 τ1 + ... + an exn τn
+This dynamics preserves the hyperplane a1 + ... + an = 1 corresponding to monic polynomials
+Q. For generic Q the transformation of the sum Q/P of simple fractions to the chain fraction
+                                                             q1
+                             P/Q = x − p1 +
+                                                  x − p2 + ...+ q2...q
+                                                                        n−1
+                                                                  ...+ x−p
+                                                                           n
+
+
+defines n commuting flows on the space with coordinates (p1 , ..., pn, q1 , ..., qn−1) (this chain
+fraction corresponds to the complete flag manifold F (1, ..., 1)). We put qi = exp(ti − ti+1).
+It is easy to check that the dynamics of the Toda system (in the (p, t)-space) coincides with
+the diagonal flow with τ1 = ... = τn = τ .
+    I am thankful to N. Reshetikhin who pointed to me the references [27, 26] where these
+facts about Toda lattices are described.
+    Despite of several recent papers (see for instance [24]), the actual relation of quantum
+cohomology with Toda dynamics as well as the interrelations between quantum cohomology
+algebras of partial flag manifolds (whose spectra fit nicely as various strata in the space of
+polynomials Q) yet to be understood.
+
+
+6     Floer theory and D-modules
+Structural constants hα ∗ β, γi of the quantum cup-product are derivatives ∂β Fα,γ of the
+same function. This allows to interpret the WDVV-equation as integrability condition of
+
+                                                   13
+some connections ∇~ on the tangent bundle TH of the space H = H ∗ (X, C). Namely, put
+   P
+t=    tαpα where p1 = 1, p2 , . . . , pN is a basis in H and define
+                                    X
+                        ∇~ = ~d −       (pα ∗)dtα ∧ : Ω0 (TH ) → Ω1(TH )
+
+where pα ∗ are operators of quantum multiplication by pα . Then ∇~ ◦ ∇~ = 0 for each
+value of the parameter ~. Notice that the integrability condition that reads “the system of
+differential equations ~∂α I = pα ∗ I has solutions I ∈ Ω0 (T H)” is actually obtained as a
+somewhat combinatorial statement (the WDVV-equation) about coefficients of the series F .
+    In [9], [10] we attempted to improve this unsatisfactory explanation of the integrabil-
+ity property by describing a direct geometrical meaning of the solutions I in terms of S 1 -
+                                                                                g carries
+equivariant Floer theory on the loop space LX. Briefly, the universal covering LX
+the action of the covering transformation lattice π2(X) with generators q1, . . . , qk and the
+S 1 -action by rotation of loops which preserves natural symplectic forms ω1 , . . . , ωk on LX
+                                                               g (the action functionals).
+and thus defines corresponding Hamiltonians H1 , . . . , Hk on LX
+The Duistermaat–Heckman forms ωi + ~Hi (here ~ is the generator of HS∗1 (pt)) are equiv-
+ariantly closed, and operators pi of exterior multiplication by these forms have the following
+Heisenberg commutation relations with the covering transformations:
+
+                                     pi qj − qj pi = ~qj δij .
+
+                                                                 g with a D-module struc-
+Conjecturally, this provides S 1-equivariant Floer cohomology of LX
+ture which is equivalent to the above system of differential equations (restricted to t = 0,
+q 6= 0) and reduces to the quantum cohomology algebra in the quasi-classical limit ~ = 0
+(see [9, 7]).
+   In this section we describe solutions to ∇~I = 0 by imitating the S 1 -equivariant Floer
+theory (which is still to be constructed) within the framework of Gromov–Witten theory.
+This construction turns out to be crucial in our proof in Section 11 of the mirror conjecture
+for Calabi-Yau projective complete intersections.
+
+    One may think of the graph of an algebraic loop CP 1 \{0, ∞} → X of degree d as of a
+stable map CP 1 → X × CP 1 of bidegree (d, 1). Denote Ld (X) a moduli space of genus zero
+stable maps to X × CP 1 of bidegree (d, 1) (we do not specify the number of marked points in
+this notation). Our starting point consists in interpretation of Ld (X) of such as a degree-d
+
+                                                14
+approximation to LXg and application of equivariant Gromov–Witten theory to the action
+of S 1 on the second factor CP 1 with the fixed points {0, ∞}.
+     In the theorem below we assume X to be convex. It is natural to expect however that
+the theorem holds true whenever the non-equivariant Gromov–Witten theory works for X
+since the S 1 -action is non-trivial only on the factor CP 1 which is convex on its own.
+     Let h , i be the Poincare pairing on H = H ∗ (X, C). The equivariant cohomology algebra
+HS∗1 (X × CP 1 ) is isomorphic to H ⊗C C[p, ~]/(p(p − ~)) with the S 1 -equivariant pairing
+                                               I
+                                            1     hϕ, ψidp
+                                  (ϕ, ψ) =                 .
+                                           2πi    p(p − ~)
+
+Localization in ~ allows to introduce coordinates ϕ = tp/~ + τ (~ − p)/~, τ, t ∈ H, diagonal-
+izing the equivariant pairing:
+
+                                                         ht, t′i − hτ, τ ′ i
+                                 ((τ, t), (τ ′, t′)) =                       .
+                                                                 ~
+The potential F (t, τ, ~, q, q0) satisfying the equivariant WDVV-equation for X×CP 1 expands
+as
+                                 F = F (0) + q0 F (1) + q02F (2) . . .
+
+according to contributions of stable maps of degree 0, 1, 2, . . . with respect to the second
+factor. Denote F = F (t, q) the potential (1) of the GW -theory for X.
+
+Theorem 6.1 (a) F (0) = (F (t, q) − F (τ, q))/~.
+  (b) The matrix (Φαβ ) := (∂ 2F (1)/∂τα ∂tβ ) is a fundamental solution of ∇±~I = 0:
+
+                                               ∂
+                                        −~        Φ = p̂γ (t)Φ ,
+                                              ∂τγ
+
+                                             ∂ ∗
+                                        ~       Φ = p̂γ (τ )Φ∗ ,
+                                            ∂tγ
+where p̂γ = (pβα )γ , γ = 1, . . . , N, are matrices of quantum multiplication by pγ , and Φ∗ is
+transposed to Φ.
+
+Proof. Moduli spaces of bidegree-(d, 0) stable maps to X × CP 1 coincide with Xn,d × CP 1.
+This implies (a) and shows that the WDVV-equation for F modulo q0 follows from the
+
+
+                                                    15
+WDVV-equation for F . Part (b) follows now directly from the WDVV-equation for F
+modulo q02 and from
+                                ∂                   ∂
+                                  Φαβ = Φαβ = −~
+                                   ~                   Φαβ
+                              ∂t1                  ∂τ1
+due to (5) and (6). Here ∂/∂t1, ∂/∂τ1 are derivatives in the direction 1 ∈ H ∗ (X) of the
+identity components of t and τ respectively.
+
+    The following corollary is obtained by expressing equivariant correlators Φαβ via local-
+ization of equivariant cohomology classes of moduli spaces Ld (X) to fixed points of the S 1
+action.
+   Define the matrix ψ = (φαβ (t, q, ~)) by
+                                   ∞
+                                   X 1 X               pβ
+                           ψαβ =                qdh       , t, . . . , t, pα in+2,d             (7)
+                                   n=0
+                                       n!             ~+c
+                                            d
+
+where c := c(1) is the first Chern class of the line bundle over Xk,d introduced in Section 2
+                                                                  β           p
+as “the universal tangent line at the first marked point”, and h ~+c , pα i2,0 := hpα , pβ i.
+
+Corollary 6.2 ~∂ψ/∂tγ = p̂γ (t)ψ, i.e., the matrix ψ is (another) fundamental solution of
+∇~I = 0.
+
+Proof. A fixed point in Ld (X) is represented by a stable map C0 ∪ CP 1 ∪ C∞ → X × CP 1
+where ϕi : Ci → X × {i} are stable maps of degrees d0 + d∞ = d connected by a “constant
+             ≃
+loop” CP 1 → {x} × CP 1 (notice that di = 0 corresponds to empty Ci .) Thus components of
+       1
+Ld (X)S can be identified with submanifolds in Xd0 ,k0 +1 × Xd∞ ,k∞ +1 defined by the diagonal
+constraint e1(ϕ0 ) = e1(ϕ∞ ), with ~2 (~ + c(0))(~ − c(∞)) to be the equivariant Euler class of
+the normal bundle. This gives rise to
+                                     X                 ′
+                          ~2Φαβ =      ψαε (τ, −~) η εε ψε′ β (t, h)                            (8)
+                                        ε,ε′
+         P εε′
+where     η pε ⊗ pε′ is the coordinate expression of the diagonal cohomology class of X ⊂
+X × X. Now the differential equations of Theorem 6.1 for Φ imply the differential equation
+for ψ.
+
+   We give here several reformulations which will be convenient for computation of quantum
+cohomology algebras in Sections 9 – 11.
+
+                                                  16
+   Consider the specialization of the connection ∇~ to the parameter subspace correspond-
+ing to the deformation of the quantum cup-product along the 2-nd cohomology (this is
+                                                                 P
+accomplished by putting first t = 0 and then replacing q d by exp di ti where (t1, ..., tk) are
+coordinates on H 2 (X) with respect to the basis p(1) , ..., p(k) ∈ H 2 (X) . In this new setting
+put
+                                       X          ept/~
+                               sα,β :=     edthpβ        , pα i2,d
+                                                  ~+c
+                                        d
+            P (i)             P
+where pt := p ti and dt = di ti.
+    Corollary 6.3. The matrix (sα,β (t)) is a fundamental solution to
+
+                                                       ∂
+                                    ∇~ s = 0 : ~          s = p̂(i) s.
+                                                      ∂ti
+
+
+   Proof. One should combine Corollary 6.2 with iterative applications of the following
+symmetries generalizing (5), (6):
+
+                                                        f(0) − f(c)
+                              hf(c), ..., 1in+1,d = h               , ...in,d,
+                                                             c
+                                                          f(0) − f(c)
+                 hf(c), ..., p(i)in+1,d = di hf(c), ...in,d + hp(i)   , ...in,d.
+                                                               c
+Here f is a function of one variable with values in H ∗ (X).
+   The symmetries are easily verified on the basis of the following geometrical properties of
+universal tangent lines:
+   (i) Consider the push-forward along the map π : Xn+1,d → Xn,d (forgetting the last
+marked point). It is easy to see that the difference π ∗(c) − c between the Chern class of the
+universal tangent line at the 1-st marked point and the pull-back of its counterpart from
+Xn,d is represented by the fundamental cycle of the section i : Xn,d → Xn+1,d defined by the
+first marked point.
+   (ii) i∗ (c) = c.
+   In particular π∗(1/(~ + c)) = 1/[~(~ + c)].
+   Corollary 6.4. Consider the functions
+                                            X              ept/~
+                                    sβ :=        edt hpβ         , 1i2,d .
+                                             d
+                                                           ~+c
+
+                                                    17
+Let P (~∂/∂t, exp t, ~) be a differential operator annihilating simultaneously all the functions
+sβ . Then the relation P (p(1) , ..., p(k), q1, ..., qk , 0) = 0 holds in the quantum cohomology algebra
+of X (we assume here that P depends only on non-negative powers of ~).
+  Proof. The functions sβ form the first row in the fundamental solution matrix S = (sα,β ).
+Application of the differential operator P to the matrix S is equal to the matrix product
+(P0 + ~P1 + ... + ~M PM )S where P0 is the matrix of the quantum multiplication by the
+symbol P (p, exp t, 0). Our hypotheses mean that the first row in this product vanishes.
+Since the fundamental solution matrix S is non-degenerate, this implies that the first row in
+P0 vanishes too. In other words, hP (p, q, 0), pβ i = 0 for all β and thus P (p, q, 0) = 0 in the
+quantum cohomology algebra.
+
+   All results of this section extend literally to the equivariant setting and/or to the general-
+ization to convex vector bundles described in Section 4. We will apply them in this extended
+form in Sections 9–11.
+
+   Remarks. 1) The universal formula (7) for solutions of ∇~I = 0 was perhaps discovered
+independently by several authors. I first learned this formula from R. Dijkgraaf. It can also
+be found in [2] in the axiomatic context of conformal topological field theory. One can prove it
+directly from a recursion relation (in the spirit of WDVV-equation) for so-called gravitational
+descendents — correlators involving the first Chern classes of the universal tangent lines (or,
+in a slightly different manner, by describing explicitly the divisor in Xn,d representing c). Our
+approach provides an interpretation of (7) in terms of fixed point localization in equivariant
+cohomology.
+   2) One can generalize our theorem to bundles over CP 1 with the fiber X. This seems
+to indicate that a straightforward “open-string” approach to S 1-equivariant Floer theory on
+g would be more powerful and flexible than the approximation by Gromov–Witten theory
+LX
+on X × CP 1 described above.
+   3) Although the theorem provides a geometrical interpretation of solutions to ∇~I = 0,
+it does not eliminate the combinatorial nature of the integrability condition. Indeed, the
+theorem is deduced from an equivariant WDVV-equation which in its turn can be interpreted
+as an integrability condition. Of course one can explain it using the S 1 × S 1 -equivariant
+WDVV-equation on (X × CP 1 ) × CP 1 , etc. It would be interesting to find out whether this
+process converges.
+
+                                                  18
+7         Frobenius structures
+In [2], B. Dubrovin studied geometrical structures defined by solutions of WDVV-equations
+on the parameter space and reduced classification of generic solutions to the classification
+of trajectories of some Euler-like non-autonomous Hamiltonian systems on so∗N . We show
+here how this approach to equivariant Gromov–Witten theory yields analogous Hamiltonian
+                                     so∗N .
+systems on the affine Lie coalgebras b
+        The quantum cup-product on H = HG∗ (X) considered as an N-dimensional vector space
+over the field of fractions K of the algebra HG∗ (pt) defines a formal Frobenius structure on
+H. The structure consists of the following ingredients.
+
+    1. A symmetric K-bilinear inner product h , i,
+
+    2. a (formal) function F : H → K whose third directional derivatives ha ∗ b, ci := Fa,b,c
+          provide tangent spaces TtH with the Frobenius algebra structure (i.e. associative
+          commutative multiplication ∗ satisfying ha ∗ b, ci = ha, b ∗ ci).
+
+    3. The constant vector field 11 of unities of the algebras (Tt H, ∗) whose flow preserves the
+          multiplication ∗ (i.e. L11 (∗) = 0).
+
+    4. Grading: In the non-equivariant case axiomatically studied by B. Dubrovin it can be
+          described by the Euler vector field E, such that the tensor fields 11, ∗ and h , i are
+          homogeneous (i.e. are eigen-vectors of the Lie derivative LE ) of degrees −1, 1 and
+          D respectively (where D = dimC X in the models arising from the GW-theory). In
+          the equivariant GW-theory this grading axiom should be slightly modified since the
+          grading of the structural ring HG∗ (pt) is non-trivial and thus the natural Euler operator
+          LE is C-linear but not K-linear 3
+
+
+        The fact that the multiplication ∗ is defined on tangent vectors to H means that the
+algebra (Ω0 (TH ), ∗) can be naturally considered as the algebra K[L] of regular functions on
+some subvariety L ⊂ T ∗H in the cotangent bundle. A point t ∈ H is called semi-simple if
+    3
+    One may also think of the HG   ∗
+                                     (pt)-module HG∗
+                                                     (X) as of the module of sections of a vector bundle over
+the spectrum of HG(pt). The fibers of the bundle then carry Frobenius structures satisfying the axioms 1 –
+                   ∗
+
+3 while the Euler vector field is not tangent to the fibers.
+
+
+                                                     19
+the algebra (Tt H, ∗) is semi-simple, that is if L ∩ Tt∗H consists of N linearly independent
+points.
+   Flatness of the connection (defined on TH )
+                                             X
+                                  ∇~ = ~d −    pα ∗ dtα                                             (9)
+                                                     α
+
+implies [7] that L is a Lagrangian submanifold in T ∗H near a semisimple t. Following
+[2], introduce local canonical coordinates (u1, . . . , uN ) such that the sections (du1 , . . . , duN )
+of T ∗H are the N branches of L near t, and transform the connections ∇~ to these local
+coordinates and to a (suitably normalized) basis f1 , . . . , fN of vector field on H diagonalizing
+the ∗-product.
+   The result of this transformation can be described as follows.
+   (a) The basis {fi } can be normalized in a way that in the transformed form
+
+                                     ∇~ = ~d − ~A1 ∧ −D1 ∧                                         (10)
+
+of the connection ∇~ with D1 = diag(du1 , . . . , duN ), and Aij = Vij (u)d(ui − uj )/(ui − uj ) for
+all i 6= j, we will have additionally Aii = 0 ∀i.
+                                                                                  P
+   (b) The vector field 11 in the canonical coordinates assumes the form             k ∂k where ∂k :=
+∂/∂uk are the canonical idempotents of the ∗-product:
+
+                                           ∂i ∗ ∂j = δij ∂j .                                      (11)
+
+   (c) The (remaining part of the) integrability condition ∇2~ = 0 reads d(A1 ) = A1 ∧ A1 or
+
+                                 ∂iφjα = φiαVij /(ui − uj ), i 6= j,                        (12)
+                                                 P
+where (φjα ) is the transition matrix, ∂/∂tα = i φiα fi ; it can be reformulated as compatibility
+of the PDE system (12) for (φjα) completed by
+                                      X
+                                          ∂k φjα = 0.                                              (13)
+                                              k
+
+    (d) The Frobenius property ha ∗ b, ci = ha, b ∗ ci of the ∗-product shows that the diago-
+nalizing basis {fi } is orthogonal, that its normalization by hfi , fj i = δij obeys Aii = 0 and,
+additionally, implies anti-symmetricity Aij = −Aji , or
+
+                                             Vij = −Vji .                                          (14)
+
+                                                  20
+     The presence of the grading axiom (4) of Frobenius structures over K = C allows
+B.Dubrovin to describe anti-symmetric matrices V = (Vij ) ∈ so∗N satisfying the integra-
+bility conditions (12) and (13) in quasi-homogeneous canonical coordinates (i.e. LE ui = ui
+             P
+so that E =     uk ∂k ) as trajectories of N commuting non-autonomous Hamiltonian systems
+(see [2]):
+                                         ∂i V = {Hi , V }
+
+where the Poisson-commuting non-autonomous quadratic Hamiltonians Hi on so∗N are given
+by
+                                      1 X Vij Vji
+                                 Hi =              .
+                                      2    ui − uj
+                                                 j6=i
+
+     Consider now the following model modification of the grading axiom: K = C[[λ±1]],
+deg λ = 1. In quasi-homogeneous canonical coordinates (u1 , . . . , uN , λ) the Euler vector field
+takes then on
+                                            X
+                                     LE =         uk ∂k + λ∂λ .                              (15)
+                                             k
+
+     Introduce the connection operator
+
+                                                    so∗N
+                                      V = λ∂λ − V ∈ b
+
+                                                      so∗N
+and the qudratic Hamiltonians on the Poisson manifold b
+                                          I
+                                                   dλ
+                                 Hi (V) = Hi (V ) .                                          (16)
+                                                    λ
+
+Proposition 7.1 The Hamiltonians H1 , . . . , HN are in involution. The operator V of a
+Frobenius manifold over K satisfies the non-autonomous system of Hamiltonian equations
+
+                                 ∂i V = {Hi , V}, i = 1, . . . , N.                          (17)
+
+The columns φα = (φiα ) of the transition matrix are eigen-functions of the connection operator
+V:
+                                                        n               
+                         Vφα := (λ∂λ − V )φα =               − deg tα + 1 φα .               (18)
+                                                         2
+
+
+                                                 21
+Proof. It can be obtained by a straightforward calculation quite analogous to that in [2].
+
+    In our real life the model equations (15–18) describe the structure of Frobenius manifolds
+over each semi-simple orbit of the grading Euler field in the ground parameter space. This
+parameter space is the spectrum of the coefficient algebra HG∗ (pt, C)⊗C[q1±1, . . . , qk±1 ] (its field
+of fractions can be taken on the role of the ground field K). An orbit of the Euler vector
+field in this parameter space is semi-simple if the corresponding C-Frobenius algebras are
+semi-simple.
+   The equations (15–18) over semi-simple Euler orbits should be complemented by the
+additional symmetries (6).
+   In the next section we will show how the canonical coordinates of the axiomatic theory
+of Frobenius structures emerge from localization formulas in equivariant Gromov–Witten
+theory.
+
+
+8     Fixed point localization
+We consider here the case of a circle T 1 acting by Killing transformations on a compact
+Kahler manifold X with isolated fixed points only. The case of tori actions with isolated
+fixed points requires only slight modification of notations which we leave to the reader. Our
+results are rigorous for convex X (which includes homogeneous Kahher spaces of compact
+Lie group and their maximal tori) while applications to general toric manifolds (which are
+typically not convex) yet to be justified.
+    It is the Borel localization theorem that reduces computations in torus-equivariant co-
+homology to computations near fixed points. Let {pα }, α = 1, ..., N, be the fixed points of
+the action. We will denote with the same symbols pα the equivariant cohomology class of X
+which restricts to 1 ∈ HT∗ (pα ) at pα and to 0 at all the other fixed points. These classes are
+well-defined over the field of fractions C(λ) of the coefficient ring HT∗ (pt) = C[λ] and form
+the basis of canonical idempotents in the semi-simple algebra HT∗ (X, C(λ). The equivariant
+Poincare pairing reduces to hpα , pβ i = δα,β /eβ where eα ∈ C[λ] is the equivariant Euler class
+of the normal “bundle” Tpα X → pα to the fixed point.
+   The results described below apply to the setting of Section 4 of a manifold X provided
+with a convex vector bundle in which case eα’s should be modified accordingly.
+
+
+                                                  22
+   The same localization theorem reduces computation of GW-invariants to that near the
+fixed point set (orbifold) in the moduli spaces Xn,d . A fixed point in the moduli space is
+represented by a stable map to X of a (typically reducible) curve C such that each component
+of C is mapped to (the closure of) an orbit of the complexified action TC : X. Any such an
+orbit is either one of the fixed points pα or isomorphic to (C−0) connecting two distinct fixed
+points pα and pβ corresponding to 0 and ∞. Respectively, there are two types of components
+of C:
+(i) Each component of C which carries 3 or more special points must be mapped to one of
+the fixed points pα .
+(ii) All other components are multiple covers z 7→ z d of the non-constant orbits, and their
+special points may correspond only to z = 0 or ∞.
+   The combinatorial structure of such a stable map can be described by a tree whose edges
+correspond to chains of components of type (ii) and should be labeled by the total degree
+of this chain as a curve in X, and vertices correspond to the ends of the chains. The ends
+may carry 0 or 1 marked point, or correspond to a (tree of) type-(i) components with 1 or
+more marked points and should be labeled by the indices of these marked points and by the
+target point pα .
+   The fixed stable maps with different combinatorial structure belong to different connected
+components of the fixed point orbifold in Xn,d .
+   The results below are based on the observation that a stable map with the first k ≥ 3
+marked points in a given generic configuration (i.e. with the given generic value of the
+contraction map Xn.d → M̄0,k ) must have in an irreducible component C0 in the underlying
+curve C which contains this given configuration of k special points, (so that the corresponding
+first k marked points are located on the branches outgoing these special points of C0). The
+cause is hidden in the definition of the contraction map (see [3, 6]).
+   We will call the component C0 special.
+   The observation applied to a fixed stable map of the circle action allows to subdivide all
+fixed point components in X3+n,d into N types pi according to the fixed points pi where the
+special component is mapped to. We introduce the superscript notation (...)i for the con-
+tribution (via Borel’s localization formulas) of type-pi components into various equivariant
+
+
+
+
+                                              23
+correlators. For example,
+                                      X 1 X
+                              i
+                             Fαβγ =                q d hpα , pβ , pγ , t, ..., tii3+n,d
+                                      n
+                                          n!
+                                               d
+
+             PN                                     ∗
+                                                                                          P  i
+where t =        α=1 tα pα is the general class in HT (X, C(λ)), so that Fαβγ =           i Fαβγ .
+     We introduce also the notations
+
+     • Ψiαβ — for contributions to eiFαβi
+                                      i
+                                          of those fixed points which have the third marked
+       point situated directly on the special component C0 (it is convenient here to introduce
+       the normalizing factor ei ∈ HT∗ (pt), the Euler class of the normal “bundle” to the fixed
+       point pi in X);
+                        P
+     • Ψiα := Ψiα11 =        i
+                          β Ψαβ ;
+
+
+     • Dαi — for contributions to ei Fαii of those fixed points which have the second and third
+       marked points situated directly on the special component;
+
+     • ∆i — for contributions to ei Fiii of those fixed points which have the first three marked
+       points situated directly on the special component;
+
+     • ui = ti + contributions to eiFii of all those fixed point components in X2+n,d for which
+       the first two marked points belong to the same vertex of the tree describing the com-
+       binatorial structure.
+
+   The correlators ui can be also interpreted as contributions to the genus-1 equivariant
+correlators
+                                 X 1 X
+                                            q d (t, ..., t)n,d
+                                  n
+                                     n!
+                                                   d
+
+with given complex structure of the elliptic curve of those T -invariant classes which map the
+(only) genus-1 component of the curve C to the fixed point pi .
+
+   Theorem 8.1. (a) The functions u1 (t), ..., uN (t) are the canonical coordinates of the
+Frobenius structure on HG∗ (X, C(λ)).
+     (b) The functions Dαi (t) are eigen-values of the quantum multiplication by pα : dui =
+P      i
+    α Dα dtα .
+
+
+
+
+                                                       24
+   (c) The transition matrix (Ψiα) provides simultaneous diagonalization of the quantum cup
+          i
+product: Fαβγ = Ψiα Dβi Ψiγ and obeys the following orthogonality relations:
+                             X                      X
+                                Ψiα Ψiβ = δαβ /eβ ,   Ψiα Ψjα = δij .
+                                i                              α
+
+   (d) The Euclidean structure on the cotangent bundle of the Frobenius manifold (defined
+by the equivariant intersection pairing in HT∗ (X)) in the canonical coordinates ui takes on
+hdui , duj i = (∆i)2 δij ej and additionally
+                                     X                         Dαi          Dαi Dβi
+                                                                       i
+                          (∆i)−1 =        Ψiα , Ψiα =              , Ψ αβ =         .
+                                      α
+                                                               ∆i            ∆i
+
+
+
+   Proof. We first apply the localization formula
+                                               X
+                               A1234h...in,d =   A1234h...iin,d
+                                                           i
+
+to the 4-point equivariant correlators with the fixed cross-ratio z of the 4 marked points and
+only after this specialize the cross-ratio to 0,1 or ∞. This gives rise to the local WDVV-
+identities
+                            Ψiαβ Ψiγδ is totally symmetric in α, β, γ, δ
+which is independent of the global WDVV-equation. When combined with the global iden-
+tities
+                           A1234h11, pα , pβ , pγ in,d = hpα , pβ , pγ in,d
+                                      P
+they yield the orthogonality relation i Ψiα Ψiβ = δαβ /eβ and localization formulas
+                                                 X
+                                      Fαβγ =          Ψiαβ Ψiγ
+                                                       i
+
+for the structural constants of the quantum cup-product.
+   A similar argument with > 4-point correlators A12345...h...ii proves the diagonalization
+                                              X
+                            hpα ∗ pβ , pγ i =   Ψiα Dβi Ψiγ /ei ,
+                                                       i
+                                                       X
+                              hpα ∗ pβ ∗ pγ , pδ i =            Ψiα Dβi Dγi Ψiδ /ei
+                                                           i
+
+
+                                                   25
+and the identities
+                                                                  X
+                                Ψiαβ = Ψiα Dβi , (∆i )−1 =             Ψiα .
+                                                           α
+                                P     i
+   Finally, the identity dui =     α Dα dtα follows directly from the definition of ui and implies
+that u1, ..., uN are the canonical coordinates of the Frobenius structure.
+
+
+9      Projective complete intersections
+We are going to describe explicitly solutions of the differential equations arising from quan-
+tum cohomology of projective complete intersections. Lex X be such a non-singular complete
+intersection in Y := CP n given by r equations of the degrees (l1, ..., lr). If l1 + ... + lr = n + 1
+then X is a Calabi-Yau manifold and its quantum cohomology is described by the mirror
+conjecture. In this and the next sections we study respectively the cases l1 + ... + lr < n and
+l1 + ... + lr = n when the 1-st Chern class of X is still positive. In the case l1 + ... + lr > n + 1
+(which from the point of view of enumerative geometry can be considered as “less interesting”
+for rational curves generically occur only in finitely many degrees) the “mirror symmetry”
+problem of hypergeometric interpretation of quantum cohomology differential equations re-
+mains open.
+    Let Ed be the Euler class of the vector bundle over the moduli space Y2,d of genus
+0 degree d stable maps φ : (C, x0, x1) → CP n with two marked points, with the fiber
+H 0 (C, φ∗H l1 ⊕ ... ⊕ φ∗H lr ) where H l is the l-th tensor power of the hyperplane line bundle
+over CP n .
+    Consider the class
+
+                                                  1
+                                Sd (~) :=        (0)
+                                                        Ed ∈ H ∗ (Y2,d )
+                                            ~ + c1
+        (0)
+where c1 is the 1-st Chern class of the “universal tangent line at the marked point x0 ”, and
+e0, e1 are the evaluation maps. Due to the factor Ed this class represents the push forward
+                                            (0)
+along X2,d → Y2,d of the class 1/(~ + c1 ) ∈ H ∗ (X2,d ) (by the very construction of X2,d in
+Section 4).
+    In the cohomology algebra C[P ]/(P n+1 ) of CP n , consider the class
+                                                      ∞
+                                                      X
+                               S(t, ~) := e   P t/~
+                                                            edt(e0 )∗(Sd (~))
+                                                      d=0
+
+
+                                                      26
+where (e0)∗ represents the push-forward along the evaluation map (and for d = 0, when Y2,d
+is not defined, we take Euler (⊕j H ⊗lj ) on the role of (e0 )∗S0 ).
+    Considered as a function of t, S is a curve in H ∗ (CP n ) whose components are solutions of
+the differential equation we are concerned about. Indeed, according to Section 6 a similar sum
+represents the solutions of the quantum cohomology differential equation for X, and S is just
+the push-forward of that sum from H ∗ (X) to H ∗ (Y ). (Strictly speaking S carries information
+only about correlators between those classes which come from the ambient projective space;
+also if X is a surface rk H2 (X) can be greater than 1 and S mixes information about the
+curves of different degrees in X when they have the same degree in Y .)
+
+    Theorem 9.1. Suppose that l1 + ... + lr < n. Then
+                                        ∞
+                                        X         dl1                 dlr
+                                P t/~         dt Πm=0 (l1 P + m~)...Πm=0(lr P + m~)
+                       S=e                  e                                       .
+                                        d=0
+                                                          Πdm=1 (P + m~)n+1
+
+    The formula coincides with those in [9, 10] (found by analysis of toric compactifications
+of spaces of maps CP 1 → CP n ) for solutions of differential equations in S 1 -equivariant
+cohomology of the loop space.
+
+    Corollary 9.2. (see [9, 10]) The components s := hP i , Si, i = 0, ..., n − r, of S form a
+basis of solutions to the linear differential equation
+
+                               d n+1−r                 lj −1     d
+                          (~      )    s = etΠrj=1 lj Πm=1   ~(lj + m) s .
+                               dt                                dt
+    This implies (combine [10] with [18]) that the solutions have an integral representation
+of the form
+                            Z
+                                                                    du0 ∧ ... ∧ dun
+                                             e(u0 +...+un )/~
+                                γ n−r ⊂Xt′                       dF0 ∧ dF1 ∧ ... ∧ dFr
+
+where
+
+F0 = u0...un, F1 = u1 + ...ul1 , F2 = ul1 +1 + ... + ul1 +l2 , ..., Fr = ul1 +...+lr−1 +1 + ... + ul1 +...+ulr
+
+and the “mirror manifolds” Xt′ are described by the equations
+
+                    Xt′ = {(uo , ..., un) | F0 (u) = et, F1(u) = 1, ..., Fr (u) = 1}.
+
+                                                            27
+This proves for X the mirror conjecture in the form suggested in [10].
+
+   Corollary 9.3. If dimC X 6= 2 the cohomology class p of hyperplane section satisfies in
+the quantum cohomology of X the relation
+
+                                  pn+1−r = l1l1 ...lrlr qpl1 +...+lr −r .
+
+   When X is a surface the same relation holds true in the quotient of the quantum coho-
+mology algebra which takes in account only degrees of curves in the ambient CP n (we leave
+to figure out a precise description of this quotient to the reader; quadrics CP 1 × CP 1 in CP 3
+provide a good example: (p1 + p2 )3 = 4q(p1 + p2 )           mod p21 = q = p22 .)
+   This corollary is consistent with the result of A. Beauville [22] describing quantum co-
+                                          P               P
+homology of complete intersections with      lj ≤ n + 1 − (lj − 1) and with results of M.
+Jinzenji [23] on quantum cohomology of projective hypersurfaces (r = 1) with l1 < n.
+
+   Corollary 9.4. The number of degree d holomorphic maps CP 1 → X n−r ⊂ CP n , which
+send 0 and ∞ to two given cycles and send n + 1 − r given points in CP 1 to n + 1 − r given
+generic hyperplane sections, is equal to l1l1 ...lrlr times the number of degree d − 1 maps which
+send 0 and ∞ to the same cycles and l1 + ... + lr − r given points — to l1 + ... + lr − r given
+hyperplane sections.
+   This is the enumerative meaning of Corollary 9.3; of course in this formulation numerous
+general position reservations are assumed.
+    Control examples. 1. l1 = ... = lr = 1: The above formulas for quantum cohomology and
+for solutions of the differential equations in the case of a hyperplane section give rise to the
+same formulas with n := n − 1.
+   2. n = 5, r = 1, l = 2: X is the Plucker embedding of the grassmanian Gr4,2. Its quantum
+cohomology algebra is described by the relations c31 = 2c1 c2, c22 − c2 c21 + q = 0 between the
+Chern classes of the tautological plane bundle. For the 1-st Chern class p = −c1 of the
+determinant line bundle we deduce the relation p5 = 4pq prescribed by Corollary 9.3.
+
+   We will deduce Theorem 9.1 from its equivariant generalization. Consider the space Cn+1
+provided with the standard action of the (n + 1)-dimensional torus T . The equivariant co-
+homology algebra of Cn+1 coincides with the algebra of characteristic classes H ∗ (BT n+1 ) =
+C[λ0 , ..., λn]. The equivariant cohomology algebra of the projective space (Cn+1 − 0)/C×
+
+                                                   28
+in these notations is identified with C[p, λ]/((p − λ0 )...(p − λn )) and the push-forward
+HT∗ (CP n ) → HT∗ (pt) is given by the residue formula
+                                             I
+                                          1         f(p, λ)dp
+                              f(p, λ) 7→                              .
+                                         2πi    (p − λ0 )...(p − λn )
+    Here −p can be considered as the equivariant 1-st Chern class of the Hopf line bundle
+provided with the natural lifting of the torus action. We will use φi := Πj6=i (p − λj ), i =
+0, ..., n, as a basis in HT∗ (CP n ).
+     Consider the T -equivariant vector bundle ⊕rj=1 H ⊗lj and provide it with the fiberwise
+action of the additional r-dimensional torus T ′. The equivariant Euler class of this bundle
+is equal to (l1 p − λ′1 )...(lrp − λ′r ) where C[λ′ ] = H ∗ (BT ′).
+   Introduce the equivariant counterpart S ′ of the class S in the T × T ′-equivariant coho-
+mology of CP n . This means that we use the equivariant class p instead of P and replace the
+                            (0)
+Euler classes Ed and c1 by their equivariant partners.
+
+    Theorem 9.5. Let l1 + ... + lr < n. Then
+                                   ∞
+                                   X           Πdl         ′           dlr       ′
+                                                0 (l1 p − λ1 + m~)...Π0 (lr p − λr + m~)
+                                                   1
+
+                     S ′ = ept/~         edt                                             .
+                                   d=0
+                                                 Πd1 (p − λ0 + m~)...Πd1(p − λn + m~)
+
+    Theorem 9.1 follows from Theorem 9.5 by putting λ = 0, λ′ = 0 which corresponds to
+passing from equivariant to non-equivariant cohomology.
+   The vector-function S ′ satisfies the differential equation
+                    d                           d                         d
+         Πri=0 (~      − λi ) S ′ = etΠlm=1
+                                        1
+                                            (l1~ − λ′1 + m~)...Πlm=1
+                                                                 r
+                                                                     (lr ~ − λ′r + m~) S ′.
+                    dt                          dt                        dt
+
+    We intend to prove Theorem 9.5 by means of localization of S ′ to the fixed point set
+of the torus T action on the moduli spaces Y2,d . As it is shown in [3], all correlators of
+the equivariant theory on CP n are computable at least in principle, and in practice the
+computation reduces to a recursive procedure which can be understood as a summation over
+trees and can be also formulated as a non-linear fixed point (or critical point) problem. We
+will see below that in the case of correlators hφi , S ′i certain reasons of a somewhat geometrical
+character cause numerous cancellations between trees so that the recursive procedure reduces
+to a “summation over chains” and respectively to a linear recurrence equation. The formula
+of Theorem 9.5 is simply the solution to this equation.
+
+                                                           29
+   In the proof of Theorem 9.5 below we write down all formulas for r = 1 (it serves the
+case when X is a hypersurface in CP n of degree l < n). The proof for r > 1 differs only by
+longer product formulas.
+                       (0)
+   Let us abbreviate c1 as c, denote Ed′ the equivariant Euler class of the vector bundle over
+Y2,d whose fiber over the point ψ : (C, x0, x1 ) → Y = CP n consists of holomorphic sections
+of the bundle ψ ∗ (H l ) vanishing at x0 , and introduce the following equivariant correlator:
+                                         ∞
+                                         X             Z
+                                                   d                          1
+                                Zi :=          q                  e∗0(φi )      E′ .
+                                                           Y2,d              ~+c d
+                                         d=0
+
+   We have
+
+                               hφi , S ′i = eλi t/~(lλi − λ′ )(Zi |q=et )
+
+   Proposition 9.6.
+                               X                       Z
+                                        q        d          (−c)(n+1−l)d−1 ′ ∗
+                    Zi = 1 +         ( n+1−l )                            Ed e0(φi ) .
+                                      ~                Y2,d    1 + c/~
+                               d>0
+
+   Proof. We have just dropped first several terms in the geometrical series 1/(~ + c) since
+their degree added with the degrees of other factors in the integral over Y2,d is still less than
+the dimension of Y2,d . It is important here that all the equivariant classes involved including
+φi are defined in the equivariant cohomology over C[λ, λ′ ] without any localization.
+   It is a half of the geometrical argument mentioned above. The other half comes from the
+description of the fixed point set in Y2,d given in [11].
+   Consider a fixed point of the torus T action on Y2,d . It is represented by a holomorphic
+map of a possibly reducible curve with complicated combinatorial structure and with two
+marked points on some components. Each component carrying 3 or more special points is
+mapped to one of the n + 1 fixed points of T on CP n , and the other components are mapped
+(with some multiplicity) onto the lines joining the fixed points and connect the point-mapped
+components in a tree-like manner.
+                                          R
+   In the Borel localization formula for e∗0(φi )... the fixed point will have zero contribution
+unless the marked point x0 is mapped to the i-th fixed point in CP n (since φi has zero
+localizations at all other fixed points.
+
+                                                            30
+   Consider a fixed point curve C whose marked point x0 is indeed mapped to the i-th fixed
+point in CP n . There are two options
+   (i) the marked point x0 is situated on an irreducible component of C mapped with some
+degree d′ onto the line joining the i-th fixed point with the j-th fixed point in CP n with
+i 6= j;
+   (ii) the marked point x0 is situated on a component of C mapped to the i-th fixed point
+and carrying two or more other special points.
+    Consider first the option (ii) and the contribution of such a connected component of the
+                                                               R
+fixed point set in Y2,d to the Borel localization formula for c(n+1−l)d−1 .... The connected
+component itself is the (product of the) Deligne-Mumford configuration space of, say, s + 1
+special points: the marked point x0 , may be the marked point x1, and respectively s − 1 or
+s endpoints of other components of C mapped onto the lines outgoing the i-th fixed point
+in CP n .
+   Lemma 9.7. The type (ii) fixed point component in Y2,d has zero contribution to the
+                              R
+Borel localization formula for Y2,d c(n+1−l)d−1 ...
+   Proof. Restriction of the class c from Y2,d to the type (ii) fixed point component coin-
+cides with the 1-st Chern class of the line bundle on the Deligne-Mumford factor M̄0,s+1 of
+the component defined as “the universal tangent line as the marked point x0” and is thus
+nilpotent in the cohomology of the component. Since the number of straight lines in a curve
+of degree d does not exceed d we find that the dimension s − 2 of the factor M̄0,s+1 is less
+than d which in its turn does not exceed (n + 1 − l)d − 1 for d > 0 (because we assumed that
+n + 1 − l ≥ 2).
+   Consider now the option (i). The irreducible component C ′ of the curve C = C ′ ∪ C ′′
+carrying the marked point x0 is mapped with the multiplicity d′ ≤ d onto the line joining
+i-th fixed point in CP n with the j-th one while the remaining part C ′′ → CP n of the map
+represents a fixed point in Y2,d−d′ . Moreover, the normal space to the fixed point component at
+the type (i) point (the equivariant Euler class of the normal bundle occurs in the denominator
+of the Borel localization formula) is the sum of (a) such a space N ′′ for C ′′ → CP n , (b) the
+space N ′ of holomorphic vector fields along the map C ′ → CP n vanishing at the fixed point j
+factorized by infinitesimal reparametrizations of C ′, (c) the tensor product L of the tangent
+lines to C ′ and C ′′ at their intersection point. Since the space V of holomorphic sections of
+H l restricted to C (and vanishing at x0 ) admits a similar decomposition V ′ ⊕ V ′′ , we arrive
+
+                                              31
+to the following linear recursion relation for Zi .
+   Proposition 9.8. Put zi(Q, ~) := Zi (~(n+1−l) Q, ~). Then
+                                   XX
+                                                Qd Coeff ji (d′ ) zj (Q, (λj − λi )/d′ )
+                                                   ′
+                  zi(Q, ~) = 1 +
+                                   j6=i d′ >0
+
+
+where                                                   ′
+                       j ′      [(λj − λi )/d′ ](n+1−l)d −1 Euler (V ′ )
+                 Coeff i (d ) =                                          φi |p=λi .
+                                   1 + (λi − λj )/d′ ~ Euler (N ′ )
+   Proof. Here (λi − λj )/d′ is the localization of c, and the key point is that the equivariant
+Chern class of the line bundle L over Y2,d−d′ is what we would denote ~ + c for the moduli
+space Y2,d−d′ but with ~ = (λj − λi )/d′ . This is how the recursion for the correlators zi
+becomes possible. The rest is straightforward.
+   Remark. Our reduction to the linear recursion relation can be interpreted in the following
+more geometrical way: contributions of all non-isolated fixed points cancel out with some
+explicit part of the contribution from isolated fixed points; the latter are represented by
+chains of multiple covers of straight lines connecting the two marked points.
+
+    Let us write down explicitly the factor Coeff ji (d) from Proposition 9.8 (compare with
+[3]). Coeff ji (d) =
+
+                  Πld           ′
+                    m=1 (lλi − λ + m(λj − λi )/d)[(λj − λi )/d]
+                                                                   (n+1−l)d−1
+                                                                                   =
+             d(1 + (λi − λj )/~d)Πnα=0 dm=1 (α,m)6=(j,d) (λi − λα + m(λj − λi )/d)
+
+(here the product in the numerator is Euler(V ′ ), the denominator — it is essentially
+Euler(N ′) where however the cancellation with φi |p=λi is taken care of — has been computed
+using the exact sequence 0 → C → Cn+1 ⊗ H → TY → 0 of vector bundles over Y = CP n ,
+and the “hard-to-explain” extra-factor d is due to the orbifold structure of the moduli spaces
+(the d-multiple map of C ′ onto the (ij)-line in CP n has a discrete symmetry of order d)
+                                                       (λi−λ )d    ′
+                             1                  Πld
+                                                 m=1 (l λj −λi + m)
+                   =                                                             .
+                     [(λi − λj )/~ + d] Πnα=0 dm=1 (α,m)6=(j,d) ( (λi−λα )d + m)
+                                                                       λj −λi
+
+   Now it is easy to check
+                                                                 P
+   Proposition 9.9. The correlators zi (Q, 1/ω) are power series   Ci (d)Qd in Q with
+coefficients Ci (d) which are reduced rational functions of ω with poles of the order ≤ 1 at
+
+                                                       32
+ω = d′ /(λj − λi ) with d′ = 1, ..., d. The correlators zi are uniquely determined by these
+properties, the recursion relations of Proposition 9.8 and the initial condition Ci (0) = 1.
+
+   The proof of Theorem 9.5 is completed by the following
+   Proposition 9.10. The series
+                                      ∞
+                                      X             Πld             ′
+                                                      m=1 ((lλi − λ )ω + m)
+                               zi =         Qd
+                                      d=0
+                                                 d!Πα6=iΠdm=1 ((λi − λα )ω + m)
+
+   satisfy all the conditions of Proposition 9.9.
+   Proof. The recursion relation is deduced by the decomposition of the rational functions of
+ω into the sum of simple fractions (or, equivalently, from the Lagrange interpolation formula
+for each numerator through its values at the roots of the corresponding denominator).
+
+
+10      Complete intersections with l1 + ... + lr = n
+Let X ⊂ Y = CP n be a non-singular complete intersection given by equations of degrees
+(l1, ..., lr) with l1 + ... + lr = n. There are only two points where our proof of Theorem 9.1
+would fail for such X. One of them is the Lagrange interpolation formula in the proof of
+Proposition 9.10. Namely, the rational functions of ω there are not reduced — the degree
+dl of the numerator is equal to the degree dn of the corresponding denominator. The other
+one is Lemma 9.7. Namely, we have the following lemma instead.
+   Lemma 10.1. The type (ii) fixed point component in Y2,d makes zero contribution via
+                              R
+Borel localization formulas to Y2,d cd−1 ... unless it consists of maps (C ′ ∪ C ′′ , x0, x1) → Y
+where C ′ is mapped to a fixed point in CP n and carries both marked points, and C ′′ is a
+disjoint union of d irreducible components (intersecting C ′ at d special points) mapped (each
+with multiplicity 1) onto straight lines outgoing the fixed point. All type (ii) components
+                          R
+make zero contribution to Y2,d cd ....
+    Let us modify the results of Section 9 accordingly. As we will see, the LHS in Theorem
+9.5 is now only proportional to the RHS, and we will compute the proportionality coefficient
+(a series in q) directly.
+   Proposition 10.2. Put zi(Q, ~) := Zi (~Q, ~). Then
+                         X                            XX
+                                                                    Qd Coeff ji (d′) zj (Q, (λj − λi )/d′ )
+                                                                       ′
+        zi(Q, ~) = 1 +         Qd Coeff i (d) +
+                         d>0                           j6=i d′ >0
+
+
+                                                         33
+where Coeff i (d) is equal to the contribution of type (ii) fixed point components to
+R
+  Y2,d
+       (−c)d−1 Ed′ e∗0(φi ), and
+
+                                                                   (la λi −λa )d′
+                                      1              Πra=1Πdl
+                                                            m=1 ( λj −λi
+                                                              a
+                                                                                 + m)
+             Coeff ji (d) =                                                               .
+                              [(λi − λj )/~ + d] Πnα=0 dm=1 (α,m)6=(j,d)( (λi −λα )d + m)
+                                                                                λj −λi
+
+                                                                                    P              d
+   Corollary 10.3. The correlators zi (Q, 1/ω) are power series                        d Ci (d)Q       with coeffi-
+cients
+                         Ci (d) = Pd (ω, λ, λ′ )/Πα Πdm=1 ((λi − λα )ω + m)
+
+where Pd = Pd0 ω nd + ... is a polynomial in ω of degree nd. The correlators zi are uniquely
+determined by these properties, the recursion relations of Proposition 10.2 and the initial
+conditions
+                         X                          X                  Pd0
+                              Coeff i (d)Qd =             Qd                       .
+                          d                          d
+                                                               d!Πα6=i (λi − λa )d
+
+   Proposition 10.4. The series
+                                   ∞
+                                   X           r     la d          ′
+                                           d Πa=1 Πm=1 ((la λi − λa )ω + m)
+                           zi′ =         Q
+                                   d=0
+                                             d!Πα6=i Πdm=1 ((λi − λα )ω + m)
+
+satisfy the requirements of Corollary 10.3 with the initial condition
+                    X         Πra=1(laλi − λ′a )lad         Πa(laλi − λ′a )la
+                         Qd                         = exp{Q                   }.
+                              d!Πα6=i (λi − λα )d           Πα6=i (λi − λα )
+                     d
+
+
+
+
+   Now let us compute Coeff i (d) using the description of type (ii) fixed point components
+given in Lemma 10.1.
+    Proposition 10.5. Contribution of the type (ii) fixed point components to
+P dR
+   dQ   Y2,d
+             (−c)d−1 Ed′ φi is
+
+                                    Πa(laλi − λ′a )la
+                           exp{Q                      } exp{−Q l1!...lr!} .
+                                    Πα6=i (λi − λα )
+
+   Proof. Each fixed point component described in Lemma 10.1 is isomorphic to the Deligne
+- Mumford configuration space M̄0,d+2 . Our computation is based on the following known
+
+                                                     34
+formula (see for instance [3] ) for correlators between Chern classes of universal tangent lines
+at the marked points:
+                Z
+                                                1                          (1/w1 + ... + 1/wk )k−3
+                                    (1)          (k)
+                                                                       =                           .
+                       M̄0,k (w1 + c1 )...(wk + c1 )                              w1...wk
+
+   Consider the type (ii) fixed point component specified by the following combinatorial
+structure of stable maps: d degree 1 irreducible components join the i-th fixed point with
+the fixed points with indices j1 , ..., jd. Using the above formula and describing explicitly the
+normal bundle to this component in Y2,d and localization of the Euler class Ed′ we arrive to
+                                                                  R
+the following expression for the contribution of this component to Y2,d (−c)d−1φi Ed′ :
+
+                                         Πra=1Πlm=1
+                                                 a
+                                                    (laλi − λ′a + m(λjs − λi ))
+                               Πds=1                                            .
+                                              (λi − λjs )Πα6=js ,i (λjs − λα )
+
+   Summation over all type (ii) components in all Y2,d with weights Qd gives rise to
+                                     X Πa Πla                     ′
+                                                    m=1 (la λi − λa + m(p − λi ))
+                       exp{−Q                                                             |p=λj } .
+                                                           Πα6=j (p − λα )
+                                     j6=i
+
+The exponent can be understood as a sum of residues at p 6= λi , ∞ and is thus opposite to
+the sum
+                                                            Πa(laλi − λ′a )la
+                                               l1 !...lr! −
+                                                            Πα6=i(λi − λα )
+of residues at ∞ and λi .
+   Corollary 10.6. zi (Q, 1/ω) = zi′(Q, ω) exp(−l1!...lr!Q).
+   Proof. Multiplication by a function of Q does not destroy the recursion relation of
+Proposition 10.2 but changes the initial condition.
+
+   We have proved the following
+   Theorem 10.7. Suppose l1 + ... + lr = n. Then
+                                         ∞
+                                         X
+                  (pt−l1!...lr !et )/~                Πdl         ′           dlr       ′
+                                                       0 (l1 p − λ1 + m~)...Π0 (lr p − λr + m~)
+                                                          1
+            ′
+           S =e                                 edt                                             .
+                                         d=0
+                                                        Πd1 (p − λ0 + m~)...Πdi(p − λn + m~)
+
+                                                                           dl
+                   ′                     (P t−l1!...lr !et )/~
+                                                                 Πrj=1 Πm=0
+                                                                         j
+                                                                            (lj P + m~)
+            S = S |λ=0,λ′=0 = e                                      d
+                                                                                        (mod P n+1 ) .
+                                                                  Πm=1 (P + m~)n+1
+
+                                                                  35
+      Corollary 10.8. Let D = ~d/dt + l1!...lr!et. Then
+
+                     Dn+1−r S = l1...lret Πrj=1 (lj D + ~)...(lj D + (lj − 1)~) S.
+
+      Corollary 10.9. In the quantum cohomology algebra of X the class p of hyperplane
+sections satisfies the following relation (with the same reservation in the case dim X ≤ 2 as
+in Corollary 9.3):
+                          (p + l1 !...lr!q)n+1−r = l1l1 ...lrlr q(p + l1!...lr!q)n−r .
+                           4
+      Control examples.        1. X = pt in CP 1 (n = 1, r = 1, l = 1). The above relation
+takes on p + q = q, or p = 0. Since P 2 = 0, we also find from Theorem 10.7 that S =
+           P
+P exp(−et) d edt/d! = P , or h1, Si = 1 as it should be for the solution of the differential
+equation ~d/dt s = 0 that arises from quantum cohomology of the point.
+      2. X = CP 1 embedded as a quadric into CP 2 (n = 2, r = 1, l = 2). We get (p + 2q)2 =
+4q(p + 2q), or p2 = 4q 2 . Taking into account that p is twice the generator in H 2 (CP 1 )
+and the line in CP 1 has the degree 2 in CP 2 we conclude that this is the correct relation
+in the quantum cohomology of CP 1. This example was the most confusing for the author:
+predictions of the loop space analysis [9] appeared totally unreliable because they gave a
+wrong answer for the quadric in CP 2 . As we see now, the loop space approach gives correct
+results if l1 + ... + lr < n and require “minor” modification (by the factor exp(−l1!...lr!q/~)
+) in the boundary cases l1 + ...lr = n; the quadric on the plane happens to be one of such
+cases.
+   3. n = 3, r = 1, l = 3. We have (p + 6q)3 = 27q(p + 6q)2, or p3 = 9qp2 + 63 q 2p + 27 · 28q 3.
+In particular, hp ∗ p, pi = 9qhp, pi + 63 q 2 hp, 1i + 27 · 28q 3 h1, 1i = 27q + 0 + 0 which indicates
+that there should exist 27 discrete lines on a generic cubical surface in CP 3 .
+
+
+11        Calabi-Yau projective complete intersections
+Let Ld (Y ) denote, as in Section 6, the moduli space of stable maps ψ : CP 1 → CP n × CP 1
+of bidegree (d, 1) with 2 marked points mapped to CP n × {0} and CP n × {∞} respectively.
+Let Ed denote the equivariant Euler class of the vector bundle over Ld (Y ) with the fiber
+  4
+   I am thankful to A. Collino [30] who pointed to me that in the hypersurface case the statement of
+Corollary 10.9 was conjectured independently by several authors on the basis of numerical data.
+
+
+
+                                                      36
+H 0 (CP 1 , ψ ∗(V )) where V is the bundle on CP n × CP 1 induced from our convex bundle
+⊕a H la by the projection to the first factor.
+   Consider the equivariant correlator
+                             Z
+                        Φ=       Euler−1(V ) S ′(t, ~) S ′(τ, −~) =
+                                             Y
+
+               X                X Πa(la λi − λ′ ) Z                         e   pt/~ ∗
+                                                                                    e0(φi )
+                                                                                              Z
+                                                                                                                  e−pτ /~e∗0(φi )
+                      dt d′ τ                            a
+           =          e e                                               Ed′                               Ed′ ′                   .
+                                 i
+                                     Πj6=i (λi − λj )            Y2,d            ~+c              Y2,d′             −~ + c
+               d,d′
+
+   In the case l1 + ... + lr < n it is easy to check using the explicit formula for S ′ from
+Theorem 9.5 that
+                                     I                   X                 la d         ′
+                           1                 p(t−τ )/~             dτ Πa Πm=0 (la p − λa − m~)
+                       Φ=                e           [           e                              ] dp.
+                          2πi
+                                                         d
+                                                                      Πnj=0 Πdm=0 (p − λj − m~)
+
+   This is an equivariant version of a formula found in [9] in the context of loop spaces and
+toric compactifications of spaces of rational maps. Namely, consider the projective space L′d
+of (n + 1)-tuples of polynomials in one variable of degree ≤ d each, up to a scalar factor
+(notice that L′d has the same dimension d(n + 1) + n as Ld ). It inherits the component-wise
+action of the torus T n+1 and the action of S 1 by the rotation of the variable (“rotation of
+loops”). Integration over the equivariant fundamental cycle in L′d is given by the residue
+formula
+                                                             I
+                                               1                                    fdp
+                                f(p, λ, ~) 7→                                                                .
+                                              2πi                 Πnj=0 Πdm=0 (p − λj − m~)
+   Consider the equivariant vector bundle over L′d such that substitution of the (n + 1)
+polynomials into r (invariant) homogeneous equations in CP n of degrees l1, ..., lr produces a
+section of this bundle. The equivariant Euler class of the bundle is
+                                                      la d
+                                         Ed′ = Πra=1 Πm=0  (lap − λ′a − m~).
+
+   The formula for Φ indicates that there should exist a close relation between the spaces
+Ld and L′d . This relation is described in the following lemma whose proof will be given in
+the end of this Section.
+   The Main Lemma. There exists a natural S 1 × T n+1 -equivariant map µ : Ld → L′d .
+Denote −p the equivariant 1-st Chern class of the Hopf bundle over L′d induced by µ to Ld .
+Then
+
+                                                                    37
+                                              X             Z
+                                Φ(t, τ ) =         e   dτ
+                                                                 ep(t−τ )/~Ed .
+                                               d            Ld
+
+   Define Φ′(q, z, ~) := Φ|t=τ +z~,q=eτ . (By the way the limit of the series Φ′ at ~ = 0
+has the topological meaning of what is called in [7] the generating volume function, and
+the meaning of this limit procedure in terms of differential equations satisfied by Φ is the
+adiabatic approximation.)
+                                P     R
+   Corollary 11.1. Φ′ (q, z) := d q d Ld epz Ed =
+                              I     X
+                           1                q d Ed (p, λ, λ′ , ~)
+                       =        epz                               dp
+                          2πi
+                                     d
+                                        Πnj=0 Πdm=0 (p − λj − m~)
+
+where Ed = µ∗ (Ed ) is a polynomial (of degree < (n + 1)d) of all its variables.
+                                   R
+   Proof. The integrals E (k) = Ld pk Ed , k = 0, ..., dim L′d , which determine the push-
+                                                         R           ′
+forward µ∗ (E) are polynomials in (λ, λ′ , ~). The matrix L′ pi+dim Ld −j is triangular with all
+                                                                           d
+eigenvalues equal to 1. This means that there exists a unique polynomial in p with coeffi-
+cients polynomial in (λ, λ′ , ~) which represents the push-forward with any given polynomials
+E (k) (λ, λ′ , ~).
+   The last argument also proves
+   Proposition 11.2. Suppose that a series
+                                    X              Pd (p, λ, λ′ , ~)
+                               s=        qd
+                                     d
+                                              Πj Πdm=0 (p − λj − m~)
+
+with coefficients Pd which are polynomials of p of degree ≤ dim Ld has the property that for
+                                   H
+every k = 0, 1, 2, ... the q-series spk dp has polynomial coefficients in (λ, λ′ , ~). Then the
+coefficients of all Pd are polynomials of (λ, λ′ , ~), and vice versa.
+
+   The coefficient Ed (p, λ, λ′ , ~) in the series Φ′ has the total degree (l1 + ... + lr )d + r
+according to the dimension of the vector bundle whose Euler class it represents. Consider
+the following operations with the series Φ:
+   (i) multiplication by a series of et and / or eτ ;
+   (ii) simultaneous change of variables t 7→ t + f(et ), τ 7→ τ + f(eτ ).
+   (iii) multiplication by exp[C(f(et) − f(eτ ))/~] (here the factor C should be a linear
+function of (λ, λ′ ) in order to obey homogeneity).
+
+                                                   38
+    Proposition 11.3. The property of the series Φ to generate polynomial coefficients
+Ed (p, λ, λ′ , ~) is invariant with respect to the operations (i),(ii),(iii).
+    Proof. The polynomiality property of coefficients in Φ′ is equivalent, due to Proposition
+11.2, to the fact that for all k the q-series (∂/∂z)k |z=0 Φ′ has polynomial coefficients.
+   Multiplication by a series of q does not change this property, which proves the invariance
+with respect to multiplication by functions of eτ .
+   The roles of t and τ can be interchanged by the substitutions p 7→ p + ~d, ~ 7→ −~ in
+each summand of Φ. This proves the invariance with respect to multiplication by functions
+of et.
+    The operation (ii) transforms Φ′ to
+                          I
+           1 X d df (q)             z~ + f(qez~) − f(q)          Ed (p)
+                  q e         exp{p                     }                     dp.
+          2πi                               ~             Πj Πm (p − λj − m~)
+                 d
+
+    Since the exponent is in fact divisible by ~, the derivatives in z at z = 0 still have
+polynomial coefficients. This proves the invariance with respect to (ii). The case of the
+operation (iii) is analogous.
+
+    We are going to use the above polynomiality and invariance properties of the correlator
+Φ in order to describe quantum cohomology of Calabi-Yau complete intersections in CP n
+(in which case l1 + ... + lr = n + 1). We will use this polynomiality in conjunction with
+recursion relations based on the fixed point analysis of Sections 9, 10. The result can be
+roughly formulated in the following way: the hypergeometric functions of Theorem 9.5 in
+the case l1 + ... + lr = n + 1 can be transformed to the correlators S ′ by the operations
+(i),(ii),(iii). Notice that in the Calabi – Yau case all our formulas are homogeneous with
+the grading deg q = 0, deg p = deg ~ = deg λ = deg λ′ = 1, deg z = −1. In particular
+the transformations (i)–(iii) also preserve the degrees of the numerators Ed in Φ′ . In the
+                                                       P
+“positive” case l1 + ... + lr ≤ n where deg q = n + 1 − la > 0 the transformations (i)–(iii)
+in fact increase degrees of the numerators Ed and are “not allowed”. The only exception is
+the operation (iii) with f(q) = const q in the case l1 + ... + lr = n when deg q = 1. The right
+value −l1!...lr! of the constant can be found by counting contributions of curves of degree 1.
+In Section 10 we have found this answer by a straightforward computation involving curves
+of all degrees.
+
+
+                                                  39
+    Consider now the correlator Φ (defined in The Main Lemma) in the Calabi–Yau case
+l1 + ... + lr = n + 1. Localization to S 1 -fixed points in Ld (as in Section 6) expresses Φ via
+the correlators Zi (defined in Section 9) as follows:
+                                 X Πa (laλi − λ′ )
+                                                           a
+                        Φ=                                     eλi(t−τ )/~ Zi (et, ~) Zi (eτ , −~).
+                                  i
+                                          Πj6=i (λi − λj )
+                                                                                                                    P        d
+    Proposition 11.4. (1) The coefficients of the power series Zi (q, ~) =                                                d q Ci (d) are
+rational functions
+                                                                        (i)
+                                                            Pd
+                                      Ci (d) =    d       d
+                                               d!~ Πj6=i Πm=1 (λi − λj + m~)
+         (i)
+where Pd is a polynomial in (~, λ, λ′ ) of degree (n + 1)d.
+    (2) The polynomial coefficients ED (p) in Φ′ are determined by their values
+                                                                               (i)       (i)
+                               ED (λi + d~) = Πa (laλi − λ′a ) Pd (~)PD−d (−~)
+
+at p = λi + d~, i = 0, ..., n, d = 0, ..., D.
+    (3) The correlators zi (Q, ~) := Zi (Q~, ~) satisfy the recursion relation
+                                      X Qd                 XX               Coeff ji (d)        (λj − λi )
+               zi (Q, ~) = 1 +                    Ri,d +               Qd                zj (Q,            )
+                                             d!                             λi − λj + d~            d
+                                      d>0                   d>0 j6=i
+
+                  (0)           (1)
+where Ri,d = Ri,d ~d + Ri,d ~d−1 + ... is a polynomial of (~, λ, λ′ ) of degree ≤ d, and
+                                                       la d
+                                                  ΠaΠm=1    (laλi − λ′a + m(λj − λi )/d)
+                 Coeff ji (d) =                                                                .
+                                            d!Πα6=i dm=1 (α,m)6=(j,d)(λi − λα + m(λj − λi )/d)
+
+For any given {Ri,d |i = 0, ..., n, d = 1, 2, ...} these recursion relations have a unique solution
+{zi }.
+
+    Proof. (3) We have
+
+                    X           d−1
+                                X                 Z                               X             Z
+                                                                                         d −d                             (−c)d
+         Zi = 1 +          d
+                          q [         ~   −k−1
+                                                         Ed′ e∗0 (φi )(−c)k ] +         q ~                Ed′ e∗0(φi )
+                                                  Y2,d                                              Y2,d                  ~+c
+                    d>0         k=0                                               d>0
+
+where the integrals of the last sum have zero contributions from the type (ii) fixed point
+components (Lemmas 9.7, 10.1). Thus these integrals have a recursive expression identical
+
+                                                                 40
+to those of Sections 9 and 10. The terms of the double sum constitute the initial condition
+{Ri,d }. The recursion relations have the form of the decomposition of rational functions
+of ~ (coefficients at powers of Q = q/~) into the sum of simple fractions in the case when
+degrees of numerators exceed degrees of denominators. This proves existence and uniqueness
+of solutions to the recursion relations.
+    (1) follows directly from the form and topological meaning of the recursion relations.
+    (2) follows from the definition of Φ in terms of Zi .
+
+    Introduce now the class P of solutions to the recursion relation 11.4(3) which give rise
+(via 11.4(2)) to polynomial coefficients Ed in the corresponding Φ′.
+    Proposition 11.5. A solution from P is uniquely determined by the first two coefficients
+ (0)    (1)
+Ri,d , Ri,d , i = 0, ..., n,   0 < d < ∞, of its initial condition (that is by the first two terms in
+                    (0)  (1)
+the expansion Zi = Zi + Zi /~ + ... as power series in 1/~.
+    Proof. Perturbation theory: suppose that two solutions from the class P have the same
+initial condition up to the order (d − 1) inclusively. Then (2) shows that corresponding Ek
+for these solutions coincide for k < d and the variation δEd (p) vanishes at p = λi + k~ for
+0 < k < d. This means that the polynomial δEd is divisible by Πj Πd−1 m=1 (p − λj − m~). On
+the other hand (1) and (2) imply that the variation δRi,d of the initial condition satisfies
+
+                    δRi,d (~) Πa (laλi − λ′a )Πj6=i Πdm=1 (λi − λj + m~) = δEd |p=λi +~d
+(since Ri,0 = 1) and thus δRi,d is divisible by ~d−1 . Since δRi,d is a degree d polynomial, it
+leaves only the possibility
+                                                   (0)         (1)
+                                        δRi,d = δRi,d ~d + δRi,d ~d−1 .
+Thus if two class P solutions coincide in orders ~0 , ~−1 then δRi,d = 0, and thus the very
+solutions coincide.
+    Proposition 11.6. The class P is invariant with respect to the following operations:
+    (a) simultaneous multiplication Zi 7→ f(q)Zi by a power series of q with f(0) = 1;
+    (b) changes Zi (q, ~) 7→ eλif (q)/~Zi (qef (q), ~) with f(0) = 0;
+   (c) multiplication Zi 7→ exp(Cf(q)/~)Zi where C is a linear function of (λ, λ′ ) and
+f(0) = 0.
+    Proof. The operations (a),(b),(c) give rise to the operations of type (i)-(iii) for corre-
+sponding polynomials Ed . Thus it suffices to show that the operations (a),(b),(c) transform
+a solution {zi } of the recursion relations to another solution.
+
+                                                         41
+   Recall that the recursion relation 11.4(3) expresses zi as formal power series in Q with
+coefficients (at QD ) being rational functions of ~ decomposed into simple fractions with the
+poles ~ = (λj − λi )/d, d ≤ D, plus the polynomial parts Ri,D (~) of degrees ≤ D.
+   Consider the recursion coefficient Qd Coeff ji (d) responsible for the simple fraction with
+the denominator (λi − λj + d~). Application of the operations (a), (b), (c) to the left and
+right hand sides of the recursion relation causes respectively the following modifications in
+this coefficient:
+                                   Qd 7→ f(Q~)Qd /f(Q(λj − λi )/d),
+                                      λi f(Q~)            λj f(Q(λj − λi )/d)
+                    Qd 7→ Qd exp{              + df(Q~) −                     },
+                                          ~                   (λj − λi )/d
+                                                  f(Q~)    f(Q(λj − λi )/d
+                         Qd 7→ Qd exp{C                 −C                 }.
+                                                    ~        (λi − λj )/d
+In the case of the change (b), additionally, the argument Q in zj on the RHS of the recursion
+relation gets an extra-factor exp[f(Q~) − f(Q(λj − λi )/d)].
+   All the modifying factors written above actually take on 1 at ~ = (λj − λi )/d. This
+means that the recursion coefficient responsible for the simple fraction with the pole at
+~ = (λj − λi )/d does not change and that the operations (a), (b), (c) modify only the
+polynomial initial conditions Ri,D (~).
+  Under our assumptions about f (that f(0) = 1 in (a) and f(0) = 0 in (b), (c)) the
+modifying factors depend on ~ only in the combination Q~. This implies that the degrees of
+the new initial conditions Ri,D (~) still do not exceed D.
+
+   Let us consider now the hypergeometric series
+                                     ∞
+                                     X                  la d
+                                                 Πra=1Πm=1   (laλi − λ′a + m~)
+                           Zi∗ =           qd
+                                     d=0
+                                                 Πnα=0 Πdm=1 (λi − λα + m~)
+
+where l1 + ... + lr = n + 1.
+   It is straightforward to see that {Zi∗ } satisfy the recursion relations of Proposition 11.4(3)
+(see the proof of Proposition 9.10) and that the formulas of Proposition 11.4(2) generate
+corresponding
+                               I                 ∞
+                                                 X                   la d
+                     ∗   1                                   Πra=1Πm=0    (lap − λ′a − m~)
+                    Φ =             ep(t−τ )/~         edτ                                 dp
+                        2πi                      d=0
+                                                              Πni=0 Πdm=0 (p − λi − m~)
+
+                                                         42
+with polynomial numerators. Thus {Zi∗ } is a solution from the class P.
+       Computation of the first two terms in the initial condition gives
+                                                                 ∞
+                                                                 X (l1d)!...(lrd)!
+                                       Zi∗ (0) = f(q) =                                     qd ,
+                                                                 d=0
+                                                                        (d!)n+1
+                                     X                              X              X
+                      Zi∗ (1) = λi         la [gla (q) − g1 (q)] + (  λα )g1 (q) −   λ′a gla (q)
+                                       a                                 α                         a
+where
+                                                   ∞
+                                                   X                         ld
+                                                                             X
+                                                                Πa(lad)!        1
+                                            gl =             qd          (             ).
+                                                   d=1
+                                                                (d!)n+1      m=1
+                                                                                   m
+
+       Let us compare these initial conditions with those for {Zi }.
+                                     (0)           (1)
+       Proposition 11.7. Zi = 1, Zi = 0.
+       Proof. The first statement follows from the definition of Zi while the second means that
+R
+    Y2,d
+           Ed′ e∗0 (φi ) = 0 for all d > 0. It is due to the fact that the class Ed′ e∗0(φi ) is a pull-back
+from Y1,d . (In fact we have just repeated an argument proving (5) from Section 5 and thus
+the proposition can be deduced from general properties of quantum cohomology.)
+
+       Combining the last three propositions we arrive to the following
+
+       Theorem 11.8. The hypergeometric solution {Zi∗ (q, ~)} coincides with the solution
+{Zi (Q, ~)} up to transformations (a),(b),(c). More precisely, perform the following oper-
+ations with {Zi }
+       1) put
+                                                     X
+                                     Q = q exp{               la [gla (q) − g1 (q)]/f(q)} ,
+                                                         a
+
+       2) multiply Zi (Q(q), ~) by
+                                   1 X                           X
+                          exp{        [ (la λi − λ′a )gla (q) − ( (λi − λα ))g1 (q)]},
+                                 f(q)~ a                         α
+
+       3) multiply all Zi simultaneously by f(q).
+       Then the resulting functions coincide with hypergeometric series Zi∗ (q, ~).
+       Proof. The three steps correspond to consecutive applications of operations of type
+(b),(c) and (a) to {Zi } and transform the initial condition of Proposition 11.7 to that for
+{Zi∗ }. According to Propositions 11.5, 11.6 this transforms the whole solution {Zi } to {Zi∗ }.
+
+                                                                  43
+   Consider the solutions
+                                            si = eλi T /~ Zi (eT , ~)
+
+to the equivariant quantum cohomology differential equations.
+   Corollary 11.9. The operations
+                    P
+   1) change T = t + α la[gla (et ) − g1 (et)]/f(et ),
+   2) multiplication by
+                                               X                   X
+                      f(et) exp{[g1 (et)(               lα ) −            λ′a gla (et)]/(~f(et ))}
+                                                   α                a
+
+transform {si } to the hypergeometric solutions
+                                      X               la d
+                                                   ΠaΠm=1  (la p − λ′a + m~)
+                        s∗i = ept/~          edt                             |p=λi
+                                        d
+                                                   ΠαΠdm=1 (p − λα + m~)
+
+of the differential equation
+                            d                            d
+                     Πα(~      − λα )s∗ = et ΠaΠlm=1
+                                                 a
+                                                     (~la − λ′a + m~) s∗ .
+                            dt                           dt
+For λ′ = 0, λ0 + ... + λn = 0 the solutions s∗i have the following integral representation:
+                            Z                          λ /~        λ /~
+                                                 u0 0 ...unn du0 ∧ ... ∧ dun
+                                Γn ⊂{F0 (u)=et }      F1(u) ... Fr (u) dF0
+
+where
+
+F1 = (1−u1 −...−ul1), F2 = (1−ul1 +1 −...−ul1+l2 ), ..., Fr = (1−ul1 +...+lr−1 +1 −...−ul1+...+lr )
+
+and F0 = u0...un.
+
+   Corollary 11.10. The hypergeometric class S ∗ (t, ~) ∈ H ∗ (CP n ) = C[P ]/(P n+1 ),
+                                               X                  la d
+                                                              Πa Πm=0  (laP + m~)
+                                S ∗ = eP t/~            edt     d
+                                                   d
+                                                              Πm=1 (P + m~)n+1
+
+whose n + 1 − r non-zero components are solutions to the Picard-Fuchs equation
+                              d n+1−r ∗                        d
+                          (      )   s = l1...lr etΠaΠlm=1
+                                                       a −1
+                                                            (la + m)s∗
+                              dt                               dt
+
+                                                              44
+for the integrals                 Z
+                                                    du0 ∧ ... ∧ dun
+                                                                       ,
+                                      γ n−r ⊂Xt′ dF0 ∧ dF1 ∧ ... ∧ dFr
+
+(here Xt′ = {(u0, ..., un)|F0(u) = et , F1(u) = 0, ..., Fr(u) = 0}) are obtained from the class
+S (describing the quantum cohomology D-module for the Calabi-Yau complete intersection
+X n−r ⊂ CP n ),
+                                                   X                    Ed
+                                 S = eP T /~            edT (e0)∗ (          (0)
+                                                                                   ),
+                                                    d                 ~ + c1
+by the change
+                                           X
+                              T =t+                la[gla (et) − g1 (et)]/f(et )
+                                               a
+                                           t
+followed by the multiplication by f(e ).
+                                                P
+   Proof. Corollary 11.9 shows that for λ′ = 0, λα = 0 these change and multiplication
+transform the corresponding equivariant classes S ′ and S ′ ∗ to one another. The class −p in
+the formula for s∗i in Corollary 11.9 is the equivariant Chern class of the Hopf line bundle over
+CP n . In the limit λ = 0 it becomes −P while S ′ and S ′ ∗ transform to their non-equivariant
+counterparts S and S ∗ .
+   Remarks. 1) Notice that the components S0∗ and S1∗ in
+
+                       S ∗ = l1...lr[P r S0∗(t) + P r+1 S1∗ (t) + ... + P n Sn∗ (t)]
+                                  P         t         t
+are exactly f(et ) and tf(et) + a la [gla (e ) − g1 (e )] respectively. Thus the inverse transfor-
+mation from S ∗ to S consists in division by S0∗ followed by the change T = S1∗ (t)/S0∗(t) in
+complete accordance with the recipe [16, 18, 9] based on the mirror conjecture.
+   2) According to [17] the (n − r)-dimensional manifolds Xt′ admit a Calabi-Yau com-
+pactification to the family X̄t′ of mirror manifolds of the Calabi-Yau complete intersection
+X n−r ⊂ CP n . The Picard-Fuchs differential equation from Corollary 11.10 describes vari-
+ations of complex structures for X̄ ′ . This proves the mirror conjecture (described in detail
+in [18]) for projective Calabi-Yau complete intersections and confirms the enumerative pre-
+dictions about rational curves and quantum cohomology algebras made there (and in some
+other papers) on the basis of the mirror conjecture.
+   3) The description [15] of the quantum cohomology algebra of a Calabi-Yau 3-fold in
+terms of the numbers nd of rational curves of all degrees d (see for instance [9] for the
+description of the corresponding class S in these terms) has been rigorously justified in [14].
+
+                                                         45
+Combining these results with Corollary 11.10 we arrive to the theorem formulated in the
+introduction.
+
+      Proof of The Main Lemma.
+      In our construction of the map µ : Ld → L′d we will denote Ld the moduli space of stable
+maps C → CP n × CP 1 of bidegree (d, 1) with no marked points (it also has dimension
+d(n + 1) + n). The construction works for any given number of marked points but produces
+a map which is the composition of µ with the forgetful map. In this form it applies to the
+submanifold of stable maps with two marked points confined over 0 and ∞ in CP 1 (this
+submanifold is what we denoted Ld in the formulation of The Main Lemma).
+   Let ψ : C → CP n × CP 1 be a stable genus 0 map of bidegree (d, 1). Then C =
+C0 ∪ C1 ... ∪ Cr where C0 is isomorphic to CP 1 and ψ|C0 maps C0 onto the graph of a degree
+d′ ≤ d map CP 1 → CP n , and for i = 1, ..., r the bidegree (di , 0) map ψ|Ci sends Ci into the
+slice CP n × {pi } where pi 6= pj and d1 + ... + dr = d − d′ .
+    The map µ : Ld → L′d assigns to [ψ] the (n + 1)-tuple (f0 g : f1 g : ... : fn g) of polynomials
+(= binary forms) on CP 1 where g is the polynomial of degree d − d′ with roots (p1 , ..., pr )
+of multiplicities (d1 , ..., dr) and the tuple (f0 : ... : fn ) of degree d′ polynomials (with no
+common roots, including ∞) is the one that describes the map ψ|C0.
+      In order to prove that the map µ is regular 5 let us give it more invariant description.
+The construction below can be generalized to any positive line bundle instead of OCP n (1).
+   Denote L̂d the moduli space of bidegree (d, 1) stable maps with an extra-marked point
+and pull back to L̂d the line bundle
+
+                                H := Hom(π1∗ OCP n (1), π2∗OCP 1 (d))
+
+by the evaluation map e : L̂d → CP n × CP 1 (where πi are projections to the factors).
+Consider the push-forward sheaf H 0 := R0 π∗e∗(H) of the locally free sheaf e∗H along the
+forgetful map π : L̂d → Ld . To a small neighborhood U ⊂ Ld , it assigns the OU -module
+H 0 (π −1 (U), e∗H) of sections of e∗H.
+      Claim. 1) H 0 is a rank 1 locally free sheaf on Ld .
+      2) The fiber at [ψ] of the corresponding line bundle can be identified with
+
+                       H 0 (C0 , (ψ|C0)∗(H) ⊗ O(−[p1 ])⊗d1 ... ⊗ O(−[pr ])⊗dr ).
+  5
+    I am thankful to M. Kontsevich who communicated to me another, more elementary proof of this
+statement.
+
+                                                  46
+   3) The kernel of the natural map
+
+            h : H 0 (C, ψ ∗π1∗(OCP n (1))) → H 0 (C, ψ ∗π2∗(OCP 1 (d))) = H 0 (CP 1 , O(d))
+
+defined by a nonzero vector in this fiber consists of the sections vanishing identically on C0.
+    Using this, we pick n + 1 independent sections of OCP n (1) (that is homogeneous coor-
+dinates on CP n ), define corresponding sections of e∗ π1∗OCP n (1) and apply the map h. By
+this we obtain a degree 1 map from the total space of the line bundle H 0 to the linear
+space Cn+1 ⊗ H 0 (CP 1 , O(d)). Since the homogeneous coordinates on CP n nowhere vanish
+simultaneously, we obtain a natural map
+
+                           Ld → L′d = P roj(Cn+1 ⊗ H 0 (CP 1 , O(d)))
+
+which sends [ψ] to (f0g : ... : fn g) and conclude that µ is regular.
+   The remaining statements of The Main Lemma are proved by looking at localizations of
+the equivariant class p at the S 1 ×T n+1 -fixed points in L′d and Ld (in this paragraph we use the
+notation Ld for the same space as in the formulation of The Main Lemma). The fixed points
+                                                                ′
+in L′d are represented by the vector-monomials (0 : ... : 0 : xd : 0 : ... : 0) where p localizes to
+λi +d′ ~. A fixed point in Ld is represented by ψ with ψ(C0) = (0 : ... : 0 : 1 : 0 : ... : 0), r = 2,
+p0 = 0, p1 = ∞ and the maps ψ|Ck : Ck → CP n , k = 1, 2 representing T n+1 -fixed points
+respectively in Y2,d′ and Y2,d−d′ such that their (say) second marked points are mapped to
+the point ψ(C0). This implies that the class µ∗ (p) localizes to λi + d′ ~ at such a fixed point
+and thus the pull back of p to the fixed point set
+
+                        {[ψ] ∈ Y2,d′ × Y2,d−d′ |(e2 × e2)([ψ]) ∈ ∆ ⊂ Y × Y
+
+of the S 1 -action on Ld coincides with the pull back through the common marked point of the
+                                                                               R
+T n+1 -equivariant class p+ d′~ on the diagonal ∆ = CP n . Now localizations of Ld ep(t−τ )Ed to
+the fixed points of S 1 -action identify the form of the correlator Φ given in The Main Lemma
+with the definition of Φ as the convolution of S ′(t, ~) and S ′(τ, −~).
+
+   In order to justify the claim we need to compute the space of global sections of the sheaf
+e∗(H) over the formal neighborhood of the fiber π −1 ([ψ]) of the forgetful map π : L̂d → Ld .
+The fiber itself is isomorphic to the tree-like genus 0 curve C. Let (xj , yj ), j = 1, ..., N ≥ r
+be some local parameters on irreducible components of C near the singular points such
+
+                                                  47
+that εj = xj yj are local coordinates on the orbifold Ld near [ψ] (one should add some local
+coordinates ε′ on the stratum ε1 = ...εN = 0 of stable maps C → CP n in order to construct
+a complete local coordinate system on Ld ). Such a description of local coordinates on Ld
+follows from the very construction of the moduli spaces of stable maps to convex manifolds;
+we refer the reader to [3, 6] for details.
+   A line bundle over the neighborhood of C ⊂ L̂d can be specified by the set
+
+                                 uj (x±1           ±1
+                                      j , ε), vj (yj , ε), j = 1, ..., N,
+
+
+of non-vanishing functions describing transition maps between trivializations of the bundle
+inside and outside the neighborhoods (with local coordinates (xj , yj , ε1, ..., εˆj , ..., εN , ε′ )) of
+the double points.
+   Let us consider first the following model case. Suppose that C consists of r +1 irreducible
+components (C0, C1 , ..., Cr) such that each Cj with j > 0 intersects C0 at some point pj . Let
+xj be the local parameter on C0 near pj , and the line bundle (of the degree −dj ≤ 0 on Cj )
+                        −d
+be specified by vj = yj j .
+   In the neighborhood of pj a section of such a bundle is given by a function s(xj , yj , εˆj )
+satisfying
+                                                −d
+                                          s = yj j sj (yj−1 , ε)
+where the function sj represents the section in the trivialization over the neighborhood of
+Cj − pj . Here εˆj means that εj is excluded from the set of coordinates ε (remember that
+                                          d
+εj = xj yj ). This implies that sj = εj j fj (yj−1 εj , ε) where fj is some regular function. Thus
+                                                                                    d
+this section in the neighborhood of p ∈ C0 is given by a function s(xj , ε) = xj j fj (xj , ε) with
+zero of order dj at xj = 0, and the restriction of this section to the neighborhood of Cj is
+determined by s.
+    In other words, the C[[ε]]-module of global sections in the formal neighborhood of C
+identifies with the module of global sections on C0 for the line bundle given by the loops
+  −d                                                                      P
+xj j uj instead of uj (this corresponds to the subtraction of the divisor   dj [pj ].
+                                                                      −d
+    The more general situation where vj is the product of yj j with an invertible function
+                                                                 d
+wj (yj , xj , εˆj ) preserves the above conclusion with w−1 s = xj j fj (xj , ε) instead of s.
+   Obviously, the above computation bears dependence on additional parameters.
+   Now we apply our model computation to the neighborhood of a general tree-like curve
+C inductively by decomposing the tree into simpler ones starting from the root component
+
+                                                     48
+C0 . We conclude that the C[[ε]]-module of sections of the bundle e∗ (H) is identified with
+the module of sections of some line bundle over the product of C0 with the polydisk with
+coordinates (ε1, ..., εr, ..., εN , ε′), and that this line bundle is e∗ (H) for C0 (given by the loops
+                                                            −d
+uj in our current notations) twisted by the loops xj j in the punctured neighborhoods of
+the points (p1 , ..., pr ), where (d1 , ..., dr) are the degrees of the maps ψ|Cj : Cj → CP n (in the
+notations of the claim so that d1 + ... + dr = d − d′ ).
+    This implies that the C[[ε]]-module H0 of global sections can be identified with the module
+of those global sections of the degree d − d′ locally free sheaf (ψ|C0)∗(H) ⊗ C[[ε]] which have
+zeroes of order dj at pj for j = 1, ..., r. In particular
+   1) H0 is a free C[[ε]]-module of rank 1,
+   2) H0 ⊗C[[ε]] (C[[ε]]/(ε)) is the 1-dimensional space H 0 |[ψ] described in the claim, and
+   3) non-zero vectors in H 0 |[ψ] represent sections of ψ ∗ (H) over C non-zero on C0 (and
+thus their product with a non-zero on C0 section of ψ ∗π1∗(OCP n (1)) can not vanish identically
+on C0.)
+   Factorization by the discrete group Aut(ψ) preserves (1 − 3) with C[[ε]] replaced by
+C[[ε]]Aut(ψ).
+
+
+12      Quantum Serre duality
+Results of Sections 9 – 11 on quantum cohomology algebras of projective complete intersec-
+tions can be understood as a study of the recursion relations which arise from localization to
+fixed points of tori actions. In this Section we apply the same technique to the more general
+quantum cup-product structures defined by solutions of WDVV-equations. Comparing the
+solutions which correspond (see Section 4) to a convex vector bundle over CP n and its dual
+we will arrive to a quantum analogue of the Serre duality theorem. The canonical coordi-
+nates of semisimple Frobenius manifolds that we discussed in Section 8 will play here a key
+role.
+
+   We begin with a known property of quantum correlators for X = pt. Consider the series
+                                      ∞
+                                      X
+                                 1       1    1                       1
+                    W (x, y) =      +      h      , f(c), ..., f(c),     ik+2
+                               x + y k=1 k! x + c                    y+c
+
+
+
+                                                  49
+where f(c) = f0 + f1 c + f2c2 + ... is a given function of the 1-st Chern class of the universal
+tangent line on the Deligne - Mumford spaces Xk+2 := M̄0,k+2, and h ... ik+2 are defined by
+integration over these spaces.
+   Lemma 12.1.
+                                                    eU/x+U/y
+                                       W (x, y) =            ,
+                                                     x+y
+where U depends on f and does not depend on x and y.
+   Proof. This fact is well-known in the axiomatic theory [2] of Frobenius structures and
+their τ -functions. Consider the correlators
+
+                         V (x) := lim yW (x, y), U := lim x(V (x) − 1)
+                                  y→∞                    x→∞
+
+
+(they correspond to replacing 1/(y + c) or/and 1/(x + c) by 1 in the definition of W ). The
+symmetries from the proof of Corollary 6.3 show that for the vector field F = ∂/∂f0 −
+P
+   fk+1 ∂/∂fk
+                                                         1 1
+                       LF U = 1, LF V = V/x, LF W = ( + )W
+                                                         x y
+(the so called string equations). The degree argument shows that for f0 = 0 we have U =
+0, V = 1, W = 1/(x + y). Thus V (x) = exp(U/x), W (x, y) = (exp(U/x + U/y))/(x + y).
+    Notice that these identities are compatible with the WDVV-type equation
+LF W (x, y)LF U = LF V (x)LF V (y).
+    This lemma can be deduces also from the explicit formula for correlators between univer-
+sal tangent lines over Deligne-Mumford spaces which we exploited in the proof of Proposition
+10.5. As we see from the above proof some convergence-providing assumptions about f are
+necessary in this lemma.
+
+   Consider now the following modification of the recursion relations of Sections 9 – 11:
+
+                     δij   XX                             Cik (d)
+     Wij (x, y) =        +    q ded(Ui −Uk )/(λi−λk )                 Wkj ((λk − λi )/d, y).
+                    x+y                               (xd + λi − λk )
+                            k6=i d>0
+
+
+Given U0 , ..., Un and the coefficients Cij (d), the recursion relation has a unique matrix solution
+(Wij ) in formal power series of q.
+
+
+
+
+                                                50
+     Consider the torus-equivariant GW-theory on Y = CP n provided with the r-dimensional
+convex vector bundle V = ⊕H lj . Introduce the correlator
+                  X∞      X∞    Z
+                        d     1           φi                         φj
+           Zij :=     q                       (0)
+                                                  e∗1(t)...e∗k(t)            Eulerk+2,d
+                  d=0     k=0
+                              k! Yk+2,d x + c                     y + c(k+1)
+
+where Eulerk+2,d is the equivariant Euler class of the vector bundle H 0 (C, e∗k+2 V ) over Yk+2,d ,
+   R
+and Y φi Euler(V )φj /(x + y) is taken on the role of the ill-defined summand with d = 0, n =
+2.
+     Introduce another correlator, Zij∗ , replacing Ek+2,d by the equivariant Euler class Ek+2,d
+                                                                                           ∗
+
+of the vector bundle H 1 (C, e∗k+2V ∗) for d > 0 and by Euler−1 (V ∗ ) for d = 0.
+                         P
+    In both versions t = nα=0 tα φα/Πβ6=α (λα − λβ ) denotes the general equivariant cohomol-
+ogy class of Y .
+
+     Proposition 12.2. 1)
+
+                       Zij = Πra=1 (laλi − λ′a ) eui /x Wij euj /y Πα6=j (λj − λα )
+
+where u0, ..., un are the homogeneous canonical coordinates at t (uα = uα(t, q; λ, λ′)) of the
+Frobenius structure, and (Wij ) is the solution to the recursion relation with Uα = uα and
+                                           la d
+                                   Πra=1Πm=1    (la λi − λ′a + m(λj − λi )/d)
+                   Cij (d) =                                                     .
+                               Πnα=0 Πdm=1 (α,m)6=(j,d)(λi − λα + m(λj − λi )/d)
+     2)
+                      Zij∗ = eui /xWij euj /y Πα6=j (λj − λα ) / Πra=1 (λ′a − laλj )
+                                ∗        ∗
+
+
+
+
+where u∗0, ..., u∗n are the homogeneous canonical coordinates at t∗ of the Frobenius structure,
+and (Wij ) is the solution to the recursion relation with Uα = u∗α and
+                                         la d
+                                  Πra=1Πm=1   (−laλi + λ′a − m(λj − λi )/d)
+                   Cij (d) =                                                     .
+                               Πnα=0 Πdm=1 (α,m)6=(j,d)(λi − λα + m(λj − λi )/d)
+     3) In each case put
+
+                        Vij (x, U) = lim yWij = δij + V̂ij (U)/x + o(1/x).
+                                      y→∞
+
+Then                                    n                               n
+                                        X                               X
+                           t α = uα +         V̂αj (u),   t∗α = u∗α +         V̂iα (u∗).
+                                        j=0                             i=0
+
+
+                                                          51
+   Proof. The recursion for Zij and Zij∗ is based on the same idea as in Sections 9 – 11.
+We use Borel’s localization formula in order to reduce computation of the correlators to
+summation over all fixed point components in Yk+2,d . The components are labeled by trees
+“walking” in the 1-skeleton of the n-simplex (the momentum polyhedron of the torus action
+on CP n ). Each tree contains the chain of edges connecting the vertices i and j where the first
+and the last marked points are mapped to. We cut off the 1-st edge (connecting the vertex
+i with say vertex α). The rest of the chain contributes to the Borel localization formula by
+Zαj ((λα − λi )/d, y) while the coefficient Cij (d) takes in account the contribution of the edge
+[i, α] of degree d.
+   The subtlety hidden in this argument is due to the possibility that the first marked point
+can belong to a component of the curve which is mapped to the vertex i and carries k more
+special points giving birth to k branches of the tree (not containing the last marked point)
+and / or l extra marked points (carrying the cohomology class t). Cutting off the first edge
+we should take care of the weight obtained by integration over the factor M̄k+l+2 of the fixed
+point set and by summation over all possibilities for the k branches.
+   However it is easy to see that this sum effectively reduces to the exponential series of
+Lemma 12.1 (with f(c) unknown so far) and is thus equal to exp(Ui /x + Ui d/(λi − λα )).
+Moreover, compaing the description of the correlator Ui from the proof of Lemma 12.1 with
+the definition of “local” equivariant correlators ui given in Section 8 and applying Theorem
+8.1(a) we conclude that Ui = ui is the canonical coordinate of the Frobenius structure. In
+particular correlators Ui are well-defined as formal q-series.
+   In order to prove the relation between flat and canonical coordinates described in the
+part (3) of the Proposition, consider the correlators
+
+                           (1)            d          X           yZij
+                          Zi     =            |1/x=0    lim
+                                       d(1/x)        j
+                                                       y→∞ Πα6=j (λj − λα )
+
+                                 X
+                           =           q d hφi , t, ..., t, 1ik+2,d/k! = ti hφi , 1i .
+                                 k,d
+                                                       (1)             P        j
+The recursion relation for Zij shows that Zi                 = (Ui +       j V̂i )hφi , 1i.
+   Similarly,
+              d           X          xZij∗                             X j
+                   |1/y=0    lim                = t∗j h1, φj i = (Uj +   V̂i )h1, φj i.
+            d(1/y)        i
+                            x→∞ Πα6=i(λi − λα )
+                                                                       i
+
+
+                                                        52
+   Remark. According to Section 6 the matrix limy→∞ yZij (~, y) and its counterpart “with
+∗” are essentially the fundamental solutions of the linear differential systems defined by the
+corresponding Frobenius structures on the equivariant cohomology space of CP n provided
+with the convex vector bundle V (see Section 4). Proposition 12.2 identifies the fundamental
+solution expressed in terms of canonical coordinates with the solution of a linear recursion
+relation and additionally describes the non-linear transformation from canonical to flat coor-
+dinates. These equations are exactly identical to the critical point equations obtained by M.
+Kontsevich [3]. In particular the linear recursion relations can be also interpreted as critical
+point equations for a quadratic combinatorial “Lagrangian” with the “kinetic energy” (its
+terms should correspond to the edges of the momentum simplex) determined by the coeffi-
+cients (Cij (d))−1 and the “potential energy” (whose terms should correspond to the vertices)
+determined by the factors exp(Ui dα /(λi − λα ) + Ui dβ /(λi − λβ )). The important problem of
+finding the general solution to the linear recursion relation remains open as well as the role of
+these relations and of the quadratic combinatorial Lagrangian in the theory of isomonodromy
+deformations [2] accompanying the concept of canonical coordinates — unclear.
+
+   Corollary 12.3 (Quantum Serre Duality).
+    At the points t and t∗ with the same canonical coordinates U = (u0, ..., un) = (u∗0, ..., u∗n)
+the correlators (Zij ) and (Zij∗ ) satisfy the following relation:
+
+                                              (−1)r Zij (U, x, y, (−1) la q)
+                                                                        P
+
+                      Zij∗ (U, x, y, q) =                                          .
+                                            Πra=1(la λi − λ′a )Πra=1 (laλj − λ′a )
+
+   Remarks. This fact (which is proved by comparisson of the coefficients Cij (d) of the
+two recursion relations) can be explained in the following way: for the curve C which is a
+chain of CP 1 ’s with two marked points p0 and p∞ on the first and the last component, the
+Serre duality theorem provides a non-degenerate duality between H 0 (C, V ⊗ O[−p0 ]) and
+H 1 (C, V ∗ ⊗ O[p∞ ]) since the canonical class K + [p0] + [p∞ ] on such a curve C is trivial.
+   The quantum Serre duality theorem shows that the Frobenius structures on HT∗ (CP n )
+corresponding to V and V ∗ are equivalent, but the equivalence involves some transformation
+of the flat coordinates. The same equivalence statement holds true in the limit λ = 0, λ′ 6= 0.
+It is natural to conjecture that such an equivalence of two Frobenius structures corresponding
+to V and V ∗ should be true for vector bundles over arbitrary Y . One of the two equiva-
+lent Frobenius structures coincides with the Frobenius structure of the super-manifold (in
+
+                                                    53
+terminology of [28]) of dimension (n|r) (here the fiber of the convex bundle V over CP n is
+considered odd) and in the limit λ′ = 0 degenerates to the Gromov-Witten theory on the
+codimension r complete intersections X defined by sections of V . The second one corre-
+sponds to an n + r dimensional non-compact manifold — the total space of the bundle V ∗.
+It would be interesting to study the relation between the two structures in greater detail.
+
+   Corollary 12.4. The translations
+(a): tα 7→ tα + τ
+(b): tα 7→ tα + λα τ
+on the Frobenius manifolds cause respectively the translations Ũα = Uα +τ and Ũα = Uα +λα τ
+of the canonical coordinates and the following transformations of the matrix (Zij ):
+
+                          (a) Zij (Ũ, x, y, q) = eτ /x+τ /y Zij (U, x, y, q) ,
+
+                       (b) Zij (Ũ, x, y, q) = eλiτ /x+λj τ /y Zij (U, x, y, qeτ ) .
+
+The same transformation formulas hold for the matrix (Zij∗ ).
+                                                             P       P
+   Proof. The translation (a) corresponds to the vector field ∂/∂tα = ∂/∂uα represent-
+ing the unity of the quantum cup-product. The translation (b) corresponds to the symmetry
+                                     P
+generated by the vector field q∂/∂q − λα ∂/∂tα. This justifies the effect of the translations
+on the canonical coordinates. The rest follows now directly from the form of the recursion
+relation.
+   Remarks. This corollary explains the origin of the invariance property with respect to the
+change of coordinates stated in Propositions 11.3, 11.6: it is a consequence of the symmetries
+(5), (6) from Section 5.
+   The proof of the mirror conjecture given in Sections 9 – 11 could be more straightforward
+and conceptual if we had at our disposal a well-developed theory of Frobenius structures,
+their flat and canonical coordinates, for the models of Landau-Ginzburg type (see [10]) more
+general than K. Saito’s theory [29] of isolated critical points of holomorphic functions.
+
+
+
+
+                                                    54
+References
+ [1] M. Atiyah, R. Bott. The moment map and equivariant cohomology. Topology 23 (1984),
+    1 – 28.
+
+ [2] B. Dubrovin. The geometry of 2D topological gravity. Preprint SISSA, Trieste, 1995,
+    200 pp.
+
+ [3] M. Kontsevich. Enumeration of rational curves via toric actions. In: The moduli space
+    of curves, R. Dijkgraaf, C. Faber, G. van der Geer (Eds.), Progress in Math., v. 129,
+    Birkhäuser, 1995, p. 335 – 368, hep-th/9405035.
+
+ [4] M. Kontsevich, Yu. Manin. Gromov - Witten classes, quantum cohomology and enu-
+    merative geometry. Commun. Math. Phys. 164 (1994), 525 – 562, hep-th/9402147.
+
+ [5] A. Astashkevich, V. Sadov. Quantum cohomology of partial flag manifolds Fn1 ,...,nk .
+    Commun. Math. Phys. 170 (1995), 503 – 528.
+
+ [6] K.Behrend, Yu. Manin. Stacks of stable maps and Gromov-Witten invariants. Preprint,
+    1995.
+
+ [7] A. Givental, B. Kim. Quantum cohomology of flag manifolds and Toda lattices. Commun.
+    Math. Phys. 168 (1994), 609 – 641.
+
+ [8] M. Gromov. Pseudo - holomorphic curves in symplectic manifolds. Invent. Math. 82
+    (1985), No. 2, 307 – 347.
+
+ [9] A. Givental. Homological geometry I: Projective hypersurfaces. Selecta Math., New Se-
+     ries, 1 (1995), No. 2, 325 – 345.
+
+[10] A. Givental. Homological geometry and mirror symmetry. Proceedings of the Interna-
+     tional Congress of Mathematicians, 1994, Zürich, Birkhäuser, 1995, p. 472 – 480.
+
+[11] B. Kim. Quantum cohomology of partial flag manifolds and a residue formula for their
+     intersection pairing. IMRN, 1995, No. 1, 1 – 16.
+
+[12] B. Kim. Equivariant quantum cohomology. Preprint, 1995 (to appear in IMRN).
+
+
+                                           55
+[13] B. Kim. Quantum cohomology of flag manifolds G/B and quantum Toda lattices.
+    Preprint, 1996.
+
+[14] Yu. Manin. Generating functions in algebraic geometry and summation over trees. In:
+    The moduli space of curves, R. Dijkgraaf, C. Faber, G. van der Geer (Eds.), Progress
+    in Math., v. 129, Birkhäuser, 1995, p. 401 – 417, alg-geom/9407005.
+
+[15] P. Aspinwall, D. Morrison. Topological field theory and rational curves. Commun. Math.
+    Phys. 151 (1993), 245 – 262.
+
+[16] P. Candelas, X.C. de la Ossa, P.S. Green, L.Parkes. A pair of Calabi-Yau manifolds as
+    an exactly soluble superconformal theory. Nucl. Phys. B359 (1991), 21.
+
+[17] V.V. Batyrev. Dual polyhedra and mirror symmetry for Calabi-Yau hypersurfaces in
+    toric varieties. Preprint, alg-geom/9310003.
+
+[18] V.V.Batyrev, D. van Straten. Generalized hypergeometric functions and rational curves
+    on Calabi-Yau complete intersections. Preprint, alg-geom/9307010.
+
+[19] D. McDuff, D. Salamon. J -holomorphic curves and quantum cohomology. AMS, Univ.
+    Lecture Series, v. 6, 1994, 205 pp.
+
+[20] Y. Ruan, G. Tian. A mathematical theory of quantum cohomology. Math. Res. Lett. 1
+     (1994), 269 – 278.
+
+[21] R. Dijkgraaf, E. Verlinde, H. Verlinde. Notes on topological string theory and 2D quan-
+     tum gravity. Proc. of the Trieste Spring School, 1990, M. Green at al., eds., World-
+    Scientific, Singapore, 1991.
+
+[22] A. Beauville. Quantum cohomology of complete intersections. Preprint, 1995, alg-
+    geom/9501008.
+
+[23] M. Jinzenji. On quantum cohomology rings for hypersurfaces in CP N −1. Preprint, hep-
+    th/9511206.
+
+[24] B. Kostant. Flag manifold quantum cohomology, the Toda lattice, and the representation
+    with the highest weight ρ. Preprint, 1996.
+
+
+                                            56
+[25] S. Fomin, S. Gelfand, A. Postnikov. Quantum Schubert polynomials. Preprint, 1996.
+
+[26] A. M. Perelomov. Integrable systems of classical mechanics and Lie algebras. V.I.
+     Birkhäuser, 1990.
+
+[27] Ju. Moser. Finitely many mass points on the line under the influence of an exponential
+     potential — an integrable system. In: Lecture Notes in Phys., v. 38, Springer, 1975, 97
+    – 101.
+
+[28] A. Schwarz. Sigma-models having supermanifolds as target spaces. Preprint IHES, 1995.
+
+[29] K. Saito. On periods of primitive integrals, I. RIMS (1982), 1 – 235.
+
+[30] A. Collino. Some computations on the quantum cohomology product of a Fano hyper-
+     surface. Informal draft.
+
+
+
+
+                                             57
+

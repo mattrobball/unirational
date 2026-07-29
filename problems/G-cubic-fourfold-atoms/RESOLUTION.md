@@ -209,3 +209,12 @@ delete-the-classification simplification incorporated.
 
 Whether and when to communicate the findings to the authors is the
 owner's decision, not a worker action.
+
+## 2026-07-29 — owner's assessment; repair ordered
+
+The owner judges the five printed defects not serious.  Work order 0.5
+issued (`WORKORDER_0.5_REPAIR.md`): Codex repairs R1–R5 with the routes
+pinned at the gate, primary deliverable a self-contained
+`certificates/REPAIRED_PROOF.md` at certificate standard, secondary a
+neutral `certificates/GAP_REPORT.md`.  Director gate on the repaired
+proof; on acceptance the WP-1..5 simplification program resumes.

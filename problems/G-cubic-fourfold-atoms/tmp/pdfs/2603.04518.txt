@@ -1,0 +1,2472 @@
+                                                  ON THE IRRATIONALITY OF CUBIC FOURFOLDS
+
+
+                                                                               JÉRÉMY GUÉRÉ
+
+
+                                                  Abstract. Following the work of Katzarkov–Kontsevich–Pantev–Yu [2] con-
+
+
+
+
+arXiv:2603.04518v1 [math.AG] 4 Mar 2026
+                                                  cerning the irrationality of the very general complex cubic fourfold, we prove
+                                                  the following: for every rational smooth complex cubic fourfold, the primi-
+                                                  tive cohomology is isomorphic as a Hodge structure to the (twisted) middle
+                                                  cohomology of a projective K3 surface.
+
+
+
+
+                                                                                  Contents
+                                            0. Introduction                                                                         1
+                                            1. Quantum cohomology                                                                   2
+                                            1.1. Hodge structures                                                                   2
+                                            1.2. Formal power series                                                                3
+                                            1.3. Quantum product                                                                    5
+                                            1.4. Examples                                                                           8
+                                            2. Birational transformation                                                           10
+                                            2.1. Invariant properties                                                              11
+                                            2.2. Non-archimedean geometry                                                          17
+                                            2.3. Blow-up formula                                                                   19
+                                            3. Examples regarding Property ♣                                                       27
+                                            3.1. Basic cases                                                                       27
+                                            3.2. Surface with non-negative canonical class                                         28
+                                            3.3. Low dimension                                                                     28
+                                            3.4. Cubic fourfold                                                                    28
+                                            4. Examples regarding Property ♥                                                       29
+                                            4.1. Basic cases                                                                       29
+                                            4.2. Surface with non-negative canonical class                                         29
+                                            4.3. Other surfaces                                                                    30
+                                            4.4. Cubic fourfolds                                                                   31
+                                            References                                                                             36
+
+
+
+
+                                                                              0. Introduction
+                                             In [2], Katzarkov–Kontsevich–Pantev–Yu develop a framework for using Gromov–
+                                          Witten theory to study birational geometry. Since Gromov–Witten theory is defor-
+                                          mation invariant, its utility in distinguishing between rational and irrational smooth
+                                          cubic fourfolds may initially seem surprising. However, by combining it with Hodge
+                                          theory, one can define properties of smooth projective complex varieties that re-
+                                          main invariant under blow-ups at smooth centers, at least for complex dimensions
+                                                                                        1
+2                                       GUÉRÉ
+
+
+up to four. This approach is underpinned by [1, Theorem 1.1], which describes the
+behaviour of quantum cohomology under such blow-ups.
+  In this paper, we adapt the methods of [2] in order to prove the following theorem,
+which addresses part of Kuznetsov’s conjecture [3].
+Theorem (see Theorem 56). If X is a rational smooth complex cubic fourfold,
+then there exists a projective K3 surface S and an isomorphism of Hodge structures
+                         H 4 (X, Q)primitive ≃ H 2 (S, Q)(−1).
+   Our proof relies on a specific property of quantum cohomology that remains
+invariant under blow-ups. To clarify the distinction between our approach and that
+of [2], we denote our property by ♥ and their original property by ♣ (see Definition
+27). Additionally, for the reader’s convenience, we recall the relevant material from
+[2] and provide an outline of their main result.
+Remark. For simplicity’s sake we have chosen not to discuss the famous ‘Hodge
+atom’, since it is not directly necessary for our proof (and would have involved a long
+digression). We refer the interested reader to [2] for further details. Nevertheless,
+the evaluation maps (see Definition 20) are closely related to the Hodge atom
+construction.
+Acknowledgement. I would like to thank the organizers of the reading group
+on [2] in Paris, especially Emanuele Macrı̀ and Claire Voisin, where this project
+originated. I am also grateful to Alessandro Chiodo, Hsueh-Yung Lin, Laurent
+Manivel, Vladimiro Benedetti, Nicolas Perrin, Michel Brion, and Catriona Maclean
+for many fruitful discussions and their assistance regarding this work. Special
+thanks are due to Hiroshi Iritani for his clarifications on [1] and for his helpful
+corrections to this manuscript. Finally, I would like to thank my wife and children
+for their patience and support during the completion of this work.
+
+                            1. Quantum cohomology
+  Throughout this paper, we consider only smooth projective complex varieties.
+Let X be such a variety. In this section, we provide basic definitions regarding
+Hodge structures, followed by a description of Gromov–Witten theory and quantum
+multiplication.
+1.1. Hodge structures.
+Definition 1 (Hodge structure). Let VQ be a Q-vector space and n ∈ Z. A Hodge
+structure on VQ of weight n is a decomposition
+                                          M
+                              V Q ⊗Q C =       V p,q
+                                              p,q∈Z
+                                             p+q=n
+
+such that V p,q = V q,p under complex conjugation. A morphism of Hodge structures
+f : VQ → WQ is a morphism of Q-vector spaces whose complexification satisfies
+                                  fC (V p,q ) ⊂ W p,q .
+Example 2 (Deligne twist). Denote by Q(1) := VQ = 2πiQ ⊂ C the one-dimensional
+Q-vector space with the decomposition
+                                 VQ ⊗Q C = V −1,−1 .
+                   ON THE IRRATIONALITY OF CUBIC FOURFOLDS                           3
+
+
+This is a Hodge structure of weight −2 called the Deligne twist. If WQ is another
+Hodge structure, we use the notation
+                             WQ (n) := WQ ⊗Q Q(1)⊗Q n
+for the twisted Hodge structure.
+Definition 3 (Hodge classes and Hochschild degree). Let VQ be a Q-vector space
+equipped with a Hodge structure of weight n. The elements of the subspace
+                             VQ ∩ V p,p if n = 2p for p ∈ Z,
+                          
+                   Hdg
+                 V     :=
+                             0           if n is odd,
+are called Hodge classes. For any k ∈ Z, we define the subspace of classes of
+Hochschild degree k as
+                                       M
+                              V (k) :=   V p,q .
+                                          p,q∈Z
+                                         p−q=k
+
+Example 4. The rational cohomology H n (X, Q) of X carries a Hodge structure
+                                     M
+                        H n (X, C) =     H p,q (X).
+                                          p,q≥0
+                                         p+q=n
+
+We denote by H ∗ (X)Hdg (resp. H (k) (X)) the subspace of Hodge classes (resp. classes
+of Hochschild degree k).
+1.2. Formal power series. We begin with the definition of the Novikov ring.
+Definition 5 (Novikov ring). Let NEN (X) ⊂ H2 (X, Z) denote the monoid gener-
+ated by classes of effective curves in X. We write Qβ ∈ Q[NEN (X)] for the element
+corresponding to the curve β ∈ NEN (X), and define its degree by
+                                             Z
+                                deg Qβ := 2 c1 (X).
+                                        
+                                                 β
+
+Let ω be an ample class in X. We denote by
+                               Q[[Q]] := Q[[NEN (X)]]
+the graded completion of Q[NEN (X)] with respect to the descending chain of sub-
+modules                                 Z
+                               Ik = ⟨Qβ |        ω ≥ k⟩.
+                                             β
+
+This completion is dependent of the choice of ω; we call Q[[Q]] the (rational) Novikov
+ring of X. More generally, for any Z-graded module K, we define K[[Q]] as the
+graded completion of K[Q]. Specifically, we first consider the submodule Rn ⊂
+K[Q] of polynomials homogeneous of degree n for each n ∈ Z, complete Rn into
+R
+bn with respect to the descending chain above, and then take the direct sum
+                                            M
+                                 K[[Q]] :=      Rbn .
+                                            n∈Z
+
+In particular, this construction yields a graded K-algebra.
+4                                           GUÉRÉ
+
+
+    We fix a graded basis
+                                     H := (α0 , . . . , αh )
+                        ∗     Hdg
+of the vector space H (X) , with α0 := 1X , and introduce a formal variable Tk
+for each αk , with degree defined by
+                                 deg (Tk ) := 2 − deg(αk ).
+Following Definition 5, we obtain a graded Q-algebra
+                             R∗ (X, Q) := Q[[Q, T0 , . . . , Th ]].
+Explicitly, an element of R∗ (X, Q) is a formal power series
+           X                   X
+                                                  cn0 ,...,nh ,β T0n0 · · · Thnh Qβ ,
+        −D≤d≤D                  n0 ,...,nh ≥0
+         N ≥0                    β∈NEN R (X)
+                            n0 +...+nh + β ω=N
+                  n0 deg(T0 )+···+nh deg(Th )+deg(Qβ )=d
+
+with D ≥ 0 and coefficients cn0 ,...,nh ,β ∈ Q such that there are only finitely many
+non-zero coefficients in the second sum, where ω is any ample class on X.
+Definition 6. For any field extension Q ⊂ K ⊂ C, any graded K-algebra R∗ , and
+any graded K-vector space V ∗ , we define
+                         M                 M
+                  VR∗ :=     VRn , VRn :=       V p ⊗K R2q ,
+                             n∈Z                     p,q∈Z
+                                                    p+2q=n
+
+where we restrict R∗ to Reven , i.e. to terms of even degree. This is a free Reven -
+module and a graded K-algebra. Our primary example is H ∗ (X, Q)R(X,Q) .
+   Now, let R∗ be a graded Q-algebra and V ∗ be a graded Q-vector space such that
+each V p carries a Hodge structure. For each q ∈ Z, we define a Hodge structure on
+the Q-vector space R2q by setting R2q ⊗Q C = V q,q , i.e. we take the trivial Hodge
+structure on R2q and twist it by (−q). Then, for any n ∈ Z, we define a Hodge
+structure on the Q-vector space
+                                      M
+                             VRn =         V p ⊗Q R2q
+                                         p,q∈Z
+                                        p+2q=n
+
+by tensoring the Hodge structure of V p with the twist (−q). In particular, the
+subspace of Hodge classes is VRHdg = V Hdg ⊗Q R, and the subspace of classes with
+                        (k)
+Hochschild degree k is VR = V (k) ⊗C RC .
+Definition 7 (K-span of morphisms of Hodge structures). Let K be a field ex-
+tension Q ⊂ K ⊂ C, R∗ be a graded Q-algebra, and V ∗ and W ∗ be two graded
+Q-vector spaces equipped with Hodge structures in each degree as in Definition 6.
+                                    even
+Assume we have a morphism of free RK     -modules
+                                    f : VR∗−2k
+                                           K
+                                               → WR∗ K
+that is homogeneous of some even degree 2k ∈ Z and defined over K. We say that
+f is in the K-span of morphisms of Hodge structures if there exist finitely many
+morphisms of free Reven -modules
+                             f1 , . . . , fN : VR∗−2k (−k) → WR∗
+                       ON THE IRRATIONALITY OF CUBIC FOURFOLDS                                              5
+
+
+which are also morphisms of Hodge structures, such that
+                                      f = s1 f1 + · · · + sN fN
+for some scalars s1 , . . . , sN ∈ K that are linearly independent over Q.
+1.3. Quantum product. We briefly recall several properties of Gromov–Witten
+invariants. For any non-negative integer n and any effective curve class β ∈ NEN (X)
+such that β ̸= 0 or n ≥ 3, there exists a proper Deligne–Mumford stack M0,n (X, β)
+parametrizing stable maps f : C → X from an n-marked genus-zero nodal curve C
+to X such that f∗ [C] = β ∈ H2 (X, Z). Moreover, there exists an algebraic cycle
+                                           vir
+                           [M0,n (X, β)]           ∈ H2 vdim (M0,n (X, β), Q),
+called the virtual fundamental cycle, of pure complex dimension
+                                                 Z
+                     vdim := dimC (X) − 3 + n + c1 (X) ∈ Z.
+                                                                      β
+There is also an evaluation map
+                           ev∗ : H ∗ (X, Q)⊗n → H ∗ (M0,n (X, β), Q).
+For any cohomology classes γ1 , . . . , γn ∈ H ∗ (X, Q), we define the correlator
+                                       Z
+                              X
+            ⟨γ1 , . . . , γn ⟩0,n,β :=             ev∗ (γ1 ⊗ · · · ⊗ γn ) ∈ Q.
+                                               [M0,n (X,β)]vir
+
+In particular, if the correlator is non-zero, the dimension equation must hold:
+                                 Xn
+                                     deg (γi ) = 2 vdim .
+                                         i=1
+Correlators are symmetric under permutations of the markings. Furthermore, we
+will repeatedly use the following identities, known as the string and divisor equa-
+tions. Whenever n ≥ 3 or β ̸= 0:
+    ⟨γ1 , . . . , γn , 1X ⟩X
+                           0,n+1,β   =     0,
+                                           Z
+  ⟨γ1 , . . . , γn , γn+1 ⟩X
+                           0,n+1,β   =             γn+1 · ⟨γ1 , . . . , γn ⟩X
+                                                                            0,n,β   if γn+1 ∈ H 2 (X, Q).
+                                               β
+   Next, we define quantum multiplication. To this end, we fix a graded basis
+                                          B := (ϕ0 , . . . , ϕm )
+                            ∗
+                                                                       
+of the cohomology H (X, Q), with ϕ0 := 1X ∈ H 0 (X, Q). We denote by ϕk the
+(dual) basis defined by the condition
+                        Z
+                            ϕi ∪ ϕk = δi,k , ∀ 0 ≤ i, k ≤ m.
+                                X
+
+Definition 8 (Quantum product). Let
+                     h
+                     X
+              τ :=         Tk αk ∈ H ∗ (X)Hdg [[T0 , . . . , Th ]] ⊂ H ∗ (X, Q)R(X,Q) .
+                     k=0
+We define the quantum product by
+               X                                           Qβ k
+ ϕi ⋆τ ϕj =          ⟨ϕi , ϕj , ϕk , τ, . . . , τ ⟩X
+                                                   0,3+n,β    ϕ ∈ H ∗ (X, Q) ⊗Q R∗ (X, Q),
+                                                           n!
+               0≤k≤m,n≥0
+                β∈NEN (X)
+6                                                 GUÉRÉ
+
+
+using the genus-zero Gromov–Witten invariants of X.
+Remark 9 (Change of variables). Given a field extension Q ⊂ K ′ ⊂ C, let
+      f Qβ := µQβ , f (T0 ), . . . , f (Th ) ∈ R∗ (X, K ′ ) , where µ ∈ K ′ ,
+           
+
+such that the function f is homogeneous of degree 0, i.e. we have deg(f (u)) = deg(u)
+for any u ∈ Qβ , T0 , . . . , Th . For any 0 ≤ k ≤ h, we write
+                                         f (Tk ) =: λk + g(Tk ),
+where the formal power series g(Tk ) has no constant term and λk ∈ K ′ . By the
+homogeneity of f , note that deg (αk ) ̸= 2 =⇒ λk = 0. We define
+                                      Ph     R
+                          g Qβ = e k=0 λk β αk f Qβ ,
+                                                     
+
+which belongs to R∗ (X, K) for some field extension K ′ ⊂ K ⊂ C containing the
+value of this exponential. Since the formal power series g Qβ , g(T0 ), . . . , g(Th )
+have no constant terms, we obtain a well-defined (continuous) morphism
+                                    g : R∗ (X, K) → R∗ (X, K)
+of graded K-algebras given by
+   X                                                  X
+         cn0 ,...,nh ,β T0n0 · · · Thnh Qβ 7→                     cn0 ,...,nh ,β g(T0 )n0 · · · g(Th )nh g Qβ .
+                                                                                                             
+
+n0 ,...,nh ≥0                                     n0 ,...,nh ≥0
+β∈NEN (X)                                         β∈NEN (X)
+
+Remark 10. Throughout this paper, we consider
+                         h
+                         X
+                  τ :=         fk αk ∈ H 2 (X)Hdg          2     ′
+                                              R(X,K ′ ) ⊂ H (X, K )R(X,K ) ,
+                                                                        ′
+
+                         k=0
+i.e. homogeneous elements of degree 2, where Q ⊂ K ′ ⊂ C is a field extension.
+Then the function f mapping Tk to fk and Q to Q is homogeneous of degree zero
+as in Remark 9. Thus we obtain a morphism of graded K-algebras
+                  g : R∗ (X, K) → R∗ (X, K) , T0 α0 + · · · + Th αh 7→ τ,
+for some field extension K ′ ⊂ K ⊂ C. Consequently, by the divisor equation, we
+can extend the quantum product as
+                               ϕi ⋆τ ϕj := g (ϕi ⋆T0 α0 +···+Th αh ϕj ) .
+Definition 11 (Euler vector field). For any element
+                                         h
+                                         X
+                                  τ :=         fk αk ∈ H 2 (X)Hdg
+                                                              R(X,Q) ,
+                                         k=0
+that is homogeneous of degree 2, we define the Euler vector field as
+                             h
+                                             !
+                            X         deg αk
+            Euτ = c1 (X) +        1−           fk αk ∈ H 2 (X)Hdg
+                                                               R(X,Q) .
+                                         2
+                                     k=0
+
+Definition 12 (Endomorphism). For any field extension Q ⊂ K ′ ⊂ C, and any
+element τ ∈ H 2 (X)Hdg
+                   R(X,K ′ ) , we define
+
+                  κτ := Euτ ⋆τ ∈ EndR(X,K) H ∗ (X, K)R(X,K) ,
+                                                           
+                                                                                               R
+where K is a field extension Q ⊂ K ⊂ C containing all exponentials e β τ2 of the
+integral of the degree-2 constant part τ2 of τ over any effective curve class β.
+                     ON THE IRRATIONALITY OF CUBIC FOURFOLDS                                 7
+
+
+Example 13. In Definition 12, consider the case where
+                                  2πip                                     p
+                  τ ′ := τ +          u,       with u ∈ H 2 (X, Z) ,         ∈ Q,
+                                   q                                       q
+such that τ ∈ H 2 (X)Hdg
+                     R(X,Q) has no constant terms in degree 2. By Remark 9, the
+endomorphism κτ ′ can be defined by extending our scalars to include q-th roots of
+unity.
+Proposition 14. For any i ∈ Z, the endomorphism κT0 α0 +···+Th αh is homogeneous
+of degree 2 and is a morphism of Hodge structures
+                         H i (X, Q)R(X,Q) → H i+2 (X, Q)R(X,Q) (1).
+In particular, it stabilizes the subspaces H ∗ (X)Hdg
+                                                  R(X,Q) and H
+                                                               (k)
+                                                                   (X)R(X,Q) .
+Proof. Consider a non-zero element
+                                                                                Qβ k
+                A := ⟨Ti0 αi0 , ϕj , ϕk , Ti1 αi1 , . . . , Tin αin ⟩X
+                                                                     0,3+n,β       ϕ .
+                                                                                n!
+By the dimension equation, we have
+   Xn                                                             Z      
+      deg (αik ) + deg (ϕj ) + deg (ϕk ) = 2 dimC (X) − 3 + 3 + n + c1 (X) ,
+   k=0                                                                                   β
+
+which implies
+                         n
+                         X
+                               deg (Tik ) + deg Qβ + deg ϕk
+                                                           
+      deg (A)    =
+                         k=0
+                         Xn                           Z
+                 =             (2 − deg (αik )) + 2        c1 (X) + 2 dimC (X) − deg (ϕk )
+                         k=0                           β
+
+                 =       deg (ϕj ) + 2.
+Since the element κτ (ϕj ) is a formal power series with components of this form, κτ
+is homogeneous of degree 2. Furthermore, every constituent in the definition of κτ
+respects Hodge structures; specifically:
+      • the virtual cycle defining the correlators is an algebraic cycle of pure di-
+        mension,
+      • the class τ and the Euler vector field Euτ are Hodge classes,
+      • the perfect pairing defining the dual basis is compatible with Hodge struc-
+        tures.
+Hence the linear map
+                           u 7→ ⟨αi0 , u, ϕk , αi1 , . . . , αin ⟩X
+                                                                  0,n+3,β ϕ
+                                                                            k
+
+is a morphism of Hodge structures
+                                                           !
+                                                    i−j
+                     i                j
+                                                                   j := deg ϕk ,
+                                                                              
+                 H (X, Q) → H (X, Q)                           ,
+                                                     2
+where the difference i − j is even by the dimension equation. Therefore, the endo-
+morphism
+                   κτ : H i (X, Q)R(X,Q) → H i+2 (X, Q)R(X,Q) (1)
+is a morphism of Hodge structures. In particular, it preserves the Hochschild degree
+and the subspace of Hodge classes.                                                □
+8                                               GUÉRÉ
+
+
+1.4. Examples. We compute the endomorphism κτ in two important cases: when
+X is a surface with a nef (numerically effective) canonical class and when X is a
+cubic fourfold.
+Example 15 (Surfaces with nef canonical class). Let S be a smooth projective
+surface with KS ≥ 0, i.e. it is numerically effective. We choose a graded basis
+H = (α0 , . . . , αh ) of H ∗ (S)Hdg such that
+                                     α0    =    1S ∈ H 0 (S, C),
+                                     αh    =    [pt] ∈ H 4 (S, C).
+We fix a graded basis B = (ϕ0 , . . . , ϕm ) of H ∗ (S, Q) with ϕ0 = 1S , ϕm = [pt], and
+                              ϕi ∈ H k (S, C) for Nk−1 < i ≤ Nk ,
+where N0 = 0, N1 ≤ N2 ≤ N3 = m − 1, and N4 = m. Furthermore, we impose the
+condition
+                     ϕN2 = c1 (S), whenever c1 (S) ̸= 0.
+  Fix an element τ := f0 α0 + · · · + fh αh ∈ H 2 (X)Hdg
+                                                     R(X,Q) . By the string and divisor
+equations, we find
+    κτ (ϕj )   =    f0 ϕj
+                                                                               
+                                Z                                         n k
+                      X              X                                    f h ϕ
+                    +   exp     τ2  ⟨c1 (S), ϕj , ϕk , [pt]⊗n ⟩S0,n+3,β         Qβ
+                              β                                             n!
+                      β               k,n
+                                                                               
+                            Z                                          1+n k
+                      X              X                                 f      ϕ
+                    −   exp     τ2  ⟨[pt], ϕj , ϕk , [pt]⊗n ⟩S0,n+3,β   h       Qβ ,
+                              β                                            n!
+                        β                      k,n
+
+where τ2 := f1 α1 + · · · + fh−1 αh−1 corresponds to the degree-two Hodge classes.
+The virtual dimension formula gives
+                                 vdim = −1 + n + 3 − KS · β,
+so that
+                                                                                 deg(ϕj ) + deg(ϕk )
+⟨c1 (S), ϕj , ϕk , [pt]⊗n ⟩S0,n+3,β ̸= 0       =⇒    −1 + n + 3 − KS · β = 1 +                       + 2n
+                                                                                          2
+                                             deg(ϕj ) + deg(ϕk )
+                                               =⇒                 + n + KS · β = 1,
+                                                       2
+                                             deg(ϕj ) + deg(ϕk )
+  ⟨[pt], ϕj , ϕk , [pt]⊗n ⟩S0,n+3,β ̸= 0 =⇒                       + n + KS · β = 0,
+                                                       2
+resulting in the following possibilities. For the first correlator, we must have one of
+the following:
+       • n = 1, KS · β = 0, ϕj = ϕk = 1S ,
+       • n = 0, KS · β = 1, ϕj = ϕk = 1S ,
+       • n = 0, KS · β = 0, (ϕj = 1S , ϕk ∈ H 2 (S)) or (ϕj ∈ H 2 (S), ϕk = 1S ),
+       • n = 0, KS · β = 0, ϕj and ϕk ∈ H 1 (S).
+By the string equation, the first and second cases result in vanishing correlators,
+and the condition β = 0 must hold in the third case. Specifically, this yields the
+                     ON THE IRRATIONALITY OF CUBIC FOURFOLDS                                        9
+
+
+contributions
+X                                                                                        Z             
+   ⟨c1 (S), ϕj = 1S , ϕk ⟩S0,3,0 ϕk = c1 (S)   and     ⟨c1 (S), ϕj , 1S ⟩S0,3,0 [pt] =        c1 (S) ∪ ϕj [pt].
+ k                                                                                        S
+
+     For the second correlator, we must have
+       • n = 0, KS · β = 0, ϕj = ϕk = 1S ,
+and so β = 0 by the string equation, yielding the contribution
+
+                          ⟨[pt], ϕj = 1S , 1S ⟩S0,3,0 fh [pt] = fh [pt].
+
+To sum up, we find
+                    
+                    
+                     = c1 (S) − fh [pt]               if ϕj = 1S ,
+                      ∈ HR3 (S, C)                     if ϕj ∈ H 1 (S, C),
+                    
+   (κτ − f0 ) (ϕj )                      
+                    
+                     =    S
+                             c1 (S) ∪ ϕj [pt]          if ϕj ∈ H 2 (S, C),
+                      = 0                              if ϕj ∈ H 3 (S, C) or if ϕj = [pt],
+                    
+
+                                B
+that is, the matrix [κτ − f0 ]B is of the form
+                                                        
+                                   0     0 0          0 0
+                                0       0 0          0 0
+                                                        
+                                E       0 0          0 0
+                                                        ,
+                                0      U 0           0 0
+                                 −fh 0 F              0 0
+where the blocks correspond to cohomology degrees, U is some square matrix,
+                     
+                0
+               ..    
+                 .
+                                   R                       R            
+    E=                , and F = S c1 (S) ∪ ϕN1 +1 . . . S c1 (S) ∪ ϕN2 .
+                     
+         0 
+           δc1 (S)̸=0
+In particular, we observe that this matrix is nilpotent.
+
+Example 16 (Givental). Let X be a smooth cubic hypersurface in P5 . Its Novikov
+ring consists of polynomials in a single variable Q, as H2 (X, Z) is generated by a
+single class and Q is assigned a non-zero degree. We choose
+
+                                    τ := 0 ∈ H 2 (X)Hdg
+                                                    R(X,Q) .
+
+   The cohomology of X splits as the direct sum of the ambient part (pulled back
+from P5 ) and the primitive part. By the divisor equation, the endomorphism κτ
+vanishes on the primitive part.
+   Following Givental’s computation and [2, Proof of Theorem 6.8], the endomor-
+phism κτ =0 on the ambient part equals
+                                                     
+                                 0 0 6Q       0     0
+                                1 0 0 15Q 0 
+                                                     
+                        M = 3  0 1 0        0    6Q,
+                                0 0 1        0     0
+                                 0 0 0        1     0
+10                                        GUÉRÉ
+
+                                            
+expressed in the basis 1, H, H 2 , H 3 , H 4 , with H the hyperplane class. Written in
+the basis 1, H, H 2 , H 3 − 21Q, H 4 − 6QH , it becomes
+                                                          
+                                       0 0 27Q 0 0
+                                     1 0         0   0 0
+                            M ′ := 3 
+                                                          
+                                      0    1     0   0 0 .
+                                     0 0         1   0 0
+                                       0 0        0   1 0
+We deduce that 0 is an eigenvalue with a 1-dimensional eigenspace, and its gener-
+alized eigenspace has dimension 2, given by
+              ker (κm              3        4
+                                                    
+                    τ =0 ) = Vect H − 21Q, H − 6QH , for m ≥ 2.
+
+Note that if we extend scalars to C[[Q1/3 ]], we obtain three other eigenvalues
+9Q1/3 , 9e2iπ/3 Q1/3 , 9e−2iπ/3 Q1/3 .
+
+                         2. Birational transformation
+   In this section, we consider a number field K and a non-Archimedean field F
+containing Q such that the absolute value restricted to Q is trivial. Specifically, we
+take F to be the (rational) Levi-Civita field
+                                     F := Q((aQ )),
+whose elements are series in the formal variable a of the form
+                                 X
+                                    xq aq , xq ∈ Q
+                                    q∈Q
+
+where for any rational number r there are only finitely many non-zero coefficients
+xq with q ≤ r. The absolute value is defined by
+                             X
+                           |   xq aq | := 2−p , xp ̸= 0.
+                              q≥p
+
+Moreover, we declare that every element of F has degree zero.
+  We introduce an additional formal variable b, which we declare to have degree 1
+and absolute value |b| = 1. We then define the graded Q-algebra
+                                     M
+                   S ∗ := F [b±1 ] =   S k , with S k = F · bk .
+                                      k∈Z
+          ∗
+We write SK := S ∗ ⊗Q K for the corresponding graded K-algebra.
+Lemma 17. We have the equivalence
+                       X
+                           xn ∈ FK ⇐⇒ xn → 0,
+                             n∈N
+
+for any sequence (xn )n∈N ∈ FK
+                             N
+                               .
+Proof. If xn → 0, we can write
+                                          X
+                       ∀n ∈ N , xn =             yn,q aq , yn,q ∈ K,
+                                          q≥wn
+                   ON THE IRRATIONALITY OF CUBIC FOURFOLDS                          11
+
+
+where the sequence (wn )n∈N ∈ QN tends to infinity. This means that for any Q ∈ Q,
+there exists N ∈ N such that for all n > N , we have wn > Q. It follows that
+                 X               X                        X
+                       yn,q aq =     zq aq , where zq :=      yn,q .
+                 n∈N                q≤Q                                 0≤n≤N
+               wn ≤q≤Q                                                   wn ≤q
+
+By definition of FK , the sum defining P
+                                       zq is finite and is non-empty for only finitely
+many values of q. Hence, the element n∈N xn is well-defined in FK . The converse
+implication holds in any metric space.                                              □
+
+2.1. Invariant properties. Let X → Z be a morphism of varieties. We denote
+the Novikov variable of Z by Q′ and an ample class in Z by ω. Let T0 , . . . , Th
+be the formal variables associated with the basis H of H ∗ (X)Hdg . Introducing an
+additional formal variable q′ of degree in {1, 2}, we define the graded Q-algebra RZ
+                                                                                   ∗
+
+as
+                           ∗              ±1
+                          RZ := Q[q′           ][[Q′ , T0 , . . . , Th ]].
+Remark 18. The morphism X → Z induces a morphism of Novikov rings Q[[Q]] →
+Q[[Q′ ]]. It is important to note that this morphism is not generally homogeneous of
+degree zero, as will be seen in the case of the blow-up X e → X in the next section.
+
+   Throughout this paper, we assume that the morphism X → Z is equipped with
+                                        ±1
+a degree-zero morphism j : Q[[Q]] → Q[q′ ][[Q′ ]] of the form
+                                                  j(β) ′ jβ
+                                    Qβ 7→ Q′            q     .
+In particular, this induces a degree-zero homogeneous morphism
+                                    R∗ (X, K) → RZ,K
+                                                 ∗
+
+
+between the corresponding graded K-algebras.
+Remark 19. If j(Qβ ) = 1 for some β ̸= 0, then Qβ is homogeneous of degree zero.
+However,  in this case, the morphism j is not well-defined on the formal power series
+         Nβ
+P
+   N ≥0 Q    ∈ Q[[Q]], as the image would involve an infinite sum of constant terms,
+leading to a contradiction. Consequently, if β ̸= 0 and j(β) = 0, it must follow that
+jβ ̸= 0.
+Definition 20 (Evaluation function). Let
+                            n                        o
+                                   β
+                       ev : q′ , Q′ , T0 , . . . , Th → SK
+                                                         ∗
+
+
+be a degree-zero homogeneous function that is multiplicative in β ∈ NEN (Z). We
+say that ev is a normalized K-evaluation function for the morphism X → Z if
+                                ′
+     • we have ev(q′ ) = bdeg(q ) ,
+     • there exists 0 < ϵ < 1 such that for any non-zero curve class β ∈ NEN (Z),
+       we have                               R
+                                           β
+                             0 ≤ |ev(Q′ )| < ϵ β ω < 1,
+     • for each 0 ≤ k ≤ h, we have
+                                    0 ≤ |ev(Tk )| < 1.
+12                                           GUÉRÉ
+
+
+     For any ζ ∈ FK and any function ev, we define the function λev by
+                      n                         o
+                              β
+                 ∀ x ∈ q′ , Q′ , T0 , . . . , Th , λev(x) := λdeg(x) ev(x).
+
+We say that ev is a K-evaluation function for the morphism X → Z if there exists
+λ ∈ FK such that λev is a normalized K-evaluation function.
+Proposition 21 ([2, Lemma 4.6]). Every K-evaluation function for the morphism
+X → Z can be extended uniquely and continuously to a degree-zero homogeneous
+morphism of graded K-algebras
+                                           ∗      ∗
+                                          RZ,K → SK ,
+that we call a K-evaluation map. Conversely, every degree-zero homogeneous mor-
+             ∗       ∗
+phism ev : RZ,K → SK   of graded K-algebras comes from a K-evaluation function.
+Proof. By homogeneity, the statement holds if and only if it holds for all normalized
+K-evaluation functions. Without loss of generality, we may assume |ev(q′ )| = 1 and
+apply the criterium of Lemma 17 to prove that the element
+                                                                   
+                                               β                  k
+                   X      X
+                                  cβ,n,k ev Q′ T0n0 . . . Thnh q′
+                     N ∈Z        k∈Z
+                                n∈N1+h
+                            R β∈NEN (Z)
+                             β
+                               ω+|n|+k=N
+
+is well-defined in FK , where we adopt the notation n := (n0 , . . . , nh+l ) ∈ N1+h+l
+and |n| := n0 + · · · + nh+l . We examine the limit as N → ±∞ of
+                                                                   
+                                               β                  k
+                          X
+        |AN | := |                 cβ,n,k ev Q′ T0n0 . . . Thnh q′ |
+                           k∈Z
+                      R β∈NEN (Z)
+                       β
+                         ω+|n|+k=N
+                        n                                                  o
+                                 β                                            k
+                ≤    max |ev Q′ | · |ev (T0 ) |n0 . . . |ev (Th ) |nh · |ev q′ |
+                        n R        o
+                ≤    max ϵ β ω+|n| ,
+
+where the maximum is taken over the finite set of all
+                              k ∈ Z , n ∈ N1+h , β ∈ NEN (Z),
+          R
+such that β ω + |n| + k = N and cβ,n,k ̸= 0. By the definition of a graded algebra,
+there exists D > 0 such that
+                                            Z         X h
+        cβ,n,k ̸= 0 =⇒ −D ≤ k deg (q′ ) + 2 c1 (Z) +       ni deg (Ti ) ≤ D.
+                                                             β              i=0
+
+This implies the following bounds:
+                                               R                  R             
+                                                     β1 c1 (Z)        β c1 (Z)
+                                    2 min −1,         R
+                                                          ω
+                                                               ,..., Rl ω              R            
+                   D                                   β1               βl
+          N≤     deg(q′ ) +
+                            1 −
+                                                       deg(q′ )
+                                                                                   
+                                                                                            β
+                                                                                              ω + |n|  ,
+                                      R           R                         
+                                          β c1 (Z)   β c1 (Z)
+                                 2 max 1, R1 ω ,..., Rl ω                          R            
+                    D                       β1                   βl
+        −N ≤      deg(q′ ) +
+                             
+                                            deg(q′ )                      − 1          β
+                                                                                          ω + |n|  ,
+                      ON THE IRRATIONALITY OF CUBIC FOURFOLDS                                           13
+
+
+where (β1 , . . . , βl ) is the dual basis to a basis of ample classes (ω1 , . . . , ωl ) for the
+torsion-free part of the Néron–Severi group of Z, so that every effective curve is
+a linear combination of β1 , . . . , βl with non-negative integer coefficients. Conse-
+quently, we obtain AN → 0 as N → ±∞.
+                              ∗      ∗
+   Conversely, let ev : RZ      → SK   be a degree-zero homogeneous morphism of graded
+                                                                                                ′
+K-algebras. In particular, since ev(q′ ) ̸= 0, we may assume that ev(q′ ) = bdeg(q )
+                                                                  1
+                                                           ′ − deg(q′ )
+after potentially rescaling ev by   n the factor λ :=o ev(q )           b.
+                                           β
+   Suppose there exists x ∈             Q′ , T0 , . . . , Th     such that |ev(x)| ≥ 1. Then the
+                      deg(x)
+                    ′ deg(q′ )
+element y :=Pxq         is homogeneous of degree 0. It follows P that the formal
+                                          ∗
+power series N ≥0 y N is well-defined in RZ , whereas its image N ≥0 ev(y)N is
+                     ∗
+not well-defined in SK by Lemma 17. This yields a contradiction.              □
+
+Proposition 22 (Preservation of Hodge structures). Let ev be a K-evaluation
+function for the morphism X → Z, and let (s1 , . . . , sN ) be a Q-basis of K, where
+N := dimQ K. We set τ := T0 α0 + · · · + Th αh .
+   Then the endomorphism ev (κτ ) is well-defined and lies in the K-linear span of
+morphisms of Hodge structures (see Definition 7). Specifically, for any i ∈ Z, there
+exist morphisms of free S even -modules and of Hodge structures
+
+                        κ1 , . . . , κN : H i (X, Q)S → H i+2 (X, Q)S (1)
+
+such that ev (κτ ) = s1 κ1 +· · ·+sN κN . In particular, ev (κτ ) stabilizes the subspaces
+H ∗ (X)Hdg
+       S    and H (k) (X)SC .
+
+Proof. By Proposition 21, we have a well-defined degree-zero homogeneous mor-
+            ∗       ∗
+phism ev : RZ,K → SK  of graded K-algebras and thus a morphism
+
+                           ev : R∗ (X, K) ⊂ RX,K
+                                             ∗      ∗
+                                                 → RZ,K    ∗
+                                                        → SK .
+
+Recall that κτ is an endomorphism of H ∗ (X, Q)R(X,Q) . We define an endomorphism
+                    ∗                                            ∗
+ev(κτ ) ∈ EndSK ∗ (H (X, K)S ) as follows: choose a basis B of H (X, K) and define
+                             K
+         B            B
+                        
+[ev(κτ )]B := ev [κτ ]B . Note that it is independant of the choice of the basis B of
+H ∗ (X, K), because we have ev(P ) = P for any base change matrix P ∈ Mat(K).
+   Every element ζ ∈ FK decomposes uniquely as a sum
+
+                                      ζ = s1 ζ1 + · · · + sN ζN ,
+                                                                                        deg(T )
+where ζ1 , . . . , ζN ∈ F . Let ev (τ ) = g0 α0 + · · · + gh αh , where gk ∈ SK k for each
+0 ≤ k ≤ h. We compute
+                                              h
+                                                                 !                                                          
+                          X                  X           deg αl                                              ⊗n X      ev Qβ k
+ev (κτ ) (ϕi ) =                 ⟨c1 (X) +        1−               gl αl , ϕi , ϕk , (g0 α0 + · · · + gh αh ) ⟩0,3+n,β        ϕ
+                                                            2                                                            n!
+                    0≤k≤m,n≥0                    l=0
+                     β∈NEN (X)
+
+                           X                           ⟨c1 (X), ϕi , ϕk , α0⊗n0 , . . . , αh⊗nh ⟩X
+                                                                                                 0,3+n,β
+                                     g0n0 · · · ghnh                                                     ev Qβ ϕk
+                                                                                                              
+               =
+                                                                         n0 ! · · · nh !
+                       0≤k≤m
+                     n0 ,...,nh ≥0
+                    n0 +···+nh =n
+                     β∈NEN (X)
+14                                              GUÉRÉ
+
+
+                                                                                  ⟨αl , ϕi , ϕk , α0⊗n0 , . . . , αh⊗nh ⟩X
+                                                       !
+                            X               deg αl                                                                       0,3+n,β
+                                                             gl g0n0 · · · ghnh                                                  ev Qβ ϕk
+                                                                                                                                      
+                    +                    1−
+                                              2                                                    n0 ! · · · nh !
+                           0≤k≤m
+                            0≤l≤h
+                         n0 ,...,nh ≥0
+                        n0 +···+nh =n
+                         β∈NEN (X)
+                            
+                           
+                    N
+                                                          ⟨c1 (X), ϕi , ϕk , α0⊗n0 , . . . , αh⊗nh ⟩X
+                           
+                                            (j)                                                     0,3+n,β k
+                    X            X
+               =        sj                hn0 ,...,nh ,β                                                  ϕ
+                    j=1
+                           
+                            0≤k≤m                                          n 0 ! · · · nh !
+                            n0 ,...,nh ≥0
+                                n0 +···+nh =n
+                                 β∈NEN (X)
+                                                                                                                              
+                                                                                                                         
+                                                                                                                         
+                                                         !                                     ⊗n0             ⊗nh X
+                                                                                                                         
+                                X               deg αl        (j)             ⟨αl , ϕi , ϕk , α0 , . . . , αh ⟩0,3+n,β k 
+                    +                    1−                  hl;n0 ,...,nh ,β                                         ϕ ,
+                                                                                                                         
+                                                  2                                            n0 ! · · · nh !           
+                           0≤k≤m                                                                                         
+                            0≤l≤h                                                                                        
+                         n0 ,...,nh ≥0                                                                                   
+                        n0 +···+nh =n
+                         β∈NEN (X)
+                          (j)            (j)
+with some elements hn0 ,...,nh ,β , hl;n0 ,...,nh ,β ∈ S ∗ and where
+            ϕi 7→ ⟨x, ϕi , ϕk , α0⊗n0 , . . . , αh⊗nh ⟩X        k
+                                                       0,3+n,β ϕ , x ∈ {c1 (X), αl } ,
+
+is a morphism of Hodge structures from H ∗ (X, Q) to H ∗+2 (X, Q) (1). Hence, denot-
+ing by κj the morphism within the parentheses, we see that it is a morphism of free
+S even -modules and of Hodge structures from H ∗ (X, Q)S to H ∗+2 (X, Q)S (1).    □
+Definition 23 (Spectrum). For any K-evaluation function ev, we define the spec-
+trum as
+                                ∗                                ∗
+               SpX
+                         
+                  ev := α ∈ SKev | det (ev (κτ ) − α) = 0 ⊂ SKev ,
+where τ := T0 α0 + · · · + Th αh and Kev is the splitting field of the characteristic
+                                     ∗
+polynomial of ev (κτ ). For any α ∈ SK ev
+                                          , we define
+                                                m
+               X
+              Eev,α := ker (ev (κτ ) − α)           ⊂ H ∗ (X, Kev )SKev , m >> 1.
+This is the generalized eigenspace when α ∈ SpX
+                                              ev and it vanishes otherwise.
+
+Remark 24 (String equation). For any K-evaluation function ev and any element
+      2
+f0 ∈ SK , we define the K-evaluation function ev + f0 1X by
+                                                   β′
+                     (                      n                        o
+                        ev(x)        if x ∈ q′ , Q′ , T1 , . . . , Th ,
+               x 7→
+                        ev(T0 ) + f0 if x = T0 .
+From this, we obtain
+                        ev (Euτ )    =     (ev + f0 1X ) (Euτ ) − f0 1X ,
+                          ev (κτ )   =     (ev + f0 1X ) (κτ ) − f0 ,
+                                                              ∗
+                             SpX
+                               ev    =     SpX
+                                             ev+f0 1X − f0 ⊂ SKev ,
+                 ∗
+and for any α ∈ SK ev
+                      , we obtain
+                         X
+                        Eev,α    X
+                              = Eev+f 0 1X ,α+f0
+                                                 ⊂ H ∗ (X, Kev )SKev .
+                      ON THE IRRATIONALITY OF CUBIC FOURFOLDS                        15
+
+                                                                   ∗
+Definition 25. For any K-evaluation function ev and any α ∈ SK       ev
+                                                                        , we define the
+following integers:
+               ρX                  X
+                                        ∩ H ∗ (X)Hdg ⊗Q SK
+                                                         ∗
+                                                              
+                  ev,α = rkSK∗
+                               ev
+                                  Eev,α                    ev
+                                                                 ,
+                                                                 
+                  X                X
+                                       ⊗Kev C ∩ H (2) (X) ⊗C SC∗ ,
+                                              
+               νev,α   = rkSC∗ Eev,α
+                                                                
+                  X
+              ν ′ ev,α = rkSC∗ Eev,α
+                                   X
+                                       ⊗Kev C ∩ H (1) (X) ⊗C SC∗ ,
+               X
+              γev,α     =    rkSK
+                                ∗
+                                  ev
+                                     (ev (κτ ) − α)|Eev,α
+                                                     X    ,
+
+
+where τ := T0 α0 + · · · + Th αh . These integers are zero whenever α ∈ / SpX
+                                                                            ev .
+                                                                      ′
+  Furthermore, we say that two K-evaluation functions ev and ev are equivalent,
+and we write ev ∼ ev′ , when we have a bijection Φ : SpX          X
+                                                           ev → Spev′ such that
+
+                                       ϵX       X
+                                        ev,α = ϵev′ ,Φ(α)
+
+for any α ∈ SpX                       ′
+              ev and each ϵ ∈ {ρ, ν, ν , γ}.
+
+Example 26. By Remark 24, we have
+                                       ev ∼ ev + f0 1X ,
+                                               2
+for any K-evaluation function ev and any f0 ∈ SK .
+   For any K-evaluation function ev and any non-zero element λ ∈ FK , we have
+                                           ev ∼ λev.
+Indeed, if we write these endomorphisms in the bases B = (ϕ0 , . . . , ϕm ) and
+                                                                  
+                      B ′ = λ− deg(ϕ0 ) ϕ0 , . . . , λ− deg(ϕm ) ϕm ,
+                                  ′
+                            B
+then we obtain [ev]B
+                   B = [λev]B′ .
+                                                    ∗      ∗
+Definition 27. We say that a K-evaluation map ev : RZ,K → SK does not vanish
+                                                                   β
+on Q′ if for every curve class β ∈ NEN (Z) we have ev(Q′ ) ̸= 0.
+We say that the variety X satisfies Property ♣RZ,K
+                                                ∗   if there exists a finite set S of
+K-evaluation maps such that:
+                                      ∗      ∗
+     • for any K-evaluation map ev : RZ,K → SK that does not vanish on Q′ and
+       that is not in S, we have
+                                  X
+                                 νev,α =0        or   ρX
+                                                       ev,α ≥ 3
+
+        for all α ∈ SpX
+                      ev .
+We say that the variety X satisfies Property ♥RZ,K
+                                               ∗   if there exists a finite set S of
+K-evaluation maps such that:
+                                      ∗      ∗
+     • for any K-evaluation map ev : RZ,K → SK that does not vanish on Q′ and
+       that is not in S, we have
+                                             X
+                        X
+                       νev,α =0       or   ν ′ ev,α ̸= 0   or    X
+                                                                γev,α ≥2
+
+        for all α ∈ SpX
+                      ev .
+16                                             GUÉRÉ
+
+                           ∗        ∗
+Lemma 28. Let ev0 : RZ,K         → SK be a K-evaluation map and ev′0 : R∗ (X, K) →
+SK be the resulting composition. We denote by i : R∗ (X, K) ⊂ RX,K
+  ∗                                                                  ∗
+                                                                          the natural
+                                                      ′      ′                    ∗
+inclusion, and we distinguish the formal variables qX and qZ associated with RX,K
+       ∗
+and RZ,K , respectively.
+    Then, there exists a K-evaluation map ev′′0 : RX,K
+                                                   ∗       ∗
+                                                        → SK   such that ev′0 = ev′′0 ◦ i
+if and only if for any non-zero curve classes β1 , β2 ∈ NEN (X), we have
+                                                     
+                               j                    j
+                  j(Qβ1 ) = q′ Z1 and j(Qβ2 ) = q′ Z2 =⇒ j1 j2 > 0.
+
+Proof. Let λ ∈ FK be such that ev := λev0 is normalized. By composition, we
+obtain a morphism ev′ : R∗ (X, K) → SK
+                                     ∗                              ∗
+                                       , which we aim to extend to RX,K . We
+                                                                                j(β)
+have |ev′ (Tk )| = |ev(Tk )| < 1 for each 0 ≤ k ≤ h, and |ev′ (Qβ )| = |ev(Q′          |<1
+for any curve class β ∈ NEN (X) such that j(β) ̸= 0.
+   Suppose there exist β1 and β2 such that
+                                      j                               j
+                         j(Qβ1 ) = q′ Z1        and      j(Qβ2 ) = q′ Z2
+with j1 < 0 < j2 . Then |ev′ (Qβ1 )| = |ev′ (Qβ2 )| = 1. Consequently, for any λ ∈ FK
+with |λ| ̸= 1, one of the values |λev′ (Qβ1 )| or |λev′ (Qβ2 )| will strictly exceed 1,
+making it impossible to obtain a normalized K-evaluation function from ev′ .
+                                                                 j                  j
+   Now assume that for any β1 and β2 such that j(Qβ1 ) = q′ Z1 and j(Qβ2 ) = q′ Z2 ,
+the integers j1 and j2 have the same sign. We treat the case j1 , j2 > 0; the other
+case is analogous.
+                                                                                ′′
+   We may choose η > 0 sufficiently small to define
+                                                   β a K-evaluation map ev for X
+              ′′ ′              ′′      η    ′
+by setting ev (qX ) := 1 and ev := a ev on Q , T0 , . . . , Th . Indeed, we choose
+η > 0 such that
+                                               R
+                            |ev′ (Qβ | < ϵ β ω < 2−η| deg(β)|
+for any curve class β ∈ NEN (X) of negative degree. This is satisfied if
+                                   R                 R           !
+            | deg(β)|            | β1 c1 (X)|       | βl c1 (X)|
+      0<η R           < η max 1,     R        ,...,    R           < log2 (ϵ−1 ),
+                β
+                  ω                   β1
+                                         ω               βl
+                                                            ω
+
+where (β1 , . . . , βl ) is the basis defined in the proof of Proposition 21. Finally, we
+set
+                                 ev′′0 := 2η λ−1 ev′′ : RX,K
+                                                         ∗      ∗
+                                                             → SK
+which provides the desired factorization ev′0 = ev′′0 ◦ i.               □
+                       
+Remark 29. Let ♢ ∈ ♣, ♥ . If every K-evaluation map for the morphism X → Z
+satisfy the condition of Lemma 28, then we have
+                       Property ♢RX,K
+                                  ∗   =⇒ Property ♢RZ,K
+                                                    ∗   ,
+
+because every K-evaluation map for (X → Z) would then induce a K-evaluation
+map for X. Similarly, for a number field extension K1 ⊂ K2 , we have
+                      Property ♢RZ,K
+                                 ∗              =⇒ Property ♢RZ,K
+                                                              ∗
+                                           2                               1
+
+because every K1 -evaluation function ev1 induces a K2 -evaluation function ev2 by
+extension of scalars, and we have SpX        X          X        X
+                                     ev1 ⊂ Spev2 and Eev2 ,α = Eev1 ,α ⊗K1 K2 , for
+           X
+any α ∈ Spev1 .
+                    ON THE IRRATIONALITY OF CUBIC FOURFOLDS                          17
+
+
+2.2. Non-archimedean geometry. In this section, we consider a matrix
+                         X
+                    A :=   AN tN ∈ Matn,n (FK [[t]])
+                                N ≥0
+
+such that the evaluation
+                                    X
+                          A(ζ) :=          AN ζ N ∈ Matn,n (FK )
+                                    N ≥0
+
+is well-defined for all ζ ∈ D(0, 1). Here, D(ζ0 , r) ⊂ FK denotes the open disk of
+center ζ0 ∈ FK and radius r > 0, defined by
+                            ζ ∈ D(ζ0 , r) ⇐⇒ |ζ − ζ0 | < r.
+Furthermore, for each 0 ≤ i ≤ p, we assume there exists a C-subspace Hi ⊂
+Matn,1 (C) such that the module Hi ⊗C FC [[t]] is stable under multiplication by AC .
+Lemma 30. The determinant function det : D(0, 1) → FK is either identically zero
+or has only finitely many zeros. Consequently, the rank function rk : D(0, 1) → N,
+given by ζ 7→ rk(A(ζ)), is constant except at finitely many points. That is, there
+exists a finite set S ⊂ D(0, 1) such that the restriction rk|D(0,1)−S is constant.
+Furthemore, the rank function is lower semi-continuous.
+Proof. The determinant det(A) is a non-zero power series with coefficients in FK
+that converges on the disk D(0, 1). More generally, any non-zero power series with
+coefficients in a non-archimedean field that converges on a disk has only finitely
+many zeros within that disk.
+   The result concerning the rank function follows from the characterization of the
+rank as the size of a largest invertible sub-matrix.                             □
+   For any ζ ∈ D(0, 1), let Sp(A(ζ)) be the set of eigenvalues of A in FQ .
+Lemma 31. There is a finite set S ⊂ D(0, 1) such that the function
+                                  ζ 7→ card (Sp(A(ζ)))
+is constant on D(0, 1) − S and lower semi-continuous on D(0, 1). Furthermore, for
+any ζ0 ∈ D(0, 1)−S and any α0 ∈ Sp(A(ζ0 )), there exists a power series α ∈ FQ [[t]]
+that converges in some non-empty open disk D(ζ0 , r) and satisfies
+                         α(ζ0 ) = α0    and     α(ζ) ∈ Sp(A(ζ)),
+for all ζ ∈ D(ζ0 , r).
+Proof. Since F [[t]] is a unique factorization domain, we can write the characteristic
+polynomial as
+               det (A(t) − X) = Q1 (t, X)k1 · · · Qm (t, X)km ∈ F [[t]][X],
+where Q1 , . . . , Qm are distinct irreducible polynomials in F [[t]][X]. We set
+                     P (t, X) := Q1 (t, X) · · · Qm (t, X),
+                  n                      o
+so that Sp(A(ζ)) = λ ∈ FQ | P (ζ, λ) = 0 . We claim there is a finite set S ⊂
+D(0, 1) such that for any ζ ∈ D(0, 1) − S, the polynomials Q1 (ζ, X), . . . , Qm (ζ, X)
+split with distinct roots in Q, all with algebraic multiplicity one. In particular, for
+any ζ ∈ D(0, 1) − S we have
+                           card (Sp(A(ζ))) = deg (P (t, X)) .
+18                                        GUÉRÉ
+
+
+    To prove the claim, for any 1 ≤ i < j ≤ m, we consider the resultant Resi,j of
+Qi and Qj with respect to X. Since the resultant is defined as the determinant
+of a matrix with coefficients in the integral domain F [[t]] and since Qi and Qj are
+distinct irreducible polynomials, Resi,j is a non-zero element of F [[t]]. Thus, it has
+only finitely many zeros in D(0, 1).
+    The main property of the resultant is the following: for any ζ ∈ D(0, 1), we have
+Resi,j (ζ) = 0 if and only if there exists λ ∈ Q such that Qi (ζ, λ) = Qj (ζ, λ) = 0.
+Consequently, the set of such values ζ ∈ D(0, 1) is finite and the polynomials
+Qi (ζ, X) and Qj (ζ, X) have no common roots when ζ is outside this set.
+    Similarly, for each 1 ≤ i ≤ m, the resultant Resi of the polynomials Qi and ∂Q      ∂X
+                                                                                          i
+
+
+is a non-zero element of F [[t]], because Qi is irreducible. It follows that Qi (ζ, X)
+has a multiple root only for finitely many ζ ∈ D(0, 1), because Resi has only finitely
+many zeroes in D(0, 1), and for any ζ ∈ D(0, 1), Resi (ζ) = 0 if and only if there
+exists a multiple root of the polynomial Qi (ζ, X) in Q.
+    Next, we prove the second statement. Let ζ0 ∈ D(0, 1) − S and α0 ∈ Sp(A(ζ0 )).
+                                                                        ∂P
+Since α0 is a simple root of P (ζ0 , X), we have P (ζ0 , α0 ) = 0 and ∂X   (ζ0 , α0 ) ̸= 0.
+The implicit function theorem for formal power series provides a unique α ∈ FQ [[t−
+ζ0 ]] such that P (t, α(t)) = 0 ∈ F [[t]].
+    To checkP the convergence, assume ζ0 = α0 = 0 without loss of generality. Write
+                            p q                                         ∂P
+P (t, X) =      p,q≥0 cp,q t X . The conditions P (ζ0 , α0 ) = 0 and ∂X (ζ0 , α0 ) ̸= 0
+imply c0,0 = 0 and c0,1 ̸= 0. The coefficients αn of α(t) are determined by the
+recurrence:
+                                           X
+                ∀ N ≥ 1 , c0,1 αN +                cp,q αn1 · · · αnq = 0.
+                                           p,q≥0
+                                        (p,q)̸=(0,1)
+                                        n1 ,...,nq ≥0
+                                      p+n1 +···+nq =N
+
+For instance, the first relations are
+                                            c1,0 + c0,1 α1    =   0,
+                        c2,0 + c1,1 α1 + c0,2 α12 + c0,1 α2   =   0.
+Since P (t, X) converges on D(0, 1), then we must have |cp,q | < 1 for any p, q ≥ 0.
+Hence, we obtain |αn | < |c0,1 |−n for any n ≥ 0, so that the power series α(t)
+                             1
+converges in the disk D(0, |c0,1 | ).                                             □
+
+   We denote by U := D(0, 1) − S the complement of the finite set from Lemma
+31. For any ζ ∈ U , we define the function ϵζ : Sp(A(ζ)) → Np+2 as
+                                                                          
+ϵζ : α 7→    dimFC E(ζ)α ⊗Q C ∩ (Hi ⊗C FC )               , rkFQ (A(ζ) − α)|E(ζ)α ,
+                                                          0≤i≤p
+
+where E(ζ)α ⊂ Matn,1 (Q) denotes the generalized eigenspace
+                                                    m
+                       E(ζ)α := ker ((A(ζ) − α) ) , m >> 1.
+For each ζ ∈ U , we define the image set
+                            A(ζ) := ϵζ (Sp(A(ζ))) ⊂ Np+2 .
+By Lemma 30, there exists a finite subset S ′ ⊂ U such that for all ζ1 , ζ2 ∈ U − S ′ ,
+we have
+                            A(ζ1 ) = A(ζ2 ) ⊂ Np+2 .
+                     ON THE IRRATIONALITY OF CUBIC FOURFOLDS                          19
+
+
+2.3. Blow-up formula. Let X be a smooth projective complex variety and X ′ ⊂
+X be a smooth subvariety of codimension r ≥ 2. We denote by Xe = BlX ′ X the
+blow-up of X at the smooth center X ′ and by pr : Xe → X the projection map.
+Recall that we have an isomorphism of Hodge structures
+                                                 r−1
+                                                 M
+                   H ∗ (X,
+                        e Q) ≃ H ∗ (X, Q) ⊕            H ∗−2k (X ′ , Q)(−k),
+                                                 k=1
+            ∗                         k−1
+                                         ◦ pr∗|E on the summands, where i : E ,→ X
+                                             
+given by pr on X and by i∗ ◦         HE   ∪                                       e
+is the embedding of the exceptional divisor and HE is its hyperplane class. Hence,
+we can fix graded bases B, B ′ , and Be of the cohomologies of X, X ′ , and Xe such
+that
+                                            r−1
+                                            G
+                                   B≃B⊔
+                                   e             B′
+                                                 k=1
+
+under the isomorphism. Similarly, we fix graded bases H, H′ , and H
+                                                                  e of the Hodge
+subspaces such that
+                                          r−1
+                                          G
+                                H
+                                e ≃H⊔         H′ .
+                                                 k=1
+
+Let h be the dimension of H ∗ ( e   X)Hdg and introduce formal variables T0 , . . . , Th
+                                                                   e ≃ H ⊔ Fr−1 H′ .
+associated to the elements α0 , . . . , αh of the equivalent bases H        k=1
+   Following Iritani [1], we define the integer
+                                 
+                                      2(r − 1) if r is odd,
+                           s :=
+                                      r−1        if r is even.
+Iritani introduces a ring
+                                     b := C[q±1/s ][[Q]],
+                                     R
+where Q is the Novikov variable of X, equipped with ring maps from the Novikov
+rings of X, X ′ , and X,
+                      e see [1, Remark 1.3]. Furthermore, as in [1, line above
+Lemma 3.1], we assign the degree of q to be
+                                     deg (q) = 2 (r − 1) .
+           ′      1/s
+We write q := q         , whose degree is in {1, 2}.
+Notation 32. We introduce the graded Q-algebra
+                                                                  M
+                Q[q±1/s ][[Q, T0 , . . . , Th ]] =: R
+                                                    b∗ (X, Q) =         bn (X, Q).
+                                                                        R
+                                                                  n∈Z
+
+                                                       b∗ (X, K) := R
+Similarly, for any field extension Q ⊂ K ⊂ C, we write R            b∗ (X, Q)⊗Q K.
+By [1, Equation (1.1)], we have embeddings of graded K-algebras
+                   R∗ (X, K) ,→ R
+                                b∗ (X, K)           Q 7→ Q,
+                    ∗        b∗ (X, K)                            β) −[E]·β
+                                                    e βe 7→ Qpr∗ ( e
+                  R (X,
+                     e K) ,→ R                      Q                q      ,
+                                                                          e
+
+
+where E is the exceptional divisor in X            e → X is the projection. In
+                                        e and pr : X
+particular, we have
+                                   Qe lE 7→ q,
+                                                                              r−2
+where lE is the ‘vertical’ line in the exceptional divisor E defined by lE = HE   .
+20                                                 GUÉRÉ
+
+                      
+Lemma 33. For each ♢ ∈ ♣, ♥ , we have
+               X ′ satisfies ♢Rb∗ (X ′ ,K)           =⇒        X ′ satisfies ♢Rb∗ (X,K) ,
+                e satisfies ♢ b∗ e
+                X                                    ⇐⇒        e satisfies ♢ b∗
+                                                               X
+                             R (X,K)                                        R (X,K) .
+
+Proof. By Remark 29, proving the implications =⇒ requires showing that the
+condition in Lemma 28 is satisfied. For the variety X ′ , we have the map
+                                                               R
+                                          ′                        ′ c1 (Ni )
+                                     ′β            i∗ (β ′ ) − β r−1
+                                  Q           7→ Q         q
+where β ′ ∈ NEN (X ′ ), i : X ′ ,→ X, and Ni its normal bundle, see [1, Equation
+1.1]. Since i∗ (β ′ ) ̸= 0 for any non-zero curve class β ′ ∈ NEN (X ′ ), the condition of
+Lemma 28 is satisfied. Similarly, for the variety e  X, the map is
+                                                    β) −[E]·β
+                                      e βe 7→ Qpr∗ ( e
+                                      Q                q      .
+                                                            e
+
+
+Since pr(β)  e = 0 implies that βe is a positive multiple of lE , the condition of Lemma
+28 is again satisfied.
+    Now consider the implication ⇐= . Assume that the variety X        e satisfies Property
+                      ′′   ∗         ∗
+♢Rb∗ (X,K) . Let ev0 : R e X,K
+                                → SK be a K-evaluation map for X    e that does not vanish
+                    ′        ′′     ∗              ∗
+on eQ, and let ev0 := ev0 ◦ i : R ( e  X, K) → SK be the map obtained by dropping the
+variable q  e. We seek a K-evaluation map ev0 : R       b∗ (X, K) → S ∗ for the morphism
+                                                                      K
+                                  ′
+X → X inducing the map ev0 .
+ e
+    Since ev′0 (Qe lE ) ̸= 0, we can choose λ ∈ FK such that ev′ := λev′ satisfies
+                                                                                  0
+ev′ (Qe lE ) = b2r−2 . Our strategy is to first define a K-evaluation map ev : Rb∗ (X, K) →
+SK∗
+     inducing the map ev′ , and then set ev0 := λ−1 ev. To this aim, we have to take
+                           ev(Tk )        =      ev′ (Tk ) , ∀ 0 ≤ k ≤ h,
+                             ev(q)        =      b2r−2 .
+Furthermore, we have to set
+                                           e            
+                                           e β+([E]·βe)lE ,
+                              ev Qβ := ev′ Q
+                                   
+
+
+where β ∈ NEN (X) and βe ∈ NEN (X)    e such that pr∗ (β)e = β. This map is well-
+defined: if two effective curves βe1 and βe2 satisfy pr∗ (βe1 ) = pr∗ (βe2 ), then βe2 =
+βe1 + k · lE for some k ∈ Z. It follows that [E] · βe2 = [E] · βe1 + k[E] · lE . Since
+[E] · lE = −1, we obtain
+                   e βe2 +([E]·βe2 )lE
+                   Q                            e βe1 +k·lE +([E]·(βe1 +k·lE ))lE
+                                              = Q
+                                                e βe1 +([E]·βe1 )lE +k·lE (1+[E]·lE )
+                                              = Q
+                                                e βe1 +([E]·βe1 )lE .
+                                              = Q
+Moreover, this map preserves degrees:
+                                          Z                      
+                   deg (q) = 2(r − 1) = 2     c1 (X)
+                                                   e = deg Q  e lE ,
+                                           l
+                            Z             Z E                     
+               deg Qβ = 2 c1 (X) = 2
+                      
+                                                   e + (r − 1)[E]
+                                               c1 (X)
+                             β             βe
+                                              e            
+                                      = deg Q e β+([E]·βe)lE .
+                       ON THE IRRATIONALITY OF CUBIC FOURFOLDS                                               21
+
+
+   While ev does not vanish on Q and satisfies the conditions |ev(q)| = 1 and
+|ev(Tk )| < 1 for any 0 ≤ k ≤ h, we must consider |ev(Qβ )| for any curve class
+β ∈ NEN (X). There is a potential issue because
+                                                                                       eβ
+                                                                                   deg(Q
+                                                                                         e
+                                                                                           )
+                     |ev(Qβ )| < 1 ⇐⇒ |ev′′0 (Q
+                                              e βe)| < |ev′′0 (Q
+                                                               e lE )| 2r−2
+
+and this latter condition is not guaranteed for an arbitrary evaluation map. How-
+ever, if this condition holds, then ev is a valid K-evaluation map for the morphism
+Xe → X and so is ev0 , which would conclude the proof. Thus, it suffices to show that
+checking Property ♢Rb∗ ( e
+                         X,K) on K-evaluation maps satisfying this extra condition
+
+                                                                        eβ
+                                                                    deg(Q
+                                                                          e
+                                                                            )
+                                 |ev′′0 (Q
+                                         e β )| < |ev′′0 (Q
+                                                          e lE )| 2r−2
+                                           e
+
+
+for any curve class βe ∈ NEN ( e
+                              X) is sufficient.
+   To do this, we apply the results from Section 2.2. We choose a normalized
+K-evaluation map ev′′0 and factor it as
+                      ev′′0 =: ev′′0,t ◦ ev′′0,Q : R∗ (X,      ∗
+                                                       e K) → SK          ∗
+                                                                 [[t]] → SK
+using the geometric structure of the blow-up. Indeed, every effective curve class
+           e can be written uniquely as βe = βe′ + n elE , where βe′ is the strict
+βe ∈ NEN (X)                                           β
+transform of the effective curve class pr (β) ∈ NEN (X) and n e ∈ N. We define
+                                           e
+                                                  ∗                                     β
+                                           e′
+                                        e β ) tnβe
+                ev′′0,Q : Q
+                          e β 7→ ev′′0 (Q                 and   ev′′0,t : t 7→ ev′′0 (Q
+                                                                                      e lE ).
+                           e
+
+
+For any ζ ∈ D(0, 1), we define a family of evaluation maps ev′′ζ : R∗ ( e              X, K) → SK ∗
+
+by setting ev′′ζ =: ev′′ζ,t ◦ ev′′0,Q where ev′′ζ,t : t 7→ ζ. This is a K-evaluation function
+once we set ev′′ζ (x) := ev′′0 (x), for each x ∈ {e       q , T0 , . . . , Th }. Obviously, we have
+ev′′ev′′ (QelE ) = ev′′0 .
+      0
+
+     In the basis Bb := ϕ0 bdeg(ϕ0 )−1 , . . . , ϕm bdeg(ϕm )−1 of H ∗ ( e
+                                                                     
+                                                                                 X, K)SK , the endo-
+morphism ev′′0,Q (κτ ) yields a matrix
+
+                               A := [ev′′0,Q (κτ )]B
+                                                   Bb ∈ Mat(FK [[t]]).
+                                                    b
+
+
+
+Note that by homogeneity and our choice of the basis, the coefficients of the matrix
+A do not involve the variable b. For any ζ ∈ D(0, 1), the matrix
+                                  A(ζ) = ev′′ζ,t (A) ∈ Mat(FK )
+is well-defined. By Proposition 22, the endomorphism ev′′0,Q (κτ ) is in the K-linear
+span of morphisms of Hodge structures and therefore it stabilizes the subspaces
+H ∗ (X)Hdg
+        S    and H (k) (X)SC . Thus the matrix A stabilizes the subspaces H0 :=
+   ∗     Hdg
+[H (X)S ]Bb and Hk := [H (k) (X)SC ]Bb of the space of column matrices.
+   Applying the results of Section 2.2, we find a finite subset S ⊂ D(0, 1) such
+that, for any ζ1 , ζ2 ∈ D(0, 1) − S, the numerical condition in Property ♢Rb∗ ( eX,K) is
+               ′′                                     ′′
+satisfied by evζ1 if and only if it is satisfied by evζ2 . This concludes the proof. □
+
+   For any element
+                                                          r−1
+                                                                                               !∗=2
+                                                          M
+         τ ∈H   2
+                     X)Hdg
+                    (e R(X,Q) ≃
+                                       ∗
+                                     H (X)      Hdg
+                                                      ⊕         H   ∗−2k
+                                                                           (X ) ′ Hdg
+                                                                                        (−k)             ,
+                                                          k=1                                   R(X,Q)
+22                                                   GUÉRÉ
+
+
+we denote by κeτ (resp. κτ , κ′τ ) the endomorphism associated to X     e (resp. X, X ′ )
+by Definition 12. Precisely, we have
+                                                                               
+     eτ ∈ EndR(X,Q)
+     κ            e     H ∗ (X,
+                             e Q) e
+                                    R(X,Q)   ⊂ EndR(X,Q)
+                                                   b     even   H ∗ e
+                                                                   ( X, Q) R(X,Q)
+                                                                           b
+
+and the endomorphism given by the direct sum
+        r−1
+               !                             r−1
+                                                                    !
+        M                                    M
+             ′                     ∗               ∗−2k   ′
+    κ⊕      κ    ∈ End b
+                      R(X,Q)even H (X, Q) ⊕      H      (X , Q)(−k)                                    .
+         k=1      τ                                                 k=1                       R(X,Q)
+                                                                                              b
+
+Remark 34. There is a slight abuse of notation here. If we write the element
+τ = f0 α0 + . . . + fh αh , then there are subsets Ik ⊂ {0, . . . , h} for k = 0, . . . , r − 1
+such that (αj )j∈Ik corresponds to the basis of the k-th copy of X ′ (or to X for
+                        P
+k = 0). Setting τk := j∈Ik fj αj , we use the notation
+                                   r−1
+                                          !           r−1
+                                   M                  M
+                                        ′
+                               κ⊕      κ    := κτ0 ⊕      κ′τk .
+                                       k=1            τ              k=1
+
+Theorem 35 (Iritani, [1]). Let K be the number field obtained
+                                                            √   by adding the s-th
+roots of unity, the imaginary unit i, and the square root r − 1. Furthermore, let
+                                 K(π) if dimC (X ′ ) ≥ 3,
+                              
+                          ′
+                        K :=
+                                 K        if dimC (X ′ ) ≤ 2.
+Then there exist formal power series
+                       f (T0 ), . . . , f (Th )       and      fe(T0 ), . . . , fe(Th )
+in Rb∗ (X, K), such that the functions f and fe are homogeneous of degree zero and
+satisfy the following. Defining f and fe as the identity on Novikov variables and
+using Remark 9, we produce two morphisms of graded K-algebras of degree zero:
+       • g: R b∗ (X, K) → R
+                          b∗ (X, K), Tk 7→ gk ,
+       • ge : R (X, K) → R∗ (X, K), Tk 7→ gek .
+              b ∗         b
+Then there exist two isomorphisms Ψ and Ψ
+                                        e
+                                 r−1
+                                                                !
+                                 M                                                       
+     Ψ, Ψ
+        e :    H ∗ (X, K ′ ) ⊕         H ∗−2k (X ′ , K ′ )                    → H ∗ X,
+                                                                                     e K′
+                                                                                          R(X,K ′ )
+                                                                                          b
+                                 k=1                              R(X,K ′ )
+                                                                  b
+
+such that
+                                    r−1
+                                                 !
+                                    M
+                              κ⊕            κ′            =    Ψ−1 ◦ κ
+                                                                     eg(τ ) ◦ Ψ,
+                                    k=1           τ
+                                 r−1
+                                            !
+                                 M
+                          κ⊕           κ′                 =    e −1 ◦ κ
+                                                               Ψ      eτ ◦ Ψ,
+                                                                           e
+                                 k=1         g
+                                             e(τ )
+
+where τ := T0 α0 + · · · + Th αh . Moreover, the isomorphisms Ψ and Ψ   e are in the
+K ′ -span of morphisms of Hodge structures, i.e. there are finitely many morphisms
+of free bR(X, Q)even -modules and of Hodge structures
+                               r−1
+                                                      !
+                               M                                           
+                    ∗                ∗−2k   ′
+ Ψ1 , . . . , ΨN : H (X, Q) ⊕      H      (X , Q) (−k)         → H∗ e  X, Q
+                                                                                                R(X,Q)
+                                                                                                b
+                                   k=1                                     R(X,Q)
+                                                                           b
+                   ON THE IRRATIONALITY OF CUBIC FOURFOLDS                               23
+
+
+such that
+                   Ψ = s1 Ψ1 + · · · + sN ΨN with s1 , . . . , sN ∈ K ′ ,
+and similarly for Ψ.
+                  e
+
+Proof. The proof follows from a careful reading of the paper of Iritani [1]. We
+provide the necessary details here, following the notation established in that paper.
+   From Section 2 through Section 4.1, all results remain valid when the coefficients
+C are replaced by Q. In particular, the discrete Fourier transform is defined over
+Q. The first instance where a larger field is required is in Section 4.2, specifically in
+Equation (4.5). In particular, the continuous Fourier transform is not defined over
+Q, and Corollary 4.9 necessitates an extension of Q.
+   In Section 4.3, the discrete and continuous Fourier transforms are compared.
+Corollary 4.11 holds with Q coefficients because it is eventually phrased in terms
+of the discrete Fourier transform.
+   In Section 5, one may replace C with Q up to Remark 5.6. At this stage, it is
+important to note that results concerning X and X     e are defined over Q, whereas
+results concerning Z are defined over C.
+   Moreover, since the Kirwan map in Section 3.6 is defined using pull-backs, it is
+a morphism of Hodge structures. As a consequence, the maps denoted FT         c e and
+                                                                                  X
+FT
+ c X are defined over Q and are morphisms of Hodge structures. The remaining
+difficulty lies with the map FT
+                             c Z,j .
+   The center Z is responsible for both the fractional powers of q and the extension
+of scalars from Q. However, the continuous Fourier transform does not require the
+full field of complex numbers. From the formulae for FF,0 near Equation (4.9), for
+Φ(u) and for g(u, λ0 ) in the previous page, and for the quantum Riemann–Roch
+operator in Equation (2.24), we observe that the operator FF,0 is defined using
+only
+√ algebraic cycles, s-th roots of unity, the imaginary unit i, and the square root
+  r − 1 (note that cF = 1 − r for F = Z). One then defines the continuous Fourier
+transform FF,j by
+
+                FF,j = FF,0 |q7→e2πij q             (for F = Z, we have SF = q).
+
+Note that the notation e2πij is somewhat symbolic here; it should not be replaced
+by the number 1 because FF,0 involves s-th roots of q. It is more precise to write
+the substitution as q1/s 7→ e2πij/s q1/s . Furthermore, q appears only in the term λ0
+defined after Equation (4.8). Attention must be paid to the term
+                                                               c   (NZ⊂W )
+                            1
+                                        ( ρzα + r2α )       − 1
+                                    P
+                                −   α                                         − r2
+                          λ02                           = λ0          z
+                                                                                     ,
+
+where NZ⊂W is
+             the normal bundle of the blow-up center Z in the space W :=
+BlZ×0 X × P1 . When rescaling q 7→ e2πij q to define FF,j , one must introduce
+                                                                     
+                                            2πij    c1 (NZ⊂W )
+                                            r−1 ·        z     + r2
+                                        e                                 ,
+
+and specifically the expansion
+                          X                             n −n
+                                        2πij               z
+                                             · c1 (NZ⊂W )      .
+                                        r−1                 n!
+                           n≥0
+24                                      GUÉRÉ
+
+
+This is an algebraic cycle, but it involves the transcendental number π. For n = 1,
+we obtain a divisor class which can be transformed into an s-th root of unity via
+Example 13; thus only terms with n ≥ 2 create difficulties.
+   To summarize, the continuous Fourier transform, and thus the main Theorem
+5.18, holds over the field extension
+                           √          K(π), where K is the number field containing
+s-th roots of unity, i, and r − 1. Since the continuous Fourier transform involves
+only algebraic cycles (via the quantum Riemann–Roch operator), it lies in the
+span of morphisms of Hodge structures after extending coefficients to K(π). To
+be precise, the fact that it can be written as a finite linear combination of such
+morphisms follows because K is a finite extension of Q and only finitely many
+powers of π are used. Let us explain this last statement.
+   First, the number π n always appears with the variable z −n of degree −2n. By
+Example 13, we may assume n ≥ 2. In Section 5.8, Ψ and ς are reconstructed
+from their initial data at Q = τe = 0. By Theorem 5.18, precisely Equations
+(4) and (6) there, one  observes
+                               that π appears in hZ,j (see Equation (5.19)) and
+                           1
+potentially in the O q− r−1 term. The former can be handled by Example 13.
+For the latter, a degree argument suffices. Additionally, regarding ς ◦ , one may
+observe from Equation (5.45) that only the coefficient of z −1 appears. For Ψ◦ ,
+the Z-components  are homogeneous
+                                  of degree −r, matching the degree of qZ,j , so
+                       1
+that the term O q− r−1      has to be homogeneous of degree 0. Since the degrees
+        1
+     − r−1
+of q       and z −1 are both −2, a term involving π n z −n for n ≥ 2 must carry a
+cohomology class of degree 2(n + 1). Consequently, the power n of π is bounded by
+the complex dimension of the blow-up center Z. In particular, if dimC Z ≤ 2, then
+the cohomology degree is at most 4, and Ψ◦ is defined without π.
+   Finally, one uses the first equation on page 62 to reconstruct Ψ and τe from the
+initial data. This equation involves the matrix M (defined over Q), λj (requiring
+s-th roots of unity), and the initial data. As a consequence, we see that only finitely
+many powers of π are involved in Ψ and τe, and π is not required when dimC (Z) ≤ 2.
+In particular, in that case at least, one obtains that the main Theorem 5.18 holds
+by working over the number field K.
+   In any case, the isomorphisms Ψ and Ψ      e are in the K ′ -span of morphisms of
+Hodge structures, and the variable changes g and ge are defined over K, preserving
+Hodge classes by Proposition 22.                                                     □
+
+Remark 36. According to Iritani, Theorem 35 should hold over the number field K
+obtained by adjoining s-th roots of unity, with K ′ = K regardless of the dimension.
+
+Corollary 37. Assume one of the following:
+               b∗ (X, K) → S ∗ be a K-evaluation map and denote by
+    • let ev : R               K
+
+                                ev
+                                e:Rb∗ (X, K) → S ∗
+                                                K
+
+        the composition ev ◦ g, which is a K-evaluation map,
+      • let ev
+            e:Rb∗ (X, K) → S ∗ be a K-evaluation map and denote by
+                              K
+
+                                     b∗ (X, K) → SK
+                                ev : R            ∗
+
+
+                         e ◦ ge, which is a K-evaluation map,
+         the composition ev
+                   ON THE IRRATIONALITY OF CUBIC FOURFOLDS                             25
+
+
+where K is the number field from Theorem 35, and g, ge are the changes of variables
+defined therein. Then there exist two isomorphisms
+                                   r−1
+                                                      !
+                                   M                                     
+                      ∗       ′          ∗−2k   ′   ′
+      Ψ and Ψe : H (X, K ) ⊕           H      (X , K )    → H∗ e   X, K ′
+                                                                                SK ′
+                                           k=1                  SK ′
+such that
+                                 r−1
+                                            ! !
+                                 M
+                                        ′
+                   ev     κ⊕           κ           =   Ψ−1 ◦ ev κτ ) ◦ Ψ,
+                                                             e (e
+                                 k=1
+                                 r−1
+                                            !τ !
+                                 M
+                   ev     κ⊕           κ′            e −1 ◦ ev
+                                                   = Ψ         κτ ) ◦ Ψ,
+                                                            e (e      e
+                                 k=1         τ
+
+where τ := T0 α0 + · · · + Th αh . Moreover, the isomorphisms Ψ and Ψ
+                                                                    e lie in the
+  ′
+K -span of morphisms of Hodge structures
+                            r−1
+                                                    !
+                            M                                  
+               ∗                   ∗−2k   ′
+             H (X, Q) ⊕         H       (X , Q) (−k)  → H ∗ X,
+                                                             e Q .
+                                                                            S
+                             k=1                            S
+                                                  ∗
+                                                  e:
+In particular, we have the following equality in SK
+                                              [        ′
+                            SpX       X
+                               e = Spev0 ∪        SpXevk ,
+                                e
+                               ev
+                                                    1≤k<r
+
+where the K-evaluation maps ev0 on X and evk on the k-th copy of X ′ are induced
+by ev, see Remark 34, and where K   e is a number field containing the number fields
+                                                                        ∗
+  e and Kevk for each 0 ≤ k ≤ r − 1. Furthermore, for any α ∈ SK
+Kev                                                                     e , we obtain the
+equalities
+                                   r−1
+                                   X      ′
+                                                                    ′
+                 ϵXe   = ϵX
+                                 +     ϵX
+                                        evk ,α , for ϵ ∈ {ρ, γ, ν, ν }.
+                   e
+                  ev,α    ev0 ,α
+                                        k=1
+                             
+Proposition 38. Let ♢ ∈ ♣, ♥ and let K be a number field containing all s-th
+                                            √
+roots of unity, the imaginary unit i, and r − 1. Assume that the blow-up center
+X ′ satisfies Property ♢Rb∗ (X ′ ,K) . Then
+       e satisfies Property ♢ b∗ e
+       X                     R (X,K) ⇐⇒ X satisfies Property ♢R
+                                                              b∗ (X,K) .
+
+Conversely, if X ′ does not satisfy Property ♢Rb∗ (X,K) , then X
+                                                               e does not satisfy Prop-
+erty ♢Rb∗ ( e
+           X,K) .
+
+Proof. Assume that X ′ satisfies Property ♢Rb∗ (X ′ ,K) , and hence Property ♢Rb∗ (X,K)
+by Lemma 33, and X satisfies Property ♢Rb∗ (X,K) . From the equalities in Corollary
+                    e also satisfies Property ♢ b∗
+37, it follows that X                                       . Applying Lemma 33, we
+                                                        R (X,K)
+conclude that X  e satisfies Property ♢ b∗ e .
+                                          R (X,K)
+   Conversely, assume either that X fails Property ♢Rb∗ (X,K) or that X ′ fails Prop-
+erty ♢Rb∗ (X,K) . We treat the first case; the second is analogous.
+   Consider infinitely many pairs of a K-evaluation map ev0 for X and an eigenvalue
+α ∈ SpXev0 such that
+                                  X
+      • Case ♢ = ♣: we have νev     0 ,α
+                                         ̸= 0 and ρX ev0 ,α ≤ 2,
+                                                      X
+      • Case ♢ = ♥: we have νev0 ,α ̸= 0 and ν ′ ev0 ,α = 0 and γev
+                                  X                                   X
+                                                                        0 ,α
+                                                                             ≤ 1.
+26                                           GUÉRÉ
+
+
+We choose an arbitrary K-evaluation map ev′ for (X ′ → X). Since the spectrum
+    ′
+SpX                          ∗                                                      2
+  ev′ is a finite subset of SK , there certainly exists a homogeneous element f0 ∈ SK
+such that
+                                             ′
+                                                   X′
+                             α∈  / f0 + SpXev′ = Spev′ +f0 1X ′ ,
+
+see Proposition 24. By Remark 34, combining the K-evaluation map ev0 with r − 1
+copies of the K-evaluation map evk := ev′ + f0 1X ′ yields a K-evaluation map
+                                        b∗ (X, K) → S ∗ .
+                                   ev : R            K
+
+Corollary 37 provides a corresponding K-evaluation map
+                                   ev
+                                   e:Rb∗ (X, K) → S ∗
+                                                   K
+
+     e → X) by taking the composition ev ◦ g and and we find equalities for the
+for (X
+numbers ν, ν ′ , ρ, and γ, as before. Because we have
+                                                                         ′
+                        α ∈ SpX     , α ∈ SpX          and    / SpX
+                                                             α∈   evk ,
+                               e
+                              ev
+                              e             ev0
+
+these equalities reduce to
+                           X         X
+νX       X
+                         ν′ e      ′
+                                                       ρXe      X
+                                                                                   γX       X
+                           e
+ ev,α = νev0 ,α   and      ev,α = ν ev0 ,α    and       ev,α = ρev0 ,α       and    ev,α = γev0 ,α .
+     e                                                  e                            e
+ e                                                                                  e
+
+      e fails Property ♢ b∗
+Thus, X                 R (X,K) , and then Property ♢R
+                                                     b∗ (X,K)
+                                                         e    by Lemma 33.                        □
+
+Definition 39 (Weak factorization). Let X and Y be two birational smooth pro-
+jective varieties. A weak factorization between X and Y is a sequence of blow-ups
+and blow-downs at smooth centers
+                   X =: X0 ↔ X1 ↔ X2 ↔ X3 ↔ . . . ↔ Xq := Y,
+where each arrow Xi−1 ↔ Xi represents either a blow-up Xi−1 ← Xi or a blow-
+down Xi−1 → Xi . Let Yi denote the smooth center of the birational map Xi−1 ↔
+Xi . Specifically, if Xi−1 ← Xi , then Xi = BlYi (Xi−1 ); if Xi−1 → Xi , then Xi−1 =
+BlYi (Xi ).
+Remark 40. If two smooth projective varieties X and Y are birational, then there
+exists a weak factorization between them, see [4].
+                         
+Corollary 41. Let ♢ ∈ ♣, ♥ and let X and Y be two birational smooth projective
+varieties. Define the integer
+                            smax := lcd (1, . . . , dim(X) − 1) ,
+and the number field Qext obtained by   √ adjoining
+                                                 p all smax -th roots of unity, the
+imaginary unit i, and the square roots 2, . . . , dim(X) − 1. Let K be any number
+field containing Qext .
+    If there exists a weak factorization between X and Y for which all centers Yi
+satisfy Property ♢Rb∗ (Yi ,K) , then
+         X satisfies Property ♢Rb∗ (X,K) ⇐⇒ Y satisfies Property ♢Rb∗ (Y,K) .
+   Conversely, if Y satisfies Property ♢Rb∗ (Y,K) but X does not satisfy Property
+♢Rb∗ (X,K) , then there must exist a weak factorization involving at least one blow-up
+center Yi that does not satisfy Property ♢Rb∗ (Yi ,K) .
+                    ON THE IRRATIONALITY OF CUBIC FOURFOLDS                             27
+
+
+Remark 42. Let
+                          X0 ↔ X1 ↔ X2 ↔ X3 ↔ . . . ↔ Xq
+be a weak factorization with blow-up centers Y1 , . . . , Yq . Let ev0 be an evaluation
+map for X0 and α ∈ SpX     ev0 ,α an eigenvalue. By applying Corollary 37 along the
+                              0
+
+
+weak factorization, we obtain K-evaluation maps evi for Xi and ev′i,k for (Yi → Xj ),
+where 1 ≤ i ≤ q, j ∈ {i − 1, i} and 1 ≤ k < codim(Yi ). Specifically, for a map in
+the direction Xi−1 ← Xi , we have the freedom to choose the evaluation maps for
+                                                                                  Yi
+Yi . We choose them such that the intersection of spectra SpX
+                                                                            T
+                                                                    evi−1 ∩   k Spev′i,k is
+                                                                      i−1
+
+
+empty. Consequently, we have
+                          Yi         Xi
+      • SpX
+                   F
+           evi−1 ⊔   k Spev′i,k = Spevi if Xi−1 ← Xi ,
+             i−1
+
+
+                       Yi          Xi−1
+      • SpX
+                 S
+           evi ∪   k Spev′ = Spevi−1 if Xi−1 → Xi .
+             i
+                         i,k
+
+From this, we deduce that
+                                                      X
+                               ϵX         Xq
+                                ev0 ,α = ϵevq ,α +
+                                  0
+                                                               ϵYevi i,k ,α ,
+                                                     (i,k)∈I
+
+where ϵ ∈ {ρ, γ, ν, ν ′ } and I := {1 ≤ i ≤ q, k ∈ N | Xi−1 → Xi and 1 ≤ k ≤ codimXi Yi },
+generalizing the final equality of Corollary 37. Furthermore, if we have an eigenvalue
+                                                 n                                      o
+                              Z
+           α ∈ SpX   0
+                   ev0   ∩ Sp evZ , (Z, ev Z ) ∈  (Y i , ev i,k ) (i,k)∈I , (Xq , ev q )  ,
+
+                                Z          X0
+there exists an embedding Eev     Z ,α
+                                       ,→ Eev 0 ,α
+                                                   of SQe ext -modules, where the number
+field Qext is large enough to contain the number fields Qext,• of every Qext -evaluation
+      e
+maps involved. We also have a Q-basis (s1 , . . . , sN ) of the number field Qext and
+morphisms of S-modules and Hodge structures
+                    f1 , . . . , fN : H ∗ (Z, Q)S → H ∗+2k (X0 , Q)S (k),
+where k = 0 if evZ = evq and k is the index in evZ = evi,k otherwise, such that the
+morphism fQext := s1 f1 + · · · + sN fN is induced from Corollary 37 and its extension
+                       Z                                     Z           X0
+f eQext restricted to Eev Z ,α
+                               coincides with the embedding Eev Z ,α
+                                                                     ,→ Eev 0 ,α
+                                                                                 . Finally,
+the morphism
+                   fQext : H ∗ (Z, Qext )SQext → H ∗+2k (X0 , Qext )SQext
+satisfies the commutation relation
+                               ev0 κX     ◦ f = f ◦ evZ κZ
+                                                          
+                                                         τ .
+                                      0
+                                    τ
+
+
+
+                      3. Examples regarding Property ♣
+3.1. Basic cases.
+
+Proposition 43. Let X be a point, a curve, a surface with vanishing Hodge number
+h2,0 = 0, or a projective space Pn . Then, for any number field K, the variety X
+satisfies Properties ♣Rb∗ (X,K) .
+
+Proof. This follows from the fact that h2,0 = 0 in all these cases; consequently, the
+         X
+integer νev,α is always zero.                                                      □
+28                                         GUÉRÉ
+
+
+3.2. Surface with non-negative canonical class.
+Proposition 44. Let Σ be a surface with KΣ ≥ 0. Then, for any number field K,
+the variety Σ satisfies Property ♣Rb∗ (Σ,K) .
+                                                                  B
+Proof. Recall from Example 15 that the matrix [κτ − f0 ]B is nilpotent. Thus, for
+any K-evaluation map ev, we have
+                           SpΣ
+                             ev−ev(T0 )     =    {0} ,
+                            Σ
+                           Eev−ev(T0 ),0
+                                            =    H ∗ (Σ, K)SK .
+As a consequence, we obtain
+                                           Σ
+                            ρΣ
+                             ev,ev(T0 ) = ρev−ev(T0 ),0 ≥ 3,
+
+since H ∗ (Σ, C) contains at least the Hodge classes 1Σ , H, and H 2 .               □
+3.3. Low dimension.
+Proposition 45. Every smooth projective variety X of dimension at most 2 sat-
+isfies Property ♣Rb∗ (X,K) for any number field K containing the imaginary unit i.
+
+Proof. It remains to verify the case of a surface X with h2,0 ̸= 0. Such a surface
+is birational to a surface Σ with KΣ ≥ 0, which satisfies Property ♣Rb∗ (Σ,K) by
+Proposition 44. Since all blow-up centers in a weak factorization between X and
+S are points, they satisfy Property ♣Rb∗ (pt,K) . Therefore, the result follows from
+Corollary 41, where Qext = Q(i).                                                   □
+Corollary 46. Every rational smooth projective complex variety X of dimension    √ √at
+most 4 satisfies Property ♣Rb∗ (X,K) for any finite field K containing Q(e2iπ/6 , 2, 3).
+Proof. Consider a weak factorization between X and Pn . All blow-up centers Yi
+have dimension at most two, and thus satisfy Property ♣Rb∗ (Yi ,K) by Proposition
+45. Since Pn also satisfies Property ♣Rb∗ (Pn ,K) , the claim follows from Corollary 41
+                       √ √
+with Qext = Q(e2iπ/6 , 2, 3).                                                        □
+3.4. Cubic fourfold. Let X be a cubic fourfold. Its Hodge diamond decomposes
+into an ambient part, pulled back from P5 , and a primitive part. We choose a basis
+B of H ∗ (X, Q) and a basis H of H ∗ (X)Hdg that respect this direct sum. The main
+theorem in [2] is the following.
+Theorem 47. A very general cubic fourfold X is not rational.
+Proof. Let X be a very general cubic fourfold, such that it has no Hodge classes
+in the primitive part of its cohomology. Then H ∗ (X)Hdg = H ∗ (X)amb , which has
+dimension 5.
+                                 b∗ (X, Q) → S ∗ be the Q-evaluation map defined by
+   For any ζ ∈ D(0, 1), let ev : R
+                               ′
+                ev(q′ ) = bdeg(q ) , ev(Q) = ζ 3 b6 , and      ev(Tk ) = 0,
+for each 0 ≤ k ≤ h.
+   Following Example 16, the matrix ev (κτ ) vanishes on the primitive part and has
+the following eigenvalues on the ambient part:
+      • 0 with algebraic multiplicity 2,
+      • 9ζb2 , 9e2iπ/3 ζb2 , 9e−2iπ/3 ζb2 , each with algebraic multiplicity 1.
+                     ON THE IRRATIONALITY OF CUBIC FOURFOLDS                       29
+
+
+Thus, for the eigenvalue α = 0, we obtain
+                                ρX
+                                 ev,0 = 2    and     X
+                                                    νev,0 = 1.
+This contradicts Property ♣Rb∗ (X,Q) . By Remark 29, it also contradicts Property
+♣Rb∗ (X,K) for any number field K. By Corollary 46, we conclude that X cannot be
+rational.                                                                      □
+
+                        4. Examples regarding Property ♥
+4.1. Basic cases.
+Proposition 48. Let X be a point, a curve, a surface with vanishing Hodge number
+h2,0 = 0, or a projective space Pn . Then, for any number field K, the variety X
+satisfies Properties ♥Rb∗ (X,K) .
+
+Proof. This follows from the fact that h2,0 = 0 in all these cases; consequently, the
+         X
+integer νev,α is always zero.                                                      □
+4.2. Surface with non-negative canonical class.
+Proposition 49. Every abelian surface Σ satisfies Property ♥Rb∗ (Σ,K) for any num-
+ber field K.
+Proof. Since KΣ ≥ 0, we recall from the proof of Proposition 44 (and Example 15)
+that for any K-evaluation map ev, we have
+                                    SpΣev    =   {ev(T0 )} ,
+                                Σ
+                               Eev,ev(T0 )   =   H ∗ (Σ, K)SK .
+                                                               Σ
+In particular, since H 1,0 (Σ, C) ̸= 0, it follows that ν ′ ev,ev(T0 ) ̸= 0.       □
+
+Proposition 50. Every surface Σ such that KΣ ≥ 0 and c1 (Σ) ̸= 0 satisfies
+Property ♥Rb∗ (Σ,K) for any number field K.
+Proof. Since KΣ ≥ 0, we have
+                                     SpΣ
+                                       ev    =   {ev(T0 )} ,
+                                Σ
+                               Eev,ev(T0)
+                                             =   H ∗ (Σ, K)SK ,
+for any K-evaluation map ev as before. In Example 15, we computed the matrix
+          B
+[κτ − f0 ]B , which takes the form
+                                             
+                                   0 0 0 0 0
+                                0   0 0 0 0
+                                             
+                                E   0 0 0 0
+                                             ,
+                                0   U 0 0 0
+                                 −Th 0 F 0 0
+where the blocks correspond to cohomology degrees and U is a square matrix. Here,
+                     
+                0
+               ..    
+                 .
+                                    R                       R              
+   E=                 , and F = Σ c1 (Σ) ∪ ϕN1 +1 . . . Σ c1 (Σ) ∪ ϕN2 .
+                     
+         0 
+           δc1 (Σ)̸=0
+30                                       GUÉRÉ
+
+
+Given the assumption c1 (Σ) ̸= 0 and the fact that the pairing is perfect, the sub-
+matrices E and F are non-zero. Since these matrices have coefficients in K, we
+obtain
+                          ev(E) = E and ev(F ) = F.
+                                
+                               B
+Thus, the rank of ev [κτ − f0 ]B is at least 2 for any K-evaluation map. Conse-
+quently, we obtain
+                           Σ             Σ
+                          γev,ev(T 0)
+                                      = γev−ev(T0 ),0
+                                                      ≥ 2,
+and Σ satisfies Property ♥Rb∗ (Σ,K) .                                                 □
+
+Corollary 51. If a surface Σ with KΣ ≥ 0 fails Property ♥Rb∗ (Σ,K) for some
+number field K, then Σ must satisfy
+                      c1 (KΣ ) = 0 , h2,0 (Σ) ̸= 0 , h1 (Σ, C) = 0.
+Furthermore, such a surface never satisfies Property ♥Rb∗ (Z,Q) for any (Σ → Z).
+
+Proof. If Σ is a surface with KΣ ̸= 0 failing Property ♥Rb∗ (Σ,K) , the previous
+Proposition implies c1 (KΣ ) = 0. Furthermore, we must have h2,0 (Σ) ̸= 0 and
+h1 (Σ, C) = 0 because there is only one eigenvalue and we require ν ̸= 0 and ν ′ = 0.
+   Conversely, let Σ be a surface with c1 (KΣ ) = 0, h2,0 (Σ) ̸= 0, and h1 (Σ, C) = 0.
+                                       B
+Since c1 (Σ) = 0, the matrix [κτ − f0 ]B reduces to
+                                               
+                                      0    0 0
+                                   0      0 0 ,
+                                    −Th 0 0
+                                 0         2                 4
+where
+   the blocks  correspond to H (Σ, Q), H (Σ, Q), and H (Σ, Q). The matrix
+             B
+ev [κτ − f0 ]B has rank at most one, depending on the value of ev(Th ). Thus, for
+any (Σ → Z) and any Q-evaluation map ev : Rb∗ (Z, Q) → S ∗ , we find
+                                                         Σ
+         Σ
+        γev,ev(T0)
+                          Σ
+                   ≤ 1 , νev,ev(T0)
+                                    = h2,0 (Σ) = 1 , ν ′ ev,ev(T0 ) = h1,0 (Σ) = 0,
+contradicting Property ♥Rb∗ (Z,Q) .                                                   □
+
+Remark 52. Let Σ be a minimal surface with
+                      c1 (KΣ ) = 0 , h2,0 (Σ) ̸= 0 , h1 (Σ, C) = 0.
+The Kodaira dimension of Σ cannot be −∞ (since h2,0 (Σ) ̸= 0) or 2 (since c1 (KΣ ) =
+0). If the Kodaira dimension of Σ is 0, Σ must be a K3 surface because h2,0 (Σ) ̸= 0
+and h1 (Σ, C) = 0.
+   If the Kodaira dimension of Σ is 1, Σ is an elliptic surface f : Σ → B over a
+smooth curve B. By the Leray spectral sequence, h1 (B, C) ̸= 0 implies h1 (Σ, C) ̸=
+0, so B = P1 . Furthermore, an elliptic surface over P1 with h2,0 = 1 is necessarily
+a K3 elliptic surface.
+4.3. Other surfaces.
+Proposition 53. Let K be a number field containing Q(i). A surface Σ fails
+Property ♥Rb∗ (Σ,K) if and only if its minimal model Σ′ satisfies
+
+                    c1 (KΣ′ ) = 0 , h2,0 (Σ′ ) ̸= 0 , h1 (Σ′ , C) = 0.
+                    ON THE IRRATIONALITY OF CUBIC FOURFOLDS                           31
+
+
+Proof. This follows from Corollaries 51 and 41 (where Qext = Q(i)). By choosing a
+weak factorization between Σ and its minimal model Σ′ , we observe that all blow-up
+centers are points, which necessarily satisfy Property ♥Rb∗ (pt,K) .              □
+
+Proposition 54. Let Σ be a surface whose minimal model Σ′ satisfies
+                     c1 (KΣ′ ) = 0 , h2,0 (Σ′ ) ̸= 0 , h1 (Σ′ , C) = 0.
+
+Let ev be a Q(i)-evaluation map and α ∈ SpΣ
+                                          ev be such that
+                                                              Σ
+                        Σ
+                       γev,α <2,        Σ
+                                       νev,α ̸= 0    and    ν ′ ev,α = 0.
+
+Then there exist a number field extension Q(i) ⊂ Q(i)
+                                                 e    and an embedding of free
+ even
+SQ(i)
+ e    -modules
+
+                                H ∗ (Σ′ , Q(i))
+                                          e    Se
+                                                Q(i)
+                                                         Σ
+                                                     ,→ Eev,α ,
+that is in the linear span of Hodge structures from H ∗ (Σ′ , Q)S to H ∗ (Σ, Q)S .
+Proof. Consider the number field Qext = Q(i) as in Corollary 41, and let
+                    Σ =: X0 ↔ X1 ↔ X2 ↔ X3 ↔ . . . ↔ Xq := Σ′
+be a weak factorization between Σ and its minimal model Σ′ with blow-up centers
+Y1 , . . . , Yq . From Remark 42, we have the equality
+                                        Σ′
+                                                  X
+                                 Σ                   Yi
+                               νev,α = νev q ,α +   νev i,k ,α
+                                                               .
+                                                    i,k
+
+Since all blow-up centers are points, they have no h2,0 , so νev
+                                                              Yi
+                                                                 i,k ,α
+                                                                        = 0. Therefore,
+  ′                                            ′
+                                          Σ
+ Σ
+νev q ,α
+         ̸= 0, which implies α ∈ SpΣ
+                                   ev ∩ Spevq . By Remark 42, there exist morphisms
+of free S even -modules and of Hodge structures fk : H ∗ (Σ′ , Q)S → H ∗ (Σ, Q)S , 1 ≤
+k ≤ N, such that
+                                                                 Σ′
+             (s1 f1 + · · · + sN fN ) : H ∗ (Σ′ , Q(i))
+                                                  e     SQ(i)
+                                                         e
+                                                              = Eev q ,α
+                                                                             Σ
+                                                                         ,→ Eev,α ,
+
+where (s1 , . . . , sN ) is a Q-basis of the number field Q(i).
+                                                          e                           □
+
+4.4. Cubic fourfolds. Let X be a cubic fourfold. Its Hodge diamond decomposes
+into an ambient part, pulled back from P5 , and a primitive part.
+Proposition 55. A cubic fourfold X fails Property ♥Rb∗ (X,Q) .
+
+                                                                    b∗ (X, Q) → S ∗
+Proof. Let X be a cubic fourfold, and for any ζ ∈ D(0, 1), let ev : R
+be the Q-evaluation map defined by
+                                  ′
+                 ev(q′ ) = bdeg(q ) , ev(Q) = ζ 3 b6 , and        ev(Tk ) = 0,
+for each 0 ≤ k ≤ h.
+   Following Example 16, we deduce that the endomorphism ev (κτ ) vanishes on
+the primitive part and has the following eigenvalues on the ambient part:
+      • 0 with algebraic multiplicity 2,
+      • 9ζb2 , 9e2iπ/3 ζb2 , 9e−2iπ/3 ζb2 , each with algebraic multiplicity 1.
+32                                               GUÉRÉ
+
+
+Furthermore, the matrix representing the action on the ambient part of the gener-
+alized eigenspace for the eigenvalue 0 is conjugate over Q to the Jordan block
+                                           
+                                        0 1
+                                               .
+                                        0 0
+Since this submatrix has coefficient in Q, its evaluation is simply the matrix itself,
+which has rank one. Consequently, for the eigenvalue α = 0, we obtain
+                                                                   X
+                          X
+                         γev,0 =1,           X
+                                            νev,0 =1,      and   ν ′ ev,0 = 0.
+This contradicts Property ♥Rb∗ (X,Q) .                                                          □
+
+Theorem 56. If X is a rational cubic fourfold, then there exists a projective K3
+surface Σ and an isomorphism of Hodge structures
+                             H 4 (X, Q)primitive ≃ H 2 (Σ, Q)(−1).
+Proof. Consider a weak factorization
+                     X =: X0 ↔ X1 ↔ X2 ↔ X3 ↔ . . . ↔ Xq := P4 ,
+                                                                                    √ √
+with blow-up centers Y1 , . . . , Yq as in Definition 39, and let Qext := Q(e2iπ/6 , 2, 3)
+be the number field relevant for Corollary 41.
+   For any ζ ∈ D(0, 1), let ev0 be the Q-evaluation map from the proof of Proposi-
+tion 55, and let α = 0 ∈ SpX    ev0 , so that
+                                                                    X
+                        X
+                       γev 0 ,0
+                                =1,          X
+                                            νev 0 ,0
+                                                     =1,   and   ν ′ ev0 ,0 = 0.
+
+Following Remark 42, we choose a number field extension Q            e ext large enough so
+that, for every Qext -evaluation map ev involved in the weak factorization, the char-
+acteristic polynomial of ev(κτ ) is split. Take a Q-basis (s1 , . . . , sN ) of Q
+                                                                                e ext . Then
+by Remark 42 we have
+                             P4
+                                      X
+                  ϵX
+                   ev0 ,α = ϵevq ,α +      ϵYevi i,k ,α , ϵ ∈ {γ, ν, ν ′ } .
+                                             (i,k)∈I
+                                        4
+                                                               X
+Since H 2,0 (P4 ) = 0, we have νev       P
+                                            q ,α
+                                                 = 0. Given νev,α     = 1, there must exist a pair
+                       Yi                                           X       Yi
+(i, k) ∈ I such that νev i,k ,α
+                                  =    1.   This  implies α ∈  Sp   ev0 ∩ Spevi,k . Furthermore, we
+must have
+                                  Y
+                              ν ′ evi i,k ,α = 0 and γev   Yi
+                                                             i,k ,α
+                                                                     < 2,
+because it is true for X, so Yi fails Property ♥Rb∗ (Yi ,Qext ) . By Propositions 48 and
+53, Yi is a surface whose minimal model Σ satisfies c1 (KΣ ) = 0, h2,0 (Σ) ̸= 0, and
+h1 (Σ, C) = 0.
+   Combining Proposition 54 and Remark 42, we obtain N morphisms of S-modules
+and of Hodge structures
+                       f1 , . . . , fN : H ∗ (Σ, Q)S (−1) → H ∗+2 (X, Q)S
+such that the morphism
+                                     f := s1 f1 + · · · + sN fN
+is the composition of embeddings
+             H ∗ (Σ, Q
+                     e ext )S
+                             Q
+                                        Yi
+                                    ,→ Eev i,k ,α
+                                                      X
+                                                  ,→ Eev 0 ,α
+                                                              ⊂ H ∗+2 (X, Q
+                                                                          e ext )S
+                                                                                  Q
+                                                                                         .
+                              ext                                                  ext
+                              e                                                    e
+                     ON THE IRRATIONALITY OF CUBIC FOURFOLDS                                 33
+
+
+Furthermore, Σ is a K3 surface because h3,1 (X) = 1 and thus h2,0 (Σ) = 1, see
+Remark 52. Since ev0 is defined over Q, Example 16 implies
+                            X
+                           Eev 0 ,α
+                                    = PS∗ ⊕ H ∗ (X, Q)primitive,S ,
+where we set
+   w3 := H 3 − 21a3 b6 , w4 := H 4 − 6a3 b6 H , PS∗ := S · ⟨w3 , w4 ⟩ ⊂ H ∗ (X, Q)S ,
+with H the hyperplane class in X.
+Lemma 57. For each 1 ≤ k ≤ N , the morphism fk of S-modules and of Hodge
+structures satisfies
+                 fk : H ∗ (Σ, Q)S (−1) → PS∗+2 ⊕ H ∗+2 (X, Q)primitive,S .
+Proof. Let f¯, f¯1 , . . . , f¯N be the projections of f, f1 , . . . , fN onto the ambient coho-
+mology of X. Recall that the image of f¯ lands in PS∗e . We aim to show that for
+                                                                 Qext
+
+each 1 ≤ k ≤ N the image of f¯k lies         in PS∗ .
+   Consider the basis H 0 , . . . , H 4 of H ∗ (X, Q)ambient and a graded basis (e1 , . . . , em )
+                                          
+
+of H ∗ (Σ, Q). We write
+                                    4
+                                       (k)                       (k)
+                                    X
+                      f¯k (ej ) =     ζi,j bdeg(ej )+2−2i H i , ζi,j ∈ F.
+                                    i=0
+
+Recalling that f¯ = s1 f¯1 + · · · + sN f¯N and that the image of f¯ lies in PS∗e , then
+                                                                                Qext
+for each 1 ≤ j ≤ m, there exist xj , yj ∈ S eQext such that
+                                  (k)
+                     X
+                            sk ζi,j bdeg(ej )+2−2i H i = xj w3 + yj w4 .
+                      1≤k≤N
+                       0≤i≤4
+
+By identifying the components of H 0 , . . . , H 4 on both sides, we obtain
+                              (k)
+                      X
+                          sk ζ0,j bdeg(ej )+2 = −21a3 b6 xj ,
+                        1≤k≤N
+                                          (k)
+                             X
+                                     sk ζ1,j bdeg(ej )     =   −6a3 b6 yj ,
+                           1≤k≤N
+                                      (k)
+                          X
+                                sk ζ2,j bdeg(ej )−2        =   0,
+                        1≤k≤N
+                                      (k)
+                          X
+                                sk ζ3,j bdeg(ej )−4        =   xj ,
+                        1≤k≤N
+                                      (k)
+                          X
+                                sk ζ4,j bdeg(ej )−6        =   yj .
+                        1≤k≤N
+
+By combining the first and the fourth equations, and the second and the fifth
+equations, and using that (s1 , . . . , sN ) is a basis of Q
+                                                           e ext over Q, we obtain
+                                                    
+                                         (k)     (k)
+                              21a3 ζ3,j + ζ0,j         = 0,
+                                                    
+                                         (k)     (k)
+                                 6a3 ζ4,j + ζ1,j       = 0,
+                                                     (k)
+                                                    ζ2,j       =    0,
+34                                                  GUÉRÉ
+
+
+for each 1 ≤ k ≤ N . These relations confirm that each f¯k maps into PS∗ , as
+desired.                                                                   □
+
+     Lemma 57 implies that we obtain a morphism of Hodge structures
+fk : ⟨1Σ b2 , [pt]b−2 ⟩F (−1)⊕H 2 (Σ, Q)F (−1) → ⟨w3 b−2 , w4 b−4 ⟩F ⊕H 4 (X, Q)primitive,F .
+Our goal is to eliminate the extra copies of Q and the non-archimedean field F .
+Recall that the Qext -evaluation map evi,k for Yi corresponds to the evaluation map
+ev0 for X under the change of variables along the weak factorization. Similarly,
+there exists a Qext -evaluation map ev′ for Σ corresponding to the evaluation map
+evi,k for Yi under the change of variables along a weak factorization between Yi and
+Σ. By Remark 42, we have the commutation relation
+                             ev0 κX    ◦ f = f ◦ ev′ κΣ
+                                                       
+                                   τ                  τ .
+
+As the dimensions match, the embedding
+f : ⟨1Σ b2 , [pt]b−2 ⟩F eQ     ⊕H 2 (Σ, Q)F eQ      ,→ ⟨w3 b−2 , w4 b−4 ⟩F eQ     ⊕H 4 (X, Q)primitive,F eQ
+                         ext                  ext                           ext                           ext
+                                                                                                              
+is an isomorphism of FQe ext -vector spaces. Consequently, the endomorphisms ev0 κX τ
+and ev′ κΣ
+            
+          τ   are conjugate     and share the same  rank.
+                                                      
+    From Example 16, the endomorphism ev0 κX        τ   vanishes on the primitive part
+of the cohomology and satisfies
+                     ev0 κX
+                                
+                              τ (xw3 + yw4 ) = xw4 , ∀ x, y ∈ Q.
+
+From the proof of Corollary 51, the endomorphism ev′ κΣ
+                                                               
+                                                             τ vanishes except for
+
+                               ev′ κΣ             ′
+                                      
+                                    τ (1Σ ) = −ev (Tp )[pt].
+
+By homogeneity of ev′ , we must have ev′ (Tp ) = ζ · b−2 for some ζ ̸= 0 ∈ FQext .
+   Let (u2 , . . . , up−1 ) of H 2 (Σ, Q) be a basis of H 2 (Σ, Q), and set u1 := 1Σ b2 ,
+up := [pt]b−2 . For each 1 ≤ k ≤ N , we write
+                                           
+                      (k)           (k)                                (k) (k)
+     fk (uj ) − xj w3 b−2 + yj w4 b−4 ∈ H 4 (X, Q)primitive,F , xj , yj ∈ F.
+
+Fixing a basis (v1 , . . . , vq ) of H 4 (X, Q)primitive , the conjugation relation implies that
+the matrix Ak of fk , relative to the bases (u1 , . . . , up ) and w3 b−2 , v1 , . . . , vq , w4 b−4 ,
+                                                                                                    
+
+takes the form                                                    
+                                               (k)
+                                            x1     0...0       0
+                                   Ak :=  ⋆         A′k       0 ,
+                                                                  
+                                                               (k)
+                                               ⋆   ⋆ . . . ⋆ yp
+       PN        (k)             PN          (k)
+where k=1 sk x1 = −ζ k=1 sk yp and A′k is the submatrix with coefficients in
+F corresponding to the restriction
+                             fk′ : H 2 (Σ, Q)F (−1) → H 4 (X, Q)primitive,F .
+The matrix of the isomorphism f , relative to the above bases, is given by A =
+s1 A1 + · · · + sN AN . Since A is invertible and lower block-triangular, the diagonal
+block A′ = s1 A′1 + · · · + sN A′N must also be invertible.
+   Choose an integer L ∈ N such that, for each 1 ≤ k ≤ N , the matrix
+                                                         ∗
+                                                            
+                           Bk′ := aL · A′k ∈ Mat Q[[aQ+ ]]
+                                          
+                     ON THE IRRATIONALITY OF CUBIC FOURFOLDS                            35
+
+
+has positive valuation. Let Q be the set of exponents appearing in B1′ , . . . , BN
+                                                                                  ′
+                                                                                    :
+
+                Q = {q ∈ Q | ∃1 ≤ k ≤ N st Coeff aq (Bk′ ) ̸= 0} ⊂ Q∗+ .
+
+We write
+                                   X
+                         Bk′ =            ′
+                                         Bk,l al         ′
+                                                   with Bk,l ∈ Mat(Q),
+                                   l∈Q
+                  ′
+and denote by gk,l  the morphism of Q-vector spaces whose matrix in the above basis
+    ′
+is Bk,l . Since the Hodge structure on H 2 (Σ, Q)F (−1) (resp. H 4 (X, Q)primitive,F ) is
+obtained from the Hodge structure on H 2 (Σ, Q)(−1) (resp. H 4 (X, Q)primitive ) by
+extension of scalars from Q to F , the linear maps
+                          ′
+                         gk,l : H 2 (Σ, Q)(−1) → H 4 (X, Q)primitive
+
+are morphisms of Hodge structures. We seek a Q-linear combination of these maps
+that constitutes an isomorphism.
+                                              ∗
+   For any M ≥n0, fix a positive integer
+                                      o AM ∈ N such that the finite set Q ∩ [0, M ]
+                     p
+is contained in     AM   | 1 ≤ p ≤ M AM . Suppose that for every M ≥ 0 and every
+                   N
+(q1 , . . . , qN ) ∈ Q , we have
+                               M AM
+                                                                        !
+                               X
+                                               ′                 ′
+                         det              q1l B1,l            l
+                                                   + · · · + qN BN,l        = 0.
+                                   l=1
+
+This would imply that the polynomial
+                               M AM
+                                                                        !
+                               X
+                                              ′                 ′
+                         det             X1l B1,l            l
+                                                  + · · · + XN BN,l          =0
+                                   l=1
+
+is identically zero. Consequently, for any M ≥ 0, the following truncation would
+vanish:
+                 M AM 
+                                                                     !
+                                  l                         l
+                         1/l 1/AM                    1/l 1/AM
+                  X
+                                      ′                           ′
+           det          s1 a         B1,l + · · · + sN a         BN,l = 0.
+                   l=1
+
+Let D ≥ 0 be the valuation of the non-zero determinant
+
+                    det (s1 B1′ + · · · + sN BN
+                                              ′
+                                                ) ̸= 0 ∈ aD · Qext [[aQ+ ]].
+
+For M > D, the vanishing of the truncation leads to a contradiction. Therefore,
+there must exist some M ≥ 0 and (q1 , . . . , qN ) ∈ QN such that
+                         M AM
+                                                         !
+                          X
+                               l ′                  l ′
+                     det      q1 B1,l + · · · + qN BN,l ̸= 0.
+                                   l=1
+
+The resulting Q-linear combination
+                                   M
+                                   X AM
+                                                ′              l ′
+                                           q1l g1,l + · · · + qN gN,l
+                                    l=1
+
+is thus an isomorphism of Hodge structures, where Σ is a projective K3 surface.         □
+36                                          GUÉRÉ
+
+
+                                        References
+[1] Hiroshi Iritani, Quantum cohomology of blow-ups, to appear in Kyoto Journal of Mathematics,
+    avalaible at arXiv 2307.13555.
+[2] Ludmil Katzarkov, Maxim Kontsevich, Tony Pantev, and Tony Yu Yue, Birational invariants
+    from Hodge structures and quantum multiplication, avalaible at arXiv 2508.05105.
+[3] Alexander Kuznetsov, Derived categories view on rationality problems, Lecture Notes in Math.
+    2172 (2016), 67-104.
+[4] Jaroslaw Wlodarczyk, Birational cobordisms and factorization of birational maps, Journal of
+    Algebraic Geometry 9 (2000), no. (3), 425-449.
+
+     Univ. Grenoble Alpes, CNRS, IF, 38000 Grenoble, France
+     Email address: jeremy.guere@univ-grenoble-alpes.fr
+
