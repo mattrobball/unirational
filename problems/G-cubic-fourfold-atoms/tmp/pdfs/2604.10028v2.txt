@@ -1,0 +1,630 @@
+                                           NOTES ON THE DECOMPOSITION THEOREM FOR BLOWUPS
+
+                                                                               HIROSHI IRITANI
+
+                                                  Abstract. We discuss arithmetic and Hodge-theoretic properties of the isomor-
+                                                  phisms appearing in the decomposition theorem [4] for quantum cohomology of
+                                                  blowups. These properties underpin the application to the rationality questions
+                                                  by Katzarkov-Kontsevich-Pantev-Yu [5].
+
+
+
+
+arXiv:2604.10028v2 [math.AG] 19 Apr 2026
+                                              Let X be a smooth projective variety, and let Z ⊂ X be a smooth subvariety
+                                           of codimension r ≥ 2. Let X  e be the blowup of X along Z. The decomposition
+                                           theorem [4, Theorems 1.1, 5.18] for blowups establishes the following isomorphism
+                                           of (formal) quantum D-modules:
+                                                                                                   r−2
+                                                                    e la ∼
+                                                                                                   M
+                                           (1)              Ψ : QDM(X)   = τ ∗ QDM(X)la ⊕                ςj∗ QDM(Z)la
+                                                                                                   j=0
+
+                                           for some formal maps τ : H ∗ ( e
+                                                                         X) → H ∗ (X) and ςj : H ∗ ( e
+                                                                                                    X) → H ∗ (Z) that induce a
+                                           formal isomorphism at τ̃ = 0
+                                           (2)         H ∗ (X)
+                                                            e → H ∗ (X) ⊕ H ∗ (Z)⊕(r−1) , τ̃ 7→ (τ (τ̃ ), {ςj (τ̃ )}r−2 ).
+                                                                                                                     j=0
+
+                                           These maps Ψ, τ (τ̃ ) and ςj (τ̃ ) are defined over C in [4]. In these notes we show the
+                                           following:
+                                           Main Results (see Propositions 3, 8 and Corollary 11 for precise statements). The
+                                           maps τ (τ̃ ), ςj (τ̃ ), and Ψ are essentially defined over a cyclotomic field. Further-
+                                           more, the change-of-variables map (2) restricts to a formal isomorphism between
+                                           the subspaces of complexified Hodge classes. When τ̃ is a complexified Hodge class,
+                                           the isomorphism Ψ|τ̃ restricts to an isomorphism between these Hodge subspaces.
+                                           Remark 1. We summarize the notation from [4] necessary to state the results in
+                                           these notes. In the proofs of these results, however, we shall freely adopt the notation
+                                           and conventions of [4].
+                                           Acknowledgements. I thank Sergey Galkin for crucial clarifications, and Alessio
+                                           Corti, Jérémy Guéré, Yankı Lekili, and Emanuele Macrı̀ for their questions, which
+                                           motivated me to write these notes.
+
+                                                                1. Recollection of notation from [4]
+                                              We recall notation necessary to state the results. Every module in these notes
+                                           is Z-graded and its completion
+                                                                      L will      always be considered in the graded sense. For
+                                                                            k
+                                           a Z-graded module   N
+                                                             L k  =     k N   and   a descending chain {In }n≥1 of homogeneous
+                                           submodules In = k In ⊂ N , the graded completion of N with respect to {In } is
+                                                         b = LN
+                                           defined to be N       b k , where Nb k = lim N k /I k .
+                                                                                     ←−n      n
+                                              Let NEN (X) ⊂ H2 (X, Z) denote the monoid of effective curve classes in X. We
+                                           denote by Qd ∈ C[NEN (X)] the element corresponding to d ∈ NEN (X) in the
+                                           monoid ring, and define its degree by deg Qd = 2c1 (X) · d. The variable Q is called
+                                                                                        1
+2                                    HIROSHI IRITANI
+
+the Novikov variable. Let ω ∈ H 2 (X, R) be an ample class. The Novikov ring C[[Q]]
+is defined to be the graded completion of C[NEN (X)] with respect to the descending
+chain In = ⟨Qd : ω · d ≥ n⟩C ⊂ C[NEN (X)] of submodules. The completion does not
+depend on the choice of ω. Similarly, for any Z-graded ring K, we define K[[Q]] to
+be the graded completion of K[NEN (X)].
+      For a variable x of degree deg x ∈ Z and a Z-graded ring K, we define the ring
+K((x)) of formal Laurent series to be the graded completion of K[x, x−1 ] with respect
+to the descending chain In = xn K[x] of submodules.
+      For Y = X, X,  e or Z, let H ∗ (Y ) = H ∗ (Y ; C) denote the cohomology group with
+complex coefficients and let {ϕY,i }i denote a homogeneous basis of H ∗ (Y ; Q) over
+Q. Let τ , τ̃ and σ denote the parameters of the quantum cohomology of X, X           e and
+Z respectively; theyPtake values inP      H ∗ (X), H ∗ (X)
+                                                         e and H ∗ (Z). We expand these
+                             i                 i
+                                                              P i                          i
+parameters as τ = i τ ϕX,i , τ̃ = i τ̃ ϕ e       X,i and σ =     i σ ϕZ,i . The variables τ ,
+τ̃ i , σ i are assigned the degrees
+
+       deg τ i = 2 − deg ϕX,i ,   deg τ̃ i = 2 − deg ϕ e
+                                                      X,i ,                deg σ i = 2 − deg ϕZ,i .
+
+They are also assigned the parities |τ i |, |τ̃ i |, |σ i | ∈ Z/2Z that are congruent modulo
+2 to their degrees. We require that they are supercommutative with respect to their
+                                   i j
+parities, e.g. τ i τ j = (−1)|τ ||τ | τ j τ i .
+   For a Z-graded ring K, K[[τ̃ ]] (or K[[τ ]], K[[σ]]) denotes the graded completion of
+the polynomial ring K[τ̃ ] = K[{τ̃ i }] (resp. K[τ ], K[σ]) with respect to the polyno-
+mial degree. Due to the supercommutativity, we have
+                                                         •
+                                                                        !
+                                                         ^     M
+                          K[[τ̃ ]] = K[[τ̃ i : even]] ⊗K          K τ̃ i .
+                                                               K   τ̃ i :odd
+
+We also use the shorthand notation such as K[[Q, τ̃ ]] := K[[Q]][[τ̃ ]] (and similarly for
+K[[Q, τ ]] and K[[Q, σ]]).
+  Let φ : X e → X denote the blowup morphism along Z ⊂ X and let D ⊂ X               e be
+                                  ∼
+the exceptional locus. We have D = P(NZ/X ). These spaces fit into the following
+commutative diagram:
+                                                  
+                                        D
+                                                      ȷ
+                                                          /X
+                                                           e
+(3)                                     π                      φ
+                                                         
+                                                     ı   /X
+                                        Z
+
+where ı, ȷ are the natural inclusions and π is the natural projection. We denote
+by p ∈ H 2 (D; Z) the relative hyperplane class c1 (OD (1)) over D = P(NZ/X ).
+Given bases {ϕX,i } and {ϕZ,k } of H ∗ (X; Q) and H ∗ (Z; Q), respectively, the set
+{φ∗ ϕX,i , ȷ∗ (pl π ∗ ϕZ,k )}i,k,0≤l≤r−2 forms a basis of H ∗ (X;
+                                                               e Q).
+  Let z be a variable of degree two and let q denote the Novikov variable associated
+with the class of a line contracted under the map X         e → X. We have deg q = 2(r −1).
+We also set
+                                          (
+                                           r−1       if r is even;
+                                     s=
+                                           2(r − 1) if r is odd.
+                   NOTES ON THE DECOMPOSITION THEOREM FOR BLOWUPS                                3
+
+The quantum D-modules of X, X       e and Z are originally defined over the respective
+Novikov rings. Let Q, e    Q, QZ denote the Novikov variables for X, X
+                                                                     e and Z respec-
+tively. In [4, (1.1)], we embed the Novikov rings of X, X and Z into the common
+                                                           e
+ring C((q−1/s ))[[Q]] as follows:
+                       C[[Q]] ,→ C((q−1/s ))[[Q]]               in an obvious way
+(4)                       e ,→ C((q−1/s ))[[Q]]
+                       C[[Q]]                                   ed˜ 7→ Qφ∗ d˜q−D·d˜
+                                                                Q
+                      C[[QZ ]] → C((q−1/s ))[[Q]]               QdZ 7→ Qı∗ d q−ρZ ·d/(r−1)
+where ρZ = c1 (NZ/X ), and defined the following Laurent forms via the base change
+to this common ring (see [4, (5.37)]):
+                             QDM(X)la := H ∗ (X) ⊗ C[z]((q−1/s ))[[Q, τ ]]
+                                 e la := H ∗ (X)
+                             QDM(X)           e ⊗ C[z]((q−1/s ))[[Q, τ̃ ]]
+                             QDM(Z)la := H ∗ (Z) ⊗ C[z]((q−1/s ))[[Q, σ]].
+The pull-backs τ ∗ QDM(X)la , ςj∗ QDM(Z)la are defined as modules as:
+                          τ ∗ QDM(X)la := H ∗ (X) ⊗ C[z]((q−1/s ))[[Q, τ̃ ]]
+                          ςj∗ QDM(Z)la := H ∗ (Z) ⊗ C[z]((q−1/s ))[[Q, τ̃ ]]
+They are equipped with the appropriate pull-back connections (see [4, (5.41)–
+(5.43)]).
+Remark 2. All variables, as well as cohomology classes, carry both a Z-degree
+and a Z/2Z-parity. Except for the parameters τ i , τ̃ i and σ i associated with odd
+cohomology classes, all other variables (Q, z, q1/s , etc.) have even parity. Note that
+the parity is not always congruent modulo 2 to the degree: we have deg q1/s = 1
+when r is odd, but the parity of q1/s remains even.
+
+                                        2. Arithmetic properties
+   First we recall several properties of τ (τ̃ ), ςj (τ̃ ) and Ψ established in [4]. The
+formal changes of variables τ = τ (τ̃ ), σ = ςj (τ̃ ) from (2) are expanded in the form:
+                               X                            X
+                     τ (τ̃ ) =   τ i (τ̃ )ϕX,i , ςj (τ̃ ) =   ςji (τ̃ )ϕZ,i
+                                         i                                 i
+                                                                   1
+         i
+with τ (τ ) ∈ C((q      −1
+                             ))[[Q, τ̃ ]] and ςji (τ̃ ) ∈ C((q− r−1 ))[[Q, τ̃ ]].
+                                                                  Note the differing expo-
+                                                                     11
+                                           −1
+nents of q; note also that C((q )) = C[q ], C((q         ±
+                                                           )) = C[q± r−1 ] by the convention
+                                                                 − r−1
+
+on completion. They satisfy the following properties (see [4, Theorem 5.18]):
+   (a) The formal power series τ i (τ̃ ), ςji (τ̃ ) have the same degrees and the parities
+       as the variables τ i , σ i .
+   (b) We have
+               τ (τ̃ )|Q=τ̃ =0 = q−1 [Z] + O(q−2 ) ∈ H ∗ (X) ⊗ C[q−1 ]
+                                                                       1                     1
+               ςj (τ̃ )|Q=τ̃ =0 = −(r − 1)λj + hZ,j + O(q− r−1 ) ∈ H ∗ (Z) ⊗ C[q± r−1 ]
+                                  2πi             1
+             where λj = −e− r−1 j (e−πi q) r−1 and hZ,j = r−1
+                                                          2πi
+                                                              (j + 12 )ρZ with ρZ = c1 (NZ/X ).
+                                                                                        1
+      (c) The Jacobian matrix of the map (2) is invertible over C((q− r−1 ))[[Q, τ̃ ]]; hence,
+          (2) defines a formal isomorphism at τ̃ = 0.
+4                                              HIROSHI IRITANI
+
+The statement about the parity in Part (a) was omitted in [4], but it is obvious from
+the construction.
+  The decomposition isomorphism Ψ from (1) is an invertible element
+            Ψ ∈ Hom(H ∗ (X),
+                         e H ∗ (X) ⊕ H ∗ (Z)⊕(r−1) ) ⊗ C[z]((q−1/s ))[[Q, τ̃ ]].
+
+We write Ψ = (ΨX , ΨZ,0 , . . . , ΨZ,r−2 ), where ΨX is a Hom(H ∗ ( e        X), H ∗ (X))-valued
+formal power series and each ΨZ,j is a Hom(H ∗ ( e           X), H ∗ (Z))-valued formal power
+series. We have the following [4, Theorem 5.18]:
+    (d) The endomorphism ΨX is homogeneous of degree zero and each ΨZ,j is ho-
+        mogeneous of degree −r. They also preserve the parity.
+    (e) Recall the basis {φ∗ ϕX,i , ȷ∗ (pl π ∗ ϕZ,k )}i,k,0≤l≤r−2 of H ∗ ( e
+                                                                          X; Q) introduced fol-
+        lowing (3). The following asymptotics hold:
+                          ΨX (φ∗ ϕX,i )|Q=τ̃ =0 = ϕX,i + O(q−1 )
+                ΨX (ȷ∗ (pl π ∗ ϕZ,k ))|Q=τ̃ =0 = O(q−1 )
+                                                                              1
+                         ΨZ,j (φ∗ ϕX,i )|Q=τ̃ =0 = qZ,j (ϕX,i |Z + O(q− r−1 ))
+                                                                                            1
+                                                                            − r−1
+               ΨZ,j (ȷ∗ (pl π ∗ ϕZ,k ))|Q=τ̃ =0 = qZ,j (−1)l λl+1
+                                                              j (ϕZ,k + O(q       ))
+                                     πir               r
+         where qZ,j = i√1r−1 e r−1 j (e−πi q)− 2(r−1) .
+The statement about parity in Part (d) was again omitted in [4], but it is obvious
+from the construction.
+Proposition 3. We set t := e−πi q = −q. Recall the quantities hZ,j from (b) and
+qZ,j from (e). We have
+               τ (τ̃ ) ∈ H ∗ (X; Q) ⊗ Q((t−1 ))[[Q, τ̃ ]]
+                                                           1
+              ς0 (τ̃ ) ∈ hZ,0 + H ∗ (Z; Q) ⊗ Q((t− r−1 ))[[Q, τ̃ ]]
+                ΨX ∈ Hom(H ∗ (X;     e Q), H ∗ (X; Q)) ⊗ Q[z]((t−1 ))[[Q, τ̃ ]]
+                                                                                  1
+                                    X; Q), H ∗ (Z; Q)) ⊗ Q[z]((t− r−1 ))[[Q, τ̃ ]]
+               ΨZ,0 ∈ qZ,0 Hom(H ∗ ( e
+Moreover, ςj (τ̃ ) and ΦZ,j are obtained respectively from ς0 (τ̃ ) and ΦZ,0 by the mon-
+odromy transformation with respect to the path θ 7→ e−2πiθ t, θ ∈ [0, j]:
+                                ςj (τ̃ ) − hZ,j = (ς0 (τ̃ ) − hZ,0 )|t→e−2πij t
+                                           ΨZ,j = ΨZ,0 |t→e−2πij t
+                                                                                    −1
+In particular, when written in the original coordinate q, the components of qZ,j       ΨZ,j
+and ςj (τ̃ ) − hZ,j are formal power series in q, Q, τ̃ , z with coefficients in the cyclo-
+                   πi
+tomic field Q(e r−1 ) = Q(e2πi/s ).
+Proof. Recall from [4, Sections 5] that the isomorphism Ψ is induced from the map
+Ψ that is determined by the following commutative diagram:
+                                QDMT (W )b
+                                         X
+                                         e
+                       FTˆe                           FTˆ             ˆ
+                                                               Lr−2
+                           X                            X⊕      j=0 FTZ,j
+                            ∼
+                   v        =                                      *
+                                           Ψ            / τ ∗ QDM(X)La ⊕
+     ∗             ext
+                                                                         Lr−2 ∗
+    τ̃ QDM(X)
+           e                                                                 ς QDM(Z)La
+                                                                                      j=0   j
+                NOTES ON THE DECOMPOSITION THEOREM FOR BLOWUPS                                    5
+
+where τ̃ : HT∗ (W ) → H ∗ (X), e τ : H ∗ (W ) → H ∗ (X), ς j : H ∗ (W ) → H ∗ (Z) are for-
+                                         T                       T
+           1
+mal maps . The map τ̃ defines a formal isomorphism when restricted to a finite-
+dimensional subspace H ⊂ HT∗ (W ). The maps τ and ςj in the present notes are
+given as the compositions τ ◦ (τ̃ |H )−1 and ς j ◦ (τ̃ |H )−1 respectively. The map Ψ is
+obtained by restricting Ψ to the subspace H. Note that Ψ appears in [4, Theorem
+5.9], and the reduction to the finite-dimensional base is discussed in [4, Section 5.7].
+  It is evident from the construction that the isomorphism FTb       Xe and the change of
+                 ∗             ∗ e
+variables τ̃ : HT (W ) → H (X) are defined over Q. In fact, these data are determined
+by the discrete Fourier transform FXe (JW (θ)) (via [4, Corollary 4.11, Proposition
+5.1]), which is itself defined over Q. Similarly, the Fourier transformation FTb   X and
+the change of variables τ : HT∗ (W ) → H ∗ (X) are defined over Q. Note also that the
+maps FTb  Xe , FTbX , τ̃ , τ only involve integer powers of q = −t.
+  It follows that the map ΨX and the change of variables τ = τ ◦(τ̃ |H )−1 : H ∗ (X)e →
+H ∗ (X) are defined over Q. Thus it suffices to study the Fourier transformations
+                                                            ∗           ∗
+FTb Z,j and the associated coordinate changes ς j : HT (W ) → H (Z). These are
+determined by the following formula (see [4, Corollary 4.9, Proposition 5.7, (5.21)]):
+                                  ρZ                                  ρZ
+        FZ,j (MW (θ)ϕ) = q− (r−1)z MZ (hZ,j + ς j (θ); QZ q− r−1 )                   FTb
+                                                                                       Z,j (ϕ).
+                                                                            QZ →Q
+
+
+where we write ς j (θ) = −(r − 1)λj + hZ,j + ς j (θ) and the subscript QZ → Q denotes
+the replacement of QdZ with Qı∗ d for d ∈ NEN (Z) (where ı : Z → X is the inclusion).
+Using the Divisor Equation MZ (τ + h; QZ ) = eh/z MZ (τ, QZ eh ), which holds for
+h ∈ H 2 (Z), we can rewrite this as
+                                        ρZ                       ρZ
+                                    −                        −
+             FZ,j (MW (θ)ϕ) = tj (r−1)z MZ (ς j (θ); QZ tj r−1 )                 FTb
+                                                                                   Z,j (ϕ)
+                                                                       QZ →Q
+
+                                   1
+where tj := e−2πij t = e−2πi(j+ 2 ) q. The statement about ςj = ς j ◦ (τ̃ |H )−1 and ΨZ,j
+follows from the Lemma 4 below.                                                        □
+
+Lemma 4. For f ∈ HT∗ (W ; Q), we have
+                                         ρZ                                      1
+                   FZ,0 (f ) ∈ qZ,0 t− (r−1)z H ∗ (Z; Q) ⊗ Q[z, z −1 ]((t− r−1 ))
+                   FZ,j (f ) = FZ,0 (f )|t→e−2πij t .
+
+Proof. This follows from the definition of FZ,j in [4, Section 4.2.3]. It suffices to
+prove the first formula, as the second holds by definition. The equation following
+[4, (4.9)] applied to F = Z yields:
+                      r
+                      λ0                           h                         √          i
+                                             −1/2           2
+        FZ,0 (f ) =       (−λ0 )−ρZ /z−r/2 λ0        e(z∂u ) e−g(u,λ0 )/z eu/ cZ λ0 Φ(u)
+                      cZ                                                                  u=0
+                             ρZ  h       2
+                                                          √            i
+(5)              = qZ,0 t− (r−1)z e(z∂u ) e−g(u,λ0 )/z eu/ cZ λ0 Φ(u)
+                                                                           u=0
+
+
+
+  1These are denoted by the non-bold symbols τ̃ , τ, ς
+                                                        j in [4, Theorem 5.9]; we use bold symbols
+here to avoid confusion.
+6                                      HIROSHI IRITANI
+                  1
+where λ0 = −t r−1 , cZ = −(r − 1) and
+                                       ∞                   n
+                                      X   n−1         u
+                    g(u, λ0 ) = cZ λ0              √           ,
+                                      n=3
+                                           n!        cZ λ 0
+                                                                !
+                                 − √ u (ρF /z+rF /2) Y −1
+                       Φ(u) = e cZ λ0                      ∆e α i∗F f .
+                                                           α
+                                                                                      √
+Here ∆e α depends on u through the identification α = wα λ and λ = λ0 eu/ cZ λ0 . By
+                                 √
+the change of coordinate v = u/ cZ λ0 , we see that the quantity in brackets [· · · ]u=0
+                                             1
+in (5) is a formal Laurent series in (z, t− r−1 ) with rational coefficients.         □
+Remark 5. Recall that we considered the base change of the quantum D-module
+of Z via the ring homomorphism (4). With this understood, the constant term
+                                                                                            1
+       2πi
+hZ,j = r−1 (j + 21 )ρZ for ςj (τ̃ ) effectively rescales the Novikov variable q by e−2πi(j+ 2 ) ,
+                  1          1         2πi   1
+transforming q r−1 into tjr−1 = e− r−1 j t r−1 . That is, the quantum product ⋆Zσ of Z
+satisfies
+                     ⋆Zςj (τ̃ )  −ρ /(r−1)
+                                             = ⋆Zςj (τ̃ )−hZ,j  −ρZ /(r−1)
+                                                                           .
+                              QZ →Qq   Z                       QZ →Qtj
+                                                                                              1
+                                                                                          −
+Note that the right-hand side is evidently a (Laurent) power series in Q, tj r−1 , τ̃
+with rational coefficients.
+                                                                                 πi       r
+Remark 6. We have hZ,j ∈ πiH 2 (Z; Q) and qZ,j ∈ i√1r−1 Q(e r−1 )t− 2(r−1) ⊂
+      πi          r                         √              πi
+Q(e 2(r−1) )q− 2(r−1) . Here we note that i, r − 1 ∈ Q(e 2(r−1) ).
+                           3. Hodge-theoretic properties
+   In this section, we prove that the decomposition isomorphism (1) is equivariant
+with respect to the (universal) Hodge group, as suggested by Katzarkov-Kontsevich-
+Pantev-Yu [5].
+   First, we recall the Hodge group (also known as the special Mumford-Tate group)
+associated with a Q-Hodge structure (see e.g. [2]). Let H be a Q-Hodge structure;
+that is,La finite-dimensional rational vector space H equipped with a decomposition
+HC = p,q∈Z H p,q such that H q,p = H p,q , where HC = H ⊗ C. Let S 1 = {z ∈ C :
+|z|2 = 1} ∼= {(x, y) ∈ R2 : x2 + y 2 = 1} be the circle group, viewed as an algebraic
+group defined over R. We consider the S 1 -action on HC given by λ · up,q = λp−q up,q
+for λ ∈ S 1 and up,q ∈ H p,q . This action preserves the real form HR = H ⊗ R,
+inducing a homomorphism h : S 1 → GL(HR ). The Hodge group of H is defined to
+be the smallest algebraic subgroup HodH ⊂ GL(H), defined over Q, such that the
+set of real points HodH (R) contains the image h(S 1 ). Note that a Tate twist of the
+Hodge structure does not change this group. When H is the rational cohomology
+of a smooth projective variety, the HodH -fixed subspace H HodH = H ∩ ( p H p,p )
+                                                                            L
+                                                                         Hod
+consists of rational Hodge classes. We refer to elements of HC H,C = H HodH ⊗ C as
+complexified Hodge classes.
+  The Hodge groups have the following Tannakian interpretation. Consider the
+category (HodgeQ ) of polarizable Q-Hodge structures and let C = (HodgeQ )/ Tate
+be its orbit category by Tate twists. The category C is a neutral Tannakian category
+with fibre functor ω : C → (VectQ ) sending a Hodge structure to its underlying Q-
+vector space. The universal Hodge group is the affine group scheme Hod = Aut⊗ (ω)
+              NOTES ON THE DECOMPOSITION THEOREM FOR BLOWUPS                             7
+
+associated with C in the Tannakian formalism [1, Chapter II]. The universal Hodge
+group Hod can be described as the inverse limit2 limH HodH of Hodge groups over all
+                                                 ←−
+polarizable Q-Hodge structures H. It acts on each object H of C via the canonical
+surjection Hod ↠ HodH ⊂ GL(H) and every morphism in C is Hod-equivariant.
+Lemma 7. The big quantum product of a smooth projective variety Y is equivariant
+with respect to the universal Hodge group Hod, i.e. we have
+                               g(α ⋆t β) = g(α) ⋆g(t) g(β)
+for g ∈ Hod, where α, β, t ∈ H ∗ (Y ; Q) and ⋆t denotes the big quantum product of Y
+with parameter t.
+Proof. We note that a stronger result, the equivariance with respect to the motivic
+Galois group of André motives, is discussed in [5, Proposition 3.40].
+  It suffices to show that the quantum product is equivariant with respect to the
+Hodge group HodY := HodH ∗ (Y ;Q) associated with the rational cohomology of Y .
+Recall that the big quantum product for Y is defined by the formula:
+                                       ∞
+                               X X                                        Qd
+                 (α ⋆t β, γ) =            ⟨α, β, γ, t, . . . , t⟩Y0,3+n,d    .
+                                      n=0
+                                                                          n!
+                               d∈NEN (X)
+
+Thus, it suffices to show that the Gromov-Witten correlators ⟨· · ·⟩Y0,n,d and the
+Poincaré pairing (·, ·) are HodY -invariant. They are multilinear forms defined over
+Q. The algebraicity of the (virtual) fundamental class implies that they are invariant
+under h : S 1 → GL(H ∗ (Y ; R)). The algebraic subgroup of GL(H ∗ (Y ; Q)) preserving
+the form ⟨· · ·⟩Y0,n,d or (·, ·) is defined over Q and the set of its real points contains
+h(S 1 ). Hence, it must contain HodY .                                                  □
+  By Lemma 7, we may regard the quantum D-module of Y as a HodC -equivariant
+vector bundle equipped with a HodC -invariant flat connection, where HodC acts on
+the parameter t ∈ H ∗ (Y ) and the cohomology fiber via the projection HodC →
+HodY,C , and acts trivially on z and the Novikov variables Q, Q,
+                                                              e QZ .
+
+Proposition 8. The formal maps τ : H ∗ ( e
+                                        X) → H ∗ (X), ςj : H ∗ ( e
+                                                                X) → H ∗ (Z) and
+the isomorphism Ψ appearing in (1) are HodC -equivariant.
+Remark 9. We have an isomorphism of Hodge structures [6, Theorem 7.31]
+                                     r−2
+                                           H ∗ (Z; Q)(−j − 1) ∼
+                                     M
+                         ∗
+(6)               dec : H (X; Q) ⊕                            = H ∗ (X)
+                                                                     e
+                                     j=0
+
+defined by dec(α, β0 , . . . , βr−2 ) = φ∗ α + r−2      j ∗
+                                              P
+                                               j=0 ȷ∗ (p π βj ). This is Hod-equivariant.
+Therefore, the universal Hodge group Hod acts on the cohomologies of X, Z and X        e
+through the algebraic quotient HodXe = HodH ∗ ( e  X;Q) .
+
+Proof of Proposition 8. The proposition can be proved directly from the construc-
+tion in [4] (as we did in the proof of Proposition 3) or by using the reconstruction
+method of Hinault-Yu-Zhang-Zhang [3]. Here, we adopt the latter approach, which
+  2Here we regard H  7→ HodH as an inverse system via inclusions of Hodge structures; any
+inclusion H1 ,→ H2 of Hodge structures induces a surjective group homomorphism HodH2 ↠
+HodH1 .
+8                                          HIROSHI IRITANI
+
+does not require the full details of the previous proof and is, hence, more transparent
+to the reader.
+  We review the reconstruction of the decomposition Ψ via the initial conditions
+and the Birkhoff factorization described in [4, Section 5.8]. To simplify notation, we
+write Hdecomp := H ∗ (X) ⊕ H ∗ (Z)⊕(r−1) . We start with the initial conditions
+                                                                              1
+                    τ ◦ ∈ H ∗ (X) ⊗ C((q−1 )), ςj◦ ∈ H ∗ (Z) ⊗ C((q− r−1 )),
+                    Ψ◦ ∈ Hom(H ∗ (X),e Hdecomp ) ⊗ C[z]((q−1/s )).
+These quantities are given explicitly in [4, Section 5.8]. They are the restrictions,
+respectively, of τ (τ̃ ), ςj (τ̃ ) and Ψ to the locus Q = τ̃ = 0. We introduce a coordinate
+system (t, s0 , . . . , sr−2 ) on H ∗ (X)⊕H ∗ (Z)⊕(r−1) , which is related to the original one,
+(τ, ς0 , . . . , ςr−2 ), by τ = τ ◦ + t and ςj = ςj◦ + sj . We also relate it to τ̃ ∈ H ∗ ( eX) via
+the formal change of variables τ = τ (τ̃ ) and ςj = ςj (τ̃ ). Let M ∈ End(Hdecomp ) ⊗
+C[z −1 ]((q−1/s ))[[Q, t, s]] be the following block-diagonal endomorphism:
+               ◦                                                                              
+                 e−τ /z MX (τ ◦ + t)
+                                          ◦
+                                      e−ς0 /z MZ (ς0◦ + s0 )                                  
+   M =                                                                                        ,
+                                                                                              
+                                                              . .
+                                                                 .                            
+                                                                       ◦
+                                                                     −ςr−2 /z      ◦
+                                                                    e         MZ (ςr−2 + sr−2 )
+where MX and MZ are the fundamental solutions [4, (2.5)] for the quantum connec-
+tions of X and Z, respectively, with the base change to C((q−1/s ))[[Q]] via (4) under-
+stood. We have M |Q=t=s=0 = id. The isomorphism Ψ as a function of (t, s0 , . . . , sr−2 )
+is uniquely determined by the equation
+                                     (Ψ◦ )−1 ◦ M = M ′ ◦ Ψ−1 ,
+where
+    M ′ ∈ End(H ∗ (X))
+                   e ⊗ C[z −1 ]((q−1/s ))[[Q, t, s]] satisfying M ′ |z=∞ = id,
+    Ψ ∈ Hom(H ∗ (X),
+                   e Hdecomp ) ⊗ C[z]((q−1/s ))[[Q, t, s]] satisfying Ψ|Q=t=s=0 = Ψ◦ .
+Regarding z as a loop parameter, we find that M ′ and Ψ are, respectively, the
+negative and positive Birkhoff factors of (Ψ◦ )−1 ◦ M . As explained in [4, Section
+5.8], M ′ gives a fundamental solution for X     e in the (Q, t, s)-direction. The initial
+condition M |Q=t=s=0 = id implies that M ′ = (MXe (τ̃ )|Q=t=s=0 )−1 ◦ MXe (τ̃ ). The
+              ′
+
+coordinate change between τ̃ and (t, s0 , . . . , sr−2 ) is given by the asymptotics
+(7)           M ′ 1 = (MXe (τ̃ )|Q=t=s=0 )−1 ◦ MXe (τ̃ )1 = 1 + τ̃ z −1 + O(z −2 ).
+where we used the fact that MXe (τ̃ )1 = 1 + τ̃ z −1 + O(z −2 ), MXe (τ̃ )−1 1 = 1 − τ̃ z −1 +
+O(z −2 ) and τ̃ |Q=t=s=0 = 0. This determines τ̃ as a function of (t, s0 , . . . , sr−2 ), and
+conversely, (t, s0 , . . . , sr−2 ) (and consequently (τ, ς0 , . . . , ςr−2 )) as a function of τ̃ .
+   We proceed to the proof of the proposition. As we will see in Lemma 10 below,
+τ ◦ and ςj◦ are complexified Hodge classes (i.e. fixed by HodC ) and Ψ◦ is HodC -
+equivariant. The block-diagonal endomorphism M = M (t, s0 , . . . , sr−2 ) is HodC -
+equivariant in the sense that
+        gM (t, s0 , . . . , sr−2 )g −1 = M (g(t), g(s0 ), . . . , g(sr−2 ))   for g ∈ HodC .
+This follows from the corresponding property gMY (t)g −1 = MY (g(t)) for the fun-
+damental solution MY ; since MY is defined in terms of descendant Gromov-Witten
+               NOTES ON THE DECOMPOSITION THEOREM FOR BLOWUPS                                  9
+
+invariants, we can deduce the HodC -equivariance of MY by an argument similar to
+that in the proof of Lemma 7. Hence, the composition (Ψ◦ )−1 ◦ M satisfies the
+same HodC -equivariance. It is straightforward to prove that the Birkhoff factors M ′
+and Ψ−1 inherit this HodC -equivariance. In particular, the map (t, s0 , . . . , sr−2 ) 7→ τ̃
+determined by (7) is also HodC -equivariant.                                              □
+Lemma 10. The initial conditions τ ◦ and ςj◦ are fixed by HodC and Ψ◦ is HodC -
+equivariant.
+Proof. We summarize the initial conditions τ ◦ , ςj◦ and Ψ◦ given in [4, Section 5.8.1].
+First, τ ◦ and ςj◦ are given by
+                                                       Qk−1                 !
+                                         X       ı ∗ (      e
+                                                        ν=1 −νz   (N Z/X ))
+                   τ ◦ = [z −1 ] log 1 +     q−k                k
+                                                                              ,
+                                         k>0
+                                                            k!z
+                   ςj◦ = −(r − 1)λj + [z −1 ] log qρZ /((r−1)z) FZ,j (1) ,
+                                                                          
+
+where eλ (· · · ) is the equivariant Euler class [4, (2.21)] and [z −1 ](· · · ) denotes the
+coefficient of z −1 . We define a map decT : Hdecomp → HT∗ (W ) by
+                                                                   r−2
+                                                                   X
+                                                    ∗
+                    decT (α, β0 , . . . , βr−2 ) = φ̂   pr∗1 α +         ȷ̂∗ (p̂j π̂ ∗ βj ),
+                                                                   j=0
+
+where pr1 : X × P1 → X is the first projection, φ̂ : W → X × P1 is the blowup along
+Z × {0} and the maps ȷ̂ : D  b → W , π̂ : D b → Z and the class p̂ ∈ H 2 ( bD; Z) are as
+in [4, Section 3.5]. This is a lift of dec in (6) and satisfies κXe ◦ decT = dec for the
+Kirwan map κXe : HT∗ (W ) → H ∗ (X) e (see [4, Section 3.6]). Let κ−1 denote the right
+                                                                     Xe
+inverse of κXe given by
+                                          −1
+                          κ−1
+                           e := decT ◦ dec
+                           X
+                                             : H ∗ (X)
+                                                    e → H ∗ (W ).
+                                                         T
+
+These maps dec, decT and κ−1   e are Hod-equivariant as they are morphisms in
+                               X
+C = (HodgeQ )/ Tate. We write Ψ◦ = (Ψ◦X , Ψ◦Z,0 , . . . , Ψ◦Z,r−2 ) as before, where Ψ◦X
+is the Hom(H ∗ (X),
+                  e H ∗ (X))-component and Ψ◦ is the j-th Hom(H ∗ (X),
+                                              Z,j
+                                                                                e H ∗ (Z))-
+                         ◦
+component. The map Ψ is given by
+                                             Qk−1                                      !!
+                  ◦
+                                  X                 e
+                                               ν=1 −νz     (N  Z/X ) h          i
+     Ψ◦X (γ) = e−τ /z κX (κ−1
+                           e γ) +     q−k ı∗              k
+                                                                       i∗Z κ−1
+                                                                            e γ
+                           X
+                                  k>0
+                                                      k!z                   X     λ=kz
+                    ◦
+   Ψ◦Z,j (γ) = e−(ςj +(r−1)λj )/z qρZ /((r−1)z) FZ,j (κ−1
+                                                       e γ)
+                                                       X
+
+for γ ∈ H ∗ (X),
+             e where iZ : Z → W is the inclusion and κX : H ∗ (W ) → H ∗ (X) is the
+                                                                  T
+Kirwan map.
+   We remark that HT∗ (W ; Q) has a canonical polarizable Q-Hodge structure, and
+hence is a Hod-module. For a fixed degree k, HTk (W ; Q) can be identified with the
+cohomology of a (sufficiently large) finite-dimensional approximation of the Borel
+construction, which is a smooth projective variety, and hence admits a polarizable
+pure Q-Hodge structure of weight k. The equivariant parameter λ ∈ HT2 (pt; Z) acts
+on HT∗ (W ; Q) as an operator of type (1, 1).
+   By the construction of τ ◦ , ςj◦ and Ψ◦ above, it suffices to prove that the following
+maps are HodC -equivariant:
+    (1) multiplication by e−νz (NZ/X ) in H ∗ (Z) ⊗ C[z, z −1 ];
+10                                     HIROSHI IRITANI
+
+    (2) ı∗ : H ∗ (Z) → H ∗ (X);
+    (3) i∗Z : HT∗ (W ) → H ∗ (Z) ⊗ C[λ];
+    (4) κX : HT∗ (W ) → H ∗ (X); and
+                                              r                              1
+    (5) qρZ /((r−1)z) FZ,j : HT∗ (W ) → q− 2(r−1) H ∗ (Z) ⊗ C[z, z −1 ]((q− r−1 )).
+Part (1) is obvious as e−νz (NZ/X ) is an algebraic class. Parts (2)-(4) follow from the
+fact that the maps ı∗ , i∗Z and κX are morphisms in C. Note that the Kirwan map
+κX is defined to be the composition
+                              i∗            (pr∗ )−1
+                             → HT∗ (Ws ) −−−
+                    HT∗ (W ) −             ∼
+                                            −→ H ∗ (Ws /T ) = H ∗ (X),
+                                               =
+in which all maps are morphisms of mixed Hodge structures, where i : Ws → W is
+the inclusion of the open stable locus and pr : Ws → Ws /T = X is the projection. (In
+                                                                                  i∗
+the case at hand, κX can also be described as the composition HT∗ (W ) −→  X
+                                                                              HT∗ (X) =
+            λ→0
+H ∗ (X)[λ] −−→ H ∗ (X).) The map qρZ /((r−1)z) FZ,j only involves multiplication by
+algebraic classes and i∗F as can be seen from (5), and hence is HodC -equivariant. Note
+here that the quantum Riemann-Roch operator ∆       e α involves only multiplication by
+algebraic classes chi (NZ/W,α ).                                                      □
+Corollary 11. The formal map (τ, ς0 , . . . , ςr−2 ) : H ∗ (X)
+                                                            e → H ∗ (X)⊕H ∗ (Z)⊕(r−1) re-
+stricts to a formal isomorphism between the subspaces of complexified Hodge classes.
+When τ̃ is a complexified Hodge class, the decomposition isomorphism Ψ|τ̃ restricts
+to an isomorphism between these Hodge subspaces.
+Remark 12. By a similar argument, we can show that the formal maps τ : H ∗ ( eX) →
+  ∗               ∗ e       ∗
+H (X) and ςj : H (X) → H (Z) preserve (complexified) algebraic classes, i.e. com-
+plex linear combinations of the Poincaré duals of algebraic cycles, and that the
+isomorphism Ψ|τ̃ preserves algebraic classes whenever the parameter τ̃ is algebraic.
+By the algebraic construction of virtual fundamental classes, we have a quantum
+product defined within Chow groups, and the fundamental solution MY (t) preserves
+algebraic classes whenever the parameter t is algebraic.
+                                        References
+1. Pierre Deligne, James S. Milne, Arthur Ogus, and Kuang-yen Shih, Hodge cycles, motives, and
+   Shimura varieties, Lecture Notes in Mathematics, vol. 900, Springer-Verlag, Berlin-New York,
+   1982.
+2. Mark Green, Phillip Griffiths, and Matt Kerr, Mumford-Tate groups and domains, Annals of
+   Mathematics Studies, vol. 183, Princeton University Press, Princeton, NJ, 2012, Their geometry
+   and arithmetic.
+3. Thorgal Hinault, Tony Yue Yu, Chi Zhang, and Shaowu Zhang, Decomposition and framing of
+   F -bundles and applications to quantum cohomology, arXiv:2411.02266[math.AG], 2024.
+4. Hiroshi Iritani, Quantum cohomology of blowups, arXiv:2307.13555[math.AG], 2023.
+5. Ludmil Katarkov, Maxim Kontsevich, Tony Pantev, and Tony Yue Yu, Birational invariants
+   from Hodge structures and quantum multiplications, arXiv:2508.05105[math.AG], 2025.
+6. Claire Voisin, Hodge theory and complex algebraic geometry. I, English ed., Cambridge Studies
+   in Advanced Mathematics, vol. 76, Cambridge University Press, Cambridge, 2007, Translated
+   from the French by Leila Schneps.
+   Email address: iritani@math.kyoto-u.ac.jp
+
+  Department of Mathematics, Graduate School of Science, Kyoto University,
+Kitashirakawa-Oiwake-cho, Sakyo-ku, Kyoto, 606-8502, Japan
+

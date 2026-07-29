@@ -342,3 +342,199 @@ routes are in the audit record), then the certificate is final and the
 WP-1..5 simplification program resumes on it — with R5's
 classification-deletion and the cover-native formulation already banked
 as simplifications.
+
+## 2026-07-29 — WP-0.6 punch list complete; stopped at director gate
+
+**Completion verdict:** all eight certificate-hygiene findings N1–N8 are
+incorporated in `certificates/REPAIRED_PROOF.md` without weakening the
+repaired theorem or crossing into WP-1–WP-5. The imported-interface table is
+now A1–A15; every external input used in Sections 3–5 is either listed there
+or proved in the certificate.
+
+**Historical-line-number note:** the line references and A-row attributions
+in this WP-0.6 entry refer to the certificate snapshot at the WP-0.6 gate.
+WP-1 subsequently inserted Lemmas 3.5–3.6 and Proposition 3.7, narrowed A6,
+and renumbered later lines. The current interface and use-site ledger is
+`certificates/GW_INPUT.md`; the snapshot below is intentionally not rewritten.
+
+### Per-item closure
+
+1. **N1 — closed.** A11 at certificate line 64 now identifies the full
+   A-model fiber with Betti cohomology and records the fiber-point atomic
+   decomposition. Corollary 3.4, lines 381–430, derives the folded
+   Hodge-polynomial and invariant-rank identities component by component,
+   with
+   \(m_X(\alpha)=\sum_{C:\bar C=\alpha}\deg(C/U_X)\) taken before the
+   automorphism/global-atom quotient. R3 uses the derived identity at lines
+   579–590.
+2. **N2 — closed.** A6, line 59, includes the full-cohomology clause. R5,
+   lines 633–641, explains that the single reduced eigenvalue makes the
+   unique generalized eigenspace the entire fiber and obtains
+   \(E^{\boldsymbol\eta(S_{\min})}\cong
+   H_B^\bullet(S_{\min},\overline{\mathbf Q})\).
+3. **N3 — closed.** Disjoint-union additivity is in A6, and R5 reduces an
+   arbitrary disconnected variety to a connected component at lines
+   599–612 before treating points, curves, and surfaces.
+4. **N4 — closed.** The former context-dependent Lemma 3.2(4) is now the
+   standalone Proposition 3.3, lines 278–365, with density, finite
+   étaleness, surjectivity, and point-factor hypotheses stated explicitly.
+   The cubic verification, including the exact density pin, is at lines
+   526–533.
+5. **N5 — closed.** A12, line 65, pins KKPY's analytic group-germ
+   framework. Lemma 3.2(2), lines 242–257, compares action and projection
+   pullbacks on common refinements and expressly avoids claiming that the
+   full unbounded group preserves one affinoid representative.
+6. **N6 — closed.** The Hassett artifact is stored at
+   `tmp/pdfs/hassett-special-cubic-fourfolds.pdf`; its manifest entry is at
+   lines 35–43 and A8/A14 give corrected artifact pagination. R4, lines
+   666–693, quotes the integral-Hodge-lattice line and Theorem 3.1.2 and
+   explains why the implication used is independent of the Hodge
+   conjecture.
+7. **N7 — closed.** Lemma 3.2(1), lines 162–240, proves resultant-unit
+   persistence, characteristic-polynomial CRT projectors, the
+   Sylvester/Nakayama reduction of any competing idempotent, and hence
+   \(m\ge1\). Proposition 3.3, lines 300–346, proves the cover-native kernel
+   is an idempotent image and therefore a vector subbundle; A15 lists the
+   reduced-affinoid identity principle used in that proof.
+8. **N8 — closed.** A13, line 66, and the sign convention at lines 108–129
+   distinguish \(\kappa_{\mathrm{at}}=\operatorname{Eu}\star(-)\) from
+   \(K_{\mathrm{res}}=-\kappa_{\mathrm{at}}\). R1 keeps the positive atom
+   spectrum while recording the negated HYZZ residue spectrum and unchanged
+   multiplicities at lines 465–504.
+
+### Source and replay verification
+
+The new local artifact is a valid 28-page PDF and has the ordered digest:
+
+```text
+ecc2e31a63f56d443aaa3534f0218b25a5b6ab6e1a84c82db5c7bac1789a1d21  tmp/pdfs/hassett-special-cubic-fourfolds.pdf
+```
+
+The complete five-artifact hash replay matches the manifest. The finite
+matrix replay again returns
+
+```text
+L**5 - 729*L**2*q
+```
+
+and `git diff --check` returns no output.
+
+The WP-0.6 delta in this problem directory is confined to
+`certificates/REPAIRED_PROOF.md`, this `RESOLUTION.md` entry, and the new
+Hassett PDF. `certificates/GAP_REPORT.md` and `DEPENDENCY_MAP.md` are
+untouched. Pre-existing user changes in sibling Problem E remain untouched
+and are not part of this work order.
+
+### Gate state
+
+**STOP.** WP-0.6 is complete at its assigned scope and awaits director
+review of the diff. No WP-1–WP-5 work, author contact, or Lean work has
+started.
+
+## 2026-07-29 — WP-1 minimal GW input complete; stopped at director gate
+
+**Completion verdict:** the repaired proof's Gromov--Witten exposure is
+definitively reduced to **three interfaces**. The required inventory is
+[certificates/GW_INPUT.md](certificates/GW_INPUT.md), and the reductions
+which change the proof boundary are incorporated directly in
+[certificates/REPAIRED_PROOF.md](certificates/REPAIRED_PROOF.md).
+
+### Surviving rows
+
+1. **GW-1 — F3, AXIOM-INTERFACE.** The full analytic, maximal,
+   Hodge-equivariant genus-zero A-model package for the smooth projective
+   varieties of dimension at most four reached by the proof. The full rank-27
+   big cubic germ is load-bearing in R2; small-\(q\) polynomiality does not
+   replace it.
+2. **GW-2 — F2, FORMALIZE.** Only the cubic's three degree-one ambient line
+   counts \((6,15,6)\). Beauville's Grassmannian formula is now the primary
+   input; Givental's general Fano complete-intersection theorem is retained
+   only as an independent cross-check.
+3. **GW-3 — F3, AXIOM-INTERFACE.** Only the Hodge-compatible blowup
+   decomposition for surface point blowups and for smooth fourfold blowups
+   along centers of dimension at most two. Iritani is the underlying source,
+   not an independent proof; Bayer checks only a point-blowup spectral
+   shadow. No complete independent route was found.
+
+### Interface reductions incorporated
+
+- Certificate Lemma 3.5 derives the ambient matrix from Beauville's three
+  line-incidence integrals and records a finite coefficient-extraction replay.
+  The general Givental/quantum-Lefschetz theorem is deleted from the trusted
+  boundary.
+- Certificate Lemma 3.6 proves the nef-\(K\) single-atom statement directly
+  from grading, virtual dimension, and the unit axiom. KKPY Lemma 5.24 is no
+  longer imported.
+- Certificate Proposition 3.7 introduces the finer blowup-Hodge-atom quotient
+  and telescopes only the blowup formula along weak factorization. The
+  positive-\(t^2\) cubic atom cannot come from \(\mathbf P^4\), so it must
+  occur in a center of dimension at most two. This deletes KKPY Theorem 4.11,
+  Iritani--Koto's projective-bundle theorem, and imported Proposition 5.30.
+- Disjoint-union additivity is componentwise bookkeeping, not GW input.
+- Primitive-class vanishing in KKPY Lemma 6.11 is downstream of Theorem 6.8
+  and is deleted from this target's interface. If later needed, its conclusion
+  at \(q_0\) follows from Lemma 3.5, Frobenius symmetry, grading, and
+  primitivity.
+- Deformation invariance has no separate certificate use-site and is deleted
+  as an interface. Beauville invokes it internally in proving his all-smooth
+  target statement; that dependence is recorded inside GW-2 rather than
+  exposed as a family-transport API.
+- The work order's “Proposition 5.31” has no referent in the pinned
+  arXiv:2508.05105v2 artifact; Proposition 5.30 is followed by §5.5.
+
+### New pinned source artifacts
+
+~~~text
+9d022796aefa01fd601820e415c5462bdfc255b3b4fe158af64b51f7bf0a83e3  tmp/pdfs/beauville-quantum-complete-intersections.pdf
+0114923576b2ec3a78fc346fd9f61eb65cfe63f8cc7087881d11626cdb9883c3  tmp/pdfs/2604.10028v2.pdf
+~~~
+
+The corresponding extracted text files are retained beside the PDFs for
+searchable provenance. The already pinned Iritani blowup v3 PDF has digest
+\(c16f56b283863322df04dadaeb0780889abd67a664f56a74fea39bc7ba8a934b\).
+
+### Verification record
+
+The Beauville coefficient extraction returned
+
+~~~text
+[6, 15, 6]
+~~~
+
+and the matrix replay returned
+
+~~~text
+L**5 - 729*L**2*q
+~~~
+
+The ordered source-hash replay in certificates/GW_INPUT.md matched all six
+expected digests. Control-character scans and git diff --check returned no
+output.
+
+Sibling Problem E modifications remain untouched and outside this work order.
+No author contact, Lean implementation, or WP-2 factorization work was
+performed.
+
+### Gate state
+
+**STOP.** WP-1 is complete at worker scope. Director review asks whether each
+of the three rows is genuinely irreducible and each deletion genuinely
+justified at its certificate use-site. WP-2 begins only after acceptance.
+
+## 2026-07-29 — gates on WP-0.6 and WP-1: ACCEPTED; WP-2 ordered
+
+WP-0.6: punch list incorporated (N1–N8; diff reviewed against the
+acceptance criteria — interface table complete with hashes, no statement
+weakened).  WP-1: `GW_INPUT.md` accepted — the program's GW exposure is
+three rows (GW-1 bundle package, AXIOM-INTERFACE; GW-2 the three
+Beauville numbers, FORMALIZE with Givental as cross-check; GW-3 the
+two-case blowup formula via Iritani, AXIOM-INTERFACE), nine deletions
+with use-site arguments including deformation invariance and the general
+mirror theorem, Prop. 5.30 replaced in-certificate (D8) leaving A7 (weak
+factorization) as the sole unexamined non-GW infrastructure input, and
+the negative finding that the full rank-27 germ is genuinely required.
+The "Prop. 5.31" bibliographic ghost is assigned to WP-2 housekeeping.
+`WORKORDER_2.md` issued: decide A7's fate — E1 delete via
+morphism-monotonicity (MONO) + Hironaka; E2 pin as the third permanent
+axiom interface with the fourfold specialization; E3 timeboxed
+restructure probe.
