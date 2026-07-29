@@ -11,22 +11,27 @@ The current two-axis ranking and the four-path audit are in
 
 ## 2026-07-28 delta
 
-> **DIRECTOR STOPPING RULE (restored 2026-07-29 with owner confirmation;
-> supersedes ranking below where they conflict).**  No NEW `tmp/` sweep
-> whose conclusion has the form "degree / support / chart N excluded" may
-> be dispatched unless it is a step inside a structural, degree-independent
-> theorem.  **Runs already in flight may continue to completion — do not
-> kill them — unless they contend for resources with the newly prioritized
-> computations below, in which case the new work wins.**  Next dispatches,
-> in order: (1) the five exact checks of "Generalizing the F-engine"
-> below — cheap, unrun, and they decide whether the transition-system
-> obstruction OR a positive construction along the fixed configuration is
-> the live route; (2) the structural targets the worker itself named
-> (global foliation / line-subsheaf / bounded-pole), formulated as
-> theorems to prove rather than sweeps to run.  Bounded sweeps may resume
-> only if (1) and (2) produce a precise delimitation showing they are
-> needed.  Precedent: Problem F's degrees-24–34 ladder — every certificate
-> correct, none decisive — retired at once by one structural argument.
+> **DIRECTOR STOPPING RULE (corrected 2026-07-29; owner-confirmed).**  No
+> NEW `tmp/` sweep whose conclusion has the form "degree / support / chart
+> N excluded" may be dispatched unless it is a step inside a structural,
+> degree-independent theorem.  Runs already in flight continue to
+> completion unless they contend with newly prioritized work, in which
+> case the new work wins.  **Correction to the previous wording:** the
+> five F-engine checks are DONE (`tmp/involution_exceptional_divisor/`,
+> `tmp/d12_line_restriction/`; RESOLUTION item 8) — the director's
+> "unrun" claim was wrong.  Their verdict stands: the finite transition
+> graph CLOSES rather than obstructs; per the pre-registered fork in the
+> technique-import note, that outcome weighs toward a POSITIVE
+> construction along the fixed configuration, and the worker's
+> do-not-rerun note on the constant-path argument is endorsed.  Current
+> priorities: (1) the structural targets as reformulated by the
+> degree-256 endomorphism finding — a global foliation / line-subsheaf
+> theorem, or an effective bound for one MINIMAL solution (the uniform
+> bound is dead: precomposition saturates degrees 4^n d); (2) the
+> positive-construction assessment the closing graph licenses, alongside
+> the ongoing xcd descent (DAG implementation, then alpha_R).  Bounded
+> sweeps re-enter only on a precise delimitation showing they are needed.
+
 
 > **Cross-problem import, now audited (see the full section near the end of
 > this file):** Problem F — the PSL(2,7) degree-2 del Pezzo — is RESOLVED
