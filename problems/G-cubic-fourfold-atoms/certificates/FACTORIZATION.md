@@ -2,7 +2,8 @@
 
 **Date:** 2026-07-29; **work order:** WP-2; **verdict:** **E2 — MINIMIZE**
 
-**Status:** complete at worker scope; **STOP at director review before WP-3**
+**Status:** WP-2 accepted; trusted-boundary scoreboard updated by WP-3;
+**STOP at director review before WP-4**
 
 ## 1. Binary result
 
@@ -22,7 +23,7 @@ asserts complete, not projective, intermediate varieties.
 ## 2. Exact use that must be supplied
 
 The consumed passage is Proposition 3.7 of
-[`REPAIRED_PROOF.md`](REPAIRED_PROOF.md), certificate lines 563--598. The
+[`REPAIRED_PROOF.md`](REPAIRED_PROOF.md). The
 required passage is quoted in full:
 
 > ### Proposition 3.7 — the target-specific weak-factorization consequence
@@ -189,9 +190,10 @@ searched proof boundary, not evidence that (MONO) is false.
 
 ## 4. E2 interface — the exact surviving A7
 
-| ID | Tight statement actually consumed | Hash-pinned source | Exact use-sites in the repaired certificate | Honest minimal special case | Independent verification route | Cost | Lean-phase recommendation |
-|---|---|---|---|---|---|---|---|
-| WF-4 (A7) | If a smooth projective complex fourfold \(X\) is birational to \(\mathbf P^4\), there is a finite chain \(\mathbf P^4=V_0\dashrightarrow V_1\dashrightarrow\cdots\dashrightarrow V_\ell=X\) of smooth projective complex fourfolds such that every step, in one orientation, is the blowup of a smooth irreducible center. After deleting identity steps, every center has codimension at least two and hence dimension at most two. | AKMW, *Torification and factorization of birational maps*, JAMS 15 (2002), 531--572, arXiv:math/9904135v4, Theorem 0.1.1, internal pp. 1--2; [local PDF](../tmp/pdfs/akmw-torification-factorization.pdf), SHA-256 `55bbc2c58f29d4b9dbe965035f80f3844f6968eaf98076ac625132ac3b3977a5`. The projectivity conclusion is explicit on p. 2. | A7 in the interface table; Proposition 3.7, certificate lines 563--598; its conclusion at certificate lines 825--827. | Only the endpoint pair \(\mathbf P^4,X\), ordinary smooth-center blowups in both directions, and projective intermediate fourfolds. No functoriality, normal-crossings refinement, analytic version, arbitrary field or dimension, or strong factorization is consumed. The dimension bound on centers is derived, not assumed. | Włodarczyk, *Toroidal varieties and the weak Factorization Theorem*, Invent. Math. 154 (2003), 223--331, arXiv:math/9904076v5, displayed statement 0.0.1 on internal p. 1, Proposition 12.2.1 on internal pp. 64--65, and proof completion in §12.4 on internal p. 66; [local PDF](../tmp/pdfs/wlodarczyk-toroidal-weak-factorization.pdf), SHA-256 `2f7a0bce5871db86bf84f54c4562fc053c53a4313180a6eecb66587d21e4fcfe`. It independently proves smooth complete weak factorization, but does not independently supply AKMW's projective-intermediate clause. | F3 | **AXIOM-INTERFACE.** Expose only WF-4. Do not formalize the factorization proof inside the main development. |
+The authoritative `WF-4` row has been moved to the single interface table in
+[`GW_INPUT.md`](GW_INPUT.md), Section 2. Its statement, AKMW hash, Włodarczyk
+cross-check, exact use-sites, F3 cost, and minimal scope are recorded there.
+This section retains the proof of the two elementary deductions from that row.
 
 A smooth codimension-one center in a smooth variety is an effective Cartier
 divisor, and its blowup is an isomorphism. Such steps can be deleted. A
@@ -242,29 +244,34 @@ equality by definition would instead discard the data the atomic obstruction
 is meant to detect. Thus neither version supplies a cheaper replacement for
 A7.
 
-## 6. Program-wide trusted boundary after WP-2
+## 6. Program-wide trusted boundary after WP-3
 
 The honest current display is
 
 \[
 \mathsf{TB}_G=
-\underbrace{\{\mathrm{GW\!-\!1}(A1),\mathrm{GW\!-\!3}(A6),
-\mathrm{WF}_4(A7)\}}_{\text{established permanent F3 interfaces}}
+\underbrace{\{\mathrm{GW\!-\!1},\mathrm{GW\!-\!3},\mathrm{WF}_4\}}
+_{\text{analytic GW and birational interfaces}}
 \cup
-\underbrace{\{\mathrm{HYZZ}(A3)\}}_{\text{WP-3 discharge or fourth axiom}}
+\underbrace{\{\mathrm{SEP\!-\!CONV}\}}
+_{\text{finite analytic split plus HYZZ strict-shrink convergence}}
 \cup
-\underbrace{\{\mathrm{HAtom}_{\rm cov}(A5,A10,A11,A12),
-\mathrm{NL}_{\rm cubic}(A8,A14),\mathrm{Surf}_{\min}(A9)\}}
+\underbrace{\{\mathrm{HATOM\!-\!RAW},
+\mathrm{NL\!-\!CUBIC},\mathrm{SURF\!-\!MIN}\}}
 _{\text{Hodge-side and terminal birational interfaces}}.
 \]
 
-Thus the paper-level sentence justified at this gate is: the obstruction is
-conditional on the analytic A-model package GW-1, the two-case blowup package
-GW-3, weak factorization WF-4, HYZZ decomposition unless WP-3 discharges it,
-and the displayed Hodge-side interfaces. GW-2/A4 and the remaining elementary
-repair lemmas belong to the formalization spine, not the permanent axiom
-boundary. WP-3 and WP-4 may further minimize the braces assigned to them; this
-certificate does not pre-judge those work orders.
+The formal separated-projector theorem is now internal and proved in
+[`ATOM_CORE.md`](ATOM_CORE.md), Section 4. The only surviving analytic brace is
+`SEP-CONV`: its finite $u=0$ block extension is isolated via a
+non-archimedean analytic implicit-function step, and HYZZ Proposition 3.36
+supplies convergence on a strict shrink conditional on that extension.
+Completion injectivity is internal. Whole HYZZ Theorem 3.42, maximality,
+product decomposition of the base, and the moving-base group-germ argument
+have left the target graph.
+`GW-2` and all other F0/F1/F2 repair lemmas are internal to the formalization
+spine. The exact wording of all seven opaque packages and the one internal F2
+row is in the single table of record in `GW_INPUT.md`.
 
 ## 7. Proposition-number reconciliation
 
@@ -318,22 +325,19 @@ rg -n 'Theorem 1\.2|CF\(X|Conjecture 1\.8|Corollary 1\.9' \
 Observed replay: the four SHA-256 values matched; `pdfinfo` parsed unencrypted
 PDFs of 30, 70, 18, and 64 pages; fresh `pdftotext -layout` output was
 byte-identical to all four retained extracts; and all theorem/problem searches
-returned the displayed anchors. The Proposition 3.7 block above matched
-certificate lines 563--598 after whitespace normalization. `git diff --check`,
+returned the displayed anchors. The Proposition 3.7 block above matched the
+current certificate after whitespace normalization. `git diff --check`,
 the separate new-file whitespace check, Markdown-link/table/fence checks, and
 the control-character scan produced no diagnostics. The pre-existing sibling
 Problem E modifications were not touched.
 
 ## 9. Gate
 
-**STOP.** WP-2 is complete at worker scope. Director review should decide:
+WP-2's E2 verdict and `WF-4` row were accepted. The current gate is WP-3:
 
-1. whether each failure point in the E1 audit really blocks MONO rather than
-   merely the attempted proof;
-2. whether WF-4 is the minimal exact A7 interface and the asymmetric status of
-   the Włodarczyk cross-check is clear;
-3. whether the trusted-base display exposes, rather than hides, HYZZ and the
-   Hodge-side interfaces; and
-4. whether the Proposition 5.28 reconciliation is complete.
+1. is the replacement of whole HYZZ by the proved formal theorem plus
+   `SEP-CONV` honest at the finite analytic split and convergence steps;
+2. does `ATOM_CORE.md` close over exactly the seven displayed packages; and
+3. is its Mathlib shopping list concrete enough to cost WP-4?
 
-WP-3 has not begun.
+**STOP.** WP-4 has not begun.

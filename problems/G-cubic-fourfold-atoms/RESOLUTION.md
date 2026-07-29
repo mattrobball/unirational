@@ -2,14 +2,119 @@
 
 ## Current verdict
 
-**2026-07-29 — WP-2 COMPLETE AT WORKER SCOPE; STOPPED AT DIRECTOR REVIEW.**
+**2026-07-29 — WP-3 COMPLETE AT WORKER SCOPE; STOPPED AT DIRECTOR REVIEW.**
 
-WP-0.6 and WP-1 have been accepted. WP-2 selects **E2 — MINIMIZE**: MONO is
-unsupported but not refuted, and the exact fourfold weak-factorization input
-survives as `WF-4 (A7)`. The source boundary, failed E1 routes, E3 probe,
-trusted-base display, and Proposition 5.28 correction are recorded in
-[`certificates/FACTORIZATION.md`](certificates/FACTORIZATION.md). WP-3 has not
-begun.
+WP-3 selects **SPLIT** for HYZZ. The formal separated horizontal-projector
+theorem is proved over \(k[[t_1,\ldots,t_n]][[u]]\); the sole surviving
+analytic residue is `SEP-CONV`: finite analytic extension of the closed blocks
+at \(u=0\), followed by strict-shrink convergence of the formal projectors.
+Completion injectivity is internal by Krull intersection. Whole HYZZ Theorem 3.42,
+maximality, product-base splitting, and the moving-base group-germ argument
+are no longer consumed.
+
+[`certificates/ATOM_CORE.md`](certificates/ATOM_CORE.md) records the entire
+F0/F1/F2 spine, finite \(6,15,6\) and characteristic-polynomial
+verifications, top theorem closure, exact Mathlib homes, and named
+prerequisite gaps. [`certificates/GW_INPUT.md`](certificates/GW_INPUT.md) is
+now the one table of record. WP-4 has not begun.
+
+## 2026-07-29 — WP-3 formal core complete; HYZZ outcome SPLIT
+
+### Half A — formal discharge and analytic residue
+
+The formal layer is not merely ordinary idempotent lifting. The completed
+proof has four stages:
+
+1. Hensel factorization and CRT lift the closed primary projectors to a
+   \(U_0(t)\)-stable decomposition at \(u=0\).
+2. Bases of the free blocks give a $t$-dependent but $u$-independent gauge
+   in which the projectors are constant coordinate blocks. Unit resultants
+   make every off-diagonal Sylvester commutator invertible.
+   An order-by-order \(u\)-gauge kills all off-diagonal coefficients.
+3. Flatness recurrence (HYZZ equation (3.30)) forces every base-direction
+   matrix to be block diagonal.
+4. A first-nonzero-\(u\)-coefficient argument proves uniqueness; symmetry
+   equivariance follows from uniqueness.
+
+This gives unique complete orthogonal horizontal projectors over the same
+formal base, with no maximality or product-base conclusion.
+
+The analytic step remains genuinely separate and has two explicit clauses.
+First, a finite non-archimedean analytic implicit-function step extends the
+closed blocks to an analytic \(U_0\)-stable decomposition; this is the matrix
+specialization described in `ATOM_CORE.md` §5.2 and compared with Vezzani,
+Proposition A.1.1. Second, HYZZ Proposition 3.36, which assumes that first
+clause, uses a non-archimedean norm double induction. A certificate-level
+reproduction must both repair its self-referential terminal maximum and shrink strictly from
+\((\delta,\epsilon)\) to \((\delta',\epsilon')\), gaining
+\((\delta'/\delta)^m(\epsilon'/\epsilon)^{|v|}\to0\) so the infinite gauge
+and inverse tend to convergent products. WP-3 records both analytic boundaries
+but does not reproduce the full implicit-function or conjugation estimates.
+It therefore retains the narrow `SEP-CONV` interface rather than claiming
+analytic discharge. Equality of analytic germs with the same completion is
+proved internally from Noetherianity and Krull intersection.
+
+Because this replacement theorem has no maximality hypothesis, R2 may first
+restrict the rank-27 connection to the five-dimensional Hodge-fixed germ and
+split it there. The old full-base restriction route and A12 are retired.
+
+### Half B — formalization spine
+
+`ATOM_CORE.md` explicitly specifies:
+
+- \(F=\overline{\mathbf Q}\), the non-archimedean field \(k\), the formal
+  rings \(R=k[[t_1,\ldots,t_n]]\), \(A=R[[u]]\), finite free modules, residue
+  and atom operators, and horizontal-projector equations;
+- primary CRT, the sign lemma, spectrum on invariants, exact proreductive
+  invariants and scalar base change;
+- finite-étale cover CRT, idempotent-image bundles, reduced-Jacobson
+  pointwise vanishing, atom quotient, `Finsupp` chemical formulas, and Laurent
+  \(p-q\) polynomials;
+- the F2 degree-one line-incidence theorem, including contracted-tail boundary
+  and virtual-class/incidence comparison, as a genuine internal proof
+  obligation, followed by the full F0 \(6,15,6\) coefficient extraction;
+- the \(5\times5\) matrix, characteristic polynomial
+  \(L^2(L^3-3^6q)\), and invariant primary dimensions \(2,1,1,1\);
+- the nef-filtration lemma, weak-factorization telescope, surface endpoint,
+  final contradiction, and Noether–Lefschetz quantifier;
+- a file-by-file Lean plan and twenty concrete prerequisite declarations,
+  audited against Lean 4.32.1 and Mathlib commit
+  `520045ab14e26149ee970e2e617ca04b09bde5d6`.
+
+Proposition 5.28 is kept in a downstream-only file and has no edge to Theorem
+6.8. No F-bundle, nc-Hodge, or infinity-category abstraction is present in
+the formal core.
+
+### Trusted boundary and new source pins
+
+The top theorem has exactly seven opaque packages:
+
+\[
+\{\mathrm{GW\!-\!1},\mathrm{GW\!-\!3},\mathrm{WF}_4,
+\mathrm{SEP\!-\!CONV},\mathrm{HATOM\!-\!RAW},
+\mathrm{NL\!-\!CUBIC},\mathrm{SURF\!-\!MIN}\}.
+\]
+
+`GW-2` and all other F0/F1/F2 nodes are internal. The WF-4 row was moved from
+`FACTORIZATION.md` into `GW_INPUT.md`; `FACTORIZATION.md` now contains only a
+pointer and the current scoreboard.
+
+Three formerly web-only sources were pinned locally:
+
+```text
+48f8af5249081217fc4a806414a764d9d69d66eff9092ddd8e2cf0ea078579e8  tmp/pdfs/milne-tannakian-categories.pdf
+5add29094b74385746c4d977290b2308d02cbe8aa6f085e6a99724f6939e309b  tmp/pdfs/conrad-nonarchimedean-geometry.pdf
+bf53f2958e17de3ece49c27d433f98f9a55086fedd4c7cbb65e9bb15682e8f4d  tmp/pdfs/vezzani-nonarch-implicit-function.pdf
+```
+
+Their searchable `pdftotext -layout` extracts are retained beside them.
+
+### Gate
+
+**STOP.** Director review should decide whether the `SPLIT` boundary is
+honest at the hardest analytic step, whether `ATOM_CORE.md` closes without a
+hidden assumption, and whether the named Mathlib gaps are concrete enough to
+authorize WP-4.
 
 ## 2026-07-29 -- WP-0 critical-path audit
 
@@ -635,3 +740,23 @@ split outcome (proved formal lemma + smaller analytic axiom) explicitly
 sanctioned; Half B — ATOM_CORE.md, the formalization spine in
 Mathlib-shaped plain language closing over the named axiom interfaces,
 with the Mathlib gap list as the Lean phase's shopping list.
+
+## 2026-07-29 — gate on WP-3: ACCEPTED (SPLIT); WP-4 ordered
+
+ATOM_CORE.md accepted.  Half A landed the best sanctioned exit: the
+formal separated splitting is proved in-certificate, and the surviving
+analytic residue is the single statement SEP-CONV (formal horizontal
+projectors are Taylor expansions of analytic ones under separated
+closed-residue eigenvalues), pinned to HYZZ Prop. 3.36 + Vezzani A.1.1,
+with the failure of the cheap completion/faithful-flatness transfer
+honestly recorded — HYZZ-as-a-whole leaves the axiom list.  Half B: the
+top theorem closes over exactly seven hash-pinned packages (GW-1, GW-3,
+WF-4, SEP-CONV, HATOM-RAW, NL-CUBIC, SURF-MIN); GW-2 is internal (F2
+file + F0 computation); schematic Lean signatures drafted; file layout
+with Mathlib homes verified against the sibling project's exact Mathlib
+commit including instance-synthesis checks; the named-prerequisite
+shopping list stands at ~13 items including Mathlib's own Henselian
+idempotent-lifting TODO.  WORKORDER_4 issued: the explicit-instance
+effectivity assessment (expected NO, argued), per-clause shrinkage of
+NL-CUBIC and HATOM-RAW at their use-sites, and the pinned Lean target
+statement with the corollary ladder mirroring Problem B's layering.
