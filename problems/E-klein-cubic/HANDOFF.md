@@ -11,6 +11,23 @@ The current two-axis ranking and the four-path audit are in
 
 ## 2026-07-28 delta
 
+> **DIRECTOR STOPPING RULE (restored 2026-07-29 with owner confirmation;
+> supersedes ranking below where they conflict).**  No NEW `tmp/` sweep
+> whose conclusion has the form "degree / support / chart N excluded" may
+> be dispatched unless it is a step inside a structural, degree-independent
+> theorem.  **Runs already in flight may continue to completion — do not
+> kill them — unless they contend for resources with the newly prioritized
+> computations below, in which case the new work wins.**  Next dispatches,
+> in order: (1) the five exact checks of "Generalizing the F-engine"
+> below — cheap, unrun, and they decide whether the transition-system
+> obstruction OR a positive construction along the fixed configuration is
+> the live route; (2) the structural targets the worker itself named
+> (global foliation / line-subsheaf / bounded-pole), formulated as
+> theorems to prove rather than sweeps to run.  Bounded sweeps may resume
+> only if (1) and (2) produce a precise delimitation showing they are
+> needed.  Precedent: Problem F's degrees-24–34 ladder — every certificate
+> correct, none decisive — retired at once by one structural argument.
+
 > **Cross-problem import, now audited (see the full section near the end of
 > this file):** Problem F — the PSL(2,7) degree-2 del Pezzo — is RESOLVED
 > NEGATIVE by an all-degree V₄-fixed exceptional-path obstruction.  Its
@@ -89,28 +106,39 @@ replayed.
   `T_m=0` (or vanishing of `[(T_m tensor W)^G]`).  The tempting surjective
   four-term Cech complex is false: the `D12` line map has right cokernel
   Hilbert function `(4,5,1)`, and the residual point term is instead a
-  quotient on the left of its kernel.  Over split `F_67`, the bounded colon
-  packet now proves `[(T_1)_d tensor W]^G=0` for every `d<=32`; the automatic
-  regularity bound gives the same conclusion for every `d>=164`.  The direct
-  compact/literal comparison covers degrees 14--32, while injectivity on the
-  plane-normal source handles lower degrees.  Multiplication by `f3`, formed
-  before quotienting, is injective on `D_d -> D_(d+3)` for every
-  `14<=d<=29`.  The truncated quotient through degree 32 has dimension 1,346,
-  versus the decisive target 1,572, so the colon remains unresolved exactly
-  in degrees 33--163.  This is not a characteristic-zero saturation theorem.
+  quotient on the left of its kernel.  Over split `F_67`, compact/literal
+  comparison proves `[(T_1)_d tensor W]^G=0` through degree 34, and automatic
+  regularity gives zero in every degree at least 164.  Multiplication by
+  `f3`, formed before quotienting, is injective on `D_d -> D_(d+3)` for every
+  `14<=d<=31`; the truncated quotient through degree 34 is 1,459.  Degree 35
+  changes the conclusion: the line kernel has dimension 878, the combined
+  point rank is 516, the compact saturation has dimension 362, and the
+  independently rebuilt literal global image has dimension 361.  Hence
+  `dim [(T_1)_35 tensor W]^G=1`.  Finite irrelevant-torsion nilpotence then
+  gives a nonzero element of `(0 :_D1 f3)` in some degree.  Thus the proposed
+  all-degree split-fibre colon vanishing, and with it the target-1,572
+  certificate, is **refuted**.  The first killed degree/vector is not known,
+  and no characteristic-zero saturation statement follows.  A complete
+  second split fibre at `(89,zeta11-2)` again has compact dimension 362, while
+  the full 637-dimensional ambient global space has order-zero restriction
+  rank 276 and hence literal-image dimension at most 361.  This proves a
+  second positive fibre defect but still does not lift it: rank may increase
+  generically.  The raw cyclotomic line matrix alone has a 492.8 MiB
+  coefficient floor before field/bignum overhead, so a characteristic-zero
+  proof now requires intrinsic compressed line/point differentials or a small
+  exact cycle/nonboundary certificate, not another prime.
   See
   `tmp/symbolic_global_exactness/REPORT.md`,
   `tmp/graded_symbolic_architecture/REPORT.md`, and
   `tmp/m1_compact_graded_pilot/REPORT.md`, together with
-  `tmp/m1_t1_saturation/REPORT.md` and
-  `tmp/m1_t1_f3_colon_attack/REPORT.md`.
-  The sharp all-degree successor is one `f3`-colon on
-  `D_1=[(E_1/M_1) tensor W]^G`: because `f3` is nonzero on both residual
-  point orbits, it is enough to prove `(0 :_D1 f3)=0`.  Equivalently, a
-  finite presentation must certify `dim_F67(D_1/f3 D_1)=1572`.
-  The bounded packet accounts for only 1,346 quotient classes, leaving at
-  least 226 free classes to occur later and no control on possible torsion.
-  See `tmp/m1_t1_propagation_design/REPORT.md`.
+  `tmp/m1_t1_saturation/REPORT.md`,
+  `tmp/m1_t1_f3_colon_attack/REPORT.md`, and
+  `tmp/m1_t1_f3_colon_degree35_audit/REPORT.md`, together with
+  `tmp/m1_t1_char0_d35_gate/REPORT.md`.  The linear successors are
+  now a characteristic-zero/integral saturation analysis and higher symbolic
+  order; extending the same split-`F_67` zero-colon ladder cannot prove the
+  false statement.  The nonlinear relative border/Fitting landing problem is
+  unaffected.
 - The complete split-`F_67` order-four landing system on the degree-25
   strict 43-space is now known, not merely its former `56/56` high-order
   block.  With `V=Q_37 direct_sum K_6`, its 842-dimensional cubic row space
@@ -353,17 +381,28 @@ replayed.
   three-support sweeps.  The local KLS determinant hypersurface has dimension
   19, while all four-direction first jets with fixed three-coordinate support
   have dimension at most 10; `P3/P5/P8` families cannot be exhaustive.  The
-  first full-support `P9` chart hit the 700 MiB stop with no verdict.  The
-  negative route now needs a global foliation/line-subsheaf theorem or a
-  bounded-pole normal form.  Replay with
+  first full-support `P9` chart hit the 700 MiB stop with no verdict.  A new
+  structural theorem rules out the formerly suggested bound on *all* KLS
+  solutions.  The installed primitive quartic covariant defines a finite
+  surjective `G`-endomorphism `c:P4->P4` with `c^*O(1)=O(4)` and degree 256.
+  Precomposing any primitive KLS solution by `c` preserves the Jacobian rank
+  drop and multiplies its saturated degree by four.  Thus one solution would
+  generate solutions in degrees `4^n d`; an all-solutions pole/degree bound is
+  false in the positive case and vacuous in the negative case.  The same
+  packet gives a rank-1024 finite free `C`-adic decomposition with residue
+  degrees at most 15, but no Jacobian descent across its residue terms.  The
+  valid successor is a theorem bounding one *minimal* KLS solution (an
+  effective essential-dimension statement), or a direct global
+  foliation/line-subsheaf argument.  Replay with
   `python3 tmp/kls_divisor_ansatz/verify.py` and
   `python3 -u tmp/kls_residue_next/verify.py`, then
   `python3 tmp/kls_first_jet_two_fiber/verify_manifest.py`,
   `python3 tmp/kls_first_jet_two_fiber/verify.py --ledger-only`,
   `python3 tmp/kls_first_jet_two_fiber/verify_manifest_p5.py`, and
   `python3 tmp/kls_first_jet_two_fiber/verify_p5.py --ledger-only`, then
-  `python3 -u tmp/kls_first_jet_three_fiber/verify_combined_p8.py` and
-  `python3 -u tmp/kls_structural_audit/verify.py`.
+  `python3 -u tmp/kls_first_jet_three_fiber/verify_combined_p8.py`,
+  `python3 -u tmp/kls_structural_audit/verify.py`, and
+  `/opt/homebrew/bin/python3 -u tmp/kls_structural_successor/verify.py`.
 - On the characteristic-23 soluble `xCD` control, \(Q=[H-3O]\), the
   irreducible nonzero \(E[3]\) field, and the genuine nonzero representative
   \(G(Q)\) are explicit.  Translation interpolation still times out before a
@@ -456,10 +495,22 @@ replayed.
   branches.  The next structural gate is therefore the image of the global
   class group in the four boundary valuations of the normalized
   `G`-equivariant weighted Rees model, followed only then by horizontal fibre
-  degree.  Replay the normality and local/globalization packets with
+  degree.  That local decision interface is now exact.  The
+  section-preserving weighted Rees family has weights
+  `(x,y,z,t,c)=(2,2,2,1,1)`, survives at both `s=0` and `s=1`, and has special
+  hypersurface `u*v+g4(t,c)`.  Over the quartic splitting field its four
+  primitive branch modules have explicit `2 x 2` matrix factorizations.
+  Individual descent is equivalent to a graded, `s`-torsion-free rank-one
+  reflexive Rees lattice whose special reflexive hull is primitive `I1` or
+  `I3`.  The displayed `2 x 2` lift is only a sufficient defect-free positive
+  ansatz after algebraization across `s=1`, not a necessary test: a general
+  special fibre can have finite-length defect.  No lift has been found or
+  excluded.  Replay the normality and local/globalization packets with
   `/opt/homebrew/bin/python3 -u tmp/xcd_total_normality/verify.py`,
   `/opt/homebrew/bin/python3 -u tmp/xcd_local_class_defect/verify.py`, and
   `/opt/homebrew/bin/python3 -u tmp/xcd_class_globalization_next/verify.py`;
+  replay the Rees descent gate with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_zariski_descent_gate/verify.py`;
   replay the earlier residue packet with
   `/opt/homebrew/bin/python3 -u tmp/xcd_residue_class_gate/verify.py`.
   Its optional `--full` Gröbner recomputation measured about 0.95 GB RSS and
@@ -469,7 +520,8 @@ replayed.
   smaller zero-fibre basis and stays below the cap.  See
   `tmp/xcd_total_normality/REPORT.md`,
   `tmp/xcd_local_class_defect/REPORT.md`, and
-  `tmp/xcd_class_globalization_next/REPORT.md`.
+  `tmp/xcd_class_globalization_next/REPORT.md`, together with
+  `tmp/xcd_zariski_descent_gate/REPORT.md`.
 - The Problem F involution import has an exact correction packet.  For every
   involution, `(dim E_plus,dim E_minus)=(3,2)`, the plus-plane section is a
   smooth genus-one cubic, and `F|E_minus=0`, so the minus fixed locus is a
@@ -880,6 +932,7 @@ python3 tmp/kls_first_jet_two_fiber/verify_manifest_p5.py
 python3 tmp/kls_first_jet_two_fiber/verify_p5.py --ledger-only
 python3 -u tmp/kls_first_jet_three_fiber/verify_combined_p8.py
 python3 -u tmp/kls_structural_audit/verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_structural_successor/verify.py
 python3 tmp/kls_full_support_p9_msolve/verify_p9.py --ledger-only
 python3 tmp/relative_kls_chart/verify.py
 python3 tmp/relative_kls_chart/analyze_exceptional.py
@@ -932,6 +985,7 @@ python3 -u tmp/xcd_discriminant_divisor/verify.py
 /opt/homebrew/bin/python3 -u tmp/xcd_total_normality/verify.py
 /opt/homebrew/bin/python3 -u tmp/xcd_local_class_defect/verify.py
 /opt/homebrew/bin/python3 -u tmp/xcd_class_globalization_next/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_zariski_descent_gate/verify.py
 /opt/homebrew/bin/python3 tmp/involution_exceptional_divisor/verify.py
 /opt/homebrew/bin/python3 tmp/involution_exceptional_divisor/verify_v4.py
 /opt/homebrew/bin/python3 tmp/d12_line_restriction/verify.py
@@ -983,12 +1037,12 @@ certificate; neither bounded theorem gives an all-degree cutoff.
 
 ## Current ranking
 
-The ranked attacks are now: (1) finish the finite irrelevant-saturation
-module left by the exact symbolic sheaf architecture, then attack the full
-landing ideal through its relative border/Fitting presentation.  Over split
-`F_67`, `[(T_1)_d tensor W]^G` vanishes for every `d<=32` and every `d>=164`;
-the finite gap is exactly 33--163, and no characteristic-zero or higher-`m`
-statement follows.  The first
+The ranked attacks are now: (1) replace the refuted split-`F_67` zero-colon
+shortcut by a characteristic-zero/integral saturation analysis, then attack
+the full landing ideal through its relative border/Fitting presentation.
+Over split `F_67`, `[(T_1)_d tensor W]^G` vanishes through degree 34 but has
+dimension one in degree 35; hence the all-degree `f3` colon is nonzero.  No
+characteristic-zero or higher-`m` statement follows.  The first
 `m=3` line-to-`D12` boundary stratum is also killed.  In degree 25 the
 complete 842-cubic system is normalized to 833 monic relations plus a
 `9 x 6` determinantal tail.  The tail leaves a pure 33-dimensional
@@ -1003,12 +1057,14 @@ certificates make `P^19` and then `P^20` empty, so the former
 canonical projective-DVR family gives `dim L_25<=15` for the
 characteristic-zero degree-25 landing locus.  This
 sharply limits the support but does not make it empty.  What remains is sparse module/Fitting support,
-the exact `f3` colon (target quotient dimension 1572), and uniform
+characteristic-zero/higher-order saturation, and uniform
 landing detection on `[(I^(m)/I^(m+2))_d tensor W]^G`, not another finite
 `V4` table, isolated point-row sweep, or raw scalar Hilbert degree; (2)
 attack the original projective `xCD` cubic at `f6=0` through the
-codimension-three local class maps and the quotient-relative degree image
-`3Z` (total-space normality is now proved; `f5=0` descent is the alternative);
+section-preserving graded Rees-lattice lift for primitive branch classes,
+then the global class image and quotient-relative degree image `3Z`
+(total-space normality and the local class maps are now proved; `f5=0`
+descent is the alternative);
 (3) run the
 ambient-polynomial semantic verifier through the remaining 7,846
 degree-six/seven rows before composing the `M7` circuit; and (4) touch
@@ -1020,7 +1076,9 @@ The old degree-22
 memory stop is superseded by the `25 -> 12 -> 4 -> 0` proof.  The
 finite KLS `P8` screen is complete, and dimension
 counts prove that larger sparse three-support boxes cannot be exhaustive;
-the route now needs a global foliation or bounded-pole theorem.  Do not
+the quartic-precomposition theorem now rules out a bound on every solution,
+so the route needs a global foliation theorem or an effective bound for one
+minimal solution.  Do not
 launch another bare Problem F path/transition argument, unchanged degree-12
 mixed charts, high-dimensional raw degree-25 charts, more isolated degree-16 fibres, or control translation
 interpolation.  For headline leverage: (1) the forced 55-plane symbolic
@@ -1535,14 +1593,15 @@ point quotient.  The subsequent global theorem proves that these iterated
 kernels give the correct associated sheaf in every twist.  The naive
 four-term Cech sequence remains false, and the passage to literal
 low-degree graded pieces is controlled by the finite irrelevant-torsion
-module `T_m`.  Over split `F_67`, `[(T_1)_d tensor W]^G` is now zero for every
-`d<=32`, by compact/literal comparison in degrees 14--32 and injectivity on
-the plane-normal source below degree 14; regularity gives the same conclusion
-for every `d>=164`.  All induced `f3:D_d->D_(d+3)` maps with
-`14<=d<=29` are injective.  Their truncated quotient through degree 32 has
-dimension 1,346 rather than the decisive 1,572, leaving degrees 33--163 and
-possible torsion unresolved.  Nothing here lifts the colon to characteristic
-zero or higher symbolic order.  Direct plane jets do prove
+module `T_m`.  Over split `F_67`, `[(T_1)_d tensor W]^G` is zero through
+degree 34 and in every degree at least 164.  All induced
+`f3:D_d->D_(d+3)` maps with `14<=d<=31` are injective, and their truncated
+quotient through degree 34 has dimension 1,459.  In degree 35 the exact
+compact/literal dimensions are 362 and 361, so `[(T_1)_35 tensor W]^G` has
+dimension one.  Nilpotence of this finite irrelevant torsion forces a
+nonzero `f3`-colon element in some degree.  The split-fibre all-degree colon
+is therefore refuted; nothing here lifts the torsion to characteristic zero
+or higher symbolic order.  Direct plane jets do prove
 `C_(3,d)=0` for `25<=d<=31`; the full-rank split-`F_67` matrices promote this
 bounded vanishing to characteristic zero by good reduction.
 
@@ -1582,11 +1641,9 @@ canonical Reynolds-lattice specialization promotes `dim L_25<=15` to
 characteristic zero.  The global support is still not proved
 irrelevant, so degree 25 remains open.
 
-The all-degree successors are therefore to finish the split-fibre `f3`
-colon `(0 :_D1 f3)=0` (equivalently quotient dimension 1572) across degrees
-33--163, extend the
-saturation analysis to higher `m`, and prove a uniform relative border/Fitting
-landing-detection lemma on
+The all-degree successors are therefore a characteristic-zero/integral
+saturation analysis, extension to higher `m`, and a uniform relative
+border/Fitting landing-detection lemma on
 `[(I^(m)/I^(m+2))_d tensor W]^G`.
 
 Replay:
@@ -1626,6 +1683,8 @@ Replay:
     /opt/homebrew/bin/python3 -u tmp/m1_t1_saturation/verify.py
     /opt/homebrew/bin/python3 -u tmp/m1_t1_propagation_design/verify.py
     /opt/homebrew/bin/python3 -u tmp/m1_t1_f3_colon_attack/verify.py
+    /opt/homebrew/bin/python3 -u tmp/m1_t1_f3_colon_degree35_audit/run_bounded.py
+    /opt/homebrew/bin/python3 -u tmp/m1_t1_char0_d35_gate/verify.py
     /opt/homebrew/bin/python3 -u tmp/m1_determinantal_geometry/verify.py
     /opt/homebrew/bin/python3 -u tmp/m1_landing_chart_fitting/verify.py
     /opt/homebrew/bin/python3 -u tmp/m1_rank6_circuit_support/verify.py
@@ -1671,6 +1730,8 @@ recent border-module audit are under
 `tmp/symbolic_global_exactness/`,
 `tmp/m1_compact_graded_pilot/`, `tmp/m1_t1_saturation/`,
 `tmp/m1_t1_propagation_design/`, `tmp/m1_t1_f3_colon_attack/`,
+`tmp/m1_t1_f3_colon_degree35_audit/`,
+`tmp/m1_t1_char0_d35_gate/`,
 `tmp/m1_full_plane_block_rank/`,
 `tmp/m1_determinantal_geometry/`, `tmp/m1_landing_chart_fitting/`,
 `tmp/m1_rank6_circuit_support/`, `tmp/m1_rank6_schur_compression/`,
