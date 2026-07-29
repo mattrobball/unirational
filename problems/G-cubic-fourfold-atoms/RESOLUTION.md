@@ -218,3 +218,127 @@ pinned at the gate, primary deliverable a self-contained
 `certificates/REPAIRED_PROOF.md` at certificate standard, secondary a
 neutral `certificates/GAP_REPORT.md`.  Director gate on the repaired
 proof; on acceptance the WP-1..5 simplification program resumes.
+
+## 2026-07-29 — WP-0.5 repair complete; stopped at director gate
+
+**Package verdict:** WP-0.5 is complete at its assigned scope, relative to
+the imported interfaces A1–A10 stated in the proof certificate. The repaired
+argument now closes R1–R5 for Theorem 6.8. This is not a foundational reproof
+of the global atom formalism, and it does not upgrade the separately recorded
+A-model blowup/atom interfaces from pinned inputs to verified theorems.
+
+### Deliverables
+
+- [`certificates/REPAIRED_PROOF.md`](certificates/REPAIRED_PROOF.md) is the
+  primary, stand-alone repair certificate. It gives every R1–R5 before/after
+  replacement, an exact imported-interface table, two new R2 lemmas, the
+  repaired proof, and the downstream R1 substitutions.
+- [`certificates/GAP_REPORT.md`](certificates/GAP_REPORT.md) is the neutral
+  referee record. The `E × C` counterexample appears there and is absent
+  from the repaired proof, as ordered.
+
+### Repair audit
+
+1. **R1 closed.** The inadmissible point `q = 1` is replaced by
+   \(q_0=\boldsymbol y^a\), \(a\in\mathbf Q_{>0}\). The characteristic
+   polynomial is
+   \(\lambda^2(\lambda^3-729q_0)\), with invariant cluster dimensions
+   \((2,1,1,1)\); Lemma 6.11 and Corollary 6.12 receive the same substitution.
+2. **R2 closed in the form Theorem 6.8 needs.** HYZZ Theorem 3.42 supplies
+   existence but, contrary to the route stated in the work order, has no
+   uniqueness clause. The certificate therefore proves uniqueness by
+   comparing horizontal idempotents and using the off-diagonal Sylvester
+   isomorphism. This makes the full-base factors Hodge-equivariant; they are
+   then pulled back to the fixed base without being called maximal.
+3. **R2 step 5 is corrected, not asserted in its stronger requested form.**
+   A connected global finite étale spectral component need not lie in one
+   cluster after restriction to a small neighborhood: the connected cover
+   \(z^2=t\) over \(\mathbf G_m\) splits into two branches near \(t=1\).
+   The needed conclusion is pointwise. The tautological generalized-
+   eigenbundle on the component has constant Hodge-representation type; a
+   point above the local neighborhood lies in one cluster and supplies the
+   rank bound. Thus the theorem-level localization is proved while the false
+   stronger global label is expressly not certified.
+4. **R3 closed.** The false minimum is replaced by the particular containing
+   cluster, giving \(\rho_\alpha\le2\).
+5. **R4 closed.** Hassett Theorem 3.1.2 supplies the countable union of proper
+   special-cubic divisors. No extra Torelli or transcendental-irreducibility
+   exceptional locus is used in Theorem 6.8.
+6. **R5 closed.** The surface classification is deleted. Positive
+   \(p_g\) gives a minimal model with nef canonical class, and point-blowup
+   additivity carries the non-point atom to that model, where its invariant
+   dimension is at least three.
+
+### Verification record
+
+The certificate replay was executed against the pinned local artifacts:
+
+```text
+$ /opt/homebrew/bin/python3 -c 'import sympy as s; q,L=s.symbols("q L"); K=3*s.Matrix([[0,0,6*q,0,0],[1,0,0,15*q,0],[0,1,0,0,6*q],[0,0,1,0,0],[0,0,0,1,0]]); p=s.expand(K.charpoly(L).as_expr()); expected=L**2*(L**3-729*q); assert s.expand(p-expected)==0; print(p)'
+L**5 - 729*L**2*q
+
+$ shasum -a 256 tmp/pdfs/2508.05105v2.pdf tmp/pdfs/2411.02266.pdf tmp/pdfs/peters-surface.pdf tmp/pdfs/givental-eqv.pdf
+2c5c9f0a2f9eaf230605eaf844c3b7d08e0181e6dbc921153156a071d616ff64  tmp/pdfs/2508.05105v2.pdf
+a11a093f790890804c7d4f7559b30ed2a6da87811de46f2aa0d29026e343e6bd  tmp/pdfs/2411.02266.pdf
+51f9c99621b3819aa85894a8cdee4a528b0894364fc22b40a651f1bae55ceed3  tmp/pdfs/peters-surface.pdf
+985248cc3e6e166b9847b01552de2034429a624794dc0c53cad50beb1f4b50c9  tmp/pdfs/givental-eqv.pdf
+
+$ rg -n 'thm:cubic4|thm:K-decomposition|lem:Ginvariants|lem:nefK|prop:non-rational' tmp/sources/v2/brinv.tex
+[all five labels found]
+
+$ git diff --check
+[no output]
+```
+
+### Gate state
+
+**STOP.** No WP-1–WP-5 simplification, author contact, or Lean work has
+started. Director review of the repaired proof is required before the
+original program resumes.
+
+## 2026-07-29 — adversarial audit of the repaired proof: SURVIVES; gate ACCEPTED with punch list
+
+Independent hostile pass (scratch under `/private/tmp/audit_g/`), on top of
+the director's direct read of Lemma 3.2.  Every ranked attack failed, with
+from-scratch re-derivations rather than trust: the order-`m` coefficient
+computation is right under KKPY's and HYZZ's SHARED `u⁻²` convention and is
+independently corroborated by HYZZ eq. (3.27); the Sylvester/block step is
+valid for non-semisimple blocks (ring-coefficient version is HYZZ Lemma
+3.28); HYZZ Thm 3.42 has NO uniqueness clause and the certificate does not
+lean on one — its idempotent uniqueness stands alone; maximality of the
+A-model bundle on the full `B_X` is confirmed from the text and by direct
+dimension count; the `K`-matrix coefficients `6,15,6` were re-derived
+uniquely from Givental's ODE; Hassett's Thm 3.1.2 is stated for INTEGRAL
+HODGE classes, so R4 needs no Hodge conjecture in the direction used.
+
+Two strengthenings beyond survival:
+- the cover-native reading of `E^α` is FORCED, not chosen — the
+  pushforward reading breaks KKPY Prop. 5.31, Rem. 5.29, and the
+  Hochschild additivity used by Thm 6.8 itself;
+- KKPY Prop. 5.23's printed proof is genuinely defective for
+  multiplicity > 1; the certificate's Lemma 3.1 is the correct
+  replacement (a sixth printed defect, found by the audit).
+- R1 is load-bearing, not cosmetic: by KKPY Lemma 3.29 the quantum
+  product is analytic only on the tube — `κ_b` is not defined at `q=1`
+  at all.
+
+**Punch list (N1–N8), all interface-hygiene or elision grade, none
+mathematical:** N1 the Hochschild-additivity interface is used but
+unlisted (derivable from the cover-native fiber decomposition — the item a
+formalization would stall on first); N2 R5 needs the one-clause
+`E^{η(S_min)} ≅ H^•(S_min)` identification (present in KKPY's printed
+text, omitted from the interface table); N3 the reduction to connected
+`S` (disjoint-union additivity); N4 Lemma 3.2(4) imports context its
+hypotheses don't state (incl. density of `U_X`); N5 step (2) needs a
+`G`-stable germ; N6 Hassett unpinned (no hash/local copy; page anchors
+off — audit's fetched copy hashed
+`ecc2e31a63f56d443aaa3534f0218b25a5b6ab6e1a84c82db5c7bac1789a1d21`);
+N7 three true-but-asserted steps inside Lemma 3.2; N8 an inherited
+KKPY sign inconsistency (`U₀ = −κ` under their own display), harmless
+but to be recorded.
+
+**Gate decision: ACCEPTED.**  WP-0.6 ordered: incorporate N1–N8 (fix
+routes are in the audit record), then the certificate is final and the
+WP-1..5 simplification program resumes on it — with R5's
+classification-deletion and the cover-native formulation already banked
+as simplifications.

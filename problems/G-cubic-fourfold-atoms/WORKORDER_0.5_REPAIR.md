@@ -104,3 +104,19 @@ R-step without consulting `DEPENDENCY_MAP.md`.
 No simplification beyond the five repairs (that is WP-1..5's job, and R5
 already banks the one simplification the gate found).  No contact with
 the authors or any external party.  No Lean.
+
+---
+
+## Addendum: WP-0.6 punch list (post-audit, 2026-07-29)
+
+The repaired proof SURVIVED adversarial audit; gate accepted.  Before the
+certificate is stamped final, incorporate N1–N8 from the 2026-07-29 audit
+entry in `RESOLUTION.md` (fix routes recorded there): add the
+Hochschild-additivity interface row and derive it from the cover-native
+fiber decomposition (N1); add the `E^{η} ≅ H^•` clause to A6/R5 (N2) and
+the disjoint-union reduction (N3); restate Lemma 3.2(4) with its actual
+hypotheses including density (N4); supply the `G`-stable germ (N5); pin
+Hassett with hash and correct anchors (N6); prove the three asserted
+steps (N7); record the `U₀ = −κ` sign convention and its harmlessness
+(N8).  No new mathematics; certificate-standard edits only.  Director
+gate on the diff, then WP-1..5 resumes.
