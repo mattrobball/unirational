@@ -14,6 +14,7 @@ equivariant birational geometry.
 | [D](D-2d-conic-bundles/SPEC.md) | Unirationality of general (2,d) hypersurfaces, d ≥ 4; primary target d = 4 via the tangent-residual double cover | Notes pp. 23–24 ("d large"), continuation of B | Tangent, bitangent, and flex routes are general type; D4 classes (1,0) and (1,1) are excluded, with a two-profile primitive class-(1,2) frontier; headline open |
 | [E](E-klein-cubic/SPEC.md) | \(\operatorname{PSL}_2(\mathbf F_{11})\)-equivariant unirationality of the Klein cubic threefold | Klein-cubic exceptional action retained in the current literature | Open; exactly equivalent here to \(\operatorname{ed}_{\mathbf C}(G)=3\), with bounded covariant and descent routes sharply delimited |
 | [F](F-dp2-psl27/SPEC.md) | \(\operatorname{PSL}_2(\mathbf F_{7})\)-equivariant unirationality of the degree-2 del Pezzo surface (Klein-quartic double cover) | External suggestion (2026-07-28): the easier sibling of E, one dimension down | Authored; literature triage (WP-0) pending — expected decidable via Duncan's ed-2 classification |
+| [G](G-cubic-fourfold-atoms/README.md) | Formalization program: irrationality of the very general cubic fourfold (KKPY Hodge atoms, arXiv:2508.05105) | New disproof of rationality via quantum multiplication; formalization requires radical simplification first | Phase 0: simplification work order authored; Codex dispatch pending |
 
 ## Shared conventions for A--D
 
