@@ -2,12 +2,14 @@
 
 ## Current verdict
 
-**2026-07-29 -- WP-0 COMPLETE; STOPPED AT DIRECTOR GATE.**
+**2026-07-29 — WP-2 COMPLETE AT WORKER SCOPE; STOPPED AT DIRECTOR REVIEW.**
 
-The dependency path for KKPY Theorem 6.8 has been mapped in
-[`DEPENDENCY_MAP.md`](DEPENDENCY_MAP.md).  The v2 proof is **not valid as
-printed**.  This is a proof-audit finding, not a refutation of the theorem.
-No WP-1 work has started.
+WP-0.6 and WP-1 have been accepted. WP-2 selects **E2 — MINIMIZE**: MONO is
+unsupported but not refuted, and the exact fourfold weak-factorization input
+survives as `WF-4 (A7)`. The source boundary, failed E1 routes, E3 probe,
+trusted-base display, and Proposition 5.28 correction are recorded in
+[`certificates/FACTORIZATION.md`](certificates/FACTORIZATION.md). WP-3 has not
+begun.
 
 ## 2026-07-29 -- WP-0 critical-path audit
 
@@ -313,7 +315,8 @@ HODGE classes, so R4 needs no Hodge conjecture in the direction used.
 
 Two strengthenings beyond survival:
 - the cover-native reading of `E^α` is FORCED, not chosen — the
-  pushforward reading breaks KKPY Prop. 5.31, Rem. 5.29, and the
+  pushforward reading is incompatible with the atom-fiber identification
+  used in the proof of KKPY Prop. 5.28, with Rem. 5.29, and with the
   Hochschild additivity used by Thm 6.8 itself;
 - KKPY Prop. 5.23's printed proof is genuinely defective for
   multiplicity > 1; the certificate's Lemma 3.1 is the correct
@@ -479,8 +482,9 @@ which change the proof boundary are incorporated directly in
   as an interface. Beauville invokes it internally in proving his all-smooth
   target statement; that dependence is recorded inside GW-2 rather than
   exposed as a family-transport API.
-- The work order's “Proposition 5.31” has no referent in the pinned
-  arXiv:2508.05105v2 artifact; Proposition 5.30 is followed by §5.5.
+- The work order's “Proposition 5.31” is a misnumbering of Proposition 5.28
+  (\(\rho_\alpha\ge1\)), printed p. 62, source label `prop:Ginv1`. It is
+  downstream of Theorem 6.8 and contributes no target interface.
 
 ### New pinned source artifacts
 
@@ -533,8 +537,101 @@ with use-site arguments including deformation invariance and the general
 mirror theorem, Prop. 5.30 replaced in-certificate (D8) leaving A7 (weak
 factorization) as the sole unexamined non-GW infrastructure input, and
 the negative finding that the full rank-27 germ is genuinely required.
-The "Prop. 5.31" bibliographic ghost is assigned to WP-2 housekeeping.
+The "Prop. 5.31" misnumbering (actual Proposition 5.28) is assigned to WP-2
+housekeeping.
 `WORKORDER_2.md` issued: decide A7's fate — E1 delete via
 morphism-monotonicity (MONO) + Hironaka; E2 pin as the third permanent
 axiom interface with the fourfold specialization; E3 timeboxed
 restructure probe.
+
+## 2026-07-29 — WP-2: E2 MINIMIZE; A7 pinned as WF-4
+
+WP-2 is complete at worker scope. The ordered verdict is **E2 — MINIMIZE**.
+The proposed morphism-monotonicity lemma (MONO) was not proved, and no
+counterexample was found. The result is deliberately recorded as unsupported,
+not false.
+
+The three E1 routes have precise stopping points:
+
+- Hironaka makes the resolution leg over \(\mathbf P^4\) a smooth-blowup
+  tower, but leaves the map to \(X\) as an arbitrary birational morphism.
+  GW-3 compares atoms only across an actual smooth blowup. Turning the other
+  leg into a directed tower would require strong/directed factorization.
+- The graph splits classical Hodge cohomology, but the certificate has no
+  correspondence functor on A-model F-bundles. The graph projector is not
+  known to be horizontal or to commute with Euler quantum multiplication, so
+  it need not select atom blocks.
+- Iritani's general discrepant quantum-D-module decomposition is posed as
+  Problem 3.3, with the analytic/K-theoretic form as Problem 3.4. Gu--Yu--Yu
+  subsequently proved quantum-D-module and published-\(\operatorname{CF}\)
+  decomposition for smooth projective simple reductive-\(G\) VGIT wall
+  crossings. That is a real positive special case, but the published CF is
+  coarser than this certificate's \(\operatorname{CF}_{\rm bl}\), and the
+  result does not cover an arbitrary birational morphism. Their general
+  standard-flip statement remains Conjecture 1.8, with Corollary 1.9 covering
+  projective local models.
+
+The exact surviving interface is `WF-4 (A7)`: if a smooth projective complex
+fourfold \(X\) is birational to \(\mathbf P^4\), there is a weak factorization
+from \(\mathbf P^4\) to \(X\) through smooth projective fourfolds, with every
+step or inverse step a blowup in a smooth center. Divisorial-center blowups are
+identities and can be removed, so the remaining centers automatically have
+codimension at least two and dimension at most two. This is exactly what
+certificate Proposition 3.7 consumes.
+
+AKMW Theorem 0.1.1 supplies the exact interface, including projective
+intermediates. Włodarczyk `math/9904076v5`, statement 0.0.1 proved in §12.4,
+independently checks the smooth-complete weak-factorization core but does not
+separately state the projectivity clause. The similarly titled
+`math/9904074` paper is preparatory and is not used as the independent theorem.
+
+The E3 Grothendieck/Bittner-style probe produced no replacement. Ordinary
+scissors express the difference of birational projective varieties through
+their lower-dimensional complements, but the chemical formula has no descent
+to the resulting singular/nonproper pieces. In the smooth-projective Bittner
+presentation, choice-independence uses weak factorization and the blowup
+relation restores the exceptional projective-bundle term removed in WP-1.
+
+The Proposition-number housekeeping is closed. The intended statement is
+KKPY Proposition 5.28, source label `prop:Ginv1`, pinned-v2 printed p. 62:
+every Hodge atom has \(\rho_\alpha\ge1\). `certificates/GW_INPUT.md` now records
+the correct number and its downstream-only scope. Historical work orders
+retain the original misnumbering as provenance.
+
+### New pinned source artifacts
+
+~~~text
+55bbc2c58f29d4b9dbe965035f80f3844f6968eaf98076ac625132ac3b3977a5  tmp/pdfs/akmw-torification-factorization.pdf
+2f7a0bce5871db86bf84f54c4562fc053c53a4313180a6eecb66587d21e4fcfe  tmp/pdfs/wlodarczyk-toroidal-weak-factorization.pdf
+462f2e0d6eff6315d9fcc2e0db78f95f14558d532d118e31b74f2270c2e0ab8a  tmp/pdfs/iritani-gamma-quantum-cohomology.pdf
+9c00f826cb13ad243bd2ad126e74733cacf650a385160a11adc785693c01a358  tmp/pdfs/gu-yu-yu-vgit-flips.pdf
+~~~
+
+Searchable `pdftotext -layout` extracts are retained beside the four PDFs.
+The detailed E1 audit, exact GW_INPUT-format interface row, trusted-base
+display, source replay, and director questions are in
+`certificates/FACTORIZATION.md`.
+
+### Gate state
+
+**STOP.** Director review must accept the E1 failure audit, the minimal WF-4
+interface, the asymmetric Włodarczyk cross-check, the trusted-base display,
+and the Proposition 5.28 correction before WP-3 begins.
+
+## 2026-07-29 — gate on WP-2: ACCEPTED (E2); WP-3 ordered
+
+FACTORIZATION.md accepted.  (MONO) not proved and not refuted, with the
+failure analysis at the right depth: GW-3 covers only genuine smooth
+blowups; Hironaka repairs the wrong leg; weak factorization yields a
+stable equality whose center terms can offset the tracked atom, hence no
+monotonicity; the graph route fails because the classical projector is
+not known horizontal, consistent with KKPY's own no-morphisms warning.
+A7 pinned as WF₄ in minimal fourfold form; E3 probe negative; the
+proposition-number ghost reconciled; the program-wide trusted boundary
+displayed in §6 with HYZZ (A3) marked as the one brace WP-3 can still
+discharge.  WORKORDER_3 issued: Half A — discharge HYZZ via formal
+idempotent-lifting plus an honest analytic-upgrade attempt, with the
+split outcome (proved formal lemma + smaller analytic axiom) explicitly
+sanctioned; Half B — ATOM_CORE.md, the formalization spine in
+Mathlib-shaped plain language closing over the named axiom interfaces,
+with the Mathlib gap list as the Lean phase's shopping list.

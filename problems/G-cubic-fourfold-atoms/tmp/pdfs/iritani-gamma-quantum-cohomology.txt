@@ -1,0 +1,1015 @@
+                                                        GAMMA CLASSES AND QUANTUM COHOMOLOGY
+
+                                                                                      HIROSHI IRITANI
+
+
+                                                  Abstract. The b    Γ-class is a characteristic class for complex manifolds with transcendental
+                                                  coefficients. It defines an integral structure of quantum cohomology, or more precisely, an
+                                                  integral lattice in the space of flat sections of the quantum connection. We present several
+
+
+
+
+arXiv:2307.15938v1 [math.AG] 29 Jul 2023
+                                                  conjectures (the Γ-conjectures)
+                                                                     b              about this structure, particularly focusing on the Riemann-
+                                                  Hilbert problem it poses. We also discuss a conjectural functoriality of quantum cohomology
+                                                  under birational transformations.
+
+
+
+
+                                                          1. Gamma-integral structure in quantum cohomology
+                                              We briefly review the definition of the Γ-integral
+                                                                                      b          structure in quantum cohomology in-
+                                           troduced in [42]. The corresponding rational structure was introduced independently by
+                                           Katzarkov, Kontsevich and Pantev [46] in the framework of nc-Hodge structure.
+                                           1.1. Gamma class. Let X be an almost complex manifold and let δ1 , . . . , δn (with n =
+                                           dimC X) be the Chern roots of the tangent bundle, so that c(T X) = (1 + δ1 ) · · · (1 + δn ). The
+                                           Γ-class
+                                           b       b X ∈ H ∗ (X; R) [52, 53, 42, 46] is the characteristic class defined by
+                                                   Γ
+                                                                             b X = Γ(1 + δ1 ) · · · Γ(1 + δn )
+                                                                             Γ
+                                                                 R ∞ −t x
+                                           where Γ(1 + x) = 0 e t dt is Euler’s Γ-function. The right-hand side is expanded in
+                                           symmetric power series in δ1 , . . . , δn and then expressed in terms of the Chern characters
+                                           chk (T X) as follows:
+                                                                                         ∞
+                                                                                                                         !
+                                                                                        X
+                                                              b X = exp −γc1 (X) +
+                                                              Γ                             (−1)k ζ(k)(k − 1)! chk (T X)
+                                                                                             k=2
+                                                         P∞       −s is the Riemann zeta function and γ = lim         1           1
+                                           where ζ(s) =     n=1 n                                            n→∞ (1 + 2 + · · · + n − log n)
+                                                                                                                                    1
+                                           is the Euler constant. This is a characteristic class with transcendental coefficients . The
+                                           identity Γ(1 − x)Γ(1 + x) = πx/ sin(πx) shows that the b Γ-class can be thought of as a “square
+                                           root” of the A-class, i.e.
+                                                         b
+                                           (1.1)                             Γ     b ∗ = (2πi)deg /2 A
+                                                                              bX · Γ                 bX
+                                                                                         X
+                                                 b ∗ := (−1)deg /2 Γ
+                                           where Γ                 b X denotes the dual b
+                                                                                        Γ-class.  We note that A  bX depends only on the
+                                                   X
+                                           underlying topological manifold whereas ΓX depends on an almost complex structure on it.
+                                                                                     b
+                                           The identity (1.1) suggests a relationship between the Γ-class
+                                                                                                    b        and the Atiyah-Singer index
+                                           theorem. In fact, we can interpret ΓX as (a regularization of) the inverse S 1 -equivariant Euler
+                                                                              b
+                                           class of the positive normal bundle N+ of the set X of constant loops in the free loop space
+                                           LX (see [53] [26, Appendix A]), i.e.
+                                                                 1              1
+                                           (1.2)                       =Q Q               ∼ (2π)−n/2 z (n−deg)/2 z c1 (X) Γ
+                                                                                                                          bX
+                                                            eS 1 (N+ )    i      (δ
+                                                                              k>0 i + kz)
+                                             1It is however an algebraic (Hodge) class when X is a smooth projective variety.
+                                                                                                   1
+2                                          HIROSHI IRITANI
+
+where z is a generator of the S 1 -equivariant cohomology of a point. This is reminiscent of
+the loop space heuristics of the index theorem by Atiyah and Witten [4], where the A-class
+                                                                                        b  is
+                                                −1
+interpreted as the inverse Euler class eS 1 (N ) of the normal bundle N itself.
+               1                1                    1              z n−(deg /2)
+                     =                      =Q Q                 ∼                 A
+                                                                                   bX .
+           eS 1 (N )   eS 1 (N− )eS 1 (N+ )   i   k̸=0 (δi + kz)    2πi
+
+Since N+ corresponds to infinitesimal (pseudo-)holomorphic loops, the Γ-class
+                                                                        b      can be thought
+of as the localization contribution from constant loops in symplectic Floer theory.
+
+1.2. Quantum cohomology D-modules. Let X be a smooth projective variety (or a com-
+pact symplectic manifold) and let H ∗ (X) denote the cohomology group with complex coeffi-
+cients. The quantum cohomology QH∗ (X) = (H ∗ (X), ⋆τ ) of X is a family of supercommuta-
+tive product structures ⋆τ on H ∗ (X) parametrized by τ ∈ H ∗ (X). The quantum product ⋆τ
+is defined by
+                                        X                                         Qd
+                     (α ⋆τ β, γ) =                ⟨α, β, γ, τ, . . . , τ ⟩0,k+3,d
+                                                                                  k!
+                                   d∈H2 (X,Z),k≥0
+
+for α, β, γ ∈ H ∗ (X). Here (α, β) = X α ∪ β is the Poincaré pairing and ⟨α1 , . . . , αk ⟩0,k,d
+                                        R
+
+denotes the genus-zero, k-point, degree d Gromov-Witten invariants. Strictly speaking, we
+should treat the odd degree part of τ as anti-commuting variables and view the parameter
+space H ∗ (X) as a supermanifold. For the most part of this paper, we shall restrict the
+parameter τ and elements of quantum cohomology to the even part of the cohomology group
+and write H ∗ (X) for the even part (see Remark 1.2 for the odd part).
+    In the above formula, we introduced the Novikov variable Q to ensure the adic convergence
+of ⋆τ . The divisor equation shows that, if we decompose τ = σ + τ ′ with σ ∈ H 2 (X) and
+τ ′ ∈ H ̸=2 (X),
+                                      X                                                e⟨σ,d⟩ Qd
+                 (α ⋆τ β, γ) =                    α, β, γ, τ ′ , . . . , τ ′ 0,k+3,d             .
+                                                                                          k!
+                                 d∈H2 (X,Z),k≥0
+
+Thus the quantum product can be expanded in a power series in τ ′ and eσ and approaches
+the cup product in the following large-radius limit:
+(1.3)                 τ ′ → 0,     e⟨σ,d⟩ → 0 for all effective classes d ̸= 0.
+Hereafter we shall always specialize the Novikov variable Q to 1 and assume that ⋆τ |Q=1
+(which we shall write as ⋆τ ) is convergent in a neighbourhood U of the large radius limit.
+  The quantum cohomology defines the structure of a Frobenius manifold [20] on the con-
+vergence domain U ⊂ H ∗ (X). Specifically, it defines a meromorphic flat connection ∇ on
+the trivial bundle F = H ∗ (X) × (U × C) → (U × C), called the quantum connection or the
+Dubrovin connection. It is defined by the formulae
+                                              ∂    1
+                                   ∇∂/∂τ i =    i
+                                                  + (ϕi ⋆τ )
+                                            ∂τ     z
+                                               ∂    1
+                                   ∇z∂/∂z = z     − (E⋆τ ) + µ
+                                              ∂z z
+where (τ, z) ∈ U × C denotes a point on the base
+                                              P and {τ i } are linear coordinates dual to a
+                            ∗                    i
+homogeneous basis {ϕi } of H (X) so that τ = i τ ϕi . The section E ∈ O(F ) is the Euler
+                         GAMMA CLASSES AND QUANTUM COHOMOLOGY                                       3
+
+vector field given by
+                                            X   deg ϕi
+                                                        
+                               E = c1 (X) +   1−          τ i ϕi
+                                                   2
+                                          i
+and µ ∈ End(H (X)) is the grading operator defined by µ(ϕi ) = ( deg2 ϕi − n2 )ϕi . The connection
+             ∗
+
+∇ has poles of order two along z = 0 and is possibly irregular singular there. On the other
+hand, it has logarithmic poles (and is therefore regular singular ) along z = ∞. The connection
+∇ is compatible with the Poincaré pairing in the sense that the z-sesquilinear pairing
+                                                                         Z
+                     ∗
+(1.4)            (−1) O(F ) ⊗ O(F ) → O,         s1 ⊗ s2 7→ (s1 , s2 ) =   s1 ∪ s2
+                                                                            X
+is flat for ∇, where (−1) : U × C → U × C is the map sending (τ, z) to (τ, −z).
+   The quantum (cohomology) D-module is the tuple QDM(X) = (O(F ), ∇, (·, ·)) consisting
+of the locally free sheaf O(F ) over U × C, the quantum connection ∇ and the pairing in (1.4).
+The D-module approach to quantum cohomology has been proposed by Givental [28] and
+Guest [34].
+
+1.3. Gamma-integral structure. The b         Γ-integral structure is an integral lattice in the space
+of flat sections for the quantum connection ∇. We have a fundamental solution for ∇-flat
+sections of the form L(τ, z)z −µ z c1 (X) with an End(H ∗ (X))-valued function L(τ, z) uniquely
+characterized by the following asymptotic condition at the large radius limit (1.3):
+                                 L(τ, z) = (id +O(eσ , τ ′ ))e−σ/z .
+Here z −µ z c1 (X) = exp(−µ log z) exp(c1 (X) log z) is an End(H ∗ (X))-valued function on the
+universal cover of C× . Given a basis {ϕi } of H ∗ (X), {L(τ, z)z −µ z c1 (X) ϕi } gives a basis of
+∇-flat sections. Explicitly, L(τ, z) is given in terms of gravitational descendants as follows
+(see [19], [29]):
+                                                  *                                    +
+                                                    e−σ/z ϕ                              ϕj ⟨σ,d⟩
+                                                            i
+                                     X X
+(1.5)         L(τ, z)ϕi = e−σ/z ϕi −                          , τ ′ , . . . , τ ′ , ϕj      e
+                                                     z+ψ                                 k!
+                                      j   (d,k)̸=(0,0)                          0,k+2,d
+
+where ψ denotes P the universal cotangent class at the first marking, 1/(z + ψ) should be
+expanded as k≥0 z −k−1 (−ψ)k , and {ϕj }, {ϕj } are mutually dual bases of H ∗ (X) such that
+R          j     j
+  X ϕi ∪ ϕ = δi .
+   Let S(X) denote the C-vector space of multi-valued flat sections of (F, ∇) over U × C× ,
+i.e. flat sections over the universal cover U × C     f× . Let K(X) = K 0 (X) denote the K-group
+                                                                          top
+of topological complex vector bundles and define a map s : K(X) → S(X) as
+                                                                                    
+(1.6)              s(V )(τ, z) = L(τ, z)z −µ z c1 (X) (2π)−n/2 Γ
+                                                               b X (2πi)deg /2 ch(V ) .
+
+The factor (2π)−n/2 z −µ z c1 (X) Γ
+                                  b X also appears in (1.2) as a regularization of eS 1 (N+ )−1 . The
+Γ-integral structure is the integral lattice of S(X) given as the image of the map s.
+b
+  By the compatibility between ∇ and the Poincaré pairing, we have a non-degenerate (not
+necessarily symmetric or anti-symmetric) pairing [·, ·) : S(X) ⊗ S(X) → C defined by
+(1.7)                            [s1 , s2 ) = (s1 (τ, e−πi z), s2 (τ, z))
+for s1 , s2 ∈ S(X). The property (1.1) of the b
+                                              Γ-class and the Atiyah-Singer index theorem (or
+Hirzebruch-Riemann-Roch theorem) show that s respects the pairing
+                                     [s(V1 ), s(V2 )) = χ(V1 , V2 )
+4                                        HIROSHI IRITANI
+
+where χ(V1 , V2 ) ∈ Z is
+                       Pthe K-theoretic  push-forward of V1∨ ⊗ V2 to a point (the index of a
+Dirac operator; it is i≥0 (−1)i dim Exti (V1 , V2 ) if V1 , V2 are holomorphic vector bundles).
+The Γ-integral
+    b            structure is monodromy-invariant in the sense that
+                          s(V )(τ − 2πic1 (L), z) = s(V ⊗ L)(τ, z)
+                                 s(V )(τ, e−2πi z) = s(V ⊗ ωX [n])(τ, z)
+where L is a (topological) line bundle on X and ωX [n] = (−1)n ωX is the canonical line bundle
+ωX shifted by n, corresponding to the Serre functor of the derived category.
+Remark 1.1. The Γ-integral
+                b          structure can be defined more generally for orbifolds [42].
+Remark 1.2. We can generalize the Γ-integral
+                                      b          structure including the odd part of the quan-
+                           ∗         0
+tum cohomology, using K (X) = Ktop (X) ⊕ Ktop     1 (X) instead of K 0 (X). We still restrict
+                                                                      top
+the parameter τ to lie in the even part, but consider flat sections taking values in the full
+cohomology √  group. The formula (1.6) makes sense for all V ∈ K ∗ (X) when we choose a
+square root 2πi and use the Chern character ch : K ∗ (X) → H ∗ (X) of Atiyah-Hirzebruch
+[5]. The resulting map sX : K ∗ (X)/tors → S(X) then has the advantage that it is natural
+with respect to the Cartesian product, i.e. sX×Y = sX ⊗sY (under the Künneth isomorphism).
+Interestingly, we have
+          [s(α1 ), s(α2 )) = −iχ(α1 , α2 ) ∈ iZ                       for α1 , α2 ∈ K 1 (X)
+        s(α)(τ, e−2πi z) = (−1)deg α s(α ⊗ ωX [n])(τ, z)              for α ∈ K ∗ (X)
+where χ(α1 , α2 ) ∈ Z is the K-theoretic push-forward of α1∨ · α2 to a point as before; the dual
+element α1∨ here is defined via the isomorphism K 1 (X) ∼= K −1 (X) ∼  = K̃ 0 (S 1 ∧ X + ) (see [5])
+and the usual duality in K . 0
+
+
+Remark 1.3 (mirror symmetry). The b        Γ-integral structure had (implicitly) appeared for a
+long time in the study of mirror symmetry before it was defined in [42, 46]. Under mir-
+ror symmetry of Calabi-Yau manifolds, the quantum differential equation corresponds to the
+Picard-Fuchs differential equations satisfied by periods of the mirror family, and we can par-
+tially see the b
+               Γ-class in the asymptotics of periods near the large-complex structure limit.
+Libgober [52] introduced the (inverse) Γ-class
+                                         b       based on the observation of Hosono et. al. [40]
+that certain combinations of Chern numbers and ζ values appear in solutions of the mirror
+Picard-Fuchs equations. Hosono [39] stated a conjecture equating periods of mirrors of com-
+plete intersections with explicit hypergeometric series and the Γ-class
+                                                                 b      is hidden in the series.
+We also refer the reader to [38, 9, 59] for related works. It has been checked in a number of
+cases that the Γ-integral
+                b          structure corresponds to a natural integral structure on the mirror
+side [42, 44]. Regarding the compatibility with mirror symmetry, an approach based on the
+SYZ picture and tropical geometry has been proposed in [1] recently.
+
+                                   2. Gamma conjectures
+   In this section we review the Γ-conjectures
+                                 b             I, II discussed by Galkin, Golyshev and the
+author [26], and their generalization by Sanda and Shamoto [58]. The b    Γ-conjectures can
+be understood as the compatibility between the Betti (real, rational, or integral) structure
+and the Stokes structure, discussed by Hertling and Sevenheck [35] in the context of TERP
+structure and by Katzarkov, Kontevich and Pantev [46] in the context of nc-Hodge structure.
+The Gamma conjecture II also refines Dubrovin’s conjecture [20].
+                         GAMMA CLASSES AND QUANTUM COHOMOLOGY                                      5
+
+
+2.1. Gamma conjecture I. The b        Γ-conjecture I is specifically about quantum cohomology
+of Fano manifolds. It roughly speaking says that we can know the topology (the Γ-class)
+                                                                                     b    of a
+Fano manifold by counting rational curves on it. In view of (1.1), we may view it as a “square
+root” of the index theorem.
+   Let X be a Fano manifold and let JX (τ, z) be the (small) J-function defined as
+                                                                                  
+                                                                      i
+                                                                        
+                                      X       X                     ϕ
+               JX (τ, z) = eτ /z 1 +                   e⟨τ,d⟩                  ϕi 
+                                                                 z(z − ψ) 0,1,d
+                                        i   d∈H2 (X,Z),d̸=0
+
+where τ ∈ H 2 (X).  This is a cohomology-valued function which is convergent for all (τ, z) ∈
+H 2 (X) × C× (this follows from the Fano assumption). We can also write this as JX (τ, z) =
+L(τ, z)−1 1 using the fundamental solution L in (1.5); hence JX (τ, z) gives a solution of the
+quantum D-module along the τ -direction.
+Conjecture 2.1 (Γ-conjecture
+                b            I). For a Fano manifold X, we have the equality
+                           [Γb X ] = lim [JX (c1 (X) log t, 1)]
+                                      t→+∞
+                           ∗
+in the projective space P(H (X)) of cohomology.
+   This has been proved for the projective spaces, type A Grassmannians [30, 26] and Fano
+threefolds of Picard rank one [31]. The Γ-conjecture
+                                          b             I for Fano toric manifolds or complete
+intersections in them follows if these spaces satisfy certain conditions related to Conjecture
+O [27]. The bΓ-conjecture I is also compatible with taking hyperplane sections, i.e. if a Fano
+manifold X satisfies the Γ-conjecture
+                          b            I and if Y ⊂ X is a hypersurface in the linear system
+|L| with L proportional to −KX , Y satisfies the bΓ-conjecture I [27, Theorem 8.3].
+Example 2.2. The J-function of Pn is given by
+                                               ∞
+                               n
+                                              X    t(n+1)(d+p/z)
+                     JPn (c1 (P ) log t, z) =     Qd            n+1
+                                              d=0  k=1 (p + kz)
+where p is the hyperplane class. Setting z = 1 and fixing t > 0, we find that the dth summand
+                                               n+1               1       1
+                                                                                 !n+1
+                                                      e(log d−(1+ 2 +···+ d ))p
+                                    d
+                   t(n+1)(d+p)        t (t/d)p
+                Qd               =                    Qd            p −p/k
+                  k=1 (p + k)
+                             n+1         d!             k=1 ((1 + k )e         )
+has a strong peak approximately when d is close to t. We can guess from this that the limit
+of CJPn (c1 (Pn ) log t, 1) in the projective space should be the line generated by
+                                            1       1
+                                                           !n+1
+                                e(log d−(1+ 2 +···+ d ))p
+                        lim Qd                p −p/k
+                                                                = Γ(1 + p)n+1 = Γ
+                                                                                b Pn .
+                       d→∞
+                                  k=1  ((1 +  k )e       )
+Remark 2.3. In Givental’s heuristic calculation of the J-function [28], the dth summand
+Qd             −n−1 of J n (τ, z) appears as the localization contribution from constant loops in
+   k=1 (p + kz)          P
+the polynomial loop space (quasi-maps’ space) of degree d, and hence it can be viewed as the
+degree-d truncation of eS 1 (N+ )−1 appearing in §1.1. In view of the loop space interpretation
+of the Γ-class,
+        b       this gives a geometric explanation for the Γ-conjecture
+                                                            b            I in this case. In general,
+the degree d term of JX (τ, z) arises from a localization contribution of an integral over the
+graph space Gd = M 0,0 (X × P1 , (d, 1)), the moduli space of genus-zero stable maps to X × P1
+of degree (d, 1), equipped with the C× -action induced by the C× -action on P1 . Let G◦d ⊂ Gd
+denote the open subset consisting of stable maps which are genuine graphs near ∞ ∈ P1 ,
+6                                          HIROSHI IRITANI
+
+i.e. do not contain components contained in X × {∞}. Then G◦d is preserved by the C× -
+action and has Fd = M 0,1 (X, d) as the fixed locus. Writing ev∞ : G◦d → X for the evaluation
+map at ∞ ∈ P1 , we have
+                                            ev∗1 α
+                  Z             Z
+                          ∗
+                        ev∞ α =                    = (degree d term of JX , α)
+                    G◦d          [Fd ]vir z(z − ψ)
+
+where we defined the integral over the improper space G◦d using (virtual) equivariant local-
+ization. In the case where X = Pn , Givental gave a birational morphism from G◦d to the
+polynomial loop space and justified his heuristic calculation (see [29, Main Lemma]). There-
+         Γ-conjecture I can be viewed as the statement that G◦d approximates the (positive)
+fore the b
+loop space of X as d → ∞ in a suitable sense.
+Remark 2.4. A discrete version of the limit in Conjecture 2.1 had been also studied (before
+the formulation of the Γ-conjecture)
+                         b               and called Apéry limits, in view of the connection to
+Apéry’s proof of the irrationality of ζ(2) and ζ(3), see Galkin [24] and Golyshev [30].
+2.2. Gamma conjecture I in terms of flat sections. We restate Γ-conjecture
+                                                                       b            I in terms
+of ∇-flat sections over the z-plane, in order to explain the relationship with b
+                                                                               Γ-conjecture II
+in the following section. We start with Conjecture O.
+Conjecture 2.5 (Conjecture O). Let X be a Fano manifold and let T denote the maximal
+norm of the eigenvalues of the quantum multiplication (E⋆0 ) = (c1 (X)⋆0 ) at τ = 0. Then T is
+a simple eigenvalue of (c1 (X)⋆0 ), that is, an eigenvalue whose multiplicity in the characteristic
+polynomial is one.
+  Here we omitted part (2) of Conjecture O in [26, Definition 3.1.1] since we do not need it.
+Conjecture O is a consequence of the Perron-Frobenius theorem if (c1 (X)⋆0 ) is represented by
+an irreducible nonnegative matrix. Cheong and Li [11] proved Conjecture O for homogeneous
+spaces G/P using the Perron-Frobenius theorem.
+  Eigenvalues of (c1 (X)⋆0 ) are closely related to asymptotics of flat sections for ∇|τ =0 as
+z → 0. The flatness equation reads
+                                                    
+                                  ∂    1
+                                z    − c1 (X) ⋆0 +µ s(z) = 0.
+                                  ∂z z
+For each eigenvector Ψ of (c1 (X)⋆0 ) with eigenvalue u, we expect that there should be a flat
+section s(z) with asymptotics ∼ e−u/z Ψ as z → 0. Define a vector space A as
+                                                                                     
+                        ∗       s(z) is flat for ∇z∂z |τ =0
+      A = s : R>0 → H (X)
+                                eT /z s(z) is at most of polynomial growth as z → +0
+Assuming Conjecture O for X, we can prove that A is one-dimensional and that, for any
+s(z) ∈ A, eT /z s(z) converges to a T -eigenvector of (c1 (X)⋆0 ) as z → +0. The original
+formulation of the b
+                   Γ-conjecture I in [26] was as follows.
+Conjecture 2.6 (Γ-conjecture
+                b            I: another form). The space A is generated by s(O)|τ =0 .
+   It is equivalent to Conjecture 2.1 in §2.1 under Conjecture O [26, Corollary 3.6.9] and can
+be viewed as a dual formulation. We have a gauge equivalence between the connections ∇|τ =0
+and ∇|z=1,τ =c1 (X) log t , that is, z µ (∇|τ =0 ) z −µ = ∇|z=1,τ =c1 (X) log t under the identification
+t = z −1 .Therefore flat sections over {τ = 0} × C and the solution JX (c1 (X) log t, 1) are dual
+to each other. While the space A consists of flat sections with most rapid decay (∼ e−T /z ),
+                           GAMMA CLASSES AND QUANTUM COHOMOLOGY                                        7
+
+the t → +∞ limit of the J-function detects its most rapidly growing component. In fact, we
+can show that the J-function has the following asymptotics:
+                                                               
+               JX (c1 (X) log t, 1) = Ct−n/2 eT t Γb X + O(t−1 )  as t → +∞
+
+for some C ∈ C, under Conjecture O and Γ-conjecture
+                                       b            I (see [27, Proposition 3.8]).
+
+2.3. Gamma conjecture II. In this section we assume that the quantum product ⋆τ is
+semisimple2 at some τ = τ0 ∈ H ∗ (X), i.e. (H ∗ (X), ⋆τ0 ) is isomorphic to the direct sum of
+C as a ring. We do not need to assume that X is Fano. Let ψ1 , . . . , ψN ∈ H ∗ (X) denote
+an idempotent basis such that ψi ⋆τ ψj = δij ψi and let u1 , . . . , uN ∈ C be the eigenvalues
+of (E⋆τ ) such that E ⋆τ ψi = ui ψi ; here ψi and ui are analytic functions of τ defined in a
+neighbourhood of τ = τ0 . The functions {ui } give a local coordinate system near τ0 called the
+canonical coordinates [19, 21]. We write Ψi = (ψi , ψi )−1/2 ψi for the normalized idempotent
+basis, which is unique up to sign. Choose a phase ϕ ∈ R such that eiϕ ∈         / R>0 (ui,0 − uj,0 ) for
+all i, j, where ui,0 is the value of ui at τ0 ; such a phase ϕ is said to be admissible. We have
+                              ϕ
+a basis (y1ϕ (τ, z), . . . , yN (τ, z)) of ∇-flat sections defined in a neighbourhood of τ = τ0 and
+arg z = ϕ with the following property:
+          eui /z yiϕ (τ, z) → Ψi   as z → 0 along the angular sector | arg z − ϕ| < π + ϵ
+for some ϵ > 0, see [26, Proposition 2.5.1].
+
+Conjecture 2.7 ( bΓ-conjecture II: a topological form). Suppose that the quantum product ⋆τ of
+X is semisimple at some τ0 ∈ H ∗ (X) and let ϕ ∈ R be an admissible phase for the eigenvalues
+of (E⋆τ0 ). There exist K-classes E1ϕ , . . . , EN
+                                                 ϕ
+                                                   ∈ K(X) such that yiϕ (τ, z) = s(Eiϕ )(τ, z) in a
+neighbourhood of τ = τ0 and arg z = ϕ.
+   This refines part (3) of Dubrovin’s conjecture [20, Conjecture 4.2.2] concerning the central
+connection matrix. It has been proved for type A Grassmannians [26], Fano toric manifolds
+[23] and quadric hypersurfaces [41]. The b  Γ-conjecture I can be viewed as a special case of the
+Γ-conjecture II when τ = 0 and ϕ = 0.
+b
+   The flat sections yiϕ (τ, z) depend on the choice of a phase ϕ (or more precisely on a chamber
+of admissible phases) whereas their asymptotic expansions as z → 0 do not. This is the so-
+called Stokes phenomena. The Stokes matrix S = (Sij ) is a transition matrix between the
+flat sections associated with opposite directions: it is given by yjϕ (τ, z) = N       ϕ+π
+                                                                               P
+                                                                                  i=1 yi   (τ, z)Sij
+with arg z = ϕ + π2 . It can be given in terms of the bilinear form in (1.7) and then as the
+Euler matrix of {Eiϕ }:
+                                      Sij = (yiϕ , yjϕ ] = χ(Eiϕ , Ejϕ ).
+This corresponds to part (2) of Dubrovin’s conjecture saying that the Stokes matrix is integral
+and is given by the Euler pairing. If follows from the fact that the asymptotics yiϕ ∼ e−ui /z Ψi
+holds over a sector of angle > π that the Stokes matrix is upper-triangular
+                                     (
+                           ϕ   ϕ      1 if i = j;
+                 Sij = χ(Ei , Ej ) =
+                                      0 if ℑ(e−iϕ ui ) ≤ ℑ(e−iϕ uj ) and i ̸= j.
+
+   2Under the semisimlicity assumption, X has no odd cohomology classes and, if moreover X is a smooth
+projective variety, H ∗ (X) is necessarily of Hodge-Tate type, i.e. H p,q (X) = 0 for p ̸= q, see [37].
+8                                                     HIROSHI IRITANI
+
+
+Remark 2.8. In [26], the b   Γ-conjecture II was stated for Fano manifolds which have semisimple
+quantum cohomology and full exceptional collections in Db (X). It is moreover conjectured
+that {Eiϕ } should lift to a full exceptional collection. We drop these assumptions/conclusions
+to emphasize a topological nature of the Γ-conjecture.
+                                             b
+Remark 2.9. Dubrovin [22] also formulated a conjecture similar to the b      Γ-conjecture II. See
+Cotti, Dubrovin and Guzzetti [18] for the formulation.
+Example 2.10. For X = Pn , the corresponding exceptional collection is {O, O(1), . . . , O(n)}
+at some τ [26]. The collection at τ = 0 is given explicitly in [18].
+Remark 2.11. Suppose that X is Fano and is mirror to a Landau-Ginzburg model f : Y → C.
+It is expected that the idempotent ψi corresponds to a non-degenerate critical point ci of f
+such that the corresponding eigenvalue ui equals f (ci ). The critical point ci can associate
+a Lefschetz thimble Lϕi extending in the direction of eiϕ , which gives an exceptional object
+in the Fukaya-Seidel category of (Y, f ). The object in Db (X) corresponding to Lϕi under
+homological mirror symmetry should give the class Eiϕ .
+Remark 2.12. The Γ-conjecture
+                      b           II concerns the connection problem between flat sections
+yiϕ characterized by the asymptotics at the irregular singular point z = 0 and flat sections
+s(V ) normalized at the regular singular point z = ∞. The connection matrix of flat sections
+(with respect to a fixed basis) is called the central connection matrix by Dubrovin [20]; in
+the formalism of the bΓ-integral structure, it corresponds to the basis {Eiϕ } of the K-group.
+As discussed by Dubrovin, when τ and ϕ vary, the basis {yiϕ } of flat sections (and hence
+{Eiϕ }) changes discontinuously by the action of the braid group in N strands. Suppose that
+we ordered flat sections {yiϕ } in such a way that ℑ(e−iϕ u1 ) ≥ ℑ(e−iϕ u2 ) ≥ · · · ≥ ℑ(e−iϕ uN ).
+The braid group action is generated by the following right mutations and their inverses (which
+are the actions of simple braids):
+               (E1 , . . . , Ei , Ei+1 , . . . , EN ) 7→ (E1 , . . . , Ei+1 , Ei − χ(Ei , Ei+1 )Ei+1 , . . . , EN )
+where we suppressed ϕ to simplify the notation. This transformation happens when the eigen-
+value ui crosses behind ui+1 towards direcion eiϕ . As Dubrovin observed, this is consistent
+with mutations of exceptional collections in the derived category [8].
+2.4. Conjecture of Sanda and Shamoto. Sanda and Shamoto [58] proposed a generaliza-
+tion of the Γ-conjecture
+            b            II to the case where quantum cohomology is not necessarily semisimple
+and called it Dubrovin-type conjecture. Their formulation involves derived category of coherent
+sheaves and Hochschild homology, but here we give a topological formulation that has been
+proposed by Sergey Galkin [25]. This formulation makes sense for any compact symplectic
+manifolds.
+   We fix a parameter τ ∈ H ∗ (X) in the convergence domain of the quantum product. We
+consider the restriction QDM(X)τ of the quantum D-module from §1.2 to {τ } × C and write
+QDM(X)τ = QDM(X)τ,0 ⊗C{z} C[[z]] for the restriction to the formal neighbourhood of z = 0,
+where QDM(X)τ,0 denotes the germ of QDM(X)τ at z = 0. We say that the quantum
+connection at τ is of exponential type 3 if we have the following formal decomposition (see [35,
+Lemma 8.2]):
+                           b : QDM(X)τ ∼
+                                             M
+(2.1)                     Φ               =     (eu/z ⊗ Ru ) ⊗C{z} C[[z]]
+                                                          u∈C
+
+    3We follow the terminology in [46]; it was called “require no ramification” in [35].
+                         GAMMA CLASSES AND QUANTUM COHOMOLOGY                                      9
+
+where we disregard the pairing on QDM(X)τ momentarily, C denotes the set of distinct
+eigenvalues of (E⋆τ ), eu/z denotes the rank-one connection (C{z}, d + d(u/z)) and Ru is a free
+C{z}-module equipped with a regular singular connection (whose pole order at z = 0 is at most
+two). In this decomposition, each “regular singular piece” Ru is unique up to isomorphism.
+This decomposition is automatically orthogonal with respect to the Poincaré pairing (1.4)
+and hence each piece Ru inherits a non-degenerate z-sesquilinear pairing (·, ·)u : (−1)∗ Ru ⊗
+Ru → C{z}. Hereafter we assume that the quantum connection is of exponential type: this
+assumption is natural from a mirror symmetry point of view.
+   We choose an admissible direction eiϕ for C, that is, an element eiϕ ∈ S 1 satisfying eiϕ ∈/
+          ′              ′
+R>0 (u − u ) for any u, u ∈ C. By the Hukuhara-Turrittin theorem (see [35, Lemma 8.3]), the
+above formal decomposition (2.1) lifts uniquely to an analytic decomposition
+
+                              ΦI : QDM(X)τ ∼
+                                                  M
+                                                =     eu/z ⊗ Ru
+                                                I                   I
+                                                      u∈C
+
+over a sector of the form I = {z ∈ C× : | arg z − ϕ| < π2 + ϵ} for some ϵ > 0. Here we mean
+by “lifts” that the map ΦI admits, when expressed in terms of local holomorphic frames of
+QDM(X)τ and Ru around z = 0, an asymptotic expansion as z → 0 along the sector I and
+that the expansion coincides with Φ.b
+   Let SI denote the space of ∇-flat sections over the angular sector {τ }×I: it can be identified
+with S(X) from §1.1 once we specify a lift of the sector I to the universal cover of C× . The
+analytic decomposition ΦI induces a decomposition of SI
+                                                M
+(2.2)                                      SI =      Vu
+                                                    u∈C
+
+where Vu can be identified with the space of flat sections of Ru over I. Since the analytic
+decomposition ΦI is valid over a sector of angle greater than π, it follows easily that the
+decomposition (2.2) is semiorthogonal in the sense that
+                             [Vu , Vu′ ) = 0 if ℑ(e−iϕ u) < ℑ(e−iϕ u′ )
+where [·, ·) is the pairing on SI ∼= S(X) introduced in (1.7). The data of the vector space SI
+equipped with the pairing [·, ·) and the semiorthogonal decomposition (SOD) (2.2) constitute
+a mutation system in the sense of [58, Definition 2.30]. In what follows, we ignore the torsion
+part of the K-group and write K(X) for K(X)/tors.
+Conjecture 2.13 ([58, 25]). Suppose that the quantum connection is of exponential type at
+τ ∈ H ∗ (X). With notation as above, the SOD (2.2) is induced from a decomposition of the
+topological K-group lattice, i.e. there exists a decomposition
+                                                   M
+(2.3)                                    K(X) =       Vuϕ
+                                                     u∈C
+
+such that Vu = s(Vuϕ ) ⊗ C, where we identify SI with S(X) by choosing a lift ϕ ∈ R of the
+direction eiϕ ∈ I. (A different choice of the lift ϕ changes Vuϕ by monodromy, i.e. Vuϕ+2π =
+Vuϕ ⊗ ωX [n].)
+
+   When this conjecture holds, the lattices {Vuϕ } are semiorthogonal with respect to the Euler
+pairing, i.e. χ(Vuϕ , Vuϕ′ ) = 0 for ℑ(e−iϕ u) < ℑ(e−iϕ u′ ) and therefore the Euler pairing on each
+Vuϕ is necessarily unimodular (because the Euler pairing on K(X) is unimodular by Poincaré
+duality). In the semisimple case, we must have Vuϕ ∼                                  ϕ
+                                                         = Z and a generator E of Vu must satisfy
+10                                           HIROSHI IRITANI
+
+
+χ(E, E) = ±1; the bΓ-conjecture II (Conjecture 2.7) additionally asserts that χ(E, E) = 1 (this
+point does not follow from Conjecture 2.13).
+Remark 2.14. The original formulation in [58] assumes that X is a smooth Fano variety and
+claims also that the semiorthogonal decomposition (SOD) (2.3) arises from an SOD of the
+derived category of coherent sheaves. We note that an SOD of the derived category induces
+an SOD of the topological K-group, since projections to the SOD summands are given by
+Fourier-Mukai kernels in Db (X × X) and these kernels induce projections in the topological
+K-group (see the discussion in [33, §4] in the context of algebraic K-theory).
+Example 2.15 ([58]). Sanda and Shamoto proved their conjecture for Fano complete inter-
+sections in the projective spaces of Fano index greater than 1. Let X be a degree d Fano
+hypersurface in Pn , with n − d > 0. The set of eigenvalues of the quantum multiplication
+(E⋆0 ) = (c1 (X)⋆0 ) is {0} ∪ {T ζ : ζ n+1−d = 1} where T = (n + 1 − d) · dd/(n+1−d) . The multi-
+plicity of T ζ is one and that of 0 is the dimension of the primitive cohomology plus d − 1. In
+this case, the decomposition (2.2) at τ = 0 arises from (up to mutation) the following SOD
+of the derived category
+                               Db (X) = ⟨A, O, O(1), . . . , O(n − d)⟩
+where O, . . . , O(n − k) are exceptional objects corresponding to simple eigenvalues T ζ and A
+is the right orthogonal of ⟨O, O(1), . . . , O(n − d)⟩ corresponding to the eigenvalue 0.
+     The following problem naturally arises:
+Problem 2.16. Understand a geometric meaning of each regular singular piece Ru and the
+corresponding unimodular lattice Vuϕ predicted in Conjecture 2.13.
+   In the semisimple case, each regular singular piece is the quantum connection of a point
+and the K-class Eiϕ in the Γ-conjecture
+                             b            II (Conjecture 2.7) corresponds to a generator of
+   0     ∼
+K (pt) = Z. The subcategory A in Example 2.15 is equivalent to the category of graded
+matrix factorizations of a degree d polynomial F (x0 , . . . , xn ) defining the hypersurface [56]:
+it is known to be a fractional Calabi-Yau category (in the sense that a power of the Serre
+functor equals the shift functor).
+
+2.5. Monodromy data and Riemann-Hilbert problem. Let us assume that X satis-
+fies Conjecture 2.13. In this section we explain how the SOD (2.3) encodes the irregular
+monodromy (Stokes) data, following [35, §8] and [58]. We also formulate a Riemann-Hilbert
+problem that reconstructs quantum cohomology from the SOD (2.3), formal data (2.1) and
+certain additional data.
+Monodromy. The monodromy transformation T : s(z) 7→ s(e2πi z) on SI is determined from
+the pairing [·, ·) as
+                   [T s1 , s2 ) = (s1 (eπi z), s2 (z)) = (s2 (e−πi z), s1 (z)) = [s2 , s1 ).
+The restriction [·, ·)u of the pairing [·, ·) to Vu is non-degenerate and is induced from the
+pairing (·, ·)u on Ru . The monodromy transformation Tu : Vu → Vu on flat sections of Ru is
+likewise determined by [Tu s1 , s2 )u = [s2 , s1 )u .
+Stokes data. Let S−I denote the space of ∇-flat sections over the opposite sector {τ } ×
+(−I). The Poincaré pairing (·, L  ·) : S−I × SI → C identifies S−I with the dual space of SI
+and the decomposition S−I =                  ′
+                                       u∈C Vu associated with the sector −I is dual to that for
+          ′                        ′
+I, i.e. (Vu′ , Vu ) = 0 for u ̸= u . The Stokes data are given by the analytic continuation
+                         GAMMA CLASSES AND QUANTUM COHOMOLOGY                                    11
+
+                                          𝑆+
+                                                  𝐷+
+
+                                                                 𝑒 i𝜙
+                                            −𝐼          𝐼
+
+
+                                                  𝐷−
+                                          𝑆−
+
+        Figure 1. The angular sectors ±I and the paths of analytic continuations
+        used to define the Stokes maps S ±
+
+maps S ± : SI → S−I , s(z) 7→ s(e±πi z). By the very definition of the pairing [·, ·), they are
+determined from [·, ·) as
+                         (S + s1 , s2 ) = [s2 , s1 ),       (S − s1 , s2 ) = [s1 , s2 ).
+Then we have T = (SL  − )−1 S + . The Stokes maps S ± are upper (or lower) triangular in the
+            +                                   ′       −                                 ′
+                                                                 L
+sense that S (Vu ) ⊂     ℑ(e−iϕ u′ )≥ℑ(e−iϕ u) Vu′ and S (Vu ) ⊂   ℑ(e−iϕ u′ )≤ℑ(e−iϕ u) Vu′ . They
+can be used to glue the connections over the opposite sectors
+                          M                            M
+                               eu/z ⊗ Ru          and     eu/z ⊗ Ru
+                                                 −I                                I
+                            u∈C                                u∈C
+
+along the two overlapping domains D± = I ∩ (−I) ∩ {±ℑ(ze−iϕ ) > 0} (see Figure 1). Hence
+the Stokes data reconstruct an analytic germ of the quantum connection at z = 0 from the
+formal data {Ru }u∈C .
+Riemann-Hilbert problem. The global quantum connection over P1 can be reconstructed
+by gluing the germ of the connection at z = 0 with a connection around z = ∞ via the
+Γ-integral
+b          structure. The quantum connection around z = ∞ is gauge-equivalent, via L(τ, z),
+to the connection
+                                   (∞)       ∂   c1 (X)
+                                 ∇z∂z = z      −        +µ
+                                            ∂z      z
+on the trivial bundle F∞ = H ∗ (X) × (P1 \ {0}) → P1 \ {0}. We identify the space of ∇(∞) -flat
+sections with the K-group via the framing Ψ∞ : K(X) → H ∗ (X) ⊗ OCf× (cf. (1.6)) given by
+
+(2.4)                  Ψ∞ (α) := (2π)−n/2 z −µ z c1 (X) Γ
+                                                        b X (2πi)deg /2 ch(α).
+
+We glue the bundle (F∞ , ∇(∞) ) with the germ around z = 0 by identifying the flat section
+Ψ∞ (α) with α ∈ Vuϕ with the flat section in Vu ∼
+                                                = Γ(I, Ru )∇ corresponding to α (here we need
+                    ϕ ∼
+an identification Vu = Vu ). This gives us a global vector bundle Fb → P1 with a meromorphic
+connection b ∇. The glued bundle Fb must be trivial (although it is not a priori clear); the
+trivialization of F∞ at z = ∞ induces a trivialization Fb ∼ = H ∗ (X) × P1 . The pair (Fb, ∇)
+                                                                                           b is
+identified with the quantum connection at τ .
+   More explicitly, this reconstruction procedure can be described as the following Riemann-
+Hilbert problem for functions Y± = (Φ±I )−1 (over the sectors ±I) and Y∞ = L(τ, z) (around
+z = ∞). This is an extension of the Riemann-Hilbert problem described by Dubrovin [19],
+[21, Lecture 4] in the semisimple case.
+ProblemL 2.17. Suppose that we are given the following data C, {Ru }u∈C , eiϕ , I, ϕ, (K(X), χ),
+K(X) = u∈C Vu , Ψu , Ψ∞ :
+    • a subset C of C;
+12                                          HIROSHI IRITANI
+
+     • a finite free C{z}-module Ru with a regular singular connection for each u ∈ C;
+     • an admissible direction eiϕ for C and a sector I = {z ∈ C× : | arg z − ϕ| < π2 + ϵ}
+       centred around it;
+     • a unimodular                                  ∗                      iϕ
+                  L lattice (K(X), χ) of rank dim H (X), a lift ϕ ∈ R of e and an SOD
+       K(X) = u∈C Vu ;
+     • a framing Ψu : Vu → Γ(I, Ru )∇ for each u ∈ C such that Ψu induces an isomorphism
+       over C and intertwines the transformation Tu ∈ End(Vu ) given by χ(Tu α, β) = χ(β, α)
+       with the monodromy s(z) 7→ s(e2πi z) on Γ(I, Ru )∇ ;
+     • the “Γ-integral”
+             b           framing Ψ∞ : K(X) → H ∗ (X) ⊗ OCf× given in (2.4), which satisfies
+       Ψ∞ (e2πi z) = Ψ∞ (z) ◦ T with T ∈ End(K(X)) given by χ(T α, β) = χ(β, α).
+We define Stokes maps S ± : K(X) → K(X)∨ by ⟨S + α, β⟩ = χ(β, α), ⟨S − α, β⟩ = χ(α, β) and
+a framing Ψ−,u : Vu∨ → Γ(−I, Ru )∇ over the opposite sector −I by
+            Ψ−,u (χ(α, ·)) := clockwise analytic continuation of Ψu (α) through D−
+for α ∈ Vu . We set
+                      Ψ := ⊕u∈C Ψu : K(X) = ⊕u∈C Vu → ⊕u∈C Γ(I, Ru )∇
+                  Ψ− := ⊕u∈C Ψ−,u : K(X)∨ = ⊕u∈C Vu∨ → ⊕u∈C Γ(−I, Ru )∇
+The problem is to find (matrix-valued) holomorphic functions
+              Y∞ ∈ GL(H ∗ (X)) ⊗ OP1 \{0} ,        Y± : ⊕u∈C Ru ±I → H ∗ (X) ⊗ O±I
+such that
+                 Y∞ |z=∞ = id,           Y± → Y0    as z → 0 along the sector ±I
+for an invertible operator Y0 : ⊕u∈C Ru |z=0 → H ∗ (X) and that
+                          Y+ Ψe−U/z = Y∞ Ψ∞                           over I
+                            −U ∨ /z
+                   Y− Ψ− e            S ± = Y+ Ψe−U/z                 over D±
+where D± is as before, the determination of Ψ∞ over I is given by | arg z − ϕ| < π2 + ϵ,
+U := ⊕u∈C u idVu ∈ End(K(X)) and U ∨ := ⊕u∈C u idVu∨ ∈ End(K(X)∨ ).
+   A solution (Y± , Y∞ ) to this problem is unique if exists. The solution Y∞ gives the funda-
+mental solution L(τ, z) and hence recovers the quantum connection. It is interesting to note
+that we reconstruct not only the connection but also the fundamental solution L(τ, z) (called
+calibration in the theory of Frobenius manifolds): this implies that the value of the parameter
+τ can be reconstructed by the asymptotics L(τ, z)−1 1 = 1 + τ z −1 + O(z −2 ) if we know the
+unit class 1.
+Remark 2.18. The additional data we need here (other than those we already mentioned) is
+the framing Ψu for each regular singular piece. In the semisimple case, we have Ru ∼  = (C{z}, d)
+and Vu ∼= Z, so there is essentially a unique choice for Ψu . A natural candidate for Ψu could be
+given by answering Problem 2.16. See §3.3 for the example where we have a natural candidate
+for the framing.
+Remark 2.19. If we include odd classes, the monodromy transformation T on SI is given
+by (−1)deg α [T α, β) = [β, α); the Stokes maps S ± : SI → S−I are given by (S + α, β) =
+(−1)deg α [β, α), (S − α, β) = [α, β). Problem 2.17 can be also modified accordingly, using
+the fact that the pairing [·, ·) on SI corresponds to −iχ(·, ·) on K 1 (X) (see Remark 1.2).
+                          GAMMA CLASSES AND QUANTUM COHOMOLOGY                                   13
+
+                        3. Functoriality of quantum cohomology
+   In this section, we discuss a conjectural functoriality of quantum cohomology under bira-
+tional transformations. Roughly speaking, we expect that the relationship between quantum
+cohomology is induced from a natural map between K-groups via the Γ-integral
+                                                                          b         structure.
+Let X1 , X2 be smooth projective varieties and let φ : X1 99K X2 be a birational map. Suppose
+that φ fits into the following commutative diagram
+
+(3.1)                                                 X
+                                                      b
+                                                 p1       p2
+
+                                             ~        φ
+                                        X1                  / X2 .
+
+where p1 , p2 are projective birational morphisms. We say that φ is crepant (or K-equivalent)
+if p∗1 KX1 = p∗2 KX2 and discrepant otherwise. We allow Xi to be smooth Deligne-Mumford
+stacks (with projective coarse moduli spaces) so that we can include crepant resolutions of
+orbifolds in the following discussion.
+
+3.1. Crepant transformation. Suppose that φ : X1 99K X2 is crepant. In this case it can
+be shown that H ∗ (X1 ) ∼
+                        = H ∗ (X2 ) as graded vector spaces by Kontsevich’s motivic integration
+(see e.g. [60]). A famous conjecture of Yongbin Ruan [57] says that the quantum cohomologies
+of X1 and X2 become isomorphic after analytic continuation. This problem has been studied
+by many people, see e.g. [51, 10, 48, 54]. We give a version of the conjecture stated in terms
+of quantum D-modules and the Γ-integral
+                                  b          structure following [15, Conjecture 5.1], [42, §5.5],
+[43, 17].
+Conjecture 3.1 (Crepant Transformation Conjecture). Let φ : X1 99K X2 be a crepant bi-
+rational map. There exists a map f from an open subset of H ∗ (X1 ) to an open subset of
+H ∗ (X2 ) such that, after analytic continuation, we have an isomorphism of quantum D-modules
+QDM(X1 ) ∼  = f ∗ QDM(X2 ). Moreover,via the Γ-integral
+                                                 b          structure, the isomorphism is induced
+by an isomorphism (K(X1 ), χ) ∼    = (K(X2 ), χ) of topological K-group lattices.
+   Recall from §1.2 that the quantum D-module QDM(Xi ) is the tuple of the cohomology
+bundle F , the quantum connection and the Poincaré pairing and the isomorphism in the
+conjecture is required to respect these structures. Conjecture 3.1 was proved4 for crepant
+transformations between complete intersections in toric Deligne-Mumford stacks, which are
+induced from variation of GIT quotients [14]. In that case, it is shown that the map K(X1 ) ∼=
+K(X2 ) between K-groups is given by a Fourier-Mukai transformation that gives rise to the
+equivalence of derived categories of X1 and X2 . The calculation needed in this result is an
+extension of the work of Borisov-Horja [9] that relates analytic continuation of hypergeometric
+solutions to the GKZ system and Fourier-Mukai transformations between toric orbifolds.
+Remark 3.2. (1) We can hope that the isomorphism K(X1 ) ∼             = K(X2 ) is induced by an
+equivalence of derived categories in general. A different derived equivalence can arise from a
+different choice of paths of analytic continuation.
+   (2) When Conjecture 3.1 holds, the map f is necessarily a local isomorphism and identifies
+the F -manifold structure [36] of quantum cohomology. In the case of crepant resolutions of
+orbifolds, it has been observed in [15] that f is not necessarily affine-linear unless the orbifold
+satisfies the Hard Lefschetz condition.
+  4For complete intersections, we restrict to the ambient part of quantum cohomology in [14].
+14                                        HIROSHI IRITANI
+
+3.2. Discrepant transformation. We present a conjectural picture in the discrepant case
+following [45]. In the discrepant case, the ranks of cohomology are different in general
+and we expect to have an orthogonal decomposition of formal quantum D-modules and a
+semiorthogonal decomposition of the Γ-integral
+                                     b          structure. As in §2.4, we write QDM(X) :=
+QDM(X) ⊗O[z] O[[z]] for the quantum D-module formalized along z = 0. Because of the lack
+of abundant evidences, we state our picture as problems rather than conjectures.
+Problem 3.3 (formal decomposition). Let φ : X1 99K X2 be a birational map fitting into
+the diagram (3.1) such that p∗1 KX1 − p∗2 KX2 is an effective divisor. Show that there exists a
+map f from an open subset of H ∗ (X1 ) to an open subset of H ∗ (X2 ) such that we have an
+orthogonal decomposition
+                                QDM(X1 ) ∼ = f ∗ QDM(X2 ) ⊕ D
+where D is a locally free O[[z]]-module equipped with a flat meromorphic connection ∇D and
+a ∇D -flat pairing (·, ·)D : (−)∗ D ⊗ D → O[[z]].
+   Problem 3.3 has been solved for discrepant birational transformations between toric Deligne-
+Mumford stacks which arise from a variation of GIT quotients [45]. The proof is based on
+mirror symmetry for toric stacks [12, 13].
+   Suppose that Problem 3.3 is solved for some φ : X1 99K X2 , and also suppose (for simplicity)
+that QDM(X1 ) is of exponential type (see §2.4) at some τ ∈ H ∗ (X1 ) in the domain of the
+map f . Then QDM(X2 )f (τ ) and D|τ are also of exponential type. We further assume the
+following: there exist a phase ϕ ∈ R and real numbers l1 > l2 such that
+      • every eigenvalue u of −∇D  z 2 ∂z ∈ End(D|z=0,τ ) satisfies either ℑ(e
+                                                                                 −iϕ u) > l or l >
+                                                                                           1    2
+            −iϕ
+        ℑ(e u) and
+      • every eigenvalue u of (E X2 ⋆f (τ ) ) ∈ End(H ∗ (X2 )) satisfies l1 > ℑ(e−iϕ u) > l2 .
+Then D|τ decomposes as D|τ = D1 ⊕D2 so that every eigenvalue of −∇D  1
+                                                                  z 2 ∂z
+                                                                         on D1 |z=0 satisfies
+ℑ(e−iϕ u) > l1 and that every eigenvalue of −∇D      2
+                                                  z 2 ∂z
+                                                         on D2 |z=0 satisfies ℑ(e−iϕ u) < l2 . By
+varying ϕ a little, we may assume that eiϕ is admissible for the eigenvalues of (E X1 ⋆τ ). As
+discussed in §2.4, by the Hukuhara-Turrittin theorem, the formal decomposition QDM(X1 )τ ∼      =
+D1 ⊕ QDM(X2 )f (τ ) ⊕ D2 lifts to an analytic decomposition of connections over a sector of the
+form I = {z ∈ C× : | arg z − ϕ| < π2 + ϵ} for some ϵ > 0
+
+(3.2)                     QDM(X1 )τ       ∼
+                                          = D1,I ⊕ QDM(X2 )τ       ⊕ D2,I
+                                      I                        I
+where Di,I is an analytic connection over the sector I.
+Problem 3.4 (analytic decomposition). Show that the analytic decomposition (3.2) is in-
+duced, via the Γ-integral
+               b          structures for X1 and X2 , by an SOD of topological K-groups:
+(3.3)                             K(X1 ) ∼
+                                         = K1 ⊕ K(X2 ) ⊕ K2
+such that the associated inclusion K(X2 ) → K(X1 ) respects the Euler pairing.
+  Problem 3.4 has been answered affirmatively when X1 , X2 are weak-Fano compact toric
+Deligne-Mumford stacks (satisfying certain mild technical conditions) and φ : X1 → X2 is
+a weighted blowup (or a root construction) along a toric substack Z [45]. We also showed
+that the decomposition (3.3) at some τ and ϕ is given by an Orlov-type SOD [55]. We could
+hope that the SOD (3.3) in K-theory arises from an SOD Db (X1 ) ∼= ⟨A1 , Db (X2 ), A2 ⟩ of the
+derived category; such an SOD in the derived category has been conjectured in [6].
+                          GAMMA CLASSES AND QUANTUM COHOMOLOGY                                        15
+
+Remark 3.5. There are closely related works by Bayer [7], Acosta-Shoemaker [2, 3] and
+González-Woodward [32]. A formal decomposition of quantum D-modules under flips similar
+to our picture has been also proposed by Lee, Lin and Wang [49, 50].
+Remark 3.6. In Problem 3.3, f is necessarily a submersion and the quantum cohomology F -
+manifold of X1 locally decomposes into the product of the quantum cohomology F -manifold
+of X2 and that corresponding to D. Proof. The map Tτ H ∗ (X1 ) → QDM(X1 )|z=0,τ = H ∗ (X1 )
+given by v 7→ z∇v 1 is an isomorphism. If the unit section 1 maps to (s, t) ∈ QDM(X2 )⊕D un-
+der the isomorphism, it follows that the map df (Tτ H ∗ (X1 )) → QDM(X2 )|z=0,f (τ ) , w 7→ z∇w s
+is surjective. This can only happen when df : Tτ H ∗ (X1 ) → Tf (τ ) H ∗ (X2 ) is surjective. The ring
+homomorphism Tτ H ∗ (X1 ) ,→ End(QDM(X1 )|z=0,τ ), v 7→ z∇v factors through Tτ H ∗ (X1 ) →
+Tf (τ ) H ∗ (X2 ) ⊕ End(D|z=0,τ ) and this gives a decomposition of the ring (Tτ H ∗ (X1 ), ⋆τ ). The
+flatness of ∇ shows that the decomposition is integrable.
+Remark 3.7. For a higher-genus generalization of Conjecture 3.1 and Problem 3.3, we refer
+the reader to [16], [45].
+3.3. Riemann-Hilbert problem for blowups. Let X be a smooth projective variety and
+let Z ⊂ X be a smooth subvariety. Let φ : X  e → X be the blowup of X along Z. The above
+mentioned results for toric blowups suggest the following conjectural reconstruction algorithm
+for quantum cohomology of X   e from quantum cohomology of X and Z. This is similar to the
+procedure in §2.5.
+Orlov decomposition. Let c be the codimension of Z in X. By Orlov [55] we have the SOD
+of the K-group:
+               X) = φ∗ K(X) ⊕ K(Z)0 ⊕ · · · ⊕ K(Z)c−2 ∼
+            K( e                                           = K(X) ⊕ K(Z)⊕(c−1)
+where K(Z)k = j∗ (O(k) ⊗ π ∗ K(Z)) with j : E ,→ X the inclusion of the exceptional locus and
+π: E ∼ = P(NZ/X ) → Z a projective bundle. We shall fix this decomposition. The cohomology
+of X is isomorphic to H ∗ (X) ⊕ H ∗−2 (Z) ⊕ · · · ⊕ H ∗−2c+2 (Z) as graded vector spaces. The cup
+    e
+product structure on H ∗ (X),e the Γ-class
+                                      b      and the Chern character for X e can be reconstructed
+from those for X, Z, the push-forward and pull-back maps between H ∗ (X), H ∗ (Z) and the
+Chern classes ci (NZ/X ) ∈ H 2i (Z).
+Formal data. We choose parameters σ ∈ H ∗ (X) and ρ0 , . . . , ρc−2 ∈ H ∗ (Z) and a phase
+ϕ ∈ R so that ℑ(e−iϕ v) > ℑ(e−iϕ u0 ) > · · · > ℑ(e−iϕ uc−2 ) for all eigenvalues v of (E X ⋆σ ) and
+all eigenvalues ui of (E Z ⋆ρi ). We define QDM := QDM(X)σ ⊕QDM(Z)ρ0 ⊕· · ·⊕QDM(Z)ρc−2 .
+This will be the formal quantum D-module for X.     e
+Gluing. The given formal decomposition for QDM should lift to analytic decompositions over
+the sectors I and −I, with I = {z ∈ C× : | arg z − ϕ| < π2 + ϵ} for some ϵ > 0
+              Φ±I : QDM          ∼
+                                 = QDM(X)σ ⊕ QDM(Z)ρ ⊕ · · · ⊕ QDM(Z)ρ
+                            ±I                                  0                      c−2   ±I
+and the two analytic decompositions should be glued together by the Stokes data induced
+from Orlov’s SOD. Finally we glue it with the connection near z = ∞ via the b       Γ-integral
+structure to get the quantum D-module for X.e
+   The reconstruction can be formulated as a Riemann-Hilbert problem for Y± = (Φ±I )−1
+and Y∞ = L(τ, z) (a fundamental solution for X,e see (1.5)) as follows. Define S ± : K(X)
+                                                                                        e →
+      ∨       +                 −                                             X) ∼
+   X) by ⟨S α, β⟩ = χ(β, α), ⟨S α, β⟩ = χ(α, β) as before; also define Ψ : K( e
+K( e                                                                               = K(X) ⊕
+K(Z)  ⊕(c−1)       ∗       ∗
+             → (H (X) ⊕ H (Z)  ⊕(c−1) ) ⊗ OI as
+          Ψ(α, β0 , . . . , βc−2 ) = sX (α)(σ, z) ⊕ sZ (β0 )(ρ0 , z) ⊕ · · · ⊕ sZ (βc−2 )(ρc−2 , z)
+16                                           HIROSHI IRITANI
+
+
+                                                                                    X)∨ ∼
+where sX , sZ are the maps (1.6) defined for X and Z respectively and define Ψ− : K( e  =
+K(X)∨ ⊕ (K(Z)∨ )⊕(c−1) → (H ∗ (X) ⊕ H ∗ (Z)⊕(c−1) ) ⊗ O−I as
+ Ψ− (χ(α, ·), χ(β0 , ·), . . . , χ(βc−2 , ·)) = clockwise analytic continuation of Ψ(α, β0 , . . . , βc−2 ).
+Let Ψ∞ be the map (2.4) with X there replaced with e
+                                                   X. The problem is to find functions
+     Y∞ ∈ GL(H ∗ ( e
+                  X)) ⊗ OP1 \{0} , Y± ∈ Hom(H ∗ (X) ⊕ H ∗ (Z)⊕(c−1) , H ∗ ( e
+                                                                           X)) ⊗ O±I .
+such that Y∞ |z=∞ = id, Y± → Y0 as z → 0 along the sector ±I for an invertible operator Y0
+and that
+                               Y+ Ψ = Y∞ Ψ∞                               over I
+                         Y− Ψ− S ± = Y+ Ψ                                 over D±
+where D± is as before. As discussed in §2.5, we can reconstruct the value of the parameter τ
+for the quantum D-module of X    e and it becomes a function of σ, ρ0 , . . . , ρc−2 ; the parameter
+space locally splits into the product of H ∗ (X) and (c − 1) copies of H ∗ (Z) as an F -manifold.
+Remark 3.8. Recently, Katzarkov, Kontsevich and Pantev [47] formulated a closely related
+conjecture for quantum cohomology of blowups and gave a remarkable application to the
+problem of rationality.
+Acknowledgements. I thank Sergey Galkin for valuable comments on a draft version of the
+paper and allowing me to present his formulation in this paper.
+Funding. This work was partially supported by JSPS grant 16H06335, 20K03582 and 21H04994.
+
+                                               References
+ [1] M. Abouzaid, S. Ganatra, H. Iritani, and N. Sheridan, The Gamma and Strominger-Yau-Zaslow conjec-
+     tures: a tropical approach to periods. Geom. Topol. 24 (2020) 2547-2602.
+ [2] P. Acosta, M. Shoemaker, Gromov-Witten theory of toric birational transformations. 2016,
+     arXiv:1604.03491.
+ [3] P. Acosta, M. Shoemaker, Quantum cohomology of toric blowups and Landau-Ginzburg correspondences.
+     Algebr. Geom. 5 (2018), 239–263.
+ [4] M. F. Atiyah, Circular symmetry and stationary phase approximation, pp. 43–59 in Colloque en l’honneur
+     de Laurent Schwartz (École Polytechnique, Palaiseau, 30 May – 3 June 1983). Astérisque 131. Société
+     mathématique de France (Paris), 1985.
+ [5] M. F. Atiyah and F. Hirzebruch, Vector bundles and homogeneous spaces, Proc. Symp. Pure Math. v. III,
+     Amer. Math. Soc., Providence, R.I., (1961) , 7–38.
+ [6] M. Ballard, D. Favero, L. Katzarkov, Variation of geometric invariant theory quotients and derived cate-
+     gories. J. Reine Angew. Math. 746 (2019), 235–303.
+ [7] A. Bayer, Semisimple quantum cohomology and blowups. Int. Math. Res. Not. (2004), 2069–2083.
+ [8] A. Bondal and A. Polishchuk, Homological properties of associative algebras: the method of helices
+     (in Russian), Izv. Ross. Akad. Nauk Ser. Mat. 57, no.2 (1993), 3–50; English translation in Russian
+     Acad. Sci. Izv. Math. 42, no.2 (1994), 219–260.
+ [9] L. Borisov and R. Horja, Mellin–Barnes integrals as Fourier–Mukai transforms, Adv. Math. 207 (2006),
+     no. 2, 876–927.
+[10] J. Bryan and T. Graber, The crepant resolution conjecture. In Algebraic geometry – Seattle 2005. Part 1,
+     Proc. Sympos. Pure Math., Vol.80, Amer. Math. Soc., Providence, RI, 2009, 23–42.
+[11] D. Cheong and C. Li, On the Conjecture O of GGI for G/P , Adv. Math. 306 (2017), 704–721.
+[12] T. Coates, A. Corti, H. Iritani, H.H. Tseng, A Mirror Theorem for Toric Stacks. Compos. Math. 151
+     (2015), 1878–1912.
+[13] T. Coates, A. Corti, H. Iritani, H.H. Tseng, Hodge-theoretic mirror symmetry for toric stacks. J. Differ-
+     ential Geom. 114 (2020), 41–115.
+[14] T. Coates, H. Iritani, Y. Jiang, The crepant transformation conjecture for toric complete intersections.
+     Adv. Math. 329 (2018), 1002–1087.
+                            GAMMA CLASSES AND QUANTUM COHOMOLOGY                                              17
+
+[15] T. Coates, H. Iritani, H.H. Tseng, Wall-crossings in toric Gromov-Witten theory. I. Crepant examples.
+     Geom. Topol. 13 (2009), 2675–2744.
+[16] T. Coates, H. Iritani, A Fock sheaf for Givental quantization. Kyoto J. Math. 58 (2018), 695–864.
+[17] T. Coates and Y. Ruan, Quantum cohomology and crepant resolutions: a conjecture. Ann. Inst. Fourier
+     (Grenoble), 63 no.2, 431–478, 2013.
+[18] G. Cotti, B. Dubrovi, D. Guzzetti, Helix structures in quantum cohomology of Fano varieties, 2018,
+     arXiv:1811.09235.
+[19] B. Dubrovin, Geometry of 2D topological field theories, In Integrable systems and quantum groups edited
+     by M. Francaviglia et al., Berlin: Springer-Verlag. Lect. Notes Math. 1620, 120–348 (1996).
+[20] B. Dubrovin, Geometry and analytic theory of Frobenius manifolds, In Proceedings of the International
+     Congress of Mathematicians, Vol. II (Berlin, 1998), 315–326.
+[21] B. Dubrovin, Painlevé transcendents in two-dimensional topological field theory, In The Painlevé property,
+     CRM Ser. Math. Phys., Springer, New York, 1999, 287–412.
+[22] B. Dubrovin, Quantum cohomology and isomonodromic deformation, Lecture at Recent Progress in the
+     Theory of Painlevé Equations: Algebraic, asymptotic and topological aspects, Strasbourg, November 2013.
+[23] B. Fang and P. Zhou, Gamma II for toric varieties from integrals on T -dual branes and homological mirror
+     symmetry, 2019, arXiv:1903.05300.
+[24] S. Galkin, Apéry constants of homogeneous varieties, preprint SFB45 (2008), arXiv:1604.04652.
+[25] S. Galkin, Private communication.
+[26] S. Galkin, V. Golyshev and H. Iritani, Gamma classes and quantum cohomology of Fano manifolds:
+     Gamma conjectures, Duke Math. J. 165 (2016), no. 11, 2005–2077.
+[27] S. Galkin and H. Iritani, Gamma conjecture via mirror symmetry, In Primitive forms and related subjects
+     – Kavli IPMU 2014, 55–115, Adv. Stud. Pure Math. 83 (2019)
+[28] A. Givental, Homological geometry I. Projective hypersurfaces, Selecta Math., 1, 325–345 (1995)
+[29] A. Givental, Equivariant Gromov-Witten invariants, International Mathematics Research Notices, Volume
+     1996, Issue 13, 1996, 613–663.
+[30] V. Golyshev, Deresonating a Tate period, 2009, arXiv:0908.1458.
+[31] V. Golyshev and D. Zagier, Proof of the gamma conjecture for Fano 3-folds of Picard rank 1.
+     Izv. Ross. Akad. Nauk Ser. Mat., 80 (2016), no.1, 27–54.
+[32] E. González and C. Woodward, Quantum cohomology and toric minimal model programs. Adv. Math.
+     353 (2019), 591–646.
+[33] S. Gorchinskiy, D. Dmitri, Geometric phantom categories, Publ. Math. Inst. Hautes Études Sci., 117
+     (2013), 329–349.
+[34] M. Guest, Quantum cohomology via D-modules, Topology 44 (2005), no.2, 263–281.
+[35] C. Hertling and C. Sevenheck, Nilpotent orbits of a generalization of Hodge structures, J. Reine
+     Angew. Math. 609 (2007), 23–80.
+[36] C. Hertling and Y. I. Manin, Weak Frobenius manifolds. Internat. Math. Res. Notices 1999, no.6, 277–286.
+[37] C. Hertling, Y. I. Manin and C. Teleman, An update on semisimple quantum cohomology and F -manifolds,
+     Tr. Mat. Inst. Steklova 264 (2009), Mnogomernaya Algebraicheskaya Geometriya, 69–76; translation in
+     Proc. Steklov Inst. Math. 264 (2009), no. 1, 62–69.
+[38] R. Horja, Hypergeometric functions and mirror symmetry in toric varieties, 1999, arXiv:math/9912109,
+[39] S. Hosono, Central charges, symplectic forms, and hypergeometric series in local mirror symmetry, Mirror
+     symmetry. V, AMS/IP Stud. Adv. Math., vol. 38, Amer. Math. Soc., Providence, RI, 2006, pp.405–439.
+[40] S. Hosono, A. Klemm, S. Theisen, and S. T. Yau, Mirror symmetry, mirror map and applications to
+     complete intersection Calabi–Yau spaces, Nuclear Phys. B 433 (1995), no.3, 501–552.
+[41] X. Hu, H-Z. Ke, Gamma conjecture II for quadrics, 2021, arXiv:2103.15143.
+[42] H. Iritani, An integral structure in quantum cohomology and mirror symmetry for toric orbifolds,
+     Adv. Math. 222 (2009), no. 3, 1016–1079.
+[43] H. Iritani, Ruan’s conjecture and integral structures in quantum cohomology. In New developments in
+     algebraic geometry, integrable systems and mirror symmetry (RIMS, Kyoto, 2008), vol. 59, Adv. Stud. Pure
+     Math., 111–166. Math. Soc. Japan, Tokyo, 2010.
+[44] H. Iritani, Quantum cohomology and periods. Ann. Inst. Fourier (Grenoble) 61 (2011), 2909–2958.
+[45] H. Iritani, Global Mirrors and Discrepant Transformations for Toric Deligne-Mumford Stacks. SIGMA,
+     16 (2020), 032, 111 pages
+18                                            HIROSHI IRITANI
+
+[46] L. Katzarkov, M. Kontsevich, and T. Pantev, Hodge theoretic aspects of mirror symmetry, In From
+     Hodge theory to integrability and TQFT tt∗ -geometry, pp.87–174, Proc. Sympos. Pure Math., 78,
+     Amer. Math. Soc., Providence, RI, 2008.
+[47] M. Kontsevich, Birational invariants from quantum cohomology. Talk at Higher School of Economics on
+     27 May 2019, as part of Homological Mirror Symmetry at HSE, 27 May –1 June, 2019.
+[48] Y. P. Lee, H. W. Lin and C. L. Wang, Flops, motives, and invariance of quantum rings, Ann. of Math.
+     (2) 172 (2010), 243–290.
+[49] Y. P. Lee, H. W. Lin, C. L. Wang, Quantum cohomology under birational maps and transitions. In
+     String-Math 2015, Proc. Sympos. Pure Math., Vol.96, Amer. Math. Soc., Providence, RI, 2017, 149–168.
+[50] Y. P. Lee, H. W. Lin, C. L. Wang, Quantum flips I: local model, 2019, arXiv:1912.03012.
+[51] A. M. Li and Y. Ruan, Symplectic surgery and Gromov-Witten invariants of Calabi-Yau 3-folds. In-
+     vent. Math. 145 (2001), 151–218.
+[52] A. S. Libgober, Chern classes and the periods of mirrors, Math. Res. Lett., 6 (1999), 141–149,
+[53] R. Lu, The bΓ-genus and a regularization of an S 1 -equivariant Euler class, J. Phys. A 41 (2008), no.42,
+     425204 (13pp).
+[54] M. McLean, Birational Calabi-Yau manifolds have the same small quantum products. Ann. Math. Vol.191,
+     No.2 (2020), 439–579.
+[55] D. Orlov, Projective bundles, monoidal transformations, and derived categories of coherent sheaves.
+     Izv. Ross. Akad. Nauk Ser. Mat. 56 (1992), 852–862, English translation in: Russian Acad. Sci. Izv. Math.,
+     41 (1993) no.1, 133–141.
+[56] D. Orlov, Derived categories of coherent sheaves and triangulated categories of singularities. In Algebra,
+     arithmetic, and geometry: in honor of Yu. I. Manin. Vol. II, Progr. Math., vol.270, Birkhäuser Boston
+     Inc., Boston, MA, 2009, 503–531.
+[57] Y. Ruan, The cohomology ring of crepant resolutions of orbifolds. In Gromov-Witten theory of spin curves
+     and orbifolds, Contemp. Math., Vol. 403, Amer. Math. Soc., Providence, RI, 2006, 117–126.
+[58] F. Sanda and Y. Shamoto, An analogue of Dubrovin’s conjecture, Ann. Inst. Fourier, 70 (2020) no.2,
+     621–682.
+[59] C. van Enckevort and D. van Straten, Monodromy calculations of fourth order equations of Calabi-Yau
+     type, Mirror symmetry. V, AMS/IP Stud. Adv. Math., vol.38, Amer. Math. Soc., Providence, RI, 2006,
+     539–559.
+[60] T. Yasuda, Motivic integration over Deligne-Mumford stacks. Adv. Math., 207 (2006) no.2, 707–761.
+
+     Department of Mathematics, Kitashirakawa-Oiwake-cho, Sakyo-ku, Kyoto, Japan
+     Email address: iritani@math.kyoto-u.ac.jp
+

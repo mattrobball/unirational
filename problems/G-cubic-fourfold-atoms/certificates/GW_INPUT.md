@@ -159,7 +159,7 @@ is imported for this.
 | Lemma 5.24 | Replaced by certificate Lemma 3.6 as in D6. No surviving GW row beyond the already-exposed product in GW-1. F1, **FORMALIZE**. |
 | Definition 5.26 and Remark 5.27 | Formation of \(\rho_\alpha\) and \(P_\alpha(t)\) from a Hodge representation is formal representation/Hodge bookkeeping. F1, **FORMALIZE**. |
 | Proposition 5.30 | Deleted and replaced by target-specific Proposition 3.7. Its weak-factorization premise is non-GW and belongs to WP-2; its blowup premise is GW-3. |
-| “Proposition 5.31” | **No such proposition exists in the pinned arXiv:2508.05105v2 artifact.** Proposition 5.30 is followed by §5.5. This work-order entry is a bibliographic mismatch and contributes no interface. |
+| Proposition 5.28 (mislisted as “Proposition 5.31” in WORKORDER_1) | Every Hodge atom satisfies \(\rho_\alpha\ge1\), because its nonzero unital atom algebra contains the Hodge-fixed unit. This is Proposition 5.28, source label `prop:Ginv1`, pinned-v2 printed p. 62 (`tmp/sources/v2/brinv.tex`, lines 3576–3583). It is F1, **FORMALIZE**. It is not consumed by the repaired proof of Theorem 6.8; its paper use is downstream in Corollary 6.12, so it contributes no permanent interface. |
 
 The non-GW inheritance is costed separately:
 
