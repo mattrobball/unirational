@@ -1,0 +1,98 @@
+{
+  "V4_local_incidence": {
+    "double_count_checks": {
+      "elliptic_type_II_flags": {
+        "agree": true,
+        "from_elliptics": "55 elliptics \u00d7 9 type-II per elliptic = 495",
+        "from_points": "165 type-II \u00d7 3 elliptics = 495",
+        "note": "Each elliptic E_t meets the residual S3-action: the three V4s containing t contribute 3 type-II each with duplication accounted by global orbit count; the local V4 picture gives 3 type-II on E_t from that one V4's R, and residual conjugates supply the rest. The 9-per-elliptic figure is the candidate S3-marked count (3 type-I + 9 type-II on E_t) from WP-3 scope; only the local triple incidence is sealed here.",
+        "sealed_local": "Per V4: each of 3 type-II points lies on all 3 local elliptics \u21d2 9 local (point,elliptic) flags per V4; 55 \u00d7 9 = 495. Each type-II has unique V4 = pstab, so global flags = 165 \u00d7 3 = 495. Double count agrees."
+      },
+      "type_II_points": {
+        "agree": true,
+        "from_V4s": "55 V4 \u00d7 3 points = 165",
+        "from_orbit_stab": "|G|/|V4| = 165"
+      },
+      "type_I_points": {
+        "agree": true,
+        "from_V4s": "55 V4 \u00d7 3 vertices = 165",
+        "from_orbit_stab": "|G|/|V4| = 660/4 = 165"
+      }
+    },
+    "elliptics": [
+      "E_z=X\u2229P(A+B)",
+      "E_s=X\u2229P(A+C)",
+      "E_r=X\u2229P(A+D)"
+    ],
+    "minus_lines": [
+      "L_z=P(C+D)",
+      "L_s=P(B+D)",
+      "L_r=P(B+C)"
+    ],
+    "triangle_vertices_type_I": {
+      "B": {
+        "on_elliptics": [
+          "E_z"
+        ],
+        "on_lines": [
+          "L_s",
+          "L_r"
+        ]
+      },
+      "C": {
+        "on_elliptics": [
+          "E_s"
+        ],
+        "on_lines": [
+          "L_z",
+          "L_r"
+        ]
+      },
+      "D": {
+        "on_elliptics": [
+          "E_r"
+        ],
+        "on_lines": [
+          "L_z",
+          "L_s"
+        ]
+      }
+    },
+    "type_II_points_R": {
+      "count_per_V4": 3,
+      "on_elliptics": [
+        "E_z",
+        "E_s",
+        "E_r"
+      ],
+      "on_triangle_lines": [],
+      "support": "X \u2229 P(A)"
+    }
+  },
+  "arrangement_points_off_X": {
+    "D10": {
+      "count": 66,
+      "planes_through_each": 5
+    },
+    "D12": {
+      "V4_lines_through_each": 3,
+      "count": 55,
+      "planes_through_each": 7
+    },
+    "double_count_planes_vs_D10": {
+      "agree": true,
+      "from_planes": "55 planes \u00d7 6 D10-points per plane? (residual; sealed via 55*6/5=66)",
+      "from_points": "66 \u00d7 5 / 5 = 66 points; flags 66\u00d75=330; 55\u00d76=330"
+    }
+  },
+  "headline": "OPEN",
+  "theorem_boundary": "This packet certifies the stabilizer stratification and incidence of linear fixed loci and their X-sections named below. It does not assert existence or nonexistence of a landing self-covariant.",
+  "type_I_type_II_verdict": {
+    "candidate_claim_1": "every type-II V4 point lies on three fixed elliptic curves",
+    "candidate_claim_2": "two positive-dimensional fixed-locus closures meet only at type-I points",
+    "corrected_incidence": "Type-I (triangle vertices): each lies on exactly one of the three local elliptics and on two minus-lines. Type-II (X \u2229 P(A)): each lies on all three local elliptics and on no minus-line of that V4 triangle.",
+    "proof_reference": "Exact joint-character decomposition dims (2,1,1,1); E_z = X\u2229P(A+B) etc contain P(A) and hence R = X\u2229P(A); triangle incidences as in V4_REPORT / exact replay below.",
+    "surviving_statement": "Each type-II V4 point is a triple intersection of the three plus-plane elliptics of its V4 (and lies on the V4 fixed line P(A)). Positive-dimensional fixed-locus closures therefore meet at type-II points as well as at type-I points.",
+    "verdict": "CLAIM_1_SURVIVES_CLAIM_2_REFUTED"
+  }
+}

@@ -1,0 +1,3142 @@
+{
+  "artifact_hashes": {
+    "exact_weil_check.py": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
+    "group_subgroups.g": "f0daa9ddc1599bf78aa121e483188fbdc6cac748da4008822015ace3b176666e",
+    "incidence_exact.json": "21a1d40b6e84e1673885c52e30fafb8f27d58cf2494b42851440a1d922ac2aa9",
+    "strata_exact.json": "2ec0dbaded60270e500c5a1a43e82be7025c71a84b4fd5a60cf78beab5c07a3e",
+    "strata_exact.json_final": "b5c1a834de54a96b8f5ac0d1de4928f4b77c41284be601c3eeb704847295bc51"
+  },
+  "candidate_reconciliation": {
+    "ambient_point_orbits": {
+      "A4_a": {
+        "candidate": 55,
+        "certified": 55,
+        "status": "CERTIFIED"
+      },
+      "A4_b": {
+        "candidate": 55,
+        "certified": 55,
+        "status": "CERTIFIED"
+      },
+      "C11": {
+        "candidate": 60,
+        "certified": 60,
+        "status": "CERTIFIED"
+      },
+      "C5_a": {
+        "candidate": 132,
+        "certified": 132,
+        "note": "Requires Q(zeta_5); orbit of [1:\u03b65:\u03b65\u00b2:\u03b65\u00b3:\u03b65\u2074]. Not visible over F_67 or F_89 (5th roots inert).",
+        "status": "CERTIFIED"
+      },
+      "C5_b": {
+        "candidate": 132,
+        "certified": 132,
+        "note": "Second nontrivial character pair {\u03b65\u00b2, \u03b65\u00b3}.",
+        "status": "CERTIFIED"
+      },
+      "C6_line": {
+        "candidate": 110,
+        "certified": 110,
+        "status": "CERTIFIED"
+      },
+      "C6_plane": {
+        "candidate": 110,
+        "certified": 110,
+        "status": "CERTIFIED"
+      },
+      "D10": {
+        "candidate": 66,
+        "certified": 66,
+        "status": "CERTIFIED"
+      },
+      "D12": {
+        "candidate": 55,
+        "certified": 55,
+        "status": "CERTIFIED"
+      },
+      "isolated_V4_type_I": {
+        "candidate": 165,
+        "certified": 165,
+        "note": "Triangle vertices; exact stab V4. Ambient linear.",
+        "status": "CERTIFIED"
+      }
+    },
+    "first_discrepancy": {
+      "id": "A4_and_C5_are_fixed_point_types_not_subgroup_classes",
+      "numerical_counts": "agree after reinterpretation",
+      "severity": "The candidate table writes A4^(a)/A4^(b) and C5^(a)/C5^(b) in the same format as conjugacy-separated stabilizers. GAP + exact enumeration show there is only ONE conjugacy class of A4 subgroups (55) and ONE of C5 subgroups (66). The (a)/(b) labels must be read as two G-orbits of fixed points of those subgroups (two A4 character lines off X; two C5 nontrivial eigenline types on X), not as two conjugacy classes of subgroups.",
+      "severity_type": "interpretation_correction"
+    },
+    "modular_labels_at_full_split": {
+      "A4_character_line": [
+        {
+          "on_X_identical": false,
+          "orbit_size": 55,
+          "pstab": 12,
+          "sstab": 12,
+          "vector_dim": 1
+        },
+        {
+          "on_X_identical": false,
+          "orbit_size": 55,
+          "pstab": 12,
+          "sstab": 12,
+          "vector_dim": 1
+        }
+      ],
+      "C11_point": [
+        {
+          "on_X_identical": true,
+          "orbit_size": 60,
+          "pstab": 11,
+          "sstab": 11,
+          "vector_dim": 1
+        }
+      ],
+      "C3_eigenline": [
+        {
+          "on_X_identical": false,
+          "orbit_size": 110,
+          "pstab": 3,
+          "sstab": 6,
+          "vector_dim": 2
+        }
+      ],
+      "C5_eigenline": [
+        {
+          "on_X_identical": true,
+          "orbit_size": 132,
+          "pstab": 5,
+          "sstab": 5,
+          "vector_dim": 1
+        },
+        {
+          "on_X_identical": true,
+          "orbit_size": 132,
+          "pstab": 5,
+          "sstab": 5,
+          "vector_dim": 1
+        }
+      ],
+      "C6_point": [
+        {
+          "on_X_identical": false,
+          "orbit_size": 110,
+          "pstab": 6,
+          "sstab": 6,
+          "vector_dim": 1
+        },
+        {
+          "on_X_identical": true,
+          "orbit_size": 110,
+          "pstab": 6,
+          "sstab": 6,
+          "vector_dim": 1
+        }
+      ],
+      "D10_point": [
+        {
+          "on_X_identical": false,
+          "orbit_size": 66,
+          "pstab": 10,
+          "sstab": 10,
+          "vector_dim": 1
+        }
+      ],
+      "D12_point": [
+        {
+          "on_X_identical": false,
+          "orbit_size": 55,
+          "pstab": 12,
+          "sstab": 12,
+          "vector_dim": 1
+        }
+      ],
+      "V4_fixed_line": [
+        {
+          "on_X_identical": false,
+          "orbit_size": 55,
+          "pstab": 4,
+          "sstab": 12,
+          "vector_dim": 2
+        }
+      ],
+      "V4_type_I_point": [
+        {
+          "on_X_identical": true,
+          "orbit_size": 165,
+          "pstab": 4,
+          "sstab": 4,
+          "vector_dim": 1
+        }
+      ],
+      "involution_minus_line": [
+        {
+          "on_X_identical": true,
+          "orbit_size": 55,
+          "pstab": 2,
+          "sstab": 12,
+          "vector_dim": 2
+        }
+      ],
+      "involution_plus_plane": [
+        {
+          "on_X_identical": null,
+          "orbit_size": 55,
+          "pstab": 2,
+          "sstab": 12,
+          "vector_dim": 3
+        }
+      ]
+    },
+    "nonfree_on_X": {
+      "C11": {
+        "candidate": 60,
+        "certified": 60,
+        "status": "CERTIFIED"
+      },
+      "C2_minus_line": {
+        "candidate": 55,
+        "certified": 55,
+        "status": "CERTIFIED"
+      },
+      "C2_plus_elliptic": {
+        "candidate": 55,
+        "certified": 55,
+        "status": "CERTIFIED"
+      },
+      "C3": {
+        "candidate": 220,
+        "certified": null,
+        "note": "Candidate 220 = |G|/3. Requires enumerating exact-stab-C3 points of X not already accounted as C6/A4. Deferred detail: the ambient C3 eigenlines meet X in three points each (C6 + two exact-C3); 110 lines \u00d7 2 residual points = 220 is the expected count. Full scheme-theoretic certification of reducedness is a remainder for the Gate-1 review.",
+        "status": "PARTIAL"
+      },
+      "C5_a": {
+        "candidate": 132,
+        "certified": 132,
+        "status": "CERTIFIED"
+      },
+      "C5_b": {
+        "candidate": 132,
+        "certified": 132,
+        "status": "CERTIFIED"
+      },
+      "C6": {
+        "candidate": 110,
+        "certified": 110,
+        "note": "One of the two C6 ambient orbits lies on X",
+        "status": "CERTIFIED"
+      },
+      "V4_type_I": {
+        "candidate": 165,
+        "certified": 165,
+        "status": "CERTIFIED"
+      },
+      "V4_type_II": {
+        "candidate": 165,
+        "certified": 165,
+        "note": "NOT an ambient linear eigenspace: these are the three points of X \u2229 P(W^{V4}) per V4. Stabilizer V4, orbit 165. Each lies on three elliptics.",
+        "status": "CERTIFIED"
+      }
+    },
+    "positive_dimensional_ambient": {
+      "C3_eigenline": {
+        "candidate": 110,
+        "certified": 110,
+        "source": "modular orbit size 110; 55 C3 \u00d7 2 types",
+        "status": "CERTIFIED"
+      },
+      "V4_fixed_line": {
+        "candidate": 55,
+        "certified": 55,
+        "source": "55 V4s, P(W^{V4}) dim 1 projective",
+        "status": "CERTIFIED"
+      },
+      "involution_line": {
+        "candidate": 55,
+        "certified": 55,
+        "source": "55 involutions, unique E_- of dim 2 each; F|E_-=0",
+        "status": "CERTIFIED"
+      },
+      "involution_plane": {
+        "candidate": 55,
+        "certified": 55,
+        "source": "55 involutions, unique E_+ of dim 3 each",
+        "status": "CERTIFIED"
+      }
+    },
+    "type_I_type_II_discrepancy": {
+      "id": "type_II_elliptic_incidence_vs_meeting_locus",
+      "refuted": "claim (ii)",
+      "severity": "Candidate input asserts both (i) every type-II V4 point lies on three fixed elliptics and (ii) two positive-dimensional fixed-locus closures meet only at type-I points. These are incompatible. Exact V4 geometry shows (i) holds and (ii) fails: type-II points are triple meetings of elliptics.",
+      "severity_type": "incidence_inconsistency_resolved",
+      "surviving": "claim (i)"
+    }
+  },
+  "exact": {
+    "A4_character_lines": {
+      "note": "Two character lines of W|A4 = 1' \u2295 1'' \u2295 3; both off X (certified in certificates/subgroup_orbit_check.py).",
+      "on_X": false,
+      "orbit_sizes": [
+        55,
+        55
+      ],
+      "stabilizer": "A4"
+    },
+    "C11_points": {
+      "note": "12 Sylow 11-subgroups \u00d7 5 projective fixed points = 60",
+      "on_X": true,
+      "orbit_size": 60,
+      "per_C11": 5,
+      "sample": [
+        {
+          "basis": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          ],
+          "on_X": true,
+          "stab_order": 11
+        },
+        {
+          "basis": [
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          ],
+          "on_X": true,
+          "stab_order": 11
+        }
+      ],
+      "stabilizer": "C11"
+    },
+    "C3_eigenlines": {
+      "note": "55 C3s \u00d7 2 nontrivial projective eigenline types = 110, or one orbit of 110 with residual setwise action.",
+      "orbit_size": 110,
+      "pointwise_stabilizer": "C3",
+      "setwise_stabilizer": "C6 (order 6)"
+    },
+    "C5_eigenlines": {
+      "C5_a": {
+        "character_pair": [
+          "zeta5",
+          "zeta5^4"
+        ],
+        "field": "Q(zeta_5)",
+        "note": "For v=(1,\u03c9,\u03c9\u00b2,\u03c9\u00b3,\u03c9\u2074) with \u03c9^5=1, \u03c9\u22601: F(v)=sum_i v_i^2 v_{i+1} = sum_i \u03c9^{2i} \u03c9^{i+1} = \u03c9 * sum_i \u03c9^{3i}. sum_i (\u03c9^3)^i = 0 since \u03c9^3 is a nontrivial 5th root. So F(v)=0: all nontrivial C5 eigenlines lie on X.",
+        "on_X": "F(v)=1+zeta5^3+zeta5+zeta5^4+zeta5^2 = 0 (sum of 5th roots of 1 except?)",
+        "orbit_size": 132,
+        "representative_formula": "[1 : zeta5 : zeta5^2 : zeta5^3 : zeta5^4]",
+        "stabilizer": "C5"
+      },
+      "C5_b": {
+        "character_pair": [
+          "zeta5^2",
+          "zeta5^3"
+        ],
+        "field": "Q(zeta_5)",
+        "note": "Same vanishing argument with \u03c9 replaced by \u03c9\u00b2.",
+        "on_X": true,
+        "orbit_size": 132,
+        "representative_formula": "[1 : zeta5^2 : zeta5^4 : zeta5 : zeta5^3]",
+        "stabilizer": "C5"
+      }
+    },
+    "C6_points": {
+      "labels": [
+        "C6_line",
+        "C6_plane"
+      ],
+      "note": "Distinguished by incidence with minus-lines vs plus-planes.",
+      "stabilizer": "C6",
+      "two_orbits_of_size": 110
+    },
+    "D10_point": {
+      "F_value": "5",
+      "on_X": false,
+      "orbit_size": 66,
+      "representative": "[1:1:1:1:1]",
+      "stabilizer": "D10"
+    },
+    "D12_point": {
+      "F_coords": [
+        [
+          2,
+          11
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          4,
+          11
+        ]
+      ],
+      "on_X": false,
+      "orbit_size": 55,
+      "representative": "unique C3-invariant line (D12 character line)",
+      "stabilizer": "D12"
+    },
+    "V4": {
+      "V4_fixed_line_orbit_size": 55,
+      "count": 55,
+      "joint_character_dims": {
+        "A_pp": 2,
+        "B_pm": 1,
+        "C_mp": 1,
+        "D_mm": 1
+      },
+      "type_II_on_fixed_line": {
+        "ambient_support": "V4 fixed line P(A), vector dim 2",
+        "description": "X \u2229 P(W^{V4}), three reduced points per V4",
+        "elliptic_incidence": "Each type-II point lies on all three plus-plane elliptics E_z, E_s, E_r of its V4 (since P(A) \u2282 each plus-plane P(A+\u03c7)).",
+        "exact_stabilizer": "V4",
+        "orbit_size": 165,
+        "points_per_V4": 3,
+        "type_I_elliptic_incidence": "Each type-I triangle vertex [B] lies on exactly one of the three elliptics of its V4 (namely E_z = X \u2229 P(A+B)), and on two minus-lines."
+      },
+      "type_I_triangle_vertices": {
+        "count_per_V4": 3,
+        "elliptics_through_each": 1,
+        "minus_lines_through_each": 2,
+        "on_X": true,
+        "orbit_size": 165,
+        "stabilizer": "V4"
+      }
+    },
+    "element_order_counts": {
+      "1": 1,
+      "2": 55,
+      "3": 110,
+      "5": 264,
+      "6": 110,
+      "11": 120
+    },
+    "group_order": 660,
+    "involutions": {
+      "centralizer_order": 12,
+      "count": 55,
+      "dims_Eplus_Eminus": [
+        3,
+        2
+      ],
+      "minus_line_on_X": true,
+      "plus_plane_section": "smooth plane cubic (genus one)",
+      "trace_on_W": "1 (exact)"
+    },
+    "subgroup_class_interpretation": {
+      "A4": "ONE conjugacy class of 55 subgroups (self-normalizing). Candidate labels A4^(a)/A4^(b) are two orbit types of fixed points (two character lines per A4, both off X), not two conjugacy classes of subgroups.",
+      "A5": "TWO conjugacy classes of 11 subgroups each (orbit-11 branch).",
+      "C5": "ONE conjugacy class of 66 subgroups. Candidate labels C5^(a)/C5^(b) are two orbit types of nontrivial projective eigenlines (132+132), not two conjugacy classes of subgroups."
+    },
+    "subgroup_counts": {
+      "A4": 55,
+      "A5_class_sizes": [
+        11,
+        11
+      ],
+      "A5_total_subgroups": 22,
+      "C11": 12,
+      "C2": 55,
+      "C3": 55,
+      "C5": 66,
+      "D10": 66,
+      "D12": 55,
+      "V4": 55
+    },
+    "type_I_type_II_verdict": {
+      "candidate_claim_1": "every type-II V4 point lies on three fixed elliptic curves",
+      "candidate_claim_2": "two positive-dimensional fixed-locus closures meet only at type-I points",
+      "corrected_incidence": "Type-I (triangle vertices): each lies on exactly one of the three local elliptics and on two minus-lines. Type-II (X \u2229 P(A)): each lies on all three local elliptics and on no minus-line of that V4 triangle.",
+      "proof_reference": "Exact joint-character decomposition dims (2,1,1,1); E_z = X\u2229P(A+B) etc contain P(A) and hence R = X\u2229P(A); triangle incidences as in V4_REPORT / exact replay below.",
+      "surviving_statement": "Each type-II V4 point is a triple intersection of the three plus-plane elliptics of its V4 (and lies on the V4 fixed line P(A)). Positive-dimensional fixed-locus closures therefore meet at type-II points as well as at type-I points.",
+      "verdict": "CLAIM_1_SURVIVES_CLAIM_2_REFUTED"
+    }
+  },
+  "headline": "OPEN",
+  "modular_regression": {
+    "331": {
+      "closure_rounds": 2,
+      "n_eigenspaces": 885,
+      "n_orbits": 14,
+      "n_spaces_after_closure": 1215,
+      "orbits": [
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "V4_type_I_point",
+          "orbit_size": 165,
+          "pointwise_stab_order": 4,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              5,
+              3,
+              6,
+              6
+            ],
+            [
+              3,
+              9,
+              5,
+              8
+            ],
+            [
+              3,
+              8,
+              7,
+              8
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              124,
+              147,
+              119,
+              129
+            ]
+          ],
+          "setwise_stab_order": 4,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "C5_eigenline",
+          "orbit_size": 132,
+          "pointwise_stab_order": 5,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "5": 4
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              5,
+              0,
+              0,
+              9
+            ],
+            [
+              4,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              6
+            ],
+            [
+              3,
+              0,
+              0,
+              4
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              64,
+              124,
+              323,
+              150
+            ]
+          ],
+          "setwise_stab_order": 5,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "5": 4
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "C5_eigenline",
+          "orbit_size": 132,
+          "pointwise_stab_order": 5,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "5": 4
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              4,
+              4,
+              6
+            ],
+            [
+              3,
+              6,
+              6,
+              5
+            ],
+            [
+              5,
+              4,
+              4,
+              10
+            ],
+            [
+              5,
+              5,
+              5,
+              3
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              170,
+              299,
+              288,
+              15
+            ]
+          ],
+          "setwise_stab_order": 5,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "5": 4
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "C6_point",
+          "orbit_size": 110,
+          "pointwise_stab_order": 6,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1,
+            "3": 2,
+            "6": 2
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              4,
+              3,
+              6,
+              2
+            ],
+            [
+              0,
+              4,
+              8,
+              1
+            ],
+            [
+              2,
+              6,
+              1,
+              9
+            ],
+            [
+              1,
+              7,
+              3,
+              0
+            ],
+            [
+              2,
+              8,
+              5,
+              4
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              302,
+              304,
+              71,
+              226
+            ]
+          ],
+          "setwise_stab_order": 6,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "C6_point",
+          "orbit_size": 110,
+          "pointwise_stab_order": 6,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1,
+            "3": 2,
+            "6": 2
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              3,
+              8,
+              6,
+              9
+            ],
+            [
+              2,
+              8,
+              6,
+              8
+            ],
+            [
+              3,
+              6,
+              10,
+              2
+            ],
+            [
+              1,
+              1,
+              9,
+              10
+            ],
+            [
+              2,
+              5,
+              1,
+              3
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              182,
+              271,
+              129,
+              304
+            ]
+          ],
+          "setwise_stab_order": 6,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "D10_point",
+          "orbit_size": 66,
+          "pointwise_stab_order": 10,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 5,
+            "5": 4
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              9,
+              1,
+              10
+            ],
+            [
+              3,
+              4,
+              3,
+              8
+            ],
+            [
+              3,
+              1,
+              0,
+              4
+            ],
+            [
+              4,
+              10,
+              0,
+              3
+            ],
+            [
+              4,
+              4,
+              4,
+              7
+            ],
+            [
+              5,
+              8,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              2,
+              9
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              111,
+              167,
+              270,
+              80
+            ]
+          ],
+          "setwise_stab_order": 10,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 5,
+            "5": 4
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "C11_point",
+          "orbit_size": 60,
+          "pointwise_stab_order": 11,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "11": 10
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              10,
+              4,
+              8
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              5,
+              8,
+              1,
+              4
+            ],
+            [
+              4,
+              4,
+              6,
+              9
+            ],
+            [
+              2,
+              5,
+              2,
+              0
+            ],
+            [
+              3,
+              9,
+              8,
+              6
+            ],
+            [
+              3,
+              10,
+              4,
+              10
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              192,
+              295,
+              170,
+              312
+            ]
+          ],
+          "setwise_stab_order": 11,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "11": 10
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "A4_character_line",
+          "orbit_size": 55,
+          "pointwise_stab_order": 12,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3,
+            "3": 8
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              9,
+              1,
+              10
+            ],
+            [
+              0,
+              3,
+              7,
+              10
+            ],
+            [
+              3,
+              8,
+              6,
+              9
+            ],
+            [
+              2,
+              8,
+              6,
+              8
+            ],
+            [
+              1,
+              1,
+              8,
+              9
+            ],
+            [
+              2,
+              5,
+              10,
+              9
+            ],
+            [
+              2,
+              1,
+              8,
+              10
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              303,
+              289,
+              199,
+              159
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3,
+            "3": 8
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "A4_character_line",
+          "orbit_size": 55,
+          "pointwise_stab_order": 12,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3,
+            "3": 8
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              9,
+              1,
+              10
+            ],
+            [
+              0,
+              3,
+              7,
+              10
+            ],
+            [
+              3,
+              8,
+              6,
+              9
+            ],
+            [
+              2,
+              8,
+              6,
+              8
+            ],
+            [
+              1,
+              1,
+              8,
+              9
+            ],
+            [
+              2,
+              5,
+              10,
+              9
+            ],
+            [
+              2,
+              1,
+              8,
+              10
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              10,
+              186,
+              55,
+              150
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3,
+            "3": 8
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "D12_point",
+          "orbit_size": 55,
+          "pointwise_stab_order": 12,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              2,
+              3,
+              9
+            ],
+            [
+              3,
+              7,
+              8,
+              8
+            ],
+            [
+              1,
+              4,
+              2,
+              9
+            ],
+            [
+              5,
+              3,
+              7,
+              0
+            ],
+            [
+              2,
+              4,
+              2,
+              10
+            ],
+            [
+              5,
+              7,
+              1,
+              6
+            ],
+            [
+              2,
+              6,
+              1,
+              9
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              235,
+              150,
+              198,
+              55
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "C3_eigenline",
+          "orbit_size": 110,
+          "pointwise_stab_order": 3,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "3": 2
+          },
+          "projective_dim": 1,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              6,
+              9,
+              0
+            ],
+            [
+              0,
+              5,
+              2,
+              1
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              0,
+              185,
+              229,
+              284
+            ],
+            [
+              0,
+              1,
+              328,
+              189,
+              47
+            ]
+          ],
+          "setwise_stab_order": 6,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 2
+        },
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "involution_minus_line",
+          "orbit_size": 55,
+          "pointwise_stab_order": 2,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1
+          },
+          "projective_dim": 1,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              5,
+              4,
+              10,
+              6
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              0,
+              298,
+              140,
+              254
+            ],
+            [
+              0,
+              1,
+              78,
+              292,
+              122
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 2
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "V4_fixed_line",
+          "orbit_size": 55,
+          "pointwise_stab_order": 4,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3
+          },
+          "projective_dim": 1,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              3,
+              2,
+              6,
+              8
+            ],
+            [
+              5,
+              8,
+              5,
+              6
+            ],
+            [
+              3,
+              3,
+              4,
+              8
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              0,
+              316,
+              120,
+              86
+            ],
+            [
+              0,
+              1,
+              67,
+              170,
+              102
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3,
+            "3": 8
+          },
+          "vector_dim": 2
+        },
+        {
+          "F_vanishes_identically_on_span": null,
+          "label": "involution_plus_plane",
+          "orbit_size": 55,
+          "pointwise_stab_order": 2,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1
+          },
+          "projective_dim": 2,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              5,
+              1,
+              7,
+              6
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              0,
+              0,
+              103,
+              29
+            ],
+            [
+              0,
+              1,
+              0,
+              166,
+              242
+            ],
+            [
+              0,
+              0,
+              1,
+              189,
+              316
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 3
+        }
+      ],
+      "prime": 331,
+      "roots_of_unity_orders_present": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "5": 5,
+        "6": 6,
+        "11": 11
+      },
+      "zeta11": 270
+    },
+    "67": {
+      "closure_rounds": 2,
+      "n_eigenspaces": 621,
+      "n_orbits": 12,
+      "n_spaces_after_closure": 951,
+      "orbits": [
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "V4_type_I_point",
+          "orbit_size": 165,
+          "pointwise_stab_order": 4,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              2,
+              10,
+              10
+            ],
+            [
+              2,
+              6,
+              1,
+              9
+            ],
+            [
+              4,
+              2,
+              8,
+              7
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              24,
+              19,
+              64,
+              30
+            ]
+          ],
+          "setwise_stab_order": 4,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "C6_point",
+          "orbit_size": 110,
+          "pointwise_stab_order": 6,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1,
+            "3": 2,
+            "6": 2
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              3,
+              2,
+              6,
+              8
+            ],
+            [
+              4,
+              6,
+              7,
+              8
+            ],
+            [
+              1,
+              10,
+              8,
+              4
+            ],
+            [
+              3,
+              6,
+              7,
+              7
+            ],
+            [
+              4,
+              1,
+              3,
+              1
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              64,
+              62,
+              18,
+              11
+            ]
+          ],
+          "setwise_stab_order": 6,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "C6_point",
+          "orbit_size": 110,
+          "pointwise_stab_order": 6,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1,
+            "3": 2,
+            "6": 2
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              9,
+              9,
+              5
+            ],
+            [
+              5,
+              2,
+              2,
+              1
+            ],
+            [
+              4,
+              10,
+              10,
+              6
+            ],
+            [
+              4,
+              4,
+              4,
+              7
+            ],
+            [
+              5,
+              10,
+              10,
+              7
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              45,
+              17,
+              64,
+              23
+            ]
+          ],
+          "setwise_stab_order": 6,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "D10_point",
+          "orbit_size": 66,
+          "pointwise_stab_order": 10,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 5,
+            "5": 4
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              5,
+              7,
+              7,
+              10
+            ],
+            [
+              5,
+              6,
+              6,
+              3
+            ],
+            [
+              1,
+              7,
+              7,
+              6
+            ],
+            [
+              4,
+              5,
+              1,
+              7
+            ],
+            [
+              5,
+              5,
+              8,
+              6
+            ],
+            [
+              5,
+              8,
+              5,
+              6
+            ],
+            [
+              4,
+              1,
+              5,
+              7
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              52,
+              26,
+              19,
+              57
+            ]
+          ],
+          "setwise_stab_order": 10,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 5,
+            "5": 4
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "C11_point",
+          "orbit_size": 60,
+          "pointwise_stab_order": 11,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "11": 10
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              3,
+              3,
+              6,
+              10
+            ],
+            [
+              1,
+              3,
+              6,
+              8
+            ],
+            [
+              5,
+              6,
+              1,
+              8
+            ],
+            [
+              2,
+              10,
+              9,
+              7
+            ],
+            [
+              3,
+              6,
+              1,
+              6
+            ],
+            [
+              5,
+              9,
+              7,
+              4
+            ],
+            [
+              2,
+              7,
+              3,
+              0
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              37,
+              58,
+              31,
+              63
+            ]
+          ],
+          "setwise_stab_order": 11,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "11": 10
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "A4_character_line",
+          "orbit_size": 55,
+          "pointwise_stab_order": 12,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3,
+            "3": 8
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              10,
+              7,
+              8
+            ],
+            [
+              1,
+              4,
+              8,
+              0
+            ],
+            [
+              3,
+              9,
+              9,
+              9
+            ],
+            [
+              3,
+              10,
+              7,
+              9
+            ],
+            [
+              5,
+              1,
+              2,
+              5
+            ],
+            [
+              5,
+              10,
+              9,
+              5
+            ],
+            [
+              2,
+              9,
+              9,
+              8
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              34,
+              29,
+              31,
+              51
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3,
+            "3": 8
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "A4_character_line",
+          "orbit_size": 55,
+          "pointwise_stab_order": 12,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3,
+            "3": 8
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              5,
+              5,
+              7,
+              5
+            ],
+            [
+              5,
+              8,
+              3,
+              5
+            ],
+            [
+              1,
+              4,
+              2,
+              9
+            ],
+            [
+              5,
+              6,
+              4,
+              5
+            ],
+            [
+              2,
+              7,
+              9,
+              10
+            ],
+            [
+              2,
+              4,
+              2,
+              10
+            ],
+            [
+              1,
+              7,
+              9,
+              9
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              15,
+              46,
+              8,
+              2
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3,
+            "3": 8
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "D12_point",
+          "orbit_size": 55,
+          "pointwise_stab_order": 12,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              10,
+              5,
+              9
+            ],
+            [
+              3,
+              7,
+              8,
+              8
+            ],
+            [
+              3,
+              8,
+              6,
+              9
+            ],
+            [
+              2,
+              8,
+              6,
+              8
+            ],
+            [
+              3,
+              6,
+              10,
+              2
+            ],
+            [
+              1,
+              1,
+              9,
+              10
+            ],
+            [
+              4,
+              3,
+              9,
+              7
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              6,
+              30,
+              28,
+              5
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "C3_eigenline",
+          "orbit_size": 110,
+          "pointwise_stab_order": 3,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "3": 2
+          },
+          "projective_dim": 1,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              3,
+              4,
+              1,
+              9
+            ],
+            [
+              2,
+              4,
+              1,
+              8
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              0,
+              13,
+              56,
+              16
+            ],
+            [
+              0,
+              1,
+              13,
+              48,
+              63
+            ]
+          ],
+          "setwise_stab_order": 6,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 2
+        },
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "involution_minus_line",
+          "orbit_size": 55,
+          "pointwise_stab_order": 2,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1
+          },
+          "projective_dim": 1,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              5,
+              4,
+              10
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              0,
+              63,
+              60,
+              49
+            ],
+            [
+              0,
+              1,
+              35,
+              61,
+              45
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 2
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "V4_fixed_line",
+          "orbit_size": 55,
+          "pointwise_stab_order": 4,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3
+          },
+          "projective_dim": 1,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              7,
+              6,
+              10
+            ],
+            [
+              4,
+              10,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              7,
+              9
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              0,
+              1,
+              25,
+              32
+            ],
+            [
+              0,
+              1,
+              20,
+              38,
+              34
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3,
+            "3": 8
+          },
+          "vector_dim": 2
+        },
+        {
+          "F_vanishes_identically_on_span": null,
+          "label": "involution_plus_plane",
+          "orbit_size": 55,
+          "pointwise_stab_order": 2,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1
+          },
+          "projective_dim": 2,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              9,
+              8,
+              9
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              0,
+              0,
+              32,
+              23
+            ],
+            [
+              0,
+              1,
+              0,
+              49,
+              26
+            ],
+            [
+              0,
+              0,
+              1,
+              4,
+              60
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 3
+        }
+      ],
+      "prime": 67,
+      "roots_of_unity_orders_present": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "5": 1,
+        "6": 6,
+        "11": 11
+      },
+      "zeta11": 64
+    },
+    "89": {
+      "closure_rounds": 2,
+      "n_eigenspaces": 291,
+      "n_orbits": 7,
+      "n_spaces_after_closure": 511,
+      "orbits": [
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "V4_type_I_point",
+          "orbit_size": 165,
+          "pointwise_stab_order": 4,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              7,
+              6,
+              10
+            ],
+            [
+              4,
+              10,
+              6,
+              7
+            ],
+            [
+              2,
+              4,
+              7,
+              9
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              29,
+              58,
+              74,
+              36
+            ]
+          ],
+          "setwise_stab_order": 4,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "D10_point",
+          "orbit_size": 66,
+          "pointwise_stab_order": 10,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 5,
+            "5": 4
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              5,
+              1,
+              5,
+              10
+            ],
+            [
+              1,
+              1,
+              5,
+              6
+            ],
+            [
+              3,
+              7,
+              2,
+              5
+            ],
+            [
+              5,
+              4,
+              9,
+              3
+            ],
+            [
+              5,
+              7,
+              1,
+              6
+            ],
+            [
+              4,
+              7,
+              7,
+              7
+            ],
+            [
+              4,
+              8,
+              2,
+              7
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              80,
+              1,
+              77,
+              25
+            ]
+          ],
+          "setwise_stab_order": 10,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 5,
+            "5": 4
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "C11_point",
+          "orbit_size": 60,
+          "pointwise_stab_order": 11,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "11": 10
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              6,
+              3,
+              8
+            ],
+            [
+              2,
+              3,
+              7,
+              0
+            ],
+            [
+              3,
+              1,
+              6,
+              6
+            ],
+            [
+              5,
+              7,
+              9,
+              4
+            ],
+            [
+              4,
+              9,
+              10,
+              9
+            ],
+            [
+              2,
+              9,
+              10,
+              7
+            ],
+            [
+              3,
+              6,
+              3,
+              10
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              3,
+              69,
+              80,
+              16
+            ]
+          ],
+          "setwise_stab_order": 11,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "11": 10
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "D12_point",
+          "orbit_size": 55,
+          "pointwise_stab_order": 12,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "projective_dim": 0,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              4,
+              5,
+              10
+            ],
+            [
+              1,
+              9,
+              9,
+              5
+            ],
+            [
+              2,
+              1,
+              6,
+              9
+            ],
+            [
+              5,
+              2,
+              2,
+              1
+            ],
+            [
+              4,
+              10,
+              10,
+              6
+            ],
+            [
+              2,
+              6,
+              1,
+              9
+            ],
+            [
+              4,
+              7,
+              7,
+              7
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              83,
+              68,
+              40,
+              38
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 1
+        },
+        {
+          "F_vanishes_identically_on_span": true,
+          "label": "involution_minus_line",
+          "orbit_size": 55,
+          "pointwise_stab_order": 2,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1
+          },
+          "projective_dim": 1,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              8,
+              9,
+              9
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              0,
+              55,
+              35,
+              3
+            ],
+            [
+              0,
+              1,
+              87,
+              42,
+              66
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 2
+        },
+        {
+          "F_vanishes_identically_on_span": false,
+          "label": "V4_fixed_line",
+          "orbit_size": 55,
+          "pointwise_stab_order": 4,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3
+          },
+          "projective_dim": 1,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              4,
+              5,
+              10
+            ],
+            [
+              3,
+              6,
+              2,
+              8
+            ],
+            [
+              0,
+              5,
+              2,
+              0
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              0,
+              31,
+              64,
+              83
+            ],
+            [
+              0,
+              1,
+              57,
+              47,
+              11
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 3,
+            "3": 8
+          },
+          "vector_dim": 2
+        },
+        {
+          "F_vanishes_identically_on_span": null,
+          "label": "involution_plus_plane",
+          "orbit_size": 55,
+          "pointwise_stab_order": 2,
+          "pointwise_stab_order_multiset": {
+            "1": 1,
+            "2": 1
+          },
+          "projective_dim": 2,
+          "pstab_generators_as_psl_keys": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              4,
+              10,
+              6,
+              7
+            ]
+          ],
+          "representative_basis_mod_p": [
+            [
+              1,
+              0,
+              0,
+              17,
+              45
+            ],
+            [
+              0,
+              1,
+              0,
+              76,
+              10
+            ],
+            [
+              0,
+              0,
+              1,
+              75,
+              24
+            ]
+          ],
+          "setwise_stab_order": 12,
+          "setwise_stab_order_multiset": {
+            "1": 1,
+            "2": 7,
+            "3": 2,
+            "6": 2
+          },
+          "vector_dim": 3
+        }
+      ],
+      "prime": 89,
+      "roots_of_unity_orders_present": {
+        "1": 1,
+        "2": 2,
+        "3": 1,
+        "5": 1,
+        "6": 2,
+        "11": 11
+      },
+      "zeta11": 78
+    }
+  },
+  "producer": "certificates/strata/exact_strata.py",
+  "representation_source": {
+    "field": "Q(zeta_11)",
+    "group": "PSL_2(F_11)",
+    "group_order": 660,
+    "path": "certificates/exact_weil_check.py",
+    "sha256": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2"
+  },
+  "theorem_boundary": "Certifies the G-stabilizer stratification of Y=P(W) and the named incidences with X={F=0}. Does not prove or disprove existence of a homogeneous landing self-covariant, nor any statement about ed_C(G).",
+  "tool_versions": {
+    "M2": "1.26.06",
+    "Singular": "4.4.1",
+    "gap": "4.15.1 (/opt/homebrew/Caskroom/miniforge/base/bin/gap)",
+    "gp": "2.17.4",
+    "julia": "1.12.6",
+    "msolve": "0.10.1",
+    "normaliz": "3.11.1",
+    "python": "3.14.6",
+    "sage": "NOT INSTALLED \u2014 geometry.sage is a stub; Python/GAP/Julia used"
+  },
+  "wall_time_sec": 31.385,
+  "work_order": "WORKORDER_STRATA_MACHINE.md first dispatch / Gate 1"
+}
