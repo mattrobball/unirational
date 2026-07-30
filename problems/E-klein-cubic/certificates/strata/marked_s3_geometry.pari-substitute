@@ -1,0 +1,22 @@
+\\ marked_s3_geometry.pari-substitute
+\\ SageMath substitute for WP-3 elliptic-curve computations.
+\\ Run: /opt/homebrew/bin/gp -q certificates/strata/marked_s3_geometry.pari-substitute
+\\
+\\ Certifies that the rational number 8192/11 is a j-invariant of an elliptic
+\\ curve over Q, records a Weierstrass model, and refutes j = -32768.
+
+default(parisize, 20000000);
+j0 = 8192/11;
+print("j0 = ", j0);
+E = ellfromj(j0);
+Ea = ellinit(E);
+print("j(E) = ", Ea.j);
+if(Ea.j != j0, error("j mismatch"));
+print("Weierstrass a-invariants: ", [Ea.a1, Ea.a2, Ea.a3, Ea.a4, Ea.a6]);
+print("Torsion: ", elltors(Ea));
+print("Hilbert class poly D=-11: ", polclass(-11));
+print("H_{-11}(-32768) = ", subst(polclass(-11), x, -32768));
+print("H_{-11}(8192/11) = ", subst(polclass(-11), x, j0));
+print("CM_BY_Z_SQRT_MINUS_11_REFUTED");
+print("MARKED_S3_PARI_OK");
+quit

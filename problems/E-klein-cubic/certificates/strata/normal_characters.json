@@ -1,0 +1,1969 @@
+{
+  "gate1_dependency": {
+    "note": "Gate 1 ACCEPTED; orbit types and type-I/II verdict taken as given.",
+    "strata_exact": "certificates/strata/strata_exact.json"
+  },
+  "headline": "OPEN",
+  "mandatory_orbit_types_covered": [
+    "A4_a_point",
+    "A4_b_point",
+    "C11_point",
+    "C2_line",
+    "C2_plane",
+    "C3_line",
+    "C5_a_point",
+    "C5_b_point",
+    "C6_line_point",
+    "C6_plane_point",
+    "D10_point",
+    "D12_point",
+    "V4_line",
+    "V4_type_II_point",
+    "V4_type_I_all_vertices",
+    "V4_type_I_point"
+  ],
+  "producer": "certificates/strata/normal_characters.py",
+  "regressions": {
+    "D10_D12_A4_off_X": {
+      "A4_a_F_nonzero": true,
+      "A4_b_F_nonzero": true,
+      "D10_F": [
+        [
+          5,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "D12_F_nonzero": true,
+      "status": "PASS"
+    },
+    "V4_joint_character_dims": {
+      "computed": {
+        "A_triv": 2,
+        "B_chi_z": 1,
+        "C_chi_s": 1,
+        "D_chi_r": 1
+      },
+      "expected_legacy_labels": {
+        "A_pp": 2,
+        "B_pm": 1,
+        "C_mp": 1,
+        "D_mm": 1
+      },
+      "label_dictionary": {
+        "A_pp": "A_triv",
+        "B_pm": "B_chi_z",
+        "C_mp": "C_chi_s",
+        "D_mm": "D_chi_r"
+      },
+      "status": "PASS"
+    },
+    "V4_minus_lines_triangle": {
+      "edges": {
+        "L_r": "P(B\u2295C)",
+        "L_s": "P(B\u2295D)",
+        "L_z": "P(C\u2295D)"
+      },
+      "meet_dims_from_grassmann": {
+        "Ls_cap_Lr": 1,
+        "Lz_cap_Lr": 1,
+        "Lz_cap_Ls": 1
+      },
+      "status": "PASS",
+      "sum_dims": {
+        "Ls_plus_Lr": 3,
+        "Lz_plus_Lr": 3,
+        "Lz_plus_Ls": 3
+      },
+      "vertices": [
+        "[B]",
+        "[C]",
+        "[D]"
+      ],
+      "vertices_on_edges": {
+        "B_in_Ls_and_Lr": true,
+        "C_in_Lz_and_Lr": true,
+        "D_in_Lz_and_Ls": true
+      }
+    },
+    "involution_dims_Eplus_Eminus": {
+      "computed": [
+        3,
+        2
+      ],
+      "expected": [
+        3,
+        2
+      ],
+      "status": "PASS",
+      "trace_t": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  },
+  "representation_source": {
+    "field": "Q(zeta_11)",
+    "group": "PSL_2(F_11)",
+    "group_order": 660,
+    "path": "certificates/exact_weil_check.py"
+  },
+  "representatives": {
+    "C11_gen_T": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "C3_gen": [
+      0,
+      2,
+      5,
+      10
+    ],
+    "C5_gen_P": [
+      4,
+      0,
+      0,
+      3
+    ],
+    "D10_vector": [
+      [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "D12_vector": [
+      [
+        [
+          6,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          -3,
+          11
+        ]
+      ],
+      [
+        [
+          2,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          11
+        ]
+      ],
+      [
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -2,
+          11
+        ]
+      ]
+    ],
+    "V4": {
+      "r": [
+        3,
+        9,
+        5,
+        8
+      ],
+      "s": [
+        1,
+        6,
+        7,
+        10
+      ],
+      "z": [
+        0,
+        2,
+        5,
+        0
+      ]
+    },
+    "involution_t": [
+      0,
+      2,
+      5,
+      0
+    ],
+    "type_I_B_vector": [
+      [
+        [
+          9,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          -2,
+          11
+        ]
+      ],
+      [
+        [
+          6,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          2,
+          11
+        ]
+      ],
+      [
+        [
+          2,
+          11
+        ],
+        [
+          -4,
+          11
+        ],
+        [
+          -6,
+          11
+        ],
+        [
+          -4,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          -4,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          -4,
+          11
+        ],
+        [
+          -1,
+          11
+        ]
+      ],
+      [
+        [
+          1,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          -5,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          -7,
+          11
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          -5,
+          11
+        ],
+        [
+          -5,
+          11
+        ],
+        [
+          -5,
+          11
+        ]
+      ],
+      [
+        [
+          4,
+          11
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          -5,
+          11
+        ],
+        [
+          2,
+          11
+        ]
+      ]
+    ],
+    "type_I_C_vector": [
+      [
+        [
+          5,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -5,
+          11
+        ],
+        [
+          -6,
+          11
+        ],
+        [
+          -8,
+          11
+        ],
+        [
+          -8,
+          11
+        ],
+        [
+          -6,
+          11
+        ],
+        [
+          -5,
+          11
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          -6,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          -4,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          -4,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          -6,
+          11
+        ]
+      ],
+      [
+        [
+          2,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          3,
+          11
+        ]
+      ],
+      [
+        [
+          -1,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          2,
+          11
+        ]
+      ]
+    ],
+    "type_I_D_vector": [
+      [
+        [
+          9,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          -2,
+          11
+        ]
+      ],
+      [
+        [
+          2,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      [
+        [
+          -2,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      [
+        [
+          -5,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          -3,
+          11
+        ]
+      ],
+      [
+        [
+          -4,
+          11
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          -9,
+          11
+        ],
+        [
+          -5,
+          11
+        ],
+        [
+          -1,
+          11
+        ],
+        [
+          -6,
+          11
+        ],
+        [
+          -5,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          -3,
+          11
+        ],
+        [
+          -6,
+          11
+        ]
+      ]
+    ]
+  },
+  "self_sha256": "5fcf161790db120e424a39f4b0f0392fd51b5970271e790ee6a8393115acfb14",
+  "strata": {
+    "A4_a_point": {
+      "F_nonzero_certificate": "klein(v_w) \u2260 0 over Q(zeta_11,w)",
+      "O_Y1_character": {
+        "H": "A4",
+        "character": "1' (one of the two nontrivial linear characters of A4 \u2245 V4\u22caC3; the two linear characters are Gal(Q(w)/Q)-conjugates)"
+      },
+      "T_yY_as_H_module": {
+        "description": "W|A4 = 1' \u2295 1'' \u2295 3; at the 1'-line, T \u2245 Hom(1', 1''\u22953) \u2245 (1')^{-1}\u22971'' \u2295 (1')^{-1}\u22973.",
+        "dimension": 4
+      },
+      "exact_stabilizer_H": {
+        "abstract": "A4",
+        "order": 12
+      },
+      "label": "A4_a_point",
+      "on_X": false,
+      "orbit_size": 55,
+      "regression_off_X": true,
+      "representative": "character line of W|A4 for eigenvalue w of C3 (w^2+w+1=0)",
+      "splitting_field": "Q(zeta_11, w) with w^2+w+1=0"
+    },
+    "A4_b_point": {
+      "F_nonzero_certificate": "klein(v_w2) \u2260 0 over Q(zeta_11,w)",
+      "O_Y1_character": {
+        "H": "A4",
+        "character": "1'' (the other nontrivial linear character)"
+      },
+      "T_yY_as_H_module": {
+        "description": "symmetric to A4_a with 1' \u2194 1''.",
+        "dimension": 4
+      },
+      "exact_stabilizer_H": {
+        "abstract": "A4",
+        "order": 12
+      },
+      "label": "A4_b_point",
+      "on_X": false,
+      "orbit_size": 55,
+      "regression_off_X": true,
+      "representative": "character line for eigenvalue w\u00b2",
+      "splitting_field": "Q(zeta_11, w) with w^2+w+1=0"
+    },
+    "C11_point": {
+      "O_Y1_character": {
+        "H": "C11",
+        "all_five_eigencharacters": [
+          "\u03b611^1",
+          "\u03b611^9",
+          "\u03b611^4",
+          "\u03b611^3",
+          "\u03b611^5"
+        ],
+        "character": "\u03b611^1 = \u03b611^1 on e_0",
+        "splitting_field": "Q(zeta_11)"
+      },
+      "T_yX_dimension": 3,
+      "T_yY_as_H_module": {
+        "description": "Hom(\u03bb_i, \u2295_{j\u2260i} \u03bb_j) \u2245 \u2295_{j\u2260i} \u03bb_j \u03bb_i^{-1}",
+        "dimension": 4
+      },
+      "exact_stabilizer_H": {
+        "abstract": "C11 = <T>",
+        "order": 11
+      },
+      "label": "C11_point",
+      "normal_of_X": "\u03bb_i^3",
+      "on_X": true,
+      "orbit_size": 60,
+      "representative": "standard basis vector e_0 (T-eigenline)",
+      "residual_normalizer": {
+        "N_G(C11)": "11:5 Frobenius of order 55",
+        "action": "cycles the five eigenlines of a fixed C11",
+        "residual": "C5"
+      },
+      "splitting_field": "Q(zeta_11)"
+    },
+    "C2_line": {
+      "O_Y1_character": {
+        "H": "C2",
+        "character": "sign",
+        "reason": "t acts as -1 on E_-, hence as -1 on every line in E_-. Projectively t fixes L_t pointwise (scalar action)."
+      },
+      "closure": "P(E_-(t)) \u2245 P^1 \u2282 X",
+      "generic_stabilizer_H": {
+        "abstract": "C2 = <t>",
+        "generator_key": [
+          0,
+          2,
+          5,
+          0
+        ],
+        "order": 2
+      },
+      "label": "C2_line",
+      "normal_bundle_fiber_as_H_module": {
+        "H_character": "three copies of the appropriate C2-character on Hom(\u03bb, E_+)",
+        "description": "N_{L_t / P(W)} \u2245 Hom(O(-1), E_+ \u2297 O) \u2245 E_+ \u2297 O_{L_t}(1) as bundles; H = <t> acts as +1 on E_+ and as sign on O(1), giving overall sign on fibers when using the Hom(\u03bb, E_+) model with \u03bb = sign.",
+        "explicit_model": "vector normal space E_+ (dim 3), t = +Id on E_+.",
+        "rank": 3
+      },
+      "on_X": {
+        "T_yX": {
+          "dimension": 3,
+          "note": "L_t \u2282 X smooth along the line (line is a smooth rational curve on the cubic). T_y X contains T_y L_t; normal of L_t in X is rank 2."
+        },
+        "identical_containment": true,
+        "normal_of_X_in_Y": {
+          "character": "\u03bb^3 = sign^3 = sign",
+          "note": "N_{X/Y} \u2245 O_X(3) for cubic hypersurface; fiber at [v] has weight \u03bb^3."
+        },
+        "reason": "F(-v) = -F(v) on E_- and F is odd under t=-1 \u21d2 F|E_- \u2261 0 in char \u2260 2. Scheme-theoretically X \u2229 P(E_-) = P(E_-)."
+      },
+      "orbit_size": 55,
+      "regression_minus_line_on_X": true,
+      "residual_N_over_H": {
+        "abstract": "S3",
+        "isomorphism": "C_G(t)/<t> \u2245 S3",
+        "order": 6
+      },
+      "setwise_stabilizer_N": {
+        "abstract": "D12 \u2245 C_G(t)",
+        "order": 12
+      },
+      "splitting_field": "Q(zeta_11)",
+      "tangent_T_yY_generic": {
+        "H_module": "T_y L_t (sign-twisted 1-dim) \u2295 N_{line/Y} (3-dim of + chars)",
+        "dimension": 4,
+        "note": "At [v]\u2282E_-: \u03bb = sign. T_y L_t \u2245 Hom(\u03bb, E_-/\u03bb) is 1-dimensional; normal \u2245 Hom(\u03bb, E_+) \u2245 E_+ \u2297 \u03bb^{-1}, and t acts as (+1)*(-1) = sign wait: standard: t acts as +1 on E_+ and \u03bb(t)=-1 so Hom(\u03bb,E_+) has t-action weight +1 * \u03bb(t)^{-1} = -1? Convention recorded in fiber note."
+      },
+      "vector_span": "E_-(t) = ker(t + I), dim 2"
+    },
+    "C2_plane": {
+      "O_Y1_character": {
+        "H": "C2",
+        "character": "trivial",
+        "reason": "t acts as +1 on E_+, hence as +1 on every line in E_+."
+      },
+      "closure": "P(E_+(t)) \u2245 P^2",
+      "generic_stabilizer_H": {
+        "abstract": "C2 = <t>",
+        "generator_key": [
+          0,
+          2,
+          5,
+          0
+        ],
+        "note": "Generic point of the plane has projective stabilizer <t>; special loci (elliptic, V4, C6, ...) have larger stabilizers.",
+        "order": 2
+      },
+      "label": "C2_plane",
+      "normal_bundle_fiber_as_H_module": {
+        "H_character": "sign \u2295 sign",
+        "description": "N_{P(E_+)/P(W), [v]} \u2245 Hom(<v>, E_-) with t|E_- = -1, t|<v> = +1.",
+        "rank": 2
+      },
+      "on_X": {
+        "T_yX_generic_on_Et": {
+          "dimension": 3,
+          "note": "Smooth hypersurface section: dim T_y X = 3 at smooth points of E_t."
+        },
+        "normal_of_X_in_Y": "N_{X/Y} \u2245 O_X(3); fiber character \u03bb^3 = triv at generic of E_t",
+        "section": "E_t = X \u2229 P(E_+) smooth plane cubic (genus one)"
+      },
+      "orbit_size": 55,
+      "regression_dims_Eplus_Eminus": [
+        3,
+        2
+      ],
+      "residual_N_over_H": {
+        "abstract": "S3",
+        "isomorphism": "C_G(t)/<t> \u2245 S3",
+        "order": 6
+      },
+      "setwise_stabilizer_N": {
+        "abstract": "D12 \u2245 C_G(t)",
+        "description": "Full centralizer of t; preserves E_+ and E_-.",
+        "order": 12
+      },
+      "splitting_field": "Q(zeta_11)",
+      "tangent_T_yY_generic": {
+        "H_module": "T_y P(E_+) \u2295 N_{plane/Y,y} \u2245 2-dim trivial \u2295 2-dim (sign)",
+        "dimension": 4,
+        "note": "At generic [v]\u2282E_+: T_y(plane) \u2245 Hom(\u03bb, E_+/\u03bb) with \u03bb=triv, dim 2, H-trivial; normal space \u2245 Hom(\u03bb, E_-) \u2245 E_- as H-module (t = -1 on E_-), so two copies of the sign character."
+      },
+      "vector_span": "E_+(t) = ker(t - I), dim 3"
+    },
+    "C3_line": {
+      "O_Y1_character": {
+        "H": "C3",
+        "character": "\u03c9 or \u03c9\u00b2 (the eigencharacter of the line)",
+        "splitting_field": "Q(omega) = Q(zeta_3) \u2282 Q(zeta_11)? zeta_11 has degree 10; Q(zeta_3)=Q(sqrt(-3)) is separate \u2014 work in Q(zeta_33) or adjoin w^2+w+1 to Q(zeta_11)."
+      },
+      "closure": "P(eigenline of nontrivial character of C3) \u2245 P^1",
+      "generic_stabilizer_H": {
+        "abstract": "C3",
+        "generator_key": [
+          0,
+          2,
+          5,
+          10
+        ],
+        "order": 3
+      },
+      "label": "C3_line",
+      "normal_bundle_fiber_as_H_module": {
+        "H_action_on_span": "C3 acts with the two nontrivial cube roots (or double \u03c9).",
+        "note": "N \u2245 Hom(\u03bb, W/U) where U is the 2-dim span of the eigenline (actually the C3-isotypic component for \u03bb is 2-dim for nontrivial \u03bb: two eigenlines of same? For 3-cycle in PSL representation, nontrivial eigenspaces of a 3-element are typically 2-dim each or 1+1. Modular orbit data: C3 eigenline has vector dim 2, so U is 2-dim with C3 acting by a pair of characters. Recorded as 2-dim projective line.",
+        "rank": 3,
+        "vector_dim_of_span": 2
+      },
+      "on_X": {
+        "C3_residual_points_orbit": {
+          "candidate_count": 220,
+          "remainder": "scheme-theoretic reducedness of the two non-C6 points per C3-line is a named remainder (may be closed in WP-3 if cheap).",
+          "status": "COMBINATORIAL_FROM_GATE1"
+        },
+        "section": "binary cubic F|U; expected three points = one C6 + two exact-C3"
+      },
+      "orbit_size": 110,
+      "residual_N_over_H": {
+        "abstract": "C2",
+        "order": 2
+      },
+      "setwise_stabilizer_N": {
+        "abstract": "C6",
+        "note": "Index-two overgroup of C3 inside D12 = N_G(C3); swaps the two nontrivial eigencharacters \u03c9 \u2194 \u03c9\u00b2 if reflection, or extends to C6 acting on one eigenline.",
+        "order": 6
+      },
+      "splitting_field": "Q(zeta_11, zeta_3) or Q(zeta_33)",
+      "trace_of_generator_on_W": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "C5_a_point": {
+      "O_Y1_character": {
+        "H": "C5",
+        "character": "\u03b65 (generator acts by \u03b65 on the vector)",
+        "splitting_field": "Q(zeta_5)"
+      },
+      "T_yX_dimension": 3,
+      "T_yY_as_H_module": {
+        "description": "Hom(\u03b65, \u2295_{k\u22601} \u03b65^k) \u2245 \u2295_{k=0,2,3,4} \u03b65^{k-1} as C5-characters (the four nontrivial ratios).",
+        "dimension": 4
+      },
+      "exact_stabilizer_H": {
+        "abstract": "C5",
+        "order": 5
+      },
+      "label": "C5_a_point",
+      "normal_of_X": "\u03bb^3 = \u03b65^3",
+      "note": "F(v)=0 by geometric series (Gate 1 exact).",
+      "on_X": true,
+      "orbit_size": 132,
+      "representative_formula": "[1 : \u03b65 : \u03b65\u00b2 : \u03b65\u00b3 : \u03b65\u2074]",
+      "splitting_field": "Q(zeta_5)"
+    },
+    "C5_b_point": {
+      "O_Y1_character": {
+        "H": "C5",
+        "character": "\u03b65\u00b2",
+        "splitting_field": "Q(zeta_5)"
+      },
+      "T_yX_dimension": 3,
+      "T_yY_as_H_module": {
+        "description": "analogous with \u03bb=\u03b65\u00b2",
+        "dimension": 4
+      },
+      "exact_stabilizer_H": {
+        "abstract": "C5",
+        "order": 5
+      },
+      "label": "C5_b_point",
+      "normal_of_X": "\u03bb^3 = \u03b65^6 = \u03b65",
+      "on_X": true,
+      "orbit_size": 132,
+      "representative_formula": "[1 : \u03b65\u00b2 : \u03b65\u2074 : \u03b65 : \u03b65\u00b3]",
+      "splitting_field": "Q(zeta_5)"
+    },
+    "C6_line_point": {
+      "O_Y1_character": {
+        "H": "C6",
+        "character": "a faithful linear character of C6 (6th root of unity)",
+        "splitting_field": "Q(zeta_6)=Q(zeta_3)"
+      },
+      "T_yX_dimension": 3,
+      "T_yY_dimension": 4,
+      "description": "C6-fixed point lying on a minus-line L_t",
+      "exact_stabilizer_H": {
+        "abstract": "C6",
+        "order": 6
+      },
+      "incidence": {
+        "minus_lines": 1,
+        "note": "Distinguished in Gate 1 modular table by F\u22610 and incidence with L_t.",
+        "plus_planes": 0
+      },
+      "label": "C6_line_point",
+      "normal_of_X": "\u03bb^3",
+      "on_X": true,
+      "orbit_size": 110,
+      "residual_normalizer": {
+        "N_G(C6)": "D12 (order 12)",
+        "action": "the residual C2 acts on the unique C6-point? N/H \u2245 C2 swaps nothing if unique fixed point \u2014 actually each C6 has one projective fixed point of each type in the D12 character geometry.",
+        "residual": "C2"
+      },
+      "splitting_field": "Q(zeta_11, zeta_3)"
+    },
+    "C6_plane_point": {
+      "O_Y1_character": {
+        "H": "C6",
+        "character": "a linear character of C6 (the other projective eigenline type)"
+      },
+      "T_yY_dimension": 4,
+      "description": "C6-fixed point lying on a plus-plane (off X)",
+      "exact_stabilizer_H": {
+        "abstract": "C6",
+        "order": 6
+      },
+      "incidence": {
+        "minus_lines": 0,
+        "note": "Gate 1: F\u22620; incidence with plus-plane.",
+        "plus_planes": 1
+      },
+      "label": "C6_plane_point",
+      "on_X": false,
+      "orbit_size": 110,
+      "regression_related": "D12 character line is the unique C3-invariant off-X line; C6_plane points are intermediate between C3 and D12 strata.",
+      "splitting_field": "Q(zeta_11, zeta_3)"
+    },
+    "D10_point": {
+      "F_value": "5",
+      "O_Y1_character": {
+        "H": "D10",
+        "character": "trivial linear character (unique 1-dim D10-subrep of W)",
+        "reason": "v is D10-fixed as a vector (all coordinates equal)."
+      },
+      "T_yY_as_H_module": {
+        "description": "Hom(triv, W/<v>) \u2245 W/<v> as D10-module (the unique 4-dim complement to the trivial line in W|D10).",
+        "dimension": 4
+      },
+      "exact_stabilizer_H": {
+        "abstract": "D10",
+        "order": 10
+      },
+      "label": "D10_point",
+      "on_X": false,
+      "orbit_size": 66,
+      "regression_off_X": true,
+      "representative": "[1:1:1:1:1]",
+      "setwise_equals_H": true,
+      "splitting_field": "Q"
+    },
+    "D12_point": {
+      "F_coords": [
+        [
+          2,
+          11
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          4,
+          11
+        ]
+      ],
+      "O_Y1_character": {
+        "H": "D12",
+        "character": "the unique linear character of D12 appearing in W (multiplicity 1; certified by dihedral character formula in subgroup_orbit_check.py)"
+      },
+      "T_yY_as_H_module": {
+        "description": "Hom(\u03bb, W/\u03bb) where \u03bb is the D12 character line; W|D12 = \u03bb \u2295 (4-dim complement).",
+        "dimension": 4
+      },
+      "exact_stabilizer_H": {
+        "abstract": "D12",
+        "order": 12
+      },
+      "label": "D12_point",
+      "on_X": false,
+      "orbit_size": 55,
+      "regression_off_X": true,
+      "representative": "unique C3-invariant = D12 character line",
+      "setwise_equals_H": true,
+      "splitting_field": "Q(zeta_11)"
+    },
+    "V4_line": {
+      "O_Y1_character": {
+        "H": "V4",
+        "character": "trivial",
+        "reason": "V4 acts as +1 on A."
+      },
+      "closure": "P(A) = P(W^{V4}) \u2245 P^1",
+      "generic_stabilizer_H": {
+        "abstract": "V4",
+        "note": "V4 acts trivially on A, hence fixes P(A) pointwise. Generic point of P(A) has exact stab V4 (type-II points are the three roots of F|A; elsewhere stab may be smaller if not on X).",
+        "order": 4
+      },
+      "joint_character_dims": {
+        "A_triv": 2,
+        "B_chi_z": 1,
+        "C_chi_s": 1,
+        "D_chi_r": 1
+      },
+      "label": "V4_line",
+      "normal_bundle_fiber_as_H_module": {
+        "H_module": "B \u2295 C \u2295 D \u2245 chi_z \u2295 chi_s \u2295 chi_r",
+        "description": "N_{P(A)/P(W)} \u2245 Hom(O(-1), B\u2295C\u2295D) \u2245 (B\u2295C\u2295D) \u2297 O(1); fiber as V4-module is the sum of the three nontrivial characters.",
+        "rank": 3
+      },
+      "on_X": {
+        "each_type_II_elliptic_incidence": "all three local elliptics E_z, E_s, E_r",
+        "section": "R = X \u2229 P(A): three reduced points (type-II), roots of squarefree binary cubic F|A",
+        "type_II_orbit_size": 165
+      },
+      "orbit_size": 55,
+      "residual_N_over_H": {
+        "abstract": "C3",
+        "action": "cycles the three type-II points R = X \u2229 P(A); acts as PGL-automorphisms of the line P(A).",
+        "isomorphism": "A4/V4 \u2245 C3",
+        "order": 3
+      },
+      "setwise_stabilizer_N": {
+        "abstract": "A4 = N_G(V4)",
+        "order": 12
+      },
+      "splitting_field": "Q (characters \u00b11); ambient matrices in Q(zeta_11)",
+      "triangle_of_minus_lines": {
+        "L_r": "P(B\u2295C)",
+        "L_s": "P(B\u2295D)",
+        "L_z": "P(C\u2295D)",
+        "regression": "three V4 minus-lines form a triangle \u2014 CERTIFIED",
+        "vertices": {
+          "L_s \u2229 L_r": "[B]",
+          "L_z \u2229 L_r": "[C]",
+          "L_z \u2229 L_s": "[D]"
+        }
+      },
+      "vector_span": "A = W^{V4}, dim 2, trivial V4-character"
+    },
+    "V4_type_II_point": {
+      "O_Y1_character": {
+        "H": "V4",
+        "character": "trivial",
+        "reason": "point lies on P(A) = W^{V4}."
+      },
+      "T_yX_as_V4_module": {
+        "decomposition": "chi_z \u2295 chi_s \u2295 chi_r",
+        "derivation": "N_{X/Y} \u2245 \u03bb^3 = triv; the trivial summand of T_yY is the conormal direction of X (along P(A), dF is nonzero transverse to the line in the A-plane). Removing triv leaves the three nontrivial characters \u2014 same as type I.",
+        "dimension": 3,
+        "note": "Consistent with V4_REPORT for all six K-fixed points on X."
+      },
+      "T_yY_as_V4_module": {
+        "decomposition": "chi_z \u2295 chi_s \u2295 chi_r \u2295 triv(?) ",
+        "dimension": 4,
+        "precise": "T_y P(W) \u2245 Hom(triv, W/A_line) \u2245 (A/line) \u2295 B \u2295 C \u2295 D \u2245 triv \u2295 chi_z \u2295 chi_s \u2295 chi_r"
+      },
+      "exact_stabilizer_H": {
+        "abstract": "V4",
+        "order": 4
+      },
+      "incidence": {
+        "ambient_support": "P(A)",
+        "elliptics": 3,
+        "minus_lines_of_this_V4": 0
+      },
+      "label": "V4_type_II_point",
+      "on_X": true,
+      "orbit_size": 165,
+      "representative": "one geometric root of F|A on P(A)",
+      "residual_normalizer_action": {
+        "N_G(H)/H": "C3 = A4/V4",
+        "on_flags": "cycles the three type-II points; cycles the three elliptics."
+      },
+      "setwise_equals_H": true,
+      "splitting_field": "Q"
+    },
+    "V4_type_I_all_vertices": {
+      "B_chi_z": {
+        "O_Y1_character": {
+          "character_name": "chi_z",
+          "on_r": -1,
+          "on_s": -1,
+          "on_z": 1
+        },
+        "elliptics_through": [
+          "E_z = X \u2229 P(A\u2295B)"
+        ],
+        "minus_lines_through": [
+          "L_s",
+          "L_r"
+        ],
+        "on_X": true,
+        "orbit_size": 165,
+        "point": "[B]",
+        "stabilizer": "V4"
+      },
+      "C_chi_s": {
+        "O_Y1_character": {
+          "character_name": "chi_s",
+          "on_r": -1,
+          "on_s": 1,
+          "on_z": -1
+        },
+        "elliptics_through": [
+          "E_s = X \u2229 P(A\u2295C)"
+        ],
+        "minus_lines_through": [
+          "L_z",
+          "L_r"
+        ],
+        "on_X": true,
+        "orbit_size": 165,
+        "point": "[C]",
+        "stabilizer": "V4"
+      },
+      "D_chi_r": {
+        "O_Y1_character": {
+          "character_name": "chi_r",
+          "on_r": 1,
+          "on_s": -1,
+          "on_z": -1
+        },
+        "elliptics_through": [
+          "E_r = X \u2229 P(A\u2295D)"
+        ],
+        "minus_lines_through": [
+          "L_z",
+          "L_s"
+        ],
+        "on_X": true,
+        "orbit_size": 165,
+        "point": "[D]",
+        "stabilizer": "V4"
+      }
+    },
+    "V4_type_I_point": {
+      "O_Y1_character": {
+        "character_name": "chi_z",
+        "on_r": -1,
+        "on_s": -1,
+        "on_z": 1
+      },
+      "exact_stabilizer_H": {
+        "abstract": "V4",
+        "order": 4
+      },
+      "incidence": {
+        "O_Y1_character": {
+          "character_name": "chi_z",
+          "on_r": -1,
+          "on_s": -1,
+          "on_z": 1
+        },
+        "elliptics_through": [
+          "E_z = X \u2229 P(A\u2295B)"
+        ],
+        "minus_lines_through": [
+          "L_s",
+          "L_r"
+        ],
+        "on_X": true,
+        "orbit_size": 165,
+        "point": "[B]",
+        "stabilizer": "V4"
+      },
+      "label": "V4_type_I_point",
+      "on_X": true,
+      "orbit_size": 165,
+      "representative": "[B] = P(B_chi_z)",
+      "residual_normalizer_action": {
+        "N_G(H)/H": "C3 = A4/V4",
+        "on_incident_edges": "cycles the three minus-lines of the triangle",
+        "on_triangle_vertices": "cycles [B],[C],[D]"
+      },
+      "splitting_field": "Q",
+      "tangent_data": {
+        "O_Y1": "chi_z",
+        "T_yX_as_V4_module": {
+          "decomposition": "chi_z \u2295 chi_s \u2295 chi_r",
+          "derivation": "N_{X/Y,y} \u2245 \u03bb^3 = chi_z; quotient of T_yY by that line.",
+          "dimension": 3,
+          "regression": "matches V4_REPORT: T_x X \u2243 chi_1 \u2295 chi_2 \u2295 chi_3"
+        },
+        "T_yY_as_V4_module": {
+          "decomposition": "chi_z \u2295 chi_z \u2295 chi_s \u2295 chi_r",
+          "derivation": "Hom(chi_z, A\u2295C\u2295D) = chi_z\u2297A \u2295 chi_z\u2297C \u2295 chi_z\u2297D with A=triv^2, C=chi_s, D=chi_r.",
+          "dimension": 4
+        },
+        "incidence_flags": {
+          "along_E_z \u2282 P(A\u2295B)": {
+            "tangent_plane_in_T_yY": "Hom(chi_z, A) \u2245 chi_z \u2295 chi_z (the plane T E_z directions)"
+          },
+          "along_L_r = P(B\u2295C)": {
+            "tangent_line_in_T_yY": "direction of C \u2245 chi_r"
+          },
+          "along_L_s = P(B\u2295D)": {
+            "note": "T_{[B]} L_s \u2245 Hom(chi_z, (B\u2295D)/B) \u2245 Hom(chi_z, D) \u2245 chi_s",
+            "tangent_line_in_T_yY": "direction of D in Hom(chi_z, D) \u2245 chi_s"
+          }
+        },
+        "normal_of_X_in_Y": "chi_z",
+        "point": "[B] type-I triangle vertex"
+      }
+    }
+  },
+  "theorem_boundary": "Decorates each Gate-1 stratum orbit with H, N_G(S), residual N/H, O_Y(1) character, tangent/normal H-modules, and incidence-flag characters. Does NOT compute normal jets, landing covariants, or unirationality. Character decompositions are exact over the stated splitting fields; \u00b11 characters are over Q; cyclotomic characters over Q(zeta_n).",
+  "wall_time_sec": 6.338,
+  "work_package": "WP-2"
+}
