@@ -1,0 +1,10 @@
+{
+  "payload": "payload.json",
+  "payload_sha256": "981b4d1c5bf7c618b4110560278a7e3f07598b432897c57aae839cda2de3360d",
+  "schema": "klein-cubic-target-branch-mod3-seal-v1",
+  "slice_log": "slice_critical_qq.m2.log",
+  "slice_log_sha256": "6441cee66845619a52ced6aeb04d07bf90730d486c20767d72d0a4b9654ac94b",
+  "slice_script": "slice_critical_qq.m2",
+  "slice_script_sha256": "200c3412f9389b0ab31581c91afb01db69ec58b8c0d2642a2645fe3c68c63627",
+  "terminal_marker": "TARGET_BRANCH_MOD3_PRODUCER_SEALED"
+}

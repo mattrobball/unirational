@@ -1,0 +1,94 @@
+{
+  "accepted_theory": {
+    "Pic_T_D": "Z*H_z (+) Z*H_lambda",
+    "Pic_report_sha256": "0bca6d54d2b9490e3d0d2fb204dabb74b83c58e16a34909fcab8ac8f458b8837",
+    "Pic_source": "SGA2 XII.3.6--3.7 via tmp/target_branch_picard_theory/REPORT.md",
+    "generic_cubic_smooth_on_branch": true,
+    "h3_h4_zero_on_rur": true,
+    "raw_branch_nonnormal_codim1": true,
+    "residue_degree_m": 1,
+    "rur_orbit_corank_two": true
+  },
+  "cramer_saturated_model": {
+    "content": "C in ZZ[A,B,Y,Z], 2630 terms, deg 22, E_raw = C*P",
+    "cramer_open": "delta = M[0,1]*M[1,2]-M[1,1]*M[0,2] unit (accepted on RUR and H21)",
+    "normalization_note": "Raw branch D is nonnormal along a double-fold locus; the simple-fold model on the Cramer/content-open is the accepted multiplicity-one component with residue degree one.",
+    "primitive_equation": "P in ZZ[A,B,Y,Z,u], u-degree 6, 1593 terms",
+    "simple_fold_model": "R_fold = V(P, P_u) saturated away from P_uu * delta * C = 0",
+    "slice_A0_B2": {
+      "critical_codim": 2,
+      "critical_degree": 14,
+      "critical_dim": 1,
+      "ideal": "(P, PA, PB, PY, PZ, Pu) after A=0, B=2",
+      "ring": "QQ[Y,Z,u]",
+      "sing_degree": 14,
+      "sing_dim": 1,
+      "theorem": "The specialized critical ideal is purely one-dimensional of degree 14.  Singularities of the specialized ramification hypersurface are therefore non-isolated."
+    }
+  },
+  "headline": "OPEN",
+  "mod3_class_group_gate": {
+    "completed_pieces": [
+      "ordinary Pic(T_D)=Z^2",
+      "generic cubic smooth on the selected branch",
+      "m=1 residue degree",
+      "exact primitive P and content C",
+      "exact degree-12 RUR corank-two orbit with h3=h4=0",
+      "exact QQ slice A=0,B=2: critical/singular locus dimension 1, degree 14"
+    ],
+    "dangerous_local_models": [
+      {
+        "geometric_source": "nodal cubic degeneration of contact order n on a smooth base",
+        "local_Cl": "Z/n",
+        "model": "xy = pi^n",
+        "three_primary_danger": "3 divides n"
+      },
+      {
+        "geometric_source": "residual ramification singularity after Morse splitting",
+        "model": "xy = h(z,w) with h = product p_i^{n_i}",
+        "three_primary_danger": "some n_i divisible by 3"
+      },
+      {
+        "local_effect": "nonnormal ordinary double crossing along a smooth surface",
+        "model": "xy = 0 (Morse-Bott)",
+        "normalization": "separates two smooth branches; no residual local Cl defect",
+        "status_on_slice_A0_B2": "critical/singular ideal has dimension 1, consistent with a curve section of a Morse-Bott surface; residual series h is not independently certified to vanish in two free parameters"
+      }
+    ],
+    "house_rule_8": "compute only the three-primary quotient of Cl/Pic",
+    "open_pieces": [
+      "global equation of D or primary decomposition of the Cramer-saturated fold ideal over QQ",
+      "all-orders residual h=0 (equivalently local membership P in (PA,PB,PY)_m at RUR)",
+      "global list of cubic-discriminant contact orders m_i on the normal base",
+      "codim-3 parafactorial audit of residual strata of the incidence"
+    ],
+    "ordinary_picard": "Pic(T_D)=Z H_z + Z H_lambda already complete",
+    "sufficient_certificate_format": [
+      "1. Cramer-saturated simple-fold component of V(P,P_u) with gates P_uu, delta, C units",
+      "2. Normality of base through codimension two, or Morse-Bott normalization smooth",
+      "3. For each height-one prime of Delta_cub on the normal base: contact m_i with 3 not dividing m_i",
+      "4. Exhaustive codim-2 strata = nodal sections only; residual locus codim >= 3",
+      "5. Codim-3 local punctured Picard exponents prime to 3, or residual codim >= 4 (lci parafactorial)"
+    ]
+  },
+  "producer": "certificates/target_branch_mod3/produce.py",
+  "schema": "klein-cubic-target-branch-mod3-v1",
+  "sources_sha256": {
+    "tmp/full_scaled_frame_branch_line_hostile_audit/certificate.json": "594683557ec657f89e107e5582b7622e7339081acdfb7a91bbe3997af46efd05",
+    "tmp/full_scaled_frame_degree_attack/sparse_bkk_certificate.json": "31960b0ad9cef5a5f51df73b78cb949201ecc08b0558ac27d042ed18a767ec31",
+    "tmp/target_branch_delta_saturated_singularity/global_parameter_content_exact.tsv": "480eb9f376a3d6270b74109613fd5132876338d3112f3d254aaa972684251644",
+    "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "tmp/target_branch_delta_saturated_singularity/qq_rur_hprime_certificate.json": "928fe51809049d0256cbf941011af4697645c8272e605be948aa5fd5660822ba"
+  },
+  "verdict": {
+    "dangerous_class_exhibited": false,
+    "decision_exit": "Stop short of the negative resolution of Problem E.  The three-primary defect is not proved to vanish, and no explicit dangerous three-primary class is exhibited.",
+    "headline": "OPEN",
+    "horizontal_degree_subgroup": "NOT_DECIDED",
+    "prime_to_three_vertical_classes_proved": false,
+    "strongest_positive_evidence": "On the exact A=0,B=2 slice the ramification critical locus is a degree-14 curve, so the isolated-cA analysis is false there; combined with accepted corank-two data and h3=h4=0 this is the Morse-Bott shape.  Modular fold samples at p=67 find singular cubics only rarely on simple folds.  Neither statement closes the global mod-3 gate by itself.",
+    "three_primary_defect": "NOT_DECIDED"
+  },
+  "verifier": "certificates/target_branch_mod3/verify.py",
+  "work_package": "WP-T1"
+}
