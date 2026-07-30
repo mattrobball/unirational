@@ -1,0 +1,16 @@
+{
+  "M2_script": "tmp/pathG_decision/fitt_L3.m2",
+  "degree_V": 6,
+  "dim_V": 3,
+  "generators_file": "Fitt_coker_L3.generators",
+  "ideal": "Fitt_0(coker L_3) over Q[A0,A1,A2,A3]",
+  "is_unit": false,
+  "is_zero": false,
+  "num_gb_generators": 165,
+  "operator_shape": [
+    7,
+    15
+  ],
+  "proper_closed_in_free_B0": true,
+  "self_sha256": "aa79ceb0db53f3af6a1c3b1c2a7506f700861cfe431c9c537973246bc6419512"
+}

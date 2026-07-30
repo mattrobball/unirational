@@ -1,0 +1,204 @@
+{
+  "G_witness_dim": 10,
+  "bidegree": {
+    "d": 7,
+    "m": 1
+  },
+  "containment_G_in_R3": "FALSE_AT_THIS_BIDEGREE",
+  "decision_exit": "G-SCOPED",
+  "director_fork_recommendation": "G-B (open meeting at witness level; do not run Fork here)",
+  "forks_not_run": [
+    "G-A",
+    "G-B"
+  ],
+  "free_module_L3": {
+    "Fitting_ideal_coker_L3": {
+      "degree_V_Fitt": 6,
+      "dim_V_Fitt": 3,
+      "generators_file": "Fitt_coker_L3.generators",
+      "is_unit_ideal": false,
+      "is_zero_ideal": false,
+      "num_gb_generators": 165,
+      "source": "M2 minors(7, L3) over QQ[A0..A3]",
+      "status": "PROPER_CLOSED_IN_FREE_B0"
+    },
+    "R_3_m_free": {
+      "contains_a_triv": false,
+      "definition": "V(Fitt_0(coker L_3)) subset free B_0 = A^4",
+      "proper_closed": true,
+      "reason_not_containing_a_triv": "maximal minor on columns [0, 1, 2, 5, 8, 11, 14] equals -2 \u2260 0"
+    },
+    "c3_leading_weights": {
+      "dims": {
+        "0": 2,
+        "1": 1,
+        "2": 1
+      },
+      "weight_0": [
+        1,
+        2
+      ],
+      "weight_1": [
+        3
+      ],
+      "weight_2": [
+        0
+      ]
+    },
+    "free_shape_codomain_x_domain": [
+      7,
+      15
+    ],
+    "generic_coker_free_B0": 0,
+    "generic_nullity_free_B0": 8,
+    "generic_rank_free_B0": 7,
+    "m": 1,
+    "n_leading_free_coeffs": 4,
+    "nnz_quadratic_terms": 80,
+    "operator": "L_3(b) = B(b; a_m, a_m)",
+    "polar_model": "B(z;y,y)=z0\u00b72 y0 y1 + z1\u00b7y1\u00b2 + z2\u00b7y0\u00b2 (D12-weight model)",
+    "residual_S3_sign_free_fibre": {
+      "L3_rank_over_Q": 7,
+      "a_coeffs": [
+        "0",
+        "1",
+        "-1",
+        "0"
+      ],
+      "note": "sign character free fibre; full L3 rank but not residual-trivial"
+    },
+    "residual_S3_trivial_free_fibre": {
+      "L3_coker_over_Q": 0,
+      "L3_rank_over_Q": 7,
+      "a_coeffs": [
+        "0",
+        "1",
+        "1",
+        "0"
+      ],
+      "description": "span{y0 f1 + y1 f0}: C3-weight 0 and reflection-fixed",
+      "nonzero_maximal_minor": {
+        "columns": [
+          0,
+          1,
+          2,
+          5,
+          8,
+          11,
+          14
+        ],
+        "proof_type": "exact_det_over_Q",
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "value": "-2"
+      }
+    },
+    "symbolic_quadratic_sha256_terms": "56c99aa3de9d89b1168035fa7526c580ad365f2156501acc53f848ef7457cc9c"
+  },
+  "headline": "OPEN",
+  "open_meeting": "OPEN_MEETING_CERTIFIED",
+  "restriction_to_G": {
+    "attains_free_generic_rank": true,
+    "free_generic_rank": 7,
+    "generic_rank_on_pure_triv_based": 7,
+    "method": "Free-module L_3 depends only on free fibre coordinates A_0..A_3. Multi-Rees sections in the pure residual-trivial family a_triv \u2297 f have free fibre f(z)\u00b7a_triv; L_3 scales by f(z)^2 and retains rank 7 wherever f(z)\u22600. Based residual-invariant pure_triv sections give globally compatible (Level-2 structural witness) leading states in G.",
+    "nonzero_maximal_minor_on_residual_free_fibre": {
+      "columns": [
+        0,
+        1,
+        2,
+        5,
+        8,
+        11,
+        14
+      ],
+      "proof_type": "exact_det_over_Q",
+      "rows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "value": "-2"
+    },
+    "not_modular_sample": true,
+    "open_meeting_points_char0": [
+      {
+        "L3_coker_over_Q": 0,
+        "L3_rank_over_Q": 7,
+        "basis_index": 0,
+        "free_fibre_eval": [
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        "full_generic_rank": true
+      },
+      {
+        "L3_coker_over_Q": 0,
+        "L3_rank_over_Q": 7,
+        "basis_index": 1,
+        "free_fibre_eval": [
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        "full_generic_rank": true
+      },
+      {
+        "L3_coker_over_Q": 0,
+        "L3_rank_over_Q": 7,
+        "basis_index": 2,
+        "free_fibre_eval": [
+          "0",
+          "2",
+          "2",
+          "0"
+        ],
+        "full_generic_rank": true
+      },
+      {
+        "L3_coker_over_Q": 0,
+        "L3_rank_over_Q": 7,
+        "basis_index": 3,
+        "free_fibre_eval": [
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        "full_generic_rank": true
+      }
+    ],
+    "proof_type": "exact_Q_maximal_minor_plus_exact_rank_on_char0_points_of_G_witness"
+  },
+  "self_sha256": "aea7ba3da3f508450c3c744a1e49412132197aadae059302d1f2ebfcf6add89c",
+  "theorem_boundary": {
+    "not_proved": [
+      "All-degree containment or open meeting (needs finite generation / periodicity)",
+      "Full geometric V4 triple-line equalizer matrix from cyclotomic strata coordinates",
+      "Nonzero omega_3 on rank-drop (Fork G-A)",
+      "Algebraization of formal lifts to a covariant (Fork G-B)",
+      "Headline ed_C(G) or unirationality"
+    ],
+    "proved": [
+      "Free L_3 Fitting ideal is proper closed in free B_0 (dim 3, degree 6)",
+      "Residual S3-trivial free fibre a_triv has L_3 rank 7 over Q with nonzero maximal minor",
+      "Residual S3-invariant based plane jets at (1,7) form a 10-dimensional Q-space (Level-2 based witness)",
+      "A 4-dimensional pure a_triv\u2297f based subfamily has free-fibre L_3 rank 7 at explicit Q-points",
+      "Hence G_witness meets B \\ R_3 at (1,7) in characteristic zero"
+    ]
+  }
+}

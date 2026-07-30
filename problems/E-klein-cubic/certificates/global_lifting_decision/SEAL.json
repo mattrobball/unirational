@@ -1,0 +1,41 @@
+{
+  "G_SCOPED_no_headline_claim": true,
+  "accepted_input_sha256": {
+    "certificates/global_lifting/global_state_image.json": "d06ccf27839491abf7a31b03b98e604ea53cc7c5ffe387b4abec3103c0ad3206",
+    "certificates/global_transition/level2_inverse_limit.json": "d23615ecbe4584e3e401293984d354bbf6b26392b8923e40e69c8ecc37098a90",
+    "certificates/lifting/families/SUMMARY.json": "717240ae557d3468cac3dc0c7862717ac6ecd6efb95c3e7e26686e4da25f6035",
+    "certificates/lifting/families/free_module_stages.json": "7305453e8c75be0a7c30eab41cbc2e1b82daacbe5899cceab34145e26a6e43a7",
+    "certificates/lifting/polar_expansion.json": "1231694bdc41f6c06c690c2b8eb58dca42402acf1cfaacdc284157b00033098e",
+    "certificates/transition_repair/category_repaired.json": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0"
+  },
+  "artifact_sha256": {
+    "DECISION.md": "5f5fea62968d4cc61475dcdb0d12379c37618c681687b2210d370504869a8c2a",
+    "Fitt_coker_L3.generators": "53a45bfeb74102a354e46d3257a5c7dad09a8092e2375dfc870f6bbd3df655ef",
+    "Fitt_coker_L3.json": "280d57c833b74f76d841f8c7f1289977579fd01f25e5ea06198fe2667977a24d",
+    "G_projection_matrix.json": "a09cce3fe8579a83f9d414e33ee8761af5438b8d43f06405cf4d390629c7e2e8",
+    "Lambda_basis_CSR.json": "4df6b3c7ca8eb1c4623bf7a1abc4ae6b0ef9082509d3584b33f509f86a571cbc",
+    "produce.py": "d9a2a5e05e3012f5ae379c98b6428c30a33a0966e600c2e03d1ce398bb40f209",
+    "rank_certificate.json": "ba12ab5adf75acfa2212c2b283072239c71c2c6b3e2fa7c52e9a654dae4def53",
+    "verify.py": "4dfd3872dc5b2499fde3ad0748f2a699870088734e644f7f4e3c15880779df73"
+  },
+  "attempt": "Elo Path G Gate G1",
+  "bidegree": {
+    "d": 7,
+    "m": 1
+  },
+  "containment_G_in_R3": "FALSE_AT_THIS_BIDEGREE",
+  "decision_exit": "G-SCOPED",
+  "forks_not_run": [
+    "G-A",
+    "G-B"
+  ],
+  "headline": "OPEN",
+  "open_meeting": "OPEN_MEETING_CERTIFIED",
+  "producer": "certificates/global_lifting_decision/produce.py",
+  "self_sha256": "273179fe01eb6e6eb4ae503e5b74d86ee72ccfa76a5fd4d9638dcadfd908f04f",
+  "terminal_markers": [
+    "GLOBAL_LIFTING_DECISION_G1_OK",
+    "GLOBAL_LIFTING_DECISION_VERIFY_OK"
+  ],
+  "verifier": "certificates/global_lifting_decision/verify.py"
+}
