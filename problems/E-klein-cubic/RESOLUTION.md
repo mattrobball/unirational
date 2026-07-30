@@ -3,7 +3,7 @@
 ## Verdict
 
 **OPEN.** No unconditional affirmative or negative answer is proved here.
-As checked on 2026-07-29, the author version of
+As checked on 2026-07-30, the author version of
 Cheltsov–Tschinkel–Zhang dated 2026-07-18 still explicitly lists the
 \(\operatorname{PSL}_2(\mathbf F_{11})\)-action on the Klein cubic among the
 two open Klein-cubic cases (Theorem 5.1 and the discussion on printed page
@@ -11,7 +11,9 @@ two open Klein-cubic cases (Theorem 5.1 and the discussion on printed page
 
 What is proved below is an exact reduction to the remaining essential-
 dimension dichotomy, an explicit generic-twist presentation, and a certified
-bounded covariant exclusion. None of the bounded computations is a negative
+bounded covariant exclusion, together with several all-degree structural
+closures and feasibility theorems.  None of these results supplies the
+missing dominant map or generic-twist nonpoint required for a headline
 solution.
 
 Artifact scope matters when replaying the ledger: the tracked
@@ -19,6 +21,223 @@ Artifact scope matters when replaying the ledger: the tracked
 `tmp/` tree containing newer solver outputs and intermediate matrices is
 intentionally ignored, so `tmp/...` citations below are local provenance
 pointers rather than remotely published files.
+
+## 2026-07-30 audited advances
+
+The main question remains **OPEN**.  The following new conclusions are exact
+at their stated scope.
+
+1. For an actual source divisor dominating a normalization-conductor prime,
+   the KLS multiplicities satisfy
+
+   \[
+   a=\epsilon(c+\mu),\qquad
+   \beta=(\epsilon-1)+\epsilon\mu,qquad
+   a-\beta=1+\epsilon(c-1)>0.
+   \]
+
+   Thus multiplicity one forces a transverse immersed ordinary node and
+   \(\beta=0\).  For every divisor over the normalization pair one has the
+   refinement
+
+   \[
+   \beta-a=\epsilon A_E(H^\nu,C)-1.
+   \]
+
+   In particular, a squarefree gcd factor centered in codimension at least
+   two cancels from `deg(h)-deg(b)`.  The unique invariant quintic is normal.
+   More strongly, the universal Jacobian scheme of the invariant sextic pencil
+   \(f_6+t f_3^2\) has affine dimension two, so every genuine invariant
+   sextic is geometrically integral and normal.  A nonnormal non-Klein image
+   has degree at least seven.  If the complete gradient gcd is exactly the
+   product `P22*k`, where `P22` is the complete conductor-dominating support
+   and `k` is coprime, squarefree, and centered in codimension at least two,
+   the KLS degree identity gives `d<=9`; the complete characteristic-zero
+   dominance theorem through degree nine excludes the branch.  Repeated `k`
+   is also covered when every associated discrepancy is at least one.  The
+   exact lc/plt frontier is now proved.  Cartier integrality shows that
+   target-pair lc removes multiplicity dependence but may leave one reduced
+   copy at an `A_E=0` place; plt gives full cancellation for valuations
+   exceptional over codimension-at-least-two centers, not for conductor
+   divisors themselves.  A homogeneous rank-four normal-image family with lc
+   kernel foliation realizes `A_E=5-e`, and a fixed nodal plt pair has
+   pullbacks with arbitrarily many conductor-dominating source divisors.
+   These models are non-`G` and nonminimal, so they prove that the missing
+   input must be a representation-specific minimality-to-discrepancy theorem
+   plus a separate conductor-support bound.  They do not construct a KLS
+   counterexample for the Klein action.
+
+2. A maximal `D12` stabilizes an honest two-dimensional submodule whose
+   projective line lies on the Klein cubic and has full stabilizer `D12`.
+   Every twist consequently has an effective degree-55 zero-cycle, and the
+   generic Schur twist has an actual closed point of exact degree 55.  A
+   degree-three section gives index one.  Neither statement gives a rational
+   point.  Balestrieri supplies only an extension of degree at most 107 with
+   the stated coprimality properties, and Ma's degree-seven theorem is
+   inapplicable.  A proper degree-19 curve through the degree-55 point would
+   leave a residual degree-two cycle and prove solubility; it must depend on
+   the torsor because a constant invariant degree-19 curve would cut an
+   invariant length-57 scheme, below the minimum orbit length 60.  For a
+   negative Schur-source result, any boundary-zero no-point torsor over an
+   infinite field suffices; a valuation construction is optional.  Every
+   qualifying pure degree-19 curve through a line-orbit point with the
+   certified maximal geometric semilinear `D12` stabilizer is now forced to
+   be geometrically integral.  For a descended
+   hyperplane-selected degree-55 point the exact Hilbert function is
+   `1,4,10,19,31,45,55,...`, and no geometrically integral ACM degree-19
+   curve works.  This leaves non-ACM integral curves, as well as ACM curves
+   through other independently chosen orbit points, outside the theorem.
+   The selected hyperplane can simultaneously be chosen so that
+   `Y=V(f3,f5)` is a smooth geometrically integral `(3,5)` complete
+   intersection of degree `15` and genus `31`.  The selected point ideal has
+   five new minimal sextic generators and
+   `O_Y(6)(-Z)` has `(degree,h0,h1)=(35,5,0)`.  A smooth rational survivor
+   has forced Rao dimensions
+   `(0,16,29,38,42,40+epsilon)`, `epsilon in {0,1}`.  In the
+   `epsilon=1` branch its unique quintic carrier is `f5+f3*q` and `Y~3H`.
+   Picard rank one for that actual carrier would exclude degree `19`, but
+   the standard Brevik--Nollet/Lopez theorem does not apply because
+   `I_Y(4)=f3*S1` is not globally generated, and a very-general Picard
+   result would not control the special carrier selected by a curve.
+   Complete-intersection links of types `(5,6)` and `(5,7)` force residual
+   genera `-28` and `-12`, but disconnected or nonreduced residuals remain.
+   Thus this is an exact non-ACM frontier, not a nonexistence theorem.
+
+3. The Pfaffian descent now proves existence of the Morita idempotent and
+   isolates its explicit-coordinate equation.  The exact
+   characteristic-zero alignment gives
+   \(\dim\operatorname{Hom}_G(W,\wedge^2V_6^*)=1\), and 36 explicit
+   weight-zero rational matrices form a generic `K_proj`-basis.  A rank-25
+   Reynolds map `End(W)->End(V6)` and eleven complement covariants give a
+   normalized `25+11` frame with determinant `7 mod 23`.  Multiplication is
+   ordinary `6 x 6` multiplication followed by one frame solve.  The
+   descended involution is
+
+   \[
+   \sigma_x(M)=Q(x)^{-1}M^tQ(x),\qquad
+   \operatorname{Pf}Q(x)=\lambda f_3(x),\quad\lambda\ne0.
+   \]
+
+   The rank-25 map is linear rather than multiplicative; the generic matrix
+   circuit is a correct formula, while its fully instantiated replay is at
+   the good prime.  The generic Brauer class has period and index exactly two,
+   so the algebra is `M3(D)` for a quaternion division algebra and a
+   `sigma`-self-adjoint reduced-rank-two idempotent exists abstractly.  On a
+   certified 15-element basis of `Sym(A,sigma)`, explicit extraction is the
+   single system
+
+   \[
+   c_3(a)=0,\qquad c_2(a)\ne0,
+   \]
+
+   with projector
+
+   \[
+   e=(a^2-c_1(a)a+c_2(a)1)/c_2(a).
+   \]
+
+   The system has a `K_proj`-point abstractly, but no installed-frame
+   coordinates are supplied.  The direct homogeneous Grassmannian-covariant
+   shortcut is excluded through degree eight only.  In the degree-14 Reynolds
+   symmetric frame, every one of the 105 coordinate-pair Pfaffian cubics is
+   geometrically irreducible, so no support-one or support-two point exists
+   over `K_proj`.  All 455 coordinate ternary cubics are now proved smooth
+   and geometrically integral over `K_proj`; this is a basis-dependent
+   coordinate-plane theorem.  The unique minimal fixed-frame triple `(0,1,2)`
+   has the exact depressed model
+
+   \[
+   F=u^3+u(q_0v^2+q_1vw+q_2w^2)
+     +r_0v^3+r_1v^2w+r_2vw^2+r_3w^3=0,
+   \]
+
+   with seven explicit `K_proj` coefficients, exact Hessian/Jacobian/flex
+   data, and projector open `c2=F_u!=0`.  Exactly 34 of the 38 ambient
+   invariant-basis slots are nonzero; the four zero slots are precisely the
+   two `u^2v,u^2w` rows.  Neither the construction nor its independent audit
+   decides the genus-one torsor class.  The exact flex eliminant is monogenic:
+   `K[t]/(Phi)` is a degree-nine field and `u=-L0/L1`, so there is no rational
+   flex.  The Jacobian 3-division quartic is irreducible, excluding rational
+   nonzero 3-torsion and a rational 3-isogeny kernel.  This still does not
+   decide whether the genus-one curve has a rational point.  At the genuine
+   `f3=0` quotient valuation, `pi=f3*f5/f8` gives a simple Hensel point in
+   `F_u!=0`; hence this divisor supplies no obstruction and even gives a
+   local projector.  The `f5=0` scaling has a generically smooth explicit
+   residual genus-one cubic, but its residue-field point is undecided.  The
+   affine `E[3]` cocycle and first Kummer representative are now explicit:
+   a 755,647-node determinant-free circuit constructs
+   `alpha_R in R^x/R^(x3)`, and an independent audit checks two actual
+   Pfaffian sheets, projective translation orientation, and the rank-729 Cech
+   triple overlap.  The normalized first-descent chart has ten variables and
+   nine cubics.  It has 729 geometric degree-nine components, but their
+   component torsor cannot obstruct this class: `alpha_R=w1(xi)` supplies a
+   base-defined component representing the original covering.  The first
+   local Kummer layer is now exact, with the prime-`3` injectivity theorem for
+   `w1` included explicitly.  The `f3=0` Hensel point forces local Kummer
+   membership, so that place is retired.  At `f5=0`, the primitive rescaled
+   cubic extends the same degree-three covering over the henselian DVR, its
+   Jacobian has good reduction, and local membership is equivalent to a
+   point on the residual plane cubic.  The raw nine saved `alpha_R`
+   coordinates have no certified homogeneous gauge; their mixed-weight DAG
+   pass is not an actual coordinate valuation and cannot be reduced naively.
+   The residual cubic descends exactly to
+   `F0=C(A,Y,Z)`, with `A=f6/f3^2`, `Y=f9/f3^3`, and `Z=f12/f3^4`.
+   A direct characteristic-zero Jacobian witness proves algebraic
+   independence.  The corrected possibly disconnected finite-etale `mu3`
+   slice and generically free `G` quotient give the factor-three rank
+   identity.  A hostile audit rejects the attempted generic bound from the
+   exact length-`3960` affine fibre because the projective boundary is
+   nonempty.  Its replacement is an exact generic characteristic-zero
+   calculation: the rank-12 Hironaka module quotient by `f9-Y` and `f12-Z`
+   over `QQ(A,Y,Z)[f8,f11]` has length `6`.  Hence
+   `[k(D5):F0]=2` exactly.  The plane degree-three divisor and genus-one
+   Riemann--Roch then show that this quadratic residue extension cannot
+   create a point absent over `F0`.  The three coordinate-infinity valuations
+   are locally soluble and the distinguished double-root direction is empty
+   even over `k(D5)`.  The remaining Pfaffian gate is the residual Kummer
+   class or a non-coordinate discriminant place for the explicit cubic over
+   `C(A,Y,Z)`, followed by a global point with `F_u!=0`, the quaternion
+   corner, five Hermitian matrices, and a simultaneous common isotropic right
+   line.
+
+Replays are listed at the top of `HANDOFF.md`.  The local packets are
+`tmp/kls_actual_conductor_geometry/`,
+`tmp/kls_actual_conductor_geometry_audit/`, `tmp/kls_f5_normality/`,
+`tmp/kls_f5_normality_audit/`, `tmp/schur_unrestricted_point_attack/`,
+`tmp/schur_unrestricted_point_attack_audit/`,
+`tmp/pfaffian_representation_alignment/`,
+`tmp/pfaffian_representation_alignment_audit/`, and
+`tmp/pfaffian_25plus11_descent/`, together with
+`tmp/pfaffian_25plus11_descent_audit/`,
+`tmp/quadratic_grassmannian_covariant/`,
+`tmp/pfaffian_rank2_idempotent_attack/`,
+`tmp/pfaffian_rank2_hostile_audit/`,
+`tmp/pfaffian_binary_cubic_attack/`,
+`tmp/pfaffian_binary_cubic_geometric_audit/`, and
+`tmp/kls_proper_multiple_structure/`, with its independent
+`tmp/kls_proper_multiple_structure_audit/`, together with
+`tmp/pfaffian_ternary_cubic_triage/`,
+`tmp/pfaffian_ternary_cubic_hostile_audit/`,
+`tmp/pfaffian_minimal_ternary_model/`,
+`tmp/pfaffian_minimal_ternary_model_audit/`,
+`tmp/pfaffian_depressed_torsor_next/`, with its independent
+`tmp/pfaffian_depressed_torsor_next_audit/`,
+`tmp/pfaffian_torsor_valuation_attack/`, with its independent
+`tmp/pfaffian_torsor_valuation_attack_audit/`,
+`tmp/pfaffian_depressed_alpha_r/`, with its independent
+`tmp/pfaffian_depressed_alpha_r_audit/`,
+`tmp/pfaffian_alpha_local_kummer/`, with its independent qualified audit
+`tmp/pfaffian_alpha_local_kummer_audit/`,
+`tmp/pfaffian_d5_residual_attack/`, with its independent corrective audit
+`tmp/pfaffian_d5_residual_attack_audit/`, the independent invariant-module
+salvage `tmp/d5_degree_bound_invariant_salvage/`, and the independent
+projective cross-check `tmp/pfaffian_d5_degree_projective_audit/`,
+`tmp/kls_discrepancy_next_gate/`,
+`tmp/kls_discrepancy_next_gate_audit/`, and
+`tmp/schur_degree19_structural_design/`, with its independent
+`tmp/schur_degree19_structural_design_audit/`, together with
+`tmp/schur_degree19_nonacm_attack/` and its independent
+`tmp/schur_degree19_nonacm_attack_audit/`.
 
 ## 2026-07-29 structural advances
 
@@ -65,13 +284,12 @@ not a replacement for either acceptance criterion.
    `11:5` (orbit 12) still forces a faithful image curve; its branch orders
    `5,11` give genus and resolution irregularity at least 12, with the same
    singularity exclusions.  This is the only extension forced by proper-
-   stabilizer curve geometry alone.  The orbit-11 `A5` branch survives
-   sharply: for both `A5` classes there is one nondegenerate invariant
+   stabilizer curve geometry alone.  At that coarse level the orbit-11 `A5`
+   model is sharp: for both `A5` classes there is one nondegenerate invariant
    quadratic, and its eleven translates form a squarefree degree-22
    `G`-invariant made of smooth rational quadrics; `A5` also admits a faithful
-   `P1` image.  This is not a KLS gcd example, but it refutes a uniform coarse-
-   geometry obstruction.  Logarithmic tangency is not strong enough.  For
-   their product \(P_{22}\), the exact induced degree-25 field
+   `P1` action.  Logarithmic tangency is not strong enough.  For their product
+   \(P_{22}\), the exact induced degree-25 field
 
    \[
    v=\sum_i(P_{22}/q_i)
@@ -91,8 +309,21 @@ not a replacement for either acceptance criterion.
    \(W^*\)-valued first-integral module of a generic-rank-four self-covariant,
    its adjugate/image and degree identities, minimality, or stronger
    conductor/discrepancy input.
-   The degree-28 induced field and its primitive form are now excluded
-   **unconditionally**.  On the generic surface
+
+   The new linearized-pencil theorem supplies exactly such a comparison in
+   the normal-image orbit-11 branch.  If `H` is normal and one invariant
+   quadric \(Q_{A_5}\) divided \(h\), restriction would give a dominant
+   `A5`-equivariant rational map from the smooth rational quadric threefold to
+   a curve in `Sing(H)`.  Its normalization is \(\mathbf P^1\) with faithful
+   icosahedral action.  But the affine cone over the quadric is factorial, so
+   a primitive rational pencil on it spans an honest two-dimensional
+   `A5`-subrepresentation.  No such representation exists.  Hence no
+   \(Q_{A_5}\) divides \(h\), and the full product \(P_{22}\) cannot occur in
+   the contracted-gradient gcd of a normal-image KLS covariant.  Thus neither
+   the degree-25 nor the degree-28 field realizes this normal-image branch,
+   regardless of its scalar first-integral field.  The separate Stein
+   fixed-point proof still excludes the degree-28 induced field and its
+   primitive form independently.  On the generic surface
    \(S_r=V(q,c-rf)\), the geometrically integral \(A_5\)-stable divisor
    \(D_r=V(d_4)\) gives an \(A_5\)-fixed rational point on the normal curve
    of the finite Stein field of \(t=d_4^3/f^4\).  A nontrivial \(A_5\)-action
@@ -103,15 +334,61 @@ not a replacement for either acceptance criterion.
    KLS first-integral tuple to vanish modulo the selected quadric; conjugacy
    puts \(P_{22}\) in the coordinate gcd, contradicting primitivity.  The
    pencil has a degree-72 base scheme, so the proof deliberately does not
-   assert that the Stein degree is one.  Degree 25 remains the harder live
-   candidate.
+   assert that the Stein degree is one.
+
+   There is also a general normal-image multiplicity theorem.  In the
+   primitive rank-one factorization
+
+   \[
+   \operatorname{adj}(Dq)=b\,v\,\bar A^t,
+   \qquad \bar A=(\nabla F)(q)/h,
+   \]
+
+   rank drop along every prime component of \(V(h)\) gives
+
+   \[
+   \operatorname{rad}(h)\mid b.
+   \]
+
+   If \(\rho=\deg\operatorname{rad}(h)\), \(r=\deg v\), \(t=\deg b\),
+   \(d=\deg q\), and \(e=\deg H\), the exact degree identity sharpens to
+
+   \[
+   s-\rho\ge r+d(e-5)+4.
+   \]
+
+   For a normal non-Klein image \(e\ge5\), so every nonzero \(h\) is
+   non-squarefree and has multiplicity excess at least \(r+4\).  This does
+   not force \(h=1\): repeated factors can supply the excess.
    The symbol \(P_{22}\) here denotes the degree-22 divisor, not a
    coordinate-\(\mathbf P^{22}\) landing slice.  Smaller stabilizers likewise
    allow point or
    rational-curve images.  If `H` is nonnormal, a vertical component may
    dominate a divisorial conductor surface, and rational singularities force
-   only `q=p_g=0` there.  Thus `h=1` remains unproved, as do stable components
-   with non-rational singularities.  The proofs and independent audits are
+   only `q=p_g=0` there.  A new feasibility theorem shows that this is not a
+   gap which can be closed by a formal surface analogue of the pencil
+   argument.  For the invariant smooth quadric threefold \(Q\) of either
+   maximal `A5`, the exact decomposition
+
+   \[
+   H^0(Q,\mathcal O_Q(3))
+     \simeq2\cdot\mathbf1\oplus\mathbf3\oplus\mathbf3'
+       \oplus3\cdot\mathbf4\oplus2\cdot\mathbf5
+   \]
+
+   supplies a cubic `A5`-equivariant rational map
+   \(Q\dashrightarrow\mathbf P^2\), and an exact differential-rank witness
+   proves it dominant.  Thus there is no blanket prohibition on an
+   `A5`-equivariant map from \(Q\) to a surface.  The target here is an
+   abstract `A5`-surface, not an embedded conductor of a KLS image, and the
+   theorem constructs neither a `G`-self-covariant nor a realization of
+   \(P_{22}\).  An actual nonnormal obstruction must use the conductor
+   embedding, normalization compatibility, Jacobian origin, or
+   multiplicities.  The surviving KLS branches therefore include a
+   nonnormal image with such a conductor surface, other `A5`-stabilized
+   factors, repeated normal-image components satisfying the displayed
+   excess, and stable components with non-rational singularities.  In
+   particular `h=1` remains unproved.  The proofs and independent audits are
    `tmp/kls_vertical_divisor_geometry/REPORT.md`, its `PROOF_AUDIT.md`, and
    `tmp/kls_vertical_divisor_geometry_audit/REPORT.md`, followed by
    `tmp/kls_nonstable_vertical_orbits/REPORT.md` and
@@ -119,7 +396,11 @@ not a replacement for either acceptance criterion.
    `tmp/kls_a5_logarithmic_divisor/REPORT.md` and its `PROOF_AUDIT.md`, then
    `tmp/kls_wstar_first_integrals/REPORT.md` and its `PROOF_AUDIT.md`, and
    `tmp/kls_degree28_stein_fixed_point/REPORT.md` with its
-   `PROOF_AUDIT.md`.
+   `PROOF_AUDIT.md`, and finally
+   `tmp/kls_a5_linearized_pencil_obstruction/REPORT.md`, its
+   `PROOF_AUDIT.md`, and its independent `AUDIT.md`, followed by
+   `tmp/kls_a5_conductor_surface_feasibility/REPORT.md`, its
+   `PROOF_AUDIT.md`, and its `INDEPENDENT_AUDIT.md`.
 2. The normalized dual Gauss covariant
 
    \[
@@ -203,8 +484,9 @@ not a replacement for either acceptance criterion.
    \(F(\sigma)=0\bmod I^{(11)}\).  This closes exactly the target
    \(\widetilde{I^{(9)}/I^{(11)}}(3d)\), supplying only the first formal
    landing correction, not all-order lifting, algebraization, or dominance.
-   The next correction is the canonical map
-   \(I^{(5)}/I^{(7)}\to I^{(11)}/I^{(13)}\).  High twist and smoothness do
+   The canonical next correction would be the map
+   \(I^{(5)}/I^{(7)}\to I^{(11)}/I^{(13)}\); the factorized attempt at this
+   correction is now obstructed below.  High twist and smoothness do
    not make these maps automatically surjective: on every edge the
    order-three initial has the six-basepoint factor \(Q\).  The resulting
    fixed-factor quotient is now computed equivariantly.  In odd orders nine
@@ -240,23 +522,59 @@ not a replacement for either acceptance criterion.
    retired under the arbitrary-high-factor policy.  In the raw point stalk
    \(Q\in\mathfrak m_p^2\), whereas its exceptional transform is a unit at
    the old flags.  The nonautomatic order-twelve equation instead lives on
-   the genuine \(Q=0\) sections.  It is pointwise soluble by
-   \(\beta=2zq\), \(h=Bq\), but no simultaneous equivariant solution on all
-   six sections and all centres, no global \(H^1\)-gluing, and no later
-   correction or algebraization is proved.  This
-   rules out only the naive Serre/implicit-function shortcut; it is not a
-   negative landing result and uses no instantiated degree.  The corrected
+   the genuine \(Q=0\) sections.  A denominator-free polynomial solution on
+   one edge and both roots is now certified inside the exact Koszul tangent
+   image.  Its naive cyclic transports fail six joint coefficients, but the
+   exact joint Koszul equalizer repairs them by `Q`-multiples and has full rank
+   one on the invariant residue target.  Degree-seven/eight parity witnesses
+   and `H2=x^2+y^2+z^2` split every normalized simple-`Q` grade.  The ambient
+   `J5/J7` correction image is now proved to equal the complete
+   residue-cleared `J11/J13` target in every transverse grade, including the
+   zero low-grade bulk and both stable parity strands.  The strict
+   Koszul-tangent bulk image is zero, but the full ambient correction is the
+   permitted source after the first gate.  This is still only the normalized
+   centre-line module.  The attempted global relative-divisor antecedent is
+   now impossible for the factorized family.  A residue-zero `p4_P` on
+   `V(q_P)` would define a point of the fixed elliptic cubic over a quadratic
+   function algebra.  Its elliptic trace descends to `P^2` and is constant,
+   while the effective `S3` order-three stabilizer translates it by nonzero
+   `2T`.  Split, nonreduced, singular, nonnormal, and irregular covers give
+   no escape, and the exact common-basis audit finds all six prescribed
+   boundary values in one orbit.  Thus the global factorized Koszul family
+   cannot reach `I11/I13`.  The proposed primitive nonfactorized continuation
+   is impossible as well.  The constant map `Sym^2(E_-) -> E_+^*` is an
+   isomorphism, so Hilbert--Burch forces every regular `p4` syzygy into
+   `(A,B)E_+` and hence to zero on the forced common-zero scheme.  A common
+   divisor compatible with both nonzero roots is necessarily quadratic and
+   reduces to the trace-obstructed case.  Therefore every normal-order `3/4`
+   planewise extension retaining these line germs is closed; a Fable escape
+   must change the boundary or leading normal order.  No later correction or
+   algebraization is proved.  This is a scoped negative landing theorem and
+   uses no instantiated degree.  The corrected
    calculations are in `tmp/fable_constrained_cokernel/REPORT.md` with its
    `AUDIT_NOTES.md`, followed by
    `tmp/fable_finite_d12_constrained/REPORT.md` and
    `tmp/fable_finite_d12_constrained/interface_design.json`, followed by
    `tmp/fable_d12_char0_bridge/REPORT.md` and its `PROOF_AUDIT.md`, followed by
    `tmp/fable_d12_rees_sigma_interface/REPORT.md` and its
-   `PROOF_AUDIT.md`.
+   `PROOF_AUDIT.md`, followed by
+   `tmp/fable_d12_simultaneous_successor/REPORT.md` and
+   `tmp/fable_order12_qsection_correction/PROOF_AUDIT.md`, then the sealed
+   `tmp/fable_d12_joint_rank/` and `tmp/fable_d12_koszul_rank/` packets,
+   `tmp/fable_d12_module_adversary/`,
+   `tmp/fable_d12_bulk_correction_rank/`,
+   `tmp/fable_d12_triangular_bulk_closure/`,
+   `tmp/fable_relative_divisor_trace_obstruction/`,
+   `tmp/fable_fixed_plane_boundary_adversary/`, the synthesis packet
+   `tmp/fable_relative_q_trace_obstruction/`, and the independent
+   `tmp/fable_nonfactorized_successor/`,
+   `tmp/fable_nonfactorized_syzygy_obstruction/`, and
+   `tmp/fable_nonfactorized_feasibility/` packets.
 5. A primary-source audit through 2026-07-29 finds no missed theorem deciding
    the action.  It did find the July 27 Jung--Saito defect/factoriality
-   interface, which proves the Klein sextic base factorial but leaves the
-   total `xCD` class image open, as recorded in item 7.  The higher-Amitsur
+   interface, which first proved the Klein sextic base factorial and, after
+   the completed census/rank-720 slice argument, now makes the total `C6`
+   factorial as recorded in item 6.  The higher-Amitsur
    branch is now terminal: since
    \(\operatorname{Pic}(X)=\mathbf Z[\mathcal O_X(1)]\) and the generator is
    honestly \(G\)-linearized, the universal-torsor obstruction and every
@@ -264,19 +582,20 @@ not a replacement for either acceptance criterion.
    henselian GAGA and perfect-complex algebraization theorems do not imply
    surjectivity
    \(\operatorname{Cl}(B)\to\operatorname{Cl}(\widehat B)\) for the local,
-   nonproper `xCD` ring.  The exact gate remains membership of the completed
-   branch class in this image, equivalently an explicit finite graded Rees
-   lattice or descent cocycle on an open meeting \(s=1\).  The exact relative
+   nonproper `xCD` ring.  That local membership question remains unresolved
+   but is retired: the general-slice theorem proves the plane-section result
+   without it.  The historical alternative was an explicit finite graded
+   Rees lattice or descent cocycle on an open meeting \(s=1\).  The exact relative
    critical curve gives a finite diagnostic, but residue-Galois "monodromy"
-   does not control its Zariski contraction partition.  A conditional
-   exclusion now requires an algebraic four-branch divisor, factorial
+   does not control its Zariski contraction partition.  That retired
+   conditional exclusion would have required an algebraic four-branch divisor, factorial
    complement, and no singleton contraction block.  The natural two-minor
    polar field cannot supply the factorial complement by a polynomial chart:
    its generic function-field degree is at least two, as certified by two
    distinct unramified points in one good fibre and the off-diagonal etale
    fibre-product argument.  This remains true after every triangular
-   correction `a0+P(b,t,c)`, including `a1,a2`; direct factoriality and the
-   class image remain open.
+   correction `a0+P(b,t,c)`, including `a1,a2`; direct local factoriality and
+   the class image remain unresolved only inside that retired alternative.
 6. The local `xCD` comparison, activating census, and global defect
    implication are now certified.  Saito's comparison identifies the
    pole-four coefficients with the actual eigenvalue-one local groups and
@@ -301,6 +620,101 @@ not a replacement for either acceptance criterion.
    `K_proj,C`-point.  This closes only the plane section
    `F(a*x+b*C+c*D)=0`, not the full generic twisted Klein cubic threefold;
    the headline remains open.
+7. Put
+
+   \[
+   K_{\rm Schur}:=\mathbf C(\mathbf P(V_6))^G.
+   \]
+
+   The exhaustive degree-eight Schur frame now has a degree-free geometric
+   audit.  This is a different generic field from
+   \(K_{\rm proj}=\mathbf C(\mathbf P(W))^G\).  All ten ternary coordinate
+   sections are smooth geometrically integral genus-one curves.  The generic
+   Schur twist has no rational line and no geometrically integral rational
+   plane conic, geometric Picard rank one excludes a regular fibration to a
+   lower-dimensional projective base, and a separated model
+   \(N_{L/K_{\rm Schur}}(z)=B_3(u,v)\) is impossible because its three
+   coordinate points are universally singular.  Projection from each
+   ambient coordinate line is resolved after blowing up its irreducible
+   degree-three intersection with the cubic and gives a genus-one fibration
+   over \(\mathbf P^2_{K_{\rm Schur}}\) whose generic fibre is
+
+   \[
+   P_{ij}(s,t)+3uB_\Phi(v,v,r_b)+3u^2B_\Phi(v,r_b,r_b)
+      +u^3\Phi(r_b)=0.
+   \]
+
+   That section attack is now closed for every one of the ten lines.  If
+   \(Y_{ij}\) is the blow-up, \(H\) the pulled-back hyperplane class, \(E\)
+   its connected degree-three exceptional divisor, and \(F_{ij}\) the
+   generic fibre, then
+
+   \[
+   \operatorname{Pic}(Y_{ij})=\mathbf ZH\oplus\mathbf ZE,
+   \qquad H\cdot F_{ij}=E\cdot F_{ij}=3.
+   \]
+
+   Hence every horizontal Cartier divisor has fibre degree divisible by
+   three, whereas the closure of a rational section would have degree one.
+   The exceptional divisor supplies a closed point of degree three on the
+   generic fibre, so
+
+   \[
+   \operatorname{ind}(F_{ij})=\operatorname{per}(F_{ij})=3,
+   \qquad \xi_{ij}\ne0
+   \]
+
+   for all ten pairs.  This no-section theorem does not imply that the total
+   threefold has no \(K_{\rm Schur}\)-point: such a point can lie on a special
+   fibre.  Chevalley--Warning and Tsen also show that closed finite-field and
+   one-parameter geometric specializations of the full five-variable cubic
+   always have a point, so a negative specialization must retain at least two
+   parameters.  See `tmp/schur_structural_routes/REPORT.md` and its
+   `PROOF_AUDIT.md`, together with
+   `tmp/schur_fibration_picard_obstruction/REPORT.md`, its
+   `PROOF_AUDIT.md`, and its `INDEPENDENT_AUDIT.md`.
+8. The Schur central extension is now exact on the generic projective
+   torsor over \(K_{\rm proj}=\mathbf C(\mathbf P(W))^G\), not over the
+   preceding Schur-source field.  The explicit restriction \(Q_8\to V_4\),
+   together with the torsor having boundary quaternion \((s,t)\), proves by
+   versality that
+
+   \[
+   0\ne\alpha_{\rm proj}\in\operatorname{Br}(K_{\rm proj})[2],
+   \qquad \operatorname{ind}(A_{\rm proj})=2.
+   \]
+
+   Hence the generic twist of \(\mathbf P(V_6)\) is a nonsplit, non-stably-
+   rational Severi--Brauer fivefold; there is no stable replacement of this
+   projective factor by projectivizations of honest `G`-representations.
+   Passing to two-planes absorbs the ambient obstruction exactly:
+
+   \[
+   {}^{T_{\rm proj}}\!\operatorname{Gr}(2,6)
+      =\operatorname{SB}_2(M_3(D))\simeq\mathbf P_D^2,
+   \]
+
+   which is rational with affine chart \(D^2\).  The distinguished
+   \(F_{14}\) section remains the exact problem of a common isotropic right
+   \(D\)-line for the descended special five-plane of quaternionic Hermitian
+   forms on \(D^3\).  A common line for the generic tuple proves the headline
+   positively.  The proposed converse attack by finding one anisotropic
+   member is now impossible: twisting the accepted `A4`-fixed point of
+   \(F_{14}\) gives a degree-55 zero-cycle, hence a common line after some
+   odd-degree extension; for each individual Hermitian member its evaluation
+   on \(D^3\) is a 12-dimensional quadratic form, so Springer's odd-degree
+   theorem descends isotropy to \(K_{\rm proj}\).  Every member is therefore
+   individually isotropic, but their isotropic lines need not agree.  The
+   simultaneous common-line problem remains the exact gate.  The current
+   artifacts do not yet contain an explicit quaternion over
+   \(K_{\rm proj}\), a Morita idempotent, or the five global Hermitian
+   matrices; their construction must pass through characteristic-zero
+   representation alignment and the 36-dimensional descended algebra with
+   involution.  Degree sixteen remains a strict solver nonverdict rather than
+   a reason to continue large bounded elimination.  See
+   `tmp/pfaffian_generic_schur_audit/REPORT.md` and its `PROOF_AUDIT.md`, and
+   `tmp/pfaffian_explicit_descent/REPORT.md`, its `PROOF_AUDIT.md`, and its
+   independent `AUDIT.md`.
 
 The structural packet replays are:
 
@@ -313,6 +727,12 @@ The structural packet replays are:
 /opt/homebrew/bin/python3 -u tmp/kls_a5_logarithmic_divisor/verify.py
 /opt/homebrew/bin/python3 -u tmp/kls_wstar_first_integrals/verify.py
 /opt/homebrew/bin/python3 -u tmp/kls_degree28_stein_fixed_point/verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_a5_linearized_pencil_obstruction/verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_a5_conductor_surface_feasibility/verify.py
+/opt/homebrew/bin/python3 -u tmp/schur_structural_routes/verify.py
+/opt/homebrew/bin/python3 -u tmp/schur_fibration_picard_obstruction/verify.py
+/opt/homebrew/bin/python3 -u tmp/pfaffian_generic_schur_audit/verify.py
+/opt/homebrew/bin/python3 -u tmp/pfaffian_explicit_descent/verify.py
 /opt/homebrew/bin/python3 -u tmp/fable_positive_construction/verify.py
 /opt/homebrew/bin/python3 -u tmp/fable_trisection_attack/verify.py
 /opt/homebrew/bin/python3 -u tmp/fable_trisection_compatibility/verify.py
@@ -324,6 +744,22 @@ The structural packet replays are:
 /opt/homebrew/bin/python3 -u tmp/fable_d12_rees_sigma_interface/verify.py
 /opt/homebrew/bin/python3 -u tmp/fable_first_gate_koszul/verify.py
 /opt/homebrew/bin/python3 -u tmp/fable_first_gate_koszul_audit/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_d12_simultaneous_successor/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_d12_simultaneous_successor/verify_transport_equalizer.py
+/opt/homebrew/bin/python3 -u tmp/fable_order12_qsection_correction/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_d12_joint_rank/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_d12_joint_rank/verify_all_grades.py
+/opt/homebrew/bin/python3 -u tmp/fable_d12_koszul_rank/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_d12_module_adversary/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_d12_module_adversary/verify_bulk.py
+/opt/homebrew/bin/python3 -u tmp/fable_d12_bulk_correction_rank/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_d12_triangular_bulk_closure/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_relative_divisor_trace_obstruction/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_fixed_plane_boundary_adversary/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_relative_q_trace_obstruction/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_nonfactorized_successor/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_nonfactorized_syzygy_obstruction/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_nonfactorized_feasibility/verify.py
 /opt/homebrew/bin/python3 -u tmp/recent_structural_tools_audit/verify.py
 /opt/homebrew/bin/python3 -u tmp/xcd_class_image_attack/verify.py
 /opt/homebrew/bin/python3 -u tmp/xcd_ca_class_group/verify.py
@@ -528,13 +964,14 @@ places.
    component on the normal quotient.  Poonen--Stoll's 2026-06-30 theorem then
    gives one residue-rational nondegenerate node, so projection and Hensel
    lifting give a local point at every discriminant component.  This closes
-   the discriminant as a negative local route, not the `xCD` point problem or
-   the headline.  The two motivated smooth-reduction primes `f5=0` and
+   the discriminant as a negative local route, not by itself the `xCD` point
+   problem or the headline.  The two motivated smooth-reduction primes `f5=0` and
    `f6=0` are geometrically integral and admit alternate unit gauges.  Their
    three coordinate vertices and every complete invariant-polynomial
-   `x,C,D` ansatz of total source degree at most 15 are empty.  This is only a
-   height lower bound: their residue 3-descents and relative unramified
-   descent remain open.
+   `x,C,D` ansatz of total source degree at most 15 are empty.  This was only a
+   height lower bound.  The later general-slice theorem obstructs `f6=0`; the
+   `f5=0` residue and a genuinely full-threefold relative descent remain
+   independent open diagnostics.
    See
    `tmp/xcd_control_next/REPORT.md`,
    `tmp/xcd_generic_cech_next/REPORT.md`,
@@ -2143,25 +2580,105 @@ combinations in the degree-eight or degree-ten spaces.
 
 There is now an exact all-degree normal form for the rational-coefficient
 problem. Five explicit degree-eight Reynolds covariants \(q_0,\ldots,q_4\),
-divided by a degree-eight invariant \(I_8\), form a basis over
+divided by a degree-eight invariant \(I_8\), form a basis of the descended
+Klein five-space over
 
 \[
-K=\mathbf C(\mathbf P(V_6))^G
+K_{\rm Schur}:=\mathbf C(\mathbf P(V_6))^G.
 \]
 
-of the descended Klein five-space. Thus every rational equivariant
-projective-source map has the form
+This Schur-source field is distinct from the generic projective-torsor field
+\(K_{\rm proj}=\mathbf C(\mathbf P(W))^G\).
+
+Thus every rational equivariant projective-source map has the form
 
 \[
-\left[\sum_{i=0}^4 a_iq_i/I_8\right],\qquad a_i\in K,
+\left[\sum_{i=0}^4 a_iq_i/I_8\right],\qquad a_i\in K_{\rm Schur},
 \]
 
-and landing is exactly the existence of a nonzero \(K\)-point on the
-resulting generic twisted Klein cubic. Exact good-reduction factorization
+and landing is exactly the existence of a nonzero \(K_{\rm Schur}\)-point on
+the resulting generic twisted Klein cubic; write this cubic as \(X_T\).
+Exact good-reduction factorization
 over both \(\mathbf F_{23}(s)\) and \(\mathbf F_{23^3}(s)\) proves that none
-of the ten coordinate lines \(Kq_i+Kq_j\) contains such a point. Any solution
-in this frame must use at least three coordinates. This support exclusion is
-not an exclusion of ternary or larger rational combinations.
+of the ten coordinate lines
+\(K_{\rm Schur}q_i+K_{\rm Schur}q_j\) contains such a point. Any solution in
+this frame must use at least three coordinates. This support exclusion is not
+an exclusion of ternary or larger rational combinations.
+
+All ten coordinate planes in this same Schur frame are now known, without a
+coefficient-degree bound, to cut smooth geometrically integral genus-one
+curves.  Exact good reduction reconstructs the five Reynolds columns and the
+target cubic and proves the derivative ideal is the unit ideal on all three
+charts for every triple.  Thus none of these sections hides a reducible or
+singular norm curve, although any one may still have a
+\(K_{\rm Schur}\)-point.
+
+There are also global degree-free exclusions on the Schur generic twist.  It
+has no \(K_{\rm Schur}\)-rational line: such a line would give a rational
+equivariant map from \(\mathbf P(V_6)\) to the Fano surface of lines, whose
+nonconstant image would be a faithful unirational variety of dimension at
+most two, contrary to the rational-surface classification.  A geometrically
+integral \(K_{\rm Schur}\)-rational plane conic would leave a residual
+\(K_{\rm Schur}\)-line in its plane section, so no such conic exists either.
+Geometric Picard rank one excludes any nonconstant regular fibration from the
+twist to a lower-dimensional projective base.  Finally a projective-linear
+separated cubic norm equation
+
+\[
+N_{L/K_{\rm Schur}}(z)=B_3(u,v)
+\]
+
+would become \(z_0z_1z_2=B_3(u,v)\) after splitting \(L\), with three
+universal singular coordinate points; it cannot define the smooth twist.
+
+There is nevertheless a precise birational fibration successor.  Put
+\(P_{ij}(s,t)=\Phi(se_i+te_j)\) and let \(D_{ij}\) be its irreducible
+degree-three zero scheme on the ambient coordinate line.  Projection from
+that line is resolved by
+
+\[
+\operatorname{Bl}_{D_{ij}}(X_T)
+  \longrightarrow\mathbf P^2_{K_{\rm Schur}}.
+\]
+
+For base vector \(r_b=\sum_{k\ne i,j}b_ke_k\), line vector
+\(v=se_i+te_j\), and the normalized symmetric polarization \(B_\Phi\), the
+generic fibre has the exact equation
+
+\[
+P_{ij}(s,t)+3uB_\Phi(v,v,r_b)+3u^2B_\Phi(v,r_b,r_b)
+  +u^3\Phi(r_b)=0.
+\]
+
+Write \(Y_{ij}=\operatorname{Bl}_{D_{ij}}(X_T)\), let \(H\) be the pullback
+of the hyperplane class, \(E\) the connected exceptional divisor, and
+\(F_{ij}\) the smooth generic fibre.  The Picard calculation over the
+nonsplit centre is exact:
+
+\[
+\operatorname{Pic}(Y_{ij})=\mathbf ZH\oplus\mathbf ZE,
+\qquad H\cdot F_{ij}=E\cdot F_{ij}=3.
+\]
+
+Thus every divisor has fibre degree in \(3\mathbf Z\), while the closure of a
+rational section would be a horizontal Cartier divisor of degree one.  No
+one of these ten fibrations has a rational section.  Moreover \(E\cap F_{ij}\)
+is a closed point of degree three and every closed-point degree is divisible
+by three, so
+
+\[
+\operatorname{ind}(F_{ij})=\operatorname{per}(F_{ij})=3.
+\]
+
+Equivalently, every \(\xi_{ij}\) is nontrivial of exact order three.  This
+closes the coordinate-line section attacks; it does not exclude a
+\(K_{\rm Schur}\)-point of \(X_T\) on a special fibre.  Closed finite-field
+and one-parameter geometric specializations of the full five-variable cubic
+cannot give a negative certificate, because Chevalley--Warning and Tsen make
+them soluble.  See `tmp/schur_structural_routes/REPORT.md` and its
+`PROOF_AUDIT.md`, and
+`tmp/schur_fibration_picard_obstruction/REPORT.md`, its
+`PROOF_AUDIT.md`, and its `INDEPENDENT_AUDIT.md`.
 
 There is nevertheless a substantial bounded ternary exclusion.  On each of
 the ten coordinate planes, the full invariant-coefficient ansätze in degrees
@@ -2180,7 +2697,8 @@ Its 47.288-second gate projects all 360 such slices to 4.73 hours, beyond the
 authorized 20-minute budget, so the other 359 were not run.  Those other
 two-direction slices, all combinations of three or more quotient directions, the full
 \(R_{12}\), higher coefficient degrees, and unrestricted ternary
-\(K\)-points remain open.  See `tmp/schur_ternary_planes/REPORT.md` and
+\(K_{\rm Schur}\)-points remain open.  See
+`tmp/schur_ternary_planes/REPORT.md` and
 `tmp/schur_ternary_planes/one_primitive/REPORT.md`.
 
 The full degree-twelve constant-coefficient space has dimension 48. Its
@@ -2545,11 +3063,26 @@ another form of the unresolved varying-covariant problem.
   threefold. No linear or already very versal source for the deck action is
   produced, so the modular interpretation restates rather than solves the
   current problem.
-- The projective factor in the Pfaffian bridge is genuinely nonsplit. The
-  inverse image of a Sylow \(V_4\subset G\) in
-  \(\operatorname{SL}_2(11)\) is \(Q_8\), and the central element acts as
-  \(-I\) on the six-dimensional representation. Thus its projective action
-  has no \(V_4\)-fixed point and is not itself weakly versal.
+- The projective factor in the Pfaffian bridge is generically and
+  intrinsically nonsplit.  The inverse image of an explicit
+  \(V_4\subset G\) in \(\operatorname{SL}_2(11)\) is \(Q_8\); the associated
+  \(V_4\)-torsor over \(\mathbf C(s,t)\) has nonzero boundary quaternion
+  \((s,t)\).  Extending structure group and using versality of the free open
+  in \(\mathbf P(W)\) proves
+
+  \[
+  \alpha_{\rm proj}\ne0,
+  \qquad \operatorname{ind}(A_{\rm proj})=2.
+  \]
+
+  Thus the generic twist of \(\mathbf P(V_6)\) is a nonsplit
+  Severi--Brauer fivefold and is not stably rational: its function field
+  splits the nonzero Brauer class, while a purely transcendental extension
+  does not.  Consequently this projective factor has no stable replacement
+  by projectivizations of honest `G`-representations.  This does not weaken
+  the projective-source lemma: the algebra still splits over a quadratic
+  extension, after which third-intersection descent applies to the honestly
+  embedded cubic.
 - In contrast, every twist of the ambient
   \(\operatorname{Gr}(2,6)\) is rational. It is
   \(\operatorname{SB}_2(A_T)\), where \(A_T\) has degree six and index one or
@@ -2558,8 +3091,19 @@ another form of the unresolved varying-covariant problem.
   with affine chart \(D^2\). Intrinsically, the distinguished \(F_{14}\)
   section asks for a common isotropic \(D\)-line in \(D^3\) for five
   quaternionic Hermitian forms, equivalently a common zero of five scalar
-  quadrics on the eight-dimensional chart \(D^2\). No point theorem for this
-  simultaneous-isotropy problem applies. Moreover
+  quadrics on the eight-dimensional chart \(D^2\).  For the generic torsor,
+  existence of such a common line would give a dominant map to \(F_{14}\)
+  and settle Problem E positively through the Pfaffian bridge.  The formerly
+  proposed search for an anisotropic member is now proved impossible.  The
+  accepted `A4`-fixed point on \(F_{14}\) twists to a degree-55 zero-cycle,
+  hence gives a common \(D\)-line after an odd-degree residue extension.
+  For any one descended Hermitian form \(h\), the equation
+  \(q_h(v)=h(v,v)\) is an ordinary 12-dimensional quadratic form over
+  \(K_{\rm proj}\).  Springer descends its isotropy through that odd-degree
+  extension.  Consequently every individual member of the special
+  five-plane is isotropic over \(K_{\rm proj}\).  This does not descend a
+  simultaneous line: the individual isotropic vectors may differ, so the
+  common-line problem remains open.  Moreover
   \(\operatorname{Br}({}^T F_{14})=\operatorname{Br}(K)\), so a nonsplit
   quaternion class remains nonsplit over the function field of the section;
   the tautological reduced-dimension-two ideal does not split it. Exact
@@ -2568,8 +3112,23 @@ another form of the unresolved varying-covariant problem.
   80-dimensional covariant space and 1,313 independent necessary Pluecker
   quadrics have been reconstructed, but a 1,800-second exact Gröbner run
   timed out in a \(105039\times88559\) degree-three matrix without emitting a
-  leading ideal. Thus degree sixteen remains the next unchecked geometric
-  locus, not an exclusion; see `tmp/fano14_degree16/REPORT.md`.
+  leading ideal. Thus degree sixteen is a strict nonverdict, not an
+  exclusion or an all-degree gate; the preferred successor is the explicit
+  quaternion-plus-five-Hermitian-matrices problem.  The installed data do not
+  yet give a quaternion symbol over \(K_{\rm proj}\), a Morita idempotent, or
+  five global Hermitian matrices.  The exact construction dependency is
+
+  \[
+  \text{characteristic-zero alignment}\longrightarrow
+  \text{36-dimensional descended algebra with involution}\longrightarrow
+  \text{rank-two idempotent}\longrightarrow D_{\rm proj}\longrightarrow
+  \text{five Hermitian matrices}\longrightarrow\text{common-line test}.
+  \]
+
+  See `tmp/fano14_degree16/REPORT.md`,
+  `tmp/pfaffian_generic_schur_audit/REPORT.md` with its `PROOF_AUDIT.md`,
+  and `tmp/pfaffian_explicit_descent/REPORT.md` with its
+  `PROOF_AUDIT.md` and independent `AUDIT.md`.
 - Kresch--Tschinkel's equivariant integral decomposition of the diagonal does
   not furnish a new obstruction here. Their proved implication starts from
   stable linearizability, whereas the target is only dominance from a linear
@@ -2596,12 +3155,29 @@ A complete solution must still do at least one of the following:
 
 - find a landing self-covariant in degree at least 25, or another dominant
   equivariant parametrization;
-- find a landing covariant into the associated \(F_{14}\) Pfaffian cone in
-  degree at least 16;
-- find a projective-source map \(\mathbf P(V_6)\dashrightarrow C\), on the
-  genuinely mixed/large-primitive-support part of the degree-twelve
-  constant-coefficient space or on an unrestricted ternary-or-larger support
-  in the exhaustive degree-eight rational frame;
+- solve the generic Pfaffian Hermitian gate: write
+  \(A_{\rm proj}=M_3(D_{\rm proj})\) and the descended special five-plane
+  explicitly, then exhibit a common isotropic right \(D_{\rm proj}\)-line.
+  This would settle the headline positively.  Every individual member is
+  now proved isotropic by the degree-55 `A4` orbit and Springer, so an
+  anisotropic-member search is not viable; simultaneous isotropy remains
+  open.  The next executable construction is characteristic-zero
+  representation alignment, followed by the 36-dimensional descended
+  algebra with involution, a reduced-rank-two Morita idempotent, the
+  quaternion core, and the five global Hermitian matrices.  The matched
+  degree-sixteen covariant system remains a strict solver nonverdict; no
+  isolated higher-degree elimination is an all-degree substitute;
+- find a point on the unrestricted Schur generic twist over
+  \(K_{\rm Schur}=\mathbf C(\mathbf P(V_6))^G\).  The ten ambient
+  coordinate-line genus-one fibrations are no longer positive targets:
+  their generic fibres all have exact period and index three and hence no
+  rational section.  This does not exclude a point on a special fibre or on
+  the total threefold.  A live Schur target must therefore address an
+  unrestricted point, for example on one of the coordinate-plane genus-one
+  curves or on the full twist.  The no-line, no-geometrically-integral-plane-
+  conic, no-regular-fibration and separated-norm exclusions retire those
+  shortcuts, while the degree-twelve and other bounded coefficient windows
+  remain nonverdicts;
 - find a Jacobian-zero self-covariant over the proper closed exceptional
   locus in the degree-twelve primitive parameter space, or in a higher
   degree, equivalently a four-dimensional faithful covariant image;
@@ -2612,20 +3188,37 @@ A complete solution must still do at least one of the following:
   vertical-divisor comparison lemma, or prove its image canonical directly.
   The comparison must now use differential/minimality or conductor geometry:
   coarse stabilizer geometry excludes full-`G` and `11:5` rational factors
-  but explicitly permits the orbit-11 `A5` quadric model and the smaller-
-  stabilizer rational-curve branches.  The exact primitive logarithmic field
-  on the eleven-quadric product refutes a tangency-only comparison; its
-  rational integrating factor and the separate degree-32 integrable Nambu
-  control also refute closed-form and scalar-integrability replacements.
-  The successor must retain the same-degree \(W^*\)-valued polynomial
-  first-integral module, generic-rank-four self-covariant and
-  adjugate/image/degree identities, minimality, or conductor/discrepancy
-  input.  The Stein fixed-point theorem unconditionally excludes the
-  degree-28 induced field without computing its finite constant extension.
-  Degree 25 remains separate and live;
-- on the Fable branch, start from the audited nonzero compatible class with
-  \(F(\sigma)=0\bmod I^{(11)}\) and solve the next
-  \(I^{(11)}/I^{(13)}\) correction.  Equivariance already forces the odd
+  but by itself permits the orbit-11 `A5` quadric model.  The new
+  linearized-pencil theorem closes that model whenever the image `H` is
+  normal: no invariant `A5` quadric divides \(h\), so \(P_{22}\) and both its
+  degree-25 and degree-28 fields cannot realize a normal-image KLS branch.
+  More generally normality gives
+
+  \[
+  \operatorname{rad}(h)\mid b,
+  \qquad
+  \deg h-\deg\operatorname{rad}(h)
+    \ge r+d(\deg H-5)+4.
+  \]
+
+  Thus a surviving normal non-Klein branch has repeated components with
+  multiplicity excess at least \(r+4\).  The actual residual cases are a
+  nonnormal image with a conductor surface, other `A5`-stabilized factors,
+  repeated normal-image factors satisfying this inequality, stable
+  components with non-rational singularities, and smaller-stabilizer
+  branches.  The degree-25 logarithmic vector field remains only a
+  tangency/integrability counterexample, not a live normal-image candidate.
+  The exact dominant cubic `A5`-map \(Q^3\dashrightarrow\mathbf P^2\) now
+  rules out a blanket prohibition on equivariant surface images as a way to
+  dispatch the nonnormal conductor case.  A successor must use the actual
+  conductor embedding and normalization compatibility, the same-degree
+  \(W^*\)-valued polynomial first-integral module, the
+  adjugate/image/degree identities, Jacobian multiplicities, minimality, or
+  genuinely stronger conductor/discrepancy input;
+- on the Fable branch, retain the audited nonzero compatible class with
+  \(F(\sigma)=0\bmod I^{(11)}\) as a completed first correction, but do not
+  continue its fixed-boundary ansatz through \(I^{(11)}/I^{(13)}\).
+  Equivariance already forces the odd
   order-nine/eleven
   doubled-\(Q^2\) residue classes to vanish.  A resolved/saturated calculation
   now proves constrained generic surjectivity along the six base sections for
@@ -2635,23 +3228,24 @@ A complete solution must still do at least one of the following:
   interface and invariant high-factor theorem now make the prescribed finite
   old-point jets zero simultaneously.  The raw point residue is then zero,
   but so is its differential; colon saturation moves the entire finite defect
-  into \(B_{\rm desc}\).  The eventual target is therefore the simultaneous
-  residue equation on the genuine \(Q=0\) sections, followed by equivariant
-  \(H^0/H^1\)-gluing and descent in the original unsaturated symbolic sheaf.
-  The first-gate zero and generic saturated result give no all-order landing
-  or negative conclusion.  After that, solve the higher formal
-  corrections, effectivity, algebraization/descent, and dominance;
-- find a \(K_0\)-point on the explicit generic twisted cubic \(\Phi=0\);
-- for an exhaustive generic `xCD` descent, find a `K_proj,C`-rational point on
-  the original projective `xCD` cubic (equivalently on the distinguished
-  component of `G(P)=alpha_R*z^3`), or compute a relative unramified 3-Selmer
-  obstruction or a smooth-reduction local obstruction there; then construct
-  the generic twisted three-flex-line
-  algebra, line forms, and constants required for true second descent;
-- on the local `f6=0` class-image route, construct or obstruct a finite graded
-  primitive Rees lattice, or prove the required factorial complement by a
-  method not based on reparametrizing `(p_y,p_z)`.  The latter polar field has
-  generic degree at least two and cannot be a Zariski coordinate chart;
+  into \(B_{\rm desc}\).  The joint Koszul equalizer now repairs all six naive
+  conflicts and splits the normalized simple-`Q` residue in every transverse
+  grade.  The ambient residue-cleared centre-line bulk is now exact in every
+  grade as well.  The quadratic-trace obstruction now proves that no
+  boundary-compatible factorized `q_P R_P` extension can kill the residue on
+  the complete `V(q_P)`.  The Veronese/Hilbert--Burch obstruction further
+  proves that a primitive nonfactorized pair with the same line germs makes
+  `p4` vanish on the required common-zero sections; a compatible common
+  divisor is forced back to `q_P`.  The current fixed-boundary order-`3/4`
+  branch is therefore closed.  A future Fable target must change the boundary
+  data or leading normal order before addressing higher formal corrections,
+  effectivity, algebraization/descent, and dominance;
+- find a \(K_0\)-point on the explicit generic twisted cubic \(\Phi=0\), or a
+  full-threefold obstruction.  The distinguished `xCD` component now has a
+  certified `K_proj,C` nonpoint, and its local `f6=0` class-image/Rees route is
+  retired; this does not decide any other component or the full cubic;
+- if an independent true-second-descent route is pursued, construct the
+  generic twisted three-flex-line algebra, line forms, and constants;
 - construct a torsor-dependent semilinear degree-74 curve through the
   degree-220 orbit point, leaving a quadratic residual cycle;
 - find such a point in a three-column frame plane in total degree at least 15;
@@ -2808,8 +3402,9 @@ multiplicity three) plus certified étaleness — both in place.
 *Consequence for the queue.*  The "Best re-entry points → Generic twist"
 needs list (rank-nine flex algebra `F`, Cech difference
 `c_{12} ∈ E[3](F⊗F)`, triple-overlap identity, rank-81 isomorphism) is now
-satisfied AT CIRCUIT LEVEL; the former circuit-construction gate is done.
-The current arithmetic covering-curve attack remains open.  The subsequent
+  satisfied AT CIRCUIT LEVEL; the former circuit-construction gate is done.
+  The selected arithmetic covering curve is now closed negatively, while the
+  full twisted-threefold problem remains open.  The subsequent
 coefficient pass implemented the length-twelve Hironaka DAG through the
 generic flex point and diagonal
 idempotent; a typed nested-etale-algebra continuation now also supplies the
@@ -2825,9 +3420,10 @@ modulo cubes; the raw
   not the full twisted Klein cubic.  The pure-coefficient places `A=0`, `B=0`, and
 `C=0` are exactly locally soluble.  The geometric degree-120 discriminant is
 now also closed as a local-obstruction route by the squarefree line
-certificate and Poonen--Stoll's valuation-one theorem.  At the two motivated
-smooth-reduction primes, invariant-polynomial residue points through degree
-  15 are excluded but local solubility is undecided.  At `f6=0`, the pullback
+  certificate and Poonen--Stoll's valuation-one theorem.  At both motivated
+  smooth-reduction primes, invariant-polynomial residue points through degree
+  15 were excluded; local solubility remains undecided only at `f5=0`.  At
+  `f6=0`, the pullback
   total space is integral and normal; the exact repeated-factor census and
   general-slice theorem make it factorial and prove quotient-relative
   horizontal degree image `3Z`.  The earlier Rees-lattice/class-image problem
@@ -2837,14 +3433,14 @@ fibres prevent a fibrewise total-factoriality shortcut.  The base itself is
   factorial with `Cl(H6)=Z[O(1)]`, and now
   `Cl(C6)=Pic(C6)=Z[H] direct_sum Z[xi]`; the local `Cl(B)` question is not
   needed for the scoped conclusion.
-Relative unramified
-3-descent and the
-actual `f5=0` residue descent remain alternatives over `K_proj,C`, not
-arithmetic primes of the saved `QQ`-model.  True second
-descent needs the
-twelve-flex-lines algebra as before.  The engineering directive
+Relative unramified 3-descent, the `f5=0` residue, and true second descent
+remain independent diagnostic branches over `K_proj,C`; they are not missing
+steps for the refuted selected component.  A true second descent would need
+the twelve-flex-lines algebra as before.  The engineering directive
 (no five-variable resultant expansion, no splitting field, hash-consed DAG)
-remains in force.
+remains in force.  These are diagnostics for the distinguished `xCD` plane
+over \(K_{\rm proj}\), not the now-closed coordinate-line section attacks on
+the separate Schur twist over \(K_{\rm Schur}\).
 
 The sibling `tmp/kls_residue_next/` packet has also been replayed: its general
 residue systems are positive-dimensional determinant hypersurfaces, and its
