@@ -1,0 +1,69 @@
+{
+  "K_dim": 6,
+  "Q_dim": 37,
+  "based_minus_line": {
+    "based_condition_rank": 7,
+    "based_kernel_dim": 36,
+    "geometric_regression": {
+      "plus_plane_intersections_on_L_t": 6,
+      "residual_vanishes_there_on_all_43": true
+    },
+    "matches_expected_residual_dim_7": true,
+    "plus_component_of_odd_restriction": 0,
+    "reduced_qk_sha256": "fc9618c8a95ec9f1370d3d478a21804f0651f76c96b4f6ed319c1703b62fba3d",
+    "reduced_qk_shape": [
+      7,
+      43
+    ],
+    "residual_e": 19,
+    "residual_image_rank": 7
+  },
+  "degree": 25,
+  "exit_P_status": "necessary formal state only; not a parametrization; not a landing covariant",
+  "families": {
+    "based_minus_lines_odd_m": {
+      "forced_sparse_rows": 7,
+      "kernel_dim_in_43": 36,
+      "linear_conditions_rank": 7,
+      "live_at_m1_d25": true
+    },
+    "residual_e1_swap_both": {
+      "live_at_m1_d25": false,
+      "reason": "Requires residual e=1 i.e. d=6m+1=7 for m=1; not degree 25."
+    },
+    "residual_e_ge7_generic_swap_both": {
+      "linear_cut": null,
+      "live_at_m1_d25": true,
+      "note": "The arrangement kernel already surjects onto the full residual module of rank 7 at m=1,d=25. Generic swap_both is Zariski-open in P^6; no additional linear block. Nonlinear landing remains the classical border system.",
+      "residual_e": 19,
+      "residual_module_dim": 7
+    }
+  },
+  "headline": "OPEN",
+  "plane_order_m": 1,
+  "prime_discovery_fiber": 67,
+  "producer": "certificates/border_support/produce.py",
+  "provenance": {
+    "block_matrices_sha256": "bd0da6a7a7df52183704b32b2582306215bf18fd8d07ae93ba5e2dfe48c727ce",
+    "border_rank28_results_sha256": "55baace54a52c572f3ec796c98395ae3c6cbc015eebd356a32b408ecced69ef6",
+    "exit_sha256": "43ef188f6cc618e4f46dae980cfaae3287aac13128fd9b092cb88094e5c861b8",
+    "full_cubic_coefficients_sha256": "2fd6a5ad83f17de8826eb1787e062e79c66f6aac681197c24702c65df6135f76",
+    "kernel_sha256": "e7bdd6a2826a1ebbb3c0f3e4736879d6f6fb041352c1e34c6f9e0c788fb623df",
+    "level1_sha256": "c6056cdf94e9a5324a5ec17950a170511d0f3c7a3edf0cb92bfc12b010675f19",
+    "level2_sha256": "d23615ecbe4584e3e401293984d354bbf6b26392b8923e40e69c8ecc37098a90",
+    "strict_sha256": "0fb0732aacc2fac8cb746f34f46bd2c02c219bd369bb30f5f3a7c7b620dc128c"
+  },
+  "self_sha256": "60201c26925c7bef2ccd9be61c08a51e0fdf9c279a086f90366117bf8559a1af",
+  "sparse_based_term_counts": [
+    36,
+    36,
+    37,
+    37,
+    36,
+    35,
+    36
+  ],
+  "strict_space_dim": 43,
+  "verifier": "certificates/border_support/verify.py",
+  "work_package": "WP-6"
+}

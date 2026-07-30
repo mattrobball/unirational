@@ -1,0 +1,2078 @@
+{
+  "border_components": {
+    "count": 28,
+    "names": [
+      "1",
+      "K_0",
+      "K_1",
+      "K_2",
+      "K_3",
+      "K_4",
+      "K_5",
+      "K_0*K_0",
+      "K_0*K_1",
+      "K_0*K_2",
+      "K_0*K_3",
+      "K_0*K_4",
+      "K_0*K_5",
+      "K_1*K_1",
+      "K_1*K_2",
+      "K_1*K_3",
+      "K_1*K_4",
+      "K_1*K_5",
+      "K_2*K_2",
+      "K_2*K_3",
+      "K_2*K_4",
+      "K_2*K_5",
+      "K_3*K_3",
+      "K_3*K_4",
+      "K_3*K_5",
+      "K_4*K_4",
+      "K_4*K_5",
+      "K_5*K_5"
+    ]
+  },
+  "forced_blocks": {
+    "based_minus_lines": {
+      "matrix_sha256": "fc9618c8a95ec9f1370d3d478a21804f0651f76c96b4f6ed319c1703b62fba3d",
+      "rank": 7,
+      "rows": [
+        {
+          "degree_in_F": 1,
+          "family": "based_minus_lines_odd_m",
+          "forced": true,
+          "row_index": 0,
+          "term_count": 36,
+          "terms": [
+            {
+              "coeff_mod_67": 1,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                0
+              ]
+            },
+            {
+              "coeff_mod_67": 60,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                7
+              ]
+            },
+            {
+              "coeff_mod_67": 34,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                8
+              ]
+            },
+            {
+              "coeff_mod_67": 40,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                9
+              ]
+            },
+            {
+              "coeff_mod_67": 22,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                10
+              ]
+            },
+            {
+              "coeff_mod_67": 8,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                11
+              ]
+            },
+            {
+              "coeff_mod_67": 37,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                12
+              ]
+            },
+            {
+              "coeff_mod_67": 50,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                13
+              ]
+            },
+            {
+              "coeff_mod_67": 51,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                14
+              ]
+            },
+            {
+              "coeff_mod_67": 64,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                15
+              ]
+            },
+            {
+              "coeff_mod_67": 14,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                16
+              ]
+            },
+            {
+              "coeff_mod_67": 37,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                17
+              ]
+            },
+            {
+              "coeff_mod_67": 24,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                18
+              ]
+            },
+            {
+              "coeff_mod_67": 5,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                19
+              ]
+            },
+            {
+              "coeff_mod_67": 56,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                20
+              ]
+            },
+            {
+              "coeff_mod_67": 59,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                21
+              ]
+            },
+            {
+              "coeff_mod_67": 49,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                22
+              ]
+            },
+            {
+              "coeff_mod_67": 32,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                23
+              ]
+            },
+            {
+              "coeff_mod_67": 55,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                25
+              ]
+            },
+            {
+              "coeff_mod_67": 20,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                26
+              ]
+            },
+            {
+              "coeff_mod_67": 13,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                27
+              ]
+            },
+            {
+              "coeff_mod_67": 10,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                28
+              ]
+            },
+            {
+              "coeff_mod_67": 23,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                29
+              ]
+            },
+            {
+              "coeff_mod_67": 63,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                30
+              ]
+            },
+            {
+              "coeff_mod_67": 14,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                31
+              ]
+            },
+            {
+              "coeff_mod_67": 50,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                32
+              ]
+            },
+            {
+              "coeff_mod_67": 60,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                33
+              ]
+            },
+            {
+              "coeff_mod_67": 29,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                34
+              ]
+            },
+            {
+              "coeff_mod_67": 64,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                35
+              ]
+            },
+            {
+              "coeff_mod_67": 53,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                36
+              ]
+            },
+            {
+              "coeff_mod_67": 28,
+              "component": 1,
+              "component_name": "K_0",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 23,
+              "component": 2,
+              "component_name": "K_1",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 7,
+              "component": 3,
+              "component_name": "K_2",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 44,
+              "component": 4,
+              "component_name": "K_3",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 10,
+              "component": 5,
+              "component_name": "K_4",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 13,
+              "component": 6,
+              "component_name": "K_5",
+              "q_monomial": []
+            }
+          ]
+        },
+        {
+          "degree_in_F": 1,
+          "family": "based_minus_lines_odd_m",
+          "forced": true,
+          "row_index": 1,
+          "term_count": 36,
+          "terms": [
+            {
+              "coeff_mod_67": 1,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                1
+              ]
+            },
+            {
+              "coeff_mod_67": 36,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                7
+              ]
+            },
+            {
+              "coeff_mod_67": 26,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                8
+              ]
+            },
+            {
+              "coeff_mod_67": 59,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                9
+              ]
+            },
+            {
+              "coeff_mod_67": 64,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                10
+              ]
+            },
+            {
+              "coeff_mod_67": 62,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                11
+              ]
+            },
+            {
+              "coeff_mod_67": 9,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                12
+              ]
+            },
+            {
+              "coeff_mod_67": 21,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                13
+              ]
+            },
+            {
+              "coeff_mod_67": 43,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                14
+              ]
+            },
+            {
+              "coeff_mod_67": 59,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                15
+              ]
+            },
+            {
+              "coeff_mod_67": 16,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                16
+              ]
+            },
+            {
+              "coeff_mod_67": 18,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                17
+              ]
+            },
+            {
+              "coeff_mod_67": 28,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                18
+              ]
+            },
+            {
+              "coeff_mod_67": 9,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                19
+              ]
+            },
+            {
+              "coeff_mod_67": 1,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                20
+              ]
+            },
+            {
+              "coeff_mod_67": 7,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                21
+              ]
+            },
+            {
+              "coeff_mod_67": 36,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                22
+              ]
+            },
+            {
+              "coeff_mod_67": 14,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                23
+              ]
+            },
+            {
+              "coeff_mod_67": 39,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                24
+              ]
+            },
+            {
+              "coeff_mod_67": 64,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                25
+              ]
+            },
+            {
+              "coeff_mod_67": 29,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                26
+              ]
+            },
+            {
+              "coeff_mod_67": 9,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                27
+              ]
+            },
+            {
+              "coeff_mod_67": 48,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                28
+              ]
+            },
+            {
+              "coeff_mod_67": 47,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                29
+              ]
+            },
+            {
+              "coeff_mod_67": 42,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                30
+              ]
+            },
+            {
+              "coeff_mod_67": 25,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                31
+              ]
+            },
+            {
+              "coeff_mod_67": 59,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                32
+              ]
+            },
+            {
+              "coeff_mod_67": 47,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                33
+              ]
+            },
+            {
+              "coeff_mod_67": 61,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                34
+              ]
+            },
+            {
+              "coeff_mod_67": 10,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                35
+              ]
+            },
+            {
+              "coeff_mod_67": 8,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                36
+              ]
+            },
+            {
+              "coeff_mod_67": 33,
+              "component": 1,
+              "component_name": "K_0",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 59,
+              "component": 2,
+              "component_name": "K_1",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 11,
+              "component": 4,
+              "component_name": "K_3",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 25,
+              "component": 5,
+              "component_name": "K_4",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 10,
+              "component": 6,
+              "component_name": "K_5",
+              "q_monomial": []
+            }
+          ]
+        },
+        {
+          "degree_in_F": 1,
+          "family": "based_minus_lines_odd_m",
+          "forced": true,
+          "row_index": 2,
+          "term_count": 37,
+          "terms": [
+            {
+              "coeff_mod_67": 1,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                2
+              ]
+            },
+            {
+              "coeff_mod_67": 61,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                7
+              ]
+            },
+            {
+              "coeff_mod_67": 6,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                8
+              ]
+            },
+            {
+              "coeff_mod_67": 44,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                9
+              ]
+            },
+            {
+              "coeff_mod_67": 10,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                10
+              ]
+            },
+            {
+              "coeff_mod_67": 64,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                11
+              ]
+            },
+            {
+              "coeff_mod_67": 24,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                12
+              ]
+            },
+            {
+              "coeff_mod_67": 34,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                13
+              ]
+            },
+            {
+              "coeff_mod_67": 28,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                14
+              ]
+            },
+            {
+              "coeff_mod_67": 40,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                15
+              ]
+            },
+            {
+              "coeff_mod_67": 35,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                16
+              ]
+            },
+            {
+              "coeff_mod_67": 60,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                17
+              ]
+            },
+            {
+              "coeff_mod_67": 15,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                18
+              ]
+            },
+            {
+              "coeff_mod_67": 35,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                19
+              ]
+            },
+            {
+              "coeff_mod_67": 40,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                20
+              ]
+            },
+            {
+              "coeff_mod_67": 47,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                21
+              ]
+            },
+            {
+              "coeff_mod_67": 16,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                22
+              ]
+            },
+            {
+              "coeff_mod_67": 21,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                23
+              ]
+            },
+            {
+              "coeff_mod_67": 61,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                24
+              ]
+            },
+            {
+              "coeff_mod_67": 31,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                25
+              ]
+            },
+            {
+              "coeff_mod_67": 57,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                26
+              ]
+            },
+            {
+              "coeff_mod_67": 54,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                27
+              ]
+            },
+            {
+              "coeff_mod_67": 30,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                28
+              ]
+            },
+            {
+              "coeff_mod_67": 38,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                29
+              ]
+            },
+            {
+              "coeff_mod_67": 65,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                30
+              ]
+            },
+            {
+              "coeff_mod_67": 65,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                31
+              ]
+            },
+            {
+              "coeff_mod_67": 65,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                32
+              ]
+            },
+            {
+              "coeff_mod_67": 9,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                33
+              ]
+            },
+            {
+              "coeff_mod_67": 40,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                34
+              ]
+            },
+            {
+              "coeff_mod_67": 31,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                35
+              ]
+            },
+            {
+              "coeff_mod_67": 1,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                36
+              ]
+            },
+            {
+              "coeff_mod_67": 40,
+              "component": 1,
+              "component_name": "K_0",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 6,
+              "component": 2,
+              "component_name": "K_1",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 55,
+              "component": 3,
+              "component_name": "K_2",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 51,
+              "component": 4,
+              "component_name": "K_3",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 18,
+              "component": 5,
+              "component_name": "K_4",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 35,
+              "component": 6,
+              "component_name": "K_5",
+              "q_monomial": []
+            }
+          ]
+        },
+        {
+          "degree_in_F": 1,
+          "family": "based_minus_lines_odd_m",
+          "forced": true,
+          "row_index": 3,
+          "term_count": 37,
+          "terms": [
+            {
+              "coeff_mod_67": 1,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                3
+              ]
+            },
+            {
+              "coeff_mod_67": 42,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                7
+              ]
+            },
+            {
+              "coeff_mod_67": 42,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                8
+              ]
+            },
+            {
+              "coeff_mod_67": 32,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                9
+              ]
+            },
+            {
+              "coeff_mod_67": 64,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                10
+              ]
+            },
+            {
+              "coeff_mod_67": 45,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                11
+              ]
+            },
+            {
+              "coeff_mod_67": 57,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                12
+              ]
+            },
+            {
+              "coeff_mod_67": 54,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                13
+              ]
+            },
+            {
+              "coeff_mod_67": 44,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                14
+              ]
+            },
+            {
+              "coeff_mod_67": 53,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                15
+              ]
+            },
+            {
+              "coeff_mod_67": 23,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                16
+              ]
+            },
+            {
+              "coeff_mod_67": 9,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                17
+              ]
+            },
+            {
+              "coeff_mod_67": 18,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                18
+              ]
+            },
+            {
+              "coeff_mod_67": 3,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                19
+              ]
+            },
+            {
+              "coeff_mod_67": 14,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                20
+              ]
+            },
+            {
+              "coeff_mod_67": 27,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                21
+              ]
+            },
+            {
+              "coeff_mod_67": 21,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                22
+              ]
+            },
+            {
+              "coeff_mod_67": 28,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                23
+              ]
+            },
+            {
+              "coeff_mod_67": 54,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                24
+              ]
+            },
+            {
+              "coeff_mod_67": 37,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                25
+              ]
+            },
+            {
+              "coeff_mod_67": 3,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                26
+              ]
+            },
+            {
+              "coeff_mod_67": 52,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                27
+              ]
+            },
+            {
+              "coeff_mod_67": 51,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                28
+              ]
+            },
+            {
+              "coeff_mod_67": 42,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                29
+              ]
+            },
+            {
+              "coeff_mod_67": 5,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                30
+              ]
+            },
+            {
+              "coeff_mod_67": 31,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                31
+              ]
+            },
+            {
+              "coeff_mod_67": 58,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                32
+              ]
+            },
+            {
+              "coeff_mod_67": 8,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                33
+              ]
+            },
+            {
+              "coeff_mod_67": 8,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                34
+              ]
+            },
+            {
+              "coeff_mod_67": 59,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                35
+              ]
+            },
+            {
+              "coeff_mod_67": 54,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                36
+              ]
+            },
+            {
+              "coeff_mod_67": 57,
+              "component": 1,
+              "component_name": "K_0",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 13,
+              "component": 2,
+              "component_name": "K_1",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 50,
+              "component": 3,
+              "component_name": "K_2",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 2,
+              "component": 4,
+              "component_name": "K_3",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 22,
+              "component": 5,
+              "component_name": "K_4",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 53,
+              "component": 6,
+              "component_name": "K_5",
+              "q_monomial": []
+            }
+          ]
+        },
+        {
+          "degree_in_F": 1,
+          "family": "based_minus_lines_odd_m",
+          "forced": true,
+          "row_index": 4,
+          "term_count": 36,
+          "terms": [
+            {
+              "coeff_mod_67": 1,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                4
+              ]
+            },
+            {
+              "coeff_mod_67": 9,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                7
+              ]
+            },
+            {
+              "coeff_mod_67": 3,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                8
+              ]
+            },
+            {
+              "coeff_mod_67": 49,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                9
+              ]
+            },
+            {
+              "coeff_mod_67": 52,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                10
+              ]
+            },
+            {
+              "coeff_mod_67": 42,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                11
+              ]
+            },
+            {
+              "coeff_mod_67": 42,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                12
+              ]
+            },
+            {
+              "coeff_mod_67": 22,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                13
+              ]
+            },
+            {
+              "coeff_mod_67": 46,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                14
+              ]
+            },
+            {
+              "coeff_mod_67": 12,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                15
+              ]
+            },
+            {
+              "coeff_mod_67": 37,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                16
+              ]
+            },
+            {
+              "coeff_mod_67": 66,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                17
+              ]
+            },
+            {
+              "coeff_mod_67": 12,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                18
+              ]
+            },
+            {
+              "coeff_mod_67": 63,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                19
+              ]
+            },
+            {
+              "coeff_mod_67": 65,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                20
+              ]
+            },
+            {
+              "coeff_mod_67": 8,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                21
+              ]
+            },
+            {
+              "coeff_mod_67": 23,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                22
+              ]
+            },
+            {
+              "coeff_mod_67": 38,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                23
+              ]
+            },
+            {
+              "coeff_mod_67": 17,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                24
+              ]
+            },
+            {
+              "coeff_mod_67": 27,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                25
+              ]
+            },
+            {
+              "coeff_mod_67": 59,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                27
+              ]
+            },
+            {
+              "coeff_mod_67": 28,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                28
+              ]
+            },
+            {
+              "coeff_mod_67": 11,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                29
+              ]
+            },
+            {
+              "coeff_mod_67": 34,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                30
+              ]
+            },
+            {
+              "coeff_mod_67": 60,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                31
+              ]
+            },
+            {
+              "coeff_mod_67": 47,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                32
+              ]
+            },
+            {
+              "coeff_mod_67": 23,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                33
+              ]
+            },
+            {
+              "coeff_mod_67": 37,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                34
+              ]
+            },
+            {
+              "coeff_mod_67": 23,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                35
+              ]
+            },
+            {
+              "coeff_mod_67": 24,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                36
+              ]
+            },
+            {
+              "coeff_mod_67": 10,
+              "component": 1,
+              "component_name": "K_0",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 37,
+              "component": 2,
+              "component_name": "K_1",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 6,
+              "component": 3,
+              "component_name": "K_2",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 9,
+              "component": 4,
+              "component_name": "K_3",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 39,
+              "component": 5,
+              "component_name": "K_4",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 64,
+              "component": 6,
+              "component_name": "K_5",
+              "q_monomial": []
+            }
+          ]
+        },
+        {
+          "degree_in_F": 1,
+          "family": "based_minus_lines_odd_m",
+          "forced": true,
+          "row_index": 5,
+          "term_count": 35,
+          "terms": [
+            {
+              "coeff_mod_67": 1,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                5
+              ]
+            },
+            {
+              "coeff_mod_67": 59,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                7
+              ]
+            },
+            {
+              "coeff_mod_67": 31,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                8
+              ]
+            },
+            {
+              "coeff_mod_67": 33,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                9
+              ]
+            },
+            {
+              "coeff_mod_67": 63,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                10
+              ]
+            },
+            {
+              "coeff_mod_67": 3,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                11
+              ]
+            },
+            {
+              "coeff_mod_67": 56,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                12
+              ]
+            },
+            {
+              "coeff_mod_67": 64,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                13
+              ]
+            },
+            {
+              "coeff_mod_67": 15,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                14
+              ]
+            },
+            {
+              "coeff_mod_67": 4,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                15
+              ]
+            },
+            {
+              "coeff_mod_67": 7,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                16
+              ]
+            },
+            {
+              "coeff_mod_67": 28,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                17
+              ]
+            },
+            {
+              "coeff_mod_67": 5,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                18
+              ]
+            },
+            {
+              "coeff_mod_67": 48,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                19
+              ]
+            },
+            {
+              "coeff_mod_67": 46,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                20
+              ]
+            },
+            {
+              "coeff_mod_67": 8,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                21
+              ]
+            },
+            {
+              "coeff_mod_67": 8,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                23
+              ]
+            },
+            {
+              "coeff_mod_67": 34,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                24
+              ]
+            },
+            {
+              "coeff_mod_67": 63,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                25
+              ]
+            },
+            {
+              "coeff_mod_67": 63,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                26
+              ]
+            },
+            {
+              "coeff_mod_67": 8,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                27
+              ]
+            },
+            {
+              "coeff_mod_67": 20,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                28
+              ]
+            },
+            {
+              "coeff_mod_67": 53,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                29
+              ]
+            },
+            {
+              "coeff_mod_67": 10,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                31
+              ]
+            },
+            {
+              "coeff_mod_67": 10,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                32
+              ]
+            },
+            {
+              "coeff_mod_67": 6,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                33
+              ]
+            },
+            {
+              "coeff_mod_67": 3,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                34
+              ]
+            },
+            {
+              "coeff_mod_67": 50,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                35
+              ]
+            },
+            {
+              "coeff_mod_67": 18,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                36
+              ]
+            },
+            {
+              "coeff_mod_67": 48,
+              "component": 1,
+              "component_name": "K_0",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 47,
+              "component": 2,
+              "component_name": "K_1",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 5,
+              "component": 3,
+              "component_name": "K_2",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 16,
+              "component": 4,
+              "component_name": "K_3",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 38,
+              "component": 5,
+              "component_name": "K_4",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 6,
+              "component": 6,
+              "component_name": "K_5",
+              "q_monomial": []
+            }
+          ]
+        },
+        {
+          "degree_in_F": 1,
+          "family": "based_minus_lines_odd_m",
+          "forced": true,
+          "row_index": 6,
+          "term_count": 36,
+          "terms": [
+            {
+              "coeff_mod_67": 1,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                6
+              ]
+            },
+            {
+              "coeff_mod_67": 2,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                7
+              ]
+            },
+            {
+              "coeff_mod_67": 51,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                8
+              ]
+            },
+            {
+              "coeff_mod_67": 50,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                9
+              ]
+            },
+            {
+              "coeff_mod_67": 63,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                10
+              ]
+            },
+            {
+              "coeff_mod_67": 56,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                11
+              ]
+            },
+            {
+              "coeff_mod_67": 29,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                12
+              ]
+            },
+            {
+              "coeff_mod_67": 3,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                13
+              ]
+            },
+            {
+              "coeff_mod_67": 44,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                14
+              ]
+            },
+            {
+              "coeff_mod_67": 23,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                15
+              ]
+            },
+            {
+              "coeff_mod_67": 28,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                16
+              ]
+            },
+            {
+              "coeff_mod_67": 34,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                17
+              ]
+            },
+            {
+              "coeff_mod_67": 21,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                18
+              ]
+            },
+            {
+              "coeff_mod_67": 6,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                19
+              ]
+            },
+            {
+              "coeff_mod_67": 40,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                20
+              ]
+            },
+            {
+              "coeff_mod_67": 45,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                21
+              ]
+            },
+            {
+              "coeff_mod_67": 41,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                22
+              ]
+            },
+            {
+              "coeff_mod_67": 63,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                24
+              ]
+            },
+            {
+              "coeff_mod_67": 62,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                25
+              ]
+            },
+            {
+              "coeff_mod_67": 50,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                26
+              ]
+            },
+            {
+              "coeff_mod_67": 28,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                27
+              ]
+            },
+            {
+              "coeff_mod_67": 50,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                28
+              ]
+            },
+            {
+              "coeff_mod_67": 63,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                29
+              ]
+            },
+            {
+              "coeff_mod_67": 28,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                30
+              ]
+            },
+            {
+              "coeff_mod_67": 57,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                31
+              ]
+            },
+            {
+              "coeff_mod_67": 35,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                32
+              ]
+            },
+            {
+              "coeff_mod_67": 41,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                33
+              ]
+            },
+            {
+              "coeff_mod_67": 44,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                34
+              ]
+            },
+            {
+              "coeff_mod_67": 14,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                35
+              ]
+            },
+            {
+              "coeff_mod_67": 54,
+              "component": 0,
+              "component_name": "1",
+              "q_monomial": [
+                36
+              ]
+            },
+            {
+              "coeff_mod_67": 59,
+              "component": 1,
+              "component_name": "K_0",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 21,
+              "component": 2,
+              "component_name": "K_1",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 14,
+              "component": 3,
+              "component_name": "K_2",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 37,
+              "component": 4,
+              "component_name": "K_3",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 4,
+              "component": 5,
+              "component_name": "K_4",
+              "q_monomial": []
+            },
+            {
+              "coeff_mod_67": 14,
+              "component": 6,
+              "component_name": "K_5",
+              "q_monomial": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "headline": "OPEN",
+  "note": "C3/A4/C6 added as sparse block row data; raw 43-variable cubic system NOT rebuilt.",
+  "optional_discovery_blocks": {
+    "A4_character_values": {
+      "full_rows_stored_in": "sparse_blocks.npz:a4_reduced_qk",
+      "matrix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "off_X_verified": true,
+      "reduced_rank": 0
+    },
+    "C3_not_forced_base": {
+      "forced_base": false,
+      "full_rows_stored_in": "sparse_blocks.npz:c3_optional_reduced_qk",
+      "matrix_sha256": "c8decc1c5226613932a073e2cfb9c40b30857d0be8a687da8d724844b1ee0097",
+      "reduced_rank": 11,
+      "sample_term_counts": [
+        32,
+        33,
+        33
+      ]
+    },
+    "C6_endpoints_on_L_t": {
+      "full_rows_stored_in": "sparse_blocks.npz:c6_reduced_qk",
+      "matrix_sha256": "b1d9d28bf05826397d7ec565ee47e4e75fffcc32b882661f807a9dd0e57412ff",
+      "reduced_rank": 1
+    }
+  },
+  "producer": "certificates/border_support/produce.py",
+  "self_sha256": "233d46cb32c944dc58bdd8a9936fc6e00c82e44030adb1a6ba44d3da3249cca2",
+  "verifier": "certificates/border_support/verify.py",
+  "work_package": "WP-6"
+}

@@ -1,0 +1,17 @@
+{
+  "authoritative_next": "director gate on formulation in restricted_module.json",
+  "covariant_reconstructed": false,
+  "exit_N3": "not reached",
+  "exit_P_carry_forward": true,
+  "finite_field_points_as_solutions": false,
+  "headline": "OPEN",
+  "landing_equivariance_primitivity_dominance_checked": false,
+  "meaning": "WP-5 Exit P remains a necessary formal state only. WP-6 produced the sparse translation and restricted-module formulation but did not certify emptiness or nonemptiness of the nonlinear landing support in characteristic zero.",
+  "producer": "certificates/border_support/produce.py",
+  "self_sha256": "dfd58d74295c7b0c2a8b947f320d6842c8eff28aa4e3beb62da4b222dd047792",
+  "stop_reason": "memory_gate_8GiB_formulation_returned",
+  "support_decision": "NOT_DECIDED",
+  "surviving_point_claimed": false,
+  "verifier": "certificates/border_support/verify.py",
+  "work_package": "WP-6"
+}

@@ -1,0 +1,16 @@
+{
+  "artifacts": {
+    "c3_a4_c6_blocks.json": "683d0011cdda4d44c6cfbc7e674f03116a894b5d2ba267dc5f94f81e46aeeb62",
+    "restricted_module.json": "1a22ceb3c901c64ed3211a3a5887b77ddc2e8cb31da6d35ff8e45c1cd60bcaa2",
+    "sparse_blocks.npz": "099b3a7ad96537e09a7c7a2c1cd2ba87facb184652a5fd4255f7b7340865d7a9",
+    "support_status.json": "e55146dc47a0ae4613823e3a020b03bf4eaf91bda6c29c922d7424aed807b095",
+    "translation.json": "262141c3f500b3ae58b5e8d2b348549dc755aaf6919e5464b7d9c8044f26b0f4"
+  },
+  "gate": 5,
+  "headline": "OPEN",
+  "producer": "certificates/border_support/produce.py",
+  "self_sha256": "6484bcf057bac8914615df711f0a61617a710844f15f1d45cd2780aa32b52e1d",
+  "terminal_marker": "BORDER_SUPPORT_WP6_SEALED",
+  "verifier": "certificates/border_support/verify.py",
+  "work_package": "WP-6"
+}

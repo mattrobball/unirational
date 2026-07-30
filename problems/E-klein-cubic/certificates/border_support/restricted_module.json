@@ -1,0 +1,182 @@
+{
+  "classical_isomorphism": "F/N \u2245 R/I for the normalized 842-cubic landing ideal (prior packet)",
+  "commutator_closure": {
+    "based_generators_degree": 1,
+    "computed_in_this_dispatch": "classical commutator basis shape retained; no new global T_i-stable closure launched under the 8 GiB gate",
+    "neighbor_syzygies_among_based_rows": "vacuous in F_1 relative to monic K^3 rewrite; T_i-multiples enter degree 2",
+    "status": "classical 315 raw / 210 basis retained unchanged"
+  },
+  "formulation": {
+    "certificate_formats_authorized_after_director_gate": [
+      {
+        "description": "Generators of Ann(F/N') or a Fitting ideal with radical equal to the irrelevant ideal (q0..q36), over Q or a DVR with written rank preservation.",
+        "name": "exact_char0_annihilator_or_Fitting"
+      },
+      {
+        "description": "Integral model of the restricted border module at p=(67, zeta_11-64) with complete good-fiber emptiness and certified rank preservation to characteristic zero (house rule 9).",
+        "name": "projective_DVR_properness_with_good_fiber"
+      },
+      {
+        "description": "Sparse T_i-stable saturation of N' using the 7 based generators + 786 seeds + 210 commutator basis, with hashed row streams and independent verifier.",
+        "name": "structured_saturation_certificate"
+      }
+    ],
+    "checkpoint_plan": [
+      "1. Hash-lock sparse based rows and classical K3/seed/comm streams",
+      "2. Build degree-3 restricted presentation (seeds + based) and record rank over F_67",
+      "3. Degree-4 first closure with based multiples on coordinate slices P^k, k\u226416",
+      "4. Only after director approval: sparse saturation / Fitting at degree \u22657 with >8 GiB budget",
+      "5. Promote emptiness by DVR properness using the existing char0_lift pattern"
+    ],
+    "forbidden_by_stopping_rule": [
+      "raw_43_variable_projective_solve",
+      "unstructured_degree_ladder",
+      "standard_chart_sweep_without_structural_reduction",
+      "dense_expansion_of_global_degree_four_block",
+      "isolated_finite_field_point_tests_as_geometric_support"
+    ],
+    "graded_dimensions": {
+      "3": {
+        "dense_uint8_GiB_square_lower_bound": 0.18605026975274086,
+        "dim_F_d": 14134,
+        "extra_based_multiples_in_degree_d": 4921
+      },
+      "4": {
+        "dense_uint8_GiB_square_lower_bound": 24.136914097703993,
+        "dim_F_d": 160987,
+        "extra_based_multiples_in_degree_d": 63973
+      },
+      "5": {
+        "dense_uint8_GiB_square_lower_bound": 2066.677415416576,
+        "dim_F_d": 1489657,
+        "extra_based_multiples_in_degree_d": 639730
+      },
+      "6": {
+        "dense_uint8_GiB_square_lower_bound": 126648.14511360228,
+        "dim_F_d": 11661364,
+        "extra_based_multiples_in_degree_d": 5245786
+      },
+      "7": {
+        "dense_uint8_GiB_square_lower_bound": 5876745.995107427,
+        "dim_F_d": 79436188,
+        "extra_based_multiples_in_degree_d": 36720502
+      },
+      "8": {
+        "dense_uint8_GiB_square_lower_bound": 215237783.42693996,
+        "dim_F_d": 480738817,
+        "extra_based_multiples_in_degree_d": 225568798
+      }
+    },
+    "level1_family_translation": {
+      "based_minus_lines_odd_m": {
+        "forced_sparse_rows": 7,
+        "kernel_dim_in_43": 36,
+        "linear_conditions_rank": 7,
+        "live_at_m1_d25": true
+      },
+      "residual_e1_swap_both": {
+        "live_at_m1_d25": false,
+        "reason": "Requires residual e=1 i.e. d=6m+1=7 for m=1; not degree 25."
+      },
+      "residual_e_ge7_generic_swap_both": {
+        "linear_cut": null,
+        "live_at_m1_d25": true,
+        "note": "The arrangement kernel already surjects onto the full residual module of rank 7 at m=1,d=25. Generic swap_both is Zariski-open in P^6; no additional linear block. Nonlinear landing remains the classical border system.",
+        "residual_e": 19,
+        "residual_module_dim": 7
+      }
+    },
+    "memory_gate": {
+      "classical_global_degree4": {
+        "cannot_be_full_by_row_count": true,
+        "columns": 160987,
+        "first_closure_rows_upper": 34113
+      },
+      "decision": "Global Macaulay/Fitting emptiness of the restricted module exceeds the 8 GiB exploratory ceiling (same obstruction as the unrestricted rank-28 packet: degree 4 cannot close by row count; degree \u22657 is the first counting-possible degree and is far beyond 8 GiB dense). STOP with formulation rather than launching a large job.",
+      "degree7_dense_square_GiB": 5876745.995107427,
+      "earliest_degree_not_excluded_by_raw_row_count": 7,
+      "exploratory_ceiling_RSS_GiB": 8,
+      "observed_producer_RSS_MiB": 114.546875
+    },
+    "module": {
+      "S": "k[q0,...,q36]",
+      "classical_submodule_N": {
+        "T_i_stable_closure": true,
+        "neighbor_commutators_basis": 210,
+        "neighbor_commutators_raw": 315,
+        "seed_relations": 786,
+        "source": "tmp/m1_relative_border_rank28 + tmp/m1_border_module_m2"
+      },
+      "component_shifts": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "free_module": "F = S^{28}",
+      "name": "restricted_relative_border_module",
+      "new_generators_N_based": {
+        "count": 7,
+        "degree": 1,
+        "description": "Seven independent linear forms L_j(q,k)=0 cutting the based-minus-line family inside V=Q\u2295K. Encoded as degree-1 elements of F: L_j = sum_i a_ji q_i \u00b7 e_1 + sum_b b_jb \u00b7 e_{K_b}.",
+        "family": "based_minus_lines_odd_m"
+      },
+      "optional_blocks_not_in_forced_N": {
+        "A4": {
+          "rank_on_43": 0,
+          "reduced_rows": 0
+        },
+        "C3": {
+          "forced_base": false,
+          "optional_based_rank_on_43": 11,
+          "optional_reduced_rows": 11
+        },
+        "C6": {
+          "rank_on_43": 1,
+          "reduced_rows": 1
+        }
+      },
+      "order_ideal": [
+        "1",
+        "K_i (i=0..5)",
+        "K_i K_j (0<=i<=j<=5)"
+      ],
+      "restricted_module": "F / N' with N' = N + N_based (based family only)"
+    }
+  },
+  "headline": "OPEN",
+  "module_name": "F/N' (rank-28 relative border, restricted by WP-5 based family)",
+  "producer": "certificates/border_support/produce.py",
+  "restriction": "N' = N + <7 based linear generators in F_1>",
+  "saturation_fitting_support": {
+    "reason": "Global Macaulay/Fitting emptiness of the restricted module exceeds the 8 GiB exploratory ceiling (same obstruction as the unrestricted rank-28 packet: degree 4 cannot close by row count; degree \u22657 is the first counting-possible degree and is far beyond 8 GiB dense). STOP with formulation rather than launching a large job.",
+    "status": "NOT_DECIDED under 8GiB exploratory gate"
+  },
+  "self_sha256": "05607ff0fa556ff8130ff53c5321b66451dbb8e7a95c023a131b55da007245ec",
+  "verifier": "certificates/border_support/verify.py",
+  "work_package": "WP-6"
+}
