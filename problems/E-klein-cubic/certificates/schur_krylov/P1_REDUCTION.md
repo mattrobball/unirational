@@ -306,6 +306,9 @@ theorem for qualifying curves (input, not re-proved).
 **`A1-PASS`.**  Proceed to Gate A2.  No singular or index loophole remains
 inside the qualifying hypotheses.
 
+The alternative exit **`A1-FAIL`** would apply only if a singular or index
+loophole survived; it is not taken.
+
 ---
 
 ## 7. Independent verification

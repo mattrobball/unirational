@@ -1,0 +1,86 @@
+{
+  "N_A_claimed": false,
+  "N_A_note": "N-A would require proving K empty and exhaustiveness of the parametrization criterion; it would close only the degree-19 Krylov rescue route, not the headline.  Not claimed.",
+  "P_A_claimed": false,
+  "artifact_paths": [
+    "certificates/schur_krylov/P1_REDUCTION.md",
+    "certificates/schur_krylov/field_algebra.md",
+    "certificates/schur_krylov/field_algebra.json",
+    "certificates/schur_krylov/marked_point.md",
+    "certificates/schur_krylov/marked_point.json",
+    "certificates/schur_krylov/krylov_incidence.md",
+    "certificates/schur_krylov/krylov_incidence.json",
+    "certificates/schur_krylov/candidate_verifier.py",
+    "certificates/schur_krylov/verify_p1_reduction.py",
+    "certificates/schur_krylov/verify_field_algebra.py",
+    "certificates/schur_krylov/verify_marked_point.py",
+    "certificates/schur_krylov/verify_krylov_incidence.py",
+    "certificates/schur_krylov/verify.py",
+    "certificates/schur_krylov/README.md",
+    "certificates/schur_krylov/SEAL.json"
+  ],
+  "date": "2026-07-30",
+  "decision_exit": "A-STOP",
+  "decision_exit_meaning": "A1-PASS and A2 interfaces sealed; A3 incidence formulated with linear elimination of 80 coefficients and certified PGL2 gauge; dense residual elimination exceeds 8 GiB exploratory gate before structural variable collapse; measured bottleneck recorded; no qualifying curve; not N-A",
+  "deliverable_sha256": {
+    "P1_REDUCTION.md": "a682b946b50f717038d04062d129abb11f4b742c6e626bbde59b87116b17d848",
+    "README.md": "ac26f8ea555769381ae5cce09258222bf2c6833e06bd8ae2cadc7801e16d25aa",
+    "candidate_verifier.py": "71c444db84d8d0bed8ab943cfd523ec3798902fa730b329a647746fd593c8b99",
+    "field_algebra.json": "57750a057fa7833625267cc2cb9af610b556735d0d90529e8417dbb3e661e3db",
+    "field_algebra.md": "1a7688421067d23ad5960abd363e84b556c1520e826efffddbd09ddaa4a2d32c",
+    "krylov_incidence.json": "a99d7dca441d79acc587920d731b880f84b68c4be45bbcf0355767f284572c71",
+    "krylov_incidence.md": "a1e996b694680648423902cc0e9e9b373b365c9988145c32dcda8b28e3b5a8c8",
+    "marked_point.json": "ef7aac085ea4115bb3f6c2b41f4385e2ec99e72b01b215e49076c9313e696db3",
+    "marked_point.md": "3e5fadab51d260e6cdfd00d6174e5bb1deb3b5d65b5a4aa38e7dd0c082796363",
+    "verify.py": "6c5cb18e1782a038788aae279cbf9d0611f4d3ee1ae6869e3805de92811c7bf7",
+    "verify_field_algebra.py": "bc777dac66888e70a3eab809fba77f424fed74fa8b28072856f1a801f3d3681d",
+    "verify_krylov_incidence.py": "ffd4ac6a0be27b8ef64219fb1aa6c4368cc15dd0b351ddde07983b5a9c8060b4",
+    "verify_marked_point.py": "338981c4bd81038eabcaaedec56409230f106aa757ccef864cd07607d9f9fa30",
+    "verify_p1_reduction.py": "6fe13d1489b49ffa2180fb63718d6f7da187ea864c0f02a7f711863e67ff98f1"
+  },
+  "forbidden_edits_respected": [
+    "HANDOFF.md",
+    "RESOLUTION.md",
+    "CURRENT_PATHS.md",
+    "SPEC.md"
+  ],
+  "gates": {
+    "A1": "A1-PASS",
+    "A2_field_algebra": "SEALED",
+    "A2_marked_point": "SEALED",
+    "A3": "A-STOP"
+  },
+  "headline": "OPEN",
+  "intended_commit_split": [
+    "certificates/schur_krylov: Gate A1 P1_REDUCTION (A1-PASS, odd-index gcd(55,2)=1)",
+    "certificates/schur_krylov: Gate A2 field_algebra + marked_point interfaces",
+    "certificates/schur_krylov: Gate A3 krylov incidence formulation, candidate_verifier, SEAL A-STOP"
+  ],
+  "packet": "certificates/schur_krylov",
+  "path": "A",
+  "pinned_base": "89c27e2",
+  "proved": [
+    "P1 reduction: qualifying C with p=19t+1 is isomorphic to P1_F (odd-index step explicit)",
+    "L/F monogenic degree 55 with companion multiplication API over F",
+    "dim V_Z = 4 from H_Z(1)=4; residue degree 55",
+    "Fibre witness: D12-line meets hyperplane (1,1,1,2,7) on Klein cubic with rank_Q 4",
+    "Krylov incidence matrix 55x24; linear elim of 80 coeffs; 220 F-equations in (c,lambda)",
+    "Memory floors before elimination: dense Macaulay D>=3 exceeds 8 GiB; raw minors ~1e17 forbidden",
+    "Candidate verifier implements S1-S6; rank-only points rejected"
+  ],
+  "remains": [
+    "Expanded coefficients of mu in F = K_Schur",
+    "Expanded power-basis coordinates of z in L",
+    "Exact residual generators of K after linear elimination",
+    "Existence or emptiness of a qualifying degree-19 curve",
+    "Headline G-unirationality of the Klein cubic"
+  ],
+  "resource_gate": {
+    "dense_elimination_authorized": false,
+    "exploratory_RSS_GiB": 8,
+    "measured_bottleneck": "gauged tau ~53-54 variables; Macaulay D=3 has 29260 columns, D=4 has 424270; exact F-arithmetic with 55x55 field ops exceeds 8 GiB"
+  },
+  "seal_sha256_self": "489471d2cf237e5751790288acec5403a8cb6d4e97b603f2a5d29b5235335d6e",
+  "terminal_marker": "SCHUR_KRYLOV_PATH_A_A_STOP_HEADLINE_OPEN",
+  "workorder": "WORKORDER_ELO_TEN_PATHS.md Path A Gates A1-A3"
+}
