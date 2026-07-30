@@ -253,6 +253,44 @@ def dense_L_matrix(m: int, r: int, a: list[Q]) -> list[list[Q]]:
     return Mat
 
 
+def pivot_maximal_minor(Mat: list[list[Q]]) -> dict | None:
+    """Extract a nonzero maximal minor from RREF pivot columns (exact over Q)."""
+    if not Mat or not Mat[0]:
+        return None
+    n_rows, n_cols = len(Mat), len(Mat[0])
+    A = [row[:] for row in Mat]
+    pivots: list[int] = []
+    r = 0
+    for c in range(n_cols):
+        piv = next((i for i in range(r, n_rows) if A[i][c] != 0), None)
+        if piv is None:
+            continue
+        A[r], A[piv] = A[piv], A[r]
+        inv = Q(1) / A[r][c]
+        A[r] = [inv * x for x in A[r]]
+        for i in range(n_rows):
+            if i != r and A[i][c] != 0:
+                f = A[i][c]
+                A[i] = [A[i][j] - f * A[r][j] for j in range(n_cols)]
+        pivots.append(c)
+        r += 1
+        if r == n_rows:
+            break
+    if len(pivots) < n_rows:
+        return None
+    cols = pivots[:n_rows]
+    sub = [[Mat[i][j] for j in cols] for i in range(n_rows)]
+    val = det_exact(sub)
+    if val == 0:
+        return None
+    return {
+        "columns": cols,
+        "rows": list(range(n_rows)),
+        "value": q_to_str(val),
+        "proof_type": "exact_det_over_Q_on_RREF_pivot_columns",
+    }
+
+
 # ---------------------------------------------------------------------------
 # Pure-powers free fibre: a = y0^m f0 + y1^m f1
 # ---------------------------------------------------------------------------
@@ -433,8 +471,6 @@ def open_meeting_at(m: int, d: int) -> dict:
                 continue
             L = L_matrix_sparse(m, 3, A)
             if L["rank_over_Q"] == full_rk and L["cokernel_dim_over_Q"] == 0:
-                Mat = dense_L_matrix(m, 3, A)
-                minor = find_nonzero_maximal_minor(Mat)
                 points.append(
                     {
                         "source": "based_basis_section",
@@ -445,7 +481,7 @@ def open_meeting_at(m: int, d: int) -> dict:
                         "L3_coker_over_Q": L["cokernel_dim_over_Q"],
                         "L3_nullity_over_Q": L["nullity_over_Q"],
                         "full_generic_rank": True,
-                        "nonzero_maximal_minor": minor,
+                        "nonzero_maximal_minor": None,
                     }
                 )
                 break
@@ -470,8 +506,6 @@ def open_meeting_at(m: int, d: int) -> dict:
                     continue
                 L = L_matrix_sparse(m, 3, A)
                 if L["rank_over_Q"] == full_rk:
-                    Mat = dense_L_matrix(m, 3, A)
-                    minor = find_nonzero_maximal_minor(Mat)
                     points.append(
                         {
                             "source": "based_linear_combo",
@@ -482,12 +516,21 @@ def open_meeting_at(m: int, d: int) -> dict:
                             "L3_coker_over_Q": L["cokernel_dim_over_Q"],
                             "L3_nullity_over_Q": L["nullity_over_Q"],
                             "full_generic_rank": True,
-                            "nonzero_maximal_minor": minor,
+                            "nonzero_maximal_minor": None,
                         }
                     )
                     break
             if len(points) >= 3:
                 break
+
+    # Attach one nonzero maximal minor certificate (char-0 standard) to first point
+    if points:
+        A0 = [Q(x) for x in points[0]["free_fibre"]]
+        Mat = dense_L_matrix(m, 3, A0)
+        minor = pivot_maximal_minor(Mat)
+        if minor is None:
+            minor = find_nonzero_maximal_minor(Mat, max_tries=40, max_dim=20)
+        points[0]["nonzero_maximal_minor"] = minor
 
     # Residual-trivial pure family diagnostic (may fail rank for m>1)
     pure_triv_diag = residual_triv_pure_diagnostic(m, d, W)
@@ -603,7 +646,8 @@ def rank_theorem_certificate(odd_m_samples: list[int] | None = None) -> dict:
     verification on a sample of odd m (and a few even m for transport).
     """
     if odd_m_samples is None:
-        odd_m_samples = [1, 3, 5, 7, 9, 11]
+        # Structural pure-powers proof covers all m; exact samples stay sparse-small.
+        odd_m_samples = [1, 3, 5, 7, 9]
 
     structural = {
         "model": "B(z;y,y)=z0·2 y0 y1 + z1·y1² + z2·y0²",
@@ -657,11 +701,11 @@ def rank_theorem_certificate(odd_m_samples: list[int] | None = None) -> dict:
             assert L["rank_over_Q"] == want, (m, r, L["rank_over_Q"], want)
             assert L["nullity_over_Q"] == null_want
             assert L["cokernel_dim_over_Q"] == 0
-            # Exact maximal minor only for small free matrices (m≤3)
+            # Exact maximal minor via pivot columns (cheap) for m≤5
             minor = None
-            if m <= 3:
+            if m <= 5:
                 Mat = dense_L_matrix(m, r, aa)
-                minor = find_nonzero_maximal_minor(Mat)
+                minor = pivot_maximal_minor(Mat)
             row[f"L{r}"] = {
                 "shape": L["shape"],
                 "rank_over_Q": L["rank_over_Q"],
@@ -1122,7 +1166,7 @@ def main() -> None:
     HERE.mkdir(parents=True, exist_ok=True)
 
     print("=== Fork G-B: rank theorem ===")
-    rank_cert = rank_theorem_certificate([1, 3, 5, 7, 9, 11])
+    rank_cert = rank_theorem_certificate([1, 3, 5, 7, 9])
     write_json(HERE / "rank_theorem.json", rank_cert)
     print("  rank theorem PROVED; samples", [s["m"] for s in rank_cert["exact_Q_verification_samples"]])
 

@@ -1,0 +1,18 @@
+{
+  "gate_name": "ALGEBRAIZATION_OF_FORMAL_NORMAL_LIFTS",
+  "headline_if_passed": "Would still need the full positive proof standard of WORKORDER \u00a70; algebraization alone is not ed_C(G)=3.",
+  "house_rule_3": "No formal state or formal lift may be called a covariant.",
+  "inputs_from_this_fork": [
+    "common open U of free B_0 with all L_r surjective",
+    "formal smoothness of the polar tower on U",
+    "Level-2 based residual global compatibility at tested bidegrees"
+  ],
+  "self_sha256": "b9cb62dfe7864cc03d10b114a51e201124e37b8b444792aeef58985608951c21",
+  "statement": "A formal normal-order lift (p_m + p_{m+1} + \u00b7\u00b7\u00b7) \u2208 \u220f_k (Sym^{d-*} E_+^* \u2297 Sym^{m+k} E_-^* \u2297 W) that satisfies all polar equations U.3m+(odd) on a residual-equivariant formal arc is NOT a homogeneous polynomial self-map p: W\u2192W. Algebraization requires a theorem producing a finite (polynomial) normal expansion \u2014 equivalently Artin approximation / equivariant algebraization for the multi-Rees polar system \u2014 yielding a genuine element of Hom(Sym^d W^*, W)^G landing in X.",
+  "status": "NOT_ATTEMPTED (items 5\u20136 out of this dispatch)",
+  "still_required": [
+    "equivariant gluing of local formal lifts across residual charts",
+    "algebraization / Artin approximation to a polynomial covariant",
+    "landing, primitivity, dominance, conversion to G-unirationality"
+  ]
+}

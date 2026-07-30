@@ -1,0 +1,37 @@
+{
+  "algebraization": "NAMED_NOT_ATTEMPTED",
+  "all_degree_G_open_meeting": "NOT_CLAIMED",
+  "base_gate": "G1 at (1,7) open meeting \u2192 director chose G-B",
+  "containment_G_in_R3": "FALSE_AT_TESTED_BIDEGREES",
+  "decision_exit": "G-CONSTRUCTION",
+  "finite_generation_item3": "PARTIAL \u2014 free/linear multi-Rees yes; G\u2229(B\\R_3) all-d no",
+  "fork": "G-B",
+  "headline": "OPEN",
+  "higher_polar_recursion": "PROVED_COMBINATORIAL + common open free-module surjectivity",
+  "mechanism_used_for_unbounded_free_statements": "Pure-powers specialization (uniform in m) + multi-Rees free module over Sym(E_+^*) (uniform in d for free L_r). NOT the quartic endomorphism. NOT finite generation of covariants alone.",
+  "not_a_covariant": true,
+  "open_meeting": "CERTIFIED_AT_TESTED_BIDEGREES",
+  "rank_theorem": "PROVED (all m\u22650; null L1=4, null L3=8)",
+  "repaired_category": "certificates/transition_repair/: three copies of P(E_-) distinct; L_t^src \u2229 Z_t = empty; based = coefficient coupling / source restriction",
+  "self_sha256": "f6c81502ea293cf93097b009023165382743816d4ba887a530f60474bfd7cbb4",
+  "tested_bidegrees": [
+    "(1,7)",
+    "(1,13)",
+    "(3,19)"
+  ],
+  "theorem_boundary": {
+    "not_proved": [
+      "G_{m,d} meets B\\R_3 for every odd m and all large d",
+      "Periodicity / finite generation of the infinite obstruction tower as L-F",
+      "Equivariant gluing of formal lifts across residual charts",
+      "Algebraization of formal lifts to a polynomial covariant",
+      "Headline ed_C(G) or G-unirationality"
+    ],
+    "proved": [
+      "Open meeting G \u2229 (B\\R_3) \u2260 \u2205 at (1,7), (1,13), (3,19) in char 0 (exact ranks / maximal minors at Q-points of Level-2 based residual G-witness)",
+      "Free L_1, L_3 generically surjective for every m\u22650 with nullities 4 and 8 (pure-powers window proof)",
+      "Higher polar isolation operators L_{2k+1}=B(-;a_m,a_m); combinatorial R; common free open U with all finite stages formally smooth",
+      "Multi-Rees / free R-module controls all d at free and linear-equalizer level"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "all_degree_G_open_meeting": "NOT_CLAIMED",
+  "headline": "OPEN",
+  "house_rule_4": "No all-degree claim without a proved reduction mechanism. The equivariant quartic endomorphism generates degrees 4^n d from one solution, so finite generation of covariants over the invariant ring alone does NOT give unbounded degree.",
+  "multi_Rees_presentation": {
+    "G_witness": "Based residual S3-invariant plane jets form a linear subspace of the plane module (free rank 2(m+1) over Sym^{d-m} E_+^*). This is a finitely generated free / projective module over R = Sym(E_+^*) after residual projection \u2014 finite generation over R controls all d for FIXED m at the linear-state level.",
+    "free_leading": "B_0^free = Spec Q[A_0..A_{2m+1}]; multi-Rees: each A_s is a section of O(d-m) when degree is restored, i.e. B_{m,d}^{free fibre} \u2245 Sym^{d-m} E_+^* \u2297 (free leading fibre).",
+    "gap_to_open_meeting_all_d": "Finite generation of the linear equalizer over R gives nonemptiness of G for large d (already known from WP-5), but incidence with the nonlinear Fitting locus R_3 requires a rank statement for L_3 on G, which is what persistence checks sample and what a monotonicity/Rees argument would need to promote to all d.",
+    "status_for_item_3": "PARTIAL \u2014 free/linear multi-Rees yes; G\u2229(B\\R_3) all-d no"
+  },
+  "quartic_endomorphism_warning": "Even if one algebraic solution of degree d exists, the quartic equivariant endomorphism only produces degrees 4^n d. Unbounded degree requires a separate mechanism (e.g. multi-Rees base change, linear system growth in d, or an independent construction per degree class).",
+  "self_sha256": "9254bfd1592bfd334fb256713163808055159a721438d5d205048327f0ba2752",
+  "what_is_proved_all_degree_or_all_m": [
+    {
+      "claim": "Free L_1, L_3 (and L_r for odd r) generically surjective for every m\u22650",
+      "mechanism": "Pure-powers specialization + window covering + upper semicontinuity; free R-module over Sym(E_+^*), multi-Rees restores all base degrees d.",
+      "scope": "free multi-Rees / free leading fibre \u2014 not yet G_{m,d}"
+    },
+    {
+      "claim": "Higher polar isolation operators are always B(-;a_m,a_m)",
+      "mechanism": "combinatorial triple enumeration independent of m and d",
+      "scope": "universal equations U.3m+(odd)"
+    },
+    {
+      "claim": "Formal normal-order tower is unobstructed on a common open U of free B_0",
+      "mechanism": "common open of surjective L_r at pure powers",
+      "scope": "formal series in normal variable; NOT a polynomial covariant"
+    }
+  ],
+  "what_remains_scoped": [
+    {
+      "certified_only_at": [
+        "(1,7)",
+        "(1,13)",
+        "(3,19)"
+      ],
+      "claim": "G_{m,d} meets B\\R_3 for every odd m and all large d",
+      "missing_mechanism": "Need either (i) a Rees-module presentation of the based residual equalizer \u039b^rep showing pure-powers or another full-rank free fibre lifts into G for all large d, or (ii) a monotonicity theorem (open meeting at (m,d) \u21d2 open meeting at (m,d') for d'>d), or (iii) an exact periodicity/semigroup statement for the Fitting restriction to G.",
+      "status": "NOT PROVED"
+    },
+    {
+      "claim": "Finite generation of the infinite obstruction tower (L-F)",
+      "note": "Free ranks \u2192 \u221e with m; coverage is by closed-form ranks, not finite generation in m.",
+      "status": "NOT PROVED"
+    }
+  ]
+}

@@ -1,0 +1,1477 @@
+{
+  "common_open_surjectivity": {
+    "claim": "On the Zariski-open U \u2282 free B_0 where pure-powers specialization extends by upper semicontinuity \u2014 equivalently the open where L_r has full rank for one (hence, by the window argument at pure powers, for every) odd r \u2014 every isolation map L_r is surjective.",
+    "common_open": "U = free B_0 \\ V(Fitt_0(coker L_1)). Since L_1 surjective generically and pure powers lies in U, U is nonempty. At pure powers every L_r (r odd) is surjective, so \u2229_r {L_r surjective} contains pure powers and is therefore a nonempty open (finite intersection of opens for any finite initial segment of stages; for the infinite tower the same pure-powers point lies in every {L_r surjective}).",
+    "consequence": "On U every finite stage of the polar tower is formally smooth in the newest E_+-unknown: \u03c9_r = 0 automatically. Formal lifts exist as power series in the normal variable on U. THIS IS NOT A COVARIANT (house rule 3).",
+    "status": "PROVED_AT_FREE_MODULE_LEVEL"
+  },
+  "headline": "OPEN",
+  "method": "Combinatorial enumeration of triples i+j+k = 3m+\u03b4 with i,j,k \u2265 m, excluding triple-E_-; translate by m so offsets sum to \u03b4.",
+  "not_a_covariant": true,
+  "periodic_pattern": {
+    "claim": "Isolation operators for newest b_{m+(2k+1)} are always the same polar L(b)=B(b;a_m,a_m) on order m+(2k+1) jets. Residual R_{2k+1} is a universal polynomial in earlier jets (combinatorial). No new polar type appears at higher order \u2014 only larger free ranks and longer residual expressions.",
+    "status": "PROVED_COMBINATORIAL"
+  },
+  "self_sha256": "bea4a565bec1e77e5b2b3367a911ea0c4907702c10eb279419908a9870e1357e",
+  "stages": {
+    "3m+0": {
+      "F_order": "3m+0",
+      "N_parity_relative_to_3m": "even",
+      "automatic_by_y_evenness": true,
+      "delta": 0,
+      "isolation": {
+        "L": null,
+        "R_remaining": [],
+        "note": "Automatic odd F-order, or no pure (m,m,m+r) isolation at this delta.",
+        "omega": null
+      },
+      "live_contributions": [],
+      "newest_Eplus_offset": null
+    },
+    "3m+1": {
+      "F_order": "3m+1",
+      "N_parity_relative_to_3m": "odd",
+      "automatic_by_y_evenness": false,
+      "delta": 1,
+      "isolation": {
+        "L": "L_1(b_{m+1}) = B(b_{m+1}; a_m, a_m)",
+        "R_remaining": [],
+        "note": "Same polar operator family: each isolated L_{2k+1} is of the form B(-; a_m, a_m) on E_+-valued jets of order m+(2k+1). Generic surjectivity of this polar family follows from the rank theorem for r odd (same pure-powers argument with r=newest).",
+        "omega": "class of R in coker(L_1) on free jets of order m+1"
+      },
+      "live_contributions": [
+        {
+          "multiplicity": 3,
+          "offsets": [
+            0,
+            0,
+            1
+          ],
+          "orders": [
+            "m",
+            "m",
+            "m+1"
+          ],
+          "term": "B(b_{m+1}; a_m, a_m)",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        }
+      ],
+      "newest_Eplus_offset": 1
+    },
+    "3m+10": {
+      "F_order": "3m+10",
+      "N_parity_relative_to_3m": "even",
+      "automatic_by_y_evenness": true,
+      "delta": 10,
+      "isolation": {
+        "L": null,
+        "R_remaining": [],
+        "note": "Automatic odd F-order, or no pure (m,m,m+r) isolation at this delta.",
+        "omega": null
+      },
+      "live_contributions": [],
+      "newest_Eplus_offset": null
+    },
+    "3m+11": {
+      "F_order": "3m+11",
+      "N_parity_relative_to_3m": "odd",
+      "automatic_by_y_evenness": false,
+      "delta": 11,
+      "isolation": {
+        "L": "L_11(b_{m+11}) = B(b_{m+11}; a_m, a_m)",
+        "R_remaining": [
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              1,
+              10
+            ],
+            "term": "B(b_{m+1}; a_m, a_{m+10})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              2,
+              9
+            ],
+            "term": "B(b_{m+9}; a_m, a_{m+2})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              3,
+              8
+            ],
+            "term": "B(b_{m+3}; a_m, a_{m+8})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              4,
+              7
+            ],
+            "term": "B(b_{m+7}; a_m, a_{m+4})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              5,
+              6
+            ],
+            "term": "B(b_{m+5}; a_m, a_{m+6})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              1,
+              1,
+              9
+            ],
+            "term": "F_+ / Phi(b_{m+1},b_{m+1},b_{m+9})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              1,
+              2,
+              8
+            ],
+            "term": "B(b_{m+1}; a_{m+2}, a_{m+8})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              1,
+              3,
+              7
+            ],
+            "term": "F_+ / Phi(b_{m+1},b_{m+3},b_{m+7})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              1,
+              4,
+              6
+            ],
+            "term": "B(b_{m+1}; a_{m+4}, a_{m+6})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              1,
+              5,
+              5
+            ],
+            "term": "F_+ / Phi(b_{m+1},b_{m+5},b_{m+5})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              2,
+              2,
+              7
+            ],
+            "term": "B(b_{m+7}; a_{m+2}, a_{m+2})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              2,
+              3,
+              6
+            ],
+            "term": "B(b_{m+3}; a_{m+2}, a_{m+6})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              2,
+              4,
+              5
+            ],
+            "term": "B(b_{m+5}; a_{m+2}, a_{m+4})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              3,
+              3,
+              5
+            ],
+            "term": "F_+ / Phi(b_{m+3},b_{m+3},b_{m+5})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              3,
+              4,
+              4
+            ],
+            "term": "B(b_{m+3}; a_{m+4}, a_{m+4})"
+          }
+        ],
+        "note": "Same polar operator family: each isolated L_{2k+1} is of the form B(-; a_m, a_m) on E_+-valued jets of order m+(2k+1). Generic surjectivity of this polar family follows from the rank theorem for r odd (same pure-powers argument with r=newest).",
+        "omega": "class of R in coker(L_11) on free jets of order m+11"
+      },
+      "live_contributions": [
+        {
+          "multiplicity": 3,
+          "offsets": [
+            0,
+            0,
+            11
+          ],
+          "orders": [
+            "m",
+            "m",
+            "m+11"
+          ],
+          "term": "B(b_{m+11}; a_m, a_m)",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            1,
+            10
+          ],
+          "orders": [
+            "m",
+            "m+1",
+            "m+10"
+          ],
+          "term": "B(b_{m+1}; a_m, a_{m+10})",
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            2,
+            9
+          ],
+          "orders": [
+            "m",
+            "m+2",
+            "m+9"
+          ],
+          "term": "B(b_{m+9}; a_m, a_{m+2})",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            3,
+            8
+          ],
+          "orders": [
+            "m",
+            "m+3",
+            "m+8"
+          ],
+          "term": "B(b_{m+3}; a_m, a_{m+8})",
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            4,
+            7
+          ],
+          "orders": [
+            "m",
+            "m+4",
+            "m+7"
+          ],
+          "term": "B(b_{m+7}; a_m, a_{m+4})",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            5,
+            6
+          ],
+          "orders": [
+            "m",
+            "m+5",
+            "m+6"
+          ],
+          "term": "B(b_{m+5}; a_m, a_{m+6})",
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            1,
+            1,
+            9
+          ],
+          "orders": [
+            "m+1",
+            "m+1",
+            "m+9"
+          ],
+          "term": "F_+ / Phi(b_{m+1},b_{m+1},b_{m+9})",
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            1,
+            2,
+            8
+          ],
+          "orders": [
+            "m+1",
+            "m+2",
+            "m+8"
+          ],
+          "term": "B(b_{m+1}; a_{m+2}, a_{m+8})",
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            1,
+            3,
+            7
+          ],
+          "orders": [
+            "m+1",
+            "m+3",
+            "m+7"
+          ],
+          "term": "F_+ / Phi(b_{m+1},b_{m+3},b_{m+7})",
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            1,
+            4,
+            6
+          ],
+          "orders": [
+            "m+1",
+            "m+4",
+            "m+6"
+          ],
+          "term": "B(b_{m+1}; a_{m+4}, a_{m+6})",
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            1,
+            5,
+            5
+          ],
+          "orders": [
+            "m+1",
+            "m+5",
+            "m+5"
+          ],
+          "term": "F_+ / Phi(b_{m+1},b_{m+5},b_{m+5})",
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            2,
+            2,
+            7
+          ],
+          "orders": [
+            "m+2",
+            "m+2",
+            "m+7"
+          ],
+          "term": "B(b_{m+7}; a_{m+2}, a_{m+2})",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            2,
+            3,
+            6
+          ],
+          "orders": [
+            "m+2",
+            "m+3",
+            "m+6"
+          ],
+          "term": "B(b_{m+3}; a_{m+2}, a_{m+6})",
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            2,
+            4,
+            5
+          ],
+          "orders": [
+            "m+2",
+            "m+4",
+            "m+5"
+          ],
+          "term": "B(b_{m+5}; a_{m+2}, a_{m+4})",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            3,
+            3,
+            5
+          ],
+          "orders": [
+            "m+3",
+            "m+3",
+            "m+5"
+          ],
+          "term": "F_+ / Phi(b_{m+3},b_{m+3},b_{m+5})",
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            3,
+            4,
+            4
+          ],
+          "orders": [
+            "m+3",
+            "m+4",
+            "m+4"
+          ],
+          "term": "B(b_{m+3}; a_{m+4}, a_{m+4})",
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        }
+      ],
+      "newest_Eplus_offset": 11
+    },
+    "3m+2": {
+      "F_order": "3m+2",
+      "N_parity_relative_to_3m": "even",
+      "automatic_by_y_evenness": true,
+      "delta": 2,
+      "isolation": {
+        "L": null,
+        "R_remaining": [],
+        "note": "Automatic odd F-order, or no pure (m,m,m+r) isolation at this delta.",
+        "omega": null
+      },
+      "live_contributions": [],
+      "newest_Eplus_offset": null
+    },
+    "3m+3": {
+      "F_order": "3m+3",
+      "N_parity_relative_to_3m": "odd",
+      "automatic_by_y_evenness": false,
+      "delta": 3,
+      "isolation": {
+        "L": "L_3(b_{m+3}) = B(b_{m+3}; a_m, a_m)",
+        "R_remaining": [
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              1,
+              2
+            ],
+            "term": "B(b_{m+1}; a_m, a_{m+2})"
+          },
+          {
+            "multiplicity": 1,
+            "offsets": [
+              1,
+              1,
+              1
+            ],
+            "term": "F_+ / Phi(b_{m+1},b_{m+1},b_{m+1})"
+          }
+        ],
+        "note": "Same polar operator family: each isolated L_{2k+1} is of the form B(-; a_m, a_m) on E_+-valued jets of order m+(2k+1). Generic surjectivity of this polar family follows from the rank theorem for r odd (same pure-powers argument with r=newest).",
+        "omega": "class of R in coker(L_3) on free jets of order m+3"
+      },
+      "live_contributions": [
+        {
+          "multiplicity": 3,
+          "offsets": [
+            0,
+            0,
+            3
+          ],
+          "orders": [
+            "m",
+            "m",
+            "m+3"
+          ],
+          "term": "B(b_{m+3}; a_m, a_m)",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "orders": [
+            "m",
+            "m+1",
+            "m+2"
+          ],
+          "term": "B(b_{m+1}; a_m, a_{m+2})",
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 1,
+          "offsets": [
+            1,
+            1,
+            1
+          ],
+          "orders": [
+            "m+1",
+            "m+1",
+            "m+1"
+          ],
+          "term": "F_+ / Phi(b_{m+1},b_{m+1},b_{m+1})",
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        }
+      ],
+      "newest_Eplus_offset": 3
+    },
+    "3m+4": {
+      "F_order": "3m+4",
+      "N_parity_relative_to_3m": "even",
+      "automatic_by_y_evenness": true,
+      "delta": 4,
+      "isolation": {
+        "L": null,
+        "R_remaining": [],
+        "note": "Automatic odd F-order, or no pure (m,m,m+r) isolation at this delta.",
+        "omega": null
+      },
+      "live_contributions": [],
+      "newest_Eplus_offset": null
+    },
+    "3m+5": {
+      "F_order": "3m+5",
+      "N_parity_relative_to_3m": "odd",
+      "automatic_by_y_evenness": false,
+      "delta": 5,
+      "isolation": {
+        "L": "L_5(b_{m+5}) = B(b_{m+5}; a_m, a_m)",
+        "R_remaining": [
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              1,
+              4
+            ],
+            "term": "B(b_{m+1}; a_m, a_{m+4})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              2,
+              3
+            ],
+            "term": "B(b_{m+3}; a_m, a_{m+2})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              1,
+              1,
+              3
+            ],
+            "term": "F_+ / Phi(b_{m+1},b_{m+1},b_{m+3})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              1,
+              2,
+              2
+            ],
+            "term": "B(b_{m+1}; a_{m+2}, a_{m+2})"
+          }
+        ],
+        "note": "Same polar operator family: each isolated L_{2k+1} is of the form B(-; a_m, a_m) on E_+-valued jets of order m+(2k+1). Generic surjectivity of this polar family follows from the rank theorem for r odd (same pure-powers argument with r=newest).",
+        "omega": "class of R in coker(L_5) on free jets of order m+5"
+      },
+      "live_contributions": [
+        {
+          "multiplicity": 3,
+          "offsets": [
+            0,
+            0,
+            5
+          ],
+          "orders": [
+            "m",
+            "m",
+            "m+5"
+          ],
+          "term": "B(b_{m+5}; a_m, a_m)",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            1,
+            4
+          ],
+          "orders": [
+            "m",
+            "m+1",
+            "m+4"
+          ],
+          "term": "B(b_{m+1}; a_m, a_{m+4})",
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            2,
+            3
+          ],
+          "orders": [
+            "m",
+            "m+2",
+            "m+3"
+          ],
+          "term": "B(b_{m+3}; a_m, a_{m+2})",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            1,
+            1,
+            3
+          ],
+          "orders": [
+            "m+1",
+            "m+1",
+            "m+3"
+          ],
+          "term": "F_+ / Phi(b_{m+1},b_{m+1},b_{m+3})",
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            1,
+            2,
+            2
+          ],
+          "orders": [
+            "m+1",
+            "m+2",
+            "m+2"
+          ],
+          "term": "B(b_{m+1}; a_{m+2}, a_{m+2})",
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        }
+      ],
+      "newest_Eplus_offset": 5
+    },
+    "3m+6": {
+      "F_order": "3m+6",
+      "N_parity_relative_to_3m": "even",
+      "automatic_by_y_evenness": true,
+      "delta": 6,
+      "isolation": {
+        "L": null,
+        "R_remaining": [],
+        "note": "Automatic odd F-order, or no pure (m,m,m+r) isolation at this delta.",
+        "omega": null
+      },
+      "live_contributions": [],
+      "newest_Eplus_offset": null
+    },
+    "3m+7": {
+      "F_order": "3m+7",
+      "N_parity_relative_to_3m": "odd",
+      "automatic_by_y_evenness": false,
+      "delta": 7,
+      "isolation": {
+        "L": "L_7(b_{m+7}) = B(b_{m+7}; a_m, a_m)",
+        "R_remaining": [
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              1,
+              6
+            ],
+            "term": "B(b_{m+1}; a_m, a_{m+6})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              2,
+              5
+            ],
+            "term": "B(b_{m+5}; a_m, a_{m+2})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              3,
+              4
+            ],
+            "term": "B(b_{m+3}; a_m, a_{m+4})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              1,
+              1,
+              5
+            ],
+            "term": "F_+ / Phi(b_{m+1},b_{m+1},b_{m+5})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              1,
+              2,
+              4
+            ],
+            "term": "B(b_{m+1}; a_{m+2}, a_{m+4})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              1,
+              3,
+              3
+            ],
+            "term": "F_+ / Phi(b_{m+1},b_{m+3},b_{m+3})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              2,
+              2,
+              3
+            ],
+            "term": "B(b_{m+3}; a_{m+2}, a_{m+2})"
+          }
+        ],
+        "note": "Same polar operator family: each isolated L_{2k+1} is of the form B(-; a_m, a_m) on E_+-valued jets of order m+(2k+1). Generic surjectivity of this polar family follows from the rank theorem for r odd (same pure-powers argument with r=newest).",
+        "omega": "class of R in coker(L_7) on free jets of order m+7"
+      },
+      "live_contributions": [
+        {
+          "multiplicity": 3,
+          "offsets": [
+            0,
+            0,
+            7
+          ],
+          "orders": [
+            "m",
+            "m",
+            "m+7"
+          ],
+          "term": "B(b_{m+7}; a_m, a_m)",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            1,
+            6
+          ],
+          "orders": [
+            "m",
+            "m+1",
+            "m+6"
+          ],
+          "term": "B(b_{m+1}; a_m, a_{m+6})",
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            2,
+            5
+          ],
+          "orders": [
+            "m",
+            "m+2",
+            "m+5"
+          ],
+          "term": "B(b_{m+5}; a_m, a_{m+2})",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            3,
+            4
+          ],
+          "orders": [
+            "m",
+            "m+3",
+            "m+4"
+          ],
+          "term": "B(b_{m+3}; a_m, a_{m+4})",
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            1,
+            1,
+            5
+          ],
+          "orders": [
+            "m+1",
+            "m+1",
+            "m+5"
+          ],
+          "term": "F_+ / Phi(b_{m+1},b_{m+1},b_{m+5})",
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            1,
+            2,
+            4
+          ],
+          "orders": [
+            "m+1",
+            "m+2",
+            "m+4"
+          ],
+          "term": "B(b_{m+1}; a_{m+2}, a_{m+4})",
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            1,
+            3,
+            3
+          ],
+          "orders": [
+            "m+1",
+            "m+3",
+            "m+3"
+          ],
+          "term": "F_+ / Phi(b_{m+1},b_{m+3},b_{m+3})",
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            2,
+            2,
+            3
+          ],
+          "orders": [
+            "m+2",
+            "m+2",
+            "m+3"
+          ],
+          "term": "B(b_{m+3}; a_{m+2}, a_{m+2})",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        }
+      ],
+      "newest_Eplus_offset": 7
+    },
+    "3m+8": {
+      "F_order": "3m+8",
+      "N_parity_relative_to_3m": "even",
+      "automatic_by_y_evenness": true,
+      "delta": 8,
+      "isolation": {
+        "L": null,
+        "R_remaining": [],
+        "note": "Automatic odd F-order, or no pure (m,m,m+r) isolation at this delta.",
+        "omega": null
+      },
+      "live_contributions": [],
+      "newest_Eplus_offset": null
+    },
+    "3m+9": {
+      "F_order": "3m+9",
+      "N_parity_relative_to_3m": "odd",
+      "automatic_by_y_evenness": false,
+      "delta": 9,
+      "isolation": {
+        "L": "L_9(b_{m+9}) = B(b_{m+9}; a_m, a_m)",
+        "R_remaining": [
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              1,
+              8
+            ],
+            "term": "B(b_{m+1}; a_m, a_{m+8})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              2,
+              7
+            ],
+            "term": "B(b_{m+7}; a_m, a_{m+2})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              3,
+              6
+            ],
+            "term": "B(b_{m+3}; a_m, a_{m+6})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              0,
+              4,
+              5
+            ],
+            "term": "B(b_{m+5}; a_m, a_{m+4})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              1,
+              1,
+              7
+            ],
+            "term": "F_+ / Phi(b_{m+1},b_{m+1},b_{m+7})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              1,
+              2,
+              6
+            ],
+            "term": "B(b_{m+1}; a_{m+2}, a_{m+6})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              1,
+              3,
+              5
+            ],
+            "term": "F_+ / Phi(b_{m+1},b_{m+3},b_{m+5})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              1,
+              4,
+              4
+            ],
+            "term": "B(b_{m+1}; a_{m+4}, a_{m+4})"
+          },
+          {
+            "multiplicity": 3,
+            "offsets": [
+              2,
+              2,
+              5
+            ],
+            "term": "B(b_{m+5}; a_{m+2}, a_{m+2})"
+          },
+          {
+            "multiplicity": 6,
+            "offsets": [
+              2,
+              3,
+              4
+            ],
+            "term": "B(b_{m+3}; a_{m+2}, a_{m+4})"
+          },
+          {
+            "multiplicity": 1,
+            "offsets": [
+              3,
+              3,
+              3
+            ],
+            "term": "F_+ / Phi(b_{m+3},b_{m+3},b_{m+3})"
+          }
+        ],
+        "note": "Same polar operator family: each isolated L_{2k+1} is of the form B(-; a_m, a_m) on E_+-valued jets of order m+(2k+1). Generic surjectivity of this polar family follows from the rank theorem for r odd (same pure-powers argument with r=newest).",
+        "omega": "class of R in coker(L_9) on free jets of order m+9"
+      },
+      "live_contributions": [
+        {
+          "multiplicity": 3,
+          "offsets": [
+            0,
+            0,
+            9
+          ],
+          "orders": [
+            "m",
+            "m",
+            "m+9"
+          ],
+          "term": "B(b_{m+9}; a_m, a_m)",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            1,
+            8
+          ],
+          "orders": [
+            "m",
+            "m+1",
+            "m+8"
+          ],
+          "term": "B(b_{m+1}; a_m, a_{m+8})",
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            2,
+            7
+          ],
+          "orders": [
+            "m",
+            "m+2",
+            "m+7"
+          ],
+          "term": "B(b_{m+7}; a_m, a_{m+2})",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            3,
+            6
+          ],
+          "orders": [
+            "m",
+            "m+3",
+            "m+6"
+          ],
+          "term": "B(b_{m+3}; a_m, a_{m+6})",
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            0,
+            4,
+            5
+          ],
+          "orders": [
+            "m",
+            "m+4",
+            "m+5"
+          ],
+          "term": "B(b_{m+5}; a_m, a_{m+4})",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            1,
+            1,
+            7
+          ],
+          "orders": [
+            "m+1",
+            "m+1",
+            "m+7"
+          ],
+          "term": "F_+ / Phi(b_{m+1},b_{m+1},b_{m+7})",
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            1,
+            2,
+            6
+          ],
+          "orders": [
+            "m+1",
+            "m+2",
+            "m+6"
+          ],
+          "term": "B(b_{m+1}; a_{m+2}, a_{m+6})",
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            1,
+            3,
+            5
+          ],
+          "orders": [
+            "m+1",
+            "m+3",
+            "m+5"
+          ],
+          "term": "F_+ / Phi(b_{m+1},b_{m+3},b_{m+5})",
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            1,
+            4,
+            4
+          ],
+          "orders": [
+            "m+1",
+            "m+4",
+            "m+4"
+          ],
+          "term": "B(b_{m+1}; a_{m+4}, a_{m+4})",
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 3,
+          "offsets": [
+            2,
+            2,
+            5
+          ],
+          "orders": [
+            "m+2",
+            "m+2",
+            "m+5"
+          ],
+          "term": "B(b_{m+5}; a_{m+2}, a_{m+2})",
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 6,
+          "offsets": [
+            2,
+            3,
+            4
+          ],
+          "orders": [
+            "m+2",
+            "m+3",
+            "m+4"
+          ],
+          "term": "B(b_{m+3}; a_{m+2}, a_{m+4})",
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ],
+          "vanish_triple_Eminus": false
+        },
+        {
+          "multiplicity": 1,
+          "offsets": [
+            3,
+            3,
+            3
+          ],
+          "orders": [
+            "m+3",
+            "m+3",
+            "m+3"
+          ],
+          "term": "F_+ / Phi(b_{m+3},b_{m+3},b_{m+3})",
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ],
+          "vanish_triple_Eminus": false
+        }
+      ],
+      "newest_Eplus_offset": 9
+    }
+  },
+  "universal_equations": {
+    "U.3m+1": {
+      "L": "L_1(b_{m+1})=B(b_{m+1};a_m,a_m)",
+      "R": "0",
+      "equation": "B(b_{m+1}; a_m, a_m) = 0",
+      "status": "PROVED (WP-L1)"
+    },
+    "U.3m+3": {
+      "L": "L_3(b_{m+3})=B(b_{m+3};a_m,a_m)",
+      "R": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+      "equation": "B(b_{m+3}; a_m, a_m) + 2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1}) = 0",
+      "status": "PROVED (WP-L1)"
+    },
+    "U.3m+5": {
+      "L": "L_5(b_{m+5})=B(b_{m+5};a_m,a_m)",
+      "R": "All live contributions at 3m+5 except (m,m,m+5); see stages['3m+5'].live_contributions",
+      "equation": "B(b_{m+5}; a_m, a_m) + 2 B(b_{m+3}; a_m, a_{m+2}) + 2 B(b_{m+1}; a_m, a_{m+4}) + 2 B(b_{m+1}; a_{m+2}, a_{m+2}) + 6 Phi(b_{m+1}, b_{m+1}, a_{m+2}) + [terms from live multiset enumeration] = 0",
+      "newest_correction_operator": "L_5",
+      "status": "PROVED_COMBINATORIAL (enumeration independent of odd m)"
+    },
+    "U.3m+7": {
+      "L": "L_7(b_{m+7})=B(b_{m+7};a_m,a_m)",
+      "R": "live contributions at 3m+7 except (m,m,m+7)",
+      "newest_correction_operator": "L_7",
+      "status": "PROVED_COMBINATORIAL"
+    }
+  },
+  "valid_for": "all odd positive m; free multi-Rees level independent of d",
+  "y_evenness": "F(p) even in y \u21d2 odd F-orders (\u03b4 even) automatic. Nonautomatic orders are 3m+(odd) = 3m+1, 3m+3, 3m+5, ..."
+}

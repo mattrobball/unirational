@@ -1,0 +1,287 @@
+{
+  "containment_G_in_R3": "FALSE_AT_TESTED_BIDEGREES",
+  "gate_G1_bidegree": {
+    "d": 7,
+    "m": 1,
+    "reference": "certificates/global_lifting_decision/rank_certificate.json",
+    "status": "OPEN_MEETING_CERTIFIED (prior G1 packet)"
+  },
+  "headline": "OPEN",
+  "not_modular_sample": true,
+  "persistence": "OPEN_MEETING_PERSISTS_AT_BOTH_BIDEGREES",
+  "self_sha256": "73d49b78536ea872d3d6f0ec5220801e129ac790c34ba9b45e975353e94d6395",
+  "tests": [
+    {
+      "category": "repaired C^rep: L_t^src, P(E_-)^N, L_t^tgt distinct; based = ker(restriction to residual-stable line x2=0)",
+      "containment_G_in_R3": "FALSE_AT_THIS_BIDEGREE",
+      "d": 13,
+      "dimensions": {
+        "N_PLANE": 364,
+        "accepted_dim_plane": 364,
+        "dim_based_G_witness": 44,
+        "dim_c3_weight0": 122,
+        "dim_s3": 61,
+        "disagreement_with_accepted": false
+      },
+      "e": 7,
+      "expected_full_L3_rank": 7,
+      "expected_generic_nullity": 8,
+      "has_nonzero_maximal_minor": true,
+      "m": 1,
+      "not_modular_sample": true,
+      "open_meeting_points_char0": [
+        {
+          "L3_coker_over_Q": 0,
+          "L3_nullity_over_Q": 8,
+          "L3_rank_over_Q": 7,
+          "basis_index": 0,
+          "eval_point_z": [
+            1,
+            1,
+            1
+          ],
+          "free_fibre": [
+            "0",
+            "1",
+            "1",
+            "0"
+          ],
+          "full_generic_rank": true,
+          "nonzero_maximal_minor": {
+            "columns": [
+              0,
+              1,
+              2,
+              5,
+              8,
+              11,
+              14
+            ],
+            "proof_type": "exact_det_over_Q_on_RREF_pivot_columns",
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "value": "-2"
+          },
+          "source": "based_basis_section"
+        },
+        {
+          "L3_coker_over_Q": 0,
+          "L3_nullity_over_Q": 8,
+          "L3_rank_over_Q": 7,
+          "basis_index": 1,
+          "eval_point_z": [
+            1,
+            1,
+            1
+          ],
+          "free_fibre": [
+            "0",
+            "1",
+            "1",
+            "0"
+          ],
+          "full_generic_rank": true,
+          "nonzero_maximal_minor": null,
+          "source": "based_basis_section"
+        },
+        {
+          "L3_coker_over_Q": 0,
+          "L3_nullity_over_Q": 8,
+          "L3_rank_over_Q": 7,
+          "basis_index": 2,
+          "eval_point_z": [
+            1,
+            1,
+            1
+          ],
+          "free_fibre": [
+            "0",
+            "1",
+            "1",
+            "0"
+          ],
+          "full_generic_rank": true,
+          "nonzero_maximal_minor": null,
+          "source": "based_basis_section"
+        }
+      ],
+      "proof_type": "exact_Q_rank_on_free_fibre_of_Level2_based_residual_G_witness_plus_nonzero_maximal_minor",
+      "pure_triv_diagnostic": {
+        "all_full_rank": true,
+        "dim_free_triv": 1,
+        "note": "Pure residual-S3-trivial free fibre may lie in the free rank-drop locus for m>1 (observed m=3 rank 9 < 13). Open meeting uses general points of the based residual G-witness, not this pure subfamily alone.",
+        "ranks": [
+          {
+            "L3_rank": 7,
+            "a": [
+              "0",
+              "1",
+              "1",
+              "0"
+            ],
+            "full_rank": true
+          }
+        ],
+        "status": "diagnostic_only"
+      },
+      "status": "OPEN_MEETING_CERTIFIED"
+    },
+    {
+      "category": "repaired C^rep: L_t^src, P(E_-)^N, L_t^tgt distinct; based = ker(restriction to residual-stable line x2=0)",
+      "containment_G_in_R3": "FALSE_AT_THIS_BIDEGREE",
+      "d": 19,
+      "dimensions": {
+        "N_PLANE": 1224,
+        "accepted_dim_plane": 1224,
+        "dim_based_G_witness": 160,
+        "dim_c3_weight0": 408,
+        "dim_s3": 204,
+        "disagreement_with_accepted": false
+      },
+      "e": 1,
+      "expected_full_L3_rank": 13,
+      "expected_generic_nullity": 8,
+      "has_nonzero_maximal_minor": true,
+      "m": 3,
+      "not_modular_sample": true,
+      "open_meeting_points_char0": [
+        {
+          "L3_coker_over_Q": 0,
+          "L3_nullity_over_Q": 8,
+          "L3_rank_over_Q": 13,
+          "basis_index": 80,
+          "eval_point_z": [
+            1,
+            1,
+            1
+          ],
+          "free_fibre": [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          "full_generic_rank": true,
+          "nonzero_maximal_minor": {
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              11,
+              14,
+              17,
+              20
+            ],
+            "proof_type": "exact_det_over_Q_on_RREF_pivot_columns",
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "value": "8"
+          },
+          "source": "based_basis_section"
+        },
+        {
+          "L3_coker_over_Q": 0,
+          "L3_nullity_over_Q": 8,
+          "L3_rank_over_Q": 13,
+          "basis_index": 81,
+          "eval_point_z": [
+            1,
+            1,
+            1
+          ],
+          "free_fibre": [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          "full_generic_rank": true,
+          "nonzero_maximal_minor": null,
+          "source": "based_basis_section"
+        },
+        {
+          "L3_coker_over_Q": 0,
+          "L3_nullity_over_Q": 8,
+          "L3_rank_over_Q": 13,
+          "basis_index": 82,
+          "eval_point_z": [
+            1,
+            1,
+            1
+          ],
+          "free_fibre": [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          "full_generic_rank": true,
+          "nonzero_maximal_minor": null,
+          "source": "based_basis_section"
+        }
+      ],
+      "proof_type": "exact_Q_rank_on_free_fibre_of_Level2_based_residual_G_witness_plus_nonzero_maximal_minor",
+      "pure_triv_diagnostic": {
+        "all_full_rank": false,
+        "dim_free_triv": 1,
+        "note": "Pure residual-S3-trivial free fibre may lie in the free rank-drop locus for m>1 (observed m=3 rank 9 < 13). Open meeting uses general points of the based residual G-witness, not this pure subfamily alone.",
+        "ranks": [
+          {
+            "L3_rank": 9,
+            "a": [
+              "0",
+              "0",
+              "0",
+              "1",
+              "1",
+              "0",
+              "0",
+              "0"
+            ],
+            "full_rank": false
+          }
+        ],
+        "status": "diagnostic_only"
+      },
+      "status": "OPEN_MEETING_CERTIFIED"
+    }
+  ]
+}

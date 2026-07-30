@@ -1,0 +1,38 @@
+{
+  "accepted_input_sha256": {
+    "certificates/global_lifting_decision/rank_certificate.json": "ba12ab5adf75acfa2212c2b283072239c71c2c6b3e2fa7c52e9a654dae4def53",
+    "certificates/lifting/families/free_module_stages.json": "7305453e8c75be0a7c30eab41cbc2e1b82daacbe5899cceab34145e26a6e43a7",
+    "certificates/lifting/polar_expansion.json": "1231694bdc41f6c06c690c2b8eb58dca42402acf1cfaacdc284157b00033098e",
+    "certificates/transition_repair/category_repaired.json": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0"
+  },
+  "all_degree_G_open_meeting": "NOT_CLAIMED",
+  "artifact_sha256": {
+    "FORK_GB.md": "90b2b8573bd2c103b30b6b6256bdac996d5ab709a2b86cf82cf1ad512c5394f8",
+    "algebraization_gate.json": "a791d54b5bc8ae811004ac2cd8614a621d3c9430cd1fb62d594c741260c14940",
+    "finite_generation_boundary.json": "156bb658cd38e50c601c30330bfeaa45ababc356ab62a14dee05264f2a6923c5",
+    "forkB_exit.json": "0031e61bf3885e181e5ee83fe15ba0e23f59ee2e3a8d4b809a0ea795a20c3a25",
+    "higher_polar_recursion.json": "53a47de62bc01c24f4f0212f096932b68795e9d8b061585dca2eda23f284d2a5",
+    "persistence_certificate.json": "3adf3388954b0a72f3c41b92cd965fc89d983dd66763baf1ed217aa617117822",
+    "produce_forkB.py": "92ab20e0c8f95100efb322575954c18611fa0c1d466444be805b0b26522cb457",
+    "rank_theorem.json": "40ca01d67ca4d2ef3f7dff9dc67ef4176745af3d913f41de8ddae2c85ac033fa",
+    "verify_forkB.py": "cee01c0f40cea8c18c4740b8592e9b4c4c02d3cd58080e4da182d7b2aa3fe353"
+  },
+  "attempt": "Elo Path G Fork G-B",
+  "containment_G_in_R3": "FALSE_AT_TESTED_BIDEGREES",
+  "decision_exit": "G-CONSTRUCTION",
+  "headline": "OPEN",
+  "not_a_covariant": true,
+  "producer": "certificates/global_lifting_decision/produce_forkB.py",
+  "rank_theorem": "PROVED",
+  "self_sha256": "891b4c8a058e4137564a2af8ec56f8f48c440f6763f696c540f3d064e0aa12a8",
+  "terminal_markers": [
+    "PATH_G_FORK_GB_OK",
+    "PATH_G_FORK_GB_VERIFY_OK"
+  ],
+  "tested_bidegrees": [
+    "(1,7)",
+    "(1,13)",
+    "(3,19)"
+  ],
+  "verifier": "certificates/global_lifting_decision/verify_forkB.py"
+}
