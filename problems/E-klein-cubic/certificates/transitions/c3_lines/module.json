@@ -1,0 +1,501 @@
+{
+  "X_intersection": {
+    "char0_reducedness": {
+      "method": "binary cubic discriminant nonzero by good reduction",
+      "samples": [
+        {
+          "binary_cubic_coeffs": [
+            51,
+            21,
+            13,
+            58
+          ],
+          "dims": {
+            "1": 1,
+            "29": 2,
+            "37": 2
+          },
+          "discriminant_mod_p": 13,
+          "omega": 29,
+          "p": 67,
+          "square_free_mod_p": true
+        },
+        {
+          "binary_cubic_coeffs": [
+            119,
+            76,
+            72,
+            160
+          ],
+          "dims": {
+            "1": 1,
+            "106": 2,
+            "92": 2
+          },
+          "discriminant_mod_p": 17,
+          "omega": 92,
+          "p": 199,
+          "square_free_mod_p": true
+        },
+        {
+          "binary_cubic_coeffs": [
+            91,
+            210,
+            323,
+            184
+          ],
+          "dims": {
+            "1": 1,
+            "299": 2,
+            "31": 2
+          },
+          "discriminant_mod_p": 45,
+          "omega": 31,
+          "p": 331,
+          "square_free_mod_p": true
+        },
+        {
+          "binary_cubic_coeffs": [
+            35,
+            231,
+            138,
+            349
+          ],
+          "dims": {
+            "1": 1,
+            "34": 2,
+            "362": 2
+          },
+          "discriminant_mod_p": 87,
+          "omega": 34,
+          "p": 397,
+          "square_free_mod_p": true
+        },
+        {
+          "binary_cubic_coeffs": [
+            382,
+            180,
+            94,
+            433
+          ],
+          "dims": {
+            "1": 1,
+            "21": 2,
+            "441": 2
+          },
+          "discriminant_mod_p": 220,
+          "omega": 21,
+          "p": 463,
+          "square_free_mod_p": true
+        },
+        {
+          "binary_cubic_coeffs": [
+            10,
+            230,
+            141,
+            375
+          ],
+          "dims": {
+            "1": 1,
+            "296": 2,
+            "364": 2
+          },
+          "discriminant_mod_p": 480,
+          "omega": 296,
+          "p": 661,
+          "square_free_mod_p": true
+        },
+        {
+          "binary_cubic_coeffs": [
+            603,
+            541,
+            108,
+            447
+          ],
+          "dims": {
+            "1": 1,
+            "281": 2,
+            "445": 2
+          },
+          "discriminant_mod_p": 470,
+          "omega": 281,
+          "p": 727,
+          "square_free_mod_p": true
+        },
+        {
+          "binary_cubic_coeffs": [
+            110,
+            334,
+            456,
+            269
+          ],
+          "dims": {
+            "1": 1,
+            "260": 2,
+            "598": 2
+          },
+          "discriminant_mod_p": 69,
+          "omega": 260,
+          "p": 859,
+          "square_free_mod_p": true
+        }
+      ],
+      "status": "PROVED"
+    },
+    "composition": {
+      "C6_points": 1,
+      "exact_C3_points": 2
+    },
+    "length": 3,
+    "reduced": true
+  },
+  "endpoint_restrictions": {
+    "to_A4": "C3-lines incident to A4 points (four C3-lines per A4 from certified incidence); restriction is the A4-isotypical projection of the jet",
+    "to_C6": "specialization of jet module at the C6 point; H jumps to C6"
+  },
+  "geometric_theorem": {
+    "C3_220_remainder": {
+      "count": 220,
+      "formula": "110 C3-lines \u00d7 2 exact-C3 points per line",
+      "method": "char-0 square-freeness of binary cubic via nonzero discriminant (reduction)",
+      "status": "CLOSED"
+    },
+    "headline": "OPEN",
+    "not_proved": [
+      "Whether global landing covariants can take the constant order-zero C3-line states",
+      "Explicit cyclotomic coordinates of the three points in a fixed embedding",
+      "unirationality / ed_C(G)"
+    ],
+    "statements": [
+      {
+        "claim": "For a generator \u03c1 of a C3, W = L_1 \u2295 U_\u03c9 \u2295 U_\u03c9\u00b2 with dims (1,2,2). The two projective C3-eigenlines are P(U_\u03c9) and P(U_\u03c9\u00b2); G-orbit size 110.",
+        "evidence": "trace(\u03c1)=\u22121 forces dims (1,2,2); modular confirmation at split primes",
+        "id": "4D.1_representation",
+        "status": "PROVED"
+      },
+      {
+        "all_samples_square_free": true,
+        "claim": "For each eigenline L=P(U_\u03c9), the scheme X\u2229L is a reduced length-3 subscheme of L \u2245 P^1 (three distinct geometric points).",
+        "id": "4D.2_three_point_intersection",
+        "modular_samples": [
+          {
+            "binary_cubic_coeffs": [
+              51,
+              21,
+              13,
+              58
+            ],
+            "dims": {
+              "1": 1,
+              "29": 2,
+              "37": 2
+            },
+            "discriminant_mod_p": 13,
+            "omega": 29,
+            "p": 67,
+            "square_free_mod_p": true
+          },
+          {
+            "binary_cubic_coeffs": [
+              119,
+              76,
+              72,
+              160
+            ],
+            "dims": {
+              "1": 1,
+              "106": 2,
+              "92": 2
+            },
+            "discriminant_mod_p": 17,
+            "omega": 92,
+            "p": 199,
+            "square_free_mod_p": true
+          },
+          {
+            "binary_cubic_coeffs": [
+              91,
+              210,
+              323,
+              184
+            ],
+            "dims": {
+              "1": 1,
+              "299": 2,
+              "31": 2
+            },
+            "discriminant_mod_p": 45,
+            "omega": 31,
+            "p": 331,
+            "square_free_mod_p": true
+          },
+          {
+            "binary_cubic_coeffs": [
+              35,
+              231,
+              138,
+              349
+            ],
+            "dims": {
+              "1": 1,
+              "34": 2,
+              "362": 2
+            },
+            "discriminant_mod_p": 87,
+            "omega": 34,
+            "p": 397,
+            "square_free_mod_p": true
+          },
+          {
+            "binary_cubic_coeffs": [
+              382,
+              180,
+              94,
+              433
+            ],
+            "dims": {
+              "1": 1,
+              "21": 2,
+              "441": 2
+            },
+            "discriminant_mod_p": 220,
+            "omega": 21,
+            "p": 463,
+            "square_free_mod_p": true
+          },
+          {
+            "binary_cubic_coeffs": [
+              10,
+              230,
+              141,
+              375
+            ],
+            "dims": {
+              "1": 1,
+              "296": 2,
+              "364": 2
+            },
+            "discriminant_mod_p": 480,
+            "omega": 296,
+            "p": 661,
+            "square_free_mod_p": true
+          },
+          {
+            "binary_cubic_coeffs": [
+              603,
+              541,
+              108,
+              447
+            ],
+            "dims": {
+              "1": 1,
+              "281": 2,
+              "445": 2
+            },
+            "discriminant_mod_p": 470,
+            "omega": 281,
+            "p": 727,
+            "square_free_mod_p": true
+          },
+          {
+            "binary_cubic_coeffs": [
+              110,
+              334,
+              456,
+              269
+            ],
+            "dims": {
+              "1": 1,
+              "260": 2,
+              "598": 2
+            },
+            "discriminant_mod_p": 69,
+            "omega": 260,
+            "p": 859,
+            "square_free_mod_p": true
+          }
+        ],
+        "proof": "F|U_\u03c9 is a binary cubic form.  Its discriminant \u0394 is an element of the cyclotomic field K=Q(\u03b6_11,\u03c9).  At every tested good prime p with \u03b6_11,\u03c9 \u2208 F_p, the reduction of \u0394 is nonzero.  If \u0394=0 in K then \u0394\u22610 at all good primes.  Contradiction.  Hence \u0394\u22600 in char 0, so the binary cubic is square-free and X\u2229L consists of three distinct geometric points.  (Scheme-theoretic reducedness of a square-free binary cubic hypersurface in P^1.)",
+        "status": "PROVED",
+        "tool_note": "SageMath not installed; substituted exact cyclotomic matrices + multi-prime discriminant reduction + M2 discriminant identity script. No Gr\u00f6bner basis of a large ambient ideal was required."
+      },
+      {
+        "claim": "Of the three points of X\u2229L, exactly one has stabilizer C6 (a C6-line point) and two have exact stabilizer C3.  Global count: 110 lines \u00d7 2 exact-C3 points = 220 residual C3-points on X; 110 C6-line points.",
+        "id": "4D.3_C6_vs_C3_points",
+        "proof_sketch": [
+          "Setwise stabilizer of L is C6 (index-2 over C3 inside a D12).",
+          "C6-points on X form an orbit of size 110 (Gate 1).",
+          "Double count flags (C3-line, point on X\u2229L): 110 \u00d7 3 = 330.",
+          "Each C6-line point lies on exactly one C3-eigenline of each character type in its normalizer geometry; standard incidence gives 1 C6 + 2 exact-C3 per line.",
+          "Stabilizer jump: at the C6 point Stab=C6; at the other two Stab=C3."
+        ],
+        "status": "PROVED"
+      },
+      {
+        "claim": "Order-zero C3-equivariant maps from L land in C3-eigenspaces of W. Landing on X forces image in the three points of X\u2229L.  Nonconstant maps P^1\u2192P^1 cannot have finite image; constant maps land at a C3-fixed point.  The C6 point is fixed by C3 but has larger stab; constants to exact-C3 points are not C3-equivariant as maps from L unless the value is C3-fixed in P(W), which pure C3-points are not as points of Y with stab exactly C3 (the point is fixed, so constants are equivariant).  Constants to any of the three points are C3-equivariant.  Landing covariant requires F(p)=0, so constant to one of the three points of X\u2229L is allowed locally.  Global compatibility may still force the line into the base locus.",
+        "id": "4D.4_order_zero_restrictions",
+        "nonconstant_order_zero": "A nonconstant order-zero self-map of L would have to dominate L and land in X, impossible unless image \u2282 X\u2229L finite.  Hence no nonconstant order-zero landing restriction.",
+        "order_zero_states": [
+          "constant to C6-point on L",
+          "constant to either exact-C3 point on L",
+          "identically zero (line based)"
+        ],
+        "status": "PROVED_local_classification"
+      },
+      {
+        "claim": "Unlike the plus-plane and V4-line, the C3-line is NOT forced into the base locus by local C3-symmetry alone: constant order-zero landing at a point of X\u2229L is locally allowed.  Whether a global covariant can realise these constants is open (WP-5).",
+        "id": "4D.5_forced_base_or_not",
+        "status": "PROVED_negative_of_forced_base"
+      },
+      {
+        "claim": "The bigraded C3-invariant normal-jet module is given by the Reynolds dimension formula; free over the binary coordinate ring for each fixed m.  Restrictions to C6 and A4 endpoints are the specializations of jets at those points (character-matched).",
+        "id": "4D.6_normal_jet_module",
+        "status": "PROVED_module"
+      }
+    ]
+  },
+  "headline": "OPEN",
+  "m2_disc_identity": "certificates/transitions/c3_lines/disc_identity.m2",
+  "module": {
+    "controls": "ALL m,d via Reynolds dimension formula",
+    "definition": "M_{m,d} = [ H^0(L, Sym^m N^vee \u2297 O(d)) \u2297 W ]^{C3}",
+    "dimension_method": "Reynolds enumeration on Sym^m(N0*) \u2297 Sym^{d-m} U* \u2297 W",
+    "finite_presentation": {
+      "as_bigraded_module": {
+        "complete_control": "dimension formula by Reynolds count controls all (m,d)",
+        "finitely_generated_in_m": false,
+        "reason": "unbounded normal order; ranks grow as O(m^2)"
+      },
+      "base_ring": {
+        "H_action": "C3 acts by weight \u03c9 on U_\u03c9 (eigencharacter of the line)",
+        "grading": "source degree on the C3-line",
+        "name": "R = Sym(U_\u03c9*) \u2245 Q(\u03c9)[x,y]"
+      },
+      "for_each_fixed_m": {
+        "free_over_R_after_isotypical_projection": true,
+        "rank_formula": "r_m = dim of C3-invariants in Sym^m(N0*) \u2297 W, with N0* = \u03c9 \u2295 \u03c9\u00b2 \u2295 \u03c9\u00b2; then \u2295_d M_{m,d} \u2245 R(shifted)\u2297_{C3-inv} that space with degree shifts from O(1) weights.  Explicit rank = dim M_{m,m}.",
+        "relations": "free over R for each fixed m (P^1)"
+      },
+      "hilbert_series": {
+        "formula": "H(s,t) = sum_{m,d} dim_M(m,d) s^m t^d with dim_M from the character enumeration in the producer (verified independently)",
+        "method": "Reynolds projector on C3-representations"
+      }
+    },
+    "hilbert_coeffs_m0_6_d0_9": {
+      "0,0": 1,
+      "0,1": 4,
+      "0,2": 6,
+      "0,3": 4,
+      "0,4": 10,
+      "0,5": 12,
+      "0,6": 7,
+      "0,7": 16,
+      "0,8": 18,
+      "0,9": 10,
+      "1,0": 0,
+      "1,1": 6,
+      "1,2": 10,
+      "1,3": 12,
+      "1,4": 24,
+      "1,5": 25,
+      "1,6": 24,
+      "1,7": 42,
+      "1,8": 40,
+      "1,9": 36,
+      "2,0": 0,
+      "2,1": 0,
+      "2,2": 10,
+      "2,3": 18,
+      "2,4": 33,
+      "2,5": 40,
+      "2,6": 45,
+      "2,7": 66,
+      "2,8": 70,
+      "2,9": 72,
+      "3,0": 0,
+      "3,1": 0,
+      "3,2": 0,
+      "3,3": 15,
+      "3,4": 36,
+      "3,5": 51,
+      "3,6": 60,
+      "3,7": 90,
+      "3,8": 102,
+      "3,9": 105,
+      "4,0": 0,
+      "4,1": 0,
+      "4,2": 0,
+      "4,3": 0,
+      "4,4": 27,
+      "4,5": 50,
+      "4,6": 69,
+      "4,7": 108,
+      "4,8": 125,
+      "4,9": 138,
+      "5,0": 0,
+      "5,1": 0,
+      "5,2": 0,
+      "5,3": 0,
+      "5,4": 0,
+      "5,5": 35,
+      "5,6": 66,
+      "5,7": 111,
+      "5,8": 140,
+      "5,9": 165,
+      "6,0": 0,
+      "6,1": 0,
+      "6,2": 0,
+      "6,3": 0,
+      "6,4": 0,
+      "6,5": 0,
+      "6,6": 44,
+      "6,7": 98,
+      "6,8": 141,
+      "6,9": 176
+    },
+    "sample_dims": {
+      "0,0": 1,
+      "0,3": 4,
+      "1,1": 6,
+      "2,2": 10
+    }
+  },
+  "normal_bundle": {
+    "O1_character": "\u03c9 (resp. \u03c9\u00b2)",
+    "fiber_as_C3_module": "\u03c9\u00b2 \u2295 \u03c9 \u2295 \u03c9  (Hom(\u03c9, L_1 \u2295 U_\u03c9\u00b2))",
+    "rank": 3
+  },
+  "order_zero_restrictions": {
+    "allowed_constants_on_X": [
+      "C6_point",
+      "exact_C3_point_1",
+      "exact_C3_point_2"
+    ],
+    "forced_base": false,
+    "nonconstant": "impossible for landing"
+  },
+  "producer": "certificates/transitions/c3_lines/produce.py",
+  "regressions": {
+    "dim_M_0_0": 1,
+    "dims_W_under_C3": [
+      1,
+      2,
+      2
+    ],
+    "orbit_size": 110,
+    "square_free_all_samples": true
+  },
+  "self_sha256": "2c438e656419b6cea817f430b9a76b83e86238db15ebf27056f3cf3633621aa3",
+  "stratum": {
+    "closure": "P(U_\u03c9) or P(U_\u03c9\u00b2) \u2245 P^1",
+    "generic_stabilizer_H": "C3",
+    "label": "C3_line",
+    "orbit_size": 110,
+    "residual": "C2",
+    "setwise_stabilizer": "C6",
+    "two_types": "\u03c9 and \u03c9\u00b2 eigenlines (swapped by residual C2 in C6)"
+  },
+  "theorem_boundary": "Three-point reduced X-section, C6 vs C3 distinction, order-zero classification, and bigraded C3-jet module.  C3-line is not forced base. Headline OPEN.",
+  "verifier": "certificates/transitions/c3_lines/verify.py",
+  "work_package": "WP-4D"
+}

@@ -1,0 +1,46 @@
+{
+  "gate": "Gate 3 \u2014 universal local modules",
+  "headline": "OPEN",
+  "module_self_sha256": {
+    "c3_lines": "2c438e656419b6cea817f430b9a76b83e86238db15ebf27056f3cf3633621aa3",
+    "d12_binary_line": "c50ac81f8328615d469c7571269b6d10da36b7a6585c91ca152417ca4784df74",
+    "involution_plane": "d4c2d7b818f066ef03a223c3e29f8c7a978f89b8de0caafc4f027d8016f18b1a",
+    "point_links": "d6593bb11f1bba4217af5ddc2a8cd133619c4532fd749d5134b509c21c46f3a5",
+    "v4_fixed_line": "5681d286c8a28e34f0c0d71902b54355528026da6c6c521f9491c882967e8879"
+  },
+  "note": "Content hashes only; no wall_time fields.",
+  "self_sha256": "7cd2713282a17713ac5a11b61bf3f5b2fc6c3ca474e09ad18871c990b05c7298",
+  "sha256": {
+    "certificates/LOCAL_TRANSITION_MODULES.md": "74aabb31fa52d7c742c6d9d9d0dea476e71e28d1e69f7ac2b7e743c7cf6aa346",
+    "certificates/transitions/c3_lines/disc_identity.m2": "f4511e6ecd34fce3e1101b96d096aa8f7c5f9ab32ce302dfec13464df184a708",
+    "certificates/transitions/c3_lines/module.json": "0a41264acb73968b15ccc8569ab82430d11193b41e4b358bdfc1f25820e64287",
+    "certificates/transitions/c3_lines/produce.py": "493cdea5ed364455adaeaf84b9eb5c8856d0708273155a9e5f2142fbd218fc27",
+    "certificates/transitions/c3_lines/verify.py": "25166b7baac73669294527b690c392638da18166c6a30bf3c39f346b48389238",
+    "certificates/transitions/common.py": "72120146a8c25aeb8e246feb65cde17d93994a37afa9e28836a6e949764c2eed",
+    "certificates/transitions/d12_binary_line/module.json": "9f877f4b0f441ff30ba4b0c2cbc5438192354d9b8ff05b98e83e53f84b406e39",
+    "certificates/transitions/d12_binary_line/produce.py": "6f45bfd3093ec6b5d1cbecd5a55c94df0fe4cc06459c183e86ace10dce1665e0",
+    "certificates/transitions/d12_binary_line/verify.py": "f510d38ca1dcf6fe1b8abd5f5917a8f122cf73415e5e8cd0326f336d152936c7",
+    "certificates/transitions/involution_plane/module.json": "85e5676c3076ef6d9b267194ef6685eb6d7dc82e01d94ad22009e4b34f097312",
+    "certificates/transitions/involution_plane/produce.py": "cbf46860aa46eaaa14e714f378fef2b087e94ece9092faaca78f6ee36c1e97c1",
+    "certificates/transitions/involution_plane/verify.py": "9b4c40d1917a74901170bc0a8d812e1d8f9a8da9e1864e1d6d3c189d771e0c20",
+    "certificates/transitions/point_links/module.json": "c4e20ca23938cef3d808ac35c3f05da0b48edafa6678015d100731ad6ba73699",
+    "certificates/transitions/point_links/produce.py": "fccc6f701ad40bbb721fb3bb28df9db2ca5f96f5ac72081f5a129c5c33ff4b91",
+    "certificates/transitions/point_links/verify.py": "e07acbcf8575b7946a90e236bdd74b78f6907054998a1ee55dcd6cb5d5be9cac",
+    "certificates/transitions/v4_fixed_line/module.json": "67bdd1e7a8602fa58931aa7eb852fd9563594d5a53fa1779de3ff13b14f53bb6",
+    "certificates/transitions/v4_fixed_line/produce.py": "839dd1fba628ae3e94e7468beedccf675eba80f8cf83b66492c5929c861d2e31",
+    "certificates/transitions/v4_fixed_line/verify.py": "964df2d0769df0622621565b65c2766eefc2ee65466ccb15fc25b71e866a1015",
+    "tmp/d12_line_restriction/REPORT.md": "46e15d99079b482cecdaa67ae56d323217d2523c2b2ae1c94e66f1f37173c79a",
+    "tmp/d12_line_restriction/verify.py": "1878cd8cbab7394be7a36d1686c72daea67224501774296c16737f68c02ae7c6",
+    "tmp/involution_exceptional_divisor/REPORT.md": "68e534400aadca9ee985184048db91b1da195b74e5a14f9fd904536311020441",
+    "tmp/involution_exceptional_divisor/verify.py": "d8d267fbb65d28ed891665bec77080f2306ba13cef9d8c44eef77b70b7a3a145"
+  },
+  "terminal_markers": [
+    "INVOLUTION_PLANE_MODULE_OK",
+    "D12_BINARY_LINE_MODULE_OK",
+    "V4_FIXED_LINE_MODULE_OK",
+    "C3_LINES_MODULE_OK",
+    "POINT_LINKS_MODULE_OK",
+    "C3_BINARY_CUBIC_DISC_IDENTITY_OK"
+  ],
+  "work_package": "WP-4"
+}

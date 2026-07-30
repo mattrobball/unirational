@@ -1,0 +1,698 @@
+{
+  "C6_and_marked": {
+    "C6_points_on_L_t": {
+      "coordinates_canonical": "In eigenbasis of the order-6 rotation r:(x,y)\u2192(\u03bbx, \u03bb^{-1}y), the C6 points are [1:0] and [0:1] (the two coordinate points).",
+      "count": 2,
+      "description": "Fix of residual C3 on L_t; size-two S3-orbit",
+      "under_det_twisted_maps": "h1=(x,-y) sends [1:0]\u2192[1:0] and [0:1]\u2192[0:1] (fixes both C6 points setwise as points; the sign is in the linear lift).  Higher maps: a det-twisted map (f, \u2212\u011d) or similar \u2014 projective self-maps of P^1 preserving the D12-action must preserve the C6 pair setwise.",
+      "vanishing": "Extra vanishing at a C6 point is possible for high residual degree; it is recorded as a vanishing order in the transition state."
+    },
+    "WP3_marked_strata_restriction": {
+      "charge_link": "Endpoint type-I points on L_t are the triangle vertices; their E[2]-charge lives on the elliptic side (4C), not on L_t.",
+      "maps_restrict_to": [
+        "two C6 points (size-two orbit)",
+        "six type-I V4 points (three reflection pairs)"
+      ],
+      "reference": "certificates/strata/marked_s3_geometry.json"
+    },
+    "entire_line_based": {
+      "possible": true,
+      "when": "p|_{E_-}=0 (always for even d; optionally for odd d).  Then the line is an additional base component with transverse parity constraint d+n \u2261 1 (mod 2)."
+    },
+    "type_I_endpoints": {
+      "Delta": "x^6 \u2212 y^6 = product of the six linear forms at those points",
+      "count": 6,
+      "description": "two per residual reflection (three reflections)",
+      "six_plane_intersections": "Z_s \u2229 L_t for the six noncentral involutions s\u2208C_G(t)"
+    }
+  },
+  "binary_representation": {
+    "V": "E_-(t), dim 2",
+    "canonical_action": {
+      "involution_t": "r^3 = \u2212Id on V (projectively id on L_t)",
+      "reflection_s": "s(x,y) = (y, x)",
+      "rotation_r": "r(x,y) = (\u03bb x, \u03bb^{-1} y), \u03bb^6=1 primitive"
+    },
+    "identification": "Certified inside the 5-dimensional Klein representation at good prime 67 by the upstream d12_line_restriction verifier; intrinsic binary module is characteristic-zero."
+  },
+  "endpoint_classification": {
+    "0": {
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree: det-twisted module vanishes (same as ordinary)"
+    },
+    "1": {
+      "all_ledgers": [
+        "swap_both"
+      ],
+      "dim": 1,
+      "e": 1,
+      "endpoint_vanishing_possible": false,
+      "generic_ledger": [
+        "-",
+        "+"
+      ],
+      "models": {
+        "swap_both": "(x, -y)"
+      }
+    },
+    "10": {
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree: det-twisted module vanishes (same as ordinary)"
+    },
+    "11": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "construction": "Multiply the four displayed ordinary models of degrees 7,11,11,13 (all divisible by \u0394) by powers of the endpoint-nonvanishing invariant xy, or work directly in the det-twisted residual module of degree e.",
+      "dim": 4,
+      "e": 11,
+      "endpoint_vanishing_orders": "A full transition state must record vanishing orders at the two endpoints, not only a binary preserve/swap label.",
+      "generic_ledger": [
+        "-",
+        "+"
+      ]
+    },
+    "12": {
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree: det-twisted module vanishes (same as ordinary)"
+    },
+    "13": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "construction": "Multiply the four displayed ordinary models of degrees 7,11,11,13 (all divisible by \u0394) by powers of the endpoint-nonvanishing invariant xy, or work directly in the det-twisted residual module of degree e.",
+      "dim": 5,
+      "e": 13,
+      "endpoint_vanishing_orders": "A full transition state must record vanishing orders at the two endpoints, not only a binary preserve/swap label.",
+      "generic_ledger": [
+        "-",
+        "+"
+      ]
+    },
+    "14": {
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree: det-twisted module vanishes (same as ordinary)"
+    },
+    "15": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "construction": "Multiply the four displayed ordinary models of degrees 7,11,11,13 (all divisible by \u0394) by powers of the endpoint-nonvanishing invariant xy, or work directly in the det-twisted residual module of degree e.",
+      "dim": 5,
+      "e": 15,
+      "endpoint_vanishing_orders": "A full transition state must record vanishing orders at the two endpoints, not only a binary preserve/swap label.",
+      "generic_ledger": [
+        "-",
+        "+"
+      ]
+    },
+    "16": {
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree: det-twisted module vanishes (same as ordinary)"
+    },
+    "17": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "construction": "Multiply the four displayed ordinary models of degrees 7,11,11,13 (all divisible by \u0394) by powers of the endpoint-nonvanishing invariant xy, or work directly in the det-twisted residual module of degree e.",
+      "dim": 6,
+      "e": 17,
+      "endpoint_vanishing_orders": "A full transition state must record vanishing orders at the two endpoints, not only a binary preserve/swap label.",
+      "generic_ledger": [
+        "-",
+        "+"
+      ]
+    },
+    "18": {
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree: det-twisted module vanishes (same as ordinary)"
+    },
+    "19": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "construction": "Multiply the four displayed ordinary models of degrees 7,11,11,13 (all divisible by \u0394) by powers of the endpoint-nonvanishing invariant xy, or work directly in the det-twisted residual module of degree e.",
+      "dim": 7,
+      "e": 19,
+      "endpoint_vanishing_orders": "A full transition state must record vanishing orders at the two endpoints, not only a binary preserve/swap label.",
+      "generic_ledger": [
+        "-",
+        "+"
+      ]
+    },
+    "2": {
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree: det-twisted module vanishes (same as ordinary)"
+    },
+    "20": {
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree: det-twisted module vanishes (same as ordinary)"
+    },
+    "3": {
+      "all_ledgers": [
+        "swap_both"
+      ],
+      "dim": 1,
+      "e": 3,
+      "endpoint_vanishing_possible": false,
+      "generic_ledger": [
+        "-",
+        "+"
+      ],
+      "models": {
+        "swap_both": "(x^2 y, -x y^2) ~ (x,-y) after cancel xy? wait: actually (x^2 y, -x y^2)=(xy)(x,-y)"
+      },
+      "note": "module 1-dimensional; projective map is swap after removing invariant factors"
+    },
+    "4": {
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree: det-twisted module vanishes (same as ordinary)"
+    },
+    "5": {
+      "all_ledgers_in_module": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed"
+      ],
+      "dim": 2,
+      "e": 5,
+      "generic_ledger": [
+        "-",
+        "+"
+      ],
+      "note": "preserve_both requires higher e (e\u22657) or extra (xy) factors",
+      "preserve_both_absent": true,
+      "special_lines": {
+        "plus_fixed_minus_to_plus": [
+          "+",
+          "+"
+        ],
+        "plus_to_minus_minus_fixed": [
+          "-",
+          "-"
+        ]
+      }
+    },
+    "6": {
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree: det-twisted module vanishes (same as ordinary)"
+    },
+    "7": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "construction": "Multiply the four displayed ordinary models of degrees 7,11,11,13 (all divisible by \u0394) by powers of the endpoint-nonvanishing invariant xy, or work directly in the det-twisted residual module of degree e.",
+      "dim": 3,
+      "e": 7,
+      "endpoint_vanishing_orders": "A full transition state must record vanishing orders at the two endpoints, not only a binary preserve/swap label.",
+      "generic_ledger": [
+        "-",
+        "+"
+      ]
+    },
+    "8": {
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree: det-twisted module vanishes (same as ordinary)"
+    },
+    "9": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "construction": "Multiply the four displayed ordinary models of degrees 7,11,11,13 (all divisible by \u0394) by powers of the endpoint-nonvanishing invariant xy, or work directly in the det-twisted residual module of degree e.",
+      "dim": 3,
+      "e": 9,
+      "endpoint_vanishing_orders": "A full transition state must record vanishing orders at the two endpoints, not only a binary preserve/swap label.",
+      "generic_ledger": [
+        "-",
+        "+"
+      ]
+    }
+  },
+  "geometric_theorem": {
+    "headline": "OPEN",
+    "not_proved": [
+      "Which residual ledgers survive global G-equivariance and landing",
+      "A numerical common plane order m for an actual covariant",
+      "unirationality / ed_C(G)"
+    ],
+    "statements": [
+      {
+        "claim": "For a homogeneous G-covariant p of degree d: if d even then p|_{E_-(t)}=0; if d odd then p|_{E_-} is an ordinary binary D12-covariant E_-\u2192E_- (or zero).",
+        "id": "4B.1_even_odd_restriction",
+        "status": "PROVED"
+      },
+      {
+        "claim": "If the common plus-plane order is the odd integer m and the odd restriction is nonzero, then p|_{E_-} = \u0394_t^m h_t with h_t det-twisted of degree d\u22126m.",
+        "id": "4B.2_Delta_factor",
+        "status": "PROVED"
+      },
+      {
+        "claim": "The ordinary and det-twisted binary covariant modules are free of rank 2 over R=Q[xy, x^6+y^6], generated in degrees 1 and 5.  Hilbert series (t+t^5)/((1-t^2)(1-t^6)).  This controls ALL degrees.",
+        "id": "4B.3_module_presentation",
+        "status": "PROVED"
+      },
+      {
+        "claim": "For residual degree e=1 or 3: only swap_both.  For e=5: three ledgers (not preserve_both).  For e\u22657 odd: all four ledgers occur in the local D12 module.  Centralizer symmetry alone does not force a unique global transition.",
+        "id": "4B.4_endpoint_classification",
+        "status": "PROVED_locally"
+      },
+      {
+        "claim": "The four local endpoint ledgers are not claimed to extend to global G-covariants; global restriction maps may cut the module.",
+        "id": "4B.5_not_global",
+        "status": "THEOREM_BOUNDARY"
+      }
+    ]
+  },
+  "headline": "OPEN",
+  "module": {
+    "basis_exponents_ordinary": {
+      "0": [],
+      "1": [
+        1
+      ],
+      "10": [],
+      "11": [
+        0,
+        3,
+        6,
+        9
+      ],
+      "12": [],
+      "13": [
+        1,
+        4,
+        7,
+        10,
+        13
+      ],
+      "14": [],
+      "15": [
+        2,
+        5,
+        8,
+        11,
+        14
+      ],
+      "16": [],
+      "17": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15
+      ],
+      "18": [],
+      "19": [
+        1,
+        4,
+        7,
+        10,
+        13,
+        16,
+        19
+      ],
+      "2": [],
+      "20": [],
+      "21": [
+        2,
+        5,
+        8,
+        11,
+        14,
+        17,
+        20
+      ],
+      "22": [],
+      "23": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21
+      ],
+      "24": [],
+      "25": [
+        1,
+        4,
+        7,
+        10,
+        13,
+        16,
+        19,
+        22,
+        25
+      ],
+      "26": [],
+      "27": [
+        2,
+        5,
+        8,
+        11,
+        14,
+        17,
+        20,
+        23,
+        26
+      ],
+      "28": [],
+      "29": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27
+      ],
+      "3": [
+        2
+      ],
+      "30": [],
+      "31": [
+        1,
+        4,
+        7,
+        10,
+        13,
+        16,
+        19,
+        22,
+        25,
+        28,
+        31
+      ],
+      "4": [],
+      "5": [
+        0,
+        3
+      ],
+      "6": [],
+      "7": [
+        1,
+        4,
+        7
+      ],
+      "8": [],
+      "9": [
+        2,
+        5,
+        8
+      ]
+    },
+    "controls": "ALL source degrees d and ALL residual orders after \u0394^m",
+    "definition_det_twisted": "T_d = Hom_{D12}^{det}(Sym^d V, V)",
+    "definition_ordinary": "O_d = Hom_{D12}(Sym^d V, V)",
+    "dimension_formula": {
+      "even_d": 0,
+      "odd_d": "floor((d+2)/3)"
+    },
+    "dimensions_d0_to_31": {
+      "0": 0,
+      "1": 1,
+      "10": 0,
+      "11": 4,
+      "12": 0,
+      "13": 5,
+      "14": 0,
+      "15": 5,
+      "16": 0,
+      "17": 6,
+      "18": 0,
+      "19": 7,
+      "2": 0,
+      "20": 0,
+      "21": 7,
+      "22": 0,
+      "23": 8,
+      "24": 0,
+      "25": 9,
+      "26": 0,
+      "27": 9,
+      "28": 0,
+      "29": 10,
+      "3": 1,
+      "30": 0,
+      "31": 11,
+      "4": 0,
+      "5": 2,
+      "6": 0,
+      "7": 3,
+      "8": 0,
+      "9": 3
+    },
+    "finite_presentation": {
+      "base_ring": {
+        "generators": {
+          "u": "xy (degree 2)",
+          "v": "x^6 + y^6 (degree 6)"
+        },
+        "invariant_ring_of": "binary D12 on V = E_-(t) \u2245 Q^2",
+        "name": "R = Q[u, v]",
+        "note": "\u0394^2 = (x^6 \u2212 y^6)^2 = v^2 \u2212 4 u^6, so \u0394 is integral over R but not an R-element; \u0394 is anti-invariant under reflections.",
+        "relations": "none \u2014 R is a polynomial ring"
+      },
+      "det_twisted_module_T": {
+        "definition": "T = \u2295_d Hom_{D12}^{det}(Sym^d V, V)  (q(gv)=det(g) g q(v))",
+        "dimension": "same as ordinary",
+        "free": true,
+        "generators": [
+          {
+            "degree": 1,
+            "formula": "(x, -y)",
+            "ledger": "swap_both",
+            "name": "h1"
+          },
+          {
+            "degree": 5,
+            "formula": "(y^5, -x^5)",
+            "independent_of": "u^2 h1",
+            "name": "h5"
+          }
+        ],
+        "hilbert_series": "identical to ordinary: (t + t^5)/((1-t^2)(1-t^6))",
+        "rank": 2,
+        "relation_to_ordinary": "Multiplication by \u0394 (degree 6, det character) gives R-module maps O \u2192 T and T \u2192 O shifting degree by 6.",
+        "relations": "none"
+      },
+      "line_base_module": {
+        "note": "If L_t itself is a base component of transverse order n, then d+n odd (by the same character argument as 4A), and the leading exceptional map dominates L_t.  The leading module is again a copy of O or T at the residual degree."
+      },
+      "ordinary_module_O": {
+        "definition": "O = \u2295_{d\u22650} Hom_{D12}(Sym^d V, V)  (ordinary, twist=1)",
+        "dimension": "dim O_d = 0 (d even); floor((d+2)/3) (d odd)",
+        "free": true,
+        "generators": [
+          {
+            "degree": 1,
+            "formula": "(x, y)",
+            "ledger_if_primitive": "preserve_both after viewing projectively as id",
+            "name": "g1"
+          },
+          {
+            "degree": 5,
+            "formula": "(y^5, x^5)  [the a=0 basis vector at d=5]",
+            "independent_of": "u^2 g1 = (x^3 y^2, x^2 y^3)",
+            "name": "g5"
+          }
+        ],
+        "hilbert_series": {
+          "check": "coeff of t^d = floor((d+2)/3) for d odd",
+          "formula": "t/(1-t^2) * (1 + t^4) / (1 - t^6)  with only odd powers nonzero",
+          "rational_form": "(t + t^5) / ( (1 - t^2) (1 - t^6) )",
+          "simplified": "sum_{k\u22650} floor((2k+1+2)/3) t^{2k+1} = sum_k floor((2k+3)/3) t^{2k+1}"
+        },
+        "rank": 2,
+        "relations": "none (free of rank 2 over R)",
+        "verification_of_freeness": "dim O_{2k+1} = floor((2k+3)/3).  The free module R\u00b7g1 \u2295 R\u00b7g5 has Hilbert series (t + t^5)/((1-t^2)(1-t^6)).  Expanding: 1/((1-t^2)(1-t^6)) = sum_{a,b\u22650} t^{2a+6b}; times t gives degrees 1+2a+6b; times t^5 gives 5+2a+6b.  For odd d=2k+1 the number of representations equals floor((d+2)/3).  Checked computationally for d\u226460 in the verifier."
+      }
+    },
+    "free_check_d_le_60": true,
+    "hilbert_series_det_twisted": "(t + t^5) / ((1 - t^2) (1 - t^6))",
+    "hilbert_series_ordinary": "(t + t^5) / ((1 - t^2) (1 - t^6))"
+  },
+  "plus_plane_coupling": {
+    "for_odd_plane_order_m": "p|_{E_-} = \u0394_t^m * h_t, h_t \u2208 T_{d-6m}",
+    "mandatory_Delta": "\u0394_t = x^6 \u2212 y^6",
+    "residual_samples": {
+      "m1_d11": {
+        "dim": 2,
+        "e": 5,
+        "mandatory_factor": "Delta_t^m with Delta_t = x^6 - y^6",
+        "residual_type": "det_twisted"
+      },
+      "m1_d13": {
+        "dim": 3,
+        "e": 7,
+        "mandatory_factor": "Delta_t^m with Delta_t = x^6 - y^6",
+        "residual_type": "det_twisted"
+      },
+      "m1_d19": {
+        "dim": 5,
+        "e": 13,
+        "mandatory_factor": "Delta_t^m with Delta_t = x^6 - y^6",
+        "residual_type": "det_twisted"
+      },
+      "m1_d25": {
+        "dim": 7,
+        "e": 19,
+        "mandatory_factor": "Delta_t^m with Delta_t = x^6 - y^6",
+        "residual_type": "det_twisted"
+      },
+      "m1_d7": {
+        "dim": 1,
+        "e": 1,
+        "mandatory_factor": "Delta_t^m with Delta_t = x^6 - y^6",
+        "residual_type": "det_twisted"
+      },
+      "m3_d11": {
+        "e": -7,
+        "forced_zero_restriction": true,
+        "reason": "deg \u0394^m = 6m > d, so odd restriction vanishes"
+      },
+      "m3_d13": {
+        "e": -5,
+        "forced_zero_restriction": true,
+        "reason": "deg \u0394^m = 6m > d, so odd restriction vanishes"
+      },
+      "m3_d19": {
+        "dim": 1,
+        "e": 1,
+        "mandatory_factor": "Delta_t^m with Delta_t = x^6 - y^6",
+        "residual_type": "det_twisted"
+      },
+      "m3_d25": {
+        "dim": 3,
+        "e": 7,
+        "mandatory_factor": "Delta_t^m with Delta_t = x^6 - y^6",
+        "residual_type": "det_twisted"
+      },
+      "m3_d7": {
+        "e": -11,
+        "forced_zero_restriction": true,
+        "reason": "deg \u0394^m = 6m > d, so odd restriction vanishes"
+      },
+      "m5_d11": {
+        "e": -19,
+        "forced_zero_restriction": true,
+        "reason": "deg \u0394^m = 6m > d, so odd restriction vanishes"
+      },
+      "m5_d13": {
+        "e": -17,
+        "forced_zero_restriction": true,
+        "reason": "deg \u0394^m = 6m > d, so odd restriction vanishes"
+      },
+      "m5_d19": {
+        "e": -11,
+        "forced_zero_restriction": true,
+        "reason": "deg \u0394^m = 6m > d, so odd restriction vanishes"
+      },
+      "m5_d25": {
+        "e": -5,
+        "forced_zero_restriction": true,
+        "reason": "deg \u0394^m = 6m > d, so odd restriction vanishes"
+      },
+      "m5_d7": {
+        "e": -23,
+        "forced_zero_restriction": true,
+        "reason": "deg \u0394^m = 6m > d, so odd restriction vanishes"
+      }
+    }
+  },
+  "producer": "certificates/transitions/d12_binary_line/produce.py",
+  "recovery": {
+    "packet": "tmp/d12_line_restriction/",
+    "sha256": {
+      "tmp/d12_line_restriction/REPORT.md": "46e15d99079b482cecdaa67ae56d323217d2523c2b2ae1c94e66f1f37173c79a",
+      "tmp/d12_line_restriction/verify.py": "1878cd8cbab7394be7a36d1686c72daea67224501774296c16737f68c02ae7c6"
+    },
+    "terminal_marker_upstream": "D12_LINE_RESTRICTION_AUDIT_OK"
+  },
+  "regressions": {
+    "dim_d1": 1,
+    "dim_d11": 4,
+    "dim_d5": 2,
+    "dim_d7": 3,
+    "example_ledgers_local": {
+      "fix_both": {
+        "degree": 13,
+        "ledger": [
+          "+",
+          "-"
+        ]
+      },
+      "plus_fixed_minus_to_plus": {
+        "degree": 11,
+        "ledger": [
+          "+",
+          "+"
+        ]
+      },
+      "plus_to_minus_minus_fixed": {
+        "degree": 11,
+        "ledger": [
+          "-",
+          "-"
+        ]
+      },
+      "swap_both": {
+        "degree": 7,
+        "ledger": [
+          "-",
+          "+"
+        ]
+      }
+    }
+  },
+  "self_sha256": "c50ac81f8328615d469c7571269b6d10da36b7a6585c91ca152417ca4784df74",
+  "stratum": {
+    "closure": "L_t = P(E_-(t)) \u2245 P^1 \u2282 X",
+    "generic_stabilizer_H": "C2 = <t>",
+    "label": "C2_line",
+    "on_X": true,
+    "orbit_size": 55,
+    "residual": "S3",
+    "setwise_stabilizer": "D12 = C_G(t)"
+  },
+  "theorem_boundary": "Complete free presentation of the binary D12 transition module and local endpoint classification in all degrees.  Local models are not global G-covariants.  Headline OPEN.",
+  "verifier": "certificates/transitions/d12_binary_line/verify.py",
+  "work_package": "WP-4B"
+}

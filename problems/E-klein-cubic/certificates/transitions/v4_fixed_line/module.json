@@ -1,0 +1,350 @@
+{
+  "charge_tracking": {
+    "Gate1_consistency": "CLAIM_1_SURVIVES_CLAIM_2_REFUTED",
+    "explicit_q_coords": "REMAINDER (existence/uniqueness only; not required for labels)",
+    "flags": {
+      "P(A) -> type_II_points": "charge e+<q>, C3-orbit of size 3",
+      "P(A) -normal-> elliptic_component": "same elliptic's charge labeling",
+      "P(A) -normal-> triangle_edge": "rational line L_*; endpoints type-I with charge <q>",
+      "P(A) -normal-> type_I_vertex": "charge <q> on the unique local elliptic through that vertex"
+    },
+    "source": "WP-3 E[2] theorem (PROVED_STRUCTURALLY)",
+    "type_I": "<q> \u2282 E[3]",
+    "type_II": "e + <q> for 0\u2260e\u2208E[2]"
+  },
+  "geometric_theorem": {
+    "headline": "OPEN",
+    "not_proved": [
+      "Global compatibility of V4 jets with all 55 plane orders (WP-5)",
+      "Existence of a landing covariant",
+      "Explicit Weierstrass model of q, e_i"
+    ],
+    "statements": [
+      {
+        "claim": "The ambient V4 fixed line P(A) is a forced base component of any homogeneous landing covariant: a nonzero order-zero restriction would be a residual-C3 equivariant rational map P(A)\u21e2X whose generic value is C3-fixed in X^{V4}, but the only C3-fixed points of P(A) are the two A4 character lines, both off X, and the six points of X^{V4} = R \u2294 {[B],[C],[D]} form two C3-orbits of size 3 (type-II and type-I) with no C3-fixed point on X.",
+        "id": "4C.1_forced_base",
+        "proof_sketch": [
+          "V4 acts trivially on A \u21d2 any order-zero p|_{A} lands in the V4-fixed locus of W, i.e. in A \u2295 (nothing else is V4-fixed as a line...). More precisely: for v\u2208A, p(v) must be V4-eigen with the same character as the O(1) character on <v>, which is trivial, so p(v)\u2208A.  Thus order-zero restriction is an endomorphism of A, i.e. a binary map P(A)\u2192P(A), residual-C3 equivariant.",
+          "Landing in X requires image in X\u2229P(A)=R (three type-II points). A nonconstant map P^1\u2192P^1 cannot have finite image; a constant map lands at a C3-fixed point of P(A), i.e. an A4 character line, off X (certified).  The type-II points are cycled by residual C3, so none is C3-fixed.  Contradiction.  Hence p vanishes on P(A): forced base component."
+        ],
+        "status": "PROVED"
+      },
+      {
+        "claim": "N_{P(A)/P(W)} \u2245 O(1) \u2297 (B\u2295C\u2295D) \u2245 O(1) \u2297 (\u03c7_z \u2295 \u03c7_s \u2295 \u03c7_r) as V4-equivariant bundles on P(A).",
+        "id": "4C.2_normal_bundle",
+        "status": "PROVED"
+      },
+      {
+        "claim": "First nonzero normal-jet directions decompose by V4-character: (i) pure B / C / D directions point along the three triangle edges toward type-I vertices and the corresponding elliptic E_z / E_s / E_r; (ii) mixed characters encode multi-edge / type-II sector data; (iii) residual C3 cycles the three pure edge characters.",
+        "id": "4C.3_normal_directions",
+        "status": "PROVED",
+        "table": {
+          "chi_r_direction": {
+            "E2_charge": "<q> on E_r",
+            "elliptic": "E_r",
+            "target_line": "D",
+            "triangle": "vertex [D] type-I"
+          },
+          "chi_s_direction": {
+            "E2_charge": "<q> on E_s",
+            "elliptic": "E_s",
+            "target_line": "C",
+            "triangle": "vertex [C] type-I"
+          },
+          "chi_z_direction": {
+            "E2_charge_at_type_I": "<q> after origin at a type-I point on E_z",
+            "elliptic": "E_z = X \u2229 P(A\u2295B)",
+            "minus_lines_through_B": [
+              "L_s",
+              "L_r"
+            ],
+            "target_line": "B",
+            "triangle": "vertex [B] type-I"
+          },
+          "rational_fixed_line": {
+            "the_line_itself": "P(A) is rational; forced base, so maps emerge from normal jets",
+            "triangle_edges": "L_z, L_s, L_r are the rational minus-lines (on X)"
+          },
+          "type_II_sector": {
+            "E2_charge": "e + <q> for 0\u2260e\u2208E[2] (WP-3 theorem)",
+            "incidence": "each type-II point lies on all three elliptics (Gate 1 CLAIM_1)",
+            "normal_jets_to_type_II": "jets valued in A (trivial character) deform within P(A); landing on type-II is the residual C3-orbit of R",
+            "support": "R = X \u2229 P(A), three points"
+          }
+        }
+      },
+      {
+        "claim": "Under every incident flag, type-I states carry charge <q> and type-II states carry charge e+<q> (WP-3 E[2] theorem), consistent with Gate 1 type-II triple-elliptic meetings.  Residual C3 cycles charges within each orbit; residual reflections act as P \u21a6 e\u2212P.",
+        "explicit_Weierstrass_coords": "NOT computed: existence/uniqueness of q and E[2] up to sign is the theorem; numerical Weierstrass coordinates remain a named remainder unless needed for a specific restriction matrix (not required for the charge-label tracking of transition states).",
+        "id": "4C.4_charge_tracking",
+        "status": "PROVED_from_WP3"
+      },
+      {
+        "claim": "The local triangle graph closes (endpoint preserve and swap both occur).  Not re-run here (house rule 7).",
+        "id": "4C.5_no_bare_V4_rerun",
+        "status": "ACCEPTED_from_upstream",
+        "upstream": "tmp/involution_exceptional_divisor/V4_REPORT.md"
+      }
+    ]
+  },
+  "headline": "OPEN",
+  "module": {
+    "character_decomposition_samples": {
+      "0,0": {
+        "A_triv": 2,
+        "B_chi_z": 0,
+        "C_chi_s": 0,
+        "D_chi_r": 0
+      },
+      "1,1": {
+        "A_triv": 0,
+        "B_chi_z": 1,
+        "C_chi_s": 1,
+        "D_chi_r": 1
+      },
+      "1,5": {
+        "A_triv": 0,
+        "B_chi_z": 5,
+        "C_chi_s": 5,
+        "D_chi_r": 5
+      },
+      "2,2": {
+        "A_triv": 6,
+        "B_chi_z": 1,
+        "C_chi_s": 1,
+        "D_chi_r": 1
+      },
+      "2,5": {
+        "A_triv": 24,
+        "B_chi_z": 4,
+        "C_chi_s": 4,
+        "D_chi_r": 4
+      },
+      "3,3": {
+        "A_triv": 2,
+        "B_chi_z": 3,
+        "C_chi_s": 3,
+        "D_chi_r": 3
+      }
+    },
+    "controls": "ALL m\u22650 and ALL d via free ranks over Q[x,y] and the n_triv formula",
+    "definition": "M_{m,d} = [ H^0(P(A), Sym^m N^vee \u2297 O(d)) \u2297 W ]^{V4}",
+    "dimension_formula": {
+      "d_ge_m": "(n_triv(m) + binom(m+2,2)) * (d - m + 1)",
+      "d_lt_m": 0,
+      "n_triv_closed_form": {
+        "m_even_2k": "binom(k+2, 2)",
+        "m_odd_2k_plus_1": "binom(k+1, 2)",
+        "verified_m_le_40": true
+      },
+      "n_triv_m": "number of monomials of degree m in (B*,C*,D*) of trivial V4-character",
+      "n_triv_sequence_m0_to_20": [
+        1,
+        0,
+        3,
+        1,
+        6,
+        3,
+        10,
+        6,
+        15,
+        10,
+        21,
+        15,
+        28,
+        21,
+        36,
+        28,
+        45,
+        36,
+        55,
+        45,
+        66
+      ]
+    },
+    "finite_presentation": {
+      "as_bigraded_module": {
+        "complete_control": "rank formula + Hilbert series control all (m,d)",
+        "finitely_generated_in_m": false,
+        "reason": "r_m ~ m^2/2 grows quadratically; infinite normal orders"
+      },
+      "base_ring": {
+        "H_action": "trivial (V4 acts as +1 on A)",
+        "grading": "deg = 1 (source degree on P(A) \u2245 P^1)",
+        "name": "R = Sym(A*) \u2245 Q[x,y]",
+        "residual_C3": "A4/V4 \u2245 C3 acts on A as the sum of the two nontrivial linear characters 1',1'' of A4 (i.e. on P(A) with two fixed points = A4 character lines).  Invariants under residual C3 are the binary C3-invariants on A."
+      },
+      "first_nonzero_normal_jets": {
+        "order_zero_forbidden_on_X": true,
+        "see_theorem": "4C.1"
+      },
+      "for_each_fixed_m": {
+        "character_decomposition_of_generators": "n_triv(m) generators valued in A (dim-2 target contributes factor 2 already in rank formula via 2 n_triv in the pre-simplified count; rank formula already includes target dimensions), plus n_z, n_s, n_r generators valued in B, C, D respectively.",
+        "free_over_R": true,
+        "generator_degree": "d = m",
+        "rank": "r_m = n_triv(m) + binom(m+2,2)",
+        "relations": "none for fixed m over R"
+      }
+    },
+    "hilbert_coeffs_m0_8_d0_11": {
+      "0,0": 2,
+      "0,1": 4,
+      "0,10": 22,
+      "0,11": 24,
+      "0,2": 6,
+      "0,3": 8,
+      "0,4": 10,
+      "0,5": 12,
+      "0,6": 14,
+      "0,7": 16,
+      "0,8": 18,
+      "0,9": 20,
+      "1,0": 0,
+      "1,1": 3,
+      "1,10": 30,
+      "1,11": 33,
+      "1,2": 6,
+      "1,3": 9,
+      "1,4": 12,
+      "1,5": 15,
+      "1,6": 18,
+      "1,7": 21,
+      "1,8": 24,
+      "1,9": 27,
+      "2,0": 0,
+      "2,1": 0,
+      "2,10": 81,
+      "2,11": 90,
+      "2,2": 9,
+      "2,3": 18,
+      "2,4": 27,
+      "2,5": 36,
+      "2,6": 45,
+      "2,7": 54,
+      "2,8": 63,
+      "2,9": 72,
+      "3,0": 0,
+      "3,1": 0,
+      "3,10": 88,
+      "3,11": 99,
+      "3,2": 0,
+      "3,3": 11,
+      "3,4": 22,
+      "3,5": 33,
+      "3,6": 44,
+      "3,7": 55,
+      "3,8": 66,
+      "3,9": 77,
+      "4,0": 0,
+      "4,1": 0,
+      "4,10": 147,
+      "4,11": 168,
+      "4,2": 0,
+      "4,3": 0,
+      "4,4": 21,
+      "4,5": 42,
+      "4,6": 63,
+      "4,7": 84,
+      "4,8": 105,
+      "4,9": 126,
+      "5,0": 0,
+      "5,1": 0,
+      "5,10": 144,
+      "5,11": 168,
+      "5,2": 0,
+      "5,3": 0,
+      "5,4": 0,
+      "5,5": 24,
+      "5,6": 48,
+      "5,7": 72,
+      "5,8": 96,
+      "5,9": 120,
+      "6,0": 0,
+      "6,1": 0,
+      "6,10": 190,
+      "6,11": 228,
+      "6,2": 0,
+      "6,3": 0,
+      "6,4": 0,
+      "6,5": 0,
+      "6,6": 38,
+      "6,7": 76,
+      "6,8": 114,
+      "6,9": 152,
+      "7,0": 0,
+      "7,1": 0,
+      "7,10": 168,
+      "7,11": 210,
+      "7,2": 0,
+      "7,3": 0,
+      "7,4": 0,
+      "7,5": 0,
+      "7,6": 0,
+      "7,7": 42,
+      "7,8": 84,
+      "7,9": 126,
+      "8,0": 0,
+      "8,1": 0,
+      "8,10": 180,
+      "8,11": 240,
+      "8,2": 0,
+      "8,3": 0,
+      "8,4": 0,
+      "8,5": 0,
+      "8,6": 0,
+      "8,7": 0,
+      "8,8": 60,
+      "8,9": 120
+    },
+    "hilbert_series": {
+      "formula_piecewise": "For d\u2265m: dim = (n_triv(m) + binom(m+2,2)) * (d\u2212m+1), where n_triv(m) = # {\u03b1+\u03b2+\u03b3=m : \u03b1+\u03b3 even, \u03b2+\u03b3 even}.",
+      "hilbert_series": "H(s,t) = sum_m s^m (n_triv(m)+binom(m+2,2)) t^m / (1-t)^2",
+      "n_triv_closed": "m=2k even: n_triv = binom(k+2,2) = (k+1)(k+2)/2; m=2k+1 odd: n_triv = binom(k+1,2) = k(k+1)/2. Verified by enumeration for m\u226440.  (Not equal to round((m+3)^2/12).)",
+      "valid_for": "all m\u22650, all d",
+      "variables": {
+        "s": "normal order m",
+        "t": "source degree d"
+      }
+    }
+  },
+  "normal_bundle": {
+    "H_module": "\u03c7_z \u2295 \u03c7_s \u2295 \u03c7_r",
+    "as_sheaf": "N \u2245 O(1) \u2297 (B \u2295 C \u2295 D)",
+    "rank": 3
+  },
+  "producer": "certificates/transitions/v4_fixed_line/produce.py",
+  "regressions": {
+    "A4_character_lines_off_X": true,
+    "dim_M_0_0": 2,
+    "dim_M_1_1": 3,
+    "joint_dims": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "n_triv_0": 1,
+    "n_triv_1": 0,
+    "n_triv_2": 3,
+    "triangle_closes": "ACCEPTED (house rule 7; V4_REPORT)"
+  },
+  "self_sha256": "5681d286c8a28e34f0c0d71902b54355528026da6c6c521f9491c882967e8879",
+  "stratum": {
+    "closure": "P(A) = P(W^{V4}) \u2245 P^1",
+    "generic_stabilizer_H": "V4",
+    "joint_character_dims": {
+      "A_triv": 2,
+      "B_chi_z": 1,
+      "C_chi_s": 1,
+      "D_chi_r": 1
+    },
+    "label": "V4_line",
+    "on_X_section": "R = X \u2229 P(A): three reduced type-II points",
+    "orbit_size": 55,
+    "residual": "C3 = A4/V4",
+    "setwise_stabilizer": "A4 = N_G(V4)"
+  },
+  "theorem_boundary": "Forced base of P(A), complete bigraded V4-jet module, character-wise normal directions, and E[2]-charge tracking under flags.  No global obstruction claimed.  Headline OPEN.",
+  "verifier": "certificates/transitions/v4_fixed_line/verify.py",
+  "work_package": "WP-4C"
+}
