@@ -141,9 +141,43 @@ advanced, but not completed, three attacks:
   use of the primitive-root model must first separate and normalize the
   simple component.  Exact double-fold lifting also proves that the raw
   irreducible target branch is nonnormal in codimension one.  Cramer
-  saturation removes the squared factors in every exact line test, but
-  delta-open modular singular witnesses remain; smoothness of the selected
-  normalization is still an unproved gate.
+  saturation removes the squared factors in every exact line test.  A
+  squarefree degree-12 rational-univariate certificate now proves twelve
+  distinct content-open, delta-open characteristic-zero singular points on
+  the `A=0,B=2` slice.  The full Hessian has rank exactly three and, since
+  `E_uu` is a unit, the eliminated four-variable Schur Hessian has rank
+  exactly two at every point.  Hence neither the direct smooth-ramification
+  argument nor its ODP shortcut is available.  The binary cubic on the
+  Hessian kernel and the correctly Morse-corrected effective quartic both
+  vanish identically in the exact degree-12 etale algebra, so the residual
+  `h` in `x*y-h(z,w)` is zero or begins in order at least five.  Smoothness
+  of the selected normalization remains undecided.  The characteristic-zero
+  equation has now been reduced exactly as `E=C*P`, where `C` has 2,630
+  terms and degree `22`, and the primitive `u`-sextic `P` has 1,593 terms.
+  The irreducible degree-12 RUR makes `P` and all five derivatives zero and
+  keeps `C`, `P_uu`, and the transverse Hessian determinant invertible.
+  Hence the exact gate is the single localized membership
+  `P in (P_A,P_B,P_Y)`.  Exact determinant reconstruction proves rank-two
+  tangency, unique left/right kernels, and all five first contractions at the
+  entire RUR orbit, but only pointwise; it supplies neither a
+  two-dimensional component nor local membership.  Direct local-ring and
+  source-coordinate component eliminations remain resource nonverdicts.  All
+  nine original projective frame relations also vanish at the reconstructed
+  orbit and their seven-variable Jacobian has rank exactly two, so the orbit
+  is not an extraneous determinant-consequence point and the original
+  incidence is not a smooth-source resolution.
+  The exact implication
+  `P_Z,P_u in (P,P_A,P_B,P_Y) => P in (P_A,P_B,P_Y)` is available in the
+  characteristic-zero regular local ring, but bounded mod-29 searches
+  exclude its hypotheses only through the selected multiplier box.  Three
+  rank-deficient mod-13 v1 boxes are explicitly undecided.  Good-prime formal residuals vanish through
+  order `128` in every rational kernel direction at `13`, `29`, and `31`
+  (and through `256` on two `p=29` lines), but no bounded modular jet or
+  bounded multiplier search replaces the missing all-orders certificate.
+  Exact global line normal forms at `29` and `31` are nonzero because other
+  critical sheets survive; their remainders vanish at the selected point and
+  are not local nonmembership.  The first rigorous Bézout contact bound on
+  that line is `11000`, so the order-256 jet is not decisive.
 
 These are structural reductions, not a proof or refutation.  In particular,
 index one is not a rational point, a generic rational frame is not an

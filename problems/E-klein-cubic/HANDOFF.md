@@ -156,11 +156,142 @@ following sharper boundary.
    characteristic-zero two-dimensional locus where two distinct ordinary
    Cramer-open folds have independent target normals; `S6` transitivity puts
    both local branches on the same irreducible `D`.  Direct Lefschetz on raw
-   `D` is therefore unavailable.  Small-prime tests still find singular
-   points after `delta` saturation.  On `A=0,B=2`, the saturated rank-zero
-   scheme has modular dimension zero and degree `12` at `67`; the exact
-   characteristic-zero ideal timed out at 180 seconds, so smoothness of the
-   selected normalization is not yet refuted.
+   `D` is therefore unavailable.  The formerly modular singularity warning
+   is now exact in characteristic zero.  On `A=0,B=2`, a rational-univariate
+   certificate gives a monic squarefree polynomial `H` of degree `12` and
+   coordinates
+
+   ```text
+   D=H'(u),  Y=NY(u)/D,  Z=NZ(u)/D
+   ```
+
+   for which all six singular equations vanish in `QQ[u]/(H)`, while `D`,
+   the primitive slice content, and the Cramer minor `delta` are units.
+   Thus the content-open, delta-open ramification model contains a finite
+   etale degree-12 characteristic-zero singular subscheme, hence twelve
+   distinct geometric singular points.  Exact Python quotient arithmetic
+   and an independent Macaulay2 ideal-membership replay both certify this.
+   Consequently the direct argument that applies Sommese to a smooth
+   ramification model is unavailable.
+
+   These points are not ordinary double points.  The full Hessian in
+   `(A,B,Y,Z,u)` has rank exactly `3` at all twelve points and `E_uu` is a
+   unit; equivalently, after eliminating `u`, the four-parameter
+   Schur-complement Hessian has rank exactly `2`, not `4`.  Therefore the
+   proposed ODP/small-resolution shortcut is also rejected.  The higher-jet
+   calculation now goes two exact orders farther: the binary cubic on the
+   two-dimensional full-Hessian kernel vanishes identically, and so does the
+   effective binary quartic after the required Morse-splitting correction
+   `U|K-3*L^T*Q^(-1)*L`.  Thus, in the local branch equation
+   `x*y-h(z,w)`, either `h=0` or `ord(h)>=5` at all twelve points.  This does
+   not prove `h=0`; finite jets cannot do so.  The next decisive gate is the
+   all-orders localized critical-surface test
+
+   ```text
+   E, E_u, E_Z in (E_A,E_B,E_Y)
+   ```
+
+   after inverting a transverse Hessian minor and the content/Cramer gates.
+   A successful exact characteristic-zero certificate would show that the
+   local branch is a nonnormal Morse--Bott crossing with smooth finite
+   normalization.  Failure, or a nonzero higher residual, would leave a
+   normal higher `cA`-type singularity.  The present certificates do not
+   decide global projective small resolvability or the final class-group
+   obstruction.
+   The exact certificates, independent replays, proof boundaries, and
+   hash bindings are in
+   `tmp/target_branch_delta_saturated_singularity/PROOF_AUDIT.md` and
+   `tmp/target_branch_delta_saturated_singularity/HESSIAN_PROOF_AUDIT.md`.
+   The higher-jet audit and hash manifest are in the same packet.
+
+   The former characteristic-zero primitive-equation bottleneck is now
+   closed exactly.  The full 72,286-term eliminant factors over `ZZ` as
+
+   ```text
+   E_raw=C(A,B,Y,Z)*P(A,B,Y,Z,u),
+   C: 2630 terms, total degree 22,
+   P: 1593 terms, u-degree 6.
+   ```
+
+   Nemo/FLINT computes the multivariate content, exact division and literal
+   remultiplication; independent reductions recover the saved mod-13 and
+   mod-67 primitives up to nonzero scalars.  The accepted degree-12 RUR
+   polynomial is irreducible and squarefree, and exact quotient arithmetic
+   proves `P=P_A=P_B=P_Y=P_Z=P_u=0` while `C`, `P_uu`, and the
+   `(A,B,Y)` Hessian determinant are units.  Therefore it is enough to prove
+
+   ```text
+   P in (P_A,P_B,P_Y)_mRUR.
+   ```
+
+   The regular two-dimensional quotient then supplies the `P_Z` and `P_u`
+   memberships automatically.  The exact LocalRings calculation reaches the
+   six zero RUR remainders and then times out; colon, Mora, sparse-F4, and
+   parameter-field variants likewise give no verdict.  The sparse
+   consequence matrix nevertheless admits a useful exact pointwise audit:
+   its Cramer minor is a unit on the whole irreducible RUR orbit, its rank is
+   exactly two, its normalized right and left kernels are explicit, and
+   `ell^T*(partial_x M)*r=0` for all five variables.  This proves tangency at
+   the twelve points but does not exhibit the required two-dimensional
+   component.  The same kernel coordinates satisfy all nine original
+   projective frame relations exactly.  Their `9 x 7` Jacobian has rank two:
+   one `2 x 2` minor is a unit and all 2,940 `3 x 3` minors vanish.  Hence the
+   singular orbit is not an artifact of retaining only the three sparse
+   consequences, and the original incidence is not a smooth local
+   normalization.  The parameter content factors exactly as
+
+   ```text
+   const*(25A-381)*(5A-81)^3*Q8^2*Q2,
+   ```
+
+   with `Q8` irreducible of degree eight and `Q2` quadratic; every factor is
+   a unit at the RUR orbit.
+
+   There is also a valid characteristic-zero shortcut: on the regular formal
+   critical surface,
+
+   ```text
+   P_Z,P_u in (P,P_A,P_B,P_Y)_m  ==>  P in (P_A,P_B,P_Y)_m.
+   ```
+
+   Indeed, a nonzero positive-order residual cannot divide both of its
+   partial derivatives in characteristic zero.  The hypotheses have not
+   been proved.  A mod-29 full-rank calculation excludes both candidate
+   logarithmic identities in the bounded box
+   `deg(q),deg(a_A),deg(a_B),deg(a_Y)<=6`, `deg(b)<=5`.  In the separate
+   mod-13 v1 search, the full-rank negatives are `P_u` through `d=4` and
+   `P_Z` through `d=5`; `P_u` at `d=5,6` and `P_Z` at `d=6` are undecided
+   because testing sampled-kernel basis vectors one at a time was
+   insufficient.  The script is repaired for future runs, but the large
+   deficient cases were deliberately not rerun after the memory overrun.
+
+   Modulo `13`, no
+   unit-multiplier identity for `P` exists in the recorded boxes through
+   `deg(q)<=6`.  Good-prime Newton solves give zero residual through order
+   `128` on every rational kernel line at `13`, `29`, and `31`, and through
+   order `256` on two `p=29` lines.  Padé/Berlekamp--Massey finds no
+   low-degree rational critical arc.  All of these are bounded modular
+   diagnostics, not the missing characteristic-zero all-orders proof.
+   Complete modular grevlex bases on the critical line
+   `Z=Z0+t,u=u0` give nonzero global normal forms for `P` at both `29` and
+   `31`.  Those remainders vanish at the selected point, so the result proves
+   only that unrelated critical sheets contaminate the global ideal.  It is
+   not local nonmembership.  The line generators have degrees `(11,10,10)`
+   and the reduced remainder degree `10`; Bézout gives only
+   `deg(C)<=1100` and possible contact order at most `11000`.  Therefore the
+   order-256 formal vanishing is not a finite-determinacy certificate.
+
+   The exact primitive, localized-attack, and good-prime formal audits are
+   `EXACT_PRIMITIVE_PROOF_AUDIT.md`,
+   `LOCALIZED_MEMBERSHIP_ATTACK_REPORT.md`, and
+   `FORMAL_PRIMITIVE_GOOD_PRIMES_AUDIT.md` in the same packet.  The new
+   determinant and logarithmic audits are
+   `DETERMINANTAL_CRITICAL_SURFACE_AUDIT.md` and
+   `LOGARITHMIC_CRITERION_AUDIT.md`.  The original-relation, global-line, and
+   jet-bound audits are `ORIGINAL_PROJECTIVE_RUR_AUDIT.md`,
+   `GROEBNER_LOCAL_COMPONENT_AUDIT.md`, and
+   `CRITICAL_LINE_DEGREE_BOUND_AUDIT.md`.  Each has a verified SHA-256
+   manifest.
 
 6. **The exact remaining fixed-frame gate is narrow.**  Since the extension
    has no intermediate fields and `Pic^0(C)(F)=0`, a `K_proj`-point exists
@@ -171,13 +302,21 @@ following sharper boundary.
    gives no contradiction.
 
 Immediate ranking: first separate and normalize the multiplicity-one target
-branch, then prove that its cubic incidence has no three-primary non-Cartier
-Weil defect; the ordinary Picard, residue-degree, and generic-cubic-smoothness
-gates are complete.  A bounded
-modulo-`67` extraction shows that the global primitive sextic has only `1556`
-terms after removing its `2580`-term parameter content, so modular
-discriminant reconstruction remains feasible; the direct characteristic-zero
-import timed out at 180 seconds and produced no global branch equation.
+branch.  The immediate computation is now the exact all-orders localized
+critical-surface membership at the certified rank-two Schur singularities;
+depending on that answer, either pass to a finite smooth normalization or
+retire the smooth-model route and prove directly that the cubic incidence has
+no three-primary non-Cartier Weil defect.  The ordinary Picard,
+residue-degree, generic-cubic-smoothness, and exact primitive-equation gates
+are complete.  Do not rerun the raw 72,286-term Groebner calculation or add
+more finite jet orders without an effective bound.  The live local attack is
+a component-aware exact identity for the 1,593-term primitive, preferably
+through the sparse determinant/consequence incidence or a reconstructed
+unit separator; the existing direct CAS formulations are engineering
+timeouts, not negative membership results.  The source-coordinate
+Gröbner attempts also crossed the one-GiB cap before producing a marker and
+are nonverdicts.  Do not extend the order-256 jets merely to another
+arbitrary cutoff: the first general bound found is 11,000 even on one line.
 Exact true-projective-line reconnaissance (linear in `(A,B,Y,T)`, with
 `T=Z-11A^2/18`) gives discriminant pattern `(1,2),(23,2),(39,1)`; this is
 line evidence for a degree-39 simple component, not a certified global
@@ -203,9 +342,23 @@ New capped replays:
 /usr/sbin/taskpolicy -m 1024 /opt/homebrew/bin/python3 -u tmp/six_sheet_next_attack_redesign/verify.py
 /usr/sbin/taskpolicy -m 2048 /opt/homebrew/bin/python3 -u tmp/full_scaled_frame_branch_line_hostile_audit/verify.py
 /usr/sbin/taskpolicy -m 1024 /opt/homebrew/bin/python3 -u tmp/target_branch_cubic_smoothness_line_probe/probe.py
+/usr/sbin/taskpolicy -m 512 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_python_capped.py build_hprime_rur_certificate.py
+/usr/sbin/taskpolicy -m 512 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_python_capped.py verify_hprime_rur_certificate.py
+/usr/sbin/taskpolicy -m 512 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_m2_1g_capped.py exactcert_derivative_rur_verify.m2
+/usr/sbin/taskpolicy -m 1024 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_m2_1g_capped.py exactcert_hessian_rank_verify.m2
+/usr/sbin/taskpolicy -m 512 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_python_capped.py certify_kernel_cubic_rur.py
+/usr/sbin/taskpolicy -m 512 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_python_capped.py build_fourth_tensor_rur.py
+/usr/sbin/taskpolicy -m 512 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_python_capped.py certify_effective_quartic_rur.py
+/usr/sbin/taskpolicy -m 512 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_python_capped.py emit_raw_e_terms_tsv.py
+/usr/sbin/taskpolicy -m 1024 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_julia_capped.py extract_exact_primitive_nemo.jl
+/usr/sbin/taskpolicy -m 512 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_python_capped.py audit_exact_primitive_rur.py
+/usr/sbin/taskpolicy -m 512 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_python_capped.py probe_exact_primitive_formal_good_primes.py
+/usr/sbin/taskpolicy -m 512 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_python_capped.py analyze_primitive_formal_pade_p29.py
+/usr/sbin/taskpolicy -m 512 /opt/homebrew/bin/python3 -u tmp/target_branch_delta_saturated_singularity/run_python_capped.py audit_original_projective_relations_rur.py
 ```
 
-All heavy subprocesses must retain the explicit two-GiB wrapper.  The stale
+All heavy subprocesses must retain their explicit hard wrapper and the
+180-second timeout; the new RUR and Hessian replays use at most one GiB.  The stale
 generic `reduced_algebra.m2` process was stopped; no generic Groebner job is
 part of the accepted degree proof.
 

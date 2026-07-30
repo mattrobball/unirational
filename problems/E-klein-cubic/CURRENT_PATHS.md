@@ -73,9 +73,9 @@ There are now three structured continuations, in descending order.
    integral target hypersurface here.  Thus the sole remaining gate is the
    absence of a three-primary non-Cartier Weil defect in `Cl(T_D)/Pic(T_D)`
    (or on the normalized dominant incidence).  Local factoriality suffices;
-   normality does not.  A modular extraction measured the
-   primitive global sextic at only `1556` terms after content removal; direct
-   characteristic-zero import timed out and did not produce `D`.  Exact
+   normality does not.  The characteristic-zero primitive sextic is now
+   exact, but this five-variable cover equation is not yet an extracted
+   global equation for the target divisor `D`.  Exact
    true-projective-line reconnaissance gives factor pattern
    `(1,2),(23,2),(39,1)`; the simple degree `39` is only a line-level global
    candidate, while the old `H21` line is degree-dropped.  A proposed smooth
@@ -87,10 +87,60 @@ There are now three structured continuations, in descending order.
    Cramer `delta` saturation removes precisely the squared factors and
    preserves the simple factor.  Separately, an exact lifted double-fold
    proves the raw irreducible target branch is nonnormal in codimension one.
-   Delta-open singular witnesses persist at four small primes; on the
-   `A=0,B=2` slice the saturated scheme is zero-dimensional of degree `12`
-   modulo `67`, but the characteristic-zero ideal timed out and remains the
-   immediate decision gate.
+   The delta-open singularity gate is now exact in characteristic zero.  On
+   `A=0,B=2`, a squarefree degree-12 RUR with common denominator `H'(u)`
+   makes all six singular equations vanish and keeps the primitive content
+   and `delta` invertible.  It therefore constructs twelve distinct
+   geometric singular points; exact Python and independent Macaulay2
+   verifiers agree.  The direct smooth-ramification/Sommese argument is
+   closed.  These points are not ODPs: `E_uu` is a unit, the full Hessian has
+   rank exactly `3`, and the eliminated Schur Hessian has rank exactly `2`
+   at all twelve.  The binary kernel cubic and the correctly
+   Morse-corrected effective quartic also vanish identically in the exact
+   degree-12 etale algebra.  Hence the residual `h` in `x*y-h(z,w)` is zero
+   or has order at least five; this finite-jet statement does not prove it is
+   zero.  The full characteristic-zero equation is now available exactly as
+   `E=C*P`, with `C` a 2,630-term parameter polynomial of degree `22` and
+   `P` a 1,593-term primitive sextic in `u`.  The RUR polynomial is
+   irreducible, and exact quotient arithmetic proves that `P` and all five
+   derivatives vanish while `C`, `P_uu`, and the `(A,B,Y)` Hessian
+   determinant are units.  The immediate all-orders gate therefore reduces
+   to the single local membership `P in (P_A,P_B,P_Y)_m`; if it holds, the
+   two remaining derivative memberships follow in the regular
+   two-dimensional quotient.  Direct LocalRings, colon, Mora, sparse-F4,
+   and parameter-field attempts have reached their hard caps without a
+   verdict.  On the determinant chart, exact quotient arithmetic proves
+   that the consequence matrix has rank exactly two throughout the
+   degree-12 RUR orbit, with unique right kernel, canonical left kernel, and
+   all five contractions `ell^T*(partial_x M)*r` zero.  This is a pointwise
+   rank-two tangency certificate, not a two-dimensional component or the
+   missing membership.  Reconstructing the same `(v,t)` in the original
+   nine projective frame relations makes every relation zero; their `9 x 7`
+   Jacobian has rank exactly two (a unit `2 x 2` minor and all 2,940
+   three-by-three minors zero).  Thus the orbit is not debris introduced by
+   passing to the three determinant consequences, and the original
+   projective incidence does not provide a smooth-source shortcut.  The exact parameter content factors as two linear
+   factors, an irreducible degree-eight factor squared, and one quadratic;
+   all are local units here.  The characteristic-zero implication
+   `P_Z,P_u in (P,P_A,P_B,P_Y)_m => P in (P_A,P_B,P_Y)_m` is valid by the
+   initial-order argument on the regular formal critical surface.  A
+   structurally chosen mod-29 search excludes both logarithmic identities
+   only in the box `deg(q),deg(a_i)<=6`, `deg(b)<=5`; it gives no unbounded
+   nonmembership theorem.  Good reductions at `13`, `29`, and `31` give zero residual on
+   every rational kernel line through order `128` (and two `p=29` lines
+   through order `256`), but these are bounded modular checks, not an
+   all-orders theorem.  Complete grevlex calculations on one critical line
+   at `p=29,31` give nonzero global normal forms for `P`, proving that other
+   critical sheets contaminate the unseparated derivative ideal; the
+   remainders still vanish at the selected point and give no local verdict.
+   On that selected smooth curve, the available Bézout bound is only
+   `ord(P)<=11000` if nonzero, so vanishing modulo `t^257` is far below a
+   decisive threshold.  Bounded multiplier exclusions likewise apply only
+   to their recorded degree boxes.
+   If it holds locally at the twelve points, normalization separates a
+   nonnormal Morse--Bott crossing and the finite normalized route may survive;
+   otherwise a normal higher `cA`-type singularity requires a genuinely
+   global small model or a return to normalized/vertical `Cl/Pic mod 3`.
 2. **Resolved branch incidence.**  The upstairs critical determinant has
    degree `37` and is geometrically integral and reduced.  The naive corank
    incidence is nevertheless unusable: every coordinate point is a base

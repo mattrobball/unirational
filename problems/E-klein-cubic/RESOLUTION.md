@@ -116,16 +116,105 @@ smooth ordered-double-fold point modulo `7` lifts to characteristic zero;
 there two distinct ordinary Cramer-open folds have independent target
 normals.  Geometric `S6` monodromy puts the two branches on the same
 irreducible target divisor, proving a codimension-one self-intersection and
-nonnormality.  After Cramer saturation, small-prime singular witnesses still
-occur.  The `A=0,B=2` saturated rank-zero slice has dimension zero and degree
-`12` modulo `67`; its exact rational computation hit the 180-second cap, so
-this is evidence rather than a characteristic-zero singularity theorem.
+nonnormality.  After Cramer saturation, the singularity warning is now exact
+in characteristic zero.  On `A=0,B=2`, a squarefree degree-12 polynomial
+`H(u)` and derivative-coordinate RUR
 
-The global primitive sextic is computationally smaller than its raw
-determinant suggests: modulo `67`, removing a `2580`-term parameter content
-leaves a `1556`-term sextic of parameter total degree `10`.  This is a
-feasibility estimate, not a characteristic-zero branch equation; the direct
-rational import timed out at 180 seconds before determinant construction.
+```text
+D=H'(u),  Y=NY(u)/D,  Z=NZ(u)/D
+```
+
+make all six singular equations vanish in `QQ[u]/(H)` while `D`, the
+primitive content, and `delta` are units.  This constructs a finite etale
+degree-12 closed singular subscheme and hence twelve distinct geometric
+singular points.  Exact Python and independent Macaulay2 replays agree.
+Thus a direct smooth-ramification/Sommese proof is false as stated.
+
+The singularities are not ordinary double points: `E_uu` is a unit, the
+full five-variable Hessian has rank exactly `3`, and the eliminated
+four-variable Schur Hessian has rank exactly `2` at every certified point.
+This rejects the ODP/small-resolution shortcut.  Exact quotient-algebra
+calculations further show that both the binary cubic on the Hessian kernel
+and the correctly Morse-corrected effective quartic vanish identically at all
+twelve points.  Thus the residual `h` in the local branch form
+`x*y-h(z,w)` is zero or has order at least five.  This does not show that
+normalization is smooth or singular.  After removing the now-exact parameter
+content, the decisive remaining local test is the single all-orders
+membership `P in (P_A,P_B,P_Y)` at the degree-12 RUR prime.  The transverse
+Hessian unit makes the quotient regular of dimension two, so this one
+membership automatically gives the two tangent-derivative memberships.  It
+must distinguish a nonnormal Morse--Bott
+crossing removed by normalization from a normal higher `cA`-type
+singularity.  Global projective small resolvability and the
+normalized/vertical class-group obstruction remain open.
+The replayable certificates and hash bindings are recorded in
+`tmp/target_branch_delta_saturated_singularity/PROOF_AUDIT.md` and
+`tmp/target_branch_delta_saturated_singularity/HESSIAN_PROOF_AUDIT.md`.
+
+The global primitive sextic is now exact in characteristic zero, rather than
+only a modular feasibility estimate.  Sparse determinant expansion followed
+by an exact Nemo/FLINT multivariate gcd gives
+
+```text
+E_raw=C(A,B,Y,Z)*P(A,B,Y,Z,u),
+C: 2630 terms, total degree 22,
+P: 1593 terms, u-degree 6.
+```
+
+Literal multiplication recovers all 72,286 terms of `E_raw`.  The exact
+primitive reproduces the earlier `1474`-term mod-13 and `1556`-term mod-67
+objects up to certified nonzero scalars.  The degree-12 RUR polynomial is
+irreducible and squarefree; in its quotient field, `P` and all five first
+derivatives are zero, while the parameter content, `P_uu`, and the selected
+transverse Hessian determinant are units.  Thus the all-orders question
+reduces to
+
+```text
+P in (P_A,P_B,P_Y)_mRUR.
+```
+
+Direct local-ring, colon, Mora, sparse-F4, and parameter-field computations
+all reached the one-GiB/180-second caps without a membership verdict.  Exact
+determinantal reconstruction does prove that the sparse consequence matrix
+has rank exactly two at every point of the irreducible RUR orbit.  Its
+Cramer minor is a unit, the right and left kernels are explicit, and all
+five contractions `ell^T*(partial_x M)*r` vanish.  This is exact pointwise
+tangency, not the missing two-dimensional component.  The discarded
+parameter content factors into two linear factors, a squared irreducible
+degree-eight factor, and a quadratic, all invertible at the orbit.
+The reconstructed `(v,t)` also satisfies every one of the original nine
+projective frame relations.  Their `9 x 7` Jacobian has exact rank two: a
+`2 x 2` minor is a unit and all 2,940 `3 x 3` minors vanish.  Thus the orbit
+is not a special-fibre artifact of the three consequence equations, and the
+original projective incidence is singular there as well.
+
+On the regular formal critical surface, the implication
+
+```text
+P_Z,P_u in (P,P_A,P_B,P_Y)_m  ==>  P in (P_A,P_B,P_Y)_m
+```
+
+is valid in characteristic zero: a nonzero positive-order series cannot
+divide both partial derivatives of itself.  Its two hypotheses remain
+unproved.  Exact full-rank linear algebra modulo `29` excludes identities in
+the selected box `deg(q),deg(a_i)<=6`, `deg(b)<=5`, but this is only a
+bounded negative.  A separate mod-13 v1 audit leaves three rank-deficient
+boxes explicitly undecided; its search script is repaired without rerunning
+the memory-heavy eliminations.
+
+Exact
+finite-field Newton solves at good primes `13`, `29`, and `31` find zero
+residual on every rational kernel line through order `128`, with two
+`p=29` lines also zero through order `256`; Padé reconstruction finds no
+low-degree rational critical arc.  These checks and the bounded multiplier
+exclusions are strictly finite/modular and do not prove `h=0`.
+Complete grevlex bases after the line restriction `Z=Z0+t,u=u0` give
+nonzero global normal forms for `P` at both `p=29` and `p=31`.  This is exact
+all-degree global-line nonmembership, but both remainders vanish at the
+selected point; it demonstrates contamination by other critical sheets and
+does not decide the selected local component.  The corresponding general
+Bézout contact bound is `11000`, so zero residual modulo `t^257` is not
+decisive.
 On an exact line in the actual projective coefficient coordinates
 `(A,B,Y,T)`, the discriminant factors as degrees/exponents
 `(1,2),(23,2),(39,1)`.  This corrects the affine-line reconnaissance but does
