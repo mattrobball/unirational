@@ -1,0 +1,64 @@
+{
+  "artifact_paths": [
+    "certificates/pfaffian_point/BRIDGE_AUDIT.md",
+    "certificates/pfaffian_point/CFOSS_W1_INPUT.md",
+    "certificates/pfaffian_point/IDEMPOTENT_TO_KLEIN_POINT.md",
+    "certificates/pfaffian_point/quaternion_corner.md",
+    "certificates/pfaffian_point/quaternion_corner.json",
+    "certificates/pfaffian_point/SEAL.json"
+  ],
+  "cfoss": {
+    "arxiv": "math/0606580v1",
+    "local_pdf": "tmp/a1_pfaffian_bridge/cfoss_I.pdf",
+    "n": 3,
+    "pdf_sha256": "86f5b9a156c9afffdb3434670012b48bbfdb058ca22f4b2fefac493d5d7d1e01",
+    "theorem": "CFOSS I Lemma 3.1"
+  },
+  "date": "2026-07-30",
+  "decisions": {
+    "gate1": "FAIL-SCOPE: abstract sigma-self-adjoint reduced-rank-two idempotent is only a Morita projector in P2_D; missing bridge is common isotropic line for H_T / F14_T(K_proj)",
+    "gate2": "P1-REDUCED: installed cubic is abstractly soluble (auxiliary); headline reduces to five Hermitian equations on D^2; not solved"
+  },
+  "deliverable_sha256": {
+    "BRIDGE_AUDIT.md": "0c9cf64c0a7c367286afd2636bf8f1c8dc432df8616075fb4d6434dcf0d16031",
+    "CFOSS_W1_INPUT.md": "399701a42a943726661fb61b27028f59fc98883040f440ae1f08bcd047a86066",
+    "IDEMPOTENT_TO_KLEIN_POINT.md": "d1194af309c13b46ce1c4d5d9c3d24a17ab5308b619559ea82a0bcea79fdefd8",
+    "quaternion_corner.json": "9ca99aa07b642c6a083149372f5aa605236fb967597b84273510576cb15d60e9",
+    "quaternion_corner.md": "f6bee025701c20bb08b7fdc9f9edf74e4b49a97a81ac6fe3a0fb9206611cdb2f"
+  },
+  "forbidden_edits_respected": [
+    "HANDOFF.md",
+    "RESOLUTION.md",
+    "CURRENT_PATHS.md",
+    "SPEC.md"
+  ],
+  "gate1_decision": "FAIL-SCOPE",
+  "gate2_decision": "P1-REDUCED",
+  "gate3_attempted": false,
+  "headline": "OPEN",
+  "intended_commit_split": [
+    "certificates/pfaffian_point: Gate 1 bridge audit + CFOSS w1 pin",
+    "certificates/pfaffian_point: Gate 2 quaternion corner + idempotent dictionary + SEAL"
+  ],
+  "packet": "certificates/pfaffian_point",
+  "pinned_base": "d9cadc3a835c40add65c322ab29ff2b983dc3216",
+  "proved": [
+    "CFOSS I Lemma 3.1 pinned with hash, hypotheses, convention agreement, and every use-site",
+    "Arrow A of claimed implication chain fails (idempotent does not force common isotropic line)",
+    "Arrows B and C hold under stated Pfaffian incidence and ed equivalence",
+    "Stable Tschinkel-Zhang factor trap identified; audited Pfaffian path avoids it",
+    "Installed c3=0,c2!=0 cubic is abstractly K_proj-nonempty and equivalent to Morita projectors",
+    "Idempotent space I_sigma is open in rational P2_D with K-points (not a nontrivial obstructing torsor)",
+    "Smallest intrinsic system is five scalar equations on D^2, expected dimension 3"
+  ],
+  "remains": [
+    "Explicit quaternion symbol (a,b) over executable K_proj",
+    "Explicit five Hermitian matrices H_1..H_5",
+    "Common isotropic right D-line or proof of emptiness",
+    "All five positive verification items for G-unirationality",
+    "No headline claim"
+  ],
+  "seal_sha256_self": "dd291a098be88f71626c5e2386a5c34052895a2995f2911755dde60cbd1d6226",
+  "terminal_marker": "PFAFFIAN_POINT_GATES_1_2_FAIL_SCOPE_P1_REDUCED_HEADLINE_OPEN",
+  "workorder": "WORKORDER_FIVE_ATTEMPTS.md Attempt 1 Gates 1 and 2 only"
+}
