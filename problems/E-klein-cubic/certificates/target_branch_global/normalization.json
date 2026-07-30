@@ -1,0 +1,9 @@
+{
+  "Dtilde": null,
+  "bottleneck": "ELIMINATION-ORDER_GB_OF_FOLD_FOR_PROJECTION_AND_CHAR0_COMPONENT_EXTRACTION",
+  "discriminant_divisor": null,
+  "gate1_decision": "STOP-2",
+  "map_to_coefficient_space": null,
+  "reason": "STOP-2",
+  "status": "NOT_CONSTRUCTED"
+}

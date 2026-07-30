@@ -1,0 +1,7 @@
+{
+  "bottleneck": "ELIMINATION-ORDER_GB_OF_FOLD_FOR_PROJECTION_AND_CHAR0_COMPONENT_EXTRACTION",
+  "conductor_ideal": null,
+  "note": "Conductor of normalization of the simple-fold component requires the component and its normalization; neither was extracted.",
+  "reason": "STOP-2",
+  "status": "NOT_CONSTRUCTED"
+}
