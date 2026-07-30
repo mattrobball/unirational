@@ -2,21 +2,28 @@
 
 ## Current verdict
 
-**2026-07-29 — WP-3 COMPLETE AT WORKER SCOPE; STOPPED AT DIRECTOR REVIEW.**
+**2026-07-29 — WP-4 COMPLETE AT WORKER SCOPE; STOPPED AT DIRECTOR REVIEW
+BEFORE WP-5.**
 
-WP-3 selects **SPLIT** for HYZZ. The formal separated horizontal-projector
-theorem is proved over \(k[[t_1,\ldots,t_n]][[u]]\); the sole surviving
-analytic residue is `SEP-CONV`: finite analytic extension of the closed blocks
-at \(u=0\), followed by strict-shrink convergence of the formal projectors.
-Completion injectivity is internal by Krull intersection. Whole HYZZ Theorem 3.42,
-maximality, product-base splitting, and the moving-base group-germ argument
-are no longer consumed.
+The live theorem closes over exactly six opaque packages: `GW-1`, `GW-3`,
+`WF-4`, `HATOM-RAW`, `NL-CUBIC`, and `SURF-MIN`. `SEP-CONV` is retired:
+the analytic stalk is Henselian, and all target consumers use only the
+canonical primary projectors on \(\mathcal H|_{u=0}\). The stronger formal
+full-\(u\) theorem and HYZZ convergence audit remain non-load-bearing.
 
-[`certificates/ATOM_CORE.md`](certificates/ATOM_CORE.md) records the entire
-F0/F1/F2 spine, finite \(6,15,6\) and characteristic-polynomial
-verifications, top theorem closure, exact Mathlib homes, and named
-prerequisite gaps. [`certificates/GW_INPUT.md`](certificates/GW_INPUT.md) is
-now the one table of record. WP-4 has not begun.
+Part 1 is **YES**. Addington–Auel give an explicit rational cubic equation
+with \(A(X)=\mathbf Zh^2\); its smoothness, eleven point counts, Frobenius
+polynomial, and irreducibility certificate replay locally. This discharges
+the explicit cubic's `NLGeneral` premise, while its non-rationality conclusion
+depends on the remaining five packages. The countable-union theorem uses all
+six because `NL-CUBIC` supplies its exceptional family.
+
+[`certificates/GENERALITY.md`](certificates/GENERALITY.md) is the WP-4
+deliverable. [`certificates/GW_INPUT.md`](certificates/GW_INPUT.md) is the
+single interface table; [`certificates/ATOM_CORE.md`](certificates/ATOM_CORE.md),
+[`certificates/REPAIRED_PROOF.md`](certificates/REPAIRED_PROOF.md), and
+[`certificates/FACTORIZATION.md`](certificates/FACTORIZATION.md) are
+synchronized. WP-5 has not begun.
 
 ## 2026-07-29 — WP-3 formal core complete; HYZZ outcome SPLIT
 
@@ -796,3 +803,115 @@ Rework (the audit's "a day's work" list) inserted as a PRIORITY PREFIX
 into WORKORDER_4; Parts 2–3 of WP-4 now build on the six-package base.
 Review-depth ledger corrected going forward: no gate closes on a
 structural skim.
+
+## 2026-07-29 — WP-4 worker deliverable: explicit cubic YES; six-package boundary
+
+WP-4 is complete at worker scope and awaits director review. The priority
+rework changes the live dependency graph but preserves the earlier WP-2/WP-3
+entries above as historical gate records.
+
+### Priority rework
+
+`SEP-CONV` is retired. Berkovich Theorem 2.1.5, printed pp. 39–40, directly
+proves that the analytic local ring at the rigid point is Henselian;
+Fresnel–van der Put Proposition 7.1.8(1), pp. 199–200, independently
+corroborates it. Characteristic-polynomial Hensel factorization and CRT now
+construct the canonical analytic projectors on
+\(\mathcal H|_{u=0}\). A downstream audit confirms that Lemma 3.2,
+Proposition 3.3, Corollary 3.4, R2, and R3 consume only those \(u=0\)
+summands and their invariant/weight ranks. The stronger formal full-\(u\)
+projector theorem, completion injectivity, and HYZZ convergence analysis
+remain proved/audited but non-load-bearing.
+
+The top theorem now exposes exactly six opaque packages:
+`GW-1`, `GW-3`, `WF-4`, `HATOM-RAW`, `NL-CUBIC`, and `SURF-MIN`.
+`GW-2` is the internal F2 theorem `beauvilleCubicLineCorrections`, stated
+directly from Beauville's three target numbers; no separate Fano-scheme
+expected-dimension premise remains.
+
+FACTORIZATION § 3.2 is upgraded from uncertainty to proof. If
+\(p=f^*f_*\) were horizontal for the full A-model connection, then
+\([L_x,p]=0\), \(p(1)=1\), and therefore
+\(p(x)=p(L_x1)=L_xp(1)=x\); the graph route can work only when \(f^*\) is
+already an isomorphism. For
+\(\operatorname{Bl}_{\mathrm{pt}}\mathbf P^4\),
+\(c_1(T)=5H-3E\), while \(p(E)=0\), so
+\(p(\kappa(1))=5H\ne5H-3E=\kappa(p(1))\). This closes the E1 graph-projector
+route without proving or refuting MONO itself.
+
+The eight formerly unnamed inputs are now explicit: the folded Hodge data of
+\(\mathbf P^4\), a point, a curve, and a surface; cubic adjunction and degree;
+the GW-1 unital algebra-automorphism/Euler clause; the direct Beauville
+fallback; and the definition of isomorphism of cover-native data. The
+flatness identities and the analytic-vs-formal coefficient-ring typing are
+displayed. D8's actual consumers are recorded. Iritani's Notes Proposition 8
+is correctly marked as using HYZZ reconstruction rather than as an
+independent escape.
+
+### Part 1: an explicit NL-general cubic exists
+
+The effectivity verdict is **YES**, contrary to the work order's expectation.
+Addington–Auel Theorem 3 gives a concrete rational cubic with
+\(H^{2,2}_{\mathrm{prim}}(X,\mathbf Z)=0\), hence
+\(A(X)=\mathbf Zh^2\). Their certificate uses smooth good reduction modulo
+2, exact counts over \(\mathbf F_{2^m}\) for \(1\le m\le11\), and an
+irreducible nonintegral normalized primitive Frobenius polynomial, which has
+no root-of-unity eigenvalue. Proposition 2.1 plus the known Hodge conjecture
+for cubic-fourfold codimension-two classes gives the integral Hodge-rank
+bound. Finite-field Tate is not required.
+
+Fresh replay returned the eleven published counts, the published degree-22
+polynomial, `irreducible=True`, `integral_coefficients=False`, and a smooth
+Jacobian check. Pinned hashes include:
+
+```text
+553229d1cd6f1eb318608ab56bb13ee013f9d8d24a218c93e2cd6ede05bc1f7a  tmp/pdfs/addington-auel-nonspecial-cubics.pdf
+0f89f0177957f189e6a7c3f4d90735298021f2d920bd358634af6ec38bfe2b09  tmp/pdfs/addington-auel-nonspecial-cubics-source.tar
+ccba5c4d814851fd2354f16f52d78e95d3d213d27edb98d302c1812958be916f  anc/thm3.m2
+b84e045e89772f48ebdeafd7f93c801a38f9230f6db7330b94cc06f278a6cd26  anc/count.cpp
+59a8f023335285171758f2317fc00fcb0df53c0c44611d5147e3112d653c2616  anc/coeffs_thm3.h
+c5969a9c95c8b170dd0d1d9b4a2bc4fe16ee582f908cc0945d660bcbdb062679  anc/char_poly.m2
+```
+
+Terasoma's monodromy/Hilbert-irreducibility route remains nonconstructive;
+period transcendence remains ineffective. Addington–Auel show that the
+middle-cohomology van Luijk analogue does exist, and controlled
+\(p\)-adic-cohomology work supplies further explicit examples.
+
+### Parts 2–3: minimized rows and final target
+
+`NL-CUBIC` now contains only the rank-one middle rational Hodge conclusion
+outside a countable union of proper algebraic closed subsets in the smooth
+cubic-form parameter space. The full diamond, rank 27, irreducibility and
+nonemptiness of Hassett divisors, and Torelli statements are not exposed;
+\(h^{3,1}=1\) is internal `cubicBasicHodge` data.
+
+`HATOM-RAW` now contains only the raw proreductive action and \(p-q\) grading,
+the connected smooth/reduced fixed bases and finite-étale reduced covers,
+the cubic degree-four fixed-vector identification, and fixedness of the three
+surface cycle classes. Primary projectors, component surjectivity, exact
+invariants, rank constancy, and \(\rho/P\) descent are internal.
+
+The Lean target is the smooth locus in the projectivization of the
+56-dimensional coefficient space, not a PGL quotient. Proper exceptional
+loci are common zero sets of homogeneous coefficient equations and need only
+be proper closed subsets. `NLGeneral` is intrinsic rank one, and `IsRational`
+is `Scheme.BirationalOver` the cubic and \(\mathbf P^4\), not dominance or
+unirationality. The declaration ladder separates the pointwise and global
+boundaries:
+
+1. `nlGeneral_not_isRational` over the five packages other than `NL-CUBIC`;
+2. `theorem_6_8_countable_union` over all six packages and
+   \(\mathbf N\)-indexed proper closed subsets;
+3. `veryGeneral_smoothCubic_not_isRational` as a one-line repackaging;
+4. the supported explicit `addingtonAuel_NLGeneral` and
+   five-package `addingtonAuel_not_isRational` declarations.
+
+The full equation, route assessment, replay commands, row minimization, and
+new-definition inventory are in `certificates/GENERALITY.md`.
+
+### Gate state
+
+**STOP.** Director review must verify the explicit Frobenius certificate, the
+six-package closure, the two minimized Hodge rows, and the projectivization
+descent/birational Lean target. WP-5 has not begun.

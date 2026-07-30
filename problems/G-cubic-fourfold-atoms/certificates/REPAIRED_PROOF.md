@@ -16,12 +16,13 @@ formula from their Gromov--Witten-theoretic foundations.
 
 ## 1. Repaired statement
 
-Let \(\mathcal C\) be the moduli space of smooth complex cubic fourfolds.
-There is a countable collection of proper closed algebraic divisors
-\(\{\mathcal C[K]\}\) such that every smooth cubic fourfold
+Let \(\mathcal U\subset\mathbf P^{55}_{\mathbf C}\) be the smooth locus in
+the projective parameter space of cubic equations in six variables. There is
+a countable collection of proper closed algebraic subsets
+\(D_n\subset\mathbf P^{55}\) such that every smooth cubic fourfold represented by
 
 \[
-X\in \mathcal C\setminus\bigcup_K\mathcal C[K]
+X\in \mathcal U\setminus\bigcup_nD_n
 \]
 
 is not rational. In particular, a very general smooth cubic fourfold is not
@@ -39,6 +40,8 @@ have these SHA-256 digests:
 2c5c9f0a2f9eaf230605eaf844c3b7d08e0181e6dbc921153156a071d616ff64  tmp/pdfs/2508.05105v2.pdf
 a11a093f790890804c7d4f7559b30ed2a6da87811de46f2aa0d29026e343e6bd  tmp/pdfs/2411.02266.pdf
 bf53f2958e17de3ece49c27d433f98f9a55086fedd4c7cbb65e9bb15682e8f4d  tmp/pdfs/vezzani-nonarch-implicit-function.pdf
+bd864c89ed8b6e8f27a90f459837221549db75afa75554ab51414e17771066af  tmp/pdfs/berkovich-etale-cohomology.pdf
+54bac91f89abcd9a42645b1a07624222aeb570048ed224e4cd79a328fd7ef915  tmp/pdfs/fresnel-van-der-put-rigid-analytic-geometry.pdf
 c16f56b283863322df04dadaeb0780889abd67a664f56a74fea39bc7ba8a934b  tmp/pdfs/2307.13555.pdf
 0114923576b2ec3a78fc346fd9f61eb65cfe63f8cc7087881d11626cdb9883c3  tmp/pdfs/2604.10028v2.pdf
 9d022796aefa01fd601820e415c5462bdfc255b3b4fe158af64b51f7bf0a83e3  tmp/pdfs/beauville-quantum-complete-intersections.pdf
@@ -47,31 +50,50 @@ c16f56b283863322df04dadaeb0780889abd67a664f56a74fea39bc7ba8a934b  tmp/pdfs/2307.
 ecc2e31a63f56d443aaa3534f0218b25a5b6ab6e1a84c82db5c7bac1789a1d21  tmp/pdfs/hassett-special-cubic-fourfolds.pdf
 48f8af5249081217fc4a806414a764d9d69d66eff9092ddd8e2cf0ea078579e8  tmp/pdfs/milne-tannakian-categories.pdf
 5add29094b74385746c4d977290b2308d02cbe8aa6f085e6a99724f6939e309b  tmp/pdfs/conrad-nonarchimedean-geometry.pdf
+28cce3fa0cbd3c25491d1416f8e40a89362b6b1c14420789b3cd83e9c3f7f860  tmp/pdfs/popa-hodge-theory-singularities.pdf
 ```
 
 The primary PDF is linked
 [`here`](../tmp/pdfs/2508.05105v2.pdf).
 
-The following are the exact imported interfaces. An eventual formalization
-may replace each row independently.
+The following is an expanded proof-local dependency and source ledger. It
+mixes opaque packages, internal lemmas, and retired historical nodes. The only
+authoritative top-level imported-interface table is `GW_INPUT.md` § 2.
 
-| ID | Imported statement | Exact source and use |
+| ID | Dependency/status | Exact source and use |
 |---|---|---|
-| A1 | The analytic A-model matrices exist on the required non-archimedean germ, restrict to the connected smooth Hodge-fixed germ, and are Hodge-equivariant. The product satisfies the virtual-dimension grading and genus-zero unit/fundamental-class rule used in Lemma 3.6. Full-base maximality is source data but is no longer consumed after WP-3. | KKPY §3.5.1, virtual dimension and GW-class properties, printed pp. 22–23; Definition 3.25 and the unit-axiom paragraph, p. 29; Definition 3.32, p. 31; Proposition 3.40, pp. 35–36; Definition 3.52, p. 42. |
+| A1 | **Opaque `GW-1`.** The analytic A-model matrices exist on the required non-archimedean germ, restrict to the connected smooth Hodge-fixed germ, and are Hodge-equivariant. On \(\mathcal H\vert_{u=0}\), the Hodge group acts by unital algebra automorphisms preserving the quantum product and Euler field. The product satisfies the virtual-dimension grading and genus-zero unit/fundamental-class rule used in Lemma 3.6. Full-base maximality is not consumed. | KKPY §3.5.1, Definition 3.25 and the unit paragraph, Definition 3.32, Proposition 3.40, Definition 3.52; the algebra-action clause used in Lemma 5.19 is explicit in `tmp/sources/v2/brinv.tex`, lines 3336–3344 (printed p. 57). |
 | A2 | For multiplication by a group-fixed element in a finite-dimensional unital commutative superalgebra, the reduced spectrum on the whole algebra equals the reduced spectrum on its invariant subalgebra. | KKPY Lemma 5.19, printed p. 57. |
-| A3 | **WP-3 split.** Over \(k[[t_1,\ldots,t_n]][[u]]\), separated closed-residue blocks have unique complete orthogonal horizontal projectors; this is proved internally in `ATOM_CORE.md`, Theorem 4.1. The opaque residue `SEP-CONV` has exactly two analytic clauses: extend the closed blocks to an analytic \(U_0\)-stable split after shrinking, then make the formal horizontal projectors converge on a further strict shrink. Completion injectivity is proved internally by Krull intersection. | Formal proof and exact boundary: [`ATOM_CORE.md`](ATOM_CORE.md), §§4–5. HYZZ Proposition 3.36, printed pp. 25–27, supplies convergence conditional on the analytic \(u=0\) split; pinned PDF SHA-256 `a11a093f790890804c7d4f7559b30ed2a6da87811de46f2aa0d29026e343e6bd`. The finite split is the matrix implicit-function specialization in §5.2; compare Vezzani Proposition A.1.1, printed pp. 55–56, [local PDF](../tmp/pdfs/vezzani-nonarch-implicit-function.pdf), SHA-256 `bf53f2958e17de3ece49c27d433f98f9a55086fedd4c7cbb65e9bb15682e8f4d`. Whole HYZZ Theorem 3.42, maximality, and product-base splitting are not imported. |
-| A4 | For a smooth cubic fourfold, the three degree-one ambient corrections to multiplication by \(h\) are the Grassmannian line-incidence numbers \(\ell_0,\ell_1,\ell_2\) in Lemma 3.5 below; the grading excludes higher-degree corrections. | Beauville, [*Quantum cohomology of complete intersections*](../tmp/pdfs/beauville-quantum-complete-intersections.pdf), equations (1.6) and (2.1) and the Grassmannian coefficient lemma, artifact pp. 2–7; local SHA-256 `9d022796aefa01fd601820e415c5462bdfc255b3b4fe158af64b51f7bf0a83e3`. Givental's pinned Corollaries 6.3–6.4 and Theorem 9.1/Corollary 9.2 supply an independent mirror-theorem check, but are no longer imported by this certificate. |
+| A3 | **Internal HP theorem.** Over the Henselian analytic local ring \(\mathcal O_{S,b}\), pairwise separated closed-fiber blocks of \(K_{\mathrm{res}}\) have unique complete orthogonal commuting projectors on \(\mathcal H\vert_{u=0}\); after one shrink these are analytic subbundles, and canonicity gives Hodge equivariance. No full-\(u\) horizontal projector is consumed. | `ATOM_CORE.md`, Henselian Primary-Projector Theorem. Henselianity is Berkovich Theorem 2.1.5, printed pp. 39–40, independently corroborated by Fresnel–van der Put Proposition 7.1.8(1), printed pp. 199–200; hashes listed above. HYZZ convergence is retained only as a non-load-bearing audit. |
+| A4 | **Internal `GW-2` target.** For a smooth cubic fourfold, the three degree-one ambient corrections to multiplication by \(h\) are \((6,15,6)\); the grading excludes higher-degree corrections. No separate Fano-scheme expected-dimension premise is exposed. | Prove `beauvilleCubicLineCorrections` directly from Beauville's equations (1.6), (2.1), and Grassmannian coefficient lemma, pp. 2–7; hash listed above. Any expected-dimension/deformation step belongs inside that F2 proof. Givental remains only an independent check. |
 | A5 | The fixed analytic base \(B_X^G\) is connected and smooth. Its dense nonempty Zariski-open maximal-distinct-eigenvalue locus \(U_X\) carries the finite étale reduced spectral cover \(\widetilde U_X\). Raw local atoms are its connected components, with only isomorphism, same-component, disjoint-union, and smooth-blowup generators retained for the blowup-Hodge quotient. No representation or Hodge-polynomial descent is assumed here. | KKPY §5.2.2 and Definition 5.10, printed p. 51; §5.2.6.2, pp. 54–55; Definition 5.21 and the relevant parts of Proposition 5.22, pp. 59–60; proof of Theorem 6.8, p. 70 (density). Component surjectivity is now derived from irreducibility and finite étaleness; cover-native bundles and numerical descent are internal in `ATOM_CORE.md` §7. |
-| A6 | The blowup-Hodge-atom formula \(\operatorname{CF}_{\rm bl}(\operatorname{Bl}_Z Y)=\operatorname{CF}_{\rm bl}(Y)+(r-1)\operatorname{CF}_{\rm bl}(Z)\), compatibly with Hodge representations and their \(p-q\) gradings, holds in the only two cases used here: (i) \(Y\) is a surface and \(Z\) is a point; (ii) \(Y\) is a smooth projective fourfold and \(Z\) is a smooth center of dimension at most two, with \(r=4-\dim Z\). | These are the corresponding special cases of KKPY Theorem 4.5 and §5.2.6.2, blowup item (2), printed pp. 43–47 and 55; proof of Proposition 5.22, blowup item (2), pp. 59–60. KKPY extracts the analytic statement from Iritani, [*Quantum cohomology of blowups*](../tmp/pdfs/2307.13555.pdf), Theorem 5.18, artifact pp. 58–59, SHA-256 `c16f56b283863322df04dadaeb0780889abd67a664f56a74fea39bc7ba8a934b`. Iritani, [*Notes on the decomposition theorem for blowups*](../tmp/pdfs/2604.10028v2.pdf), Proposition 8 and Corollary 11, artifact pp. 7 and 10, proves formal universal-Hodge equivariance; SHA-256 `0114923576b2ec3a78fc346fd9f61eb65cfe63f8cc7087881d11626cdb9883c3`. In case (i), exactly one point atom is added. |
+| A6 | **Opaque `GW-3`.** The blowup-Hodge-atom formula \(\operatorname{CF}_{\rm bl}(\operatorname{Bl}_Z Y)=\operatorname{CF}_{\rm bl}(Y)+(r-1)\operatorname{CF}_{\rm bl}(Z)\), compatibly with Hodge representations and \(p-q\) gradings, holds only for a surface blown up at a point and a fourfold blown up along a smooth center of dimension at most two. | KKPY Theorem 4.5 and Proposition 5.22(2); Iritani, *Quantum cohomology of blowups*, Theorem 5.18. Iritani's later Notes, Proposition 8 and Corollary 11, support formal Hodge compatibility, but Proposition 8 explicitly invokes HYZZ reconstruction on pp. 7–8 and is not an independent HYZZ-free proof. Hashes listed above. |
 | A7 | If a smooth projective complex fourfold \(X\) is birational to \(\mathbf P^4\), there is a finite weak factorization from \(\mathbf P^4\) to \(X\) through smooth projective complex fourfolds, each step or inverse step being a blowup in a smooth center. After identity blowups of Cartier divisors are deleted, the centers have codimension at least two and hence dimension at most two. | Abramovich–Karu–Matsuki–Włodarczyk, *Torification and factorization of birational maps*, Theorem 0.1.1, internal pp. 1–2; [local PDF](../tmp/pdfs/akmw-torification-factorization.pdf), SHA-256 `55bbc2c58f29d4b9dbe965035f80f3844f6968eaf98076ac625132ac3b3977a5`. Włodarczyk's independent smooth-complete proof is statement 0.0.1 and §12.4 of [*Toroidal varieties and the weak Factorization Theorem*](../tmp/pdfs/wlodarczyk-toroidal-weak-factorization.pdf), SHA-256 `2f7a0bce5871db86bf84f54c4562fc053c53a4313180a6eecb66587d21e4fcfe`; it cross-checks the weak theorem but not AKMW's projective-intermediate clause. The target-specific atom consequence is Proposition 3.7 below; KKPY Proposition 5.30 is not imported. |
-| A8 | With \(A(X)=H^{2,2}(X)\cap H^4(X,\mathbf Z)\), special cubic fourfolds form a countable union of irreducible algebraic divisors. | Hassett, [*Special Cubic Fourfolds*](../tmp/pdfs/hassett-special-cubic-fourfolds.pdf), Compos. Math. 120 (2000): the \(A(X)\) paragraph immediately after Definition 3.1.1 and Theorem 3.1.2, artifact pp. 7–8. Theorem 3.2.3, artifact p. 9, gives irreducibility; the exclusions and Theorem 4.3.1, artifact p. 14, give nonemptiness, summarized as the exact condition \(d>6\), \(d\equiv0,2\pmod6\) in Theorem 1.0.1, artifact p. 2. Local SHA-256: `ecc2e31a63f56d443aaa3534f0218b25a5b6ab6e1a84c82db5c7bac1789a1d21`. |
+| A8 | **Opaque `NL-CUBIC`.** In the smooth cubic-form parameter space, outside a countable union of proper algebraic closed subsets, \(H^{2,2}(X)\cap H^4(X,\mathbf Q)=\mathbf Qh^2\). | Hassett, Definition 3.1.1 and Theorem 3.1.2, pp. 7–8, pulled back to the smooth locus in \(\mathbf P^{55}\); hash listed above. Irreducibility of the divisors, discriminant data, and nonemptiness are not consumed. |
 | A9 | For a smooth projective surface, \(P_1=p_g\) and positive plurigenera are birational invariants. If a plurigenus is positive, finitely many \((-1)\)-curve contractions lead to a smooth projective minimal model with nef canonical class; reversing this sequence gives ordinary point blowups. | Peters, [*An Introduction to the Theory of Compact Complex Surfaces*](../tmp/pdfs/peters-surface.pdf): the definitions of \(p_g=h^{0,2}\) and \(P_m=h^0(K_S^{\otimes m})\), printed pp. 5 and 7, together with Serre duality, Theorem 4.3, printed p. 12, give \(P_1=p_g\); Propositions 2.1 and 2.2 and the discussion immediately following Proposition 2.2, printed pp. 8–9, give the contraction sequence, minimality, and nefness assertions. |
 | A10 | Finite-dimensional representations of a proreductive group in characteristic zero are semisimple. | Deligne–Milne, [local *Tannakian Categories* PDF](../tmp/pdfs/milne-tannakian-categories.pdf), Proposition 2.23 and Remark 2.28, printed pp. 26–28; SHA-256 `48f8af5249081217fc4a806414a764d9d69d66eff9092ddd8e2cf0ea078579e8`. Exactness and base change are internal Lemma 3.1. |
-| A11 | At \(b\in U_X\), the full fiber is the Hodge realization and is the direct sum of tautological primary factors indexed by \(\widetilde U_{X,b}\), with its raw \(p-q\) grading. Hodge-group fixed vectors are exactly rational Hodge classes. | KKPY Example 5.4, Definition 5.10, the fiber-point decomposition before Definition 5.21, Lemma 5.25, Definition 5.26, and Remark 5.27. Cover degrees, invariant ranks, ordinary grading-weight ranks, \(\rho/P\) descent, and Corollary 3.4 are proved internally in `ATOM_CORE.md` §§6–7. |
+| A11 | **Opaque `HATOM-RAW`.** The Hodge action is rational and proreductive with its \(p-q\) grading; the fixed base is connected smooth/reduced and its spectral cover is finite étale reduced. Only for a cubic in degree four are fixed vectors identified with rational \((2,2)\)-classes; the general cycle classes \(1,c_1(L),[\mathrm{pt}]\) are fixed. Fiberwise primary decomposition, component surjectivity, exact invariants, rank constancy, and \(\rho/P\) descent are internal. | KKPY Examples 5.5 and 5.7, p. 49; fixed base and cover before Definition 5.10, p. 51; Lemma 5.25, pp. 61–62; Definition 5.26, p. 62. Internal Henselian/cover CRT is in `ATOM_CORE.md` §§ 4, 6–7. |
 | A12 | **RETIRED FROM THE TARGET GRAPH IN WP-3.** The moving-base analytic group germ was used by the older full-base restriction route. The new separated-projector theorem applies directly on the fixed base, where uniqueness makes the fiberwise-equivariant projectors equivariant. | Historical source: KKPY §5.2.1, Example 5.8 and following paragraph, printed p. 50; §5.2.2, p. 51. |
 | A13 | KKPY's atom operator is \(\kappa_{\mathrm{at}}=\operatorname{Eu}\star(-)\), whereas the displayed A-model connection has \(-u^{-2}\kappa_{\mathrm{at}}\); hence its literal residue is \(K_{\mathrm{res}}=-\kappa_{\mathrm{at}}\). | KKPY Definition 3.12, printed p. 21; the A-model connection (3.30), printed p. 31; the cubic connection (6.9) in the proof of Theorem 6.8, p. 69. The sign reconciliation is recorded below; no new theorem is imported. |
-| A14 | A smooth cubic fourfold has the displayed Hodge diamond; outside middle degree its cohomology is generated by the powers of the hyperplane class, and its odd cohomology vanishes. | Hassett, [*Special Cubic Fourfolds*](../tmp/pdfs/hassett-special-cubic-fourfolds.pdf), §2.1, Hodge-diamond display and the discussion of \(h\), artifact pp. 3–4; same local SHA-256 as A8. |
+| A14 | **Internal `cubicBasicHodge`.** The proof uses only \(h^{3,1}(X)=1\) and the elementary ambient Hodge dimensions needed for the five hyperplane powers; the full Hodge diamond is not a theorem hypothesis. | Hassett §2.1, pp. 3–4, supplies proof material. The finite dimension and coefficient deductions are internal. |
 | A15 | On a reduced affinoid rigid space, an analytic function or matrix which vanishes at every rigid point is zero. | Conrad, [local *Several approaches to non-archimedean geometry* PDF](../tmp/pdfs/conrad-nonarchimedean-geometry.pdf), Theorem 1.1.5 and the paragraph after Example 1.2.2, printed pp. 4–5; SHA-256 `5add29094b74385746c4d977290b2308d02cbe8aa6f085e6a99724f6939e309b`. This is internalized as the reduced-Jacobson lemma in `ATOM_CORE.md` §7. |
+
+The elementary proof inputs are also named rather than silently folded into
+matrix arithmetic: `foldedHodgePolynomial_projectiveSpace_four`,
+`foldedHodgePolynomial_point`, `curve_foldedHodge_coeff_two_eq_zero`,
+`surface_foldedHodge_coeff_two_eq_pg`, `c1_tangent_cubicFourfold`,
+`integral_hyperplane_pow_four`, and `beauvilleCubicLineCorrections`. Popa
+§ 1.1, equation (1.1.1), and the projective-space example (pp. 2–3) support
+the first four; Peters pp. 5–6 supports the surface notation; Beauville § 2
+and Hassett § 2.1 support the final three. Their exact hashes are displayed
+above or in `ATOM_CORE.md` §§ 9–11.
+
+An **isomorphism of cover-native data** means an isomorphism of connected
+base germs, an isomorphism of their finite-étale cover components over the
+base map preserving the tautological eigenvalue, and a grading-preserving
+Hodge-equivariant vector-bundle isomorphism intertwining the Euler operator,
+multiplication, and distinguished unit. This preserves cover degree,
+\(P_\alpha\), and \(\rho_\alpha\); it is the relation used below.
 
 A connected component of a finite étale cover has open-and-closed nonempty
 image in the connected base, hence is surjective. This deduction replaces the
@@ -141,6 +163,12 @@ commutants, disjointness, nor their multiplicities. We retain KKPY's positive
 atom labels throughout R1 and write HYZZ's local normal form as
 \(U_0=K_{\mathrm{res}}=-\kappa_{\mathrm{at}}\).
 
+**Coefficient-ring typing.** The analytic bundle lives over
+\(S\times D_u\) with structure sheaf \(\mathcal O_{S\times D_u}\); its
+restriction at \(u=0\) is a finite locally free \(\mathcal O_S\)-module. Only
+its formal completion along \(u=0\) is modeled over \(\mathcal O_S[[u]]\).
+The load-bearing lemma below uses the analytic \(\mathcal O_S\)-module.
+
 ### Historical WP-0.6 full-base uniqueness audit — non-normative
 
 **WP-3 status.** This entire subsection is retained only as an audit trail. It
@@ -184,7 +212,7 @@ primary decomposition. Fix one such splitting. Put
 
 \[
 R=\mathcal O_{B,b},\qquad
-M=(\mathcal H_{u=0})_b=\bigoplus_iM_i,qquad
+M=(\mathcal H|_{u=0})_b=\bigoplus_iM_i,\qquad
 K=K_{\mathrm{res}}|_M,
 \]
 
@@ -293,74 +321,67 @@ Lemma 3.1 also shows that taking invariants preserves the whole direct-sum
 decomposition and commutes with the scalar extensions used in Definition
 5.26. ∎
 
-### Lemma 3.2 — fixed-base separated projectors (R2)
+### Lemma 3.2 — fixed-base primary projectors at \(u=0\) (R2)
 
 Let \(\mathbb K\) be an algebraically closed non-archimedean field of
 characteristic zero. Let \(S\) be a connected smooth analytic germ at \(b\),
-let \(G\) act trivially on \(S\), and let a finite locally free
-\(\mathcal O_S[[u]]\)-module carry flat matrices
+let \(G\) act trivially on \(S\), and let
+\(\mathcal H_0:=\mathcal H|_{u=0}\) be a finite locally free
+\(\mathcal O_S\)-module. Let
+\(K_{\mathrm{res}}\in\operatorname{End}_{\mathcal O_S}(\mathcal H_0)\)
+commute with the rational \(G\)-action. Suppose
 
 \[
-\nabla_{\partial_u}=\partial_u+u^{-2}U,\qquad
-\nabla_{\partial_{t_a}}=\partial_{t_a}+u^{-1}T_a
-\]
-
-which commute with the rational \(G\)-action on the fibers. Suppose
-
-\[
-\mathcal H_{(b,0)}
-=\bigoplus_{\lambda\in\Lambda}H_b^\lambda
+(\mathcal H_0)_b=\bigoplus_{\lambda\in\Lambda}H_b^\lambda
 \]
 
 is a primary decomposition for \(\kappa_{\mathrm{at},b}\), with pairwise
-disjoint cluster spectra. Equivalently, these are the
-\(-\lambda\)-clusters of \(K_{\mathrm{res},b}\). Assume `SEP-CONV` for this
-target germ. Then, after shrinking \(S\):
+coprime block characteristic polynomials. Equivalently these are the
+\(-\lambda\)-blocks of \(K_{\mathrm{res},b}\). Then, after shrinking \(S\):
 
-1. there are unique complete orthogonal horizontal analytic projectors
-   \(e_\lambda\) lifting the displayed blocks;
+1. there is a unique complete family of orthogonal analytic idempotents
+   \(e_{\lambda,0}\) commuting with \(K_{\mathrm{res}}\) and lifting the
+   displayed blocks;
 2. their images give a direct sum over the **same** base \(S\);
 3. every projector and summand is \(G\)-equivariant; and
 4. at \(b\),
    \[
-   (H_b^\lambda)^G
-   =(\mathcal H_{(b,0)}^G)^\lambda.
+   (H_b^\lambda)^G=((\mathcal H_0)_b^G)^\lambda.
    \]
 
-There is no maximality or product-base conclusion.
+There is no assertion about full-\(u\) horizontality, maximality, or a product
+base.
 
-**Proof.** Complete \(\mathcal O_{S,b}\) at its maximal ideal. Smooth
-coordinates identify the completion with a formal power-series ring.
-`ATOM_CORE.md`, Theorem 4.1 constructs the unique complete family of formal
-horizontal projectors: Hensel/CRT constructs the \(u=0\) projectors, the
-Sylvester recursion extends them in \(u\), and flatness makes every base
-matrix block diagonal. The first `SEP-CONV` clause extends the closed blocks
-to an analytic \(u=0\) decomposition; its second clause makes the formal
-horizontal projectors analytic after a strict shrink, proving (1) and (2).
-
-Any other analytic family completes to another formal family with the same
-closed blocks, so formal uniqueness identifies the completions. Section 5.1's
-internal Krull-intersection lemma makes the analytic local ring inject into
-its completion; hence the analytic projectors agree as germs. This proves
-analytic uniqueness.
-
-Transporting the family by the fiberwise \(G\)-action gives another
-horizontal family with the same closed primary blocks. Uniqueness therefore
-proves (3); no moving-base action is needed. Finally, for the equivariant
-primary projector \(e_\lambda\),
+**Proof.** The analytic local ring \(R=\mathcal O_{S,b}\) is Henselian by
+Berkovich Theorem 2.1.5 (also Fresnel–van der Put Proposition 7.1.8(1)).
+Factor the characteristic polynomial of \(K_{\mathrm{res}}\) uniquely into
+monic lifts \(F_\lambda\) of the pairwise coprime closed-fiber block
+polynomials. Pairwise resultants remain units. For
+\(G_\lambda=\prod_{\mu\ne\lambda}F_\mu\), choose Bézout polynomials
+\(a_\lambda F_\lambda+b_\lambda G_\lambda=1\) and set
 
 \[
-\begin{aligned}
-(H_b^\lambda)^G
- &=e_\lambda(\mathcal H_{(b,0)})\cap\mathcal H_{(b,0)}^G\\
- &=e_\lambda(\mathcal H_{(b,0)}^G)
-  =(\mathcal H_{(b,0)}^G)^\lambda.
-\end{aligned}
+e_{\lambda,0}=b_\lambda(K_{\mathrm{res}})
+G_\lambda(K_{\mathrm{res}}).
 \]
 
-The middle equality follows directly from equivariance; Lemma 3.1 also
-shows that invariants preserve the whole direct sum and commute with the
-scalar extensions used below. ∎
+CRT and Cayley–Hamilton give a complete orthogonal family whose image is
+\(\ker F_\lambda(K_{\mathrm{res}})\). Unit-resultant Sylvester maps kill the
+off-diagonal blocks of any competing lift, and Nakayama forces its diagonal
+idempotents to be the required identity or zero; hence the family is unique.
+The finitely many matrix entries and identities are represented on one common
+analytic shrink, proving (1) and (2).
+
+Transport by \(G\) gives another commuting family lifting the same blocks, so
+uniqueness proves (3). Equivariance then gives
+
+\[
+(H_b^\lambda)^G
+=e_{\lambda,0}((\mathcal H_0)_b^G)
+=((\mathcal H_0)_b^G)^\lambda,
+\]
+
+and Lemma 3.1 shows that invariants preserve the complete direct sum. ∎
 
 ### Proposition 3.3 — pointwise localization of an atom
 
@@ -382,7 +403,7 @@ point \(x\) above \(W\cap U_X\). Its atomic germ lies in one local cluster
 
 \[
 \rho_\alpha\le
-\operatorname{rank}(\mathcal H^\lambda_{u=0})^G.
+\operatorname{rank}((\mathcal H^\lambda)|_{u=0})^G.
 \]
 
 **Proof.** First we justify the cover-native subbundle used in the statement.
@@ -501,8 +522,9 @@ Likewise,
 =\sum_C\deg(C/U_X)\rho_{\bar C}.
 \]
 
-**Proof.** Choose \(b\in U_X\). By A11, the cover-native primary
-decomposition is
+**Proof.** Choose \(b\in U_X\). Proposition 3.3's cover CRT, applied to the
+Hodge realization and raw grading supplied by A1/A11, gives the cover-native
+primary decomposition
 
 \[
 \mathcal H_{(b,0)}
@@ -636,9 +658,9 @@ cohomological-degree filtration. Thus
 
 with \(N_\gamma\) nilpotent. The reduced spectrum therefore consists only of
 \(-t_0\). Connectedness of the fixed base from A5 gives one spectral-cover
-component, and its unique
-generalized eigenspace is the full fiber. A11 identifies that fiber with the
-full Betti Hodge representation. ∎
+component, and its unique generalized eigenspace is the full fiber. A1 gives
+that fiber as the Betti Hodge representation, with the action and grading
+from A11. ∎
 
 ### Proposition 3.7 — the target-specific weak-factorization consequence
 
@@ -680,17 +702,18 @@ some \(Z_i\) on the right. Since \(r_i\ge2\),
 ## 4. Repaired proof
 
 Let \(X\) be a Noether–Lefschetz-general smooth cubic fourfold: its rational
-Hodge classes are precisely the powers of the hyperplane class
-\(h=c_1(\mathcal O_X(1))\). By A14, its odd cohomology vanishes, its total
-even cohomology has dimension \(27\), and
+middle Hodge classes are \(\mathbf Qh^2\), where
+\(h=c_1(\mathcal O_X(1))\), by A8. The degree-four fixed-vector clause of
+A11 and the internal elementary cubic Hodge data A14 identify the complete
+fixed subspace as
 
 \[
 \mathcal H_{(b,0)}^{\mathsf{Hod}}
 =\bigoplus_{i=0}^4\mathbb K h^i.
 \]
 
-Let \((\mathcal H,\nabla)/B_X\) be the full maximal analytic A-model
-F-bundle from A1.
+Let \((\mathcal H,\nabla)/B_X\) be the analytic A-model bundle from A1. No
+maximality property is used.
 
 ### R1 — choose an admissible base point and recompute the spectrum
 
@@ -757,7 +780,7 @@ specializations in this proof are at \(q_0\), never at \(q=1\).
 4.1 … the A-model F-bundle \((\mathcal H,\nabla)/B_X^{\mathsf{Hod}}\)
 decomposes into an external direct sum of maximal F-bundles.”
 
-**After WP-3:** First restrict the rank-27 analytic connection from A1 to
+**After WP-4:** First restrict the rank-27 analytic connection from A1 to
 \(S=B_X^{\mathsf{Hod}}\). No maximality assertion is made or needed on this
 five-dimensional base.
 
@@ -765,16 +788,15 @@ five-dimensional base.
    \(\kappa_{\mathrm{at},b}\) indexed by \(\Lambda\) have pairwise disjoint
    spectra. By A13 the residue blocks are the same blocks labelled by
    \(-\Lambda\).
-2. The formal completion of the restricted matrix connection satisfies the
-   hypotheses of `ATOM_CORE.md`, Theorem 4.1. That theorem constructs unique
-   complete orthogonal horizontal projectors over
-   \(\widehat{\mathcal O}_{S,b}[[u]]\).
-3. A3's sole residual interface `SEP-CONV` supplies the analytic \(u=0\) split
-   and analytifies those formal projectors after shrinking \(S\). Since the Hodge group acts trivially on
-   \(S\) and equivariantly on the fiber matrices, transporting a projector
-   gives another lift of the same closed block; uniqueness makes all four
-   projectors Hodge-equivariant. A12 and the older moving-base argument are
-   not used.
+2. Restrict to the analytic bundle \(\mathcal H_0=\mathcal H|_{u=0}\).
+   Berkovich's theorem makes \(\mathcal O_{S,b}\) Henselian. Lemma 3.2/HP
+   factors the characteristic polynomial of \(K_{\mathrm{res}}\), applies
+   CRT, and gives four canonical analytic commuting projectors after one
+   shrink of \(S\). No completion or convergence in \(u\) is invoked.
+3. Since the Hodge group acts trivially on \(S\) and equivariantly on
+   \(K_{\mathrm{res}}\), transporting a projector gives another lift of the
+   same closed block; Henselian uniqueness makes all four projectors
+   Hodge-equivariant. A12 and the older moving-base argument are not used.
 4. The hypotheses of Proposition 3.3 hold: by A5,
    \(B_X^{\mathsf{Hod}}\) is a connected smooth analytic base, and \(U_X\) is
    its dense nonempty Zariski-open maximal-eigenvalue locus (density is stated
@@ -782,10 +804,11 @@ five-dimensional base.
    and \(\widetilde U_X\to U_X\) is finite étale. A connected smooth analytic
    base is irreducible, so its nonempty Zariski-open \(U_X\) is connected.
    Every cover component is then surjective because its image is nonempty,
-   open, and closed. A11 gives the raw pointwise primary factors, while
-   Proposition 3.3 and Corollary 3.4 prove their cover-native bundles,
-   invariant ranks, and atom bookkeeping. Thus every atom is represented in
-   one of the four local clusters.
+   open, and closed. A11 gives the raw action, grading, and cover data;
+   Proposition 3.3's CRT constructs the pointwise primary factors and their
+   cover-native bundles, while Corollary 3.4 proves the numerical atom
+   bookkeeping. Thus every atom is represented in one of the four local
+   clusters.
 
 At the repaired point, the compatibility with invariants is
 
@@ -796,8 +819,8 @@ At the repaired point, the compatibility with invariants is
 \]
 
 This is the conclusion needed from the printed proof's invalid application of
-Theorem 4.1. Whole HYZZ Theorem 3.42, full-base maximality, and maximality of
-the factors are absent.
+KKPY Theorem 4.1. Whole HYZZ Theorem 3.42, full-\(u\) convergence,
+full-base maximality, and maximality of the factors are absent.
 
 ### R3 — use the cluster containing the atom
 
@@ -888,8 +911,8 @@ composition of \(S_{\min}\) has the single atom
 
 The proof of Lemma 3.6 says that
 \(\kappa_{\mathrm{at}}\) has one reduced eigenvalue. Its unique generalized
-eigenspace is therefore the entire fiber, and A11 (via KKPY Lemma 5.25)
-identifies its representation as
+eigenspace is therefore the entire A1 fiber; with the A11 action, its
+representation is
 
 \[
 E^{\boldsymbol\eta(S_{\min})}
@@ -919,39 +942,25 @@ is not rational.
 **Before (KKPY p. 69):** “Such cubic fourfolds exist e.g. by Voisin’s proof
 of the Torelli theorem for cubic fourfolds.”
 
-**After:** The pinned Hassett artifact first defines the integral Hodge
-lattice (the paragraph immediately after Definition 3.1.1, artifact p. 7):
-
-> “Let \(A(X)=H^{2,2}(X)\cap H^4(X,\mathbf Z)\).”
-
-Theorem 3.1.2 then states (artifact pp. 7–8):
-
-> “Every special cubic fourfold is contained in some \(\mathcal C[K]\), which is an irreducible algebraic divisor.”
-
-Here \(\mathcal C[K]\) is defined by the inclusion of a positive-definite
-saturated rank-two lattice \(K\), containing \(h^2\), in \(A(X)\). Thus if
-\(A(X)\) has rank at least two, choosing such a saturated \(K\) puts \(X\)
-in \(\mathcal C[K]\). This implication is purely about the integral Hodge
-lattice and uses no Hodge conjecture; Hassett invokes that conjecture only
-to identify these Hodge classes with algebraic-cycle classes. The relevant
-integral lattices \(K\) form a countable set. Therefore
+**After:** Hassett Definition 3.1.1 and Theorem 3.1.2 (artifact pp. 7–8)
+show that cubics with a middle integral Hodge lattice of rank at least two lie
+in a countable union of proper algebraic Hodge divisors. Pull those loci back
+to the smooth locus \(\mathcal U\subset\mathbf P^{55}\) of cubic equations
+and take their closures \(D_n\) in \(\mathbf P^{55}\). Each closure is
+proper, and \(D_n\cap\mathcal U\) is the original relatively closed pullback.
+Outside \(\bigcup_nD_n\), clearing denominators gives
 
 \[
-\mathcal C_{\rm NL}:=\bigcup_K\mathcal C[K]
+H^{2,2}(X)\cap H^4(X,\mathbf Q)=\mathbf Qh^2.
 \]
 
-is a countable union of proper closed algebraic divisors. Outside this union,
-\(A(X)\) has rank one, so clearing denominators shows that the middle
-rational Hodge classes are generated by \(h^2\); A14 shows in the other
-degrees that the only rational Hodge classes are the remaining powers of
-\(h\). This is precisely the
-Noether–Lefschetz generality used above. The repaired argument applies to
-every point of this complement.
+Together with the internal elementary cubic Hodge data A14, this is precisely
+the fixed-subspace generality used above. The repaired argument applies to
+every parameter in this complement.
 
-No further Torelli or transcendental-irreducibility locus is consumed by
-Theorem 6.8. The irreducibility assertion used later in KKPY Corollary 6.12
-is not an input to this theorem and adds no exceptional locus here. This
-proves the stated very-general theorem. ∎
+No Torelli theorem, irreducibility of Hassett divisors, discriminant
+irreducibility, or transcendental-irreducibility locus is consumed. This
+proves the stated parameter-space very-general theorem. ∎
 
 ## 5. Consequential R1 substitutions after Theorem 6.8
 
@@ -998,27 +1007,28 @@ L**5 - 729*L**2*q
 The source pins can be replayed with:
 
 ```sh
-shasum -a 256 tmp/pdfs/2508.05105v2.pdf tmp/pdfs/2411.02266.pdf tmp/pdfs/vezzani-nonarch-implicit-function.pdf tmp/pdfs/2307.13555.pdf tmp/pdfs/2604.10028v2.pdf tmp/pdfs/beauville-quantum-complete-intersections.pdf tmp/pdfs/peters-surface.pdf tmp/pdfs/givental-eqv.pdf tmp/pdfs/hassett-special-cubic-fourfolds.pdf tmp/sources/v2/brinv.tex
+shasum -a 256 tmp/pdfs/2508.05105v2.pdf tmp/pdfs/berkovich-etale-cohomology.pdf tmp/pdfs/fresnel-van-der-put-rigid-analytic-geometry.pdf tmp/pdfs/2411.02266.pdf tmp/pdfs/vezzani-nonarch-implicit-function.pdf tmp/pdfs/2307.13555.pdf tmp/pdfs/2604.10028v2.pdf tmp/pdfs/beauville-quantum-complete-intersections.pdf tmp/pdfs/peters-surface.pdf tmp/pdfs/popa-hodge-theory-singularities.pdf tmp/pdfs/givental-eqv.pdf tmp/pdfs/hassett-special-cubic-fourfolds.pdf tmp/sources/v2/brinv.tex
 rg -n 'thm:cubic4|thm:K-decomposition|lem:Ginvariants|lem:nefK|prop:non-rational' tmp/sources/v2/brinv.tex
 ```
 
 ## 7. Certificate boundary
 
 - R1, R3, R4, and R5 are closed by explicit substitutions and arguments.
-- R2 is closed conditionally by the internal formal separated-projector
-  theorem, the narrow analytic interface `SEP-CONV`, Lemma 3.1, and
-  Proposition 3.3. The cover-native representation and its numerical data are
-  internal.
+- R2 is closed by the internal Henselian Primary-Projector Theorem, Lemma 3.1,
+  and Proposition 3.3, relative only to the analytic bundle in `GW-1` and the
+  raw cover/Hodge data in `HATOM-RAW`. No projector-convergence interface
+  survives.
 - The stronger claim that one global spectral-cover component has one local
   cluster label is expressly not certified; it is false in general and
   unnecessary.
-- The single current interface table is `GW_INPUT.md`. It exposes exactly
-  `GW-1`, `GW-3`, `WF-4`, `SEP-CONV`, `HATOM-RAW`, `NL-CUBIC`, and
-  `SURF-MIN` as top-level opaque packages. A4/`GW-2` is an internal F2 theorem.
+- The single current interface table is `GW_INPUT.md`. It exposes exactly six
+  top-level opaque packages: `GW-1`, `GW-3`, `WF-4`, `HATOM-RAW`, `NL-CUBIC`,
+  and `SURF-MIN`. A4/`GW-2` is an internal F2 theorem.
 - Whole HYZZ Theorem 3.42, full-base maximality, A12's moving-base action,
   projective-bundle atom relations, KKPY Proposition 5.30, a separate
   imported nef-\(K\) lemma, primitive-class vanishing, and deformation
   invariance are not target interfaces.
-- N1–N8 and the WP-1–WP-3 reductions are incorporated. The full formal spine,
-  source pins, and Mathlib gap list are in `ATOM_CORE.md`. No WP-4 work,
-  author contact, or Lean implementation is included.
+- N1–N8 and the WP-1–WP-4 reductions are incorporated. The full formal spine,
+  source pins, and Mathlib gap list are in `ATOM_CORE.md`; the parameter-space
+  Lean target is in `GENERALITY.md`. No WP-5 assembly, author contact, or Lean
+  implementation is included.

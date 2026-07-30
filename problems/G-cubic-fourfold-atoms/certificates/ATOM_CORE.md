@@ -1,38 +1,29 @@
-# Theorem 6.8 — formal atom core and the analytic residue
+# Theorem 6.8 — formal atom core and the Henselian analytic split
 
 **Date:** 2026-07-29
-**Work order:** WP-3
-**Outcome:** **SPLIT** for HYZZ: the formal separated splitting is proved
-below; finite analytic $u=0$ splitting and strict-shrink convergence remain
-the narrower interface `SEP-CONV`.
-**Status:** complete at worker scope; **STOP at director review before WP-4**.
+**Work orders:** WP-3, corrected and minimized in WP-4
+**Outcome:** the analytic $u=0$ primary projectors are internal by
+Henselianity of the analytic local ring. The full formal $u$-horizontal
+extension remains proved, but is not load-bearing for Theorem 6.8.
+**Status:** WP-4 worker deliverable; **STOP at director review before WP-5**.
 
 ## 1. Verdict and scope
 
 The repaired cubic-fourfold proof does not need HYZZ's product decomposition
-of the base, tangent distributions, or maximality of the factors. It needs
-only horizontal projectors that separate prescribed closed-fiber spectral
-clusters. Section 4 proves the existence and uniqueness of those projectors
-over a formal power-series base, without maximality.
+of the base, tangent distributions, maximality of the factors, or an analytic
+projector depending on $u$. Its consumers read only the primary decomposition
+of the analytic bundle at $u=0$: certificate Proposition 3.3, Lemma 3.2(4),
+Corollary 3.4, and R3. HP constructs that decomposition directly over
+the Henselian stalk $\mathcal O_{S,b}$ by characteristic-polynomial
+factorization and CRT. The idempotents are canonical and hence
+Hodge-equivariant.
 
-The proof does **not** establish convergence of the resulting infinite gauge
-on a non-archimedean analytic germ. Completion and faithful flatness do not
-turn an arbitrary formal series into a convergent one. The sole surviving
-analytic package is:
-
-> **`SEP-CONV` (separated-projector analytic effectivity).** For the target
-> analytic matrix connection, if the closed residue has finitely many
-> invariant blocks with pairwise disjoint spectra, then after a strict shrink:
-> the finite analytic block splitting at $u=0$ exists; the unique formal
-> horizontal projectors of Theorem 4.1 are Taylor expansions of analytic
-> horizontal idempotents.
-
-The convergence clause is the part of HYZZ Proposition 3.36 consumed here;
-that proposition assumes the analytic $u=0$ splitting. The preceding finite
-effectivity clause is the non-archimedean analytic implicit-function step
-isolated in Section 5. Together they are strictly smaller than HYZZ Theorem
-3.42: there is no maximality hypothesis and no F-manifold or product-base
-conclusion.
+The old `SEP-CONV` package is therefore retired. The full formal
+$u$-horizontal theorem, the completion-injectivity lemma, and the corrected
+HYZZ convergence analysis are retained as FP and in Section 5 because they are
+valid independent results. They have no edge to Theorem 6.8. In particular,
+failure to prove convergence of the infinite formal gauge no longer leaves an
+analytic axiom on the target path.
 
 The remaining sections specify the entire Lean spine. An item marked
 **internal** is a theorem to prove in that development, not an additional
@@ -47,7 +38,7 @@ until independently formalized.
 ## 2. The only top-level hypotheses
 
 The single table of record, with exact wording and use-sites, is
-[GW_INPUT.md](GW_INPUT.md), Section 2. The top theorem takes exactly seven
+[GW_INPUT.md](GW_INPUT.md), Section 2. The top theorem takes exactly six
 named packages:
 
 1. **`GW-1`** — target analytic A-model matrices, Hodge action, and the
@@ -63,22 +54,20 @@ named packages:
 3. **`WF-4`** — projective weak factorization for the endpoint pair
    $\mathbf P^4,X$. Source: AKMW, SHA-256
    `55bbc2c58f29d4b9dbe965035f80f3844f6968eaf98076ac625132ac3b3977a5`.
-4. **`SEP-CONV`** — the analytic effectivity statement above. Source: HYZZ
-   Proposition 3.36, SHA-256
-   `a11a093f790890804c7d4f7559b30ed2a6da87811de46f2aa0d29026e343e6bd`,
-   and Vezzani, Proposition A.1.1, SHA-256
-   `bf53f2958e17de3ece49c27d433f98f9a55086fedd4c7cbb65e9bb15682e8f4d`.
-5. **`HATOM-RAW`** — the connected fixed base, proreductive Hodge action,
-   finite étale reduced spectral cover, fiberwise primary decomposition, and
-   $p-q$ grading. Its fixed vectors are exactly the rational Hodge classes. It
-   does not assume descent of $\rho$ or $P$; these are proved internally. Main
-   source: the pinned KKPY v2 artifact. The
+4. **`HATOM-RAW`** — the connected smooth/reduced fixed base, dense spectral
+   locus, proreductive Hodge action, finite étale reduced spectral cover, and
+   raw $p-q$ grading. Only the degree-four cubic fixed-vector identification
+   and fixedness of algebraic cycle classes are exposed; primary bundles and
+   descent of $\rho$ and $P$ are internal. Main source: the pinned KKPY v2
+   artifact. The
    proreductive-to-semisimple bridge is pinned to Deligne--Milne, SHA-256
    `48f8af5249081217fc4a806414a764d9d69d66eff9092ddd8e2cf0ea078579e8`.
-6. **`NL-CUBIC`** — the cubic Hodge diamond and the countable union of proper
-   Noether--Lefschetz divisors. Source: Hassett, SHA-256
+5. **`NL-CUBIC`** — only the rank-one middle rational Hodge-class statement
+   off a countable union and that union's proper-closed parameter-space form.
+   The universal cubic identity $[t^2]=1$ is an internal basic-Hodge lemma,
+   not part of this Noether--Lefschetz package. Source: Hassett, SHA-256
    `ecc2e31a63f56d443aaa3534f0218b25a5b6ab6e1a84c82db5c7bac1789a1d21`.
-7. **`SURF-MIN`** — $P_1=p_g$, birational invariance of plurigenera, and a
+6. **`SURF-MIN`** — $P_1=p_g$, birational invariance of plurigenera, and a
    finite sequence of $(-1)$-curve contractions from the given smooth
    projective surface to a smooth projective minimal model with nef canonical
    class when a plurigenus is positive. Reversing the sequence gives ordinary
@@ -89,26 +78,92 @@ named packages:
 theorem is an F2 internal file, followed by the F0 calculation in Section 9.
 Proposition 5.28 is also absent: it is downstream of Theorem 6.8.
 
-A Lean-shaped top signature is:
+A Lean-shaped top signature now uses fixed coordinates on the projective
+parameter space of equations:
 
 ```lean
-theorem nlGeneral_not_isRational
-    (X : CubicFourfold)
-    (gw1 : GW1Family) (gw3 : GW3) (wf4 : WF4)
-    (sepConv : SepConvFamily) (hatom : HAtomRawFamily)
-    (nl : NLCubic X) (surf : SurfaceMinimalPackage) :
-    NLGeneral X -> Not (IsRational X)
+def CubicMonomial :=
+  {m : Fin 6 →₀ ℕ // m.sum (fun _ e => e) = 3}
 
-theorem theorem_6_8
+abbrev CubicCoefficients := CubicMonomial → ℂ
+abbrev CubicParameter := Projectivization ℂ CubicCoefficients
+def SmoothCubicLocus : Set CubicParameter :=
+  {x | Smooth (CubicFourfold.toSpec x)}
+abbrev SmoothCubicParameter := ↥SmoothCubicLocus
+
+structure CubicHodge22Fiber (X : SmoothCubicParameter) where
+  H4Q : Type
+  [addCommGroupH4Q : AddCommGroup H4Q]
+  [moduleH4Q : Module ℚ H4Q]
+  [finiteDimensionalH4Q : FiniteDimensional ℚ H4Q]
+  classes22 : Submodule ℚ H4Q
+  hyperplaneSq : H4Q
+  hyperplaneSq_mem : hyperplaneSq ∈ classes22
+  hyperplaneSq_ne_zero : hyperplaneSq ≠ 0
+
+noncomputable def cubicHodge22Fiber
+    (X : SmoothCubicParameter) : CubicHodge22Fiber X := ...
+
+abbrev RationalHodgeClasses22 (X : SmoothCubicParameter) :
+    Submodule ℚ (cubicHodge22Fiber X).H4Q :=
+  (cubicHodge22Fiber X).classes22
+
+def NLGeneral (X : SmoothCubicParameter) : Prop :=
+  Module.finrank ℚ (RationalHodgeClasses22 X) = 1
+
+structure NLCubicFamily where
+  exceptional : ℕ → ProperClosedSubset
+  avoidance_nlGeneral : ∀ X : SmoothCubicParameter,
+    X.1 ∉ ⋃ n, (exceptional n).carrier → NLGeneral X
+
+def IsRational (X : SmoothCubicParameter) : Prop :=
+  Scheme.BirationalOver
+    (CubicFourfold.toSpec X.1)
+    (ProjectiveSpace.toSpec 4 ℂ)
+
+theorem nlGeneral_not_isRational
     (gw1 : GW1Family) (gw3 : GW3) (wf4 : WF4)
-    (sepConv : SepConvFamily) (hatom : HAtomRawFamily)
-    (nl : NLCubicFamily) (surf : SurfaceMinimalPackage) :
-    Exists fun (I : Type) => Countable I ∧
-      Exists fun D : I -> ProperClosedDivisor CubicModuli =>
-        forall X, X ∉ Set.iUnion D -> Not (IsRational X)
+    (hatom : HAtomRawFamily) (surf : SurfaceMinimalPackage)
+    (X : SmoothCubicParameter) (hX : NLGeneral X) :
+    ¬ IsRational X
+
+theorem theorem_6_8_countable_union
+    (gw1 : GW1Family) (gw3 : GW3) (wf4 : WF4)
+    (hatom : HAtomRawFamily) (nl : NLCubicFamily)
+    (surf : SurfaceMinimalPackage) :
+    ∃ D : ℕ → ProperClosedSubset,
+      ∀ X : SmoothCubicParameter,
+        X.1 ∉ ⋃ n, (D n).carrier → ¬ IsRational X
+
+def HoldsForVeryGeneralSmoothCubic
+    (P : SmoothCubicParameter → Prop) : Prop :=
+  ∃ D : ℕ → ProperClosedSubset,
+    ∀ X, X.1 ∉ ⋃ n, (D n).carrier → P X
+
+theorem veryGeneral_smoothCubic_not_isRational
+    (gw1 : GW1Family) (gw3 : GW3) (wf4 : WF4)
+    (hatom : HAtomRawFamily) (nl : NLCubicFamily)
+    (surf : SurfaceMinimalPackage) :
+    HoldsForVeryGeneralSmoothCubic (fun X => ¬ IsRational X)
+
+theorem addingtonAuel_NLGeneral :
+    NLGeneral addingtonAuelParameter
+
+theorem addingtonAuel_not_isRational
+    (gw1 : GW1Family) (gw3 : GW3) (wf4 : WF4)
+    (hatom : HAtomRawFamily) (surf : SurfaceMinimalPackage) :
+    ¬ IsRational addingtonAuelParameter
 ```
 
-This is schematic syntax; no Lean implementation is claimed yet.
+Here `CubicParameter` is $\mathbf P^{55}(\mathbf C)$, not a quotient by
+$\operatorname{PGL}_6$; `ProperClosedSubset` is cut out by homogeneous
+coefficient equations and is not required to be a divisor. The explicit
+Addington--Auel theorem is a supported target because WP-4 supplies a
+replayable proof of `addingtonAuel_NLGeneral`, not merely a stretch goal.
+Sections 6–8 of
+[GENERALITY.md](GENERALITY.md) specify the missing definitions and existing
+Problem-B/Mathlib reuse. This remains target syntax; no Lean implementation
+is claimed yet.
 
 ## 3. Concrete data and coefficient rings
 
@@ -156,6 +211,25 @@ R_{\mathrm{an}}=\mathcal O_{S,b},\qquad
 \widehat R_{\mathrm{an}}\simeq k[[t_1,\ldots,t_n]].
 $$
 
+The stalk $R_{\mathrm{an}}$ is Henselian. Fresnel--van der Put, *Rigid
+Analytic Geometry and Its Applications*, Proposition 7.1.8(1), printed
+pp. 199--200, states this for the stalk at every prime filter; a rigid point
+gives a maximal, hence prime, filter. See the [local PDF](../tmp/pdfs/fresnel-van-der-put-rigid-analytic-geometry.pdf),
+SHA-256
+`54bac91f89abcd9a42645b1a07624222aeb570048ed224e4cd79a328fd7ef915`.
+Berkovich, *Étale cohomology for non-Archimedean analytic spaces*, Theorem
+2.1.5, is an independent direct statement and proof; [local
+PDF](../tmp/pdfs/berkovich-etale-cohomology.pdf), SHA-256
+`bd864c89ed8b6e8f27a90f459837221549db75afa75554ab51414e17771066af`.
+Bosch's 1977 formal-fiber paper is retained as the historical source requested
+by the work order, [local scan](../tmp/pdfs/bosch-formal-fibers-affinoid.pdf),
+SHA-256
+`e50ea3b1868f3c6c2aae7ff4394c45484732c33bba30184855e7a380fe42aa8b`,
+but the certificate does not miscite BGR §7.3.2 as the direct Henselian-stalk
+theorem. Smoothness is used only for the displayed regular completion;
+finite projectivity over the local ring supplies freeness. Henselianity itself holds for analytic local rings in the cited
+theorems.
+
 If $S=B^G$ is a fixed locus, $\mathcal O_{S,b}$ is a quotient of the ambient
 local ring. It is not silently $\mathcal O_{B,b}^G$. Restriction of modules
 and matrices is tensor base change along that quotient.
@@ -185,6 +259,26 @@ u^2\partial_u e+[U,e]=0,\qquad
 u\partial_{t_a}e+[T_a,e]=0.
 $$
 
+For the even base coordinates actually consumed, flatness means explicitly
+
+$$
+[T_a,U]+u\,\partial_{t_a}U+uT_a-u^2\partial_uT_a=0,
+\qquad
+[T_a,T_b]+u(\partial_{t_a}T_b-\partial_{t_b}T_a)=0. \tag{3.1}
+$$
+
+In particular $[T_{a,0},U_0]=0$. For odd coordinates the corresponding
+graded commutators carry the Koszul signs; no odd-coordinate identity is used
+below.
+
+On an analytic representative the connection lives on a vector bundle over a
+product $B\times D_u$ (with $u\ne0$ where the meromorphic connection is
+evaluated). Writing a finite locally free $\mathcal O_S[[u]]$-module means its
+formal germ along $u=0$, not an analytic bundle on the whole product. The
+load-bearing construction below takes the actual analytic restriction at
+$u=0$ over $S$; the formal $[[u]]$ model is used only by the non-load-bearing
+Formal Horizontal-Projector Theorem (FP).
+
 The closed fiber is $V=M/(u,t_1,\ldots,t_n)M$. Keep two operators distinct:
 
 $$
@@ -198,9 +292,53 @@ Negation sends $\lambda$ to $-\lambda$ but changes neither generalized
 eigenspaces nor dimensions. Atom labels use $\kappa_{\mathrm{at}}$; the
 formal splitting theorem sees $K_{\mathrm{res}}$.
 
-## 4. Formal separated horizontal projectors — proved layer
+## 4. Separated projectors — analytic $u=0$ core and formal extension
 
-### Theorem 4.1 (`formalHorizontalProjectors`)
+### Henselian Primary-Projector Theorem (HP; `analyticPrimaryProjectorsAtUZero`) — load-bearing
+
+Let $(R,\mathfrak m,k)$ be a Henselian local ring, let $M_0$ be finite free
+over $R$, and let $K\in\operatorname{End}_R(M_0)$. Suppose the closed fiber
+$\bar M_0$ has a finite $K_b$-stable decomposition
+
+$$
+\bar M_0=\bigoplus_{i\in I}V_i
+$$
+
+whose block characteristic polynomials $\chi_i$ are pairwise coprime. Then
+there is a unique complete family of $K$-commuting orthogonal idempotents
+$e_{i,0}\in\operatorname{End}_R(M_0)$ reducing to the displayed projectors.
+Their images are finite projective direct summands. Any symmetry commuting
+with $K$ and preserving the closed clusters preserves this family.
+
+**Proof.** The characteristic polynomial of $K$ reduces to
+$\prod_i\chi_i$. Hensel factorization gives unique monic factors
+$F_i\in R[Z]$ lifting $\chi_i$ with
+
+$$
+\det(Z-K)=\prod_iF_i(Z).
+$$
+
+Their pairwise resultants are units. Put $G_i=\prod_{j\ne i}F_j$ and choose
+$a_i,b_i\in R[Z]$ with $a_iF_i+b_iG_i=1$. Then
+
+$$
+e_{i,0}=b_i(K)G_i(K)
+$$
+
+are complete orthogonal $K$-commuting idempotents, and Cayley--Hamilton gives
+$\operatorname{im}(e_{i,0})=\ker F_i(K)$. For uniqueness, any other
+$K$-commuting lift is block diagonal because every off-diagonal Sylvester map
+has unit determinant; Nakayama kills its discrepancy on each diagonal block.
+Canonicity proves the symmetry assertion. ∎
+
+Apply this with $R=\mathcal O_{S,b}$, $M_0=(\mathcal H|_{u=0})_b$, and
+$K=K_{\mathrm{res}}$. Each matrix entry is an analytic germ, so the finite
+family is represented after one common shrink of $S$. An idempotent image is
+a vector subbundle. Thus this theorem gives exactly the analytic $u=0$
+cluster bundles consumed by Proposition 3.3 and R2, without completing the
+ring and without any convergence assertion in $u$.
+
+### Formal Horizontal-Projector Theorem (FP; `formalHorizontalProjectors`) — proved, non-load-bearing
 
 Let $R$, $A$, and $M$ be as above. Assume the matrices of Section 3.3 are
 flat, and write
@@ -229,8 +367,9 @@ occurs.
 
 ### Step 1 — lift the $u=0$ primary decomposition
 
-The characteristic polynomial of $U_0(t)$ reduces to $\prod_i\chi_i$ at
-$t=0$. Complete-local Hensel factorization gives unique monic
+The formal ring $R=k[[t_1,\ldots,t_n]]$ is Henselian, so HP applies
+to $U_0(t)$. Concretely, its characteristic polynomial reduces to
+$\prod_i\chi_i$ at $t=0$, and Hensel factorization gives unique monic
 $F_i(t,Z)\in R[Z]$ lifting $\chi_i$ with
 
 $$
@@ -254,8 +393,9 @@ are orthogonal idempotents summing to one. Cayley--Hamilton gives
 $\operatorname{im}(e_{i,0})=\ker F_i(U_0)$. The images are finite projective,
 hence free because $R$ is local.
 
-This is the only raw Hensel/idempotent step. It does not yet split the full
-connection.
+This is the only raw Hensel/idempotent step. Theorem 6.8 stops here. The
+remaining steps prove the stronger formal $u$-horizontal extension but are
+not used by any target consumer.
 
 Choose an $R$-basis of each free module
 $M_i=\operatorname{im}(e_{i,0})$ and concatenate these bases. The resulting
@@ -374,9 +514,9 @@ $$
 On the selected block this is $2d_r=d_r$; on every other block it is
 $0=d_r$. Thus $d_r=0$, contradiction. The family is unique. Any symmetry
 preserving the matrices transports it to another such family, so uniqueness
-also proves equivariance. This proves Theorem 4.1. ∎
+also proves equivariance. This proves FP. ∎
 
-## 5. Analytic upgrade — the exact stopping point
+## 5. Non-load-bearing full-$u$ analytic upgrade audit
 
 ### 5.1 Completion does not prove convergence
 
@@ -395,8 +535,10 @@ upgrades formal uniqueness to analytic uniqueness.
 
 Injectivity does **not** imply that entries of an arbitrary formal gauge lie
 in $R_{\mathrm{an}}$. Artin approximation also does not produce one exact
-convergent solution of this infinite differential system. Thus Theorem 4.1
-alone supplies no analytic summand.
+convergent solution of this infinite differential system. Thus FP
+alone supplies no analytic summand depending analytically on $u$. This does
+not affect Theorem 6.8, whose analytic $u=0$ summands are already supplied by
+HP.
 
 ### 5.2 The finite analytic split at $u=0$
 
@@ -415,9 +557,9 @@ theorem therefore produces a unique small analytic $X(t)$ with
 $\Psi(t,X(t))=0$ after shrinking. Conjugating the constant block projectors by
 $1+X(t)$ gives the required analytic $U_0$-stable decomposition.
 
-This is a finite analytic effectivity step, not a consequence of formal
-completion. It is the first clause retained in `SEP-CONV`. A coefficient-
-majorant form of the needed implicit-function theorem is Alberto Vezzani,
+This gives an independent analytic-implicit-function proof of the finite
+$u=0$ theorem, but is no longer an interface. A coefficient-majorant form of
+the needed implicit-function theorem is Alberto Vezzani,
 *A Motivic Version of the Theorem of Fontaine and Wintenberger*, Proposition
 A.1.1, printed pp. 55--56 of the pinned artifact, SHA-256
 `bf53f2958e17de3ece49c27d433f98f9a55086fedd4c7cbb65e9bb15682e8f4d`.
@@ -488,10 +630,10 @@ reproof must repair two points in the printed argument:
    strict shrink.
 
 This work order does not reproduce every conjugation estimate and the full
-double induction. It therefore does not claim analytic discharge.
-`SEP-CONV` retains exactly the analytic ingredients: finite analytic block
-effectivity from the closed projector to $u=0$, and convergence on a
-strict shrink. Taylor-map injectivity was proved internally in Section 5.1.
+double induction. It therefore does not claim convergence of the full formal
+gauge. That unresolved independent question is not an axiom: no downstream
+consumer asks for an analytic projector away from $u=0$. Taylor-map
+injectivity remains the internal result of Section 5.1.
 
 ### 5.4 Exact source boundary and target use
 
@@ -504,16 +646,15 @@ The pinned HYZZ artifact has these anchors:
 - Proposition 3.36, pp. 25--27: convergence;
 - Theorem 3.42, pp. 27--28: the stronger maximal/product theorem.
 
-The two analytic-effectivity clauses isolated in `SEP-CONV` remain opaque:
-the finite analytic $u=0$ split from Section 5.2 and HYZZ's convergence on a
-strict shrink. Proposition 3.36 supplies only the second clause and assumes
-the first. Taylor-map injectivity is internal Section 5.1, not part of the
-opaque package. Since the replacement theorem needs no maximality, the proof
-may first restrict the rank-27 connection to the five-dimensional fixed germ
-and split it there. The Hodge group acts trivially on that base and
-equivariantly on fibers; formal uniqueness plus internal Taylor-map
-injectivity makes the analytic projectors equivariant. The former moving-base
-argument and HYZZ's product-base machinery are no longer consumed.
+HP discharges the finite analytic $u=0$ split. HYZZ
+Proposition 3.36 concerns the stronger full-$u$ convergence problem and is
+retained only as audited research material. Since the target needs no
+full-$u$ analytification, `SEP-CONV`, Taylor-map injectivity, and Proposition
+3.36 all have no edge to Theorem 6.8. The proof first restricts the rank-27
+connection to the five-dimensional fixed germ and splits $U_0$ there. The
+Hodge group acts trivially on that base and equivariantly on fibers;
+canonicity of the Henselian CRT projectors makes them equivariant. The former
+moving-base argument and HYZZ's product-base machinery are not consumed.
 
 ## 6. Internal linear and representation lemmas
 
@@ -644,11 +785,12 @@ axiom.
 
 ### 7.2 Canonical clusters and pointwise localization (F2)
 
-Apply Theorem 4.1 and `SEP-CONV` on the fixed germ. Two analytic horizontal
-projectors with the same fiber block have the same formal completion; the
-internal completion-injectivity lemma of Section 5.1 makes them agree as
-germs. Transport by the Hodge action gives another such projector, so
-uniqueness makes all cluster projectors equivariant.
+Apply HP to $K_{\mathrm{res}}$ over the Henselian analytic stalk of
+the fixed germ. It gives the canonical analytic $u=0$ cluster projectors
+directly. Transport by the Hodge action gives another $K_{\mathrm{res}}$-
+commuting lift of the same closed blocks, so Henselian uniqueness makes every
+cluster projector equivariant. No formal completion or full-$u$ convergence
+is used.
 
 Let $W\subset S$ be the connected splitting neighborhood. Density gives
 $U\cap W\ne\varnothing$. For every cover component $C$, surjectivity gives a
@@ -671,8 +813,24 @@ This is exactly what certificate Lemma 3.2 and Proposition 3.3 contribute.
 
 ### 7.3 Atom type, chemical formula, and Laurent Hodge polynomial (F0/F1)
 
-Begin with raw connected spectral-cover components. Generate an equivalence
-relation only from:
+Begin with raw connected spectral-cover components. Here an **isomorphism of
+cover-native data** from $C\to U$ to $C'\to U'$ means an isomorphism of base
+germs $U\simeq U'$, an isomorphism $C\simeq C'$ over it compatible with the
+tautological eigenvalue, and a grading-preserving equivariant vector-bundle
+isomorphism
+
+$$
+\ker(\kappa_{\mathrm{at}}-\ell)^N
+\simeq
+\ker(\kappa'_{\mathrm{at}}-\ell')^N
+$$
+
+that intertwines the induced primary operator and unital algebra structure.
+This is the exact data needed to preserve the Hodge representation, the
+$p-q$ grading, $P_\alpha$, and $\rho_\alpha$; an isomorphism of the finite
+covers alone is not enough.
+
+Generate an equivalence relation only from:
 
 - isomorphism of cover-native data;
 - transport inside one connected component;
@@ -755,14 +913,12 @@ replacing KKPY Lemma 5.24.
 
 ## 9. `GW-2`: target geometry and the finite $6,15,6$ proof
 
-### 9.1 F2 theorem to formalize
+### 9.1 Chosen F2 boundary: Beauville's three numbers directly
 
-For a smooth cubic fourfold $X\subset\mathbf P^5$, a degree-one stable map has
-a unique positive-degree component, which maps isomorphically to a line;
-contracted components may still occur. The F2 theorem must compare the stable-
-map virtual class and general incidence constraints with Beauville's line
-locus, including those boundary strata. After that comparison, the
-line-incidence computation gives
+WP-4 takes the explicit fallback and dissolves the previously unnamed
+expected-dimension theorem about the Fano scheme of lines. The internal
+target theorem `beauvilleCubicLineCorrections` states directly that the three
+ambient degree-one corrections equal
 
 $$
 \ell_p=\frac13\int_{\operatorname{Gr}(2,6)}
@@ -770,12 +926,13 @@ c_4(\operatorname{Sym}^3S^\vee)c_{3-p}(Q)c_{1+p}(Q),
 \qquad p=0,1,2. \tag{9.1}
 $$
 
-Formalizing the positive-degree-component statement, contracted-tail boundary,
-virtual-class/incidence comparison, zero locus of the cubic section, and
-Grassmannian integration is the F2 file `Cubic/LineIncidence.lean`. An
-alternative honest interface is to state Beauville's three target invariants
-directly. The arithmetic below does not replace either route. Source:
-Beauville, SHA-256
+Its proof target is Beauville's published complete-intersection calculation,
+equations (1.6), (2.1), and the Grassmannian coefficient lemma. The main spine
+does not promise a separate construction of stable-map boundary strata or a
+Fano-scheme expected-dimension theorem. Those facts belong inside any future
+foundational reproof of Beauville, not as unnamed premises here. The theorem
+is the F2 file `Cubic/BeauvilleCorrections.lean`; the coefficient extraction
+below is F0. Source: Beauville, SHA-256
 `9d022796aefa01fd601820e415c5462bdfc255b3b4fe158af64b51f7bf0a83e3`.
 
 ### 9.2 F0 coefficient extraction
@@ -831,6 +988,32 @@ This is a finite polynomial identity for `ring_nf` and coefficient
 evaluation; no mirror theorem enters the trusted boundary.
 
 ## 10. Cubic matrix and primary dimensions (F0)
+
+The internal lemma `cubicBasicHodge` extracts only the universal facts needed
+from Hassett §2.1: $h^{3,1}(X)=1$, and outside middle degree the rational
+cohomology is the diagonal span of $1,h,h^3,h^4$. Consequently
+
+$$
+[t^2]\operatorname{HP}_{\mathrm{fold}}(X;t)=1. \tag{10.H}
+$$
+
+The full Hodge diamond and total rank $27$ are not part of `NL-CUBIC` and are
+not separate theorem hypotheses; the rank of the A-model fiber is already
+part of the `GW-1` object.
+
+The named internal declarations `c1_tangent_cubicFourfold` and
+`integral_hyperplane_pow_four` supply the two scalar facts used here:
+
+$$
+c_1(T_X)=3h,\qquad \int_Xh^4=3. \tag{10.0}
+$$
+
+The first follows from the tangent-normal exact sequence for a cubic
+hypersurface in $\mathbf P^5$ (equivalently $K_X=-3h$); Beauville §2 writes
+the complete-intersection index formula
+$k=n+r+1-\sum d_i$. The second is the definition of the degree and is also
+recorded in Hassett §2.1 as $\langle h^2,h^2\rangle=h^4=3$. Thus neither
+identity is left as an unnamed matrix premise.
 
 On $(1,h,h^2,h^3,h^4)$, multiplication by $h$ is
 
@@ -895,8 +1078,31 @@ most two.
 
 ### 11.2 Point, curve, and surface arithmetic (F0/F1)
 
-A point has folded Hodge polynomial $1$. A smooth projective curve has Hodge
-differences only $0,\pm1$. Hence neither can supply an atom with positive
+The named internal declarations
+`foldedHodgePolynomial_projectiveSpace_four` and
+`foldedHodgePolynomial_point` record
+
+$$
+\operatorname{HP}_{\mathrm{fold}}(\mathbf P^4;t)=5,
+\qquad
+\operatorname{HP}_{\mathrm{fold}}(\mathrm{pt};t)=1,
+$$
+
+The declaration `curve_foldedHodge_coeff_two_eq_zero` records that a smooth
+projective curve has Hodge differences only $0,\pm1$. For a smooth
+projective surface, `surface_foldedHodge_coeff_two_eq_pg` uses Hodge symmetry
+and Serre duality to give $h^{2,0}=h^{0,2}=p_g$, so
+$[t^2]\operatorname{HP}_{\mathrm{fold}}(S;t)=p_g(S)$. These are elementary
+Hodge calculations, but they are no longer unnamed: Popa, *Hodge theory and
+singularities*, §1.1, equation (1.1.1) and the projective-space example,
+supplies Hodge symmetry, duality, and the $\mathbf P^n$ diamond; [local
+PDF](../tmp/pdfs/popa-hodge-theory-singularities.pdf), SHA-256
+`28cce3fa0cbd3c25491d1416f8e40a89362b6b1c14420789b3cd83e9c3f7f860`.
+Peters, Chapter 1, pp. 5--6, identifies $p_g=h^{0,2}$ and uses the same
+duality; SHA-256
+`51f9c99621b3819aa85894a8cdee4a528b0894364fc22b40a651f1bae55ceed3`.
+
+Consequently neither a point nor a curve can supply an atom with positive
 $t^2$-coefficient. If $[t^2]P_\alpha=1$ occurs in dimension at most two, it
 occurs on a connected smooth projective surface $S$, and (7.2) gives
 
@@ -932,7 +1138,7 @@ The Lean proof needs only that an ample class on a projective surface is
 nonzero and that algebraic cycle classes are Hodge-fixed. It uses no surface
 classification.
 
-## 12. Closure from the seven named hypotheses
+## 12. Closure from the six named hypotheses
 
 The dependency graph is:
 
@@ -944,13 +1150,12 @@ flowchart TD
   HR[HATOM-RAW] --> M
   NL[NL-CUBIC] --> M
   M --> A2[spectrum on invariants]
-  FS[formal separated projectors] --> AC[analytic clusters]
-  SC[SEP-CONV] --> AC
+  HS[Henselian analytic u=0 projectors] --> AC[analytic clusters]
   HR --> CV[cover CRT and exact invariants]
   A2 --> AC
   AC --> UP[every atom has rho at most 2]
   CV --> UP
-  NL --> SEL[atom with t2 coefficient 1]
+  BH[cubic basic Hodge coefficient] --> SEL[atom with t2 coefficient 1]
   CV --> SEL
   WF[WF-4] --> TEL[factorization telescope]
   G3[GW-3] --> TEL
@@ -970,21 +1175,24 @@ flowchart TD
 
 In words:
 
-1. `NL-CUBIC` and `HATOM-RAW` identify the fixed cubic subspace with the five
-   hyperplane powers. Sections 9--10 and `GW-1` then give its primary
+1. `NL-CUBIC` and the degree-four clause of `HATOM-RAW`, together with the
+   internal `cubicBasicHodge` data outside middle degree, identify the fixed
+   cubic subspace with the five hyperplane powers. Sections 9--10 and `GW-1`
+   then give its primary
    dimensions $2,1,1,1$; Section 6.2 gives the same reduced spectrum on the
    full fiber.
-2. Theorem 4.1 and `SEP-CONV` give four canonical analytic cluster
+2. HP gives four canonical analytic $u=0$ cluster
    projectors. Section 7 puts every atom in one cluster, so $\rho_\alpha\le2$.
-3. `NL-CUBIC` gives
-   $[t^2]\operatorname{HP}_{\mathrm{fold}}(X)=1$. Nonnegative additivity
-   produces an atom with $[t^2]P_\alpha=1$ and $\rho_\alpha\le2$.
+3. The internal cubic basic-Hodge lemma gives
+   $[t^2]\operatorname{HP}_{\mathrm{fold}}(X)=h^{3,1}(X)=1$.
+   Nonnegative additivity produces an atom with $[t^2]P_\alpha=1$ and
+   $\rho_\alpha\le2$.
 4. If $X$ were rational, `WF-4`, `GW-3`, and (11.1) would place that atom in
    dimension at most two.
 5. Section 11.2, `SURF-MIN`, `GW-3`, `HATOM-RAW`, and the nef lemma force the
    same atom to satisfy $\rho_\alpha\ge3$, contradiction.
 6. `NL-CUBIC` identifies the exceptional cubics as a countable union of
-   proper closed divisors, giving Theorem 6.8 on the complement.
+   proper closed subsets, giving Theorem 6.8 on the complement.
 
 There is no unnamed theorem-level input. Missing library lemmas required to
 prove internal nodes are named below.
@@ -1000,17 +1208,18 @@ G has no Lean project yet.
 | `AtomCore/FiniteFree.lean` | finite free modules, matrices, charpoly | `Module.Free`, `Module.Finite`, `Module.Free.chooseBasis`, `Module.End`, `LinearMap.toMatrixAlgEquiv`, `LinearMap.charpoly`, `LinearMap.aeval_self_charpoly`, `Matrix.charpoly_map` |
 | `AtomCore/Primary.lean` | generalized eigenspaces, coprime kernels, CRT projectors, sign, A2 | `Module.End.genEigenspace`, `Module.End.maxGenEigenspace`, `Module.End.disjoint_genEigenspace`, `Module.End.iSup_maxGenEigenspace_eq_top`, `LinearMap.finrank_maxGenEigenspace_eq`, `Polynomial.disjoint_ker_aeval_of_isCoprime`, `Polynomial.sup_ker_aeval_eq_ker_aeval_mul_of_coprime`, `Polynomial.isUnit_resultant_iff_isCoprime` |
 | `AtomCore/Adic.lean` | explicit $R,A,\mathfrak m$, quotients and limits | `MvPowerSeries`, `PowerSeries`, `IsAdicComplete`, `IsAdicComplete.henselianRing`, `HenselianRing` |
-| `AtomCore/HorizontalProjector.lean` | Theorem 4.1, Sylvester, gauge recursion, uniqueness | `IsIdempotentElem`, `OrthogonalIdempotents`, `CompleteOrthogonalIdempotents`, `CompleteOrthogonalIdempotents.lift_of_isNilpotent_ker`, `Submodule.projection` |
+| `AtomCore/AnalyticPrimary.lean` | HP and analytic-germ realization at $u=0$ | `HenselianRing`, polynomial CRT, idempotent APIs; analytic stalks are a gap |
+| `AtomCore/HorizontalProjector.lean` | Non-load-bearing FP, Sylvester, gauge recursion, uniqueness | `IsIdempotentElem`, `OrthogonalIdempotents`, `CompleteOrthogonalIdempotents`, `CompleteOrthogonalIdempotents.lift_of_isNilpotent_ker`, `Submodule.projection` |
 | `AtomCore/Representations.lean` | exact invariants, scalar extension, constant ranks | `Representation`, `Representation.invariants`, `Rep`, `FDRep`, `Rep.invariantsFunctor`, `Representation.IsSemisimpleRepresentation` |
 | `AtomCore/CoverPrimary.lean` | finite-étale branch CRT and descent | polynomial/idempotent API above; analytic geometry is a gap |
 | `AtomCore/AtomBasic.lean` | atom quotient, `Atom ->₀ Nat`, disjoint union | `Quotient`, `Finsupp` |
 | `AtomCore/HodgeWeights.lean` | ordinary grading-weight ranks for `Int ->₀ Nat`, invariant dimension $\rho$, and Corollary 3.4 | `AddMonoidAlgebra`, `Finsupp` |
-| `AtomCore/CubicLineIncidence.lean` | F2 maps, lines, incidence, Grassmannian integral | substantial AG/GW prerequisites are missing |
+| `AtomCore/BeauvilleCorrections.lean` | direct F2 theorem giving Beauville's three cubic corrections | substantial AG/GW prerequisites are missing, but no separate Fano expected-dimension premise is exposed |
 | `AtomCore/CubicMatrix.lean` | (9.2), matrix, charpoly, primary dimensions | `Matrix.charpoly`, eigenspace API, `ring_nf` |
 | `AtomCore/NefFiltration.lean` | strictly raising implies nilpotent; one atom | finite filtration and linear algebra |
 | `AtomCore/FactorizationConsequence.lean` | `Finsupp` telescope and positivity | `Finsupp` |
 | `AtomCore/Surface.lean` | point/curve support and surface endpoint | Hodge/AG prerequisites below |
-| `AtomCore/Theorem68.lean` | only seven named packages and contradiction | imports preceding internal files |
+| `AtomCore/Theorem68.lean` | only six named packages and contradiction | imports preceding internal files |
 | `AtomCore/Downstream/Prop528.lean` | optional $\rho\ge1$ | must not be imported by `Theorem68.lean` |
 
 ## 14. Named prerequisite shopping list
@@ -1032,7 +1241,7 @@ These names are deliberately new; none is presented as existing API.
    commutation.
 7. **`formalHorizontalProjector_exists`** and
    **`formalHorizontalProjector_unique`** — package Section 4's recursion and
-   first-nonzero-coefficient argument.
+   first-nonzero-coefficient argument for non-load-bearing FP.
 8. **`MvPowerSeries.ker_constantCoeff_eq_span_range_X`** — identify the
    multivariable augmentation ideal if a residue-field statement needs it.
    The current design avoids depending on it by naming $\mathfrak m$.
@@ -1055,20 +1264,28 @@ These names are deliberately new; none is presented as existing API.
     connected components; this is separate from taking $G$-invariants.
 16. **`spectrum_eq_of_nilpotent_thickening`** — nilpotent parameters do not
     change reduced characteristic-polynomial support.
-17. **`degreeOneStableMap_positiveComponent_line`**,
-    **`degreeOneContractedTail_virtualComparison`**,
-    **`cubicLine_zeroLocus`**, and **`grassmannian22_integral`** — the F2
-    stable-map/line-incidence and geometric part of `GW-2`.
+17. **`beauvilleCubicLineCorrections`** — the direct F2 theorem that the
+    three target corrections are $(6,15,6)$, following Beauville's published
+    calculation. No separate Fano expected-dimension declaration is exposed.
 18. **`strictlyRaises_isNilpotent`** — a finite graded operator strictly
     raising degree is nilpotent.
 19. **`ample_c1_ne_zero_surface`** and **`cycleClass_hodgeFixed`** — the two
     surface Hodge facts used in (11.2).
-20. **`analyticGerm_completion_injective`** — injectivity of a Noetherian
+20. **`analyticLocalRing_henselian`** — realize Berkovich Theorem 2.1.5 in
+    the chosen analytic-stalk model and feed it to the polynomial CRT theorem.
+21. **`foldedHodgePolynomial_projectiveSpace_four`**,
+    **`foldedHodgePolynomial_point`**,
+    **`curve_foldedHodge_coeff_two_eq_zero`**,
+    **`surface_foldedHodge_coeff_two_eq_pg`**,
+    **`c1_tangent_cubicFourfold`**, and
+    **`integral_hyperplane_pow_four`** — the separately named elementary
+    inputs in §§10--11.
+22. **`analyticGerm_completion_injective`** — injectivity of a Noetherian
     analytic local ring in its maximal-ideal completion, by Krull
-    intersection; used only to turn formal uniqueness into germ uniqueness.
-The largest costs are items 12, 14, and 17. Items 1--11 are concentrated
-linear/adic/representation infrastructure. Items 18--20 are small once the
-geometric data structures are fixed.
+    intersection; retained only for the non-load-bearing full-$u$ audit.
+The largest costs are items 12, 14, 17, and 20. Items 1--11 are concentrated
+linear/adic/representation infrastructure. Items 18--19 and 21--22 are small
+once the geometric data structures are fixed.
 
 ## 15. Replay and gate
 
@@ -1077,29 +1294,36 @@ Section 6. The newly local source pins replay with:
 
 ```sh
 shasum -a 256 \
+  tmp/pdfs/bosch-formal-fibers-affinoid.pdf \
+  tmp/pdfs/fresnel-van-der-put-rigid-analytic-geometry.pdf \
+  tmp/pdfs/berkovich-etale-cohomology.pdf \
   tmp/pdfs/2411.02266.pdf \
   tmp/pdfs/vezzani-nonarch-implicit-function.pdf \
   tmp/pdfs/milne-tannakian-categories.pdf \
-  tmp/pdfs/conrad-nonarchimedean-geometry.pdf
+  tmp/pdfs/conrad-nonarchimedean-geometry.pdf \
+  tmp/pdfs/popa-hodge-theory-singularities.pdf
 ```
 
 Expected output:
 
 ```text
+e50ea3b1868f3c6c2aae7ff4394c45484732c33bba30184855e7a380fe42aa8b  tmp/pdfs/bosch-formal-fibers-affinoid.pdf
+54bac91f89abcd9a42645b1a07624222aeb570048ed224e4cd79a328fd7ef915  tmp/pdfs/fresnel-van-der-put-rigid-analytic-geometry.pdf
+bd864c89ed8b6e8f27a90f459837221549db75afa75554ab51414e17771066af  tmp/pdfs/berkovich-etale-cohomology.pdf
 a11a093f790890804c7d4f7559b30ed2a6da87811de46f2aa0d29026e343e6bd  tmp/pdfs/2411.02266.pdf
 bf53f2958e17de3ece49c27d433f98f9a55086fedd4c7cbb65e9bb15682e8f4d  tmp/pdfs/vezzani-nonarch-implicit-function.pdf
 48f8af5249081217fc4a806414a764d9d69d66eff9092ddd8e2cf0ea078579e8  tmp/pdfs/milne-tannakian-categories.pdf
 5add29094b74385746c4d977290b2308d02cbe8aa6f085e6a99724f6939e309b  tmp/pdfs/conrad-nonarchimedean-geometry.pdf
+28cce3fa0cbd3c25491d1416f8e40a89362b6b1c14420789b3cd83e9c3f7f860  tmp/pdfs/popa-hodge-theory-singularities.pdf
 ```
 
 **Director gate.** Review should decide:
 
-1. whether `SPLIT` draws the analytic boundary at exactly the stated finite
-   analytic $u=0$ splitting and strict-shrink convergence clauses;
-2. whether every internal F0/F1/F2 node closes over the seven named packages
+1. whether the Henselian $u=0$ theorem correctly retires `SEP-CONV`;
+2. whether every internal F0/F1/F2 node closes over the six named packages
    without circularly assuming atom descent or analytic splitting; and
-3. whether the named prerequisites make the Lean cost legible enough to
-   authorize WP-4.
+3. whether the minimized Hodge rows and concrete Lean target are ready for
+   WP-5 assembly.
 
-**STOP.** No WP-4 Hodge-interface minimization or Lean implementation has
-been started.
+**STOP.** WP-4 is complete at worker scope. No WP-5 assembly or Lean
+implementation has been started.

@@ -1,9 +1,9 @@
 # Theorem 6.8 — weak-factorization boundary
 
-**Date:** 2026-07-29; **work order:** WP-2; **verdict:** **E2 — MINIMIZE**
+**Date:** 2026-07-29; **work orders:** WP-2, priority audit through WP-4;
+**verdict:** **E2 — MINIMIZE**
 
-**Status:** WP-2 accepted; trusted-boundary scoreboard updated by WP-3;
-**STOP at director review before WP-4**
+**Status:** WP-4 worker deliverable; **STOP at director review before WP-5**
 
 ## 1. Binary result
 
@@ -126,12 +126,49 @@ offset the coefficient of \(\alpha\).
 
 The graph of \(f\) gives the classical Hodge maps \(f^*\) and \(f_*\), with
 \(f_*f^*=\operatorname{id}\), so \(H^\bullet(X)\) is a Hodge direct summand
-of \(H^\bullet(Z)\). This does not identify atom summands. The retained atom
-formalism has no action of arbitrary algebraic correspondences on A-model
-F-bundles, and the classical projector \(f^*f_*\) is not known to be
-horizontal or to commute with Euler quantum multiplication. HYZZ therefore
-cannot turn its image into a union of spectral blocks. A Hodge summand may cut
-across several atomic generalized-eigenbundles, and an isomorphic Hodge
+of \(H^\bullet(Z)\). Put \(p=f^*f_*\). Then \(p^2=p\) and \(p(1)=1\)
+because \(f\) has degree one. The proposed graph upgrade is impossible except
+when the cohomology map is already an isomorphism. Indeed, if \(p\) were
+horizontal for the full A-model connection, its \(u=0\) base equation would
+give
+
+\[
+[L_x,p]=0\qquad\text{for every tangent/cohomology class }x.
+\]
+
+Consequently
+
+\[
+p(x)=p(L_x1)=L_xp(1)=x.
+\]
+
+Thus \(p=\operatorname{id}\) and \(f^*\) is an isomorphism with inverse
+\(f_*\). A birational morphism with exceptional cohomology therefore cannot
+yield a horizontal graph projector.
+
+There is also a concrete classical Euler obstruction. For
+\(f:Z=\operatorname{Bl}_{\mathrm{pt}}\mathbf P^4\to\mathbf P^4\), write
+\(H\) for the pulled-back hyperplane and \(E\) for the exceptional divisor.
+The blowup canonical-divisor formula gives
+
+\[
+c_1(T_Z)=5H-3E,\qquad p(H)=H,\quad p(E)=0,\quad p(1)=1.
+\]
+
+At \(q=t=0\), Euler multiplication satisfies
+\(\kappa(1)=c_1(T_Z)\). Hence
+
+\[
+p(\kappa(1))=5H\ne5H-3E=\kappa(p(1)).
+\]
+
+So \(p\) already fails Euler commutation classically, and therefore fails
+the required fixed-base horizontality. This closes the E1 graph-projector
+route; it does **not** prove or refute MONO itself.
+
+More generally, the retained atom formalism has no action of arbitrary
+algebraic correspondences on A-model F-bundles. A Hodge summand may cut across
+several atomic generalized-eigenbundles, and an isomorphic Hodge
 representation is not an identification of blowup-Hodge atoms.
 
 This is consistent with KKPY's own scope warning: atoms have no natural
@@ -244,7 +281,7 @@ equality by definition would instead discard the data the atomic obstruction
 is meant to detect. Thus neither version supplies a cheaper replacement for
 A7.
 
-## 6. Program-wide trusted boundary after WP-3
+## 6. Program-wide trusted boundary after WP-4
 
 The honest current display is
 
@@ -253,24 +290,18 @@ The honest current display is
 \underbrace{\{\mathrm{GW\!-\!1},\mathrm{GW\!-\!3},\mathrm{WF}_4\}}
 _{\text{analytic GW and birational interfaces}}
 \cup
-\underbrace{\{\mathrm{SEP\!-\!CONV}\}}
-_{\text{finite analytic split plus HYZZ strict-shrink convergence}}
-\cup
 \underbrace{\{\mathrm{HATOM\!-\!RAW},
 \mathrm{NL\!-\!CUBIC},\mathrm{SURF\!-\!MIN}\}}
 _{\text{Hodge-side and terminal birational interfaces}}.
 \]
 
-The formal separated-projector theorem is now internal and proved in
-[`ATOM_CORE.md`](ATOM_CORE.md), Section 4. The only surviving analytic brace is
-`SEP-CONV`: its finite $u=0$ block extension is isolated via a
-non-archimedean analytic implicit-function step, and HYZZ Proposition 3.36
-supplies convergence on a strict shrink conditional on that extension.
-Completion injectivity is internal. Whole HYZZ Theorem 3.42, maximality,
-product decomposition of the base, and the moving-base group-germ argument
-have left the target graph.
+The Henselian Primary-Projector Theorem is internal and proved in
+[`ATOM_CORE.md`](ATOM_CORE.md), Section 4. It constructs the only analytic
+projectors the target consumes, directly on the restriction at $u=0$. Whole
+HYZZ Theorem 3.42, full-$u$ convergence, maximality, product decomposition of
+the base, and the moving-base group-germ argument have left the target graph.
 `GW-2` and all other F0/F1/F2 repair lemmas are internal to the formalization
-spine. The exact wording of all seven opaque packages and the one internal F2
+spine. The exact wording of all six opaque packages and the one internal F2
 row is in the single table of record in `GW_INPUT.md`.
 
 ## 7. Proposition-number reconciliation
@@ -327,17 +358,17 @@ PDFs of 30, 70, 18, and 64 pages; fresh `pdftotext -layout` output was
 byte-identical to all four retained extracts; and all theorem/problem searches
 returned the displayed anchors. The Proposition 3.7 block above matched the
 current certificate after whitespace normalization. `git diff --check`,
-the separate new-file whitespace check, Markdown-link/table/fence checks, and
-the control-character scan produced no diagnostics. The pre-existing sibling
+the separate new-Markdown-file whitespace check, Markdown-link/table/fence
+checks, and the control-character scan produced no diagnostics. The archived
+upstream Addington--Auel source remains byte-for-byte unchanged, including its
+original trailing spaces. The pre-existing sibling
 Problem E modifications were not touched.
 
 ## 9. Gate
 
-WP-2's E2 verdict and `WF-4` row were accepted. The current gate is WP-3:
+WP-2's E2 verdict and `WF-4` row remain accepted. WP-4 additionally closes the
+E1 graph-projector route by the abstract unitality argument and the explicit
+Euler obstruction above. MONO itself remains neither proved nor refuted.
 
-1. is the replacement of whole HYZZ by the proved formal theorem plus
-   `SEP-CONV` honest at the finite analytic split and convergence steps;
-2. does `ATOM_CORE.md` close over exactly the seven displayed packages; and
-3. is its Mathlib shopping list concrete enough to cost WP-4?
-
-**STOP.** WP-4 has not begun.
+**STOP.** Director review should verify the six-package boundary and the
+parameter-space Lean target. WP-5 has not begun.
