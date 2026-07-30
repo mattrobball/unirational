@@ -1,0 +1,34 @@
+{
+  "date": "2026-07-30",
+  "scope": "smooth rational degree-19 through selected hyperplane degree-55 point",
+  "ground_field": "F = K_Schur",
+  "hilbert_polynomial": "19*t + 1",
+  "branches": {
+    "epsilon_0": {
+      "name": "no-quintic marked incidence",
+      "dim_I_C_5": 0,
+      "rao_d0_to_5": [0, 16, 29, 38, 42, 40],
+      "min_generator_degree": 6,
+      "status": "LIVE"
+    },
+    "epsilon_1": {
+      "name": "degree-19 divisors on special quintic carriers",
+      "dim_I_C_5": 1,
+      "rao_d0_to_5": [0, 16, 29, 38, 42, 41],
+      "min_generator_degree": 5,
+      "carrier": "f5 + f3*q",
+      "status": "LIVE"
+    }
+  },
+  "acm_excluded": true,
+  "rao6_bounds": [31, 60],
+  "dim_I_C_6_bounds": [0, 29],
+  "liaison_5_s": {
+    "6": {"residual_degree": 11, "residual_pa": -28},
+    "7": {"residual_degree": 16, "residual_pa": -12},
+    "8": {"residual_degree": 21, "residual_pa": 9},
+    "9": {"residual_degree": 26, "residual_pa": 35},
+    "10": {"residual_degree": 31, "residual_pa": 66}
+  },
+  "terminal_marker": "SCHUR_DEGREE19_RAO_RESOLUTIONS_ENUMERATED"
+}

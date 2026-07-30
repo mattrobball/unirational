@@ -1,0 +1,39 @@
+{
+  "date": "2026-07-30",
+  "branch": "epsilon=1",
+  "base_curve_Y": {
+    "type": "smooth geometrically integral (3,5) complete intersection",
+    "degree": 15,
+    "genus": 31,
+    "class_on_carrier": "Y ~ 3H"
+  },
+  "carrier_family": {
+    "linear_system": "P(H0(I_Y(5))) = P(f3*S2 + <f5>)",
+    "dimension": 10,
+    "affine_chart": "F_q = f5 + f3*q, q in S_2",
+    "reducible_chart_alpha_0": "f3*q = 0 (excluded for prime quintic carrier)"
+  },
+  "picard": {
+    "rank_one_excludes_degree_19": true,
+    "rank_one_proved_for_all_q": false,
+    "brevik_nollet_lopez_applies": false,
+    "reason_theorem_fails": "I_Y(4)=f3*S1 is not globally generated",
+    "failure_witness_point": [0, -2, 0, 1, 0],
+    "failure_witness_f3_f5": [0, -8],
+    "very_general_would_control_special_carrier": false
+  },
+  "lattice_condition_smooth_quintic": {
+    "K_S": "H",
+    "degree_19_genus_0": {"C_dot_H": 19, "C_square": -21},
+    "exists_in_ZH": false
+  },
+  "liaison_5_s": {
+    "6": {"residual_degree": 11, "residual_pa": -28, "reduced_connected_possible": false},
+    "7": {"residual_degree": 16, "residual_pa": -12, "reduced_connected_possible": false},
+    "8": {"residual_degree": 21, "residual_pa": 9, "reduced_connected_possible": true}
+  },
+  "liaison_excludes_branch": false,
+  "liaison_control_note": "negative pa excludes only reduced connected residuals",
+  "branch_status": "LIVE",
+  "terminal_marker": "SCHUR_DEGREE19_QUINTIC_CARRIERS_CLASSIFIED"
+}

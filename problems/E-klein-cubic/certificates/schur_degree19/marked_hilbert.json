@@ -1,0 +1,44 @@
+{
+  "date": "2026-07-30",
+  "ground_field": "F = K_Schur (not Fbar)",
+  "ambient": "P3_F after torsor-dependent hyperplane choice",
+  "hilbert_polynomial": "19*t + 1",
+  "marked_point": {
+    "scheme": "Z",
+    "degree": 55,
+    "field_of_definition": "F",
+    "residue_degree": 55,
+    "hilbert_function_d0_to_6": [1, 4, 10, 19, 31, 45, 55]
+  },
+  "schemes": {
+    "H": "Hilb^{19t+1}(P3_F)",
+    "H_Z": "closed F-subscheme of H cut by I subset I_Z",
+    "H_Z_0": "rank locus dim I(5)=0",
+    "H_Z_1": "rank locus dim I(5)=1"
+  },
+  "nonemptiness": {
+    "H_Fbar": "yes (geometric rational curves of degree 19 exist)",
+    "H_F": "UNDECIDED",
+    "H_Z_Fbar": "UNDECIDED",
+    "H_Z_F": "UNDECIDED",
+    "H_Z_epsilon_F": "UNDECIDED for epsilon in {0,1}"
+  },
+  "component_dimensions": {
+    "certified": null,
+    "virtual": {
+      "chi_N": 76,
+      "maps_unmarked": 77,
+      "maps_marked_55": -33,
+      "hilbert_marked_codim1_model": 21
+    },
+    "note": "negative virtual dimension is not nonexistence"
+  },
+  "incidence_with_degree_55_point": "by definition of H_Z",
+  "geometrically_integral_rational_on_component": "UNDECIDED",
+  "memory_gate": {
+    "full_elimination_authorized": false,
+    "reason": "expected to exceed 8 GB RSS exploratory ceiling",
+    "emitted": ["scheme definition", "equation format", "virtual dimensions", "verifier design"]
+  },
+  "terminal_marker": "SCHUR_DEGREE19_MARKED_HILBERT_OVER_F"
+}

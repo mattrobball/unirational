@@ -1,0 +1,83 @@
+{
+  "artifact_paths": [
+    "certificates/schur_degree19/IMPLICATION_AUDIT.md",
+    "certificates/schur_degree19/betti_tables.json",
+    "certificates/schur_degree19/rao_resolutions.md",
+    "certificates/schur_degree19/rao_resolutions.json",
+    "certificates/schur_degree19/marked_hilbert.md",
+    "certificates/schur_degree19/marked_hilbert.json",
+    "certificates/schur_degree19/quintic_carriers.md",
+    "certificates/schur_degree19/quintic_carriers.json",
+    "certificates/schur_degree19/verify.py",
+    "certificates/schur_degree19/README.md",
+    "certificates/schur_degree19/SEAL.json"
+  ],
+  "date": "2026-07-30",
+  "decision_exit": "STOP-3",
+  "decision_exit_meaning": "marked Hilbert components survive without a decision; exact equations/virtual dimensions recorded; not a headline result",
+  "deliverable_sha256": {
+    "IMPLICATION_AUDIT.md": "2c64e3ff0e917ec89afb2877cee39543b6a666773ef51176fd7bc8526596d6bf",
+    "README.md": "791b2b6d62a58ab34b26662acc59de91a629fcde44504d945b58ad5c71d54f79",
+    "betti_tables.json": "f3e2f5783f3f0d5b7609f893d58eb9b40a8644877d29f986ac51954863cd6ed0",
+    "marked_hilbert.json": "161b61e7e94fc32fa1cb579cb7c50a8ecc304aae4e9a773afe5336adf1f09be0",
+    "marked_hilbert.md": "b3869bbdfbc041eddb90c9c9c3dabe88048ff8d95f251e9bbc0c640c9db56031",
+    "quintic_carriers.json": "2b13c2e9d53e0701a1a5a8c13f6cf42449c5fa7194821a434ca70eec93527859",
+    "quintic_carriers.md": "b0533f867b8bb5304825ad78d0ad6412b8a982d0c6c9f8780f04c3f0de989f72",
+    "rao_resolutions.json": "dbca9a60622dece5dbb43ca2826538479a55b7cf2b511197a3d07588b34362b2",
+    "rao_resolutions.md": "5ccc9a29a5efdf5be5bc03013132d867e03bb7587539b189642c6ce545b5251d",
+    "verify.py": "242d670146b22c12ac088369e6b3450937a614b282294195ff6d402626aa8c38"
+  },
+  "forbidden_edits_respected": [
+    "HANDOFF.md",
+    "RESOLUTION.md",
+    "CURRENT_PATHS.md",
+    "SPEC.md"
+  ],
+  "gate1_decision": "PASS",
+  "gate2_status": {
+    "3C.1_betti_rao": "enumerated; ACM rejected; two live shapes epsilon=0,1",
+    "3C.2_marked_hilbert": "constructed over F; nonemptiness UNDECIDED; dimensions virtual only",
+    "3C.3_quintic_carriers": "classified; Picard rank one conditional; liaison does not exclude"
+  },
+  "gate3_3D_attempted": false,
+  "gate3_3D_reason": "3D only if all rescue curves excluded; both branches remain live",
+  "headline": "OPEN",
+  "house_rule_10": {
+    "checked": true,
+    "degree2_types": [
+      "F_times_F",
+      "quadratic_field",
+      "dual_numbers"
+    ],
+    "no_line_theorem_used": true,
+    "residual_line_field": "F = K_Schur"
+  },
+  "intended_commit_split": [
+    "certificates/schur_degree19: Gate 1 IMPLICATION_AUDIT (PASS, house rule 10)",
+    "certificates/schur_degree19: Gate 2 betti/Rao/marked Hilbert/quintic carriers + SEAL STOP-3"
+  ],
+  "n3_scoped_note": "N3-SCOPED not claimed: neither Rao branch is excluded; N3-SCOPED would be non-headline even if claimed",
+  "packet": "certificates/schur_degree19",
+  "pinned_base": "b7be961",
+  "proved": [
+    "Implication chain qualifying deg-19 curve => residual deg-2 F-cycle => X_T(F) nonempty => G-unirationality holds under Q1-Q5",
+    "House rule 10 residual-line field check complete for generic Schur twist",
+    "ACM Betti/h-tables exhaustively rejected for selected hyperplane point",
+    "Both Rao branches epsilon=0,1 have live generator-degree shapes and forced Rao ledger through degree 5",
+    "Marked Hilbert scheme H_Z defined over F with branch stratification",
+    "Unique quintic carrier form F_q=f5+f3*q; Y~3H; Brevik-Nollet/Lopez hypothesis fails",
+    "Liaison (5,s) genera with residual control; does not exclude branches"
+  ],
+  "remains": [
+    "Nonemptiness of H_Z(F) for either epsilon",
+    "Certified component dimensions of marked Hilbert strata",
+    "Picard/class groups of special quintic carriers for all relevant q",
+    "Construction of a qualifying degree-19 curve (would give P3)",
+    "Exclusion of both live branches (would give N3-SCOPED, non-headline)",
+    "Boundary-zero pointless torsor (N3 headline negative)",
+    "Headline G-unirationality of the Klein cubic"
+  ],
+  "seal_sha256_self": "414e3f90a90d8fa01c6ea381d7d9b013233e5524485a1d56c3441739709bdbff",
+  "terminal_marker": "SCHUR_DEGREE19_GATES_1_2_STOP_3_HEADLINE_OPEN",
+  "workorder": "WORKORDER_FIVE_ATTEMPTS.md Attempt 3 Gates 1 (3B) and 2 (3C)"
+}

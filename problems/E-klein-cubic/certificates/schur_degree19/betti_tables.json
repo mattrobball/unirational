@@ -1,0 +1,458 @@
+{
+  "date": "2026-07-30",
+  "scope": "smooth rational degree-19 through selected hyperplane degree-55 point",
+  "accepted_hilbert_Z": {
+    "h_Z_d0_to_6": [
+      1,
+      4,
+      10,
+      19,
+      31,
+      45,
+      55,
+      55
+    ],
+    "dim_I_Z_d0_to_6": [
+      0,
+      0,
+      0,
+      1,
+      4,
+      11,
+      29
+    ]
+  },
+  "branches": {
+    "0": {
+      "epsilon": 0,
+      "dim_I_C_d0_to_5": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rao_d0_to_5": [
+        0,
+        16,
+        29,
+        38,
+        42,
+        40
+      ],
+      "hilbert_fn_S_mod_I_d0_to_5": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        56
+      ],
+      "hilbert_polynomial": "19*t + 1",
+      "degree": 19,
+      "genus": 0
+    },
+    "1": {
+      "epsilon": 1,
+      "dim_I_C_d0_to_5": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "rao_d0_to_5": [
+        0,
+        16,
+        29,
+        38,
+        42,
+        41
+      ],
+      "hilbert_fn_S_mod_I_d0_to_5": [
+        1,
+        4,
+        10,
+        20,
+        35,
+        55
+      ],
+      "hilbert_polynomial": "19*t + 1",
+      "degree": 19,
+      "genus": 0
+    }
+  },
+  "acm_rejected_tables": [
+    {
+      "h_vector": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        4
+      ],
+      "dim_I_5": 2,
+      "violates": "dim I_C(5) <= 1",
+      "status": "REJECTED"
+    },
+    {
+      "h_vector": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        3,
+        1
+      ],
+      "dim_I_5": 3,
+      "violates": "dim I_C(5) <= 1",
+      "status": "REJECTED"
+    },
+    {
+      "h_vector": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        2,
+        2
+      ],
+      "dim_I_5": 4,
+      "violates": "dim I_C(5) <= 1",
+      "status": "REJECTED"
+    },
+    {
+      "h_vector": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        2,
+        1,
+        1
+      ],
+      "dim_I_5": 4,
+      "violates": "dim I_C(5) <= 1",
+      "status": "REJECTED"
+    },
+    {
+      "h_vector": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        1,
+        1,
+        1,
+        1
+      ],
+      "dim_I_5": 5,
+      "violates": "dim I_C(5) <= 1",
+      "status": "REJECTED"
+    }
+  ],
+  "epsilon_0": {
+    "rejected": [
+      {
+        "pattern": "ACM / pure Hilbert-Burch codim-2",
+        "branch": "epsilon=0",
+        "violates": "ACM excluded for selected point; dim I(5)<=1 incompatible with ACM h-vectors"
+      },
+      {
+        "pattern": "nonzero minimal generator in degree 0",
+        "branch": "epsilon=0",
+        "violates": "I_C(d)=0 for d<=4 (primality + I_C subset I_Z, f3 notin I_C)"
+      },
+      {
+        "pattern": "nonzero minimal generator in degree 1",
+        "branch": "epsilon=0",
+        "violates": "I_C(d)=0 for d<=4 (primality + I_C subset I_Z, f3 notin I_C)"
+      },
+      {
+        "pattern": "nonzero minimal generator in degree 2",
+        "branch": "epsilon=0",
+        "violates": "I_C(d)=0 for d<=4 (primality + I_C subset I_Z, f3 notin I_C)"
+      },
+      {
+        "pattern": "nonzero minimal generator in degree 3",
+        "branch": "epsilon=0",
+        "violates": "I_C(d)=0 for d<=4 (primality + I_C subset I_Z, f3 notin I_C)"
+      },
+      {
+        "pattern": "nonzero minimal generator in degree 4",
+        "branch": "epsilon=0",
+        "violates": "I_C(d)=0 for d<=4 (primality + I_C subset I_Z, f3 notin I_C)"
+      },
+      {
+        "pattern": "dim I_C(5) >= 2",
+        "branch": "epsilon=0",
+        "violates": "two quintics would produce f3*q2 in I_C, primality forces q2 in I_C(2)=0"
+      },
+      {
+        "pattern": "dim I_C(5) != epsilon for this branch",
+        "branch": "epsilon=0",
+        "violates": "branch definition requires dim I_C(5)=0"
+      },
+      {
+        "pattern": "complete intersection (5,5)",
+        "degree": 25,
+        "genus": 76,
+        "branch": "epsilon=0",
+        "violates": "degree 25 != 19 or genus 76 != 0"
+      },
+      {
+        "pattern": "complete intersection (5,6)",
+        "degree": 30,
+        "genus": 106,
+        "branch": "epsilon=0",
+        "violates": "degree 30 != 19 or genus 106 != 0"
+      },
+      {
+        "pattern": "complete intersection (5,7)",
+        "degree": 35,
+        "genus": 141,
+        "branch": "epsilon=0",
+        "violates": "degree 35 != 19 or genus 141 != 0"
+      },
+      {
+        "pattern": "complete intersection (5,8)",
+        "degree": 40,
+        "genus": 181,
+        "branch": "epsilon=0",
+        "violates": "degree 40 != 19 or genus 181 != 0"
+      },
+      {
+        "pattern": "complete intersection (6,6)",
+        "degree": 36,
+        "genus": 145,
+        "branch": "epsilon=0",
+        "violates": "degree 36 != 19 or genus 145 != 0"
+      },
+      {
+        "pattern": "complete intersection (6,7)",
+        "degree": 42,
+        "genus": 190,
+        "branch": "epsilon=0",
+        "violates": "degree 42 != 19 or genus 190 != 0"
+      },
+      {
+        "pattern": "any complete intersection of two surfaces",
+        "branch": "epsilon=0",
+        "violates": "deg=a*b=19 forces {a,b}={1,19}; degree-1 surface is a plane, curve would be plane of deg 19, but I_C(1)=0 so not planar"
+      },
+      {
+        "pattern": "contained in a quadric surface",
+        "branch": "epsilon=0",
+        "violates": "I_C(2)=0"
+      },
+      {
+        "pattern": "contained in a cubic surface (any cubic equation)",
+        "branch": "epsilon=0",
+        "violates": "I_C(3)=0; in particular B not contained in V(f3) which is required for properness too"
+      },
+      {
+        "pattern": "contained in a quartic surface",
+        "branch": "epsilon=0",
+        "violates": "I_C(4)=0"
+      },
+      {
+        "pattern": "unique quintic carrier / dim I_C(5)=1",
+        "branch": "epsilon=0",
+        "violates": "branch is no-quintic marked incidence"
+      },
+      {
+        "pattern": "resolution defined only after splitting Z_55 with non-descent of Betti summands",
+        "branch": "epsilon=0",
+        "violates": "marked Hilbert scheme and resolutions must be constructed over F, not merely over Fbar"
+      }
+    ],
+    "live_shapes": [
+      {
+        "branch": "epsilon=0 (no quintic)",
+        "min_generator_degrees": "all generators in degree >= 6",
+        "dim_I_C_5": 0,
+        "rao_d0_to_5": [
+          0,
+          16,
+          29,
+          38,
+          42,
+          40
+        ],
+        "module_type": "non-ACM; Rao module nonzero in degrees 1..5 at least",
+        "first_possible_surface_carrier_degree": 6,
+        "constraints": [
+          "I_C subset I_Z",
+          "dim I_C(6) in [0,29], and dim I_C(6)=rao(6)-31 so rao(6) in [31,60]",
+          "Hilbert polynomial 19t+1",
+          "geometrically integral",
+          "marked containment Z subset C"
+        ],
+        "status": "LIVE_SHAPE"
+      }
+    ]
+  },
+  "epsilon_1": {
+    "rejected": [
+      {
+        "pattern": "ACM / pure Hilbert-Burch codim-2",
+        "branch": "epsilon=1",
+        "violates": "ACM excluded for selected point; dim I(5)<=1 incompatible with ACM h-vectors"
+      },
+      {
+        "pattern": "nonzero minimal generator in degree 0",
+        "branch": "epsilon=1",
+        "violates": "I_C(d)=0 for d<=4 (primality + I_C subset I_Z, f3 notin I_C)"
+      },
+      {
+        "pattern": "nonzero minimal generator in degree 1",
+        "branch": "epsilon=1",
+        "violates": "I_C(d)=0 for d<=4 (primality + I_C subset I_Z, f3 notin I_C)"
+      },
+      {
+        "pattern": "nonzero minimal generator in degree 2",
+        "branch": "epsilon=1",
+        "violates": "I_C(d)=0 for d<=4 (primality + I_C subset I_Z, f3 notin I_C)"
+      },
+      {
+        "pattern": "nonzero minimal generator in degree 3",
+        "branch": "epsilon=1",
+        "violates": "I_C(d)=0 for d<=4 (primality + I_C subset I_Z, f3 notin I_C)"
+      },
+      {
+        "pattern": "nonzero minimal generator in degree 4",
+        "branch": "epsilon=1",
+        "violates": "I_C(d)=0 for d<=4 (primality + I_C subset I_Z, f3 notin I_C)"
+      },
+      {
+        "pattern": "dim I_C(5) >= 2",
+        "branch": "epsilon=1",
+        "violates": "two quintics would produce f3*q2 in I_C, primality forces q2 in I_C(2)=0"
+      },
+      {
+        "pattern": "dim I_C(5) != epsilon for this branch",
+        "branch": "epsilon=1",
+        "violates": "branch definition requires dim I_C(5)=1"
+      },
+      {
+        "pattern": "complete intersection (5,5)",
+        "degree": 25,
+        "genus": 76,
+        "branch": "epsilon=1",
+        "violates": "degree 25 != 19 or genus 76 != 0"
+      },
+      {
+        "pattern": "complete intersection (5,6)",
+        "degree": 30,
+        "genus": 106,
+        "branch": "epsilon=1",
+        "violates": "degree 30 != 19 or genus 106 != 0"
+      },
+      {
+        "pattern": "complete intersection (5,7)",
+        "degree": 35,
+        "genus": 141,
+        "branch": "epsilon=1",
+        "violates": "degree 35 != 19 or genus 141 != 0"
+      },
+      {
+        "pattern": "complete intersection (5,8)",
+        "degree": 40,
+        "genus": 181,
+        "branch": "epsilon=1",
+        "violates": "degree 40 != 19 or genus 181 != 0"
+      },
+      {
+        "pattern": "complete intersection (6,6)",
+        "degree": 36,
+        "genus": 145,
+        "branch": "epsilon=1",
+        "violates": "degree 36 != 19 or genus 145 != 0"
+      },
+      {
+        "pattern": "complete intersection (6,7)",
+        "degree": 42,
+        "genus": 190,
+        "branch": "epsilon=1",
+        "violates": "degree 42 != 19 or genus 190 != 0"
+      },
+      {
+        "pattern": "any complete intersection of two surfaces",
+        "branch": "epsilon=1",
+        "violates": "deg=a*b=19 forces {a,b}={1,19}; degree-1 surface is a plane, curve would be plane of deg 19, but I_C(1)=0 so not planar"
+      },
+      {
+        "pattern": "contained in a quadric surface",
+        "branch": "epsilon=1",
+        "violates": "I_C(2)=0"
+      },
+      {
+        "pattern": "contained in a cubic surface (any cubic equation)",
+        "branch": "epsilon=1",
+        "violates": "I_C(3)=0; in particular B not contained in V(f3) which is required for properness too"
+      },
+      {
+        "pattern": "contained in a quartic surface",
+        "branch": "epsilon=1",
+        "violates": "I_C(4)=0"
+      },
+      {
+        "pattern": "no quintic / dim I_C(5)=0",
+        "branch": "epsilon=1",
+        "violates": "branch requires unique quintic carrier"
+      },
+      {
+        "pattern": "resolution defined only after splitting Z_55 with non-descent of Betti summands",
+        "branch": "epsilon=1",
+        "violates": "marked Hilbert scheme and resolutions must be constructed over F, not merely over Fbar"
+      }
+    ],
+    "live_shapes": [
+      {
+        "branch": "epsilon=1 (unique quintic carrier)",
+        "min_generator_degrees": "one generator in degree 5; rest in degree >= 6",
+        "dim_I_C_5": 1,
+        "carrier_equation": "F_q = f5 + f3*q with q in S_2 (10-dimensional family before scaling)",
+        "rao_d0_to_5": [
+          0,
+          16,
+          29,
+          38,
+          42,
+          41
+        ],
+        "on_carrier": "Y = V(f3,f5) ~ 3H on S_q = V(F_q)",
+        "constraints": [
+          "I_C subset I_Z",
+          "C subset S_q",
+          "deg C = 19 not divisible by 5, so Pic(S_q) cannot be Z*H",
+          "Hilbert polynomial 19t+1",
+          "geometrically integral",
+          "marked containment Z subset C"
+        ],
+        "status": "LIVE_SHAPE"
+      }
+    ]
+  },
+  "marked_point_hilbert_function": [
+    1,
+    4,
+    10,
+    19,
+    31,
+    45,
+    55
+  ],
+  "notes": [
+    "Full numerical Betti tables of non-ACM ideals are not uniquely determined by the Rao ledger through degree 5; live shapes record generator-degree constraints and module type.",
+    "ACM pure Hilbert-Burch tables are exhaustively rejected via h-vectors.",
+    "Planar, quadric, cubic, quartic, and complete-intersection tables are rejected by vanishing of I_C(d) for d<=4 and degree/genus."
+  ]
+}
