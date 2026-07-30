@@ -1,0 +1,49 @@
+{
+  "accepted_input_sha256": {
+    "certificates/strata/incidence_exact.json": "21a1d40b6e84e1673885c52e30fafb8f27d58cf2494b42851440a1d922ac2aa9",
+    "certificates/strata/marked_s3_geometry.json": "6662f850028c4df8c7e33a1749d948153d0fc9ca6da4b733daa88536343a59a6",
+    "certificates/strata/normal_characters.json": "7651f92b990136e5b06415eaab9018606c9765be21357fa3a2b9e467e33170c6",
+    "certificates/strata/strata_exact.json": "a32a3d83518190d923fb91b408a1f3cfa33242b96f6136dd03b366383f04f4d8",
+    "certificates/transitions/SEAL.json": "250f0e06b96b2ebed6e3a3a916aae4093d0686009430e7104176526499069331",
+    "certificates/transitions/c3_lines/module.json": "0a41264acb73968b15ccc8569ab82430d11193b41e4b358bdfc1f25820e64287",
+    "certificates/transitions/d12_binary_line/module.json": "9f877f4b0f441ff30ba4b0c2cbc5438192354d9b8ff05b98e83e53f84b406e39",
+    "certificates/transitions/involution_plane/module.json": "85e5676c3076ef6d9b267194ef6685eb6d7dc82e01d94ad22009e4b34f097312",
+    "certificates/transitions/point_links/module.json": "c4e20ca23938cef3d808ac35c3f05da0b48edafa6678015d100731ad6ba73699",
+    "certificates/transitions/v4_fixed_line/module.json": "67bdd1e7a8602fa58931aa7eb852fd9563594d5a53fa1779de3ff13b14f53bb6"
+  },
+  "exit": "P",
+  "gate": "Gate 4 \u2014 global structural decision",
+  "headline": "OPEN",
+  "module_self_sha256": {
+    "diagram": "6b4aca957d6d689b352fd4ac43cd6a1b995615c81bf9bb2a2bf54242b8bf0f31",
+    "dimension_tables": "bf7fc5040f56e960ffdd5ad202d43ee48b678b4b1cda5f06ab594c024864e663",
+    "exit": "1ef52510b77c7a7353eaf48a7732d372bd63315cd7eb39d2e4ee19ec811347d9",
+    "level1_marked_states": "d0c04f36bd7c573e04164635f65c92bfd1a02e3259d9a0eeb205537254b8ff5c",
+    "level2_inverse_limit": "4031190c2feff92460f3df8cfdbd21488edb3cbe0c6646edbd7d857ef12dcfc8",
+    "necessity_theorem": "4dea984d24ff23a8541fc5671e3bdfd4e1134d9022afc64096f8e7a90066817b"
+  },
+  "note": "Content hashes only; no wall_time fields.",
+  "self_sha256": "fda2630f0a1dacaa1e7b511aa23e0688355ca30dd3fe254b927322aa74117d22",
+  "sha256": {
+    "certificates/GLOBAL_TRANSITION_DIAGRAM.md": "2ded385ce770839142497fa4c9b569a9d10aff5a242925d76c5bb7b2a8acd931",
+    "certificates/global_transition/common_global.py": "a9a9c7a3a53cf5abe991391b107dfe1a4a57a48aa5b42836d875b18cb710d7b7",
+    "certificates/global_transition/diagram.json": "369f15f46d4e37f0dd7af578361ea9907d17ac0f307c9e5b6b63ef3c01d7708d",
+    "certificates/global_transition/dimension_tables.json": "acd9926847e9c2fc4540ce3e01425e04dd53963ba30930775a4fd7ed2678ad26",
+    "certificates/global_transition/exit.json": "43ef188f6cc618e4f46dae980cfaae3287aac13128fd9b092cb88094e5c861b8",
+    "certificates/global_transition/level1_marked_states.json": "c6056cdf94e9a5324a5ec17950a170511d0f3c7a3edf0cb92bfc12b010675f19",
+    "certificates/global_transition/level2_inverse_limit.json": "d23615ecbe4584e3e401293984d354bbf6b26392b8923e40e69c8ecc37098a90",
+    "certificates/global_transition/necessity_theorem.json": "a5a21eff778447bd6edf250a1ecaf17ee0406edf371c56aa35bd6796cd3b3731",
+    "certificates/global_transition/produce.py": "2bacae77df1fc0df974b486fab41cd381c12395d1e95d1a82f14ee3bcd7476c6",
+    "certificates/global_transition/verify.py": "f45c077e20526b6c6e8bbf82211060d003898ad2c54194d0573746777125539b"
+  },
+  "terminal_markers": [
+    "GLOBAL_TRANSITION_INCIDENCE_OK",
+    "LEVEL1_MARKED_STATE_SURVIVES",
+    "LEVEL2_INVERSE_LIMIT_NONZERO",
+    "NECESSITY_THEOREM_OK",
+    "ALL_DEGREE_COVERAGE_OK",
+    "EXIT_P_FORMAL_CONFIGURATION",
+    "GLOBAL_TRANSITION_DIAGRAM_OK"
+  ],
+  "work_package": "WP-5"
+}

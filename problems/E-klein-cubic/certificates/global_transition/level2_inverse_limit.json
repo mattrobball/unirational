@@ -1,0 +1,88 @@
+{
+  "c3_a4_marked": {
+    "A4_points": "Off X; point modules with Molien growth O(1).  Included in J_points.  Do not collapse into the 55-plane ideal (character lines are residual C3 fixed points on V4 lines).",
+    "C3_forced_base": false,
+    "C3_linear_constraints": "Optional order-zero / jet conditions along 110 lines; each contributes O(d) or O(1) residual conditions \u2014 absorbed in the O(d) target budget of the growth argument.",
+    "marked_elliptic": "Charge labels are discrete (Level 1); linear jets on elliptics are restrictions of plane jets \u2014 not independent linear cuts beyond the plane module."
+  },
+  "classical_arrangement_relation": {
+    "injection": "The classical fixed-m object [H^0(M\u0303_m(d)) \u2297 W]^G embeds into \u039b_{m,d} by taking residual-invariant jets of a global section along every orbit type in the 55-plane architecture (planes, V4 triple lines, D10/D12 points).  Extension by zero/restriction supplies the C3/A4/marked components when they are not forced.",
+    "not_used_as_sole_witness": "Modular ranks such as dim K_25 \u2261 59 (mod 67) are regression checks only (house rule 9); the nonemptiness proof above does not rely on them.",
+    "sheaf_vs_graded": "For d \u2265 55m+109, sheaf H^0 equals literal graded piece; below that, finite irrelevant torsion T_m may enlarge or shrink literal graded dimensions relative to sheaf-level.  Nonemptiness for large d is unaffected by T_m."
+  },
+  "conclusion": "The linear bigraded inverse-limit module \u039b is nonzero in characteristic zero: for every odd m \u2265 1 and all sufficiently large d, dim \u039b_{m,d} > 0.  Explicit structural witnesses include based-along-minus-line residual-invariant plane jets.  Exit N2 is closed.",
+  "definition": {
+    "G_equivariance": "Equivalent to residual N_G(S)/H-equivariance on one representative per orbit, by induction Ind_H^G adjunction.",
+    "architecture_presentation": "For the 55-plane subdiagram: plane normalization \u2192 triple-line equalizer \u2192 residual point kernel, retaining T_m.",
+    "arrows": "specialization/equalizer maps along flags",
+    "full_diagram": "55-plane architecture plus C3 lines, A4 points, minus-line D12 modules, and marked elliptic charge-compatible restrictions.",
+    "objects": "bigraded local modules M_S on each incidence-category object S"
+  },
+  "dimension_tables_file": "dimension_tables.json",
+  "dimension_tables_sha256": "bf7fc5040f56e960ffdd5ad202d43ee48b678b4b1cda5f06ab594c024864e663",
+  "exit_N2_status": "CLOSED (module is not zero)",
+  "growth": {
+    "equalizer_kernel_growth": {
+      "characteristic": "Argument uses only Hilbert-Serre over char 0 (or char \u2224 |G|) and the accepted free presentations of WP-4; no modular fibre rank lifting (house rule 9).",
+      "claim": "For each fixed odd m, the residual-equivariant equalizer \u039b_{m,d} of the diagram J_plane \u21c9 (J_line \u2295 J_V4 \u2295 J_points \u2295 J_C3) has dim \u039b_{m,d} \u2265 c_m d^2 \u2212 C_m d \u2212 C'_m for large d, with c_m > 0.  Hence \u039b_{m,d} \u2260 0 for all sufficiently large d.",
+      "proof_sketch": [
+        "J_plane^{D12} has Hilbert function \u223c c_m d^2, c_m > 0 (invariant theory of finite group on free module of rank r_m = 2(m+1) over ternary R).",
+        "Each target of a specialization map has growth \u2264 O(d) (binary line / V4 line) or O(1) (points).",
+        "There are finitely many orbit-types of flags (finite incidence category of orbit types).",
+        "Therefore dim(target total) = O(d), and dim ker \u2265 dim J_plane \u2212 O(d) \u2192 \u221e as d \u2192 \u221e.",
+        "Nonzero kernel elements are nonzero residual-equivariant compatible jet systems = nonzero elements of the inverse limit in bidegree (m,d)."
+      ]
+    },
+    "line_residual": {
+      "formula": "floor((d+2)/3) for odd d; 0 for even d",
+      "free_rank_2_over": "Q[xy, x^6+y^6]",
+      "growth": "O(d)"
+    },
+    "plane_residual_invariants": {
+      "finite_generation_in_m": false,
+      "growth": "O(d^2)",
+      "house_rule_4_note": "Quadratic growth in m of ranks is expected (infinite normal cone) and does not by itself yield emptiness or nonemptiness of landing support.",
+      "reason": "For fixed odd m, M_plane is free of rank r_m = 2(m+1) over R = Sym(E_+*).  Residual S3 \u2282 PGL(E_+) is finite; the invariant ring R^{S3} has Krull dimension 3, Hilbert function \u223c c k^2 with c > 0.  Hence residual-invariant plane jets are nonzero for infinitely many d, with quadratic growth."
+    },
+    "point_modules": {
+      "D10_D12_A4": "Molien of finite H on Sym^m T_y* \u2297 \u03bb^d \u2297 W",
+      "growth": "O(1) (periodic in d via \u03bb^d)"
+    },
+    "v4_residual": {
+      "formula": "(n_triv(m)+binom(m+2,2))*(d-m+1) before residual C3",
+      "growth": "O(d)"
+    }
+  },
+  "headline": "OPEN",
+  "level": 2,
+  "module_name": "\u039b = lim\u2190 M_\u2022  (residual-equivariant equalizer of the incidence diagram)",
+  "name": "linear_bigraded_inverse_limit",
+  "question": "Is the module of compatible leading jets (before cubic landing) zero?",
+  "self_sha256": "4031190c2feff92460f3df8cfdbd21488edb3cbe0c6646edbd7d857ef12dcfc8",
+  "verdict": "NONZERO",
+  "witnesses": [
+    {
+      "V4_and_points": "Further equalizer maps land in O(d) targets; for large d the based plane invariant space still has growth O(d^2) and survives.",
+      "bidegree": "m odd, d > m (so k = d\u2212m \u2265 1)",
+      "construction": "Inside the free plane module of rank r_m = 2(m+1) over R, take the submodule of sections vanishing on L_t \u2282 Z_t (multiply by a residual-eigen linear form defining L_t in the plus-plane, or use the ideal sheaf sequence).  Kernel of restriction to L_t is nonzero for d > m.  Residual-average (Reynolds for D12) preserves vanishing on the residual-stable line L_t, yielding nonzero D12-invariant based plane jets.",
+      "id": "based_along_minus_line_plane_jets",
+      "line_component": "zero",
+      "matches_level1_family": "based_minus_lines_odd_m",
+      "nonzero": true
+    },
+    {
+      "bidegree": "each fixed odd m; all d \u226b 0",
+      "construction": "For each fixed odd m, the residual-equivariant equalizer \u039b_{m,d} of the diagram J_plane \u21c9 (J_line \u2295 J_V4 \u2295 J_points \u2295 J_C3) has dim \u039b_{m,d} \u2265 c_m d^2 \u2212 C_m d \u2212 C'_m for large d, with c_m > 0.  Hence \u039b_{m,d} \u2260 0 for all sufficiently large d.",
+      "id": "asymptotic_equalizer_nonvanishing",
+      "nonzero": true,
+      "proof": [
+        "J_plane^{D12} has Hilbert function \u223c c_m d^2, c_m > 0 (invariant theory of finite group on free module of rank r_m = 2(m+1) over ternary R).",
+        "Each target of a specialization map has growth \u2264 O(d) (binary line / V4 line) or O(1) (points).",
+        "There are finitely many orbit-types of flags (finite incidence category of orbit types).",
+        "Therefore dim(target total) = O(d), and dim ker \u2265 dim J_plane \u2212 O(d) \u2192 \u221e as d \u2192 \u221e.",
+        "Nonzero kernel elements are nonzero residual-equivariant compatible jet systems = nonzero elements of the inverse limit in bidegree (m,d)."
+      ]
+    }
+  ],
+  "work_package": "WP-5"
+}

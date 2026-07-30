@@ -1,0 +1,381 @@
+{
+  "adversarial_attempts": [
+    {
+      "attempt": "Force preserve_both at e=1",
+      "reason": "e=1 module 1-dimensional; only swap_both (WP-4B.4)",
+      "result": "FAILS"
+    },
+    {
+      "attempt": "Assign type-II charge <q> (same as type-I)",
+      "reason": "WP-3: type-II = e+<q> for 0\u2260e\u2208E[2]; residual C3 cycles type-II as size-3 orbit, while <q> is the type-I origin class",
+      "result": "FAILS"
+    },
+    {
+      "attempt": "Even plane order m",
+      "reason": "4A.2: even m lands on elliptic \u21d2 C_G(t)-fixed on X \u21d2 empty",
+      "result": "FAILS for landing covariants"
+    },
+    {
+      "attempt": "Order-zero on V4 line landing on X",
+      "reason": "4C.1: only C3-fixed points on P(A) are A4 lines off X",
+      "result": "FAILS"
+    },
+    {
+      "attempt": "Contradict charges at type-II triple elliptic meeting",
+      "reason": "WP-3 proves charge labels are consistent with Gate1 CLAIM_1; no discrete obstruction",
+      "result": "FAILS to contradict"
+    },
+    {
+      "attempt": "Require C3 lines forced base",
+      "reason": "4D.5: local C3 symmetry allows order-zero landing at X\u2229L",
+      "result": "NOT FORCED"
+    }
+  ],
+  "c3_labels": {
+    "X_section": "1 C6 + 2 exact C3 (reduced, char 0)",
+    "forced_base": false,
+    "order_zero_allowed_targets": [
+      "C6_point",
+      "exact_C3_1",
+      "exact_C3_2"
+    ]
+  },
+  "charges": {
+    "consistency_at_triangle_vertex": "PROVED by WP-3",
+    "consistency_at_triple_elliptic": "PROVED by WP-3; Gate1 CLAIM_1",
+    "type_I": "<q>",
+    "type_II": "e+<q> for 0\u2260e\u2208E[2]"
+  },
+  "conclusion": "At least three infinite families of globally compatible marked states exist (based minus-lines; e=1 swap_both; generic e\u22657 swap_both).  No finite-state obstruction.  Exit N1 is closed.",
+  "headline": "OPEN",
+  "ledger_families_e0_to_20": {
+    "0": {
+      "all_ledgers": [],
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree"
+    },
+    "1": {
+      "all_ledgers": [
+        "swap_both"
+      ],
+      "defined": true,
+      "dim": 1,
+      "e": 1,
+      "generic_ledger": "swap_both"
+    },
+    "10": {
+      "all_ledgers": [],
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree"
+    },
+    "11": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "defined": true,
+      "dim": 4,
+      "e": 11,
+      "generic_ledger": "swap_both"
+    },
+    "12": {
+      "all_ledgers": [],
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree"
+    },
+    "13": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "defined": true,
+      "dim": 5,
+      "e": 13,
+      "generic_ledger": "swap_both"
+    },
+    "14": {
+      "all_ledgers": [],
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree"
+    },
+    "15": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "defined": true,
+      "dim": 5,
+      "e": 15,
+      "generic_ledger": "swap_both"
+    },
+    "16": {
+      "all_ledgers": [],
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree"
+    },
+    "17": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "defined": true,
+      "dim": 6,
+      "e": 17,
+      "generic_ledger": "swap_both"
+    },
+    "18": {
+      "all_ledgers": [],
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree"
+    },
+    "19": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "defined": true,
+      "dim": 7,
+      "e": 19,
+      "generic_ledger": "swap_both"
+    },
+    "2": {
+      "all_ledgers": [],
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree"
+    },
+    "20": {
+      "all_ledgers": [],
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree"
+    },
+    "3": {
+      "all_ledgers": [
+        "swap_both"
+      ],
+      "defined": true,
+      "dim": 1,
+      "e": 3,
+      "generic_ledger": "swap_both"
+    },
+    "4": {
+      "all_ledgers": [],
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree"
+    },
+    "5": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed"
+      ],
+      "defined": true,
+      "dim": 2,
+      "e": 5,
+      "generic_ledger": "swap_both",
+      "preserve_both_absent": true
+    },
+    "6": {
+      "all_ledgers": [],
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree"
+    },
+    "7": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "defined": true,
+      "dim": 3,
+      "e": 7,
+      "generic_ledger": "swap_both"
+    },
+    "8": {
+      "all_ledgers": [],
+      "defined": false,
+      "dim": 0,
+      "reason": "even residual degree"
+    },
+    "9": {
+      "all_ledgers": [
+        "swap_both",
+        "plus_fixed_minus_to_plus",
+        "plus_to_minus_minus_fixed",
+        "preserve_both"
+      ],
+      "defined": true,
+      "dim": 3,
+      "e": 9,
+      "generic_ledger": "swap_both"
+    }
+  },
+  "level": 1,
+  "method": "Constraint satisfaction on discrete labels (stabilizers, characters, orbit labels, endpoint permutations, type-I/II charges) with G-equivariance = residual-equivariance on orbit representatives.",
+  "name": "finite_marked_state_screen",
+  "plane_labels": {
+    "dominates_minus_line": true,
+    "forced_base": true,
+    "order_parity": "odd",
+    "target_character": "E_minus"
+  },
+  "question": "Does a globally compatible marked state exist?",
+  "self_sha256": "d0c04f36bd7c573e04164635f65c92bfd1a02e3259d9a0eeb205537254b8ff5c",
+  "surviving_states": [
+    {
+      "C3_line": {
+        "X_section": "1 C6 + 2 exact C3 (reduced, char 0)",
+        "forced_base": false,
+        "order_zero_allowed_targets": [
+          "C6_point",
+          "exact_C3_1",
+          "exact_C3_2"
+        ]
+      },
+      "G_extension": "Common odd m by conjugacy; based-line is residual-S3 stable; charges residual-stable by WP-3; C3 data residual-stable by 4D.",
+      "V4_line": {
+        "first_nonzero_order": "\u2265 3r+3 for m=2r+1 (upstream)",
+        "forced_base": true
+      },
+      "charges": {
+        "consistency_at_triangle_vertex": "PROVED by WP-3",
+        "consistency_at_triple_elliptic": "PROVED by WP-3; Gate1 CLAIM_1",
+        "type_I": "<q>",
+        "type_II": "e+<q> for 0\u2260e\u2208E[2]"
+      },
+      "endpoint_ledgers": "vacuous (restriction zero)",
+      "id": "based_minus_lines_odd_m",
+      "minus_line": {
+        "entire_line_based": true,
+        "restriction": "zero",
+        "when_always": "even d (4B.1); optionally for odd d"
+      },
+      "parameters": {
+        "d": "any d \u2265 m",
+        "m": "any odd positive integer"
+      },
+      "plane": {
+        "dominates_minus_line": true,
+        "forced_base": true,
+        "order_parity": "odd",
+        "target_character": "E_minus"
+      },
+      "triangle_ok": true,
+      "why_compatible": [
+        "No endpoint ledger constraints when restriction vanishes",
+        "Type-I/II charges already globally consistent (WP-3)",
+        "V4 triangle conditions vacuous for zero restriction on edges",
+        "C3 not forced base: optional constant states residual-C2 stable"
+      ]
+    },
+    {
+      "C3_line": {
+        "X_section": "1 C6 + 2 exact C3 (reduced, char 0)",
+        "forced_base": false,
+        "order_zero_allowed_targets": [
+          "C6_point",
+          "exact_C3_1",
+          "exact_C3_2"
+        ]
+      },
+      "G_extension": "Unique projective residual class at e=1 \u21d2 unique G-orbit of nonzero residual states of this bidegree type.",
+      "V4_line": {
+        "forced_base": true
+      },
+      "charges": {
+        "consistency_at_triangle_vertex": "PROVED by WP-3",
+        "consistency_at_triple_elliptic": "PROVED by WP-3; Gate1 CLAIM_1",
+        "type_I": "<q>",
+        "type_II": "e+<q> for 0\u2260e\u2208E[2]"
+      },
+      "endpoint_ledgers": "swap_both on every residual reflection pair",
+      "id": "residual_e1_swap_both",
+      "minus_line": {
+        "all_ledgers_at_e": [
+          "swap_both"
+        ],
+        "dim_local": 1,
+        "ledger": "swap_both",
+        "restriction": "Delta^m * h with h = (x, -y) up to scale"
+      },
+      "parameters": {
+        "d": "6m+1",
+        "e": 1,
+        "m": "odd \u2265 1"
+      },
+      "plane": {
+        "dominates_minus_line": true,
+        "forced_base": true,
+        "order_parity": "odd",
+        "target_character": "E_minus"
+      },
+      "triangle_ok": true,
+      "triangle_reason": "swap_both is residual-S3 equivariant (unique 1-dim det-twisted module at e=1). G-conjugacy extends to all 55 lines. Local triangle closing (accepted) includes the all-swap configuration.",
+      "why_compatible": [
+        "Unique ledger: no choice that could mismatch at shared vertices",
+        "Charges independent of residual binary map on L_t (live on elliptic side)",
+        "C3 composition orthogonal to minus-line residual at Level-1 labels"
+      ]
+    },
+    {
+      "charges": {
+        "consistency_at_triangle_vertex": "PROVED by WP-3",
+        "consistency_at_triple_elliptic": "PROVED by WP-3; Gate1 CLAIM_1",
+        "type_I": "<q>",
+        "type_II": "e+<q> for 0\u2260e\u2208E[2]"
+      },
+      "id": "residual_e_ge7_generic_swap_both",
+      "minus_line": {
+        "ledger": "swap_both (generic)",
+        "note": "Local existence of preserve/mixed is not claimed global",
+        "other_local_ledgers_exist": true,
+        "restriction": "Delta^m * h, h det-twisted of degree e"
+      },
+      "parameters": {
+        "d": "6m+e",
+        "e": "odd \u2265 7",
+        "m": "odd \u2265 1"
+      },
+      "plane": {
+        "dominates_minus_line": true,
+        "forced_base": true,
+        "order_parity": "odd",
+        "target_character": "E_minus"
+      },
+      "triangle_ok": true,
+      "why_compatible": [
+        "Generic swap_both residual-S3 equivariant line in the free module",
+        "Same G-extension as Family B",
+        "preserve_both / mixed may or may not globalize (WP-4B.5 boundary); not needed for Level-1 survival"
+      ]
+    }
+  ],
+  "triangle_transition": {
+    "claim": "Local V4 triangle graph closes; endpoint preserve and swap both occur",
+    "house_rule_7": "no bare V4 transition re-run",
+    "status": "ACCEPTED_from_upstream",
+    "upstream": "tmp/involution_exceptional_divisor/V4_REPORT.md"
+  },
+  "verdict": "SURVIVES",
+  "work_package": "WP-5"
+}

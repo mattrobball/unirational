@@ -1,0 +1,54 @@
+{
+  "corollaries": {
+    "emptiness_gives_negative": "If \u039b = 0 then no nonzero homogeneous landing self-covariant exists.  Combined with the accepted exhaustiveness theorem (any dominant equivariant map from an honest linear source forces such a covariant), this would yield ed_C(G)=4 and non-G-unirationality of X.  That combined step is separate from emptiness of \u039b.",
+    "nonemptiness_not_positive": "Nonzero elements of \u039b are necessary formal configurations only \u2014 not parametrizations and not existence of p (Exit P)."
+  },
+  "direction": "forward only (emptiness of \u039b \u21d2 no such p; nonemptiness of \u039b \u21cf existence of p)",
+  "headline": "OPEN",
+  "name": "Normal-cone necessity theorem",
+  "proof": {
+    "status": "PROVED",
+    "steps": [
+      {
+        "claim": "By 4A/4C, p vanishes to a common odd order m on every plus-plane and vanishes on every V4 fixed line.  The first nonzero normal jet along each forced stratum S is an H-equivariant section of Sym^m N_{S/Y}^\u2228 \u2297 O_S(d) \u2297 W.",
+        "id": "N.1_forced_base_jets",
+        "source": "WP-4A.1\u20133, WP-4C.1"
+      },
+      {
+        "claim": "Vanishing to order \u2265 m on every conjugate plus-plane means p \u2208 (A_m \u2297 W)^G with A_m = \u2229_t I(Z_t)^m.  This is the symbolic (here ordinary, linear primes) power along the union of conjugate strata \u2014 not a single ordinary power of the ideal of the union in the sense that would conflate multiplicities (house rule 5).",
+        "id": "N.2_symbolic_powers"
+      },
+      {
+        "claim": "The class of p in [M_m \u2297 W]^G = [A_m/A_{m+2} \u2297 W]^G is the associated-graded leading piece at exact order m when p \u2209 A_{m+2}; if p \u2208 A_{m+2} one replaces m by the true order (still odd).",
+        "id": "N.3_associated_graded"
+      },
+      {
+        "claim": "For every incidence S' \u2282 closure(S), the initial jet on S specializes to the initial jet on S' by restriction of normal cones.  Hence the collection of all stratum jets of p lies in the equalizer of all specialization maps = \u039b.",
+        "id": "N.4_specialization"
+      },
+      {
+        "claim": "Triple-line and multiple-point incidences are handled by the architecture plane norm \u2192 triple-line equalizer \u2192 residual point kernel; p's jets satisfy these equalizers because they come from a single global section of A_m.",
+        "id": "N.5_iterated_incidences"
+      },
+      {
+        "claim": "In low degree the literal graded piece (M_m)_d may differ from H^0(M\u0303_m(d)) by the finite irrelevant torsion T_m.  A polynomial covariant p gives a genuine graded element, which maps to both the sheaf-level and graded presentations; the necessity map lands in whichever presentation is used for \u039b, provided T_m is retained as a named finite discrepancy (not silently discarded).",
+        "id": "N.6_irrelevant_torsion"
+      },
+      {
+        "claim": "Projective scalar characters (O(1)-weights \u03bb on point stabilizers, residual det twists on binary lines) are built into the local modules M_{m,d}.  Primitive reduction (no fixed scalar factor) is optional for necessity: any nonzero p maps to a nonzero class after removing content in the base rings if desired.",
+        "id": "N.7_projective_scalars"
+      },
+      {
+        "claim": "Restriction of p to C3 lines, A4 points, and marked elliptic data produces elements of the corresponding local modules, compatible under flags by restriction transitivity.  C3 lines need not be base components.",
+        "id": "N.8_C3_A4_marked"
+      },
+      {
+        "claim": "The proof uses the iterated architecture, not a false short Cech complex (house rule 6).",
+        "id": "N.9_no_short_Cech"
+      }
+    ]
+  },
+  "self_sha256": "4dea984d24ff23a8541fc5671e3bdfd4e1134d9022afc64096f8e7a90066817b",
+  "statement": "Every nonzero homogeneous landing self-covariant p: W \u2192 W with F(p) = 0 determines a compatible element of the all-order inverse limit \u039b of the stabilizer-decorated associated-graded landing modules assembled in this package.",
+  "work_package": "WP-5"
+}

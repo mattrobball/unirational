@@ -1,0 +1,1030 @@
+{
+  "accepted_input_sha256": {
+    "certificates/strata/incidence_exact.json": "21a1d40b6e84e1673885c52e30fafb8f27d58cf2494b42851440a1d922ac2aa9",
+    "certificates/strata/marked_s3_geometry.json": "6662f850028c4df8c7e33a1749d948153d0fc9ca6da4b733daa88536343a59a6",
+    "certificates/strata/normal_characters.json": "7651f92b990136e5b06415eaab9018606c9765be21357fa3a2b9e467e33170c6",
+    "certificates/strata/strata_exact.json": "a32a3d83518190d923fb91b408a1f3cfa33242b96f6136dd03b366383f04f4d8",
+    "certificates/transitions/SEAL.json": "250f0e06b96b2ebed6e3a3a916aae4093d0686009430e7104176526499069331",
+    "certificates/transitions/c3_lines/module.json": "0a41264acb73968b15ccc8569ab82430d11193b41e4b358bdfc1f25820e64287",
+    "certificates/transitions/d12_binary_line/module.json": "9f877f4b0f441ff30ba4b0c2cbc5438192354d9b8ff05b98e83e53f84b406e39",
+    "certificates/transitions/involution_plane/module.json": "85e5676c3076ef6d9b267194ef6685eb6d7dc82e01d94ad22009e4b34f097312",
+    "certificates/transitions/point_links/module.json": "c4e20ca23938cef3d808ac35c3f05da0b48edafa6678015d100731ad6ba73699",
+    "certificates/transitions/v4_fixed_line/module.json": "67bdd1e7a8602fa58931aa7eb852fd9563594d5a53fa1779de3ff13b14f53bb6"
+  },
+  "all_degree_coverage": {
+    "mechanism": "finite_generation_over_correct_rings_plus_Hilbert_series_plus_growth",
+    "name": "All-degree and all-odd-m coverage of the machine",
+    "named_mechanism_detail": {
+      "D12_binary": "Free of rank 2 over Q[xy, x^6+y^6] for ordinary and det-twisted; Hilbert series (t+t^5)/((1-t^2)(1-t^6)) controls all degrees.",
+      "all_odd_m": "m runs over all odd positive integers.  Finite generation in m fails for plane and V4 modules (ranks \u2192 \u221e).  Coverage of all m is by the closed-form rank formulas / rational Hilbert series in the normal-order variable \u2014 a Rees-style generating function for the associated-graded normal cone \u2014 not by finite generation in m alone (house rule 4).",
+      "inverse_limit_all_degrees": "\u039b is assembled degreewise from these modules and linear specialization maps.  For each fixed m the equalizer in d is controlled by Hilbert series of free modules over polynomial rings (or Molien rings) and has eventual quasi-polynomial dimension.  The growth argument of Level 2 gives nonvanishing for all large d without enumerating degrees.",
+      "per_fixed_m_V4": "Free of rank n_triv(m)+binom(m+2,2) over Q[x,y]; closed form n_triv controls all orders.",
+      "per_fixed_m_plane": "For each fixed m, \u2295_d M_plane,m,d is free of rank r_m over R = Sym(E_+*) \u2245 Q[x0,x1,x2].  Hilbert series (3+4st)/((1-t)^3 (1-(st)^2)^2) controls all (m,d).",
+      "point_modules": "Finitely generated in m over the invariant ring of H on T_y Y* (Molien); d-dependence through \u03bb^d.",
+      "quartic_endomorphism_warning": "The equivariant quartic produces degrees 4^n d from one solution.  All-degree emptiness cannot be read from finite generation of covariants over the invariant ring alone.  Our nonemptiness is an existence statement about \u039b, not an emptiness claim about landing support."
+    },
+    "not_used": [
+      "Finite module generation alone as emptiness theorem",
+      "Single modular fibre ranks as char-0 emptiness/nonemptiness",
+      "Finite degree scan as all-degree negative theorem"
+    ],
+    "status": "PROVED_for_machine_coverage"
+  },
+  "distinctions": {
+    "finite_irrelevant_torsion": "T_m = discrepancy between sheaf and graded presentations; finite length, supported at irrelevant maximal ideal; retained in every claim about low-degree graded pieces.",
+    "literal_graded_pieces": "(M_m)_d \u2245 H^0(M\u0303_m(d)) for d \u2265 55m+109; below that, may differ.",
+    "sheaf_level_exactness": "Architecture formula for H^0(M\u0303_m(d)) is exact for every d (kernels only; no H^1 hypothesis)."
+  },
+  "exit": {
+    "closed_exits": {
+      "N1": "closed \u2014 marked states exist",
+      "N2": "closed \u2014 \u039b \u2260 0",
+      "N3": "not reached \u2014 nonlinear support not decided"
+    },
+    "exit": "P",
+    "explicit_necessary_state": {
+      "level1_families": [
+        "based_minus_lines_odd_m",
+        "residual_e1_swap_both",
+        "residual_e_ge7_generic_swap_both"
+      ],
+      "level2_module": "\u039b_{m,d} \u2260 0 for every odd m \u2265 1 and all d \u226b 0",
+      "parameters_recorded": {
+        "C3_line": "not forced base",
+        "V4_line": "forced base",
+        "charges": "type-I = <q>; type-II = e+<q>",
+        "d": "all sufficiently large integers (growth threshold depends on m)",
+        "m": "any odd positive integer",
+        "minus_line_family_A": "based (restriction 0)",
+        "minus_line_family_B": "e=1 swap_both at d=6m+1 (Level 1; linear lift may require higher d)",
+        "plane_order": "odd m"
+      },
+      "structural_witness": "based_along_minus_line_plane_jets"
+    },
+    "headline": "OPEN",
+    "headline_precision": "Problem E remains OPEN.  This package does NOT prove ed_C(G)=4 and does NOT prove non-G-unirationality of X.  Even a future negative exit would state precisely: no homogeneous landing self-covariant exists; conversion to ed_C(G)=4 uses the accepted exhaustiveness theorem as a separate step.",
+    "meaning": "A nonzero formal configuration survives (Level 1 states + Level 2 module \u039b \u2260 0).  It is ONLY a necessary state for a homogeneous landing self-covariant.  It is NOT a parametrization and NOT a proof of existence of such a covariant.  Lifting is WP-6/WP-7.",
+    "name": "formal_positive_configuration",
+    "next": "WP-6 (border/Fitting integration) only if a lifting attempt is authorized; not started here."
+  },
+  "gate": "Gate 4 \u2014 global structural decision",
+  "headline": "OPEN",
+  "incidence_category": {
+    "V4_local_incidence_summary": {
+      "double_count_checks_agree": true,
+      "elliptics": [
+        "E_z=X\u2229P(A+B)",
+        "E_s=X\u2229P(A+C)",
+        "E_r=X\u2229P(A+D)"
+      ],
+      "minus_lines": [
+        "L_z=P(C+D)",
+        "L_s=P(B+D)",
+        "L_r=P(B+C)"
+      ],
+      "type_II_per_V4": 3,
+      "type_I_per_V4": 3
+    },
+    "accepted_incidence_verdict": {
+      "candidate_claim_1": "every type-II V4 point lies on three fixed elliptic curves",
+      "candidate_claim_2": "two positive-dimensional fixed-locus closures meet only at type-I points",
+      "corrected_incidence": "Type-I (triangle vertices): each lies on exactly one of the three local elliptics and on two minus-lines. Type-II (X \u2229 P(A)): each lies on all three local elliptics and on no minus-line of that V4 triangle.",
+      "proof_reference": "Exact joint-character decomposition dims (2,1,1,1); E_z = X\u2229P(A+B) etc contain P(A) and hence R = X\u2229P(A); triangle incidences as in V4_REPORT / exact replay below.",
+      "surviving_statement": "Each type-II V4 point is a triple intersection of the three plus-plane elliptics of its V4 (and lies on the V4 fixed line P(A)). Positive-dimensional fixed-locus closures therefore meet at type-II points as well as at type-I points.",
+      "verdict": "CLAIM_1_SURVIVES_CLAIM_2_REFUTED"
+    },
+    "architecture": {
+      "G_invariants": "Reynolds operator exact when char \u2224 660; applies in char 0 and at split primes 61, 67 used in regression packets.",
+      "extensions_beyond_55_plane": [
+        "C3 lines (not forced base; not components of \u2229 I(Z_t))",
+        "A4 character-line points (off X; residual C3 fixed on V4 lines)",
+        "Marked elliptic / E[2]-charge data on type-I/II points",
+        "Minus-line D12 binary residual modules (L_t \u2282 X, distinct from triple lines)"
+      ],
+      "false_model_refuted": "Naive surjective four-term Cech complex is FALSE (symbolic_global_exactness). D12 stalk has nonzero cokernel on the right of the line map; point residual is a quotient of the kernel (left).",
+      "for_fixed_m": [
+        "1. Plane normalization: map from symbolic quotient M_m = A_m/A_{m+2}, A_r = \u2229_t I(Z_t)^r, into N_m = \u2295_t I(Z_t)^m / I(Z_t)^{m+2}",
+        "2. Triple-line equalizer: \u03b4_L : N_m \u2192 \u2295_L Q_{m,L} where L runs over the 55 V4 fixed lines (arrangement triple lines), Q_{m,L} = coker of the three-plane jet map at L",
+        "3. Residual point kernel: further kernel at the 121 multiple points (66 D10 + 55 D12) of the sheafified defect D_m"
+      ],
+      "irrelevant_torsion": {
+        "eventual_vanishing": "For d \u2265 55m + 109 (crude Derksen\u2013Sidman bound), (M_m)_d \u2245 H^0(M\u0303_m(d)) and T_m is invisible.",
+        "must_retain": true,
+        "role": "Finite module supported at the irrelevant maximal ideal; controls the difference between sheaf-level H^0(M\u0303_m(d)) and literal graded pieces (M_m)_d in low degree.",
+        "symbol": "T_m"
+      },
+      "name": "plane_normalization_triple_line_equalizer_residual_point_kernel",
+      "sheaf_formula": "H^0(M\u0303_m(d)) = ker( ker(H^0(N\u0303_m(d)) \u2192 H^0(Q\u0303_m(d))) \u2192 H^0(R_m(d)) )"
+    },
+    "arrangement_points": {
+      "D10": {
+        "count": 66,
+        "planes_through_each": 5
+      },
+      "D12": {
+        "V4_lines_through_each": 3,
+        "count": 55,
+        "planes_through_each": 7
+      },
+      "double_count_planes_vs_D10": {
+        "agree": true,
+        "from_planes": "55 planes \u00d7 6 D10-points per plane? (residual; sealed via 55*6/5=66)",
+        "from_points": "66 \u00d7 5 / 5 = 66 points; flags 66\u00d75=330; 55\u00d76=330"
+      }
+    },
+    "flag_count": 16,
+    "flags": [
+      {
+        "geometry": "L_t = P(E_-) \u2282 boundary of normal cone of Z_t",
+        "id": "plane_to_minus_line",
+        "multiplicity_per_source": 1,
+        "source": "C2_plane",
+        "specialization": {
+          "exactness_level": "sheaf-level on exceptional divisor; literal graded pieces may differ by irrelevant torsion",
+          "for_odd_m": "leading jet restricts as \u0394_t^m \u00b7 h_t, h_t \u2208 T_{d-6m}",
+          "map_type": "restriction / evaluation on minus-line"
+        },
+        "target": "C2_line"
+      },
+      {
+        "geometry": "Each plus-plane contains three V4-lines through its residual V4s (three Sylow V4s in D12 through t).",
+        "id": "plane_to_triple_line",
+        "multiplicity_per_source": 3,
+        "source": "C2_plane",
+        "specialization": {
+          "architecture": "fixed-m: plane norm \u2192 triple-line equalizer \u2192 residual point kernel",
+          "map_type": "triple-line equalizer component (plane normalization \u2192 triple-line equalizer)"
+        },
+        "target": "V4_line"
+      },
+      {
+        "geometry": "six D10 points residual on a plus-plane arrangement",
+        "id": "plane_to_D10",
+        "multiplicity_global_flags": 330,
+        "source": "C2_plane",
+        "specialization": {
+          "map_type": "residual point kernel (D10 stalk)"
+        },
+        "target": "D10_point"
+      },
+      {
+        "geometry": "D12 points as 7-plane meetings",
+        "id": "plane_to_D12",
+        "multiplicity_global_flags": 385,
+        "source": "C2_plane",
+        "specialization": {
+          "map_type": "residual point kernel (D12 stalk)"
+        },
+        "target": "D12_point"
+      },
+      {
+        "geometry": "E_t = X \u2229 Z_t",
+        "id": "plane_to_elliptic",
+        "multiplicity_per_source": 1,
+        "source": "C2_plane",
+        "specialization": {
+          "charges": "type-I / type-II labels on E_t via WP-3",
+          "map_type": "restriction of leading data to marked elliptic"
+        },
+        "target": "elliptic_plus"
+      },
+      {
+        "geometry": "six type-I endpoints on L_t (two per residual reflection)",
+        "id": "minus_line_to_type_I",
+        "multiplicity_per_source": 6,
+        "source": "C2_line",
+        "specialization": {
+          "ledgers": "swap_both / preserve_both / mixed (WP-4B)",
+          "map_type": "endpoint ledger evaluation"
+        },
+        "target": "V4_type_I_point"
+      },
+      {
+        "geometry": "two residual-C3 fixed points on L_t",
+        "id": "minus_line_to_C6",
+        "multiplicity_per_source": 2,
+        "source": "C2_line",
+        "specialization": {
+          "map_type": "evaluation at C6 points; det-twisted maps preserve pair setwise"
+        },
+        "target": "C6_line_point"
+      },
+      {
+        "geometry": "normal jets toward triangle vertices; charge <q>",
+        "id": "V4_line_to_type_I",
+        "multiplicity_per_source": 3,
+        "source": "V4_line",
+        "specialization": {
+          "charge": "<q>",
+          "map_type": "pure \u03c7_z/\u03c7_s/\u03c7_r normal directions"
+        },
+        "target": "V4_type_I_point"
+      },
+      {
+        "geometry": "R = X \u2229 P(A); trivial-character sector",
+        "id": "V4_line_to_type_II",
+        "multiplicity_per_source": 3,
+        "source": "V4_line",
+        "specialization": {
+          "charge": "e+<q>",
+          "map_type": "trivial V4-character jets within P(A)"
+        },
+        "target": "V4_type_II_point"
+      },
+      {
+        "geometry": "two A4 character lines = residual-C3 fixed points on P(A), off X",
+        "id": "V4_line_to_A4",
+        "multiplicity_per_source": 2,
+        "note": "A4_a and A4_b are the two character-line orbits",
+        "source": "V4_line",
+        "specialization": {
+          "map_type": "endpoint of residual C3 on V4 line"
+        },
+        "target": "A4_a_point"
+      },
+      {
+        "geometry": "three V4-lines through each D12 point",
+        "id": "V4_line_to_D12",
+        "multiplicity_global_flags": 165,
+        "source": "V4_line",
+        "specialization": {
+          "map_type": "point residual on triple-line"
+        },
+        "target": "D12_point"
+      },
+      {
+        "geometry": "one C6 point among the three points of X \u2229 L",
+        "id": "C3_line_to_C6",
+        "multiplicity_per_source": 1,
+        "source": "C3_line",
+        "specialization": {
+          "map_type": "order-zero / jet evaluation"
+        },
+        "target": "C6_line_point"
+      },
+      {
+        "geometry": "four C3-lines through each A4 point",
+        "id": "C3_line_to_A4",
+        "multiplicity_global_flags": "55*4 per A4 orbit (a and b)",
+        "source": "C3_line",
+        "specialization": {
+          "map_type": "endpoint restriction 4D\u21924E"
+        },
+        "target": "A4_a_point"
+      },
+      {
+        "geometry": "each type-II point lies on all three local elliptics",
+        "id": "type_II_to_three_elliptics",
+        "multiplicity_per_source": 3,
+        "source": "V4_type_II_point",
+        "specialization": {
+          "Gate1": "CLAIM_1_SURVIVES_CLAIM_2_REFUTED",
+          "charge_consistency": "WP-3 E[2] theorem",
+          "map_type": "charge transport under triple meeting"
+        },
+        "target": "elliptic_plus"
+      },
+      {
+        "geometry": "each type-I vertex lies on exactly one local elliptic",
+        "id": "type_I_to_one_elliptic",
+        "multiplicity_per_source": 1,
+        "source": "V4_type_I_point",
+        "specialization": {
+          "map_type": "charge <q> on that elliptic"
+        },
+        "target": "elliptic_plus"
+      },
+      {
+        "geometry": "three involution planes through each A4 point",
+        "id": "A4_to_planes",
+        "multiplicity_per_source": 3,
+        "source": "A4_a_point",
+        "specialization": {
+          "map_type": "point-link restriction 4E\u21924A"
+        },
+        "target": "C2_plane"
+      }
+    ],
+    "object_count": 13,
+    "objects": {
+      "A4_a_point": {
+        "H": "A4",
+        "O1_character": "1'",
+        "do_not_collapse_into_55_plane_ideal": true,
+        "incidents": {
+          "C3_lines": 4,
+          "V4_line": 1,
+          "involution_planes": 3
+        },
+        "module_ref": "transitions/point_links/module.json",
+        "on_X": false,
+        "orbit_size": 55
+      },
+      "A4_b_point": {
+        "H": "A4",
+        "O1_character": "1''",
+        "do_not_collapse_into_55_plane_ideal": true,
+        "incidents": {
+          "C3_lines": 4,
+          "V4_line": 1,
+          "involution_planes": 3
+        },
+        "module_ref": "transitions/point_links/module.json",
+        "on_X": false,
+        "orbit_size": 55
+      },
+      "C2_line": {
+        "H": "C2",
+        "N_G": "D12",
+        "bigraded_module": {
+          "controls": "all source degrees",
+          "det_twisted": "same Hilbert series (t+t^5)/((1-t^2)(1-t^6))",
+          "ordinary": "free rank 2 over Q[xy, x^6+y^6]"
+        },
+        "closure": "P(E_-(t)) \u2245 P^1 \u2282 X",
+        "forced_base": false,
+        "module_ref": "transitions/d12_binary_line/module.json",
+        "note": "Arrangement triple lines are V4 fixed lines, NOT these minus-lines.",
+        "on_X": true,
+        "orbit_size": 55,
+        "residual": "S3"
+      },
+      "C2_plane": {
+        "H": "C2",
+        "N_G": "D12",
+        "bigraded_module": {
+          "M_m_d": "dim = (m+1)*binom(d-m+2,2)*(3 if m even else 2)",
+          "controls": "all m,d via free rank + Hilbert series",
+          "finite_generation_in_m": false,
+          "free_over": "R = Sym(E_+*) for each fixed m"
+        },
+        "closure": "P(E_+(t)) \u2245 P^2",
+        "forced_base": true,
+        "forced_base_reason": "4A.1",
+        "leading_character": {
+          "dominates_minus_line": true,
+          "m_even_forbidden_for_landing": true,
+          "m_odd_target": "E_-"
+        },
+        "module_ref": "transitions/involution_plane/module.json",
+        "on_X": "section elliptic E_t",
+        "orbit_size": 55,
+        "residual": "S3"
+      },
+      "C3_line": {
+        "H": "C3",
+        "N_G": "C6",
+        "closure": "P(U_\u03c9) or P(U_\u03c9\u00b2) \u2245 P^1",
+        "composition": "1 C6 + 2 C3 per line; global 220 residual C3 points",
+        "do_not_collapse_into_55_plane_ideal": true,
+        "forced_base": false,
+        "forced_base_reason": "4D.5: NOT forced by local C3 symmetry alone",
+        "module_ref": "transitions/c3_lines/module.json",
+        "on_X": "meets X in 3 reduced points (1 C6 + 2 exact C3)",
+        "orbit_size": 110,
+        "residual": "C2"
+      },
+      "C6_line_point": {
+        "H": "C6",
+        "incidents": {
+          "C3_lines": 1,
+          "minus_lines": "endpoint of residual C3 on L_t"
+        },
+        "on_X": true,
+        "orbit_size": 110
+      },
+      "C6_plane_point": {
+        "H": "C6",
+        "note": "off X; residual on plus side",
+        "on_X": false,
+        "orbit_size": 110
+      },
+      "D10_point": {
+        "F": 5,
+        "H": "D10",
+        "arrangement_role": "5-plane multiple point of the 55-plane arrangement",
+        "incidents": {
+          "involution_planes": {
+            "count": 5,
+            "double_count": "66 D10 \u00d7 5 = 330 = 55 planes \u00d7 6 D10-points per plane",
+            "source": "incidence_exact.json arrangement_points_off_X.D10"
+          },
+          "no_C3_line": "not in the C3/A4 chain as a generic point",
+          "no_V4_line": "D10 does not contain V4"
+        },
+        "module_ref": "transitions/point_links/module.json",
+        "on_X": false,
+        "orbit_size": 66
+      },
+      "D12_point": {
+        "H": "D12",
+        "arrangement_role": "7-plane multiple point; lies on 3 triple lines",
+        "incidents": {
+          "V4_lines": {
+            "count": 3,
+            "note": "three V4 fixed lines through the D12 point (A4 character geometry)",
+            "source": "incidence_exact.json D12.V4_lines_through_each=3"
+          },
+          "involution_planes": {
+            "count": 7,
+            "source": "incidence_exact.json D12.planes_through_each=7"
+          }
+        },
+        "module_ref": "transitions/point_links/module.json",
+        "on_X": false,
+        "orbit_size": 55
+      },
+      "V4_line": {
+        "H": "V4",
+        "N_G": "A4",
+        "arrangement_role": "The 55 triple lines of the plus-plane arrangement are exactly the 55 V4 fixed lines (3 planes per line; 165 pairwise line incidences / 3 = 55).",
+        "bigraded_module": {
+          "M_m_d": "(n_triv(m)+binom(m+2,2))*(d-m+1)",
+          "free_over": "Q[x,y] for each fixed m",
+          "n_triv": "closed form even/odd binomial"
+        },
+        "closure": "P(A) = P(W^{V4}) \u2245 P^1",
+        "forced_base": true,
+        "forced_base_reason": "4C.1",
+        "module_ref": "transitions/v4_fixed_line/module.json",
+        "on_X": false,
+        "orbit_size": 55,
+        "residual": "C3"
+      },
+      "V4_type_II_point": {
+        "H": "V4",
+        "charge": "e + <q> for 0\u2260e\u2208E[2]",
+        "charge_source": "WP-3 E[2] theorem PROVED_STRUCTURALLY",
+        "incidents": {
+          "elliptics_local": 3,
+          "minus_lines_local": 0,
+          "role": "triple elliptic meeting; Gate1 CLAIM_1_SURVIVES"
+        },
+        "on_X": true,
+        "orbit_size": 165,
+        "support": "X \u2229 P(A)"
+      },
+      "V4_type_I_point": {
+        "H": "V4",
+        "charge": "<q> \u2282 E[3]",
+        "charge_source": "WP-3 E[2] theorem PROVED_STRUCTURALLY",
+        "incidents": {
+          "elliptics_local": 1,
+          "minus_lines_local": 2,
+          "role": "triangle vertex"
+        },
+        "on_X": true,
+        "orbit_size": 165
+      },
+      "elliptic_plus": {
+        "CM": false,
+        "closure": "E_t = X \u2229 P(E_+(t)), smooth genus one",
+        "j_invariant": "8192/11",
+        "module_note": "Not an ambient linear stratum; carries marked residual S3 geometry and E[2]-charges (WP-3).  Retained as a decorated object so charges are not collapsed into the 55-plane ideal.",
+        "orbit_size": 55,
+        "residual_S3": {
+          "marked_12_point_set": "E[2] + <q>",
+          "order_three": "translation by unique q \u2208 E_t[3], free"
+        },
+        "source": "certificates/strata/marked_s3_geometry.json"
+      }
+    }
+  },
+  "level1": {
+    "adversarial_attempts": [
+      {
+        "attempt": "Force preserve_both at e=1",
+        "reason": "e=1 module 1-dimensional; only swap_both (WP-4B.4)",
+        "result": "FAILS"
+      },
+      {
+        "attempt": "Assign type-II charge <q> (same as type-I)",
+        "reason": "WP-3: type-II = e+<q> for 0\u2260e\u2208E[2]; residual C3 cycles type-II as size-3 orbit, while <q> is the type-I origin class",
+        "result": "FAILS"
+      },
+      {
+        "attempt": "Even plane order m",
+        "reason": "4A.2: even m lands on elliptic \u21d2 C_G(t)-fixed on X \u21d2 empty",
+        "result": "FAILS for landing covariants"
+      },
+      {
+        "attempt": "Order-zero on V4 line landing on X",
+        "reason": "4C.1: only C3-fixed points on P(A) are A4 lines off X",
+        "result": "FAILS"
+      },
+      {
+        "attempt": "Contradict charges at type-II triple elliptic meeting",
+        "reason": "WP-3 proves charge labels are consistent with Gate1 CLAIM_1; no discrete obstruction",
+        "result": "FAILS to contradict"
+      },
+      {
+        "attempt": "Require C3 lines forced base",
+        "reason": "4D.5: local C3 symmetry allows order-zero landing at X\u2229L",
+        "result": "NOT FORCED"
+      }
+    ],
+    "c3_labels": {
+      "X_section": "1 C6 + 2 exact C3 (reduced, char 0)",
+      "forced_base": false,
+      "order_zero_allowed_targets": [
+        "C6_point",
+        "exact_C3_1",
+        "exact_C3_2"
+      ]
+    },
+    "charges": {
+      "consistency_at_triangle_vertex": "PROVED by WP-3",
+      "consistency_at_triple_elliptic": "PROVED by WP-3; Gate1 CLAIM_1",
+      "type_I": "<q>",
+      "type_II": "e+<q> for 0\u2260e\u2208E[2]"
+    },
+    "conclusion": "At least three infinite families of globally compatible marked states exist (based minus-lines; e=1 swap_both; generic e\u22657 swap_both).  No finite-state obstruction.  Exit N1 is closed.",
+    "ledger_families_e0_to_20": {
+      "0": {
+        "all_ledgers": [],
+        "defined": false,
+        "dim": 0,
+        "reason": "even residual degree"
+      },
+      "1": {
+        "all_ledgers": [
+          "swap_both"
+        ],
+        "defined": true,
+        "dim": 1,
+        "e": 1,
+        "generic_ledger": "swap_both"
+      },
+      "10": {
+        "all_ledgers": [],
+        "defined": false,
+        "dim": 0,
+        "reason": "even residual degree"
+      },
+      "11": {
+        "all_ledgers": [
+          "swap_both",
+          "plus_fixed_minus_to_plus",
+          "plus_to_minus_minus_fixed",
+          "preserve_both"
+        ],
+        "defined": true,
+        "dim": 4,
+        "e": 11,
+        "generic_ledger": "swap_both"
+      },
+      "12": {
+        "all_ledgers": [],
+        "defined": false,
+        "dim": 0,
+        "reason": "even residual degree"
+      },
+      "13": {
+        "all_ledgers": [
+          "swap_both",
+          "plus_fixed_minus_to_plus",
+          "plus_to_minus_minus_fixed",
+          "preserve_both"
+        ],
+        "defined": true,
+        "dim": 5,
+        "e": 13,
+        "generic_ledger": "swap_both"
+      },
+      "14": {
+        "all_ledgers": [],
+        "defined": false,
+        "dim": 0,
+        "reason": "even residual degree"
+      },
+      "15": {
+        "all_ledgers": [
+          "swap_both",
+          "plus_fixed_minus_to_plus",
+          "plus_to_minus_minus_fixed",
+          "preserve_both"
+        ],
+        "defined": true,
+        "dim": 5,
+        "e": 15,
+        "generic_ledger": "swap_both"
+      },
+      "16": {
+        "all_ledgers": [],
+        "defined": false,
+        "dim": 0,
+        "reason": "even residual degree"
+      },
+      "17": {
+        "all_ledgers": [
+          "swap_both",
+          "plus_fixed_minus_to_plus",
+          "plus_to_minus_minus_fixed",
+          "preserve_both"
+        ],
+        "defined": true,
+        "dim": 6,
+        "e": 17,
+        "generic_ledger": "swap_both"
+      },
+      "18": {
+        "all_ledgers": [],
+        "defined": false,
+        "dim": 0,
+        "reason": "even residual degree"
+      },
+      "19": {
+        "all_ledgers": [
+          "swap_both",
+          "plus_fixed_minus_to_plus",
+          "plus_to_minus_minus_fixed",
+          "preserve_both"
+        ],
+        "defined": true,
+        "dim": 7,
+        "e": 19,
+        "generic_ledger": "swap_both"
+      },
+      "2": {
+        "all_ledgers": [],
+        "defined": false,
+        "dim": 0,
+        "reason": "even residual degree"
+      },
+      "20": {
+        "all_ledgers": [],
+        "defined": false,
+        "dim": 0,
+        "reason": "even residual degree"
+      },
+      "3": {
+        "all_ledgers": [
+          "swap_both"
+        ],
+        "defined": true,
+        "dim": 1,
+        "e": 3,
+        "generic_ledger": "swap_both"
+      },
+      "4": {
+        "all_ledgers": [],
+        "defined": false,
+        "dim": 0,
+        "reason": "even residual degree"
+      },
+      "5": {
+        "all_ledgers": [
+          "swap_both",
+          "plus_fixed_minus_to_plus",
+          "plus_to_minus_minus_fixed"
+        ],
+        "defined": true,
+        "dim": 2,
+        "e": 5,
+        "generic_ledger": "swap_both",
+        "preserve_both_absent": true
+      },
+      "6": {
+        "all_ledgers": [],
+        "defined": false,
+        "dim": 0,
+        "reason": "even residual degree"
+      },
+      "7": {
+        "all_ledgers": [
+          "swap_both",
+          "plus_fixed_minus_to_plus",
+          "plus_to_minus_minus_fixed",
+          "preserve_both"
+        ],
+        "defined": true,
+        "dim": 3,
+        "e": 7,
+        "generic_ledger": "swap_both"
+      },
+      "8": {
+        "all_ledgers": [],
+        "defined": false,
+        "dim": 0,
+        "reason": "even residual degree"
+      },
+      "9": {
+        "all_ledgers": [
+          "swap_both",
+          "plus_fixed_minus_to_plus",
+          "plus_to_minus_minus_fixed",
+          "preserve_both"
+        ],
+        "defined": true,
+        "dim": 3,
+        "e": 9,
+        "generic_ledger": "swap_both"
+      }
+    },
+    "level": 1,
+    "method": "Constraint satisfaction on discrete labels (stabilizers, characters, orbit labels, endpoint permutations, type-I/II charges) with G-equivariance = residual-equivariance on orbit representatives.",
+    "name": "finite_marked_state_screen",
+    "plane_labels": {
+      "dominates_minus_line": true,
+      "forced_base": true,
+      "order_parity": "odd",
+      "target_character": "E_minus"
+    },
+    "question": "Does a globally compatible marked state exist?",
+    "surviving_states": [
+      {
+        "C3_line": {
+          "X_section": "1 C6 + 2 exact C3 (reduced, char 0)",
+          "forced_base": false,
+          "order_zero_allowed_targets": [
+            "C6_point",
+            "exact_C3_1",
+            "exact_C3_2"
+          ]
+        },
+        "G_extension": "Common odd m by conjugacy; based-line is residual-S3 stable; charges residual-stable by WP-3; C3 data residual-stable by 4D.",
+        "V4_line": {
+          "first_nonzero_order": "\u2265 3r+3 for m=2r+1 (upstream)",
+          "forced_base": true
+        },
+        "charges": {
+          "consistency_at_triangle_vertex": "PROVED by WP-3",
+          "consistency_at_triple_elliptic": "PROVED by WP-3; Gate1 CLAIM_1",
+          "type_I": "<q>",
+          "type_II": "e+<q> for 0\u2260e\u2208E[2]"
+        },
+        "endpoint_ledgers": "vacuous (restriction zero)",
+        "id": "based_minus_lines_odd_m",
+        "minus_line": {
+          "entire_line_based": true,
+          "restriction": "zero",
+          "when_always": "even d (4B.1); optionally for odd d"
+        },
+        "parameters": {
+          "d": "any d \u2265 m",
+          "m": "any odd positive integer"
+        },
+        "plane": {
+          "dominates_minus_line": true,
+          "forced_base": true,
+          "order_parity": "odd",
+          "target_character": "E_minus"
+        },
+        "triangle_ok": true,
+        "why_compatible": [
+          "No endpoint ledger constraints when restriction vanishes",
+          "Type-I/II charges already globally consistent (WP-3)",
+          "V4 triangle conditions vacuous for zero restriction on edges",
+          "C3 not forced base: optional constant states residual-C2 stable"
+        ]
+      },
+      {
+        "C3_line": {
+          "X_section": "1 C6 + 2 exact C3 (reduced, char 0)",
+          "forced_base": false,
+          "order_zero_allowed_targets": [
+            "C6_point",
+            "exact_C3_1",
+            "exact_C3_2"
+          ]
+        },
+        "G_extension": "Unique projective residual class at e=1 \u21d2 unique G-orbit of nonzero residual states of this bidegree type.",
+        "V4_line": {
+          "forced_base": true
+        },
+        "charges": {
+          "consistency_at_triangle_vertex": "PROVED by WP-3",
+          "consistency_at_triple_elliptic": "PROVED by WP-3; Gate1 CLAIM_1",
+          "type_I": "<q>",
+          "type_II": "e+<q> for 0\u2260e\u2208E[2]"
+        },
+        "endpoint_ledgers": "swap_both on every residual reflection pair",
+        "id": "residual_e1_swap_both",
+        "minus_line": {
+          "all_ledgers_at_e": [
+            "swap_both"
+          ],
+          "dim_local": 1,
+          "ledger": "swap_both",
+          "restriction": "Delta^m * h with h = (x, -y) up to scale"
+        },
+        "parameters": {
+          "d": "6m+1",
+          "e": 1,
+          "m": "odd \u2265 1"
+        },
+        "plane": {
+          "dominates_minus_line": true,
+          "forced_base": true,
+          "order_parity": "odd",
+          "target_character": "E_minus"
+        },
+        "triangle_ok": true,
+        "triangle_reason": "swap_both is residual-S3 equivariant (unique 1-dim det-twisted module at e=1). G-conjugacy extends to all 55 lines. Local triangle closing (accepted) includes the all-swap configuration.",
+        "why_compatible": [
+          "Unique ledger: no choice that could mismatch at shared vertices",
+          "Charges independent of residual binary map on L_t (live on elliptic side)",
+          "C3 composition orthogonal to minus-line residual at Level-1 labels"
+        ]
+      },
+      {
+        "charges": {
+          "consistency_at_triangle_vertex": "PROVED by WP-3",
+          "consistency_at_triple_elliptic": "PROVED by WP-3; Gate1 CLAIM_1",
+          "type_I": "<q>",
+          "type_II": "e+<q> for 0\u2260e\u2208E[2]"
+        },
+        "id": "residual_e_ge7_generic_swap_both",
+        "minus_line": {
+          "ledger": "swap_both (generic)",
+          "note": "Local existence of preserve/mixed is not claimed global",
+          "other_local_ledgers_exist": true,
+          "restriction": "Delta^m * h, h det-twisted of degree e"
+        },
+        "parameters": {
+          "d": "6m+e",
+          "e": "odd \u2265 7",
+          "m": "odd \u2265 1"
+        },
+        "plane": {
+          "dominates_minus_line": true,
+          "forced_base": true,
+          "order_parity": "odd",
+          "target_character": "E_minus"
+        },
+        "triangle_ok": true,
+        "why_compatible": [
+          "Generic swap_both residual-S3 equivariant line in the free module",
+          "Same G-extension as Family B",
+          "preserve_both / mixed may or may not globalize (WP-4B.5 boundary); not needed for Level-1 survival"
+        ]
+      }
+    ],
+    "triangle_transition": {
+      "claim": "Local V4 triangle graph closes; endpoint preserve and swap both occur",
+      "house_rule_7": "no bare V4 transition re-run",
+      "status": "ACCEPTED_from_upstream",
+      "upstream": "tmp/involution_exceptional_divisor/V4_REPORT.md"
+    },
+    "verdict": "SURVIVES"
+  },
+  "level2": {
+    "c3_a4_marked": {
+      "A4_points": "Off X; point modules with Molien growth O(1).  Included in J_points.  Do not collapse into the 55-plane ideal (character lines are residual C3 fixed points on V4 lines).",
+      "C3_forced_base": false,
+      "C3_linear_constraints": "Optional order-zero / jet conditions along 110 lines; each contributes O(d) or O(1) residual conditions \u2014 absorbed in the O(d) target budget of the growth argument.",
+      "marked_elliptic": "Charge labels are discrete (Level 1); linear jets on elliptics are restrictions of plane jets \u2014 not independent linear cuts beyond the plane module."
+    },
+    "classical_arrangement_relation": {
+      "injection": "The classical fixed-m object [H^0(M\u0303_m(d)) \u2297 W]^G embeds into \u039b_{m,d} by taking residual-invariant jets of a global section along every orbit type in the 55-plane architecture (planes, V4 triple lines, D10/D12 points).  Extension by zero/restriction supplies the C3/A4/marked components when they are not forced.",
+      "not_used_as_sole_witness": "Modular ranks such as dim K_25 \u2261 59 (mod 67) are regression checks only (house rule 9); the nonemptiness proof above does not rely on them.",
+      "sheaf_vs_graded": "For d \u2265 55m+109, sheaf H^0 equals literal graded piece; below that, finite irrelevant torsion T_m may enlarge or shrink literal graded dimensions relative to sheaf-level.  Nonemptiness for large d is unaffected by T_m."
+    },
+    "conclusion": "The linear bigraded inverse-limit module \u039b is nonzero in characteristic zero: for every odd m \u2265 1 and all sufficiently large d, dim \u039b_{m,d} > 0.  Explicit structural witnesses include based-along-minus-line residual-invariant plane jets.  Exit N2 is closed.",
+    "definition": {
+      "G_equivariance": "Equivalent to residual N_G(S)/H-equivariance on one representative per orbit, by induction Ind_H^G adjunction.",
+      "architecture_presentation": "For the 55-plane subdiagram: plane normalization \u2192 triple-line equalizer \u2192 residual point kernel, retaining T_m.",
+      "arrows": "specialization/equalizer maps along flags",
+      "full_diagram": "55-plane architecture plus C3 lines, A4 points, minus-line D12 modules, and marked elliptic charge-compatible restrictions.",
+      "objects": "bigraded local modules M_S on each incidence-category object S"
+    },
+    "exit_N2_status": "CLOSED (module is not zero)",
+    "growth": {
+      "equalizer_kernel_growth": {
+        "characteristic": "Argument uses only Hilbert-Serre over char 0 (or char \u2224 |G|) and the accepted free presentations of WP-4; no modular fibre rank lifting (house rule 9).",
+        "claim": "For each fixed odd m, the residual-equivariant equalizer \u039b_{m,d} of the diagram J_plane \u21c9 (J_line \u2295 J_V4 \u2295 J_points \u2295 J_C3) has dim \u039b_{m,d} \u2265 c_m d^2 \u2212 C_m d \u2212 C'_m for large d, with c_m > 0.  Hence \u039b_{m,d} \u2260 0 for all sufficiently large d.",
+        "proof_sketch": [
+          "J_plane^{D12} has Hilbert function \u223c c_m d^2, c_m > 0 (invariant theory of finite group on free module of rank r_m = 2(m+1) over ternary R).",
+          "Each target of a specialization map has growth \u2264 O(d) (binary line / V4 line) or O(1) (points).",
+          "There are finitely many orbit-types of flags (finite incidence category of orbit types).",
+          "Therefore dim(target total) = O(d), and dim ker \u2265 dim J_plane \u2212 O(d) \u2192 \u221e as d \u2192 \u221e.",
+          "Nonzero kernel elements are nonzero residual-equivariant compatible jet systems = nonzero elements of the inverse limit in bidegree (m,d)."
+        ]
+      },
+      "line_residual": {
+        "formula": "floor((d+2)/3) for odd d; 0 for even d",
+        "free_rank_2_over": "Q[xy, x^6+y^6]",
+        "growth": "O(d)"
+      },
+      "plane_residual_invariants": {
+        "finite_generation_in_m": false,
+        "growth": "O(d^2)",
+        "house_rule_4_note": "Quadratic growth in m of ranks is expected (infinite normal cone) and does not by itself yield emptiness or nonemptiness of landing support.",
+        "reason": "For fixed odd m, M_plane is free of rank r_m = 2(m+1) over R = Sym(E_+*).  Residual S3 \u2282 PGL(E_+) is finite; the invariant ring R^{S3} has Krull dimension 3, Hilbert function \u223c c k^2 with c > 0.  Hence residual-invariant plane jets are nonzero for infinitely many d, with quadratic growth."
+      },
+      "point_modules": {
+        "D10_D12_A4": "Molien of finite H on Sym^m T_y* \u2297 \u03bb^d \u2297 W",
+        "growth": "O(1) (periodic in d via \u03bb^d)"
+      },
+      "v4_residual": {
+        "formula": "(n_triv(m)+binom(m+2,2))*(d-m+1) before residual C3",
+        "growth": "O(d)"
+      }
+    },
+    "level": 2,
+    "module_name": "\u039b = lim\u2190 M_\u2022  (residual-equivariant equalizer of the incidence diagram)",
+    "name": "linear_bigraded_inverse_limit",
+    "question": "Is the module of compatible leading jets (before cubic landing) zero?",
+    "verdict": "NONZERO",
+    "witnesses": [
+      {
+        "V4_and_points": "Further equalizer maps land in O(d) targets; for large d the based plane invariant space still has growth O(d^2) and survives.",
+        "bidegree": "m odd, d > m (so k = d\u2212m \u2265 1)",
+        "construction": "Inside the free plane module of rank r_m = 2(m+1) over R, take the submodule of sections vanishing on L_t \u2282 Z_t (multiply by a residual-eigen linear form defining L_t in the plus-plane, or use the ideal sheaf sequence).  Kernel of restriction to L_t is nonzero for d > m.  Residual-average (Reynolds for D12) preserves vanishing on the residual-stable line L_t, yielding nonzero D12-invariant based plane jets.",
+        "id": "based_along_minus_line_plane_jets",
+        "line_component": "zero",
+        "matches_level1_family": "based_minus_lines_odd_m",
+        "nonzero": true
+      },
+      {
+        "bidegree": "each fixed odd m; all d \u226b 0",
+        "construction": "For each fixed odd m, the residual-equivariant equalizer \u039b_{m,d} of the diagram J_plane \u21c9 (J_line \u2295 J_V4 \u2295 J_points \u2295 J_C3) has dim \u039b_{m,d} \u2265 c_m d^2 \u2212 C_m d \u2212 C'_m for large d, with c_m > 0.  Hence \u039b_{m,d} \u2260 0 for all sufficiently large d.",
+        "id": "asymptotic_equalizer_nonvanishing",
+        "nonzero": true,
+        "proof": [
+          "J_plane^{D12} has Hilbert function \u223c c_m d^2, c_m > 0 (invariant theory of finite group on free module of rank r_m = 2(m+1) over ternary R).",
+          "Each target of a specialization map has growth \u2264 O(d) (binary line / V4 line) or O(1) (points).",
+          "There are finitely many orbit-types of flags (finite incidence category of orbit types).",
+          "Therefore dim(target total) = O(d), and dim ker \u2265 dim J_plane \u2212 O(d) \u2192 \u221e as d \u2192 \u221e.",
+          "Nonzero kernel elements are nonzero residual-equivariant compatible jet systems = nonzero elements of the inverse limit in bidegree (m,d)."
+        ]
+      }
+    ]
+  },
+  "level3": {
+    "authorized": true,
+    "conclusion": "Nonlinear landing support is not decided at headline standard.  The surviving object is the nonzero linear formal configuration \u039b (Exit P necessary state only).",
+    "executed_as_raw_solve": false,
+    "exit_N3_status": "NOT_REACHED",
+    "level": 3,
+    "memory_gate": "A raw unstructured solve of the full nonlinear system is forbidden here (exploratory gate 8 GB; Level 3 must stay structured).  No large Gr\u00f6bner job was launched.",
+    "name": "nonlinear_landing_support",
+    "reason_authorized": "Levels 1\u20132 both survive",
+    "verdict": "NOT_DECIDED",
+    "what_is_missing_for_N3": [
+      "An exact elimination certificate that the projective landing support of \u039b is empty in characteristic zero for every odd m and every d \u2014 not a finite degree range.",
+      "Or a structural identity showing the cubic cuts \u039b down to zero as a Rees/Hilbert module (all m, all d)."
+    ],
+    "what_was_checked": [
+      "Associated-graded cubic landing F(p)=0 is a nonlinear section of a bundle on Proj of the linear module \u039b.",
+      "Existing portable low-degree certificates exclude landing covariants in degrees \u2264 12 (certificates/CHECKS.md).",
+      "Degree-25 compact filtration (tmp, modular) remains open; not lifted to a char-0 all-degree emptiness theorem."
+    ]
+  },
+  "necessity_theorem": {
+    "corollaries": {
+      "emptiness_gives_negative": "If \u039b = 0 then no nonzero homogeneous landing self-covariant exists.  Combined with the accepted exhaustiveness theorem (any dominant equivariant map from an honest linear source forces such a covariant), this would yield ed_C(G)=4 and non-G-unirationality of X.  That combined step is separate from emptiness of \u039b.",
+      "nonemptiness_not_positive": "Nonzero elements of \u039b are necessary formal configurations only \u2014 not parametrizations and not existence of p (Exit P)."
+    },
+    "direction": "forward only (emptiness of \u039b \u21d2 no such p; nonemptiness of \u039b \u21cf existence of p)",
+    "name": "Normal-cone necessity theorem",
+    "proof": {
+      "status": "PROVED",
+      "steps": [
+        {
+          "claim": "By 4A/4C, p vanishes to a common odd order m on every plus-plane and vanishes on every V4 fixed line.  The first nonzero normal jet along each forced stratum S is an H-equivariant section of Sym^m N_{S/Y}^\u2228 \u2297 O_S(d) \u2297 W.",
+          "id": "N.1_forced_base_jets",
+          "source": "WP-4A.1\u20133, WP-4C.1"
+        },
+        {
+          "claim": "Vanishing to order \u2265 m on every conjugate plus-plane means p \u2208 (A_m \u2297 W)^G with A_m = \u2229_t I(Z_t)^m.  This is the symbolic (here ordinary, linear primes) power along the union of conjugate strata \u2014 not a single ordinary power of the ideal of the union in the sense that would conflate multiplicities (house rule 5).",
+          "id": "N.2_symbolic_powers"
+        },
+        {
+          "claim": "The class of p in [M_m \u2297 W]^G = [A_m/A_{m+2} \u2297 W]^G is the associated-graded leading piece at exact order m when p \u2209 A_{m+2}; if p \u2208 A_{m+2} one replaces m by the true order (still odd).",
+          "id": "N.3_associated_graded"
+        },
+        {
+          "claim": "For every incidence S' \u2282 closure(S), the initial jet on S specializes to the initial jet on S' by restriction of normal cones.  Hence the collection of all stratum jets of p lies in the equalizer of all specialization maps = \u039b.",
+          "id": "N.4_specialization"
+        },
+        {
+          "claim": "Triple-line and multiple-point incidences are handled by the architecture plane norm \u2192 triple-line equalizer \u2192 residual point kernel; p's jets satisfy these equalizers because they come from a single global section of A_m.",
+          "id": "N.5_iterated_incidences"
+        },
+        {
+          "claim": "In low degree the literal graded piece (M_m)_d may differ from H^0(M\u0303_m(d)) by the finite irrelevant torsion T_m.  A polynomial covariant p gives a genuine graded element, which maps to both the sheaf-level and graded presentations; the necessity map lands in whichever presentation is used for \u039b, provided T_m is retained as a named finite discrepancy (not silently discarded).",
+          "id": "N.6_irrelevant_torsion"
+        },
+        {
+          "claim": "Projective scalar characters (O(1)-weights \u03bb on point stabilizers, residual det twists on binary lines) are built into the local modules M_{m,d}.  Primitive reduction (no fixed scalar factor) is optional for necessity: any nonzero p maps to a nonzero class after removing content in the base rings if desired.",
+          "id": "N.7_projective_scalars"
+        },
+        {
+          "claim": "Restriction of p to C3 lines, A4 points, and marked elliptic data produces elements of the corresponding local modules, compatible under flags by restriction transitivity.  C3 lines need not be base components.",
+          "id": "N.8_C3_A4_marked"
+        },
+        {
+          "claim": "The proof uses the iterated architecture, not a false short Cech complex (house rule 6).",
+          "id": "N.9_no_short_Cech"
+        }
+      ]
+    },
+    "statement": "Every nonzero homogeneous landing self-covariant p: W \u2192 W with F(p) = 0 determines a compatible element of the all-order inverse limit \u039b of the stabilizer-decorated associated-graded landing modules assembled in this package."
+  },
+  "producer": "certificates/global_transition/produce.py",
+  "self_sha256": "6b4aca957d6d689b352fd4ac43cd6a1b995615c81bf9bb2a2bf54242b8bf0f31",
+  "theorem_boundary": "Assembles local WP-4 modules into the global necessary-condition object \u039b (inverse limit / residual equalizer of the incidence category).  Proves necessity (landing covariants map into \u039b), all-degree machine coverage, Level-1 survival, Level-2 nonemptiness.  Does NOT prove emptiness of nonlinear landing support.  Does NOT lift formal states to actual covariants.  Does NOT assert ed_C(G)=3 or 4.  Headline OPEN.",
+  "verifier": "certificates/global_transition/verify.py",
+  "work_package": "WP-5"
+}

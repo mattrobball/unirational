@@ -1,0 +1,34 @@
+{
+  "closed_exits": {
+    "N1": "closed \u2014 marked states exist",
+    "N2": "closed \u2014 \u039b \u2260 0",
+    "N3": "not reached \u2014 nonlinear support not decided"
+  },
+  "exit": "P",
+  "explicit_necessary_state": {
+    "level1_families": [
+      "based_minus_lines_odd_m",
+      "residual_e1_swap_both",
+      "residual_e_ge7_generic_swap_both"
+    ],
+    "level2_module": "\u039b_{m,d} \u2260 0 for every odd m \u2265 1 and all d \u226b 0",
+    "parameters_recorded": {
+      "C3_line": "not forced base",
+      "V4_line": "forced base",
+      "charges": "type-I = <q>; type-II = e+<q>",
+      "d": "all sufficiently large integers (growth threshold depends on m)",
+      "m": "any odd positive integer",
+      "minus_line_family_A": "based (restriction 0)",
+      "minus_line_family_B": "e=1 swap_both at d=6m+1 (Level 1; linear lift may require higher d)",
+      "plane_order": "odd m"
+    },
+    "structural_witness": "based_along_minus_line_plane_jets"
+  },
+  "headline": "OPEN",
+  "headline_precision": "Problem E remains OPEN.  This package does NOT prove ed_C(G)=4 and does NOT prove non-G-unirationality of X.  Even a future negative exit would state precisely: no homogeneous landing self-covariant exists; conversion to ed_C(G)=4 uses the accepted exhaustiveness theorem as a separate step.",
+  "meaning": "A nonzero formal configuration survives (Level 1 states + Level 2 module \u039b \u2260 0).  It is ONLY a necessary state for a homogeneous landing self-covariant.  It is NOT a parametrization and NOT a proof of existence of such a covariant.  Lifting is WP-6/WP-7.",
+  "name": "formal_positive_configuration",
+  "next": "WP-6 (border/Fitting integration) only if a lifting attempt is authorized; not started here.",
+  "self_sha256": "1ef52510b77c7a7353eaf48a7732d372bd63315cd7eb39d2e4ee19ec811347d9",
+  "work_package": "WP-5"
+}
