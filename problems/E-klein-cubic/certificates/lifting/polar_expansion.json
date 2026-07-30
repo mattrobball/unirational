@@ -1,0 +1,1773 @@
+{
+  "accepted_input_sha256": {
+    "certificates/global_transition/level1_marked_states.json": "c6056cdf94e9a5324a5ec17950a170511d0f3c7a3edf0cb92bfc12b010675f19",
+    "certificates/transition_repair/category_repaired.json": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0",
+    "certificates/transitions/involution_plane/module.json": "85e5676c3076ef6d9b267194ef6685eb6d7dc82e01d94ad22009e4b34f097312"
+  },
+  "family_instantiation": {
+    "character_strategy_for_WP_L2": [
+      "C2 eigenspace already built into p_r target",
+      "Residual S3 projectors on plane jets (triv / sign / 2-dim)",
+      "D12 binary ordinary vs det-twisted on source-line coupling",
+      "Never average affine torsors naively (house rule 6)"
+    ],
+    "families": {
+      "based_minus_lines_odd_m": {
+        "certificate_format_proposed": {
+          "format": "relative sparse CSR over Q[base coords] with Fitting ideal generators",
+          "hash": "sha256 of canonical CSR + base ring presentation",
+          "stages": [
+            "L1_matrix",
+            "omega1_column",
+            "L3_matrix",
+            "omega3_column"
+          ],
+          "verifier": "recompute B-action on random Q-points of the base (regression) + exact symbolic identity check of U.3m+1/U.3m+3"
+        },
+        "coefficient_coupling": "p|_{E_-} = p_d(0,y) = 0",
+        "finite_order_obstruction_found": false,
+        "id": "based_minus_lines_odd_m",
+        "linear_state_from_WP5": "based_along_minus_line_plane_jets",
+        "parameters": {
+          "d": "any \u2265 m",
+          "m": "odd \u2265 1"
+        },
+        "sample_bidegrees": [
+          {
+            "L1": {
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 2",
+                "free_rank_over_Sym_Eplus": 9,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 855,
+              "d": 7,
+              "depends_on_leading": "quadratic in a_m (coefficients of L_1)",
+              "domain_dim_C2": 189,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                855,
+                189
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.005171,
+                "dense_bytes_floor": 5171040,
+                "sparse_GB_floor": 0.000427,
+                "sparse_bytes_floor": 427104
+              },
+              "nnz_estimate_upper": 12825,
+              "operator": "L_1",
+              "relative_over": "coordinate ring of the a_m-component (plane module of order m)"
+            },
+            "L3": {
+              "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 4",
+                "free_rank_over_Sym_Eplus": 15,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 952,
+              "d": 7,
+              "domain_dim_C2": 150,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                952,
+                150
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.00457,
+                "dense_bytes_floor": 4569600,
+                "sparse_GB_floor": 0.000475,
+                "sparse_bytes_floor": 474592
+              },
+              "nnz_estimate_upper": 14280,
+              "operator": "L_3",
+              "relative_over": "coordinate ring of the (a_m, b_{m+1}, a_{m+2})-stage locus B_1"
+            },
+            "d": 7,
+            "dim_plane_leading": 112,
+            "e": 1,
+            "m": 1,
+            "note": "based family: source-line residual dim 0; L_r still acts on normal jets along Z_t"
+          },
+          {
+            "L1": {
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 2",
+                "free_rank_over_Sym_Eplus": 9,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 3330,
+              "d": 13,
+              "depends_on_leading": "quadratic in a_m (coefficients of L_1)",
+              "domain_dim_C2": 702,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                3330,
+                702
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.074805,
+                "dense_bytes_floor": 74805120,
+                "sparse_GB_floor": 0.001663,
+                "sparse_bytes_floor": 1662912
+              },
+              "nnz_estimate_upper": 49950,
+              "operator": "L_1",
+              "relative_over": "coordinate ring of the a_m-component (plane module of order m)"
+            },
+            "L3": {
+              "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 4",
+                "free_rank_over_Sym_Eplus": 15,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 4165,
+              "d": 13,
+              "domain_dim_C2": 825,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                4165,
+                825
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.109956,
+                "dense_bytes_floor": 109956000,
+                "sparse_GB_floor": 0.002079,
+                "sparse_bytes_floor": 2079040
+              },
+              "nnz_estimate_upper": 62475,
+              "operator": "L_3",
+              "relative_over": "coordinate ring of the (a_m, b_{m+1}, a_{m+2})-stage locus B_1"
+            },
+            "d": 13,
+            "dim_plane_leading": 364,
+            "e": 7,
+            "m": 1,
+            "note": "based family: source-line residual dim 0; L_r still acts on normal jets along Z_t"
+          },
+          {
+            "L1": {
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 2",
+                "free_rank_over_Sym_Eplus": 9,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 13140,
+              "d": 25,
+              "depends_on_leading": "quadratic in a_m (coefficients of L_1)",
+              "domain_dim_C2": 2700,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                13140,
+                2700
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 1.135296,
+                "dense_bytes_floor": 1135296000,
+                "sparse_GB_floor": 0.006561,
+                "sparse_bytes_floor": 6560640
+              },
+              "nnz_estimate_upper": 197100,
+              "operator": "L_1",
+              "relative_over": "coordinate ring of the a_m-component (plane module of order m)"
+            },
+            "L3": {
+              "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 4",
+                "free_rank_over_Sym_Eplus": 15,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 17395,
+              "d": 25,
+              "domain_dim_C2": 3795,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                17395,
+                3795
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 2.112449,
+                "dense_bytes_floor": 2112448800,
+                "sparse_GB_floor": 0.008689,
+                "sparse_bytes_floor": 8688640
+              },
+              "nnz_estimate_upper": 260925,
+              "operator": "L_3",
+              "relative_over": "coordinate ring of the (a_m, b_{m+1}, a_{m+2})-stage locus B_1"
+            },
+            "d": 25,
+            "dim_plane_leading": 1300,
+            "e": 19,
+            "m": 1,
+            "note": "based family: source-line residual dim 0; L_r still acts on normal jets along Z_t"
+          },
+          {
+            "L1": {
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 4",
+                "free_rank_over_Sym_Eplus": 15,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 16335,
+              "d": 21,
+              "depends_on_leading": "quadratic in a_m (coefficients of L_1)",
+              "domain_dim_C2": 2565,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 3,
+              "matrix_shape_upper": [
+                16335,
+                2565
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 1.340777,
+                "dense_bytes_floor": 1340776800,
+                "sparse_GB_floor": 0.008143,
+                "sparse_bytes_floor": 8143200
+              },
+              "nnz_estimate_upper": 245025,
+              "operator": "L_1",
+              "relative_over": "coordinate ring of the a_m-component (plane module of order m)"
+            },
+            "L3": {
+              "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 6",
+                "free_rank_over_Sym_Eplus": 21,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 17914,
+              "d": 21,
+              "domain_dim_C2": 2856,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 3,
+              "matrix_shape_upper": [
+                17914,
+                2856
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 1.637196,
+                "dense_bytes_floor": 1637196288,
+                "sparse_GB_floor": 0.008931,
+                "sparse_bytes_floor": 8931040
+              },
+              "nnz_estimate_upper": 268710,
+              "operator": "L_3",
+              "relative_over": "coordinate ring of the (a_m, b_{m+1}, a_{m+2})-stage locus B_1"
+            },
+            "d": 21,
+            "dim_plane_leading": 1520,
+            "e": 3,
+            "m": 3,
+            "note": "based family: source-line residual dim 0; L_r still acts on normal jets along Z_t"
+          },
+          {
+            "L1": {
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 6",
+                "free_rank_over_Sym_Eplus": 21,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 69615,
+              "d": 35,
+              "depends_on_leading": "quadratic in a_m (coefficients of L_1)",
+              "domain_dim_C2": 9765,
+              "exceeds_8GB_dense": true,
+              "exceeds_8GB_sparse": false,
+              "m": 5,
+              "matrix_shape_upper": [
+                69615,
+                9765
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 21.753295,
+                "dense_bytes_floor": 21753295200,
+                "sparse_GB_floor": 0.034685,
+                "sparse_bytes_floor": 34685280
+              },
+              "nnz_estimate_upper": 1044225,
+              "operator": "L_1",
+              "relative_over": "coordinate ring of the a_m-component (plane module of order m)"
+            },
+            "L3": {
+              "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 8",
+                "free_rank_over_Sym_Eplus": 27,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 74404,
+              "d": 35,
+              "domain_dim_C2": 10962,
+              "exceeds_8GB_dense": true,
+              "exceeds_8GB_sparse": false,
+              "m": 5,
+              "matrix_shape_upper": [
+                74404,
+                10962
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 26.099733,
+                "dense_bytes_floor": 26099732736,
+                "sparse_GB_floor": 0.03708,
+                "sparse_bytes_floor": 37079776
+              },
+              "nnz_estimate_upper": 1116060,
+              "operator": "L_3",
+              "relative_over": "coordinate ring of the (a_m, b_{m+1}, a_{m+2})-stage locus B_1"
+            },
+            "d": 35,
+            "dim_plane_leading": 5952,
+            "e": 5,
+            "m": 5,
+            "note": "based family: source-line residual dim 0; L_r still acts on normal jets along Z_t"
+          }
+        ]
+      },
+      "residual_e1_swap_both": {
+        "certificate_format_proposed": {
+          "format": "same as based, plus residual D12 det-twisted rank-1 coupling row identifying terminal coefficient with \u0394^m (x,-y)",
+          "hash": "sha256 CSR + coupling",
+          "stages": [
+            "L1",
+            "omega1",
+            "L3",
+            "omega3",
+            "coupling_row_e1"
+          ],
+          "verifier": "independent rebuild of B and \u0394^m factor"
+        },
+        "coefficient_coupling": "p|_{E_-} = \u0394_t^m h_t with h_t = (x,-y) up to scale",
+        "dim_residual_local": 1,
+        "finite_order_obstruction_found": false,
+        "id": "residual_e1_swap_both",
+        "ledger": "swap_both",
+        "parameters": {
+          "d": "6m+1",
+          "e": 1,
+          "m": "odd \u2265 1"
+        },
+        "sample_bidegrees": [
+          {
+            "L1": {
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 2",
+                "free_rank_over_Sym_Eplus": 9,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 855,
+              "d": 7,
+              "depends_on_leading": "quadratic in a_m (coefficients of L_1)",
+              "domain_dim_C2": 189,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                855,
+                189
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.005171,
+                "dense_bytes_floor": 5171040,
+                "sparse_GB_floor": 0.000427,
+                "sparse_bytes_floor": 427104
+              },
+              "nnz_estimate_upper": 12825,
+              "operator": "L_1",
+              "relative_over": "coordinate ring of the a_m-component (plane module of order m)"
+            },
+            "L3": {
+              "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 4",
+                "free_rank_over_Sym_Eplus": 15,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 952,
+              "d": 7,
+              "domain_dim_C2": 150,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                952,
+                150
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.00457,
+                "dense_bytes_floor": 4569600,
+                "sparse_GB_floor": 0.000475,
+                "sparse_bytes_floor": 474592
+              },
+              "nnz_estimate_upper": 14280,
+              "operator": "L_3",
+              "relative_over": "coordinate ring of the (a_m, b_{m+1}, a_{m+2})-stage locus B_1"
+            },
+            "d": 7,
+            "dim_plane_leading": 112,
+            "dim_residual_D12_twisted": 1,
+            "e": 1,
+            "m": 1
+          },
+          {
+            "L1": {
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 4",
+                "free_rank_over_Sym_Eplus": 15,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 12936,
+              "d": 19,
+              "depends_on_leading": "quadratic in a_m (coefficients of L_1)",
+              "domain_dim_C2": 2040,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 3,
+              "matrix_shape_upper": [
+                12936,
+                2040
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.844462,
+                "dense_bytes_floor": 844462080,
+                "sparse_GB_floor": 0.006449,
+                "sparse_bytes_floor": 6448896
+              },
+              "nnz_estimate_upper": 194040,
+              "operator": "L_1",
+              "relative_over": "coordinate ring of the a_m-component (plane module of order m)"
+            },
+            "L3": {
+              "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 6",
+                "free_rank_over_Sym_Eplus": 21,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 14053,
+              "d": 19,
+              "domain_dim_C2": 2205,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 3,
+              "matrix_shape_upper": [
+                14053,
+                2205
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.99158,
+                "dense_bytes_floor": 991579680,
+                "sparse_GB_floor": 0.007006,
+                "sparse_bytes_floor": 7005568
+              },
+              "nnz_estimate_upper": 210795,
+              "operator": "L_3",
+              "relative_over": "coordinate ring of the (a_m, b_{m+1}, a_{m+2})-stage locus B_1"
+            },
+            "d": 19,
+            "dim_plane_leading": 1224,
+            "dim_residual_D12_twisted": 1,
+            "e": 1,
+            "m": 3
+          },
+          {
+            "L1": {
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 6",
+                "free_rank_over_Sym_Eplus": 21,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 52377,
+              "d": 31,
+              "depends_on_leading": "quadratic in a_m (coefficients of L_1)",
+              "domain_dim_C2": 7371,
+              "exceeds_8GB_dense": true,
+              "exceeds_8GB_sparse": false,
+              "m": 5,
+              "matrix_shape_upper": [
+                52377,
+                7371
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 12.354268,
+                "dense_bytes_floor": 12354267744,
+                "sparse_GB_floor": 0.026097,
+                "sparse_bytes_floor": 26096928
+              },
+              "nnz_estimate_upper": 785655,
+              "operator": "L_1",
+              "relative_over": "coordinate ring of the a_m-component (plane module of order m)"
+            },
+            "L3": {
+              "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 8",
+                "free_rank_over_Sym_Eplus": 27,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 55594,
+              "d": 31,
+              "domain_dim_C2": 8100,
+              "exceeds_8GB_dense": true,
+              "exceeds_8GB_sparse": false,
+              "m": 5,
+              "matrix_shape_upper": [
+                55594,
+                8100
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 14.409965,
+                "dense_bytes_floor": 14409964800,
+                "sparse_GB_floor": 0.027704,
+                "sparse_bytes_floor": 27704224
+              },
+              "nnz_estimate_upper": 833910,
+              "operator": "L_3",
+              "relative_over": "coordinate ring of the (a_m, b_{m+1}, a_{m+2})-stage locus B_1"
+            },
+            "d": 31,
+            "dim_plane_leading": 4536,
+            "dim_residual_D12_twisted": 1,
+            "e": 1,
+            "m": 5
+          }
+        ]
+      },
+      "residual_e_ge7_generic_swap_both": {
+        "certificate_format_proposed": {
+          "format": "relative matrix over the det-twisted binary residual ring tensored with plane jet base; Fitting ideal of [L_r | omega_r]",
+          "hash": "sha256 multi-Rees presentation + CSR",
+          "stages": [
+            "L1",
+            "omega1",
+            "L3",
+            "omega3"
+          ],
+          "verifier": "character-projected blocks checked separately"
+        },
+        "coefficient_coupling": "p|_{E_-} = \u0394_t^m h, h det-twisted of degree e",
+        "finite_order_obstruction_found": false,
+        "id": "residual_e_ge7_generic_swap_both",
+        "ledger": "swap_both (generic)",
+        "parameters": {
+          "d": "6m+e",
+          "e": "odd \u2265 7",
+          "m": "odd \u2265 1"
+        },
+        "sample_bidegrees": [
+          {
+            "L1": {
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 2",
+                "free_rank_over_Sym_Eplus": 9,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 3330,
+              "d": 13,
+              "depends_on_leading": "quadratic in a_m (coefficients of L_1)",
+              "domain_dim_C2": 702,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                3330,
+                702
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.074805,
+                "dense_bytes_floor": 74805120,
+                "sparse_GB_floor": 0.001663,
+                "sparse_bytes_floor": 1662912
+              },
+              "nnz_estimate_upper": 49950,
+              "operator": "L_1",
+              "relative_over": "coordinate ring of the a_m-component (plane module of order m)"
+            },
+            "L3": {
+              "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 4",
+                "free_rank_over_Sym_Eplus": 15,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 4165,
+              "d": 13,
+              "domain_dim_C2": 825,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                4165,
+                825
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.109956,
+                "dense_bytes_floor": 109956000,
+                "sparse_GB_floor": 0.002079,
+                "sparse_bytes_floor": 2079040
+              },
+              "nnz_estimate_upper": 62475,
+              "operator": "L_3",
+              "relative_over": "coordinate ring of the (a_m, b_{m+1}, a_{m+2})-stage locus B_1"
+            },
+            "d": 13,
+            "dim_plane_leading": 364,
+            "dim_residual_D12_twisted": 3,
+            "e": 7,
+            "m": 1
+          },
+          {
+            "L1": {
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 2",
+                "free_rank_over_Sym_Eplus": 9,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 5880,
+              "d": 17,
+              "depends_on_leading": "quadratic in a_m (coefficients of L_1)",
+              "domain_dim_C2": 1224,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                5880,
+                1224
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.230308,
+                "dense_bytes_floor": 230307840,
+                "sparse_GB_floor": 0.002936,
+                "sparse_bytes_floor": 2936064
+              },
+              "nnz_estimate_upper": 88200,
+              "operator": "L_1",
+              "relative_over": "coordinate ring of the a_m-component (plane module of order m)"
+            },
+            "L3": {
+              "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 4",
+                "free_rank_over_Sym_Eplus": 15,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 7567,
+              "d": 17,
+              "domain_dim_C2": 1575,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 1,
+              "matrix_shape_upper": [
+                7567,
+                1575
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 0.381377,
+                "dense_bytes_floor": 381376800,
+                "sparse_GB_floor": 0.003778,
+                "sparse_bytes_floor": 3778432
+              },
+              "nnz_estimate_upper": 113505,
+              "operator": "L_3",
+              "relative_over": "coordinate ring of the (a_m, b_{m+1}, a_{m+2})-stage locus B_1"
+            },
+            "d": 17,
+            "dim_plane_leading": 612,
+            "dim_residual_D12_twisted": 4,
+            "e": 11,
+            "m": 1
+          },
+          {
+            "L1": {
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 4",
+                "free_rank_over_Sym_Eplus": 15,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 24321,
+              "d": 25,
+              "depends_on_leading": "quadratic in a_m (coefficients of L_1)",
+              "domain_dim_C2": 3795,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 3,
+              "matrix_shape_upper": [
+                24321,
+                3795
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 2.953542,
+                "dense_bytes_floor": 2953542240,
+                "sparse_GB_floor": 0.012124,
+                "sparse_bytes_floor": 12123936
+              },
+              "nnz_estimate_upper": 364815,
+              "operator": "L_1",
+              "relative_over": "coordinate ring of the a_m-component (plane module of order m)"
+            },
+            "L3": {
+              "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+              "character": {
+                "C2_target": "E_plus",
+                "degree_on_base": "d - 6",
+                "free_rank_over_Sym_Eplus": 21,
+                "residual_S3": "decompose further by residual S3 after fixing the involution; not expanded numerically in this dispatch",
+                "stabilizer_characters": {
+                  "C2": "built into target eigenspace",
+                  "D12_binary_on_source_line": "ordinary vs det-twisted when coupling to L_t^{src}"
+                }
+              },
+              "codomain_dim_scalar_normal_upper": 27040,
+              "d": 25,
+              "domain_dim_C2": 4410,
+              "exceeds_8GB_dense": false,
+              "exceeds_8GB_sparse": false,
+              "m": 3,
+              "matrix_shape_upper": [
+                27040,
+                4410
+              ],
+              "memory": {
+                "bytes_per_entry_assumption": 32,
+                "dense_GB_floor": 3.815885,
+                "dense_bytes_floor": 3815884800,
+                "sparse_GB_floor": 0.013482,
+                "sparse_bytes_floor": 13482400
+              },
+              "nnz_estimate_upper": 405600,
+              "operator": "L_3",
+              "relative_over": "coordinate ring of the (a_m, b_{m+1}, a_{m+2})-stage locus B_1"
+            },
+            "d": 25,
+            "dim_plane_leading": 2208,
+            "dim_residual_D12_twisted": 3,
+            "e": 7,
+            "m": 3
+          }
+        ]
+      }
+    },
+    "large_elimination_run": false,
+    "new_families_from_repair": [],
+    "resource_summary": {
+      "exploratory_gate_GB": 8,
+      "max_dense_GB_floor_over_samples": 26.099733,
+      "max_sparse_GB_floor_over_samples": 0.03708,
+      "note": "Upper bounds use full scalar normal spaces as codomain before residual projection; residual/S3 projection reduces rows. Even so, dense floors for large (m,d) exceed 8 GB \u2014 sparse relative Fitting over the base ring is required for WP-L2."
+    }
+  },
+  "gate": "First dispatch \u2014 universal polar expansion through 3m+3",
+  "headline": "OPEN",
+  "incidence_compatibility": {
+    "claims": [
+      {
+        "claim": "Universal equations U.3m+1 and U.3m+3 are written in normal jets on Z_t / P(N); they do not identify L_t^{src} with a subvariety of Z_t.",
+        "id": "C.1_source_vs_normal",
+        "ok": true
+      },
+      {
+        "claim": "Source-line based/residual conditions constrain p_d(0,y) only; they enter the lifting tower as side conditions on the terminal coefficient, not as substitutes for L_r.",
+        "id": "C.2_coefficient_coupling_orthogonal",
+        "ok": true
+      },
+      {
+        "claim": "Odd-m leading a_m evaluates to a map into L_t^{tgt}; F-landing on the target is automatic at order 3m and constrained at 3m+1 via B(b_{m+1};a_m,a_m)=0.",
+        "id": "C.3_target_line",
+        "ok": true
+      },
+      {
+        "claim": "Solutions of the lifting equations are formal jets, not certified covariants (house rule 3).",
+        "id": "C.4_no_covariant_claim",
+        "ok": true
+      }
+    ],
+    "status": "CHECKED_SYMBOLICALLY"
+  },
+  "isolation_maps": {
+    "indexing": "r = 0,1,2,... indexes the normal-order correction p_{m+r}. The F-equation that first involves p_{m+r} as newest unknown (among even F-orders) defines L_r when that equation is linear in p_{m+r}.",
+    "next_even_F_orders": [
+      {
+        "F_order": "3m+5",
+        "note": "Not certified as a computed stage in this dispatch; the symbolic ledger extends by the same triple enumeration.",
+        "status": "recorded_for_WP-L2"
+      }
+    ],
+    "steps": [
+      {
+        "F_order": "3m (automatic)",
+        "L_0": "0  (no linear constraint from F at leading order)",
+        "R_0": "0",
+        "note": "a_m is constrained only by residual D12 / global equalizer data from the linear strata machine, not by F at order 3m.",
+        "omega_0": "0 in coker(0) \u2014 free leading jet subject to residual equivariance",
+        "r": 0,
+        "target_space": "E_minus",
+        "unknown": "a_m = p_m"
+      },
+      {
+        "F_order": "3m+1",
+        "L_1": "L_1(b_{m+1}) = B(b_{m+1}; a_m, a_m)",
+        "R_1": "0",
+        "depends_on": [
+          "a_m"
+        ],
+        "equation": "L_1(b_{m+1}) = 0",
+        "linear_in_newest": true,
+        "omega_1": "omega_1 \u2208 coker(L_1), where L_1: {E_+-valued jets of normal order m+1} \u2192 {scalar jets of normal order 3m+1}. Explicitly L_1 depends quadratically on a_m via B(-;a_m,a_m).",
+        "r": 1,
+        "target_space": "E_plus",
+        "unknown": "b_{m+1} = p_{m+1}"
+      },
+      {
+        "F_order": "no exclusive even F-order linear in a_{m+2} alone before 3m+3",
+        "L_2": "At F-order 3m+3, a_{m+2} appears only through 2 B(b_{m+1}; a_m, a_{m+2}), jointly with b_{m+3}. Treated as a free correction parameter at stage r=2, entering the residual of stage r=3.",
+        "R_2": "0 (no standalone equation)",
+        "linear_in_newest": false,
+        "note": "House rule: do not force a false linear isolation. a_{m+2} is a relative parameter for the r=3 Fitting problem.",
+        "omega_2": "0 \u2014 no cokernel obstruction at a pure a_{m+2} stage",
+        "r": 2,
+        "target_space": "E_minus",
+        "unknown": "a_{m+2} = p_{m+2}"
+      },
+      {
+        "F_order": "3m+3",
+        "L_3": "L_3(b_{m+3}) = B(b_{m+3}; a_m, a_m)",
+        "R_3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+        "depends_on": [
+          "a_m",
+          "b_{m+1}",
+          "a_{m+2}"
+        ],
+        "equation": "L_3(b_{m+3}) = -R_3(a_m, b_{m+1}, a_{m+2})",
+        "linear_in_newest": true,
+        "omega_3": "omega_3 = class of R_3 in coker(L_3). Vanishing of omega_3 is the relative obstruction to lifting through order 3m+3.",
+        "r": 3,
+        "target_space": "E_plus",
+        "unknown": "b_{m+3} = p_{m+3}"
+      }
+    ],
+    "through_order": "3m+3"
+  },
+  "order_ledger": {
+    "director_spine": {
+      "F_expansion": "F(z+y)=F(z)+3 Phi(z,y,y)=F_+(z)+B(z;y,y)",
+      "F_on_Eminus": "0",
+      "covariant_parity": "p_r is E_+-valued for even r and E_--valued for odd r; p|_{E_-}=p_d(0,y)"
+    },
+    "first_order_automatic": {
+      "F_order": "3m",
+      "equation": "0 = 0",
+      "reason": "Pure leading term a_m is E_--valued; F|_{E_-}=0 so Phi(a_m,a_m,a_m)=0. Moreover 3m is odd, so the order is also killed by y-evenness of F(p).",
+      "reference": "4A.4 + director F|_{E_-}=0",
+      "status": "PROVED"
+    },
+    "no_instantiated_degree": true,
+    "notation": {
+      "first_normal_order": "m odd",
+      "global_degree": "d (independent grading)",
+      "p_minus": "a_m + a_{m+2} + a_{m+4} + ...  (E_--valued, odd normal orders)",
+      "p_plus": "b_{m+1} + b_{m+3} + b_{m+5} + ...  (E_+-valued, even normal orders)"
+    },
+    "regression_structure_m_in_1_3_5_7": {
+      "1": {
+        "3m+0": {
+          "N": 3,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+1": {
+          "N": 4,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                1,
+                1,
+                2
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        },
+        "3m+2": {
+          "N": 5,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+3": {
+          "N": 6,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                1,
+                1,
+                4
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                1,
+                2,
+                3
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_plus",
+                "E_minus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                2,
+                2,
+                2
+              ],
+              "multiplicity": 1,
+              "types": [
+                "E_plus",
+                "E_plus",
+                "E_plus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        },
+        "3m+4": {
+          "N": 7,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+5": {
+          "N": 8,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                1,
+                1,
+                6
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                1,
+                2,
+                5
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_plus",
+                "E_minus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                1,
+                3,
+                4
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                2,
+                2,
+                4
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_plus",
+                "E_plus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                2,
+                3,
+                3
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_plus",
+                "E_minus",
+                "E_minus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        }
+      },
+      "3": {
+        "3m+0": {
+          "N": 9,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+1": {
+          "N": 10,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                3,
+                3,
+                4
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        },
+        "3m+2": {
+          "N": 11,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+3": {
+          "N": 12,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                3,
+                3,
+                6
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                3,
+                4,
+                5
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_plus",
+                "E_minus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                4,
+                4,
+                4
+              ],
+              "multiplicity": 1,
+              "types": [
+                "E_plus",
+                "E_plus",
+                "E_plus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        },
+        "3m+4": {
+          "N": 13,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+5": {
+          "N": 14,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                3,
+                3,
+                8
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                3,
+                4,
+                7
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_plus",
+                "E_minus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                3,
+                5,
+                6
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                4,
+                4,
+                6
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_plus",
+                "E_plus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                4,
+                5,
+                5
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_plus",
+                "E_minus",
+                "E_minus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        }
+      },
+      "5": {
+        "3m+0": {
+          "N": 15,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+1": {
+          "N": 16,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                5,
+                5,
+                6
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        },
+        "3m+2": {
+          "N": 17,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+3": {
+          "N": 18,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                5,
+                5,
+                8
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                5,
+                6,
+                7
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_plus",
+                "E_minus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                6,
+                6,
+                6
+              ],
+              "multiplicity": 1,
+              "types": [
+                "E_plus",
+                "E_plus",
+                "E_plus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        },
+        "3m+4": {
+          "N": 19,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+5": {
+          "N": 20,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                5,
+                5,
+                10
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                5,
+                6,
+                9
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_plus",
+                "E_minus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                5,
+                7,
+                8
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                6,
+                6,
+                8
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_plus",
+                "E_plus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                6,
+                7,
+                7
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_plus",
+                "E_minus",
+                "E_minus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        }
+      },
+      "7": {
+        "3m+0": {
+          "N": 21,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+1": {
+          "N": 22,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                7,
+                7,
+                8
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        },
+        "3m+2": {
+          "N": 23,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+3": {
+          "N": 24,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                7,
+                7,
+                10
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                7,
+                8,
+                9
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_plus",
+                "E_minus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                8,
+                8,
+                8
+              ],
+              "multiplicity": 1,
+              "types": [
+                "E_plus",
+                "E_plus",
+                "E_plus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        },
+        "3m+4": {
+          "N": 25,
+          "N_parity": "odd",
+          "automatic_by_y_evenness": true,
+          "live_contributions": [],
+          "note_if_auto": "F(p) is even in the normal variable y (because F(p(z,-y))=F(p(z,y)) by G-invariance of F and covariance of p), so odd normal orders in F(p) vanish identically."
+        },
+        "3m+5": {
+          "N": 26,
+          "N_parity": "even",
+          "automatic_by_y_evenness": false,
+          "live_contributions": [
+            {
+              "ijk_sorted": [
+                7,
+                7,
+                12
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                7,
+                8,
+                11
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_plus",
+                "E_minus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                7,
+                9,
+                10
+              ],
+              "multiplicity": 6,
+              "types": [
+                "E_minus",
+                "E_minus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                8,
+                8,
+                10
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_plus",
+                "E_plus",
+                "E_plus"
+              ]
+            },
+            {
+              "ijk_sorted": [
+                8,
+                9,
+                9
+              ],
+              "multiplicity": 3,
+              "types": [
+                "E_plus",
+                "E_minus",
+                "E_minus"
+              ]
+            }
+          ],
+          "note_if_auto": null
+        }
+      }
+    },
+    "universal_equations": {
+      "order_3m+1": {
+        "F_order": "3m+1",
+        "automatic": false,
+        "equation": "B(b_{m+1}; a_m, a_m) = 0",
+        "equation_id": "U.3m+1",
+        "live_triples": [
+          {
+            "ijk": "(m, m, m+1)",
+            "multiplicity": 3,
+            "term": "3 Phi(b_{m+1}, a_m, a_m) = B(b_{m+1}; a_m, a_m)",
+            "types": "(E_minus, E_minus, E_plus)"
+          }
+        ],
+        "parity": "even",
+        "proof": [
+          "Only triple of normal orders summing to 3m+1 with each \u2265 m and not all odd is (m,m,m+1) up to permutation.",
+          "Multiplicity 3 gives 3 Phi(b_{m+1}, a_m, a_m).",
+          "By definition B(z;y,y)=3 Phi(z,y,y), hence B(b_{m+1}; a_m, a_m)=0.",
+          "Triple-E_- contribution at (m,m,m) has order 3m (odd) and vanishes both by y-evenness of F(p) and by F|_{E_-}=0."
+        ],
+        "status": "PROVED"
+      },
+      "order_3m+3": {
+        "F_order": "3m+3",
+        "automatic": false,
+        "equation": "B(b_{m+3}; a_m, a_m) + 2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1}) = 0",
+        "equation_id": "U.3m+3",
+        "live_triples": [
+          {
+            "ijk": "(m, m, m+3)",
+            "multiplicity": 3,
+            "term": "3 Phi(b_{m+3}, a_m, a_m) = B(b_{m+3}; a_m, a_m)",
+            "types": "(E_minus, E_minus, E_plus)"
+          },
+          {
+            "ijk": "(m, m+1, m+2)",
+            "multiplicity": 6,
+            "term": "6 Phi(b_{m+1}, a_m, a_{m+2}) = 2 B(b_{m+1}; a_m, a_{m+2})",
+            "types": "(E_minus, E_plus, E_minus)"
+          },
+          {
+            "ijk": "(m+1, m+1, m+1)",
+            "multiplicity": 1,
+            "term": "Phi(b_{m+1}, b_{m+1}, b_{m+1}) = F_+(b_{m+1})",
+            "types": "(E_plus, E_plus, E_plus)"
+          }
+        ],
+        "parity": "even",
+        "proof": [
+          "Even F-order 3m+3; enumerate triples i+j+k=3m+3 with i,j,k\u2265m, excluding triple-E_-. Combinatorial list is independent of the value of odd m (translate indices by m).",
+          "Contribution (m,m,m+3): mult 3 \u2192 B(b_{m+3}; a_m, a_m).",
+          "Contribution (m,m+1,m+2): mult 6 \u2192 2 B(b_{m+1}; a_m, a_{m+2}) because B(z;y1,y2)=3 Phi(z,y1,y2) and 6 Phi = 2\u00b73 Phi.",
+          "Contribution (m+1,m+1,m+1): F(b_{m+1})=F_+(b_{m+1}) since b_{m+1} is E_+-valued.",
+          "No (1 odd + 2 even) triple sums to 3m+3 with min odd order m: m+(m+1)+(m+1)=3m+2 and m+(m+1)+(m+3)=3m+4."
+        ],
+        "status": "PROVED"
+      }
+    },
+    "valid_for": "all odd positive integers m; all degrees d \u2265 m",
+    "y_evenness_of_Fp": {
+      "claim": "F(p(z,y)) is even in y",
+      "consequence": "Only even normal orders in F(p) can give equations. Odd orders (including 3m, 3m+2, ...) vanish automatically.",
+      "reason": "F is G-invariant and p is t-covariant, so F(p(t x))=F(t p(x))=F(p(x)); t(z+y)=z-y."
+    }
+  },
+  "polarization": {
+    "B_formula": "B(z;y1,y2)=3 Phi(z,y1,y2)",
+    "F": "sum_{i in Z/5} x_i^2 x_{i+1}",
+    "Phi_formula": "Phi(u,v,w)=(1/3) sum_i (u_i v_i w_{i+1} + u_i w_i v_{i+1} + v_i w_i u_{i+1})",
+    "checks": [
+      "Phi_matches_inclusion_exclusion_on_basis",
+      "Phi(x,x,x)=F(x)",
+      "Phi_symmetric",
+      "binomial_cubic_expansion",
+      "B_definition",
+      "structure_constants_Phi(e_i,e_i,e_{i+1})=1/3"
+    ],
+    "field": "Q",
+    "status": "PROVED"
+  },
+  "producer": {
+    "does_not_import": "verify_polar_expansion.py",
+    "script": "certificates/lifting/polar_expansion.py"
+  },
+  "self_sha256": "bf0283cbeaa4bf533e5d65cec3d7786c6b3fc71dba5d9b7cb60b821eb150e1b7",
+  "theorem_boundary": {
+    "not_proved": [
+      "Vanishing of omega_r on any family (no large elimination)",
+      "Existence of a formal lift or a covariant",
+      "All-degree emptiness of any family"
+    ],
+    "proved": [
+      "Exact polarization Phi of the Klein cubic over Q",
+      "F(z+y)=F(z)+3 Phi(z,y,y) after odd-in-y terms die on E_+\u2295E_-",
+      "Universal equation B(b_{m+1};a_m,a_m)=0 at order 3m+1",
+      "Universal equation at order 3m+3 as stated in the work order",
+      "L_r / omega_r isolation through r=3 (order 3m+3)",
+      "Compatibility with repaired source/normal/target incidences",
+      "Size and character estimates on three survivor families"
+    ]
+  },
+  "work_package": "WP-L1"
+}

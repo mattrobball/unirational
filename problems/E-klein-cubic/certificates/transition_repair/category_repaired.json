@@ -1,0 +1,967 @@
+{
+  "accepted_input_sha256": {
+    "certificates/global_transition/diagram.json": "369f15f46d4e37f0dd7af578361ea9907d17ac0f307c9e5b6b63ef3c01d7708d",
+    "certificates/global_transition/level1_marked_states.json": "c6056cdf94e9a5324a5ec17950a170511d0f3c7a3edf0cb92bfc12b010675f19",
+    "certificates/global_transition/necessity_theorem.json": "a5a21eff778447bd6edf250a1ecaf17ee0406edf371c56aa35bd6796cd3b3731",
+    "certificates/strata/incidence_exact.json": "21a1d40b6e84e1673885c52e30fafb8f27d58cf2494b42851440a1d922ac2aa9",
+    "certificates/transitions/d12_binary_line/module.json": "9f877f4b0f441ff30ba4b0c2cbc5438192354d9b8ff05b98e83e53f84b406e39",
+    "certificates/transitions/involution_plane/module.json": "85e5676c3076ef6d9b267194ef6685eb6d7dc82e01d94ad22009e4b34f097312"
+  },
+  "arrow_type_counts": {
+    "COEFFICIENT-COUPLING": 1,
+    "NORMAL-CONE-SPECIALIZATION": 4,
+    "SOURCE-RESTRICTION": 11,
+    "TARGET-EVALUATION": 3
+  },
+  "arrow_types": [
+    "SOURCE-RESTRICTION",
+    "NORMAL-CONE-SPECIALIZATION",
+    "TARGET-EVALUATION",
+    "COEFFICIENT-COUPLING"
+  ],
+  "coefficient_coupling": {
+    "covariant_parity": {
+      "condition": "p(t x) = t p(x)",
+      "consequence": "p_r is E_+-valued for even r and E_--valued for odd r",
+      "director_verified": true,
+      "source_line_formula": "p|_{E_-} = p_d(0,y)"
+    },
+    "decomposition": {
+      "distinction": "local normal order r and global degree d are independent gradings; never conflate them",
+      "global_degree": "d (homogeneous polynomial degree on W)",
+      "normal_order": "r (I(Z_t)-adic order along the plus-plane)",
+      "p": "sum_{r=0}^d p_r",
+      "p_r_space": "Sym^{d-r} E_+^\u2228 \u2297 Sym^r E_-^\u2228 \u2297 W"
+    },
+    "name": "normal_expansion_coefficient_coupling",
+    "setup": {
+      "F_parity": "F is G-invariant and t \u2208 G, so F(z+y)=F(z\u2212y). Every term odd in y dies. Combined with F|_{E_-}=0 one obtains F(z+y) = F(z) + 3 \u03a6(z,y,y) = F_+(z) + B(z;y,y).",
+      "coordinates": "x = z + y, z \u2208 E_+, y \u2208 E_-",
+      "director_verified": true,
+      "involution": "t acts +1 on E_+, \u22121 on E_-"
+    },
+    "three_copies_in_coupling": {
+      "normal_jet_on_Z_t": "associated-graded piece of order m lives in H^0(Z_t, Sym^m N^\u2228 \u2297 O(d)) \u2297 W and on P(N) uses P(E_-)^{N}",
+      "source_restriction": "p|_{L_t^{src}} uses L_t^{src}; equals terminal coefficient only",
+      "target_line": "odd-m leading jet evaluates to a map into L_t^{tgt}"
+    }
+  },
+  "corrected_necessity_theorem": {
+    "comparison_to_legacy": {
+      "house_rule_2": "Do not infer a negative theorem from first-normal-state existence/nonexistence without this corrected necessity proof. The repair itself yields no emptiness.",
+      "legacy_defect": "Legacy N.4 treated plane\u2192minus-line as ordinary normal-cone restriction, identifying L_t^{src} with a boundary of the normal cone of Z_t.",
+      "legacy_statement_ref": "certificates/global_transition/necessity_theorem.json",
+      "no_negative_from_repair": true,
+      "repair": "Replace that arrow by the span Z_t^{src} \u2190 P(N_{Z_t/Y}) \u2192 L_t^{tgt} together with the separate source restriction L_t^{src} \u21e2 X^t and the coefficient coupling p|_{E_-} = p_d(0,y).",
+      "size_reason": "Every legacy equalizer constraint is retained (plane normalization, triple-line equalizer, residual point kernel, C3/A4/marked data, V4 charges). The conflated plane\u2192line constraint is refined into four explicitly weaker/orthogonal constraints whose common solutions map onto the legacy solutions by forgetting the source/target/normal labels. Refinement of a constraint system cannot shrink the solution set below a quotient of a larger set; here the forgetful map from corrected states to legacy states is surjective because every legacy plane-line coupling (\u0394_t^m h_t) lifts to a coefficient-coupling datum plus a normal-cone leading jet with the same residual D12 class (transport of structure on isomorphic residual modules). Hence |corrected| \u2265 |legacy|.",
+      "size_verdict": "AT_LEAST_AS_LARGE"
+    },
+    "corollaries": {
+      "emptiness_gives_negative": "If \u039b^rep = 0 then no nonzero homogeneous landing self-covariant exists. Conversion to ed_C(G)=4 uses the accepted exhaustiveness theorem as a separate step.",
+      "legacy_exit_P_survives": "WP-5 Exit P is not overturned: the repair enlarges or preserves the linear state space.",
+      "nonemptiness_not_positive": "Nonzero elements of \u039b^rep are necessary formal configurations only \u2014 not parametrizations and not existence of p."
+    },
+    "direction": "forward only (emptiness of \u039b^rep \u21d2 no such p; nonemptiness of \u039b^rep \u21cf existence of p)",
+    "headline": "OPEN",
+    "name": "Corrected normal-cone necessity theorem",
+    "new_families_from_repair": [],
+    "note_on_new_families": "The repair refines arrows; it does not create a new marked-state family beyond the three accepted WP-5 survivors. Coefficient coupling makes the based vs residual distinction sharper but does not add a fourth discrete family at Level 1.",
+    "proof": {
+      "status": "PROVED",
+      "steps": [
+        {
+          "claim": "By 4A/4C, p vanishes to a common odd order m on every plus-plane Z_t and vanishes on every V4 fixed line. The first nonzero normal jet along Z_t is an H-equivariant section of Sym^m N_{Z_t/Y}^\u2228 \u2297 O(d) \u2297 W, i.e. lives on P(N_{Z_t/Y}), not on L_t^{src}.",
+          "id": "R.1_forced_base_jets",
+          "source": "WP-4A.1\u20133, WP-4C.1"
+        },
+        {
+          "claim": "Vanishing to order \u2265 m on every conjugate plus-plane means p \u2208 (A_m \u2297 W)^G with A_m = \u2229_t I(Z_t)^m.",
+          "id": "R.2_symbolic_powers",
+          "source": "legacy N.2, retained"
+        },
+        {
+          "claim": "The class of p in [M_m \u2297 W]^G = [A_m/A_{m+2} \u2297 W]^G is the associated-graded leading piece at exact order m.",
+          "id": "R.3_associated_graded",
+          "source": "legacy N.3, retained"
+        },
+        {
+          "claim": "Along each involution, the leading jet determines a point of the span Z_t^{src} \u2190 P(N_{Z_t/Y}) \u2192 L_t^{tgt}: projection to Z_t is the base of the exceptional divisor; for odd m the jet is E_--valued and evaluates to a dominant map onto L_t^{tgt} (4A.3).",
+          "id": "R.4_normal_cone_span",
+          "source": "WP-R0 replacement span"
+        },
+        {
+          "claim": "Independently, p|_{E_-} = p_d(0,y) is a terminal coefficient condition on L_t^{src}. For based families this vanishes; for residual families it equals \u0394_t^m h_t. This is COEFFICIENT-COUPLING, not normal-cone restriction from Z_t.",
+          "id": "R.5_coefficient_coupling",
+          "source": "director-verified covariant parity"
+        },
+        {
+          "claim": "All other incidence specializations (triple-line equalizer, residual points, C3/A4, type-I/II charges) are retained with their legacy types (SOURCE-RESTRICTION / NORMAL-CONE-SPECIALIZATION / TARGET-EVALUATION) and are satisfied by jets of a single global p.",
+          "id": "R.6_other_incidences",
+          "source": "legacy N.5, N.8 repaired classification"
+        },
+        {
+          "claim": "Finite irrelevant torsion T_m is retained; low-degree graded pieces may differ from sheaf-level H^0.",
+          "id": "R.7_irrelevant_torsion",
+          "source": "legacy N.6, house rule 5"
+        },
+        {
+          "claim": "The collection of all repaired stratum jets of p lies in the equalizer \u039b^rep of all repaired specialization, evaluation, and coefficient-coupling maps.",
+          "id": "R.8_equalizer",
+          "source": "definition of \u039b^rep"
+        },
+        {
+          "claim": "Forgetful map \u039b^rep \u2192 \u039b_legacy is surjective on the linear data used by WP-5 (every legacy plane-line coupling lifts by residual D12 transport). Therefore the corrected state space is at least as large, and Exit P nonemptiness persists. No negative theorem follows from the repair.",
+          "id": "R.9_size",
+          "source": "WP-R0 comparison"
+        }
+      ]
+    },
+    "statement": "Every nonzero homogeneous landing self-covariant p: W \u2192 W with F(p)=0 determines a compatible element of the corrected inverse limit \u039b^rep of the stabilizer-decorated associated-graded landing modules assembled with the repaired incidence category (source line, exceptional normal factor, and target line distinguished). The forgetful map \u039b^rep \u2192 \u039b_legacy to the pre-repair equalizer is surjective on underlying linear data; in particular dim \u039b^rep_{m,d} \u2265 dim \u039b_legacy_{m,d} whenever either is defined. Nonemptiness of \u039b_legacy (WP-5 Exit P) therefore implies nonemptiness of the image of \u039b^rep in the legacy state space, and the corrected state space is at least as large.",
+    "surviving_families_retained": [
+      "based_minus_lines_odd_m",
+      "residual_e1_swap_both",
+      "residual_e_ge7_generic_swap_both"
+    ]
+  },
+  "forbidden_identifications": [
+    {
+      "claim": "L_t^{src} subset Z_t",
+      "id": "source_line_inside_plus_plane",
+      "reason": "L_t^{src} \u2229 Z_t = empty",
+      "status": "REJECTED",
+      "verifier_must_reject": true
+    },
+    {
+      "claim": "L_t^{src} = P(E_-)^{N} as geometric objects",
+      "id": "source_equals_normal_fiber",
+      "reason": "Isomorphic as residual D12-spaces but live in different ambients (P(W) vs P(N_{Z_t/Y}))",
+      "status": "REJECTED",
+      "verifier_must_reject": true
+    },
+    {
+      "claim": "L_t^{src} = L_t^{tgt} as incidence objects",
+      "id": "source_equals_target",
+      "reason": "Source restriction domain vs target of leading normal jet; same abstract P(E_-) but different path/type tags",
+      "status": "REJECTED",
+      "verifier_must_reject": true
+    },
+    {
+      "claim": "plane_to_minus_line is an ordinary restriction of the first normal jet on Z_t to a subvariety of Z_t",
+      "id": "legacy_plane_to_minus_line_as_restriction",
+      "reason": "No such subvariety; replaced by the span + coupling",
+      "status": "REJECTED",
+      "verifier_must_reject": true
+    }
+  ],
+  "gate": "First dispatch \u2014 category repair",
+  "headline": "OPEN",
+  "legacy_flag_audit": {
+    "classifications": [
+      {
+        "forbidden_identification": {
+          "claim": "L_t^{src} is a subvariety of Z_t = P(E_+)",
+          "reason": "E_+ \u2229 E_- = 0 in W, so P(E_-) \u2229 P(E_+) = empty in P(W)",
+          "status": "REJECTED"
+        },
+        "legacy_id": "plane_to_minus_line",
+        "legacy_source": "C2_plane",
+        "legacy_target": "C2_line",
+        "reason": "Conflated three copies of P(E_-): treated L_t as both the boundary of the normal cone of Z_t and the source fixed line. L_t^{src} \u2229 Z_t = empty, so no ordinary restriction map Z_t -> L_t exists.",
+        "replacement_span": [
+          "normal_cone_projection",
+          "normal_cone_to_target_line",
+          "source_line_restriction",
+          "coefficient_coupling_terminal"
+        ],
+        "status": "REPLACED"
+      },
+      {
+        "arrow_type": "NORMAL-CONE-SPECIALIZATION",
+        "geometry": "Each plus-plane contains three V4-lines through its residual V4s (three Sylow V4s in D12 through t).",
+        "legacy_id": "plane_to_triple_line",
+        "legacy_source": "C2_plane",
+        "legacy_target": "V4_line",
+        "map_type": "triple-line equalizer component (plane normalization \u2192 triple-line equalizer)",
+        "note": "Specialization of normal jets along forced base components (plane normalization \u2192 triple-line equalizer, or pure character normal directions on the V4 line). Lives on the source / normal side; target charges are labels, not L_t^{tgt}.",
+        "status": "RETAINED"
+      },
+      {
+        "P_E_minus_involvement": "none_or_source_line_only",
+        "arrow_type": "SOURCE-RESTRICTION",
+        "geometry": "six D10 points residual on a plus-plane arrangement",
+        "legacy_id": "plane_to_D10",
+        "legacy_source": "C2_plane",
+        "legacy_target": "D10_point",
+        "map_type": "residual point kernel (D10 stalk)",
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "status": "RETAINED"
+      },
+      {
+        "P_E_minus_involvement": "none_or_source_line_only",
+        "arrow_type": "SOURCE-RESTRICTION",
+        "geometry": "D12 points as 7-plane meetings",
+        "legacy_id": "plane_to_D12",
+        "legacy_source": "C2_plane",
+        "legacy_target": "D12_point",
+        "map_type": "residual point kernel (D12 stalk)",
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "status": "RETAINED"
+      },
+      {
+        "P_E_minus_involvement": "none_or_source_line_only",
+        "arrow_type": "SOURCE-RESTRICTION",
+        "geometry": "E_t = X \u2229 Z_t",
+        "legacy_id": "plane_to_elliptic",
+        "legacy_source": "C2_plane",
+        "legacy_target": "elliptic_plus",
+        "map_type": "restriction of leading data to marked elliptic",
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "status": "RETAINED"
+      },
+      {
+        "P_E_minus_involvement": "none_or_source_line_only",
+        "arrow_type": "SOURCE-RESTRICTION",
+        "geometry": "six type-I endpoints on L_t (two per residual reflection)",
+        "legacy_id": "minus_line_to_type_I",
+        "legacy_source": "C2_line",
+        "legacy_target": "V4_type_I_point",
+        "map_type": "endpoint ledger evaluation",
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "status": "RETAINED"
+      },
+      {
+        "P_E_minus_involvement": "none_or_source_line_only",
+        "arrow_type": "SOURCE-RESTRICTION",
+        "geometry": "two residual-C3 fixed points on L_t",
+        "legacy_id": "minus_line_to_C6",
+        "legacy_source": "C2_line",
+        "legacy_target": "C6_line_point",
+        "map_type": "evaluation at C6 points; det-twisted maps preserve pair setwise",
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "status": "RETAINED"
+      },
+      {
+        "arrow_type": "NORMAL-CONE-SPECIALIZATION",
+        "geometry": "normal jets toward triangle vertices; charge <q>",
+        "legacy_id": "V4_line_to_type_I",
+        "legacy_source": "V4_line",
+        "legacy_target": "V4_type_I_point",
+        "map_type": "pure \u03c7_z/\u03c7_s/\u03c7_r normal directions",
+        "note": "Specialization of normal jets along forced base components (plane normalization \u2192 triple-line equalizer, or pure character normal directions on the V4 line). Lives on the source / normal side; target charges are labels, not L_t^{tgt}.",
+        "status": "RETAINED"
+      },
+      {
+        "arrow_type": "NORMAL-CONE-SPECIALIZATION",
+        "geometry": "R = X \u2229 P(A); trivial-character sector",
+        "legacy_id": "V4_line_to_type_II",
+        "legacy_source": "V4_line",
+        "legacy_target": "V4_type_II_point",
+        "map_type": "trivial V4-character jets within P(A)",
+        "note": "Specialization of normal jets along forced base components (plane normalization \u2192 triple-line equalizer, or pure character normal directions on the V4 line). Lives on the source / normal side; target charges are labels, not L_t^{tgt}.",
+        "status": "RETAINED"
+      },
+      {
+        "P_E_minus_involvement": "none_or_source_line_only",
+        "arrow_type": "SOURCE-RESTRICTION",
+        "geometry": "two A4 character lines = residual-C3 fixed points on P(A), off X",
+        "legacy_id": "V4_line_to_A4",
+        "legacy_source": "V4_line",
+        "legacy_target": "A4_a_point",
+        "map_type": "endpoint of residual C3 on V4 line",
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "status": "RETAINED"
+      },
+      {
+        "P_E_minus_involvement": "none_or_source_line_only",
+        "arrow_type": "SOURCE-RESTRICTION",
+        "geometry": "three V4-lines through each D12 point",
+        "legacy_id": "V4_line_to_D12",
+        "legacy_source": "V4_line",
+        "legacy_target": "D12_point",
+        "map_type": "point residual on triple-line",
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "status": "RETAINED"
+      },
+      {
+        "P_E_minus_involvement": "none_or_source_line_only",
+        "arrow_type": "SOURCE-RESTRICTION",
+        "geometry": "one C6 point among the three points of X \u2229 L",
+        "legacy_id": "C3_line_to_C6",
+        "legacy_source": "C3_line",
+        "legacy_target": "C6_line_point",
+        "map_type": "order-zero / jet evaluation",
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "status": "RETAINED"
+      },
+      {
+        "P_E_minus_involvement": "none_or_source_line_only",
+        "arrow_type": "SOURCE-RESTRICTION",
+        "geometry": "four C3-lines through each A4 point",
+        "legacy_id": "C3_line_to_A4",
+        "legacy_source": "C3_line",
+        "legacy_target": "A4_a_point",
+        "map_type": "endpoint restriction 4D\u21924E",
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "status": "RETAINED"
+      },
+      {
+        "arrow_type": "TARGET-EVALUATION",
+        "geometry": "each type-II point lies on all three local elliptics",
+        "legacy_id": "type_II_to_three_elliptics",
+        "legacy_source": "V4_type_II_point",
+        "legacy_target": "elliptic_plus",
+        "map_type": "charge transport under triple meeting",
+        "note": "Charge / residual evaluation on the target marked elliptic X \u2229 Z_t (and its type-I/II points). Distinct from source-line restriction and from the exceptional normal factor.",
+        "status": "RETAINED"
+      },
+      {
+        "arrow_type": "TARGET-EVALUATION",
+        "geometry": "each type-I vertex lies on exactly one local elliptic",
+        "legacy_id": "type_I_to_one_elliptic",
+        "legacy_source": "V4_type_I_point",
+        "legacy_target": "elliptic_plus",
+        "map_type": "charge <q> on that elliptic",
+        "note": "Charge / residual evaluation on the target marked elliptic X \u2229 Z_t (and its type-I/II points). Distinct from source-line restriction and from the exceptional normal factor.",
+        "status": "RETAINED"
+      },
+      {
+        "P_E_minus_involvement": "none_or_source_line_only",
+        "arrow_type": "SOURCE-RESTRICTION",
+        "geometry": "three involution planes through each A4 point",
+        "legacy_id": "A4_to_planes",
+        "legacy_source": "A4_a_point",
+        "legacy_target": "C2_plane",
+        "map_type": "point-link restriction 4E\u21924A",
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "status": "RETAINED"
+      }
+    ],
+    "n_flags": 16,
+    "n_replaced": 1,
+    "n_retained": 15,
+    "source": "certificates/global_transition/diagram.json"
+  },
+  "producer": {
+    "does_not_import": "verify.py",
+    "script": "certificates/transition_repair/produce.py"
+  },
+  "repaired_arrows": [
+    {
+      "arrow_type": "NORMAL-CONE-SPECIALIZATION",
+      "exactness_level": "sheaf-level on the exceptional divisor; literal graded pieces may differ by irrelevant torsion T_m",
+      "geometry": "bundle projection P(N_{Z_t/Y}) \u2192 Z_t",
+      "id": "normal_cone_projection",
+      "replaces_part_of": "plane_to_minus_line",
+      "source": "P_N_Zt_Y",
+      "target": "C2_plane",
+      "three_copy_path": {
+        "as": "fiber of the P1-bundle",
+        "uses": [
+          "P_E_minus_normal"
+        ]
+      }
+    },
+    {
+      "arrow_type": "TARGET-EVALUATION",
+      "for_even_m": "forbidden for landing (4A.2)",
+      "for_odd_m": "leading jet lands in E_- and dominates L_t^{tgt}",
+      "geometry": "For odd m, leading normal jet is E_--valued and induces a C_G(t)-equivariant map P(N_{Z_t/Y}) \u2192 L_t^{tgt} dominating the target fixed line (4A.3).",
+      "id": "normal_cone_to_target_line",
+      "replaces_part_of": "plane_to_minus_line",
+      "source": "P_N_Zt_Y",
+      "target": "L_t_tgt",
+      "three_copy_path": {
+        "from": "P_E_minus_normal",
+        "identification": "fiber coordinate = target line coordinate as residual D12-spaces; geometrically this is evaluation of the leading jet, not the source-line embedding",
+        "to": "L_t_tgt"
+      }
+    },
+    {
+      "arrow_type": "SOURCE-RESTRICTION",
+      "geometry": "Restriction of a global polynomial map p: W \u2192 W to the source fixed line L_t^{src} = P(E_-). Lands in X^t when F(p)=0.",
+      "id": "source_line_restriction",
+      "not_a_restriction_from": "C2_plane",
+      "reason_not_from_plane": "L_t^{src} \u2229 Z_t = empty",
+      "replaces_part_of": "plane_to_minus_line",
+      "source": "L_t_src",
+      "target": "X_t_fixed",
+      "three_copy_path": {
+        "as": "domain of restriction",
+        "uses": [
+          "L_t_src"
+        ]
+      }
+    },
+    {
+      "arrow_type": "COEFFICIENT-COUPLING",
+      "formula": {
+        "based_family": "based_minus_lines_odd_m forces p_d(0,y) = 0 (entire source line based)",
+        "decomposition": "p(z,y) = sum_{r=0}^d p_r(z,y)",
+        "not_first_jet": "p|_{E_-} is NOT the restriction of the order-m normal jet along Z_t; that jet lives on P(N_{Z_t/Y})",
+        "parity": "p_r is E_+-valued for even r and E_--valued for odd r",
+        "residual_family": "residual families force p_d(0,y) = \u0394_t^m h_t with h_t det-twisted of residual degree e = d - 6m",
+        "source_restriction": "p|_{E_-} = p_d(0,y)"
+      },
+      "geometry": "Terminal coefficient coupling: write x = z + y with z \u2208 E_+, y \u2208 E_-. Decompose p(z,y) = sum_{r=0}^d p_r(z,y) with p_r \u2208 Sym^{d-r} E_+^\u2228 \u2297 Sym^r E_-^\u2228 \u2297 W. Then p|_{E_-} = p_d(0,y). Equivariance forces p_r E_+-valued for even r and E_--valued for odd r.",
+      "id": "coefficient_coupling_terminal",
+      "replaces_part_of": "plane_to_minus_line",
+      "source": "normal_expansion_of_p",
+      "target": "L_t_src",
+      "three_copy_path": {
+        "couples": [
+          "P_E_minus_normal",
+          "L_t_src"
+        ],
+        "mechanism": "same residual D12-module transport, different geometric realization: normal fiber coordinate vs source embedding"
+      }
+    },
+    {
+      "arrow_type": "NORMAL-CONE-SPECIALIZATION",
+      "geometry": "Each plus-plane contains three V4-lines through its residual V4s (three Sylow V4s in D12 through t).",
+      "id": "plane_to_triple_line",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": null,
+      "multiplicity_per_source": 3,
+      "source": "C2_plane",
+      "specialization": {
+        "architecture": "fixed-m: plane norm \u2192 triple-line equalizer \u2192 residual point kernel",
+        "map_type": "triple-line equalizer component (plane normalization \u2192 triple-line equalizer)"
+      },
+      "target": "V4_line",
+      "three_copy_path": {
+        "note": "Specialization of normal jets along forced base components (plane normalization \u2192 triple-line equalizer, or pure character normal directions on the V4 line). Lives on the source / normal side; target charges are labels, not L_t^{tgt}.",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "SOURCE-RESTRICTION",
+      "geometry": "six D10 points residual on a plus-plane arrangement",
+      "id": "plane_to_D10",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": 330,
+      "multiplicity_per_source": null,
+      "source": "C2_plane",
+      "specialization": {
+        "map_type": "residual point kernel (D10 stalk)"
+      },
+      "target": "D10_point",
+      "three_copy_path": {
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "SOURCE-RESTRICTION",
+      "geometry": "D12 points as 7-plane meetings",
+      "id": "plane_to_D12",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": 385,
+      "multiplicity_per_source": null,
+      "source": "C2_plane",
+      "specialization": {
+        "map_type": "residual point kernel (D12 stalk)"
+      },
+      "target": "D12_point",
+      "three_copy_path": {
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "SOURCE-RESTRICTION",
+      "geometry": "E_t = X \u2229 Z_t",
+      "id": "plane_to_elliptic",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": null,
+      "multiplicity_per_source": 1,
+      "source": "C2_plane",
+      "specialization": {
+        "charges": "type-I / type-II labels on E_t via WP-3",
+        "map_type": "restriction of leading data to marked elliptic"
+      },
+      "target": "elliptic_plus",
+      "three_copy_path": {
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "SOURCE-RESTRICTION",
+      "geometry": "six type-I endpoints on L_t (two per residual reflection)",
+      "id": "minus_line_to_type_I",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": null,
+      "multiplicity_per_source": 6,
+      "source": "C2_line",
+      "specialization": {
+        "ledgers": "swap_both / preserve_both / mixed (WP-4B)",
+        "map_type": "endpoint ledger evaluation"
+      },
+      "target": "V4_type_I_point",
+      "three_copy_path": {
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "SOURCE-RESTRICTION",
+      "geometry": "two residual-C3 fixed points on L_t",
+      "id": "minus_line_to_C6",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": null,
+      "multiplicity_per_source": 2,
+      "source": "C2_line",
+      "specialization": {
+        "map_type": "evaluation at C6 points; det-twisted maps preserve pair setwise"
+      },
+      "target": "C6_line_point",
+      "three_copy_path": {
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "NORMAL-CONE-SPECIALIZATION",
+      "geometry": "normal jets toward triangle vertices; charge <q>",
+      "id": "V4_line_to_type_I",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": null,
+      "multiplicity_per_source": 3,
+      "source": "V4_line",
+      "specialization": {
+        "charge": "<q>",
+        "map_type": "pure \u03c7_z/\u03c7_s/\u03c7_r normal directions"
+      },
+      "target": "V4_type_I_point",
+      "three_copy_path": {
+        "note": "Specialization of normal jets along forced base components (plane normalization \u2192 triple-line equalizer, or pure character normal directions on the V4 line). Lives on the source / normal side; target charges are labels, not L_t^{tgt}.",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "NORMAL-CONE-SPECIALIZATION",
+      "geometry": "R = X \u2229 P(A); trivial-character sector",
+      "id": "V4_line_to_type_II",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": null,
+      "multiplicity_per_source": 3,
+      "source": "V4_line",
+      "specialization": {
+        "charge": "e+<q>",
+        "map_type": "trivial V4-character jets within P(A)"
+      },
+      "target": "V4_type_II_point",
+      "three_copy_path": {
+        "note": "Specialization of normal jets along forced base components (plane normalization \u2192 triple-line equalizer, or pure character normal directions on the V4 line). Lives on the source / normal side; target charges are labels, not L_t^{tgt}.",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "SOURCE-RESTRICTION",
+      "geometry": "two A4 character lines = residual-C3 fixed points on P(A), off X",
+      "id": "V4_line_to_A4",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": null,
+      "multiplicity_per_source": 2,
+      "source": "V4_line",
+      "specialization": {
+        "map_type": "endpoint of residual C3 on V4 line"
+      },
+      "target": "A4_a_point",
+      "three_copy_path": {
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "SOURCE-RESTRICTION",
+      "geometry": "three V4-lines through each D12 point",
+      "id": "V4_line_to_D12",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": 165,
+      "multiplicity_per_source": null,
+      "source": "V4_line",
+      "specialization": {
+        "map_type": "point residual on triple-line"
+      },
+      "target": "D12_point",
+      "three_copy_path": {
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "SOURCE-RESTRICTION",
+      "geometry": "one C6 point among the three points of X \u2229 L",
+      "id": "C3_line_to_C6",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": null,
+      "multiplicity_per_source": 1,
+      "source": "C3_line",
+      "specialization": {
+        "map_type": "order-zero / jet evaluation"
+      },
+      "target": "C6_line_point",
+      "three_copy_path": {
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "SOURCE-RESTRICTION",
+      "geometry": "four C3-lines through each A4 point",
+      "id": "C3_line_to_A4",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": "55*4 per A4 orbit (a and b)",
+      "multiplicity_per_source": null,
+      "source": "C3_line",
+      "specialization": {
+        "map_type": "endpoint restriction 4D\u21924E"
+      },
+      "target": "A4_a_point",
+      "three_copy_path": {
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "TARGET-EVALUATION",
+      "geometry": "each type-II point lies on all three local elliptics",
+      "id": "type_II_to_three_elliptics",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": null,
+      "multiplicity_per_source": 3,
+      "source": "V4_type_II_point",
+      "specialization": {
+        "Gate1": "CLAIM_1_SURVIVES_CLAIM_2_REFUTED",
+        "charge_consistency": "WP-3 E[2] theorem",
+        "map_type": "charge transport under triple meeting"
+      },
+      "target": "elliptic_plus",
+      "three_copy_path": {
+        "note": "Charge / residual evaluation on the target marked elliptic X \u2229 Z_t (and its type-I/II points). Distinct from source-line restriction and from the exceptional normal factor.",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "TARGET-EVALUATION",
+      "geometry": "each type-I vertex lies on exactly one local elliptic",
+      "id": "type_I_to_one_elliptic",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": null,
+      "multiplicity_per_source": 1,
+      "source": "V4_type_I_point",
+      "specialization": {
+        "map_type": "charge <q> on that elliptic"
+      },
+      "target": "elliptic_plus",
+      "three_copy_path": {
+        "note": "Charge / residual evaluation on the target marked elliptic X \u2229 Z_t (and its type-I/II points). Distinct from source-line restriction and from the exceptional normal factor.",
+        "uses": []
+      }
+    },
+    {
+      "arrow_type": "SOURCE-RESTRICTION",
+      "geometry": "three involution planes through each A4 point",
+      "id": "A4_to_planes",
+      "legacy_status": "RETAINED",
+      "multiplicity_global_flags": null,
+      "multiplicity_per_source": 3,
+      "source": "A4_a_point",
+      "specialization": {
+        "map_type": "point-link restriction 4E\u21924A"
+      },
+      "target": "C2_plane",
+      "three_copy_path": {
+        "note": "Ordinary incidence restriction between source strata (or source-stratum evaluation). Does not identify the three copies of P(E_-).",
+        "uses": []
+      }
+    }
+  ],
+  "repaired_objects": {
+    "A4_a_point": {
+      "H": "A4",
+      "O1_character": "1'",
+      "do_not_collapse_into_55_plane_ideal": true,
+      "incidents": {
+        "C3_lines": 4,
+        "V4_line": 1,
+        "involution_planes": 3
+      },
+      "module_ref": "transitions/point_links/module.json",
+      "on_X": false,
+      "orbit_size": 55
+    },
+    "A4_b_point": {
+      "H": "A4",
+      "O1_character": "1''",
+      "do_not_collapse_into_55_plane_ideal": true,
+      "incidents": {
+        "C3_lines": 4,
+        "V4_line": 1,
+        "involution_planes": 3
+      },
+      "module_ref": "transitions/point_links/module.json",
+      "on_X": false,
+      "orbit_size": 55
+    },
+    "C2_line": {
+      "H": "C2",
+      "N_G": "D12",
+      "bigraded_module": {
+        "controls": "all source degrees",
+        "det_twisted": "same Hilbert series (t+t^5)/((1-t^2)(1-t^6))",
+        "ordinary": "free rank 2 over Q[xy, x^6+y^6]"
+      },
+      "closure": "P(E_-(t)) \u2245 P^1 \u2282 X",
+      "deprecated_as_single_object": true,
+      "forced_base": false,
+      "module_ref": "transitions/d12_binary_line/module.json",
+      "note": "DEPRECATED as a single incidence object. Use L_t_src / L_t_tgt / P_E_minus_normal. Residual D12-modules still apply to each copy separately by transport of structure.",
+      "on_X": true,
+      "orbit_size": 55,
+      "residual": "S3",
+      "split_into": [
+        "L_t_src",
+        "L_t_tgt",
+        "P_E_minus_normal"
+      ]
+    },
+    "C2_plane": {
+      "H": "C2",
+      "N_G": "D12",
+      "also_called": "Z_t^{src}",
+      "bigraded_module": {
+        "M_m_d": "dim = (m+1)*binom(d-m+2,2)*(3 if m even else 2)",
+        "controls": "all m,d via free rank + Hilbert series",
+        "finite_generation_in_m": false,
+        "free_over": "R = Sym(E_+*) for each fixed m"
+      },
+      "closure": "P(E_+(t)) \u2245 P^2",
+      "forced_base": true,
+      "forced_base_reason": "4A.1",
+      "leading_character": {
+        "dominates_minus_line": true,
+        "m_even_forbidden_for_landing": true,
+        "m_odd_target": "E_-"
+      },
+      "module_ref": "transitions/involution_plane/module.json",
+      "note_repair": "Source plus-plane. Forced base (4A.1). First normal order m odd. Does not contain L_t^{src}.",
+      "on_X": "section elliptic E_t",
+      "orbit_size": 55,
+      "residual": "S3"
+    },
+    "C3_line": {
+      "H": "C3",
+      "N_G": "C6",
+      "closure": "P(U_\u03c9) or P(U_\u03c9\u00b2) \u2245 P^1",
+      "composition": "1 C6 + 2 C3 per line; global 220 residual C3 points",
+      "do_not_collapse_into_55_plane_ideal": true,
+      "forced_base": false,
+      "forced_base_reason": "4D.5: NOT forced by local C3 symmetry alone",
+      "module_ref": "transitions/c3_lines/module.json",
+      "on_X": "meets X in 3 reduced points (1 C6 + 2 exact C3)",
+      "orbit_size": 110,
+      "residual": "C2"
+    },
+    "C6_line_point": {
+      "H": "C6",
+      "incidents": {
+        "C3_lines": 1,
+        "minus_lines": "endpoint of residual C3 on L_t"
+      },
+      "on_X": true,
+      "orbit_size": 110
+    },
+    "C6_plane_point": {
+      "H": "C6",
+      "note": "off X; residual on plus side",
+      "on_X": false,
+      "orbit_size": 110
+    },
+    "D10_point": {
+      "F": 5,
+      "H": "D10",
+      "arrangement_role": "5-plane multiple point of the 55-plane arrangement",
+      "incidents": {
+        "involution_planes": {
+          "count": 5,
+          "double_count": "66 D10 \u00d7 5 = 330 = 55 planes \u00d7 6 D10-points per plane",
+          "source": "incidence_exact.json arrangement_points_off_X.D10"
+        },
+        "no_C3_line": "not in the C3/A4 chain as a generic point",
+        "no_V4_line": "D10 does not contain V4"
+      },
+      "module_ref": "transitions/point_links/module.json",
+      "on_X": false,
+      "orbit_size": 66
+    },
+    "D12_point": {
+      "H": "D12",
+      "arrangement_role": "7-plane multiple point; lies on 3 triple lines",
+      "incidents": {
+        "V4_lines": {
+          "count": 3,
+          "note": "three V4 fixed lines through the D12 point (A4 character geometry)",
+          "source": "incidence_exact.json D12.V4_lines_through_each=3"
+        },
+        "involution_planes": {
+          "count": 7,
+          "source": "incidence_exact.json D12.planes_through_each=7"
+        }
+      },
+      "module_ref": "transitions/point_links/module.json",
+      "on_X": false,
+      "orbit_size": 55
+    },
+    "L_t_src": {
+      "H": "C2",
+      "N_G": "D12",
+      "bigraded_module": {
+        "controls": "all source degrees",
+        "det_twisted": "same Hilbert series (t+t^5)/((1-t^2)(1-t^6))",
+        "ordinary": "free rank 2 over Q[xy, x^6+y^6]"
+      },
+      "closure": "L_t^{src} = P(E_-(t)) subset P(W), and L_t^{src} subset X",
+      "disjoint_from_Z_t": true,
+      "forced_base": false,
+      "id": "L_t_src",
+      "module_ref": "transitions/d12_binary_line/module.json",
+      "note": "SOURCE copy of P(E_-). Restriction of a covariant to E_- is the terminal normal coefficient p_d(0,y), not a restriction of the first normal jet of p along Z_t.",
+      "on_X": true,
+      "orbit_size": 55,
+      "residual": "S3",
+      "role": "source_fixed_line",
+      "three_copy": "L_t_src"
+    },
+    "L_t_tgt": {
+      "H": "C2",
+      "N_G": "D12",
+      "closure": "L_t^{tgt} = P(E_-(t)) subset X^t",
+      "forced_base": false,
+      "id": "L_t_tgt",
+      "module_ref": "transitions/d12_binary_line/module.json",
+      "note": "TARGET copy of P(E_-). For odd first normal order m the leading normal map on P(N_{Z_t/Y}) dominates L_t^{tgt} (4A.3).",
+      "on_X": true,
+      "orbit_size": 55,
+      "role": "target_fixed_line",
+      "three_copy": "L_t_tgt"
+    },
+    "P_N_Zt_Y": {
+      "H": "C2",
+      "N_G": "D12",
+      "definition": "P(N_{Z_t/Y}) \u2245 Z_t \u00d7 P(E_-(t))",
+      "factors": {
+        "base": "Z_t = P(E_+(t)) = C2_plane",
+        "fiber": "P(E_-)^{N}  (NORMAL copy of P(E_-))"
+      },
+      "id": "P_N_Zt_Y",
+      "note": "Exceptional divisor of the blowup of Y along Z_t. The NORMAL copy of P(E_-) is the fiber, not L_t^{src}.",
+      "orbit_size": 55,
+      "role": "exceptional_normal_projectivization",
+      "three_copy_fiber": "P_E_minus_normal"
+    },
+    "V4_line": {
+      "H": "V4",
+      "N_G": "A4",
+      "arrangement_role": "The 55 triple lines of the plus-plane arrangement are exactly the 55 V4 fixed lines (3 planes per line; 165 pairwise line incidences / 3 = 55).",
+      "bigraded_module": {
+        "M_m_d": "(n_triv(m)+binom(m+2,2))*(d-m+1)",
+        "free_over": "Q[x,y] for each fixed m",
+        "n_triv": "closed form even/odd binomial"
+      },
+      "closure": "P(A) = P(W^{V4}) \u2245 P^1",
+      "forced_base": true,
+      "forced_base_reason": "4C.1",
+      "module_ref": "transitions/v4_fixed_line/module.json",
+      "on_X": false,
+      "orbit_size": 55,
+      "residual": "C3"
+    },
+    "V4_type_II_point": {
+      "H": "V4",
+      "charge": "e + <q> for 0\u2260e\u2208E[2]",
+      "charge_source": "WP-3 E[2] theorem PROVED_STRUCTURALLY",
+      "incidents": {
+        "elliptics_local": 3,
+        "minus_lines_local": 0,
+        "role": "triple elliptic meeting; Gate1 CLAIM_1_SURVIVES"
+      },
+      "on_X": true,
+      "orbit_size": 165,
+      "support": "X \u2229 P(A)"
+    },
+    "V4_type_I_point": {
+      "H": "V4",
+      "charge": "<q> \u2282 E[3]",
+      "charge_source": "WP-3 E[2] theorem PROVED_STRUCTURALLY",
+      "incidents": {
+        "elliptics_local": 1,
+        "minus_lines_local": 2,
+        "role": "triangle vertex"
+      },
+      "on_X": true,
+      "orbit_size": 165
+    },
+    "elliptic_plus": {
+      "CM": false,
+      "closure": "E_t = X \u2229 P(E_+(t)), smooth genus one",
+      "j_invariant": "8192/11",
+      "module_note": "Not an ambient linear stratum; carries marked residual S3 geometry and E[2]-charges (WP-3).  Retained as a decorated object so charges are not collapsed into the 55-plane ideal.",
+      "orbit_size": 55,
+      "residual_S3": {
+        "marked_12_point_set": "E[2] + <q>",
+        "order_three": "translation by unique q \u2208 E_t[3], free"
+      },
+      "source": "certificates/strata/marked_s3_geometry.json"
+    }
+  },
+  "self_sha256": "58f08a4b5d1402c17df0e3bc83a21e17f3e453ef9fe2e53b952d911c84514cfb",
+  "theorem_boundary": {
+    "not_proved": [
+      "Existence or nonexistence of a landing covariant",
+      "Emptiness of nonlinear lifting support",
+      "ed_C(G) or unirationality"
+    ],
+    "proved": [
+      "Classification of every legacy diagram arrow into the four types",
+      "Distinction of three copies of P(E_-) by path and type",
+      "Replacement of C2_plane\u2192C2_line by the normal-cone span plus source restriction and coefficient coupling",
+      "Corrected necessity theorem with size comparison \u2265 legacy"
+    ]
+  },
+  "three_copies_of_P_E_minus": {
+    "L_t_src": {
+      "ambient": "P(W)",
+      "definition": "P(E_-(t)) subset P(W)",
+      "disjointness": "L_t^{src} \u2229 Z_t = empty (E_+ \u2229 E_- = 0)",
+      "id": "L_t_src",
+      "meets_Z_t": false,
+      "on_X": true,
+      "path_tag": "SOURCE",
+      "role": "source_fixed_line",
+      "symbol": "L_t^{src}"
+    },
+    "L_t_tgt": {
+      "ambient": "X^t subset X",
+      "definition": "P(E_-(t)) subset X^t",
+      "id": "L_t_tgt",
+      "note": "image of the odd-m leading normal map from the exceptional divisor",
+      "on_X": true,
+      "path_tag": "TARGET",
+      "role": "target_fixed_line",
+      "symbol": "L_t^{tgt}"
+    },
+    "P_E_minus_normal": {
+      "ambient": "P(N_{Z_t/Y})",
+      "definition": "second factor of P(N_{Z_t/Y}) \u2245 Z_t \u00d7 P(E_-(t))",
+      "id": "P_E_minus_normal",
+      "meets_Z_t": "projects to Z_t along the P1-bundle",
+      "on_X": "fiberwise target of leading odd-m jet lands in X",
+      "path_tag": "NORMAL",
+      "role": "exceptional_normal_direction",
+      "symbol": "P(E_-)^{N}"
+    }
+  },
+  "work_package": "WP-R0"
+}
