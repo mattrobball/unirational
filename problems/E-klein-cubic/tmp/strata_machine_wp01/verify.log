@@ -1,0 +1,14 @@
+PASS g^2=-11
+PASS S^2=T^11=(ST)^3=1
+PASS ST^3ST^4ST^3=P, P^5=1
+PASS F(Sx)=F(Tx)=F(Px)=F(x) exactly in Q(zeta_11)
+PASS exact Cayley consistency on all 660 elements of PSL_2(F_11)
+PASS group order 660, element orders
+PASS subgroup counts C2=55 V4=55 C3=55 C5=66 C11=12 A4=55 D10=66 D12=55
+PASS A5 two classes of 11
+PASS V4 type-I stabilizers = V4, on X
+PASS type-I/II elliptic incidence rebuilt; claim 1 survives, claim 2 refuted
+PASS double-count seals
+PASS modular regression structure
+PASS headline OPEN
+STRATA_EXACT_VERIFY_OK

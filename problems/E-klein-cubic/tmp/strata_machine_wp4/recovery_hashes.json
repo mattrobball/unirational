@@ -1,0 +1,12 @@
+{
+  "certificates/strata/incidence_exact.json": "21a1d40b6e84e1673885c52e30fafb8f27d58cf2494b42851440a1d922ac2aa9",
+  "certificates/strata/marked_s3_geometry.json": "6662f850028c4df8c7e33a1749d948153d0fc9ca6da4b733daa88536343a59a6",
+  "certificates/strata/normal_characters.json": "7651f92b990136e5b06415eaab9018606c9765be21357fa3a2b9e467e33170c6",
+  "certificates/strata/strata_exact.json": "a32a3d83518190d923fb91b408a1f3cfa33242b96f6136dd03b366383f04f4d8",
+  "tmp/d12_line_restriction/REPORT.md": "46e15d99079b482cecdaa67ae56d323217d2523c2b2ae1c94e66f1f37173c79a",
+  "tmp/d12_line_restriction/verify.py": "1878cd8cbab7394be7a36d1686c72daea67224501774296c16737f68c02ae7c6",
+  "tmp/involution_exceptional_divisor/REPORT.md": "68e534400aadca9ee985184048db91b1da195b74e5a14f9fd904536311020441",
+  "tmp/involution_exceptional_divisor/V4_REPORT.md": "1a7e7338a4360f44f0682b9638da892767753b2153590dbe7d5f5df3b2069789",
+  "tmp/involution_exceptional_divisor/verify.py": "d8d267fbb65d28ed891665bec77080f2306ba13cef9d8c44eef77b70b7a3a145",
+  "tmp/involution_exceptional_divisor/verify_v4.py": "aaeb4e7479c8fb2eb856b0e3d541ac75a72efd1209cc14980e7a3fbd1860ad68"
+}

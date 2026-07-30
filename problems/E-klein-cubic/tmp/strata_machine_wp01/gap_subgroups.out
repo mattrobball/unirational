@@ -1,0 +1,58 @@
+#I  packagemanager package is not available. Check that the name is correct
+#I  and it is present in one of the GAP root directories (see '??RootPaths')
+NUM_SUBGROUP_CLASSES=16
+GROUP_ORDER=660
+NUM_ELEMENT_CLASSES=8
+ELCLASS order=1 size=1
+ELCLASS order=11 size=60
+ELCLASS order=11 size=60
+ELCLASS order=2 size=55
+ELCLASS order=3 size=110
+ELCLASS order=6 size=110
+ELCLASS order=5 size=132
+ELCLASS order=5 size=132
+SUBCLASS idx=1 order=1 count=1 normalizer_order=660 IdGroup=
+[ 1, 1 ] element_orders=[ [ 1, 1 ] ]
+SUBCLASS idx=2 order=2 count=55 normalizer_order=12 IdGroup=
+[ 2, 1 ] element_orders=[ [ 1, 1 ], [ 2, 1 ] ]
+SUBCLASS idx=3 order=3 count=55 normalizer_order=12 IdGroup=
+[ 3, 1 ] element_orders=[ [ 1, 1 ], [ 3, 2 ] ]
+SUBCLASS idx=4 order=4 count=55 normalizer_order=12 IdGroup=
+[ 4, 2 ] element_orders=[ [ 1, 1 ], [ 2, 3 ] ]
+SUBCLASS idx=5 order=5 count=66 normalizer_order=10 IdGroup=
+[ 5, 1 ] element_orders=[ [ 1, 1 ], [ 5, 4 ] ]
+SUBCLASS idx=6 order=6 count=55 normalizer_order=12 IdGroup=
+[ 6, 1 ] element_orders=[ [ 1, 1 ], [ 2, 3 ], [ 3, 2 ] ]
+SUBCLASS idx=7 order=6 count=55 normalizer_order=12 IdGroup=
+[ 6, 1 ] element_orders=[ [ 1, 1 ], [ 2, 3 ], [ 3, 2 ] ]
+SUBCLASS idx=8 order=6 count=55 normalizer_order=12 IdGroup=
+[ 6, 2 ] element_orders=[ [ 1, 1 ], [ 2, 1 ], [ 3, 2 ], [ 6, 2 ] ]
+SUBCLASS idx=9 order=10 count=66 normalizer_order=10 IdGroup=
+[ 10, 1 ] element_orders=[ [ 1, 1 ], [ 2, 5 ], [ 5, 4 ] ]
+SUBCLASS idx=10 order=11 count=12 normalizer_order=55 IdGroup=
+[ 11, 1 ] element_orders=[ [ 1, 1 ], [ 11, 10 ] ]
+SUBCLASS idx=11 order=12 count=55 normalizer_order=12 IdGroup=
+[ 12, 3 ] element_orders=[ [ 1, 1 ], [ 2, 3 ], [ 3, 8 ] ]
+SUBCLASS idx=12 order=12 count=55 normalizer_order=12 IdGroup=
+[ 12, 4 ] element_orders=[ [ 1, 1 ], [ 2, 7 ], [ 3, 2 ], [ 6, 2 ] ]
+SUBCLASS idx=13 order=55 count=12 normalizer_order=55 IdGroup=
+[ 55, 1 ] element_orders=[ [ 1, 1 ], [ 5, 44 ], [ 11, 10 ] ]
+SUBCLASS idx=14 order=60 count=11 normalizer_order=60 IdGroup=
+[ 60, 5 ] element_orders=[ [ 1, 1 ], [ 2, 15 ], [ 3, 20 ], [ 5, 24 ] ]
+SUBCLASS idx=15 order=60 count=11 normalizer_order=60 IdGroup=
+[ 60, 5 ] element_orders=[ [ 1, 1 ], [ 2, 15 ], [ 3, 20 ], [ 5, 24 ] ]
+SUBCLASS idx=16 order=660 count=1 normalizer_order=660 IdGroup=
+[ 660, 13 ] element_orders=[ [ 1, 1 ], [ 2, 55 ], [ 3, 110 ], [ 5, 264 ], 
+  [ 6, 110 ], [ 11, 120 ] ]
+--- REGRESSION ---
+C2_classes=1 counts=[ 55 ]
+V4_classes=1 counts=[ 55 ]
+C3_classes=1 counts=[ 55 ]
+C5_classes=1 counts=[ 66 ]
+C11_classes=1 counts=[ 12 ]
+A4_classes=1 counts=[ 55 ]
+D10_classes=1 counts=[ 66 ]
+D12_classes=1 counts=[ 55 ]
+A5_classes=2 counts=[ 11, 11 ]
+11:5_classes=1 counts=[ 12 ]
+GROUP_SUBGROUPS_OK
