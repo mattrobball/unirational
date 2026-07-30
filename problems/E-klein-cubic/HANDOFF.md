@@ -25,11 +25,14 @@ The current two-axis ranking and the four-path audit are in
 > construction along the fixed configuration, and the worker's
 > do-not-rerun note on the constant-path argument is endorsed.  Current
 > priorities: (1) the structural targets as reformulated by the
-> degree-256 endomorphism finding — a global foliation / line-subsheaf
-> theorem, or an effective bound for one MINIMAL solution (the uniform
+> degree-256 endomorphism finding — the minimal-contraction/canonicity
+> theorem isolated by the global foliation identity, or an effective bound
+> for one MINIMAL solution (the uniform
 > bound is dead: precomposition saturates degrees 4^n d); (2) the
 > positive-construction assessment the closing graph licenses, alongside
-> the ongoing xcd descent (DAG implementation, then alpha_R).  Bounded
+> the ongoing `xCD` descent (the DAG and `alpha_R` are complete; the current
+> local gate is `[I_i] in image(Cl(B) -> Cl(Bhat))`, followed by global class
+> and horizontal fibre degree).  Bounded
 > sweeps re-enter only on a precise delimitation showing they are needed.
 
 
@@ -51,6 +54,67 @@ The current two-axis ranking and the four-path audit are in
 > full symbolic 55-plane arrangement or a new invariant of the
 > higher-dimensional exceptional complex, not the Problem F path lemma or
 > its finite triangle state alone.
+
+### 2026-07-29 xCD completion and Fable update
+
+- The `xCD` general-slice census, defect, and factoriality chain is now
+  complete at its exact **plane-cubic** scope.  The independently audited
+  Saito comparison gives restricted-source rank `660+60=720`, and the Cayley
+  bridge identifies surjective localization with `def(Y)=0`.  The missing
+  census is supplied without the three abandoned global rank charts.  Over
+  `F_67` the invariant rank radical has the known `f11` axis and four extra
+  components; exact residue-field discriminants show that every extra binary
+  cubic is squarefree, so none supports a vertical singular curve.  On the
+  axis, the saturated projective repeated-factor incidence has local Hilbert
+  function `1,2,3,2,1` and length nine over both `QQ` and `F_67`.  Its entire
+  special length is `60*9=540`, while the known generic orbit already
+  contributes 540.  Properness therefore excludes every extra generic
+  repeated-factor base.  Together with the `L=0` total-incidence theorem this
+  proves that the reduced positive-dimensional support of `Sing(C6)` is
+  exactly the 120 known fibre lines.
+
+  A genuinely general ample slice avoids the residual isolated singular
+  points and the 60 line vertices, meets every line transversely in three
+  points, and lies in the already certified rank-720 open.  It consequently
+  has exactly 180 `A3` and 180 ordinary four-branch `cA` singularities,
+  `def(Y)=0`, and makes `Y` and `C6` factorial.  Thus
+
+  ```text
+  Cl(C6)=Pic(C6)=Z*H direct_sum Z*xi,
+  horizontal Weil degrees = 3Z,
+  C6_eta(C(H6)) = empty.
+  ```
+
+  Proper specialization then proves that the original projective `xCD`
+  plane cubic has no `K_proj,C`-point.  This closes the construction
+  `F(a*x+b*C+c*D)=0`; it does **not** prove that the full generic twisted
+  Klein cubic threefold has no point.  The headline remains open.  Replay
+  `tmp/xcd_invariant_fibre_discriminants/verify.py`, its independent audit,
+  `tmp/xcd_repeated_factor_incidence/verify.py`,
+  `tmp/xcd_singular_curve_enumeration_audit/verify.py`, and
+  `tmp/xcd_general_slice_completion/verify.py`, in addition to the local
+  comparison and global bridge replays.
+- The three superseded `L=1` sparse rank solvers were all terminated with
+  zero-byte outputs and are noncertificates.  A 15-prime modular radical
+  experiment retained degree 27 and one leading-monomial signature, but a
+  14-prime CRT modulus still failed withheld-prime rational reconstruction;
+  conditionally, every nonleading coefficient has height above
+  `65154001869447`.  This makes no `QQ` support claim and is retired for the
+  census, which the proper length comparison decides directly.  Replay
+  `tmp/xcd_invariant_module_multiprime/verify_reconstruction.py` only for
+  provenance.
+- Fable's first nonlinear gate is now solved at sufficiently high twist.  An
+  exact Koszul construction produces a nonzero compatible
+  `sigma in H0(~(I^(3)/I^(5))(d) tensor W)^G` with the prescribed
+  trisections and `F(sigma)=0 mod I^(11)`.  The independent audit checks all
+  three cyclic factorizations, the common `D12` reflection-sign character of
+  `R` and `q`, invariant `eta`, and one common multiplier in the finite
+  thickened-line rings.  Ordinary invariant averaging of `R` or `q` would be
+  wrong.  The theorem closes only `I^(9)/I^(11)`; the next gate is
+  `I^(11)/I^(13)`, followed by global gluing, unsaturated descent, later
+  corrections, algebraization, and dominance.  Replay
+  `tmp/fable_first_gate_koszul/verify.py` and
+  `tmp/fable_first_gate_koszul_audit/verify.py`.
 
 The headline is still open, but the following next steps were completed and
 replayed.
@@ -257,7 +321,23 @@ replayed.
   `tmp/m1_relative_border_p19_d5/REPORT.md`, and
   `tmp/char0_lift_p19_d5/REPORT.md`, together with
   `tmp/m1_relative_border_p20_d5/REPORT.md`, its `PROOF_AUDIT.md`, and
-  `tmp/char0_lift_p20_d5/REPORT.md`.  Degree
+  `tmp/char0_lift_p20_d5/REPORT.md`.  The grandfathered coordinate `P^21`
+  degree-five test is now complete and is a strict nonverdict.  Its exact
+  split-`F_67` matrix has shape `21407 x 7911` and coefficient SHA256
+  `aaa835c09cf5dafea89678d9370eb359cc511c2721e0315904d1eefc60c3c4b7`.
+  The first 3,933 columns are independent, while an explicit normalized
+  vector in `F_67^3934`, with last coordinate one, gives a coefficientwise
+  dependency among columns `0,...,3933` in all 21,407 rows.  Therefore the
+  only certified total-rank statement is
+  `3933 <= rank <= 7910`; the exact total rank was not computed.  This fixed
+  candidate family fails the sufficient full-rank test, so it proves no
+  coordinate-`P^21` emptiness and does not improve `dim Z<=15`.  The
+  conditional full-rank replay and the canonical characteristic-zero
+  DVR/upper-semicontinuity promotion to `dim L_25<=14` did not trigger.  No
+  `P^22` or successor slice was launched.  The accepted peak RSS was
+  `555.171875 MiB`.  See
+  `tmp/m1_relative_border_p21_d5_design/REPORT.md` and its
+  `PROOF_AUDIT.md`.  Degree
   25, `(ID_1)`, emptiness of the
   landing locus, and the headline all remain open.
 - The former degree-16 residual calculation is now superseded as a re-entry
@@ -396,9 +476,22 @@ replayed.
   false in the positive case and vacuous in the negative case.  The same
   packet gives a rank-1024 finite free `C`-adic decomposition with residue
   degrees at most 15, but no Jacobian descent across its residue terms.  The
-  valid successor is a theorem bounding one *minimal* KLS solution (an
-  effective essential-dimension statement), or a direct global
-  foliation/line-subsheaf argument.  Replay with
+  global image/foliation successor is now exact.  Every KLS solution has
+  three-dimensional projective image an irreducible invariant unirational
+  hypersurface `H=V(F)`.  If `H` has canonical singularities, adjunction and
+  vanishing of the plurigenera of a unirational resolution give `deg(H)<=4`;
+  Adler's invariant ledger then forces `H` to be the Klein cubic.  More
+  generally, with `h=gcd_i (partial_i F)(q)`, primitive right-kernel vector
+  of degree `r`, and residual adjugate factor of degree `t`, one has
+  `deg(h)=r+t+d(deg(H)-5)+4`.  Hence `h=1` again forces the Klein cubic, while
+  every non-Klein image requires a nonzero invariant divisor mapped into
+  `Sing(H)`; for `deg(H)>=5` its degree is at least
+  `d(deg(H)-5)+4`.  In the Klein branch `r+t=2d-4`.  The quartic free
+  decomposition is not differential: its defining ideal is not
+  derivation-stable and the finite map has ramification divisor `15H`.
+  Thus the valid successor is the **minimal contraction lemma** excluding
+  that singular-image divisor for one minimal KLS solution, or a theorem
+  making its image canonical; neither is proved.  Replay with
   `python3 tmp/kls_divisor_ansatz/verify.py` and
   `python3 -u tmp/kls_residue_next/verify.py`, then
   `python3 tmp/kls_first_jet_two_fiber/verify_manifest.py`,
@@ -407,7 +500,8 @@ replayed.
   `python3 tmp/kls_first_jet_two_fiber/verify_p5.py --ledger-only`, then
   `python3 -u tmp/kls_first_jet_three_fiber/verify_combined_p8.py`,
   `python3 -u tmp/kls_structural_audit/verify.py`, and
-  `/opt/homebrew/bin/python3 -u tmp/kls_structural_successor/verify.py`.
+  `/opt/homebrew/bin/python3 -u tmp/kls_structural_successor/verify.py`, then
+  `/opt/homebrew/bin/python3 -u tmp/kls_global_foliation_theorem/verify.py`.
 - On the characteristic-23 soluble `xCD` control, \(Q=[H-3O]\), the
   irreducible nonzero \(E[3]\) field, and the genuine nonzero representative
   \(G(Q)\) are explicit.  Translation interpolation still times out before a
@@ -442,8 +536,9 @@ replayed.
   \(K_{\mathrm{proj},\mathbf C}=K_{\mathrm{proj},\mathbf Q}
   \otimes_{\mathbf Q}\mathbf C\).  CFOSS identifies a
   distinguished base-defined component that is isomorphic as a covering to
-  the original projective `xCD` cubic; use that cubic rather than extracting
-  or closing all 729 components.  Exact Hensel pilots rule out every prime
+  the original projective `xCD` cubic.  The general-slice theorem now proves
+  that this component has no `K_proj,C`-point; do not resume its former
+  class-image or point-search subroute.  Exact Hensel pilots rule out every prime
   component of `A=0`, `B=0`, and `C=0` as a local-obstruction place.  The
   degree-120 discriminant packet now rejects every one of its height-one
   components as well: its pullback is squarefree and gauge-coprime, every
@@ -452,8 +547,9 @@ replayed.
   smooth-reduction primes `f5=0` and `f6=0` are geometrically integral and
   have alternate unit gauges.  Their coordinate vertices and every complete
   invariant-polynomial `x,C,D` ansatz through total degree 15 are empty.  This
-  is not a local obstruction; the next negative gate is their actual residue
-  3-descent or a relative unramified 3-Selmer calculation.  Do not use
+  was not itself a local obstruction; the later `f6=0` degree-image theorem is.
+  The `f5=0` residue or a genuinely full-threefold relative obstruction remains.
+  Do not use
   arithmetic-prime or `QQ`-only Selmer
   results as negative evidence, enter a splitting field, or expand an `81 x 81`
   determinant.  Even a nonpoint theorem for this component would close only
@@ -481,24 +577,76 @@ replayed.
   Poonen--Stoll at every valuation-one vertical discriminant prime give
   `R1`.  Exact good-reduction calculations also exclude every triple-line
   fibre, while the five coordinate fibres are `a*c^2`: blanket fibrewise
-  geometric reducedness and absolute factoriality remain false.  No general
-  Grothendieck--Lefschetz/Noether--Lefschetz theorem applies to this fixed
-  special member.  The first codimension-three class maps are now exact.
+  geometric reducedness is false, and total-space factoriality does not
+  follow from fibre geometry.  The first codimension-three class maps are now exact.
   `Sing(H6)` is one 60-point orbit of `A3` points, with Jacobian-scheme length
-  `60*3=180`.  At the simple fibre line the completed and henselian base map
-  on class groups is an isomorphism.  At the doubled line the total local
-  ring has four henselian branches and the map is
-  `Z -> Z^3`, `1 |-> (1,1,0)`, with cokernel `Z^2`.  Thus the hoped-for
-  completed-local-surjectivity/factoriality shortcut is false.  Exact
+  `60*3=180`.  The July 27 Jung--Saito formula now gives an exact new theorem.
+  The sextic two-block ranks are `75,2125,2200`, its characteristic-zero
+  degree-13 Jacobian quotient has dimension 255, and therefore
+  `def(H6)=0`.  Jung--Saito factoriality yields
+
+  ```text
+  Cl(H6)=Z[O_H6(1)].
+  ```
+
+  Every algebraic local ring of `H6`, including after extension to
+  `C(lambda)`, is a UFD.  At the simple fibre line the **completed and
+  henselian** base map on class groups is an isomorphism.  At the doubled
+  line the total completed local ring has four branches and the map is
+  `Z -> Z^3`, `1 |-> (1,1,0)`, with cokernel `Z^2`.  The actual algebraic
+  base class group is zero: `(1,1,0)` is a class created by completion, not
+  an algebraized base divisor.  This still neither proves `B` or `C6`
+  factorial nor excludes a primitive total horizontal Weil class.  The
+  global Picard/Cartier step is now closed.  Correcting the projective-bundle
+  convention gives the ample cubic class `D=3*zeta=15H+3xi`; exact
+  all-negative-twist vanishing and SGA 2 give
+
+  ```text
+  Pic(C6)=Z*H direct_sum Z*xi,
+  Pic(C6) -> Pic(Y) is an isomorphism for an effective-Cartier Y in |D|.
+  ```
+
+  Hence every Cartier horizontal degree is in `3Z`.  For general `Y`,
+  Ravindra--Srinivas identifies the Weil class groups, so the `Cl/Pic`
+  defects agree.  The singular-locus input is now certified:
+  `dim Sing(C6)<=1`.  An `L^2*M` fibre forces rank at most two for the
+  `6 x 3` coefficient matrix of its fibre derivatives.  Modulo 67, `f6`
+  and the twenty maximal minors have unit ideal on one chart of the cyclic
+  hyperplane `w0+...+w4=0`; cyclic symmetry, properness, and the projective
+  dimension theorem give the characteristic-zero bound.  The activating
+  census is now exhaustive.  Four non-axis invariant rank-support branches
+  modulo 67 have squarefree induced binary cubics.  On the known axis, the
+  intrinsic saturated projective repeated-factor incidence has local length
+  nine over both `QQ` and `F_67`; its full special length and the known generic
+  contribution are both `60*9=540`.  Properness excludes every extra
+  characteristic-zero repeated-factor base.  Together with the `L=0`
+  verticality theorem, this proves that the reduced positive-dimensional
+  support of `Sing(C6)` is exactly the 120 known fibre lines.  A general ample
+  slice avoids the residual isolated points and vertices and meets the lines
+  transversely in 180 `A3` plus 180 ordinary four-branch `cA` points.  The
+  actual rank-720 localization therefore proves `def(Y)=0`; Jung--Saito makes
+  `Y` and `C6` factorial and forces the full Weil degree image to be `3Z`.
+  The residue plane cubic has no `C(H6)`-point, and proper specialization gives
+  no `K_proj,C`-point on the original projective `xCD` plane cubic.  This is a
+  theorem only about the distinguished plane section; it does not exclude a
+  point elsewhere on the full generic twisted Klein cubic threefold, and the
+  headline remains open.
+
+  The class-image/Rees discussion below is retained as a failure ledger for
+  an alternative proof of that plane-section theorem.  It is no longer a live
+  gate.
+  A pulled-back base hyperplane is not ample, and
+  one fixed `lambda` specialization has no certified injective class
+  specialization.  Exact
   enumeration gives full stabilizer `C11`; it fixes all four branches, so the
   invariant henselian defect still has rank two.  The two within-pair branch
   differences span only an index-four sublattice, so primitive individual
   branch patterns cannot be discarded.  The recent algebraic splitting lemma
   upgrades the factors from formal to henselian, but individual Zariski
-  descent and globalization remain unproved: height-one contraction is
-  guaranteed, while re-extension may recover a grouped sum of conjugate
-  branches.  The next structural gate is therefore the image of the global
-  class group in the four boundary valuations of the normalized
+  descent and globalization remain unproved inside that retired route:
+  height-one contraction is guaranteed, while re-extension may recover a
+  grouped sum of conjugate branches.  Its formerly next structural gate was
+  the image of the global class group in the four boundary valuations of the normalized
   `G`-equivariant weighted Rees model, followed only then by horizontal fibre
   degree.  That local decision interface is now exact.  The
   section-preserving weighted Rees family has weights
@@ -507,15 +655,119 @@ replayed.
   primitive branch modules have explicit `2 x 2` matrix factorizations.
   Individual descent is equivalent to a graded, `s`-torsion-free rank-one
   reflexive Rees lattice whose special reflexive hull is primitive `I1` or
-  `I3`.  The displayed `2 x 2` lift is only a sufficient defect-free positive
-  ansatz after algebraization across `s=1`, not a necessary test: a general
-  special fibre can have finite-length defect.  No lift has been found or
-  excluded.  Replay the normality and local/globalization packets with
+  `I3`.  The defect-free `2 x 2` ansatz is now solved to **all formal
+  orders**.  After `s`-adic implicit elimination, the tangent determinant map
+  is surjective in every weight by an explicit binary-form right inverse;
+  determinant induction therefore gives four formally homogeneous matrix
+  factorizations over `K[u,v,t,c][[s]]`.  Their cokernels are
+  `s`-torsion-free rank-one MCM/reflexive modules with actual special fibres
+  `I1,...,I4`.  Thus no higher finite-order matrix-factorization obstruction
+  exists, and an order-five sweep is retired.  This is still only an
+  `s`-adic/topological grading: the infinite matrices cannot be evaluated at
+  `s=1` and are not finite algebraic `G_m`-graded matrices on the
+  section-preserving Rees space.  Artin--Popescu approximation does promote
+  each formal solution to an exact `2 x 2` factorization over the
+  henselization of the algebraic pair along `(s)`, congruent modulo `s` and
+  therefore retaining the actual special module `I_i`.  Pair-henselian
+  effectivity is thus proved.  It still cannot give descent across `s=1`:
+  `1-s` is a unit in that henselization, so its `s=1` fibre is empty, while
+  equivariant coherent completeness dehomogenizes only to the completed
+  original local ring.  The exact remaining local gate is
+  `[I_i] in image(Cl(B) -> Cl(Bhat))`, equivalently a finite graded Rees
+  lattice or an effective descent cocycle on a genuine open meeting `s=1`.
+  The corrected class-image attack now supplies an exact finite algebraic
+  diagnostic for this gate.  In the regular hypersurface `U=0`, the Jacobian
+  minors
+  `p_y=U_x*f6_y-f6_x*U_y` and
+  `p_z=U_x*f6_z-f6_x*U_z` cut a relative critical curve whose henselization
+  is the four-branch curve `g=0`; its special polar ideal is exactly
+  `(6v,u+15*lambda^4*v)=(v,u)`.  Strict-henselian residue Galois fixes all
+  four tangent-separated branches and gives no monodromy restriction.  An
+  explicit normal algebraic cA UFD with completed class group `Z` proves that
+  shortcut false.  The correct conditional negative theorem requires an
+  algebraic element `a` whose henselian divisor is the reduced sum of the
+  four branch primes with no extras, `B[1/a]` factorial, and a contraction
+  partition with no singleton block.  Under those hypotheses Nagata
+  localization excludes every primitive branch class.  None of the three
+  hypotheses has yet been completed here.
+  The first exact algebraic null-polar test now rules out the most natural
+  candidate.  With `b=p_y/6` and
+  `a0=p_z-(5/2)*lambda^4*p_y`, the map
+  `(x,y,z,t,c) -> (U,a0,b,t,c)` has Jacobian determinant `6` and special
+  initials `(u,v)`, but the tangent quartic on `U=a0=0` is not `g4`; in
+  particular it restricts to
+  `-(8235/2)*lambda^10*b^4` on `t=c=0`.  Hence
+  `div_(B^h)(a0) != Q1+...+Q4`.  There is a unique ordinary cubic correction
+  in `(b,t,c)`, `a1=a0+phi3(b,t,c)`, restoring the necessary tangent cone
+  `g4`, but the exact five-jet refutes `a1` as well.  On `U=a1=0`, its
+  common-axis expansion is
+  `12*lambda^2*(195*lambda^11+2)*b^5+O(b^6)`.  Four reduced prescribed
+  smooth branches, each with tangent `C-r_i*T`, would each have order at
+  least two on that axis and their product order at least eight.  Hence
+  `div_(B^h)(a1) != Q1+...+Q4`.  Writing the complete degree-five error as
+  `H5=(3/8)*b^2*P3`, the finite ordinary-quartic correction
+  `a2=a1+psi4`, `psi4=H5/b`, cancels that error.  Its henselian divisor and
+  the factoriality of `B[1/a2]` remain open; do not continue a formal jet
+  ladder.  The proposed degree-one Zariski Morse chart is now refuted for
+  the whole two-minor polar field.  At `p=67,lambda=1,t=c=0`, the distinct
+  points `(0,0,0)` and `(15,48,57)` have the same `(U,a0,b)` value and full
+  Jacobian determinants `6` and `38`.  Their ordered pair lies in the etale
+  locus off the diagonal of the fibre product, whose open image contains the
+  generic point of the integral characteristic-zero target.  Therefore
+
+  ```text
+  [Q(lambda,x,y,z,t,c):Q(lambda,U,a0,b,t,c)] >= 2.
+  ```
+
+  Since `(a0,b)` is an invertible recombination of `(p_z,p_y)`, no
+  birational reparametrization of the polar minors can give a degree-one
+  chart.  In particular this persists under `a0 -> a1 -> a2` and every
+  `a0+P(b,t,c)`.  This does not refute the henselian divisor of `a2`, direct
+  factoriality of `B[1/a2]`, a genuinely different transverse function
+  field, or the primitive class image.  Do not compute the exact polar degree
+  or run another point-count ladder.
+  Moreover, this positive
+  The corrected standard-`cA` calculation now makes the algebraization issue
+  exact.  For an actual Zariski equation `u*v+g(t,c)`, Nagata gives
+  `Cl=Z^r/Z*(1,...,1)` from the algebraic factors of `g`, and henselian
+  refinement sends each factor to its block sum; a primitive branch class is
+  in the image exactly for a singleton block.  But
+  `u*v+c^4-t^4*(1+t)` and `u*v+c^4-t^4` have isomorphic split four-branch
+  completions while their algebraic class images are zero and full `Z^3`.
+  Hence completed/special `cA` data, tangent labels, and residue Galois cannot
+  compute the actual image without an algebraic ruling/incidence comparison
+  or a direct reflexive module.  The positive
+  defect-free formal survivor does not eliminate general Rees lattices whose
+  special fibre has a finite-length defect.  Replay the normality and
+  local/globalization packets with
   `/opt/homebrew/bin/python3 -u tmp/xcd_total_normality/verify.py`,
   `/opt/homebrew/bin/python3 -u tmp/xcd_local_class_defect/verify.py`, and
   `/opt/homebrew/bin/python3 -u tmp/xcd_class_globalization_next/verify.py`;
   replay the Rees descent gate with
   `/opt/homebrew/bin/python3 -u tmp/xcd_zariski_descent_gate/verify.py`;
+  replay the all-order formal theorem with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_formal_mf_all_order/verify.py`;
+  replay the formal-to-henselian/Zariski boundary audit with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_formal_algebraization_audit/verify.py`;
+  replay the corrected critical-curve/contraction theorem with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_class_image_attack/verify.py`;
+  replay the standard-`cA` class-group theorem and formal-data counterexample
+  with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_ca_class_group/verify.py`;
+  replay the exact null-polar test with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_algebraic_null_polar/verify.py`;
+  replay the exact five-jet refutation with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_zariski_morse_chart/verify.py`;
+  replay the polar function-field theorem and independent proof audit with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_polar_function_field_degree/verify.py`
+  and
+  `/opt/homebrew/bin/python3 -u tmp/xcd_polar_function_field_degree/verify_audit.py`;
+  replay the Klein-sextic defect/factoriality and actual base-class image with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_actual_class_image/verify.py`;
+  replay the fixed-member and general-slice Picard theorem with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_picard_restriction/verify.py`;
+  replay the exact singular-locus dimension theorem with
+  `/opt/homebrew/bin/python3 -u tmp/xcd_singular_locus_bound/verify.py`;
   replay the earlier residue packet with
   `/opt/homebrew/bin/python3 -u tmp/xcd_residue_class_gate/verify.py`.
   Its optional `--full` Gröbner recomputation measured about 0.95 GB RSS and
@@ -526,7 +778,18 @@ replayed.
   `tmp/xcd_total_normality/REPORT.md`,
   `tmp/xcd_local_class_defect/REPORT.md`, and
   `tmp/xcd_class_globalization_next/REPORT.md`, together with
-  `tmp/xcd_zariski_descent_gate/REPORT.md`.
+  `tmp/xcd_zariski_descent_gate/REPORT.md` and
+  `tmp/xcd_formal_mf_all_order/REPORT.md`, followed by
+  `tmp/xcd_formal_algebraization_audit/REPORT.md` and
+  `tmp/xcd_class_image_attack/REPORT.md` and
+  `tmp/xcd_ca_class_group/REPORT.md`, then
+  `tmp/xcd_algebraic_null_polar/REPORT.md` and
+  `tmp/xcd_zariski_morse_chart/REPORT.md`, followed by
+  `tmp/xcd_polar_function_field_degree/REPORT.md` and its
+  `PROOF_AUDIT.md`, then `tmp/xcd_actual_class_image/REPORT.md` with its
+  `PROOF_AUDIT.md`, then `tmp/xcd_picard_restriction/REPORT.md` with its
+  `PROOF_AUDIT.md`, and finally
+  `tmp/xcd_singular_locus_bound/REPORT.md` with its `PROOF_AUDIT.md`.
 - The Problem F involution import has an exact correction packet.  For every
   involution, `(dim E_plus,dim E_minus)=(3,2)`, the plus-plane section is a
   smooth genus-one cubic, and `F|E_minus=0`, so the minus fixed locus is a
@@ -606,13 +869,239 @@ replayed.
   `/opt/homebrew/bin/python3 -u tmp/m1_compact_degree25_filtration_independent_audit/verify.py`,
   together with the degree-22--25
   verifiers above.
+- The minimal-KLS contraction gate has now been sharpened without a degree
+  sweep.  For a least-degree primitive rank-deficient self-covariant, let
+  `H=V(F)` be its image and let `h=gcd_i F_i(q)`.  Then `h` is invariant,
+  every non-stable factor orbit has length at least 11, and the Klein cubic
+  `f3` cannot divide `h`; in particular `deg(h)<=4` forces `h=1`.  The
+  primitive dual Gauss covariant
+  `p=(grad F)(q)/h:W->W*` has rank four and degree
+  `m=4d-4-r-t`.  The first map back to `W` is the quadratic dual Klein
+  polar, so minimality gives only `d<=2m`, not `h=1`.  Every component of
+  `V(h)` is a Darboux-invariant leaf divisor.  Spicer--Tasin supplies a
+  useful conditional bridge: if the rank-one kernel foliation is log
+  canonical, there is a **reduced** divisor `Gamma` with
+  `(P4,Gamma)` log canonical and `deg(Gamma)=r+4`; this gives no support
+  inclusion in `V(h)`.  Exact order-11 characters show that log canonicity
+  requires
+  `r mod 11 in {1,3,4,5,9}`.  The `V4` fixed loci give no additional parity
+  obstruction.  Thus the surviving theorem is genuinely paired: prove
+  LC-minimality (no nilpotent zero for a minimal solution) **and** a
+  vertical-divisor comparison that lowers degree or excludes `h!=1`, or
+  prove the minimal image canonical directly.
+
+  The stable-component part of that comparison now has a degree-independent
+  obstruction.  Assume `H` is normal and `D=V(g)` is one irreducible vertical
+  component which is individually stable under the full group `G` (not merely
+  a member of a nontrivial component orbit).  Then the normalized image of
+  `D` in `Sing(H)` is a faithful `G`-curve.  The exact
+  `PSL_2(F_11)` element orders and all orbifold signatures give genus at least
+  26, and pullback of one-forms gives
+
+  ```text
+  q(Dtilde) = h^1(Dtilde,O_Dtilde) >= 26
+  ```
+
+  for every smooth projective resolution.  Since a hypersurface in `P4` has
+  `H^1(O_D)=0`, this excludes rational singularities and hence, in
+  characteristic zero, smooth, klt, and canonical `D`; inversion of
+  adjunction also excludes `(P4,D)` being plt.  It does not prove `h=1`:
+  stable components with non-rational singularities remain.
+
+  The non-stable and nonnormal branches are now sharply audited.  The proper
+  stabilizer types give exactly the component-orbit lengths
+
+  ```text
+  11,12,55,60,66,110,132,165,220,330,660.
+  ```
+
+  If `H` is normal and `Stab_G(D)=11:5` (orbit 12), the normalized image is a
+  faithful `11:5`-curve.  Its branch orders are `5,11`; Riemann--Hurwitz gives
+  genus at least 12, hence `q(Dtilde)>=12` and the same rational/klt/canonical/
+  smooth/plt exclusions.  No other proper stabilizer forces positive
+  irregularity from curve geometry alone.  For either orbit-11 `A5` class,
+  `W|A5` has one nondegenerate invariant quadratic and `W` has no
+  `G`-quadratic.  The eleven translates are smooth rational quadrics whose
+  squarefree product is a degree-22 `G`-invariant; `A5` also has a faithful
+  rational normal quartic in `P(W)`.  This is not a KLS gcd example, but it
+  proves the orbit-11 branch cannot be excluded by coarse stabilizer,
+  divisor, and curve geometry.  It also survives logarithmic tangency.  If
+  \(P_{22}\) is the product of those quadrics, the exact local field
+  \(\delta=c\nabla_qf_3-f_3\nabla_qc\) induces
+
+  \[
+  v=\sum_i(P_{22}/q_i)\delta_i,\qquad
+  P_{22}\mid v(P_{22}),
+  \]
+
+  and its class is nonzero in
+  \(D(-\log P_{22})/(R E+P_{22}\operatorname{Der}R)\).  Dividing the component
+  gcd gives a primitive \(G\)-equivariant survivor of degree at most 25.
+  The induced degree-25 field and its degree-28 backup satisfy
+  \(d(\iota_v\Omega/P_{22})=0\), so rational integrating factors do not
+  restore rigidity.  The separate degree-32 Nambu field
+  \(\star(dP_{22}\wedge df_3\wedge df_5\wedge df_6)\) is nontrivial on the
+  divisor and, after its component gcd is removed, is primitive with a
+  polynomial integrating factor and four algebraically independent
+  polynomial first integrals.  Hence tangency, closed forms, and ordinary
+  scalar algebraic integrability are all insufficient.  The KLS successor
+  must use a same-degree homogeneous \(W^*\) module of polynomial first
+  integrals producing the generic-rank-four self-covariant, together with
+  its adjugate/image relation and degree identity, or use minimality or
+  stronger conductor/discrepancy data.  The degree-28 induced Nambu field and
+  its primitive form are now excluded unconditionally.  On the generic
+  surface \(S_r=V(q,c-rf)\), the geometrically integral \(A_5\)-stable
+  divisor \(D_r=V(d_4)\) gives an \(A_5\)-fixed rational point on the normal
+  Stein curve of \(t=d_4^3/f^4\).  A nontrivial \(A_5\)-action would be
+  faithful, but a finite faithful stabilizer at a smooth
+  characteristic-zero curve point is cyclic.  The full local Nambu constant
+  field is therefore pointwise \(A_5\)-fixed.  Since \(W^*|_{A_5}\) is
+  irreducible and nontrivial, a hypothetical homogeneous KLS coordinate
+  tuple vanishes modulo the selected quadric; conjugacy puts \(P_{22}\) in
+  its gcd, contradicting primitivity.  The pencil has base points, so the
+  Stein degree itself is deliberately not claimed to be one.  Degree 25
+  remains the harder candidate.  This divisor
+  `P22` is
+  unrelated to the forbidden coordinate-`P^22` landing run.  Smaller
+  stabilizers likewise allow point or
+  rational-curve images.  For nonnormal `H`, a vertical component may
+  dominate a divisorial conductor surface.  Rational singularities force
+  only `q=p_g=0` on that surface, leaving rational and other zero-form
+  conductor surfaces open.  The next theorem must use the differential
+  origin of `h`, minimality, or conductor/discrepancy geometry.  See
+  `tmp/kls_vertical_divisor_geometry/REPORT.md` and its `PROOF_AUDIT.md`, with
+  the independent audit in
+  `tmp/kls_vertical_divisor_geometry_audit/REPORT.md`, followed by
+  `tmp/kls_nonstable_vertical_orbits/REPORT.md` and its independent audit,
+  then `tmp/kls_a5_logarithmic_divisor/REPORT.md` and its
+  `PROOF_AUDIT.md`, followed by
+  `tmp/kls_wstar_first_integrals/REPORT.md` and its `PROOF_AUDIT.md`, then
+  `tmp/kls_degree28_stein_fixed_point/REPORT.md` and its
+  `PROOF_AUDIT.md`.
+  Replay with
+  `/opt/homebrew/bin/python3 -u tmp/kls_minimal_contraction_attack/verify.py`,
+  `/opt/homebrew/bin/python3 -u tmp/kls_vertical_divisor_geometry/verify.py`,
+  and
+  `/opt/homebrew/bin/python3 -u tmp/kls_vertical_divisor_geometry_audit/verify.py`,
+  then
+  `/opt/homebrew/bin/python3 -u tmp/kls_nonstable_vertical_orbits/verify.py`
+  and
+  `/opt/homebrew/bin/python3 -u tmp/kls_nonstable_vertical_orbits/independent_verify.py`,
+  then
+  `/opt/homebrew/bin/python3 -u tmp/kls_a5_logarithmic_divisor/verify.py` and
+  `/opt/homebrew/bin/python3 -u tmp/kls_wstar_first_integrals/verify.py`, then
+  `/opt/homebrew/bin/python3 -u tmp/kls_degree28_stein_fixed_point/verify.py`.
+- Fable's positive-construction suggestion has also been tested at the
+  structural, all-degree level.  For one `V4`, put
+  `A=N_G(V4)=A4` and `W=T direct_sum U`.  Blowing up the reduced orbit
+  `R=X intersect P(T)` resolves projection to the triangle plane `P(U)`.
+  Every `A4`-stable prime multisection has degree divisible by three, and
+  the three exceptional planes give degree three.  Consequently, for every
+  `A4`-equivariant rational map `f:P(U)-->X` with dominant projected map,
+  `deg(pi o f)` is divisible by three.  The degree-one quadratic triangle
+  Cremona transition therefore cannot globalize.  An exact good-fibre
+  computation strengthens this to: no nonzero quadratic `A4`-equivariant
+  map lands on `X`.  The smallest permitted projected degree is now attained:
+  each of the two genuine `A4`-character hyperplanes cuts a smooth cubic
+  surface
+  `S(a,b,c): a*w^3+b*w*(x^2+y^2+z^2)+c*x*y*z=0`, and the exact cubic formula
+  in `tmp/fable_trisection_attack/REPORT.md` gives an `A4`-equivariant
+  birational map `P(U)-->S` whose projected composite has degree three.
+  Its six simple basepoints form a new `A4` orbit, disjoint from the old
+  marked orbit in the checked fibre, and its restriction to every triangle
+  edge has degree one after cancellation.  Thus the one-centre local
+  trisection gate is solved positively.  Precomposition with the triangle
+  Cremona map gives an exact landing tuple in `J3/J5`, with componentwise
+  axis orders `(4,4,4),(4,3,3),(3,4,3),(3,3,4)`.  The minimal
+  character-corrected line model fails the split-`F_67` `D12` boundary in
+  degrees six and seven, but this is not an all-degree obstruction.  By
+  multiplying with high stable point factors, imposing the `D10` and `D12`
+  fat-point zero conditions simultaneously, and applying equivariant Serre
+  extension, one obtains a nonzero high-twist `G`-invariant section of
+  `~(I^(3)/I^(5))(d) tensor W` with the prescribed projective trisection at
+  every generic triple line.  Thus **all linear 55-centre compatibility is
+  solved asymptotically**.  Lifting an arbitrary such section to an ambient
+  polynomial covariant does not preserve the nonlinear Klein equation.
+  The new Koszul theorem nevertheless constructs a sufficiently high-twist
+  compatible section for which
+  `F(sigma)=0 mod I^(11)` in `~(I^(9)/I^(11))(3d)`.  This solves exactly the
+  first formal landing correction.  The next correction is the canonical
+  two-term map `I^(5)/I^(7) -> I^(11)/I^(13)`; all later corrections and
+  descent remain open.  The tempting smooth-target/Serre shortcut
+  is now ruled out, but its six-basepoint descent quotient is exactly
+  understood.  On each edge the order-three initial is `Q` times the residual
+  linear map.  In orders nine and eleven the doubled `Q^2` quotient is
+  `2 Ind_C2^A4(sign)=4U`, hence has no `A4`-invariants and, after transport to
+  all 55 centres, no `G`-invariants: equivariance forces this fixed-factor
+  class to vanish.  Orders ten and twelve leave a simple `Q` quotient
+  `Ind_C2^A4(1)` with invariant fibre rank one.  Restoring coefficients along
+  the centre line gives a **rank-one invariant residue sheaf**, not one global
+  scalar.  The affine boundary omitted from the earlier notation is now
+  canonical: transverse degree five is zero, degree six is fixed to
+  \(A_L(q_B\circ C)\), and the tangent begins in degree seven.  The actual
+  joint-symbolic degree-seven directions make the factor-saturated
+  constrained two-layer differential rank two at every generic \(Q\)-root,
+  including the stabilizer-allowed invariant fibre.  Thus no saturated
+  cokernel component dominates the six resolved base sections.  The raw
+  order-ten target sheaf still has rank one.  Its first nonlinear quadratic
+  residue factors through the preceding upper linear equation, so it
+  vanishes automatically on the homogeneous linear kernel; there is no
+  two-null-line monodromy obstruction.  The pure-boundary order-twelve
+  residue vanishes, but the first post-boundary one is nonautomatic: the
+  exact local kernel direction \(v_3=(0,0,By^2z,y^3),v_4=0\) gives
+  \(-cy^{12}(B^6-1)\ne0\).  The characteristic-zero old-point interface is
+  now complete.  Exact Fourier frames identify the seven tangent branches
+  and the three simultaneous Rees flags at every representative `D12`
+  point.  A homogeneous invariant \(H\), nonzero generically on each of the
+  55 centre lines, vanishes to order at least 660 at all 121 old points.
+  Hence a suitable \(H^N\sigma_0\) has zero Artin jet to any prescribed
+  finite order at every old point while preserving every generic projective
+  trisection.  For the constructed Koszul first-gate class the generic-line
+  equation does vanish, so the raw old-point residue is zero.  Its raw
+  differential is also zero, not
+  surjective.  Colon saturation kills the finite-length saturated cokernel
+  formally and transfers the full raw quotient to the descent defect
+  \(B_{\rm desc}\).  Thus a finite `D10/D12` rank matrix is no longer a
+  viable obstruction under arbitrary high common factors.  In the raw point
+  stalk \(Q\in\mathfrak m_p^2\), whereas its exceptional transform is a unit
+  at the old flags.  The genuine \(Q=0\) sections elsewhere carry the
+  nonautomatic order-twelve equation.  It is pointwise soluble by
+  \(\beta=2zq\), \(h=Bq\), but simultaneous equivariant solvability on all
+  six sections and all centres, global \(H^1\)-gluing, later residues,
+  descent, and higher corrections remain open.  This is not a negative
+  landing result, and no
+  degree was instantiated.  Replay with
+  `/opt/homebrew/bin/python3 -u tmp/fable_positive_construction/verify.py`
+  and
+  `/opt/homebrew/bin/python3 -u tmp/fable_trisection_attack/verify.py`, then
+  `/opt/homebrew/bin/python3 -u tmp/fable_trisection_compatibility/verify.py`
+  and
+  `/opt/homebrew/bin/python3 -u tmp/fable_nonlinear_first_gate/verify.py` and
+  `/opt/homebrew/bin/python3 -u tmp/fable_resolved_descent/verify.py`, then
+  `/opt/homebrew/bin/python3 -u tmp/fable_constrained_cokernel/verify.py`, then
+  `/opt/homebrew/bin/python3 -u tmp/fable_finite_d12_constrained/verify.py`
+  and
+  `/opt/homebrew/bin/python3 -u tmp/fable_d12_char0_bridge/verify.py`, then
+  `/opt/homebrew/bin/python3 -u tmp/fable_d12_rees_sigma_interface/verify.py`.
+- A primary-source audit through 2026-07-29 found no recent theorem that
+  closes the headline.  Spicer--Tasin materially sharpens KLS, and the July
+  27 Jung--Saito revisions prove the Klein sextic base factorial, as stated
+  below.  Kresch--Tschinkel reduces the all-twist quantifier to
+  a versal twist but supplies no rational point; recent birational rigidity
+  does not obstruct a higher-degree dominant map; and the higher Amitsur
+  route is exhausted here because `Pic(X)=Z[H]` and `O_X(1)` is honestly
+  `G`-linearized, so the relevant groups vanish after restriction to every
+  subgroup.  No recent algebraization result proves the required image
+  statement `Cl(B)->Cl(Bhat)` for the local nonproper `xCD` pair.  Replay
+  the dated source ledger and boundary audit with
+  `/opt/homebrew/bin/python3 -u tmp/recent_structural_tools_audit/verify.py`.
 - The July 2026 level-11 theta/Schwarz construction uses the correct
   projective representation but does not lie on the Klein cubic:
   \(F(H\Phi_{11})=\xi_{44}^5u^{11}+O(u^{99})\).  It is also outside the
   classical Hessian-singular model.  Close this as a headline path.  Replay
   with `python3 tmp/theta11_test/theta11_test.py`.
 
-The local ignored `tmp/` tree is now about 6.7 GB.  The new material is
+The local ignored `tmp/` tree is now about 9.1 GB.  The new material is
 dominated by a 647 MiB gated raw-coordinate Cech prototype, the 373 MiB full
 top Groebner basis, the 351 MiB degree-12 survivor circuit, the 1.3 GiB local
 Julia/Groebner.jl installation and pilot, the degree-12 hyperplane-chart
@@ -622,6 +1111,9 @@ landing packets.  The accepted segmented generic DAGs include files of about
 `tmp/` and therefore do not enlarge GitHub history unless deliberately
 force-added.  The curvature-safe `P^19` packet adds 103 MiB locally, of which
 90 MiB is streamed replay chunks and 7.6 MiB is the compressed certificate.
+The accepted `xcd_zariski_morse_chart` packet is only about 32 KiB and peaks
+near 75 MiB.  A rejected dense SymPy precursor jumped to `1,044,704 KiB` RSS
+before it was killed; it produced no output and is used for no claim.
 
 ## Strongest proved progress
 
@@ -853,10 +1345,12 @@ force-added.  The curvature-safe `P^19` packet adds 103 MiB locally, of which
     `G(P)=alpha_R*z^3` is assembled as a ten-variable, nine-cubic affine unit
     chart.  Its `3^8` sheets split geometrically into 729 degree-nine
     components.  Its distinguished base-defined component is isomorphic as a
-    covering to the original projective `xCD` cubic.  The remaining task is a
-    `K_proj,C`-rational point or a geometric-divisor obstruction on that
-    cubic; the pure-coefficient places `A=0`, `B=0`, and `C=0` are already
-    locally soluble.
+    covering to the original projective `xCD` cubic.  The general-slice
+    factoriality theorem now proves that this cubic has no
+    `K_proj,C`-rational point, so that distinguished component is closed
+    negatively.  This is not an obstruction to points elsewhere on the full
+    twisted Klein cubic threefold.  The pure-coefficient places `A=0`, `B=0`,
+    and `C=0` were already locally soluble and remain diagnostic only.
     Generic true second descent still needs the
     twisted three-flex-line algebra, line forms, and constants. See
     `tmp/kproj_arithmetic/REPORT.md`, `tmp/xcd_genuine_descent/REPORT.md`,
@@ -869,7 +1363,7 @@ force-added.  The curvature-safe `P^19` packet adds 103 MiB locally, of which
 
 The initial `certificates/...` commands below form the portable checked-in
 suite. Every later command under `tmp/...` requires the intentionally ignored
-about 6.7 GB local artifact tree and will not be available in a fresh clone.
+about 9.1 GB local artifact tree and will not be available in a fresh clone.
 
 From this directory run:
 
@@ -938,6 +1432,27 @@ python3 tmp/kls_first_jet_two_fiber/verify_p5.py --ledger-only
 python3 -u tmp/kls_first_jet_three_fiber/verify_combined_p8.py
 python3 -u tmp/kls_structural_audit/verify.py
 /opt/homebrew/bin/python3 -u tmp/kls_structural_successor/verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_global_foliation_theorem/verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_minimal_contraction_attack/verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_vertical_divisor_geometry/verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_vertical_divisor_geometry_audit/verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_nonstable_vertical_orbits/verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_nonstable_vertical_orbits/independent_verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_a5_logarithmic_divisor/verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_wstar_first_integrals/verify.py
+/opt/homebrew/bin/python3 -u tmp/kls_degree28_stein_fixed_point/verify.py
+/opt/homebrew/bin/python3 -u tmp/recent_structural_tools_audit/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_positive_construction/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_trisection_attack/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_trisection_compatibility/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_nonlinear_first_gate/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_resolved_descent/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_constrained_cokernel/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_finite_d12_constrained/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_d12_char0_bridge/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_d12_rees_sigma_interface/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_first_gate_koszul/verify.py
+/opt/homebrew/bin/python3 -u tmp/fable_first_gate_koszul_audit/verify.py
 python3 tmp/kls_full_support_p9_msolve/verify_p9.py --ledger-only
 python3 tmp/relative_kls_chart/verify.py
 python3 tmp/relative_kls_chart/analyze_exceptional.py
@@ -991,6 +1506,26 @@ python3 -u tmp/xcd_discriminant_divisor/verify.py
 /opt/homebrew/bin/python3 -u tmp/xcd_local_class_defect/verify.py
 /opt/homebrew/bin/python3 -u tmp/xcd_class_globalization_next/verify.py
 /opt/homebrew/bin/python3 -u tmp/xcd_zariski_descent_gate/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_formal_mf_all_order/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_formal_algebraization_audit/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_class_image_attack/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_algebraic_null_polar/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_zariski_morse_chart/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_polar_function_field_degree/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_polar_function_field_degree/verify_audit.py
+/opt/homebrew/bin/python3 -u tmp/xcd_actual_class_image/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_picard_restriction/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_singular_locus_bound/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_local_grv_comparison_audit/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_global_defect_bridge/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_rank_invariant_reduction/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_invariant_module_support/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_singular_curve_enumeration_audit/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_invariant_fibre_discriminants/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_invariant_fibre_discriminants_audit/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_repeated_factor_incidence/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_general_slice_completion/verify.py
+/opt/homebrew/bin/python3 -u tmp/xcd_invariant_module_multiprime/verify_reconstruction.py
 /opt/homebrew/bin/python3 tmp/involution_exceptional_divisor/verify.py
 /opt/homebrew/bin/python3 tmp/involution_exceptional_divisor/verify_v4.py
 /opt/homebrew/bin/python3 tmp/d12_line_restriction/verify.py
@@ -1042,9 +1577,63 @@ certificate; neither bounded theorem gives an all-degree cutoff.
 
 ## Current ranking
 
-The ranked attacks are now: (1) replace the refuted split-`F_67` zero-colon
-shortcut by a characteristic-zero/integral saturation analysis, then attack
-the full landing ideal through its relative border/Fitting presentation.
+The ranked structural attacks are now: (1) Fable's positive branch, where an
+explicit minimal trisection and a nonzero all-centre compatible high-twist
+symbolic class are constructed, and the Koszul theorem solves
+`F(sigma)=0 mod I^(11)` for one such class.  The next gate is the
+`I^(11)/I^(13)` correction.  The structural fixed-factor quotient is
+now separated: equivariance automatically clears the doubled `Q^2` residue
+in odd orders nine and eleven, while even orders ten and twelve retain a
+rank-one invariant residue sheaf along the centre line.  For the canonical
+fixed affine boundary, the factor-saturated **constrained** two-layer
+differential is now generically onto along all six base sections.  Its first
+  order-ten quadratic residue factors through the preceding upper equation and
+  vanishes on the homogeneous kernel.  The next verified condition is the
+  first post-boundary order-twelve residue, which is not automatic.  Exact
+  characteristic-zero three-flag modules and a universal invariant high
+  factor now supply zero jets to every finite order at all old points while
+  preserving the generic trisections.  The old-point raw residue and
+  differential both become zero, and colon saturation transfers the whole
+  finite defect to \(B_{\rm desc}\).  The next positive step is therefore the
+  simultaneous order-twelve equation on all genuine \(Q=0\) sections,
+  followed by global \(H^1\)-gluing and descent back to the unsaturated
+  symbolic sheaf.  This supplies
+  no negative conclusion; (2) the paired KLS
+  LC-minimality/vertical-divisor comparison (or direct canonicity of one
+  minimal image), now sharpened by the theorem that a normal-image,
+  individually full-`G`-stable vertical component must have resolution
+  irregularity at least 26 and therefore cannot be rational, klt, canonical,
+  or plt.  The proper-stabilizer audit extends this only to `11:5` components
+  (orbit 12), with irregularity at least 12.  Orbit-11 `A5` factors survive
+  coarse geometry via an exact orbit of eleven smooth rational quadrics and
+  also survive tangency, rational integrating-factor, and ordinary
+  polynomial-integrability tests: besides the primitive logarithmic field
+  of degree at most 25, a separate degree-32 Nambu control has four
+  independent polynomial first integrals and remains nontrivial on the
+  divisor.  Smaller stabilizers allow rational curves, and nonnormal images
+  retain
+  conductor surfaces with `q=p_g=0`.  Further progress must use the
+  homogeneous \(W^*\)-valued first-integral module and its
+  generic-rank-four self-covariant/adjugate/image/degree identities,
+  now with the degree-28 induced field excluded but degree 25 still live,
+  or use minimality of `h` or conductor discrepancies; and (3) the genuinely
+  generic Schur, Pfaffian, full-threefold, or torsor-arithmetic positive
+  routes.  The `xCD` class-image/globalization problem is retired because the
+  general-slice theorem has already proved the needed plane-section
+  factoriality; that scoped negative result does not settle the headline.
+  The characteristic-zero/integral
+symbolic-saturation and relative border/Fitting analysis remain relevant
+  inside (1), but another bare bounded ladder does not.  The grandfathered
+  coordinate `P^21` degree-five support calculation is complete: its fixed
+  candidate family is non-full, with only the certified bounds
+  `3933 <= rank <= 7910` and an explicit dependency among its first 3,934
+  columns.  It proves no `P^21` emptiness or characteristic-zero promotion.
+  No `P^22` or successor slice is authorized.
+
+Within the existing degree-25 landing packet, replace the refuted
+split-`F_67` zero-colon shortcut by a characteristic-zero/integral saturation
+analysis, then attack the full landing ideal through its relative
+border/Fitting presentation.
 Over split `F_67`, `[(T_1)_d tensor W]^G` vanishes through degree 34 but has
 dimension one in degree 35; hence the all-degree `f3` colon is nonzero.  No
 characteristic-zero or higher-`m` statement follows.  The first
@@ -1063,27 +1652,22 @@ canonical projective-DVR family gives `dim L_25<=15` for the
 characteristic-zero degree-25 landing locus.  This
 sharply limits the support but does not make it empty.  What remains is sparse module/Fitting support,
 characteristic-zero/higher-order saturation, and uniform
-landing detection on `[(I^(m)/I^(m+2))_d tensor W]^G`, not another finite
-`V4` table, isolated point-row sweep, or raw scalar Hilbert degree; (2)
-attack the original projective `xCD` cubic at `f6=0` through the
-section-preserving graded Rees-lattice lift for primitive branch classes,
-then the global class image and quotient-relative degree image `3Z`
-(total-space normality and the local class maps are now proved; `f5=0`
-descent is the alternative);
-(3) run the
-ambient-polynomial semantic verifier through the remaining 7,846
-degree-six/seven rows before composing the `M7` circuit; and (4) touch
-Pfaffian degree sixteen only after a structural reduction.  Landing
+  landing detection on `[(I^(m)/I^(m+2))_d tensor W]^G`, not another finite
+  `V4` table, isolated point-row sweep, or raw scalar Hilbert degree; (2) run the
+  ambient-polynomial semantic verifier through the remaining 7,846
+  degree-six/seven rows before composing the `M7` circuit; and (3) touch
+  Pfaffian degree sixteen only after a structural reduction.  Landing
 self-covariants are already excluded through degree 24; degree 25 is the
 first bounded unknown and should be used through the normalized
 border/Fitting module, not an unstructured high-dimensional projective solve.
 The old degree-22
 memory stop is superseded by the `25 -> 12 -> 4 -> 0` proof.  The
-finite KLS `P8` screen is complete, and dimension
+  finite KLS `P8` screen is complete, and dimension
 counts prove that larger sparse three-support boxes cannot be exhaustive;
 the quartic-precomposition theorem now rules out a bound on every solution,
-so the route needs a global foliation theorem or an effective bound for one
-minimal solution.  Do not
+and the global foliation identity reduces the singular-image branch to its
+invariant contracted divisor; the route now needs the minimal-contraction or
+canonicity theorem for one minimal solution.  Do not
 launch another bare Problem F path/transition argument, unchanged degree-12
 mixed charts, high-dimensional raw degree-25 charts, more isolated degree-16 fibres, or control translation
 interpolation.  For headline leverage: (1) the forced 55-plane symbolic
@@ -1136,6 +1720,38 @@ vertical codimension-one point of the pullback total cubic and is the key
 `R1` input in `tmp/xcd_total_normality/REPORT.md`.  It still says nothing
 about the global torsor or the relative divisor-class degree image.
 
+A second, even newer theorem materially changes the **base** of the `xCD`
+class diagram.  Jung--Saito,
+[*Defect of projective hypersurfaces with isolated singularities*](https://arxiv.org/abs/2512.23522)
+v3 and
+[*Factoriality of normal projective varieties*](https://arxiv.org/abs/2601.13151)
+v6 were both revised on 2026-07-27.  Their pole-order two-block formula,
+applied to the exact Klein sextic, has ranks `75,2125,2200`; the independent
+characteristic-zero Jacobian Hilbert value is 255.  Hence `def(H6)=0` and
+`Cl(H6)=Z[O(1)]`.  The Zariski local base class group at every `A3` point is
+therefore zero, although its completion has class group `Z`.  This explains
+the completed pair-sum `(1,1,0)` as a completion-created class.  It does not
+compute `Cl(B)` or `Cl(C6)`.  The follow-up Picard theorem does compute the
+Cartier side: `Pic(C6)=Z*H direct_sum Z*xi`, restriction to an
+effective-Cartier ample slice is an isomorphism, and every Cartier horizontal
+  degree is a multiple of three.  Thus there is no remaining Picard/Cartier
+  restriction gap.  The exact gradient-rank hyperplane certificate proves
+  `dim Sing(C6)<=1`.  The later invariant-branch discriminants and intrinsic
+  repeated-factor incidence prove that its reduced one-dimensional singular
+  support is exactly the 120 known fibre lines.  General-slice Bertini and
+  transversality then give exactly 180 `A3` plus 180 ordinary four-branch
+  `cA` points, so the rank-720 theorem proves `def(Y)=0`.  Consequently `Y`
+  and `C6` are factorial, the horizontal Weil degree image is `3Z`, and the
+  projective `xCD` plane cubic has no `K_proj,C`-point.  This closes the slice
+  subroute without deciding the full twisted threefold or the headline.  See
+  `tmp/xcd_actual_class_image/REPORT.md`,
+  `tmp/xcd_picard_restriction/REPORT.md`,
+  `tmp/xcd_singular_locus_bound/REPORT.md`,
+  `tmp/xcd_invariant_fibre_discriminants/REPORT.md`,
+  `tmp/xcd_repeated_factor_incidence/REPORT.md`, and
+  `tmp/xcd_general_slice_completion/REPORT.md` with their proof audits and
+  verifiers.
+
 The 2026-07-27 Groebner.jl change-matrix API was installed and tested rather
 than dismissed.  Exact small identities pass, but the fixed two-generator
 change calculation and 512-row parsing already cross the `768 MiB` RSS gate;
@@ -1163,10 +1779,12 @@ generic function-field local/Selmer machinery.  See
   unit-chart interface; a universal translation matrix is no longer required.
   The unit-open scheme has 729 geometric degree-nine components, with a
   distinguished base-defined component isomorphic as a covering to the
-  original projective `xCD` cubic.  Generic first descent now needs a
-  `K_proj,C`-rational point search or geometric-divisor obstruction on that
-  cubic.  The three pure-coefficient divisor families are locally soluble;
-  nonexistence only over the saved `QQ`-model is insufficient.
+  original projective `xCD` cubic.  The general-slice theorem now rules out a
+  `K_proj,C`-point on that component.  Generic first descent through this
+  particular plane construction is therefore closed negatively; further
+  progress must leave it for the full twisted threefold or another genuinely
+  generic construction.  The three pure-coefficient divisor families remain
+  locally soluble diagnostics only.
   True second descent then needs the generic twisted three-flex-line algebra,
   line forms, and constants.  The soluble coordinate-line control is now
   explicit: \(Q_{\rm ctl}=[H-3O]\), its irreducible nonzero \(E[3]\) field,
@@ -1543,6 +2161,135 @@ The surviving all-degree route is the symbolic arrangement module of the 55
 plus-planes, together with higher-center compatibility; a bare finite-state
 or surface-path argument should not be dispatched again.
 
+### 2026-07-29 — Fable positive-construction assessment
+
+The closing transition graph does not itself produce a positive map.  Fix
+`K=V4`, put `A=N_G(K)=A4`, and write `W=T direct_sum U`, where `P(U)` is the
+triangle plane.  Projection `X-->P(U)` has reduced base orbit
+`R=X intersect P(T)` of length three.  On
+`Y=Bl_R(X)`, with `L=H-E_1-E_2-E_3`, every `A4`-stable prime divisor
+multisection has class `aH-b(E_1+E_2+E_3)` and hence degree
+
+```text
+S.L^2 = 3a-3b.
+```
+
+The exceptional union has degree three, so the equivariant multisection
+degree subgroup is exactly `3Z`.  Therefore an `A4`-equivariant
+`f:P(U)-->X` with dominant projected composite satisfies
+`deg(pi o f)=0 mod 3`.  The triangle Cremona map has projected degree one
+and cannot be repaired into a landing map by common factors or arbitrary
+`T`-coordinates.  Exact character reconstruction also gives
+`dim Hom_A4(Sym^2 U,W)=3`, and the complete projective quadratic landing
+scheme has unit ideal on all three charts over `F_67`; proper good reduction
+excludes it in characteristic zero.
+
+The minimal permitted trisection is now constructed explicitly.  The two
+genuine `A4`-character hyperplanes cut smooth cubic surfaces
+`S subset X`, proved by exact good reduction after diagonalizing the
+order-three action on `T`.  In standard coordinates
+
+```text
+S(a,b,c): a*w^3+b*w*(x^2+y^2+z^2)+c*x*y*z=0.
+```
+
+Choose `B` with `b^3(B^3-1)^2=a*c^2*B^3`, put `C=B^-1` and
+`D=-c/b`, and use
+
+```text
+[x:y:z] |-> [D*x*y*z,
+             x*(x^2+B*y^2+C*z^2),
+             y*(y^2+B*z^2+C*x^2),
+             z*(z^2+B*x^2+C*y^2)].
+```
+
+The landing identity is exact.  This is an `A4`-equivariant birational map
+`P(U)-->S subset X`; its projected composite has degree three.  It has six
+simple basepoints, two on each edge, and after canceling the edge factor its
+three boundary maps have degree one onto the required minus-lines.  The six
+points form a new `A4` orbit, disjoint from the old `D12` marked divisor in
+the checked good fibre.  Hence the first local positive gate is **solved**,
+but the construction is further based and does not automatically define a
+section of the full 55-plane symbolic sheaf.
+
+The all-centre linear gate is now also solved asymptotically.  The primitive
+tuple cannot itself be an odd first normal layer, but precomposing with
+`[x:y:z] |-> [yz:zx:xy]` gives an exact nonzero landing tuple in `J3/J5`.
+After the inverse-character line factor, the minimal degree-six/seven model
+fails the split-`F_67` `D12` boundary.  Extra factors change the conclusion:
+a high power of the stable divisor of the three `D12` points, together with
+independent simultaneous zero jets at every `D10` and `D12` point, clears all
+finite residual quotients.  Equivariant Serre extension and the exact
+nested-kernel theorem then give a nonzero class
+
+```text
+sigma_d in H0(~(I^(3)/I^(5))(d) tensor W)^G
+```
+
+with the prescribed projective trisection at every generic triple line.
+This proves full **linear** `A4/D10/D12` compatibility at a sufficiently high
+twist; an arbitrary lift need not land.  The Koszul construction now chooses
+a nonzero compatible high-twist class satisfying
+
+```text
+F(sigma) = 0 mod I^(11).
+```
+
+This closes only the target `H0(~(I^(9)/I^(11))(3d))^G`.  All higher
+corrections, effectivity/algebraization, descent, and dominance remain.  If
+`Phi` is the symmetric polarization of the Klein cubic, the
+tangent-obstruction complex at this first-gate zero is
+
+```text
+K_d -- v |-> 3 Phi(sigma,sigma,v) --> T^0_(3d),
+```
+
+and the first higher correction is canonically
+
+```text
+I^(5)/I^(7) -- e |-> 3 Phi(p,p,e) --> I^(11)/I^(13).
+```
+
+The naive smoothness-plus-Serre shortcut fails before any choice of `d`:
+edgewise the order-three initial is
+`Q*[0,0,z,B^(-1)y]`.  The refined descent calculation uses the six-point
+`A4` orbit with stabilizer `C2`.  In odd orders nine and eleven, the doubled
+`Q^2` fixed-factor quotient is `2 Ind_C2^A4(sign)=4U`, so it has no invariant
+section; the induced `G`-module has none either.  Thus equivariance makes the
+order-nine and order-eleven `Q^2` divisibility conditions automatic.  In even
+orders ten and twelve, however, the simple `Q` quotient is
+`Ind_C2^A4(1)` and has invariant fibre rank one.  With coefficients along the
+centre line restored, this is a rank-one invariant residue sheaf, not one
+global scalar.  Fixing the canonical affine boundary
+\(\operatorname{gr}^5=0\),
+\(\operatorname{gr}^6=A_L(q_B\circ C)\), the actual grade-seven joint-symbolic
+directions make the saturated constrained map rank two at each generic
+\(Q\)-root.  Hence no cokernel component dominates the six base sections.
+The first quadratic order-ten residue factors through the upper linear
+equation and vanishes on its homogeneous kernel.  The pure-boundary
+order-twelve residue vanishes, but the first post-boundary residue is not
+automatic; the explicit kernel witness has value
+\(-cy^{12}(B^6-1)\ne0\).  The subsequent characteristic-zero three-flag and
+high-factor theorem supersedes that finite-interface gap.  It supplies zero
+Artin jets of every prescribed finite order at all old `D10/D12` points while
+preserving the generic trisections.  Their raw residue and differential both
+become zero; colon saturation moves the full finite defect to
+\(B_{\rm desc}\).  The remaining gate is the simultaneous order-twelve
+equation on the genuine \(Q=0\) sections, its global \(H^1\)-gluing, later
+residue sections, and unsaturated descent.  This rules out
+only the naive shortcut, not the existence
+of a landing zero.  Replay with
+`/opt/homebrew/bin/python3 -u tmp/fable_positive_construction/verify.py`,
+`/opt/homebrew/bin/python3 -u tmp/fable_trisection_attack/verify.py`, and
+`/opt/homebrew/bin/python3 -u tmp/fable_trisection_compatibility/verify.py`,
+then
+`/opt/homebrew/bin/python3 -u tmp/fable_nonlinear_first_gate/verify.py` and
+`/opt/homebrew/bin/python3 -u tmp/fable_resolved_descent/verify.py`, then
+`/opt/homebrew/bin/python3 -u tmp/fable_constrained_cokernel/verify.py` and
+`/opt/homebrew/bin/python3 -u tmp/fable_finite_d12_constrained/verify.py`, then
+`/opt/homebrew/bin/python3 -u tmp/fable_d12_char0_bridge/verify.py`, then
+`/opt/homebrew/bin/python3 -u tmp/fable_d12_rees_sigma_interface/verify.py`.
+
 ### Landing structure through degree 25; first symbolic complex; exclusion through 24
 
 The first symbolic-module step has now been run on complete self-covariant
@@ -1646,6 +2393,15 @@ canonical Reynolds-lattice specialization promotes `dim L_25<=15` to
 characteristic zero.  The global support is still not proved
 irrelevant, so degree 25 remains open.
 
+The completed coordinate `P^21` degree-five packet is a strict nonverdict.
+Its `21407 x 7911` split-`F_67` matrix has 3,933 independent leading columns
+and an explicit normalized dependency among columns `0,...,3933`.  Hence
+only `3933 <= rank <= 7910` is certified; 3,933 is not the total rank, and
+the exact total rank was not computed.  The fixed family therefore proves no
+`P^21` emptiness.  Its conditional selected-square replay and canonical
+characteristic-zero promotion to `dim L_25<=14` were correctly skipped, and
+no `P^22` run followed.
+
 The all-degree successors are therefore a characteristic-zero/integral
 saturation analysis, extension to higher `m`, and a uniform relative
 border/Fitting landing-detection lemma on
@@ -1708,6 +2464,7 @@ Replay:
     /opt/homebrew/bin/python3 -u tmp/char0_lift_p19_d5/verify.py
     VECLIB_MAXIMUM_THREADS=1 /opt/homebrew/bin/python3 -u tmp/m1_relative_border_p20_d5/verify.py --full
     VECLIB_MAXIMUM_THREADS=1 /opt/homebrew/bin/python3 -u tmp/char0_lift_p20_d5/verify.py
+    VECLIB_MAXIMUM_THREADS=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /opt/homebrew/bin/python3 -u tmp/m1_relative_border_p21_d5_design/verify.py
 
 The exact boundary and transition ledger are in
 tmp/involution_exceptional_divisor/REPORT.md and
@@ -1746,8 +2503,23 @@ The mixed-coordinate dense-slice certificate, exact rank-28
 finite-projection packet, and independent Q-slice audit are under
 `tmp/m1_cubic_slice_macaulay/`, `tmp/m1_relative_border_rank28/`, and
 `tmp/m1_qslice_border_dimension/`.  The recursive degree-four slice
-certificate, its degree-five `P^19` and `P^20` successors, and the current
-characteristic-zero promotion are under `tmp/m1_relative_border_maxslice/`,
+certificate, its degree-five `P^19` and `P^20` successors, their
+characteristic-zero promotions, and the completed `P^21` strict nonverdict
+are under `tmp/m1_relative_border_maxslice/`,
 `tmp/m1_relative_border_p19_d5/`, `tmp/m1_relative_border_p20_d5/`,
-`tmp/char0_lift_p19_d5/`, and `tmp/char0_lift_p20_d5/`.  The precise
+`tmp/char0_lift_p19_d5/`, `tmp/char0_lift_p20_d5/`, and
+`tmp/m1_relative_border_p21_d5_design/`.  The precise
 remaining global lemmas are in tmp/all_degree_arrangement_attack/REPORT.md.
+The 2026-07-29 structural successors are
+`tmp/kls_minimal_contraction_attack/`,
+`tmp/kls_vertical_divisor_geometry/` with its independent audit
+`tmp/kls_vertical_divisor_geometry_audit/`,
+`tmp/fable_positive_construction/`, and
+`tmp/fable_trisection_attack/`,
+`tmp/fable_trisection_compatibility/`,
+`tmp/fable_nonlinear_first_gate/`,
+`tmp/fable_resolved_descent/`, together with
+`tmp/recent_structural_tools_audit/` and
+`tmp/xcd_class_image_attack/`, followed by
+`tmp/xcd_algebraic_null_polar/` and
+`tmp/xcd_zariski_morse_chart/`.
