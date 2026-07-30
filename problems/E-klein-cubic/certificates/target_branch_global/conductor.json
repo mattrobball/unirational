@@ -1,7 +1,8 @@
 {
-  "bottleneck": "ELIMINATION-ORDER_GB_OF_FOLD_FOR_PROJECTION_AND_CHAR0_COMPONENT_EXTRACTION",
+  "H_primitive_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+  "bottleneck": "NORMALIZATION_JACOBIAN_GB_OF_DEGREE_43_TARGET_BRANCH_HYPERSURFACE_H",
   "conductor_ideal": null,
-  "note": "Conductor of normalization of the simple-fold component requires the component and its normalization; neither was extracted.",
+  "note": "Conductor requires normalization of D=V(H); H is constructed, D~ is not.",
   "reason": "STOP-2",
   "status": "NOT_CONSTRUCTED"
 }
