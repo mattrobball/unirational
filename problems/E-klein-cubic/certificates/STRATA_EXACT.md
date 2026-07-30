@@ -320,3 +320,31 @@ Markdown certificates (content hashes of the files as first written to disk on
 | `certificates/STRATA_EXACT.md` (pre-footer) | `0bbb1efae414e8fd87bdad5925645f2694ee5ecb5fc30bdfe02c9434eb07c6dc` |
 
 **STRATA_EXACT_OK** (documentation seal; machine marker is `STRATA_EXACT_VERIFY_OK`).
+
+## Director audit note (2026-07-30)
+
+Independent adversarial audit of this Gate 1 packet: **sound as committed**.
+Three independent verification paths converge (GAP's own `PSL(2,11)` library,
+the repository's exact `Q(zeta_11)` matrices, and a verifier that reads only
+the JSON — confirmed to contain no import of the producer). The verifier
+recomputes rather than rubber-stamps: it rebuilds the 55 `V4`s from commuting
+involution pairs, derives `|cl(A5)|=660/60=11` from a brute-force order-60
+`(2,3,5)` subgroup search, and re-derives the `V4` incidence geometry by an
+independent mod-67 rank test.
+
+Two caveats recorded for downstream packages:
+
+1. **Seal hash is not bit-reproducible.** `strata_exact.json` records
+   `wall_time_sec`, and the file hashes its own prior bytes, so a fresh
+   replay changes exactly two lines (the timing field and the dependent
+   self-hash). All substantive fields are byte-identical and
+   `incidence_exact.json` is unchanged. Cosmetic; do not treat a differing
+   seal line as a content mismatch. Future producers should exclude timing
+   from sealed payloads.
+2. **The type-II incidence is single-representative plus symmetry.** The
+   "three fixed elliptics" verdict is verified exactly on one representative
+   `V4 = <z,s>` and extended to all 55 subgroups / 165 points by the
+   single-conjugacy-class orbit argument (`A4` is one class of 55, certified
+   above). This is legitimate but was implicit; it is stated here explicitly.
+   Any downstream use requiring pointwise-independent verification at all 165
+   points must say so and redo it.
