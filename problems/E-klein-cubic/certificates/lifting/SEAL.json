@@ -1,0 +1,28 @@
+{
+  "decision_exit": "L-P",
+  "exceeded_8GB": false,
+  "files_sha256": {
+    "certificates/lifting/OBSTRUCTION_TOWER.md": "0e8b954eabe95db33372b55c8f27ac317f4ab72bc5d1ab8c83985d3a631b48e6",
+    "certificates/lifting/families/SUMMARY.json": "717240ae557d3468cac3dc0c7862717ac6ecd6efb95c3e7e26686e4da25f6035",
+    "certificates/lifting/families/based_minus_lines_odd_m/tower_stages.json": "3a51e0056351e3ee3932aa714ee9e6b0632e2edb8778433f4114585ed3e45eb1",
+    "certificates/lifting/families/common_tower.py": "2ccde5c1263c872fda8e150b2e6b52f28073e4475ceef2335c324259df9b4bf9",
+    "certificates/lifting/families/free_module_stages.json": "7305453e8c75be0a7c30eab41cbc2e1b82daacbe5899cceab34145e26a6e43a7",
+    "certificates/lifting/families/produce.py": "872faae92723ae9c1fbbfa2757b362cd22096f5a34765b785037fe3101d2fb1b",
+    "certificates/lifting/families/residual_e1_swap_both/tower_stages.json": "d817e20cec7999f3a41116fe69b9a4f3d08616f4881c193b02f5e262bf1a1933",
+    "certificates/lifting/families/residual_e_ge7_generic_swap_both/tower_stages.json": "1f73868bac800592b403e192146fce5ec15ae565ef2fe709aa387365f26e5458",
+    "certificates/lifting/families/verify.py": "433034d3cb9b7801fc6ea042e2a2187a81176a43eaef7421deff5a7f7d0f91af",
+    "certificates/lifting/polar_expansion.json": "1231694bdc41f6c06c690c2b8eb58dca42402acf1cfaacdc284157b00033098e"
+  },
+  "headline": "OPEN",
+  "producer": "certificates/lifting/families/produce.py",
+  "resource_gate_GB": 8,
+  "self_sha256": "313e12f470c3144f41e67c1c6d7ec57c07afc915d268bb40d470480c5a39af26",
+  "structural_nullities": {
+    "L1": 4,
+    "L3": 8,
+    "generic_coker": 0
+  },
+  "terminal_marker": "WP_L2_TOWER_SEALED",
+  "verifier": "certificates/lifting/families/verify.py",
+  "work_package": "WP-L2"
+}

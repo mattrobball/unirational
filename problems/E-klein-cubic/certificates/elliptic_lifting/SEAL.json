@@ -1,0 +1,20 @@
+{
+  "fable_inputs_sha256": {
+    "tmp/fable_relative_divisor_trace_obstruction/REPORT.md": "cfcda8682c86eb48222bfda6888aeec6580d362afd0a29d18a267b3696425573",
+    "tmp/fable_relative_q_trace_obstruction/REPORT.md": "bda7bf9a58025c15c097ce183f43655a9743f23e6e535776af3712f004bc452c"
+  },
+  "files_sha256": {
+    "certificates/elliptic_lifting/PICARD_OBSTRUCTION.md": "57f200e82de68d94246c14b65508f433ce75fb0e97a1876667568605907a246e",
+    "certificates/elliptic_lifting/picard_data.json": "6f49bbeee2560ac15f50ab4f5537d7b99e153c9a75d2eafa5588a36fb78c63c2",
+    "certificates/elliptic_lifting/produce.py": "f4477bae9e8b443b9fb5e7abc7f0989b1b471c18f6111e09365ce9f8d7dc8c41",
+    "certificates/elliptic_lifting/verify.py": "83fc775d8855bf434b2db4587c357d12d2e75d51e6992132581b4bc8322d5244"
+  },
+  "headline": "OPEN",
+  "live_families_killed_by_trace": false,
+  "order12_regression": "PROVED_AS_REGRESSION",
+  "producer": "certificates/elliptic_lifting/produce.py",
+  "self_sha256": "b36776888f4000c6e45d80a7828133b49cc806818d06c2d2849ee587bcdf1f5c",
+  "terminal_marker": "WP_E1_PICARD_SEALED",
+  "verifier": "certificates/elliptic_lifting/verify.py",
+  "work_package": "WP-E1"
+}

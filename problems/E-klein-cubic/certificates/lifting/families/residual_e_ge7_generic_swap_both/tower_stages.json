@@ -1,0 +1,4491 @@
+{
+  "accepted_inputs_sha256": {
+    "certificates/global_transition/level1_marked_states.json": "c6056cdf94e9a5324a5ec17950a170511d0f3c7a3edf0cb92bfc12b010675f19",
+    "certificates/lifting/polar_expansion.json": "1231694bdc41f6c06c690c2b8eb58dca42402acf1cfaacdc284157b00033098e",
+    "certificates/transition_repair/category_repaired.json": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0",
+    "certificates/transitions/involution_plane/module.json": "85e5676c3076ef6d9b267194ef6685eb6d7dc82e01d94ad22009e4b34f097312"
+  },
+  "bidegree_runs": [
+    {
+      "d": 13,
+      "dim_codomain_L1_upper": 3330,
+      "dim_codomain_L3_upper": 4165,
+      "dim_domain_L1_C2": 702,
+      "dim_domain_L3_C2": 825,
+      "dim_leading_C2": 364,
+      "e": 7,
+      "family": "residual_e_ge7_generic_swap_both",
+      "free_rank_L1_codomain": 5,
+      "free_rank_L1_domain": 9,
+      "free_rank_L3_codomain": 7,
+      "free_rank_L3_domain": 15,
+      "free_rank_leading": 4,
+      "justification": "Director-authorized start bidegree; free-module theorems reduce the universal family to these ranks by tensoring with Sym^{d-*} E_+^*.  Numbers below are full C2-jet dimensions before residual projection.",
+      "label": "regression_bidegree",
+      "m": 1,
+      "memory_gate_free_L1": {
+        "dense_GB": 1e-06,
+        "limit_GB": 8.0,
+        "ok_dense": true,
+        "ok_sparse": true,
+        "sparse_GB": 1e-06
+      },
+      "memory_gate_full_C2_L1_upper": {
+        "dense_GB": 0.074805,
+        "limit_GB": 8.0,
+        "ok_dense": true,
+        "ok_sparse": true,
+        "sparse_GB": 0.001598
+      },
+      "memory_sparse_floor_GB_L1_free": 1.44e-06
+    },
+    {
+      "d": 25,
+      "dim_codomain_L1_upper": 24321,
+      "dim_codomain_L3_upper": 27040,
+      "dim_domain_L1_C2": 3795,
+      "dim_domain_L3_C2": 4410,
+      "dim_leading_C2": 2208,
+      "e": 7,
+      "family": "residual_e_ge7_generic_swap_both",
+      "free_rank_L1_codomain": 11,
+      "free_rank_L1_domain": 15,
+      "free_rank_L3_codomain": 13,
+      "free_rank_L3_domain": 21,
+      "free_rank_leading": 8,
+      "justification": "Director-authorized start bidegree; free-module theorems reduce the universal family to these ranks by tensoring with Sym^{d-*} E_+^*.  Numbers below are full C2-jet dimensions before residual projection.",
+      "label": "regression_bidegree",
+      "m": 3,
+      "memory_gate_free_L1": {
+        "dense_GB": 5e-06,
+        "limit_GB": 8.0,
+        "ok_dense": true,
+        "ok_sparse": true,
+        "sparse_GB": 5e-06
+      },
+      "memory_gate_full_C2_L1_upper": {
+        "dense_GB": 2.953542,
+        "limit_GB": 8.0,
+        "ok_dense": true,
+        "ok_sparse": true,
+        "sparse_GB": 0.011674
+      },
+      "memory_sparse_floor_GB_L1_free": 5.28e-06
+    }
+  ],
+  "coupling": {
+    "D12_coupling": "det-twisted residual of rank (e+2)//3",
+    "orthogonality": "Source-line based/residual conditions constrain p_d(0,y) only (WP-R0 coefficient coupling).  They do not alter the normal-cone operators L_r; they cut a linear subspace of the terminal coefficient of the degree-d polynomial, transverse to the normal-order tower along Z_t.",
+    "source_line_role": "p|_{E_-} = \u0394_t^m h, h det-twisted degree e"
+  },
+  "family": {
+    "D12_coupling": "det-twisted residual of rank (e+2)//3",
+    "coefficient_coupling": "p|_{E_-} = \u0394_t^m h, h det-twisted degree e",
+    "id": "residual_e_ge7_generic_swap_both",
+    "parameters": {
+      "d": "6m+e",
+      "e": "odd \u2265 7",
+      "m": "odd \u2265 1"
+    },
+    "source_line": "generic residual e\u22657, ledger swap_both",
+    "start_bidegrees": [
+      [
+        1,
+        13
+      ],
+      [
+        3,
+        25
+      ]
+    ],
+    "start_triples": [
+      [
+        1,
+        13,
+        7
+      ],
+      [
+        3,
+        25,
+        7
+      ]
+    ]
+  },
+  "headline": "OPEN",
+  "self_sha256": "831ff23430a0a4152cb43d2aba35b89be07f76e33d207713d52f7c3238e1ea17",
+  "stages_by_m": {
+    "1": {
+      "B_isomorphism": {
+        "det_phi": "2",
+        "isomorphism": true,
+        "model": "B(z;y,y)=z0\u00b72 y0 y1 + z1\u00b7y1\u00b2 + z2\u00b7y0\u00b2",
+        "note": "D12-weight matching forces this shape up to scale on each weight component; nondegeneracy is scale-invariant.",
+        "status": "PROVED"
+      },
+      "L1_relative_sparse": {
+        "generic_rank": {
+          "bidegree_status": "free R-module level (all base degrees simultaneously); not a single (m,d) instantiation",
+          "generic_coker_Q": 0,
+          "generic_nullity_Q": 4,
+          "generic_rank_Q": 5,
+          "label": "generic_fiber_exact_rank_over_Q",
+          "m": 1,
+          "r": 1,
+          "rank_constant_on_samples": true,
+          "sample_ranks": [
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "samples": [
+            {
+              "coker": 0,
+              "nnz": 18,
+              "nullity": 4,
+              "rank": 5,
+              "seed": 1,
+              "shape": [
+                5,
+                9
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 27,
+              "nullity": 4,
+              "rank": 5,
+              "seed": 2,
+              "shape": [
+                5,
+                9
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 27,
+              "nullity": 4,
+              "rank": 5,
+              "seed": 3,
+              "shape": [
+                5,
+                9
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 27,
+              "nullity": 4,
+              "rank": 5,
+              "seed": 4,
+              "shape": [
+                5,
+                9
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 27,
+              "nullity": 4,
+              "rank": 5,
+              "seed": 5,
+              "shape": [
+                5,
+                9
+              ]
+            }
+          ],
+          "shape": [
+            5,
+            9
+          ]
+        },
+        "memory_gate": {
+          "dense_GB": 1e-06,
+          "limit_GB": 8.0,
+          "ok_dense": true,
+          "ok_sparse": true,
+          "sparse_GB": 2e-06
+        },
+        "symbolic_quadratic": {
+          "base_ring": "Q[A_0..A_3] (coordinate ring of free leading jets of order m; multi-Rees: each A_s is itself a section of O(d-m) when degree is restored)",
+          "codomain_basis": [
+            [
+              4,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "domain_basis": [
+            {
+              "Eplus_index": 0,
+              "y": [
+                2,
+                0
+              ]
+            },
+            {
+              "Eplus_index": 1,
+              "y": [
+                2,
+                0
+              ]
+            },
+            {
+              "Eplus_index": 2,
+              "y": [
+                2,
+                0
+              ]
+            },
+            {
+              "Eplus_index": 0,
+              "y": [
+                1,
+                1
+              ]
+            },
+            {
+              "Eplus_index": 1,
+              "y": [
+                1,
+                1
+              ]
+            },
+            {
+              "Eplus_index": 2,
+              "y": [
+                1,
+                1
+              ]
+            },
+            {
+              "Eplus_index": 0,
+              "y": [
+                0,
+                2
+              ]
+            },
+            {
+              "Eplus_index": 1,
+              "y": [
+                0,
+                2
+              ]
+            },
+            {
+              "Eplus_index": 2,
+              "y": [
+                0,
+                2
+              ]
+            }
+          ],
+          "format": "relative sparse: entry(row,col) = sum_{p,q} c_{row,col,p,q} A_p A_q",
+          "leading_basis": [
+            {
+              "Eminus_index": 0,
+              "y": [
+                1,
+                0
+              ]
+            },
+            {
+              "Eminus_index": 1,
+              "y": [
+                1,
+                0
+              ]
+            },
+            {
+              "Eminus_index": 0,
+              "y": [
+                0,
+                1
+              ]
+            },
+            {
+              "Eminus_index": 1,
+              "y": [
+                0,
+                1
+              ]
+            }
+          ],
+          "m": 1,
+          "n_leading_coeffs": 4,
+          "nnz_quadratic_terms": 48,
+          "operator": "L_1(b) = B(b; a_m, a_m)",
+          "r": 1,
+          "shape": [
+            5,
+            9
+          ]
+        },
+        "terms": [
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 2,
+            "row": 0
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 2,
+            "row": 1
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 2,
+            "row": 1
+          },
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 3,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 3,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 4,
+            "row": 1
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 5,
+            "row": 1
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 0,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 0,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 1,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 2,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 4,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 4,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 5,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 5,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 6,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 6,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 7,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 8,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 3,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 3,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 4,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 5,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 7,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 7,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 8,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 8,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 6,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 6,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 7,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 8,
+            "row": 4
+          }
+        ],
+        "terms_included": true
+      },
+      "L3_relative_sparse": {
+        "generic_rank": {
+          "bidegree_status": "free R-module level (all base degrees simultaneously); not a single (m,d) instantiation",
+          "generic_coker_Q": 0,
+          "generic_nullity_Q": 8,
+          "generic_rank_Q": 7,
+          "label": "generic_fiber_exact_rank_over_Q",
+          "m": 1,
+          "r": 3,
+          "rank_constant_on_samples": true,
+          "sample_ranks": [
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "samples": [
+            {
+              "coker": 0,
+              "nnz": 30,
+              "nullity": 8,
+              "rank": 7,
+              "seed": 1,
+              "shape": [
+                7,
+                15
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 45,
+              "nullity": 8,
+              "rank": 7,
+              "seed": 2,
+              "shape": [
+                7,
+                15
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 45,
+              "nullity": 8,
+              "rank": 7,
+              "seed": 3,
+              "shape": [
+                7,
+                15
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 45,
+              "nullity": 8,
+              "rank": 7,
+              "seed": 4,
+              "shape": [
+                7,
+                15
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 45,
+              "nullity": 8,
+              "rank": 7,
+              "seed": 5,
+              "shape": [
+                7,
+                15
+              ]
+            }
+          ],
+          "shape": [
+            7,
+            15
+          ]
+        },
+        "memory_gate": {
+          "dense_GB": 3e-06,
+          "limit_GB": 8.0,
+          "ok_dense": true,
+          "ok_sparse": true,
+          "sparse_GB": 3e-06
+        },
+        "symbolic_quadratic": {
+          "base_ring": "Q[A_0..A_3] (coordinate ring of free leading jets of order m; multi-Rees: each A_s is itself a section of O(d-m) when degree is restored)",
+          "format": "relative sparse: entry(row,col) = sum_{p,q} c_{row,col,p,q} A_p A_q",
+          "m": 1,
+          "n_leading_coeffs": 4,
+          "nnz_quadratic_terms": 80,
+          "operator": "L_3(b) = B(b; a_m, a_m)",
+          "r": 3,
+          "shape": [
+            7,
+            15
+          ]
+        },
+        "terms": [
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 2,
+            "row": 0
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 2,
+            "row": 1
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 2,
+            "row": 1
+          },
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 3,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 3,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 4,
+            "row": 1
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 5,
+            "row": 1
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 0,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 0,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 1,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 2,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 4,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 4,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 5,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 5,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 6,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 6,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 7,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 8,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 3,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 3,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 4,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 5,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 7,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 7,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 8,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 8,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 9,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 9,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 10,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 11,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 6,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 6,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 7,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 8,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 9,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 9,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 9,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 9,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 10,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 10,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 11,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 11,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 12,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 12,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 13,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 14,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 9,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 9,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 10,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 11,
+            "row": 5
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 12,
+            "row": 5
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 12,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 12,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 12,
+            "row": 5
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 13,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 13,
+            "row": 5
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 14,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 14,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 12,
+            "row": 6
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 12,
+            "row": 6
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 13,
+            "row": 6
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 14,
+            "row": 6
+          }
+        ],
+        "terms_included": true
+      },
+      "free_module_theorem": {
+        "not_claimed": [
+          "Emptiness of any family in all degrees",
+          "Existence of a global G-covariant",
+          "Vanishing of omega_3 on every residual-S3-equivariant state"
+        ],
+        "scope": "Free R-module / multi-Rees coefficient algebra \u2014 all base degrees at once.  Instantiated (m,d) dimensions are recovered by tensoring with Sym^{d-*} E_+^* (regression tables).",
+        "statement": "For every odd m\u22651, as free modules over R=Sym(E_+^*), L_1 : R^9 \u2192 R^5 and L_3 : R^15 \u2192 R^7 are given by the relative sparse quadratic matrices recorded below. At a generic Q-point of the leading jet space, rank L_1 = 5, nullity = 4, coker dim = 0; rank L_3 = 7, nullity = 8, coker dim = 0.",
+        "status": "PROVED_GENERIC_RANK"
+      },
+      "free_ranks": {
+        "L1_codomain": 5,
+        "L1_domain": 9,
+        "L3_codomain": 7,
+        "L3_domain": 15,
+        "a_m2": 8,
+        "leading_a_m": 4
+      },
+      "m": 1,
+      "next_obstruction_module": {
+        "coker_rank_generic": 0,
+        "description": "On the open of B_1 where rank L_3 is generic, the next obstruction is omega_3 \u2208 coker(L_3) \u2245 Q^{coker_dim} as a linear function of (a_{m+2}) for fixed (a_m, b_{m+1}), plus the quadratic/cubic F_+(b) term.  This is a coherent obstruction sheaf on B_1, not a covariant (house rule 3).",
+        "formal_parameters_surviving_stage1": {
+          "a_m": "leading jet on B_0 (residual-allowed)",
+          "a_{m+2}": "free relative parameter (stage r=2 has no exclusive equation)",
+          "b_{m+1}": "ker L_1, generic rank 4"
+        }
+      },
+      "omega1": {
+        "Fitting_ideal_of_coker": "Fitting_0(coker L_1) cuts the rank-drop locus where rank L_1 < 5; on the complement the kernel rank is constant 4.",
+        "R_1": "0",
+        "equation": "L_1(b_{m+1}) = 0",
+        "lifting_locus_B1": "Spec of the annihilator of coker is the whole base (always solvable: b=0 works); B_1 is the relative kernel bundle ker(L_1) \u2192 B_0, a linear space of rank generic_nullity=4 over the open where rank attains the generic value.",
+        "omega_1": "0 in coker(L_1) \u2014 RHS vanishes identically",
+        "r": 1,
+        "status": "COMPUTED_FREE_MODULE"
+      },
+      "omega3": {
+        "F_plus_model": "Hesse cubic z0\u00b3+z1\u00b3+z2\u00b3-3 z0 z1 z2 (smooth); L_3 itself is independent of F_+.  Transport of sample vanishing to the exact Klein F_+ requires the D12-isomorphism of polars \u2014 rank of L_3 transports; the particular R_3 column transforms by the same isomorphism on the F_+ summand.",
+        "R_3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+        "all_samples_omega3_in_image": true,
+        "any_sample_obstructed": false,
+        "equation": "L_3(b_{m+3}) = -R_3",
+        "interpretation": "If a sample has omega3 not in image, that specialized formal state does not lift through order 3m+3.  If all generic samples have omega3 in image, the obstruction vanishes on a Zariski-open of B_1 \u00d7 (a_{m+2}-space); the Fitting ideal of [L_3|R_3] then cuts a proper closed subset (possibly empty).",
+        "omega_3": "class of R_3 in coker(L_3)",
+        "r": 3,
+        "sample_fibers": [
+          {
+            "L1_nullity": 4,
+            "L3_rank": 7,
+            "R3_is_zero": false,
+            "R3_nnz": 6,
+            "augmented_rank": 7,
+            "b_in_ker_L1": true,
+            "bidegree_status": "free R-module level (all base degrees)",
+            "label": "sample_fiber_omega3_obstruction_over_Q",
+            "m": 1,
+            "omega3_in_image": true,
+            "seed": 1
+          },
+          {
+            "L1_nullity": 4,
+            "L3_rank": 7,
+            "R3_is_zero": false,
+            "R3_nnz": 6,
+            "augmented_rank": 7,
+            "b_in_ker_L1": true,
+            "bidegree_status": "free R-module level (all base degrees)",
+            "label": "sample_fiber_omega3_obstruction_over_Q",
+            "m": 1,
+            "omega3_in_image": true,
+            "seed": 2
+          },
+          {
+            "L1_nullity": 4,
+            "L3_rank": 7,
+            "R3_is_zero": false,
+            "R3_nnz": 6,
+            "augmented_rank": 7,
+            "b_in_ker_L1": true,
+            "bidegree_status": "free R-module level (all base degrees)",
+            "label": "sample_fiber_omega3_obstruction_over_Q",
+            "m": 1,
+            "omega3_in_image": true,
+            "seed": 3
+          },
+          {
+            "L1_nullity": 4,
+            "L3_rank": 7,
+            "R3_is_zero": false,
+            "R3_nnz": 6,
+            "augmented_rank": 7,
+            "b_in_ker_L1": true,
+            "bidegree_status": "free R-module level (all base degrees)",
+            "label": "sample_fiber_omega3_obstruction_over_Q",
+            "m": 1,
+            "omega3_in_image": true,
+            "seed": 4
+          },
+          {
+            "L1_nullity": 4,
+            "L3_rank": 7,
+            "R3_is_zero": false,
+            "R3_nnz": 6,
+            "augmented_rank": 7,
+            "b_in_ker_L1": true,
+            "bidegree_status": "free R-module level (all base degrees)",
+            "label": "sample_fiber_omega3_obstruction_over_Q",
+            "m": 1,
+            "omega3_in_image": true,
+            "seed": 5
+          }
+        ],
+        "status": "COMPUTED_FREE_MODULE_SAMPLES"
+      },
+      "representation_decomposition_before_elimination": {
+        "C2": "built into target eigenspaces (E_+ even order, E_- odd)",
+        "C3_block_ranks_sample": {
+          "L1": {
+            "blocks": {
+              "0": {
+                "coker_dim": 0,
+                "n_cols": 3,
+                "n_rows": 1,
+                "nullity": 2,
+                "rank": 1
+              },
+              "1": {
+                "coker_dim": 0,
+                "n_cols": 3,
+                "n_rows": 2,
+                "nullity": 1,
+                "rank": 2
+              },
+              "2": {
+                "coker_dim": 1,
+                "n_cols": 3,
+                "n_rows": 2,
+                "nullity": 2,
+                "rank": 1
+              }
+            },
+            "codomain_c3": {
+              "0": 1,
+              "1": 2,
+              "2": 2
+            },
+            "domain_c3": {
+              "0": 3,
+              "1": 3,
+              "2": 3
+            },
+            "full_rank": 5,
+            "m": 1,
+            "note": "Diagonal C3-weight blocks.  For a general (mixed-weight) leading jet, off-diagonal weight blocks can appear; for C3-semi-invariant leading jets (single weight), L is block-diagonal and this is exact.",
+            "r": 1,
+            "sum_block_ranks": 4
+          },
+          "L3": {
+            "blocks": {
+              "0": {
+                "coker_dim": 1,
+                "n_cols": 5,
+                "n_rows": 3,
+                "nullity": 3,
+                "rank": 2
+              },
+              "1": {
+                "coker_dim": 0,
+                "n_cols": 5,
+                "n_rows": 2,
+                "nullity": 3,
+                "rank": 2
+              },
+              "2": {
+                "coker_dim": 0,
+                "n_cols": 5,
+                "n_rows": 2,
+                "nullity": 3,
+                "rank": 2
+              }
+            },
+            "codomain_c3": {
+              "0": 3,
+              "1": 2,
+              "2": 2
+            },
+            "domain_c3": {
+              "0": 5,
+              "1": 5,
+              "2": 5
+            },
+            "full_rank": 7,
+            "m": 1,
+            "note": "Diagonal C3-weight blocks.  For a general (mixed-weight) leading jet, off-diagonal weight blocks can appear; for C3-semi-invariant leading jets (single weight), L is block-diagonal and this is exact.",
+            "r": 3,
+            "sum_block_ranks": 6
+          }
+        },
+        "D12_source_line": "ordinary vs det-twisted coupling is orthogonal to the normal-cone L_r (coefficient coupling on L_t^{src})",
+        "S3_triv_sign_std": "Full residual S3 projectors (triv/sign/2-dim) refine the C3-weight spaces by the reflection action; C3 already cuts rows before elimination.  Reflection projectors are recorded as the next refinement when a C3-isotypic block is large.",
+        "residual_C3_weights": {
+          "L1_codomain": {
+            "0": 1,
+            "1": 2,
+            "2": 2
+          },
+          "L1_domain": {
+            "0": 3,
+            "1": 3,
+            "2": 3
+          },
+          "L3_codomain": {
+            "0": 3,
+            "1": 2,
+            "2": 2
+          },
+          "L3_domain": {
+            "0": 5,
+            "1": 5,
+            "2": 5
+          },
+          "leading": {
+            "0": 2,
+            "1": 1,
+            "2": 1
+          }
+        }
+      }
+    },
+    "3": {
+      "B_isomorphism": {
+        "det_phi": "2",
+        "isomorphism": true,
+        "model": "B(z;y,y)=z0\u00b72 y0 y1 + z1\u00b7y1\u00b2 + z2\u00b7y0\u00b2",
+        "note": "D12-weight matching forces this shape up to scale on each weight component; nondegeneracy is scale-invariant.",
+        "status": "PROVED"
+      },
+      "L1_relative_sparse": {
+        "generic_rank": {
+          "bidegree_status": "free R-module level (all base degrees simultaneously); not a single (m,d) instantiation",
+          "generic_coker_Q": 0,
+          "generic_nullity_Q": 4,
+          "generic_rank_Q": 11,
+          "label": "generic_fiber_exact_rank_over_Q",
+          "m": 3,
+          "r": 1,
+          "rank_constant_on_samples": true,
+          "sample_ranks": [
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "samples": [
+            {
+              "coker": 0,
+              "nnz": 100,
+              "nullity": 4,
+              "rank": 11,
+              "seed": 1,
+              "shape": [
+                11,
+                15
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 105,
+              "nullity": 4,
+              "rank": 11,
+              "seed": 2,
+              "shape": [
+                11,
+                15
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 105,
+              "nullity": 4,
+              "rank": 11,
+              "seed": 3,
+              "shape": [
+                11,
+                15
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 105,
+              "nullity": 4,
+              "rank": 11,
+              "seed": 4,
+              "shape": [
+                11,
+                15
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 105,
+              "nullity": 4,
+              "rank": 11,
+              "seed": 5,
+              "shape": [
+                11,
+                15
+              ]
+            }
+          ],
+          "shape": [
+            11,
+            15
+          ]
+        },
+        "memory_gate": {
+          "dense_GB": 5e-06,
+          "limit_GB": 8.0,
+          "ok_dense": true,
+          "ok_sparse": true,
+          "sparse_GB": 1e-05
+        },
+        "symbolic_quadratic": {
+          "base_ring": "Q[A_0..A_7] (coordinate ring of free leading jets of order m; multi-Rees: each A_s is itself a section of O(d-m) when degree is restored)",
+          "codomain_basis": [
+            [
+              10,
+              0
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              8,
+              2
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              0,
+              10
+            ]
+          ],
+          "domain_basis": [
+            {
+              "Eplus_index": 0,
+              "y": [
+                4,
+                0
+              ]
+            },
+            {
+              "Eplus_index": 1,
+              "y": [
+                4,
+                0
+              ]
+            },
+            {
+              "Eplus_index": 2,
+              "y": [
+                4,
+                0
+              ]
+            },
+            {
+              "Eplus_index": 0,
+              "y": [
+                3,
+                1
+              ]
+            },
+            {
+              "Eplus_index": 1,
+              "y": [
+                3,
+                1
+              ]
+            },
+            {
+              "Eplus_index": 2,
+              "y": [
+                3,
+                1
+              ]
+            },
+            {
+              "Eplus_index": 0,
+              "y": [
+                2,
+                2
+              ]
+            },
+            {
+              "Eplus_index": 1,
+              "y": [
+                2,
+                2
+              ]
+            },
+            {
+              "Eplus_index": 2,
+              "y": [
+                2,
+                2
+              ]
+            },
+            {
+              "Eplus_index": 0,
+              "y": [
+                1,
+                3
+              ]
+            },
+            {
+              "Eplus_index": 1,
+              "y": [
+                1,
+                3
+              ]
+            },
+            {
+              "Eplus_index": 2,
+              "y": [
+                1,
+                3
+              ]
+            },
+            {
+              "Eplus_index": 0,
+              "y": [
+                0,
+                4
+              ]
+            },
+            {
+              "Eplus_index": 1,
+              "y": [
+                0,
+                4
+              ]
+            },
+            {
+              "Eplus_index": 2,
+              "y": [
+                0,
+                4
+              ]
+            }
+          ],
+          "format": "relative sparse: entry(row,col) = sum_{p,q} c_{row,col,p,q} A_p A_q",
+          "leading_basis": [
+            {
+              "Eminus_index": 0,
+              "y": [
+                3,
+                0
+              ]
+            },
+            {
+              "Eminus_index": 1,
+              "y": [
+                3,
+                0
+              ]
+            },
+            {
+              "Eminus_index": 0,
+              "y": [
+                2,
+                1
+              ]
+            },
+            {
+              "Eminus_index": 1,
+              "y": [
+                2,
+                1
+              ]
+            },
+            {
+              "Eminus_index": 0,
+              "y": [
+                1,
+                2
+              ]
+            },
+            {
+              "Eminus_index": 1,
+              "y": [
+                1,
+                2
+              ]
+            },
+            {
+              "Eminus_index": 0,
+              "y": [
+                0,
+                3
+              ]
+            },
+            {
+              "Eminus_index": 1,
+              "y": [
+                0,
+                3
+              ]
+            }
+          ],
+          "m": 3,
+          "n_leading_coeffs": 8,
+          "nnz_quadratic_terms": 320,
+          "operator": "L_1(b) = B(b; a_m, a_m)",
+          "r": 1,
+          "shape": [
+            11,
+            15
+          ]
+        },
+        "terms": [
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 2,
+            "row": 0
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 2,
+            "row": 1
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 2,
+            "row": 1
+          },
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 3,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 3,
+            "row": 1
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 4,
+            "row": 1
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 5,
+            "row": 1
+          },
+          {
+            "A_p": 0,
+            "A_q": 5,
+            "c": "1",
+            "col": 0,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 4,
+            "c": "1",
+            "col": 0,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 0,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 0,
+            "row": 2
+          },
+          {
+            "A_p": 4,
+            "A_q": 1,
+            "c": "1",
+            "col": 0,
+            "row": 2
+          },
+          {
+            "A_p": 5,
+            "A_q": 0,
+            "c": "1",
+            "col": 0,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 5,
+            "c": "1",
+            "col": 1,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 1,
+            "row": 2
+          },
+          {
+            "A_p": 5,
+            "A_q": 1,
+            "c": "1",
+            "col": 1,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 4,
+            "c": "1",
+            "col": 2,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 2,
+            "row": 2
+          },
+          {
+            "A_p": 4,
+            "A_q": 0,
+            "c": "1",
+            "col": 2,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 3,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 4,
+            "row": 2
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 4,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 5,
+            "row": 2
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 5,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 6,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 6,
+            "row": 2
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 7,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 8,
+            "row": 2
+          },
+          {
+            "A_p": 0,
+            "A_q": 7,
+            "c": "1",
+            "col": 0,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 6,
+            "c": "1",
+            "col": 0,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 5,
+            "c": "1",
+            "col": 0,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 4,
+            "c": "1",
+            "col": 0,
+            "row": 3
+          },
+          {
+            "A_p": 4,
+            "A_q": 3,
+            "c": "1",
+            "col": 0,
+            "row": 3
+          },
+          {
+            "A_p": 5,
+            "A_q": 2,
+            "c": "1",
+            "col": 0,
+            "row": 3
+          },
+          {
+            "A_p": 6,
+            "A_q": 1,
+            "c": "1",
+            "col": 0,
+            "row": 3
+          },
+          {
+            "A_p": 7,
+            "A_q": 0,
+            "c": "1",
+            "col": 0,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 7,
+            "c": "1",
+            "col": 1,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 5,
+            "c": "1",
+            "col": 1,
+            "row": 3
+          },
+          {
+            "A_p": 5,
+            "A_q": 3,
+            "c": "1",
+            "col": 1,
+            "row": 3
+          },
+          {
+            "A_p": 7,
+            "A_q": 1,
+            "c": "1",
+            "col": 1,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 6,
+            "c": "1",
+            "col": 2,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 4,
+            "c": "1",
+            "col": 2,
+            "row": 3
+          },
+          {
+            "A_p": 4,
+            "A_q": 2,
+            "c": "1",
+            "col": 2,
+            "row": 3
+          },
+          {
+            "A_p": 6,
+            "A_q": 0,
+            "c": "1",
+            "col": 2,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 5,
+            "c": "1",
+            "col": 3,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 4,
+            "c": "1",
+            "col": 3,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 3,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 3,
+            "row": 3
+          },
+          {
+            "A_p": 4,
+            "A_q": 1,
+            "c": "1",
+            "col": 3,
+            "row": 3
+          },
+          {
+            "A_p": 5,
+            "A_q": 0,
+            "c": "1",
+            "col": 3,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 5,
+            "c": "1",
+            "col": 4,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 4,
+            "row": 3
+          },
+          {
+            "A_p": 5,
+            "A_q": 1,
+            "c": "1",
+            "col": 4,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 4,
+            "c": "1",
+            "col": 5,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 5,
+            "row": 3
+          },
+          {
+            "A_p": 4,
+            "A_q": 0,
+            "c": "1",
+            "col": 5,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 6,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 7,
+            "row": 3
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 7,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 8,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 8,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 9,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 9,
+            "row": 3
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 10,
+            "row": 3
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 11,
+            "row": 3
+          },
+          {
+            "A_p": 2,
+            "A_q": 7,
+            "c": "1",
+            "col": 0,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 6,
+            "c": "1",
+            "col": 0,
+            "row": 4
+          },
+          {
+            "A_p": 4,
+            "A_q": 5,
+            "c": "1",
+            "col": 0,
+            "row": 4
+          },
+          {
+            "A_p": 5,
+            "A_q": 4,
+            "c": "1",
+            "col": 0,
+            "row": 4
+          },
+          {
+            "A_p": 6,
+            "A_q": 3,
+            "c": "1",
+            "col": 0,
+            "row": 4
+          },
+          {
+            "A_p": 7,
+            "A_q": 2,
+            "c": "1",
+            "col": 0,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 7,
+            "c": "1",
+            "col": 1,
+            "row": 4
+          },
+          {
+            "A_p": 5,
+            "A_q": 5,
+            "c": "1",
+            "col": 1,
+            "row": 4
+          },
+          {
+            "A_p": 7,
+            "A_q": 3,
+            "c": "1",
+            "col": 1,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 6,
+            "c": "1",
+            "col": 2,
+            "row": 4
+          },
+          {
+            "A_p": 4,
+            "A_q": 4,
+            "c": "1",
+            "col": 2,
+            "row": 4
+          },
+          {
+            "A_p": 6,
+            "A_q": 2,
+            "c": "1",
+            "col": 2,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 7,
+            "c": "1",
+            "col": 3,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 6,
+            "c": "1",
+            "col": 3,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 5,
+            "c": "1",
+            "col": 3,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 4,
+            "c": "1",
+            "col": 3,
+            "row": 4
+          },
+          {
+            "A_p": 4,
+            "A_q": 3,
+            "c": "1",
+            "col": 3,
+            "row": 4
+          },
+          {
+            "A_p": 5,
+            "A_q": 2,
+            "c": "1",
+            "col": 3,
+            "row": 4
+          },
+          {
+            "A_p": 6,
+            "A_q": 1,
+            "c": "1",
+            "col": 3,
+            "row": 4
+          },
+          {
+            "A_p": 7,
+            "A_q": 0,
+            "c": "1",
+            "col": 3,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 7,
+            "c": "1",
+            "col": 4,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 5,
+            "c": "1",
+            "col": 4,
+            "row": 4
+          },
+          {
+            "A_p": 5,
+            "A_q": 3,
+            "c": "1",
+            "col": 4,
+            "row": 4
+          },
+          {
+            "A_p": 7,
+            "A_q": 1,
+            "c": "1",
+            "col": 4,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 6,
+            "c": "1",
+            "col": 5,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 4,
+            "c": "1",
+            "col": 5,
+            "row": 4
+          },
+          {
+            "A_p": 4,
+            "A_q": 2,
+            "c": "1",
+            "col": 5,
+            "row": 4
+          },
+          {
+            "A_p": 6,
+            "A_q": 0,
+            "c": "1",
+            "col": 5,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 5,
+            "c": "1",
+            "col": 6,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 4,
+            "c": "1",
+            "col": 6,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 6,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 6,
+            "row": 4
+          },
+          {
+            "A_p": 4,
+            "A_q": 1,
+            "c": "1",
+            "col": 6,
+            "row": 4
+          },
+          {
+            "A_p": 5,
+            "A_q": 0,
+            "c": "1",
+            "col": 6,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 5,
+            "c": "1",
+            "col": 7,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 7,
+            "row": 4
+          },
+          {
+            "A_p": 5,
+            "A_q": 1,
+            "c": "1",
+            "col": 7,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 4,
+            "c": "1",
+            "col": 8,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 8,
+            "row": 4
+          },
+          {
+            "A_p": 4,
+            "A_q": 0,
+            "c": "1",
+            "col": 8,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 9,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 9,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 9,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 9,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 10,
+            "row": 4
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 10,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 11,
+            "row": 4
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 11,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 1,
+            "c": "1",
+            "col": 12,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 0,
+            "c": "1",
+            "col": 12,
+            "row": 4
+          },
+          {
+            "A_p": 1,
+            "A_q": 1,
+            "c": "1",
+            "col": 13,
+            "row": 4
+          },
+          {
+            "A_p": 0,
+            "A_q": 0,
+            "c": "1",
+            "col": 14,
+            "row": 4
+          },
+          {
+            "A_p": 4,
+            "A_q": 7,
+            "c": "1",
+            "col": 0,
+            "row": 5
+          },
+          {
+            "A_p": 5,
+            "A_q": 6,
+            "c": "1",
+            "col": 0,
+            "row": 5
+          },
+          {
+            "A_p": 6,
+            "A_q": 5,
+            "c": "1",
+            "col": 0,
+            "row": 5
+          },
+          {
+            "A_p": 7,
+            "A_q": 4,
+            "c": "1",
+            "col": 0,
+            "row": 5
+          },
+          {
+            "A_p": 5,
+            "A_q": 7,
+            "c": "1",
+            "col": 1,
+            "row": 5
+          },
+          {
+            "A_p": 7,
+            "A_q": 5,
+            "c": "1",
+            "col": 1,
+            "row": 5
+          },
+          {
+            "A_p": 4,
+            "A_q": 6,
+            "c": "1",
+            "col": 2,
+            "row": 5
+          },
+          {
+            "A_p": 6,
+            "A_q": 4,
+            "c": "1",
+            "col": 2,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 7,
+            "c": "1",
+            "col": 3,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 6,
+            "c": "1",
+            "col": 3,
+            "row": 5
+          },
+          {
+            "A_p": 4,
+            "A_q": 5,
+            "c": "1",
+            "col": 3,
+            "row": 5
+          },
+          {
+            "A_p": 5,
+            "A_q": 4,
+            "c": "1",
+            "col": 3,
+            "row": 5
+          },
+          {
+            "A_p": 6,
+            "A_q": 3,
+            "c": "1",
+            "col": 3,
+            "row": 5
+          },
+          {
+            "A_p": 7,
+            "A_q": 2,
+            "c": "1",
+            "col": 3,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 7,
+            "c": "1",
+            "col": 4,
+            "row": 5
+          },
+          {
+            "A_p": 5,
+            "A_q": 5,
+            "c": "1",
+            "col": 4,
+            "row": 5
+          },
+          {
+            "A_p": 7,
+            "A_q": 3,
+            "c": "1",
+            "col": 4,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 6,
+            "c": "1",
+            "col": 5,
+            "row": 5
+          },
+          {
+            "A_p": 4,
+            "A_q": 4,
+            "c": "1",
+            "col": 5,
+            "row": 5
+          },
+          {
+            "A_p": 6,
+            "A_q": 2,
+            "c": "1",
+            "col": 5,
+            "row": 5
+          },
+          {
+            "A_p": 0,
+            "A_q": 7,
+            "c": "1",
+            "col": 6,
+            "row": 5
+          },
+          {
+            "A_p": 1,
+            "A_q": 6,
+            "c": "1",
+            "col": 6,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 5,
+            "c": "1",
+            "col": 6,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 4,
+            "c": "1",
+            "col": 6,
+            "row": 5
+          },
+          {
+            "A_p": 4,
+            "A_q": 3,
+            "c": "1",
+            "col": 6,
+            "row": 5
+          },
+          {
+            "A_p": 5,
+            "A_q": 2,
+            "c": "1",
+            "col": 6,
+            "row": 5
+          },
+          {
+            "A_p": 6,
+            "A_q": 1,
+            "c": "1",
+            "col": 6,
+            "row": 5
+          },
+          {
+            "A_p": 7,
+            "A_q": 0,
+            "c": "1",
+            "col": 6,
+            "row": 5
+          },
+          {
+            "A_p": 1,
+            "A_q": 7,
+            "c": "1",
+            "col": 7,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 5,
+            "c": "1",
+            "col": 7,
+            "row": 5
+          },
+          {
+            "A_p": 5,
+            "A_q": 3,
+            "c": "1",
+            "col": 7,
+            "row": 5
+          },
+          {
+            "A_p": 7,
+            "A_q": 1,
+            "c": "1",
+            "col": 7,
+            "row": 5
+          },
+          {
+            "A_p": 0,
+            "A_q": 6,
+            "c": "1",
+            "col": 8,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 4,
+            "c": "1",
+            "col": 8,
+            "row": 5
+          },
+          {
+            "A_p": 4,
+            "A_q": 2,
+            "c": "1",
+            "col": 8,
+            "row": 5
+          },
+          {
+            "A_p": 6,
+            "A_q": 0,
+            "c": "1",
+            "col": 8,
+            "row": 5
+          },
+          {
+            "A_p": 0,
+            "A_q": 5,
+            "c": "1",
+            "col": 9,
+            "row": 5
+          },
+          {
+            "A_p": 1,
+            "A_q": 4,
+            "c": "1",
+            "col": 9,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 9,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 9,
+            "row": 5
+          },
+          {
+            "A_p": 4,
+            "A_q": 1,
+            "c": "1",
+            "col": 9,
+            "row": 5
+          },
+          {
+            "A_p": 5,
+            "A_q": 0,
+            "c": "1",
+            "col": 9,
+            "row": 5
+          },
+          {
+            "A_p": 1,
+            "A_q": 5,
+            "c": "1",
+            "col": 10,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 10,
+            "row": 5
+          },
+          {
+            "A_p": 5,
+            "A_q": 1,
+            "c": "1",
+            "col": 10,
+            "row": 5
+          },
+          {
+            "A_p": 0,
+            "A_q": 4,
+            "c": "1",
+            "col": 11,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 11,
+            "row": 5
+          },
+          {
+            "A_p": 4,
+            "A_q": 0,
+            "c": "1",
+            "col": 11,
+            "row": 5
+          },
+          {
+            "A_p": 0,
+            "A_q": 3,
+            "c": "1",
+            "col": 12,
+            "row": 5
+          },
+          {
+            "A_p": 1,
+            "A_q": 2,
+            "c": "1",
+            "col": 12,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 1,
+            "c": "1",
+            "col": 12,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 0,
+            "c": "1",
+            "col": 12,
+            "row": 5
+          },
+          {
+            "A_p": 1,
+            "A_q": 3,
+            "c": "1",
+            "col": 13,
+            "row": 5
+          },
+          {
+            "A_p": 3,
+            "A_q": 1,
+            "c": "1",
+            "col": 13,
+            "row": 5
+          },
+          {
+            "A_p": 0,
+            "A_q": 2,
+            "c": "1",
+            "col": 14,
+            "row": 5
+          },
+          {
+            "A_p": 2,
+            "A_q": 0,
+            "c": "1",
+            "col": 14,
+            "row": 5
+          },
+          {
+            "A_p": 6,
+            "A_q": 7,
+            "c": "1",
+            "col": 0,
+            "row": 6
+          },
+          {
+            "A_p": 7,
+            "A_q": 6,
+            "c": "1",
+            "col": 0,
+            "row": 6
+          },
+          {
+            "A_p": 7,
+            "A_q": 7,
+            "c": "1",
+            "col": 1,
+            "row": 6
+          },
+          {
+            "A_p": 6,
+            "A_q": 6,
+            "c": "1",
+            "col": 2,
+            "row": 6
+          },
+          {
+            "A_p": 4,
+            "A_q": 7,
+            "c": "1",
+            "col": 3,
+            "row": 6
+          },
+          {
+            "A_p": 5,
+            "A_q": 6,
+            "c": "1",
+            "col": 3,
+            "row": 6
+          },
+          {
+            "A_p": 6,
+            "A_q": 5,
+            "c": "1",
+            "col": 3,
+            "row": 6
+          },
+          {
+            "A_p": 7,
+            "A_q": 4,
+            "c": "1",
+            "col": 3,
+            "row": 6
+          },
+          {
+            "A_p": 5,
+            "A_q": 7,
+            "c": "1",
+            "col": 4,
+            "row": 6
+          },
+          {
+            "A_p": 7,
+            "A_q": 5,
+            "c": "1",
+            "col": 4,
+            "row": 6
+          },
+          {
+            "A_p": 4,
+            "A_q": 6,
+            "c": "1",
+            "col": 5,
+            "row": 6
+          },
+          {
+            "A_p": 6,
+            "A_q": 4,
+            "c": "1",
+            "col": 5,
+            "row": 6
+          },
+          {
+            "A_p": 2,
+            "A_q": 7,
+            "c": "1",
+            "col": 6,
+            "row": 6
+          },
+          {
+            "A_p": 3,
+            "A_q": 6,
+            "c": "1",
+            "col": 6,
+            "row": 6
+          },
+          {
+            "A_p": 4,
+            "A_q": 5,
+            "c": "1",
+            "col": 6,
+            "row": 6
+          },
+          {
+            "A_p": 5,
+            "A_q": 4,
+            "c": "1",
+            "col": 6,
+            "row": 6
+          },
+          {
+            "A_p": 6,
+            "A_q": 3,
+            "c": "1",
+            "col": 6,
+            "row": 6
+          },
+          {
+            "A_p": 7,
+            "A_q": 2,
+            "c": "1",
+            "col": 6,
+            "row": 6
+          },
+          {
+            "A_p": 3,
+            "A_q": 7,
+            "c": "1",
+            "col": 7,
+            "row": 6
+          },
+          {
+            "A_p": 5,
+            "A_q": 5,
+            "c": "1",
+            "col": 7,
+            "row": 6
+          },
+          {
+            "A_p": 7,
+            "A_q": 3,
+            "c": "1",
+            "col": 7,
+            "row": 6
+          },
+          {
+            "A_p": 2,
+            "A_q": 6,
+            "c": "1",
+            "col": 8,
+            "row": 6
+          },
+          {
+            "A_p": 4,
+            "A_q": 4,
+            "c": "1",
+            "col": 8,
+            "row": 6
+          },
+          {
+            "A_p": 6,
+            "A_q": 2,
+            "c": "1",
+            "col": 8,
+            "row": 6
+          },
+          {
+            "A_p": 0,
+            "A_q": 7,
+            "c": "1",
+            "col": 9,
+            "row": 6
+          },
+          {
+            "A_p": 1,
+            "A_q": 6,
+            "c": "1",
+            "col": 9,
+            "row": 6
+          },
+          {
+            "A_p": 2,
+            "A_q": 5,
+            "c": "1",
+            "col": 9,
+            "row": 6
+          },
+          {
+            "A_p": 3,
+            "A_q": 4,
+            "c": "1",
+            "col": 9,
+            "row": 6
+          },
+          {
+            "A_p": 4,
+            "A_q": 3,
+            "c": "1",
+            "col": 9,
+            "row": 6
+          },
+          {
+            "A_p": 5,
+            "A_q": 2,
+            "c": "1",
+            "col": 9,
+            "row": 6
+          },
+          {
+            "A_p": 6,
+            "A_q": 1,
+            "c": "1",
+            "col": 9,
+            "row": 6
+          },
+          {
+            "A_p": 7,
+            "A_q": 0,
+            "c": "1",
+            "col": 9,
+            "row": 6
+          },
+          {
+            "A_p": 1,
+            "A_q": 7,
+            "c": "1",
+            "col": 10,
+            "row": 6
+          },
+          {
+            "A_p": 3,
+            "A_q": 5,
+            "c": "1",
+            "col": 10,
+            "row": 6
+          },
+          {
+            "A_p": 5,
+            "A_q": 3,
+            "c": "1",
+            "col": 10,
+            "row": 6
+          },
+          {
+            "A_p": 7,
+            "A_q": 1,
+            "c": "1",
+            "col": 10,
+            "row": 6
+          },
+          {
+            "A_p": 0,
+            "A_q": 6,
+            "c": "1",
+            "col": 11,
+            "row": 6
+          },
+          {
+            "A_p": 2,
+            "A_q": 4,
+            "c": "1",
+            "col": 11,
+            "row": 6
+          },
+          {
+            "A_p": 4,
+            "A_q": 2,
+            "c": "1",
+            "col": 11,
+            "row": 6
+          },
+          {
+            "A_p": 6,
+            "A_q": 0,
+            "c": "1",
+            "col": 11,
+            "row": 6
+          },
+          {
+            "A_p": 0,
+            "A_q": 5,
+            "c": "1",
+            "col": 12,
+            "row": 6
+          },
+          {
+            "A_p": 1,
+            "A_q": 4,
+            "c": "1",
+            "col": 12,
+            "row": 6
+          },
+          {
+            "A_p": 2,
+            "A_q": 3,
+            "c": "1",
+            "col": 12,
+            "row": 6
+          },
+          {
+            "A_p": 3,
+            "A_q": 2,
+            "c": "1",
+            "col": 12,
+            "row": 6
+          },
+          {
+            "A_p": 4,
+            "A_q": 1,
+            "c": "1",
+            "col": 12,
+            "row": 6
+          },
+          {
+            "A_p": 5,
+            "A_q": 0,
+            "c": "1",
+            "col": 12,
+            "row": 6
+          },
+          {
+            "A_p": 1,
+            "A_q": 5,
+            "c": "1",
+            "col": 13,
+            "row": 6
+          },
+          {
+            "A_p": 3,
+            "A_q": 3,
+            "c": "1",
+            "col": 13,
+            "row": 6
+          },
+          {
+            "A_p": 5,
+            "A_q": 1,
+            "c": "1",
+            "col": 13,
+            "row": 6
+          },
+          {
+            "A_p": 0,
+            "A_q": 4,
+            "c": "1",
+            "col": 14,
+            "row": 6
+          },
+          {
+            "A_p": 2,
+            "A_q": 2,
+            "c": "1",
+            "col": 14,
+            "row": 6
+          },
+          {
+            "A_p": 4,
+            "A_q": 0,
+            "c": "1",
+            "col": 14,
+            "row": 6
+          },
+          {
+            "A_p": 6,
+            "A_q": 7,
+            "c": "1",
+            "col": 3,
+            "row": 7
+          },
+          {
+            "A_p": 7,
+            "A_q": 6,
+            "c": "1",
+            "col": 3,
+            "row": 7
+          },
+          {
+            "A_p": 7,
+            "A_q": 7,
+            "c": "1",
+            "col": 4,
+            "row": 7
+          },
+          {
+            "A_p": 6,
+            "A_q": 6,
+            "c": "1",
+            "col": 5,
+            "row": 7
+          },
+          {
+            "A_p": 4,
+            "A_q": 7,
+            "c": "1",
+            "col": 6,
+            "row": 7
+          },
+          {
+            "A_p": 5,
+            "A_q": 6,
+            "c": "1",
+            "col": 6,
+            "row": 7
+          },
+          {
+            "A_p": 6,
+            "A_q": 5,
+            "c": "1",
+            "col": 6,
+            "row": 7
+          },
+          {
+            "A_p": 7,
+            "A_q": 4,
+            "c": "1",
+            "col": 6,
+            "row": 7
+          },
+          {
+            "A_p": 5,
+            "A_q": 7,
+            "c": "1",
+            "col": 7,
+            "row": 7
+          },
+          {
+            "A_p": 7,
+            "A_q": 5,
+            "c": "1",
+            "col": 7,
+            "row": 7
+          },
+          {
+            "A_p": 4,
+            "A_q": 6,
+            "c": "1",
+            "col": 8,
+            "row": 7
+          },
+          {
+            "A_p": 6,
+            "A_q": 4,
+            "c": "1",
+            "col": 8,
+            "row": 7
+          },
+          {
+            "A_p": 2,
+            "A_q": 7,
+            "c": "1",
+            "col": 9,
+            "row": 7
+          },
+          {
+            "A_p": 3,
+            "A_q": 6,
+            "c": "1",
+            "col": 9,
+            "row": 7
+          },
+          {
+            "A_p": 4,
+            "A_q": 5,
+            "c": "1",
+            "col": 9,
+            "row": 7
+          },
+          {
+            "A_p": 5,
+            "A_q": 4,
+            "c": "1",
+            "col": 9,
+            "row": 7
+          },
+          {
+            "A_p": 6,
+            "A_q": 3,
+            "c": "1",
+            "col": 9,
+            "row": 7
+          },
+          {
+            "A_p": 7,
+            "A_q": 2,
+            "c": "1",
+            "col": 9,
+            "row": 7
+          },
+          {
+            "A_p": 3,
+            "A_q": 7,
+            "c": "1",
+            "col": 10,
+            "row": 7
+          },
+          {
+            "A_p": 5,
+            "A_q": 5,
+            "c": "1",
+            "col": 10,
+            "row": 7
+          },
+          {
+            "A_p": 7,
+            "A_q": 3,
+            "c": "1",
+            "col": 10,
+            "row": 7
+          },
+          {
+            "A_p": 2,
+            "A_q": 6,
+            "c": "1",
+            "col": 11,
+            "row": 7
+          },
+          {
+            "A_p": 4,
+            "A_q": 4,
+            "c": "1",
+            "col": 11,
+            "row": 7
+          },
+          {
+            "A_p": 6,
+            "A_q": 2,
+            "c": "1",
+            "col": 11,
+            "row": 7
+          },
+          {
+            "A_p": 0,
+            "A_q": 7,
+            "c": "1",
+            "col": 12,
+            "row": 7
+          },
+          {
+            "A_p": 1,
+            "A_q": 6,
+            "c": "1",
+            "col": 12,
+            "row": 7
+          },
+          {
+            "A_p": 2,
+            "A_q": 5,
+            "c": "1",
+            "col": 12,
+            "row": 7
+          },
+          {
+            "A_p": 3,
+            "A_q": 4,
+            "c": "1",
+            "col": 12,
+            "row": 7
+          },
+          {
+            "A_p": 4,
+            "A_q": 3,
+            "c": "1",
+            "col": 12,
+            "row": 7
+          },
+          {
+            "A_p": 5,
+            "A_q": 2,
+            "c": "1",
+            "col": 12,
+            "row": 7
+          },
+          {
+            "A_p": 6,
+            "A_q": 1,
+            "c": "1",
+            "col": 12,
+            "row": 7
+          },
+          {
+            "A_p": 7,
+            "A_q": 0,
+            "c": "1",
+            "col": 12,
+            "row": 7
+          },
+          {
+            "A_p": 1,
+            "A_q": 7,
+            "c": "1",
+            "col": 13,
+            "row": 7
+          },
+          {
+            "A_p": 3,
+            "A_q": 5,
+            "c": "1",
+            "col": 13,
+            "row": 7
+          },
+          {
+            "A_p": 5,
+            "A_q": 3,
+            "c": "1",
+            "col": 13,
+            "row": 7
+          },
+          {
+            "A_p": 7,
+            "A_q": 1,
+            "c": "1",
+            "col": 13,
+            "row": 7
+          },
+          {
+            "A_p": 0,
+            "A_q": 6,
+            "c": "1",
+            "col": 14,
+            "row": 7
+          },
+          {
+            "A_p": 2,
+            "A_q": 4,
+            "c": "1",
+            "col": 14,
+            "row": 7
+          },
+          {
+            "A_p": 4,
+            "A_q": 2,
+            "c": "1",
+            "col": 14,
+            "row": 7
+          },
+          {
+            "A_p": 6,
+            "A_q": 0,
+            "c": "1",
+            "col": 14,
+            "row": 7
+          },
+          {
+            "A_p": 6,
+            "A_q": 7,
+            "c": "1",
+            "col": 6,
+            "row": 8
+          },
+          {
+            "A_p": 7,
+            "A_q": 6,
+            "c": "1",
+            "col": 6,
+            "row": 8
+          },
+          {
+            "A_p": 7,
+            "A_q": 7,
+            "c": "1",
+            "col": 7,
+            "row": 8
+          },
+          {
+            "A_p": 6,
+            "A_q": 6,
+            "c": "1",
+            "col": 8,
+            "row": 8
+          },
+          {
+            "A_p": 4,
+            "A_q": 7,
+            "c": "1",
+            "col": 9,
+            "row": 8
+          },
+          {
+            "A_p": 5,
+            "A_q": 6,
+            "c": "1",
+            "col": 9,
+            "row": 8
+          },
+          {
+            "A_p": 6,
+            "A_q": 5,
+            "c": "1",
+            "col": 9,
+            "row": 8
+          },
+          {
+            "A_p": 7,
+            "A_q": 4,
+            "c": "1",
+            "col": 9,
+            "row": 8
+          },
+          {
+            "A_p": 5,
+            "A_q": 7,
+            "c": "1",
+            "col": 10,
+            "row": 8
+          },
+          {
+            "A_p": 7,
+            "A_q": 5,
+            "c": "1",
+            "col": 10,
+            "row": 8
+          },
+          {
+            "A_p": 4,
+            "A_q": 6,
+            "c": "1",
+            "col": 11,
+            "row": 8
+          },
+          {
+            "A_p": 6,
+            "A_q": 4,
+            "c": "1",
+            "col": 11,
+            "row": 8
+          },
+          {
+            "A_p": 2,
+            "A_q": 7,
+            "c": "1",
+            "col": 12,
+            "row": 8
+          },
+          {
+            "A_p": 3,
+            "A_q": 6,
+            "c": "1",
+            "col": 12,
+            "row": 8
+          },
+          {
+            "A_p": 4,
+            "A_q": 5,
+            "c": "1",
+            "col": 12,
+            "row": 8
+          },
+          {
+            "A_p": 5,
+            "A_q": 4,
+            "c": "1",
+            "col": 12,
+            "row": 8
+          },
+          {
+            "A_p": 6,
+            "A_q": 3,
+            "c": "1",
+            "col": 12,
+            "row": 8
+          },
+          {
+            "A_p": 7,
+            "A_q": 2,
+            "c": "1",
+            "col": 12,
+            "row": 8
+          },
+          {
+            "A_p": 3,
+            "A_q": 7,
+            "c": "1",
+            "col": 13,
+            "row": 8
+          },
+          {
+            "A_p": 5,
+            "A_q": 5,
+            "c": "1",
+            "col": 13,
+            "row": 8
+          },
+          {
+            "A_p": 7,
+            "A_q": 3,
+            "c": "1",
+            "col": 13,
+            "row": 8
+          },
+          {
+            "A_p": 2,
+            "A_q": 6,
+            "c": "1",
+            "col": 14,
+            "row": 8
+          },
+          {
+            "A_p": 4,
+            "A_q": 4,
+            "c": "1",
+            "col": 14,
+            "row": 8
+          },
+          {
+            "A_p": 6,
+            "A_q": 2,
+            "c": "1",
+            "col": 14,
+            "row": 8
+          },
+          {
+            "A_p": 6,
+            "A_q": 7,
+            "c": "1",
+            "col": 9,
+            "row": 9
+          },
+          {
+            "A_p": 7,
+            "A_q": 6,
+            "c": "1",
+            "col": 9,
+            "row": 9
+          },
+          {
+            "A_p": 7,
+            "A_q": 7,
+            "c": "1",
+            "col": 10,
+            "row": 9
+          },
+          {
+            "A_p": 6,
+            "A_q": 6,
+            "c": "1",
+            "col": 11,
+            "row": 9
+          },
+          {
+            "A_p": 4,
+            "A_q": 7,
+            "c": "1",
+            "col": 12,
+            "row": 9
+          },
+          {
+            "A_p": 5,
+            "A_q": 6,
+            "c": "1",
+            "col": 12,
+            "row": 9
+          },
+          {
+            "A_p": 6,
+            "A_q": 5,
+            "c": "1",
+            "col": 12,
+            "row": 9
+          },
+          {
+            "A_p": 7,
+            "A_q": 4,
+            "c": "1",
+            "col": 12,
+            "row": 9
+          },
+          {
+            "A_p": 5,
+            "A_q": 7,
+            "c": "1",
+            "col": 13,
+            "row": 9
+          },
+          {
+            "A_p": 7,
+            "A_q": 5,
+            "c": "1",
+            "col": 13,
+            "row": 9
+          },
+          {
+            "A_p": 4,
+            "A_q": 6,
+            "c": "1",
+            "col": 14,
+            "row": 9
+          },
+          {
+            "A_p": 6,
+            "A_q": 4,
+            "c": "1",
+            "col": 14,
+            "row": 9
+          },
+          {
+            "A_p": 6,
+            "A_q": 7,
+            "c": "1",
+            "col": 12,
+            "row": 10
+          },
+          {
+            "A_p": 7,
+            "A_q": 6,
+            "c": "1",
+            "col": 12,
+            "row": 10
+          },
+          {
+            "A_p": 7,
+            "A_q": 7,
+            "c": "1",
+            "col": 13,
+            "row": 10
+          },
+          {
+            "A_p": 6,
+            "A_q": 6,
+            "c": "1",
+            "col": 14,
+            "row": 10
+          }
+        ],
+        "terms_included": true
+      },
+      "L3_relative_sparse": {
+        "generic_rank": {
+          "bidegree_status": "free R-module level (all base degrees simultaneously); not a single (m,d) instantiation",
+          "generic_coker_Q": 0,
+          "generic_nullity_Q": 8,
+          "generic_rank_Q": 13,
+          "label": "generic_fiber_exact_rank_over_Q",
+          "m": 3,
+          "r": 3,
+          "rank_constant_on_samples": true,
+          "sample_ranks": [
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "samples": [
+            {
+              "coker": 0,
+              "nnz": 140,
+              "nullity": 8,
+              "rank": 13,
+              "seed": 1,
+              "shape": [
+                13,
+                21
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 147,
+              "nullity": 8,
+              "rank": 13,
+              "seed": 2,
+              "shape": [
+                13,
+                21
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 147,
+              "nullity": 8,
+              "rank": 13,
+              "seed": 3,
+              "shape": [
+                13,
+                21
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 147,
+              "nullity": 8,
+              "rank": 13,
+              "seed": 4,
+              "shape": [
+                13,
+                21
+              ]
+            },
+            {
+              "coker": 0,
+              "nnz": 147,
+              "nullity": 8,
+              "rank": 13,
+              "seed": 5,
+              "shape": [
+                13,
+                21
+              ]
+            }
+          ],
+          "shape": [
+            13,
+            21
+          ]
+        },
+        "memory_gate": {
+          "dense_GB": 9e-06,
+          "limit_GB": 8.0,
+          "ok_dense": true,
+          "ok_sparse": true,
+          "sparse_GB": 1.4e-05
+        },
+        "symbolic_quadratic": {
+          "base_ring": "Q[A_0..A_7] (coordinate ring of free leading jets of order m; multi-Rees: each A_s is itself a section of O(d-m) when degree is restored)",
+          "format": "relative sparse: entry(row,col) = sum_{p,q} c_{row,col,p,q} A_p A_q",
+          "m": 3,
+          "n_leading_coeffs": 8,
+          "nnz_quadratic_terms": 448,
+          "operator": "L_3(b) = B(b; a_m, a_m)",
+          "r": 3,
+          "shape": [
+            13,
+            21
+          ]
+        },
+        "terms": "omitted_m=3_nnz=448",
+        "terms_included": false
+      },
+      "free_module_theorem": {
+        "not_claimed": [
+          "Emptiness of any family in all degrees",
+          "Existence of a global G-covariant",
+          "Vanishing of omega_3 on every residual-S3-equivariant state"
+        ],
+        "scope": "Free R-module / multi-Rees coefficient algebra \u2014 all base degrees at once.  Instantiated (m,d) dimensions are recovered by tensoring with Sym^{d-*} E_+^* (regression tables).",
+        "statement": "For every odd m\u22651, as free modules over R=Sym(E_+^*), L_1 : R^15 \u2192 R^11 and L_3 : R^21 \u2192 R^13 are given by the relative sparse quadratic matrices recorded below. At a generic Q-point of the leading jet space, rank L_1 = 11, nullity = 4, coker dim = 0; rank L_3 = 13, nullity = 8, coker dim = 0.",
+        "status": "PROVED_GENERIC_RANK"
+      },
+      "free_ranks": {
+        "L1_codomain": 11,
+        "L1_domain": 15,
+        "L3_codomain": 13,
+        "L3_domain": 21,
+        "a_m2": 12,
+        "leading_a_m": 8
+      },
+      "m": 3,
+      "next_obstruction_module": {
+        "coker_rank_generic": 0,
+        "description": "On the open of B_1 where rank L_3 is generic, the next obstruction is omega_3 \u2208 coker(L_3) \u2245 Q^{coker_dim} as a linear function of (a_{m+2}) for fixed (a_m, b_{m+1}), plus the quadratic/cubic F_+(b) term.  This is a coherent obstruction sheaf on B_1, not a covariant (house rule 3).",
+        "formal_parameters_surviving_stage1": {
+          "a_m": "leading jet on B_0 (residual-allowed)",
+          "a_{m+2}": "free relative parameter (stage r=2 has no exclusive equation)",
+          "b_{m+1}": "ker L_1, generic rank 4"
+        }
+      },
+      "omega1": {
+        "Fitting_ideal_of_coker": "Fitting_0(coker L_1) cuts the rank-drop locus where rank L_1 < 11; on the complement the kernel rank is constant 4.",
+        "R_1": "0",
+        "equation": "L_1(b_{m+1}) = 0",
+        "lifting_locus_B1": "Spec of the annihilator of coker is the whole base (always solvable: b=0 works); B_1 is the relative kernel bundle ker(L_1) \u2192 B_0, a linear space of rank generic_nullity=4 over the open where rank attains the generic value.",
+        "omega_1": "0 in coker(L_1) \u2014 RHS vanishes identically",
+        "r": 1,
+        "status": "COMPUTED_FREE_MODULE"
+      },
+      "omega3": {
+        "F_plus_model": "Hesse cubic z0\u00b3+z1\u00b3+z2\u00b3-3 z0 z1 z2 (smooth); L_3 itself is independent of F_+.  Transport of sample vanishing to the exact Klein F_+ requires the D12-isomorphism of polars \u2014 rank of L_3 transports; the particular R_3 column transforms by the same isomorphism on the F_+ summand.",
+        "R_3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+        "all_samples_omega3_in_image": true,
+        "any_sample_obstructed": false,
+        "equation": "L_3(b_{m+3}) = -R_3",
+        "interpretation": "If a sample has omega3 not in image, that specialized formal state does not lift through order 3m+3.  If all generic samples have omega3 in image, the obstruction vanishes on a Zariski-open of B_1 \u00d7 (a_{m+2}-space); the Fitting ideal of [L_3|R_3] then cuts a proper closed subset (possibly empty).",
+        "omega_3": "class of R_3 in coker(L_3)",
+        "r": 3,
+        "sample_fibers": [
+          {
+            "L1_nullity": 4,
+            "L3_rank": 13,
+            "R3_is_zero": false,
+            "R3_nnz": 12,
+            "augmented_rank": 13,
+            "b_in_ker_L1": true,
+            "bidegree_status": "free R-module level (all base degrees)",
+            "label": "sample_fiber_omega3_obstruction_over_Q",
+            "m": 3,
+            "omega3_in_image": true,
+            "seed": 1
+          },
+          {
+            "L1_nullity": 4,
+            "L3_rank": 13,
+            "R3_is_zero": false,
+            "R3_nnz": 12,
+            "augmented_rank": 13,
+            "b_in_ker_L1": true,
+            "bidegree_status": "free R-module level (all base degrees)",
+            "label": "sample_fiber_omega3_obstruction_over_Q",
+            "m": 3,
+            "omega3_in_image": true,
+            "seed": 2
+          },
+          {
+            "L1_nullity": 4,
+            "L3_rank": 13,
+            "R3_is_zero": false,
+            "R3_nnz": 12,
+            "augmented_rank": 13,
+            "b_in_ker_L1": true,
+            "bidegree_status": "free R-module level (all base degrees)",
+            "label": "sample_fiber_omega3_obstruction_over_Q",
+            "m": 3,
+            "omega3_in_image": true,
+            "seed": 3
+          },
+          {
+            "L1_nullity": 4,
+            "L3_rank": 13,
+            "R3_is_zero": false,
+            "R3_nnz": 12,
+            "augmented_rank": 13,
+            "b_in_ker_L1": true,
+            "bidegree_status": "free R-module level (all base degrees)",
+            "label": "sample_fiber_omega3_obstruction_over_Q",
+            "m": 3,
+            "omega3_in_image": true,
+            "seed": 4
+          },
+          {
+            "L1_nullity": 4,
+            "L3_rank": 13,
+            "R3_is_zero": false,
+            "R3_nnz": 12,
+            "augmented_rank": 13,
+            "b_in_ker_L1": true,
+            "bidegree_status": "free R-module level (all base degrees)",
+            "label": "sample_fiber_omega3_obstruction_over_Q",
+            "m": 3,
+            "omega3_in_image": true,
+            "seed": 5
+          }
+        ],
+        "status": "COMPUTED_FREE_MODULE_SAMPLES"
+      },
+      "representation_decomposition_before_elimination": {
+        "C2": "built into target eigenspaces (E_+ even order, E_- odd)",
+        "C3_block_ranks_sample": {
+          "L1": {
+            "blocks": {
+              "0": {
+                "coker_dim": 0,
+                "n_cols": 5,
+                "n_rows": 3,
+                "nullity": 2,
+                "rank": 3
+              },
+              "1": {
+                "coker_dim": 0,
+                "n_cols": 5,
+                "n_rows": 4,
+                "nullity": 1,
+                "rank": 4
+              },
+              "2": {
+                "coker_dim": 0,
+                "n_cols": 5,
+                "n_rows": 4,
+                "nullity": 1,
+                "rank": 4
+              }
+            },
+            "codomain_c3": {
+              "0": 3,
+              "1": 4,
+              "2": 4
+            },
+            "domain_c3": {
+              "0": 5,
+              "1": 5,
+              "2": 5
+            },
+            "full_rank": 11,
+            "m": 3,
+            "note": "Diagonal C3-weight blocks.  For a general (mixed-weight) leading jet, off-diagonal weight blocks can appear; for C3-semi-invariant leading jets (single weight), L is block-diagonal and this is exact.",
+            "r": 1,
+            "sum_block_ranks": 11
+          },
+          "L3": {
+            "blocks": {
+              "0": {
+                "coker_dim": 0,
+                "n_cols": 7,
+                "n_rows": 5,
+                "nullity": 2,
+                "rank": 5
+              },
+              "1": {
+                "coker_dim": 0,
+                "n_cols": 7,
+                "n_rows": 4,
+                "nullity": 3,
+                "rank": 4
+              },
+              "2": {
+                "coker_dim": 0,
+                "n_cols": 7,
+                "n_rows": 4,
+                "nullity": 3,
+                "rank": 4
+              }
+            },
+            "codomain_c3": {
+              "0": 5,
+              "1": 4,
+              "2": 4
+            },
+            "domain_c3": {
+              "0": 7,
+              "1": 7,
+              "2": 7
+            },
+            "full_rank": 13,
+            "m": 3,
+            "note": "Diagonal C3-weight blocks.  For a general (mixed-weight) leading jet, off-diagonal weight blocks can appear; for C3-semi-invariant leading jets (single weight), L is block-diagonal and this is exact.",
+            "r": 3,
+            "sum_block_ranks": 13
+          }
+        },
+        "D12_source_line": "ordinary vs det-twisted coupling is orthogonal to the normal-cone L_r (coefficient coupling on L_t^{src})",
+        "S3_triv_sign_std": "Full residual S3 projectors (triv/sign/2-dim) refine the C3-weight spaces by the reflection action; C3 already cuts rows before elimination.  Reflection projectors are recorded as the next refinement when a C3-isotypic block is large.",
+        "residual_C3_weights": {
+          "L1_codomain": {
+            "0": 3,
+            "1": 4,
+            "2": 4
+          },
+          "L1_domain": {
+            "0": 5,
+            "1": 5,
+            "2": 5
+          },
+          "L3_codomain": {
+            "0": 5,
+            "1": 4,
+            "2": 4
+          },
+          "L3_domain": {
+            "0": 7,
+            "1": 7,
+            "2": 7
+          },
+          "leading": {
+            "0": 2,
+            "1": 3,
+            "2": 3
+          }
+        }
+      }
+    }
+  },
+  "verdict": {
+    "all_degree_theorem": null,
+    "exit_contribution": "L-P",
+    "family_empty_at_finite_stage": false,
+    "formal_parameters": {
+      "a_m": "leading jet on B_0 (residual-allowed)",
+      "a_{m+2}": "free relative parameter (stage r=2 has no exclusive equation)",
+      "b_{m+1}": "ker L_1, generic rank 4"
+    },
+    "house_rule_3": "formal jets / obstruction modules \u2014 never called covariants",
+    "next_obstruction_module": {
+      "coker_rank_generic": 0,
+      "description": "On the open of B_1 where rank L_3 is generic, the next obstruction is omega_3 \u2208 coker(L_3) \u2245 Q^{coker_dim} as a linear function of (a_{m+2}) for fixed (a_m, b_{m+1}), plus the quadratic/cubic F_+(b) term.  This is a coherent obstruction sheaf on B_1, not a covariant (house rule 3).",
+      "formal_parameters_surviving_stage1": {
+        "a_m": "leading jet on B_0 (residual-allowed)",
+        "a_{m+2}": "free relative parameter (stage r=2 has no exclusive equation)",
+        "b_{m+1}": "ker L_1, generic rank 4"
+      }
+    },
+    "survives_through": "order 3m+3 (formal free-module stages L_1 and L_3)"
+  },
+  "work_package": "WP-L2"
+}

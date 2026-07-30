@@ -1,0 +1,173 @@
+{
+  "accepted_input_sha256": {
+    "certificates/lifting/polar_expansion.json": "1231694bdc41f6c06c690c2b8eb58dca42402acf1cfaacdc284157b00033098e",
+    "certificates/strata/marked_s3_geometry.json": "6662f850028c4df8c7e33a1749d948153d0fc9ca6da4b733daa88536343a59a6",
+    "certificates/transition_repair/category_repaired.json": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0"
+  },
+  "fable_hash_check": {
+    "tmp/fable_relative_divisor_trace_obstruction/PROOF_AUDIT.md": "0cb5758e391e7b6b1986873139dbc99797fa1aa87bd96df63d253b7cfca5b499",
+    "tmp/fable_relative_divisor_trace_obstruction/REPORT.md": "cfcda8682c86eb48222bfda6888aeec6580d362afd0a29d18a267b3696425573",
+    "tmp/fable_relative_divisor_trace_obstruction/verify.py": "cdc46b4568f152b3bc24636949674e4f58ce924124c295ed89e32851c5361ca5",
+    "tmp/fable_relative_q_trace_obstruction/PROOF_AUDIT.md": "bce1914db25b3c6d1cb451ffdca7c05e6e69b3dc97c8b974afcf41a85d0e29e7",
+    "tmp/fable_relative_q_trace_obstruction/REPORT.md": "bda7bf9a58025c15c097ce183f43655a9743f23e6e535776af3712f004bc452c",
+    "tmp/fable_relative_q_trace_obstruction/verify.py": "f9884d21a6d39170ba029348f3c10d21076c5b280937313382111408e5d82c40"
+  },
+  "gate": "Second dispatch \u2014 Pic^0 obstruction parallel to WP-L2",
+  "headline": "OPEN",
+  "induced_classes_from_WP_L2_jets": {
+    "correction_b_m1": {
+      "L1_constraint": "L_1(b)=B(b;a,a)=0 is a scalar condition on the normal cone, not the same as F(b)|_{E_t}=0.  Only when an auxiliary horizontal quadratic (or higher) cover Z \u2192 P is cut out so that b defines f: Z \u21e2 E_t does a Pic^0 class appear.",
+      "evaluation_on_E_t": "At a point z \u2208 E_t \u2282 P(E_+), if the normal-order-(m+1) piece b_{m+1}(z, y) is considered as a polynomial in the normal variable y with values in E_+, its vanishing or its projectivization can define maps from subschemes of the normal cone to E_t.",
+      "target": "E_+ (even normal order m+1)",
+      "transformation_P_to_P_plus_q": "If f: Z \u21e2 E_t is residual-order-three equivariant, then f(\u03c1\u00b7z) = f(z) + q in E_t.",
+      "transformation_under_reflections": "If f is residual-reflection equivariant, f(\u03c3_i\u00b7z) = e_i \u2212 f(z)."
+    },
+    "leading_a_m": {
+      "divisor_on_E_t": "No canonical degree-0 class on E_t from a pure E_--valued jet.  Finite E[2]-charge labels on marked points remain discrete WP-3 data (house rule 7: not sufficient alone).",
+      "evaluation_on_E_t": "a_m is E_--valued; it does not directly define a map to E_t.  Restriction of a_m to the zero section of the normal cone is zero for m>0.  The associated map on the exceptional divisor P(N) \u2192 L_t = P(E_-) is the projectivized leading jet (dominates L_t by 4A.3).  Pic^0(E_t) is not the target of a_m.",
+      "target": "E_- (odd normal order)"
+    },
+    "stage_r3_residual": {
+      "F_plus_on_E_t": "F_+ vanishes on E_t by definition of E_t = X \u2229 P(E_+).  The class of F_+(b) as a section vanishing on E_t relates to the divisor of contact of the image of b with E_t, but is not automatically a Pic^0 obstruction without a cover and trace.",
+      "R3": "2 B(b; a, a2) + F_+(b)"
+    }
+  },
+  "obstruction_protocol_house_rule_12": {
+    "live_families": "No certified nonzero invariant class in a finite quotient of Pic^0 obstructing the three WP-5 families was found; do not fake one.  Continue with WP-L2 tower / other blockers.",
+    "order12_ansatz": "Invariant class \u2212q \u2208 E[3] \u2282 Pic^0 exhibited; independence recorded; STOP for the factorized Fable order-twelve gate."
+  },
+  "order12_quadratic_trace_regression": {
+    "antecedent": {
+      "Z_P": "Primitive horizontal degree-two part of V(q_P) \u2282 P(N_{P/P(W)}).",
+      "ansatz": "Factorized first-gate germ on a fixed involution plane: p_3 = q_P R_P, p_4 = \u03b9_{\u0393_{R_P}} \u03b7_P, with the audited nonzero three-line Fable boundary.",
+      "necessary_residue": "F(p_4)|_{Z_P} = 0 is necessary for the order-12 landing gate; allowed I^{(5)}/I^{(7)} corrections cannot change it (order-twelve residue ledger).",
+      "source_packets": [
+        "tmp/fable_relative_divisor_trace_obstruction/",
+        "tmp/fable_relative_q_trace_obstruction/"
+      ]
+    },
+    "construction_of_class": {
+      "split_and_nonreduced": "Split horizontal quadratic: each component birational to P, so f constant on each, equivariance \u21d2 c = c+q.  Nonreduced: unique reduced component, same.  Vertical factors irrelevant after taking primitive horizontal part.",
+      "step1": "If F(p_4)|_{Z_P}=0 and p_4 generically nonzero on Z_P, then f = [p_4] : Z_P \u21e2 E_t is a rational map to the plus-plane elliptic (p_4 is E_+-valued of even normal order).",
+      "step2_Pic0": "On a horizontal component with function field L, the point f determines \u03be = [f \u2212 O] \u2208 Pic^0(E_t)(L) \u2245 E_t(L).",
+      "step3_trace": "For irreducible horizontal quadratic L/K, K=C(P), the trace Tr(\u03be) = \u03be + \u03c4\u03be lies in Pic^0(E_t)(K) \u2245 E_t(K).  Constancy of maps P\u00b2\u21e2E forces Tr(\u03be) = C constant in E_t(C).",
+      "step4_translation": "Residual order-three \u03c1 acts on E_t by P \u21a6 P+q, q\u22600 in E[3], and normalizes the quadratic cover (commutes with \u03c4).  Equivariance of f (residual S3 / stabilizer equivariance of the germ) gives \u03c1\u00b7\u03be = t_q(\u03be) in Pic^0.",
+      "step5_contradiction": "C = Tr(\u03be) = Tr(\u03c1\u00b7\u03be) = Tr(\u03be + q) = Tr(\u03be) + 2q = C + 2q.  Since 3q=0, 2q = \u2212q \u2260 0, contradiction."
+    },
+    "finite_quotient_exhibit": {
+      "independence_of_choices": [
+        "Origin change replaces q by \u00b1q; 2q=\u2212q still nonzero",
+        "Scale of p_4 does not change [p_4] in P(E_+)",
+        "Representative of p_4 mod I^{(5)} does not change the residue",
+        "Choice of horizontal component: both give the same contradiction pattern"
+      ],
+      "invariant_class": "The obstruction is the nonzero class 2q = \u2212q in E_t[3] \u2282 Pic^0, forced to vanish by equivariant trace constancy.",
+      "protocol": "House rule 12: invariant class exhibited in the exact finite quotient E[3] of Pic^0; independence recorded; STOP for this ansatz \u2014 do not add higher-order corrections around it.",
+      "quotient": "E_t[3] \u2245 (Z/3)\u00b2 \u2282 Pic^0(E_t), via the translation class q"
+    },
+    "name": "Order-twelve quadratic-trace obstruction (Pic^0 form)",
+    "proof_type": "function-field / Pic^0 trace; no resolution of singularities required",
+    "scope": "Kills the factorized Fable/Koszul full relative-divisor antecedent with audited nonzero three-line boundary at the order-twelve gate.  Does not kill nonfactorized first normal forms, unrelated full-threefold constructions, or the three WP-5 survivor families without additional hypotheses.",
+    "status": "PROVED_AS_REGRESSION",
+    "strength": "residual_S3_equivariant_identity on one elliptic",
+    "strength_not": [
+      "global_G_equivariant_gluing_theorem",
+      "obstruction_to_all_formal_lifts_of_all_families"
+    ]
+  },
+  "pic0_formalism": {
+    "Aut_group_origin": "{\u00b11}",
+    "curve": "E_t = X \u2229 P(E_+(t)), smooth plane cubic",
+    "house_rule_7": "Full Pic^0 class is the invariant; do not argue from finite E[2]-charge alone.",
+    "identification": "After origin choice O \u2208 E_t, Pic^0(E_t) \u2245 E_t via L \u21a6 sum n_i(P_i) with deg 0 \u2194 \u03a3 n_i P_i in the group law.",
+    "j_invariant": "8192/11",
+    "no_CM": true,
+    "origin_convention": "Prefer a type-I point as origin so type-I = <q>, type-II = e+<q> for 0\u2260e\u2208E[2] (accepted WP-3).",
+    "residual_actions": {
+      "reflections": {
+        "action_on_E": "P \u21a6 e_i \u2212 P for the three nonzero e_i \u2208 E[2]",
+        "action_on_Pic0": "hyperelliptic involution through e_i: on Pic^0, inversion composed with translation by e_i.",
+        "elements": "three residual order-2 elements of S3"
+      },
+      "translation_by_q": {
+        "action_on_E": "P \u21a6 P + q,  0 \u2260 q \u2208 E_t[3]",
+        "action_on_Pic0": "pullback \u03c1^* : Pic^0 \u2192 Pic^0 is translation by q on the identified elliptic, i.e. L \u21a6 t_q^* L.  On degree-0 divisor classes [P\u2212O] \u21a6 [P+q \u2212 O] only after adjusting origin; more invariantly, \u03c1 acts as translation on E\u2245Pic^0.",
+        "element": "order-3 \u03c1 \u2208 residual S3 \u2245 C_G(t)/<t>",
+        "proof_ref": "certificates/strata/marked_s3_geometry.json; j\u22600"
+      }
+    },
+    "trace_and_norm": {
+      "constancy": "Any K-point of E with K=C(P\u00b2) is constant: no nonconstant rational map P\u00b2 \u2192 E (restrict to general lines \u2192 P\u00b9\u2192E).",
+      "norm_Pic0": "Nm_{L/K}(\u03be) = \u03be + \u03c4(\u03be) in the abelian group Pic^0 (same as trace for elliptic group law written additively).",
+      "quadratic_extension": "L/K separable quadratic with deck involution \u03c4, K=C(P) or function field of the plane / a rational base.",
+      "trace_Pic0": "For a class \u03be \u2208 Pic^0(E)(L), set Tr_{L/K}(\u03be) = \u03be + \u03c4(\u03be) \u2208 Pic^0(E)(K).  Under E\u2245Pic^0 this is the elliptic sum of Gal(\u03c4)-conjugates."
+    }
+  },
+  "producer": {
+    "does_not_import": "verify.py",
+    "script": "certificates/elliptic_lifting/produce.py"
+  },
+  "self_sha256": "a01585feb4dbb319963f1fb328b5897a485992b4b95df6cbff4615505cf55980",
+  "theorem_boundary": {
+    "not_proved": [
+      "Pic^0 kill of based_minus_lines_odd_m for arbitrary odd m",
+      "Pic^0 kill of residual_e1_swap_both",
+      "Pic^0 kill of residual_e_ge7_generic_swap_both",
+      "Pic^0 kill of non-planewise corrections",
+      "Global G-equivariant gluing of elliptic Pic^0 classes"
+    ],
+    "proved": [
+      "Pic^0 formalism on E_t with residual translation by q and reflections",
+      "Trace/norm on Pic^0(E_t)-valued data through quadratic extensions",
+      "Order-twelve quadratic-trace obstruction recovered as Pic^0 regression theorem",
+      "Invariant class \u2212q in E[3] for that ansatz; independence of choices",
+      "Trace test applied to four listed cases with D / S3 / G labels"
+    ]
+  },
+  "trace_tests": {
+    "cases": [
+      {
+        "case": "based_minus_lines_odd_m \u2014 arbitrary odd m",
+        "missing_for_stronger": "A theorem producing, from a based formal lift, a residual-S3-equivariant rational map from a quadratic cover of the plane to E_t with nonzero translation equivariance \u2014 not established in this dispatch.",
+        "reason": "(D)/(S3): The based family has p|_{E_-}=0 and leading jet a_m : exceptional \u2192 L_t.  There is no built-in horizontal quadratic cover Z_P from a factorized q_P, and b_{m+1} is constrained by B(b;a,a)=0 rather than by F(b)|_{Z_P}=0.  The order-twelve quadratic-trace hypothesis (equivariant map Z_P \u21e2 E_t from an even jet with quadratic horizontal trace) is not part of the based-family definition.  Hence the Pic^0 trace contradiction does not fire on the raw based family.",
+        "strength": "not_applicable_without_extra_ansatz",
+        "trace_obstruction_applies": false
+      },
+      {
+        "case": "residual_e1_swap_both \u2014 unique e=1 all-swap",
+        "missing_for_stronger": "Identification of a quadratic cover from the e=1 residual or from L_1-kernel geometry, with residual-S3 equivariance of the induced map to E_t.",
+        "reason": "(D)/(S3): The e=1 swap_both residual fixes the source-line coefficient coupling p|_{E_-}=\u0394^m h with h of degree 1.  This is a coefficient coupling on L_t^{src}, orthogonal to the normal-cone Pic^0 data on E_t.  No quadratic horizontal cover of the plus-plane is forced by e=1 alone.  The order-twelve trace obstruction does not apply as stated.",
+        "strength": "not_applicable_without_extra_ansatz",
+        "trace_obstruction_applies": false
+      },
+      {
+        "case": "residual_e_ge7_generic_swap_both \u2014 generic odd e\u22657",
+        "missing_for_stronger": "Same as e=1: a bridge from residual line data or L_r kernels to an equivariant quadratic cover map into E_t.",
+        "reason": "(D)/(S3): Generic e\u22657 enlarges the det-twisted residual module but still supplies source-line data, not a quadratic cover of P(E_+).  Same gap as e=1.",
+        "strength": "not_applicable_without_extra_ansatz",
+        "trace_obstruction_applies": false
+      },
+      {
+        "case": "non-planewise corrections",
+        "missing_for_stronger": "Global G-gluing of Pic^0 classes across the 55-plane orbit, or a different global blocker (WP-T1 / WP-H1).",
+        "reason": "(G): Non-planewise corrections (jets not supported on a single plus-plane normal cone) fall outside the single-involution Pic^0 formalism developed here.  A global G-equivariant gluing theorem would be required; none is claimed.  The order-twelve trace obstruction is a single-plane residual-S3 statement and does not automatically globalize.",
+        "strength": "not_applicable",
+        "trace_obstruction_applies": false
+      },
+      {
+        "case": "REGRESSION: factorized Fable order-twelve gate",
+        "missing_for_stronger": null,
+        "reason": "Recovered above as the order-twelve quadratic-trace theorem.  The obstruction class is the nonzero 2q\u2208E[3].  STOP for that ansatz (house rule 12).",
+        "strength": "residual_S3_equivariant (S3); finite quotient E[3]\u2282Pic^0",
+        "trace_obstruction_applies": true
+      }
+    ],
+    "protocol": "Each claim is labelled by strength: (D) divisor identity on one elliptic; (S3) residual-S3-equivariant identity; (G) global G-equivariant gluing theorem.  These are not interchangeable.",
+    "summary": {
+      "live_families_killed_by_same_trace": false,
+      "note": "A structural kill of the three WP-5 families by Pic^0 trace is not available without additional geometric input producing an equivariant quadratic cover map to E_t.  That is a precisely delimited gap, not a negative or positive theorem.",
+      "regression_order12": "RECOVERED"
+    }
+  },
+  "work_package": "WP-E1"
+}

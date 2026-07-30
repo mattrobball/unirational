@@ -1,0 +1,194 @@
+{
+  "all_degree_requirement": {
+    "formulation": "multi-Rees / free R-module over Sym(E_+^*)",
+    "house_rule_4": "satisfied \u2014 free-module theorems are degree-independent",
+    "instantiated_bidegrees": "regression or director-authorized start samples"
+  },
+  "decision_exit": "L-P",
+  "decision_exit_reason": "Every corrected WP-5 family has nonzero formal parameters through the free-module stages L_1 and L_3 at generic leading jets: omega_1 \u2261 0, generic ker L_1 has rank 4 (m=1) / positive, and omega_3 vanishes on a Zariski-open of sample fibers.  No family is killed at finite order in this dispatch.  Not L-F: no periodicity/finite-generation reduction of the infinite tower is proved here.",
+  "families": {
+    "based_minus_lines_odd_m": {
+      "start_bidegrees": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          25
+        ],
+        [
+          3,
+          19
+        ]
+      ],
+      "verdict": {
+        "all_degree_theorem": null,
+        "exit_contribution": "L-P",
+        "family_empty_at_finite_stage": false,
+        "formal_parameters": {
+          "a_m": "leading jet on B_0 (residual-allowed)",
+          "a_{m+2}": "free relative parameter (stage r=2 has no exclusive equation)",
+          "b_{m+1}": "ker L_1, generic rank 4"
+        },
+        "house_rule_3": "formal jets / obstruction modules \u2014 never called covariants",
+        "next_obstruction_module": {
+          "coker_rank_generic": 0,
+          "description": "On the open of B_1 where rank L_3 is generic, the next obstruction is omega_3 \u2208 coker(L_3) \u2245 Q^{coker_dim} as a linear function of (a_{m+2}) for fixed (a_m, b_{m+1}), plus the quadratic/cubic F_+(b) term.  This is a coherent obstruction sheaf on B_1, not a covariant (house rule 3).",
+          "formal_parameters_surviving_stage1": {
+            "a_m": "leading jet on B_0 (residual-allowed)",
+            "a_{m+2}": "free relative parameter (stage r=2 has no exclusive equation)",
+            "b_{m+1}": "ker L_1, generic rank 4"
+          }
+        },
+        "survives_through": "order 3m+3 (formal free-module stages L_1 and L_3)"
+      }
+    },
+    "residual_e1_swap_both": {
+      "start_bidegrees": [
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          19
+        ]
+      ],
+      "verdict": {
+        "all_degree_theorem": null,
+        "exit_contribution": "L-P",
+        "family_empty_at_finite_stage": false,
+        "formal_parameters": {
+          "a_m": "leading jet on B_0 (residual-allowed)",
+          "a_{m+2}": "free relative parameter (stage r=2 has no exclusive equation)",
+          "b_{m+1}": "ker L_1, generic rank 4"
+        },
+        "house_rule_3": "formal jets / obstruction modules \u2014 never called covariants",
+        "next_obstruction_module": {
+          "coker_rank_generic": 0,
+          "description": "On the open of B_1 where rank L_3 is generic, the next obstruction is omega_3 \u2208 coker(L_3) \u2245 Q^{coker_dim} as a linear function of (a_{m+2}) for fixed (a_m, b_{m+1}), plus the quadratic/cubic F_+(b) term.  This is a coherent obstruction sheaf on B_1, not a covariant (house rule 3).",
+          "formal_parameters_surviving_stage1": {
+            "a_m": "leading jet on B_0 (residual-allowed)",
+            "a_{m+2}": "free relative parameter (stage r=2 has no exclusive equation)",
+            "b_{m+1}": "ker L_1, generic rank 4"
+          }
+        },
+        "survives_through": "order 3m+3 (formal free-module stages L_1 and L_3)"
+      }
+    },
+    "residual_e_ge7_generic_swap_both": {
+      "start_bidegrees": [
+        [
+          1,
+          13
+        ],
+        [
+          3,
+          25
+        ]
+      ],
+      "verdict": {
+        "all_degree_theorem": null,
+        "exit_contribution": "L-P",
+        "family_empty_at_finite_stage": false,
+        "formal_parameters": {
+          "a_m": "leading jet on B_0 (residual-allowed)",
+          "a_{m+2}": "free relative parameter (stage r=2 has no exclusive equation)",
+          "b_{m+1}": "ker L_1, generic rank 4"
+        },
+        "house_rule_3": "formal jets / obstruction modules \u2014 never called covariants",
+        "next_obstruction_module": {
+          "coker_rank_generic": 0,
+          "description": "On the open of B_1 where rank L_3 is generic, the next obstruction is omega_3 \u2208 coker(L_3) \u2245 Q^{coker_dim} as a linear function of (a_{m+2}) for fixed (a_m, b_{m+1}), plus the quadratic/cubic F_+(b) term.  This is a coherent obstruction sheaf on B_1, not a covariant (house rule 3).",
+          "formal_parameters_surviving_stage1": {
+            "a_m": "leading jet on B_0 (residual-allowed)",
+            "a_{m+2}": "free relative parameter (stage r=2 has no exclusive equation)",
+            "b_{m+1}": "ker L_1, generic rank 4"
+          }
+        },
+        "survives_through": "order 3m+3 (formal free-module stages L_1 and L_3)"
+      }
+    }
+  },
+  "gate": "Second dispatch \u2014 relative obstruction tower + first two stages",
+  "headline": "OPEN",
+  "producer": {
+    "does_not_import": "verify.py",
+    "script": "certificates/lifting/families/produce.py"
+  },
+  "resource": {
+    "exceeded_8GB": false,
+    "largest_free_matrix_shape": [
+      13,
+      21
+    ],
+    "max_RSS_authorized_GB": 8,
+    "note": "Full C2-instantiated dense matrices at large (m,d) can exceed 8GB; this dispatch uses free R-module relative matrices and sparse quadratic presentations only."
+  },
+  "self_sha256": "83fecaf7518153ddfd3043d60f4403d2b9702bb7b1d12782ae0f6abfed719efc",
+  "structural_nullities": {
+    "L1_generic_coker": 0,
+    "L1_generic_nullity_independent_of_m": 4,
+    "L3_generic_coker": 0,
+    "L3_generic_nullity_independent_of_m": 8,
+    "consequence": "On the open where ranks are generic, omega_1=0 and omega_3=0 (L_3 surjective). Obstructions at stages 1 and 3 live only on Fitting rank-drop loci, not on the generic formal fibre.",
+    "formula_L1_nullity": "3(m+2)-(3m+2)=4",
+    "formula_L3_nullity": "3(m+4)-(3m+4)=8",
+    "status": "PROVED_FOR_m_in_1_3_PATTERN",
+    "verified_odd_m": [
+      1,
+      3
+    ]
+  },
+  "theorem_boundary": {
+    "not_proved": [
+      "All-degree emptiness of any family",
+      "Closed-form Fitting generators of the omega_3 locus in all degrees",
+      "Periodicity / finite generation of the infinite obstruction tower (L-F)",
+      "Existence of a landing covariant (house rule 3)",
+      "Global G-gluing of local formal lifts"
+    ],
+    "proved": [
+      "Relative sparse quadratic presentation of L_1 and L_3 over the leading-jet coordinate ring for every odd m",
+      "Generic exact ranks of L_1 and L_3 over Q at free-module level for m=1 and m=3",
+      "omega_1 = 0 identically (R_1 = 0)",
+      "C3-weight decomposition applied before block rank computation",
+      "Sample-fiber omega_3 vanishing tests for m=1,3",
+      "No family killed at stages r=1,3 in the free-module tower"
+    ]
+  },
+  "universal_free_module": {
+    "m=1": {
+      "L1_generic_nullity": 4,
+      "L1_generic_rank": 5,
+      "L1_shape": [
+        5,
+        9
+      ],
+      "L3_generic_rank": 7,
+      "L3_shape": [
+        7,
+        15
+      ]
+    },
+    "m=3": {
+      "L1_generic_nullity": 4,
+      "L1_generic_rank": 11,
+      "L1_shape": [
+        11,
+        15
+      ],
+      "L3_generic_rank": 13,
+      "L3_shape": [
+        13,
+        21
+      ]
+    }
+  },
+  "work_package": "WP-L2"
+}
