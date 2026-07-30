@@ -1,0 +1,65 @@
+{
+  "packet": "pfaffian_point/quaternion_corner",
+  "date": "2026-07-30",
+  "headline": "OPEN",
+  "gate1_decision": "FAIL-SCOPE",
+  "gate2_decision": "P1-REDUCED",
+  "theorem_boundary": "Structural quaternion-corner reduction only. No explicit (a,b), no explicit Hermitian matrices, no Gate-3 solve, no Klein point.",
+  "quaternion_corner": {
+    "form": "D = e A e after sigma-self-adjoint reduced-rank-two idempotent e",
+    "presentation": "D = (a,b)_K with i^2=a, j^2=b, ji=-ij, standard involution",
+    "explicit_symbol_installed": false,
+    "reason_symbol_absent": "requires coordinates of e in the installed Sym(A,sigma) basis or an independent cocycle construction"
+  },
+  "five_hermitian_forms": {
+    "space": "H_T subset Herm_3(D), dim_K = 5",
+    "forms": ["h_r(u,v) = u^* H_r v for r=1..5"],
+    "scalar_quadratics": ["q_r(v) = h_r(v,v) in K"],
+    "explicit_matrices_installed": false,
+    "individual_isotropy": "every h in H_T is isotropic over K (Springer + degree-55 A4 cycle)",
+    "common_line": "open"
+  },
+  "common_isotropic_line_equations": {
+    "projective": "h_r(q,q)=0 for r=1..5, 0 != q in D^3, up to right D^x",
+    "affine_chart": "q=(1,x,y), x,y in D",
+    "scalar_unknowns": 8,
+    "scalar_equations": 5,
+    "equation_names": ["F_1", "F_2", "F_3", "F_4", "F_5"]
+  },
+  "equivalence_with_installed_cubic": {
+    "c3_c2_system": "c_3(a)=0 and c_2(a)!=0 in Sym(A,sigma) ~ A^{15}",
+    "c3_c2_meaning": "sigma-self-adjoint reduced-rank-two idempotents / Morita projectors",
+    "common_line_meaning": "points of F14_T",
+    "systems_equivalent": false,
+    "abstract_cubic_soluble_over_K": true,
+    "abstract_cubic_gives_Klein_point": false
+  },
+  "dimension_count": {
+    "P2_D_dim_K": 8,
+    "affine_chart_dim_K": 8,
+    "number_of_scalar_equations": 5,
+    "expected_dimension": 3,
+    "matches_classical_F14_dimension": true
+  },
+  "singular_locus": {
+    "split_model": "classical F14 smooth",
+    "twisted_model": "form of smooth Fano threefold on generic versal locus (accepted Pfaffian geometry)",
+    "affine_chart_extra_singularities": "chart-at-infinity artefacts and differential degeneracy, expected dimension <=2 inside the threefold",
+    "explicit_jacobian_computed": false
+  },
+  "idempotent_space_classification": {
+    "object": "I_sigma = sigma-self-adjoint reduced-rank-two idempotents",
+    "type": "Zariski open in P2_D",
+    "rational_over_K": true,
+    "K_points": "nonempty",
+    "nontrivial_torsor_obstruction": false,
+    "cohomological_class": "neutral (point exists; algebra-with-involution data already over K)"
+  },
+  "reduced_system_to_report": {
+    "name": "common isotropic right D-line for H_T",
+    "equations": "F_r(x,y)=0, r=1..5",
+    "solved_in_this_dispatch": false
+  },
+  "gate3_attempted": false,
+  "conic_algebra_packet": "not authorized in this dispatch"
+}

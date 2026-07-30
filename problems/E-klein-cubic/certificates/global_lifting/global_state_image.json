@@ -1,0 +1,955 @@
+{
+  "accepted_input_sha256": {
+    "certificates/global_transition/diagram.json": "369f15f46d4e37f0dd7af578361ea9907d17ac0f307c9e5b6b63ef3c01d7708d",
+    "certificates/global_transition/level1_marked_states.json": "c6056cdf94e9a5324a5ec17950a170511d0f3c7a3edf0cb92bfc12b010675f19",
+    "certificates/global_transition/level2_inverse_limit.json": "d23615ecbe4584e3e401293984d354bbf6b26392b8923e40e69c8ecc37098a90",
+    "certificates/global_transition/necessity_theorem.json": "a5a21eff778447bd6edf250a1ecaf17ee0406edf371c56aa35bd6796cd3b3731",
+    "certificates/lifting/families/SUMMARY.json": "717240ae557d3468cac3dc0c7862717ac6ecd6efb95c3e7e26686e4da25f6035",
+    "certificates/lifting/families/free_module_stages.json": "7305453e8c75be0a7c30eab41cbc2e1b82daacbe5899cceab34145e26a6e43a7",
+    "certificates/lifting/polar_expansion.json": "1231694bdc41f6c06c690c2b8eb58dca42402acf1cfaacdc284157b00033098e",
+    "certificates/transition_repair/category_repaired.json": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0",
+    "certificates/transitions/involution_plane/module.json": "85e5676c3076ef6d9b267194ef6685eb6d7dc82e01d94ad22009e4b34f097312"
+  },
+  "attempt": 5,
+  "containment_status": "UNDECIDED",
+  "formulation": {
+    "B_leading_jet_space": {
+      "B0_free_module": "Coordinate ring Q[A_0..A_{2m+1}] of free leading fibre (sealed free_module_stages.json); multi-Rees lifts to all d.",
+      "definition": "Leading-jet parameter space for a_m: residual-allowed E_--valued normal jets of order m and global degree d along plus-planes, i.e. the plane-component ambient of the free R-module of rank 2(m+1) (R=Sym(E_+^*)), multi-Rees restored as Sym^{d-m} E_+^* \u2297 (free leading fibre), before or after residual D12 projection as labelled in size tables.",
+      "free_R_rank": "2(m+1) for odd m",
+      "lives_on": "P(N_{Z_t/Y}) / Z_t  (normal side), not on L_t^{src}",
+      "relation_to_families": "B_0 in the obstruction tower is this leading space; families restrict by coefficient coupling on L_t^{src}, not by replacing L_r.",
+      "symbol": "B_{m,d}"
+    },
+    "Lambda": {
+      "additional_equalizer_factors": [
+        "C3 lines (not forced base)",
+        "A4 points (Molien)",
+        "minus-line D12 modules on L_t^{src}",
+        "marked elliptic charge-compatible restrictions",
+        "coefficient coupling p|_{E_-}=p_d(0,y) (based: 0; residual: Delta_t^m h_t)",
+        "target evaluation of odd-m jet to L_t^{tgt}",
+        "normal-cone projection P(N) \u2192 Z_t"
+      ],
+      "architecture_55_plane": "plane normalization \u2192 triple-line equalizer \u2192 residual point kernel, retaining finite irrelevant torsion T_m",
+      "definition": "Corrected residual-equivariant equalizer of the incidence diagram of local bigraded modules M_S on objects of the repaired category C^{rep}, in fixed odd normal order m and global degree d.",
+      "house_rule_8": "Elements of Lambda are formal states, never covariants.",
+      "legacy_source": "certificates/global_transition/level2_inverse_limit.json",
+      "nonemptiness": "For every odd m\u22651 and all sufficiently large d, dim Lambda_{m,d} \u2265 c_m d^2 \u2212 C_m d \u2212 C'_m > 0 (WP-5 Exit P; char 0).",
+      "repair": "Use C^{rep} (WP-R0), not the legacy plane\u2192minus-line arrow. Forgetful map Lambda^{rep} \u2192 Lambda_legacy is surjective on linear data; size AT_LEAST_AS_LARGE.",
+      "symbol": "Lambda^{rep}_{m,d}"
+    },
+    "corrected_category": {
+      "arrow_types": [
+        "SOURCE-RESTRICTION",
+        "NORMAL-CONE-SPECIALIZATION",
+        "TARGET-EVALUATION",
+        "COEFFICIENT-COUPLING"
+      ],
+      "forbidden_identifications": [
+        "L_t^{src} subset Z_t",
+        "L_t^{src} = P(E_-)^{N}",
+        "L_t^{src} = L_t^{tgt}",
+        "plane_to_minus_line as ordinary restriction of first normal jet on Z_t"
+      ],
+      "replacement_span": "Z_t^{src} \u2190 P(N_{Z_t/Y}) \u2192 L_t^{tgt}  +  L_t^{src} \u21e2 X^t  +  coefficient coupling p|_{E_-}=p_d(0,y)",
+      "source": "certificates/transition_repair/category_repaired.json",
+      "three_copies_of_P_E_minus": {
+        "L_t_src": {
+          "ambient": "P(W)",
+          "disjointness": "L_t^{src} \u2229 Z_t = empty",
+          "id": "L_t_src",
+          "meets_Z_t": false,
+          "path_tag": "SOURCE",
+          "role": "source_fixed_line",
+          "symbol": "L_t^{src}"
+        },
+        "L_t_tgt": {
+          "ambient": "X^t subset X",
+          "id": "L_t_tgt",
+          "path_tag": "TARGET",
+          "role": "target_fixed_line",
+          "symbol": "L_t^{tgt}"
+        },
+        "P_E_minus_normal": {
+          "ambient": "P(N_{Z_t/Y}) \u2245 Z_t \u00d7 P(E_-)",
+          "id": "P_E_minus_normal",
+          "path_tag": "NORMAL",
+          "role": "exceptional_normal_direction",
+          "symbol": "P(E_-)^{N}"
+        }
+      }
+    },
+    "name": "scheme_theoretic_image_of_global_states",
+    "projection_and_image": {
+      "G": {
+        "as_schemes": "G_{m,d} := Spec( O(B_{m,d}) / ker(\u03c0^*) ) \u2286 B_{m,d}",
+        "definition": "scheme-theoretic image of \u03c0_{m,d}",
+        "exact_defining_data": [
+          "Repaired incidence category C^{rep} with four arrow types",
+          "Local modules M_S from accepted transitions/* module.json",
+          "Equalizer presentation of Lambda^{rep}_{m,d}",
+          "Component projection \u03c0 onto plane leading jet a_m",
+          "Ideal of G = kernel of the dual map on coordinate rings (equivalently row-span of a basis of Lambda under \u03c0)"
+        ],
+        "family_refinements": {
+          "families": [
+            "based_minus_lines_odd_m",
+            "residual_e1_swap_both",
+            "residual_e_ge7_generic_swap_both"
+          ],
+          "formal_parameters_per_family": {
+            "a_m": "point of G^{fam} (leading jet)",
+            "a_{m+2}": "free relative (stage r=2 has no exclusive equation)",
+            "b_{m+1}": "ker L_1 fibre (generic rank 4)"
+          },
+          "note": "Level-1 families cut discrete residual ledgers / based vs residual coupling; each induces a closed subscheme G^{fam}_{m,d} \u2286 G_{m,d}."
+        },
+        "linear_structure": "Because Lambda and B are affine spaces (graded pieces of linear modules) and \u03c0 is linear, G_{m,d} = im(\u03c0) is a linear subspace (cone) of B_{m,d}, closed in the Zariski topology. Scheme-theoretic and set-theoretic images agree.",
+        "symbol": "G_{m,d}"
+      },
+      "pi": {
+        "rule": "Retain only the C2_plane / normal-cone leading jet component a_m; forget residual line, V4, point, C3, and marked decorations (already constrained by the equalizer).",
+        "source": "Lambda^{rep}_{m,d}",
+        "symbol": "\u03c0_{m,d}",
+        "target": "B_{m,d}",
+        "type": "linear projection of Q-vector spaces (affine cones)"
+      }
+    },
+    "rank_drop_loci": {
+      "L_1": {
+        "RHS_R1": "0",
+        "definition": "L_1(b_{m+1}) = B(b_{m+1}; a_m, a_m)",
+        "depends_on": "a_m only (quadratic in leading coefficients)",
+        "free_shape": "(3m+2) \u00d7 3(m+2)",
+        "omega_1": "0 identically in coker L_1"
+      },
+      "L_3": {
+        "RHS_R3": "2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1})",
+        "definition": "L_3(b_{m+3}) = B(b_{m+3}; a_m, a_m)",
+        "depends_on": "a_m only for the linear operator matrix",
+        "free_shape": "(3m+4) \u00d7 3(m+4)",
+        "omega_3": "class of R_3 in coker L_3 (coherent sheaf on stage base)"
+      },
+      "R_1_m": {
+        "definition": "V( Fitt_0( coker L_1 ) ) \u2286 B_{m,*}",
+        "generic_status_m_1_3": "On the free-module base, generic coker L_1 = 0, so R_{1,m} is a proper closed subset of free B_0 (for m=1,3 sealed).",
+        "meaning": "Closed locus of leading jets a_m where L_1 fails to be surjective (Fitting ideal of the cokernel module over the leading-jet coordinate ring).",
+        "symbol": "R_{1,m}"
+      },
+      "R_3_m": {
+        "definition": "V( Fitt_0( coker L_3 ) ) \u2286 B_{m,*}",
+        "generic_status_m_1_3": "Generic coker L_3 = 0 for m=1,3 (sealed); R_{3,m} proper closed in free B_0.",
+        "meaning": "Closed locus of leading jets a_m where L_3 fails to be surjective. Only here can omega_3 obstruct; on the complement L_3 is surjective so omega_3=0 for every R_3.",
+        "symbol": "R_{3,m}"
+      },
+      "ambient_for_loci": "Primary ambient is free/multi-Rees B_{m,*} (leading a_m). Instantiated B_{m,d} inherits by base change / residual projection. Comparison with G uses the same ambient.",
+      "operators_source": {
+        "free_module_stages": "certificates/lifting/families/free_module_stages.json",
+        "polar_expansion": "certificates/lifting/polar_expansion.json",
+        "universal_equations": {
+          "U.3m+1": "B(b_{m+1}; a_m, a_m) = 0",
+          "U.3m+3": "B(b_{m+3}; a_m, a_m) + 2 B(b_{m+1}; a_m, a_{m+2}) + F_+(b_{m+1}) = 0"
+        }
+      }
+    },
+    "required_decision": {
+      "exclusive_forks": {
+        "containment_in_rank_drop": "Fork A (5C) \u2014 obstruction on rank drop",
+        "meets_generic_surjective": "Fork B (5D) \u2014 construction through generic surjectivity"
+      },
+      "not_decided_by_sampling": true,
+      "sample_point_policy": "A sample point is insufficient for either claim unless both characteristic-zero validity and global compatibility (membership in Lambda^{rep}) are certified.",
+      "statement": "Either G_{m,d} \u2286 R_{3,m}, or G_{m,d} \u2229 (B_{m,d} \\ R_{3,m}) \u2260 \u2205.",
+      "status_this_dispatch": "UNDECIDED",
+      "structural_free_results": [
+        {
+          "claim": "R_{3,m} is a proper closed subset of free B_0 for m=1,3",
+          "label": "structural",
+          "not_a_containment_of_G": true,
+          "reason": "Sealed free-module generic rank of L_3 equals the codomain rank over Q (coker 0 on a Zariski-open). Hence the Fitting ideal of coker L_3 does not cut out the whole free leading base: R_{3,m} \u2260 free B_0."
+        },
+        {
+          "claim": "G_{m,d} \u2260 0 (as a cone) for every odd m and all large d",
+          "label": "structural",
+          "not_a_containment_into_R3": true,
+          "reason": "WP-5 Level-2 nonemptiness of Lambda + \u03c0 linear"
+        },
+        {
+          "claim": "No free structural proof that G \u2286 R_3 or that G meets the open, from accepted packets alone",
+          "label": "structural_negative_meta",
+          "reason": "Equalizer conditions are O(d) linear cuts; R_3 is a nonlinear determinantal locus of polar type. Their incidence is not settled by growth or generic free ranks alone."
+        }
+      ]
+    },
+    "survivor_families": {
+      "exit_L_P": true,
+      "ids": [
+        "based_minus_lines_odd_m",
+        "residual_e1_swap_both",
+        "residual_e_ge7_generic_swap_both"
+      ],
+      "note": "Formal parameters and omega_3 sheaf as sealed in lifting/families/SUMMARY.json; never called covariants."
+    }
+  },
+  "gate": "5B \u2014 Gate 1: image of global states in leading-jet space",
+  "headline": "OPEN",
+  "producer": {
+    "does_not_import": "verify.py",
+    "script": "certificates/global_lifting/produce.py"
+  },
+  "scope": {
+    "excludes": [
+      "Fork A (5C) rank-drop obstruction computation",
+      "Fork B (5D) generic-surjectivity construction",
+      "generic local lifting continuation (house rule 4)",
+      "containment decision by sampling"
+    ],
+    "includes": [
+      "formulation of G_{m,d} \u2286 B_{m,d}",
+      "rank-drop loci R_{1,m}, R_{3,m}",
+      "precise decision statement",
+      "size estimates per WORKORDER \u00a77.2"
+    ]
+  },
+  "self_sha256": "3f65ca714288d5e29dd8c5d728d476b5ab5564a54bf346c444e96d69e9d2e32b",
+  "size_estimates": {
+    "certificate_format_proposed": {
+      "exactness": "all ranks and ideals over Q (or DVR rank-preservation with hypotheses checked)",
+      "files": [
+        "Lambda_basis_CSR.json (exact Q sparse basis of equalizer kernel)",
+        "G_projection_matrix.json (plane-component map \u03c0)",
+        "Fitt_coker_L3.generators (M2/Singular ideal over Q[A] or O(G))",
+        "rank_certificate.json (generic rank of L_3 over G with proof type)",
+        "SHA256SUMS"
+      ],
+      "hash_policy": "content hashes only; self_sha256 after last byte; no timing fields",
+      "name": "global_state_image_decision_packet"
+    },
+    "checkpoint_plan": [
+      "CKPT-0: free-module L1/L3 sparse COO + generic ranks (already sealed in families/)",
+      "CKPT-1: Fitt generators of coker L_3 over free leading ring for m=1",
+      "CKPT-2: same for m=3; compare pattern",
+      "CKPT-3: sparse equalizer matrix rows streamed per orbit-type arrow",
+      "CKPT-4: Lambda basis for (m,d)=(1,7); project to G; store CSR",
+      "CKPT-5: rank of L_3 over G at (1,7) with char-0 certificate",
+      "CKPT-6: replicate at (1,13) and (3,19); stop if pattern stable or structural theorem appears",
+      "On any CKPT exceeding 8 GB RSS: halt, emit dimensions, request director 96 GB only if sparse residual path is proved insufficient"
+    ],
+    "decision_path_recommended": [
+      {
+        "expected_RSS": "<< 1 GB",
+        "matrix_dims": "L3: (3m+4) x 3(m+4); entries quadratic in 2(m+1) A-coeffs",
+        "name": "free_module_Fitting_L3",
+        "output": "generators or GB of Fitt_0(coker L_3) in Q[A_*]",
+        "scope": "odd m in {1,3} first; free R-module only",
+        "step": 1
+      },
+      {
+        "expected_RSS": "< 1 GB sparse for listed starts",
+        "matrix_dims": "equalizer target_upper x J_plane_C2 (see table)",
+        "name": "global_equalizer_sparse_Lambda",
+        "output": "basis of Lambda_{m,d} over Q; plane projection = G",
+        "scope": "director start bidegrees (1,7),(1,13),(3,19)",
+        "step": 2
+      },
+      {
+        "action": "Pull L_3 back to coordinate ring of G_{m,d}; compute generic rank over frac(O(G)) or sample certified Q-points of G with global-compatibility certificate",
+        "expected_RSS": "dominated by step 2 + free Fitting",
+        "name": "restrict_L3_to_G",
+        "scope": "same bidegrees",
+        "step": 3,
+        "verdict_rule": "If rank(L_3)|_G attains free generic rank on a Zariski-open of G (char 0), then G meets B\\R_3. If Fitt vanishes identically on G, then G \u2286 R_3."
+      },
+      {
+        "action": "A bare modular or uncertified sample of a_m is insufficient for either containment claim.",
+        "name": "no_sample_alone",
+        "step": 4
+      }
+    ],
+    "formulation_RSS_estimate_GB": 0.05,
+    "free_module_Fitting_and_ranks": {
+      "1": {
+        "L1": {
+          "generic_coker_pattern": 0,
+          "generic_nullity_pattern": 4,
+          "generic_rank_pattern": 5,
+          "memory": {
+            "bytes_per_entry_assumption": 32,
+            "bytes_per_sparse_assumption": 40,
+            "dense_GB_floor": 1e-06,
+            "dense_bytes_floor": 1440,
+            "exceeds_8GB_dense": false,
+            "exceeds_8GB_sparse": false,
+            "sparse_GB_floor": 2e-06,
+            "sparse_bytes_floor": 1920
+          },
+          "minor_total_degree_in_A": 10,
+          "nnz_quadratic_terms": 48,
+          "num_maximal_minors": 126,
+          "shape_codomain_x_domain": [
+            5,
+            9
+          ]
+        },
+        "L3": {
+          "generic_coker_pattern": 0,
+          "generic_nullity_pattern": 8,
+          "generic_rank_pattern": 7,
+          "memory": {
+            "bytes_per_entry_assumption": 32,
+            "bytes_per_sparse_assumption": 40,
+            "dense_GB_floor": 3e-06,
+            "dense_bytes_floor": 3360,
+            "exceeds_8GB_dense": false,
+            "exceeds_8GB_sparse": false,
+            "sparse_GB_floor": 3e-06,
+            "sparse_bytes_floor": 3200
+          },
+          "minor_total_degree_in_A": 14,
+          "nnz_quadratic_terms": 80,
+          "num_maximal_minors": 6435,
+          "shape_codomain_x_domain": [
+            7,
+            15
+          ]
+        },
+        "formula_L1_nullity": "3(m+2)-(3m+2)=4",
+        "formula_L3_nullity": "3(m+4)-(3m+4)=8",
+        "n_leading_free_coeffs": 4,
+        "status_generic_ranks": "PROVED_FOR_m_in_1_3_PATTERN"
+      },
+      "3": {
+        "L1": {
+          "generic_coker_pattern": 0,
+          "generic_nullity_pattern": 4,
+          "generic_rank_pattern": 11,
+          "memory": {
+            "bytes_per_entry_assumption": 32,
+            "bytes_per_sparse_assumption": 40,
+            "dense_GB_floor": 5e-06,
+            "dense_bytes_floor": 5280,
+            "exceeds_8GB_dense": false,
+            "exceeds_8GB_sparse": false,
+            "sparse_GB_floor": 1.3e-05,
+            "sparse_bytes_floor": 12800
+          },
+          "minor_total_degree_in_A": 22,
+          "nnz_quadratic_terms": 320,
+          "num_maximal_minors": 1365,
+          "shape_codomain_x_domain": [
+            11,
+            15
+          ]
+        },
+        "L3": {
+          "generic_coker_pattern": 0,
+          "generic_nullity_pattern": 8,
+          "generic_rank_pattern": 13,
+          "memory": {
+            "bytes_per_entry_assumption": 32,
+            "bytes_per_sparse_assumption": 40,
+            "dense_GB_floor": 9e-06,
+            "dense_bytes_floor": 8736,
+            "exceeds_8GB_dense": false,
+            "exceeds_8GB_sparse": false,
+            "sparse_GB_floor": 1.8e-05,
+            "sparse_bytes_floor": 17920
+          },
+          "minor_total_degree_in_A": 26,
+          "nnz_quadratic_terms": 448,
+          "num_maximal_minors": 203490,
+          "shape_codomain_x_domain": [
+            13,
+            21
+          ]
+        },
+        "formula_L1_nullity": "3(m+2)-(3m+2)=4",
+        "formula_L3_nullity": "3(m+4)-(3m+4)=8",
+        "n_leading_free_coeffs": 8,
+        "status_generic_ranks": "PROVED_FOR_m_in_1_3_PATTERN"
+      },
+      "5": {
+        "L1": {
+          "generic_coker_pattern": 0,
+          "generic_nullity_pattern": 4,
+          "generic_rank_pattern": 17,
+          "memory": {
+            "bytes_per_entry_assumption": 32,
+            "bytes_per_sparse_assumption": 40,
+            "dense_GB_floor": 1.1e-05,
+            "dense_bytes_floor": 11424,
+            "exceeds_8GB_dense": false,
+            "exceeds_8GB_sparse": false,
+            "sparse_GB_floor": 0.000137,
+            "sparse_bytes_floor": 137080
+          },
+          "minor_total_degree_in_A": 34,
+          "nnz_quadratic_terms": 3427,
+          "num_maximal_minors": 5985,
+          "shape_codomain_x_domain": [
+            17,
+            21
+          ]
+        },
+        "L3": {
+          "generic_coker_pattern": 0,
+          "generic_nullity_pattern": 8,
+          "generic_rank_pattern": 19,
+          "memory": {
+            "bytes_per_entry_assumption": 32,
+            "bytes_per_sparse_assumption": 40,
+            "dense_GB_floor": 1.6e-05,
+            "dense_bytes_floor": 16416,
+            "exceeds_8GB_dense": false,
+            "exceeds_8GB_sparse": false,
+            "sparse_GB_floor": 0.000141,
+            "sparse_bytes_floor": 140720
+          },
+          "minor_total_degree_in_A": 38,
+          "nnz_quadratic_terms": 3518,
+          "num_maximal_minors": 2220075,
+          "shape_codomain_x_domain": [
+            19,
+            27
+          ]
+        },
+        "formula_L1_nullity": "3(m+2)-(3m+2)=4",
+        "formula_L3_nullity": "3(m+4)-(3m+4)=8",
+        "n_leading_free_coeffs": 12,
+        "status_generic_ranks": "PATTERN_EXTRAPOLATION_ONLY"
+      },
+      "7": {
+        "L1": {
+          "generic_coker_pattern": 0,
+          "generic_nullity_pattern": 4,
+          "generic_rank_pattern": 23,
+          "memory": {
+            "bytes_per_entry_assumption": 32,
+            "bytes_per_sparse_assumption": 40,
+            "dense_GB_floor": 2e-05,
+            "dense_bytes_floor": 19872,
+            "exceeds_8GB_dense": false,
+            "exceeds_8GB_sparse": false,
+            "sparse_GB_floor": 0.000424,
+            "sparse_bytes_floor": 423920
+          },
+          "minor_total_degree_in_A": 46,
+          "nnz_quadratic_terms": 10598,
+          "num_maximal_minors": 17550,
+          "shape_codomain_x_domain": [
+            23,
+            27
+          ]
+        },
+        "L3": {
+          "generic_coker_pattern": 0,
+          "generic_nullity_pattern": 8,
+          "generic_rank_pattern": 25,
+          "memory": {
+            "bytes_per_entry_assumption": 32,
+            "bytes_per_sparse_assumption": 40,
+            "dense_GB_floor": 2.6e-05,
+            "dense_bytes_floor": 26400,
+            "exceeds_8GB_dense": false,
+            "exceeds_8GB_sparse": false,
+            "sparse_GB_floor": 0.000402,
+            "sparse_bytes_floor": 402280
+          },
+          "minor_total_degree_in_A": 50,
+          "nnz_quadratic_terms": 10057,
+          "num_maximal_minors": 13884156,
+          "shape_codomain_x_domain": [
+            25,
+            33
+          ]
+        },
+        "formula_L1_nullity": "3(m+2)-(3m+2)=4",
+        "formula_L3_nullity": "3(m+4)-(3m+4)=8",
+        "n_leading_free_coeffs": 16,
+        "status_generic_ranks": "PATTERN_EXTRAPOLATION_ONLY"
+      }
+    },
+    "independent_verifier_design": {
+      "rules": [
+        "Does not import produce.py",
+        "Recomputes defining data hashes of accepted inputs",
+        "Checks three P(E_-) copies remain distinguished in formulation",
+        "Checks R_1, R_3 written as Fitting loci of accepted L_r",
+        "Checks decision statement exact; containment_status is UNDECIDED",
+        "Rejects any formal state labelled as covariant",
+        "Rejects timing fields; checks self_sha256",
+        "Future decision verifier: rebuild equalizer rows from incidence + local modules; recompute ker; recompute Fitt or rank over G independently"
+      ],
+      "script": "certificates/global_lifting/verify_decision.py (future Fork A/B)",
+      "this_gate_verifier": "certificates/global_lifting/verify.py",
+      "tools": {
+        "GAP": "/opt/homebrew/Caskroom/miniforge/base/bin/gap",
+        "M2": "/opt/homebrew/bin/M2",
+        "Singular": "/opt/homebrew/bin/Singular",
+        "note": "gap shell alias is git apply; gp alias is git push \u2014 use absolute paths",
+        "python3": "/opt/homebrew/bin/python3"
+      }
+    },
+    "instantiated_bidegree_envelopes": [
+      {
+        "L1_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.000302,
+          "dense_bytes_floor": 302400,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.000378,
+          "sparse_bytes_floor": 378000
+        },
+        "L1_full_C2_nnz_upper": 9450,
+        "L1_full_C2_shape_upper": [
+          50,
+          189
+        ],
+        "L3_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.000101,
+          "dense_bytes_floor": 100800,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.000126,
+          "sparse_bytes_floor": 126000
+        },
+        "L3_full_C2_nnz_upper": 3150,
+        "L3_full_C2_shape_upper": [
+          21,
+          150
+        ],
+        "d": 7,
+        "dim_B_leading_C2": 112,
+        "dim_J_plane_C2": 112,
+        "e": 1,
+        "equalizer_matrix_shape_upper": [
+          236,
+          112
+        ],
+        "equalizer_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.000846,
+          "dense_bytes_floor": 845824,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.000944,
+          "sparse_bytes_floor": 944000
+        },
+        "equalizer_nnz_upper": 23600,
+        "equalizer_targets": {
+          "J_C3_upper": 6,
+          "J_V4": 21,
+          "J_coefficient_coupling_upper": 3,
+          "J_line_upper": 6,
+          "J_points_envelope": 200,
+          "note": "Upper envelope for equalizer codomain size; residual projection and character blocks cut further. Used only for memory floors.",
+          "target_total_upper": 236
+        },
+        "free_module_preferred": {
+          "L1_free_shape": [
+            5,
+            9
+          ],
+          "L3_free_shape": [
+            7,
+            15
+          ],
+          "reason": "Relative free R-module matrices decide generic rank and Fitting shape independent of d; instantiate d only after residual projection."
+        },
+        "label": "based / e1 residual start",
+        "m": 1
+      },
+      {
+        "L1_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.006178,
+          "dense_bytes_floor": 6177600,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.007722,
+          "sparse_bytes_floor": 7722000
+        },
+        "L1_full_C2_nnz_upper": 193050,
+        "L1_full_C2_shape_upper": [
+          275,
+          702
+        ],
+        "L3_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.006653,
+          "dense_bytes_floor": 6652800,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.008316,
+          "sparse_bytes_floor": 8316000
+        },
+        "L3_full_C2_nnz_upper": 207900,
+        "L3_full_C2_shape_upper": [
+          252,
+          825
+        ],
+        "d": 13,
+        "dim_B_leading_C2": 364,
+        "dim_J_plane_C2": 364,
+        "e": 7,
+        "equalizer_matrix_shape_upper": [
+          264,
+          364
+        ],
+        "equalizer_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.003075,
+          "dense_bytes_floor": 3075072,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.001056,
+          "sparse_bytes_floor": 1056000
+        },
+        "equalizer_nnz_upper": 26400,
+        "equalizer_targets": {
+          "J_C3_upper": 10,
+          "J_V4": 39,
+          "J_coefficient_coupling_upper": 5,
+          "J_line_upper": 10,
+          "J_points_envelope": 200,
+          "note": "Upper envelope for equalizer codomain size; residual projection and character blocks cut further. Used only for memory floors.",
+          "target_total_upper": 264
+        },
+        "free_module_preferred": {
+          "L1_free_shape": [
+            5,
+            9
+          ],
+          "L3_free_shape": [
+            7,
+            15
+          ],
+          "reason": "Relative free R-module matrices decide generic rank and Fitting shape independent of d; instantiate d only after residual projection."
+        },
+        "label": "based / e>=7 residual start",
+        "m": 1
+      },
+      {
+        "L1_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.109296,
+          "dense_bytes_floor": 109296000,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.13662,
+          "sparse_bytes_floor": 136620000
+        },
+        "L1_full_C2_nnz_upper": 3415500,
+        "L1_full_C2_shape_upper": [
+          1265,
+          2700
+        ],
+        "L3_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.178517,
+          "dense_bytes_floor": 178516800,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.223146,
+          "sparse_bytes_floor": 223146000
+        },
+        "L3_full_C2_nnz_upper": 5578650,
+        "L3_full_C2_shape_upper": [
+          1470,
+          3795
+        ],
+        "d": 25,
+        "dim_B_leading_C2": 1300,
+        "dim_J_plane_C2": 1300,
+        "e": 19,
+        "equalizer_matrix_shape_upper": [
+          320,
+          1300
+        ],
+        "equalizer_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.013312,
+          "dense_bytes_floor": 13312000,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.00128,
+          "sparse_bytes_floor": 1280000
+        },
+        "equalizer_nnz_upper": 32000,
+        "equalizer_targets": {
+          "J_C3_upper": 18,
+          "J_V4": 75,
+          "J_coefficient_coupling_upper": 9,
+          "J_line_upper": 18,
+          "J_points_envelope": 200,
+          "note": "Upper envelope for equalizer codomain size; residual projection and character blocks cut further. Used only for memory floors.",
+          "target_total_upper": 320
+        },
+        "free_module_preferred": {
+          "L1_free_shape": [
+            5,
+            9
+          ],
+          "L3_free_shape": [
+            7,
+            15
+          ],
+          "reason": "Relative free R-module matrices decide generic rank and Fitting shape independent of d; instantiate d only after residual projection."
+        },
+        "label": "based large-d regression",
+        "m": 1
+      },
+      {
+        "L1_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.039494,
+          "dense_bytes_floor": 39494400,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.049368,
+          "sparse_bytes_floor": 49368000
+        },
+        "L1_full_C2_nnz_upper": 1234200,
+        "L1_full_C2_shape_upper": [
+          605,
+          2040
+        ],
+        "L3_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.033022,
+          "dense_bytes_floor": 33022080,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.041278,
+          "sparse_bytes_floor": 41277600
+        },
+        "L3_full_C2_nnz_upper": 1031940,
+        "L3_full_C2_shape_upper": [
+          468,
+          2205
+        ],
+        "d": 19,
+        "dim_B_leading_C2": 1224,
+        "dim_J_plane_C2": 1224,
+        "e": 1,
+        "equalizer_matrix_shape_upper": [
+          422,
+          1224
+        ],
+        "equalizer_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.016529,
+          "dense_bytes_floor": 16528896,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.001688,
+          "sparse_bytes_floor": 1688000
+        },
+        "equalizer_nnz_upper": 42200,
+        "equalizer_targets": {
+          "J_C3_upper": 14,
+          "J_V4": 187,
+          "J_coefficient_coupling_upper": 7,
+          "J_line_upper": 14,
+          "J_points_envelope": 200,
+          "note": "Upper envelope for equalizer codomain size; residual projection and character blocks cut further. Used only for memory floors.",
+          "target_total_upper": 422
+        },
+        "free_module_preferred": {
+          "L1_free_shape": [
+            11,
+            15
+          ],
+          "L3_free_shape": [
+            13,
+            21
+          ],
+          "reason": "Relative free R-module matrices decide generic rank and Fitting shape independent of d; instantiate d only after residual projection."
+        },
+        "label": "based / e1 at m=3",
+        "m": 3
+      },
+      {
+        "L1_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.181674,
+          "dense_bytes_floor": 181674240,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.227093,
+          "sparse_bytes_floor": 227092800
+        },
+        "L1_full_C2_nnz_upper": 5677320,
+        "L1_full_C2_shape_upper": [
+          1496,
+          3795
+        ],
+        "L3_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.192629,
+          "dense_bytes_floor": 192628800,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.240786,
+          "sparse_bytes_floor": 240786000
+        },
+        "L3_full_C2_nnz_upper": 6019650,
+        "L3_full_C2_shape_upper": [
+          1365,
+          4410
+        ],
+        "d": 25,
+        "dim_B_leading_C2": 2208,
+        "dim_J_plane_C2": 2208,
+        "e": 7,
+        "equalizer_matrix_shape_upper": [
+          498,
+          2208
+        ],
+        "equalizer_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.035187,
+          "dense_bytes_floor": 35186688,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.001992,
+          "sparse_bytes_floor": 1992000
+        },
+        "equalizer_nnz_upper": 49800,
+        "equalizer_targets": {
+          "J_C3_upper": 18,
+          "J_V4": 253,
+          "J_coefficient_coupling_upper": 9,
+          "J_line_upper": 18,
+          "J_points_envelope": 200,
+          "note": "Upper envelope for equalizer codomain size; residual projection and character blocks cut further. Used only for memory floors.",
+          "target_total_upper": 498
+        },
+        "free_module_preferred": {
+          "L1_free_shape": [
+            11,
+            15
+          ],
+          "L3_free_shape": [
+            13,
+            21
+          ],
+          "reason": "Relative free R-module matrices decide generic rank and Fitting shape independent of d; instantiate d only after residual projection."
+        },
+        "label": "e>=7 residual at m=3",
+        "m": 3
+      },
+      {
+        "L1_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 1.115554,
+          "dense_bytes_floor": 1115553600,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 1.394442,
+          "sparse_bytes_floor": 1394442000
+        },
+        "L1_full_C2_nnz_upper": 34861050,
+        "L1_full_C2_shape_upper": [
+          3570,
+          9765
+        ],
+        "L3_full_C2_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 1.139697,
+          "dense_bytes_floor": 1139697216,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 1.424622,
+          "sparse_bytes_floor": 1424621520
+        },
+        "L3_full_C2_nnz_upper": 35615538,
+        "L3_full_C2_shape_upper": [
+          3249,
+          10962
+        ],
+        "d": 35,
+        "dim_B_leading_C2": 5952,
+        "dim_J_plane_C2": 5952,
+        "e": 5,
+        "equalizer_matrix_shape_upper": [
+          1004,
+          5952
+        ],
+        "equalizer_memory": {
+          "bytes_per_entry_assumption": 32,
+          "bytes_per_sparse_assumption": 40,
+          "dense_GB_floor": 0.191226,
+          "dense_bytes_floor": 191225856,
+          "exceeds_8GB_dense": false,
+          "exceeds_8GB_sparse": false,
+          "sparse_GB_floor": 0.004016,
+          "sparse_bytes_floor": 4016000
+        },
+        "equalizer_nnz_upper": 100400,
+        "equalizer_targets": {
+          "J_C3_upper": 24,
+          "J_V4": 744,
+          "J_coefficient_coupling_upper": 12,
+          "J_line_upper": 24,
+          "J_points_envelope": 200,
+          "note": "Upper envelope for equalizer codomain size; residual projection and character blocks cut further. Used only for memory floors.",
+          "target_total_upper": 1004
+        },
+        "free_module_preferred": {
+          "L1_free_shape": [
+            17,
+            21
+          ],
+          "L3_free_shape": [
+            19,
+            27
+          ],
+          "reason": "Relative free R-module matrices decide generic rank and Fitting shape independent of d; instantiate d only after residual projection."
+        },
+        "label": "stress upper bound (not authorized to solve)",
+        "m": 5
+      }
+    ],
+    "resource_gate_GB": 8,
+    "section_7_2_compliance": "Before any job expected to exceed 8 GB RSS: matrix/module dimensions, term counts, sparse/dense floors, certificate format, checkpoint plan, independent verifier design."
+  },
+  "terminal_marker": "GLOBAL_STATE_IMAGE_FORMULATION_OK",
+  "theorem_boundary": {
+    "not_proved_here": [
+      "G \u2286 R_3",
+      "G meets B \\ R_3",
+      "Closed-form Fitting generators of R_3 in all m",
+      "Existence of a landing covariant",
+      "Emptiness of any survivor family"
+    ],
+    "proved_here": [
+      "Exact defining data for G_{m,d} as scheme-theoretic image of \u03c0: Lambda^{rep} \u2192 B",
+      "R_{1,m} and R_{3,m} as Fitting-ideal loci of accepted L_1, L_3",
+      "Required decision stated; forks A/B identified",
+      "Size estimates (dimensions, nnz, sparse/dense floors) for deciding it",
+      "Structural: R_3 proper in free B_0 for m=1,3; G nonzero for large d"
+    ]
+  },
+  "work_package": "A5-G1"
+}

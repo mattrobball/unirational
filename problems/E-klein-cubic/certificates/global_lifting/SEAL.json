@@ -1,0 +1,53 @@
+{
+  "accepted_input_sha256": {
+    "certificates/global_transition/diagram.json": "369f15f46d4e37f0dd7af578361ea9907d17ac0f307c9e5b6b63ef3c01d7708d",
+    "certificates/global_transition/level1_marked_states.json": "c6056cdf94e9a5324a5ec17950a170511d0f3c7a3edf0cb92bfc12b010675f19",
+    "certificates/global_transition/level2_inverse_limit.json": "d23615ecbe4584e3e401293984d354bbf6b26392b8923e40e69c8ecc37098a90",
+    "certificates/global_transition/necessity_theorem.json": "a5a21eff778447bd6edf250a1ecaf17ee0406edf371c56aa35bd6796cd3b3731",
+    "certificates/lifting/families/SUMMARY.json": "717240ae557d3468cac3dc0c7862717ac6ecd6efb95c3e7e26686e4da25f6035",
+    "certificates/lifting/families/free_module_stages.json": "7305453e8c75be0a7c30eab41cbc2e1b82daacbe5899cceab34145e26a6e43a7",
+    "certificates/lifting/polar_expansion.json": "1231694bdc41f6c06c690c2b8eb58dca42402acf1cfaacdc284157b00033098e",
+    "certificates/transition_repair/category_repaired.json": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0",
+    "certificates/transitions/involution_plane/module.json": "85e5676c3076ef6d9b267194ef6685eb6d7dc82e01d94ad22009e4b34f097312"
+  },
+  "attempt": 5,
+  "containment_status": "UNDECIDED",
+  "exceeded_8GB": false,
+  "files_sha256": {
+    "certificates/global_lifting/GLOBAL_STATE_IMAGE.md": "dfdeec78205acd31d2b6bd2efe1c8f2a2718743052b7f457748c8108d64b0b55",
+    "certificates/global_lifting/global_state_image.json": "d06ccf27839491abf7a31b03b98e604ea53cc7c5ffe387b4abec3103c0ad3206",
+    "certificates/global_lifting/produce.py": "5642cbc5562db3d6e9610d1723f18a940e63ec97665052d3a98a479525d181ad",
+    "certificates/global_lifting/verify.py": "8d0d043503aa45cae6aa4b9cec830597f67bdc3045e7d970795ba1246aaa5e18"
+  },
+  "gate": "5B \u2014 Gate 1: global state image formulation + size estimates only",
+  "headline": "OPEN",
+  "module_self_sha256": {
+    "global_state_image": "3f65ca714288d5e29dd8c5d728d476b5ab5564a54bf346c444e96d69e9d2e32b"
+  },
+  "note": "Content hashes only; no wall_time fields. Formulation and estimates only \u2014 containment undecided.",
+  "producer": "certificates/global_lifting/produce.py",
+  "resource_gate_GB": 8,
+  "self_sha256": "f23c9d04c032e4bf19b9c8c2eec6ce85cba7c6aafaedde096572a9f33116219b",
+  "terminal_markers": [
+    "GLOBAL_STATE_IMAGE_FORMULATION_OK",
+    "GLOBAL_STATE_IMAGE_VERIFY_OK"
+  ],
+  "theorem_boundary": {
+    "not_proved_here": [
+      "G \u2286 R_3",
+      "G meets B \\ R_3",
+      "Closed-form Fitting generators of R_3 in all m",
+      "Existence of a landing covariant",
+      "Emptiness of any survivor family"
+    ],
+    "proved_here": [
+      "Exact defining data for G_{m,d} as scheme-theoretic image of \u03c0: Lambda^{rep} \u2192 B",
+      "R_{1,m} and R_{3,m} as Fitting-ideal loci of accepted L_1, L_3",
+      "Required decision stated; forks A/B identified",
+      "Size estimates (dimensions, nnz, sparse/dense floors) for deciding it",
+      "Structural: R_3 proper in free B_0 for m=1,3; G nonzero for large d"
+    ]
+  },
+  "verifier": "certificates/global_lifting/verify.py",
+  "work_package": "A5-G1"
+}
