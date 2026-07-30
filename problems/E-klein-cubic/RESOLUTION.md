@@ -22,6 +22,125 @@ Artifact scope matters when replaying the ledger: the tracked
 intentionally ignored, so `tmp/...` citations below are local provenance
 pointers rather than remotely published files.
 
+## 2026-07-30 latest fixed-frame result
+
+The main question is again: is the Klein cubic
+\(\operatorname{PSL}_2(\mathbf F_{11})\)-unirational?  The answer remains
+**OPEN**.  The newest exact conclusions concern only the minimal fixed-frame
+Pfaffian plane cubic.
+
+- The `f5=0` residual cubic over `C(A,Y,Z)` has an explicit constant smooth
+  point `[x1:t1:1]` with nonzero projector derivative.  It Hensel-lifts, so
+  `D5` is no longer a possible local obstruction; the accepted `E[3]`
+  representative lies in the local Kummer image.
+- Over
+
+  \[
+  F=\mathbf C(A,B,Y,Z),
+  \]
+
+  the full fixed-frame equation is the generic member of a basepoint-free
+  four-parameter linear system of plane cubics.  The regular universal
+  incidence and its projective-bundle Picard group prove
+
+  \[
+  \operatorname{ind}(C/F)=3,\quad C(F)=\varnothing,
+  \quad \operatorname{Pic}^0(C)(F)=0.
+  \]
+
+- A sparse exact BKK calculation, with a separate hostile replay, proves
+
+  \[
+  [K_{\rm proj}:F]=6
+  \]
+
+  and affine scaled-frame length `18`.  Its special arithmetic monodromy is
+  `S6`; the degree packet first gives geometric monodromy `A6` or `S6`,
+  enough to prove that the sextic extension has no proper intermediate
+  field.  The later simple-branch theorem upgrades it to geometric `S6`.
+  The degree proof uses exact polynomial identities and mixed volume `6`,
+  not the timed-out generic
+  Groebner calculations or the rejected naive homogenization.
+- The residual point itself fails globally by `B*rB(t1)!=0`.  Holding its
+  binary direction fixed produces an irreducible cubic extension, hence no
+  `K_proj` point on that fixed line because no cubic intermediate field
+  exists.  A point with varying direction is not excluded.
+- On the exact target line `(A,B,Y,Z)=(1,2,3,s)`, a primitive element has
+  sextic discriminant `Q11^2*H21`, with the irreducible `H21` factor of
+  exponent one and coprime to content and leading coefficient.  The global
+  specialization plus index-square/different formula proves the existence
+  of a target branch divisor with one ramified prime `(e,f)=(2,1)`; hence
+  `[k(R):k(D)]=1`.  Degree `21` is only the degree of the chosen line point.
+  A separate exact two-chart calculation modulo `67` proves that `H21` is
+  coprime to the necessary affine and infinite singularity conditions for
+  the fixed-frame cubic.  Thus the selected branch component has smooth
+  generic cubic.  The remaining valuation gate is `ind(C_{k(D)})=3`.
+- The degree-37 upstairs critical determinant of the four-parameter map is
+  geometrically integral and reduced.  Its first proposed incidence
+  compactification fails exactly: the five coordinate points are base points
+  with differential rank two, so the incidence has `P2` fibres and the
+  cleared cubic has `P2 x P2` components.  Thus the naive semiample Picard
+  argument is not a proof.  Extracting the multiplicity-one target branch
+  and controlling the integral Picard/class group of its cubic incidence is
+  still new work; a base-ideal blow-up and strict-transform Picard
+  calculation is the longer alternative.
+
+There is now a uniform fixed-member Picard theorem for the target incidence.
+For every integral target hypersurface `D` with integral generic cubic, the
+two-equation Koszul vanishing and SGA2 XII.3.6--3.7 prove
+
+```text
+Pic(T_D) = Z*H_z + Z*H_lambda
+```
+
+even if `T_D` is singular.  Flatness over `D` supplies integrality.  This is
+ordinary Picard control only: the exact remaining obstruction is the
+three-primary part of `Cl(T_D)/Pic(T_D)` (after the necessary normalization
+and removal of vertical classes).  Local factoriality would close it;
+normality and rational Picard control do not.  At a codimension-two nodal
+contact on the normalization, the local model is `xy=pi^m` with class group
+`Z/m`, so only pullback orders divisible by three are dangerous.
+
+The naive smooth primitive-root complete intersection is also rejected.
+On the exact characteristic-zero slice `A=Y=0,B=1`, its primitive sextic has
+discriminant factors `(11,2),(21,1)`.  Every full Jacobian minor vanishes on
+the degree-11 factor, and that factor divides the Cramer norm; the simple
+degree-21 factor is Cramer-open and has no rank drop.  Hence only the selected
+simple component after Cramer saturation and normalization remains viable.
+Exact pointwise evaluation and the true projective-line factorization show
+that the Cramer norm contains the entire squared part and is coprime to the
+simple factor, so this saturation is canonical in the tested charts.
+
+The raw target branch cannot itself serve as a normal Lefschetz base.  A
+smooth ordered-double-fold point modulo `7` lifts to characteristic zero;
+there two distinct ordinary Cramer-open folds have independent target
+normals.  Geometric `S6` monodromy puts the two branches on the same
+irreducible target divisor, proving a codimension-one self-intersection and
+nonnormality.  After Cramer saturation, small-prime singular witnesses still
+occur.  The `A=0,B=2` saturated rank-zero slice has dimension zero and degree
+`12` modulo `67`; its exact rational computation hit the 180-second cap, so
+this is evidence rather than a characteristic-zero singularity theorem.
+
+The global primitive sextic is computationally smaller than its raw
+determinant suggests: modulo `67`, removing a `2580`-term parameter content
+leaves a `1556`-term sextic of parameter total degree `10`.  This is a
+feasibility estimate, not a characteristic-zero branch equation; the direct
+rational import timed out at 180 seconds before determinant construction.
+On an exact line in the actual projective coefficient coordinates
+`(A,B,Y,T)`, the discriminant factors as degrees/exponents
+`(1,2),(23,2),(39,1)`.  This corrects the affine-line reconnaissance but does
+not yet certify a global degree-39 equation; the `H21` test line is
+degree-dropped.
+
+The no-intermediate-field theorem does not preserve a three-torsion class
+across a degree-six extension.  Equivalently, a `K_proj` point is still
+possible and would be encoded by an `F`-conic whose six-point intersection
+algebra with `C` is isomorphic to `K_proj`.  This is an exact interface, not a
+finite search.  None of these statements constructs or excludes the full
+15-coordinate self-adjoint Pfaffian idempotent, and none settles the headline.
+This latest section supersedes the older `D5`-undecided and
+field-degree-undecided sentences retained in the longer audit ledger below.
+
 ## 2026-07-30 audited advances
 
 The main question remains **OPEN**.  The following new conclusions are exact

@@ -82,35 +82,68 @@ advanced, but not completed, three attacks:
   seven explicit coefficients, exact Jacobian and flex data, and projector
   open `F_u!=0`.  Its flex algebra is a degree-nine field and its Jacobian
   3-division quartic is irreducible, so it has neither a rational flex nor a
-  rational 3-torsion/3-isogeny shortcut.  The genuine `f3=0` quotient
-  valuation is locally soluble with `F_u!=0`, while the `f5=0` scaling leaves
-  a smooth residual genus-one point problem.  The genuine `E[3]` algebra,
+  rational 3-torsion/3-isogeny shortcut.  The genuine `E[3]` algebra,
   flex Cech cocycle, normalized translation, and
   `alpha_R in R^x/R^(x3)` are now exact and independently audited, including
   the rank-729 triple-overlap identity.  The normalized first-descent
   interface has ten variables and nine cubics.  Its 729 geometric
   degree-nine components do not yield a separate obstruction because one
   base-defined component recovers the original covering.  The local Kummer
-  comparison now retires `f3=0`: the accepted Hensel point puts the covering
-  class in the local Kummer image.  At `f5=0`, good reduction and prime-`3`
-  injectivity of `w1` identify local membership exactly with the residual
-  plane cubic having a point.  That residual cubic descends to
-  `C(A,Y,Z)`, for `A=f6/f3^2`, `Y=f9/f3^3`, and `Z=f12/f3^4`; the actual
-  independence of these three parameters is certified directly in
-  characteristic zero.  A hostile audit rejected the attempted inference
-  from one length-`3960` affine fibre, since points can escape to infinity,
-  and replaced it by a genuinely generic calculation in the certified
-  rank-12 invariant module.  The cokernel of multiplication by `f9-Y` and
-  `f12-Z` over `QQ(A,Y,Z)[f8,f11]` has exact length `6`; dividing by the
-  residual scalar `mu3` rank proves
-  `[k(D5):C(A,Y,Z)]=2`.  Hence a residue-field point exists exactly when the
-  descended three-parameter cubic has a `C(A,Y,Z)`-point.  The three
-  coordinate-infinity places are locally soluble, while one distinguished
-  binary direction is empty even over the quadratic residue field.  The
-  explicit residual torsor point/nonpoint problem, the global torsor point,
-  and the later quaternion/common-line stages remain undecided.  The saved
-  raw `alpha_R` coordinates are gauge-dependent: their mixed-weight DAG pass
-  is only a homogeneity diagnostic, not a coordinatewise valuation.
+  comparison retires `f3=0`: the accepted Hensel point puts the covering
+  class in the local Kummer image.  The `f5=0` residual cubic descends to
+  `C(A,Y,Z)`, and the residue extension has exact degree two.  It now has the
+  exact constant smooth point `[x1:t1:1]` in the projector open, so `f5=0`
+  is also locally soluble and retired; the selected `E[3]` lift is
+  Kummer-admissible there, not asserted to be zero.  Globally, with
+  `F=C(A,B,Y,Z)`, the full fixed-frame cubic is the generic member of a
+  basepoint-free five-form linear system.  Its universal-incidence Picard
+  calculation proves `ind(C/F)=3`, `C(F)=empty`, and `Pic^0(C)(F)=0`.
+  An exact sparse BKK certificate and an independent hostile replay prove
+  `[K_proj:F]=6` and scaled affine length `18`; arithmetic monodromy is `S6`
+  and the degree theorem gives geometric monodromy `A6` or `S6`, so there are
+  no proper intermediate fields.  A later exponent-one branch certificate
+  upgrades geometric monodromy to `S6`.  This excludes only the natural
+  fixed-binary-direction continuation of the residual point.  It does not prove
+  `C(K_proj)=empty`: a point with varying direction may generate the full
+  sextic field.  Equivalently, such a point would give a unique `F`-conic
+  whose length-six intersection algebra is `K_proj`, an existential
+  condition over `P5(F)`.  On `(A,B,Y,Z)=(1,2,3,s)`, the primitive sextic
+  discriminant is exactly `Q11^2*H21`, with `H21` irreducible of exponent one
+  and coprime to content and leading coefficient.  The global specialization
+  and index-square/different argument prove a branch divisor with one
+  ramified prime `(e,f)=(2,1)`, hence residue degree one.  The degree `21` is
+  the degree of the closed line point, not the residue degree.  An exact
+  two-chart coprimality screen modulo `67` proves that this selected branch
+  is not contained in the fixed-cubic discriminant, so its generic cubic is
+  smooth.  It remains to prove `ind(C_{k(D)})=3`.  The degree-37 upstairs
+  critical divisor is
+  geometrically integral and reduced, but the naive corank-incidence
+  compactification is rejected: all five coordinate points are coefficient-
+  map base points of Jacobian rank two, producing `P2` fibres and
+  `P2 x P2` components in the cleared total cubic.  The leading negative
+  route is now integral Picard/class-group control for the target branch
+  incidence; a base-ideal blow-up with strict-transform Picard control is the
+  longer alternative.  The saved raw `alpha_R`
+  coordinates remain gauge-dependent: their mixed-weight DAG pass is only a
+  homogeneity diagnostic, not a coordinatewise valuation.
+
+  The ordinary Picard part of the target-incidence problem is now complete:
+  a fixed-member SGA2 argument gives
+  `Pic(T_D)=Z*H_z+Z*H_lambda` for every integral target hypersurface in this
+  setup.  This does not control horizontal non-Cartier Weil divisors.  The
+  exact missing group is the three-primary part of
+  `Cl(T_D)/Pic(T_D)`, with vertical classes removed after normalization.
+  Local factoriality is sufficient; normality is not.  The first smooth
+  primitive-root complete-intersection model is rejected by an exact
+  characteristic-zero slice: its squared degree-11 discriminant factor is a
+  full Jacobian-rank-drop locus contained in the Cramer norm, while its simple
+  degree-21 factor is Cramer-open and does not have that rank drop.  Thus any
+  use of the primitive-root model must first separate and normalize the
+  simple component.  Exact double-fold lifting also proves that the raw
+  irreducible target branch is nonnormal in codimension one.  Cramer
+  saturation removes the squared factors in every exact line test, but
+  delta-open modular singular witnesses remain; smoothness of the selected
+  normalization is still an unproved gate.
 
 These are structural reductions, not a proof or refutation.  In particular,
 index one is not a rational point, a generic rational frame is not an

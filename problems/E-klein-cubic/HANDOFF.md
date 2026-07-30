@@ -9,6 +9,206 @@ resolution.
 The current two-axis ranking and the four-path audit are in
 [`CURRENT_PATHS.md`](CURRENT_PATHS.md).
 
+## 2026-07-30 latest Pfaffian closure
+
+The main question is still whether the Klein cubic is
+\(G=\operatorname{PSL}_2(\mathbf F_{11})\)-unirational.  The verdict remains
+**OPEN**.  The newest exact work replaces the former `D5` residue question
+and the unknown degree of the four-parameter fixed-frame cover by the
+following sharper boundary.
+
+1. **`D5` is soluble and is retired as an obstruction.**  Over
+   \(F_0=\mathbf C(A,Y,Z)\), the residual cubic has the constant point
+
+   \[
+   [X:v:w]=[x_1:t_1:1]
+   \]
+
+   with `x1,t1 in Q(zeta_11)`.  All five coefficients of the equation vanish
+   there identically in `A,Y,Z`, and the `Y` coefficient of `F_X` is nonzero.
+   Thus the point is generically smooth and lies in the projector open.  It
+   Hensel-lifts, the local genus-one torsor is zero, and the selected
+   `E[3]` representative is in the local Kummer image.  This does not say
+   that the particular `E[3]` lift is itself zero.
+
+2. **The full fixed-frame cubic has index three over a rational subfield.**
+   Put
+
+   \[
+   F=\mathbf C(A,B,Y,Z),\qquad
+   A=f_6/f_3^2,\ B=f_5f_7/f_3^4,\
+   Y=f_9/f_3^3,\ Z=f_{12}/f_3^4.
+   \]
+
+   The equation is the generic member of the basepoint-free linear system
+
+   \[
+   F_0+A F_A+B F_B+YF_Y+
+   \left(Z-\frac{11}{18}A^2\right)F_Z=0.
+   \]
+
+   The five constant ternary cubics are independent and have no common
+   geometric zero.  The universal incidence is a regular projective bundle
+   over `P2`; closure of generic-fibre divisors makes its Picard group
+   surject onto that of the generic cubic.  Hence the degree subgroup is
+   exactly `3Z`:
+
+   \[
+   \operatorname{ind}(C/F)=3,\qquad C(F)=\varnothing,
+   \qquad \operatorname{Pic}^0(C)(F)=0.
+   \]
+
+   Do not transfer this conclusion to `K_proj` without a new argument.
+
+3. **The missing field degree is now exact.**  A sparse three-equation BKK
+   certificate, independently replayed, proves
+
+   \[
+   [K_{\rm proj}:F]=6;
+   \]
+
+   the scaled affine frame has length `18`.  The proof uses an exact `3 x 9`
+   polynomial-combination matrix, the `t` and `u` unit gates, a
+   transcendental `v`-translation, normalized mixed volume `6`, and six
+   strict-henselian etale branches through an exact reduced rational fibre.
+   It does not use either timed-out generic Groebner basis or the false naive
+   homogenization.  The special sextic has arithmetic group `S6`; geometric
+   monodromy over `C` is `A6` or `S6`.  Either natural action is primitive,
+   so `K_proj/F` has no proper intermediate fields.
+
+4. **The natural constant-direction lift is excluded, but the point problem
+   is not.**  The `D5` point fails in the full equation by the exact nonzero
+   term `B*rB(t1)`.  Keeping `[v:w]=[t1:1]` gives a cubic in `X` that is
+   irreducible over `C(A,B,Y,Z)` because it is primitive and linear in the
+   independent parameter `B` with nonzero coefficient.  A root would create
+   a cubic intermediate field, which the primitive six-sheet monodromy
+   excludes.  A point with varying binary direction remains possible.
+
+5. **The branch residue degree is one, while its first compactification is
+   rejected.**  On the deterministic target line
+   `(A,B,Y,Z)=(1,2,3,s)`, the primitive `u`-sextic has exact discriminant
+   `Q11(s)^2*H21(s)`, where `H21` is irreducible, occurs once, and is coprime
+   to the coefficient content and leading coefficient.  Binding `u` to the
+   actual field uses its six distinct values on the reduced etale fibre plus
+   the no-intermediate-field theorem; arithmetic irreducibility alone is not
+   used across the extension of constants to `C`.  Specialization in the
+   coefficient UFD and the index-square/different formula then give a global
+   branch divisor with one ramified prime
+
+   \[
+   (e,f)=(2,1),\qquad [k(R):k(D)]=1.
+   \]
+
+   This simple transposition also upgrades geometric monodromy from
+   `A6 or S6` to `S6`.  The degree `21` is the degree of the chosen closed
+   point on the test line, not the residue degree or a certified global
+   divisor degree.  A separate exact two-chart screen modulo `67` proves
+   that `H21` is coprime to every necessary singularity condition for the
+   fixed-frame plane cubic, including the point at infinity.  Hence the
+   selected branch component is not contained in the cubic-discriminant
+   locus and its generic fixed-frame cubic is smooth.  Independently, the
+   degree-37 determinant of
+   `d(f3,f6,f5*f7,f9,f12)` is geometrically integral and reduced in
+   characteristic zero.  However, at every coordinate point `e_i` its rank
+   is exactly two and all five coefficient-map sections vanish.  The naive
+   corank incidence therefore has a `P2_ell` fibre there, and the cleared
+   cubic total space contains `P2_z x P2_ell` components.  The proposed
+   semiample-Lefschetz/Picard proof on that compactification is rejected.  The
+   exact remaining negative gate is
+
+   \[
+   \operatorname{ind}(C_{k(D)})=3
+   \]
+
+   for the multiplicity-one target branch.  Prove it by extracting `D` and
+   controlling the integral class group of its cubic incidence.  The
+   ordinary Picard part is now complete: an SGA2 fixed-member argument proves
+   `Pic(T_D)=Z*H_z+Z*H_lambda` for every integral target hypersurface with
+   integral generic cubic, even when `T_D` is singular.  What remains is
+   exactly the three-primary non-Cartier Weil defect
+
+   ```text
+   (Cl(T_D)/Pic(T_D))/3.
+   ```
+
+   Local factoriality would suffice; normality or rational Picard control
+   would not.  On the normalization, a codimension-two nodal-cubic contact
+   has local model `xy=pi^m` and class group `Z/m`, so only contacts with
+   `3|m` are dangerous.  A coefficient-base principalization with all
+   exceptional classes is a secondary, substantially longer route.
+
+   The first primitive-root shortcut has also been audited exactly.  On
+   `A=Y=0,B=1`, the characteristic-zero primitive sextic again has
+   discriminant factors `(11,2),(21,1)`.  The full Jacobian rank drops on the
+   degree-11 factor, which is exactly contained in the Cramer-denominator
+   norm, while it does not drop on the simple degree-21 factor.  Therefore
+   the full derivative incidence is not a smooth complete intersection.
+   The selected simple component remains viable only after canonical Cramer
+   saturation/component separation and normalization.  Exact pointwise
+   evaluation shows `delta=0` on the bad degree-11 repeated root and
+   `delta!=0` on the simple degree-21 root.  On the true projective line,
+   the Cramer norm contains exactly the squared degree-1 and degree-23
+   factors and is coprime to the simple degree-39 factor.  Thus `delta`
+   saturation is the correct component separator in every exact line test.
+
+   The raw irreducible target branch itself is now known to be nonnormal in
+   codimension one.  A smooth mod-7 ordered-double-fold point lifts to a
+   characteristic-zero two-dimensional locus where two distinct ordinary
+   Cramer-open folds have independent target normals; `S6` transitivity puts
+   both local branches on the same irreducible `D`.  Direct Lefschetz on raw
+   `D` is therefore unavailable.  Small-prime tests still find singular
+   points after `delta` saturation.  On `A=0,B=2`, the saturated rank-zero
+   scheme has modular dimension zero and degree `12` at `67`; the exact
+   characteristic-zero ideal timed out at 180 seconds, so smoothness of the
+   selected normalization is not yet refuted.
+
+6. **The exact remaining fixed-frame gate is narrow.**  Since the extension
+   has no intermediate fields and `Pic^0(C)(F)=0`, a `K_proj`-point exists
+   exactly when its six conjugates are the complete intersection with a
+   unique `F`-conic whose length-six coordinate algebra is isomorphic to
+   `K_proj`.  This is a useful finite-dimensional algebra interface, but the
+   conics still form `P5(F)`; it is not a finite enumeration and `S6` alone
+   gives no contradiction.
+
+Immediate ranking: first separate and normalize the multiplicity-one target
+branch, then prove that its cubic incidence has no three-primary non-Cartier
+Weil defect; the ordinary Picard, residue-degree, and generic-cubic-smoothness
+gates are complete.  A bounded
+modulo-`67` extraction shows that the global primitive sextic has only `1556`
+terms after removing its `2580`-term parameter content, so modular
+discriminant reconstruction remains feasible; the direct characteristic-zero
+import timed out at 180 seconds and produced no global branch equation.
+Exact true-projective-line reconnaissance (linear in `(A,B,Y,T)`, with
+`T=Z-11A^2/18`) gives discriminant pattern `(1,2),(23,2),(39,1)`; this is
+line evidence for a degree-39 simple component, not a certified global
+factorization.  The old degree-21 `Z`-line is highly degree-dropped.
+Pursue a base-ideal blow-up only if its exceptional-divisor ledger is
+tractable.  In parallel, a positive attack may solve the varying-direction
+conic/algebra condition or return to the full 15-coordinate self-adjoint
+Pfaffian cubic.  Do not resume generic
+12-by-36/four-relation Groebner bases, the naive projective homogenization, or
+unstructured support sweeps.
+
+New capped replays:
+
+```sh
+/usr/sbin/taskpolicy -m 2048 /opt/homebrew/bin/python3 -u tmp/pfaffian_d5_constant_point/verify.py
+/usr/sbin/taskpolicy -m 2048 /opt/homebrew/bin/python3 -u tmp/pfaffian_d5_constant_point_hostile_audit/verify.py
+/usr/sbin/taskpolicy -m 2048 /opt/homebrew/bin/python3 -u tmp/pfaffian_d5_constant_section_audit/verify.py
+/usr/sbin/taskpolicy -m 2048 /opt/homebrew/bin/python3 -u tmp/pfaffian_global_fixed_frame_hostile_audit/verify.py
+/usr/sbin/taskpolicy -m 2048 /opt/homebrew/bin/python3 -u tmp/full_scaled_frame_degree_attack/verify.py
+/usr/sbin/taskpolicy -m 2048 /opt/homebrew/bin/python3 -u tmp/full_scaled_frame_degree_hostile_audit/verify.py
+/usr/sbin/taskpolicy -m 2048 /opt/homebrew/bin/python3 -u tmp/pfaffian_six_sheet_fixed_direction_audit/verify.py
+/usr/sbin/taskpolicy -m 2048 /opt/homebrew/bin/python3 -u tmp/pfaffian_six_sheet_branch_obstruction/verify.py
+/usr/sbin/taskpolicy -m 1024 /opt/homebrew/bin/python3 -u tmp/six_sheet_next_attack_redesign/verify.py
+/usr/sbin/taskpolicy -m 2048 /opt/homebrew/bin/python3 -u tmp/full_scaled_frame_branch_line_hostile_audit/verify.py
+/usr/sbin/taskpolicy -m 1024 /opt/homebrew/bin/python3 -u tmp/target_branch_cubic_smoothness_line_probe/probe.py
+```
+
+All heavy subprocesses must retain the explicit two-GiB wrapper.  The stale
+generic `reduced_algebra.m2` process was stopped; no generic Groebner job is
+part of the accepted degree proof.
+
 ## 2026-07-30 audited delta
 
 The main question is still whether the Klein cubic is
