@@ -1,0 +1,62 @@
+{
+  "packet": "certificates/schur_krylov",
+  "gate": "A2",
+  "object": "L/F",
+  "F": "K_Schur = C(P(V_6))^G",
+  "L": "E^H = F(Z), H = D_12",
+  "degree": 55,
+  "presentation": {
+    "type": "monogenic",
+    "form": "L = F[t]/(mu(t))",
+    "mu_degree": 55,
+    "mu_monic": true,
+    "mu_coefficients_expanded_in_invariants": false,
+    "mu_coefficients_ring": "F",
+    "basis": ["alpha^k for k=0..54"],
+    "basis_name": "power_basis_B",
+    "galois": {
+      "L_over_F_galois": false,
+      "Aut_L_F": 1,
+      "galois_closure": "E = C(P(V_6))",
+      "Gal_E_F": "PSL_2(F_11)",
+      "Gal_E_L": "D_12",
+      "transitive_degree": 55,
+      "coset_space": "G/H"
+    }
+  },
+  "multiplication_matrices": {
+    "form": "companion",
+    "size": [55, 55],
+    "multiplication_by_alpha": "companion_matrix(mu)",
+    "multiplication_by_alpha_k": "companion_matrix(mu)^k",
+    "multiplication_by_general_element": "sum_k x_k * companion(mu)^k",
+    "entries_in": "F",
+    "cayley_hamilton": true
+  },
+  "hironaka_module": {
+    "free_rank_over_F": 55,
+    "structure_constants": "entries of companion powers"
+  },
+  "subfields": {
+    "possible_degrees": [1, 5, 11, 55],
+    "U_tau_dim_formula": "min(20, [F(tau):F])",
+    "U_tau_full_dim_20_iff": "tau primitive in L/F"
+  },
+  "group_indices": {
+    "G_order": 660,
+    "H_order": 12,
+    "L_over_F": 55
+  },
+  "terminal_marker": "SCHUR_KRYLOV_A2_FIELD_ALGEBRA_SEALED",
+  "theorem_boundary": {
+    "proved": [
+      "L/F degree 55 monogenic separable",
+      "companion multiplication API exact over F",
+      "subfield lattice {1,5,11,55}",
+      "dim U_tau = 20 iff tau primitive"
+    ],
+    "not_proved": [
+      "explicit expanded coefficients of mu in C(P(V_6))^G"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "decision_exit": "F1-P-INTERFACE",
+  "decision_exit_meaning": "Conic-algebra scheme and F2 terminality audit sealed; exact fixed-direction stratum excluded; no F-point of the scheme constructed; no local obstruction claimed; headline remains OPEN. Not P-F, N-F, F-LOCAL-SOLUBLE, or F-STOP.",
+  "files": {
+    "TERMINALITY_AUDIT.md": "606794be144d89c24fe8f0593ff775812c2cd1b325361e6bbbdf2a8b01e73677",
+    "conic_algebra_inputs.json": "26bf58c6c353c14db389ff6b2b8c21f95c2da1fee07c50628b968110befc0a9b",
+    "conic_algebra_scheme.md": "50cc3b2597ed5cd614198b21f14f2fc0fce90e2c9da343df6cb7f991615689e6",
+    "conic_algebra_verify.py": "b3aa38cd2d0464563e182331208248fdc4873e9993c003537014d4d9e6dd42d2",
+    "five_forms.json": "61377d6e464f7c78cf1fa91d13610b76dc4567de7b7214256e04de50066c83a4"
+  },
+  "fork": "F1-P",
+  "fork_not_started": "F1-N",
+  "format": "pathF-fixed-frame-arithmetic-seal-v1",
+  "gate_F2": "terminality_audit_sealed",
+  "headline": "OPEN",
+  "implication": "conic-algebra solution ==> C(K_proj) != empty",
+  "markers": [
+    "FIXED_DIRECTION_RESIDUAL_IS_B_TIMES_RB_EXACT",
+    "PATH_F_F1P_CONIC_ALGEBRA_INTERFACE_ACCEPT"
+  ],
+  "path": "F",
+  "resource_ceiling_bytes": 2147483648,
+  "scope": {
+    "cfoss_pin": "certificates/pfaffian_point/CFOSS_W1_INPUT.md \u2014 CFOSS I, Lemma 3.1",
+    "excludes_auxiliary": "P2_D Morita idempotent / F14_T (FAIL-SCOPE object)",
+    "target": "fixed-frame plane cubic C over K_proj"
+  },
+  "seal_sha256_of_payload_without_this_field": "139aa0c12d46a203110b2a73977eea564bac008a8817bc4ceed7f797a774d1e3"
+}

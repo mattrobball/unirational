@@ -1,0 +1,57 @@
+{
+  "packet": "certificates/schur_krylov",
+  "gate": "A2",
+  "object": "marked_point_Z",
+  "residue_field": "L = E^H",
+  "residue_degree": 55,
+  "ambient": "P3_F after torsor-dependent hyperplane choice M in U",
+  "coordinates": {
+    "form": "z = [z0:z1:z2:z3] in P3(L)",
+    "each_zi_power_basis_length": 55,
+    "construction": "unique intersection of twisted D12-line with M_L",
+    "expanded_coefficients_in_F": false
+  },
+  "V_Z": {
+    "definition": "span_F(z0,z1,z2,z3) subset L",
+    "dimension": 4,
+    "reason": "H_Z(1)=4 (linear forms independent on Z)"
+  },
+  "hilbert_function_d0_to_6": [1, 4, 10, 19, 31, 45, 55],
+  "point_equations": {
+    "cubic": "f3(z)=0",
+    "no_quadrics_through_Z": true,
+    "degree5_ideal_dim": 11,
+    "reference": "tmp/schur_degree19_structural_design"
+  },
+  "fibre_witness": {
+    "scope": "shape only; constant hyperplane (1,1,1,2,7) on certified D12-line over Q(zeta_11)",
+    "not_generic_Schur_point": true,
+    "data": [
+      "tmp/pathA_krylov/d12_line_basis.json",
+      "tmp/pathA_krylov/fibre_marked_point.json"
+    ],
+    "checks": {
+      "on_hyperplane": true,
+      "on_klein_cubic": true,
+      "nonzero_P3_coords": 4,
+      "rank_Q_span": 4
+    }
+  },
+  "field_action": {
+    "Aut_L_F": 1,
+    "geometric_orbit_size": 55,
+    "stabilizer": "conjugate of D12"
+  },
+  "terminal_marker": "SCHUR_KRYLOV_A2_MARKED_POINT_SEALED",
+  "theorem_boundary": {
+    "proved": [
+      "z in P3(L) from twisted line meets hyperplane",
+      "dim V_Z = 4",
+      "residue degree 55",
+      "fibre non-degeneracy witness rank 4"
+    ],
+    "not_proved": [
+      "expanded a_ik in F as explicit invariant functions"
+    ]
+  }
+}

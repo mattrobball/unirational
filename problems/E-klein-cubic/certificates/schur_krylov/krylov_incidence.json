@@ -1,0 +1,61 @@
+{
+  "packet": "certificates/schur_krylov",
+  "gate": "A3",
+  "incidence": {
+    "name": "K",
+    "definition": "lambda * V_Z subseteq U_tau",
+    "U_tau": "span_F{1, tau, ..., tau^19}",
+    "matrix_M": {
+      "shape": [55, 24],
+      "columns": ["1", "tau", "...", "tau^19", "lambda*z0", "lambda*z1", "lambda*z2", "lambda*z3"],
+      "rank_condition": "rank <= 20"
+    }
+  },
+  "linear_elimination": {
+    "interpolating_coefficients": 80,
+    "equations_in_L": 4,
+    "scalar_equations_over_F": 220,
+    "linear_unknowns_c_lambda": 135,
+    "nonlinear_variables_retained": ["tau", "lambda"],
+    "c_eliminated_linearly": true
+  },
+  "gauge": {
+    "primary": ["Tr_L/F(tau) = 0", "lambda_0 = 1 on open"],
+    "full_PGL2_optional": ["Tr(tau)=0", "Tr(tau^2) normalised", "lambda_0=1"],
+    "PGL2_dimension": 3
+  },
+  "memory_floors_before_elimination": {
+    "M_dense_entries": 1320,
+    "A_tau_shape": [220, 135],
+    "A_tau_dense_entries": 29700,
+    "raw_21_minors_count_approx": 1.05e17,
+    "gauged_tau_variables": [53, 54],
+    "macaulay_columns_D3": 29260,
+    "macaulay_columns_D4": 424270,
+    "macaulay_columns_D5_approx": 5000000,
+    "dense_elimination_exceeds_8GiB": true,
+    "sparse_unreduced_minors_forbidden": true,
+    "exploratory_RSS_gate_GiB": 8
+  },
+  "safeguards": [
+    "S1_no_common_zero",
+    "S2_degree_exactly_19",
+    "S3_birational_onto_image",
+    "S4_mult_one_at_all_conjugates",
+    "S5_no_component_in_cubic",
+    "S6_residual_length_exactly_2"
+  ],
+  "rank_only_not_qualifying": true,
+  "decision_exit": "A-STOP",
+  "decision_exit_meaning": "incidence formulated; linear elim plan sealed; dense residual exceeds 8 GiB gate before structural variable collapse; no qualifying curve; not N-A",
+  "N_A_claimed": false,
+  "N_A_note": "N-A would close only the degree-19 Krylov route, not the headline; not claimed",
+  "P_A_claimed": false,
+  "headline": "OPEN",
+  "terminal_marker": "SCHUR_KRYLOV_A3_INCIDENCE_FORMULATED_A_STOP",
+  "checkpoint_plan": [
+    "build A(tau) multiplication API over monogenic L",
+    "modular rank profile of A(tau) for discovery only",
+    "exact residual only if modular dim-0 and term count below dense floor"
+  ]
+}
