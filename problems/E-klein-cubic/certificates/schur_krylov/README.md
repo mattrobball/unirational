@@ -2,7 +2,7 @@
 
 **Decision exit:** `A-STOP`  
 **Headline:** OPEN  
-**Base pin:** `89c27e2`
+**Base pin:** `e050464` (cycle-2 collapse on prior A1–A3 seal)
 
 ## Replay
 
@@ -25,6 +25,15 @@ HEADLINE_OPEN
 | A1 | `A1-PASS` | P¹ reduction; odd-index step `gcd(55,2)=1` explicit |
 | A2 | sealed | monogenic L/F, companion mult. matrices, marked point + V_Z |
 | A3 | `A-STOP` | incidence formulated; linear elim of 80 coeffs; 8 GiB floor |
+| A3 collapse | `A-STOP` refined | no lossless collapse under 8 GiB; minimal system = Fitting of \(\varphi_\tau\) on 52-dim PGL₂ slice |
+
+## Cycle-2 collapse
+
+See `STRUCTURAL_COLLAPSE.md`.  Full PGL₂ gauge is lossless (55→52 nonlinear
+vars) but residual degree ≫3 still exceeds 8 GiB.  No F-rational isotypic /
+intermediate-field block reduction exists (H maximal, Aut(L/F)=1).  Non-scalar
+λ-specialisations and τ=α are lossy.  Modular rank discovery lives under
+`tmp/pathA_collapse/` (shape only; not N-A).
 
 ## Boundary
 

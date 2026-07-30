@@ -20,6 +20,7 @@ GATES = [
     ("verify_field_algebra.py", "SCHUR_KRYLOV_A2_FIELD_ALGEBRA_SEALED"),
     ("verify_marked_point.py", "SCHUR_KRYLOV_A2_MARKED_POINT_SEALED"),
     ("verify_krylov_incidence.py", "SCHUR_KRYLOV_A3_INCIDENCE_FORMULATED_A_STOP"),
+    ("verify_structural_collapse.py", "SCHUR_KRYLOV_A3_STRUCTURAL_COLLAPSE_A_STOP"),
     ("candidate_verifier.py", "CANDIDATE_VERIFIER_READY"),
 ]
 

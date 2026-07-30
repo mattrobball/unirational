@@ -368,7 +368,36 @@ would close only the degree-19 Krylov rescue route, not the headline.
 
 ---
 
-## 8. Terminal marker
+## 8. Cycle-2 structural collapse (successor)
+
+The four candidate collapses (full \(\mathrm{PGL}_2\) gauge; \(S_3\)/\(D_{12}\)
+isotypic blocks; sparse Schur order; \(\lambda\)-specialisation) are audited in
+
+```text
+certificates/schur_krylov/STRUCTURAL_COLLAPSE.md
+certificates/schur_krylov/structural_collapse.json
+```
+
+**Summary.**  Full \(\mathrm{PGL}_2\) gauge is lossless and reduces the
+nonlinear ambient to **52** variables.  No further lossless \(F\)-rational
+collapse exists: \(H\) maximal \(\Rightarrow\) no intermediate fields of
+\(L/F\); \(\operatorname{Aut}(L/F)=1\); geometric isotypics do not split the
+residual ideal over \(F\); non-scalar specialisations of \(\lambda\) or
+fixation \(\tau=\alpha\) are lossy.  After every lossless reduction the
+residual is the Fitting ideal of the structured \(140\times 55\) matrix
+\(\varphi_\tau\) on a 52-dimensional gauge slice, of degree \(\gg 3\).  Dense
+Macaulay at \(D=3\), \(n=52\) is already \(\sim 20.5\) GiB \(>8\) GiB; fitting
+degree \(\ge 19\) under 8 GiB would require \(n\le 4\), which is not reached
+losslessly.
+
+**Exit remains `A-STOP`** with the minimal irreducible system of the collapse
+note.  Modular rank-profile discovery
+(`tmp/pathA_collapse/modular_rank_profile.*`) is authorised for shape only and
+does not yield `N-A`.
+
+---
+
+## 9. Terminal marker
 
 ```text
 SCHUR_KRYLOV_A3_INCIDENCE_FORMULATED_A_STOP

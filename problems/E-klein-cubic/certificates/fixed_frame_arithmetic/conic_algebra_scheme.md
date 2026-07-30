@@ -157,8 +157,11 @@ curve. It is **not** a point of the auxiliary Morita plane `P²_D` and does
 | Scheme equations written by mult tables / traces / monogenic charpoly | **done** |
 | Five-form coefficients exported exactly over `Q(ζ₁₁)` | **done** |
 | Fixed-direction residual identity | **done** (exact) |
+| Monogenic `χ_u` on line `(1,2,3,s)` / fibre `s=4` | **done** (`S_6` over `QQ`) |
 | F-point of the scheme / explicit conic | **not found** |
+| Local cohomological obstruction to existence | **not claimed** |
 | Generic elimination of the mult-table ideal | **not run** (would require a scoped 8 GiB plan) |
+| Existence exit (this cycle) | **`EXISTENCE-UNDECIDED`** — see `EXISTENCE_STATUS.md` |
 
 ---
 

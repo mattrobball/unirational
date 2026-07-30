@@ -1,22 +1,33 @@
 {
-  "decision_exit": "F1-P-INTERFACE",
-  "decision_exit_meaning": "Conic-algebra scheme and F2 terminality audit sealed; exact fixed-direction stratum excluded; no F-point of the scheme constructed; no local obstruction claimed; headline remains OPEN. Not P-F, N-F, F-LOCAL-SOLUBLE, or F-STOP.",
+  "decision_exit": "EXISTENCE-UNDECIDED",
+  "decision_exit_meaning": "F1-P interface and F2 terminality remain sealed; monogenic existence system stated exactly; specialized fibre (1,2,3,4) rebuilt with E4 irreducible S6 over QQ; no F-point of the conic scheme constructed; no local obstruction claimed; modular methods cannot prove emptiness (Lang); dense generic elimination not run under 8GiB unscoped ban; headline remains OPEN. Not P-F, N-F, F-LOCAL-SOLUBLE, or F-STOP.",
   "files": {
     "TERMINALITY_AUDIT.md": "606794be144d89c24fe8f0593ff775812c2cd1b325361e6bbbdf2a8b01e73677",
     "conic_algebra_inputs.json": "26bf58c6c353c14db389ff6b2b8c21f95c2da1fee07c50628b968110befc0a9b",
-    "conic_algebra_scheme.md": "50cc3b2597ed5cd614198b21f14f2fc0fce90e2c9da343df6cb7f991615689e6",
+    "conic_algebra_scheme.md": "5fc6d4a56207cc4f384adce5ded41f51d5ffd53f293993ead02af28771064c9d",
     "conic_algebra_verify.py": "b3aa38cd2d0464563e182331208248fdc4873e9993c003537014d4d9e6dd42d2",
-    "five_forms.json": "61377d6e464f7c78cf1fa91d13610b76dc4567de7b7214256e04de50066c83a4"
+    "five_forms.json": "61377d6e464f7c78cf1fa91d13610b76dc4567de7b7214256e04de50066c83a4",
+    "EXISTENCE_STATUS.md": "e617fbd280716906f1127a2b913a733126bb10ea6cb1fee5c5ce599f004be0a9",
+    "existence_verify.py": "d585adf3253d9f8778aeb0a085111394da5cd36b97634e84fa174fdabc98e9bd"
+  },
+  "tmp_files": {
+    "tmp/pathF_existence/monogenic_system.json": "e9c382ab2bd4905eed15d9eb517bfdee547fc8abbc23615f4b197c52437c04c7",
+    "tmp/pathF_existence/line_eliminant_E_terms.json": "a6fe00ec16a1a8fd8cb74c52dfa43a7dbbe045e03a0bb24f1756761c585f0e79",
+    "tmp/pathF_existence/special_1234.json": "3fbfdf941849d199acc792c7caa7ecddedc83a04b8d291f3e7f19361f0c8f2ca"
   },
   "fork": "F1-P",
   "fork_not_started": "F1-N",
-  "format": "pathF-fixed-frame-arithmetic-seal-v1",
+  "format": "pathF-fixed-frame-arithmetic-seal-v2-existence",
   "gate_F2": "terminality_audit_sealed",
+  "gate_existence": "undecided",
   "headline": "OPEN",
   "implication": "conic-algebra solution ==> C(K_proj) != empty",
   "markers": [
     "FIXED_DIRECTION_RESIDUAL_IS_B_TIMES_RB_EXACT",
-    "PATH_F_F1P_CONIC_ALGEBRA_INTERFACE_ACCEPT"
+    "PATH_F_F1P_CONIC_ALGEBRA_INTERFACE_ACCEPT",
+    "LINE_ELIMINANT_E_REBUILT_MATCH",
+    "E4_IRREDUCIBLE_S6",
+    "PATH_F_EXISTENCE_UNDECIDED_ACCEPT"
   ],
   "path": "F",
   "resource_ceiling_bytes": 2147483648,
@@ -25,5 +36,5 @@
     "excludes_auxiliary": "P2_D Morita idempotent / F14_T (FAIL-SCOPE object)",
     "target": "fixed-frame plane cubic C over K_proj"
   },
-  "seal_sha256_of_payload_without_this_field": "139aa0c12d46a203110b2a73977eea564bac008a8817bc4ceed7f797a774d1e3"
+  "seal_sha256_of_payload_without_this_field": "288c4e9c17980596ff1ff52375477fc678c9e4fcdcb7023e81f5cfd15dc33a8f"
 }

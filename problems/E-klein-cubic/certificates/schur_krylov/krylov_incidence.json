@@ -47,15 +47,25 @@
   ],
   "rank_only_not_qualifying": true,
   "decision_exit": "A-STOP",
-  "decision_exit_meaning": "incidence formulated; linear elim plan sealed; dense residual exceeds 8 GiB gate before structural variable collapse; no qualifying curve; not N-A",
+  "decision_exit_meaning": "incidence formulated; linear elim plan sealed; dense residual exceeds 8 GiB gate; cycle-2 structural collapse audit finds no lossless reduction under 8 GiB; minimal irreducible system is Fitting of phi_tau on 52-dim PGL2 slice; no qualifying curve; not N-A",
   "N_A_claimed": false,
   "N_A_note": "N-A would close only the degree-19 Krylov route, not the headline; not claimed",
   "P_A_claimed": false,
   "headline": "OPEN",
+  "structural_collapse": {
+    "document": "STRUCTURAL_COLLAPSE.md",
+    "json": "structural_collapse.json",
+    "no_lossless_collapse_under_8GiB": true,
+    "nonlinear_vars_after_PGL2": 52,
+    "phi_tau_shape": [140, 55],
+    "macaulay_D3_n52_qq32_GiB": 20.512,
+    "terminal_marker": "SCHUR_KRYLOV_A3_STRUCTURAL_COLLAPSE_A_STOP"
+  },
   "terminal_marker": "SCHUR_KRYLOV_A3_INCIDENCE_FORMULATED_A_STOP",
   "checkpoint_plan": [
     "build A(tau) multiplication API over monogenic L",
     "modular rank profile of A(tau) for discovery only",
-    "exact residual only if modular dim-0 and term count below dense floor"
+    "exact residual only if modular dim-0 and term count below dense floor",
+    "structural collapse audited: no lossless path under 8 GiB (cycle 2)"
   ]
 }
