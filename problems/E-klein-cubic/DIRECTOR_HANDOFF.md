@@ -324,7 +324,8 @@ Active work order: `WORKORDER_CAS_AFTER_5E72D8E.md` (supersedes
 
 | Route | State | Blocker |
 |---|---|---|
-| T8 / T8-N1 | `T8-S1-UNDECIDED`, `T8-N1-UNDECIDED` — **verified**; evidence favors NONUNIT | RUR degree ~2000: the binodal point is algebraic of large degree |
+| T9 | **`T9-HENSEL-NONUNIT-SEALED`** — `s_1` is **not** a unit, settled; `T9-UNDECIDED` on the global component | isolate the deg-496 AB-eliminant factor, then a finite `Q[A,B]`-algebra |
+| T8 / T8-N1 | superseded by T9; the RUR chase was never on the critical path | — |
 | P25Y | `P25Y-DVR-PASS`; `m_75 = 2343`; `P25YB-UNDECIDED` — **verified** | deg-4 F4 / Macaulay wall at ~55 GiB; `V_+(J_N)` still open |
 | C1 | not started | gated by the owner behind T8-N1 and P25Y-M/B |
 | C0 | `C0-UNDECIDED` — **verified** | no executable Fano model; needs `A_proj` descent → Morita symbol |
@@ -338,6 +339,22 @@ deterministic subsystem of genuine landing rows of `F_89`-rank **746 — a lower
 bound only**. Degree 4 cannot fill `Sym⁴` on rank grounds (≤ 32k vs 163k), so
 the earliest possible monomial-fill certificate sits far above 8 GiB. No
 degree-25 exclusion, no covariant. See §5.3 for the one citation gap.
+
+**T9.0 — the `s_1` question is settled (verified).** `T8-S1-NONUNIT-ANALYTIC`.
+At L4/`p`=101 the deflated Jacobian is a unit mod `p`, so multivariate Hensel
+gives a `Z_101`-solution and hence a `Q_101`-point with every gate a unit; a
+point over *any* characteristic-zero field refutes the unit ideal. So
+`(H,P,P_u,s_1):q^∞ ≠ (1)`, **`s_1` is not a unit**, `S_G ≅ B_G` is unavailable,
+and the old T8.3/T8.4 continuation — both gated on `T8-S1-UNIT` — is dead as
+written. Confirmed beyond replay by an independent Newton lift to `101^12`:
+all four residuals vanish, every gate stays a unit, and `H → 0` even though `H`
+is not one of the lifted equations.
+
+**The lesson worth carrying:** the previous round spent its whole budget
+chasing an exact algebraic point (RUR degree ~2000, `algdep` unstable to degree
+24) for a conclusion that never needed one. When the goal is "the ideal is not
+(1)", a `Q_p`-point suffices — ask what the *weakest* object that settles the
+question is before buying the strongest one.
 
 **T8-N1 result (verified).** The Jacobian claim at `SUBRESULTANT_UNIT_TARGET.md`
 line 100 is false *and* was never computed — see `DIRECTOR_CORRECTION_T8.md` and
