@@ -1,0 +1,10 @@
+{
+  "degree": 4,
+  "dim_Sym4": 163185,
+  "n_rows": 32078,
+  "rank_J4": 1007,
+  "hilbert_d4": 162178,
+  "peak_rss_mib": 55918.78125,
+  "elapsed_s": 352.069,
+  "prime": 89
+}
