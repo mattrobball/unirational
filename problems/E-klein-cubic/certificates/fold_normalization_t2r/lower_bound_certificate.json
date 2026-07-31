@@ -1,0 +1,28 @@
+{
+  "schema": "klein-cubic-T2R5-lower-bound-v1",
+  "statement": "dim Sing(S_G) >= 2 on D(G*Sigma)",
+  "status": "NOT_PROVED",
+  "forbidden_argument": "two independent nonempty 0-dim codim-2 sections alone (REPAIR.md §1.1)",
+  "acceptable_missing": [
+    "exact height-3 prime meeting the open",
+    "finite dominant two-parameter map into Sing",
+    "Noether normalization with two alg-independent coordinates",
+    "exact irreducible 2-dim component plus gate nonvanishing"
+  ],
+  "obtained": [],
+  "modular_discovery_not_claims": [
+    {
+      "name": "hist_sat_cut2A_p67",
+      "result": "zero_dim degree 1115",
+      "artifact": "msolve/Hsing_hist_sat_cut2A_p67.out",
+      "note": "discovery only"
+    },
+    {
+      "name": "sat_lcPuu_cut2A_p67",
+      "result": "zero_dim degree 1113",
+      "artifact": "msolve/Hsing_sat_lcPuu_cut2A_p67.out",
+      "note": "discovery only"
+    }
+  ],
+  "t2r4_status": "T2R4-PASS — factors installed; does not by itself prove lower bound"
+}

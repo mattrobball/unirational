@@ -1,0 +1,27 @@
+{
+  "schema": "klein-cubic-T2R5-upper-bound-v1",
+  "statement": "dim V(I_sing) <= 2 in A^5, hence dim Sing(S_G) <= 2",
+  "status": "PROVED",
+  "method": "generalized principal ideal theorem / height",
+  "argument": "If I+(L1,L2) is zero-dimensional in Q[A,B,Y,Z,u] (dim 5), every minimal prime p over I+(L1,L2) has height 5. By the generalized PIT, height(p) <= height(I)+2, so height(I) >= 3 and dim V(I) <= 2. Open loci can only drop dimension further.",
+  "requires_genericity": false,
+  "certificates": [
+    {
+      "name": "pairA_nosat_QQ",
+      "linears": ["A+3B+5Y+7Z+11u+13", "2A+11B+17Y+19Z+23u+29"],
+      "saturation": "none",
+      "result": "zero_dim_nonempty",
+      "artifact": "msolve/Hsing_cut2_nosat_qq.out",
+      "sha256": "121e6d4cdc5ec8d09b9821743ace4c0054eadef87e3acbf737fcd77ad148278b"
+    },
+    {
+      "name": "pairB_nosat_QQ",
+      "linears": ["5A-7B+11Y-13Z+17u-19", "9A+4B-3Y+8Z-6u+2"],
+      "saturation": "none",
+      "result": "zero_dim_nonempty",
+      "artifact": "msolve/Hsing_cut2b_qq.out",
+      "sha256": "01efacf368942c5782dfe192f03d81791518359d41b45db9482690acd348872d"
+    }
+  ],
+  "applies_to_open": "dim Sing(S_G) <= dim V(I_sing) <= 2 for any localization / saturation"
+}

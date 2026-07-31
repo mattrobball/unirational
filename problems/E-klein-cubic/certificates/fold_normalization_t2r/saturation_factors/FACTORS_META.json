@@ -1,0 +1,52 @@
+{
+  "exit": "T2R4-PASS",
+  "exit_note": "All primary factors executable: ell,P_uu,C,delta sparse; G as exact_div circuit with L,M,Q4 sparse factorization factors. F27 sparse status: MODULAR_EXECUTABLE_CRT_PENDING.",
+  "factors": {
+    "C": {
+      "definition": "parameter content; E_raw=C*P",
+      "n_terms": 2630,
+      "path": "saturation_factors/C_content.tsv",
+      "sha256": "5b7262308487bbe74d0bef36483bb9a381e1b589550156cbbe7918d8ab87dd37",
+      "source_sha256": "480eb9f376a3d6270b74109613fd5132876338d3112f3d254aaa972684251644"
+    },
+    "G": {
+      "circuit": "saturation_factors/G_circuit.json",
+      "circuit_sha256": "cf4363ff2b3d70a6d603ab24279d8681613d903456108125d6f86c2eacf3029b",
+      "definition": "Res_u(P,Pu)/H",
+      "factorization_factors": {
+        "F27_status": "MODULAR_EXECUTABLE_CRT_PENDING",
+        "L": "936e5632cb6e0a643121513507dd406f8c0d991230dbd7d8267384223fa671cb",
+        "M": "393abd2c1407f532bbfc757a9bfa910f8f017c9759f526f943ef23310c09faec",
+        "Q4": "e5f0432d00fa0e89eaf35304c1dc3d184cf9f5a057e8c0c5de1d33b1f52f57cc"
+      }
+    },
+    "P_uu": {
+      "definition": "partial_u^2 P",
+      "n_terms": 881,
+      "path": "saturation_factors/P_uu.tsv",
+      "sha256": "3d436eb35c45c2248519391efcdf46d13d1eb3dc7be089dd3b24ad82c50f2c36"
+    },
+    "delta": {
+      "definition": "Cramer minor M01*M12-M11*M02 of BKK frame matrix",
+      "n_terms": 10507,
+      "path": "saturation_factors/delta_Cramer.tsv",
+      "sha256": "7119b244997c188ee280e0b8d96cdebddedb49f9bd797578bf8ccfeeb9cf30c9",
+      "source_bkk_sha256": "31960b0ad9cef5a5f51df73b78cb949201ecc08b0558ac27d042ed18a767ec31"
+    },
+    "ell": {
+      "definition": "lc_u(P)",
+      "n_terms": 31,
+      "path": "saturation_factors/ell_lc_u.tsv",
+      "sha256": "7a318fcf72bd4b1bd93d86603fbbee4f579373ac6b08d14fdf6bb3cc8f32afa1"
+    }
+  },
+  "inputs": {
+    "BKK_sha256": "31960b0ad9cef5a5f51df73b78cb949201ecc08b0558ac27d042ed18a767ec31",
+    "C_source_sha256": "480eb9f376a3d6270b74109613fd5132876338d3112f3d254aaa972684251644",
+    "H_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
+  },
+  "meta_sha256": "8a986e0b829a7b9d6546a8cac1696ae2a1b1eb2279344c85d968314583ab369c",
+  "schema": "klein-cubic-T2R4-saturation-factors-v1",
+  "terminal_marker": "FOLD_NORMALIZATION_T2R4_PRODUCER_SEALED"
+}

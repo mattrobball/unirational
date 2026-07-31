@@ -1,14 +1,16 @@
 {
   "G_inverted": true,
   "R1": null,
-  "T2R_md_sha256": "02f4c7e7c14f3ad40060e68988e3be05417c6d041364cc1e95bcf6e77c64e7be",
+  "T2R4": "T2R4-PASS",
+  "T2R5": "T2R-UNDECIDED",
+  "T2R_md_sha256": "b4f7089b73b00de3d539aba83a1426ffca60134a07d7a13304b4e3d57a853a76",
   "bottlenecks": [
     "BOTTLENECK-T2R-LOWER",
-    "BOTTLENECK-T2R-FULL-SAT",
-    "BOTTLENECK-T2R-RESOURCE"
+    "BOTTLENECK-T2R-EXACT-SAT-DIM",
+    "BOTTLENECK-T2R-F27-SPARSE"
   ],
   "dim_Sing_S_G": null,
-  "dimension_bounds_sha256": "d62fb9780955b4006c2368e9329c488384a17632b15f3f04750bfe9d80d854a8",
+  "dimension_bounds_sha256": "4eaa973fa14292561c3241027cb8df56a1b2f4a13e84a027ca65c8b6a423a7fb",
   "gate_T1": "T-BIRATIONAL",
   "gate_T2R": "T2R-UNDECIDED",
   "headline": "OPEN",
@@ -22,9 +24,11 @@
     "Hsing_sat_lcPuu_cut2A_p67.out": "c31d9698c2940cbfc42dfbbb9672ba21f4a7badefaeb43d779aa08ab1361e505"
   },
   "repair_reference": "REPAIR.md Part I \u00a7\u00a71-6",
-  "schema": "klein-cubic-T2R-seal-v1",
+  "resultant_identity_sha256": "f36c12b90262fca8f4c63959cde9ac96e51b6238db8fadbce487108f50160932",
+  "same_open_dimension_sha256": "4295bd6d8a21452733b6a691f2d45430b30bafc3aa2e544f3990247388b3707f",
+  "schema": "klein-cubic-T2R-seal-v2",
   "scheme_t2r1_sha256": "a9dd2d71d8734adecce57f0fced929de5bacd4404481da40b111c07d47304b3a",
-  "seal_sha256": "8d5274c0ee1392529316b9d4390fb27e87eba4d86f0e2cb487308486578a310c",
+  "seal_sha256": "1a6033e37b9af34e2726bd522dce911efecf5b7b66bf764fa8fad6cdafdde01e",
   "sources_sha256": {
     "certificates/fold_normalization_t2r/msolve/Hsing_cut2_nosat_qq.out": "121e6d4cdc5ec8d09b9821743ace4c0054eadef87e3acbf737fcd77ad148278b",
     "certificates/fold_normalization_t2r/msolve/Hsing_cut2b_qq.out": "01efacf368942c5782dfe192f03d81791518359d41b45db9482690acd348872d",
@@ -32,10 +36,21 @@
     "certificates/fold_normalization_t2r/msolve/Hsing_hist_sat_cut2A_p67.out": "5ebf0004a840993562bc66bcf168ec58988845c78944b9df4fab0418dcafdf88",
     "certificates/fold_normalization_t2r/msolve/Hsing_nosat_cut2A_p67.out": "884a7fc9d54c3ab76466176c4351b01b7253768aa689dbca656ffa74d8e1e404",
     "certificates/fold_normalization_t2r/msolve/Hsing_sat_lcPuu_cut2A_p67.out": "c31d9698c2940cbfc42dfbbb9672ba21f4a7badefaeb43d779aa08ab1361e505",
+    "certificates/fold_normalization_t2r/saturation_factors/C_content.tsv": "5b7262308487bbe74d0bef36483bb9a381e1b589550156cbbe7918d8ab87dd37",
+    "certificates/fold_normalization_t2r/saturation_factors/FACTORS_META.json": "005eaf81f1c277e0c17246951022f940f558e41bf4803e48c142de3388dbb9f2",
+    "certificates/fold_normalization_t2r/saturation_factors/G_circuit.json": "cf4363ff2b3d70a6d603ab24279d8681613d903456108125d6f86c2eacf3029b",
+    "certificates/fold_normalization_t2r/saturation_factors/G_factor_L.tsv": "936e5632cb6e0a643121513507dd406f8c0d991230dbd7d8267384223fa671cb",
+    "certificates/fold_normalization_t2r/saturation_factors/G_factor_M.tsv": "393abd2c1407f532bbfc757a9bfa910f8f017c9759f526f943ef23310c09faec",
+    "certificates/fold_normalization_t2r/saturation_factors/G_factor_Q4.tsv": "e5f0432d00fa0e89eaf35304c1dc3d184cf9f5a057e8c0c5de1d33b1f52f57cc",
+    "certificates/fold_normalization_t2r/saturation_factors/P_uu.tsv": "3d436eb35c45c2248519391efcdf46d13d1eb3dc7be089dd3b24ad82c50f2c36",
+    "certificates/fold_normalization_t2r/saturation_factors/delta_Cramer.tsv": "7119b244997c188ee280e0b8d96cdebddedb49f9bd797578bf8ccfeeb9cf30c9",
+    "certificates/fold_normalization_t2r/saturation_factors/ell_lc_u.tsv": "7a318fcf72bd4b1bd93d86603fbbee4f579373ac6b08d14fdf6bb3cc8f32afa1",
     "certificates/target_branch_global/H_factor/H_primitive_integer.tsv": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
     "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
   },
-  "t2r_payload_sha256": "b84212b2cc4b932d8aa70b6569ef88ef8ed1416c3949f639298aec526282180a",
+  "t2r_payload_sha256": "febf29ef7a7e0137ff8df4d9b5f08f9f9a3a8bd56aec884532031b40762577c1",
   "terminal_marker": "FOLD_NORMALIZATION_T2R_PRODUCER_SEALED",
+  "terminal_marker_t2r4": "FOLD_NORMALIZATION_T2R4_PRODUCER_SEALED",
+  "terminal_marker_t2r5": "FOLD_NORMALIZATION_T2R5_PRODUCER_SEALED",
   "upper_bound_dim_le_2": true
 }

@@ -1,0 +1,72 @@
+{
+  "definition": "G = Res_u(P, P_u) / H exact complementary factor",
+  "identity": "Res_u(P, P_u) = H * G",
+  "modular_identity_primes_verified": [
+    71,
+    73,
+    79,
+    83,
+    89,
+    97,
+    101,
+    103,
+    107,
+    109,
+    113,
+    127,
+    131,
+    137,
+    139,
+    149,
+    151,
+    157,
+    163,
+    167
+  ],
+  "operations": {
+    "evaluation_at_point": "specialize P to Q[u]; Res_u univariate; divide by H(point)",
+    "good_prime_reduction": "Nemo Res_u mod p; exact_div by H mod p",
+    "ideal_membership": "via G*q or modular CRT",
+    "identity_verification": "mod p: rem(Res,H)=0 and H*G=Res; evaluation probes H!=0",
+    "saturation_via_aux": "I:(L*M*Q4*F27)^inf; expanded L,M,Q4 exact; F27 modular until sparse seal"
+  },
+  "representation": {
+    "factorization_over_Q": "G = c * L * M^4 * Q4 * F27^2",
+    "factors": {
+      "F27": {
+        "formula": "unique monic-in-A deg-27 factor of G; line_deg 11; mult 2",
+        "modular_extraction": "tmp/t2r45/G_modp/F27_p*.tsv",
+        "multiplicity_in_G": 2,
+        "path": "saturation_factors/G_factor_F27.tsv",
+        "status": "MODULAR_EXECUTABLE_CRT_PENDING"
+      },
+      "L": {
+        "formula": "A - 15",
+        "multiplicity_in_G": 1,
+        "n_terms": 2,
+        "path": "saturation_factors/G_factor_L.tsv",
+        "sha256": "936e5632cb6e0a643121513507dd406f8c0d991230dbd7d8267384223fa671cb",
+        "status": "INSTALLED_SPARSE"
+      },
+      "M": {
+        "formula": "B",
+        "multiplicity_in_G": 4,
+        "n_terms": 1,
+        "path": "saturation_factors/G_factor_M.tsv",
+        "sha256": "393abd2c1407f532bbfc757a9bfa910f8f017c9759f526f943ef23310c09faec",
+        "status": "INSTALLED_SPARSE"
+      },
+      "Q4": {
+        "formula": "primitive deg-4 factor (monic-rational LT A^4)",
+        "multiplicity_in_G": 1,
+        "n_terms": 21,
+        "path": "saturation_factors/G_factor_Q4.tsv",
+        "sha256": "e5f0432d00fa0e89eaf35304c1dc3d184cf9f5a057e8c0c5de1d33b1f52f57cc",
+        "status": "INSTALLED_SPARSE"
+      }
+    },
+    "primary": "exact_div(resultant_u(P, Pu), H)",
+    "type": "exact_quotient_plus_factorization"
+  },
+  "schema": "klein-cubic-T2R4-G-circuit-v1"
+}

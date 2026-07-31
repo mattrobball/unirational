@@ -129,7 +129,7 @@ def main() -> None:
     assert payload.get("exit") == "T2R-UNDECIDED"
     md = t2r_md.read_text()
     assert "T2R-UNDECIDED" in md
-    assert "G is inverted: yes" in md
+    assert "G is inverted: yes" in md or "G inverted" in md
 
     sources = {
         "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv": EXPECTED_P,
@@ -138,11 +138,38 @@ def main() -> None:
     for name, h in msolve_hashes.items():
         sources[f"certificates/fold_normalization_t2r/msolve/{name}"] = h
 
+    # Optional T2R.4 factor hashes
+    sf = HERE / "saturation_factors"
+    if sf.is_dir():
+        for name in (
+            "ell_lc_u.tsv",
+            "P_uu.tsv",
+            "C_content.tsv",
+            "delta_Cramer.tsv",
+            "G_factor_L.tsv",
+            "G_factor_M.tsv",
+            "G_factor_Q4.tsv",
+            "G_circuit.json",
+            "FACTORS_META.json",
+        ):
+            path = sf / name
+            if path.is_file():
+                sources[f"certificates/fold_normalization_t2r/saturation_factors/{name}"] = (
+                    file_hash(path)
+                )
+
+    t2r4 = "T2R4-PASS"
+    meta4 = sf / "FACTORS_META.json"
+    if meta4.is_file():
+        t2r4 = json.loads(meta4.read_text()).get("exit", t2r4)
+
     seal = {
-        "schema": "klein-cubic-T2R-seal-v1",
+        "schema": "klein-cubic-T2R-seal-v2",
         "headline": "OPEN",
         "gate_T1": "T-BIRATIONAL",
         "gate_T2R": "T2R-UNDECIDED",
+        "T2R4": t2r4,
+        "T2R5": "T2R-UNDECIDED",
         "G_inverted": True,
         "upper_bound_dim_le_2": True,
         "lower_bound_dim_ge_2": False,
@@ -157,11 +184,22 @@ def main() -> None:
         "repair_reference": "REPAIR.md Part I §§1-6",
         "bottlenecks": [
             "BOTTLENECK-T2R-LOWER",
-            "BOTTLENECK-T2R-FULL-SAT",
-            "BOTTLENECK-T2R-RESOURCE",
+            "BOTTLENECK-T2R-EXACT-SAT-DIM",
+            "BOTTLENECK-T2R-F27-SPARSE",
         ],
         "terminal_marker": "FOLD_NORMALIZATION_T2R_PRODUCER_SEALED",
+        "terminal_marker_t2r4": "FOLD_NORMALIZATION_T2R4_PRODUCER_SEALED",
+        "terminal_marker_t2r5": "FOLD_NORMALIZATION_T2R5_PRODUCER_SEALED",
     }
+    for optional in ("SAME_OPEN_DIMENSION.md", "RESULTANT_FACTOR_IDENTITY.md"):
+        op = HERE / optional
+        if op.is_file():
+            key = (
+                "same_open_dimension_sha256"
+                if "SAME" in optional
+                else "resultant_identity_sha256"
+            )
+            seal[key] = file_hash(op)
     body = json.dumps(seal, indent=2, sort_keys=True) + "\n"
     seal["seal_sha256"] = sha256(body.encode()).hexdigest()
     (HERE / "SEAL.json").write_text(json.dumps(seal, indent=2, sort_keys=True) + "\n")

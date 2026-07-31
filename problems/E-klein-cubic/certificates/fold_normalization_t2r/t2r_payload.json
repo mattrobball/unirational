@@ -1,24 +1,27 @@
 {
-  "schema": "klein-cubic-T2R-same-open-saturated-dim-v1",
+  "schema": "klein-cubic-T2R-same-open-saturated-dim-v2",
   "headline": "OPEN",
   "gate_T1": "T-BIRATIONAL",
   "gate_T2_historical": "T2-UNDECIDED pending exact saturated same-open dimension proof",
   "gate_T2R": "T2R-UNDECIDED",
-  "dispatch": "REPAIR.md §6 T2R; WORKORDER_CAS_HEADLINE.md §3, §11, §12",
-  "base_commit_note": "db37f58",
+  "dispatch": "WORKORDER_CAS_HEADLINE_REVISED.md §4 T2R.4+T2R.5; REPAIR.md Part I",
+  "base_commit_note": "b222573",
   "theorem_boundary": {
     "proved": [
       "T2R.1 object S_G with G inverted",
       "S2 on S_G via CI + localization",
       "upper bound dim V(I_sing) <= 2 by height/PIT on exact Q unsaturated cut2 records",
-      "upper bound dim Sing(S_G) <= 2"
+      "upper bound dim Sing(S_G) <= 2",
+      "T2R4-PASS: ell, P_uu, C, delta sparse; G = Res_u/H exact-quotient circuit with L=A-15, M=B, Q4 sparse; Res=H*G verified modularly and by evaluation"
     ],
     "not_proved": [
       "lower bound dim Sing(S_G) >= 2",
-      "exact dim of I_sing^open after full gate product including delta and G",
+      "exact dim of I_sing^{S_G} after full gate product",
+      "equidimensional decomposition of I_sing^{S_G}",
       "R1 true or false on S_G",
       "normality or nonnormality of S_G",
-      "conductor generators"
+      "conductor generators",
+      "sparse integer expansion of F27 factor of G"
     ]
   },
   "T2R_1": {
@@ -26,10 +29,25 @@
     "G_inverted": true,
     "object": "S_G"
   },
+  "T2R_4": {
+    "exit": "T2R4-PASS",
+    "certificate": "saturation_factors/",
+    "identity": "RESULTANT_FACTOR_IDENTITY.md",
+    "verifier": "verify_saturation_factors.py"
+  },
+  "T2R_5": {
+    "exit": "T2R-UNDECIDED",
+    "certificate": "SAME_OPEN_DIMENSION.md",
+    "upper_bound": "PROVED (<=2)",
+    "lower_bound": "NOT_PROVED",
+    "dim": null,
+    "equidimensional": "NOT_COMPUTED",
+    "verifier": "verify_same_open_dimension.py"
+  },
   "T2R_2": {
     "ideal": "(H,P,Pu,PA,PB,PY,PZ):(ell*Puu*delta*C*G)^infinity",
-    "implemented_partial_saturation": "ell*Puu",
-    "full_sat_status": "BOTTLENECK-T2R-FULL-SAT"
+    "factors_installed": true,
+    "full_exact_sat_dim_status": "BOTTLENECK-T2R-EXACT-SAT-DIM"
   },
   "T2R_3": {
     "certificate": "dimension_bounds.json",
@@ -40,8 +58,8 @@
   "exit": "T2R-UNDECIDED",
   "bottlenecks": [
     "BOTTLENECK-T2R-LOWER",
-    "BOTTLENECK-T2R-FULL-SAT",
-    "BOTTLENECK-T2R-RESOURCE"
+    "BOTTLENECK-T2R-EXACT-SAT-DIM",
+    "BOTTLENECK-T2R-F27-SPARSE"
   ],
   "conductors_distinct": true,
   "house_rules": {
@@ -57,5 +75,7 @@
     "H_prim_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501"
   },
   "terminal_marker_producer": "FOLD_NORMALIZATION_T2R_PRODUCER_SEALED",
-  "terminal_marker_verifier": "FOLD_NORMALIZATION_T2R_VERIFIER_ACCEPT"
+  "terminal_marker_verifier": "FOLD_NORMALIZATION_T2R_VERIFIER_ACCEPT",
+  "terminal_marker_t2r4": "FOLD_NORMALIZATION_T2R4_VERIFIER_ACCEPT",
+  "terminal_marker_t2r5": "FOLD_NORMALIZATION_T2R5_VERIFIER_ACCEPT"
 }

@@ -1,0 +1,13 @@
+{
+  "schema": "klein-cubic-T2R5-equidimensional-v1",
+  "ideal": "I_sing^{S_G} = (H,P,Pu,PA,PB,PY,PZ):(ell*Puu*delta*C*G)^infinity",
+  "status": "NOT_COMPUTED",
+  "char0_decomposition": null,
+  "dim": null,
+  "components": [],
+  "note": "Exact equidimensional decomposition under 8 GiB exploratory ceiling not completed. Modular cut2 discovery after partial gates remains zero-dimensional of degree ~10^3 (not a purity certificate).",
+  "resource": {
+    "ceiling_gib": 8,
+    "blocker": "simultaneous grevlex / full-product Rabinowitsch densifies; sequential sat + modular F27 available after T2R4-PASS"
+  }
+}

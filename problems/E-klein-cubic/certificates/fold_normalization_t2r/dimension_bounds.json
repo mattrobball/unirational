@@ -1,9 +1,9 @@
 {
-  "gate": "T2R.2-T2R.3",
+  "gate": "T2R.2-T2R.5",
   "ideal_closed": "I_sing = (H, P, P_u, P_A, P_B, P_Y, P_Z) in Q[A,B,Y,Z,u]",
   "ideal_open_full": "I_sing : (ell * P_uu * delta * C * G)^infinity",
-  "ideal_open_implemented": "I_sing : (ell * P_uu)^infinity  (partial; delta, C, G not fully sealed as sparse generators here)",
-  "G_included_in_saturation_iff": "G inverted in T2R.1 — yes; full G-factor not expanded as TSV",
+  "ideal_open_factors_status": "T2R4-PASS: all factors executable (G as exact_div circuit)",
+  "G_included_in_saturation_iff": "G inverted in T2R.1 — yes; G circuit installed",
   "ambient_dimension": 5,
   "dim_S_G": 3,
   "upper_bound": {
@@ -12,6 +12,7 @@
     "method": "generalized principal ideal theorem / height",
     "argument": "If I+(L1,L2) is zero-dimensional in Q[A,B,Y,Z,u] (dim 5), every minimal prime p over I+(L1,L2) has height 5. By the generalized PIT, height(p) <= height(I)+2, so height(I) >= 3 and dim V(I) <= 2. Open loci can only drop dimension further.",
     "requires_genericity": false,
+    "certificate": "upper_bound_certificate.json",
     "certificates": [
       {
         "name": "pairA_nosat_QQ",
@@ -34,7 +35,8 @@
   "lower_bound": {
     "statement": "dim Sing(S_G) >= 2 on D(G*Sigma)",
     "status": "NOT_PROVED",
-    "forbidden_argument": "two independent nonempty 0-dim codim-2 sections alone (REPAIR.md §1.1 counterexample)",
+    "certificate": "lower_bound_certificate.json",
+    "forbidden_argument": "two independent nonempty 0-dim codim-2 sections alone (REPAIR.md §1.1)",
     "acceptable_missing": [
       "exact height-3 prime meeting the open",
       "finite dominant two-parameter map into Sing",
