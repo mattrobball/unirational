@@ -1,0 +1,52 @@
+{
+  "schema": "klein-cubic-T62-r1-decision-v1",
+  "object": "S_G",
+  "S2_on_S_G": true,
+  "S2_ref": "certificates/fold_normalization_t2r/scheme_t2r1.json",
+  "dim_Sing_S_G": null,
+  "upper_bound": {
+    "statement": "dim Sing(S_G) <= 2",
+    "status": "PROVED",
+    "method": "generalized PIT / height on exact-Q unsaturated cut2 of I_sing; no genericity",
+    "ref": "certificates/fold_normalization_t2r/upper_bound_certificate.json",
+    "requires_genericity": false
+  },
+  "lower_bound": {
+    "statement": "dim Sing(S_G) >= 2",
+    "status": "NOT_PROVED",
+    "forbidden_not_used": "hand-selected affine hyperplane sections alone (REPAIR.md §1.1; V2 §0)",
+    "missing_accepted_certificates": [
+      "exact height-3 prime meeting the open",
+      "two-parameter Noether normalization of an integral component",
+      "finite dominant map from an integral 2-dimensional algebra",
+      "exact irreducible surface + gate nonvanishing"
+    ]
+  },
+  "normal_certificate_dim_le_1": {
+    "status": "NOT_OBTAINED",
+    "accepted_methods_not_completed": [
+      "exact Krull dim of J_open <= 1",
+      "exact Noether normalization dim <= 1",
+      "unit ideal after full factorwise saturation",
+      "projective closure hyperplane section 0-dim (V2 projective certificate)"
+    ],
+    "note": "Affine hyperplane section of affine scheme is NOT accepted without independent meeting proof (V2 §0)"
+  },
+  "nonnormal_certificate_dim_eq_2": {
+    "status": "NOT_OBTAINED"
+  },
+  "R1": null,
+  "exit": "T2R-UNDECIDED",
+  "bottlenecks": [
+    "BOTTLENECK-T61-EXACT-FACTORWISE-SAT-DIM",
+    "BOTTLENECK-T2R-EXACT-SAT-DIM",
+    "BOTTLENECK-T2R-LOWER",
+    "BOTTLENECK-T60-S1-UNIT-EXACT"
+  ],
+  "T6_continues_regardless": true,
+  "T6_3_status": "NOT_STARTED (director gate; T6.0-T6.2 only this dispatch)",
+  "conductors": {
+    "c_B_subset_S": "not computed",
+    "c_S_subset_Stilde": "not computed; requires R1 decision"
+  }
+}

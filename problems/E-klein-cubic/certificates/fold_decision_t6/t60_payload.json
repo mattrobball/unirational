@@ -1,0 +1,23 @@
+{
+  "artifacts": {
+    "SUBRESULTANT_AUDIT.md": "57686309793cb38d3dd6bc766bb5f0083b16b8595ae933623173e8158f6112bc",
+    "principal_subresultants.json": "e67fd4607342a9134e922ae57c4d66d5eba56ea7bc716e3c18b0f497e9d20a05",
+    "rank_one_algebra_map.json": "f33c98903efb01be4052c05135a18704373f95313f37a7c99407fc2c839919ce",
+    "relative_differentials.json": "527e1400c8afe3b93ac8498956d464289ac25ba45e81be57fbb9ecaf92e7e6e9",
+    "s1_unit_mod_summary.json": "fb1a7165e57bb0bf9319ffb88ca28d7bcdffd3cc08d4eeef3d33594d31c59983",
+    "s1_zero_points.out": "bae05a07621800383829070c492c1d57589a51947e7cd325159be861547aae75",
+    "subresultant_1.circuit.json": "64a9800252dad0a67390451a3b15b61ad9e17d824ab45cc5ba0b0c0deac8d226"
+  },
+  "bottleneck": "BOTTLENECK-T60-S1-UNIT-EXACT",
+  "exit": "T60-UNDECIDED",
+  "gate": "T6.0",
+  "inputs": {
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
+  },
+  "isomorphism_S_G_B_G": false,
+  "normality_inferred": false,
+  "payload_sha256": "d97952d3e4391196b0c1a495cad6edad6c6bfb8ce10a3de3a8de1c0f3d029793",
+  "s1_representation": "exact_ducos_PRS_circuit",
+  "s1_unit_exact": false,
+  "schema": "klein-cubic-T60-payload-v1"
+}

@@ -1,0 +1,16 @@
+{
+  "bottleneck": "BOTTLENECK-T61-EXACT-FACTORWISE-SAT-DIM",
+  "exact_J_open_sealed": false,
+  "exit": "T61-LEDGER-INCOMPLETE",
+  "gate": "T6.1",
+  "ledger_sha256": "fc06212ab5530179f381d52fe71397d389f3bba92f8215a676098e45373cb65d",
+  "md_sha256": "e1014d6087d2c7acca41345179c2358f5d334be6ae419cdcf2d70208a6d0775e",
+  "modular_J0_dim_p101": 3,
+  "modular_sat_M_dim_p101": 3,
+  "msolve": {
+    "J0_p101_g2.out": "268e8cbdddbb57c231dabbb4aa89e137200b2b202d7510e5db99a9fff26e3ca3",
+    "J0_sat_M_p101_g2.out": "4e6999f656d669b8fe6b08680a5d8abc171fc0c4ce1ad2b43f5f3a82c75fbb2f"
+  },
+  "payload_sha256": "599340cc8b5dd3657a8be5945d620c8c46d940a1e6e13a5305feee6063893542",
+  "schema": "klein-cubic-T61-payload-v1"
+}

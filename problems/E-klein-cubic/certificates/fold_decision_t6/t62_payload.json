@@ -1,0 +1,13 @@
+{
+  "R1": null,
+  "T6_3_started": false,
+  "dim_Sing_S_G": null,
+  "exit": "T2R-UNDECIDED",
+  "gate": "T6.2",
+  "lower_bound_ge_2": "NOT_PROVED",
+  "payload_sha256": "89f8261a1d8276b2993383a436b497ab039db79251d3e60dc8a0160d534b4ea6",
+  "r1_decision_sha256": "251695025b9fee8c5101a88002c11cd44a30a26390e1850b4432adb0beb87638",
+  "r1_md_sha256": "31f3d12e218afbc4b4cc858c7bc81b914210e3ca2e5e826395968527b122412f",
+  "schema": "klein-cubic-T62-payload-v1",
+  "upper_bound_le_2": "PROVED"
+}

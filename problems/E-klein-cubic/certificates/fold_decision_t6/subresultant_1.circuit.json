@@ -1,0 +1,42 @@
+{
+  "schema": "klein-cubic-T60-subresultant-1-circuit-v1",
+  "definition": "Sres_1(P, P_u) = s_1(A,B,Y,Z)*u + s_0(A,B,Y,Z)",
+  "representation": "exact_ducos_subresultant_PRS_circuit",
+  "inputs": {
+    "P": {
+      "path": "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv",
+      "sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+      "n_terms": 1593,
+      "deg_u": 6
+    }
+  },
+  "algorithm": {
+    "name": "Ducos optimized subresultant PRS",
+    "reference": "Lionel Ducos, J. Pure Appl. Algebra 2000; AbstractAlgebra.jl resultant_subresultant",
+    "steps": [
+      "Set p0 = P, p1 = dP/du in R[u], R = Q[A,B,Y,Z]",
+      "Iterate pseudo-remainder subresultant steps until deg <= 1",
+      "Output the degree-1 (or lower) subresultant polynomial S = s1*u + s0"
+    ],
+    "operations": [
+      "pseudorem",
+      "leading_coefficient powers",
+      "exact division by previous lc powers (content-correct Ducos correction)"
+    ]
+  },
+  "evaluation": {
+    "at_point": "specialize P to Q[u]; run univariate Ducos PRS; read coeff(S,1), coeff(S,0)",
+    "mod_p": "same over GF(p)[A,B,Y,Z][u]; full expansion of s0,s1 mod p is feasible but dense (intermediate Sres_2 ~3.5e5 terms mod 67)"
+  },
+  "expansion_status": {
+    "exact_sparse_s0_s1": "NOT_EXPANDED",
+    "reason": "PRS intermediate deg-2 poly has ~3.5e5 multipoly terms mod p; exact QQ expansion exceeds exploratory densification budget",
+    "accepted_by_workorder": "exact sparse polynomials OR exact straight-line circuits"
+  },
+  "principal_subresultant_coefficients": {
+    "PSC_0": "Res_u(P, P_u) = H * G (installed as exact quotient circuit; not re-expanded)",
+    "PSC_1": "leading coefficient of Sres_1 when deg Sres_1 = 1; equals s_1 under that degree hypothesis",
+    "PSC_k_k_ge_2": "control deg gcd >= 2; vanish of PSC_1 (with Res=0) is the deg-gcd >= 2 locus"
+  },
+  "identity": "Sres_1 lies in the ideal (P, P_u) as an R[u]-linear combination (Bézout/subresultant identity); on D(s1) one has u = -s0/s1 in the quotient whenever deg gcd = 1"
+}

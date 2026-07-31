@@ -1,0 +1,90 @@
+{
+  "schema": "klein-cubic-T61-saturation-ledger-v1",
+  "ideal_J0": {
+    "generators": ["P", "P_u", "P_A", "P_B", "P_Y", "P_Z"],
+    "ring": "Q[A,B,Y,Z,u]",
+    "note": "H omitted: on D(G), H is redundant via Res=H*G in (P,P_u)"
+  },
+  "gate_sequence": ["ell", "P_uu", "C", "delta", "L=A-15", "M=B", "Q4", "F27_if_required"],
+  "stages": [
+    {
+      "name": "J0_unsat",
+      "exact_krull_dim": null,
+      "exact_status": "NOT_COMPLETED_UNDER_EXPLORATORY_QQ_GB",
+      "modular_discovery": {
+        "p": 101,
+        "method": "msolve -g 2 grevlex reduced GB; dim from leading-monomial staircase",
+        "n_GB": 260,
+        "dim_LM": 3,
+        "artifact": "msolve/J0_p101_g2.out",
+        "note": "dim 3 without H is compatible with a component in V(G); V(H,J0) retains upper bound <=2 from T2R"
+      },
+      "projective_closure_dim": null,
+      "is_unit_ideal": false
+    },
+    {
+      "name": "after_sat_M",
+      "gate": "M=B",
+      "method": "Rabinowitsch (J0, 1-t*B) grevlex GB mod 101",
+      "exact_krull_dim": null,
+      "modular_discovery": {
+        "p": 101,
+        "n_GB": 386,
+        "dim_LM": 3,
+        "unit": false,
+        "artifact": "msolve/J0_sat_M_p101_g2.out",
+        "interpretation": "dim-3 component of J0 is not contained in V(B); saturating by M alone does not kill it"
+      }
+    },
+    {
+      "name": "after_sat_ell",
+      "gate": "ell=lc_u(P)",
+      "exact_krull_dim": null,
+      "modular_discovery": {
+        "status": "JOB_INCOMPLETE_OR_PENDING",
+        "note": "msolve sat jobs for ell/L/Q4 were started; seal only completed portable artifacts"
+      }
+    },
+    {
+      "name": "after_sat_Puu",
+      "exact_krull_dim": null,
+      "modular_discovery": {"status": "NOT_RUN_TO_SEAL"}
+    },
+    {
+      "name": "after_sat_C",
+      "exact_krull_dim": null,
+      "modular_discovery": {"status": "NOT_RUN_TO_SEAL"}
+    },
+    {
+      "name": "after_sat_delta",
+      "exact_krull_dim": null,
+      "modular_discovery": {"status": "NOT_RUN_TO_SEAL"}
+    },
+    {
+      "name": "after_sat_L",
+      "exact_krull_dim": null,
+      "modular_discovery": {"status": "NOT_RUN_TO_SEAL"}
+    },
+    {
+      "name": "after_sat_Q4",
+      "exact_krull_dim": null,
+      "modular_discovery": {"status": "NOT_RUN_TO_SEAL"}
+    },
+    {
+      "name": "after_sat_F27",
+      "F27_status": "MODULAR_EXECUTABLE_CRT_PENDING (T2R4)",
+      "remaining_in_G_check": "NOT_DECIDED_BEFORE_F27_RECONSTRUCTION",
+      "note": "Workorder: reconstruct F27 only if required; sequential sat by F27 not by giant product"
+    }
+  ],
+  "full_product_Rabinowitsch": {
+    "status": "NOT_RERUN",
+    "reason": "T2R.5 densified past practical limits; V2 forbids reintroducing that as the only path"
+  },
+  "resource": {
+    "exploratory_ceiling_MiB": 8192,
+    "structured_job_ceiling_MiB": 65536,
+    "preflight_for_64GiB": "NOT_AUTHORIZED_THIS_DISPATCH",
+    "exact_QQ_GB_J0": "STOPPED_AFTER_CHECKPOINT (M2/Singular >8min no dim output; modular path used)"
+  }
+}

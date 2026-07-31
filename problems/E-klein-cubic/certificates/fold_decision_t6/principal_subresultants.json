@@ -1,0 +1,33 @@
+{
+  "schema": "klein-cubic-T60-principal-subresultants-v1",
+  "ring": "Q[A,B,Y,Z][u]",
+  "P_deg_u": 6,
+  "Pu_deg_u": 5,
+  "PSC": {
+    "0": {
+      "name": "Res_u(P, P_u)",
+      "status": "INSTALLED_AS_EXACT_QUOTIENT_FACTORIZATION",
+      "identity": "Res_u(P, P_u) = H * G",
+      "H_path": "certificates/target_branch_global/H_factor/H_primitive_integer.tsv",
+      "H_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+      "G_circuit": "certificates/fold_normalization_t2r/saturation_factors/G_circuit.json",
+      "note": "On B_G one has H=0 and G inverted, so Res=0 identically on Spec B_G"
+    },
+    "1": {
+      "name": "PSC_1 = coeff_u^1(Sres_1) when deg Sres_1=1",
+      "status": "CIRCUIT_ONLY",
+      "circuit": "subresultant_1.circuit.json",
+      "controls": "deg gcd(P, P_u) >= 2 iff Res=0 and PSC_1=0 (classical principal-subresultant criterion)"
+    }
+  },
+  "modular_expansion_discovery": {
+    "status": "discovery_only",
+    "mod_67_PRS_ledger": {
+      "prem_deg4_nterms": 14991,
+      "prem_deg3_nterms": 99392,
+      "prem_deg2_nterms": 351642,
+      "prem_deg1": "unfinished_under_exploratory_time_budget"
+    },
+    "note": "Full sparse char-0 s0,s1 not sealed; circuit is the executable exact object"
+  }
+}

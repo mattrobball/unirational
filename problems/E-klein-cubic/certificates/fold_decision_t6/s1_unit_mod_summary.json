@@ -1,0 +1,10 @@
+{
+  "schema": "klein-cubic-T60-s1-mod-probes-v1",
+  "status": "discovery_only",
+  "primes": [
+    {"p":71,"n_H":475,"n_gates_ok":410,"n_s1_nonzero":400,"n_s1_zero":0,"n_s1_fail":10},
+    {"p":101,"n_H":429,"n_gates_ok":375,"n_s1_nonzero":363,"n_s1_zero":0,"n_s1_fail":12},
+    {"p":103,"n_H":398,"n_gates_ok":352,"n_s1_nonzero":336,"n_s1_zero":0,"n_s1_fail":16},
+    {"p":107,"n_H":445,"n_gates_ok":411,"n_s1_nonzero":399,"n_s1_zero":0,"n_s1_fail":12}
+  ]
+}
