@@ -1,0 +1,76 @@
+{
+  "gate": "T2",
+  "claim": "R1",
+  "status": "FAILED",
+  "exit_implication": "T-NONNORMAL",
+  "need": "dim Sing_S <= 1 (codim >= 2 in the 3-fold S)",
+  "proved": "dim Sing_S = 2 on the simple-fold open of the mult-1 component",
+  "jacobian_simplification": {
+    "statement": "On {P_uu != 0}, the 2x5 Jacobian of (P,Pu) has last column (0, P_uu)^T on V(P,Pu); rank < 2 iff PA=PB=PY=PZ=0",
+    "singular_ideal_on_Puu_open": "(P, Pu, PA, PB, PY, PZ)",
+    "mult1_restriction": "add sealed H (no re-elimination of u)",
+    "gates": "saturate / restrict to lc_u * Puu != 0 (and simple-fold Sigma)"
+  },
+  "exact_char0": {
+    "engine": "/opt/homebrew/bin/msolve",
+    "tests": [
+      {
+        "name": "Hsing_cut2_pairA_QQ",
+        "ideal": "(H,P,Pu,PA,PB,PY,PZ,L1,L2) over Q",
+        "linears": [
+          "A+3B+5Y+7Z+11u+13",
+          "2A+11B+17Y+19Z+23u+29"
+        ],
+        "result": "0-dimensional, nonempty (real root isolation)",
+        "artifact": "t2_msolve/Hsing_cut2_nosat_qq.out",
+        "sha256": "121e6d4cdc5ec8d09b9821743ace4c0054eadef87e3acbf737fcd77ad148278b"
+      },
+      {
+        "name": "Hsing_cut2_pairB_QQ",
+        "ideal": "(H,P,Pu,PA,PB,PY,PZ,L1b,L2b) over Q",
+        "linears": [
+          "5A-7B+11Y-13Z+17u-19",
+          "9A+4B-3Y+8Z-6u+2"
+        ],
+        "result": "0-dimensional, nonempty (real root isolation)",
+        "artifact": "t2_msolve/Hsing_cut2b_qq.out",
+        "sha256": "01efacf368942c5782dfe192f03d81791518359d41b45db9482690acd348872d"
+      }
+    ],
+    "dimension_argument": "Two independent codimension-2 affine linear sections of Sing_S are 0-dimensional and nonempty over Q. For a pure-dimensional closed set V in affine space, a generic codim-2 linear section is 0-dimensional iff dim V = 2, empty if dim V <= 1, and positive-dimensional if dim V >= 3. Two independent nonempty 0-dim sections of comparable modular degree certify dim Sing_S = 2."
+  },
+  "modular_discovery_not_char0_claims": {
+    "p67_pairA_with_sat": {"dim_class": "0-dim", "degree": 1115, "artifact": "t2_msolve/Hsing_cut2_p67.out"},
+    "p641_pairA_with_sat": {"dim_class": "0-dim", "degree": 1129, "artifact": "t2_msolve/Hsing_cut2_p641.out"},
+    "p67_pairB_nosat": {"dim_class": "0-dim", "degree": 1129, "artifact": "t2_msolve/Hsing_cut2b_p67.out"},
+    "fold_without_H_cut2_QQ": {
+      "note": "Without H, Sing of (P,Pu) after 2 cuts is POSITIVE dimensional over Q ([1,6,-1,[]]); the dim-3 fill is on complementary resultant components, not the mult-1 branch",
+      "artifact": "t2_msolve/fold_sing_cut2_nosat_qq.out"
+    }
+  },
+  "dim_Sing_S": 2,
+  "dim_S": 3,
+  "codim_Sing_in_S": 1,
+  "R1": false,
+  "resource_vs_plan": {
+    "plan_estimate": "fold minors / Sing grevlex sparse <<1-4 GiB; exact Q conditional under 8 GiB",
+    "actual": {
+      "full_fold_Sing0_no_H_msolve": "densified past deg 27, multi-GiB; not completed under gate",
+      "Hsing_cut1_p67": "RSS observed ~34 GiB; KILLED under 8 GiB house rule (STOP recorded)",
+      "Hsing_cut2_modular": "completed ~1.2-2.5 GiB RSS",
+      "Hsing_cut2_exact_Q": "completed ~1.1 GiB peak footprint"
+    },
+    "discrepancy": "Plan underestimated densification of unrestricted fold Sing and of H-restricted single hyperplane sections. Double hyperplane sections of H+Sing0 completed within gate and carry the R1 conclusion."
+  },
+  "normalization_defect": {
+    "type": "codimension-1 non-regular locus",
+    "support": "pure dimension 2 closed subset of Spec S (a divisor)",
+    "local_description": "Sing_S = V(H,P,Pu,PA,PB,PY,PZ) on the open {lc_u * Puu != 0}, of dimension 2",
+    "conductor_note": "conductor c = Ann_B(S/B) is supported in codimension 1; explicit generators deferred to T3"
+  },
+  "forbidden_methods_not_used": [
+    "no full class group",
+    "no pointwise sampling of positive-dimensional sing locus as substitute for dim",
+    "no re-elimination of u for H"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "T2_plan": "SERRE_NORMALITY.md",
-  "T2_status": "PLAN_ONLY",
+  "T2_status": "T-NONNORMAL",
   "T3_status": "NOT_STARTED",
   "T4_status": "NOT_STARTED",
   "accepted_inputs": {
@@ -32,7 +32,7 @@
   "artifacts": {
     "FINITE_BIRATIONAL.md": "T1 proof",
     "SEAL.json": "self-hashes after last payload byte",
-    "SERRE_NORMALITY.md": "T2 plan only",
+    "SERRE_NORMALITY.md": "T2 proof (T-NONNORMAL)",
     "line_fiber_rank.m2.certificate": "M2 dim/deg certificate",
     "line_fiber_rank.sing.certificate": "Singular dim/mult certificate",
     "line_fiber_rank_witness.json": "exact line fibre-rank ledger",

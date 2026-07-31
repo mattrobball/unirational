@@ -1,0 +1,39 @@
+{
+  "gate": "T2",
+  "claim": "S2",
+  "status": "PROVED",
+  "presentation": "R[u]/(P,Pu) is a complete intersection of dimension 3; S is a localization of the mult-1 component on the simple-fold open",
+  "regular_sequence": true,
+  "proof_mode": "gcd_content_resultant_no_GB",
+  "argument": {
+    "step1": "R = Q[A,B,Y,Z,u] is a UFD and Cohen-Macaulay of dimension 5",
+    "step2": "content(P)=1 as sealed primitive integer polynomial (1593 terms); verified by producer/verifier gcd of all coefficients",
+    "step3": "Res_u(P,Pu) is nonzero in Q[A,B,Y,Z] because the sealed irreducible H of degree 43 divides Res_u(P,Pu) and H != 0 (37992 terms, sealed target_branch_global)",
+    "step4": "Any common divisor of P and Pu in R: if deg_u >= 1 then Res_u(P,Pu)=0, contradiction; if deg_u = 0 then it divides content(P), hence is a unit in Q. Therefore gcd(P,Pu)=1 in R",
+    "step5": "height(P,Pu)=2 (no height-1 prime contains both). Two generators of height 2 in a CM ring form a regular sequence",
+    "step6": "R/(P,Pu) is a complete intersection of pure dimension 3, hence Cohen-Macaulay, hence satisfies S_k for all k (in particular S2)",
+    "step7": "Cohen-Macaulayness is preserved by localization. On the open where complementary resultant factor G and gates Sigma are inverted, H vanishes on V(P,Pu), so S is a localization of (an open of) this CI and is CM, hence S2"
+  },
+  "dim": 3,
+  "depth": 3,
+  "codim_in_ambient": 2,
+  "betti_table": null,
+  "betti_note": "not computed; CM follows from CI presentation without free resolution",
+  "gates_inverted": ["lc_u", "P_uu", "delta", "C"],
+  "no_reelimination_of_u": true,
+  "inputs": {
+    "P_path": "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv",
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "P_n_terms": 1593,
+    "P_content": 1,
+    "H_path": "certificates/target_branch_global/H_factor/H_primitive_integer.tsv",
+    "H_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "H_n_terms": 37992,
+    "H_total_degree": 43
+  },
+  "not_claimed": [
+    "R1",
+    "normality of S",
+    "that (P,Pu) is radical globally (only that it is a regular sequence / CI)"
+  ]
+}

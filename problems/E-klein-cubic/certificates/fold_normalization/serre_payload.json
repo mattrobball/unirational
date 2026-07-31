@@ -1,0 +1,79 @@
+{
+  "schema": "klein-cubic-postelo-T2-serre-normality-v1",
+  "headline": "OPEN",
+  "gate_T1": "T-BIRATIONAL",
+  "gate_T2": "T-NONNORMAL",
+  "dispatch": "WORKORDER_POST_ELO_CONSTRUCTION.md Path T / T2",
+  "base_commit_note": "3bfbd01 pin from dispatch; T1 seal on c5e71be lineage",
+  "definitions": {
+    "B": "Q[A,B,Y,Z]/(H_prim)",
+    "S": "(B[u]/(P,P_u))[Sigma^{-1}]",
+    "Sigma": ["lc_u(P)", "P_uu", "delta_Cramer", "C_content"]
+  },
+  "claims": {
+    "S2": true,
+    "R1": false,
+    "S_normal": false,
+    "dim_S": 3,
+    "dim_Sing_S": 2,
+    "codim_Sing_in_S": 1
+  },
+  "S2": {
+    "mode": "complete_intersection_regular_sequence",
+    "certificate": "s2_cm_certificate.json",
+    "gcd_P_Pu": 1,
+    "content_P": 1,
+    "Res_nonzero_via_H": true
+  },
+  "R1": {
+    "certificate": "r1_singular_locus.json",
+    "jacobian_simplified_ideal": "(H,P,Pu,PA,PB,PY,PZ) on {P_uu != 0}",
+    "exact_Q_cut2_pairA": "0-dim nonempty",
+    "exact_Q_cut2_pairB": "0-dim nonempty",
+    "dim_Sing": 2
+  },
+  "normalization_defect": {
+    "nonregular_locus_dimension": 2,
+    "conductor_supported_in_codim": 1,
+    "conductor_generators": "NOT_COMPUTED_T3"
+  },
+  "accepted_inputs": {
+    "primitive_P": {
+      "path": "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv",
+      "sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+      "n_terms": 1593,
+      "content": 1,
+      "u_degree": 6
+    },
+    "H_prim": {
+      "path": "certificates/target_branch_global/H_factor/H_primitive_integer.tsv",
+      "sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+      "n_terms": 37992,
+      "total_degree": 43
+    }
+  },
+  "artifacts": {
+    "SERRE_NORMALITY.md": "T2 proof",
+    "s2_cm_certificate.json": "S2 CI certificate",
+    "r1_singular_locus.json": "R1 failure + dim Sing=2",
+    "t2_msolve/": "portable msolve .out files",
+    "produce_t2.py": "producer",
+    "verify_t2.py": "independent verifier"
+  },
+  "not_proved": [
+    "conductor ideal generators",
+    "discriminant contacts mod 3",
+    "3-primary class group",
+    "Problem E resolution"
+  ],
+  "house_rules": {
+    "no_full_class_group": true,
+    "no_pointwise_positive_dim_sing": true,
+    "no_reelim_u_for_H": true,
+    "rss_gate_gib": 8,
+    "modular_is_discovery_only": true
+  },
+  "resource_discrepancy_vs_plan": "Unrestricted fold Sing densified past plan floors; H-restricted cut1 exceeded 8 GiB (~34 GiB, killed). R1 settled via exact-Q double linear sections of H+Sing0 within gate (~1.1 GiB).",
+  "terminal_marker_producer": "POSTELO_T2_SERRE_PRODUCER_SEALED",
+  "terminal_marker_verifier": "FOLD_NORMALIZATION_T2_VERIFIER_ACCEPT"
+}

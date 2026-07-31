@@ -1,0 +1,9 @@
+{
+  "R1": false,
+  "ckpt": 3,
+  "dim_Sing_S": 2,
+  "exact_Q_cut2": [
+    "Hsing_cut2_nosat_qq.out",
+    "Hsing_cut2b_qq.out"
+  ]
+}

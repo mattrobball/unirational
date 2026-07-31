@@ -1,0 +1,6 @@
+{
+  "S2": true,
+  "certificate": "s2_cm_certificate.json",
+  "ckpt": 2,
+  "mode": "CI_regular_sequence"
+}

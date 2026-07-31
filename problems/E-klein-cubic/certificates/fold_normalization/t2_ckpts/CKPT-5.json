@@ -1,0 +1,8 @@
+{
+  "ckpt": 5,
+  "gate_T2": "T-NONNORMAL",
+  "headline": "OPEN",
+  "seal_sha256": "bc9ab301a81e0e5527763563a5799f7c07c4e2a5f43321d503079c829be43740",
+  "terminal_marker": "POSTELO_T2_SERRE_PRODUCER_SEALED",
+  "verifier_marker": "FOLD_NORMALIZATION_T2_VERIFIER_ACCEPT"
+}
