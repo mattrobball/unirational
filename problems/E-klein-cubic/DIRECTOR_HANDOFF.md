@@ -325,7 +325,8 @@ Active work order: `WORKORDER_CAS_AFTER_5E72D8E.md` (supersedes
 | Route | State | Blocker |
 |---|---|---|
 | T8 / T8-N1 | `T8-S1-UNDECIDED`, `T8-N1-UNDECIDED` — **verified**; evidence favors NONUNIT | RUR degree ~2000: the binodal point is algebraic of large degree |
-| P25Y | `P25Y-DVR-PASS`; `m_75 = 2343`; `P25YB-F4-SLOT-REQUEST` — **verified** | 64 GiB F4 projective support of `J_N`, waiting on the slot |
+| P25Y | `P25Y-DVR-PASS`; `m_75 = 2343`; `P25YB-UNDECIDED` — **verified** | deg-4 F4 / Macaulay wall at ~55 GiB; `V_+(J_N)` still open |
+| C1 | not started | gated by the owner behind T8-N1 and P25Y-M/B |
 | C0 | `C0-UNDECIDED` — **verified** | no executable Fano model; needs `A_proj` descent → Morita symbol |
 | T (old T6) | `T60-UNDECIDED`, `T2R-UNDECIDED` | superseded by T8 |
 | P25X | `P25X0-PASS`, `P25X1-FAIL` | 842 basis quarantined, not on critical path |
@@ -387,6 +388,21 @@ The exit is honestly `T8-S1-UNDECIDED`: no char-0 point was lifted.
 `S_G ≅ B_G` is probably unavailable. It also shows the T60 sweep's zero hits
 were not evidence of emptiness — exactly the failure mode §6 warns about.
 
+**P25Y-B step 5 result (verified).** `R/J_N` is a **finite** `S`-module,
+`S = F_89[Q]`, on the 28 generators `B = 1 ⊕ K ⊕ Sym²K` — the monic pure-`K³`
+border closes 56/56, so every `K`-monomial of degree ≥ 3 reduces. So `V_+(J_N)`
+is finite over `P(Q) = P^36` and its support is decided by annihilator/Fitting
+data. But the module is **not free of rank 28**, for a dimensional reason:
+mixed `QK²` closes only 690 of 777, and `56 + 777 = 833 > 746`, so a full `QK²`
+normalization is *impossible from the 746-row subsystem alone*. No relation
+refused to reduce — the uncovered monomials are simply outside the span.
+
+**This sharpens the fork on the quarantined packet.** Either the true row rank
+exceeds 746 (it is a lower bound, ceiling 2343), or the historical rank-28
+border presentation is incompatible with the direct landing ideal. It is not
+recoverable from the direct object as it stands. Deciding which needs an upper
+bound on the row rank — that is now the highest-value cheap question in P25Y.
+
 **Open decisions for the owner:**
 
 1. ~~A 64–96 GiB job to prove Track T's `s_1`-unit lemma.~~ **Superseded.**
@@ -398,11 +414,14 @@ were not evidence of emptiness — exactly the failure mode §6 warns about.
    system `P(u_1)=P_u(u_1)=P(u_2)=P_u(u_2)=0` in `(s,t,u_1,u_2)`, whose
    Jacobian factors as `± P_uu(u_1)·P_uu(u_2)·det[dh_i·x_∂]` with
    `dh_i = ∇_x P(x,u_i)` — nonzero at all three witnesses (±88, ±95, ±20).
-2. A 64 GiB job for P25Y.3/P25Y-B projective support — `preflight_p25y3.json`
-   refreshed, exit `P25YB-F4-SLOT-REQUEST`. **Fenced, not descoped:** it was
-   authorized by the owner but could not run beside T8-N1, since two
-   memory-saturating jobs may not overlap. Dispatch it as soon as the slot
-   frees.
+2. ~~A 64 GiB job for P25Y.3/P25Y-B projective support.~~ **Run** — it exited
+   `P25YB-UNDECIDED` at a measured 54.6 GiB, wall at the degree-4 F4/Macaulay
+   step (`32077 × 163184`, ~8% dense). Going further needs either the >64 GiB
+   ceiling, or the structure-exploiting route: Fitting ideals of the universal
+   84-jet matrix `C(q)` over `S`, which exploits the finiteness above and is the
+   better bet.
+4. **New, and cheap relative to its value:** an upper bound on the direct row
+   rank. It decides the fork above, and `m_75 = 2343` is too weak to do it.
 3. If `T8-S1-NONUNIT` lands, T8.3/T8.4 are dead as written (both are gated on
    `T8-S1-UNIT`). The work order needs a branch for the nonunit case — the
    normalization-defect analysis in §3.2's `T8-S1-NONUNIT` exit line, not the
