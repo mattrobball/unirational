@@ -309,7 +309,7 @@ Active work order: `WORKORDER_CAS_AFTER_5E72D8E.md` (supersedes
 
 | Route | State | Blocker |
 |---|---|---|
-| T8 | dispatched 2026-07-31, in flight | `s_1` unit question; holds the round's 64 GiB slot |
+| T8 | `T8-S1-UNDECIDED` — **verified**; modular evidence now favors NONUNIT | exact char-0 lift of a binodal witness |
 | P25Y | `P25Y-DVR-PASS`, `P25Y3-PREFLIGHT-READY` — **verified** | projective support of `J_N` undecided under 8 GiB |
 | C0 | `C0-UNDECIDED` — **verified** | no executable Fano model; needs `A_proj` descent → Morita symbol |
 | T (old T6) | `T60-UNDECIDED`, `T2R-UNDECIDED` | superseded by T8 |
@@ -332,18 +332,43 @@ by geometric type. Separately, the degree-55 odd multisection gives individual
 isotropy (Springer) but cannot kill `[D]`: `cor ∘ res` is multiplication by 55,
 a unit on `Br[2]`. No model installed; elimination preflight written, not run.
 
+**T8 result (verified).** Directed 2-plane sections found **gate-passing
+binodal points on `V(H, s_1)`** at `p = 89, 101, 199`: `H = 0`, `s_1 = 0`,
+`deg_u gcd(P,P_u) = 2` with two *distinct* roots, every gate nonzero including
+`P_uu` and `delta` at both roots. Since `deg gcd = 2` forces `Sres_1 ≡ 0`,
+these are genuine `F_p`-points of `V(H,P,P_u,s_1)` meeting `D(q)`. Verified
+independently of the worker's code — see §5.2; recovering `G` needed a
+symbolic Sylvester determinant over `F_p[τ]` because `deg Res = 106` exceeds
+`p` at two of the three primes, so interpolation would have been invalid.
+The exit is honestly `T8-S1-UNDECIDED`: no char-0 point was lifted.
+
+**This inverts the standing recommendation.** The evidence now favors
+`s_1` **not** being a unit, so the `s_1`-unit lemma is probably false and
+`S_G ≅ B_G` is probably unavailable. It also shows the T60 sweep's zero hits
+were not evidence of emptiness — exactly the failure mode §6 warns about.
+
 **Open decisions for the owner:**
 
-1. A 64–96 GiB preflighted job for Track T's `s_1`-unit lemma. Unlike Path A's
-   elimination — where the ledger proved no machine could help — this one is
-   plausibly a genuine finite wall, and the lemma would give `S_G ≅ B_G`.
+1. ~~A 64–96 GiB job to prove Track T's `s_1`-unit lemma.~~ **Superseded.**
+   Do not buy a proof of a statement the evidence says is false. Redirect the
+   slot to the *counterexample*: the isolated modular binodal points have
+   invertible `(H,s_1)|_Λ` Jacobians and are Hensel-liftable, so a CRT/RUR
+   lift of the zero-dimensional plane section in the `(s,t,u_1,u_2)` binodal
+   formulation should reach `T8-S1-NONUNIT` far below 64 GiB. Cheap first,
+   preflight only if it stalls.
 2. A 64 GiB job for P25Y.3 projective support (`preflight_p25y3.json` is
-   written and waiting). Cannot overlap (1).
+   written and waiting).
+3. If `T8-S1-NONUNIT` lands, T8.3/T8.4 are dead as written (both are gated on
+   `T8-S1-UNIT`). The work order needs a branch for the nonunit case — the
+   normalization-defect analysis in §3.2's `T8-S1-NONUNIT` exit line, not the
+   isomorphism route.
 
-### 8.1 Director-derived, dispatched but **not** sealed
+### 8.1 Director-derived reduction — dispatched, and it **survived**
 
-Recorded so it survives the session. Derived at director level for the T8
-brief; worker T was dispatched to verify it. **Not a certificate.**
+Derived at director level for the T8 brief; worker T verified it (`s_1 = 0 ⟺
+deg gcd ≥ 2` checked on `V(H)` over `F_101, F_199, F_353`, zero failures) and
+then used it to find the binodal witnesses above. Still **not a sealed
+char-0 certificate** — it is the frame the search ran in.
 
 Because `ell = lc_u(P)` is inverted and `Res_u(P,P_u) = H·G`, a common root of
 `(P,P_u)` exists over every point of `V(H)`. `H`, `s_1`, `s_0`, `G`, `ell`, `C`
