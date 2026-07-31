@@ -1,7 +1,11 @@
-# G3 — Terminal obstruction pattern across (1,7), (1,13), (3,19)
+# G3 — Terminal free-fibre residual pattern across (1,7), (1,13), (3,19)
 
 **Headline: OPEN.**  
 **Path G3 exit: `G-PATTERN`.**  
+**Degree-13/19 sample exits (corrected labels):** `G13-SAMPLE-RESIDUAL`, `G19-SAMPLE-RESIDUAL`
+(historical package strings `G13-OBSTRUCTION` / `G19-OBSTRUCTION` remain in sealed
+JSON as computation records; they are **not** degree-wide obstruction theorems —
+`REPAIR.md` §§11–12).  
 **Not claimed: `G-PERIODIC-NEGATIVE` (no all-degree proof).**  
 **Not claimed: `G-POLYNOMIAL` (no tower closes to a polynomial covariant).**
 
@@ -38,7 +42,8 @@ Local free-module surjectivity is **never** promoted to global solvability.
 | residual support size | 1 | 1 | 1 |
 | residual C3 weight(s) | {0} | {0} | {2} |
 | residual monomial (model) | y₀⁸ y₁² | y₀¹⁴ y₁² | y₀²³ y₁³ |
-| package exit | G7-OBSTRUCTION | G13-OBSTRUCTION | G19-OBSTRUCTION |
+| package exit (corrected) | G7-OBSTRUCTION (degree-7 global landing empty; independent) | G13-SAMPLE-RESIDUAL | G19-SAMPLE-RESIDUAL |
+| historical JSON label | G7-OBSTRUCTION | G13-OBSTRUCTION | G19-OBSTRUCTION |
 | G-global landing exclusion | empty (septic) | not re-proved here | not re-proved here |
 
 All free-fibre residuals are exact over **Q** (Fraction arithmetic). Finite fields are not used as characteristic-zero claims.
@@ -77,7 +82,7 @@ On every ker-L1 free-fibre sample computed here, the first nonzero residual sits
 | (1,7) | 1 | 10 |
 | (3,19) | 1 | 26 |
 
-Same `d − 6m`, different terminal free-fibre obstruction order.  
+Same `d − 6m`, different terminal free-fibre residual order.  
 Therefore **`d − 6m` is not the invariant controlling the free-fibre residual order**.  
 (It may still appear in other global/equalizer contexts; it does not classify the three free-fibre terminals.)
 
@@ -94,7 +99,7 @@ Fails: (1,7) vs (1,13) share `m=1` but residual at 10 vs 16.
 
 Samples use **based-style** pure E− relative jets zero (`a_odd = 0` for orders `> m`).  
 The pure based_zero branch (all E+ particular solutions zero / L1 kernel zero) has **vanishing** free-fibre `F` (triple-E− / odd-order vanishing).  
-The obstruction appears on the **nontrivial ker-L1** free open.  
+The nonzero sample residual appears on the **nontrivial ker-L1** free open.  
 A residual ledger with nonzero `a_d` was not needed to kill these free-fibre samples; it remains a separate global constraint layer.
 
 ### 2.6 Residual S3 / C3 type of the residual form
@@ -110,6 +115,21 @@ For `m=3`, the first residual is a multiple of `y0^{N-3} y1^3`.
 So the **shape** of the residual depends on `m` (and the leading sample), not only on `d−6m`.
 
 ---
+
+## 2.7 P25.1 confirms the sample-residual correction (`REPAIR.md` §12)
+
+At \((m,d)=(1,25)\), the particular terminal residual is nonzero on sample
+directions, but later high-order kernel freedom cancels it: an affine-linear
+map of **rank 27** into a **29-dimensional** residual codomain leaves a
+nonempty zero locus in both live free-fibre families
+(`certificates/degree25_tower/TOWER.md`, exit `P25-TOWER-SURVIVES`).
+
+Thus terminal nonzero sample values are **not** evidence of an empty global
+zero locus.  The decisive object is always \(\Theta^{-1}(0)\), with all global
+equalizers and coefficient couplings imposed.  G4.1's symbolic free-fibre
+recurrence remains useful at its stated free-fibre boundary; G4.2 correctly
+stops because finite generation of the full equalizer/Fitting layers over the
+proposed pure \((m,d)\)-semigroup grading has not been proved.
 
 ## 3. Mechanism (why formal smoothness does not algebraize)
 
@@ -145,7 +165,8 @@ A **finite combinatorial classification is conjectured** with exact supporting d
 
 ### Not claimed: `G-PERIODIC-NEGATIVE`
 
-Three bidegrees do **not** upgrade to a proved periodic obstruction covering all degrees and families.  
+Three bidegrees do **not** upgrade to a proved periodic residual pattern covering all degrees and families,
+let alone a degree-wide obstruction.  
 No chain to `ed_C(G)=4` is asserted.
 
 ### Not claimed: `G-POLYNOMIAL`
@@ -200,8 +221,13 @@ G3_PATTERN_SEAL_OK
 |--------|------------|
 | G1 finite truncation for all d | All-degree nonzero residual at N_★ |
 | Isolation cutoff N_★ = d+2m+1 (odd m,d) | Periodicity in d mod N |
-| Exact free-fibre towers at (1,7),(1,13),(3,19) | Global multi-Rees equalizer elimination |
-| G4 architecture tables at every live stage | G-global Molien landing empty for d=13,19 |
-| d−6m does **not** control free-fibre residual order | Headline ed_C(G) |
+| Exact free-fibre sample residuals at (1,7),(1,13),(3,19) | Degree-wide emptiness of Θ^{-1}(0) at those bidegrees |
+| G4 architecture tables at every live stage | Global multi-Rees equalizer elimination |
+| d−6m does **not** control free-fibre residual order | G-global Molien landing empty for d=13,19 |
+| P25.1: nonzero sample residual can still leave nonempty zero locus | Headline ed_C(G) |
 
-**Headline remains OPEN. Exit `G-PATTERN` only.**
+**Retained:** finite truncation, isolation cutoff \(N_\star=d+2m+1\), G4.1
+symbolic free-fibre recurrence at its stated free-fibre boundary, exact sample
+data.  
+**Headline remains OPEN. Exit `G-PATTERN` only (sample residuals, not
+degree-wide obstructions).**

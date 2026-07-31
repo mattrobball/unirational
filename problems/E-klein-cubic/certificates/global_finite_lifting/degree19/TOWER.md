@@ -1,7 +1,10 @@
 # Degree-19 finite global lifting tower
 
 **Headline: OPEN.**  
-**Exit: `G19-OBSTRUCTION`.**  
+**Exit: `G19-SAMPLE-RESIDUAL`.**  
+**Historical package label (computation record): `G19-OBSTRUCTION`** — retained in
+JSON/`exit.json` as a sealed sample ledger; **not** a degree-wide obstruction theorem
+(`REPAIR.md` §§11–12).  
 **Bidegree: (m,d)=(3,19).**  
 **d − 6m = 1.**  
 **Gate G1: PASS** (finite truncation at normal order 57).
@@ -86,7 +89,7 @@ Sample `based_zero`: first nonzero at F-order **None**.
 
 Sample `ker_L1`: first nonzero residual at F-order **26** (norm^2 = 15968016).
 
-Residual C3 weights at first obstruction: **[2]** (support size 1).
+Residual C3 weights at first nonzero sample residual: **[2]** (support size 1).
 
 ## 6. Invariants recorded for G3 pattern
 
@@ -102,12 +105,28 @@ Residual C3 weights at first obstruction: **[2]** (support size 1).
 | residual S3-type (leading) | pure_powers_y0m_f0_plus_y1m_f1 |
 | source-line ledger (samples) | based a_odd=0 |
 
-## 7. Boundary
+## 7. Theorem boundary (`REPAIR.md` §§11–12)
+
+A nonzero free-fibre residual on a selected `ker_L1` sample is **not** an
+obstruction theorem for all degree-19 maps.  The same packet records a
+`based_zero` sample with vanishing residual, so the free-fibre residual map
+already has zeros.  The decisive object remains \(\Theta^{-1}(0)\) with all
+global equalizers and coefficient couplings imposed.
+
+**P25.1 confirmation.**  At \((m,d)=(1,25)\), the particular terminal residual
+is again nonzero on sample directions, yet later high-order kernel freedom
+(rank 27 into a 29-dimensional residual codomain) cancels it and both live
+free-fibre families survive (`certificates/degree25_tower/TOWER.md`, exit
+`P25-TOWER-SURVIVES`).  Terminal nonzero sample values are therefore not
+evidence of an empty global zero locus.
 
 | Proved | Not proved |
 |--------|------------|
-| Complete free-fibre tower at (3,19) | All-degree periodic obstruction |
-| Exact residual on ker-L1 sample | Full multi-Rees equalizer elimination |
+| Complete free-fibre tower at (3,19) | Degree-wide emptiness of \(\Theta^{-1}(0)\) |
+| Exact residual on ker-L1 sample | All-degree periodic obstruction |
+| Isolation cutoff \(N_\star=d+2m+1\) | Full multi-Rees equalizer elimination |
 | Resource floor documented | G-global Molien landing for d=19 |
 
-**Headline remains OPEN.**
+**Retained:** finite truncation (G1), isolation cutoff \(N_\star=d+2m+1\), exact
+sample residual data.  
+**Headline remains OPEN. Exit `G19-SAMPLE-RESIDUAL` only.**

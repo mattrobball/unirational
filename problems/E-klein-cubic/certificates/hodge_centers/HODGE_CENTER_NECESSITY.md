@@ -36,6 +36,15 @@ was found.
 
 ## 1. Split injection \(f^*:H^3(X,\mathbf Q)\hookrightarrow H^3(Z,\mathbf Q)\)
 
+**Repair note (2026-07-31).**  The original write-up treated \(f:Z\to X\) as
+generically finite and pushed \(H^3(Z)\) directly to \(H^3(X)\).  That is
+wrong: \(Z\) resolves a rational map from \(\mathbf P^4\), so
+\(\dim Z=4\) and \(\dim X=3\), and a dominant \(f\) has relative dimension
+one.  The argument below replaces that derivation entirely by the relatively
+ample class splitting of `REPAIR.md` §8.  Historical character-screen data are
+unchanged; only the cohomological splitting is rewritten.  See
+`REPAIR.md` §§7–8.
+
 ### Setup
 
 Let \(X\subset\mathbf P(W)\simeq\mathbf P^4\) be the Klein cubic threefold,
@@ -57,38 +66,61 @@ of blowups along smooth \(G\)-invariant centres (or a \(G\)-equivariant
 smooth resolution dominating the graph closure), \(f\) is a \(G\)-equivariant
 morphism, and \(f=\varphi\circ\pi\) on a dense open.
 
-### Projection formula and splitting
+Dimensions: \(Z\) is four-dimensional (a resolution of a map out of
+\(\mathbf P^4\)) and \(X\) is three-dimensional, so a dominant \(f\) has
+relative dimension one.  In particular \(f\) is **not** generically finite,
+and there is no valid degree-\(d\) identity \(f_*\circ f^*=\times d\) on
+\(H^3\).
 
-Let \(\eta\in\operatorname{NS}(Z)^G\) be a \(G\)-invariant ample class (e.g.
-a sufficiently large multiple of an equivariant very ample class obtained by
-averaging). The morphism \(f:Z\to X\) is generically finite of some degree
-\(d\ge 1\). For the rational Chow / cohomology class of a fibre of \(f\),
+### Relatively ample class and splitting (`REPAIR.md` §8)
+
+Choose a \(G\)-invariant ample class
 
 \[
-f_*\bigl(f^*\alpha\cdot\eta^{\dim Z-\dim X}\bigr)
+\eta\in H^2(Z,\mathbf Q)
+\]
+
+(e.g. a sufficiently large multiple of an equivariant very ample class
+obtained by averaging).  Then
+
+\[
+f_*(\eta)=n\in H^0(X,\mathbf Q)
+\]
+
+for some \(n>0\), the degree of \(\eta\) on the generic curve fibre of \(f\).
+Define the rational map of Hodge structures
+
+\[
+s:H^3(Z,\mathbf Q)\longrightarrow H^3(X,\mathbf Q),
+\qquad
+s(\beta)=\frac1n\,f_*(\eta\cup\beta).
+\]
+
+For \(\alpha\in H^3(X,\mathbf Q)\), the projection formula gives
+
+\[
+s(f^*\alpha)
 =
-\bigl(\deg f\bigr)\,\alpha
-\qquad\text{for all }\alpha\in H^*(X,\mathbf Q),
+\frac1n\,f_*\bigl(\eta\cup f^*\alpha\bigr)
+=
+\frac1n\,f_*(\eta)\cup\alpha
+=
+\alpha.
 \]
 
-by the projection formula. In particular on \(H^3\),
-
-\[
-f_*:H^3(Z,\mathbf Q)\longrightarrow H^3(X,\mathbf Q)
-\]
-
-satisfies \(f_*\circ f^*=\times d\), hence
+Thus \(f^*\) is a **split injection** of rational Hodge structures, with
+left inverse \(s\).  Averaging \(\eta\) over \(G\) (or choosing \(\eta\)
+\(G\)-invariant from the start) makes the splitting \(G\)-equivariant, so
 
 \[
 f^*:H^3(X,\mathbf Q)\longrightarrow H^3(Z,\mathbf Q)
 \]
 
-is a **split injection** of \(\mathbf Q[G]\)-modules (the splitting is
-\(d^{-1}f_*\), or integrally after clearing denominators). Equivariance of
-\(f\) makes \(f^*\) a map of \(G\)-representations.
+is a split injection of \(\mathbf Q[G]\)-modules.
 
 **Form used.** We only need: \(f^*\) is injective on \(H^3(-,\mathbf Q)\) as
 \(G\)-modules. We do not need integral coefficients or torsion information.
+No new CAS computation is required for this replacement.
 
 ### Hodge refinement
 
@@ -508,15 +540,18 @@ WP_H1_HODGE_VERIFY_OK
 1. `certificates/hodge_centers/character_screen.g` + dump path docs  
 2. `assemble_json.py` + sealed `character_screen.json`  
 3. `verify.py`  
-4. `HODGE_CENTER_NECESSITY.md`
+4. `HODGE_CENTER_NECESSITY.md` (2026-07-31: generically-finite argument replaced by
+   relatively ample class splitting of `REPAIR.md` §8)
 
-(Do not touch `HANDOFF.md`, `RESOLUTION.md`, `CURRENT_PATHS.md`, `SPEC.md`.)
+Narrative theorem-boundary repairs live in a separate commit
+(`CURRENT_PATHS.md`, `SPEC.md`, `HANDOFF.md`, `RESOLUTION.md` → `REPAIR.md`).
 
 ---
 
 ## 9. Acceptance checklist
 
-- [x] Split injection and equivariant blowup decomposition proved at the level used  
+- [x] Split injection via relatively ample class (`REPAIR.md` §8); equivariant blowup decomposition at the level used  
+- [x] Generically-finite / wrong-degree pushforward argument **removed**, not papered over  
 - [x] \(H^{2,1}(X)\) as \(G\)-rep from Jacobian ring; dim 5; character vs GAP  
 - [x] \(\operatorname{Hom}_H(H^{2,1}\lvert_H,\rho)\) for every strata subgroup type and every irrep  
 - [x] Surviving \((H,\rho)\): genus bounds, orbit size, base-locus contribution  

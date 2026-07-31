@@ -7,6 +7,8 @@
 `WORKORDER_ELO_TEN_PATHS.md` (Path A safeguards)  
 **Decision exit:** `A_EMPTY_UNDECIDED`  
 **Headline:** OPEN  
+**Theorem-boundary repair:** `REPAIR.md` §§9–10 (maximal-minor quantifier;
+abstract field-algebra / marked-point interface).  
 **\(N\text{-}A\) claimed:** no  
 **\(P\text{-}A\) claimed:** no
 
@@ -22,8 +24,18 @@ director-issued remaining assertion is
 (A_empty)     for all primitive tau in L,     K_34(tau, V_Z) = L.
 ```
 
-Equivalently: some \(55\times 55\) minor of the block Krylov matrix
-\(B_{34}(\tau,V_Z)\) is nonzero at every primitive \(\tau\).
+Equivalently (pointwise quantifier, `REPAIR.md` §9): **at every** primitive
+\(\tau\), **at least one** \(55\times 55\) minor of the block Krylov matrix
+\(B_{34}(\tau,V_Z)\) is nonzero.  The minor may depend on \(\tau\).  This is
+**not** the stronger assertion that a single minor is globally nonvanishing
+on the whole primitive locus.  The correct global certificate is emptiness of
+
+\[
+V\bigl(I_{55}(B_{34})\bigr)\cap U_{\mathrm{primitive}},
+\]
+
+i.e. the ideal of **all** maximal minors of \(B_{34}\) (or an equivalent
+saturation) meets no primitive \(\tau\).
 
 ### Theorem boundary of a positive resolution
 
@@ -128,13 +140,16 @@ the controllability side \(K_{34}\).  Same predicate on the primitive locus.
 ### 1.5 Exact shape used in this packet
 
 ```text
-L / F          degree 55, monogenic, H = D_12 maximal
-V_Z            dim_F = 4  (not expanded in power basis)
+L / F          degree 55, monogenic schema (abstract interface; mu not expanded)
+V_Z            dim_F = 4  (geometric construction; power-basis coords not expanded)
 U_tau          span{1, tau, ..., tau^19}     dim 20 if primitive
 B_34           55 x 140   blocks: tau^0 V_Z | ... | tau^{34} V_Z
 phi_tau        140 x 55   (L/U_tau)^4 <- L
 (A_empty)      rank B_34(tau, V_Z) = 55 for all primitive tau
+               <=> I_55(B_34) misses U_primitive
+               (NOT: one fixed 55x55 minor nonzero for all tau)
 full rank      <=>  K_34(tau, V_Z) = L  <=>  no incidence at tau
+executable (L,V_Z)  NOT installed (REPAIR.md §10)
 ```
 
 ---
@@ -144,8 +159,9 @@ full rank      <=>  K_34(tau, V_Z) = L  <=>  no incidence at tau
 **Result:** expansion **not available**.  
 **Artifact:** `vz_power_basis.md`, `vz_power_basis.json`.
 
-The sealed A2 interfaces install abstract monogenic \(L/F\) and the geometric
-construction of \(z\in\mathbf P^3(L)\), and explicitly set
+The sealed A2 interfaces install **abstract** monogenic \(L/F\) and the geometric
+construction of \(z\in\mathbf P^3(L)\) as formal algebra schemas — not expanded
+executable generic data (`REPAIR.md` §10) — and explicitly set
 
 ```text
 mu_coefficients_expanded_in_invariants: false
@@ -198,9 +214,10 @@ After the orbit code is installed, the exact remaining obstruction is:
 > dimension four and the geometric \(\mathcal O(1)\)-evaluation description.
 > Without expanded power-basis coordinates (Task 1) or a geometric
 > no-degree-19-curve theorem for the marked \(G/H\)-orbit on \(X_T\cap M\),
-> no \(55\times 55\) minor of \(B_{34}(\tau,V_Z)\) can be certified nonzero
-> for all primitive \(\tau\), and no contradiction from
-> \(\lambda V_Z\subseteq U_\tau\) is obtained.**
+> the ideal of all maximal minors of \(B_{34}(\tau,V_Z)\) cannot be certified
+> to miss every primitive \(\tau\) (equivalently: one cannot certify that at
+> every primitive \(\tau\) at least one \(55\times 55\) minor is nonzero),
+> and no contradiction from \(\lambda V_Z\subseteq U_\tau\) is obtained.**
 
 That is why the exit is `A_EMPTY_UNDECIDED` rather than `A_EMPTY_PROVED`
 or `A_EMPTY_REFUTED`.

@@ -9,7 +9,7 @@
 
 ## 0. Goal
 
-Produce exact projective coordinates
+Install an **abstract geometric construction** of projective coordinates
 
 \[
 z=[z_0:z_1:z_2:z_3]\in\mathbf P^3(L)
@@ -23,7 +23,9 @@ V_Z=\operatorname{span}_F(z_0,z_1,z_2,z_3)\subset L,
 \]
 
 and an independent verifier of residue degree, point equations, and field
-action.
+action.  This is a marked-evaluation **interface**, not expanded executable
+generic data (`REPAIR.md` §10).  Power-basis coordinates of the \(z_i\) and
+the exact Plücker point of \(V_Z\subset L\) are **not** installed.
 
 ---
 
@@ -93,14 +95,16 @@ forms in \((s,t)\).  Scaling in \(\mathbf P^3\) gives
 z=[z_0:z_1:z_2:z_3],\qquad z_i\in L.
 \]
 
-In the monogenic model \(L=F(\alpha)\) of `field_algebra.md`, each \(z_i\) is a
-coordinate vector of length 55 over \(F\):
+In the monogenic **schema** \(L=F(\alpha)\) of `field_algebra.md`, each \(z_i\)
+is formally a coordinate vector of length 55 over \(F\):
 
 \[
 z_i=\sum_{k=0}^{54} a_{ik}\,\alpha^k,\qquad a_{ik}\in F.
 \]
 
-The machine interface is `marked_point.json` → `coordinates_power_basis`.
+The coefficients \(a_{ik}\) are **not** expanded as explicit elements of a
+concrete model of \(F\).  The machine interface is `marked_point.json` →
+`coordinates_power_basis` (schema only).
 
 ---
 
@@ -196,20 +200,27 @@ tests \(\lambda V_Z\subseteq U_\tau\).
 
 ---
 
-## 6. Theorem boundary
+## 6. Theorem boundary (`REPAIR.md` §10)
 
-| Sealed | Not sealed as expanded rationals |
+| Sealed (abstract interface) | Not sealed (expanded executable generic data) |
 |---|---|
 | Geometric construction of \(z\in\mathbf P^3(L)\) | Coefficient vectors \(a_{ik}\in F\) as explicit invariant rational functions |
 | \(\dim_F V_Z=4\) from Hilbert function | A single numerical 4×55 matrix over \(\mathbf Q\) claimed to be generic |
-| Fibre non-degeneracy witness | Identification of the fibre point with the generic \(Z\) |
+| Fibre non-degeneracy witness (shape only) | Identification of the fibre point with the generic \(Z\) |
+| Marked-evaluation API for incidence shape | Exact Plücker point of \(V_Z\subset L\); executable generic \((L,V_Z)\) |
+
+```text
+abstract degree-55 algebra and marked-evaluation interface installed;
+exact executable marked algebra-code pair (L,V_Z) not installed.
+```
 
 Expanded coefficients of \(z_i\) in the power basis of a concrete primitive
 element require an explicit model of \(F\) (invariant field of \(G\) on
 \(V_6\)) and the torsor-dependent hyperplane.  That computation is the next
 exact point problem if the Krylov incidence is authorised; it is not a
 blocker for sealing the incidence **shape**, linear-elimination plan, or
-memory floors.
+memory floors.  The later `A_EMPTY_UNDECIDED` packet correctly records this
+boundary.
 
 ---
 

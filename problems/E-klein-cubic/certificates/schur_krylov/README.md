@@ -23,7 +23,7 @@ HEADLINE_OPEN
 | Gate | Exit | Content |
 |---|---|---|
 | A1 | `A1-PASS` | P¹ reduction; odd-index step `gcd(55,2)=1` explicit |
-| A2 | sealed | monogenic L/F, companion mult. matrices, marked point + V_Z |
+| A2 | sealed (abstract interface) | monogenic L/F **schema**, companion mult. pattern, marked-point construction + dim V_Z=4; **not** expanded executable generic (L,V_Z) (`REPAIR.md` §10) |
 | A3 | `A-STOP` | incidence formulated; linear elim of 80 coeffs; 8 GiB floor |
 | A3 collapse | `A-STOP` refined | no lossless collapse under 8 GiB; minimal system = Fitting of \(\varphi_\tau\) on 52-dim PGL₂ slice |
 
@@ -42,7 +42,8 @@ intermediate-field block reduction exists (H maximal, Aut(L/F)=1).  Non-scalar
 | Exit | `A_EMPTY_UNDECIDED` |
 | Task 1 — expand \(V_Z\) | **not available** (`vz_power_basis.*`) |
 | Task 2 — orbit code | formulated (`orbit_code.*`) |
-| Task 3 — index \(K_{34}\) | \(55\times 140\) dual to sealed \(\varphi_\tau\) \(140\times 55\); no discrepancy |
+| Task 3 — index \(K_{34}\) | \(55\times 140\) dual to sealed \(\varphi_\tau\) \(140\times 55\); index-34 duality retained; no discrepancy |
+| Quantifier (`REPAIR.md` §9) | full rank ⇔ ideal of **all** maximal minors misses \(U_{\mathrm{primitive}}\); **not** one universal nonzero minor |
 | \(N\text{-}A\) | not claimed |
 
 Replay:
@@ -53,10 +54,19 @@ Replay:
 
 Expected markers: `SCHUR_KRYLOV_A_EMPTY_UNDECIDED`, `HEADLINE_OPEN`, `N_A_NOT_CLAIMED`.
 
-## Boundary
+## Boundary (`REPAIR.md` §§9–10, index-34 duality retained)
 
 No qualifying curve is constructed.  `N-A` is not claimed (would be non-headline
 even if claimed; closes only the degree-19 Krylov route).  Expanded coefficients
-of μ and of z_i in F are not produced; the multiplication and incidence APIs are
-sealed structurally; the orbit-code home of \((A_{\mathrm{empty}})\) is installed
-but the rank assertion is undecided.  Headline OPEN.
+of μ and of z_i in F are not produced:
+
+```text
+abstract degree-55 algebra and marked-evaluation interface installed;
+exact executable marked algebra-code pair (L,V_Z) not installed.
+```
+
+The multiplication and incidence APIs are sealed as **formal algebra schemas**,
+not as expanded executable generic data.  The orbit-code home of
+\((A_{\mathrm{empty}})\) is installed, but the rank assertion is undecided: the
+correct target is the ideal of all maximal minors of \(B_{34}\), not a single
+globally nonvanishing minor.  Headline OPEN.

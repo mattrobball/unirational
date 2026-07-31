@@ -22,15 +22,89 @@ merely a projective action of a central extension.  The variety \(X\) is a
 smooth cubic threefold, \(\operatorname{Aut}(X)=G\), and the action is
 generically free.
 
-> **Status (checked 2026-07-30).**  The problem is open.  The updated
-> July 18, 2026 manuscript of Cheltsov--Tschinkel--Zhang explicitly retains
-> the \(G\)-action on the Klein cubic as an exception whose equivariant
-> unirationality is unknown.
+> **Status (checked 2026-07-30; theorem boundaries repaired 2026-07-31).**
+> The problem is open.  The updated July 18, 2026 manuscript of
+> Cheltsov--Tschinkel--Zhang explicitly retains the \(G\)-action on the Klein
+> cubic as an exception whose equivariant unirationality is unknown.
+> Binding repair memorandum: [`REPAIR.md`](REPAIR.md).
 
 The portable `certificates/` package and the documentation in this directory
 are tracked. The approximately 9.1 GB `tmp/` computation tree cited below is
 intentionally ignored; those paths record local provenance for newer solver
 outputs and are not artifacts available from a fresh clone.
+
+
+## 2026-07-31 theorem-boundary repair (`REPAIR.md`)
+
+**Binding document:** [`REPAIR.md`](REPAIR.md) (Parts II–VII).  Published
+history is not rewritten; historical certificates remain valid as computation
+records.  This section records the accepted post-repair status only.
+
+### Binding distinction (`REPAIR.md` §0)
+
+```text
+hash/verifier replay
+    !=
+mathematical verification of every analytic implication in the proof note.
+```
+
+`HEADLINE_CAS_BASELINE_ACCEPT` certifies file presence, hashes, internal
+packet consistency, and replay of current verifiers.  It does **not** certify
+analytic arguments that verifiers merely read from JSON or Markdown.
+
+### Immediate route status after repair
+
+| Route / claim | Status |
+|---|---|
+| Path T: `T-BIRATIONAL` | retained at its stated generic/open theorem boundary |
+| Path T: `T-NONNORMAL` | **suspended**; not proved by the current T2 packet; pending T2R gate |
+| Path T: `dim Sing_S = 2` | **unproved**; current exact cuts do not establish it; pending T2R |
+| Path G: finite truncation and isolation cutoff \(N_\star=d+2m+1\) | retained |
+| Path G: degree-13/19 “obstruction” labels | downgraded to **sample residuals** (`G13-SAMPLE-RESIDUAL`, `G19-SAMPLE-RESIDUAL`) |
+| Path G4.1 symbolic free-fibre recurrence | retained at its stated free-fibre boundary |
+| P25.1 `P25-TOWER-SURVIVES` | retained as scoped free-fibre/degree-25 continuation |
+| Hodge-center conclusion | salvageable; proof rewritten via relatively ample class (`REPAIR.md` §8) |
+| Path A index-34 duality | retained |
+| Path A single-minor formulation | corrected to the ideal of all maximal minors |
+| Path A executable `L,V_Z` claim | downgraded to an abstract interface |
+
+### Trusted results retained (`REPAIR.md` §16)
+
+- exact degree-43 resultant-factor reconstruction;
+- Path T finite generic-rank-one/birational fold construction on its stated open;
+- regular-sequence theorem for \(P,P_u\) in \(R[u]\);
+- Path G finite truncation; isolation cutoff \(N_\star=d+2m+1\); exact sample residuals;
+- G4.1 symbolic free-fibre recurrence at its stated scope; P25.1 scoped survival;
+- Path A \(\mathbf P^1\)-reduction; Path A index-34 duality;
+- Pfaffian `FAIL-SCOPE` audit;
+- corrected Hodge-center split-injection theorem after §8 substitution.
+
+### Suspended or downgraded (`REPAIR.md` §17)
+
+| Historical statement | Accepted replacement |
+|---|---|
+| `dim Sing_S = 2` | unproved; exact same-open saturated computation required (T2R running) |
+| `T-NONNORMAL` | suspended |
+| “normalization defect is divisorial” | unproved |
+| `Ann_B(S/B)` is the normalization conductor | false notation; conductors separated |
+| `G13-OBSTRUCTION` / `G19-OBSTRUCTION` | nonzero selected sample residuals |
+| exact executable generic \(L,V_Z\) | abstract interface only |
+| one universal nonzero Krylov minor | ideal of all maximal minors / pointwise cover |
+| generic Schur twist has no rational point | no rational point currently known |
+
+### Narrative language corrections (`REPAIR.md` §§13–14)
+
+- Any “cubic has a `K_proj`-point abstractly” claim refers only to the
+  **auxiliary Pfaffian characteristic cubic in \(\operatorname{Sym}(A,\sigma)\)**,
+  not to a point of \(F_{14,T}\) or of the generic Klein twist
+  (`FAIL-SCOPE` bridge audit is authoritative).
+- The generic Schur twist has index one, but **no rational point is currently
+  known** — pointlessness has not been proved.
+
+**Headline remains OPEN.**  Immediate priority is T2R; do not consume
+`T-NONNORMAL` or `dim Sing_S = 2` until T2R exits.  Concurrent worker owns
+`certificates/fold_normalization*`.
+
 
 ### 2026-07-30 audited research boundary
 
@@ -49,7 +123,8 @@ advanced, but not completed, three attacks:
   missing theorem.  Representation-specific minimality-to-discrepancy and
   conductor-support control remain;
 - the generic Schur twist has an actual degree-55 closed point and index one,
-  but no rational point; the smallest current residual-intersection target is
+  but no rational point is currently known (`REPAIR.md` §14; pointlessness
+  has not been proved); the smallest current residual-intersection target is
   a torsor-dependent degree-19 curve, while any boundary-zero no-point torsor
   would give a negative Schur-source result.  Every qualifying degree-19
   curve through a line-orbit point with the certified maximal geometric
@@ -70,8 +145,10 @@ advanced, but not completed, three attacks:
 - the Pfaffian degree-six descent algebra now has an exact generic `25+11`
   basis and symplectic involution, and its Brauer class has period and index
   exactly two.  A `sigma`-self-adjoint reduced-rank-two idempotent therefore
-  exists abstractly.  Its coordinates reduce to one Pfaffian cubic in a
-  certified 15-element symmetric basis; the cubic is abstractly soluble but
+  exists abstractly.  Its coordinates reduce to one **auxiliary Pfaffian
+  characteristic cubic in `Sym(A,sigma)`** in a certified 15-element
+  symmetric basis (`REPAIR.md` §13; not a point of `F_{14,T}` or of the
+  generic Klein twist); that auxiliary cubic is abstractly soluble but
   no explicit `K_proj` coordinates, quaternion corner, or common isotropic
   line are known.  Homogeneous full-Grassmannian covariants are excluded only
   through degree eight.  In the certified degree-14 symmetric frame, all 105

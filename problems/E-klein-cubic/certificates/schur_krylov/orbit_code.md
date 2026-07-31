@@ -179,7 +179,9 @@ The isotypic decomposition of \(P\) does **not**, by itself, name which
 4-plane is \(V_Z\otimes\overline F\).  Descent of isotypics to \(F\) fails for
 the residual ideal (`STRUCTURAL_COLLAPSE.md`); the same obstruction blocks
 writing \(V_Z\) as an \(F\)-rational sum of named isotypics without the
-expanded model of Task 1.
+expanded model of Task 1.  The installed marked-point packet is an **abstract
+interface** only (`REPAIR.md` §10): exact executable generic coordinates of
+\((L,V_Z)\) are not installed.
 
 ---
 
@@ -234,8 +236,20 @@ K_{34}(\tau,V_Z)=L
 \quad\Longleftrightarrow\quad
 \operatorname{rank} B_{34}(\tau,V_Z)=55
 \quad\Longleftrightarrow\quad
-\text{some \(55\times 55\) minor of \(B_{34}\) is nonzero}.
+\text{at least one \(55\times 55\) minor of \(B_{34}\) is nonzero at \(\tau\)}.
 \]
+
+**Quantifier (`REPAIR.md` §9).**  The third clause is a **pointwise** statement:
+for each fixed primitive \(\tau\) there exists a maximal minor \(M_\tau\)
+(allowed to depend on \(\tau\)) with \(M_\tau(\tau)\neq 0\).  It is **not**
+equivalent to the existence of one minor that is nonzero for every primitive
+\(\tau\).  The correct global certificate is
+
+\[
+V\bigl(I_{55}(B_{34})\bigr)\cap U_{\mathrm{primitive}}=\varnothing,
+\]
+
+the vanishing locus of the ideal of **all** maximal minors.
 
 ### 5.3 Equivalence with incidence (proved)
 
@@ -350,8 +364,10 @@ Without either
 - a geometric theorem that the marked \(G/H\)-orbit on \(X_T\cap M\) lies on
   no \(F\)-rational degree-\(\le 19\) curve in \(M\),
 
-the orbit code names the home of the problem but does not evaluate a single
-maximal minor of \(B_{34}(\tau,V_Z)\) or produce a contradiction from
+the orbit code names the home of the problem but does not certify that the
+ideal of all maximal minors of \(B_{34}(\tau,V_Z)\) misses the primitive locus
+(equivalently: does not evaluate, for every primitive \(\tau\), at least one
+nonzero maximal minor) or produce a contradiction from
 \(\lambda V_Z\subseteq U_\tau\).
 
 That is the remaining obstruction to \((A_{\mathrm{empty}})\).

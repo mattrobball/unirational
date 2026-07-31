@@ -18,8 +18,11 @@
 | \(L=E^H=F(Z)\) | fixed field of \(H\); residue field of the degree-55 point | \([L:F]=55\) |
 
 Accepted existence of the degree-55 closed point \(Z\) with \(k(Z)=L\) is upstream
-(`tmp/schur_unrestricted_point_attack`).  This note installs the exact
-algebraic presentation of \(L/F\) required before any Krylov search.
+(`tmp/schur_unrestricted_point_attack`).  This note installs an **abstract
+monogenic algebra schema** for \(L/F\) required before any Krylov search
+(`REPAIR.md` §10).  It does **not** install expanded executable coefficients
+of \(\mu\) in named invariant generators, nor executable generic multiplication
+matrices over a concrete presentation of \(F\).
 
 ---
 
@@ -65,12 +68,20 @@ L  ≅  F[t] / (μ(t))
 basis B = (1, α, α², …, α⁵⁴)     (α = t mod μ)
 ```
 
-The coefficients of \(\mu\) are elements of \(F=K_{\mathrm{Schur}}\).  They are
-not expanded here as explicit rational functions on \(\mathbf P(V_6)\); the
-monogenic presentation and the companion arithmetic below are exact as
-\(F\)-algebra data once any primitive element is fixed.  A producer that
-later specialises or computes \(\mu\) must feed the same interface
-(`field_algebra.json`).
+The coefficients of \(\mu\) are formal elements of \(F=K_{\mathrm{Schur}}\).
+They are **not** expanded here as explicit rational functions on
+\(\mathbf P(V_6)\).  The monogenic presentation and the companion arithmetic
+below are a **formal algebra schema** over \(F\): exact once any primitive
+element is fixed, but **not** expanded executable generic data.  Status
+(`REPAIR.md` §10):
+
+```text
+abstract degree-55 algebra and marked-evaluation interface installed;
+exact executable marked algebra-code pair (L,V_Z) not installed.
+```
+
+A producer that later specialises or computes \(\mu\) must feed the same
+interface (`field_algebra.json`).
 
 ---
 
@@ -105,9 +116,12 @@ endomorphism
 M_\xi=\sum_{k=0}^{54}x_k\,C_\mu^k\in\operatorname{Mat}_{55}(F).
 \]
 
-**Sealed claim.**  For the fixed basis \(B\), the family \((M_\xi)_{\xi\in L}\) is
-the complete table of multiplication matrices of \(L/F\).  It is determined
-exactly by the 55 coefficients of \(\mu\) and the coordinate vector of \(\xi\).
+**Sealed claim (schema level).**  For the fixed basis \(B\), the family
+\((M_\xi)_{\xi\in L}\) is the complete table of multiplication matrices of
+\(L/F\) **as a formal \(F\)-algebra schema**.  It is determined exactly by the
+55 (unexpanded) coefficients of \(\mu\) and the coordinate vector of \(\xi\).
+This is **not** a claim that executable generic multiplication matrices over
+a concrete model of \(F\) are installed.
 
 The machine-readable form is recorded in `field_algebra.json`:
 
@@ -167,19 +181,27 @@ These checks are implemented in `verify_field_algebra.py`.
 
 ---
 
-## 5. Theorem boundary
+## 5. Theorem boundary (`REPAIR.md` §10)
 
-| Installed | Not installed |
+| Installed (abstract interface) | Not installed (expanded executable generic data) |
 |---|---|
-| Monogenic presentation \(L=F[t]/(\mu)\), \(\deg\mu=55\) | Explicit expanded coefficients of \(\mu\) as elements of \(\mathbf C(\mathbf P(V_6))^G\) |
-| Exact multiplication matrices via companion arithmetic over \(F\) | A Gröbner basis of the full invariant ideal of \(G\) on \(V_6\) |
+| Monogenic schema \(L=F[t]/(\mu)\), \(\deg\mu=55\) | Explicit expanded coefficients of \(\mu\) as elements of \(\mathbf C(\mathbf P(V_6))^G\) |
+| Companion multiplication pattern over formal \(c_i\in F\) | Executable generic multiplication matrices over a concrete presentation of \(F\) |
 | Subfield lattice and \(\dim U_\tau\) criterion | A numerical minimal polynomial over \(\mathbf Q\) advertised as the generic \(\mu\) |
 
+```text
+abstract degree-55 algebra and marked-evaluation interface installed;
+exact executable marked algebra-code pair (L,V_Z) not installed.
+```
+
 The missing expanded \(\mu\in F[t]\) is an invariant-field computation on
-\(\mathbf P(V_6)\).  It is **not** required to seal the multiplication API or
-to dimension the Krylov incidence.  It **is** required before any claim that
-a concrete coefficient vector in \(\mathbf Q^{55}\) is the generic marked
-point over \(F\).
+\(\mathbf P(V_6)\).  It is **not** required to seal the abstract multiplication
+API or to dimension the Krylov incidence.  It **is** required before any claim
+that a concrete coefficient vector in \(\mathbf Q^{55}\) is the generic marked
+point over \(F\), or that an executable generic pair \((L,V_Z)\) is installed.
+The later `A_EMPTY_UNDECIDED` packet correctly records this boundary and
+supersedes earlier summaries that overstated A2 as installing exact generic
+coordinates.
 
 ---
 
