@@ -1,0 +1,483 @@
+{
+  "L_rank_table": [
+    {
+      "F_order": 10,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 4,
+      "order_b": 4,
+      "r": 1,
+      "rank_over_Q": 11,
+      "shape": [
+        11,
+        15
+      ],
+      "surjective": true
+    },
+    {
+      "F_order": 12,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 8,
+      "order_b": 6,
+      "r": 3,
+      "rank_over_Q": 13,
+      "shape": [
+        13,
+        21
+      ],
+      "surjective": true
+    },
+    {
+      "F_order": 14,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 12,
+      "order_b": 8,
+      "r": 5,
+      "rank_over_Q": 15,
+      "shape": [
+        15,
+        27
+      ],
+      "surjective": true
+    },
+    {
+      "F_order": 16,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 16,
+      "order_b": 10,
+      "r": 7,
+      "rank_over_Q": 17,
+      "shape": [
+        17,
+        33
+      ],
+      "surjective": true
+    },
+    {
+      "F_order": 18,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 20,
+      "order_b": 12,
+      "r": 9,
+      "rank_over_Q": 19,
+      "shape": [
+        19,
+        39
+      ],
+      "surjective": true
+    },
+    {
+      "F_order": 20,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 24,
+      "order_b": 14,
+      "r": 11,
+      "rank_over_Q": 21,
+      "shape": [
+        21,
+        45
+      ],
+      "surjective": true
+    },
+    {
+      "F_order": 22,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 28,
+      "order_b": 16,
+      "r": 13,
+      "rank_over_Q": 23,
+      "shape": [
+        23,
+        51
+      ],
+      "surjective": true
+    },
+    {
+      "F_order": 24,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 32,
+      "order_b": 18,
+      "r": 15,
+      "rank_over_Q": 25,
+      "shape": [
+        25,
+        57
+      ],
+      "surjective": true
+    }
+  ],
+  "a_label": "pure_powers_y0m_f0_plus_y1m_f1",
+  "a_m": [
+    "1",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1"
+  ],
+  "b_m_plus_1_nonzero": true,
+  "d": 19,
+  "d_minus_6m": 1,
+  "early_orders_vanish": {
+    "10": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "12": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "14": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "16": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "18": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "20": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "22": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "24": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    }
+  },
+  "first_nonzero_terminal_F_order": 26,
+  "first_post_isolator_F_order": 26,
+  "ker_L1_dim": 4,
+  "last_isolable_F_order": 24,
+  "m": 3,
+  "mode": "ker_L1",
+  "residual_decomposition": {
+    "C3_weight_components": {
+      "0": {
+        "n_terms": 0,
+        "terms": []
+      },
+      "1": {
+        "n_terms": 0,
+        "terms": []
+      },
+      "2": {
+        "n_terms": 1,
+        "terms": [
+          {
+            "coeff": "3996",
+            "index": 3,
+            "monom": [
+              23,
+              3
+            ]
+          }
+        ]
+      }
+    },
+    "F_order": 26,
+    "G_representation_note": "G-global residual for equivariant polynomial maps is a separate layer (Molien spaces / modular scans). Free-fibre residual classifies the truncated polar tower on one involution plane.",
+    "codomain_dim": 27,
+    "dominant_C3_weights": [
+      2
+    ],
+    "stabilizer_note": "Free-fibre residual is a binary form of order N under the residual D12 / C3 action on E_- coordinates. This is a local normal-cone obstruction type, not a full G-isotypic of Hom(Sym^d W*,W)^G.",
+    "status": "NONZERO",
+    "support_indices": [
+      3
+    ],
+    "support_size": 1
+  },
+  "sample_name": "ker_L1_on_pure_powers_y0m_f0_plus_y1m_f1",
+  "self_sha256": "86c9f3b74bf136c309f0655628c2b91145ee92079f04d3173b7e39ccd6802c1c",
+  "solvable_through_all_isolators": true,
+  "stage_log": [
+    {
+      "choice": "zero_based_relative",
+      "dim": 12,
+      "unknown": "a5"
+    },
+    {
+      "choice": "zero_based_relative",
+      "dim": 16,
+      "unknown": "a7"
+    },
+    {
+      "choice": "zero_based_relative",
+      "dim": 20,
+      "unknown": "a9"
+    },
+    {
+      "choice": "zero_based_relative",
+      "dim": 24,
+      "unknown": "a11"
+    },
+    {
+      "choice": "zero_based_relative",
+      "dim": 28,
+      "unknown": "a13"
+    },
+    {
+      "choice": "zero_based_relative",
+      "dim": 32,
+      "unknown": "a15"
+    },
+    {
+      "choice": "zero_based_relative",
+      "dim": 36,
+      "unknown": "a17"
+    },
+    {
+      "choice": "zero_based_relative",
+      "dim": 40,
+      "unknown": "a19"
+    },
+    {
+      "F_order": 10,
+      "L_coker": 0,
+      "L_rank": 11,
+      "L_shape": [
+        11,
+        15
+      ],
+      "R_norm_sq": "0",
+      "b_nonzero": true,
+      "particular_is_zero": false,
+      "solvable": true,
+      "unknown": "b4"
+    },
+    {
+      "F_order": 12,
+      "L_coker": 0,
+      "L_rank": 13,
+      "L_shape": [
+        13,
+        21
+      ],
+      "R_norm_sq": "65",
+      "b_nonzero": true,
+      "particular_is_zero": false,
+      "solvable": true,
+      "unknown": "b6"
+    },
+    {
+      "F_order": 14,
+      "L_coker": 0,
+      "L_rank": 15,
+      "L_shape": [
+        15,
+        27
+      ],
+      "R_norm_sq": "1296",
+      "b_nonzero": true,
+      "particular_is_zero": false,
+      "solvable": true,
+      "unknown": "b8"
+    },
+    {
+      "F_order": 16,
+      "L_coker": 0,
+      "L_rank": 17,
+      "L_shape": [
+        17,
+        33
+      ],
+      "R_norm_sq": "1296",
+      "b_nonzero": true,
+      "particular_is_zero": false,
+      "solvable": true,
+      "unknown": "b10"
+    },
+    {
+      "F_order": 18,
+      "L_coker": 0,
+      "L_rank": 19,
+      "L_shape": [
+        19,
+        39
+      ],
+      "R_norm_sq": "6401",
+      "b_nonzero": true,
+      "particular_is_zero": false,
+      "solvable": true,
+      "unknown": "b12"
+    },
+    {
+      "F_order": 20,
+      "L_coker": 0,
+      "L_rank": 21,
+      "L_shape": [
+        21,
+        45
+      ],
+      "R_norm_sq": "129600",
+      "b_nonzero": true,
+      "particular_is_zero": false,
+      "solvable": true,
+      "unknown": "b14"
+    },
+    {
+      "F_order": 22,
+      "L_coker": 0,
+      "L_rank": 23,
+      "L_shape": [
+        23,
+        51
+      ],
+      "R_norm_sq": "156816",
+      "b_nonzero": true,
+      "particular_is_zero": false,
+      "solvable": true,
+      "unknown": "b16"
+    },
+    {
+      "F_order": 24,
+      "L_coker": 0,
+      "L_rank": 25,
+      "L_shape": [
+        25,
+        57
+      ],
+      "R_norm_sq": "788553",
+      "b_nonzero": true,
+      "particular_is_zero": false,
+      "solvable": true,
+      "unknown": "b18"
+    }
+  ],
+  "terminal_residuals": {
+    "26": {
+      "F_order": 26,
+      "codomain_dim": 27,
+      "is_zero": false,
+      "residual_coeffs": [
+        "0",
+        "0",
+        "0",
+        "3996",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "residual_norm_sq": "15968016"
+    },
+    "28": {
+      "F_order": 28,
+      "codomain_dim": 29,
+      "is_zero": false,
+      "residual_norm_sq": "2340900"
+    },
+    "30": {
+      "F_order": 30,
+      "codomain_dim": 31,
+      "is_zero": false,
+      "residual_norm_sq": "2742407568"
+    },
+    "32": {
+      "F_order": 32,
+      "codomain_dim": 33,
+      "is_zero": false,
+      "residual_norm_sq": "9872409600"
+    },
+    "34": {
+      "F_order": 34,
+      "codomain_dim": 35,
+      "is_zero": false,
+      "residual_norm_sq": "46656"
+    },
+    "36": {
+      "F_order": 36,
+      "codomain_dim": 37,
+      "is_zero": false,
+      "residual_norm_sq": "240209772905"
+    },
+    "38": {
+      "F_order": 38,
+      "codomain_dim": 39,
+      "is_zero": false,
+      "residual_norm_sq": "1144112615424"
+    },
+    "40": {
+      "F_order": 40,
+      "codomain_dim": 41,
+      "is_zero": false,
+      "residual_norm_sq": "1052676"
+    },
+    "42": {
+      "F_order": 42,
+      "codomain_dim": 43,
+      "is_zero": false,
+      "residual_norm_sq": "28986077713680"
+    },
+    "44": {
+      "F_order": 44,
+      "codomain_dim": 45,
+      "is_zero": false,
+      "residual_norm_sq": "671846400"
+    },
+    "46": {
+      "F_order": 46,
+      "codomain_dim": 47,
+      "is_zero": false,
+      "residual_norm_sq": "65610000"
+    },
+    "48": {
+      "F_order": 48,
+      "codomain_dim": 49,
+      "is_zero": false,
+      "residual_norm_sq": "3777304065970905"
+    },
+    "50": {
+      "F_order": 50,
+      "codomain_dim": 51,
+      "is_zero": false,
+      "residual_norm_sq": "740710656"
+    },
+    "52": {
+      "F_order": 52,
+      "codomain_dim": 53,
+      "is_zero": false,
+      "residual_norm_sq": "114318864"
+    },
+    "54": {
+      "F_order": 54,
+      "codomain_dim": 55,
+      "is_zero": false,
+      "residual_norm_sq": "490317952361693913"
+    },
+    "56": {
+      "F_order": 56,
+      "codomain_dim": 57,
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    }
+  }
+}

@@ -1,0 +1,8406 @@
+{
+  "d": 19,
+  "d_minus_6m": 1,
+  "m": 3,
+  "nonautomatic_orders": [
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56
+  ],
+  "self_sha256": "3424f63af20cf1b917e4fe3b07a59df589813ef71d3a78c36c80f543c4621b82",
+  "stages": [
+    {
+      "F_order": 0,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 1,
+      "codomain_multi_rees_dim": 1711,
+      "equation_type": "empty",
+      "formal_delta": -9,
+      "formal_newest_Eplus_order": null,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [],
+      "n_live_classes": 0,
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 1,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 2,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 3,
+      "codomain_multi_rees_dim": 4788,
+      "equation_type": "empty",
+      "formal_delta": -7,
+      "formal_newest_Eplus_order": null,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [],
+      "n_live_classes": 0,
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 3,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 4,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 5,
+      "codomain_multi_rees_dim": 7425,
+      "equation_type": "empty",
+      "formal_delta": -5,
+      "formal_newest_Eplus_order": null,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [],
+      "n_live_classes": 0,
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 5,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 6,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 7,
+      "codomain_multi_rees_dim": 9646,
+      "equation_type": "empty",
+      "formal_delta": -3,
+      "formal_newest_Eplus_order": null,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [],
+      "n_live_classes": 0,
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 7,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 8,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 9,
+      "codomain_multi_rees_dim": 11475,
+      "equation_type": "empty",
+      "formal_delta": -1,
+      "formal_newest_Eplus_order": null,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [],
+      "n_live_classes": 0,
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 9,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 10,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 11,
+      "codomain_multi_rees_dim": 12936,
+      "equation_type": "isolate_Eplus",
+      "formal_delta": 1,
+      "formal_newest_Eplus_order": 4,
+      "isolable_Eplus_within_d": true,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            3,
+            4
+          ],
+          "max_Eminus": 3,
+          "max_Eplus": 4,
+          "max_order": 4,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 1,
+      "newest_Eminus_order": 3,
+      "newest_Eplus_order": 4
+    },
+    {
+      "F_order": 11,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 12,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 13,
+      "codomain_multi_rees_dim": 14053,
+      "equation_type": "isolate_Eplus",
+      "formal_delta": 3,
+      "formal_newest_Eplus_order": 6,
+      "isolable_Eplus_within_d": true,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            3,
+            6
+          ],
+          "max_Eminus": 3,
+          "max_Eplus": 6,
+          "max_order": 6,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            4,
+            5
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 4,
+          "max_order": 5,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            4,
+            4
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 4,
+          "max_order": 4,
+          "multiplicity": 1,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 3,
+      "newest_Eminus_order": 5,
+      "newest_Eplus_order": 6
+    },
+    {
+      "F_order": 13,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 14,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 15,
+      "codomain_multi_rees_dim": 14850,
+      "equation_type": "isolate_Eplus",
+      "formal_delta": 5,
+      "formal_newest_Eplus_order": 8,
+      "isolable_Eplus_within_d": true,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            3,
+            8
+          ],
+          "max_Eminus": 3,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            4,
+            7
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 4,
+          "max_order": 7,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            5,
+            6
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 6,
+          "max_order": 6,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            4,
+            6
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 6,
+          "max_order": 6,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            5,
+            5
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 4,
+          "max_order": 5,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        }
+      ],
+      "n_live_classes": 5,
+      "newest_Eminus_order": 7,
+      "newest_Eplus_order": 8
+    },
+    {
+      "F_order": 15,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 16,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 17,
+      "codomain_multi_rees_dim": 15351,
+      "equation_type": "isolate_Eplus",
+      "formal_delta": 7,
+      "formal_newest_Eplus_order": 10,
+      "isolable_Eplus_within_d": true,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            3,
+            10
+          ],
+          "max_Eminus": 3,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            4,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 4,
+          "max_order": 9,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            5,
+            8
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            6,
+            7
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 6,
+          "max_order": 7,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            4,
+            8
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            5,
+            7
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 4,
+          "max_order": 7,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            6,
+            6
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 6,
+          "max_order": 6,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            5,
+            6
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 6,
+          "max_order": 6,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 8,
+      "newest_Eminus_order": 9,
+      "newest_Eplus_order": 10
+    },
+    {
+      "F_order": 17,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 18,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 19,
+      "codomain_multi_rees_dim": 15580,
+      "equation_type": "isolate_Eplus",
+      "formal_delta": 9,
+      "formal_newest_Eplus_order": 12,
+      "isolable_Eplus_within_d": true,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            3,
+            12
+          ],
+          "max_Eminus": 3,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            4,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 4,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            5,
+            10
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            6,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 6,
+          "max_order": 9,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            7,
+            8
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            4,
+            10
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            5,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 4,
+          "max_order": 9,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            6,
+            8
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            7,
+            7
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 4,
+          "max_order": 7,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            5,
+            8
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            6,
+            7
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 6,
+          "max_order": 7,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            6,
+            6
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 6,
+          "max_order": 6,
+          "multiplicity": 1,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 12,
+      "newest_Eminus_order": 11,
+      "newest_Eplus_order": 12
+    },
+    {
+      "F_order": 19,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 20,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 21,
+      "codomain_multi_rees_dim": 15561,
+      "equation_type": "isolate_Eplus",
+      "formal_delta": 11,
+      "formal_newest_Eplus_order": 14,
+      "isolable_Eplus_within_d": true,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            3,
+            14
+          ],
+          "max_Eminus": 3,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            4,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 4,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            5,
+            12
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            6,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 6,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            7,
+            10
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            8,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 8,
+          "max_order": 9,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            4,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            5,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 4,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            6,
+            10
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            7,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 4,
+          "max_order": 9,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            8,
+            8
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            5,
+            10
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            6,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 6,
+          "max_order": 9,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            7,
+            8
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            6,
+            8
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            7,
+            7
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 6,
+          "max_order": 7,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        }
+      ],
+      "n_live_classes": 16,
+      "newest_Eminus_order": 13,
+      "newest_Eplus_order": 14
+    },
+    {
+      "F_order": 21,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 22,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 23,
+      "codomain_multi_rees_dim": 15318,
+      "equation_type": "isolate_Eplus",
+      "formal_delta": 13,
+      "formal_newest_Eplus_order": 16,
+      "isolable_Eplus_within_d": true,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            3,
+            16
+          ],
+          "max_Eminus": 3,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            4,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 4,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            5,
+            14
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            6,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 6,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            7,
+            12
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            8,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 8,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            9,
+            10
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            4,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            5,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 4,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            6,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            7,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 4,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            8,
+            10
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            9,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 4,
+          "max_order": 9,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            5,
+            12
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            6,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 6,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            7,
+            10
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            8,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 8,
+          "max_order": 9,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            6,
+            10
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            7,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 6,
+          "max_order": 9,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            8,
+            8
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            7,
+            8
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 21,
+      "newest_Eminus_order": 15,
+      "newest_Eplus_order": 16
+    },
+    {
+      "F_order": 23,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 24,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 25,
+      "codomain_multi_rees_dim": 14875,
+      "equation_type": "isolate_Eplus",
+      "formal_delta": 15,
+      "formal_newest_Eplus_order": 18,
+      "isolable_Eplus_within_d": true,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            3,
+            18
+          ],
+          "max_Eminus": 3,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            4,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 4,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            5,
+            16
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            6,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 6,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            7,
+            14
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            8,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 8,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            9,
+            12
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            10,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 10,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            4,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            5,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 4,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            6,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            7,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 4,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            8,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            9,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 4,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            10,
+            10
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            5,
+            14
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            6,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 6,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            7,
+            12
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            8,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 8,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            9,
+            10
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            6,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            7,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 6,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            8,
+            10
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            9,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 6,
+          "max_order": 9,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            7,
+            10
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            8,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 8,
+          "max_order": 9,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            8,
+            8
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 8,
+          "max_order": 8,
+          "multiplicity": 1,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 27,
+      "newest_Eminus_order": 17,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 25,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 26,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 27,
+      "codomain_multi_rees_dim": 14256,
+      "equation_type": "mixed_residual",
+      "formal_delta": 17,
+      "formal_newest_Eplus_order": 20,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            4,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 4,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            5,
+            18
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            6,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 6,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            7,
+            16
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            8,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 8,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            9,
+            14
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            10,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 10,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            11,
+            12
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            4,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            5,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 4,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            6,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            7,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 4,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            8,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            9,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 4,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            10,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            11,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 4,
+          "max_order": 11,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            5,
+            16
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            6,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 6,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            7,
+            14
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            8,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 8,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            9,
+            12
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            10,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 10,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            6,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            7,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 6,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            8,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            9,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 6,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            10,
+            10
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            7,
+            12
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            8,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 8,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            9,
+            10
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            8,
+            10
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            9,
+            9
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 8,
+          "max_order": 9,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        }
+      ],
+      "n_live_classes": 32,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 27,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 28,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 29,
+      "codomain_multi_rees_dim": 13485,
+      "equation_type": "mixed_residual",
+      "formal_delta": 19,
+      "formal_newest_Eplus_order": 22,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            6,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 6,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            7,
+            18
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            8,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 8,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            9,
+            16
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            10,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 10,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            11,
+            14
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            12,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 12,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            5,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 4,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            6,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            7,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 4,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            8,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            9,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 4,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            10,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            11,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 4,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            12,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            5,
+            18
+          ],
+          "max_Eminus": 5,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            6,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 6,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            7,
+            16
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            8,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 8,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            9,
+            14
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            10,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 10,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            11,
+            12
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            6,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            7,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 6,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            8,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            9,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 6,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            10,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            11,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 6,
+          "max_order": 11,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            7,
+            14
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            8,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 8,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            9,
+            12
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            10,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 10,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            8,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            9,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 8,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            10,
+            10
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            9,
+            10
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 36,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 29,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 30,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 31,
+      "codomain_multi_rees_dim": 12586,
+      "equation_type": "mixed_residual",
+      "formal_delta": 21,
+      "formal_newest_Eplus_order": 24,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            8,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 8,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            9,
+            18
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            10,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 10,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            11,
+            16
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            12,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 12,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            13,
+            14
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            7,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 4,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            8,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            9,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 4,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            10,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            11,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 4,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            12,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            13,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 4,
+          "max_order": 13,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            6,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 6,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            7,
+            18
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            8,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 8,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            9,
+            16
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            10,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 10,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            11,
+            14
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            12,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 12,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            6,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            7,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 6,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            8,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            9,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 6,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            10,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            11,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 6,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            12,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            7,
+            16
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            8,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 8,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            9,
+            14
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            10,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 10,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            11,
+            12
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            8,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            9,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 8,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            10,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            11,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 8,
+          "max_order": 11,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            9,
+            12
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            10,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 10,
+          "max_order": 11,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            10,
+            10
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 10,
+          "max_order": 10,
+          "multiplicity": 1,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 39,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 31,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 32,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 33,
+      "codomain_multi_rees_dim": 11583,
+      "equation_type": "mixed_residual",
+      "formal_delta": 23,
+      "formal_newest_Eplus_order": 26,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            10,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 10,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            11,
+            18
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            12,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 12,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            13,
+            16
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            14,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 14,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            9,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 4,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            10,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            11,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 4,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            12,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            13,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 4,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            14,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            8,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 8,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            9,
+            18
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            10,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 10,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            11,
+            16
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            12,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 12,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            13,
+            14
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            7,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 6,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            8,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            9,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 6,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            10,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            11,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 6,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            12,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            13,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 6,
+          "max_order": 13,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            7,
+            18
+          ],
+          "max_Eminus": 7,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            8,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 8,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            9,
+            16
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            10,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 10,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            11,
+            14
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            12,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 12,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            8,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            9,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 8,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            10,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            11,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 8,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            12,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            9,
+            14
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            10,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 10,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            11,
+            12
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            10,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            11,
+            11
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 10,
+          "max_order": 11,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        }
+      ],
+      "n_live_classes": 40,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 33,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 34,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 35,
+      "codomain_multi_rees_dim": 10500,
+      "equation_type": "mixed_residual",
+      "formal_delta": 25,
+      "formal_newest_Eplus_order": 28,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            12,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 12,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            13,
+            18
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            14,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 14,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            15,
+            16
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            11,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 4,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            12,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            13,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 4,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            14,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            15,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 4,
+          "max_order": 15,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            10,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 10,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            11,
+            18
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            12,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 12,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            13,
+            16
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            14,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 14,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            9,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 6,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            10,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            11,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 6,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            12,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            13,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 6,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            14,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            8,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 8,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            9,
+            18
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            10,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 10,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            11,
+            16
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            12,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 12,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            13,
+            14
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            8,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            9,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 8,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            10,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            11,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 8,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            12,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            13,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 8,
+          "max_order": 13,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            9,
+            16
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            10,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 10,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            11,
+            14
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            12,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 12,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            10,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            11,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 10,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            12,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            11,
+            12
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 40,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 35,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 36,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 37,
+      "codomain_multi_rees_dim": 9361,
+      "equation_type": "mixed_residual",
+      "formal_delta": 27,
+      "formal_newest_Eplus_order": 30,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            14,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 14,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            15,
+            18
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            16,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 16,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            13,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 4,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            14,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            15,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 4,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            16,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            12,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 12,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            13,
+            18
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            14,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 14,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            15,
+            16
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            11,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 6,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            12,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            13,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 6,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            14,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            15,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 6,
+          "max_order": 15,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            10,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 10,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            11,
+            18
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            12,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 12,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            13,
+            16
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            14,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 14,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            9,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 8,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            10,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            11,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 8,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            12,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            13,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 8,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            14,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            9,
+            18
+          ],
+          "max_Eminus": 9,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            10,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 10,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            11,
+            16
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            12,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 12,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            13,
+            14
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            10,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            11,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 10,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            12,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            13,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 10,
+          "max_order": 13,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            11,
+            14
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            12,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 12,
+          "max_order": 13,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            12,
+            12
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 12,
+          "max_order": 12,
+          "multiplicity": 1,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 39,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 37,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 38,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 39,
+      "codomain_multi_rees_dim": 8190,
+      "equation_type": "mixed_residual",
+      "formal_delta": 29,
+      "formal_newest_Eplus_order": 32,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            16,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 16,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            3,
+            17,
+            18
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            15,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 4,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            16,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            17,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 4,
+          "max_order": 17,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            14,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 14,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            15,
+            18
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            16,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 16,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            13,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 6,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            14,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            15,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 6,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            16,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            12,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 12,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            13,
+            18
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            14,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 14,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            15,
+            16
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            11,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 8,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            12,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            13,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 8,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            14,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            15,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 8,
+          "max_order": 15,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            10,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 10,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            11,
+            18
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            12,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 12,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            13,
+            16
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            14,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 14,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            10,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            11,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 10,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            12,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            13,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 10,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            14,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            11,
+            16
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            12,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 12,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            13,
+            14
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            12,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            13,
+            13
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 12,
+          "max_order": 13,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        }
+      ],
+      "n_live_classes": 36,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 39,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 40,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 41,
+      "codomain_multi_rees_dim": 7011,
+      "equation_type": "mixed_residual",
+      "formal_delta": 31,
+      "formal_newest_Eplus_order": 34,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            3,
+            18,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 18,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            17,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 4,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            4,
+            18,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            16,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 16,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            17,
+            18
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            15,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 6,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            16,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            17,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 6,
+          "max_order": 17,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            14,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 14,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            15,
+            18
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            16,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 16,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            13,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 8,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            14,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            15,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 8,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            16,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            12,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 12,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            13,
+            18
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            14,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 14,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            15,
+            16
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            11,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 10,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            12,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            13,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 10,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            14,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            15,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 10,
+          "max_order": 15,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            11,
+            18
+          ],
+          "max_Eminus": 11,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            12,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 12,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            13,
+            16
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            14,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 14,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            12,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            13,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 12,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            14,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            13,
+            14
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 32,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 41,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 42,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 43,
+      "codomain_multi_rees_dim": 5848,
+      "equation_type": "mixed_residual",
+      "formal_delta": 33,
+      "formal_newest_Eplus_order": 36,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            4,
+            19,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 4,
+          "max_order": 19,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            5,
+            18,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 18,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            17,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 6,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            6,
+            18,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            16,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 16,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            17,
+            18
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            15,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 8,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            16,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            17,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 8,
+          "max_order": 17,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            14,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 14,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            15,
+            18
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            16,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 16,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            13,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 10,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            14,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            15,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 10,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            16,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            12,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 12,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            13,
+            18
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            14,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 14,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            15,
+            16
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            12,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            13,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 12,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            14,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            15,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 12,
+          "max_order": 15,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            13,
+            16
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            14,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 14,
+          "max_order": 15,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            14,
+            14,
+            14
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 14,
+          "max_order": 14,
+          "multiplicity": 1,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 27,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 43,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 44,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 45,
+      "codomain_multi_rees_dim": 4725,
+      "equation_type": "mixed_residual",
+      "formal_delta": 35,
+      "formal_newest_Eplus_order": 38,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            6,
+            19,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 6,
+          "max_order": 19,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            7,
+            18,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 18,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            17,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 8,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            8,
+            18,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            16,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 16,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            17,
+            18
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            15,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 10,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            16,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            17,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 10,
+          "max_order": 17,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            14,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 14,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            15,
+            18
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            16,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 16,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            13,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 12,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            14,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            15,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 12,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            16,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            13,
+            18
+          ],
+          "max_Eminus": 13,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            14,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 14,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            15,
+            16
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            14,
+            14,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            14,
+            15,
+            15
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 14,
+          "max_order": 15,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        }
+      ],
+      "n_live_classes": 21,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 45,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 46,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 47,
+      "codomain_multi_rees_dim": 3666,
+      "equation_type": "mixed_residual",
+      "formal_delta": 37,
+      "formal_newest_Eplus_order": 40,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            8,
+            19,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 8,
+          "max_order": 19,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            9,
+            18,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 18,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            17,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 10,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            10,
+            18,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            16,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 16,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            17,
+            18
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            15,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 12,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            16,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            17,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 12,
+          "max_order": 17,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            14,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 14,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            15,
+            18
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            16,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 16,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            14,
+            14,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            14,
+            15,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 14,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            14,
+            16,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            15,
+            15,
+            16
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 16,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 47,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 48,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 49,
+      "codomain_multi_rees_dim": 2695,
+      "equation_type": "mixed_residual",
+      "formal_delta": 39,
+      "formal_newest_Eplus_order": 42,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            10,
+            19,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 10,
+          "max_order": 19,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            11,
+            18,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 18,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            17,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 12,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            12,
+            18,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            16,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 16,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            17,
+            18
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            14,
+            15,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 14,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            14,
+            16,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            14,
+            17,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 14,
+          "max_order": 17,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            15,
+            15,
+            18
+          ],
+          "max_Eminus": 15,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            15,
+            16,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 16,
+          "max_order": 17,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            16,
+            16,
+            16
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 16,
+          "max_order": 16,
+          "multiplicity": 1,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 12,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 49,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 50,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 51,
+      "codomain_multi_rees_dim": 1836,
+      "equation_type": "mixed_residual",
+      "formal_delta": 41,
+      "formal_newest_Eplus_order": 44,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            12,
+            19,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 12,
+          "max_order": 19,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            13,
+            18,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 18,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            14,
+            17,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 14,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            14,
+            18,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            15,
+            16,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 16,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            15,
+            17,
+            18
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            16,
+            16,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            16,
+            17,
+            17
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 16,
+          "max_order": 17,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        }
+      ],
+      "n_live_classes": 8,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 51,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 52,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 53,
+      "codomain_multi_rees_dim": 1113,
+      "equation_type": "mixed_residual",
+      "formal_delta": 43,
+      "formal_newest_Eplus_order": 46,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            14,
+            19,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 14,
+          "max_order": 19,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            15,
+            18,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 18,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            16,
+            17,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 16,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            16,
+            18,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            17,
+            17,
+            18
+          ],
+          "max_Eminus": 17,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 3,
+          "types": [
+            "E_minus",
+            "E_minus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 5,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 53,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 54,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 55,
+      "codomain_multi_rees_dim": 550,
+      "equation_type": "mixed_residual",
+      "formal_delta": 45,
+      "formal_newest_Eplus_order": 48,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            16,
+            19,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 16,
+          "max_order": 19,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            17,
+            18,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 18,
+          "max_order": 19,
+          "multiplicity": 6,
+          "types": [
+            "E_minus",
+            "E_plus",
+            "E_minus"
+          ]
+        },
+        {
+          "ijk_sorted": [
+            18,
+            18,
+            18
+          ],
+          "max_Eminus": -1,
+          "max_Eplus": 18,
+          "max_order": 18,
+          "multiplicity": 1,
+          "types": [
+            "E_plus",
+            "E_plus",
+            "E_plus"
+          ]
+        }
+      ],
+      "n_live_classes": 3,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 55,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    },
+    {
+      "F_order": 56,
+      "automatic_by_y_evenness": false,
+      "codomain_free_dim": 57,
+      "codomain_multi_rees_dim": 171,
+      "equation_type": "mixed_residual",
+      "formal_delta": 47,
+      "formal_newest_Eplus_order": 50,
+      "isolable_Eplus_within_d": false,
+      "live_triples": [
+        {
+          "ijk_sorted": [
+            18,
+            19,
+            19
+          ],
+          "max_Eminus": 19,
+          "max_Eplus": 18,
+          "max_order": 19,
+          "multiplicity": 3,
+          "types": [
+            "E_plus",
+            "E_minus",
+            "E_minus"
+          ]
+        }
+      ],
+      "n_live_classes": 1,
+      "newest_Eminus_order": 19,
+      "newest_Eplus_order": 18
+    },
+    {
+      "F_order": 57,
+      "automatic_by_y_evenness": true,
+      "equation_type": "automatic",
+      "isolable_Eplus_within_d": null,
+      "live_triples": [],
+      "newest_Eminus_order": null,
+      "newest_Eplus_order": null
+    }
+  ],
+  "terminal_F_order": 57
+}

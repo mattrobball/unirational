@@ -1,0 +1,533 @@
+{
+  "first_stage_without_Eplus_poly_isolator": 26,
+  "last_isolable_Eplus_F_order": 24,
+  "meaning": "From this F-order onward, free-module isolation would require an E+ jet of order > d (or no pure isolator). Remaining freedom is only ker(L_*) of earlier stages and a_odd relative parameters still within degree, subject to coefficient coupling.",
+  "self_sha256": "9cfc109a1920401b01a079fc6610387830b7f0cac6d4547342a45062767ee6b5",
+  "stage": {
+    "F_order": 26,
+    "automatic_by_y_evenness": false,
+    "codomain_free_dim": 27,
+    "codomain_multi_rees_dim": 14256,
+    "equation_type": "mixed_residual",
+    "formal_delta": 17,
+    "formal_newest_Eplus_order": 20,
+    "isolable_Eplus_within_d": false,
+    "live_triples": [
+      {
+        "ijk_sorted": [
+          3,
+          4,
+          19
+        ],
+        "max_Eminus": 19,
+        "max_Eplus": 4,
+        "max_order": 19,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_plus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          3,
+          5,
+          18
+        ],
+        "max_Eminus": 5,
+        "max_Eplus": 18,
+        "max_order": 18,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_minus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          3,
+          6,
+          17
+        ],
+        "max_Eminus": 17,
+        "max_Eplus": 6,
+        "max_order": 17,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_plus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          3,
+          7,
+          16
+        ],
+        "max_Eminus": 7,
+        "max_Eplus": 16,
+        "max_order": 16,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_minus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          3,
+          8,
+          15
+        ],
+        "max_Eminus": 15,
+        "max_Eplus": 8,
+        "max_order": 15,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_plus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          3,
+          9,
+          14
+        ],
+        "max_Eminus": 9,
+        "max_Eplus": 14,
+        "max_order": 14,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_minus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          3,
+          10,
+          13
+        ],
+        "max_Eminus": 13,
+        "max_Eplus": 10,
+        "max_order": 13,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_plus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          3,
+          11,
+          12
+        ],
+        "max_Eminus": 11,
+        "max_Eplus": 12,
+        "max_order": 12,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_minus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          4,
+          4,
+          18
+        ],
+        "max_Eminus": -1,
+        "max_Eplus": 18,
+        "max_order": 18,
+        "multiplicity": 3,
+        "types": [
+          "E_plus",
+          "E_plus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          4,
+          5,
+          17
+        ],
+        "max_Eminus": 17,
+        "max_Eplus": 4,
+        "max_order": 17,
+        "multiplicity": 6,
+        "types": [
+          "E_plus",
+          "E_minus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          4,
+          6,
+          16
+        ],
+        "max_Eminus": -1,
+        "max_Eplus": 16,
+        "max_order": 16,
+        "multiplicity": 6,
+        "types": [
+          "E_plus",
+          "E_plus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          4,
+          7,
+          15
+        ],
+        "max_Eminus": 15,
+        "max_Eplus": 4,
+        "max_order": 15,
+        "multiplicity": 6,
+        "types": [
+          "E_plus",
+          "E_minus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          4,
+          8,
+          14
+        ],
+        "max_Eminus": -1,
+        "max_Eplus": 14,
+        "max_order": 14,
+        "multiplicity": 6,
+        "types": [
+          "E_plus",
+          "E_plus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          4,
+          9,
+          13
+        ],
+        "max_Eminus": 13,
+        "max_Eplus": 4,
+        "max_order": 13,
+        "multiplicity": 6,
+        "types": [
+          "E_plus",
+          "E_minus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          4,
+          10,
+          12
+        ],
+        "max_Eminus": -1,
+        "max_Eplus": 12,
+        "max_order": 12,
+        "multiplicity": 6,
+        "types": [
+          "E_plus",
+          "E_plus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          4,
+          11,
+          11
+        ],
+        "max_Eminus": 11,
+        "max_Eplus": 4,
+        "max_order": 11,
+        "multiplicity": 3,
+        "types": [
+          "E_plus",
+          "E_minus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          5,
+          5,
+          16
+        ],
+        "max_Eminus": 5,
+        "max_Eplus": 16,
+        "max_order": 16,
+        "multiplicity": 3,
+        "types": [
+          "E_minus",
+          "E_minus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          5,
+          6,
+          15
+        ],
+        "max_Eminus": 15,
+        "max_Eplus": 6,
+        "max_order": 15,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_plus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          5,
+          7,
+          14
+        ],
+        "max_Eminus": 7,
+        "max_Eplus": 14,
+        "max_order": 14,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_minus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          5,
+          8,
+          13
+        ],
+        "max_Eminus": 13,
+        "max_Eplus": 8,
+        "max_order": 13,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_plus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          5,
+          9,
+          12
+        ],
+        "max_Eminus": 9,
+        "max_Eplus": 12,
+        "max_order": 12,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_minus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          5,
+          10,
+          11
+        ],
+        "max_Eminus": 11,
+        "max_Eplus": 10,
+        "max_order": 11,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_plus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          6,
+          6,
+          14
+        ],
+        "max_Eminus": -1,
+        "max_Eplus": 14,
+        "max_order": 14,
+        "multiplicity": 3,
+        "types": [
+          "E_plus",
+          "E_plus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          6,
+          7,
+          13
+        ],
+        "max_Eminus": 13,
+        "max_Eplus": 6,
+        "max_order": 13,
+        "multiplicity": 6,
+        "types": [
+          "E_plus",
+          "E_minus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          6,
+          8,
+          12
+        ],
+        "max_Eminus": -1,
+        "max_Eplus": 12,
+        "max_order": 12,
+        "multiplicity": 6,
+        "types": [
+          "E_plus",
+          "E_plus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          6,
+          9,
+          11
+        ],
+        "max_Eminus": 11,
+        "max_Eplus": 6,
+        "max_order": 11,
+        "multiplicity": 6,
+        "types": [
+          "E_plus",
+          "E_minus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          6,
+          10,
+          10
+        ],
+        "max_Eminus": -1,
+        "max_Eplus": 10,
+        "max_order": 10,
+        "multiplicity": 3,
+        "types": [
+          "E_plus",
+          "E_plus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          7,
+          7,
+          12
+        ],
+        "max_Eminus": 7,
+        "max_Eplus": 12,
+        "max_order": 12,
+        "multiplicity": 3,
+        "types": [
+          "E_minus",
+          "E_minus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          7,
+          8,
+          11
+        ],
+        "max_Eminus": 11,
+        "max_Eplus": 8,
+        "max_order": 11,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_plus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          7,
+          9,
+          10
+        ],
+        "max_Eminus": 9,
+        "max_Eplus": 10,
+        "max_order": 10,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_minus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          8,
+          8,
+          10
+        ],
+        "max_Eminus": -1,
+        "max_Eplus": 10,
+        "max_order": 10,
+        "multiplicity": 3,
+        "types": [
+          "E_plus",
+          "E_plus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          8,
+          9,
+          9
+        ],
+        "max_Eminus": 9,
+        "max_Eplus": 8,
+        "max_order": 9,
+        "multiplicity": 3,
+        "types": [
+          "E_plus",
+          "E_minus",
+          "E_minus"
+        ]
+      }
+    ],
+    "n_live_classes": 32,
+    "newest_Eminus_order": 19,
+    "newest_Eplus_order": 18
+  }
+}

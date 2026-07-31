@@ -1,0 +1,177 @@
+{
+  "bidegree": {
+    "d": 19,
+    "m": 3
+  },
+  "decision_summary": "Finite truncation (G1) at d=19, m=3: terminal F-order 57. Isolable E+ through F-order 24; first non-isolable 26. Free-fibre ker-L1 residual first nonzero at F-order 26 (norm^2=15968016). d-6m=1 (matches (1,7)). Exit G19-OBSTRUCTION. Headline OPEN. Free-fibre only (multi-Rees dim 19236 not densified).",
+  "exit": "G19-OBSTRUCTION",
+  "first_stage_without_Eplus_poly_isolator": 26,
+  "free_fibre_samples": {
+    "based_zero": {
+      "early_vanish": {
+        "10": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "12": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "14": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "16": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "18": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "20": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "22": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "24": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        }
+      },
+      "first_nonzero_F_order": null,
+      "solvable_through_all_isolators": true
+    },
+    "ker_L1": {
+      "b_m_plus_1_nonzero": true,
+      "early_vanish": {
+        "10": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "12": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "14": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "16": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "18": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "20": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "22": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "24": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        }
+      },
+      "first_nonzero_F_order": 26,
+      "residual_norm_sq_at_first": "15968016",
+      "solvable_through_all_isolators": true
+    }
+  },
+  "gate_G1": "PASS",
+  "headline": "OPEN",
+  "house_rules": [
+    "No formal state or formal lift called a covariant",
+    "Exact arithmetic; finite fields discovery only",
+    "G4 architecture enforced; no local=>global surjectivity promotion"
+  ],
+  "not_a_covariant": true,
+  "obstruction_layers": {
+    "free_fibre_truncated_polar": {
+      "first_nonzero_F_order_kerL1_sample": 26,
+      "pure_Eminus_based_branch": {
+        "first_nonzero": null,
+        "note": "Based-style zero E+ corrections; free-fibre residual depends on whether pure E- jets alone can produce even F-order terms."
+      },
+      "residual_decomposition": {
+        "C3_weight_components": {
+          "0": {
+            "n_terms": 0,
+            "terms": []
+          },
+          "1": {
+            "n_terms": 0,
+            "terms": []
+          },
+          "2": {
+            "n_terms": 1,
+            "terms": [
+              {
+                "coeff": "3996",
+                "index": 3,
+                "monom": [
+                  23,
+                  3
+                ]
+              }
+            ]
+          }
+        },
+        "F_order": 26,
+        "G_representation_note": "G-global residual for equivariant polynomial maps is a separate layer (Molien spaces / modular scans). Free-fibre residual classifies the truncated polar tower on one involution plane.",
+        "codomain_dim": 27,
+        "dominant_C3_weights": [
+          2
+        ],
+        "stabilizer_note": "Free-fibre residual is a binary form of order N under the residual D12 / C3 action on E_- coordinates. This is a local normal-cone obstruction type, not a full G-isotypic of Hom(Sym^d W*,W)^G.",
+        "status": "NONZERO",
+        "support_indices": [
+          3
+        ],
+        "support_size": 1
+      },
+      "residual_norm_sq_at_first": "15968016",
+      "status": "NONZERO_RESIDUAL_ON_OPEN"
+    },
+    "invariants": {
+      "d": 19,
+      "d_minus_6m": 1,
+      "d_mod_6": 1,
+      "m": 3,
+      "residual_S3_type_leading": "pure_powers_y0m_f0_plus_y1m_f1",
+      "source_line_ledger": "based_style_a_odd_zero_on_samples"
+    },
+    "polynomial_truncation": {
+      "first_stage_without_Eplus_poly_isolator": 26,
+      "formal_newest_needed_at_first_noniso": 20,
+      "last_isolable_Eplus_F_order": 24,
+      "within_degree": false
+    }
+  },
+  "resource_floor": {
+    "certificate_format": "JSON stage ledger + free L_r COO ranks + free-fibre residual norm^2 and C3 weight support; independent verifier rebuilds from common_g3 without importing produce.",
+    "checkpoint_plan": "stage_ledger \u2192 free_Lr_ranks \u2192 isolable free-fibre sols \u2192 post-isolator residuals \u2192 SUMMARY/exit",
+    "exceeded_8GB": false,
+    "first_nonisolable_F_order": 26,
+    "largest_free_L_dense_floor_bytes_estimate": 45600,
+    "largest_free_L_shape": [
+      25,
+      57
+    ],
+    "max_RSS_authorized_GB": 8,
+    "multi_rees_dense_equalizer_floor_note": "Materializing a dense multi-Rees residual equalizer of ambient dim 19236 would be O(multi^2) and can exceed 8GB; not constructed. G3 residual certificate is free-fibre exact over Q.",
+    "strategy": "free_fibre_only",
+    "total_multi_rees_dim": 19236,
+    "verifier_design": "verify.py rebuilds ledger, L_r ranks on pure-powers sample, and ker-L1 residual at first non-isolable F-order."
+  },
+  "self_sha256": "4593f868026949900e7f0f9d8f37c3294c2c29492a177554dbb7b12f0daf655a",
+  "terminal_F_order": 57
+}

@@ -1,0 +1,106 @@
+{
+  "a_label": "residual_S3_trivial_a_triv",
+  "d": 13,
+  "m": 1,
+  "rows": [
+    {
+      "F_order": 4,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 4,
+      "order_b": 2,
+      "r": 1,
+      "rank_over_Q": 5,
+      "sample": "residual_S3_trivial_a_triv",
+      "shape": [
+        5,
+        9
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 6,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 8,
+      "order_b": 4,
+      "r": 3,
+      "rank_over_Q": 7,
+      "sample": "residual_S3_trivial_a_triv",
+      "shape": [
+        7,
+        15
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 8,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 12,
+      "order_b": 6,
+      "r": 5,
+      "rank_over_Q": 9,
+      "sample": "residual_S3_trivial_a_triv",
+      "shape": [
+        9,
+        21
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 10,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 16,
+      "order_b": 8,
+      "r": 7,
+      "rank_over_Q": 11,
+      "sample": "residual_S3_trivial_a_triv",
+      "shape": [
+        11,
+        27
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 12,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 20,
+      "order_b": 10,
+      "r": 9,
+      "rank_over_Q": 13,
+      "sample": "residual_S3_trivial_a_triv",
+      "shape": [
+        13,
+        33
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 14,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 24,
+      "order_b": 12,
+      "r": 11,
+      "rank_over_Q": 15,
+      "sample": "residual_S3_trivial_a_triv",
+      "shape": [
+        15,
+        39
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 16,
+      "note": "First formal isolator beyond polynomial degree 13",
+      "order_b": 14,
+      "r": 13,
+      "sample": null,
+      "within_degree": false
+    }
+  ],
+  "self_sha256": "b00831171daac74e3e830f78f4cfdd175df9ce091e54a28d6f96d447a07f79e8"
+}

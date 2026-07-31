@@ -1,0 +1,32 @@
+{
+  "bidegree": {
+    "d": 13,
+    "m": 1
+  },
+  "d_minus_6m": 7,
+  "exit": "G13-OBSTRUCTION",
+  "files": [
+    "SUMMARY.json",
+    "TOWER.md",
+    "exit.json",
+    "first_terminal_stage.json",
+    "free_Lr_ranks.json",
+    "global_correction_modules.json",
+    "jet_dimensions.json",
+    "produce.py",
+    "stage_ledger.json",
+    "tower_sample_based_zero.json",
+    "tower_sample_kerL1.json",
+    "verify.py"
+  ],
+  "first_stage_without_Eplus_poly_isolator": 16,
+  "gate_G1": "PASS",
+  "headline": "OPEN",
+  "leading_sample": "residual_S3_trivial_a_triv",
+  "multi_rees_total_dim": 5649,
+  "sample0_first_nonzero": null,
+  "sample1_first_nonzero": 16,
+  "sample1_residual_norm_sq": "156816",
+  "self_sha256": "4f5e88b7fc3c14c3bb7011227636a4713b2671b254ace37dae03c84e52b73506",
+  "terminal_F_order": 39
+}

@@ -1,0 +1,17 @@
+{
+  "certificate_format": "JSON stage ledger + free L_r COO ranks + free-fibre residual norm^2 and C3 weight support; independent verifier rebuilds from common_g3 without importing produce.",
+  "checkpoint_plan": "stage_ledger \u2192 free_Lr_ranks \u2192 isolable free-fibre sols \u2192 post-isolator residuals \u2192 SUMMARY/exit",
+  "exceeded_8GB": false,
+  "first_nonisolable_F_order": 26,
+  "largest_free_L_dense_floor_bytes_estimate": 45600,
+  "largest_free_L_shape": [
+    25,
+    57
+  ],
+  "max_RSS_authorized_GB": 8,
+  "multi_rees_dense_equalizer_floor_note": "Materializing a dense multi-Rees residual equalizer of ambient dim 19236 would be O(multi^2) and can exceed 8GB; not constructed. G3 residual certificate is free-fibre exact over Q.",
+  "self_sha256": "dbc26bcb3eb726d19f4d18dd2d946eb90eee00fd63d412b1292fd94e409b1b2a",
+  "strategy": "free_fibre_only",
+  "total_multi_rees_dim": 19236,
+  "verifier_design": "verify.py rebuilds ledger, L_r ranks on pure-powers sample, and ker-L1 residual at first non-isolable F-order."
+}

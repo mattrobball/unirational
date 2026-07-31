@@ -1,22 +1,173 @@
 {
-  "base_commit_expected": "c5e71be",
-  "bidegree_G2": {
-    "d": 7,
-    "m": 1
+  "bidegrees": {
+    "G2": {
+      "d": 7,
+      "d_minus_6m": 1,
+      "m": 1
+    },
+    "G3_a": {
+      "d": 13,
+      "d_minus_6m": 7,
+      "m": 1
+    },
+    "G3_b": {
+      "d": 19,
+      "d_minus_6m": 1,
+      "m": 3
+    }
   },
   "deliverables": {
     "FINITE_TRUNCATION_THEOREM.md": "G1 theorem",
     "SEAL.json": "this seal",
-    "degree7/*": "G2 complete tower + residual + reconcile",
-    "verify_finite_truncation.py": "G1 independent verifier"
+    "TERMINAL_PATTERN.md": "G3 pattern table + exit G-PATTERN",
+    "common_g3.py": "shared exact helpers",
+    "degree13/*": "G3 tower (1,13)",
+    "degree19/*": "G3 tower (3,19)",
+    "degree7/*": "G2 complete tower"
   },
-  "dispatch": "POST-ELO Path G (PRIMARY): finite global lifting",
+  "dispatch": "POST-ELO Path G3: terminal obstruction periodicity / pattern",
   "exit_G2": "G7-OBSTRUCTION",
+  "exit_G3": "G-PATTERN",
   "files": [
     {
       "bytes": 6416,
       "path": "certificates/global_finite_lifting/FINITE_TRUNCATION_THEOREM.md",
       "sha256": "41c3ec8f37f396555cf604af813bc2a12629c499576172925f270fb4bfc3b7b8"
+    },
+    {
+      "bytes": 8316,
+      "path": "certificates/global_finite_lifting/TERMINAL_PATTERN.md",
+      "sha256": "b4fc64b0557162756123ace23d89236a7f1be5e9aa82de0d8000fe3afe3c7e58"
+    },
+    {
+      "bytes": 34390,
+      "path": "certificates/global_finite_lifting/common_g3.py",
+      "sha256": "43c19898dbb3ab34385516d5340d0a1b9f54549b2ff041d7b9db70d20bcc59e0"
+    },
+    {
+      "bytes": 806,
+      "path": "certificates/global_finite_lifting/degree13/SUMMARY.json",
+      "sha256": "d4f2551bdfd6928b39dd87d34c8ded7dfcfddcc6e1129243263dae24c31fda9f"
+    },
+    {
+      "bytes": 3142,
+      "path": "certificates/global_finite_lifting/degree13/TOWER.md",
+      "sha256": "5460c44354dba128fa7ebe6a188898b668c6922f72f3f2b5300dc6aa942655e8"
+    },
+    {
+      "bytes": 4361,
+      "path": "certificates/global_finite_lifting/degree13/exit.json",
+      "sha256": "95e9956c6dfd3003ccc2a2bca47a9d07fe3dbe1fc526c715368d98b4884b08a8"
+    },
+    {
+      "bytes": 6447,
+      "path": "certificates/global_finite_lifting/degree13/first_terminal_stage.json",
+      "sha256": "80462a3add6a6e739b9cd0e2ff71fb09778aa995509566fbb7d20b7d3a97d52f"
+    },
+    {
+      "bytes": 2117,
+      "path": "certificates/global_finite_lifting/degree13/free_Lr_ranks.json",
+      "sha256": "65cf59e607c8e5dcda79eca3ae42b232746542809afc2c89f9bcd32ad1ba731e"
+    },
+    {
+      "bytes": 34451,
+      "path": "certificates/global_finite_lifting/degree13/global_correction_modules.json",
+      "sha256": "8e4cf940ed36ab097da9789b1d1923611f9f9957348900c4122586718dd760f5"
+    },
+    {
+      "bytes": 2998,
+      "path": "certificates/global_finite_lifting/degree13/jet_dimensions.json",
+      "sha256": "b1ee42b9bb875e09c0a875a1df105c4108f1033e24c0904b9aecaf3b577f77d3"
+    },
+    {
+      "bytes": 11710,
+      "path": "certificates/global_finite_lifting/degree13/produce.py",
+      "sha256": "efa7ba6868e8eca9b6f2db2fefc86185f6d44d25af4d3d3eeabd41821307593f"
+    },
+    {
+      "bytes": 83741,
+      "path": "certificates/global_finite_lifting/degree13/stage_ledger.json",
+      "sha256": "9d47d91b32ad9c1d09260f8714c0e94479d2b5840fba38a929a89806bab022dd"
+    },
+    {
+      "bytes": 5987,
+      "path": "certificates/global_finite_lifting/degree13/tower_sample_based_zero.json",
+      "sha256": "e04619f3282525ee9e7b5d6dfa3cd91b01519de8aaf3ba545f784f2664b5c9a4"
+    },
+    {
+      "bytes": 7228,
+      "path": "certificates/global_finite_lifting/degree13/tower_sample_kerL1.json",
+      "sha256": "d986e552f391ae6751c2fb79c2ede53cd5b78e90bf2f232243051cd24a01157c"
+    },
+    {
+      "bytes": 5895,
+      "path": "certificates/global_finite_lifting/degree13/verify.py",
+      "sha256": "bb39b0d464894fe3fce32b2599b263b3e7840fadf6d19b7147cb41f7be8efeee"
+    },
+    {
+      "bytes": 865,
+      "path": "certificates/global_finite_lifting/degree19/SUMMARY.json",
+      "sha256": "e417a4f8f2ab156b84577517b70b7fc341f4f72c1d8c0366d9c9247869d41eac"
+    },
+    {
+      "bytes": 3544,
+      "path": "certificates/global_finite_lifting/degree19/TOWER.md",
+      "sha256": "cd2fd28f510b520ceef6654572ac13df8899780d77085e8ee39ee973ccaaf28b"
+    },
+    {
+      "bytes": 5690,
+      "path": "certificates/global_finite_lifting/degree19/exit.json",
+      "sha256": "9a806d03d06c9c61a0cb6f3144163c6dc618bd1dd977d806fb26bf9963b70620"
+    },
+    {
+      "bytes": 9883,
+      "path": "certificates/global_finite_lifting/degree19/first_terminal_stage.json",
+      "sha256": "9c053789430fdb5eda1757b865c256b07db567c1953baaf4b1aca45dbd4d05b6"
+    },
+    {
+      "bytes": 2758,
+      "path": "certificates/global_finite_lifting/degree19/free_Lr_ranks.json",
+      "sha256": "e896a3f068ed86f1b8767329400cfba90c35188cd988d92203deb47854ecb323"
+    },
+    {
+      "bytes": 45835,
+      "path": "certificates/global_finite_lifting/degree19/global_correction_modules.json",
+      "sha256": "6acdb0100d800af2188cf4adf3c8a13711c3738c455d90b3136f9ba32e213d22"
+    },
+    {
+      "bytes": 3847,
+      "path": "certificates/global_finite_lifting/degree19/jet_dimensions.json",
+      "sha256": "e9f7f7164852e5fba5f2fa98965bdb855d92ee34e4081c7338916fd696507ab8"
+    },
+    {
+      "bytes": 14089,
+      "path": "certificates/global_finite_lifting/degree19/produce.py",
+      "sha256": "9f7fed0cb110cf1f0094bd99c30cf5ae6a30079ccdc296ed60caa73fb889d686"
+    },
+    {
+      "bytes": 1040,
+      "path": "certificates/global_finite_lifting/degree19/resource_floor.json",
+      "sha256": "376b242c5227378a94ad23caef4f0be5d3bbdcccaefa2145fd87f59bfa2a97d3"
+    },
+    {
+      "bytes": 170872,
+      "path": "certificates/global_finite_lifting/degree19/stage_ledger.json",
+      "sha256": "424f1783cccd80df2892faf08afce5229a26226aac08248810168f485008608c"
+    },
+    {
+      "bytes": 7818,
+      "path": "certificates/global_finite_lifting/degree19/tower_sample_based_zero.json",
+      "sha256": "920a608f701c530a59b88bbedc4348a944a00d84f6cfd51ef2a025d4170e7b49"
+    },
+    {
+      "bytes": 9271,
+      "path": "certificates/global_finite_lifting/degree19/tower_sample_kerL1.json",
+      "sha256": "70eb07652cf111a575dd83e682903b31abd8b514c0bb4c585cbb3029d046ef35"
+    },
+    {
+      "bytes": 6205,
+      "path": "certificates/global_finite_lifting/degree19/verify.py",
+      "sha256": "04d2f4764e32a90cee05389b4e5b78d20aead132899c90b0aa66639579c469db"
     },
     {
       "bytes": 850,
@@ -102,30 +253,52 @@
     "G4: plane -> triple-line equalizer -> residual point kernel",
     "No timing fields in sealed payloads",
     "Independent verifier does not import producer",
-    "self_sha256 last"
-  ],
-  "not_attempted": [
-    "G3 degrees 13/19",
-    "Path F",
-    "Path T"
+    "self_sha256 last",
+    "Do not upgrade G-PATTERN to G-PERIODIC-NEGATIVE on three bidegrees"
   ],
   "package": "global_finite_lifting",
-  "self_sha256": "f75203815dd0d4751b336838752860b499b9f9c30447094d92ee1e382bfe9e99",
+  "self_sha256": "55cd81d9a94db6d8629bcffff9b7230ac0cd492127e0849f36db4e2fd6e8bf47",
   "summary": {
-    "degree7_G_covariant_landing": "EMPTY (septic + modular)",
-    "degree7_first_nonisolable_F_order": 10,
-    "degree7_free_fibre_residual_F10_norm_sq": "1296",
-    "finite_truncation": "F(p) in I^{3d+1} => F(p)=0 for homogeneous degree-d maps; tower terminates by order 3d",
-    "why_no_covariant": "Formal series solutions exist on free open; polynomial degree 7 truncates isolators at b6 (F-order 8); residual at F-order 10 nonzero; G-global 4-dim space already excluded"
+    "conjecture": "free-fibre residual nonzero at N_star for all odd (m,d) on ker-L1 open with based a_odd=0 \u2014 not proved",
+    "d_minus_6m_predicts_residual_order": false,
+    "degree19_exceeded_8GB": false,
+    "degree19_strategy": "free_fibre_only",
+    "finite_truncation": "F(p) in I^{3d+1} => F(p)=0; tower terminates by order 3d",
+    "free_fibre_first_nonzero": {
+      "(1,13)": {
+        "F_order": 16,
+        "norm_sq": "156816"
+      },
+      "(1,7)": {
+        "F_order": 10,
+        "norm_sq": "1296"
+      },
+      "(3,19)": {
+        "F_order": 26,
+        "norm_sq": "15968016"
+      }
+    },
+    "isolation_cutoff_formula": "N_star = d + 2m + 1 (odd m,d) \u2014 proved combinatorially",
+    "not_G_PERIODIC_NEGATIVE": true,
+    "not_G_POLYNOMIAL": true,
+    "predicting_invariant": "N_star = d+2m+1 matches first non-isolable and first free-fibre residual on all three samples",
+    "reason": "(1,7) and (3,19) share d-6m=1 but residual at 10 vs 26"
   },
   "terminal_markers": [
     "FINITE_TRUNCATION_G1_PASS",
     "G7_TOWER_PRODUCE_OK",
     "G7_TOWER_VERIFY_OK",
+    "G13_TOWER_PRODUCE_OK",
+    "G13_TOWER_VERIFY_OK",
+    "G19_TOWER_PRODUCE_OK",
+    "G19_TOWER_VERIFY_OK",
+    "G3_PATTERN_SEAL_OK",
     "GLOBAL_FINITE_LIFTING_SEAL_OK"
   ],
   "verify_commands": [
     "/opt/homebrew/bin/python3 -u certificates/global_finite_lifting/verify_finite_truncation.py",
-    "/opt/homebrew/bin/python3 -u certificates/global_finite_lifting/degree7/verify.py"
+    "/opt/homebrew/bin/python3 -u certificates/global_finite_lifting/degree7/verify.py",
+    "/opt/homebrew/bin/python3 -u certificates/global_finite_lifting/degree13/verify.py",
+    "/opt/homebrew/bin/python3 -u certificates/global_finite_lifting/degree19/verify.py"
   ]
 }

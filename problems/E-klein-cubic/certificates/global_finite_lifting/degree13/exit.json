@@ -1,0 +1,145 @@
+{
+  "bidegree": {
+    "d": 13,
+    "m": 1
+  },
+  "decision_summary": "Finite truncation (G1) reduces algebraization at d=13 to a finite polar system through F-order 39. Isolable E+ polynomial corrections exist only through F-order 14. First stage without E+ poly isolator: 16. Free-fibre ker-L1 sample first nonzero residual at F-order 16 (norm^2=156816). d-6m=7. Exit G13-OBSTRUCTION. Headline OPEN.",
+  "exit": "G13-OBSTRUCTION",
+  "first_stage_without_Eplus_poly_isolator": 16,
+  "free_fibre_samples": {
+    "based_zero": {
+      "early_vanish": {
+        "10": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "12": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "14": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "4": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "6": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "8": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        }
+      },
+      "first_nonzero_F_order": null,
+      "solvable_through_all_isolators": true
+    },
+    "ker_L1": {
+      "b_m_plus_1_nonzero": true,
+      "early_vanish": {
+        "10": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "12": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "14": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "4": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "6": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "8": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        }
+      },
+      "first_nonzero_F_order": 16,
+      "residual_norm_sq_at_first": "156816",
+      "solvable_through_all_isolators": true
+    }
+  },
+  "gate_G1": "PASS",
+  "headline": "OPEN",
+  "house_rules": [
+    "No formal state or formal lift called a covariant",
+    "Exact arithmetic; finite fields discovery only",
+    "G4 architecture enforced; no local=>global surjectivity promotion"
+  ],
+  "not_a_covariant": true,
+  "obstruction_layers": {
+    "free_fibre_truncated_polar": {
+      "first_nonzero_F_order_kerL1_sample": 16,
+      "pure_Eminus_based_branch": {
+        "first_nonzero": null,
+        "note": "With all E+ jets zero, free-fibre F vanishes by triple-E- vanishing when only a_m is nonzero of odd order with 3m odd. Not a G-covariant."
+      },
+      "residual_decomposition": {
+        "C3_weight_components": {
+          "0": {
+            "n_terms": 1,
+            "terms": [
+              {
+                "coeff": "396",
+                "index": 2,
+                "monom": [
+                  14,
+                  2
+                ]
+              }
+            ]
+          },
+          "1": {
+            "n_terms": 0,
+            "terms": []
+          },
+          "2": {
+            "n_terms": 0,
+            "terms": []
+          }
+        },
+        "F_order": 16,
+        "G_representation_note": "G-global residual for equivariant polynomial maps is a separate layer (Molien spaces / modular scans). Free-fibre residual classifies the truncated polar tower on one involution plane.",
+        "codomain_dim": 17,
+        "dominant_C3_weights": [
+          0
+        ],
+        "stabilizer_note": "Free-fibre residual is a binary form of order N under the residual D12 / C3 action on E_- coordinates. This is a local normal-cone obstruction type, not a full G-isotypic of Hom(Sym^d W*,W)^G.",
+        "status": "NONZERO",
+        "support_indices": [
+          2
+        ],
+        "support_size": 1
+      },
+      "residual_norm_sq_at_first": "156816",
+      "status": "NONZERO_RESIDUAL_ON_OPEN"
+    },
+    "invariants": {
+      "d": 13,
+      "d_minus_6m": 7,
+      "d_mod_6": 1,
+      "m": 1,
+      "residual_S3_type_leading": "residual_S3_trivial_a_triv",
+      "source_line_ledger": "based_style_a_odd_zero_on_samples"
+    },
+    "polynomial_truncation": {
+      "first_stage_without_Eplus_poly_isolator": 16,
+      "formal_newest_needed_at_first_noniso": 14,
+      "last_isolable_Eplus_F_order": 14,
+      "within_degree": false
+    }
+  },
+  "self_sha256": "09a1bac4a56d969259c190c87237cf47312b8565158b6fbc9b4094a1c481db1a",
+  "terminal_F_order": 39
+}

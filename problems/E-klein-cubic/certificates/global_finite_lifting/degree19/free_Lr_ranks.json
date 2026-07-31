@@ -1,0 +1,136 @@
+{
+  "a_label": "pure_powers_y0m_f0_plus_y1m_f1",
+  "d": 19,
+  "m": 3,
+  "rows": [
+    {
+      "F_order": 10,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 4,
+      "order_b": 4,
+      "r": 1,
+      "rank_over_Q": 11,
+      "sample": "pure_powers_y0m_f0_plus_y1m_f1",
+      "shape": [
+        11,
+        15
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 12,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 8,
+      "order_b": 6,
+      "r": 3,
+      "rank_over_Q": 13,
+      "sample": "pure_powers_y0m_f0_plus_y1m_f1",
+      "shape": [
+        13,
+        21
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 14,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 12,
+      "order_b": 8,
+      "r": 5,
+      "rank_over_Q": 15,
+      "sample": "pure_powers_y0m_f0_plus_y1m_f1",
+      "shape": [
+        15,
+        27
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 16,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 16,
+      "order_b": 10,
+      "r": 7,
+      "rank_over_Q": 17,
+      "sample": "pure_powers_y0m_f0_plus_y1m_f1",
+      "shape": [
+        17,
+        33
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 18,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 20,
+      "order_b": 12,
+      "r": 9,
+      "rank_over_Q": 19,
+      "sample": "pure_powers_y0m_f0_plus_y1m_f1",
+      "shape": [
+        19,
+        39
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 20,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 24,
+      "order_b": 14,
+      "r": 11,
+      "rank_over_Q": 21,
+      "sample": "pure_powers_y0m_f0_plus_y1m_f1",
+      "shape": [
+        21,
+        45
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 22,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 28,
+      "order_b": 16,
+      "r": 13,
+      "rank_over_Q": 23,
+      "sample": "pure_powers_y0m_f0_plus_y1m_f1",
+      "shape": [
+        23,
+        51
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 24,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 32,
+      "order_b": 18,
+      "r": 15,
+      "rank_over_Q": 25,
+      "sample": "pure_powers_y0m_f0_plus_y1m_f1",
+      "shape": [
+        25,
+        57
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 26,
+      "note": "First formal isolator beyond polynomial degree 19",
+      "order_b": 20,
+      "r": 17,
+      "sample": null,
+      "within_degree": false
+    }
+  ],
+  "self_sha256": "626712e82c985439cefda96871bdfafd42c0f8496c491b3d49b6cfce32988ed1"
+}

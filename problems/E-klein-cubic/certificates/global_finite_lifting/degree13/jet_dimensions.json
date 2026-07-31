@@ -1,0 +1,127 @@
+{
+  "d": 13,
+  "m": 1,
+  "note": "C2-parity normal jets of a single degree-d map along one involution plus-plane (not yet residual equalizer / G-invariants).",
+  "rows": [
+    {
+      "base_degree_d_minus_k": 12,
+      "free_fibre_rank": 4,
+      "multi_rees_dim": 364,
+      "normal_order": 1,
+      "sym_Eplus_dim": 91,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "base_degree_d_minus_k": 11,
+      "free_fibre_rank": 9,
+      "multi_rees_dim": 702,
+      "normal_order": 2,
+      "sym_Eplus_dim": 78,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "base_degree_d_minus_k": 10,
+      "free_fibre_rank": 8,
+      "multi_rees_dim": 528,
+      "normal_order": 3,
+      "sym_Eplus_dim": 66,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "base_degree_d_minus_k": 9,
+      "free_fibre_rank": 15,
+      "multi_rees_dim": 825,
+      "normal_order": 4,
+      "sym_Eplus_dim": 55,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "base_degree_d_minus_k": 8,
+      "free_fibre_rank": 12,
+      "multi_rees_dim": 540,
+      "normal_order": 5,
+      "sym_Eplus_dim": 45,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "base_degree_d_minus_k": 7,
+      "free_fibre_rank": 21,
+      "multi_rees_dim": 756,
+      "normal_order": 6,
+      "sym_Eplus_dim": 36,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "base_degree_d_minus_k": 6,
+      "free_fibre_rank": 16,
+      "multi_rees_dim": 448,
+      "normal_order": 7,
+      "sym_Eplus_dim": 28,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "base_degree_d_minus_k": 5,
+      "free_fibre_rank": 27,
+      "multi_rees_dim": 567,
+      "normal_order": 8,
+      "sym_Eplus_dim": 21,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "base_degree_d_minus_k": 4,
+      "free_fibre_rank": 20,
+      "multi_rees_dim": 300,
+      "normal_order": 9,
+      "sym_Eplus_dim": 15,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "base_degree_d_minus_k": 3,
+      "free_fibre_rank": 33,
+      "multi_rees_dim": 330,
+      "normal_order": 10,
+      "sym_Eplus_dim": 10,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "base_degree_d_minus_k": 2,
+      "free_fibre_rank": 24,
+      "multi_rees_dim": 144,
+      "normal_order": 11,
+      "sym_Eplus_dim": 6,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "base_degree_d_minus_k": 1,
+      "free_fibre_rank": 39,
+      "multi_rees_dim": 117,
+      "normal_order": 12,
+      "sym_Eplus_dim": 3,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "base_degree_d_minus_k": 0,
+      "free_fibre_rank": 28,
+      "multi_rees_dim": 28,
+      "normal_order": 13,
+      "sym_Eplus_dim": 1,
+      "target": "E_minus",
+      "target_dim": 2
+    }
+  ],
+  "self_sha256": "2654414a234fb954282475dbcec544516b607a3a4aa8ce71ce42a9032725bb12",
+  "total_free_fibre_rank": 256,
+  "total_multi_rees_dim": 5649
+}
