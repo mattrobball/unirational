@@ -1,0 +1,34 @@
+{
+  "P25Y1": "P25Y-DVR-PASS",
+  "P25Y2": {
+    "last_rank_increase_at": 753,
+    "n_points": 1600,
+    "rank_final_lower_bound": 746,
+    "upper_bound_proved": false
+  },
+  "P25Y3": "P25Y3-PREFLIGHT-READY",
+  "P25Y4": "not started (no surviving special point produced)",
+  "artifacts": [
+    "DVR_MODEL.md",
+    "dvr_certificate.json",
+    "dvr_special_fibre_p89.npz",
+    "produce_dvr.py",
+    "verify_dvr.py",
+    "deterministic_points.py",
+    "deterministic_points_p89.npz",
+    "direct_rows_p89.npz",
+    "direct_rows_p89.json",
+    "rank_growth.json",
+    "produce_rows.py",
+    "verify_rows.py",
+    "preflight_p25y3.json"
+  ],
+  "dispatch": "P25Y",
+  "exits_in_order": [
+    "P25Y-DVR-PASS",
+    "P25Y3-PREFLIGHT-READY"
+  ],
+  "headline": "OPEN",
+  "self_sha256": "2bcd61fd02276f9f8c3a51a86c61c83fa6bf9fd7570b0c90ec840988c29ca49e",
+  "theorem_boundary": "Fixed DVR model of V_25 at p=89 with unit pivots and monic basis-lift; deterministic direct landing rows giving F_89-rank lower bound 746; projective support of the subsystem not decided under 8 GiB. No degree-25 exclusion, no covariant, no headline bridge."
+}

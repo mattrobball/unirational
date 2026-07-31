@@ -1,0 +1,147 @@
+{
+  "certificate_type_if_launched": [
+    "all monoms of some degree D lie in J_N (Macaulay rank = dim Sym^D)",
+    "or saturated homogeneous ideal = (1)",
+    "or independently verified projective Nullstellensatz certificate"
+  ],
+  "cheap_probe_already_run": {
+    "best_vanishing_count": 745,
+    "interpretation": "No F_89-point of the 746-cubic subsystem was found among 2001 structured and 5000 random samples; best vanishing was 745/746. Failed search is not emptiness (house rule 5).",
+    "projective_point_found": false,
+    "random_trials": 5000,
+    "structured_candidates": 2001
+  },
+  "checkpoint_plan": {
+    "stages": [
+      "export generators sparse/dense to msolve or Singular format",
+      "degree-bounded F4 with RSS monitor; abort if RSS > 7.5 GiB",
+      "record Hilbert function / leading ideal at each degree",
+      "if unit ideal or full Sym^D, seal emptiness certificate",
+      "if component found, record dimension witnesses without calling points covariants"
+    ],
+    "tmp": "tmp/p25y_work/"
+  },
+  "depends_on": {
+    "P25Y_DVR": "P25Y-DVR-PASS",
+    "rank_final_lower_bound": 746
+  },
+  "dispatch": "P25Y.3",
+  "earliest_degree_dimensionally_able_to_fill": 7,
+  "estimated_peak_RSS_if_forced_d4_membership_scan_GiB": 6.0,
+  "estimated_peak_RSS_if_forced_d7_fill_GiB": ">>64 (not authorized this slot)",
+  "exit_if_stop": "P25Y3-PREFLIGHT-READY",
+  "expected_GB_or_Macaulay_dimensions": {
+    "at_d4_cannot_fill": true,
+    "at_d4_dense_GiB": 4.8751,
+    "at_d7_dense_GiB_upper": 9739021.1679,
+    "at_d7_note": "Crude source-dimension count first allows fill at d=7, but the dense Macaulay matrix is multi-petabyte class; even sparse F4 on 746 dense cubics in 43 variables is expected far above 8 GiB and likely above 64 GiB without specialized structure.",
+    "fill_certificate_degree_floor": 7
+  },
+  "headline": "OPEN",
+  "historical_packets_not_imported": [
+    "tmp/m1_full_plane_block_rank/full_cubic_basis.npz",
+    "certificates/border_support/"
+  ],
+  "independent_verifier_design": {
+    "decisive_invariant": "For emptiness via Sym^D fill: verifier rebuilds the multiplication map from the sealed echelon generators and recomputes rank over F_89, checking equality with binom(43+D-1, D). For GB unit ideal: verifier re-reduces 1 against the sealed basis or recomputes GB from generators.",
+    "no_producer_import": true,
+    "not_sufficient": "reading a boolean from JSON or hash-only checks"
+  },
+  "macaulay_table": [
+    {
+      "degree": 3,
+      "dense_uint8_GiB_upper": 0.0099,
+      "dense_uint8_bytes_upper": 10585740,
+      "dim_Sym_d": 14190,
+      "dimensionally_can_fill": false,
+      "source_dim_upper_N_gen_times_Sym_dm3": 746
+    },
+    {
+      "degree": 4,
+      "dense_uint8_GiB_upper": 4.8751,
+      "dense_uint8_bytes_upper": 5234648430,
+      "dim_Sym_d": 163185,
+      "dimensionally_can_fill": false,
+      "source_dim_upper_N_gen_times_Sym_dm3": 32078
+    },
+    {
+      "degree": 5,
+      "dense_uint8_GiB_upper": 1008.1802,
+      "dense_uint8_bytes_upper": 1082525295324,
+      "dim_Sym_d": 1533939,
+      "dimensionally_can_fill": false,
+      "source_dim_upper_N_gen_times_Sym_dm3": 705716
+    },
+    {
+      "degree": 6,
+      "dense_uint8_GiB_upper": 120981.6294,
+      "dense_uint8_bytes_upper": 129903035438880,
+      "dim_Sym_d": 12271512,
+      "dimensionally_can_fill": false,
+      "source_dim_upper_N_gen_times_Sym_dm3": 10585740
+    },
+    {
+      "degree": 7,
+      "dense_uint8_GiB_upper": 9739021.1679,
+      "dense_uint8_bytes_upper": 10457194352829840,
+      "dim_Sym_d": 85900584,
+      "dimensionally_can_fill": true,
+      "source_dim_upper_N_gen_times_Sym_dm3": 121736010
+    },
+    {
+      "degree": 8,
+      "dense_uint8_GiB_upper": 572167493.616,
+      "dense_uint8_bytes_upper": 614360168228753100,
+      "dim_Sym_d": 536878650,
+      "dimensionally_can_fill": true,
+      "source_dim_upper_N_gen_times_Sym_dm3": 1144318494
+    },
+    {
+      "degree": 9,
+      "dense_uint8_GiB_upper": 25938259710.592,
+      "dense_uint8_bytes_upper": 27850994293036807200,
+      "dim_Sym_d": 3042312350,
+      "dimensionally_can_fill": true,
+      "source_dim_upper_N_gen_times_Sym_dm3": 9154547952
+    },
+    {
+      "degree": 10,
+      "dense_uint8_GiB_upper": 944152653465.5502,
+      "dense_uint8_bytes_upper": 1013776192266539782080,
+      "dim_Sym_d": 15820024220,
+      "dimensionally_can_fill": true,
+      "source_dim_upper_N_gen_times_Sym_dm3": 64081835664
+    }
+  ],
+  "measured_peak_RSS": {
+    "Y1_Y2_peak_mib": 1102.078125,
+    "exploratory_ceiling_GiB": 8,
+    "how_measured": "resource.getrusage(RUSAGE_SELF).ru_maxrss via common_p25x.rss_mib",
+    "support_probe_mib": 206.375
+  },
+  "preferred_methods_in_order": [
+    "sparse homogeneous Groebner/F4",
+    "degree-by-degree Macaulay/Hilbert",
+    "border basis newly derived from J_N (not historical border)",
+    "projective saturation / irrelevant-power certificate"
+  ],
+  "resource_rule": "This worker holds only the 8 GiB exploratory ceiling for P25Y.3. Worker T holds the 64 GiB slot this round. If the job needs more than 8 GiB, write this preflight and stop \u2014 successful outcome.",
+  "ring": {
+    "ambient_projective_space": "P^{42}_{F_89}",
+    "cubic_ambient_dim": 14190,
+    "field": "F_89",
+    "generator_count": 746,
+    "generator_degree": 3,
+    "generator_source": "direct_rows_p89.npz echelon (deterministic sample span)",
+    "homogeneous": true,
+    "rank_is_lower_bound_only": true,
+    "variables": 43
+  },
+  "self_sha256": "3a0f77bd2bb6614dd3414099df4ebfe6b86d7adddf0f4774daf70e108b6008d6",
+  "term_count_estimate": {
+    "note": "Echelon rows are monic-reduced and typically dense over F_89.",
+    "per_cubic_dense_upper": 14190,
+    "total_terms_dense_upper": 10585740
+  },
+  "why_stop_under_8_GiB": "Fill is dimensionally impossible for d < 7. At d=4 the dense Macaulay matrix is already ~5.2 GiB uint8 and cannot fill; incremental echelon toward rank 163185 would exceed 8 GiB if rank is large. At the first possible fill degree d=7 the dense upper bound is astronomical. Launching F4/GB under 8 GiB is not expected to finish with a decisive certificate. Preflight-and-stop is the authorized successful outcome."
+}

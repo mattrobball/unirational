@@ -1,0 +1,12 @@
+{
+  "coordinate_convention": "monic RREF of V_25 in Reynolds seed coordinates; cubic monomials = weak compositions of degree 3 in 43 variables (same order as common_p25x.cubic_monomials)",
+  "echelon_sha256": "d6132cb1a3f9475c6261ca8adc29bbe8079545b3fa5068c655b43b1d6000d164",
+  "headline": "OPEN",
+  "points_sha256": "76a81a3ebcd149ad6bac1c844bea751d194237c4f8d4778e3e0242566eb51e04",
+  "prime": 89,
+  "self_sha256": "1df1978b31614d116ed7bb8fc57f73e3634ba94d33626a3a08c88c5aa20bddac",
+  "shape": [
+    746,
+    14190
+  ]
+}

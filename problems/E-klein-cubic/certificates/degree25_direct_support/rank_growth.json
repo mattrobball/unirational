@@ -1,0 +1,200 @@
+{
+  "basis43_sha256": "4709fdbeea6db5f5c6c17b828dc766c748da9ac656874ae85a60acabe5ce4a54",
+  "block_size": 50,
+  "cubic_ambient_dim": 14190,
+  "echelon_sha256": "d6132cb1a3f9475c6261ca8adc29bbe8079545b3fa5068c655b43b1d6000d164",
+  "fast_cubic_row_direct_check_ok": true,
+  "fast_cubic_row_direct_check_points": 3,
+  "growth": [
+    {
+      "last_rank_increase_at": 50,
+      "n_points": 50,
+      "rank": 50
+    },
+    {
+      "last_rank_increase_at": 100,
+      "n_points": 100,
+      "rank": 100
+    },
+    {
+      "last_rank_increase_at": 150,
+      "n_points": 150,
+      "rank": 148
+    },
+    {
+      "last_rank_increase_at": 200,
+      "n_points": 200,
+      "rank": 198
+    },
+    {
+      "last_rank_increase_at": 250,
+      "n_points": 250,
+      "rank": 248
+    },
+    {
+      "last_rank_increase_at": 300,
+      "n_points": 300,
+      "rank": 297
+    },
+    {
+      "last_rank_increase_at": 350,
+      "n_points": 350,
+      "rank": 347
+    },
+    {
+      "last_rank_increase_at": 400,
+      "n_points": 400,
+      "rank": 397
+    },
+    {
+      "last_rank_increase_at": 450,
+      "n_points": 450,
+      "rank": 447
+    },
+    {
+      "last_rank_increase_at": 500,
+      "n_points": 500,
+      "rank": 497
+    },
+    {
+      "last_rank_increase_at": 550,
+      "n_points": 550,
+      "rank": 545
+    },
+    {
+      "last_rank_increase_at": 600,
+      "n_points": 600,
+      "rank": 595
+    },
+    {
+      "last_rank_increase_at": 650,
+      "n_points": 650,
+      "rank": 645
+    },
+    {
+      "last_rank_increase_at": 700,
+      "n_points": 700,
+      "rank": 694
+    },
+    {
+      "last_rank_increase_at": 750,
+      "n_points": 750,
+      "rank": 743
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 800,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 850,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 900,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 950,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1000,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1050,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1100,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1150,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1200,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1250,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1300,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1350,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1400,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1450,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1500,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1550,
+      "rank": 746
+    },
+    {
+      "last_rank_increase_at": 753,
+      "n_points": 1600,
+      "rank": 746
+    }
+  ],
+  "headline": "OPEN",
+  "holdout": {
+    "n_points": 400,
+    "prime": 199,
+    "rank_lower_bound": 400,
+    "role": "structural holdout, not a substitute for the fixed p=89 model"
+  },
+  "last_rank_increase_at": 753,
+  "n_points": 1600,
+  "plateau": true,
+  "point_generator": {
+    "LCG_A": 48271,
+    "LCG_C": 0,
+    "LCG_M": 2147483647,
+    "coordinate_rule": "five successive LCG outputs mod prime per point",
+    "generator": "Park-Miller LCG",
+    "n_points": 1600,
+    "prime": 89,
+    "reject_zero_vector": true,
+    "seed": 2026073189
+  },
+  "prime": 89,
+  "rank_final": 746,
+  "rank_is_lower_bound_only": true,
+  "row_as_dvr_section_argument": "Each source point x_j \u2208 F_89^5 lifts to a Teichm\u00fcller/integral point x\u0303_j \u2208 O^5 (finite field residue). By P25Y.1 the monic basis p_1,..,p_43 is an O-basis of V_25. Hence p_c(x\u0303_j) is O-integral for c in O^{43}, and F(p_c(x\u0303_j)) is a section of the integral landing ideal I_25 \u2282 O[c]_3. Its reduction mod \ud835\udd2d is exactly the cubic form F(p_c(x_j)) whose coefficient row is stored. Therefore every direct row is the reduction of a genuine section of the fixed DVR landing ideal.",
+  "rss_mib": 1102.078125,
+  "self_sha256": "af8fcdd739e64243ef10985d4ddc9b1b26e4a427845f7f233a1085e5e1fc9715",
+  "upper_bound_note": "No unisolvence or representation-theoretic upper bound is claimed. The recorded rank is a certified lower bound on the F_p-span of coefficient rows of F(p_c) at the deterministic sample. A plateau under sampling is not a span (house rule 8).",
+  "upper_bound_proved": false,
+  "zeta": 78
+}
