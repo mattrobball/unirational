@@ -136,5 +136,27 @@
   },
   "generic_rank_on_line_branch": 1,
   "K_dim_of_fiber_algebra": 1,
-  "Q_dim_of_line_branch_algebra": 21
+  "Q_dim_of_line_branch_algebra": 21,
+  "engine_certificates": {
+    "macaulay2_stdout": "BUILT\nDIM=0\nDEG=21\nGCD_Q11_H21_DEG=0\nGCD_LC_H21_DEG=0\nDIM_PUU=-1\nDEG_PUU=0\nDIM_LC=-1\nDONE\n",
+    "singular_stdout": "SING_DIM=0\nSING_MULT=21\nSING_DIM_PUU=-1\nSING_DIM_LC=-1\nSING_DONE\n",
+    "macaulay2_sha256": "4a6f8e9f7a445a845af7e9ae341ef4e33e78acc8694f3a8b224ed667fae2c955",
+    "singular_sha256": "4bc85bafb9fad5a7358954258346202bdadfeacab0cb896c84fadab02347f4b7",
+    "parsed": {
+      "m2": {
+        "dim": 0,
+        "deg": 21,
+        "gcd_q11_h21": 0,
+        "gcd_lc_h21": 0,
+        "dim_puu": -1,
+        "dim_lc": -1
+      },
+      "singular": {
+        "dim": 0,
+        "mult": 21,
+        "dim_puu": -1,
+        "dim_lc": -1
+      }
+    }
+  }
 }

@@ -1,0 +1,30 @@
+{
+  "format": "pathF-divisor-vector-mod3-v1",
+  "headline": "OPEN",
+  "exit": "PLAN_ONLY",
+  "dispatch": "POST-ELO Path F / F2",
+  "not_executed": true,
+  "plan_document": "certificates/restricted_e3/CUBE_TEST.md",
+  "depends_on_F1": "certificates/restricted_e3/restricted_algebra.json",
+  "target_vector": "(v_E(alpha_R))_E mod 3 on a normal model of R_K",
+  "reduced_target": "alpha_L in L_K^x after identity cube-normalization",
+  "places": [],
+  "unit_test": {
+    "status": "skipped",
+    "reason": "F2 not executed this dispatch"
+  },
+  "decision_exits_defined": [
+    "F-NONCUBE",
+    "F-DIVISOR-CUBE",
+    "F-UNIT-NONCUBE",
+    "F-CUBE"
+  ],
+  "cfoss": "CFOSS I Lemma 3.1 n=3; PDF sha256 86f5b9a156c9afffdb3434670012b48bbfdb058ca22f4b2fefac493d5d7d1e01; Cor 3.12 for alpha_R=w1(xi); pin certificates/pfaffian_point/CFOSS_W1_INPUT.md",
+  "retired_places_not_reopened": ["D3=(f3=0)", "D5=(f5=0)"],
+  "memory_gate_gib": 8,
+  "strict_boundary": [
+    "No valuation vector computed.",
+    "No claim res(xi)=0 or !=0.",
+    "No conic elimination."
+  ]
+}

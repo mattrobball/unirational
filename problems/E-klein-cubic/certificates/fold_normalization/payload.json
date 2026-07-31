@@ -1,0 +1,115 @@
+{
+  "T2_plan": "SERRE_NORMALITY.md",
+  "T2_status": "PLAN_ONLY",
+  "T3_status": "NOT_STARTED",
+  "T4_status": "NOT_STARTED",
+  "accepted_inputs": {
+    "H_prim": {
+      "content": 1,
+      "n_terms": 37992,
+      "path": "certificates/target_branch_global/H_factor/H_primitive_integer.tsv",
+      "role": "irreducible mult-1 factor of Res_u(P,P_u); sealed input, not re-eliminated",
+      "sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+      "total_degree": 43
+    },
+    "branch_line": "(A,B,Y,Z)=(1,2,3,s)",
+    "house_rule": "no re-elimination of u for H; no pointwise positive-dim critical locus",
+    "primitive_P": {
+      "content": 1,
+      "n_terms": 1593,
+      "path": "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv",
+      "sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+      "u_degree": 6
+    },
+    "rss_gate_gib": 8,
+    "simple_fold_gates": [
+      "lc_u(P)",
+      "P_uu",
+      "delta_Cramer",
+      "C_content"
+    ]
+  },
+  "artifacts": {
+    "FINITE_BIRATIONAL.md": "T1 proof",
+    "SEAL.json": "self-hashes after last payload byte",
+    "SERRE_NORMALITY.md": "T2 plan only",
+    "line_fiber_rank.m2.certificate": "M2 dim/deg certificate",
+    "line_fiber_rank.sing.certificate": "Singular dim/mult certificate",
+    "line_fiber_rank_witness.json": "exact line fibre-rank ledger",
+    "payload.json": "machine-readable T1 seal body"
+  },
+  "base_commit": "c5e71be",
+  "claims": {
+    "Frac_S_equals_Frac_B": true,
+    "S_finite_over_B": true,
+    "generic_rank": 1,
+    "selected_component_is_mult1_simple_fold": true
+  },
+  "definitions": {
+    "B": "Q[A,B,Y,Z]/(H_prim)",
+    "K": "Frac(B)",
+    "S": "(B[u]/(P,P_u))[Sigma^{-1}] with Sigma = simple_fold_gates"
+  },
+  "dispatch": "WORKORDER_POST_ELO_CONSTRUCTION.md \u00a73 Dispatch T (T1+T2 plan)",
+  "gate_T1": "T-BIRATIONAL",
+  "headline": "OPEN",
+  "lc_u": {
+    "H_does_not_divide_lc": true,
+    "max_total_degree": 7,
+    "n_terms": 31
+  },
+  "line_witness": {
+    "H21_irreducible": true,
+    "H_line_match_H21": true,
+    "disc_shape": [
+      {
+        "degree": 2,
+        "exponent": 1
+      },
+      {
+        "degree": 11,
+        "exponent": 2
+      },
+      {
+        "degree": 21,
+        "exponent": 1
+      }
+    ],
+    "generic_rank_on_line_branch": 1,
+    "m2": {
+      "deg": 21,
+      "dim": 0,
+      "dim_lc": -1,
+      "dim_puu": -1,
+      "gcd_lc_h21": 0,
+      "gcd_q11_h21": 0
+    },
+    "m2_certificate_sha256": "4a6f8e9f7a445a845af7e9ae341ef4e33e78acc8694f3a8b224ed667fae2c955",
+    "path": "line_fiber_rank_witness.json",
+    "sha256": "caaad19aef363acb921a65775eceeb62a8020d13d149b8e4e8ff39fe851222f5",
+    "singular": {
+      "dim": 0,
+      "dim_lc": -1,
+      "dim_puu": -1,
+      "mult": 21
+    },
+    "singular_certificate_sha256": "4bc85bafb9fad5a7358954258346202bdadfeacab0cb896c84fadab02347f4b7",
+    "subresultant_gcd_degree": 1
+  },
+  "not_proved": [
+    "Serre normality of S (S2+R1)",
+    "conductor ideal",
+    "discriminant contacts mod 3",
+    "(Cl/Pic)[3]",
+    "Problem E resolution"
+  ],
+  "proof_summary": {
+    "component": "B built from mult-1 H selected by H21; Q11 and P_uu=0 excluded by gates",
+    "finiteness": "after inverting lc_u(P), P scales to monic deg 6; S is a quotient of a free rank-6 algebra",
+    "fraction_fields": "over K, (P,P_u)=(u-alpha) reduced because P_uu is a gate",
+    "rank_ge_1": "H divides Res_u(P,P_u) by sealed construction, so gcd deg >= 1 over K",
+    "rank_le_1": "mult-1 of H in Res implies simple double root generically; line branch has subresultant gcd deg 1 and bivariate deg(H21,P,Pu)=21"
+  },
+  "schema": "klein-cubic-postelo-T1-fold-birational-v1",
+  "terminal_marker": "POSTELO_T1_FOLD_BIRATIONAL_PRODUCER_SEALED"
+}

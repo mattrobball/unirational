@@ -1,0 +1,62 @@
+{
+  "base_commit": "c5e71bef45c51136703ed0cf82d425840d9133c9",
+  "binary_question": "res_{K_proj/F}(xi)=0 ?",
+  "binary_status": "UNDECIDED",
+  "cfoss_pin": {
+    "corollary": "CFOSS I, Corollary 3.12 (n odd) for alpha_R = w1(xi)",
+    "lemma": "CFOSS I, Lemma 3.1 (n prime => w1 injective), n=3",
+    "pdf_sha256": "86f5b9a156c9afffdb3434670012b48bbfdb058ca22f4b2fefac493d5d7d1e01",
+    "repo": "certificates/pfaffian_point/CFOSS_W1_INPUT.md"
+  },
+  "decision_exit": "F1_INSTALLED_F2_F3_PLAN_ONLY",
+  "decision_exit_meaning": "R_K = R tensor_F K_proj constructed: R \u2245 F x L with L/F field degree 8; R_K \u2245 K_proj x L_K with L_K/K_proj field degree 8 by S6 rigidity / linear disjointness. alpha_R image and CFOSS I Lemma 3.1 + Cor 3.12 pin recorded. Exact F2 divisor-cube and F3 group-cohomology plans emitted. Binary restriction question not decided. No conic elimination. Paths G/T untouched. Headline remains OPEN.",
+  "dispatch": "POST-ELO Path F (F1 construct + F2/F3 plans)",
+  "files": {
+    "CUBE_TEST.md": "21c3a4e552b93d24bf78bb846771c6c5868f17cfba86f97e9872226b6ae61086",
+    "DECISION.md": "71a6fdb92cd3237bdad3da39a30f2bc9fb1d97a092d1cd6a4ccee1c3022e1f1a",
+    "RESTRICTED_ETALE_ALGEBRA.md": "c37ab06dcb92d598d8470c19757ce569b2e8fe9041110a5e946902fb1a739724",
+    "divisor_vector_mod3.json": "63a8acbb5528b2c7301efc78af360a4d8648b9b2ad175b4b1917d83894740949",
+    "group_cohomology.json": "1fe8a4d5f13b933c7b9e3bad80fc9287c50145d92f16d23808a563f85d4ac600",
+    "produce_restricted_algebra.py": "6a3ffca55b8699fdd9b4acf5373fddfc4d93af44ba0912eab3111e890a140fb2",
+    "restricted_algebra.json": "e9d2708ed670f30e3fd0fdc25655c5d10cd214556e13a9b647a0c284ceaf9f93",
+    "verify_restricted_algebra.py": "4eb19d6c64b8ab9df64cc692461ee01ce31ec2da6252be25dbd03c011dd5aac8"
+  },
+  "format": "pathF-restricted-e3-seal-v1",
+  "headline": "OPEN",
+  "markers": [
+    "PATH_F_RESTRICTED_ETALE_ALGEBRA_ACCEPT",
+    "F2_PLAN_ONLY",
+    "F3_PLAN_ONLY",
+    "BINARY_RES_UNDECIDED"
+  ],
+  "not_claimed": [
+    "res(xi)=0",
+    "res(xi)!=0",
+    "C(K_proj) nonempty or empty",
+    "ed_C(G)=3 or 4",
+    "Aut(L/F)=1",
+    "conic scheme existence"
+  ],
+  "resource_ceiling_bytes": 2147483648,
+  "scope": {
+    "excludes": [
+      "conic elimination",
+      "F2 computation",
+      "F3 computation",
+      "Path G",
+      "Path T",
+      "git mutations"
+    ],
+    "includes": [
+      "F1 restricted etale algebra",
+      "F2 plan",
+      "F3 plan",
+      "F4 consequences ledger"
+    ]
+  },
+  "seal_sha256_of_payload_without_this_field": "90cff585c31782d27d9c04e6bd1dbd023173fdff602e0ff87b43dc23976a516f",
+  "tmp_files": {
+    "tmp/postelo_F/R8_specialization_results.json": "de60f72ea56028536131e724c94bb73dd7cb48b4759fd3602861308cf269d1a5",
+    "tmp/postelo_F/analyze_R8.jl": "23c3454e9a90d6d0b1a165cb5823f5edd1d63d32276c6287679b79cdb07ebe07"
+  }
+}

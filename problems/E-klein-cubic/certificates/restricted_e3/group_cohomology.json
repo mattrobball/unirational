@@ -1,0 +1,127 @@
+{
+  "format": "pathF-group-cohomology-plan-v1",
+  "headline": "OPEN",
+  "status": "PLAN_ONLY",
+  "dispatch": "POST-ELO Path F / F3",
+  "not_executed": true,
+  "binary_question": "res_{K_proj/F}(xi) = 0 in H^1(K_proj, E[3]) ?",
+  "must_agree_with": "F2 divisor-cube / unit-cube test",
+  "cfoss_pin": {
+    "injectivity": "CFOSS I, Lemma 3.1 (n prime => w1 injective), n=3",
+    "class_id": "CFOSS I, Corollary 3.12 (n odd)",
+    "pdf_sha256": "86f5b9a156c9afffdb3434670012b48bbfdb058ca22f4b2fefac493d5d7d1e01",
+    "repo_pin": "certificates/pfaffian_point/CFOSS_W1_INPUT.md"
+  },
+  "objects": {
+    "F": "C(A,B,Y,Z)",
+    "K_proj": {
+      "degree": 6,
+      "monodromy": "S6",
+      "proper_intermediate_fields": false,
+      "galois_closure_of_K_proj_over_F": {
+        "note": "K_proj/F is already S6-primitive of degree 6, so its Galois closure N/F has Gal(N/F) embedding into S6 as a transitive subgroup containing the decomposition action; accepted packets give geometric monodromy S6, so Gal(N/F) ≅ S6 and K_proj = N^H for H ≅ S5 (point stabilizer) up to conjugacy.",
+        "subgroup_H": "conjugate of a standard S5 < S6 (stabilizer of a root of chi_u)",
+        "index": 6
+      }
+    },
+    "E": "Jac(C)/F, base-changed to N and to K_proj",
+    "E3": "kernel of [3] on E; Gal-module via rho: Gal(Fbar/F) -> GL_2(F_3)",
+    "xi": "explicit class in H^1(F, E[3]) with w1(xi)=alpha_R",
+    "Gamma": "Gal(Fbar/F) (profinite); computations use finite quotients through the 3-division field and N",
+    "Gamma_K": "Gal(Fbar/K_proj) = decomposition/open subgroup fixing K_proj"
+  },
+  "exact_cocycle_data": {
+    "translation_cocycle": {
+      "description": "From the installed flex-Cech / translation circuit: M0 = L(P2)^{-1} L(P1) gives a PGL_3-valued cocycle on the flex algebra; scalar cochain ell produces M in GL_3(R) with det M = alpha_R.",
+      "source": "tmp/pfaffian_depressed_alpha_r/ (755647-node DAG) + first_descent_interface.json",
+      "values": "E[3]-valued 1-cocycle xi_sigma recovered from w(xi_sigma) = sigma(gamma)/gamma with gamma^3 = alpha_R (Hilbert 90 in Rbar^x)"
+    },
+    "restriction_map": {
+      "algebraic": "res: H^1(F, E[3]) -> H^1(K_proj, E[3])",
+      "on_cocycles": "restrict continuous cocycles along Gamma_K -> Gamma",
+      "on_Kummer": "alpha_R |-> image in R_K^x / R_K^{x3}  (F1)"
+    },
+    "inflation_restriction_sequence": {
+      "exact_fragment": "0 -> H^1(Gal(N/F), E[3](N)) -> H^1(F, E[3]) -> H^1(N, E[3])^{Gal(N/F)}",
+      "use": "reduce res_{K_proj/F} to a finite-group cohomology computation on Gal(N/F) ≅ S6 once E[3] is adjoined or the module is known over N"
+    }
+  },
+  "computation_shape": {
+    "phase_F3_A_galois_closure": [
+      "Identify Gal(N/F) ≅ S6 from accepted monodromy of chi_u (already S6 on the (1,2,3,s) line and claimed geometrically).",
+      "Fix H = stab(root) ≅ S5 with K_proj = N^H.",
+      "Do not re-prove monodromy; hash-pin the accepted monodromy certificates."
+    ],
+    "phase_F3_B_E3_module": [
+      "Compute the 3-division field M = F(E[3]) or its compositum MN with N.",
+      "Determine image G = rho(Gal(Fbar/F)) ⊆ GL_2(F_3) as a concrete matrix group (order dividing 48).",
+      "Present E[3] as an explicit F_3[G]-module of rank 2 (or as Gal(N)-module after inflation).",
+      "Aut(L/F) ≅ N_G(H_v)/H_v for H_v = stab of a nonzero vector — compute here if needed; do not assume 1."
+    ],
+    "phase_F3_C_finite_cohomology": [
+      "Compute H^1(G, E[3]) by cocycle enumeration or Magma/GAP/Hecke cohomology for the small group G (|G|≤48).",
+      "Identify the class [xi] with the Kummer class of alpha_R under the CFOSS isomorphism w1.",
+      "Compute restriction along H_K := rho(Gal(Fbar/K_proj)) ⊆ G (or the preimage of H in the extension 1->Gal(M/N)->... ), evaluating res([xi]) in H^1(H_K, E[3])."
+    ],
+    "phase_F3_D_cross_check": [
+      "Compare boolean res(xi)=0 with F2 exit (cube / noncube of alpha_L).",
+      "Disagreement is a certificate bug, not a mathematical fork — both must use the same xi and the same CFOSS convention."
+    ]
+  },
+  "dimensions_and_memory": {
+    "group_orders": {
+      "GL2_F3": 48,
+      "S6": 720,
+      "S5_stabilizer": 120,
+      "max_cocycle_naive_H1_GL2": "≤ 48^2 = 2304 pairs before cocycle/coboundary reduction; trivial RSS"
+    },
+    "E3_field_degree": {
+      "max_over_F": 48,
+      "L_degree": 8,
+      "compositum_with_K_proj": "≤ 48*6/1 = 288 if linearly disjoint from N; often smaller"
+    },
+    "memory_floors": {
+      "finite_group_cohomology_GAP": "< 256 MiB",
+      "degree_48_number_field_specialization": "≤ 4 GiB for nfinit/aut if absolute",
+      "generic_function_field_compositum": "avoid dense; keep relative presentations; exploratory ceiling 8 GiB"
+    },
+    "gate": "stop and report floors before any job expected to exceed 8 GiB RSS"
+  },
+  "certificate_format_when_executed": {
+    "path": "certificates/restricted_e3/group_cohomology.json (replace PLAN_ONLY body)",
+    "required_fields": [
+      "exit: F-RES-ZERO | F-RES-NONZERO | PLAN_ONLY",
+      "galois_image_matrices or group_id in GL2(F3)",
+      "cocycle_representative (finite table)",
+      "restriction_to_H_K evaluated",
+      "agreement_with_F2: true",
+      "cfoss pin strings",
+      "sources_sha256",
+      "seal_sha256_of_payload_without_this_field last"
+    ],
+    "forbidden_fields": ["timing", "wall_clock", "cpu_seconds"]
+  },
+  "independent_verifier_design": {
+    "file": "certificates/restricted_e3/verify_group_cohomology.py (when executed)",
+    "rules": [
+      "Does not import the producer that enumerated cocycles.",
+      "Recomputes H^1 for the sealed finite group and module from matrices.",
+      "Re-evaluates restriction of the sealed cocycle to H_K.",
+      "Checks w1(xi) matches alpha_R class in R_K^x/R_K^{x3} on a nonempty open (identity cube + one nonzero component norm check).",
+      "Checks boolean agreement with divisor_vector_mod3.json exit.",
+      "Terminal markers: PATH_F_F3_RES_ZERO_ACCEPT or PATH_F_F3_RES_NONZERO_ACCEPT."
+    ]
+  },
+  "checkpoints": [
+    "seal Gal image G ⊆ GL2(F3) and module structure",
+    "seal finite cocycle for xi",
+    "seal H_K and res(xi)",
+    "seal agreement bit with F2"
+  ],
+  "strict_boundary": [
+    "Plan only in this dispatch.",
+    "Does not decide res(xi).",
+    "Does not run conic elimination.",
+    "Finite-field module discovery is not a char-0 Gal-image certificate until lifted."
+  ]
+}

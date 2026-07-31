@@ -1,0 +1,17 @@
+{
+  "FINITE_BIRATIONAL_sha256": "a96eb8f56adb3f63b03ecf6513b665be8ccd6585d028f658e151753f65a35ed1",
+  "SERRE_NORMALITY_sha256": "1144e1dd1f54df22394653602b7f0a0d47a453ed635c00f18d9c1ff4fe6e4228",
+  "gate_T1": "T-BIRATIONAL",
+  "headline": "OPEN",
+  "line_fiber_rank_m2_certificate_sha256": "4a6f8e9f7a445a845af7e9ae341ef4e33e78acc8694f3a8b224ed667fae2c955",
+  "line_fiber_rank_sing_certificate_sha256": "4bc85bafb9fad5a7358954258346202bdadfeacab0cb896c84fadab02347f4b7",
+  "line_fiber_rank_witness_sha256": "caaad19aef363acb921a65775eceeb62a8020d13d149b8e4e8ff39fe851222f5",
+  "payload_sha256": "b6dfbbaa3433f1f1519be015de3e2350c7873a9003d98e26463481b4978fd2a6",
+  "schema": "klein-cubic-postelo-T1-fold-birational-seal-v1",
+  "seal_sha256": "07eedad2260559143a01ba7f38aac63d0602e3045fd120843d33c1c4be55fdca",
+  "sources_sha256": {
+    "certificates/target_branch_global/H_factor/H_primitive_integer.tsv": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
+  },
+  "terminal_marker": "POSTELO_T1_FOLD_BIRATIONAL_PRODUCER_SEALED"
+}
