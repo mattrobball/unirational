@@ -227,6 +227,21 @@ it (`DIRECTOR_CORRECTION_C0.md`, `ROUTE_G_VERDICT.md` are the templates),
 stating the error, the independently recomputed truth, and why the exit does or
 does not change.
 
+### 5.3a A passing verifier does not vouch for the prose around it
+
+`verify_t81.py` genuinely recomputes its decisive invariant (the witness
+points) and returned `FOLD_DECISION_T81_VERIFIER_ACCEPT`. One sentence away,
+the same file claimed the `(H,s_1)|_Λ` Jacobian was invertible "(dets 96 and
+29)". That claim is false — `∇H = 0` at those points, so the determinant is
+0 — and `grep -i "jac\|det"` over the packet's three scripts returns *nothing*:
+the computation never existed. The numbers match a `P_uu` value and a `C` gate
+value from two different points in the packet's own JSON.
+
+So: verifier scope is not packet scope. Read the prose claims and ask of each
+one, "which line of code produced this number?" A claim with no computation
+behind it is the cheapest possible error to make and the easiest to miss, and
+a green marker actively camouflages it. See `DIRECTOR_CORRECTION_T8.md`.
+
 ### 5.4 Audit the *citations*, not just the computations
 
 A packet can be arithmetically right and still under-cited, which makes it
@@ -351,11 +366,13 @@ were not evidence of emptiness — exactly the failure mode §6 warns about.
 
 1. ~~A 64–96 GiB job to prove Track T's `s_1`-unit lemma.~~ **Superseded.**
    Do not buy a proof of a statement the evidence says is false. Redirect the
-   slot to the *counterexample*: the isolated modular binodal points have
-   invertible `(H,s_1)|_Λ` Jacobians and are Hensel-liftable, so a CRT/RUR
-   lift of the zero-dimensional plane section in the `(s,t,u_1,u_2)` binodal
-   formulation should reach `T8-S1-NONUNIT` far below 64 GiB. Cheap first,
-   preflight only if it stalls.
+   slot to the *counterexample* — dispatched 2026-07-31 as Request T8-N1.
+   **Correction:** the `(H,s_1)|_Λ` Jacobian is **not** invertible at the
+   witnesses; `∇H = 0` there (see `DIRECTOR_CORRECTION_T8.md`), so that system
+   is singular and naive Hensel fails. The lift goes through the **deflated**
+   system `P(u_1)=P_u(u_1)=P(u_2)=P_u(u_2)=0` in `(s,t,u_1,u_2)`, whose
+   Jacobian factors as `± P_uu(u_1)·P_uu(u_2)·det[dh_i·x_∂]` with
+   `dh_i = ∇_x P(x,u_i)` — nonzero at all three witnesses (±88, ±95, ±20).
 2. A 64 GiB job for P25Y.3 projective support (`preflight_p25y3.json` is
    written and waiting).
 3. If `T8-S1-NONUNIT` lands, T8.3/T8.4 are dead as written (both are gated on
