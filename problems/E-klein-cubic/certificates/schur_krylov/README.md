@@ -35,8 +35,28 @@ intermediate-field block reduction exists (H maximal, Aut(L/F)=1).  Non-scalar
 λ-specialisations and τ=α are lossy.  Modular rank discovery lives under
 `tmp/pathA_collapse/` (shape only; not N-A).
 
+## Successor: \((A_{\mathrm{empty}})\) via \(G/D_{12}\) orbit code
+
+| Item | Status |
+|---|---|
+| Exit | `A_EMPTY_UNDECIDED` |
+| Task 1 — expand \(V_Z\) | **not available** (`vz_power_basis.*`) |
+| Task 2 — orbit code | formulated (`orbit_code.*`) |
+| Task 3 — index \(K_{34}\) | \(55\times 140\) dual to sealed \(\varphi_\tau\) \(140\times 55\); no discrepancy |
+| \(N\text{-}A\) | not claimed |
+
+Replay:
+
+```bash
+/opt/homebrew/bin/python3 -u certificates/schur_krylov/verify_a_empty.py
+```
+
+Expected markers: `SCHUR_KRYLOV_A_EMPTY_UNDECIDED`, `HEADLINE_OPEN`, `N_A_NOT_CLAIMED`.
+
 ## Boundary
 
 No qualifying curve is constructed.  `N-A` is not claimed (would be non-headline
-even if claimed).  Expanded coefficients of μ and of z_i in F are not produced;
-the multiplication and incidence APIs are sealed structurally.  Headline OPEN.
+even if claimed; closes only the degree-19 Krylov route).  Expanded coefficients
+of μ and of z_i in F are not produced; the multiplication and incidence APIs are
+sealed structurally; the orbit-code home of \((A_{\mathrm{empty}})\) is installed
+but the rank assertion is undecided.  Headline OPEN.

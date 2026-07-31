@@ -1,0 +1,61 @@
+{
+  "packet": "certificates/schur_krylov",
+  "task": "1_vz_power_basis_expansion",
+  "headline": "OPEN",
+  "expansion_status": "NOT_AVAILABLE",
+  "terminal_marker": "SCHUR_KRYLOV_VZ_POWER_BASIS_NOT_EXPANDED",
+  "requested": {
+    "object": "4x55 matrix a_ik in F with z_i = sum_k a_ik alpha^k",
+    "basis": "power basis 1, alpha, ..., alpha^54 of L/F",
+    "source_interfaces": [
+      "certificates/schur_krylov/field_algebra.json",
+      "certificates/schur_krylov/marked_point.json"
+    ]
+  },
+  "sealed_A2_flags": {
+    "mu_coefficients_expanded_in_invariants": false,
+    "coordinates_expanded_coefficients_in_F": false
+  },
+  "obstruction": {
+    "summary": "Expanded power-basis coordinates require an explicit model of F=K_Schur and of L=E^H plus the torsor-dependent hyperplane; none of these are sealed.",
+    "missing": [
+      "generators/relations for F = C(P(V_6))^G",
+      "primitive element alpha in L=E^H with expanded mu in F[t]",
+      "F-point M in the good hyperplane open U",
+      "coordinates of twisted D12-line meet M as elements of L"
+    ],
+    "not_a_blocker_for": [
+      "abstract dim V_Z = 4",
+      "multiplication API of L/F",
+      "incidence shape and phi_tau / K_34 dimensions",
+      "orbit-code formulation over the permutation module after base change"
+    ]
+  },
+  "weaker_data": {
+    "dim_V_Z": 4,
+    "reason_dim": "H_Z(1)=4",
+    "hilbert_function_d0_to_6": [1, 4, 10, 19, 31, 45, 55],
+    "geometric_construction": "unique point of twisted D12-line meet M_L",
+    "base_change_description": "V_Z tensor barF = image of H^0(O_M(1)) -> barF^{G/H}, rank 4, support full orbit",
+    "fibre_witness": {
+      "scope": "shape only; not generic Schur point",
+      "rank_Q_span": 4,
+      "paths": [
+        "tmp/pathA_krylov/fibre_marked_point.json",
+        "tmp/pathA_krylov/d12_line_basis.json"
+      ]
+    }
+  },
+  "theorem_boundary": {
+    "proved": [
+      "dim_F V_Z = 4 from Hilbert function",
+      "existence of z in P3(L) from twisted line construction",
+      "no expanded a_ik is present in sealed A2"
+    ],
+    "not_proved": [
+      "explicit a_ik in F",
+      "explicit mu in F[t]",
+      "identification of V_Z with a named isotypic piece over F"
+    ]
+  }
+}

@@ -1,6 +1,18 @@
 {
+  "A_empty": {
+    "decision_exit": "A_EMPTY_UNDECIDED",
+    "meaning": "Expanded power-basis coordinates of V_Z not available from sealed A2; G/D12 orbit code and K_34/phi_tau equivalence formulated; remaining obstruction is the unmarked position of geometric V_Z in the permutation module (no minor certified, no no-curve theorem). Not A_EMPTY_PROVED, not A_EMPTY_REFUTED.",
+    "remaining_obstruction": "no expanded V_Z coordinates and no geometric no-degree-19-curve theorem for the marked G/H orbit on X_T cap M",
+    "tasks": {
+      "1_vz_power_basis": "NOT_AVAILABLE",
+      "2_orbit_code": "FORMULATED",
+      "3_index_reconciliation": "NO_DISCREPANCY_55x140_dual_to_140x55"
+    },
+    "terminal_marker": "SCHUR_KRYLOV_A_EMPTY_UNDECIDED_HEADLINE_OPEN"
+  },
+  "A_empty_decision_exit": "A_EMPTY_UNDECIDED",
   "N_A_claimed": false,
-  "N_A_note": "N-A would require proving K empty and exhaustiveness of the parametrization criterion; it would close only the degree-19 Krylov rescue route, not the headline.  Not claimed.  Modular full-rank sampling on random V_Z is not N-A.",
+  "N_A_note": "N-A would require proving K empty (equivalently A_empty) and exhaustiveness of the parametrization criterion; it would close only the degree-19 Krylov rescue route, not the headline. Not claimed. Modular full-rank sampling is not N-A. A_EMPTY_UNDECIDED: orbit code formulated, V_Z not expanded.",
   "P_A_claimed": false,
   "artifact_paths": [
     "certificates/schur_krylov/P1_REDUCTION.md",
@@ -12,6 +24,13 @@
     "certificates/schur_krylov/krylov_incidence.json",
     "certificates/schur_krylov/STRUCTURAL_COLLAPSE.md",
     "certificates/schur_krylov/structural_collapse.json",
+    "certificates/schur_krylov/A_EMPTY.md",
+    "certificates/schur_krylov/vz_power_basis.md",
+    "certificates/schur_krylov/vz_power_basis.json",
+    "certificates/schur_krylov/orbit_code.md",
+    "certificates/schur_krylov/orbit_code.json",
+    "certificates/schur_krylov/orbit_code.g",
+    "certificates/schur_krylov/verify_a_empty.py",
     "certificates/schur_krylov/candidate_verifier.py",
     "certificates/schur_krylov/verify_p1_reduction.py",
     "certificates/schur_krylov/verify_field_algebra.py",
@@ -23,14 +42,17 @@
     "certificates/schur_krylov/SEAL.json",
     "tmp/pathA_collapse/modular_rank_profile.py",
     "tmp/pathA_collapse/modular_rank_profile.json",
-    "tmp/pathA_collapse/memory_floors.json"
+    "tmp/pathA_collapse/memory_floors.json",
+    "tmp/a_empty/compare_ranks.json",
+    "tmp/a_empty/orbit_perm.out"
   ],
-  "date": "2026-07-30",
+  "date": "2026-07-31",
   "decision_exit": "A-STOP",
-  "decision_exit_meaning": "A1-PASS and A2 interfaces sealed; A3 incidence formulated; cycle-2 structural collapse audit: full PGL2 gauge lossless (55->52) but residual degree >>3 still exceeds 8 GiB (~20.5 GiB Macaulay D=3 at n=52); no F-rational isotypic/intermediate-field block reduction (H maximal, Aut(L/F)=1); non-scalar lambda and tau=alpha specialisations lossy; minimal irreducible system is Fitting of structured 140x55 phi_tau on 52-dim PGL2 slice; modular discovery shape-only; no qualifying curve; not N-A",
+  "decision_exit_meaning": "A1-PASS and A2 interfaces sealed; A3 incidence formulated; cycle-2 structural collapse audit: full PGL2 gauge lossless (55->52) but residual degree >>3 still exceeds 8 GiB; no F-rational isotypic/intermediate-field block reduction; minimal irreducible system is Fitting of structured 140x55 phi_tau on 52-dim PGL2 slice. Successor A_empty attack via G/D12 orbit code: V_Z power basis NOT expanded; orbit code formulated with K_34 <-> incidence equivalence; exit A_EMPTY_UNDECIDED; not N-A; headline OPEN.",
   "deliverable_sha256": {
+    "A_EMPTY.md": "1c8fdcebde184c231fc9499b023c65261b08d05b64afa8d9ba0ecf535dca8168",
     "P1_REDUCTION.md": "a682b946b50f717038d04062d129abb11f4b742c6e626bbde59b87116b17d848",
-    "README.md": "fd7586365583260f2dd996fbfd0886f35e5a8c3588e6b10cd3d2a5fc4698428d",
+    "README.md": "5621c4ce53bdc0af0402aa3163ef694e138e8171701bb43fd26012f6794fab3a",
     "STRUCTURAL_COLLAPSE.md": "cab5a58b8ae32838ef0fd04f7b8b4ccc59f2f9e419fdce3c207054b3d7e67ecc",
     "candidate_verifier.py": "71c444db84d8d0bed8ab943cfd523ec3798902fa730b329a647746fd593c8b99",
     "field_algebra.json": "57750a057fa7833625267cc2cb9af610b556735d0d90529e8417dbb3e661e3db",
@@ -39,13 +61,19 @@
     "krylov_incidence.md": "75f374e4eb2fe29fa736fa6fd7eac2bc4e03fb26d5cb8163496d4747b1b9fc11",
     "marked_point.json": "ef7aac085ea4115bb3f6c2b41f4385e2ec99e72b01b215e49076c9313e696db3",
     "marked_point.md": "3e5fadab51d260e6cdfd00d6174e5bb1deb3b5d65b5a4aa38e7dd0c082796363",
+    "orbit_code.g": "779f5689c89c83c5e10aa291eb4c96db3934d32357f98142f504e416b00958b9",
+    "orbit_code.json": "2ea6e550b0e97f2d39bfdc8ee16ea1e379ffb11378cc26d294df59e8887a5b9c",
+    "orbit_code.md": "ad1c6426d857024be948c3d6b38546fe6265c4b6e2fe11b8b233644fe16b341f",
     "structural_collapse.json": "a9f88768b0ca2ee042d3572b92f774f76382aae121fbd69187bf7abd3b4ff624",
-    "verify.py": "6e41ab8efa916606839b4112bb2ce1f6d1d31c401fa0d8c441899567d39b2f4f",
+    "verify.py": "b0ea478775527d2e7b63ca7b498e95d8c4c18ce0ff4fa8aecbbd40db16074e69",
+    "verify_a_empty.py": "9b3ba00cc2cd4336a0212badc2285cbf7172fcc8d9c86f1e5635a17377a81c03",
     "verify_field_algebra.py": "bc777dac66888e70a3eab809fba77f424fed74fa8b28072856f1a801f3d3681d",
     "verify_krylov_incidence.py": "ffd4ac6a0be27b8ef64219fb1aa6c4368cc15dd0b351ddde07983b5a9c8060b4",
     "verify_marked_point.py": "338981c4bd81038eabcaaedec56409230f106aa757ccef864cd07607d9f9fa30",
     "verify_p1_reduction.py": "6fe13d1489b49ffa2180fb63718d6f7da187ea864c0f02a7f711863e67ff98f1",
-    "verify_structural_collapse.py": "0d17cb8c6ff44a4fe336b0f09806c81379becbbe9f4b093d80c03aa856c49491"
+    "verify_structural_collapse.py": "0d17cb8c6ff44a4fe336b0f09806c81379becbbe9f4b093d80c03aa856c49491",
+    "vz_power_basis.json": "70b66118fb1573194928da68ee40100a84131c799052f69fbf55926d3e24c919",
+    "vz_power_basis.md": "20086f2a437e536ea0711d4e7473e29904173933904346059cb062f83cea7b65"
   },
   "forbidden_edits_respected": [
     "HANDOFF.md",
@@ -58,18 +86,20 @@
     "A2_field_algebra": "SEALED",
     "A2_marked_point": "SEALED",
     "A3": "A-STOP",
-    "A3_structural_collapse": "A-STOP"
+    "A3_structural_collapse": "A-STOP",
+    "A_empty": "A_EMPTY_UNDECIDED"
   },
   "headline": "OPEN",
   "intended_commit_split": [
     "certificates/schur_krylov: Gate A1 P1_REDUCTION (A1-PASS, odd-index gcd(55,2)=1)",
     "certificates/schur_krylov: Gate A2 field_algebra + marked_point interfaces",
     "certificates/schur_krylov: Gate A3 krylov incidence formulation, candidate_verifier",
-    "certificates/schur_krylov: A3 structural collapse audit -- no lossless path under 8 GiB, A-STOP refined"
+    "certificates/schur_krylov: A3 structural collapse audit -- no lossless path under 8 GiB, A-STOP refined",
+    "certificates/schur_krylov: A_empty orbit-code attack -- V_Z not expanded, A_EMPTY_UNDECIDED"
   ],
   "packet": "certificates/schur_krylov",
   "path": "A",
-  "pinned_base": "e050464",
+  "pinned_base": "17e0e5f",
   "proved": [
     "P1 reduction: qualifying C with p=19t+1 is isomorphic to P1_F (odd-index step explicit)",
     "L/F monogenic degree 55 with companion multiplication API over F",
@@ -84,24 +114,29 @@
     "Memory floors after collapse: Macaulay D=3 at n=52 is ~20.5 GiB > 8 GiB; D>=19 needs n<=4",
     "No lossless collapse reaches n<=4",
     "Modular rank profile on random V_Z: 80/80 full rank; planted control detects drop (shape only)",
-    "Candidate verifier implements S1-S6; rank-only points rejected"
+    "Candidate verifier implements S1-S6; rank-only points rejected",
+    "Index reconciliation: K_34 block Krylov is 55x140; dual to sealed phi_tau 140x55; s=34 = 55-20-1 sharp for obstructing containment",
+    "B_34 rank < 55 iff incidence at primitive tau (residue/moment duality)",
+    "G/D12 permutation module Ind = 1+5a+5b+2*10+12a+12b; subdegrees 1,3,3,6,6,6,6,12,12 geometric only",
+    "Task 1: expanded power-basis coordinates of V_Z not available from sealed A2 (obstruction named)"
   ],
   "remains": [
     "Expanded coefficients of mu in F = K_Schur",
     "Expanded power-basis coordinates of z in L",
+    "Proof or refutation of (A_empty) for geometric V_Z",
     "Exact residual generators of K after linear elimination (over gate)",
     "Existence or emptiness of a qualifying degree-19 curve",
     "Headline G-unirationality of the Klein cubic",
-    "Any future theorem forcing tau onto a <=4-dimensional locus or proving K empty geometrically"
+    "Any future geometric no-curve theorem for the marked G/H orbit on X_T cap M"
   ],
   "resource_gate": {
     "dense_elimination_authorized": false,
     "exploratory_RSS_GiB": 8,
-    "measured_bottleneck": "after lossless PGL2 gauge, n=52 nonlinear vars; residual minor degree >>3; Macaulay D=3 already ~20.5 GiB exact; true residual far larger; n<=4 required for D=19 under 8 GiB and no lossless collapse reaches n<=4",
+    "measured_bottleneck": "after lossless PGL2 gauge, n=52 nonlinear vars; residual minor degree >>3; Macaulay D=3 already ~20.5 GiB exact; true residual far larger; n<=4 required for D=19 under 8 GiB and no lossless collapse reaches n<=4; A_empty attack does not re-open dense elimination",
     "minimal_irreducible_nonlinear_vars": 52,
     "no_lossless_collapse_under_8GiB": true
   },
-  "seal_sha256_self": "908f37a20484e0abd87bef3c2eb803d20b74728797fd9b5cc66aadf5ba64f05b",
-  "terminal_marker": "SCHUR_KRYLOV_PATH_A_A_STOP_HEADLINE_OPEN",
-  "workorder": "WORKORDER_ELO_TEN_PATHS.md Path A Gates A1-A3 + cycle-2 structural collapse"
+  "seal_sha256_self": "264bea0ab411634f7a289320ee0a5f76d325a44943ba9145ca7cf0deba217a4d",
+  "terminal_marker": "SCHUR_KRYLOV_A_EMPTY_UNDECIDED_HEADLINE_OPEN",
+  "workorder": "WORKORDER_POST_ELO_CONSTRUCTION.md Path A + director A_empty orbit-code dispatch; WORKORDER_ELO_TEN_PATHS.md Path A safeguards"
 }

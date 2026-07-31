@@ -1,0 +1,58 @@
+{
+  "packet": "certificates/schur_krylov",
+  "task": "2_orbit_code_G_D12",
+  "headline": "OPEN",
+  "exit_contribution": "A_EMPTY_UNDECIDED",
+  "terminal_marker": "SCHUR_KRYLOV_ORBIT_CODE_FORMULATED_A_EMPTY_UNDECIDED",
+  "group": {
+    "G": "PSL_2(F_11)",
+    "G_order": 660,
+    "H": "D_12",
+    "H_order": 12,
+    "index": 55,
+    "H_maximal": true,
+    "intermediate_subgroups": 0,
+    "N_G_H_over_H": 1,
+    "Aut_L_F": 1
+  },
+  "subdegrees": [1, 3, 3, 6, 6, 6, 6, 12, 12],
+  "subdegrees_are_F_splitting_of_L": false,
+  "num_double_cosets_H_G_H": 9,
+  "permutation_module": {
+    "name": "Ind_H^G 1",
+    "dimension": 55,
+    "irr_degrees_of_G": [1, 5, 5, 10, 10, 11, 12, 12],
+    "decomposition_multiplicities": [1, 1, 1, 0, 2, 0, 1, 1],
+    "decomposition_string": "1 + 5a + 5b + 2*10 + 12a + 12b",
+    "degree_11_appears": false
+  },
+  "V_Z_position": {
+    "over_F": "4-dimensional F-subspace of field L; not a G-submodule over F",
+    "after_base_change": "image of H^0(O_M(1)) in barF[G/H], rank 4, full support on G/H",
+    "specialness_required_for_A_empty": true,
+    "expanded_coordinates": false,
+    "named_isotypic_identification_over_F": false
+  },
+  "Krylov": {
+    "K_s_definition": "sum_{j=0}^s tau^j V",
+    "index_s": 34,
+    "block_matrix_B34_shape": [55, 140],
+    "blocks": 35,
+    "powers_of_tau": "0..34",
+    "columns_per_block": 4,
+    "full_rank_means": "K_34(tau,V_Z) = L",
+    "equivalent_to_incidence_empty_on_primitive_locus": true,
+    "sealed_phi_tau_shape": [140, 55],
+    "phi_tau_kernel_nontrivial_iff_rank_B34_lt_55": true
+  },
+  "A_empty_statement": "for all primitive tau in L, rank B_34(tau, V_Z) = 55",
+  "remaining_obstruction": "no expanded V_Z coordinates and no geometric no-curve theorem for the marked G/H orbit on X_T cap M; orbit code formulates but does not evaluate the rank",
+  "forbidden": [
+    "general-purpose elimination of Fitting(phi_tau)",
+    "treating subdegrees as F-splitting of L",
+    "advertising modular ranks as char-0",
+    "naive G->PGL2 from twisted hyperplane section"
+  ],
+  "gap_script": "certificates/schur_krylov/orbit_code.g",
+  "gap_marker": "ORBIT_CODE_GAP_OK"
+}

@@ -22,6 +22,7 @@ GATES = [
     ("verify_krylov_incidence.py", "SCHUR_KRYLOV_A3_INCIDENCE_FORMULATED_A_STOP"),
     ("verify_structural_collapse.py", "SCHUR_KRYLOV_A3_STRUCTURAL_COLLAPSE_A_STOP"),
     ("candidate_verifier.py", "CANDIDATE_VERIFIER_READY"),
+    ("verify_a_empty.py", "SCHUR_KRYLOV_A_EMPTY_UNDECIDED"),
 ]
 
 
@@ -65,6 +66,7 @@ def main() -> int:
     assert seal["gates"]["A2_field_algebra"] == "SEALED"
     assert seal["gates"]["A2_marked_point"] == "SEALED"
     assert seal["gates"]["A3"] == "A-STOP"
+    assert seal.get("gates", {}).get("A_empty") == "A_EMPTY_UNDECIDED"
     assert seal.get("N_A_claimed") is False
     assert "HANDOFF.md" in seal.get("forbidden_edits_respected", [])
 
