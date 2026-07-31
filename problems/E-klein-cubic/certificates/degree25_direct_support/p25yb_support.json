@@ -1,0 +1,93 @@
+{
+  "direct_rows": {
+    "echelon_sha256": "d6132cb1a3f9475c6261ca8adc29bbe8079545b3fa5068c655b43b1d6000d164",
+    "rank": 746,
+    "rank_is_lower_bound_only": true,
+    "shape": [
+      746,
+      14190
+    ],
+    "source": "direct_rows_p89.npz"
+  },
+  "dispatch": "P25Y-B",
+  "elapsed_s": 25.431,
+  "exit": "P25YB-F4-SLOT-REQUEST",
+  "fitting_probe": {
+    "interpretation": "Evaluation rank of the 746 cubics in k at fixed random q0. A common zero in k\u22600 is only a sample hit, not a covariant. Not a Nullstellensatz certificate for P^{42}.",
+    "k_samples_per_trial": 120,
+    "method": "evaluation_rank_at_random_k_for_random_q0",
+    "specialized_ranks": {
+      "max": 84,
+      "mean": 84.0,
+      "median": 84,
+      "min": 84
+    },
+    "trials": 20,
+    "trials_with_nonzero_k_common_zero_sample": 0
+  },
+  "headline": "OPEN",
+  "historical_comparison": {
+    "note": "746-row ideal defined independently. Pure-K\u00b3 border test is the independent recompute of the 1\u2295K\u2295Sym\u00b2K suggestion. Quarantined 842-row / rank-28 packets were not imported.",
+    "status": "discovery_only_after_independent_definition"
+  },
+  "holdout_p199": {
+    "decision_fibre": 89,
+    "prime": 199,
+    "recorded": {
+      "n_points": 400,
+      "prime": 199,
+      "rank_lower_bound": 400,
+      "role": "structural holdout, not a substitute for the fixed p=89 model"
+    },
+    "role": "structural holdout, never a substitute for the fixed p=89 model"
+  },
+  "linear_Q_probe": {
+    "dim_Sym3_Q": 9139,
+    "n_Q3_monoms": 9139,
+    "n_eval_samples": 900,
+    "note": "Lower bound on rank of pure-Q cubic conditions on P(Q)=P^{36} by random evaluation. Full support of J_N needs F4.",
+    "rank_Q3_block_lower_bound": 746
+  },
+  "molien_context": {
+    "P25Y_FULL_ROWSPACE_746": "NOT_SEALED",
+    "m_75": 2343,
+    "observed_746_below_bound": true,
+    "row_rank_upper_bound": 2343
+  },
+  "prime": 89,
+  "qk_frame": {
+    "K_dim": 6,
+    "Q_dim": 37,
+    "artifact": "tmp/p25yb/qk_blocks_p89.npz",
+    "block_K3_sha256": "ecc57fc62a44f0a036208fd73a0f71c84f3496c24fe5e7cb4856dafd3e0a1113",
+    "frame_rank": 43,
+    "monic_basis_matches_dvr_special_fibre": true,
+    "order3_rank": 37,
+    "same_K_rowspace_as_sealed_multiprime": true,
+    "same_Q_rowspace_as_sealed_multiprime": true
+  },
+  "rss_mib": 938.59375,
+  "self_sha256": "0ca18d3e4eb5f3e21ef8cb34db6ca29527bfc7c881e769f7890dd5219cb6e3b6",
+  "structure_1_K_Sym2K": {
+    "full_K3_coverage": true,
+    "interpretation": "All 56 pure-K cubic monoms reduce to 0 on the K-subspace modulo the 746-row ideal \u2014 necessary for a free 1\u2295K\u2295Sym\u00b2K presentation over F_89[Q].",
+    "n_K3_border_monoms": 56,
+    "order_ideal": "1 \u2295 K \u2295 Sym^2 K",
+    "order_ideal_rank": 28,
+    "rank_pure_K3_block": 56,
+    "refutation_relation": null,
+    "structure_1_K_Sym2K_K3_border": "HOLDS",
+    "uncovered_count": 0,
+    "uncovered_sample": []
+  },
+  "survivors": {
+    "count": 0,
+    "note": "No subsystem point promoted. Complete F(p_c)\u22610 verification not required (no survivor claimed)."
+  },
+  "what_remained": [
+    "P25Y-B step 5: 64 GiB homogeneous F4 / projective support of J_N",
+    "complete annihilator/Fitting generators of a compact module",
+    "any survivor lift with complete F(p_c)\u22610 verification"
+  ],
+  "zeta": 78
+}

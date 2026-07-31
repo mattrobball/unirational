@@ -1,0 +1,153 @@
+{
+  "P25Y_FULL_ROWSPACE_746": "NOT_SEALED",
+  "degree_max": 75,
+  "dispatch": "P25Y-M",
+  "elapsed_s": 1.074,
+  "group_order": 660,
+  "headline": "OPEN",
+  "invariants": {
+    "m_25": 43,
+    "m_3": 1,
+    "m_43": 289,
+    "m_75": 2343,
+    "series_key_degrees": {
+      "0": 1,
+      "1": 0,
+      "10": 3,
+      "11": 4,
+      "12": 6,
+      "13": 5,
+      "19": 17,
+      "2": 0,
+      "22": 28,
+      "25": 43,
+      "28": 63,
+      "3": 1,
+      "4": 0,
+      "43": 289,
+      "5": 1,
+      "55": 721,
+      "7": 1,
+      "75": 2343
+    }
+  },
+  "magnitude_check": {
+    "dim_Sym_75_C5": 1502501,
+    "dim_over_group_order": 2276.516666666667,
+    "note": "1502501/660 \u2248 2276.5; m_75=2343 is the right order of magnitude."
+  },
+  "method": "Independent group-sum Molien: enumerate the project's 660 exact 5\u00d75 matrices at split primes p\u22611 (mod 11), compute [t^d] 1/det(I\u2212t g) via Newton identities from power traces tr(g^k), average with 1/660, CRT-reconstruct integers.",
+  "primes_used": [
+    {
+      "c_25_mod": 11,
+      "c_75_mod": 48,
+      "m_25_mod": 43,
+      "m_3_mod": 1,
+      "m_75_mod": 29,
+      "prime": 89,
+      "zeta": 78
+    },
+    {
+      "c_25_mod": 189,
+      "c_75_mod": 97,
+      "m_25_mod": 43,
+      "m_3_mod": 1,
+      "m_75_mod": 154,
+      "prime": 199,
+      "zeta": 61
+    },
+    {
+      "c_25_mod": 189,
+      "c_75_mod": 186,
+      "m_25_mod": 43,
+      "m_3_mod": 1,
+      "m_75_mod": 26,
+      "prime": 331,
+      "zeta": 270
+    },
+    {
+      "c_25_mod": 189,
+      "c_75_mod": 144,
+      "m_25_mod": 43,
+      "m_3_mod": 1,
+      "m_75_mod": 225,
+      "prime": 353,
+      "zeta": 58
+    }
+  ],
+  "representation": {
+    "dim": 5,
+    "is_project_W": true,
+    "note": {
+      "consequence": "W vs W\u2228 does not change m_d.",
+      "statement": "Both degree-5 irreducibles of PSL(2,11) yield the same Molien invariant dimensions (Galois conjugates; duality preserves dims)."
+    },
+    "source": "certificates/exact_weil_check.py S,T \u2192 modular_covariant_scan.generate_group"
+  },
+  "row_rank_bound": {
+    "observed_746": "Observed F_89-rank 746 is a lower bound only (house rule 8). Molien upper bound 2343 does not force 746 to be the full span, and does not separate 746 from the historical quarantined 842 (both < 2343).",
+    "rank_bound": "rank(row space) = rank(\u039b) \u2264 min(dim Sym^3(V_25), m_75) = min(14190, 2343) = 2343.",
+    "seal": {
+      "P25Y-FULL-ROWSPACE-746": "NOT_SEALED",
+      "historical_842_quarantine": "Unaffected; remains quarantined under work order \u00a71.2.6.",
+      "reason": "m_75 = 2343 \u2260 746"
+    },
+    "setup": "Each basis element p_i of V_25 is a degree-25 covariant (G-equivariant map W\u2192W). For c \u2208 V_25, p_c = \u03a3 c_i p_i satisfies p_c(g x) = g \u00b7 p_c(x). F is G-invariant, so x \u21a6 F(p_c(x)) is a G-invariant form of degree 75. The cubic map c \u21a6 F(p_c(\u00b7)) linearises to \u039b: Sym^3(V_25) \u2192 (Sym^{75} W^\u2228)^G, and evaluation rows at points x_j span the image of the transpose."
+  },
+  "rss_mib": 75.15625,
+  "self_covariants": {
+    "c_1": 1,
+    "c_25": 189,
+    "c_75": 11440,
+    "matches_project_M_25": true,
+    "series_key_degrees": {
+      "0": 0,
+      "1": 1,
+      "10": 10,
+      "11": 12,
+      "12": 16,
+      "13": 21,
+      "19": 73,
+      "2": 0,
+      "22": 121,
+      "25": 189,
+      "28": 284,
+      "3": 0,
+      "4": 2,
+      "43": 1375,
+      "5": 1,
+      "55": 3485,
+      "7": 4,
+      "75": 11440
+    }
+  },
+  "self_sha256": "3da3f30b46924c773f0ad9d678988a4c1644583f3d6b89c789f76f3ca02fa845",
+  "special_fibre_p89": {
+    "check_m75_mod": true,
+    "invariant_dimension_equals_char0": true,
+    "m_25": 43,
+    "m_3": 1,
+    "m_43": 289,
+    "m_75": 2343,
+    "m_75_mod_89": 29,
+    "method": "Reynolds/Molien sum over the 660 reduced project matrices in Mat_5(F_89); valid because 89 \u2224 660 so the Reynolds operator is defined and projects onto invariants of the same dimension as char 0.",
+    "prime": 89,
+    "zeta": 78
+  },
+  "v25_invariants_vs_covariants": {
+    "argument": "The Molien coefficient m_25 = dim (Sym^{25} W^\u2228)^G = 43 is the dimension of degree-25 G-invariant scalar forms. The project's M_25 (dim 189) is the full self-covariant space Hom_G(Sym^{25} W, W) = c_25, matching cov Molien. V_25 is the strict arrangement kernel inside M_25 (ker of order-2 common-line map on Arr = ker of plus-plane evaluation), a 43-dimensional subspace of self-covariants \u2014 not the space of degree-25 invariants. The numerical equality dim V_25 = m_25 is a coincidence of dimensions, not an identification of objects.",
+    "c_25_self_covariants": 189,
+    "identification": "equal_dimension_only",
+    "m_25_invariants": 43,
+    "p25y1_citation_audit": {
+      "correction_record": "certificates/degree25_molien/MOLIEN_BOUND.md \u00a7V25-audit (this packet); sealed P25Y.1 left byte-identical.",
+      "detail": "DVR_MODEL.md \u00a70 lists dim M_25=189, dim Arr=59, dim V_25=43 as 'Exact Molien dimensions'. Only M_25=189 is a pure Molien self-covariant coefficient (c_25). Arr=59 and V_25=43 are construction dimensions of the arrangement/strict filtration of M_25 (trusted by work order \u00a71.1 items 5\u20136 and multiprime realization). V_25=43 equals the invariant Molien m_25 only numerically. The constant-rank freeness argument in DVR_MODEL.md \u00a72 remains valid if it invokes the trusted construction dimensions (189\u221259=130, 59\u221243=16) rather than substituting the invariant Molien for dim V_25 by name; the citation should not call Arr and V_25 'Molien dimensions'.",
+      "exit_impact": "P25Y-DVR-PASS freeness is not overturned: special-fibre ranks and unit minors are independently certified; char-0 upper bounds on those ranks come from the trusted construction dimensions, not from misidentifying V_25 with invariants.",
+      "status": "PARTIAL_MISLABEL"
+    },
+    "project_Arr": 59,
+    "project_M_25": 189,
+    "project_V_25": 43,
+    "same_object": false
+  }
+}

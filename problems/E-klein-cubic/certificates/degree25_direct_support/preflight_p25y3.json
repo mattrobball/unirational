@@ -1,147 +1,154 @@
 {
   "certificate_type_if_launched": [
-    "all monoms of some degree D lie in J_N (Macaulay rank = dim Sym^D)",
+    "all monoms of some degree D lie in J_N",
     "or saturated homogeneous ideal = (1)",
-    "or independently verified projective Nullstellensatz certificate"
+    "or independently verified projective Nullstellensatz"
   ],
   "cheap_probe_already_run": {
-    "best_vanishing_count": 745,
-    "interpretation": "No F_89-point of the 746-cubic subsystem was found among 2001 structured and 5000 random samples; best vanishing was 745/746. Failed search is not emptiness (house rule 5).",
-    "projective_point_found": false,
-    "random_trials": 5000,
-    "structured_candidates": 2001
+    "note": "Inherited from prior preflight plus new K3/Q3/specialize probes in p25yb_support.json"
   },
   "checkpoint_plan": {
     "stages": [
-      "export generators sparse/dense to msolve or Singular format",
-      "degree-bounded F4 with RSS monitor; abort if RSS > 7.5 GiB",
-      "record Hilbert function / leading ideal at each degree",
-      "if unit ideal or full Sym^D, seal emptiness certificate",
-      "if component found, record dimension witnesses without calling points covariants"
+      "export QK-coordinate generators to msolve/Singular",
+      "degree-bounded F4 with RSS monitor",
+      "record Hilbert function / leading ideal",
+      "emptiness certificate or component witnesses (not covariants)"
     ],
-    "tmp": "tmp/p25y_work/"
+    "tmp": "tmp/p25yb/"
   },
   "depends_on": {
     "P25Y_DVR": "P25Y-DVR-PASS",
+    "molien_bound_tight": false,
+    "molien_m75": 2343,
     "rank_final_lower_bound": 746
   },
-  "dispatch": "P25Y.3",
+  "dispatch": "P25Y-B",
   "earliest_degree_dimensionally_able_to_fill": 7,
-  "estimated_peak_RSS_if_forced_d4_membership_scan_GiB": 6.0,
-  "estimated_peak_RSS_if_forced_d7_fill_GiB": ">>64 (not authorized this slot)",
-  "exit_if_stop": "P25Y3-PREFLIGHT-READY",
-  "expected_GB_or_Macaulay_dimensions": {
-    "at_d4_cannot_fill": true,
-    "at_d4_dense_GiB": 4.8751,
-    "at_d7_dense_GiB_upper": 9739021.1679,
-    "at_d7_note": "Crude source-dimension count first allows fill at d=7, but the dense Macaulay matrix is multi-petabyte class; even sparse F4 on 746 dense cubics in 43 variables is expected far above 8 GiB and likely above 64 GiB without specialized structure.",
-    "fill_certificate_degree_floor": 7
+  "estimated_peak_RSS_if_forced_d7_fill_GiB": ">>64 without specialized structure",
+  "exit": "P25YB-F4-SLOT-REQUEST",
+  "exit_if_stop": "P25YB-F4-SLOT-REQUEST",
+  "fitting_probe": {
+    "interpretation": "Evaluation rank of the 746 cubics in k at fixed random q0. A common zero in k\u22600 is only a sample hit, not a covariant. Not a Nullstellensatz certificate for P^{42}.",
+    "k_samples_per_trial": 120,
+    "method": "evaluation_rank_at_random_k_for_random_q0",
+    "specialized_ranks": {
+      "max": 84,
+      "mean": 84.0,
+      "median": 84,
+      "min": 84
+    },
+    "trials": 20,
+    "trials_with_nonzero_k_common_zero_sample": 0
   },
   "headline": "OPEN",
   "historical_packets_not_imported": [
-    "tmp/m1_full_plane_block_rank/full_cubic_basis.npz",
-    "certificates/border_support/"
+    "tmp/m1_relative_border_rank28/",
+    "certificates/border_support/",
+    "historical 842-row packet"
   ],
   "independent_verifier_design": {
-    "decisive_invariant": "For emptiness via Sym^D fill: verifier rebuilds the multiplication map from the sealed echelon generators and recomputes rank over F_89, checking equality with binom(43+D-1, D). For GB unit ideal: verifier re-reduces 1 against the sealed basis or recomputes GB from generators.",
-    "no_producer_import": true,
-    "not_sufficient": "reading a boolean from JSON or hash-only checks"
+    "decisive_invariant": "rebuild generators from sealed echelon + QK frame; recompute GB/Macaulay rank or reduce 1 against the basis",
+    "no_producer_import": true
+  },
+  "linear_Q_probe": {
+    "dim_Sym3_Q": 9139,
+    "n_Q3_monoms": 9139,
+    "n_eval_samples": 900,
+    "note": "Lower bound on rank of pure-Q cubic conditions on P(Q)=P^{36} by random evaluation. Full support of J_N needs F4.",
+    "rank_Q3_block_lower_bound": 746
   },
   "macaulay_table": [
     {
       "degree": 3,
-      "dense_uint8_GiB_upper": 0.0099,
-      "dense_uint8_bytes_upper": 10585740,
+      "dense_uint8_GiB_upper": 0.1875,
       "dim_Sym_d": 14190,
       "dimensionally_can_fill": false,
-      "source_dim_upper_N_gen_times_Sym_dm3": 746
+      "source_dim_upper": 746
     },
     {
       "degree": 4,
-      "dense_uint8_GiB_upper": 4.8751,
-      "dense_uint8_bytes_upper": 5234648430,
+      "dense_uint8_GiB_upper": 24.8005,
       "dim_Sym_d": 163185,
       "dimensionally_can_fill": false,
-      "source_dim_upper_N_gen_times_Sym_dm3": 32078
+      "source_dim_upper": 32078
     },
     {
       "degree": 5,
-      "dense_uint8_GiB_upper": 1008.1802,
-      "dense_uint8_bytes_upper": 1082525295324,
+      "dense_uint8_GiB_upper": 2191.373,
       "dim_Sym_d": 1533939,
       "dimensionally_can_fill": false,
-      "source_dim_upper_N_gen_times_Sym_dm3": 705716
+      "source_dim_upper": 705716
     },
     {
       "degree": 6,
-      "dense_uint8_GiB_upper": 120981.6294,
-      "dense_uint8_bytes_upper": 129903035438880,
+      "dense_uint8_GiB_upper": 140247.8728,
       "dim_Sym_d": 12271512,
       "dimensionally_can_fill": false,
-      "source_dim_upper_N_gen_times_Sym_dm3": 10585740
+      "source_dim_upper": 10585740
     },
     {
       "degree": 7,
-      "dense_uint8_GiB_upper": 9739021.1679,
-      "dense_uint8_bytes_upper": 10457194352829840,
+      "dense_uint8_GiB_upper": 6872145.7678,
       "dim_Sym_d": 85900584,
       "dimensionally_can_fill": true,
-      "source_dim_upper_N_gen_times_Sym_dm3": 121736010
+      "source_dim_upper": 121736010
     },
     {
       "degree": 8,
-      "dense_uint8_GiB_upper": 572167493.616,
-      "dense_uint8_bytes_upper": 614360168228753100,
+      "dense_uint8_GiB_upper": 268443194.0558,
       "dim_Sym_d": 536878650,
       "dimensionally_can_fill": true,
-      "source_dim_upper_N_gen_times_Sym_dm3": 1144318494
+      "source_dim_upper": 1144318494
     },
     {
       "degree": 9,
-      "dense_uint8_GiB_upper": 25938259710.592,
-      "dense_uint8_bytes_upper": 27850994293036807200,
+      "dense_uint8_GiB_upper": 8620009231.3462,
       "dim_Sym_d": 3042312350,
       "dimensionally_can_fill": true,
-      "source_dim_upper_N_gen_times_Sym_dm3": 9154547952
+      "source_dim_upper": 9154547952
     },
     {
       "degree": 10,
-      "dense_uint8_GiB_upper": 944152653465.5502,
-      "dense_uint8_bytes_upper": 1013776192266539782080,
+      "dense_uint8_GiB_upper": 233085049615.6017,
       "dim_Sym_d": 15820024220,
       "dimensionally_can_fill": true,
-      "source_dim_upper_N_gen_times_Sym_dm3": 64081835664
+      "source_dim_upper": 64081835664
     }
   ],
-  "measured_peak_RSS": {
-    "Y1_Y2_peak_mib": 1102.078125,
-    "exploratory_ceiling_GiB": 8,
-    "how_measured": "resource.getrusage(RUSAGE_SELF).ru_maxrss via common_p25x.rss_mib",
-    "support_probe_mib": 206.375
-  },
   "preferred_methods_in_order": [
     "sparse homogeneous Groebner/F4",
     "degree-by-degree Macaulay/Hilbert",
     "border basis newly derived from J_N (not historical border)",
     "projective saturation / irrelevant-power certificate"
   ],
-  "resource_rule": "This worker holds only the 8 GiB exploratory ceiling for P25Y.3. Worker T holds the 64 GiB slot this round. If the job needs more than 8 GiB, write this preflight and stop \u2014 successful outcome.",
+  "reason": "P25Y-B steps 1\u20134 did not produce a compact module with certified annihilator/Fitting support under 8 GiB. K\u00b3-border status: HOLDS. Step 5 (64 GiB homogeneous F4) is fenced \u2014 Worker N holds the memory-heavy slot (T8-N1). Director should dispatch when free.",
+  "resource_rule": "This worker may not launch the 64 GiB job while Worker N holds T8-N1. Preflight-and-stop is the authorized outcome.",
   "ring": {
     "ambient_projective_space": "P^{42}_{F_89}",
-    "cubic_ambient_dim": 14190,
+    "coordinates": "Q(37)|K(6) over fixed DVR model at p=89",
     "field": "F_89",
     "generator_count": 746,
     "generator_degree": 3,
-    "generator_source": "direct_rows_p89.npz echelon (deterministic sample span)",
     "homogeneous": true,
     "rank_is_lower_bound_only": true,
     "variables": 43
   },
-  "self_sha256": "3a0f77bd2bb6614dd3414099df4ebfe6b86d7adddf0f4774daf70e108b6008d6",
-  "term_count_estimate": {
-    "note": "Echelon rows are monic-reduced and typically dense over F_89.",
-    "per_cubic_dense_upper": 14190,
-    "total_terms_dense_upper": 10585740
+  "self_sha256": "5ccc27550f9647cdf6d9cfe29a91b9c611ead3d63c8d03aeab9764b93ce880a8",
+  "structure_probe": {
+    "full_K3_coverage": true,
+    "interpretation": "All 56 pure-K cubic monoms reduce to 0 on the K-subspace modulo the 746-row ideal \u2014 necessary for a free 1\u2295K\u2295Sym\u00b2K presentation over F_89[Q].",
+    "n_K3_border_monoms": 56,
+    "order_ideal": "1 \u2295 K \u2295 Sym^2 K",
+    "order_ideal_rank": 28,
+    "rank_pure_K3_block": 56,
+    "refutation_relation": null,
+    "structure_1_K_Sym2K_K3_border": "HOLDS",
+    "uncovered_count": 0,
+    "uncovered_sample": []
   },
-  "why_stop_under_8_GiB": "Fill is dimensionally impossible for d < 7. At d=4 the dense Macaulay matrix is already ~5.2 GiB uint8 and cannot fill; incremental echelon toward rank 163185 would exceed 8 GiB if rank is large. At the first possible fill degree d=7 the dense upper bound is astronomical. Launching F4/GB under 8 GiB is not expected to finish with a decisive certificate. Preflight-and-stop is the authorized successful outcome."
+  "what_remained": [
+    "P25Y-B step 5: 64 GiB homogeneous F4 / projective support of J_N",
+    "complete annihilator/Fitting generators of a compact module",
+    "any survivor lift with complete F(p_c)\u22610 verification"
+  ]
 }
