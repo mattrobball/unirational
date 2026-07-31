@@ -1,0 +1,370 @@
+{
+  "N_star": 28,
+  "same_global_c": true,
+  "self_sha256": "31e30218cef5409deed6a2f7ac35fbb4b84ad6f3f246164946c30dca9ad8fbd9",
+  "stages": [
+    {
+      "F_order": 4,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 5,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 6,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 7,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 8,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 9,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 10,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 11,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 12,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 13,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 14,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 15,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 16,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 17,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 18,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 19,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 20,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 21,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 22,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 23,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 24,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 25,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 26,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 27,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Free-fibre isolators exist through F-order 26. Global stage uses \u03c1(c) rather than free newest E+; equations retained as constraints on c, not solved by resetting earlier jets.",
+      "status": "FREE_PATH_SOLVABLE_GLOBAL_COUPLING_RETAINED",
+      "type": "isolable_or_mixed_linear_in_newest_Eplus"
+    },
+    {
+      "F_order": 28,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 29,
+      "free_a_d_cancellable": true,
+      "genuine_residual_image_cancellable_free_path": false,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "residual_promotion": "On the free-fibre particular path of P25.1 (residual_S3_trivial a_m, each ker L_1 generator, isolable particular tower), the affine equation R0 + A_ad \u00b7 a_d = 0 has solutions in free a_d (dim 52, rank 27) but has NO solution with a_d restricted to the genuine residual image (rank 7) over Q.",
+      "status": "RESIDUAL_IMAGE_TESTED",
+      "type": "first_non_isolable_residual"
+    },
+    {
+      "F_order": 30,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 31,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 32,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 33,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 34,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 35,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 36,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 37,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 38,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 39,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 40,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 41,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 42,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 43,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 44,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 45,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 46,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 47,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 48,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 49,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 50,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 51,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 52,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 53,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 54,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 55,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 56,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 57,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 58,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 59,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 60,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 61,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 62,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 63,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 64,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 65,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 66,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 67,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 68,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 69,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 70,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 71,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 72,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 73,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    },
+    {
+      "F_order": 74,
+      "back_substitution_to_43": true,
+      "codomain_free_dim": 75,
+      "global_variables": 43,
+      "independent_jet_reset_forbidden": true,
+      "note": "Must be imposed simultaneously with earlier equations on the same c. Not independently reset.",
+      "status": "COUPLED_TO_SAME_C",
+      "type": "higher_terminal_residual"
+    }
+  ],
+  "terminal": 75
+}

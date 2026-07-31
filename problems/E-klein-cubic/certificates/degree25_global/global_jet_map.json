@@ -1,0 +1,145 @@
+{
+  "blocks": [
+    {
+      "free_dim": 4,
+      "map": "rho_1",
+      "r": 1
+    },
+    {
+      "free_dim": 9,
+      "map": "rho_2",
+      "r": 2
+    },
+    {
+      "free_dim": 8,
+      "map": "rho_3",
+      "r": 3
+    },
+    {
+      "free_dim": 15,
+      "map": "rho_4",
+      "r": 4
+    },
+    {
+      "free_dim": 12,
+      "map": "rho_5",
+      "r": 5
+    },
+    {
+      "free_dim": 21,
+      "map": "rho_6",
+      "r": 6
+    },
+    {
+      "free_dim": 16,
+      "map": "rho_7",
+      "r": 7
+    },
+    {
+      "free_dim": 27,
+      "map": "rho_8",
+      "r": 8
+    },
+    {
+      "free_dim": 20,
+      "map": "rho_9",
+      "r": 9
+    },
+    {
+      "free_dim": 33,
+      "map": "rho_10",
+      "r": 10
+    },
+    {
+      "free_dim": 24,
+      "map": "rho_11",
+      "r": 11
+    },
+    {
+      "free_dim": 39,
+      "map": "rho_12",
+      "r": 12
+    },
+    {
+      "free_dim": 28,
+      "map": "rho_13",
+      "r": 13
+    },
+    {
+      "free_dim": 45,
+      "map": "rho_14",
+      "r": 14
+    },
+    {
+      "free_dim": 32,
+      "map": "rho_15",
+      "r": 15
+    },
+    {
+      "free_dim": 51,
+      "map": "rho_16",
+      "r": 16
+    },
+    {
+      "free_dim": 36,
+      "map": "rho_17",
+      "r": 17
+    },
+    {
+      "free_dim": 57,
+      "map": "rho_18",
+      "r": 18
+    },
+    {
+      "free_dim": 40,
+      "map": "rho_19",
+      "r": 19
+    },
+    {
+      "free_dim": 63,
+      "map": "rho_20",
+      "r": 20
+    },
+    {
+      "free_dim": 44,
+      "map": "rho_21",
+      "r": 21
+    },
+    {
+      "free_dim": 69,
+      "map": "rho_22",
+      "r": 22
+    },
+    {
+      "free_dim": 48,
+      "map": "rho_23",
+      "r": 23
+    },
+    {
+      "free_dim": 75,
+      "map": "rho_24",
+      "r": 24
+    },
+    {
+      "free_dim": 52,
+      "map": "rho_25",
+      "r": 25
+    }
+  ],
+  "codomain_free_total": 868,
+  "codomain_multi_rees_total": 58370,
+  "compatibility": {
+    "dim": 43,
+    "name": "c",
+    "rule": "Every jet is a linear function of the same c; no stagewise reset.",
+    "space": "V_25"
+  },
+  "dense_868x43_materialized": false,
+  "domain": {
+    "dim": 43,
+    "name": "V_25"
+  },
+  "reason": "Preferred sparse representation. Dense free-jet matrix is larger than residual/based linear gates + polar sparse operators used downstream; preflight favors sparse residual 7-space and based 36-space.",
+  "representation": "sparse_block_linear",
+  "self_sha256": "49eb023a323451d7026754bfc4451f15f76fb276765c4cf5dd26841a69e4908d"
+}

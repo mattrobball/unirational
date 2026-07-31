@@ -1,0 +1,96 @@
+{
+  "SHA256SUMS_sha256": "20a685a9526cc17a241dc38965943d396d3452e3b7ca7bf8c4c725d19ca08bab",
+  "base_pin_requested": "b222573",
+  "dispatches": [
+    "P25R.0",
+    "P25R.1",
+    "P25R.2"
+  ],
+  "exits": {
+    "P25R0": "P25R0-PASS",
+    "P25R1": "P25R1-PASS",
+    "P25R2": "P25R2-UNDECIDED"
+  },
+  "files": {
+    "COEFFICIENT_MODEL.md": "4e2750d76f7bcf3311e11f34379c0c941c17a1d01b08da833b14bd7c272f5f0a",
+    "FULL_FINITE_TOWER.md": "7fbfc9aa7d36fea1c55d00704dd99edf10b1f51929196a8f999f91be749ddb20",
+    "GLOBAL_CORRECTION_SPACES.md": "6adcb77644a0bc5ae8e2288b13be7f79d66002aa02d9aebeeff0072b3a9efe65",
+    "bases.json": "75d5dc4978643d873795be97f40be26c36abd49d8dd35901c3564f2c06b5c247",
+    "common_p25r.py": "7686b4172840adcb15cc93c09f381cf2563d32eb748ee35ca1d3bf7c26b3c5ba",
+    "elimination_ledger.json": "2288f00ee7e4647d47a41b1731d422517781210cac836900ff9168335c08d81c",
+    "equivalence_to_842.json": "25481cf52d7bc039c92b2abe5435da02f11feb54574fdf10455f9f8a139df64a",
+    "exit_p25r0.json": "527e39e60613b32c54ab21b59990b767b56967dc08d15e3ddbe3aaa7681e58f3",
+    "exit_p25r1.json": "96ebba6f1bd856e66f871ee9c873b9a4c392cfb9012b70f74200432121268439",
+    "exit_p25r2.json": "486503cfa735bf3c8109169378f37dc39722a472401e0ed84f7ea56d3b967587",
+    "family_linear_gates.json": "3a5ab60cd4b452d55a0b5944957bc428da5621b6fea71f9266d41de4f69d2314",
+    "global_jet_map.json": "847d2a6b5f380c31de162f595ebfc74349f161f00c357f09676546f9515bf035",
+    "produce_correction_spaces.py": "ec8cb813da64fa8963aaba099ec3b35e86c11391468d5e9c754ed301b37d55d3",
+    "produce_full_tower.py": "ba33d350b7a8af266b19f6e2ae317ce77741317497d1a578efbc16a670f74e96",
+    "produce_model.py": "56258d26afe156ab2d19022648ed3e052144a875e04c387c878ff2fab11bf8e6",
+    "projective_support_preborder.json": "aa9d4d55599367edde847cb99a45a96785963f14bcf0ef76629c39ebe4bce023",
+    "residual_module_char0.json": "1a4a05f6f867da59e7a759c362cc44deca176e923aa625e34671b3e40dc8f32d",
+    "restriction_maps/rho_abstract.json": "64aaa655ac4cbf763bb925a7305a30a31a71494812b76ad17608072c493ca375",
+    "stage_subspaces.json": "be9a0451328566a8124aedb58b6dc36a54b3b10525afcde7874147f74398c5d7",
+    "tower_equations/free_path_A_ad.json": "bb455d914effb2f2810c5d13d35fed35b6311f448c66b7cd52d4573dfd90dd24",
+    "tower_equations/residual_image_Nstar.json": "26fab7a99d96680f1e0ab6fc2e65073ca344fb09d98857889257a848f278ce34",
+    "tower_equations/resource_preflight.json": "e4e372fd7d36513bb314236d6df195408ab96e64a186087eec5fc927778e2d55",
+    "tower_equations/unresolved_sparse_system.json": "b2f08af27e276d67d1322fa3b9bd3dddf22fc1d844f60b16fbc674d61c826b2f",
+    "verify_correction_spaces.py": "a000811ab0ef49a5dc93d0edae72ed7f725ade0618131589dda6e0293c5e77f3",
+    "verify_full_tower.py": "75b158b82ff63ee475651c0b55e1cf782ca29874e8ed79ed809fa75e87b84306",
+    "verify_model.py": "d14c336f23cc3afd46fae9c197c9d98ef497a4f57699b30a39f0a4cfc0f9d494"
+  },
+  "headline": "OPEN",
+  "house_rules": [
+    "No formal state called a covariant",
+    "Exact arithmetic; modular discovery only with written lifting",
+    "Independent verifier does not import producer",
+    "No timing in sealed payloads",
+    "Self-hashes last",
+    "No git mutations"
+  ],
+  "independent_verifiers_do_not_import_producers": true,
+  "key_results": {
+    "K_dim": 6,
+    "P25_GLOBAL_EMPTY": false,
+    "P25_GLOBAL_SURVIVES": false,
+    "Q_dim": 37,
+    "V25_dim": 43,
+    "based_kernel_dim": 36,
+    "final_exit": "P25R2-UNDECIDED",
+    "free_a_d_proxy_rejected": true,
+    "free_path_Nstar_residual_image_cancellable": false,
+    "residual_module_rank": 7
+  },
+  "not_a_covariant": true,
+  "not_headline": true,
+  "producer_scripts": [
+    "produce_model.py",
+    "produce_correction_spaces.py",
+    "produce_full_tower.py"
+  ],
+  "resource": {
+    "default_ceiling_GiB": 8,
+    "dense_842_not_materialized": true,
+    "strategy": "sparse_polar_residual7_based36"
+  },
+  "route": "P25R",
+  "self_sha256": "be3770166e1048e7282002d2b4d41701fc6dcc19b0bf44a6138554b6d3e6ef67",
+  "theorem_boundary": {
+    "not_proved": [
+      "Empty projective support of both families",
+      "Surviving global component",
+      "Char-0 ideal equivalence with rank-842 cubic basis",
+      "Headline ed_C(G)"
+    ],
+    "proved": [
+      "Exact char-0 ranks for V_25 and residual module (multi-prime + DVR)",
+      "Genuine global linear gates: based ker 36, residual image 7",
+      "P25.1 residual free-path cancellation fails inside residual image"
+    ]
+  },
+  "verifier_scripts": [
+    "verify_model.py",
+    "verify_correction_spaces.py",
+    "verify_full_tower.py"
+  ]
+}

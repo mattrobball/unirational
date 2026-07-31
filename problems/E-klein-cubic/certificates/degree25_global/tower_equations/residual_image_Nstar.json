@@ -1,0 +1,131 @@
+{
+  "primes": [
+    {
+      "all_ker_L1_nonsolvable": true,
+      "ker_L1_tests": [
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 1,
+          "augmented_rank": 8,
+          "ker_L1_index": 0,
+          "solvable_on_residual_image": false
+        },
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 1,
+          "augmented_rank": 8,
+          "ker_L1_index": 1,
+          "solvable_on_residual_image": false
+        },
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 9,
+          "augmented_rank": 8,
+          "ker_L1_index": 2,
+          "solvable_on_residual_image": false
+        },
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 5,
+          "augmented_rank": 8,
+          "ker_L1_index": 3,
+          "solvable_on_residual_image": false
+        }
+      ],
+      "prime": 89,
+      "residual_image_rank": 7,
+      "zeta": 78
+    },
+    {
+      "all_ker_L1_nonsolvable": true,
+      "ker_L1_tests": [
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 1,
+          "augmented_rank": 8,
+          "ker_L1_index": 0,
+          "solvable_on_residual_image": false
+        },
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 1,
+          "augmented_rank": 8,
+          "ker_L1_index": 1,
+          "solvable_on_residual_image": false
+        },
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 9,
+          "augmented_rank": 8,
+          "ker_L1_index": 2,
+          "solvable_on_residual_image": false
+        },
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 5,
+          "augmented_rank": 8,
+          "ker_L1_index": 3,
+          "solvable_on_residual_image": false
+        }
+      ],
+      "prime": 199,
+      "residual_image_rank": 7,
+      "zeta": 61
+    },
+    {
+      "all_ker_L1_nonsolvable": true,
+      "ker_L1_tests": [
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 1,
+          "augmented_rank": 8,
+          "ker_L1_index": 0,
+          "solvable_on_residual_image": false
+        },
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 1,
+          "augmented_rank": 8,
+          "ker_L1_index": 1,
+          "solvable_on_residual_image": false
+        },
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 9,
+          "augmented_rank": 8,
+          "ker_L1_index": 2,
+          "solvable_on_residual_image": false
+        },
+        {
+          "A_ad_mod_rank": 27,
+          "A_on_residual_image_rank": 7,
+          "R0_mod_nnz": 5,
+          "augmented_rank": 8,
+          "ker_L1_index": 3,
+          "solvable_on_residual_image": false
+        }
+      ],
+      "prime": 331,
+      "residual_image_rank": 7,
+      "zeta": 270
+    }
+  ],
+  "promotion": {
+    "argument": "A_ad and R0 are exact over Q (common_g3 polar model). The residual image \u039b \u2282 Z^{52} is a rank-7 lattice (P25R.0 multi-prime + DVR). Suppose there existed x \u2208 \u039b_Q with A_ad x = R0. Clearing denominators gives a primitive integral solution in \u039b. At any good prime p not dividing the denominators of A_ad entries, of x, or of a basis of \u039b, reduction yields A_mod x_mod = R0_mod with x_mod in the special residual image. At p \u2208 {89,199,331} the residual image has rank 7, R0_mod \u2260 0 (p does not divide 50652 for these primes), and rank(A|image) < rank([A|image | R0]), so no such reduction exists. Contradiction. Hence no Q-solution exists on the residual image for this free path.",
+    "primes_agree_nonsolvable": true,
+    "scope": "This kills the P25.1 residual-family cancellation certificate as a global residual-module statement. It does not by itself prove that every global c \u2208 V_25 has nonzero residual at N_star=28, because a global c couples lower jets (the free particular path need not lie in im \u03c1_\u226424). Full global emptiness requires the simultaneous tower in c, recorded as unresolved sparse system below when not decided.",
+    "statement": "On the free-fibre particular path of P25.1 (residual_S3_trivial a_m, each ker L_1 generator, isolable particular tower), the affine equation R0 + A_ad \u00b7 a_d = 0 has solutions in free a_d (dim 52, rank 27) but has NO solution with a_d restricted to the genuine residual image (rank 7) over Q."
+  },
+  "self_sha256": "8a0188f8e4de92d4ef97a8226b90ffcd974241e232f1ef40d36c26b53ed454e2"
+}

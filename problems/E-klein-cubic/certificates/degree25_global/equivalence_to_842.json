@@ -1,0 +1,61 @@
+{
+  "accepted_842": {
+    "coefficients_field": "F_67 discovery; char0 via DVR for rank bounds only",
+    "coefficients_sha256_mod_67": "2fd6a5ad83f17de8826eb1787e062e79c66f6aac681197c24702c65df6135f76",
+    "shape": [
+      842,
+      14190
+    ],
+    "source": "tmp/m1_full_plane_block_rank/full_cubic_basis.npz"
+  },
+  "equivalence": {
+    "direction_842_to_tower": "Same G1 equivalence. Not verified coefficientwise over Q in this dispatch because the 842\u00d714190 matrix is not lifted to Q.",
+    "direction_tower_to_842": "By G1 finite truncation, vanishing of all polar F_N for N=4,6,...,74 on a degree-25 map is equivalent to F(p)=0. The 842 cubics are a basis of the order-four landing equations in (Q|K) coordinates of the same V_25. Full coefficientwise identity of generating sets requires char-0 reconstruction of the 842-row matrix (currently sealed only mod 67).",
+    "residual_gap": "GAP: exact char-0 generators of the 842 cubic ideal are not installed (modular matrix only). Polar tower operators over Q are installed for free jets; global substitution \u03c1(c) is certified for residual rank and based kernel, not as a full expanded cubic ideal equality with the modular 842 basis. Ideal containment in both directions over Q remains unproved.",
+    "row_ideal_containment_both_directions_over_Q": false
+  },
+  "polar_tower": {
+    "finite_truncation": "G1: F(p)=0 iff normal components through order 75 vanish",
+    "global_variables": 43,
+    "orders": [
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      48,
+      50,
+      52,
+      54,
+      56,
+      58,
+      60,
+      62,
+      64,
+      66,
+      68,
+      70,
+      72,
+      74
+    ]
+  },
+  "preflight": "USE_SPARSE_POLAR",
+  "self_sha256": "16342a9abe4074bc9c4a7e3ee4c75ac140dcd848ba59d858c7fbc40a6d008218"
+}

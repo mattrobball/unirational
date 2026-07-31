@@ -1,0 +1,17 @@
+{
+  "bottleneck": "Exact global substitution of \u03c1_\u226424 into polar F_N as polynomials in the 43 coordinates without free-fibre particularization; equivalently char-0 842 cubic ideal membership / projective support on P(V_25).",
+  "description": "Simultaneous F_N(\u03c1(c))=0 for N=4,6,...,74 with c \u2208 V_25, saturated by nonzero-covariant ideal, exact-order gates, swap_both open (residual family), and basis-change denominators.",
+  "name": "global_polar_tower_on_V25",
+  "reduced_after_Nstar_residual_image_test": {
+    "remaining": "Full multilinear polar system in c with lower-jet coupling; based family high-order image of 36-space; higher orders 30..74.",
+    "residual_family_free_path": "killed inside residual image (rank 7)"
+  },
+  "resource_floor_GiB": {
+    "authorization_needed_for": "char-0 reconstruction of 842 cubics and/or sparse saturation of border module beyond 8 GiB",
+    "default_ceiling": 8,
+    "dense_842_int64": 0.08901938796043396,
+    "sparse_estimate": 0.05
+  },
+  "self_sha256": "674b9844c026c922581028cfeafe1f98060c50314cecfe37dfbf6bacde7a9326",
+  "variables": 43
+}

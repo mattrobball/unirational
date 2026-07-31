@@ -1,0 +1,28 @@
+{
+  "N_star": 28,
+  "P25_GLOBAL_EMPTY": false,
+  "P25_GLOBAL_SURVIVES": false,
+  "based_support": "UNDECIDED",
+  "dispatch": "P25R.2",
+  "exit": "P25R2-UNDECIDED",
+  "headline": "OPEN",
+  "not_a_covariant": true,
+  "residual_free_path_killed_in_genuine_image": true,
+  "residual_support": "UNDECIDED",
+  "rss_mib": 255.15625,
+  "self_sha256": "b1683ed1773cf677d5fc04d38a1ac8be5af4dabebfd61365f6cc81a1227f61b5",
+  "theorem_boundary": {
+    "not_proved": [
+      "Emptiness of both global family branches",
+      "Existence of a global landing c in V_25",
+      "Char-0 ideal equivalence with the 842 cubic basis",
+      "Headline ed_C(G)"
+    ],
+    "proved": [
+      "P25R0 exact model ranks (V_25=43=37+6, residual rank 7)",
+      "P25R1 global linear gates (based ker 36; residual image 7)",
+      "Free-path N_star residual cancellation fails in residual image"
+    ]
+  },
+  "unresolved": "tower_equations/unresolved_sparse_system.json"
+}

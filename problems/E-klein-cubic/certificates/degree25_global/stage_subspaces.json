@@ -1,0 +1,436 @@
+{
+  "N_star": 28,
+  "bidegree": {
+    "d": 25,
+    "m": 1
+  },
+  "block_map": "rho_le_25: V_25 \u2192 \u2295_{r=1}^{25} J_r",
+  "global_coordinate_vector": {
+    "dim": 43,
+    "name": "c",
+    "rule": "Every jet is a linear function of the same c; no stagewise reset.",
+    "space": "V_25"
+  },
+  "nonautomatic_F_orders": [
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60,
+    62,
+    64,
+    66,
+    68,
+    70,
+    72,
+    74
+  ],
+  "residual_stage": {
+    "critical": "P25.1 residual family used free a_d of dim 52. Genuine global correction space uses residual image of rank 7.",
+    "free_fibre_a_d_dim": 52,
+    "genuine_global_image_rank": 7,
+    "r": 25
+  },
+  "self_sha256": "d2bb5b17fb5c71e258ad5287a75025b6bdd9788e25b9b0a0a624bfe75d309e39",
+  "stages": [
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 4,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 4,
+      "isolable_operator": true,
+      "multi_rees_dim": 1300,
+      "r": 1,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 9,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 9,
+      "isolable_operator": false,
+      "multi_rees_dim": 2700,
+      "r": 2,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 8,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 8,
+      "isolable_operator": true,
+      "multi_rees_dim": 2208,
+      "r": 3,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 15,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 15,
+      "isolable_operator": false,
+      "multi_rees_dim": 3795,
+      "r": 4,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 12,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 12,
+      "isolable_operator": true,
+      "multi_rees_dim": 2772,
+      "r": 5,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 21,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 21,
+      "isolable_operator": false,
+      "multi_rees_dim": 4410,
+      "r": 6,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 16,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 16,
+      "isolable_operator": true,
+      "multi_rees_dim": 3040,
+      "r": 7,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 27,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 27,
+      "isolable_operator": false,
+      "multi_rees_dim": 4617,
+      "r": 8,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 20,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 20,
+      "isolable_operator": true,
+      "multi_rees_dim": 3060,
+      "r": 9,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 33,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 33,
+      "isolable_operator": false,
+      "multi_rees_dim": 4488,
+      "r": 10,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 24,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 24,
+      "isolable_operator": true,
+      "multi_rees_dim": 2880,
+      "r": 11,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 39,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 39,
+      "isolable_operator": false,
+      "multi_rees_dim": 4095,
+      "r": 12,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 28,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 28,
+      "isolable_operator": true,
+      "multi_rees_dim": 2548,
+      "r": 13,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 45,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 45,
+      "isolable_operator": false,
+      "multi_rees_dim": 3510,
+      "r": 14,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 32,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 32,
+      "isolable_operator": true,
+      "multi_rees_dim": 2112,
+      "r": 15,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 51,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 51,
+      "isolable_operator": false,
+      "multi_rees_dim": 2805,
+      "r": 16,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 36,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 36,
+      "isolable_operator": true,
+      "multi_rees_dim": 1620,
+      "r": 17,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 57,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 57,
+      "isolable_operator": false,
+      "multi_rees_dim": 2052,
+      "r": 18,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 40,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 40,
+      "isolable_operator": true,
+      "multi_rees_dim": 1120,
+      "r": 19,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 63,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 63,
+      "isolable_operator": false,
+      "multi_rees_dim": 1323,
+      "r": 20,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 44,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 44,
+      "isolable_operator": true,
+      "multi_rees_dim": 660,
+      "r": 21,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 69,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 69,
+      "isolable_operator": false,
+      "multi_rees_dim": 690,
+      "r": 22,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 48,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 48,
+      "isolable_operator": true,
+      "multi_rees_dim": 288,
+      "r": 23,
+      "target": "E_minus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 75,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 75,
+      "isolable_operator": false,
+      "multi_rees_dim": 225,
+      "r": 24,
+      "target": "E_plus"
+    },
+    {
+      "C_r_glob": {
+        "definition": "C_r^glob = \u03c1_r(V_25) \u2229 ker L_r \u2229 E_V4 \u2229 E_points \u2229 E_chars \u2229 E_source_line, all factors from P25R.0 matrices.",
+        "domain_dim_upper": 43,
+        "equality_with_free_ker_assumed": false,
+        "free_fibre_rank_upper": 52,
+        "not_independent_per_stage": true,
+        "parametrized_by": "single global c \u2208 V_25 (family linear gates applied)"
+      },
+      "free_fibre_rank": 52,
+      "isolable_operator": false,
+      "multi_rees_dim": 52,
+      "r": 25,
+      "target": "E_minus"
+    }
+  ]
+}

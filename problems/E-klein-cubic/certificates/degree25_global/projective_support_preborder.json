@@ -1,0 +1,21 @@
+{
+  "based_minus_lines_odd_m": {
+    "N_star_free_path_high_order_cancel": "P25.1 nonempty free-fibre zero locus via high-order E+ ker",
+    "global_high_order_image_from_based_36": "Not fully expanded: high-order E+ jets are \u03c1(c) for c in based kernel. Free-fibre cancellation parameters need not lie in im \u03c1.",
+    "linear_support_dim": 36,
+    "projective_support": "UNDECIDED"
+  },
+  "both_families_empty": false,
+  "either_family_survives_certified": false,
+  "exit_component": "P25R2-UNDECIDED",
+  "residual_e_ge7_generic_swap_both": {
+    "ambient_dim": 43,
+    "free_path_N_star_cancel_in_residual_image": false,
+    "free_path_N_star_cancel_in_residual_image_killed": true,
+    "global_full_tower_in_c": "UNDECIDED",
+    "note": "P25.1 residual-family survivor equations do not lift to the genuine residual module. Full emptiness of residual branch in global c requires coupled lower-jet equations.",
+    "projective_support": "UNDECIDED",
+    "residual_image_rank": 7
+  },
+  "self_sha256": "91750daa87869b6e87635e82909bc1eb703569ffb45687ee92ae71e61beb3572"
+}

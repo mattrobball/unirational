@@ -1,0 +1,51 @@
+{
+  "degree": 25,
+  "dispatch": "P25R.0",
+  "free_local_a_d_dim": 52,
+  "headline": "OPEN",
+  "modular_claim_confirmed": true,
+  "must_not_substitute_free_52": true,
+  "object": "characteristic-zero residual module of V_25 on the source involution line",
+  "primes": [
+    {
+      "arrangement_kernel_dim": 59,
+      "based_kernel_dim_in_arrangement": 52,
+      "free_a_d_dim": 52,
+      "image_basis_sha256": "44cf7e065647d101e1a01becff61d833e303713b285e361cce3fdbfc213fa0eb",
+      "prime": 89,
+      "residual_image_cols": 7,
+      "residual_image_rank": 7,
+      "residual_map_sha256": "c3bd14ba0d2e3803fb96495c7e333c5f0aacb6f08ecd9734dda71bb1e03bec6c",
+      "zeta": 78
+    },
+    {
+      "arrangement_kernel_dim": 59,
+      "based_kernel_dim_in_arrangement": 52,
+      "free_a_d_dim": 52,
+      "image_basis_sha256": "1c820c08b99e6a6ce51343da4c17b38bd4331639e6aba8b049436391f91f6f06",
+      "prime": 199,
+      "residual_image_cols": 7,
+      "residual_image_rank": 7,
+      "residual_map_sha256": "33a6286d2d8c54dce1ffcdc71d4e80c7003cd6d730f3b8299066babd3bfd7b11",
+      "zeta": 61
+    },
+    {
+      "arrangement_kernel_dim": 59,
+      "based_kernel_dim_in_arrangement": 52,
+      "free_a_d_dim": 52,
+      "image_basis_sha256": "8972bd04761315eb5e483b75383239f058b6063cdc714a0ce63fd9c2be53a0ef",
+      "prime": 331,
+      "residual_image_cols": 7,
+      "residual_image_rank": 7,
+      "residual_map_sha256": "df28c24bc3339e778ae7a9f3f7dec559874c20cf727f621eee6396db27c7a1f3",
+      "zeta": 270
+    }
+  ],
+  "promotion_argument": "Integral model of M_25 at p=(prime, \u03b6_11 \u2212 zeta) with 67 \u2224 660 (and same for listed holdouts). Reynolds factor 1/660 is a unit. Residual restriction is an R-linear map on the arrangement lattice. Rank of the special fibre is 7 at every listed good prime; by semicontinuity of rank under specialization the generic rank is \u22657. Upper bound rank \u22647 is the sealed modular claim recovered at p=67 on the strict 43-space (translation.json residual_image_rank=7) and reconfirmed on the arrangement kernel at holdouts. Hence rank_Q residual_module = 7. The free local a_d space has dim 52 and must not be substituted for this module.",
+  "rank": 7,
+  "references": {
+    "border_support_translation": "certificates/border_support/translation.json",
+    "char0_lift_pattern": "tmp/char0_lift_p16/REPORT.md"
+  },
+  "self_sha256": "bf81066034f18dff146ea39a42842b2cf7eb00531656432da907b3ba325c1bad"
+}

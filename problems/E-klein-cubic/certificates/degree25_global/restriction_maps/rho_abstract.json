@@ -1,0 +1,297 @@
+{
+  "V25_dim": 43,
+  "degree": 25,
+  "equalizer_targets": [
+    "source_involution_line",
+    "exceptional_normal_direction_line",
+    "target_involution_line",
+    "V4_triple_line_equalizer",
+    "A4_D10_D12_typeI_typeII_point_kernels",
+    "C3_A4_C6_character_blocks"
+  ],
+  "residual_special": {
+    "free_fibre_dim": 52,
+    "genuine_global_image_rank": 7,
+    "note": "The free a_d space has dimension 52. The genuine residual image of V_25 (equivalently of the arrangement kernel) has rank 7.",
+    "r": 25
+  },
+  "rows": [
+    {
+      "codomain_free_dim": 4,
+      "codomain_multi_rees_dim": 1300,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_1: V_25 -> Sym^1(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 1,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 9,
+      "codomain_multi_rees_dim": 2700,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_2: V_25 -> Sym^2(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 2,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 8,
+      "codomain_multi_rees_dim": 2208,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_3: V_25 -> Sym^3(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 3,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 15,
+      "codomain_multi_rees_dim": 3795,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_4: V_25 -> Sym^4(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 4,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 12,
+      "codomain_multi_rees_dim": 2772,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_5: V_25 -> Sym^5(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 5,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 21,
+      "codomain_multi_rees_dim": 4410,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_6: V_25 -> Sym^6(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 6,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 16,
+      "codomain_multi_rees_dim": 3040,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_7: V_25 -> Sym^7(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 7,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 27,
+      "codomain_multi_rees_dim": 4617,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_8: V_25 -> Sym^8(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 8,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 20,
+      "codomain_multi_rees_dim": 3060,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_9: V_25 -> Sym^9(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 9,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 33,
+      "codomain_multi_rees_dim": 4488,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_10: V_25 -> Sym^10(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 10,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 24,
+      "codomain_multi_rees_dim": 2880,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_11: V_25 -> Sym^11(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 11,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 39,
+      "codomain_multi_rees_dim": 4095,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_12: V_25 -> Sym^12(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 12,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 28,
+      "codomain_multi_rees_dim": 2548,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_13: V_25 -> Sym^13(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 13,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 45,
+      "codomain_multi_rees_dim": 3510,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_14: V_25 -> Sym^14(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 14,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 32,
+      "codomain_multi_rees_dim": 2112,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_15: V_25 -> Sym^15(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 15,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 51,
+      "codomain_multi_rees_dim": 2805,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_16: V_25 -> Sym^16(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 16,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 36,
+      "codomain_multi_rees_dim": 1620,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_17: V_25 -> Sym^17(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 17,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 57,
+      "codomain_multi_rees_dim": 2052,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_18: V_25 -> Sym^18(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 18,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 40,
+      "codomain_multi_rees_dim": 1120,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_19: V_25 -> Sym^19(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 19,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 63,
+      "codomain_multi_rees_dim": 1323,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_20: V_25 -> Sym^20(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 20,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 44,
+      "codomain_multi_rees_dim": 660,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_21: V_25 -> Sym^21(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 21,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 69,
+      "codomain_multi_rees_dim": 690,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_22: V_25 -> Sym^22(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 22,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 48,
+      "codomain_multi_rees_dim": 288,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_23: V_25 -> Sym^23(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 23,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "codomain_free_dim": 75,
+      "codomain_multi_rees_dim": 225,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_24: V_25 -> Sym^24(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 24,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "codomain_free_dim": 52,
+      "codomain_multi_rees_dim": 52,
+      "domain": "V_25",
+      "domain_dim": 43,
+      "global_image_vs_free": "Global image is a linear subspace of the free jet space. Equality with the free local kernel is NOT assumed (P25R.0 required check).",
+      "map": "rho_25: V_25 -> Sym^25(E_-*) \u2297 E_\u00b1 (free chart)",
+      "r": 25,
+      "target": "E_minus",
+      "target_dim": 2
+    }
+  ],
+  "self_sha256": "f76f248e1332ed94913e888d32799dfe9354ab850a714f2b1d1de560cc63c1e6",
+  "source_normal_target_distinct": true
+}

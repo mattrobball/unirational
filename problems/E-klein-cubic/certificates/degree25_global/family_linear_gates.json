@@ -1,0 +1,38 @@
+{
+  "based_minus_lines_odd_m": {
+    "C_r_glob_parametrization": "c \u2208 ker(based residual map) \u2282 V_25, dim 36",
+    "a_odd": "forced zero on free fibre; globally automatic from based residual = 0",
+    "family_id": "based_minus_lines_odd_m",
+    "free_proxy_forbidden": {
+      "high_order_Eplus_ker_free": "P25.1 used free high-order ker L_r (r\u226513) as independent parameters. Globally those jets are \u03c1_r(c) for c in the based kernel of dimension 36 \u2014 not free of total rank sum_r nullity(L_r)."
+    },
+    "linear_conditions": {
+      "kernel_dim_in_V25": 36,
+      "matrix_reference": "tmp/p25r/based_rows_p67.npy (row space rank 7)",
+      "object": "residual restriction of c to source involution line L_t vanishes",
+      "rank": 7
+    },
+    "live_at_m1_d25": true
+  },
+  "residual_e1_swap_both": {
+    "live_at_m1_d25": false,
+    "reason": "Requires residual e=1 i.e. d=6m+1=7 for m=1; not degree 25."
+  },
+  "residual_e_ge7_generic_swap_both": {
+    "C_r_glob_parametrization": "c \u2208 V_25 (dim 43); a_d = \u03c1_25(c) \u2208 residual image (dim 7)",
+    "a_d_global": {
+      "free_fibre_dim": 52,
+      "genuine_image_rank": 7,
+      "replacement": "Replace free 52-dimensional a_d by the genuine residual image im(\u03c1_res) of rank 7 inside Sym^{25}(E_-*)\u2297E_-."
+    },
+    "family_id": "residual_e_ge7_generic_swap_both",
+    "linear_conditions": {
+      "kernel_dim_in_V25": 43,
+      "object": "no additional linear cut on V_25 beyond arrangement/strict filtration",
+      "rank": 0,
+      "swap_both_open": "Zariski-open in residual P^6 ledger; nonlinear later"
+    },
+    "live_at_m1_d25": true
+  },
+  "self_sha256": "20e2431b92272746489d7d7d21b6c33d5fed7a6a8ca6bcdc87ddb8dcb28126d2"
+}

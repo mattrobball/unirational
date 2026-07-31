@@ -1,0 +1,21 @@
+{
+  "K_dim": 6,
+  "Q_dim": 37,
+  "V25_dim": 43,
+  "based_kernel_dim": 36,
+  "dispatch": "P25R.0",
+  "exit": "P25R0-PASS",
+  "files": [
+    "COEFFICIENT_MODEL.md",
+    "bases.json",
+    "residual_module_char0.json",
+    "restriction_maps/rho_abstract.json",
+    "produce_model.py",
+    "verify_model.py",
+    "common_p25r.py"
+  ],
+  "headline": "OPEN",
+  "residual_rank": 7,
+  "rss_mib": 246.21875,
+  "self_sha256": "c87b1db313a3c2acf6e6709627bf2ffa2c873478209dd21c73cfa28441e9a811"
+}

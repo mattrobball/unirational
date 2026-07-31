@@ -1,0 +1,14 @@
+{
+  "based_kernel_dim": 36,
+  "dispatch": "P25R.1",
+  "exit": "P25R1-PASS",
+  "families_live_linear": [
+    "based_minus_lines_odd_m",
+    "residual_e_ge7_generic_swap_both"
+  ],
+  "free_a_d_proxy_rejected": true,
+  "headline": "OPEN",
+  "residual_image_rank": 7,
+  "rss_mib": 32.0,
+  "self_sha256": "39e1fb1629aa73a2f0322bbaa4451d8cb18478582475efbc98682f6ac332c7ae"
+}

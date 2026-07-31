@@ -1,0 +1,114 @@
+{
+  "V25": {
+    "K_dim": 6,
+    "Q_dim": 37,
+    "ambient_M25_dim": 189,
+    "arrangement_kernel_dim": 59,
+    "decomposition": "V_25 = Q \u2295 K",
+    "definition": "Strict global coefficient space of degree-25 self-covariants with plus-plane arrangement vanishing and common-line order \u2265 3; equivalently the accepted normalized (Q|K) space of dimension 43.",
+    "total_dim": 43
+  },
+  "based_minus_line": {
+    "based_kernel_dim": 36,
+    "based_kernel_sha256": "b9faf4eef22d97b3b9ad3a5f67d357eb67d0b60305bbbe60365e99094311885a",
+    "not_imported_from_F67_as_char0_entries": "Row space is reconstructed by evaluation at p=67; characteristic-zero rank and based kernel dimension are promoted by the DVR argument in residual_module_char0.json. Exact Q-entries of a primitive integral basis of the residual lattice are not required for rank claims.",
+    "prime": 67,
+    "reduced_based_rows_shape": [
+      7,
+      43
+    ],
+    "reduced_based_sha256": "c1dc7e4a1165a982bba814c640a0f4b8b58c134c7886784b01d4d747164f4e15",
+    "residual_image_rank": 7,
+    "seven_rows_reconstructed_at_p67": true
+  },
+  "change_of_basis": {
+    "arrangement_to_strict_43": {
+      "sha256_mod_67": "d874fbbfe4b28c6147c9a07cf9e6be449ee5488bcf2d92d13cdd5be27f1b78ca",
+      "shape": [
+        43,
+        59
+      ]
+    },
+    "border_rank28": {
+      "components": "1 \u2295 K (6) \u2295 Sym^2 K / relations (21) \u2192 rank 28",
+      "rank": 28,
+      "reference": "certificates/border_support/"
+    },
+    "local_normal_jet_bases": {
+      "free_fibre": "certificates/global_finite_lifting/common_g3.py monoms_bin \u00d7 target",
+      "note": "Local free bases are not identified with im(\u03c1_r) without check."
+    },
+    "original_to_arrangement_kernel": {
+      "sha256_mod_67": "5e569430049d4b6df92fa2ac8d27b37aa214ff126700406e77ec068e8cfe2bf0",
+      "shape": [
+        59,
+        189
+      ]
+    },
+    "strict_to_QK_frame": {
+      "K_basis_shape": [
+        6,
+        43
+      ],
+      "K_sha256_mod_67": "34fac517b9f2cffea558cc7651d8bc0b0f54ae0fcc2721216d483b0c1a837ed2",
+      "Q_basis_shape": [
+        37,
+        43
+      ],
+      "Q_sha256_mod_67": "04a2db91032a9b7efe1a2bf0ceef89e1bfd5cfd13f876b30c3babb7fe5b70de3",
+      "det_frame_unit_mod_67": true,
+      "frame_sha256_mod_67": "04db7e34df433f5f92cd3855a40a4523880608c6cbd89c25e6649cafc1383b3f",
+      "frame_shape": [
+        43,
+        43
+      ]
+    }
+  },
+  "degree": 25,
+  "dispatch": "P25R.0",
+  "field": {
+    "discovery_primes": [
+      [
+        67,
+        64
+      ],
+      [
+        89,
+        78
+      ],
+      [
+        199,
+        61
+      ],
+      [
+        331,
+        270
+      ],
+      [
+        353,
+        58
+      ]
+    ],
+    "generic": "Q(zeta_11)",
+    "integral_model": "O_K localized at good p=(prime, zeta_11 - zeta)"
+  },
+  "headline": "OPEN",
+  "required_checks": {
+    "global_image_not_assumed_equal_free_kernel": true,
+    "matrices_exact_char0_ranks": true,
+    "modular_recovery_at_stated_primes": true,
+    "seven_based_rows_reconstructed": true,
+    "source_normal_target_P_E_minus_distinct": true
+  },
+  "residual_module_summary": {
+    "free_proxy_forbidden_dim": 52,
+    "rank": 7
+  },
+  "reynolds_seeds": {
+    "count": 189,
+    "note": "Combinatorial Reynolds seeds; evaluation rank 189 at good primes identifies them with an R-basis of the covariant lattice (Nakayama).",
+    "sha256": "436a46f55e7919e699c67cbaf2bef0587050353fe61b307403c007d6434b4270",
+    "source": "tmp/degree25_structural_probe/seeds.json"
+  },
+  "self_sha256": "0e08a4716ea8152a2c863a9700eb979369f96c45edb0428912201c328e3219e9"
+}
