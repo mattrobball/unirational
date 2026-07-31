@@ -1,0 +1,35 @@
+{
+  "schema": "klein-cubic-T9-seal-v1",
+  "exits": [
+    "T9-HENSEL-NONUNIT-SEALED",
+    "T9-UNDECIDED"
+  ],
+  "headline": "OPEN",
+  "file_sha256": {
+    "BINODAL_COMPONENT.md": "b6a0275686786357b3c3410ef7ae837f40a26e1036a3b0ce4721b6caf3dd555a",
+    "HENSEL_NONUNIT.md": "bd986fb5471383607d2d2ffc684d4d4a848eec87eb5c58b77ecce05c59636a53",
+    "component_presentation.json": "ab406520993172cd2b0adf60912e62564b1633e0cd0cf900f7a72aae90ab11a1",
+    "exit_t9.json": "9e09c31d1caa29f5d873639454114581b930e2a3e5f30f02d1dd2ccff4752f98",
+    "hensel_hypotheses.json": "aa3b00b700ffa434eab2d250daa62f31ba386b7409548e0559165933cd31191a",
+    "noether_parameters.json": "ac4e667b55bdaea51f6017ef290c853f868aa02857d72110c20847c0acd1dc41",
+    "preflight_t91.json": "f43759a9114ce43e317007525695322c44abed26de45333f6cdf05b535e26e7b",
+    "verify_component.py": "5e7a2c09a4cc401bed0dc1204b452a154f0fbf30324afb56f9d475688dbac5a7",
+    "verify_hensel_hypotheses.py": "893b227c1231fe9ee14cef23e5d535ed399ff4771ccfe9e768fad30b2190aa6b"
+  },
+  "terminal_markers": [
+    "T9_HENSEL_VERIFIER_ACCEPT",
+    "T9_COMPONENT_VERIFIER_ACCEPT"
+  ],
+  "proves": [
+    "Z_101 / Q_101 binodal point via multivariate Hensel at L4/p=101",
+    "Analytic nonunitness of saturated (H,s1) ideal over Q (T8-S1-NONUNIT-ANALYTIC interface sealed)",
+    "Local dim-2 smoothness of ordered double-root incidence at the Hensel point (modular Jacobian)",
+    "Modular fibre-degree floor for global Noether charts (2758 over u, 496 over AB)"
+  ],
+  "does_not_prove": [
+    "Global equations of the binodal component over Q",
+    "Normality/nonnormality of S_G",
+    "dim Sing(S_G) = 2",
+    "T9-BINODAL-COMPONENT"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "klein-cubic-T91-component-presentation-v1",
+  "status": "UNDECIDED",
+  "presentation_form": "none_closed_over_Q",
+  "ideal_description_raw": {
+    "ring": "Q[A,B,Y,Z,u1,u2]",
+    "generators": [
+      "P(A,B,Y,Z,u1)",
+      "partial_u P(A,B,Y,Z,u1)",
+      "P(A,B,Y,Z,u2)",
+      "partial_u P(A,B,Y,Z,u2)"
+    ],
+    "saturator": "(u1-u2)*ell*C*G*P_uu(u1)*P_uu(u2)*delta(u1)*delta(u2)",
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
+  },
+  "what_is_known": [
+    "Smooth 2-dimensional component exists in char 0 (analytic Hensel + Morse input)",
+    "Modular point on the component with rank-4 Jacobian (T9.0)",
+    "Noether pair (A,B) is locally free; modular fibre degree 496 before G-isolation",
+    "Diagonal and G=0 components must be saturated away (correction 3)"
+  ],
+  "what_is_not_produced": [
+    "Prime ideal generators over Q of the generic component",
+    "Finite free/integral algebra structure over Q[t1,t2]",
+    "Function-field RUR with exact verification"
+  ],
+  "component_isolation_method_planned": "Modular factor selection at the Hensel point on the AB-fibre eliminant, discarding G=0 and non-gate factors before char-0 reconstruction",
+  "modular_isolation_status": "not_completed",
+  "exit": "T9-UNDECIDED",
+  "headline": "OPEN"
+}

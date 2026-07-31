@@ -1,0 +1,153 @@
+{
+  "schema": "klein-cubic-T91-preflight-v1",
+  "timestamp_note": "T9.1 preflight after T9.0 Hensel seal",
+  "ring": {
+    "ambient": "Q[A,B,Y,Z,u1,u2]",
+    "generators_of_raw_ideal": [
+      "P(A,B,Y,Z,u1)",
+      "P_u(A,B,Y,Z,u1)",
+      "P(A,B,Y,Z,u2)",
+      "P_u(A,B,Y,Z,u2)"
+    ],
+    "saturator": "(u1-u2)*ell*C*G*P_uu(u1)*P_uu(u2)*delta(u1)*delta(u2)",
+    "H_note": "On the open G\u22600, two distinct double roots imply Res=0 hence H=0 automatically. H is needed to cut G=0 components of the raw incidence."
+  },
+  "generator_counts": {
+    "P_terms": 1593,
+    "H_terms": 37992,
+    "ell_terms": 31,
+    "C_terms": 2630,
+    "P_uu_terms": 881,
+    "delta_terms": 10507,
+    "G_representation": "exact_div(Res_u(P,P_u), H); factorization L*M^4*Q4*F27^2 with F27 modular-pending"
+  },
+  "term_counts_specialized_mod_p": {
+    "p": 101,
+    "fibre_u_P_terms_approx": [
+      1581,
+      1204,
+      1581,
+      1204
+    ],
+    "fibre_AB_system_bytes": 50186,
+    "H_specialized_AB_terms": 37589
+  },
+  "local_smoothness_at_hensel_point": {
+    "point": {
+      "A": 36,
+      "B": 55,
+      "Y": 77,
+      "Z": 80,
+      "u1": 46,
+      "u2": 72,
+      "p": 101
+    },
+    "jacobian_4x6_rank": 4,
+    "nullspace_dim": 2,
+    "nullspace_basis": [
+      [
+        43,
+        1,
+        83,
+        88,
+        1,
+        0
+      ],
+      [
+        100,
+        56,
+        30,
+        79,
+        0,
+        1
+      ]
+    ],
+    "good_Noether_pairs_ABYZ": [
+      [
+        "A",
+        "B",
+        86
+      ],
+      [
+        "A",
+        "Y",
+        60
+      ],
+      [
+        "A",
+        "Z",
+        51
+      ],
+      [
+        "B",
+        "Y",
+        28
+      ],
+      [
+        "B",
+        "Z",
+        100
+      ],
+      [
+        "Y",
+        "Z",
+        79
+      ]
+    ],
+    "preferred_Noether_parameters": [
+      "A",
+      "B"
+    ],
+    "note": "RREF free variables are (u1,u2) for the 4x6 Jacobian, so the projection to (u1,u2) is \u00e9tale-local. Globally that projection has modular fibre degree 2758 (unsaturated). Projection to (A,B) is also \u00e9tale-local (det 86) with modular fibre degree 496 (u1\u2260u2 only)."
+  },
+  "expected_dimensions": {
+    "analytic_component_dim": 2,
+    "source": "WORKORDER_CAS_T9_P25Z.md \u00a71.2 T-BRANCH-BINODAL-DIVISOR (smooth 2-dim ordered double-root incidence in char 0)",
+    "ambient_dim": 6,
+    "raw_equations": 4
+  },
+  "modular_degree_measurements": {
+    "p": 101,
+    "fibre_over_u1_u2_equals_46_72_unsaturated": {
+      "degree": 2758,
+      "system": "P(u1),Pu(u1),P(u2),Pu(u2) in A,B,Y,Z",
+      "artifact": "tmp/t9_component/fibre_u_p101.out",
+      "includes_G0_and_diagonal_removed": "diagonal not present (u1,u2 fixed distinct); G=0 components included"
+    },
+    "fibre_over_A_B_equals_36_55_u_distinct": {
+      "degree": 496,
+      "system": "P(u),Pu(u),P(v),Pu(v),(u-v)*w-1 in Y,Z,u,v,w",
+      "artifact": "tmp/t9_component/fibre_AB_degree.json",
+      "leading_ideal_artifact": "tmp/t9_component/fibre_AB_lead.out",
+      "note": "msolve RUR file empty at this degree; degree from msolve verbose log; leading ideal has 72 generators"
+    },
+    "AB_plane_scan_binodal_YZ": {
+      "binodal_YZ_count": 10,
+      "binodal_and_H_zero_count": 6,
+      "witness_YZ": [
+        77,
+        80
+      ],
+      "note": "brute-force F_101 scan; H=0 binodal points at fixed (A,B)"
+    }
+  },
+  "checkpoint_plan": [
+    "1. Choose Noether parameters (A,B) (preferred; fibre deg 496 vs 2758 for (u1,u2))",
+    "2. Modular factor selection at Hensel point among deg-496 fibre to isolate G\u22600, gates-passing, branch-transverse factor",
+    "3. Multi-modular CRT of the isolated monic eliminant / RUR over F_p(A,B)",
+    "4. Rational reconstruction with congruence check + exact substitution",
+    "5. Verify dim 2, generic root distinctness, gates, dh1\u2227dh2\u22600 over Q(t1,t2)"
+  ],
+  "certificate_type_target": "finite integral algebra over Q[A,B] (or RUR/function-field presentation) for the prime component through the Hensel point, saturated by the gate product",
+  "verifier_design": "Independent verifier recomputes: (i) modular Jacobian rank/nullspace at the Hensel point; (ii) specialization of the algebra/RUR at (A,B)\u2261(36,55) recovers the witness with gates units; (iii) exact residual of the four deflated equations over Q(t1,t2); (iv) does not import the producer.",
+  "memory_floor": {
+    "exploratory_rss_observed": "msolve fibre jobs < 50 MiB; python preflight < 25 MiB",
+    "char0_reconstruction_floor": "Degree-496 function-field RUR over Q(A,B) with multi-modular isolation, or elimination involving 37992-term H, is the measured char-0 floor. Prior plane-section RUR was degree ~2000\u20132678. Not attempted in this dispatch inside the 8 GiB default; 64 GiB would be requested only after this preflight if the director assigns the heavy slot to a concrete multi-modular plan.",
+    "request_64GiB": false,
+    "reason_not_requesting_64GiB_now": "No closed finite matrix formulation yet for the function-field solve; heavy slot reserved for a credible finite floor. Measured modular degrees alone do not yet justify a 64 GiB elimination without a factor-isolation plan with bounded matrix size."
+  },
+  "smallest_unresolved_computation": "Isolate the monic factor of the degree-496 AB-fibre eliminant at the Hensel point across enough primes, CRT to Q(A,B), and certify a finite Q[A,B]-algebra presentation of the ordered binodal component (gates-saturated).",
+  "exit_if_not_closed": "T9-UNDECIDED",
+  "heavy_slot_used": false,
+  "headline": "OPEN"
+}

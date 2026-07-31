@@ -1,0 +1,229 @@
+{
+  "schema": "klein-cubic-T9-hensel-hypotheses-v1",
+  "witness": {
+    "plane": "L4",
+    "plane_definition": {
+      "A": "13+7*s+2*t",
+      "B": "2+5*s+9*t",
+      "Y": "8+s+6*t",
+      "Z": "4+3*s+11*t"
+    },
+    "p": 101,
+    "variables": [
+      "s",
+      "t",
+      "u1",
+      "u2"
+    ],
+    "modular_point": {
+      "s": 0,
+      "t": 62,
+      "u1": 46,
+      "u2": 72,
+      "A": 36,
+      "B": 55,
+      "Y": 77,
+      "Z": 80
+    }
+  },
+  "system": {
+    "E1": "P(Lambda(s,t), u1)",
+    "E2": "P_u(Lambda(s,t), u1)",
+    "E3": "P(Lambda(s,t), u2)",
+    "E4": "P_u(Lambda(s,t), u2)",
+    "ring": "Z_(101)[s,t,u1,u2] (localized at (101))",
+    "target_ring": "Z_101 (101-adic integers)"
+  },
+  "hensel_version": {
+    "name": "multivariate Hensel lemma (nonsingular Jacobian form)",
+    "statement": "Let f=(f1,...,fn) be polynomials with coefficients in Z_p. If a in Z^n satisfies f(a) \u2261 0 mod p and det(Df(a)) is a unit in Z_p (equivalently nonzero mod p), then there exists a unique \u00e3 in Z_p^n with f(\u00e3)=0 and \u00e3 \u2261 a mod p.",
+    "references": [
+      "Bourbaki, Commutative Algebra, Ch. III, \u00a74, no. 5 (Hensel's lemma)",
+      "Eisenbud, Commutative Algebra, Thm. 7.3 / Ex. 7.25 (complete local rings)",
+      "Standard computational form: linear Newton lift with invertible Jacobian mod p"
+    ],
+    "hypotheses_literal": {
+      "residual_vanishing_mod_p": true,
+      "residual_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "jacobian_determinant_mod_p": 88,
+      "jacobian_determinant_direct": 13,
+      "jacobian_is_unit_mod_p": true,
+      "precision_condition": "For the nonsingular form (det J unit mod p), residual vanishing mod p and unit Jacobian suffice for a unique Z_p-lift; no higher precision bootstrap is required."
+    }
+  },
+  "recomputed_modular": {
+    "E": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "u1_minus_u2": 75,
+    "dh1": [
+      31,
+      44,
+      1,
+      89
+    ],
+    "dh2": [
+      0,
+      93,
+      83,
+      1
+    ],
+    "branch_2x2_det": 14,
+    "Puu": [
+      48,
+      35
+    ],
+    "detJ4_formula": 88,
+    "detJ4_direct": 13,
+    "H": 0,
+    "Res_u": 0,
+    "gates": {
+      "ell": 18,
+      "C": 66,
+      "L": 21,
+      "M": 55,
+      "Q4": 10,
+      "Puu": [
+        48,
+        35
+      ],
+      "delta": [
+        93,
+        12
+      ],
+      "u1_minus_u2": 75
+    },
+    "G_formal_line": [
+      {
+        "G0": 16,
+        "deg_G_line": 59,
+        "deg_Res_line": 102,
+        "deg_H_line": 43,
+        "H0": 0,
+        "direction": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "G0": 16,
+        "deg_G_line": 34,
+        "deg_Res_line": 56,
+        "deg_H_line": 22,
+        "H0": 0,
+        "direction": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "G0": 16,
+        "deg_G_line": 63,
+        "deg_Res_line": 106,
+        "deg_H_line": 43,
+        "H0": 0,
+        "direction": [
+          1,
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "G": 16,
+    "detJ4_sign_note": "On the locus Pu1=Pu2=0, det of the ordered 4\u00d74 Jacobian equals \u2212P_uu(u1)P_uu(u2)\u00b7branch_det; the director table reports the absolute/formula value 88, and the direct det is 13 \u2261 \u221288 (mod 101)."
+  },
+  "table_match": {
+    "expected": {
+      "A": 36,
+      "B": 55,
+      "Y": 77,
+      "Z": 80,
+      "branch_det": 14,
+      "Puu": [
+        48,
+        35
+      ],
+      "detJ4": 88,
+      "dh1": [
+        31,
+        44,
+        1,
+        89
+      ],
+      "dh2": [
+        0,
+        93,
+        83,
+        1
+      ],
+      "ell": 18,
+      "C": 66,
+      "L": 21,
+      "M": 55,
+      "Q4": 10,
+      "delta": [
+        93,
+        12
+      ],
+      "G": 16
+    },
+    "mismatches": [],
+    "exact_match": true
+  },
+  "computational_lift_check": {
+    "max_exp": 6,
+    "mod": 1061520150601,
+    "lifted_point": {
+      "s": 358623019768,
+      "t": 173879992849,
+      "u1": 756267297975,
+      "u2": 761252913127
+    },
+    "E_vanishes_at_lift": true,
+    "note": "Finite-precision Newton lift confirms the inductive step; full Z_p existence is the Hensel conclusion."
+  },
+  "analytic_conclusions": {
+    "Z_p_solution_exists": true,
+    "Q_p_point_exists": true,
+    "gates_are_units_in_Z_p": true,
+    "u1_neq_u2_in_Z_p": true,
+    "s1_vanishes": "At the Z_p point, P and P_u share two distinct roots, so deg_u gcd(P,P_u) >= 2, hence the first subresultant s1 = 0.",
+    "H_vanishes": "Res_u(P,P_u) = H*G = 0 at the point, and G is a Z_p-unit (nonzero mod p), therefore H = 0.",
+    "nonunit_ideal": "(H, P, P_u, s1) : (ell * P_uu * C * delta * G)^infty != (1) over Q, because a Q_p-point with all gates units exists.",
+    "marker_consumed": "T8-S1-NONUNIT-ANALYTIC",
+    "number_field_rur_required": false
+  },
+  "inputs": {
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "H_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "P_n_terms": 1593,
+    "H_n_terms": 37992
+  },
+  "proves": [
+    "Unique Z_101-lift of the L4 modular witness for the deflated system",
+    "Q_101-point with P=P_u=0 at two distinct unit-separated roots",
+    "All listed gates and det J4 are units at the modular (hence p-adic) point",
+    "Analytic nonunitness of the saturated (H,s1) ideal over Q (via Q_p point)"
+  ],
+  "does_not_prove": [
+    "An explicit number-field minimal polynomial for the point",
+    "Global normality or nonnormality of S_G",
+    "dim Sing(S_G) = 2",
+    "Explicit global equations of the binodal component (T9.1)"
+  ],
+  "exit": "T9-HENSEL-NONUNIT-SEALED",
+  "headline": "OPEN"
+}

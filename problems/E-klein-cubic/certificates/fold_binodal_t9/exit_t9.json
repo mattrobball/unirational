@@ -1,0 +1,29 @@
+{
+  "schema": "klein-cubic-T9-exit-v1",
+  "exits": [
+    "T9-HENSEL-NONUNIT-SEALED",
+    "T9-UNDECIDED"
+  ],
+  "t90": "T9-HENSEL-NONUNIT-SEALED",
+  "t91": "T9-UNDECIDED",
+  "headline": "OPEN",
+  "table_match": "EXACT",
+  "preferred_witness": {
+    "plane": "L4",
+    "p": 101,
+    "s": 0,
+    "t": 62,
+    "A": 36,
+    "B": 55,
+    "Y": 77,
+    "Z": 80,
+    "u1": 46,
+    "u2": 72,
+    "detJ4": 88,
+    "G": 16
+  },
+  "t91_presentation_form": "none_closed_over_Q",
+  "smallest_unresolved": "multi-modular isolation of deg-496 AB-fibre factor at Hensel point → finite Q[A,B]-algebra",
+  "heavy_slot_used": false,
+  "peak_rss_note": "msolve probes < 50 MiB; T9.0/T9.1 python < 30 MiB"
+}

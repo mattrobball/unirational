@@ -1,0 +1,65 @@
+{
+  "schema": "klein-cubic-T91-noether-parameters-v1",
+  "preferred_parameters": [
+    "A",
+    "B"
+  ],
+  "selection_basis": {
+    "local_projection_det_mod_101": 86,
+    "all_good_ABYZ_pairs": [
+      [
+        "A",
+        "B",
+        86
+      ],
+      [
+        "A",
+        "Y",
+        60
+      ],
+      [
+        "A",
+        "Z",
+        51
+      ],
+      [
+        "B",
+        "Y",
+        28
+      ],
+      [
+        "B",
+        "Z",
+        100
+      ],
+      [
+        "Y",
+        "Z",
+        79
+      ]
+    ],
+    "rejected_global_u1_u2": {
+      "reason": "local free but modular fibre degree 2758",
+      "degree": 2758
+    },
+    "accepted_for_next_attempt": {
+      "parameters": [
+        "A",
+        "B"
+      ],
+      "modular_fibre_degree_u_distinct": 496,
+      "hensel_point_reduction": {
+        "A": 36,
+        "B": 55
+      }
+    }
+  },
+  "alternative_parameters": [
+    "Y",
+    "Z"
+  ],
+  "notes": [
+    "Any good ABYZ pair is \u00e9tale-local Noether at the witness",
+    "Global finite presentation degree measured only for (A,B) and (u1,u2) fibres"
+  ]
+}
