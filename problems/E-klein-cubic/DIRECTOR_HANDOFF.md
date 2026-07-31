@@ -324,7 +324,7 @@ Active work order: `WORKORDER_CAS_AFTER_5E72D8E.md` (supersedes
 
 | Route | State | Blocker |
 |---|---|---|
-| T8 | `T8-S1-UNDECIDED` — **verified**; modular evidence now favors NONUNIT | exact char-0 lift of a binodal witness |
+| T8 / T8-N1 | `T8-S1-UNDECIDED`, `T8-N1-UNDECIDED` — **verified**; evidence favors NONUNIT | RUR degree ~2000: the binodal point is algebraic of large degree |
 | P25Y | `P25Y-DVR-PASS`; `m_75 = 2343`; `P25YB-F4-SLOT-REQUEST` — **verified** | 64 GiB F4 projective support of `J_N`, waiting on the slot |
 | C0 | `C0-UNDECIDED` — **verified** | no executable Fano model; needs `A_proj` descent → Morita symbol |
 | T (old T6) | `T60-UNDECIDED`, `T2R-UNDECIDED` | superseded by T8 |
@@ -337,6 +337,20 @@ deterministic subsystem of genuine landing rows of `F_89`-rank **746 — a lower
 bound only**. Degree 4 cannot fill `Sym⁴` on rank grounds (≤ 32k vs 163k), so
 the earliest possible monomial-fill certificate sits far above 8 GiB. No
 degree-25 exclusion, no covariant. See §5.3 for the one citation gap.
+
+**T8-N1 result (verified).** The Jacobian claim at `SUBRESULTANT_UNIT_TARGET.md`
+line 100 is false *and* was never computed — see `DIRECTOR_CORRECTION_T8.md` and
+`certificates/fold_decision_t8n1/JACOBIAN_CORRECTION.md`. Every director-derived
+item survived independent check (branch dets 14/155/40, `det J_4` 88/95/20,
+`dh_i` rank 2, modular `G` = 16/104/6). The deflated system is nonsingular and
+Hensel lifts cleanly — residuals vanish to `p^40` at L4/`p`=101 — but
+**reconstruction is the wall**: rational reconstruction produced congruence-valid
+false positives that only exact substitution caught, `algdep` was unstable
+through degree 24 at 267 bits, and the msolve plane RUR degree is **~2000**.
+The binodal point is algebraic of large degree, so `T8-S1-NONUNIT` is not
+claimed. Also useful: the raw plane system is positive-dimensional along
+`u_1 = u_2`, and the degree-2678 system contains `G=0` points, so both the
+diagonal saturation and `H=0` are needed to isolate the true component.
 
 **Molien facts, now sealed and quadruply checked** (`certificates/degree25_molien/`):
 `m_d = dim (Sym^d W^∨)^G` is `1, 43, 289, 2343` for `d = 3, 25, 43, 75`, and the
