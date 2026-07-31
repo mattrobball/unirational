@@ -210,7 +210,24 @@ the wrong object. Independent spot-checks that have paid off:
 - **Ledgers that kill a plan outright.** The Macaulay ledger showing a 64 GiB
   grant could not possibly help Path A (`D=19`, `n=52` needs ~10²⁶ GiB).
 
-### 5.3 Audit the *citations*, not just the computations
+### 5.3 Check the incidental facts too
+
+The load-bearing claims get the attention; the incidental sentences are where
+errors survive. Worked example, C0: the packet's structure table said
+`PSL(2,11)` has "110 subgroups of order 12, all `A_4`." It has 110 in two
+classes — 55 `A_4` and 55 `D_12`, both of index 55. A one-line GAP recompute
+caught it. The exit was unaffected, but the false sentence was already inside a
+sealed certificate. Recompute the cheap group-theoretic and numeric asides;
+they cost seconds and they are the ones nobody re-derives later.
+
+**Correcting a sealed packet.** Do not edit it — the seal's self-hash
+convention is often undocumented and a hand-edit silently invalidates the
+ledger. Leave the packet byte-identical and commit a correction record beside
+it (`DIRECTOR_CORRECTION_C0.md`, `ROUTE_G_VERDICT.md` are the templates),
+stating the error, the independently recomputed truth, and why the exit does or
+does not change.
+
+### 5.4 Audit the *citations*, not just the computations
 
 A packet can be arithmetically right and still under-cited, which makes it
 unsafe to reuse. Worked example, P25Y.1: `DVR_MODEL.md` §2 invokes "a map of
@@ -294,7 +311,7 @@ Active work order: `WORKORDER_CAS_AFTER_5E72D8E.md` (supersedes
 |---|---|---|
 | T8 | dispatched 2026-07-31, in flight | `s_1` unit question; holds the round's 64 GiB slot |
 | P25Y | `P25Y-DVR-PASS`, `P25Y3-PREFLIGHT-READY` — **verified** | projective support of `J_N` undecided under 8 GiB |
-| C0 | dispatched 2026-07-31, in flight | idempotent→Fano arrow broken; codim-5 section problem |
+| C0 | `C0-UNDECIDED` — **verified** | no executable Fano model; needs `A_proj` descent → Morita symbol |
 | T (old T6) | `T60-UNDECIDED`, `T2R-UNDECIDED` | superseded by T8 |
 | P25X | `P25X0-PASS`, `P25X1-FAIL` | 842 basis quarantined, not on critical path |
 | G, A, S19, H | parked | need new theorems, not compute |
@@ -305,6 +322,15 @@ deterministic subsystem of genuine landing rows of `F_89`-rank **746 — a lower
 bound only**. Degree 4 cannot fill `Sym⁴` on rank grounds (≤ 32k vs 163k), so
 the earliest possible monomial-fill certificate sits far above 8 GiB. No
 degree-25 exclusion, no covariant. See §5.3 for the one citation gap.
+
+**C0 result (verified).** Two clean negatives. `ρ(F_14) = 1` for the prime
+Fano threefold of genus 8, and conic bundles, rational fibrations and del Pezzo
+fibrations all need `ρ ≥ 2` — so no such mechanism exists geometrically and
+none can descend to `F_14,T`. This closes the §5 search the work order ordered
+*before* elimination, and it rules Problem B's tangent-residual mechanism out
+by geometric type. Separately, the degree-55 odd multisection gives individual
+isotropy (Springer) but cannot kill `[D]`: `cor ∘ res` is multiplication by 55,
+a unit on `Br[2]`. No model installed; elimination preflight written, not run.
 
 **Open decisions for the owner:**
 
