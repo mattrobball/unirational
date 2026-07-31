@@ -1,0 +1,55 @@
+{
+  "schema": "klein-cubic-T81-factor-ledger-v1",
+  "status": "partial",
+  "note": "s1 not expanded over Q; ledger records what is known and what is blocked",
+  "resultant_factorization": {
+    "identity": "Res_u(P,P_u) = H * G",
+    "status": "T2R4-PASS sealed",
+    "H": {
+      "n_terms": 37992,
+      "total_degree": 43,
+      "u_free": true
+    },
+    "G": {
+      "representation": "exact_quotient_circuit",
+      "factorization_shape": "c * L * M^4 * Q4 * F27^2",
+      "deg_G": 63,
+      "L": "A-15",
+      "M": "B",
+      "Q4": "21 terms sparse installed",
+      "F27": "MODULAR_EXECUTABLE_CRT_PENDING (char-0 sparse not installed)"
+    }
+  },
+  "principal_subresultants": {
+    "PSC_0": {
+      "equals": "H*G",
+      "expanded": false,
+      "factors_known": true
+    },
+    "PSC_1_s1": {
+      "expanded_over_Q": false,
+      "term_count": "unknown; not expanded",
+      "empirical_line_degree_mod_p": "classical PSC_1 total degree along generic lines is high (order ~90-100); Euclidean field PRS is rational not polynomial",
+      "zero_locus_meaning": "deg gcd(P,P_u) >= 2 when Res=0 and ell != 0",
+      "factorization_over_Q": "NOT_OBTAINED",
+      "bottleneck": "BOTTLENECK-T8-SRES1-EXPANSION"
+    },
+    "PSC_k_k_ge_2": {
+      "status": "not expanded",
+      "role": "control higher gcd degree; not required for T8.1 exit"
+    }
+  },
+  "gate_factors": {
+    "ell": {"n_terms": 31, "u_free": true, "path": "certificates/fold_normalization_t2r/saturation_factors/ell_lc_u.tsv"},
+    "P_uu": {"n_terms": 881, "u_free": false, "path": "certificates/fold_normalization_t2r/saturation_factors/P_uu.tsv"},
+    "C": {"n_terms": 2630, "u_free": true, "path": "certificates/fold_normalization_t2r/saturation_factors/C_content.tsv"},
+    "delta": {"n_terms": 10507, "u_free": false, "path": "certificates/fold_normalization_t2r/saturation_factors/delta_Cramer.tsv"},
+    "G_factors_installed": ["L", "M", "Q4"],
+    "G_factors_modular_only": ["F27"]
+  },
+  "does_not_claim": [
+    "s1 factors into gate polynomials over Q",
+    "V(H,s1) subset V(ell) as an exact containment",
+    "unit ideal after any saturation stage"
+  ]
+}

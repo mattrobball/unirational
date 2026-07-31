@@ -1,0 +1,155 @@
+{
+  "status": "discovery_only_not_exact_certificate",
+  "structural_on_VH": [
+    {
+      "p": 101,
+      "ok": 26,
+      "fail": 0
+    },
+    {
+      "p": 199,
+      "ok": 22,
+      "fail": 0
+    },
+    {
+      "p": 353,
+      "ok": 25,
+      "fail": 0
+    }
+  ],
+  "witnesses": [
+    {
+      "plane": "L4",
+      "p": 101,
+      "s": 0,
+      "t": 62,
+      "A": 36,
+      "B": 55,
+      "Y": 77,
+      "Z": 80,
+      "H": 0,
+      "s1": 0,
+      "gd": 2,
+      "ell": 18,
+      "C": 66,
+      "L": 21,
+      "M": 55,
+      "Q4": 10,
+      "F27": 36,
+      "roots": [
+        {
+          "u": 46,
+          "Puu": 48,
+          "delta": 93
+        },
+        {
+          "u": 72,
+          "Puu": 35,
+          "delta": 12
+        }
+      ],
+      "ufree_gates_ok": true,
+      "binodal_Puu_ok": true
+    },
+    {
+      "plane": "L4",
+      "p": 199,
+      "s": 63,
+      "t": 134,
+      "A": 125,
+      "B": 130,
+      "Y": 79,
+      "Z": 75,
+      "H": 0,
+      "s1": 0,
+      "gd": 2,
+      "ell": 78,
+      "C": 128,
+      "L": 110,
+      "M": 130,
+      "Q4": 87,
+      "F27": 8,
+      "roots": [
+        {
+          "u": 35,
+          "Puu": 96,
+          "delta": 76
+        },
+        {
+          "u": 171,
+          "Puu": 20,
+          "delta": 176
+        }
+      ],
+      "ufree_gates_ok": true,
+      "binodal_Puu_ok": true
+    },
+    {
+      "plane": "L2",
+      "p": 101,
+      "s": 26,
+      "t": 60,
+      "A": 50,
+      "B": 41,
+      "Y": 64,
+      "Z": 16,
+      "H": 0,
+      "s1": 0,
+      "gd": 2,
+      "ell": 21,
+      "C": 29,
+      "L": 35,
+      "M": 41,
+      "Q4": 15,
+      "F27": 0,
+      "roots": [
+        {
+          "u": 30,
+          "Puu": 88,
+          "delta": 93
+        },
+        {
+          "u": 78,
+          "Puu": 37,
+          "delta": 0
+        }
+      ],
+      "ufree_gates_ok": false,
+      "binodal_Puu_ok": true
+    },
+    {
+      "plane": "L2",
+      "p": 89,
+      "s": 4,
+      "t": 65,
+      "A": 67,
+      "B": 81,
+      "Y": 86,
+      "Z": 2,
+      "H": 0,
+      "s1": 0,
+      "gd": 2,
+      "ell": 31,
+      "C": 85,
+      "L": 52,
+      "M": 81,
+      "Q4": 33,
+      "F27": 8,
+      "roots": [
+        {
+          "u": 46,
+          "Puu": 87,
+          "delta": 2
+        },
+        {
+          "u": 82,
+          "Puu": 22,
+          "delta": 21
+        }
+      ],
+      "ufree_gates_ok": true,
+      "binodal_Puu_ok": true
+    }
+  ],
+  "note": "Exact T8-S1-NONUNIT requires char-0 algebraic point; these are F_p reductions of candidate binodal points with all installed G-factors and Sigma gates nonzero."
+}

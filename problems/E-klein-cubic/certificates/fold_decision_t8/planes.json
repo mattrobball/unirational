@@ -1,0 +1,32 @@
+{
+  "schema": "klein-cubic-T81-planes-v1",
+  "description": "Fixed replayable affine 2-planes in A^4_(A,B,Y,Z). Each plane is (s,t) |-> linear forms with integer coefficients listed as (const, coeff_s, coeff_t).",
+  "forbidden_decision_fibre": [67],
+  "planes": {
+    "L1": {
+      "A": [3, 1, 0],
+      "B": [5, 0, 1],
+      "Y": [7, 2, 3],
+      "Z": [11, 5, 7]
+    },
+    "L2": {
+      "A": [1, 2, 5],
+      "B": [4, 3, 1],
+      "Y": [0, 1, 4],
+      "Z": [2, 6, 1]
+    },
+    "L3": {
+      "A": [0, 1, 1],
+      "B": [1, 2, 0],
+      "Y": [2, 0, 3],
+      "Z": [3, 4, 5]
+    },
+    "L4": {
+      "A": [13, 7, 2],
+      "B": [2, 5, 9],
+      "Y": [8, 1, 6],
+      "Z": [4, 3, 11]
+    }
+  },
+  "usage": "Discovery only for plane sections of V(H,s1). Empty section does not prove unit ideal. Gate-pass F_p points do not prove T8-S1-NONUNIT without exact char-0 lift."
+}

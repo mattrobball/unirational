@@ -1,0 +1,28 @@
+{
+  "artifacts": {
+    "SUBRESULTANT_UNIT_TARGET.md": "ad449a5b14d03d90c18a56103c44062155ecac5c99ab277cdd852bf590df9943",
+    "factor_ledger.json": "6adf4fd8b1686cbe80c77ffd5864032b1c8b59912349bb146c23e33393d10519",
+    "modular_nonunit_discovery.json": "4754f47318ad75379a8a6d3f8dfe4ecff9d5b304645afb02a4c93f4ce3dd4534",
+    "planes.json": "75e0c8c1fe6c57e49edffead5f9c8ef4bd3ec563992bddff45a8cc439f3079e3",
+    "sres_eval_t81.py": "2e895454a3c62a726d24ccd50b5411954c00d4638d6e4cf1a5d9d101d40773ce",
+    "subresultant_identities.json": "584866a5edc39f670d30651ee8bf7f176102725efb84b4835adfb5fd3a283c90",
+    "verify_t81.py": "0f3e2af7c8f182baf0cf43dfd7162da0f52675fbfe8026d9cab7fb5d2269fc59"
+  },
+  "bottleneck": "BOTTLENECK-T8-S1-EXACT-CHAR0-WITNESS",
+  "exit": "T8-S1-UNDECIDED",
+  "gate": "T8.1",
+  "inputs": {
+    "H_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
+  },
+  "modular_nonunit_discovery": true,
+  "n_modular_full_gate_witnesses": 3,
+  "normality_inferred": false,
+  "payload_sha256": "baa9023aec99a9377ff176992010fec1164b65cd9acb186a046372a8c6563541",
+  "s1_nonunit_exact": false,
+  "s1_representation": "independent_euclidean_PRS_circuit",
+  "s1_unit_exact": false,
+  "schema": "klein-cubic-T81-payload-v1",
+  "secondary_bottleneck": "BOTTLENECK-T8-SRES1-EXPANSION",
+  "structural_reduction_s4_verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "klein-cubic-T81-subresultant-identities-v1",
+  "definition": "Sres_1(P, P_u) = s_1(A,B,Y,Z)*u + s_0(A,B,Y,Z)",
+  "representation": "independent_euclidean_PRS_circuit_plus_classical_crosscheck",
+  "inputs": {
+    "P": {
+      "path": "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv",
+      "sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+      "n_terms": 1593,
+      "deg_u": 6
+    },
+    "H": {
+      "path": "certificates/target_branch_global/H_factor/H_primitive_integer.tsv",
+      "sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+      "n_terms": 37992
+    }
+  },
+  "algorithms": {
+    "euclid_Q": "rational Euclidean PRS of (P, dP/du); read deg<=1 remainder as associate of Sres_1",
+    "euclid_Fp": "field Euclidean PRS over F_p; zero-locus agrees with classical PSC_1",
+    "classical": "sympy.subresultants for absolute Sres_1 and PSC_1",
+    "bezout": "extended Euclidean algorithm: s1*u+s0 = a*P + b*P_u with a,b in Q[u] (pointwise specialization)"
+  },
+  "principal_subresultant_coefficients": {
+    "PSC_0": "Res_u(P, P_u) = H * G (T2R4 exact quotient circuit)",
+    "PSC_1": "s_1 when deg Sres_1 = 1; vanishes with Res=0 iff deg gcd(P,P_u) >= 2 on D(ell)"
+  },
+  "identities": {
+    "membership": "Sres_1 lies in the ideal (P, P_u) as an R[u]-linear combination (Bézout/subresultant)",
+    "on_D_s1_generic": "when deg gcd = 1 and s1 != 0, the unique common root is u = -s0/s1 in the quotient",
+    "structural_equivalence": {
+      "statement": "On D(ell) with Res_u(P,P_u)=0: s1=0 <=> deg_u gcd(P,P_u) >= 2",
+      "status": "verified_modular_on_V_H",
+      "not_a_char0_proof_of_unit": true
+    },
+    "binodal_vs_cuspidal": {
+      "binodal": "gcd has two distinct roots => two distinct double roots of P; P_uu generically nonzero => open point if other gates pass => NONUNIT witness",
+      "cuspidal": "gcd has a multiple root => mult >= 3 root of P => P_uu = 0 at that root => killed by P_uu gate"
+    }
+  },
+  "expansion_status": {
+    "exact_sparse_s0_s1": "NOT_EXPANDED",
+    "reason": "same densification barrier as T6; evaluation oracle sufficient for directed sections",
+    "accepted_by_workorder": "exact sparse polynomials OR exact straight-line circuits"
+  },
+  "agreement_with_T6_circuit": {
+    "note": "T6 sealed circuit description; this packet recomputes independently and matches zero-loci",
+    "Q_zero_locus_samples": ">=20 all agree",
+    "Fp_zero_locus_samples": "p=89,101 : 30/30 each"
+  }
+}
