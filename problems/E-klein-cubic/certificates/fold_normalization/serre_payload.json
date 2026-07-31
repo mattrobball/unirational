@@ -1,41 +1,49 @@
 {
-  "schema": "klein-cubic-postelo-T2-serre-normality-v1",
+  "schema": "klein-cubic-postelo-T2-serre-normality-v2-repair",
   "headline": "OPEN",
   "gate_T1": "T-BIRATIONAL",
-  "gate_T2": "T-NONNORMAL",
-  "dispatch": "WORKORDER_POST_ELO_CONSTRUCTION.md Path T / T2",
-  "base_commit_note": "3bfbd01 pin from dispatch; T1 seal on c5e71be lineage",
+  "gate_T2": "T2-UNDECIDED pending exact saturated same-open dimension proof",
+  "gate_T2_historical_suspended": "T-NONNORMAL",
+  "dispatch": "REPAIR.md Part I T2R; WORKORDER_CAS_HEADLINE.md §3, §11, §12",
+  "base_commit_note": "repair base db37f58; historical T2 on 3bfbd01/T1 lineage",
   "definitions": {
     "B": "Q[A,B,Y,Z]/(H_prim)",
-    "S": "(B[u]/(P,P_u))[Sigma^{-1}]",
-    "Sigma": ["lc_u(P)", "P_uu", "delta_Cramer", "C_content"]
+    "S_declared": "(B[u]/(P,P_u))[Sigma^{-1}]",
+    "Sigma": ["lc_u(P)", "P_uu", "delta_Cramer", "C_content"],
+    "G": "complementary factor of Res_u(P,P_u)=H*G; inverted in the scoped S2 argument, not proved unit on all of D(Sigma)"
   },
   "claims": {
-    "S2": true,
-    "R1": false,
-    "S_normal": false,
+    "S2_on_D_GSigma": true,
+    "S2_on_full_D_Sigma_without_G": null,
+    "R1": null,
+    "S_normal": null,
     "dim_S": 3,
-    "dim_Sing_S": 2,
-    "codim_Sing_in_S": 1
+    "dim_Sing_S": null,
+    "codim_Sing_in_S": null
   },
   "S2": {
     "mode": "complete_intersection_regular_sequence",
     "certificate": "s2_cm_certificate.json",
+    "scope": "D(G*Sigma) — G inverted",
     "gcd_P_Pu": 1,
     "content_P": 1,
     "Res_nonzero_via_H": true
   },
   "R1": {
     "certificate": "r1_singular_locus.json",
+    "status": "T2-UNDECIDED pending exact saturated same-open dimension proof",
     "jacobian_simplified_ideal": "(H,P,Pu,PA,PB,PY,PZ) on {P_uu != 0}",
-    "exact_Q_cut2_pairA": "0-dim nonempty",
-    "exact_Q_cut2_pairB": "0-dim nonempty",
-    "dim_Sing": 2
+    "exact_Q_cut2_pairA": "0-dim nonempty (unsaturated closed model only)",
+    "exact_Q_cut2_pairB": "0-dim nonempty (unsaturated closed model only)",
+    "dim_Sing": null,
+    "upper_bound_closed_unsaturated": "<= 2 via height/PIT"
   },
   "normalization_defect": {
-    "nonregular_locus_dimension": 2,
-    "conductor_supported_in_codim": 1,
-    "conductor_generators": "NOT_COMPUTED_T3"
+    "status": "undecided",
+    "nonregular_locus_dimension": null,
+    "conductor_B_subset_S": "Ann_B(S/B) — distinct from normalization conductor",
+    "conductor_S_subset_Stilde": "Ann_S(Stilde/S) — not computed; requires proved nonnormality",
+    "conductor_generators": "NOT_COMPUTED"
   },
   "accepted_inputs": {
     "primitive_P": {
@@ -53,14 +61,19 @@
     }
   },
   "artifacts": {
-    "SERRE_NORMALITY.md": "T2 proof",
-    "s2_cm_certificate.json": "S2 CI certificate",
-    "r1_singular_locus.json": "R1 failure + dim Sing=2",
-    "t2_msolve/": "portable msolve .out files",
-    "produce_t2.py": "producer",
-    "verify_t2.py": "independent verifier"
+    "SERRE_NORMALITY.md": "T2 status note (amended; undecided)",
+    "s2_cm_certificate.json": "S2 CI certificate (scoped to D(G Sigma))",
+    "r1_singular_locus.json": "R1 undecided + cut records re-scoped",
+    "t2_msolve/": "portable msolve .out files (unsaturated cut records retained)",
+    "produce_t2.py": "producer (amended)",
+    "verify_t2.py": "independent verifier (amended; does not certify dim theorem)",
+    "fold_normalization_t2r/": "T2R repair packet"
   },
   "not_proved": [
+    "dim Sing_S = 2",
+    "R1 failure or success on same open as S2",
+    "normality or nonnormality of S",
+    "exact saturated open singular dimension",
     "conductor ideal generators",
     "discriminant contacts mod 3",
     "3-primary class group",
@@ -73,7 +86,7 @@
     "rss_gate_gib": 8,
     "modular_is_discovery_only": true
   },
-  "resource_discrepancy_vs_plan": "Unrestricted fold Sing densified past plan floors; H-restricted cut1 exceeded 8 GiB (~34 GiB, killed). R1 settled via exact-Q double linear sections of H+Sing0 within gate (~1.1 GiB).",
-  "terminal_marker_producer": "POSTELO_T2_SERRE_PRODUCER_SEALED",
+  "repair_reference": "REPAIR.md Part I §§1-6, §15",
+  "terminal_marker_producer": "POSTELO_T2_SERRE_PRODUCER_SEALED_UNDECIDED",
   "terminal_marker_verifier": "FOLD_NORMALIZATION_T2_VERIFIER_ACCEPT"
 }

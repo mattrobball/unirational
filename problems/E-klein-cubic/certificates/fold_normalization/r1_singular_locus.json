@@ -1,22 +1,34 @@
 {
   "gate": "T2",
   "claim": "R1",
-  "status": "FAILED",
-  "exit_implication": "T-NONNORMAL",
-  "need": "dim Sing_S <= 1 (codim >= 2 in the 3-fold S)",
-  "proved": "dim Sing_S = 2 on the simple-fold open of the mult-1 component",
+  "status": "T2-UNDECIDED pending exact saturated same-open dimension proof",
+  "historical_status_suspended": "FAILED",
+  "exit_implication": "suspended; do not consume as T-NONNORMAL",
+  "need": "dim Sing on the T2R.1 open <= 1 for R1, or codim-1 singular component for failure of R1; both require exact saturated same-open proof",
+  "proved": "upper bound dim V(I_sing_closed) <= 2 for the unsaturated closed model I_sing=(H,P,Pu,PA,PB,PY,PZ) in Q[A,B,Y,Z,u], via GPT/height on exact 0-dim codim-2 sections; NOT dim=2; NOT open/saturated; NOT R1",
+  "not_proved": [
+    "dim Sing_S = 2",
+    "purity of the singular locus",
+    "lower bound dim >= 2 on any open",
+    "nonemptiness after exact saturation by ell*Puu*delta*C (and G if inverted)",
+    "R1 false or true on the same open as S2"
+  ],
   "jacobian_simplification": {
     "statement": "On {P_uu != 0}, the 2x5 Jacobian of (P,Pu) has last column (0, P_uu)^T on V(P,Pu); rank < 2 iff PA=PB=PY=PZ=0",
     "singular_ideal_on_Puu_open": "(P, Pu, PA, PB, PY, PZ)",
     "mult1_restriction": "add sealed H (no re-elimination of u)",
-    "gates": "saturate / restrict to lc_u * Puu != 0 (and simple-fold Sigma)"
+    "gates_required_for_open": "I_sing^open = (H,P,Pu,PA,PB,PY,PZ) : (ell * P_uu * delta * C)^infinity, plus G iff T2R.1 inverts G"
   },
-  "exact_char0": {
+  "exact_char0_cut_records_unsaturated": {
+    "scope": "unsaturated closed model only; nosat; retained as exact cut computations per REPAIR.md §15",
     "engine": "/opt/homebrew/bin/msolve",
+    "valid_implication": "Each exact 0-dim codim-2 section of I_sing in A^5 implies height(I_sing) >= 3 hence dim V(I_sing) <= 2 (generalized principal ideal theorem). Two sections do not upgrade this to dim = 2 (REPAIR.md §1.1).",
+    "invalid_historical_implication": "Two independent nonempty 0-dim codim-2 sections force dim Sing_S = 2 — FALSE without genericity, purity, and open/saturation control.",
     "tests": [
       {
         "name": "Hsing_cut2_pairA_QQ",
         "ideal": "(H,P,Pu,PA,PB,PY,PZ,L1,L2) over Q",
+        "saturation": "none (nosat)",
         "linears": [
           "A+3B+5Y+7Z+11u+13",
           "2A+11B+17Y+19Z+23u+29"
@@ -28,6 +40,7 @@
       {
         "name": "Hsing_cut2_pairB_QQ",
         "ideal": "(H,P,Pu,PA,PB,PY,PZ,L1b,L2b) over Q",
+        "saturation": "none (nosat)",
         "linears": [
           "5A-7B+11Y-13Z+17u-19",
           "9A+4B-3Y+8Z-6u+2"
@@ -36,22 +49,33 @@
         "artifact": "t2_msolve/Hsing_cut2b_qq.out",
         "sha256": "01efacf368942c5782dfe192f03d81791518359d41b45db9482690acd348872d"
       }
-    ],
-    "dimension_argument": "Two independent codimension-2 affine linear sections of Sing_S are 0-dimensional and nonempty over Q. For a pure-dimensional closed set V in affine space, a generic codim-2 linear section is 0-dimensional iff dim V = 2, empty if dim V <= 1, and positive-dimensional if dim V >= 3. Two independent nonempty 0-dim sections of comparable modular degree certify dim Sing_S = 2."
+    ]
   },
   "modular_discovery_not_char0_claims": {
-    "p67_pairA_with_sat": {"dim_class": "0-dim", "degree": 1115, "artifact": "t2_msolve/Hsing_cut2_p67.out"},
-    "p641_pairA_with_sat": {"dim_class": "0-dim", "degree": 1129, "artifact": "t2_msolve/Hsing_cut2_p641.out"},
-    "p67_pairB_nosat": {"dim_class": "0-dim", "degree": 1129, "artifact": "t2_msolve/Hsing_cut2b_p67.out"},
+    "p67_pairA_with_sat": {"dim_class": "0-dim", "degree": 1115, "artifact": "t2_msolve/Hsing_cut2_p67.out", "note": "discovery only; Rabinowitsch gate variable present"},
+    "p641_pairA_with_sat": {"dim_class": "0-dim", "degree": 1129, "artifact": "t2_msolve/Hsing_cut2_p641.out", "note": "discovery only"},
+    "p67_pairB_nosat": {"dim_class": "0-dim", "degree": 1129, "artifact": "t2_msolve/Hsing_cut2b_p67.out", "note": "discovery only"},
     "fold_without_H_cut2_QQ": {
-      "note": "Without H, Sing of (P,Pu) after 2 cuts is POSITIVE dimensional over Q ([1,6,-1,[]]); the dim-3 fill is on complementary resultant components, not the mult-1 branch",
+      "note": "Without H, Sing of (P,Pu) after 2 cuts is POSITIVE dimensional over Q ([1,6,-1,[]]); fill on complementary resultant components",
       "artifact": "t2_msolve/fold_sing_cut2_nosat_qq.out"
     }
   },
-  "dim_Sing_S": 2,
+  "dim_Sing_S": null,
+  "dim_Sing_S_historical_suspended": 2,
   "dim_S": 3,
-  "codim_Sing_in_S": 1,
-  "R1": false,
+  "codim_Sing_in_S": null,
+  "R1": null,
+  "R1_historical_suspended": false,
+  "upper_bound_closed_unsaturated": {
+    "statement": "dim V(H,P,Pu,PA,PB,PY,PZ) <= 2 in A^5",
+    "method": "exact Q 0-dim of I+(L1,L2) + generalized PIT / height",
+    "artifacts": ["t2_msolve/Hsing_cut2_nosat_qq.out", "t2_msolve/Hsing_cut2b_qq.out"]
+  },
+  "conductors_distinct": {
+    "c_B_subset_S": "Ann_B(S/B) — partial fold modification of the target branch; not the normalization conductor of S",
+    "c_S_subset_Stilde": "Ann_S(Stilde/S) — nonnormality conductor of S, if nonnormality is eventually proved",
+    "note": "REPAIR.md §5; do not conflate"
+  },
   "resource_vs_plan": {
     "plan_estimate": "fold minors / Sing grevlex sparse <<1-4 GiB; exact Q conditional under 8 GiB",
     "actual": {
@@ -59,18 +83,13 @@
       "Hsing_cut1_p67": "RSS observed ~34 GiB; KILLED under 8 GiB house rule (STOP recorded)",
       "Hsing_cut2_modular": "completed ~1.2-2.5 GiB RSS",
       "Hsing_cut2_exact_Q": "completed ~1.1 GiB peak footprint"
-    },
-    "discrepancy": "Plan underestimated densification of unrestricted fold Sing and of H-restricted single hyperplane sections. Double hyperplane sections of H+Sing0 completed within gate and carry the R1 conclusion."
-  },
-  "normalization_defect": {
-    "type": "codimension-1 non-regular locus",
-    "support": "pure dimension 2 closed subset of Spec S (a divisor)",
-    "local_description": "Sing_S = V(H,P,Pu,PA,PB,PY,PZ) on the open {lc_u * Puu != 0}, of dimension 2",
-    "conductor_note": "conductor c = Ann_B(S/B) is supported in codimension 1; explicit generators deferred to T3"
+    }
   },
   "forbidden_methods_not_used": [
     "no full class group",
     "no pointwise sampling of positive-dimensional sing locus as substitute for dim",
     "no re-elimination of u for H"
-  ]
+  ],
+  "repair_reference": "REPAIR.md Part I §§1-6, §15",
+  "t2r_packet": "certificates/fold_normalization_t2r/"
 }

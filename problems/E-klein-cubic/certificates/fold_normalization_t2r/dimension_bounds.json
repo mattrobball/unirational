@@ -1,0 +1,69 @@
+{
+  "gate": "T2R.2-T2R.3",
+  "ideal_closed": "I_sing = (H, P, P_u, P_A, P_B, P_Y, P_Z) in Q[A,B,Y,Z,u]",
+  "ideal_open_full": "I_sing : (ell * P_uu * delta * C * G)^infinity",
+  "ideal_open_implemented": "I_sing : (ell * P_uu)^infinity  (partial; delta, C, G not fully sealed as sparse generators here)",
+  "G_included_in_saturation_iff": "G inverted in T2R.1 — yes; full G-factor not expanded as TSV",
+  "ambient_dimension": 5,
+  "dim_S_G": 3,
+  "upper_bound": {
+    "statement": "dim V(I_sing) <= 2 in A^5, hence dim Sing(S_G) <= 2",
+    "status": "PROVED",
+    "method": "generalized principal ideal theorem / height",
+    "argument": "If I+(L1,L2) is zero-dimensional in Q[A,B,Y,Z,u] (dim 5), every minimal prime p over I+(L1,L2) has height 5. By the generalized PIT, height(p) <= height(I)+2, so height(I) >= 3 and dim V(I) <= 2. Open loci can only drop dimension further.",
+    "requires_genericity": false,
+    "certificates": [
+      {
+        "name": "pairA_nosat_QQ",
+        "linears": ["A+3B+5Y+7Z+11u+13", "2A+11B+17Y+19Z+23u+29"],
+        "saturation": "none",
+        "result": "zero_dim_nonempty",
+        "artifact": "msolve/Hsing_cut2_nosat_qq.out",
+        "sha256": "121e6d4cdc5ec8d09b9821743ace4c0054eadef87e3acbf737fcd77ad148278b"
+      },
+      {
+        "name": "pairB_nosat_QQ",
+        "linears": ["5A-7B+11Y-13Z+17u-19", "9A+4B-3Y+8Z-6u+2"],
+        "saturation": "none",
+        "result": "zero_dim_nonempty",
+        "artifact": "msolve/Hsing_cut2b_qq.out",
+        "sha256": "01efacf368942c5782dfe192f03d81791518359d41b45db9482690acd348872d"
+      }
+    ]
+  },
+  "lower_bound": {
+    "statement": "dim Sing(S_G) >= 2 on D(G*Sigma)",
+    "status": "NOT_PROVED",
+    "forbidden_argument": "two independent nonempty 0-dim codim-2 sections alone (REPAIR.md §1.1 counterexample)",
+    "acceptable_missing": [
+      "exact height-3 prime meeting the open",
+      "finite dominant two-parameter map into Sing",
+      "Noether normalization with two alg-independent coordinates",
+      "exact irreducible 2-dim component plus gate nonvanishing / Jac rank 3 point"
+    ],
+    "modular_discovery_not_claims": [
+      {
+        "name": "hist_sat_cut2A_p67",
+        "result": "zero_dim degree 1115",
+        "artifact": "msolve/Hsing_hist_sat_cut2A_p67.out",
+        "note": "discovery only"
+      },
+      {
+        "name": "hist_sat_cut2A_p641",
+        "result": "zero_dim degree 1129",
+        "artifact": "msolve/Hsing_hist_sat_cut2A_p641.out",
+        "note": "discovery only"
+      },
+      {
+        "name": "sat_lcPuu_cut2A_p67",
+        "result": "zero_dim degree 1113",
+        "artifact": "msolve/Hsing_sat_lcPuu_cut2A_p67.out",
+        "gate": "ell*Puu via Rabinowitsch t",
+        "note": "discovery only; close to historical degree"
+      }
+    ]
+  },
+  "dim_Sing_S_G": null,
+  "R1": null,
+  "exit_implication": "neither T2R-NONNORMAL nor T2R-NORMAL; T2R-UNDECIDED"
+}

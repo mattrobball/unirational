@@ -1,0 +1,41 @@
+{
+  "G_inverted": true,
+  "R1": null,
+  "T2R_md_sha256": "02f4c7e7c14f3ad40060e68988e3be05417c6d041364cc1e95bcf6e77c64e7be",
+  "bottlenecks": [
+    "BOTTLENECK-T2R-LOWER",
+    "BOTTLENECK-T2R-FULL-SAT",
+    "BOTTLENECK-T2R-RESOURCE"
+  ],
+  "dim_Sing_S_G": null,
+  "dimension_bounds_sha256": "d62fb9780955b4006c2368e9329c488384a17632b15f3f04750bfe9d80d854a8",
+  "gate_T1": "T-BIRATIONAL",
+  "gate_T2R": "T2R-UNDECIDED",
+  "headline": "OPEN",
+  "lower_bound_dim_ge_2": false,
+  "msolve_artifacts_sha256": {
+    "Hsing_cut2_nosat_qq.out": "121e6d4cdc5ec8d09b9821743ace4c0054eadef87e3acbf737fcd77ad148278b",
+    "Hsing_cut2b_qq.out": "01efacf368942c5782dfe192f03d81791518359d41b45db9482690acd348872d",
+    "Hsing_hist_sat_cut2A_p641.out": "866deb4a72e4d539c6362ca375ecf1bce289de35598b596f7b8939f66c659467",
+    "Hsing_hist_sat_cut2A_p67.out": "5ebf0004a840993562bc66bcf168ec58988845c78944b9df4fab0418dcafdf88",
+    "Hsing_nosat_cut2A_p67.out": "884a7fc9d54c3ab76466176c4351b01b7253768aa689dbca656ffa74d8e1e404",
+    "Hsing_sat_lcPuu_cut2A_p67.out": "c31d9698c2940cbfc42dfbbb9672ba21f4a7badefaeb43d779aa08ab1361e505"
+  },
+  "repair_reference": "REPAIR.md Part I \u00a7\u00a71-6",
+  "schema": "klein-cubic-T2R-seal-v1",
+  "scheme_t2r1_sha256": "a9dd2d71d8734adecce57f0fced929de5bacd4404481da40b111c07d47304b3a",
+  "seal_sha256": "8d5274c0ee1392529316b9d4390fb27e87eba4d86f0e2cb487308486578a310c",
+  "sources_sha256": {
+    "certificates/fold_normalization_t2r/msolve/Hsing_cut2_nosat_qq.out": "121e6d4cdc5ec8d09b9821743ace4c0054eadef87e3acbf737fcd77ad148278b",
+    "certificates/fold_normalization_t2r/msolve/Hsing_cut2b_qq.out": "01efacf368942c5782dfe192f03d81791518359d41b45db9482690acd348872d",
+    "certificates/fold_normalization_t2r/msolve/Hsing_hist_sat_cut2A_p641.out": "866deb4a72e4d539c6362ca375ecf1bce289de35598b596f7b8939f66c659467",
+    "certificates/fold_normalization_t2r/msolve/Hsing_hist_sat_cut2A_p67.out": "5ebf0004a840993562bc66bcf168ec58988845c78944b9df4fab0418dcafdf88",
+    "certificates/fold_normalization_t2r/msolve/Hsing_nosat_cut2A_p67.out": "884a7fc9d54c3ab76466176c4351b01b7253768aa689dbca656ffa74d8e1e404",
+    "certificates/fold_normalization_t2r/msolve/Hsing_sat_lcPuu_cut2A_p67.out": "c31d9698c2940cbfc42dfbbb9672ba21f4a7badefaeb43d779aa08ab1361e505",
+    "certificates/target_branch_global/H_factor/H_primitive_integer.tsv": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
+  },
+  "t2r_payload_sha256": "b84212b2cc4b932d8aa70b6569ef88ef8ed1416c3949f639298aec526282180a",
+  "terminal_marker": "FOLD_NORMALIZATION_T2R_PRODUCER_SEALED",
+  "upper_bound_dim_le_2": true
+}

@@ -1,8 +1,9 @@
 {
   "FINITE_BIRATIONAL_sha256": "a96eb8f56adb3f63b03ecf6513b665be8ccd6585d028f658e151753f65a35ed1",
-  "SERRE_NORMALITY_sha256": "0393fd292d93aa535833753d123ef69d2fb38f9b26197a6d6cb18b1710f19683",
+  "SERRE_NORMALITY_sha256": "0e8dfe047f2752bf190da039377c8cefaf30dc35cc29a236ce2af77d9269a692",
   "gate_T1": "T-BIRATIONAL",
-  "gate_T2": "T-NONNORMAL",
+  "gate_T2": "T2-UNDECIDED pending exact saturated same-open dimension proof",
+  "gate_T2_historical_suspended": "T-NONNORMAL",
   "headline": "OPEN",
   "msolve_artifacts_sha256": {
     "Hsing_cut2_nosat_qq.out": "121e6d4cdc5ec8d09b9821743ace4c0054eadef87e3acbf737fcd77ad148278b",
@@ -11,11 +12,12 @@
     "Hsing_cut2b_qq.out": "01efacf368942c5782dfe192f03d81791518359d41b45db9482690acd348872d",
     "fold_sing_cut2_nosat_qq.out": "b6e3b620d53860c3f445af75d1e7944fba92191c23829a65e7e8a88f2c7c6073"
   },
-  "r1_singular_locus_sha256": "3824596d12dd1135602b1afe04917208e40834020472b2a0d6fa69ba3da3c6eb",
-  "s2_cm_certificate_sha256": "ba2cf4f031c6246481d5185fc3b70432d0da1f502c201d9fac5fe762ebe69dfb",
-  "schema": "klein-cubic-postelo-T2-serre-normality-seal-v1",
-  "seal_sha256": "bc9ab301a81e0e5527763563a5799f7c07c4e2a5f43321d503079c829be43740",
-  "serre_payload_sha256": "d4144a72cfb5b317b506c1452083a8d9c064ac275ccb46c8ae4194dbe5ecc298",
+  "r1_singular_locus_sha256": "8db1c65113eaf2f0f3d5c64b23bf652db8acb9d4b8dbdf73e2e6c5f0a6259ed7",
+  "repair_reference": "REPAIR.md Part I \u00a7\u00a71-6, \u00a715",
+  "s2_cm_certificate_sha256": "6db2dfda4628a0647befd113dbc3cfb4d141fdc4b008fc99ab5c32b19c44014a",
+  "schema": "klein-cubic-postelo-T2-serre-normality-seal-v2-repair",
+  "seal_sha256": "60eaeb95d77d760486283c9ac99c932f5b2a1247459c51d87c59268f0ff2f17b",
+  "serre_payload_sha256": "dc39d3bba1979b23f9addf138f28b6ea8b19ed552d68a845b016c0a10d42bd8f",
   "sources_sha256": {
     "certificates/fold_normalization/t2_msolve/Hsing_cut2_nosat_qq.out": "121e6d4cdc5ec8d09b9821743ace4c0054eadef87e3acbf737fcd77ad148278b",
     "certificates/fold_normalization/t2_msolve/Hsing_cut2_p641.out": "866deb4a72e4d539c6362ca375ecf1bce289de35598b596f7b8939f66c659467",
@@ -25,5 +27,6 @@
     "certificates/target_branch_global/H_factor/H_primitive_integer.tsv": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
     "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
   },
-  "terminal_marker": "POSTELO_T2_SERRE_PRODUCER_SEALED"
+  "t2r_packet": "certificates/fold_normalization_t2r/",
+  "terminal_marker": "POSTELO_T2_SERRE_PRODUCER_SEALED_UNDECIDED"
 }

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Path T / Gate T2 producer — Serre normality of the fold algebra.
+"""Path T / Gate T2 producer — amended under REPAIR.md Part I.
 
-Seals T-NONNORMAL: S2 proved (CI), R1 fails (dim Sing_S = 2).
+Seals T2-UNDECIDED pending exact saturated same-open dimension proof.
+Historical T-NONNORMAL / dim Sing_S=2 suspended.
 Does not import the verifier.  Does not re-eliminate u for H.
 Does not run T3/T4.  No timing fields.  Self-hashes after last payload byte.
 """
@@ -35,6 +36,8 @@ EXPECTED_MSOLVE = {
     "Hsing_cut2_p641.out": "866deb4a72e4d539c6362ca375ecf1bce289de35598b596f7b8939f66c659467",
     "fold_sing_cut2_nosat_qq.out": "b6e3b620d53860c3f445af75d1e7944fba92191c23829a65e7e8a88f2c7c6073",
 }
+
+STATUS = "T2-UNDECIDED pending exact saturated same-open dimension proof"
 
 
 def enforce_limit() -> None:
@@ -83,7 +86,6 @@ def msolve_is_zero_dim_nonempty(text: str) -> bool:
     t = text.lstrip()
     if t.startswith("[-1]"):
         return False
-    # positive-dim form: [1, nvars, -1, []]
     if t.startswith("[1,") and "-1" in t[:80] and "[]" in t[:80]:
         return False
     return t.startswith("[0,")
@@ -108,7 +110,6 @@ def main() -> None:
     h_n = load_H_count()
     assert h_n == 37992
 
-    # Check msolve artifacts present and hashed
     msolve_hashes = {}
     for name, expected in EXPECTED_MSOLVE.items():
         path = MSOLVE_DIR / name
@@ -117,12 +118,13 @@ def main() -> None:
         assert h == expected, f"hash mismatch {name}: {h} != {expected}"
         msolve_hashes[name] = h
         text = path.read_text()
-        if name.startswith("Hsing_cut2"):
+        if name in ("Hsing_cut2_nosat_qq.out", "Hsing_cut2b_qq.out"):
             assert msolve_is_zero_dim_nonempty(text), f"{name} not 0-dim nonempty"
+        if name in ("Hsing_cut2_p67.out", "Hsing_cut2_p641.out"):
+            assert msolve_is_zero_dim_nonempty(text), f"{name} not 0-dim discovery"
         if name == "fold_sing_cut2_nosat_qq.out":
             assert msolve_is_positive_dim(text), "fold without H should be pos-dim"
 
-    # Build / refresh certificates already written; re-hash for SEAL
     s2_path = HERE / "s2_cm_certificate.json"
     r1_path = HERE / "r1_singular_locus.json"
     payload_path = HERE / "serre_payload.json"
@@ -136,15 +138,16 @@ def main() -> None:
     r1 = json.loads(r1_path.read_text())
     payload = json.loads(payload_path.read_text())
 
-    assert s2["status"] == "PROVED" and s2["regular_sequence"] is True
-    assert r1["status"] == "FAILED" and r1["R1"] is False
-    assert r1["dim_Sing_S"] == 2
-    assert payload["gate_T2"] == "T-NONNORMAL"
-    assert payload["claims"]["S2"] is True
-    assert payload["claims"]["R1"] is False
+    assert s2["regular_sequence"] is True
+    assert s2.get("G_inverted") is True
+    assert STATUS in str(r1.get("status", ""))
+    assert r1.get("dim_Sing_S") is None
+    assert r1.get("R1") is None
+    assert STATUS in str(payload.get("gate_T2", ""))
     assert payload["headline"] == "OPEN"
+    assert payload.get("claims", {}).get("dim_Sing_S") is None
+    assert STATUS in serre_md.read_text()
 
-    # Checkpoint ledgers
     ckpt_dir = HERE / "t2_ckpts"
     ckpt_dir.mkdir(exist_ok=True)
     for k, body in [
@@ -164,14 +167,15 @@ def main() -> None:
             {
                 "ckpt": 1,
                 "modular_discovery": msolve_hashes,
-                "note": "modular dim discovery only; char-0 in R1 certificate",
+                "note": "modular dim discovery only; not char-0 dim theorem",
             },
         ),
         (
             2,
             {
                 "ckpt": 2,
-                "S2": True,
+                "S2": "PROVED_ON_D_GSigma",
+                "G_inverted": True,
                 "mode": "CI_regular_sequence",
                 "certificate": "s2_cm_certificate.json",
             },
@@ -180,17 +184,29 @@ def main() -> None:
             3,
             {
                 "ckpt": 3,
-                "R1": False,
-                "dim_Sing_S": 2,
-                "exact_Q_cut2": ["Hsing_cut2_nosat_qq.out", "Hsing_cut2b_qq.out"],
+                "R1": None,
+                "dim_Sing_S": None,
+                "upper_bound_closed_unsaturated": "<=2",
+                "exact_Q_cut2_nosat": ["Hsing_cut2_nosat_qq.out", "Hsing_cut2b_qq.out"],
+                "status": STATUS,
             },
         ),
         (
             4,
             {
                 "ckpt": 4,
-                "gate_T2": "T-NONNORMAL",
+                "gate_T2": STATUS,
                 "headline": "OPEN",
+                "repair": "REPAIR.md Part I; T2R required before T3",
+            },
+        ),
+        (
+            5,
+            {
+                "ckpt": 5,
+                "gate_T2": STATUS,
+                "headline": "OPEN",
+                "terminal_marker": "POSTELO_T2_SERRE_PRODUCER_SEALED_UNDECIDED",
             },
         ),
     ]:
@@ -198,15 +214,6 @@ def main() -> None:
             json.dumps(body, indent=2, sort_keys=True) + "\n"
         )
 
-    # SEAL: hash all sealed files after final payload bytes are fixed
-    sealed_files = {
-        "SERRE_NORMALITY.md": serre_md,
-        "FINITE_BIRATIONAL.md": finite_md,
-        "s2_cm_certificate.json": s2_path,
-        "r1_singular_locus.json": r1_path,
-        "serre_payload.json": payload_path,
-        "payload.json": HERE / "payload.json",  # T1 payload retained
-    }
     sources = {
         "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv": p_hash,
         "certificates/target_branch_global/H_factor/H_primitive_integer.tsv": h_hash,
@@ -215,10 +222,11 @@ def main() -> None:
         sources[f"certificates/fold_normalization/t2_msolve/{name}"] = h
 
     seal = {
-        "schema": "klein-cubic-postelo-T2-serre-normality-seal-v1",
+        "schema": "klein-cubic-postelo-T2-serre-normality-seal-v2-repair",
         "headline": "OPEN",
         "gate_T1": "T-BIRATIONAL",
-        "gate_T2": "T-NONNORMAL",
+        "gate_T2": STATUS,
+        "gate_T2_historical_suspended": "T-NONNORMAL",
         "SERRE_NORMALITY_sha256": file_hash(serre_md),
         "FINITE_BIRATIONAL_sha256": file_hash(finite_md) if finite_md.is_file() else None,
         "s2_cm_certificate_sha256": file_hash(s2_path),
@@ -226,18 +234,19 @@ def main() -> None:
         "serre_payload_sha256": file_hash(payload_path),
         "sources_sha256": sources,
         "msolve_artifacts_sha256": msolve_hashes,
-        "terminal_marker": "POSTELO_T2_SERRE_PRODUCER_SEALED",
+        "repair_reference": "REPAIR.md Part I §§1-6, §15",
+        "t2r_packet": "certificates/fold_normalization_t2r/",
+        "terminal_marker": "POSTELO_T2_SERRE_PRODUCER_SEALED_UNDECIDED",
     }
-    # self-hash after last payload byte: write without seal_sha256, then add
     seal_path = HERE / "SEAL.json"
     body = json.dumps(seal, indent=2, sort_keys=True) + "\n"
     seal["seal_sha256"] = sha256(body.encode()).hexdigest()
     seal_path.write_text(json.dumps(seal, indent=2, sort_keys=True) + "\n")
 
     print("T2_PRODUCER_OK")
-    print("gate_T2=T-NONNORMAL")
-    print("S2=true R1=false dim_Sing_S=2")
-    print("POSTELO_T2_SERRE_PRODUCER_SEALED")
+    print(f"gate_T2={STATUS}")
+    print("S2=scoped_D_GSigma R1=undecided dim_Sing_S=null")
+    print("POSTELO_T2_SERRE_PRODUCER_SEALED_UNDECIDED")
 
 
 if __name__ == "__main__":

@@ -1,8 +1,9 @@
 {
   "gate": "T2",
   "claim": "S2",
-  "status": "PROVED",
-  "presentation": "R[u]/(P,Pu) is a complete intersection of dimension 3; S is a localization of the mult-1 component on the simple-fold open",
+  "status": "PROVED_ON_D_GSigma",
+  "status_note": "S2 proved after inverting complementary resultant factor G and Sigma; not claimed on full D(Sigma) without G (REPAIR.md §4)",
+  "presentation": "R[u]/(P,Pu) is a complete intersection of dimension 3; after inverting G and Sigma, H is redundant and S_G is a localization of this CI",
   "regular_sequence": true,
   "proof_mode": "gcd_content_resultant_no_GB",
   "argument": {
@@ -12,14 +13,15 @@
     "step4": "Any common divisor of P and Pu in R: if deg_u >= 1 then Res_u(P,Pu)=0, contradiction; if deg_u = 0 then it divides content(P), hence is a unit in Q. Therefore gcd(P,Pu)=1 in R",
     "step5": "height(P,Pu)=2 (no height-1 prime contains both). Two generators of height 2 in a CM ring form a regular sequence",
     "step6": "R/(P,Pu) is a complete intersection of pure dimension 3, hence Cohen-Macaulay, hence satisfies S_k for all k (in particular S2)",
-    "step7": "Cohen-Macaulayness is preserved by localization. On the open where complementary resultant factor G and gates Sigma are inverted, H vanishes on V(P,Pu), so S is a localization of (an open of) this CI and is CM, hence S2"
+    "step7": "Cohen-Macaulayness is preserved by localization. On the open where complementary resultant factor G and gates Sigma are inverted, HG in (P,Pu) implies H=0 after inverting G, so S_G is a localization of (an open of) this CI and is CM, hence S2 on D(G*Sigma)"
   },
+  "G_inverted": true,
   "dim": 3,
   "depth": 3,
   "codim_in_ambient": 2,
   "betti_table": null,
   "betti_note": "not computed; CM follows from CI presentation without free resolution",
-  "gates_inverted": ["lc_u", "P_uu", "delta", "C"],
+  "gates_inverted": ["lc_u", "P_uu", "delta", "C", "G"],
   "no_reelimination_of_u": true,
   "inputs": {
     "P_path": "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv",
@@ -32,8 +34,11 @@
     "H_total_degree": 43
   },
   "not_claimed": [
+    "S2 on D(Sigma) without inverting G",
+    "V(H,G) cap D(Sigma) empty",
     "R1",
     "normality of S",
     "that (P,Pu) is radical globally (only that it is a regular sequence / CI)"
-  ]
+  ],
+  "repair_reference": "REPAIR.md §4"
 }

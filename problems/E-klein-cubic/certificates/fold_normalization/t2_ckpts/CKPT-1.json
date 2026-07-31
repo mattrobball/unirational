@@ -7,5 +7,5 @@
     "Hsing_cut2b_qq.out": "01efacf368942c5782dfe192f03d81791518359d41b45db9482690acd348872d",
     "fold_sing_cut2_nosat_qq.out": "b6e3b620d53860c3f445af75d1e7944fba92191c23829a65e7e8a88f2c7c6073"
   },
-  "note": "modular dim discovery only; char-0 in R1 certificate"
+  "note": "modular dim discovery only; not char-0 dim theorem"
 }

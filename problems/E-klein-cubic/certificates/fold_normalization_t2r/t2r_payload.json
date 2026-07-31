@@ -1,0 +1,61 @@
+{
+  "schema": "klein-cubic-T2R-same-open-saturated-dim-v1",
+  "headline": "OPEN",
+  "gate_T1": "T-BIRATIONAL",
+  "gate_T2_historical": "T2-UNDECIDED pending exact saturated same-open dimension proof",
+  "gate_T2R": "T2R-UNDECIDED",
+  "dispatch": "REPAIR.md §6 T2R; WORKORDER_CAS_HEADLINE.md §3, §11, §12",
+  "base_commit_note": "db37f58",
+  "theorem_boundary": {
+    "proved": [
+      "T2R.1 object S_G with G inverted",
+      "S2 on S_G via CI + localization",
+      "upper bound dim V(I_sing) <= 2 by height/PIT on exact Q unsaturated cut2 records",
+      "upper bound dim Sing(S_G) <= 2"
+    ],
+    "not_proved": [
+      "lower bound dim Sing(S_G) >= 2",
+      "exact dim of I_sing^open after full gate product including delta and G",
+      "R1 true or false on S_G",
+      "normality or nonnormality of S_G",
+      "conductor generators"
+    ]
+  },
+  "T2R_1": {
+    "certificate": "scheme_t2r1.json",
+    "G_inverted": true,
+    "object": "S_G"
+  },
+  "T2R_2": {
+    "ideal": "(H,P,Pu,PA,PB,PY,PZ):(ell*Puu*delta*C*G)^infinity",
+    "implemented_partial_saturation": "ell*Puu",
+    "full_sat_status": "BOTTLENECK-T2R-FULL-SAT"
+  },
+  "T2R_3": {
+    "certificate": "dimension_bounds.json",
+    "upper_bound": "<=2 PROVED",
+    "lower_bound": "NOT_PROVED",
+    "dim": null
+  },
+  "exit": "T2R-UNDECIDED",
+  "bottlenecks": [
+    "BOTTLENECK-T2R-LOWER",
+    "BOTTLENECK-T2R-FULL-SAT",
+    "BOTTLENECK-T2R-RESOURCE"
+  ],
+  "conductors_distinct": true,
+  "house_rules": {
+    "no_full_class_group": true,
+    "no_reelim_u_for_H": true,
+    "rss_gate_gib": 8,
+    "modular_is_discovery_only": true,
+    "no_timing_in_sealed_payloads": true,
+    "linear_sections_alone_insufficient_for_dim_eq_2": true
+  },
+  "accepted_inputs": {
+    "primitive_P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "H_prim_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501"
+  },
+  "terminal_marker_producer": "FOLD_NORMALIZATION_T2R_PRODUCER_SEALED",
+  "terminal_marker_verifier": "FOLD_NORMALIZATION_T2R_VERIFIER_ACCEPT"
+}

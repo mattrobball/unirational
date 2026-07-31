@@ -1,5 +1,6 @@
 {
-  "S2": true,
+  "G_inverted": true,
+  "S2": "PROVED_ON_D_GSigma",
   "certificate": "s2_cm_certificate.json",
   "ckpt": 2,
   "mode": "CI_regular_sequence"

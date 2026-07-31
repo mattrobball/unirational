@@ -1,0 +1,42 @@
+{
+  "gate": "T2R.1",
+  "object_name": "S_G",
+  "ring": "Q[A,B,Y,Z,u]",
+  "ideal_presentation": "(H, P, P_u) before localization; equivalent to (P, P_u) after inverting G",
+  "localization": {
+    "Sigma": ["lc_u(P)", "P_uu", "delta_Cramer", "C_content"],
+    "G_inverted": true,
+    "G_definition": "complementary factor in Res_u(P,P_u)=H*G with H not dividing G",
+    "open": "D(G * Sigma)"
+  },
+  "formula": "S_G = (R[u]/(H,P,P_u))[(Sigma*G)^{-1}] = (R[u]/(P,P_u))[(Sigma*G)^{-1}] on D(G)",
+  "S2_on_this_object": true,
+  "S2_mode": "complete_intersection_regular_sequence_plus_localization",
+  "S2_certificate_ref": "certificates/fold_normalization/s2_cm_certificate.json",
+  "R1_on_this_object": null,
+  "not_claimed": [
+    "S2 on D(Sigma) without inverting G",
+    "V(H,G) cap D(Sigma) empty",
+    "that removed V(G) strata are irrelevant to class-group/valuation arguments"
+  ],
+  "conductors_distinct": {
+    "c_B_subset_S": "Ann_B(S/B)",
+    "c_S_subset_Stilde": "Ann_S(Stilde/S)",
+    "note": "REPAIR.md §5; neither computed in T2R"
+  },
+  "inputs": {
+    "P": {
+      "path": "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv",
+      "sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+      "n_terms": 1593,
+      "content": 1,
+      "u_degree": 6
+    },
+    "H": {
+      "path": "certificates/target_branch_global/H_factor/H_primitive_integer.tsv",
+      "sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+      "n_terms": 37992,
+      "total_degree": 43
+    }
+  }
+}

@@ -1,9 +1,11 @@
 {
-  "R1": false,
+  "R1": null,
   "ckpt": 3,
-  "dim_Sing_S": 2,
-  "exact_Q_cut2": [
+  "dim_Sing_S": null,
+  "exact_Q_cut2_nosat": [
     "Hsing_cut2_nosat_qq.out",
     "Hsing_cut2b_qq.out"
-  ]
+  ],
+  "status": "T2-UNDECIDED pending exact saturated same-open dimension proof",
+  "upper_bound_closed_unsaturated": "<=2"
 }

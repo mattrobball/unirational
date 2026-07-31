@@ -1,5 +1,6 @@
 {
   "ckpt": 4,
-  "gate_T2": "T-NONNORMAL",
-  "headline": "OPEN"
+  "gate_T2": "T2-UNDECIDED pending exact saturated same-open dimension proof",
+  "headline": "OPEN",
+  "repair": "REPAIR.md Part I; T2R required before T3"
 }
