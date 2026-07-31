@@ -326,8 +326,9 @@ Active work order: `WORKORDER_CAS_AFTER_5E72D8E.md` (supersedes
 |---|---|---|
 | T9 | **`T9-HENSEL-NONUNIT-SEALED`** — `s_1` is **not** a unit, settled; `T9-UNDECIDED` on the global component | isolate the deg-496 AB-eliminant factor, then a finite `Q[A,B]`-algebra |
 | T8 / T8-N1 | superseded by T9; the RUR chase was never on the critical path | — |
-| P25Y | `P25Y-DVR-PASS`; `m_75 = 2343`; `P25YB-UNDECIDED` — **verified** | deg-4 F4 / Macaulay wall at ~55 GiB; `V_+(J_N)` still open |
-| C1 | not started | gated by the owner behind T8-N1 and P25Y-M/B |
+| P25Z | **`P25Z-ROW-RANK-746`** — the direct row space is *exactly* 746, certified; `P25Z-FINITE-PRESENTATION-LOWER` | P25Z.2 Fitting/annihilator support (preflight written, 64 GiB) |
+| P25Y | `P25Y-DVR-PASS`; `m_75 = 2343`; `P25YB-UNDECIDED` — **verified** | superseded by P25Z |
+| C1 | `C1-UNDECIDED` — **verified** | char-0 structure constants of the 36-frame (stage 1a) |
 | C0 | `C0-UNDECIDED` — **verified** | no executable Fano model; needs `A_proj` descent → Morita symbol |
 | T (old T6) | `T60-UNDECIDED`, `T2R-UNDECIDED` | superseded by T8 |
 | P25X | `P25X0-PASS`, `P25X1-FAIL` | 842 basis quarantined, not on critical path |
@@ -414,11 +415,25 @@ mixed `QK²` closes only 690 of 777, and `56 + 777 = 833 > 746`, so a full `QK²
 normalization is *impossible from the 746-row subsystem alone*. No relation
 refused to reduce — the uncovered monomials are simply outside the span.
 
-**This sharpens the fork on the quarantined packet.** Either the true row rank
-exceeds 746 (it is a lower bound, ceiling 2343), or the historical rank-28
-border presentation is incompatible with the direct landing ideal. It is not
-recoverable from the direct object as it stands. Deciding which needs an upper
-bound on the row rank — that is now the highest-value cheap question in P25Y.
+**The fork is now RESOLVED (`P25Z-ROW-RANK-746`, verified).** The direct landing
+row rank is **exactly 746** — an upper *and* lower bound, not a plateau. The
+certificate: 2343 Reynolds orbit-sum invariants of degree 75 forming a basis of
+`(Sym^75 W^∨)^G`, and 2343 source points whose `2343 × 2343` invariant-evaluation
+matrix is invertible (det 68). Unisolvence makes the point-evaluations span
+`Inv_75^∨`, so the landing rows at those points span `image(Λ^∨)` exactly.
+
+Two consequences:
+
+- `56 + 777 = 833 > 746` is a **hard dimensional obstruction**, not an artifact
+  of missing rows. The rank-28 border presentation is genuinely *unrecoverable*
+  from the direct landing ideal.
+- The historical **842** count cannot be the direct landing row rank, which is
+  746. That packet is retired on mathematical grounds now, not merely
+  procedurally — and it was modular at `p = 67` only, a prime this project
+  already knows is degenerate.
+
+Worker P's presentation does **not** need rebuilding for missing rows; its open
+issue is closure (§ the `-LOWER` correction), which is independent of this.
 
 **Open decisions for the owner:**
 
