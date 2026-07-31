@@ -1,0 +1,21 @@
+{
+  "T_i": "S-linear endomorphisms of F=S^{28}. On basis deg\u22641: permutation low_target[i,bi]. On quadratic basis: column is -tail of monic rule for k_i*b, stored as F3 coefficient vector T_quad_F3[i,qi].",
+  "T_quad_F3_sha256": "63d863a73873f4959842b5b8351b18d7c599a329ecccbe97d8027400450f9256",
+  "T_quad_F3_shape": [
+    6,
+    21,
+    14134
+  ],
+  "artifact": "certificates/degree25_finite_module/multiplication_matrices.npz",
+  "commutators": {
+    "deg_2_defects_in_specialized_seed_span": "40/40",
+    "deg_2_nonzero_operator_pairs_at_sample_point": 15,
+    "deg_le_1_exact_monomial_identity": true
+  },
+  "low_target_sha256": "ba00c05c2b0c34d2f700e2258380d7ca92f5e6b803239d8492d103adcbae0f4c",
+  "low_target_shape": [
+    6,
+    28
+  ],
+  "self_sha256": "1aa385ae45b40cc931ea80bd63c176e3e5eb310380451234087e6003df9141e5"
+}

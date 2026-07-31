@@ -1,0 +1,38 @@
+{
+  "dispatch": "P25Z.1",
+  "method": "N := smallest T-stable S-submodule of F=S^{28} containing the 690 residual cubic seeds (and hence all commutator defects, which specialize into the seed span at every tested point). Presentation matrix columns = the 690 seeds as polyvectors in S^{28}.",
+  "notes": [
+    "Finite generation on B is not freeness: QK2 only 690/777.",
+    "746 is a lower bound on direct row rank, not a span upper bound.",
+    "The 84-jet is an outer filter only; not used as the presentation."
+  ],
+  "presentation_ncols": 28,
+  "presentation_r": 690,
+  "prime": 89,
+  "rounds": [
+    {
+      "description": "residual cubic seeds (non-K3 RREF pivots)",
+      "generator_degree": 3,
+      "graded_seed_matrix_rank": 690,
+      "n_generators": 690,
+      "round": 0
+    },
+    {
+      "T_stable_count": 40,
+      "comm_in_seed_span_count": 40,
+      "comm_nonzero_defect_columns_sample": 315,
+      "comm_nonzero_operator_pairs": 15,
+      "description": "close under T_0..T_5 and include commutator defects; specialized fibre rank already 28/28 so no new fibre relations; T-stable hull coincides with seed span on a Zariski-dense open of Spec S",
+      "n_generators_added_specialized": 0,
+      "round": 1,
+      "rounds_to_stabilize_specialized": 0,
+      "seed_pm": 2026073189,
+      "specialized_fibre_dim": 0,
+      "specialized_relation_rank": 28,
+      "trials": 40
+    }
+  ],
+  "self_sha256": "eb9015c35b0d8740a4853926a623fd11757c4186e38e57070949995a087fd957",
+  "stabilized": true,
+  "stabilized_round": 1
+}

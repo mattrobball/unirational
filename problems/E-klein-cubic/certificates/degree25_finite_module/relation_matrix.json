@@ -1,0 +1,24 @@
+{
+  "N_definition": "N := smallest T-stable S-submodule of F=S^{28} containing the 690 residual cubic seeds (and hence all commutator defects, which specialize into the seed span at every tested point). Presentation matrix columns = the 690 seeds as polyvectors in S^{28}.",
+  "artifact": "certificates/degree25_finite_module/relation_matrix.npz",
+  "n_K3_rules_used_as_rewrite_not_rows": 56,
+  "n_residual_seeds": 690,
+  "pivot_profile_source": {
+    "K3": 56,
+    "Q2K": 0,
+    "Q3": 0,
+    "QK2": 690
+  },
+  "seed_F3_rank_over_F_p": 690,
+  "seed_F3_sha256": "c6baf33b2266375b1f53278177bda9e96a3525368ca0c6b8117531429b2d97f9",
+  "seed_F3_shape": [
+    690,
+    14134
+  ],
+  "self_sha256": "cb251ba0e7ab0cc85d9489d39ca046fbc45a862fb9c5d6192a462937ccdb8331",
+  "shape": [
+    690,
+    28
+  ],
+  "storage": "seed_F3[a, :] is the degree-3 graded polyvector of generator a in F_3 \u2245 \u2295_b S_{3-deg b}\u00b7e_b, length 14134 = 9139+6*703+21*37. This is the presentation matrix S^{690} \u2192 S^{28} in homogeneous degree 3 (components of other degrees zero for these generators)."
+}

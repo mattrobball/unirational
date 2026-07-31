@@ -1,0 +1,67 @@
+{
+  "dispatch": "P25Z.2-preflight",
+  "gate": "P25Z-FINITE-PRESENTATION",
+  "inputs_sha256": {
+    "T_quad_F3": "63d863a73873f4959842b5b8351b18d7c599a329ecccbe97d8027400450f9256",
+    "relation_matrix_seed_F3": "c6baf33b2266375b1f53278177bda9e96a3525368ca0c6b8117531429b2d97f9",
+    "rewrite_rules_tail_F3": "1842fa7345c1d2dbd40a3143e6553de532cbafafaa0030c23a96be50ad0eb772"
+  },
+  "method_options": [
+    {
+      "description": "Fitt_0(M) = ideal of 28\u00d728 minors of the presentation matrix (poly entries of deg \u22643). Saturate by q-irrelevant ideal.",
+      "expected_cost": "C(690,28) minors is impossible naively; use structure: structured determinant / exterior algebra rank / random projection + CRT, or evaluate on charts / Noether normalization to few variables first.",
+      "memory_floor_gib": 64,
+      "name": "Fitting minors of 28\u00d7690 poly matrix"
+    },
+    {
+      "description": "At random q0 relation rank is 28 so local Fitt is unit; compute exact annihilator generators by interpolation of adjugate/Cramer data from the 28\u00d728 full-rank seed blocks.",
+      "expected_cost": "Choose 28 independent seed rows (dense open); det \u0394 is a degree-\u226484 polynomial in 37 vars \u2014 black-box interpolation needs C(37+84,84) points if dense (infeasible); use sparse or geometric degree bounds / monodromy.",
+      "memory_floor_gib": 64,
+      "name": "specialized annihilation + Hensel/exact lift"
+    },
+    {
+      "description": "Rank drop of the universal 84-jet contains Supp(M) but need not equal it. Use only for chart selection, not as Fitt_0 substitute (work order \u00a72.5, \u00a74 P25Z.2).",
+      "expected_cost": "low; already full rank 84 at 40 random q0",
+      "memory_floor_gib": 8,
+      "name": "84-jet outer determinantal filter (chart only)"
+    }
+  ],
+  "presentation": {
+    "free_rank": 28,
+    "relation_matrix": "certificates/degree25_finite_module/relation_matrix.npz",
+    "shape": [
+      690,
+      28
+    ],
+    "storage_F3": [
+      690,
+      14134
+    ]
+  },
+  "recommended": "Structure-exploiting Fitting of the sealed 690\u00d728 poly presentation under the 64 GiB slot; 84-jet only as outer filter. Do not repeat raw degree-4 F4 on 43 variables.",
+  "resource": {
+    "absolute_max_gib": 96,
+    "authorized_after_preflight_gib": 64,
+    "exploratory_gib": 8,
+    "holder_this_round": "Worker T (fold_binodal_t9)",
+    "one_heavy_slot": true
+  },
+  "ring": {
+    "S": "F_89[q_0,...,q_36]",
+    "n_vars": 37,
+    "prime": 89
+  },
+  "self_sha256": "511f5cb8190d3976a44d9cdbf6d738305f101b4876d4e1567fc71574b2f3b4ec",
+  "verifier_design": {
+    "independent": true,
+    "must_not": [
+      "trust JSON exit fields without recomputation",
+      "import produce_presentation.py",
+      "treat empty solver output as emptiness"
+    ],
+    "must_recompute": [
+      "at least one nonzero 28\u00d728 minor evaluation or equivalent certificate that Fitt_0 is unit after saturation, OR an exact positive-dimensional component with certified witness",
+      "congruence of any reconstructed generators against the sealed relation_matrix seed_F3"
+    ]
+  }
+}

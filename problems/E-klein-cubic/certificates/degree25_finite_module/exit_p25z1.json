@@ -1,0 +1,57 @@
+{
+  "artifacts": {
+    "closure_ledger": "closure_ledger.json",
+    "iso_proof": "iso_proof.json",
+    "multiplication_matrices": "multiplication_matrices.npz",
+    "relation_matrix": "relation_matrix.npz",
+    "rewrite_rules": "rewrite_rules.npz"
+  },
+  "closure_stabilized_round": 1,
+  "dispatch": "P25Z.1",
+  "elapsed_s": 30.068,
+  "exit": "P25Z-FINITE-PRESENTATION",
+  "headline": "OPEN",
+  "inputs_sha256": {
+    "direct_rows_p89": "dcef69b5b60da179af2c4f14f175ab6d0e27f7e594efe0f59cc74ded951123dc",
+    "perm": "d49babb7cfd91bca566d01c25d855c686fa0566f9107d2b18f8bfe4a481838e3",
+    "rows_qk": "eafc35b96914a0d5b84fb42ba7a85f1ee7244e8163d833ba8fd1369c7fefb409",
+    "rref_A": "f7ed78ff0e9414529acb7e437b6d3bb2928fdec878e08c2874a278faa44ddf6a"
+  },
+  "iso": "M = F/N \u2245 R/J_N via mutually inverse reduction maps (iso_proof.json)",
+  "monic_K3": 56,
+  "n_basis": 28,
+  "peak_rss_mib": 450.0,
+  "presentation_shape": [
+    690,
+    28
+  ],
+  "prime": 89,
+  "r": 690,
+  "residual_seeds": 690,
+  "self_sha256": "15fd492b85b0badcd98b13f8466eb962b829d5b5267cd2e59cb53cf62f5c1f69",
+  "specialized_fibre": {
+    "closed_rank": 28,
+    "fibre_dim": 0,
+    "rounds_to_stabilize": 0,
+    "seed_pm": 2026073189,
+    "seed_rank": 28,
+    "trials": 40
+  },
+  "what_remained": [
+    "P25Z.2: Fitt_0(M) and saturation by (q_0..q_36)^\u221e"
+  ],
+  "what_this_does_not_prove": [
+    "Emptiness of Supp_S(M) / Fitting saturation (that is P25Z.2).",
+    "That 746 is the complete direct landing row rank (Worker R / P25Z.3).",
+    "Headline unirationality of the Klein cubic.",
+    "That the historical 842-row packet equals this subsystem."
+  ],
+  "what_this_proves": [
+    "Monic pure-K\u00b3 rewrite system sealed (56/56).",
+    "Multiplication operators T_i on F=S^{28} sealed from those rules.",
+    "Exact residual cubic generators: 690 polyvectors in S^{28}.",
+    "N := T-stable S-span of those generators; presentation S^{690}\u2192S^{28}.",
+    "M = F/N \u2245 R/J_N as S-modules by mutually inverse reduction maps.",
+    "At 40 random q0, specialized relation rank=28 (empty fibre)."
+  ]
+}

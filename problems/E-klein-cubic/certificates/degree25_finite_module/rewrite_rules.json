@@ -1,0 +1,13 @@
+{
+  "artifact": "certificates/degree25_finite_module/rewrite_rules.npz",
+  "k_exp_order": "sorted lexicographic on 6-tuples",
+  "monic_ok": true,
+  "n_rules": 56,
+  "rewrite": "pure_K_cubic_monom + tail = 0 in R/J_N; monom \u2261 -tail in F",
+  "self_sha256": "16f54166895d08932342d2382c0884be1e2fd21895e75621fa558c702b9cebf1",
+  "tail_F3_sha256": "1842fa7345c1d2dbd40a3143e6553de532cbafafaa0030c23a96be50ad0eb772",
+  "tail_F3_shape": [
+    56,
+    14134
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "M_definition": "M = F / N with F = S^{28} on basis B = 1 \u2295 K \u2295 Sym\u00b2K, and N the smallest T-stable S-submodule containing the 690 residual seeds.",
+  "checks_recomputed_here": {
+    "exact_comm_deg1_monomial_identity": true,
+    "monic_K3_count": 56,
+    "monic_ok": true,
+    "seed_F3_rank": 690,
+    "seed_count": 690,
+    "specialized_empty_fibre_trials": 40,
+    "specialized_relation_rank_always": 28
+  },
+  "map_phi": {
+    "name": "\u03c6: F/N \u2192 R/J_N",
+    "on_basis": "\u03c6(e_b) = class of monom b in R/J_N",
+    "surjective": "Monic K\u00b3 rewrites put every pure-K cubic into S\u00b7B, so every class in R/J_N has a representative in S\u00b7B = F.",
+    "well_defined": "Each seed is the K\u00b3-normal form of a cubic generator of J_N, hence zero in R/J_N. T_i lifts multiplication by k_i, which preserves J_N, so T-stable combinations remain in ker(F\u2192R/J_N)."
+  },
+  "map_psi": {
+    "construction": "Reduce any f \u2208 R by the sealed monic K\u00b3 rules (rewrite pure-K cubics via -tail) until the K-support lies in B; read the coefficient polyvector in F; pass to F/N.",
+    "name": "\u03c8: R/J_N \u2192 F/N",
+    "well_defined_on_J_N": "Generators of J_N reduce to seeds or zero, hence to 0 in F/N. Ideal multiples: reduce r\u00b7f by rewriting, which is S-linear combination of T-words on seeds, hence in N."
+  },
+  "phi_psi_id": "Reducing a class then mapping back by \u03c6 yields the same class in R/J_N because each rewrite rule is an equality in R/J_N.",
+  "psi_phi_id": "An element of F is already K-normal; \u03c6 then \u03c8 returns the same polyvector modulo N.",
+  "self_sha256": "270fe7eff1e355724069fb211f2b5052254b0d3638a2ccc622647c014e4f47ad"
+}
