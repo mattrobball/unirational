@@ -1,0 +1,14 @@
+{
+  "basis43_sha256": "4709fdbeea6db5f5c6c17b828dc766c748da9ac656874ae85a60acabe5ce4a54",
+  "claimed_exit": "P25Z-ROW-RANK-746",
+  "claimed_rank": 746,
+  "errors": [],
+  "headline": "OPEN",
+  "ok": true,
+  "recomputed_invariant_rank": 2343,
+  "recomputed_landing_rank": 746,
+  "recomputed_pivot_product_mod_p": 68,
+  "recomputed_unisolvence_rank": 2343,
+  "rss_mib": 1658.828125,
+  "seconds": 132.31507205963135
+}

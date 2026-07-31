@@ -1,0 +1,134 @@
+{
+  "artifact_sha256": {
+    "invariant_basis.npz": "e22df5a743d8f25efb9fb0632003a4898e27d25a081474f02edfa7776cc7baf2",
+    "landing_rows_unisolvent.npz": "aacf5208ea4ea18b7c4a8ab55607e5c3f4ed153fafc5b67acd787e867e021b63",
+    "unisolvent_points.npz": "775543d3dbb1972b1b0af238726af60744db95ed2e33f9e8971ea8b7b857270f"
+  },
+  "artifacts": {
+    "invariant_basis": "invariant_basis.npz",
+    "landing_rows": "landing_rows_unisolvent.npz",
+    "unisolvent_points": "unisolvent_points.npz"
+  },
+  "basis43_sha256": "4709fdbeea6db5f5c6c17b828dc766c748da9ac656874ae85a60acabe5ce4a54",
+  "compare_to_direct_746": {
+    "compared": true,
+    "new_echelon_rank_recomputed": 746,
+    "new_rank": 746,
+    "old_rank": 746,
+    "old_rowspace_contained_in_new": true,
+    "rank_increase_over_746": 0,
+    "stacked_rank": 746
+  },
+  "exit": "P25Z-ROW-RANK-746",
+  "headline": "OPEN",
+  "holdout": {
+    "prime": 199,
+    "role": "structural holdout only, not a decision fibre"
+  },
+  "invariant_basis": {
+    "basis_rank": 2343,
+    "build_seconds": 41.2301869392395,
+    "fill_trials": 0,
+    "m_75": 2343,
+    "method": "Reynolds orbit sums of degree-75 monomials; independence by eval rank on probe set",
+    "n_probe": 2500,
+    "n_selected": 2343,
+    "probe_seed": 2026073189,
+    "reverified": true,
+    "rss_mib_after_basis": 894.296875,
+    "source": "/Users/worker/unirational/problems/E-klein-cubic/tmp/p25z3_work/invariant_monoms.npy"
+  },
+  "landing": {
+    "cubic_ambient_dim": 14190,
+    "growth": [
+      {
+        "last_rank_increase_at": 200,
+        "n_points": 200,
+        "rank": 197
+      },
+      {
+        "last_rank_increase_at": 400,
+        "n_points": 400,
+        "rank": 396
+      },
+      {
+        "last_rank_increase_at": 600,
+        "n_points": 600,
+        "rank": 595
+      },
+      {
+        "last_rank_increase_at": 752,
+        "n_points": 800,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 752,
+        "n_points": 1000,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 752,
+        "n_points": 1200,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 752,
+        "n_points": 1400,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 752,
+        "n_points": 1600,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 752,
+        "n_points": 1800,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 752,
+        "n_points": 2000,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 752,
+        "n_points": 2200,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 752,
+        "n_points": 2343,
+        "rank": 746
+      }
+    ],
+    "last_rank_increase_at": 752,
+    "n_points": 2343,
+    "rank": 746,
+    "rss_mib": 1528.390625,
+    "seconds": 46.11277508735657
+  },
+  "lower_bound_proved": true,
+  "m_75": 2343,
+  "method": "Unisolvent evaluation model for (Sym^75 W^vee)^G over F_89: 2343 independent Reynolds monom orbit-sums; 2343 points with invertible invariant-evaluation matrix; stacked cubic landing rows at those points have rank = rank(\u039b).",
+  "peak_rss_mib": 1528.390625,
+  "prime": 89,
+  "rank": 746,
+  "rank_is_exact": true,
+  "self_sha256": "1f6bac17345a972c313e869cd31e5a8874fb56a163f418fb12f46678817c9e75",
+  "theorem_boundary": "Proved: over F_89, rank of the direct landing map \u039b: Sym^3(V_25) \u2192 (Sym^75 W^vee)^G equals the reported rank, via an invertible evaluation matrix on a spanning set of Inv_75. This is an upper-and-lower bound certificate, not a sampling plateau.",
+  "total_seconds": 173.93045902252197,
+  "unisolvence": {
+    "candidates_tried": 2376,
+    "eval_matrix_rank": 2343,
+    "eval_matrix_shape": [
+      2343,
+      2343
+    ],
+    "invertible": true,
+    "pivot_product_mod_p": 68,
+    "seed": 2026073190
+  },
+  "upper_bound_proved": true,
+  "zeta": 78
+}
