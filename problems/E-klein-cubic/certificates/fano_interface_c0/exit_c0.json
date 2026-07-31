@@ -1,0 +1,99 @@
+{
+  "packet": "certificates/fano_interface_c0",
+  "date": "2026-07-31",
+  "track": "C0",
+  "workorder": "WORKORDER_CAS_AFTER_5E72D8E.md",
+  "headline": "OPEN",
+  "exit": "C0-UNDECIDED",
+  "exits_not_claimed": [
+    "C0-MODEL-PASS",
+    "C-FANO-POINT"
+  ],
+  "c0_1": {
+    "option_chosen": 1,
+    "option_name": "exact quaternion D=(a,b) over K_proj + five Hermitian matrices + common-isotropic equations",
+    "option_installed": false,
+    "option_2_cost": "comparable descent cost (needs A_proj or Morita); slightly cheaper classical Plucker narrative; less convenient for common-line solve",
+    "reason_not_installed": "explicit symbol and H_T matrices absent from installed artifacts; require representation alignment, A_proj descent, and Morita extraction (resource floor outside structural fence); local V4 (p^2,q^2) models refused as global",
+    "smallest_exact_system": "S1 in C0_MODEL.md",
+    "resource_floor": "Steps 1-3 of tmp/pfaffian_explicit_descent/REPORT.md §3 (align B5, descend A_proj, Morita symbol); then split dim/deg/smooth check"
+  },
+  "c0_2": {
+    "structures_searched": [
+      "rational_fibration",
+      "conic_bundle",
+      "odd_degree_multisection",
+      "homogeneous_space_description",
+      "low_degree_rational_section",
+      "linear_section_description",
+      "incidence_to_klein_cubic"
+    ],
+    "conic_bundle_descends": false,
+    "rational_fibration_descends": false,
+    "reason_no_conic_bundle": "classical F14 has Picard number 1; conic-bundle Fanos have rho>=2",
+    "odd_multisection_degree": 55,
+    "odd_multisection_gives_common_line": false,
+    "odd_multisection_kills_quaternion_class": false,
+    "problem_B_applies": false,
+    "problem_B_reason": "F14_T is not a bidegree (2,3) hypersurface in P2xP2"
+  },
+  "binding_corrections": {
+    "idempotent_to_fano": "FAIL-SCOPE",
+    "auxiliary_cubic_language": "REPAIR.md §13",
+    "schur_pointlessness_language": "REPAIR.md §14 — no rational point currently known, not proved pointless"
+  },
+  "elimination": {
+    "status": "PREFLIGHT_ONLY_NOT_RUN",
+    "path": "preflight_elimination.json",
+    "prerequisite": "C0-MODEL-PASS"
+  },
+  "accepted_inputs_not_rederived": [
+    "period(A_proj)=index(A_proj)=2",
+    "SB_2(A) isomorphic to P2_D rational",
+    "individual isotropy of every h in H_T via Springer + degree-55",
+    "common line open",
+    "abstract sigma-self-adjoint reduced-rank-two idempotent exists",
+    "CFOSS I Lemma 3.1 hash-pinned"
+  ],
+  "gap_orbit_degrees": {
+    "group": "PSL(2,11)",
+    "order": 660,
+    "A4_index": 55,
+    "C11_index": 60,
+    "C5_index": 132,
+    "gcd": 1,
+    "scratch": "tmp/c0_audit/gap_orbit_degrees.txt"
+  },
+  "write_scope_respected": [
+    "certificates/fano_interface_c0/",
+    "tmp/c0_*/"
+  ],
+  "forbidden_paths_not_modified": [
+    "CURRENT_PATHS.md",
+    "SPEC.md",
+    "HANDOFF.md",
+    "RESOLUTION.md",
+    "REPAIR.md",
+    "WORKORDER_*.md",
+    "certificates/pfaffian_point/",
+    "certificates/fold_decision_t8/",
+    "certificates/degree25_direct_support/",
+    "problems/B-conic-bundle-multisections/"
+  ],
+  "proved": [
+    "C0.1 Option 1 preferred; neither option installable inside structural resource fence",
+    "smallest exact system S1 and resource floor named",
+    "no conic bundle or rational fibration on F14 (rho=1) hence none on F14_T",
+    "degree-55 multisection lever does not solve common-line or kill [D]",
+    "Problem B mechanism does not apply by geometric type",
+    "elimination preflight recorded without execution"
+  ],
+  "not_proved": [
+    "F14_T(K_proj) nonempty or empty",
+    "explicit (a,b) or H_1..H_5",
+    "ed_C(G)=3",
+    "G-unirationality or its negation",
+    "any headline exit"
+  ],
+  "terminal_marker": "C0_UNDECIDED_STRUCTURAL_AUDIT_HEADLINE_OPEN"
+}

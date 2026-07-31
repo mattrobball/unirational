@@ -1,0 +1,49 @@
+{
+  "c0_1_installed": false,
+  "c0_1_option_chosen": 1,
+  "date": "2026-07-31",
+  "deliverable_sha256": {
+    "C0_AUDIT.md": "7c0bbac4f31613ff41001a206a5bf62791510f40605370054c2b399691586dd4",
+    "C0_MODEL.md": "a425d373c5ecbf2c879b9703e63345a5ce249c705ee7a44eab3f40fa07f7bb2e",
+    "C0_STRUCTURE_TABLE.md": "0115cef77dc06d65511c035ba3591a45f241dc793404cd90c8be60befda0eec0",
+    "exit_c0.json": "2c235419b737afd6d4f4cfc0e2a4ca4ef7ea6c7eeb620c104618fd1801f74237",
+    "preflight_elimination.json": "5c8113713083df988e2d2581fd968a3c375430d50cc89a3a65c0e1012a9dc1b5",
+    "verify_c0.py": "e3483cb8ab44c290c7c3be99f605f162d681536fee51783eb6edccf48743a328"
+  },
+  "elimination": "PREFLIGHT_ONLY_NOT_RUN",
+  "exit": "C0-UNDECIDED",
+  "gap_orbit_degrees": {
+    "A4": 55,
+    "C11": 60,
+    "C5": 132,
+    "gcd": 1
+  },
+  "gate1_binding": "FAIL-SCOPE",
+  "headline": "OPEN",
+  "not_proved": [
+    "F14_T(K_proj) point or emptiness",
+    "explicit (a,b) and H_1..H_5",
+    "headline exit"
+  ],
+  "packet": "certificates/fano_interface_c0",
+  "proved": [
+    "C0.1 Option 1 preferred; neither option installed inside structural fence",
+    "smallest exact system S1 and resource floor named",
+    "no conic bundle or rational fibration on F14 (rho=1)",
+    "degree-55 lever does not yield common line or kill [D]",
+    "Problem B mechanism inapplicable by geometric type",
+    "elimination preflight only"
+  ],
+  "seal_sha256_self": "13fbffc5b49a5c0a8f744d881fe5f964e1c349376cd461023d1731b6217d0937",
+  "terminal_marker": "C0_UNDECIDED_STRUCTURAL_AUDIT_HEADLINE_OPEN",
+  "upstream_pins": {
+    "certificates/pfaffian_point/BRIDGE_AUDIT.md": "0c9cf64c0a7c367286afd2636bf8f1c8dc432df8616075fb4d6434dcf0d16031",
+    "certificates/pfaffian_point/quaternion_corner.json": "9ca99aa07b642c6a083149372f5aa605236fb967597b84273510576cb15d60e9"
+  },
+  "verifier_marker": "VERIFY_C0_OK",
+  "workorder": "WORKORDER_CAS_AFTER_5E72D8E.md \u00a75",
+  "write_scope": [
+    "certificates/fano_interface_c0/",
+    "tmp/c0_*/"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "packet": "certificates/fano_interface_c0",
+  "date": "2026-07-31",
+  "status": "PREFLIGHT_ONLY_NOT_RUN",
+  "headline": "OPEN",
+  "recommendation": "DO_NOT_RUN_UNTIL_C0_MODEL_PASS",
+  "reason": "Work order §5 orders fibration/conic/multisection search before raw elimination. C0.2 found no conic bundle or rational fibration on F14_T (rho=1). Elimination of the common-isotropic system is the residual arithmetic attack, but it requires installed Option-1 (or Option-2) coefficients first. Running five-equation elimination without certified H_T would be empty theatre or a memory-saturating placeholder solve.",
+  "prerequisite": {
+    "exit_required": "C0-MODEL-PASS",
+    "data_required": [
+      "explicit D=(a,b) over executable K_proj",
+      "explicit H_1..H_5 in Herm_3(D)",
+      "split-model check dim=3, deg=14, smooth passed by independent verifier"
+    ]
+  },
+  "proposed_system_after_model": {
+    "name": "common_isotropic_line_affine_chart",
+    "ring": "K_proj[x0,x1,x2,x3,y0,y1,y2,y3]",
+    "generators": [
+      "F1 = h1((1,x,y),(1,x,y))",
+      "F2 = h2((1,x,y),(1,x,y))",
+      "F3 = h3((1,x,y),(1,x,y))",
+      "F4 = h4((1,x,y),(1,x,y))",
+      "F5 = h5((1,x,y),(1,x,y))"
+    ],
+    "generator_count": 5,
+    "unknown_count": 8,
+    "expected_term_shape": "each Fr is a quadratic form in the eight scalar coordinates (Hermitian weight 2); term counts depend on the installed (a,b) and H_r and are unknown until C0-MODEL-PASS",
+    "expected_dimension": 3,
+    "projective_model": "F14_T",
+    "charts_required": [
+      "(1,x,y)",
+      "(x,1,y)",
+      "(x,y,1)"
+    ],
+    "not_a_general_complete_intersection": true,
+    "note": "The five forms are special (Moore determinant recovers twisted Klein cubic). Do not cite general five-quadric singular-locus bounds."
+  },
+  "checkpoint_plan": [
+    {
+      "id": "E0",
+      "action": "Serialize F1..F5 with self-hashes; record bit-sizes of coefficients in K_proj model",
+      "abort_if": "coefficient bit-size or term count exceeds pre-agreed envelope"
+    },
+    {
+      "id": "E1",
+      "action": "Modular Gröbner discovery at two good primes p≠67; record LM, dim, degree of special fibre",
+      "abort_if": "empty solver output (treat as failed run, not empty variety)"
+    },
+    {
+      "id": "E2",
+      "action": "If modular fibres suggest rational points of small height, lift by Hensel/CRT with implemented final congruence check and holdout prime",
+      "abort_if": "reconstruction fails final congruence"
+    },
+    {
+      "id": "E3",
+      "action": "Characteristic-zero Gröbner or resultant only on a scoped chart with dimension certificate plan; never affine hyperplane as dim certificate",
+      "abort_if": "memory > authorized envelope or no exact reconstruction path"
+    },
+    {
+      "id": "E4",
+      "action": "Any candidate q substituted into all five original Hermitian equations; recompute that q is nonzero right D-line",
+      "abort_if": "substitution fails"
+    }
+  ],
+  "certificate_type_if_success": {
+    "exit": "C-FANO-POINT",
+    "must_prove": "point lies on F14_T, not merely on P2_D or auxiliary Pfaffian cubic in Sym(A,sigma)",
+    "bridge": "Arrow B then C of BRIDGE_AUDIT.md (incidence to C_gen, then ed/unirationality)",
+    "house_rule_10": "substitute into original equations"
+  },
+  "certificate_type_if_empty": {
+    "exit": "scoped emptiness only — not automatic headline negative",
+    "note": "Emptiness of one affine chart is not emptiness of F14_T; all three charts and projective closure required"
+  },
+  "verifier_design": {
+    "producer_isolation": "verify_*.py must not import produce_*.py",
+    "decisive_invariant": "recompute h_r(q,q)=0 in D from serialized matrices and q; recompute Nrd coordinates; do not trust JSON booleans",
+    "split_check_independent": "on a splitting extension, recompute dim/deg/smooth of the classical linear section from the same matrices",
+    "modular": "final congruence + holdout prime; never sole fibre p=67",
+    "forbidden": "SymPy _rational_reconstruction private helper"
+  },
+  "resource_envelope_suggestion": {
+    "memory_giB_cap": 8,
+    "note": "Larger than C0 structural fence; requires director authorization after C0-MODEL-PASS",
+    "stagger": "must not overlap T8 or P25Y memory-saturating jobs"
+  },
+  "c0_2_implication": "No conic-bundle shortcut reduces codimension before elimination. The codimension-five section problem remains the residual path once the model exists."
+}
