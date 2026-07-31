@@ -325,7 +325,7 @@ Active work order: `WORKORDER_CAS_AFTER_5E72D8E.md` (supersedes
 | Route | State | Blocker |
 |---|---|---|
 | T8 | `T8-S1-UNDECIDED` — **verified**; modular evidence now favors NONUNIT | exact char-0 lift of a binodal witness |
-| P25Y | `P25Y-DVR-PASS`, `P25Y3-PREFLIGHT-READY` — **verified** | projective support of `J_N` undecided under 8 GiB |
+| P25Y | `P25Y-DVR-PASS`; `m_75 = 2343`; `P25YB-F4-SLOT-REQUEST` — **verified** | 64 GiB F4 projective support of `J_N`, waiting on the slot |
 | C0 | `C0-UNDECIDED` — **verified** | no executable Fano model; needs `A_proj` descent → Morita symbol |
 | T (old T6) | `T60-UNDECIDED`, `T2R-UNDECIDED` | superseded by T8 |
 | P25X | `P25X0-PASS`, `P25X1-FAIL` | 842 basis quarantined, not on critical path |
@@ -337,6 +337,17 @@ deterministic subsystem of genuine landing rows of `F_89`-rank **746 — a lower
 bound only**. Degree 4 cannot fill `Sym⁴` on rank grounds (≤ 32k vs 163k), so
 the earliest possible monomial-fill certificate sits far above 8 GiB. No
 degree-25 exclusion, no covariant. See §5.3 for the one citation gap.
+
+**Molien facts, now sealed and quadruply checked** (`certificates/degree25_molien/`):
+`m_d = dim (Sym^d W^∨)^G` is `1, 43, 289, 2343` for `d = 3, 25, 43, 75`, and the
+self-covariant count is `c_25 = dim Hom_G(Sym^25 W, W) = 189 = dim M_25`. So
+`M_25` *is* the self-covariant space, while `V_25` (dim 43) equals the
+*invariant* space in dimension only — it is a subspace of covariants, not of
+scalar forms. Of the three dimensions `189, 59, 43` that work order §1.1.5 and
+`DVR_MODEL.md` both call "exact Molien dimensions", **only 189 is one**;
+`Arr = 59` and `V_25 = 43` are construction dimensions. Cite them as such. The
+row-rank bound `rank ≤ 2343` is real but not tight — it separates neither 746
+nor the historical 842, so it cannot retire either.
 
 **C0 result (verified).** Two clean negatives. `ρ(F_14) = 1` for the prime
 Fano threefold of genus 8, and conic bundles, rational fibrations and del Pezzo
@@ -373,8 +384,11 @@ were not evidence of emptiness — exactly the failure mode §6 warns about.
    system `P(u_1)=P_u(u_1)=P(u_2)=P_u(u_2)=0` in `(s,t,u_1,u_2)`, whose
    Jacobian factors as `± P_uu(u_1)·P_uu(u_2)·det[dh_i·x_∂]` with
    `dh_i = ∇_x P(x,u_i)` — nonzero at all three witnesses (±88, ±95, ±20).
-2. A 64 GiB job for P25Y.3 projective support (`preflight_p25y3.json` is
-   written and waiting).
+2. A 64 GiB job for P25Y.3/P25Y-B projective support — `preflight_p25y3.json`
+   refreshed, exit `P25YB-F4-SLOT-REQUEST`. **Fenced, not descoped:** it was
+   authorized by the owner but could not run beside T8-N1, since two
+   memory-saturating jobs may not overlap. Dispatch it as soon as the slot
+   frees.
 3. If `T8-S1-NONUNIT` lands, T8.3/T8.4 are dead as written (both are gated on
    `T8-S1-UNIT`). The work order needs a branch for the nonunit case — the
    normalization-defect analysis in §3.2's `T8-S1-NONUNIT` exit line, not the
