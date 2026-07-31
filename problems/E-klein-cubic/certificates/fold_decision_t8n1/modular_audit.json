@@ -1,0 +1,328 @@
+{
+  "schema": "klein-cubic-T8N1-modular-audit-v1",
+  "grad_H": [
+    {
+      "plane": "L4",
+      "p": 101,
+      "point": [
+        36,
+        55,
+        77,
+        80
+      ],
+      "H": 0,
+      "grad_H": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "control": false
+    },
+    {
+      "plane": "L4",
+      "p": 199,
+      "point": [
+        125,
+        130,
+        79,
+        75
+      ],
+      "H": 0,
+      "grad_H": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "control": false
+    },
+    {
+      "plane": "L2",
+      "p": 89,
+      "point": [
+        67,
+        81,
+        86,
+        2
+      ],
+      "H": 0,
+      "grad_H": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "control": false
+    },
+    {
+      "plane": "L2",
+      "p": 101,
+      "point": [
+        50,
+        41,
+        64,
+        16
+      ],
+      "H": 0,
+      "grad_H": [
+        21,
+        95,
+        74,
+        42
+      ],
+      "control": true
+    }
+  ],
+  "deflated": [
+    {
+      "plane": "L4",
+      "p": 101,
+      "s": 0,
+      "t": 62,
+      "u": [
+        46,
+        72
+      ],
+      "dh1": [
+        31,
+        44,
+        1,
+        89
+      ],
+      "dh2": [
+        0,
+        93,
+        83,
+        1
+      ],
+      "branch_det": 14,
+      "Puu": [
+        48,
+        35
+      ],
+      "detJ4": 88,
+      "P_Pu_ok": true,
+      "control": false
+    },
+    {
+      "plane": "L4",
+      "p": 199,
+      "s": 63,
+      "t": 134,
+      "u": [
+        35,
+        171
+      ],
+      "dh1": [
+        20,
+        5,
+        46,
+        129
+      ],
+      "dh2": [
+        136,
+        138,
+        63,
+        77
+      ],
+      "branch_det": 155,
+      "Puu": [
+        96,
+        20
+      ],
+      "detJ4": 95,
+      "P_Pu_ok": true,
+      "control": false
+    },
+    {
+      "plane": "L2",
+      "p": 89,
+      "s": 4,
+      "t": 65,
+      "u": [
+        46,
+        82
+      ],
+      "dh1": [
+        70,
+        25,
+        20,
+        7
+      ],
+      "dh2": [
+        44,
+        4,
+        63,
+        86
+      ],
+      "branch_det": 40,
+      "Puu": [
+        87,
+        22
+      ],
+      "detJ4": 20,
+      "P_Pu_ok": true,
+      "control": false
+    },
+    {
+      "plane": "L2",
+      "p": 101,
+      "s": 26,
+      "t": 60,
+      "u": [
+        30,
+        78
+      ],
+      "dh1": [
+        23,
+        80,
+        57,
+        46
+      ],
+      "dh2": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "branch_det": 0,
+      "Puu": [
+        88,
+        37
+      ],
+      "detJ4": 0,
+      "P_Pu_ok": true,
+      "control": true
+    }
+  ],
+  "gates": [
+    {
+      "plane": "L4",
+      "p": 101,
+      "ell": 18,
+      "C": 66,
+      "L": 21,
+      "M": 55,
+      "Q4": 10,
+      "u_gates": [
+        {
+          "u": 46,
+          "Puu": 48,
+          "delta": 93
+        },
+        {
+          "u": 72,
+          "Puu": 35,
+          "delta": 12
+        }
+      ],
+      "control": false
+    },
+    {
+      "plane": "L4",
+      "p": 199,
+      "ell": 78,
+      "C": 128,
+      "L": 110,
+      "M": 130,
+      "Q4": 87,
+      "u_gates": [
+        {
+          "u": 35,
+          "Puu": 96,
+          "delta": 76
+        },
+        {
+          "u": 171,
+          "Puu": 20,
+          "delta": 176
+        }
+      ],
+      "control": false
+    },
+    {
+      "plane": "L2",
+      "p": 89,
+      "ell": 31,
+      "C": 85,
+      "L": 52,
+      "M": 81,
+      "Q4": 33,
+      "u_gates": [
+        {
+          "u": 46,
+          "Puu": 87,
+          "delta": 2
+        },
+        {
+          "u": 82,
+          "Puu": 22,
+          "delta": 21
+        }
+      ],
+      "control": false
+    },
+    {
+      "plane": "L2",
+      "p": 101,
+      "ell": 21,
+      "C": 29,
+      "L": 35,
+      "M": 41,
+      "Q4": 15,
+      "u_gates": [
+        {
+          "u": 30,
+          "Puu": 88,
+          "delta": 93
+        },
+        {
+          "u": 78,
+          "Puu": 37,
+          "delta": 0
+        }
+      ],
+      "control": true
+    }
+  ],
+  "G_via_line": [
+    {
+      "plane": "L4",
+      "p": 101,
+      "G": 16,
+      "method": "line_interp_Res_over_H_degG_bound"
+    },
+    {
+      "plane": "L4",
+      "p": 199,
+      "G": 104,
+      "method": "line_interp_Res_over_H_degG_bound"
+    },
+    {
+      "plane": "L2",
+      "p": 89,
+      "G": 6,
+      "method": "line_interp_Res_over_H_degG_bound"
+    }
+  ],
+  "director_items_survived": {
+    "grad_H_zero_at_three_witnesses": true,
+    "grad_H_nonzero_at_control": true,
+    "branch_dets": {
+      "L4_101": 14,
+      "L4_199": 155,
+      "L2_89": 40
+    },
+    "det_J4": {
+      "L4_101": 88,
+      "L4_199": 95,
+      "L2_89": 20
+    },
+    "dh_rank_2": true,
+    "no_jacobian_code_in_T8": true,
+    "96_29_are_Puu_and_C": true
+  },
+  "char0_status": "UNDECIDED",
+  "char0_floor": "plane_section_RUR_degree_~2000; algdep_unstable_deg24_at_p40; RR_false_positives"
+}

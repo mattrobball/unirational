@@ -1,0 +1,16 @@
+{
+  "schema": "klein-cubic-T8N1-seal-v1",
+  "exit": "T8-N1-UNDECIDED",
+  "headline": "OPEN",
+  "file_sha256": {
+    "JACOBIAN_CORRECTION.md": "18f27ac0905127f2fb8eedb3326efe35bcce9f5960881fecc1ce2b0257d57c79",
+    "DEFLATED_SYSTEM.md": "77d86a37c104bddeba2ae4cd2355b24ca63ecf12a745a7c5d229fdd050a1ebb5",
+    "HENSEL_AND_LIFT_STATUS.md": "77245d40b2a7f3893115bc9c5332f67db075f8192afedfb4315a8ccc908fa890",
+    "NONUNIT_CONTINUATION.md": "bb7f7ab11c85dc8df3f36ab116e5e423def6686cf54804f14019d90f9100926d",
+    "RESULT.md": "ffef9b303858e9a485fbfd52ef93ee10bbe7b6ab90d67ee9aeecd7321948628f",
+    "exit_t8n1.json": "2aee0b8ab2350011d46d04786a8eb243c71d7cacd11c5d49e723aed0641e585f",
+    "modular_audit.json": "61961258ed301df5acc7d3838af10c1d59d1bf26ed608ef1d797746e8a178203",
+    "verify_t8n1.py": "2bdda09598dabfb1cb23b41c9a701515d79e8d5ec6c6f0051e99d644095967a2"
+  },
+  "terminal_marker": "FOLD_DECISION_T8N1_PRODUCER_SEALED"
+}

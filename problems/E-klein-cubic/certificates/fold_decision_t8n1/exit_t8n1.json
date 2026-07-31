@@ -1,0 +1,30 @@
+{
+  "schema": "klein-cubic-T8N1-exit-v1",
+  "exit": "T8-N1-UNDECIDED",
+  "headline": "OPEN",
+  "smallest_unresolved_stage": "step3_char0_algebraic_point",
+  "resource_floor": {
+    "char0": "plane_section_RUR_degree_~2000; algdep_unstable_through_deg_24_at_p^40_267bits; RR_false_positives_fail_exact_P_subst",
+    "dimension": "no_exact_component_no_Noether_norm_no_saturated_projective_dim; plane_sections_nonemptiness_only"
+  },
+  "steps": {
+    "1_jacobian_correction": "PASS_SEALED",
+    "2_deflated_nonsingular": "PASS_MODULAR",
+    "3_char0_lift": "UNDECIDED",
+    "4_normal_crossing": "MODULAR_ONLY",
+    "5_continuation_dimension": "UNDECIDED"
+  },
+  "director_items": {
+    "grad_H_zero": "confirmed",
+    "no_jacobian_code_in_T8": "confirmed",
+    "96_29_origin": "Puu_and_C_in_discovery_json_not_determinants",
+    "branch_dets_and_detJ4": "confirmed",
+    "dh_rank_2": "confirmed"
+  },
+  "not_claimed": [
+    "T8-S1-NONUNIT",
+    "T-NONNORMAL",
+    "dim_Sing_S_G_equals_2",
+    "headline_exit"
+  ]
+}
