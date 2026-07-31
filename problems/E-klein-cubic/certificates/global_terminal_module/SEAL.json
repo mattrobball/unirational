@@ -1,0 +1,72 @@
+{
+  "characteristic": 0,
+  "do_not_run_degree_ladder": true,
+  "exact_arithmetic": true,
+  "file_sha256": {
+    "FREE_TERMINAL_FORMULA.md": "c2cd6581e170f8064a5013ebba38816678afeb03cb440dc3fd003076d4b0afa8",
+    "GLOBAL_TERMINAL_MODULE.md": "426e8c8e04cd4819582c1815aac248d7395ba1bbbf54415c11c171d9a6ade5b7",
+    "common_g4.py": "92123d2c073a9054583e8f32f80f1c7de1ce69a7d80a6324975830598efc7427",
+    "free_terminal_formula.json": "6a25863ac6301845331a267755678011667557169bbf598cacf3bf2559b3cf88",
+    "global_terminal_module_seal.json": "25c8c7a92b96e7e4383a063be4b0e6f92868fd5efeaef00e49df47be919fdeee",
+    "produce_free_formula.py": "00becdae1d72c3f5824082781593b2d7f2215d4a5014ea381c88acdbd97def80",
+    "produce_global_module.py": "c2b162c14f3cc43bcf9c66aa367029b67ab000db5d75c0cb8a0b04ace287e174",
+    "recurrence_certificate.json": "2da4a3489867ab3b3fcdf5649b3f4fbf1a016d1d8cfb60c5025b7e113d892df4",
+    "regression_7_13_19.json": "07812e0e9bed4c2aaa09ba1ef6ca82bfad4572d8934ee10dba751ae8b2efc769",
+    "semigroup_generators.json": "02718b14871548538850245f474f5601f381c147fe27745b71e0ab864a27cfb6",
+    "source_presentation.json": "81b84fcbabfc8ccbbbffe1312d0f6bf35b862b6d7c211d52fd34072657db1211",
+    "source_presentation.txt": "f1bdc712b1294c50e8628e890eaf2414861b128bb58b0bc29980aba689037d4f",
+    "target_presentation.json": "88af2cc3c355563d5c041a643c0ab6483112aac69e4175c34c7ef2bd06378059",
+    "target_presentation.txt": "0fe246be9b463a1f1958974bfa968e763b44f3d9483c563da6ef97faeee9053b",
+    "terminal_matrix.json": "b64e7f9cadd33eff17912af5c9a6dcd0ad6c84532cdd84ffe3ef5688df72a7b6",
+    "terminal_matrix.txt": "1fb0b3724bd192651948396fbe129d17977cac108d0e55c5051be3a4e31650ff",
+    "verify_free_formula.py": "98cd70f37c6f76835f8b788aff37871f8c3a1764c8b2d356626de18431bbe99c",
+    "verify_global_module.py": "7bf0ab7dc49d70a9c207a5e9d8746b376f762176bb71303350158432df080a3a"
+  },
+  "gates": {
+    "G4.1": "G41-FORMULA",
+    "G4.2_free_fibre": "FINITE_PRESENTATION",
+    "G4.2_global": "G42-OBSTRUCTION-EQUALIZER-REES-GROWTH",
+    "G_A": "G_A_NO_FINITE_GLOBAL_PRESENTATION"
+  },
+  "git_base_requested": "a40b10fbc4bd470ec56af5a6f50e11e6a778cabf",
+  "git_head": "054d42a739ab3823c1a1fd83d3ffcbb1494d92b4",
+  "headline": "OPEN",
+  "input_hashes": {
+    "FINITE_TRUNCATION_THEOREM.md": "41c3ec8f37f396555cf604af813bc2a12629c499576172925f270fb4bfc3b7b8",
+    "TERMINAL_PATTERN.md": "b4fc64b0557162756123ace23d89236a7f1be5e9aa82de0d8000fe3afe3c7e58",
+    "WORKORDER_CAS_HEADLINE.md": "2bf3cbbc7ee4bdc5a551e6dee43e761e367f6b47bb3c89b03871c3458108f102",
+    "common_g3.py": "43c19898dbb3ab34385516d5340d0a1b9f54549b2ff041d7b9db70d20bcc59e0",
+    "degree13_kerL1": "d986e552f391ae6751c2fb79c2ede53cd5b78e90bf2f232243051cd24a01157c",
+    "degree19_kerL1": "70eb07652cf111a575dd83e682903b31abd8b514c0bb4c585cbb3029d046ef35",
+    "degree7_kerL1": "b6bc078a897e99bcb0a8661165fabf2d27cb54e4d846152d9f30b12864dfd97c",
+    "level1_marked_states": "c6056cdf94e9a5324a5ec17950a170511d0f3c7a3edf0cb92bfc12b010675f19"
+  },
+  "modular_discovery_only": false,
+  "no_timing_in_sealed_payloads": true,
+  "open_gates": {
+    "G4.3": "blocked at G-A for full global Theta",
+    "G4.4": "not started",
+    "all_order_alpha_nonvanishing": "certified through r_max=81 only"
+  },
+  "package": "global_terminal_module",
+  "phase0_baseline": "HEADLINE_CAS_BASELINE_ACCEPT at 054d42a",
+  "ring_field": "Q / Z coefficients; binary residual forms over Q",
+  "scope": "G4.1 + G4.2 only; stop at director gate G-A; G4.3/G4.4 not started",
+  "self_sha256": "c0c945a22c8a99f254f5bbd49bab73443c63d51042c0750a63ae29c80e890a5c",
+  "terminal_markers": [
+    "G41_FREE_TERMINAL_FORMULA",
+    "G41_RECURRENCE_CERTIFICATE",
+    "G41_FREE_FORMULA_VERIFY_OK",
+    "G42_SEMIGROUP_HILBERT_BASIS",
+    "G42_FREE_FIBRE_FINITE_PRESENTATION",
+    "G42_GLOBAL_OBSTRUCTION_EQUALIZER_REES",
+    "G42_REGRESSION_7_13_19",
+    "G_A_NO_FINITE_GLOBAL_PRESENTATION",
+    "G42_GLOBAL_MODULE_VERIFY_OK"
+  ],
+  "theorem_boundary": "Free-fibre terminal residual formula (exact recurrence + Res=-L(b^{k+1})). Full global equalizer module: no finite presentation in pure (m,d) gradings (obstruction named). Not a covariant. Not G-NEGATIVE/G-POLYNOMIAL. Headline remains OPEN.",
+  "verifiers": {
+    "verify_free_formula.py": "independent; does not import produce_free_formula",
+    "verify_global_module.py": "independent; does not import produce_global_module"
+  }
+}

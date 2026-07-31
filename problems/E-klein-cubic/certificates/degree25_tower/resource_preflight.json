@@ -1,0 +1,28 @@
+{
+  "N_star": 28,
+  "checkpoint_plan": "stage_ledger -> jet_dimensions -> free_Lr_ranks -> first_terminal_stage -> resource_preflight -> G4 modules -> free-fibre samples -> zero_locus -> exit/SUMMARY",
+  "degree_reached": 25,
+  "dense_floor_note": "Largest free L is 27 x 75 Fraction entries",
+  "exceeded_8GB": false,
+  "first_nonisolable_F_order": 28,
+  "headline_capable_if_survivors": true,
+  "largest_free_L_dense_floor_bytes_estimate": 64800,
+  "largest_free_L_shape": [
+    27,
+    75
+  ],
+  "matrix_dimensions_at_N_star": {
+    "a_d_dim": 52,
+    "ker_L1_dim_generic": 4,
+    "ker_L23_dim_generic": 48,
+    "residual_codomain_dim": 29
+  },
+  "max_RSS_authorized_GB": 8,
+  "multi_rees_dense_equalizer_floor_note": "Materializing a dense multi-Rees residual equalizer of ambient dim 58370 is not constructed. P25.1 residual zero locus is free-fibre exact over Q.",
+  "self_sha256": "01f3e6e8d190d6dac0f5d90e783fdc31ea6e30baf277507f3fa6242c2317044c",
+  "sparse_floor_note": "COO free L_r; residual columns built one-at-a-time",
+  "strategy": "free_fibre_and_free_module_only",
+  "terminal_F_order": 75,
+  "total_multi_rees_dim": 58370,
+  "verifier_design": "verify.py rebuilds ledger, N_star, L_r ranks, ker-L1 residual, and a_d / high-order-ker cancellation without importing produce."
+}

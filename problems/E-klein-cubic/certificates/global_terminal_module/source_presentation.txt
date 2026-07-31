@@ -1,0 +1,53 @@
+{
+  "free_fibre_chart_presentation": {
+    "alphas_sample": {
+      "1": -2,
+      "11": 180,
+      "3": 8,
+      "5": -18,
+      "7": 36,
+      "9": -80
+    },
+    "chart": "free_fibre_pure_powers_based_kerL1",
+    "finite_presentation": true,
+    "r_max_computed": 81,
+    "semigroup_algebra": "A = Q[u,v] with deg(u)=(1,0) on (a,b), deg(v)=(0,1); m=1+2a, d=m+2b",
+    "source_generators": {
+      "finite": true,
+      "n_recursive_sequences": 2,
+      "note": "m-independent; (m,d) only truncates at r <= d-m and shifts monoms",
+      "recurrence": "cubic Phi_+ recurrence for (alpha_r, beta_r)",
+      "seed": "b^{(1)} with (alpha_1,beta_1)=(-2,1)"
+    },
+    "target_generators": {
+      "description": "binary monoms of order N_star = d+2m+1",
+      "finite": true,
+      "finite_over_A": "The family of target spaces is the graded pieces of A \u2297 (polynomial ring on two variables of weight 1 in (m,d) shifts). As a single A-module of all residuals simultaneously, generators are the universal support classes A/B/C by k mod 6, with coefficients from the alpha sequence \u2014 finitely many coefficient streams.",
+      "rank_as_function_of_md": "N_star+1 = d+2m+2"
+    },
+    "terminal_matrix_Theta": {
+      "description": "On the free fibre, Theta is the cubic map from the truncated jet sequence to binary forms of order N_star. Equivalent linear presentation after recurrence: Theta(state) = -L(b^{k+1}), a  (N_star+1) x 2  matrix acting on (alpha_{k+1}, beta_{k+1}) with exactly one nonzero column pattern by sigma_{k+1}.",
+      "entries": "integers from L-image of the ansatz (factors 1 or 2)",
+      "finite_presentation": true,
+      "shape_formula": "[d+2m+2] x 2  (after recurrence reduction)"
+    }
+  },
+  "full_global_finite_presentation": false,
+  "generators_free_fibre": {
+    "finite": true,
+    "n_recursive_sequences": 2,
+    "note": "m-independent; (m,d) only truncates at r <= d-m and shifts monoms",
+    "recurrence": "cubic Phi_+ recurrence for (alpha_r, beta_r)",
+    "seed": "b^{(1)} with (alpha_1,beta_1)=(-2,1)"
+  },
+  "layers": [
+    "plane normal jets (multi-Rees)",
+    "V4 triple-line equalizer",
+    "residual point kernels",
+    "character blocks C3,A4,C6,D10,D12",
+    "source-line coefficient coupling",
+    "finite irrelevant torsion"
+  ],
+  "module": "G^{fam}_{m,d} (global state before terminal residual)",
+  "obstruction": "G42-OBSTRUCTION-EQUALIZER-REES-GROWTH"
+}

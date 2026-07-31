@@ -1,0 +1,719 @@
+{
+  "N_star": 28,
+  "N_star_formula": "d + 2m + 1",
+  "accepted_inputs_sha256": {
+    "WORKORDER_CAS_HEADLINE.md": "2bf3cbbc7ee4bdc5a551e6dee43e761e367f6b47bb3c89b03871c3458108f102",
+    "certificates/global_finite_lifting/FINITE_TRUNCATION_THEOREM.md": "41c3ec8f37f396555cf604af813bc2a12629c499576172925f270fb4bfc3b7b8",
+    "certificates/global_finite_lifting/TERMINAL_PATTERN.md": "b4fc64b0557162756123ace23d89236a7f1be5e9aa82de0d8000fe3afe3c7e58",
+    "certificates/global_finite_lifting/common_g3.py": "43c19898dbb3ab34385516d5340d0a1b9f54549b2ff041d7b9db70d20bcc59e0",
+    "certificates/global_transition/level1_marked_states.json": "c6056cdf94e9a5324a5ec17950a170511d0f3c7a3edf0cb92bfc12b010675f19",
+    "certificates/lifting/families/based_minus_lines_odd_m/tower_stages.json": "3a51e0056351e3ee3932aa714ee9e6b0632e2edb8778433f4114585ed3e45eb1",
+    "certificates/lifting/families/common_tower.py": "2ccde5c1263c872fda8e150b2e6b52f28073e4475ceef2335c324259df9b4bf9",
+    "certificates/lifting/families/residual_e_ge7_generic_swap_both/tower_stages.json": "1f73868bac800592b403e192146fce5ec15ae565ef2fe709aa387365f26e5458",
+    "certificates/lifting/polar_expansion.json": "1231694bdc41f6c06c690c2b8eb58dca42402acf1cfaacdc284157b00033098e",
+    "certificates/transition_repair/category_repaired.json": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0"
+  },
+  "base_pin": "a40b10fbc4bd470ec56af5a6f50e11e6a778cabf",
+  "bidegree": {
+    "d": 25,
+    "m": 1
+  },
+  "decision_summary": "Finite truncation (G1) reduces algebraization at d=25 to a finite polar system through F-order 75. Isolable E+ polynomial corrections exist through F-order 26. First stage without E+ poly isolator: N_star=28. Free-fibre ker-L1 particular residual nonzero at 28 (norm^2=2565625104). Based family: residual zero locus nonempty via high-order E+ ker (rank-27 affine system). Residual e>=7 family: zero locus nonempty via free a_d (rank-27 affine system). Exit P25-TOWER-SURVIVES. Headline OPEN. Not a covariant.",
+  "dispatch": "P25.1",
+  "exit": "P25-TOWER-SURVIVES",
+  "families": {
+    "based_minus_lines_odd_m": {
+      "killed": false,
+      "survivor_equation_shape": "R_0(a_m, b_2, particular b_{>=4}) + A_high \u00b7 s = 0, where s coordinates high-order ker L_r (r>=13), A_high has rank 27, codomain dim 29.",
+      "zero_locus_status": "NONEMPTY"
+    },
+    "residual_e_ge7_generic_swap_both": {
+      "killed": false,
+      "survivor_equation_shape": "R_0(a_m, b_2, particular b_{>=4}, a_odd=0) + A_ad \u00b7 a_d = 0, A_ad has rank 27, a_d dim 52, codomain dim 29.",
+      "zero_locus_status": "NONEMPTY"
+    }
+  },
+  "first_stage_without_Eplus_poly_isolator": 28,
+  "free_fibre_samples": {
+    "based_zero": {
+      "first_nonzero_F_order": null,
+      "solvable_through_all_isolators": true
+    },
+    "ker_L1": {
+      "b_m_plus_1_nonzero": true,
+      "first_nonzero_F_order": 28,
+      "residual_norm_sq_at_first": "2565625104",
+      "solvable_through_all_isolators": true
+    }
+  },
+  "gate_G1": "PASS",
+  "headline": "OPEN",
+  "house_rules": [
+    "No formal state or formal lift called a covariant",
+    "Exact arithmetic; finite fields discovery only",
+    "G4 architecture enforced; no local=>global surjectivity promotion",
+    "Do not infer all-degree theorems from finite degrees"
+  ],
+  "last_isolable_Eplus_F_order": 26,
+  "not_a_covariant": true,
+  "not_headline": true,
+  "resource": {
+    "exceeded_8GB": false,
+    "max_RSS_authorized_GB": 8,
+    "strategy": "free_fibre_and_free_module_only"
+  },
+  "route": "P25",
+  "scope_note": "P25-TOWER-SURVIVES is not P25-POSITIVE and not a degree-all statement. P25-TOWER-EMPTY would be a degree-25 exclusion only.",
+  "self_sha256": "423ebcec7f62b43076e684806935a476d040b15643166884f1d4e370a577b105",
+  "survivor_equations_for_P25_2": {
+    "based_minus_lines_odd_m": [
+      {
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_high_order_Eplus_ker",
+        "expected_solution_codim": 27,
+        "ker_L1_index": 0,
+        "map_rank": 27,
+        "nonzero_parameters": [
+          {
+            "coeff": "-1407/23",
+            "ker_index": 0,
+            "order_b": 14,
+            "r": 13
+          }
+        ],
+        "verified_residual_zero": true
+      },
+      {
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_high_order_Eplus_ker",
+        "expected_solution_codim": 27,
+        "ker_L1_index": 1,
+        "map_rank": 27,
+        "nonzero_parameters": [
+          {
+            "coeff": "-63668289/1968128",
+            "ker_index": 1,
+            "order_b": 14,
+            "r": 13
+          }
+        ],
+        "verified_residual_zero": true
+      },
+      {
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_high_order_Eplus_ker",
+        "expected_solution_codim": 27,
+        "ker_L1_index": 2,
+        "map_rank": 27,
+        "nonzero_parameters": [
+          {
+            "coeff": "-8429620224/35",
+            "ker_index": 2,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "10286327808/35",
+            "ker_index": 5,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "2335057152/35",
+            "ker_index": 8,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-235865088/7",
+            "ker_index": 11,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-162159696/35",
+            "ker_index": 14,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "25369632/35",
+            "ker_index": 17,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "73920",
+            "ker_index": 20,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-165/2",
+            "ker_index": 26,
+            "order_b": 14,
+            "r": 13
+          }
+        ],
+        "verified_residual_zero": true
+      },
+      {
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_high_order_Eplus_ker",
+        "expected_solution_codim": 29,
+        "ker_L1_index": 3,
+        "map_rank": 29,
+        "nonzero_parameters": [
+          {
+            "coeff": "-73072617/60128",
+            "ker_index": 0,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-48041295/30064",
+            "ker_index": 3,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-10300473/30064",
+            "ker_index": 6,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "12398181/30064",
+            "ker_index": 9,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "75552897/60128",
+            "ker_index": 12,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-17113947/30064",
+            "ker_index": 15,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "10300473/30064",
+            "ker_index": 18,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-4099773/15032",
+            "ker_index": 21,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-165/4",
+            "ker_index": 24,
+            "order_b": 14,
+            "r": 13
+          }
+        ],
+        "verified_residual_zero": true
+      }
+    ],
+    "residual_e_ge7_generic_swap_both": [
+      {
+        "a_d_dim": 52,
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_a_d",
+        "expected_solution_codim": 27,
+        "ker_L1_index": 0,
+        "map_rank": 27,
+        "solution_a_d_nonzero": [
+          {
+            "a_d_index": 1,
+            "basis_key": [
+              [
+                25,
+                0
+              ],
+              1
+            ],
+            "coeff": "-25326"
+          }
+        ],
+        "verified_residual_zero": true
+      },
+      {
+        "a_d_dim": 52,
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_a_d",
+        "expected_solution_codim": 27,
+        "ker_L1_index": 1,
+        "map_rank": 27,
+        "solution_a_d_nonzero": [
+          {
+            "a_d_index": 1,
+            "basis_key": [
+              [
+                25,
+                0
+              ],
+              1
+            ],
+            "coeff": "573014601/2097152"
+          }
+        ],
+        "verified_residual_zero": true
+      },
+      {
+        "a_d_dim": 52,
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_a_d",
+        "expected_solution_codim": 27,
+        "ker_L1_index": 2,
+        "map_rank": 27,
+        "solution_a_d_nonzero": [
+          {
+            "a_d_index": 1,
+            "basis_key": [
+              [
+                25,
+                0
+              ],
+              1
+            ],
+            "coeff": "-839986685411328"
+          },
+          {
+            "a_d_index": 7,
+            "basis_key": [
+              [
+                22,
+                3
+              ],
+              1
+            ],
+            "coeff": "405875919421440"
+          },
+          {
+            "a_d_index": 13,
+            "basis_key": [
+              [
+                19,
+                6
+              ],
+              1
+            ],
+            "coeff": "-78761204121600"
+          },
+          {
+            "a_d_index": 19,
+            "basis_key": [
+              [
+                16,
+                9
+              ],
+              1
+            ],
+            "coeff": "7832471961600"
+          },
+          {
+            "a_d_index": 25,
+            "basis_key": [
+              [
+                13,
+                12
+              ],
+              1
+            ],
+            "coeff": "-421748490240"
+          },
+          {
+            "a_d_index": 31,
+            "basis_key": [
+              [
+                10,
+                15
+              ],
+              1
+            ],
+            "coeff": "11918979072"
+          },
+          {
+            "a_d_index": 37,
+            "basis_key": [
+              [
+                7,
+                18
+              ],
+              1
+            ],
+            "coeff": "-156828672"
+          },
+          {
+            "a_d_index": 43,
+            "basis_key": [
+              [
+                4,
+                21
+              ],
+              1
+            ],
+            "coeff": "720720"
+          },
+          {
+            "a_d_index": 49,
+            "basis_key": [
+              [
+                1,
+                24
+              ],
+              1
+            ],
+            "coeff": "-495"
+          }
+        ],
+        "verified_residual_zero": true
+      },
+      {
+        "a_d_dim": 52,
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_a_d",
+        "expected_solution_codim": 27,
+        "ker_L1_index": 3,
+        "map_rank": 27,
+        "solution_a_d_nonzero": [
+          {
+            "a_d_index": 1,
+            "basis_key": [
+              [
+                25,
+                0
+              ],
+              1
+            ],
+            "coeff": "-292149"
+          },
+          {
+            "a_d_index": 13,
+            "basis_key": [
+              [
+                19,
+                6
+              ],
+              1
+            ],
+            "coeff": "946845/2"
+          },
+          {
+            "a_d_index": 25,
+            "basis_key": [
+              [
+                13,
+                12
+              ],
+              1
+            ],
+            "coeff": "-204561"
+          },
+          {
+            "a_d_index": 37,
+            "basis_key": [
+              [
+                7,
+                18
+              ],
+              1
+            ],
+            "coeff": "23535"
+          },
+          {
+            "a_d_index": 49,
+            "basis_key": [
+              [
+                1,
+                24
+              ],
+              1
+            ],
+            "coeff": "-495/2"
+          }
+        ],
+        "verified_residual_zero": true
+      }
+    ],
+    "residual_ker0_explicit_a_d_system": {
+      "A_nnz_count": 52,
+      "A_nnz_sample_first_40": [
+        {
+          "a_d_col": 0,
+          "row": 1,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 1,
+          "row": 2,
+          "value": "2"
+        },
+        {
+          "a_d_col": 2,
+          "row": 2,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 3,
+          "row": 3,
+          "value": "2"
+        },
+        {
+          "a_d_col": 4,
+          "row": 3,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 5,
+          "row": 4,
+          "value": "2"
+        },
+        {
+          "a_d_col": 6,
+          "row": 4,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 7,
+          "row": 5,
+          "value": "2"
+        },
+        {
+          "a_d_col": 8,
+          "row": 5,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 9,
+          "row": 6,
+          "value": "2"
+        },
+        {
+          "a_d_col": 10,
+          "row": 6,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 11,
+          "row": 7,
+          "value": "2"
+        },
+        {
+          "a_d_col": 12,
+          "row": 7,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 13,
+          "row": 8,
+          "value": "2"
+        },
+        {
+          "a_d_col": 14,
+          "row": 8,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 15,
+          "row": 9,
+          "value": "2"
+        },
+        {
+          "a_d_col": 16,
+          "row": 9,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 17,
+          "row": 10,
+          "value": "2"
+        },
+        {
+          "a_d_col": 18,
+          "row": 10,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 19,
+          "row": 11,
+          "value": "2"
+        },
+        {
+          "a_d_col": 20,
+          "row": 11,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 21,
+          "row": 12,
+          "value": "2"
+        },
+        {
+          "a_d_col": 22,
+          "row": 12,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 23,
+          "row": 13,
+          "value": "2"
+        },
+        {
+          "a_d_col": 24,
+          "row": 13,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 25,
+          "row": 14,
+          "value": "2"
+        },
+        {
+          "a_d_col": 26,
+          "row": 14,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 27,
+          "row": 15,
+          "value": "2"
+        },
+        {
+          "a_d_col": 28,
+          "row": 15,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 29,
+          "row": 16,
+          "value": "2"
+        },
+        {
+          "a_d_col": 30,
+          "row": 16,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 31,
+          "row": 17,
+          "value": "2"
+        },
+        {
+          "a_d_col": 32,
+          "row": 17,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 33,
+          "row": 18,
+          "value": "2"
+        },
+        {
+          "a_d_col": 34,
+          "row": 18,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 35,
+          "row": 19,
+          "value": "2"
+        },
+        {
+          "a_d_col": 36,
+          "row": 19,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 37,
+          "row": 20,
+          "value": "2"
+        },
+        {
+          "a_d_col": 38,
+          "row": 20,
+          "value": "-2"
+        },
+        {
+          "a_d_col": 39,
+          "row": 21,
+          "value": "2"
+        }
+      ],
+      "R0_coeffs": [
+        "0",
+        "0",
+        "50652",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "R0_norm_sq": "2565625104",
+      "equation": "R0 + A_ad \u00b7 a_d = 0  (binary form of order 28)",
+      "map_rank": 27,
+      "particular_solution_a_d_nonzero": [
+        {
+          "a_d_index": 1,
+          "basis_key": [
+            [
+              25,
+              0
+            ],
+            1
+          ],
+          "coeff": "-25326"
+        }
+      ],
+      "verified_residual_zero": true
+    }
+  },
+  "terminal_F_order": 75,
+  "theorem_boundary": {
+    "not_proved": [
+      "Existence of a G-equivariant landing covariant of degree 25",
+      "Full multi-Rees equalizer / point-kernel elimination",
+      "Projective support of the degree-25 border module (P25.2+)",
+      "All-degree emptiness or survival",
+      "Headline ed_C(G) statement"
+    ],
+    "proved": [
+      "G1 finite truncation: tower terminates by order 3d=75",
+      "Isolation cutoff N_star = d+2m+1 = 28",
+      "Complete free-fibre stage ledger at (1,25)",
+      "Exact free L_r ranks on residual-S3-trivial leading sample",
+      "Nonzero particular residual at N_star on ker L1 free open",
+      "Nonempty free-fibre zero locus of residual at N_star for both families"
+    ]
+  }
+}

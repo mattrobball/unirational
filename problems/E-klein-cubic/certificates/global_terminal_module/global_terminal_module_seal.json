@@ -1,0 +1,50 @@
+{
+  "dimension_samples": [
+    {
+      "N_star": 10,
+      "d": 7,
+      "free_fibre_codomain_dim": 11,
+      "growth_note": "multi-Rees plane jet dimension is cubic polynomial in d (sum_{k=m}^d binom(d-k+2,2)*(k+1)*tdim)",
+      "m": 1,
+      "multi_rees_codomain_at_Nstar": 858,
+      "multi_rees_total_jet_dim": 722
+    },
+    {
+      "N_star": 16,
+      "d": 13,
+      "free_fibre_codomain_dim": 17,
+      "growth_note": "multi-Rees plane jet dimension is cubic polynomial in d (sum_{k=m}^d binom(d-k+2,2)*(k+1)*tdim)",
+      "m": 1,
+      "multi_rees_codomain_at_Nstar": 5100,
+      "multi_rees_total_jet_dim": 5649
+    },
+    {
+      "N_star": 26,
+      "d": 19,
+      "free_fibre_codomain_dim": 27,
+      "growth_note": "multi-Rees plane jet dimension is cubic polynomial in d (sum_{k=m}^d binom(d-k+2,2)*(k+1)*tdim)",
+      "m": 3,
+      "multi_rees_codomain_at_Nstar": 14256,
+      "multi_rees_total_jet_dim": 19236
+    }
+  ],
+  "do_not_run_degree_ladder": true,
+  "do_not_start_G43": true,
+  "free_fibre_finite_presentation": true,
+  "full_global_finite_presentation": false,
+  "gate_G_A": "G_A_NO_FINITE_GLOBAL_PRESENTATION",
+  "headline": "OPEN",
+  "obstruction_code": "G42-OBSTRUCTION-EQUALIZER-REES-GROWTH",
+  "obstruction_summary": "The full global terminal map Theta^fam_{m,d} retains the multi-Rees plane-jet module, the V4 triple-line equalizer of three distinct P(E_-) copies (source/normal/target \u2014 repaired category), residual point kernels (A4/D10/D12/type I\u2013II), character blocks (C3,A4,C6,D10,D12), source-line coefficient coupling, and finite irrelevant torsion. \n\nIn the pure (m,d) semigroup algebra A=Q[u,v], the multi-Rees plane jet space at each bidegree has rank growing as a cubic polynomial in d (see samples). The V",
+  "regression_ok": true,
+  "repaired_category": [
+    "L_t^{src} (SOURCE)",
+    "P(E_-)^N (NORMAL)",
+    "L_t^{tgt} (TARGET)",
+    "L_t^{src} \u2229 Z_t = empty (not identified)"
+  ],
+  "self_sha256": "91725e58f9b7d67836d6fc6fd8605a2fe67e94b489940b2e1c1d88dcc11df3a0",
+  "semigroup_finite": true,
+  "terminal_marker": "G_A_NO_FINITE_GLOBAL_PRESENTATION",
+  "theorem_boundary": "G4.2 global terminal module / director gate G-A. Headline OPEN. No G-NEGATIVE/G-POLYNOMIAL. No degree ladder."
+}

@@ -1,0 +1,470 @@
+{
+  "coefficient_coupling": "p|_{E_-}=0 (a_odd=0 including a_d=0)",
+  "family_id": "based_minus_lines_odd_m",
+  "ker_L1_basis_analysis": [
+    {
+      "R0_cancellable_by_high_order_ker": true,
+      "R0_coeffs": [
+        "0",
+        "0",
+        "50652",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "R0_norm_sq": "2565625104",
+      "R0_support_indices": [
+        2
+      ],
+      "after_cancel_norm_sq": "0",
+      "high_order_ker_map_rank": 27,
+      "high_order_ker_n_cols": 210,
+      "ker_L1_index": 0,
+      "linear_r_range": [
+        13,
+        15,
+        17,
+        19,
+        21,
+        23
+      ],
+      "solution_nnz": 1
+    },
+    {
+      "R0_cancellable_by_high_order_ker": true,
+      "R0_coeffs": [
+        "0",
+        "-573014601/2097152",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "R0_norm_sq": "328345732959189201/4398046511104",
+      "R0_support_indices": [
+        1
+      ],
+      "after_cancel_norm_sq": "0",
+      "high_order_ker_map_rank": 27,
+      "high_order_ker_n_cols": 228,
+      "ker_L1_index": 1,
+      "linear_r_range": [
+        13,
+        15,
+        17,
+        19,
+        21,
+        23
+      ],
+      "solution_nnz": 1
+    },
+    {
+      "R0_cancellable_by_high_order_ker": true,
+      "R0_coeffs": [
+        "0",
+        "0",
+        "0",
+        "1679973370822656",
+        "0",
+        "0",
+        "-811751838842880",
+        "0",
+        "0",
+        "157522408243200",
+        "0",
+        "0",
+        "-15664943923200",
+        "0",
+        "0",
+        "843496980480",
+        "0",
+        "0",
+        "-23837958144",
+        "0",
+        "0",
+        "313657344",
+        "0",
+        "0",
+        "-1441440",
+        "0",
+        "0",
+        "990",
+        "0"
+      ],
+      "R0_norm_sq": "3506310986160391343433166411908",
+      "R0_support_indices": [
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27
+      ],
+      "after_cancel_norm_sq": "0",
+      "high_order_ker_map_rank": 27,
+      "high_order_ker_n_cols": 228,
+      "ker_L1_index": 2,
+      "linear_r_range": [
+        13,
+        15,
+        17,
+        19,
+        21,
+        23
+      ],
+      "solution_nnz": 8
+    },
+    {
+      "R0_cancellable_by_high_order_ker": true,
+      "R0_coeffs": [
+        "0",
+        "0",
+        "584298",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-946845",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "409122",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-47070",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "495",
+        "0",
+        "0"
+      ],
+      "R0_norm_sq": "1407516247638",
+      "R0_support_indices": [
+        2,
+        8,
+        14,
+        20,
+        26
+      ],
+      "after_cancel_norm_sq": "0",
+      "high_order_ker_map_rank": 29,
+      "high_order_ker_n_cols": 207,
+      "ker_L1_index": 3,
+      "linear_r_range": [
+        13,
+        15,
+        17,
+        19,
+        21,
+        23
+      ],
+      "solution_nnz": 9
+    }
+  ],
+  "leading_sample": "residual_S3_trivial_a_triv",
+  "particular_path_residual": {
+    "R0_coeffs": [
+      "0",
+      "0",
+      "50652",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "R0_norm_sq": "2565625104",
+    "R0_support_indices": [
+      2
+    ],
+    "mode": "ker_L1[0]_particular_higher_sols_a_odd_zero",
+    "monom_at_support": [
+      [
+        26,
+        2
+      ]
+    ],
+    "note": "With particular (non-ker) solutions for r>1 and a_odd=0, residual at N_star=28 is nonzero. High-order ker L_r (r>=13) cancel it exactly (affine-linear system of rank 27 on free fibre).",
+    "residual_decomposition": {
+      "C3_weight_components": {
+        "0": {
+          "n_terms": 1,
+          "terms": [
+            {
+              "coeff": "50652",
+              "index": 2,
+              "monom": [
+                26,
+                2
+              ]
+            }
+          ]
+        },
+        "1": {
+          "n_terms": 0,
+          "terms": []
+        },
+        "2": {
+          "n_terms": 0,
+          "terms": []
+        }
+      },
+      "F_order": 28,
+      "G_representation_note": "G-global residual for equivariant polynomial maps is a separate layer (Molien spaces / modular scans). Free-fibre residual classifies the truncated polar tower on one involution plane.",
+      "codomain_dim": 29,
+      "dominant_C3_weights": [
+        0
+      ],
+      "stabilizer_note": "Free-fibre residual is a binary form of order N under the residual D12 / C3 action on E_- coordinates. This is a local normal-cone obstruction type, not a full G-isotypic of Hom(Sym^d W*,W)^G.",
+      "status": "NONZERO",
+      "support_indices": [
+        2
+      ],
+      "support_size": 1
+    }
+  },
+  "self_sha256": "82eefc614f6d57c56804a4e7394fb49259183810aadc5d2b0521af6e709f2e6d",
+  "zero_locus": {
+    "all_ker_L1_basis_cancellable": true,
+    "all_particular_R0_nonzero": true,
+    "description": "On the free open where every isolable L_r is surjective, after fixing a_m=a_triv and b_2 in ker L_1, the residual binary form at F-order 28 is an affine-linear function of the high-order E+ ker parameters (r>=13). The linear map has rank 27 on a 29-dimensional codomain; the residual is cancellable for every ker L_1 basis vector (exact over Q).",
+    "equation_shape": "R_0(a_m, b_2, particular b_{>=4}) + A_high \u00b7 s = 0, where s coordinates high-order ker L_r (r>=13), A_high has rank 27, codomain dim 29.",
+    "killed": false,
+    "status": "NONEMPTY",
+    "survivor_equations": [
+      {
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_high_order_Eplus_ker",
+        "expected_solution_codim": 27,
+        "ker_L1_index": 0,
+        "map_rank": 27,
+        "nonzero_parameters": [
+          {
+            "coeff": "-1407/23",
+            "ker_index": 0,
+            "order_b": 14,
+            "r": 13
+          }
+        ],
+        "verified_residual_zero": true
+      },
+      {
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_high_order_Eplus_ker",
+        "expected_solution_codim": 27,
+        "ker_L1_index": 1,
+        "map_rank": 27,
+        "nonzero_parameters": [
+          {
+            "coeff": "-63668289/1968128",
+            "ker_index": 1,
+            "order_b": 14,
+            "r": 13
+          }
+        ],
+        "verified_residual_zero": true
+      },
+      {
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_high_order_Eplus_ker",
+        "expected_solution_codim": 27,
+        "ker_L1_index": 2,
+        "map_rank": 27,
+        "nonzero_parameters": [
+          {
+            "coeff": "-8429620224/35",
+            "ker_index": 2,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "10286327808/35",
+            "ker_index": 5,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "2335057152/35",
+            "ker_index": 8,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-235865088/7",
+            "ker_index": 11,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-162159696/35",
+            "ker_index": 14,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "25369632/35",
+            "ker_index": 17,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "73920",
+            "ker_index": 20,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-165/2",
+            "ker_index": 26,
+            "order_b": 14,
+            "r": 13
+          }
+        ],
+        "verified_residual_zero": true
+      },
+      {
+        "ambient_codomain_dim": 29,
+        "equation_type": "affine_linear_on_high_order_Eplus_ker",
+        "expected_solution_codim": 29,
+        "ker_L1_index": 3,
+        "map_rank": 29,
+        "nonzero_parameters": [
+          {
+            "coeff": "-73072617/60128",
+            "ker_index": 0,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-48041295/30064",
+            "ker_index": 3,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-10300473/30064",
+            "ker_index": 6,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "12398181/30064",
+            "ker_index": 9,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "75552897/60128",
+            "ker_index": 12,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-17113947/30064",
+            "ker_index": 15,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "10300473/30064",
+            "ker_index": 18,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-4099773/15032",
+            "ker_index": 21,
+            "order_b": 14,
+            "r": 13
+          },
+          {
+            "coeff": "-165/4",
+            "ker_index": 24,
+            "order_b": 14,
+            "r": 13
+          }
+        ],
+        "verified_residual_zero": true
+      }
+    ]
+  }
+}

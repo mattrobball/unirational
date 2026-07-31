@@ -1,0 +1,112 @@
+{
+  "families": [
+    "based_minus_lines_odd_m",
+    "residual_e1_swap_both",
+    "residual_e_ge7_generic_swap_both"
+  ],
+  "generators": {
+    "cone": "N^2 x {0,1,2}",
+    "finite": true,
+    "hilbert_basis": [
+      {
+        "a": 1,
+        "b": 0,
+        "f": 0,
+        "meaning": "increment m by 2"
+      },
+      {
+        "a": 0,
+        "b": 1,
+        "f": 0,
+        "meaning": "increment d-m by 2"
+      },
+      {
+        "a": 0,
+        "b": 0,
+        "f": 1,
+        "meaning": "family residual_e1 (flag unit)"
+      },
+      {
+        "a": 0,
+        "b": 0,
+        "f": 2,
+        "meaning": "family residual_e_ge7 (flag unit)"
+      },
+      {
+        "a": 0,
+        "b": 0,
+        "d": 1,
+        "f": 0,
+        "m": 1,
+        "meaning": "origin of based family (m,d)=(1,1) minimal odd"
+      }
+    ],
+    "lattice_coordinates": {
+      "a": "m = 1 + 2a, a >= 0",
+      "b": "d = m + 2b = 1 + 2a + 2b, b >= 0",
+      "family_index": "f in {0,1,2} for the three Level-1 families"
+    },
+    "normaliz_input": {
+      "ambient_dim": 3,
+      "cone_generators": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "note": "The pure (m,d) odd cone is free of rank 2 after the affine change (a,b). Finite family flags do not destroy finite generation."
+    }
+  },
+  "normaliz": {
+    "console_out_path": "tmp/cas_G/normaliz_ab.console.out",
+    "coordinates": "a,b with m=1+2a, d=m+2b",
+    "finite": true,
+    "hilbert_basis_ab": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "hilbert_basis_md": [
+      {
+        "a": 1,
+        "b": 0,
+        "delta_d": 2,
+        "delta_m": 2
+      },
+      {
+        "a": 0,
+        "b": 1,
+        "delta_d": 2,
+        "delta_m": 0
+      }
+    ],
+    "minimal_point": {
+      "a": 0,
+      "b": 0,
+      "d": 1,
+      "m": 1
+    },
+    "raw_out_path": "tmp/cas_G/admissible_ab.out",
+    "returncode": 0,
+    "status": "normaliz_ok",
+    "tool": "/opt/homebrew/bin/normaliz"
+  },
+  "self_sha256": "d2885827ba19b5e15cb5509ecf0ff3e18173e1bec2f5a9d59bfafbf4b4f21bc3",
+  "terminal_marker": "G42_SEMIGROUP_HILBERT_BASIS"
+}

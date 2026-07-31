@@ -1,0 +1,13 @@
+{
+  "free_fibre_codomain": "binary forms of order N_star (dim N_star+1)",
+  "free_fibre_presentation": {
+    "description": "binary monoms of order N_star = d+2m+1",
+    "finite": true,
+    "finite_over_A": "The family of target spaces is the graded pieces of A \u2297 (polynomial ring on two variables of weight 1 in (m,d) shifts). As a single A-module of all residuals simultaneously, generators are the universal support classes A/B/C by k mod 6, with coefficients from the alpha sequence \u2014 finitely many coefficient streams.",
+    "rank_as_function_of_md": "N_star+1 = d+2m+2"
+  },
+  "full_global_finite_presentation": false,
+  "module": "Q^{fam}_{m,d} (terminal residual at N_star)",
+  "multi_rees_codomain": "Sym^{3d-N_star} E_+* \u2297 binary forms of order N_star",
+  "self_sha256": "c2d3ee5dcfde6b1721126adda10526c13515404b6fb5275a62e837fdebf91a07"
+}

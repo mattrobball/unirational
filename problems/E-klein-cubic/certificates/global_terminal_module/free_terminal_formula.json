@@ -1,0 +1,600 @@
+{
+  "C3_S3_decomposition_samples": {
+    "m1_d13": {
+      "C3_isotype": 0,
+      "C3_weights_present": [
+        0
+      ],
+      "F_order": 16,
+      "S3_note": "Binary form of order N under residual D12/C3 on E_-. Weight 0 is the C3-trivial summand; weights {1,2} are the nontrivial C3 characters (swapped by the residual S3 transposition).",
+      "is_C3_isotypic": true,
+      "not_a_G_covariant": true,
+      "support": [
+        {
+          "coeff": "396",
+          "monom": [
+            14,
+            2
+          ]
+        }
+      ]
+    },
+    "m1_d7": {
+      "C3_isotype": 0,
+      "C3_weights_present": [
+        0
+      ],
+      "F_order": 10,
+      "S3_note": "Binary form of order N under residual D12/C3 on E_-. Weight 0 is the C3-trivial summand; weights {1,2} are the nontrivial C3 characters (swapped by the residual S3 transposition).",
+      "is_C3_isotypic": true,
+      "not_a_G_covariant": true,
+      "support": [
+        {
+          "coeff": "-36",
+          "monom": [
+            8,
+            2
+          ]
+        }
+      ]
+    },
+    "m3_d19": {
+      "C3_isotype": 2,
+      "C3_weights_present": [
+        2
+      ],
+      "F_order": 26,
+      "S3_note": "Binary form of order N under residual D12/C3 on E_-. Weight 0 is the C3-trivial summand; weights {1,2} are the nontrivial C3 characters (swapped by the residual S3 transposition).",
+      "is_C3_isotypic": true,
+      "not_a_G_covariant": true,
+      "support": [
+        {
+          "coeff": "3996",
+          "monom": [
+            23,
+            3
+          ]
+        }
+      ]
+    }
+  },
+  "N_star_cutoff": {
+    "formula": "N_star = d + 2*m + 1",
+    "proved": true,
+    "samples": {
+      "m1_d13": {
+        "d": 13,
+        "first_nonisolable_F_order": 16,
+        "formula": "N_star = d + 2*m + 1",
+        "last_isolable_Eplus_F_order": 14,
+        "m": 1,
+        "proof_ref": "certificates/global_finite_lifting/TERMINAL_PATTERN.md \u00a72.1",
+        "proved": true
+      },
+      "m1_d7": {
+        "d": 7,
+        "first_nonisolable_F_order": 10,
+        "formula": "N_star = d + 2*m + 1",
+        "last_isolable_Eplus_F_order": 8,
+        "m": 1,
+        "proof_ref": "certificates/global_finite_lifting/TERMINAL_PATTERN.md \u00a72.1",
+        "proved": true
+      },
+      "m3_d19": {
+        "d": 19,
+        "first_nonisolable_F_order": 26,
+        "formula": "N_star = d + 2*m + 1",
+        "last_isolable_Eplus_F_order": 24,
+        "m": 3,
+        "proof_ref": "certificates/global_finite_lifting/TERMINAL_PATTERN.md \u00a72.1",
+        "proved": true
+      }
+    }
+  },
+  "exit_classification": {
+    "claimed": "G41-FORMULA",
+    "not_claimed": [
+      "G-NEGATIVE",
+      "G-POLYNOMIAL",
+      "all_order_alpha_nonvanishing",
+      "G-global equalizer residual formula"
+    ],
+    "previous_cycle": "G-PATTERN (numerical only)",
+    "progress": "Exact recurrence identity + structural Res=-L(b^{k+1}) replace pure numerical pattern."
+  },
+  "families": {
+    "based_minus_lines_odd_m": {
+      "N_star": "d+2m+1",
+      "family": "based_minus_lines_odd_m",
+      "free_fibre_formula": "On the pure-powers free open with based a_odd=0 and first ker-L1 generator, Res at N_star=d+2m+1 equals -L(b^{(d-m+1)}) with universal (alpha,beta) from the recurrence. Source-line ledger (based vs residual e) cuts a_d / p|_{E_-} transverse to this normal-cone residual and does not alter L_r.",
+      "ledger_ref": "certificates/lifting/families/based_minus_lines_odd_m/tower_stages.json",
+      "symbolic_indices": true
+    },
+    "residual_e1_swap_both": {
+      "N_star": "d+2m+1",
+      "family": "residual_e1_swap_both",
+      "free_fibre_formula": "On the pure-powers free open with based a_odd=0 and first ker-L1 generator, Res at N_star=d+2m+1 equals -L(b^{(d-m+1)}) with universal (alpha,beta) from the recurrence. Source-line ledger (based vs residual e) cuts a_d / p|_{E_-} transverse to this normal-cone residual and does not alter L_r.",
+      "ledger_ref": "certificates/lifting/families/residual_e1_swap_both/tower_stages.json",
+      "symbolic_indices": true
+    },
+    "residual_e_ge7_generic_swap_both": {
+      "N_star": "d+2m+1",
+      "family": "residual_e_ge7_generic_swap_both",
+      "free_fibre_formula": "On the pure-powers free open with based a_odd=0 and first ker-L1 generator, Res at N_star=d+2m+1 equals -L(b^{(d-m+1)}) with universal (alpha,beta) from the recurrence. Source-line ledger (based vs residual e) cuts a_d / p|_{E_-} transverse to this normal-cone residual and does not alter L_r.",
+      "ledger_ref": "certificates/lifting/families/residual_e_ge7_generic_swap_both/tower_stages.json",
+      "symbolic_indices": true
+    }
+  },
+  "gate": "G4.1",
+  "git_base_requested": "a40b10fbc4bd470ec56af5a6f50e11e6a778cabf",
+  "grid": {
+    "all_nonzero_for_k_ge_2": true,
+    "all_nonzero_on_grid": false,
+    "all_structural_identity_ok": true,
+    "full_grid_path": "tmp/cas_G/grid_full.json",
+    "k0_vanishing": "When k=d-m=0, the only available jet is a_m (E-); no E+ jet exists, so the triple-E+ residual at N_star vanishes. Exact, not a failure.",
+    "n_crosscheck_failures": 0,
+    "n_points": 171,
+    "n_zero_k0_expected": 6,
+    "sample_rows": [
+      {
+        "C3_weights": [
+          0
+        ],
+        "N_star": 10,
+        "d": 7,
+        "g3_first_nz": 10,
+        "g3_match_N": true,
+        "g3_match_coeffs": true,
+        "g3_match_nsq": true,
+        "g3_norm_sq": "1296",
+        "is_zero": false,
+        "k": 6,
+        "m": 1,
+        "residual_norm_sq": "1296",
+        "residual_nz": [
+          {
+            "coeff": "-36",
+            "monom": [
+              8,
+              2
+            ]
+          }
+        ],
+        "structural_identity_ok": true,
+        "support_class": "A_pure_sigma_cycle"
+      },
+      {
+        "C3_weights": [
+          0
+        ],
+        "N_star": 12,
+        "d": 9,
+        "g3_first_nz": 12,
+        "g3_match_N": true,
+        "g3_match_coeffs": true,
+        "g3_match_nsq": true,
+        "g3_norm_sq": "6401",
+        "is_zero": false,
+        "k": 8,
+        "m": 1,
+        "residual_norm_sq": "6401",
+        "residual_nz": [
+          {
+            "coeff": "-1",
+            "monom": [
+              9,
+              3
+            ]
+          },
+          {
+            "coeff": "80",
+            "monom": [
+              12,
+              0
+            ]
+          }
+        ],
+        "structural_identity_ok": true,
+        "support_class": "B_two_term"
+      },
+      {
+        "C3_weights": [
+          0
+        ],
+        "N_star": 16,
+        "d": 13,
+        "g3_first_nz": 16,
+        "g3_match_N": true,
+        "g3_match_coeffs": true,
+        "g3_match_nsq": true,
+        "g3_norm_sq": "156816",
+        "is_zero": false,
+        "k": 12,
+        "m": 1,
+        "residual_norm_sq": "156816",
+        "residual_nz": [
+          {
+            "coeff": "396",
+            "monom": [
+              14,
+              2
+            ]
+          }
+        ],
+        "structural_identity_ok": true,
+        "support_class": "A_pure_sigma_cycle"
+      },
+      {
+        "C3_weights": [
+          2
+        ],
+        "N_star": 26,
+        "d": 19,
+        "g3_first_nz": 26,
+        "g3_match_N": true,
+        "g3_match_coeffs": true,
+        "g3_match_nsq": true,
+        "g3_norm_sq": "15968016",
+        "is_zero": false,
+        "k": 16,
+        "m": 3,
+        "residual_norm_sq": "15968016",
+        "residual_nz": [
+          {
+            "coeff": "3996",
+            "monom": [
+              23,
+              3
+            ]
+          }
+        ],
+        "structural_identity_ok": true,
+        "support_class": "C_mixed_or_PPM"
+      },
+      {
+        "C3_weights": [
+          2
+        ],
+        "N_star": 22,
+        "d": 11,
+        "g3_first_nz": 22,
+        "g3_match_N": true,
+        "g3_match_coeffs": true,
+        "g3_match_nsq": true,
+        "g3_norm_sq": "1296",
+        "is_zero": false,
+        "k": 6,
+        "m": 5,
+        "residual_norm_sq": "1296",
+        "residual_nz": [
+          {
+            "coeff": "-36",
+            "monom": [
+              12,
+              10
+            ]
+          }
+        ],
+        "structural_identity_ok": true,
+        "support_class": "A_pure_sigma_cycle"
+      },
+      {
+        "C3_weights": [
+          0
+        ],
+        "N_star": 114,
+        "d": 91,
+        "g3_first_nz": 114,
+        "g3_match_N": true,
+        "g3_match_coeffs": true,
+        "g3_match_nsq": true,
+        "g3_norm_sq": "134539154166029508239369049488",
+        "is_zero": false,
+        "k": 80,
+        "m": 11,
+        "residual_norm_sq": "134539154166029508239369049488",
+        "residual_nz": [
+          {
+            "coeff": "-300830572",
+            "monom": [
+              81,
+              33
+            ]
+          },
+          {
+            "coeff": "366795793549952",
+            "monom": [
+              114,
+              0
+            ]
+          }
+        ],
+        "structural_identity_ok": true,
+        "support_class": "B_two_term"
+      }
+    ],
+    "spec": {
+      "d_range": "m <= d <= 6m+25 odd",
+      "family_ledger": "based_minus_lines_odd_m (a_odd=0, pure powers leading)",
+      "m_range": "1 <= m <= 11 odd",
+      "n_points": 171
+    }
+  },
+  "headline": "OPEN",
+  "input_hashes": {
+    "TERMINAL_PATTERN.md": "b4fc64b0557162756123ace23d89236a7f1be5e9aa82de0d8000fe3afe3c7e58",
+    "common_g3.py": "43c19898dbb3ab34385516d5340d0a1b9f54549b2ff041d7b9db70d20bcc59e0",
+    "degree13_kerL1": "d986e552f391ae6751c2fb79c2ede53cd5b78e90bf2f232243051cd24a01157c",
+    "degree19_kerL1": "70eb07652cf111a575dd83e682903b31abd8b514c0bb4c585cbb3029d046ef35",
+    "degree7_kerL1": "b6bc078a897e99bcb0a8661165fabf2d27cb54e4d846152d9f30b12864dfd97c"
+  },
+  "regression_7_13_19": {
+    "matches_TERMINAL_PATTERN": {
+      "m1_d13": true,
+      "m1_d7": true,
+      "m3_d19": true
+    },
+    "samples": {
+      "m1_d13": {
+        "C3_weights": [
+          0
+        ],
+        "N_star": 16,
+        "d": 13,
+        "first_nonzero": 16,
+        "is_zero": false,
+        "m": 1,
+        "residual_norm_sq": "156816",
+        "residual_nz": [
+          {
+            "coeff": "396",
+            "monom": [
+              14,
+              2
+            ]
+          }
+        ],
+        "structural_identity_ok": true
+      },
+      "m1_d7": {
+        "C3_weights": [
+          0
+        ],
+        "N_star": 10,
+        "d": 7,
+        "first_nonzero": 10,
+        "is_zero": false,
+        "m": 1,
+        "residual_norm_sq": "1296",
+        "residual_nz": [
+          {
+            "coeff": "-36",
+            "monom": [
+              8,
+              2
+            ]
+          }
+        ],
+        "structural_identity_ok": true
+      },
+      "m3_d19": {
+        "C3_weights": [
+          2
+        ],
+        "N_star": 26,
+        "d": 19,
+        "first_nonzero": 26,
+        "is_zero": false,
+        "m": 3,
+        "residual_norm_sq": "15968016",
+        "residual_nz": [
+          {
+            "coeff": "3996",
+            "monom": [
+              23,
+              3
+            ]
+          }
+        ],
+        "structural_identity_ok": true
+      }
+    }
+  },
+  "self_sha256": "cce652c0c2225c3dca487420cf697346eeb01d8336b5a28c12681faeb1c8ae2d",
+  "structural_identity": {
+    "N_star": "N_star = d + 2*m + 1 = 3*m + k + 1",
+    "exact_identity": true,
+    "formula": "Res_{m,d}(y) = - L(b^{(k+1)})(y),  k = d - m",
+    "proof_sketch": [
+      "Based a_odd=0 \u21d2 only E- jet is a_m (pure powers).",
+      "Mixed (E+,E-,E-) triples at order N_star require E+ order N_star - 2m = d+1 > d, unavailable as a polynomial jet.",
+      "Hence Res at N_star is pure triple-E+ Phi_+ of jets b^{(s)}, s odd, m+s <= d i.e. s <= k.",
+      "Those triples are exactly R_pre at formal stage r = k+1.",
+      "The recurrence defines b^{(k+1)} by L(b^{(k+1)}) = -R_pre.",
+      "Therefore Res = -L(b^{(k+1)})."
+    ]
+  },
+  "terminal_marker": "G41_FREE_TERMINAL_FORMULA",
+  "theorem_boundary": "G4.1 free-fibre terminal residual formula. Exact over Q. Not a formal state promoted to a covariant. Not an all-degree G-global landing exclusion. Headline remains OPEN.",
+  "universal_jets": {
+    "L_operator": "L(b)=B(b;a,a)=2 b0 y0^m y1^m + b1 y1^{2m} + b2 y0^{2m}",
+    "alphas": {
+      "1": -2,
+      "11": 180,
+      "13": -396,
+      "15": 888,
+      "17": -1998,
+      "19": 4464,
+      "21": -10032,
+      "23": 22572,
+      "25": -50652,
+      "27": 113912,
+      "29": -256302,
+      "3": 8,
+      "31": 576036,
+      "33": -1295808,
+      "35": 2915568,
+      "37": -6556752,
+      "39": 14751264,
+      "41": -33190344,
+      "43": 74660832,
+      "45": -167979120,
+      "47": 377953020,
+      "49": -850298364,
+      "5": -18,
+      "51": 1913128056,
+      "53": -4304538126,
+      "55": 9684669996,
+      "57": -21790260816,
+      "59": 49028086836,
+      "61": -110310087276,
+      "63": 248196265656,
+      "65": -558441597726,
+      "67": 1256475450816,
+      "69": -2827061349696,
+      "7": 36,
+      "71": 6360888036816,
+      "73": -14311890796176,
+      "75": 32201704224288,
+      "77": -72453834504648,
+      "79": 163020486391344,
+      "81": -366795793549952,
+      "9": -80
+    },
+    "ansatz": "b^{(r)} = alpha_r y0^{m+r} e_{sigma_r} + beta_r y0^{r} y1^{m} e_{tau_r}",
+    "based_relative": "a_{m+2}=a_{m+4}=...=0 (based-style relative E- jets)",
+    "betas": {
+      "1": 1,
+      "11": 0,
+      "13": 0,
+      "15": -3,
+      "17": 0,
+      "19": 0,
+      "21": 12,
+      "23": 0,
+      "25": 0,
+      "27": -55,
+      "29": 0,
+      "3": -1,
+      "31": 0,
+      "33": 273,
+      "35": 0,
+      "37": 0,
+      "39": -1428,
+      "41": 0,
+      "43": 0,
+      "45": 7752,
+      "47": 0,
+      "49": 0,
+      "5": 0,
+      "51": -43263,
+      "53": 0,
+      "55": 0,
+      "57": 246675,
+      "59": 0,
+      "61": 0,
+      "63": -1430715,
+      "65": 0,
+      "67": 0,
+      "69": 8414640,
+      "7": 0,
+      "71": 0,
+      "73": 0,
+      "75": -50067108,
+      "77": 0,
+      "79": 0,
+      "81": 300830572,
+      "9": 1
+    },
+    "leading_jet": "pure_powers_y0^m_f0_plus_y1^m_f1",
+    "m_independence": "Coefficients (alpha_r, beta_r) are independent of m; only monomial supports y0^{m+r} and y0^{r} y1^{m} carry m. Proved by the form of L(b)=B(b;a,a) on pure powers and preservation of the 2-term ansatz under the cubic Phi_+ recurrence.",
+    "r_max": 81,
+    "sigmas": {
+      "1": 1,
+      "11": 0,
+      "13": 1,
+      "15": 2,
+      "17": 0,
+      "19": 1,
+      "21": 2,
+      "23": 0,
+      "25": 1,
+      "27": 2,
+      "29": 0,
+      "3": 2,
+      "31": 1,
+      "33": 2,
+      "35": 0,
+      "37": 1,
+      "39": 2,
+      "41": 0,
+      "43": 1,
+      "45": 2,
+      "47": 0,
+      "49": 1,
+      "5": 0,
+      "51": 2,
+      "53": 0,
+      "55": 1,
+      "57": 2,
+      "59": 0,
+      "61": 1,
+      "63": 2,
+      "65": 0,
+      "67": 1,
+      "69": 2,
+      "7": 1,
+      "71": 0,
+      "73": 1,
+      "75": 2,
+      "77": 0,
+      "79": 1,
+      "81": 2,
+      "9": 2
+    },
+    "taus": {
+      "1": 0,
+      "11": 1,
+      "13": 1,
+      "15": 1,
+      "17": 1,
+      "19": 1,
+      "21": 1,
+      "23": 1,
+      "25": 1,
+      "27": 1,
+      "29": 1,
+      "3": 1,
+      "31": 1,
+      "33": 1,
+      "35": 1,
+      "37": 1,
+      "39": 1,
+      "41": 1,
+      "43": 1,
+      "45": 1,
+      "47": 1,
+      "49": 1,
+      "5": 1,
+      "51": 1,
+      "53": 1,
+      "55": 1,
+      "57": 1,
+      "59": 1,
+      "61": 1,
+      "63": 1,
+      "65": 1,
+      "67": 1,
+      "69": 1,
+      "7": 1,
+      "71": 1,
+      "73": 1,
+      "75": 1,
+      "77": 1,
+      "79": 1,
+      "81": 1,
+      "9": 1
+    }
+  }
+}

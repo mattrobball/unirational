@@ -1,0 +1,1351 @@
+{
+  "architecture": "plane_normalization -> triple_line_equalizer -> residual_point_kernel",
+  "bidegree": {
+    "d": 25,
+    "m": 1
+  },
+  "irrelevant_torsion_retained": true,
+  "marked_elliptic_data_retained": true,
+  "repaired_category_retained": true,
+  "self_sha256": "7f8ee2444fc7c0ce7ec9fc517658fc1a349eb4c40e29d32450655757e1c03ad4",
+  "source_line_coupling_retained": true,
+  "stages": [
+    {
+      "F_order": 4,
+      "domain_free_dim": 9,
+      "domain_multi_rees_dim": 2700,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 5,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 13140,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_2) = B(b_2; a_1, a_1)"
+    },
+    {
+      "F_order": 6,
+      "domain_free_dim": 15,
+      "domain_multi_rees_dim": 3795,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 7,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 17395,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_4) = B(b_4; a_1, a_1)"
+    },
+    {
+      "F_order": 8,
+      "domain_free_dim": 21,
+      "domain_multi_rees_dim": 4410,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 9,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 21114,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_6) = B(b_6; a_1, a_1)"
+    },
+    {
+      "F_order": 10,
+      "domain_free_dim": 27,
+      "domain_multi_rees_dim": 4617,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 11,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 24321,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_8) = B(b_8; a_1, a_1)"
+    },
+    {
+      "F_order": 12,
+      "domain_free_dim": 33,
+      "domain_multi_rees_dim": 4488,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 13,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 27040,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_10) = B(b_10; a_1, a_1)"
+    },
+    {
+      "F_order": 14,
+      "domain_free_dim": 39,
+      "domain_multi_rees_dim": 4095,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 15,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 29295,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_12) = B(b_12; a_1, a_1)"
+    },
+    {
+      "F_order": 16,
+      "domain_free_dim": 45,
+      "domain_multi_rees_dim": 3510,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 17,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 31110,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_14) = B(b_14; a_1, a_1)"
+    },
+    {
+      "F_order": 18,
+      "domain_free_dim": 51,
+      "domain_multi_rees_dim": 2805,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 19,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 32509,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_16) = B(b_16; a_1, a_1)"
+    },
+    {
+      "F_order": 20,
+      "domain_free_dim": 57,
+      "domain_multi_rees_dim": 2052,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 21,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 33516,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_18) = B(b_18; a_1, a_1)"
+    },
+    {
+      "F_order": 22,
+      "domain_free_dim": 63,
+      "domain_multi_rees_dim": 1323,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 23,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 34155,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_20) = B(b_20; a_1, a_1)"
+    },
+    {
+      "F_order": 24,
+      "domain_free_dim": 69,
+      "domain_multi_rees_dim": 690,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 25,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 34450,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_22) = B(b_22; a_1, a_1)"
+    },
+    {
+      "F_order": 26,
+      "domain_free_dim": 75,
+      "domain_multi_rees_dim": 225,
+      "equation_type": "isolate_Eplus",
+      "global_status": "LOCAL_SURJECTIVE_OPEN_GLOBAL_EQUALIZER_REQUIRED",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 27,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 34425,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "Free-module L_r is generically surjective (accepted rank theorem). Global solvability requires the composition through the equalizer and point kernel to hit the residual class \u2014 NOT automatic from local rank.",
+      "operator": "L(b_24) = B(b_24; a_1, a_1)"
+    },
+    {
+      "F_order": 28,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 29,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 34104,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 30,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 31,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 33511,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 32,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 33,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 32670,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 34,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 35,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 31605,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 36,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 37,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 30340,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 38,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 39,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 28899,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 40,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 41,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 27306,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 42,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 43,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 25585,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 44,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 45,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 23760,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 46,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 47,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 21855,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 48,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 49,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 19894,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 50,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 51,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 17901,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 52,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 53,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 15900,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 54,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 55,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 13915,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 56,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 57,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 11970,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 58,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 59,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 10089,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 60,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 61,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 8296,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 62,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 63,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 6615,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 64,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 65,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 5070,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 66,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 67,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 3685,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 68,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 69,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 2484,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 70,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 71,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 1491,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 72,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 73,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 730,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    },
+    {
+      "F_order": 74,
+      "domain_free_dim": 0,
+      "domain_multi_rees_dim": 0,
+      "equation_type": "mixed_residual",
+      "global_status": "CONSTRAINT_ON_PRIOR_GLOBAL_STATE",
+      "house_rule_G4": "No local free-module surjectivity may be promoted to global solvability without plane\u2192equalizer\u2192point-kernel.",
+      "layers": [
+        {
+          "free_codomain_dim": 75,
+          "layer": "plane_normalization",
+          "multi_rees_codomain_dim": 225,
+          "note": "Scalar F-order N jets on the normal cone of the involution plane.",
+          "object": "normal jets along Z_t = P(E_+)"
+        },
+        {
+          "accepted_leading_based_residual_dim_m1": 10,
+          "layer": "triple_line_equalizer",
+          "note": "Equalizer cuts the free plane module before L_r acts. Local free-module surjectivity is not global solvability.",
+          "object": "V4 triple-line residual equalizer of plane jets (three copies of P(E_-) kept distinct)",
+          "repaired_category": [
+            "L_t^{src} (SOURCE)",
+            "P(E_-)^N (NORMAL)",
+            "L_t^{tgt} (TARGET)"
+          ],
+          "source_line_coefficient_coupling": "based: p|_{E_-}=0; residual: p|_{E_-}=p_d(0,y) nonzero ledger"
+        },
+        {
+          "irrelevant_torsion": "retained (finite T_m; not discarded)",
+          "layer": "residual_point_kernel",
+          "note": "Point kernels impose O(d) residual conditions (accepted upper bound). They are coefficient constraints orthogonal to free polar ranks.",
+          "object": "A4/D10/D12/type-I/II point modules + marked elliptic charges"
+        }
+      ],
+      "local_vs_global": "No pure free-module E+ isolator; residual is a polynomial constraint on previously fixed jets, possibly linear in remaining a_odd.",
+      "operator": "no_newest_Eplus_isolator_within_degree"
+    }
+  ],
+  "three_copies_P_E_minus": [
+    "L_t^{src} (SOURCE)",
+    "P(E_-)^N (NORMAL)",
+    "L_t^{tgt} (TARGET)"
+  ]
+}

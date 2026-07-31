@@ -1,0 +1,95 @@
+{
+  "after_recurrence_reduction": true,
+  "codomain_basis": "binary monoms of order N_star ordered y0^N, y0^{N-1}y1, ...",
+  "domain_basis": [
+    "alpha_{k+1}",
+    "beta_{k+1}"
+  ],
+  "finite": true,
+  "patterns_by_k_mod_6": [
+    {
+      "k": 6,
+      "matrix_pattern": "type_A: -alpha * y0^{N-2m} y1^{2m}",
+      "r_next": 7,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 1
+    },
+    {
+      "k": 8,
+      "matrix_pattern": "type_B: -alpha * y0^N  +  -beta * y0^{N-3m} y1^{3m}",
+      "r_next": 9,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 2
+    },
+    {
+      "k": 10,
+      "matrix_pattern": "type_C: -2*alpha * y0^{N-m} y1^m  (+ mixed if tau!=1 inactive)",
+      "r_next": 11,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 0
+    },
+    {
+      "k": 12,
+      "matrix_pattern": "type_A: -alpha * y0^{N-2m} y1^{2m}",
+      "r_next": 13,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 1
+    },
+    {
+      "k": 14,
+      "matrix_pattern": "type_B: -alpha * y0^N  +  -beta * y0^{N-3m} y1^{3m}",
+      "r_next": 15,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 2
+    },
+    {
+      "k": 16,
+      "matrix_pattern": "type_C: -2*alpha * y0^{N-m} y1^m  (+ mixed if tau!=1 inactive)",
+      "r_next": 17,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 0
+    },
+    {
+      "k": 18,
+      "matrix_pattern": "type_A: -alpha * y0^{N-2m} y1^{2m}",
+      "r_next": 19,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 1
+    },
+    {
+      "k": 20,
+      "matrix_pattern": "type_B: -alpha * y0^N  +  -beta * y0^{N-3m} y1^{3m}",
+      "r_next": 21,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 2
+    },
+    {
+      "k": 22,
+      "matrix_pattern": "type_C: -2*alpha * y0^{N-m} y1^m  (+ mixed if tau!=1 inactive)",
+      "r_next": 23,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 0
+    },
+    {
+      "k": 24,
+      "matrix_pattern": "type_A: -alpha * y0^{N-2m} y1^{2m}",
+      "r_next": 25,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 1
+    },
+    {
+      "k": 26,
+      "matrix_pattern": "type_B: -alpha * y0^N  +  -beta * y0^{N-3m} y1^{3m}",
+      "r_next": 27,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 2
+    },
+    {
+      "k": 28,
+      "matrix_pattern": "type_C: -2*alpha * y0^{N-m} y1^m  (+ mixed if tau!=1 inactive)",
+      "r_next": 29,
+      "shape": " (N_star+1) x 2 ",
+      "sigma": 0
+    }
+  ]
+}

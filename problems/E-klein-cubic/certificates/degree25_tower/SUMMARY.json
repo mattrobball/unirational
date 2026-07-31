@@ -1,0 +1,41 @@
+{
+  "N_star": 28,
+  "base_pin": "a40b10fbc4bd470ec56af5a6f50e11e6a778cabf",
+  "based_family_killed": false,
+  "bidegree": {
+    "d": 25,
+    "m": 1
+  },
+  "dispatch": "P25.1",
+  "exit": "P25-TOWER-SURVIVES",
+  "files": [
+    "TOWER.md",
+    "exit.json",
+    "family_based_minus_lines_odd_m.json",
+    "family_residual_e_ge7_generic_swap_both.json",
+    "first_terminal_stage.json",
+    "free_Lr_ranks.json",
+    "global_correction_modules.json",
+    "input_hashes.json",
+    "jet_dimensions.json",
+    "produce.py",
+    "resource_preflight.json",
+    "stage_ledger.json",
+    "tower_sample_based_zero.json",
+    "tower_sample_kerL1.json",
+    "verify.py",
+    "zero_locus_Nstar.json"
+  ],
+  "gate_G1": "PASS",
+  "headline": "OPEN",
+  "leading_sample": "residual_S3_trivial_a_triv",
+  "multi_rees_total_dim": 58370,
+  "not_a_covariant": true,
+  "residual_family_killed": false,
+  "route": "P25",
+  "sample0_first_nonzero": null,
+  "sample1_first_nonzero": 28,
+  "sample1_residual_norm_sq": "2565625104",
+  "self_sha256": "bd8dd736834045e4242abf05ed775522c90426cde3bee3d8ef6cfa44f76b3d5e",
+  "terminal_F_order": 75
+}

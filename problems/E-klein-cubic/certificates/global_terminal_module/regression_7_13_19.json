@@ -1,0 +1,85 @@
+{
+  "families": [
+    "based_minus_lines_odd_m",
+    "residual_e1_swap_both",
+    "residual_e_ge7_generic_swap_both"
+  ],
+  "input_hashes": {
+    "degree13_kerL1": "d986e552f391ae6751c2fb79c2ede53cd5b78e90bf2f232243051cd24a01157c",
+    "degree19_kerL1": "70eb07652cf111a575dd83e682903b31abd8b514c0bb4c585cbb3029d046ef35",
+    "degree7_kerL1": "b6bc078a897e99bcb0a8661165fabf2d27cb54e4d846152d9f30b12864dfd97c"
+  },
+  "matches_TERMINAL_PATTERN": {
+    "m1_d13": true,
+    "m1_d7": true,
+    "m3_d19": true
+  },
+  "note": "Free-fibre residuals on pure-powers ker-L1 chart; matches certificates/global_finite_lifting degree 7/13/19 kerL1 samples.",
+  "samples": {
+    "m1_d13": {
+      "C3_weights": [
+        0
+      ],
+      "N_star": 16,
+      "d": 13,
+      "first_nonzero": 16,
+      "is_zero": false,
+      "m": 1,
+      "residual_norm_sq": "156816",
+      "residual_nz": [
+        {
+          "coeff": "396",
+          "monom": [
+            14,
+            2
+          ]
+        }
+      ],
+      "structural_identity_ok": true
+    },
+    "m1_d7": {
+      "C3_weights": [
+        0
+      ],
+      "N_star": 10,
+      "d": 7,
+      "first_nonzero": 10,
+      "is_zero": false,
+      "m": 1,
+      "residual_norm_sq": "1296",
+      "residual_nz": [
+        {
+          "coeff": "-36",
+          "monom": [
+            8,
+            2
+          ]
+        }
+      ],
+      "structural_identity_ok": true
+    },
+    "m3_d19": {
+      "C3_weights": [
+        2
+      ],
+      "N_star": 26,
+      "d": 19,
+      "first_nonzero": 26,
+      "is_zero": false,
+      "m": 3,
+      "residual_norm_sq": "15968016",
+      "residual_nz": [
+        {
+          "coeff": "3996",
+          "monom": [
+            23,
+            3
+          ]
+        }
+      ],
+      "structural_identity_ok": true
+    }
+  },
+  "self_sha256": "5d083e01eef4afb80bb9a24fdf0651fe9f7573afcf25c62056a04d50be15def1",
+  "terminal_marker": "G42_REGRESSION_7_13_19"
+}

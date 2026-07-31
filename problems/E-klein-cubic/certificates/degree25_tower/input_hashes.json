@@ -1,0 +1,16 @@
+{
+  "accepted_inputs_sha256": {
+    "WORKORDER_CAS_HEADLINE.md": "2bf3cbbc7ee4bdc5a551e6dee43e761e367f6b47bb3c89b03871c3458108f102",
+    "certificates/global_finite_lifting/FINITE_TRUNCATION_THEOREM.md": "41c3ec8f37f396555cf604af813bc2a12629c499576172925f270fb4bfc3b7b8",
+    "certificates/global_finite_lifting/TERMINAL_PATTERN.md": "b4fc64b0557162756123ace23d89236a7f1be5e9aa82de0d8000fe3afe3c7e58",
+    "certificates/global_finite_lifting/common_g3.py": "43c19898dbb3ab34385516d5340d0a1b9f54549b2ff041d7b9db70d20bcc59e0",
+    "certificates/global_transition/level1_marked_states.json": "c6056cdf94e9a5324a5ec17950a170511d0f3c7a3edf0cb92bfc12b010675f19",
+    "certificates/lifting/families/based_minus_lines_odd_m/tower_stages.json": "3a51e0056351e3ee3932aa714ee9e6b0632e2edb8778433f4114585ed3e45eb1",
+    "certificates/lifting/families/common_tower.py": "2ccde5c1263c872fda8e150b2e6b52f28073e4475ceef2335c324259df9b4bf9",
+    "certificates/lifting/families/residual_e_ge7_generic_swap_both/tower_stages.json": "1f73868bac800592b403e192146fce5ec15ae565ef2fe709aa387365f26e5458",
+    "certificates/lifting/polar_expansion.json": "1231694bdc41f6c06c690c2b8eb58dca42402acf1cfaacdc284157b00033098e",
+    "certificates/transition_repair/category_repaired.json": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0"
+  },
+  "base_pin": "a40b10fbc4bd470ec56af5a6f50e11e6a778cabf",
+  "self_sha256": "85e958665caf1ef37002839d9a6baf7c222007d08bb2c4203f2f7f75ce36560e"
+}
