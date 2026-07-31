@@ -1,0 +1,264 @@
+{
+  "L1_rank_data": {
+    "coker": 0,
+    "rank": 5,
+    "shape": [
+      5,
+      9
+    ]
+  },
+  "L3_rank_data": {
+    "coker": 0,
+    "rank": 7,
+    "shape": [
+      7,
+      15
+    ]
+  },
+  "L5_rank_data": {
+    "coker": 0,
+    "nullity": 12,
+    "rank": 9,
+    "shape": [
+      9,
+      21
+    ]
+  },
+  "a1": [
+    "0",
+    "1",
+    "1",
+    "0"
+  ],
+  "early_orders_vanish": {
+    "4": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "6": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "8": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    }
+  },
+  "first_nonzero_terminal_F_order": null,
+  "residual_decomposition": {
+    "G_representation_note": "Free-fibre residual is a local normal-cone obstruction, not a G-isotypic decomposition of global Hom(Sym^7 W*,W)^G. G-global residual is handled by the accepted degree-7 exclusion.",
+    "leading_character": "residual_S3_trivial_free_fibre_a_triv",
+    "sample_leading": [
+      "0",
+      "1",
+      "1",
+      "0"
+    ],
+    "stabilizer_note": "a_triv = span{y0 f1 + y1 f0} is C3-weight 0 and reflection-fixed (residual S3-trivial). Residual at terminal orders transforms in the corresponding even binary forms of order N under D12."
+  },
+  "sample_name": "based_zero_corrections_on_a_triv",
+  "self_sha256": "9af3597e0cad49c5d8716fa1e46e93c8f5ea9a7d7406d353c09f65c03a86f054",
+  "stage_log": [
+    {
+      "F_order": 4,
+      "L_coker": 0,
+      "L_rank": 5,
+      "L_shape": [
+        5,
+        9
+      ],
+      "particular": "zero",
+      "solvable": true,
+      "unknown": "b2"
+    },
+    {
+      "F_order": null,
+      "choice": "zero_based_relative",
+      "dim": 8,
+      "unknown": "a3"
+    },
+    {
+      "F_order": 6,
+      "L_coker": 0,
+      "L_rank": 7,
+      "L_shape": [
+        7,
+        15
+      ],
+      "R3": "zero_on_this_sample",
+      "particular": "zero",
+      "solvable": true,
+      "unknown": "b4"
+    },
+    {
+      "choice": "zero",
+      "dim": 12,
+      "unknown": "a5"
+    },
+    {
+      "F_order": 8,
+      "L_coker": 0,
+      "L_rank": 9,
+      "L_shape": [
+        9,
+        21
+      ],
+      "R5_norm_sq": "0",
+      "particular_is_zero": true,
+      "solvable": true,
+      "unknown": "b6"
+    },
+    {
+      "choice": "zero_based_coefficient_coupling",
+      "dim": 16,
+      "reason": "based family: p|_{E_-}=p_d(0,y)=0 and d odd \u21d2 a_d=0",
+      "unknown": "a7"
+    }
+  ],
+  "terminal_residuals": {
+    "10": {
+      "F_order": 10,
+      "codomain_dim": 11,
+      "is_zero": true,
+      "residual_coeffs": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "residual_norm_sq": "0"
+    },
+    "12": {
+      "F_order": 12,
+      "codomain_dim": 13,
+      "is_zero": true,
+      "residual_coeffs": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "residual_norm_sq": "0"
+    },
+    "14": {
+      "F_order": 14,
+      "codomain_dim": 15,
+      "is_zero": true,
+      "residual_coeffs": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "residual_norm_sq": "0"
+    },
+    "16": {
+      "F_order": 16,
+      "codomain_dim": 17,
+      "is_zero": true,
+      "residual_coeffs": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "residual_norm_sq": "0"
+    },
+    "18": {
+      "F_order": 18,
+      "codomain_dim": 19,
+      "is_zero": true,
+      "residual_coeffs": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "residual_norm_sq": "0"
+    },
+    "20": {
+      "F_order": 20,
+      "codomain_dim": 21,
+      "is_zero": true,
+      "residual_coeffs": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "residual_norm_sq": "0"
+    }
+  }
+}

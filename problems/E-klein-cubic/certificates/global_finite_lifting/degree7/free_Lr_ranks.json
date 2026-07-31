@@ -1,0 +1,105 @@
+{
+  "d": 7,
+  "m": 1,
+  "rows": [
+    {
+      "F_order": 4,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 4,
+      "order_b": 2,
+      "r": 1,
+      "rank_over_Q": 5,
+      "sample": "a_triv",
+      "shape": [
+        5,
+        9
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 4,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 4,
+      "order_b": 2,
+      "r": 1,
+      "rank_over_Q": 5,
+      "sample": "a_pure_powers",
+      "shape": [
+        5,
+        9
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 6,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 8,
+      "order_b": 4,
+      "r": 3,
+      "rank_over_Q": 7,
+      "sample": "a_triv",
+      "shape": [
+        7,
+        15
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 6,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 8,
+      "order_b": 4,
+      "r": 3,
+      "rank_over_Q": 7,
+      "sample": "a_pure_powers",
+      "shape": [
+        7,
+        15
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 8,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 12,
+      "order_b": 6,
+      "r": 5,
+      "rank_over_Q": 9,
+      "sample": "a_triv",
+      "shape": [
+        9,
+        21
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 8,
+      "coker_over_Q": 0,
+      "nullity_over_Q": 12,
+      "order_b": 6,
+      "r": 5,
+      "rank_over_Q": 9,
+      "sample": "a_pure_powers",
+      "shape": [
+        9,
+        21
+      ],
+      "surjective": true,
+      "within_degree": true
+    },
+    {
+      "F_order": 10,
+      "note": "First formal isolator beyond polynomial degree 7",
+      "order_b": 8,
+      "r": 7,
+      "sample": null,
+      "within_degree": false
+    }
+  ],
+  "self_sha256": "ace9837b737b2ddf7718ba140e924fed005e163fb413e5407895c525765a4a2e"
+}

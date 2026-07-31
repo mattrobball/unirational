@@ -1,0 +1,33 @@
+{
+  "accepted_exclusion": {
+    "basis": [
+      "K",
+      "F*C",
+      "F^2*x",
+      "J*x"
+    ],
+    "degree": 7,
+    "dim_Hom_G": 4,
+    "landing_exclusion": {
+      "exact_septic": "four-point Groebner basis [1] on every chart A=1,B=1,C=1,D=1",
+      "modular_scan": "degree=7 covariants=4 landing_rank=15 projective_base_locus_empty",
+      "septic_script_pass": true,
+      "septic_stdout": [
+        "[(-1, 2, -2, 0, -2), (1, 1, 1, 1, -1), (-2, 1, -2, 1, 1), (2, -2, 1, 0, -1)]",
+        "PASS every projective chart A=1,B=1,C=1,D=1 has Groebner basis [1]"
+      ]
+    },
+    "source": "exact_covariants_check.py + exact_molien.py"
+  },
+  "consistency": "TOWER_AGREES_WITH_EXCLUSION",
+  "self_sha256": "b2450a0b53916113771c6fab82721464333433f1b1243a278f6071b5dea59225",
+  "septic_path_sha256": "3fe1bcdad8340102bf4a8c241411001ab6c769b0b821bf8ca8ee04c5ecd6c98b",
+  "why_early_formal_smoothness_does_not_produce_degree7_covariant": {
+    "G_global": "Imposing full G-equivariance collapses polynomial candidates to the 4-dimensional space already excluded by septic_landing_check / modular_covariant_scan. Early formal smoothness never reaches that space with F(p)=0.",
+    "based_coupling": "Based ledger forces a7=p|_{E_-}=0, removing the only remaining degree-7 E- correction that could cancel some high-order residuals.",
+    "formal_smoothness": "On the free-module open U where every L_r (r odd) is surjective, the polar tower admits formal power-series solutions in the normal variable y (accepted higher_polar_recursion / rank theorem).",
+    "no_candidate": "Tower exit is G7-OBSTRUCTION, consistent with the accepted exclusion. No G7-CANDIDATE appears; no inconsistency to locate.",
+    "polynomial_truncation": "A homogeneous map of degree 7 has normal order \u22647. The last E+ isolable correction within degree is b6 at F-order 8. From F-order 10 onward the free-module isolator would require b8,b10,\u2026 which do not exist as polynomial jets of degree 7.",
+    "terminal_system": "Finite truncation (G1) converts the infinite formal problem into the finite residual equations at even F-orders 10\u202620 (and 0,2 empty). Samples on the residual-trivial free fibre produce nonzero terminal residual \u2014 exact over Q."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "G_global_landing": "EMPTY (accepted septic + modular exclusion)",
+  "bidegree": {
+    "d": 7,
+    "m": 1
+  },
+  "decision_summary": "Finite truncation (G1) reduces algebraization at d=7 to a finite polar system through F-order 21. Isolable E+ polynomial corrections exist only through F-order 8 (b6). From F-order 10 the free-module isolator would need order >=8, unavailable. Based coupling kills a7. An explicit free-fibre lift through order 8 has nonzero residual at F-order 10 (norm^2=1296). Independently, the 4-dimensional space of degree-7 G-covariants has empty landing locus. Exit G7-OBSTRUCTION. Early formal smoothness produces series, not degree-7 covariants.",
+  "exit": "G7-OBSTRUCTION",
+  "first_stage_without_Eplus_poly_isolator": 10,
+  "free_fibre_samples": {
+    "based_zero": {
+      "early_vanish": {
+        "4": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "6": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "8": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        }
+      },
+      "first_nonzero_F_order": null
+    },
+    "ker_L1": {
+      "b2_nonzero": true,
+      "early_vanish": {
+        "4": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "6": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        },
+        "8": {
+          "is_zero": true,
+          "residual_norm_sq": "0"
+        }
+      },
+      "first_nonzero_F_order": 10
+    }
+  },
+  "gate_G1": "PASS",
+  "headline": "OPEN",
+  "house_rules": [
+    "No formal state or formal lift called a covariant",
+    "Exact arithmetic; finite fields discovery only",
+    "G4 architecture enforced; no local=>global surjectivity promotion"
+  ],
+  "not_a_covariant": true,
+  "obstruction_layers": {
+    "G_equivariant_polynomial": {
+      "certificate": "septic_landing_check + modular_covariant_scan",
+      "dim_covariants": 4,
+      "meaning": "Every nonzero degree-7 self-covariant has F(p)\u22600. This is the terminal residual for full G-global states.",
+      "status": "EMPTY_PROJECTIVE"
+    },
+    "free_fibre_truncated_polar": {
+      "first_nonzero_F_order_kerL1_sample": 10,
+      "meaning": "After solving isolable stages through F-order 8, the F-order 10 residual is nonzero on an explicit char-0 point of ker L1 (and hence on a Zariski-open of that linear space by continuity of the residual polynomial).",
+      "pure_Eminus_based_branch": {
+        "first_nonzero": null,
+        "note": "With all E+ jets zero, free-fibre F vanishes by F|E_-=0 / triple-E_- vanishing. That branch is not a G-covariant and does not algebraize the formal open."
+      },
+      "residual_norm_sq_F10": "1296",
+      "status": "NONZERO_RESIDUAL_ON_OPEN"
+    }
+  },
+  "self_sha256": "6fbd21d31aad1ed81adabf39ee20770b2e3a864c97070a3ebc56843798ebe9d0",
+  "terminal_F_order": 21,
+  "why_no_covariant": {
+    "G_global": "Imposing full G-equivariance collapses polynomial candidates to the 4-dimensional space already excluded by septic_landing_check / modular_covariant_scan. Early formal smoothness never reaches that space with F(p)=0.",
+    "based_coupling": "Based ledger forces a7=p|_{E_-}=0, removing the only remaining degree-7 E- correction that could cancel some high-order residuals.",
+    "formal_smoothness": "On the free-module open U where every L_r (r odd) is surjective, the polar tower admits formal power-series solutions in the normal variable y (accepted higher_polar_recursion / rank theorem).",
+    "no_candidate": "Tower exit is G7-OBSTRUCTION, consistent with the accepted exclusion. No G7-CANDIDATE appears; no inconsistency to locate.",
+    "polynomial_truncation": "A homogeneous map of degree 7 has normal order \u22647. The last E+ isolable correction within degree is b6 at F-order 8. From F-order 10 onward the free-module isolator would require b8,b10,\u2026 which do not exist as polynomial jets of degree 7.",
+    "terminal_system": "Finite truncation (G1) converts the infinite formal problem into the finite residual equations at even F-orders 10\u202620 (and 0,2 empty). Samples on the residual-trivial free fibre produce nonzero terminal residual \u2014 exact over Q."
+  }
+}

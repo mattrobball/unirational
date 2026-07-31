@@ -1,0 +1,131 @@
+{
+  "base_commit_expected": "c5e71be",
+  "bidegree_G2": {
+    "d": 7,
+    "m": 1
+  },
+  "deliverables": {
+    "FINITE_TRUNCATION_THEOREM.md": "G1 theorem",
+    "SEAL.json": "this seal",
+    "degree7/*": "G2 complete tower + residual + reconcile",
+    "verify_finite_truncation.py": "G1 independent verifier"
+  },
+  "dispatch": "POST-ELO Path G (PRIMARY): finite global lifting",
+  "exit_G2": "G7-OBSTRUCTION",
+  "files": [
+    {
+      "bytes": 6416,
+      "path": "certificates/global_finite_lifting/FINITE_TRUNCATION_THEOREM.md",
+      "sha256": "41c3ec8f37f396555cf604af813bc2a12629c499576172925f270fb4bfc3b7b8"
+    },
+    {
+      "bytes": 850,
+      "path": "certificates/global_finite_lifting/degree7/SUMMARY.json",
+      "sha256": "3d01581596385c39383a835c5dea7f7b4242e4e4c0dcd9380c392e17ccf79649"
+    },
+    {
+      "bytes": 3755,
+      "path": "certificates/global_finite_lifting/degree7/TOWER.md",
+      "sha256": "6ec1222196f93c0c3b66ca1adcb10328361846c6fdf28d6e0d98c001a3db4672"
+    },
+    {
+      "bytes": 13338,
+      "path": "certificates/global_finite_lifting/degree7/common_d7.py",
+      "sha256": "4a0c0c6c864355b39c2ceeb363f2b57077eed23e7852b5ae8e03b518ee630e74"
+    },
+    {
+      "bytes": 4228,
+      "path": "certificates/global_finite_lifting/degree7/exit.json",
+      "sha256": "46017e8aa90eadcab871fd48f54a1d1dbd71046355dca528cd8f0e600614cdec"
+    },
+    {
+      "bytes": 2790,
+      "path": "certificates/global_finite_lifting/degree7/first_terminal_stage.json",
+      "sha256": "a1d587bbb52274ad7febd82edfc3ce6404e882f07f240df6655dd240f008ebf0"
+    },
+    {
+      "bytes": 1956,
+      "path": "certificates/global_finite_lifting/degree7/free_Lr_ranks.json",
+      "sha256": "51861b2c942623fef27a648601bf232162930f6f633d89d1babe8d55ec9046f7"
+    },
+    {
+      "bytes": 17384,
+      "path": "certificates/global_finite_lifting/degree7/global_correction_modules.json",
+      "sha256": "42a222c875624be411c31cfc6b68d5765cc46bd4384b2247b9e39e9012cf93f1"
+    },
+    {
+      "bytes": 1753,
+      "path": "certificates/global_finite_lifting/degree7/jet_dimensions.json",
+      "sha256": "e749aee9014ba0b6ecd295b9a9bdb325e8457a768868713934f291a40c29a2bc"
+    },
+    {
+      "bytes": 40896,
+      "path": "certificates/global_finite_lifting/degree7/produce.py",
+      "sha256": "aa31db01606eece2f3393ab4c541ab3ddd9ecb67203fc9319c59d367dc1f5069"
+    },
+    {
+      "bytes": 2250,
+      "path": "certificates/global_finite_lifting/degree7/reconcile_degree7_exclusion.json",
+      "sha256": "f8b7ede77b2bb6b18e735c2a5f288ab9c44d995accb7ae2d314286b4acd1aae8"
+    },
+    {
+      "bytes": 19849,
+      "path": "certificates/global_finite_lifting/degree7/stage_ledger.json",
+      "sha256": "86aa2ef78a0e3c3a5e1ca50433fa96fd99b95fdb539f4d28065177fdc5cf7d71"
+    },
+    {
+      "bytes": 4625,
+      "path": "certificates/global_finite_lifting/degree7/tower_sample_based_zero.json",
+      "sha256": "64bf1f85f051bc9cf983f08a62e4dd51e7301ae6d938a69ee2ea93795ab94fd6"
+    },
+    {
+      "bytes": 1139,
+      "path": "certificates/global_finite_lifting/degree7/tower_sample_kerL1.json",
+      "sha256": "b6bc078a897e99bcb0a8661165fabf2d27cb54e4d846152d9f30b12864dfd97c"
+    },
+    {
+      "bytes": 9254,
+      "path": "certificates/global_finite_lifting/degree7/verify.py",
+      "sha256": "a91422270c263ac55d03f1e1ceb84d95296dbb1edb1b32848678a53df59d6b82"
+    },
+    {
+      "bytes": 8073,
+      "path": "certificates/global_finite_lifting/verify_finite_truncation.py",
+      "sha256": "4143e35c46827ef7f94edc0581ce2f96f4e08217b7a35f59268b33ff72ee684f"
+    }
+  ],
+  "gate_G1": "PASS",
+  "headline": "OPEN",
+  "house_rules": [
+    "No formal state or formal lift called a covariant",
+    "Exact arithmetic; finite fields discovery/pivot only",
+    "G4: plane -> triple-line equalizer -> residual point kernel",
+    "No timing fields in sealed payloads",
+    "Independent verifier does not import producer",
+    "self_sha256 last"
+  ],
+  "not_attempted": [
+    "G3 degrees 13/19",
+    "Path F",
+    "Path T"
+  ],
+  "package": "global_finite_lifting",
+  "self_sha256": "f75203815dd0d4751b336838752860b499b9f9c30447094d92ee1e382bfe9e99",
+  "summary": {
+    "degree7_G_covariant_landing": "EMPTY (septic + modular)",
+    "degree7_first_nonisolable_F_order": 10,
+    "degree7_free_fibre_residual_F10_norm_sq": "1296",
+    "finite_truncation": "F(p) in I^{3d+1} => F(p)=0 for homogeneous degree-d maps; tower terminates by order 3d",
+    "why_no_covariant": "Formal series solutions exist on free open; polynomial degree 7 truncates isolators at b6 (F-order 8); residual at F-order 10 nonzero; G-global 4-dim space already excluded"
+  },
+  "terminal_markers": [
+    "FINITE_TRUNCATION_G1_PASS",
+    "G7_TOWER_PRODUCE_OK",
+    "G7_TOWER_VERIFY_OK",
+    "GLOBAL_FINITE_LIFTING_SEAL_OK"
+  ],
+  "verify_commands": [
+    "/opt/homebrew/bin/python3 -u certificates/global_finite_lifting/verify_finite_truncation.py",
+    "/opt/homebrew/bin/python3 -u certificates/global_finite_lifting/degree7/verify.py"
+  ]
+}

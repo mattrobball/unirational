@@ -1,0 +1,133 @@
+{
+  "first_stage_without_Eplus_poly_isolator": 10,
+  "last_isolable_Eplus_F_order": 8,
+  "meaning": "From this F-order onward, free-module isolation would require an E+ jet of order > d (or no pure isolator). Remaining freedom is only ker(L_*) of earlier stages and a_odd relative parameters still within degree (a3,a5,a7), subject to coefficient coupling.",
+  "self_sha256": "73b860979e515210d64718d70cfb8bc159e18f7adbad5fec33c7e7241ffc5df6",
+  "stage": {
+    "F_order": 10,
+    "automatic_by_y_evenness": false,
+    "codomain_free_dim": 11,
+    "codomain_multi_rees_dim": 858,
+    "equation_type": "mixed_residual",
+    "formal_delta": 7,
+    "formal_newest_Eplus_order": 8,
+    "isolable_Eplus_within_d": false,
+    "live_triples": [
+      {
+        "ijk_sorted": [
+          1,
+          2,
+          7
+        ],
+        "max_Eminus": 7,
+        "max_Eplus": 2,
+        "max_order": 7,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_plus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          1,
+          3,
+          6
+        ],
+        "max_Eminus": 3,
+        "max_Eplus": 6,
+        "max_order": 6,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_minus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          1,
+          4,
+          5
+        ],
+        "max_Eminus": 5,
+        "max_Eplus": 4,
+        "max_order": 5,
+        "multiplicity": 6,
+        "types": [
+          "E_minus",
+          "E_plus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          2,
+          2,
+          6
+        ],
+        "max_Eminus": -1,
+        "max_Eplus": 6,
+        "max_order": 6,
+        "multiplicity": 3,
+        "types": [
+          "E_plus",
+          "E_plus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          2,
+          3,
+          5
+        ],
+        "max_Eminus": 5,
+        "max_Eplus": 2,
+        "max_order": 5,
+        "multiplicity": 6,
+        "types": [
+          "E_plus",
+          "E_minus",
+          "E_minus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          2,
+          4,
+          4
+        ],
+        "max_Eminus": -1,
+        "max_Eplus": 4,
+        "max_order": 4,
+        "multiplicity": 3,
+        "types": [
+          "E_plus",
+          "E_plus",
+          "E_plus"
+        ]
+      },
+      {
+        "ijk_sorted": [
+          3,
+          3,
+          4
+        ],
+        "max_Eminus": 3,
+        "max_Eplus": 4,
+        "max_order": 4,
+        "multiplicity": 3,
+        "types": [
+          "E_minus",
+          "E_minus",
+          "E_plus"
+        ]
+      }
+    ],
+    "n_live_classes": 7,
+    "newest_Eminus_order": 7,
+    "newest_Eplus_order": 6
+  }
+}

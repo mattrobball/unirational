@@ -1,0 +1,73 @@
+{
+  "d": 7,
+  "m": 1,
+  "note": "C2-parity normal jets of a single degree-d map along one involution plus-plane (not yet residual equalizer / G-invariants).",
+  "rows": [
+    {
+      "base_degree_d_minus_k": 6,
+      "free_fibre_rank": 4,
+      "multi_rees_dim": 112,
+      "normal_order": 1,
+      "sym_Eplus_dim": 28,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "base_degree_d_minus_k": 5,
+      "free_fibre_rank": 9,
+      "multi_rees_dim": 189,
+      "normal_order": 2,
+      "sym_Eplus_dim": 21,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "base_degree_d_minus_k": 4,
+      "free_fibre_rank": 8,
+      "multi_rees_dim": 120,
+      "normal_order": 3,
+      "sym_Eplus_dim": 15,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "base_degree_d_minus_k": 3,
+      "free_fibre_rank": 15,
+      "multi_rees_dim": 150,
+      "normal_order": 4,
+      "sym_Eplus_dim": 10,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "base_degree_d_minus_k": 2,
+      "free_fibre_rank": 12,
+      "multi_rees_dim": 72,
+      "normal_order": 5,
+      "sym_Eplus_dim": 6,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "base_degree_d_minus_k": 1,
+      "free_fibre_rank": 21,
+      "multi_rees_dim": 63,
+      "normal_order": 6,
+      "sym_Eplus_dim": 3,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "base_degree_d_minus_k": 0,
+      "free_fibre_rank": 16,
+      "multi_rees_dim": 16,
+      "normal_order": 7,
+      "sym_Eplus_dim": 1,
+      "target": "E_minus",
+      "target_dim": 2
+    }
+  ],
+  "self_sha256": "595f3d174e539586c4b667488d63f0dc165291457b9b3e4510cb2581448b7655",
+  "total_free_fibre_rank": 85,
+  "total_multi_rees_dim": 722
+}

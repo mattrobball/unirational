@@ -1,0 +1,33 @@
+{
+  "bidegree": {
+    "d": 7,
+    "m": 1
+  },
+  "consistency_with_exclusion": "TOWER_AGREES_WITH_EXCLUSION",
+  "exit": "G7-OBSTRUCTION",
+  "files": [
+    "SUMMARY.json",
+    "TOWER.md",
+    "common_d7.py",
+    "exit.json",
+    "first_terminal_stage.json",
+    "free_Lr_ranks.json",
+    "global_correction_modules.json",
+    "jet_dimensions.json",
+    "produce.py",
+    "reconcile_degree7_exclusion.json",
+    "stage_ledger.json",
+    "tower_sample_based_zero.json",
+    "tower_sample_kerL1.json",
+    "verify.py"
+  ],
+  "first_stage_without_Eplus_poly_isolator": 10,
+  "gate_G1": "PASS",
+  "headline": "OPEN",
+  "multi_rees_total_dim": 722,
+  "sample0_first_nonzero": null,
+  "sample1_first_nonzero": 10,
+  "self_sha256": "49e9eca77c4892bbe0ea6a8bab1c266ccec492037fec884062bcf8b041906f74",
+  "septic_exclusion_pass": true,
+  "terminal_F_order": 21
+}

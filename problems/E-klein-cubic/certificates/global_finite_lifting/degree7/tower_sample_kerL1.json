@@ -1,0 +1,55 @@
+{
+  "L5_coker": 0,
+  "L5_rank": 9,
+  "b2_nonzero": true,
+  "early_orders_vanish": {
+    "4": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "6": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "8": {
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    }
+  },
+  "first_nonzero_terminal_F_order": 10,
+  "ker_L1_dim": 4,
+  "sample_name": "a_triv_plus_ker_L1_first_basis",
+  "self_sha256": "de0f3f20e305ecaa20e6c65512fb21a797262e7a4a51276d953603a359153e96",
+  "terminal_residuals": {
+    "10": {
+      "codomain_dim": 11,
+      "is_zero": false,
+      "residual_norm_sq": "1296"
+    },
+    "12": {
+      "codomain_dim": 13,
+      "is_zero": false,
+      "residual_norm_sq": "123905"
+    },
+    "14": {
+      "codomain_dim": 15,
+      "is_zero": false,
+      "residual_norm_sq": "291600"
+    },
+    "16": {
+      "codomain_dim": 17,
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    },
+    "18": {
+      "codomain_dim": 19,
+      "is_zero": false,
+      "residual_norm_sq": "34012224"
+    },
+    "20": {
+      "codomain_dim": 21,
+      "is_zero": true,
+      "residual_norm_sq": "0"
+    }
+  }
+}
