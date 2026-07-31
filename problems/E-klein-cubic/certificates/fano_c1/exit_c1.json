@@ -1,0 +1,31 @@
+{
+  "packet": "certificates/fano_c1",
+  "date": "2026-07-31",
+  "track": "C1.1",
+  "workorder": "WORKORDER_CAS_T9_P25Z.md",
+  "headline": "OPEN",
+  "exit": "C1-UNDECIDED",
+  "exits_not_claimed": [
+    "C1-MODEL-PASS",
+    "C-FANO-POINT"
+  ],
+  "c1_1": {
+    "steps_installed": {
+      "1_A_proj": "partial",
+      "2_Morita_symbol": false,
+      "3_hermitian_matrices": false,
+      "4_restricted_plucker": false,
+      "5_split_fibre_check": false
+    },
+    "smallest_exact_system": "S1",
+    "resource_floor": "char-0 structure constants of the 36-frame over K_proj (stage 1a)",
+    "modular_path_validated": true,
+    "modular_prime": 23
+  },
+  "corrections": {
+    "birational_route_reopened_for_later_c12": true,
+    "brauer_odd_degree_lever_reopened": false
+  },
+  "peak_rss_MiB_observed": 124.23,
+  "terminal_marker": "C1_UNDECIDED_DESCENT_INTERFACE_PREFLIGHT_HEADLINE_OPEN"
+}

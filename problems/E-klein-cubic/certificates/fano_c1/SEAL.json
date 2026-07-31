@@ -1,0 +1,37 @@
+{
+  "packet": "certificates/fano_c1",
+  "date": "2026-07-31",
+  "exit": "C1-UNDECIDED",
+  "headline": "OPEN",
+  "track": "C1.1",
+  "workorder": "WORKORDER_CAS_T9_P25Z.md",
+  "deliverable_sha256": {
+    "C1_MODEL.md": "6b518356f362c61fab69ac382bb3afa460ad850ac99f4662bcadd0110f760e06",
+    "preflight_c1.json": "de42974310d9306691cebb29af6ba79c99041dad9f054eab67790fdc235f645f",
+    "exit_c1.json": "64cd19f189e29fc44c361d7f4d2eda9de4c1518ce2113330a45c0322d50f2b70",
+    "verify_c1.py": "9c63669436b195700febd5144c937f1276f8858b1904046e4f550b7fbda2d763"
+  },
+  "scratch_sha256": {
+    "tmp/c1_preflight/modular_mul_probe.json": "7b6d7ae1b5dafbcdda8cb783531743f3d77b5720ebec7a09f0c03c65ab8d1db1",
+    "tmp/c1_preflight/structure_constants_f23.npz": "369d08ddb2cb9681c50dbe43f077da4236676f045c3f26dcf28f8b8f2f3d6b83",
+    "tmp/c1_preflight/produce_modular_probe.py": "97f5039238933ff0f3336e39a2e530d5dea17a39e3a3709d58c64eb85d063416"
+  },
+  "verifier_marker": "VERIFY_C1_OK",
+  "c1_1_steps": {
+    "1_A_proj": "partial",
+    "2_Morita_symbol": false,
+    "3_hermitian_matrices": false,
+    "4_restricted_plucker": false,
+    "5_split_fibre_check": false
+  },
+  "smallest_exact_system": "S1",
+  "resource_floor": "char-0 structure constants of 36-frame over K_proj (stage 1a)",
+  "modular_path_validated_p": 23,
+  "peak_rss_MiB_observed": 124.23,
+  "write_scope": [
+    "certificates/fano_c1/",
+    "tmp/c1_*/"
+  ],
+  "terminal_marker": "C1_UNDECIDED_DESCENT_INTERFACE_PREFLIGHT_HEADLINE_OPEN",
+  "seal_sha256_self": "c70f6d26243f49aee4c4085e307bab83000c7f6138c8b1c5a3833ed0416fc9d1"
+}

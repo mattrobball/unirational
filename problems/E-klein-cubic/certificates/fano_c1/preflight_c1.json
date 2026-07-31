@@ -1,0 +1,171 @@
+{
+  "packet": "certificates/fano_c1",
+  "date": "2026-07-31",
+  "track": "C1.1",
+  "workorder": "WORKORDER_CAS_T9_P25Z.md",
+  "headline": "OPEN",
+  "exit": "C1-UNDECIDED",
+  "status": "PREFLIGHT_WITH_PARTIAL_STEP1",
+  "resource_fence": {
+    "memory_giB_cap": 4,
+    "job_duration": "minutes",
+    "memory_heavy_slot": "held_by_worker_T",
+    "observed_peak_rss_MiB": 124.23,
+    "observed_peak_rss_note": "max over alignment replay (~91), modular probe (~82), kproj dense mul sample (~124)"
+  },
+  "c1_1_steps": {
+    "1_A_proj_executable": {
+      "status": "partial",
+      "installed": [
+        "exact B5 intertwiner over Q(zeta_11) (upstream alignment)",
+        "generator words A->TSTS, B->T^8S (upstream)",
+        "End(V6)=1+11+12a+12b (upstream)",
+        "36 weight-zero Reynolds seeds giving K_proj-vector-space frame (upstream)",
+        "modular multiplication path at F_23 witness (this dispatch)"
+      ],
+      "not_installed": [
+        "structure constants c_ij^k in the rank-12 K_proj model",
+        "symplectic involution sigma in that basis"
+      ]
+    },
+    "2_Morita_and_symbol": {
+      "status": "not_installed",
+      "explicit_symbol_installed": false,
+      "upstream_marker": "certificates/pfaffian_point/quaternion_corner.json"
+    },
+    "3_five_hermitian_matrices": {
+      "status": "not_installed",
+      "explicit_matrices_installed": false
+    },
+    "4_restricted_plucker": {
+      "status": "not_installed"
+    },
+    "5_split_fibre_check": {
+      "status": "not_run",
+      "required_invariants": ["dim=3", "deg=14", "smooth"]
+    }
+  },
+  "smallest_exact_system": {
+    "name": "S1",
+    "source": "certificates/fano_interface_c0/C0_MODEL.md refined in C1_MODEL.md",
+    "data": [
+      "a,b in K_proj^x",
+      "D=(a,b)_{K_proj}",
+      "H_1..H_5 in Herm_3(D) with span H_T",
+      "split check dim/deg/smooth of classical F14"
+    ],
+    "live_equations_after_install_out_of_scope": "F_r(x,y)=h_r((1,x,y),(1,x,y))=0"
+  },
+  "resource_floor": {
+    "dominant_stage": "char0_structure_constants_of_A_proj_in_K_proj_36_frame",
+    "stage_id": "1a",
+    "why_outside_this_fence": "dense ~36^3 table expected (modular nnz ratio ~0.90 at p=23); each entry is a rank-12 K_proj element; naive Reynolds products over orbit 660 with degrees <=14 need multi-hour exact arithmetic and risk multi-GiB swell",
+    "preferred_later_path": [
+      "modular structure constants at several good primes p!=67 (path validated at p=23)",
+      "CRT / rational reconstruction with final congruence check and holdout prime",
+      "associativity and reduced-norm checks over K_proj as verifier invariants"
+    ],
+    "suggested_envelope_giB": 8,
+    "stagger": "must not overlap Worker T or P25Z memory-saturating jobs",
+    "local_trap": "V4 (p^2,q^2)-type symbols after odd base change are not global over K_proj",
+    "optimization_recorded_not_used": "End(V6)=End(W)+11 may rebuild 25/36 dimensions from Klein module"
+  },
+  "modular_probe": {
+    "path": "tmp/c1_preflight/modular_mul_probe.json",
+    "structure_constants_npz": "tmp/c1_preflight/structure_constants_f23.npz",
+    "prime": 23,
+    "point": [1, 2, 3, 4, 5],
+    "basis_det_mod_p": 6,
+    "products_closed_in_span": true,
+    "associativity_random_samples": 80,
+    "associativity_failures": 0,
+    "identity_in_span": true,
+    "structure_constants_nnz": 41994,
+    "elapsed_seconds": 0.21,
+    "peak_rss_MiB": 81.84,
+    "proves": "specialized 36-dim associative unital F_23-algebra from the certified Reynolds frame",
+    "does_not_prove": [
+      "A_proj over K_proj",
+      "quaternion symbol",
+      "Hermitian matrices",
+      "Fano point"
+    ]
+  },
+  "corrections": {
+    "corr_1_picard_vs_birational": {
+      "c0_closed": "nontrivial fibrations as morphisms on prime F14 (rho=1)",
+      "reopens": "birational models / Sarkisov links / fibrations after modification",
+      "authorized_for": "later C1.2 structural search only (work order §5 C1.2 item 1)",
+      "not_done_here": true,
+      "recommended_later_target": "classify low-degree Gal-stable centres (A4/D12 orbit geometry) before any elimination"
+    },
+    "corr_2_degree55_brauer": {
+      "c0_closed": "odd-degree multisection does not kill [D] in Br[2]; does not give common line",
+      "reopens": false,
+      "note": "cor o res = x55 is a unit on Br[2]; residual problem remains codim-5 common isotropic line"
+    }
+  },
+  "binding_corrections_carried": {
+    "idempotent_to_fano": "FAIL-SCOPE",
+    "auxiliary_cubic_language": "REPAIR.md §13",
+    "schur_pointlessness_language": "REPAIR.md §14 — no rational point currently known",
+    "codimension_five": "dim Gr(2,6)=8, five conditions, expected dim 3",
+    "trap": "arguments for arbitrary quaternion + arbitrary five-plane are too weak"
+  },
+  "gap_orbit_degrees": {
+    "group": "PSL(2,11)",
+    "order": 660,
+    "order12_subgroups": {
+      "total": 110,
+      "A4": 55,
+      "D12": 55,
+      "note": "director correction to C0_STRUCTURE_TABLE absorbed"
+    },
+    "A4_index": 55,
+    "C11_index": 60,
+    "C5_index": 132,
+    "gcd": 1,
+    "scratch": "tmp/c1_preflight/gap_orbit_degrees.txt"
+  },
+  "upstream_pins": {
+    "certificates/pfaffian_point/BRIDGE_AUDIT.md": "0c9cf64c0a7c367286afd2636bf8f1c8dc432df8616075fb4d6434dcf0d16031",
+    "certificates/pfaffian_point/quaternion_corner.json": "9ca99aa07b642c6a083149372f5aa605236fb967597b84273510576cb15d60e9",
+    "certificates/fano_interface_c0/C0_MODEL.md": "a425d373c5ecbf2c879b9703e63345a5ce249c705ee7a44eab3f40fa07f7bb2e",
+    "certificates/fano_interface_c0/exit_c0.json": "2c235419b737afd6d4f4cfc0e2a4ca4ef7ea6c7eeb620c104618fd1801f74237",
+    "tmp/pfaffian_representation_alignment/certificate.json": "90746a65051b863c684c906f7166c70572a2edc319e6f6e6e306042261153848",
+    "tmp/pfaffian_explicit_descent/REPORT.md": "247d9e59f801b8adc1b50db899dca13a0a7b0271312fa73c424e3c1a8f91185d"
+  },
+  "write_scope_respected": [
+    "certificates/fano_c1/",
+    "tmp/c1_*/"
+  ],
+  "forbidden_paths_not_modified": [
+    "certificates/fano_interface_c0/",
+    "certificates/pfaffian_point/",
+    "certificates/fold_binodal_t9/",
+    "certificates/degree25_finite_module/",
+    "certificates/degree25_rowrank/",
+    "tmp/t9_*/",
+    "tmp/p25z1_*/",
+    "tmp/p25z3_*/"
+  ],
+  "c1_2_status": "NOT_STARTED",
+  "proved": [
+    "upstream VS frame for A_proj still replays",
+    "modular multiplication path sound at F_23 witness from certified seeds",
+    "S1 remains the smallest exact system; floor is char-0 structure constants (1a)",
+    "correction 1 reopens birational/Sarkisov search for later C1.2 only",
+    "correction 2 does not reopen Brauer splitting",
+    "orbit lattice 55+55 order-12, degrees 55/60/132 gcd 1"
+  ],
+  "not_proved": [
+    "executable A_proj multiplication table over K_proj",
+    "explicit (a,b) or H_1..H_5",
+    "F14_T(K_proj) nonempty or empty",
+    "any birational model with a fibration",
+    "ed_C(G)=3",
+    "G-unirationality or its negation",
+    "C1-MODEL-PASS or C-FANO-POINT"
+  ],
+  "terminal_marker": "C1_UNDECIDED_DESCENT_INTERFACE_PREFLIGHT_HEADLINE_OPEN"
+}
