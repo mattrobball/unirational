@@ -1,0 +1,30 @@
+{
+  "accepted_replay_summary": {
+    "count": 13,
+    "fail": 0,
+    "pass": 13
+  },
+  "artifacts": {
+    "BASELINE.json": "a50052ad9393612cb2a00849954360af1ca29ebe07f0bed11713f17e2dddfb15",
+    "SHA256SUMS": "167b8a5f50a45036f81bb1c494aac3804806d0c7b3124f096836c75152339b91"
+  },
+  "cas_0_status": "PASS",
+  "git_head_at_freeze": "a40b10fbc4bd470ec56af5a6f50e11e6a778cabf",
+  "headline": "OPEN",
+  "pinned_base_declared": "a40b10f",
+  "schema": "headline-cas-order-baseline-seal-v1",
+  "self_sha256": "6f77cf83ac2346635f7e40e49473a400de92b17036fc01f38859d4984a216c3a",
+  "terminal_marker": "HEADLINE_CAS_BASELINE_ACCEPT",
+  "tool_versions": {
+    "M2": "1.26.06",
+    "Singular": "Singular for arm64-Darwin version 4.4.1 (44105, 64 bit) Nov 11 2025 16:12:34",
+    "gap": "GAP 4.15.1 built on 2026-01-28 18:53:29+0000",
+    "gp": "GP/PARI CALCULATOR Version 2.17.4 (released)",
+    "julia": "julia version 1.12.6",
+    "machine": "arm64",
+    "msolve": "0.10.1",
+    "numpy": "2.5.1",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python3": "Python 3.14.6"
+  }
+}
