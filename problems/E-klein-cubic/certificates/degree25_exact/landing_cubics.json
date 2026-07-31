@@ -1,0 +1,123 @@
+{
+  "coordinate_convention": "monic RREF of V_25 in original Reynolds seed coordinates; cubic monomials = weak compositions of degree 3 in 43 variables",
+  "headline": "OPEN",
+  "method": "sparse-direct sample: evaluate F(p_c)(x) at random x\u2208F_p^5, expand as cubic in c via polarized Klein form (fast_cubic_row), row-reduce",
+  "n_samples_per_prime": 1600,
+  "primes": [
+    {
+      "basis43_pivots_prefix": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "historical_842": {
+        "available": true,
+        "comparison_at_this_prime": 89,
+        "historical_prime": 67,
+        "historical_rank": 842,
+        "historical_sha256": "2fd6a5ad83f17de8826eb1787e062e79c66f6aac681197c24702c65df6135f76",
+        "historical_shape": [
+          842,
+          14190
+        ],
+        "note": "Historical 842\u00d714190 basis is the order-four plane block system in (Q|K) coordinates over F_67. Direct sample span of F(p_c) in monic Reynolds coordinates is compared by rank only at p>25; coefficientwise identity over Q remains open (same residual gap as P25R equivalence_to_842)."
+      },
+      "landing_rank": 746,
+      "landing_sha256": "d6132cb1a3f9475c6261ca8adc29bbe8079545b3fa5068c655b43b1d6000d164",
+      "meta": {
+        "cubic_ambient_dim": 14190,
+        "last_rank_increase_at_sample": 759,
+        "n_samples": 1600,
+        "plateau": true,
+        "rank": 746
+      },
+      "prime": 89,
+      "rss_mib": 1095.5,
+      "zeta": 78
+    },
+    {
+      "basis43_pivots_prefix": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "historical_842": {
+        "available": true,
+        "comparison_at_this_prime": 199,
+        "historical_prime": 67,
+        "historical_rank": 842,
+        "historical_sha256": "2fd6a5ad83f17de8826eb1787e062e79c66f6aac681197c24702c65df6135f76",
+        "historical_shape": [
+          842,
+          14190
+        ],
+        "note": "Historical 842\u00d714190 basis is the order-four plane block system in (Q|K) coordinates over F_67. Direct sample span of F(p_c) in monic Reynolds coordinates is compared by rank only at p>25; coefficientwise identity over Q remains open (same residual gap as P25R equivalence_to_842)."
+      },
+      "landing_rank": 746,
+      "landing_sha256": "56e770f5efc49ac427fab623d6828419712599397f066511a28090605f031e5c",
+      "meta": {
+        "cubic_ambient_dim": 14190,
+        "last_rank_increase_at_sample": 747,
+        "n_samples": 1600,
+        "plateau": true,
+        "rank": 746
+      },
+      "prime": 199,
+      "rss_mib": 1205.375,
+      "zeta": 61
+    },
+    {
+      "basis43_pivots_prefix": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "historical_842": {
+        "available": true,
+        "comparison_at_this_prime": 331,
+        "historical_prime": 67,
+        "historical_rank": 842,
+        "historical_sha256": "2fd6a5ad83f17de8826eb1787e062e79c66f6aac681197c24702c65df6135f76",
+        "historical_shape": [
+          842,
+          14190
+        ],
+        "note": "Historical 842\u00d714190 basis is the order-four plane block system in (Q|K) coordinates over F_67. Direct sample span of F(p_c) in monic Reynolds coordinates is compared by rank only at p>25; coefficientwise identity over Q remains open (same residual gap as P25R equivalence_to_842)."
+      },
+      "landing_rank": 746,
+      "landing_sha256": "1d1e5cadfcfb5eb49d6c22d8c57b3c99e019e2bf73ae0ecb4f6587b4ecd99b43",
+      "meta": {
+        "cubic_ambient_dim": 14190,
+        "last_rank_increase_at_sample": 746,
+        "n_samples": 1600,
+        "plateau": true,
+        "rank": 746
+      },
+      "prime": 331,
+      "rss_mib": 1225.0625,
+      "zeta": 270
+    }
+  ],
+  "self_sha256": "2108fcbf34273e9c7af0296eccf78f2bf37509dfccd9c43ae4d817c9869d7a97"
+}

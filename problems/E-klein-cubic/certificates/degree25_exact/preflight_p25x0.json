@@ -1,0 +1,23 @@
+{
+  "checkpoint_plan": "tmp/v2_P25/*.npz + certificates/degree25_exact/",
+  "expected_exact_certificate": "multimodular monic bases + 868\u00d743 rho + residual 7 + ranks over K via DVR",
+  "independent_verifier": "verify_p25x0.py / verify_p25x1.py (no producer import)",
+  "matrix_module_dimensions": {
+    "basis43": [
+      43,
+      189
+    ],
+    "residual_forms": [
+      7,
+      43
+    ],
+    "rho_le25": [
+      868,
+      43
+    ]
+  },
+  "memory_ceiling_GiB_exploratory": 8,
+  "monomial_order": "weak compositions / grevlex-compatible index order",
+  "ring": "F_p with p=1 mod 11 (split cyclotomic), exact model over K=Q(zeta_11)",
+  "self_sha256": "952bc4cce19c022be056469a4f61d550bcee3cd19828a5482017140679916a89"
+}

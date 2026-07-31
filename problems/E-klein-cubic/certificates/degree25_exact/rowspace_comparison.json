@@ -1,0 +1,24 @@
+{
+  "coordinate_convention": "monic RREF of V_25 in original Reynolds seed coordinates; cubic monomials = weak compositions of degree 3 in 43 variables",
+  "headline": "OPEN",
+  "historical_842_mod_67": {
+    "field": "F_67",
+    "rank": 842,
+    "sha256": "2fd6a5ad83f17de8826eb1787e062e79c66f6aac681197c24702c65df6135f76",
+    "source": "tmp/m1_full_plane_block_rank/full_cubic_basis.npz"
+  },
+  "rank_842_rowspaces_recovered_as_historical_object": false,
+  "recovery_at_holdouts": {
+    "199": 746,
+    "331": 746,
+    "89": 746,
+    "note": "Sample span ranks of F(p_c) in monic Reynolds coordinates. These are lower bounds on the true landing row rank; plateau observed under 1600 samples. Historical 842 is a different (Q|K, order-four plane) modular basis at p=67 only."
+  },
+  "sample_plateau_consistent": true,
+  "sample_ranks": {
+    "89": 746,
+    "199": 746,
+    "331": 746
+  },
+  "self_sha256": "19994c9053d76c76fd15fa7056ad9ee626cd7375111860d11ab5a17d5ffa1258"
+}

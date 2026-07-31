@@ -1,0 +1,14 @@
+{
+  "checkpoint_plan": "tmp/v2_P25/*.npz + certificates/degree25_exact/",
+  "expected_exact_certificate": "sample monic cubic bases at p=89,199,331; rowspace_comparison; equivalence_to_border residual gap",
+  "independent_verifier": "verify_p25x0.py / verify_p25x1.py (no producer import)",
+  "matrix_module_dimensions": {
+    "cubic_ambient": 14190,
+    "variables": 43
+  },
+  "memory_ceiling_GiB_exploratory": 8,
+  "monomial_order": "weak compositions / grevlex-compatible index order",
+  "ring": "F_p with p=1 mod 11 (split cyclotomic), exact model over K=Q(zeta_11)",
+  "self_sha256": "f294f043e1a54c7fe4e6df3753056e65dada7c4fa5b0a186f3cf9ffd74bbfbb2",
+  "sparse_dense": "Prefer sample cubics + echelon (no dense global Macaulay). Each sample row is dense (~14k nnz) but only rank-many rows stored."
+}

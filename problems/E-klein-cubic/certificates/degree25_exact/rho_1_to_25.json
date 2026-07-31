@@ -1,0 +1,368 @@
+{
+  "blocks": [
+    {
+      "free_dim": 4,
+      "r": 1,
+      "row_offset": 0,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 9,
+      "r": 2,
+      "row_offset": 4,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 8,
+      "r": 3,
+      "row_offset": 13,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 15,
+      "r": 4,
+      "row_offset": 21,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 12,
+      "r": 5,
+      "row_offset": 36,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 21,
+      "r": 6,
+      "row_offset": 48,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 16,
+      "r": 7,
+      "row_offset": 69,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 27,
+      "r": 8,
+      "row_offset": 85,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 20,
+      "r": 9,
+      "row_offset": 112,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 33,
+      "r": 10,
+      "row_offset": 132,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 24,
+      "r": 11,
+      "row_offset": 165,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 39,
+      "r": 12,
+      "row_offset": 189,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 28,
+      "r": 13,
+      "row_offset": 228,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 45,
+      "r": 14,
+      "row_offset": 256,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 32,
+      "r": 15,
+      "row_offset": 301,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 51,
+      "r": 16,
+      "row_offset": 333,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 36,
+      "r": 17,
+      "row_offset": 384,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 57,
+      "r": 18,
+      "row_offset": 420,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 40,
+      "r": 19,
+      "row_offset": 477,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 63,
+      "r": 20,
+      "row_offset": 517,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 44,
+      "r": 21,
+      "row_offset": 580,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 69,
+      "r": 22,
+      "row_offset": 624,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 48,
+      "r": 23,
+      "row_offset": 693,
+      "target": "E_minus",
+      "target_dim": 2
+    },
+    {
+      "free_dim": 75,
+      "r": 24,
+      "row_offset": 741,
+      "target": "E_plus",
+      "target_dim": 3
+    },
+    {
+      "free_dim": 52,
+      "r": 25,
+      "row_offset": 816,
+      "target": "E_minus",
+      "target_dim": 2
+    }
+  ],
+  "description": "Materialized block restriction matrix rho_\u226425: V_25 \u2192 \u2295_{r=1}^{25} J_r in the free jet chart along a fixed involution line. Not a list of names only \u2014 arrays stored multiprime; circuit rho_le_25 rebuilds.",
+  "headline": "OPEN",
+  "primes": [
+    {
+      "prime": 67,
+      "rho_block_ranks": [
+        2,
+        4,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "rho_sha256": "296855dd6d2b21ab292ccbb340c2c8e3b24a59d4fcd696855c3cf73854bb8057",
+      "rho_shape": [
+        868,
+        43
+      ],
+      "zeta": 64
+    },
+    {
+      "prime": 89,
+      "rho_block_ranks": [
+        4,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "rho_sha256": "622c615e12306cae32466e6797b40bb03aaf7c4f1c342ec2a56bae4961f98dfd",
+      "rho_shape": [
+        868,
+        43
+      ],
+      "zeta": 78
+    },
+    {
+      "prime": 199,
+      "rho_block_ranks": [
+        4,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "rho_sha256": "3cf824ec497736746c9db3f5885dd6857c71eed3cb3409aca8dad041446c4ea5",
+      "rho_shape": [
+        868,
+        43
+      ],
+      "zeta": 61
+    },
+    {
+      "prime": 331,
+      "rho_block_ranks": [
+        4,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "rho_sha256": "16c7b3ad66ad4da860bc5ae335bce78def58de9600f8c1487726a58d3ab33042",
+      "rho_shape": [
+        868,
+        43
+      ],
+      "zeta": 270
+    },
+    {
+      "prime": 353,
+      "rho_block_ranks": [
+        4,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "rho_sha256": "9315610193b989cc93044caaaa0642e388b4a531fe9e82d0d738c18206a31315",
+      "rho_shape": [
+        868,
+        43
+      ],
+      "zeta": 58
+    }
+  ],
+  "self_sha256": "4586a7b03d9954ea3cdd58070fe5e32ab00262141fa2b2a19ecef72897e8bb75",
+  "shape": [
+    868,
+    43
+  ]
+}

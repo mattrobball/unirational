@@ -1,0 +1,63 @@
+{
+  "arrays": {
+    "basis43_p199": {
+      "sha256": "6a7da42ec082f531a7c9259dda4a3be28ab0fcd24769e32a9b6b1f0f145ca527",
+      "shape": [
+        43,
+        189
+      ]
+    },
+    "basis43_p331": {
+      "sha256": "eb1d9e4f152c2d23669f8c345d10423e84d6ee395e430d4d02de90a0dd8c94a8",
+      "shape": [
+        43,
+        189
+      ]
+    },
+    "basis43_p353": {
+      "sha256": "3ff3cf79aa78558f1574ad9cbbea795a881043957da0a4a12e6a9cdda4ffc761",
+      "shape": [
+        43,
+        189
+      ]
+    },
+    "basis43_p67": {
+      "sha256": "6ab0f1aeebe4100670935b1e758e926e1472ed5e53843fe838a7e443230a84c2",
+      "shape": [
+        43,
+        189
+      ]
+    },
+    "basis43_p89": {
+      "sha256": "4709fdbeea6db5f5c6c17b828dc766c748da9ac656874ae85a60acabe5ce4a54",
+      "shape": [
+        43,
+        189
+      ]
+    }
+  },
+  "headline": "OPEN",
+  "meta": {
+    "p199": {
+      "prime": 199,
+      "zeta": 61
+    },
+    "p331": {
+      "prime": 331,
+      "zeta": 270
+    },
+    "p353": {
+      "prime": 353,
+      "zeta": 58
+    },
+    "p67": {
+      "prime": 67,
+      "zeta": 64
+    },
+    "p89": {
+      "prime": 89,
+      "zeta": 78
+    }
+  },
+  "self_sha256": "537a7f4b9896c69ac115ae3e51b0a086997a38f865833e0b19aa7e533d20b32f"
+}

@@ -1,0 +1,53 @@
+{
+  "common_pivots_prefix": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "executable_circuit": "produce_p25x0.build_at_prime / common_p25x.strict_from_arrangement + monic_basis_reynolds + rho_le_25",
+  "field": "K = Q(zeta_11)",
+  "max_height_ok": 0,
+  "n_free_columns": 146,
+  "n_primes_holdout": 2,
+  "n_primes_use": 8,
+  "pivots_stable_across_primes": true,
+  "recon_fail": 4,
+  "recon_mismatch_holdout": 1,
+  "recon_ok_holdout": 0,
+  "sample_positions": [
+    [
+      0,
+      43
+    ],
+    [
+      0,
+      44
+    ],
+    [
+      1,
+      43
+    ],
+    [
+      20,
+      48
+    ],
+    [
+      42,
+      188
+    ]
+  ],
+  "self_sha256": "7c1605ab06671f65aa1f9f59f6e5706f169deabd3ca3557a225b307555803a78",
+  "verdict": "Monic RREF pivots stable; free entries Galois-fixed at each split prime (embedding-independent). Entrywise rational reconstruction with uniqueness bound \u221a(M/2) does not pass holdouts on sampled positions. Exact model is the multimodular monic lattice plus the replayable arithmetic circuit over K (group + Reynolds + nullspaces). Not a claim that entries fail to lie in K \u2014 only that the monic Q-RREF was not recovered within the stated height bound."
+}
