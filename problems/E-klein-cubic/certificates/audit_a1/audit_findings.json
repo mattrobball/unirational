@@ -1,0 +1,317 @@
+{
+  "schema": "klein-cubic-AUDIT-A1-v1",
+  "exit": "AUDIT-A1-COMPLETE",
+  "headline": "OPEN",
+  "worker": "A",
+  "workorder": "WORKORDER_CAS_T11_P25V_C3.md",
+  "packet": "certificates/audit_a1",
+  "no_new_mathematics": true,
+  "no_narrative_edits": true,
+  "no_sealed_packet_edits": true,
+  "no_computation_performed": true,
+  "markers_audited": [
+    "T9-HENSEL-NONUNIT-SEALED",
+    "T8-S1-NONUNIT-ANALYTIC",
+    "T-BRANCH-NONNORMAL",
+    "T10-BINODAL-NO-3-DEFECT",
+    "T10-FOLD-UNDECIDED",
+    "T8-S1-UNDECIDED",
+    "T8-N1-UNDECIDED",
+    "T2R4-PASS",
+    "S_2",
+    "dim_Sing_S_G_le_2",
+    "P25Y-DVR-PASS",
+    "P25Z-ROW-RANK-746",
+    "P25W-RANK-K-UNDECIDED",
+    "P25Z-FINITE-PRESENTATION-LOWER",
+    "P25YB-UNDECIDED",
+    "P25X0-PASS",
+    "P25X1-FAIL",
+    "C0-UNDECIDED",
+    "C1-UNDECIDED",
+    "C2-TWO-GENERATORS-MODULAR",
+    "C2-1-UNDECIDED",
+    "MOLIEN_m75_2343",
+    "MOLIEN_c25_189"
+  ],
+  "markers_not_reached": [],
+  "findings_ranked": [
+    {
+      "id": "F1",
+      "severity": [
+        "T-BRANCH-NONNORMAL",
+        "T10-BINODAL-NO-3-DEFECT"
+      ],
+      "verdict": "UNSUPPORTED",
+      "secondary_verdict": "SCOPE-DRIFT",
+      "severity": "critical",
+      "known_residual": false,
+      "file_line": "certificates/target_branch_t10/BINODAL_ODD_PRIMARY.md:38-44",
+      "exact_text": "ordinary-binodal completed local equation sealed at the Hensel point (T9-HENSEL-NONUNIT-SEALED): ... O_B ≃ K'[[x,y,z1,z2]]/(xy)",
+      "issue": "T9 seals deflated Hensel nonunitness, not the completed ordinary-node form of B. T8-N1 left normal_crossing MODULAR_ONLY. Nonnormality of B over Q via the correction still rests on analytic local-model input.",
+      "repair": "Cite work-order analytic input (or seal formal normal form); do not attribute xy=0 to T9-HENSEL-NONUNIT-SEALED.",
+      "exit_impact": "wording_and_consumption_scope; marker may remain as analytic ledger item only"
+    },
+    {
+      "id": "F2",
+      "markers": [
+        "T10-BINODAL-NO-3-DEFECT"
+      ],
+      "verdict": "UNCITED-HYPOTHESIS",
+      "secondary_verdict": "SOUND",
+      "severity": "high",
+      "known_residual": false,
+      "file_line": "certificates/target_branch_t10/verify_binodal_result.json:proves",
+      "exact_text": "split ordinary node: unit map surjective on truncated model; ... no 3-primary local Picard torsion",
+      "issue": "Pure algebra of abstract ordinary node is recomputed; geometric application to B inherits unsealed ordinary-node hypothesis. Verifier PASS does not recompute Sing(B) or completed stalk.",
+      "repair": "Conditional exit statement; name hypothesis explicitly.",
+      "exit_impact": "conditional_only; algebraic lemma stands"
+    },
+    {
+      "id": "F3",
+      "markers": [
+        "P25Z-FINITE-PRESENTATION-LOWER"
+      ],
+      "verdict": "SCOPE-DRIFT",
+      "severity": "high",
+      "known_residual": true,
+      "director_correction": "certificates/degree25_finite_module/DIRECTOR_CORRECTION_P25Z1.md",
+      "file_line": "certificates/degree25_finite_module/exit_p25z1.json:12,20,54",
+      "exact_text": "exit P25Z-FINITE-PRESENTATION; iso M=F/N ≅ R/J_N; what_this_proves isomorphism",
+      "issue": "Closure/commutator redundancy only specialized (40 fibres); sealed exit and verifier still accept non-LOWER name and full iso. Emptiness direction remains safe.",
+      "repair": "Rename sealed exit to -LOWER; demote iso; graded defect membership optional.",
+      "exit_impact": "work_order already uses LOWER; sealed packet still claims exact presentation"
+    },
+    {
+      "id": "F4",
+      "markers": [
+        "T8-S1-UNDECIDED"
+      ],
+      "verdict": "UNSUPPORTED",
+      "severity": "high",
+      "known_residual": true,
+      "director_correction": "certificates/fold_decision_t8/DIRECTOR_CORRECTION_T8.md",
+      "file_line": "certificates/fold_decision_t8/SUBRESULTANT_UNIT_TARGET.md:100",
+      "exact_text": "Jacobian of (H,s1)|_Lambda w.r.t. (s,t) is invertible (dets 96 and 29)",
+      "issue": "Still no jac/det code in T8 scripts; 96/29 are Puu and C from discovery JSON; det is 0. Verifier does not check the sentence.",
+      "repair": "Consumer must read DIRECTOR_CORRECTION_T8.md; use deflated Hensel (T9).",
+      "exit_impact": "none; T8-S1-UNDECIDED correct"
+    },
+    {
+      "id": "F5",
+      "markers": [
+        "P25Y-DVR-PASS"
+      ],
+      "verdict": "SCOPE-DRIFT",
+      "severity": "medium",
+      "known_residual": true,
+      "correction_record": "certificates/degree25_molien/MOLIEN_BOUND.md §5",
+      "file_line": "certificates/degree25_direct_support/DVR_MODEL.md:29-35",
+      "exact_text": "Exact Molien dimensions (trusted): dim M_25=189, dim Arr=59, dim V_25=43",
+      "issue": "Only 189 is pure Molien (c_25). Arr=59 and V_25=43 are construction dimensions. Unit minors still recompute freeness.",
+      "repair": "Wording only.",
+      "exit_impact": "none"
+    },
+    {
+      "id": "F6",
+      "markers": [
+        "MOLIEN_m75_2343",
+        "P25YB-UNDECIDED"
+      ],
+      "verdict": "SCOPE-DRIFT",
+      "severity": "medium",
+      "known_residual": false,
+      "file_line": "certificates/degree25_molien/molien_values.json:row_rank_bound.observed_746; certificates/degree25_support_f4/support_result.json:ring.rank_is_lower_bound_only",
+      "exact_text": "Observed F_89-rank 746 is a lower bound only / rank_is_lower_bound_only: true",
+      "issue": "Stale relative to sealed P25Z-ROW-RANK-746 exact rank at p=89.",
+      "repair": "Currency note; do not reopen Molien/P25YB exits.",
+      "exit_impact": "none for those exits"
+    },
+    {
+      "id": "F7",
+      "markers": [
+        "P25X0-PASS"
+      ],
+      "verdict": "SCOPE-DRIFT",
+      "severity": "low_medium",
+      "known_residual": false,
+      "file_line": "certificates/degree25_exact/COEFFICIENT_MODEL.md:1,56",
+      "exact_text": "Executable characteristic-zero coefficient model; entrywise Q-RREF fails holdouts",
+      "issue": "Title suggests installed char-0 expansion; body is multiprime circuit lattice.",
+      "repair": "Clarify multiprime/circuit scope in title.",
+      "exit_impact": "wording only if exit means executable circuit"
+    },
+    {
+      "id": "F8",
+      "markers": [
+        "C0-UNDECIDED"
+      ],
+      "verdict": "UNSUPPORTED",
+      "severity": "low",
+      "known_residual": true,
+      "director_correction": "certificates/fano_interface_c0/DIRECTOR_CORRECTION_C0.md",
+      "file_line": "certificates/fano_interface_c0/C0_STRUCTURE_TABLE.md:55-56",
+      "exact_text": "110 subgroups of order 12, all StructureDescription = A4",
+      "issue": "True split is 55 A4 + 55 D12; orbit degrees 55,60,132 gcd 1 still sound.",
+      "repair": "Overlay correction already present.",
+      "exit_impact": "none"
+    }
+  ],
+  "marker_verdicts": {
+    "T9-HENSEL-NONUNIT-SEALED": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Deflated Hensel + analytic nonunit; gates and detJ4 recomputed."
+    },
+    "T8-S1-NONUNIT-ANALYTIC": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Consumed via T9 Q_p point with unit gates."
+    },
+    "T-BRANCH-NONNORMAL": {
+      "verdict": "UNSUPPORTED",
+      "severity": "critical",
+      "finding_ids": [
+        "F1"
+      ],
+      "note": "CAS does not seal ordinary-node completed form; analytic work-order claim only."
+    },
+    "T10-BINODAL-NO-3-DEFECT": {
+      "verdict": "UNCITED-HYPOTHESIS",
+      "severity": "high",
+      "finding_ids": [
+        "F1",
+        "F2"
+      ],
+      "note": "Algebra sound conditional on ordinary node; verifier is pure algebra."
+    },
+    "T10-FOLD-UNDECIDED": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Ten-pair modular discovery; exact fibre not sealed; S_G only."
+    },
+    "T8-S1-UNDECIDED": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "finding_ids": [
+        "F4"
+      ],
+      "note": "Exit correct; sealed Jacobian sentence residual."
+    },
+    "T8-N1-UNDECIDED": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Honest floors; normal crossing modular only."
+    },
+    "T2R4-PASS": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Saturation factors executable; Res=H*G modular+eval."
+    },
+    "S_2": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "CI + localization on D(G Sigma) only."
+    },
+    "dim_Sing_S_G_le_2": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Upper bound via PIT; lower bound not proved."
+    },
+    "P25Y-DVR-PASS": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "finding_ids": [
+        "F5"
+      ],
+      "note": "Unit-pivot freeness supported; Molien label drift on Arr/V25."
+    },
+    "P25Z-ROW-RANK-746": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Exact at F_89 only; verifier recomputes unisolvence and rank."
+    },
+    "P25W-RANK-K-UNDECIDED": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Modular ranks 746 at three primes; rank_K not sealed."
+    },
+    "P25Z-FINITE-PRESENTATION-LOWER": {
+      "verdict": "SCOPE-DRIFT",
+      "severity": "high",
+      "finding_ids": [
+        "F3"
+      ],
+      "note": "Work-order name correct; sealed packet still non-LOWER iso claim."
+    },
+    "P25YB-UNDECIDED": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "finding_ids": [
+        "F6"
+      ],
+      "note": "Support undecided honest; rank-currency stale."
+    },
+    "P25X0-PASS": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "finding_ids": [
+        "F7"
+      ],
+      "note": "Multiprime/circuit install; not entrywise K matrix."
+    },
+    "P25X1-FAIL": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Equivalence to 842/border not closed."
+    },
+    "C0-UNDECIDED": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "finding_ids": [
+        "F8"
+      ],
+      "note": "Exit correct; A4-only residual."
+    },
+    "C1-UNDECIDED": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Preflight only; no Fano point."
+    },
+    "C2-TWO-GENERATORS-MODULAR": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Unit dets modular only; correctly named."
+    },
+    "C2-1-UNDECIDED": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Partial Q-constants; degree floor >=5."
+    },
+    "MOLIEN_m75_2343": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "finding_ids": [
+        "F6"
+      ],
+      "note": "m_75 recomputed; stale 746 lower-bound language only."
+    },
+    "MOLIEN_c25_189": {
+      "verdict": "SOUND",
+      "severity": "info",
+      "note": "Self-covariant Molien matches M_25."
+    }
+  },
+  "intended_commit_split": [
+    "certificates/audit_a1/  # AUDIT-A1-COMPLETE findings only"
+  ],
+  "process": {
+    "computation": "none",
+    "narrative_edits": "none",
+    "git": "not run",
+    "write_paths": [
+      "certificates/audit_a1/",
+      "tmp/audit_a1/"
+    ]
+  }
+}
