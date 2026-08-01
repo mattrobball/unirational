@@ -1,12 +1,14 @@
 # Problem E all-out goal-mode packets — 2026-08-01
 
-**Repository:** `mattrobball/unirational`  
-**Pinned mathematical baseline:** `715faf441289e2589b9325311b6613ea0331bf88`  
+**Repository:** `mattrobball/unirational`
+**Pinned mathematical baseline:** `715faf441289e2589b9325311b6613ea0331bf88`
 **Headline at dispatch:** **OPEN**
 
 This directory now contains an all-out portfolio rather than a four-worker shortlist. Each file is a self-contained goal-mode assignment with an exact theorem boundary, valid headline bridges, scoped exits, stopping rules, and an isolated output directory.
 
 Every worker must compare the live repository head with the pinned mathematical baseline before starting, absorb later path-scoped commits relevant to its route, and never overwrite another worker's `goal_runs/` directory.
+
+Every worker must be MINDFUL of workspace hygiene and resource usage. Waiting for resources to free is ok. Clobbering is not.
 
 ## Complete route portfolio
 

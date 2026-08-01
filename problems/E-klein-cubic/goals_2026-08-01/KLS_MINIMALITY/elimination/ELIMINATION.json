@@ -1,0 +1,70 @@
+{
+  "schema": "kls-elimination-ledger-v1",
+  "as_of": "2026-08-01",
+  "headline": "OPEN",
+  "exit": "KLS-NO-THEOREM",
+  "records": [
+    {
+      "id": "GLOBAL_IMAGE_INTERFACE",
+      "result": "PASS",
+      "claim": "Every KLS solution has an invariant unirational hypersurface image; canonical or divisor-clean image is the Klein cubic.",
+      "replay": "/opt/homebrew/bin/python3 -u tmp/kls_global_foliation_theorem/verify.py",
+      "observed_terminal": "STRICT NONVERDICT singular/noncanonical KLS image branch remains open"
+    },
+    {
+      "id": "QUARTIC_PRECOMPOSITION",
+      "result": "PASS_NONVERDICT",
+      "claim": "Finite quartic precomposition multiplies primitive saturated degree by four and conditionally yields unbounded KLS degrees.",
+      "replay": "/opt/homebrew/bin/python3 -u tmp/kls_structural_successor/verify.py",
+      "observed_terminal": "STRICT NONVERDICT no KLS solution or universal nonvanishing is proved"
+    },
+    {
+      "id": "MINIMAL_CONTRACTION",
+      "result": "OPEN",
+      "claim": "Only d<=2m is proved; the minimal contraction lemma is absent.",
+      "replay": "/opt/homebrew/bin/python3 -u tmp/kls_minimal_contraction_attack/verify.py",
+      "observed_terminal": "STRICT NONVERDICT minimal contraction and Klein unirationality remain open"
+    },
+    {
+      "id": "ACTUAL_CONDUCTOR_IDENTITY",
+      "result": "PASS_LOCAL",
+      "claim": "a=epsilon*(c+mu), beta=(epsilon-1)+epsilon*mu for a source divisor dominating a conductor prime.",
+      "replays": [
+        "/opt/homebrew/bin/python3 -u tmp/kls_actual_conductor_geometry/verify.py",
+        "/opt/homebrew/bin/python3 -u tmp/kls_actual_conductor_geometry_audit/verify.py"
+      ],
+      "observed_terminals": [
+        "KLS_ACTUAL_CONDUCTOR_GEOMETRY_EXACT",
+        "KLS_ACTUAL_CONDUCTOR_GEOMETRY_AUDIT_ACCEPTED"
+      ]
+    },
+    {
+      "id": "SQUAREFREE_PROPER_P22",
+      "result": "EMPTY_AT_STATED_SCOPE",
+      "claim": "P22 plus coprime squarefree codimension-two extras and no additional conductor support forces d<=9 and is excluded.",
+      "replays": [
+        "/opt/homebrew/bin/python3 -u tmp/kls_proper_multiple_structure/verify.py",
+        "/opt/homebrew/bin/python3 -u tmp/kls_proper_multiple_structure_audit/verify.py"
+      ],
+      "observed_terminals": [
+        "KLS_SQUAREFREE_PROPER_P22_BRANCH_EXCLUDED",
+        "KLS_PROPER_MULTIPLE_STRUCTURE_AUDIT_ACCEPT"
+      ]
+    },
+    {
+      "id": "DISCREPANCY_GATE",
+      "result": "COUNTERMODELS_PASS_HEADLINE_OPEN",
+      "claim": "lc can leave one reduced factor and a fixed plt conductor pair can have arbitrarily split source support.",
+      "replays": [
+        "/opt/homebrew/bin/python3 -u tmp/kls_discrepancy_next_gate/verify.py",
+        "/opt/homebrew/bin/python3 -u tmp/kls_discrepancy_next_gate_audit/verify.py"
+      ],
+      "observed_terminals": [
+        "KLS_DISCREPANCY_NEXT_GATE_EXACT",
+        "KLS_DISCREPANCY_NEXT_GATE_HOSTILE_AUDIT_ACCEPT"
+      ]
+    }
+  ],
+  "exhaustive_elimination": false,
+  "reason": "K1 supplies no finite classification theorem; CONFIGURATIONS.json records unbounded open families."
+}

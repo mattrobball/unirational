@@ -1,0 +1,42 @@
+{
+  "schema": "s19_scoped_closure_seal/v1",
+  "exit_code": "S19-NO-CURVE-SCOPED",
+  "terminal_marker": "S19_LITERAL_TARGET_BOTH_BRANCHES_EMPTY",
+  "headline": "OPEN",
+  "pinned_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "live_commit_consumed": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+  "produced_commit": null,
+  "produced_commit_note": "isolated uncommitted worktree packet; no repository metadata or sibling path modified",
+  "theorem": "For epsilon=0 and epsilon=1, the literal S19 locus satisfying both C subset X_F and the BR-SCHUR19-POS proper-intersection conditions is empty over every extension of F.",
+  "scope_note": "The ambient marked Hilbert loci without the contradictory containment clause remain undecided; no headline result is claimed.",
+  "deliverable_sha256": {
+    "WORK_SCOPE.md": "210d61a5585854203d6ddb61147559ca4c3490b7e208b9479175804871d0487e",
+    "STATUS.md": "49cd62241aab469410d14cb97105e8689ba6212e33e6e8a52ea28067a55da796",
+    "BRIDGE.md": "6f555b518a72998ec1e491bfb57a00c32cee3eb89943e191efffa686818aa882",
+    "HILBERT_COMPONENTS.md": "4a9d0857d980ff42b401e29169e2c73011e97f298b02c908c34ca1d966bb35ac",
+    "emptiness_certificate.json": "485e80fee2c4f341d561db81538809aa5de281b3bf40b08e6a4c6159944d466a",
+    "produce_certificate.py": "1ee59cabeae15a550a70dc88d5e6499934bbfd41072de5307875106895f6211c",
+    "verify.py": "27f7ab1ee4a349585e21d914ad34704f59d5e8bac0a630e1da28f26ef8542cc5",
+    "README.md": "fb020aa22ff86844dfbdfb2049489d4ab6f20f23eaa6eb757cc5de3ae9f70bfb"
+  },
+  "authoritative_source_sha256": {
+    "goals_2026-08-01/GOAL_S19_SCHUR_CURVE.md": "e3372fcf56d46d66fd2e818d966d7bff51f6828713c09cf424909919195cc44f",
+    "certificates/schur_degree19/IMPLICATION_AUDIT.md": "2c64e3ff0e917ec89afb2877cee39543b6a666773ef51176fd7bc8526596d6bf",
+    "certificates/schur_degree19/marked_hilbert.json": "161b61e7e94fc32fa1cb579cb7c50a8ecc304aae4e9a773afe5336adf1f09be0",
+    "certificates/schur_degree19/rao_resolutions.json": "dbca9a60622dece5dbb43ca2826538479a55b7cf2b511197a3d07588b34362b2"
+  },
+  "proof_paths": [
+    "geometrically integral containment directly contradicts bridge Q3",
+    "I_C + (f3) = I_C makes C intersection X equal C, contradicting bridge Q4"
+  ],
+  "covered_branches": [
+    "epsilon_0",
+    "epsilon_1"
+  ],
+  "replay": [
+    "python3 produce_certificate.py --check",
+    "python3 verify.py"
+  ],
+  "seal_self_hash": null,
+  "seal_self_hash_note": "SEAL.json is intentionally excluded from its own content-hash map"
+}

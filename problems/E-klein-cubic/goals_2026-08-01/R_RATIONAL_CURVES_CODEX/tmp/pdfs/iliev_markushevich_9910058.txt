@@ -1,0 +1,1250 @@
+                                                       THE ABEL–JACOBI MAP FOR
+                                                A CUBIC THREEFOLD AND PERIODS OF FANO
+
+
+
+
+arXiv:math/9910058v1 [math.AG] 11 Oct 1999
+                                                       THREEFOLDS OF DEGREE 14
+
+                                                                 A. ILIEV AND D. MARKUSHEVICH
+
+                                                    Abstract. The Abel–Jacobi maps of the families of elliptic quin-
+                                                    tics and rational quartics lying on a smooth cubic threefold are
+                                                    studied. It is proved that their generic fiber is the 5-dimensional
+                                                    projective space for quintics, and a smooth 3-dimensional variety
+                                                    birational to the cubic itself for quartics. The paper is a continua-
+                                                    tion of the recent work of Markushevich–Tikhomirov, who showed
+                                                    that the first Abel–Jacobi map factors through the moduli com-
+                                                    ponent of stable rank 2 vector bundles on the cubic threefold with
+                                                    Chern numbers c1 = 0, c2 = 2 obtained by Serre’s construction
+                                                    from elliptic quintics, and that the factorizing map from the mod-
+                                                    uli space to the intermediate Jacobian is étale. The above result
+                                                    implies that the degree of the étale map is 1, hence the moduli
+                                                    component of vector bundles is birational to the intermediate Ja-
+                                                    cobian. As an applicaton, it is shown that the generic fiber of
+                                                    the period map of Fano varieties of degree 14 is birational to the
+                                                    intermediate Jacobian of the associated cubic threefold.
+
+
+
+
+                                                                            Introduction
+                                                Clemens and Griffiths studied in [CG] the Abel–Jacobi map of the
+                                             family of lines on a cubic threefold X. They represented its interme-
+                                             diate Jacobian J 2 (X) as the Albanese variety Alb F (X) of the Fano
+                                             surface F (X) parametrizing lines on X and described its theta divisor.
+                                             From this description, they deduced the Torelli Theorem and the non-
+                                             rationality of X. Similar results were obtained by Tyurin [Tyu] and
+                                             Beauville [B].
+                                                One can easily understand the structure of the Abel–Jacobi maps
+                                             of some other familes of curves of low degree on X (conics, cubics or
+                                             elliptic quartics), in reducing the problem to the results of Clemens–
+                                             Griffiths and Tyurin. The first non trivial cases are those of rational
+                                             normal quartics and of elliptic normal quintics. We determine the fibers
+                                             of the Abel–Jacobi maps of these families of curves, in continuing the
+                                             work started in [MT].
+                                               1991 Mathematics Subject Classification. 14J30,14J60,14J45.
+                                                                                     1
+   Our result on elliptic quintics implies that the moduli space of in-
+stanton vector bundles of charge 2 on X has a component, birational
+to J 2 (X). We conjecture that the moduli space is irreducible, but the
+problem of irreducibility stays beyond the scope of the present article.
+As far as we know, this is the first example of a moduli space of vector
+bundles which is birational to an abelian variety, different from the
+Picard or Albanese variety of the base. The situation is also quite dif-
+ferent from the known cases where the base is P3 or the 3-dimensional
+quadric. In these cases, the instanton moduli space is irreducible and
+rational at least for small charges, see [Barth], [ES], [H], [LP], [OS].
+Remark, that for the cubic X, two is the smallest possible charge, but
+the moduli space is non-rational. There are no papers on the geometry
+of particular moduli spaces of vector bundles for other 3-dimensional
+Fano varieties (for some constructions of vector bundles on such vari-
+eties, see [G1], [G2], [B-MR1], [B-MR2],[SW], [AC]).
+   The authors of [MT] proved that the Abel–Jacobi map Φ of the
+family of elliptic quintics lying on a general cubic threefold X factors
+through a 5-dimensional moduli component MX of stable rank 2 vector
+bundles E on X with Chern numbers c1 = 0, c2 = 2. The factorizing
+map φ sends an elliptic quintic C ⊂ X to the vector bundle E obtained
+by Serre’s construction from C (see Sect. 2). The fiber φ−1 ([E]) is a 5-
+dimensional projective space in the Hilbert scheme Hilb5n X , and the map
+Ψ from the moduli space to the intermediate Jacobian J 2 (X), defined
+by Φ = Ψ ◦ φ, is étale on the open set representing (smooth) elliptic
+quintics which are not contained in a hyperplane (Theorem 2.1).
+   We improve the result of [MT] in showing that the degree of the
+above étale map is 1. Hence MX is birational to J 2 (X) and the generic
+fiber of Φ is just one copy of P5 (see Theorem 3.2 and Corollary 3.3).
+The behavior of the Abel–Jacobi map of elliptic quintics is thus quite
+similar to that of the Abel–Jacobi map of divisors on a curve, where
+all the fibers are projective spaces. But we prove that the situation is
+very different in the case of rational normal quartics, where the fiber
+of the Abel–Jacobi map is a non-rational 3-dimensional variety: it is
+birationally equivalent to the cubic X itself (Theorem 5.2).
+   The first new ingredient of our proofs, comparing to [MT], is another
+interpretation of the vector bundles E from MX . We represent the cubic
+X as a linear section of the Pfaffian cubic in P14 , parametrizing 6 × 6
+matrices M of rank 4, and realize E ∨ (−1) as the restriction of the kernel
+bundle M 7→ ker M ⊂ C6 (Theorem 2.2). The kernel bundle has been
+investigated by A. Adler in his Appendix to [AR]. We prove that it
+embeds X into the Grassmannian G = G(2, 6), and the quintics C ∈
+φ−1 ([E]) become the sections of X by the Schubert varieties σ11 (L) for
+                                     2
+all hyperplanes L ⊂ C6 . We deduce that for any line l ⊂ X, each fiber
+of φ contains precisely one pencil P1 of reducible curves of the form C ′ +l
+(Lemma 3.4). Next we use the techniques of Hartshorne–Hirschowitz
+[HH] for smoothing the curves of the type “a rational normal quartic
+plus one of its chords in X” (see Sect. 4) to show that there is a
+3-dimensional family of such curves in a generic fiber of φ and that
+the above pencil P1 for a generic l contains curves C ′ + l of this type
+(Lemma 4.3, Corollary 4.4).
+   The other main ingredient is the parametrization of J 2 (X) by min-
+imal sections of the 2-dimensional conic bundles of the form Y (C 2 ) =
+πl−1 (C 2 ), where πl : Blowupl (X)−→P2 is the conic bundle obtained by
+projecting X from a fixed line l, and C 2 is a generic conic in P2 (see
+Sect. 3). The standard Wirtinger approach [B] parametrizes J 2 (X)
+by reducible curves which are sums of components of reducible fibers
+of πl . Our approach, developed in [I] in a more general form, replaces
+the degree 10 sums of components of the reducible fibers of the sur-
+faces Y (C 2 ) by the irreducible curves which are sections of the pro-
+jection Y (C 2 )−→C 2 with a certain minimality condition. This gives a
+parametrization of J 2 (X) by a family of rational curves, each one of
+which is projected isomorphically onto some conic in P2 . It turns out,
+that these rational curves are normal quartics meeting l at two points.
+They form a unique pencil P1 in each fiber of the Abel–Jacobi map of
+rational normal quartics. Combining this with the above, we conclude
+that the curves of type C ′ + l form a unique pencil in each fiber of Φ,
+hence the fiber is one copy of P5 .
+   In conclusion, we provide a description of the moduli space of Fano
+varieties V14 as a birationally fibered space over the moduli space of
+cubic 3-folds with the intermediate Jacobian as a fiber (see Theorem
+5.8). The interplay between cubics and varieites V14 is exploited several
+times in the paper. We use the Fano–Iskovskikh birationality between
+X and V14 to prove Theorem 2.2 on kernel bundles, and the Tregub–
+Takeuchi one (see Sect. 1) to study the fiber of the Abel–Jacobi map
+of the family of rational quartics (Theorem 5.2) and the relation of this
+family to that of normal elliptic quintics (Proposition 5.6).
+  Acknowledgements. The second author acknowledges with pleasure
+the hospitality of the MPIM at Bonn, where he completed the work on
+the paper.
+
+        1. Birational isomorphisms between V3 and V14
+  There are two constructions of birational isomorphisms between a
+nonsingular cubic threefold V3 ∈ P4 and the Fano variety V14 of degree
+                                     3
+14 and of index 1, which is a nonsingular section of the Grassmannian
+G(2, 6) ∈ P14 by a linear subspace of codimension 5. The first one is
+that of Fano–Iskovskikh, and it gives a birational isomorphism whose
+indeterminacy locus in both varieties is an elliptic curve together with
+some 25 lines; the other is due to Tregub–Takeuchi, and its indeter-
+minacy locus is a rational quartic plus 16 lines on the side of V3 , and
+16 conics passing through one point on the side of V14 . We will sketch
+both of them.
+
+Theorem 1.1 (Fano–Iskovskikh). Let X = V3 be a smooth cubic three-
+fold. Then X contains a smooth projectively normal elliptic quin-
+tic curve. Let C be such a curve. Then C has exactly 25 bisecant
+lines li ⊂ X, i = 1, ..., 25, and there is a unique effective divisor
+M ∈| OX (5 − 3C) | on X, which is a reduced surface containing the li .
+The following assertions hold:
+   (i) The non-complete linear system | OX (7−4C) | defines a birational
+map ρ : X → V where V = V14 is a Fano 3-fold of index 1 and of degree
+14. Moreover ρ = σ ◦ κ ◦ τ where σ : X ′ → X is the blow-up of C,
+κ : X ′ → X + is a flop over the proper transforms li′ ⊂ X ′ of the li ,
+i = 1, ..., 25, and τ : X + → V is a blowdown of the proper transform
+M + ⊂ X + of M onto an elliptic quintic B ⊂ V . The map τ sends the
+transforms li+ ⊂ X + of li to the 25 secant lines mi ⊂ V , i = 1, ..., 25 of
+the curve B.
+   (ii) The inverse map ρ−1 is defined by the system | OV (3 − 4B) |.
+The exceptional divisor E ′ = σ −1 (C) ⊂ X ′ is the proper transform of
+the unique effective divisor N ∈| OV (2 − 3B) |.
+
+  For a proof , see [Isk1], [F], or [Isk-P], Ch. 4.
+
+Theorem 1.2 (Tregub–Takeuchi). Let X be a smooth cubic threefold.
+Then X contains a rational projectively normal quartic curve. Let Γ
+be such a curve. Then Γ has exactly 16 bisecant lines li ⊂ X, i =
+1, ..., 16,and there is a unique effective divisor M ∈| OX (3−2Γ) | on X,
+which is a reduced surface containing the li . The following assertions
+hold:
+   (i) The non-complete linear system | OX (8−5Γ) | defines a birational
+map χ : X → V where V is a Fano 3-fold of index 1 and of degree
+14. Moreover χ = σ ◦ κ ◦ τ , where σ : X ′ → X is the blowup of
+Γ, κ : X ′ → X + is a flop over the proper transforms li′ ⊂ X ′ of li ,
+i = 1, ..., 16, and τ : X + → V is a blowdown of the proper transform
+M + ⊂ X + of M to a point P ∈ V . The map τ sends the transforms
+li+ ⊂ X + of li to the 16 conics qi ⊂ V , i = 1, ..., 16 which pass through
+the point P .
+                                     4
+  (ii) The inverse map χ−1 is defined by the system | OV (2 − 5P ) |.
+The exceptional divisor E ′ = σ −1 (Γ) ⊂ X ′ is the proper transform of
+the unique effective divisor N ∈| OV (3 − 8P ) |.
+  (iii) For a generic point P on any nonsingular V14 , this linear system
+defines a birational isomorphism of type χ−1 .
+Proof. For (i), (ii), see [Tak], Theorem 3.1, and [Tre]. For (iii), see
+[Tak], Theorem 2.1, (iv). See also [Isk-P], Ch. 4.
+
+1.3. Geometric description. We will briefly describe the geometry
+of the first birational isomorphism between V3 and V14 following [P].
+   Let E be a 6-dimensional vector space over C. Fix a basis e0 , . . . , e5
+for E, then ei ∧ ej for 0 ≤ i < j ≤ 5 form a basis for the Plücker space
+of 2-spaces in E, or equivalently, of lines in P5 = P(E). With Plücker
+coordinates xij , the embedding of the Grassmannian G = G(2, E) in
+P14 = P(∧2 E) is precisely the locus of rank 2 skew symmetric 6 × 6
+matrices
+                      0     x01    x02    x03    x04 x05
+                                                          
+                   −x01     0     x12    x13    x14 x15 
+                   −x02 −x12       0     x23    x24 x25 
+                                                          
+            M =                                           .
+                   −x03 −x13 −x23         0     x34 x35 
+                   −x
+                        04 −x14 −x24 −x34         0    x45 
+                     −x05 −x15 −x25 −x35 −x45 0
+  There are two ways to associate to these data a 13-dimensional cubic.
+The Pfaffian cubic hypersurface Ξ ⊂ P14 is defined as the zero locus of
+the 6 × 6 Pfaffian of this matrix; it can be identified with the secant
+variety of G(2, E), or else, it is the locus where M has rank 4. The
+other way is to consider the dual variety Ξ′ = G∨ ⊂ P14∨ of G; it is also
+a cubic hypersurface, which is nothing other than the secant variety of
+the Grassmannian G′ = G(2, E ∨ ) ⊂ P(∧2 E ∨ ) = P14∨ .
+  As it is classically known, the generic cubic threefold X can be rep-
+resented as a section of the Pfaffian cubic by a linear subspace of codi-
+mension 10; see also a recent proof in [AR], Theorem 47.3. There are
+∞5 essentially different ways to do this. Beauville and Donagi [BD]
+have used this idea for introducing the symplectic structure on the
+Fano 4-fold (parametrizing lines) of a cubic 4-fold. In their case, only
+special cubics (a divisorial family) are sections of the Pfaffian cubic, so
+they introduced the symplectic structure on the Fano 4-folds of these
+special cubics, and obtained the existence of such a structure on the
+generic one by deformation arguments.
+  For any hyperplane section H ∩ G of G, we can      Pdefine rk H as the
+rank of the antisymmetric matrix (αij ), where          αij xij = 0 is the
+                                     5
+equation of H. So, rk H may take the values 2,4 or 6. If rk H = 6,
+then H ∩ G is nonsingular and for any p ∈ P5 = P(E), there is the
+unique hyperplane Lp ⊂ P5 = P(E), such that q ∈ H ∩ G, p ∈ lq ⇐⇒
+lq ⊂ Lp . Here lq denotes the line in P5 represented by q ∈ G. (This is
+a way to see that the base of the family of 3-dimensional planes on the
+7-fold H ∩ G is P5 .)
+   The rank of H is 4 if and only if H is tangent to G at exactly one
+point z, and in this case, the hyperplane Lp is not defined for any p ∈ lz :
+we have for such p the equivalence p ∈ lx ⇐⇒ x ∈ H. Following Puts,
+we call the line lz the center of H; it will be denoted cH .
+   In the third case, when rk H = 2, H ∩ G is singular along the whole
+Grassmannian subvariety G(2, 4) = G(2, EH ), where EH = ker(αij ) is
+of dimension 4. We have x ∈ H ⇐⇒ lx ∩ P(EH ) 6= ∅.
+   This description identifies the dual of G with Ξ′ = {H | rk H ≤ 4} =
+{H | Pf ((αij )) = 0, and its singular locus with {EH }rk H=2 = G(4, E).
+   Now, associate to any nonsingular V14 = G ∩ Λ, where Λ = H1 ∩
+H2 ∩ H3 ∩ H4 ∩ H5 , the cubic 3-fold V3 by the following rule:
+                     V14 = G ∩ Λ 7→ V3 = Ξ′ ∩ Λ∨ ,                      (1)
+where Λ∨ =< H1∨ , H2∨ , H3∨ , H4∨ , H5∨ >, Hi∨ denotes the orthogonal com-
+plement of Hi in P14∨ , and the angular brackets the linear span. One
+can prove that V3 is also nonsingular.
+   According to Fano, the lines lx represented by points x ∈ V14 sweep
+out an irreducible quartic hypersurface W , which Fano calls the quartic
+da Palatin. W coincides with the union of centers of all H ∈ V3 . One
+can see, that W is singular along the locus of foci p of Schubert pencils
+of lines on G
+                    σ43 (p, h) = {x ∈ G | p ∈ lx ⊂ h}
+which lie entirely in V14 , where h denotes a plane in P5 (depending on
+p). The pencils σ43 are exactly the lines on V14 , so Sing W is identified
+with the base of the family of lines on V14 , which is known to be a
+nonsingular curve of genus 26 for generic V14 (see, e. g. [M] for the
+study of the curve of lines on V14 , and Sections 50, 51 of [AR] for the
+study of Sing W without any connection to V14 ).
+  The construction of the birational isomorphism ηL : V14 99K V3 de-
+pends on the choice of a hyperplane L ⊂ P5 . Let
+  φ : V14 99K W ∩ L, x 7→ L ∩ lx , ψ : V3 99K W ∩ L, H ∨ 7→ L ∩ cH .
+These two maps are birational, and ηL is defined by
+                              ηL = ψ −1 ◦ φ.                            (2)
+                                     6
+   The locus, on which ηL is not an isomorphism, consists of points
+where either φ or ψ is not defined or is not one-to-one. The indetermi-
+nacy locus B of φ consists of all the points x such that lx ⊂ L, that is,
+B = G(2, L) ∩ H1 ∩ . . . ∩ H5 . For generic L, it is obviously a smooth
+elliptic quintic curve in V14 , and it is this curve that was denoted in
+Theorem 1.1 by the same symbol B. The indeterminacy locus of ψ is
+described in a similar way. We summarize the above in the following
+statement.
+
+Proposition 1.4. Any nonsingular variety V14 determines a unique
+nonsingular cubic V3 by the rule (1). Conversely, a generic cubic V3
+can be obtained in this way from ∞5 many varieties V14 .
+   For each pair (V14 , V3 ) related by (1), there is a family of birational
+maps ηL : V14 99K V3 , defined by (2) and parametrized by points of
+the dual projective space P5∨ , and the structure of ηL for generic L is
+described by Theorem 1.1.
+   The smooth elliptic quintic curve B (resp. C) of Theorem 1.1 is the
+locus of points x ∈ V14 such that lx ⊂ L (resp. H ∨ ∈ V3 such that
+cH ⊂ L).
+
+Definition 1.5. We will call two varieties V3 , V14 associated (to each
+other), if V3 can be obtained from V14 by the construction (1).
+
+1.6. Intermediate Jacobians of V3 , V14 . Both constructions of bi-
+rational isomorphisms give the isomorphism of the intermediate Ja-
+cobians of generic varieties V3 , V14 , associated to each other. This is
+completely obvious for the second construction: it gives a birational
+isomorphism, which is a composition of blowups and blowdowns with
+centers in nonsingular rational curves or points. According to [CG], a
+blowup σ : X̃−→X of a threefold X with a nonsingular center Z can
+change its intermediate Jacobian only in the case when Z is a curve
+of genus ≥ 1, and in this case J 2 (X̃) ≃ J 2 (X) × J(Z) as principally
+polarized abelian varieties, where J 2 (resp. J) stands for the interme-
+diate Jacobian of a threefold (resp. for the Jacobian of a curve). Thus,
+the Tregub–Takeuchi birational isomorphism does not change the in-
+termediate Jacobian. Similar argument works for the Fano–Iskovskikh
+construction. It factors through blowups and blowdowns with cen-
+ters in rational curves, and contains in its factorization exactly one
+blowup and one blowdown with nonrational centers, which are elliptic
+curves. So, we have J 2 (V3 ) × C ≃ J 2 (V14 ) × B for some elliptic curves
+C, B. According to Clemens–Griffiths, J 2 (V3 ) is irreducible for every
+nonsingular V3 , so we can simplify the above isomorphism to obtain
+                                     7
+J 2 (V3 ) ≃ J 2 (V14 ) (and we also obtain, as a by-product, the isomor-
+phism C ≃ B).
+Proposition 1.7. Let V = V14 , X = V3 be a pair of smooth Fano
+varieties related by either of the two birational isomorphisms of Fano–
+Iskovskikh or of Tregub–Takeuchi. Then J 2 (X) ≃ J 2 (V ), V, X are
+associated to each other and related by a birational isomorphism of the
+other type as well.
+Proof. The isomorphism of the intermediate Jacobians was proved in
+the previous paragraph. Let J 2 (V ′ ) = J 2 (V ′′ ) = J. By Clemens-
+Griffiths [CG] or Tyurin [Tyu], the global Torelli Theorem holds for
+smooth 3-dimensional cubics, so there exists the unique cubic threefold
+X such that J 2 (X) = J as p.p.a.v. Let X ′ and X ′′ be the unique cubics
+associated to V ′ and V ′′ . Since J 2 (X ′ ) = J 2 (V ′ ) = J = J 2 (V ′′ ) =
+J 2 (X ′′ ), then X ′ ≃ X ≃ X ′′ .
+   Let now V ′ and V ′′ be associated to the same cubic threefold X, and
+let J 2 (X) = J. Then by the above J 2 (V ′ ) = J 2 (X) = J 2 (V ′′ ).
+   Let X, V be related by, say, a Tregub–Takeuchi birational isomor-
+phism. By Proposition 1.4, V contains a smooth elliptiic quintic curve
+and admits a birational isomorphism of Fano–Iskovskikh type with
+some cubic X ′ . Then, as above, X ≃ X ′ by Global Torelli, and X,
+V are associated to each other by the definition of the Fano–Iskovskikh
+birational isomorphism. Conversely, if we start from the hypothesis
+that X, V are related by a Fano–Iskovskikh birational isomorphism,
+then the existence of a Tregub–Takeuchi one from V to some cubic
+X ′ is affirmed by Theorem 1.2, (iii). Hence, again by Global Torelli,
+X ≃ X ′ and we are done.
+
+
+     2. Abel–Jacobi map and vector bundles on a cubic
+                         threefold
+  Let X be a smooth cubic threefold. The authors of [MT] have as-
+sociated to every normal elliptic quintic curve C ⊂ X a stable rank
+2 vector bundle E = EC , unique up to isomorpfism. It is defined by
+Serre’s construction:
+                    0−→OX −→E(1)−→IC (2)−→0 ,                             (3)
+where IC = IC,X is the ideal sheaf of C in X. Since the class of C
+modulo algebraic equivalence is 5l, where l is the class of a line, the
+sequence (3) implies that c1 (E) = 0, c2 (E) = 2l. One sees immediately
+from (3) that det E is trivial, and hence E is self-dual as soon as it is a
+                                      8
+vector bundle (that is, E ∨ ≃ E). See [MT, Sect. 2] for further details
+on this construction.
+  Let H∗ ⊂ Hilb5nX be the open set of the Hilbert scheme parametrizing
+normal elliptic quintic curves in X, and M ⊂ MX (2; 0, 2) the open
+subset in the moduli space of vector bundles on X parametrizing those
+stable rank 2 vector bundles which arise via Serre’s construction from
+normal elliptic quintic curves. Let φ∗ : H∗ −→M be the natural map.
+For any reference curve C0 of degree 5 in X, let Φ∗ : H∗ −→J 2 (X),
+[C] 7→ [C − C0 ], be the Abel–Jacobi map. The following result is
+proved in [MT].
+Theorem 2.1. H∗ and M are smooth of dimensions 10 and 5 respec-
+tively. They are also irreducible for generic X. There exist a bigger
+open subset H ⊂ Hilb5n                                        5n
+                        X in the nonsingular locus of HilbX containing
+   ∗                                          ∗   ∗
+H as a dense subset and extensions of φ , Φ to morphisms φ, Φ re-
+spectively, defined on the whole of H, such that the following properties
+are verified:
+   (i) φ is a locally trivial fiber bundle in the étale topology with fiber
+P5 . For every [E] ∈ M, we have h0 (E(1)) = 6, and φ−1 ([E]) ⊂ H is
+nothing but the P5 of zero loci of all the sections of E(1).
+   (ii) The fibers of Φ are finite unions of those of φ, and the map
+Ψ : M−→J 2 (X) in the natural factorization Φ = Ψ ◦ φ is a quasi-finite
+étale morphism.
+   Now, we will give another interpretation of the vector bundles EC .
+Let us represent the cubic X = V3 as a section of the Pfaffian cubic
+Ξ′ ⊂ P14 and keep the notation of 1.3. Let K be the kernel bundle on
+         ∨
+
+
+X whose fiber at M ∈ X is ker H. Thus K is a rank 2 vector subbundle
+of the trivial rank 6 vector bundle EX = E ⊗C OX . Let i : X−→P14 be
+the composition Pl ◦ Cl, where Cl : X−→G(2, E) is the classifying map
+of K ⊂ EX , and Pl : G(2, E) ֒→ P(∧2 E) = P14 the Plücker embedding.
+Theorem 2.2. For any vector bundle E obtained by Serre’s construc-
+tion starting from a normal elliptic quintic C ⊂ X, there exists a rep-
+resentation of X as a linear section of Ξ′ such that E(1) ≃ K∨ and all
+the global sections of E(1) are the images of the constant sections of EX
+                                                                        ∨
+
+
+via the natural map EX −→K . For generic X, E, such a representation
+                        ∨      ∨
+
+
+is unique modulo the action of P GL(6) and the map i can be identified
+with the restriction v2 |X of the Veronese embedding v2 : P4 −→P14 of
+degree 2.
+Proof. Let C ⊂ X be a normal elliptic quintic. By Theorem 1.1, there
+exists a V14 = G ∩ Λ together with a birational isomorphism X 99K V14 .
+Proposition 1.7 implies that X and V14 are associated to each other.
+                                     9
+By Proposition 1.4, we have C = {H ∨ ∈ X | cH ⊂ L} = Cl−1 (σ11 (L)),
+where σ11 (L) denotes the Schubert variety in G parametrizing the lines
+c ⊂ P(E) contained in L. It is standard that σ11 (L) is the scheme of
+zeros of a section of the dualized universal rank 2 vector bundle S ∨ on
+G. Hence C is the scheme of zeros of a section of K∨ = Cl∗ (S ∨ ). Hence
+K∨ can be obtained by Serre’s construction from C, and by uniqueness,
+K∨ ≃ EC (1).
+   By Lemma 2.1, c) of [MT], h0 (EC (1)) = 6, so, to prove the assertion
+about global sections, it is enough to show the injectivity of the natural
+map E ∨ = H 0 (EX  ∨
+                     )−→H 0 (K∨ ). The latter is obvious, because the
+quartic da Palatini is not contained in a hyperplane. Thus we have
+E ∨ = H 0(K∨ ).
+   For the identification of i with v2 |X , it is sufficient to show that
+i is defined by the sections of O(2) in the image of the map ev :
+Λ2 H 0 (E(1))−→H 0 (det(E(1))) = H 0 (O(2)) and that ev is an isomor-
+phism. This is proved in the next lemmas. The uniqueness modulo
+P GL(6) is proved in Lemma 2.7.
+
+
+Lemma 2.3. Let Pf 2 : P14 99K P14 be the Pfaffian map, sending a
+skew-symmetric 6 × 6 matrix M to the collection of its 15 quadratic
+Pfaffians. Then Pf 22 = idP14 , the restriction of Pf 2 to P14 \ Ξ is an
+isomorphism onto P14 \ G, and i = Pf 2 |X .
+  Thus Pf 2 is an example of a Cremona quadratic transformation. Such
+transformations were studied in [E-SB].
+Proof. Let (ei ), (ǫi ) be dual bases of E, E ∨ respectively, and (eij =
+                                                  2     2 ∨
+ei ∧ ej ), (ǫij ) the corresponding basesP of ∧ E, ∧ E . Identify M in the
+source of Pf 2 with a 2-form M =            aij ǫij . Then Pf 2 can be given by
+                                1
+the formula Pf 2 (M) = 2!4! M ∧ M e123456 , where e123456 = e1 ∧ . . . ∧ e6 ,
+and stands for the contraction of tensors. Notice that Pf 2 sends 2-
+forms of rank 6,4, resp. 2 to bivectors of rank 6,2, resp. 0. Hence Pf 2
+is not defined on G′ and contracts Ξ′ \ G′ into G. In fact, the Pfaffians
+of a 2-form M of rank 4 are exactly the Plücker coordinates of ker M,
+which implies i = Pf 2 |X .
+   In order to iterate Pf 2 , we have to identify its source P(∧2 E ∨ ) with
+its target P(∧2 E).   P We do it in using the above bases: ǫij 7→ eij . Let
+           2
+N = Pf 2 (M) =          bij ǫij . Then each matrix element bij = bij (M) is a
+polynomial of degree 4 in (akl ), vanishing on Ξ′ . Hence it is divisible
+by the equation of Ξ′ , which is the cubic Pfaffian Pf(M). We can
+write bij = b̃ij Pf(M), where b̃ij are some linear forms in (akl ). Testing
+them on a collection of simple matrices with only one variable matrix
+                                      10
+element, we find the answer: Pf 2 (M) = Pf(M)M. Hence Pf 2 is a
+birational involution.
+
+Lemma 2.4. Let l ⊂ V3 be a line. Then i(l) is a conic in P14 , and
+the lines of P5 parametrized by the points of i(l) sweep out a quadric
+surface of rank 3 or 4.
+Proof. The restriction of Cl to the lines in V3 is written out in [AR] on
+pages 170 (for a non-jumping line of K, formula (49.5)) and 171 (for a
+jumping line). These formulas imply the assertion; in fact, the quadric
+surface has rank 4 for a non-jumping line, and rank 3 for a jumping
+one.
+
+Lemma 2.5. The map i is injective.
+Proof. Let Ξ̃ be the natural desingularization of Ξ′ parametrizing pairs
+(M, l), where M is a skew-symmetric 6 × 6 matrix and l is a line in the
+projectivized kernel of M. We have Ξ̃ = P(∧2 (EX /S)), where S is the
+tautological rank 2 vector bundle on G = G(2, 6). Ξ̃ has two natural
+projections p : Ξ̃−→G ⊂ P14 and q : Ξ̃−→Ξ′ ⊂ P14∨ . The classifying
+map of K is just Cl = pq −1 . q is isomorphic over the alternating forms
+of rank 4, so q −1 (V3 ) ≃ V3 . p is at least bijective on q −1 (V3 ). In fact, it
+is easy to see that the fibers of p can only be linear subspaces of P14 .
+Indeed, the fiber of p is nothing but the family of matrices M whose
+kernel contains a fixed plane, hence it is a linear subspace P5 of P14 ,
+                                                                                ∨
+
+
+and the fibers of p|q−1 (V3 ) are P5 ∩ V3 . As V3 does not contain planes,
+the only possible fibers are points or lines. By the previous lemma,
+they can be only points, so i is injective.
+
+Lemma 2.6. i is defined by the image of the map ev : Λ2 H 0 (E(1)) −→
+H 0 (det(E(1))) = H 0 (O(2)) considered as a linear subsystem of |O(2)|.
+Proof. Let (xi = ǫi ) be the coordinate functions on E, dual to the
+basis (ei ). The xi can be considered as sections of K∨ . Then xi ∧ xj
+can be considered either as an element xij of ∧2 E ∨ = ∧2 H 0 (K∨ ), or
+as a section sij of ∧2 K∨ . For a point x ∈ V3 , the Plücker coordinates
+of the corresponding plane Kx ⊂ E are xij (ν) for a non zero bivector
+ν ∈ ∧2 Kx . By construction, this is the same as sij (x)(ν). This proves
+the assertion.
+
+
+Lemma 2.7. Let X ˜   −→Ξ′ ∩ Λ1 , X ˜−→Ξ′ ∩ Λ2 be two representations of
+                         ′
+X as linear sections of Ξ , K1 , K2 the corresponding kernel bundles on
+X. Assume that K1 ≃ K2 . Then there exists a linear transformation
+                                       11
+A ∈ GL(E ∨ ) = GL6 such that Ξ′ ∩ ∧2 A(Λ1 ) and Ξ′ ∩ Λ2 have the same
+image under the classifying maps into G. The family of linear sections
+Ξ′ ∩ Λ of the Pfaffian cubic with the same image in G is a rationally
+1-connected subvariety of G(5, 15), generically of dimension 0.
+
+Proof. The representations X ˜  −→Ξ′ ∩ Λ1 , X ˜
+                                              −→Ξ′ ∩ Λ2 define two iso-
+morphisms f1 : E ∨ −→H 0 (K1 ), f2 : E ∨ −→H 0 (K2 ). Identifying K1 , K2 ,
+define A = f2−1 ◦ f1 .
+    Assume that Λ = ∧2 A(Λ1 ) 6= Λ2 . Then the two 3-dimensional cubics
+Ξ ∩ Λ and Ξ′ ∩ Λ2 are isomorphic by virtue of the map f = f2 ◦
+  ′
+
+f1−1 ◦ (∧2 A)−1 . By construction, we have ker M = ker f (M) for any
+M ∈ Ξ′ ∩ Λ. Hence Ξ′ ∩ Λ and Ξ′ ∩ Λ2 represent two cross-sections of
+the map pq −1 defined in the proof of Lemma 2.5 over their common
+image Y = pq −1 (Ξ′ ∩ Λ) = pq −1 (Ξ′ ∩ Λ2 ), and f is a morphism over
+Y . These cross-sections do not meet the indeterminacy locus G′ ⊂ Ξ′
+of pq −1 , because it is at the same time the singular locus of Ξ′ and
+both 3-dimensional cubics are nonsingular. The fibers of pq −1 being
+linear subspaces of P14 , the generic element of a linear pencil Xλ:µ =
+                         ∨
+
+
+Ξ ∩ (λΛ + µΛ2 ) represents also a cross-section of pq −1 that does not
+  ′
+
+meet G′ . So there is a one-dimensional family of representations of X
+as a linear section of the Pfaffian cubic which are not equivalent under
+the action of P GL(6) but induce the same vector bundle K. This
+family joins Ξ′ ∩ Λ and Ξ′ ∩ Λ2 and its base is an open subset of P1 .
+This cannot happen for generic X, E, because both the family of vector
+bundles E and that of representations of X as a linear section of Ξ′ are
+5 dimensional for generic X (Theorem 2.1 and Proposition 1.4).
+
+
+
+
+Lemma 2.8. For a generic 3-dimensional linear section V3 of Ξ′ , the
+15 quadratic Pfaffians of M ∈ V3 are linearly independent in |OV3 (2)|.
+
+  The authors of [IR] solve a similar problem: they describe the struc-
+ture of the restriction of Pf 2 to a 4-dimensional linear section of the
+Pfaffian cubic.
+
+
+Proof. It is sufficient to verify this property for a special V3 . Take
+Klein’s cubic
+
+                   v 2 w + w 2 x + x2 y + y 2 z + z 2 v = 0.
+                                      12
+Adler ([AR], Lemma (47.2)) gives the representation of this cubic as
+the Pfaffian of the following matrix:
+                          0   v    w  x   y    z
+                                                 
+                       −v 0       0  z −x 0 
+                       −w 0       0  0   v −y 
+                                                 
+                M =                              .
+                       −x −z 0       0   0    w 
+                       −y x −v 0         0    0 
+                         −z 0      y −w 0      0
+  Its quadratic Pfaffians are given by
+                 cij = (−1)i+j+1(apq ars − apr aqs + aps aqr ),
+where p < q < r < s, (pqrsij) is a permutation of (123456), and
+(−1)i+j+1 is nothing but its sign. A direct computation shows that the
+15 quadratic Pfaffians are linearly independent.
+  This ends the proof of Theorem 2.2.
+
+     3. Minimal sections of 2-dimensional conic bundle
+   Let X be a generic cubic threefold. To prove the irreducibility of the
+fibers of the Abel-Jacobi map Φ of Theorem 2.1, we will use other Abel–
+Jacobi maps. Let us fix a line l0 in X, and denote by Φd,g the Abel–
+Jacobi map of the family Hd,g of curves of degree d and of arithmetic
+genus g in X having dl0 as reference curve. The precise domain of
+definition of Φd,g will be specified in the context in each particular
+case. So, Φ5,1 will be exactly the above map Φ defined on H.
+   We will provide a description of Φ4,0 , obtained by an application of
+the techiniques of [I]. This map is defined on the family of normal
+rational quartics in X. For completeness, we will mention a similar
+description of Φ3,0 , the Abel–Jacobi map of twisted rational cubics in
+X. As was proved in [MT], these families of curves are irreducible for
+a generic X.
+   Let L0 ⊂ X be a generic line, p : X̃−→P2 the projection from
+L0 , giving to X̃ = BlowupL0 (X) a structure of a conic bundle. Let
+C ⊂ P2 be a generic conic, then Y = p−1 (C) is a 2-dimensional conic
+bundle, and pY = p|Y : Y −→C is the conic bundle structure map. It
+is well known (see [B]), that the discriminant curve ∆ ⊂ P2 of p is a
+smooth quintic, and the components of the reducible conics P1 ∨P1 over
+points of ∆ are parametrized by a non-ramified two-sheeted covering
+     ˜
+π : ∆−→∆.            As C is generic, there are 10 distinct points in ∆ ∩ C,
+giving us 10 pairs of lines {l1 ∪ l1′ ∪ . . . ∪ l10 ∪ l10
+                                                       ′
+                                                          } = p−1 (∆ ∩ C). We will
+identify the components l of reducible fibers of p with points of ˜         ∆, so
+            ′                  ′       −1         ˜
+that {l1 , l1 , . . . , l10 , l10 } = π (∆ ∩ C) ⊂ ∆. Let pα : Yα −→C be any of
+                                       13
+the 210 ruled surfaces obtained by contracting the li′ with i ∈ α and the
+lj with j 6∈ α, where α runs over the subsets of {1, 2, . . . , 10}. Then
+the Yα are divided into two classes: even and odd surfaces, according
+to the parity of the integer n ≥ 0 such that Yα ≃ Fn = P(OP1 ⊕
+OP1 (−n)). Remark, that the surfaces Yα are in a natural one-to-one
+correspondence with effective divisors D of degree 10 on ∆    ˜ such that
+π∗ D = ∆ ∩ C. The 10 points of such a divisor correspond to lines
+(li or li′ ) which are not contracted by the map Y −→Yα . For a surface
+Yα , associated to an effective divisor D of degree 10, we will use the
+alternative notation YD .
+   The next theorem is a particular case of the result of [I].
+
+Theorem 3.1. Let X be a generic cubic threefold, C ∈ P2 a generic
+conic. Then, in the above notation, the following assertions hold:
+  (i) There are only two isomorphism classes of surfaces among the
+Yα : Yodd ≃ F1 and Yeven ≃ F0 ≃ P1 × P1 .
+  (ii) The family C− of the proper transforms in X of (−1)-curves in
+each one of the odd surfaces Yα ≃ F1 over all sufficiently generic conics
+C ⊂ P2 is identified with a dense open subset in the family of twisted
+rational cubic curves C 3 ∈ X meeting L0 at one point.
+  (iii) Let Φ3,0 be the Abel–Jacobi map of the family of rational twisted
+cubics. Let Φ− = Φ3 |C− be its restriction. Then Φ− is onto an open
+subset of the theta divisor of J 2 (X). For generic C 3 ∈ C− , which is a
+proper transform of the (−1)-curve in the ruled surface Yα associated
+to an effective divisor Dα of degree 10 on ∆,˜ the fiber Φ−1       3
+                                                           − Φ− (C ) can
+                                        1
+be identified with an open subset of P = |Dα | by the following rule:
+                        the proper transform in X of the (−1)-curve in
+        D ∈ |Dα | 7→
+                        YD if YD ≃ F1
+
+   (iv) Let C+ be the family of the proper transforms in X of the curves
+in the second ruling on any one of the even surfaces Yα ≃ P1 × P1 for
+all sufficiently generic conics C; the second ruling means the one which
+is different from that consisting of fibers of πα . Then C+ is identified
+with a dense open subset in the family of normal rational quartic curves
+C 4 ∈ X meeting L0 at two points.
+   (v) Let Φ4,0 be the Abel–Jacobi map of the family of rational normal
+quartics. Let Φ+ = Φ4,0 |C+ be its restriction. Then Φ+ is onto an open
+subset of J 2 (X). For generic C 4 ∈ C+ which is the proper transform
+of a curve on the ruled surface Yα associated to an effective divisor Dα
+of degree 10 on ∆, ˜ where dim |Dα | = 0 and the fiber Φ−1       4
+                                                         + Φ+ (C ) ≃ P
+                                                                        1
+
+consists of the proper transforms of all the curves of the second ruling
+on Yα .
+                                     14
+   The irreducibility of Φ−1       4
+                          + Φ+ (C ) in the above statement is an essen-
+tial ingredient of the proof of the following theorem, which is the main
+result of the paper.
+Theorem 3.2. Let X be a nonsingular cubic threefold. Then the de-
+gree of the étale map Ψ from Theorem 2.1 is 1. Equivalently, all the
+fibers of the Abel–Jacobi map Φ are isomorphic to P5 .
+  This obviously implies:
+Corollary 3.3. The open set M ⊂ MX (2; 0, 2) in the moduli space of
+vector bundles on X parametrizing those stable rank 2 vector bundles
+which arise via Serre’s construction from normal elliptic quintics is
+isomorphic to an open subset in the intermediate Jacobian of X.
+  We will start by the following lemma.
+Lemma 3.4. Let X be a generic cubic threefold. Let z ∈ J 2 (X) be a
+generic point, Hi (z) ≃ P5 any component of Φ−1 (z). Then, for any
+line l ⊂ X3 , the family
+   Hl;i (z) := {C ∈ Hi (z) : C = l + C ′ , where C ′ is a curve of degree 4 }
+is isomorphic to P1 .
+Proof. By Theorem 2.1, the curve C represented by the generic point
+of Hi (z) is a (smooth) normal elliptic quintic. Let E = EC be the
+associated vector bundle, represented by the point φ([C]) ∈ M. Choose
+any representation of X as a linear section of the Pfaffian cubic Ξ′ as
+in Theorem 2.2, so that E(1) ≃ K∨ . The projective space Hi (z) is
+naturally identified with P5∨ = P(E ∨ ). This follows from the proof of
+Theorem 2.2. Indeed, the curves C represented by points of Hi (z) are
+exactly the zero loci of the sections of E(1), and the latter are induced
+by linear forms on E via the natural surjection EX −→K∨ . The zero
+loci of these sections are of the form Cl−1 (σ11 (L)), where L ∈ P5∨ runs
+over all the hyperplanes in P5 .
+   Let l be a line in X. By Lemma 2.4, the quadratic pencil of lines
+with base Cl(l) sweeps out a quadric surface Q(l) of rank 3 or 4. Let
+< Q(l) >≃ P3 be the linear span of Q(l) in P5 . Then l is a component
+of Cl−1 (σ11 (L)) if and only if < Q(l) >⊂ L. Such hyperplanes L form
+the pencil < Q(l) >∨ ≃ P1 in P5∨ . Obviously, the pencil {Cl−1 (σ11 (L)) |
+L ∈< Q(l) >∨ } contains exactly all the curves, represented by points of
+Hi (z) and having l as an irreducible component.
+   Now our aim is to show that the generic member of Hl;i (z) is a
+rational normal quartic having l as one of its chords. Then we will
+be able to apply the description of such curves given by Theorem 3.1,
+(iv), (v).
+                                     15
+                         4. Smoothing C ′ + l
+   Let X be a nonsingular cubic threefold, C = C ′ + l ⊂ X a ra-
+tional normal quartic plus one of its chords. Then one can apply
+Serre’s construction (3) to C to obtain a self-dual rank 2 vector bun-
+dle E = EC in MX (2; 0, 2) like it was done in [MT] for a nonsingular
+C. One proves directly that E possesses all the essential properties of
+the vector bundles constructed from normal elliptic quintics. First of
+all, our C is a locally complete intersection in X with trivial canonical
+sheaf ωC , and this implies (see the proofs of Lemma 2.1 and Corollary
+2.2 in loc. cit.) that Ext1 (IC (2), OX ) ≃ H 0 (C, ωC ) ≃ C and that
+Ext1OX (IC (2), OX ) = Ext2OX (OC , ωX ) = ωC , so that E is uniquely de-
+termined up to isomorphism and is locally free. One can also easily
+show that h0 (IC (1)) = h1 (IC (1)) = h2 (IC (1)) = 0, and this implies
+(see the proofs of Corollary 2.4, Proposition 2.6 and Lemma 2.8 in loc.
+cit.) the stability of E and the fact that the zero loci of nonproportional
+sections of E(1) are distinct complete intersection linearly normal quin-
+tic curves. Further, remark that h0 (IC (2)) = 5 (the basis of H 0(IC (2))
+is given in appropriate coordinates in (9) below); the restriction exact
+sequence
+                  0−→IC (k)−→OX (k)−→OC (k)−→0                         (4)
+with k = 2 implies also hi (IC (2)) = 0 for i > 0. One deduces from here
+h0 (E(1)) = 6, hi (E(1)) = 0 for i > 0. Hence the sections of E define a
+P5 in Hilb5n
+           X.
+   We want to show that, generically, this P5 is of the form Hi (z), that
+is E has a section whose zero locus is a (smooth) normal elliptic quintic.
+First, we make a routine verification that C can be smoothed into a
+normal elliptic quintic, that is [C] ∈ Hilb5n                           ∗
+                                               X is in the closure of H .
+Afterwards, we will show that the smoothing can be effectuated inside
+the P5 of zero loci of sections of E. To this end, we will find an example
+of (X, E), in which the locus of the curves of type ‘normal rational
+quartic plus its chord’ inside the P5 has at least one 3-dimensional
+component. By a standard dimension count, this will imply that all
+the components of this locus are 3-dimensional for generic (X, E), and
+that the generic point of the P5 represents a nonsingular curve.
+Lemma 4.1. Let X be a nonsingular cubic threefold, C = C ′ + l ⊂ X
+a rational normal quartic plus one of its chords, E the vector bundle
+defined in 4. Then the following assertions are true:
+   (i) hi (E(−1)) = 0 ∀ i ∈ Z, hence E is an instanton vector bundle
+of charge 2. Further, h0 (E ⊗ E) = 1, h1 (E ⊗ E) = 5, h2 (E ⊗ E) =
+h3 (E ⊗ E) = 0, hence MX (2; 0, 2) is smooth of dimension 5 at [E].
+                                    16
+   ii) h0 (NC/X ) = 10, h1 (NC/X ) = 0, hence Hilb5n X is smooth of di-
+mension 10 in [C]. Moreover, if we assume that NC ′ /X 6≃ O ⊕ O(6)
+or Nl/X 6≃ O(−1) ⊕ O(1), then C is strongly smoothable and a suffi-
+ciently small deformation C−→U of C parametrizes curves of only the
+following three types: (a) for u in a dense open subset of U, Cu is a
+normal elliptic quintic; (b) over on open subset of a divisor ∆1 ⊂ U, Cu
+is a linearly normal rational curve with only one node as singularity;
+(c) over a closed subvariety of pure codimension 2 ∆2 ⊂ U, Cu is of
+the same type as C, that is a normal rational quartic plus one of its
+chords.
+Proof. As concerns the numerical values for the hi , the proof goes ex-
+actly as that of Lemma 2.7 in [MT] with only one modification: the au-
+thors used there the property of a normal elliptic quintic h0 (NC/P4 (−2))
+= 0, proved in Proposition V.2.1 of [Hu]. Here we should verify directly
+this property for our curve C = C ′ + l. This is an easy exercise: one
+can use the identifications of the normal bundles of C ′ , l
+                 NC ′ /P4 ≃ 3OP1 (6) ,        Nl/P4 ≃ 3OP1 (1)                 (5)
+and the three natural exact sequences
+         0−→NC/W −→NC/W |C ′ ⊕ NC/W |l −→NC/W ⊗ CS −→0,                        (6)
+
+                    0−→NC ′ /W −→NC/W |C ′ −→TS1 −→0,                          (7)
+
+                     0−→Nl/W −→NC/W |l −→TS1 −→0,                              (8)
+where S = {P1 , P2 } = C ′ ∩ l, CS = CP1 ⊕ CP2 is the sky-scraper sheaf
+with the only nonzero stalks at P1 , P2 equal to C, W = P4 , and TS1
+denotes Schlesinger’s T 1 of a singularity; we have TS1 ≃ CS for nodal
+curves.
+  The values of hi (E ⊗E) in (i) imply the stated properties of the moduli
+space, because E is self-dual, and so hi (E ⊗ E) = dim Exti (E, E).
+  For the remaining assertions of (ii), we will apply Theorem 4.1 of
+[HH] 1 . It states that if the elementary transformations of the normal
+bundles to C ′ , l satisfy H 1 (C ′ , elm+            1       −
+                                         Pi Nl/X ) = H (l, elmS NC ′ /X ) = 0,
+then C is strongly smoothable. In fact, by (5) and
+                  0−→NC ′ /X −→NC/P4 −→NX/P4 |C −→0 ,
+we see that NC ′ /X ≃ O(a) ⊕ O(b) with a + b = 6, 0 ≤ a ≤ b ≤ 6.
+By [CG], Nl/X ≃ 2O or O(−1) ⊕ O(1), so elm+   Pi Nl/X = O(−1) ⊕
+  1
+    Hartshorne–Hirschowitz formulated it for nodal curves in P3 , but the proof and
+the techniques of the paper remain valid if one replaces P3 by any nonsingular
+projective variety; see Remark 4.1.1 in [HH].
+                                         17
+O(2) or O ⊕ O(1). For C ′ , elm−     S NC ′ /X may be one of the sheaves
+O(a − 2) ⊕ O(b), O(a − 1) ⊕ O(b − 1), or O(a) ⊕ O(b − 2). So, the
+hypotheses of the theorem may be not verified only if a = 0, b = 6.
+In interchanging the roles of C ′ , l and assuming that Nl/X ≃ 2O, we
+can see that elm−  S Nl/X ≃ 2O(−1) or O ⊕ O(−2). The second case
+is impossible, because l and the tangent directions of C ′ at the points
+Pi are not coplanar, so the centers of the elementary transformation
+P̃i ∈ P(Nl/X |Pi ) ≃ P1 , corresponding to the directions of C ′ at Pi , do
+not lie on the same section of P(Nl/X ) = P1 × P1 .
+   Thus, in both cases the theorem can be applied, and we conclude that
+the natural maps δi : H 0 (NC/X )−→TP1i C = CPi are surjective. Hence
+the discriminant divisor ∆1 ⊂ U has locally analytically two nonsingu-
+lar branches with tangent spaces ker δi ⊂ H 0 (NC/X ) = T[C] Hilb5n
+                                                                  X , each
+unfolding only one of the two singular points of C, and their transversal
+intersection ∆2 parametrizes the deformations preserving the two sin-
+gular points. To conclude the proof, remark that the linear normality
+and pa (C) are preserved under small deformations.
+
+Lemma 4.2. Let X be a generic cubic threefold, C = C ′ + l ⊂ X
+a generic rational normal quartic plus one of its chords, E the vector
+bundle defined above. Let HE ⊂ Hilb5n          5
+                                     X be the P of zero loci of sections
+of E(1). Then the assumption of Lemma 4.1, (ii) for the normal bundle
+of l is verified and, moreover, dim ∆i ∩ HE = 5 − i for i = 1, 2. This
+implies that C ′ + l can be smoothed not only inside Hilb5nX , but also
+inside HE .
+Proof. We have to show that Nl/X ≃ 2O and that the natural map
+T[C] Hilb5n
+         X −→TS C
+                 1
+                       remains surjective when restricted to T[C] HE ⊂
+         5n
+T[C] HilbX . It suffices to do this only for one special cubic threefold X
+and for one special C, because both conditions are open. So, choose a
+curve C of type C ′ + l in P4 , then a cubic X passing through C. Take,
+for example, the closures of the following affine curves:
+C ′ = {x1 = t, x2 = t2 , x3 = t3 , x4 = t4 } , l = {x1 = x2 = x3 = 0} .
+The family of quadrics passing through C is 5-dimensional with gener-
+ators
+  Q1 = x2 − x21 , Q2 = x3 − x1 x2 , Q3 = x1 x3 − x22 ,
+                               Q4 = x1 x4 − x2 x3 , Q5 = x2 x4 − x23 . (9)
+The cubic hypersurface in P4 with equation
+                                               P
+                                                   αi (x)Qi is nonsingular
+for generic linear forms αi (x), so we can choose X to be of this form.
+We verified, in using the Macaulay program [BS], that the choice α1 =
+                                    18
+0, α2 = −1, α3 = x2 , α4 = −x1 , α5 = x4 yields a nonsingular X =
+{x1 x2 −x32 −x3 +2x1 x2 x3 −x21 x4 −x23 x4 +x2 x24 = 0} such that Nl/X ≃ 2O.
+   Look at the following commutative diagram with exact rows and
+columns, where the first row is the restriction of (3) to the subsheaf of
+the sections of E(1) vanishing along C.
+
+                                0                   0
+                                                   
+                                                   
+                                y                   y
+     0 −−−→ OX −−−→ E(1) ⊗ IC −−−→                IC2 (2)   −−−→ 0
+                                                    
+                                                    
+                        y                            y
+     0 −−−→ OX −−−→           E(1)        −−−→    IC (2)    −−−→ 0     (10)
+                                                   
+                                                   
+                               y                    y
+                              NC/X               NC/X
+                                                  ∨
+                                                      (2)
+                                                   
+                                                   
+                               y                    y
+                                 0                 0
+   It allows to identify the tangent space T[E] HE = H 0 (E(1))/H 0(E(1)⊗
+IC ) with the image of H 0 (IC (2)) in H 0 (NC/X ) = H 0 (IC (2)/IC (2)2 ).
+So, we have to show that the derivative d : H 0 (IC (2))−→TS1 C is sur-
+jective. Using the basis (9) of H 0 (IC (2)), we easily verify that this is
+the case (in fact, dQ1 , dQ2 generate TS1 C).
+
+Lemma 4.3. With the hypotheses of Lemma 3.4, the family Ci (z) of
+curves of the form C ′ + l in Hi (z), where C ′ is a rational normal
+quartic and l one of its chords, is non-empty and equidimensional of
+dimension 3.
+Proof. According to [MT], the family of rational normal quartics in
+a nonsingular cubic threefold X has dimension 8, and is irreducible
+for generic X. By Theorem 1.2, each rational normal quartic C ′ has
+exactly 16 chords l in X, so the family ∆2 = ∆2 (X) of pairs C ′ + l
+is equidimensional of dimension 8. It suffices to verify that one of the
+components of ∆2 , say ∆2,0 , meets Hi (z) at some point b with local
+dimension dimb ∆2,0 ∩ Hi (z) = 3 for one special cubic threefold X, for
+one special z and for at least one i. But this was done in the previous
+lemma. Indeed, the fact that C can be smoothed inside HE implies
+that E ∈ H, hence HE = Hi (z) for some i, z. The assertion for general
+X, z follows by the relativization over the family of cubic threefolds
+and the standard count of dimensions.
+                                     19
+Corollary 4.4. With the hypotheses of Lemma 3.4, let l be a generic
+line in X. Then the generic member of the pencil Hl;i (z) is a rational
+normal quartic plus one of its chords.
+Proof. We know already that the family of pairs C ′ + l ∈ Ci (z) is 3-
+dimensional. Now we are to show that the second components l of
+these pairs move in a dense open subset in the Fano surface F of X.
+This can be done by an infinitesimal argument: let C = C ′ + l be
+such a pair. Then a small neighborhood of [C] in Hi (z) contains a
+smooth subvariety D of codimension 2 with tangent space T[C] D =
+ker{T[C] Hi (z)−→TS1 C}, which parametrizes the curves C ′′ + l of the
+same type. It suffices to show that the natural projection of T[C] D to
+T[l] F = H 0 (Nl/X ) is surjective.
+   The exact triples (6), (7), (8) with W = X together with the obser-
+vation that all the H 1 ’s vanish imply that the natural map H 0 (NC/X )
+−→ H 0 (NC/X |l ) is surjective and that it restricts to a surjective map
+between the kernels of the respective maps to TS1 C:
+  T[C] ∆2 X = ker{H 0 (NC/X )−→TS1 C}։
+                               H 0 (Nl/X ) = ker{H 0 (NC/X |l )−→TS1 C}.
+We want to see that it will remain surjective even if we shrink its source
+to TC D ⊂ T[C] ∆2 X.
+  Let E = EC be as above. Then the triple (3) determines an isomor-
+phism NC/X = E(1)|C in such a way that T[C] Hi (z) is the image of the
+restriction map H 0 (E(1))−→H 0 (E(1)|C ). Hence we can identify NC/X |l
+with E(1)|l . Look at the exact triple
+                 0−→E(1) ⊗ Il −→E(1)−→E(1)|l −→0.
+By Lemma 3.4, h0 (E(1) ⊗ Il ) = 2. By Lemma 4.2, we have Nl/X ≃ 2O
+for generic C ′ +l. As in the proof of Lemma 4.1, the fact that the centers
+of the elementary transformation elm+    S Nl/X ≃ NC/X |l of Nl/X do not
+lie on the same section of P(Nl/X ) = P1 × P1 implies that NC/X |l ≃
+2O(1) and that the map NC/X |l −→TS1 C is surjective. As h0 (E(1)) = 6,
+the last exact triple gives the surjectivity of H 0 (E(1))−→H 0 (NC/X |l ).
+Restricting the map to the kernels of the natural surjections onto TS1 C,
+we obtain the result.
+
+
+      5. Fibers of Φ4,0 , Φ5,1 and periods of varieties V14
+   Now we are able to prove Theorem 3.2. Let X be a generic cubic
+threefold. Let Φ1,0 , Φ4,0 , resp. Φ∗ = Φ∗5,1 be the Abel–Jacobi map
+of lines, rational normal quartics, resp. elliptic normal quintics. We
+                                    20
+will use the notation Φ, or Φ5,1 for the extension of Φ∗ defined in the
+statement of Theorem 2.1. By Lemma 4.2, the generic curves of the
+form C ′ + l, where C ′ is a rational normal quartic and l one of its
+chords, are elements of H, the domain of Φ.
+   Proof of Theorem 3.2. Let z ∈ J 2 (X) be a generic point, Hi (z) ≃ P5
+any component of Φ−1 (z). Choose a generic line l on X. In the nota-
+tions of Lemma 3.4, the number of pencils Hl;i (z) ≃ P1 with generic
+member Ci′ + l, where Ci′ is a rational normal quartic meeting l quasi-
+transversely at 2 points, and mapped to the same point z of the interme-
+diate Jacobian, is equal to the degree d of Ψ. Now look at the images of
+the curves Ci′ arising in these pencils under the Abel–Jacobi map Φ4,0 .
+Denoting AJ the Abel–Jacobi map on the algebraic 1-cycles homolo-
+gous to 0, we have AJ((Ci′ + l) − (Cj′ + l)) = AJ(Ci′ − Cj′ ) = z − z = 0.
+Hence Φ4,0 (Ci′ ) = Φ4,0 (Cj′ ) is a constant point z ′ ∈ J 2 (X). According
+to Theorem 3.1, the family of the normal rational quartics in a generic
+fiber of Φ4,0 meeting a generic line at two points is irreducible and is
+parametrized by (an open subset of) a P1 . The point z ′ is a generic
+one, because Φ4,0 is dominant, and every rational normal quartic has
+at least one chord. Hence d = 1 and we are done.
+Corollary 5.1. M, H are irreducible and the degree of Ψ is 1 not only
+for a generic cubic X, but also for every nonsingular one.
+Proof. One can easily relativize the constructions of H, M, Φ, φ, Ψ, etc.
+over a small analytic (or étale) connected open set U in the param-
+eter space P34 of 3-dimensional cubics, over which all the cubics Xu
+are nonsingular. We have to restrict ourselves to a “small” open set,
+because we need a local section of the family {Hu } in order to define
+the maps Φ, Ψ.
+   The fibers Hu , Mu are equidimensional and nonsingular of dimen-
+sions 10, 5 respectively. Moreover, it is easy to see that a normal elliptic
+quintic C0 in a special fiber Xu0 can be deformed to the neighboring
+fibers Xu . Indeed, one can embed the pencil λXu0 + µXu into the
+linear system of hyperplane sections of a 4-dimensional cubic Y and
+show that the local dimension of the Hilbert scheme of Y at [C0 ] is 15,
+which implies that C0 deforms to all the nearby and hence to all the
+nonsingular hypeplane sections of Y .
+   Hence the families {Hu }, {Mu } are irreducible, flat of relative dimen-
+sions 10, resp. 5 over U, and the degree of Ψ is constant over U. If there
+is a reducible fiber Mu , then the degree sums up over its irreducible
+components, so it has to be strictly greater than 1. But we know, that
+d is 1 over the generic fiber, hence all the fibers are irreducible and
+d = 1 for all u.
+                                     21
+  We are going to relate the Abel–Jacobi mapping of elliptic normal
+quintics with that of rational normal quartics. With our convention for
+the choice of reference curves in the form dl0 for a line l0 , fixed once
+and forever, we have the identity
+                     Φ5,1 (C ′ + l) = Φ4,0 (C ′ ) + Φ1,0 (l) .
+
+Theorem 5.2. Let X be a generic cubic threefold, z ∈ J 2 (X) a generic
+point. Then the corresponding fiber Φ−14,0 (z) is an irreducible nonsingu-
+lar variety of dimension 3, birationally equivalent to X.
+Proof. As we have already mentioned in the proof of Lemma 4.3, the
+family H4,0 of rational normal quartics in X is irreducible of dimension
+8. The nonsingularity of H4,0 follows from the evaluation of the normal
+bundle of a rational normal quartic in the proof of Lemma 4.1. We
+saw also that Φ4,0 : H4,0 −→J 2 (X) is dominant, so the generic fiber is
+equidimensional of dimension 3 and we have to prove its irreducibility.
+    Let π : Ũ −→U be the quasi-finite covering of U = Φ(H) parametriz-
+ing the irreducible components of the fibers of Φ4,0 over points of U.
+Let z ∈ U be generic, and Hz ≃ P5 the fiber of Φ. By Corollary 4.4, for
+a generic line l, we can represent z as Φ4,0 (C ′ ) + Φ1,0 (l) for a rational
+normal quartic C ′ having l as one of its chords. Let κ : U 99K Ũ be
+the rational map sending z to the component of Φ−1                  ′
+                                                         4,0 Φ4,0 (C ) containing
+C ′ . Let λ = π ◦ κ. Theorem 3.1 implies that λ is dominant. Hence it
+is generically finite. Then κ is also generically finite, and we have for
+their degrees deg λ = (deg π)(deg κ).
+    Let us show that deg λ = 1. Let z, z ′ be two distinct points in a
+generic fiber of λ. By Theorem 3.1, Φ−1                   ′
+                                              4,0 Φ4,0 (C ) contains only one
+pencil of curves of type C ′′ + l, where l is a fixed chord of C ′ , and C ′′
+is a rational normal quartic meeting l in 2 points. But Lemma 3.4 and
+Corollary 4.4 imply that both Hz and Hz ′ contain such a pencil. This
+is a contradiction. Hence deg λ = deg π = deg κ = 1.
+    Now, choose a generic rational normal quartic C ′ in X. We are going
+to show that Φ−1            ′
+                 4,0 Φ4,0 (C ) is birational to some V14 , associated to X,
+and hence birational to X itself. Namely, take the V14 obtained by the
+Tregub–Takeuchi transformation χ from X with center C ′ . Let x ∈ V14
+be the indeterminacy point of χ−1 . The pair (x, V14 ) is determined by
+(C ′ , X) uniquely up to isomorphism, because V14 is the image of X
+under the map defined by the linear system |OX (8) − 5C ′ | and x is the
+image of the unique divisor of the linear system |OX (3 − 2C ′ )|.
+    By Theorem 1.2, (iii), a generic ξ ∈ V14 defines an inverse map
+of Tregub–Takeuchi type from V14 to the same cubic X. As X is
+generic, it has no biregular automorphisms, and hence this map defines
+                                        22
+a rational normal quartic Γ in X. We obtain the rational map α :
+V14 99K H4,0 , ξ 7→ [Γ], whose image contains [C ′ ]. As h1,0 (V14 ) = 0,
+the whole image α(V14 ) is contracted to a point by the Abel–Jacobi
+map. Hence, to show that Φ−1                 ′
+                                  4,0 Φ4,0 (C ) is birationally equivalent to
+V14 , it suffices to see that α is generically injective. This follows from
+the following two facts: first, the pair (ξ, V14) is determined by (Γ, X)
+uniqueley up to isomorphism, and second, a generic V14 has no biregular
+automorphisms. If there were two points ξ, ξ ′ ∈ V14 giving the same
+Γ, then there would exist an automorphism of V14 sending ξ to ξ ′ , and
+hence ξ = ξ ′ . Another proof of the generic injectivity of α is given in
+Proposition 5.6.
+  We did not find an appropriate reference for the second fact, so we
+prove it in the next lemma.
+
+Lemma 5.3. A generic variety V14 has no nontrivial biregular auto-
+morphisms.
+Proof. As V14 is embedded in P9 by the anticanonical system, any bireg-
+ular automorphism g of V14 is induced by a linear automorphism of P9 .
+Hence it sends conics to conics, and thus defines an automorphism
+F (g) : F (V14 )−→F (V14 ) of the Fano surface F (V14 ), parametrizing
+conics on V14 . In [BD], the authors prove that the Hilbert scheme
+Hilb2 (S) = S [2] parametrizing pairs of points on the K3 surface S of
+degree 14 in P8 is isomorphic to the Fano 4-fold F (V34 ) parametriz-
+ing lines on V34 , where V34 is the 4-dimensional linear section of the
+Pfaffian cubic in P14 associated to S. The same argument shows that
+F (V14 ) ≃ F (X), where X is the cubic 3-fold associated to V14 , and
+F (X) is the Fano surface parametrizing lines on X.
+   Hence g induces an automorphism f of F (X). Let f ∗ be the induced
+linear automorphism of Alb(F (X)) = J 2 (X), and T0 f ∗ its differential
+at the origin. By [Tyu], the projectivized tangent cone of the theta
+divisor of J 2 (X) at 0 is isomorphic to X, so T0 f ∗ induces an automor-
+phism of X. V14 being generic, X is also generic, so Aut(X) = {1}.
+Hence f ∗ = id. By the Tangent Theorem for F (X) [CG], Ω1F (X) is
+identified with the restriction of the universal rank 2 quotient bundle
+Q on G(2, 5), and all the global sections of Ω1F (X) are induced by lin-
+ear forms L on P4 via the natural map H 0 (P4 , OP4 (1)) ⊗ OG(2,5) ։ Q.
+Hence the fact that f acts trivially on H 0 (Ω1F (X) ) = T0∗ J 2 (X) implies
+that f permutes the lines l ∈ {L = 0} ∩ X lying in one hyperplane
+section of X. For general L, there are 27 lines l, and in taking two
+hypeplane sections {L1 = 0}, {L2 = 0} which have only one common
+line, we conclude that f fixes the generic point of F (X). Hence F (g)
+                                     23
+is the identity. This implies that every conic on V14 is transformed by
+g into itself.
+   By Theorem 1.2, we have 16 different conics C1 , . . . , C16 passing
+through the generic point x ∈ V14 , which are transforms of the 16
+chords of C ′ in X. Two different conics Ci , Cj cannot meet at a point
+y, different from x. Indeed, their proper transforms in X + (we are using
+the notations of Theorem 1.2) are the results li+ , lj+ of the floppings of
+two distinct chords li , lj of C ′ . Two distinct chords of C ′ are disjoint,
+because otherwise the 4 points (li ∩ lj ) ∩ C ′ would be coplanar, which
+would contradict the linear normality of C ′ . Hence li+ , lj+ are disjoint.
+They meet the exceptional divisor M + of X + −→V14 at one point each,
+hence Ci ∩ Cj = {x}. As g(Ci ) = Ci and g(Cj ) = Cj , this implies
+g(x) = x. This ends the proof.
+
+5.4. Two correspondences between H4,0 , H5,1 . This subsection con-
+tains some complementary information on the relations between the
+families of rational normal quartics and of elliptic normal quintics on
+X which can be easily deduced from the above results.
+  For a generic cubic 3-fold X and any point c ∈ J 2 (X), the Abel–
+Jacobi maps Φ4,0 , Φ5,1 define a correspondence Z1 (c) between H4,0 , H5,1
+with generic fibers over H5,1 , H4,0 of dimensions 3, respectively 5:
+        Z1 (c) = {(Γ, C) ∈ H4,0 × H5,1 | Φ4,0 (Γ) + Φ5,1 (C) = c} .
+The structure of the fibers is given by Theorems 3.2 and 5.2: they are,
+respectiveley, birational to X and isomorphic to P5 .
+  There is another correspondence, defined in [MT]:
+
+  Z2 = {(Γ, C) ∈ H4,0 × H5,1 | C + Γ = F1 ∩ X for a rational
+                                                  normal scroll F1 ⊂ P4 } .
+It is proved in [MT] that the fiber over a generic C ∈ H5,1 is isomorphic
+to C, and the one over Γ ∈ H4,0 is a rational 3-dimensional variety. In
+fact, we have the following description for the latter:
+Lemma 5.5. For any rational normal quartic Γ ∈ X, we have Z2 (Γ) ≃
+P GL(2).
+Proof. Let Γ ⊂ P4 be a rational normal quartic. Then there exists
+a unique P GL(2)-orbit P GL(2) · g ⊂ P GL(5) transforming Γ to the
+normal form
+                                                                        
+   4 3              4                                        x0 x1 x2 x3
+{(s , s t, . . . , t )}(s:t)∈P1 = {(x0 , . . . , x4 ) | rk                 ≤ 1}.
+                                                             x1 x2 x3 x4
+                                      24
+There is one particularly simple rational normal scroll S containing Γ:
+                                                                   
+          2       2                                        x0 x1 x3
+S = {(us , ust, ut , vs, vt)} = {(x0 , . . . , x4 ) | rk              ≤ 1}.
+                                                           x1 x2 x4
+Geometrically, S is the union of lines which join the corresponding
+points of the line l = {(0, 0, 0, s, t)} and of the conic C 2 = {(s2 , st, t2 ,
+0, 0)}. Conversely, any rational normal scroll can be obtained in this
+way from a pair (l, C) whose linear span is the whole P4 . Remark that
+(s : t) 7→ (s : t) is the only correspondence from l to C such that the
+resulting scroll contains Γ.
+   Now, it is easy to describe all the scrolls containing Γ: they are
+obtained from S by the action of P GL(2). Each non-identical trans-
+formation from P GL(2) leaves invariant Γ, but moves both l and C,
+and hence moves S.
+   As the rational normal scrolls in P4 are parametrized by a rational
+variety, the Abel–Jacobi image of C + Γ is a constant c ∈ J 2 (X) for all
+pairs (Γ, C) such that C ∈ Z2 (Γ). Hence we have identically Φ4,0 (Γ) +
+Φ5,1 (C) = c on Z2 , so that Z2 (Γ) ⊂ Z1 (c)(Γ).
+   We can obtain another birational description of Z2 (Γ) for generic Γ
+in applying to all the C ∈ Z2 (Γ) the Tregub–Takeuchi transformation
+χ, centered at Γ. Let ξ ∈ V14 be the indeterminacy point of χ−1 .
+Proposition 5.6. On a generic V14 , the family of elliptic quintic curves
+is irreducible. It is parametrized by an open subset of a component B
+of Hilb5n                  5
+        V14 isomorphic to P , and all the curves represented by points of
+B are l. c. i. of pure dimension 1.
+   For any x ∈ V14 , the family of curves from B = P5 passing through
+x is a linear 3-dimensional subspace P3x ⊂ P5 . For generic rational
+normal quartic Γ as above, χ maps Z2 (Γ) birationally onto P3ξ .
+Proof. Gushel constructs in [G2] for any elliptic quintic curve B on
+V14 a rank two vector bundle G such that h0 (G) = 6, det G = O(1),
+c2 (G) = B, and proves that the map from V14 to G = G(2, 6) given
+by the sections of G and composed with the Plücker embedding is the
+standard embedding of V14 into P14 . Hence G is isomorphic to the
+restriction of the universal rank 2 quotient bundle on G (in particular,
+it has no moduli), and the zero loci of its sections are precisely the
+sections of V14 by the Schubert varieties σ11 (L) over all hyperplanes
+L ⊂ C6 = H 0 (G)∨ . These zero loci are l. c. i. of pure dimension
+1. Indeed, assume the contrary. Assume that D = σ11 (L) ∩ V14 has a
+component of dimension > 1. Anyway, deg D = deg σ11 (L) = 5, hence
+if dim D = 2, then V14 has a divisor of degree ≤ 5 < 14 = deg V14 .
+This contradicts the fact that V14 has index 1 and Picard number 1.
+                                      25
+One cannot have dim D > 2, because otherwise V14 would be reducible.
+Hence dim D ≤ 1, and it is l. c. i. of pure dimension 1 as the zero locus
+of a section of a rank 2 vector bundle. All the zero loci B of sections of
+G form a component B of the Hilbert scheme of V14 isomorphic to P5 .
+   The curves B from B passing through x are the sections of V14 by the
+Schubert varieties σ11 (L) for all L containing the 2-plane Sx represented
+by the point x ∈ G(2, 6), and hence form a linear subspace P3 in P5 .
+   Now, let us prove the last assertion. Let C ∈ Z2 (Γ) be generic. We
+have (C · Γ)F1 = 7, therefore the map χ, given by the linear system
+|O(8) − 5Γ)|, sends it to a curve C̃ of degree 8 · 5 − 5 · 7 = 5. So,
+the image is a quintic of genus 1. Let k = multξ C̃. The inverse χ−1
+being given by the linear system |O(2) − 5ξ|, we have for the degree of
+C = χ−1 (C̃):       5 = 2 deg C̃ − 5k = 10 − 5k, hence k = 1, that is, ξ is
+a simple point of C̃. Thus the generic C ∈ Z2 (Γ) is transformed into a
+smooth elliptic quintic C̃ ∈ V14 passing through ξ. By the above, such
+curves form a P3 in the Hilbert scheme, and this ends the proof.
+
+
+
+5.7. Period map of varieties V14 . We have seen that one can asso-
+ciate to any Fano variety V14 a unique cubic 3-fold X, but to any cubic
+3-fold X a 5-dimensional family of varieties V14 . Now we are going to
+determine this 5-dimensional family. This will give also some infor-
+mation on the period map of varieties V14 . Let Ag denote the moduli
+space of principally polarized abelian varieties of dimension g.
+
+Theorem 5.8. Let V14 be the moduli space of smooth Fano 3-folds of
+degree 14, and let Π : V14 → A5 be the period map on V14 . Then the im-
+age Π(V14 ) coincides with the 10-dimensional locus J5 of intermediate
+jacobians of cubic threefolds. The fiber Π−1 (J), J ∈ J5 , is isomorphic
+to the family V(X) of the V14 which are associated to the same cubic
+threefold X, and birational to J 2 (X).
+
+Proof. For the construction of V14 and for the fact that dim V14 = 15,
+see Theorem 0.9 in [Mu].
+  According to Theorem 2.2, there exists a 5-dimensional family of
+varieties V14 , associated to a fixed generic cubic 3-fold X, which is
+birationally parametrized by the set M of isomorphism classes of vector
+bundle E obtained by Serre’s construction starting from normal elliptic
+quintics C ⊂ X. By Corollary 3.3, M is an open subset of J 2 (X).
+Hence all the assertions follow from Proposition 1.7.
+
+                                    26
+                                 References
+[AC]    E. Arrondo, L. Costa, Vector bundles on Fano 3-folds without interme-
+        diate cohomology , e-print math.AG/9804033.
+[AR]    A. Adler, S. Ramanan, Moduli of Abelien Varieties, Lect. Notes Math.,
+        1644, Springer-Verlag, 1996.
+[B-MR1] E. Ballico, R. M. Miró-Roig, Rank 2 stable vector bundles on Fano 3-folds
+        of index 2, J. Pure Appl. Algebra 120, 213–220 (1997).
+[B-MR2] E. Ballico, R. M. Miró-Roig, A lower bound for the number of components
+        of the moduli schemes of stable rank 2 vector bundles on projective 3-
+        folds. , Proc. Amer. Math. Soc. 127, 2557–2560 (1999).
+[Barth] W. Barth, Irreducibility of the space of mathematical instanton bundles
+        with rank 2 and c2 = 4, Math. Ann. 258, 81–106 (1981/82).
+[BS]    D. Bayer, M. Stillman: Macaulay: A computer algebra system for al-
+        gebraic geometry, 1982+, ftp://zariski.harvard.edu (login: anonymous
+        Password: any).
+[B]     A. Beauville, Les singularités du diviseur thêta de la jacobienne in-
+        termédiaire de l’hypersurface cubique dans P4 , Lecture Notes in Math.
+        947, 190-208 (1982).
+[BD]    A. Beauville, R. Donagi: La variété des droites d’une hypersurface cu-
+        bique de dimension 4, C. R. Acad. Sci. Paris Ser. I Math. 301, no. 14,
+        703–706(1985).
+[CG]    H.Clemens, P.Griffiths, The intermediate Jacobian of the cubic threefold,
+        Annals of Math. 95, 281-356 (1972).
+[ES]    G. Ellingsrud, S. Strømme, Stable rank-2 vector bundles on P 3 with c1 =
+        0 and c2 = 3, Math. Ann. 255, 123–135 (1981).
+[E-SB]  L.Ein, N. Shepherd-Barron, Some special Cremona transformations,
+        Amer. J. Math. 111, 783-800 (1989).
+[F]     G. Fano, Sulle sezioni spaziale della varietà grassmanniana delle rette
+        spazio a cinque dimensioni, Rend. R. Accad. Lincei 11, 329–335(1930).
+[G1]    N. Gushel, Fano varieties of genus 6, Math. USSR, Izv. 21, 445–459
+        (1983).
+[G2]    N. Gushel, Fano 3-folds of genus 8, St. Petersbg. Math. J. 4, 115–129
+        (1993).
+[H]     R.Hartshorne, Stable vector bundles of rank 2 on P 3 , Math. Ann. 238,
+        229–280 (1978).
+[HH]    Hartshorne, R.; Hirschowitz, A. Smoothing algebraic space curves, In:
+        Algebraic geometry, Sitges (Barcelona), 1983, Lecture Notes in Math.,
+        1124. Springer, Berlin-New York, 1985, 98–131.
+[Hu]    Hulek, K.: Projective geometry of elliptic curves, Astérisque 137(1986).
+[I]     A.I.Iliev, Minimal sections of conic bundles, Boll. Uni. Mat. Italiana. (8)
+        2B, 401-428(1999).
+[IR]    A.I.Iliev, K.Ranestad, The sympletic grassmannian Sp(3)/U (3) and du-
+        ality for the Fano threefold V16 , e-print math.AG/9809140, to appear in
+        J. Alg. Geom.
+[Isk1]  V.A.Iskovskikh, Birational automorphisms of three-dimensional algebraic
+        varieties, J. Soviet Math. 13:6, 815-868 (1980)
+[Isk2]  V.A. Iskovskikh, Double projection from a line on Fano threefolds of the
+        first kind, Math. USSR Sbornik 66, No.1, 265-284 (1990).
+                                        27
+[Isk-P]   V. A. Iskovskikh, Yu. G. Prokhorov, Fano varieties, Algebraic Geometry
+          V (A. N. Parsin, I. R .Shafarevich, Eds.), Encyclopaedia of Math. Sci.,
+          Vol. 47, Springer, Berlin, 1998.
+[LP]      J. Le Potier, Sur l’espace de modules des fibrés de Yang et Mills, In:
+          Mathematics and physics (Paris, 1979/1982), 65–137, Progr. Math., 37,
+          Birkhäuser, Boston, Mass., 1983.
+[M]       D. Markushevich, Numerical invariants of families of straight lines of
+          Fano manifolds, Math.USSR, Sbornik 44, 239-260(1983).
+[MT]      D. Markushevich, A.S.Tikhomirov, The Abel-Jacobi map of a mod-
+          uli component of vector bundles on the cubic threefold, e-print
+          math.AG/9809140, to appear in J. Alg. Geom.
+[Mu]      S.Mukai, Curves, K3 Surfaces and Fano 3-folds of Genus ≤ 10, in: Al-
+          gebraic Geometry and Commutative Algebra in Honor of M. Nagata,
+          Kinokuniya, Tokyo 357-377 (1988)
+[OS]      G. Ottaviani, M. Szurek, On moduli of stable 2-bundles with small Chern
+          classes on Q3 , Ann. Mat. Pura Appl. (IV) 167, 191–241 (1994).
+[P]       P.J. Puts, On some Fano threefolds that are sections of Grassmannians,
+          Proc. Kon. Ned. Acad. Wet. A 85(1), 77-90 (1982)
+[SW]      M. Szurek, J. Wiśniewski, Conics, conic fibrations and stable vector bun-
+          dles of rank 2 on some Fano threefolds, Rev. Roumaine Math. Pures
+          Appl. 38, 729–741 (1993).
+[Tak]     K.Takeuchi, Some birational maps of Fano 3-folds, Compositio Math.
+          71, 265-283 (1989).
+[Tre]     S.L.Tregub, Construction of a birational isomorphism of a cubic threefold
+          and Fano variety of the first kind with g = 8, associated with a normal
+          rational curve of degree 4, Moscow Univ. Math. Bull. 40, 78-80 (1985);
+          translation from Vestn. Mosk. Univ., Ser. I 1985, No.6, 99-101 (1985).
+[Tyu]     A. N. Tyurin, Geometry of the Fano surface of a non-singular cubic
+          F ⊂ P4 and Torelli theorems for Fano surfaces and cubics, Izv. USSR
+          Math. 35 (1971), 498–529.
+
+  A. I.: Inst. of Math., Bulgarian Acad. of Sci., Acad. G. Bonchev
+Str., 8, 1113 Sofia, Bulgaria
+  E-mail address: ailiev@math.bas.bg
+
+  D. M.: Mathématiques - bât. M2, Université Lille 1, F-59655 Vil-
+leneuve d’Ascq Cedex, France
+  E-mail address: markushe@gat.univ-lille1.fr
+
+
+
+
+                                        28
+

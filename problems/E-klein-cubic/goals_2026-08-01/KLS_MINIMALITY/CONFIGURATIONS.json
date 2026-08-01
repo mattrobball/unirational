@@ -1,0 +1,140 @@
+{
+  "schema": "kls-conductor-configurations-v1",
+  "as_of": "2026-08-01",
+  "exit": "KLS-NO-THEOREM",
+  "classification": {
+    "finite": false,
+    "exhaustive": false,
+    "reason": "No minimality-to-discrepancy theorem and no conductor-pullback support bound are proved. Open families retain unbounded multiplicity, support-degree, contact-index, and conductor-coefficient parameters."
+  },
+  "landing_branch": {
+    "image": "smooth Klein cubic",
+    "h": "1",
+    "normalization_conductor": "0",
+    "existence": "OPEN",
+    "note": "P22 conductor configurations concern singular non-Klein KLS images, not an already-landing rank-four covariant."
+  },
+  "closed_scoped_families": [
+    {
+      "id": "NORMAL_P22",
+      "hypotheses": ["H normal", "one A5 orbit quadric divides h"],
+      "decision": "EMPTY",
+      "mechanism": "factorial A5-quadric linearized-pencil obstruction"
+    },
+    {
+      "id": "NONNORMAL_LITERAL_P22",
+      "hypotheses": [
+        "h=P22",
+        "all eleven quadrics dominate conductor primes",
+        "no additional conductor-dominating support"
+      ],
+      "decision": "EMPTY",
+      "mechanism": "nodal conductor contribution 22 implies d<=9; exact degree<=9 dominance exclusion"
+    },
+    {
+      "id": "NONNORMAL_P22_SQUAREFREE_EXTRA",
+      "hypotheses": [
+        "h=P22*k",
+        "gcd(P22,k)=1",
+        "P22 is complete conductor-dominating source support",
+        "every factor of k is squarefree and centered in codimension at least two"
+      ],
+      "decision": "EMPTY",
+      "mechanism": "codimension-two squarefree cancellation plus degree<=9 closure"
+    },
+    {
+      "id": "NONNORMAL_P22_POSITIVE_DISCREPANCY_EXTRA",
+      "hypotheses": [
+        "h=P22*k",
+        "P22 is complete conductor-dominating source support",
+        "A_E>=1 for every factor of k"
+      ],
+      "decision": "EMPTY",
+      "mechanism": "full discrepancy cancellation plus degree<=9 closure"
+    },
+    {
+      "id": "NORMAL_DEGREE25_28_P22_FIELDS",
+      "hypotheses": ["H normal", "contracted-gradient support P22"],
+      "decision": "EMPTY_AS_KLS_IMAGE_BRANCH",
+      "mechanism": "normal-image P22 exclusion",
+      "scope_note": "The logarithmic fields remain valid tangency/integrability constructions at their recorded scope."
+    }
+  ],
+  "open_parametric_families": [
+    {
+      "id": "REPEATED_LC_PLACE_FACTORS",
+      "parameters": ["number of factors", "factor degrees", "multiplicities"],
+      "unbounded_parameters": ["number of factors", "factor degrees", "multiplicities"],
+      "constraint": "A_E=0 leaves one reduced copy in s-t",
+      "status": "OPEN"
+    },
+    {
+      "id": "NEGATIVE_DISCREPANCY_FACTORS",
+      "parameters": ["epsilon", "A_E", "factor degree", "multiplicity"],
+      "unbounded_parameters": ["-A_E", "factor degree", "multiplicity"],
+      "constraint": "a-beta=1-epsilon*A_E",
+      "status": "OPEN"
+    },
+    {
+      "id": "ADDITIONAL_CONDUCTOR_SUPPORT",
+      "parameters": ["source-prime count", "source-prime degrees", "contact indices", "conductor coefficients"],
+      "unbounded_parameters": ["source-prime count", "source-prime degrees", "contact indices", "conductor coefficients"],
+      "constraint": "plt of the normalization pair does not bound pullback splitting",
+      "status": "OPEN"
+    },
+    {
+      "id": "REPEATED_P22_HIGHER_CONDUCTOR",
+      "parameters": ["P22 multiplicities", "epsilon", "c"],
+      "unbounded_parameters": ["P22 multiplicities", "epsilon", "c"],
+      "constraint": "a-beta=1+epsilon*(c-1)",
+      "status": "OPEN"
+    },
+    {
+      "id": "NONNORMAL_NON_P22_SUPPORT",
+      "parameters": ["component orbit", "factor degree", "multiplicity", "conductor gluing"],
+      "unbounded_parameters": ["factor degree", "multiplicity"],
+      "constraint": "no theorem forces conductor support to be P22",
+      "status": "OPEN"
+    },
+    {
+      "id": "NORMAL_REPEATED_FACTORS",
+      "parameters": ["factor orbit", "factor degree", "multiplicity"],
+      "unbounded_parameters": ["factor degree", "multiplicity"],
+      "constraint": "deg(h)-deg(rad(h)) >= r+d*(e-5)+4",
+      "status": "OPEN"
+    },
+    {
+      "id": "STABLE_NONRATIONAL_COMPONENTS",
+      "parameters": ["invariant factor degree", "singularity type", "vertical image"],
+      "unbounded_parameters": ["invariant factor degree"],
+      "constraint": "coarse unirational-curve/surface argument does not apply",
+      "status": "OPEN"
+    },
+    {
+      "id": "SMALLER_STABILIZER_COMPONENTS",
+      "parameters": ["orbit length", "factor degree", "multiplicity", "vertical image"],
+      "unbounded_parameters": ["factor degree", "multiplicity"],
+      "constraint": "orbit lengths are finite but component degrees and multiplicities are not bounded",
+      "status": "OPEN"
+    }
+  ],
+  "formal_consistency_witness": {
+    "existence_claim": false,
+    "e": 7,
+    "d": 11,
+    "r": 4,
+    "t": 8,
+    "s": 38,
+    "m": 28,
+    "support": [
+      {"name": "P22", "reduced_degree": 22, "multiplicity": 1},
+      {"name": "stable_degree8_factor", "reduced_degree": 8, "multiplicity": 2, "A_E": 0, "epsilon": 1}
+    ],
+    "checks": [
+      "s=r+t+d*(e-5)+4",
+      "m=d*(e-1)-s",
+      "d<=2*m",
+      "r mod 11 in {1,3,4,5,9}"
+    ]
+  }
+}
