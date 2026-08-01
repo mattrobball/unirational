@@ -1,0 +1,9 @@
+{
+  "exit": "C2-1-UNDECIDED",
+  "headline": "OPEN",
+  "La_Q_constants": 859,
+  "Lb_Q_constants": 484,
+  "poly_degree_lower_bound": 5,
+  "peak_rss_MiB": 94.609375,
+  "elapsed_seconds": 4.164080250000552
+}

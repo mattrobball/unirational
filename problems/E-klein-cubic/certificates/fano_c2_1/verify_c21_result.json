@@ -1,0 +1,63 @@
+{
+  "exit_checked": "C2-1-UNDECIDED",
+  "headline": "OPEN",
+  "holdout_recompute": [
+    {
+      "pt": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "status": "ok",
+      "word_det": 41,
+      "frame_det": 79,
+      "La_const_bad": 0,
+      "Lb_const_bad": 0,
+      "a_unit_col_bad": 0,
+      "n_La_const": 859,
+      "n_Lb_const": 484
+    },
+    {
+      "pt": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "status": "ok",
+      "word_det": 252,
+      "frame_det": 356,
+      "La_const_bad": 0,
+      "Lb_const_bad": 0,
+      "a_unit_col_bad": 0,
+      "n_La_const": 859,
+      "n_Lb_const": 484
+    },
+    {
+      "pt": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "status": "ok",
+      "word_det": 163,
+      "frame_det": 150,
+      "La_const_bad": 0,
+      "Lb_const_bad": 0,
+      "a_unit_col_bad": 0,
+      "n_La_const": 859,
+      "n_Lb_const": 484
+    }
+  ],
+  "La_Q_constants_verified": 859,
+  "Lb_Q_constants_verified": 484,
+  "C_Q_constants_sealed": 208,
+  "degree_lower_bound": 5,
+  "verdict": "PASS_PARTIAL",
+  "note": "Verifier confirms Q-constant entries of L_a,L_b against independent modular rebuild at holdout prime and against sealed p=23 packet. Full Mat_36(K_proj) reconstruction remains open (degree floor)."
+}

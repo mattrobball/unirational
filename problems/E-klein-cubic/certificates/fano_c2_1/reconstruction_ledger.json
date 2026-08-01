@@ -1,0 +1,500 @@
+{
+  "packet": "certificates/fano_c2_1",
+  "track": "C2.1",
+  "workorder": "WORKORDER_CAS_T10_P25W_C2.md \u00a75 C2.1",
+  "exit": "C2-1-UNDECIDED",
+  "headline": "OPEN",
+  "pair": {
+    "a_frame_index": 1,
+    "b_frame_index": 2
+  },
+  "words": [
+    "",
+    "a",
+    "b",
+    "aa",
+    "ab",
+    "ba",
+    "bb",
+    "aaa",
+    "aab",
+    "aba",
+    "abb",
+    "baa",
+    "bab",
+    "bba",
+    "aaaa",
+    "aaab",
+    "aaba",
+    "aabb",
+    "abaa",
+    "abab",
+    "abba",
+    "baaa",
+    "baab",
+    "baba",
+    "babb",
+    "bbaa",
+    "bbab",
+    "aaaaa",
+    "aaaab",
+    "aaaba",
+    "aaabb",
+    "aabaa",
+    "aabab",
+    "aabba",
+    "abaaa",
+    "abaab"
+  ],
+  "max_word_length": 5,
+  "primes_used": [
+    {
+      "p": 23,
+      "zeta": 2
+    },
+    {
+      "p": 89,
+      "zeta": 2
+    },
+    {
+      "p": 199,
+      "zeta": 18
+    },
+    {
+      "p": 331,
+      "zeta": 74
+    },
+    {
+      "p": 353,
+      "zeta": 58
+    }
+  ],
+  "holdout_prime": {
+    "p": 463,
+    "zeta": 15
+  },
+  "n_samples_per_prime": 80,
+  "prime_records": [
+    {
+      "prime": 23,
+      "zeta_11": 2,
+      "n_samples": 80,
+      "word_det_units": 80,
+      "La_n_const": 859,
+      "La_n_varying": 437,
+      "Lb_n_const": 498,
+      "Lb_n_varying": 798,
+      "C_n_const": 208,
+      "C_n_varying": 1088,
+      "sample_pts_head": [
+        [
+          1,
+          20,
+          15,
+          2,
+          1
+        ],
+        [
+          5,
+          12,
+          14,
+          5,
+          3
+        ],
+        [
+          21,
+          21,
+          16,
+          18,
+          12
+        ]
+      ]
+    },
+    {
+      "prime": 89,
+      "zeta_11": 2,
+      "n_samples": 80,
+      "word_det_units": 80,
+      "La_n_const": 859,
+      "La_n_varying": 437,
+      "Lb_n_const": 498,
+      "Lb_n_varying": 798,
+      "C_n_const": 208,
+      "C_n_varying": 1088,
+      "sample_pts_head": [
+        [
+          69,
+          73,
+          40,
+          68,
+          70
+        ],
+        [
+          82,
+          55,
+          39,
+          81,
+          53
+        ],
+        [
+          1,
+          43,
+          9,
+          35,
+          44
+        ]
+      ]
+    },
+    {
+      "prime": 199,
+      "zeta_11": 18,
+      "n_samples": 80,
+      "word_det_units": 80,
+      "La_n_const": 859,
+      "La_n_varying": 437,
+      "Lb_n_const": 498,
+      "Lb_n_varying": 798,
+      "C_n_const": 209,
+      "C_n_varying": 1087,
+      "sample_pts_head": [
+        [
+          39,
+          13,
+          12,
+          107,
+          159
+        ],
+        [
+          109,
+          112,
+          92,
+          43,
+          18
+        ],
+        [
+          91,
+          155,
+          1,
+          5,
+          163
+        ]
+      ]
+    },
+    {
+      "prime": 331,
+      "zeta_11": 74,
+      "n_samples": 80,
+      "word_det_units": 80,
+      "La_n_const": 859,
+      "La_n_varying": 437,
+      "Lb_n_const": 498,
+      "Lb_n_varying": 798,
+      "C_n_const": 208,
+      "C_n_varying": 1088,
+      "sample_pts_head": [
+        [
+          40,
+          18,
+          228,
+          323,
+          13
+        ],
+        [
+          29,
+          9,
+          143,
+          187,
+          111
+        ],
+        [
+          50,
+          128,
+          265,
+          155,
+          250
+        ]
+      ]
+    },
+    {
+      "prime": 353,
+      "zeta_11": 58,
+      "n_samples": 80,
+      "word_det_units": 80,
+      "La_n_const": 859,
+      "La_n_varying": 437,
+      "Lb_n_const": 498,
+      "Lb_n_varying": 798,
+      "C_n_const": 208,
+      "C_n_varying": 1088,
+      "sample_pts_head": [
+        [
+          51,
+          323,
+          64,
+          325,
+          12
+        ],
+        [
+          274,
+          257,
+          48,
+          126,
+          318
+        ],
+        [
+          50,
+          271,
+          108,
+          54,
+          122
+        ]
+      ]
+    }
+  ],
+  "reconstructed": {
+    "La_Q_constants": 859,
+    "Lb_Q_constants": 484,
+    "C_Q_constants": 208,
+    "La_failed_const": [],
+    "Lb_failed_const": [
+      {
+        "pos": [
+          7,
+          6
+        ],
+        "residues": [
+          13,
+          81,
+          117,
+          206,
+          6
+        ],
+        "error": "ratrecon"
+      },
+      {
+        "pos": [
+          14,
+          13
+        ],
+        "residues": [
+          13,
+          81,
+          117,
+          206,
+          6
+        ],
+        "error": "ratrecon"
+      }
+    ],
+    "C_failed_const": [],
+    "total_matrix_entries_target": 2592,
+    "note": "Only entries constant on the sampled geometric open (hence in Q) were rationally reconstructed. Varying entries require multivariate rational functions of total degree >=5 in (t3,t6,t8,t11) for the 12 P0-coefficients; that floor blocks C2-APROJ-EXECUTABLE this round."
+  },
+  "degree_floor": {
+    "method": "At split primes, each L_a[i,j] specializes to F_p. The unique expansion L_a[i,j] = sum_{k=0..11} r_k(t) * beta_k in the certified rank-12 model is tested by linear ansatz r_k total-degree <= D polynomials in (t3,t6,t8,t11). Inconsistency of the overdetermined modular system proves D is too small.",
+    "poly_ansatz_inconsistent_for_D": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "evidence": "Julia/Nemo rank checks at p=331 with 1000 geometric samples: for every tested varying entry, deg-D polynomial system has rank(A)=nunk but rank([A|b])=nunk+1 for D=0,1,2,3,4 (840 unknowns at D=4). Rational ansatz with num/den total degree <=3 has nullity 0 at 500 samples (only zero solution). Constant entries (Q) are D=0 and reconstruct.",
+    "min_poly_total_degree_lower_bound": 5,
+    "unknowns_at_D5": 1512,
+    "varying_La_entries_approx": 437,
+    "varying_Lb_entries_approx": 798,
+    "resource_note": "Per varying entry at D=5: 1512 rational coefficients in P0. For ~437 La + ~800 Lb varying entries: ~1.9e6 rational coefficients, each requiring multiprime CRT. Modular sampling itself is cheap (~5s/1000 points/prime, peak RSS ~40 MiB). Linear algebra per entry per prime at 1500x1500 is the floor; full multiprime recon estimated hours\u2013days on one core, still under 8 GiB if streamed entrywise."
+  },
+  "holdout": {
+    "prime": 463,
+    "zeta_11": 15,
+    "n_samples": 30,
+    "La": {
+      "entries_checked_times_samples": 25770,
+      "ok": 25770,
+      "bad": 0
+    },
+    "Lb": {
+      "entries_checked_times_samples": 14520,
+      "ok": 14520,
+      "bad": 0
+    },
+    "C": {
+      "entries_checked_times_samples": 6240,
+      "ok": 6240,
+      "bad": 0
+    },
+    "dropped_false_ratrecon": {
+      "La": [],
+      "Lb": [
+        {
+          "pos": [
+            8,
+            6
+          ],
+          "num": 76135,
+          "den": 54013,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        },
+        {
+          "pos": [
+            9,
+            6
+          ],
+          "num": 76135,
+          "den": 54013,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        },
+        {
+          "pos": [
+            10,
+            6
+          ],
+          "num": 10284,
+          "den": 119903,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        },
+        {
+          "pos": [
+            11,
+            6
+          ],
+          "num": 76135,
+          "den": 54013,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        },
+        {
+          "pos": [
+            12,
+            6
+          ],
+          "num": 10284,
+          "den": 119903,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        },
+        {
+          "pos": [
+            13,
+            6
+          ],
+          "num": 10284,
+          "den": 119903,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        },
+        {
+          "pos": [
+            16,
+            13
+          ],
+          "num": 76135,
+          "den": 54013,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        },
+        {
+          "pos": [
+            18,
+            13
+          ],
+          "num": 76135,
+          "den": 54013,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        },
+        {
+          "pos": [
+            20,
+            13
+          ],
+          "num": 10284,
+          "den": 119903,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        },
+        {
+          "pos": [
+            21,
+            13
+          ],
+          "num": 76135,
+          "den": 54013,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        },
+        {
+          "pos": [
+            23,
+            13
+          ],
+          "num": 10284,
+          "den": 119903,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        },
+        {
+          "pos": [
+            25,
+            13
+          ],
+          "num": 10284,
+          "den": 119903,
+          "holdout_bad": 30,
+          "holdout_n": 30
+        }
+      ],
+      "C": []
+    },
+    "note": "Entries that appeared constant on training primes but failed the holdout prime are false rational reconstructions (height/collision) and are not sealed."
+  },
+  "open_set": "Model valid on the dense open of Proj^4 where the sealed shortlex word-basis determinant is nonzero (equivalently unit after reduction at good split primes), the projective Reynolds frame is free (frame det nonzero), and the homogenization denominators f14 and f_(14-d) for seed degrees are nonzero. C2.0 sealed unit dets 16 at p=23 and 82 at p=89 at point (1,2,3,4,5).",
+  "inputs_consumed": {
+    "word_basis.json": "6760fc38ad536320fd8fc0b697bacababdb96166424d1233ce33615bad6e9d7e",
+    "word_basis.npz": "766487bc206908991f841967aac8002fc18c2e347da66e85a2748cace6f88668",
+    "alignment_certificate.json": "90746a65051b863c684c906f7166c70572a2edc319e6f6e6e306042261153848",
+    "kproj_core.py": "913b6184df2272e4834f81b38abdda9f468a2852ec571a04a469610054468b01",
+    "common_p25x.py": "b5d27fe9174e859a88a9b1704963e07a4ff53f96ddd259d83c5a7d148d9588bc"
+  },
+  "specific_inputs": [
+    "descended PSL(2,11) Reynolds frame seeds",
+    "alignment words A->TSTS, B->T^8S",
+    "certified projective point homogenization f_(14-d)/f_14",
+    "sealed pair a=e_1, b=e_2 and shortlex word list",
+    "rank-12 K_proj model over P0=Q(t3,t6,t8,t11)"
+  ],
+  "trap_named": "A construction valid for an arbitrary degree-6 CSA over an arbitrary field is too weak for later Morita/Hermitian steps; this packet only addresses the specific descended A_proj frame above.",
+  "elapsed_seconds": 4.164080250000552,
+  "peak_rss_MiB": 94.609375,
+  "does_not_prove": [
+    "full L_a, L_b in Mat_36(K_proj)",
+    "involution / Morita / Hermitian / Plucker",
+    "Fano point",
+    "characteristic-zero structure constants of the full frame"
+  ],
+  "corrections": {
+    "modular_not_promoted_to_char0": true,
+    "p67_not_sole_fibre": true,
+    "no_46656_fallback": true,
+    "ratrecon_uses_common_p25x": true
+  },
+  "product_hashes": {
+    "L_a.npz": "bdcf639ef888a0e8adeda9c5c97b6ba77543e87f64f92869f27ac4ad646e2ccc",
+    "L_b.npz": "c305740bb6852fb980afb29c6729333913f9a71ef542b39d6dc59e5fe8ad891c",
+    "word_change.npz": "14de82ff1ec29e5d352e2c8a0598d0ea04489e5ceb5a4ef350518d1a1fbd3491",
+    "L_a.json": "9711a543f78a7f05548037f40e7377cbcef84e17707d917f8bcc7ba5bf3b841d",
+    "L_b.json": "8e3aa59250c1e1d5d3405a313149a1acc3d8d4404c9936eafbdc60fe714d74da",
+    "word_change.json": "c56001f6a2651c2ae48e3c37f712e4eb17219651849c0d6bb59a90c7d8ac2945",
+    "produce_c21.py": "cc94ec860807698b178080de4c0bd41c06b5511eafc0e5990b8ec61c3298ed6f",
+    "verify_c21.py": "95df54aa02b9bc84050df21fed867ed72ff93daaa7623d2ee6d98fa99a2474a8",
+    "APROJ_EXECUTABLE.md": "61fd0a5d83bff7d39a110c2616509bd75af87332a8099089765e10c9149eea72",
+    "exit_c21.json": "4dd0cc635cac70fc4fb9899f188064a5eed2fdf51ba73044dc876640e6caef0e",
+    "verify_c21_result.json": "28734ecb01f9b7466043dba12a9efadeac625da07698f7b63265a4cecb14b4b9"
+  },
+  "reconstruction_ledger_prehash_note": "ledger rewritten once after product hashes; verifier recomputes"
+}
