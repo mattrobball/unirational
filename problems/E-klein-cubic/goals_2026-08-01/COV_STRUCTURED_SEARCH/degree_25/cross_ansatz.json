@@ -1,0 +1,223 @@
+{
+  "arrangement_proof": "At a point of an involution plus-plane, gradients of invariant forms lie in the 3-dimensional plus eigenspace. Four such gradients are dependent, so their generalized cross product vanishes. Equivariance propagates this to all 55 planes.",
+  "characteristic_zero_conclusion": "empty_projective_arrangement_ansatz",
+  "degree": 25,
+  "direction_count": 9,
+  "directions": [
+    {
+      "cross_degree": 17,
+      "gradient_invariants": [
+        "I3",
+        "I5",
+        "I6",
+        "I7"
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 8
+    },
+    {
+      "cross_degree": 18,
+      "gradient_invariants": [
+        "I3",
+        "I5",
+        "I6",
+        "I8"
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 7,
+        "secondary_index": 1,
+        "secondary_name": "f7"
+      },
+      "multiplier_degree": 7
+    },
+    {
+      "cross_degree": 19,
+      "gradient_invariants": [
+        "I3",
+        "I5",
+        "I6",
+        "I9"
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 6
+    },
+    {
+      "cross_degree": 19,
+      "gradient_invariants": [
+        "I3",
+        "I5",
+        "I7",
+        "I8"
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 6
+    },
+    {
+      "cross_degree": 20,
+      "gradient_invariants": [
+        "I3",
+        "I5",
+        "I7",
+        "I9"
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 5
+    },
+    {
+      "cross_degree": 20,
+      "gradient_invariants": [
+        "I3",
+        "I6",
+        "I7",
+        "I8"
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 5
+    },
+    {
+      "cross_degree": 22,
+      "gradient_invariants": [
+        "I3",
+        "I6",
+        "I8",
+        "I9"
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 3
+    },
+    {
+      "cross_degree": 22,
+      "gradient_invariants": [
+        "I5",
+        "I6",
+        "I7",
+        "I8"
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 3
+    },
+    {
+      "cross_degree": 25,
+      "gradient_invariants": [
+        "I5",
+        "I7",
+        "I8",
+        "I9"
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 0
+    }
+  ],
+  "prime_records": [
+    {
+      "payload": "cross_landing_p89.npz",
+      "payload_sha256": "4a2ee39c730a8417459becc604e9302b94909c1f5b91cd1b86c484f78c4d8ffc",
+      "prime": 89,
+      "quartic_closure": null,
+      "rank": 165
+    },
+    {
+      "payload": "cross_landing_p199.npz",
+      "payload_sha256": "eb6f65f44a6dce2b14cf7f7c8f07d1cd1a96268b5e8748184ae2d5d14900bf63",
+      "prime": 199,
+      "quartic_closure": null,
+      "rank": 165
+    }
+  ],
+  "symmetric_cube_dimension": 165
+}

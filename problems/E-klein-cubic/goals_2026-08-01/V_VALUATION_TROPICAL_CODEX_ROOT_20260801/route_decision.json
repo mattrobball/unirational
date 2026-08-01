@@ -1,0 +1,44 @@
+{
+  "schema": "klein-goal-v-decision-v1",
+  "exit_code": "V-UNDECIDED",
+  "headline": "OPEN",
+  "repository_head_at_start": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "fields": {
+    "affine_generic": "K_aff=C(W)^G",
+    "projective_generic": "K_proj=C(P(W))^G",
+    "relation": "K_aff is a purely transcendental extension of K_proj of degree one",
+    "bridge": "properness gives C_gen(K_aff) nonempty iff C_gen(K_proj) nonempty"
+  },
+  "proved": [
+    "every genuine Klein twist and every scalar extension of it has index one",
+    "therefore no valuation can force local index divisible by three or local degree subgroup 3Z",
+    "the ordinary relative Brauer group of a smooth genuine Klein twist is zero",
+    "a pure Newton-polytope nonintersection is unavailable for the non-monomial cubic hypersurface",
+    "every discrete rank-one coefficient valuation of the exact cubic has an integral tropical projective value vector",
+    "five absolutely prime divisorial valuations of K_aff have exact simple residue points and hence completed-field points",
+    "the degree-five invariant is the Hessian determinant up to 32, and the canonical Hessian-kernel line has no generic rational intersection point with the Klein cubic"
+  ],
+  "five_soluble_divisors": [
+    "F(x)=f3",
+    "F(C)=f12",
+    "F(D)",
+    "F(E)",
+    "F(K)"
+  ],
+  "not_proved": [
+    "a rational point over K_aff or K_proj",
+    "a pointless completion of the genuine twist",
+    "an exhaustive theorem for all divisorial or higher-rank valuations",
+    "a residue-field point or nonpoint theorem for the whole genuine f5 special cubic",
+    "a higher unramified-cohomology obstruction"
+  ],
+  "smallest_remaining_terminal_theorem": {
+    "valuation": "the affine generic-field divisor f5=0 (or another certified prime invariant boundary)",
+    "model": "the proper integral genuine Hilbert-90 cubic after proving one common smooth open",
+    "decision": "prove its residue cubic over C(f5=0)^G has no rational point, or construct a point away from the now-excluded canonical Hessian-kernel line",
+    "negative_payoff": "smooth proper reduction plus residue pointlessness gives a pointless completion and hence generic pointlessness",
+    "required_boundary": "the residue cubic still has index one, so component-multiplicity, degree-subgroup, and ordinary Brauer shortcuts cannot prove the nonpoint"
+  },
+  "scope_note": "V-UNDECIDED is an allowed route exit, not a negative answer to Problem E."
+}

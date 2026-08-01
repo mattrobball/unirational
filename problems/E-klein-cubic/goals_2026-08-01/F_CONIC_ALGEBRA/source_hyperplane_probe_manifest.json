@@ -1,0 +1,92 @@
+{
+  "charts": [
+    {
+      "file": "source_hyperplane_X_x0_p23.sing",
+      "msolve_file": "source_hyperplane_X_x0_p23.ms",
+      "plane_chart": "X",
+      "source_chart": "x0",
+      "terms": 271
+    },
+    {
+      "file": "source_hyperplane_X_x1_p23.sing",
+      "msolve_file": "source_hyperplane_X_x1_p23.ms",
+      "plane_chart": "X",
+      "source_chart": "x1",
+      "terms": 271
+    },
+    {
+      "file": "source_hyperplane_X_x2_p23.sing",
+      "msolve_file": "source_hyperplane_X_x2_p23.ms",
+      "plane_chart": "X",
+      "source_chart": "x2",
+      "terms": 271
+    },
+    {
+      "file": "source_hyperplane_X_x3_p23.sing",
+      "msolve_file": "source_hyperplane_X_x3_p23.ms",
+      "plane_chart": "X",
+      "source_chart": "x3",
+      "terms": 271
+    },
+    {
+      "file": "source_hyperplane_y_x0_p23.sing",
+      "msolve_file": "source_hyperplane_y_x0_p23.ms",
+      "plane_chart": "y",
+      "source_chart": "x0",
+      "terms": 271
+    },
+    {
+      "file": "source_hyperplane_y_x1_p23.sing",
+      "msolve_file": "source_hyperplane_y_x1_p23.ms",
+      "plane_chart": "y",
+      "source_chart": "x1",
+      "terms": 271
+    },
+    {
+      "file": "source_hyperplane_y_x2_p23.sing",
+      "msolve_file": "source_hyperplane_y_x2_p23.ms",
+      "plane_chart": "y",
+      "source_chart": "x2",
+      "terms": 271
+    },
+    {
+      "file": "source_hyperplane_y_x3_p23.sing",
+      "msolve_file": "source_hyperplane_y_x3_p23.ms",
+      "plane_chart": "y",
+      "source_chart": "x3",
+      "terms": 271
+    },
+    {
+      "file": "source_hyperplane_w_x0_p23.sing",
+      "msolve_file": "source_hyperplane_w_x0_p23.ms",
+      "plane_chart": "w",
+      "source_chart": "x0",
+      "terms": 271
+    },
+    {
+      "file": "source_hyperplane_w_x1_p23.sing",
+      "msolve_file": "source_hyperplane_w_x1_p23.ms",
+      "plane_chart": "w",
+      "source_chart": "x1",
+      "terms": 271
+    },
+    {
+      "file": "source_hyperplane_w_x2_p23.sing",
+      "msolve_file": "source_hyperplane_w_x2_p23.ms",
+      "plane_chart": "w",
+      "source_chart": "x2",
+      "terms": 271
+    },
+    {
+      "file": "source_hyperplane_w_x3_p23.sing",
+      "msolve_file": "source_hyperplane_w_x3_p23.ms",
+      "plane_chart": "w",
+      "source_chart": "x3",
+      "terms": 271
+    }
+  ],
+  "hyperplane": "x4=0",
+  "prime": 23,
+  "scope": "modular characteristic-zero dimension certificate candidate",
+  "zeta": 2
+}

@@ -1,0 +1,35 @@
+{
+  "basis_rank": 637,
+  "degree": 35,
+  "orders": [
+    {
+      "input_dimension": 637,
+      "jet_rank": 276,
+      "kernel_dimension": 361,
+      "order": 0,
+      "unisolvent_rows": 3330
+    },
+    {
+      "input_dimension": 361,
+      "jet_rank": 233,
+      "kernel_dimension": 128,
+      "order": 1,
+      "unisolvent_rows": 6300
+    },
+    {
+      "input_dimension": 128,
+      "jet_rank": 128,
+      "kernel_dimension": 0,
+      "order": 2,
+      "unisolvent_rows": 8925
+    }
+  ],
+  "plane_order": 5,
+  "prime": 67,
+  "residual_degree": 5,
+  "reynolds_seed_count": 637,
+  "schema": "COV_GLOBAL_JETS_SPLIT_FIBRE_V1",
+  "scope": "complete global G-covariants with common symbolic plane order; globality makes all line, point, C3 and elliptic incidence identities automatic",
+  "selected_symbolic_kernel_dimension": 0,
+  "self_covariant_dimension": 637
+}

@@ -1,0 +1,7 @@
+{
+  "candidate_found": false,
+  "degree": 35,
+  "jacobian_rank_four_check": "not_applicable",
+  "primitive_check": "not_applicable",
+  "reason": "the named 32-direction mixed structured landing ansatz is projectively empty; the full m=1 equalizer remains undecided"
+}

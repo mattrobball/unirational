@@ -17,9 +17,10 @@ import numpy as np
 
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[2]
+ROOT = HERE.parents[1]
 EXACT = ROOT / "certificates" / "degree25_exact"
-SOURCE = EXACT / "landing_cubics.npz"
+SOURCE = ROOT / "tmp" / "p25yf4_border" / "rows_qk.npz"
+RREF_CACHE = ROOT / "tmp" / "p25z1_probe" / "rref_A.npz"
 P = 89
 
 sys.path.insert(0, str(EXACT))
@@ -57,17 +58,23 @@ def polynomial_string(row: np.ndarray, monomials, names: list[str]) -> str:
 
 def main() -> None:
     with np.load(SOURCE) as frozen:
-        rows = np.ascontiguousarray(frozen["p89"], dtype=np.uint8)
-    assert rows.shape == (746, 14190)
-    assert sha256_array(rows) == "403cd42146550e36baa71bc5d34070438a0ffdf63d1f65bd41ea3850255b7495"
+        source_rows = np.ascontiguousarray(frozen["rows"], dtype=np.uint8)
+    assert source_rows.shape == (746, 14190)
+    assert sha256_array(source_rows) == "0bc3f799c4cc776e708d0ea8984e0450cb34f52c82d5824405c135ab2a7af5cc"
 
-    pivots = [int(np.flatnonzero(row)[0]) for row in rows]
-    assert pivots == list(range(746))
+    with np.load(RREF_CACHE) as frozen:
+        rows = np.ascontiguousarray(frozen["A"], dtype=np.uint8)
+        pivots = frozen["pivots"].astype(np.int32)
+        permutation = frozen["perm"].astype(np.int32)
+    assert rows.shape == (746, 14190)
+    assert sha256_array(rows) == "f7ed78ff0e9414529acb7e437b6d3bb2928fdec878e08c2874a278faa44ddf6a"
+    assert pivots.tolist() == list(range(746))
     assert np.array_equal(rows[:, :746], np.eye(746, dtype=np.uint8))
 
     names = [f"q{i}" for i in range(37)] + [f"k{i}" for i in range(6)]
     solver_names = [f"k{i}" for i in range(6)] + [f"q{i}" for i in range(37)]
-    monomials = common.cubic_monomials()
+    original_monomials = common.cubic_monomials()
+    monomials = [original_monomials[int(index)] for index in permutation]
     assert len(monomials) == 14190
     assert all(sum(exponents) == 3 for exponents in monomials)
     assert all(sum(exponents[:37]) == 0 for exponents in monomials[:56])
@@ -87,7 +94,11 @@ def main() -> None:
         "prime": P,
         "source": str(SOURCE),
         "source_sha256": sha256_file(SOURCE),
-        "p89_rows_sha256": sha256_array(rows),
+        "source_rows_sha256": sha256_array(source_rows),
+        "rref_cache": str(RREF_CACHE),
+        "rref_cache_sha256": sha256_file(RREF_CACHE),
+        "rref_rows_sha256": sha256_array(rows),
+        "permutation_sha256": sha256_array(permutation),
         "input": target.name,
         "input_sha256": sha256_file(target),
         "input_bytes": target.stat().st_size,

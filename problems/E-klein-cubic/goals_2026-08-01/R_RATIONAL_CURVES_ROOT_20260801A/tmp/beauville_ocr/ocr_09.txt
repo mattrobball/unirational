@@ -1,0 +1,55 @@
+VECTOR BUNDLES ON THE CUBIC THREEFOLD 79
+
+Let us denote by f the class of a fibre of the ruling in Pic(Sp) and
+also in Pic(S,). We have —Ks, = 2t+kf for some integer k € Z, hence
+
+2t- Sole, +kf = —Ks, = Es, -
+
+In CH?(X~) the classes f = f*[p] and E-S, = E- f*|c] are independent
+of t, hence so is 2t— > £,,; pushing down in CH?(X) gives our assertion.
+
+(5.2.d) The commutativity of the diagram implies that the generic fibre of a
+is birationally isomorphic to that of we. We know that a has positive-
+dimensional fibres ((5.2.a), hence so does we; therefore ¢ = 0. Now the
+image of wo is the canonical theta divisor in Po, and its general fibre is
+isomorphic to P+ (4.1); thus the image of a is a theta divisor © C J(X),
+and its general fibre is isomorphic to P+. In the factorization a : Ty >
+S—£ J(X), we see that p is birational; therefore T is birationally a P?-
+bundle over 9.
+
+Oo
+
+Remark 5.3. The divisor © is the canonical theta divisor of J(X): its unique
+singular point is 0 (see [B2]). The corresponding divisor y*9® C P is the translate
+of the canonical theta divisor wo(Wo) C Po by the element 7*O,(1) of Po.
+
+We now pass to quartic curves. Let Q, be the variety of rational normal quartic
+curves which are contained in X and intersect ¢ transversally in 2 points; let Q¢ be
+its closure in the Hilbert scheme of X.
+
+Proposition 5.4. The Abel-Jacobi map Op — J4(X) is surjective; its general
+fibre is isomorphic to P?.
+
+Proor. The proof follows closely the proof of (5.2). Let q be a general element
+of Qe. Again q projects from @ onto a smooth conic c C P?, and defines a section
+of the ruled surface S,. Let > p; be the divisor cut down by c on A; we write as
+above f-!(p;) = 2, Uly,, with £2, q = 0, and D(q) = ¥ ai.
+
+As in (5.2.5) we consider the image g of q by b: S- + Spiq); since E-q = 2 we
+find q? = q? = 0. This implies:
+
+1) Spiq) is isomorphic to Fo, so by (5.2.6) D(q) lives in Wi;
+2) @ is one of the lines of the horizontal ruling.
+
+Conversely, any general line of this ruling lifts to a quartic q of Qg: thus D maps
+Qe into W,, it is dominant, and its general fibre is a rational curve (parametrizing
+the horizontal ruling).
+
+As in (5.2.c) we get a commutative diagram
+
+D
+i aoe
+J(X) ~—— P2 Py.
+
+Now w1 is birational, so a is birationally equivalent to D; the Proposition
+follows. oO

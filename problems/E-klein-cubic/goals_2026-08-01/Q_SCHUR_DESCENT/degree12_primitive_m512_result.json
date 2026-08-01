@@ -1,0 +1,8 @@
+{
+  "status": "timeout",
+  "timeout_seconds": 900,
+  "max_pairs_per_matrix": 512,
+  "elapsed_seconds": 900.1047534579993,
+  "log_file": "degree12_primitive_m512_msolve.log",
+  "log_sha256": "9e7013acdaf353a227b94d08315b91f65feb5625ee3665d6713cfbcc5e788bf4"
+}

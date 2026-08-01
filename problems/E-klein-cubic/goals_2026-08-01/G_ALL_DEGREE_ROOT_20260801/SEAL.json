@@ -1,0 +1,38 @@
+{
+  "exit": "G-STRUCTURAL-UNDECIDED",
+  "scope": "characteristic-zero all-order first gate and line-constant obstruction; exact split-F67 central boundary recurrence frontier; no headline decision",
+  "files": {
+    "DECISION.md": "c0a8763bfb3c76dad0cf5e1114690986a5ecd2badbf2befd628dc47f5d6cf571",
+    "FINITE_GENERATION.md": "48f8d59f399bafcbef940e480eeda4b7f8896739c95dcac0010b24d94bdbfe64",
+    "STATUS.md": "5d1dc5a3826d5ba6bd9703dfc2e0a66dffae0512ee00bc5b4e99f2b4d600d6a4",
+    "THEOREM.md": "2e3686add8336e95d93474ff311708ba3a8533f75b5f3d44f53103149ca3e2ca",
+    "UNIVERSAL_OBJECT.md": "bc3a693bd3a06fbf044c62cd58512bdc47d818c0324776945ba3e0fef71479f2",
+    "UNIVERSAL_REDUCTION.md": "3ad5dbe817c874e66b453b0de70e4a7f6b177a091621802127efb2d9d3b78f23",
+    "analyze_line_boundary_recurrence.py": "8d1aa872287ad24da3bb468c13e4ebc135a21275c0a7c52d116d1eadcf3e1956",
+    "build_line_support_m2.py": "28e42a4bad1edff169e56fdc7234be01c2ac343850f235599737f512439c7d31",
+    "m3_line1_support.m2": "64fe201e129dbfd1a22e08c8b96089a6416808aeef833af36b14292c769d02f7",
+    "m3_line4_central_landing.m2": "170d724b26b46a367e08769484e87606e8a0ed4125288c300c314482ebfdc1eb",
+    "m3_line_boundary_recurrence_f67.json": "14599ba71a5d241978de9b7aa117e96b11564e12b64beb750b25b26b511a35f9",
+    "produce.py": "b6fd2bb8133867130048b74292a07fcd313911b7337a3f51147e3c3440496954",
+    "verify.py": "821868381d4834bd7f7816aded51ca6c825f96bd64067f7a5585eeb2ce54f656",
+    "verify_boundary_recurrence.py": "45e39e53f774399d2437548f47d4df4abe7de9bd028e6750ba26670eb0e28c33"
+  },
+  "authoritative_inputs": {
+    "tmp/degree14_structural/core.py": "2e6e0a27843478361916266883488bd662627447af3c2cb57e235e53ec626372",
+    "tmp/m3_line_point_boundary/analyze.py": "212df94d65be4ef4d2807af733d807a5999d8edb1d45ba191d89956bab099466",
+    "tmp/m3_line_point_boundary/compute.py": "e0fdf3bf7c0b500e10df3b324d31fde2da418f5b19bb3b06ceb5425199b110b1",
+    "tmp/symbolic_compatibility_complex/boundary_interface.json": "32f013a4691dbea6f04c6a2ba1392d636f717b42d2d0168c00a162203554aa36",
+    "tmp/symbolic_compatibility_complex/line_landing_bigraded.py": "efaa3975152bf03a80e691a7521638cdeba01dc7ad80e46981ec1608780d4a62",
+    "tmp/symbolic_compatibility_complex/line_post_gate_landing.py": "60a69b32eabb7421b368063012a5135b8e9216c420f980284024594d0e08ee71",
+    "tmp/symbolic_compatibility_complex/point_symbolic/character_results.json": "0e3e3f9ae15e6aae4409dbb7c558104f9a6747d653500cf373971791d18c68f8",
+    "tmp/symbolic_compatibility_complex/point_symbolic/local_interface_f67.py": "35a9b50e01bf6655ce4c88743b5151b1485e65e4fb3a9bf8751064ffbd7da73b",
+    "tmp/symbolic_compatibility_complex/triple_line_symbolic/verify.py": "f8dc05b012e1c2981ed854389d25ae32d9de51ced6f6c160f064518fe3986416"
+  },
+  "replay": [
+    "python3 G_ALL_DEGREE_ROOT_20260801/produce.py",
+    "python3 G_ALL_DEGREE_ROOT_20260801/verify.py",
+    "python3 G_ALL_DEGREE_ROOT_20260801/verify_boundary_recurrence.py",
+    "M2 --script G_ALL_DEGREE_ROOT_20260801/m3_line1_support.m2"
+  ],
+  "unresolved_frontier": "M2 --script G_ALL_DEGREE_ROOT_20260801/m3_line4_central_landing.m2 (exact input; computation not completed, no verdict)"
+}

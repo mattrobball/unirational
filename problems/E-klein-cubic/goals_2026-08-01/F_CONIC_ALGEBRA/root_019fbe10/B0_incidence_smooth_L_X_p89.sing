@@ -1,0 +1,8 @@
+ring R=89,(A,J,T,y,w),dp;
+option(redSB);
+ideal I=31*A*w^3 + 17*A*w^2*y + 7*A*w^2 - 19*A*w*y^2 + 16*A*w*y - 41*A*y^3 - 12*A*y^2 - 36*J*w^3 - 43*J*w^2*y + 5*J*w^2 + 22*J*w*y^2 - 5*J*w*y - 18*J*y^3 - 21*J*y^2 + 35*T*w^3 + 8*T*w^2*y - 12*T*w*y^2 + 33*T*y^3 + 3*w^3 - 31*w^2*y + 29*w*y^2 + 30*w*y + 43*y^3 - 19*y^2 + 1,31*w^3 + 17*w^2*y + 7*w^2 - 19*w*y^2 + 16*w*y - 41*y^3 - 12*y^2,-36*w^3 - 43*w^2*y + 5*w^2 + 22*w*y^2 - 5*w*y - 18*y^3 - 21*y^2,35*w^3 + 8*w^2*y - 12*w*y^2 + 33*y^3,17*A*w^2 - 38*A*w*y + 16*A*w - 123*A*y^2 - 24*A*y - 43*J*w^2 + 44*J*w*y - 5*J*w - 54*J*y^2 - 42*J*y + 8*T*w^2 - 24*T*w*y + 99*T*y^2 - 31*w^2 + 58*w*y + 30*w + 129*y^2 - 38*y,93*A*w^2 + 34*A*w*y + 14*A*w - 19*A*y^2 + 16*A*y - 108*J*w^2 - 86*J*w*y + 10*J*w + 22*J*y^2 - 5*J*y + 105*T*w^2 + 16*T*w*y - 12*T*y^2 + 9*w^2 - 62*w*y + 29*y^2 + 30*y;
+ideal G=std(I);
+poly n=reduce(1,G);
+if (n==0) { print("SINGULAR_LOCUS_EMPTY=1"); } else { print("SINGULAR_LOCUS_EMPTY=0"); }
+print("B0_INCIDENCE_SMOOTH_L_X_P89_DONE");
+quit;

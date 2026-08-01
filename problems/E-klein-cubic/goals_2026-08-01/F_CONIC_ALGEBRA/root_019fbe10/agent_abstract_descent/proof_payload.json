@@ -1,0 +1,43 @@
+{
+  "format": "goal-F-abstract-descent-v1",
+  "infinity_cross_check": {
+    "cohomological_consequence": "image(res(xi))=res([C]) is nonzero in H^1(K_proj,E)[3]",
+    "consistent": true,
+    "ef": [
+      1,
+      1
+    ],
+    "exit": "F-CONIC-CRITERION-EMPTY",
+    "residue_index": 3
+  },
+  "inputs": {
+    "E3_nonzero_orbit_size": 8,
+    "K_galois_closure": "S6",
+    "xi_maps_to": "nonzero [C] in H^1(F,E)[3]"
+  },
+  "scope": "fixed-frame plane cubic over F and K_proj",
+  "sources_sha256": {
+    "F_CONIC_ALGEBRA/INFINITY_OBSTRUCTION.md": "0a0f4d414b9c3b989dcc67f568d14075c0b8cf92579911aee6f4154850d97a2a",
+    "F_CONIC_ALGEBRA/infinity_obstruction.json": "00316341a4d5207d8630e3d8d4411113b8fa2df5f6b3db42b48aa3003e094405",
+    "F_CONIC_ALGEBRA/verify_infinity_obstruction.py": "756a97638227a1d2e0edbe2f063f940c2db4453b9e804e071943d6468f720d18",
+    "certificates/fixed_frame_arithmetic/TERMINALITY_AUDIT.md": "606794be144d89c24fe8f0593ff775812c2cd1b325361e6bbbdf2a8b01e73677",
+    "certificates/restricted_e3/DECISION.md": "71a6fdb92cd3237bdad3da39a30f2bc9fb1d97a092d1cd6a4ccee1c3022e1f1a",
+    "certificates/restricted_e3/RESTRICTED_ETALE_ALGEBRA.md": "c37ab06dcb92d598d8470c19757ce569b2e8fe9041110a5e946902fb1a739724",
+    "certificates/restricted_e3/restricted_algebra.json": "e9d2708ed670f30e3fd0fdc25655c5d10cd214556e13a9b647a0c284ceaf9f93"
+  },
+  "strict_boundary": {
+    "noncube_alone_proves_CK_empty": false,
+    "remaining_without_valuation": "membership in delta(E(K_proj)/3E(K_proj))",
+    "trace_corestriction_formal_obstruction": false
+  },
+  "terminal_markers": [
+    "GOAL_F_E3_RESTRICTION_INJECTIVE_ACCEPT",
+    "GOAL_F_INFINITY_COHOMOLOGY_CONSISTENT_ACCEPT"
+  ],
+  "theorem": {
+    "E3_of_N": 0,
+    "restricted_alpha_R": "noncube",
+    "restricted_xi": "nonzero",
+    "restriction_H1_E3": "injective"
+  }
+}

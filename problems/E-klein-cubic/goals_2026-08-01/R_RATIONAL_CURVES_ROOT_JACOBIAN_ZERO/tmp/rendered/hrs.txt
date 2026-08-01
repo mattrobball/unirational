@@ -1,0 +1,1274 @@
+                                            ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS
+
+                                                                       JOE HARRIS, MIKE ROTH, AND JASON STARR
+
+
+
+
+arXiv:math/0202080v1 [math.AG] 9 Feb 2002
+                                                                                           Contents
+                                              1. Introduction                                                                                        1
+                                              2. Review of the Abel-Jacobi Map                                                                       4
+                                              3. Lines, Conics and Plane Cubics                                                                      5
+                                              4. Twisted cubics                                                                                     10
+                                              5. Cubic scrolls and applications                                                                     12
+                                              6. Quartic Rational Curves                                                                            15
+                                              7. Quintic Elliptics                                                                                  17
+                                              8. Double Residuation and Unirationality of the Fibers                                                18
+                                              9. Quintic Rational Curves                                                                            23
+                                              10. Quintic Curves of Genus 2                                                                         24
+                                              References                                                                                            26
+
+                                                    Abstract. In this article we consider the spaces Hd,g (X) parametrizing curves of degree d
+                                                    and genus g on a smooth cubic threefold X ⊂ P4 , with regard in particular to the Abel-Jacobi
+                                                    map ud : Hd,g (X) → J 3 (X) to the intermediate Jacobian J 3 (X) of X. Our principle result
+                                                    is that for all d ≤ 5 the map ud coincides with the maximal rationally connected fibration of
+                                                    Hd,g (X).
+
+
+                                                                                       1. Introduction
+                                              In this paper we will study spaces parametrizing curves on a smooth cubic threefold X ⊂ P4 .
+                                            There has been a great deal of work in recent years on the geometry of spaces parametrizing
+                                            rational curves on a variety X. Most of it has focussed on the enumerative geometry of these
+                                            spaces: the description of their Chow rings and the evaluation of certain products in their
+                                            Chow rings. Here we will be concerned with a very different sort of question: we will be
+                                            concerned with the birational geometry of the spaces M.
+                                              We should start by explaining, at least in part, our motivation. The central object in
+                                            curve theory—the one that links together every aspect of the theory, and whose study yields
+                                            the majority of theorems in the subject—is the Abel-Jacobi map. This is the map from the
+                                            symmetric product Cd of a curve C, parametrizing 0-cycles of a given degree d on C, to
+                                            the Jacobian Picd (C) ∼= J(C), defined variously as the space of cycles of degree d mod linear
+                                            equivalence (that is, the space of line bundles of degree d on C) or, over the complex numbers,
+                                            as the complex torus H 1 (C, K)∗/H1 (C, Z).
+                                               Date: October 28, 2018.
+                                               The third author was partially supported by an NSF Graduate Research Fellowship and a Sloan Dissertation
+                                            Fellowship.
+                                                                                                 1
+2                                      HARRIS, ROTH, AND STARR
+
+   Under the circumstances, it’s natural to ask what sort of analogue of this we might be able
+to define and study in higher dimensions. There have been numerous constructions proposed
+to this end; they have been too varied to categorize easily, but the majority adopt one of
+two approaches, corresponding to the definitions of Picd (C) ∼= J(C) for a curve. In the first,
+we look again at the space of cycles on a variety X mod some equivalence relation (typically
+rational equivalence); in the second, we try to form a geometric object out of the Hodge
+structure of X.
+   Both approaches suffer from some seemingly unavoidable difficulties. In the first, the
+quotients of the spaces on cycles on a variety X by rational equivalence tends to be either too
+big or too small: if we mod out by algebraic equivalence we tend to lose too much information,
+while if we mod out by rational equivalence the quotient is too large (and in particular too
+hard to calculate even in simple concrete cases). As for the second, we simply don’t know how
+to make an algebrao-geometric object out of a Hodge structure except in very special cases—
+specifically, the case of Hodge structures of odd weight with all but two of the Hodge groups
+vanishing, where we can form the intermediate Jacobian and it will be an Abelian variety. In
+these cases the theory has had spectacular successes (such as the proof of the irrationality of
+cubic threefolds), but it’s undeniably frustrating that it has no wider application.
+   In this paper we’d like to suggest another approach to the problem, based on a construction
+of Kollár, Miyaoka and Mori: the maximal rationally connected fibration associated to a
+variety X. Briefly, we say that a smooth projective variety X is rationally connected if
+two general points of X can be connected by a chain of rational curves. This condition is
+equivalent to rationality and unirationality for curves and surfaces; in higher dimensions it
+is weaker than either. More generally, the maximal rationally connected fibration associates
+to a variety X a (birational isomorphism class of) variety Z and a rational map φ : X → Z
+with the properties that
+    • the fibers Xz of φ are rationally connected; and conversely
+    • almost all the rational curves in X lie in fibers of φ: for a very general point z ∈ Z any
+      rational curve in X meeting Xz lies in Xz .
+The variety Z and morphism φ are unique up to birational isomorphism, and are called the
+mrc quotient and mrc fibration of X, respectively. They measure the failure of X to be
+rationally connected: if X is rationally connected, Z is a point, while if X is not uniruled we
+have Z = X.
+   The point of this is, if we start with the symmetric product Cd of a curve C and apply
+this construction, we find (for d large, at any rate) that the mrc fibration of Cd is the Abel-
+Jacobi map φ : Cd → J(C). In other words, we don’t have to define the Jacobian J(C)
+either in terms of cycles mod linear equivalence or via Hodge theory; we can realize it simply
+the mrc quotient of the space Cd parametrizing 0-cycles of reasonably large degree d on C.
+The obvious question is then: what happens when we take the mrc quotient of the variety
+parametrizing cycles1 on a higher-dimensional variety?
+
+    1
+    Note that we have a choice of parameter spaces for the cycles on X: the Chow variety, the Hilbert
+scheme and, in the case of 1-dimensional cycles, the Kontsevich space. But since we are concerned with the
+birational geometry of these spaces it really doesn’t matter which we choose to work with, except for technical
+convenience.
+               ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                            3
+
+   To begin with, taking the mrc quotient of the varieties parametrizing 0-cycles on X doesn’t
+seem to yield much: if X is rationally connected, so will be its symmetric powers; and if X
+possesses any holomorphic forms one expects the dimensions of the mrc quotients of Xd tend
+to ∞ with d (c.f. [13]). We turn our attention next to curves on X and ask: what can we say
+about the mrc quotients of the varieties Hd,g (X) parametrizing curves of degree d and genus
+g on X? For various reasons it makes sense to look primarily at the spaces parametrizing
+rational curves—for one thing, we don’t want to get involved in the geometry of the moduli
+space Mg of curves of genus g when we are only interested in invariants of X—but in the
+course of studying rational curves we will also discover facts about the geometry of Hd,g (X)
+for g > 0.
+   For X = Pn and for X ⊂ Pn+1 a quadric hypersurface, the answer is known, at least in
+the case of rational curves, and is trivial: the variety Hd,0 (X) parametrizing rational curves
+of degree d on X is itself rationally connected in both cases. The first real test is thus cubic
+hypersurfaces, and here we will focus specifically on the case of a smooth cubic threefold
+X ⊂ P4 .
+   We start by asking the most naive possible question: is the variety Hd,g (X) rationally
+connected? The answer is that it can never be: we have the Abel Jacobi map
+                                     u : Hd,g (X) → J 3 (X)
+from the Kontsevich space to the intermediate Jacobian
+                                 J3 (X) = H 2,1 (X)∗ /H3 (X, Z).
+Since any map of a rational curve to a complex torus/Abelian variety is constant, any rational
+curve on Hd,g (X) must lie in a fiber of u. The Abel-Jacobi map thus factors through the mrc
+fibration φ : Hd,g (X) → Z of Hd,g (X).
+   Given this, the second most naive question would be: is the intermediate Jacobian J 3 (X)
+the mrc quotient of Hd,g (X)? This may seem equally naive, but it turns out to hold for small
+values of d. The main result of this paper is the
+
+Theorem 1.1. If X ⊂ P4 is any smooth cubic threefold, for any d ≤ 5 the Abel-Jacobi map
+                                     u : Hd,g (X) → J 3 (X)
+is the maximal rationally connected fibration of Hd,g (X).
+   As we indicated, we view this result as simply the first test of a general hypothesis. It would
+be very interesting to see if the analogous statement holds for other rationally connected
+threefolds. Work is being done in this direction: Ana-Maria Castravet has proved in [1] that
+for X ⊂ P5 the intersection of two quadrics, the analogous statement—that the mrc quotient
+of the space Hd,0 (X) is the intermediate Jacobian—holds for all d. And work of Harris
+and Starr [9] shows that the same is true at least for components of the variety Hd,0 (X)
+corresponding to an open cone of curve classes β ∈ H2 (Z, Z) in a blow-up X of P3 .
+   Ultimately, though, we want to extend this research to higher-dimensional varieties X,
+where the Hodge theory doesn’t seem to provide us with a candidate for the mrc quotients
+of the spaces of rational curves on X. To relate this to a specific issue: for smooth cubic
+threefolds X, the fact that the Hodge structure on H 3 (X, Z) is not isomorphic to a product
+of Hodge structures of curves implies that X is not rational. A close examination of the
+4                                 HARRIS, ROTH, AND STARR
+
+Hodge structure of a very general cubic fourfold X ⊂ P5 suggests a similar finding: the
+Hodge structure on H 4 (X, Z) does not appear to be a product of factors of Hodge structures
+of surfaces (see [Has]), and if this is indeed the case it would imply that X is irrational. But
+the fact that the Hodge structure is not conveyed in the form of a geometric object—there
+is no construction analogous to that of the intermediate Jacobian of a cubic threefold—has
+frustrated our attempts to make this into a proof. But now we can ask: if the intermediate
+Jacobian of a cubic threefold X may be realized as the mrc quotient of the space of rational
+curves on X, what happens when we take the mrc quotient of the space of rational curves on
+a cubic fourfold?
+   In this paper, though, we will be concerned exclusively with the geometry of cubic three-
+folds. We start some preliminary sections on the Abel-Jacobi map for curves on threefolds in
+general and on the geometry of curves of low degree on cubic threefolds in particular. We then
+launch into the analysis of the Abel-Jacobi map for curves of degree 3, 4 and 5 on a smooth
+cubic threefold X. The basic technique here is residuation: we associate to a curve C ⊂ X on
+X and a surface S ⊂ P4 containing it, a residual curve C ′ with (roughly) C + C ′ = S ∩ X. In
+this way we relate the parameter space for curves C to that for curves C ′ . In [7] it is proved
+that for d ≤ 5, each of the spaces Hd,g (X) is irreducible of dimension 2d. Combining this
+with the residuation technique, we prove that for d ≤ 5 the fibers of the Abel-Jacobi map
+Hd,g (X) → J 3 (X) are unirational.
+   Many of the results in this paper have also been proved in [12] and [11] by considering
+moduli of vector bundles on X. Our theorem 4.2 corresponds to [12, proposition 3.2]. Our
+corollary 8.6 corresponds to [12, theorem 5.6(iii)] and [11, theorem 3.2]. Our proof is original
+and does not use vector bundles on X, but rather an analysis of the divisors in the intermediate
+Jacobian. In addition, we give an analysis of quartic rational curves (which are also considered
+in [12]), of quintic rational curves, and of quintic curves of genus 2. Furthermore, we prove
+that for every degree d > 3, the Abel-Jacobi map αd,0 : Hd,0 (X) → J(X) is dominant and
+the general fiber is irreducible.
+1.1. Notation. All schemes in this paper will be schemes over C. All absolute products will
+be understood to be fiber products over Spec(C).
+  For a projective variety X and a numerical polynomial P (t), HilbP (t) (X) denotes the cor-
+responding Hilbert scheme. For integers d, g, Hd,g (X) ⊂ Hilbdt+1−g (X) denotes the open
+subscheme parametrizing smooth, connected curves of degree d and genus g, and Hd,g (X)
+denotes the closure of Hd,g (X) in Hilbdt+1−g (X).
+
+                          2. Review of the Abel-Jacobi Map
+  Our object of study are the Abel-Jacobi maps associated to families of 1-cycles on a smooth
+cubic hypersurface X ⊂ P4 . The reader is referred to [2] and [6] for full definitions. Here we
+recall only a few facts about Abel-Jacobi maps.
+    Associated to a smooth, projective threefold X there is a complex torus
+                                                                        
+                      J 2 (X) = HZ3 (X)\H 3(X, C)/ H 3,0 (X) ⊕ H 2,1 (X) .                  (1)
+In case X is a cubic hypersurface in P4 (in fact for any rationally connected threefold) then
+J 2 (X) is a principally polarized abelian variety with theta divisor Θ. Given an algebraic
+1-cycle γ ∈ A1 (X) which is homologically equivalent to zero [6, 13], one can associate a point
+               ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                           5
+
+u2 (α). The construction is analogous to the Abel-Jacobi map for a smooth, projective alge-
+braic curve C which associates to each 0-cycle γ ∈ A0 (C) which is homologically equivalent to
+zero a point u1 (α) ∈ J 1 (C), the Jacobian variety of C. In particular u2 : A1 (X)hom → J 2 (X)
+is a group homomorphism.
+   Suppose that B is a normal, connected variety of dimension n and Γ ∈ An+1 (B × X) is an
+(n + 1)-cycle such that for each closed point b ∈ B the corresponding cycle Γb ∈ A1 (X) [4,
+§10.1] is homologically equivalent to zero. Then in this case the set map b 7→ u1 (Γb ) ∈ J 2 (X)
+comes from a (unique) algebraic morphism u = uΓ : B → J 2 (X). We call this morphism the
+Abel-Jacobi map determined by Γ.
+   More generally, suppose B as above, Γ ∈ An+1 (B × X) is any (n + 1)-cycle, and suppose
+b0 ∈ B is some base-point. Then we can form a new cycle Γ′ = Γ −π2∗ Γb0 , and for all b ∈ B we
+have Γ′b = Γb − Γb0 is homologically equivalent to zero. Thus we have an algebraic morphism
+u = uΓ′ : B → J 2 (X). Of course this morphism depends on the choice of a base-point, but
+changing the base-point only changes the morphism by a constant translation. Thus we shall
+speak of any of the morphisms uΓ′ determined by Γ and the choice of a base-point as an
+Abel-Jacobi map determined by Γ.
+   Suppose that Γ1 , Γ2 ∈ An+1 (B × X) are two (n + 1)-cycles. Then uΓ1 +Γ2 is the pointwise
+sum uΓ1 + uΓ2 . This trivial observation is frequently useful.
+   The Residuation Trick: Another useful observation is that any Abel-Jacobi morphism
+αΓ contracts all rational curves on B, since an Abelian variety contains no rational curves.
+Combined with the observation in the last paragraph, this leads to the residuation trick:
+Suppose that B is a normal, rationally-connected variety and Γ ∈ An+1 (B × X) is an (n + 1)-
+cycle. Then uΓ : B → J(X) is a constant map. Now suppose that B ′ ⊂ B is a normal closed
+subvariety and that Γ|B′ ×X decomposes as a sum of cycles Γ1 + Γ2 . Since uΓ1 + uΓ2 equals
+a constant map, we conclude that uΓ1 is the pointwise inverse of uΓ2 , up to a fixed additive
+constant.
+
+                           3. Lines, Conics and Plane Cubics
+
+  The study of the Abel-Jacobi map associated to the space H1,0 (X) of lines on X was
+carried out in [2]. In this section we will summarize their results, which will also be useful to
+us for studying Abel-Jacobi maps of higher degree curves. In this section we also consider the
+Abel-Jacobi maps associated to the spaces H2,0 (X) and H3,1 (X) of plane conics and plane
+cubics in X. In each case the Abel-Jacobi is trivial to describe.
+
+3.1. Lines. For brevity we refer to the Fano scheme of lines, H1,0 (X), simply as F . Two
+general lines L1 , L2 ⊂ P4 determine a hyperplane by span(L1 , L2 ). We generalize this as
+                            Φ
+follows: Let (F × F − ∆) −  → P4∨ denote the following set map:
+                                        
+                                          [span (L1 , L2 )] if L1 ∩ L2 = ∅,
+                       Φ ([L1 , L2 ]) =                                                (2)
+                                          [Tp X]            if p ∈ L1 ∩ L2
+By [2, lemma 12.16], Φ is algebraic. Let X ∨ ⊂ P4∨ denote the dual variety of X, i.e.
+the variety parametrizing tangent hyperplanes to X. Let Xs∨ ⊂ X ∨ denote the subvariety
+parametrizing hyperplanes H which are tangent to X and such that the singular locus of
+H ∩ X is not simply a single ordinary double point. Let Us ⊂ U ⊂ F × F denote the open
+6                                      HARRIS, ROTH, AND STARR
+
+sets Φ−1 (P4∨ − X ∨ ) ⊂ Φ−1 (P4∨ − Xs∨ ). And let I ⊂ F × F denote the divisor parametrizing
+incident lines, i.e. I is the closure of the set {([L1 ], [L2 ]) : L1 6= L2 , L1 ∩ L2 6= ∅}. In [2],
+                                                                                                  ψ
+Clemens and Griffiths completely describe both the total Abel-Jacobi map F × F −
+                                                                               → J(X)
+                           i
+and the Abel-Jacobi map F −→J(X). Here is a summary of their results
+                                                                                                          u
+Theorem 3.1. 1. The Fano variety F is a smooth surface and the Abel-Jacobi map F −    →
+    J(X) is a closed immersion [2, theorem 7.8, theorem 12.37].
+ 2. The induced map Alb(F ) = J 2 (F ) → J(X) is an isomorphism of principally polarized
+    Abelian varieties [2, theorem 11.19].
+                                      3
+ 3. The class of u(F ) in J(X) is [Θ]
+                                   3!
+                                        [2, proposition 13.1].
+ 4. The difference of Abel-Jacobi maps
+                         ψ : F × F → J(X), ψ([L], [L′ ]) = u([L]) − u([L′ ])                            (3)
+       maps F × F generically 6-to-1 to the theta divisor Θ ⊂ J(X) [2, section 13].
+                        G
+    5. Let (Θ − {0}) − → PH 1,2 (X)∨ denote the Gauss map. If we identify PH 1,2 (X) with P4
+       via the Griffiths residue calculus [5], then the composite map
+                                                    ψ               G
+                                   (F ×C F − ∆) −           → P4∨
+                                                → (Θ − {0}) −                                           (4)
+       is just the map Φ defined above [2, formula 13.6].
+    6. The fibers of the Abel-Jacobi map form a Schläfli double-six, i.e. the general fiber of
+       ψ : F × F → J is of the form {(E1 , G1 ), . . . , (E6 , G6 )} where the lines Ei , Gj lie in a
+       smooth hyperplane section of X, the Ei are pairwise skew, the Gj are pairwise skew, and
+       Ei and Gj are skew iff i = j.
+          There is a more precise result than above. Let
+                         R′ ⊂ (U ×P4∨ U) × F × Grass(3, V ) × Grass(3, V )                              (5)
+       be the closed subscheme parametrizing data (([L1 ], [L2 ]) , ([L3 ], [L4 ]) , [l], [H1 ], [H3 ]) such
+       that for each i = 1, . . . , 4, l∩Li 6= ∅ and such that H1 ∩X = l∪L1 ∪L4 , H2 ∩X = l∪L2 ∪L3 .
+       Let R ⊂ U ×P4∨ U be the image of R′ under the projection map. Let ∆ ⊂ U × U be the
+       diagonal. Then the fiber product U ×Θ U ⊂ U × U is just the union R ∪ ∆ [2, p. 347-348]
+                                       G                                              Φ
+    7. The branch locus of Θ −        → P4∨ equals the branch locus of F × F −       → P4∨ equals the
+       dual variety of X, i.e. the variety parametrizing the tangent hyperplanes to X. The
+                                     Φ                                        ψ
+       ramification locus of U −     → P4∨ equals the ramification locus of U −
+                                                                              → Θ equals the divisor
+       I. Each such pair is a simple ramification point of both ψ and Φ [2, lemma 13,8].
+   In [15], Tjurin also analyzed cubic threefolds and the associated intermediate Jacobians.
+We summarize his results:
+Theorem 3.2. [15] Let J(X)  ] be the variety obtained by blowing up 0 ∈ J(X) and let Θ      e
+be the proper transform of Θ. Let F^  × F be the variety obtained by blowing up the diagonal
+in F × F . The exceptional divisor E ⊂ J(X) ] is isomorphic to P4 and this isomorphism
+                            e ∩ E with our original cubic threefold X. The exceptional divisor
+identifies the intersection Θ
+E ′ ⊂ F^ × F is the projective bundle PTF . In fact there is an isomorphism of sheaves of the
+tautological rank 2 sheaf S = S(2, V ) and the tangent bundle TF so that E ′ ∼  = PF S. The
+                              ψ̃
+                      → P4 is just the usual morphism induced by the map of sheaves
+induced morphism PF S −
+                 ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                                    7
+
+S ֒→ V ⊗C OF . In particular, this morphism is generically 6-to-1 onto X with ramification
+locus Σ1 ⊂ F consisting of the lines of ”second type”, i.e. lines L ⊂ X such that NL/X ∼    =
+                                                                                      e
+OL (−1) ⊕ OL (1). Let D ⊂ F × F denote the divisor of intersecting lines and let D be the
+proper transform of D. Then D   e ∩ E ′ = Σ1 so that we finally have the result: The morphism
+F^ ×F →Θ  e is finite of degree 6 with ramification locus D.
+                                                          e
+
+3.2. Conics. Next we consider the space H2,0 (X) parametrizing smooth plane conics on
+X. Given a plane conic C ⊂ X, consider the plane cubic curve which is the intersection
+span(C) ∩X. This curve contains C is an irreducible component, and the residual component
+is a line L ⊂ X. In this way we have a morphism H2,0 (X) → F by [C] 7→ [L]. Conversely,
+given a line L ⊂ X and a 2-plane P ⊂ P4 which contains L, then the residual to L in P ∩ X
+is a plane conic. In this way one sees that H2,0 (X) is isomorphic to an open subset of the
+P2 -bundle
+                               PQ = {([L], [P ]) ∈ F × G(2, 4)|L ⊂ P }.                                  (6)
+In [7, prop 3.4] we prove the stronger result:
+Proposition 3.3. The morphism H2,0 (X) → F is isomorphic to an open subset of a P2 -
+bundle PQ → F . In particular, H2,0 (X) is smooth and connected of dimension 4. Moreover
+PQ is the normalization of Hilb2t+1 (X).
+  Next we describe the Abel-Jacobi map for conics. By the residuation trick, the Abel-Jacobi
+map uD2 : PQ → J(X) is, up to a fixed translation, the pointwise inverse of the composite
+    π    u
+PQ −
+   →F − → J(X). Thus the fibers of uD2 : PQ → J(X) are just the fibers of π, i.e. P2 ’s.
+3.3. Plane Cubics. Every curve C ⊂ P4 with Hilbert polynomial 3t is a plane cubic, and
+the 2-plane P = span(C) is unique; we have that C = X ∩ P . Therefore the Hilbert scheme
+Hilb3t (X) is just the Grassmannian G(2, P4 ) of 2-planes in P4 and H3,1 (X) is just an open
+subset of G(2, P4 ). Since G(2, P4 ) is rational, it follows that both the total Abel-Jacobi map
+ψ : Hilb3t (X) × Hilb3t (X) → J(X) and the Abel-Jacobi map i : Hilb3t (X) → J(X) are
+constant maps.
+3.4. Two Useful Results. Recall that ψ : F × F → J(X) is defined as the difference map
+ψ = u ◦ π1 − u ◦ π2 . Now we consider the sum map ψ ′ = u ◦ π1 + u ◦ π2 . Alternatively one
+may define ψ ′ to be the (Weil extension of the) morphism (F × F ) − ∆ → J(X) which is
+                                                              π
+the Abel-Jacobi map corresponding to the flat family Z −     → (F × F − ∆) defined as follows.
+For L1 and L2 skew lines, we define Z([L1 ],[L2]) to be the disjoint union of L1 and L2 . If
+p ∈ L1 ∩ L2 , we define Z([L1 ],[L2]) to be the subscheme whose reduced scheme is just the union
+L1 ∪ L2 and which has an embedded point at p corresponding to the normal direction of
+span(L1 , L2 ) ⊂ Tp X.
+  Clearly ψ ′ commutes with the involution
+                           ι : F × F → F × F, ([L1 ], [L2 ]) 7→ ([L2 ], [L1 ]).                          (7)
+                                                                                                  ψ′′
+So ψ ′ factors through the quotient F × F → Sym2 F . We will denote by Sym2 F −→ J(X)
+the induced morphism. Let us define Θ′ to be the scheme-theoretic image of ψ ′ .
+  First we prove an easy lemma about cohomology of complex tori. Given a g-dimensional
+complex torus A and a sequence of nonzero integers (n1 , . . . , nr ), consider the holomorphic
+map f = f(n1 ,...,nr ) : Ar → A defined by f (a1 , . . . , ar ) = n1 a1 + · · · + nr ar . There is an induced
+8                                       HARRIS, ROTH, AND STARR
+
+Gysin image map on cohomology f∗ : H p+2(r−1)g (Ar ) → H p (A). Now by the Künneth formula,
+the cohomology H q (Ar ) is a direct sum of Künneth components H q1 (A) ⊗ · · · ⊗ H qr (A) with
+q = q1 + · · · + qr .
+Lemma 3.4. For each integer r ≥ 1, for each integer 0 ≤ p ≤ 2g, and for each decomposition
+(q1 , . . . , qr ) with q1 + · · · + qr = p + 2(r − 1)g, there is a homomorphism
+                           g = g(q1 ,...,qr ) : H q1 (A) ⊗ · · · ⊗ H qr (A) → H p (A)                        (8)
+such that for each sequence of nonzero integers (n1 , . . . , nr ), with f defined as above, the
+restriction of the Gysin image map
+                                  f∗ : H q1 (A) ⊗ · · · ⊗ H qr (A) → H p (A)                                 (9)
+                                        
+satisfies f∗ = n12g−q1 · · · · · nr2g−qr g.
+Proof. This is just a computation. By Poincaré duality, to give the homomorphism g, it is
+equivalent to give a bilinear pairing
+                             (H q1 (A) ⊗ · · · ⊗ H qr (A)) × H 2g−p (A) → Z.                                 (10)
+                                    V
+Moreover, since H 2g−p (A) = 2g−p H 1(A), it suffices to define the pairing for pure wedge
+powers α = α1 ∧ · · · ∧ α2g−p ∈ H g−p (A). Define S to be the set of functions σ : {1, 2, . . . , 2g −
+p} → 1, 2, . . . , r such that for each i = 1, . . . , r, we have qi + #σ −1 (i) = 2g. We define the
+pairing by taking the wedge product in H ∗ (Ar ) and then taking the degree as follows:
+                                                  X
+hβ = β1 ⊗ · · · ⊗ βr , α1 ∧ · · · ∧ α2g−p i = deg      π1∗ β1 ∧ · · · ∧ πr∗ βr ∧ πσ(1)
+                                                                                  ∗                  ∗
+                                                                                       α1 ∧ · · · ∧ πσ(2g−p) α2g−p .
+                                                    σ∈S
+                                                                                                            (11)
+                                                
+    The fact that f∗ = n12g−q1 · · · · · nr2g−qr g follows from the projection formula
+                                           f∗ (β) ∧ α = f∗ (β ∧ f ∗ α)                                      (12)
+together with the formula
+                                   f ∗ (α1 ∧ · · · ∧ αr ) = f ∗ (α1 ) ∧ · · · ∧ f ∗ (αr ) =                 (13)
+                                                                                      
+               r
+               X                                    Xr
+                       ∗
+                 nσ(1) πσ(1) (α1 ) ∧ · · · ∧                        ∗
+                                                           nσ(2g−p) πσ(2g−p)   (α2g−p ) .
+               σ(1)=1                                σ(2g−p)=1
+
+
+
+
+Theorem 3.5. The image Θ′ is a divisor in J(X) which is algebraically equivalent to 3Θ and
+ψ ′ : Sym2 (F ) → Θ′ is birational. The singular locus of Θ′ has codimension 2. For general
+a ∈ J(X), we have that Θ′ ∩ (a + Θ) is irreducible.
+Proof. For divisors on J(X), algebraic equivalence is equivalent to homological equivalence,
+so we shall establish that Θ′ is homologically equivalent to 3Θ.
+                 ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                                         9
+
+  Using the notation of the previous lemma, both Θ and Θ′ are images of the subvariety
+u(F ) × u(F ) ⊂ J × J under the morphism f(1,−1) and f(1,1) respectively. By lemma 3.4 we
+know there is a linear map g : H 4 (J) ⊗ H 4 (J) → H 2 (J) such that
+                f(1,−1)∗ (P.D.[u(F ) × u(F )]) = (1)6 (−1)6 g(P.D.[u(F ) × u(F )]),                         (14)
+                     f(1,1)∗ (P.D.[u(F ) × u(F )]) = (1)6 (1)6 g(P.D.[u(F ) × u(f )])
+where P.D.[u(F ) × u(F )] is the Poincaré dual of the homology class of u(F ) × u(F ). We
+know the mapping ψ : F × F → Θ has degree 6. So if ψ ′ : F × F → Θ′ has degree d, then it
+follows that
+    dP.D.[Θ′ ] = f(1,1)∗ (P.D.[u(F ) × u(F )]) = f(1,−1)∗ (P.D.[u(F ) × u(F )]) = 6P.D.[Θ].                 (15)
+In other words, the cohomology class of Θ′ is equal to d6 times the cohomology class of Θ. Of
+course d is divisible by 2 because ψ ′ factors through F × F → Sym2 (F ). It remains to prove
+that d is precisely 2.
+  Now let G ′ : (Θ′ )ns → P4∨ be the Gauss map defined on the nonsingular locus of Θ′ . Of
+course the differentials dψ and dψ ′ are simply given by du◦dπ1 −du◦dπ2 and by du◦dπ1 +du◦
+dπ2 respectively. In particular for each point (L, M) ∈ F × F , the subspace image(dψ) ⊂ T0 J
+and image(dψ) ⊂ T0 J are equal, i.e. the composites
+                                                           ψ   G
+                                      (F × F − ∆) − → P4∨
+                                                  →Θ−                                                       (16)
+                                                      ψ′       G′
+                                            F × F −→ Θ′ −
+                                                        → P4∨                                               (17)
+are equal as rational maps; so both are equal to the rational map Φ. Therefore, for each point
+([L1 ], [L2 ]) whose image under ψ ′ lies in the nonsingular locus of Θ′ , we see that the fiber of ψ ′
+containing ([L1 ], [L2 ]) is contained in the fiber of Φ containing ([L1 ], [L2 ]). So, we are reduced
+to showing that, for generic ([L1 ], [L2 ]), if ψ ′ ([L1 ], [L2 ]) = ψ ′ ([L3 ], [L4 ]) with L1 , L2 , L3 and
+L4 contained in a smooth hyperplane section of X, then either ([L1 ], [L2 ]) = ([L3 ], [L4 ]) or
+([L2 ], [L1 ]) = ([L4 ], [L3 ]).
+    A bit more generally, suppose that ([L1 ], [L2 ]) ∈ U is a pair of skew lines. We will
+show that the fiber (ψ ′ )−1 (ψ ′ ([L1 ], [L2 ])) = {([L1 ], [L2 ]) , ([L2 ], [L1 ])}. Indeed, suppose that
+ψ ′ ([L1 ], [L2 ]) = ψ ′ ([L3 ], [L4 ]) and suppose that ([L3 ], [L4 ]) 6= ([L2 ], [L1 ]). Then ψ ([L1 ], [L4 ]) =
+ψ ([L3 ], [L2 ]). Therefore Φ ([L1 ], [L4 ]) = Φ ([L3 ], [L2 ]). Let us call this common hyperplane
+H. Then L1 ⊂ H and L2 ⊂ H. Therefore H = Φ ([L1 ], [L2 ]). Since we have L4 6= L1 and
+L3 6= L2 , we conclude that ([L1 ], [L4 ]) , ([L3 ], [L2 ]) ∈ U. Therefore, by theorem 3.1 (7), we
+have either ([L1 ], [L4 ]) = ([L3 ], [L2 ]), or else there exists a line l ∈ H such that l ∪ L1 ∪ L2
+is the intersection of X with a P2 . But L1 and L2 cannot lie in a common P2 since they are
+skew. Therefore we conclude that ([L1 ], [L4 ]) = ([L3 ], [L2 ]), i.e. ([L3 ], [L4 ]) = ([L1 ], [L2 ]).
+   So we deduce that d = 2 and thus Θ′ is algebraically equivalent to 3Θ. But we deduce
+even more. The image of U − I ∩ U in Sym2 F is smooth, let’s call it U ′ . Since the map
+ψ ′ : U ′ → ψ ′ (U ′ ) is bijective and since rank(dψ ′ ) = rank(dψ) = 4 on U − I ∩ U, it follows
+                                                                                                 ψ′
+from Zariski’s main theorem [14, p. 288-289] that ψ ′ (U ′ ) is smooth and U ′ −→ ψ ′ U ′ is an
+isomorphism. Now the complement of U in F ×F has codimension 2. Therefore ψ ′ (F ×F −U)
+has codimension at least 2 inside of Θ′ . But in fact ψ ′ (I) also has codimension 2. Consider
+                    ρ
+the rational map I −→ F defined by sending a pair of incident lines ([L1 ], [L2 ]) to the residual
+line l such that span(L1 , L2 ) ∩ X = l ∪ L1 ∪ L2 . By the residuation trick we have that the
+10                                 HARRIS, ROTH, AND STARR
+
+restriction of ψ ′ to I equals the composition of ρ with the pointwise negative Abel-Jacobi
+map −i. In particular ψ ′ (I) is just −u(F ) up to translation. So ψ ′ (I) has codimension 2
+inside of Θ′ . Therefore ψ ′ (U ′ ) ⊂ Θ′ has complement of codimension 2. So the singular locus
+of Θ′ , has codimension 2.
+   Since Θ′ ∩ (a + Θ) is a positive dimensional intersection of ample divisors, Θ′ ∩ (a + Θ) is
+connected. Since Θ′ ∩ (a + Θ) is a complete intersection of Cartier divisors, it follows from
+Hartshorne’s connectedness theorem [3, thereom 18.12] that Θ′ ∩ (a + Θ) is connected in
+codimension 2. Thus to prove that Θ′ ∩ (a + Θ) is irreducible, it suffices to prove that the
+singular locus of Θ′ ∩(a+Θ) has codimension at least 2. By the Bertini-Kleiman theorem [10,
+theorem III.10.8], we have that for general a ∈ J(X), the intersection Θ′ ∩ (a + Θ) is smooth
+away from the intersection of each divisor with the singular locus of the other divisor. But
+by the last paragraph and by theorem 3.2, we see that the singular loci of Θ and Θ′ both
+have codimension at least 2 (in Θ or Θ′ respectively). So it follows that for a general, the
+singular locus of Θ′ ∩ (a + Θ) has codimension at least 2. Thus we conclude that for general
+a ∈ J(X), the intersection Θ′ ∩ (a + Θ) is irreducible.
+
+
+     We also use the following enumerative lemma, which is proved in [7, lemma 4.2].
+
+Lemma 3.6. Suppose that C ⊂ X is a smooth curve of genus g and degree d. Let BC ⊂ F
+denote the scheme parametrizing lines in X which intersect C in a scheme of degree 2 or
+more. Define b(C) = 5d(d−3)
+                        2
+                            + 6 − 6g. If BC is not positive dimensional and if b(C) ≥ 0, then
+the degree of BC is b(C).
+
+                                     4. Twisted cubics
+
+   We now begin in earnest the analysis of the geometry of cubic, quartic and quintic curves
+on our cubic threefold X ⊂ P4 . In each case our goal is the proof of the Main Theorem 1.1
+for the variety Hd,g (X) parametrizing curves of this degree and genus. We start with the
+variety H3,0 (X) parametrizing rational curves of degree 3—that is twisted cubics.
+   In [7, theorem 4.4] we prove the following result
+Theorem 4.1. The space H3,0 (X) is a smooth, irreducible 6-dimensional variety.
+     We have a morphism
+                                                 σ3,0
+                                       H3,0 (P4 ) −−→ P4∨                                 (18)
+
+defined by sending [C] to span(C). This morphism makes H3,0 (P4 ) into a locally trivial
+bundle over P4∨ with fiber H3,0 (P3 ) . Recall from section 3 that we defined X ∨ ⊂ P4∨ to
+be the dual variety of X which parametrizes tangent hyperplanes to X and we defined U
+to be the complement of X ∨ in P4∨ . Then we define HU3,0 (X) to be the open subscheme of
+H3,0 (X) which parametrizes twisted cubics, C, in X such that σ 3,0 ([C]) ∈ U. By the graph
+construction we may consider HU3,0 (X) as a locally closed subvariety of Hilb3t+1 (X) × U.
+Let H ⊂ Hilb3t+1 (X) × U denote the closure of HU3,0 (X) with the reduced induced scheme
+                           f
+structure. Denote by H −
+                       → U(X) the projection map.
+               ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                         11
+
+                         f ′′     f′                                           f
+Theorem 4.2. Let H −→ U ′ −
+                          → U(X) be the Stein factorization of H −
+                                                                 → U(X). Then
+   f ′′                                             π
+H −→ U ′ is isomorphic to a P2 -bundle PU ′ (E) −
+                                                → U ′ with E a locally free sheaf of rank 3.
+          f′
+And U ′ −→ U is an unramified finite morphism of degree 72. Moreover, the Abel-Jacobi map
+    i                  f ′′     i′               i′
+H− →J(X) factors as H −→ U ′ − → J(X) where U ′ −→ J(X) is a birational morphism of U ′ to
+a translate of Θ.
+Proof. This theorem is [7, theorem 4.5], and is proved there. For brevity’s sake, we recall just
+the sketch of the proof.
+  One can form the subvariety X ⊂ U × X as the universal smooth hyperplane section of X.
+Each fiber of X → U is a smooth cubic surface. We associate to this family of cubic surfaces
+the finite étale morphism
+                                       ρ : Pic3,0 (X /U) → U                               (19)
+whose fiber over a point [H] ∈ U is simply the set of divisor classes D on the smooth cubic
+surface H ∩ U such that D.D = 1 and D.h = 3 with h the hyperplane class. Now the
+Weyl group W(E6 ) acts transitively on the set of such divisor classes D. It follows that with
+respect to the model of a cubic surface as P2 blown up at 6 points, each divisor class D above
+corresponds to the class of a line on P2 . From this it follows that the induced morphism
+                                  g : H3,0 (X) → Pic3,0 (X /U))                            (20)
+is surjective and isomorphic to an open subset of a P2 -bundle on Pic3,0 (X /U). In particular,
+since u : H3,0 (X) → J(X) contracts all rational curves, there is an induced morphism u′ :
+Pic3,0 (X /U) → J(X) such that u = u′ ◦ g.
+   It only remains to show that u′ maps Pic3,0 (X /U) birationally to its image. This is proved
+by analyzing “Z”s of lines, i.e. configurations of lines on a cubic surface H ∩ X whose dual
+graph is just the connected graph with 3 vertices and no loops. Using 3.1, part 5, we conclude
+that two “Z”s have the same image in J(X) iff they are in the same linear equivalence class
+on H ∩ X.
+
+Corollary 4.3. The Abel-Jacobi map u3,0 : H3,0 (X) → J(X) dominates a translate of Θ and
+is birational to a P2 -bundle over its image.
+Proof. Since H3,0 (X) is irreducible, HU3,0 (X) is dense in H3,0 (X).
+4.1. Quartic Elliptic Curves. Recall that the normalization of Hilb2t+1 (X) is isomorphic
+to the P2 -bundle PQ → F which parametrizes pairs (L, P ) which L ⊂ X a line and P ⊂ P4 a
+                            g
+                            → PQ denote the P1 -bundle which parametrizes triples (L, P, H)
+2-plane containing L. Let A −
+                                            h
+                                            → A denote the P4 -bundle parametrizing 4-tuples
+with H a hyperplane containing P . Let I4,1 −
+(L, P, H, Q) where Q ⊂ H is a quadric surface containing the conic C ⊂ X ∩ P . Notice that
+I4,1 is smooth and connected of dimension 4 + 1 + 4 = 9.
+  Let D ⊂ I4,1 ×X denote the intersection of the universal quadric surface over I4,1 with I4,1 ×
+X ⊂ I4,1 × P4 . Then D is a local complete intersection scheme. By the Lefschetz hyperplane
+theorem, X contains no quadric surfaces; therefore D → I4,1 has constant fiber dimension 1
+and so is flat. Let D1 ⊂ I4,1 × X denote the pullback from PQ × X = Hilb2t+1 (X) × X of
+the universal family of conics. Since I4,1 × X → PQ × X is smooth and the universal family
+12                                 HARRIS, ROTH, AND STARR
+
+of conics is a local complete intersection which is flat over PQ, we conclude that also D1 is
+a local complete intersection which is flat over I4,1 . Clearly D1 ⊂ D. Thus by corollary [7,
+corollary 2.7], we see that the residual D2 of D1 ⊂ D is Cohen-Macaulay and flat over I4,1 .
+   By the base-change property in corollary [7, corollary 2.7], we see that the fiber of D1 → I4,1
+over a point (L, P, H, Q) is simply the residual of C ⊂ Q ∩ X. If we choose Q to be a smooth
+quadric, i.e. Q ∼
+                = P1 × P1 , then C ⊂ Q is a divisor of type (1, 1) and X ∩ Q ⊂ Q is a divisor
+of type (3, 3). Thus the residual curve E is a divisor of type (2, 2), i.e. a quartic curve of
+arithmetic genus 1. Thus D2 ⊂ I4,1 × X is a family of connected, closed subschemes of X
+with Hilbert polynomial 4t. So we have an induced map f : I4,1 → Hilb4t (X).
+
+Proposition 4.4. The image of the morphism above f : I4,1 → Hilb4t (X) is the closure
+H4,1 (X) of H4,1 (X). Moreover the open set f −1 H4,1 (X) ⊂ I4,1 is a P1 -bundle over H4,1 (X).
+Thus H4,1 (X) is smooth and connected of dimension 8.
+Proof. This is [7, proposition 5.1].
+   If (L, P, H, Q) is a point in the fiber over [E], then H = span(E). And since there is no
+rational curve in F , we also have that L is constant in the fiber. So we have a well-defined
+morphism m : H4,1 (X) → PQ∨ , where PQ∨ is the P2 -bundle over F parametrizing pairs
+([L], [H]), L ⊂ H. For a general H, the intersection Y = H ∩ X is a smooth cubic surface.
+And the fiber m−1 ([L], [H]) is an open subset of the complete linear series |OY L + h|, where
+h is the hyperplane class on Y . Thus m : H4,1 (X) → PQ∨ is a morphism of smooth connected
+varieties which is birational to a P4 -bundle. Composing m with the projection PQ∨ yields a
+morphism n : H4,1 (X) → F which is birational to a P4 -bundle over a P2 -bundle.
+Corollary 4.5. By the residuation trick, we conclude the Abel-Jacobi map u4,1 : H4,1 (X) →
+J(X) is equal, up to a fixed translation, to the composite:
+                                            n        u1,0
+                               H4,1 (X) −−−→ F −−−→ J(X).                                    (21)
+Thus the general fiber of u4,1 equals the general fiber of n, and so is isomorphic to an open
+subset of a P4 -bundle over P2 .
+
+                           5. Cubic scrolls and applications
+
+
+5.1. Preliminaries on cubic scrolls.
+  In the next few sections we will use residuation in a cubic surface scroll. We start by
+collecting some basic facts about these surfaces.
+     There are several equivalent descriptions of cubic scrolls.
+     1. A cubic scroll Σ ⊂ P4 is a connected, smooth surface with Hilbert polynomial P (t) =
+        3 2
+        2
+          t + 25 t + 1.
+     2. A cubic scroll Σ ⊂ P4 is the determinantal variety defined by the 2 × 2 minors of a
+        matrix of linear forms:
+                                                        
+                                           L1 L2 L3
+                                                                                        (22)
+                                          M1 M2 M3
+       such that for each row or column, the linear forms in that row or column are linearly
+       independent
+               ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                            13
+
+   3. A cubic scroll Σ ⊂ P4 is the join of an isomorphism φ : L → C. Here L ⊂ P4 is a line
+      and C ⊂ P4 such that L ∩ span(C) = ∅. The join of φ is defined as the union over all
+      p ∈ L of the line span(p, φ(p)).
+   4. A cubic scroll Σ ⊂ P4 is the image of a morphism f : PE → P4 where E is the rank 2
+      vector bundle on P1 , E = OP1 (−1) ⊕ OP1 (−2), and the morphism f : PE → P4 is such
+      that f ∗ OP4 (1) = OPE (1) and the pullback map H 0 (P4 , OP4 (1)) → H 0 (PE, OPE (1) is an
+      isomorphism.
+   5. A cubic scroll Σ ⊂ P4 is as a minimal variety, i.e. Σ ⊂ P4 is any smooth connected
+      surface with span(Σ) = P4 which has the minimal possible degree for such a surface,
+      namely deg(Σ) = 3.
+   6. A cubic scroll Σ ⊂ P4 is a smooth surface residual to a 2-plane Π in the base locus of a
+      pencil of quadric hypersurfaces which contain Π.
+   From the fourth description Σ = f (PE) we see that Pic(Σ) = Pic(PE) ∼             = Z2 . Let π :
+PE → P denote the projection morphism and let σ : P → PE denote the unique section
+          1                                                     1
+
+whose image D = σ(P1 ) has self-intersection D.D = −1. Then f (D) is a line on Σ called the
+directrix. And for each t ∈ P1 , f (π −1 (t)) is a line called a line of the ruling of Σ. Denote by
+F the divisor class of any π −1 (t). Then Pic(Σ) = Z{D, F } and the intersection pairing on Σ
+is determined by D.D = −1, D.F = 1, F.F = 0. The hyperplane class is H = D + 2F and
+the canonical class is K = −2D − 3F .
+   Using the fourth description of a cubic scroll, we see that any two cubic scrolls differ only
+by the choice of the isomorphism H 0 (P4 , OP4 (1)) → H 0 (PE, OPE (1)). Therefore any two
+cubic scrolls are conjugate under the action of PGL(5). So the open set U ⊂ HilbP (t) (P4 )
+parametrizing cubic scrolls is a homogeneous space for PGL(5), in particular it is smooth,
+connected and rational. So the Abel-Jacobi map U → J(X) associated to the family of
+intersections Σ ∩ X ⊂ X is a constant map.
+5.2. Cubic Scrolls and Quartic Rational Curves.
+   Recall that Pic(Σ) = Z{D, F } where D is the directrix and F is the class of a line of ruling.
+The intersection product is given by D 2 = −1, D.F = 1, F 2 = 0. The canonical class is given
+by KΣ = −2D − 3F and the hyperplane class is given by H = D + 2F . The linear system |F |
+is nef because it is the pullback of OP1 (1) under the projection π : Σ → P1 . Similarly, |D + F |
+is nef because it contains all the conics obtained as the residuals to lines of the ruling in |H|.
+Thus for any effective curve class aD + bF we have the two inequalities a = (aD + bF ).F ≥ 0,
+b = (aD + bF ).(D + F ) ≥ 0.
+   Suppose that C ⊂ Σ is an effective divisor of degree 4 and arithmetic genus 0. By the
+adjunction formula
+                               KΣ .[C] + [C].[C] = 2pa − 2 = −2.                              (23)
+So if [C] = aD + bF , then we have the conditions
+                         a ≥ 0, b ≥ 0, a + b = 4, a2 − 2ab + a + 2b = 2.                      (24)
+It is easy to check that there are precisely two solutions [C] = 2D +2F, [C] = D +3F . We will
+see that both possibilities occur and describe some constructions related to each possibility.
+
+Lemma 5.1. Let C ⊂ P4 be a smooth quartic rational curve and let V ⊂ |OC (2)| be a pencil
+of degree 2-divisors on C without basepoints. There exists a unique map of a Hirzebruch
+14                                HARRIS, ROTH, AND STARR
+
+surface F1 , f : Σ → P4 such that (f ∗ H)2 = 3 and a factorization i : C → Σ of C → P4 such
+that i(C) ∼ 2D + 2F and the pencil of degree 2 divisors F ∩ C is the pencil V .
+Proof. This is [7, lemma 6.7].
+   Remark While we are at it, let’s mention a specialization of the construction above,
+namely what happens if V is not basepoint free. Then V = p + |OC (1)| where p ∈ C is some
+basepoint. Consider the projection morphism f : P4 → P3 obtained by projection from p
+(this is a rational map undefined at p). The image of C is a rational cubic curve B (possibly
+a singular plane cubic). Consider the cone Σ′ in P4 over B with vertex p. This surface
+contains C. If we blowup P4 at p, then the proper transform of Σ′ in P    f4 is a surface whose
+normalization Σ is a Hirzebruch surface F3 (normalization is only necessary if B is a plane
+curve). The directrix D of Σ is the pullback of the exceptional divisor of f  P4 . The inclusion
+C ⊂ Σ induces a factorization i : C → Σ of C → P , and [i(C)] = D + 4F . The intersection
+        ′                                           4
+
+of D and i(C) is precisely the point p. And the linear system i∗ |F | is exactly |OC (1)|.
+   Next we consider the case of a rational curve C ⊂ Σ such that [C] = D + 3F .
+Lemma 5.2. Let C ⊂ P4 be a smooth quartic rational curve and let L ⊂ P4 be a line such
+that L ∩ C = Z is a degree 2 divisor. Let φ : C → L be an isomorphism such that φ(Z) = Z
+and φ|Z is the identity map. Then there exists a unique triple (h, i, j) where h : Σ → P4 is a
+finite map of a Hirzebruch surface Σ ≡ F1 , and i : C → P4 , j : L → P4 are factorizations
+of C → P4 , L → P4 such that j(L) = D is the directrix, such that [i(C)] = D + 3F and such
+that the composition of i : C → Σ with the projection π : Σ → D equals j ◦ φ.
+Proof. This is [7, lemma 6.8].
+5.3. Cubic Scrolls and Quintic Elliptics.
+   Recall that our fourth description of a cubic scroll was the image of a morphism f : Σ → P4
+where Σ is the Hirzebruch surface F1 , f ∗ O(1) ∼ OΣ (1) = OPE (D + 2F ), and f : Σ → P4 is
+given by the complete linear series of OΣ (D + 2F ). In the next sections it will be useful to
+weaken this last condition.
+
+Definition 5.3. A cubic scroll in Pn is a finite morphism f : Σ → Pn where Σ is isomorphic
+to the Hirzebruch surface F1 and such that f ∗ OPn (1) is isomorphic to OΣ (D + 2F ).
+   Let H = D + 2F denote the pullback of the hyperplane class. Now suppose that E ⊂ Σ is
+an effective Cartier divisor with pa (E) = 1 and E.H = 5. Since F and D + F are effective
+and move, we have E.F, E.(D + F ) ≥ 0. Writing E = aD + bF we see (a, b) satisfies the
+relations a, b ≥ 0, a + b = 5 and a(b − 3) + b(a − 2) − a(a − 2) = 0. These relations give the
+unique solution E = 2D + 3F = −K. In particular, if E is smooth then π : E → P1 is a finite
+morphism of degree 2, i.e. a g21 on E. Thus a pair (f : Σ → Pn , E ⊂ Σ) of a cubic scroll and
+a quintic elliptic determines a pair (g : E → Pn , π : E → P1 ) where g : E → Pn is a quintic
+elliptic and π : E → P1 is a degree 2 morphism.
+   Suppose we start with a pair (g : E → Pn , π : E → P1 ) where g : E → Pn is an embedding
+of a quintic elliptic curve and π : E → P1 is a degree 2 morphism. Consider the rank 2 vector
+bundle π∗ g ∗OPn (1).
+
+Lemma 5.4. Suppose E is an elliptic curve and π : E → P1 is a degree 2 morphism. Suppose
+L is an invertible sheaf on E of degree d. Then we have
+               ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                          15
+
+
+                        
+                         OP1 (e) ⊕ OP1 (e − 1)     d = 2e + 1,
+                 π∗ L ∼
+                      =   OP1 (e) ⊕ OP1 (e − 2)     d = 2e, L ∼= π ∗ OP1 (e),               (25)
+                        
+                          OP1 (e − 1) ⊕ OP1 (e − 1) d = 2e, L ∼
+                                                              6= π ∗ OP1 (e)
+Proof. This is [7, lemma 6.10].
+   By the lemma we see that the vector bundle G := π∗ g ∗OPn (1) is isomorphic to OP1 (1) ⊕ OP1 (2).
+Associated to the linear series OEn+1 → g ∗OPn (1) defining the embedding g, we have the push-
+forward linear series OPn+1
+                         1  → G. Since g is an embedding, for each pair of points {p, q} ⊂ E
+(possibly infinitely near), we have that OEn+1 → g ∗ OPn (1)|{p,q} is surjective. In particular
+taking {p, q} = π −1 (t) for t ∈ P1 , we conclude that OPn+1 1   → F |t is surjective. Thus we
+have an induced morphism PG∨ → Pn which pulls back OPn (1) to OPG∨ (1). Let us denote
+Σ := PG∨ and let us denote the morphism by f : Σ → Pn . Abstractly Σ is isomorphic to F1
+and f : Σ → Pn is a cubic scroll.
+  The tautological map π ∗ π∗ g ∗OPn (1) → g ∗ OPn (1) is clearly surjective. Thus there is an
+induced morphism h : E → Σ. Chasing definitions, we see that g = f ◦h. So we conclude that
+given a pair (g : E → Pn , π : E → P1 ) as above, we obtain a pair (f : Σ → Pn , h : E → Σ).
+Thus we have prove the following:
+Lemma 5.5. There is an equivalence between the collection of pairs (f : Σ → Pn , h : E → Σ)
+with f : Σ → Pn a cubic scroll and f ◦ h : E → Pn an embedded quintic elliptic curve and the
+collection of pairs (g : E → Pn , π : E → P1 ) where g : E → Pn is an embedded quintic elliptic
+curve and π : E → P1 is a degree 2 morphism.
+  Stated more precisely, this gives an isomorphism of the parameter schemes of such pairs,
+but we don’t need such a precise result.
+
+5.4. Cubic Scrolls and Quintic Rational Curves.
+   If one carries out the analogous computations as at the beginning of subsection 5.2 one
+sees that the only effective divisor classes aD + bF on a cubic scroll Σ with degree 5 and
+arithmetic genus 0 are D + 4F and 3D + 2F . But the divisor class 3D + 2F cannot be the
+divisor of an irreducible curve because (3D + 2F ).D = −1. Thus if C ⊂ Σ is an irreducible
+curve of degree 5 and arithmetic genus 0, then [C] = D + 4F .
+Lemma 5.6. Let C ⊂ P4 be a smooth quintic rational curve and let L ⊂ P4 be a line such
+that L ∩ C is a degree 3 divisor Z. Let φ : C → L be an isomorphism such that φ(Z) = Z
+and φ|Z is the identity map. Then there exists a unique triple (h, i, j) such that h : Σ → P4 is
+a finite map of a Hirzebruch surface Σ ≡ P4 , and i : C → P4 , j : L → P4 are factorizations
+of C → P4 , L → P4 such that j(L) = D is the directrix, such that [i(C)] = D + 4F and such
+that the composition of i with the projection π : Σ → D equals j ◦ φ.
+Proof. This is [7, lemma 6.12].
+
+                              6. Quartic Rational Curves
+  In this section we will prove that the Abel-Jacobi map u4,0 : H4,0 (X) → J(X) is dominant
+and the general fiber is irreducible of dimension 3. In a later section we will prove that the
+general fiber is unirational.
+16                                 HARRIS, ROTH, AND STARR
+
+   The construction we use to understand quartic rational curves is as follows. For any
+quartic rational curve C ⊂ X, define AC ⊂ F to be the scheme parametrizing 2-secant
+lines to C. By lemma 3.6, AC is either positive-dimensional or else has length 16. Define
+I ⊂ H4,0 (X) × Hilb2 (F ) to be the space of pairs ([C], [Z]) where Z ⊂ AC is a 0-dimensional
+length 2 subscheme of AC . Denote by Λ ⊂ Z × P4 the flat family of lines determined by
+Z ⊂ F.
+Definition 6.1. We say Z is planar if there exists a 2-plane P ⊂ P4 such that Λ ⊂ Z × P .
+We say Z is nonplanar if Z is not planar.
+   By lemma 7.1, lemma 7.2 and theorem 7.3 of [7], we have the following result
+Theorem 6.2. The morphism I → H4,0 (X) is generically finite, I is irreducible of dimen-
+sion 8 and therefore H4,0 (X) is irreducible of dimension 8. For a general pair ([C], [Z]) ∈ I,
+C is nondegenerate and Z is reduced and nonplanar.
+   Let ([C], [Z]) ∈ I be a general pair. Now we may also consider Z as a subscheme of
+Sym2 (C) ∼ = P2 . Since Z is non-planar, in particular the span of Z ⊂ P2 yields a pencil of
+degree 2 divisors on C without basepoints. By lemma 5.1, there is a cubic scroll f : Σ → P4
+along with a factorization i : C → P4 such that the pencil of degree 2 divisors on C is just the
+pencil of intersections of C with the lines of ruling of Σ. The residual of C ∪ Λ in Σ ∩ X is a
+curve in Σ of degree 3 and arithmetic genus 0. As a corollary of the proof of [7, theorem 7.3],
+for ([C], [Z]) a general pair, the residual curve D is a twisted cubic curve. As in theorem 4.2,
+let U ′ ⊂ J(X) denote the Abel-Jacobi image of the locus of twisted cubics D ⊂ X such that
+span(D) ∩ X is a smooth cubic surface. And recall from theorem 3.5 that the Abel-Jacobi
+map Hilb2 (F ) → Θ′ is birational. Define R = Θ′ × U ′ and define a rational transformation
+                             h : I → R, ([C], [Z]) 7→ (u[Z], u([D])).                          (26)
+
+Lemma 6.3. The rational transformation h : I → R is birational.
+Proof. By Zariski’s main theorem, it suffices to prove that for the general element (x, y) ∈ R,
+there is a unique pair ([C], [Z]) such that h([C], [Z]) = (x, y). Now x = {L1 , L2 } is a general
+pair of disjoint lines in X. And y is a linear equivalence class |D| of twisted cubics on a
+general hyperplane section H ∩ X. Then Li ∩ H = {pi } is a general point on H ∩ X (since
+every point of X lies on a line, we may assume this point is general on H ∩ X). And there
+is a unique twisted cubic D ⊂ H ∩ X in the linear equivalence class |D| and which contains
+the two points p1 and p2 . If h([C], [Z]) = (x, y), then the residual to C ∪ L1 ∪ L2 in Σ can
+only be D.
+   Now consider the hyperplane H ′ = span(L1 , L2 ). The intersection H ′ ∩ D consists of three
+points p1 , p2 and a third point q. Moreover the directrix M of Σ is contained in H. And by a
+divisor class calculation, M ∩ D consists of a point other than p1 , p2 . The only possibility is
+that M ∩ D = {q}. Notice that given two skew lines L1 , L2 in a 3-plane H ′ and given a point
+q ∈ H ′ not lying on L1 ∪ L2 , there is a unique line M ⊂ H ′ which contains q and intersects
+each of L1 , L2 . Indeed, if we project from q then L1 , L2 project to distinct lines in H/q ∼
+                                                                                             = P2
+which intersect in a unique point. And M is simply the cone over this point. So we conclude
+that the directrix line M is uniquely determined by (x, y).
+
+  Finally, projection Σ → M to the directrix determines an isomorphism φ : D → M such
+that for each r ∈ D, span(r, φ(r)) is a line of the ruling of Σ, in particular φ(q) = q. Conversely,
+               ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                           17
+
+given a line M which intersects C in one point q and given an isomorphism φ : C → M such
+that φ(q) = q, then the union of the lines span(r, φ(r)) is a cubic scroll Σ. Thus to uniquely
+specify the cubic scroll Σ, we have only to determine φ. But notice also that we already know
+φ(p1 ), φ(p2 ) are the unique points of intersection of M with L1 and L2 respectively. Thus φ
+is also uniquely determined by (x, y). Altogether we conclude that Σ is uniquely determined
+by (x, y). But then we can recover/construct C as the residual to D ∪ L1 ∪ L2 in Σ ∩ X. This
+proves that h is birational.
+
+Theorem 6.4. The composite of I → H4,0 (X) with the Abel-Jacobi map u4,0 : H4,0 (X) →
+J(X) is dominant and the general fiber is irreducible. Therefore u4,0 is dominant and the
+general fiber is irreducible.
+Proof. By the residuation trick, the composite equals (as a rational map) the pointwise inverse
+of the composition
+                                     h
+                                    → R = Θ′ × U ′ → J(X)
+                                   I−                                                        (27)
+where the second map is the restriction to Θ′ × U ′ ⊂ J(X) × J(X) of the addition map.
+Clearly Θ′ + U ′ = J(X) since Θ′ is a divisor. U ′ ⊂ Θ is a Zariski-dense open set, and Θ is
+not contained in any translate of Θ′ . Thus I → J(X) is dominant.
+   Using the fact that Θ is a symmetric divisor, we see that the general fiber of the map
+Θ′ × Θ → J(X) is an intersection Θ ∩ (a + Θ′ ). By theorem 3.5, for general a this intersection
+is irreducible. Thus we conclude that the general fiber of I → J(X) is irreducible. This
+proves the theorem.
+
+                                    7. Quintic Elliptics
+
+  In this section we will prove that the Abel-Jacobi map u5,1 : H5,1 (X) → J(X) is dominant
+and the general fiber is an irreducible 5-fold. In the next section we will see that the fibers
+are unirational.
+  The construction we use to understand quintic elliptics is as follows. Define g : H      e →
+  5,1                           2                                                   5,1
+H (X) to be the relative Pic of the universal family of elliptic curves C → H (X). By
+lemma 5.5 H e is also the parameter space for pairs (f, h) where f : Σ → P4 is a generalized
+cubic scroll and h : C → Σ is a curve such that f (h(C)) ⊂ X is a smooth quintic elliptic.
+The residual to C in Σ ∩ X is a curve C ′ of degree 4 and arithemtic genus 0.
+Theorem 7.1. The scheme H      e is irreducible of dimension 11. For a general pair (f, h) ∈ H,
+                                                                                             e
+the residual curve D is a smooth, nondegenerate, quartic rational curve.
+Proof. This follows from the proof of [7, theorem 8.1].
+   We have an induced rational transformation g ′ : H    e → H4,0 (X) which sends a pair (f, h)
+to the residual curve C ′ . Also by lemma 5.2, we see that g ′ : H e → H4,0 (X) is (birationally)
+the parameter space for pairs (f ′ , h′ ) where f ′ : Σ → P4 is a cubic scroll and h′ : C ′ → Σ is
+a curve which intersects the directrix in a degree 2 divisor and lines of the ruling in a degree
+1 divisor, and such that f ′ (h′ (C ′ )) ⊂ X is a quartic rational curve. Given such a pair, the
+residual to C ′ in Σ ∩ X is the quintic elliptic C we started with, so both descriptions of H   e
+are equivalent.
+18                                  HARRIS, ROTH, AND STARR
+
+  Notice that by lemma 5.2, the fiber of g ′ over a general point [C ′ ] is the irreducible (rational)
+variety parametrizing pairs (D, φ) where D is a 2-secant line to C ′ and where φ : C ′ → D is
+an isomorphism such that φ is the identity on C ′ ∩ D.
+Theorem 7.2. The composite of g : H   e → H5,1 (X) and the Abel-Jacobi map u5,1 : H5,1 (X) →
+J(X) is dominant and the general fiber is an irreducible 6-fold. Therefore the Abel-Jacobi map
+u5,1 : H5,1 (X) → J(X) is dominant and the general fiber is an irreducible 5-fold.
+Proof. The space of all embedded cubic scrolls f : Σ → P4 is clearly unirational, in fact it
+is a homogeneous space for PGL(5) and so it is even rational. So the Abel-Jacobi map is
+constant on the family of complete intersections f ∗ X. By the residuation trick, the following
+two birational transformations are pointwise (additive) inverses:
+                                     g           u5,1
+                                   e−
+                                   H → H5,1 (X) −−→ J(X)                                         (28)
+                                      g′        u4,0
+                                  e−
+                                  H → H4,0 (X) −−→ J(X).
+By theorem 6.4, u4,0 is dominant and the general fiber is irreducible. We have seen that
+He → H4,0 (X) is dominant and the general fiber is irreducible. Thus one, and hence both of the
+morphisms H e 1 → J(X) are dominant and the general fiber is irreducible. Since He → H5,1 (X)
+is dominant, we conclude that u5,1 is dominant and the general fiber is irreducible.
+
+              8. Double Residuation and Unirationality of the Fibers
+    In the last section we introduced the space H    e which parametrizes pairs (f : Σ → P4 , h :
+E → Σ) where f : Σ → P is a cubic scroll and E ⊂ Σ is an elliptic curve such that
+                                4
+
+f ◦ h : E → P4 is an embedding of E as a quintic elliptic curve in X. Equivalently H              e
+parametrizes pairs (f : Σ → P , k : C → Σ) where C is the rational curve residual to E in
+                                  4
+
+f ∗ X and f ◦ k : C → X is a quartic rational curve. In this section we will use H      e to prove
+that the fibers of u4,0 and u5,1 are unirational.
+    We need a partial compactification of H.   e Let H 5,1 ⊂ Hilb5t (X) denote the open sub-
+set of the closure of H5,1 (X) which parametrizes Cohen-Macaulay curves (i.e. curves with
+no embedded points). Let P (t) be the numerical polynomial P (t) = 23 t2 + 25 t + 1. Let
+M ⊂ HilbP (t) (P4 ) denote the open subscheme parametrizing connected, reduced, local com-
+plete intersection subschemes of P4 with Hilbert polynomial P (t). The space M contains
+an open subset parametrizing embedded cubic scrolls, but M also parametrizes mild de-
+generations of embedded cubic scrolls. We will refer to the schemes parametrized by M as
+                                             5,1
+generalized cubic scrolls. Let N ⊂ M × H denote the locally closed subscheme parametriz-
+ing pairs (Σ, E) such that X ∩ Σ is a reduced Weil divisor and E ⊂ X ∩ Σ. Notice that
+the Lefschetz hyperplane theorem shows that X contains no generalized cubic scrolls. Thus
+X ∩ Σ is a Cartier divisor on Σ which contains E. By [7, corollary 2.7] the family of residual
+curves to E ⊂ X ∩ Σ is a flat family of Cohen-Macaulay curves. The residual divisor C ⊂ Σ
+                                                                                              4,0
+is a connected, arithmetic genus 0 curve of degree 4 contained in X, i.e. a point of H . So
+                                                 5,1                 4,0
+we have 2 projection morphisms p1 : N → H and p2 : N → H .
+    One thing to notice is that if E is a quintic elliptic curve whose span is all of P4 , then E is
+not contained in any hyperplanes, any quadric surfaces, or in any cone over a twisted cubic.
+Thus for every point (Σ, E) ∈ N, we have that Σ is a smooth cubic scroll.
+                  ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                                19
+
+  Now define N 2 to be the fiber product N ×H 5,1 N. We define the two maps i = 1, 2,
+                 4,0                                                                              4,0
+p2,i : N 2 → H         to be the compositions of the projection pi : N 2 → N with p2 : N → H            .
+                                                                              4,0                 2
+Lemma 8.1. For a general quartic rational curve [C] ∈ H (X), the fiber of p2,i : N →
+ 4,0
+H is unirational of dimension 4.
+Proof. Let C ⊂ X be a general quartic rational curve. Let T ⊂ P4 be the threefold swept out
+by all 2-secant lines and tangent lines to C. Then T ∩ X is a surface. Let U ⊂ X denote the
+complement of T . We construct a rational transformation ρ : C × U → N 2 as follows. For
+each point p ∈ C and q ∈ U, there is a line L = span(p, q). The quotient projective space
+P4 /L is isomorphic to P2 . Since L ∩ C = {p}, we see that the image of C under the rational
+projection P4 → P2 is a singular cubic curve. Let V ⊂ C × U denote the open set such that
+this singular cubic curve is a nodal cubic. Then the node corresponds to the unique 2-secant
+line D ⊂ P4 to C which intersects L. And there is a unique isomorphism π : C → D such that
+π(r) = r for each r ∈ C ∩ D and such that π(p) = s where D ∩ L = {s}. By subsection 5.2
+the 4-tuple (C, D, π, C ∩ D) determines a cubic scroll f : Σ → P4 which contains C and D.
+Let E denote the residual curve to C in f ∗ X. Then (Σ, E) is a point of e     H. Also we know
+that q is on E. The linear system |2q| on E is a g2 , i.e. a degree 2 morphism π : E → P1 . By
+                                                   1
+
+lemma5.5 π : E → P1 determines a second cubic scroll Σ′ containing E such that |2q| is just
+the linear system of intersections of E with the lines of ruling of Σ′ . For (p, q) ∈ V we define
+ρ(p, q) = ((Σ, E), (Σ′ , E)).
+   Since every g21 on E can be expressed as |2q| for some q ∈ E, it is clear that we can obtain
+every cubic scroll Σ′ containing E simply by varying the point q. Thus we conclude that the
+                                                         4,0
+map ρ : V → N 2 dominates the fiber of p2,i : N 2 → H over [C]. Since V is an open subset
+of the product of unirational varieties C × X, we conclude that V is unirational. Since the
+                                                                                               4,0
+image of a unirational variety is unirational, we conclude that the fiber of p2,i : N 2 → H
+over [C] is unirational.
+
+  Let P ⊂ N 2 denote the irreducible component whose general member is a point (E, Σ1 , Σ2 )
+where E is a smooth quintic elliptic and Σ1 , Σ2 are cubic scrolls. Now consider the morphism
+                                 4,0        4,0
+                       r:P →H          ×H         , r(E, Σ1 , Σ2 ) = (p2 (E, Σ1 ), p2 (E, Σ2 ))   (29)
+i.e. the pair of residual quartic curves to E in Σ1 ∩ X and Σ2 ∩ X.
+Theorem 8.2. For a general pair (C1 , C2 ) of smooth quartic rational curves in the image
+of r, the fiber is 1-dimensional. And the general fiber of the Abel-Jacobi map
+                                        u4,0 : H4,0 (X) → J(X)                                    (30)
+
+it one of the irreducible, unirational 3-folds p2,2 (p−1                         4,0
+                                                      2,1 ([C])) for some [C] ∈ H (X).
+
+Proof. Let Π ⊂ P4 be a hyperplane such that Y = Π ∩ X is a smooth cubic surface. For a
+general point p ∈ Y we can find a quartic elliptic curve B ⊂ Y with p ∈ B: in the model of Y
+as the blow-up of P2 at 6 points, B is the proper transform of a plane cubic passing through
+5 of those points and the additional point p. Also for a general point p ∈ Y , we can find a
+line of type I, L ⊂ X, such that L ∩ Π = {p}. Define E = B ∪ L, so E is a connected, nodal
+curve of arithmetic genus 1 and degree 5.
+20                                  HARRIS, ROTH, AND STARR
+
+Claim 8.3. The curve E satisfies the conditions in [7, lemma 2.3], i.e.
+                             H 1 (L, NL/X (−p)) = H 1 (B, NB/X ) = 0.                            (31)
+Therefore Hilb5t (X) is smooth at [E] and deformations of E smooth the node at p.
+     We have the following short exact sequences of coherent sheaves:
+                       0 −−−→ NB/X −−−→ NE/X |B −−−→ Op −−−→ 0
+                                                                                                 (32)
+                       0 −−−→ NL/X −−−→ NE/X |L −−−→ Op −−−→ 0
+We also have a short exact sequence:
+                     0 −−−→ NB/Y −−−→ NB/X −−−→ NY /X |B −−−→ 0                                  (33)
+The self-intersection of a quartic rational curve on a smooth cubic scroll is 4. And NY /X |B =
+OΠ (1)|E is also degree 4. So by Riemann-Roch we conclude that H 1 (B, NB/Y ) = H 1 (B, NY /X |B ) =
+0. Applying the long exact sequence in cohomology to our last short exact sequence, we con-
+clude that H 1(B, NB/X ) = 0. Applying the long exact sequence in cohomology to our first
+short exact sequence above, we conclude that H 1 (B, NE/X |B ) = 0.
+     Twisting the second exact sequence above by OL (−p) yields an exact sequence:
+                0 −−−→ NL/X (−p) −−−→ NE/X |L (−p) −−−→ Op −−−→ 0                        (34)
+By assumption NL/X ∼  = OL ⊕ OL , thus NL/X (−p) ∼    = OL (−1) ⊕ OL (−1). In particular,
+  1
+H (L, NL/X (−p)) = 0. Applying the long exact sequence in cohomology to this short exact
+sequence, we conclude that H 1 (L, NE/X (−p)) = 0. Finally, we have the short exact sequence:
+                  0 −−−→ NE/X |L (−p) −−−→ NE/X −−−→ NE/X |B −−−→ 0                              (35)
+Applying the long exact sequence in cohomology to this short exact sequence, we conclude
+that H 1 (E, NE/X ) = 0. Thus [E] ∈ Hilb5t (X) is unobstructed. This finishes the proof of
+claim 8.3.
+   For a general line M ⊂ Π containing p, the residual to L in span(L, M) ∩ X is a smooth
+conic. Let M1 , M2 be two such lines. Without loss of generality, we may also suppose that
+M1 , M2 are 2-secant lines to B: since we are free to choose B a general quartic elliptic, we
+may first choose M1 , M2 , and then choose B to pass through p and one of the other two
+points of Mi ∩ Y for each of i = 1, 2. Let Mi ∩ B = {p, qi } and let ri denote the third point
+of Mi ∩ Y .
+   Define Si′ = span(L, Mi ) and let S1′′ , S2′′ ⊂ Π be smooth quadric surfaces containing B ∪ M1
+and B ∪ M2 respectively. Define S1 = S1′ ∪ S1′′ , S2 = S2′ ∪ S2′′ , thus S1 , S2 are each a union of
+a 2-plane and a smooth quadric surface. By [7, lemma 6.2] such a surface is a specialization
+of a cubic scroll, thus [S1 ], [S2 ] ∈ HilbP (t) (P4 ).
+Claim 8.4. For i = 1, 2, we have H 1 (Si , IE/Si NSi /P4 ) = H 2 (Si , IE/Si NSi /P4 ) = 0 where IE/Si
+is the ideal sheaf of E ⊂ Si .
+  By the deformation theory argument in the proof of [7, lemma 6.2], this vanishing result
+                                  5,1
+implies that the morphism N 2 → H is smooth at (E, S1 , S2 ).
+  We have a short exact sequence:
+      0 −−−→ NSi /P4 |Si′ (−Mi − L) −−−→ IE/Si NSi /P4 −−−→ NSi /P4 |Si′′ (−B) −−−→ 0            (36)
+                ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                           21
+
+And we have the two short exact sequences:
+    0 −−−→ NSi′ /P4 (−Mi − L) −−−→ NSi /P4 |S ′ (−Mi − L) −−−→ NMi /Si′′ (−p) −−−→ 0 (37)
+ 0 −−−→ NSi′′ /P4 (−B) −−−→ NSi /P4 |Si′′ (−B) −−−→ NMi /S ′ ⊗ NMi /Si′′ (−p − q) −−−→ 0 (38)
+From the proof of lemma [7, lemma 6.3], we know that
+                      = OP2 (1) ⊕ OP2 (1), NS ′′ /P4 ∼
+             NS ′ /P4 ∼
+                   i                               i
+                                                     = OP1 ×P1 (1, 1) ⊕ OP1 ×P1 (2, 2).        (39)
+Thus we have NS ′ /P4 (−Mi − L) ∼= OP2 (−1) ⊕ OP2 (−1) and NSi′′ /P4 (−B) ∼
+                                                                          = OP1 ×P1 (−1, −1) ⊕
+                           ∼                     ∼
+OP ×P . Moreover NMi /S = OP (1) and NMi /Si = OP . Thus our two exact sequences are:
+  1  1                   ′     1              ′′     1
+
+
+  0 −−−→       OP2 (−1) ⊕ OP2 (−1)         −−−→ NSi /P4 |Si′ (−Mi − L) −−−→ OP1 (−1) −−−→ 0
+  0 −−−→ OP1 ×P1 (−1, −1) ⊕ OP1 ×P1 −−−→               NSi /P4 |Si′′ (−B)    −−−→ OP1 (−1) −−−→ 0
+                                                                                               (40)
+It quickly follows from the long exact sequence in cohomology that
+                 H j>0(S ′ , NSi /P4 |S ′ (−Mi − L)) = H j>0(Si′′ , NSi /P4 |Si′′ (−B)) = 0    (41)
+Applying the long exact sequence in cohomology to our first short exact sequence, we conclude
+that H j>0(Si , IE/Si NSi /P4 ) = 0. This proves claim 8.4
+                                   5,1
+   We conclude that N 2 → H is smooth at (E, S1 , S2 ). Since [E] is a smooth point of
+                          5,1
+Hilb5t (X) which lies in H , we conclude that N 2 is smooth at (E, S1 , S2 ) and the irreducible
+                                                          5,1
+component of N 2 which contains (E, S1 , S2 ) dominates H , i.e. the irreducible component
+is P .
+                                      4,0     4,0
+Claim 8.5. The fiber of r : P → H × H containing (E, S1 , S2 ) is one-dimensional at
+(E, S1 , S2 ).
+  Of course the residual to L in Si′ ∩ X is a smooth conic Di′ which intersects Mi in {qi , ri }.
+And the residual to B in Si′′ ∩ X is a smooth conic Di′′ which contains ri . Let us define
+Di = Di′ ∪ Di′′ . Then r(E, S1 , S2 ) = (D1 , D2 ).
+   Now we want to determine the dimension of every irreducible component of the fiber
+Φ = r −1 (D1 , D2 ) through (E, S1 , S2 ). By lemma [7, lemma 6.3], we may restrict our attention
+to the open subset of Φ parametrizing pairs (C, R1 , R2 ) such that each of R1 , R2 is in T ∪ U,
+i.e. Ri is either a cubic scroll or the union of a 2-plane and a quadric surface along a line. But
+for any conic G in a cubic scroll Σ with directrix D and fiber F , we know that G ∼ D + F .
+Given a union of 2 such conics, G′ , G′′ , we see that 3H − G′ − G′′ ∼ D + 4F . Thus the residual
+to such a curve in Σ ∩ X would be a quintic curve of arithmetic genus 0, not arithmetic genus
+1. We conclude that for (C, R1 , R2 ) in Φ, we must have Ri is in T .
+   For an open neighborhood of (E, S1 , S2 ) in Φ, we must have that Di′ lies in the irreducible
+component of Ri which is a 2-plane. Now suppose given such a (C, R1 , R2 ). There is a unique
+2-plane Si′ which contains Di′ . Thus Ri = Si′ ∪ Ri′′ for some smooth quadric surface Ri′′ . And
+C = L ∪ A for some quartic elliptic A. Now span(A) contains both span(D1′′ ) and span(D2′′ ).
+Thus span(A) = Π. Finally, since Si′ ∩ Π = Mi , we can only have Si′ ∩ Ri′′ = Mi . In particular,
+we conclude that Mi intersects A in the points p, qi . Thus A ⊂ Y = Π ∩ X is a quartic
+elliptic curve passing through p, q1 and q2 . These points impose independent conditions on
+the 4-dimensional linear system of quartic elliptic curves residual to Di′′ . Thus there is a
+1-dimensional linear system of A’s.
+22                                  HARRIS, ROTH, AND STARR
+
+   For each A in this pencil of quartic elliptic curves, we have A ∪ Di′′ ⊂ Y lies in |OY (2)|.
+Since Y is linearly normal and lies in no quadric surfaces, we have |OY (2)| = |OΠ (2)|. Thus
+there is a unique quadric surface Ri′′ containing A ∪ Di′′ . Since {p, qi , ri } ⊂ Mi ∩ Ri′′ , we
+conclude that Mi ⊂ Ri′′ . Thus Ri = Si′ ∪ Ri′′ is a surface in T , and (A, R1 , R2 ) is a point in
+the fiber Φ. So the fiber of Φ is one-dimensional at (E, S1 , S2 ), which finishes the proof of
+claim 8.5.
+   By the above, Φ is a 1-dimensional irreducible variety in a neighborhood of (E, S1 , S2 ).
+It follows by upper semicontinuity of the fiber dimension that the general fiber of r : P →
+  4,0        4,0
+H (X) × H (X) is at most 1-dimensional.
+  For a general rational quartic [C] ∈ H4,0 (X), it follows by lemma 8.1 that p−1               2
+                                                                                   2,1 ([C]) ⊂ N is a
+unirational 4-fold. So the subvariety ZC := p2,2 (p−1
+                                                    2,1 ([C]) is an irreducible, unirational variety.
+Also observe that the subvarieties ZC sweep out H4,0 (X): given a curve [D] ∈ H4,0 (X), if we
+choose any curve [C] ∈ ZD , then also [D] is contained in ZC .
+   Since the fiber dimension of p2,i : N 2 → H4,0,( X) is at most 1, we conclude the dimension
+of ZC is at least 4 − 1 = 3. Since J(X) contains no unirational subvarieties, ZC is contained
+in a fiber of the Abel-Jacobi map u4,0 : H4,0,( X) → J(X). By theorem 6.4, the general fiber
+of u4,0 is irreducible of dimension 3. Combining this with the fact that a general point of
+H4,0 (X) is contained in an irreducible 3-fold ZC , we conclude that the general fiber of u4,0 is
+one of the general subvarieties ZC , and vice versa. As a consequence, observe that the general
+fiber dimension of u4,0 is 1 (and not 0). This completes the proof of the theorem.
+
+Corollary 8.6. The general fiber of the Abel-Jacobi map u5,1 : H5,1 (X) → J(X) is an
+irreducible, unirational 5-fold.
+Proof. Recall from the proof of lemma 8.1 that not only did we show that p−1        2,i ([C]) is uni-
+rational, but we showed that there is a dominant, generically-finite morphism B → p−1        2,i ([C])
+such that B is unirational and on B we can produce a section σ of the family of elliptic
+curves E – in fact we used |2σ| as the g21 ’s on E to produce the surface Σ′ . Thus we have a
+distinguished line on each Σ′ corresponding to |2σ|. And if C ′ is the residual to E ⊂ Σ′ ∩ X,
+this line intersects C ′ in a distinguished point. What this shows is that there is a unirational
+variety B dominating a general fiber Z = u−1  4,0 (p) such that after we base-change to B, we have
+a section τ of the family of quartic rational curves C ′ . Thus the family of quartic rational
+curves over B is a conic bundle with a section; therefore it is a P1 -bundle.
+   It is easy to see that given a quartic rational curve C ′ along with a point p, the locus of
+cubic scrolls containing C is canonically birational to Sym2 (C) × C∗ , which is canonically
+birational to A3 . Thus the fiber product H      e ×H4,0 (X) B → B is canonically birational to
+A3 × B → B. In particular, since B is itself unirational, we conclude that H       e ×H4,0 (X) B is
+also unirational.
+   Consider the composite morphism:
+                            e ×H4,0 (X) B −−−→ H
+                            H                  e −−−→ H5,1 (X).                                  (42)
+                                  e → H5,1 (X) has fiber dimension, we conclude that
+Define Y to be the image. Because H
+                           e ×H4,0 (X) B − 1 = dim(B) + 3 − 1 = 3 + 3 − 1 = 5.
+              dim(Y ) ≥ dimH                                                                     (43)
+               ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                          23
+
+So Y is a unirational variety of dimension 5. Since J(X) contains no unirational varieties, we
+conclude that Y is contained in a fiber of u5,1 . Since H  e → H5,1 (X) is dominant, we conclude
+                            5,1
+that a general point of H (X) is contained in one of the varieties Y . Finally, by theorem 7.2,
+we see that the general fiber of u5,1 is an irreducible 5-fold. Thus we have that Y equals a
+fiber of u5,1 , so the general fiber of u5,1 is an irreducible, unirational 5-fold.
+
+                               9. Quintic Rational Curves
+  In this section we will prove that the Abel-Jacobi map u5,0 : H5,0 (X) → J(X) is dominant
+and the general fiber is an irreducible, unirational 5-fold.
+
+   The construction we use to understand quintic rational curves is as follows. Define I ⊂
+H (X) × G(1, 4) to be the locally closed subvariety parametrizing pairs ([C], [L]) where L is
+  5,0
+
+a 3-secant line to C which is not a 4-secant line. There is a unique isomorphism φ : C → L
+which is the identity on C ∩ L. By lemma 5.6, there is a cubic scroll h : Σ → P4 such that L
+is the directrix of Σ, C ⊂ Σ, and φ is the restriction of the projection π : Σ → L to C. The
+residual to C in Σ ∩ X is a quartic rational curve C ′ (which does not intersect L and which
+intersects lines of the ruling in a degree 2 divisor).
+Lemma 9.1. The scheme H5,0 (X) is irreducible of dimension 10. The morphism I →
+H5,0 (X) is birational. For a general pair ([C], [L]) the residual quartic curve C ′ is a smooth,
+nondegenerate quartic rational curve.
+Proof. This follows from [7, corollary 9.3, theorem 9.4].
+   What are the fibers of I → H4,0 (X)? By lemma 5.1, the fiber over [C ′ ] for C ′ a general
+quartic rational curve is simply an open subset of the P2 which parametrizes the collection
+of g21 ’s on C ′ .
+Theorem 9.2. The general fiber of u5,0 : H5,0,( X) → J(X) is an irreducible, unirational
+5-fold.
+Proof. Since I → H5,0 (X) is birational, we will show that the general fiber of u5,0 : I → J(X)
+is an irreducible, unirational 5-fold.
+   Now I surjects to an open subscheme of H4,0,( X) with irreducible fibers isomorphic to
+open subsets of P2 . By the residuation trick, we know that u5,0 is the pointwise inverse (up
+to constant translation) of the composite map:
+                                                     u4,0
+                                I −−−→ H4,0 (X) −−−→ J(X)                                   (44)
+We know the general fiber of u4,0 is an irreducible 3-fold. Thus we conclude that the general
+fiber of I1 → J(X) is an irreducible 5-fold.
+   To see that the general fiber is unirational, we once again use the fact that for general
+p ∈ J(X) there is a morphism B → u−1   4,0 (p) such that B is unirational and the base-change to
+                                 4,0
+B of the universal curve over H (X) admits a section. Thus the base-change of the universal
+curve is birational to B × A1 . So the “relative symmetric product” of the universal curve is
+birational to B × A2 . By lemma 9.1 I → H4,0 (X) is isomorphic to an open subset of the
+relative second symmetric product of the universal curve. Thus the fiber product B ×H4,0 (X) I
+is birational to B × A2 . Since B is unirational, so is B × A2 . And B ×H4,0 (X) I dominates the
+fiber over p ∈ J(X). Thus we conclude that the general fiber of I → J(X) is unirational.
+24                                 HARRIS, ROTH, AND STARR
+
+                             10. Quintic Curves of Genus 2
+   By Bézout’s theorem, X cannot contain a plane curve of degree d > 3. Thus the next case
+after quintic elliptic curves is quintic curves of genus 2.
+   In this section we will show that the Abel-Jacobi map u5,2 : H5,2 (X) → J(X) has image
+image(u5,2 ) = u1,0 (F ). Moreover the general fiber is irreducible and rational of dimension 8.
+The construction we will use to prove this is as follows. Suppose that C ⊂ X is a smooth
+quintic curve of genus 2. By Riemann-Roch, h0 (C, OP4 (1)|C ) = 4, so C is contained in a
+hyperplane section H ∩ X. Similarly, h0 (C, OP4 (2)|C ) = 9 < 10, so C is contained in a
+quadric surface Q ⊂ H. The residual to C in Q ∩ X is a line L ⊂ X. Thus there is a
+morphism f : H  g 5,1 (X) → F where H  g5,1 (X) is the normalization of H5,1 (X).
+                                   5,2
+Lemma 10.1. The scheme H (X) is irreducible of dimension 10 and the morphism f :
+Hg5,2 (X) → F is dominant.
+
+
+Proof. This follows from the proof of [7, theorem 10.1].
+   What is the fiber of f ? Given a line L ⊂ X, to specify the curve C, it suffices to specify
+the hyperplane H containing L and the quadric surface Q ⊂ H containing L. The collection
+of pairs
+                            PQ∨ = {([L], [H]) ∈ F × P4∨ : L ⊂ H}                           (45)
+is a P2 -bundle over F . And the collection of triples
+                               I = {([L], [H], [Q]) : L ⊂ Q ⊂ H}                           (46)
+                                                                                  g
+is a P6 -bundle over PQ∨ . By a dimension count we conclude that the morphism g : H 5,2 (X) →
+
+I maps birationally to an open subset of I. Thus the fibers of f are irreducible, rational
+varieties of dimension 8.
+Corollary 10.2. The Abel-Jacobi map u5,2 has image a (translate of ) an open subset of
+−u1,0 (F ), and the general fiber of u5,2 is an irreducible, rational 8-fold.
+Proof. By the residuation trick we know u5,2 is the pointwise inverse of u1,0 ◦ g. And u1,0
+is an embedding. Since g is dominant, we conclude that image(u5,2 ) is an open subset of
+−u1,0 (X). Since the fibers of u5,2 equal the fibers of g, we conclude the general fiber of u5,2
+is an irreducible, rational variety of dimension 8.
+
+10.1. Irreducibility for Hd,0 (X). We have avoided using the following result in the previous
+section, but we present it here to mention one important corollary.
+Theorem 10.3. For each d the space Hd,0 (X) is an irreducible, reduced, local complete in-
+tersection scheme of dimension 2d. Moreover the general point of Hd,0 (X) is an unobstructed
+curve.
+  This is theorem 1 of [8]. We will not discuss the proof here, but we will prove a corollary
+that follows from theorem 10.3 and our analysis of H4,0 (X) and H5,0 (X). Let Hgd,0 (X) denote
+
+the normalization of Hd,0 (X).
+Theorem 10.4. For each d ≥ 4, the Abel-Jacobi morphism αd,0 : H          gd,0 (X) → J(X) is
+
+dominant and the general fiber is irreducible.
+                ABEL-JACOBI MAPS ASSOCIATED TO SMOOTH CUBIC THREEFOLDS                               25
+
+Proof. Let Hd → Hd,0 (X) denote the normalization of the closure of Hd,0 (X). We will
+actually show that αd,0 : Hd → J(X) is dominant and the general fiber is irreducible. Let us
+denote the Stein factorization of αd,0 as follows:
+                                           β           γ
+                                     Hd −−−
+                                          d       d
+                                           → Zd −−−→ J(X)                                          (47)
+We need to prove that γd is an open immersion. By theorem 10.3, we know that Zd is
+irreducible. We will prove by induction that there is a rational section ǫd : J(X) → Zd . It
+then follows that γd is an open immersion. We have already established this result in case
+d = 4 or 5. Therefore suppose that d ≥ 6 and suppose that the theorem has been proved for
+all integers less than d (and greater than 3).
+   Let Hd−2,0 (X)u ⊂ Hd−2,0 (X) denote the open subscheme of Hd−2,0 (X) such that the corre-
+sponding curve is unobstructed. Let π : C d−2 → Hd−2,0 (X)u denote the universal curve. The
+points of C d−2 parametrize pairs ([C], p) where [C] ∈ Hd−2,0 (X) and p ∈ C. Let L ⊂ X be a
+general line. Let U ⊂ C d−2 denote the open subscheme parametrizing pairs ([C], p) such that
+p ∈ X \ L. We have a family of 2-planes P ⊂ U × P4 whose fiber over ([C], p) is span(L, p).
+Let D ⊂ U ×X denote the intersection of U ×X with P inside U ×P4 . Let D1 ⊂ D denote the
+constant family U × L ⊂ U × P4 . Let D2 denote the residual family of conics. By [7, corollary
+2.7], D2 is flat over U. Let V ⊂ U denote the open subscheme parametrizing pairs ([C], p)
+such that the corresponding conic C ′ is smooth and such that C intersects C ′ transversally at
+p and in no other points. Then over V the union C d−2 ∪ D2 ⊂ V × X is a flat family of curves
+of degree d and arithmetic genus 0. So there is an induced morphism f : V → Hilbdt+1 (X).
+   We will prove that f (V ) ⊂ Hd,0 (X). In fact we will prove that every point in f (V ) satisfies
+the conditions in [7, lemma 2.3], namely H 1 (C ′ , NC ′ /X (−p)) = H 1 (C, NC/X ) = 0. It then
+follows that such a point is a smooth point of Hilbdt+1 (X) and also that the node smooths
+so that the point is in Hd,0 (X). Let ([C], p) be a point of V , and let C ′ be the corresponding
+conic. Let B = C ∪ C ′ denote the union. By construction B is a connected nodal curve. We
+need to prove that H 1 (B, NB/X ) = 0.
+   We have the exact sequence:
+                 0 −−−→ NB/X |C ′ (−p) −−−→ NB/X −−−→ NB/X |C −−−→ 0.                              (48)
+And we have two exact sequences:
+                 0 −−−→ NC ′ /X (−p) −−−→ NB/X |C ′ (−p) −−−→ Op −−−→ 0
+                                                                                      .            (49)
+                 0 −−−→       NC/X       −−−→      NB/X |C      −−−→ Op −−−→ 0
+We have seen that NC ′ /X is either OC ′ (1)⊕OC ′ (1) or OC ′ (2)⊕OC ′ . Thus H 1 (C ′ , NC ′ /X (−p)) =
+0. By the long exact sequence in cohomology we conclude that H 1 (C ′ , NB/X |C ′ (−p)) = 0. By
+assumption H 1 (C, NC/X ) = 0, therefore also H 1 (C, NB/X |C ) = 0. By the long exact sequence
+in cohomology we conclude that H 1 (B, NB/X ) = 0, i.e. B is unobstructed.
+   We conclude that f (V ) is contained in the smooth locus of Hd,0 (X). Thus we can factor f as
+g : V → Hd . By additivity θ(B) = θ(C) + θ(C ′ ). And by residuation we have θ(C ′ ) = −θ(L)
+(up to a fixed constant). Thus we conclude that the composite map:
+                                           g          αd,0
+                                     V −−−→ Hd −−−→ J(X)                                           (50)
+26                                      HARRIS, ROTH, AND STARR
+
+equals the pointwise inverse (up to a constant translation) of the composite:
+                                                          αd−2,0
+                                      V −−−→ Hd−2 −−−→ J(X).                                               (51)
+Since V → Hd−2 has irreducible fibers, the Stein factorization of this composite is just
+the Stein factorization of αd−2,0 (or more precisely an open subscheme). By the induction
+assumption γd−2 : Zd−2 → J(X) is an open immersion. By the universal property of the
+Stein factorization of V → J(X), there is an induced morphism ǫd : Zd−2 → Zd . This is a
+rational section of γd : Zd → J(X), which shows that γd is an open immersion. Therefore
+the morphism αd,0 : Hd → J(X) is dominant and the general fiber is irreducible, as was to
+be shown.
+                                                References
+ [1] A.-M. Castravet. Rational curves on moduli spaces of stable bundles of rank 2 over a curve. Ph. D. thesis,
+     MIT 2002, in preparation.
+ [2] C. H. Clemens and P. A. Griffiths. The intermediate Jacobian of the cubic threefold. Annals of Mathe-
+     matics, 95:281–356, 1972.
+ [3] D. Eisenbud. Commutative Algebra, volume 150 of Graduate Texts in Mathematics. Springer-Verlag,
+     1995.
+ [4] W. Fulton. Intersection Theory, volume 2 of Ergebnisse der Mathematik und ihrer Grenzgebiete, 3. Folge.
+     Springer-Verlag, 2 edition, 1998.
+ [5] P. A. Griffiths. On the periods of certain rational integrals, I. Annals of Mathematics, 90:496–541, 1969.
+ [6] P. A. Griffiths. Variations of Hodge structure. In Topics in Transcendental Algebraic Geometry, volume
+     106 of Annals of Mathematics Studies, chapter 1. Annals of Mathematics, 1984.
+ [7] J. Harris, M. Roth, and J. Starr. Curves of small degree on cubic threefolds. math.AG/0202067.
+ [8] J. Harris, M. Roth, and J. Starr. Irreducibility of spaces of rational curves on cubic threefolds. in prepa-
+     ration.
+ [9] J. Harris and J. Starr. Rational curves on blow-ups of projective space. in preparation.
+[10] R. Hartshorne. Algebraic Geometry, volume 52 of Graduate Texts in Mathematics. Springer-Verlag, 1977.
+[11] A. Iliev and D. Markushevich. The Abel-Jacobi map for a cubic threefold and periods of Fano threefolds
+     of degree 14. Documenta Mathematica, 5:23–47, 2000. math.AG/9910058.
+[12] D. Markushevich and A. Tikhimirov. The Abel-Jacobi map of a moduli component of vector bundles on
+     the cubic threefold. Journal of Algebraic Geometry, 10:37–62, 2001.
+[13] D. Mumford. Rational equivalence of 0-cycles on surfaces. Journal of Mathematics of Kyoto University,
+     9:195–204, 1968.
+[14] D. Mumford. The Red Book of Varieties and Schemes, volume 1358 of Lecture Notes in Mathematics.
+     Springer-Verlag, 1988.
+[15] A. Tyurin. Geometry of the Fano surface of a non-singular cubic F ⊂ P4 and Torelli theorems for Fano
+     surfaces and cubics. Izvestiya Akademii Nauk SSSR. Seriya Matematicheskaya, 35:498–529, 1971.
+
+     Department of Mathematics, Harvard University, Cambridge MA 02138
+     E-mail address: harris@math.harvard.edu
+
+     Department of Mathematics, University of Michigan, Ann Arbor, MI 48109
+     E-mail address: mikeroth@math.lsa.umich.edu
+
+  Department of Mathematics, Massachusetts Institute of Technology, Cambridge MA
+02139
+  E-mail address: jstarr@math.mit.edu
+

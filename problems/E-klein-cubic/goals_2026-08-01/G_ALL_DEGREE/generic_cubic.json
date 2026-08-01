@@ -1,0 +1,9003 @@
+{
+  "base_field": "QQ",
+  "coefficient_count": 35,
+  "coefficients": [
+    {
+      "degree": 3,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "label": "x*x*x",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "triple": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "degree": 6,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "label": "x*x*C",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "triple": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "degree": 7,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        }
+      ],
+      "label": "x*x*D",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        }
+      ],
+      "triple": [
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "degree": 8,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "label": "x*x*E",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "triple": [
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "degree": 9,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        }
+      ],
+      "label": "x*x*K",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        }
+      ],
+      "triple": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "degree": 9,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 72,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        }
+      ],
+      "label": "x*C*C",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 72,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        }
+      ],
+      "triple": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "degree": 10,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 12,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 4,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "label": "x*C*D",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 12,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 4,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "triple": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "degree": 11,
+      "entries": [
+        {
+          "denominator": 3,
+          "numerator": -2,
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 10,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 18,
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "label": "x*C*E",
+      "normalized_entries": [
+        {
+          "denominator": 3,
+          "numerator": -2,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 10,
+          "projective_exponents": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 18,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "triple": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "degree": 12,
+      "entries": [
+        {
+          "denominator": 27,
+          "numerator": -88,
+          "primary_exponents": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 116,
+          "primary_exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -918,
+          "primary_exponents": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": 2,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 10,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": -2,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "label": "x*C*K",
+      "normalized_entries": [
+        {
+          "denominator": 27,
+          "numerator": -88,
+          "projective_exponents": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 116,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -918,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": 2,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 10,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": -2,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "triple": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "degree": 11,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -20,
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 10,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "label": "x*D*D",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -20,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 10,
+          "projective_exponents": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "triple": [
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "degree": 12,
+      "entries": [
+        {
+          "denominator": 27,
+          "numerator": -49,
+          "primary_exponents": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 8,
+          "primary_exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 135,
+          "primary_exponents": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -4,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": -2,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": 4,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "label": "x*D*E",
+      "normalized_entries": [
+        {
+          "denominator": 27,
+          "numerator": -49,
+          "projective_exponents": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 8,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 135,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -4,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": -2,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": 4,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "triple": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "degree": 13,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 2,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -32,
+          "primary_exponents": [
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -14,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 74,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": -6,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "label": "x*D*K",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 2,
+          "projective_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -32,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -14,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 74,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": -6,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "triple": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "degree": 13,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 8,
+          "primary_exponents": [
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 12,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 4,
+          "numerator": -5,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "label": "x*E*E",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 8,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 12,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 4,
+          "numerator": -5,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "triple": [
+        0,
+        3,
+        3
+      ]
+    },
+    {
+      "degree": 14,
+      "entries": [
+        {
+          "denominator": 30,
+          "numerator": -31,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -1,
+          "primary_exponents": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": 179,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": -27,
+          "primary_exponents": [
+            3,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 5,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 20,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "label": "x*E*K",
+      "normalized_entries": [
+        {
+          "denominator": 30,
+          "numerator": -31,
+          "projective_exponents": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -1,
+          "projective_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": 179,
+          "projective_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": -27,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": 1,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 5,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 20,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "triple": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "degree": 15,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 25,
+          "primary_exponents": [
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 216,
+          "numerator": -2821,
+          "primary_exponents": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": 1707,
+          "primary_exponents": [
+            3,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": -29061,
+          "primary_exponents": [
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": 11,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 6,
+          "numerator": -25,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 2,
+          "numerator": 141,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 8,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 12,
+          "numerator": 11,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "label": "x*K*K",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 25,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 216,
+          "numerator": -2821,
+          "projective_exponents": [
+            1,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": 1707,
+          "projective_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": -29061,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": 11,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 6,
+          "numerator": -25,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 2,
+          "numerator": 141,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 8,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 12,
+          "numerator": 11,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "triple": [
+        0,
+        4,
+        4
+      ]
+    },
+    {
+      "degree": 12,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "label": "C*C*C",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "triple": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "degree": 13,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": -5,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 12,
+          "primary_exponents": [
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": 5,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 2,
+          "numerator": 39,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 15,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "label": "C*C*D",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": -5,
+          "projective_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 12,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": 5,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 2,
+          "numerator": 39,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 15,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "triple": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "degree": 14,
+      "entries": [
+        {
+          "denominator": 60,
+          "numerator": 971,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 21,
+          "primary_exponents": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 20,
+          "numerator": -4779,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": -1323,
+          "primary_exponents": [
+            3,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": 9,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 10,
+          "numerator": 9,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 40,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "label": "C*C*E",
+      "normalized_entries": [
+        {
+          "denominator": 60,
+          "numerator": 971,
+          "projective_exponents": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 21,
+          "projective_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 20,
+          "numerator": -4779,
+          "projective_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": -1323,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": 9,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 10,
+          "numerator": 9,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 40,
+          "numerator": -1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "triple": [
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "degree": 15,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 155,
+          "primary_exponents": [
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 72,
+          "numerator": 215,
+          "primary_exponents": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -99,
+          "primary_exponents": [
+            3,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": 1053,
+          "primary_exponents": [
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 2,
+          "numerator": 25,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 6,
+          "numerator": 13,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 2,
+          "numerator": -15,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 50,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": -13,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "label": "C*C*K",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 155,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 72,
+          "numerator": 215,
+          "projective_exponents": [
+            1,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -99,
+          "projective_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": 1053,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 2,
+          "numerator": 25,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 6,
+          "numerator": 13,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 2,
+          "numerator": -15,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 50,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": -13,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "triple": [
+        1,
+        1,
+        4
+      ]
+    },
+    {
+      "degree": 14,
+      "entries": [
+        {
+          "denominator": 30,
+          "numerator": -169,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 4,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -84,
+          "primary_exponents": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": 1341,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": 4572,
+          "primary_exponents": [
+            3,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": -51,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 5,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 20,
+          "numerator": 9,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "label": "C*D*D",
+      "normalized_entries": [
+        {
+          "denominator": 30,
+          "numerator": -169,
+          "projective_exponents": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 4,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -84,
+          "projective_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": 1341,
+          "projective_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": 4572,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": -51,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 5,
+          "numerator": -1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 20,
+          "numerator": 9,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "triple": [
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "degree": 15,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 20,
+          "primary_exponents": [
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": -5,
+          "primary_exponents": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -249,
+          "primary_exponents": [
+            3,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 5643,
+          "primary_exponents": [
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -8,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": 5,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": -33,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 4,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 1,
+          "numerator": 9,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "label": "C*D*E",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 20,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": -5,
+          "projective_exponents": [
+            1,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -249,
+          "projective_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 5643,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -8,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": 5,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": -33,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 4,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 1,
+          "numerator": 9,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "triple": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "degree": 16,
+      "entries": [
+        {
+          "denominator": 2,
+          "numerator": -5,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 5,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -58,
+          "primary_exponents": [
+            0,
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 161,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 336,
+          "primary_exponents": [
+            2,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 24,
+          "numerator": -463,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 8,
+          "numerator": 2451,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": -41,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 2,
+          "numerator": 393,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": 5,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        }
+      ],
+      "label": "C*D*K",
+      "normalized_entries": [
+        {
+          "denominator": 2,
+          "numerator": -5,
+          "projective_exponents": [
+            0,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 5,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -58,
+          "projective_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 161,
+          "projective_exponents": [
+            3,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 336,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 24,
+          "numerator": -463,
+          "projective_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 8,
+          "numerator": 2451,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": -41,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 2,
+          "numerator": 393,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": 5,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        }
+      ],
+      "triple": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "degree": 16,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 27,
+          "primary_exponents": [
+            2,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 1,
+          "numerator": 9,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "label": "C*E*E",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -1,
+          "projective_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 27,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -1,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 1,
+          "numerator": 9,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "triple": [
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "degree": 17,
+      "entries": [
+        {
+          "denominator": 3,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 27,
+          "numerator": 182,
+          "primary_exponents": [
+            0,
+            1,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 60,
+          "numerator": -2503,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 5,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -327,
+          "primary_exponents": [
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 20,
+          "numerator": 13707,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": 9369,
+          "primary_exponents": [
+            4,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 10,
+          "numerator": 3,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": -2,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 10,
+          "numerator": -7,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 40,
+          "numerator": 13,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "label": "C*E*K",
+      "normalized_entries": [
+        {
+          "denominator": 3,
+          "numerator": -1,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 27,
+          "numerator": 182,
+          "projective_exponents": [
+            2,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 60,
+          "numerator": -2503,
+          "projective_exponents": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 5,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -327,
+          "projective_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 20,
+          "numerator": 13707,
+          "projective_exponents": [
+            3,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": 9369,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -1,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 10,
+          "numerator": 3,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": -2,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 10,
+          "numerator": -7,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 40,
+          "numerator": 13,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "triple": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "degree": 18,
+      "entries": [
+        {
+          "denominator": 216,
+          "numerator": 649,
+          "primary_exponents": [
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 12,
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -160,
+          "primary_exponents": [
+            1,
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 72,
+          "numerator": -12839,
+          "primary_exponents": [
+            2,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": 26319,
+          "primary_exponents": [
+            4,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": -158895,
+          "primary_exponents": [
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": -7,
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 2,
+          "numerator": 15,
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": -22,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 126,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 4,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 1,
+          "numerator": -52,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 12,
+          "numerator": 7,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 4,
+          "numerator": -23,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 8
+        }
+      ],
+      "label": "C*K*K",
+      "normalized_entries": [
+        {
+          "denominator": 216,
+          "numerator": 649,
+          "projective_exponents": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 12,
+          "projective_exponents": [
+            4,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -160,
+          "projective_exponents": [
+            7,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 72,
+          "numerator": -12839,
+          "projective_exponents": [
+            2,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": 26319,
+          "projective_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": -158895,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": -7,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 2,
+          "numerator": 15,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": -22,
+          "projective_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 126,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 4,
+          "projective_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 1,
+          "numerator": -52,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 12,
+          "numerator": 7,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 4,
+          "numerator": -23,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 8
+        }
+      ],
+      "triple": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "degree": 15,
+      "entries": [
+        {
+          "denominator": 1,
+          "numerator": -40,
+          "primary_exponents": [
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 36,
+          "numerator": 695,
+          "primary_exponents": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -1335,
+          "primary_exponents": [
+            3,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": 19791,
+          "primary_exponents": [
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -5,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 10,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": 10,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": -45,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 5,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "label": "D*D*D",
+      "normalized_entries": [
+        {
+          "denominator": 1,
+          "numerator": -40,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 36,
+          "numerator": 695,
+          "projective_exponents": [
+            1,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -1335,
+          "projective_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": 19791,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -5,
+          "projective_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 10,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": 10,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": -45,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 5,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "triple": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "degree": 16,
+      "entries": [
+        {
+          "denominator": 2,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -10,
+          "primary_exponents": [
+            0,
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 35,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -72,
+          "primary_exponents": [
+            2,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 24,
+          "numerator": -71,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 8,
+          "numerator": 387,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": 4,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 2,
+          "numerator": -39,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        }
+      ],
+      "label": "D*D*E",
+      "normalized_entries": [
+        {
+          "denominator": 2,
+          "numerator": -1,
+          "projective_exponents": [
+            0,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 1,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": -10,
+          "projective_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 35,
+          "projective_exponents": [
+            3,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -72,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 24,
+          "numerator": -71,
+          "projective_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 8,
+          "numerator": 387,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": 4,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 2,
+          "numerator": -39,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": -1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        }
+      ],
+      "triple": [
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "degree": 17,
+      "entries": [
+        {
+          "denominator": 3,
+          "numerator": -8,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 18,
+          "numerator": 509,
+          "primary_exponents": [
+            0,
+            1,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 24,
+          "numerator": -1601,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 44,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -1249,
+          "primary_exponents": [
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": 8733,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -6039,
+          "primary_exponents": [
+            4,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 13,
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": -4,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 4,
+          "numerator": 81,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": -6,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 4,
+          "numerator": -1,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 16,
+          "numerator": -5,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "label": "D*D*K",
+      "normalized_entries": [
+        {
+          "denominator": 3,
+          "numerator": -8,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 18,
+          "numerator": 509,
+          "projective_exponents": [
+            2,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 24,
+          "numerator": -1601,
+          "projective_exponents": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 44,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -1249,
+          "projective_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": 8733,
+          "projective_exponents": [
+            3,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -6039,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 13,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": -4,
+          "projective_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 4,
+          "numerator": 81,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": -6,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 4,
+          "numerator": -1,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 16,
+          "numerator": -5,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "triple": [
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "degree": 17,
+      "entries": [
+        {
+          "denominator": 6,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 54,
+          "numerator": -139,
+          "primary_exponents": [
+            0,
+            1,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 15,
+          "numerator": 202,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -5,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 38,
+          "primary_exponents": [
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": -1098,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": -459,
+          "primary_exponents": [
+            4,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 5,
+          "numerator": -4,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": 2,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 5,
+          "numerator": 1,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 5,
+          "numerator": -1,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "label": "D*E*E",
+      "normalized_entries": [
+        {
+          "denominator": 6,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 54,
+          "numerator": -139,
+          "projective_exponents": [
+            2,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 15,
+          "numerator": 202,
+          "projective_exponents": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -5,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 38,
+          "projective_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": -1098,
+          "projective_exponents": [
+            3,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": -459,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": 1,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 5,
+          "numerator": -4,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": 2,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 5,
+          "numerator": 1,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 5,
+          "numerator": -1,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "triple": [
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "degree": 18,
+      "entries": [
+        {
+          "denominator": 162,
+          "numerator": 517,
+          "primary_exponents": [
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -12,
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 86,
+          "primary_exponents": [
+            1,
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 36,
+          "numerator": -2771,
+          "primary_exponents": [
+            2,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 342,
+          "primary_exponents": [
+            4,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": 5967,
+          "primary_exponents": [
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 9,
+          "numerator": 23,
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": -40,
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": 5,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": -33,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": -4,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 1,
+          "numerator": 24,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 9,
+          "numerator": -20,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 2,
+          "numerator": 67,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "label": "D*E*K",
+      "normalized_entries": [
+        {
+          "denominator": 162,
+          "numerator": 517,
+          "projective_exponents": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -12,
+          "projective_exponents": [
+            4,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 86,
+          "projective_exponents": [
+            7,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 36,
+          "numerator": -2771,
+          "projective_exponents": [
+            2,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 342,
+          "projective_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": 5967,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 9,
+          "numerator": 23,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": -40,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 3,
+          "numerator": 5,
+          "projective_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": -33,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": -4,
+          "projective_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 1,
+          "numerator": 24,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 9,
+          "numerator": -20,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 2,
+          "numerator": 67,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "triple": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "degree": 19,
+      "entries": [
+        {
+          "denominator": 60,
+          "numerator": 1799,
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": 1,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -1,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 395,
+          "primary_exponents": [
+            1,
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": -2539,
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": -30807,
+          "primary_exponents": [
+            3,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 36,
+          "numerator": 187,
+          "primary_exponents": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 48,
+          "numerator": -7877,
+          "primary_exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 16,
+          "numerator": 20709,
+          "primary_exponents": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 10,
+          "numerator": 101,
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": 161,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": -3495,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 10,
+          "numerator": 21,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 40,
+          "numerator": -19,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        },
+        {
+          "denominator": 8,
+          "numerator": -1,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        },
+        {
+          "denominator": 1,
+          "numerator": 4,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 9
+        }
+      ],
+      "label": "D*K*K",
+      "normalized_entries": [
+        {
+          "denominator": 60,
+          "numerator": 1799,
+          "projective_exponents": [
+            2,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": 1,
+          "projective_exponents": [
+            1,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -1,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": 395,
+          "projective_exponents": [
+            5,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": -2539,
+          "projective_exponents": [
+            4,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": -30807,
+          "projective_exponents": [
+            7,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 36,
+          "numerator": 187,
+          "projective_exponents": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 48,
+          "numerator": -7877,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 16,
+          "numerator": 20709,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 10,
+          "numerator": 101,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": 161,
+          "projective_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": -3495,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 10,
+          "numerator": 21,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 40,
+          "numerator": -19,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        },
+        {
+          "denominator": 8,
+          "numerator": -1,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        },
+        {
+          "denominator": 1,
+          "numerator": 4,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 9
+        }
+      ],
+      "triple": [
+        2,
+        4,
+        4
+      ]
+    },
+    {
+      "degree": 18,
+      "entries": [
+        {
+          "denominator": 648,
+          "numerator": -19,
+          "primary_exponents": [
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 6,
+          "primary_exponents": [
+            1,
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 24,
+          "numerator": 11,
+          "primary_exponents": [
+            2,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": 15,
+          "primary_exponents": [
+            4,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": -81,
+          "primary_exponents": [
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 18,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 2,
+          "numerator": 3,
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 3,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 18,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 1,
+          "numerator": -1,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "label": "E*E*E",
+      "normalized_entries": [
+        {
+          "denominator": 648,
+          "numerator": -19,
+          "projective_exponents": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -1,
+          "projective_exponents": [
+            4,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 6,
+          "projective_exponents": [
+            7,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 24,
+          "numerator": 11,
+          "projective_exponents": [
+            2,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": 15,
+          "projective_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": -81,
+          "projective_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 18,
+          "numerator": -1,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 2,
+          "numerator": 3,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 3,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 18,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 1,
+          "numerator": -1,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "triple": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "degree": 19,
+      "entries": [
+        {
+          "denominator": 30,
+          "numerator": 247,
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -1,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": 1,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": 20,
+          "primary_exponents": [
+            1,
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 20,
+          "numerator": -2661,
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": -531,
+          "primary_exponents": [
+            3,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 36,
+          "numerator": -5,
+          "primary_exponents": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 48,
+          "numerator": 277,
+          "primary_exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 16,
+          "numerator": -909,
+          "primary_exponents": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 5,
+          "numerator": 8,
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": 20,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": -429,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 5,
+          "numerator": 3,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 10,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        },
+        {
+          "denominator": 8,
+          "numerator": 1,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 9
+        }
+      ],
+      "label": "E*E*K",
+      "normalized_entries": [
+        {
+          "denominator": 30,
+          "numerator": 247,
+          "projective_exponents": [
+            2,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -1,
+          "projective_exponents": [
+            1,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": 1,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 3,
+          "numerator": 20,
+          "projective_exponents": [
+            5,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 20,
+          "numerator": -2661,
+          "projective_exponents": [
+            4,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 5,
+          "numerator": -531,
+          "projective_exponents": [
+            7,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 36,
+          "numerator": -5,
+          "projective_exponents": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 48,
+          "numerator": 277,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 16,
+          "numerator": -909,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 5,
+          "numerator": 8,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 3,
+          "numerator": 20,
+          "projective_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": -429,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 5,
+          "numerator": 3,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 10,
+          "numerator": -1,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        },
+        {
+          "denominator": 8,
+          "numerator": 1,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 9
+        }
+      ],
+      "triple": [
+        3,
+        3,
+        4
+      ]
+    },
+    {
+      "degree": 20,
+      "entries": [
+        {
+          "denominator": 540,
+          "numerator": -1547,
+          "primary_exponents": [
+            0,
+            0,
+            2,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 40,
+          "primary_exponents": [
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": 1,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 12,
+          "numerator": -23,
+          "primary_exponents": [
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 120,
+          "numerator": 13457,
+          "primary_exponents": [
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -5,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 20,
+          "numerator": 263,
+          "primary_exponents": [
+            3,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": -8637,
+          "primary_exponents": [
+            4,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 126,
+          "primary_exponents": [
+            5,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 2,
+          "numerator": 5,
+          "primary_exponents": [
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 60,
+          "numerator": -7,
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 2,
+          "numerator": -1,
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 13,
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 12,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 20,
+          "numerator": -9,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 1,
+          "numerator": 8,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 240,
+          "numerator": -17,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 6
+        },
+        {
+          "denominator": 8,
+          "numerator": 9,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "label": "E*K*K",
+      "normalized_entries": [
+        {
+          "denominator": 540,
+          "numerator": -1547,
+          "projective_exponents": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 40,
+          "projective_exponents": [
+            8,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": 1,
+          "projective_exponents": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 12,
+          "numerator": -23,
+          "projective_exponents": [
+            3,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 120,
+          "numerator": 13457,
+          "projective_exponents": [
+            2,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -5,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 20,
+          "numerator": 263,
+          "projective_exponents": [
+            5,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 8,
+          "numerator": -8637,
+          "projective_exponents": [
+            4,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": 126,
+          "projective_exponents": [
+            7,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 6,
+          "numerator": 1,
+          "projective_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 2,
+          "numerator": 5,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 60,
+          "numerator": -7,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 2,
+          "numerator": -1,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 13,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 12,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 20,
+          "numerator": -9,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 1,
+          "numerator": 8,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "denominator": 240,
+          "numerator": -17,
+          "projective_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 6
+        },
+        {
+          "denominator": 8,
+          "numerator": 9,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "triple": [
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "degree": 21,
+      "entries": [
+        {
+          "denominator": 5,
+          "numerator": 2,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -1,
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -111,
+          "primary_exponents": [
+            0,
+            3,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4320,
+          "numerator": 76909,
+          "primary_exponents": [
+            1,
+            0,
+            3,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 20,
+          "numerator": -309,
+          "primary_exponents": [
+            1,
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": 10709,
+          "primary_exponents": [
+            2,
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 480,
+          "numerator": -416453,
+          "primary_exponents": [
+            3,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 160,
+          "numerator": 2311149,
+          "primary_exponents": [
+            5,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 160,
+          "numerator": -13133421,
+          "primary_exponents": [
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 120,
+          "numerator": 7,
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 80,
+          "numerator": -257,
+          "primary_exponents": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 40,
+          "numerator": -43,
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 16,
+          "numerator": 955,
+          "primary_exponents": [
+            3,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 48,
+          "numerator": 203,
+          "primary_exponents": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 24,
+          "numerator": -3449,
+          "primary_exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 80,
+          "numerator": 97701,
+          "primary_exponents": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 20,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 5,
+          "numerator": -99,
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": -5,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 20,
+          "numerator": 6997,
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 10,
+          "numerator": -21,
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 20,
+          "numerator": 691,
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 8,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        },
+        {
+          "denominator": 20,
+          "numerator": -1,
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 8
+        },
+        {
+          "denominator": 160,
+          "numerator": 1,
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 10
+        }
+      ],
+      "label": "K*K*K",
+      "normalized_entries": [
+        {
+          "denominator": 5,
+          "numerator": 2,
+          "projective_exponents": [
+            2,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4,
+          "numerator": -1,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 2,
+          "numerator": -111,
+          "projective_exponents": [
+            6,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 4320,
+          "numerator": 76909,
+          "projective_exponents": [
+            1,
+            3,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 20,
+          "numerator": -309,
+          "projective_exponents": [
+            5,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 10,
+          "numerator": 10709,
+          "projective_exponents": [
+            8,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 480,
+          "numerator": -416453,
+          "projective_exponents": [
+            3,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 160,
+          "numerator": 2311149,
+          "projective_exponents": [
+            5,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 160,
+          "numerator": -13133421,
+          "projective_exponents": [
+            7,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "denominator": 120,
+          "numerator": 7,
+          "projective_exponents": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 80,
+          "numerator": -257,
+          "projective_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 40,
+          "numerator": -43,
+          "projective_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 16,
+          "numerator": 955,
+          "projective_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "denominator": 48,
+          "numerator": 203,
+          "projective_exponents": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 24,
+          "numerator": -3449,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 80,
+          "numerator": 97701,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "denominator": 20,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 5,
+          "numerator": -99,
+          "projective_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 4,
+          "numerator": -5,
+          "projective_exponents": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 20,
+          "numerator": 6997,
+          "projective_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "denominator": 10,
+          "numerator": -21,
+          "projective_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 20,
+          "numerator": 691,
+          "projective_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "denominator": 8,
+          "numerator": 1,
+          "projective_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        },
+        {
+          "denominator": 20,
+          "numerator": -1,
+          "projective_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 8
+        },
+        {
+          "denominator": 160,
+          "numerator": 1,
+          "projective_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 10
+        }
+      ],
+      "triple": [
+        4,
+        4,
+        4
+      ]
+    }
+  ],
+  "frame_degrees": [
+    1,
+    4,
+    5,
+    6,
+    7
+  ],
+  "frame_names": [
+    "x",
+    "C",
+    "D",
+    "E",
+    "K"
+  ],
+  "manifest": [
+    {
+      "basis": [
+        {
+          "label": "f3*b0",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "degree": 3,
+      "targets": [
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f6*b0",
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^2*b0",
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "degree": 6,
+      "targets": [
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "1*b1",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        }
+      ],
+      "degree": 7,
+      "targets": [
+        [
+          0,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f8*b0",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f5*b0",
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "degree": 8,
+      "targets": [
+        [
+          0,
+          0,
+          3
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f3*f6*b0",
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^3*b0",
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "1*b2",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        }
+      ],
+      "degree": 9,
+      "targets": [
+        [
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f5^2*b0",
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*b1",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "1*b3",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "degree": 10,
+      "targets": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f11*b0",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5*f6*b0",
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f8*b0",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^2*f5*b0",
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        }
+      ],
+      "degree": 11,
+      "targets": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f6^2*b0",
+          "primary_exponents": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^2*f6*b0",
+          "primary_exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^4*b0",
+          "primary_exponents": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5*b1",
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3*b2",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "1*b4",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "degree": 12,
+      "targets": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f5*f8*b0",
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f5^2*b0",
+          "primary_exponents": [
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f6*b1",
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3^2*b1",
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3*b3",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        }
+      ],
+      "degree": 13,
+      "targets": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          1,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f6*f8*b0",
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f11*b0",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f5*f6*b0",
+          "primary_exponents": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^2*f8*b0",
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^3*f5*b0",
+          "primary_exponents": [
+            3,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5*b2",
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "1*b5",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "label": "1*b6",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "degree": 14,
+      "targets": [
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f5^3*b0",
+          "primary_exponents": [
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f6^2*b0",
+          "primary_exponents": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^3*f6*b0",
+          "primary_exponents": [
+            3,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^5*b0",
+          "primary_exponents": [
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f8*b1",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3*f5*b1",
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f6*b2",
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f3^2*b2",
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f5*b3",
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "f3*b4",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        }
+      ],
+      "degree": 15,
+      "targets": [
+        [
+          0,
+          4,
+          4
+        ],
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f8^2*b0",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5*f11*b0",
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5^2*f6*b0",
+          "primary_exponents": [
+            0,
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f5*f8*b0",
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^2*f5^2*b0",
+          "primary_exponents": [
+            2,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f6*b1",
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3^3*b1",
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f6*b3",
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "f3^2*b3",
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "1*b7",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        }
+      ],
+      "degree": 16,
+      "targets": [
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          2,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f6*f11*b0",
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5*f6^2*b0",
+          "primary_exponents": [
+            0,
+            1,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f6*f8*b0",
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^2*f11*b0",
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^2*f5*f6*b0",
+          "primary_exponents": [
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^3*f8*b0",
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^4*f5*b0",
+          "primary_exponents": [
+            4,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5^2*b1",
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f8*b2",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f3*f5*b2",
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f5*b4",
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "label": "f3*b5",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "label": "f3*b6",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "degree": 17,
+      "targets": [
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f6^3*b0",
+          "primary_exponents": [
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5^2*f8*b0",
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f5^3*b0",
+          "primary_exponents": [
+            1,
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^2*f6^2*b0",
+          "primary_exponents": [
+            2,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^4*f6*b0",
+          "primary_exponents": [
+            4,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^6*b0",
+          "primary_exponents": [
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f11*b1",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f5*f6*b1",
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3*f8*b1",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3^2*f5*b1",
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3*f6*b2",
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f3^3*b2",
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f8*b3",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "f3*f5*b3",
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "f6*b4",
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "label": "f3^2*b4",
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "label": "1*b8",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 8
+        }
+      ],
+      "degree": 18,
+      "targets": [
+        [
+          1,
+          4,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f8*f11*b0",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5*f6*f8*b0",
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f8^2*b0",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f5*f11*b0",
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f5^2*f6*b0",
+          "primary_exponents": [
+            1,
+            2,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^2*f5*f8*b0",
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^3*f5^2*b0",
+          "primary_exponents": [
+            3,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f6^2*b1",
+          "primary_exponents": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3^2*f6*b1",
+          "primary_exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3^4*b1",
+          "primary_exponents": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f5^2*b2",
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f3*f6*b3",
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "f3^3*b3",
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "f5*b5",
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "label": "f5*b6",
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        },
+        {
+          "label": "f3*b7",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        },
+        {
+          "label": "1*b9",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 9
+        }
+      ],
+      "degree": 19,
+      "targets": [
+        [
+          2,
+          4,
+          4
+        ],
+        [
+          3,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f6^2*f8*b0",
+          "primary_exponents": [
+            0,
+            0,
+            2,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5^4*b0",
+          "primary_exponents": [
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f6*f11*b0",
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f5*f6^2*b0",
+          "primary_exponents": [
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^2*f6*f8*b0",
+          "primary_exponents": [
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^3*f11*b0",
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^3*f5*f6*b0",
+          "primary_exponents": [
+            3,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^4*f8*b0",
+          "primary_exponents": [
+            4,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^5*f5*b0",
+          "primary_exponents": [
+            5,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5*f8*b1",
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3*f5^2*b1",
+          "primary_exponents": [
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f11*b2",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f5*f6*b2",
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f3*f8*b2",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f3^2*f5*b2",
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f5^2*b3",
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "f8*b4",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "label": "f3*f5*b4",
+          "primary_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "label": "f6*b5",
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "label": "f3^2*b5",
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 5
+        },
+        {
+          "label": "f6*b6",
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 6
+        },
+        {
+          "label": "f3^2*b6",
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 6
+        }
+      ],
+      "degree": 20,
+      "targets": [
+        [
+          3,
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "basis": [
+        {
+          "label": "f5*f8^2*b0",
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            2,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5^2*f11*b0",
+          "primary_exponents": [
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f5^3*f6*b0",
+          "primary_exponents": [
+            0,
+            3,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f6^3*b0",
+          "primary_exponents": [
+            1,
+            0,
+            3,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3*f5^2*f8*b0",
+          "primary_exponents": [
+            1,
+            2,
+            0,
+            1,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^2*f5^3*b0",
+          "primary_exponents": [
+            2,
+            3,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^3*f6^2*b0",
+          "primary_exponents": [
+            3,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^5*f6*b0",
+          "primary_exponents": [
+            5,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f3^7*b0",
+          "primary_exponents": [
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 0
+        },
+        {
+          "label": "f6*f8*b1",
+          "primary_exponents": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3*f11*b1",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3*f5*f6*b1",
+          "primary_exponents": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3^2*f8*b1",
+          "primary_exponents": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f3^3*f5*b1",
+          "primary_exponents": [
+            3,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 1
+        },
+        {
+          "label": "f6^2*b2",
+          "primary_exponents": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f3^2*f6*b2",
+          "primary_exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f3^4*b2",
+          "primary_exponents": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 2
+        },
+        {
+          "label": "f11*b3",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "f5*f6*b3",
+          "primary_exponents": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "f3*f8*b3",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "f3^2*f5*b3",
+          "primary_exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 3
+        },
+        {
+          "label": "f3*f6*b4",
+          "primary_exponents": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "label": "f3^3*b4",
+          "primary_exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 4
+        },
+        {
+          "label": "f5*b7",
+          "primary_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "secondary": 7
+        },
+        {
+          "label": "f3*b8",
+          "primary_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 8
+        },
+        {
+          "label": "1*b10",
+          "primary_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "secondary": 10
+        }
+      ],
+      "degree": 21,
+      "targets": [
+        [
+          4,
+          4,
+          4
+        ]
+      ]
+    }
+  ],
+  "primary_degrees": [
+    3,
+    5,
+    6,
+    8,
+    11
+  ],
+  "primary_names": [
+    "f3",
+    "f5",
+    "f6",
+    "f8",
+    "f11"
+  ],
+  "projective_base": [
+    "t3",
+    "t6",
+    "t8",
+    "t11"
+  ],
+  "projective_basis": [
+    "b0/tau^0",
+    "b1/tau^7",
+    "b2/tau^9",
+    "b3/tau^10",
+    "b4/tau^12",
+    "b5/tau^14",
+    "b6/tau^14",
+    "b7/tau^16",
+    "b8/tau^18",
+    "b9/tau^19",
+    "b10/tau^21",
+    "b11/tau^28"
+  ],
+  "schema": "G_GENERIC_KLEIN_CUBIC_V1",
+  "scope": "Exact finite generic cubic; no rational point or pointlessness verdict.",
+  "secondary_degrees": [
+    0,
+    7,
+    9,
+    10,
+    12,
+    14,
+    14,
+    16,
+    18,
+    19,
+    21,
+    28
+  ]
+}

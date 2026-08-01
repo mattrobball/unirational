@@ -1,0 +1,51 @@
+{
+  "degrees": {
+    "25": {
+      "minimum_rank": 9,
+      "payload": "degree_25/search.json",
+      "payload_sha256": "9ea032b0f86f8ba7dbda15f7f60c79c5debf336dc33174d24a504a02176ec20d",
+      "tested_primitive_ansaetze": 2988
+    },
+    "31": {
+      "minimum_rank": 9,
+      "payload": "degree_31/search.json",
+      "payload_sha256": "c26894c90a1c36d153188250b8dab19d6d6a852a1b4f90418895d65ebf1a9d84",
+      "tested_primitive_ansaetze": 16013
+    },
+    "35": {
+      "minimum_rank": 9,
+      "payload": "degree_35/search.json",
+      "payload_sha256": "ddf356c5accc65fe9abdce7083d980ac406d1dea17bfb65f08413b0d44dbe662",
+      "tested_primitive_ansaetze": 32340
+    }
+  },
+  "family": "all three-element frame subsets; one primary-hsop monomial per selected frame vector; tuples with a common displayed primary factor removed",
+  "frame_degrees": [
+    1,
+    4,
+    5,
+    6,
+    7
+  ],
+  "frame_names": [
+    "x",
+    "C",
+    "D",
+    "E",
+    "K"
+  ],
+  "primary_degrees": [
+    3,
+    5,
+    6,
+    8,
+    11
+  ],
+  "proof": "rank 10 gives a nonzero minor; rank 9 gives a unique kernel line with a violated ternary-Veronese binomial. Either certificate proves projective landing emptiness over the algebraic closure",
+  "schema": "COV_SPARSE_PRIMARY_FRAME_V1",
+  "selected_degrees": [
+    25,
+    31,
+    35
+  ]
+}

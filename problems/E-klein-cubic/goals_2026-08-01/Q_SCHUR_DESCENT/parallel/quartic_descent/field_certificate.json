@@ -1,0 +1,74 @@
+{
+  "format": "Q-SCHUR-PRIMITIVE-QUARTIC-FIELD-CERTIFICATE-v1",
+  "schur": {
+    "group": "PSL2(F11)",
+    "order": 660,
+    "involution_centralizer_order": 12,
+    "line_orbit_size": 55,
+    "nonidentity_conjugacy_class_sizes": [
+      55,
+      60,
+      60,
+      110,
+      110,
+      132,
+      132
+    ],
+    "normal_closure_orders": [
+      660,
+      660,
+      660,
+      660,
+      660,
+      660,
+      660
+    ],
+    "simple": true
+  },
+  "primitive_quartic_cases": {
+    "A4": {
+      "name": "A4",
+      "vertex_stabilizer_order": 3,
+      "pairing_stabilizer_order": 4,
+      "stabilizer_intersection_order": 1,
+      "vertex_orbit_size": 4,
+      "edge_orbit_size": 6,
+      "pairing_orbit_size": 3,
+      "quartic_resolvent_compositum_degree": 12,
+      "product_orbit_sizes": {
+        "lines_x_vertices": 220,
+        "lines_x_edges": 330,
+        "lines_x_pairings": 165
+      },
+      "galois_closure_order": 12,
+      "cubic_resolvent_galois_closure": "C3",
+      "common_quotient_with_PSL2_11": "trivial"
+    },
+    "S4": {
+      "name": "S4",
+      "vertex_stabilizer_order": 6,
+      "pairing_stabilizer_order": 8,
+      "stabilizer_intersection_order": 2,
+      "vertex_orbit_size": 4,
+      "edge_orbit_size": 6,
+      "pairing_orbit_size": 3,
+      "quartic_resolvent_compositum_degree": 12,
+      "product_orbit_sizes": {
+        "lines_x_vertices": 220,
+        "lines_x_edges": 330,
+        "lines_x_pairings": 165
+      },
+      "galois_closure_order": 24,
+      "cubic_resolvent_galois_closure": "S3",
+      "common_quotient_with_PSL2_11": "trivial"
+    }
+  },
+  "deductions": {
+    "schur_and_quartic_galois_closures_are_linearly_disjoint": true,
+    "quartic_degree_after_adjoining_schur_splitting_field": 4,
+    "quartic_degree_after_adjoining_D12_line_field": 4,
+    "resolvent_degree_after_adjoining_schur_splitting_field": 3,
+    "D12_line_data_selects_no_vertex_or_pairing": true
+  },
+  "boundary": "The product-action certificate proves independence of the known Schur line data; it does not decide whether the cubic surface has a ground-field point."
+}

@@ -1,0 +1,87 @@
+Initial seed for pseudo-random number generator is 0
+
+--------------- INPUT DATA ---------------
+#variables                      19
+#equations                     669
+#invalid equations               0
+field characteristic            23
+homogeneous input?               1
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size    1048576 (2^20)
+max pair selection            2000
+reduce gb                        1
+#threads                         2
+info level                       2
+generate pbm files               0
+------------------------------------------
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  3     663     665     669 x 1330       88.23%      663 new       0 zero         0.28 | 0.25         
+  4    2000    7494    4373 x 3495        8.39%      934 new    1066 zero         0.84 | 0.86         
+  4    2000   21071    6358 x 4693        6.19%      335 new    1665 zero         0.71 | 0.73         
+  4    2000   24985    8247 x 6530        5.49%      283 new    1717 zero         0.86 | 1.09         
+  4     948   27993    8262 x 7314        5.29%        0 new     948 zero         0.48 | 0.72         
+  5    2002   27045    2795 x 793         3.58%        0 new    2002 zero         0.01 | 0.01         
+  5    2001   25043    3558 x 1557        5.22%        0 new    2001 zero         0.02 | 0.02         
+  5    2001   23042    3892 x 1891        4.51%        0 new    2001 zero         0.04 | 0.05         
+  5    2001   21041    5199 x 3198        4.73%        0 new    2001 zero         0.10 | 0.15         
+  5    2001   19040    5914 x 3913        4.29%        0 new    2001 zero         0.15 | 0.23         
+  5    2001   17039    6709 x 4708        4.11%        0 new    2001 zero         0.24 | 0.36         
+  5    2001   15038    6535 x 4534        3.68%        0 new    2001 zero         0.15 | 0.22         
+  5    2001   13037    7579 x 5578        3.56%        0 new    2001 zero         0.29 | 0.47         
+  5    2002   11036   10389 x 8387        3.22%        0 new    2002 zero         0.75 | 1.28         
+  5    2002    9034   14155 x 12153       2.49%        0 new    2002 zero         1.14 | 1.90         
+  5    2001    7032   14168 x 12167       2.21%        0 new    2001 zero         1.12 | 2.00         
+  5    2001    5031   16066 x 14065       1.85%        0 new    2001 zero         1.11 | 1.97         
+  5    2001    3030   17922 x 15921       1.75%        0 new    2001 zero         1.47 | 2.66         
+  5    1029    1029   16603 x 15574       1.81%        0 new    1029 zero         1.04 | 1.84         
+------------------------------------------------------------------------------------------------------
+reduce final basis     2221 x 2882        4.78%     2221 new       0 zero         0.02 | 0.02         
+------------------------------------------------------------------------------------------------------
+
+---------------- TIMINGS ----------------
+overall(elapsed)       10.92 sec
+overall(cpu)           16.87 sec
+select                  0.38 sec   3.4%
+symbolic prep.          1.60 sec  14.7%
+update                  1.73 sec  15.9%
+convert                 0.05 sec   0.5%
+linear algebra          7.11 sec  65.1%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                  2221
+#terms in basis              260822
+#pairs reduced                34656
+#GM criterion               4122630
+#redundant elements             663
+#rows reduced                 71533
+#zero reductions              32441
+max. matrix data              17922 x 15921 (1.751%)
+max. symbolic hash table size  2^15
+max. basis hash table size     2^20
+-----------------------------------------
+
+
+
+------------------------------------------------------------------------------------
+msolve overall time          11.70 sec (elapsed) / 17.63 sec (cpu)
+------------------------------------------------------------------------------------

@@ -1,0 +1,8 @@
+ring R=67,(X,w),dp;
+option(redSB);
+ideal I=X^3 + 18*X*w^2 + 18*X*w + 27*X + 24*w^3 - 32*w^2 + 5*w - 13,28*X*w^2 + 15*X*w + 33*X + 31*w^3 + w^2 + 9*w + 11,-13*X*w^2 - 14*X*w + 22*X - 24*w^3 + 11*w^2 - 23*w + 17,-8*w^3 - 30*w^2 + 25*w - 32;
+ideal G=std(I);
+poly n=reduce(1,G);
+if (n==0) { print("BASEPOINT_EMPTY=1"); } else { print("BASEPOINT_EMPTY=0"); }
+print("B0_FOUR_FORM_BASEPOINT_y_P67_DONE");
+quit;

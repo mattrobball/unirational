@@ -1,0 +1,55 @@
+VECTOR BUNDLES ON THE CUBIC THREEFOLD 5
+
+of dimension h°(N) = deg N = deg E(1)), = 10. Since Q is a P®-bundle
+over M, M is smooth of dimension 5.
+
+b) Let us prove now that a is smooth; here I follow closely [M-T]. Let
+T be a smooth elliptic quintic in X. The tangent map Tr(a) maps
+Tp(Q) = H°(L,N) into Tacry(J(X)) = H*(X, 9%)"; using Serre dual-
+ity and the isomorphism N* © N(—2), we can view its transpose as
+'T(a) : H*(X,0%) > H*(P,N(—2)). By Welters general results [We],
+this map fits into a commutative diagram:
+
+H(X,Ox()) ——+  (x,90%)
+HP, Or(1)) we,N(-2))
+
+where rp is the restriction map, R the Griffiths residue isomorphism, and
+@ the coboundary homomorphism associated to the exact sequence of
+normal bundles
+
+0 N — Nryps — Of(3) +0
+
+twisted by Op(—2).
+
+Since rp and R are bijective, we only have to prove that @ is injec-
+tive; it is sufficient to prove H°(I, Npyp«(—2)) = 0 ~ that is, by duality,
+H(P, Nfypa(2)) = 0. Using the exact sequence
+
+0 Niyps — Aa ip — wp +O
+
+and the vanishing of H1(I, Q}4(2)jr), this is equivalent to the surjectivity
+of the map H°(P,Q4,4(2)ir) + H°(T,wr(2)); it is enough to prove that
+the restriction map r : H°(P4,4,(2)) + H°(L',wr(2)) is onto. We have
+a commutative diagram
+
+WH°(P4, Ops(1)) H°(P4, %4(2))
+
+h :
+
+MHOE,Op(1)) ——*  H"(,wr(2))
+
+where the horizontal maps are the Wahl maps given by LA M 4
+
+LdM — MdL; since wp is known to be surjective in this case ([W],
+Thm. 4.2), r is surjective.
+
+©) Since a and p are smooth, ¢2 is smooth, hence étale because M and J(X)
+have the same dimension.
+
+a
+
+4, Reminder: J(X) as a Prym variety
+
+4.1, We need to recall some standard facts about Prym varieties and the
+corresponding description of J(X); the reader familiar with this is advised to go
+directly to the next section. A general reference is [M2].

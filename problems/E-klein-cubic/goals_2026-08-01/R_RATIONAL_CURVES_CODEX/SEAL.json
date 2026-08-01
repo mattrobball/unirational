@@ -1,0 +1,35 @@
+{
+  "exit": "R-HILBERT-COMPONENT-STRUCTURAL",
+  "headline": "OPEN",
+  "packet": "R_RATIONAL_CURVES_CODEX",
+  "pinned_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "replay": [
+    "/opt/homebrew/bin/python3 produce_fixed_jacobian.py",
+    "/opt/homebrew/bin/python3 produce_seal.py",
+    "/opt/homebrew/bin/python3 verify.py"
+  ],
+  "repository_commit_consumed": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+  "sha256": {
+    "HILBERT_INVENTORY.md": "527d52b19ff31e098cc075a351a82a6043724c4310155761ad13d7ce41435c0d",
+    "SOURCES.md": "eaea0098c9255a43df4362ffb1109c39f7f6159bab099a2f76bb1606e99dd4a2",
+    "STATUS.md": "a8ff178410520b0e96d36509468fcf187711516bc3d682b9705c144cf60c1366",
+    "THEOREM.md": "1faf234f55f2e1e72b7dd8ef562dcd459e82814ceb53661d8183f66060f563a1",
+    "component_inventory.json": "1a4ba0765ca3a7e5566ad710b4a8bf354263bde79dfae027a8f0b9132be82c5e",
+    "fixed_jacobian_payload.json": "9db626c2fab8dae9dfb05255b0951d4aae6a6c713e74074b1d3a9747aadf7cb6",
+    "produce_fixed_jacobian.py": "6cf6ee6085676db56cd6c08b045d5fedd3881b8417f195b503cb8a2c6acf1205",
+    "produce_seal.py": "6156dac3a39ccc937fc78ffd9c43530d8076d7b147fdac01e50eaafb6ee55950",
+    "verify.py": "d564e8241ef3b4496025578d6bc02ea7a0b5c28dbcb4e9bf5476bb8f915f8c6f",
+    "verify_fixed_jacobian.py": "4f2953055077cd979d95b336035c2754a9eb44b9ad139ad8bbee912342df3e9f"
+  },
+  "strict_nonclaims": [
+    "no point of the original generic twist was constructed",
+    "pointlessness was not proved",
+    "quartics and higher rational curves were not excluded"
+  ],
+  "terminal_marker": "R_HILBERT_COMPONENT_STRUCTURAL_SEALED_HEADLINE_OPEN",
+  "theorems": [
+    "J_T(K_proj) = {0}",
+    "no geometrically integral K_proj-conic on the genuine generic twist",
+    "a K_proj-point of the generalized twisted-cubic Hilbert component forces a K_proj-point of the original twist"
+  ]
+}

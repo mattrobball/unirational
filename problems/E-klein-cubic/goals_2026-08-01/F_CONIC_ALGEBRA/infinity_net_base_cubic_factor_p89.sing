@@ -1,0 +1,8 @@
+ring R=(89,r),(X),dp;
+poly G=X^3 + 19*X*r^2 - 31*X - 26*r^2 + 14;
+list L=factorize(G,1);
+ideal I=L[1];
+print("FACTOR_COUNT="+string(size(I)));
+print("FACTOR_1="+string(I[1]));
+print("INFINITY_NET_BASE_CUBIC_FACTOR_P89_DONE");
+quit;

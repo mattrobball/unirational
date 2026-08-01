@@ -1,0 +1,30 @@
+{
+  "schema": "m-sarkisov-dp3-section-frontier-v1",
+  "group": {"name": "PSL_2(F_11)", "order": 660},
+  "line_orbit": {
+    "setwise_stabilizer": "D12",
+    "stabilizer_order": 12,
+    "orbit_degree": 55,
+    "generic_twist_scheme": "connected finite etale line scheme"
+  },
+  "plane_choice": {
+    "parameter_space": "Gr(3,5)",
+    "conditions": [
+      "smooth cubic plane section",
+      "disjoint from all 55 orbit lines"
+    ],
+    "existence": "nonempty open over infinite K0"
+  },
+  "generic_cubic_surface": {
+    "closed_point_degree": 55,
+    "hyperplane_zero_cycle_degree": 3,
+    "index": 1
+  },
+  "voisin_2026": {
+    "source": "arXiv:2509.17996v2",
+    "hypothesis_degree_prime_to_3": 55,
+    "conclusion": "rational section or degree-4 multisection"
+  },
+  "headline": "OPEN",
+  "prohibited_inference": "a degree-55 point or degree-4 multisection is not a section"
+}

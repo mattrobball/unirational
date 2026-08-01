@@ -1,0 +1,56 @@
+A. BEAUVILLE,
+
+to c of the conic bundle f:
+
+So —+ Xe
+
+|_|
+
+c+ PP.
+
+It is a conic bundle over c with 10 singular fibres f~!(m2;) = €2, U loz.-
+Let 6: S. + Sp be the blowing down of ,,,...,2,3 Sp is a P!-bundle
+over c, thus isomorphic to one of the ruled surfaces F, (n > 0). Since
+these surfaces have different topological type according to the parity of
+n, we see that this parity is constant when D varies in each component
+W.. On the other hand, let us observe that the parity of n changes with :
+consider the divisor D’ = 01 +:r2+...+210, which belongs to W1—. (4-1);
+the surface Sp, is obtained from Sp ~ F,, by performing an elementary
+transformation on the fibre at (x,), thus is isomorphic to Fni1.
+
+Let us now specialize to the case where D is the divisor D(t) associated
+to a general twisted cubic t € J. Then t lies in Se, and projects down
+isomorphically to a curve fin Sp. Let E be the exceptional divisor of X~.
+Since the canonical bundle of X¢ is f*Op2(—2)(—E) & Ox,(—S. — E),
+the adjunction formula gives Ks, = —E\s,. Therefore —Ks,-t = E-t = 1,
+hence by the adjunction formula ¢? = —1 in S,, and therefore also # = —1
+in Sp. But for n > 0 the surface F,, contains a unique curve of negative
+square, namely the exceptional section of square —n. We conclude that
+Sp is isomorphic to F1, and that is its exceptional section; moreover the
+points of Sp which are blown up by 6 do not lie on
+
+‘Thus all components of J; are mapped into the same component W.
+of W. For a general D in Wz, the surface Sp is isomorphic to F; (a
+small deformation of F; is again isomorphic to F;), and the exceptional
+section = does not pass through the points which are blown up. Let t be
+its proper transform in S,. We have ? = —1, hence t- E = 1; since t
+projects isomorphically onto ¢, it is a twisted cubic intersecting £ at one
+point. This provides (birationally) the inverse mapping of D.
+
+(5.2.c) Claim : We have a commutative diagram
+
+D
+T] ~~" We
+
+J(X) P=P-
+
+where the isomorphism P © P, is the translation by an appropriate ele-
+ment £ € Pe. _
+
+Let t € J, and D(t) = Xai the corresponding divisor on A. The
+commutativity of the diagram means that the element u(t) := a(t) —
+(Xai — €) of J(X) is zero. Since € is arbitrary and J is irreducible,
+it suffices to prove that 2u(t) is constant when t varies. In view of the
+definition of g (4.2), this means that the class of 2t— Dz, in J~4(X) is
+independent of t.
+

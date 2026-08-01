@@ -1,0 +1,43 @@
+{
+  "schema": "q-schur-q0-v1",
+  "repository_commit": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+  "field": {
+    "name": "K_Schur",
+    "definition": "C(P(V6))^PSL2(F11)",
+    "transcendence_degree": 5,
+    "galois_closure_field": "E=C(P(V6))",
+    "galois_group_order": 660
+  },
+  "closed_point_55": {
+    "stabilizer": "D12",
+    "stabilizer_order": 12,
+    "degree": 55,
+    "residue_field": "E^D12",
+    "galois_closure": "E",
+    "automorphism_group_order": 1,
+    "effective": true,
+    "reduced": true
+  },
+  "orbit_cycles": [
+    {"stabilizer": "C11", "order": 11, "degree": 60, "normalizer_quotient_order": 5},
+    {"stabilizer": "C5", "order": 5, "degree": 132, "normalizer_quotient_order": 2},
+    {"stabilizer": "V4", "order": 4, "degree": 165, "normalizer_quotient_order": 3},
+    {"stabilizer": "C3", "order": 3, "degree": 220, "normalizer_quotient_order": 4}
+  ],
+  "degree_one_certificates": [
+    {"coefficients": [-13, 3, 1, 1], "degrees": [60, 132, 165, 220], "effective": false},
+    {"coefficients": [1, -18], "degrees": [55, 3], "effective": false}
+  ],
+  "index": 1,
+  "degree_19_residual": 2,
+  "standard_obstructions": {
+    "picard_torsor": "trivial",
+    "albanese": "trivial",
+    "elementary": "zero",
+    "relative_brauer": "zero",
+    "higher_amitsur": "zero",
+    "ten_coordinate_fibrations": "generic fibre period=index=3; not exhaustive"
+  },
+  "headline": "OPEN"
+}
+

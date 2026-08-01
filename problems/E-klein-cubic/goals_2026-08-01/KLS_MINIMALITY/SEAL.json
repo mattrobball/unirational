@@ -1,0 +1,73 @@
+{
+  "artifacts": [
+    {
+      "bytes": 4445,
+      "path": "COMPLETION_AUDIT.md",
+      "sha256": "6db3ae27e646e90c95eb668194759d63dc5185236691580deb5ccc0dacdd8f9d"
+    },
+    {
+      "bytes": 4118,
+      "path": "CONFIGURATIONS.json",
+      "sha256": "b1c3e935ff07133d0ea624639a9f1d63dd1bd2bdb7bbd3cb780fc9d0bf3a4faa"
+    },
+    {
+      "bytes": 2687,
+      "path": "ELIMINATION.json",
+      "sha256": "b9bd28341fd712db55ccb35c01126712d3800d520f352cca0db3baa8d50be090"
+    },
+    {
+      "bytes": 6473,
+      "path": "INTERFACE_AUDIT.md",
+      "sha256": "3d18edebfdb7e6c0f4563abf089d953d7a7e06cec80736c4dac47cc51215e084"
+    },
+    {
+      "bytes": 1754,
+      "path": "LITERATURE_AUDIT.md",
+      "sha256": "01388585b811156e682c9ea92dd69062e5c10dcf0367cc8c97e3251acfaaa7d6"
+    },
+    {
+      "bytes": 4580,
+      "path": "MINIMALITY_THEOREM.md",
+      "sha256": "31f897f9530a2c41a6def31ec562b4fe8a4f6f0df282c4293bd29523c5066633"
+    },
+    {
+      "bytes": 1152,
+      "path": "README.md",
+      "sha256": "fec48abbba0b684b8d2da355252d7fc93ad8aa586b911b8da1006b020f5f6034"
+    },
+    {
+      "bytes": 2661,
+      "path": "SOURCE_MANIFEST.json",
+      "sha256": "be0b6e92bcac4ee29a8ce74666f946cf02ac959360d77427174c9b9c319667ae"
+    },
+    {
+      "bytes": 3533,
+      "path": "STATUS.md",
+      "sha256": "364cf234035c986b38faa0ab33721b45335f94da6a897558a4202934cc3fc352"
+    },
+    {
+      "bytes": 1350,
+      "path": "VERIFICATION.md",
+      "sha256": "4541b2d3c54606a2fa4facbbdcf8cb76869cec7ce05ed2dda5d47150a46ddc01"
+    },
+    {
+      "bytes": 3117,
+      "path": "elimination/ELIMINATION.json",
+      "sha256": "467f59dc9b61eb09a6fc57e569d2f96f85cc8edd1be009b350efec411885fdae"
+    },
+    {
+      "bytes": 3095,
+      "path": "producer.py",
+      "sha256": "61bcbebe46c7addc80f406c081d94bfcefe4e58ab0862960589e95b36e91b2ce"
+    },
+    {
+      "bytes": 10675,
+      "path": "verify.py",
+      "sha256": "abe3b5e6d60bc2747813ba303b1f6abe58b7808393d44918e3dc4d61600e282e"
+    }
+  ],
+  "exit": "KLS-NO-THEOREM",
+  "headline": "OPEN",
+  "schema": "kls-goal-seal-v1",
+  "self_hash_included": false
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "m-sarkisov-seal-v1",
+  "exit": "M-NEW-MORI-FIBRE-STRUCTURAL",
+  "entry_head": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+  "repository_head_at_seal": "e1fc474a448db9d93df13967a4cef5f9918ff443",
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "local_files": {
+    "ARITHMETIC.md": "d18fd4dd397b317e52840b413c989807be2a473ff73204951271888622778258",
+    "CENTRES.md": "36ea975d046a7a29b4bae14e23e3b02e2c186b083384c2a0e1dd70d1b5537c5e",
+    "COMPLETION_AUDIT.md": "d09a1fd7930e39eb3322f21fa70b719dfd05f854bbd7943a7e5c55365d473b10",
+    "DESCENT_AUDIT.md": "f914cbbbf3f2d2eb70995c19ed3bda5faf316f58dbef3205d5fe962c1a7d7ae9",
+    "MORI_CONES.md": "1bac3ecf665911622f8ca0549621e74bbda4dc490b64a83bb13128f21c125e13",
+    "REFERENCES.md": "4d166befac44ef63a0bd50d82c7c346701d77a75a8e9f9c8e6a12e0872eced6f",
+    "STATUS.md": "4e3fa3255dbf3d69d171197efabaed0dc7d9110f5e12a689c474576bb2549c1a",
+    "THEOREM.md": "b3d460ddb7dc96ffcc0f84343e82faf892f8f015b311e9cd1d6c955d9d059f0c",
+    "WORK_SCOPE.md": "47092ee13c90e267953b1279ba4cabb9e5a2bdc3e1582dda57885d73f9c55ceb",
+    "links/plane_cubic_dp3/README.md": "017ef87dff8af734aa9ac80349d1964b2fb8fde67a9fecc6d7253b1cc3638edd",
+    "links/plane_cubic_dp3/intersection_payload.json": "062cf8c01bd399e1b08ae7c5cf9a38810ff623ea7a469329d5d633ed6714b06e",
+    "links/plane_cubic_dp3/produce.py": "e8e0005dddc281702abc2ef3f2dfeb5ec743a74e1aa1b8e3498ad859296fb039",
+    "links/plane_cubic_dp3/section_payload.json": "fb95ed2d7e999c9224114a634dd8371b09fc16c8b348fa30fefbf288a421980b",
+    "links/plane_cubic_dp3/verify.py": "d8e70274ed8ce1eabef726c07321c3ef270a226ebcce024d192e1d45f4b57d24",
+    "links/plane_cubic_dp3/verify_section_frontier.py": "4fbc61d3cbb7d4226ac7fd79136e47ddda048bfd0141217253b085efec89da7f",
+    "payload/weak_fano_centres.json": "bcdfd7e2348c6352b9f6ec36c7730b9967b5d94a7a579a68e3537b13d0c045a8",
+    "produce.py": "046b7fc67f36db4371cef3b3be6eafdeaccfaba086e15d23e315401f7730f11c",
+    "verify.py": "36703ad244e47ad51fe620eb0d6823d99fed92858e274d9e408f508bc7226633",
+    "verify_centres.py": "d8980465f849c472c6a97d72faa7ef86d52f1b2677a292cc3be2fbae2b9c07f6"
+  },
+  "upstream_inputs": {
+    "goals_2026-08-01/GOAL_M_SARKISOV_BIRATIONAL_MODELS.md": "2870c5801f4a12eb44637ff0f5181bb0e2c68b709b628a0144a4513965db96d8",
+    "certificates/exact_covariants_check.py": "89847a3203bf7d842b00a551a29377bc9d1cdd36dca9cb5d192c54de0abd2a6e",
+    "tmp/generic_twist/phi_coefficients.py": "8c217aeaefe300a76e886f0a94803b5812689574299e1a2c72daeec72efd4525",
+    "tmp/d12_line_restriction/REPORT.md": "46e15d99079b482cecdaa67ae56d323217d2523c2b2ae1c94e66f1f37173c79a",
+    "tmp/d12_line_restriction/verify.py": "1878cd8cbab7394be7a36d1686c72daea67224501774296c16737f68c02ae7c6"
+  },
+  "headline": "OPEN",
+  "scope": "exact structural Mori-fibre exit; no positive or negative headline claim"
+}

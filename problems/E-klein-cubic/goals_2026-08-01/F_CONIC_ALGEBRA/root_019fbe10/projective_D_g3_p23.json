@@ -1,0 +1,25 @@
+{
+  "affine_degree": 10,
+  "affine_terms": 358,
+  "base_charts": [
+    "h",
+    "A",
+    "B",
+    "Y",
+    "T"
+  ],
+  "cubic_terms": 30,
+  "d_only": true,
+  "g": 3,
+  "point_charts": [
+    "X",
+    "y",
+    "w"
+  ],
+  "prime": 23,
+  "projective_degree": 10,
+  "projective_terms": 358,
+  "scope": "smoothness lifting probe; not point evidence",
+  "script": "projective_D_g3_p23.sing",
+  "zeta11_residue": 2
+}

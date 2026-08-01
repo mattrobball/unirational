@@ -1,0 +1,476 @@
+{
+  "all_projective_special_fibres_empty": true,
+  "ansatz": "for each listed frame triple and listed support {0,s,t}, each of its three coordinates is an arbitrary QQ-linear combination of beta_0,beta_s,beta_t",
+  "basis": [
+    "beta_0",
+    "beta_1",
+    "beta_2",
+    "beta_3",
+    "beta_4",
+    "beta_5",
+    "beta_6",
+    "beta_7",
+    "beta_8",
+    "beta_9",
+    "beta_10",
+    "beta_11"
+  ],
+  "field": "K_proj over P0=QQ(t3,t6,t8,t11)",
+  "frame": [
+    "x",
+    "C",
+    "D",
+    "E",
+    "K"
+  ],
+  "prime": 101,
+  "schema": "G_TERNARY_COMMON_PLANE_V1",
+  "scope": "Good-fibre projective emptiness proves characteristic-zero emptiness only for the listed 9-variable constant-field ansatze.",
+  "source_hashes": {
+    "G_ALL_DEGREE/generic_cubic.json": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+    "tmp/kproj_arithmetic/normalized_kproj_table.json": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f"
+  },
+  "system_count": 10,
+  "systems": [
+    {
+      "ansatz": [
+        "u00*beta_0+u01*beta_1+u02*beta_2",
+        "u10*beta_0+u11*beta_1+u12*beta_2",
+        "u20*beta_0+u21*beta_1+u22*beta_2"
+      ],
+      "elapsed_seconds": 0.011016,
+      "exact_coefficient_equations": 1181,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "plane_systems/012_s000102.in",
+      "input_sha256": "eb601aa55de0a80db0c4288cbed3bd6035f94a883306b80bcc9e85db08edbf8b",
+      "leading": "plane_systems/012_s000102.leading.out",
+      "leading_basis_length": 100,
+      "leading_sha256": "ddc8b1fb522f8632beb182c1f3964c54c362a2c0bdbb141122e61e1cbcf93fb4",
+      "modular_equation_rank": 100,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3,
+        "a6": 3,
+        "a7": 3,
+        "a8": 3
+      },
+      "stem": "012_s000102",
+      "support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "ansatz": [
+        "u00*beta_0+u01*beta_1+u02*beta_2",
+        "u10*beta_0+u11*beta_1+u12*beta_2",
+        "u20*beta_0+u21*beta_1+u22*beta_2"
+      ],
+      "elapsed_seconds": 0.033984,
+      "exact_coefficient_equations": 1441,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "plane_systems/013_s000102.in",
+      "input_sha256": "445f6bc5ffb62ed69b06a86d1bf98fed4f0e6b008605f664d0bd7a641db66fd5",
+      "leading": "plane_systems/013_s000102.leading.out",
+      "leading_basis_length": 100,
+      "leading_sha256": "ddc8b1fb522f8632beb182c1f3964c54c362a2c0bdbb141122e61e1cbcf93fb4",
+      "modular_equation_rank": 100,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3,
+        "a6": 3,
+        "a7": 3,
+        "a8": 3
+      },
+      "stem": "013_s000102",
+      "support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "ansatz": [
+        "u00*beta_0+u01*beta_1+u02*beta_2",
+        "u10*beta_0+u11*beta_1+u12*beta_2",
+        "u20*beta_0+u21*beta_1+u22*beta_2"
+      ],
+      "elapsed_seconds": 0.051305,
+      "exact_coefficient_equations": 1935,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "plane_systems/014_s000102.in",
+      "input_sha256": "c250ebb941b528b944cf366cde9e68d9b86db7deccd6f2f1b8597c25dcf7980e",
+      "leading": "plane_systems/014_s000102.leading.out",
+      "leading_basis_length": 100,
+      "leading_sha256": "ddc8b1fb522f8632beb182c1f3964c54c362a2c0bdbb141122e61e1cbcf93fb4",
+      "modular_equation_rank": 100,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3,
+        "a6": 3,
+        "a7": 3,
+        "a8": 3
+      },
+      "stem": "014_s000102",
+      "support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "ansatz": [
+        "u00*beta_0+u01*beta_1+u02*beta_2",
+        "u10*beta_0+u11*beta_1+u12*beta_2",
+        "u20*beta_0+u21*beta_1+u22*beta_2"
+      ],
+      "elapsed_seconds": 0.021253,
+      "exact_coefficient_equations": 1525,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "plane_systems/023_s000102.in",
+      "input_sha256": "364a9903b94614b052e726a47c5577cf1a0d2ff023127bc84d0c10abf5e057b2",
+      "leading": "plane_systems/023_s000102.leading.out",
+      "leading_basis_length": 100,
+      "leading_sha256": "ddc8b1fb522f8632beb182c1f3964c54c362a2c0bdbb141122e61e1cbcf93fb4",
+      "modular_equation_rank": 100,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3,
+        "a6": 3,
+        "a7": 3,
+        "a8": 3
+      },
+      "stem": "023_s000102",
+      "support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "ansatz": [
+        "u00*beta_0+u01*beta_1+u02*beta_2",
+        "u10*beta_0+u11*beta_1+u12*beta_2",
+        "u20*beta_0+u21*beta_1+u22*beta_2"
+      ],
+      "elapsed_seconds": 0.020595,
+      "exact_coefficient_equations": 1847,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "plane_systems/024_s000102.in",
+      "input_sha256": "4d3fd94f9d598f818414c373b19f535aa394127937e7f3baedb6942eb9edb42c",
+      "leading": "plane_systems/024_s000102.leading.out",
+      "leading_basis_length": 100,
+      "leading_sha256": "20331a7ea030ae8fb913836f6f4425087265eb1343b2e3579e8ca4cb359bbe23",
+      "modular_equation_rank": 94,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3,
+        "a6": 3,
+        "a7": 3,
+        "a8": 3
+      },
+      "stem": "024_s000102",
+      "support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "ansatz": [
+        "u00*beta_0+u01*beta_1+u02*beta_2",
+        "u10*beta_0+u11*beta_1+u12*beta_2",
+        "u20*beta_0+u21*beta_1+u22*beta_2"
+      ],
+      "elapsed_seconds": 0.010226,
+      "exact_coefficient_equations": 1975,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "plane_systems/034_s000102.in",
+      "input_sha256": "fc368199b1301664900180e8e5ab6a56f10713fe71615c81ac35d4e7e334478f",
+      "leading": "plane_systems/034_s000102.leading.out",
+      "leading_basis_length": 100,
+      "leading_sha256": "ddc8b1fb522f8632beb182c1f3964c54c362a2c0bdbb141122e61e1cbcf93fb4",
+      "modular_equation_rank": 100,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3,
+        "a6": 3,
+        "a7": 3,
+        "a8": 3
+      },
+      "stem": "034_s000102",
+      "support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "ansatz": [
+        "u00*beta_0+u01*beta_1+u02*beta_2",
+        "u10*beta_0+u11*beta_1+u12*beta_2",
+        "u20*beta_0+u21*beta_1+u22*beta_2"
+      ],
+      "elapsed_seconds": 0.034325,
+      "exact_coefficient_equations": 1512,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "plane_systems/123_s000102.in",
+      "input_sha256": "1d60c8380a9d2357d82f999bb9f192cec244477a261f09169b01199746403fad",
+      "leading": "plane_systems/123_s000102.leading.out",
+      "leading_basis_length": 100,
+      "leading_sha256": "ddc8b1fb522f8632beb182c1f3964c54c362a2c0bdbb141122e61e1cbcf93fb4",
+      "modular_equation_rank": 100,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3,
+        "a6": 3,
+        "a7": 3,
+        "a8": 3
+      },
+      "stem": "123_s000102",
+      "support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "ansatz": [
+        "u00*beta_0+u01*beta_1+u02*beta_2",
+        "u10*beta_0+u11*beta_1+u12*beta_2",
+        "u20*beta_0+u21*beta_1+u22*beta_2"
+      ],
+      "elapsed_seconds": 0.013972,
+      "exact_coefficient_equations": 1957,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "plane_systems/124_s000102.in",
+      "input_sha256": "4ebdcc9a68fd26cb9c0233d08a2903a6c951ccb7f99d02eef0bf37db199b6c4f",
+      "leading": "plane_systems/124_s000102.leading.out",
+      "leading_basis_length": 100,
+      "leading_sha256": "ddc8b1fb522f8632beb182c1f3964c54c362a2c0bdbb141122e61e1cbcf93fb4",
+      "modular_equation_rank": 100,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3,
+        "a6": 3,
+        "a7": 3,
+        "a8": 3
+      },
+      "stem": "124_s000102",
+      "support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "ansatz": [
+        "u00*beta_0+u01*beta_1+u02*beta_2",
+        "u10*beta_0+u11*beta_1+u12*beta_2",
+        "u20*beta_0+u21*beta_1+u22*beta_2"
+      ],
+      "elapsed_seconds": 0.032911,
+      "exact_coefficient_equations": 1991,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "plane_systems/134_s000102.in",
+      "input_sha256": "5dc483fa776978590e8dda54bde0db698f5a881d37128ff278e6563c764e1889",
+      "leading": "plane_systems/134_s000102.leading.out",
+      "leading_basis_length": 100,
+      "leading_sha256": "ddc8b1fb522f8632beb182c1f3964c54c362a2c0bdbb141122e61e1cbcf93fb4",
+      "modular_equation_rank": 100,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3,
+        "a6": 3,
+        "a7": 3,
+        "a8": 3
+      },
+      "stem": "134_s000102",
+      "support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "ansatz": [
+        "u00*beta_0+u01*beta_1+u02*beta_2",
+        "u10*beta_0+u11*beta_1+u12*beta_2",
+        "u20*beta_0+u21*beta_1+u22*beta_2"
+      ],
+      "elapsed_seconds": 0.019866,
+      "exact_coefficient_equations": 1975,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "plane_systems/234_s000102.in",
+      "input_sha256": "80decc826b5cbc3bcb4674a8e3e3bb430dc5a50b374c175696691c91e94daedd",
+      "leading": "plane_systems/234_s000102.leading.out",
+      "leading_basis_length": 100,
+      "leading_sha256": "ddc8b1fb522f8632beb182c1f3964c54c362a2c0bdbb141122e61e1cbcf93fb4",
+      "modular_equation_rank": 100,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3,
+        "a6": 3,
+        "a7": 3,
+        "a8": 3
+      },
+      "stem": "234_s000102",
+      "support": [
+        0,
+        1,
+        2
+      ]
+    }
+  ]
+}

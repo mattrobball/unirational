@@ -1,0 +1,64 @@
+{
+  "schema": "q-schur-negative-obstruction-interface-v1",
+  "status": "NEGATIVE-OBSTRUCTION-INTERFACE-NONTERMINAL",
+  "headline": "OPEN",
+  "repository_head_audited": "53e267a59b2d24de93c58dd9ddacc2f995fc2d68",
+  "schur_field": {
+    "presentation": "C(P(V6))^PSL(2,11)",
+    "transcendence_degree": 5,
+    "distinct_from_goal_v_field": true
+  },
+  "known_effective_cycle_degrees": [3, 55],
+  "bezout": {
+    "coefficients": [-18, 1],
+    "value": 1
+  },
+  "global_no_go": {
+    "rost_cycle_module_base_kernels": "zero by degree-3 and degree-55 restriction-corestriction",
+    "commutative_torsor_recipient": "every K-morphism from X_Schur to a torsor under a commutative algebraic group forces that torsor to be trivial",
+    "semiabelian_torsor_recipient": "retired as a special case",
+    "strict_boundary": "noncommutative or nonlinear invariants are not covered"
+  },
+  "local_narrowing": {
+    "ramified_inertia": "locally soluble",
+    "residue_transcendence_degree_at_most_one": "locally soluble by rational connectedness and Graber-Harris-Starr",
+    "necessary_inertia_for_nonpoint": 1,
+    "necessary_minimum_residue_transcendence_degree": 2,
+    "necessary_maximum_rational_rank": 3,
+    "surviving_decomposition_groups": [
+      "PSL(2,11)",
+      "A5_class_1",
+      "A5_class_2",
+      "11:5"
+    ],
+    "abhyankar_table": [
+      {"rational_rank": 1, "maximum_residue_transcendence_degree": 4},
+      {"rational_rank": 2, "maximum_residue_transcendence_degree": 3},
+      {"rational_rank": 3, "maximum_residue_transcendence_degree": 2},
+      {"rational_rank": 4, "maximum_residue_transcendence_degree": 1},
+      {"rational_rank": 5, "maximum_residue_transcendence_degree": 0}
+    ]
+  },
+  "primary_sources": {
+    "graber_harris_starr": "https://arxiv.org/abs/math/0109220",
+    "cheltsov_tschinkel_zhang": "https://math.nyu.edu/~tschinke/papers/yuri/25bguni/bguni.pdf"
+  },
+  "authoritative_inputs": {
+    "GOAL_Q_SCHUR_INDEX_ONE_DESCENT.md": "72454a2844988ed0848caa0474d4f145b5c8afd53379a5f2f211480fe94e3de6",
+    "Q_SCHUR_DESCENT/ZERO_CYCLE_LEDGER.md": "fddb775b050cd6efa3439a57ec0159322c0d62c177ec15c4cfab843418740f98",
+    "Q_SCHUR_DESCENT/OBSTRUCTION_LEDGER.md": "e7fb1902227112585af769d91d12543395d3add399c04b1337d9429da8cdd73c",
+    "V_VALUATION_TROPICAL/MODEL.md": "bdd827da6fce6f2f91bad55ccd219400fd733a2f91d054396fd935e4dc107127",
+    "V_VALUATION_TROPICAL/proof_payload.json": "46d8cc886af7f50c63329bc0382dea67f3262ab3963a30d0041b5c144edb8bca",
+    "M_SARKISOV/headline_method_audit_20260801/THEOREM.md": "e651e65fba6c3b4a79bcdd943805a67d0b2d3c1361d62d38e6e8782f35a78a70",
+    "D_EQUIVARIANT_MOTIVE/STATUS.md": "01da0d9f26151c238151b84b2d5f8e472449c8c5c633cb2f6fad14f56ba3ec6b",
+    "J_FIXED_CENTRE_PRYM/STATUS.md": "bab71216a1f3b0ccdadf0c8f10e3e7dd66207276b12ae04d16ccb500252989b5",
+    "F_CONIC_ALGEBRA/STATUS.md": "d571f8705099131c3cf80766b66af068353e507e756b825b4f0a0bfbc56a5e77",
+    "H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/STATUS.md": "b6e4973ee9cabea762b7b553af03f08923aa7da8e090bbd0c733230ba07dae1f"
+  },
+  "strict_nonclaims": [
+    "no Schur-field local nonpoint has been constructed",
+    "no full residue cubic is proved pointless",
+    "no global pointlessness theorem is proved",
+    "the Problem E headline remains open"
+  ]
+}

@@ -1,0 +1,626 @@
+{
+  "format": "klein-a5-covariant-line-search-v2",
+  "records": [
+    {
+      "common_degree": 22,
+      "geometric_line_rational_function_points_found": 0,
+      "invariant_f15_terms": 70,
+      "invariant_q_terms": 6,
+      "label": "A5_class_1",
+      "lines": [
+        {
+          "extension_input": "a5c1_line_0_1_f89cubic.sing",
+          "extension_input_sha256": "73cefcfae426db0eab514f6e8d44293e946c7d160ea366353db1a437597d6c51",
+          "extension_transcript": "a5c1_line_0_1_f89cubic.txt",
+          "extension_transcript_sha256": "a074fa8e3baf6b170df885d53b734cf7fca200097e81d1066b1f5029ad2e2fba",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c1_line_0_1.sing",
+          "input_sha256": "0c4abb28bae191d0f163ec34ba3d41e7cfbc22a6fb64ffd8b6750a4e06ee2c41",
+          "left_column": 0,
+          "right_column": 1,
+          "total_terms": 8993,
+          "transcript": "a5c1_line_0_1.txt",
+          "transcript_sha256": "a074fa8e3baf6b170df885d53b734cf7fca200097e81d1066b1f5029ad2e2fba"
+        },
+        {
+          "extension_input": "a5c1_line_0_2_f89cubic.sing",
+          "extension_input_sha256": "493c0e81977bc6f3771fb12747a6e7eff2599b59020f70ee8d5a114cc848aa1e",
+          "extension_transcript": "a5c1_line_0_2_f89cubic.txt",
+          "extension_transcript_sha256": "4b17c7dbd604b5e2412aef22292a604a98a8f4486c0373ed3fc974f4e68effd7",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c1_line_0_2.sing",
+          "input_sha256": "822aa5355317cc98e1a96a0335393b70f482f6bcab0f3192e798792e8f08a286",
+          "left_column": 0,
+          "right_column": 2,
+          "total_terms": 5398,
+          "transcript": "a5c1_line_0_2.txt",
+          "transcript_sha256": "4b17c7dbd604b5e2412aef22292a604a98a8f4486c0373ed3fc974f4e68effd7"
+        },
+        {
+          "extension_input": "a5c1_line_0_3_f89cubic.sing",
+          "extension_input_sha256": "2605f7ebd93f20e571aba971e4b48e73b280f88467e4f345757372c6f42d3864",
+          "extension_transcript": "a5c1_line_0_3_f89cubic.txt",
+          "extension_transcript_sha256": "c7aa9e33fe8b68197911a486602f12f8f959791af5e085696812134803ad28f3",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c1_line_0_3.sing",
+          "input_sha256": "732648de996d0558505a8eb34aac54239e206535d935ea83c29e3a30d548fbc2",
+          "left_column": 0,
+          "right_column": 3,
+          "total_terms": 8940,
+          "transcript": "a5c1_line_0_3.txt",
+          "transcript_sha256": "c7aa9e33fe8b68197911a486602f12f8f959791af5e085696812134803ad28f3"
+        },
+        {
+          "extension_input": "a5c1_line_0_4_f89cubic.sing",
+          "extension_input_sha256": "0351acc0df6bf13c5fa319bde415aa9a9ec8ff341f0ec610a728d1e92abfe4d1",
+          "extension_transcript": "a5c1_line_0_4_f89cubic.txt",
+          "extension_transcript_sha256": "dc4bbf9819d8db7c2726aa5961a419a28f94738b34d1d7b5e1d62c8ece4f6dcc",
+          "f89_cubic_extension_factor_count": 1,
+          "f89_cubic_extension_factor_t_degrees": [
+            3
+          ],
+          "factor_count": 1,
+          "factor_t_degrees": [
+            3
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c1_line_0_4.sing",
+          "input_sha256": "4bcac332edce259925d92d612d3798e02784db302ad349efd6f822ad891d55a6",
+          "left_column": 0,
+          "right_column": 4,
+          "total_terms": 5300,
+          "transcript": "a5c1_line_0_4.txt",
+          "transcript_sha256": "dc4bbf9819d8db7c2726aa5961a419a28f94738b34d1d7b5e1d62c8ece4f6dcc"
+        },
+        {
+          "extension_input": "a5c1_line_1_2_f89cubic.sing",
+          "extension_input_sha256": "f7c0465d29f2c73f2fece1b3443f56d40356d0db787d54aa8f8dddce17bd8e59",
+          "extension_transcript": "a5c1_line_1_2_f89cubic.txt",
+          "extension_transcript_sha256": "88dec8942fa732d2456ac6d75fdae0b5ac68a344f12af2d9438d9d7e6fd2c020",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c1_line_1_2.sing",
+          "input_sha256": "ba9828ea4eccddc82e512cb466e9da1dd8886d7bd4a74bf586e56ecd530393ad",
+          "left_column": 1,
+          "right_column": 2,
+          "total_terms": 5356,
+          "transcript": "a5c1_line_1_2.txt",
+          "transcript_sha256": "88dec8942fa732d2456ac6d75fdae0b5ac68a344f12af2d9438d9d7e6fd2c020"
+        },
+        {
+          "extension_input": "a5c1_line_1_3_f89cubic.sing",
+          "extension_input_sha256": "664d49413d9d55c2858f606686c729c001424eb4c30aeafe10a96457eabb19eb",
+          "extension_transcript": "a5c1_line_1_3_f89cubic.txt",
+          "extension_transcript_sha256": "244035684a764ba27ae16cba1c52dff61b5c0390a411b72810b4f5bb992a0c0b",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c1_line_1_3.sing",
+          "input_sha256": "e33545eb0b76185d18795d760a4fd1e777488e2094ce874b1f0d6a9f939f3cd6",
+          "left_column": 1,
+          "right_column": 3,
+          "total_terms": 8902,
+          "transcript": "a5c1_line_1_3.txt",
+          "transcript_sha256": "244035684a764ba27ae16cba1c52dff61b5c0390a411b72810b4f5bb992a0c0b"
+        },
+        {
+          "extension_input": "a5c1_line_1_4_f89cubic.sing",
+          "extension_input_sha256": "2d9fe93c0e8599ef610c48b7e50e322d957e7bc17a2d2a257881b6ccfbd7a220",
+          "extension_transcript": "a5c1_line_1_4_f89cubic.txt",
+          "extension_transcript_sha256": "6960ae0877463c580519e5ad0c0a507f13671440537d0a3f9c02b658580d4bc4",
+          "f89_cubic_extension_factor_count": 1,
+          "f89_cubic_extension_factor_t_degrees": [
+            3
+          ],
+          "factor_count": 1,
+          "factor_t_degrees": [
+            3
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c1_line_1_4.sing",
+          "input_sha256": "c411ed3ab819ae6ebd2b9f7f58fef0e98dc77fcb5bcd78effbcd312543053e32",
+          "left_column": 1,
+          "right_column": 4,
+          "total_terms": 7105,
+          "transcript": "a5c1_line_1_4.txt",
+          "transcript_sha256": "6960ae0877463c580519e5ad0c0a507f13671440537d0a3f9c02b658580d4bc4"
+        },
+        {
+          "extension_input": "a5c1_line_2_3_f89cubic.sing",
+          "extension_input_sha256": "7ac3855ecaac22a716219e75ed6b9ec1e22de3b51111f95fbbb0b1432606bd20",
+          "extension_transcript": "a5c1_line_2_3_f89cubic.txt",
+          "extension_transcript_sha256": "e434b3266db7a9f85b64680c5234b9f8f5bc864751c6a8cd2d0117e45aa28228",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c1_line_2_3.sing",
+          "input_sha256": "50b38af7d9a31dd0cfe7c7547d6dff2cdf0e3ec674dcf1d0367a9c33ed0251cc",
+          "left_column": 2,
+          "right_column": 3,
+          "total_terms": 7145,
+          "transcript": "a5c1_line_2_3.txt",
+          "transcript_sha256": "e434b3266db7a9f85b64680c5234b9f8f5bc864751c6a8cd2d0117e45aa28228"
+        },
+        {
+          "extension_input": "a5c1_line_2_4_f89cubic.sing",
+          "extension_input_sha256": "388402c9497a4a065ba225c7883b6b8229f4ba7537f9dee5372a187b98a1412b",
+          "extension_transcript": "a5c1_line_2_4_f89cubic.txt",
+          "extension_transcript_sha256": "e1f9d40e48693f368255fec22cf57c05ed242f19c18cfdfe865e767810be5338",
+          "f89_cubic_extension_factor_count": 16,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "factor_count": 16,
+          "factor_t_degrees": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c1_line_2_4.sing",
+          "input_sha256": "2124065bc4839f6af556c09993a2c4dabd0b8a3f69d5aabc5b865ec16d1ab84a",
+          "left_column": 2,
+          "right_column": 4,
+          "total_terms": 5400,
+          "transcript": "a5c1_line_2_4.txt",
+          "transcript_sha256": "e1f9d40e48693f368255fec22cf57c05ed242f19c18cfdfe865e767810be5338"
+        },
+        {
+          "extension_input": "a5c1_line_3_4_f89cubic.sing",
+          "extension_input_sha256": "e44f7b09abdc0e2aa1f602cd34c248b23b758d4853191ad84bb670e52f510dfb",
+          "extension_transcript": "a5c1_line_3_4_f89cubic.txt",
+          "extension_transcript_sha256": "f8d69eed0d4e42d15ebd371a85e5656e68904129ec6423b1897f1bba9cb6b567",
+          "f89_cubic_extension_factor_count": 1,
+          "f89_cubic_extension_factor_t_degrees": [
+            3
+          ],
+          "factor_count": 1,
+          "factor_t_degrees": [
+            3
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c1_line_3_4.sing",
+          "input_sha256": "4b0e699be49273e061272445b5155dde4683a9bde806983af745ea26ffb80e88",
+          "left_column": 3,
+          "right_column": 4,
+          "total_terms": 5213,
+          "transcript": "a5c1_line_3_4.txt",
+          "transcript_sha256": "f8d69eed0d4e42d15ebd371a85e5656e68904129ec6423b1897f1bba9cb6b567"
+        }
+      ],
+      "multiplier_degrees": [
+        20,
+        18,
+        17,
+        16,
+        15
+      ],
+      "primitive_degrees": [
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "raw_frame_witness": {
+        "determinant_mod_89": 34,
+        "point": [
+          2,
+          3,
+          1
+        ]
+      },
+      "selected_basis_indices": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "common_degree": 22,
+      "geometric_line_rational_function_points_found": 0,
+      "invariant_f15_terms": 70,
+      "invariant_q_terms": 6,
+      "label": "A5_class_2",
+      "lines": [
+        {
+          "extension_input": "a5c2_line_0_1_f89cubic.sing",
+          "extension_input_sha256": "965d9b904781e084246180ea78114a0e43af572a91191026b08d842477647d31",
+          "extension_transcript": "a5c2_line_0_1_f89cubic.txt",
+          "extension_transcript_sha256": "c1465aa3d0a8abcb7921b4df3eaa9e41d443468e90029ee7a2bc5093f88f32f8",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c2_line_0_1.sing",
+          "input_sha256": "f0520c72cde306f1e6cc7189c307a14325d8300b4cfcd79e24024568a67add57",
+          "left_column": 0,
+          "right_column": 1,
+          "total_terms": 8990,
+          "transcript": "a5c2_line_0_1.txt",
+          "transcript_sha256": "c1465aa3d0a8abcb7921b4df3eaa9e41d443468e90029ee7a2bc5093f88f32f8"
+        },
+        {
+          "extension_input": "a5c2_line_0_2_f89cubic.sing",
+          "extension_input_sha256": "423b508da42e4e31f4b9f316e9e056328140c4d31e683e4ea3e487f484dadb52",
+          "extension_transcript": "a5c2_line_0_2_f89cubic.txt",
+          "extension_transcript_sha256": "6980c0798670458cd4daf84e15860205819c4f7343827a3bf20b2a69e6105106",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c2_line_0_2.sing",
+          "input_sha256": "2061976a05cac73456e6f079ac157c3b506223181e17aec192f797a51ca7d118",
+          "left_column": 0,
+          "right_column": 2,
+          "total_terms": 5416,
+          "transcript": "a5c2_line_0_2.txt",
+          "transcript_sha256": "6980c0798670458cd4daf84e15860205819c4f7343827a3bf20b2a69e6105106"
+        },
+        {
+          "extension_input": "a5c2_line_0_3_f89cubic.sing",
+          "extension_input_sha256": "cb31feca6464f0fbbec3e58c3e357310c0d94146a4897385e68a00d87005157b",
+          "extension_transcript": "a5c2_line_0_3_f89cubic.txt",
+          "extension_transcript_sha256": "c0b32591375ca28b97ac351efb6ce7391a5cfb93ff06727a0fec0f92f9bad8ac",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c2_line_0_3.sing",
+          "input_sha256": "957f94356d17e73cfe2cfee24006a3a0efb7bd6708a6d6c63fa47a2e596aecbd",
+          "left_column": 0,
+          "right_column": 3,
+          "total_terms": 8946,
+          "transcript": "a5c2_line_0_3.txt",
+          "transcript_sha256": "c0b32591375ca28b97ac351efb6ce7391a5cfb93ff06727a0fec0f92f9bad8ac"
+        },
+        {
+          "extension_input": "a5c2_line_0_4_f89cubic.sing",
+          "extension_input_sha256": "ce70faa0ff784098dff19c1ad77f92584f1105f65028d67d49078a41e6796a45",
+          "extension_transcript": "a5c2_line_0_4_f89cubic.txt",
+          "extension_transcript_sha256": "520737f4f13844ccd3744769a66ce6991ec6fe097ea38fee617cf534cb3764ce",
+          "f89_cubic_extension_factor_count": 1,
+          "f89_cubic_extension_factor_t_degrees": [
+            3
+          ],
+          "factor_count": 1,
+          "factor_t_degrees": [
+            3
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c2_line_0_4.sing",
+          "input_sha256": "3082ad791d336b47c801030367d932cc3853c2c52dc6c3118013955e61a6ec06",
+          "left_column": 0,
+          "right_column": 4,
+          "total_terms": 5316,
+          "transcript": "a5c2_line_0_4.txt",
+          "transcript_sha256": "520737f4f13844ccd3744769a66ce6991ec6fe097ea38fee617cf534cb3764ce"
+        },
+        {
+          "extension_input": "a5c2_line_1_2_f89cubic.sing",
+          "extension_input_sha256": "4f23374cd42e2c044001d97d9a68ec15df1cb7e5b5347ab47dd5abac2a79dc30",
+          "extension_transcript": "a5c2_line_1_2_f89cubic.txt",
+          "extension_transcript_sha256": "12fd3d2d8bbcc5f1bc1051ea8a9ef87cdaef1e9c85ec08bfd4c29da8ab0c1e25",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c2_line_1_2.sing",
+          "input_sha256": "114a5204dc79f51ff29998b0a146fcf7dbaf4c59ea838304c9585b11556216e4",
+          "left_column": 1,
+          "right_column": 2,
+          "total_terms": 5352,
+          "transcript": "a5c2_line_1_2.txt",
+          "transcript_sha256": "12fd3d2d8bbcc5f1bc1051ea8a9ef87cdaef1e9c85ec08bfd4c29da8ab0c1e25"
+        },
+        {
+          "extension_input": "a5c2_line_1_3_f89cubic.sing",
+          "extension_input_sha256": "08c0ec0fc90a1b2cf280f51dece8420fe45df0591571590db699e877fd78ce5c",
+          "extension_transcript": "a5c2_line_1_3_f89cubic.txt",
+          "extension_transcript_sha256": "b2bcc5e2c56e51603d6a71ae511b5b3b9afb1411767a184862280706e4fc9f58",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c2_line_1_3.sing",
+          "input_sha256": "902b6e73d2218d440ee77bff598d0843afcbca164d5476c020a09c5c6ddb86c4",
+          "left_column": 1,
+          "right_column": 3,
+          "total_terms": 8902,
+          "transcript": "a5c2_line_1_3.txt",
+          "transcript_sha256": "b2bcc5e2c56e51603d6a71ae511b5b3b9afb1411767a184862280706e4fc9f58"
+        },
+        {
+          "extension_input": "a5c2_line_1_4_f89cubic.sing",
+          "extension_input_sha256": "8d6876c50748e664eb1f2741491d707b10192a2499effe9c4e3226f09681ef33",
+          "extension_transcript": "a5c2_line_1_4_f89cubic.txt",
+          "extension_transcript_sha256": "cc0e0a7c3a544f68323abe0d66233f1e6f172cf3e1cd7231d6dda3e3139baaf4",
+          "f89_cubic_extension_factor_count": 1,
+          "f89_cubic_extension_factor_t_degrees": [
+            3
+          ],
+          "factor_count": 1,
+          "factor_t_degrees": [
+            3
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c2_line_1_4.sing",
+          "input_sha256": "9807fb7b759f961683027c60fec0204102fb9046fe939f3f227e5c56e7b23848",
+          "left_column": 1,
+          "right_column": 4,
+          "total_terms": 7096,
+          "transcript": "a5c2_line_1_4.txt",
+          "transcript_sha256": "cc0e0a7c3a544f68323abe0d66233f1e6f172cf3e1cd7231d6dda3e3139baaf4"
+        },
+        {
+          "extension_input": "a5c2_line_2_3_f89cubic.sing",
+          "extension_input_sha256": "d6a133343b35630b2f32520ac581ba7ed7f9ddfb9bea971bdd8bf880be6b5ed3",
+          "extension_transcript": "a5c2_line_2_3_f89cubic.txt",
+          "extension_transcript_sha256": "4e73e92f2b3fba0e53df33dea708f23aae9f5a59dd8c72b9859aedf2bdc5818b",
+          "f89_cubic_extension_factor_count": 2,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0
+          ],
+          "factor_count": 2,
+          "factor_t_degrees": [
+            3,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c2_line_2_3.sing",
+          "input_sha256": "51f62a05d1f2232bdefb0704a46b7abea465ffaf995cea54709c059dc9acdce4",
+          "left_column": 2,
+          "right_column": 3,
+          "total_terms": 7155,
+          "transcript": "a5c2_line_2_3.txt",
+          "transcript_sha256": "4e73e92f2b3fba0e53df33dea708f23aae9f5a59dd8c72b9859aedf2bdc5818b"
+        },
+        {
+          "extension_input": "a5c2_line_2_4_f89cubic.sing",
+          "extension_input_sha256": "1dc758b1ecb83f45eeb5874ee76f6ecdb5a03bb50c9497e108115fffb9282260",
+          "extension_transcript": "a5c2_line_2_4_f89cubic.txt",
+          "extension_transcript_sha256": "a43d9f30a5b242abbff89e1fc31300b702f942c1b54a61b1abd5c94cf26d03ae",
+          "f89_cubic_extension_factor_count": 16,
+          "f89_cubic_extension_factor_t_degrees": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "factor_count": 16,
+          "factor_t_degrees": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c2_line_2_4.sing",
+          "input_sha256": "09ec6d373909c114ffe59b84c34506e46ebef4aa4c8566f626c10c88d732f35d",
+          "left_column": 2,
+          "right_column": 4,
+          "total_terms": 5400,
+          "transcript": "a5c2_line_2_4.txt",
+          "transcript_sha256": "a43d9f30a5b242abbff89e1fc31300b702f942c1b54a61b1abd5c94cf26d03ae"
+        },
+        {
+          "extension_input": "a5c2_line_3_4_f89cubic.sing",
+          "extension_input_sha256": "05a2425962af94f60f5c17c7e964fc18993f2d653a499a46467577a0bcaa34cb",
+          "extension_transcript": "a5c2_line_3_4_f89cubic.txt",
+          "extension_transcript_sha256": "1df90bff2d82c66949772599d0063ec1cbbbdf4cc04281743a9567ef7df74eac",
+          "f89_cubic_extension_factor_count": 1,
+          "f89_cubic_extension_factor_t_degrees": [
+            3
+          ],
+          "factor_count": 1,
+          "factor_t_degrees": [
+            3
+          ],
+          "has_f89_t_linear_factor": false,
+          "has_geometric_t_linear_factor": false,
+          "input": "a5c2_line_3_4.sing",
+          "input_sha256": "91652027e0b2c57e281d3f6e409aba8f56342fb9fe9e2713a63f36b000cb3197",
+          "left_column": 3,
+          "right_column": 4,
+          "total_terms": 5213,
+          "transcript": "a5c2_line_3_4.txt",
+          "transcript_sha256": "1df90bff2d82c66949772599d0063ec1cbbbdf4cc04281743a9567ef7df74eac"
+        }
+      ],
+      "multiplier_degrees": [
+        20,
+        18,
+        17,
+        16,
+        15
+      ],
+      "primitive_degrees": [
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "raw_frame_witness": {
+        "determinant_mod_89": 86,
+        "point": [
+          2,
+          3,
+          1
+        ]
+      },
+      "selected_basis_indices": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "scope": "all ten coordinate lines in a full five-column degree-22 A5 covariant frame; the unique t-cubic factor is retested over F_89^3, the only possible constant-field orbit size for an absolute t-linear factor"
+}

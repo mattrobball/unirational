@@ -29,7 +29,7 @@ def word_matrix(word, generators, identity):
     return answer
 
 
-def exact_reynolds_a(point, pf):
+def exact_reynolds_generator(point, pf, matrix_unit):
     K = pf["K11"]
     one5 = pf["identity"](5)
     one6 = pf["identity"](6)
@@ -58,7 +58,7 @@ def exact_reynolds_a(point, pf):
         value = sum((trows[4][i] * K(point[i]) for i in range(5)), K.zero) ** 3
         for r in range(6):
             for c in range(6):
-                out[r][c] += value * srows[r][0] * sirows[0][c]
+                out[r][c] += value * srows[r][0] * sirows[matrix_unit][c]
     return DomainMatrix(out, (6, 6), K)
 
 
@@ -96,7 +96,7 @@ def exact_formula_value(entry, point, pf, kp):
     return total
 
 
-def verify_injective_maps(payload, kp):
+def verify_injective_maps(payload, coefficient_key, kp):
     modulus = payload["evaluation_injectivity_modulus"]
     points = [tuple(point) for point in payload["exact_evaluation_points"]]
     for k, degree in enumerate((3, 6, 9, 12, 15, 18), start=1):
@@ -104,7 +104,7 @@ def verify_injective_maps(payload, kp):
         rows = [[kp["evaluate"](poly, point) % modulus for _s, _e, poly in columns] for point in points]
         matrix = DomainMatrix.from_list_sympy(len(rows), len(columns), rows).convert_to(sp.GF(modulus))
         assert matrix.rank() == len(columns)
-        assert payload["coefficients"][str(k)]["module_dimension"] == len(columns)
+        assert payload[coefficient_key][str(k)]["module_dimension"] == len(columns)
 
 
 def load_modular_kproj():
@@ -128,7 +128,7 @@ def evaluate_normalized_entry(entry, ts, betas, p, zeta):
     return raw
 
 
-def fresh_modular_checks(payload):
+def fresh_modular_checks(payload, coefficient_key, frame_index):
     c3 = runpy.run_path(str(ROOT / "certificates" / "fano_c3" / "produce_c3.py"))
     c2 = c3["load_c2_helpers"]()
     kpm = load_modular_kproj()
@@ -144,7 +144,7 @@ def fresh_modular_checks(payload):
                 frame, _vectors = c3["frame_at_point"](c2, conjugation, inverses, seeds, forms, kpm["evaluate_mod"], point, p)
             except ValueError:
                 continue
-            direct = c3["minpoly_coeffs"](frame[1], p)
+            direct = c3["minpoly_coeffs"](frame[frame_index], p)
             tinfo = c3["evaluate_kproj_t_beta"](forms, kpm["evaluate_mod"], point, p)
             if direct is not None and len(direct) == 7 and tinfo is not None:
                 accepted = (point, direct, tinfo)
@@ -153,7 +153,7 @@ def fresh_modular_checks(payload):
         point, direct, (ts, betas, _f) = accepted
         predicted = []
         for k in range(1, 7):
-            raw = evaluate_normalized_entry(payload["coefficients"][str(k)], ts, betas, p, zeta)
+            raw = evaluate_normalized_entry(payload[coefficient_key][str(k)], ts, betas, p, zeta)
             value = raw * pow(int(ts[3]), k, p) % p
             value = value * pow(pow(int(betas[5]), k, p), -1, p) % p
             predicted.append(value)
@@ -165,24 +165,42 @@ def fresh_modular_checks(payload):
 
 def main():
     payload = json.loads(DATA.read_text())
-    assert payload["format"] == "c0-exact-minpoly-v1"
-    assert set(payload["coefficients"]) == {str(k) for k in range(1, 7)}
+    assert payload["format"] == "c0-exact-minpolys-v2"
+    assert set(payload["a_minpoly_coefficients"]) == {str(k) for k in range(1, 7)}
+    assert set(payload["b_minpoly_coefficients"]) == {str(k) for k in range(1, 7)}
     pf = runpy.run_path(str(ROOT / "tmp" / "pfaffian_representation_alignment" / "core.py"))
     kp = runpy.run_path(str(ROOT / "tmp" / "kproj_arithmetic" / "core.py"))
 
-    verify_injective_maps(payload, kp)
+    verify_injective_maps(payload, "a_minpoly_coefficients", kp)
+    verify_injective_maps(payload, "b_minpoly_coefficients", kp)
     point = (5, 2, 7, 3, 11)  # deliberately absent from producer rows
     assert list(point) not in payload["exact_evaluation_points"]
-    direct = char_coefficients(exact_reynolds_a(point, pf), pf)
+    direct = char_coefficients(exact_reynolds_generator(point, pf, 0), pf)
     for k in range(1, 7):
-        assert exact_formula_value(payload["coefficients"][str(k)], point, pf, kp) == direct[k]
+        assert exact_formula_value(payload["a_minpoly_coefficients"][str(k)], point, pf, kp) == direct[k]
+    direct_b = char_coefficients(exact_reynolds_generator(point, pf, 1), pf)
+    for k in range(1, 7):
+        assert exact_formula_value(payload["b_minpoly_coefficients"][str(k)], point, pf, kp) == direct_b[k]
 
-    checks = fresh_modular_checks(payload)
-    print("PASS six invariant-module evaluation maps are injective")
-    print(f"PASS exact Q(zeta11) Reynolds characteristic polynomial at unused point {point}")
-    print(f"PASS normalized K_proj formulas against fresh modular direct matrices {checks}")
-    print("SCOPE exact m_a only; b^6/L_a, involution, Morita, Hermitian, and common line remain open")
-    print("C0-MINPOLY-EXACT-VERIFIED")
+    relation = payload["b6_relation"]
+    assert relation["structural_zero_count_in_6x6_E_coordinate_array"] == 30
+    assert relation["additional_trace_zero"].startswith("b_c1=0")
+    assert payload["b_minpoly_coefficients"]["1"]["module_terms"] == []
+    assert relation["E_coordinates"] == {
+        "e0": "-b_c6 * 1_E", "e1": "-b_c5 * 1_E",
+        "e2": "-b_c4 * 1_E", "e3": "-b_c3 * 1_E",
+        "e4": "-b_c2 * 1_E", "e5": "-b_c1 * 1_E",
+    }
+
+    checks_a = fresh_modular_checks(payload, "a_minpoly_coefficients", 1)
+    checks_b = fresh_modular_checks(payload, "b_minpoly_coefficients", 2)
+    print("PASS a and b invariant-module evaluation maps are injective")
+    print(f"PASS exact Q(zeta11) Reynolds characteristic polynomials for a,b at unused point {point}")
+    print(f"PASS normalized a formulas against fresh modular direct matrices {checks_a}")
+    print(f"PASS normalized b/b^6 formulas against fresh modular direct matrices {checks_b}")
+    print("PASS b^6 has five scalar coefficients and exactly 31 zero E-coordinates")
+    print("SCOPE exact m_a and b^6 only; L_a, involution, Morita, Hermitian, and common line remain open")
+    print("C0-MINPOLY-B6-EXACT-VERIFIED")
 
 
 if __name__ == "__main__":

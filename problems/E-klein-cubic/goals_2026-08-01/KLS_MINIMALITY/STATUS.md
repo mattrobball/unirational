@@ -2,83 +2,77 @@ KLS-NO-THEOREM
 
 # Status
 
-The route terminates at the goal packet's authorized honest-stop exit.  It
-does **not** prove the headline negative conclusion, and it does **not** alter
-the repository-wide status: equivariant unirationality of the Klein cubic
-remains open.
+The KLS minimality/conductor route stops at its authorized honest exit.  The
+main problem remains **OPEN**.  No all-degree negative conclusion is claimed.
 
-## Binary decision
+## Exact decision
 
 The requested implication
 
 ```text
 minimal primitive rank-four KLS covariant
   => finite exhaustive conductor list
-  => all configurations empty
 ```
 
-is not established by the accepted inputs and cannot be obtained from the
-listed generic hypotheses.  In particular:
+is not proved by the accepted repository inputs, and the inputs do not imply
+it.  In particular:
 
-1. minimality currently gives only the dual-Gauss inequality
-   `d <= 2m`, with `m = 4d - 4 - r - t`;
-2. quartic precomposition sends degree `d` to degree `4d`, so it cannot by
-   itself contradict minimality;
-3. lc/plt geometry does not bound the number or degree of source divisors
-   dominating a conductor component;
-4. the surviving repeated-factor, nonnormal, and extra-conductor branches
-   contain unbounded integer parameters, so there is no proved finite list to
-   eliminate; and
-5. for a genuine rank-four covariant landing in the smooth Klein cubic, the
-   image is already that cubic and `h=1`; the `P22` conductor packets instead
-   concern hypothetical singular non-Klein KLS images.
+1. A genuine rank-four covariant landing in the smooth Klein cubic already
+   has image equal to that cubic, pulled-gradient gcd `h=1`, and no
+   normalization conductor.  The `P22` packets instead concern hypothetical
+   rank-four KLS covariants with a singular non-Klein image.
+2. The strongest proved consequence of minimality is the dual-Gauss
+   inequality `d <= 2m`, where `m=4d-4-r-t`.  It contains no discrepancy or
+   conductor-support term.
+3. Precomposition by the primitive quartic endomorphism sends a primitive
+   degree-`d` solution to a primitive degree-`4d` solution.  It preserves the
+   image and rank drop and therefore cannot contradict minimality.  It gives
+   conditional unboundedness, not degree lowering.
+4. Exact countermodels prove that normality, target-pair lc, foliation lc,
+   target-pair plt, and conductor geometry do not separately bound the
+   reduced source support above conductor primes.  The required bridge must
+   be representation-specific and is absent.
+5. Consequently K2 has no proved finite exhaustive input list, so a new CAS
+   elimination campaign is prohibited by the goal itself.
 
-`INTERFACE_AUDIT.md` proves the fifth point and gives the exact KLS ledger.
-`MINIMALITY_THEOREM.md` records the strongest justified minimality statement
-and the precise missing lemmas.  `CONFIGURATIONS.json` and
-`elimination/ELIMINATION.json` separate closed scoped branches from open
-parametric families without claiming a false exhaustive classification.
-
-## Work-package audit
-
-| Package | Decision | Evidence |
-|---|---|---|
-| K0 exact interface | complete | `INTERFACE_AUDIT.md`, source manifest, replayed sealed packets |
-| K1 minimality-to-discrepancy | not proved | generic countermodels and exact formal consistency ledger; no representation-specific bridge |
-| K2 finite classification | unavailable | open families have unbounded multiplicity/support/contact parameters |
-| K3 elimination | complete only for named scoped branches | normal `P22`; literal/squarefree proper-`P22`; degree-nine closure under exact hypotheses |
-| K4 all-degree conclusion | not proved | source-exhaustiveness bridge still requires K1/K2 or universal nonvanishing of the KLS determinant |
+This is not `KLS-MINIMALITY-COUNTERMODEL`: the stored countermodels do not
+satisfy both the Klein-group symmetry and the minimality hypothesis.  They
+refute proposed generic proofs, not the still-possible representation-specific
+theorem.
 
 ## Repository state
 
-- pinned mathematical baseline: `715faf441289e2589b9325311b6613ea0331bf88`
-- consumed live commit: `2140419410cfff2f7d7dcca166acef8c16a0d41b`
-- produced commit: none; this is an isolated uncommitted worktree artifact
-- files outside `goals_2026-08-01/KLS_MINIMALITY/` modified by this run: none
+- Pinned mathematical baseline: `715faf441289e2589b9325311b6613ea0331bf88`.
+- Initial live commit inspected: `2140419410cfff2f7d7dcca166acef8c16a0d41b`.
+- Live commit consumed after the shared waypoint refresh:
+  `80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c`.
+- Latest live `HEAD` observed during final sealing:
+  `e1fc474a448db9d93df13967a4cef5f9918ff443`; the intervening commits are
+  isolated Goal D artifacts and changed none of the hashed KLS sources.
+- Commit produced by this finalized run: none; the finalized packet is an
+  isolated uncommitted goal-run update.  The shared `waypoint` commit swept
+  an earlier draft of several files into history while the audit was active.
+- Unrelated sibling worktree directories were not modified.
+
+## Work-package audit
+
+| Package | Result |
+|---|---|
+| K0 | Complete interface audit, including the landing/KLS distinction and exact conductor identities. |
+| K1 | Not proved.  The exact missing inputs are minimality-to-positive-discrepancy and a conductor-pullback support bound. |
+| K2 | Not available.  `CONFIGURATIONS.json` records closed cases and unbounded open families and explicitly sets `exhaustive=false`. |
+| K3 | Previously closed `P22` cases replayed; no elimination is claimed for open families. |
+| K4 | Not achieved; neither universal KLS nonexistence nor non-unirationality follows. |
 
 ## Verification
 
-From `goals_2026-08-01/` run:
+Run from `goals_2026-08-01`:
 
 ```sh
-/opt/homebrew/bin/python3 -u KLS_MINIMALITY/producer.py
 /opt/homebrew/bin/python3 -u KLS_MINIMALITY/verify.py
 /opt/homebrew/bin/python3 -u KLS_MINIMALITY/verify.py --deep
 ```
 
-The default verifier checks every sealed artifact and independently rebuilds
-the load-bearing symbolic countermodel and numerical ledgers.  `--deep` also
-reruns the nine consumed KLS source verifiers.
-
-## Smallest missing theorem
-
-For a minimal `G`-KLS self-covariant, prove both:
-
-1. every codimension-at-least-two gcd valuation of the normalization pair has
-   positive integral log discrepancy; and
-2. the total reduced source support dominating conductor primes is bounded
-   (or is exactly the already-audited `P22` support).
-
-Equivalently, a direct minimal-contraction/canonicity theorem eliminating
-`h != 1` would suffice.  No theorem found in the current repository or the
-primary-literature audit supplies either assertion.
+The first command independently checks the seal, source hashes, symbolic
+countermodel identities, degree ledgers, and scope flags.  The second also
+reruns the nine load-bearing repository verifiers.

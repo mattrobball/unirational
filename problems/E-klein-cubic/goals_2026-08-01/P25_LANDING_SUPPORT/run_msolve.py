@@ -76,20 +76,26 @@ def main() -> None:
     parser.add_argument("--rss-gib", type=float, default=64.0)
     parser.add_argument("--threads", type=int, default=4)
     parser.add_argument("--max-pairs", type=int, default=0)
+    parser.add_argument("--metadata", default="msolve_input.json")
+    parser.add_argument("--stem", default="landing_746")
     args = parser.parse_args()
 
-    metadata = json.loads((HERE / "msolve_input.json").read_text())
+    metadata = json.loads((HERE / args.metadata).read_text())
     source = HERE / metadata["input"]
     assert sha256_file(source) == metadata["input_sha256"]
-    leading = HERE / "landing_746_leading.out"
-    log = HERE / "landing_746_msolve.log"
-    result_path = HERE / "landing_746_msolve_result.json"
+    leading = HERE / f"{args.stem}_leading.out"
+    log = HERE / f"{args.stem}_msolve.log"
+    result_path = HERE / f"{args.stem}_msolve_result.json"
     leading.write_text("")
     log.write_text("")
 
     command = [
         "/opt/homebrew/bin/msolve", "-f", str(source), "-o", str(leading),
         "-t", str(args.threads), "-v", "2", "-g", "1", "-l", "2",
+        # Only the leading ideal is needed for the irrelevant-power
+        # certificate.  Reducing the full Groebner basis can be substantially
+        # more expensive and contributes nothing to that implication.
+        "-q", "0", "-r", "0", "-s", "20",
         "-m", str(args.max_pairs), "--random-seed", "2026080189",
     ]
     started = time.monotonic()

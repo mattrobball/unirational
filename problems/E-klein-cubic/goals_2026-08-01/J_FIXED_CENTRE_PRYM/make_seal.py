@@ -15,6 +15,7 @@ FILES = [
     "BLOWUP_FORMULA.md",
     "HODGE_ISOGENY.md",
     "CENTRE_REALIZABILITY.md",
+    "COMPLETION_AUDIT.md",
     "SOURCES.md",
     "payload.json",
     "produce.py",

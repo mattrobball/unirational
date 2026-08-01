@@ -1,0 +1,13 @@
+{
+  "format": "Q-SCHUR-SOURCE-MANIFEST-v1",
+  "isolation_waypoint": "80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c",
+  "live_head_at_manifest": "53e267a59b2d24de93c58dd9ddacc2f995fc2d68",
+  "sources": {
+    "problems/E-klein-cubic/goals_2026-08-01/GOAL_Q_SCHUR_INDEX_ONE_DESCENT.md": "72454a2844988ed0848caa0474d4f145b5c8afd53379a5f2f211480fe94e3de6",
+    "problems/E-klein-cubic/tmp/schur_ternary_planes/core.py": "f2501355f44d4f66927b4cf62f3565b13462249c8b3516c1848fe182c2e0113d",
+    "problems/E-klein-cubic/tmp/schur_unrestricted_point_attack_audit/verify.py": "6d9fc5fda34b5ac62c9e612ea997e643b70b6d25e4a98509a90f9cc08ffd0889",
+    "problems/E-klein-cubic/tmp/schur_structural_routes/verify.py": "9212915b00f3fe221120bea690d00f444edc812d85c3fef638eb5b5e28ae374b",
+    "problems/E-klein-cubic/tmp/schur_fibration_picard_obstruction/verify.py": "b795f936491f32c438d90898e2b04c3db9d012075b2d9218b20d6620471ae3c9",
+    "problems/E-klein-cubic/certificates/subgroup_orbit_check.py": "68e6f18b00d520ae24fdfc0ea1524e5255f9a72b523c141627565e3a5a45bfd7"
+  }
+}

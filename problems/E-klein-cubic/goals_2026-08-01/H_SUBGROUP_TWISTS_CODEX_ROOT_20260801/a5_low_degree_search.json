@@ -1,0 +1,2412 @@
+{
+  "characteristic_zero_transfer": "Maschke exactness at p=89 identifies the reduced full covariant spaces; properness of the projective parameter scheme makes geometric emptiness of the good fibre imply emptiness in characteristic zero",
+  "format": "klein-a5-low-degree-landing-v1",
+  "prime": 89,
+  "records": [
+    {
+      "covariant_dimensions_degrees_0_to_4": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 2
+      },
+      "degree_2_lands_on_X": false,
+      "degree_4_affine_landing_gcd_mod_89": [
+        1
+      ],
+      "degree_4_coefficient_polynomials": [
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            54
+          ],
+          "source_exponent": [
+            0,
+            0,
+            12
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            23
+          ],
+          "source_exponent": [
+            0,
+            1,
+            11
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            81,
+            22,
+            86
+          ],
+          "source_exponent": [
+            0,
+            2,
+            10
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            51,
+            60,
+            10
+          ],
+          "source_exponent": [
+            0,
+            3,
+            9
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            67,
+            20,
+            3,
+            83
+          ],
+          "source_exponent": [
+            0,
+            4,
+            8
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            49,
+            42,
+            60,
+            47
+          ],
+          "source_exponent": [
+            0,
+            5,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            22,
+            83,
+            36,
+            19
+          ],
+          "source_exponent": [
+            0,
+            6,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            41,
+            61,
+            83,
+            5
+          ],
+          "source_exponent": [
+            0,
+            7,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            87,
+            63,
+            27,
+            75
+          ],
+          "source_exponent": [
+            0,
+            8,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            39,
+            68,
+            64,
+            3
+          ],
+          "source_exponent": [
+            0,
+            9,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            43,
+            73,
+            28,
+            37
+          ],
+          "source_exponent": [
+            0,
+            10,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            68,
+            21,
+            82,
+            70
+          ],
+          "source_exponent": [
+            0,
+            11,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            25,
+            64,
+            38,
+            65
+          ],
+          "source_exponent": [
+            0,
+            12,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "source_exponent": [
+            1,
+            0,
+            11
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            80,
+            47,
+            37
+          ],
+          "source_exponent": [
+            1,
+            1,
+            10
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            76,
+            58,
+            43
+          ],
+          "source_exponent": [
+            1,
+            2,
+            9
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            84,
+            38,
+            26,
+            75
+          ],
+          "source_exponent": [
+            1,
+            3,
+            8
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            20,
+            27,
+            1,
+            6
+          ],
+          "source_exponent": [
+            1,
+            4,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            14,
+            33,
+            45,
+            22
+          ],
+          "source_exponent": [
+            1,
+            5,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            12,
+            19,
+            13,
+            35
+          ],
+          "source_exponent": [
+            1,
+            6,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            22,
+            42,
+            3,
+            58
+          ],
+          "source_exponent": [
+            1,
+            7,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            29,
+            18,
+            3,
+            71
+          ],
+          "source_exponent": [
+            1,
+            8,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            61,
+            75,
+            17,
+            59
+          ],
+          "source_exponent": [
+            1,
+            9,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            44,
+            18,
+            1,
+            29
+          ],
+          "source_exponent": [
+            1,
+            10,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            68,
+            21,
+            82,
+            70
+          ],
+          "source_exponent": [
+            1,
+            11,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            81,
+            22,
+            79
+          ],
+          "source_exponent": [
+            2,
+            0,
+            10
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            65,
+            66,
+            7
+          ],
+          "source_exponent": [
+            2,
+            1,
+            9
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            70,
+            70,
+            72,
+            75
+          ],
+          "source_exponent": [
+            2,
+            2,
+            8
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            29,
+            74,
+            16,
+            17
+          ],
+          "source_exponent": [
+            2,
+            3,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            51,
+            83,
+            51,
+            35
+          ],
+          "source_exponent": [
+            2,
+            4,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            19,
+            50,
+            44,
+            44
+          ],
+          "source_exponent": [
+            2,
+            5,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            10,
+            6,
+            41,
+            66
+          ],
+          "source_exponent": [
+            2,
+            6,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            24,
+            52,
+            23,
+            39
+          ],
+          "source_exponent": [
+            2,
+            7,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            73,
+            72,
+            62,
+            18
+          ],
+          "source_exponent": [
+            2,
+            8,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            61,
+            75,
+            17,
+            59
+          ],
+          "source_exponent": [
+            2,
+            9,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            43,
+            73,
+            28,
+            37
+          ],
+          "source_exponent": [
+            2,
+            10,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            52,
+            35,
+            21
+          ],
+          "source_exponent": [
+            3,
+            0,
+            9
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            84,
+            57,
+            85,
+            42
+          ],
+          "source_exponent": [
+            3,
+            1,
+            8
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            66,
+            75,
+            31,
+            37
+          ],
+          "source_exponent": [
+            3,
+            2,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            11,
+            14,
+            67,
+            2
+          ],
+          "source_exponent": [
+            3,
+            3,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            52,
+            61,
+            52,
+            49
+          ],
+          "source_exponent": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            84,
+            27,
+            7,
+            13
+          ],
+          "source_exponent": [
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            46,
+            88,
+            73,
+            44
+          ],
+          "source_exponent": [
+            3,
+            6,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            24,
+            52,
+            23,
+            39
+          ],
+          "source_exponent": [
+            3,
+            7,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            29,
+            18,
+            3,
+            71
+          ],
+          "source_exponent": [
+            3,
+            8,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            39,
+            68,
+            64,
+            3
+          ],
+          "source_exponent": [
+            3,
+            9,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            67,
+            27,
+            6,
+            53
+          ],
+          "source_exponent": [
+            4,
+            0,
+            8
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            45,
+            46,
+            75,
+            64
+          ],
+          "source_exponent": [
+            4,
+            1,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            33,
+            3,
+            74,
+            22
+          ],
+          "source_exponent": [
+            4,
+            2,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            79,
+            49,
+            13,
+            1
+          ],
+          "source_exponent": [
+            4,
+            3,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            14,
+            41,
+            75,
+            65
+          ],
+          "source_exponent": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            84,
+            27,
+            7,
+            13
+          ],
+          "source_exponent": [
+            4,
+            5,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            10,
+            6,
+            41,
+            66
+          ],
+          "source_exponent": [
+            4,
+            6,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            22,
+            42,
+            3,
+            58
+          ],
+          "source_exponent": [
+            4,
+            7,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            87,
+            63,
+            27,
+            75
+          ],
+          "source_exponent": [
+            4,
+            8,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            69,
+            76,
+            23,
+            23
+          ],
+          "source_exponent": [
+            5,
+            0,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            28,
+            11,
+            46,
+            13
+          ],
+          "source_exponent": [
+            5,
+            1,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            75,
+            3,
+            51,
+            19
+          ],
+          "source_exponent": [
+            5,
+            2,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            79,
+            49,
+            13,
+            1
+          ],
+          "source_exponent": [
+            5,
+            3,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            52,
+            61,
+            52,
+            49
+          ],
+          "source_exponent": [
+            5,
+            4,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            19,
+            50,
+            44,
+            44
+          ],
+          "source_exponent": [
+            5,
+            5,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            12,
+            19,
+            13,
+            35
+          ],
+          "source_exponent": [
+            5,
+            6,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            41,
+            61,
+            83,
+            5
+          ],
+          "source_exponent": [
+            5,
+            7,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            58,
+            86,
+            28,
+            38
+          ],
+          "source_exponent": [
+            6,
+            0,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            28,
+            11,
+            46,
+            13
+          ],
+          "source_exponent": [
+            6,
+            1,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            33,
+            3,
+            74,
+            22
+          ],
+          "source_exponent": [
+            6,
+            2,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            11,
+            14,
+            67,
+            2
+          ],
+          "source_exponent": [
+            6,
+            3,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            51,
+            83,
+            51,
+            35
+          ],
+          "source_exponent": [
+            6,
+            4,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            14,
+            33,
+            45,
+            22
+          ],
+          "source_exponent": [
+            6,
+            5,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            22,
+            83,
+            36,
+            19
+          ],
+          "source_exponent": [
+            6,
+            6,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            69,
+            76,
+            23,
+            23
+          ],
+          "source_exponent": [
+            7,
+            0,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            45,
+            46,
+            75,
+            64
+          ],
+          "source_exponent": [
+            7,
+            1,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            66,
+            75,
+            31,
+            37
+          ],
+          "source_exponent": [
+            7,
+            2,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            29,
+            74,
+            16,
+            17
+          ],
+          "source_exponent": [
+            7,
+            3,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            20,
+            27,
+            1,
+            6
+          ],
+          "source_exponent": [
+            7,
+            4,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            49,
+            42,
+            60,
+            47
+          ],
+          "source_exponent": [
+            7,
+            5,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            67,
+            27,
+            6,
+            53
+          ],
+          "source_exponent": [
+            8,
+            0,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            84,
+            57,
+            85,
+            42
+          ],
+          "source_exponent": [
+            8,
+            1,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            70,
+            70,
+            72,
+            75
+          ],
+          "source_exponent": [
+            8,
+            2,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            84,
+            38,
+            26,
+            75
+          ],
+          "source_exponent": [
+            8,
+            3,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            67,
+            20,
+            3,
+            83
+          ],
+          "source_exponent": [
+            8,
+            4,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            52,
+            35,
+            21
+          ],
+          "source_exponent": [
+            9,
+            0,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            65,
+            66,
+            7
+          ],
+          "source_exponent": [
+            9,
+            1,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            76,
+            58,
+            43
+          ],
+          "source_exponent": [
+            9,
+            2,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            51,
+            60,
+            10
+          ],
+          "source_exponent": [
+            9,
+            3,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            81,
+            22,
+            79
+          ],
+          "source_exponent": [
+            10,
+            0,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            80,
+            47,
+            37
+          ],
+          "source_exponent": [
+            10,
+            1,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            81,
+            22,
+            86
+          ],
+          "source_exponent": [
+            10,
+            2,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "source_exponent": [
+            11,
+            0,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            23
+          ],
+          "source_exponent": [
+            11,
+            1,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            54
+          ],
+          "source_exponent": [
+            12,
+            0,
+            0
+          ]
+        }
+      ],
+      "degree_4_geometric_landing_scheme_empty_mod_89": true,
+      "degree_4_parameter_space": "P1",
+      "degree_4_point_at_infinity_lands": false,
+      "label": "A5_class_1"
+    },
+    {
+      "covariant_dimensions_degrees_0_to_4": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 2
+      },
+      "degree_2_lands_on_X": false,
+      "degree_4_affine_landing_gcd_mod_89": [
+        1
+      ],
+      "degree_4_coefficient_polynomials": [
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            58
+          ],
+          "source_exponent": [
+            0,
+            0,
+            12
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            28
+          ],
+          "source_exponent": [
+            0,
+            1,
+            11
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            87,
+            12,
+            67
+          ],
+          "source_exponent": [
+            0,
+            2,
+            10
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            35,
+            57,
+            74
+          ],
+          "source_exponent": [
+            0,
+            3,
+            9
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            20,
+            80,
+            47,
+            59
+          ],
+          "source_exponent": [
+            0,
+            4,
+            8
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            86,
+            23,
+            88,
+            8
+          ],
+          "source_exponent": [
+            0,
+            5,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            21,
+            78,
+            71,
+            66
+          ],
+          "source_exponent": [
+            0,
+            6,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            27,
+            38,
+            20,
+            73
+          ],
+          "source_exponent": [
+            0,
+            7,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            47,
+            65,
+            64,
+            84
+          ],
+          "source_exponent": [
+            0,
+            8,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            17,
+            75,
+            16,
+            55
+          ],
+          "source_exponent": [
+            0,
+            9,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            12,
+            0,
+            3,
+            39
+          ],
+          "source_exponent": [
+            0,
+            10,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            3,
+            50,
+            80,
+            13
+          ],
+          "source_exponent": [
+            0,
+            11,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            60,
+            21,
+            87,
+            82
+          ],
+          "source_exponent": [
+            0,
+            12,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            46
+          ],
+          "source_exponent": [
+            1,
+            0,
+            11
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            20,
+            58,
+            66
+          ],
+          "source_exponent": [
+            1,
+            1,
+            10
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            19,
+            64,
+            68
+          ],
+          "source_exponent": [
+            1,
+            2,
+            9
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            45,
+            67,
+            5,
+            0
+          ],
+          "source_exponent": [
+            1,
+            3,
+            8
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            84,
+            84,
+            15,
+            9
+          ],
+          "source_exponent": [
+            1,
+            4,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            48,
+            27,
+            54,
+            39
+          ],
+          "source_exponent": [
+            1,
+            5,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            60,
+            38,
+            66,
+            6
+          ],
+          "source_exponent": [
+            1,
+            6,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            55,
+            64,
+            60,
+            62
+          ],
+          "source_exponent": [
+            1,
+            7,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            31,
+            55,
+            42,
+            27
+          ],
+          "source_exponent": [
+            1,
+            8,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            42,
+            21,
+            4,
+            59
+          ],
+          "source_exponent": [
+            1,
+            9,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            1,
+            9,
+            47,
+            47
+          ],
+          "source_exponent": [
+            1,
+            10,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            3,
+            50,
+            80,
+            13
+          ],
+          "source_exponent": [
+            1,
+            11,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            87,
+            12,
+            43
+          ],
+          "source_exponent": [
+            2,
+            0,
+            10
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            83,
+            36,
+            27
+          ],
+          "source_exponent": [
+            2,
+            1,
+            9
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            82,
+            58,
+            6,
+            28
+          ],
+          "source_exponent": [
+            2,
+            2,
+            8
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            47,
+            62,
+            60,
+            84
+          ],
+          "source_exponent": [
+            2,
+            3,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            58,
+            48,
+            67,
+            16
+          ],
+          "source_exponent": [
+            2,
+            4,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            46,
+            5,
+            7,
+            6
+          ],
+          "source_exponent": [
+            2,
+            5,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            5,
+            73,
+            61,
+            45
+          ],
+          "source_exponent": [
+            2,
+            6,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            36,
+            5,
+            65,
+            74
+          ],
+          "source_exponent": [
+            2,
+            7,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            14,
+            3,
+            76,
+            23
+          ],
+          "source_exponent": [
+            2,
+            8,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            42,
+            21,
+            4,
+            59
+          ],
+          "source_exponent": [
+            2,
+            9,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            12,
+            0,
+            3,
+            39
+          ],
+          "source_exponent": [
+            2,
+            10,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            13,
+            11,
+            21
+          ],
+          "source_exponent": [
+            3,
+            0,
+            9
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            45,
+            5,
+            21,
+            45
+          ],
+          "source_exponent": [
+            3,
+            1,
+            8
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            70,
+            15,
+            18,
+            79
+          ],
+          "source_exponent": [
+            3,
+            2,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            29,
+            88,
+            0,
+            31
+          ],
+          "source_exponent": [
+            3,
+            3,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            28,
+            68,
+            85,
+            14
+          ],
+          "source_exponent": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            60,
+            41,
+            17,
+            78
+          ],
+          "source_exponent": [
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            79,
+            6,
+            13,
+            32
+          ],
+          "source_exponent": [
+            3,
+            6,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            36,
+            5,
+            65,
+            74
+          ],
+          "source_exponent": [
+            3,
+            7,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            31,
+            55,
+            42,
+            27
+          ],
+          "source_exponent": [
+            3,
+            8,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            17,
+            75,
+            16,
+            55
+          ],
+          "source_exponent": [
+            3,
+            9,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            20,
+            15,
+            81,
+            84
+          ],
+          "source_exponent": [
+            4,
+            0,
+            8
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            37,
+            46,
+            77,
+            80
+          ],
+          "source_exponent": [
+            4,
+            1,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            7,
+            0,
+            38,
+            37
+          ],
+          "source_exponent": [
+            4,
+            2,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            12,
+            39,
+            65,
+            50
+          ],
+          "source_exponent": [
+            4,
+            3,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            29,
+            54,
+            21,
+            4
+          ],
+          "source_exponent": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            60,
+            41,
+            17,
+            78
+          ],
+          "source_exponent": [
+            4,
+            5,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            5,
+            73,
+            61,
+            45
+          ],
+          "source_exponent": [
+            4,
+            6,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            55,
+            64,
+            60,
+            62
+          ],
+          "source_exponent": [
+            4,
+            7,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            47,
+            65,
+            64,
+            84
+          ],
+          "source_exponent": [
+            4,
+            8,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            84,
+            24,
+            56,
+            76
+          ],
+          "source_exponent": [
+            5,
+            0,
+            7
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            24,
+            5,
+            43,
+            51
+          ],
+          "source_exponent": [
+            5,
+            1,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            81,
+            9,
+            58,
+            27
+          ],
+          "source_exponent": [
+            5,
+            2,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            12,
+            39,
+            65,
+            50
+          ],
+          "source_exponent": [
+            5,
+            3,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            28,
+            68,
+            85,
+            14
+          ],
+          "source_exponent": [
+            5,
+            4,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            46,
+            5,
+            7,
+            6
+          ],
+          "source_exponent": [
+            5,
+            5,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            60,
+            38,
+            66,
+            6
+          ],
+          "source_exponent": [
+            5,
+            6,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            27,
+            38,
+            20,
+            73
+          ],
+          "source_exponent": [
+            5,
+            7,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            8,
+            46,
+            43,
+            55
+          ],
+          "source_exponent": [
+            6,
+            0,
+            6
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            24,
+            5,
+            43,
+            51
+          ],
+          "source_exponent": [
+            6,
+            1,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            7,
+            0,
+            38,
+            37
+          ],
+          "source_exponent": [
+            6,
+            2,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            29,
+            88,
+            0,
+            31
+          ],
+          "source_exponent": [
+            6,
+            3,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            58,
+            48,
+            67,
+            16
+          ],
+          "source_exponent": [
+            6,
+            4,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            48,
+            27,
+            54,
+            39
+          ],
+          "source_exponent": [
+            6,
+            5,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            21,
+            78,
+            71,
+            66
+          ],
+          "source_exponent": [
+            6,
+            6,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            84,
+            24,
+            56,
+            76
+          ],
+          "source_exponent": [
+            7,
+            0,
+            5
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            37,
+            46,
+            77,
+            80
+          ],
+          "source_exponent": [
+            7,
+            1,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            70,
+            15,
+            18,
+            79
+          ],
+          "source_exponent": [
+            7,
+            2,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            47,
+            62,
+            60,
+            84
+          ],
+          "source_exponent": [
+            7,
+            3,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            84,
+            84,
+            15,
+            9
+          ],
+          "source_exponent": [
+            7,
+            4,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            86,
+            23,
+            88,
+            8
+          ],
+          "source_exponent": [
+            7,
+            5,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            20,
+            15,
+            81,
+            84
+          ],
+          "source_exponent": [
+            8,
+            0,
+            4
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            45,
+            5,
+            21,
+            45
+          ],
+          "source_exponent": [
+            8,
+            1,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            82,
+            58,
+            6,
+            28
+          ],
+          "source_exponent": [
+            8,
+            2,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            45,
+            67,
+            5,
+            0
+          ],
+          "source_exponent": [
+            8,
+            3,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            20,
+            80,
+            47,
+            59
+          ],
+          "source_exponent": [
+            8,
+            4,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            13,
+            11,
+            21
+          ],
+          "source_exponent": [
+            9,
+            0,
+            3
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            83,
+            36,
+            27
+          ],
+          "source_exponent": [
+            9,
+            1,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            19,
+            64,
+            68
+          ],
+          "source_exponent": [
+            9,
+            2,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            35,
+            57,
+            74
+          ],
+          "source_exponent": [
+            9,
+            3,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            87,
+            12,
+            43
+          ],
+          "source_exponent": [
+            10,
+            0,
+            2
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            20,
+            58,
+            66
+          ],
+          "source_exponent": [
+            10,
+            1,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            87,
+            12,
+            67
+          ],
+          "source_exponent": [
+            10,
+            2,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            46
+          ],
+          "source_exponent": [
+            11,
+            0,
+            1
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            28
+          ],
+          "source_exponent": [
+            11,
+            1,
+            0
+          ]
+        },
+        {
+          "parameter_coefficients_low_to_high": [
+            0,
+            0,
+            0,
+            58
+          ],
+          "source_exponent": [
+            12,
+            0,
+            0
+          ]
+        }
+      ],
+      "degree_4_geometric_landing_scheme_empty_mod_89": true,
+      "degree_4_parameter_space": "P1",
+      "degree_4_point_at_infinity_lands": false,
+      "label": "A5_class_2"
+    }
+  ],
+  "scope": "complete homogeneous A5-covariants from the faithful 3-space through degree 4"
+}

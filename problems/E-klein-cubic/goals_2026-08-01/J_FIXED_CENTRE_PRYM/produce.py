@@ -171,6 +171,7 @@ def main() -> None:
             "subgroup_rows": subgroup_rows,
             "involution_plus_minus_dimensions": [3, 2],
             "S3_restriction": "trivial + 2 standard; sign multiplicity 0",
+            "D12_restriction": "trivial + two 2-dimensional irreducibles; all three nontrivial linears have multiplicity 0",
             "fixed_elliptic_differential_character": "sign",
             "fixed_elliptic_channel_multiplicity": 0,
             "JX_isogeny_type": "E_11^5, CM(E_11)=Q(sqrt(-11))",
@@ -179,6 +180,8 @@ def main() -> None:
             "Hom_fixed_elliptic_to_E11": 0,
         },
         "stabilization_countermodel": {
+            "fixed_locus_functoriality_gap": "A dominant equivariant morphism need not be dominant on fixed loci.",
+            "fixed_locus_counterexample": "For a free 2-torsion translation on an elliptic A and trivial involution on Y, A x Y -> Y is equivariant dominant but (A x Y)^t is empty and Y^t=Y.",
             "fixed_data": "Equivariantly resolve and then blow up the embedded G-arrangement of the actual E_t and L_t inside P(W).",
             "hodge_data": "Blow up a free 660-component G-orbit of a curve C with J(X) an isogeny factor of J(C).",
             "fixed_and_hodge_decouple": True,

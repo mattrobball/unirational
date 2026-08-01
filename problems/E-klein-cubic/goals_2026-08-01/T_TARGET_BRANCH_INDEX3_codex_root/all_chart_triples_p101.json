@@ -1,0 +1,2990 @@
+{
+  "claim_scope": "finite-field discovery; an explicit witness refutes only the indicated chart with the named gates",
+  "pairs": [
+    [
+      63,
+      35
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      100,
+      50
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      10,
+      10
+    ],
+    [
+      -1,
+      2
+    ],
+    [
+      20,
+      7
+    ]
+  ],
+  "prime": 101,
+  "primitive_P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+  "rows": [
+    {
+      "A": 63,
+      "chart_points": 3,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 6,
+          "gates": {
+            "C": 93,
+            "F27": 37,
+            "G": 48,
+            "L": 48,
+            "M": 19,
+            "Puu": 87,
+            "Q4": 34,
+            "delta": 17,
+            "ell": 47
+          },
+          "generator_values": {
+            "P": 71,
+            "PA": 0,
+            "PB": 0,
+            "PY": 8,
+            "PZ": 43,
+            "Pu": 0
+          },
+          "point": [
+            63,
+            19,
+            46,
+            19,
+            35
+          ]
+        },
+        {
+          "Delta": 2,
+          "gates": {
+            "C": 27,
+            "F27": 36,
+            "G": 17,
+            "L": 48,
+            "M": 97,
+            "Puu": 71,
+            "Q4": 19,
+            "delta": 59,
+            "ell": 39
+          },
+          "generator_values": {
+            "P": 67,
+            "PA": 0,
+            "PB": 0,
+            "PY": 7,
+            "PZ": 4,
+            "Pu": 0
+          },
+          "point": [
+            63,
+            97,
+            80,
+            13,
+            35
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PB"
+      ],
+      "u": 35
+    },
+    {
+      "A": 63,
+      "chart_points": 5,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 48,
+          "gates": {
+            "C": 47,
+            "F27": 99,
+            "G": 8,
+            "L": 48,
+            "M": 9,
+            "Puu": 59,
+            "Q4": 8,
+            "delta": 18,
+            "ell": 22
+          },
+          "generator_values": {
+            "P": 25,
+            "PA": 0,
+            "PB": 83,
+            "PY": 0,
+            "PZ": 33,
+            "Pu": 0
+          },
+          "point": [
+            63,
+            9,
+            43,
+            91,
+            35
+          ]
+        },
+        {
+          "Delta": 59,
+          "gates": {
+            "C": 81,
+            "F27": 87,
+            "G": 8,
+            "L": 48,
+            "M": 53,
+            "Puu": 77,
+            "Q4": 41,
+            "delta": 96,
+            "ell": 20
+          },
+          "generator_values": {
+            "P": 76,
+            "PA": 0,
+            "PB": 29,
+            "PY": 0,
+            "PZ": 94,
+            "Pu": 0
+          },
+          "point": [
+            63,
+            53,
+            64,
+            35,
+            35
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PY"
+      ],
+      "u": 35
+    },
+    {
+      "A": 63,
+      "chart_points": 2,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PA",
+        "PZ"
+      ],
+      "u": 35
+    },
+    {
+      "A": 63,
+      "chart_points": 1,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PB",
+        "PY"
+      ],
+      "u": 35
+    },
+    {
+      "A": 63,
+      "chart_points": 2,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 96,
+          "gates": {
+            "C": 8,
+            "F27": 87,
+            "G": 77,
+            "L": 48,
+            "M": 74,
+            "Puu": 13,
+            "Q4": 80,
+            "delta": 97,
+            "ell": 61
+          },
+          "generator_values": {
+            "P": 2,
+            "PA": 14,
+            "PB": 0,
+            "PY": 71,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            63,
+            74,
+            23,
+            41,
+            35
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PB",
+        "PZ"
+      ],
+      "u": 35
+    },
+    {
+      "A": 63,
+      "chart_points": 2,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PY",
+        "PZ"
+      ],
+      "u": 35
+    },
+    {
+      "A": 63,
+      "chart_points": 1,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PA",
+        "PB",
+        "PY"
+      ],
+      "u": 35
+    },
+    {
+      "A": 63,
+      "chart_points": 2,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 12,
+          "gates": {
+            "C": 32,
+            "F27": 83,
+            "G": 75,
+            "L": 48,
+            "M": 20,
+            "Puu": 38,
+            "Q4": 83,
+            "delta": 73,
+            "ell": 81
+          },
+          "generator_values": {
+            "P": 27,
+            "PA": 0,
+            "PB": 0,
+            "PY": 89,
+            "PZ": 0,
+            "Pu": 52
+          },
+          "point": [
+            63,
+            20,
+            77,
+            21,
+            35
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PB",
+        "PZ"
+      ],
+      "u": 35
+    },
+    {
+      "A": 63,
+      "chart_points": 4,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 13,
+          "gates": {
+            "C": 100,
+            "F27": 24,
+            "G": 57,
+            "L": 48,
+            "M": 47,
+            "Puu": 93,
+            "Q4": 86,
+            "delta": 49,
+            "ell": 30
+          },
+          "generator_values": {
+            "P": 7,
+            "PA": 0,
+            "PB": 85,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 8
+          },
+          "point": [
+            63,
+            47,
+            2,
+            63,
+            35
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PY",
+        "PZ"
+      ],
+      "u": 35
+    },
+    {
+      "A": 63,
+      "chart_points": 1,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PB",
+        "PY",
+        "PZ"
+      ],
+      "u": 35
+    },
+    {
+      "A": 2,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PA",
+        "PB"
+      ],
+      "u": 3
+    },
+    {
+      "A": 2,
+      "chart_points": 4,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 42,
+          "gates": {
+            "C": 61,
+            "F27": 51,
+            "G": 99,
+            "L": 88,
+            "M": 65,
+            "Puu": 72,
+            "Q4": 16,
+            "delta": 93,
+            "ell": 45
+          },
+          "generator_values": {
+            "P": 56,
+            "PA": 0,
+            "PB": 28,
+            "PY": 0,
+            "PZ": 66,
+            "Pu": 0
+          },
+          "point": [
+            2,
+            65,
+            20,
+            94,
+            3
+          ]
+        },
+        {
+          "Delta": 10,
+          "gates": {
+            "C": 87,
+            "F27": 57,
+            "G": 62,
+            "L": 88,
+            "M": 74,
+            "Puu": 93,
+            "Q4": 9,
+            "delta": 1,
+            "ell": 17
+          },
+          "generator_values": {
+            "P": 29,
+            "PA": 0,
+            "PB": 60,
+            "PY": 0,
+            "PZ": 33,
+            "Pu": 0
+          },
+          "point": [
+            2,
+            74,
+            4,
+            75,
+            3
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PY"
+      ],
+      "u": 3
+    },
+    {
+      "A": 2,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 58,
+          "gates": {
+            "C": 74,
+            "F27": 74,
+            "G": 78,
+            "L": 88,
+            "M": 33,
+            "Puu": 70,
+            "Q4": 32,
+            "delta": 95,
+            "ell": 63
+          },
+          "generator_values": {
+            "P": 32,
+            "PA": 0,
+            "PB": 78,
+            "PY": 20,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            2,
+            33,
+            27,
+            87,
+            3
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PZ"
+      ],
+      "u": 3
+    },
+    {
+      "A": 2,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PB",
+        "PY"
+      ],
+      "u": 3
+    },
+    {
+      "A": 2,
+      "chart_points": 3,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 37,
+          "gates": {
+            "C": 43,
+            "F27": 74,
+            "G": 68,
+            "L": 88,
+            "M": 24,
+            "Puu": 55,
+            "Q4": 72,
+            "delta": 55,
+            "ell": 90
+          },
+          "generator_values": {
+            "P": 96,
+            "PA": 19,
+            "PB": 0,
+            "PY": 23,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            2,
+            24,
+            48,
+            30,
+            3
+          ]
+        },
+        {
+          "Delta": 64,
+          "gates": {
+            "C": 28,
+            "F27": 59,
+            "G": 17,
+            "L": 88,
+            "M": 60,
+            "Puu": 100,
+            "Q4": 8,
+            "delta": 43,
+            "ell": 12
+          },
+          "generator_values": {
+            "P": 95,
+            "PA": 30,
+            "PB": 0,
+            "PY": 35,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            2,
+            60,
+            45,
+            94,
+            3
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PB",
+        "PZ"
+      ],
+      "u": 3
+    },
+    {
+      "A": 2,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PY",
+        "PZ"
+      ],
+      "u": 3
+    },
+    {
+      "A": 2,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 100,
+          "gates": {
+            "C": 54,
+            "F27": 19,
+            "G": 41,
+            "L": 88,
+            "M": 59,
+            "Puu": 3,
+            "Q4": 25,
+            "delta": 34,
+            "ell": 31
+          },
+          "generator_values": {
+            "P": 46,
+            "PA": 0,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 31,
+            "Pu": 51
+          },
+          "point": [
+            2,
+            59,
+            46,
+            33,
+            3
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PB",
+        "PY"
+      ],
+      "u": 3
+    },
+    {
+      "A": 2,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 56,
+          "gates": {
+            "C": 5,
+            "F27": 75,
+            "G": 34,
+            "L": 88,
+            "M": 41,
+            "Puu": 3,
+            "Q4": 80,
+            "delta": 39,
+            "ell": 19
+          },
+          "generator_values": {
+            "P": 12,
+            "PA": 0,
+            "PB": 0,
+            "PY": 42,
+            "PZ": 0,
+            "Pu": 36
+          },
+          "point": [
+            2,
+            41,
+            89,
+            43,
+            3
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PB",
+        "PZ"
+      ],
+      "u": 3
+    },
+    {
+      "A": 2,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PA",
+        "PY",
+        "PZ"
+      ],
+      "u": 3
+    },
+    {
+      "A": 2,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 78,
+          "gates": {
+            "C": 95,
+            "F27": 100,
+            "G": 50,
+            "L": 88,
+            "M": 76,
+            "Puu": 85,
+            "Q4": 52,
+            "delta": 53,
+            "ell": 43
+          },
+          "generator_values": {
+            "P": 64,
+            "PA": 3,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 85
+          },
+          "point": [
+            2,
+            76,
+            12,
+            65,
+            3
+          ]
+        }
+      ],
+      "triple": [
+        "PB",
+        "PY",
+        "PZ"
+      ],
+      "u": 3
+    },
+    {
+      "A": 5,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 82,
+          "gates": {
+            "C": 72,
+            "F27": 89,
+            "G": 29,
+            "L": 91,
+            "M": 50,
+            "Puu": 22,
+            "Q4": 32,
+            "delta": 60,
+            "ell": 36
+          },
+          "generator_values": {
+            "P": 74,
+            "PA": 0,
+            "PB": 0,
+            "PY": 60,
+            "PZ": 96,
+            "Pu": 0
+          },
+          "point": [
+            5,
+            50,
+            69,
+            62,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PB"
+      ],
+      "u": 7
+    },
+    {
+      "A": 5,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 61,
+          "gates": {
+            "C": 87,
+            "F27": 44,
+            "G": 57,
+            "L": 91,
+            "M": 96,
+            "Puu": 97,
+            "Q4": 29,
+            "delta": 70,
+            "ell": 81
+          },
+          "generator_values": {
+            "P": 46,
+            "PA": 0,
+            "PB": 24,
+            "PY": 0,
+            "PZ": 97,
+            "Pu": 0
+          },
+          "point": [
+            5,
+            96,
+            63,
+            36,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PY"
+      ],
+      "u": 7
+    },
+    {
+      "A": 5,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 90,
+          "gates": {
+            "C": 75,
+            "F27": 12,
+            "G": 80,
+            "L": 91,
+            "M": 79,
+            "Puu": 76,
+            "Q4": 33,
+            "delta": 52,
+            "ell": 63
+          },
+          "generator_values": {
+            "P": 78,
+            "PA": 0,
+            "PB": 30,
+            "PY": 2,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            5,
+            79,
+            82,
+            79,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PZ"
+      ],
+      "u": 7
+    },
+    {
+      "A": 5,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 27,
+          "gates": {
+            "C": 17,
+            "F27": 46,
+            "G": 51,
+            "L": 91,
+            "M": 43,
+            "Puu": 9,
+            "Q4": 7,
+            "delta": 3,
+            "ell": 17
+          },
+          "generator_values": {
+            "P": 80,
+            "PA": 13,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 49,
+            "Pu": 0
+          },
+          "point": [
+            5,
+            43,
+            18,
+            77,
+            7
+          ]
+        },
+        {
+          "Delta": 12,
+          "gates": {
+            "C": 30,
+            "F27": 36,
+            "G": 8,
+            "L": 91,
+            "M": 85,
+            "Puu": 74,
+            "Q4": 94,
+            "delta": 42,
+            "ell": 16
+          },
+          "generator_values": {
+            "P": 59,
+            "PA": 23,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 14,
+            "Pu": 0
+          },
+          "point": [
+            5,
+            85,
+            9,
+            56,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PB",
+        "PY"
+      ],
+      "u": 7
+    },
+    {
+      "A": 5,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PB",
+        "PZ"
+      ],
+      "u": 7
+    },
+    {
+      "A": 5,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 50,
+          "gates": {
+            "C": 23,
+            "F27": 30,
+            "G": 68,
+            "L": 91,
+            "M": 44,
+            "Puu": 78,
+            "Q4": 78,
+            "delta": 11,
+            "ell": 8
+          },
+          "generator_values": {
+            "P": 28,
+            "PA": 97,
+            "PB": 100,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            5,
+            44,
+            71,
+            91,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PY",
+        "PZ"
+      ],
+      "u": 7
+    },
+    {
+      "A": 5,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PA",
+        "PB",
+        "PY"
+      ],
+      "u": 7
+    },
+    {
+      "A": 5,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PA",
+        "PB",
+        "PZ"
+      ],
+      "u": 7
+    },
+    {
+      "A": 5,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 96,
+          "gates": {
+            "C": 50,
+            "F27": 57,
+            "G": 32,
+            "L": 91,
+            "M": 40,
+            "Puu": 38,
+            "Q4": 98,
+            "delta": 2,
+            "ell": 14
+          },
+          "generator_values": {
+            "P": 4,
+            "PA": 0,
+            "PB": 50,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 68
+          },
+          "point": [
+            5,
+            40,
+            43,
+            69,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PY",
+        "PZ"
+      ],
+      "u": 7
+    },
+    {
+      "A": 5,
+      "chart_points": 3,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 47,
+          "gates": {
+            "C": 5,
+            "F27": 96,
+            "G": 69,
+            "L": 91,
+            "M": 11,
+            "Puu": 2,
+            "Q4": 27,
+            "delta": 99,
+            "ell": 6
+          },
+          "generator_values": {
+            "P": 65,
+            "PA": 54,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 9
+          },
+          "point": [
+            5,
+            11,
+            0,
+            21,
+            7
+          ]
+        },
+        {
+          "Delta": 35,
+          "gates": {
+            "C": 59,
+            "F27": 50,
+            "G": 9,
+            "L": 91,
+            "M": 87,
+            "Puu": 4,
+            "Q4": 97,
+            "delta": 62,
+            "ell": 7
+          },
+          "generator_values": {
+            "P": 50,
+            "PA": 31,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 79
+          },
+          "point": [
+            5,
+            87,
+            15,
+            96,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "PB",
+        "PY",
+        "PZ"
+      ],
+      "u": 7
+    },
+    {
+      "A": 100,
+      "chart_points": 2,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 59,
+          "gates": {
+            "C": 44,
+            "F27": 74,
+            "G": 74,
+            "L": 85,
+            "M": 88,
+            "Puu": 69,
+            "Q4": 97,
+            "delta": 12,
+            "ell": 1
+          },
+          "generator_values": {
+            "P": 95,
+            "PA": 0,
+            "PB": 0,
+            "PY": 37,
+            "PZ": 87,
+            "Pu": 0
+          },
+          "point": [
+            100,
+            88,
+            27,
+            81,
+            50
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PB"
+      ],
+      "u": 50
+    },
+    {
+      "A": 100,
+      "chart_points": 2,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PA",
+        "PY"
+      ],
+      "u": 50
+    },
+    {
+      "A": 100,
+      "chart_points": 3,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 42,
+          "gates": {
+            "C": 46,
+            "F27": 46,
+            "G": 66,
+            "L": 85,
+            "M": 75,
+            "Puu": 46,
+            "Q4": 22,
+            "delta": 34,
+            "ell": 79
+          },
+          "generator_values": {
+            "P": 23,
+            "PA": 0,
+            "PB": 57,
+            "PY": 98,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            100,
+            75,
+            26,
+            69,
+            50
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PZ"
+      ],
+      "u": 50
+    },
+    {
+      "A": 100,
+      "chart_points": 1,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PB",
+        "PY"
+      ],
+      "u": 50
+    },
+    {
+      "A": 100,
+      "chart_points": 1,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PB",
+        "PZ"
+      ],
+      "u": 50
+    },
+    {
+      "A": 100,
+      "chart_points": 4,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 100,
+          "gates": {
+            "C": 98,
+            "F27": 75,
+            "G": 92,
+            "L": 85,
+            "M": 17,
+            "Puu": 48,
+            "Q4": 27,
+            "delta": 49,
+            "ell": 66
+          },
+          "generator_values": {
+            "P": 78,
+            "PA": 17,
+            "PB": 30,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            100,
+            17,
+            98,
+            77,
+            50
+          ]
+        },
+        {
+          "Delta": 66,
+          "gates": {
+            "C": 61,
+            "F27": 63,
+            "G": 10,
+            "L": 85,
+            "M": 32,
+            "Puu": 65,
+            "Q4": 31,
+            "delta": 87,
+            "ell": 14
+          },
+          "generator_values": {
+            "P": 58,
+            "PA": 68,
+            "PB": 14,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            100,
+            32,
+            38,
+            28,
+            50
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PY",
+        "PZ"
+      ],
+      "u": 50
+    },
+    {
+      "A": 100,
+      "chart_points": 2,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 76,
+          "gates": {
+            "C": 49,
+            "F27": 34,
+            "G": 78,
+            "L": 85,
+            "M": 18,
+            "Puu": 84,
+            "Q4": 29,
+            "delta": 78,
+            "ell": 62
+          },
+          "generator_values": {
+            "P": 74,
+            "PA": 0,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 93,
+            "Pu": 89
+          },
+          "point": [
+            100,
+            18,
+            36,
+            7,
+            50
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PB",
+        "PY"
+      ],
+      "u": 50
+    },
+    {
+      "A": 100,
+      "chart_points": 1,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PA",
+        "PB",
+        "PZ"
+      ],
+      "u": 50
+    },
+    {
+      "A": 100,
+      "chart_points": 2,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PA",
+        "PY",
+        "PZ"
+      ],
+      "u": 50
+    },
+    {
+      "A": 100,
+      "chart_points": 2,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 3,
+          "gates": {
+            "C": 4,
+            "F27": 73,
+            "G": 16,
+            "L": 85,
+            "M": 68,
+            "Puu": 35,
+            "Q4": 40,
+            "delta": 5,
+            "ell": 27
+          },
+          "generator_values": {
+            "P": 99,
+            "PA": 48,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 76
+          },
+          "point": [
+            100,
+            68,
+            87,
+            12,
+            50
+          ]
+        }
+      ],
+      "triple": [
+        "PB",
+        "PY",
+        "PZ"
+      ],
+      "u": 50
+    },
+    {
+      "A": 0,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 96,
+          "gates": {
+            "C": 91,
+            "F27": 15,
+            "G": 47,
+            "L": 86,
+            "M": 13,
+            "Puu": 87,
+            "Q4": 58,
+            "delta": 76,
+            "ell": 59
+          },
+          "generator_values": {
+            "P": 72,
+            "PA": 0,
+            "PB": 0,
+            "PY": 75,
+            "PZ": 99,
+            "Pu": 0
+          },
+          "point": [
+            0,
+            13,
+            30,
+            10,
+            1
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PB"
+      ],
+      "u": 1
+    },
+    {
+      "A": 0,
+      "chart_points": 3,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 97,
+          "gates": {
+            "C": 15,
+            "F27": 90,
+            "G": 13,
+            "L": 86,
+            "M": 50,
+            "Puu": 67,
+            "Q4": 80,
+            "delta": 55,
+            "ell": 34
+          },
+          "generator_values": {
+            "P": 2,
+            "PA": 0,
+            "PB": 1,
+            "PY": 0,
+            "PZ": 5,
+            "Pu": 0
+          },
+          "point": [
+            0,
+            50,
+            56,
+            86,
+            1
+          ]
+        },
+        {
+          "Delta": 43,
+          "gates": {
+            "C": 64,
+            "F27": 20,
+            "G": 36,
+            "L": 86,
+            "M": 96,
+            "Puu": 42,
+            "Q4": 81,
+            "delta": 79,
+            "ell": 59
+          },
+          "generator_values": {
+            "P": 79,
+            "PA": 0,
+            "PB": 34,
+            "PY": 0,
+            "PZ": 25,
+            "Pu": 0
+          },
+          "point": [
+            0,
+            96,
+            86,
+            6,
+            1
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PY"
+      ],
+      "u": 1
+    },
+    {
+      "A": 0,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PA",
+        "PZ"
+      ],
+      "u": 1
+    },
+    {
+      "A": 0,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PB",
+        "PY"
+      ],
+      "u": 1
+    },
+    {
+      "A": 0,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PB",
+        "PZ"
+      ],
+      "u": 1
+    },
+    {
+      "A": 0,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 99,
+          "gates": {
+            "C": 10,
+            "F27": 24,
+            "G": 20,
+            "L": 86,
+            "M": 90,
+            "Puu": 16,
+            "Q4": 22,
+            "delta": 92,
+            "ell": 41
+          },
+          "generator_values": {
+            "P": 19,
+            "PA": 52,
+            "PB": 70,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            0,
+            90,
+            25,
+            58,
+            1
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PY",
+        "PZ"
+      ],
+      "u": 1
+    },
+    {
+      "A": 0,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 47,
+          "gates": {
+            "C": 51,
+            "F27": 84,
+            "G": 88,
+            "L": 86,
+            "M": 24,
+            "Puu": 94,
+            "Q4": 97,
+            "delta": 52,
+            "ell": 2
+          },
+          "generator_values": {
+            "P": 65,
+            "PA": 0,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 44,
+            "Pu": 1
+          },
+          "point": [
+            0,
+            24,
+            91,
+            58,
+            1
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PB",
+        "PY"
+      ],
+      "u": 1
+    },
+    {
+      "A": 0,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 87,
+          "gates": {
+            "C": 16,
+            "F27": 69,
+            "G": 66,
+            "L": 86,
+            "M": 75,
+            "Puu": 36,
+            "Q4": 83,
+            "delta": 28,
+            "ell": 80
+          },
+          "generator_values": {
+            "P": 38,
+            "PA": 0,
+            "PB": 0,
+            "PY": 2,
+            "PZ": 0,
+            "Pu": 57
+          },
+          "point": [
+            0,
+            75,
+            94,
+            58,
+            1
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PB",
+        "PZ"
+      ],
+      "u": 1
+    },
+    {
+      "A": 0,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PA",
+        "PY",
+        "PZ"
+      ],
+      "u": 1
+    },
+    {
+      "A": 0,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PB",
+        "PY",
+        "PZ"
+      ],
+      "u": 1
+    },
+    {
+      "A": 10,
+      "chart_points": 3,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 14,
+          "gates": {
+            "C": 72,
+            "F27": 64,
+            "G": 65,
+            "L": 96,
+            "M": 51,
+            "Puu": 14,
+            "Q4": 39,
+            "delta": 40,
+            "ell": 3
+          },
+          "generator_values": {
+            "P": 69,
+            "PA": 0,
+            "PB": 0,
+            "PY": 60,
+            "PZ": 5,
+            "Pu": 0
+          },
+          "point": [
+            10,
+            51,
+            54,
+            99,
+            10
+          ]
+        },
+        {
+          "Delta": 85,
+          "gates": {
+            "C": 44,
+            "F27": 38,
+            "G": 39,
+            "L": 96,
+            "M": 86,
+            "Puu": 40,
+            "Q4": 77,
+            "delta": 50,
+            "ell": 71
+          },
+          "generator_values": {
+            "P": 76,
+            "PA": 0,
+            "PB": 0,
+            "PY": 83,
+            "PZ": 79,
+            "Pu": 0
+          },
+          "point": [
+            10,
+            86,
+            90,
+            91,
+            10
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PB"
+      ],
+      "u": 10
+    },
+    {
+      "A": 10,
+      "chart_points": 3,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 88,
+          "gates": {
+            "C": 62,
+            "F27": 45,
+            "G": 67,
+            "L": 96,
+            "M": 51,
+            "Puu": 84,
+            "Q4": 22,
+            "delta": 81,
+            "ell": 25
+          },
+          "generator_values": {
+            "P": 3,
+            "PA": 0,
+            "PB": 44,
+            "PY": 0,
+            "PZ": 82,
+            "Pu": 0
+          },
+          "point": [
+            10,
+            51,
+            2,
+            54,
+            10
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PY"
+      ],
+      "u": 10
+    },
+    {
+      "A": 10,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 18,
+          "gates": {
+            "C": 58,
+            "F27": 6,
+            "G": 31,
+            "L": 96,
+            "M": 74,
+            "Puu": 96,
+            "Q4": 3,
+            "delta": 50,
+            "ell": 98
+          },
+          "generator_values": {
+            "P": 2,
+            "PA": 0,
+            "PB": 28,
+            "PY": 54,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            10,
+            74,
+            71,
+            60,
+            10
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PZ"
+      ],
+      "u": 10
+    },
+    {
+      "A": 10,
+      "chart_points": 1,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PB",
+        "PY"
+      ],
+      "u": 10
+    },
+    {
+      "A": 10,
+      "chart_points": 2,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 39,
+          "gates": {
+            "C": 78,
+            "F27": 2,
+            "G": 27,
+            "L": 96,
+            "M": 1,
+            "Puu": 100,
+            "Q4": 47,
+            "delta": 95,
+            "ell": 30
+          },
+          "generator_values": {
+            "P": 79,
+            "PA": 6,
+            "PB": 0,
+            "PY": 88,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            10,
+            1,
+            55,
+            17,
+            10
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PB",
+        "PZ"
+      ],
+      "u": 10
+    },
+    {
+      "A": 10,
+      "chart_points": 4,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 74,
+          "gates": {
+            "C": 86,
+            "F27": 13,
+            "G": 48,
+            "L": 96,
+            "M": 14,
+            "Puu": 34,
+            "Q4": 85,
+            "delta": 57,
+            "ell": 14
+          },
+          "generator_values": {
+            "P": 42,
+            "PA": 79,
+            "PB": 30,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            10,
+            14,
+            61,
+            48,
+            10
+          ]
+        },
+        {
+          "Delta": 46,
+          "gates": {
+            "C": 98,
+            "F27": 42,
+            "G": 66,
+            "L": 96,
+            "M": 63,
+            "Puu": 78,
+            "Q4": 65,
+            "delta": 61,
+            "ell": 95
+          },
+          "generator_values": {
+            "P": 48,
+            "PA": 30,
+            "PB": 64,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            10,
+            63,
+            44,
+            71,
+            10
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PY",
+        "PZ"
+      ],
+      "u": 10
+    },
+    {
+      "A": 10,
+      "chart_points": 3,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 76,
+          "gates": {
+            "C": 45,
+            "F27": 55,
+            "G": 41,
+            "L": 96,
+            "M": 93,
+            "Puu": 61,
+            "Q4": 56,
+            "delta": 60,
+            "ell": 85
+          },
+          "generator_values": {
+            "P": 44,
+            "PA": 0,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 8,
+            "Pu": 67
+          },
+          "point": [
+            10,
+            93,
+            86,
+            81,
+            10
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PB",
+        "PY"
+      ],
+      "u": 10
+    },
+    {
+      "A": 10,
+      "chart_points": 2,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 87,
+          "gates": {
+            "C": 7,
+            "F27": 20,
+            "G": 99,
+            "L": 96,
+            "M": 21,
+            "Puu": 11,
+            "Q4": 36,
+            "delta": 38,
+            "ell": 68
+          },
+          "generator_values": {
+            "P": 84,
+            "PA": 0,
+            "PB": 0,
+            "PY": 92,
+            "PZ": 0,
+            "Pu": 67
+          },
+          "point": [
+            10,
+            21,
+            50,
+            24,
+            10
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PB",
+        "PZ"
+      ],
+      "u": 10
+    },
+    {
+      "A": 10,
+      "chart_points": 5,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 3,
+          "gates": {
+            "C": 72,
+            "F27": 63,
+            "G": 73,
+            "L": 96,
+            "M": 18,
+            "Puu": 22,
+            "Q4": 79,
+            "delta": 24,
+            "ell": 21
+          },
+          "generator_values": {
+            "P": 46,
+            "PA": 0,
+            "PB": 92,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 33
+          },
+          "point": [
+            10,
+            18,
+            4,
+            9,
+            10
+          ]
+        },
+        {
+          "Delta": 19,
+          "gates": {
+            "C": 38,
+            "F27": 51,
+            "G": 27,
+            "L": 96,
+            "M": 25,
+            "Puu": 35,
+            "Q4": 6,
+            "delta": 80,
+            "ell": 4
+          },
+          "generator_values": {
+            "P": 6,
+            "PA": 0,
+            "PB": 32,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 55
+          },
+          "point": [
+            10,
+            25,
+            10,
+            95,
+            10
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PY",
+        "PZ"
+      ],
+      "u": 10
+    },
+    {
+      "A": 10,
+      "chart_points": 1,
+      "full_singular_points": 1,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PB",
+        "PY",
+        "PZ"
+      ],
+      "u": 10
+    },
+    {
+      "A": -1,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PA",
+        "PB"
+      ],
+      "u": 2
+    },
+    {
+      "A": -1,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 84,
+          "gates": {
+            "C": 11,
+            "F27": 40,
+            "G": 71,
+            "L": 85,
+            "M": 64,
+            "Puu": 96,
+            "Q4": 18,
+            "delta": 21,
+            "ell": 26
+          },
+          "generator_values": {
+            "P": 38,
+            "PA": 0,
+            "PB": 27,
+            "PY": 0,
+            "PZ": 8,
+            "Pu": 0
+          },
+          "point": [
+            100,
+            64,
+            19,
+            26,
+            2
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PY"
+      ],
+      "u": 2
+    },
+    {
+      "A": -1,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PA",
+        "PZ"
+      ],
+      "u": 2
+    },
+    {
+      "A": -1,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 96,
+          "gates": {
+            "C": 34,
+            "F27": 40,
+            "G": 9,
+            "L": 85,
+            "M": 12,
+            "Puu": 91,
+            "Q4": 48,
+            "delta": 67,
+            "ell": 34
+          },
+          "generator_values": {
+            "P": 35,
+            "PA": 100,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 32,
+            "Pu": 0
+          },
+          "point": [
+            100,
+            12,
+            54,
+            90,
+            2
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PB",
+        "PY"
+      ],
+      "u": 2
+    },
+    {
+      "A": -1,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 80,
+          "gates": {
+            "C": 24,
+            "F27": 54,
+            "G": 84,
+            "L": 85,
+            "M": 17,
+            "Puu": 43,
+            "Q4": 75,
+            "delta": 96,
+            "ell": 15
+          },
+          "generator_values": {
+            "P": 89,
+            "PA": 82,
+            "PB": 0,
+            "PY": 10,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            100,
+            17,
+            46,
+            57,
+            2
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PB",
+        "PZ"
+      ],
+      "u": 2
+    },
+    {
+      "A": -1,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 23,
+          "gates": {
+            "C": 28,
+            "F27": 67,
+            "G": 73,
+            "L": 85,
+            "M": 4,
+            "Puu": 3,
+            "Q4": 79,
+            "delta": 96,
+            "ell": 31
+          },
+          "generator_values": {
+            "P": 46,
+            "PA": 3,
+            "PB": 61,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            100,
+            4,
+            57,
+            40,
+            2
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PY",
+        "PZ"
+      ],
+      "u": 2
+    },
+    {
+      "A": -1,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PA",
+        "PB",
+        "PY"
+      ],
+      "u": 2
+    },
+    {
+      "A": -1,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PA",
+        "PB",
+        "PZ"
+      ],
+      "u": 2
+    },
+    {
+      "A": -1,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PA",
+        "PY",
+        "PZ"
+      ],
+      "u": 2
+    },
+    {
+      "A": -1,
+      "chart_points": 3,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 51,
+          "gates": {
+            "C": 71,
+            "F27": 45,
+            "G": 32,
+            "L": 85,
+            "M": 40,
+            "Puu": 8,
+            "Q4": 82,
+            "delta": 92,
+            "ell": 88
+          },
+          "generator_values": {
+            "P": 98,
+            "PA": 28,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 50
+          },
+          "point": [
+            100,
+            40,
+            41,
+            94,
+            2
+          ]
+        },
+        {
+          "Delta": 90,
+          "gates": {
+            "C": 75,
+            "F27": 1,
+            "G": 14,
+            "L": 85,
+            "M": 44,
+            "Puu": 32,
+            "Q4": 53,
+            "delta": 89,
+            "ell": 3
+          },
+          "generator_values": {
+            "P": 93,
+            "PA": 96,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 55
+          },
+          "point": [
+            100,
+            44,
+            80,
+            57,
+            2
+          ]
+        }
+      ],
+      "triple": [
+        "PB",
+        "PY",
+        "PZ"
+      ],
+      "u": 2
+    },
+    {
+      "A": 20,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PA",
+        "PB"
+      ],
+      "u": 7
+    },
+    {
+      "A": 20,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 3,
+          "gates": {
+            "C": 28,
+            "F27": 70,
+            "G": 40,
+            "L": 5,
+            "M": 89,
+            "Puu": 99,
+            "Q4": 21,
+            "delta": 12,
+            "ell": 64
+          },
+          "generator_values": {
+            "P": 92,
+            "PA": 0,
+            "PB": 9,
+            "PY": 0,
+            "PZ": 81,
+            "Pu": 0
+          },
+          "point": [
+            20,
+            89,
+            13,
+            92,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PY"
+      ],
+      "u": 7
+    },
+    {
+      "A": 20,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 10,
+          "gates": {
+            "C": 69,
+            "F27": 51,
+            "G": 94,
+            "L": 5,
+            "M": 92,
+            "Puu": 26,
+            "Q4": 56,
+            "delta": 65,
+            "ell": 96
+          },
+          "generator_values": {
+            "P": 18,
+            "PA": 0,
+            "PB": 99,
+            "PY": 7,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            20,
+            92,
+            38,
+            7,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PA",
+        "PZ"
+      ],
+      "u": 7
+    },
+    {
+      "A": 20,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 64,
+          "gates": {
+            "C": 48,
+            "F27": 1,
+            "G": 81,
+            "L": 5,
+            "M": 84,
+            "Puu": 70,
+            "Q4": 94,
+            "delta": 45,
+            "ell": 32
+          },
+          "generator_values": {
+            "P": 30,
+            "PA": 78,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 34,
+            "Pu": 0
+          },
+          "point": [
+            20,
+            84,
+            3,
+            41,
+            7
+          ]
+        },
+        {
+          "Delta": 80,
+          "gates": {
+            "C": 1,
+            "F27": 47,
+            "G": 84,
+            "L": 5,
+            "M": 88,
+            "Puu": 45,
+            "Q4": 8,
+            "delta": 7,
+            "ell": 89
+          },
+          "generator_values": {
+            "P": 31,
+            "PA": 46,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 75,
+            "Pu": 0
+          },
+          "point": [
+            20,
+            88,
+            87,
+            15,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PB",
+        "PY"
+      ],
+      "u": 7
+    },
+    {
+      "A": 20,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "Pu",
+        "PB",
+        "PZ"
+      ],
+      "u": 7
+    },
+    {
+      "A": 20,
+      "chart_points": 3,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 2,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 78,
+          "gates": {
+            "C": 98,
+            "F27": 1,
+            "G": 12,
+            "L": 5,
+            "M": 34,
+            "Puu": 36,
+            "Q4": 100,
+            "delta": 65,
+            "ell": 76
+          },
+          "generator_values": {
+            "P": 41,
+            "PA": 66,
+            "PB": 35,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            20,
+            34,
+            60,
+            6,
+            7
+          ]
+        },
+        {
+          "Delta": 26,
+          "gates": {
+            "C": 24,
+            "F27": 96,
+            "G": 15,
+            "L": 5,
+            "M": 76,
+            "Puu": 32,
+            "Q4": 37,
+            "delta": 31,
+            "ell": 9
+          },
+          "generator_values": {
+            "P": 10,
+            "PA": 89,
+            "PB": 24,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 0
+          },
+          "point": [
+            20,
+            76,
+            96,
+            18,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "Pu",
+        "PY",
+        "PZ"
+      ],
+      "u": 7
+    },
+    {
+      "A": 20,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 39,
+          "gates": {
+            "C": 82,
+            "F27": 65,
+            "G": 61,
+            "L": 5,
+            "M": 77,
+            "Puu": 61,
+            "Q4": 56,
+            "delta": 64,
+            "ell": 43
+          },
+          "generator_values": {
+            "P": 91,
+            "PA": 0,
+            "PB": 0,
+            "PY": 0,
+            "PZ": 26,
+            "Pu": 81
+          },
+          "point": [
+            20,
+            77,
+            48,
+            64,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PB",
+        "PY"
+      ],
+      "u": 7
+    },
+    {
+      "A": 20,
+      "chart_points": 1,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 38,
+          "gates": {
+            "C": 92,
+            "F27": 53,
+            "G": 74,
+            "L": 5,
+            "M": 82,
+            "Puu": 73,
+            "Q4": 17,
+            "delta": 67,
+            "ell": 54
+          },
+          "generator_values": {
+            "P": 89,
+            "PA": 0,
+            "PB": 0,
+            "PY": 22,
+            "PZ": 0,
+            "Pu": 89
+          },
+          "point": [
+            20,
+            82,
+            29,
+            61,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PB",
+        "PZ"
+      ],
+      "u": 7
+    },
+    {
+      "A": 20,
+      "chart_points": 2,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 1,
+      "gate_open_extraneous_examples": [
+        {
+          "Delta": 98,
+          "gates": {
+            "C": 48,
+            "F27": 33,
+            "G": 71,
+            "L": 5,
+            "M": 97,
+            "Puu": 98,
+            "Q4": 91,
+            "delta": 27,
+            "ell": 57
+          },
+          "generator_values": {
+            "P": 26,
+            "PA": 0,
+            "PB": 58,
+            "PY": 0,
+            "PZ": 0,
+            "Pu": 97
+          },
+          "point": [
+            20,
+            97,
+            53,
+            32,
+            7
+          ]
+        }
+      ],
+      "triple": [
+        "PA",
+        "PY",
+        "PZ"
+      ],
+      "u": 7
+    },
+    {
+      "A": 20,
+      "chart_points": 0,
+      "full_singular_points": 0,
+      "gate_open_extraneous_count_lower_bound": 0,
+      "gate_open_extraneous_examples": [],
+      "triple": [
+        "PB",
+        "PY",
+        "PZ"
+      ],
+      "u": 7
+    }
+  ],
+  "schema": "klein-t-all-chart-triples-screen-v1",
+  "summary": {
+    "PA/PB/PY": {
+      "pairs_screened": 8,
+      "pairs_with_gate_open_extraneous_witness": 5,
+      "total_chart_points": 9,
+      "total_full_singular_points": 3
+    },
+    "PA/PB/PZ": {
+      "pairs_screened": 8,
+      "pairs_with_gate_open_extraneous_witness": 5,
+      "total_chart_points": 8,
+      "total_full_singular_points": 3
+    },
+    "PA/PY/PZ": {
+      "pairs_screened": 8,
+      "pairs_with_gate_open_extraneous_witness": 4,
+      "total_chart_points": 18,
+      "total_full_singular_points": 3
+    },
+    "PB/PY/PZ": {
+      "pairs_screened": 8,
+      "pairs_with_gate_open_extraneous_witness": 4,
+      "total_chart_points": 11,
+      "total_full_singular_points": 3
+    },
+    "Pu/PA/PB": {
+      "pairs_screened": 8,
+      "pairs_with_gate_open_extraneous_witness": 5,
+      "total_chart_points": 10,
+      "total_full_singular_points": 3
+    },
+    "Pu/PA/PY": {
+      "pairs_screened": 8,
+      "pairs_with_gate_open_extraneous_witness": 7,
+      "total_chart_points": 23,
+      "total_full_singular_points": 3
+    },
+    "Pu/PA/PZ": {
+      "pairs_screened": 8,
+      "pairs_with_gate_open_extraneous_witness": 5,
+      "total_chart_points": 15,
+      "total_full_singular_points": 2
+    },
+    "Pu/PB/PY": {
+      "pairs_screened": 8,
+      "pairs_with_gate_open_extraneous_witness": 3,
+      "total_chart_points": 8,
+      "total_full_singular_points": 3
+    },
+    "Pu/PB/PZ": {
+      "pairs_screened": 8,
+      "pairs_with_gate_open_extraneous_witness": 4,
+      "total_chart_points": 9,
+      "total_full_singular_points": 3
+    },
+    "Pu/PY/PZ": {
+      "pairs_screened": 8,
+      "pairs_with_gate_open_extraneous_witness": 6,
+      "total_chart_points": 20,
+      "total_full_singular_points": 3
+    }
+  }
+}

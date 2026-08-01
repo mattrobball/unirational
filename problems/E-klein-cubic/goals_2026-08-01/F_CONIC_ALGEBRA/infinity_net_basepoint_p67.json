@@ -1,0 +1,19 @@
+{
+  "prime": 67,
+  "zeta": 9,
+  "net_terms": [
+    15,
+    11,
+    4
+  ],
+  "net_r_degrees": [
+    2,
+    1,
+    0
+  ],
+  "charts": [
+    "infinity_net_basepoint_X_p67.sing",
+    "infinity_net_basepoint_y_p67.sing",
+    "infinity_net_basepoint_w_p67.sing"
+  ]
+}

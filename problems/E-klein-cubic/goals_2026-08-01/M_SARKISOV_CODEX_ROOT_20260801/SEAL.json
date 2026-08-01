@@ -1,0 +1,30 @@
+{
+  "schema": "goal-m-sarkisov-structural-seal-v1",
+  "exit": "M-NEW-MORI-FIBRE-STRUCTURAL",
+  "repository_head_consumed": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "local_files": {
+    "ARITHMETIC.md": "87670b061f9d67dfca3f3d92c46adde84cea578111558cbc823985721aede968",
+    "CENTRES.md": "6b9ec3440e441599371e84a2663f27dfdab84c6a87af8620755f80e8ff3279ca",
+    "COMPLETION_AUDIT.md": "f3aaf05ab84d4a357f5789ce1935b86cad61c1f4b3c33f0543f129aaa9ba9a2d",
+    "DESCENT_AUDIT.md": "9a7955467f9904d2e1542f0289b4f9d8cd9cf9bb16a5bb477af26cc56efc7608",
+    "MORI_CONES.md": "d6050805acc52597274cef5b4d0161244d62cceb15acf5969d73738c7e73e0ec",
+    "REFERENCES.md": "6d02dac660534e53f664577500041031f22dbcff8643d0ec5fb20abd9708f1db",
+    "STATUS.md": "88235e9319415f50a15568675bf7ecfdaf43ba1847a942ac2314d9cea4be1638",
+    "THEOREM.md": "2dd07e0a04ad69deb8b756e303b608b4889a21a37d3ded06b5d7758243532528",
+    "WORK_SCOPE.md": "a8b4e6f77e7a244268b150c2551783d97a00cd764e1e48572aeec5a0f4642411",
+    "links/plane_cubic_dp3/README.md": "45c987ed64847f0fb2237973c5291281eb14963ea73c98b4f6b9d80533ee2f25",
+    "links/plane_cubic_dp3/intersection_payload.json": "062cf8c01bd399e1b08ae7c5cf9a38810ff623ea7a469329d5d633ed6714b06e",
+    "links/plane_cubic_dp3/produce.py": "e8e0005dddc281702abc2ef3f2dfeb5ec743a74e1aa1b8e3498ad859296fb039",
+    "links/plane_cubic_dp3/verify.py": "c2840a1730035e5b0f6ce2d48f00d2db084033c7b3569d16d831a4f42c283e3d",
+    "verify.py": "4be1b76585beee06520fb6c44e8903d4a620f86815131d33d244d2f25301c380"
+  },
+  "upstream_inputs": {
+    "SPEC.md": "a607b0a026f732eee1f6cb281ae2e85732d9e2aac866802fd739a810767df01e",
+    "RESOLUTION.md": "3eac1aa9787da90cbee21b0e72e9ea0fe538921e74afd9cc20170d5227e64c67",
+    "certificates/exact_covariants_check.py": "89847a3203bf7d842b00a551a29377bc9d1cdd36dca9cb5d192c54de0abd2a6e",
+    "certificates/exact_weil_check.py": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
+    "goals_2026-08-01/GOAL_M_SARKISOV_BIRATIONAL_MODELS.md": "2870c5801f4a12eb44637ff0f5181bb0e2c68b709b628a0144a4513965db96d8",
+    "tmp/generic_twist/phi_coefficients.py": "8c217aeaefe300a76e886f0a94803b5812689574299e1a2c72daeec72efd4525"
+  }
+}

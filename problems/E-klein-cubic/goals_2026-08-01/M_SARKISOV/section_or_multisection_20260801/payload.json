@@ -1,0 +1,60 @@
+{
+  "schema": "m-sarkisov-section-or-multisection-v1",
+  "verdict": "PROVED-MULTISECTION-DEGREE-55",
+  "fibration": {
+    "base_field": "K0=C(W)^G",
+    "base": "P1_K0",
+    "center_plane": "a3=a4=0",
+    "center_curve": "smooth xCD plane cubic",
+    "model": "Bl_center(X)"
+  },
+  "group": {
+    "name": "PSL2(F11)",
+    "order": 660,
+    "line_stabilizer": "D12",
+    "line_stabilizer_order": 12,
+    "orbit_size": 55
+  },
+  "fields": {
+    "E": "C(W)",
+    "K0": "E^G",
+    "Kproj": "C(P(W))^G",
+    "K0_over_Kproj": "purely_transcendental_degree_1",
+    "L": "E^D12",
+    "L_over_K0_degree": 55,
+    "L_is_field": true
+  },
+  "center_avoidance": {
+    "center_has_K0_point": false,
+    "center_divisor_degree": 3,
+    "hypothetical_orbit_intersection_cycle_degree": 55,
+    "bezout_coefficients": {
+      "degree_3": 37,
+      "degree_55": -2,
+      "result": 1
+    },
+    "all_orbit_lines_disjoint_from_center_plane": true
+  },
+  "multisection": {
+    "normalization": "P1_L",
+    "geometric_components": 55,
+    "component_map_to_base_degree": 1,
+    "degree_over_K0_base": 55,
+    "finite_etale_over_base": true,
+    "connected_over_K0": true,
+    "geometrically_connected": false,
+    "G_action_after_untwisting": "transitive_on_55_components",
+    "descent_interpretation": "K0-defined semilinear G-equivariant orbit"
+  },
+  "requested_disjunction": {
+    "section": "NOT_CLAIMED",
+    "multisection": "PROVED_DEGREE_55",
+    "result": true
+  },
+  "prohibited_inferences": [
+    "a degree-55 multisection is not a K0-rational section",
+    "pairwise disjointness of the 55 geometric lines is not asserted",
+    "no Problem E headline conclusion is asserted"
+  ]
+}
+

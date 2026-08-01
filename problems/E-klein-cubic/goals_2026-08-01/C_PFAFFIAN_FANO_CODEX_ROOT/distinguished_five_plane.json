@@ -1,0 +1,2822 @@
+{
+  "format": "c2-distinguished-five-plane-lazy-v1",
+  "field": "Q(zeta11)(P(W))^PSL_2(F_11)",
+  "hilbert90_frame": {
+    "names": [
+      "x",
+      "C",
+      "D",
+      "E",
+      "K"
+    ],
+    "degrees": [
+      1,
+      4,
+      5,
+      6,
+      7
+    ],
+    "vectors": {
+      "x": [
+        [
+          {
+            "exponents": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 1
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 1
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 1
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "coefficient": 1
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "coefficient": 1
+          }
+        ]
+      ],
+      "C": [
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              4,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              1,
+              0,
+              2
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              0,
+              2,
+              1
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 8
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              0,
+              0,
+              2
+            ],
+            "coefficient": 6
+          },
+          {
+            "exponents": [
+              3,
+              1,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 4
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              0,
+              4
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              2,
+              1,
+              0
+            ],
+            "coefficient": 8
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              0,
+              0,
+              2
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              2,
+              2,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 6
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              1,
+              2,
+              1
+            ],
+            "coefficient": 8
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              3,
+              1,
+              0
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              0,
+              1,
+              1
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              2,
+              0,
+              0
+            ],
+            "coefficient": 6
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              4,
+              0,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 1
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              3,
+              1
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              2,
+              2,
+              0
+            ],
+            "coefficient": 6
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              0,
+              4,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              0,
+              1,
+              2
+            ],
+            "coefficient": 8
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              2,
+              0,
+              1
+            ],
+            "coefficient": 4
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              2,
+              2
+            ],
+            "coefficient": 6
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              2,
+              1,
+              1
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              4,
+              0,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              0,
+              0,
+              3
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              0,
+              2,
+              0
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              0,
+              0,
+              1
+            ],
+            "coefficient": 8
+          }
+        ]
+      ],
+      "D": [
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              2,
+              0,
+              3
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              0,
+              3,
+              1
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              1,
+              1,
+              0
+            ],
+            "coefficient": 5
+          },
+          {
+            "exponents": [
+              0,
+              5,
+              0,
+              0,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              0,
+              1,
+              2
+            ],
+            "coefficient": 10
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              1,
+              2,
+              0
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              2,
+              2,
+              0,
+              1,
+              0
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": 5
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              3,
+              1,
+              1
+            ],
+            "coefficient": 5
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              0,
+              1,
+              2
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              2,
+              0,
+              1
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              1,
+              0,
+              3
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              1,
+              2,
+              0
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              1,
+              3,
+              0,
+              1,
+              0
+            ],
+            "coefficient": 5
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              1,
+              0,
+              1
+            ],
+            "coefficient": 10
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              0,
+              2,
+              0
+            ],
+            "coefficient": -5
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              1,
+              1,
+              2
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              3,
+              0,
+              1
+            ],
+            "coefficient": 5
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              0,
+              0,
+              2
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              0,
+              3,
+              1
+            ],
+            "coefficient": 5
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              2,
+              2,
+              0
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              1,
+              1,
+              0
+            ],
+            "coefficient": 10
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              2,
+              0,
+              1
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              3,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": -5
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              0,
+              2,
+              2
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              2,
+              1,
+              1
+            ],
+            "coefficient": 10
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              1,
+              0,
+              1
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              1,
+              3,
+              0
+            ],
+            "coefficient": 5
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              0,
+              0,
+              3
+            ],
+            "coefficient": 5
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              0,
+              2,
+              0
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              1,
+              1,
+              1
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            "coefficient": -5
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              1,
+              0,
+              1,
+              3
+            ],
+            "coefficient": 5
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              2,
+              0,
+              2
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              0,
+              3,
+              0
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              1,
+              2,
+              1
+            ],
+            "coefficient": 10
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              3,
+              1,
+              0
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              0,
+              1,
+              1
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              1,
+              0,
+              2
+            ],
+            "coefficient": -5
+          },
+          {
+            "exponents": [
+              3,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 5
+          },
+          {
+            "exponents": [
+              5,
+              0,
+              0,
+              0,
+              0
+            ],
+            "coefficient": -1
+          }
+        ]
+      ],
+      "E": [
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              1,
+              3,
+              2
+            ],
+            "coefficient": -2
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              3,
+              2,
+              1
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              0,
+              0,
+              5
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              0,
+              2,
+              2
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              2,
+              1,
+              1
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              4,
+              0,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              4,
+              1,
+              0,
+              1
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              1,
+              3,
+              0
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              0,
+              0,
+              3
+            ],
+            "coefficient": 2
+          },
+          {
+            "exponents": [
+              1,
+              3,
+              0,
+              2,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              3,
+              0,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              2,
+              3,
+              0,
+              0,
+              1
+            ],
+            "coefficient": -3
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              0,
+              3,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              4,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              2,
+              4,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              1,
+              1,
+              3
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              3,
+              0,
+              2
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              1,
+              3,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              0,
+              0,
+              3
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              0,
+              3,
+              2
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              2,
+              2,
+              1
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              4,
+              1,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              3,
+              0,
+              0
+            ],
+            "coefficient": -3
+          },
+          {
+            "exponents": [
+              1,
+              4,
+              0,
+              0,
+              1
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              0,
+              1,
+              3
+            ],
+            "coefficient": -2
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              2,
+              0,
+              2
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              3,
+              1,
+              2,
+              0,
+              0
+            ],
+            "coefficient": 2
+          },
+          {
+            "exponents": [
+              5,
+              0,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 1
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              2,
+              4
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              2,
+              1,
+              3
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              0,
+              4,
+              1
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "coefficient": -3
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              1,
+              2,
+              0
+            ],
+            "coefficient": 2
+          },
+          {
+            "exponents": [
+              0,
+              5,
+              0,
+              1,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              0,
+              2,
+              2
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              4,
+              0,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              1,
+              3,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              0,
+              0,
+              3
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              2,
+              2,
+              0,
+              2,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              1,
+              1,
+              1
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              3,
+              0,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              3,
+              2,
+              0,
+              0,
+              1
+            ],
+            "coefficient": -2
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              1,
+              2,
+              3
+            ],
+            "coefficient": -3
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              3,
+              1,
+              2
+            ],
+            "coefficient": 2
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              5,
+              0,
+              1
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              1,
+              4,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              0,
+              1,
+              3
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              2,
+              0,
+              2
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              0,
+              3,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              1,
+              0,
+              4
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              1,
+              3,
+              0,
+              1,
+              1
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              1,
+              3,
+              2,
+              0,
+              0
+            ],
+            "coefficient": -2
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              1,
+              0,
+              2
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              0,
+              2,
+              1
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              3,
+              2,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              4,
+              0,
+              0,
+              0,
+              2
+            ],
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              1,
+              1,
+              4
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              3,
+              0,
+              3
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              3,
+              2,
+              0
+            ],
+            "coefficient": -2
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              2,
+              1,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              0,
+              5,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              3,
+              0,
+              1
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              1,
+              3,
+              0,
+              0,
+              2
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              0,
+              3,
+              1
+            ],
+            "coefficient": 2
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              2,
+              2,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              2,
+              2,
+              1,
+              1,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              2,
+              4,
+              0,
+              0,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              0,
+              1,
+              2
+            ],
+            "coefficient": -3
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              2,
+              0,
+              1
+            ],
+            "coefficient": 1
+          },
+          {
+            "exponents": [
+              4,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": -1
+          }
+        ]
+      ],
+      "K": [
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              1,
+              0,
+              6
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              2,
+              5,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              1,
+              2,
+              3
+            ],
+            "coefficient": -4
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              5,
+              0,
+              1
+            ],
+            "coefficient": -2
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              1,
+              4,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              0,
+              1,
+              3
+            ],
+            "coefficient": -4
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              2,
+              0,
+              2
+            ],
+            "coefficient": 2
+          },
+          {
+            "exponents": [
+              0,
+              4,
+              0,
+              3,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              4,
+              2,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              1,
+              0,
+              4
+            ],
+            "coefficient": -16
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              1,
+              2,
+              1
+            ],
+            "coefficient": 28
+          },
+          {
+            "exponents": [
+              1,
+              4,
+              0,
+              1,
+              1
+            ],
+            "coefficient": -18
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              0,
+              2,
+              3
+            ],
+            "coefficient": -6
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              2,
+              1,
+              2
+            ],
+            "coefficient": 22
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              4,
+              0,
+              1
+            ],
+            "coefficient": -11
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              0,
+              4,
+              0
+            ],
+            "coefficient": -10
+          },
+          {
+            "exponents": [
+              2,
+              2,
+              1,
+              0,
+              2
+            ],
+            "coefficient": 16
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              0,
+              0,
+              4
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              3,
+              1,
+              0,
+              2,
+              1
+            ],
+            "coefficient": 20
+          },
+          {
+            "exponents": [
+              3,
+              1,
+              2,
+              1,
+              0
+            ],
+            "coefficient": 12
+          },
+          {
+            "exponents": [
+              3,
+              3,
+              1,
+              0,
+              0
+            ],
+            "coefficient": -8
+          },
+          {
+            "exponents": [
+              4,
+              1,
+              0,
+              0,
+              2
+            ],
+            "coefficient": -9
+          },
+          {
+            "exponents": [
+              5,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": -12
+          },
+          {
+            "exponents": [
+              5,
+              2,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 4
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              2,
+              5
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              2,
+              1,
+              4
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              4,
+              0,
+              3
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              0,
+              4,
+              2
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              1,
+              0,
+              4
+            ],
+            "coefficient": -10
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              1,
+              2,
+              1
+            ],
+            "coefficient": 12
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              3,
+              1,
+              0
+            ],
+            "coefficient": -8
+          },
+          {
+            "exponents": [
+              0,
+              5,
+              0,
+              1,
+              1
+            ],
+            "coefficient": -12
+          },
+          {
+            "exponents": [
+              0,
+              5,
+              2,
+              0,
+              0
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              1,
+              5,
+              0
+            ],
+            "coefficient": -2
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              2,
+              1,
+              2
+            ],
+            "coefficient": 28
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              4,
+              0,
+              1
+            ],
+            "coefficient": -18
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              0,
+              4,
+              0
+            ],
+            "coefficient": -11
+          },
+          {
+            "exponents": [
+              1,
+              3,
+              1,
+              0,
+              2
+            ],
+            "coefficient": 20
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              3,
+              2,
+              0
+            ],
+            "coefficient": 2
+          },
+          {
+            "exponents": [
+              2,
+              2,
+              0,
+              2,
+              1
+            ],
+            "coefficient": 22
+          },
+          {
+            "exponents": [
+              2,
+              2,
+              2,
+              1,
+              0
+            ],
+            "coefficient": 16
+          },
+          {
+            "exponents": [
+              2,
+              4,
+              1,
+              0,
+              0
+            ],
+            "coefficient": -9
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              1,
+              1,
+              2
+            ],
+            "coefficient": -4
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              3,
+              0,
+              1
+            ],
+            "coefficient": -4
+          },
+          {
+            "exponents": [
+              3,
+              2,
+              0,
+              0,
+              2
+            ],
+            "coefficient": -6
+          },
+          {
+            "exponents": [
+              4,
+              1,
+              1,
+              1,
+              0
+            ],
+            "coefficient": -16
+          },
+          {
+            "exponents": [
+              4,
+              3,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              6,
+              0,
+              0,
+              1,
+              0
+            ],
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              3,
+              3,
+              1
+            ],
+            "coefficient": -8
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              5,
+              2,
+              0
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              0,
+              1,
+              5
+            ],
+            "coefficient": -2
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              2,
+              0,
+              4
+            ],
+            "coefficient": -11
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              0,
+              3,
+              2
+            ],
+            "coefficient": 2
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              2,
+              2,
+              1
+            ],
+            "coefficient": 16
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              4,
+              1,
+              0
+            ],
+            "coefficient": -9
+          },
+          {
+            "exponents": [
+              0,
+              4,
+              1,
+              1,
+              1
+            ],
+            "coefficient": -16
+          },
+          {
+            "exponents": [
+              0,
+              4,
+              3,
+              0,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              0,
+              6,
+              0,
+              0,
+              1
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              3,
+              1,
+              2
+            ],
+            "coefficient": 12
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              5,
+              0,
+              1
+            ],
+            "coefficient": -12
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              1,
+              4,
+              0
+            ],
+            "coefficient": -18
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              2,
+              0,
+              2
+            ],
+            "coefficient": 22
+          },
+          {
+            "exponents": [
+              1,
+              3,
+              0,
+              3,
+              0
+            ],
+            "coefficient": -4
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              1,
+              0,
+              4
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              1,
+              2,
+              1
+            ],
+            "coefficient": 28
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              3,
+              1,
+              0
+            ],
+            "coefficient": 20
+          },
+          {
+            "exponents": [
+              2,
+              3,
+              0,
+              1,
+              1
+            ],
+            "coefficient": -4
+          },
+          {
+            "exponents": [
+              2,
+              3,
+              2,
+              0,
+              0
+            ],
+            "coefficient": -6
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              0,
+              4,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              4,
+              0,
+              0,
+              2,
+              1
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              4,
+              0,
+              2,
+              1,
+              0
+            ],
+            "coefficient": -10
+          },
+          {
+            "exponents": [
+              5,
+              0,
+              0,
+              0,
+              2
+            ],
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              5,
+              2
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              2,
+              4,
+              1
+            ],
+            "coefficient": -9
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              4,
+              3,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              1,
+              1,
+              4
+            ],
+            "coefficient": -18
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              3,
+              0,
+              3
+            ],
+            "coefficient": -4
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              1,
+              3,
+              1
+            ],
+            "coefficient": 20
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              3,
+              2,
+              0
+            ],
+            "coefficient": -6
+          },
+          {
+            "exponents": [
+              0,
+              3,
+              0,
+              0,
+              4
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              4,
+              0,
+              2,
+              1
+            ],
+            "coefficient": -10
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              0,
+              3,
+              3
+            ],
+            "coefficient": -8
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              2,
+              2,
+              2
+            ],
+            "coefficient": 16
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              4,
+              1,
+              1
+            ],
+            "coefficient": -16
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              6,
+              0,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              0,
+              5,
+              0
+            ],
+            "coefficient": -12
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              1,
+              1,
+              2
+            ],
+            "coefficient": 28
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              3,
+              0,
+              1
+            ],
+            "coefficient": -4
+          },
+          {
+            "exponents": [
+              1,
+              4,
+              0,
+              0,
+              2
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              2,
+              0,
+              3
+            ],
+            "coefficient": 2
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              0,
+              3,
+              1
+            ],
+            "coefficient": 12
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              2,
+              2,
+              0
+            ],
+            "coefficient": 22
+          },
+          {
+            "exponents": [
+              2,
+              5,
+              0,
+              0,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              4,
+              0,
+              1,
+              2,
+              0
+            ],
+            "coefficient": -11
+          },
+          {
+            "exponents": [
+              4,
+              2,
+              0,
+              1,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              5,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": -2
+          }
+        ],
+        [
+          {
+            "exponents": [
+              0,
+              0,
+              0,
+              4,
+              3
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              0,
+              0,
+              2,
+              3,
+              2
+            ],
+            "coefficient": -6
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              0,
+              6,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              1,
+              1,
+              0,
+              5
+            ],
+            "coefficient": -12
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              1,
+              2,
+              2
+            ],
+            "coefficient": 22
+          },
+          {
+            "exponents": [
+              0,
+              2,
+              5,
+              0,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              0,
+              4,
+              0,
+              1,
+              2
+            ],
+            "coefficient": -11
+          },
+          {
+            "exponents": [
+              0,
+              4,
+              2,
+              0,
+              1
+            ],
+            "coefficient": 3
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              0,
+              2,
+              4
+            ],
+            "coefficient": -9
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              2,
+              1,
+              3
+            ],
+            "coefficient": 20
+          },
+          {
+            "exponents": [
+              1,
+              0,
+              4,
+              0,
+              2
+            ],
+            "coefficient": -10
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              0,
+              4,
+              1
+            ],
+            "coefficient": -16
+          },
+          {
+            "exponents": [
+              1,
+              1,
+              2,
+              3,
+              0
+            ],
+            "coefficient": -4
+          },
+          {
+            "exponents": [
+              1,
+              2,
+              1,
+              0,
+              3
+            ],
+            "coefficient": 12
+          },
+          {
+            "exponents": [
+              1,
+              5,
+              0,
+              1,
+              0
+            ],
+            "coefficient": -2
+          },
+          {
+            "exponents": [
+              2,
+              0,
+              0,
+              0,
+              5
+            ],
+            "coefficient": 4
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              0,
+              2,
+              2
+            ],
+            "coefficient": 16
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              2,
+              1,
+              1
+            ],
+            "coefficient": 28
+          },
+          {
+            "exponents": [
+              2,
+              1,
+              4,
+              0,
+              0
+            ],
+            "coefficient": -1
+          },
+          {
+            "exponents": [
+              3,
+              0,
+              1,
+              3,
+              0
+            ],
+            "coefficient": -4
+          },
+          {
+            "exponents": [
+              3,
+              1,
+              0,
+              0,
+              3
+            ],
+            "coefficient": -8
+          },
+          {
+            "exponents": [
+              3,
+              2,
+              0,
+              2,
+              0
+            ],
+            "coefficient": 2
+          },
+          {
+            "exponents": [
+              4,
+              0,
+              1,
+              1,
+              1
+            ],
+            "coefficient": -18
+          },
+          {
+            "exponents": [
+              4,
+              0,
+              3,
+              0,
+              0
+            ],
+            "coefficient": -1
+          }
+        ]
+      ]
+    },
+    "generic_basis_witness": [
+      -2,
+      -2,
+      -2,
+      -2,
+      -1
+    ],
+    "generic_basis_determinant": -295136920
+  },
+  "alternating_forms": {
+    "semantics": "B_j(x)=Q(V_j(x)), with Q the exact aligned linear Pfaffian map",
+    "distinguished_section": "span_K{B_x,B_C,B_D,B_E,B_K}"
+  },
+  "symmetric_elements": {
+    "semantics": "S_j(x)=Q(x)^-1*Q(V_j(x))",
+    "compressed_coordinates": "R^-1*vec(S_j), using compressed_algebra.json",
+    "fixedness_identity": "for alternating B_j and Q, sigma(Q^-1 B_j)=Q^-1 (Q^-1 B_j)^t Q=Q^-1 B_j",
+    "dimension": 5
+  },
+  "exact_witness": {
+    "point": [
+      -2,
+      -2,
+      -2,
+      -2,
+      -1
+    ],
+    "frame_determinant": -295136920,
+    "Q_invertible": true,
+    "symmetric_span_rank": 5
+  },
+  "source_hashes": {
+    "involution.json": "e8001963a8361f97e63deb7b8a92f2c9608765b09be9bb631aaa9c4eb5bae077",
+    "alignment_core.py": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4",
+    "phi_coefficients.py": "8c217aeaefe300a76e886f0a94803b5812689574299e1a2c72daeec72efd4525",
+    "exact_covariants_check.py": "89847a3203bf7d842b00a551a29377bc9d1cdd36dca9cb5d192c54de0abd2a6e"
+  },
+  "theorem_boundary": {
+    "proved": "exact lazy K_proj basis of the specific descended five-plane as five sigma-symmetric algebra elements",
+    "not_proved": "an explicit self-adjoint projector, quaternion corner, 3x3 Hermitian coordinates, common isotropic line, or Fano point"
+  }
+}

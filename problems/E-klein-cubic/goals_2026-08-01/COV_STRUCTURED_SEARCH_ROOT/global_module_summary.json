@@ -1,0 +1,67 @@
+{
+  "field": "Q(zeta_11)",
+  "integral_model": "Z[zeta_11,1/660]",
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "schema": "COV_SELECTED_GLOBAL_MODULES_V1",
+  "scope": "all selected m>=3 normal-cone residual families; no m=1 exclusion",
+  "selected_pairs": [
+    {
+      "characteristic_zero_global_module_dimension": 0,
+      "degree": 25,
+      "holdout_89_filtration": [
+        59,
+        3,
+        0
+      ],
+      "landing_equations_after_linear_elimination": 0,
+      "plane_order": 3,
+      "primitive_quotient_dimension": 0,
+      "residual_degree": 7,
+      "split_67_filtration": [
+        59,
+        3,
+        0
+      ],
+      "stacked_holdout_rank": 189
+    },
+    {
+      "characteristic_zero_global_module_dimension": 0,
+      "degree": 31,
+      "holdout_89_filtration": [
+        198,
+        43,
+        0
+      ],
+      "landing_equations_after_linear_elimination": 0,
+      "plane_order": 5,
+      "primitive_quotient_dimension": 0,
+      "residual_degree": 1,
+      "split_67_filtration": [
+        198,
+        43,
+        0
+      ],
+      "stacked_holdout_rank": 410
+    },
+    {
+      "characteristic_zero_global_module_dimension": 0,
+      "degree": 35,
+      "holdout_89_filtration": [
+        361,
+        128,
+        0
+      ],
+      "landing_equations_after_linear_elimination": 0,
+      "plane_order": 5,
+      "primitive_quotient_dimension": 0,
+      "residual_degree": 5,
+      "split_67_filtration": [
+        361,
+        128,
+        0
+      ],
+      "stacked_holdout_rank": 637
+    }
+  ],
+  "theorem": "for (d,m,e)=(25,3,7),(31,5,1),(35,5,5), the exact characteristic-zero global coefficient module is zero"
+}

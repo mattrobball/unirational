@@ -1,0 +1,51 @@
+80 A. BEAUVILLE
+
+6. ca is of degree one
+
+We now turn back to our moduli space M and the map cz : M + J?(X). We
+keep our general line £¢ X.
+
+Lemma 6.1. Let [E] € M. The subspace of sections in H°(X,E(1)) which
+vanish along € has dimension 2.
+
+PROOF. We use the exact sequence (2.2):
+0 > Op.(-1)® — O84 — E(1) 30.
+
+Restricting to £ we get an exact sequence O,(—1)® —+ OF *+ E(1)p + 0. The
+kernel K of p is a rank 4 vector bundle on ¢, of determinant O,(—2), with a
+surjective map O,(—1)® —» K; this implies H1(é, K) = 0, hence dim H°(é, K) = 2
+by Riemann-Roch; but H°(¢,K) can be identified with the kernel of the restriction
+map H°(X, E(1)) + H°(¢, E(1)je). is)
+
+Proposition 6.2. ¢2 induces an isomorphism of M onto an open subset of
+P(X).
+We will describe precisely this open subset later (Cor. 7.4).
+
+Proor. Recall that the variety Q of elliptic quintics in X admits a fibration
+p: QM, such that the fibre of p at [E] € M is identified with P(H°(X, E(1))).
+Let Q) be the subvariety of Q parametrizing elliptic quintics containing ¢; by the
+lemma the restriction of p to Q} is a sub-P1-bundle of Q + M. A curve in Q% is
+the union of ¢ and a quartic curve, so we can view Q' as a variety parametrizing
+quartic curves in X, containing Qe; the Abel-Jacobi map Q > J?(X) induces on
+Y., up to a constant, the Abel-Jacobi map for this family of quartics. Since Q,
+is smooth and 6-dimensional (3.3), an easy count of constants shows that Q% is
+contained in Qy. In the diagram
+
+m
+
+Pp
+Q—- m2 (x)
+
+we know that cp is étale (3.3) and that the fibres of a are connected (5.4), so ¢2 has
+degree one, hence is an open embedding. Qo
+
+7. The boundary of M
+
+7.1. To complete the description of the moduli space M, we must describe
+the sheaves in M which are not locally free. Let us first describe examples of such
+sheaves (the systematic reference for this section is [D]):
+
+a) Let c be a smooth conic in X, L the positive generator of Pic(c) (so that
+Ox(1)jc = L®). Let E be the kernel of the canonical map
+Hc,L) ®c Ox — L. Then B is a torsion free sheaf, with ¢(E) =
+3(E) = 0 and ¢2(E) = [c]. It is not difficult to check that E is stable.

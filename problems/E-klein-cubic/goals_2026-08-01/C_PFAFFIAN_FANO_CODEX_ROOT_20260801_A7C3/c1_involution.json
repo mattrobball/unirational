@@ -1,0 +1,104 @@
+{
+  "format": "goal-c-c1-lazy-involution-v1",
+  "field": "K_proj=Q(zeta11)(P(W))^PSL_2(F_11)",
+  "universal_form": {
+    "definition": "Q(x)=J*x from the exact 15x5 Pfaffian intertwiner",
+    "covariance": "Q(g*x)=rho6(g)^(-T) Q(x) rho6(g)^(-1)",
+    "pfaffian": "Pf(Q)=lambda*(x0^2*x1+x1^2*x2+x2^2*x3+x3^2*x4+x4^2*x0), lambda!=0"
+  },
+  "rectangular_involution": {
+    "rectangle": "R=column_stack(vec(b^j*a^i), 0<=j,i<6)",
+    "formula": "Sigma_R[:,(j,i)] = R^-1*vec(Q^-1*transpose(b^j*a^i)*Q)",
+    "generic_open": "det(R)*Pf(Q)!=0",
+    "symbolic_identities": [
+      "Sigma_R^2=1 because Q^-1*(Q^-1*M^T*Q)^T*Q=M for Q^T=-Q",
+      "sigma(XY)=sigma(Y)*sigma(X) by transpose reversal",
+      "Reynolds covariance plus Q covariance makes every coordinate G-invariant"
+    ]
+  },
+  "lazy_exact_transport": {
+    "point": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "Sigma_F": "F^-1*column_stack(vec(Q^-1*F_i^T*Q))",
+    "Sigma_R": "R^-1*column_stack(vec(Q^-1*R_i^T*Q))",
+    "C": "F^-1*R",
+    "exact_identity": "Sigma_F*C=C*Sigma_R by cancellation of F and equality of the adjoint-image columns",
+    "generic_nonvanishing": "each denominator is a polynomial/rational function with a nonzero good-reduction witness below",
+    "q_exact_digest": "476d464aaf53b70cd20a6b6f3281b77da5dd01b6e0e66a46901affd70a632649",
+    "a_exact_digest": "6c34a122b8f0312a492399b293b47aa2aa82c3224a358cedfe066cede13c4333",
+    "b_exact_digest": "32865fa57c2b922d88c682fe7bf68ca201daf52ce6d3c5430b21807f7865372d",
+    "exact_direct_sigma_squared_checks": 5,
+    "exact_direct_anti_multiplicativity_checks": 3
+  },
+  "independent_good_reductions": [
+    {
+      "prime": 23,
+      "zeta11": 2,
+      "point": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "original_frame_determinant": 6,
+      "rectangle_determinant": 5,
+      "q_determinant": 16,
+      "sigma_original_sha256": "b0d6b947c522c1010f810849b86ff069511299f0ab719655dc3609a08583a74f",
+      "sigma_rectangle_sha256": "52343bfb46e52cff19d082fc4d7e95ade3c298c32eeea888ee86b39e95324141",
+      "change_of_basis_intertwining": true,
+      "anti_multiplicativity_basis_pairs": 1296,
+      "plus_dimension": 15,
+      "minus_dimension": 21
+    },
+    {
+      "prime": 331,
+      "zeta11": 74,
+      "point": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "original_frame_determinant": 146,
+      "rectangle_determinant": 89,
+      "q_determinant": 79,
+      "sigma_original_sha256": "0da37b4e94f026bff9b2d915cd3cf03c8b216798bb46d6e3320681892ddd11dc",
+      "sigma_rectangle_sha256": "ff963ab1ce9fddb91c0a76436dc8f59030e1e48e3080d51a597fb1022eaf36ac",
+      "change_of_basis_intertwining": true,
+      "anti_multiplicativity_basis_pairs": 1296,
+      "plus_dimension": 15,
+      "minus_dimension": 21
+    },
+    {
+      "prime": 463,
+      "zeta11": 15,
+      "point": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "original_frame_determinant": 79,
+      "rectangle_determinant": 228,
+      "q_determinant": 185,
+      "sigma_original_sha256": "c9c94f20bc427428c9e17fc642690454cd0fc316edd29806d649ab469b677e71",
+      "sigma_rectangle_sha256": "c9f3a1c87a449a7d691db3e07b01200f44886cf16ce136810b7ce04b8bf58d77",
+      "change_of_basis_intertwining": true,
+      "anti_multiplicativity_basis_pairs": 1296,
+      "plus_dimension": 15,
+      "minus_dimension": 21
+    }
+  ],
+  "theorem_boundary": {
+    "proved": "exact lazy transport of the specific symplectic involution to the C3 rectangle, with original-frame compatibility",
+    "not_proved": "a self-adjoint rank-two idempotent, quaternion corner, five Hermitian matrices, common line, or headline"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "format": "goal-c-compressed-algebra-progress-v1",
+  "status": "C0-PARTIAL",
+  "field": "Q(zeta11)(t3,t6,t8,t11) tensor_P0 K_proj",
+  "generators": {
+    "a": "(f11/f14) * Reynolds(x5^3 E_00)",
+    "b": "(f11/f14) * Reynolds(x5^3 E_01)"
+  },
+  "exact_packet": "c0_minpoly_exact.json",
+  "exact_blocks": {
+    "m_a": "all six coefficients",
+    "m_b": "all six coefficients",
+    "b6_coefficients_in_E": "(-b_c6,-b_c5,-b_c4,-b_c3,-b_c2,-b_c1), all scalar in E",
+    "b6_structural_zero_count": 31
+  },
+  "remaining_block": {
+    "name": "L_a in Mat_6(E)",
+    "exact_oracle": "reshape(R^-1 vec(a*b^j)), R columns vec(b^j*a^i)",
+    "named_basis_materialization": false,
+    "modular_rational_total_degree_floor": 8,
+    "floor_prime": 353,
+    "floor_entry": [0, 1, 0],
+    "floor_samples": 5000
+  },
+  "headline": "OPEN",
+  "scope_warning": "No involution, Morita corner, five Hermitian matrices, or common line is claimed by this file."
+}

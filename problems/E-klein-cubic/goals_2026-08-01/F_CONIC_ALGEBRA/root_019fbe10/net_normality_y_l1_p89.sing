@@ -1,0 +1,9 @@
+ring R=(89,r),(X,w,l0,l2),dp;
+option(redSB);
+ideal I=X^3*l0 + X*l0*r^2*w^2 - 10*X*l0*r^2*w - 35*X*l0*r^2 - 7*X*l0*w^2 + 16*X*l0*w - 14*X*l0 + 23*X*w^2 - 23*X*w + 28*X + 10*l0*r^2*w^3 + 30*l0*r^2*w^2 + 4*l0*r^2*w - 14*l0*r^2 + 17*l0*w^3 - 32*l0*w^2 + 22*l0*w + 30*l0 + 28*l2*w^3 - 27*l2*w^2 + 6*l2*w - 22*l2 - 41*r*w^3 - 27*r*w^2 - 9*r*w - 17*r + 15*w^3 + 11*w^2 - 25*w + 19,3*X^2*l0 + l0*r^2*w^2 - 10*l0*r^2*w - 35*l0*r^2 - 7*l0*w^2 + 16*l0*w - 14*l0 + 23*w^2 - 23*w + 28,2*X*l0*r^2*w - 10*X*l0*r^2 - 14*X*l0*w + 16*X*l0 + 46*X*w - 23*X + 30*l0*r^2*w^2 + 60*l0*r^2*w + 4*l0*r^2 + 51*l0*w^2 - 64*l0*w + 22*l0 + 84*l2*w^2 - 54*l2*w + 6*l2 - 123*r*w^2 - 54*r*w - 9*r + 45*w^2 + 22*w - 25,X^3 + X*r^2*w^2 - 10*X*r^2*w - 35*X*r^2 - 7*X*w^2 + 16*X*w - 14*X + 10*r^2*w^3 + 30*r^2*w^2 + 4*r^2*w - 14*r^2 + 17*w^3 - 32*w^2 + 22*w + 30,28*w^3 - 27*w^2 + 6*w - 22;
+ideal G=std(I);
+print("DIM="+string(dim(G)));
+poly n=reduce(1,G);
+if (n==0) { print("UNIT=1"); } else { print("UNIT=0"); }
+print("NET_NORMALITY_y_l1_P89_DONE");
+quit;

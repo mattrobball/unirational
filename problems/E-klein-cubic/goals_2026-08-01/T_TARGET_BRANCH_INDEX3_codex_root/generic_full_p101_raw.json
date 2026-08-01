@@ -1,0 +1,37 @@
+{
+  "claim_scope": "discovery/preflight only",
+  "coefficient_field": "GF(101)(A,u)",
+  "factorwise_stages": [],
+  "ideal": [
+    "P",
+    "P_u",
+    "P_A",
+    "P_B",
+    "P_Y",
+    "P_Z"
+  ],
+  "output": "generic_full_p101_raw.out",
+  "primitive_P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+  "schema": "klein-t-generic-full-fibre-probe-v1",
+  "script": "generic_full_p101_raw.sing",
+  "term_counts": {
+    "Bgate": 1,
+    "Cgate": 2630,
+    "F27": 6288,
+    "P": 1593,
+    "PA": 1206,
+    "PB": 942,
+    "PY": 996,
+    "PZ": 862,
+    "Pu": 1213,
+    "Puu": 881,
+    "Q4": 21,
+    "delta": 10507,
+    "ell": 31
+  },
+  "variables": [
+    "B",
+    "Y",
+    "Z"
+  ]
+}

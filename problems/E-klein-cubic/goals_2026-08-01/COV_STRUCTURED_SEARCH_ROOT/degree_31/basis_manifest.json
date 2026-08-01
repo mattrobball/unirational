@@ -1,0 +1,21 @@
+{
+  "basis_dimension": 410,
+  "basis_element_formula": "R_(j,alpha)(x)=(1/660) sum_(g in G) (g x)^alpha g^(-1)e_j",
+  "basis_proof": "each circuit is exactly G-equivariant by Reynolds averaging; the p=89 evaluation rank equals the seed count; reduction independence implies characteristic-zero independence; the independent Molien count equals that count",
+  "degree": 31,
+  "field": "Q(zeta_11)",
+  "independent_holdout_basis_rank": {
+    "prime": 89,
+    "rank": 410,
+    "zeta11": 78
+  },
+  "molien_dimension": 410,
+  "normalization_note": "the factor 1/660 may be omitted without changing spans",
+  "schema": "COV_EXACT_REYNOLDS_BASIS_V1",
+  "seed_payload": "covariant_basis_seeds.json",
+  "seed_payload_sha256": "227b721371734612dfd3df2bbf778812e7b9c5cb581388848e5a747fe03dcbe8",
+  "split_discovery_basis_rank": {
+    "prime": 67,
+    "rank": 410
+  }
+}

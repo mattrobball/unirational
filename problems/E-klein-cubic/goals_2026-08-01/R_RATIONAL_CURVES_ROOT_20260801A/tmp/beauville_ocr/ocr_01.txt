@@ -1,0 +1,50 @@
+Contemporary Mathematics
+Volume 312, 2002
+
+Vector bundles on the cubic threefold
+
+Arnaud Beauville
+
+To Herb
+
+1. Introduction
+
+Let X be a smooth cubic hypersurface in P*. In their seminal paper [C-G],
+Clemens and Griffiths showed that the intermediate Jacobian J(X), an abelian
+variety defined analytically through Hodge theory, is a fundamental tool to under-
+stand the geometry of X. They studied the Fano surface F of lines contained in
+X, proving that the Abel-Jacobi map embeds F into J(X) and induces an isomor-
+phism Alb(F’) + J(X). They were able to deduce from this the Torelli theorem
+and the non-rationality of X (a problem which had resisted the efforts of the Italian
+geometers)!.
+
+Mumford noticed that one can express J(X) as a Prym variety and thus give an
+alternate proof for the non-rationality of X ({C-G], Appendix C); the other results
+of [C-G] can also be obtained via this approach [B2]. Later Clemens observed
+that one could use the twisted cubics as well, giving an elegant parametrization
+of the theta divisor (see (5.2) below). At this point the cubic threefold could be
+considered as well understood, and the emphasis shifted to other Fano threefolds.
+
+On the other hand vector bundles on low-dimensional varieties attracted much
+attention in the last two decades, notably because of their relation with mathe-
+matical physics. Since rank 2 vector bundles are well-known to be connected to
+codimension 2 cycles, it seems obvious to try to relate them to the intermediate
+Jacobian. Surprisingly this was done only recently: to my knowledge the first at-
+tempt appears in [M-T], followed by [I-M] and [D]. I would like to explain these
+results in this paper and to give some applications.
+
+We will look at the simplest possible case, namely stable rank 2 vector bundles
+on X with trivial determinant. Using the isomorphism deg : H*(X,Z) “> Z we
+consider the second Chern class cz as a number, which is easily seen to be > 2 (see
+e.g. [B-M]). This leads us to consider the moduli space M of stable rank 2 vector
+bundles on X with c) = 0, cg = 2. It is a quasi-projective variety; according to
+Maruyama [Mal] it admits a natural compactification M consisting of classes of
+semi-stable sheaves with c; = 0, cp = 2, cz = 0. The main result is:
+
+Theorem 1.1. The moduli space M is isomorphic to the intermediate Jacobian
+of X blown up along the Fano surface.
+
+lExcept the last one, these results had been obtained independently by Tyurin [T1].
+
+© 2002 American Mathematical Society
+71

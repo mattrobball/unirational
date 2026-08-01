@@ -1,0 +1,40 @@
+{
+  "format": "klein-a5-degree4-function-field-v1",
+  "records": [
+    {
+      "extension_input": "degree4_class1_factor_f89cubic.sing",
+      "extension_input_sha256": "f0394bd5b37a905293ccb46333264183c5a2da04360faf71a199caf5caf5ca61",
+      "extension_transcript": "degree4_class1_factor_f89cubic.txt",
+      "extension_transcript_sha256": "f8d8575b62d41a04477dbd93d231059b5528de0509971682ca97046be24b66cf",
+      "f89_cubic_extension_factor_count": 1,
+      "geometrically_irreducible": true,
+      "irreducible_factor_count": 1,
+      "label": "A5_class_1",
+      "prime": 89,
+      "singular_input": "degree4_class1_factor.sing",
+      "singular_input_sha256": "e38688eb7f507e6d24e1026f8a52059e93980eb895e0c84dd03f169e6ff09b87",
+      "singular_transcript": "degree4_class1_factor.txt",
+      "singular_transcript_sha256": "f8d8575b62d41a04477dbd93d231059b5528de0509971682ca97046be24b66cf",
+      "t_degree": 3,
+      "total_terms": 332
+    },
+    {
+      "extension_input": "degree4_class2_factor_f89cubic.sing",
+      "extension_input_sha256": "1a225ef74bd20f98cbaa4bdbf1ddeb2170f302b8b6dd3d4653e87efe1fc97d6c",
+      "extension_transcript": "degree4_class2_factor_f89cubic.txt",
+      "extension_transcript_sha256": "b3112e0173cbe9311cf17b9ee262cb3f3f4d05803e54b89ba8ac386b89777334",
+      "f89_cubic_extension_factor_count": 1,
+      "geometrically_irreducible": true,
+      "irreducible_factor_count": 1,
+      "label": "A5_class_2",
+      "prime": 89,
+      "singular_input": "degree4_class2_factor.sing",
+      "singular_input_sha256": "e93109f17dd7b51adbc44736db34a2aba6202d35aa3dea074c5d57d8f42e2782",
+      "singular_transcript": "degree4_class2_factor.txt",
+      "singular_transcript_sha256": "b3112e0173cbe9311cf17b9ee262cb3f3f4d05803e54b89ba8ac386b89777334",
+      "t_degree": 3,
+      "total_terms": 324
+    }
+  ],
+  "scope": "the complete two-dimensional degree-four covariant frame; a base-field irreducible t-cubic can only acquire a t-linear factor in the cubic constant extension, where it remains irreducible"
+}

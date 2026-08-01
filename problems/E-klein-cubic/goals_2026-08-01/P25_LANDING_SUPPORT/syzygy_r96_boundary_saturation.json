@@ -1,0 +1,13 @@
+{
+  "contracted": "syzygy_r96_q0_contracted.npz",
+  "contracted_sha256": "7bfa9b41cabbb2446041ac0fb561b4fa6b35b5a7c00f7e843598de543878c979",
+  "criterion": "A saturated unit ideal is an exact global emptiness certificate for this stratum. Timeout, crash, or a nonunit result is not emptiness.",
+  "prime": 89,
+  "result": "syzygy_r96_boundary_saturation_result.json",
+  "rows": 96,
+  "saturation": "qideal*bideal",
+  "script": "syzygy_r96_boundary_saturate.m2",
+  "script_bytes": 81826598,
+  "script_sha256": "0ce4ab20a517c1cada99508a9cc96db432c8ac2b2324decc52a8b25274cd48a2",
+  "stratum": "boundary"
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "q-schur-residue-theorem-search-v1",
+  "status": "NO_APPLICABLE_POINT_THEOREM_FOUND_NONTERMINAL",
+  "cubic": {
+    "degree": 3,
+    "ambient_projective_dimension": 4,
+    "variables": 5,
+    "dimension": 3
+  },
+  "rsc_bounds": {
+    "published": {
+      "left": 9,
+      "right": 4,
+      "holds": false
+    },
+    "advertised_variant": {
+      "left": 9,
+      "right": 5,
+      "holds": false
+    },
+    "surface_theorem_missing_hypotheses": [
+      "rationally simply connected by chains of free lines",
+      "very twisting surface"
+    ]
+  },
+  "tsen_lang": [
+    {
+      "residue_transcendence_degree": 2,
+      "variables": 5,
+      "required_strict_lower_bound": 9,
+      "holds": false
+    },
+    {
+      "residue_transcendence_degree": 3,
+      "variables": 5,
+      "required_strict_lower_bound": 27,
+      "holds": false
+    }
+  ],
+  "index_one": {
+    "known_closed_point_degrees": [3, 55],
+    "prime_to_cubic_degree_point": 55,
+    "upgrade_to_rational_point": "Cassels-Swinnerton-Dyer conjecture, not theorem"
+  },
+  "isotrivial": {
+    "point_identity": "(T x^D X)(k) = Hom_D(T,X)",
+    "curve_base_theorem_only": true,
+    "surface_or_threefold_descent_theorem_found": false
+  },
+  "strict_nonclaims": [
+    "the Klein cubic is not proved to fail every notion of rational simple connectedness",
+    "no surviving residue twist is proved pointless",
+    "no global Schur-twist verdict follows"
+  ]
+}

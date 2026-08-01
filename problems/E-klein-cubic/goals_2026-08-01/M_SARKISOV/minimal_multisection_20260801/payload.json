@@ -1,0 +1,45 @@
+{
+  "schema": "m-sarkisov-minimal-multisection-v1",
+  "verdict": "DEGREE-3-MULTISECTION-PROVED",
+  "fibration": {
+    "base_field": "K0=C(W)^G",
+    "base": "B=P1_K0",
+    "generic_fibre": "smooth cubic surface in split P3"
+  },
+  "center": {
+    "type": "smooth plane cubic",
+    "K0_point": false,
+    "index": 3,
+    "normal_bundle": "O_C(1) plus O_C(1)"
+  },
+  "degree_3_construction": {
+    "divisor": "transverse K0-line section of C",
+    "finite_etale_degree": 3,
+    "connected": true,
+    "residue_field": "K3",
+    "exceptional_divisor": "C x B",
+    "multisection": "P1_K3",
+    "description": "integral constant-field multisection over K0",
+    "degree_over_B": 3,
+    "rational_over_constant_field": true,
+    "K0_rational": false,
+    "geometrically_integral_over_K0": false,
+    "descent_datum_stable": true,
+    "G_orbit_of_three_branches": false
+  },
+  "degree_2_audit": {
+    "effective_cycle_degree": 2,
+    "ambient_line_intersection_degree": 3,
+    "residual_degree": 1,
+    "contained_line_also_has_K_point": true,
+    "implies_rational_section": true
+  },
+  "minimum": {
+    "possible_values": [1, 3],
+    "if_section_exists": 1,
+    "if_no_section_exists": 3,
+    "degree_2_never_minimal": true,
+    "degree_55_not_minimal": true
+  },
+  "headline": "OPEN"
+}

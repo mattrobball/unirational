@@ -1,0 +1,62 @@
+{
+  "schema": "m-sarkisov-headline-method-audit-v1",
+  "verdict": "M-MULTISECTION-DESCENT-NO-GO",
+  "headline": "OPEN",
+  "fields": {
+    "E": "C(W)",
+    "K0": "E^G",
+    "H": "D12",
+    "L": "E^H",
+    "L_over_K0_degree": 55,
+    "K0_algebraically_closed_in_K0_t": true
+  },
+  "cover": {
+    "source": "P1_L",
+    "target": "P1_K0",
+    "degree": 55,
+    "rational_right_inverse": false,
+    "tautological_section_descends": false
+  },
+  "branches": {
+    "G_order": 660,
+    "H_order": 12,
+    "orbit_size": 55,
+    "G_fixed_branch": false,
+    "H_has_index_two_overgroup_in_G": false,
+    "equivariant_binary_pairing": false
+  },
+  "section_degrees": {
+    "exceptional_section": false,
+    "congruence_modulus": 3,
+    "congruence_residue": 1,
+    "degree_one_line_excluded": true,
+    "first_possible_degree": 4
+  },
+  "quartic_gate": {
+    "A_forms": 3,
+    "A_form_degree": 4,
+    "A_coefficients_each": 5,
+    "q_degree": 3,
+    "q_coefficients": 4,
+    "total_coefficients": 19,
+    "parameter_projective_dimension": 18,
+    "identity_binary_degree": 12,
+    "coefficient_equations": 13,
+    "equation_degree_in_parameters": 3,
+    "K0_point_known": false,
+    "emptiness_known": false
+  },
+  "logic": {
+    "section_implies_headline_positive": true,
+    "headline_positive_implies_section_installed": false,
+    "no_section_implies_headline_negative": false,
+    "multisection_alone_resolves_headline": false
+  },
+  "scope": {
+    "direct_branch_descent_closed": true,
+    "binary_branch_folding_closed": true,
+    "all_independent_sections_excluded": false,
+    "all_uses_of_fibration_excluded": false
+  }
+}
+

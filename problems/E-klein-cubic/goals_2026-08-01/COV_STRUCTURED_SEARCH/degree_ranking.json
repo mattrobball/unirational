@@ -1,0 +1,273 @@
+{
+  "covariant_hsop_numerator": {
+    "1": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 4,
+    "9": 2,
+    "10": 4,
+    "11": 4,
+    "12": 5,
+    "13": 4,
+    "14": 5,
+    "15": 5,
+    "16": 3,
+    "17": 4,
+    "18": 3,
+    "19": 3,
+    "20": 2,
+    "21": 2,
+    "22": 2,
+    "23": 1,
+    "24": 1,
+    "26": 1
+  },
+  "hsop_degrees": [
+    3,
+    5,
+    6,
+    8,
+    11
+  ],
+  "invariant_hsop_numerator": {
+    "0": 1,
+    "7": 1,
+    "9": 1,
+    "10": 1,
+    "12": 1,
+    "14": 2,
+    "16": 1,
+    "18": 1,
+    "19": 1,
+    "21": 1,
+    "28": 1
+  },
+  "primitive_note": "The Hironaka numerator has no new A-secondary in degrees 25,31,35 (the last occurs in degree 26). This is not a proof that every map has a common invariant factor: sums of invariant multiples need not share a factor. It is used only as a composition/module ranking datum.",
+  "ranking": [
+    31,
+    35,
+    25
+  ],
+  "ranking_reason": {
+    "25": "first unrestricted residual e>=7 representative; smallest module, but its dedicated exact support route is already unresolved after much stronger work",
+    "31": "first unresolved residual e=1 representative; smaller strict module than degree 35",
+    "35": "first unresolved residual e=5 representative; favorable new residual class despite larger module"
+  },
+  "scope_note": "Arrangement and strict dimensions are exact in both displayed good fibres. Their agreement is ranking evidence, not by itself a characteristic-zero kernel reconstruction. In contrast, zero higher normal-jet kernel in either integral good fibre does exclude a characteristic-zero order-at-least-three covariant.",
+  "selected_degrees": [
+    {
+      "agreement_primes": [
+        89,
+        199
+      ],
+      "arrangement_dimension_good_fibres": 59,
+      "combined_ansatz_char0": "empty_projective_combined_ansatz",
+      "combined_ansatz_cubic_coranks": [
+        13,
+        13
+      ],
+      "combined_ansatz_cubic_ranks": [
+        1127,
+        1127
+      ],
+      "combined_ansatz_dimension": 18,
+      "combined_ansatz_primes": [
+        199,
+        353
+      ],
+      "combined_ansatz_quartic_dual_nullities": [
+        0,
+        0
+      ],
+      "common_order2_rank_good_fibres": 16,
+      "composition_ansatz_char0": "empty_projective_ansatz",
+      "composition_ansatz_cubic_ranks": [
+        165,
+        165
+      ],
+      "composition_ansatz_dimension": 9,
+      "composition_ansatz_quartic_closure": [
+        null,
+        null
+      ],
+      "composition_ansatz_symmetric_cube": 165,
+      "cross_ansatz_char0": "empty_projective_arrangement_ansatz",
+      "cross_ansatz_cubic_ranks": [
+        165,
+        165
+      ],
+      "cross_ansatz_dimension": 9,
+      "cross_ansatz_primes": [
+        89,
+        199
+      ],
+      "degree": 25,
+      "hsop_secondary_covariants_born_in_degree": 0,
+      "landing_target_invariants_degree_3d": 2343,
+      "plane_order_at_least_3_char0": "excluded_by_integral_good_fibre_injectivity",
+      "plane_order_at_least_3_dimensions": [
+        0,
+        0
+      ],
+      "residual_classes": [
+        {
+          "plane_order_m": 1,
+          "residual_e": 19
+        },
+        {
+          "plane_order_m": 3,
+          "residual_e": 7
+        }
+      ],
+      "scalar_invariants": 43,
+      "self_covariants": 189,
+      "strict_dimension_good_fibres": 43
+    },
+    {
+      "agreement_primes": [
+        89,
+        199
+      ],
+      "arrangement_dimension_good_fibres": 198,
+      "combined_ansatz_char0": "empty_projective_combined_ansatz",
+      "combined_ansatz_cubic_coranks": [
+        24,
+        24
+      ],
+      "combined_ansatz_cubic_ranks": [
+        4036,
+        4036
+      ],
+      "combined_ansatz_dimension": 28,
+      "combined_ansatz_primes": [
+        199,
+        353
+      ],
+      "combined_ansatz_quartic_dual_nullities": [
+        0,
+        0
+      ],
+      "common_order2_rank_good_fibres": 22,
+      "composition_ansatz_char0": "empty_projective_ansatz",
+      "composition_ansatz_cubic_ranks": [
+        454,
+        454
+      ],
+      "composition_ansatz_dimension": 13,
+      "composition_ansatz_quartic_closure": [
+        1820,
+        1820
+      ],
+      "composition_ansatz_symmetric_cube": 455,
+      "cross_ansatz_char0": "empty_projective_arrangement_ansatz",
+      "cross_ansatz_cubic_ranks": [
+        680,
+        680
+      ],
+      "cross_ansatz_dimension": 15,
+      "cross_ansatz_primes": [
+        89,
+        199
+      ],
+      "degree": 31,
+      "hsop_secondary_covariants_born_in_degree": 0,
+      "landing_target_invariants_degree_3d": 5349,
+      "plane_order_at_least_3_char0": "excluded_by_integral_good_fibre_injectivity",
+      "plane_order_at_least_3_dimensions": [
+        0,
+        0
+      ],
+      "residual_classes": [
+        {
+          "plane_order_m": 1,
+          "residual_e": 25
+        },
+        {
+          "plane_order_m": 3,
+          "residual_e": 13
+        },
+        {
+          "plane_order_m": 5,
+          "residual_e": 1
+        }
+      ],
+      "scalar_invariants": 89,
+      "self_covariants": 410,
+      "strict_dimension_good_fibres": 176
+    },
+    {
+      "agreement_primes": [
+        89,
+        199
+      ],
+      "arrangement_dimension_good_fibres": 361,
+      "combined_ansatz_char0": "empty_projective_combined_ansatz",
+      "combined_ansatz_cubic_coranks": [
+        21,
+        21
+      ],
+      "combined_ansatz_cubic_ranks": [
+        5963,
+        5963
+      ],
+      "combined_ansatz_dimension": 32,
+      "combined_ansatz_primes": [
+        199,
+        353
+      ],
+      "combined_ansatz_quartic_dual_nullities": [
+        0,
+        0
+      ],
+      "common_order2_rank_good_fibres": 26,
+      "composition_ansatz_char0": "empty_projective_ansatz",
+      "composition_ansatz_cubic_ranks": [
+        968,
+        968
+      ],
+      "composition_ansatz_dimension": 17,
+      "composition_ansatz_quartic_closure": [
+        4845,
+        4845
+      ],
+      "composition_ansatz_symmetric_cube": 969,
+      "cross_ansatz_char0": "empty_projective_arrangement_ansatz",
+      "cross_ansatz_cubic_ranks": [
+        680,
+        680
+      ],
+      "cross_ansatz_dimension": 15,
+      "cross_ansatz_primes": [
+        89,
+        199
+      ],
+      "degree": 35,
+      "hsop_secondary_covariants_born_in_degree": 0,
+      "landing_target_invariants_degree_3d": 8555,
+      "plane_order_at_least_3_char0": "excluded_by_integral_good_fibre_injectivity",
+      "plane_order_at_least_3_dimensions": [
+        0,
+        0
+      ],
+      "residual_classes": [
+        {
+          "plane_order_m": 1,
+          "residual_e": 29
+        },
+        {
+          "plane_order_m": 3,
+          "residual_e": 17
+        },
+        {
+          "plane_order_m": 5,
+          "residual_e": 5
+        }
+      ],
+      "scalar_invariants": 139,
+      "self_covariants": 637,
+      "strict_dimension_good_fibres": 335
+    }
+  ]
+}

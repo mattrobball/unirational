@@ -1,0 +1,79 @@
+VECTOR BUNDLES ON THE CUBIC THREEFOLD 85
+
+fibration Ms — II; however it is conceivable that it extends to some other compact
+holomorphic symplectic manifold birationally isomorphic to Ms.
+
+b) A Lagrangian fibration is the same thing as a completely integrable system: if
+H =(H,,...,Hs5) in some local coordinates system on II, the functions H; Poisson
+commute and the Hamiltonian vector fields X 7, span the tangent space to the fibre
+at each smooth point of H. Since the fibres are open subsets of abelian varieties,
+it seems likely that these vector fields linearize on each fibre, that is, come from
+global vector fields on the abelian variety (such a system is often called algebraically
+completely integrable). To prove this it would be enough to exhibit some partial
+compactification H’ : M — II of H such that H’~1(X), for X general in II, is
+isomorphic to the complement of a subvariety of codimension > 2 in J?(X).
+
+References
+
+[B-M] E. Ballico, R.-M. Miro-Roig: Rank 2 stable vector bundles on Fano 3-folds of index 2. J.
+Pure Appl. Algebra 120 (1997), 213-220.
+
+[B1) A. Beauville: Sous-variétés spéciales des variétés de Prym. Compositio Math. 45 (1981),
+357-383.
+
+[B2] A. Beauville: Les singularités du diviseur © de la jacobienne intermédiaire de I’hypersurface
+cubique dans P4. Algebraic threefolds, LN 947, 190-208; Springer-Verlag, 1982.
+
+[B3] A. Beauville: Determinantal hypersurfaces. Michigan Math. Journal 48 (2000), 39-64.
+
+[C-G] H. Clemens, P. Griffiths: The intermediate Jacobian of the cubic threefold. Ann. of Math.
+95 (1972), 281-356.
+
+[D] S. Druel: Espace des modules des faisceaux semi-stables de rang 2 et de classes de Chern
+c1 = 0, co = 2 et cz = O sur une hypersurface cubique lisse de P+. Internat. Math. Res.
+Notices 19 (2000), 985-1004.
+
+[De] P. Deligne: Le théoréme de Noether. SGA 7 II, LN 340, 328-340; Springer-Verlag, 1973.
+
+{I] A. lliev: Minimal sections of conic bundles. Boll. Unione Mat. Ital. 2 (1999), 401-428.
+
+{I-M] A. Iliev, D. Markushevich: The Abel-Jacobi map for a cubic threefold and periods of Fano
+threefolds of degree 14. Doc. Math. 5 (2000), 23-47 (electronic).
+
+[M-T] D. Markushevich, A. Tikhomirov: The Abel-Jacobi map of a moduli component of vector
+bundles on the cubic threefold. J. Algebraic Geom. 10 (2001), 37-62.
+
+[Mal] M. Maruyama: Moduli of stable sheaves, I and II. J. Math. Kyoto Univ. 17 (1977), 91-126;
+18 (1978), 557-614.
+
+[Ma2] M. Maruyama: Boundedness of semi-stable sheaves of small ranks. Nagoya Math. J. 78
+(1980), 65-94.
+
+[Mo] B. Moishezon: On n-dimensional compact complex manifolds having n algebraically inde-
+pendent meromorphic functions III. Amer. Math. Soc. Transl. (2) 63 (1967), 51-177.
+
+(Mi) D. Mumford: Lectures on curves on an algebraic surface. Annals of Math. Studies 59.
+Princeton University Press, 1966.
+
+[M2] D. Mumford: Prym varieties I. Contributions to analysis (a collection of papers dedicated
+to Lipman Bers), 325-350. Academic Press, New York, 1974.
+
+[Mu] S. Mukai: Symplectic structure of the moduli space of sheaves on an abelian or K3 surface.
+Invent. Math. 77 (1984), 101-116.
+
+[O] K. 0’ Grady: Desingularized moduli spaces of sheaves on a K3. J. Reine Angew. Math. 512
+(1999), 49-117.
+
+[T1] A. N. Tyurin: The geometry of the Fano surface of a nonsingular cubic F C P4 and Torelli
+theorems for Fano surfaces and cubics. Math. USSR Izvestija 5 (1971), 517-546.
+
+[T2] A.N. Tyurin: Five lectures on three-dimensional varieties. Russian Math. Surveys 27 (1972),
+no. 5, 1-53.
+
+[T3] A. N. Tyurin: The moduli spaces of vector bundles on threefolds, surfaces and curves I.
+Preprint, Erlangen, 1990.
+
+[W] J. Wahl: Gaussian maps on algebraic curves. J. Diff. Geometry 73 (1990), 77-98.
+
+[We] G. Welters: Abel-Jacobi isogenies for certain types of Fano threefolds. Math. Centre Tracts,
+141; Math. Centrum, Amsterdam, 1981.

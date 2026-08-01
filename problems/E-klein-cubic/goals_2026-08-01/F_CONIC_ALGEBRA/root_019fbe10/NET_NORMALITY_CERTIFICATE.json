@@ -1,0 +1,79 @@
+{
+  "charts": [
+    {
+      "dimension": -1,
+      "lambda_chart": "l0",
+      "output": "net_normality_X_l0_p89.out",
+      "plane_chart": "X",
+      "script": "net_normality_X_l0_p89.sing",
+      "unit": true
+    },
+    {
+      "dimension": -1,
+      "lambda_chart": "l1",
+      "output": "net_normality_X_l1_p89.out",
+      "plane_chart": "X",
+      "script": "net_normality_X_l1_p89.sing",
+      "unit": true
+    },
+    {
+      "dimension": 0,
+      "lambda_chart": "l2",
+      "output": "net_normality_X_l2_p89.out",
+      "plane_chart": "X",
+      "script": "net_normality_X_l2_p89.sing",
+      "unit": false
+    },
+    {
+      "dimension": -1,
+      "lambda_chart": "l0",
+      "output": "net_normality_y_l0_p89.out",
+      "plane_chart": "y",
+      "script": "net_normality_y_l0_p89.sing",
+      "unit": true
+    },
+    {
+      "dimension": -1,
+      "lambda_chart": "l1",
+      "output": "net_normality_y_l1_p89.out",
+      "plane_chart": "y",
+      "script": "net_normality_y_l1_p89.sing",
+      "unit": true
+    },
+    {
+      "dimension": 0,
+      "lambda_chart": "l2",
+      "output": "net_normality_y_l2_p89.out",
+      "plane_chart": "y",
+      "script": "net_normality_y_l2_p89.sing",
+      "unit": false
+    },
+    {
+      "dimension": -1,
+      "lambda_chart": "l0",
+      "output": "net_normality_w_l0_p89.out",
+      "plane_chart": "w",
+      "script": "net_normality_w_l0_p89.sing",
+      "unit": true
+    },
+    {
+      "dimension": -1,
+      "lambda_chart": "l1",
+      "output": "net_normality_w_l1_p89.out",
+      "plane_chart": "w",
+      "script": "net_normality_w_l1_p89.sing",
+      "unit": true
+    },
+    {
+      "dimension": 0,
+      "lambda_chart": "l2",
+      "output": "net_normality_w_l2_p89.out",
+      "plane_chart": "w",
+      "script": "net_normality_w_l2_p89.sing",
+      "unit": false
+    }
+  ],
+  "prime": 89,
+  "scope": "good-reduction upper bound for the universal net singular locus",
+  "zeta": 2
+}

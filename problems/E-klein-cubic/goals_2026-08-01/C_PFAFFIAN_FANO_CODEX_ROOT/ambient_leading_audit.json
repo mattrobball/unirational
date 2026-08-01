@@ -1,0 +1,93 @@
+{
+  "format": "ambient-leading-hilbert-audit-v1",
+  "scope": "mod-23 auxiliary ambient projector schemes only",
+  "records": [
+    {
+      "covariant_degree": 9,
+      "prime": 23,
+      "variables": 20,
+      "leading_basis_size": 257,
+      "leading_degree_tally": {
+        "2": 157,
+        "3": 100
+      },
+      "hilbert_function": [
+        1,
+        20,
+        53,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "covariant_degree": 10,
+      "prime": 23,
+      "variables": 28,
+      "leading_basis_size": 777,
+      "leading_degree_tally": {
+        "2": 252,
+        "3": 525
+      },
+      "hilbert_function": [
+        1,
+        28,
+        154,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "covariant_degree": 11,
+      "prime": 23,
+      "variables": 36,
+      "leading_basis_size": 2161,
+      "leading_degree_tally": {
+        "2": 335,
+        "3": 1804,
+        "4": 22
+      },
+      "hilbert_function": [
+        1,
+        36,
+        331,
+        22,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "covariant_degree": 12,
+      "prime": 23,
+      "variables": 48,
+      "leading_basis_size": 8505,
+      "leading_degree_tally": {
+        "2": 471,
+        "3": 4191,
+        "4": 3843
+      },
+      "hilbert_function": [
+        1,
+        48,
+        705,
+        1971,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  ],
+  "theorem_boundary": "Hilbert functions of modular initial ideals do not construct a characteristic-zero projector and do not impose the Fano section"
+}

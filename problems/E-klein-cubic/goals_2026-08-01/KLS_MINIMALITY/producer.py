@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build deterministic source and artifact manifests for the KLS route exit."""
+"""Produce deterministic source and artifact manifests for this goal run."""
 
 from __future__ import annotations
 
@@ -29,65 +29,64 @@ SOURCE_PATHS = [
     PROBLEM / "tmp/kls_discrepancy_next_gate_audit/REPORT.md",
     PROBLEM / "tmp/kls_a5_linearized_pencil_obstruction/REPORT.md",
     PROBLEM / "tmp/kls_a5_conductor_surface_feasibility/REPORT.md",
+    PROBLEM / "tmp/kls_a5_logarithmic_divisor/REPORT.md",
 ]
 
 
 def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
+    h = hashlib.sha256()
     with path.open("rb") as handle:
-        for block in iter(lambda: handle.read(1 << 20), b""):
-            digest.update(block)
-    return digest.hexdigest()
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            h.update(block)
+    return h.hexdigest()
 
 
-def relative_source(path: Path) -> str:
+def rel(path: Path) -> str:
     return str(path.relative_to(PROBLEM))
 
 
-def write_json(path: Path, value: object) -> None:
-    path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n")
+def git_head() -> str:
+    return subprocess.check_output(
+        ["git", "rev-parse", "HEAD"], cwd=PROBLEM, text=True
+    ).strip()
 
 
 def main() -> None:
     missing = [str(path) for path in SOURCE_PATHS if not path.is_file()]
     if missing:
-        raise SystemExit(f"missing consumed sources: {missing}")
-
-    commit = subprocess.run(
-        ["git", "rev-parse", "HEAD"],
-        cwd=PROBLEM,
-        check=True,
-        text=True,
-        capture_output=True,
-    ).stdout.strip()
+        raise SystemExit(f"missing sources: {missing}")
 
     source_manifest = {
         "schema": "kls-source-manifest-v1",
         "as_of": "2026-08-01",
         "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
-        "consumed_live_commit": commit,
-        "sources": {
-            relative_source(path): sha256(path) for path in SOURCE_PATHS
-        },
+        "live_commit": git_head(),
+        "sources": [
+            {"path": rel(path), "sha256": sha256(path)} for path in SOURCE_PATHS
+        ],
     }
-    write_json(HERE / "SOURCE_MANIFEST.json", source_manifest)
+    (HERE / "SOURCE_MANIFEST.json").write_text(
+        json.dumps(source_manifest, indent=2, sort_keys=True) + "\n"
+    )
 
-    artifacts = {}
-    for path in sorted(HERE.rglob("*")):
-        if not path.is_file() or path.name == "SEAL.json":
+    artifacts = []
+    for path in sorted(HERE.rglob("*"), key=lambda item: str(item.relative_to(HERE))):
+        if not path.is_file() or path == HERE / "SEAL.json" or "__pycache__" in path.parts:
             continue
-        if "__pycache__" in path.parts:
-            continue
-        artifacts[str(path.relative_to(HERE))] = sha256(path)
-
+        artifact_path = str(path.relative_to(HERE))
+        artifacts.append(
+            {"path": artifact_path, "sha256": sha256(path), "bytes": path.stat().st_size}
+        )
     seal = {
-        "schema": "kls-seal-v1",
-        "as_of": "2026-08-01",
+        "schema": "kls-goal-seal-v1",
         "exit": "KLS-NO-THEOREM",
+        "headline": "OPEN",
         "artifacts": artifacts,
         "self_hash_included": False,
     }
-    write_json(HERE / "SEAL.json", seal)
+    (HERE / "SEAL.json").write_text(
+        json.dumps(seal, indent=2, sort_keys=True) + "\n"
+    )
     print(f"WROTE SOURCE_MANIFEST.json sources={len(SOURCE_PATHS)}")
     print(f"WROTE SEAL.json artifacts={len(artifacts)}")
 

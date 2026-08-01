@@ -1,0 +1,111 @@
+{
+  "charts": [
+    {
+      "msolve_file": "full_source_total_x0_X_p23.ms",
+      "plane_chart": "X",
+      "singular_file": "full_source_total_x0_X_p23.sing",
+      "source_chart": "x0",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x0_y_p23.ms",
+      "plane_chart": "y",
+      "singular_file": "full_source_total_x0_y_p23.sing",
+      "source_chart": "x0",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x0_w_p23.ms",
+      "plane_chart": "w",
+      "singular_file": "full_source_total_x0_w_p23.sing",
+      "source_chart": "x0",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x1_X_p23.ms",
+      "plane_chart": "X",
+      "singular_file": "full_source_total_x1_X_p23.sing",
+      "source_chart": "x1",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x1_y_p23.ms",
+      "plane_chart": "y",
+      "singular_file": "full_source_total_x1_y_p23.sing",
+      "source_chart": "x1",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x1_w_p23.ms",
+      "plane_chart": "w",
+      "singular_file": "full_source_total_x1_w_p23.sing",
+      "source_chart": "x1",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x2_X_p23.ms",
+      "plane_chart": "X",
+      "singular_file": "full_source_total_x2_X_p23.sing",
+      "source_chart": "x2",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x2_y_p23.ms",
+      "plane_chart": "y",
+      "singular_file": "full_source_total_x2_y_p23.sing",
+      "source_chart": "x2",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x2_w_p23.ms",
+      "plane_chart": "w",
+      "singular_file": "full_source_total_x2_w_p23.sing",
+      "source_chart": "x2",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x3_X_p23.ms",
+      "plane_chart": "X",
+      "singular_file": "full_source_total_x3_X_p23.sing",
+      "source_chart": "x3",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x3_y_p23.ms",
+      "plane_chart": "y",
+      "singular_file": "full_source_total_x3_y_p23.sing",
+      "source_chart": "x3",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x3_w_p23.ms",
+      "plane_chart": "w",
+      "singular_file": "full_source_total_x3_w_p23.sing",
+      "source_chart": "x3",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x4_X_p23.ms",
+      "plane_chart": "X",
+      "singular_file": "full_source_total_x4_X_p23.sing",
+      "source_chart": "x4",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x4_y_p23.ms",
+      "plane_chart": "y",
+      "singular_file": "full_source_total_x4_y_p23.sing",
+      "source_chart": "x4",
+      "terms": 1140
+    },
+    {
+      "msolve_file": "full_source_total_x4_w_p23.ms",
+      "plane_chart": "w",
+      "singular_file": "full_source_total_x4_w_p23.sing",
+      "source_chart": "x4",
+      "terms": 1140
+    }
+  ],
+  "prime": 23,
+  "zeta": 2
+}

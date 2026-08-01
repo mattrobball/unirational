@@ -1,0 +1,58 @@
+VECTOR BUNDLES ON THE CUBIC THREEFOLD 17
+
+5. Low degree curves on the cubic
+
+5.1. I noticed in [B1] that the Fano surface F of lines contained in X has a
+simple interpretation in terms of the Prym variety (it is isomorphic to one of the
+two components of the variety of divisors D € Sym5(A) such that m.D € |Oa(1)]);
+this gives for instance an easy proof of the fact (already proved in [C-G]) that the
+a Jacobi map embeds F into J1(X) as a surface with minimal cohomology class
+
+ . Tliev made the nice observation that the same method can be used to study
+higher degree curves as well [I]. His construction works for general conic bundles,
+but I will specialize to the cubic threefold for simplicity.
+
+Conics are not interesting: any conic q determines a line @, (the residual inter-
+section with X of the plane spanned by q) such that q+¢, = h? in CH?(X); thus the
+image F? C J?(X) of the variety of conics in X by the Abel-Jacobi map is isomor-
+phic to the Fano surface F C J}(X) through the isomorphism J2(X) > J+(X)
+given by > h? —€
+
+The next case is twisted cubics. Let T be the variety of twisted cubics contained
+in X; we denote by T its closure in the Hilbert scheme of X. Let a: T + J(X)
+be the Abel-Jacobi map t+ [t] — h?.
+
+Proposition 5.2. The image of a: T > J(X) is a theta divisor @ C J(X);
+its generic fibre is isomorphic to P?.
+
+I learned this result from Herb Clemens some 25 years ago; it can be easily
+deduced from the parametrization © = F — F given in {C-G]. We will give a
+different proof, to illustrate Iiev's method and also to open the way for the case of
+quartic curves.
+
+Proor. (5.2.a) A twisted cubic ¢ C X is contained in a unique hyperplane
+section 5; of X; we replace T by the open and dense subset consisting of
+those twisted cubic for which 3; is smooth and does not contain &. On S;
+there are 72 nets (= 2-dimensional linear systems) of twisted cubies. Thus
+the Abel-Jacobi map factors as a: T + S — J(X), where S parametrizes
+pairs ($,L) of a smooth hyperplane section S of X, not containing ¢, and
+a net of twisted cubics |L| on S. We may now add to T the singular
+elements in each net of cubics, so that T becomes a P?-bundle over S.
+
+Let T; be the subvariety of cubics in T which intersect é (that is, which
+pass through the unique point of £9 S); then J > S is a subP1-bundle
+of the P?-bundle T > S.
+
+Let t € J; the projection pe maps t to a conic c C P?. The trace
+of c on A is a divisor > p; € |Ka|. The two points (2;,y:) of A over a
+point p; correspond to two lines (£,,,€y,) meeting é; since the projection
+t + c is one-to-one, there is exactly one of these two lines, say &,,, which
+intersects t; we put D(t) := }>2;. Using the notation of (4.1), this gives
+a rational map D: T; --» W.
+
+(5.2.6) Claim: D maps J; into one component W, of W; the map D : J; --» We
+is birational (in particular, J; is irreducible).
+
+Let D = 332; be a general element of W; its push-down 0 2; on A
+
+is cut down by a smooth conic c transversal to A. Let S, be the pull-back

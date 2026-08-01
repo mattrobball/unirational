@@ -1,0 +1,7 @@
+{
+  "candidate_found": false,
+  "degree": 25,
+  "jacobian_rank_four_check": "not_applicable",
+  "primitive_check": "not_applicable",
+  "reason": "the named 18-direction mixed structured landing ansatz is projectively empty; the full strict degree space remains undecided"
+}

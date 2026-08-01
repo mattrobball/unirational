@@ -1,0 +1,4106 @@
+{
+  "all_projective_special_fibres_empty": true,
+  "ansatz": "for a frame triple T and one s in 1..11, each of its three coordinates is an arbitrary QQ-linear combination of 1 and beta_s",
+  "basis": [
+    "beta_0",
+    "beta_1",
+    "beta_2",
+    "beta_3",
+    "beta_4",
+    "beta_5",
+    "beta_6",
+    "beta_7",
+    "beta_8",
+    "beta_9",
+    "beta_10",
+    "beta_11"
+  ],
+  "field": "K_proj over P0=QQ(t3,t6,t8,t11)",
+  "frame": [
+    "x",
+    "C",
+    "D",
+    "E",
+    "K"
+  ],
+  "prime": 101,
+  "schema": "G_TERNARY_COMMON_PENCIL_V1",
+  "scope": "Good-fibre projective emptiness proves characteristic-zero emptiness only for the listed common-pencil ansatze; it is not pointlessness of any unrestricted ternary cubic or of the full generic cubic.",
+  "source_hashes": {
+    "G_ALL_DEGREE/generic_cubic.json": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+    "tmp/kproj_arithmetic/normalized_kproj_table.json": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f"
+  },
+  "system_count": 110,
+  "systems": [
+    {
+      "ansatz": [
+        "u00+u01*beta_1",
+        "u10+u11*beta_1",
+        "u20+u21*beta_1"
+      ],
+      "elapsed_seconds": 0.00791,
+      "exact_coefficient_equations": 579,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "systems/012_s01.in",
+      "input_sha256": "751a11656f4478dc6d4e6a9597710d2e10b15fb4fded175607edfec5aaf5b305",
+      "leading": "systems/012_s01.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 1,
+      "stem": "012_s01"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_2",
+        "u10+u11*beta_2",
+        "u20+u21*beta_2"
+      ],
+      "elapsed_seconds": 0.006387,
+      "exact_coefficient_equations": 1090,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "systems/012_s02.in",
+      "input_sha256": "302fea61d73889f84a6a067033d67c0800072b1090892293d6433fc729ddb178",
+      "leading": "systems/012_s02.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 2,
+      "stem": "012_s02"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_3",
+        "u10+u11*beta_3",
+        "u20+u21*beta_3"
+      ],
+      "elapsed_seconds": 0.006753,
+      "exact_coefficient_equations": 1402,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "systems/012_s03.in",
+      "input_sha256": "6eb223c9dabdf34149a8150baa3be996ef4a11d3a911117a2603259baf6fdaf3",
+      "leading": "systems/012_s03.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 3,
+      "stem": "012_s03"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_4",
+        "u10+u11*beta_4",
+        "u20+u21*beta_4"
+      ],
+      "elapsed_seconds": 0.006902,
+      "exact_coefficient_equations": 2304,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "systems/012_s04.in",
+      "input_sha256": "d088bfc51908f61d8b05c2cc56aaa76d8b588b8f037fc62320f1b503dbb40bc0",
+      "leading": "systems/012_s04.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 4,
+      "stem": "012_s04"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_5",
+        "u10+u11*beta_5",
+        "u20+u21*beta_5"
+      ],
+      "elapsed_seconds": 0.006691,
+      "exact_coefficient_equations": 3572,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "systems/012_s05.in",
+      "input_sha256": "c76b83a0ed3e70d763887d5d1960339a725540b34fb97d1f7228aa4ef02b6440",
+      "leading": "systems/012_s05.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 5,
+      "stem": "012_s05"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_6",
+        "u10+u11*beta_6",
+        "u20+u21*beta_6"
+      ],
+      "elapsed_seconds": 0.006998,
+      "exact_coefficient_equations": 3366,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "systems/012_s06.in",
+      "input_sha256": "c76b83a0ed3e70d763887d5d1960339a725540b34fb97d1f7228aa4ef02b6440",
+      "leading": "systems/012_s06.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 6,
+      "stem": "012_s06"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_7",
+        "u10+u11*beta_7",
+        "u20+u21*beta_7"
+      ],
+      "elapsed_seconds": 0.006779,
+      "exact_coefficient_equations": 4821,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "systems/012_s07.in",
+      "input_sha256": "c76b83a0ed3e70d763887d5d1960339a725540b34fb97d1f7228aa4ef02b6440",
+      "leading": "systems/012_s07.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 7,
+      "stem": "012_s07"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_8",
+        "u10+u11*beta_8",
+        "u20+u21*beta_8"
+      ],
+      "elapsed_seconds": 0.006818,
+      "exact_coefficient_equations": 6951,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "systems/012_s08.in",
+      "input_sha256": "c76b83a0ed3e70d763887d5d1960339a725540b34fb97d1f7228aa4ef02b6440",
+      "leading": "systems/012_s08.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 8,
+      "stem": "012_s08"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_9",
+        "u10+u11*beta_9",
+        "u20+u21*beta_9"
+      ],
+      "elapsed_seconds": 0.04687,
+      "exact_coefficient_equations": 7650,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "systems/012_s09.in",
+      "input_sha256": "c76b83a0ed3e70d763887d5d1960339a725540b34fb97d1f7228aa4ef02b6440",
+      "leading": "systems/012_s09.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 9,
+      "stem": "012_s09"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_10",
+        "u10+u11*beta_10",
+        "u20+u21*beta_10"
+      ],
+      "elapsed_seconds": 0.007022,
+      "exact_coefficient_equations": 10270,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "systems/012_s10.in",
+      "input_sha256": "c76b83a0ed3e70d763887d5d1960339a725540b34fb97d1f7228aa4ef02b6440",
+      "leading": "systems/012_s10.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 10,
+      "stem": "012_s10"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_11",
+        "u10+u11*beta_11",
+        "u20+u21*beta_11"
+      ],
+      "elapsed_seconds": 0.007376,
+      "exact_coefficient_equations": 23576,
+      "frame_indices": [
+        0,
+        1,
+        2
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "D"
+      ],
+      "good_prime": 101,
+      "input": "systems/012_s11.in",
+      "input_sha256": "c76b83a0ed3e70d763887d5d1960339a725540b34fb97d1f7228aa4ef02b6440",
+      "leading": "systems/012_s11.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 11,
+      "stem": "012_s11"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_1",
+        "u10+u11*beta_1",
+        "u20+u21*beta_1"
+      ],
+      "elapsed_seconds": 0.007019,
+      "exact_coefficient_equations": 711,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/013_s01.in",
+      "input_sha256": "8581c53c5ba89066f3dfbdb55963496286d3fb0fab896520e130ed734d7b550f",
+      "leading": "systems/013_s01.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 1,
+      "stem": "013_s01"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_2",
+        "u10+u11*beta_2",
+        "u20+u21*beta_2"
+      ],
+      "elapsed_seconds": 0.006996,
+      "exact_coefficient_equations": 1269,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/013_s02.in",
+      "input_sha256": "8562ed8239dde4e2e21789584d10384a0f520b93b3ddc6aa7f2176db5fb8193e",
+      "leading": "systems/013_s02.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 2,
+      "stem": "013_s02"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_3",
+        "u10+u11*beta_3",
+        "u20+u21*beta_3"
+      ],
+      "elapsed_seconds": 0.00728,
+      "exact_coefficient_equations": 1565,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/013_s03.in",
+      "input_sha256": "0c667ae24303b1b005ff78ff21cff2a4673d3d174070b7b473ac6fec9cf47778",
+      "leading": "systems/013_s03.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 3,
+      "stem": "013_s03"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_4",
+        "u10+u11*beta_4",
+        "u20+u21*beta_4"
+      ],
+      "elapsed_seconds": 0.007235,
+      "exact_coefficient_equations": 2674,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/013_s04.in",
+      "input_sha256": "adcd799c59de524fd9b33e3e2ab93163c8d8aa8d94da06daaf983d348c36c427",
+      "leading": "systems/013_s04.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 4,
+      "stem": "013_s04"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_5",
+        "u10+u11*beta_5",
+        "u20+u21*beta_5"
+      ],
+      "elapsed_seconds": 0.006914,
+      "exact_coefficient_equations": 4188,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/013_s05.in",
+      "input_sha256": "b37764d0b6b6285996fedbe451500ac002f41f2caea76618e16ac680fc890ebe",
+      "leading": "systems/013_s05.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 5,
+      "stem": "013_s05"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_6",
+        "u10+u11*beta_6",
+        "u20+u21*beta_6"
+      ],
+      "elapsed_seconds": 0.007031,
+      "exact_coefficient_equations": 3976,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/013_s06.in",
+      "input_sha256": "cc1ff3f0f4e36fecc9a1bd5486644352e965eb3bac847ca52a9229c14a7f515a",
+      "leading": "systems/013_s06.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 6,
+      "stem": "013_s06"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_7",
+        "u10+u11*beta_7",
+        "u20+u21*beta_7"
+      ],
+      "elapsed_seconds": 0.006989,
+      "exact_coefficient_equations": 5626,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/013_s07.in",
+      "input_sha256": "5554e10a8077f7d65ce4a19e5974be754a82954877dfbd0be60cd500a69df08a",
+      "leading": "systems/013_s07.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 7,
+      "stem": "013_s07"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_8",
+        "u10+u11*beta_8",
+        "u20+u21*beta_8"
+      ],
+      "elapsed_seconds": 0.00949,
+      "exact_coefficient_equations": 8281,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/013_s08.in",
+      "input_sha256": "b37764d0b6b6285996fedbe451500ac002f41f2caea76618e16ac680fc890ebe",
+      "leading": "systems/013_s08.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 8,
+      "stem": "013_s08"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_9",
+        "u10+u11*beta_9",
+        "u20+u21*beta_9"
+      ],
+      "elapsed_seconds": 0.007447,
+      "exact_coefficient_equations": 9249,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/013_s09.in",
+      "input_sha256": "b37764d0b6b6285996fedbe451500ac002f41f2caea76618e16ac680fc890ebe",
+      "leading": "systems/013_s09.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 9,
+      "stem": "013_s09"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_10",
+        "u10+u11*beta_10",
+        "u20+u21*beta_10"
+      ],
+      "elapsed_seconds": 0.007341,
+      "exact_coefficient_equations": 12519,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/013_s10.in",
+      "input_sha256": "b37764d0b6b6285996fedbe451500ac002f41f2caea76618e16ac680fc890ebe",
+      "leading": "systems/013_s10.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 10,
+      "stem": "013_s10"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_11",
+        "u10+u11*beta_11",
+        "u20+u21*beta_11"
+      ],
+      "elapsed_seconds": 0.006365,
+      "exact_coefficient_equations": 28426,
+      "frame_indices": [
+        0,
+        1,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/013_s11.in",
+      "input_sha256": "b37764d0b6b6285996fedbe451500ac002f41f2caea76618e16ac680fc890ebe",
+      "leading": "systems/013_s11.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 11,
+      "stem": "013_s11"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_1",
+        "u10+u11*beta_1",
+        "u20+u21*beta_1"
+      ],
+      "elapsed_seconds": 0.007166,
+      "exact_coefficient_equations": 944,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/014_s01.in",
+      "input_sha256": "c44168c347a490c3f66278b2f4a8ee22e580cd73496a9c8e58b84bc886efeeac",
+      "leading": "systems/014_s01.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 1,
+      "stem": "014_s01"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_2",
+        "u10+u11*beta_2",
+        "u20+u21*beta_2"
+      ],
+      "elapsed_seconds": 0.007266,
+      "exact_coefficient_equations": 1465,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/014_s02.in",
+      "input_sha256": "311ab2968395ffd718182ae8c1da649895b1dca09622fb12fba1b9d1e363f968",
+      "leading": "systems/014_s02.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 2,
+      "stem": "014_s02"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_3",
+        "u10+u11*beta_3",
+        "u20+u21*beta_3"
+      ],
+      "elapsed_seconds": 0.007535,
+      "exact_coefficient_equations": 1973,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/014_s03.in",
+      "input_sha256": "062d60d986c7fecfabde1cfc27d87c50d38fb75558539c0aa676f3b16b440082",
+      "leading": "systems/014_s03.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 3,
+      "stem": "014_s03"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_4",
+        "u10+u11*beta_4",
+        "u20+u21*beta_4"
+      ],
+      "elapsed_seconds": 0.007404,
+      "exact_coefficient_equations": 3003,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/014_s04.in",
+      "input_sha256": "16585b97aec9959dab2b33b8ad4ac657a9fdff841e9d5f4705bc7039cf7e510b",
+      "leading": "systems/014_s04.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 4,
+      "stem": "014_s04"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_5",
+        "u10+u11*beta_5",
+        "u20+u21*beta_5"
+      ],
+      "elapsed_seconds": 0.007911,
+      "exact_coefficient_equations": 4816,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/014_s05.in",
+      "input_sha256": "c4415e4108c039276039444b6d79c998066a66a7b568e919893801678d8b6921",
+      "leading": "systems/014_s05.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 5,
+      "stem": "014_s05"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_6",
+        "u10+u11*beta_6",
+        "u20+u21*beta_6"
+      ],
+      "elapsed_seconds": 0.00708,
+      "exact_coefficient_equations": 4671,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/014_s06.in",
+      "input_sha256": "712f176baa57bcc7a69ac2ab116a0820f83a581bcf197ec56d573fbf8fdc2c1b",
+      "leading": "systems/014_s06.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 6,
+      "stem": "014_s06"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_7",
+        "u10+u11*beta_7",
+        "u20+u21*beta_7"
+      ],
+      "elapsed_seconds": 0.007093,
+      "exact_coefficient_equations": 6618,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/014_s07.in",
+      "input_sha256": "057f607c57e1aed4b9a1319f518bdeadabeb6df6293d95c041838c9a9d47c9be",
+      "leading": "systems/014_s07.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 7,
+      "stem": "014_s07"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_8",
+        "u10+u11*beta_8",
+        "u20+u21*beta_8"
+      ],
+      "elapsed_seconds": 0.009406,
+      "exact_coefficient_equations": 9329,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/014_s08.in",
+      "input_sha256": "357eca141b8edc954f33846f0fb21f7a5e13d781864700fef1edd3aa2feb185a",
+      "leading": "systems/014_s08.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 8,
+      "stem": "014_s08"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_9",
+        "u10+u11*beta_9",
+        "u20+u21*beta_9"
+      ],
+      "elapsed_seconds": 0.007279,
+      "exact_coefficient_equations": 10546,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/014_s09.in",
+      "input_sha256": "36488eb38a0a8d0568d8c0eb0f80ceb6b75acdc474a88d845012bb62db5f576b",
+      "leading": "systems/014_s09.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 9,
+      "stem": "014_s09"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_10",
+        "u10+u11*beta_10",
+        "u20+u21*beta_10"
+      ],
+      "elapsed_seconds": 0.007138,
+      "exact_coefficient_equations": 14438,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/014_s10.in",
+      "input_sha256": "bd494e4fa8486ae52340158cc80ab403b2696daa246acf9843ab13b078d61511",
+      "leading": "systems/014_s10.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 10,
+      "stem": "014_s10"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_11",
+        "u10+u11*beta_11",
+        "u20+u21*beta_11"
+      ],
+      "elapsed_seconds": 0.007517,
+      "exact_coefficient_equations": 33311,
+      "frame_indices": [
+        0,
+        1,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "C",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/014_s11.in",
+      "input_sha256": "1b57989e99a67e7b2bd537e0c63aefadc9512c1975045db556f99d484358254d",
+      "leading": "systems/014_s11.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 11,
+      "stem": "014_s11"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_1",
+        "u10+u11*beta_1",
+        "u20+u21*beta_1"
+      ],
+      "elapsed_seconds": 0.007068,
+      "exact_coefficient_equations": 761,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/023_s01.in",
+      "input_sha256": "431d4185cc5d2eec958109df2e900e66be4e2ab6108582afa4c488ba8cdbdb89",
+      "leading": "systems/023_s01.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 1,
+      "stem": "023_s01"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_2",
+        "u10+u11*beta_2",
+        "u20+u21*beta_2"
+      ],
+      "elapsed_seconds": 0.006788,
+      "exact_coefficient_equations": 1352,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/023_s02.in",
+      "input_sha256": "965cf21cd138502d4fa9bf8ce8858cd47a27d77d89df524690d367a7d03691c2",
+      "leading": "systems/023_s02.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 2,
+      "stem": "023_s02"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_3",
+        "u10+u11*beta_3",
+        "u20+u21*beta_3"
+      ],
+      "elapsed_seconds": 0.007313,
+      "exact_coefficient_equations": 1618,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/023_s03.in",
+      "input_sha256": "3238fe3c0b7a59ceb93eae0128accefeb490a0b1bee85268e1f8a9f61c32289f",
+      "leading": "systems/023_s03.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 3,
+      "stem": "023_s03"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_4",
+        "u10+u11*beta_4",
+        "u20+u21*beta_4"
+      ],
+      "elapsed_seconds": 0.007217,
+      "exact_coefficient_equations": 2765,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/023_s04.in",
+      "input_sha256": "a4ca184b6a60ccfd05e991989caf11c3cae67425a3585a38003fdd03e822f8b3",
+      "leading": "systems/023_s04.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 4,
+      "stem": "023_s04"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_5",
+        "u10+u11*beta_5",
+        "u20+u21*beta_5"
+      ],
+      "elapsed_seconds": 0.007174,
+      "exact_coefficient_equations": 4197,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/023_s05.in",
+      "input_sha256": "e0aa6a15bf43090c25e8b0a9e1655a760687c8d42c163fe1afe22098e0adbc36",
+      "leading": "systems/023_s05.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 5,
+      "stem": "023_s05"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_6",
+        "u10+u11*beta_6",
+        "u20+u21*beta_6"
+      ],
+      "elapsed_seconds": 0.007159,
+      "exact_coefficient_equations": 3977,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/023_s06.in",
+      "input_sha256": "6c194847d36ecff4d61bf9f23856f8cb566257d6aa76e6efe75278eacc7264ff",
+      "leading": "systems/023_s06.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 6,
+      "stem": "023_s06"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_7",
+        "u10+u11*beta_7",
+        "u20+u21*beta_7"
+      ],
+      "elapsed_seconds": 0.007097,
+      "exact_coefficient_equations": 5666,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/023_s07.in",
+      "input_sha256": "3428904fee8e812f3f85518a1133c09e8e0f3ec78d20d392c006b71bf9719df1",
+      "leading": "systems/023_s07.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 7,
+      "stem": "023_s07"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_8",
+        "u10+u11*beta_8",
+        "u20+u21*beta_8"
+      ],
+      "elapsed_seconds": 0.007146,
+      "exact_coefficient_equations": 8340,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/023_s08.in",
+      "input_sha256": "0bd7ea0ddf433cd58323345f116f76d62fa1df511c55225897376aa1bb5fd006",
+      "leading": "systems/023_s08.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 8,
+      "stem": "023_s08"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_9",
+        "u10+u11*beta_9",
+        "u20+u21*beta_9"
+      ],
+      "elapsed_seconds": 0.007902,
+      "exact_coefficient_equations": 9257,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/023_s09.in",
+      "input_sha256": "0bd7ea0ddf433cd58323345f116f76d62fa1df511c55225897376aa1bb5fd006",
+      "leading": "systems/023_s09.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 9,
+      "stem": "023_s09"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_10",
+        "u10+u11*beta_10",
+        "u20+u21*beta_10"
+      ],
+      "elapsed_seconds": 0.00709,
+      "exact_coefficient_equations": 12469,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/023_s10.in",
+      "input_sha256": "0bd7ea0ddf433cd58323345f116f76d62fa1df511c55225897376aa1bb5fd006",
+      "leading": "systems/023_s10.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 10,
+      "stem": "023_s10"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_11",
+        "u10+u11*beta_11",
+        "u20+u21*beta_11"
+      ],
+      "elapsed_seconds": 0.008589,
+      "exact_coefficient_equations": 28261,
+      "frame_indices": [
+        0,
+        2,
+        3
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/023_s11.in",
+      "input_sha256": "0bd7ea0ddf433cd58323345f116f76d62fa1df511c55225897376aa1bb5fd006",
+      "leading": "systems/023_s11.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 11,
+      "stem": "023_s11"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_1",
+        "u10+u11*beta_1",
+        "u20+u21*beta_1"
+      ],
+      "elapsed_seconds": 0.007623,
+      "exact_coefficient_equations": 1014,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/024_s01.in",
+      "input_sha256": "da681923739894b4153fcb84e6229b235b51b32781339c315b51dde0e6d1f1f6",
+      "leading": "systems/024_s01.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 1,
+      "stem": "024_s01"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_2",
+        "u10+u11*beta_2",
+        "u20+u21*beta_2"
+      ],
+      "elapsed_seconds": 0.006978,
+      "exact_coefficient_equations": 1776,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/024_s02.in",
+      "input_sha256": "7ba308a5fdd1ac340dabaeff94a99806fe3095635308ad5e80b5431ce5a5a827",
+      "leading": "systems/024_s02.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 2,
+      "stem": "024_s02"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_3",
+        "u10+u11*beta_3",
+        "u20+u21*beta_3"
+      ],
+      "elapsed_seconds": 0.006942,
+      "exact_coefficient_equations": 2061,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/024_s03.in",
+      "input_sha256": "a209345a04c39b44fdbcc9b9bbae87c0e3e639292b6dfb92b3edaba43c425c9d",
+      "leading": "systems/024_s03.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 3,
+      "stem": "024_s03"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_4",
+        "u10+u11*beta_4",
+        "u20+u21*beta_4"
+      ],
+      "elapsed_seconds": 0.006891,
+      "exact_coefficient_equations": 3363,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/024_s04.in",
+      "input_sha256": "e416fad1da7861df465ee4b57f71933f3b7f198f002fa8444b1eea5bc181a391",
+      "leading": "systems/024_s04.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 4,
+      "stem": "024_s04"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_5",
+        "u10+u11*beta_5",
+        "u20+u21*beta_5"
+      ],
+      "elapsed_seconds": 0.009775,
+      "exact_coefficient_equations": 5153,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/024_s05.in",
+      "input_sha256": "3344b9c54b6569a528a323194afa071db3f9562ec72ce51590d7dbdb185541fa",
+      "leading": "systems/024_s05.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 5,
+      "stem": "024_s05"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_6",
+        "u10+u11*beta_6",
+        "u20+u21*beta_6"
+      ],
+      "elapsed_seconds": 0.007133,
+      "exact_coefficient_equations": 4977,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/024_s06.in",
+      "input_sha256": "0eeba48b1347109827145cf54bb647e78166e1296be69c91a326c5a977fe1b41",
+      "leading": "systems/024_s06.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 6,
+      "stem": "024_s06"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_7",
+        "u10+u11*beta_7",
+        "u20+u21*beta_7"
+      ],
+      "elapsed_seconds": 0.007363,
+      "exact_coefficient_equations": 7229,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/024_s07.in",
+      "input_sha256": "5baacf4b7c94043868a137bd88fbe3c3ff2ad3cdc078344b4e3790021801f6cb",
+      "leading": "systems/024_s07.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 7,
+      "stem": "024_s07"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_8",
+        "u10+u11*beta_8",
+        "u20+u21*beta_8"
+      ],
+      "elapsed_seconds": 0.007307,
+      "exact_coefficient_equations": 10237,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/024_s08.in",
+      "input_sha256": "6b3e1f87982ebb95f80c46fc2a8f64892e72f74ef301868263fcd96be1313d88",
+      "leading": "systems/024_s08.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 8,
+      "stem": "024_s08"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_9",
+        "u10+u11*beta_9",
+        "u20+u21*beta_9"
+      ],
+      "elapsed_seconds": 0.013164,
+      "exact_coefficient_equations": 11282,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/024_s09.in",
+      "input_sha256": "c6b1790b3fd67684ef83f3b8f930b75d0074f93bf67bfdfeecc021a158c96032",
+      "leading": "systems/024_s09.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 9,
+      "stem": "024_s09"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_10",
+        "u10+u11*beta_10",
+        "u20+u21*beta_10"
+      ],
+      "elapsed_seconds": 0.007908,
+      "exact_coefficient_equations": 15437,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/024_s10.in",
+      "input_sha256": "079331ea7d7a97f532adf225becd17ed0af05a75500f24ac774652f4ab14612b",
+      "leading": "systems/024_s10.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 10,
+      "stem": "024_s10"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_11",
+        "u10+u11*beta_11",
+        "u20+u21*beta_11"
+      ],
+      "elapsed_seconds": 0.014703,
+      "exact_coefficient_equations": 34937,
+      "frame_indices": [
+        0,
+        2,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/024_s11.in",
+      "input_sha256": "f460193129f94195a2cefda96ee6e3a0db0df7224acebc42022c5e21cdcf0387",
+      "leading": "systems/024_s11.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 11,
+      "stem": "024_s11"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_1",
+        "u10+u11*beta_1",
+        "u20+u21*beta_1"
+      ],
+      "elapsed_seconds": 0.015637,
+      "exact_coefficient_equations": 1017,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/034_s01.in",
+      "input_sha256": "302c88989400f1a96d461d87d7565a626e0f668386ca6acc8396c9c6e2cd2782",
+      "leading": "systems/034_s01.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 1,
+      "stem": "034_s01"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_2",
+        "u10+u11*beta_2",
+        "u20+u21*beta_2"
+      ],
+      "elapsed_seconds": 0.024467,
+      "exact_coefficient_equations": 1774,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/034_s02.in",
+      "input_sha256": "21a6daf7994f25efb9fdb63dd044888d318b13a6d30054af24baab98fb102f6d",
+      "leading": "systems/034_s02.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 2,
+      "stem": "034_s02"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_3",
+        "u10+u11*beta_3",
+        "u20+u21*beta_3"
+      ],
+      "elapsed_seconds": 0.009871,
+      "exact_coefficient_equations": 2121,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/034_s03.in",
+      "input_sha256": "0fc8796c7a5ed356f21f99ce70ddde555dfe8e62ba81ebfc4ef84e0bf64d7fcf",
+      "leading": "systems/034_s03.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 3,
+      "stem": "034_s03"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_4",
+        "u10+u11*beta_4",
+        "u20+u21*beta_4"
+      ],
+      "elapsed_seconds": 0.009849,
+      "exact_coefficient_equations": 3263,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/034_s04.in",
+      "input_sha256": "2a03c4fc8f7a45543c7dd1ccaf63e9cc01cd5d9790bbc5ac8776dee980ccb49a",
+      "leading": "systems/034_s04.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 4,
+      "stem": "034_s04"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_5",
+        "u10+u11*beta_5",
+        "u20+u21*beta_5"
+      ],
+      "elapsed_seconds": 0.009165,
+      "exact_coefficient_equations": 5144,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/034_s05.in",
+      "input_sha256": "371bedf01ad1d2a1f64bab73048a58431b12ce08f841f6e7f235f893048ed4e3",
+      "leading": "systems/034_s05.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 5,
+      "stem": "034_s05"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_6",
+        "u10+u11*beta_6",
+        "u20+u21*beta_6"
+      ],
+      "elapsed_seconds": 0.015212,
+      "exact_coefficient_equations": 4944,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/034_s06.in",
+      "input_sha256": "371bedf01ad1d2a1f64bab73048a58431b12ce08f841f6e7f235f893048ed4e3",
+      "leading": "systems/034_s06.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 6,
+      "stem": "034_s06"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_7",
+        "u10+u11*beta_7",
+        "u20+u21*beta_7"
+      ],
+      "elapsed_seconds": 0.011507,
+      "exact_coefficient_equations": 6906,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/034_s07.in",
+      "input_sha256": "e1876814f4af75ebfafc5d1595667be1f03ee3a75da6896a3049024b8ce97d89",
+      "leading": "systems/034_s07.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 7,
+      "stem": "034_s07"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_8",
+        "u10+u11*beta_8",
+        "u20+u21*beta_8"
+      ],
+      "elapsed_seconds": 0.007874,
+      "exact_coefficient_equations": 9621,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/034_s08.in",
+      "input_sha256": "9ddaeeffe4aa9d8e02722aee687fe29b5625d9c74aad54a6e134cf37ddeb8f86",
+      "leading": "systems/034_s08.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 8,
+      "stem": "034_s08"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_9",
+        "u10+u11*beta_9",
+        "u20+u21*beta_9"
+      ],
+      "elapsed_seconds": 0.008269,
+      "exact_coefficient_equations": 10668,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/034_s09.in",
+      "input_sha256": "d414854984e3e9b6b2423008b9183e694f230c712be7009b25c9bbe89ff7fa6b",
+      "leading": "systems/034_s09.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 9,
+      "stem": "034_s09"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_10",
+        "u10+u11*beta_10",
+        "u20+u21*beta_10"
+      ],
+      "elapsed_seconds": 0.00727,
+      "exact_coefficient_equations": 14659,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/034_s10.in",
+      "input_sha256": "371bedf01ad1d2a1f64bab73048a58431b12ce08f841f6e7f235f893048ed4e3",
+      "leading": "systems/034_s10.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 10,
+      "stem": "034_s10"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_11",
+        "u10+u11*beta_11",
+        "u20+u21*beta_11"
+      ],
+      "elapsed_seconds": 0.007566,
+      "exact_coefficient_equations": 33416,
+      "frame_indices": [
+        0,
+        3,
+        4
+      ],
+      "frame_names": [
+        "x",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/034_s11.in",
+      "input_sha256": "371bedf01ad1d2a1f64bab73048a58431b12ce08f841f6e7f235f893048ed4e3",
+      "leading": "systems/034_s11.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 11,
+      "stem": "034_s11"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_1",
+        "u10+u11*beta_1",
+        "u20+u21*beta_1"
+      ],
+      "elapsed_seconds": 0.007521,
+      "exact_coefficient_equations": 785,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/123_s01.in",
+      "input_sha256": "c3c640fb8e2b1925ae6047265aee40f34eb60419b05b0c1c93aec043c8d23fc0",
+      "leading": "systems/123_s01.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 1,
+      "stem": "123_s01"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_2",
+        "u10+u11*beta_2",
+        "u20+u21*beta_2"
+      ],
+      "elapsed_seconds": 0.007467,
+      "exact_coefficient_equations": 1362,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/123_s02.in",
+      "input_sha256": "a25e9531c91899a221f7e269acc13f4bb920889aa0757ffecfc91720a48c3450",
+      "leading": "systems/123_s02.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 2,
+      "stem": "123_s02"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_3",
+        "u10+u11*beta_3",
+        "u20+u21*beta_3"
+      ],
+      "elapsed_seconds": 0.018846,
+      "exact_coefficient_equations": 1598,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/123_s03.in",
+      "input_sha256": "f6fda13345baa83862326dfdd2cde2f5f2bb3cf1abb1ed4dc84afad057748e71",
+      "leading": "systems/123_s03.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 3,
+      "stem": "123_s03"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_4",
+        "u10+u11*beta_4",
+        "u20+u21*beta_4"
+      ],
+      "elapsed_seconds": 0.00734,
+      "exact_coefficient_equations": 2470,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/123_s04.in",
+      "input_sha256": "cfce9b2deae5c49b3657e3a29fc27eab4b4e76381556e1c218f0b147ad4e8710",
+      "leading": "systems/123_s04.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 4,
+      "stem": "123_s04"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_5",
+        "u10+u11*beta_5",
+        "u20+u21*beta_5"
+      ],
+      "elapsed_seconds": 0.007836,
+      "exact_coefficient_equations": 3529,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/123_s05.in",
+      "input_sha256": "5a2b8b68a6d084df40c0568379f1cbe6c8ba9e258974a5ad6cfcdbd9b24d1e95",
+      "leading": "systems/123_s05.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 5,
+      "stem": "123_s05"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_6",
+        "u10+u11*beta_6",
+        "u20+u21*beta_6"
+      ],
+      "elapsed_seconds": 0.0073,
+      "exact_coefficient_equations": 3351,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/123_s06.in",
+      "input_sha256": "2d00f55bc22ebe9b67a1d269590bafc6802d5624557037ec677053deb4dde837",
+      "leading": "systems/123_s06.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 6,
+      "stem": "123_s06"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_7",
+        "u10+u11*beta_7",
+        "u20+u21*beta_7"
+      ],
+      "elapsed_seconds": 0.007222,
+      "exact_coefficient_equations": 4570,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/123_s07.in",
+      "input_sha256": "3c492577b1bdb6b0aa9c70e0fe44a34b3a4bcf2e0b8e82bb71b422c0b0fd7c30",
+      "leading": "systems/123_s07.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 7,
+      "stem": "123_s07"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_8",
+        "u10+u11*beta_8",
+        "u20+u21*beta_8"
+      ],
+      "elapsed_seconds": 0.007362,
+      "exact_coefficient_equations": 6280,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/123_s08.in",
+      "input_sha256": "ea715c43e7d9e6615396bdd9b041be9d2b88778e2ab7915ed3e0839eebda5943",
+      "leading": "systems/123_s08.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 8,
+      "stem": "123_s08"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_9",
+        "u10+u11*beta_9",
+        "u20+u21*beta_9"
+      ],
+      "elapsed_seconds": 0.008015,
+      "exact_coefficient_equations": 6895,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/123_s09.in",
+      "input_sha256": "27adcc1e67e25fe594ca29d150ad2ff4c621656c4885a2a34aad5e7954e07a08",
+      "leading": "systems/123_s09.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 9,
+      "stem": "123_s09"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_10",
+        "u10+u11*beta_10",
+        "u20+u21*beta_10"
+      ],
+      "elapsed_seconds": 0.007408,
+      "exact_coefficient_equations": 9047,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/123_s10.in",
+      "input_sha256": "92659fe047dcd3cfdbf4acec4d5a4ecf9d58a5ef363725f483d2f1693e626d16",
+      "leading": "systems/123_s10.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 10,
+      "stem": "123_s10"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_11",
+        "u10+u11*beta_11",
+        "u20+u21*beta_11"
+      ],
+      "elapsed_seconds": 0.009274,
+      "exact_coefficient_equations": 19903,
+      "frame_indices": [
+        1,
+        2,
+        3
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "E"
+      ],
+      "good_prime": 101,
+      "input": "systems/123_s11.in",
+      "input_sha256": "4050f3b4cb98691979b177173cc294a8a7bb07730b90e882bf3d627ec3ec0cab",
+      "leading": "systems/123_s11.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 11,
+      "stem": "123_s11"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_1",
+        "u10+u11*beta_1",
+        "u20+u21*beta_1"
+      ],
+      "elapsed_seconds": 0.008967,
+      "exact_coefficient_equations": 1087,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/124_s01.in",
+      "input_sha256": "46de74fc7308595d457e6f0697e50d3bc2e90e65409649972961c6f09403aa21",
+      "leading": "systems/124_s01.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 1,
+      "stem": "124_s01"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_2",
+        "u10+u11*beta_2",
+        "u20+u21*beta_2"
+      ],
+      "elapsed_seconds": 0.007351,
+      "exact_coefficient_equations": 1892,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/124_s02.in",
+      "input_sha256": "d40382e18db38ce2e873bdcd538252b6edbc64ba1f49fb94d79cdc63aa5d54f8",
+      "leading": "systems/124_s02.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 2,
+      "stem": "124_s02"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_3",
+        "u10+u11*beta_3",
+        "u20+u21*beta_3"
+      ],
+      "elapsed_seconds": 0.00781,
+      "exact_coefficient_equations": 2362,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/124_s03.in",
+      "input_sha256": "89ba6c8396e63c97151da4245cc6a16562df9e98bb31638ac754f885e1e4e9ff",
+      "leading": "systems/124_s03.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 3,
+      "stem": "124_s03"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_4",
+        "u10+u11*beta_4",
+        "u20+u21*beta_4"
+      ],
+      "elapsed_seconds": 0.007597,
+      "exact_coefficient_equations": 3682,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/124_s04.in",
+      "input_sha256": "d4888775976e277a79b9d01dbd8c0fd67bf128da27c1f9af3dd3a5b4c67037ed",
+      "leading": "systems/124_s04.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 4,
+      "stem": "124_s04"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_5",
+        "u10+u11*beta_5",
+        "u20+u21*beta_5"
+      ],
+      "elapsed_seconds": 0.006909,
+      "exact_coefficient_equations": 5194,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/124_s05.in",
+      "input_sha256": "a072d7efdca17cbc3a2829178b09a0dd5684f45b0b02fd737be52730136661eb",
+      "leading": "systems/124_s05.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 5,
+      "stem": "124_s05"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_6",
+        "u10+u11*beta_6",
+        "u20+u21*beta_6"
+      ],
+      "elapsed_seconds": 0.007183,
+      "exact_coefficient_equations": 4982,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/124_s06.in",
+      "input_sha256": "3c5e3667578996929e323cd7788bc8c4943c55d174096f091b8cd29c8ad9c439",
+      "leading": "systems/124_s06.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 6,
+      "stem": "124_s06"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_7",
+        "u10+u11*beta_7",
+        "u20+u21*beta_7"
+      ],
+      "elapsed_seconds": 0.007789,
+      "exact_coefficient_equations": 6715,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/124_s07.in",
+      "input_sha256": "17992b2fb43f91e9b95ce7b2a189e287b9389ef3d0448a4ba0dce4296554bde3",
+      "leading": "systems/124_s07.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 7,
+      "stem": "124_s07"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_8",
+        "u10+u11*beta_8",
+        "u20+u21*beta_8"
+      ],
+      "elapsed_seconds": 0.006951,
+      "exact_coefficient_equations": 9074,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/124_s08.in",
+      "input_sha256": "a34db8d6c6bd5dfa3f926cf51263d9901e70b88093ae2cc60a28c96f6017cba7",
+      "leading": "systems/124_s08.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 8,
+      "stem": "124_s08"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_9",
+        "u10+u11*beta_9",
+        "u20+u21*beta_9"
+      ],
+      "elapsed_seconds": 0.00738,
+      "exact_coefficient_equations": 9941,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/124_s09.in",
+      "input_sha256": "d0a36924a081d6d17b3255ecd90791a17b8c8f46f43e35a547217bf0d4a1598b",
+      "leading": "systems/124_s09.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 9,
+      "stem": "124_s09"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_10",
+        "u10+u11*beta_10",
+        "u20+u21*beta_10"
+      ],
+      "elapsed_seconds": 0.007445,
+      "exact_coefficient_equations": 12778,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/124_s10.in",
+      "input_sha256": "3f15f7d13ea7e6fbf74c4399ae2fc176da3bfe12d0eaf9bd6dbf423e637f3f89",
+      "leading": "systems/124_s10.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 10,
+      "stem": "124_s10"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_11",
+        "u10+u11*beta_11",
+        "u20+u21*beta_11"
+      ],
+      "elapsed_seconds": 0.007063,
+      "exact_coefficient_equations": 27171,
+      "frame_indices": [
+        1,
+        2,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "D",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/124_s11.in",
+      "input_sha256": "3e1ed8381dddc107acf323b3e5cea5270a7163acd21e91409777253bdd62ed45",
+      "leading": "systems/124_s11.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 11,
+      "stem": "124_s11"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_1",
+        "u10+u11*beta_1",
+        "u20+u21*beta_1"
+      ],
+      "elapsed_seconds": 0.007344,
+      "exact_coefficient_equations": 1100,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/134_s01.in",
+      "input_sha256": "97f7b6705ad221620276d8788c7cfda8beb84626ec3123c0d0de9d85363d21a6",
+      "leading": "systems/134_s01.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 1,
+      "stem": "134_s01"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_2",
+        "u10+u11*beta_2",
+        "u20+u21*beta_2"
+      ],
+      "elapsed_seconds": 0.006934,
+      "exact_coefficient_equations": 1883,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/134_s02.in",
+      "input_sha256": "fa5730e5ab86762a1d9788a8bcd7443224ead918e9daaab1cba4579566e0d01a",
+      "leading": "systems/134_s02.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 2,
+      "stem": "134_s02"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_3",
+        "u10+u11*beta_3",
+        "u20+u21*beta_3"
+      ],
+      "elapsed_seconds": 0.007233,
+      "exact_coefficient_equations": 2357,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/134_s03.in",
+      "input_sha256": "4c3aff83c48ee867136a924786573f89ae4936c531978f143d40b6875fca0a25",
+      "leading": "systems/134_s03.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 3,
+      "stem": "134_s03"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_4",
+        "u10+u11*beta_4",
+        "u20+u21*beta_4"
+      ],
+      "elapsed_seconds": 0.007152,
+      "exact_coefficient_equations": 3658,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/134_s04.in",
+      "input_sha256": "38448f2d8f35d95d2c1b9e65c8bf833ba9e515117d561855575d919b5bbfb3dd",
+      "leading": "systems/134_s04.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 4,
+      "stem": "134_s04"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_5",
+        "u10+u11*beta_5",
+        "u20+u21*beta_5"
+      ],
+      "elapsed_seconds": 0.007092,
+      "exact_coefficient_equations": 5203,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/134_s05.in",
+      "input_sha256": "8cf3faf0f19e5900ca1739936251815692cfa3db90cbcc247e421d200f761f37",
+      "leading": "systems/134_s05.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 5,
+      "stem": "134_s05"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_6",
+        "u10+u11*beta_6",
+        "u20+u21*beta_6"
+      ],
+      "elapsed_seconds": 0.008178,
+      "exact_coefficient_equations": 4969,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/134_s06.in",
+      "input_sha256": "f82412c045147453c51e18a4f67f471ab68bef0b35edfcab59aff42b4d5d9b24",
+      "leading": "systems/134_s06.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 6,
+      "stem": "134_s06"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_7",
+        "u10+u11*beta_7",
+        "u20+u21*beta_7"
+      ],
+      "elapsed_seconds": 0.007748,
+      "exact_coefficient_equations": 6665,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/134_s07.in",
+      "input_sha256": "2d20cf62ab726e8d5ae165972c35c55a2ce1d9df1afdfcc3cb7626b87bdf0ea0",
+      "leading": "systems/134_s07.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 7,
+      "stem": "134_s07"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_8",
+        "u10+u11*beta_8",
+        "u20+u21*beta_8"
+      ],
+      "elapsed_seconds": 0.008085,
+      "exact_coefficient_equations": 9020,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/134_s08.in",
+      "input_sha256": "6b23807b7660ee431a47b3666d8399c1afb9b019d5285da96df5e937bd4ce578",
+      "leading": "systems/134_s08.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 8,
+      "stem": "134_s08"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_9",
+        "u10+u11*beta_9",
+        "u20+u21*beta_9"
+      ],
+      "elapsed_seconds": 0.008152,
+      "exact_coefficient_equations": 9918,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/134_s09.in",
+      "input_sha256": "c322b152e6303c4c382b115ef294141f639e97072d802b47011c02d2263e6eb2",
+      "leading": "systems/134_s09.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 9,
+      "stem": "134_s09"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_10",
+        "u10+u11*beta_10",
+        "u20+u21*beta_10"
+      ],
+      "elapsed_seconds": 0.008674,
+      "exact_coefficient_equations": 12779,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/134_s10.in",
+      "input_sha256": "93b01fa963e758c8e931bbcd73ea62c5f7a1f75cc9c4fbbfc7c5012f94cbdc76",
+      "leading": "systems/134_s10.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 10,
+      "stem": "134_s10"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_11",
+        "u10+u11*beta_11",
+        "u20+u21*beta_11"
+      ],
+      "elapsed_seconds": 0.007829,
+      "exact_coefficient_equations": 27041,
+      "frame_indices": [
+        1,
+        3,
+        4
+      ],
+      "frame_names": [
+        "C",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/134_s11.in",
+      "input_sha256": "856717b40f2b9da66bdd3562f529864744ae24589589f0e82aa7b7f3b1524c0a",
+      "leading": "systems/134_s11.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 11,
+      "stem": "134_s11"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_1",
+        "u10+u11*beta_1",
+        "u20+u21*beta_1"
+      ],
+      "elapsed_seconds": 0.008116,
+      "exact_coefficient_equations": 1104,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/234_s01.in",
+      "input_sha256": "0cd2cf667b8257b11b79a83e019fee4b97672b061962aedb54da0cb89f5d404a",
+      "leading": "systems/234_s01.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 1,
+      "stem": "234_s01"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_2",
+        "u10+u11*beta_2",
+        "u20+u21*beta_2"
+      ],
+      "elapsed_seconds": 0.008077,
+      "exact_coefficient_equations": 1818,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/234_s02.in",
+      "input_sha256": "5db911f9432e5c39d583b3fb6f776a5641d789e2d3a23230cff5ca1563412281",
+      "leading": "systems/234_s02.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 2,
+      "stem": "234_s02"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_3",
+        "u10+u11*beta_3",
+        "u20+u21*beta_3"
+      ],
+      "elapsed_seconds": 0.00985,
+      "exact_coefficient_equations": 2134,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/234_s03.in",
+      "input_sha256": "0a0fd4c7537c235e8ff468b1cb82a6c3a6d5d02dffd940304f9d33336155ee02",
+      "leading": "systems/234_s03.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 3,
+      "stem": "234_s03"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_4",
+        "u10+u11*beta_4",
+        "u20+u21*beta_4"
+      ],
+      "elapsed_seconds": 0.008195,
+      "exact_coefficient_equations": 3152,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/234_s04.in",
+      "input_sha256": "9d66cbf92a67d04fb37b46f6955a477e50bed182413b0c9e857e6eee3da6d905",
+      "leading": "systems/234_s04.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 4,
+      "stem": "234_s04"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_5",
+        "u10+u11*beta_5",
+        "u20+u21*beta_5"
+      ],
+      "elapsed_seconds": 0.009825,
+      "exact_coefficient_equations": 4369,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/234_s05.in",
+      "input_sha256": "a59d8ab7aefaaa0f1b0374a90efb6aeb10aa72002520c986a2b54a47a1e0e3e8",
+      "leading": "systems/234_s05.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 5,
+      "stem": "234_s05"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_6",
+        "u10+u11*beta_6",
+        "u20+u21*beta_6"
+      ],
+      "elapsed_seconds": 0.008557,
+      "exact_coefficient_equations": 4194,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/234_s06.in",
+      "input_sha256": "490333a4f865250e73fe722d8abc13a5f2b24a90200f9e3f46c68fd399ae9871",
+      "leading": "systems/234_s06.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 6,
+      "stem": "234_s06"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_7",
+        "u10+u11*beta_7",
+        "u20+u21*beta_7"
+      ],
+      "elapsed_seconds": 0.008674,
+      "exact_coefficient_equations": 5615,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/234_s07.in",
+      "input_sha256": "cb934ac44cb800ae7b483d6e591771d6c6278036fa9f23e7a78f176b1bf1add2",
+      "leading": "systems/234_s07.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 7,
+      "stem": "234_s07"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_8",
+        "u10+u11*beta_8",
+        "u20+u21*beta_8"
+      ],
+      "elapsed_seconds": 0.007998,
+      "exact_coefficient_equations": 7565,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/234_s08.in",
+      "input_sha256": "dcf17a1c419b4ed60c7688d5d1dbfd9a1acd8c3f3312ea0dd29813050070d802",
+      "leading": "systems/234_s08.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 8,
+      "stem": "234_s08"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_9",
+        "u10+u11*beta_9",
+        "u20+u21*beta_9"
+      ],
+      "elapsed_seconds": 0.007914,
+      "exact_coefficient_equations": 8274,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/234_s09.in",
+      "input_sha256": "a74f2703afee5bf41fb9910e0eacb122ed1d6fc6239d73745348aae38555c88a",
+      "leading": "systems/234_s09.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 9,
+      "stem": "234_s09"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_10",
+        "u10+u11*beta_10",
+        "u20+u21*beta_10"
+      ],
+      "elapsed_seconds": 0.007944,
+      "exact_coefficient_equations": 10624,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/234_s10.in",
+      "input_sha256": "2907897a97f17f5b7247d657a689bbade98cc7424d3859f67f25da7da5995d3c",
+      "leading": "systems/234_s10.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 10,
+      "stem": "234_s10"
+    },
+    {
+      "ansatz": [
+        "u00+u01*beta_11",
+        "u10+u11*beta_11",
+        "u20+u21*beta_11"
+      ],
+      "elapsed_seconds": 0.011366,
+      "exact_coefficient_equations": 22657,
+      "frame_indices": [
+        2,
+        3,
+        4
+      ],
+      "frame_names": [
+        "D",
+        "E",
+        "K"
+      ],
+      "good_prime": 101,
+      "input": "systems/234_s11.in",
+      "input_sha256": "801fccd296c8389f031e2636d6f71b670ee54336cde21981299dc2b829213d97",
+      "leading": "systems/234_s11.leading.out",
+      "leading_basis_length": 40,
+      "leading_sha256": "ff621894098eb33f472945e8ec02cbc2e9cfa6f277df7c30617b58e8c646b28b",
+      "modular_equation_rank": 40,
+      "projective_special_fibre_empty": true,
+      "pure_powers": {
+        "a0": 3,
+        "a1": 3,
+        "a2": 3,
+        "a3": 3,
+        "a4": 3,
+        "a5": 3
+      },
+      "secondary": 11,
+      "stem": "234_s11"
+    }
+  ]
+}

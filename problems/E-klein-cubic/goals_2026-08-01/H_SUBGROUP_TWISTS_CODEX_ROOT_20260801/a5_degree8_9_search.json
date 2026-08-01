@@ -1,0 +1,186 @@
+{
+  "characteristic_zero_transfer": "Maschke base change at p=89 and properness of each projective landing scheme: geometric emptiness of the special fibre implies emptiness in characteristic zero",
+  "format": "klein-a5-degree8-9-landing-v1",
+  "prime": 89,
+  "records": [
+    {
+      "degrees": {
+        "8": {
+          "chart_certificates": [
+            {
+              "chart": 0,
+              "equation_count": 325,
+              "input": "a5_class_1_degree8_chart_0.sing",
+              "input_sha256": "f4d902e42864cbc51cc862e2c205e9c111f35d778495e7a1f616f30b3a8af148",
+              "transcript": "a5_class_1_degree8_chart_0.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 1,
+              "equation_count": 325,
+              "input": "a5_class_1_degree8_chart_1.sing",
+              "input_sha256": "d10ab9d2414e39e7109fbb0ded49bffd25a67ecb96ebec4b700f7f13b07e3331",
+              "transcript": "a5_class_1_degree8_chart_1.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 2,
+              "equation_count": 325,
+              "input": "a5_class_1_degree8_chart_2.sing",
+              "input_sha256": "957ab5f1d39864bd0bb039a0f5e9f3e81d76f4b879e67f76ae961a4ccdb7d370",
+              "transcript": "a5_class_1_degree8_chart_2.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 3,
+              "equation_count": 325,
+              "input": "a5_class_1_degree8_chart_3.sing",
+              "input_sha256": "7505cc0f715e85c5cfea0487a383c9e6e3550a10071e006a3419660d841f75c3",
+              "transcript": "a5_class_1_degree8_chart_3.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 4,
+              "equation_count": 319,
+              "input": null,
+              "transcript": null,
+              "unit_ideal": true
+            }
+          ],
+          "covariant_dimension": 5,
+          "geometric_landing_scheme_empty_mod_89": true,
+          "landing_equation_count": 325,
+          "parameter_space": "P4"
+        },
+        "9": {
+          "chart_certificates": [
+            {
+              "chart": 0,
+              "equation_count": 300,
+              "input": "a5_class_1_degree9_chart_0.sing",
+              "input_sha256": "e6de6439168c8607b4c11b090fde03a776aea06ac1aaabfe53553d40f9888a7c",
+              "transcript": "a5_class_1_degree9_chart_0.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 1,
+              "equation_count": 300,
+              "input": "a5_class_1_degree9_chart_1.sing",
+              "input_sha256": "1ce2ee443636a2713cd0e298fa9e03a847240a8c60a605595deb1e972b874795",
+              "transcript": "a5_class_1_degree9_chart_1.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 2,
+              "equation_count": 296,
+              "input": null,
+              "transcript": null,
+              "unit_ideal": true
+            }
+          ],
+          "covariant_dimension": 3,
+          "geometric_landing_scheme_empty_mod_89": true,
+          "landing_equation_count": 300,
+          "parameter_space": "P2"
+        }
+      },
+      "label": "A5_class_1"
+    },
+    {
+      "degrees": {
+        "8": {
+          "chart_certificates": [
+            {
+              "chart": 0,
+              "equation_count": 325,
+              "input": "a5_class_2_degree8_chart_0.sing",
+              "input_sha256": "e049c4819317cd7611235f7f0c4cb5d52a11718ad0e4a1f64f2613f41b4ade09",
+              "transcript": "a5_class_2_degree8_chart_0.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 1,
+              "equation_count": 325,
+              "input": "a5_class_2_degree8_chart_1.sing",
+              "input_sha256": "3284dea1f5ae5340849da6df017ebc75154d7651657381b8db4c96cd60a6d200",
+              "transcript": "a5_class_2_degree8_chart_1.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 2,
+              "equation_count": 325,
+              "input": "a5_class_2_degree8_chart_2.sing",
+              "input_sha256": "4e01dfeb2d6450203fe4b0f47f7949802af23214bc4dc494e8c81861de27d370",
+              "transcript": "a5_class_2_degree8_chart_2.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 3,
+              "equation_count": 325,
+              "input": "a5_class_2_degree8_chart_3.sing",
+              "input_sha256": "9a1b0efb2a3c8915667a38f433926d7879f5c7830e78c4beddd126e91999d93a",
+              "transcript": "a5_class_2_degree8_chart_3.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 4,
+              "equation_count": 323,
+              "input": null,
+              "transcript": null,
+              "unit_ideal": true
+            }
+          ],
+          "covariant_dimension": 5,
+          "geometric_landing_scheme_empty_mod_89": true,
+          "landing_equation_count": 325,
+          "parameter_space": "P4"
+        },
+        "9": {
+          "chart_certificates": [
+            {
+              "chart": 0,
+              "equation_count": 300,
+              "input": "a5_class_2_degree9_chart_0.sing",
+              "input_sha256": "586d9211871c5cf0e89394f912184b67bfa0f691516a9e0736b710b0057b4ab4",
+              "transcript": "a5_class_2_degree9_chart_0.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 1,
+              "equation_count": 300,
+              "input": "a5_class_2_degree9_chart_1.sing",
+              "input_sha256": "6ae0764fe1943cc9f9c3d4515f38c8ab1b47beee978df5aa7a0aa77158f1bea0",
+              "transcript": "a5_class_2_degree9_chart_1.txt",
+              "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+              "unit_ideal": true
+            },
+            {
+              "chart": 2,
+              "equation_count": 300,
+              "input": null,
+              "transcript": null,
+              "unit_ideal": true
+            }
+          ],
+          "covariant_dimension": 3,
+          "geometric_landing_scheme_empty_mod_89": true,
+          "landing_equation_count": 300,
+          "parameter_space": "P2"
+        }
+      },
+      "label": "A5_class_2"
+    }
+  ],
+  "scope": "complete homogeneous A5-covariant parameter spaces in degrees 8 and 9"
+}

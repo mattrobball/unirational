@@ -1,0 +1,138 @@
+{
+  "baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "commit_consumed": "80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c",
+  "counterexample": {
+    "field": "C((s))((t))",
+    "gradient_at_point": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "index_argument": "line divisor gives index|3; genus-one index 1 gives a K-point; no K-point; hence index=3",
+    "plane_cubic": "s*y**3 + t*z**3 + x**3",
+    "possible_minimal_tie": [
+      "x^3",
+      "s*y^3"
+    ],
+    "rational_point": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "residue_obstruction": "v_s(-s)=1 is not divisible by 3",
+    "section_substitution": {
+      "q": 0,
+      "w": 0
+    },
+    "smoothness_radical_certificates": [
+      "3*x^3 = x*Y_x-(w/2)*Y_w",
+      "w^3 = w*Y_x-(3*x/2)*Y_w",
+      "Y_y=3*s*y^2, Y_z=3*t*z^2, Y_q=3*q^2"
+    ],
+    "t_valuation_residues_mod_3": {
+      "s*y^3": 0,
+      "t*z^3": 1,
+      "x^3": 0
+    },
+    "threefold": "q**3 + s*y**3 + t*z**3 + w**2*x + x**3"
+  },
+  "exit": "T-ROUTE-REFUTED",
+  "missing_arrow": "C_fix(K_proj)=empty =/=> X_gen(K_proj)=empty (no accepted theorem)",
+  "problem_e_headline": "OPEN",
+  "schema": "klein-cubic-target-branch-route-refutation-v1",
+  "scope": {
+    "does_not_prove": [
+      "X_gen(K_proj) is empty",
+      "X_gen(K_proj) has a point",
+      "the Klein cubic is or is not G-unirational",
+      "ed_C(PSL(2,F_11)) equals 3 or 4"
+    ],
+    "proves": [
+      "the advertised BR-T-NEG continuation is unavailable for the fixed-frame plane cubic",
+      "index three of a smooth coordinate plane section does not formally imply pointlessness of a smooth cubic threefold",
+      "the commissioned target-branch route exits T-ROUTE-REFUTED"
+    ]
+  },
+  "source_markers": {
+    "bridge_audit": [
+      {
+        "line": 30,
+        "text": "has a **broken first arrow**. The abstract idempotent is Morita / structure"
+      },
+      {
+        "line": 33,
+        "text": "distinguished Fano section. The missing bridge is the simultaneous"
+      },
+      {
+        "line": 34,
+        "text": "isotropy condition for the descended five-plane `H_T \u2282 Herm_3(D)`."
+      }
+    ],
+    "fixed_frame_index": [
+      {
+        "line": 16,
+        "text": "The full fixed-frame Pfaffian plane cubic descends to `F`; over this field it"
+      },
+      {
+        "line": 20,
+        "text": "This is not a no-point theorem over `K_proj`. The curve relevant to the"
+      }
+    ],
+    "fixed_frame_terminality": [
+      {
+        "line": 204,
+        "text": "C(K_proj) \u2260 \u2205  =/=>  X is G-unirational"
+      },
+      {
+        "line": 199,
+        "text": "| **Scope warning** | this produces a projector for the **fixed-frame** Pfaffian chart, not automatically a common isotropic line of `H_T` or a point of `F_{14,T}`. Path F only claims `C(K_proj)\u2260\u2205`. Bridge to Klein unirationality is a separate arrow outside this packet. |"
+      }
+    ],
+    "goal": [
+      {
+        "line": 87,
+        "text": "If any arrow is unavailable at the stated generality, repair it first or return `T-BRIDGE-BLOCKED` with a precise counterexample/gap."
+      },
+      {
+        "line": 154,
+        "text": "Use this only after producing an exact horizontal divisor of degree prime to three, a genuine \\(K_{\\rm proj}\\)-point, or another theorem that destroys the proposed negative implication."
+      }
+    ],
+    "idempotent_dictionary": [
+      {
+        "line": 88,
+        "text": "**not** a Fano point and **not** a Klein point."
+      },
+      {
+        "line": 233,
+        "text": "| `h_i(q,q)=0` (5 eqs on `D\u00b2`) | Fano point | common isotropic line | **unknown** (live gate) |"
+      }
+    ],
+    "repair": [
+      {
+        "line": 470,
+        "text": "The auxiliary Pfaffian characteristic cubic in Sym(A,sigma)"
+      },
+      {
+        "line": 474,
+        "text": "This is not a point of \\(F_{14,T}\\) or of the generic Klein twist. The `FAIL-SCOPE` bridge audit is authoritative."
+      }
+    ]
+  },
+  "source_sha256": {
+    "bridge_audit": "0c9cf64c0a7c367286afd2636bf8f1c8dc432df8616075fb4d6434dcf0d16031",
+    "current_paths": "664bd6fcc01908c4cea126a05eab2dec50fba8c6bcb191f68e7f69b330647ed6",
+    "fixed_frame_index": "9e392ab2d72ab545d453c6d8220091ccc072a250aa16256b6d407b0b2d2b85fb",
+    "fixed_frame_terminality": "606794be144d89c24fe8f0593ff775812c2cd1b325361e6bbbdf2a8b01e73677",
+    "goal": "145f74e92ca59aff0aa7c8ddefc8bb2e2d3b440a52f1b858029ddc75d05171ce",
+    "handoff": "748e5fda516777708511c4683c73e0cd50a5aa7f1847d845281fa330f3f4f6ca",
+    "idempotent_dictionary": "d1194af309c13b46ce1c4d5d9c3d24a17ab5308b619559ea82a0bcea79fdefd8",
+    "repair": "c7cc9d822885726c5dc6b8168e3a1cf55ab6a5f929b3c8ea16e3f77bd3528e54"
+  },
+  "t0_subexit": "T-BRIDGE-BLOCKED",
+  "valid_arrow": "ind(C_fix/k(D))=3 => C_fix(K_proj)=empty by proper specialization at k(R)=k(D)"
+}

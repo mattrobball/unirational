@@ -1,0 +1,161 @@
+{
+  "boundary_divisor": "D_L=(l1-42*l0)(l1-58*l0)(l1-66*l0)",
+  "prime": 67,
+  "records": [
+    {
+      "D_L_times_degree_minus_3_dimension": 0,
+      "boundary_power": 7,
+      "central_equation_rank": 3,
+      "central_kernel_dimension": 0,
+      "line_degree": 0,
+      "point_degree": 16,
+      "residual_rank_on_central_kernel": 0,
+      "source_dimension": 3,
+      "survivor_dimension_after_residual": 0,
+      "survivor_equals_D_L_multiple": true
+    },
+    {
+      "D_L_times_degree_minus_3_dimension": 0,
+      "boundary_power": 7,
+      "central_equation_rank": 8,
+      "central_kernel_dimension": 0,
+      "line_degree": 1,
+      "point_degree": 16,
+      "residual_rank_on_central_kernel": 0,
+      "source_dimension": 8,
+      "survivor_dimension_after_residual": 0,
+      "survivor_equals_D_L_multiple": true
+    },
+    {
+      "D_L_times_degree_minus_3_dimension": 0,
+      "boundary_power": 7,
+      "central_equation_rank": 8,
+      "central_kernel_dimension": 3,
+      "line_degree": 2,
+      "point_degree": 16,
+      "residual_rank_on_central_kernel": 3,
+      "source_dimension": 11,
+      "survivor_dimension_after_residual": 0,
+      "survivor_equals_D_L_multiple": true
+    },
+    {
+      "D_L_times_degree_minus_3_dimension": 3,
+      "boundary_power": 7,
+      "central_equation_rank": 8,
+      "central_kernel_dimension": 6,
+      "line_degree": 3,
+      "point_degree": 16,
+      "residual_rank_on_central_kernel": 3,
+      "source_dimension": 14,
+      "survivor_dimension_after_residual": 3,
+      "survivor_equals_D_L_multiple": true
+    },
+    {
+      "D_L_times_degree_minus_3_dimension": 8,
+      "boundary_power": 7,
+      "central_equation_rank": 8,
+      "central_kernel_dimension": 11,
+      "line_degree": 4,
+      "point_degree": 16,
+      "residual_rank_on_central_kernel": 3,
+      "source_dimension": 19,
+      "survivor_dimension_after_residual": 8,
+      "survivor_equals_D_L_multiple": true
+    },
+    {
+      "D_L_times_degree_minus_3_dimension": 11,
+      "boundary_power": 7,
+      "central_equation_rank": 8,
+      "central_kernel_dimension": 14,
+      "line_degree": 5,
+      "point_degree": 16,
+      "residual_rank_on_central_kernel": 3,
+      "source_dimension": 22,
+      "survivor_dimension_after_residual": 11,
+      "survivor_equals_D_L_multiple": true
+    },
+    {
+      "D_L_times_degree_minus_3_dimension": 0,
+      "boundary_power": 8,
+      "central_equation_rank": 3,
+      "central_kernel_dimension": 0,
+      "line_degree": 0,
+      "point_degree": 17,
+      "residual_rank_on_central_kernel": 0,
+      "source_dimension": 3,
+      "survivor_dimension_after_residual": 0,
+      "survivor_equals_D_L_multiple": true
+    },
+    {
+      "D_L_times_degree_minus_3_dimension": 0,
+      "boundary_power": 8,
+      "central_equation_rank": 8,
+      "central_kernel_dimension": 0,
+      "line_degree": 1,
+      "point_degree": 17,
+      "residual_rank_on_central_kernel": 0,
+      "source_dimension": 8,
+      "survivor_dimension_after_residual": 0,
+      "survivor_equals_D_L_multiple": true
+    },
+    {
+      "D_L_times_degree_minus_3_dimension": 0,
+      "boundary_power": 8,
+      "central_equation_rank": 8,
+      "central_kernel_dimension": 3,
+      "line_degree": 2,
+      "point_degree": 17,
+      "residual_rank_on_central_kernel": 3,
+      "source_dimension": 11,
+      "survivor_dimension_after_residual": 0,
+      "survivor_equals_D_L_multiple": true
+    },
+    {
+      "D_L_times_degree_minus_3_dimension": 3,
+      "boundary_power": 8,
+      "central_equation_rank": 8,
+      "central_kernel_dimension": 6,
+      "line_degree": 3,
+      "point_degree": 17,
+      "residual_rank_on_central_kernel": 3,
+      "source_dimension": 14,
+      "survivor_dimension_after_residual": 3,
+      "survivor_equals_D_L_multiple": true
+    },
+    {
+      "D_L_times_degree_minus_3_dimension": 8,
+      "boundary_power": 8,
+      "central_equation_rank": 8,
+      "central_kernel_dimension": 11,
+      "line_degree": 4,
+      "point_degree": 17,
+      "residual_rank_on_central_kernel": 3,
+      "source_dimension": 19,
+      "survivor_dimension_after_residual": 8,
+      "survivor_equals_D_L_multiple": true
+    },
+    {
+      "D_L_times_degree_minus_3_dimension": 11,
+      "boundary_power": 8,
+      "central_equation_rank": 8,
+      "central_kernel_dimension": 14,
+      "line_degree": 5,
+      "point_degree": 17,
+      "residual_rank_on_central_kernel": 3,
+      "source_dimension": 22,
+      "survivor_dimension_after_residual": 11,
+      "survivor_equals_D_L_multiple": true
+    }
+  ],
+  "scope": "Finite split-F67 reconstruction of the central evaluation map. The low-degree residual divisibility equality stops after the finite residual point module; this is not an all-degree or characteristic-zero headline conclusion.",
+  "symbolic_order": 5,
+  "tested_boundary_powers": [
+    7,
+    8
+  ],
+  "tested_line_degrees": [
+    0,
+    5
+  ],
+  "transverse_degree": 9
+}

@@ -206,10 +206,13 @@ def _specialized_cubic_cached(A: int, B: int, Y: int, Z: int, prime: int, zeta: 
         return [_cyclotomic_residue(item, prime, zeta) for item in payload[name]]
 
     A, B, Y, Z = (value % prime for value in (A, B, Y, Z))
+    # The five-form coordinate is T=Z+kappa*A^2 with kappa=-11/18.
+    # Here Z is the invariant f12/f3^4 used by the degree-six field packet.
+    T = (Z - 11 * pow(18, -1, prime) * A * A) % prime
     q0, qA, qY = row("q0"), row("qA"), row("qY")
     r0, rA, rB, rY, rZ = row("r0"), row("rA"), row("rB"), row("rY"), row("rZ")
     q = [(q0[i] + A * qA[i] + Y * qY[i]) % prime for i in range(3)]
-    r = [(r0[i] + A * rA[i] + B * rB[i] + Y * rY[i] + Z * rZ[i]) % prime for i in range(4)]
+    r = [(r0[i] + A * rA[i] + B * rB[i] + Y * rY[i] + T * rZ[i]) % prime for i in range(4)]
     return tuple(q), tuple(r)
 
 

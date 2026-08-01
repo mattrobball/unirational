@@ -1,0 +1,36 @@
+{
+  "schema": "q-schur-quartic-frontier-v2",
+  "characteristic": 0,
+  "input_closed_point_degree": 55,
+  "input_closed_point_stabilizer": "D12",
+  "hyperplane_section": "smooth cubic surface over K_Schur",
+  "surface_index": 1,
+  "voisin_alternative": [
+    "K_Schur-rational point",
+    "effective zero-cycle of degree 4"
+  ],
+  "no_point_consequence": {
+    "degree_4_cycle": "one integral separable closed point",
+    "galois_action": "primitive on four embeddings",
+    "possible_galois_closure_groups": ["A4", "S4"],
+    "linear_span": "P3",
+    "intersection_with_schur_splitting_field": "K_Schur",
+    "linearly_disjoint_from_schur_splitting_field": true,
+    "cubic_resolvent": {
+      "degree": 3,
+      "point_exists_after_base_change": true,
+      "galois_closure_group_by_quartic_group": {
+        "A4": "C3",
+        "S4": "S3"
+      }
+    }
+  },
+  "source": {
+    "author": "Claire Voisin",
+    "title": "Rank 2 vector bundles and degrees of points of del Pezzo surfaces",
+    "arxiv": "2509.17996v2",
+    "result": "Theorem 1.5 and Remarks 1.6-1.7",
+    "url": "https://arxiv.org/abs/2509.17996"
+  },
+  "headline": "OPEN"
+}

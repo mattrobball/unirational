@@ -1,0 +1,207 @@
+{
+  "format": "Q-SCHUR-PRIMITIVE-QUARTIC-GEOMETRY-GATES-v1",
+  "balestrieri_3_8": {
+    "hypothesis": "simple field extension of degree 4",
+    "simple_means_monogenic_not_a_geometric_simplicity_condition": true,
+    "applies_to_characteristic_zero_primitive_quartic": true,
+    "general_residual_polynomial_degrees": [
+      2,
+      5
+    ],
+    "full_span_twisted_cubic_residual_degree": 5,
+    "no_point_branch_intersection_partition": [
+      4,
+      5
+    ],
+    "quartic_factor_multiplicity": 1,
+    "quintic_factor_irreducible": true,
+    "same_lift_reverse_link": [
+      5,
+      4
+    ],
+    "canonical_iteration": [
+      4,
+      5,
+      4
+    ]
+  },
+  "degree_five_successor": {
+    "residual_polynomial_degrees": [
+      1,
+      4,
+      7
+    ],
+    "possible_point_degrees_from_factor_extraction": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "no_point_branch": [
+      4,
+      7
+    ],
+    "strict_degree_descent_forced": false
+  },
+  "twisted_cubic_restriction": {
+    "source_dimension": 20,
+    "target_dimension": 10,
+    "rank": 10,
+    "weight_multiplicities": {
+      "0": 1,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 2,
+      "8": 1,
+      "9": 1
+    },
+    "surjective": true,
+    "example_quartic_coefficients_ascending": [
+      1,
+      -1,
+      0,
+      0,
+      1
+    ],
+    "example_quintic_coefficients_ascending": [
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "example_product_coefficients_ascending": [
+      -1,
+      0,
+      1,
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      0,
+      1
+    ],
+    "quartic_irreducible_mod": 2,
+    "quintic_irreducible_mod": 3,
+    "mechanism_scope": "Arbitrary binary quartic-quintic products occur as restrictions of cubic forms; this does not exhibit a pointless smooth cubic surface."
+  },
+  "degree_55_postulation": {
+    "input_hilbert_function_degrees_0_to_6": [
+      1,
+      4,
+      10,
+      19,
+      31,
+      45,
+      55
+    ],
+    "ambient_dimensions": [
+      1,
+      4,
+      10,
+      20,
+      35,
+      56,
+      84
+    ],
+    "ideal_dimensions": [
+      0,
+      0,
+      0,
+      1,
+      4,
+      11,
+      29
+    ],
+    "proper_carrier_dimensions_on_cubic_surface": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      9
+    ],
+    "first_proper_carrier_degree": 5,
+    "unique_quintic_carrier": true,
+    "quintic_carrier_curve_degree": 15,
+    "quintic_carrier_curve_genus": 31,
+    "canonical_degree_on_carrier": 60,
+    "canonical_sections_vanishing_on_Z55": 0
+  },
+  "complete_intersection_gate_for_Z55_plus_quartic": {
+    "contained_length": 59,
+    "minimum_proper_hypersurface_degrees": [
+      5,
+      5
+    ],
+    "minimum_complete_intersection_length": 75,
+    "minimum_residual_length": 16,
+    "residual_one_requires_product_of_degrees": 20,
+    "residual_two_integrality_possible": false
+  },
+  "high_contact_successor": {
+    "formula": "3*d-4*m",
+    "residual_one_pairs_d_le_20": [
+      [
+        3,
+        2
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        11,
+        8
+      ],
+      [
+        15,
+        11
+      ],
+      [
+        19,
+        14
+      ]
+    ],
+    "residual_two_pairs_d_le_20": [
+      [
+        2,
+        1
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        14,
+        10
+      ],
+      [
+        18,
+        13
+      ]
+    ],
+    "degree_2_conic_case_excluded_by_full_span": true,
+    "first_unexcluded_residual_one_pair": [
+      3,
+      2
+    ],
+    "first_unexcluded_residual_two_pair": [
+      6,
+      4
+    ],
+    "existence_proved": false
+  },
+  "boundary": "The exact 4+5 link, its 5-to-4 reverse, postulation gates, and contact arithmetic do not turn the signed degree-one zero-cycle into an effective rational point."
+}

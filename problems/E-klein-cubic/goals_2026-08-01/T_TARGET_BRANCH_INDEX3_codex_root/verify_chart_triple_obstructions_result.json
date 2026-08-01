@@ -1,0 +1,138 @@
+{
+  "checks": {
+    "PA/PB/PY": {
+      "Delta": 100,
+      "P": 46,
+      "all_named_gates_nonzero": true,
+      "hensel_conclusion": "with A=A0+s and u=u0+t, unique Z_101[[s,t]] lift solving the triple; P and gates remain units",
+      "point": [
+        2,
+        59,
+        46,
+        33,
+        3
+      ]
+    },
+    "PA/PB/PZ": {
+      "Delta": 12,
+      "P": 27,
+      "all_named_gates_nonzero": true,
+      "hensel_conclusion": "with A=A0+s and u=u0+t, unique Z_101[[s,t]] lift solving the triple; P and gates remain units",
+      "point": [
+        63,
+        20,
+        77,
+        21,
+        35
+      ]
+    },
+    "PA/PY/PZ": {
+      "Delta": 13,
+      "P": 7,
+      "all_named_gates_nonzero": true,
+      "hensel_conclusion": "with A=A0+s and u=u0+t, unique Z_101[[s,t]] lift solving the triple; P and gates remain units",
+      "point": [
+        63,
+        47,
+        2,
+        63,
+        35
+      ]
+    },
+    "PB/PY/PZ": {
+      "Delta": 78,
+      "P": 64,
+      "all_named_gates_nonzero": true,
+      "hensel_conclusion": "with A=A0+s and u=u0+t, unique Z_101[[s,t]] lift solving the triple; P and gates remain units",
+      "point": [
+        2,
+        76,
+        12,
+        65,
+        3
+      ]
+    },
+    "Pu/PA/PB": {
+      "Delta": 6,
+      "P": 71,
+      "all_named_gates_nonzero": true,
+      "hensel_conclusion": "with A=A0+s and u=u0+t, unique Z_101[[s,t]] lift solving the triple; P and gates remain units",
+      "point": [
+        63,
+        19,
+        46,
+        19,
+        35
+      ]
+    },
+    "Pu/PA/PY": {
+      "Delta": 48,
+      "P": 25,
+      "all_named_gates_nonzero": true,
+      "hensel_conclusion": "with A=A0+s and u=u0+t, unique Z_101[[s,t]] lift solving the triple; P and gates remain units",
+      "point": [
+        63,
+        9,
+        43,
+        91,
+        35
+      ]
+    },
+    "Pu/PA/PZ": {
+      "Delta": 58,
+      "P": 32,
+      "all_named_gates_nonzero": true,
+      "hensel_conclusion": "with A=A0+s and u=u0+t, unique Z_101[[s,t]] lift solving the triple; P and gates remain units",
+      "point": [
+        2,
+        33,
+        27,
+        87,
+        3
+      ]
+    },
+    "Pu/PB/PY": {
+      "Delta": 27,
+      "P": 80,
+      "all_named_gates_nonzero": true,
+      "hensel_conclusion": "with A=A0+s and u=u0+t, unique Z_101[[s,t]] lift solving the triple; P and gates remain units",
+      "point": [
+        5,
+        43,
+        18,
+        77,
+        7
+      ]
+    },
+    "Pu/PB/PZ": {
+      "Delta": 96,
+      "P": 2,
+      "all_named_gates_nonzero": true,
+      "hensel_conclusion": "with A=A0+s and u=u0+t, unique Z_101[[s,t]] lift solving the triple; P and gates remain units",
+      "point": [
+        63,
+        74,
+        23,
+        41,
+        35
+      ]
+    },
+    "Pu/PY/PZ": {
+      "Delta": 50,
+      "P": 28,
+      "all_named_gates_nonzero": true,
+      "hensel_conclusion": "with A=A0+s and u=u0+t, unique Z_101[[s,t]] lift solving the triple; P and gates remain units",
+      "point": [
+        5,
+        44,
+        71,
+        91,
+        7
+      ]
+    }
+  },
+  "mathematical_implication": "Nonsingular multivariate Hensel over Z_101[[s,t]], after setting A=A0+s and u=u0+t, lifts each witness over an injective copy of Q(A,u). Since P is a unit at the lift, the localized triple strictly contains the full singular scheme after characteristic-zero base change.",
+  "primitive_P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+  "schema": "klein-t-chart-triple-hensel-obstructions-verify-v1",
+  "status": "ACCEPT"
+}

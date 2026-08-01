@@ -1,0 +1,14 @@
+ring R=67,(L,A,Y,T),dp;
+option(redSB);
+ideal I=27*A^3 + 12*A^2*L - 4*A^2*Y + 17*A*L^2 - 6*A*L*T - 15*A*L*Y - 12*A*L + 20*A*Y^2 + 4*L^3 + 21*L^2*T + 31*L^2*Y - 25*L^2 + 12*L*T^2 + 10*L*T*Y - 19*L*T - 32*L*Y^2 + 20*L*Y - 19*L,
+12*A^2 + 34*A*L - 6*A*T - 15*A*Y - 12*A + 12*L^2 + 42*L*T + 62*L*Y - 50*L + 12*T^2 + 10*T*Y - 19*T - 32*Y^2 + 20*Y - 19,
+81*A^2 + 24*A*L - 8*A*Y + 17*L^2 - 6*L*T - 15*L*Y - 12*L + 20*Y^2,
+-12*A*L - 25*L^2 - 19*L*T + 20*L*Y - 38*L,
+-4*A^2 - 15*A*L + 40*A*Y + 31*L^2 + 10*L*T - 64*L*Y + 20*L,
+-6*A*L + 21*L^2 + 24*L*T + 10*L*Y - 19*L;
+ideal G=std(I);
+print("DIM="+string(dim(G)));
+poly n=reduce(1,G);
+if (n==0) { print("UNIT=1"); } else { print("UNIT=0"); }
+print("INFINITY_D_SMOOTH_B_P67_DONE");
+quit;

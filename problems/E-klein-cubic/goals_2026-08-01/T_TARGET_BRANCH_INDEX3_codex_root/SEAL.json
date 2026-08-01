@@ -1,0 +1,27 @@
+{
+  "artifacts_sha256": {
+    "INPUT_AUDIT.md": "26a1dd3c34320f1dca253578d72aead1e79154661a3647ebae5c5525a2fc3ee0",
+    "REQUIREMENTS.md": "34e950d52aee153161cd52fcbf5f91e59c3a3b7945e78b89467ccb0819e14f5a",
+    "SCRATCH_SCOPE.md": "a930c06c1ef6e5a34081f3ed5ec68592c9995dc63428ef7200dc55abbc3026b4",
+    "STATUS.md": "c5f31fabec36f0532af464b69fd9b96f6b25bff668b5e53473818b9dec7a698a",
+    "T0_BRIDGE_LEDGER.md": "00436d1776c97cbcc2117cb6f1d5c8a0d0235373a00254258c7a27f412b935f6",
+    "THEOREM.md": "f13680a13d9b0340b76cbbf964e333494467697dc38c166d7ed55021354ff3f4",
+    "WORK_SCOPE.md": "dad83f8d882c8fa8753702d195f02d58c0e17fc18eaa622cf9ba26e2444e9b33",
+    "produce_route_refutation.py": "39ca4813b530cb94266294e1bc20de9b5faeba094256a08db3f4173b1e8393e9",
+    "proof_payload.json": "370539475b29176a0b6e6c44742bd5e832f466e02f1bad4480d53d92911b509d",
+    "verify_route_refutation.py": "918690c288a029308a428888df8b05e64cde6cae31dead859171e0ea8d7b6cfe"
+  },
+  "commit_consumed": "80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c",
+  "exit": "T-ROUTE-REFUTED",
+  "schema": "klein-cubic-target-branch-route-refutation-seal-v1",
+  "sources_sha256": {
+    "bridge_audit": "0c9cf64c0a7c367286afd2636bf8f1c8dc432df8616075fb4d6434dcf0d16031",
+    "current_paths": "664bd6fcc01908c4cea126a05eab2dec50fba8c6bcb191f68e7f69b330647ed6",
+    "fixed_frame_index": "9e392ab2d72ab545d453c6d8220091ccc072a250aa16256b6d407b0b2d2b85fb",
+    "fixed_frame_terminality": "606794be144d89c24fe8f0593ff775812c2cd1b325361e6bbbdf2a8b01e73677",
+    "goal": "145f74e92ca59aff0aa7c8ddefc8bb2e2d3b440a52f1b858029ddc75d05171ce",
+    "handoff": "748e5fda516777708511c4683c73e0cd50a5aa7f1847d845281fa330f3f4f6ca",
+    "idempotent_dictionary": "d1194af309c13b46ce1c4d5d9c3d24a17ab5308b619559ea82a0bcea79fdefd8",
+    "repair": "c7cc9d822885726c5dc6b8168e3a1cf55ab6a5f929b3c8ea16e3f77bd3528e54"
+  }
+}

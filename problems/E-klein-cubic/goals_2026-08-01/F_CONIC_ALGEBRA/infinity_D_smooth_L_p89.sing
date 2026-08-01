@@ -1,0 +1,15 @@
+ring R=89,(A,B,Y,T),dp;
+option(redSB);
+ideal I=44*A^3 + 15*A^2*Y + 21*A^2 - 3*A*B + 43*A*T + 21*A*Y^2 - 9*A*Y - 15*A - 41*B^2 - 41*B*T + 21*B*Y + 30*B + 12*T^2 - 34*T*Y + 15*T + 41*Y^2 - 11*Y - 41,
+21*A^2 - 3*A*B + 43*A*T - 9*A*Y - 30*A - 41*B^2 - 41*B*T + 21*B*Y + 60*B + 12*T^2 - 34*T*Y + 30*T + 41*Y^2 - 22*Y - 123,
+132*A^2 + 30*A*Y + 42*A - 3*B + 43*T + 21*Y^2 - 9*Y - 15,
+-3*A - 82*B - 41*T + 21*Y + 30,
+15*A^2 + 42*A*Y - 9*A + 21*B - 34*T + 82*Y - 11,
+43*A - 41*B + 24*T - 34*Y + 15;
+ideal G=std(I);
+print("DIM="+string(dim(G)));
+if (size(G)<=20) { print("BASIS="); print(G); }
+poly n=reduce(1,G);
+if (n==0) { print("UNIT=1"); } else { print("UNIT=0"); }
+print("INFINITY_D_SMOOTH_L_P89_DONE");
+quit;

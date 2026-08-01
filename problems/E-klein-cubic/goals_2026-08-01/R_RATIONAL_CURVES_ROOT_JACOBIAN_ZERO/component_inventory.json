@@ -1,0 +1,99 @@
+{
+  "packet": "R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO",
+  "field": "K_proj = C(P(W))^PSL2(F11)",
+  "torsor": "Spec C(P(W)) / Spec K_proj",
+  "cutoff": {
+    "e0": 5,
+    "reason": "degrees 2 and 3 have exact residual/theta descriptions; degrees 4 and 5 have all-smooth-cubic component and general Abel-Jacobi fibre theorems, with the distinguished canonical zero fibres left explicit"
+  },
+  "degrees": [
+    {
+      "degree": 1,
+      "component": "Fano surface of lines",
+      "dimension": 2,
+      "K_status": "empty",
+      "proof": "binding generic-twist no-line theorem in RESOLUTION.md"
+    },
+    {
+      "degree": 2,
+      "component": "geometrically integral conics",
+      "dimension": 4,
+      "K_status": "empty",
+      "proof": "span plane plus residual K-line"
+    },
+    {
+      "degree": 3,
+      "component": "closure of smooth twisted cubics",
+      "dimension": 6,
+      "abel_jacobi_image": "theta divisor",
+      "generic_fibre": "P2",
+      "K_status": "a K-Hilbert point implies X_T(K) is nonempty",
+      "proof": "J_T(K)=0 and the theta desingularization has exceptional divisor X_T"
+    },
+    {
+      "degree": 4,
+      "component": "smooth geometrically rational quartics",
+      "dimension": 8,
+      "abel_jacobi": "dominant; general conventional fibre irreducible unirational of dimension 3",
+      "canonical_map": "a_4(C) = AJ(3[C] - 4H^2)",
+      "K_status": "every twisted K-point lies over canonical zero and forces X_T(K) nonempty by the secant bridge",
+      "open_boundary": "the distinguished canonical zero fibre is not identified or pointed"
+    },
+    {
+      "degree": 5,
+      "component": "smooth geometrically rational quintics",
+      "dimension": 10,
+      "abel_jacobi": "dominant; general conventional fibre irreducible unirational of dimension 5",
+      "canonical_map": "a_5(C) = AJ(3[C] - 5H^2)",
+      "K_status": "every twisted K-point lies over canonical zero and forces X_T(K) nonempty by the secant bridge",
+      "open_boundary": "the distinguished canonical zero fibre is not identified or pointed"
+    }
+  ],
+  "higher_degrees": {
+    "elliptic_quintics": "open; requires exact residual descent",
+    "rational_degree_at_least_6": "outside the audited small-degree component theorem; canonical zero fibre and K-point open",
+    "degree_55_incidence": "open and field-sensitive"
+  },
+  "auxiliary_residual_components": [
+    {
+      "degree": 4,
+      "genus": 1,
+      "component": "smooth quartic elliptic curves",
+      "dimension": 8,
+      "geometry": "smooth connected; birationally a P4-bundle over a P2-bundle over the Fano surface",
+      "K_status": "empty",
+      "proof": "canonical Aut(X)-equivariant residual-line morphism to the Fano surface contradicts the binding no-line theorem"
+    },
+    {
+      "degree": 5,
+      "genus": 1,
+      "component": "smooth elliptic quintics",
+      "dimension": 10,
+      "geometry": "irreducible; conventional Abel-Jacobi map dominant with general irreducible unirational fibre of dimension 5",
+      "descent": "for Weil-Chatelet class alpha, the degree-5 polarization gives 5alpha=0 while a relative Pic^2 point gives 2alpha=0; together they split E, so the scroll choice is already a point construction"
+    },
+    {
+      "degree": 5,
+      "genus": 2,
+      "component": "smooth quintic genus-2 curves",
+      "dimension": 10,
+      "geometry": "normalization smooth connected; rational 8-fold fibres over the Fano surface",
+      "K_status": "empty",
+      "proof": "quadric-cubic residual K-line contradicts the binding no-line theorem"
+    }
+  ],
+  "all_degree_secant_bridge": {
+    "input": "a geometrically integral K_proj-curve on X_T with genus-zero normalization",
+    "construction": "a K-rational anticanonical divisor of degree 2 spans a K-secant line; cubic residuation gives a degree-1 point",
+    "result": "X_T(K_proj) is nonempty",
+    "splitness_required": false
+  },
+  "fixed_jacobian": {
+    "result": "twist J_T(K_proj) has exactly the zero point",
+    "certificate": "fixed_jacobian_payload.json",
+    "producer": "produce_fixed_jacobian.py",
+    "independent_verifier": "verify_fixed_jacobian.py"
+  },
+  "headline": "OPEN",
+  "exit": "R-HILBERT-COMPONENT-STRUCTURAL"
+}

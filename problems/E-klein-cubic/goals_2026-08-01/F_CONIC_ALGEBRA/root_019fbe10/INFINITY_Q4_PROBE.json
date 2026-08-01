@@ -1,0 +1,123 @@
+{
+  "prime": 89,
+  "quartic": "22472*A**3 - 1070916*A**2*L + 5088*A**2*Y + 2400*A*B*L + 17003880*A*L**2 + 1200*A*L*T - 159408*A*L*Y + 288*A*Y**2 + 48*B**2*L - 38952*B*L**2 + 48*B*L*T + 288*B*L*Y - 89951985*L**3 - 19476*L**2*T + 1246968*L**2*Y + 12*L*T**2 + 144*L*T*Y - 4320*L*Y**2",
+  "quartic_terms": 18,
+  "records": [
+    {
+      "chart": "L",
+      "kind": "base",
+      "unit": false
+    },
+    {
+      "chart": "A",
+      "kind": "base",
+      "unit": false
+    },
+    {
+      "chart": "B",
+      "kind": "base",
+      "unit": false
+    },
+    {
+      "chart": "Y",
+      "kind": "base",
+      "unit": false
+    },
+    {
+      "chart": "T",
+      "kind": "base",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "L",
+      "plane_chart": "X",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "L",
+      "plane_chart": "y",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "L",
+      "plane_chart": "w",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "A",
+      "plane_chart": "X",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "A",
+      "plane_chart": "y",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "A",
+      "plane_chart": "w",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "B",
+      "plane_chart": "X",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "B",
+      "plane_chart": "y",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "B",
+      "plane_chart": "w",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "Y",
+      "plane_chart": "X",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "Y",
+      "plane_chart": "y",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "Y",
+      "plane_chart": "w",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "T",
+      "plane_chart": "X",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "T",
+      "plane_chart": "y",
+      "unit": false
+    },
+    {
+      "kind": "incidence",
+      "parameter_chart": "T",
+      "plane_chart": "w",
+      "unit": false
+    }
+  ],
+  "zeta": 2
+}

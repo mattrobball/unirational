@@ -1,0 +1,11 @@
+ring R=(89,r),(X,w),dp;
+option(redSB);
+ideal I=X^3 + X*r^2*w^2 - 10*X*r^2*w - 35*X*r^2 - 7*X*w^2 + 16*X*w - 14*X + 10*r^2*w^3 + 30*r^2*w^2 + 4*r^2*w - 14*r^2 + 17*w^3 - 32*w^2 + 22*w + 30,
+23*X*w^2 - 23*X*w + 28*X - 41*r*w^3 - 27*r*w^2 - 9*r*w - 17*r + 15*w^3 + 11*w^2 - 25*w + 19,
+28*w^3 - 27*w^2 + 6*w - 22;
+ideal G=std(I);
+print("DIM="+string(dim(G)));
+poly n=reduce(1,G);
+if (n==0) { print("UNIT=1"); } else { print("UNIT=0"); print(G); }
+print("INFINITY_NET_BASEPOINT_y_P89_DONE");
+quit;

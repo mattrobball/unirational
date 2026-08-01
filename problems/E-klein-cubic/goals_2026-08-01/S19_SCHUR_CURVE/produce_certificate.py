@@ -14,6 +14,7 @@ HERE = Path(__file__).resolve().parent
 PROBLEM = HERE.parents[1]
 REPOSITORY = PROBLEM.parents[1]
 PAYLOAD = HERE / "emptiness_certificate.json"
+CONSUMED_COMMIT = "80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c"
 
 SOURCES = {
     "goals_2026-08-01/GOAL_S19_SCHUR_CURVE.md": (
@@ -35,13 +36,25 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def repository_head() -> str:
-    return subprocess.check_output(
-        ["git", "-C", str(REPOSITORY), "rev-parse", "HEAD"], text=True
-    ).strip()
+def require_consumed_commit_is_ancestor() -> None:
+    result = subprocess.run(
+        [
+            "git",
+            "-C",
+            str(REPOSITORY),
+            "merge-base",
+            "--is-ancestor",
+            CONSUMED_COMMIT,
+            "HEAD",
+        ],
+        check=False,
+    )
+    if result.returncode != 0:
+        raise RuntimeError("consumed commit is not an ancestor of live HEAD")
 
 
 def build() -> dict:
+    require_consumed_commit_is_ancestor()
     goal = SOURCES["goals_2026-08-01/GOAL_S19_SCHUR_CURVE.md"].read_text()
     audit = SOURCES[
         "certificates/schur_degree19/IMPLICATION_AUDIT.md"
@@ -57,7 +70,7 @@ def build() -> dict:
         "headline": "OPEN",
         "scope": "literal exact target in GOAL_S19_SCHUR_CURVE.md",
         "field": "F = K_Schur",
-        "repository_commit_consumed": repository_head(),
+        "repository_commit_consumed": CONSUMED_COMMIT,
         "goal_file_commit_consumed": (
             "67218b64ed1bf727f13bdcd7639c8651cd374897"
         ),

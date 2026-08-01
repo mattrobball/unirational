@@ -1,0 +1,16 @@
+{
+  "affine_degree": 12,
+  "affine_terms": 519,
+  "linear_root_coefficients_c0_cA_cB_cY_cT": [
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "prime": 67,
+  "projective_degree": 12,
+  "projective_terms": 519,
+  "script": "linear_root_D_0_1_0_0_0_p67.sing",
+  "smoothness_marker_convention": "NF1=0 means the chart singular ideal is the unit ideal"
+}

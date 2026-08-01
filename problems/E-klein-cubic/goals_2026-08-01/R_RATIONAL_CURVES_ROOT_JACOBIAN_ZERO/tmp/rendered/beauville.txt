@@ -1,0 +1,845 @@
+                                                                   Vector bundles on the cubic threefold
+
+                                                                                 Arnaud BEAUVILLE
+
+
+
+                                            Introduction
+
+
+
+
+arXiv:math/0005017v1 [math.AG] 2 May 2000
+                                                   Let X be a smooth cubic hypersurface in P4 . In their seminal paper [C-G],
+                                            Clemens and Griffiths showed that the intermediate Jacobian J(X) , an abelian vari-
+                                            ety defined analytically through Hodge theory, is a fundamental tool to understand
+                                            the geometry of X . They studied the Fano surface F of lines contained in X ,
+                                            proving that the Abel-Jacobi map embeds F into J(X) and induces an isomor-
+                                                           ∼
+                                            phism Alb(F) −→   J(X) . They were able to deduce from this the Torelli theorem
+                                            and the non-rationality of X (a problem which had resisted the efforts of the Italian
+                                            geometers)1.
+                                                   Mumford noticed that one can express J(X) as a Prym variety and thus give an
+                                            alternate proof for the non-rationality of X ([C-G], Appendix C); the other results
+                                            of [C-G] can also be obtained via this approach [B2]. Later Clemens observed that
+                                            one could use the twisted cubics as well, giving an elegant parametrization of the
+                                            theta divisor (see (4.2) below). At this point the cubic threefold could be considered
+                                            as well understood, and the emphasis shifted to other Fano threefolds.
+                                                   On the other hand vector bundles on low-dimensional varieties attracted much
+                                            attention in the last two decades, notably because of their relation with mathematical
+                                            physics. Since rank 2 vector bundles are well-known to be connected to codimension
+                                            2 cycles, it seems obvious to try to relate them to the intermediate Jacobian.
+                                            Surprisingly this was done only recently: to my knowledge the first attempt appears
+                                            in [M-T], followed by [I-M] and [D]. I would like to explain these results in this paper
+                                            and to give some applications.
+                                                   We will look at the simplest possible case, namely stable rank 2 vector bundles
+                                            on X with trivial determinant. Using the isomorphism deg : H4 (X, Z) −→∼
+                                                                                                                      Z we
+                                            consider the second Chern class c2 as a number, which is easily seen to be ≥ 2 .
+                                            This leads us to consider the moduli space M of stable rank 2 vector bundles on
+                                            X with c1 = 0 , c2 = 2 . It is a quasi-projective variety; according to Maruyama it
+                                            admits a natural compactification M consisting of classes of semi-stable sheaves
+                                            with c1 = 0 , c2 = 2 , c3 = 0 . The main result is:
+
+                                            Theorem .− The moduli space M is isomorphic to the intermediate Jacobian of
+                                            X blown up along the Fano surface.
+
+                                            1
+                                                Except the last one, these results had been obtained independently by Tyurin [T1].
+     (See Thm. 6.3 below for a more intrinsic formulation, and Cor. 6.4 for the
+corresponding description of M .)
+     The theorem as stated is due to Druel [D]; the proof relies heavily on the results
+of [M-T] and [I-M], which itself relies on [I]. Since these papers are rather technical
+I thought it worthwile to write a simplified version, insisting on the geometric ideas.
+I have made this note independent of [I], [M-T] and [I-M], but not of [D] to which
+I will have to refer for some delicate technical points.
+     The last sections contain some applications, in particular the construction of a
+completely integrable hamiltonian system related to the situation.
+
+
+1. Vector bundles in M and elliptic quintics
+     For the rest of the paper X denotes a smooth cubic threefold (over C ), and
+M the moduli space of stable rank 2 vector bundles on X with c1 = 0 , c2 = 2 (in
+this situation “stable” simply means H0 (X, E) = 0 ).
+
+Proposition 1.1 [D] .− Let [E] ∈ M . Then:
+  a) H1 (X, E(n)) = H2 (X, E(n)) = 0 for all n ∈ Z ;
+  b) E(1) is spanned by its global sections.
+Sketch of proof : Let S be a general hyperplane section of X . By a result of
+Maruyama, the restriction E|S satisfies H0 (S, E(−1)|S ) = 0 . The crucial point is
+the vanishing of H0 (S, E|S ) . This is somewhat delicate: Druel shows that in any
+case the bundle E(2) is spanned by its global sections. Thus the zero set of a
+general section of E(2) is a smooth curve C . Using Chern classes and cohomology
+computation Druel proves that if H0 (S, E|S ) 6= 0 , C is the projection in P4 (from
+an external point) of a curve of degree 14 and genus 5 in P5 . Such a curve is an
+extremal Castelnuovo curve, so that we know precisely how to describe it; from this
+one deduces that C cannot be contained in a smooth cubic threefold.
+      Thus we have H0 (S, E|S ) = 0 , so a non-zero section s of E(1)|S (which
+exists since χ(E(1)|S ) = 6 ) vanishes along a finite subscheme Z of S , of degree
+c2 (E(1)|S ) = 5 ; moreover one shows that for s general Z consists of 5 distinct
+points. Thus we have an extension
+
+                                       s
+                        0 → OS (−1) −→ E|S −→ IZ (1) → 0 ,
+
+where IZ is the ideal sheaf of Z in S . Since H0 (S, E|S ) = 0 Z is not contained
+in a hyperplane; it follows easily that Z imposes independent conditions to de-
+gree d hypersurfaces for any d ≥ 2 , that is, H1 (S, IZ (d)) = 0 . From the above
+exact sequence we deduce H1 (S, E(n)|S ) = 0 for n ≥ 1 ; since χ(E|S ) = 0 and
+H0 (S, E|S ) = H2 (S, E|S ) = 0 , we have also H1 (S, E|S ) = 0 , and we conclude that
+H1 (S, E(n)|S ) = 0 for all n by Serre duality. This together with the exact sequence
+
+                         0 → E(n − 1) −→ E(n) −→ E(n)|S → 0
+
+shows that the natural map Hi (X, E(n − 1)) → Hi (X, E(n)) is surjective for i = 1
+and injective for i = 2 . Since H1 (X, E(n)) and H2 (X, E(n)) vanish for |n| ≫ 0 ,
+assertion a) follows.
+     We have in particular H1 (X, E) = H2 (X, E(−1)) = 0 ; the space H3 (X, E(−2))
+is dual to H0 (X, E) , which is 0 by stability. Thus the sheaf F := E(1) is 0-regular
+in the sense of Mumford, that is, Hi (X, F(−i)) = 0 for i > 0 . By an easy induction
+argument using hyperplane sections, this implies that F is generated by its global
+sections ([M], lect. 14).
+
+     (1.2) Let me mention an amusing corollary; I refer to [B3] for the details.
+The assertion a) above means that E , viewed as an OP4 -module, is arithmetically
+Cohen-Macaulay, that is, the C[X0 , . . . , X4 ]-module       ⊕ H0 (X, E(n)) admits a
+                                                             n∈Z
+length 1 resolution by graded free modules. Using the alternate form det : Λ2 E → OX
+one shows that the resolution can be chosen skew-symmetric; the outcome is:
+
+Corollary 1.3 .− The vector bundle E admits a resolution
+
+                                        M
+                        0 → OP4 (−2)6 −→ OP4 (−1)6 −→ E → 0 ,
+
+where M is a skew-symmetric matrix with linear entries, such that X is defined by
+the equation pf(M) = 0 .
+
+     We will now relate our vector bundles to a certain type of curves on X through
+Serre’s construction.
+
+Proposition 1.4 .− The zero locus of a non-zero section s ∈ H0 (X, E(1)) is
+a locally complete intersection quintic curve Γ ⊂ P4 spanning P4 , with trivial
+canonical bundle and dim H0 (Γ, OΓ ) = 1 . Conversely, given a curve Γ ⊂ X with
+the above properties, there exists a vector bundle E of M and a section s of E(1)
+whose zero locus is Γ ; the pair (E, s) is uniquely determined up to automorphism.
+     If s is general enough, its zero locus is a smooth elliptic quintic curve.
+     We will refer to the curves with the properties stated in the Proposition as
+elliptic quintics. It is not difficult to list all possible configurations for such curves,
+but we will not need this.
+Proof : Since E is stable, any non-zero section s of E(1) vanishes along a l.c.i curve
+Γ ⊂ X , giving rise to an extension
+                                     s
+                          0 → OX −→ E(1) −→ IΓ (2) → 0 ,                           (1.5)
+
+where IΓ is the ideal sheaf of Γ in X . From this exact sequence we get
+  (1.5.a) H0 (X, IΓ (1)) ∼
+                         = H0 (X, E) = 0 by stability, hence Γ spans P4 ;
+  (1.5.b) H1 (X, IΓ ) ∼
+                      = H1 (X, E(−1)) = 0 by (1.1), hence h0 (OΓ ) = 1 ;
+                                                     ∼
+  (1.5.c) by restriction to Γ , an isomorphism NΓ/X −→ E(1)|Γ , which gives by
+the adjunction formula ωΓ ∼= OΓ .
+     The degree of Γ is c2 (E(1)) = 5 . Since E(1) is spanned by its global sections
+(1.1), Γ is smooth for s general.
+     Conversely, let Γ ⊂ X be an elliptic quintic. Since ωΓ is trivial, we can apply
+Serre’s construction to Γ : there are canonical isomorphisms
+
+                  Ext1 (IΓ , ωX ) −→
+                                   ∼
+                                     Ext2 (OΓ , ωX ) −→
+                                                      ∼
+                                                        H0 (Γ, ωΓ ) ,
+
+so up to isomorphism there is a unique non-trivial extension
+                                         s
+                         0 → OX (−1) −→ E −→ IΓ (1) → 0 ;
+
+since a generator of H0 (Γ, ωΓ ) is everywhere 6= 0 , the sheaf E is a rank 2 vector
+bundle with c1 = 0 and c2 = 2 . We have H0 (X, E) ∼     = H0 (X, IΓ (1)) = 0 , so E is
+stable.
+
+Remark 1.6 .− The cubic X contains smooth elliptic curves of degree 5 which are
+contained in a hyperplane, and are therefore not elliptic quintics in our sense: in fact,
+any smooth hyperplane section of X contains many 4-dimensional linear systems
+of such curves. One can still perform Serre’s construction with these curves, but the
+resulting vector bundle E has a non-zero section, hence it is no longer stable.
+
+
+2. The Abel-Jacobi map; infinitesimal study
+      (2.1) Recall that Pic(X) = H2 (X, Z) = Zh , where h is the class of a hyper-
+plane section; we identify H4 (X, Z) to Z via the isomorphism deg : ξ 7→ (ξ · h) .
+For each d ∈ Z , we denote by Jd (X) the translate of J(X) which parametrizes
+1-cycles of degree d on X . The variety Jd (X) is non-canonically isomorphic
+to J(X) = J0 (X) ; morever the map γ 7→ γ + h2 provides canonical isomorphisms
+Jd (X) −→
+        ∼
+          Jd+3 (X) .
+     Let T be an algebraic variety and z an element of the Chow group
+CH2 (X × T) , such that the restriction zt := z|X×{t} has degree d for each t ∈ T ;
+the map t 7→ [zt ] of T into Jd (X) is algebraic. In particular, for each algebraic fam-
+ily (Γt )t∈T of degree d curves on X , the Abel-Jacobi map α : T → Jd (X) given by
+α(t) = [Γt ] is algebraic.
+        Let F be a coherent sheaf on X . Grothendieck has constructed Chern classes
+c̃i (F ) ∈ CHi (X) , which give back the usual Chern classes by applying the cycle map
+CHi (X) → H2i (X, Z) . Let d = c2 (F ) ; the class c̃2 (F ) defines an element of Jd (X) ,
+which we will denote by c2 (F ) . As above, any algebraic family (Ft )t∈T of coherent
+sheaves such that c2 (Ft ) = d for all t ∈ T gives rise to a morphism c2 : T → Jd (X) .
+We have in particular a morphism c2 : M → J2 (X) .
+      (2.2) Let Q be the Hilbert scheme of elliptic quintics contained in X . Serre’s
+construction provides us with a morphism p : Q → M , whose fibre at a point [E]
+of M is the projective space P(H0 (X, E(1))) .
+    The Abel-Jacobi map α : Q → J2 (X) which associates to the curve Γ the class
+of the cycle Γ − h2 factors as
+                                      p
+                             α : Q −−−−→ M −−−2−→ J2 (X) .
+                                                  c
+
+
+
+Proposition 2.3 [M-T] .− The moduli spaces M and Q are smooth; the morphism
+c2 : M → J2 (X) is étale.
+Proof : a) Let us first prove that Q is smooth. Let Γ ∈ Q , and let N be its normal
+bundle in X . Applying the functor HomOP4 ( , OΓ (−1)) to the resolution (1.3),
+and using the isomorphism N∗ ∼
+                             = E∗ (−1)|Γ (1.5.c), we get an exact sequence
+                                                       M
+                  0 → H0 (Γ, N∗ ) −→ H0 (Γ, OΓ )6 −→ H0 (Γ, OΓ (1))6
+                                                                      M
+where the second arrow can be identified with H0 (P4 , OP4 )6 −→ H0 (P4 , OP 4
+                                                                               (1))6 .
+Since it is injective, we get H0 (Γ, N∗ ) = 0 , hence by duality H1 (Γ, N) = 0 . This
+implies that Q is smooth at [Γ] , of dimension h0 (N) = deg N = deg E(1)|Γ = 10 .
+Since Q is a P5 -bundle over M , M is smooth of dimension 5.
+     b) Let us prove now that α is smooth; here I follow closely [M-T]. Let
+Γ be a smooth elliptic quintic in X . The tangent map TΓ (α) maps TΓ (Q) =
+H0 (Γ, N) into Tα(Γ) (J(X)) = H1 (X, Ω2X )∗ ; using Serre duality and the isomorphism
+N∗ ∼= N(−2) , we can view its transpose as t T(α) : H1 (X, Ω2 ) → H1 (Γ, N(−2)) . By
+                                                                  X
+Welters general results [We], this map fits into a commutative diagram:
+
+                                            R
+                         H0 (X, OX (1))   −−−−→        H1 (X, Ω2X )
+                                                          
+                                                          
+                             rΓ 
+                                y
+                                                            t T(α)
+                                                           y
+                                            ∂
+                         H0 (Γ, OΓ (1))   −−−−→       H1 (Γ, N(−2))
+where rΓ is the restriction map, R the Griffiths residue isomorphism, and ∂ the
+coboundary homomorphism associated to the exact sequence of normal bundles
+
+                          0 → N −→ NΓ/P4 −→ OΓ (3) → 0
+
+twisted by OΓ (−2) .
+     Since rΓ and R are bijective, we only have to prove that ∂ is injective; it
+is sufficient to prove H0 (Γ, NΓ/P4 (−2)) = 0 – or, by duality, H1 (Γ, N∗Γ/P4 (2)) = 0 .
+Using the exact sequence
+
+                          0 → N∗Γ/P4 −→ Ω1P4 |Γ −→ ωΓ → 0
+
+and the vanishing of H1 (Γ, Ω1P4 (2)|Γ ) , this is equivalent to the surjectivity of the
+map H0 (Γ, Ω1P4 (2)|Γ ) → H0 (Γ, ωΓ (2)) ; it is enough to prove that the restriction map
+H0 (P4 , Ω1P4 (2)) → H0 (Γ, ωΓ (2)) is onto. But this map can be identified with the
+Wahl map w : Λ2 H0 (Γ, OΓ (1)) → H0 (Γ, ωΓ (2)) , given by w(L ∧ M) = L dM − M dL
+for L, M ∈ H0 (Γ, OΓ (1)) , which is known to be surjective in this case ([W],
+Thm. 4.2).
+     c) Since α and p are smooth, c2 is smooth, hence étale because M and J(X)
+have the same dimension.
+
+
+
+3. Reminder: J(X) as a Prym variety
+      (3.1) We need to recall some standard facts about Prym varieties and the
+corresponding description of J(X) ; the reader familiar with this is advised to go
+directly to the next section.
+     Let C be a curve of genus g and π : C   e → C an étale (connected) double
+covering. We denote by σ the involution which exchanges the two sheets of the
+                                                e , of dimension g − 1 , is called
+covering. The abelian variety P = Im(1 − σ) ⊂ J(C)
+the Prym variety associated to π . It is equipped with a principal polarization θ
+                                                                  e equals 2θ .
+such that the restriction to P of the principal polarization of J(C)
+     To describe the corresponding theta divisor it is convenient to translate the
+situation in the Jacobian J2g−2 ( e
+                                 C) parametrizing divisor classes of degree 2g − 2 .
+The divisor classes [D] such that π∗ D ≡ KC fit into two subvarieties P0 and P1
+          e , both isomorphic to P , characterized by
+of J2g−2 (C)
+
+                        [D] ∈ Pε ⇐⇒ h0 (D) ≡ ε (mod. 2) .
+
+                                           e of effective divisors D such that
+In particular, the subvariety W ⊂ Sym2g−2 (C)
+π∗ D ∈ |KC | has two irreducible components W0 and W1 , according to the par-
+ity of h0 (D) . If D = x1 + . . . + x2g−2 belongs to the component Wε , the divisor
+                                                            e → J2g−2 (C)
+σx1 + x2 + . . . + x2g−2 belongs to W1−ε . The map Sym2g−2 (C)         e in-
+duces morphisms wε : Wε → Pε , whose fibre at a point [D] of Pε is the linear
+system |D| . It follows that
+   • w1 : W1 → P1 is birational;
+   • w0 maps W0 onto a divisor Θ ⊂ P0 , which is a theta divisor on P0 ∼
+                                                                       = P ; the
+map W0 → Θ is generically a P1 -bundle.
+      (3.2) We now recall the description of the intermediate Jacobian J(X) as a
+Prym variety. We pick up a general line ℓ ⊂ X , a plane P2 ⊂ P4 and project X
+from ℓ onto P2 ; we get a morphism f : Xℓ → P2 , where Xℓ is obtained by blowing
+up X along ℓ . The fibre of f over a point p ∈ P2 is a conic, the residual intersection
+of X with the plane hℓ, pi ; this conic is smooth for general p , and becomes singular
+when p lies in the “discriminant curve” ∆ ⊂ P2 , which is a plane quintic. When ℓ
+is general enough, ∆ is smooth, and every singular fibre is a rank 2 conic, that is,
+the union of two distinct lines meeting at one point. These lines are parametrized
+           e with a double étale covering π : ∆
+by a curve ∆                                   e → ∆ ; if π −1 (p) = {x, y} , we have
+f −1 (p) = ℓx ∪ ℓy . As in (3.1) we denote by σ the involution which exchanges x
+and y .
+                          e → J1 (X) gives rise to a morphism of abelian varieties
+      The Abel-Jacobi map ∆
+      e → J(X) . For x ∈ ∆
+ψ : J(∆)                 e , the 1-cycle ℓx + ℓσx is linearly equivalent to h2 − ℓ ,
+hence is independent of p ; thus ψ annihilates π ∗ JC = Ker(1 − σ) , and factors as
+                                                ϕ
+                                   e −−1−σ
+                             ψ : J(∆)   −−→ P −−−−→ J(X) .
+           P
+If D =                               e with π∗ D ≡ 0 , we have σD ≡ −D , hence
+               ni xi is a divisor on ∆
+                                             X
+                                   ϕ(2D) =       ni ℓxi .
+
+     The following result is stated in [C-G], App. C; a proof can be found for instance
+in [T2].
+
+Theorem 3.3 (Mumford) .− ϕ is an isomorphism of principally polarized abelian
+varieties.
+
+
+
+4. Low degree curves on the cubic
+      (4.1) I noticed in [B1] that the Fano surface F of lines contained in X has a
+simple interpretation in terms of the Prym variety; this gives for instance an easy
+proof of the fact (already proved in [C-G]) that the Abel-Jacobi map embeds F
+                                                          3
+into J1 (X) as a surface with minimal cohomology class Θ3! . Iliev made the nice
+observation that the same method can be used to study higher degree curves as well
+[I]. His construction works for general conic bundles, but I will specialize to the cubic
+threefold for simplicity.
+      Conics are not interesting: any conic q determines a line ℓq (the residual inter-
+section with X of the plane spanned by q ) such that q + ℓq = h2 in CH2 (X) ; thus
+the image F2 ⊂ J2 (X) of the variety of conics in X by the Abel-Jacobi map is iso-
+morphic to the Fano surface F ⊂ J1 (X) through the isomorphism J2 (X) −→
+                                                                       ∼
+                                                                         J1 (X)
+given by ξ 7→ h2 − ξ .
+     The next case is twisted cubics. Let T         be the variety of twisted cubics
+contained in X ; we denote by T its closure in the Hilbert scheme of X . Let
+α : T → J(X) be the Abel-Jacobi map t 7→ [t] − h2 .
+
+Proposition 4.2 .− The image of α : T → J(X) is a theta divisor Θ ⊂ J(X) ; its
+generic fibre is isomorphic to P2 .
+    I learned this result from Herb Clemens some 25 years ago; it can be easily
+deduced from the parametrization Θ = F − F given in [C-G]. We will give a different
+proof, to illustrate Iliev’s method and also to open the way for the case of quartic
+curves.
+Proof : (4.2.a) A twisted cubic t ⊂ X is contained in a unique hyperplane section
+St of X ; we replace T by the open and dense subset consisting of those twisted
+cubic for which St is smooth and does not contain ℓ . On St there are 72 nets ( =
+2-dimensional linear systems) of twisted cubics. Thus the Abel-Jacobi map factors
+as α : T → S → J(X) , where S parametrizes pairs (S, L) of a smooth hyperplane
+section S of X , not containing ℓ , and a net of twisted cubics |L| on S . We may
+now add to T the singular elements in each net of cubics, so that T becomes a
+P2 -bundle over S .
+     Let Tℓ be the subvariety of cubics in T which intersect ℓ (that is, which
+pass through the unique point of ℓ ∩ S ); then Tℓ → S is a sub-P1 -bundle of the
+P2 -bundle T → S .
+      Let t ∈ Tℓ ; the projection pℓ maps t to a conic c ∈ P2 . The trace of c on ∆
+             P                                           e over a point pi correspond
+is a divisor   pi ∈ |K∆ | . The two points (xi , yi ) of ∆
+to two lines (ℓxi , ℓyi ) meeting ℓ ; since the projection t → c is one-to-one, there is
+                                                                                 P
+exactly one of these two lines, say ℓyi , which intersects t ; we put D(t) := xi .
+Using the notation of (3.1), this gives a rational map D : Tℓ 99K W .
+  (4.2.b) Claim : D maps Tℓ into one component Wε of W ; the map D : Tℓ 99K Wε
+is birational (in particular, Tℓ is irreducible).
+                P                                               P
+      Let D =      xi be a general element of W ; its push-down   πxi on ∆ is cut
+down by a smooth conic c transversal to ∆ . Let Sc be the pull-back to c of the
+conic bundle f :
+
+                                    Sc ֒−→ X
+                                            ℓ
+                                           
+                                           f
+                                     y      y
+                                     c ֒−→ P2      .
+
+It is a conic bundle over c with 10 singular fibres f −1 (πxi ) = ℓxi ∪ ℓσxi . Let
+b : Sc → SD be the blowing down of ℓx1 , . . . , ℓx10 ; SD is a P1 -bundle over c , thus
+isomorphic to one of the ruled surfaces Fn (n ≥ 0) . Since these surfaces have
+different topological type according to the parity of n , we see that this parity is
+constant when D varies in each component Wε . On the other hand, let us observe
+that the parity of n changes with ε : consider the divisor D′ = σx1 + x2 + . . . + x10 ,
+which belongs to W1−ε (3.1); the surface SD′ is obtained from SD ∼          = Fn by
+performing an elementary transformation on the fibre at π(x1 ) , thus is isomorphic
+to Fn±1 .
+     Let us now specialize to the case where D is the divisor D(t) associated to a
+general twisted cubic t ∈ Tℓ . Then t lies in Sc , and projects down isomorphically
+to a curve t̄ in SD . Let E be the exceptional divisor of Xℓ . Since the canonical
+bundle of Xℓ is f ∗ OP2 (−2) (−E) ∼
+                                  = OX (−Sc − E) , the adjunction formula gives
+                                             ℓ
+
+KSc ≡ −E|Sc . Therefore −KSc · t = E · t = 1 , hence by the adjunction formula
+t2 = −1 in Sc , and therefore also t̄2 = −1 in SD . But for n > 0 the surface Fn
+contains a unique curve of negative square, namely the exceptional section of square
+−n . We conclude that SD is isomorphic to F1 , and that t̄ is its exceptional section;
+moreover the points of SD which are blown up by b do not lie on t̄ .
+     Thus all components of Tℓ are mapped into the same component Wε of W .
+For a general D in Wε , the surface SD is isomorphic to F1 (a small deformation
+of F1 is again isomorphic to F1 ), and the exceptional section t̄ does not pass
+through the points which are blown up. Let t be its proper transform in Sc . We
+have t2 = −1 , hence t · E = 1 ; since t projects isomorphically onto c , it is a twisted
+cubic intersecting ℓ at one point. This provides (birationally) the inverse mapping
+of D .
+  (4.2.c) Claim : We have a commutative diagram
+
+
+                                         D
+                                 Tℓ 9999999K Wε
+                                              
+                                α              wε
+                                  y            y
+                                        ∼
+                                J(X) ←−−−− P ∼
+                                             = Pε
+                                        ϕ
+where the isomorphism P ∼ = Pε is the translation by an appropriate element ξ ∈ Pε .
+                              P
+      Let t ∈ Tℓ , and D(t) =   xi the corresponding divisor on ∆ e . The commuta-
+                                                                 P        
+tivity of the diagram means that the element u(t) := α(t) − ϕ       xi − ξ of J(X)
+is zero. Since ξ is arbitrary and Tℓ is irreducible, it suffices to prove that 2u(t) is
+constant when t varies. In view of the definition of ϕ (3.2), this means that the
+              P
+class of 2t − ℓxi in J−4 (X) is independent of t .
+     Let us denote by f the class of a fibre of the ruling in Pic(SD ) and also in
+Pic(Sc ) . We have −KSD ≡ 2t̄ + kf for some integer k ∈ Z , hence
+                                X
+                         2t −       ℓxi + kf ≡ −KSc ≡ E|Sc .
+
+In CH2 (Xℓ ) the classes f = f ∗ [p] and E · Sc = E · f ∗ [c] are independent of t ,
+                P
+hence so is 2t − ℓxi ; pushing down in CH2 (X) gives our assertion.
+   (4.2.d) The commutativity of the diagram implies that the generic fibre of α is
+birationally isomorphic to that of wε . We know that α has positive-dimensional
+fibres (4.2.a), hence so does wε ; therefore ε = 0 . Now the image of w0 is the
+canonical theta divisor in P0 , and its general fibre is isomorphic to P1 (3.1); thus
+the image of α is a theta divisor Θ ⊂ J(X) , and its general fibre is isomorphic to
+                                        ρ
+P1 . In the factorization α : Tℓ → S −→ J(X) , we see that ρ is birational; therefore
+T is birationally a P2 -bundle over Θ .
+
+Remark 4.3 .− The divisor Θ is the canonical theta divisor of J(X) : its unique
+singular point is 0 (see [B2]). The corresponding divisor ϕ∗ Θ ⊂ P is the translate
+of the canonical theta divisor w0 (W0 ) ⊂ P0 by the element π ∗ O∆ (1) of P0 .
+
+     We now pass to quartic curves. Let Qℓ be the variety of rational normal quartic
+curves which are contained in X and intersect ℓ transversally in 2 points; let Qℓ
+be its closure in the Hilbert scheme of X .
+
+Proposition 4.4 .− The Abel-Jacobi map Qℓ → J4 (X) is surjective; its general
+fibre is isomorphic to P1 .
+Proof : The proof follows closely the proof of (4.2). Let q be a general element of
+Qℓ . Again q projects from ℓ onto a smooth conic c ⊂ P2 , and defines a section
+                                P
+of the ruled surface Sc . Let      pi be the divisor cut down by c on ∆ ; we write as
+                                                              P
+above f −1 (pi ) = ℓxi ∪ ℓyi , with ℓxi ∩ q = ∅ , and D(q) = xi .
+     As in (4.2.b) we consider the image q̄ of q by b : Sc → SD(q) ; since E · q = 2
+we find q̄ 2 = q 2 = 0 . This implies:
+  1) SD(q) is isomorphic to F0 , so by (4.2.b) D(q) lives in W1 ;
+  2) q̄ is one of the lines of the horizontal ruling.
+   Conversely, any general line of this ruling lifts to a quartic q of Qℓ : thus
+D maps Qℓ into W1 , it is dominant, and its general fibre is a rational curve
+(parametrizing the horizontal ruling).
+      As in (4.2.c) we get a commutative diagram
+
+
+                                         D
+                                 Q
+                                 ℓ 9999999K W 1
+                                              
+                                α              w1
+                                 y             y
+                                       ∼
+                                J(X) ←−−−− P ∼
+                                             = P1 .
+                                       ϕ
+
+
+
+      Now w1 is birational, so α is birationally equivalent to D ; the Proposition
+follows.
+
+
+
+5. c2 is of degree one
+      We now turn back to our moduli space M and the map c2 : M → J2 (X) . We
+keep our general line ℓ ⊂ X .
+
+Lemma 5.1 .− Let [E] ∈ M . The subspace of sections in H0 (X, E(1)) which vanish
+along ℓ has dimension 2 .
+Proof : We use the exact sequence (1.3):
+
+                       0 → OP4 (−1)6 −→ OP
+                                         6
+                                           4 −→ E(1) → 0 .
+
+
+                                                                 p
+Restricting to ℓ we get an exact sequence Oℓ (−1)6 −→ Oℓ6 −→ E(1)|ℓ → 0 . The
+kernel K of p is a rank 4 vector bundle on ℓ , of determinant Oℓ (−2) , with a
+surjective map Oℓ (−1)6 →
+                        → K ; this implies H1 (ℓ, K) = 0 , hence dim H0 (ℓ, K) = 2
+by Riemann-Roch; but H0 (ℓ, K) can be identified with the kernel of the restriction
+map H0 (X, E(1)) → H0 (ℓ, E(1)|ℓ ) .
+
+Proposition 5.2 .− c2 induces an isomorphism of M onto an open subset of
+J2 (X) .
+      We will describe precisely this open subset later (Cor. 6.4).
+Proof : Recall that the variety Q of elliptic quintics in X admits a fibration
+p : Q → M , such that the fibre of p at [E] ∈ M is identified with P(H0 (X, E(1))) .
+Let Q′ℓ be the subvariety of Q parametrizing elliptic quintics containing ℓ ; by the
+lemma the restriction of p to Q′ℓ is a sub-P1 -bundle of Q → M . A curve in Q′ℓ is
+the union of ℓ and a quartic curve, so we can view Q′ℓ as a variety parametrizing
+quartic curves in X , containing Qℓ ; the Abel-Jacobi map Q → J2 (X) induces on
+Q′ℓ , up to a constant, the Abel-Jacobi map for this family of quartics. Since Q′ℓ
+is smooth and 6-dimensional (2.3), an easy count of constants shows that Q′ℓ is
+contained in Qℓ . In the diagram
+
+                                 Q′ℓ OO
+                                  _ = OO
+                                      == OOO
+                                        == OOαO
+                                      p ==     OOO
+                                         =       OO'
+                                                c2
+                                 Q         / M        / J2 (X)
+
+
+we know that c2 is étale (Prop. 2.3) and that the fibres of α are connected (Prop.
+4.4), so c2 has degree one, hence is an open embedding.
+
+
+
+6. The boundary of M
+      (6.1) To complete the description of the moduli space M , we must describe
+the sheaves in M which are not locally free. Let us first describe examples of such
+sheaves (the systematic reference for this section is [D]):
+     a) Let c be a smooth conic in X , L the positive generator of Pic(c) (so that
+OX (1)|c ∼
+         = L⊗2 ). Let E be the kernel of the canonical map H0 (c, L) ⊗C OX → L .
+Then E is a torsion free sheaf, with c1 (E) = c3 (E) = 0 and c2 (E) = [c] . It is not
+difficult to check that E is stable.
+     b) Let ℓ, ℓ′ be two lines in X (possibly equal), and let Iℓ , Iℓ′ be their ideal
+sheaves. The sheaf Iℓ ⊕ Iℓ′ is a torsion free sheaf with c1 (E) = c3 (E) = 0 and
+c2 (E) = [ℓ] + [ℓ′ ] . It is clearly semi-stable but not stable.
+     Sheaves of type a) are parametrized by smooth conics of X , hence they form
+a codimension 1 subvariety A of M . Sheaves of type b) are parametrized by the
+symmetric square of F , hence they form an irreducible divisor B ⊂ M .
+
+Proposition 6.2 [D] .− a) M            M = A∪B.
+     b) The moduli space M is smooth and connected.
+     The proof of a) requires a thorough analysis of the relationship between a sheaf
+in M and its bidual; we can only refer the reader to [D].
+     Let us sketch the proof of b). We already know that M is smooth and
+connected; it remains to prove that M is smooth of dimension 5 at each point
+of the boundary. This is easy for a point of A , which corresponds to a stable sheaf
+E of type a): the exact sequence
+
+                                           2
+                                  0 → E → OX →L→0
+gives an inclusion of Ext2X (E, E) into Ext3X (L, E) ; by Serre duality, this last space
+is dual to HomX (E, L(−2)) , which is easily seen to be zero. Thus Ext2X (E, E) = 0
+and dim Ext1X (E, E) = 5 by Riemann-Roch, hence our assertion.
+     Things become more complicated for a sheaf E = Iℓ ⊕ Iℓ′ , which is not stable.
+Using the presentation of M as a GIT quotient of a Quot scheme by a reductive
+group, one shows that it is locally analytically isomorphic to the quotient of
+Ext1X (E, E) by the automorphism group of E . This group is isomorphic to C∗ × C∗
+if ℓ 6= ℓ′ and to PGL(2, C) if ℓ = ℓ′ ; it is not difficult to describe its action on
+Ext1X (E, E) and to check that the quotient is smooth.
+
+     Recall that we denote by F2 ⊂ J2 (X) the image of the variety of conics; it is
+isomorphic to the Fano surface F ⊂ J1 (X) (4.1). The morphism c2 maps B onto
+the divisor F + F in J2 (X) and thus contracts only one irreducible divisor, namely
+A which is mapped onto the smooth surface F2 . By [Mo], Thm. 1, this implies:
+
+Theorem 6.3 [D] .− The map c2 : M → J2 (X) is isomorphic to the blowing up of
+J2 (X) along the Fano surface F2 .
+     Any conic in X is linearly equivalent to a sum of two (incident) lines, so F2
+is contained in F + F ; from (6.2 a) and (6.3) we conclude:
+
+Corollary 6.4 .− c2 induces an isomorphism of M onto the complement of the
+divisor F + F in J2 (X) .
+
+Remark 6.5 .− Let s : Sym2 F → F + F be the sum map, and let θ ∈ H2 (J(X), Z)
+                                                                         3
+be the principal polarization. Since the class of F in H6 (J(X), Z) is θ3! , a standard
+Pontrjagin product computation gives (deg s).[F + F] = 3θ . But s can be identified
+with the restriction of c2 to B , hence it is generically one-to-one by the theorem;
+thus we find that the divisor F + F is algebraically equivalent to 3θ .
+     In particular, F + F is an ample divisor; thus:
+
+Corollary 6.6 .− The variety M is affine.
+
+
+
+7. Applications
+     Our first application is a Torelli-type theorem:
+                                                                           ′
+Proposition 7.1 .− Let X′ be another cubic threefold, and M′ ⊂ M the corre-
+                                                           ′
+sponding moduli spaces. If M and M′ , or M and M , are isomorphic, then X
+and X′ are isomorphic.
+                           ∼
+Proof : Any isomorphism M −→ M′ extends to an isomorphism J2 (X) −→
+                                                                  ∼
+                                                                    J2 (X′ )
+which maps the divisor F + F onto F′ + F′ . By Remark 6.5, the principally
+polarized abelian varieties J(X) and J(X′ ) are isomorphic, hence by the Torelli
+theorem X and X′ are isomorphic.
+                                  ∼         ′                        ∼
+     Similarly, an isomorphism M −→ M induces an isomorphism J2 (X) −→ J2 (X′ )
+mapping F2 onto F′2 , from which we deduce an isomorphism J(X) −→
+                                                                ∼
+                                                                  J(X′ ) map-
+ping F − F = Θ onto F′ − F′ = Θ′ ; again we conclude that X and X′ are isomor-
+phic.
+
+      (7.2) Once we have a parametrization of the intermediate Jacobian, it is natural
+to ask if it can be used to express the theta divisor. Giving a theta divisor in J2 (X)
+is equivalent to choosing a point of J2 (X) (namely the singular point of the divisor);
+it is therefore natural to fix a smooth conic c ⊂ X . Let Θc ⊂ J2 (X) be the translate
+by c of the canonical theta divisor Θ ⊂ J(X) (4.3).
+
+Proposition 7.3 .− Let Mc ⊂ M be the locus of vector bundles E such that E(1)
+has a non-zero section vanishing along c . Then the closure Mc of Mc in M is
+the proper transform of Θc .
+
+Proof : We first observe that h0 (c, E(1)|c ) = 6 for all [E] ∈ M : by an easy count of
+constants, a general section s of E(1) does not vanish on c ; then the exact sequence
+(1.5) gives by restriction to c an exact sequence 0 → Oc → E(1)|c → Oc (2) → 0 ,
+hence our assertion.
+     Thus the elements [E] of Mc are those for which the restriction map
+H0 (X, E(1)) → h0 (c, E(1)|c ) is not bijective. By a well-known construction this con-
+dition defines a divisor in M .
+                                                   p
+     We now consider the factorization α : Q −→ M ֒−→ J2 (X) (2.2). Let Qc be
+the subvariety of Q consisting of elliptic quintics containing c ; we have by definition
+p(Qc ) = Mc . A curve in Qc is the union of c and a curve t of degree 3. Let Tc be
+the variety of twisted cubics in X meeting c transversally at 2 points; we identify it
+to a subvariety of Qc by mapping t to c ∪ t . It is 4-dimensional, and a simple count
+of constants shows that Qc     Tc has dimension ≤ 3 . It follows that Mc = p(Tc ) in
+M.
+     Now by (4.2) α(Tc ) is contained in the divisor Θc ⊂ J2 (X) , and therefore the
+divisor Mc is contained in the restriction of Θc to M ; since the latter is irreducible,
+they coincide, and Mc maps onto Θc in J2 (X) .
+     To conclude we just have to check that Mc does not contain the exceptional
+divisor, that is, that a general sheaf E of type a) (6.1) satisfies H0 (X, Ic E(1)) = 0 ,
+where Ic is the ideal sheaf of c in X . Let us pick up a conic d ⊂ X such that the
+plane spanned by d does not meet c ; let L be the positive generator of Pic(d) , and
+let E be the kernel of the natural map H0 (d, L) ⊗C OX → L . By tensor product
+with Ic (1) we get an exact sequence
+
+                   0 → Ic E(1) → H0 (d, L) ⊗C Ic (1) → L(1) → 0 .
+
+Let V be the image of H0 (X, Ic (1)) in H0 (d, Od (1)) ; by hypothesis it is a base-point
+free 2-dimensional subspace, and H0 (X, Ic E(1)) can be identified with the kernel of
+the canonical map H0 (d, L) ⊗ V −→ H0 (d, L(1)) ; the Koszul exact sequence
+
+                          0 → L(−1) → V ⊗C L → L(1) → 0
+
+gives isomorphisms H0 (X, Ic E(1)) ∼
+                                   = H0 (d, L(−1)) = 0 .
+
+
+
+8. Application: a completely integrable system
+      (8.1) In the introduction of [T3], Tyurin made the following beautiful obser-
+vation. Let X be a Fano threefold, and S a smooth anticanonical divisor in X (so
+that S is a K3 surface). Let MX be the moduli space of stable vector bundles on X
+with fixed rank r and Chern classes c1 , c2 , c3 , and let MS be the moduli space of
+stable vector bundles on S with rank r and Chern classes c1 |S , c2 |S . According to
+Mukai [Mu], MS is smooth and carries a symplectic structure: at a point [F] ∈ MS ,
+the symplectic form on TF (MS ) = H1 (S, End(F)) is given by the cup-product
+
+                                                            Tr
+     H1 (S, End(F)) ⊗ H1 (S, End(F)) −→ H2 (S, End(F)) −→ H2 (S, OS ) −→
+                                                                       ∼
+                                                                         C.
+
+     Let [E] ∈ MX ; assume that
+  a) The restriction of E to S is stable;
+  b) H2 (X, End(E)) = 0 .
+By a) the restriction map r : MX → MS is defined in a neighborhood of [E]. Using b)
+and Serre duality, the exact sequence 0 → End(E) ⊗ KX → End(E) → End(E)|S → 0
+gives rise to a cohomology exact sequence
+
+                               r                     r∗
+        0 → H1 (X, End(E)) −→
+                            ∗
+                              H1 (S, End(E|S )) −→ H1 (X, End(E))∗ → 0 ,
+
+where r∗ is the tangent map to r at [E] and r ∗ its transpose with respect to
+the symplectic form. Therefore r∗ is injective and its image is a maximal isotropic
+subspace; thus r induces an isomorphism of some open neighborhood of [E] in MX
+onto a Lagrangian submanifold of MS .
+      (8.2) In practice, condition b) is usually difficult to check. We now turn back
+to our situation, taking for MX our moduli space M of rank 2 vector bundles on
+the cubic threefold X with c1 = 0 , c2 = 2 . We will show using the previous results
+that MX embeds as a Lagrangian submanifold of the moduli space MS . We will
+even show that this submanifold varies in a Lagrangian fibration (equivalently, a
+completely integrable hamiltonian system) defined on an open subset of MS .
+     We pick a quadric Q ⊂ P4 such that S = X ∩ Q is a smooth K3 surface with
+Pic(S) = Z [De]. We denote by MS be the moduli space of stable rank 2 vector
+bundles on S with c1 = 0 , c2 = 4 .
+
+Lemma 8.3 .− The vector bundles F in MS admitting a resolution
+
+                                            M                p
+                          0 → OQ (−2)6 −→ OQ (−1)6 −→ F → 0 ,
+
+where M is a skew-symmetric matrix with linear entries, form an open subset MoS
+of MS . For such a vector bundle, the matrix M is uniquely determined up to a
+transformation M 7→ AM tA , with A ∈ GL(6, C) .
+Proof : If F admits the above resolution, we have:
+  a) For j = 0 or 1 , the map H0 (S, OS (j))6 → H0 (S, F(j + 1)) deduced from p is
+surjective.
+    b) H1 (S, F(j)) = 0 for j = 0 or 1 .
+       Let N be the kernel of the natural map H0 (S, F(1)) ⊗C OQ → F(1) . In our
+case it is isomorphic to OQ (−1)6 , so:
+    c) The sheaf N(1) is spanned by its global sections.
+       Conditions a), b) and c) define an open subset MoS of MS . Let [F] ∈ MoS ; by
+a), b) and Riemann-Roch we find h0 (S, F(1)) = h0 (Q, N(1)) = 6 ; hence N is a rank
+                                               6
+6 vector bundle on Q , and the surjective map OQ → N(1) must be an isomorphism.
+                                                         M
+Thus we have an exact sequence 0 → OQ (−2)6 −→ OQ (−1)6 −→ F → 0 . Reasoning
+as in [B3], Theorem B, we can choose bases of OQ (−2)6 and OQ (−1)6 such that
+M is skew-symmetric; then the matrix M is uniquely determined up to the action
+of GL(6, C) ([B3], 2.3).
+
+       We now fix our K3 surface S , but allow X to vary in the linear system
+Π (∼                                          o
+   = P5 ) of cubics containing S . For [F] ∈ MS , the cubic pf M = 0 is well
+determined by [F] , and belongs to Π ; we get in this way a morphism H : MoS → Π .
+
+Proposition 8.4 .− H is a Lagrangian fibration 2; the fibre of H at a smooth
+cubic X ∈ Π is isomorphic to the moduli space MX (through the restriction map
+r : MX → MS ). In particular, r induces an isomorphism of MX onto a Lagrangian
+submanifold of MS .
+
+2
+    This means, by definition, that the smooth part of each fibre of H is a Lagrangian submanifold.
+Proof : Let [E] ∈ MX . From the exact sequence 0 → E(−1) → E → E|S → 0 and
+the vanishing of H1 (X, E(−1)) (Prop. 1.1), we get H0 (S, E|S ) = 0 ; since Pic(S) = Z
+this means that E|S is stable.
+    Next let us compute H2 (X, End(E)) . Choosing a general section of E , we
+deduce from the exact sequence (1.5), after tensor product with E ∼
+                                                                  = E∗ , an exact
+sequence
+
+                  0 → E(−1) −→ End(E) −→ E(1) → E(1)|Γ → 0 .
+
+Because Hi (X, E(j)) = 0 for i = 1, 2 , this gives an isomorphism H2 (X, End(E)) −→
+                                                                                  ∼
+
+H1 (Γ, E(1)|Γ ) . Since E(1)|Γ is isomorphic to NΓ/X (1.5.c) and H1 (Γ, NΓ/X ) = 0
+(Prop. 2.3 a)), our assertion follows.
+                                                       M
+     Put F = E|S . The resolution 0 → OP4 (−2)6 −→ OP4 (−1)6 −→ E → 0 (1.3)
+gives by restriction to Q a resolution
+
+                                         M
+                       0 → OQ (−2)6 −→ OQ (−1)6 −→ F → 0                         (8.4.a)
+
+
+hence E|S belongs to H−1 (X) . Conversely, any F ∈ H−1 (X) admits a reso-
+lution (8.4.a), with pf M = 0 on X ; the matrix M defines an injective map
+OP4 (−2)6 → OP4 (−1)6 , whose cokernel is a bundle E ∈ MX such that E|S ∼
+                                                                        = F.
+                                  ∼
+Thus r induces an isomorphism MX −→ H−1 (X) .
+     Finally by (8.1) the smooth part of any fibre of H is Lagrangian.
+
+Remarks 8.5 .− a) The moduli space MS of stable rank 2 bundles on a K3 surface S
+with c1 = 0 , c2 = 4 is a very interesting object (again, c2 = 4 is the smallest value
+for which the moduli space is not empty). O’Grady proved that it is irreducible,
+and admits a smooth compactification M   b S which is holomorphic symplectic [O]. It
+seems that H does not extend to a Lagrangian fibration M   b S → Π ; however it is
+conceivable that it extends to some other smooth birational model of b
+                                                                     MS .
+     b) A lagrangian fibration is the same thing as a completely integrable system: if
+H = (H1 , . . . , H5 ) in some local coordinates system on Π , the functions Hi Poisson
+commute and the hamiltonian vector fields XHi span the tangent space to the fibre
+at each smooth point of H . Since the fibres are open subsets of abelian varieties,
+it seems likely that these vector fields linearize on each fibre, that is, come from
+global vector fields on the abelian variety (such a system is often called algebraically
+completely integrable). To prove this it would be enough to exhibit some partial
+compactification H′ : M′S → Π of H such that H′−1 (X) , for X general in Π , is
+isomorphic to the complement of a subvariety of codimension ≥ 2 in J2 (X) .
+                                  REFERENCES
+
+
+[B1]    A. BEAUVILLE: Sous-variétés spéciales des variétés de Prym. Compositio
+        math. 45 (1981), 357–383.
+[B2]    A. BEAUVILLE: Les singularités du diviseur Θ de la jacobienne intermédiaire
+        de l’hypersurface cubique dans P4 . Algebraic threefolds, LN 947, 190–208;
+        Springer-Verlag, 1982.
+[B3]    A. BEAUVILLE: Determinantal hypersurfaces. Michigan Math. Journal, to
+        appear; preprint math.AG/9910030.
+[C-G]   H. CLEMENS, P. GRIFFITHS: The intermediate Jacobian of the cubic three-
+        fold. Ann. of Math. 95 (1972), 281–356.
+[D]     S. DRUEL: Espace des modules des faisceaux semi-stables de rang 2 et de
+        classes de Chern c1 = 0 , c2 = 2 et c3 = 0 sur une hypersurface cubique
+        lisse de P4 . Preprint math.AG/0002058.
+[De]    P. DELIGNE: Le théorème de Noether. SGA 7 II, LN 340, 328–340; Springer-
+        Verlag, 1973.
+[I]     A. ILIEV: Minimal sections of conic bundles. Boll. Unione Mat. Ital. 2 (1999),
+        401–428.
+[I-M]   A. ILIEV, D. MARKUSHEVICH: The Abel-Jacobi map for a cubic threefold
+        and periods of Fano threefolds of degree 14. Preprint math.AG/9910058.
+[M-T]   D. MARKUSHEVICH, A. TIKHOMIROV: The Abel-Jacobi map of a moduli com-
+        ponent of vector bundles on the cubic threefold. J. of Algebraic Geometry,
+        to appear; preprint math.AG/9809140.
+[Mo]    B. MOISHEZON: On n -dimensional compact complex manifolds having n
+        algebraically independent meromorphic functions III. Amer. Math. Soc.
+        Transl. (2) 63 (1967), 51–177.
+[M]     D. MUMFORD: Lectures on curves on an algebraic surface. Annals of Math.
+        Studies 59. Princeton University Press, 1966.
+[Mu]    S. MUKAI: Symplectic structure of the moduli space of sheaves on an abelian
+        or K3 surface. Invent. Math. 77 (1984), 101–116.
+[O]     K. O’GRADY: Desingularized moduli spaces of sheaves on a K3 . J. Reine
+        Angew. Math. 512 (1999), 49–117.
+[T1]    A. N. TYURIN: The geometry of the Fano surface of a nonsingular cubic
+        F ⊂ P4 and Torelli theorems for Fano surfaces and cubics. Math. USSR
+        Izvestija 5 (1971), 517–546.
+[T2]    A. N. TYURIN: Five lectures on three-dimensional varieties. Russian Math.
+        Surveys 27 (1972), no. 5, 1–53.
+[T3]    A. N. TYURIN: The moduli spaces of vector bundles on threefolds, surfaces
+        and curves I. Preprint, Erlangen, 1990.
+[W]     J. WAHL: Gaussian maps on algebraic curves. J. Diff. Geometry 73 (1990),
+        77–98.
+[We]   G. WELTERS: Abel-Jacobi isogenies for certain types of Fano threefolds.
+       Math. Centre Tracts, 141; Math. Centrum, Amsterdam, 1981.
+
+
+
+                                                      Arnaud BEAUVILLE
+                                                DMA – École Normale Supérieure
+                                                     (UMR 8853 du CNRS)
+                                                         45 rue d’Ulm
+                                                    F-75230 PARIS Cedex 05
+

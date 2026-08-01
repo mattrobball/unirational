@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "exit_code": "S19-NO-CURVE-SCOPED",
+  "headline": "OPEN",
+  "repository_commit_consumed": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+  "goal_file_commit_consumed": "67218b64ed1bf727f13bdcd7639c8651cd374897",
+  "produced_commit": null,
+  "theorem": "For epsilon_0 and epsilon_1, the literal S19 locus satisfying both C subset X_F and BR-SCHUR19-POS proper intersection is empty after every field extension of F.",
+  "scope": "The corrected ambient marked Hilbert problem remains undecided; the Klein-cubic headline remains open.",
+  "proof_paths": [
+    "geometrically integral containment directly contradicts Q3",
+    "I_C + (f3) = I_C makes C intersect X equal C and contradicts Q4"
+  ],
+  "covered_branches": [
+    "epsilon_0",
+    "epsilon_1"
+  ],
+  "deliverable_sha256": {
+    "WORK_SCOPE.md": "13878c287a5f3046cfdaf8905836899559e0fde82c43414b17cd66904c753e86",
+    "STATUS.md": "55db2b7479415c0ca2aedd926de3e1953de553b5dbf8914810635bd2b31156a9",
+    "BRIDGE.md": "ca6fd74c5a46f4af8db719657e5bcbda592e40818e218d5a0f1bc4103a766bf7",
+    "HILBERT_COMPONENTS.md": "1ddb4e36d79a8ed9fc3605662ca6f636f1bb865c50169d4fdae512bb13e692bb",
+    "emptiness_certificate.json": "762ea3c5de81b1a8859a47f7f4f7115344434d7b2887e1319826336ce6a9990f",
+    "produce_certificate.py": "d43ec88ebb57f9d119288ab308f58b497a8258f4e7855a5233ba34bc35b06822",
+    "verify.py": "995d321b5a0c254a6d8db74de20960eebc4b9397a4dec9e076744ee462b8fd25",
+    "README.md": "87e45b57d194b81ea4e49b1b7a0f79f0070476b06738fee4e05f776e0a12dced",
+    "COMPLETION_AUDIT.md": "f9e711015442983756c0821755a267ec228336ea9f3db570fdb4c3278af01d5a"
+  },
+  "authoritative_source_sha256": {
+    "goals_2026-08-01/GOAL_S19_SCHUR_CURVE.md": "e3372fcf56d46d66fd2e818d966d7bff51f6828713c09cf424909919195cc44f",
+    "certificates/schur_degree19/IMPLICATION_AUDIT.md": "2c64e3ff0e917ec89afb2877cee39543b6a666773ef51176fd7bc8526596d6bf",
+    "certificates/schur_degree19/marked_hilbert.json": "161b61e7e94fc32fa1cb579cb7c50a8ecc304aae4e9a773afe5336adf1f09be0",
+    "certificates/schur_degree19/rao_resolutions.json": "dbca9a60622dece5dbb43ca2826538479a55b7cf2b511197a3d07588b34362b2"
+  },
+  "replay": [
+    "python3 produce_certificate.py --check",
+    "python3 verify.py"
+  ],
+  "self_hash": null,
+  "self_hash_note": "SEAL.json is intentionally excluded from its own content-hash map"
+}

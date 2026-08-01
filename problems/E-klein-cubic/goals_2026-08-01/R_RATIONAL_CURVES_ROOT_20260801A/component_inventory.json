@@ -1,0 +1,73 @@
+{
+  "schema": "klein-rational-curve-inventory-v2",
+  "field": "K_proj = C(P(W))^PSL_2(F_11)",
+  "cutoff": 5,
+  "exit": "R-HILBERT-COMPONENT-STRUCTURAL",
+  "headline": "OPEN",
+  "degrees": [
+    {
+      "degree": 1,
+      "locus": "Fano surface of lines",
+      "dimension": 2,
+      "status": "empty",
+      "reason": "binding generic-twist no-line theorem"
+    },
+    {
+      "degree": 2,
+      "locus": "geometrically integral conics",
+      "dimension": 4,
+      "status": "empty",
+      "reason": "span plane and residual K-line"
+    },
+    {
+      "degree": 3,
+      "locus": "plane geometrically rational cubics",
+      "status": "headline-equivalent",
+      "reason": "unique geometric singular point is K-rational"
+    },
+    {
+      "degree": 3,
+      "locus": "generalized twisted cubics",
+      "dimension": 6,
+      "abel_jacobi_image": "theta divisor",
+      "generic_fibre": "P2",
+      "status": "headline-equivalent",
+      "reason": "zero fibre of the theta desingularization is X_T"
+    },
+    {
+      "degree": 4,
+      "locus": "rational normal quartics",
+      "local_dimension": 8,
+      "abel_jacobi_target_point": "q_4",
+      "status": "open",
+      "reason": "the special Klein fibre over q_4 is not identified by the generic-cubic theorem"
+    },
+    {
+      "degree": 5,
+      "locus": "elliptic normal quintics",
+      "dimension": 10,
+      "fibre": "twist of P(V_6^*) = SB(A_proj^op)",
+      "status": "empty",
+      "reason": "the unique possible fibre has Brauer index two"
+    },
+    {
+      "degree": 5,
+      "locus": "geometrically rational quintics",
+      "expected_dimension_at_unobstructed_curve": 10,
+      "status": "open",
+      "reason": "no descended integral Hilbert point or all-smooth-cubic component theorem"
+    }
+  ],
+  "abel_jacobi": {
+    "fixed_group": "J(C)^G = 0",
+    "module_cohomology": "H^1(G,J[3]) = 0",
+    "degree_torsors": "each J_e has exactly one fixed point q_e"
+  },
+  "strict_nonclaims": [
+    "a K_proj-point or nonpoint of the generic Klein twist",
+    "emptiness of rational quartics",
+    "emptiness of rational quintics or higher rational curves",
+    "specialization of a generic-cubic quartic theorem to the Klein cubic",
+    "all-degree exhaustion from cutoff five"
+  ]
+}

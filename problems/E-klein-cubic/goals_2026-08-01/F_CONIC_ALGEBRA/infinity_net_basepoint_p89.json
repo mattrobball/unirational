@@ -1,0 +1,25 @@
+{
+  "prime": 89,
+  "zeta": 2,
+  "net_terms": [
+    15,
+    11,
+    4
+  ],
+  "net_r_degrees": [
+    2,
+    1,
+    0
+  ],
+  "charts": [
+    "infinity_net_basepoint_X_p89.sing",
+    "infinity_net_basepoint_y_p89.sing",
+    "infinity_net_basepoint_w_p89.sing"
+  ],
+  "factor_script": "infinity_net_base_cubic_factor_p89.sing",
+  "smooth_member_scripts": [
+    "infinity_net_smooth_member_X_p89.sing",
+    "infinity_net_smooth_member_y_p89.sing",
+    "infinity_net_smooth_member_w_p89.sing"
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "D_degree": 10,
+  "charts": [
+    {
+      "base_chart": "A",
+      "equations": 14,
+      "msolve_input": "infinity_image_g1_p23_A_X.ms",
+      "point_chart": "X",
+      "singular_script": "infinity_image_g1_p23_A_X.sing",
+      "variables": [
+        "B",
+        "Y",
+        "T",
+        "y",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "A",
+      "equations": 14,
+      "msolve_input": "infinity_image_g1_p23_A_y.ms",
+      "point_chart": "y",
+      "singular_script": "infinity_image_g1_p23_A_y.sing",
+      "variables": [
+        "B",
+        "Y",
+        "T",
+        "X",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "A",
+      "equations": 14,
+      "msolve_input": "infinity_image_g1_p23_A_w.ms",
+      "point_chart": "w",
+      "singular_script": "infinity_image_g1_p23_A_w.sing",
+      "variables": [
+        "B",
+        "Y",
+        "T",
+        "X",
+        "y"
+      ]
+    },
+    {
+      "base_chart": "B",
+      "equations": 16,
+      "msolve_input": "infinity_image_g1_p23_B_X.ms",
+      "point_chart": "X",
+      "singular_script": "infinity_image_g1_p23_B_X.sing",
+      "variables": [
+        "A",
+        "Y",
+        "T",
+        "y",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "B",
+      "equations": 16,
+      "msolve_input": "infinity_image_g1_p23_B_y.ms",
+      "point_chart": "y",
+      "singular_script": "infinity_image_g1_p23_B_y.sing",
+      "variables": [
+        "A",
+        "Y",
+        "T",
+        "X",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "B",
+      "equations": 16,
+      "msolve_input": "infinity_image_g1_p23_B_w.ms",
+      "point_chart": "w",
+      "singular_script": "infinity_image_g1_p23_B_w.sing",
+      "variables": [
+        "A",
+        "Y",
+        "T",
+        "X",
+        "y"
+      ]
+    },
+    {
+      "base_chart": "Y",
+      "equations": 14,
+      "msolve_input": "infinity_image_g1_p23_Y_X.ms",
+      "point_chart": "X",
+      "singular_script": "infinity_image_g1_p23_Y_X.sing",
+      "variables": [
+        "A",
+        "B",
+        "T",
+        "y",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "Y",
+      "equations": 14,
+      "msolve_input": "infinity_image_g1_p23_Y_y.ms",
+      "point_chart": "y",
+      "singular_script": "infinity_image_g1_p23_Y_y.sing",
+      "variables": [
+        "A",
+        "B",
+        "T",
+        "X",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "Y",
+      "equations": 14,
+      "msolve_input": "infinity_image_g1_p23_Y_w.ms",
+      "point_chart": "w",
+      "singular_script": "infinity_image_g1_p23_Y_w.sing",
+      "variables": [
+        "A",
+        "B",
+        "T",
+        "X",
+        "y"
+      ]
+    },
+    {
+      "base_chart": "T",
+      "equations": 14,
+      "msolve_input": "infinity_image_g1_p23_T_X.ms",
+      "point_chart": "X",
+      "singular_script": "infinity_image_g1_p23_T_X.sing",
+      "variables": [
+        "A",
+        "B",
+        "Y",
+        "y",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "T",
+      "equations": 14,
+      "msolve_input": "infinity_image_g1_p23_T_y.ms",
+      "point_chart": "y",
+      "singular_script": "infinity_image_g1_p23_T_y.sing",
+      "variables": [
+        "A",
+        "B",
+        "Y",
+        "X",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "T",
+      "equations": 14,
+      "msolve_input": "infinity_image_g1_p23_T_w.ms",
+      "point_chart": "w",
+      "singular_script": "infinity_image_g1_p23_T_w.sing",
+      "variables": [
+        "A",
+        "B",
+        "Y",
+        "X",
+        "y"
+      ]
+    }
+  ],
+  "g": 1,
+  "logical_use": "empty intersection implies the characteristic-zero singular image is finite",
+  "prime": 23,
+  "scope": "singular-image intersection with h=0 over a finite residue field",
+  "zeta11_residue": 2
+}

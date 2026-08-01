@@ -1,0 +1,32 @@
+{
+  "candidate": null,
+  "characteristic_zero_global_module_dimension": 0,
+  "decision": "EMPTY_BEFORE_LANDING",
+  "degree": 25,
+  "downstream_constraints": {
+    "C3": "vacuous on zero module",
+    "known_compositions": "zero",
+    "landing_identity": "no parameters remain",
+    "marked_elliptic": "vacuous on zero module",
+    "point_link": "vacuous on zero module",
+    "scalar_invariant_multiples": "zero",
+    "triple_line": "vacuous on zero module"
+  },
+  "holdout_89_filtration": [
+    59,
+    3,
+    0
+  ],
+  "landing_equations_after_linear_elimination": 0,
+  "plane_order": 3,
+  "primitive_quotient_dimension": 0,
+  "reason": "the complete characteristic-zero global coefficient module with the selected common symbolic plane order is zero",
+  "residual_degree": 7,
+  "schema": "COV_SELECTED_PAIR_CANDIDATE_V1",
+  "split_67_filtration": [
+    59,
+    3,
+    0
+  ],
+  "stacked_holdout_rank": 189
+}

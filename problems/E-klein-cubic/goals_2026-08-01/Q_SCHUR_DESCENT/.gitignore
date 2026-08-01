@@ -1,0 +1,12 @@
+# The repository-wide rules ignore solver logs and leading-ideal outputs.
+# These exact files are certificate inputs for verify_covariant_attack.py.
+!degree12_primitive*.log
+!degree12_primitive*.out
+!degree12_triple_outputs/*.log
+!degree12_triple_outputs/*.out
+!degree12_nested_outputs/*.log
+!degree12_nested_outputs/*.out
+
+# Bytecode is never part of the packet.
+__pycache__/
+*.pyc

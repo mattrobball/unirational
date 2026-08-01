@@ -1,0 +1,220 @@
+{
+  "D_degree": 10,
+  "charts": [
+    {
+      "base_chart": "h",
+      "nonzero_minors": 14,
+      "point_chart": "X",
+      "script": "projective_minor_g1_p23_h_X.sing",
+      "variables": [
+        "A",
+        "B",
+        "Y",
+        "T",
+        "y",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "h",
+      "nonzero_minors": 14,
+      "point_chart": "y",
+      "script": "projective_minor_g1_p23_h_y.sing",
+      "variables": [
+        "A",
+        "B",
+        "Y",
+        "T",
+        "X",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "h",
+      "nonzero_minors": 14,
+      "point_chart": "w",
+      "script": "projective_minor_g1_p23_h_w.sing",
+      "variables": [
+        "A",
+        "B",
+        "Y",
+        "T",
+        "X",
+        "y"
+      ]
+    },
+    {
+      "base_chart": "A",
+      "nonzero_minors": 14,
+      "point_chart": "X",
+      "script": "projective_minor_g1_p23_A_X.sing",
+      "variables": [
+        "h",
+        "B",
+        "Y",
+        "T",
+        "y",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "A",
+      "nonzero_minors": 14,
+      "point_chart": "y",
+      "script": "projective_minor_g1_p23_A_y.sing",
+      "variables": [
+        "h",
+        "B",
+        "Y",
+        "T",
+        "X",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "A",
+      "nonzero_minors": 14,
+      "point_chart": "w",
+      "script": "projective_minor_g1_p23_A_w.sing",
+      "variables": [
+        "h",
+        "B",
+        "Y",
+        "T",
+        "X",
+        "y"
+      ]
+    },
+    {
+      "base_chart": "B",
+      "nonzero_minors": 14,
+      "point_chart": "X",
+      "script": "projective_minor_g1_p23_B_X.sing",
+      "variables": [
+        "h",
+        "A",
+        "Y",
+        "T",
+        "y",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "B",
+      "nonzero_minors": 14,
+      "point_chart": "y",
+      "script": "projective_minor_g1_p23_B_y.sing",
+      "variables": [
+        "h",
+        "A",
+        "Y",
+        "T",
+        "X",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "B",
+      "nonzero_minors": 14,
+      "point_chart": "w",
+      "script": "projective_minor_g1_p23_B_w.sing",
+      "variables": [
+        "h",
+        "A",
+        "Y",
+        "T",
+        "X",
+        "y"
+      ]
+    },
+    {
+      "base_chart": "Y",
+      "nonzero_minors": 14,
+      "point_chart": "X",
+      "script": "projective_minor_g1_p23_Y_X.sing",
+      "variables": [
+        "h",
+        "A",
+        "B",
+        "T",
+        "y",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "Y",
+      "nonzero_minors": 14,
+      "point_chart": "y",
+      "script": "projective_minor_g1_p23_Y_y.sing",
+      "variables": [
+        "h",
+        "A",
+        "B",
+        "T",
+        "X",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "Y",
+      "nonzero_minors": 14,
+      "point_chart": "w",
+      "script": "projective_minor_g1_p23_Y_w.sing",
+      "variables": [
+        "h",
+        "A",
+        "B",
+        "T",
+        "X",
+        "y"
+      ]
+    },
+    {
+      "base_chart": "T",
+      "nonzero_minors": 14,
+      "point_chart": "X",
+      "script": "projective_minor_g1_p23_T_X.sing",
+      "variables": [
+        "h",
+        "A",
+        "B",
+        "Y",
+        "y",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "T",
+      "nonzero_minors": 14,
+      "point_chart": "y",
+      "script": "projective_minor_g1_p23_T_y.sing",
+      "variables": [
+        "h",
+        "A",
+        "B",
+        "Y",
+        "X",
+        "w"
+      ]
+    },
+    {
+      "base_chart": "T",
+      "nonzero_minors": 14,
+      "point_chart": "w",
+      "script": "projective_minor_g1_p23_T_w.sing",
+      "variables": [
+        "h",
+        "A",
+        "B",
+        "Y",
+        "X",
+        "y"
+      ]
+    }
+  ],
+  "g": 1,
+  "logical_use": "unit ideals lift smoothness to characteristic zero; no point-count inference",
+  "prime": 23,
+  "scope": "projective complete-intersection smoothness over finite residue field",
+  "zeta11_residue": 2
+}

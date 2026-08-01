@@ -1,0 +1,161 @@
+{
+  "consumed_head": "e1fc474a448db9d93df13967a4cef5f9918ff443",
+  "counterexample": {
+    "ambient_cubic": "x^3+s*y^3+t*z^3+w^2*x+q^3",
+    "coordinate_section": "w=q=0",
+    "field": "C((s))((t))",
+    "plane_cubic": "x^3+s*y^3+t*z^3",
+    "plane_cubic_index": 3,
+    "rational_point": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "residual_cube_obstruction": "v_s(-s)=1 mod 3",
+    "t_valuation_residues": [
+      0,
+      0,
+      1
+    ]
+  },
+  "exit": "T-ROUTE-REFUTED",
+  "fields": {
+    "F": "C(A,B,Y,Z)",
+    "K_proj": "C(P(W))^G",
+    "branch_residue": {
+      "e": 2,
+      "f": 1,
+      "residue_fields_equal": true
+    },
+    "extension_degree": 6
+  },
+  "implication_ledger": {
+    "invalid_or_unavailable": [
+      "Morita projector => common isotropic line",
+      "C_fix(K_proj) empty => no Morita projector",
+      "C_fix(K_proj) empty => X_gen(K_proj) empty"
+    ],
+    "valid": [
+      "ind(C_fix/k(D))=3 => C_fix(K_proj)=empty, by proper specialization at residue-degree-one R",
+      "common isotropic line => twisted Fano point => X_gen(K_proj) nonempty",
+      "X_gen(K_proj) empty => negative generic-twist headline"
+    ]
+  },
+  "objects": {
+    "C_fix": "full fixed-frame Pfaffian plane cubic; auxiliary (0,1,2) coordinate-plane model",
+    "X_gen": "genuine generic Klein cubic threefold over K_proj",
+    "headline_source": "common isotropic right D-line for all five descended Hermitian forms",
+    "morita_projector": "sigma-self-adjoint reduced-rank-two idempotent"
+  },
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "problem_e_headline": "OPEN",
+  "schema": "t-target-branch-t0-scope-v1",
+  "sources": {
+    "branch_audit": {
+      "path": "tmp/full_scaled_frame_branch_line_hostile_audit/PROOF_AUDIT.md",
+      "required_markers": [
+        "unique ramified prime with `(e,f)=(2,1)`",
+        "residue degree at this divisor is `m=1`."
+      ],
+      "sha256": "64a47be142f0ea895313c81601836dbd33ce6bcf31674cd70527aae4fee332e9"
+    },
+    "branch_certificate": {
+      "path": "tmp/full_scaled_frame_branch_line_hostile_audit/certificate.json",
+      "required_markers": [
+        "\"generic_ramification_residue_degree_m\": 1",
+        "\"ramified_pairs_e_f\"",
+        "\"scope\": \"there exists a global target branch divisor with m=1; no index-survival or no-point conclusion\""
+      ],
+      "sha256": "594683557ec657f89e107e5582b7622e7339081acdfb7a91bbe3997af46efd05"
+    },
+    "branch_report": {
+      "path": "tmp/full_scaled_frame_branch_line_hostile_audit/REPORT.md",
+      "required_markers": [
+        "ramification residue degree",
+        "generic ramification residue degree is exactly `m=1`",
+        "(e,f)=(2,1)."
+      ],
+      "sha256": "f18620a3c4260649b7fd8aa59804f574461f75b739d1aa85223a4252114ada4b"
+    },
+    "bridge_audit": {
+      "path": "certificates/pfaffian_point/BRIDGE_AUDIT.md",
+      "required_markers": [
+        "**Gate 1 decision:** `FAIL-SCOPE`",
+        "has a **broken first arrow**",
+        "common isotropic right D-line",
+        "Idempotent \u21d2 auxiliary Morita point"
+      ],
+      "sha256": "0c9cf64c0a7c367286afd2636bf8f1c8dc432df8616075fb4d6434dcf0d16031"
+    },
+    "fixed_frame_audit": {
+      "path": "tmp/pfaffian_global_fixed_frame_hostile_audit/PROOF_AUDIT.md",
+      "required_markers": [
+        "the full fixed-frame plane cubic is the generic member",
+        "`C(K_proj)` empty | **not proved**"
+      ],
+      "sha256": "f0d1ecbad97e515e8c4a833d8e449c93a0cd58d98dc9cc8cbfd64bb7c3e94c02"
+    },
+    "fixed_frame_report": {
+      "path": "tmp/pfaffian_global_fixed_frame_hostile_audit/REPORT.md",
+      "required_markers": [
+        "The full fixed-frame Pfaffian plane cubic descends to `F`",
+        "This is not a no-point theorem over `K_proj`.",
+        "does not settle equivariant unirationality"
+      ],
+      "sha256": "9e392ab2d72ab545d453c6d8220091ccc072a250aa16256b6d407b0b2d2b85fb"
+    },
+    "goal": {
+      "path": "goals_2026-08-01/GOAL_T_TARGET_BRANCH_INDEX3.md",
+      "required_markers": [
+        "return `T-BRIDGE-BLOCKED` with a precise counterexample/gap",
+        "another theorem that destroys the proposed negative implication",
+        "not for an auxiliary Pfaffian cubic, a coordinate ternary section"
+      ],
+      "sha256": "145f74e92ca59aff0aa7c8ddefc8bb2e2d3b440a52f1b858029ddc75d05171ce"
+    },
+    "headline_workorder": {
+      "path": "WORKORDER_CAS_HEADLINE.md",
+      "required_markers": [
+        "**Not headline bridges:** emptiness of the auxiliary Morita-projector cubic;",
+        "fixed-frame auxiliary genus-one torsor",
+        "without a separate bridge to `F_{14,T}` or the generic Klein twist"
+      ],
+      "sha256": "2bf3cbbc7ee4bdc5a551e6dee43e761e367f6b47bb3c89b03871c3458108f102"
+    },
+    "post_elo_workorder": {
+      "path": "WORKORDER_POST_ELO_CONSTRUCTION.md",
+      "required_markers": [
+        "**The auxiliary Morita idempotent is not a Klein point.**"
+      ],
+      "sha256": "ae23a212c26e6a11efc4b4cf89cf56fed9cb26f077f95447a1c956dfec1d3c9b"
+    },
+    "repair": {
+      "path": "REPAIR.md",
+      "required_markers": [
+        "This is not a point of \\(F_{14,T}\\) or of the generic Klein twist.",
+        "The `FAIL-SCOPE` bridge audit is authoritative."
+      ],
+      "sha256": "c7cc9d822885726c5dc6b8168e3a1cf55ab6a5f929b3c8ea16e3f77bd3528e54"
+    },
+    "ternary_audit": {
+      "path": "tmp/pfaffian_minimal_ternary_model/PROOF_AUDIT.md",
+      "required_markers": [
+        "the minimal curve has a `K_proj` point | **not proved**",
+        "the minimal curve has no `K_proj` point | **not proved**"
+      ],
+      "sha256": "92c6744d99efc41307633ecbb3fa3f7ee6c2f376f4b7809bdc5578464545f5cb"
+    },
+    "ternary_report": {
+      "path": "tmp/pfaffian_minimal_ternary_model/REPORT.md",
+      "required_markers": [
+        "`(0,1,2)` coordinate plane over `K_proj`",
+        "neither finds a `K_proj` point nor proves that none exists"
+      ],
+      "sha256": "b36d93204a3b62b4e23278fa8df526bbbcddafd814790c653a4a25fb9dd8a507"
+    }
+  },
+  "stopping_rule": "T1--T3 not run because the mandatory T0 headline arrow is unavailable",
+  "t0_subexit": "T-BRIDGE-BLOCKED"
+}

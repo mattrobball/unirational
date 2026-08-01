@@ -1,0 +1,350 @@
+{
+  "covariant_hsop_numerator": {
+    "1": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 4,
+    "9": 2,
+    "10": 4,
+    "11": 4,
+    "12": 5,
+    "13": 4,
+    "14": 5,
+    "15": 5,
+    "16": 3,
+    "17": 4,
+    "18": 3,
+    "19": 3,
+    "20": 2,
+    "21": 2,
+    "22": 2,
+    "23": 1,
+    "24": 1,
+    "26": 1
+  },
+  "decision": "25 first as the first unresolved e>=7 representative, 31 next as the first unresolved e=1 representative, and 35 next as the first unresolved e=5 representative.  Exact Reynolds bases exist in all three degrees.  The selected m>=3 global coefficient modules are zero in characteristic zero; m=1 remains live.",
+  "invariant_hsop_numerator": {
+    "0": 1,
+    "7": 1,
+    "9": 1,
+    "10": 1,
+    "12": 1,
+    "14": 2,
+    "16": 1,
+    "18": 1,
+    "19": 1,
+    "21": 1,
+    "28": 1
+  },
+  "primary_degrees": [
+    3,
+    5,
+    6,
+    8,
+    11
+  ],
+  "ranking": [
+    {
+      "admissible_odd_orders": [
+        {
+          "e": 19,
+          "global_coefficient_status": "live lower-order branch",
+          "m": 1
+        },
+        {
+          "e": 7,
+          "global_coefficient_status": "zero in characteristic zero by the full-rank p=89 Taylor minor",
+          "m": 3
+        }
+      ],
+      "arrangement_scope": {
+        "basis_circuit": "degree_25/covariant_basis_seeds.json",
+        "basis_dimension": 189,
+        "basis_rank_holdout_F89": 189,
+        "basis_rank_split_F67": 189,
+        "characteristic_zero_self_covariant_basis": true,
+        "jet_filtration_holdout_F89": [
+          {
+            "input_dimension": 189,
+            "jet_rank": 130,
+            "kernel_dimension": 59,
+            "order": 0,
+            "unisolvent_rows": 1755
+          },
+          {
+            "input_dimension": 59,
+            "jet_rank": 56,
+            "kernel_dimension": 3,
+            "order": 1,
+            "unisolvent_rows": 3250
+          },
+          {
+            "input_dimension": 3,
+            "jet_rank": 3,
+            "kernel_dimension": 0,
+            "order": 2,
+            "unisolvent_rows": 4500
+          }
+        ],
+        "jet_filtration_split_F67": [
+          {
+            "input_dimension": 189,
+            "jet_rank": 130,
+            "kernel_dimension": 59,
+            "order": 0,
+            "unisolvent_rows": 1755
+          },
+          {
+            "input_dimension": 59,
+            "jet_rank": 56,
+            "kernel_dimension": 3,
+            "order": 1,
+            "unisolvent_rows": 3250
+          },
+          {
+            "input_dimension": 3,
+            "jet_rank": 3,
+            "kernel_dimension": 0,
+            "order": 2,
+            "unisolvent_rows": 4500
+          }
+        ],
+        "landing_equation_count_after_linear_constraints": 0,
+        "lower_order_live_space": {
+          "landing_status": "open in the separate degree-25 support route",
+          "plane_order": 1,
+          "plus_plane_kernel_characteristic_zero": 59,
+          "strict_common_line_kernel_characteristic_zero": 43
+        },
+        "primitive_quotient_dimension": 0,
+        "proof": "the stacked order-0,1,2 Taylor matrix has full column rank modulo 89; therefore its exact characteristic-zero Reynolds-lattice matrix is injective",
+        "scope": "every odd plane order m>=3 in this degree; plane order m=1 is not excluded",
+        "selected_plane_order": 3,
+        "selected_residual_degree": 7,
+        "selected_symbolic_kernel_characteristic_zero": 0
+      },
+      "degree": 25,
+      "full_landing_parameter_cubics": 1143135,
+      "invariant_dimension": 43,
+      "known_quartic_precomposition": false,
+      "known_quartic_reason": "degree is not divisible by four",
+      "landing_target_invariant_dimension": 2343,
+      "primary_frame_option_counts": [
+        13,
+        9,
+        9,
+        7,
+        6
+      ],
+      "priority": 1,
+      "selected_residual_class": "e>=7",
+      "self_covariant_dimension": 189
+    },
+    {
+      "admissible_odd_orders": [
+        {
+          "e": 25,
+          "global_coefficient_status": "live lower-order branch",
+          "m": 1
+        },
+        {
+          "e": 13,
+          "global_coefficient_status": "zero in characteristic zero by the full-rank p=89 Taylor minor",
+          "m": 3
+        },
+        {
+          "e": 1,
+          "global_coefficient_status": "zero in characteristic zero by the full-rank p=89 Taylor minor",
+          "m": 5
+        }
+      ],
+      "arrangement_scope": {
+        "basis_circuit": "degree_31/covariant_basis_seeds.json",
+        "basis_dimension": 410,
+        "basis_rank_holdout_F89": 410,
+        "basis_rank_split_F67": 410,
+        "characteristic_zero_self_covariant_basis": true,
+        "jet_filtration_holdout_F89": [
+          {
+            "input_dimension": 410,
+            "jet_rank": 212,
+            "kernel_dimension": 198,
+            "order": 0,
+            "unisolvent_rows": 2640
+          },
+          {
+            "input_dimension": 198,
+            "jet_rank": 155,
+            "kernel_dimension": 43,
+            "order": 1,
+            "unisolvent_rows": 4960
+          },
+          {
+            "input_dimension": 43,
+            "jet_rank": 43,
+            "kernel_dimension": 0,
+            "order": 2,
+            "unisolvent_rows": 6975
+          }
+        ],
+        "jet_filtration_split_F67": [
+          {
+            "input_dimension": 410,
+            "jet_rank": 212,
+            "kernel_dimension": 198,
+            "order": 0,
+            "unisolvent_rows": 2640
+          },
+          {
+            "input_dimension": 198,
+            "jet_rank": 155,
+            "kernel_dimension": 43,
+            "order": 1,
+            "unisolvent_rows": 4960
+          },
+          {
+            "input_dimension": 43,
+            "jet_rank": 43,
+            "kernel_dimension": 0,
+            "order": 2,
+            "unisolvent_rows": 6975
+          }
+        ],
+        "landing_equation_count_after_linear_constraints": 0,
+        "lower_order_live_space": {
+          "characteristic_zero_intermediate_dimension": "not asserted",
+          "landing_status": "not searched as a complete module in this packet",
+          "plane_order": 1,
+          "plus_plane_kernel_split_F67_and_F89": 198
+        },
+        "primitive_quotient_dimension": 0,
+        "proof": "the stacked order-0,1,2 Taylor matrix has full column rank modulo 89; therefore its exact characteristic-zero Reynolds-lattice matrix is injective",
+        "scope": "every odd plane order m>=3 in this degree; plane order m=1 is not excluded",
+        "selected_plane_order": 5,
+        "selected_residual_degree": 1,
+        "selected_symbolic_kernel_characteristic_zero": 0
+      },
+      "degree": 31,
+      "full_landing_parameter_cubics": 11571020,
+      "invariant_dimension": 89,
+      "known_quartic_precomposition": false,
+      "known_quartic_reason": "degree is not divisible by four",
+      "landing_target_invariant_dimension": 5349,
+      "primary_frame_option_counts": [
+        24,
+        18,
+        16,
+        14,
+        13
+      ],
+      "priority": 2,
+      "selected_residual_class": "e=1",
+      "self_covariant_dimension": 410
+    },
+    {
+      "admissible_odd_orders": [
+        {
+          "e": 29,
+          "global_coefficient_status": "live lower-order branch",
+          "m": 1
+        },
+        {
+          "e": 17,
+          "global_coefficient_status": "zero in characteristic zero by the full-rank p=89 Taylor minor",
+          "m": 3
+        },
+        {
+          "e": 5,
+          "global_coefficient_status": "zero in characteristic zero by the full-rank p=89 Taylor minor",
+          "m": 5
+        }
+      ],
+      "arrangement_scope": {
+        "basis_circuit": "degree_35/covariant_basis_seeds.json",
+        "basis_dimension": 637,
+        "basis_rank_holdout_F89": 637,
+        "basis_rank_split_F67": 637,
+        "characteristic_zero_self_covariant_basis": true,
+        "jet_filtration_holdout_F89": [
+          {
+            "input_dimension": 637,
+            "jet_rank": 276,
+            "kernel_dimension": 361,
+            "order": 0,
+            "unisolvent_rows": 3330
+          },
+          {
+            "input_dimension": 361,
+            "jet_rank": 233,
+            "kernel_dimension": 128,
+            "order": 1,
+            "unisolvent_rows": 6300
+          },
+          {
+            "input_dimension": 128,
+            "jet_rank": 128,
+            "kernel_dimension": 0,
+            "order": 2,
+            "unisolvent_rows": 8925
+          }
+        ],
+        "jet_filtration_split_F67": [
+          {
+            "input_dimension": 637,
+            "jet_rank": 276,
+            "kernel_dimension": 361,
+            "order": 0,
+            "unisolvent_rows": 3330
+          },
+          {
+            "input_dimension": 361,
+            "jet_rank": 233,
+            "kernel_dimension": 128,
+            "order": 1,
+            "unisolvent_rows": 6300
+          },
+          {
+            "input_dimension": 128,
+            "jet_rank": 128,
+            "kernel_dimension": 0,
+            "order": 2,
+            "unisolvent_rows": 8925
+          }
+        ],
+        "landing_equation_count_after_linear_constraints": 0,
+        "lower_order_live_space": {
+          "characteristic_zero_intermediate_dimension": "not asserted",
+          "landing_status": "not searched as a complete module in this packet",
+          "plane_order": 1,
+          "plus_plane_kernel_split_F67_and_F89": 361
+        },
+        "primitive_quotient_dimension": 0,
+        "proof": "the stacked order-0,1,2 Taylor matrix has full column rank modulo 89; therefore its exact characteristic-zero Reynolds-lattice matrix is injective",
+        "scope": "every odd plane order m>=3 in this degree; plane order m=1 is not excluded",
+        "selected_plane_order": 5,
+        "selected_residual_degree": 5,
+        "selected_symbolic_kernel_characteristic_zero": 0
+      },
+      "degree": 35,
+      "full_landing_parameter_cubics": 43282239,
+      "invariant_dimension": 139,
+      "known_quartic_precomposition": false,
+      "known_quartic_reason": "degree is not divisible by four",
+      "landing_target_invariant_dimension": 8555,
+      "primary_frame_option_counts": [
+        31,
+        24,
+        24,
+        21,
+        19
+      ],
+      "priority": 3,
+      "selected_residual_class": "e=5",
+      "self_covariant_dimension": 637
+    }
+  ],
+  "schema": "COV_DEGREE_RANKING_V1",
+  "source_exact_molien_sha256": "5a02c8d143c7037c7c60b484740afc6febf343aadaa76342dd869806c58dbaf9"
+}

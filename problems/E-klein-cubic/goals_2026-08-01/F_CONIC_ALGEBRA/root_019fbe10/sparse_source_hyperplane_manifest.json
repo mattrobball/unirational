@@ -1,0 +1,93 @@
+{
+  "charts": [
+    {
+      "msolve_file": "sparse_H01_X_x0_p331.ms",
+      "plane_chart": "X",
+      "singular_file": "sparse_H01_X_x0_p331.sing",
+      "source_chart": "x0",
+      "terms": 1195
+    },
+    {
+      "msolve_file": "sparse_H01_X_x2_p331.ms",
+      "plane_chart": "X",
+      "singular_file": "sparse_H01_X_x2_p331.sing",
+      "source_chart": "x2",
+      "terms": 1195
+    },
+    {
+      "msolve_file": "sparse_H01_X_x3_p331.ms",
+      "plane_chart": "X",
+      "singular_file": "sparse_H01_X_x3_p331.sing",
+      "source_chart": "x3",
+      "terms": 1195
+    },
+    {
+      "msolve_file": "sparse_H01_X_x4_p331.ms",
+      "plane_chart": "X",
+      "singular_file": "sparse_H01_X_x4_p331.sing",
+      "source_chart": "x4",
+      "terms": 1195
+    },
+    {
+      "msolve_file": "sparse_H01_y_x0_p331.ms",
+      "plane_chart": "y",
+      "singular_file": "sparse_H01_y_x0_p331.sing",
+      "source_chart": "x0",
+      "terms": 1195
+    },
+    {
+      "msolve_file": "sparse_H01_y_x2_p331.ms",
+      "plane_chart": "y",
+      "singular_file": "sparse_H01_y_x2_p331.sing",
+      "source_chart": "x2",
+      "terms": 1195
+    },
+    {
+      "msolve_file": "sparse_H01_y_x3_p331.ms",
+      "plane_chart": "y",
+      "singular_file": "sparse_H01_y_x3_p331.sing",
+      "source_chart": "x3",
+      "terms": 1195
+    },
+    {
+      "msolve_file": "sparse_H01_y_x4_p331.ms",
+      "plane_chart": "y",
+      "singular_file": "sparse_H01_y_x4_p331.sing",
+      "source_chart": "x4",
+      "terms": 1195
+    },
+    {
+      "msolve_file": "sparse_H01_w_x0_p331.ms",
+      "plane_chart": "w",
+      "singular_file": "sparse_H01_w_x0_p331.sing",
+      "source_chart": "x0",
+      "terms": 1195
+    },
+    {
+      "msolve_file": "sparse_H01_w_x2_p331.ms",
+      "plane_chart": "w",
+      "singular_file": "sparse_H01_w_x2_p331.sing",
+      "source_chart": "x2",
+      "terms": 1195
+    },
+    {
+      "msolve_file": "sparse_H01_w_x3_p331.ms",
+      "plane_chart": "w",
+      "singular_file": "sparse_H01_w_x3_p331.sing",
+      "source_chart": "x3",
+      "terms": 1195
+    },
+    {
+      "msolve_file": "sparse_H01_w_x4_p331.ms",
+      "plane_chart": "w",
+      "singular_file": "sparse_H01_w_x4_p331.sing",
+      "source_chart": "x4",
+      "terms": 1195
+    }
+  ],
+  "hyperplane": "x0+x1=0",
+  "prime": 331,
+  "scope": "exact chosen divisor plus good-reduction smoothness certificate",
+  "total_terms": 1195,
+  "zeta": 74
+}

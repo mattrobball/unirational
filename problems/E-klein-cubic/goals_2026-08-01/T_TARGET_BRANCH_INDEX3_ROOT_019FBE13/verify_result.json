@@ -1,0 +1,10 @@
+{
+  "binding_markers_recomputed": true,
+  "consumed_head": "e1fc474a448db9d93df13967a4cef5f9918ff443",
+  "counterexample_reconstructed": true,
+  "exit": "T-ROUTE-REFUTED",
+  "implication_graph_reconstructed": true,
+  "schema": "t-target-branch-t0-verification-v1",
+  "source_hashes_recomputed": true,
+  "verdict": "ACCEPT"
+}

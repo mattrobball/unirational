@@ -122,35 +122,34 @@ def main() -> None:
     ]
     memory_limit = int(args.memory_gib * 1024**3)
     started = time.monotonic()
-    process = subprocess.Popen(
-        command,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        start_new_session=True,
-    )
+    log.write_text("")
     peak = 0
     stop_reason = None
-    chunks: list[str] = []
-    while process.poll() is None:
-        peak = max(peak, rss(process.pid))
-        elapsed = time.monotonic() - started
-        if peak >= memory_limit:
-            stop_reason = "memory"
-            os.killpg(process.pid, signal.SIGKILL)
-            break
-        if elapsed >= args.timeout:
-            stop_reason = "timeout"
-            os.killpg(process.pid, signal.SIGKILL)
-            break
-        time.sleep(0.10)
-    stdout, _ = process.communicate()
-    chunks.append(stdout)
-    log.write_text("".join(chunks))
+    with log.open("w") as log_handle:
+        process = subprocess.Popen(
+            command,
+            text=True,
+            stdout=log_handle,
+            stderr=subprocess.STDOUT,
+            start_new_session=True,
+        )
+        while process.poll() is None:
+            peak = max(peak, rss(process.pid))
+            elapsed = time.monotonic() - started
+            if peak >= memory_limit:
+                stop_reason = "memory"
+                os.killpg(process.pid, signal.SIGKILL)
+                break
+            if elapsed >= args.timeout:
+                stop_reason = "timeout"
+                os.killpg(process.pid, signal.SIGKILL)
+                break
+            time.sleep(0.10)
+        returncode = process.wait()
     leading = answer.read_text() if answer.exists() else ""
     powers = pure_power_variables(leading)
     variables = metadata["variable_order"]
-    complete = process.returncode == 0 and stop_reason is None
+    complete = returncode == 0 and stop_reason is None
     artinian = complete and all(variable in powers for variable in variables)
     result = {
         "tool": subprocess.run(
@@ -169,7 +168,7 @@ def main() -> None:
         "memory_limit_bytes": memory_limit,
         "seconds": round(time.monotonic() - started, 6),
         "peak_rss_bytes_polled": peak,
-        "returncode": process.returncode,
+        "returncode": returncode,
         "stop_reason": stop_reason,
         "complete": complete,
         "leading_output_bytes": len(leading.encode()),

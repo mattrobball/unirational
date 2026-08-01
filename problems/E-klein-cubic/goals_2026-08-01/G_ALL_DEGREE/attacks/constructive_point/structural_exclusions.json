@@ -1,0 +1,1025 @@
+{
+  "authoritative_inputs": {
+    "certificates/exact_covariants_check.py": "89847a3203bf7d842b00a551a29377bc9d1cdd36dca9cb5d192c54de0abd2a6e",
+    "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+    "tmp/generic_twist/phi_coefficients.py": "8c217aeaefe300a76e886f0a94803b5812689574299e1a2c72daeec72efd4525"
+  },
+  "constant_coordinate_matrix": {
+    "columns": 35,
+    "minor_determinant": {
+      "denominator": 79343716147200,
+      "numerator": -44054019694890986205224724555193555993
+    },
+    "pivot_rows": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      26,
+      27,
+      31,
+      32,
+      33,
+      36,
+      40,
+      41,
+      42,
+      45,
+      47,
+      54,
+      76
+    ],
+    "rank": 35,
+    "row_keys": [
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          0,
+          2,
+          1,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          0,
+          3,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          2,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          1,
+          3,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          2,
+          0,
+          0,
+          1
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          2,
+          0,
+          1,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          2,
+          1,
+          1,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          2,
+          2,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          3,
+          0,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          3,
+          0,
+          0,
+          1
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          3,
+          0,
+          1,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          3,
+          1,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          3,
+          2,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          4,
+          0,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          4,
+          0,
+          0,
+          1
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          4,
+          0,
+          1,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          4,
+          1,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          5,
+          0,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          5,
+          0,
+          1,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          5,
+          1,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          6,
+          0,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          6,
+          1,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          7,
+          0,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          8,
+          0,
+          0,
+          0
+        ],
+        "secondary": 0
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          2,
+          0,
+          1,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          3,
+          0,
+          0,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          3,
+          1,
+          0,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          4,
+          0,
+          0,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          5,
+          0,
+          0,
+          0
+        ],
+        "secondary": 1
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary": 2
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "secondary": 2
+      },
+      {
+        "projective_exponents": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary": 2
+      },
+      {
+        "projective_exponents": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "secondary": 2
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary": 2
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "secondary": 2
+      },
+      {
+        "projective_exponents": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "secondary": 2
+      },
+      {
+        "projective_exponents": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "secondary": 2
+      },
+      {
+        "projective_exponents": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "secondary": 2
+      },
+      {
+        "projective_exponents": [
+          3,
+          0,
+          0,
+          0
+        ],
+        "secondary": 2
+      },
+      {
+        "projective_exponents": [
+          4,
+          0,
+          0,
+          0
+        ],
+        "secondary": 2
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary": 3
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "secondary": 3
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "secondary": 3
+      },
+      {
+        "projective_exponents": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary": 3
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary": 3
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "secondary": 3
+      },
+      {
+        "projective_exponents": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "secondary": 3
+      },
+      {
+        "projective_exponents": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "secondary": 3
+      },
+      {
+        "projective_exponents": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "secondary": 3
+      },
+      {
+        "projective_exponents": [
+          3,
+          0,
+          0,
+          0
+        ],
+        "secondary": 3
+      },
+      {
+        "projective_exponents": [
+          4,
+          0,
+          0,
+          0
+        ],
+        "secondary": 3
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary": 4
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "secondary": 4
+      },
+      {
+        "projective_exponents": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary": 4
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary": 4
+      },
+      {
+        "projective_exponents": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "secondary": 4
+      },
+      {
+        "projective_exponents": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "secondary": 4
+      },
+      {
+        "projective_exponents": [
+          3,
+          0,
+          0,
+          0
+        ],
+        "secondary": 4
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary": 5
+      },
+      {
+        "projective_exponents": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary": 5
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary": 5
+      },
+      {
+        "projective_exponents": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "secondary": 5
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary": 6
+      },
+      {
+        "projective_exponents": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary": 6
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary": 6
+      },
+      {
+        "projective_exponents": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "secondary": 6
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary": 7
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary": 7
+      },
+      {
+        "projective_exponents": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "secondary": 7
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary": 8
+      },
+      {
+        "projective_exponents": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary": 8
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary": 9
+      },
+      {
+        "projective_exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary": 10
+      }
+    ],
+    "rows": 98
+  },
+  "deduction": {
+    "constant_coordinates": "The 98 coefficient rows span all 35 cubic monomials, so a constant normalized vector satisfying Phi has every degree-3 monomial zero and is the zero vector.",
+    "two_frame": "Each F(U+tV) is absolutely irreducible over QQbar[x]. Gauss therefore gives no root in C(x0,...,x4), hence none in K_proj. Endpoints are also off the cubic."
+  },
+  "frame_lines": [
+    {
+      "absolute_factor_classes": 1,
+      "absolute_nonconstant_factor_count": 1,
+      "input": "frame_line_x_C.sing",
+      "input_sha256": "d56f80a163b7321aa22348eb21c75fc0c897082a55365b16b2614913c59aa486",
+      "label": "x_C",
+      "ordinary_factor_list_length_including_unit": 2
+    },
+    {
+      "absolute_factor_classes": 1,
+      "absolute_nonconstant_factor_count": 1,
+      "input": "frame_line_x_D.sing",
+      "input_sha256": "41aba05204d13ebe21742808b2b8c0a27c84e269a5d187be6b3776a642481583",
+      "label": "x_D",
+      "ordinary_factor_list_length_including_unit": 2
+    },
+    {
+      "absolute_factor_classes": 1,
+      "absolute_nonconstant_factor_count": 1,
+      "input": "frame_line_x_E.sing",
+      "input_sha256": "c9e840062d91ae4ccea4dc6f2f902a279e7203d714a7d18d4cbdb013990da8e1",
+      "label": "x_E",
+      "ordinary_factor_list_length_including_unit": 2
+    },
+    {
+      "absolute_factor_classes": 1,
+      "absolute_nonconstant_factor_count": 1,
+      "input": "frame_line_x_K.sing",
+      "input_sha256": "9f5e04b8643d645bd7088f78958df5aa12056a420f420ce0445e6107023a4e3c",
+      "label": "x_K",
+      "ordinary_factor_list_length_including_unit": 2
+    },
+    {
+      "absolute_factor_classes": 1,
+      "absolute_nonconstant_factor_count": 1,
+      "input": "frame_line_C_D.sing",
+      "input_sha256": "13f147d90f02d70cfc52c2ba7eb808683f6e603c31e6afbef1621a6f84d85377",
+      "label": "C_D",
+      "ordinary_factor_list_length_including_unit": 2
+    },
+    {
+      "absolute_factor_classes": 1,
+      "absolute_nonconstant_factor_count": 1,
+      "input": "frame_line_C_E.sing",
+      "input_sha256": "31fbeaa32cd067860f2c138a932a335c31a85e34154fbd4c55c1399bb1b64576",
+      "label": "C_E",
+      "ordinary_factor_list_length_including_unit": 2
+    },
+    {
+      "absolute_factor_classes": 1,
+      "absolute_nonconstant_factor_count": 1,
+      "input": "frame_line_C_K.sing",
+      "input_sha256": "48d27f011f425e9d0c3e998ffd32bb75f92f7806891a70a7cd31c46c72c28a6d",
+      "label": "C_K",
+      "ordinary_factor_list_length_including_unit": 2
+    },
+    {
+      "absolute_factor_classes": 1,
+      "absolute_nonconstant_factor_count": 1,
+      "input": "frame_line_D_E.sing",
+      "input_sha256": "19e3a3d6cf946a351af7beab1ae9e0541cbc494fb3fdd77ef9fa459dd9be6ed9",
+      "label": "D_E",
+      "ordinary_factor_list_length_including_unit": 2
+    },
+    {
+      "absolute_factor_classes": 1,
+      "absolute_nonconstant_factor_count": 1,
+      "input": "frame_line_D_K.sing",
+      "input_sha256": "a11fde8df58cd712b6773366c46737e61030f7f43d484975198bfdff580b71b5",
+      "label": "D_K",
+      "ordinary_factor_list_length_including_unit": 2
+    },
+    {
+      "absolute_factor_classes": 1,
+      "absolute_nonconstant_factor_count": 1,
+      "input": "frame_line_E_K.sing",
+      "input_sha256": "cd1a3df27c5e960fb3f561642e228bb0050f934e34fb506b0cdc3397df5bdf40",
+      "label": "E_K",
+      "ordinary_factor_list_length_including_unit": 2
+    }
+  ],
+  "schema": "G_CONSTRUCTIVE_STRUCTURAL_EXCLUSIONS_V1",
+  "scope": "No point is produced. Excludes only the ten two-frame coordinate lines and the constant normalized-coordinate locus."
+}

@@ -1,0 +1,31 @@
+{
+  "prime": 89,
+  "zeta": 2,
+  "D": "22472*A**3 - 1070916*A**2*L + 5088*A**2*Y + 2400*A*B*L + 17003880*A*L**2 + 1200*A*L*T - 159408*A*L*Y + 288*A*Y**2 + 48*B**2*L - 38952*B*L**2 + 48*B*L*T + 288*B*L*Y - 89951985*L**3 - 19476*L**2*T + 1246968*L**2*Y + 12*L*T**2 + 144*L*T*Y - 4320*L*Y**2",
+  "D_terms": 18,
+  "incidence_minor_count": 25,
+  "D_charts": [
+    "infinity_D_smooth_L_p89.sing",
+    "infinity_D_smooth_A_p89.sing",
+    "infinity_D_smooth_B_p89.sing",
+    "infinity_D_smooth_Y_p89.sing",
+    "infinity_D_smooth_T_p89.sing"
+  ],
+  "incidence_charts": [
+    "infinity_incidence_smooth_L_X_p89.sing",
+    "infinity_incidence_smooth_L_y_p89.sing",
+    "infinity_incidence_smooth_L_w_p89.sing",
+    "infinity_incidence_smooth_A_X_p89.sing",
+    "infinity_incidence_smooth_A_y_p89.sing",
+    "infinity_incidence_smooth_A_w_p89.sing",
+    "infinity_incidence_smooth_B_X_p89.sing",
+    "infinity_incidence_smooth_B_y_p89.sing",
+    "infinity_incidence_smooth_B_w_p89.sing",
+    "infinity_incidence_smooth_Y_X_p89.sing",
+    "infinity_incidence_smooth_Y_y_p89.sing",
+    "infinity_incidence_smooth_Y_w_p89.sing",
+    "infinity_incidence_smooth_T_X_p89.sing",
+    "infinity_incidence_smooth_T_y_p89.sing",
+    "infinity_incidence_smooth_T_w_p89.sing"
+  ]
+}

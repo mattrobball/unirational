@@ -1,0 +1,46 @@
+{
+  "acceptance": {
+    "headline_positive": false,
+    "problem_e_headline": "OPEN",
+    "structural_exit_complete": true
+  },
+  "exit": "R-HILBERT-COMPONENT-STRUCTURAL",
+  "headline": "OPEN",
+  "packet": "R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO",
+  "pinned_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "replay": [
+    "/opt/homebrew/bin/python3 produce_fixed_jacobian.py",
+    "/opt/homebrew/bin/python3 produce_seal.py",
+    "/opt/homebrew/bin/python3 verify.py"
+  ],
+  "repository_commit_consumed": "9f58d6cbe889997fbd8af2fc23bf9ef0e28a55e2",
+  "sha256": {
+    "COMPLETION_AUDIT.md": "f900493a1a74cac886b3fb80c072a07b3fb1307477fed14c2427e38a280a30be",
+    "HILBERT_INVENTORY.md": "daa0cc38ccd22417211300d47c5c9c8118fed1b402b3c85d2e9b7fa4711adb7a",
+    "SOURCES.md": "458115bba9b06969565e4c65d9856bb89d63f4631c17ec3b04f04cb76b48a402",
+    "STATUS.md": "95cbef4325c63aaa4fb41f724c7fd4b4f66c96b1ace27e1b2ffcc1779bc6ab4e",
+    "THEOREM.md": "a3d5057af2687d44508d2f2289608355417993488210e33799bb99482b93375a",
+    "component_inventory.json": "9c54f91acc031b66097680c0466807efb8a426521c79127546f0dc53dfa159a6",
+    "fixed_jacobian_payload.json": "f8dbaaf5ed414db43f150f4665f8525843cb78d7b612a3ee1cf343ca56f9c443",
+    "produce_fixed_jacobian.py": "6cf6ee6085676db56cd6c08b045d5fedd3881b8417f195b503cb8a2c6acf1205",
+    "produce_seal.py": "06caba808748c32e30e68a10800d66556c06fe09354b6e255b757b601b23cc59",
+    "source_manifest.json": "63d39cf6cc7a800ca647c958127dbfe09cc98a944d99c407b3f59ce9ad38ac6a",
+    "verify.py": "265ba729c872eae2a853f90ef3ded08f6db07c48f3dbc87188eede364f6e0e21",
+    "verify_fixed_jacobian.py": "5347fafb6dad15a99e0d8002ba4471d6c1b20fc2291ece9b9771e2ca155b02d5"
+  },
+  "strict_nonclaims": [
+    "no point of the original generic twist was constructed",
+    "pointlessness was not proved",
+    "quartics and higher rational curves were not excluded and their distinguished canonical zero fibres were not pointed"
+  ],
+  "terminal_marker": "R_HILBERT_COMPONENT_STRUCTURAL_SEALED_HEADLINE_OPEN",
+  "theorems": [
+    "J_T(K_proj) = {0}",
+    "no geometrically integral K_proj-conic on the genuine generic twist",
+    "a K_proj-point of the generalized twisted-cubic Hilbert component forces a K_proj-point of the original twist",
+    "every geometrically integral K_proj-curve with genus-zero normalization forces a K_proj-point by cubic secant residuation",
+    "rational quartic and quintic components are reduced to their distinguished canonical Abel-Jacobi zero fibres",
+    "no smooth K_proj-defined degree-5 genus-2 curve on the genuine generic twist",
+    "no smooth K_proj-defined quartic elliptic curve on the genuine generic twist"
+  ]
+}

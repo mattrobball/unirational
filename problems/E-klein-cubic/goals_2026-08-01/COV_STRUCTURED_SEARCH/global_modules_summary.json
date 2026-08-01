@@ -1,0 +1,116 @@
+{
+  "25": {
+    "arrangement_scope": "exact in each displayed good fibre; agreement alone is not a characteristic-zero kernel reconstruction",
+    "basis_seed_payload": "degree_25/covariant_basis_seeds.json",
+    "basis_seed_sha256": "436a46f55e7919e699c67cbaf2bef0587050353fe61b307403c007d6434b4270",
+    "characteristic_zero_basis_model": "exact Reynolds averages of the stored monomial-output labels",
+    "characteristic_zero_self_covariant_dimension": 189,
+    "degree": 25,
+    "prime_results": [
+      {
+        "arrangement_kernel_dimension": 59,
+        "combined_first_second_jet_rank_on_arrangement": 59,
+        "common_order2_rank_on_arrangement": 16,
+        "covariant_basis_rank": 189,
+        "payload": "global_module_p89.npz",
+        "payload_sha256": "07609361efdae067e1525ac35ca7c27318d055a438524962ddab15abf2fd3bee",
+        "plane_order_at_least_3_dimension": 0,
+        "plane_point_count": 351,
+        "prime": 89,
+        "restriction_rank": 130,
+        "strict_dimension": 43,
+        "zeta11": 78
+      },
+      {
+        "arrangement_kernel_dimension": 59,
+        "combined_first_second_jet_rank_on_arrangement": 59,
+        "common_order2_rank_on_arrangement": 16,
+        "covariant_basis_rank": 189,
+        "payload": "global_module_p199.npz",
+        "payload_sha256": "da109bd0036d0dc77ee88a9a2daedde9e66b6d3717d3413a7c8a431dd82bbfdb",
+        "plane_order_at_least_3_dimension": 0,
+        "plane_point_count": 351,
+        "prime": 199,
+        "restriction_rank": 130,
+        "strict_dimension": 43,
+        "zeta11": 61
+      }
+    ]
+  },
+  "31": {
+    "arrangement_scope": "exact in each displayed good fibre; agreement alone is not a characteristic-zero kernel reconstruction",
+    "basis_seed_payload": "degree_31/covariant_basis_seeds.json",
+    "basis_seed_sha256": "049165ce4f6da3d6ca307ee47f2d1951a0ab292319e44995bd1a459a5d7860ed",
+    "characteristic_zero_basis_model": "exact Reynolds averages of the stored monomial-output labels",
+    "characteristic_zero_self_covariant_dimension": 410,
+    "degree": 31,
+    "prime_results": [
+      {
+        "arrangement_kernel_dimension": 198,
+        "combined_first_second_jet_rank_on_arrangement": 198,
+        "common_order2_rank_on_arrangement": 22,
+        "covariant_basis_rank": 410,
+        "payload": "global_module_p89.npz",
+        "payload_sha256": "4e6f5d063bba0f9c08c1d884fa1fabb115a69a5adcafa233dd5f7be5323fc6ae",
+        "plane_order_at_least_3_dimension": 0,
+        "plane_point_count": 528,
+        "prime": 89,
+        "restriction_rank": 212,
+        "strict_dimension": 176,
+        "zeta11": 78
+      },
+      {
+        "arrangement_kernel_dimension": 198,
+        "combined_first_second_jet_rank_on_arrangement": 198,
+        "common_order2_rank_on_arrangement": 22,
+        "covariant_basis_rank": 410,
+        "payload": "global_module_p199.npz",
+        "payload_sha256": "658ad5bac9aa25938d3e13560caff43a0c54f3073663108eb5e6b98bbd5275a9",
+        "plane_order_at_least_3_dimension": 0,
+        "plane_point_count": 528,
+        "prime": 199,
+        "restriction_rank": 212,
+        "strict_dimension": 176,
+        "zeta11": 61
+      }
+    ]
+  },
+  "35": {
+    "arrangement_scope": "exact in each displayed good fibre; agreement alone is not a characteristic-zero kernel reconstruction",
+    "basis_seed_payload": "degree_35/covariant_basis_seeds.json",
+    "basis_seed_sha256": "a1d3cf22731d4bce9c37b4c2743df1e8f5735bf049e731067e11305861183ba2",
+    "characteristic_zero_basis_model": "exact Reynolds averages of the stored monomial-output labels",
+    "characteristic_zero_self_covariant_dimension": 637,
+    "degree": 35,
+    "prime_results": [
+      {
+        "arrangement_kernel_dimension": 361,
+        "combined_first_second_jet_rank_on_arrangement": 361,
+        "common_order2_rank_on_arrangement": 26,
+        "covariant_basis_rank": 637,
+        "payload": "global_module_p89.npz",
+        "payload_sha256": "ff28b67dd8195f554bb3ba6c251fe9def413801b83afed689e5e3692e93565ed",
+        "plane_order_at_least_3_dimension": 0,
+        "plane_point_count": 666,
+        "prime": 89,
+        "restriction_rank": 276,
+        "strict_dimension": 335,
+        "zeta11": 78
+      },
+      {
+        "arrangement_kernel_dimension": 361,
+        "combined_first_second_jet_rank_on_arrangement": 361,
+        "common_order2_rank_on_arrangement": 26,
+        "covariant_basis_rank": 637,
+        "payload": "global_module_p199.npz",
+        "payload_sha256": "03425dd8bdbbbe9671e46e903f961c44f60b16ec66a0eb21f989a3af6e7c51c8",
+        "plane_order_at_least_3_dimension": 0,
+        "plane_point_count": 666,
+        "prime": 199,
+        "restriction_rank": 276,
+        "strict_dimension": 335,
+        "zeta11": 61
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+VECTOR BUNDLES ON THE CUBIC THREEFOLD 81
+
+b) Let @,£’ be two lines in X (possibly equal), and let Z,,Z¢ be their ideal
+sheaves. The sheaf Z; @ Zy is a torsion free sheaf with c1(E) = c3(E) =0
+and ¢2(E) = [é] + [é’]. It is clearly semi-stable but not stable.
+
+Sheaves of type a) are parametrized by smooth conics of X, hence they form
+a codimension 1 subvariety A of M. Sheaves of type b) are parametrized by the
+symmetric square of F’, hence they form an irreducible divisor B C M.
+
+Proposition 7.2. [D]
+a) M-M=AUB. |
+b) The moduli space M is smooth and connected.
+
+The proof of a) requires a thorough analysis of the relationship between a sheaf
+in M and its bidual; we can only refer the reader to [D].
+
+Let us give an idea of the proof of k b). We already know that M is smooth and
+connected; it remains to prove that © is smooth of dimension 5 at each point of
+the boundary. This is easy for a point of A, which corresponds to a stable sheaf E
+of type a): the exact sequence
+
+038302 5150
+
+gives an inclusion of Ext%(E, E) into Ext{(L, E); by Serre duality, this last space
+is dual to Homx(E, L(—2)), which is easily seen to be zero. Thus Ext%(E, E) = 0
+and dim Ext (E, E) =5 by Riemann-Roch, hence our assertion.
+
+Things become more complicated for a sheaf E = I, @ Zy, which is not stable.
+Recall that the moduli space M is constructed as the GIT quotient of a Quot
+scheme by a reductive group; using Luna’s slice theorem, one shows that M is
+locally analytically isomorphic to the quotient of Ext),(E, E) by the automorphism
+group of E. This group is isomorphic to C* x C* if ¢ 4 é and to GL(2,C) if
+2 = @; one can describe explicitly its action on Ext} (E, £). Then it is not difficult
+to check that the quotient is smooth. O
+
+Recall that we denote by F? C J?(X) the image of the variety of conics; it is
+isomorphic to the Fano surface F C J1(X) (5.1). The morphism cz maps B onto
+the divisor F + F in J?(X) and thus contracts only one irreducible divisor, namely
+A which is mapped onto the smooth surface F?. By [Mo], Thm. 1, this implies:
+
+Theorem 7.3. [D] The map c2 : M > J?(X) is isomorphic to the blowing up
+of J?(X) along the Fano surface F?. Oo
+
+Any conic in X is linearly equivalent to a sum of two (incident) lines, so F? is
+contained in F'+ F; from (7.2.a) and (7.3) we conclude:
+
+Corollary 7.4. cg induces an isomorphism of M onto the complement of the
+divisor F + F in J?(X). Oo
+
+Remark 7.5. Let s : Sym?F > F+F be the sum map, and let 6 € H?(J(X),Z)
+be the principal polarization. Since the class of F in H®(J(X), Z) is e a standard
+Pontrjagin product computation gives (deg s).[F' + F] = 30. But s can be identified
+with the restriction of co to B, hence it is generically one-to-one by the theorem;
+thus we find that the divisor F + F is algebraically equivalent to 30.
+
+In particular, F + F is an ample divisor; thus:
+Corollary 7.6. The variety M is affine. Oo

@@ -1,0 +1,45 @@
+{
+  "exit": "F-CONIC-CRITERION-EMPTY",
+  "format": "goal-F-conic-algebra-empty-v1",
+  "headline": "OPEN",
+  "not_proved": [
+    "Klein cubic unirationality or non-unirationality",
+    "pointlessness of the genuine generic Klein twist"
+  ],
+  "proved": [
+    "exact degree-six field presentation and selected embedding",
+    "exact bidirectional point/conic criterion reduction",
+    "a reciprocal-infinity place of K_proj has ramification index one and residue degree one",
+    "the residual normalized net has index three by an exact class-group localization argument",
+    "C(K_proj) is empty and hence the full conic-intersection criterion is empty",
+    "bounded screens only at their recorded scopes"
+  ],
+  "scope": "auxiliary fixed-frame plane cubic and its exhaustive conic criterion",
+  "sha256": {
+    "CRITERION.md": "f182f1e6ac83c1f3b7ef0bd2823b4a4d98ddc66af74467ab55e812e32530a27f",
+    "DISCOVERY.md": "4f09ec9cd14667bbbe45df6bf9a1fdf536f37139aaaa1c0ba5b8483648ef327c",
+    "FIELD_PRESENTATION.md": "400148436b5f695e8fac2632e6068e9e3b4a68307b4e233853dd7ec68962fdca",
+    "INFINITY_OBSTRUCTION.md": "0a0f4d414b9c3b989dcc67f568d14075c0b8cf92579911aee6f4154850d97a2a",
+    "INPUTS.md": "21c56ae7619da2334a46658e224949ba110c4d2c0080d6358775b6e3ee6c0da8",
+    "REPLAY.md": "872c26cf0d1eaf98f6e6f538bf2a0504ab5e4a4079cc4db9c2c83383e7ed129b",
+    "STATUS.md": "b87093e6a9b557ad5240abd121474fe6f98f50dfe415326c76df051f5aea153f",
+    "WORKLOG.md": "6e9219ea210e17cb2f46a09cbb103d6410d7478067422fe877d3012e55d3f798",
+    "build_coefficient_divisor_factors.py": "81ef90aa2fbf56def629c466b9da2b3bb4faa67d626900a7c592e996cb2c0a77",
+    "build_infinity_net_basepoint.py": "af08cfc9465da19e5faa0dc8a49b55b91c93653e80c91381988d40b212997461",
+    "field_presentation.json": "6f8c7930a71dbf1125f5003ee39b241e7cfbf006499eccbecb24312025c50dde",
+    "infinity_net_basepoint_p89.json": "f34c81e1e359972a4d9a334ae8aad4634e0dbac650a66876f4ac3e1eabfae755",
+    "infinity_obstruction.json": "00316341a4d5207d8630e3d8d4411113b8fa2df5f6b3db42b48aa3003e094405",
+    "line_constant_basis_p67.json": "94f6bc5cb904642cb28e098612cd293651440d35ac277fa880451abe2e76f8d5",
+    "line_constant_basis_p67.out": "f9fd77d803751104f79ae08dc9e55fc99264df835ff2942416d634e1d22dd146",
+    "linear_ansatz_p67.json": "c7c48f3a8a3345ddaa695dc1ba15eab1f60133927db1840dba0faf06889a8678",
+    "linear_ansatz_p67.out": "0333251e6ebb3890ef547f522ec55f27f0cef9a860998757e31f3e1b819e7490",
+    "payload/determinant_matrix_cells_exact.tsv": "e3633afbfc339753569181ce571ffdda1db042d2ddade506023bf6284dea555f",
+    "payload/global_parameter_content_exact.tsv": "480eb9f376a3d6270b74109613fd5132876338d3112f3d254aaa972684251644",
+    "payload/global_primitive_u_sextic_exact.tsv": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "produce_infinity_obstruction.py": "95220e9385029687e6e019f1f8e2be9970bb737651ec97919bddac29f3336e10",
+    "produce_seal.py": "1e3abf3ef6519a285379511d353fd98dd824da31213f66dbe82b39519f2cf523",
+    "verify.py": "4d43195cf5498c73f905075b7a5afc9e481dec943885ec90c8c39444759e56f6",
+    "verify_field_presentation.py": "1c7e1978108148e6d35bfaaa1ee7ed74dab502491154b66d336842bf4e2f99cb",
+    "verify_infinity_obstruction.py": "756a97638227a1d2e0edbe2f063f940c2db4453b9e804e071943d6468f720d18"
+  }
+}

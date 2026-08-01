@@ -1,0 +1,33 @@
+{
+  "authoritative_inputs": {
+    "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+    "tmp/kproj_arithmetic/normalized_kproj_table.json": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f"
+  },
+  "basis_indices": [
+    0,
+    1
+  ],
+  "case": "pair",
+  "cubic_monomials": 220,
+  "cubic_rank": 140,
+  "field_characteristic": 199,
+  "hilbert_function": [
+    1,
+    10,
+    55,
+    80,
+    50,
+    0
+  ],
+  "input_file": "krylov_pair.in",
+  "input_sha256": "b14f8cea79d56e2565742c85605171b180ca36c7f5e2595bf213e9f131f06998",
+  "method": "exact homogeneous ideal closure by multiplication",
+  "rng_seed": 202608011733,
+  "rows_file": "krylov_pair_rows.npz",
+  "rows_semantic_sha256": "0750a458db7770dff8a7c4f3f7e6bf4336785c1370c78874f493bc5827171703",
+  "rows_sha256": "89ea4d603b0a067adaf71888cfc3669942db80f6e9f929c4005de850d24b9616",
+  "sample_count": 64,
+  "scope": "necessary specialized equations for the displayed constant-Krylov coefficient ansatz",
+  "status": "empty",
+  "variables": 10
+}

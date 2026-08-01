@@ -1,0 +1,28 @@
+{
+  "artifact_root": "V_VALUATION_TROPICAL_CODEX_ROOT_20260801",
+  "exit_code": "V-UNDECIDED",
+  "files": {
+    "COMPLETION_AUDIT.md": "a9f42193c6bc514e229c74b54e6dcae76faeeb58100d554e640e79f1df429b78",
+    "HESSIAN_LINE.md": "891c3a8315c498699d09bea89adb5f426ec46aa8701e9826096785d3007919c3",
+    "MODEL.md": "848e267a465cb2fe3bd9b815072c9f6d234a5e019edac4a71bda7faa15483b43",
+    "REPLAY.md": "f4e4d4f902b5bb95b6a08bf29432c280008c0ac2f11859e08c16995fa3f031bb",
+    "STATUS.md": "900cb0279b0fb6db889d81f779b903a9d019c51feab9d89821ba92e8e9bfe582",
+    "THEOREM.md": "ec605ae5d34e2c33b63f6c0a33d0143e56eddc9beea9e0225b05bf495c461b3a",
+    "VALUATION_CENSUS.md": "03f4b30a724dbcb339640004b8b35d4b2852c9aaf93a0a408145e6639d2bd2a7",
+    "WORK_SCOPE.md": "72fed0a89302f803d8eb8ba74372af6b30a1ebf1e1a68ca6a9aec53988bb7060",
+    "axis_divisors.json": "da825d4a7318c86d06f2396cec81f84c851f625fa940dfcbe8e7f8fb2e9d8e6e",
+    "hessian_line.json": "2b66f2306ab62aacb59f6ae79723900b61088e7a6332d7633ee13b7b07b6d8a0",
+    "make_seal.py": "8a0a60c620eb0e2ef65a2fa7a525c0ff0176f70524a9a2ed9894f1ec8ebd0870",
+    "produce_axis_divisors.py": "019101a2660e5917239c672c9c2bc13600726072809cfd64de2d329a308b558a",
+    "produce_hessian_line.py": "d614b7ce441dc19b39c07e79c1bb30e196ba10244070a7fe60af517b8b741a9d",
+    "route_decision.json": "662b5b8d027ca4de2fa7acdedfb6aee621269c88f913e7a2fff438a53647f4e5",
+    "verify.py": "416d6b20dfec9910776a869e9b249e39a1926c99610e8041a71cb97308943957",
+    "verify_axis_divisors.py": "2dbd516b4824e6454edb13cf5565bea455b76261ca751df2b166b6e443bdface",
+    "verify_hessian_line.py": "7b2bd527a2a1ea90a55e7cd931c78a889295fb75fee74f3cc49e182d472d7610",
+    "verify_tropical_rank_one.py": "65d963b7d5567803c72b0e4f78c61597d4f34becc1bfb4a42fce9f07cf3b71fc"
+  },
+  "headline": "OPEN",
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "repository_head_at_start": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+  "schema": "klein-goal-v-packet-seal-v1"
+}

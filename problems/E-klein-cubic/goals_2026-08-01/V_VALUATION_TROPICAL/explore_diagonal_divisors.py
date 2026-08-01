@@ -22,6 +22,8 @@ sys.path.insert(0, str(PROBLEM / "tmp" / "kproj_arithmetic"))
 from phi_coefficients import all_coefficients  # noqa: E402
 from core import forms  # noqa: E402
 
+import sympy as sp  # noqa: E402
+
 
 ZERO = (0, 0, 0, 0, 0)
 
@@ -85,9 +87,30 @@ def divide_exact(dividend, divisor):
 
 
 def main():
-    names, _, coefficients = all_coefficients()
+    names, frame, coefficients = all_coefficients()
     invariant_forms = forms()
     diagonal = {names[index]: coefficients[(index, index, index)] for index in range(5)}
+    variables = sp.symbols("w0:5")
+    for vector_name, vector in zip(names, frame):
+        component_polys = [
+            sp.Poly(
+                sum(
+                    coefficient
+                    * sp.prod(variable**exponent for variable, exponent in zip(variables, exponents))
+                    for exponents, coefficient in component.items()
+                ),
+                *variables,
+                domain=sp.QQ,
+            )
+            for component in vector
+        ]
+        common = component_polys[0]
+        for component in component_polys[1:]:
+            common = sp.gcd(common, component)
+        print(
+            f"BASE_GCD {vector_name} total_degree={common.total_degree()} "
+            f"terms={len(common.terms())}"
+        )
     for vector_name, polynomial in diagonal.items():
         print(f"DIAGONAL {vector_name} degree={sum(next(iter(polynomial)))} terms={len(polynomial)}")
         for degree in (3, 5, 6, 8, 11, 12):

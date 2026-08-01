@@ -1,0 +1,40 @@
+{
+  "format": "Q-SCHUR-FULL-FRAME-R8-SOLVE-v1",
+  "input_sha256": "a487ea24004353f3bf96d8f8edd817a6b809c43e344ba16986473bc06f59b970",
+  "leading_sha256": "8575afdec42abdd7be12e871c03ee80396262c015aaf846e59d04217a37de686",
+  "log_sha256": "de22fb39bd4d90f35e86f56863a2ebea2892a28b5aecdc1b3f9b63d7482c8919",
+  "timeout_seconds": 300,
+  "threads": 4,
+  "elapsed_seconds": 1.2154152919974877,
+  "returncode": 0,
+  "timed_out": false,
+  "literal_unit_ideal": false,
+  "pure_power_bounds": {
+    "a0": 3,
+    "a1": 3,
+    "a2": 3,
+    "a3": 3,
+    "a4": 3,
+    "a5": 3,
+    "a6": 3,
+    "a7": 3,
+    "a8": 3,
+    "a9": 3,
+    "a10": 3,
+    "a11": 3,
+    "a12": 3,
+    "a13": 3,
+    "a14": 3,
+    "a15": 3,
+    "a16": 3,
+    "a17": 3,
+    "a18": 3,
+    "a19": 3
+  },
+  "artinian_at_origin": true,
+  "last_matrix": [
+    "36877",
+    "36121"
+  ],
+  "verdict": "SCOPED_R8_FULL_FRAME_EMPTY"
+}

@@ -1,0 +1,56 @@
+76 A. BEAUVILLE
+
+Let C be a curve of genus g and a : C > C an étale (connected) double
+covering. We denote by o the involution which exchanges the two sheets of the
+covering. The abelian variety P = Im(1 — 0) C J(C), of dimension g — 1, is called
+the Prym variety associated to x. It is equipped with a principal polarization 6
+such that the restriction to P of the principal polarization of J(C) equals 20.
+
+To describe the corresponding theta divisor it is convenient to translate the
+situation in the Jacobian J?9-2(C) parametrizing divisor classes of degree 2g — 2.
+The divisor classes [D] such that 7,D = Kc fit into two subvarieties Pp and P; of
+
+J?9-2(C), both isomorphic to P, characterized by
+[D] € P. => h°(D) =e (mod. 2).
+
+In particular, the subvariety W Cc Sym?9-?(C) of effective divisors D such that
+m,D € |Ko| has two irreducible components Wo and Wy, according to the parity
+of AD). If D= a +...+ Zg-2 belongs to the component W., the divisor
+021 +22+...+%29—2 belongs to Wi_-. The map Sym?9~2(C) — J?9-?(C) induces
+morphisms w, : W. + P:, whose fibre at a point [D] of P- is the linear system |D].
+It follows that
+
+e wi: W, = P, is birational;
+© wo maps Wo onto a divisor © C Po, which is a theta divisor on Po & P;
+the map Wy — @ is generically a P!-bundle.
+
+4.2. We now recall the description of the intermediate Jacobian J(X) as a
+Prym variety. We pick a general line @C X, a plane P? c P* and project X from
+£ onto P?; we get a morphism f : Xp — P?, where X¢ is obtained by blowing up
+X along ¢. The fibre of f over a point p € P? is a conic, the residual intersection
+of X with the plane (é,p); this conic is smooth for general p, and becomes singular
+when p lies in the “discriminant curve” A C P?, which is a plane quintic. When ¢
+is general enough, A is smooth, and every singular fibre is a rank 2 conic, that is,
+the union of two distinct lines meeting at one point. These lines are parametrized
+by a curve A with a double étale covering 7: A > A; if m1 (p) = {x,y}, we have
+f7\(p) = €z Uly. As in (4.1) we denote by o the involution which exchanges x and
+y.
+
+The Abel-Jacobi map A > J1(X) gives rise to a morphism of abelian varieties
+w:J(A) = J(X). For x € A, the 1-cycle &, + fe is linearly equivalent to h? — £,
+hence is independent of p; thus y annihilates 7*JC = Ker(1 —), and factors as
+
+l-o °
+
+P
+
+w: J(A) J(X) .
+
+If D= Yn; 2; is a divisor on A with am,D = 0, we have oD = —D, hence
+
+(2D) = Yon boss
+The following result is stated in [C-G], App. C; a proof can be found for
+instance in [T2].
+
+Theorem 4.3. (Mumford) ¢ is an isomorphism of principally polarized abelian
+varieties. QO

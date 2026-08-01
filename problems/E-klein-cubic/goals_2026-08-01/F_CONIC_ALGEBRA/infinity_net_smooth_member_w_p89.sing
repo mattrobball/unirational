@@ -1,0 +1,9 @@
+ring R=89,(X,y),dp;
+ideal I=3*X^2 - 49*y^2 + 6*y - 6,
+-98*X*y + 6*X + 48*y^2 + 52*y - 2,
+6*X*y - 12*X + 26*y^2 - 4*y + 81;
+ideal G=std(I);
+poly n=reduce(1,G);
+if (n==0) { print("UNIT=1"); } else { print("UNIT=0"); }
+print("INFINITY_NET_SMOOTH_MEMBER_w_P89_DONE");
+quit;

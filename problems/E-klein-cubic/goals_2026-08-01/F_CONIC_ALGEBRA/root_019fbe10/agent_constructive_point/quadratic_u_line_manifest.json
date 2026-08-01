@@ -1,0 +1,22 @@
+{
+  "equations": 8,
+  "line": {
+    "A": 1,
+    "B": 2,
+    "Y": 3,
+    "Z": "s"
+  },
+  "prime": 67,
+  "scope": "quadratic-u split-conic subroute over one generic line",
+  "script": "quadratic_u_line_p67.sing",
+  "variables": [
+    "a0",
+    "a1",
+    "a2",
+    "b0",
+    "b1",
+    "b2",
+    "lam",
+    "invlam"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "path": "../GOAL_COV_STRUCTURED_POSITIVE_SEARCH.md",
+      "sha256": "9e59db361d063df17656fae836c654828e36b3968de63b1f44626bd8f6280baa",
+      "size": 5617
+    },
+    {
+      "path": "../../tmp/generic_twist/phi_coefficients.py",
+      "sha256": "8c217aeaefe300a76e886f0a94803b5812689574299e1a2c72daeec72efd4525",
+      "size": 6748
+    },
+    {
+      "path": "../../tmp/kproj_arithmetic/core.py",
+      "sha256": "913b6184df2272e4834f81b38abdda9f468a2852ec571a04a469610054468b01",
+      "size": 5223
+    },
+    {
+      "path": "../../tmp/degree13_opt/reconstruct_large_prime.py",
+      "sha256": "19d8b4cdd742cfa6da300ba936b33f4200f8a1f93f571a889f404f0f155636c0",
+      "size": 7366
+    },
+    {
+      "path": "../../certificates/modular_covariant_scan.py",
+      "sha256": "8f226209cb479587d7e1a36cbb86c62ab3c9be9e8d7798c9c7db569017520349",
+      "size": 13392
+    },
+    {
+      "path": "../../tmp/higher_compatibility_regularity/seeds/degree_25.json",
+      "sha256": "436a46f55e7919e699c67cbaf2bef0587050353fe61b307403c007d6434b4270",
+      "size": 18178
+    },
+    {
+      "path": "../../tmp/m1_t1_f3_colon_degree35_audit/ambient_seeds_35.json",
+      "sha256": "a1d3cf22731d4bce9c37b4c2743df1e8f5735bf049e731067e11305861183ba2",
+      "size": 61511
+    },
+    {
+      "path": "/opt/homebrew/lib/libffpack_c.dylib",
+      "sha256": "d080537fedf325094af70477aa93ae91f6c59e78c087da4932f84e62850681aa",
+      "size": 722528
+    }
+  ],
+  "live_head_at_start": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+  "note": "The shared branch advanced concurrently; content hashes, not the moving head alone, bind every consumed input.",
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "runtime": {
+    "ffpack": "/opt/homebrew/lib/libffpack_c.dylib",
+    "numpy": "2.5.1",
+    "python": "3.14.6"
+  },
+  "schema": "cov-structured-search-input-manifest-v1",
+  "verification_time_head": "53e267a59b2d24de93c58dd9ddacc2f995fc2d68"
+}

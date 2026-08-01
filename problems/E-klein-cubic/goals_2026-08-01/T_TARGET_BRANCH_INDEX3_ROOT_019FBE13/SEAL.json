@@ -1,0 +1,34 @@
+{
+  "artifacts": {
+    "STATUS.md": "92416e3af41071d18f9080c236ffeb9c66178c47d41502e056dd340122d9e36f",
+    "T0_BRIDGE_LEDGER.md": "16da16e8f2647b3bd879672dc975f177412062737ccf0148fccb4501bee36aff",
+    "THEOREM.md": "c62a250fca7789895a463b06bb0a1e67e1889d49eb5985ca8b2407a898711317",
+    "WORK_SCOPE.md": "fad1e6f4fa53802ffd7a1d791e5b00d5c5692d1d30b7c2349859e487a8c23635",
+    "produce_bridge_scope.py": "da7befb83a0c273605a9a5c31be8d48b24c879d0c384d289e3ed5a0868b3e851",
+    "produce_seal.py": "bfaf3ae8b2ba8771498135bdce906d41aabbe8d14e155497ec32788f24c40705",
+    "proof_payload.json": "7f9ad1af0e980be4e8ea8b063bb31b53729af3774ee3d4b3c506fb235faccde6",
+    "verify_bridge_scope.py": "7676bcf781535ff231c30762e6d7cb7f5cccd68c14dd22e5917622b22d3e5c5d",
+    "verify_result.json": "ed9b1226563335e5ba8eccf0f39c0897d2bdd09588e3227720b8bd3a68164001",
+    "verify_seal.py": "9f2231e110f31592f45eec6ef8e9e5cc66389ffc1bdb4f6937ea3fb436bad8b0"
+  },
+  "consumed_head": "e1fc474a448db9d93df13967a4cef5f9918ff443",
+  "exit": "T-ROUTE-REFUTED",
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "problem_e_headline": "OPEN",
+  "schema": "t-target-branch-t0-seal-v1",
+  "t0_subexit": "T-BRIDGE-BLOCKED",
+  "upstream_sources": {
+    "REPAIR.md": "c7cc9d822885726c5dc6b8168e3a1cf55ab6a5f929b3c8ea16e3f77bd3528e54",
+    "WORKORDER_CAS_HEADLINE.md": "2bf3cbbc7ee4bdc5a551e6dee43e761e367f6b47bb3c89b03871c3458108f102",
+    "WORKORDER_POST_ELO_CONSTRUCTION.md": "ae23a212c26e6a11efc4b4cf89cf56fed9cb26f077f95447a1c956dfec1d3c9b",
+    "certificates/pfaffian_point/BRIDGE_AUDIT.md": "0c9cf64c0a7c367286afd2636bf8f1c8dc432df8616075fb4d6434dcf0d16031",
+    "goals_2026-08-01/GOAL_T_TARGET_BRANCH_INDEX3.md": "145f74e92ca59aff0aa7c8ddefc8bb2e2d3b440a52f1b858029ddc75d05171ce",
+    "tmp/full_scaled_frame_branch_line_hostile_audit/PROOF_AUDIT.md": "64a47be142f0ea895313c81601836dbd33ce6bcf31674cd70527aae4fee332e9",
+    "tmp/full_scaled_frame_branch_line_hostile_audit/REPORT.md": "f18620a3c4260649b7fd8aa59804f574461f75b739d1aa85223a4252114ada4b",
+    "tmp/full_scaled_frame_branch_line_hostile_audit/certificate.json": "594683557ec657f89e107e5582b7622e7339081acdfb7a91bbe3997af46efd05",
+    "tmp/pfaffian_global_fixed_frame_hostile_audit/PROOF_AUDIT.md": "f0d1ecbad97e515e8c4a833d8e449c93a0cd58d98dc9cc8cbfd64bb7c3e94c02",
+    "tmp/pfaffian_global_fixed_frame_hostile_audit/REPORT.md": "9e392ab2d72ab545d453c6d8220091ccc072a250aa16256b6d407b0b2d2b85fb",
+    "tmp/pfaffian_minimal_ternary_model/PROOF_AUDIT.md": "92c6744d99efc41307633ecbb3fa3f7ee6c2f376f4b7809bdc5578464545f5cb",
+    "tmp/pfaffian_minimal_ternary_model/REPORT.md": "b36d93204a3b62b4e23278fa8df526bbbcddafd814790c653a4a25fb9dd8a507"
+  }
+}

@@ -17,6 +17,8 @@ undecided, as does the Klein-cubic headline.
 - `produce_certificate.py`: deterministic producer/checker for the payload;
 - `verify.py`: independent verifier using the authoritative source text,
   ideal absorption, branch enumeration, and content hashes;
+- `COMPLETION_AUDIT.md`: requirement-level audit of every work package, exit
+  gate, target clause, prohibition, and deliverable;
 - `SEAL.json`: deterministic hashes of all deliverables other than itself.
 
 ## Replay

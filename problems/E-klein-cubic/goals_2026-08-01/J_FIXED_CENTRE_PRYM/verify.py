@@ -66,6 +66,17 @@ def main() -> None:
     assert payload["affine_S3_class"]["number_of_1_cocycles"] == 9
     assert payload["affine_S3_class"]["number_of_1_coboundaries"] == 3
     assert payload["affine_S3_class"]["number_of_H1_classes"] == 3
+    affine = tuple(payload["affine_S3_class"]["cocycle_values_in_element_order"])
+    assert cocycle(affine)
+    zero_class = min(b1)
+    affine_class = min(
+        tuple((x + y) % 3 for x, y in zip(affine, b, strict=True)) for b in b1
+    )
+    assert affine_class != zero_class
+    assert payload["affine_S3_class"]["selected_class_nonzero"] is True
+    assert payload["affine_S3_class"]["selected_class_order"] == 3
+    assert payload["linear_actions"]["Pic0_pullback"].startswith("sign: t_q^*=id")
+    assert any("not translation on Pic0" in x for x in payload["upstream_corrections"])
 
     # Character inner products on S3, class order (1, transposition, 3-cycle).
     def ip(a, b):
@@ -89,7 +100,15 @@ def main() -> None:
     assert rows["S3_class_1"]["restriction_H21_multiplicities"] == [1, 0, 2]
     assert rows["S3_class_2"]["restriction_H21_multiplicities"] == [1, 0, 2]
     assert rows["D12"]["restriction_H21_multiplicities"] == [1, 0, 0, 0, 1, 1]
+    assert payload["target_hodge"]["D12_restriction"].startswith("trivial + two 2-dimensional")
     assert payload["target_hodge"]["fixed_elliptic_channel_multiplicity"] == 0
+    marked = json.loads((PROBLEM / "certificates/strata/marked_s3_geometry.json").read_text())
+    assert marked["E_t"]["j_invariant"]["exact"] == "8192/11"
+    assert marked["E_t"]["cm"]["has_CM"] is False
+    incidence = json.loads((PROBLEM / "certificates/strata/incidence_exact.json").read_text())
+    flags = incidence["V4_local_incidence"]["double_count_checks"]["elliptic_type_II_flags"]
+    assert flags["from_elliptics"].startswith("55 elliptics × 9")
+    assert flags["from_points"].startswith("165 type-II × 3")
 
     # The seal excludes itself, so there is no timing-dependent self-hash.
     seal = json.loads((HERE / "SEAL.json").read_text())
@@ -100,6 +119,19 @@ def main() -> None:
     status = (HERE / "STATUS.md").read_text().splitlines()
     assert status[0] == "J-INVARIANT-TOO-WEAK"
     assert any("Overall Problem E headline: **OPEN**" in line for line in status)
+    combined = "\n".join((HERE / name).read_text() for name in [
+        "STATUS.md", "ONE_MOTIVE.md", "BLOWUP_FORMULA.md",
+        "HODGE_ISOGENY.md", "CENTRE_REALIZABILITY.md", "COMPLETION_AUDIT.md",
+    ])
+    flattened = " ".join(combined.split())
+    for marker in [
+        "translation acts trivially on Pic^0",
+        "not a headline negative result",
+        "equivariant dominance does not imply dominance on fixed loci",
+        "Free-orbit embedding lemma",
+        "No required item remains open",
+    ]:
+        assert marker in flattened, marker
     print("J_FIXED_CENTRE_PRYM_VERIFY_OK")
 
 

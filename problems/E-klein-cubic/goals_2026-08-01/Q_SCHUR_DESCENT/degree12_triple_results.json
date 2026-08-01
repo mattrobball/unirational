@@ -1,0 +1,445 @@
+{
+  "field_characteristic": 23,
+  "basis": "16 multiplication-span plus 32 deterministic primitive seeds",
+  "sample_count": 700,
+  "slice_dimension": 19,
+  "triples_total": 4960,
+  "logical_scope": "empty proves only this coordinate slice has no landing point; nonempty is a discovery signal pending complete exact verification",
+  "results": [
+    {
+      "triple_index": 0,
+      "triple": [
+        0,
+        1,
+        2
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "944de4f477b1fc315c497f4f1f001f02fefa79d6dbf92c4b2c940b870911b673",
+      "status": "empty",
+      "seconds": 8.36837775001186,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_0000_00_01_02_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_0000_00_01_02.log",
+      "log_sha256": "b45642e63164c5596f3da968f936abd452374282273502902179879a925af414"
+    },
+    {
+      "triple_index": 1,
+      "triple": [
+        0,
+        1,
+        3
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "02b9950c4d7db32d382801777694d70d2688a0d6171bd200f618b6f3d6fdcbfa",
+      "status": "empty",
+      "seconds": 9.975819792001857,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_0001_00_01_03_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_0001_00_01_03.log",
+      "log_sha256": "da9f827e880495f5a87a1a288c0c425b46eb835b456a2111041c3e00fcdd82a2"
+    },
+    {
+      "triple_index": 2,
+      "triple": [
+        0,
+        1,
+        4
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "4853f80fc826e732b2d98091bbe5c81d1e697b9b3c71daabadf96c2ab4a75602",
+      "status": "empty",
+      "seconds": 10.155283708008938,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_0002_00_01_04_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_0002_00_01_04.log",
+      "log_sha256": "ae939eb63a47e600b15a8073a442bd939670a43845d2985f05761db4b30226d8"
+    },
+    {
+      "triple_index": 3,
+      "triple": [
+        0,
+        1,
+        5
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "fb497da1d503372f85fbe1fcf4cca7e7d4a563093b7518f7e0d9bb92a794f47d",
+      "status": "empty",
+      "seconds": 8.655124042008538,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_0003_00_01_05_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_0003_00_01_05.log",
+      "log_sha256": "2d3e34dccd3a80b13a832e5ed11b4573f326b7a8ff3befa278478e544d36fded"
+    },
+    {
+      "triple_index": 4,
+      "triple": [
+        0,
+        1,
+        6
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "7cd372783258219128900d35c09102c898dff6d573e67964c2ad538f0bcf0888",
+      "status": "empty",
+      "seconds": 8.450006541999755,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_0004_00_01_06_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_0004_00_01_06.log",
+      "log_sha256": "4e6fb5405a995e8e3ba9e5b47a75d311cc8dd09e5e55887e3efcccf3a64b30b0"
+    },
+    {
+      "triple_index": 1000,
+      "triple": [
+        2,
+        6,
+        26
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "9f01e0ec119e52a2d6a36ad55135edcc75a53e40b7c9aedcb86fd855b0c9e1e0",
+      "status": "empty",
+      "seconds": 8.533644374998403,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_1000_02_06_26_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_1000_02_06_26.log",
+      "log_sha256": "351855e9ef80c6bba7aa2c49ec409fd03a306cf96f508d88eebd682598b33d2d"
+    },
+    {
+      "triple_index": 1001,
+      "triple": [
+        2,
+        6,
+        27
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "bd5bd737910b501486b75757a7e4b17bda0935f221a6f64fd8f0e87be5117e9b",
+      "status": "empty",
+      "seconds": 8.094250540991197,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_1001_02_06_27_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_1001_02_06_27.log",
+      "log_sha256": "c2496744d9eaa236be49cd2fb8027dd081da48dd1b511a62fcc956975d320547"
+    },
+    {
+      "triple_index": 1002,
+      "triple": [
+        2,
+        6,
+        28
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "e3b72927ed8c20bb02911b5db6a493f86e162621cd1e05210f5fc973ef400da3",
+      "status": "empty",
+      "seconds": 9.378861792007228,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_1002_02_06_28_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_1002_02_06_28.log",
+      "log_sha256": "6ffe00ff12f543fb5d6eb11bcc31cc1c31c014979a7ede0a849529c9ef52c119"
+    },
+    {
+      "triple_index": 1003,
+      "triple": [
+        2,
+        6,
+        29
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "e0016460a259972c577072d2c180d32a03efc0c2f396fd70b487d4ca4150bb36",
+      "status": "empty",
+      "seconds": 9.399900915988837,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_1003_02_06_29_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_1003_02_06_29.log",
+      "log_sha256": "415242a1a81e6e54d51384e806a4296750760f25f81978df02cfd608689df84b"
+    },
+    {
+      "triple_index": 1004,
+      "triple": [
+        2,
+        6,
+        30
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "9100e37747d7b091964f26410b19cd6c55b52c3774c00ac8eb009575659fddad",
+      "status": "empty",
+      "seconds": 8.901189791009529,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_1004_02_06_30_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_1004_02_06_30.log",
+      "log_sha256": "7d84b604e762539dc522968e3a3941db9f525eacfe5ac535e09991533bed42c4"
+    },
+    {
+      "triple_index": 4955,
+      "triple": [
+        27,
+        30,
+        31
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "4d2e12662d73f19eb83505ec72809a5b0fd6be7e2e3c550e9542db8dce45fcdb",
+      "status": "empty",
+      "seconds": 9.201561875001062,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_4955_27_30_31_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_4955_27_30_31.log",
+      "log_sha256": "6d6680fbd0b9f423b09726ce6ed2c7a166bb2cf1810627aa8acd219b4b2fc2d0"
+    },
+    {
+      "triple_index": 4956,
+      "triple": [
+        28,
+        29,
+        30
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "3793a8fadf51eeacf34efc8e14cffc907f73068311e82b94711e1a5ae7ea395c",
+      "status": "empty",
+      "seconds": 11.745647584000835,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_4956_28_29_30_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_4956_28_29_30.log",
+      "log_sha256": "7adef187d21dcd296551e3895c7c86023bde5ed5c38a6f8d8fb5b2efecb21bad"
+    },
+    {
+      "triple_index": 4957,
+      "triple": [
+        28,
+        29,
+        31
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "eab78a365e22a7a182e65654e2fd0fe372eabde0ea4833f0cd2eeb2fcedf7da2",
+      "status": "empty",
+      "seconds": 13.892399542004569,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_4957_28_29_31_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_4957_28_29_31.log",
+      "log_sha256": "dc52169aad0de03f571f05a3ec2b4f2133d650a63e0b1a87225f8023004baccb"
+    },
+    {
+      "triple_index": 4958,
+      "triple": [
+        28,
+        30,
+        31
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "a46db71d4f92409d5bf40b820d4971854d21b35a52f75838c732c4c35de9e46c",
+      "status": "empty",
+      "seconds": 9.60837258301035,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_4958_28_30_31_leading.out",
+      "leading_sha256": "09485353746ca74f9a51f8bb7dda19c47d065cd5dde6d5cf99e4b4b0e182e3d1",
+      "log_file": "triple_4958_28_30_31.log",
+      "log_sha256": "124c3737f409be03a6b0fdf07b428037ffdd4a49e9584d98089090cc3251c62f"
+    },
+    {
+      "triple_index": 4959,
+      "triple": [
+        29,
+        30,
+        31
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "cd0000bf056382da05ceaf15fbeb8b48b7a73033df95717b4c87b19d78573c8c",
+      "status": "empty",
+      "seconds": 8.437230542011093,
+      "leading_count": 2221,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 1552
+      },
+      "hilbert_function": [
+        1,
+        19,
+        190,
+        661,
+        0
+      ],
+      "leading_file": "triple_4959_29_30_31_leading.out",
+      "leading_sha256": "79fed8af818bf015d9e026d4a3eefa380f99e625b7fc7f46ecddf05e40472b8f",
+      "log_file": "triple_4959_29_30_31.log",
+      "log_sha256": "0b8b8dda3d43ead389ba96dc81d6c03ce05ce9ebc7adb30760d12c1e632df4ac"
+    }
+  ]
+}

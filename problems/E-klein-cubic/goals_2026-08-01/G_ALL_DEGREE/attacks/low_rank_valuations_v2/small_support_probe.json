@@ -1,0 +1,669 @@
+{
+  "prime": 67,
+  "schema": "g_low_rank_small_support_probe_v1",
+  "scope": "two basis atoms are screened geometrically by polynomial gcds through the displayed degree range; three atoms are discovery-only over F67 at the first open degree; full five-column frame",
+  "strict_nonclaim": "empty bounded supports do not prove residue pointlessness; finite-field survivors do not prove characteristic-zero points",
+  "targets": {
+    "f5": {
+      "pair_rows": [
+        {
+          "candidate_count": 19,
+          "degree": 16,
+          "single_survivors": [],
+          "support_count": 171,
+          "survivors": []
+        },
+        {
+          "candidate_count": 18,
+          "degree": 17,
+          "single_survivors": [],
+          "support_count": 153,
+          "survivors": []
+        },
+        {
+          "candidate_count": 22,
+          "degree": 18,
+          "single_survivors": [],
+          "support_count": 231,
+          "survivors": []
+        },
+        {
+          "candidate_count": 32,
+          "degree": 19,
+          "single_survivors": [],
+          "support_count": 496,
+          "survivors": []
+        },
+        {
+          "candidate_count": 30,
+          "degree": 20,
+          "single_survivors": [],
+          "support_count": 435,
+          "survivors": []
+        },
+        {
+          "candidate_count": 37,
+          "degree": 21,
+          "single_survivors": [],
+          "support_count": 666,
+          "survivors": []
+        },
+        {
+          "candidate_count": 48,
+          "degree": 22,
+          "single_survivors": [],
+          "support_count": 1128,
+          "survivors": []
+        },
+        {
+          "candidate_count": 49,
+          "degree": 23,
+          "single_survivors": [],
+          "support_count": 1176,
+          "survivors": []
+        },
+        {
+          "candidate_count": 56,
+          "degree": 24,
+          "single_survivors": [],
+          "support_count": 1540,
+          "survivors": []
+        },
+        {
+          "candidate_count": 72,
+          "degree": 25,
+          "single_survivors": [],
+          "support_count": 2556,
+          "survivors": []
+        },
+        {
+          "candidate_count": 73,
+          "degree": 26,
+          "single_survivors": [],
+          "support_count": 2628,
+          "survivors": []
+        },
+        {
+          "candidate_count": 83,
+          "degree": 27,
+          "single_survivors": [],
+          "support_count": 3403,
+          "survivors": []
+        },
+        {
+          "candidate_count": 100,
+          "degree": 28,
+          "single_survivors": [],
+          "support_count": 4950,
+          "survivors": []
+        },
+        {
+          "candidate_count": 105,
+          "degree": 29,
+          "single_survivors": [],
+          "support_count": 5460,
+          "survivors": []
+        },
+        {
+          "candidate_count": 116,
+          "degree": 30,
+          "single_survivors": [],
+          "support_count": 6670,
+          "survivors": []
+        },
+        {
+          "candidate_count": 139,
+          "degree": 31,
+          "single_survivors": [],
+          "support_count": 9591,
+          "survivors": []
+        },
+        {
+          "candidate_count": 144,
+          "degree": 32,
+          "single_survivors": [],
+          "support_count": 10296,
+          "survivors": []
+        },
+        {
+          "candidate_count": 160,
+          "degree": 33,
+          "single_survivors": [],
+          "support_count": 12720,
+          "survivors": []
+        },
+        {
+          "candidate_count": 185,
+          "degree": 34,
+          "single_survivors": [],
+          "support_count": 17020,
+          "survivors": []
+        },
+        {
+          "candidate_count": 194,
+          "degree": 35,
+          "single_survivors": [],
+          "support_count": 18721,
+          "survivors": []
+        },
+        {
+          "candidate_count": 211,
+          "degree": 36,
+          "single_survivors": [],
+          "support_count": 22155,
+          "survivors": []
+        },
+        {
+          "candidate_count": 244,
+          "degree": 37,
+          "single_survivors": [],
+          "support_count": 29646,
+          "survivors": []
+        },
+        {
+          "candidate_count": 252,
+          "degree": 38,
+          "single_survivors": [],
+          "support_count": 31626,
+          "survivors": []
+        },
+        {
+          "candidate_count": 275,
+          "degree": 39,
+          "single_survivors": [],
+          "support_count": 37675,
+          "survivors": []
+        },
+        {
+          "candidate_count": 310,
+          "degree": 40,
+          "single_survivors": [],
+          "support_count": 47895,
+          "survivors": []
+        }
+      ],
+      "source_points": [
+        [
+          37,
+          16,
+          15,
+          14,
+          53
+        ],
+        [
+          56,
+          1,
+          59,
+          0,
+          14
+        ],
+        [
+          61,
+          9,
+          20,
+          35,
+          10
+        ],
+        [
+          37,
+          3,
+          53,
+          46,
+          47
+        ],
+        [
+          15,
+          8,
+          10,
+          18,
+          17
+        ],
+        [
+          7,
+          44,
+          58,
+          55,
+          24
+        ],
+        [
+          31,
+          27,
+          19,
+          65,
+          36
+        ],
+        [
+          26,
+          57,
+          0,
+          25,
+          60
+        ],
+        [
+          35,
+          38,
+          25,
+          6,
+          46
+        ],
+        [
+          35,
+          3,
+          25,
+          19,
+          0
+        ],
+        [
+          37,
+          19,
+          18,
+          12,
+          65
+        ],
+        [
+          65,
+          6,
+          51,
+          58,
+          16
+        ],
+        [
+          58,
+          3,
+          55,
+          44,
+          10
+        ],
+        [
+          43,
+          55,
+          15,
+          65,
+          16
+        ],
+        [
+          49,
+          14,
+          44,
+          14,
+          41
+        ],
+        [
+          52,
+          33,
+          48,
+          26,
+          13
+        ],
+        [
+          8,
+          2,
+          35,
+          19,
+          21
+        ],
+        [
+          8,
+          66,
+          45,
+          13,
+          42
+        ],
+        [
+          36,
+          14,
+          42,
+          17,
+          43
+        ],
+        [
+          54,
+          5,
+          63,
+          58,
+          59
+        ]
+      ],
+      "source_sample_attempts": 1322,
+      "triple_first_open": {
+        "candidate_count": 19,
+        "degree": 16,
+        "survivors": []
+      }
+    },
+    "f6": {
+      "pair_rows": [
+        {
+          "candidate_count": 16,
+          "degree": 15,
+          "single_survivors": [],
+          "support_count": 120,
+          "survivors": []
+        },
+        {
+          "candidate_count": 19,
+          "degree": 16,
+          "single_survivors": [],
+          "support_count": 171,
+          "survivors": []
+        },
+        {
+          "candidate_count": 21,
+          "degree": 17,
+          "single_survivors": [],
+          "support_count": 210,
+          "survivors": []
+        },
+        {
+          "candidate_count": 26,
+          "degree": 18,
+          "single_survivors": [],
+          "support_count": 325,
+          "survivors": []
+        },
+        {
+          "candidate_count": 32,
+          "degree": 19,
+          "single_survivors": [],
+          "support_count": 496,
+          "survivors": []
+        },
+        {
+          "candidate_count": 36,
+          "degree": 20,
+          "single_survivors": [],
+          "support_count": 630,
+          "survivors": []
+        },
+        {
+          "candidate_count": 43,
+          "degree": 21,
+          "single_survivors": [],
+          "support_count": 903,
+          "survivors": []
+        },
+        {
+          "candidate_count": 50,
+          "degree": 22,
+          "single_survivors": [],
+          "support_count": 1225,
+          "survivors": []
+        },
+        {
+          "candidate_count": 57,
+          "degree": 23,
+          "single_survivors": [],
+          "support_count": 1596,
+          "survivors": []
+        },
+        {
+          "candidate_count": 66,
+          "degree": 24,
+          "single_survivors": [],
+          "support_count": 2145,
+          "survivors": []
+        },
+        {
+          "candidate_count": 76,
+          "degree": 25,
+          "single_survivors": [],
+          "support_count": 2850,
+          "survivors": []
+        },
+        {
+          "candidate_count": 86,
+          "degree": 26,
+          "single_survivors": [],
+          "support_count": 3655,
+          "survivors": []
+        },
+        {
+          "candidate_count": 96,
+          "degree": 27,
+          "single_survivors": [],
+          "support_count": 4560,
+          "survivors": []
+        },
+        {
+          "candidate_count": 109,
+          "degree": 28,
+          "single_survivors": [],
+          "support_count": 5886,
+          "survivors": []
+        },
+        {
+          "candidate_count": 122,
+          "degree": 29,
+          "single_survivors": [],
+          "support_count": 7381,
+          "survivors": []
+        },
+        {
+          "candidate_count": 136,
+          "degree": 30,
+          "single_survivors": [],
+          "support_count": 9180,
+          "survivors": []
+        },
+        {
+          "candidate_count": 153,
+          "degree": 31,
+          "single_survivors": [],
+          "support_count": 11628,
+          "survivors": []
+        },
+        {
+          "candidate_count": 167,
+          "degree": 32,
+          "single_survivors": [],
+          "support_count": 13861,
+          "survivors": []
+        },
+        {
+          "candidate_count": 186,
+          "degree": 33,
+          "single_survivors": [],
+          "support_count": 17205,
+          "survivors": []
+        },
+        {
+          "candidate_count": 207,
+          "degree": 34,
+          "single_survivors": [],
+          "support_count": 21321,
+          "survivors": []
+        },
+        {
+          "candidate_count": 225,
+          "degree": 35,
+          "single_survivors": [],
+          "support_count": 25200,
+          "survivors": []
+        },
+        {
+          "candidate_count": 248,
+          "degree": 36,
+          "single_survivors": [],
+          "support_count": 30628,
+          "survivors": []
+        },
+        {
+          "candidate_count": 272,
+          "degree": 37,
+          "single_survivors": [],
+          "support_count": 36856,
+          "survivors": []
+        },
+        {
+          "candidate_count": 294,
+          "degree": 38,
+          "single_survivors": [],
+          "support_count": 43071,
+          "survivors": []
+        },
+        {
+          "candidate_count": 322,
+          "degree": 39,
+          "single_survivors": [],
+          "support_count": 51681,
+          "survivors": []
+        },
+        {
+          "candidate_count": 350,
+          "degree": 40,
+          "single_survivors": [],
+          "support_count": 61075,
+          "survivors": []
+        }
+      ],
+      "source_points": [
+        [
+          11,
+          28,
+          8,
+          51,
+          50
+        ],
+        [
+          29,
+          57,
+          24,
+          46,
+          21
+        ],
+        [
+          19,
+          19,
+          37,
+          64,
+          11
+        ],
+        [
+          64,
+          43,
+          41,
+          54,
+          6
+        ],
+        [
+          52,
+          38,
+          9,
+          10,
+          62
+        ],
+        [
+          50,
+          34,
+          62,
+          5,
+          12
+        ],
+        [
+          44,
+          32,
+          62,
+          66,
+          60
+        ],
+        [
+          27,
+          0,
+          32,
+          37,
+          58
+        ],
+        [
+          18,
+          57,
+          25,
+          63,
+          34
+        ],
+        [
+          32,
+          16,
+          66,
+          39,
+          25
+        ],
+        [
+          49,
+          50,
+          28,
+          35,
+          48
+        ],
+        [
+          14,
+          66,
+          15,
+          43,
+          4
+        ],
+        [
+          27,
+          58,
+          40,
+          61,
+          44
+        ],
+        [
+          52,
+          34,
+          25,
+          42,
+          20
+        ],
+        [
+          40,
+          59,
+          0,
+          7,
+          18
+        ],
+        [
+          66,
+          22,
+          39,
+          11,
+          22
+        ],
+        [
+          36,
+          44,
+          19,
+          25,
+          15
+        ],
+        [
+          9,
+          29,
+          56,
+          31,
+          14
+        ],
+        [
+          57,
+          39,
+          2,
+          66,
+          10
+        ],
+        [
+          4,
+          27,
+          40,
+          25,
+          62
+        ]
+      ],
+      "source_sample_attempts": 684,
+      "triple_first_open": {
+        "candidate_count": 16,
+        "degree": 15,
+        "survivors": []
+      }
+    }
+  }
+}

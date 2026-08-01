@@ -1,0 +1,17 @@
+{
+  "format": "Q-SCHUR-COMPLETION-AUDIT-v1",
+  "live_head": "53e267a59b2d24de93c58dd9ddacc2f995fc2d68",
+  "requested_binary_resolution": true,
+  "positive_point_constructed": false,
+  "positive_original_equation_verified": false,
+  "negative_full_twist_obstruction_constructed": false,
+  "negative_exhaustiveness_verified": false,
+  "binary_goal_complete": false,
+  "packet_status": "Q-UNDECIDED",
+  "goal_status_decision": "BLOCKED",
+  "same_blocker_goal_turns_at_least": 3,
+  "blocking_condition": "No K_Schur point and no genuine all-degree full-twist pointlessness obstruction; the surviving primitive A4/S4 quartic is the unresolved Cassels--Swinnerton-Dyer boundary.",
+  "pending_degree25_boundary_saturation_is_terminal_for_q": false,
+  "completion_prohibited": true
+}
+

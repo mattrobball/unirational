@@ -4,7 +4,7 @@
   "headline": "OPEN",
   "scope": "literal exact target in GOAL_S19_SCHUR_CURVE.md",
   "field": "F = K_Schur",
-  "repository_commit_consumed": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+  "repository_commit_consumed": "80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c",
   "goal_file_commit_consumed": "67218b64ed1bf727f13bdcd7639c8651cd374897",
   "source_sha256": {
     "goals_2026-08-01/GOAL_S19_SCHUR_CURVE.md": "e3372fcf56d46d66fd2e818d966d7bff51f6828713c09cf424909919195cc44f",

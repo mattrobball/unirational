@@ -1,0 +1,176 @@
+{
+  "field_characteristic": 23,
+  "basis": "16 multiplication-span plus initial primitive Reynolds seeds",
+  "sample_count": 700,
+  "logical_scope": "empty has only nested-slice scope; nonempty is a discovery signal pending complete special-fibre and characteristic-zero checks",
+  "results": [
+    {
+      "triple_index": 4,
+      "triple": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "0d65388315977d103d5c86859b622508f830c692411418981f0c6e82466d206c",
+      "status": "empty",
+      "seconds": 21.493508166997344,
+      "leading_count": 3092,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 2423
+      },
+      "hilbert_function": [
+        1,
+        20,
+        210,
+        871,
+        0
+      ],
+      "leading_file": "triple_0004_00_01_02_leading.out",
+      "leading_sha256": "ee7940e2814e27f55ba10bd79ff635aae1046aebda4fdae88b89d1c8dd829fea",
+      "log_file": "triple_0004_00_01_02.log",
+      "log_sha256": "ed47d2f473adc9e2c77bd77314b8f4782305c64fb238102f900307ac44e57068",
+      "primitive_count": 4,
+      "primitive_selection": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "slice_dimension": 20,
+      "coefficient_cubic_monomials": 1540
+    },
+    {
+      "triple_index": 5,
+      "triple": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "ec510a566a3c569682df485e7b75971f49897b5e8d676d28a8ff0890e84d250b",
+      "status": "empty",
+      "seconds": 75.24697079099133,
+      "leading_count": 4194,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 3525
+      },
+      "hilbert_function": [
+        1,
+        21,
+        231,
+        1102,
+        0
+      ],
+      "leading_file": "triple_0005_00_01_02_leading.out",
+      "leading_sha256": "c8300b7c77dd5a6878a9a8fdcf2e0f3b0fd1618a8428e74e66bc528bd8e30775",
+      "log_file": "triple_0005_00_01_02.log",
+      "log_sha256": "67a68b242cefb9ffd65d878088a466260e89c1188e88a9032681c2c1aa5ea53b",
+      "primitive_count": 5,
+      "primitive_selection": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "slice_dimension": 21,
+      "coefficient_cubic_monomials": 1771
+    },
+    {
+      "triple_index": 6,
+      "triple": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "0f358838e1d5e49c42c2d475eedd0db6898744a7df0dda554418d2f04253253c",
+      "status": "empty",
+      "seconds": 220.6250787910103,
+      "leading_count": 5549,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 4880
+      },
+      "hilbert_function": [
+        1,
+        22,
+        253,
+        1355,
+        0
+      ],
+      "leading_file": "triple_0006_00_01_02_leading.out",
+      "leading_sha256": "b9bfbf85680b6df471e756206e7217bb764138b7254c92529de3b6d7b69e1250",
+      "log_file": "triple_0006_00_01_02.log",
+      "log_sha256": "08d77b68de7dbdf154857f519b2ab12c59bc68538120bec37a76587e45a619c0",
+      "primitive_count": 6,
+      "primitive_selection": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "slice_dimension": 22,
+      "coefficient_cubic_monomials": 2024
+    },
+    {
+      "triple_index": 7,
+      "triple": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "rank": 669,
+      "ffpack_library": "/opt/homebrew/lib/libffpack_c.dylib",
+      "input_sha256": "b2fe1247408ce334fd05db8c92dd9587a16a446dd33b673e11bbf3e230a8f95e",
+      "status": "empty",
+      "seconds": 581.6377121670084,
+      "leading_count": 7180,
+      "leading_degree_tally": {
+        "3": 669,
+        "4": 6511
+      },
+      "hilbert_function": [
+        1,
+        23,
+        276,
+        1631,
+        0
+      ],
+      "leading_file": "triple_0007_00_01_02_leading.out",
+      "leading_sha256": "0472d0c3add1f7dd92fde3b5525057bae6d54252ebfcb9da6a6f3bed51585754",
+      "log_file": "triple_0007_00_01_02.log",
+      "log_sha256": "960a6e96ca85b61b4a29d0ac4598600ec60602c70789001f0feda6b051c7995d",
+      "primitive_count": 7,
+      "primitive_selection": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slice_dimension": 23,
+      "coefficient_cubic_monomials": 2300
+    }
+  ]
+}

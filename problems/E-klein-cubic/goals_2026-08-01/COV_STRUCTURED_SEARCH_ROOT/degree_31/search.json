@@ -1,0 +1,68 @@
+{
+  "degree": 31,
+  "exit": "STRUCTURED_FAMILY_EMPTY",
+  "option_counts": [
+    24,
+    18,
+    16,
+    14,
+    13
+  ],
+  "prime_records": [
+    {
+      "geometric_survivors": [],
+      "minimum_polar_rank": 9,
+      "point_count": 24,
+      "points_sha256": "d23e5a8e66809583eb6816998d7c2d965d0f4fc9cd38838f08f6bcc3cf0b7452",
+      "prime": 89,
+      "rank9_nonveronese": 188,
+      "rank_histogram": {
+        "10": 15825,
+        "9": 188
+      },
+      "skipped_common_primary_factor": 31263,
+      "tested_primitive_ansaetze": 16013,
+      "triple_counts": {
+        "0-1-2": 2283,
+        "0-1-3": 1841,
+        "0-1-4": 2156,
+        "0-2-3": 1602,
+        "0-2-4": 1843,
+        "0-3-4": 1504,
+        "1-2-3": 1222,
+        "1-2-4": 1415,
+        "1-3-4": 1152,
+        "2-3-4": 995
+      },
+      "witness_digest_sha256": "f299d23d3d336c933373c4a08ff5540007c80060519aa547b998804927dbe7df"
+    },
+    {
+      "geometric_survivors": [],
+      "minimum_polar_rank": 9,
+      "point_count": 24,
+      "points_sha256": "6ffa83929159cf79b6544d6124262ce5d8735149066342c81620da4053788d7c",
+      "prime": 199,
+      "rank9_nonveronese": 188,
+      "rank_histogram": {
+        "10": 15825,
+        "9": 188
+      },
+      "skipped_common_primary_factor": 31263,
+      "tested_primitive_ansaetze": 16013,
+      "triple_counts": {
+        "0-1-2": 2283,
+        "0-1-3": 1841,
+        "0-1-4": 2156,
+        "0-2-3": 1602,
+        "0-2-4": 1843,
+        "0-3-4": 1504,
+        "1-2-3": 1222,
+        "1-2-4": 1415,
+        "1-3-4": 1152,
+        "2-3-4": 995
+      },
+      "witness_digest_sha256": "bd0f1ff604d79bf62a721e62b1acbbf2ff6cc2210f039fbfa3a4b8f6d90f0090"
+    }
+  ],
+  "residual_class": "e=1"
+}

@@ -1,0 +1,25 @@
+{
+  "D_degree": 10,
+  "charts": [
+    {
+      "base_chart": "h",
+      "msolve_input": "projective_minor_g2_p23_h_X.ms",
+      "nonzero_minors": 14,
+      "point_chart": "X",
+      "script": "projective_minor_g2_p23_h_X.sing",
+      "variables": [
+        "A",
+        "B",
+        "Y",
+        "T",
+        "y",
+        "w"
+      ]
+    }
+  ],
+  "g": 2,
+  "logical_use": "unit ideals lift smoothness to characteristic zero; no point-count inference",
+  "prime": 23,
+  "scope": "projective complete-intersection smoothness over finite residue field",
+  "zeta11_residue": 2
+}

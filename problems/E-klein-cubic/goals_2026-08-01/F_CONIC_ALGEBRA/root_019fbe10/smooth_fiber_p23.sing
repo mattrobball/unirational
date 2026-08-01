@@ -1,0 +1,18 @@
+ring R=23,(X,y,w),dp;
+option(redSB);
+short=0;
+poly c=X^3 + 6*X*w^2 - 5*X*w*y - 9*X*y^2 - w^3 - w^2*y + 7*w*y^2 - 3*y^3;
+poly cX=3*X^2 + 6*w^2 - 5*w*y - 9*y^2;
+poly cy=-5*X*w - 18*X*y - w^2 + 14*w*y - 9*y^2;
+poly cw=12*X*w - 5*X*y - 3*w^2 - 2*w*y + 7*y^2;
+ideal J0=c,cX,cy,cw,X-1;
+ideal G0=std(J0);
+print("SMOOTH_FIBER_CHART_X_NF1="+string(reduce(1,G0)));
+ideal J1=c,cX,cy,cw,y-1;
+ideal G1=std(J1);
+print("SMOOTH_FIBER_CHART_y_NF1="+string(reduce(1,G1)));
+ideal J2=c,cX,cy,cw,w-1;
+ideal G2=std(J2);
+print("SMOOTH_FIBER_CHART_w_NF1="+string(reduce(1,G2)));
+print("SMOOTH_FIBER_P23_DONE");
+quit;

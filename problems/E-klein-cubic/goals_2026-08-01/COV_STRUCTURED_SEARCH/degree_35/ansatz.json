@@ -1,0 +1,514 @@
+{
+  "ansatz": "invariant-scaled x,C,D,E,K and all homogenizable ordered two-fold compositions",
+  "characteristic_zero_conclusion": "empty_projective_ansatz",
+  "degree": 35,
+  "direction_count": 17,
+  "directions": [
+    {
+      "base_degree": 1,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          0,
+          2,
+          0,
+          2
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 34,
+      "word_outer_to_inner": [
+        "x"
+      ]
+    },
+    {
+      "base_degree": 4,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          0,
+          2,
+          1,
+          1
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 31,
+      "word_outer_to_inner": [
+        "C"
+      ]
+    },
+    {
+      "base_degree": 5,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          1,
+          2
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 30,
+      "word_outer_to_inner": [
+        "D"
+      ]
+    },
+    {
+      "base_degree": 6,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          0,
+          3,
+          0,
+          1
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 29,
+      "word_outer_to_inner": [
+        "E"
+      ]
+    },
+    {
+      "base_degree": 7,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          0,
+          1,
+          0,
+          2
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 28,
+      "word_outer_to_inner": [
+        "K"
+      ]
+    },
+    {
+      "base_degree": 16,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 19,
+      "word_outer_to_inner": [
+        "C",
+        "C"
+      ]
+    },
+    {
+      "base_degree": 20,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 15,
+      "word_outer_to_inner": [
+        "C",
+        "D"
+      ]
+    },
+    {
+      "base_degree": 24,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 11,
+      "word_outer_to_inner": [
+        "C",
+        "E"
+      ]
+    },
+    {
+      "base_degree": 28,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 7,
+        "secondary_index": 1,
+        "secondary_name": "f7"
+      },
+      "multiplier_degree": 7,
+      "word_outer_to_inner": [
+        "C",
+        "K"
+      ]
+    },
+    {
+      "base_degree": 20,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 15,
+      "word_outer_to_inner": [
+        "D",
+        "C"
+      ]
+    },
+    {
+      "base_degree": 25,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 10,
+      "word_outer_to_inner": [
+        "D",
+        "D"
+      ]
+    },
+    {
+      "base_degree": 30,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 5,
+      "word_outer_to_inner": [
+        "D",
+        "E"
+      ]
+    },
+    {
+      "base_degree": 35,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 0,
+      "word_outer_to_inner": [
+        "D",
+        "K"
+      ]
+    },
+    {
+      "base_degree": 24,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 11,
+      "word_outer_to_inner": [
+        "E",
+        "C"
+      ]
+    },
+    {
+      "base_degree": 30,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 5,
+      "word_outer_to_inner": [
+        "E",
+        "D"
+      ]
+    },
+    {
+      "base_degree": 28,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 7,
+        "secondary_index": 1,
+        "secondary_name": "f7"
+      },
+      "multiplier_degree": 7,
+      "word_outer_to_inner": [
+        "K",
+        "C"
+      ]
+    },
+    {
+      "base_degree": 35,
+      "multiplier": {
+        "primary_degrees": [
+          3,
+          5,
+          6,
+          8,
+          11
+        ],
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      },
+      "multiplier_degree": 0,
+      "word_outer_to_inner": [
+        "K",
+        "D"
+      ]
+    }
+  ],
+  "integral_model": true,
+  "prime_records": [
+    {
+      "full_symmetric_cube_rank": false,
+      "matrix_shape": [
+        1033,
+        969
+      ],
+      "payload": "landing_evaluations_p89.npz",
+      "payload_sha256": "8f03d2397efc510dca0710c28d1b3bc64ee0532e1e84fe4ed17b07e56e360a28",
+      "point_count": 1033,
+      "prime": 89,
+      "quartic_closure": {
+        "contains_all_quartics": true,
+        "estimated_dense_bytes": 318917280,
+        "matrix_shape": [
+          16456,
+          4845
+        ],
+        "rank": 4845,
+        "target_dimension": 4845
+      },
+      "rank": 968,
+      "rng_seed": 2026080224
+    },
+    {
+      "full_symmetric_cube_rank": false,
+      "matrix_shape": [
+        1033,
+        969
+      ],
+      "payload": "landing_evaluations_p199.npz",
+      "payload_sha256": "9e3fbdc1d961ddd8c641f5bbfd6cb4dc34cac9141463d22fe5b670ea556d9256",
+      "point_count": 1033,
+      "prime": 199,
+      "quartic_closure": {
+        "contains_all_quartics": true,
+        "estimated_dense_bytes": 318917280,
+        "matrix_shape": [
+          16456,
+          4845
+        ],
+        "rank": 4845,
+        "target_dimension": 4845
+      },
+      "rank": 968,
+      "rng_seed": 2026080234
+    }
+  ],
+  "proof_rule": "Modulo a good prime, the homogeneous landing ideal either spans the full cubic parameter space or its degree-four closure spans every quartic. Thus its projective special fibre is empty. The directions and landing equations have an integral model, so projectivity (equivalently proper specialization) makes the characteristic-zero projective fibre empty. The second prime is an independent holdout, not the characteristic-zero bridge.",
+  "scope": "this globally equivariant composition-frame ansatz only",
+  "symmetric_cube_dimension": 969
+}

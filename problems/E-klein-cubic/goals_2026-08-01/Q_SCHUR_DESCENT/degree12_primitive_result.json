@@ -1,0 +1,7 @@
+{
+  "status": "timeout",
+  "timeout_seconds": 600,
+  "elapsed_seconds": 600.1063365839946,
+  "log_file": "degree12_primitive_msolve.log",
+  "log_sha256": "1c83b03e32626db2f1cad2354dc3b8b715b64cca3a8f6e42b3994ee8c3f34ba1"
+}

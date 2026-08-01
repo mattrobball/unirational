@@ -1,0 +1,35 @@
+{
+  "agrees_with_p67": true,
+  "basis_rank": 637,
+  "degree": 35,
+  "group_order": 660,
+  "orders": [
+    {
+      "input_dimension": 637,
+      "jet_rank": 276,
+      "kernel_dimension": 361,
+      "order": 0,
+      "unisolvent_rows": 3330
+    },
+    {
+      "input_dimension": 361,
+      "jet_rank": 233,
+      "kernel_dimension": 128,
+      "order": 1,
+      "unisolvent_rows": 6300
+    },
+    {
+      "input_dimension": 128,
+      "jet_rank": 128,
+      "kernel_dimension": 0,
+      "order": 2,
+      "unisolvent_rows": 8925
+    }
+  ],
+  "plane_order": 5,
+  "prime": 89,
+  "residual_degree": 5,
+  "schema": "COV_GLOBAL_JETS_HOLDOUT_V1",
+  "selected_symbolic_kernel_dimension": 0,
+  "zeta11": 78
+}

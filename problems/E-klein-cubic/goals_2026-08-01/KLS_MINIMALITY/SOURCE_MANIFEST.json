@@ -1,0 +1,72 @@
+{
+  "as_of": "2026-08-01",
+  "live_commit": "e1fc474a448db9d93df13967a4cef5f9918ff443",
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "schema": "kls-source-manifest-v1",
+  "sources": [
+    {
+      "path": "goals_2026-08-01/GOAL_KLS_MINIMALITY_CONDUCTOR.md",
+      "sha256": "d64f0eb58416b02a29fd9c296ca4efd0712b8d39605f6af4b6a0c0b67bada7ff"
+    },
+    {
+      "path": "SPEC.md",
+      "sha256": "a607b0a026f732eee1f6cb281ae2e85732d9e2aac866802fd739a810767df01e"
+    },
+    {
+      "path": "REPAIR.md",
+      "sha256": "c7cc9d822885726c5dc6b8168e3a1cf55ab6a5f929b3c8ea16e3f77bd3528e54"
+    },
+    {
+      "path": "CURRENT_PATHS.md",
+      "sha256": "664bd6fcc01908c4cea126a05eab2dec50fba8c6bcb191f68e7f69b330647ed6"
+    },
+    {
+      "path": "tmp/kls_structural_successor/REPORT.md",
+      "sha256": "a2ec13581930974417929c51af2281a64c6442af7a2c549ea373b5545acee13d"
+    },
+    {
+      "path": "tmp/kls_global_foliation_theorem/REPORT.md",
+      "sha256": "e013535dc7d481785bdf26e26d07ab9ce780c7cfdf18569a9e2ff9d79e611302"
+    },
+    {
+      "path": "tmp/kls_minimal_contraction_attack/REPORT.md",
+      "sha256": "42f4131a01e347ac20628704add87cfdb7befcf4fc69b6b2963b5edf92ff468a"
+    },
+    {
+      "path": "tmp/kls_actual_conductor_geometry/REPORT.md",
+      "sha256": "63202ab6747ad402c379031f4986b59e8c99b64ca4245f8c62f650804f873652"
+    },
+    {
+      "path": "tmp/kls_actual_conductor_geometry_audit/REPORT.md",
+      "sha256": "d933216b0c8f309eda79e2bb58beee949e093b913e1c10c3e551ca6f9cd0eb1a"
+    },
+    {
+      "path": "tmp/kls_proper_multiple_structure/REPORT.md",
+      "sha256": "b2361cfa06089216438dfb5db25a80d9b2d8da8ae37725f2443813ddae612f07"
+    },
+    {
+      "path": "tmp/kls_proper_multiple_structure_audit/REPORT.md",
+      "sha256": "fcd30dda6601586b5f13d434c10a31760d7129223e3bcdb16cd526081b53615f"
+    },
+    {
+      "path": "tmp/kls_discrepancy_next_gate/REPORT.md",
+      "sha256": "a5b3e47bd1f99c70f1f321bf6bfd2fd21ec36225b84d5c7658128860cc52cdcc"
+    },
+    {
+      "path": "tmp/kls_discrepancy_next_gate_audit/REPORT.md",
+      "sha256": "8fc286196549de556a79e3219e43afc6c01464edb137c6ca9b6d8b5af2bda497"
+    },
+    {
+      "path": "tmp/kls_a5_linearized_pencil_obstruction/REPORT.md",
+      "sha256": "fee2c911d5ac8a31ab353ee149e22ddd5a2bcdfc92feeaec3920d8214ef29404"
+    },
+    {
+      "path": "tmp/kls_a5_conductor_surface_feasibility/REPORT.md",
+      "sha256": "4378ffba9f188138ff0f5d60219172bbc3d10abb041191861b7e250c2abe544c"
+    },
+    {
+      "path": "tmp/kls_a5_logarithmic_divisor/REPORT.md",
+      "sha256": "4c047dcfa0ad57d3ba9e7f81b3ef412d943e16d73a3e6ceaed134285e32d3912"
+    }
+  ]
+}

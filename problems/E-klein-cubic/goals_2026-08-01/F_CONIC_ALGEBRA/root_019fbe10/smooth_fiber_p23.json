@@ -1,0 +1,20 @@
+{
+  "D1_residue": 0,
+  "affine_parameters": {
+    "A": 22,
+    "B": 19,
+    "T": 0,
+    "Y": 5
+  },
+  "logical_use": "one smooth fibre proves D_1 is not contained in the cubic discriminant",
+  "prime": 23,
+  "projective_parameters": [
+    1,
+    22,
+    19,
+    5,
+    0
+  ],
+  "script": "smooth_fiber_p23.sing",
+  "zeta11_residue": 2
+}

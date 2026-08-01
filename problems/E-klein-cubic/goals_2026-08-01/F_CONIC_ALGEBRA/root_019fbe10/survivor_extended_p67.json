@@ -1,0 +1,19 @@
+{
+  "attempts": 2371,
+  "direction": "(1+u*v)/(t^2*u)",
+  "expected_holdout_passes": 40,
+  "feature_count_check": 735,
+  "fit": {
+    "base_degree": 1,
+    "equation_count": 870,
+    "feature_count": 735,
+    "inconsistent": true,
+    "laurent_degree": 3,
+    "rank": 735
+  },
+  "holdout_passes": null,
+  "holdout_samples": 40,
+  "prime": 67,
+  "scope": "discovery over GF(67); characteristic-zero reconstruction required",
+  "training_samples": 145
+}

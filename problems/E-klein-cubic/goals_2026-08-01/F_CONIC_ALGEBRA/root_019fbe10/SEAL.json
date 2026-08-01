@@ -1,0 +1,13 @@
+{
+  "exit": "F-UNDECIDED",
+  "format": "goal-F-root-honest-stop-audit-v1",
+  "headline": "OPEN",
+  "sha256": {
+    "../SEAL.json": "ed56984545b64172beec8e1aa5de6eb3ff810dd6e67864ddde1e4e6191c5843b",
+    "REPLAY.md": "f05c419ec3ea5a8d54cce5f6fbacbd844e20f667a3625755d5d2cd2e4ce9ce57",
+    "SOURCE_VALUATION_AUDIT.md": "d4ccce22f4e958fd09c93b451e76aa432655bed335f341a3fafa311a2be5522d",
+    "STATUS.md": "401d6ec1dde5359b43e13b6799db66c664304b86f4480121a87bed79cdb202e2",
+    "verify_root_audit.py": "9be44a84c4448d5105f73a0ed4f4a7104cccd2ba34d9ed2ba5a4a4913203455f",
+    "verify_source_hyperplane_stabilizer.py": "3f00faa0c7bffc9e6180d9712aa79fb7f2ca0d3d0990c81061b4b4e7243d2c5b"
+  }
+}

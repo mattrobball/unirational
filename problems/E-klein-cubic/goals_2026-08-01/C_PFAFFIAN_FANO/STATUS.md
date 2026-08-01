@@ -16,7 +16,7 @@ Fano equations.
 
 | Gate | Current evidence | Verdict |
 |---|---|---|
-| C0 compressed characteristic-zero algebra | modular/preflight packets exist; exact reconstructed interface not yet audited here | open |
+| C0 compressed characteristic-zero algebra | exact `m_a`, exact `m_b`, hence exact `b^6` block; independently verified. `L_a` has an exact Cramer oracle but is not materialized in the named basis; rational degree `<=7` is excluded at the 5,000-point `p=353` design | partial |
 | C1 exact involution | abstract/historical data exist; compressed-basis formulas not yet audited here | open |
 | C2 Morita corner and five exact forms | historical quaternion-corner packet is scope-limited; specific transported five-plane not yet audited here | open |
 | C3 simultaneous common line | no accepted exact line at intake | open |
@@ -26,3 +26,13 @@ Fano equations.
 
 All files created or modified by this run remain under `C_PFAFFIAN_FANO/`.
 Sealed packets and sibling goal workers are read-only inputs.
+
+## New exact marker
+
+```text
+C0-AB-MINPOLYS-EXACT-VERIFIED
+```
+
+This marker closes only the two minimal polynomials and the `b^6` compressed
+block.  It is not `C3-APROJ-EXECUTABLE`, because the named-basis `L_a` block
+remains open.

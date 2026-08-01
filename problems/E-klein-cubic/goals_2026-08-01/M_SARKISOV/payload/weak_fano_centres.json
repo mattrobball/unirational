@@ -1,0 +1,49 @@
+{
+  "schema": "m_sarkisov_weak_fano_centres_v1",
+  "source": {
+    "title": "On birational maps from cubic threefolds",
+    "authors": ["Jeremy Blanc", "Stephane Lamy"],
+    "arxiv": "1409.7778"
+  },
+  "cubic": {
+    "H3": 3,
+    "fano_index": 2,
+    "anticanonical_cube": 24
+  },
+  "curve_blowup_formula": {
+    "H3": 3,
+    "H2E": 0,
+    "HE2": "-d",
+    "E3": "2-2*d-2*g",
+    "minus_K": "2*H-E",
+    "minus_K_cube": "22-4*d+2*g"
+  },
+  "centres": [
+    {"g": 0, "d": 1, "family": "L_plane", "model": "Fano", "output": "conic_bundle", "volume": 18},
+    {"g": 1, "d": 3, "family": "L_plane", "model": "Fano", "output": "del_pezzo_3_fibration", "volume": 12},
+    {"g": 1, "d": 4, "family": "L_plane", "model": "weak_fano_divisorial", "output": "no_small_link", "volume": 8},
+    {"g": 4, "d": 6, "family": "L_plane", "model": "weak_fano_divisorial", "output": "no_small_link", "volume": 6},
+    {"g": 0, "d": 2, "family": "L_plane", "model": "weak_fano_small", "output": "del_pezzo_4_fibration", "volume": 14},
+    {"g": 0, "d": 3, "family": "L_plane", "model": "weak_fano_small", "output": "terminal_rank_one_fano", "volume": 10},
+    {"g": 0, "d": 4, "family": "L_quadric", "model": "weak_fano_small", "output": "V14_point", "volume": 6},
+    {"g": 1, "d": 5, "family": "L_quadric", "model": "weak_fano_small", "output": "V14_curve", "volume": 4},
+    {"g": 0, "d": 5, "family": "L_quadric", "model": "weak_fano_small", "output": "cubic_self_link", "volume": 2},
+    {"g": 2, "d": 6, "family": "L_quadric", "model": "weak_fano_small", "output": "cubic_self_link", "volume": 2}
+  ],
+  "plane_cubic_link": {
+    "centre": {"g": 1, "d": 3},
+    "plane_choice": "nonempty open of smooth sections disjoint from the degree-55 line orbit",
+    "picard_basis": ["H", "E"],
+    "minus_K": [2, -1],
+    "fibre_divisor": [1, -1],
+    "mori_rays": {
+      "exceptional_fibre": {"H": 0, "E": -1},
+      "cubic_surface_curve": {"H": 1, "E": 1}
+    },
+    "generic_fibre_degree": 3,
+    "zero_cycle_degrees": [3, 55],
+    "generic_fibre_index": 1,
+    "section_frontier": "rational section or degree-4 multisection"
+  },
+  "scope": "ordinary blowups of smooth geometrically integral curves with weak-Fano blowup only"
+}

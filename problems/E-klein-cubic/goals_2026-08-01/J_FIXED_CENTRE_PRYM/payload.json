@@ -1,0 +1,383 @@
+{
+  "affine_S3_class": {
+    "H1_isomorphism": "Z/3",
+    "cocycle_values_in_element_order": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+    ],
+    "element_order": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "index": 3,
+    "module": "<q>=Z/3 with r acting +1 and s acting -1",
+    "multisection_degree_condition": "3 divides d",
+    "number_of_1_coboundaries": 3,
+    "number_of_1_cocycles": 9,
+    "number_of_H1_classes": 3,
+    "period": 3,
+    "presentation": "S3=<r,s | r^3=s^2=1, srs=r^-1>",
+    "restriction_to_C3": "generator q",
+    "restriction_to_each_reflection_C2": "zero class",
+    "selected_class_nonzero": true,
+    "selected_class_order": 3
+  },
+  "consumed_repository_head": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+  "exit": "J-INVARIANT-TOO-WEAK",
+  "linear_actions": {
+    "Alb1": "affine cocycle above; not the Pic0 pullback action",
+    "H10_E": "sign: translations act trivially; reflections act by -1",
+    "Pic0_pullback": "sign: t_q^*=id and (t_a o [-1])^*=[-1]^*"
+  },
+  "marked_generalized_jacobians": {
+    "E_Div0_character": [
+      11,
+      3,
+      -1
+    ],
+    "E_Div0_decomposition": {
+      "sign": 0,
+      "standard": 4,
+      "trivial": 3
+    },
+    "E_marked_counts": {
+      "S3_orbits": "4 copies of S3/C2",
+      "type_I": 3,
+      "type_II": 9
+    },
+    "E_permutation_character": [
+      12,
+      4,
+      0
+    ],
+    "L_Div0_character": [
+      7,
+      1,
+      1
+    ],
+    "L_Div0_decomposition": {
+      "sign": 1,
+      "standard": 2,
+      "trivial": 2
+    },
+    "L_marked_counts": {
+      "C6": 2,
+      "S3_orbits": "2 copies of S3/C2 plus S3/C3",
+      "type_I": 6
+    },
+    "L_permutation_character": [
+      8,
+      2,
+      2
+    ],
+    "warning": "Orbit counts do not identify the marked points with E[2]+<q>."
+  },
+  "overall_problem_headline": "OPEN",
+  "packet": "J_FIXED_CENTRE_PRYM",
+  "pinned_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "self_sha256": "2e707920ac8a96f429895a4e75ef6a20e04aabb94a50f7453142efa8d21a3532",
+  "source_sha256": {
+    "certificates/exact_weil_check.py": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
+    "certificates/hodge_centers/character_screen.json": "ea262bb56a6ddd1c41e1a586eebe1c1d3cd5dcab17520c0d1ba0492a05050f45",
+    "certificates/strata/incidence_exact.json": "21a1d40b6e84e1673885c52e30fafb8f27d58cf2494b42851440a1d922ac2aa9",
+    "certificates/strata/marked_s3_geometry.json": "6662f850028c4df8c7e33a1749d948153d0fc9ca6da4b733daa88536343a59a6",
+    "certificates/strata/normal_characters.json": "7651f92b990136e5b06415eaab9018606c9765be21357fa3a2b9e467e33170c6"
+  },
+  "stabilization_countermodel": {
+    "H3_added": "H1(C,Q)(-1) tensor Q[G]",
+    "contains_target": "H3(X,Q) as a split G-Hodge substructure",
+    "fixed_and_hodge_decouple": true,
+    "fixed_data": "Equivariantly resolve and then blow up the embedded G-arrangement of the actual E_t and L_t inside P(W).",
+    "fixed_locus_counterexample": "For a free 2-torsion translation on an elliptic A and trivial involution on Y, A x Y -> Y is equivariant dominant but (A x Y)^t is empty and Y^t=Y.",
+    "fixed_locus_functoriality_gap": "A dominant equivariant morphism need not be dominant on fixed loci.",
+    "free_orbit_fixed_loci_for_nontrivial_H": "empty",
+    "hodge_data": "Blow up a free 660-component G-orbit of a curve C with J(X) an isogeny factor of J(C).",
+    "logical_conclusion": "No incompatibility theorem using only the listed refinement-unstable data can separate all admissible source blowup trees from the target data.",
+    "polarization_scope": "target natural polarization up to positive rational scalar, not an integral principal direct factor"
+  },
+  "target_hodge": {
+    "D12_restriction": "trivial + two 2-dimensional irreducibles; all three nontrivial linears have multiplicity 0",
+    "G_representation": "W*",
+    "H21_dimension": 5,
+    "Hom_fixed_elliptic_to_E11": 0,
+    "JX_isogeny_type": "E_11^5, CM(E_11)=Q(sqrt(-11))",
+    "S3_restriction": "trivial + 2 standard; sign multiplicity 0",
+    "fixed_elliptic_channel_multiplicity": 0,
+    "fixed_elliptic_differential_character": "sign",
+    "fixed_elliptic_has_CM": false,
+    "fixed_elliptic_j": "8192/11",
+    "involution_plus_minus_dimensions": [
+      3,
+      2
+    ],
+    "subgroup_rows": [
+      {
+        "H21_irrep_multiplicities": [
+          3,
+          2
+        ],
+        "conjugate_subgroup_count": 55,
+        "id": [
+          2,
+          1
+        ],
+        "invariant_dimension": 3,
+        "label": "C2",
+        "order": 2
+      },
+      {
+        "H21_irrep_multiplicities": [
+          1,
+          2,
+          2
+        ],
+        "conjugate_subgroup_count": 55,
+        "id": [
+          3,
+          1
+        ],
+        "invariant_dimension": 1,
+        "label": "C3",
+        "order": 3
+      },
+      {
+        "H21_irrep_multiplicities": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "conjugate_subgroup_count": 55,
+        "id": [
+          4,
+          2
+        ],
+        "invariant_dimension": 2,
+        "label": "V4",
+        "order": 4
+      },
+      {
+        "H21_irrep_multiplicities": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "conjugate_subgroup_count": 66,
+        "id": [
+          5,
+          1
+        ],
+        "invariant_dimension": 1,
+        "label": "C5",
+        "order": 5
+      },
+      {
+        "H21_irrep_multiplicities": [
+          1,
+          0,
+          2
+        ],
+        "conjugate_subgroup_count": 55,
+        "id": [
+          6,
+          1
+        ],
+        "invariant_dimension": 1,
+        "label": "S3_class_1",
+        "order": 6
+      },
+      {
+        "H21_irrep_multiplicities": [
+          1,
+          0,
+          2
+        ],
+        "conjugate_subgroup_count": 55,
+        "id": [
+          6,
+          1
+        ],
+        "invariant_dimension": 1,
+        "label": "S3_class_2",
+        "order": 6
+      },
+      {
+        "H21_irrep_multiplicities": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "conjugate_subgroup_count": 55,
+        "id": [
+          6,
+          2
+        ],
+        "invariant_dimension": 1,
+        "label": "C6",
+        "order": 6
+      },
+      {
+        "H21_irrep_multiplicities": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "conjugate_subgroup_count": 66,
+        "id": [
+          10,
+          1
+        ],
+        "invariant_dimension": 1,
+        "label": "D10",
+        "order": 10
+      },
+      {
+        "H21_irrep_multiplicities": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "conjugate_subgroup_count": 12,
+        "id": [
+          11,
+          1
+        ],
+        "invariant_dimension": 0,
+        "label": "C11",
+        "order": 11
+      },
+      {
+        "H21_irrep_multiplicities": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "conjugate_subgroup_count": 55,
+        "id": [
+          12,
+          3
+        ],
+        "invariant_dimension": 0,
+        "label": "A4",
+        "order": 12
+      },
+      {
+        "H21_irrep_multiplicities": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "conjugate_subgroup_count": 55,
+        "id": [
+          12,
+          4
+        ],
+        "invariant_dimension": 1,
+        "label": "D12",
+        "order": 12
+      },
+      {
+        "H21_irrep_multiplicities": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "conjugate_subgroup_count": 12,
+        "id": [
+          55,
+          1
+        ],
+        "invariant_dimension": 0,
+        "label": "11:5",
+        "order": 55
+      },
+      {
+        "H21_irrep_multiplicities": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "conjugate_subgroup_count": 11,
+        "id": [
+          60,
+          5
+        ],
+        "invariant_dimension": 0,
+        "label": "A5_class_1",
+        "order": 60
+      },
+      {
+        "H21_irrep_multiplicities": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "conjugate_subgroup_count": 11,
+        "id": [
+          60,
+          5
+        ],
+        "invariant_dimension": 0,
+        "label": "A5_class_2",
+        "order": 60
+      }
+    ]
+  },
+  "upstream_corrections": [
+    "Translation on E is not translation on Pic0 under pullback; it is the identity.",
+    "With a reflection-fixed origin the three reflections are x->-x, x->q-x, x->2q-x; their constants are not the three nonzero 2-torsion points.",
+    "The marked orbit counts alone do not prove marked set E[2]+<q>."
+  ]
+}

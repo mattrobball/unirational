@@ -1,0 +1,70 @@
+{
+  "schema": "kls-elimination-ledger-v1",
+  "exit": "KLS-NO-THEOREM",
+  "global_elimination_attempted": false,
+  "reason": "K1 does not provide an exhaustive finite configuration list; GOAL prohibition 1 forbids a large CAS campaign",
+  "verified_packets": [
+    {
+      "id": "structural_successor",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_structural_successor/verify.py",
+      "terminal": "STRICT NONVERDICT no KLS solution or universal nonvanishing is proved"
+    },
+    {
+      "id": "global_foliation",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_global_foliation_theorem/verify.py",
+      "terminal": "STRICT NONVERDICT singular/noncanonical KLS image branch remains open"
+    },
+    {
+      "id": "minimal_contraction",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_minimal_contraction_attack/verify.py",
+      "terminal": "STRICT NONVERDICT minimal contraction and Klein unirationality remain open"
+    },
+    {
+      "id": "actual_conductor",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_actual_conductor_geometry/verify.py",
+      "terminal": "KLS_ACTUAL_CONDUCTOR_GEOMETRY_EXACT"
+    },
+    {
+      "id": "actual_conductor_audit",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_actual_conductor_geometry_audit/verify.py",
+      "terminal": "KLS_ACTUAL_CONDUCTOR_GEOMETRY_AUDIT_ACCEPTED"
+    },
+    {
+      "id": "proper_multiple",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_proper_multiple_structure/verify.py",
+      "terminal": "KLS_SQUAREFREE_PROPER_P22_BRANCH_EXCLUDED"
+    },
+    {
+      "id": "proper_multiple_audit",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_proper_multiple_structure_audit/verify.py",
+      "terminal": "KLS_PROPER_MULTIPLE_STRUCTURE_AUDIT_ACCEPT"
+    },
+    {
+      "id": "discrepancy_next_gate",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_discrepancy_next_gate/verify.py",
+      "terminal": "KLS_DISCREPANCY_NEXT_GATE_EXACT"
+    },
+    {
+      "id": "discrepancy_hostile_audit",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_discrepancy_next_gate_audit/verify.py",
+      "terminal": "KLS_DISCREPANCY_NEXT_GATE_HOSTILE_AUDIT_ACCEPT"
+    }
+  ],
+  "closed_configuration_ids": [
+    "NORMAL_P22",
+    "NONNORMAL_LITERAL_P22",
+    "NONNORMAL_P22_SQUAREFREE_EXTRA",
+    "NONNORMAL_P22_POSITIVE_DISCREPANCY_EXTRA",
+    "DEGREE25_28_NORMAL_IMAGE_P22_FIELDS"
+  ],
+  "uneliminated_configuration_ids": [
+    "LC_PLACE_REPEATED_FACTORS",
+    "NEGATIVE_DISCREPANCY_FACTORS",
+    "ADDITIONAL_CONDUCTOR_SUPPORT",
+    "REPEATED_P22_HIGHER_CONDUCTOR",
+    "NON_P22_A5_OR_SMALLER_STABILIZER",
+    "STABLE_NONRATIONAL_COMPONENT"
+  ],
+  "headline_conclusion": null
+}
+

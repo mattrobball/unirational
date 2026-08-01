@@ -1,0 +1,56 @@
+{
+  "schema": "m-sarkisov-plane-cubic-dp3-v1",
+  "base_field": "K0=C(W)^G",
+  "source": "generic Klein cubic twist Phi(a)=F(a0*x+a1*C+a2*D+a3*E+a4*K)",
+  "witness": {
+    "point": [-2, -2, -2, -2, -1],
+    "frame_columns": [
+      [-2, -2, -2, -2, -1],
+      [280, 369, 336, 272, 208],
+      [212, 92, 32, 181, 172],
+      [386, 216, 236, 156, 468],
+      [42, 1612, 1512, -232, 1048]
+    ],
+    "frame_determinant": -295136920
+  },
+  "center": {
+    "ideal": ["a3", "a4"],
+    "genus": 1,
+    "degree": 3,
+    "normal_bundle": "O_C(1) + O_C(1)",
+    "plane_cubic_terms": [
+      {"exponents": [3, 0, 0], "coefficient": -30},
+      {"exponents": [2, 1, 0], "coefficient": 14820},
+      {"exponents": [2, 0, 1], "coefficient": 6220},
+      {"exponents": [1, 2, 0], "coefficient": -2432994},
+      {"exponents": [1, 1, 1], "coefficient": -2044960},
+      {"exponents": [1, 0, 2], "coefficient": -511209},
+      {"exponents": [0, 3, 0], "coefficient": 132890000},
+      {"exponents": [0, 2, 1], "coefficient": 166886240},
+      {"exponents": [0, 1, 2], "coefficient": 83896544},
+      {"exponents": [0, 0, 3], "coefficient": 16497740}
+    ]
+  },
+  "link": {
+    "graph_equation": "a3*t-a4*s=0",
+    "fibre_substitution": ["a3=s*u", "a4=t*u"],
+    "endpoint": "degree-3 del Pezzo fibration over P1_K0",
+    "relative_picard_rank": 1
+  },
+  "intersection_ring": {
+    "H3": 3,
+    "H2E": 0,
+    "HE2": -3,
+    "E3": -6,
+    "minus_K": [2, -1],
+    "fibre_L": [1, -1],
+    "minus_K_cube": 12,
+    "L2H": 0,
+    "L2E": 0,
+    "L3": 0
+  },
+  "curve_intersections": {
+    "q": {"H": 0, "E": -1, "L": 1, "minus_K": 1},
+    "ell": {"H": 1, "E": 1, "L": 0, "minus_K": 1}
+  }
+}

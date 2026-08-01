@@ -1,0 +1,61 @@
+{
+  "format": "R-RATIONAL-CURVES-SOURCE-MANIFEST-v1",
+  "sources": [
+    {
+      "path": "tmp/pdfs/roulleau_1001.4853.pdf",
+      "sha256": "4e36a22bdeb3ac6746f0162eab01c47914f1c9df88ee968ba2ae9e11ff0e4a84",
+      "url": "https://arxiv.org/pdf/1001.4853",
+      "use": "period lattice; theorem statement on PDF page 2 and proof on pages 6-10"
+    },
+    {
+      "path": "tmp/pdfs/beauville_math0005017.pdf",
+      "sha256": "18ff765599773594bd83494c44b15e1fdfa9bf40b56274675fde4d8cc655d57f",
+      "url": "https://arxiv.org/pdf/math/0005017",
+      "use": "twisted-cubic Abel-Jacobi geometry; Proposition 5.2 on PDF page 11"
+    },
+    {
+      "path": "tmp/pdfs/bayer_et_al_2011.12240.pdf",
+      "sha256": "ce005e812a7223208938c266281b88c2dbcfc3e125079eb98fcba76b8d365c8a",
+      "url": "https://arxiv.org/pdf/2011.12240",
+      "use": "theta blowup, exceptional cubic, and generalized twisted cubics; Theorem 7.1 and Proposition 7.2 on PDF page 19"
+    },
+    {
+      "path": "tmp/pdfs/iliev_markushevich_9910058.pdf",
+      "sha256": "bd141b86f38ba1b90e5f3a91f963125d897da147ea3ec4c3c041cf0251ce1405",
+      "url": "https://arxiv.org/pdf/math/9910058",
+      "use": "generic-cubic-only quartic boundary; Theorem 5.2 on PDF page 22"
+    },
+    {
+      "path": "tmp/pdfs/hrs1_0202067.pdf",
+      "sha256": "d3e38aca85883bb638ae143c56aa966e24c9c6204c8f2f1e9816903b5bfb182a",
+      "url": "https://arxiv.org/pdf/math/0202067",
+      "use": "small-degree components and residual constructions; key pages 15, 28, 35, and 37"
+    },
+    {
+      "path": "tmp/pdfs/hrs_0202080.pdf",
+      "sha256": "fae17135016e77425060e8c0860c9938facda3144ac1cd091a853d34c337d3ec",
+      "url": "https://arxiv.org/pdf/math/0202080",
+      "use": "quartic and quintic general Abel-Jacobi fibres; key pages 22-23"
+    },
+    {
+      "path": "tmp/sources/hrs1_0202067.tar.gz",
+      "sha256": "15405de4cdaec5671358b9858aac1f2f23823d544ebe6cccc55573168e46ed14",
+      "url": "https://arxiv.org/e-print/math/0202067",
+      "use": "searchable primary TeX source"
+    },
+    {
+      "path": "tmp/sources/hrs_0202080.tar.gz",
+      "sha256": "b74b4e518445a53c5853214afc936133a30f57d12ebd864f0f611e19044d6091",
+      "url": "https://arxiv.org/e-print/math/0202080",
+      "use": "searchable primary TeX source"
+    }
+  ],
+  "rendered_pages": [
+    "tmp/rendered/bayer_p19.png",
+    "tmp/rendered/hrs1_p15.png",
+    "tmp/rendered/hrs1_p28.png",
+    "tmp/rendered/hrs1_p37.png",
+    "tmp/rendered/hrs_p22.png",
+    "tmp/rendered/hrs_p23.png"
+  ]
+}

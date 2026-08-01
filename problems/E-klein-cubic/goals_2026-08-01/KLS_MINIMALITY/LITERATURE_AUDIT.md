@@ -1,40 +1,32 @@
-# Primary-literature audit
+# Current primary-literature audit
 
-Checked 2026-08-01.  This is a scope audit, not a claim that a literature
-search proves nonexistence of a theorem.
+Checked 2026-08-01.  The search was for a theorem that could supply either
+minimality-to-positive-discrepancy or a finite conductor-pullback support
+bound.
 
-## Sources checked
+1. Spicer--Tasin, *Rank one foliations on toroidal varieties*,
+   <https://arxiv.org/abs/2604.08100>, turns a **log-canonical** rank-one
+   foliation on a suitable ambient variety into an lc pair.  It does not
+   prove that the KLS foliation is lc and does not identify its produced
+   divisor with `V(h)` or the conductor pullback.
+2. Cascini--Liu--Spicer--Svaldi, *Birational boundedness of stable
+   families*, <https://arxiv.org/abs/2604.24106>, assumes bounded adjoint
+   volume.  In the KLS setting this would require control of the unknown
+   foliation degree and does not bound the residual adjugate degree or the
+   covariant presentation degree.
+3. Cascini--Spicer, *MMP for algebraically integrable foliations*,
+   <https://arxiv.org/abs/2303.07528>, assumes log canonicity and provides a
+   birational MMP, not the required presentation-degree or conductor-support
+   bound.
+4. Trushin, *Contracted divisors and Degree-Two Maps*,
+   <https://arxiv.org/abs/2605.26390>, studies dominant generically finite
+   polynomial self-maps, with stronger conclusions in field degree two.  A
+   rank-four KLS map from affine 5-space to a hypersurface of dimension four
+   has relative dimension one and is outside that scope.
+5. Cheltsov--Tschinkel--Zhang, *Equivariant unirationality of Fano
+   threefolds*, <https://arxiv.org/abs/2502.19598>, remains the surrounding
+   equivariant-unirationality source; it does not supply the KLS minimality
+   theorem.
 
-- Spicer--Tasin, *Rank one foliations on toroidal varieties*,
-  <https://arxiv.org/abs/2604.08100>.  Its main construction assumes the
-  rank-one foliation is log canonical.  It produces an lc ambient divisor
-  linearly equivalent to the foliation canonical class; it does not prove
-  log canonicity of the KLS foliation, identify that divisor with `V(h)`, or
-  bound conductor pullback support.
-- Cascini--Liu--Spicer--Svaldi, *Birational boundedness of stable families*,
-  <https://arxiv.org/abs/2604.24106>.  Its foliated boundedness statement
-  assumes bounded adjoint volume.  In the KLS ledger, supplying that bound
-  would already require control of the unknown foliation degree and still
-  would not bound the residual adjugate degree.
-- Trushin, *Contracted divisors and Degree-Two Maps*,
-  <https://arxiv.org/abs/2605.26390>.  Its classification concerns dominant
-  polynomial self-maps of equal-dimensional affine spaces and its sharper
-  conclusions concern generically finite degree-two maps.  A KLS map has
-  image dimension four from a five-dimensional source and is not in that
-  setting.
-- Cheltsov--Tschinkel--Zhang, *Equivariant unirationality of Fano
-  threefolds*, <https://arxiv.org/abs/2502.19598>, checked as the current
-  surrounding status source.  It does not supply a KLS
-  minimality-to-conductor theorem.
-
-## Decision
-
-No checked primary source supplies either load-bearing missing assertion:
-
-1. minimality forces positive discrepancies for all extracted KLS gcd
-   valuations; or
-2. minimality bounds the total reduced support above conductor primes.
-
-The repository's use of these papers is therefore at the correct limited
-scope.  None licenses a finite conductor classification or an all-degree
-negative conclusion.
+This audit is evidence about the present theorem supply, not a proof that no
+future theorem can exist.

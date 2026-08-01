@@ -1,0 +1,148 @@
+{
+  "schema": "klein_goal_v_valuation_payload_v1",
+  "status": "V-UNDECIDED",
+  "source": {
+    "live_commit_at_start": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+    "live_commit_at_final_audit": "53e267a59b2d24de93c58dd9ddacc2f995fc2d68",
+    "pinned_baseline": "715faf441289e2589b9325311b6613ea0331bf88"
+  },
+  "genuine_twist": {
+    "base_field": "K=C(P(W))^G",
+    "equation": "Phi(a)=F(a0*x+a1*C+a2*D+a3*E+a4*K)",
+    "frame_degrees": [1, 4, 5, 6, 7],
+    "nonzero_cubic_coefficients": 35,
+    "newton_support": "all lattice points of 3*Delta_4"
+  },
+  "local_index": {
+    "cycle_degrees": [60, 132, 165, 220],
+    "bezout_coefficients": [-13, 3, 1, 1],
+    "bezout_value": 1,
+    "conclusion": "index(X_T over K_v)=1 for every valuation v",
+    "excluded_mechanisms": [
+      "local index divisible by 3",
+      "specialization degree image 3Z",
+      "absence of prime-to-3 zero-cycles",
+      "all special-fibre component multiplicities divisible by 3 with the claimed index consequence"
+    ]
+  },
+  "diagonal_covariant_divisors": {
+    "vectors": ["x", "C", "D", "E", "K"],
+    "vector_degrees": [1, 4, 5, 6, 7],
+    "diagonal_degrees": [3, 12, 15, 18, 21],
+    "coordinate_gcd_total_degrees": [0, 0, 0, 0, 0],
+    "named_equalities": {
+      "F(x)": "f3",
+      "F(C)": "f12"
+    },
+    "conclusion": "every irreducible component is locally soluble for the full twist"
+  },
+  "rank_one_tropical": {
+    "value_group": "Z",
+    "conclusion": "the tropical hypersurface has an integral projective valuation vector",
+    "proof_key": "two of five pure-cube heights agree modulo 3; their binary lower Newton polygon has an integral-slope edge",
+    "strict_boundary": "initial-form residue pointlessness remains open"
+  },
+  "all_rank_inertia_tropical": {
+    "valuation_scope": "Krull valuations of K trivial on C, after henselization",
+    "tame_inertia": "finite abelian and central in the decomposition group because C contains every root of unity",
+    "centralizer_orders": {
+      "2": 12,
+      "3": 6,
+      "5": 5,
+      "6": 6,
+      "11": 11
+    },
+    "ramified_conclusion": "every valuation with nontrivial torsor inertia is locally soluble",
+    "unramified_conclusion": "the local point problem is exactly the residue twist point problem",
+    "tropical_conclusion": "for every rank and every valuation, the tropical hypersurface contains a point over the base value group",
+    "closed_residue_conclusion": "every valuation with residue field C is locally soluble",
+    "strict_boundary": "an unramified residue twist over a positive-transcendence-degree residue field can still be pointless"
+  },
+  "standard_parshin_completion_solubility": {
+    "effective_cycle_degree": 55,
+    "input": "D12-stable projective line contained in the Klein cubic",
+    "field_theorem": "Coray Theorem 4.7 for successive complete DVR fields",
+    "covered_chain_lengths_on_Kproj": [3, 4],
+    "terminal_residue_transcendence_degree_bound": 1,
+    "conclusion": "the genuine twist has a point over every covered successive Parshin completion",
+    "strict_boundary": "this complete-DVR theorem is not asserted for henselizations, rank-one divisors, or rank-two chains"
+  },
+  "constant_residue_coordinate_screen": {
+    "prime": 67,
+    "targets": {
+      "f5": {
+        "independent_cubic_rank": 34,
+        "projective_charts": 5,
+        "unit_charts": 5
+      },
+      "f6": {
+        "independent_cubic_rank": 34,
+        "projective_charts": 5,
+        "unit_charts": 5
+      }
+    },
+    "scope": "constant coordinates in the locally normalized five-column frame only"
+  },
+  "bounded_full_frame_screen": {
+    "prime": 67,
+    "f5": [
+      {"degree": 1, "candidates": 1, "equation_rank": 1, "cone_dimension": 0},
+      {"degree": 2, "candidates": 0, "equation_rank": 0, "cone_dimension": null},
+      {"degree": 3, "candidates": 0, "equation_rank": 0, "cone_dimension": null},
+      {"degree": 4, "candidates": 2, "equation_rank": 4, "cone_dimension": 0},
+      {"degree": 5, "candidates": 1, "equation_rank": 1, "cone_dimension": 0},
+      {"degree": 6, "candidates": 1, "equation_rank": 1, "cone_dimension": 0},
+      {"degree": 7, "candidates": 4, "equation_rank": 12, "cone_dimension": 0},
+      {"degree": 8, "candidates": 2, "equation_rank": 3, "cone_dimension": 0},
+      {"degree": 9, "candidates": 2, "equation_rank": 3, "cone_dimension": 0},
+      {"degree": 10, "candidates": 6, "equation_rank": 24, "cone_dimension": 0},
+      {"degree": 11, "candidates": 5, "equation_rank": 24, "cone_dimension": 0},
+      {"degree": 12, "candidates": 6, "equation_rank": 43, "cone_dimension": 0},
+      {"degree": 13, "candidates": 12, "equation_rank": 75, "cone_dimension": 0},
+      {"degree": 14, "candidates": 10, "equation_rank": 83, "cone_dimension": 0},
+      {"degree": 15, "candidates": 13, "equation_rank": 109, "cone_dimension": 0}
+    ],
+    "f6": [
+      {"degree": 1, "candidates": 1, "equation_rank": 1, "cone_dimension": 0},
+      {"degree": 2, "candidates": 0, "equation_rank": 0, "cone_dimension": null},
+      {"degree": 3, "candidates": 0, "equation_rank": 0, "cone_dimension": null},
+      {"degree": 4, "candidates": 2, "equation_rank": 3, "cone_dimension": 0},
+      {"degree": 5, "candidates": 1, "equation_rank": 1, "cone_dimension": 0},
+      {"degree": 6, "candidates": 2, "equation_rank": 4, "cone_dimension": 0},
+      {"degree": 7, "candidates": 3, "equation_rank": 8, "cone_dimension": 0},
+      {"degree": 8, "candidates": 2, "equation_rank": 3, "cone_dimension": 0},
+      {"degree": 9, "candidates": 4, "equation_rank": 12, "cone_dimension": 0},
+      {"degree": 10, "candidates": 5, "equation_rank": 24, "cone_dimension": 0},
+      {"degree": 11, "candidates": 6, "equation_rank": 34, "cone_dimension": 0},
+      {"degree": 12, "candidates": 8, "equation_rank": 69, "cone_dimension": 0},
+      {"degree": 13, "candidates": 10, "equation_rank": 82, "cone_dimension": 0},
+      {"degree": 14, "candidates": 12, "equation_rank": 108, "cone_dimension": 0},
+      {"degree": 15, "candidates": 16, "equation_rank": 140, "cone_dimension": null, "verdict": "timeout nonverdict"}
+    ],
+    "strict_boundary": "bounded homogeneous exclusions do not decide arbitrary rational residue coordinates"
+  },
+  "next_bounded_frontier": {
+    "target": "f5",
+    "degree": 16,
+    "block_dimensions": [7, 5, 2, 2, 3],
+    "candidates": 19,
+    "equation_rank": 151,
+    "timeout_seconds": 300,
+    "verdict": "timeout nonverdict"
+  },
+  "installed_local_results": {
+    "xcd_discriminant": "every height-one component has a plane point and therefore a full-twist local point",
+    "f5_hessian_kernel_line": "excluded by a pure-binary-cubic identity and a transverse noncube valuation; strict scope is one canonical line",
+    "f5_full_residue": "open",
+    "f6_full_residue": "open",
+    "pfaffian_D3_D5": "locally soluble auxiliary cubics; no full-twist negative bridge",
+    "target_branch": "normalization/class-group and full-twist bridge remain open"
+  },
+  "strict_nonclaims": [
+    "no full-twist local nonpoint is proved",
+    "no all-natural-valuations theorem is proved",
+    "no unramified residue-twist point census is complete",
+    "no bounded computation is promoted to an all-degree result",
+    "Problem E remains open"
+  ]
+}

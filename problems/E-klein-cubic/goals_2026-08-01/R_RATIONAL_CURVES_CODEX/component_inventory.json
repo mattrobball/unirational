@@ -1,0 +1,48 @@
+{
+  "packet": "R_RATIONAL_CURVES_CODEX",
+  "field": "K_proj = C(P(W))^PSL2(F11)",
+  "torsor": "Spec C(P(W)) / Spec K_proj",
+  "cutoff": {
+    "e0": 3,
+    "reason": "degree 2 is controlled by residual lines; degree 3 has an Aut(X)-equivariant all-smooth-cubic compactification theorem; the audited quartic fibre theorem assumes a generic cubic"
+  },
+  "degrees": [
+    {
+      "degree": 1,
+      "component": "Fano surface of lines",
+      "dimension": 2,
+      "K_status": "empty",
+      "proof": "binding generic-twist no-line theorem in RESOLUTION.md"
+    },
+    {
+      "degree": 2,
+      "component": "geometrically integral conics",
+      "dimension": 4,
+      "K_status": "empty",
+      "proof": "span plane plus residual K-line"
+    },
+    {
+      "degree": 3,
+      "component": "closure of smooth twisted cubics",
+      "dimension": 6,
+      "abel_jacobi_image": "theta divisor",
+      "generic_fibre": "P2",
+      "K_status": "a K-Hilbert point implies X_T(K) is nonempty",
+      "proof": "J_T(K)=0 and the theta desingularization has exceptional divisor X_T"
+    }
+  ],
+  "higher_degrees": {
+    "rational_quartics": "open; generic-cubic fibre theorem not transferred to the Klein cubic",
+    "elliptic_quintics": "open; requires exact residual descent",
+    "rational_quintics_and_higher": "open",
+    "degree_55_incidence": "open and field-sensitive"
+  },
+  "fixed_jacobian": {
+    "result": "twist J_T(K_proj) has exactly the zero point",
+    "certificate": "fixed_jacobian_payload.json",
+    "producer": "produce_fixed_jacobian.py",
+    "independent_verifier": "verify_fixed_jacobian.py"
+  },
+  "headline": "OPEN",
+  "exit": "R-HILBERT-COMPONENT-STRUCTURAL"
+}

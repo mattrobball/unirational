@@ -1,0 +1,19 @@
+{
+  "exit": "J-INVARIANT-TOO-WEAK",
+  "files": {
+    "BLOWUP_FORMULA.md": "004c085a859989cfb5e35ba2adadc0ef0037bcd581ace8687633ef9bacd8daa8",
+    "CENTRE_REALIZABILITY.md": "42eaae0a2feb04d5125feccd5191c382f82b243ea332c600747d146e49b44d52",
+    "COMPLETION_AUDIT.md": "23f28eaf9e2c140d0f68412e2c3e980deb08420715b3c71af666c7af5b1ff521",
+    "HODGE_ISOGENY.md": "4d083f0c6f09cddb0916fc30d332f7435cb9d0b21a77cd078182bdd73893c548",
+    "ONE_MOTIVE.md": "315de13340570247529740195bacdc7f0d0b8fcfcee544e3101d07576f6bf8da",
+    "SOURCES.md": "990324ab613fa1fd1298133ecc66fe7de4c17feaf2218b0781f2fdf99d80e053",
+    "STATUS.md": "bab71216a1f3b0ccdadf0c8f10e3e7dd66207276b12ae04d16ccb500252989b5",
+    "make_seal.py": "5439eab1dcd0be433158b71393e8d8f8e7d29d65186fa3276428ac7360075758",
+    "payload.json": "4c5bb34bfe4fcdf729779848069925f2319471d556a5b03dcacdbfdc8875a5ce",
+    "produce.py": "ec96a8511a3975dfc0d48517eaed2e68f9f6253c20caffbfb6a82e41c3eb8a1f",
+    "verify.py": "9189348e863e353d2b6a164cbdf5795754b342f56c61f8cc7cbd4f48bf4b26a4"
+  },
+  "hash_algorithm": "sha256",
+  "packet": "J_FIXED_CENTRE_PRYM",
+  "self_hash": "omitted by design"
+}

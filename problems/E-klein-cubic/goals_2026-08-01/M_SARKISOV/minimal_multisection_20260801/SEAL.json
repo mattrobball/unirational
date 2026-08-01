@@ -1,0 +1,33 @@
+{
+  "schema": "m-sarkisov-minimal-multisection-seal-v1",
+  "verdict": "DEGREE-3-MULTISECTION-PROVED",
+  "headline": "OPEN",
+  "repository_head_at_creation": "53e267a59b2d24de93c58dd9ddacc2f995fc2d68",
+  "local_files": {
+    "STATUS.md": "0c6c17538a26840b460247297b51127fffa0a360e7d6743639993a481fbc83a9",
+    "THEOREM.md": "b0256d04b29296e509b6714dd001203839e91b67722720652c2ee3616d3e4e07",
+    "COMPLETION_AUDIT.md": "d337c92028a0a27dc6ecff70828a291c4591905c9ef374ba3f0eb158fcfe5875",
+    "payload.json": "36b0d86af710cee45c39734736ab1abf25d947faf4598370f3e9051df662608e",
+    "verify.py": "a3fa79991d13404870991f53b28a435957532e887048ac95fff04052a9fd47d6"
+  },
+  "upstream_inputs": {
+    "goals_2026-08-01/M_SARKISOV/section_or_multisection_20260801/SEAL.json": "b00b744be7f1fe72e5a06824c5622158ddfa43ad8cbba3ea8d66d06849e8bf26",
+    "goals_2026-08-01/M_SARKISOV/section_or_multisection_20260801/verify.py": "4ffd2366f880be1d3666b10df8d386d1402427010007612dfa86f35b91968d87",
+    "goals_2026-08-01/M_SARKISOV/SEAL.json": "688c9d77daa8fd30873ab360aafedcbd78beab16fbd9fa0ea0465c295c6ba2b0",
+    "goals_2026-08-01/M_SARKISOV/verify.py": "36703ad244e47ad51fe620eb0d6823d99fed92858e274d9e408f508bc7226633",
+    "RESOLUTION.md": "3eac1aa9787da90cbee21b0e72e9ea0fe538921e74afd9cc20170d5227e64c67",
+    "SPEC.md": "a607b0a026f732eee1f6cb281ae2e85732d9e2aac866802fd739a810767df01e"
+  },
+  "proved": [
+    "connected integral constant-field degree-3 exceptional multisection exists",
+    "degree-2 multisection implies rational section",
+    "minimum multisection degree is 1 if a section exists and otherwise 3",
+    "degree-55 orbit-line multisection is not minimal"
+  ],
+  "strict_nonclaims": [
+    "the degree-3 multisection is not K0-rational or geometrically integral over K0",
+    "the three geometric branches are not asserted to be an ordinary G-orbit",
+    "existence or nonexistence of a rational section is not decided",
+    "Problem E headline remains open"
+  ]
+}

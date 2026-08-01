@@ -1,0 +1,120 @@
+{
+  "coefficient_match_count": 10,
+  "coefficient_matches": {
+    "A": {
+      "equal_as_12_component_QQ_t_vectors": true,
+      "generic_label": "x*x*x",
+      "generic_triple": [
+        0,
+        0,
+        0
+      ]
+    },
+    "A2": {
+      "equal_as_12_component_QQ_t_vectors": true,
+      "generic_label": "x*x*C",
+      "generic_triple": [
+        0,
+        0,
+        1
+      ]
+    },
+    "A3": {
+      "equal_as_12_component_QQ_t_vectors": true,
+      "generic_label": "x*x*D",
+      "generic_triple": [
+        0,
+        0,
+        2
+      ]
+    },
+    "B": {
+      "equal_as_12_component_QQ_t_vectors": true,
+      "generic_label": "C*C*C",
+      "generic_triple": [
+        1,
+        1,
+        1
+      ]
+    },
+    "B1": {
+      "equal_as_12_component_QQ_t_vectors": true,
+      "generic_label": "x*C*C",
+      "generic_triple": [
+        0,
+        1,
+        1
+      ]
+    },
+    "B3": {
+      "equal_as_12_component_QQ_t_vectors": true,
+      "generic_label": "C*C*D",
+      "generic_triple": [
+        1,
+        1,
+        2
+      ]
+    },
+    "C": {
+      "equal_as_12_component_QQ_t_vectors": true,
+      "generic_label": "D*D*D",
+      "generic_triple": [
+        2,
+        2,
+        2
+      ]
+    },
+    "C1": {
+      "equal_as_12_component_QQ_t_vectors": true,
+      "generic_label": "x*D*D",
+      "generic_triple": [
+        0,
+        2,
+        2
+      ]
+    },
+    "C2": {
+      "equal_as_12_component_QQ_t_vectors": true,
+      "generic_label": "C*D*D",
+      "generic_triple": [
+        1,
+        2,
+        2
+      ]
+    },
+    "M": {
+      "equal_as_12_component_QQ_t_vectors": true,
+      "generic_label": "x*C*D",
+      "generic_triple": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "consequence": "the coordinate plane V(Phi) intersect {a3=a4=0}, with coordinates x,C,D, has no K_proj,C-rational point",
+  "coordinate_change": "Goal G and the upstream xCD packet use the same normalized frame x/tau, C/tau^4, D/tau^5 and the same K_proj,C; all ten ternary coefficients agree literally in the normalized 12-element basis.",
+  "field": "K_proj,C = K_proj,QQ tensor_QQ C",
+  "goal_g_plane": [
+    "x",
+    "C",
+    "D"
+  ],
+  "normalization": "tau=f3^2/f5; each degree-d invariant is divided by tau^d",
+  "normalized_kproj_table_sha256": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f",
+  "schema": "G_XCD_BINDING_V1",
+  "source_hashes": {
+    "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+    "goals_2026-08-01/G_ALL_DEGREE/verify_generic_cubic.py": "cf4bc9c7ee4fea19b9f8d37d647956ad800b6554730d533a572d02fbbe392748",
+    "tmp/kproj_arithmetic/normalized_kproj_table.json": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f",
+    "tmp/xcd_descent_algebra/generic_xcd_model.json": "822f01e01f7461fc27687de472ae864c14fe3aeeaf8ff989317afd020a82656d",
+    "tmp/xcd_general_slice_completion/PROOF_AUDIT.md": "0217cd8d00068cb710b7969bcca45df5031c3c2e9864dafc118d77ac362c8e19",
+    "tmp/xcd_general_slice_completion/REPORT.md": "eac071d7a97b73d5eb3fd65b316d2ab17de7c691d69eddde4846589ec321ed56",
+    "tmp/xcd_general_slice_completion/certificate.json": "9d981914f04ad343d7e1845431e64e61d142993cc179ce36baaa4b440e935c21",
+    "tmp/xcd_general_slice_completion/verify.py": "33bdd4c284548e16372e113a258ea478d3822f88591ca60478ed72a064466fff",
+    "tmp/xcd_genuine_descent/kproj_e3_presentation.json": "e3fa6c1a5485739b2fa6e6230d88382c701f41d398881b976ba85abe9dfafc3e",
+    "tmp/xcd_genuine_descent/verify.py": "e83ec915be6fc1b8c123d592c3dd591df90299f2e159ef5d44d7daa573981b4f"
+  },
+  "strict_scope": "This excludes exactly the x,C,D ternary plane. It says nothing by itself about the other nine ternary planes or a point with four or five nonzero frame coordinates.",
+  "upstream_theorem": "the proper xCD plane curve has no K_proj,C-point by specialization at Q6=f6=0"
+}

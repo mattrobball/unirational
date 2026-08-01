@@ -1,0 +1,1775 @@
+                                                       CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS
+
+                                                                      JOE HARRIS, MIKE ROTH, AND JASON STARR
+
+
+
+
+arXiv:math/0202067v1 [math.AG] 7 Feb 2002
+                                                                                          Contents
+                                              1. Introduction                                                                                      1
+                                              2. Preliminaries                                                                                     2
+                                              3. Lines, Conics and Plane Cubics                                                                    5
+                                              4. Twisted Cubics                                                                                    8
+                                              5. Quartic Elliptic Curves                                                                          14
+                                              6. Cubic Scrolls and Applications                                                                   15
+                                              7. Quartic Rational Curves                                                                          25
+                                              8. Quintic Elliptic Curves                                                                          31
+                                              9. Quintic Rational Curves                                                                          33
+                                              10. Quintic Curves of Genus 2                                                                       37
+                                              References                                                                                          38
+
+                                                   Abstract. In this article we consider the spaces Hd,g (X) parametrizing smooth curves of
+                                                   degree d and genus g on a smooth cubic threefold X ⊂ P4 . For 1 ≤ d ≤ 5, we show that each
+                                                   variety Hd,g (X) is irreducible of dimension 2d.
+
+
+
+                                                                                     1. Introduction
+                                               Suppose that X ⊂ P4 is a smooth cubic hypersurface in complex projective 4-space. In this
+                                            article we consider the space Hd,g (X) parametrizing smooth curves of degree d and genus g
+                                            on a smooth cubic threefold X ⊂ P4 . For 1 ≤ d ≤ 5 we show that each variety Hd,g (X) is
+                                            irreducible of dimension 2d.
+
+                                               For the Fano scheme of lines F = H1,0 (X), this is a classical result, c.f. [1]. We bootstrap
+                                            from this case by residuation: in each case we show that for a general point [C] ∈ Hd,g (X)
+                                            there is a surface Σ ⊂ P4 which contains C and such that every irreducible component of the
+                                            residual to C in Σ∩X has degree e < d. In this way we inductively prove that for 1 ≤ d ≤ 5 the
+                                            space Hd,g (X) is irreducible, and in several cases we also show smoothness. In a forthcoming
+                                            paper [8], we use similar methods to describe the Abel-Jacobi maps ud,g : Hd,g (X) → J(X)
+                                            for 1 ≤ d ≤ 5.
+
+                                               Date: November 1, 2018.
+                                               The third author was partially supported by an NSF Graduate Research Fellowship and Sloan Dissertation
+                                            Fellowship.
+                                                                                               1
+2                                  HARRIS, ROTH, AND STARR
+
+1.1. Notation. All schemes in this paper will be schemes over C. All absolute products will
+be understood to be fiber products over Spec(C).
+  For a projective variety X and a numerical polynomial P (t), HilbP (t) (X) denotes the cor-
+responding Hilbert scheme. For integers d, g, Hd,g (X) ⊂ Hilbdt+1−g (X) denotes the open
+subscheme parametrizing smooth, connected curves of degree d and genus g.
+
+                                       2. Preliminaries
+  In this section we gather some preliminary facts about deformation theory, residuation,
+and Abel-Jacobi maps.
+
+2.1. Deformation Theory.
+   All of the irreducibility arguments in this paper follow the same pattern, and the linchpin
+of these arguments is the infinitesimal analysis of the Hilbert scheme in [10, section I.2], in
+particular [10, theorem I.2.15]. The part of this theorem which we shall use most often is the
+following:
+Proposition 2.1. Let Y be a smooth complex variety with canonical divisor class KY and let
+C ⊂ Y be a connected, local complete intersection curve with normal bundle NC/Y = IC /IC2
+and with arithmetic genus pa . Every irreducible component of the Hilbert scheme at [C] has
+dimension at least
+            χ(NC/Y ) = h0 (NC/Y ) − h1 (NC/Y ) = −KY .[C] + (1 − pa )(dim Y − 3).             (1)
+The Zariski tangent space has dimension h0 (NC/Y ), therefore the Hilbert scheme is smooth
+at [C] if h1 (NC/Y ) = 0.
+   Although this is technically inaccurate, we will say that the curve C ⊂ Y is unobstructed
+if h1 (NC/Y ) = 0.
+   Another condition closely related to smoothness of the Hilbert scheme at [C] is the question
+of whether deformations of C smooth the singularities of C, i.e., whether or not C is in the
+closure of the open set parametrizing smooth curves. Suppose that C is a nodal curve, i.e.,
+every singular point is formally isomorphic to the formal neighborhood of 0 ∈ Spec C[x, y]/xy.
+Then [2, lemma 9.2.2] the deformation space of the nodes p1 , . . . , pδ is canonically identified
+with
+                           H 0 (C, Ext1OC (ΩC , OC )) = ⊕δi = 1 Ti′ ⊗ Ti′′                    (2)
+where Ti′ , Ti′′ are the tangent spaces of the two branches of C at pi . In the case that C is
+unobstructed we have a short exact sequence:
+         H 0 (C, NC/X ) −−−→ H 0 (C, Ext1OC (ΩC , OC )) −−−→ H 1(C, TY |C ) −−−→ 0            (3)
+This calculation leads to the following:
+Lemma 2.2. When h1 (C, TY |C ) = 0 the morphism from the formal neighborhood of [C] in
+the Hilbert scheme to the deformation space of the nodes is smooth at [C], thus deformations
+of C smooth the nodes.
+
+   A different approach to smoothing nodes is as follows (at some level it is equivalent to the
+last paragraph). Suppose Y is a smooth variety and Z ⊂ Y is a simple normal crossings
+subscheme with no triple points, in particular each irreducible component of Z is smooth.
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                 3
+
+Let Zi be an irreducible component of Z and let D1 , . . . , Dr be the connected components of
+sing(Z) ∩ Zi . For each j = 1, . . . , r, let Zj′ be the second irreducible component of Z which
+contains Di (if an irreducible component intersects itself, make an étale base change such that
+the preimage of Zi decomposes into a union of irreducible components in a neighborhood of
+the preimage of Di ). Consider the diagram of sheaves:
+                                                    2                         
+   0 −−−→ IZ/Y / IZ/Y IZi /Y −−−→ IZi /Y / IZi /Y −−−→ IZi /Y / IZ/Y −−−→ 0
+                                                                                             (4)
+where IA/B is the ideal sheaf of A in B. By passing to formal neighborhoods and using
+the canonical form for a simple normal crossings variety, one sees that this is a short exact
+                                                                          2
+sequence. Moreover one can identify the last term with ⊕rj = 1 IDj /Zj′ /ID     ′ . Dualizing this
+                                                                            j /Zj
+short exact sequence leads to the short exact sequence:
+           0 −−−→ NZi /Y −−−→ NZ/Y |Zi −−−→ ⊕rj = 1 NDj /Zi ⊗ NDj /Zj′ −−−→ 0                 (5)
+Now suppose that Z is a curve with two irreducible components Z1 and Z2 intersecting at a
+node p. We have an obvious short exact sequence of sheaves:
+                0 −−−→ NZ/Y |Z1 (−p) −−−→ NZ/Y −−−→ NZ/Y |Z2 −−−→ 0,                          (6)
+and the map in equation 3 is simply the composite map
+                  H 0 (Z, NZ/Y ) −−−→ H 0 (Z2 , NZ/Y |Z2 ) −−−→ TZ1 ,p ⊗ TZ2 ,p               (7)
+where the second map comes from equation 5. Again using equation 5 and combining this
+with the long exact sequence in cohomology associated to a short exact sequence of sheaves,
+we conclude the following
+Lemma 2.3. Suppose that Z ⊂ X is a nodal curve and Z1 , Z2 are two closed nodal subcurves
+of Z which intersect transversally in a single point p ∈ Z1 ∩ Z2 . Then Z is unobstructed and
+the node of Z smooths when H 1 (Z1 , NZ1 /Y (−p)) = H 1 (Z2 , NZ2 /Y ) = 0.
+
+  Let us return now to the strategy of proving that Hd,g (X) is irreducible. The first case
+will be showing that Fano scheme of lines F := H1,0 (X) is irreducible, in fact a smooth,
+projective surface. The analysis of this case is classical. For each 1 < d ≤ 5, we define an
+incidence correspondence
+                                     fd,g : I d,g → Hd,g (X)                                  (8)
+parametrizing curves C ⊂ X along with some extra data and such that fd,g is dominant of
+constant fiber dimension. The extra data will allow us to associate a surface S ⊂ P4 which
+contains C and such that the residual of C in S ∩ X is made up of curves of strictly smaller
+degree. We stratify Id,g according to the behavior of the residual curve. By studying the
+residual curves in each case, we prove that there is a unique irreducible component of Id,g
+whose image in Hd,g (X) has dimension ≥ 2d, and that this image has dimension precisely
+2d. Then it follows that Hd,g (X) is irreducible of dimension 2d.
+
+2.2. Residuation. In this section we review a few basic facts about residuation of sub-
+schemes in a Gorenstein scheme.
+4                                  HARRIS, ROTH, AND STARR
+
+Definition 2.4. Suppose that D is a Gorenstein scheme and D1 ⊂ D is a closed subscheme
+of codimension 0. Let I denote the ideal sheaf of D1 in D. Define
+                              J = (0 :OD I) = HomOD (OD1 , OD ).                           (9)
+Denote by D2 ⊂ D the closed subscheme associated to the ideal sheaf J . We define D2 ⊂ D
+to be the residual subscheme to D1 ⊂ D.
+
+Theorem 2.5. [3, theorem 21.23] Let D be a Gorenstein scheme, D1 ⊂ D a codimension 0
+closed subscheme. Let D2 ⊂ D be the residual subscheme to D1 ⊂ D.
+   1. The codimension of D2 ⊂ D is zero and D2 has no embedded components. If D1 has no
+      embedded components, then D1 ⊂ D is the residual subscheme to D2 ⊂ D.
+   2. If D1 is Cohen-Macaulay, then D2 is Cohen-Macaulay.
+   3. If D1 is Cohen-Macaulay, then J ⊗ ωD is a canonical sheaf for D1 . In particular, D1 is
+      Gorenstein iff J is locally principal.
+   We will often be concerned with flat families of 1-cycles. The question arises when flatness
+of D and D1 over B implies that D2 is also flat over B. The following lemma addresses this
+issue and also establishes a base-change result for residual subschemes.
+Lemma 2.6. Let R be a local Noetherian ring. Let A be a local Noetherian A-algebra (i.e.,
+R → A is a local homomorphism) such that A is Gorenstein and flat over R. Let I ⊂ A be
+a codimension zero ideal such that A/I is Cohen-Macaulay. Define J = (0 :A I).
+  1. For any regular sequence (r1 , . . . , rn ) in R, we have
+                                                                                      
+                     J/(r1 , . . . , rn )J = 0 :A/(r1 ,...,rn )A I/(r1 , . . . , rn )I . (10)
+    2. If R is regular, then A/I and A/J are flat over R.
+Proof. First we prove (1). Since I ⊂ A has codimension zero and A/I is Cohen-Macaulay,
+A/I is a maximal Cohen-Macaulay module. Since A is flat over R, (r1 , . . . , rn ) is a regular
+sequence for A. Using [3, proposition 18.13], the result follows by induction on n with [3,
+proposition 21.12(b)] as the induction step.
+  Now we prove (2). By (2) of theorem 2.5, we know that A/J is Cohen-Macaulay. By [3,
+theorem 18.16], A/J is flat over R iff
+                         dim(A/J) = dim(R) + dim(A/(J + mR A)).                           (11)
+We always have the inequality
+                         dim(A/J) ≤ dim(R) + dim(A/(J + mR A)).                           (12)
+We also have the inequality
+                   dim(R) + dim(A/(J + mR A)) ≤ dim(R) + dim(A/mR A).                     (13)
+Now A is flat over R, so we have
+                              dim(R) + dim(A/mR A) = dim(A).                              (14)
+Finally, since J ⊂ A has codimension zero, dim(A) = dim(A/J). Putting the inequalities
+together, we have
+                   dim(A/J) ≤ dim(R) + dim(A/(J + mR A)) ≤ dim(A/J).                      (15)
+Thus A/J is flat over R. By the same argument A/I is also flat over R.
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                5
+
+Corollary 2.7 (Reformulation). Let B be a scheme and let f : D → B be a flat morphism
+with D Gorenstein. Let D1 ⊂ D be a codimension zero closed subscheme which is Cohen-
+Macaulay. Let D2 ⊂ D be the residual subscheme to D1 ⊂ D.
+  1. For any closed subscheme C ⊂ B which is a regular embedding, D1 ×B C ⊂ D ×B C and
+     D2 ×B C ⊂ D ×B C are residual to each other.
+  2. If B is regular, then D1 and D2 are flat over B.
+
+2.3. Reminder about Abel-Jacobi Maps. We shall make occasional use of the Abel-
+Jacobi maps associated to families of 1-cycles on X. The reader is referred to [1], [6] for full
+definitions. Here we recall only a few facts about Abel-Jacobi maps.
+  Associated to a smooth, projective threefold X there is a complex torus
+                                                                       
+                     J 2 (X) = HZ3 (X)\H 3(X, C)/ H 3,0 (X) ⊕ H 2,1 (X) .                   (16)
+
+In case X is a cubic hypersurface in P4 (in fact for any rationally connected threefold) then
+J 2 (X) is a principally polarized abelian variety with theta divisor Θ. Given an algebraic
+1-cycle γ ∈ A1 (X) which is homologically equivalent to zero [6, 13], one can associate a point
+u2 (α). The construction is analogous to the Abel-Jacobi map for a smooth, projective alge-
+braic curve C which associates to each 0-cycle γ ∈ A0 (C) which is homologically equivalent to
+zero a point u1 (α) ∈ J 1 (C), the Jacobian variety of C. In particular u2 : A1 (X)hom → J 2 (X)
+is a group homomorphism.
+   Suppose that B is a normal, connected variety of dimension n and Γ ∈ An+1 (B × X) is an
+(n + 1)-cycle such that for each closed point b ∈ B the corresponding cycle Γb ∈ A1 (X) [4,
+§10.1] is homologically equivalent to zero. Then in this case the set map b 7→ u2 (Γb ) ∈ J 2 (X)
+comes from a (unique) algebraic morphism u = uΓ : B → J 2 (X). We call this morphism the
+Abel-Jacobi map determined by Γ.
+   More generally, suppose B as above, Γ ∈ An+1 (B × X) is any (n + 1)-cycle, and suppose
+b0 ∈ B is some base-point. Then we can form a new cycle Γ′ = Γ −π2∗ Γb0 , and for all b ∈ B we
+have Γ′b = Γb − Γb0 is homologically equivalent to zero. Thus we have an algebraic morphism
+u = uΓ′ : B → J 2 (X). Of course this morphism depends on the choice of a base-point, but
+changing the base-point only changes the morphism by a constant translation. Thus we shall
+speak of any of the morphisms uΓ′ determined by Γ and the choice of a base-point as an
+Abel-Jacobi map determined by Γ.
+   Suppose that Γ1 , Γ2 ∈ An+1 (B × X) are two (n + 1)-cycles. Then uΓ1 +Γ2 is the pointwise
+sum uΓ1 +uΓ2 . This trivial observation is frequently useful. Another useful observation is that
+any Abel-Jacobi morphism αΓ contracts all rational curves on X, since an Abelian variety
+contains no rational curves.
+
+
+
+                           3. Lines, Conics and Plane Cubics
+
+  We begin our analysis of the spaces Hd,g (X) by recalling known results about the Fano
+scheme of lines on X, F := H1,0 (X).
+6                                     HARRIS, ROTH, AND STARR
+
+  Two general lines L1 , L2 ⊂ P4 determine a hyperplane by span(L1 , L2 ). We generalize this
+                                Φ
+as follows: Let (F × F − ∆) −→ P4∨ denote the following set map:
+                                       
+                                         [span (L1 , L2 )] if L1 ∩ L2 = ∅,
+                      Φ ([L1 , L2 ]) =                                                   (17)
+                                         [Tp X]            if p ∈ L1 ∩ L2
+By [1, lemma 12.16], Φ is algebraic. Let X ∨ ⊂ P4∨ denote the dual variety of X, i.e.,
+the variety parametrizing tangent hyperplanes to X. Let Xs∨ ⊂ X ∨ denote the subvariety
+parametrizing hyperplanes H which are tangent to X and such that the singular locus of
+H ∩X is not simply a single ordinary double point. Let Us ⊂ U ⊂ F ×F denote the open sets
+Φ−1 (P4∨ − X ∨ ) ⊂ Φ−1 (P4∨ − Xs∨ ). Finally, let I ⊂ F × F denote the divisor parametrizing
+incident lines, i.e., I is the closure of the set {([L1 ], [L2 ]) : L1 6= L2 , L1 ∩ L2 6= ∅}. In [1],
+                                                                                                 ψ
+Clemens and Griffiths completely describe both the total Abel-Jacobi map F × F −→ J(X)
+                            i
+and the Abel-Jacobi map F −→ J(X). Here is a summary of their results
+
+Theorem 3.1.
+
+                                                                                     u
+    1. The Fano variety F is a smooth surface and the Abel-Jacobi map F −→ J(X) is a closed
+       immersion [1, theorem 7.8, theorem 12.37].
+    2. The induced map Alb(F ) = J 2 (F ) → J(X) is an isomorphism of principally polarized
+       Abelian varieties [1, theorem 11.19].
+                                           3
+    3. The class of u(F ) in J(X) is [Θ]
+                                      3!
+                                         [1, proposition 13.1].
+    4. The difference of Abel-Jacobi maps
+                        ψ : F × F → J(X), ψ([L], [L′ ]) = u([L]) − u([L′ ])                           (18)
+      maps F × F generically 6-to-1 to the theta divisor Θ ⊂ J(X) [1, section 13].
+                        G
+    5. Let (Θ − {0}) −→ P(H 1,2(X)∨ ) denote the Gauss map. If we identify P(H 1,2 (X)) with
+       P4 via the Griffiths residue calculus [5], then the composite map
+                                                  ψ                G
+                               (F ×C F − ∆) −→ (Θ − {0}) −→ P4∨                                       (19)
+       is just the map Φ defined above [1, formula 13.6].
+    6. The fibers of the Abel-Jacobi map form a Schläfli double-six, i.e., the general fiber of
+       ψ : F × F → J is of the form {(E1 , G1 ), . . . , (E6 , G6 )} where the lines Ei , Gj lie in
+       a smooth hyperplane section of X, the Ei are pairwise skew, the Gj are pairwise skew,
+       and Ei and Gj are skew iff i = j.
+          There is a more precise result than above. Let
+                        R′ ⊂ (U ×P4∨ U) × F × Grass(3, V ) × Grass(3, V )                             (20)
+      be the closed subscheme parametrizing data (([L1 ], [L2 ]) , ([L3 ], [L4 ]) , [l], [H1 ], [H3 ]) such
+      that for each i = 1, . . . , 4, l∩Li 6= ∅ and such that H1 ∩X = l∪L1 ∪L4 , H2 ∩X = l∪L2 ∪L3 .
+      Let R ⊂ U ×P4∨ U be the image of R′ under the projection map. Let ∆ ⊂ U × U be the
+      diagonal. Then the fiber product U ×Θ U ⊂ U × U is just the union R ∪ ∆ [1, p. 347-348]
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                7
+
+                               G                                              Φ
+  7. The branch locus of Θ −→ P4∨ equals the branch locus of F × F −→ P4∨ equals the
+     dual variety of X, i.e., the variety parametrizing the tangent hyperplanes to X. The
+                               Φ                                             ψ
+     ramification locus of U −→ P4∨ equals the ramification locus of U −→ Θ equals the
+     divisor I. Each such pair is a simple ramification point of both ψ and Φ [1, lemma 13,8].
+3.1. Conics. Next we consider H2,0 (X) which parametrizes plane conics on X. We are
+mostly interested just in the irreducibility of the spaces Hd,g (X), but in this case we can give
+a complete description of H2,0 (X). We begin by proving that H2,0 (X) is smooth.
+Lemma 3.2. H2,0 (X) is smooth of dimension 4.
+Proof. Any plane conic C is a local complete intersection. So by lemma 2.2, it suffices to
+prove that h1 (NC/X ) = 0. In fact we will prove that for each smooth conic C ⊂ X, either
+NC/X ∼ = OC (1) ⊕ OC (1) or else NC/S ∼  = OC ⊕ OC (2).
+  We have the standard normal bundle sequence:
+                   0 −−−→ NC/X −−−→ NC/P4 −−−→ NX/P4 |C −−−→ 0.                             (21)
+Of course NX/P4 ∼
+                = OP4 (3)|C and it isn’t hard to see that
+                NC/P4 ∼= OP4 (2)|C ⊕ OP4 (1)2 |C ∼
+                                                 = OC (4) ⊕ OC (2) ⊕ OC (2).                (22)
+   By the Lefschetz hyperplane theorem we know that the 2-plane P = span(C) is not con-
+tained in X. Therefore the induced map NC/P → NX/P4 is injective with length 2 cokernel.
+It follows then that NC/X , considered as a subsheaf of NC/P4 maps injectively to the quo-
+tient NP/P4 |C ∼
+               = OC (2) ⊕ OC (2) and the cokernel is the length two cokernel above. So
+NC/X has degree 2 and no summand of NC/X can have degree higher than 2. So either
+NC/X ∼ = OC (1) ⊕ OC (1) or else NC/X ∼
+                                      = OC ⊕ OC (2).
+  Since h1 (OC (d)) = 0 for all d > −2, we conclude that H2,0 (X) is smooth.
+   Every plane conic C ⊂ P4 is contained in a unique 2-plane span(C) ⊂ P4 . Therefore over
+H2,0 (X) we have a flat family of 2-planes, Π ⊂ H2,0 (X) × P4 such that Π[C] = span(C). Of
+course the projection morphism Π → H2,0 (X) is smooth. By lemma 3.2, it follows that
+Π is smooth. Now consider the intersection D ⊂ H2,0 (X) × X of Π with H2,0 (X) × X in
+H2,0 (X) × P4 . First of all note that D → H2,0 (X) has constant fiber dimension 1 over
+H2,0 (X), since by the Lefschetz hyperplane theorem [7, p. 156] X contains no 2-planes. Since
+H2,0 (X)×X is a Cartier divisor in H2,0 (X)×P4 , also D ⊂ Π is a Cartier divisor. In particular
+D is a local complete intersection. Therefore D → H2,0 (X) is flat.
+   Now let C ⊂ H2,0 (X) × X denote the universal smooth family of plane conics. Then C is
+smooth and C ⊂ D is a codimension zero closed subscheme. Let D2 ⊂ D be the residual to C
+in D. Then by corollary 2.7, we conclude that D2 → H2,0 (X) is flat and the fiber of D2 over
+a closed point [C] ∈ H2,0 (X) is simply the residual of C in span(C) ∩ X. But span(C) ∩ X
+is a plane cubic curve, so the fiber of D2 is just a line. So we have an induced morphism
+g : H2,0 (X) → F which associates to each [C] the residual line in span(C) ∩ X.
+   Define Q to be the rank 3 vector bundle on F which is the quotient of OF5 by the universal
+sub-bundle. Let π : P(Q) → F be the projective bundle associated to the rank 3 vector
+bundle. The points of P(Q) correspond to pairs ([L], [P ]) where L ⊂ X is a line and P ⊂ P4
+is a 2-plane such that L ⊂ P . Therefore over P(Q) we have a flat family of 2-planes Π′ ⊂
+P(Q) × P4 . Let D ′ ⊂ Π′ denote the intersection of Π′ with P(Q) × X and let C ′ ⊂ P(Q) × X
+8                                 HARRIS, ROTH, AND STARR
+
+denote the pullback from F of the universal family of lines. Then, C ′ ⊂ D ′ and the residual D2′
+is a flat family of conics. Thus there is an induced morphism h : P(Q) → Hilb2t+1 (X). It is
+easy to see that h is a bijection of closed points over the open subset H2,0 (X) ⊂ Hilb2t+1 (X).
+Since both P(Q) and H2,0 (X) are smooth, it follows by Zariski’s main theorem [12, p. 288-289]
+that H2,0 (X) is isomorphic to an open subset of P(Q) and g corresponds to the projection
+morphism PQ → F .
+   But we can say more: since the Abel-Jacobi morphism u : F → J(X) is an embedding,
+F contains no rational curves. Thus, all the rational curves in P(Q) lie in fibers. Since h
+is finite over H2,0 (X), no fiber of P(Q) → F is contracted by h, thus no rational curve in
+P(Q) is contracted by h (since all rational curves in P(Q) are numerically equivalent, if one
+is contracted they all are). But by [10, theorem VI.1.2], the exceptional locus of h is ruled.
+Thus we conclude that h is a finite morphism. It follows by Zariski’s main theorem that
+h : P(Q) → Hilb2t+1 (X) is the normalization of Hilb2t+1 (X). We summarize the results as
+follows:
+Proposition 3.3. The morphism H2,0 (X) → F is isomorphic to an open subset of a P2 -
+bundle P(Q) → F . In particular, H2,0 (X) is smooth and connected of dimension 4. Moreover
+P(Q) is the normalization of Hilb2t+1 (X).
+3.2. Plane Cubics. Every curve C ⊂ P4 with Hilbert polynomial 3t is a plane cubic, and
+the 2-plane P = span(C) is unique; we have that C = X ∩ P . Therefore the Hilbert scheme
+Hilb3t (X) is just the Grassmannian G(2, 4) of 2-planes in P4 and H3,1 (X) is just an open
+subset of G(2, 4).
+                                     4. Twisted Cubics
+
+   In this section we prove the irreducibility of H3,0 (X). But first we prove an enumerative
+result about the number of 2-secant lines to a curve C ⊂ X.
+   Given a smooth curve C ⊂ X we want to consider the set of 2-secant lines to C which lie
+in X.
+Definition 4.1. For a smooth curve C ⊂ X we define BC ⊂ F to be the scheme parametriz-
+ing lines in X which intersect C in a scheme of degree 2 or more.
+  A dimension count leads one to expect that BC is a 0-dimensional scheme. What is the
+degree of this scheme?
+Lemma 4.2. Suppose that C ⊂ X is a smooth curve of genus g and degree d. Define
+b(C) = 5d(d−3)
+          2
+               + 6 − 6g. If BC is not positive dimensional and if b(C) ≥ 0, then the degree of
+BC is b(C).
+Proof. This is a standard Chern class argument. We work in the Chow ring of C × C. Let
+ω ∈ A∗ (C) denote the first Chern class of OP4 (1)|C so that ω is algebraically equivalent to
+d times the class of a point. Let ω1 , ω2 ∈ A∗ (C × C) denote the pullbacks of ω by the two
+                         ∆
+projection maps. Let C −→C×C denote the diagonal morphism. Also let ∆, ∆∗ ω ∈ A∗ (C×C)
+denote the class of the image of ∆ and the class of the pushforward by ∆ of ω respectively.
+  Let V be the underlying vector space of P4 , and AC ⊂ GrassC (2, V ) be the scheme
+parametrizing chords to C in P4 . We adopt the following convention: for p ∈ C we de-
+                                                                                   f
+note by span(p, p) the tangent line to C at p. Then we have a morphism C × C −→ AC by
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                  9
+
+(p, q) 7→ [span(p, q)]. Let S be the universal rank two subbundle of V ⊗OC×C whose fibre over
+a point (p, q) corresponds to the line span(p, q). The inclusion S → V ⊗C OC×C induces a
+morphism of schemes P := P(S) → (C × C) × P4 . We have two sections of P determined by
+(p, q) 7→ p ∈ span(p, q) and (p, q) 7→ q ∈ span(p, q). Let I1 and I2 denote the ideal sheaves of
+these sections in P . Since both of these sections are divisors, the ideal sheaf of their scheme
+theoretic union is just I1 · I2 ∼ = I1 ⊗OP I2 . Let g : P → P4 be the inclusion of P into
+(C × C) × P followed by projection onto P4 . Let D be the set of points of P which are sent
+              4
+
+into X under this map, with ideal sheaf ID = g ∗ IX . The two sections are two subvarieties
+of D, and therefore we have that ID ֒→ OP factors through the subsheaf I1 · I2 ֒→ OP , i.e.,
+we have ID ֒→ I1 · I2 . The ideal sheaf of the residual to these sections inside of D is just
+what we obtain when we twist this last map, namely ID ⊗OP (I1 · I2 )∨ ֒→ OP . We wish to
+                                                                                      π
+determine when this residual subscheme contains fibers of the projection map P −→ C × C.
+Let us assume that a general chord to C does not lie in X. Then ID is isomorphic to the
+locally free sheaf OS (−3). So we may twist our inclusion to get OP → (ID )∨ ⊗OP I1 ⊗OP I2 .
+The pushforward of this map yields a map
+                                   φ                        
+                             OC×C −→ π∗ (ID )∨ ⊗OP I1 ⊗OP I2 .                                (23)
+
+It is clear that the fiber π −1 (p, q) will be contained in D iff the image of the constant section
+1 under this map vanishes at the stalk of (p, q). Therefore we conclude that the fiber product
+(C ×C)×AC BC is precisely the zero scheme of φ. One sees that (ID )∨ ⊗OP I1 ⊗OP I2 is a locally
+free sheaf of fiber degree 1, in particular it is relatively ample. Therefore the pushforward
+E := π∗ ((ID )∨ ⊗OP I1 ⊗OP I2 ) is a locally free sheaf of rank 2. So, if the zero locus of φ is
+zero dimensional, then we see that the class of this locus in A∗ (C × C) is just c2 (E). So we
+are reduced to a Chern class calculation.
+   What is the Chern class of S? The two sections in the last paragraph yield a map of
+locally free sheaves pr1∗ (OP4 (−1)|C ) ⊕ pr2∗ (OP4 (−1)|C ) → S. This is an injective map and
+the cokernel is supported on the diagonal. Using the fact that the cokernel of S in V ⊗C OC×C
+is locally free and a simple snake lemma argument, one deduces that the cokernel is isomorphic
+to the coherent sheaf OC×C (∆) ⊗OC×C ∆∗ (OP4 (−1)|C ). So we deduce that the Chern class of
+S is 1 − ω1 − ω2 + ∆ + ω1 · ω2 − ∆∗ ω. Let η denote the first Chern class of OS (1). One has
+exact sequences
+
+  0 −−−→ OS (1) ⊗OP (pri ◦ π)∗ (OP4 (−1)|C ) −−−→ OS (1) ⊗OP π ∗ (S) −−−→ Ii∨ −−−→ 0
+                                                                                   (24)
+
+for i = 1, 2. Thus one deduces that the Chern classes of I1 and I2 are 1 − η + ω2 − ∆
+and 1 − η + ω1 − ∆ respectively. Of course the Chern class of ID is simply 1 − 3η. Since
+  ∨
+ID  ⊗OP I1 ⊗OP I2 is relatively ample, its higher direct images vanish. Thus we may calculate
+the second Chern class of E by a simple application of the Grothendieck-Riemann-Roch
+theorem [4]. It turns out to be 5ω1 · ω2 − 15∆∗ ω + 6∆ · ∆. If we work modulo algebraic
+equivalence and omitting the phrase “class of a point”, we have ω1 · ω2 = d2 , ∆∗ ω = d and
+∆ · ∆ = χ(C) = 2 − 2g. Using the fact that the map f is generically 2-to-1, we deduce that
+the degree of BC is 5d(d−3)
+                       2
+                            + 6 − 6g.
+
+Lemma 4.3. H3,0 (X) is smooth of dimension 6.
+10                                 HARRIS, ROTH, AND STARR
+
+Proof. By lemma 2.2 we need to prove that h1 (NC/X ) = 0 for all [C] ∈ H3,0 (X). Consider
+the normal bundle sequence
+                    0 −−−→ NC/X −−−→ NC/P4 −−−→ NX/P4 |C −−−→ 0.                        (25)
+Of course for any twisted cubic C, we have that H = span(C) is a hyperplane, and NC/H ∼   =
+OC (5)2 . Thus we conclude that NC/P4 ∼ = OC (5)2 ⊕ OC (3), and NX/P4 |C ∼
+                                                                         = OC (9). So NC/X
+is a rank 2 vector bundle of degree 4. By Grothendieck’s lemma about vector bundles on P1 ,
+we conclude NC/X ∼   = OC (a) ⊕ OC (4 − a) for some a ≥ 2. But since NC/X is a subbundle
+          2
+of OC (5) ⊕ OC (3), we conclude that a ≤ 5. In all four cases a = 2, 3, 4 and 5, we see that
+4 − a > −2 so that h1 (NC/X ) = 0.
+     Define
+                                    I = I3,0 ⊂ H3,0 (X) × F                                  (26)
+to be the closed subset parametrizing pairs ([C], [L]) where L is a 2-secant line to C, and
+define
+                                    f = f3,0 : I → H3,0 (X)                                  (27)
+to be the projection. By lemma 4.2, we know that f3,0 is surjective. Notice also that none of
+the lines L is a 3-secant line, because any 3 points on a twisted cubic are linearly independent.
+   Now given ([C], [L]) ∈ I, the reducible curve C ∪ L lies on a pencil of quadric sur-
+faces in the 3-plane P = span(C), and the general member of this pencil is smooth. Let
+J ⊂ I × Hilbt2 +2t+1 (P4 ) denote the locally closed subset parametrizing triples ([C], [L], [S])
+where S is a smooth quadric surface containing C ∪ L. Then J → I is birational to a
+P1 -bundle, in particular given an irreducible component Ji of J with image Ii ⊂ I, we have
+dim(Ii ) = dim(Ji )−1. By the Lefschetz hyperplane theorem, X does not contain the surface
+S, thus S ∩ X ⊂ S is a Cartier divisor of type (3, 3) on S. The residual to C ∪ L ⊂ S ∩ X is
+a divisor of type (1, 1) on S, i.e., a conic D ⊂ S.
+
+Theorem 4.4. The space H3,0 (X) is a smooth, irreducible 6-dimensional variety.
+Proof. By lemma 4.3, every irreducible component of H3,0 (X) has dimension 6. We will prove
+that there is a unique irreducible component of I of dimension d ≥ 6. Since I → H3,0 (X) is
+surjective, this implies that H3,0 (X) is irreducible. In order to show this, we will prove that
+J has a unique irreducible component of dimension 7.
+   We stratify J into locally closed subsets J1 , J2 , according to the type of the residual curve
+D. If D is a smooth conic, we say that D is the first type. If D is a reducible conic, we say
+that D is the second type. Notice that D cannot be a double line because it is a divisor of
+type (1, 1) on a smooth quadric surface.
+   Second Type: First consider J2 parametrizing triples ([C], [L], [S]) such that D is the
+second type. Let H ⊂ F × F × F denote the locally closed subset parametrizing triples
+([L], [D1 ], [D2 ]) such that L and D1 intersect transversally in one point, D1 and D2 intersect
+transversally in one point, and L is skew to D2 . There is a morphism J2 → H defined by
+decomposing D = D1 ∪ D2 so that L ∩ D1 is non-empty. Given a triple ([L], [D1 ], [D2 ]),
+every quadric surface S containing L ∪ D1 ∪ D2 is contained in the 3-plane span(L, D1 , D2 ).
+Moreover, there is a 2-dimensional linear system of quadrics S containing L ∪ D1 ∪ D2 . Thus
+the fiber dimension of J2 → H is at most 2. We can also see that the dimension of H is 4:
+                       CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                   11
+
+there is a 2-parameter family of choices for the line D1 , and given D1 there is a 1-parameter
+family of lines intersecting D1 . Thus the dimension of H is 2+1+1 = 4. So every irreducible
+component of J2 has dimension at most 6, which is less than 7.
+   Next we consider J1 parametrizing triples ([C], [L], [S]) such that the residual curve D is a
+smooth conic. Let K ⊂ F × H2,0 (X) denote the closed subset parametrizing pairs ([L], [D])
+such that L and D intersect transversally in one point p. There is a morphism J1 → K by
+sending ([C], [L], [S]) to ([L], [D]) with D the residual curve. For a point ([L], [D]) ∈ K and
+a point ([C], [L], [S]) in the fiber over ([L], [D]), we have that S is contained in the 3-plane
+span(L, D). There is a 2-parameter linear system of quadric surfaces S ⊂ span(L, D) which
+contain L ∪ D. The collection of quadric surfaces S ⊂ span(L, D) containing L ∪ D and such
+that also the residual curve C of L ∪ D ⊂ S ∩ X is a smooth twisted cubic forms an open
+subset of the collection of all quadric surfaces S ⊂ span(L, D) containing L ∪ D. So every
+(non-empty) fiber of J1 → K is irreducible of dimension 2.
+   Since J1 → K has irreducible fibers of dimension 2 (when they are non-empty), we see
+that for each irreducible component Ki of K, there is at most one irreducible component
+of J1 which fibers over Ki with fiber dimension 2. So we are reduced to proving that K is
+irreducible of dimension 5. In order to specify a pair ([L], [D]) intersecting at the point p, it is
+equivalent to specify L, a point p ∈ L, and the line N residual to D since then D is determined
+as the conic residual to N ⊂ X ∩ span(N, p). So K is isomorphic to an open subscheme of
+the product of the universal line over F (parametrizing pairs (L, p)) with another copy of F
+(parametrizing N), and this is an irreducible 5-fold. Thus there is at most one irreducible
+component of J1 of dimension at least 7, and such an irreducible component is exactly 7
+dimensional. All that remains is to show that at least one such component exists.
+  Since H3,0 (X) is nonempty, and J → H3,0 (X) is surjective with fibre dimension one,
+we conclude that J1 has such a component, and therefore that H3,0 (X) is an irreducible
+6-dimensional variety.
+
+4.1. The Abel-Jacobi map for H3,0 (X). In order to analyze H4,0 (X) we will need to
+understand the Abel-Jacobi map u : H3,0 (X) → J(X).
+  We have a morphism
+                                                   σ3,0
+                                         H3,0 (P4 ) −→ P4∨                                        (28)
+defined by sending [C] to span(C). This morphism makes H3,0 (P4 ) into a locally trivial
+bundle over P4∨ with fiber H3,0 (P3 ) . Recall from section 3 that we defined X ∨ ⊂ P4∨ to
+be the dual variety of X which parametrizes tangent hyperplanes to X and we defined U
+to be the complement of X ∨ in P4∨ . Then we define HU3,0 (X) to be the open subscheme of
+H3,0 (X) which parametrizes twisted cubics, C, in X such that σ 3,0 ([C]) ∈ U. By the graph
+construction we may consider HU3,0 (X) as a locally closed subvariety of U × Hilb3t+1 (X).
+Let H ⊂ U × Hilb3t+1 (X) denote the closure of HU3,0 (X) with the reduced induced scheme
+                                f
+structure. Denote by H −→ U the projection map.
+                         f ′′       f′                                    f                f ′′
+Theorem 4.5. Let H −→ U ′ −→ U be the Stein factorization of H −→ U. Then H −→ U ′ is
+                                                                                           f′
+isomorphic to a P2 -bundle PU ′ (E) −→ U ′ with E a locally free sheaf of rank 3, and U ′ −→ U
+                                                                                       i
+is an unramified finite morphism of degree 72. Moreover, the Abel-Jacobi map H −→ J(X)
+12                                     HARRIS, ROTH, AND STARR
+
+              f ′′       i′                  i′
+factors as H −→ U ′ −→ J(X) where U ′ −→ J(X) is a birational morphism of U ′ to a translate
+of Θ.
+Proof. We need to use the following lemma:
+Lemma 4.6. Let S be a smooth cubic surface in P3 . Then there are exactly 72 line bundles
+L on S such that L2 = 1, and L.KS = −3 (where KS is the canonical class). Furthermore,
+each of them satisfies H 1 (S, L) = H 2 (S, L) = 0, and the general member of H 0 (S, L) is a
+smooth curve.
+   We will explicitly describe such bundles L below, and this lemma will be a straightforward
+consequence. Note that if C ⊂ S is a curve with Hilbert polynomial 3t + 1, then C.KS =
+−3, since KS is minus the hyperplane class, and since the curve has arithmetic genus zero,
+adjunction shows that C 2 = 1. This shows that all the curves in HU3,0 (X) give line bundles
+L satisfying the conditions above. Conversely, given any effective divisor C ∈ |L|, with L a
+line bundle as above, we see that C has degree three, and arithmetic genus zero, and hence
+Hilbert polynomial 3t + 1.
+                     π
+   Now, let X −→ U be the universal family of smooth hyperplane sections of X. For any
+[H] ∈ U, we use SH := H ∩ X to denote the smooth cubic surface which is the fibre of π.
+Let Pic3,0 (X /U) be the subscheme of the relative Picard scheme parameterizing line bundles
+LH on the fibers SH of π such that L2H = 1 and LH · KSH = −3. For any such LH , we
+have χSH (LH ) = 1/2(L2H − L · KSH ) + χ(OSH ) = 2 + 1 = 3. By the above lemma, the line
+bundle LH has no higher cohomology on SH , and so there is a rank three vector bundle E
+on Pic3,0 (X /U) whose fibre at a point (H, LH ) of Pic3,0 (X /U) consists of the global sections
+H 0 (SH , LH ). Let P = P(E), be the projectivization of this bundle, with projection map
+g : P −→ Pic3,0 (X/U). A point of this projectivization consists of the data (H, LH , CH )
+where [H] ∈ U, LH is a line bundle on SH satisfying the numerical conditions, and CH is an
+effective divisor on SH with OSH (CH ) = LH .
+   By the remarks after lemma 4.6, we see that CH has Hilbert polynomial 3t + 1, and so we
+have a natural map P −→ U × Hilb3t+1 (X) sending ([H], LH , CH ) to ([H], CH ). The map is
+clearly an injection, since we can recover the line bundle LH from CH .
+   The short exact sequence
+                              0 −→ OSH −→ OSH (CH ) −→ OSH (CH )|CH −→ 0
+gives the long exact sequence in cohomology
+                     ·CH 0                                                 
+ 0 −→ H 0 SH , OSH −→     H SH , OSH (CH ) −→ H 0 CH , NCH /SH −→ H 1 SH , OSH = 0.
+This sequence has the following interpretation. H 0 (SH , OSH (CH )) divided by the section CH
+is the vertical tangent space (at CH ) for the map P −→ Pic3,0 (X /U). H 0 (CH , NCH /SH ) is
+the tangent space (at CH ) of Hilb3t+1 (SH ). The sequence above shows that the map between
+these tangent spaces is an isomorphism, and hence that P −→ U × Hilb3t+1 (X) is a closed
+embedding.
+   The subset HU3,0 (X) of U × Hilb3t+1 (X) is contained in the image of P , and, by lemma
+4.6, HU3,0 (X) is dense in each fibre of P −→ U, so we conclude that P = H. The map
+ρ : Pic3,0 (X /U) −→ U, since it is a finite type subscheme of the the relative Picard scheme,
+and by lemma 4.6 each fibre consists of 72 points, i.e., the map is finite. We also know that
+                       CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                   13
+
+this is unramified since the Picard group of a cubic surface is reduced. Finally, the map
+P −→ Pic3,0 (X /U) is a P2 bundle by construction.
+                  g                  ρ                                    f ′′    f′            f
+  Therefore, P −→ Pic3,0 (X /U) −→ U is the Stein factorization H −→ U ′ −→ U of H −→ U,
+and this factorization has the properties claimed in the theorem.
+                                                                i
+   It only remains to determine the Abel-Jacobi map H −→ J(X). Since J(X) contains no
+rational curves, i is a constant map on each fiber of g. Since Pic3,0 (X /U) is smooth, it
+follows that i factors through a morphism i′ : Pic3,0 (X /U) → J(X). To determine i′ , we
+introduce the locus of “Z’s of lines” i.e. the subscheme of H parametrizing cubic curves
+whose irreducible components are lines. To be precise, let Σ ⊂ H × X be our flat family
+of cubic curves. We let Σs ⊂ Σ denote the singular subscheme. We can form the flattening
+stratification for Σs → H, and we define Z ⊂ H to be the stratum corresponding to the
+constant Hilbert polynomial 2, i.e., the locus parametrizing curves with two nodes. What are
+the fibers Z ∩ g −1 (q) for q ∈ Pic3,0 (X /U)? Define H = ρ(q). In the analysis below, we will
+see that we can find a set of 6 mutually skew lines in SH such that g −1 (q) corresponds to the
+complete linear series of lines in the blown-down P2 . It is clear that a line ℓ in this linear series
+will correspond to a singular cubic curve iff ℓ intersects one of the 6 special points. Similarly,
+ℓ will correspond to a cubic curve whose singular locus has degree 2 iff ℓ is one of the 15 lines
+joining a pair of the 6 special points. Thus each fiber Z ∩ g −1 (q) consists of 15 points, and
+ΣsZ → Z is an unramified, finite morphism of degree 2. Thus ΣsZ → Pic3,0 (X /U) is an
+unramified, finite morphism of degree 30.
+   Denote by i1 : ΣsZ → J(X) the composition of ΣsX → Pic3,0 (X /U) with the Abel-Jacobi
+map Pic3,0 (X /U) → J(X). Recall ΣsZ parametrizes pairs ([C], [x]), where C is a completely
+reducible cubic and x is a node of C. We define a map h : Σs → F × F as follows. The
+union of those components of C which intersect x is a completely reducible conic, C ′ . The
+residual to C ′ inside of C is a line ℓ1 . Now C ′ spans a P2 in P4 and the residual to C ′ in
+span (C ′ ) ∩ X is another line ℓ2 . We define h to be the map ([C], [x]) 7→ ([ℓ1 ], [ℓ2 ]). The point
+is, since C ′ and ℓ2 are residual in a complete intersection which varies in a rational family, it
+follows by the residuation trick that i1 is equal to ψ ◦ h (up to a fixed translation).
+   What are the fibers of h? Suppose we are given two skew lines ℓ1 and ℓ2 whose span
+intersects X in a smooth cubic surface, X ′ . How many reducible conics C ′ are there which
+are residual to ℓ2 and which intersect ℓ1 ? One of the lines in C ′ , call it ℓ3 , intersects both ℓ1
+and ℓ2 . The other line of C ′ is uniquely determined by the condition that it be residual to
+ℓ2 ∪ ℓ3 in the P2 they span. Thus the points in a fiber of h are enumerated by the lines ℓ3
+joining ℓ1 and ℓ2 . There are 5 such lines. Therefore h is dominant and generically finite of
+degree 5. We know that ψ maps dominantly and generically finitely to Θ of degree 6, thus
+ΣsZ maps to Θ dominantly and generically finitely of degree 5 × 6 = 30. We have already
+seen that ΣsZ → Pic3,0 (X /U) is unramified of degree 30. Therefore Pic3,0 (X /U) → J(X)
+maps generically 1-to-1 and dominates a translate of Θ.
+
+
+
+Corollary 4.7. The Abel-Jacobi map i3,0 : H3,0 (X) → J(X) dominates a translate of Θ
+and is birational to a P2 -bundle over its image.
+
+Proof. HU3,0 (X) ⊂ H3,0 (X) is dense in H.
+14                                      HARRIS, ROTH, AND STARR
+
+   We now need to examine the line bundles L on a cubic surface S satisfying L2 = 1 and
+L.KS = −3. We need to establish the facts claimed in lemma 4.6, and also show that for any
+such L, we can always blow down six lines so that L is pullback of OP2 (1) from the resulting
+P2 . We will follow [9], chapter V, notation 4.7.3 for our notation of the Neron-Severi group
+of S. Recall that e1 , . . . , e6 are the linear equivalence classes of 6 mutually skew lines on S,
+so that the contraction of e1 , . . . , e6 is a P2 , and l P
+                                                           is the linear equivalence class
+                                                                                       P of the total
+                            2
+transform
+     P 2   of a line in   P   .
+                              P 2If we write
+                                          P 2L   =   al −     b e
+                                                               i i , then we have 3a −    bi = 3 and
+ 2                                                                           2     2
+a − bi = 1. Since ( bi ) ≤ 6 bi , we deduce that (3a − 3) ≤ 6a − 6. This implies
+that either a = 1, 2, 3, 4, or 5. One quickly works out all the possibilities for (a, b1 , . . . , b6 ).
+There is an obvious action of the group S6 on the set of solutions via permuting b1 , . . . , b6 .
+Representatives of the orbits of the set of solutions are as follows:
+(1, 0, 0, 0, 0, 0, 0), (2, 1, 1, 1, 0, 0, 0), (3, 2, 1, 1, 1, 1, 0), (4, 2, 2, 2, 1, 1, 1), (5, 2, 2, 2, 2, 2, 2).
+                                                                                                             (29)
+Counting the size of each orbit shows that there are a total of 72 distinct solutions. With a
+slight amount of work, one shows that the separate orbits all lie in the same orbit under the
+action of the full Weyl group of E6 . Thus, for some choice of 6 mutually skew six lines, we
+have that L is just l. The general member of this linear series is obviously smooth, and the
+long exact sequence in cohomology coming from
+
+                         0 −→ OS −→ OS (l) −→ OP1 (1) −→ 0
+                1             2
+shows that H (S, L) = H (S, L) = 0, which was the last thing to be checked.
+
+                                    5. Quartic Elliptic Curves
+
+  Recall that the normalization of Hilb2t+1 (X) is isomorphic to the P2 -bundle P(Q) → F
+which parametrizes pairs (L, P ) which L ⊂ X a line and P ⊂ P4 a 2-plane containing L. Let
+   g
+A −→ P(Q) denote the P1 -bundle which parametrizes triples (L, P, H) with H a hyperplane
+                         h
+containing P . Let I4,1 −→ A denote the P4 -bundle parametrizing 4-tuples (L, P, H, Q) where
+Q ⊂ H is a quadric surface containing the conic C ⊂ X ∩ P . Notice that I4,1 is smooth and
+connected of dimension 4 + 1 + 4 = 9.
+   Let D ⊂ I4,1 ×X denote the intersection of the universal quadric surface over I4,1 with I4,1 ×
+X ⊂ I4,1 × P4 . Then D is a local complete intersection scheme. By the Lefschetz hyperplane
+theorem, X contains no quadric surfaces; therefore D → I4,1 has constant fiber dimension
+1 and so is flat. Let D1 ⊂ I4,1 × X denote the pullback from P(Q) × X = Hilb2t+1 (X) × X
+of the universal family of conics. Since I4,1 × X → P(Q) × X is smooth and the universal
+family of conics is a local complete intersection which is flat over P(Q), we conclude that
+also D1 is a local complete intersection which is flat over I4,1 . Clearly D1 ⊂ D. Thus by
+corollary 2.7, we see that the residual D2 of D1 ⊂ D is Cohen-Macaulay and flat over I4,1 .
+   By the base-change property in corollary 2.7, we see that the fiber of D2 → I4,1 over
+a point (L, P, H, Q) is simply the residual of C ⊂ Q ∩ X. If we choose Q to be a smooth
+quadric, i.e., Q ∼
+                 = P1 × P1 , then C ⊂ Q is a divisor of type (1, 1) and X ∩ Q ⊂ Q is a divisor
+of type (3, 3). Thus the residual curve E is a divisor of type (2, 2), i.e., a quartic curve of
+arithmetic genus 1. Thus D2 ⊂ I4,1 × X is a family of connected, closed subschemes of X
+with Hilbert polynomial 4t. So we have an induced map f : I4,1 → Hilb4t (X).
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                              15
+
+Proposition 5.1. The image of the morphism above f : I4,1 → Hilb4t (X) is the closure
+H4,1 (X) of H4,1 (X). Moreover the open set f −1 H4,1 (X) ⊂ I4,1 is a P1 -bundle over H4,1 (X).
+Thus H4,1 (X) is smooth and connected of dimension 8.
+Proof. If E ⊂ X is a smooth, connected curve with Hilbert polynomial 4t, then E is a quartic
+elliptic curve in some hyperplane H. Any such curve lies on a pencil of quadric surfaces Q,
+and the residual of E ⊂ Q ∩ X is a conic. Thus we see that f (I4,1 ) contains the open
+subscheme H4,1 (X) ⊂ Hilb4t (X). Since f (I4,1 ) is closed and irreducible, we conclude that
+f (I4,1 ) = H4,1 (X). Since the fibre of f over any smooth elliptic quintic E is determined
+by the P1 of quadrics Q in H = span(E), we see that f −1 (H4,1 (X)) ⊂ I4,1 is an open subset
+which is a P1 -bundle over H4,1 . In particular, since I4,1 is smooth and connected, we conclude
+that H4,1 is also smooth and connected of dimension 8.
+   The surface F of lines contains no rational curves, so in the P1 fibre of f over [E] ∈ H4,1 ,
+the line L must be constant. Since the hyperplane H is also determined by [E], we have
+a well-defined morphism m : H4,1 (X) → P(Q∨ ), where P(Q∨ ) is the P2 -bundle over F
+parametrizing pairs ([L], [H]), L ⊂ H. For a general H, the intersection Y = H ∩ X is a
+smooth cubic surface, and the fiber m−1 ([L], [H]) is an open subset of the complete linear
+series |OY L + h|, where h is the hyperplane class on Y . Thus m : H4,1 (X) → P(Q∨ ) is a
+morphism of smooth connected varieties which is birational to a P4 -bundle. Composing m
+with the projection P(Q∨ ) yields a morphism n : H4,1 (X) → F which is birational to a
+P4 -bundle over a P2 -bundle.
+Corollary 5.2. The morphism n : H4,1 (X) → F from above is birational over F to a
+P4 -bundle over a P2 -bundle over F .
+                          6. Cubic Scrolls and Applications
+
+6.1. Preliminaries on cubic scrolls.
+  In the next few sections we will use residuation in a cubic scroll. We start by collecting
+some basic facts about these surfaces.
+  There are several equivalent descriptions of cubic scrolls.
+  1. A cubic scroll Σ ⊂ P4 is a connected, smooth surface with Hilbert polynomial P (t) =
+     3 2
+     2
+       t + 25 t + 1.
+  2. A cubic scroll Σ ⊂ P4 is the determinantal variety defined by the 2 × 2 minors of a
+     matrix of linear forms:                      
+                                      L1 L2 L3
+                                                                                    (30)
+                                     M1 M2 M3
+     such that for each row or column, the linear forms in that row or column are linearly
+     independent
+  3. A cubic scroll Σ ⊂ P4 is the join of an isomorphism φ : L → C. Here L ⊂ P4 is a line
+     and C ⊂ P4 a conic such that L ∩ span(C) = ∅. The join of φ is defined as the union
+     over all p ∈ L of the line span(p, φ(p)).
+  4. A cubic scroll Σ ⊂ P4 is the image of a morphism f : P(E) → P4 where E = OP1 (−1)⊕
+     OP1 (−2) on P1 , the morphism f : P(E) → P4 is such that f ∗ OP4 (1) = OE (1), and
+     the pullback map H 0 (P4 , OP4 (1)) → H 0 (P(E), OE (1)) is an isomorphism.
+16                                   HARRIS, ROTH, AND STARR
+
+     5. A cubic scroll Σ ⊂ P4 is as a minimal variety, i.e., Σ ⊂ P4 is any smooth connected
+        surface with span(Σ) = P4 which has the minimal possible degree for such a surface,
+        namely deg(Σ) = 3.
+     6. A cubic scroll Σ ⊂ P4 is a smooth surface residual to a 2-plane Π in the base locus of a
+        pencil of quadric hypersurfaces which contain Π.
+  From the fourth description Σ = P(E) we see that Pic(Σ) = Pic(P(E)) ∼                     = Z2 . Let
+                1                                                      1
+π : P(E) → P denote the projection morphism and let σ : P → P(E) denote the unique
+section whose image D = σ(P1 ) has self-intersection D.D = −1. Then f (D) is a line on Σ
+called the directrix. For each t ∈ P1 , f (π −1 (t)) is a line called a line of ruling of Σ. Denote by
+F the divisor class of any π −1 (t). Then Pic(Σ) = Z{D, F } and the intersection pairing on
+Σ is determined by D.D = −1, D.F = 1, F.F = 0. The hyperplane class is H = D + 2F
+and the canonical class is K = −2D − 3F .
+   Using the fourth description of a cubic scroll, we see that any two cubic scrolls differ only
+by the choice of the isomorphism H 0 (P4 , OP4 (1)) → H 0 (P(E), OE (1)). Therefore any two
+cubic scrolls are conjugate under the action of PGL(5). So the open set U ⊂ HilbP (t) (P4 )
+parametrizing cubic scrolls is a homogeneous space for PGL(5), in particular it is smooth and
+connected.
+   One possible specialization of a cubic scroll is a reducible surface Σ = Σ1 ∪ Σ2 where Σ1
+is a 2-plane, Σ2 is a smooth quadric surface, and Σ1 ∩ Σ2 is a line L. Let T ⊂ HilbP (t) (P4 )
+denote the locus parametrizing surfaces Σ of this form.
+Lemma 6.1. The Hilbert scheme HilbP (t) (P4 ) is smooth along T .
+Proof. Let [Σ] be a point of T . Since Σ is a local complete intersection, the normal sheaf NΣ/P4
+is locally free. The Zariski tangent space of HilbP (t) (P4 ) at [Σ] is identified with H 0 (Σ, NΣ/P4 ).
+By [10, theorem I.2.15.2], we see that every irreducible component of HilbP (t) (P4 ) through
+[Σ] has dimension at least
+                              dim H 0 (Σ, NΣ/P4 ) − dim H 1(Σ, NΣ/P4 ).                            (31)
+
+So once we show that H 1(Σ, NΣ/P4 ) = 0, it will follow that HilbP (t) (P4 ) is smooth at [Σ].
+   In order to analyze the normal bundle NΣ/P4 we recall the following result: Suppose that X
+is a smooth ambient variety and suppose that Y ⊂ X is a simple normal crossings variety with
+no triple points. Let Yi ⊂ Y be an irreducible component and let Z1 , . . . , Zr be the connected
+components of Sing(Y ) ∩ Yi . For each i = 1, . . . , r, there is an étale cover f : W → V of a
+Zariski neighborhood of Zi ⊂ Y such that the preimage Z = f −1 (Zi ) of Zi is connected and
+such that W is reducible along Z. Denote the two branches of W along Z by W ′ and W ′′ .
+Then the line bundle NZ/W ′ ⊗ NZ/W ′′ descends to a line bundle Ni on Zi . We have a short
+exact sequence of coherent sheaves:
+                    0 −−−→ NYi /X −−−→ NY /X |Yi −−−→ ⊕ri = 1 Ni −−−→ 0.                           (32)
+In our particular case, we have the two exact sequences:
+                0 −−−→ NΣ1 /P4 −−−→ NΣ/P4 |Σ1 −−−→ NL/Σ1 ⊗ NL/Σ2 −−−→ 0
+                                                                                                   (33)
+                0 −−−→ NΣ2 /P4 −−−→ NΣ/P4 |Σ2 −−−→ NL/Σ1 ⊗ NL/Σ2 −−−→ 0.
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                17
+
+   If we identify Σ1 with P2 , then we have NΣ1 /P4 ∼= OP2 (1) ⊕ OP2 (1). If we identify Σ1 with
+P × P , then we have NΣ2 /P4 = OP1 ×P1 (1, 1) ⊕ OP1 ×P1 (2, 2). Identifying L with P1 , we have
+ 1     1
+
+NL/Σ1 ∼= OP1 (1) and NL/Σ2 ∼  = OP1 . We are more interested in NΣ/P4 |Σ2 (−L) than we are in
+NΣ/P4 |Σ2 . To relate the two we use the identification OΣ2 (−L) ∼= OP1 ×P1 (−1, 0). With all of
+these identifications, we get two exact sequences:
+    0 −−−→         OP2 (1) ⊕ OP2 (1)       −−−→     NΣ/P4 |Σ1   −−−→ OP1 (1) −−−→ 0
+                                                                                            (34)
+    0 −−−→ OP1 ×P1 (0, 1) ⊕ OP1 ×P1 (1, 2) −−−→ NΣ/P4 |Σ2 (−L) −−−→ OP1 (1) −−−→ 0.
+Applying the long exact sequence in cohomology to these two short exact sequences, we
+conclude the vanishing result
+                          H 1 (Σ1 , NΣ/P4 |Σ1 ) = H 2 (Σ1 , NΣ/P4 |Σ1 ) =                    (35)
+
+                   H 1 (Σ2 , NΣ/P4 |Σ2 (−L)) = H 2 (Σ2 , NΣ/P4 |Σ2 (−L)) = 0.                (36)
+  We also have a short exact sequence:
+               0 −−−→ NΣ/P4 |Σ2 (−L) −−−→ NΣ/P4 −−−→ NΣ/P4 |Σ1 −−−→ 0.                       (37)
+Applying the long exact sequence in cohomology to this short exact sequence and com-
+bining with the vanishing result of the last paragraph, we conclude that H 1 (Σ, NΣ/P4 ) =
+H 2 (Σ, NΣ/P4 ) = 0. Therefore HilbP (t) (P4 ) is smooth along T .
+
+Lemma 6.2. The union V = T ∪ U ⊂ HilbP (t) (P4 ) is a smooth, connected open subset.
+Proof. Given [Σ] ∈ T , we will show that every deformation of Σ can be realized as a subvariety
+of a rank 4 quadric hypersurface Q ⊂ P4 . Then we will examine the deformations of Σ as a
+subvariety of Q to prove the lemma.
+   Let I ⊂ HilbP (t) (P4 ) × P14 denote the closed subscheme parametrizing pairs (Σ, Q) where
+Q ⊂ P4 is a quadric hypersurface and Σ ⊂ Q. The fiber of the projection I → HilbP (t) (P4 )
+over a point [Σ] is the projective space corresponding to H 0 (P4 , IΣ (2)), where IΣ is the ideal
+sheaf of Σ ⊂ P4 .
+       e ⊂ HilbP (t) (P4 ) × P4 denote the universal closed subscheme, and let I denote the
+   Let Σ
+ideal sheaf of this closed subscheme. Consider the coherent sheaf
+                                   F = pr1∗ (I ⊗ pr∗2 OP4 (2)).                              (38)
+For each [Σ] ∈ HilbP (t) (P4 ) there is an evaluation map F |[Σ] → H 0 (P4 , IΣ (2)). We will
+show that H i>0 (P4 , IΣ (2)) = 0. Then it follows by cohomology and base change [9, theorem
+III.12.11] that F is locally free in a neighborhood of T and that all the evaluation maps are
+isomorphisms in a neighborhood of T . Thus in a neighborhood of T , I → HilbP (t) (P4 ) is
+just the projective bundle associated to F .
+  To show that H i>0(P4 , IΣ (2)) = 0, we will use the short exact sequence of coherent
+sheaves:
+                    0 −−−→ IΣ (2) −−−→ OP4 (2) −−−→ OΣ (2) −−−→ 0.                           (39)
+Applying the long exact sequence in cohomology to this short exact sequence, we see that we
+need to prove two things:
+  1. H i>0 (Σ, OΣ (2)) = 0
+18                                    HARRIS, ROTH, AND STARR
+
+     2. H 0 (P4 , OP4 (2)) → H 0 (Σ, OΣ (2)) is surjective.
+     To prove (1) and (2) we will use the short exact sequence:
+               0 −−−→ OΣ1 (2)(−L) −−−→ OΣ (2) −−−→ OΣ2 (2) −−−→ 0.                  (40)
+                      = OP2 (1) and OΣ2 (2) ∼
+Of course OΣ1 (2)(−L) ∼                     = OP1 ×P1 (2, 2). So applying the long exact
+sequence in cohomology, we conclude that
+                                H 1 (Σ, OΣ (2)) = H 2 (Σ, OΣ (2)) = 0                              (41)
+i.e., we have established (1).
+   To see that (2) is true, observe first that the composite map
+                    H 0 (P4 , OP4 (2)) −−−→ H 0 (Σ, OΣ (2)) −−−→ H 0 (Σ2 , OΣ2 (2))                (42)
+is surjective, i.e., the linear system |OP1 ×P1 (2, 2)| on a smooth quadric surface is just the
+restriction of the linear system |OP3 (2)|. The kernel of the composite map is the vector space
+of quadratic polynomials which vanish identically on span(Σ2 ). If F is a linear polynomial
+defining span(Σ2 ), this subspace is just the image of the multiplication map
+                                                   ∗F
+                               H 0 (P4 , OP4 (1)) −−−→ H 0 (P4 , OP4 (2)).                         (43)
+The restriction to H 0 (Σ1 , OΣ1 (2)(−L)) = H 0 (P2 , OP2 (1)) is the restriction H 0 (P4 , OP4 (1)) →
+H 0 (P2 , OP2 (1)), which is clearly surjective. Thus we have established (2).
+   We conclude that near T , F is locally free and I → HilbP (t) (P4 ) is just the projective bun-
+dle associated to F . If we let V ′ be the open subset of HilbP (t) (P4 ) where H i>0 (P4 , IΣ (2)) = 0,
+then we know that V is contained in V ′ , and that over V ′ the map I → HilbP (t) (P4 ) is smooth
+(and hence flat). This means that if we have any open subset O of I over V ′ , its image in V ′ ,
+and hence in HilbP (t) (P4 ), will be open.
+   Notice that by the Lefschetz hyperplane theorem, there is no pair (Σ, Q) ∈ I such that
+Q ⊂ P4 is a rank 5 quadric (i.e., a smooth quadric). Denote by W ⊂ I the open subscheme
+parametrizing pairs (Σ, Q) such that Q is a rank 4 quadric. Denote by WT ⊂ W the locally
+closed subset such that Σ ∈ T and the singular point of Q is a smooth point of Σ1 .
+Claim 6.3. The map WT → T is surjective.
+  If [Σ] is any point in T , and p any point of Σ1 not on Σ2 , then letting Q be the cone over
+Σ2 with vertex p provides a point of WT over [Σ], which establishes the claim. Now define
+O ⊂ W to be the open subset parametrizing pairs (Σ, Q) such that the singular point of Q is
+a smooth point of Σ.
+Claim 6.4. O is an irreducible open neighborhood of WT ⊂ W whose points (Σ, Q) are
+exactly the points of WT and the pairs with [Σ] ∈ U.
+  As part of the proof of the claim, we will see that there are points of O with [Σ] ∈ U. Since
+U is a homogeneous space for PGL(5), and since PGL(5) acts on the rank four quadrics Q
+as well, this means that the image of O is exactly V = T ∪ U. This will show that V is
+open in HilbP (t) (P4 ), since O is open in I over V ′ , and also that V is irreducible, since O is.
+Finally, we know that V is a smooth subset of HilbP (t) (P4 ) since U is smooth, and the Hilbert
+scheme is smooth along T (by lemma 6.1). Thus, the only step left in proving lemma 6.2 is
+to establish claim 6.4 above.
+                       CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                 19
+
+  So we are reduced to studying the open neighborhood O. If we let Q̃ → Q denote the
+blow-up of Q at p, and if we let Σe ⊂ Q̃ denote the proper transform of Σ, then this open
+                                              e Q̃).
+subset is also the parameter space for pairs (Σ,
+   We will describe the threefold Q̃. Projection from p defines a morphism Q̃ → P3 whose
+image is a smooth quadric surface S ⊂ P3 . Identifying S with P1 × P1 , the projection π :
+Q̃ → S is simply the P1 -bundle associated to the vector bundle G = OP1 ×P1 ⊕ OP1 ×P1 (1, 1).
+The exceptional divisor E of f : Q̃ → Q is a section of π. Identifying E with P1 × P1 ,
+the normal bundle of E in Q̃ is identified with OP1 ×P1 (−1, −1). Let F1 , F2 denote the divisor
+classes of π ∗ pr∗1 OP1 (1), π ∗ pr∗2 OP1 (1). Then Pic(Q̃) = Z{E, F1 , F2 }, and for any (Σ, Q) ∈ O,
+the proper transform Σ     e is a Cartier divisor with divisor class E + 2F1 + F2 (up to permuting
+F1 and F2 ).
+   Notice that since p ∈ Σ is a smooth point, the intersection Σ         e ∩ E is a (−1)-curve in Σ e
+along which Σ  e is smooth. Conversely, suppose that Γ ∈ |E + 2F1 + F2 | is a surface such that
+Γ ∩ E is a curve along which Γ is smooth (actually Γ is automatically smooth along Γ ∩ E if
+Γ ∩ E is a curve, but we won’t need this fact). We will show that either Γ is smooth or else
+Γ is reducible, Γ = Γ1 ∪ Γ2 where Γ1 is a smooth, connected divisor in the class of F1 , Γ2 is
+a smooth section of π in the class of E + F1 + F2 , and Γ1 ∩ Γ2 is transverse and maps to a
+line in Q. Then it follows that f (Γ) is either a cubic scroll or else the union f (Γ1 ) ∪ f (Γ2 ) of
+a 2-plane and a smooth quadric surface along a line, and p ∈ f (Γ1 ) is a smooth point.
+   If Γ is smooth, it is clear that f (Γ) is a cubic scroll (it is a smooth connected surface with
+Hilbert polynomial P (t)). Therefore suppose that Γ is singular at some point q. We know
+that q 6∈ E.
+   Suppose we pick a line L in the quadric surface S, in the ruling corresponding to F1 . If we
+restrict the P1 bundle Q̃ over S to L, the resulting surface is a Hirzebruch surface F1 over L.
+A divisor in the class F2 on Q̃ restricts to the class of a fibre F on F1 , the exceptional divisor
+E restricts to the unique (−1)-curve D, and a divisor in the class F1 restricts to the trivial
+class on F1 .
+   Now let Lq be the particular line of ruling on S containing π(q), and F1 the surface over
+Lq . If Γ doesn’t contain this F1 , then the intersection Γ ∩ F1 is a curve on F1 in the class
+|D + F |, with a singular point at q, which is not on D. This is a contradiction since the only
+singularities in the linear system |D + F | occur along D. (In the model of F1 as the blowup
+of P2 at a point, this linear series is the pullback of the lines.)
+   Therefore the existence of a singular point q ∈ Γ means that Γ is reducible, and can
+be written Γ1 ∪ Γ2 , with Γ1 in the class F1 , and Γ2 in the class E + F1 + F2 . Now since
+NE/Q̃ ∼= OP1 ×P1 (−1, −1), we see that E ∩ Γ2 is in the linear series |OP1 ×P1 |, which means that
+Γ2 and E are disjoint (we know that Γ2 doesn’t contain E as a component since Γ intersects
+E in a curve). This shows both that the point p lies on f (Γ1 ), and that if Γ2 were to have a
+singular point q ′ , this point would not lie on E.
+   If Γ2 were to have any singular points, then the same argument as above would show that
+Γ2 would be reducible, with one piece in the class of F1 and one piece in the class of E + F2 .
+However, every element of |E +F2 | contains E as a component, which is again a contradiction.
+We conclude that Γ2 is smooth.
+20                                HARRIS, ROTH, AND STARR
+
+  The above arguments show that f (Γ) is the union of a 2-plane f (Γ1 ) and a smooth quadric
+surface f (Γ2 ) meeting along a line, and that p lies on the 2-plane.
+   We now know that every point in O is either in WT or of the form (Σ, Q) with Σ a cubic
+scroll. Notice also that O fibers over the homogeneous space of rank 4 scrolls Q and the fiber
+over a point [Q] is an open subset of the linear system |E + 2F1 + F2 | on Q̃. In particular the
+fibers are irreducible, so O is irreducible. This finishes the proof of claim 6.4, and hence of
+lemma 6.2.
+
+6.2. Additional constructions.
+  We prove several additional constructions of cubic scrolls which will be needed.
+   Recall that our fourth description of a cubic scroll was an embedding f : Σ → P4 where
+Σ is the Hirzebruch surface F1 , and f ∗ O(1) ∼ OΣ (1) = OP(E) (D + 2F ). The fact that the
+map is an embedding is equivalent to asking that the map f be given by the complete linear
+series of OΣ (D + 2F ). In the next sections it will be useful to weaken this condition.
+Definition 6.5. A cubic scroll in Pn is a finite morphism f : Σ → Pn where Σ is isomorphic
+to the Hirzebruch surface F1 and such that f ∗ OPn (1) is isomorphic to OΣ (D + 2F ).
+  We wish to look at various types of curves C in P4 , and find conditions for them to be
+enveloped by or contained in a cubic scroll Σ. We always start by looking at the class of the
+curve on Σ, look at its behavior with respect to the ruling and the directrix, and then seek to
+reconstruct the scroll out of this type of data. When talking about the “degree” of a curve
+C on Σ, we always mean with respect to the line bundle OΣ (D + 2F ), which will be used to
+map Σ into P4 .
+Lemma 6.6. Suppose L ⊂ P4 is a line and T ⊂ TP4 |L is a sub-line bundle such that
+T ∼ = OL (−1). Then there is a unique scroll f : Σ → P4 with f (D) = L (D the direc-
+trix of Σ) and such that the differential map df∗ : TΣ → f ∗ TP4 takes the vertical tangent
+bundle TΣ/D ⊂ TΣ |D to the pullback f |∗D T ⊂ f ∗ TP4 |D on D.
+Proof. We have the restriction to L of the Euler sequence for P4 :
+                      0 −−−→ OL −−−→ OL (1)5 −−−→ TP4 |L −−−→ 0                            (44)
+Define F ⊂ OL (1)5 to be the preimage of T ⊂ TP4 |L . We have an exact sequence:
+                   0 −−−→ OL −−−→ F −−−→ T ∼         = OL (−1) −−−→ 0                      (45)
+As Ext1OL (OL (−1), OL ) = H 1 (L, OL (1)) = 0, we see that F ∼
+                                                              = OL ⊕ OL (−1). Therefore
+E : = F (−1) is isomorphic to OL (−1)⊕OL (−2). By construction E is a subbundle E ֒→ OL5 .
+Defining Σ = P(E), we have a map Σ → P(OL5 ) ∼    = P1 × P4 . Projecting onto the second
+factor, we get an induced map f : Σ → P4 .
+  The directrix D is the section of Σ corresponding to OL (−1) ⊂ E. The composite map
+OL (−1) ֒→ E ֒→ OL5 is simply obtained from the first map of the Euler sequence by twisting
+by OL (−1), and by construction of the Euler sequence, this is the same as the tautological
+map OL (−1) → OL5 induced by the inclusion L ⊂ P4 . Therefore f (D) is just our original
+embedding of L in P4 . Moreover, the vertical tangent bundle of Σ on D is identified with
+           Hom(OL (−1), E/OL (−1)) ⊂ Hom(OL (−1), OL5 /OL (−1)) = f ∗ TP4 |L .             (46)
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                               21
+
+By construction of E as the preimage of T , this is precisely F/OL = f ∗ T ⊂ f ∗ TP4 |D . As
+well, f ∗ OP4 (1) = OE (1) = OΣ (D + 2F ), and therefore f : Σ → P4 is the necessary scroll.
+  To see that Σ is unique, simply observe that the lines through the points of L are determined
+by the direction of T in TP4 . Since the scroll is the union of its lines through L, we see that
+T uniquely determines the scroll.
+
+Lemma 6.7. Let C ⊂ P4 be a smooth conic curve and let T ⊂ TP4 |C be a sub-line bundle
+isomorphic to OC (1) (a degree 1 line bundle on C, not OP4 (1)|C ). Then there is a unique
+scroll f : Σ → P4 and a factorization i : C → Σ of C → P4 such that the differential
+df : TΣ → f ∗ TP4 maps the vertical tangent bundle i∗ TΣ/C to i∗ f |∗C T on C.
+Proof. As in the proof of lemma 6.6, define F to be the subbundle of OC (2)5 which is the
+preimage of T ⊂ TP4 |L . We have a short exact sequence:
+                     0 −−−→ OC −−−→ F −−−→ T ∼       = OC (1) −−−→ 0                 (47)
+Since H 1 (C, OC (−1)) = 0, we have that F =∼ OC ⊕ OC (1). Therefore E : = F (−2) ⊂ O5 is
+                                                                                     C
+isomorphic to OC (−2) ⊕ OC (−1). Define Σ = P(E). The injective map E → OC5 induces
+a morphism f : Σ → P4 . Define i : C → Σ to be the section associated to the twist by
+OC (−2) of the injection from equation (47): OC → F .
+   The composite map OC (−2) → E → OC5 is just the twist of the map in the Euler sequence
+OC → OC (2)5 . By construction of the Euler sequence, this is the map OC (−2) → OC5
+corresponding to OP4 (−1) → OP54 induced by the inclusion C → P4 . Therefore f (i(C))
+is just our original embedding of C in P4 . Finally, notice that the restriction to i(C) of the
+vertical tangent bundle is simply
+         Hom(OC (−2), E/OC (−2)) −−−→ Hom(OC (−2), OC5 /OC (−2)) = f ∗ TP4 |C               (48)
+By construction of E, this is precisely F/OC = f ∗ T ⊂ f ∗ TP4 |C . Finally, f ∗ OP4 (1) =
+OE (1) = OΣ (D + 2F ), and therefore f : Σ → P4 is the necessary scroll.
+  To see that Σ is uniquely determined, observe that T ⊂ TP4 |C determines the lines in Σ
+which pass through C. Since Σ is the union of the lines which pass through C, this shows
+that Σ is unique.
+
+6.3. Cubic Scrolls and Quartic Rational Curves.
+   Recall that Pic(Σ) = Z{D, F } where D is the directrix and F is the class of a line of ruling.
+The intersection product is given by D 2 = −1, D.F = 1, F 2 = 0. The canonical class is given
+by KΣ = −2D − 3F . Our definition of a cubic scroll is that the finite map f : Σ → P4 should
+come from the line bundle f ∗ OPn (1) = OΣ (D + 2F ).
+   The linear system |F | is nef because it is the pullback of OP1 (1) under the projection
+π : Σ → P1 . Similarly, |D + F | is nef because it is the pullback of OP2 (1) in the realization
+of Σ as P2 blown up at a point. Thus for any effective curve class aD + bF we have the two
+inequalities a = (aD + bF ).F ≥ 0, b = (aD + bF ).(D + F ) ≥ 0.
+  Suppose that C ⊂ Σ is an effective divisor of degree 4 and arithmetic genus 0. By the
+adjunction formula
+                              KΣ .[C] + [C].[C] = 2pa − 2 = −2.                             (49)
+22                                HARRIS, ROTH, AND STARR
+
+So if [C] = aD + bF , then we have the conditions
+                       a ≥ 0, b ≥ 0, a + b = 4, a2 − 2ab + a + 2b = 2.                      (50)
+It is easy to check that there are precisely two solutions [C] = 2D + 2F , and [C] = D + 3F .
+We will see that both possibilities occur and describe some constructions related to each
+possibility.
+   We start with the case [C] = 2D + 2F .
+
+Lemma 6.8. Let C ⊂ P4 be a smooth quartic rational curve and let V ⊂ |OC (2)| be a pencil
+of degree 2-divisors on C without basepoints. There exists a unique cubic scroll f : Σ → P4
+and a factorization i : C → Σ of C → P4 such that [i(C)] = 2D + 2F and such that the
+pencil of degree 2 divisors π −1 (t) ∩ C (for t ∈ P1 ) is the pencil V .
+Proof. Let g : C → P1 be a degree 2-morphism defining V . Define E ∨ : = g∗ (OP4 (1)|C ).
+Since g is finite and flat of degree 2, E ∨ is locally free of rank 2. Since g ∗OP1 (1) ∼
+                                                                                        = OC (2),
+the projection formula shows that E ∨ ∼ = OP1 (2) ⊗ g∗ OC . But g : C → P1 is a cyclic cover of
+degree 2 branched over a divisor of degree 2. The theory of cyclic covers [11, definition 2.50]
+shows that g∗ OC decomposes as a sum of Z/2Z-eigensheaves: g∗ OC ∼      = OP1 ⊕ OP1 (−1). Thus
+   ∼
+E = OP1 (−2) ⊕ OP1 (−1).
+  On P4 we have the surjection of vector bundles OP54 → OP4 (1) given by global sections
+of OP4 (1). Restricting this to C gives OC5 → OP4 (1)|C , which by adjunction induces a
+map OP51 → g∗ OC (2) = E ∨ . Since C → P4 is an embedding, for each pair of points
+{p, q} ⊂ C (possibly infinitely near), we have that OC5 → OP4 (1)|{p,q} is surjective. In
+particular, taking {p, q} = g −1 (t) for t ∈ P1 , we conclude that OP51 → E ∨ |t is surjective.
+Define Σ = P(E), then the surjective map OP51 → E ∨ induces a morphism f : Σ → P4 .
+We have E ∼  = OP1 (−2) ⊕ OP1 (−1) so that Σ ∼  = F1 , and f ∗ OP4 (1) = OE (1) = OΣ (D + 2F ).
+   By adjunction we have a map of sheaves g ∗E ∨ → OP4 (1)|C . This map is surjective since
+g is finite. Moreover g ∗E ∨ → OP4 (1)|C even separates points: for points in distinct fibers
+this is clear. For points {p, q} = g −1(t) it follows because E ∨ |t is precisely OP4 (1)|{p,q}.
+So the induced morphism i : C → Σ is even an embedding. Moreover, the pullback
+i∗ OΣ5 → i∗ OE (1) is precisely our original map OC5 → OP4 (1)|C so that f ◦ i : C → P4 is
+our original embedding of C in P4 .
+   By construction of E, we have i∗ |F | = V , and g ∗OP1 (−1) = OC (−2) so we see i∗ OΣ (D) ∼=
+OC (2). Thus we have i(C) ∼ 2D + 2F . Therefore f : Σ → P4 , i : C → Σ are the necessary
+maps.
+   The map f is only an embedding if C is nondegenerate, otherwise f is the normalization
+map for its image, which is a singular cubic surface.
+  To see that this is unique, notice that the lines f (π −1 (t)) are simply the lines obtained by
+taking the joins of the degree 2 divisors on C which lie in in V . Since f (Σ) is the union of
+this system of lines, this proves that f (Σ) is uniquely determined. But f : Σ → f (Σ) is
+simply the normalization map so that f is also uniquely determined.
+   Remark While we are at it, let’s mention a specialization of the construction above,
+namely what happens when V is not basepoint free. Then V = p + |OC (1)|, where p ∈ C
+is some basepoint. Consider the projection morphism f : P4 −−−≻ P3 obtained by projection
+from p (this is a rational map undefined at p). The image of C is a rational cubic curve B
+                       CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                 23
+
+(possibly a singular plane cubic). Consider the cone S ′ in P4 over B with vertex p. This
+surface contains C. If we blowup P4 at p, then the proper transform of S ′ in P  f4 is a surface
+whose normalization S is a Hirzebruch surface F3 (normalization is only necessary if B is a
+plane curve). The pullback of the exceptional divisor of f
+                                                         P4 plays the role of the directrix D of
+S. The inclusion C ⊂ S induces a factorization i : C → S of C → P4 , with [i(C)] = D + 4F .
+                        ′
+
+The intersection of D and i(C) is precisely the point p. Finally, the linear system i∗ |F | is
+exactly |OC (1)|.
+   Next we consider the case of a rational curve C ⊂ Σ such that [C] = D + 3F .
+Lemma 6.9. Let C ⊂ P4 be a smooth quartic rational curve and let L ⊂ P4 be a line such
+that L ∩ C = Z is a degree 2 divisor. Let φ : C → L be an isomorphism such that φ(Z) = Z
+and φ|Z is the identity map. Then there exists a unique triple (f, i, j) where f : Σ → P4 is a
+cubic scroll, i : C → Σ and j : L → Σ are factorizations of C → P4 and L → P4 , and such
+that j(L) = D is the directrix, [i(C)] = D + 3F , and the lines of ruling induce the original
+isomorphism φ : C → L.
+Proof. Choose isomorphisms g : P1 → C and h : P1 → L such that φ ◦ g = h. Consider the
+rank 2 vector bundle
+                      G = g ∗ OP4 (1) ⊕ h∗ O(1) ∼
+                                                = OP1 (4) ⊕ OP1 (1).              (51)
+Let Z = g ∗Z = h∗ Z. Since g(Z) = h(Z) as subschemes of P4 , we have an identification of
+g ∗ OP4 (1)|Z with h∗ OP4 (1)|Z . Define E ∨ ⊂ G to be the subsheaf of E of sections (sC , sL ) such
+that sC |Z = sL |Z under our identification.
+    Since the map g ∗ OP4 (1) → g ∗ OP4 (1)|Z is surjective, we conclude that E ∨ ∼  = OP1 (2) ⊕
+OP1 (1). Moreover the linear series
+                        H 0 (P4 , OP4 (1)) → H 0 (P1 , g ∗OP4 (1) ⊕ h∗ OP4 (1))                (52)
+clearly factors through H 0 (P1 , E ∨ ). The question arises whether
+                       H 0 (P4 , OP4 (1)) ⊗C OP1 → E ∨ = OP1 (2) ⊕ OP1 (1)                     (53)
+is surjective. Certainly the corresponding maps to g ∗OP4 (1) and h∗ OP4 (1) are surjective. The
+condition that C ∩ L = Z is precisely the condition that the image of
+                        H 0 (P4 , OP4 (1)) ⊗C OP1 → f ∗ OP4 (1) ⊕ g ∗ OP4 (1)                  (54)
+is E ∨ . Thus the morphism is surjective. Denoting Σ = P(E), we conclude that there is a
+well-defined morphism f : Σ → P4 such that f ∗ OP4 (1) = OE (1) and the pullback map
+                       H 0 (P4 , OP4 (1)) → H 0 (P(E), OE (1)) = H 0 (P1 , E ∨ )               (55)
+is the map above.
+   The composition of E ∨ → g ∗ OP4 (1) ⊕ h∗ OP4 (1) with the two projections define two
+surjective maps which yield sections i : P1 → Σ, j : P1 → Σ. Clearly π ◦ i = g −1 , and
+π ◦ j = h−1 . From this it follows that the isomorphism C ∼     = L induced by the ruling of Σ is
+the same as the isomorphism φ. Thus (f, i, j) is a triple as in the statement of the lemma.
+   To see that this is unique, notice that the lines f (π −1 (t)) are simply the lines obtained by
+span(p, φ(p)). Since f (Σ) is the union of this system of lines, we conclude that f (Σ) is unique.
+But f : Σ → f (Σ) is just the normalization map so that f is also uniquely determined.
+24                                HARRIS, ROTH, AND STARR
+
+6.4. Cubic Scrolls and Quintic Elliptics.
+   Suppose that E ⊂ Σ is an effective Cartier divisor of degree 5 and arithmetic genus 1.
+Writing E = aD + bF we see (a, b) satisfies the relations a, b ≥ 0, a + b = 5 and
+a(b − 3) + b(a − 2) − a(a − 2) = 0. These relations give the unique integer solution
+E = 2D + 3F = −K. In particular, if E is smooth then π : E → P1 is a finite morphism
+of degree 2, i.e., a g21 on E. Thus a pair (f : Σ → Pn , E ⊂ Σ) of a cubic scroll and a quintic
+elliptic determines a pair (g : E → Pn , π : E → P1 ) where g : E → Pn is a quintic elliptic
+and π : E → P1 is a degree 2 morphism.
+   Suppose we start with a pair (h : E → Pn , π : E → P1 ) where h : E → Pn is an
+embedding of a quintic elliptic curve and π : E → P1 is a degree 2 morphism. Consider the
+rank 2 vector bundle π∗ h∗ OPn (1).
+
+Lemma 6.10. Suppose E is an elliptic curve and π : E → P1 is a degree 2 morphism.
+Suppose L is an invertible sheaf on E of degree d. Then we have
+                       
+                        OP1 (e) ⊕ OP1 (e − 1)     d = 2e + 1,
+                     ∼
+                π∗ L =   OP1 (e) ⊕ OP1 (e − 2)     d = 2e, L ∼= π ∗ OP1 (e),              (56)
+                        O 1 (e − 1) ⊕ O 1 (e − 1) d = 2e, L ∼
+                                                             6= π ∗ OP1 (e)
+                          P              P
+
+Proof. Using the projection formula, we see that the lemma for L is equivalent to the lemma
+for L ⊗ π ∗ OP1 (m). For any L there is an m such that L ⊗ π ∗ OP1 (m) has degree 0 or degree
+1. Thus we are reduced to the two cases d = 0 and d = 1. Notice also that in all cases we
+have χ(π∗ L) = χ(L), so that by Riemann-Roch for E and P1 we have
+                          deg(π∗ L) + rank(π∗ L) = deg(L) = d,                            (57)
+i.e., deg(π∗ L) = d − 2. By Grothendieck’s lemma about vector bundles on P1 we know
+π∗ L = OP1 (a) ⊕ OP1 (d − 2 − a).
+    Suppose now that d = 0. Then π∗ L = OP1 (a) ⊕ OP1 (−2 − a). We also have h0 (π∗ L) =
+             = OE then h0 (L) = 1 so that we have π∗ L = OP1 ⊕ OP1 (−2). If L ∼
+h0 (L). If L ∼                                                                6= OE then
+  0
+h (L) = 0 so that we have π∗ L = OP1 (−1) ⊕ OP1 (−1). Thus the lemma is proved when
+d = 0.
+   Next suppose that d = 1. Then π∗ L = OP1 (a)⊕OP1 (−1−a), and h0 (π∗ L) = h0 (L) = 1.
+Thus we have π∗ L = OP1 ⊕ OP1 (−1). So the lemma is proved when d = 1. Thus the lemma
+is proved in all cases.
+   By the lemma we see that the vector bundle G∨ : = π∗ h∗ OPn (1) is isomorphic to OP1 (1) ⊕
+OP1 (2). Associated to the linear series OEn+1 → h∗ OPn (1) defining the embedding h, we have
+the adjoint map OPn+1
+                    1   → π∗ h∗ OP4 (1) = G∨ . Since h is an embedding, for each pair of points
+{p, q} ⊂ E (possibly infinitely near), we have that OEn+1 → h∗ OPn (1)|{p,q} is surjective. In
+particular taking {p, q} = π −1 (t) for t ∈ P1 , we conclude that OPn+1
+                                                                     1   → G∨ |t is surjective.
+                                                    n
+Thus we have an induced morphism P(G) → P which pulls back OPn (1) to OG (1). Let
+us denote Σ : = P(G) and let us denote the morphism by f : Σ → Pn . Abstractly Σ is
+isomorphic to F1 and f : Σ → Pn is a cubic scroll.
+  The tautological map π ∗ π∗ h∗ OPn (1) → h∗ OPn (1) is clearly surjective. Thus there is
+an induced morphism i : E → Σ. Chasing definitions, we see that h = f ◦ i. So
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                25
+
+we conclude that given a pair (h : E → Pn , π : E → P1 ) as above, we obtain a pair
+(f : Σ → Pn , i : E → Σ). Thus we have proved the following:
+Lemma 6.11. There is an equivalence between the collection of pairs (f : Σ → Pn , i :
+E → Σ) with f : Σ → Pn a cubic scroll and f ◦ i : E → Pn an embedded quintic elliptic
+curve and the collection of pairs (h : E → Pn , π : E → P1 ) where h : E → Pn is an
+embedded quintic elliptic curve and π : E → P1 is a degree 2 morphism.
+  Stated more precisely, this gives an isomorphism of the parameter schemes of such pairs,
+but we won’t need the result in this form.
+
+6.5. Cubic Scrolls and Quintic Rational Curves.
+   If one carries out the analogous computations as at the beginning of subsection 6.3 one
+sees that the only effective divisor classes aD + bF on a cubic scroll Σ with degree 5 and
+arithmetic genus 0 are D + 4F and 3D + 2F . But the divisor class 3D + 2F cannot be the
+divisor of an irreducible curve because (3D + 2F ).D = −1. Thus if C ⊂ Σ is an irreducible
+curve of degree 5 and arithmetic genus 0, then [C] = D + 4F .
+Lemma 6.12. Let C ⊂ P4 be a smooth quintic rational curve and let L ⊂ P4 be a line such
+that L ∩ C is a degree 3 divisor Z. Let φ : C → L be an isomorphism such that φ(Z) = Z
+and φ|Z is the identity map. Then there exists a unique triple (f, i, j) such that f : Σ → P4
+is a cubic scroll, i : C → Σ, and j : L → Σ are factorizations of C → P4 , and L → P4 ,
+and such that j(L) = D is the directrix, [i(C)] = D + 4F , and the lines of ruling induce the
+original isomorphism φ : C → L.
+Proof. The proof is very similar to the proof of lemma 6.9.
+
+                               7. Quartic Rational Curves
+
+   In this section we will prove that the space H4,0 (X) of smooth quartic rational curves
+C ⊂ X is irreducible of dimension 8. Recall from section 2.1 that every irreducible component
+of H4,0 (X) has dimension at least −KX .C = 2 × 4 = 8. First we prove that the open subset
+U ⊂ H4,0 (X) parametrizing curves C with span(C) = P4 is Zariski dense. To prove this it
+suffices to prove that the complement D ⊂ H4,0 (X) has dimension at most 7.
+Lemma 7.1. Every irreducible component of the closed subset D ⊂ H4,0 (X) parametrizing
+degenerate curves C (i.e., span(C) 6= P4 ) has dimension at most 7.
+Proof. By Riemann-Roch we see that a smooth quartic rational curve C ⊂ P3 lies on at
+least one quadric surface S. It cannot lie on two distinct quadric surfaces, for then it would
+have arithmetic genus 1 which is a contradiction. Thus to each point [C] ∈ D, there is an
+associated quadric surface S ⊂ span(C). Moreover the residual to C ⊂ S ∩ X is a pair of
+lines L1 , L2 (possibly a single non-reduced line). Thus there is a morphism D → Hilb2 (F ).
+Since F is a smooth surface, Hilb2 (F ) has dimension 4.
+   Now there are two types of behaviors depending on whether or not span(L1 , L2 ) is a 2-plane
+or a 3-plane. The set of pairs {L1 , L2 } such that span(L1 , L2 ) is a 2-plane corresponds to a
+point in the 3-dimensional divisor I ⊂ Sym2 (F ) parameterizing incident lines. For each pair
+{L1 , L2 } on this 3-fold, there is a 1-parameter family of hyperplanes containing span(L1 , L2 ).
+For each such hyperplane, there is a P3 of quadric surfaces Q in this hyperplane which contain
+26                                HARRIS, ROTH, AND STARR
+
+L1 ∪ L2 . Thus the locus of all curves [C] ∈ D whose associated pair {L1 , L2 } lies in I has
+dimension at most 3 + 1 + 3 = 7.
+  Next consider the case that span(L1 , L2 ) is a 3-plane. Then every quadric surface containing
+these lines lies in this 3-plane. The set of quadric surfaces in this 3-plane which contain L1
+and L2 is itself a P3 . Thus the set of curves [C] ∈ D whose associated pair {L1 , L2 } spans a
+3-plane has dimension at most 4 + 3 = 7. So the lemma is proved.
+
+
+
+   Recall from lemma 4.2 that given any smooth quartic rational curve C ⊂ X, the subscheme
+AC ⊂ Grass(2, 5) parametrizing the 2-secant lines to C is either 1-dimensional or else is 0-
+dimensional of length 16. In either case we conclude that there exists a 0-dimensional, length
+2 subscheme Z ⊂ AC (in fact many such subschemes). Suppose given a 0-dimensional, length
+2 subscheme Z ⊂ AC . Then Z either consists of two reduced points [L1 ], [L2 ] ∈ AC or else Z
+corresponds to a non-reduced point of AC . In the case that Z = {[L1 ], [L2 ]}, there are again
+two behaviors depending on whether Z is planar, i.e., span(L1 , L2 ) is a 2-plane, or whether
+Z is non-planar, i.e., span(L1 , L2 ) is a 3-plane. In the case that Z is planar, notice that we
+have the distinguished point p ∈ X corresponding to the intersection of L1 and L2 . In order
+to explain the analogues of planar and non-planar in the case that Z is non-reduced, we make
+a brief digression on ribbons.
+   A ribbon (for our purposes) is a degree two subscheme R of P4 supported along a line L,
+such that the ideal sheaf IL of L in R satisfies IL2 = 0, and such that the conormal sheaf
+IL /IL2 = IL is a line bundle on L. A ribbon is therefore a kind of doubled line in P4 , such
+that at each point p of L the doubling occurs in a specified direction (given by the normal
+bundle NL/R = IL∨ ), and such that this doubling direction varies reasonably along the line.
+Starting with a fixed line L in P4 , and a sub-line-bundle N ⊂ NL/P4 , there is a unique ribbon
+R supported on L with NL/R = N.
+   A non-reduced 0-dimensional subscheme Z of Grass(2, 5) of length 2 determines a ribbon
+R in P4 . The line L of the ribbon is given by the point of support of Z in Grass(2, 5), while
+the tangent direction of Z corresponds to a global section of NL/P4 , and there is a unique
+sub-line-bundle N of NL/P4 containing this section, which gives the ribbon.
+   There are two possibilities.
+   First of all we could have NL/R ∼= OL (1). In this case we say that R is planar ribbon since
+there is a unique 2-plane P ⊂ P4 such that R ⊂ P – in fact P is the unique 2-plane such that
+NL/P = NL/R as subbundles of NL/P4 . Notice that in this case the global section OL → NL/R
+is not determined by the ribbon R – in fact the data of this section is equivalent to a point
+p ∈ L such that the length 2 scheme Z is simply the tangent direction at [L] to the pencil of
+lines in P which pass through p. We refer to the point p ∈ L as the distinguished point of L
+determined by Z.
+   The second possibility for the ribbon is that NL/R =    ∼ OL . First of all notice that in
+this case Z is uniquely determined by the ribbon. Second, given any subbundle OL ∼      =N ⊂
+NL/P4 ∼= OL (1)3 , there is a unique 3-plane H ⊂ P4 such that the map OL → NL/P4 factors
+through NL/H ⊂ NL/P4 . Moreover in H there is a P3 of quadric surfaces Q ⊂ H such that
+R ⊂ Q. The general surface Q in this P3 will be smooth and we will have NL/R = NL/Q as
+subbundles of NL/H . We will call a ribbon of this type a non-planar ribbon.
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                              27
+
+   Define I = I4,0 ⊂ U × Hilb2 (F ) to be the incidence correspondence of pairs ([C], [Z]) such
+that Z ⊂ AC is a 0-dimensional length 2 subscheme. The idea of the proof of irreducibility
+of H4,0 (X) is to consider for such a pair ([C], [Z]) a certain cubic surface Σ which contains
+the curve which is the union of C and the scheme parametrized by Z. The residual of this
+curve in Σ ∩ X will be a cubic curve, and for general ([C], [Z]) this will be a smooth cubic
+rational curve. Moreover, if we associate to this cubic rational curve its image in Θ under the
+Abel-Jacobi map, then we obtain a rational transformation I → Θ × Hilb2 (F ) as the product
+of this map with projection I ⊂ H4,0 (X) × Hilb2 (F ) → Hilb2 (F ). The main fact is that this
+rational transformation is birational.
+
+  In order to prove the claims made in the last paragraph, we must first dispense with some
+degenerate possibilities. Let IP ⊂ I denote the closed subset parametrizing pairs ([C], [Z])
+such that Z is planar.
+Lemma 7.2. Every irreducible component of IP has dimension at most 7.
+Proof. In the reduced case Z = {[L1 ], [L2 ]}, we have that C ∩ (L1 ∪ L2 ) is a 0-dimensional
+subscheme of length 4 unless the distinguished point p ∈ C, in which case C ∩ (L1 ∪ L2 ) has
+length 3. Similarly in the case that Z is non-reduced and gives rise to a planar ribbon R, we
+have C ∩ R is length 4 unless the distinguished point p is on C. But since span(C) = P4 ,
+there is no 2-plane P such that P ∩ C has length 4; if such a 2-plane exists, then for any point
+q ∈ C − P ∩ C we have the hyperplane H = span(P, q) intersects C in a scheme of length 5
+which contradicts Bézout’s theorem since C 6⊂ H. Therefore we conclude that if Z ⊂ AC is
+planar, then the distinguished point p lies on C.
+    Now define S to be the cone over C with vertex p. The projection of P4 away from p (to
+P /p ∼
+  4
+       = P3 ) maps C birationally to a smooth cubic rational curve C ′ , and S is simply the
+cone over this cubic curve. Moreover, S contains the curve E which is the union of C and
+the degree 2 subscheme parametrized by Z (either L1 ∪ L2 or else the ribbon R determined
+by Z). By the Lefschetz hyperplane theorem, X contains no cubic surfaces other than the
+(degenerate) hyperplane sections of X. Now S is non-degenerate since it contains C and C
+is non-degenerate. Therefore S is not contained in X. So S ∩ X is a divisor on S of degree
+deg(S) × deg(X) = 3 × 3 = 9. But E has degree 6. Thus the residual curve D to E is a
+curve of degree 3. The only curves of degree 3 on S are hyperplane sections. There are two
+possible cases depending on whether or not p ∈ D.
+   Suppose that p ∈ D. In this case D is a union of three lines in S through p (or some
+degeneration thereof). Let H ⊂ P4 be the tangent hyperplane to X at p. Then every line
+L ⊂ X containing p is contained in H. In particular, the residual subscheme to C in S ∩ X
+is contained in H. But an easy divisor class calculation on the blowup of S at p shows that
+the residual to C intersects C in a divisor of degree 5 (not counting p where the residual isn’t
+well-defined). So C ∩ H is a divisor on C of degree at least 5. This contradicts Bézout’s
+theorem unless C ⊂ H. But by assumption span(C) = P4 . So we conclude that p 6∈ D.
+   Every hyperplane section of S which does not contain p is a smooth cubic rational curve
+D ⊂ X. Thus we have a well-defined morphism IP → H3,0 (X). Let us define Π ⊂ Hilb2 (F )
+to be the divisor parametrizing planar subschemes Z ⊂ F . Then we can define a morphism
+                                       fP : IP → Π × Θ                                     (58)
+28                                 HARRIS, ROTH, AND STARR
+
+as the product of the projection map IP → Hilb2 (F ) (which factors through Π by construc-
+tion) and the composition of IP → H3,0 (X) with the Abel-Jacobi map H3,0 (X) → Θ.
+   The claim is that the morphism fP is injective. Recall that the fiber of the Abel-Jacobi
+map H3,0 (X) → Θ containing some curve [D] ∈ H3,0 (X) is an open set of the 2-dimensional
+linear series determined by D on the cubic surface X ∩ span(D). The scheme determined
+by Z will intersect this cubic surface in a 0-dimensional scheme of length 2. Such a scheme
+imposes 2 linearly independent conditions on divisors in the linear series |D|. Therefore
+there is a unique curve D in this linear system which contains this 0-dimensional scheme
+of length 2. Given the curve D and the distinguished point p (which is determined by Z),
+we can reconstruct the scroll Σ as the cone over D with vertex p. We can then reconstruct
+C as the curve residual to the scheme determined by Z and D in the intersection Σ ∩ X.
+Thus we can uniquely recover [C] from fP ([C]) which shows that fP is injective. Therefore
+dim IP ≤ dim Π + dim Θ = 3 + 4 = 7. This proves the lemma.
+
+
+   Now define IU ⊂ I to be the Zariski dense open subset parametrizing pairs ([C], [Z]) with
+Z ⊂ AC a 0-dimensional scheme of length 2 such that span(C) = P4 and Z is non-planar. If
+we consider AC as a subscheme of Sym2 (C) ∼     = P2 , then the length 2 subscheme Z ⊂ Sym2 (C)
+                          2
+determines a line in Sym (C), i.e., a linear series of degree 2 divisors on C. One consequence
+of the assumption that Z is non-planar is that this linear series has no base-points. By
+lemma 6.8, there is a unique cubic scroll Σ ⊂ P4 which contains C and such that the linear
+series of degree 2 divisors is the linear series of intersections of C with the lines of the ruling
+of Σ. Let D denote the directrix of Σ and let F denote the divisor class of a line of the ruling.
+Then the hyperplane class on Σ is H ∼ D + 2F so the intersection X ∩ Σ has divisor class
+3D + 6F . Now C.F = 2 and C.H = 4, thus C ∼ 2D + 2F . On the other hand, the scheme
+determined by Z (either L1 ∪ L2 if Z is reduced, or the ribbon R if Z is non-reduced) has
+divisor class 2F . Thus the residual to C and the subscheme determined by Z is a divisor
+D2 ⊂ Σ linearly equivalent to D + 2F .
+Theorem 7.3. The space H4,0 (X) is irreducible of dimension 8.
+
+Proof. We continue to use the notation introduced in this section. Because of lemma 7.1
+and lemma 7.2, it is equivalent to prove the IU is irreducible of dimension 8. We stratify IU
+according to the type of the residual curve D2 defined above. If D2 is a smooth curve, we
+say it is the first type. If D2 is the union of a conic and a line of the ruling, we say it is the
+second type. If D3 is the union of the directrix D and two lines of the ruling (possibly one
+non-reduced line), we say it is the third type. Define the corresponding loci in IU to be I1 ,
+I2 , and I3 .
+    Third type: First we deal with the third type because it is the most involved. We will
+prove that every irreducible component of I3 has dimension at most 7. We can associate to
+each pair ([C], [Z]) ∈ I3 the configuration ([D], [W ]) where [D] ∈ F is the directrix line and
+[W ] ∈ Hilb4 (F ) is the length 4 scheme parametrizing the residual to D and C in Σ. Because
+of lemma 7.2, we may disregard the subvariety of I3 such that any length 2 subscheme of W
+is planar. Let us define I3,U ⊂ I3 to be the open subset such that no length 2 subscheme of
+W is planar. Then we are reduced to proving that every irreducible component of I3,U has
+dimension at most 7.
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                              29
+
+  Notice that W is a subscheme of the divisor ZD ⊂ F which parametrizes lines in X
+which intersect D. Let M ⊂ F × Hilb4 (F ) be the closed subset parametrizing configurations
+([D], [W ]) such that W ⊂ ZD . Then we have a morphism f3 : I3,U → M.
+   Now we consider the dimension of M. By [1, lemma 10.5], for a general [D] ∈ F , the
+divisor ZD is smooth. Therefore the fiber of projection onto the first factor M → F over the
+point [D] is simply the 4-dimensional scheme Sym4 (ZD ). It also follows by [1, lemma 10.5]
+that when ZD is singular, the singular set consists of a single ordinary node. The dimension
+of the space of length d subschemes of a nodal curve whose reduced scheme is the node is 0
+if d = 1 and 1 if d > 0. Therefore, even when ZD is singular, the dimension of Hilb4 (ZD ) is
+still only 4. So we conclude that M → F has fiber dimension 4 so that dim(M) = 6.
+   Now we consider the fiber dimension of f3 : I3,U → M. We will prove that every fiber of
+f3 has dimension at most 1. Suppose given a configuration ([D], [W ]). We want to consider
+the quotient P4 /D ∼  = P2 . Because no length 2 subscheme of W is planar, the image of
+        4
+W in P /D is a 0-dimensional subscheme of length 4. Given any scroll Σ which contains D
+as the directrix, the image of Σ in P4 /D is a smooth plane conic. Given a 0-dimensional
+subscheme of P2 of length 4, there is a pencil of conics containing this subscheme. So if Σ is
+a scroll which contains both D and W , then the image of Σ in P4 /D must be a conic B in
+the pencil determined by the image of W . Moreover, the scroll Σ determines an isomorphism
+φ : D → B which associates to each point in D, the image in P4 /D of the line of the ruling
+through that point. Notice that given a conic B in P4 /D which contains the image of W ,
+there is at most one isomorphism φ : D → B such that φ identifies the projection of W
+onto D with the projection of W onto B (because the only automorphism of P1 which fixes
+a divisor of degree 4 is the identity map).
+   By the last paragraph, associated to a configuration ([D], [W ]) there is a pencil of smooth
+conics B in P4 /D which contain the image of W , and to each B there is (at most) one
+automorphism φ : D → B which identifies the two projections of W . What extra information
+is needed to determine a scroll Σ such that Σ contains D and W and such that the image of
+Σ is B? To answer this question we recall lemma 6.6 which says that to determine a scroll
+Σ ⊂ P4 which contains a line D as the directrix, it is equivalent to determine the rank 1
+subbundle T ⊂ TP4 |D , where T ∼   = OD (−1) is the bundle of tangent spaces to line of the
+ruling of Σ. Also we have that T is everywhere distinct (as a rank 1 subspace of TP4 ) from TD .
+So first we consider the image of T in ND/P4 . But of course this is just ND/Σ ⊂ ND/P4 . Also
+ND/P4 = OD (1) ⊗C N where N is the rank 3 vector space whose associated projective space is
+canonically P4 /D. The map φ : D → P4 /D is equivalent to a subbundle N ′ ⊂ OD ⊗C N where
+N ′ is isomorphic to OD (−2), and the subbundle ND/Σ ⊂ OD (1) ⊗C N is simply N ′ ⊗ O(1).
+So ND/Σ ⊂ ND/P4 is uniquely determined by the map φ : D → P4 /D.
+  Finally, to determine the scroll Σ, we have to determine a subbundle T ⊂ TP4 |D which
+projects isomorphically to ND/Σ . The set of such subbundles is equivalent to the set of global
+sections of the bundle Hom(OD (−1), TD ⊕ ND/Σ ) ∼  = OD ⊕ OD (3) (modulo non-zero scaling)
+whose composition with TD ⊕ ND/Σ → ND/Σ is an isomorphism. In other words, the set of
+such subbundles is simply Hom(OD (−1), TD ) ∼  = OD (3). But this section is determined along
+the projection of W since W must be a subscheme of the scheme of lines of the ruling of Σ.
+Since a length 4 subscheme of P1 imposes 4 linear conditions on OD (3), we see that there is
+a unique section which restricts to W in the appropriate way. So finally we conclude that
+the scroll Σ is determined by the configuration ([D], [W ]) together with the conic B. Since
+30                                  HARRIS, ROTH, AND STARR
+
+M has dimension 6, and since for each ([D], [W ]) there is at most a 1-dimensional family of
+possible B’s, we conclude that I3,U has dimension at most 7.
+   Second Type: Next we consider the second type. We will prove that every irreducible
+component of I2 has dimension at most 7. Let B denote the smooth conic. Again let
+W ⊂ ZB ⊂ F denote the length 3 subscheme parametrizing the lines which make up the
+residual to C ∪ B ⊂ X. By lemma 7.2, we may suppose that every length 2 subscheme of
+W is non-planar. The claim is that the subscheme parametrized by W spans P4 . By way
+of contradiction, suppose that it is contained in a hyperplane H. By Bézout’s theorem, B
+is also contained in H. But then the intersection of H and the scroll Σ contains the degree
+5 curve which is the union of B and the subscheme parametrized by W . This contradicts
+Bézout’s theorem unless Σ ⊂ H. But then C is also contained in H, and this contradicts
+the hypothesis on C. Therefore the scheme parametrized by W spans P4 .
+   Let M2 ⊂ H2,0 (X) × Hilb3 (F ) be the locally closed subset parametrizing configurations
+([B], [W ]) such that B is smooth, such that every length 2 subscheme of W is planar, such
+that the subscheme of X parametrized by W spans P4 , and such that W ⊂ ZB , where
+ZB ⊂ F is the locally closed set which parametrizes lines which intersect B exactly once
+(there is exactly one line which intersects B twice). By the same type of argument at in the
+first case, we conclude that dim M2 = dim H2,0 (X) + 3 = 4 + 3 = 7.
+   There is an obvious morphism f2 : I2 → M2 , and we are reduced to showing that this
+map is injective. Now given a subscheme [W ] ∈ Hilb3 (Grass(2, 5)) such that no length 2
+subscheme of W is planar, and such that the scheme parametrized by W (in P4 ) spans P4 ,
+then there is precisely one line L whose intersection with this scheme is of length 3. We will
+only give the proof when W is reduced – the non-reduced case is only slightly more technical.
+Suppose that W = {[L1 ], [L2 ], [L3 ]}. Then L1 , L2 , L3 are all disjoint. If a line L intersects L1
+and L2 , then it lies in the hyperplane H = span(L1 , L2 ). Since span(L1 , L2 , L3 ) = P4 , the line
+L3 is not contained in H. Therefore H ∩ L3 is a point p which does not lie on L1 or L2 . We
+conclude that the lines L which intersect L1 , L2 , and L3 are exactly the lines L ⊂ H which
+intersect L1 , L2 and which pass through p. If we consider projection away from p, then the
+set of such lines corresponds to the intersection points in H/p ∼        = P2 of the images of L1
+and L2 . Since these lines are skew and don’t contain p, their images in H/p consist of two
+distinct lines, and two distinct lines in P2 intersect in precisely one point.
+   But given a scroll Σ, the directrix line D is a line which intersects L1 , L2 and L3 . Thus we
+conclude that the directrix line D is uniquely determined by the configuration ([B], [W ]) (in
+fact just by [W ]). Moreover, the lines of the ruling induce an isomorphism φ : D → B which
+carries each intersection Li ∩ D to the intersection Li ∩ B. There is a unique isomorphism
+φ : D → B with this property (because the only automorphism of P1 which fixes a length 3
+divisor is the identity). Thus φ is also determined by the configuration ([B], [W ]). From φ
+we recover the scroll Σ. From the scroll Σ we recover C as the residual to B ∪ L1 ∪ L2 ∪ L3 in
+Σ ∩ X. Thus we conclude that f2 is injective, which proves that I2 has dimension at most 7.
+   First type: Finally we consider I1 . This analysis will also be very important for describing
+the Abel-Jacobi map α4,0 : H4,0 (X) → J(X). Denote the residual curve by A (this is the
+curve we were calling D2 ). Let N ⊂ H3,0 (X) × F × F denote the locally closed subscheme
+parametrizing triples ([A], [L1 ], [L2 ]) such that L1 , L2 are skew lines each of which intersects A
+transversely in 1 point and such that span(A, L1 , L2 ) = P4 . Of course N fibers over H3,0 (X)
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                31
+
+and the fiber is an open subset of DA × DA . Thus we have
+                     dim(N) = dim(H3,0 ) + 2 dim(DA ) = 6 + 2 = 8.                           (59)
+There is an obvious map I1 → N, and the only nontrivial condition to verify is that
+span(A, L1 , L2 ) = P4 , but this follows by applying Bézout’s theorem to Σ.
+   What are the fibers of I1 → N? Consider the 3-plane P = span(L1 , L2 ). This intersects
+A in a degree 3 divisor. Two of the points of this divisor are the points of intersection of
+A and L1 , L2 . The third point p lies on neither L1 nor L2 since A.Li is a degree 1 divisor.
+Now there is a unique line M which contains p and which intersects both L1 and L2 : if we
+project P away from p, then the line M corresponds to the unique point of intersection of
+the images of L1 and L2 in P2 . Now suppose that Σ is a scroll which contains L1 and L2 and
+A. Let D denote the directrix. Since D intersects L1 and L2 , it must lie in P . If D does
+not contain p, then there is a line of the ruling F of Σ which passes through p. But then
+L1 ∪ L2 ∪ D ∪ F is a divisor of degree 4 in the hyperplane section P ∩ Σ. This contradicts
+Bézout’s theorem. What we conclude is that D must equal M. Moreover the isomorphism
+φ : A → M corresponding to projection of Σ → M must be the unique isomorphism such
+that φ(p) = p and such that φ(A ∩ Li ) = φ(M ∩ Li ). Of course the scroll Σ is determined
+by M and the isomorphism φ. Thus there is a unique scroll Σ which contains A ∪ L1 ∪ L2 ,
+i.e., I1 → N maps 1-to-1 to its image. Since there is some irreducible component of I of
+dimension 8, in fact we must have that I1 → N is dominant, i.e., I1 → N is an open
+immersion. Finally notice that N fibers over the irreducible space H3,0 and the general fiber
+DA × DA is irreducible. Thus N is irreducible. So I1 is irreducible of dimension 8.
+   Since I → H4,0 (X) is surjective, every component of H4,0 (X) is dominated by a component
+of I, which must be at least eight dimensional, since every component of H4,0 is. The only
+component of I with this property is I1 , which is precisely eight dimensional, so we conclude
+that H4,0 is irreducible of dimension eight.
+  Remark: Let I1 be as in the proof above and let J1 be the quotient of I1 by the involution
+([C], [L1 ], [L2 ]) 7→ ([C], [L2 ], [L1 ]). Notice that J1 → H4,0 (X) is still dominant.
+
+                                8. Quintic Elliptic Curves
+   In section 7 we proved that H4,0 (X) is irreducible by residuating the union of a quartic
+curve and a pair of 2-secant lines in the intersection of X with a suitable cubic scroll Σ.
+In this section we will prove that H5,1 (X) by residuating a quintic genus 1 curve in the
+intersection of X with a suitable cubic scroll. The idea of the proof is very similar to the
+proof of theorem 7.3. As in that proof, there are several degenerate behaviors which we need
+to rule out as generic.
+Theorem 8.1. The space H5,1 (X) is irreducible of dimension 10.
+
+Proof. By lemma 6.11 the irreducibility of H5,0 is equivalent to showing that H     e 5,1 is irre-
+ducible, where H e is the parameter space for pairs (f : Σ → P , i : E → Σ) such that
+                  5,1                                                  4
+                4
+f ◦ i : E → P is an embedding of E as a quintic elliptic curve. Indeed, we have seen that
+the fiber of projection He 5,1 → H5,1 (X) over a point [E] is simply the set of g 1s on E, i.e.,
+                                                                                  2
+   2     ∼
+Pic (E) = E. Since the fibers are irreducible of constant fiber dimension 1, we conclude that
+                                            e 5,1 is irreducible of dimension 11.
+H5,1 (X) is irreducible of dimension 10 iff H
+32                                   HARRIS, ROTH, AND STARR
+
+   On the other hand each pair (f : Σ → P4 , iE : E → Σ) is equivalent to a pair
+(f : Σ → P4 , iC : C → Σ) where C is the residual quartic curve, [C] = D + 3F . We
+decompose H    e 5,1 into a union of locally closed subsets H  e1, H
+                                                                   e2, H
+                                                                       e3, He 4 parametrizing the set
+where iC : C → Σ is in the first, second, third or fourth case (we say that iC : C → Σ is
+in the i-th case if C ′ .D = i − 2 where C ′ is the unique irreducible component of C which
+projects isomorphically to P1 under π). We will show that for i 6= 1, H       e i has dimension ≤ 10,
+                            e
+and we will show that H1 is irreducible of dimension 11.
+   First Case: Now H      e 1 parameterizes pairs (f : Σ → P4 , iC : C → Σ) where Σ is in the first
+case, and f (iC (C)) ⊂ X. There is a projection H      e 1 → H4,0 which assigns to (f, iC ) the curve
+C ⊂ X, the embedding being given by f ◦ iC . We have seen in lemma 6.9 that the fibre of this
+projection over a particular curve C ⊂ P4 consists of the data of a line L in P4 intersecting C
+in a subscheme Z of length 2, and an isomorphism φ between C and L which is the identity
+map on Z. The length 2 subscheme Z uniquely determines L, and given a fixed Z, there is
+a C∗ worth of choices of such isomorphisms φ. Therefore each fibre of H           e 1 → H4,0 is itself a
+C∗ bundle over the space Sym2 (C) = P2 parameterizing the Z’s. We see that H            e 1 → H4,0 has
+irreducible fibres of dimension 3. By theorem 7.3, H4,0 (X) is irreducible of dimension 8, and
+therefore Hf1 is irreducible of dimension 11.
+   Second Case: Now H        e 2 parametrizes pairs (f : Σ → P4 , iC : C → Σ) where C = C ′ ∪ F
+the union of a smooth rational cubic curve C ′ and a line of ruling F , and f (iC (C)) ⊂ X.
+Consider the morphism H       e 2 → H 3,0 which associates to (f, iC ) the curve C ′ ⊂ X, Recall
+              3,0
+that dim(H ) = 6. We analyze the fibre of this map by looking for the data necessary to
+reconstruct Σ. The irreducible component F ⊂ C is mapped to a line in X which intersects
+C ′ in a single point. The directrix D of Σ is mapped to a line in P4 which intersects F , and
+also intersects C ′ in a single point. Given a fixed C ′ ⊂ X, there is a one parameter family of
+lines in X to serve as an F . Given a fixed F , we recover the directrix as follows: pick any
+point p on C ′ , then there is a P1 of lines D passing through p and intersecting F (in case
+p ∈ F ∩ C ′ , the limiting condition is that D lie in the P2 spanned by F and the tangent line
+to C ′ at p). Finally, we need to specify the isomorphism φ : C ′ → D induced by the lines of
+ruling. Since this must be the identity on p and on F ∩ C ′ , this is parameterized by C∗ . As in
+the other lemmas on reconstructing cubic scrolls in section 6, this data is sufficient to specify
+Σ. Altogether we see that the dimension of H      e 2 is the sum of 6 for dim(H3,0 ), 1 for the choice
+of the line F , 1 for the choice of point p ∈ C ′ , 1 for the choice of D going through p and
+intersecting F , and 1 for the C∗ of isomorphisms between C ′ and D satisfying our conditions,
+i.e., dim(He 2 ) = 10.
+   Third Case: This time the curve C ′ is a smooth conic, and C consists of C ′ and two
+lines F1 , F2 of ruling (possibly a double line). The inclusion iC takes the lines of ruling to
+two lines (or possibly a nonplanar ribbon) in X which intersect C ′ . The directrix D of Σ
+maps to a line in P4 which intersects C ′ once and the union of the lines in a subscheme of
+length two. We have a projection H       e 3 → H 2,0 , given by forgetting all of the data except
+the conic C . Reversing this procedure, if we start with a smooth conic C ′ ⊂ X, the choices
+              ′
+
+of two lines F1 , F2 , in X meeting C ′ form a two dimensional family. Given the two lines,
+the directrix D must meet each of them, and so is also parameterized by a two dimensional
+family, namely the choices of the intersection points on the two lines. Finally, given this data,
+we have to specify the isomorphism φ : C ′ → D corresponding to the lines of ruling. This
+                       CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                   33
+
+isomorphism must take Fi ∩ C ′ to Fi ∩ D for i = 1, 2, and so we see that there is a C∗ of
+choices. Altogether the dimension of H    e 3 is the sum of 4 = dim(H 2,0 ), 2 for the union of two
+                      ′
+lines intersecting C , 2 for the 2-parameter family of possibilities for the directrix D, and 1
+for the C∗ of isomorphisms π : C ′ → D, i.e., dim(H      e 3 ) = 9.
+   Fourth Case: Finally we consider the fourth case. This time C ′ is the directrix of Σ,
+and C ′ ⊂ X is a line in X. The Fano scheme of lines in X has dimension 2. The
+remaining components of C are mapped to a union of three lines intersecting C ′ (or some
+degeneration thereof). For fixed C ′ , the dimension of such triples of lines is 3. By lemma
+6.6, in order to construct a scroll Σ containing C ′ as the directrix, we need to provide a
+sub-line-bundle T ⊂ TP4 |C ′ , with T ∼   = OC ′ (−1). The set of such bundles is a P12 , since
+hom(OC ′ (−1), TP4 |C ′ ) = 13. In order for the scroll to contain the three lines touching C ′ , this
+sub-bundle must agree with the direction of each line at the point of contact with C ′ . For each
+line, this is a three dimensional linear condition. Therefore the space of scrolls containing C ′
+as the directrix, as well as the three lines as lines of ruling is a P3 . Thus altogether H  e 4 has
+dimension (2 + 3 + 3) − 1 = 7.
+
+
+  Remark Of course the proof shows more than just that H5,1 (X) is irreducible. We see
+that for a general quintic elliptic E ⊂ X and a general cubic scroll containing E, the residual
+curve is a smooth quartic rational curve.
+
+
+                                9. Quintic Rational Curves
+   In this section we will prove that the space H5,0 (X) is irreducible.
+Lemma 9.1. Let C ⊂ Pn be a rational normal curve and let P ⊂ Pn be a linear r-plane. If
+(r + 2)k ≥ (r + 1)(n + 1), then P is contained in a k-secant (k − 1)-plane of C, i.e., there
+exists a divisor D = q1 + . . . qk on C such that P ⊂ span(D).
+Proof. We identify C with P1 so that OC (1) is a degree 1 line bundle, and OPn (1)|C is a
+degree n line bundle. Up to a choice of basis of Pn , we can identify the inclusion C ֒→ Pn
+with the morphism associated to the complete linear series |OC (n)|.
+  Let Pk be identified with the complete linear series |OC (k)|. Then on Pk we have the
+tautological injection of vector bundles OPk (−1) → H 0 (C, OC (k)) ⊗C OPk . If we take the
+tensor product of this map with H 0 (C, OC (n − k)) and then use the product map
+                  H 0 (C, OC (n − k)) ⊗C H 0 (C, OC (k)) −−−→ H 0 (C, OC (n)),                   (60)
+we have the composite map
+                 H 0 (C, OC (n − k)) ⊗C OPk (−1) −−−→ H 0 (C, OC (n)) ⊗ OPk .                    (61)
+
+If we think of Pk as the parameter space for degree k divisors D = q1 + · · · + qk on
+C, i.e., as Symk (C), then the fiber of this map of vector bundles at a point [D] is just
+H 0 (C, OC (n)(−D)) → H 0 (C, OC (n)).
+  Under the identification H 0 (C, OC (n)) = H 0 (Pn , OP1 (1)), we have a restriction map
+H 0 (C, OC (n)) → H 0 (P, OPn (1)|P ). Thus we have an induced map of vector bundles on Pk
+34                                  HARRIS, ROTH, AND STARR
+
+obtained as the composite map
+H 0 (C, OC (n − k))⊗C OPk (−1) −−−→ H 0 (C, OC (n))⊗C OPk −−−→ H 0 (P, OPn (1)|P )⊗C OPk .
+                                                                                      (62)
+Suppose the fiber of this map is the zero map at a point [D]. Then every linear polynomial
+of Pn which vanishes on D also vanishes on P . Since span(D) ⊂ Pn is cut out by the linear
+polynomials which vanish on D, we conclude that the ideal of span(D) is contained in the
+ideal of P , i.e., P ⊂ span(D). So we are reduced to showing that some fiber of this map is
+zero, i.e., this map of vector bundles has nonempty zero locus.
+     We may think of the map above as a global section of the bundle
+                     HomC (H 0 (C, OC (n − k)), H 0(P, OPk (1)|P )) ⊗C OPk (1).              (63)
+The rank of this vector bundle is
+              dim H 0 (C, OC (n − k)) × dim H 0 (P, OPk (1)|P ) = (n + 1 − k)(r + 1).        (64)
+Thus the map is a global section of OPk (1)(n+1−k)(r+1) . The zero locus is just defined by the
+vanishing of (n + 1 − k)(r + 1) linear polynomials. So long as (n + 1 − k)(r + 1) ≤ k, these
+linear polynomials always have a solution. Thus if (r + 2)k ≥ (n + 1)(r + 1), then the zero
+locus is nonempty.
+
+Remark 9.2. Notice that the proof also shows that the set of k-secant (k − 1)-planes which
+contain P is a linear subspace of Pk . In particular, when this set is finite, there is a unique
+solution.
+
+Corollary 9.3. If C ⊂ P4 is a smooth, nondegenerate quintic rational curve, then C has
+a unique 3-secant line L ⊂ P4 , and L is not a 4-secant line. If C ⊂ P3 is a smooth quintic
+rational curve, the C has a 1-parameter family of 3-secant lines L ⊂ P3 . If every 3-secant
+line to C is a 4-secant line, then C lies on a smooth quadric surface as a divisor of type (1, 4).
+Proof. First consider the case where C is nondegenerate. Then we can think of C ⊂ P4 as
+the projection of a rational normal curve C ′ ⊂ P5 from a point p not on C ′ . By lemma 9.1,
+we see that there is a 3-secant 2-plane span(D) which contains p. The projection of P is a
+3-secant line L to C. On the other hand, suppose that C has a 4-secant line L. The preimage
+of L is a 4-secant 2-plane to C ′ . But since any 4 points on C are linearly independent (or
+more generally any degree 4 divisor on C imposes 4 conditions on linear forms), we see that
+C ′ does not have a 4-secant 2-plane. Thus C has a 3-secant line, but does not have a 4-secant
+line.
+   Suppose that C has two distinct 3-secant lines L, M. Consider H = span(L, M). If this
+is a hyperplane in P4 , then H ∩ C has degree 6. This contradicts Bézout’s theorem unless
+C ⊂ H, i.e., C is degenerate. If H is a 2-plane, choose any point p ∈ C not contained in
+H and let H ′ = span(H, p). Then H ′ is a hyperplane, and again H ′ ∩ C ⊃ {p} ∪ (H ∩ C)
+has degree at least 6. Again by Bézout’s theorem we conclude that C ⊂ H ′ so that C is
+degenerate.
+   Suppose now that C is degenerate. Since C is smooth, span(C) is a hyperplane in P4 . Thus
+we may think of C as the projection of a rational normal curve C ′ ⊂ P5 from a line N ⊂ P5 .
+Now the 3-secant lines to C correspond to 3-secant 3-planes to C in P5 which contain N. It
+is a bit simpler to think of this as the set of 3-secant 2-planes which intersect the line N.
+                      CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                               35
+
+Since there is one such 2-plane for each point of N, we see that C has a pencil of 3-secant
+lines. Suppose moreover that each of these 3-secant lines is actually a 4-secant line. If two
+of these lines, L, M intersect nontrivially, then P = span(L, M) is a 2-plane and P ∩ C has
+degree at least 7. This contradicts Bézout’s theorem unless C ⊂ P , which itself contradicts
+that C is smooth. Thus all of the 4-secant lines are skew. Now let S be the surface swept
+out by the 4-secant lines. Then S contains C. Choose any 2-secant line M to C. For each
+4-secant line L to C which intersects M, consider the 2-plane span(L, M). If L does not pass
+through one of the 2 points of intersection of M ∩ C then span(L, M) intersects C in at least
+6 points, which contradicts Bézout’s theorem. Therefore the only lines L which intersect M
+are the lines through the 2 points of intersection of M ∩ C. Thus S intersects M in exactly
+2 points, i.e., S is a quadric surface. Since S contains a 1-parameter family of skew lines, we
+conclude that S is a smooth quadric surface. Finally, every smooth quintic rational curve on
+a smooth quadric surface has divisor class (1, 4) (with respect to some ordering of the two
+rulings).
+
+
+   Now suppose that [C] ∈ H5,0 (X). If C has a 1-parameter family of 4-secant lines, then we
+see by corollary 9.3 that C is a divisor of type (1, 4) on a smooth quadric Q. But Q ∩ X
+is a divisor of type (3, 3) on Q, it cannot contain a divisor of type (1, 4) as an irreducible
+component. This contradiction shows there are no such curves.
+   Define I = I5,0 ⊂ H5,0 (X) × G(1, 4) to be the locally closed subvariety parametrizing pairs
+(C, L) where L is a 3-secant line to C which is not a 4-secant line. Given such a pair, let
+Z = L ∩ C. This is a degree 3 divisor on both L and C, so there is a unique isomorphism
+φ : L → C such that φ(Z) = Z. By lemma 6.12 associated to the data C, L, and φ there is
+a unique triple (f, i, j) with f : Σ → P4 a cubic scroll, i : C → Σ and j : L → Σ factorizations
+of C → P4 , and L → P4 , and such that L is the directrix of Σ.
+   Conversely, given a cubic scroll f : Σ → P4 and a factorization i : C → Σ of the
+inclusion with i(C) ∼ D + 4F , we see that f (D) is a 3-secant line which is not a 4-secant
+line. Therefore I also parametrizes triples (C, f : Σ → P4 , φ).
+   Now for each cubic scroll f : Σ → P4 and j : C → Σ as above, the residual C2 to j(C)
+in f −1 (X) is a divisor of type 2D + 2F . We know from subsection 6.3 that such a divisor is
+a quartic curve of arithmetic genus 0, e.g. a quartic rational curve.
+Theorem 9.4. H5,0 (X) is irreducible of dimension 10. For a general [C] ∈ H5,0 (X), if
+f : Σ → P4 is the unique cubic scroll containing C, the residual curve C2 to C ⊂ f −1 (X) is
+a smooth quartic rational curve.
+
+Proof. Decompose I depending on the type of C2 . We say C2 is the first type if it is a smooth
+quartic rational curve. We say C2 is the second type if C2 is a union of two smooth conics
+A ∪ B. We say that C2 is the third type if it is a union of the directrix and a twisted cubic
+D ∪ A. We say that C2 is the fourth type if it is the union of a conic, the directrix, and a line
+of the ruling A ∪ D ∪ F . We say that C2 is the fifth type if C2 is the union of the double of
+the directrix and two lines of the ruling 2D ∪ F1 ∪ F2 . Finally, we say that C2 is of the sixth
+type if C2 is the double of a conic. We will label the corresponding locally closed subsets of
+I by I1 , . . . , I6 .
+  First we show that for each i > 1, dim Ii ≤ 9.
+36                                 HARRIS, ROTH, AND STARR
+
+   Second type: Suppose that C2 is the second type. The scroll f : Σ → P4 is determined by
+giving the union of the two conics A ∪ B meeting at a point p, and by giving the isomorphism
+φ : A → B, φ(p) = p induced by the lines of the ruling of Σ. Thus we see that I2 fibers over
+the Hilbert scheme of intersecting conics with fibers of dimension 2: the set of isomorphisms is
+a principal homogeneous space for the 2-dimensional subgroup of automorphisms in P GL(2)
+which fix a point of P1 . To specify a conic in X it is equivalent to specify a line in X and a
+2-plane containing this line (the conic is the residual of the line). Thus to specify two conics
+intersecting in a point p ∈ X, it is equivalent to specify a pair of lines L, M and then let
+the 2-planes be span(L, p) and span(M, p). So we see that the Hilbert scheme of intersecting
+conics is birational to X ×Sym2 (F ), and so has dimension 3+2+2 = 7. So I2 has dimension
+2 + 7 = 9.
+   Third type: Suppose that C2 is the third type. To specify the scroll it is equivalent
+to specify the twisted cubic A, the directrix D which intersects A in a point p, and an
+isomorphism φ : A → D such that φ(p) = p. Thus I3 fibers over the Hilbert scheme of
+unions A ∪ D with fibers which are 2-dimensional. We have seen that H3,0 has dimension 6,
+and that the set of lines intersecting a twisted cubic A has dimension 1. Thus the Hilbert
+scheme of unions A ∪ B has dimension 7. So I3 has dimension 2 + 7 = 9.
+   Fourth type: Suppose that C2 is the fourth type. To specify the scroll it is equivalent
+to specify the directrix line D, the conic A, a line of ruling F intersecting both D and A (in
+distinct points), and an isomorphism φ : D → A such that φ(F ∩ D) = F ∩ A. Thus I4
+fibers over the Hilbert scheme of curves A ∪ D ∪ F with fibers which are 2-dimensional. To
+specify A ∪ D ∪ F , it is equivalent to specify D ∪ F , a point p ∈ F and the residual line L to
+A. The dimension of the space of intersecting lines is 3. The dimension of choices for p is 1,
+and the dimension of choices for L is 2. Thus the dimension of the space of curves A ∪ D ∪ F
+is 3 + 1 + 2 = 6. So I4 has dimension 8.
+   Fifth type: Suppose that C2 is the fifth type. By lemma 6.6, we know that the scroll Σ is
+determined by the vertical tangent bundle T ⊂ TP4 |D . The condition that the intersection of
+Σ contain the double of D is exactly that the normal bundle ND/Σ ⊂ ND/P4 is contained in
+ND/X . But this normal bundle is simply the image of T in the quotient ND/P4 of TP4 |D . Thus
+the scrolls Σ such that Σ∩X contains 2D are the same as sub-line-bundles T ⊂ TX |D of degree
+−1. In both of the cases TX |D ∼  = OD (2) ⊕ OD ⊕ OD and TX |D ∼  = OD (2) ⊕ OD (1) ⊕ OD (−1) we
+              0
+have that H (C, TX |D (1)) is an 8-dimensional vector space. Moreover, each of the two lines
+F1 , F2 of the ruling contained in X imposes two linear conditions on the sections. Since the
+set of scrolls is the projective space associated to the possible sections, we see that there is at
+most a 3-dimensional family of scrolls which contain the double of D and F1 , F2 . Therefore
+the dimension of the space of pairs ([D], {F1 , F2 }) is just the sum of 2 for the line in X, and
+1 each for the Fi ’s. Altogether, we see that dim(I5 ) ≤ 2 + 1 + 1 + 3 = 7.
+   Sixth type: Finally we consider the sixth type. By lemma 6.7, to specify a scroll containing
+a conic A ⊂ X is the same as giving a sub-line bundle T ⊂ TP4 |A of degree 1. As in the last
+case, the condition that Σ ∩ X contain 2A is exactly that T ⊂ TX |A . The two possibilities
+for TX |A are OA (2) ⊕ OA (1) ⊕ OA (1) and OA (2) ⊕ OA (2) ⊕ OA . In both cases we see that
+H 0 (A, TX |A (−1)) is a vector space of dimension 4. Thus there is a P3 of scrolls Σ such that
+Σ ∩ X contains 2A. Since dim(H2,0 (X)) = 4, we conclude that dim(I6 ) = 4 + 3 = 7.
+                       CURVES OF SMALL DEGREE ON CUBIC THREEFOLDS                                 37
+
+   In each case the dimension is at most 9. By proposition 2.1 every irreducible component
+of H5,0 has dimension at least 10. By corollary 9.3 we know I → H5,0 is surjective. So we
+conclude that the image of I1 → H5,0 is Zariski dense and has dimension at least 10.
+   Fixing a quartic rational curve C2 ⊂ X, by lemma 6.8 the set of cubic scrolls f : Σ → P4
+containing C2 is equivalent to the set of (basepoint free) g21 ’s on C2 . The set of g21 ’s on C2 is
+simply Sym2 (C2 ) ∼= P2 . We see that I1 fibers over H4,0 as a P2 -fibration. By theorem 7.3,
+  4,0
+H is irreducible of dimension 8. Thus I1 is irreducible of dimension 10. So the image of
+I1 → H5,0 is irreducible of dimension at most 10. On the other hand we know the image has
+dimension at least 10. So H5,0 is irreducible of dimension 10.
+                              10. Quintic Curves of Genus 2
+   By Bézout’s theorem, X cannot contain a plane curve of degree d > 3. Thus the next case
+after quintic elliptic curves is quintic curves of genus 2.
+   Suppose C ⊂ X is a quintic curve of genus 2. Let H denote the hyperplane class on C.
+Since deg(H) = 5 > 2 = deg(KC ), we conclude that H 1 (C, OC (H)) = 0. Thus by
+Riemann-Roch we have
+                  dim H 0 (C, OC (H)) = deg(H) + 1 − g = 5 + 1 − 2 = 4.                        (65)
+Thus the complete linear system |H| is a P3 , i.e., C is contained in a P3 inside P4 . Moreover,
+by Riemann-Roch we also have that
+                H 0 (C, OC (2H)) = 10 + 1 − 2 = 9 < 10 = H 0 (P3 , OP3 (2)).                   (66)
+Therefore C is contained in a quadric surface C ⊂ S. Now S ∩X is a Cartier divisor of degree
+6 on S. Since C is degree 5, the residual of C ⊂ S ∩ X is a divisor of degree 1, i.e., a line.
+Therefore every quintic genus 2 curve is residual to a line L ⊂ X in a quadric surface.
+   Let P(Q∨ ) → F denote the P2 -bundle over F parametrizing pairs ([L], [H]) where L ⊂
+H ⊂ P4 is a line contained in a hyperplane contained in P4 such that L ⊂ X. Let U → P(Q∨ )
+denote the P6 -bundle parametrizing triples ([L], [H], [S]) where S ⊂ H is a quadric surface
+containing L. The universal quadric surface Se ⊂ U ×P4 is a Cartier divisor inside the pullback
+of the universal hypersurface H  e ⊂ U × P4 . Since U is smooth so is H,e therefore Se is a local
+complete intersection. Next, U × X ⊂ U × P4 is a Cartier divisor. Since Se and U × X have
+no irreducible component in common, we see that D : = Se ∩ U × X ⊂ Se is a Cartier divisor
+locally cut out by a regular element, so D is also a local complete intersection. In particular,
+D is Gorenstein.
+   Let D1 ⊂ D denote the pullback from F of the universal line in X. Then D1 → U is
+smooth, therefore D1 is smooth. In particular D1 is Cohen-Macaulay. Therefore by corol-
+lary 2.7, the residual D2 to D1 in D is a flat family of Cohen-Macaulay schemes. By special-
+izing to a point ([L], [H], [S]) with S smooth, we see that the general fiber of D2 is a smooth
+quintic genus 2 curve in X. Thus there is an induced map f : U → Hilb5t−1 (X). We have seen
+that this map is a bijection over H5,2 (X). Therefore the preimage f −1 (H5,2 (X)) is precisely
+the normalization H g 5,2 (X). Since U is irreducible, we also conclude that f (U) = H5,2 (X).
+
+Thus we have the following result.
+                                g
+Theorem 10.1. The normalization H 5,2 (X) of H5,2 (X) is a smooth, connected variety of
+
+dimension 10.
+38                                     HARRIS, ROTH, AND STARR
+
+                                               References
+ [1] C. H. Clemens and P. A. Griffiths. The intermediate Jacobian of the cubic threefold. Annals of Mathe-
+     matics, 95:281–356, 1972.
+ [2] D. A. Cox and S. Katz. Mirror Symmetry and Algebraic Geometry, volume 68 of Mathematical Surveys.
+     American Mathematical Society, 1999.
+ [3] D. Eisenbud. Commutative Algebra, volume 150 of Graduate Texts in Mathematics. Springer-Verlag,
+     1995.
+ [4] W. Fulton. Intersection Theory, volume 2 of Ergebnisse der Mathematik und ihrer Grenzgebiete, 3. Folge.
+     Springer-Verlag, 2 edition, 1998.
+ [5] P. A. Griffiths. On the periods of certain rational integrals, I. Annals of Mathematics, 90:496–541, 1969.
+ [6] P. A. Griffiths. Variations of Hodge structure. In Topics in Transcendental Algebraic Geometry, volume
+     106 of Annals of Mathematics Studies, chapter 1. Annals of Mathematics, 1984.
+ [7] P. A. Griffiths and J. Harris. Principles of Algebraic Geometry. Pure and Applied Mathematics. John
+     Wiley and Sons, 1978.
+ [8] J. Harris, M. Roth, and J. Starr. Abel-jacobi maps associated to smooth cubic threefolds. in preparation.
+ [9] R. Hartshorne. Algebraic Geometry, volume 52 of Graduate Texts in Mathematics. Springer-Verlag, 1977.
+[10] J. Kollár. Rational Curves on Algebraic Varieties, volume 32 of Ergebnisse der Mathematik und ihrer
+     Grenzgebiete, 3. Folge. Springer-Verlag, 1996.
+[11] J. Kollár and S. Mori. Birational Geometry of Algebraic Varieties, volume 134 of Cambrige Tracts in
+     Mathematics. Cambridge University Press, 1998.
+[12] D. Mumford. The Red Book of Varieties and Schemes, volume 1358 of Lecture Notes in Mathematics.
+     Springer-Verlag, 1988.
+
+     Department of Mathematics, Harvard University, Cambridge MA 02138
+     E-mail address: harris@math.harvard.edu
+
+     Department of Mathematics, University of Michigan, Ann Arbor, MI 48109
+     E-mail address: mikeroth@umich.edu
+
+  Department of Mathematics, Massachusetts Institute of Technology, Cambridge MA
+02139
+  E-mail address: jstarr@math.mit.edu
+

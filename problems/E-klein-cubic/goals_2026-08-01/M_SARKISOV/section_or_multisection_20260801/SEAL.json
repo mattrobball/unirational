@@ -1,0 +1,25 @@
+{
+  "schema": "m-sarkisov-section-or-multisection-seal-v1",
+  "verdict": "PROVED-MULTISECTION-DEGREE-55",
+  "repository_head_at_creation": "53e267a59b2d24de93c58dd9ddacc2f995fc2d68",
+  "local_files": {
+    "STATUS.md": "c96d570e294d1640f79447684cf62c0a7f993fe8b7896bab1847cb68e9e24fe9",
+    "THEOREM.md": "53b048c2b554dae4caace3c44362ada9067b5fcef7c251fa36decd5c51ce5f41",
+    "COMPLETION_AUDIT.md": "7f0529f7f28427fe5f910a4b82e903bd890f163b65428559606883f406dc14e1",
+    "payload.json": "b8bddeb5fca191faa6503111fb988d3f216560a7eb7ac31b699e1b8e42d1a7b7",
+    "verify.py": "4ffd2366f880be1d3666b10df8d386d1402427010007612dfa86f35b91968d87"
+  },
+  "upstream_inputs": {
+    "goals_2026-08-01/M_SARKISOV/SEAL.json": "688c9d77daa8fd30873ab360aafedcbd78beab16fbd9fa0ea0465c295c6ba2b0",
+    "goals_2026-08-01/M_SARKISOV/verify.py": "36703ad244e47ad51fe620eb0d6823d99fed92858e274d9e408f508bc7226633",
+    "tmp/schur_unrestricted_point_attack_audit/REPORT.md": "10cd68157d47dce9a0ce818ff5d89c7cf265f63730303df77e5b4290abc8b14b",
+    "tmp/schur_unrestricted_point_attack_audit/verify.py": "6d9fc5fda34b5ac62c9e612ea997e643b70b6d25e4a98509a90f9cc08ffd0889",
+    "tmp/xcd_general_slice_completion/PROOF_AUDIT.md": "0217cd8d00068cb710b7969bcca45df5031c3c2e9864dafc118d77ac362c8e19",
+    "tmp/xcd_general_slice_completion/certificate.json": "9d981914f04ad343d7e1845431e64e61d142993cc179ce36baaa4b440e935c21",
+    "tmp/xcd_general_slice_completion/verify.py": "33bdd4c284548e16372e113a258ea478d3822f88591ca60478ed72a064466fff",
+    "RESOLUTION.md": "3eac1aa9787da90cbee21b0e72e9ea0fe538921e74afd9cc20170d5227e64c67"
+  },
+  "claim": "exact discovered xCD fibration has a connected semilinear G-equivariant rational multisection of degree 55",
+  "section_over_K0": "NOT_CLAIMED",
+  "problem_e_headline": "OPEN"
+}

@@ -1,0 +1,71 @@
+{
+  "authoritative_hashes": {
+    "../tmp/kproj_arithmetic/model.py": "e28b0d187e2bfa967c2360b4073b06f1172e3353195d9436b65b2023984cad3a",
+    "../tmp/kproj_arithmetic/normalized_kproj_table.json": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f",
+    "G_ALL_DEGREE/generic_cubic.json": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+    "G_ALL_DEGREE/verify_generic_cubic.py": "cf4bc9c7ee4fea19b9f8d37d647956ad800b6554730d533a572d02fbbe392748",
+    "Q_SCHUR_DESCENT/verify_zero_cycle_ledger.py": "88e5c5f4315881c5cf79791d090746cd4e4cc95ad96db91fce179876cdcd0a9f",
+    "Q_SCHUR_DESCENT/zero_cycle_payload.json": "b3c8a4e952e2e3a8d4435aabe0cba5e255291a443a7cc3cc5d6adf2d544fe210"
+  },
+  "completion_model": "standard successive complete-DVR field attached to a saturated geometric Parshin chain",
+  "completion_only": true,
+  "coray": {
+    "archival_pdf": "http://matwbn.icm.edu.pl/ksiazki/aa/aa30/aa3037.pdf",
+    "archival_pdf_sha256_observed_2026_08_01": "ea2dcf48c17b9a2c5c5ec8a73d3ccf1c9178033da8d5e1e33fbf5323624c73c6",
+    "citation": "D. F. Coray, Acta Arith. 30 (1976), 267-296",
+    "doi": "10.4064/aa-30-3-267-296",
+    "pages": "281-282",
+    "section": "4 Quasi-local fields",
+    "theorem": "4.7"
+  },
+  "covered_parshin_ranks": [
+    3,
+    4
+  ],
+  "effective_cycle": {
+    "group_order": 660,
+    "orbit_degree": 55,
+    "prime_to_three": true,
+    "signed_index_degrees": [
+      55,
+      3
+    ],
+    "signed_index_identity": [
+      1,
+      -18
+    ],
+    "stabilizer": "D12",
+    "stabilizer_order": 12
+  },
+  "generic_cubic": {
+    "base": "QQ(t3,t6,t8,t11)",
+    "base_transcendence_degree": 4,
+    "coefficient_count": 35,
+    "degree": 3,
+    "field": "K_proj",
+    "field_degree_over_base": 12,
+    "variables": 5
+  },
+  "henselization_claim": false,
+  "live_commit_at_production": "53e267a59b2d24de93c58dd9ddacc2f995fc2d68",
+  "rank_table": [
+    {
+      "conclusion": "completion point exists",
+      "coray_base_property": "CS by C1/plane-cubic/elementary cases",
+      "rank": 3,
+      "terminal_residue_trdeg": 1
+    },
+    {
+      "conclusion": "completion point exists",
+      "coray_base_property": "CS by C1/plane-cubic/elementary cases",
+      "rank": 4,
+      "terminal_residue_trdeg": 0
+    }
+  ],
+  "schema": "G_VALUATION_PARSHIN_SOLUBILITY_V1",
+  "scope": "Positive local solubility for standard successive complete-DVR fields of saturated geometric length-3/4 Parshin chains; no claim for arbitrary rank-valuation completions or henselizations, no K_proj point, and no pointlessness theorem.",
+  "unresolved_parshin_ranks": [
+    1,
+    2
+  ]
+}

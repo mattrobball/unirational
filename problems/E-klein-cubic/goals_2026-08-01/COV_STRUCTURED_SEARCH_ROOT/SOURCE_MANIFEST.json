@@ -1,0 +1,14 @@
+{
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "schema": "COV_SOURCE_MANIFEST_V1",
+  "sources": {
+    "certificates/exact_molien.py": "5a02c8d143c7037c7c60b484740afc6febf343aadaa76342dd869806c58dbaf9",
+    "certificates/modular_covariant_scan.py": "8f226209cb479587d7e1a36cbb86c62ab3c9be9e8d7798c9c7db569017520349",
+    "goals_2026-08-01/GOAL_COV_STRUCTURED_POSITIVE_SEARCH.md": "9e59db361d063df17656fae836c654828e36b3968de63b1f44626bd8f6280baa",
+    "tmp/d12_block_attack/analyze.py": "2544b3ee1f78e489f4704b38f807e5183cefabee025743a4ae51ad1af3a84c8d",
+    "tmp/degree13_opt/reconstruct_large_prime.py": "19d8b4cdd742cfa6da300ba936b33f4200f8a1f93f571a889f404f0f155636c0",
+    "tmp/generic_twist/phi_coefficients.py": "8c217aeaefe300a76e886f0a94803b5812689574299e1a2c72daeec72efd4525",
+    "tmp/kproj_arithmetic/core.py": "913b6184df2272e4834f81b38abdda9f468a2852ec571a04a469610054468b01",
+    "tmp/symbolic_compatibility_complex/jet_scan.py": "7b150a3cf439018a498be0e9806e37cd997c7499da6e0f7716412034438f5ae8"
+  }
+}

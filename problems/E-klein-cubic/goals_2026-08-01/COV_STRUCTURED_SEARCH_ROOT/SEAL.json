@@ -1,0 +1,94 @@
+{
+  "consumed_repository_head": "53e267a59b2d24de93c58dd9ddacc2f995fc2d68",
+  "decision_primes": {
+    "global_jets_characteristic_zero_minor_holdout": 89,
+    "global_jets_discovery": 67,
+    "independent_molien": [
+      199,
+      353
+    ],
+    "sparse_family": [
+      89,
+      199
+    ]
+  },
+  "exit": "COV-STRUCTURED-DEGREES-EMPTY-SCOPED",
+  "files": {
+    "ANSATZ_AUDIT.md": "0996320f9dfb1117690012554e3c73fb6ceca22e8afb8a42b496867af313bd08",
+    "DEGREE_RANKING.md": "c2c0e8b19c2aee80a9e7ce58c6c470b6dfdb4e6f75dfddec4c2f760ec6ba1dc5",
+    "README.md": "e83097d490c9b88e0a614292fa40bbc6e2129bd563c858c502335181216c82ce",
+    "REQUIREMENTS.md": "86f85398102fb99af0e149433f589a1120dfb821719551c10813724fa38cf0fb",
+    "SOURCE_MANIFEST.json": "9af7c6fe656e2f365bf1eb8230c28e791a5ac5ba46dc17ec3b421fe0c745c91c",
+    "STATUS.md": "5cd0533091debd920a006c4a1b84a87d336681b3c578245b34da1d4b60e99e5e",
+    "STRUCTURAL_EMPTY_THEOREM.md": "b14298ad6ac7ff8c0b9b20ae8c07d50ad55a729901b3e0cab336aa03926ba8d0",
+    "degree_25/basis_manifest.json": "d38df7838037de7f08a1c0601171a879212ecb36227de6a2faa6afe78a7d7d10",
+    "degree_25/candidate.json": "04f98c734edd5ab247e5908f62ebb9acffb2a048b0f04eddd92f252ea43ede38",
+    "degree_25/covariant_basis_seeds.json": "3d0f0ba04943ce9122bc95db1ed807c3069eaf95937626fcc1680f8b8dbc4351",
+    "degree_25/global_jet_kernels_p67.npz": "fb6242789ecd891ee9af3ab2b5a2ce9d91f9fc42890c3ea3ae39ef5e7ea17fe3",
+    "degree_25/global_jets_p67.json": "35bc60758ffc0c2b00b7e7290a785dd703995ee6630ef85f912be6b68e94bc70",
+    "degree_25/global_jets_p89.json": "4930324cbc022f8c310f078f5e7037f6fe4040b03f379f66520262975ad8e6bd",
+    "degree_25/points_p199.json": "6ffa83929159cf79b6544d6124262ce5d8735149066342c81620da4053788d7c",
+    "degree_25/points_p89.json": "d23e5a8e66809583eb6816998d7c2d965d0f4fc9cd38838f08f6bcc3cf0b7452",
+    "degree_25/search.json": "9ea032b0f86f8ba7dbda15f7f60c79c5debf336dc33174d24a504a02176ec20d",
+    "degree_31/basis_manifest.json": "f38267d1a76ad15298767ea13425d0d326e65cbb7a4d13688b05c2fd9b7b46ac",
+    "degree_31/candidate.json": "a4a389c324c7c126bfcc52598a88054347078c29379e57c1624afdfc6278726c",
+    "degree_31/covariant_basis_seeds.json": "227b721371734612dfd3df2bbf778812e7b9c5cb581388848e5a747fe03dcbe8",
+    "degree_31/global_jet_kernels_p67.npz": "82a31ceb91b3165712fb210e77963cdcf1acbea5934996b3ebcdec6831f39082",
+    "degree_31/global_jets_p67.json": "c90c76a6e1711a05216088c64e8ff6232868ba4f93ffeb93f2c3b0c9abc8eb67",
+    "degree_31/global_jets_p89.json": "595e9dc14e0467e27296ecf3c2bd0edbf59d7c169df2d081fc3e90db02e6565e",
+    "degree_31/points_p199.json": "6ffa83929159cf79b6544d6124262ce5d8735149066342c81620da4053788d7c",
+    "degree_31/points_p89.json": "d23e5a8e66809583eb6816998d7c2d965d0f4fc9cd38838f08f6bcc3cf0b7452",
+    "degree_31/search.json": "c26894c90a1c36d153188250b8dab19d6d6a852a1b4f90418895d65ebf1a9d84",
+    "degree_35/basis_manifest.json": "ec0af7539a434d493f7c8da5f1cc0090efa0de2e1c11459cc0ea79aed4a2ea07",
+    "degree_35/candidate.json": "b68e36d191958b2d39b22512e2f2c047dec92724c6314db33e3aa7cdb03b7d82",
+    "degree_35/covariant_basis_seeds.json": "f41b734a08c9268e6abdc0edc33053872ea3e46c4790312aa11c7bae9c52f54e",
+    "degree_35/global_jet_kernels_p67.npz": "61e92560cf2a7194a0b28796499b6a93b9dec2376b8d449eb83c59b1b4460656",
+    "degree_35/global_jets_p67.json": "469f4a07c283806b962968f799e51d4fc14feddc3354311d819a161a52cf3205",
+    "degree_35/global_jets_p89.json": "fa356139fd4ee04a5d4c9504b26b91c3cb17caf385fac48ad2132f61f4e24530",
+    "degree_35/points_p199.json": "6ffa83929159cf79b6544d6124262ce5d8735149066342c81620da4053788d7c",
+    "degree_35/points_p89.json": "d23e5a8e66809583eb6816998d7c2d965d0f4fc9cd38838f08f6bcc3cf0b7452",
+    "degree_35/search.json": "ddf356c5accc65fe9abdce7083d980ac406d1dea17bfb65f08413b0d44dbe662",
+    "degree_ranking.json": "6b6297ca0519f48ab36e1aa1ecb8c20968d9b8b64d0fde3fc0fd885b596b5dce",
+    "global_module_summary.json": "9d54ae972c8d97f59c6dd95bebe4e4ad5f8431e183caa9b06e49f14955dd060d",
+    "make_seal.py": "a75dd804c6a344bb0b4bd8181e67c6671db91d404e4cfd73c4d35ce7d464f3ad",
+    "produce_global_jets_p67.py": "b9c758b36122bd15df42f4677e51ac67babc8ad670510115e70cda745e881129",
+    "produce_manifests.py": "ecf59d994267158b5b78198af21eebb174bfd9952610615ab167257c041bd0f7",
+    "produce_ranking.py": "3369142b36a22ac8845fba06a50cdbc9d9827825a38c201eaa6b9d38cc287414",
+    "produce_sparse_frame.py": "f86478dd81c014f0456c3c0c4ba16ab2ae49b0c819be3f6da3088137d0a8c563",
+    "sparse_frame_summary.json": "0a54852784a6f3de893c8d082b0254e739d5bafd583e5605b2b05491d5f9b075",
+    "verify_all.py": "eb18b98a52d1fa053cd7069b8dd76157c9aae3def6630380681d95c0cdd65c9e",
+    "verify_global_jets_holdout.py": "616c998ee9b47924905e8d04b83c80552bc12b2a000bd613dc27a9ad1f894a4b",
+    "verify_manifests.py": "68bdbc1f02a97ecf29c088cff95a5226f32c711686ba5c12012cffea2d4eae62",
+    "verify_ranking.py": "fdc3640b9a4c262a2701da79e63db3f185693ef8ee1739f348f8c70661cfdf5c",
+    "verify_seal.py": "53cedf074eaf70e59a6bebd39cb3a0673d8a0015c6c3a026bf24e7a3f3f2f061",
+    "verify_sparse_frame.py": "14ccc154f153375c38ac09e2b5ff9cd79ed84387e1eeac87d4dbd4c1f35ff484"
+  },
+  "headline": "OPEN",
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "positive_mission_achieved": false,
+  "replay": [
+    "/opt/homebrew/bin/python3 -u verify_all.py"
+  ],
+  "schema": "COV_STRUCTURED_SEARCH_SEAL_V1",
+  "scope_exclusion": "no nonzero global covariant in the selected m>=3 residual families; m=1 branches, whole-degree landing schemes, the all-degree question, and the unirationality headline are not decided",
+  "selected_pairs": [
+    {
+      "degree": 25,
+      "dimension": 0,
+      "plane_order": 3,
+      "residual_degree": 7
+    },
+    {
+      "degree": 31,
+      "dimension": 0,
+      "plane_order": 5,
+      "residual_degree": 1
+    },
+    {
+      "degree": 35,
+      "dimension": 0,
+      "plane_order": 5,
+      "residual_degree": 5
+    }
+  ]
+}

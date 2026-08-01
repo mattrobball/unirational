@@ -1,0 +1,23 @@
+{
+  "exit": "R-HILBERT-COMPONENT-STRUCTURAL",
+  "files": {
+    "HILBERT_INVENTORY.md": "ae7e5bebd2d466732e552f8f24694d93748e984a0020528f7a5a134917d552a2",
+    "SOURCES.md": "c97c0c8b2d7580559a643e10dd44b30cb38155e9c39a4d02f39fa8cbf04a8932",
+    "STATUS.md": "6a4b56ae547924d2775c3e703dae111a4977ff334472822aefdf8086fe9cfbb8",
+    "THEOREM.md": "95b5a2af09338ad478ca50069444dbb1e8018631dfed62ff22d61e06a90d7b63",
+    "component_inventory.json": "bd3f51a53417cc41428d09aef372d065932040365795d1f33e0315ed03de291f",
+    "fixed_jacobian_payload.json": "9db626c2fab8dae9dfb05255b0951d4aae6a6c713e74074b1d3a9747aadf7cb6",
+    "group_cohomology_payload.json": "2f6a9de1f4e4059914d444612598024ac46a70a3608e43ed6c94d3f246bcb531",
+    "probe_full_group_h1_mod3.py": "b06e86e792982dfcfb0da8a35c8cad2c6f9b5cba6557e975f3ae460166e6308e",
+    "produce_fixed_jacobian.py": "908a5d4a2b1f19afd2ba4329c45beb65ab41417d95f52ded2e5cea4e053c77b5",
+    "produce_seal.py": "40045a3c0a564ed0dae13a48f6d0fa5211d3c091b4c0ea853e218252fac27f0a",
+    "structural_payload.json": "f8b03b49d8805427d106ee39f7e711bba15ad683286a182bd2b6de1c5031d7cc",
+    "verify_all.py": "105105a2dbca5a02f01b4b98fd7921b1dc58a2b57336a66665618f53db8852b6",
+    "verify_fixed_jacobian.py": "4f2953055077cd979d95b336035c2754a9eb44b9ad139ad8bbee912342df3e9f",
+    "verify_group_cohomology.py": "4f60d12470423fab5698132b86719da0dcbd7e90f0b7a10ea25a5f08841d9fac",
+    "verify_seal.py": "1db5709371818e7dfd6fee7b8051bdad0ad6ab070c6df52de99781380e1938fc"
+  },
+  "hash_algorithm": "sha256",
+  "headline": "OPEN",
+  "schema": "klein-rational-curve-seal-v2"
+}

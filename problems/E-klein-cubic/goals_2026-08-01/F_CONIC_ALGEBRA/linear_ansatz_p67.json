@@ -1,0 +1,38 @@
+{
+  "ansatz": "X=a0+a1*t+a2*u+a3*v; y=b0+b1*t+b2*u+b3*v; w=1",
+  "equations": 18,
+  "prime": 67,
+  "returncode": 0,
+  "samples": [
+    {
+      "A": 1,
+      "B": 2,
+      "Y": 3,
+      "Z": 4
+    },
+    {
+      "A": 1,
+      "B": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    {
+      "A": 2,
+      "B": 3,
+      "Y": 5,
+      "Z": 7
+    }
+  ],
+  "scope": "discovery only",
+  "status": "completed",
+  "variables": [
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "b0",
+    "b1",
+    "b2",
+    "b3"
+  ]
+}

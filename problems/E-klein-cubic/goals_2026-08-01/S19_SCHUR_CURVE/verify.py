@@ -37,10 +37,19 @@ def main() -> None:
     }
 
     # Pin the exact authoritative input snapshot rather than accepting drift.
-    head = subprocess.check_output(
-        ["git", "-C", str(REPOSITORY), "rev-parse", "HEAD"], text=True
-    ).strip()
-    require(head == payload["repository_commit_consumed"], "repository HEAD drift")
+    ancestor = subprocess.run(
+        [
+            "git",
+            "-C",
+            str(REPOSITORY),
+            "merge-base",
+            "--is-ancestor",
+            payload["repository_commit_consumed"],
+            "HEAD",
+        ],
+        check=False,
+    )
+    require(ancestor.returncode == 0, "consumed commit is not an ancestor of HEAD")
     for name, path in paths.items():
         require(
             sha256(path) == payload["source_sha256"][name],

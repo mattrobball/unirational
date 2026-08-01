@@ -1,0 +1,21 @@
+option(redSB);
+LIB "elim.lib";
+
+ring r=(0,a),(x0,x1,x2,x3,x4),dp;
+poly F=x0*(x0^2-a*x1^2)+x2^3+x3^3+x4^3;
+poly onLine=subst(subst(subst(F,x2,0),x3,0),x4,0);
+if (onLine != x0*(x0^2-a*x1^2))
+{
+  ERROR("wrong line restriction");
+}
+
+ideal jac=F,diff(F,x0),diff(F,x1),diff(F,x2),diff(F,x3),diff(F,x4);
+ideal irrelevant=x0,x1,x2,x3,x4;
+ideal projectiveSing=sat(jac,irrelevant)[1];
+if (reduce(1,std(projectiveSing)) != 0)
+{
+  ERROR("projective singular locus was nonempty");
+}
+
+print("SMOOTH_CUBIC_RESIDUAL_QUADRATIC_COUNTERMODEL_OK");
+quit;

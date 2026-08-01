@@ -1,0 +1,102 @@
+{
+  "characteristic_zero_transfer": "Maschke base change at p=89 and properness of each projective landing scheme: geometric emptiness of the special fibre implies emptiness in characteristic zero",
+  "format": "klein-a5-degree5-7-landing-v1",
+  "prime": 89,
+  "records": [
+    {
+      "covariant_dimensions": {
+        "5": 1,
+        "6": 3,
+        "7": 2
+      },
+      "degree_5_landing_equation_count": 70,
+      "degree_5_lands_on_X": false,
+      "degree_6_chart_certificates": [
+        {
+          "chart": 0,
+          "equation_count": 190,
+          "input": "a5_class_1_degree6_chart_0.sing",
+          "input_sha256": "91292f0bbe1afee8d00b71908a2b1aea267555e9de4849cdfcbaf6104a20d950",
+          "transcript": "a5_class_1_degree6_chart_0.txt",
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 1,
+          "equation_count": 190,
+          "input": "a5_class_1_degree6_chart_1.sing",
+          "input_sha256": "b3901c733bf938570961415d9b50e1d3e8e64d4af9b00b04e97d5e12d5514e4a",
+          "transcript": "a5_class_1_degree6_chart_1.txt",
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 2,
+          "equation_count": 188,
+          "input": null,
+          "transcript": null,
+          "unit_ideal": true
+        }
+      ],
+      "degree_6_geometric_landing_scheme_empty_mod_89": true,
+      "degree_6_landing_equation_count": 190,
+      "degree_6_parameter_space": "P2",
+      "degree_7_affine_landing_gcd_mod_89": [
+        1
+      ],
+      "degree_7_geometric_landing_scheme_empty_mod_89": true,
+      "degree_7_landing_equation_count": 168,
+      "degree_7_parameter_space": "P1",
+      "degree_7_point_at_infinity_lands": false,
+      "label": "A5_class_1"
+    },
+    {
+      "covariant_dimensions": {
+        "5": 1,
+        "6": 3,
+        "7": 2
+      },
+      "degree_5_landing_equation_count": 70,
+      "degree_5_lands_on_X": false,
+      "degree_6_chart_certificates": [
+        {
+          "chart": 0,
+          "equation_count": 190,
+          "input": "a5_class_2_degree6_chart_0.sing",
+          "input_sha256": "b1ec1db962cbea4c9d6c2795443e04211bb4e3ea57cdc7fb17b801a5ea081142",
+          "transcript": "a5_class_2_degree6_chart_0.txt",
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 1,
+          "equation_count": 190,
+          "input": "a5_class_2_degree6_chart_1.sing",
+          "input_sha256": "9f256f1754b9908593f851948acc111585421c377c0d9549b29c3c4474e2c23d",
+          "transcript": "a5_class_2_degree6_chart_1.txt",
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 2,
+          "equation_count": 184,
+          "input": null,
+          "transcript": null,
+          "unit_ideal": true
+        }
+      ],
+      "degree_6_geometric_landing_scheme_empty_mod_89": true,
+      "degree_6_landing_equation_count": 190,
+      "degree_6_parameter_space": "P2",
+      "degree_7_affine_landing_gcd_mod_89": [
+        1
+      ],
+      "degree_7_geometric_landing_scheme_empty_mod_89": true,
+      "degree_7_landing_equation_count": 168,
+      "degree_7_parameter_space": "P1",
+      "degree_7_point_at_infinity_lands": false,
+      "label": "A5_class_2"
+    }
+  ],
+  "scope": "complete homogeneous A5-covariant parameter spaces in degrees 5, 6, and 7"
+}

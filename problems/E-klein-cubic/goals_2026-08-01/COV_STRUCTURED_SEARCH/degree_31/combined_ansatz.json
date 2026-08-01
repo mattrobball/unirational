@@ -1,0 +1,65 @@
+{
+  "ansatz": "linear span of the composition-frame and invariant-gradient cross-product directions",
+  "characteristic_zero_conclusion": "empty_projective_combined_ansatz",
+  "composition_direction_count": 13,
+  "composition_payload": "ansatz.json",
+  "cross_direction_count": 15,
+  "cross_payload": "cross_ansatz.json",
+  "degree": 31,
+  "direction_count": 28,
+  "integral_model": true,
+  "prime_records": [
+    {
+      "cubic_dual_dimension": 24,
+      "cubic_dual_sha256": "38264b1f3acac3c5a7e9dd186a591c46e39b71fd7c455b4f6788a876aefc51fd",
+      "direction_matrix_sha256": "3fdbc563f226696eddd35e352f9de8b099503cfb7a241d73c96bd21378bd58e7",
+      "direction_point_count": 14,
+      "direction_rank": 28,
+      "full_symmetric_cube_rank": false,
+      "landing_matrix_sha256": "b4abea8fbd46fd410771c9b5f8d8f5d10c8f6b74470921f944dd44adb461b75d",
+      "landing_matrix_shape": [
+        4124,
+        4060
+      ],
+      "landing_rank": 4036,
+      "point_count": 4124,
+      "prime": 199,
+      "quartic_closure_contains_all_quartics": true,
+      "quartic_dual_compatibility_rank": 672,
+      "quartic_dual_compatibility_sha256": "232161290eee98cd73c91a65ad501360bf8ab4aa59d736b70732dad6a2943b0f",
+      "quartic_dual_compatibility_shape": [
+        82215,
+        672
+      ],
+      "quartic_dual_nullity": 0,
+      "rng_seed": 2026083230
+    },
+    {
+      "cubic_dual_dimension": 24,
+      "cubic_dual_sha256": "a1059befbcb83e3b08c3907b82ff2cef0f1cbf14bb1f4570e60f94aaf8c00ecd",
+      "direction_matrix_sha256": "34656cb1f2495d43da4bdd4027851e71954e3f61fb56824181fae475a5a69982",
+      "direction_point_count": 14,
+      "direction_rank": 28,
+      "full_symmetric_cube_rank": false,
+      "landing_matrix_sha256": "b1599052080ce89dccbc6f22289d6af8ac1a94bc2e8b9e9833caebf42900baac",
+      "landing_matrix_shape": [
+        4124,
+        4060
+      ],
+      "landing_rank": 4036,
+      "point_count": 4124,
+      "prime": 353,
+      "quartic_closure_contains_all_quartics": true,
+      "quartic_dual_compatibility_rank": 672,
+      "quartic_dual_compatibility_sha256": "facc0305b09f809f8a20d16ee07b90fa762abf3bceec69c979ca51e0da3f5ce3",
+      "quartic_dual_compatibility_shape": [
+        82215,
+        672
+      ],
+      "quartic_dual_nullity": 0,
+      "rng_seed": 2026083384
+    }
+  ],
+  "proof_rule": "The dual contraction-integrability calculation proves that the degree-four closure of the polarized cubic landing ideal is every quartic modulo each good prime. The exact integral projective family therefore has empty characteristic-zero fibre; the second prime is an independent holdout.",
+  "symmetric_cube_dimension": 4060
+}

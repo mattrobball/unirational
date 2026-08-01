@@ -1,0 +1,58 @@
+82 A. BEAUVILLE
+
+8. Applications
+Our first application is a Torelli-type theorem:
+
+Proposition 8.1. Let X’ be another cubic threefold, and M’ C ™M the corre-
+sponding moduli spaces. If M and M', or M and M, are isomorphic, then X and
+X' are isomorphic.
+
+Proor. Any isomorphism M —+ M’ extends to an isomorphism
+J?(X) > J?(X’) which maps the divisor F + F onto F’ + F’. By Remark 7.5,
+the principally polarized abelian varieties J(X) and J(X’) are isomorphic, hence
+by the Torelli theorem X and X’ are isomorphic.
+
+Similarly, an isomorphism M —~+ ™M induces an isomorphism J?(X) > J?(X’)
+mapping F? onto F’?, from which we deduce an isomorphism J(X) + J(X’)
+mapping F — F = © onto F’ — F’ = ©’; again we conclude that X and X’ are
+isomorphic. Oo
+
+Once we have a parametrization of the intermediate Jacobian, it is natural to
+ask if it can be used to express the theta divisor. Giving a theta divisor in J?(X) is
+equivalent to choosing a point of J?(X) (namely the singular point of the divisor);
+it is therefore natural to fix a smooth conic c C X. Let @, C J?(X) be the translate
+by c of the canonical theta divisor @ C J(X) (5.3).
+
+Proposition 8.2. Let Mc C M be the locus of vector bundles E such that E(1)
+has a non-zero section vanishing along c. Then the closure M. of Mc in M is the
+proper transform of Q..
+
+PrRooF. We first observe that h°(c, E(1)|-) = 6 for all [E] € M: by an easy
+count of constants, a general section s of E(1) does not vanish on c; then the exact
+sequence (2.3) gives by restriction to c an exact sequence 0 + O, — E(1)ic >
+O,(2) — 0, hence our assertion.
+
+Thus the elements [E] of M, are those for which the restriction map
+H°(X, E(1)) > h°(c, E(1)jc) is not bijective. By a well-known construction this
+condition defines a divisor in M.
+
+We now consider the factorization a : Q"+>M —+ J?(X) (3.2). Let Q. be
+the subvariety of Q consisting of elliptic quintics containing c; we have by definition
+p(Q-) = Me. A curve in Q, is the union of c and a curve t of degree 3. Let J, be the
+variety of twisted cubics in X meeting c transversally at 2 points; we identify it with
+a subvariety of Q, by mapping t to cUt. It is 4-dimensional, and a simple count of
+constants shows that Q, — J; has dimension < 3. It follows that M, = p(Z-) in M.
+
+Now by (5.2) a(Tz) is contained in the divisor @, C J?(X), and therefore the
+divisor M, is contained in the restriction of @, to M; since the latter is irreducible,
+they coincide, and M. maps onto @, in J?(X).
+
+To conclude we just have to check that M, does not contain the exceptional
+divisor, that is, that a general sheaf E of type a) (7.1) satisfies H°(X,Z,E(1)) = 0,
+where Z, is the ideal sheaf of c in X. Let us pick a conic d C X such that the plane
+spanned by d does not meet c; let L be the positive generator of Pic(d), and let
+E be the kernel of the natural map H°(d, L) ®c Ox — L. Taking tensor product
+with Z,(1) we get an exact sequence
+
+0 -TZ,E(1) = H°(d,L) ®c Z-(1) > L(1) +0.
+

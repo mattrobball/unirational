@@ -1,0 +1,27 @@
+{
+  "schema": "klein-rational-curve-structural-v2",
+  "pinned_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "live_dependency_snapshot": "e1fc474a448db9d93df13967a4cef5f9918ff443",
+  "field": "K_proj = C(P(W))^PSL_2(F_11)",
+  "theorems": {
+    "fixed_jacobian": "J(C)^G = 0 and twisted J(K_proj) = {0}",
+    "cycle_torsors": "every twisted degree-e Abel-Jacobi torsor has exactly one K_proj-point",
+    "conics": "no geometrically integral K_proj-conic",
+    "degree_three": "a plane rational cubic or generalized twisted-cubic Hilbert point forces X_T(K_proj) nonempty",
+    "elliptic_quintics": "the elliptic-normal-quintic Hilbert component has no K_proj-point",
+    "quartics": "every K_proj quartic Hilbert point lies over q_4; existence remains headline-equivalent"
+  },
+  "repository_dependencies": {
+    "tmp/pfaffian_generic_schur_audit/certificate.json": "cb8759ad3e4458c08d488a601c060207f4bc5a7fa13d511a0ef63e2f430913fb",
+    "tmp/pfaffian_generic_schur_audit/verify.py": "d793b6155c125013c2d3cc77b5491394a70cb674162c8cc1917cd30fd28ac1f9",
+    "tmp/pfaffian_representation_alignment_audit/certificate.json": "cda924081af564a2a09e14903f251b3a29033c670a7a6db9acd586b12f37dc87",
+    "tmp/pfaffian_representation_alignment_audit/verify.py": "462f61d35d17051add9f2c60d92607a065d1b19b2c90ef73788c64417fb74a93"
+  },
+  "source_hashes": {
+    "Roulleau_Klein.tex": "82ff1544b9afe57735ac27bd2eaa4e370c18167a43bcc56496c127b21e9c280a",
+    "Iliev_Markushevich.tex": "1c7f15221bab7adc3dd998c4a99e6bf81ce0760e90477659aa8edcb44d94d48f",
+    "Beauville_Curves_on_Cubic.pdf": "699c0f2182a39c1e16bf5a50cecb931bb82999d0464b29e2c26220555250ce0b"
+  },
+  "exit": "R-HILBERT-COMPONENT-STRUCTURAL",
+  "headline": "OPEN"
+}

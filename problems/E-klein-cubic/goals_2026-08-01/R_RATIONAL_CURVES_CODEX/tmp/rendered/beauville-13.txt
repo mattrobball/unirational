@@ -1,0 +1,56 @@
+VECTOR BUNDLES ON THE CUBIC THREEFOLD 83
+
+Let V be the image of H°(X,Z.(1)) in H°(d, Oa(1)); by hypothesis it is a base-point
+free 2-dimensional subspace, and H°(X,Z_E(1)) can be identified with the kernel
+of the canonical map H°(d, L) @ V —+ H°(d, L(1)); the Koszul exact sequence
+
+0 L(-1) +V cL +L) +0
+gives isomorphisms H°(X,Z_B(1)) © H°(d,L(-1)) = 0. o
+
+9. Application: a completely integrable system
+
+9.1. In the introduction of [T3], Tyurin made the following beautiful observa-
+tion. Let X be a Fano threefold, and $ a smooth anticanonical divisor in X (so that
+S is a K3 surface). Let Mx be the moduli space of stable vector bundles on X with
+fixed rank r and Chern classes ¢1,¢2,c3, and let Mg be the moduli space of stable
+vector bundles on $ with rank r and Chern classes ¢1)¢, ¢2)g- According to Mukai
+[Mu], Ms is smooth and carries a symplectic structure: at a point [F] € Ms, the
+symplectic form on Tr(Ms) = H}(S, €nd(F)) is given by the cup-product
+
+H}(S,€nd(F)) @ H*(S, €nd(F)) — H?(S,€nd(F)) = H?($,0s) + C.
+Let [E] € Mx; assume that
+
+a) The restriction of E to S is stable;
+
+b) H?(X,€nd(E)) = 0.
+By a) the restriction map r : Mx > Mg is defined in a neighborhood of [E].
+
+Using 6) and Serre duality, the exact sequence 0 + €nd(B) ® Kx — End(E) >
+End(E),5 — 0 gives rise to a cohomology exact sequence
+
+0 + H(X, End(E)) “+ H"(S, End(Ejs)) > H*(X, End(E))* +0,
+
+where r, is the tangent map to r at [E] and r* its transpose with respect to the
+symplectic form. Therefore r. is injective and its image is a maximal isotropic
+subspace; thus r induces an isomorphism of some open neighborhood of [E] in Mx
+onto a Lagrangian submanifold of Ms.
+
+9.2. In practice, condition 4) is usually difficult to check. We now turn back
+to our situation, taking for Mx our moduli space M of rank 2 vector bundles on
+the cubic threefold X with c; = 0, cp = 2. We will show using the previous results
+that Mx embeds as a Lagrangian submanifold of the moduli space Ms. We will
+even show that this submanifold varies in a Lagrangian fibration (equivalently, a
+completely integrable Hamiltonian system) defined on an open subset of Ms.
+
+We pick a quadric Q Cc P* such that S = X 9Q is a smooth K3 surface with
+Pic($) = Z [De]. We denote by Ms the moduli space of stable rank 2 vector
+bundles on $ with ¢ = 0, ¢2 = 4.
+
+Lemma 9.3. The vector bundles F in Ms admitting a resolution
+0 09(-2)' 4 09(-1) 4 F 0,
+
+where M is a skew-symmetric matric with linear entries, form an open subset M&
+of Ms. For such a vector bundle, the matric M is uniquely determined up to a
+transformation M + AM*A, with A € GL(6,C)
+
+Proor. If F admits the above resolution, we have:

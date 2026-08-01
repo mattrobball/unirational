@@ -1,0 +1,36 @@
+{
+  "schema": "m-sarkisov-headline-method-audit-seal-v1",
+  "verdict": "M-MULTISECTION-DESCENT-NO-GO",
+  "headline": "OPEN",
+  "repository_head_at_creation": "53e267a59b2d24de93c58dd9ddacc2f995fc2d68",
+  "local_files": {
+    "STATUS.md": "14f848f80a5c9ea84fc6d2807dab97632d02d4a2778da8ba14de7f994b3f98cd",
+    "THEOREM.md": "e651e65fba6c3b4a79bcdd943805a67d0b2d3c1361d62d38e6e8782f35a78a70",
+    "QUARTIC_SECTION_GATE.md": "b712c77435129da83bdc51e9d20476aecd502d075066ad026a2f76fbbd42438a",
+    "COMPLETION_AUDIT.md": "e350e6cfd2df8926470e3f669e6126baf62677ad10505245ba6dabc91f95756e",
+    "SOURCES.md": "ee49ff6bc507458549a72f7ae2006bb885127cf3c07fe5140b715b583902a5e3",
+    "payload.json": "e6e65bc469c2da2917ffc005a2d5eecabe1ff7b5154fd35e3d04962e206173d9",
+    "verify.py": "2484a796ef74b07cb754769f6e775d808333ea4d565e1bd10f5e1c6f4809998e"
+  },
+  "upstream_inputs": {
+    "goals_2026-08-01/M_SARKISOV/section_or_multisection_20260801/SEAL.json": "b00b744be7f1fe72e5a06824c5622158ddfa43ad8cbba3ea8d66d06849e8bf26",
+    "goals_2026-08-01/M_SARKISOV/section_or_multisection_20260801/verify.py": "4ffd2366f880be1d3666b10df8d386d1402427010007612dfa86f35b91968d87",
+    "certificates/subgroup_orbit_check.py": "68e6f18b00d520ae24fdfc0ea1524e5255f9a72b523c141627565e3a5a45bfd7",
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO/SEAL.json": "e60e9b33e8757cf2ba12150699d2252b4e9c67a2a00da1cc327b0944999ee7be",
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO/verify.py": "265ba729c872eae2a853f90ef3ded08f6db07c48f3dbc87188eede364f6e0e21",
+    "RESOLUTION.md": "3eac1aa9787da90cbee21b0e72e9ea0fe538921e74afd9cc20170d5227e64c67",
+    "SPEC.md": "a607b0a026f732eee1f6cb281ae2e85732d9e2aac866802fd739a810767df01e",
+    "goals_2026-08-01/GOAL_M_SARKISOV_BIRATIONAL_MODELS.md": "2870c5801f4a12eb44637ff0f5181bb0e2c68b709b628a0144a4513965db96d8"
+  },
+  "proved_scope": [
+    "no rational right inverse of P1_L to P1_K0",
+    "no G-fixed branch in G/D12",
+    "no equivariant binary pairing because D12 has no index-two overgroup",
+    "all independent sections have projective degree d congruent to 1 modulo 3 and d at least 4"
+  ],
+  "strict_nonclaims": [
+    "no independent rational section is excluded",
+    "not every conceivable use of the fibration is excluded",
+    "the Problem E headline is neither proved nor refuted"
+  ]
+}

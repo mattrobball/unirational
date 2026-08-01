@@ -1,0 +1,54 @@
+4 A. BEAUVILLE
+
+since a generator of H®(I,wr) is everywhere # 0, the sheaf E is a rank 2 vector
+bundle with c; = 0 and cz = 2. We have H°(X,E) = H°(X,Ip(1)) = 0, so Bis
+stable. Qo
+
+Remark 2.4. The cubic X contains smooth elliptic curves of degree 5 which
+are contained in a hyperplane, and are therefore not elliptic quintics in our sense:
+in fact, any smooth hyperplane section of X contains many 4-dimensional linear
+systems of such curves. One can still perform Serre’s construction with these curves,
+but the resulting vector bundle E has a non-zero section, hence it is no longer stable.
+
+3. The Abel-Jacobi map; infinitesimal study
+
+3.1. Recall that Pic(X) = H?(X,Z) = Zh, where h is the class of a hyper-
+plane section; we identify H4(X,Z) with Z via the isomorphism deg : € + ( - h).
+For each d € Z, we denote by J4(X) the translate of J(X) which parametrizes
+L-cycles of degree d on X. The variety J4(X) is non-canonically isomorphic to
+J(X) = J°(X); moreover the map 7 ++ y+ h? provides canonical isomorphisms
+J8(X) + J43(X),
+
+Let T be an algebraic variety and z an element of the Chow group C:H?(X xT),
+such that the restriction z := zx x{t} has degree d for each t € T; the map t + [zz]
+of T into J4(X) is algebraic. In particular, for each algebraic family (I)rer of
+degree d curves on X, the Abel-Jacobi map a: T —» J4(X) given by a(t) = [T%] is
+algebraic.
+
+Let F be a coherent sheaf on X. Grothendieck has constructed Chern classes
+&(F) € CH*(X), which give back the usual Chern classes by applying the cycle
+map CH'(X) + H?(X,Z). Let d = co(F); the class G(F) defines an element
+of J¢(X), which we will denote by ¢o(). As above, any algebraic family (F:)ier
+of coherent sheaves such that co(F,) = d for all t € T gives rise to a morphism
+&:T — J4(X). We have in particular a morphism ¢ : M > J?(X).
+
+3.2. Let Q be the Hilbert scheme of elliptic quintics contained in X. Serre’s
+construction provides us with a morphism p : Q — M, whose fibre at a point [B]
+of M is the projective space P(H°(X, E(1))).
+
+The Abel-Jacobi map a: Q + J*(X) which associates to the curve I the class
+of the cycle  — h? factors as
+
+a:Q
+Proposition 3.3. [M-T] The moduli spaces M and Q are smooth; the mor-
+phism cy: M — J?(X) is étale.
+PROOF. a) Let us first prove that Q is smooth. Let I € Q, and let N
+be its normal bundle in X. Applying the functor Hom, ,( ,Or(—1)) to
+the resolution (2.2), and using the isomorphism N* © E*(—1)/p (2.3.c),
+‘we get an exact sequence
+0 > HL, N*) — HP, Or) 4 HP, Of(1))°
+where the second arrow can be identified with
+H°(P4, Ops)® “S H°(P4, O4(1))®. Since it is injective, we get H°(P, N*) =
+0, hence by duality H(P,N) = 0. This implies that Q is smooth at [I],
+
+M P(X).

@@ -1,0 +1,60 @@
+84 A. BEAUVILLE
+
+a) For j = 0or 1, the map H°(S,Os(j))® > H°(S, F(j + 1)) deduced from
+p is surjective.
+b) H1(S, F(j)) = 0 for 7 =O orl. Let N be the kernel of the natural map
+H®(S, F(1)) @c Og — F(1). In our case it is isomorphic to Og(—1)°, so:
+c) The sheaf N(1) is spanned by its global sections.
+Conditions a), b) and c) define an open subset Mg of Ms. Let [F'] € Mg; by a),
+b) and Riemann-Roch we find h°(S, F(1)) = h°(Q, N(1)) = 6; hence N is a rank 6
+vector bundle on Q, and the surjective map o% — N(1) must be an isomorphism.
+
+Thus we have an exact sequence 0 + Og(—2)® 4 Og(-1)® — F = 0. Reasoning
+as in [B3], Theorem B, we can choose bases of Og(—2)® and Og(—1)® such that
+M is skew-symmetric; then the matrix M is uniquely determined up to the action
+of GL(6, C) ([B3}, 2.3). Oo
+
+We now fix our K3 surface S, but allow X to vary in the linear system II (= P5)
+of cubics containing S. For [F] € M&, the cubic pf M = 0 is well determined by
+[F], and belongs to II; we get in this way a morphism H : Mg — II.
+
+Proposition 9.4. H is a Lagrangian fibration®; the fibre of H at a smooth
+cubic X € II is isomorphic to the moduli space Mx (through the restriction map
+r:Mx > Ms). In particular, r induces an isomorphism of Mx onto a Lagrangian
+submanifold of Ms.
+
+Proor. Let [E] ¢ Mx. From the exact sequence 0 > E(—2) + E > Eig +0
+and the vanishing of H1(X, E(—2)) (2.1), we get H°(S, Es) = 0; since Pic(S) = Z
+this means that Ejg is stable.
+
+Next let us compute H?(X,€nd(E)). Choosing a general section of E, we
+deduce from the exact sequence (2.3), taking tensor product with E = E*, an
+exact sequence
+
+0 = E(-1) — €nd(E) — B(1) > B()r > 0.
+
+Because H‘(X, E(j)) = 0 fori = 1, 2, this gives an isomorphism H?(X, €nd(E)) >
+HP, B(1) jr). Since E(1)ir is isomorphic to Np;x (2.3.c) and HAD, Nryx) =0
+(3.3.a), our assertion follows.
+
+Put F = Ejs. The resolution 0 > Op«(—2)® “4 Op.(-1)® — E = 0 (2.2)
+gives by restriction to Q a resolution
+
+0 — Og(-2)®§ “4 09(-1)§ — F 0 (9.4.)
+
+hence Ejg belongs to H~1(X). Conversely, any F € H~1(X) admits a resolution
+(9.4.a), with pf M = 0 on X; the matrix M defines an injective map Ops(—2)° >
+Ops(—1)®, whose cokernel is a bundle E € Mx such that E\g & F. Thus r induces
+an isomorphism Mx + H71(X).
+
+Finally by (9.1) the smooth part of any fibre of H is Lagrangian. Oo
+
+Remarks 9.5. a) The moduli space Mg of stable rank 2 bundles on a K3
+surface S with c; = 0, cp = 4 is a very interesting object (by Riemann-Roch,
+C2 = 4 is the smallest value for which the moduli space is not empty). O’Grady
+
+proved that it is irreducible, and admits a smooth compactification Mg which is
+holomorphic symplectic [O]. It seems that H does not extend to a Lagrangian
+
+3This means, by definition, that the smooth part of each fibre of H is a Lagrangian
+submanifold.

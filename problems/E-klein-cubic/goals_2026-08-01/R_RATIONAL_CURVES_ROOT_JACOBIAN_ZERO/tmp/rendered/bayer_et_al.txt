@@ -1,0 +1,1270 @@
+                                                THE DESINGULARIZATION OF THE THETA DIVISOR OF A CUBIC
+                                                            THREEFOLD AS A MODULI SPACE
+
+                                                   AREND BAYER, SJOERD VIKTOR BEENTJES, SOHEYLA FEYZBAKHSH, GEORG HEIN,
+                                                        DILETTA MARTINELLI, FATEMEH REZAEE, AND BENJAMIN SCHMIDT
+
+
+                                                  Abstract. We show that the moduli space M X (v) of Gieseker stable sheaves on a smooth cubic
+
+
+
+
+arXiv:2011.12240v2 [math.AG] 23 Mar 2022
+                                                  threefold X with Chern character v = (3, −H, −H 2 /2, H 3 /6) is smooth and of dimension four.
+                                                  Moreover, the Abel-Jacobi map to the intermediate Jacobian of X maps it birationally onto the
+                                                  theta divisor Θ, contracting only a copy of X ⊂ M X (v) to the singular point 0 ∈ Θ.
+                                                     We use this result to give a new proof of a categorical version of the Torelli theorem for cubic
+                                                  threefolds, which says that X can be recovered from its Kuznetsov component Ku(X) ⊂ Db (X).
+                                                  Similarly, this leads to a new proof of the description of the singularity of the theta divisor, and
+                                                  thus of the classical Torelli theorem for cubic threefolds, i.e., that X can be recovered from its
+                                                  intermediate Jacobian.
+
+
+
+
+                                                                                             Contents
+                                             1. Introduction                                                                                              1
+                                             2. Cubic threefolds and intermediate Jacobians                                                               4
+                                             3. Divisors on hyperplane sections                                                                           6
+                                             4. Notions of stability                                                                                      6
+                                             5. Construction of sheaves                                                                                  12
+                                             6. Variation of stability                                                                                   14
+                                             7. Proof of the main theorem                                                                                19
+                                             8. Kuznetsov component                                                                                      21
+                                             References                                                                                                  25
+
+
+
+                                                                                        1. Introduction
+                                              Moduli spaces of sheaves provide examples of algebraic varieties with an interesting and rich
+                                           geometry and they have been widely studied in the past few decades. In particular, there are many
+                                           strong results regarding moduli spaces on surfaces, while the situation on threefolds is less under-
+                                           stood. We refer to [HL10] for a more detailed account of the theory, which has been revolutionized
+                                           by the introduction of stability conditions on triangulated categories by Bridgeland [Bri07].
+                                              Perhaps the main player of the seminal paper by Clemens and Griffiths [CG72] on the geometry
+                                           of cubic threefolds is the theta divisor Θ of its intermediate Jacobian J(X). Various authors have
+                                           studied parametrizations of the theta divisor by moduli spaces of sheaves, see [AKP03, Bea02, Ili99].
+                                              In this paper, we find a new, and in a sense most efficient, parametrization of this type: a smooth
+                                           four-dimensional moduli space of stable sheaves isomorphic to the desingularization of the theta
+                                           divisor.
+                                              Let X ⊂ P4 be a smooth cubic threefold over C and H the hyperplane section. Let M X (v) be the
+                                           moduli space of Gieseker-semistable sheaves on X with Chern character v := (3, −H, − 21 H 2 , 16 H 3 ).
+                                             2010 Mathematics Subject Classification. 14D20 (Primary); 14F05, 14J30, 14J45.
+                                             Key words and phrases. Cubic Threefolds, Derived Categories, Stability Conditions.
+                                                                                                   1
+Theorem 7.1. The moduli space M X (v) is smooth and irreducible of dimension 4. More precisely,
+it is the blow up of Θ in its unique singular point. The exceptional divisor is isomorphic to the
+cubic threefold X itself, and parametrizes non-locally free sheaves in M X (v).
+Moduli space in the Kuznetsov component. The original motivation for our analysis of the
+moduli space M X (v) comes from the study of moduli spaces of stable objects in a full triangulated
+subcategory Ku(X) ⊂ Db (X) called the Kuznetsov component. It is defined through the semi-
+orthogonal decomposition
+                               Db (X) = hKu(X), OX , OX (H)i.
+See [Kuz04] for details on the decomposition and on the Kuznetsov component.
+   Stability conditions on Ku(X) have been constructed in [BMMS12] and [BLMS17]. These sta-
+bility conditions are Serre-invariant, which roughly means that stability of an object is preserved
+by the action of the Serre functor of Ku(X) (see Section 8 for the precise definition). This property
+allows us to study stability of objects irrespective of the specific construction of stability conditions.
+   The class v in Theorem 7.1 is chosen as the class of the projection KP of a skyscraper sheaf OP
+for a point P ∈ X, which is defined by the short exact sequence
+                                    0 → KP → O⊕4 → IP (1) → 0.
+These are the non-locally free torsion-free slope-stable sheaves appearing in Theorem 7.1, and we
+show that they are also stable as objects of Ku(X) with respect to any Serre-invariant stability
+condition. Hence, the moduli space Mσ (v) of σ-stable objects in Ku(X) of Chern character v
+contains X, yet its expected dimension is four. This was our first clue that this moduli space is of
+interest. Indeed, our next result says that the moduli spaces Mσ (v) and M X (v) agree entirely.
+Theorem 1.1 (Theorem 8.7 and Proposition 8.10). Let σ be an arbitrary Serre-invariant stability
+condition on Ku(X). Then the moduli space Mσ (v) is isomorphic to the moduli space M X (v).
+   To summarise, we project the structure sheaf of a point into the Kuznetsov component and take
+its moduli space. It obviously contains X but is bigger. It is the resolution of the theta divisor, with
+X as the exceptional divisor. Thus, we recover X from Ku(X) or from the intermediate Jacobian,
+i.e., we obtain new proofs of both the categorical and classical Torelli theorem for cubic threefolds:
+Theorem 1.2 (Corollary 7.6 and Theorem 8.1). Let X1 and X2 be smooth cubic threefolds. The
+following are equivalent:
+     (i) X1 and X2 are isomorphic.
+    (ii) Ku(X1 ) and Ku(X2 ) are equivalent as triangulated categories.
+   (iii) J(X1 ) and J(X2 ) are isomorphic as principally polarised abelian varieties.
+Proof ideas. The proof of Theorem 7.1 relies on two classical ingredients. Firstly, we use the fact
+that any irreducible theta divisor is normal due to [EL97]. Secondly, we use a characterization
+of the theta divisor of the intermediate Jacobian in terms of twisted cubics, see Proposition 2.2.
+This was proved by Beauville in [Bea02], but it can also be deduced from the description of Θ as
+differences of lines in [CG72], see Remark 2.3.
+   The strategy to prove Theorem 7.1 is to vary the notion of stability and reach a detailed de-
+scription of the objects that belong to the moduli space M X (v) through wall-crossing. Since X has
+Picard rank one, Gieseker stability cannot be varied. This is where the derived category comes into
+play in the form of tilt-stability introduced in [Bri08] for K3 surfaces, and then further generalized
+to other surfaces and threefolds in [AB13, BMT14]. In fact, we give a complete description of the
+wall and chamber structure (see Section 6). Once a set-theoretic description of M X (v) has been
+reached, we use standard deformation theory arguments in Corollary 6.9 to deduce that it is smooth
+and of dimension four.
+                                                    2
+   To prove Theorem 8.7, we first show the claim for the specific stability condition constructed in
+[BLMS17] which are Serre-invariant by [PY20]. We then prove in a completely separate argument
+that our moduli space is independent of the choice of Serre-invariant stability conditions σ. The
+essential ingredient in this last argument is the weak Mukai Lemma from [PY20].
+Related work. In the recent paper [APR19], the authors studied moduli spaces of some torsion
+sheaves in the Kuznetsov components of Fano threefolds with Picard rank one and index two. In
+the case of cubic threefolds they study Mσ ([S 2 (KP )]) (S is the Serre functor on Ku(X)), but do not
+obtain our detailed geometric description. A key difference is that in their case the moduli space
+in the Kuznetsov component is different from the moduli space of Gieseker-semistable sheaves.
+   Classical Torelli is the implication (iii) ⇒ (i) in Theorem 1.2 which was first proved in [CG72].
+The implication (ii) ⇒ (iii) was first established in [BMMS12, Theorem 1.1], where it was shown
+that the Fano variety of lines F (X) can be recovered from Ku(X) as a moduli space of stable
+objects. Thus, one obtains the intermediate Jacobian J(X) as the Albanese variety of F (X).
+A more recent argument for (ii) ⇒ (iii) can be deduced from Perry’s categorical construction of
+intermediate Jacobians [Per20, Section 5.3], when the equivalence is given by a Fourier-Mukai kernel
+on X1 × X2 . Instead, our paper gives a very direct geometric argument for (ii) ⇒ (i), as well as a
+variant of the proof of classical Torelli via the description of the singularity of theta divisor implied
+by Theorem 7.1.
+   Since this article originally appeared on the arXiv, [FP21] and [Zha21] proved uniqueness of
+Serre-invariant stability conditions on Ku(X). Proposition 8.10 in the last section could now be
+obtained as an immediate corollary.
+Acknowledgements. This work originated from a working group at the workshop “Semiorthog-
+onal decompositions, stability conditions and sheaves of categories” in Toulouse in May 2018, a
+meeting of the CIMI network “Semiorthogonal decompositions and stability condition”. We are
+deeply grateful to the organizers of the workshop for the nice and productive atmosphere. In par-
+ticular, we would like to thank Aaron Bertram, Naoki Koseki, Marin Petkovic, Maxim Smirnov,
+and Benjamin Sung for very useful discussions we had in Toulouse at the beginning of the project.
+We would also like to express our gratitude to Marcello Bernardara, Emanuele Macrı̀, Alex Perry,
+Laura Pertusi, and Richard Thomas for many useful comments on the subject of this paper. In
+addition, we are very grateful to the referee for many detailed comments, making the exposition
+more accurate and readable.
+   A. B., S. B., S. F., D. M. and F. R. were in part supported by ERC starting grant no. 337039.
+A. B. and F. R. were in part supported by ERC consolidator grant no. 819864 WallCrossAG.
+F. R. was partially supported by EPSRC grant EP/T015896/1 and a Maxwell Institute Research
+Fellowship. S. F. was partially supported by EPSRC postdoctoral fellowship EP/T018658/1. This
+material is also partially based upon work supported by the NSF under Grant No. DMS-1440140
+while A. B., D. M. and F. R. were in residence at the MSRI in Berkeley, California, during the
+spring 2019 semester.
+Notation.
+       X     smooth cubic threefold in P4 over C
+       H     the ample generator of Pic(X)
+        Y    a hyperplane section of X
+    b
+   D (X)     bounded derived category of coherent sheaves on X
+  Ku(X)      the Kuznetsov component inside Db (X)
+ CH∗ (X)     the Chow ring of X
+ CH∗n (X)    the numerical Chow ring of X, obtained as CH∗ (X) modulo numerical equivalence
+
+
+                                                    3
+        Hi (E)     the i-th cohomology sheaf of a complex E ∈ Db (X)
+        H i (E)    the i-th sheaf cohomology group of a complex E ∈ Db (X)
+         ch(E)     total Chern character of an object E ∈ Db (X) up to numerical equivalence
+            c(E)   total Chern class of an object E ∈ Db (X) up to numerical equivalence
+         ch(E)
+          e        total Chern character of an object E ∈ Db (X) up to rational equivalence
+           ce(E)   total Chern class of an object E ∈ Db (X) up to rational equivalence
+      ch≤l (E)     (ch0 (E), . . . , chl (E))
+      ch
+       e ≤l (E)    (ch
+                     e 0 (E), . . . , ch
+                                       e l (E))
+
+                       2. Cubic threefolds and intermediate Jacobians
+   Let X ⊂ P4 be a smooth cubic threefold. In their celebrated article [CG72], Clemens and Griffiths
+introduced the intermediate Jacobian of X. It is the complex torus defined as
+                         J(X) := H 2,1 (X)∨ /H3 (X, Z) = H 1 (Ω2X )∨ /H3 (X, Z).
+It turns out that J(X) is a principally polarized abelian variety of dimension five.
+   Let {Zb }b∈B be a family of 1-cycles over a variety B. The choice of a base point b0 ∈ B leads to
+an Abel-Jacobi map ΨB : B → J(X) as follows. For any b ∈ B the cycle Zb − Zb0 has degree 0, i.e., R
+it is homologically trivial, and can be written as the boundary ∂Γ for a 3-chain Γ. The integral Γ
+is an element in H 1,2 (X)∨ whose class in J(X) is the image of the Abel-Jacobi map. By [Gri68,
+Theorem 2.20] the map ΨB is algebraic along the smooth locus of B.
+   If Zb = C is a smooth curve, then the induced morphism on tangent spaces has been described
+by Welters, see [Wel81, Section 2]. Recall that the tangent space of the Hilbert scheme at C is
+naturally given by H 0 (NC/X ) where NC/X is the normal bundle. The tangent space of J(X) at
+any point is given by H 1,2 (X)∨ = H 1 (Ω2X )∨ . By definition, the infinitesimal Abel-Jacobi map
+ψC : H 0 (NC/X ) → H 1 (Ω2X )∨ is the map of tangent spaces induced by ΨB . We get a dual morphism
+ψC∨ : H 1 (Ω2 ) → H 0 (N      ∨
+            X            C/X ) .
+
+Lemma 2.1. The following diagram is commutative and has exact rows and columns.
+                                              0
+
+                                                                  
+                                                 H 0 (IC (H))
+
+                                                                     ∼
+                                                 H 0 (O   X (H))
+                                                                      =     / H 1 (Ω2 )
+                                                                                     X
+                                                                                      ∨
+                                                                                     ψC
+                                                                                
+                        H 0 (NC/P4 (−2H))       / H 0 (OC (H))            / H 0 (NC/X )∨
+
+Proof. This is mostly [Wel81, Lemma 2.8] and the preceding construction of the morphisms. The
+map H 0 (OX (H)) → H 1 (Ω2X ) is the connecting morphism in a long exact sequence
+              H 0 (Ω3P4 ⊗ OX (3H)) → H 0 (OX (H)) → H 1 (Ω2X ) → H 1 (Ω3P4 ⊗ OX (3H)).
+The wedge product induces a perfect pairing Ω3P4 ⊗ ΩP4 → OP4 (−5). Therefore, Ω3P4 = TP4 (−5).
+For i = 0, 1 we have
+                                 H i (TP4 ⊗ OX (−2H)) = 0.                                  
+  Recall that the Lefschetz Hyperplane Theorem says that the hyperplane section H ∈ Pic(X)
+generates the Picard group. One can use twisted cubics to characterize the theta divisor of J(X).
+                                                    4
+A proof of the following result can be found in [Bea02, Proposition 5.2]. Let T be the open locus
+of smooth twisted cubics in the Hilbert scheme of X, and let T be its closure.
+Proposition 2.2. The Abel-Jacobi map ϕ : T → J(X) with base point of class H 2 is algebraic.
+Its image is a theta divisor Θ ⊂ J(X) and its generic fiber is isomorphic to P2 .
+Remark 2.3. Proposition 2.2 can be deduced from the description of Θ as differences of lines as
+well. We give a rough sketch of the argument here.
+   Let F be the Fano variety of lines on X. According to [CG72] the morphism F × F → J(X)
+that maps (L, L0 ) 7→ [L] − [L0 ] is generically a 6 to 1 cover of Θ.
+   Since a twisted cubic C ⊂ X lies in a unique cubic surface Y ⊂ X, the morphism T → J(X)
+factors via the moduli space F of pairs (D, Y ), where Y is a cubic surface and D is the divisor
+class of a twisted cubic. The generic fiber of the morphism T → F is given by P(H 0 (OY (D)) = P2 .
+Indeed, OY (D) is the pullback of OP2 (1) if Y is written as the blow up of six general points in P2 .
+   If D is the class of a twisted cubic on a smooth cubic surface, then D − H 2 can be written as
+the difference of two lines on a cubic surface. Therefore, the Abel-Jacobi morphism maps onto Θ.
+Moreover, there are precisely six ways to write D − H 2 as the difference of two lines. Together with
+the fact that F × F → J(X) is generically a 6 to 1 cover of Θ, we get that F → Θ has degree 1.
+Lemma 2.4. Let P1 ∼     = C ⊂ X ⊂ P4 be a twisted cubic. Then NC/P4 = OP1 (5)⊕2 ⊕ OP1 (3),
+h0 (NC/X ) = 6, and h1 (NC/X ) = 0. In particular, the Hilbert scheme T is smooth of dimension six.
+Proof. We have a short exact sequence
+                 0 → NC/P3 = OP1 (5)⊕2 → NC/P4 → NP3 /P4 ⊗ OC = OP1 (3) → 0.
+Since Ext1 (OP1 (3), OP1 (5)) = 0, we get NC/P4 = OP1 (5)⊕2 ⊕ OP1 (3). Next, we have a short exact
+sequence
+             0 → NC/X → NC/P4 = OP1 (5)⊕2 ⊕ OP1 (3) → NX/P4 ⊗ OC = OP1 (9) → 0.
+Thus, NC/X has degree 4 and can only be OP1 (m) ⊕ OP1 (4 − m) for some −1 ≤ m ≤ 5. The claim
+about the cohomology of NC/X holds for each of them.                                       
+Lemma 2.5. Along the locus of smooth curves T ⊂ T , the Abel-Jacobi morphism ϕ has differential
+of rank four.
+Proof. Let C ⊂ X be a smooth twisted cubic. Clearly, restriction maps H 0 (OX (H)) ∼= C5 sur-
+                          ∼
+jectively onto H (OC (H)) = C . By Lemma 2.4, we have h (NC/P4 (−2H)) = h (OP1 (−1)⊕2 ⊕
+                0            4                             0                   0
+
+OP1 (−3)) = 0. By Lemma 2.1, we get a commutative diagram
+                                                    ∼
+                                         C5
+                                                    =   / H 1 (Ω2 )
+                                                               X
+                                                               ∨
+                                                              ψC
+                                                          
+                                                
+                                         C4        / H 0 (NC/X )∨
+              ∨ has rank four.
+  Therefore, ψC                                                                                     
+   The singularities of the theta divisor were computed in [Mum74, p. 348]. Another proof was
+given in [Bea82, Main Theorem and Proposition 2]. We will not need this full description and
+instead rely only on normality.
+Theorem 2.6 ([EL97, Theorem 1]). Any irreducible theta divisor of an abelian variety is normal.
+Lemma 2.7. Up to numerical equivalence, the Todd class of X is td(X) = (1, H, 23 H 2 , 13 H 3 ). In
+particular, for any E ∈ Db (X)
+                   χ(E) = ch3 (E) + H · ch2 (E) + 23 H 2 · ch1 (E) + 31 H 3 · ch0 (E).
+                                                        5
+Proof. By Kodaira vanishing H i (OX ) = 0 for i 6= 0, and therefore, χ(OX ) = 1. By the Hirzebruch-
+Riemann-Roch Theorem we get td3 (X) = χ(OX ) = 31 H 3 . Similarly, Kodaira vanishing implies
+H i (OX (−H)) = 0 for i 6= 0. Again by Hirzebruch-Riemann-Roch
+                                         −H 3         H2                   H3
+                      0 = χ(OX (−H)) =         +H ·        − td2 (X) · H +    .
+                                           6           2                   3
+Since X has Picard rank one, this is only possible if td2 (X) = 23 H 2 .                              
+Lemma 2.8. The numerical Chow ring CH∗n (X) has a basis given by 1, H, H 2 /3, and H 3 /3. In
+particular, if E ∈ Db (X), then ch2 (E) ∈ 61 H 2 · Z, and ch3 (E) ∈ 61 H 3 · Z.
+Proof. Since Pic(X) is generated by H, the group CH2n (X) is generated by a rational multiple of
+H 2 . A general hyperplane section of X is a smooth cubic surface, which contains lines. The class
+of such a line is H 2 /3. Since H 3 = 3, the class has to be indivisible. Since H 3 /3 is the class of a
+point, the group CH3n (X) must be generated by it.
+   The claim about second Chern characters follows directly from ch2 (E) = 12 c21 (E) − c2 (E). The
+claim about ch3 (E) follows from Lemma 2.7 and the fact that χ(E) ∈ Z.                                
+
+                              3. Divisors on hyperplane sections
+  We need to understand the singularities that can occur on hyperplane sections of X.
+Proposition 3.1. Any cubic hyperplane section Y = V ∩ X ⊂ P4 is normal and integral.
+Proof. Since hypersurfaces satisfy condition S2, by Serre’s condition [Sta20, Section 031S], it is
+enough to show that Y has isolated singularities. Assume for contradiction that Y contains a curve
+C of singular points. Let F and x be the defining equation of X and V , respectively. Then ∂F/∂x
+is a homogeneous degree 2 polynomial and hence vanishes somewhere along C. At such a point, all
+partial derivatives of F vanish, hence it is a singular point of X, a contradiction.            
+   In order to deal with singular hyperplane sections, we need to recall the relation between Weil
+divisors and rank one reflexive sheaves on integral normal varieties. This is very similar to the
+standard relation between line bundles and Cartier divisors. We refer to [Sta20, Section 0EBK] or
+[Sch07] for proofs of the following facts. They can also be found in [Har94] in more generality.
+   Let Y be a normal integral projective variety. By Cl(Y ) we denote the group of Weil divisors
+modulo rational equivalence. For two rank one reflexive sheaves L1 , L2 ∈ Coh(Y ) we can define a
+new rank one reflexive sheaf by (L1 ⊗ L2 )∨∨ . This defines a group law for rank one reflexive sheaves
+on Y , where inverses are given by L 7→ L∨ . For any effective prime divisor D one can define a rank
+one reflexive sheaf OY (D) := ID ∨ . This can be linearly extended to any divisor.
+
+
+Proposition 3.2.         (i) The group of isomorphism classes of rank one reflexive sheaves is iso-
+        morphic to Cl(Y ) under the homomorphism D 7→ OY (D).
+   (ii) To every non-zero section s ∈ H 0 (L) of a rank one reflexive sheaf L, one can associate an
+        effective divisor D on Y .
+  (iii) For any effective Weil-divisor D on Y there is a section s ∈ H 0 (OY (D)) such that the
+        associated divisor is given by D.
+  (iv) Two sections s1 , s2 ∈ H 0 (L) define the same divisor if they satisfy s1 = λs2 for some
+        λ ∈ C∗ .
+
+                                     4. Notions of stability
+  In this section, we recall a number of notions of stability for sheaves. Let X be a smooth
+projective threefold, and let H be an ample divisor on X.
+                                                   6
+Definition 4.1 ([Mum63, Tak72]).           (i) For any E ∈ Coh(X), the Mumford-Takemoto-slope is
+       defined as                         ( 2
+                                            H ·ch1 (E)
+                                            H 3 ·ch0 (E)
+                                                         for ch0 (E) 6= 0,
+                                µ(E) :=
+                                        +∞           for ch0 (E) = 0.
+   (ii) A sheaf E ∈ Coh(X) is slope-(semi)stable if for any non-trivial proper subsheaf F ,→ E the
+        inequality µ(F ) < (≤)µ(E/F ) holds.
+   From the Definition it follows  immediately that if Pic(X) = Z · H and E is slope-semistable with
+gcd ch0 (E), H 2 ch1 (E)/H 3 = 1, then E is slope-stable.
+                              
+   While slope-stability suffices to construct moduli spaces of vector bundles on curves, a refinement
+is necessary in higher dimensions.
+Definition 4.2. We define a pre-order on the polynomial ring R[m] as follows.
+    (i) For all non-zero f ∈ R[m], we have f ≺ 0.
+   (ii) If deg(f ) > deg(g) for non-zero f, g ∈ R[m], then f ≺ g.
+  (iii) Let deg(f ) = deg(g) for non-zero f, g ∈ R[m] and let af and ag be the leading coefficient of
+        f and g. Then f  g if and only if f (m)/af ≤ g(m)/ag for all m  0.
+  (iv) If f, g ∈ R[m] with f  g and g  f , we write f  g.
+  For any E ∈ Coh(X), we denote its Hilbert polynomial and the terms αi (E) by P (E, m) :=
+χ(E(mH)) = 3i=0 αi (E)mi . Moreover, let P2 (E, m) = 3i=1 αi (E)mi .
+            P                                       P
+
+Definition 4.3.       (i) The sheaf E is Gieseker-(semi)stable if for all non-trivial proper subsheaves
+       F ⊂ E, the inequality P (F, m) ≺ ()P (E, m) holds.
+  (ii) The sheaf E is 2-Gieseker-(semi)stable if for all non-trivial proper subsheaves F ⊂ E, the
+       inequality P2 (F, m) ≺ ()P2 (E/F, m) holds.
+   Note that for 2-Gieseker-semistability we could have equivalently asked P2 (F, m)  P2 (E, m), but
+for 2-Gieseker-stability, P2 (F, m) ≺ P2 (E, m) is a stronger condition that is almost never fulfilled
+for all such subsheaves. These notions imply each other as follows:
+                  slope-stable          +3 2-Gieseker-stable         +3 Gieseker-stable
+
+
+                                                                               
+               slope-semistable ks    2-Gieseker-semistable ks       Gieseker-semistable
+   The intermediate notion of 2-Gieseker stability is not classical and will just appear in the technical
+parts of our arguments.
+   Due to [Gie77, Mar77, Mar78, Sim94] there exists a projective moduli space M X (v) parametrising
+S-equivalence classes of Gieseker-semistable sheaves with Chern character v. Here two semistable
+sheaves are called S-equivalent if they have the same stable factors up to order and isomorphism
+in their Jordan-Hölder filtrations:
+Proposition 4.4 ([HL10, Proposition 1.5.2]). Any Gieseker-semistable sheaf E ∈ Coh(X) has a
+filtration
+                                  0 = E0 ,→ E1 ,→ . . . ,→ En = E
+such that the factors Ai := Ei /Ei−1 are Gieseker-stable with P (Ai , m)  P (E, m) for i = 1, . . . , n.
+The sheaf
+                                              Mn
+                                                  Ai
+                                                 i=1
+is uniquely determined (up to isomorphism) by E.
+  Moreover, any sheaf E has a Harder-Narasimhan-filtration into Gieseker-semistable factors.
+                                                    7
+Proposition 4.5 ([HL10, Theorem 1.3.4]). Let E ∈ Coh(X). There is a unique filtration
+                                   0 = E0 ,→ E1 ,→ . . . ,→ En = E
+such that the factors Ai := Ei /Ei−1 are Gieseker-semistable with P (A1 , m)  P (A2 , m)  . . . 
+P (An , m).
+   Based on Bridgeland stability on surfaces, the notion of tilt stability was introduced in [BMT14].
+It is not quite a Bridgeland stability condition, but it turns out to suffice for our purposes. The
+basic idea is to change the category in which subobjects are taken when defining stability. This
+is done via the theory of tilting introduced in [HRS96]. As before, let X be a smooth projective
+threefold with an ample divisor H.
+Definition 4.6. For any β ∈ R, we define two full additive subcategories of Coh(X):
+           Fβ (X) := {E ∈ Coh(X) : any slope-semistable factor F of E satisfies µ(F ) ≤ β},
+           Tβ (X) := {E ∈ Coh(X) : any slope-semistable factor F of E satisfies µ(F ) > β}.
+The category
+                                   Cohβ (X) := hTβ (X), Fβ (X)[1]i
+is the full additive subcategory of those E ∈ Db (X) for which H0 (E) ∈ Tβ (X), H−1 (E) ∈ Fβ (X),
+and Hi (E) = 0 for all i 6= −1, 0.
+  Note that Hom(T, F ) = 0 for all T ∈ Tβ (X) and F ∈ Fβ (X), by semistability. It is well known
+that the category Cohβ (X) is abelian. A sequence of morphisms
+                                        0→A→B→C→0
+       β
+in Coh (X) is a short exact sequence if and only if the induced sequence
+                                         A → B → C → A[1]
+is a distinguished triangle in Db (X).
+   To simplify notation, we define for any E ∈ Db (X) its twisted Chern character as chβ (E) :=
+ch(E) · e−βH . Note that when β ∈ Z, this is nothing but ch(E ⊗ OX (−βH)).
+Definition 4.7. For α > 0, β ∈ R, and E ∈ Cohβ (X) we define a slope function
+                                                              2
+                                             H · chβ2 (E) − α2 H 3 · chβ0 (E)
+                               να,β (E) :=                             ,
+                                                 H 2 · chβ1 (E)
+where again division by zero needs to be interpreted as +∞. Analogously to slope stability, an
+object E ∈ Cohβ (X) is called να,β -(semi)stable if for all non-trivial proper subobjects F ,→ E in
+Cohβ (X) the inequality να,β (F ) < (≤)να,β (E/F ) holds.
+   If it is clear from context, we will sometimes abuse notation and write tilt-(semi)stable instead of
+να,β -(semi)stable. Note that by definition, any E ∈ Cohβ (X) satisfies H 2 · chβ1 (E) ≥ 0. Therefore,
+this function plays the same role in Cohβ (X) as the rank does in Coh(X).
+   As previously, Harder-Narasimhan filtrations exist. However, note that a version of Jordan-
+Hölder filtrations exists, but the stable factors are not unique up to order.
+   The notion of 2-Gieseker stability occurs as a limit of tilt stability as follows.
+Proposition 4.8 ([Bri08, Proposition 14.2]). Let E ∈ Db (X) and β < µ(E). Then E ∈ Cohβ (X)
+and E is να,β -(semi)stable for α  0 if and only if E ∈ Coh(X) and E is 2-Gieseker-(semi)stable.
+  The statement in [Bri08] is for K3 surfaces, but the same proof works in our setting. If β > µ(E)
+the situation is slightly more complicated. The following Proposition is a combination of [BMS16,
+Lemma 2.7] and [LM16, Proposition 3.1].
+                                                      8
+Proposition 4.9. Take a να,β -semistable object E ∈ Cohβ (X). If β 6= µ(E), then H−1 (E) is a
+reflexive sheaf, and if β ≥ µ(E) and α  0, then H−1 (E) is a torsion-free slope-semistable sheaf
+and H0 (E) is supported in dimension less than or equal to one.
+   Semistable sheaves satisfy the Bogomolov inequality (see [HL10, Theorem 3.4.1]). A version for
+tilt stability was proved in [BMT14, Corollary 7.3.2].
+Theorem 4.10 (Bogomolov inequality). Let E ∈ Cohβ (X) be να,β -semistable. Then
+                    ∆H (E) := (H 2 · ch1 (E))2 − 2(H 3 · ch0 (E))(H · ch2 (E)) ≥ 0.
+  Most applications of tilt stability come from varying (α, β) and determining what that means for
+the stability of a given set of objects. We visualize the parameter space of tilt stability, (α, β) ∈ R2
+with α > 0, as the upper half-plane via iα + β. For a given class v ∈ K0 (X) it turns out that
+there is a locally finite wall and chamber structure such that stability only changes as we cross a
+wall. These walls are either semicircles with center on the β-axis or vertical lines, see Figure 1 and
+Figure 2. In the following, we recall what this means formally.
+  For v ∈ K0 (X) we write ch(v), µ(v), να,β (v), and ∆(v) to mean the appropriate versions where
+E is replaced by v.
+Definition 4.11. For v, w ∈ K0 (X) we define
+                         W (v, w) := {(α, β) ∈ R>0 × R : να,β (v) = να,β (w)}.
+The set W (v, w) is a numerical wall if W (v, w) 6= ∅ and W (v, w) 6= R>0 × R, i.e., if it is a proper
+non-trivial subset of the upper half-plane.
+  Numerical walls in tilt stability have a rather simple structure as shown in [Mac14]:
+Theorem 4.12 (Nested wall theorem). Let v ∈ K0 (X) with ∆(v) ≥ 0.
+    (i) A numerical wall for v is either a semicircle centered along the β-axis or a vertical line
+        parallel to the α-axis in the upper half plane
+   (ii) If ch0 (v) 6= 0, then there is a unique numerical vertical wall for v given by β = µ(v). The
+        remaining numerical walls for v are split into two sets of nested semicircles whose apexes
+        lie on the hyperbola να,β (v) = 0. In particular, no two distinct walls intersect.
+  (iii) If ch0 (v) = 0 and H 2 · ch1 (v) 6= 0, then every numerical wall for v is a semicircle whose
+        apex lies on the ray β = (H · ch2 (v))/(H 2 · ch1 (v)).
+  The following is a well-known consequence of the fact that walls do not intersect.
+Corollary 4.13. Let
+                                        0→F →E→G→0
+be a short exact sequence of να,β -semistable objects in Cohβ0 (X) for some (α0 , β0 ) ∈ W (F, E).
+Then this is a short exact sequence of να,β -semistable object in Cohβ (X) for any (α, β) ∈ W (E, F ).
+Definition 4.14. Let v ∈ K0 (X). A numerical wall W for v is called an actual wall for v if there
+is a short exact sequence
+                                   0→F →E→G→0
+of να,β -semistable objects in Cohβ (X) for one (α, β) ∈ W (F, E) such that W = W (F, E) and
+ch(E) = v.
+  Note that the above Corollary implies that this is a short exact sequence in Cohβ (X) for all
+(α, β) ∈ W (F, E). Determining walls is the key technique in this paper. It will allow us to classify
+sheaves with certain Chern characters in terms of short exact sequences (see Theorem 6.1). Note
+                                                   9
+that the condition W (F, E) 6= R>0 × R implies να,β (F ) > να,β (E) on one side of such a wall. We
+say that that the short exact sequence
+                                        0 → F → E → G → 0,
+or sometimes the wall W (F, E), destabilizes E.
+
+
+
+
+      Figure 1. Walls are nested semicircles or a unique vertical wall (Theorem 4.12 (ii))
+
+
+Proposition 4.15 ([BMS16, Appendix A]). If an actual wall is induced by a short exact sequence
+of tilt-semistable objects 0 → F → E → G → 0, then
+                                     ∆H (F ) + ∆H (G) ≤ ∆H (E),
+and equality can only occur if either F or G is a sheaf supported in dimension zero.
+   It turns out that walls of large radius can only be induced by subobjects of small rank. The
+following precise statement is close to [CH16, Proposition 8.3]. A proof of this version can be found
+in [MS20, Lemma 2.4] for the case of non-negative ranks. The case of non-positive ranks has the
+exact same proof with reversed signs.
+Proposition 4.16. Assume that an object E is destabilized by a semicircular wall induced by a
+subobject F ,→ E or quotient E  F with ch0 (F ) > ch0 (E) ≥ 0 or ch0 (F ) < ch0 (E) ≤ 0. Then the
+radius ρ of W (F, E) satisfies
+                                                 ∆H (E)
+                         ρ2 ≤                                                 .
+                                4(H · ch0 (F ))(H · ch0 (F ) − H 3 · ch0 (E))
+                                   3             3
+
+  Tilt stability interacts nicely with the derived dual D(·) := RHom(·, OX )[1].
+                                                   10
+                   Figure 2. Walls are nested semicircles (Theorem 4.12 (iii))
+
+Proposition 4.17 ([BMT14, Proposition 5.1.3]). Let E ∈ Cohβ (X) be a να,β -semistable object
+                                                              e ∈ Coh−β (X), a torsion sheaf T
+with να,β (E) 6= ∞. Then there is a να,−β -semistable objects E
+supported in dimension zero, and a distinguished triangle
+                                  e → D(E) → T [−1] → E[1].
+                                  E                       e
+
+   The following proposition seems to be well known to experts, but we could find no proof in the
+literature.
+Proposition 4.18. Let E ∈ Coh(X) be torsion-free. Then E[1] is tilt-stable along the vertical wall
+β = µ(E) if and only if E is slope-stable and reflexive. In particular, slope-stable reflexive sheaves
+do not get destabilized along the vertical wall.
+                                      / Cohµ(E) (X). Assume that E is strictly slope-semistable.
+Proof. If E is slope-unstable, then E ∈
+Then there is a short exact sequence of slope-semistable sheaves
+                                       0→F →E→G→0
+such that µ(F ) = µ(G). Taking a shift by one, this becomes a short exact sequence in Cohµ(E) (X)
+with να,µ(E) (F [1]) = να,µ(E) (G[1]).
+   Assume that E is not reflexive, but slope-stable. Then we have a short exact sequence in
+Cohµ(E) (X) given by
+                                       0 → T → E[1] → E ∨∨ [1] → 0
+where T is a non-trivial sheaf supported in dimension less than or equal to one. However, this
+sequence makes E[1] strictly tilt-semistable along β = µ(E).
+   Assume vice-versa that E is a slope-semistable reflexive sheaf. Then it is an object in Cohµ(E) (X)
+of maximal phase, and in particular tilt-semistable. If it is strictly semistable, then it admits a
+short exact sequence
+                                        0 → F → E[1] → G[1] → 0
+                                                  11
+where F , G[1], H−1 (F )[1], and H0 (F ) are also of maximal phase. In particular, H−1 (F ) and G are
+torsion-free and slope-semistable of slope µ(E), and H0 (F ) has support of dimension at most one.
+   Consider the long exact sequence
+                                0 → H−1 (F ) → E → G → H0 (F ) → 0.
+Since we assume that E is strictly stable, this is a contradiction unless H−1 (F ) = 0. Taking duals
+we get an exact sequence
+                                 0 → G∨ → E ∨ → Ext1 (F, OX ).
+Since F is supported in dimension less than or equal to one, this implies Ext1 (F, OX ) = 0 and
+G∨ ∼= E ∨ . Hence, E ( G = G∨∨ = E ∨∨ , a contradiction to E being reflexive.                     
+  From now on, we assume X ⊂ P4 is a smooth cubic threefold. In the later sections, we need
+the following result of [Li19, Proposition 3.2] which improves Bogomolov inequality in the case of
+a Fano threefold of Picard rank one. Be aware that our notation differs from Li’s.
+Theorem 4.19. Let E be a tilt-stable with ch0 (E) 6= 0 for some α > 0, β ∈ R. If − 12 ≤ µH (E) ≤ 12 ,
+then HH·ch  2 (E)
+       3 ·ch (E) ≤ 0.
+             0
+
+  In the case of cubic threefolds, direct sums of line bundles can be detected among semistable
+sheaves or objects by their Chern characters as follows.
+Proposition 4.20.         (i) If E is slope-semistable or να,β -semistable for some α > 0, β < 0 with
+       ch(E) = (r, 0, 0, eH 3 ) where r > 0, then e ≤ 0. If additionally, e = 0, then E ∼
+                                                                                        = OX⊕r
+                                                                                               .
+  (ii) If E is να,β -semistable for some α > 0, β > 0 with ch(E) = (−r, 0, 0, eH 3 ) where r > 0,
+       then e = 0 and E ∼  = OX ⊕r
+                                   [1].
+Proof. In either case, Proposition 4.15 and ∆(E) = 0 imply that E has no semicircular walls.
+   We first claim that the only slope-stable reflexive sheaf of class (r, 0, 0, eH 3 ) is OX . Assume oth-
+erwise. By Proposition 4.18, such an E is also stable at the vertical wall β = 0, and thus, it is να,β -
+stable for all α > 0, β ∈ R. Since ν0,β (E) = − β2 > − β2 −1 = ν0,β (OX (−2H)[1]) and both objects are
+stable for α  1 and β ∈ (−2, 0), we have Ext2 (OX , E) = Hom(E, OX (−2H)[1]) = 0. Similarly,
+from να,β -stability for α  1 and β ∈ (0, 2) we obtain Ext2 (E, OX ) = Hom(OX (2H), E[1]) = 0.
+However, at least one of χ(OX , E) = r + 3e or χ(E, OX ) = r − 3e is positive, and so E admits a
+morphism from OX or a morphism to OX . As both are reflexive and slope-stable of slope 0, this
+shows E ∼ = OX .
+   Now consider an object E as in case (i). Then E[1] is να,0 -semistable. By Proposition 4.18,
+its Jordan-Hölder factors are either of the form F [1] for a slope-stable reflexive sheaf F with
+ch(F ) = (rF , 0, dF H 2 , eF H 3 ), or a torsion sheaf supported in dimension ≤ 1. In fact, Proposition
+4.15 shows dF = 0 in the former case, and thus, F = OX by the previous case, and that the torsion
+sheaves are supported in dimension zero. As −3e is the total length of the torsion sheaves, we get
+e ≤ 0. If e = 0, all factors are isomorphic to OX [1] and the claim follows from Ext1 (OX , OX ) = 0.
+   In case (ii), we again consider a Jordan-Hölder filtration with respect to να,0 -stability. Let
+Ei ,→ Ei+1 be the first filtration step where the quotient Ei+1 /Ei is a zero-dimensional torsion sheaf
+T , should one exist. Then Ei = OX [1]⊕k for some k > 0. Since Ext1 (T, OX [1]) = H 1 (T )∨ = 0, we
+have Ei+1 = Ei ⊕ T , and so T is a subobject of E. This contradicts stability of E for β > 0. Thus,
+E = OX [1]⊕r as claimed.                                                                                
+
+                                   5. Construction of sheaves
+   In this section, we introduce the sheaves that make up our moduli space M X (v). It turns out
+that all of them are at least reflexive, and the generic one is a vector bundle. From now on X ⊂ P4
+is an arbitrary smooth cubic threefold.
+                                                    12
+   Let Y ⊂ X be an arbitrary hyperplane section, D be an effective Weil divisor on Y , and
+V ⊂ H 0 (OY (D)) be a non-trivial subspace. Then we define ED,V ∈ Db (X) to be the cone of the
+induced morphism OX ⊗ V → OY (D). Moreover, let ED,V := H−1 (ED,V ). Hence, we have a long
+exact sequence
+                        0 → ED,V → OX ⊗ V → OY (D) → H0 (ED,V ) → 0.
+If V = H 0 (OY (D)), we will drop V , and write ED , respectively ED .
+Lemma 5.1. The sheaf ED,V is slope-stable and reflexive. If additionally H0 (ED,V ) = 0, then
+ED,V is a vector bundle.
+Proof. The quotient (OX ⊗ V )/ED,V embeds into OY (D). Since Y is integral by Proposition 3.1,
+the sheaf (OX ⊗ V )/ED,V must be supported on Y . Therefore, ch≤1 (ED,V ) = (dim V, −H) is
+primitive and it is enough to show that ED,V is slope-semistable. If not, let F ⊂ ED,V be the
+slope-semistable subsheaf in the Harder-Narasimhan filtration of ED,V . Then µ(F ) > µ(ED,V )
+and the quotient ED,V /F is torsion-free. Since F is also a subsheaf of OX ⊗ V , we must have
+µ(F ) = 0. Let ch(F ) = (r, 0, dH 2 , eH 3 ). The quotient (OX ⊗ V )/F satisfies ch((OX ⊗ V )/F ) =
+(dim V − r, 0, −dH 2 , −eH 3 ). By the Snake Lemma this quotient is either torsion-free or has a
+torsion subsheaf purely supported on Y . However, if it is not torsion-free, then its torsion-free
+quotient would destabilize OX ⊗ V , a contradiction. As a torsion-free quotient of OX ⊗ V with
+slope zero, (OX ⊗ V )/F has to be slope-semistable as well.
+   The classical Bogomolov inequalities ∆H (F ) ≥ 0 and ∆H ((OX ⊗ V )/F ) ≥ 0 imply d = 0.
+                                                                                                  ⊕r
+Applying Proposition 4.20 to both F and (OX ⊗ V )/F implies e = 0, and finally, F = OX               .
+However, by construction, ED,V has no global sections, a contradiction.
+   To see that ED,V is reflexive it suffices to show that Extq (ED,V , OX ) = 0 for q ≥ 2 and that
+Ext1 (ED,V , OX ) is supported in dimension zero. If additionally Ext1 (ED,V , OX ) = 0, then ED,V is
+a vector bundle.
+   Clearly, Extq (OX ⊗ V, OX ) = 0 for q 6= 0. Because OY (D) is a rank one reflexive sheaf on the
+codimension one subvariety Y , the quotient (OX ⊗ V )/ED,V ⊂ OY (D) is purely supported on Y .
+We can use [HL10, Proposition 1.1.10] to see that Extq ((OX ⊗ V )/ED,V , OX ) = 0 for all q 6= 1, 2,
+and Ext2 ((OX ⊗ V )/ED,V , OX ) is supported in dimension zero. The long exact sequence obtained
+from dualizing the short exact sequence
+(1)                       0 → ED,V → OX ⊗ V → (OX ⊗ V )/ED,V → 0
+implies the required vanishings.
+   If additionally H0 (ED,V ) = 0, then (OX ⊗ V )/ED,V = OY (D) is a reflexive sheaf on the
+codimension one subvariety Y , and we can use [HL10, Proposition 1.1.10] again to see that
+Ext2 (OY (D), OX ) = 0. The same long exact sequence as above now implies Ext1 (ED,V , OX ) =
+0.                                                                                          
+   Note that we will use this Lemma for the case ch(OY (D)) = (0, H, H 2 /2, −H 3 /6). It will
+turn out that in this case h0 (OY (D)) = 3 for any such D, see Theorem 6.1, and we will choose
+V = H 0 (OY (D)). Moreover, we will show that in that case H0 (ED ) = 0, i.e., OY (D) is globally
+generated, see Theorem 6.1. A straightforward computation shows that in this example ch(ED ) =
+(3, −H, −H 2 /2, H 3 /6).
+Corollary 5.2. Let P ∈ X. Then h0 (IP (H)) = 4 and the sheaf KP defined through the exact
+sequence
+                                             ⊕4
+(2)                                0 → KP → OX  → IP (H) → 0
+satisfies ch(KP ) = (3, −H, −H 2 /2, H 3 /6). Moreover, KP is reflexive and slope-stable, and locally
+free except at P .
+                                                  13
+                                       ⊕3
+Proof. By choosing an embedding KP ,→ OX  we get a short exact sequence
+                                            ⊕3
+                                  0 → KP → OX  → IP/Y (H) → 0
+for some hyperplane section Y . The statement then follows from Lemma 5.1 by choosing D = H
+and V = H 0 (IP/Y (H)) ⊂ H 0 (OY (H)).
+   From the defining short exact sequence (2) one immediately sees that KP is locally free away
+from P (as it is the kernel of a surjective map of vector bundles), and not locally free at P (as
+Ext2 (OP , KP ) = Ext1 (OP , IP (H)), 6= 0).                                                   
+
+                                    6. Variation of stability
+  In this section, we investigate semistable sheaves with Chern character
+                                                           
+                                                   1 2 1 3
+                                    v := 3, −H, − H , H .
+                                                   2     6
+The main goal is to use wall-crossing to prove the following Theorem, which gives a set-theoretic
+description of the moduli space M X (v).
+Theorem 6.1.         (i) Let D be Weil divisor on a (possibly singular) hyperplane section Y with
+       ch(OY (D)) = (0, H, 12 H 2 , − 16 H 3 ). Then OY (D) is globally generated, and h0 (OY (D)) = 3.
+       In particular, there exists a smooth twisted cubic C in Y of class D.
+  (ii) A sheaf E with Chern character v is Gieseker-semistable if and only if it is either equal to
+       the reflexive sheaf KP for a point P ∈ X (2), or the vector bundle ED for a Weil divisor
+       D on a hyperplane section Y ⊂ X (1) with ch(OY (D)) = (0, H, 12 H 2 , − 16 H 3 ).
+   Note that since ch1 (E) = −H, any Gieseker-semistable sheaf of class v is slope stable. The
+argument will essentially boil down to a detailed analysis of the numerical wall W defined by
+                                                   1 2 1
+                                                    
+                                        2
+(3)                                    α + β−          = .
+                                                   2      4
+At this wall, the short exact sequences (2) and (1) become destabilizing short exact sequences
+in Cohβ (X) in the form 0 → OY (D) → ED [1] → OX [1]⊕3 → 0 and 0 → IP (H) → KP [1] →
+OX [1]⊕4 → 0. Moreover, we can show that every object gets destabilized, and the destabilizing
+short exact sequence must be of one of these types, see Lemma 6.8.
+6.1. Classification of some torsion sheaves. In this section, we prove the following Proposition.
+Proposition 6.2. The wall W of equation (3) is the unique actual wall in tilt stability for objects
+G with Chern character ch(G) = (0, H, 21 H 2 , − 16 H 3 ).
+   (i) Above W the moduli space of tilt-semistable objects is the moduli space of Gieseker-semistable
+       sheaves, and contains precisely the following two types of sheaves G:
+        (a) G = IP/Y (H) for Y ∈ |H| and P ∈ Y , and
+        (b) G = OY (D) where D is a Weil-divisor on some Y ∈ |H|.
+  (ii) Below W the moduli space of tilt-semistable objects contains precisely the following two types
+       of objects G:
+        (a) the unique non-trivial extensions
+(4)                               0 → OX [1] → GP → IP (H) → 0
+            for points P ∈ X, and
+        (b) G = OY (D) where D is a Weil-divisor on some Y ∈ |H|.
+  We start by dealing with slightly more general objects without fixing ch3 .
+                                                  14
+Lemma 6.3. The wall W of equation (3) is the unique actual wall in tilt stability for objects
+G with Chern character ch≤2 (G) = (0, H, 21 H 2 ). If G is strictly semistable along W , then any
+Jordan-Hölder filtration of G is given by either
+                                    0 → IZ (H) → G → OX [1] → 0,
+or
+                               0 → OX [1] → G → IZ (H) → 0,
+where Z ⊂ X is a zero-dimensional subscheme of length H 3 /6 − ch3 (G).
+Proof. All walls for (0, H, 21 H 2 ) intersect the vertical ray β = 12 . If G is strictly-semistable along
+some numerical wall intersecting β = 21 , then there is a short exact sequence in Coh1/2 (X) of
+tilt-semistable objects
+                                           0→A→G→B→0
+with equal tilt-slope. Let ch≤2 (A) = (r, cH, dH 2 ). By definition of Coh1/2 (X) and the fact that
+neither A nor B can have infinite tilt-slope we get
+                                      1/2               r           1/2
+                          0 < H 2 · ch1 (A) = H 3 (c − ) < H 2 · ch1 (G) = H 3 .
+                                                        2
+Therefore, c = 2r + 21 , and in particular, r is odd. We will deal with the case r < 0. If r > 0, then B
+has negative rank and one simply has to exchange the roles of A and B in the following argument.
+   For (α, 12 ) ∈ W (A, G) we have
+                                         r 1
+                           −α2 r + 2d −    − = να,1/2 (A) = να,1/2 (G) = 0.
+                                         4 2
+Since α2 > 0, this implies d < 8r + 14 . The fact
+                                       ∆H (A)           r2 r 1
+                                  0≤           = −2dr +   + +
+                                       (H 3 )2          4  2 4
+                     1
+implies d ≥ 8r + 8r    + 14 . Since d ∈ 16 Z, these restrictions on d are only possible for r ∈ {−1, −3}.
+   If r = −3, then ch≤2 (A) = (−3, −H, − 16 H 2 ). This case is immediately ruled out by Theorem
+4.19. If r = −1, then ch≤2 (A) = (−1, 0, 0), and by Proposition 4.20, we know A = OX [1]. Then
+ch(B) = (1, H, 21 H 2 , ch3 (G)). By Proposition 4.15, we know that there is no semicircular wall for
+B, and by Proposition 4.8, the object B has to be a 2-Gieseker-stable sheaf. Since ch(B(−H)) =
+(1, 0, 0, ch3 (G)− 61 H 3 ), the remaining statement follows by applying Proposition 4.20 to B(−H). 
+     The next step is to gain further control over the third Chern character.
+Lemma 6.4. Let G be a να,β -semistable object with ch≤2 (G) = (0, H, 12 H 2 ). Then ch3 (G) ≤ 16 H 3 .
+If ch3 (G) = 16 H 3 and (α, β) is above W , then G ∼
+                                                   = OY (H) for some Y ∈ |H|.
+Proof. We may assume ch3 (G) ≥ 16 H 3 . By Lemma 6.3, the only possible wall is given by W . There-
+fore, G has to be tilt-semistable along W . Since W lies below the numerical wall W (G, OX (−H)[1]),
+we get ext2 (OX (H), G) = hom(G, OX (−H)[1]) = 0. Thus, hom(OX (H), G) ≥ χ(OX (H), G) =
+ch3 (G) + 61 H 3 > 0. Therefore, W is a wall for G and by Lemma 6.3, the destabilising sequence is
+                                   0 → OX (H) → G → OX [1] → 0.
+This implies G = OY (H) for some Y ∈ |H| and ch3 (G) = 61 H 3 .                                         
+Proof of Proposition 6.2. Assume that G is strictly tilt-semistable along W . Then Lemma 6.3 splits
+our problem into two cases.
+  Firstly, assume that G fits into a non-splitting short exact sequence
+                                    0 → IP (H) → G → OX [1] → 0
+                                                    15
+for a point P ∈ X. Then clearly G = IP/Y (H) for some Y ∈ |H|. This object is tilt-stable above
+W , and tilt-unstable below W by precisely this sequence.
+   Secondly, assume that G fits into a non-splitting short exact sequence
+(5)                                 0 → OX [1] → G → IP (H) → 0
+for some P ∈ X. By Serre duality, Ext1 (IP (H), OX [1]) = h1 (IP (−H)) = 1 and hence, there
+is a unique G for each P ∈ X. Clearly, this object is tilt-unstable above W . Assume it is also
+tilt-unstable below W . Then there is a short exact sequence 0 → A → G → B → 0 destabilizing G
+below the wall. However, G is strictly-semistable at W , and by Lemma 6.3, this implies B = OX [1].
+However, that means the short exact sequence (5) splits, a contradiction.
+   Lastly, assume that G is να,β -stable for all (α, β). By Proposition 4.17, D(G) lies in a distin-
+guished triangle
+(6)                                   G̃ → D(G) → T [−1] → G̃[1]
+where T is a torsion sheaf supported in dimension zero and G̃ ∈ Coh−β (X) is να,−β -semistable.
+If ch3 (T ) = t, then ch(G̃) = (0, H, − 21 H 2 , − 16 H 3 + t). Thus, G̃ is a pure sheaf supported on a
+hyperplane section Y ∈ |H|. We can compute
+                                                                           
+                                                            1 2 1 3
+                            ch(G̃ ⊗ OX (H)) = 0, H, H , − H + t .
+                                                            2     6
+Thus, Lemma 6.4 gives t = 0 or t = 1, and if t = 1, then G̃ ⊗ OX (H) ∼= OY (H), i.e., G̃ ∼
+                                                                                         = OY (H).
+Hence there is a non-trivial morphism OX → G̃. Since hom(OX , T [−i]) = 0 for i > 0, The triangle
+(6) shows that there is a non-trivial morphism OX → D(G). Dualizing this morphism leads to a
+non-trivial morphism G → OX [1]. However, this is in contradiction to the assumption that G is
+stable along W .
+   If t = 0, then D(G) = G̃ is a sheaf, so Extq (G, OX ) = 0 for q > 1. Thus, [HL10, Proposition
+1.1.10] implies that G is reflexive and supported on a hyperplane section Y ∈ |H|. This means
+G = OY (D) for some Weil divisor D on Y .                                                       
+6.2. Set-theoretic description of the moduli space. We now prepare the proof of Theorem
+6.1.
+Lemma 6.5. There are no walls along β = −1 for tilt-semistable objects E with Chern character
+ch≤2 (E) = (3, −H, − 12 H 2 ).
+Proof. Assume there is such a wall induced by a short exact sequence
+                                         0→A→E→B→0
+with ch−1                 2                  −1        3        −1        3
+       ≤2 (A) = (r, xH, yH ). Then 0 < H · ch1 (A) = xH < H · ch1 (E) = 2H implies x = 1.
+By exchanging the roles of A and B if necessary, we may assume r ≥ 2.
+                                 1
+   Using ∆H (A) ≥ 0 we get y ≤ 2r  . A straightforward computation shows that there exists α > 0
+with να,−1 (A) = να,−1 (E) if and only if y > 0. Since y ∈ 61 Z, this is only possible if y = 16 and
+r ∈ {2, 3}. Both cases ch−1              1 2         −1              1 2
+                         ≤2 (A) = (3, H, 6 H ) and ch≤2 (A) = (2, H, 6 H ) are directly ruled out by
+Theorem 4.19.                                                                                      
+Proposition 6.6. Take a slope-stable sheaf E of Chern character (3, −H, ch2 , ch3 ). Then H · ch2 ≤
+− 21 H 3 , and if ch2 ·H = − 21 H 3 , then ch3 ≤ 16 H 3 . In particular, this implies that any slope-stable
+sheaf of Chern character v is a reflexive sheaf.
+Proof. Since E is slope stable, the classical Bogomolov inequality gives
+                              ∆H (E) = (H 3 )2 − 2(3H 3 ) (H · ch2 (E)) ≥ 0
+                                                    16
+which implies H · ch2 (E) ≤ 16 H 3 . The case H · ch2 (E) = 61 H 3 is immediately ruled out by
+Theorem 4.19. Since c2 (E) = 12 H 2 − ch2 (E) has to be an integral class, we are left to rule out
+H · ch2 (E) = − 61 H 3 . Assume H · ch2 (E) = − 61 H 3 . We may assume that E is a reflexive sheaf. If
+not, we replace it by the double dual E ∨∨ which satisfies H · ch2 (E) ≤ H · ch2 (E ∨∨ ). By the first
+part of the argument H · ch2 (E ∨∨ ) = − 61 H 3 holds as well.
+                                                         −1/2
+  We first show that ext2 (E, E) = 0. Since H 3 · ch1  (E) = 12 H, any destabilizing subobject
+                                          −1/2                     −1/2
+F ⊂ E along β = − 12 must satisfy H 3 · ch1 (F ) = 12 H or H 3 · ch1 (F ) = 0. Thus, either F
+or the quotient E/F have infinite tilt-slope, a contradiction. This means E is να,−1/2 -stable for all
+α > 0.
+   By Proposition 4.18, the object E[1] is tilt-stable for β = 0 and α  0. Since H 3 ·ch1 (E[1]) = H 3 ,
+the same type of argument as above shows that there cannot be any wall along β = 0. Hence,
+E(−2H)[1] is να,β -stable for β = −2 and any α > 0.
+   A straightforward computation shows that W (E, E(−2H)[1]) intersects both the vertical lines
+β = −2 and β = − 21 . Therefore, E and E(−2H)[1] are tilt-stable for any (α, β) ∈ W (E, E(−2H)[1])
+and have the same phase, and thus, ext2 (E, E) = hom(E, E(−2H)[1]) = 0. Since E is stable, we
+know hom(E, E) = 1 and hence, 3 = χ(E, E) = 1 − ext1 (E, E) − ext3 (E, E) ≤ 1, a contradiction.
+   Now assume H · ch2 = − 21 H 3 . We know E ∈ Cohβ (X) is να,β -stable for α  0 and β < − 13 . By
+Lemma 6.5, we have that E is να,−1 -stable for any α > 0. One can easily compute
+                                   ν0,−1 (OX (−2H)[1]) < ν0,−1 (E)
+which implies h2 (E) = hom(E, OX (−2H)[1]) = 0. Moreover, since µ(E) = − 31 < µ(OX ), we get
+hom(OX , E) = 0. Therefore, χ(E) = ch3 (E) − 16 H 3 ≤ 0 as claimed.
+  Lastly, assume that a slope-stable sheaf E of Chern character v is not reflexive. We have a short
+exact sequence
+                                     0 → E → E ∨∨ → T → 0.
+Since E ∨∨ is also slope-stable, and both H · ch2 (E) and H · ch3 (E) are maximal, one gets ch(E) =
+ch(E ∨∨ ). This is only possible if T = 0.                                                        
+
+  To prove Theorem 6.1, we start in the large volume limit.
+Lemma 6.7. Take β > − 31 . An object Ẽ ∈ Cohβ (X) of Chern character −v is να,β -semistable for
+α  0 if and only if Ẽ ∼
+                        = E[1] for a slope-stable reflexive sheaf E.
+Proof. Take a να,β -semistable object Ẽ of class −v. Proposition 4.9 implies that H−1 (Ẽ) is a
+slope-stable reflexive sheaf and H0 (Ẽ) is a torsion sheaf supported in dimension ≤ 1. Therefore,
+                                                                                 
+                      −1                    1 2          0      1 3          0
+                 ch(H (Ẽ)) = 3, −H, − H + ch2 (H (Ẽ)), H + ch3 (H (Ẽ)) .
+                                            2                   6
+
+By Proposition 6.6, this is only possible if ch2 (H0 (Ẽ)) = ch3 (H0 (Ẽ)) = 0, i.e., H0 (Ẽ) = 0.
+   Conversely, any slope-stable reflexive sheaf E of class v is να,β -stable for α  0 and β < µ(E) =
+  1
+− 3 . Proposition 4.18 implies that E[1] is να,β -stable for α  0 and β > µ(E) = − 13 .            
+
+  Next, we move down from the large volume limit and investigate walls for objects of class −v.
+Note that all walls to the right of the vertical wall must intersect β = − 31 .
+Lemma 6.8. The wall W of equation (3) is the unique actual wall for objects with Chern character
+−v to the right of the vertical wall. There are no tilt-semistable objects below W . Any tilt-semistable
+Ẽ with Chern character −v fits into one of the following two cases:
+                                                   17
+    (i) Ẽ fits into a short exact sequence
+                                                     ⊕3
+                                  0 → OY (D) → Ẽ → OX  [1] → 0
+        where D is a Weil divisor on hyperplane section Y ∈ |H|;
+   (ii) Ẽ fits into a short exact sequence
+                                                     ⊕4
+                                  0 → IP (H) → Ẽ → OX  [1] → 0
+       where P ∈ X.
+Proof. Let Ẽ be a tilt-semistable object with Chern character −v. Let W 0 be a wall strictly above
+W induced by a short exact sequence 0 → F → Ẽ → G → 0. Then the wall W 0 contains points
+(α, 0) with α > 0. In particular, 0 < H · ch1 (F ) < H · ch1 (Ẽ) = H 3 , a contradiction.
+  Since the wall W (OX (2H), Ẽ) is larger than W , we get hom(Ẽ, OX [3]) = hom(OX (2H), Ẽ) = 0
+and
+           hom(Ẽ, OX [1]) = hom(Ẽ, OX ) + ext2 (Ẽ, OX ) − χ(Ẽ, OX ) ≥ −χ(Ẽ, OX ) = 3.
+Clearly, any morphism Ẽ → OX [1] destabilizes Ẽ below W .
+   Let r := hom(Ẽ, OX [1]) ≥ 3. We get a short exact sequence of tilt-semistable objects along W
+given by
+                                                             ⊕r
+                                      0 → G → Ẽ → OX           [1] → 0.
+If r ≥ 4, then Proposition 4.16 says
+                                                1          1
+                                                    ≤           ,
+                                                4      r(r − 3)
+i.e., r ≤ 4. For r = 4, we get ch(G(−H)) = (1, 0, 0, − 31 H 3 ) and so G = IP (H) for some P ∈ X.
+   If r = 3, then ch(G) = (0, H, 21 H 2 , − 61 H 3 ). Assume G is not of the form OY (D) for some Weil-
+divisor D on a hyperplane section Y ∈ |H|. Then Proposition 6.2 implies that G has to be strictly-
+semistable along our wall W . Since Ẽ is tilt-semistable above the wall, we know Hom(OX [1], E) = 0.
+Therefore, Lemma 6.3 shows that there is a short exact sequence
+                                   0 → IP (H) → G → OX [1] → 0
+for a point P ∈ X. But then there is an inclusion IP (H) ,→ Ẽ and we are in the second case.        
+Proof of Theorem 6.1. Let D be a Weil-divisor on a hyperplane section Y ∈ |H| with ch(OY (D)) =
+(0, H, 12 H 2 , − 16 H 3 ). By Proposition 6.2, the sheaf OY (D) is tilt-stable for all α > 0, β ∈ R. A
+straightforward computation shows that the numerical wall W (OY (D), OX (−2H)[1]) is non-empty,
+and therefore, h2 (OY (D)) = hom(OY (D), OX (−2H)[1]) = 0. We conclude
+              h0 (OY (D)) = χ(OY (D)) + h1 (OY (D)) + h3 (OY (D)) ≥ χ(OY (D)) = 3.
+We pick a three-dimensional subspace V ⊂ h0 (OY (D)) to get an object ED,V ∈ Db (X) as in Section
+5. By Lemma 5.1, the sheaf ED,V = H−1 (ED,V ) is slope-stable and reflexive. If H0 (ED,V ) 6= 0,
+then ED,V has a Chern character in contradiction to Proposition 6.6. This shows that OY (D) is
+globally generated.
+   Since ED,V is slope-stable, we know h0 (ED,V ) = 0 and h3 (ED,V ) = hom(ED,V , OX (−2H)) = 0.
+Moreover, as in the proof of Proposition 6.6 we get h2 (ED,V ) = 0. This implies h1 (ED,V ) =
+−χ(ED,V ) = 0. The long exact sequence obtained from taking sheaf cohomology of
+                                0 → ED,V → OX ⊗ V → OY (D) → 0
+implies H i (OY (D)) = 0 for i > 0 and h0 (OY (D)) = 3. Therefore, V = H 0 (OY (D)) and for each D
+there is a unique slope-stable sheaf ED = ED,V .
+   Let U ⊂ Y be the smooth locus of Y . By Lemma 3.1, we know that Y is normal, and therefore,
+Y \U has dimension zero. In particular, a general section of OY (D) leads to a curve completely
+                                                  18
+contained in U . Since we work in characteristic 0, we can use a version of Bertini’s theorem [Har77,
+Corollary III.10.9, Remark III.10.9.1, Remark III.10.9.2] on the open subset U to see that a general
+section cuts out a smooth curve C. By adjunction,
+             ch(KC ) = ch(OY (−H + D)|D ) = ch(OY (−H + D)) − ch(OY (−H))
+                               1     1              3     7                  4 
+                     = 0, H, − H 2 , − H 3 − 0, H, − H 2 , H 3 = 0, 0, H 2 , − H 3 ,
+                                2     6                2     6                    3
+which shows that C is of degree 3 with χ(KC ) = −1, i.e., a twisted cubic. This completes the proof
+of part (i).
+   For part (ii), we already showed in Corollary 5.2 that KP is slope-stable for any P ∈ X. Vice-
+versa, if E is slope-stable, we can immediately conclude by Lemma 6.8.                           
+  As a consequence we can already infer that our moduli space M X (v) is smooth.
+Corollary 6.9. Every Gieseker-semistable sheaf E with ch(E) = (3, −H, −H 2 /2, H 3 /6) satisfies
+                                            
+                                            C if i = 0
+                                            
+                                  i
+                               Ext (E, E) = C4 if i = 1
+                                            
+                                               0   otherwise.
+                                            
+
+In particular, the moduli space MX (v) is smooth and 4-dimensional.
+Proof. Since (3, −H) is primitive, we know that E is slope-stable. Therefore, hom(E, E) = 1.
+Moreover, we must have Ext3 (E, E) = Hom(E, E(−2H))∨ = 0. By Lemma 6.5, the sheaf E is
+να,−1 -stable for any α > 0. Proposition 6.6 shows that E(−2H) is reflexive, so its shift E(−2H)[1]
+lies in the heart Cohβ=−1 (X) and it is να,−1 -stable for any α > 0 by Lemma 6.8. Since ν0,−1 (E) =
+0 > − 12 = ν0,−1 (E(−2H)[1]), we get Ext2 (E, E) = Hom(E, E(−2H)[1]) = 0. We can conclude
+ext1 (E, E) = hom(E, E) − χ(E, E) = 4.                                                            
+
+                                7. Proof of the main theorem
+  Recall that M X (v) is the moduli space of Gieseker-semistable sheaves with Chern character
+                                                            
+                                                  1 2 1 3
+                                   v := 3, −H, − H , H
+                                                  2     6
+and MX (v) ⊂ M X (v) is the open locus of Gieseker-semistable vector bundles. The aim of this
+section is to prove the following Theorem.
+Theorem 7.1. The moduli space M X (v) is smooth and irreducible of dimension 4. Moreover,
+there is an Abel-Jacobi morphism Ψ : M X (v) → J(X) sending E 7→ ce2 (E) − H 2 whose image is a
+theta divisor Θ in the intermediate Jacobian J(X). The theta divisor has a unique singular point,
+and M X (v) is the blow up of Θ in this point. The exceptional divisor is isomorphic to the cubic
+threefold X itself.
+   We have already shown that MX (v) is smooth of dimension 4 in Corollary 6.9. By Proposition
+2.2, the image of ϕ : T → J(X) is Θ ⊂ J(X), where T is the open locus of smooth twisted cubics
+in the Hilbert scheme of X, and T is its closure. By Theorem 2.6, we know that Θ is normal.
+Proposition 7.2. There is a surjective map ϕ0 : T → MX (v) that sends a twisted cubic C to the
+vector bundle EC . The map ϕ|T : T → J(X) factors through ϕ0 :
+                                                     T
+                                              ϕ0              ϕ|T
+
+                                          {        Ψ|MX (v)      "
+                                    MX (v)                     / J(X)
+                                                     19
+Therefore, the image of Ψ : M X (v) → J(X) is Θ ⊂ J(X).
+Proof. Let C be a twisted cubic in X, then it lies in a unique hyperplane section Y . There is a
+short exact sequence
+                                  0 → OY → OY (C) → T → 0,
+where T is a sheaf supported on C with rank one. Therefore, ch e ≤2 (OY (C)) = (0, H, C − H 2 /2) and
+                             2
+we get ch≤2 (EC ) = (3, −H, H /2−C). It follows that c̃2 (EC ) = C. Thus, the composition Ψ|M (v) ◦
+        e
+                                                                                               X
+ϕ0 : T → MX (v) → J(X) is the Abel-Jacobi map ϕ : T → J(X) restricted to T . Surjectivity of ϕ0
+is a direct consequence of Theorem 6.1.                                                      
+Lemma 7.3. The morphism i : X → M X (v) that maps P 7→ KP is an embedding with normal
+bundle OX (−H).
+Proof. We interpret X as the moduli spaces of twisted ideal sheaves IP (H) for all P ∈ X. By
+definition of KP , we have a canonical short exact sequence
+                                            ⊕4
+(7)                               0 → KP → OX  → IP (H) → 0.
+The appropriate version in families, considered below, induces the morphism i. It is injective, as P
+is the unique point where KP is not locally free by Corollary 5.2.
+   Applying Hom(·, KP ) to (7), we get an isomorphism Ext1 (KP , KP ) ∼= Ext2 (IP (H), KP ). Next,
+we apply the functor Hom(IP (H), ·) to (7) to show that the induced morphism on tangent spaces
+Ext1 (IP (H), IP (H)) ,→ Ext2 (IP (H), KP ) = Ext1 (KP , KP ) is an embedding. Since both X and
+M X (v) are smooth, the morphism is an embedding.
+   To determine the normal bundle, we need a relative version of the previous arguments to de-
+termine the cokernel of this embedding as a line bundle on X. The universal family inducing i is
+given by the sheaf K on X × X fitting into the short exact sequence
+                              0 → K → p∗ ΩP4 |X (H) → I∆ (0, H) → 0,
+where p : X × X → X is the projection to the first factor. The pull-back of the tangent bundle via
+i is i∗ TM X (v) = H1 (p∗ Hom(K, K)). Since p∗ Hom(p∗ ΩP4 |X (H), K) = 0, we have an isomorphism
+                          H1 (p∗ Hom(K, K)) = H2 (p∗ Hom(I∆ (0, H), K).
+The differential di of i fits into the four-term long exact sequence
+                                                         d
+           0 → TX = H1 (p∗ Hom(I∆ (0, H), I∆ (0, H)) −→
+                                                      i
+                                                        H2 (p∗ Hom(I∆ (0, H), K)) →
+        → H2 (p∗ Hom(I∆ (0, H), p∗ ΩP4 |X (H))) → H2 (p∗ Hom(I∆ (0, H), I∆ (0, H)) → 0.
+Using Grothendieck duality and projection formula, the third term becomes
+        ΩP4 |X (H) ⊗ H1 (p∗ I∆ (0, −H))∨ = ΩP4 |X (H) ⊗ H0 (p∗ O∆ (0, −H))∨ = ΩP4 |X (2H).
+A similar computation using the short exact sequence I∆ ,→ OX  OX  O∆ gives
+                                  H2 (p∗ Hom(I∆ , I∆ ) = ΩX (2H)
+                                                                ∨
+for the fourth term. Thus, the cokernel of di is isomorphic to NX/P 4 (2H) = OX (−H) as claimed.   
+Lemma 7.4. The morphism Ψ induces an isomorphism MX (v) → Θ \ {0}. Moreover, Ψ contracts
+the irreducible divisor M X (v) \ MX (v) to the zero point. In particular, Θ is smooth away from 0.
+Proof. By Lemma 5.1 and Corollary 5.2, the locus M X (v) \ MX (v) coincides with vector bundles
+EC associated to a twisted cubic C. By Lemma 2.5, the map ϕ|T has full rank four on tangent
+spaces. Thus, the commutative diagram in Proposition 7.2 implies that Ψ|MX (v) has full rank four
+on tangent spaces. Since MX (v) is smooth of dimension four, Ψ|MX (v) must be injective on tangent
+spaces. In particular, the morphism Ψ|MX (v) must have finite fibers. Since φ|T has generically
+                                                  20
+connected fibers by Proposition 2.2, the same holds for Ψ|MX (v) . Since Θ is normal, Zariski’s Main
+Theorem implies that Ψ|MX (v) is an open embedding. Since Θ is singular at the origin, we must
+have Ψ(MX (v)) ⊂ Θ − {0}.
+  By definition, c̃2 (KP ) = H 2 and we get Ψ(KP ) = 0. Thus Ψ−1 (0) = M X (v) \ MX (v) and the
+image of MX (v) is indeed Θ \ {0} by Proposition 2.2.                                             
+  We can finish the proof of Theorem 7.1 with the following Lemma.
+Lemma 7.5. The formal neighborhood of 0 ∈ Θ is isomorphic to the vertex of the affine cone over
+X ⊂ P4 . Moreover, we have an isomorphism M X (v) = Bl0 (Θ). Thus, X is the union of all rational
+curves on M X (v), and the unique divisor contracted by any morphism to a complex abelian variety.
+Proof. The first two claims are scheme-theoretic enhancements of the set-theoretic statements in
+the previous Lemma, that hold for any contraction of a divisor with ample conormal bundle to a
+point. We will only sketch the arguments.
+   Since the normal bundle of X ⊂ M X (v) is anti-ample, by Artin’s contractibility criterion [Art70,
+Corollary 6.12] there is a contraction Ψ0 : M X (v) → N to an algebraic space N of finite type over
+C that is an isomorphism away from X, and contracts X to a point 0 ∈ N . Moreover, by Artin’s
+construction in [Art70, Theorem 6.2], the formal neighborhood of 0 ∈ N is given by the affinization
+of the formal neighborhood of X ⊂ M X (v). More precisely, if I is the ideal of X, then it is given
+by
+                                                                M
+                  Spec lim H 0 (X, OM X (v) /I n+1 ) = Spec lim   H 0 (X, OX (k)),
+                        ←−                                  ←−
+                        n                                 n 0≤k≤n
+
+i.e., the completion of the vertex of the affine cone over X. Since the image of every infinitesimal
+neighborhood of X under Ψ is affine, it factors via its affinization. Taking the limit, we see that
+Ψ factors via Ψ0 both in the formal neighborhood of X, and in its complement. Hence (e.g. by
+[Art70, Theorem 3.1]) we get an induced morphism j : N → Θ factoring Ψ. As j is bijective on
+points and with normal target, it is an isomorphism.
+   For the last claim, note that X is uniruled, hence the union U of all rational curves in M X (v)
+contains X. If there was any other rational curve C not contained in X, then Ψ : C → Θ is a
+non-constant map from a rational to an abelian variety, a contradiction.                          
+Corollary 7.6. If X1 and X2 are smooth projective threefolds with J(X1 ) = J(X2 ) as principally
+polarised abelian varieties, then X1 = X2 .
+Proof. As in the classical argument, this is an immediate consequence of the description of the
+singularity of the theta divisor in Lemma 7.5.                                               
+
+                                   8. Kuznetsov component
+  The bounded derived category of a cubic threefold X admits a semi-orthogonal decomposition
+                                  Db (X) = hKu(X), OX , OX (1)i
+whose non-trivial part Ku(X) is called the Kuznetsov component. The goal of this section is to
+give a new proof of the following Theorem.
+Theorem 8.1. Let X1 and X2 be smooth cubic threefolds. Then Ku(X1 ) and Ku(X2 ) are equivalent
+as triangulated categories if and only if X1 and X2 are isomorphic.
+  Let S be the Serre functor of Ku(X). By [Kuz04, Lemma 4.1 and Lemma 4.2], for any object
+F ∈ Ku(X), we have
+(8)                                S(F ) = LOX (F ⊗ OX (H))[1]
+                                                 21
+where LOX is the left mutation functor with respect to OX . By [BMMS12, Proposition 2.7], the
+numerical Grothendieck group N (Ku(X)) is a two-dimensional lattice
+                              N (Ku(X)) ∼= Z2 ∼= Z[I` ] ⊕ Z[S(I` )]
+where I` is the ideal sheaf of a line ` in X. With respect to this basis, the Euler characteristic
+χ(−, −) on N (Ku(X)) has the form                  
+                                              −1 −1
+                                                      .
+                                              0 −1
+For any line ` in X, we know ch(I` ) = (1, 0, − 13 H 2 , 0). The Chern character of our second basis
+vector of ch(Ku(X)), and the action of the Serre functor S on our chosen basis are given as follows.
+Lemma 8.2. We have ch(S(I` )) = (2, −H, − 61 H 2 , 16 H 3 ) and ch(S 2 (I` )) = (1, −H, 16 H 2 , 16 H 3 ).
+Thus, the class [S 2 (I` )] in N (Ku(X)) is equal to [S(I` )] − [I` ].
+Proof. By (8) we have [S(E)] = −[E(H)] + χ(E(H))[OX ] for E ∈ Ku(X). Hence ch(I` (H)) =
+(1, H, 16 H 2 , − 16 H 3 ) and χ(I` (H)) = 3 imply the formula for ch(S(I` )). The formula for ch(S 2 (I` ))
+follows from the last claim, which in turn follows from the Euler characteristic form above with
+            χ(I` , S 2 (I` )) = χ(S 2 (I` ), S(I` )) = χ(S(I` ), I` ) = 0 = χ([I` ], [S(I` )] − [I` ])   and
+                    2
+         χ(S(I` ), S (I` )) = χ(I` , S(I` )) = −1 = χ([S(I` )], [S(I` )] − [I` ]).                             
+  For a point P ∈ X, the sheaf KP which is defined through the sequence (2), lies in the Kuznetsov
+component Ku(X).
+Lemma 8.3. Let [A] be a class in N (Ku(X)) such that χ([A], [A]) = −3. Then, up to a sign, [A]
+is either [KP ] = [I` ] + [S(I` )], or [S(KP )] = −[I` ] + 2[S(I` )], or [S 2 (Kp )] = −2[I` ] + [S(I` )].
+         0      = Coh0α,−1/2 (X), Zα,−1/2
+                                        0        be the weak stability condition on Db (X) constructed in
+                                               
+   Let σα,−1/2
+[BLMS17, Proposition 2.14]. Here Coh0α,−1/2 (X) is the usual double tilt and
+                                                                        α2 3
+                                                                                       
+                    0                2    − 21               − 12
+(9)                Zα,− 1 (E) = H · ch1 (E) + i H · ch2 (E) −              H · ch0 (E) .
+                         2                                              2
+As proven in [BLMS17, Theorem 6.8], for 0 < α  1, it induces the stability condition σ(α) =
+(A(α), Z(α)) on Ku(X) where
+                   A(α) := Coh0α,− 1 (X) ∩ Ku(X)              Z(α) := Zα,−
+                                                              and         0
+                                                                             1 |Ku(X) .
+                                      2                                      2
+                                                                       
+Lemma 8.4. There is an embedding MX (v) ,→ Mσ(α) [I` ] + [S(I` )] from the moduli space MX (v)
+for v = ch(I` ) + ch(S(I` )) = (3, −H, −H 2 /2, H 3 /6) to Mσ(α) [I` ] + [S(I` )] which parameterises
+                                                                                 
+
+σ(α)-semistable objects in Ku(X) of class [I` ] + [S(I` )] ∈ N (Ku(X)).
+Proof. According to Lemma 6.5 there is no wall for objects of Chern character v to the left of the
+                                                                0
+vertical wall. Thus, E is να,−1/2 -stable for any α > 0. Since σα,−1/2 is just a rotation of να,−1/2 ,
+                      0
+we obtain that E is σα,−1/2 -stable. By Theorem 6.1, part (ii), the sheaf E ∈ Ku(X) lies in the
+Kuznetsov component. Thus, E is σ(α)-stable. Note that the object E could be destabilised by
+               0
+objects with Zα,− 1 = 0 after rotation. But we know these are all sheaves supported in dimension
+                    2
+zero and would not be in Ku(X) and therefore, E is stable after restriction to Ku(X).                          
+   [PY20, Corollary 5.6] implies that the stability condition σ(α) is S-invariant, i.e., S·σ(α) = σ(α)·g̃
+         f + (2, R). Thus, there is an isomorphism
+for g̃ ∈ GL
+                                                                             
+                          S : Mσ(α) 2[I` ] − [S(I` )] → Mσ(α) [I` ] + [S(I` )]
+(10)                                                    E 7→ S(E)
+                                                         22
+   The following Proposition is a slight strengthening of [APR19, Theorem 1.2] which describes all
+elements of the moduli space. The idea of the proof is the same as [APR19, Lemma 2.2].
+Proposition 8.5. Any σ(α)-semistable object in Ku(X) of class 2[I` ]−[S(I` )] is of the form G[2k]
+for k ∈ Z where G is either equal to GP (−H) described in (4) for a point P ∈ X, or OY (D − H)
+where D is a Weil-divisor on some Y ∈ |H|.
+Proof. Lemma 8.2 implies ch(G) = (0, H, − 21 H 2 , − 16 H 3 ). Since G is σ(α)-semistable, its shift G[2k]
+lies in the heart A(α) for some k ∈ Z. We know its image under the stability function Z(α) is
+equal to −H 3 , so it has maximum phase in the heart A(α) which immediately implies G[2k] is
+  0
+σα,−1/2 -semistable. We claim that G[2k] has no subobject Q ∈ Coh0α,−1/2 with Zα,−1/2    0      (Q) = 0,
+so it is να,−1/2 -semistable. Assume for a contradiction that there is such a subobject Q. By the
+definition of Coh0α,−1/2 (X), it is a sheaf supported in dimension zero. Thus, hom(OX , Q) 6= 0. Since
+OX ∈ Coh0α,−1/2 (X), we have hom(OX , (G[2k]/Q)[−1]) = 0. Therefore, hom(OX , G[2k]) 6= 0 which
+is not possible because G[2k] ∈ Ku(X). Finally, since G[2k] is να,−1/2 -semistable for 0 < α  1,
+the claim follows by Proposition 6.2, (ii).                                                             
+Remark 8.6. Since the class 2[I` ] − [S(I` )] is primitive in N (Ku(X)), any σ(α)-semistable object
+of this class is σ(α)-stable if we choose α sufficiently small.
+                                                                                  
+   We now describe the image of the semistable objects G ∈ Mσ(α) 2[I` ] − [S(I` )] under the Serre
+functor S. If G = GP (−H), then by (4), we know there is a distinguished triangle
+                                   OX [1] → GP → IP (H) → OX [2]
+which gives LOX (GP ) = LOX (IP (H)) = KP [1], so
+(11)                                        S(GP ) = KP [2].
+If G = OY (D − H), then G(H) = OY (D) is of class 0, H, 21 H 2 , − 16 H 3 , and lies in a distinguished
+                                                                         
+triangle
+                              ⊕3                            ⊕3
+                             OX  → OY (D) → ED [1] → OX          [1].
+Thus,
+                                                             
+(12)                  S(G) = LOX (OY (D))[1] = LOX ED [1] [1] = ED [2].
+Combining (11) and (12) with Lemma 8.4 implies the next result.
+                                                    
+Theorem 8.7. The moduli space Mσ(α) [I` ] + [S(I` )] is isomorphic to the moduli space M X (v)
+parametrising Gieseker-stable sheaves of class v.
+  The next step is to show that we can replace σ(α) by any S-invariant stability condition on
+Ku(X).
+Lemma 8.8. [PY20, Lemma 5.8 and 5.10] Let σ be an S-invariant stability condition on Ku(X)
+and F ∈ Ku(X) be σ-semistable of phase φ(F ). Then
+    (i) φ(F ) < φ(S(F )) < φ(F ) + 2.
+   (ii) dim Ext1 (F, F ) ≥ 2.
+  For cubic threefolds, we also have a weak version of Mukai Lemma for K3 surfaces.
+Lemma 8.9. (Weak Mukai Lemma) [PY20, Lemma 5.11] Let σ be an S-invariant stability con-
+dition. Let A → E → B be a triangle in Ku(X) such that hom(A, B) = 0 and the σ-semistable
+factors of A have phase greater than or equal to the phase of the σ-semistable factors of B. Then
+                      dimC Ext1 (A, A) + dimC Ext1 (B, B) ≤ dimC Ext1 (E, E).
+                                                    23
+Proposition 8.10. Let σ1 and σ2 be two S-invariant stability conditions on Ku(X). An object
+E ∈ Ku(X) of class [I` ] + [S(I` )] is σ1 -stable if and only if it is σ2 -stale.
+Proof. By [PY20, Proposition 4.6], I` and S(I` ) are σ-stable with respect to any S-invariant sta-
+bility condition. Thus, Lemma 8.8 implies that
+(13)                                 φσ (I` ) < φσ (S(I` )) < φσ (I` ) + 2.
+Take a σ1 -stable object E ∈ Ku(X) of class [I` ] + [S(I` )]. Since σ1 is S-invariant, Lemma 8.8 gives
+                                    φσ1 (E) < φσ1 (S(E)) < φσ1 (E) + 2.
+Thus, for i < 0 or i ≥ 2, we get
+                                  hom(E, E[i]) = hom(E[i], S(E)) = 0.
+Since E is σ1 -stable, we get hom(E, E) = 1 which gives
+                                    hom(E, E[1]) = −χ(E, E) + 1 = 4.
+Suppose now for a contradiction that E is σ2 -unstable. There is a distinguished triangle of desta-
+bilising objects F1 → E → F2 → F1 [1] with respect to σ2 . We may assume F1 is σ2 -semistable.
+Thus, Lemma 8.8 implies that
+(14)                                         hom(F1 , F1 [1]) ≥ 2.
+Since the phase of F1 is bigger than the phase of σ2 -semistable factors of F2 , we have
+(15)                                          hom(F1 , F2 ) = 0.
+Thus, Weak Mukai Lemma 8.9 implies
+                         hom(F1 , F1 [1]) + hom(F2 , F2 [1]) ≤ hom(E, E[1]) = 4.
+By (14), we get hom(F2 , F2 [1]) ≤ 2. If hom(F2 , F2 [1]) = 0 or 1, then all its σ2 -semistable factors
+would satisfy the same property by Weak Mukai Lemma 8.9 which is not possible by Lemma 8.8.
+Therefore,
+                                      hom(F1 , F1 [2]) = hom(F2 , F2 [1]) = 2
+and [PY20, Lemma 5.12] implies that F1 and F2 are σ2 -stable. This gives χ(Fi , Fi ) = −1 for
+i = 1, 2, so [Fi ] is either ±[I` ], or ±[S(I` )], or ±([S(I` )] − [I` ]). Since there are only 2 stable factors
+and the object E is of class [I` ] + [S(I` )], the destabilising objects must be of class [I` ] and [S(I` )].
+Thus, [PY20, Proposition 4.6] implies that the destabilising objects are I` [2k] and S(I`0 )[2k 0 ] for
+two lines `, `0 and integers k, k 0 ∈ Z.
+   Let F1 = I` [2k] and F2 = S(I`0 )[2k 0 ]. Since E is σ1 -stable, we have φσ1 (F1 ) < φσ1 (F2 ), thus (13)
+gives k ≤ k 0 . But F1 and F2 are the destabilising objects with respect to σ2 , hence φσ2 (F1 ) > φσ2 (F2 )
+and (13) gives k 0 + 1 ≤ k which is not possible. By a similar argument, we reach a contradiction
+if F1 = S(I`0 )[2k 0 ] and F2 = I` [2k]. Finally, note that E cannot be strictly σ2 -semistable because
+the phases of I` [2k] and S(I` )[2k 0 ] cannot be equal by (13).                                              
+Proof of Theorem 8.1. As a cubic threefold has free Picard group of rank one, the first implication is
+obvious. As for the second implication, assume there is an exact equivalence Φ : Ku(X1 ) → Ku(X2 ).
+Lemma 8.3 implies that, up to composing with a power of the Serre functor of Ku(X1 ) and shift
+functor, we may assume [Φ∗ (KP )] = [KP 0 ] for points P, P 0 in X1 and X2 , respectively. Take an
+S-invariant stability condition σ on Ku(X1 ). Theorem 8.7 and 8.10 imply that
+                       MX (v) ∼= Mσ Ku(X1 ), [KP ] ∼
+                                                                            
+(16)                        1                        = Mφ·σ Ku(X2 ), [KP 0 ] .
+Since the Serre functor commutes with auto-equivalences, φ · σ is an S-invariant stability condition
+on Ku(X2 ). Thus, Theorem 8.7 gives
+                               Mφ·σ Ku(X2 ), [KP 0 ] ∼
+                                                    
+                                                      = MX (v).      2
+                                                      24
+Combining this with (16) gives MX1 (v) ∼ = MX2 (v). By Lemma 7.5, we know X1 and X2 are the
+unique exceptional divisors of MX1 (v) and MX2 (v) which get contracted by any map to a complex
+abelian variety. Thus, X1 ∼
+                          = X2 .                                                             
+
+                                                  References
+[AB13]   D. Arcara and A. Bertram. Bridgeland-stable moduli spaces for K-trivial surfaces. J. Eur. Math. Soc.
+         (JEMS), 15(1):1–38, 2013. With an appendix by Max Lieblich.
+[AKP03] M. Artebani, R. Kloosterman, and M. Pacini. A new model for the theta divisor of the cubic threefold.
+         Matematiche (Catania), 58(2):201–236 (2005), 2003.
+[APR19] M. Altavilla, M. Petkovic, and F. Rota. Moduli spaces on the Kuznetsov component of Fano threefolds
+         of index 2, 2019. arXiv:1908.10986.
+[Art70]  M. Artin. Algebraization of formal moduli. II. Existence of modifications. Ann. of Math. (2), 91:88–135,
+         1970.
+[Bea82]  A. Beauville. Les singularités du diviseur Θ de la jacobienne intermédiaire de l’hypersurface cubique
+         dans P4 . In Algebraic threefolds (Varenna, 1981), volume 947 of Lecture Notes in Math., pages 190–208.
+         Springer, Berlin-New York, 1982.
+[Bea02]  A. Beauville. Vector bundles on the cubic threefold. In Symposium in Honor of C. H. Clemens (Salt Lake
+         City, UT, 2000), volume 312 of Contemp. Math., pages 71–86. Amer. Math. Soc., Providence, RI, 2002.
+[BLMS17] A. Bayer, M. Lahoz, E. Macrı̀, and P. Stellari. Stability conditions on Kuznetsov components, 2017.
+         arXiv:1703.10839.
+[BMMS12] M. Bernardara, E. Macrı̀, S. Mehrotra, and P. Stellari. A categorical invariant for cubic threefolds. Adv.
+         Math., 229(2):770–803, 2012.
+[BMS16] A. Bayer, E. Macrı̀, and P. Stellari. The space of stability conditions on abelian threefolds, and on some
+         Calabi-Yau threefolds. Invent. Math., 206(3):869–933, 2016.
+[BMT14] A. Bayer, E. Macrı̀, and Y. Toda. Bridgeland stability conditions on threefolds I: Bogomolov-Gieseker
+         type inequalities. J. Algebraic Geom., 23(1):117–163, 2014.
+[Bri07]  T. Bridgeland. Stability conditions on triangulated categories. Ann. of Math. (2), 166(2):317–345, 2007.
+[Bri08]  T. Bridgeland. Stability conditions on K3 surfaces. Duke Math. J., 141(2):241–291, 2008.
+[CG72]   C. H. Clemens and P. A. Griffiths. The intermediate Jacobian of the cubic threefold. Ann. of Math. (2),
+         95:281–356, 1972.
+[CH16]   I. Coskun and J. Huizenga. The ample cone of moduli spaces of sheaves on the plane. Algebr. Geom.,
+         3(1):106–136, 2016.
+[EL97]   L. Ein and R. Lazarsfeld. Singularities of theta divisors and the birational geometry of irregular varieties.
+         J. Amer. Math. Soc., 10(1):243–258, 1997.
+[FP21]   S. Feyzbakhsh and L. Pertusi. Serre-invariant stability conditions and Ulrich bundles on cubic threefolds,
+         2021. arXiv:2109.13549.
+[Gie77]  D. Gieseker. On the moduli of vector bundles on an algebraic surface. Ann. of Math. (2), 106(1):45–60,
+         1977.
+[Gri68]  P. A. Griffiths. Periods of integrals on algebraic manifolds. II. Local study of the period mapping. Amer.
+         J. Math., 90:805–865, 1968.
+[Har77]  R. Hartshorne. Algebraic geometry. Springer-Verlag, New York-Heidelberg, 1977. Graduate Texts in Math-
+         ematics, No. 52.
+[Har94]  R. Hartshorne. Generalized divisors on Gorenstein schemes. K-Theory, 8(3):287–339, 1994.
+[HL10]   D. Huybrechts and M. Lehn. The geometry of moduli spaces of sheaves. Cambridge Mathematical Library.
+         Cambridge University Press, Cambridge, second edition, 2010.
+[HRS96]  D. Happel, I. Reiten, and S. O. Smalø. Tilting in abelian categories and quasitilted algebras. Mem. Amer.
+         Math. Soc., 120(575):viii+ 88, 1996.
+[Ili99]  A. Iliev. Minimal sections of conic bundles. Boll. Unione Mat. Ital. Sez. B Artic. Ric. Mat. (8), 2(2):401–
+         428, 1999.
+[Kuz04]  A. G. Kuznetsov. Derived category of a cubic threefold and the variety V14 . Tr. Mat. Inst. Steklova,
+         246(Algebr. Geom. Metody, Svyazi i Prilozh.):183–207, 2004.
+[Li19]   C. Li. Stability conditions on Fano threefolds of Picard number 1. J. Eur. Math. Soc. (JEMS), 21(3):709–
+         726, 2019.
+[LM16]   J. Lo and Y. More. Some examples of tilt-stable objects on threefolds. Comm. Algebra, 44(3):1280–1301,
+         2016.
+[Mac14]  A. Maciocia. Computing the walls associated to Bridgeland stability conditions on projective surfaces.
+         Asian J. Math., 18(2):263–279, 2014.
+                                                         25
+[Mar77]   M. Maruyama. Moduli of stable sheaves. I. J. Math. Kyoto Univ., 17(1):91–126, 1977.
+[Mar78]   M. Maruyama. Moduli of stable sheaves. II. J. Math. Kyoto Univ., 18(3):557–614, 1978.
+[MS20]    E. Macrı̀ and B. Schmidt. Derived categories and the genus of space curves. Algebr. Geom., 7(2):153–191,
+          2020.
+[Mum63]   D. Mumford. Projective invariants of projective structures and applications. In Proc. Internat. Congr.
+          Mathematicians (Stockholm, 1962), pages 526–530. Inst. Mittag-Leffler, Djursholm, 1963.
+[Mum74]   D. Mumford. Prym varieties. I. In Contributions to analysis (a collection of papers dedicated to Lipman
+          Bers), pages 325–350. Elsevier, 1974.
+[Per20]   A. Perry. The integral Hodge conjecture for two-dimensional Calabi-Yau categories, 2020.
+          arXiv:2004.03163.
+[PY20]    L. Pertusi and S. Yang. Some remarks on Fano threefolds of index two and stability conditions, 2020.
+          arXiv:2004.02798.
+[Sch07]   K. Schwede. Generalized divisors and reflexive sheaves. https://www.math.utah.edu/~schwede/Notes/
+          GeneralizedDivisors.pdf, 2007.
+[Sim94]   C. T. Simpson. Moduli of representations of the fundamental group of a smooth projective variety. I. Inst.
+          Hautes Études Sci. Publ. Math., 79:47–129, 1994.
+[Sta20]   The Stacks project authors. The stacks project. https://stacks.math.columbia.edu, 2020.
+[Tak72]   F. Takemoto. Stable vector bundles on algebraic surfaces. Nagoya Math. J., 47:29–48, 1972.
+[Wel81]   G. E. Welters. Abel-Jacobi isogenies for certain types of Fano threefolds, volume 141 of Mathematical
+          Centre Tracts. Mathematisch Centrum, Amsterdam, 1981.
+[Zha21]   S. Zhang. Bridgeland moduli spaces and Kuznetsov’s Fano threefold conjecture, 2021. arXiv:2012.12193v2.
+
+  School of Mathematics and Maxwell Institute, University of Edinburgh, James Clerk Maxwell
+Building, Peter Guthrie Tait Road, Edinburgh, EH9 3FD, United Kingdom
+  Email address: arend.bayer@ed.ac.uk
+
+  School of Mathematics and Maxwell Institute, University of Edinburgh, James Clerk Maxwell
+Building, Peter Guthrie Tait Road, Edinburgh, EH9 3FD, United Kingdom
+  Email address: Sjoerd.Beentjes@ed.ac.uk
+
+  Department of Mathematics, Imperial College, London SW7 2AZ, United Kingdom
+  Email address: s.feyzbakhsh@imperial.ac.uk
+
+  Universität Duisburg-Essen, Fakultät für Mathematik, Georg Hein, WSC-O-3.58, 45117 Essen, Ger-
+many
+  Email address: georg.hein@uni-due.de
+
+  Korteweg-de Vries, Institute for Mathematics, Universiteit van Amsterdam, Science Park 107,
+1098XG Amsterdam, Netherlands.
+  Email address: d.martinelli@uva.nl
+
+  School of Mathematics and Maxwell Institute, University of Edinburgh, James Clerk Maxwell
+Building, Peter Guthrie Tait Road, Edinburgh, EH9 3FD, United Kingdom
+  Email address: fatemeh.rezaee@ed.ac.uk
+
+  Gottfried Wilhelm Leibniz Universität Hannover, Institut für Algebraische Geometrie, Welfen-
+garten 1, 30167 Hannover, Germany
+  Email address: bschmidt@math.uni-hannover.de
+
+
+
+
+                                                       26
+

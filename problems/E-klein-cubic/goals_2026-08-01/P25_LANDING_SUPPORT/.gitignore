@@ -1,0 +1,8 @@
+# Reproducible solver inputs above GitHub's 100 MB per-file limit.
+# Regeneration commands and recorded hashes are documented in PREFLIGHT.md.
+/landing_746_kfirst.ms
+/landing_746_standard.ms
+/syzygy_r48_q0_b0_1.ms
+/syzygy_r96_q0_b0_1.ms
+/syzygy_r256_q0_b0_1.ms
+/syzygy_r256_q0_b0_0_b1_0_1.ms

@@ -1,0 +1,48 @@
+{
+  "authoritative_inputs": {
+    "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+    "tmp/kproj_arithmetic/normalized_kproj_table.json": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f"
+  },
+  "basis_indices": [
+    0,
+    1,
+    6
+  ],
+  "case": "triple",
+  "cubic_monomials": 680,
+  "cubic_rank": 245,
+  "field_characteristic": 199,
+  "hilbert_function": [
+    1,
+    15,
+    120,
+    435,
+    820,
+    351,
+    50,
+    0
+  ],
+  "input_file": "krylov_triple.in",
+  "input_sha256": "5a5927bcddb95f308024bb886deea8d903c915a50f1c689d9614c13138d41b49",
+  "leading_count": 802,
+  "leading_degree_tally": {
+    "3": 245,
+    "4": 65,
+    "5": 492
+  },
+  "leading_file": "krylov_triple_leading.out",
+  "leading_sha256": "6a416f3ec1fb82897efd13321336f18983073efe01b75cfdce77b6992715e8b5",
+  "log_file": "krylov_triple.log",
+  "log_sha256": "1f42c150b427c7d135b296db280c9925739293d899458eeb8bbf358a8caf637c",
+  "method": "exact msolve projective leading ideal",
+  "rng_seed": 202608011733,
+  "rows_file": "krylov_triple_rows.npz",
+  "rows_semantic_sha256": "598e87240cba3a5c99b6438ca5c2a619077e72e167b6f008c1352e66f508f10c",
+  "rows_sha256": "c9dc35308a590ded8c9c15518877a772d2291e4272cedbc32917fb7b8724bfc3",
+  "sample_count": 64,
+  "scope": "necessary specialized equations for the displayed constant-Krylov coefficient ansatz",
+  "solver_returncode": 0,
+  "solver_seconds": 2.3417928330018185,
+  "status": "empty",
+  "variables": 15
+}

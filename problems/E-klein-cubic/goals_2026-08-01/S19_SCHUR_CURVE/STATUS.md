@@ -7,14 +7,15 @@ cubic and is not an emptiness theorem for the corrected ambient-curve marked
 Hilbert problem.
 
 **Repository commit consumed:**
-`2140419410cfff2f7d7dcca166acef8c16a0d41b`
+`80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c`
 
 **Goal-file commit consumed:**
 `67218b64ed1bf727f13bdcd7639c8651cd374897`
 
-**Commit produced:** none; the isolated deliverable is an uncommitted worktree
-packet because this worker was authorized to write only inside the dispatch
-directory.
+**Commit produced:** none for the final audit refinement.  Commit
+`80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c` is the repository waypoint that
+first contains the core isolated packet; the current worktree may contain the
+later completion-audit refinement.
 
 ## Binary verdict
 

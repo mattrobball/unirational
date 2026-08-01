@@ -1,0 +1,23 @@
+{
+  "schema": "G_CONSTRUCTIVE_BASIS_ATOM_SEARCH_V1",
+  "scope": "bounded discovery only; exactly three signed field-basis atoms",
+  "authoritative_inputs": {
+    "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+    "tmp/kproj_arithmetic/normalized_kproj_table.json": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f",
+    "tmp/kproj_arithmetic/model.py": "e28b0d187e2bfa967c2360b4073b06f1172e3353195d9436b65b2023984cad3a"
+  },
+  "initial_candidates": 138240,
+  "stages": [
+    {
+      "prime": 101,
+      "parameters": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "survivors": 0
+    }
+  ],
+  "survivors": []
+}

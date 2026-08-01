@@ -1,0 +1,188 @@
+{
+  "format": "Q-SCHUR-LINKED-QUINTIC-FIELD-CERTIFICATE-v1",
+  "enumeration": {
+    "number_of_subgroups_of_S5": 156,
+    "number_of_transitive_subgroups_of_S5": 20,
+    "number_of_transitive_conjugacy_classes": 5,
+    "class_orders": [
+      5,
+      10,
+      20,
+      60,
+      120
+    ]
+  },
+  "quintic_galois_cases": {
+    "C5": {
+      "order": 5,
+      "orbit_size": 5,
+      "normal_quotient_orders": [
+        1,
+        5
+      ],
+      "index_two_kernel_orbit_sizes": []
+    },
+    "D10": {
+      "order": 10,
+      "orbit_size": 5,
+      "normal_quotient_orders": [
+        1,
+        2,
+        10
+      ],
+      "index_two_kernel_orbit_sizes": [
+        5
+      ]
+    },
+    "F20": {
+      "order": 20,
+      "orbit_size": 5,
+      "normal_quotient_orders": [
+        1,
+        2,
+        4,
+        20
+      ],
+      "index_two_kernel_orbit_sizes": [
+        5
+      ]
+    },
+    "A5": {
+      "order": 60,
+      "orbit_size": 5,
+      "normal_quotient_orders": [
+        1,
+        60
+      ],
+      "index_two_kernel_orbit_sizes": []
+    },
+    "S5": {
+      "order": 120,
+      "orbit_size": 5,
+      "normal_quotient_orders": [
+        1,
+        2,
+        120
+      ],
+      "index_two_kernel_orbit_sizes": [
+        5
+      ]
+    }
+  },
+  "quartic_normal_quotient_orders": {
+    "A4": [
+      1,
+      3,
+      12
+    ],
+    "S4": [
+      1,
+      2,
+      6,
+      24
+    ]
+  },
+  "quartic_quintic_intersections": {
+    "A4": {
+      "C5": {
+        "possible_nontrivial_common_quotient_orders": [],
+        "maximal_possible_intersection_degree": 1,
+        "quintic_remains_transitive_over_possible_common_quadratic": null
+      },
+      "D10": {
+        "possible_nontrivial_common_quotient_orders": [],
+        "maximal_possible_intersection_degree": 1,
+        "quintic_remains_transitive_over_possible_common_quadratic": null
+      },
+      "F20": {
+        "possible_nontrivial_common_quotient_orders": [],
+        "maximal_possible_intersection_degree": 1,
+        "quintic_remains_transitive_over_possible_common_quadratic": null
+      },
+      "A5": {
+        "possible_nontrivial_common_quotient_orders": [],
+        "maximal_possible_intersection_degree": 1,
+        "quintic_remains_transitive_over_possible_common_quadratic": null
+      },
+      "S5": {
+        "possible_nontrivial_common_quotient_orders": [],
+        "maximal_possible_intersection_degree": 1,
+        "quintic_remains_transitive_over_possible_common_quadratic": null
+      }
+    },
+    "S4": {
+      "C5": {
+        "possible_nontrivial_common_quotient_orders": [],
+        "maximal_possible_intersection_degree": 1,
+        "quintic_remains_transitive_over_possible_common_quadratic": null
+      },
+      "D10": {
+        "possible_nontrivial_common_quotient_orders": [
+          2
+        ],
+        "maximal_possible_intersection_degree": 2,
+        "quintic_remains_transitive_over_possible_common_quadratic": true
+      },
+      "F20": {
+        "possible_nontrivial_common_quotient_orders": [
+          2
+        ],
+        "maximal_possible_intersection_degree": 2,
+        "quintic_remains_transitive_over_possible_common_quadratic": true
+      },
+      "A5": {
+        "possible_nontrivial_common_quotient_orders": [],
+        "maximal_possible_intersection_degree": 1,
+        "quintic_remains_transitive_over_possible_common_quadratic": null
+      },
+      "S5": {
+        "possible_nontrivial_common_quotient_orders": [
+          2
+        ],
+        "maximal_possible_intersection_degree": 2,
+        "quintic_remains_transitive_over_possible_common_quadratic": true
+      }
+    }
+  },
+  "schur_field": {
+    "group": "PSL2(F11)",
+    "order": 660,
+    "simple": true,
+    "maximal_quintic_closure_order": 120,
+    "quartic_x_quintic_residue_compositum_degree": 20,
+    "maximal_quartic_x_quintic_closure_order": 2880,
+    "prime_11_divides_quartic_x_quintic_closure_order": false,
+    "intersection_with_every_quintic_galois_closure": "K",
+    "intersection_with_combined_quartic_quintic_galois_closure": "K",
+    "linked_quintic_degree_after_schur_base_change": 5,
+    "line_orbit_x_quintic_orbit": 275,
+    "line_orbit_x_linked_quartic_quintic_pair": 1100
+  },
+  "balestrieri_successor_from_degree_5": {
+    "raw_possible_degrees": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "after_quadratic_descent": [
+      1,
+      4,
+      7
+    ],
+    "degree_4_branch_returns_to": [
+      1,
+      5
+    ],
+    "forced_strict_descent": false
+  },
+  "deductions": {
+    "A4_quartic_and_linked_quintic_closures_are_linearly_disjoint": true,
+    "S4_quartic_and_linked_quintic_intersection_degree_at_most_2": true,
+    "S4_nontrivial_intersection_is_the_quartic_discriminant_field": true,
+    "linked_quintic_stays_degree_5_over_that_possible_quadratic": true,
+    "schur_lines_do_not_split_the_linked_quintic": true,
+    "combined_linked_pair_is_linearly_disjoint_from_schur_splitting_field": true
+  },
+  "boundary": "The certificate classifies field intersections and the Balestrieri successor set. It supplies no effective degree-one point on the cubic surface."
+}
