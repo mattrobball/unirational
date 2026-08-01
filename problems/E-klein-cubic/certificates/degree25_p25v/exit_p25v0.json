@@ -1,0 +1,64 @@
+{
+  "criterion": "Exact degree-four graded membership: T_i(s_a) \u2208 (N_0)_4 and (T_i T_j \u2212 T_j T_i)b \u2208 (N_0)_4 with (N_0)_4 = S_1 \u00b7 (N_0)_3 inside F_4. Only pure-q (basis deg 0) membership was open after P25W; deg\u22651 automatic.",
+  "deg0_membership": {
+    "G_shape": [
+      25530,
+      91390
+    ],
+    "membership_all": false,
+    "n_Ti_in": 0,
+    "n_Ti_out": 4140,
+    "n_Ti_tests": 4140,
+    "n_comm_in": 0,
+    "n_comm_out": 315,
+    "n_comm_tests": 315,
+    "rank_S1V0": 25530,
+    "rank_S1V0_note": "FLINT nmod_mat_rref; map S_1\u2297V_0 \u2192 S_4 is injective"
+  },
+  "dispatch": "P25V.0",
+  "enlargement": {
+    "action": "Add all T_i(s_a) (as F_4 polyvectors) and all nonzero commutator defects on the quadratic basis as new generators of the relation module; rebuild (N)_4 and re-test T-stability until the membership tests stabilize.",
+    "closure_repeated": false,
+    "new_generators_lower_bound": 4455,
+    "note": "This packet certifies non-membership and records the enlargement mandate. A full iterative closure to a T-stable N is deferred; the lower presentation N_0 remains valid for emptiness (Supp(R/J) \u2286 Supp(F/N_0)).",
+    "stable": false
+  },
+  "exit": "P25V-PRESENTATION-ENLARGED",
+  "inputs": {
+    "T_quad_F3_sha256": "63d863a73873f4959842b5b8351b18d7c599a329ecccbe97d8027400450f9256",
+    "multiplication_matrices": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/multiplication_matrices.npz",
+    "relation_matrix": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/relation_matrix.npz",
+    "seed_F3_sha256": "c6baf33b2266375b1f53278177bda9e96a3525368ca0c6b8117531429b2d97f9"
+  },
+  "p25w_carry": {
+    "deg1_automatic": true,
+    "deg2_automatic": true,
+    "source": "certificates/degree25_p25w/p25w1_component_spans.json"
+  },
+  "prime": 89,
+  "resource": {
+    "budget_gib": 64,
+    "elapsed_seconds_flint": 7927.433,
+    "elapsed_seconds_produce": 873.2664289474487,
+    "flint_peak_rss_bytes": 48598941696,
+    "named_bottleneck": "FLINT nmod_mat_rref of 25530\u00d791390 over F_89 (~45 GiB)",
+    "peak_rss_mib_flint": 46347.5625,
+    "peak_rss_mib_produce": 352.84375
+  },
+  "self_sha256": "ae82a3701ab50cba55543e0ce0fa5e1def8bd7849d7c5e46e0d4f0894be9ff3b",
+  "structural_certificate": {
+    "artifact": "certificates/degree25_p25v/deg0_structural_cert.npz",
+    "flint_bulk": "/Users/worker/unirational/problems/E-klein-cubic/tmp/p25v_closure/deg0_result.json",
+    "n_Tq0_cubics": 126,
+    "n_Tq0_in_V0": 0,
+    "n_Tq0_out_V0": 126,
+    "n_Tq0_zero": 0,
+    "rank_V0": 690,
+    "statement": "All 126 degree-0 components of T_quad_F3[i,qi] (i=0..5, qi=0..20) lie outside V_0 = span of the 690 seed pure-q cubic rows in S_3. Therefore for every seed s_a and every i, the pure-q component deg0(T_i(s_a)) = \u03a3_qi L_{a,qi} \u00b7 Tq0[i,qi] is an S_1-linear combination of cubics outside V_0, and the FLINT rref of G confirms none of the 4140 such vectors (nor the 315 commutator deg0 defects) lie in S_1\u00b7V_0."
+  },
+  "theorem": {
+    "does_not_prove": "The T-stable closure N of N_0; exactness of any enlarged presentation; emptiness of landing support (that is P25V.1 on the lower module).",
+    "proves": "Over F_89, the pure-q degree-four membership tests for all 6\u00b7690 vectors T_i(s_a) and all 315 commutator defects on quadratic basis elements FAIL: none lie in S_1\u00b7V_0 \u2282 S_4. Hence N_0 is not T-stable and F/N_0 \u2247 R/J. The presentation must be enlarged.",
+    "scope": "Exact over F_89. Lower-presentation caveat unchanged."
+  }
+}

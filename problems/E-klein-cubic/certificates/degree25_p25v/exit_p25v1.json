@@ -1,0 +1,120 @@
+{
+  "also_tried_weaker": [
+    28,
+    32,
+    40
+  ],
+  "blocker": {
+    "headline_capable": true,
+    "last_completed_invariant": "Deterministic compressions stored for r\u2208{28,32,40,64} with published seed 2026073189; Stage A empty; specialized rank(M(q))=28 on 200 random q (discovery only)",
+    "matrix_algebra_dimensions": {
+      "compressed_r64": "64 eqs, bidegree (3,1), 65 multiprojective vars / 63 affine chart",
+      "msolve_r28_deg5_matrix": "25232 \u00d7 1832458 (1.93% dens), 336 new",
+      "msolve_r64_deg5_matrix": "56949 \u00d7 1828991 (2.48% dens), 1593 new basis elems"
+    },
+    "observed_rss": {
+      "budget_gib": 64,
+      "r28_active_approx_gib": 21,
+      "r64_active_approx_gib": 40
+    },
+    "reason": "msolve F4 on affine charts climbs past degree 5 with multi-million-column Macaulay matrices; no accepted emptiness certificate (saturated unit ideal / irrelevant-power containment / Nullstellensatz identity) was obtained before dispatch wall. Empty solver output is not emptiness. Route remains valid.",
+    "smallest_reformulation": "M2 multihomogeneous saturate(I, qideal*bideal) on r=64 matrix form; or FittingIdeal(0, coker M) saturated by q-irrelevant; or chartwise msolve with higher wall budget after deg-6 F4 completes"
+  },
+  "compression_seed_rng": 2026073189,
+  "compressions": {
+    "28": {
+      "C_sha256": "e39288c6b876b7e508866cb924884929746f52918ece7149a36fee9f7bc97064",
+      "C_shape": [
+        28,
+        690
+      ],
+      "compressed_sha256": "a4021200ff06982f20ed0c248663fd9855e4f58c7836e385732c25ff51efd533",
+      "n_equations": 28,
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/tmp/p25v_incidence/compression_r28.npz",
+      "seed_rng": 2026073189
+    },
+    "32": {
+      "C_sha256": "fdf7f14e887c2e71096b7ff8587a64c736ef525c4088562c1b211a6ffd6b47ac",
+      "C_shape": [
+        32,
+        690
+      ],
+      "compressed_sha256": "6bbb9fe9be2624cc9eb670bc72ff5b295537a9253d22f5cbd3f8b5eaffe11842",
+      "n_equations": 32,
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/tmp/p25v_incidence/compression_r32.npz",
+      "seed_rng": 2026073189
+    },
+    "40": {
+      "C_sha256": "d764294b5559afc6a8f521d39257af1c71da011b9d195a25e376bae38bb170c3",
+      "C_shape": [
+        40,
+        690
+      ],
+      "compressed_sha256": "cb179dfe78f087a619b27275eef6f32ec54a5eaadcfc67bf22d8b7ea0ed6b326",
+      "n_equations": 40,
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/tmp/p25v_incidence/compression_r40.npz",
+      "seed_rng": 2026073189
+    },
+    "64": {
+      "C_sha256": "75eed66212d78cf164ec15d0e81da58dfe67ca6807c3ded1f552e3c6b98608f2",
+      "C_shape": [
+        64,
+        690
+      ],
+      "compressed_sha256": "01184fda6d1af5be43844de8965986133afd38858f6048da826f3312e139f8c6",
+      "n_equations": 64,
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/tmp/p25v_incidence/compression_r64.npz",
+      "seed_rng": 2026073189
+    }
+  },
+  "dispatch": "P25V.1",
+  "empty_certificate": null,
+  "exit": "P25V-SUPPORT-UNDECIDED",
+  "implication": {
+    "compressed_empty_implies_seed_empty": true,
+    "dvr_gives_char0_degree25_exclusion": true,
+    "nonempty_compressed_proves_nothing": true,
+    "scoped_not_headline": true,
+    "seed_empty_implies_true_landing_empty": true
+  },
+  "inputs": {
+    "relation_matrix": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/relation_matrix.npz",
+    "seed_F3_sha256": "c6baf33b2266375b1f53278177bda9e96a3525368ca0c6b8117531429b2d97f9"
+  },
+  "order_attempted": [
+    64,
+    72,
+    84
+  ],
+  "prime": 89,
+  "resource": {
+    "budget_gib": 64,
+    "elapsed_seconds": 0.029967069625854492,
+    "peak_rss_mib_assemble": 30.921875,
+    "preflight_floor_gib": 16
+  },
+  "self_sha256": "426ade29a698f0600c492ba1402633d2437a9634cb1ffc44e50d862a301b0f77",
+  "solver_notes": {
+    "msolve_b0_1_gb.log": {
+      "bytes": 1701,
+      "has_unit_basis": false,
+      "output_file_exists": true
+    },
+    "msolve_b0_1_solve.log": {
+      "bytes": 1776,
+      "has_unit_basis": false,
+      "output_file_exists": true
+    },
+    "msolve_r28.log": {
+      "bytes": 1776,
+      "has_unit_basis": false,
+      "output_file_exists": true
+    }
+  },
+  "stageA": "P25W-STAGEA-EMPTY",
+  "theorem": {
+    "does_not_prove": "Full kernel-incidence emptiness (no accepted certificate yet); any char-0 row rank; presentation exactness (see P25V.0 ENLARGED).",
+    "proves": "None beyond setup: compressions and Stage A inheritance are recorded. ",
+    "scope": "F_89 special fibre; lower presentation N_0."
+  }
+}

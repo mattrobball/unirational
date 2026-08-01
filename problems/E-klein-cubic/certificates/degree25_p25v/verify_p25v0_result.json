@@ -1,0 +1,9 @@
+{
+  "exit": "P25V-PRESENTATION-ENLARGED",
+  "method": "RREF of V0 + remainder of each Tq0 cubic",
+  "ok": true,
+  "seed_F3_sha256": "c6baf33b2266375b1f53278177bda9e96a3525368ca0c6b8117531429b2d97f9",
+  "self_sha256": "9602adc363467527333a873296f3f4c984ca633943170ec0d7b2f4de861b3f55",
+  "verified_rank_V0": 690,
+  "verified_structural_Tq0_out_V0": 126
+}

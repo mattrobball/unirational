@@ -1,0 +1,12 @@
+{
+  "checked_compressions": [
+    28,
+    32,
+    40,
+    64
+  ],
+  "exit": "P25V-SUPPORT-UNDECIDED",
+  "no_false_emptiness_claim": true,
+  "ok": true,
+  "self_sha256": "490b58b2ae44b9388dff3a9a7f70ba18a4f8f9a1f88b1279d5c866e5fb7f73c3"
+}

@@ -1,0 +1,34 @@
+{
+  "compression_seed_rng": 2026073189,
+  "dispatch": "P25V.1-preflight",
+  "inputs": {
+    "C_sha256": "75eed66212d78cf164ec15d0e81da58dfe67ca6807c3ded1f552e3c6b98608f2",
+    "compressed_sha256": "01184fda6d1af5be43844de8965986133afd38858f6048da826f3312e139f8c6",
+    "seed_F3_sha256": "c6baf33b2266375b1f53278177bda9e96a3525368ca0c6b8117531429b2d97f9"
+  },
+  "order": [
+    64,
+    72,
+    84
+  ],
+  "prime": 89,
+  "resource": {
+    "based_on": "compressed incidence (64 eqs), not raw degree-four matrix",
+    "budget_gib": 64,
+    "forbidden": "43-variable degree-four F4/Macaulay",
+    "measured_floor_gib_r64": 16,
+    "method": "msolve affine charts (b0=1,q0=1) and (b0=0,b1=1,q0=1); M2 multiprojective saturate backup"
+  },
+  "self_sha256": "5d1b06d3a2c3bfb38187d0eb3e0c95bfd2730f91b347dfa04be2931b48de8968",
+  "system": {
+    "bidegree": [
+      3,
+      1
+    ],
+    "full_seed_equations": 690,
+    "n_b": 28,
+    "n_q": 37,
+    "stageA": "P25W-STAGEA-EMPTY",
+    "survivor_constraint": "b0\u22600 or b1\u22600"
+  }
+}
