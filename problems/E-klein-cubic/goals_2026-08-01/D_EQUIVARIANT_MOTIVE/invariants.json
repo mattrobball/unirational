@@ -61,7 +61,7 @@
     "consumed_commit": "80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c",
     "initial_inspection_commit": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
     "pinned_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
-    "produced_commit": null
+    "produced_artifact_commit": "fc4e4900c70101d27ae5facef3bf6a706bdb9e11"
   },
   "schema": "D_EQUIVARIANT_MOTIVE.v1",
   "steenrod_on_H3": {

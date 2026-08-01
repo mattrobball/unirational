@@ -56,7 +56,7 @@ def target_payload() -> dict:
             "pinned_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
             "initial_inspection_commit": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
             "consumed_commit": "80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c",
-            "produced_commit": None,
+            "produced_artifact_commit": "fc4e4900c70101d27ae5facef3bf6a706bdb9e11",
         },
         "group": {
             "name": "PSL(2,11)",
@@ -151,7 +151,7 @@ def main() -> None:
         "schema": "D_EQUIVARIANT_MOTIVE.SEAL.v1",
         "self_hash_included": False,
         "source_commit": "80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c",
-        "produced_commit": None,
+        "produced_artifact_commit": "fc4e4900c70101d27ae5facef3bf6a706bdb9e11",
         "files": {name: sha256(ROOT / name) for name in sealed_names},
     }
     SEAL.write_text(canonical_json(seal), encoding="utf-8")

@@ -24,7 +24,7 @@ alone.
 - initial inspection head: 2140419410cfff2f7d7dcca166acef8c16a0d41b
 - live repository commit consumed after concurrent waypoint audit:
   80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c
-- produced commit: PENDING-SCOPED-COMMIT
+- produced artifact commit: fc4e4900c70101d27ae5facef3bf6a706bdb9e11
 - work is contained in D_EQUIVARIANT_MOTIVE/
 
 ## Replay
