@@ -1,0 +1,29 @@
+{
+  "packet": "certificates/fano_c2",
+  "exit": "C2-TWO-GENERATORS-MODULAR",
+  "headline": "OPEN",
+  "date": "2026-07-31",
+  "workorder": "WORKORDER_CAS_T10_P25W_C2.md",
+  "file_sha256": {
+    "C2_WORD_BASIS.md": "3776b50363c09260542ecf3f8611bc2cc4a6380c289a01a00f8da75c78116338",
+    "word_basis.json": "6760fc38ad536320fd8fc0b697bacababdb96166424d1233ce33615bad6e9d7e",
+    "word_basis.npz": "766487bc206908991f841967aac8002fc18c2e347da66e85a2748cace6f88668",
+    "preflight_c21.json": "445bdb992f61c5037bd9b16ec4f0f699af2b8d5fcf5fd406d653064411052bac",
+    "produce_c2.py": "0433540afdf7e04b31367f4c77ccca1b9e4aef5bb081fe58700300dfb81b1269",
+    "verify_c2.py": "8699fd0ed56f1190037d8b3ef3565c2ad7e936419825ebf0d7ca9484eb8020d2",
+    "exit_c2.json": "7a2a957b91c9b4527955c3279e773108e63eff132ddd31d86de1df173799ea97"
+  },
+  "decisive_invariants": {
+    "primary_prime": 23,
+    "secondary_prime": 89,
+    "a_frame_index": 1,
+    "b_frame_index": 2,
+    "word_basis_det_f23": 16,
+    "word_basis_det_f89": 82,
+    "max_word_length": 5,
+    "n_words": 36
+  },
+  "proves": "Modular two-generator generation of the specialized 36-dim A_proj frame at p=23 and p=89 with unit word-basis determinants.",
+  "does_not_prove": "L_a,L_b over K_proj; Morita; Hermitian; Fano point.",
+  "verifier": "verify_c2.py (does not import produce_c2.py)"
+}

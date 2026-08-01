@@ -1,0 +1,12 @@
+{
+  "exit": "C2-TWO-GENERATORS-MODULAR",
+  "headline": "OPEN",
+  "pair": {
+    "a_frame_index": 1,
+    "b_frame_index": 2
+  },
+  "primary_det": 16,
+  "secondary_det": 82,
+  "peak_rss_MiB": 83.92,
+  "elapsed_seconds": 1.741
+}
