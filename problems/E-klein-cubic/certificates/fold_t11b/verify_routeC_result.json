@@ -1,0 +1,35 @@
+{
+  "exit": "T11B-UNDECIDED",
+  "verified": true,
+  "sealed_point_ok": true,
+  "independent_bad_point": {
+    "pt": [
+      2,
+      76,
+      12,
+      65,
+      3
+    ],
+    "gens": {
+      "P": 64,
+      "Pu": 85,
+      "PA": 3,
+      "PB": 0,
+      "PY": 0,
+      "PZ": 0,
+      "Delta": 78
+    },
+    "gates": {
+      "ell": 43,
+      "C": 95,
+      "Q4": 52,
+      "P_uu": 85,
+      "delta": 53,
+      "L": 88,
+      "M": 76,
+      "F27": 100,
+      "G": 50
+    }
+  },
+  "headline": "OPEN"
+}

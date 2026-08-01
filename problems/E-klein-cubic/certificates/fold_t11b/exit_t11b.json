@@ -1,0 +1,1146 @@
+{
+  "schema": "klein-cubic-T11B-routeC-v1",
+  "exit": "T11B-UNDECIDED",
+  "headline": "OPEN",
+  "object": "Sing(S_G) Route C for chart (PB,PY,PZ) \u2014 not the target branch B",
+  "route": "C",
+  "elapsed_s": 276.722,
+  "chart": {
+    "pair": [
+      "A",
+      "u"
+    ],
+    "g1_g2_g3": [
+      "PB",
+      "PY",
+      "PZ"
+    ],
+    "Delta_def": "det Hessian block of P in (B,Y,Z)",
+    "sealed_point_mod_101": {
+      "A": 63,
+      "B": 74,
+      "Y": 15,
+      "Z": 15,
+      "u": 35,
+      "gens": {
+        "P": 0,
+        "Pu": 0,
+        "PA": 0,
+        "PB": 0,
+        "PY": 0,
+        "PZ": 0,
+        "Delta": 5
+      },
+      "gates": {
+        "ell": 87,
+        "C": 31,
+        "Q4": 28,
+        "P_uu": 12,
+        "delta": 19,
+        "L": 48,
+        "M": 74,
+        "F27": 10,
+        "G": 39
+      }
+    }
+  },
+  "inputs": {
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "P_n_terms": 1593,
+    "gates_dir": "certificates/fold_normalization_t2r/saturation_factors"
+  },
+  "consistency_table": {
+    "N0_cofactor_degree_scan_p101": [
+      {
+        "N": 0,
+        "d": 0,
+        "f": "P",
+        "status": "inconsistent",
+        "rankA": 3,
+        "rankAug": 4,
+        "n_unk": 3,
+        "n_pts": 43
+      },
+      {
+        "N": 0,
+        "d": 1,
+        "f": "P",
+        "status": "inconsistent",
+        "rankA": 18,
+        "rankAug": 19,
+        "n_unk": 18,
+        "n_pts": 58
+      },
+      {
+        "N": 0,
+        "d": 2,
+        "f": "P",
+        "status": "inconsistent",
+        "rankA": 63,
+        "rankAug": 64,
+        "n_unk": 63,
+        "n_pts": 126
+      },
+      {
+        "N": 0,
+        "d": 3,
+        "f": "P",
+        "status": "inconsistent",
+        "rankA": 168,
+        "rankAug": 169,
+        "n_unk": 168,
+        "n_pts": 336
+      },
+      {
+        "N": 0,
+        "d": 4,
+        "f": "P",
+        "status": "inconsistent",
+        "rankA": 378,
+        "rankAug": 379,
+        "n_unk": 378,
+        "n_pts": 756
+      },
+      {
+        "N": 0,
+        "d": 6,
+        "f": "P",
+        "status": "inconsistent",
+        "rankA": 1386,
+        "rankAug": 1387,
+        "n_unk": 1386,
+        "n_pts": 2772
+      },
+      {
+        "N": 0,
+        "d": 8,
+        "f": "P",
+        "status": "inconsistent",
+        "rankA": 3861,
+        "rankAug": 3862,
+        "n_unk": 3861,
+        "n_pts": 6000
+      }
+    ],
+    "interpretation": "At N=0 (no Delta/gate multiplier) the linear system for cofactors of total degree d<=8 is inconsistent for f=P. More strongly, modular points obstruct every (N,d) when D is built from Delta and named gates.",
+    "all_N_with_D_gates_Delta": "obstructed_for_all_N_and_d"
+  },
+  "obstruction": {
+    "summary": "There exist modular points x with PB=PY=PZ=0, Delta(x)!=0, every named gate nonzero at x, but P(x)!=0 (often also Pu,PA nonzero). Therefore no polynomial identity D^N f = a1 PB + a2 PY + a3 PZ can hold in Q[A,B,Y,Z,u] (or F_p[...]) when D is a product of Delta and named gates, for any N and any polynomial cofactors a_i.",
+    "named_gates_checked": [
+      "ell",
+      "C",
+      "Q4",
+      "P_uu",
+      "delta",
+      "L=A-15",
+      "M=B",
+      "G=c*L*M^4*Q4*F27^2 (p=101 only)"
+    ],
+    "n_bad_points_across_scans": 27,
+    "witness_point": {
+      "p": 101,
+      "A": 2,
+      "u": 3,
+      "pt": [
+        2,
+        76,
+        12,
+        65,
+        3
+      ],
+      "gens": {
+        "P": 64,
+        "Pu": 85,
+        "PA": 3,
+        "PB": 0,
+        "PY": 0,
+        "PZ": 0,
+        "Delta": 78
+      },
+      "gates": {
+        "ell": 43,
+        "C": 95,
+        "Q4": 52,
+        "P_uu": 85,
+        "delta": 53,
+        "L": 88,
+        "M": 76,
+        "F27": 100,
+        "G": 50
+      },
+      "vanishing_gates": []
+    },
+    "by_prime": {
+      "101": [
+        {
+          "p": 101,
+          "A": 63,
+          "u": 35,
+          "n_Fp_triple": 103,
+          "n_Delta_nz": 1,
+          "n_good_sing": 1,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        },
+        {
+          "p": 101,
+          "A": 2,
+          "u": 3,
+          "n_Fp_triple": 125,
+          "n_Delta_nz": 1,
+          "n_good_sing": 0,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                2,
+                76,
+                12,
+                65,
+                3
+              ],
+              "gens": {
+                "P": 64,
+                "Pu": 85,
+                "PA": 3,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 78
+              },
+              "gates": {
+                "ell": 43,
+                "C": 95,
+                "Q4": 52,
+                "P_uu": 85,
+                "delta": 53,
+                "L": 88,
+                "M": 76,
+                "F27": 100,
+                "G": 50
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 101,
+          "A": 5,
+          "u": 7,
+          "n_Fp_triple": 121,
+          "n_Delta_nz": 3,
+          "n_good_sing": 0,
+          "n_bad_extra": 3,
+          "bad_examples": [
+            {
+              "pt": [
+                5,
+                11,
+                0,
+                21,
+                7
+              ],
+              "gens": {
+                "P": 65,
+                "Pu": 9,
+                "PA": 54,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 47
+              },
+              "gates": {
+                "ell": 6,
+                "C": 5,
+                "Q4": 27,
+                "P_uu": 2,
+                "delta": 99,
+                "L": 91,
+                "M": 11,
+                "F27": 96,
+                "G": 69
+              },
+              "vanishing_gates": []
+            },
+            {
+              "pt": [
+                5,
+                87,
+                15,
+                96,
+                7
+              ],
+              "gens": {
+                "P": 50,
+                "Pu": 79,
+                "PA": 31,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 35
+              },
+              "gates": {
+                "ell": 7,
+                "C": 59,
+                "Q4": 97,
+                "P_uu": 4,
+                "delta": 62,
+                "L": 91,
+                "M": 87,
+                "F27": 50,
+                "G": 9
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 101,
+          "A": 100,
+          "u": 50,
+          "n_Fp_triple": 93,
+          "n_Delta_nz": 2,
+          "n_good_sing": 1,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                100,
+                68,
+                87,
+                12,
+                50
+              ],
+              "gens": {
+                "P": 99,
+                "Pu": 76,
+                "PA": 48,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 3
+              },
+              "gates": {
+                "ell": 27,
+                "C": 4,
+                "Q4": 40,
+                "P_uu": 35,
+                "delta": 5,
+                "L": 85,
+                "M": 68,
+                "F27": 73,
+                "G": 16
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 101,
+          "A": 1,
+          "u": 1,
+          "n_Fp_triple": 102,
+          "n_Delta_nz": 1,
+          "n_good_sing": 0,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                1,
+                100,
+                23,
+                41,
+                1
+              ],
+              "gens": {
+                "P": 84,
+                "Pu": 39,
+                "PA": 11,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 19
+              },
+              "gates": {
+                "ell": 31,
+                "C": 3,
+                "Q4": 45,
+                "P_uu": 45,
+                "delta": 37,
+                "L": 87,
+                "M": 100,
+                "F27": 34,
+                "G": 74
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 101,
+          "A": 10,
+          "u": 10,
+          "n_Fp_triple": 106,
+          "n_Delta_nz": 1,
+          "n_good_sing": 1,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        },
+        {
+          "p": 101,
+          "A": 50,
+          "u": 50,
+          "n_Fp_triple": 111,
+          "n_Delta_nz": 2,
+          "n_good_sing": 1,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                50,
+                86,
+                10,
+                79,
+                50
+              ],
+              "gens": {
+                "P": 53,
+                "Pu": 59,
+                "PA": 64,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 57
+              },
+              "gates": {
+                "ell": 69,
+                "C": 37,
+                "Q4": 96,
+                "P_uu": 34,
+                "delta": 48,
+                "L": 35,
+                "M": 86,
+                "F27": 79,
+                "G": 84
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 101,
+          "A": 11,
+          "u": 13,
+          "n_Fp_triple": 110,
+          "n_Delta_nz": 3,
+          "n_good_sing": 2,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                11,
+                83,
+                63,
+                25,
+                13
+              ],
+              "gens": {
+                "P": 7,
+                "Pu": 38,
+                "PA": 4,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 40
+              },
+              "gates": {
+                "ell": 1,
+                "C": 50,
+                "Q4": 54,
+                "P_uu": 40,
+                "delta": 50,
+                "L": 97,
+                "M": 83,
+                "F27": 81,
+                "G": 72
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 101,
+          "A": 20,
+          "u": 7,
+          "n_Fp_triple": 105,
+          "n_Delta_nz": 0,
+          "n_good_sing": 0,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        },
+        {
+          "p": 101,
+          "A": 0,
+          "u": 1,
+          "n_Fp_triple": 97,
+          "n_Delta_nz": 0,
+          "n_good_sing": 0,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        }
+      ],
+      "103": [
+        {
+          "p": 103,
+          "A": 63,
+          "u": 35,
+          "n_Fp_triple": 121,
+          "n_Delta_nz": 8,
+          "n_good_sing": 4,
+          "n_bad_extra": 4,
+          "bad_examples": [
+            {
+              "pt": [
+                63,
+                4,
+                41,
+                0,
+                35
+              ],
+              "gens": {
+                "P": 44,
+                "Pu": 64,
+                "PA": 19,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 72
+              },
+              "gates": {
+                "ell": 97,
+                "C": 3,
+                "Q4": 33,
+                "P_uu": 49,
+                "delta": 3,
+                "L": 48,
+                "M": 4
+              },
+              "vanishing_gates": []
+            },
+            {
+              "pt": [
+                63,
+                4,
+                77,
+                10,
+                35
+              ],
+              "gens": {
+                "P": 4,
+                "Pu": 83,
+                "PA": 28,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 39
+              },
+              "gates": {
+                "ell": 61,
+                "C": 69,
+                "Q4": 25,
+                "P_uu": 4,
+                "delta": 53,
+                "L": 48,
+                "M": 4
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 103,
+          "A": 2,
+          "u": 3,
+          "n_Fp_triple": 140,
+          "n_Delta_nz": 5,
+          "n_good_sing": 2,
+          "n_bad_extra": 3,
+          "bad_examples": [
+            {
+              "pt": [
+                2,
+                5,
+                75,
+                31,
+                3
+              ],
+              "gens": {
+                "P": 71,
+                "Pu": 26,
+                "PA": 81,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 12
+              },
+              "gates": {
+                "ell": 10,
+                "C": 29,
+                "Q4": 65,
+                "P_uu": 13,
+                "delta": 6,
+                "L": 90,
+                "M": 5
+              },
+              "vanishing_gates": []
+            },
+            {
+              "pt": [
+                2,
+                88,
+                53,
+                47,
+                3
+              ],
+              "gens": {
+                "P": 52,
+                "Pu": 76,
+                "PA": 91,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 92
+              },
+              "gates": {
+                "ell": 56,
+                "C": 87,
+                "Q4": 29,
+                "P_uu": 62,
+                "delta": 67,
+                "L": 90,
+                "M": 88
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 103,
+          "A": 5,
+          "u": 7,
+          "n_Fp_triple": 113,
+          "n_Delta_nz": 2,
+          "n_good_sing": 0,
+          "n_bad_extra": 2,
+          "bad_examples": [
+            {
+              "pt": [
+                5,
+                13,
+                72,
+                97,
+                7
+              ],
+              "gens": {
+                "P": 93,
+                "Pu": 73,
+                "PA": 37,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 66
+              },
+              "gates": {
+                "ell": 51,
+                "C": 24,
+                "Q4": 38,
+                "P_uu": 57,
+                "delta": 41,
+                "L": 93,
+                "M": 13
+              },
+              "vanishing_gates": []
+            },
+            {
+              "pt": [
+                5,
+                47,
+                91,
+                89,
+                7
+              ],
+              "gens": {
+                "P": 24,
+                "Pu": 98,
+                "PA": 66,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 28
+              },
+              "gates": {
+                "ell": 82,
+                "C": 94,
+                "Q4": 6,
+                "P_uu": 79,
+                "delta": 0,
+                "L": 93,
+                "M": 47
+              },
+              "vanishing_gates": [
+                "delta"
+              ]
+            }
+          ]
+        },
+        {
+          "p": 103,
+          "A": 100,
+          "u": 50,
+          "n_Fp_triple": 95,
+          "n_Delta_nz": 1,
+          "n_good_sing": 1,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        },
+        {
+          "p": 103,
+          "A": 1,
+          "u": 1,
+          "n_Fp_triple": 112,
+          "n_Delta_nz": 3,
+          "n_good_sing": 2,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                1,
+                23,
+                28,
+                44,
+                1
+              ],
+              "gens": {
+                "P": 92,
+                "Pu": 58,
+                "PA": 54,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 36
+              },
+              "gates": {
+                "ell": 81,
+                "C": 62,
+                "Q4": 64,
+                "P_uu": 32,
+                "delta": 64,
+                "L": 89,
+                "M": 23
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 103,
+          "A": 10,
+          "u": 10,
+          "n_Fp_triple": 108,
+          "n_Delta_nz": 3,
+          "n_good_sing": 3,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        },
+        {
+          "p": 103,
+          "A": 50,
+          "u": 50,
+          "n_Fp_triple": 103,
+          "n_Delta_nz": 0,
+          "n_good_sing": 0,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        },
+        {
+          "p": 103,
+          "A": 11,
+          "u": 13,
+          "n_Fp_triple": 113,
+          "n_Delta_nz": 2,
+          "n_good_sing": 2,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        },
+        {
+          "p": 103,
+          "A": 20,
+          "u": 7,
+          "n_Fp_triple": 116,
+          "n_Delta_nz": 2,
+          "n_good_sing": 2,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        },
+        {
+          "p": 103,
+          "A": 0,
+          "u": 1,
+          "n_Fp_triple": 93,
+          "n_Delta_nz": 1,
+          "n_good_sing": 0,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                0,
+                76,
+                5,
+                81,
+                1
+              ],
+              "gens": {
+                "P": 75,
+                "Pu": 66,
+                "PA": 93,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 24
+              },
+              "gates": {
+                "ell": 74,
+                "C": 58,
+                "Q4": 71,
+                "P_uu": 1,
+                "delta": 71,
+                "L": 88,
+                "M": 76
+              },
+              "vanishing_gates": []
+            }
+          ]
+        }
+      ],
+      "89": [
+        {
+          "p": 89,
+          "A": 63,
+          "u": 35,
+          "n_Fp_triple": 104,
+          "n_Delta_nz": 0,
+          "n_good_sing": 0,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        },
+        {
+          "p": 89,
+          "A": 2,
+          "u": 3,
+          "n_Fp_triple": 94,
+          "n_Delta_nz": 3,
+          "n_good_sing": 0,
+          "n_bad_extra": 3,
+          "bad_examples": [
+            {
+              "pt": [
+                2,
+                28,
+                51,
+                4,
+                3
+              ],
+              "gens": {
+                "P": 50,
+                "Pu": 72,
+                "PA": 65,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 31
+              },
+              "gates": {
+                "ell": 16,
+                "C": 33,
+                "Q4": 16,
+                "P_uu": 38,
+                "delta": 80,
+                "L": 76,
+                "M": 28
+              },
+              "vanishing_gates": []
+            },
+            {
+              "pt": [
+                2,
+                82,
+                81,
+                76,
+                3
+              ],
+              "gens": {
+                "P": 50,
+                "Pu": 27,
+                "PA": 20,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 1
+              },
+              "gates": {
+                "ell": 63,
+                "C": 33,
+                "Q4": 29,
+                "P_uu": 63,
+                "delta": 62,
+                "L": 76,
+                "M": 82
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 89,
+          "A": 5,
+          "u": 7,
+          "n_Fp_triple": 101,
+          "n_Delta_nz": 3,
+          "n_good_sing": 2,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                5,
+                35,
+                14,
+                57,
+                7
+              ],
+              "gens": {
+                "P": 29,
+                "Pu": 49,
+                "PA": 32,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 41
+              },
+              "gates": {
+                "ell": 82,
+                "C": 8,
+                "Q4": 49,
+                "P_uu": 36,
+                "delta": 46,
+                "L": 79,
+                "M": 35
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 89,
+          "A": 11,
+          "u": 50,
+          "n_Fp_triple": 92,
+          "n_Delta_nz": 0,
+          "n_good_sing": 0,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        },
+        {
+          "p": 89,
+          "A": 1,
+          "u": 1,
+          "n_Fp_triple": 109,
+          "n_Delta_nz": 2,
+          "n_good_sing": 1,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                1,
+                6,
+                86,
+                88,
+                1
+              ],
+              "gens": {
+                "P": 62,
+                "Pu": 15,
+                "PA": 61,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 22
+              },
+              "gates": {
+                "ell": 15,
+                "C": 0,
+                "Q4": 66,
+                "P_uu": 36,
+                "delta": 87,
+                "L": 75,
+                "M": 6
+              },
+              "vanishing_gates": [
+                "C"
+              ]
+            }
+          ]
+        },
+        {
+          "p": 89,
+          "A": 10,
+          "u": 10,
+          "n_Fp_triple": 100,
+          "n_Delta_nz": 1,
+          "n_good_sing": 0,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                10,
+                15,
+                31,
+                24,
+                10
+              ],
+              "gens": {
+                "P": 6,
+                "Pu": 50,
+                "PA": 84,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 63
+              },
+              "gates": {
+                "ell": 56,
+                "C": 36,
+                "Q4": 53,
+                "P_uu": 35,
+                "delta": 31,
+                "L": 84,
+                "M": 15
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 89,
+          "A": 50,
+          "u": 50,
+          "n_Fp_triple": 101,
+          "n_Delta_nz": 2,
+          "n_good_sing": 1,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                50,
+                20,
+                40,
+                34,
+                50
+              ],
+              "gens": {
+                "P": 51,
+                "Pu": 56,
+                "PA": 54,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 72
+              },
+              "gates": {
+                "ell": 48,
+                "C": 81,
+                "Q4": 27,
+                "P_uu": 86,
+                "delta": 78,
+                "L": 35,
+                "M": 20
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 89,
+          "A": 11,
+          "u": 13,
+          "n_Fp_triple": 93,
+          "n_Delta_nz": 2,
+          "n_good_sing": 1,
+          "n_bad_extra": 1,
+          "bad_examples": [
+            {
+              "pt": [
+                11,
+                19,
+                22,
+                21,
+                13
+              ],
+              "gens": {
+                "P": 4,
+                "Pu": 34,
+                "PA": 43,
+                "PB": 0,
+                "PY": 0,
+                "PZ": 0,
+                "Delta": 69
+              },
+              "gates": {
+                "ell": 38,
+                "C": 7,
+                "Q4": 34,
+                "P_uu": 5,
+                "delta": 16,
+                "L": 85,
+                "M": 19
+              },
+              "vanishing_gates": []
+            }
+          ]
+        },
+        {
+          "p": 89,
+          "A": 20,
+          "u": 7,
+          "n_Fp_triple": 83,
+          "n_Delta_nz": 3,
+          "n_good_sing": 3,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        },
+        {
+          "p": 89,
+          "A": 0,
+          "u": 1,
+          "n_Fp_triple": 88,
+          "n_Delta_nz": 0,
+          "n_good_sing": 0,
+          "n_bad_extra": 0,
+          "bad_examples": []
+        }
+      ]
+    }
+  },
+  "floor": {
+    "name": "BOTTLENECK-T11B-ROUTEC-EXTRANEOUS-CHART-COMPONENTS",
+    "detail": "On the open set where Delta and the named fold gates are invertible, V(PB,PY,PZ) properly contains Sing(S_G): extraneous components carry P!=0. Route C cannot close for this chart triple without a multiplier that vanishes on those extraneous components; no such factor appears among the named gates."
+  },
+  "not_claimed": [
+    "T11-FOLD-HEIGHT1",
+    "T11-PAIR-EMPTY",
+    "nonnormality of the fold S_G via this packet",
+    "any change to T-BRANCH-NONNORMAL (target branch B, separate object)"
+  ],
+  "peak_rss_MiB_producer": 636.64,
+  "memory_cap_note": "under 8 GiB exploratory ceiling; heavy slot not used"
+}
