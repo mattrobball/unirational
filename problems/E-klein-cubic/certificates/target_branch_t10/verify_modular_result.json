@@ -1,0 +1,50 @@
+{
+  "H_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+  "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+  "does_not_prove": [
+    "exact characteristic-zero nonempty generic fibre",
+    "dim Sing(S_G)=2",
+    "T10-FOLD-HEIGHT1 or T10-FOLD-NORMAL"
+  ],
+  "empty_pairs_note": "modular discovery found no empty pair among the ten",
+  "empty_pairs_to_rerun": [],
+  "exit": "T10-FOLD-UNDECIDED",
+  "headline": "OPEN",
+  "note_sha256": "fe75f58ef9fa3fa225108727f34b87fcd9e2ad59f5da87a0644d83ae99222160",
+  "proves": [
+    "recomputed modular zero-dim degree 6 for (A,u)=(63,35) mod 101 after gate product sat",
+    "recomputed modular zero-dim degree 12 for (A,B)=(49,68) mod 101 after gate product sat",
+    "ten-pair table present with modular_nonempty evidence on all pairs"
+  ],
+  "recomputed_fibres": [
+    {
+      "degree": 6,
+      "elapsed": 0.015378952026367188,
+      "free": {
+        "A": 63,
+        "u": 35
+      },
+      "pair": [
+        "A",
+        "u"
+      ],
+      "status": "zero_dim"
+    },
+    {
+      "degree": 12,
+      "elapsed": 0.0199429988861084,
+      "free": {
+        "A": 49,
+        "B": 68
+      },
+      "pair": [
+        "A",
+        "B"
+      ],
+      "status": "zero_dim"
+    }
+  ],
+  "result_sha256": "b82a44c3e8864921ed0125eaf585d88764efe064afdfb09e7e45956fd079203f",
+  "schema": "klein-cubic-T10.1-modular-verify-v1",
+  "table_sha256": "192666eeff4619aedf00f57c6b162a3355de43a298900ca264fa7ad6ca8cb750"
+}

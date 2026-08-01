@@ -1,0 +1,24 @@
+{
+  "artifacts": {
+    "BINODAL_ODD_PRIMARY.md": "6f0f24fa483e0d2457d3ffb941930f4d722545ddb39055f3c78c66af3eec42b0",
+    "FOLD_R1.md": "e972b61d65ac9d7e3b378ec66c983f775975253be050d97da73ce04b97d98c2d",
+    "TEN_PAIR_TABLE.md": "fe75f58ef9fa3fa225108727f34b87fcd9e2ad59f5da87a0644d83ae99222160",
+    "exit_t10.json": "47c78765b5e51104f7cb7f2d2aa885e11a6af2dbad4c64faee6e0ea0e802b546",
+    "modular_fibre_table.json": "192666eeff4619aedf00f57c6b162a3355de43a298900ca264fa7ad6ca8cb750",
+    "preflight_t101.json": "47a56c0c30175acc1c92a8c48a8a98bdcc7748b03e1fe0e02ce60b8142ee8644",
+    "verify_binodal_local_model.py": "c793a3445496425860a2461d07eeba31de2be232f57262ed0dfe4f04b65161d5",
+    "verify_binodal_result.json": "c1d14644c1eba12f55406e95133d923682ffad11deb3b2f2b85a51dbd7d8578b",
+    "verify_modular_fibres.py": "6043c605a0c393dc57957dd681787e3a3a55158059771c7e92df730a8426a275",
+    "verify_modular_result.json": "c359315d4d16d365331287a2911fb1e9b497f375195a6d0e7fb0eebbf6f029b2"
+  },
+  "exits": [
+    "T10-BINODAL-NO-3-DEFECT",
+    "T10-FOLD-UNDECIDED"
+  ],
+  "headline": "OPEN",
+  "schema": "klein-cubic-T10-SEAL-v1",
+  "verifiers": {
+    "verify_binodal_local_model.py": "truncated unit map + mult-by-2 on 3-groups",
+    "verify_modular_fibres.py": "msolve degrees (A,u)=6 and (A,B)=12 recomputed"
+  }
+}

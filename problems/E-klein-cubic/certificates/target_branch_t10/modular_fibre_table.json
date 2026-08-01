@@ -1,0 +1,2241 @@
+{
+  "elapsed_s": 132.84243822097778,
+  "exit_hint": "T10-FOLD-HEIGHT1_if_exact",
+  "full_G_certificates": [
+    {
+      "pair": [
+        "A",
+        "u"
+      ],
+      "result": {
+        "note": "u in free pair; G checked at points",
+        "status": "skip_fullG_u_free"
+      }
+    },
+    {
+      "pair": [
+        "A",
+        "Y"
+      ],
+      "result": {
+        "G_terms": 460,
+        "degree": 9,
+        "elapsed": 0.11699700355529785,
+        "free_vals": {
+          "A": 65,
+          "Y": 53
+        },
+        "is_unit": false,
+        "prod_terms": 14406,
+        "raw": "[0, [101,",
+        "status": "zero_dim"
+      }
+    },
+    {
+      "pair": [
+        "A",
+        "B"
+      ],
+      "result": {
+        "G_terms": 419,
+        "degree": 12,
+        "elapsed": 0.08557319641113281,
+        "free_vals": {
+          "A": 49,
+          "B": 68
+        },
+        "is_unit": false,
+        "prod_terms": 14018,
+        "raw": "[0, [101,",
+        "status": "zero_dim"
+      }
+    }
+  ],
+  "headline": "OPEN",
+  "inputs": {
+    "H_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "P_n_terms": 1593,
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
+  },
+  "memory_cap_MiB": 8192,
+  "method": "random specialization of free pair in F_p; msolve solve-mode on 3-var+Rabinowitsch",
+  "object": "Sing(S_G): I_sing saturated by ell,C,L,M,Q4,P_uu,delta (G filtered/full-certified)",
+  "primes": [
+    101,
+    103,
+    107
+  ],
+  "schema": "klein-cubic-T10.1-modular-fibres-v1",
+  "scope": "modular discovery only \u2014 not a characteristic-zero theorem",
+  "ten_pair_table": [
+    {
+      "aggregate_modular_verdict": "modular_nonempty",
+      "by_prime": [
+        {
+          "bad": 0,
+          "degrees": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "empty": 0,
+          "mod": 101,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 12,
+              "elapsed": 0.020494937896728516,
+              "free_vals": {
+                "A": 49,
+                "B": 68
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.020293235778808594,
+              "free_vals": {
+                "A": 22,
+                "B": 41
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.020364046096801758,
+              "free_vals": {
+                "A": 31,
+                "B": 95
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.020437955856323242,
+              "free_vals": {
+                "A": 33,
+                "B": 14
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.020524024963378906,
+              "free_vals": {
+                "A": 58,
+                "B": 55
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "empty": 0,
+          "mod": 103,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 12,
+              "elapsed": 0.020448923110961914,
+              "free_vals": {
+                "A": 37,
+                "B": 93
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.02035999298095703,
+              "free_vals": {
+                "A": 43,
+                "B": 9
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.020540952682495117,
+              "free_vals": {
+                "A": 70,
+                "B": 50
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.40448617935180664,
+              "free_vals": {
+                "A": 26,
+                "B": 72
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.020912885665893555,
+              "free_vals": {
+                "A": 96,
+                "B": 3
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "empty": 0,
+          "mod": 107,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 12,
+              "elapsed": 0.020634174346923828,
+              "free_vals": {
+                "A": 92,
+                "B": 80
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.0202789306640625,
+              "free_vals": {
+                "A": 43,
+                "B": 42
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.021403074264526367,
+              "free_vals": {
+                "A": 60,
+                "B": 55
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.020447969436645508,
+              "free_vals": {
+                "A": 96,
+                "B": 9
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.020457983016967773,
+              "free_vals": {
+                "A": 104,
+                "B": 82
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        }
+      ],
+      "exact_cost_estimate": {
+        "credible_matrix_floor": true,
+        "est_exact_RSS_GiB": "8-16",
+        "median_modular_degree": 12,
+        "modular_fibre_degree_samples": [
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "priority": "HEIGHT1_candidate",
+        "strategy": "exact finite algebra / RUR over Q(xi,xj) after gate sat"
+      },
+      "median_modular_degree": 12,
+      "pair": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "aggregate_modular_verdict": "modular_nonempty",
+      "by_prime": [
+        {
+          "bad": 0,
+          "degrees": [
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "empty": 0,
+          "mod": 101,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 9,
+              "elapsed": 0.021094083786010742,
+              "free_vals": {
+                "A": 65,
+                "Y": 53
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.02095317840576172,
+              "free_vals": {
+                "A": 21,
+                "Y": 18
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.020899057388305664,
+              "free_vals": {
+                "A": 38,
+                "Y": 48
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.02109694480895996,
+              "free_vals": {
+                "A": 71,
+                "Y": 89
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.020840883255004883,
+              "free_vals": {
+                "A": 19,
+                "Y": 83
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            6,
+            9,
+            9,
+            9,
+            9
+          ],
+          "empty": 0,
+          "mod": 103,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 6,
+              "elapsed": 0.020534038543701172,
+              "free_vals": {
+                "A": 94,
+                "Y": 88
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.021046876907348633,
+              "free_vals": {
+                "A": 72,
+                "Y": 77
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.02102518081665039,
+              "free_vals": {
+                "A": 9,
+                "Y": 73
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.02051830291748047,
+              "free_vals": {
+                "A": 46,
+                "Y": 61
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.020784854888916016,
+              "free_vals": {
+                "A": 84,
+                "Y": 47
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "empty": 0,
+          "mod": 107,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 9,
+              "elapsed": 0.021069765090942383,
+              "free_vals": {
+                "A": 94,
+                "Y": 10
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.020574092864990234,
+              "free_vals": {
+                "A": 82,
+                "Y": 84
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.020752906799316406,
+              "free_vals": {
+                "A": 6,
+                "Y": 17
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.020785808563232422,
+              "free_vals": {
+                "A": 96,
+                "Y": 82
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 9,
+              "elapsed": 0.02081894874572754,
+              "free_vals": {
+                "A": 94,
+                "Y": 12
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        }
+      ],
+      "exact_cost_estimate": {
+        "credible_matrix_floor": true,
+        "est_exact_RSS_GiB": "8-16",
+        "median_modular_degree": 9,
+        "modular_fibre_degree_samples": [
+          9,
+          9,
+          9,
+          9,
+          9,
+          6,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "priority": "HEIGHT1_candidate",
+        "strategy": "exact finite algebra / RUR over Q(xi,xj) after gate sat"
+      },
+      "median_modular_degree": 9,
+      "pair": [
+        "A",
+        "Y"
+      ]
+    },
+    {
+      "aggregate_modular_verdict": "modular_nonempty_partial",
+      "by_prime": [
+        {
+          "bad": 0,
+          "degrees": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "empty": 0,
+          "mod": 101,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 12,
+              "elapsed": 0.02608013153076172,
+              "free_vals": {
+                "A": 1,
+                "Z": 32
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.02607417106628418,
+              "free_vals": {
+                "A": 41,
+                "Z": 66
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.026117801666259766,
+              "free_vals": {
+                "A": 91,
+                "Z": 29
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.02662205696105957,
+              "free_vals": {
+                "A": 77,
+                "Z": 34
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.02614617347717285,
+              "free_vals": {
+                "A": 62,
+                "Z": 65
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "empty": 0,
+          "mod": 103,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 12,
+              "elapsed": 0.0263059139251709,
+              "free_vals": {
+                "A": 54,
+                "Z": 28
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.025820016860961914,
+              "free_vals": {
+                "A": 45,
+                "Z": 8
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.025828123092651367,
+              "free_vals": {
+                "A": 82,
+                "Z": 53
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.02573418617248535,
+              "free_vals": {
+                "A": 41,
+                "Z": 101
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.02593827247619629,
+              "free_vals": {
+                "A": 88,
+                "Z": 21
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 1,
+          "degrees": [
+            11,
+            12,
+            12,
+            12
+          ],
+          "empty": 0,
+          "mod": 107,
+          "nonempty": 4,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 11,
+              "elapsed": 0.02628183364868164,
+              "free_vals": {
+                "A": 95,
+                "Z": 58
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.02564406394958496,
+              "free_vals": {
+                "A": 71,
+                "Z": 33
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": null,
+              "elapsed": null,
+              "free_vals": {
+                "A": 88,
+                "Z": 91
+              },
+              "status": "gate_product_zero"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.026597261428833008,
+              "free_vals": {
+                "A": 11,
+                "Z": 105
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.025091171264648438,
+              "free_vals": {
+                "A": 38,
+                "Z": 17
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "inconclusive"
+        }
+      ],
+      "exact_cost_estimate": {
+        "credible_matrix_floor": true,
+        "est_exact_RSS_GiB": "8-16",
+        "median_modular_degree": 12,
+        "modular_fibre_degree_samples": [
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          11,
+          12
+        ],
+        "priority": "HEIGHT1_candidate",
+        "strategy": "exact finite algebra / RUR over Q(xi,xj) after gate sat"
+      },
+      "median_modular_degree": 12,
+      "pair": [
+        "A",
+        "Z"
+      ]
+    },
+    {
+      "aggregate_modular_verdict": "modular_nonempty",
+      "by_prime": [
+        {
+          "bad": 0,
+          "degrees": [
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "empty": 0,
+          "mod": 101,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 6,
+              "elapsed": 0.015444040298461914,
+              "free_vals": {
+                "A": 63,
+                "u": 35
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.01541590690612793,
+              "free_vals": {
+                "A": 6,
+                "u": 57
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.015612125396728516,
+              "free_vals": {
+                "A": 22,
+                "u": 13
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.01550602912902832,
+              "free_vals": {
+                "A": 29,
+                "u": 99
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.015495777130126953,
+              "free_vals": {
+                "A": 58,
+                "u": 11
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "empty": 0,
+          "mod": 103,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 6,
+              "elapsed": 0.015471935272216797,
+              "free_vals": {
+                "A": 81,
+                "u": 24
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.015837907791137695,
+              "free_vals": {
+                "A": 5,
+                "u": 62
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.015480995178222656,
+              "free_vals": {
+                "A": 12,
+                "u": 31
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.01522517204284668,
+              "free_vals": {
+                "A": 91,
+                "u": 6
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.22730517387390137,
+              "free_vals": {
+                "A": 26,
+                "u": 27
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "empty": 0,
+          "mod": 107,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 6,
+              "elapsed": 0.015529870986938477,
+              "free_vals": {
+                "A": 62,
+                "u": 80
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.015204191207885742,
+              "free_vals": {
+                "A": 32,
+                "u": 86
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.01540827751159668,
+              "free_vals": {
+                "A": 85,
+                "u": 74
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.015583992004394531,
+              "free_vals": {
+                "A": 72,
+                "u": 91
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 6,
+              "elapsed": 0.015994787216186523,
+              "free_vals": {
+                "A": 72,
+                "u": 83
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        }
+      ],
+      "exact_cost_estimate": {
+        "credible_matrix_floor": true,
+        "est_exact_RSS_GiB": "8-16",
+        "median_modular_degree": 6,
+        "modular_fibre_degree_samples": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "priority": "HEIGHT1_candidate",
+        "strategy": "exact finite algebra / RUR over Q(xi,xj) after gate sat"
+      },
+      "median_modular_degree": 6,
+      "pair": [
+        "A",
+        "u"
+      ]
+    },
+    {
+      "aggregate_modular_verdict": "modular_nonempty",
+      "by_prime": [
+        {
+          "bad": 0,
+          "degrees": [
+            17,
+            17,
+            17,
+            17,
+            17
+          ],
+          "empty": 0,
+          "mod": 101,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 17,
+              "elapsed": 0.09372591972351074,
+              "free_vals": {
+                "B": 1,
+                "Y": 32
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.09203386306762695,
+              "free_vals": {
+                "B": 41,
+                "Y": 66
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.09065604209899902,
+              "free_vals": {
+                "B": 91,
+                "Y": 29
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.09380006790161133,
+              "free_vals": {
+                "B": 77,
+                "Y": 34
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.0928201675415039,
+              "free_vals": {
+                "B": 62,
+                "Y": 65
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            17,
+            17,
+            17,
+            17,
+            17
+          ],
+          "empty": 0,
+          "mod": 103,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 17,
+              "elapsed": 0.10234618186950684,
+              "free_vals": {
+                "B": 54,
+                "Y": 28
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.1057581901550293,
+              "free_vals": {
+                "B": 45,
+                "Y": 8
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.10121512413024902,
+              "free_vals": {
+                "B": 82,
+                "Y": 53
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.09978294372558594,
+              "free_vals": {
+                "B": 41,
+                "Y": 101
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.10155415534973145,
+              "free_vals": {
+                "B": 88,
+                "Y": 21
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            17,
+            17,
+            17,
+            17,
+            17
+          ],
+          "empty": 0,
+          "mod": 107,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 17,
+              "elapsed": 0.09297418594360352,
+              "free_vals": {
+                "B": 95,
+                "Y": 58
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.09320211410522461,
+              "free_vals": {
+                "B": 71,
+                "Y": 33
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.09333300590515137,
+              "free_vals": {
+                "B": 88,
+                "Y": 91
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.09324502944946289,
+              "free_vals": {
+                "B": 11,
+                "Y": 105
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.09255599975585938,
+              "free_vals": {
+                "B": 38,
+                "Y": 17
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        }
+      ],
+      "exact_cost_estimate": {
+        "credible_matrix_floor": true,
+        "est_exact_RSS_GiB": "8-16",
+        "median_modular_degree": 17,
+        "modular_fibre_degree_samples": [
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17
+        ],
+        "priority": "HEIGHT1_candidate",
+        "strategy": "exact finite algebra / RUR over Q(xi,xj) after gate sat"
+      },
+      "median_modular_degree": 17,
+      "pair": [
+        "B",
+        "Y"
+      ]
+    },
+    {
+      "aggregate_modular_verdict": "modular_nonempty",
+      "by_prime": [
+        {
+          "bad": 0,
+          "degrees": [
+            24,
+            24,
+            24,
+            24,
+            24
+          ],
+          "empty": 0,
+          "mod": 101,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 24,
+              "elapsed": 0.14831018447875977,
+              "free_vals": {
+                "B": 67,
+                "Z": 8
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 24,
+              "elapsed": 0.1484220027923584,
+              "free_vals": {
+                "B": 42,
+                "Z": 6
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 24,
+              "elapsed": 0.147691011428833,
+              "free_vals": {
+                "B": 51,
+                "Z": 39
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 24,
+              "elapsed": 0.14829516410827637,
+              "free_vals": {
+                "B": 75,
+                "Z": 78
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 24,
+              "elapsed": 0.14742588996887207,
+              "free_vals": {
+                "B": 45,
+                "Z": 99
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            22,
+            22,
+            22,
+            22,
+            22
+          ],
+          "empty": 0,
+          "mod": 103,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 22,
+              "elapsed": 0.15794110298156738,
+              "free_vals": {
+                "B": 71,
+                "Z": 95
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 22,
+              "elapsed": 0.1572721004486084,
+              "free_vals": {
+                "B": 9,
+                "Z": 73
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 22,
+              "elapsed": 0.1574852466583252,
+              "free_vals": {
+                "B": 34,
+                "Z": 84
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 22,
+              "elapsed": 0.15442299842834473,
+              "free_vals": {
+                "B": 86,
+                "Z": 36
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 22,
+              "elapsed": 0.15117287635803223,
+              "free_vals": {
+                "B": 13,
+                "Z": 76
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            24,
+            24,
+            24,
+            24,
+            24
+          ],
+          "empty": 0,
+          "mod": 107,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 24,
+              "elapsed": 0.1446988582611084,
+              "free_vals": {
+                "B": 26,
+                "Z": 57
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 24,
+              "elapsed": 0.1430678367614746,
+              "free_vals": {
+                "B": 44,
+                "Z": 102
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 24,
+              "elapsed": 0.1444990634918213,
+              "free_vals": {
+                "B": 42,
+                "Z": 66
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 24,
+              "elapsed": 0.14416193962097168,
+              "free_vals": {
+                "B": 27,
+                "Z": 94
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 24,
+              "elapsed": 0.14474821090698242,
+              "free_vals": {
+                "B": 9,
+                "Z": 66
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        }
+      ],
+      "exact_cost_estimate": {
+        "credible_matrix_floor": true,
+        "est_exact_RSS_GiB": "16-64",
+        "median_modular_degree": 24,
+        "modular_fibre_degree_samples": [
+          24,
+          24,
+          24,
+          24,
+          24,
+          22,
+          22,
+          22,
+          22,
+          22,
+          24,
+          24
+        ],
+        "priority": "HEIGHT1_candidate",
+        "strategy": "exact finite algebra / RUR over Q(xi,xj) after gate sat"
+      },
+      "median_modular_degree": 24,
+      "pair": [
+        "B",
+        "Z"
+      ]
+    },
+    {
+      "aggregate_modular_verdict": "modular_nonempty",
+      "by_prime": [
+        {
+          "bad": 0,
+          "degrees": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "empty": 0,
+          "mod": 101,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 16,
+              "elapsed": 0.10899186134338379,
+              "free_vals": {
+                "B": 37,
+                "u": 1
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.1077871322631836,
+              "free_vals": {
+                "B": 53,
+                "u": 10
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.1107320785522461,
+              "free_vals": {
+                "B": 100,
+                "u": 88
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.10929298400878906,
+              "free_vals": {
+                "B": 19,
+                "u": 82
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.11008286476135254,
+              "free_vals": {
+                "B": 4,
+                "u": 67
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            16,
+            15,
+            16,
+            16,
+            16
+          ],
+          "empty": 0,
+          "mod": 103,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 16,
+              "elapsed": 0.11170101165771484,
+              "free_vals": {
+                "B": 1,
+                "u": 85
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 15,
+              "elapsed": 0.10964798927307129,
+              "free_vals": {
+                "B": 8,
+                "u": 30
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.1093297004699707,
+              "free_vals": {
+                "B": 77,
+                "u": 60
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.11326718330383301,
+              "free_vals": {
+                "B": 48,
+                "u": 53
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.10907196998596191,
+              "free_vals": {
+                "B": 38,
+                "u": 29
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "empty": 0,
+          "mod": 107,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 16,
+              "elapsed": 0.11222720146179199,
+              "free_vals": {
+                "B": 16,
+                "u": 95
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.11469793319702148,
+              "free_vals": {
+                "B": 42,
+                "u": 14
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.11188912391662598,
+              "free_vals": {
+                "B": 67,
+                "u": 94
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.11201906204223633,
+              "free_vals": {
+                "B": 34,
+                "u": 64
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.11448788642883301,
+              "free_vals": {
+                "B": 68,
+                "u": 7
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        }
+      ],
+      "exact_cost_estimate": {
+        "credible_matrix_floor": true,
+        "est_exact_RSS_GiB": "8-16",
+        "median_modular_degree": 16,
+        "modular_fibre_degree_samples": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          15,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "priority": "HEIGHT1_candidate",
+        "strategy": "exact finite algebra / RUR over Q(xi,xj) after gate sat"
+      },
+      "median_modular_degree": 16,
+      "pair": [
+        "B",
+        "u"
+      ]
+    },
+    {
+      "aggregate_modular_verdict": "modular_nonempty",
+      "by_prime": [
+        {
+          "bad": 0,
+          "degrees": [
+            18,
+            18,
+            18,
+            18,
+            18
+          ],
+          "empty": 0,
+          "mod": 101,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 18,
+              "elapsed": 0.14116191864013672,
+              "free_vals": {
+                "Y": 67,
+                "Z": 84
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 18,
+              "elapsed": 0.14280915260314941,
+              "free_vals": {
+                "Y": 81,
+                "Z": 97
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 18,
+              "elapsed": 0.13894200325012207,
+              "free_vals": {
+                "Y": 38,
+                "Z": 74
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 18,
+              "elapsed": 0.1367948055267334,
+              "free_vals": {
+                "Y": 10,
+                "Z": 35
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 18,
+              "elapsed": 0.1399831771850586,
+              "free_vals": {
+                "Y": 93,
+                "Z": 54
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            17,
+            17,
+            17,
+            16,
+            15
+          ],
+          "empty": 0,
+          "mod": 103,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 17,
+              "elapsed": 0.1466057300567627,
+              "free_vals": {
+                "Y": 81,
+                "Z": 100
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.147629976272583,
+              "free_vals": {
+                "Y": 28,
+                "Z": 38
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 17,
+              "elapsed": 0.14783501625061035,
+              "free_vals": {
+                "Y": 85,
+                "Z": 15
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.1474308967590332,
+              "free_vals": {
+                "Y": 3,
+                "Z": 41
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 15,
+              "elapsed": 0.1464831829071045,
+              "free_vals": {
+                "Y": 74,
+                "Z": 90
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            18,
+            18,
+            18,
+            18,
+            18
+          ],
+          "empty": 0,
+          "mod": 107,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 18,
+              "elapsed": 0.13941407203674316,
+              "free_vals": {
+                "Y": 49,
+                "Z": 72
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 18,
+              "elapsed": 0.13834118843078613,
+              "free_vals": {
+                "Y": 43,
+                "Z": 74
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 18,
+              "elapsed": 0.13922595977783203,
+              "free_vals": {
+                "Y": 104,
+                "Z": 64
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 18,
+              "elapsed": 0.138808012008667,
+              "free_vals": {
+                "Y": 63,
+                "Z": 53
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 18,
+              "elapsed": 0.141618013381958,
+              "free_vals": {
+                "Y": 66,
+                "Z": 45
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        }
+      ],
+      "exact_cost_estimate": {
+        "credible_matrix_floor": true,
+        "est_exact_RSS_GiB": "8-16",
+        "median_modular_degree": 18,
+        "modular_fibre_degree_samples": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          17,
+          17,
+          17,
+          16,
+          15,
+          18,
+          18
+        ],
+        "priority": "HEIGHT1_candidate",
+        "strategy": "exact finite algebra / RUR over Q(xi,xj) after gate sat"
+      },
+      "median_modular_degree": 18,
+      "pair": [
+        "Y",
+        "Z"
+      ]
+    },
+    {
+      "aggregate_modular_verdict": "modular_nonempty",
+      "by_prime": [
+        {
+          "bad": 0,
+          "degrees": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "empty": 0,
+          "mod": 101,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 12,
+              "elapsed": 0.10283398628234863,
+              "free_vals": {
+                "Y": 82,
+                "u": 89
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.10434699058532715,
+              "free_vals": {
+                "Y": 43,
+                "u": 45
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.0972280502319336,
+              "free_vals": {
+                "Y": 95,
+                "u": 73
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.09751081466674805,
+              "free_vals": {
+                "Y": 70,
+                "u": 23
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.09833121299743652,
+              "free_vals": {
+                "Y": 75,
+                "u": 99
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            12,
+            12,
+            12,
+            11,
+            12
+          ],
+          "empty": 0,
+          "mod": 103,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 12,
+              "elapsed": 0.1004481315612793,
+              "free_vals": {
+                "Y": 15,
+                "u": 46
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.10035037994384766,
+              "free_vals": {
+                "Y": 19,
+                "u": 93
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.10189318656921387,
+              "free_vals": {
+                "Y": 73,
+                "u": 64
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 11,
+              "elapsed": 0.09698629379272461,
+              "free_vals": {
+                "Y": 33,
+                "u": 80
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.09839582443237305,
+              "free_vals": {
+                "Y": 73,
+                "u": 26
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            11,
+            12,
+            12,
+            12,
+            12
+          ],
+          "empty": 0,
+          "mod": 107,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 11,
+              "elapsed": 0.10067415237426758,
+              "free_vals": {
+                "Y": 12,
+                "u": 65
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.10010600090026855,
+              "free_vals": {
+                "Y": 26,
+                "u": 75
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.09964108467102051,
+              "free_vals": {
+                "Y": 5,
+                "u": 72
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.10056614875793457,
+              "free_vals": {
+                "Y": 62,
+                "u": 70
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 12,
+              "elapsed": 0.09732484817504883,
+              "free_vals": {
+                "Y": 32,
+                "u": 67
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        }
+      ],
+      "exact_cost_estimate": {
+        "credible_matrix_floor": true,
+        "est_exact_RSS_GiB": "8-16",
+        "median_modular_degree": 12,
+        "modular_fibre_degree_samples": [
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          11,
+          12,
+          11,
+          12
+        ],
+        "priority": "HEIGHT1_candidate",
+        "strategy": "exact finite algebra / RUR over Q(xi,xj) after gate sat"
+      },
+      "median_modular_degree": 12,
+      "pair": [
+        "Y",
+        "u"
+      ]
+    },
+    {
+      "aggregate_modular_verdict": "modular_nonempty",
+      "by_prime": [
+        {
+          "bad": 0,
+          "degrees": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "empty": 0,
+          "mod": 101,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 16,
+              "elapsed": 0.13750314712524414,
+              "free_vals": {
+                "Z": 99,
+                "u": 5
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.13166022300720215,
+              "free_vals": {
+                "Z": 95,
+                "u": 61
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.12583112716674805,
+              "free_vals": {
+                "Z": 74,
+                "u": 6
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.14007925987243652,
+              "free_vals": {
+                "Z": 27,
+                "u": 3
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.14220118522644043,
+              "free_vals": {
+                "Z": 93,
+                "u": 80
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            16,
+            16,
+            15,
+            16,
+            16
+          ],
+          "empty": 0,
+          "mod": 103,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 16,
+              "elapsed": 0.14382696151733398,
+              "free_vals": {
+                "Z": 58,
+                "u": 7
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.1432509422302246,
+              "free_vals": {
+                "Z": 99,
+                "u": 61
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 15,
+              "elapsed": 0.14429903030395508,
+              "free_vals": {
+                "Z": 99,
+                "u": 102
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.14119601249694824,
+              "free_vals": {
+                "Z": 98,
+                "u": 33
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.14294099807739258,
+              "free_vals": {
+                "Z": 91,
+                "u": 102
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        },
+        {
+          "bad": 0,
+          "degrees": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "empty": 0,
+          "mod": 107,
+          "nonempty": 5,
+          "timeout": 0,
+          "trials": [
+            {
+              "degree": 16,
+              "elapsed": 0.1404109001159668,
+              "free_vals": {
+                "Z": 100,
+                "u": 86
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.12397003173828125,
+              "free_vals": {
+                "Z": 92,
+                "u": 10
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.14037203788757324,
+              "free_vals": {
+                "Z": 102,
+                "u": 61
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.13893699645996094,
+              "free_vals": {
+                "Z": 64,
+                "u": 15
+              },
+              "status": "zero_dim"
+            },
+            {
+              "degree": 16,
+              "elapsed": 0.13962101936340332,
+              "free_vals": {
+                "Z": 77,
+                "u": 60
+              },
+              "status": "zero_dim"
+            }
+          ],
+          "verdict": "nonempty_mod_p"
+        }
+      ],
+      "exact_cost_estimate": {
+        "credible_matrix_floor": true,
+        "est_exact_RSS_GiB": "8-16",
+        "median_modular_degree": 16,
+        "modular_fibre_degree_samples": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          15,
+          16,
+          16,
+          16,
+          16
+        ],
+        "priority": "HEIGHT1_candidate",
+        "strategy": "exact finite algebra / RUR over Q(xi,xj) after gate sat"
+      },
+      "median_modular_degree": 16,
+      "pair": [
+        "Z",
+        "u"
+      ]
+    }
+  ]
+}

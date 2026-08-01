@@ -1,0 +1,47 @@
+{
+  "schema": "klein-cubic-T10-exit-v1",
+  "headline": "OPEN",
+  "worker": "T",
+  "track": "T10",
+  "exits": {
+    "T10.0": "T10-BINODAL-NO-3-DEFECT",
+    "T10.1": "T10-FOLD-UNDECIDED"
+  },
+  "not_started": ["T10.2", "T10.3"],
+  "heavy_slot": {
+    "claimed": true,
+    "pair": ["A", "u"],
+    "preflight": "preflight_t101.json",
+    "authorization_MiB": 65536,
+    "exact_completed": false,
+    "modular_campaign_cap_MiB": 8192,
+    "measured_peak_RSS_exact": null,
+    "note": "Exact parametric GB not finished; modular discovery under 8 GiB"
+  },
+  "bottleneck": "BOTTLENECK-T101-EXACT-FUNCTION-FIELD-GB",
+  "ten_pair_summary": {
+    "all_modular_nonempty": true,
+    "cheapest_pair": ["A", "u"],
+    "cheapest_modular_degree": 6,
+    "full_G_certified": {
+      "A_Y": 9,
+      "A_B": 12
+    },
+    "prediction_if_exact": "T10-FOLD-HEIGHT1"
+  },
+  "theorem_boundary": {
+    "target_branch_B": {
+      "nonnormal_over_Q": "accepted (correction argument; Jacobian singular locus dim >= 2)",
+      "binodal_no_3_primary_defect": "T10-BINODAL-NO-3-DEFECT sealed"
+    },
+    "fold_S_G": {
+      "S2": "proved (prior)",
+      "R1": "undecided",
+      "dim_Sing": "upper bound <= 2; modular discovery suggests = 2; exact not sealed"
+    }
+  },
+  "inputs": {
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "H_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501"
+  }
+}

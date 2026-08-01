@@ -1,0 +1,53 @@
+{
+  "schema": "klein-cubic-T10.1-preflight-v1",
+  "gate": "T10.1",
+  "claimed_heavy_slot": true,
+  "pair": ["A", "u"],
+  "rationale": "Cheapest modular nonempty generic-fibre candidate among the ten pairs. Stable modular degree 6 over p=101,103,107 after gate saturation (ell,C,L,M,Q4,P_uu,delta) with G filtered/verified at full-G trials on adjacent pairs.",
+  "ring": "Q(A,u)[B,Y,Z,t] (parametric grevlex) or multiprime CRT of degree-6 monic eliminants",
+  "generators": {
+    "I_sing": ["P", "P_u", "P_A", "P_B", "P_Y", "P_Z"],
+    "n_generators": 6,
+    "P_n_terms": 1593,
+    "gate_product_for_modular": "ell*C*L*M*Q4*P_uu*delta with L=A-15, M=B",
+    "G_handling": "exact quotient Res_u(P,Pu)/H; modular full-G cert on (A,Y) deg 9 and (A,B) deg 12"
+  },
+  "term_counts": {
+    "P": 1593,
+    "ell": 31,
+    "C": 2630,
+    "P_uu": 881,
+    "delta": 10507,
+    "Q4": 21
+  },
+  "expected_dimensions": {
+    "fold_dim": 3,
+    "if_nonempty_generic_fibre": "dim Sing(S_G)=2 (HEIGHT1)",
+    "modular_fibre_degree": 6,
+    "expected_exact_algebra_degree": 6
+  },
+  "modular_evidence": {
+    "p101": {"degree": 6, "n_trials": 5, "all_nonempty": true},
+    "p103": {"degree": 6, "n_trials": 5, "all_nonempty": true},
+    "p107": {"degree": 6, "n_trials": 5, "all_nonempty": true}
+  },
+  "memory_authorization_MiB": 65536,
+  "memory_cap_note": "64 GiB authorized for cheapest decisive pair after this preflight; 96 GiB not authorized",
+  "checkpoint_plan": [
+    "1. Parametric GB over Q(A,u)[B,Y,Z,t] with DegreeLimit; record gens / unit-ideal status",
+    "2. If unit ideal: contradiction with modular — debug gate product",
+    "3. If zero-dim of degree 6: extract monic eliminant / RUR over Q(A,u)",
+    "4. Verify all gates nonzero as elements of the finite algebra",
+    "5. Independent verifier re-runs the (A,u) fibre without importing producer"
+  ],
+  "certificate_type": "finite_algebra_over_Q(A,u)_or_UNDECIDED_with_floor",
+  "verifier_design": "Independent script loads sealed P and gates; rebuilds specialized ideal over Q(A,u) or checks multiprime RUR; recomputes degree and gate nonvanishing; does not import produce_*.py",
+  "fallback_pairs_if_Au_fails": [
+    {"pair": ["A", "Y"], "modular_degree": 9, "full_G_cert_p101": true},
+    {"pair": ["A", "B"], "modular_degree": 12, "full_G_cert_p101": true}
+  ],
+  "inputs": {
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "H_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501"
+  }
+}
