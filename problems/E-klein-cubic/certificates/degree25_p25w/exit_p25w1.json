@@ -1,0 +1,71 @@
+{
+  "component_analysis": {
+    "artifact": "certificates/degree25_p25w/p25w1_component_spans.json",
+    "deg0_remaining": true,
+    "deg1_S1V_full_S3": true,
+    "deg2_V_full_S1": true
+  },
+  "criterion": "Exact degree-four graded membership: T_i(s_a) \u2208 (N_0)_4 and (T_i T_j \u2212 T_j T_i)b \u2208 (N_0)_4 for all seeds/basis vectors, with (N_0)_4 = S_1 \u00b7 (N_0)_3 inside the finite-dimensional F_89-space F_4.",
+  "deg0_membership_matrix": {
+    "G_shape": [
+      91390,
+      25530
+    ],
+    "G_shape_note": "rows = monoms of deg 4 in 37 vars; cols = 690 seeds \u00d7 37 vars",
+    "description": "Membership of f \u2208 S_4 in S_1\u00b7V_0, V_0 = span of the 690 seed degree-0 cubic coefficient rows. Columns of the generator matrix G are q_j \u00b7 v_a for a=1..690, j=0..36.",
+    "forbidden": "raw 43-variable degree-four F4/Macaulay (54.6 GiB historical)",
+    "measured_component_peak_rss_mib": 1078.0,
+    "n_test_vectors_Ti": 4140,
+    "naive_RREF_ops_estimate": 59566256451000.0,
+    "resource_floor_gib": 16,
+    "resource_floor_reason": "Dense GE on a 25530-column subspace of S_4 (dim 91390) over F_89; uint8 storage of G alone is ~2.2 GiB; full RREF peak exceeds the 8 GiB exploratory fence. Black-box Wiedemann needs O(n) matvecs of cost ~2e8 each (hours). Not a specialized-fibre substitute.",
+    "storage_uint8_GiB": 2.172949444502592
+  },
+  "dispatch": "P25W.1",
+  "exit": "P25W-PRESENTATION-UNDECIDED",
+  "graded_dimensions": {
+    "dim_F3": 14134,
+    "dim_F4": 160987,
+    "layout_F3": "9139 + 6*703 + 21*37",
+    "layout_F4": "91390 + 6*9139 + 21*703",
+    "n_basis_B": 28,
+    "n_seeds": 690
+  },
+  "inputs": {
+    "T_quad_F3_sha256": "63d863a73873f4959842b5b8351b18d7c599a329ecccbe97d8027400450f9256",
+    "low_target_shape": [
+      6,
+      28
+    ],
+    "multiplication_matrices": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/multiplication_matrices.npz",
+    "relation_matrix": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/relation_matrix.npz",
+    "seed_F3_sha256": "c6baf33b2266375b1f53278177bda9e96a3525368ca0c6b8117531429b2d97f9"
+  },
+  "prime": 89,
+  "resource": {
+    "elapsed_seconds": 105.39819598197937,
+    "exploratory_ceiling_gib": 8,
+    "floor_gib": 16,
+    "named_bottleneck": "deg0 membership GE in S_4 (91390 \u00d7 25530 over F_89)",
+    "peak_rss_mib": 1078.015625
+  },
+  "self_sha256": "3c7dc6b3fc7cce40504c548a347d3bc175aff4cbfc4d5546a04a99ab197da5db",
+  "tests": {
+    "T_i_sa": {
+      "all_nonzero_deg0_component": true,
+      "count": 4140,
+      "remaining_membership": "deg0 component only (91390-dim)"
+    },
+    "commutator_defects": {
+      "deg_le_1_exact_zero": true,
+      "operator_pairs": 15,
+      "quad_basis_columns_upper_bound": 315,
+      "remaining_membership": "deg0 component of defects on quadratic basis"
+    }
+  },
+  "theorem": {
+    "does_not_prove": "Full T_i-stability of N_0 over S; commutator defects in N_0 over S; exactness F/N_0 \u2245 R/J. Specialized fibre T-stability from the P25Z packet is not reused as a proof over S.",
+    "proves": "On every basis component of degree 1 or 2, the degree-four piece (N_0)_4 fills the whole ambient S_{4\u2212deg b}\u00b7e_b. Consequently every T_i(s_a) and every commutator defect automatically lies in (N_0)_4 on those components. The only open membership is the pure-q (degree-0) component inside S_4.",
+    "scope": "All ranks and spans are exact over F_89. Empty special fibre would still imply empty generic fibre by the sealed DVR properness theorem; that direction does not require presentation exactness."
+  }
+}

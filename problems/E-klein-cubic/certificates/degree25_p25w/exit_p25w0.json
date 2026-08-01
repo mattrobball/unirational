@@ -1,0 +1,15 @@
+{
+  "complete_special_landing_ideal": "the 746 rows at p=89",
+  "dispatch": "P25W.0",
+  "emptiness_needs_char0_rank": false,
+  "emptiness_reason": "empty special fibre implies empty generic fibre by sealed DVR properness (certificates/degree25_direct_support/DVR_MODEL.md)",
+  "exit": "P25W-ROW-RANK-SCOPE",
+  "historical_842_rank28": "not imported",
+  "lower_presentation_consequence": "F/N_0 surjects onto R/J so Supp(R/J)subseteq Supp(F/N_0); emptiness of the lower support is safe; nonempty is not interpretable until P25W.1 closes",
+  "lower_presentation_marker": "P25Z-FINITE-PRESENTATION-LOWER",
+  "marker_row_rank": "P25Z-ROW-RANK-746",
+  "prime_special": 89,
+  "rank_F_89": 746,
+  "rank_K_char0": "not yet decided",
+  "self_sha256": "cf8388103c94370f8e68110e202c9f675283b5130727dd23b83a104343eee537"
+}

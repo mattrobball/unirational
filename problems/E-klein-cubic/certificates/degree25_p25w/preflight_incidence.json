@@ -1,0 +1,183 @@
+{
+  "compressions": {
+    "64": {
+      "bidegree_each_equation": [
+        3,
+        1
+      ],
+      "compressed_seed_F3_shape": [
+        64,
+        14134
+      ],
+      "compression_row_rank": 64,
+      "method_options": [
+        {
+          "expected_cost": "64 equations of bidegree (3,1) in 65 vars; chartwise affine solves with irrelevant saturation",
+          "memory_floor_gib": 16,
+          "name": "msolve bihomogeneous / affine charts"
+        },
+        {
+          "expected_cost": "multigraded GB of r generators in 2-graded ring",
+          "memory_floor_gib": 16,
+          "name": "Macaulay2 multigraded GB + saturate"
+        },
+        {
+          "expected_cost": "compressed matrix is r\u00d728 with poly entries deg\u22643; Fitt_0 needs 28-minors if r\u226528 \u2014 still heavy in 37 vars",
+          "memory_floor_gib": 16,
+          "name": "Fitting / exterior rank of compressed M(q)"
+        }
+      ],
+      "n_equations": 64,
+      "saturation": "by q-irrelevant (q0..q36) and b-irrelevant (b0..b27)",
+      "storage_uint8_bytes": 904576,
+      "variables": {
+        "b": 28,
+        "q": 37,
+        "total_affine": 65
+      }
+    },
+    "72": {
+      "bidegree_each_equation": [
+        3,
+        1
+      ],
+      "compressed_seed_F3_shape": [
+        72,
+        14134
+      ],
+      "compression_row_rank": 72,
+      "method_options": [
+        {
+          "expected_cost": "72 equations of bidegree (3,1) in 65 vars; chartwise affine solves with irrelevant saturation",
+          "memory_floor_gib": 16,
+          "name": "msolve bihomogeneous / affine charts"
+        },
+        {
+          "expected_cost": "multigraded GB of r generators in 2-graded ring",
+          "memory_floor_gib": 16,
+          "name": "Macaulay2 multigraded GB + saturate"
+        },
+        {
+          "expected_cost": "compressed matrix is r\u00d728 with poly entries deg\u22643; Fitt_0 needs 28-minors if r\u226528 \u2014 still heavy in 37 vars",
+          "memory_floor_gib": 16,
+          "name": "Fitting / exterior rank of compressed M(q)"
+        }
+      ],
+      "n_equations": 72,
+      "saturation": "by q-irrelevant (q0..q36) and b-irrelevant (b0..b27)",
+      "storage_uint8_bytes": 1017648,
+      "variables": {
+        "b": 28,
+        "q": 37,
+        "total_affine": 65
+      }
+    },
+    "84": {
+      "bidegree_each_equation": [
+        3,
+        1
+      ],
+      "compressed_seed_F3_shape": [
+        84,
+        14134
+      ],
+      "compression_row_rank": 84,
+      "method_options": [
+        {
+          "expected_cost": "84 equations of bidegree (3,1) in 65 vars; chartwise affine solves with irrelevant saturation",
+          "memory_floor_gib": 16,
+          "name": "msolve bihomogeneous / affine charts"
+        },
+        {
+          "expected_cost": "multigraded GB of r generators in 2-graded ring",
+          "memory_floor_gib": 16,
+          "name": "Macaulay2 multigraded GB + saturate"
+        },
+        {
+          "expected_cost": "compressed matrix is r\u00d728 with poly entries deg\u22643; Fitt_0 needs 28-minors if r\u226528 \u2014 still heavy in 37 vars",
+          "memory_floor_gib": 16,
+          "name": "Fitting / exterior rank of compressed M(q)"
+        }
+      ],
+      "n_equations": 84,
+      "saturation": "by q-irrelevant (q0..q36) and b-irrelevant (b0..b27)",
+      "storage_uint8_bytes": 1187256,
+      "variables": {
+        "b": 28,
+        "q": 37,
+        "total_affine": 65
+      }
+    }
+  },
+  "dispatch": "P25W.2-StageB-preflight",
+  "implication": {
+    "compressed_empty_implies_seed_empty": true,
+    "nonempty_compressed_proves_nothing": true,
+    "reason": "Compression weakens equations; Supp(full) \u2286 Supp(seed) \u2286 Supp(compressed). Emptiness of compressed incidence after exact irrelevant saturation proves emptiness of the special-fibre landing scheme; DVR properness then gives the characteristic-zero degree-25 exclusion (scoped, not headline).",
+    "seed_empty_implies_true_landing_empty": true
+  },
+  "inputs": {
+    "relation_matrix": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/relation_matrix.npz",
+    "seed_F3_sha256": "c6baf33b2266375b1f53278177bda9e96a3525368ca0c6b8117531429b2d97f9",
+    "stageA_exit": "P25W-STAGEA-EMPTY"
+  },
+  "prime": 89,
+  "resource": {
+    "elapsed_seconds": 0.09618306159973145,
+    "heavy_solve_run": false,
+    "peak_rss_mib": 54.609375,
+    "preflight_only": true
+  },
+  "self_sha256": "f88e4cd8f877ae5da63f524aefc7e26d5f6ac78fbda57c6efdab3de56c2345a6",
+  "slot": {
+    "marker": "P25W-SLOT-REQUEST",
+    "reason": "Smallest compressed multihomogeneous saturation (64 eqs, bidegree (3,1), 65 vars, double irrelevant saturation) has measured floor 16 GiB, above the 8 GiB exploratory fence. Stage A stratum is already decided empty; the remaining Stage B solve needs the scheduled heavy slot.",
+    "request": true,
+    "what_remains": "Run deterministic compressions r=64,72,84 of M(q)b=0; compute multihomogeneous saturation by both irrelevant ideals; stop at first empty. If all nonempty, either enlarge compression toward 690 or search for a support point and verify against all 690 seeds and all 746 landing cubics."
+  },
+  "smallest_system": {
+    "bidegree": [
+      3,
+      1
+    ],
+    "exploratory_ceiling_gib": 8,
+    "measured_floor_gib": 16,
+    "method": "multihomogeneous saturation of 64 deterministic linear combinations of the 690 seed equations",
+    "n_equations": 64,
+    "n_vars": 65,
+    "verifier_design": "Independent recomputation of the saturated ideal of the same 64 compressed equations (same deterministic C matrix from seed 2026073189); empty solver output is not emptiness; must recompute saturation fact or a certified nonzero Fitting/elimination witness."
+  },
+  "stageA_status": "P25W-STAGEA-EMPTY",
+  "system": {
+    "bidegree": [
+      3,
+      1
+    ],
+    "full_equations": 690,
+    "grading": {
+      "deg_b0": [
+        0,
+        1
+      ],
+      "deg_b1_j": [
+        1,
+        1
+      ],
+      "deg_b2_j": [
+        2,
+        1
+      ],
+      "deg_q_i": [
+        1,
+        0
+      ]
+    },
+    "split_b": {
+      "b0": 1,
+      "b1": 6,
+      "b2": 21
+    },
+    "variables_b": 28,
+    "variables_q": 37
+  }
+}

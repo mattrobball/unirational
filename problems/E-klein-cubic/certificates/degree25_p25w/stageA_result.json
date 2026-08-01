@@ -1,0 +1,51 @@
+{
+  "artifact": "certificates/degree25_p25w/stageA_certificate.npz",
+  "dispatch": "P25W.2-StageA",
+  "exit": "P25W-STAGEA-EMPTY",
+  "flattening": {
+    "T_sha256": "6e994a7d6a7cec6c939a3e6601c7067d499bc67909c834088a5d3d91f1fa32fb",
+    "ker_dim": 87,
+    "ns_sha256": "a34262c98778ec58cd757231b4ff9bb58a39a0c23cc9f39c48fd3d5d2b9b5106",
+    "rank": 690,
+    "shape": [
+      690,
+      777
+    ]
+  },
+  "inputs": {
+    "relation_matrix": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/relation_matrix.npz",
+    "seed_F3_sha256": "c6baf33b2266375b1f53278177bda9e96a3525368ca0c6b8117531429b2d97f9",
+    "seed_F3_shape": [
+      690,
+      14134
+    ]
+  },
+  "method": "Flatten bilinear Stage-A equations to T \u2208 Mat_690\u00d7777(F_89); ker dim 87; 2\u00d72 minors of the parametric ker matrix span all homogeneous quadrics on F^{87}, so only the zero matrix in ker has rank \u2264 1. Hence no nonzero pure tensor \u03b2\u2297q lies in ker(T).",
+  "prime": 89,
+  "quadric_span": {
+    "M_sample_sha256": "96e71113613074b16c94a26e08f000b74159c3a2b7bcb8c9e7d2815bda05d720",
+    "dim_homogeneous_quadrics": 3828,
+    "full_span": true,
+    "n_minors_sampled": 4000,
+    "n_minors_total": 139860,
+    "n_parameters": 87,
+    "sample_rank": 3828,
+    "sample_seed_rng": 20260731,
+    "sel_sha256": "4407be5b2680d69ede9a156539c9ce82926156248b4eb86f90e4ddaa61f509f8"
+  },
+  "resource": {
+    "elapsed_seconds": 97.61977982521057,
+    "memory_ceiling_gib": 8,
+    "peak_rss_mib": 432.59375
+  },
+  "sanity_random_K_ranks": {
+    "21": 200
+  },
+  "self_sha256": "42c3bf50655c5d360d6bb67289bbe5bfa477282cd338598335ac3be6c5443559",
+  "stratum": "b0=b1=0 (21 quadratic dual variables only)",
+  "theorem": {
+    "does_not_prove": "Emptiness of the full kernel incidence (b0,b1 not necessarily zero); emptiness of the true landing scheme; any characteristic-zero rank statement; exactness of the 690-row presentation.",
+    "proves": "The multihomogeneous Stage-A incidence {(q,\u03b2) \u2208 P^{36}\u00d7P^{20} : M2(q) \u03b2 = 0} is empty. Equivalently, after saturating the bihomogeneous ideal of the 690 bilinear equations by the q-irrelevant and \u03b2-irrelevant ideals, one obtains the unit ideal on this stratum.",
+    "scope": "Exact linear algebra over F_89 only."
+  }
+}
