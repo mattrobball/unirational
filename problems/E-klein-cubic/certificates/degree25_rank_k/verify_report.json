@@ -1,0 +1,50 @@
+{
+  "exit_errors": [],
+  "exit_from_producer": "P25W-RANK-K-UNDECIDED",
+  "ok": true,
+  "peak_rss_mib": 1868.125,
+  "primes": [
+    {
+      "basis43_sha256": "4709fdbeea6db5f5c6c17b828dc766c748da9ac656874ae85a60acabe5ce4a54",
+      "errors": [],
+      "landing_rank": 746,
+      "ok": true,
+      "pivot_product_mod_p": 68,
+      "prime": 89,
+      "rank_basis": 2343,
+      "rss_mib": 1593.625,
+      "seconds": 128.36291003227234,
+      "unisolvence_rank": 2343,
+      "zeta": 78
+    },
+    {
+      "basis43_sha256": "6a7da42ec082f531a7c9259dda4a3be28ab0fcd24769e32a9b6b1f0f145ca527",
+      "errors": [],
+      "landing_rank": 746,
+      "ok": true,
+      "pivot_product_mod_p": 21,
+      "prime": 199,
+      "rank_basis": 2343,
+      "rss_mib": 1703.03125,
+      "seconds": 119.53351974487305,
+      "unisolvence_rank": 2343,
+      "zeta": 61
+    },
+    {
+      "basis43_sha256": "3ff3cf79aa78558f1574ad9cbbea795a881043957da0a4a12e6a9cdda4ffc761",
+      "errors": [],
+      "landing_rank": 746,
+      "ok": true,
+      "pivot_product_mod_p": 136,
+      "prime": 353,
+      "rank_basis": 2343,
+      "rss_mib": 1868.125,
+      "seconds": 116.99587202072144,
+      "unisolvence_rank": 2343,
+      "zeta": 58
+    }
+  ],
+  "self_sha256": "57a850814f5282260fe67282222833fc9907525d622319d60f08d954590f7e4e",
+  "theorem_boundary": "Verifier recomputed exact F_p ranks and unisolvence pivot products. It does not certify rank_K. Exit discipline: modular agreement is not a characteristic-zero certificate.",
+  "total_seconds": 364.945818901062
+}

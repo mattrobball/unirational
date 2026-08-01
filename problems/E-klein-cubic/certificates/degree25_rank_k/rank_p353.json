@@ -1,0 +1,87 @@
+{
+  "artifact_sha256": {
+    "invariant_basis_p353.npz": "3baf48adde81a2da5e21d5bc58b91111d6180ce7d8c9cf2b2e0ecf266eae94bf",
+    "landing_echelon_p353.npz": "8bdee32ae9b83f833018a6237db8ac013fa2dd757cc73ac87a409447012103ef",
+    "unisolvent_points_p353.npz": "d92b5a9faa0325af809310f5c011f1799f842fd8164669199736e15a0e8f320a"
+  },
+  "artifacts": {
+    "invariant_basis": "invariant_basis_p353.npz",
+    "landing_echelon": "landing_echelon_p353.npz",
+    "unisolvent_points": "unisolvent_points_p353.npz"
+  },
+  "basis43_sha256": "3ff3cf79aa78558f1574ad9cbbea795a881043957da0a4a12e6a9cdda4ffc761",
+  "invariant_basis": {
+    "basis_rank": 2343,
+    "build_seconds": 90.48496723175049,
+    "fill_trials": 0,
+    "m_75": 2343,
+    "method": "sealed monoms from degree25_rowrank/invariant_basis.npz; independence by eval rank on probe set",
+    "n_probe": 2500,
+    "n_selected": 2343,
+    "probe_seed": 2026073542,
+    "reverified": true,
+    "rss_mib_after_basis": 1856.640625,
+    "source": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_rowrank/invariant_basis.npz"
+  },
+  "landing": {
+    "cubic_ambient_dim": 14190,
+    "growth": [
+      {
+        "last_rank_increase_at": 400,
+        "n_points": 400,
+        "rank": 400
+      },
+      {
+        "last_rank_increase_at": 746,
+        "n_points": 800,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 746,
+        "n_points": 1200,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 746,
+        "n_points": 1600,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 746,
+        "n_points": 2000,
+        "rank": 746
+      },
+      {
+        "last_rank_increase_at": 746,
+        "n_points": 2343,
+        "rank": 746
+      }
+    ],
+    "last_rank_increase_at": 746,
+    "n_points": 2343,
+    "rank": 746,
+    "rss_mib": 1856.640625,
+    "seconds": 48.93140411376953
+  },
+  "m_75": 2343,
+  "peak_rss_mib": 1856.640625,
+  "prime": 353,
+  "rank": 746,
+  "rank_is_exact": true,
+  "self_sha256": "f7df7bbe50d6e53049396cba5fda3f54372e151718e876ac05382b3852e58454",
+  "theorem_boundary": "Proved over F_353: rank(\u039b_353) = 746 exactly, via unisolvent evaluation model (invertible 2343\u00d72343 Inv_75 eval matrix with pivot product \u2261 136 mod 353). This is an F_p statement, not a characteristic-zero rank.",
+  "total_seconds": 232.50549602508545,
+  "unisolvence": {
+    "candidates_tried": 2343,
+    "eval_matrix_rank": 2343,
+    "eval_matrix_shape": [
+      2343,
+      2343
+    ],
+    "invertible": true,
+    "pivot_product_mod_p": 136,
+    "search_seconds": 86.68074083328247,
+    "seed": 2026073201
+  },
+  "zeta": 58
+}

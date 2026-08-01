@@ -1,0 +1,33 @@
+{
+  "ambient_cubic": 14190,
+  "ambient_inv75": 2343,
+  "bottleneck": "No char-0 free model of V_25 / \u039b is installed in this packet: the monic basis43 is a fibrewise RREF over F_p and differs by prime (shas ['4709fdbeea6d', '6a7da42ec082', '3ff3cf79aa78']). CRT of modular echelons is ill-posed without a fixed Z[\u03b6_11]-lattice presentation of \u039b. Building that presentation requires reconstructing the 43 \u00d7 189 covariant basis over K and the 14190 \u00d7 2343 (or dual) map \u2014 estimated working set \u2273 6461 MiB for the image side alone at rank 746, plus multiprime integral model construction that exceeds the 8 GiB Worker-R ceiling without the heavy slot. Modular ranks alone do not prove rank_K.",
+  "chosen_side": "image",
+  "crt_modulus_bits": 23,
+  "crt_modulus_product": 6251983,
+  "estimated_cyclotomic_workset_mib": 6461.02,
+  "estimated_rational_workset_mib": 646.1,
+  "heavy_slot": false,
+  "interval": [
+    746,
+    2343
+  ],
+  "lower_bound_rank_K": 746,
+  "modular_ranks": {
+    "199": 746,
+    "353": 746,
+    "89": 746
+  },
+  "peak_rss_modular_mib": 1856.640625,
+  "ranks_agree_across_tested_primes": true,
+  "rss_ceiling_mib": 8192,
+  "self_sha256": "0998b5acaeab113352621fc0feb1fdbb825c08e1238c58cb4cb88fdca561bafd",
+  "side_dim": 746,
+  "side_reason": "image dim \u2248 746 \u2264 kernel dim \u2248 13444; reconstruct image of \u039b in cubic ambient (or Inv_75 coordinates).",
+  "storage_all_tested_primes_mib": 242.29,
+  "storage_inv75_coords_one_prime_mib": 13.34,
+  "storage_one_prime_image_echelon_mib": 80.76,
+  "upper_bound_m75": 2343,
+  "what_is_not_proved": "rank_K \u039b_K is not decided. Agreement of modular ranks is evidence only (\u00a78.6: modular rank is never silently promoted to char-0).",
+  "what_is_proved": "Exact rank(\u039b_p) at primes [89, 199, 353]; therefore rank_K \u039b_K \u2265 746. No characteristic-zero upper-bound certificate."
+}

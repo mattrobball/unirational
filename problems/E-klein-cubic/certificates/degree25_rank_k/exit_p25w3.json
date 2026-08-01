@@ -1,0 +1,44 @@
+{
+  "char0_certificate": false,
+  "corrections_carried": [
+    "modular rank not promoted to char-0 (\u00a72.4, \u00a78.6)",
+    "746 rows complete special-fibre ideal at p=89 only (\u00a72.5)",
+    "historical 842/rank-28 not imported (\u00a72.7, \u00a78.9)",
+    "no random plateau upper bound",
+    "p=67 not used as decision fibre",
+    "rational reconstruction uses common_p25x (not SymPy private helper)"
+  ],
+  "exit": "P25W-RANK-K-UNDECIDED",
+  "headline": "OPEN",
+  "lower_bound_rank_K": 746,
+  "peak_rss_mib": 1856.640625,
+  "per_prime_certificates": [
+    "rank_p89.json",
+    "rank_p199.json",
+    "rank_p353.json"
+  ],
+  "preflight": "preflight_rank_k.json",
+  "primes_tested": [
+    89,
+    199,
+    353
+  ],
+  "ranks": {
+    "89": 746,
+    "199": 746,
+    "353": 746
+  },
+  "ranks_agree": true,
+  "reconstruction_side": "image",
+  "reconstruction_side_reason": "image dim \u2248 746 \u2264 kernel dim \u2248 13444; reconstruct image of \u039b in cubic ambient (or Inv_75 coordinates).",
+  "self_sha256": "24947314a0df79cfa85e946d4e321d6fd97a6db750098049575ce6ffd6a187eb",
+  "task": "P25W.3",
+  "theorem_boundary": "Proved: rank_{F_p} \u039b_p is exact at each tested good prime [89, 199, 353] via unisolvence (see rank_p*.json). Therefore rank_K \u039b_K \u2265 746. Not proved: the characteristic-zero rank itself (no multiprime CRT image/kernel basis over K=Q(\u03b6_11) was constructed; modular agreement is not a char-0 certificate).",
+  "total_seconds": 692.3616502285004,
+  "unisolvence_pivot_products": {
+    "89": 68,
+    "199": 21,
+    "353": 136
+  },
+  "upper_bound_m75": 2343
+}
