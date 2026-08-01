@@ -1,0 +1,53 @@
+{
+  "format": "H-SUBGROUP-INDEX-v1",
+  "records": [
+    {
+      "evidence": [
+        "linear section degree 3",
+        "C3-fixed point orbit degree 10 or 20"
+      ],
+      "index": 1,
+      "subgroup": "A5_class_1"
+    },
+    {
+      "evidence": [
+        "linear section degree 3",
+        "C3-fixed point orbit degree 10 or 20"
+      ],
+      "index": 1,
+      "subgroup": "A5_class_2"
+    },
+    {
+      "evidence": [
+        "linear section degree 3",
+        "C3-fixed point orbit degree 4"
+      ],
+      "index": 1,
+      "subgroup": "A4"
+    },
+    {
+      "evidence": [
+        "linear section degree 3",
+        "C11 eigenpoint orbit degree 5"
+      ],
+      "index": 1,
+      "subgroup": "11:5"
+    },
+    {
+      "evidence": [
+        "H-stable contained projective line twists to P1"
+      ],
+      "index": 1,
+      "subgroup": "D10"
+    },
+    {
+      "evidence": [
+        "H-stable contained projective line twists to P1"
+      ],
+      "index": 1,
+      "subgroup": "D12"
+    }
+  ],
+  "valuation_status": "No valuation pointlessness theorem: index obstruction is impossible for every selected subgroup.",
+  "warning": "Index one is not a rational point for the four unresolved twists."
+}

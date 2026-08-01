@@ -1,0 +1,33 @@
+{
+  "exit": "H-SWEEP-UNDECIDED",
+  "files": {
+    "A4/TWIST.md": "4c53cd3fa258904ffaaaad1bab32eb9c2e801509a6beebba628960ca02e18268",
+    "A5_class_1/TWIST.md": "52421c3833f824f4a88e7e3089898eb3e505f45c98077db20ad2d5d09a61bf92",
+    "A5_class_2/TWIST.md": "4c47aeb81832c927998a544892441c129de2104bbad854e3f347387d041e688b",
+    "BRIDGE.md": "660577dd5848eb5f9acb747b4c82877968d3ba5c59181581eb4ba8907d8aa2f8",
+    "COMPLETION_AUDIT.md": "04d2ea36b95219e2fc1fc75ca2a8239df1e00c74277e0f9f22830f700ebd0089",
+    "D10/SOLUBLE.md": "bfbec1acc11360dbaa0f8eee60ad323f6cfd90961f33ce3250f42af1bf8db3c5",
+    "D12/SOLUBLE.md": "2cb41fbc118e0c70850106344d175005371bed99ba64cc11279a86f2557889e7",
+    "DIRECT_SEARCH.md": "c6f4d53f7ced3d9cbd55f2199749565b51ca701648728db8a15e22e62e52e5d9",
+    "F55_11_5/TWIST.md": "a4017a3fa7fb925133521ae1d1fe090646a5317c008a8a72e190085893ba8778",
+    "INDEX_AND_VALUATIONS.md": "a4652966c4acc5084970fa335992cd4fb5f1d003a6cbe05f763d8eae22ed9e38",
+    "RANKING.md": "bd0d6eca7c6054aa09ca4fd6184030fa8a21295d85b89772ef77c92f1306a5ed",
+    "REPLAY.md": "b4e86cd2027ab0fe1045f562fcf73ff2b7fa3fc0aaf3ce173a6c7d4b88db0091",
+    "STATUS.md": "7e5c4e5ac5871f2c74c84add09fc6ed833703fb5c365edb3e23c7b6132b1589a",
+    "WORK_SCOPE.md": "9cf92815c40ef76ae21d570150f756d2c11ee5a50b038ac9a247411db9a2f189",
+    "a4_direct_search.json": "54984e3269581afa3404377ad3aae9ab3bc10db15236184dd4cc12e20e335638",
+    "a4_direct_search.py": "d165c7a7c7f438468f262ca02547557f9ee11662d6547bf2ad9b25cdc41d9445",
+    "index_valuation.json": "64b8755b398bbb57a9ceb95f67594a210efa8e8d0977e497cb58556495c8ec13",
+    "produce.py": "29961a81786f493bc0362b67b4a4a9979224ccee9874a5e1046af5aa942e1f8b",
+    "seal.py": "f4de1e30746268428204e9069a70272fe53dbaa1f1b349741837f3d249b836f7",
+    "twists.json": "e97a32d6f22a8028528bc2b4d27ee009901caeb047fd2ffe5ac2bdd1fab743cd",
+    "verify.py": "c4af286410a24443a5abfe3394964347ad2e9404e453847723aea416ef3b3381"
+  },
+  "format": "H-SUBGROUP-TWISTS-SEAL-v1",
+  "replay": [
+    "produce.py",
+    "a4_direct_search.py",
+    "seal.py",
+    "verify.py"
+  ]
+}

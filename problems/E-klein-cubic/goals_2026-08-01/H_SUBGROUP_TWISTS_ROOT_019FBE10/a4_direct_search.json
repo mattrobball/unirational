@@ -1,0 +1,350 @@
+{
+  "format": "H-A4-DIRECT-SEARCH-v2",
+  "omega3": 31,
+  "prime": 331,
+  "records": [
+    {
+      "character_exponent": 0,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 1,
+      "degree": 1,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 7,
+      "source_monomials": 3
+    },
+    {
+      "character_exponent": 1,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 1,
+      "degree": 1,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 7,
+      "source_monomials": 3
+    },
+    {
+      "character_exponent": 2,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 1,
+      "degree": 1,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 7,
+      "source_monomials": 3
+    },
+    {
+      "character_exponent": 0,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 1,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 2,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 3,
+      "degree": 2,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 28,
+      "source_monomials": 6
+    },
+    {
+      "character_exponent": 1,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 1,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 2,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 3,
+      "degree": 2,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 28,
+      "source_monomials": 6
+    },
+    {
+      "character_exponent": 2,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 1,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 2,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 3,
+      "degree": 2,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 28,
+      "source_monomials": 6
+    },
+    {
+      "character_exponent": 0,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 1,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 2,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 3,
+      "degree": 3,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 52,
+      "source_monomials": 10
+    },
+    {
+      "character_exponent": 1,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 1,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 2,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 3,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 4,
+      "degree": 3,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 52,
+      "source_monomials": 10
+    },
+    {
+      "character_exponent": 2,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 1,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 2,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 3,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 4,
+      "degree": 3,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 52,
+      "source_monomials": 10
+    },
+    {
+      "character_exponent": 0,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 1,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 2,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 3,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 4,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 5,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 6,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 7,
+      "degree": 4,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 91,
+      "source_monomials": 15
+    },
+    {
+      "character_exponent": 1,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 1,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 2,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 3,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 4,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 5,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 6,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 7,
+      "degree": 4,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 91,
+      "source_monomials": 15
+    },
+    {
+      "character_exponent": 2,
+      "charts": [
+        {
+          "basis_size": 1,
+          "chart": 0,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 1,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 2,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 3,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 4,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 5,
+          "unit_ideal": true
+        },
+        {
+          "basis_size": 1,
+          "chart": 6,
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 7,
+      "degree": 4,
+      "geometrically_empty": true,
+      "landing_coefficient_count": 91,
+      "source_monomials": 15
+    }
+  ],
+  "sqrt5": 98,
+  "transfer": "projective coefficient scheme; empty good fibre implies empty characteristic-zero generic fibre",
+  "zeta11": 74
+}
