@@ -1,0 +1,17 @@
+{
+  "files": {
+    "BLOWUP_CLOSURE.md": "59ba39953c81e1275b057b5d417af20e02f9d6b37dd4ca78877e4b26b5b0164d",
+    "COMPLETION_AUDIT.md": "3b75dba18a0c0fcceb083aa51e9251dd9e16ca8ede4503ec011c229c68a6a332",
+    "STATUS.md": "ca1640c158afb00c6315d7e9ed237f457f070efb271667f28ed64b166ea50835",
+    "TARGET_INVARIANTS.md": "3b9d4300b4c16c53c9c7c4b39380331c37c79b7ba785b954fa042ec5aa451fd5",
+    "THEOREM_AUDIT.md": "6b7070f41935d076d7426a417aab36ba938c47accbeb79cc8128f6878d31a006",
+    "invariants.json": "54cf92a81445d435536f17969e04fe11b02fdf26de97bfa48e2b2fad04c9ed56",
+    "produce.py": "048d52af03e3d83b1b9b5519ea05bfc89b4324b349deb594e379ae204a3c2b43",
+    "seal.py": "7bb0ba63458d1ba8620823a54f3d53c5fad266cf818fb4c990f38071cf8dbf18",
+    "verify.py": "f0c0578f62f5bfbab2b9a388f4f1ef6d0487f831245bd00dc0639c4172da0f66"
+  },
+  "produced_commit": null,
+  "schema": "D_EQUIVARIANT_MOTIVE.SEAL.v1",
+  "self_hash_included": false,
+  "source_commit": "80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c"
+}

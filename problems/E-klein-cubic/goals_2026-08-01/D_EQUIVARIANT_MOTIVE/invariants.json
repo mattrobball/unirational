@@ -1,0 +1,124 @@
+{
+  "bridge": {
+    "identity": "f_*(eta*f^*(-))=n*(-)",
+    "integral_projector_forced": false,
+    "relative_dimension": 1,
+    "split_coefficients": "Z[1/n]"
+  },
+  "closure_model": {
+    "H1_rank_per_component": 22,
+    "H1_total_rank": 14520,
+    "base_curve_genus": 6,
+    "centre_component_genus": 11,
+    "component_stabilizer_order": 1,
+    "curve": "etale Prym double cover of a smooth plane quintic",
+    "integral_motive_split_claimed": false,
+    "motive_denominators": [
+      2,
+      660
+    ],
+    "orbit_components": 660,
+    "primitive_lattice_capacity": true,
+    "rational_motive_split": true,
+    "regular_ZG_copies": 22,
+    "target_lattice_rank": 10
+  },
+  "exit": "D-INVARIANT-REPRODUCIBLE",
+  "group": {
+    "name": "PSL(2,11)",
+    "order": 660,
+    "prime_divisors": [
+      2,
+      3,
+      5,
+      11
+    ],
+    "prime_local_essential_dimension": {
+      "11": 1,
+      "2": 2,
+      "3": 1,
+      "5": 1
+    }
+  },
+  "headline_problem": "OPEN",
+  "index_certificate": {
+    "bezout_coefficients": [
+      -13,
+      3,
+      1,
+      1
+    ],
+    "bezout_value": 1,
+    "effective_cycle_degrees": [
+      60,
+      132,
+      165,
+      220
+    ],
+    "gcd": 1
+  },
+  "repository": {
+    "consumed_commit": "80f24697dd8fcb1ee0e8fff86e3d8e38a9cfc09c",
+    "initial_inspection_commit": "2140419410cfff2f7d7dcca166acef8c16a0d41b",
+    "pinned_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+    "produced_commit": null
+  },
+  "schema": "D_EQUIVARIANT_MOTIVE.v1",
+  "steenrod_on_H3": {
+    "11": {
+      "P1": 0,
+      "beta": 0,
+      "reason": "torsion_free_and_above_dimension"
+    },
+    "2": {
+      "Sq1": 0,
+      "Sq2": 0,
+      "Sq3": 0,
+      "reason": "torsion_free_H5_zero_square_lifts"
+    },
+    "3": {
+      "P1": 0,
+      "beta": 0,
+      "reason": "torsion_free_and_above_dimension"
+    },
+    "5": {
+      "P1": 0,
+      "beta": 0,
+      "reason": "torsion_free_and_above_dimension"
+    }
+  },
+  "target": {
+    "H3_rank": 10,
+    "Hodge_H21_G_representation": "W*",
+    "Hodge_H21_dimension": 5,
+    "betti_numbers": [
+      1,
+      0,
+      1,
+      10,
+      1,
+      0,
+      1
+    ],
+    "chern_class_coefficients_in_H": [
+      1,
+      2,
+      4,
+      -2
+    ],
+    "chern_numbers": {
+      "c1*c2": 24,
+      "c1^3": 24,
+      "c3": -6,
+      "p1*H": -12,
+      "rost_half_number_minus_tangent": 33,
+      "s3": -66,
+      "s3_tangent/2": -33,
+      "todd_genus": 1
+    },
+    "complex_dimension": 3,
+    "degree": 3,
+    "euler_characteristic": -6,
+    "integral_cohomology_torsion_free": true
+  }
+}
