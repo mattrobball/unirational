@@ -1,0 +1,232 @@
+{
+  "decision_status": "necessary second-normal reduction proved; saturation open",
+  "degrees": {
+    "31": {
+      "mixed_gate_dimension": 78,
+      "mixed_nonbased_chart_count": 13,
+      "pure_gate_dimension": 99,
+      "pure_nonbased_chart_count": 7,
+      "pure_zero_dimension": 92,
+      "second_based_dimension": 130,
+      "third_based_dimension": 65
+    },
+    "35": {
+      "mixed_gate_dimension": 204,
+      "mixed_nonbased_chart_count": 20,
+      "pure_gate_dimension": 247,
+      "pure_nonbased_chart_count": 24,
+      "pure_zero_dimension": 223,
+      "second_based_dimension": 289,
+      "third_based_dimension": 184
+    }
+  },
+  "mathematical_gate": "When p and its first normal jet vanish on the C3 line, each pure second-normal eigenblock must land in the Klein cubic. The unique nonzero-eligible pure block is projectively constant at its C6-fixed root. After its scalar vanishes, the remaining mixed E0*E2 block must likewise be constant at the original fixed root.",
+  "prime_records": [
+    {
+      "degrees": {
+        "31": {
+          "c3_gate": {
+            "payload": "degree_31/c3_constant_gate_p463.npz",
+            "payload_sha256": "6327c6138fa878f958e122872abbdd52cf250056000795fd62bf9b5049f08dea"
+          },
+          "first_normal_blocks": [
+            {
+              "payload": "degree_31/c3_first_normal_exp0_p463.npz",
+              "payload_sha256": "7894918aa8f990917ee330728a88ff3bc6589984885e3aff45702ed4e0b9a2a9"
+            },
+            {
+              "payload": "degree_31/c3_first_normal_exp2_p463.npz",
+              "payload_sha256": "231dd5860ce267f896d2765f15d78cfaed698bcfdcfd4c6765ace76fe23f61a0"
+            }
+          ],
+          "input_dimension": 198,
+          "mixed_block": {
+            "payload": "degree_31/c3_second_mixed_p463.npz",
+            "payload_sha256": "645139b6336fec897926cbf332c9969052e21f07686b0e7d07e6709f70e380da"
+          },
+          "mixed_combined_kernel_dimension": 78,
+          "mixed_combined_rank": 120,
+          "mixed_scalar_rank": 13,
+          "pure_blocks": [
+            {
+              "normal_exponent": 0,
+              "payload": "degree_31/c3_second_normal_exp0_p463.npz",
+              "payload_sha256": "2fb8941c0b0e55c97b39432a965dfb657b15b10123d5e6d472166f203f318a3e"
+            },
+            {
+              "normal_exponent": 2,
+              "payload": "degree_31/c3_second_normal_exp2_p463.npz",
+              "payload_sha256": "84b2027410fd31aa0daca7f68e4e6f6fb6291383d32ab13505631dd0172c9e2f"
+            }
+          ],
+          "pure_combined_kernel_dimension": 99,
+          "pure_cumulative_ranks": [
+            76,
+            99
+          ],
+          "pure_scalar_rank": 7,
+          "pure_zero_rank": 106,
+          "second_based_rank": 68,
+          "third_based_dimension": 65,
+          "third_based_rank": 133
+        },
+        "35": {
+          "c3_gate": {
+            "payload": "degree_35/c3_constant_gate_p463.npz",
+            "payload_sha256": "2cec8fc6340045d9080b98846789adeb4350773f7f07fce18737d0257839a432"
+          },
+          "first_normal_blocks": [
+            {
+              "payload": "degree_35/c3_first_normal_exp0_p463.npz",
+              "payload_sha256": "7f28cca0759d44ffa7da1112da82593736865d97fa5927b6e06541793cf0f62f"
+            },
+            {
+              "payload": "degree_35/c3_first_normal_exp2_dir0_p463.npz",
+              "payload_sha256": "cb7f045782bccf3f1c5fbd487520eb4dbe3724d614f68485f3d2816d9073ee65"
+            },
+            {
+              "payload": "degree_35/c3_first_normal_exp2_dir1_p463.npz",
+              "payload_sha256": "69c7f407c7d7b4bcc5f46a8a2eb947227a5944614b8be8e63c84b4d0fe65cfe8"
+            }
+          ],
+          "input_dimension": 361,
+          "mixed_block": {
+            "payload": "degree_35/c3_second_mixed_p463.npz",
+            "payload_sha256": "a54c71c279d2b756d762a63900d573f2318d6b109a8e403ed53693714e7f8961"
+          },
+          "mixed_combined_kernel_dimension": 204,
+          "mixed_combined_rank": 157,
+          "mixed_scalar_rank": 20,
+          "pure_blocks": [
+            {
+              "normal_exponent": 0,
+              "payload": "degree_35/c3_second_normal_exp0_p463.npz",
+              "payload_sha256": "69540f9fd02d262ae7edef05b32803e5bfa422a5aa14bbc8b77c9daf2bee848e"
+            },
+            {
+              "normal_exponent": 2,
+              "payload": "degree_35/c3_second_normal_exp2_p463.npz",
+              "payload_sha256": "89bff351eabe1d3b3ce3f9d722a36e7768ac366cc00b6d3c0bc721489a6d0b6f"
+            }
+          ],
+          "pure_combined_kernel_dimension": 247,
+          "pure_cumulative_ranks": [
+            82,
+            114
+          ],
+          "pure_scalar_rank": 24,
+          "pure_zero_rank": 138,
+          "second_based_rank": 72,
+          "third_based_dimension": 184,
+          "third_based_rank": 177
+        }
+      },
+      "prime": 463,
+      "zeta11": 15
+    },
+    {
+      "degrees": {
+        "31": {
+          "c3_gate": {
+            "payload": "degree_31/c3_constant_gate_p727.npz",
+            "payload_sha256": "4fe4de2a354ecff6288f8129e6bb1ceb9d2bcca257012b4bff6398925e35bd39"
+          },
+          "first_normal_blocks": [
+            {
+              "payload": "degree_31/c3_first_normal_exp0_p727.npz",
+              "payload_sha256": "9f02b8db5dd396566848b1931e72d77c23d603f67683d37419a0e5e4f5fa3987"
+            },
+            {
+              "payload": "degree_31/c3_first_normal_exp2_p727.npz",
+              "payload_sha256": "b80c44372a4ea56b1ba737823b63e35f868a185b7ebb294d39993c58f26c00a4"
+            }
+          ],
+          "input_dimension": 198,
+          "mixed_block": {
+            "payload": "degree_31/c3_second_mixed_p727.npz",
+            "payload_sha256": "347489db56f60969d44560f15b9f0448073f7395a5742a91aa173b96da2976ff"
+          },
+          "mixed_combined_kernel_dimension": 78,
+          "mixed_combined_rank": 120,
+          "mixed_scalar_rank": 13,
+          "pure_blocks": [
+            {
+              "normal_exponent": 0,
+              "payload": "degree_31/c3_second_normal_exp0_p727.npz",
+              "payload_sha256": "5f6b052e8a0bf6f31d840fad90c0d32fc1f9e04d6888b4dbadeb7034da7e3fa7"
+            },
+            {
+              "normal_exponent": 2,
+              "payload": "degree_31/c3_second_normal_exp2_p727.npz",
+              "payload_sha256": "e36cc969c90581511fa635d19de94356a6753175fb71f12749900b63c87e2421"
+            }
+          ],
+          "pure_combined_kernel_dimension": 99,
+          "pure_cumulative_ranks": [
+            76,
+            99
+          ],
+          "pure_scalar_rank": 7,
+          "pure_zero_rank": 106,
+          "second_based_rank": 68,
+          "third_based_dimension": 65,
+          "third_based_rank": 133
+        },
+        "35": {
+          "c3_gate": {
+            "payload": "degree_35/c3_constant_gate_p727.npz",
+            "payload_sha256": "bab3b9fa15897938f30e9dad51d51ca884aab5f7b9130587d5284e3c9dcf941c"
+          },
+          "first_normal_blocks": [
+            {
+              "payload": "degree_35/c3_first_normal_exp0_p727.npz",
+              "payload_sha256": "62ade3e078baf82a2d71819ba48e0f894e2a30299fb0298ca7e1c4fb6ac78a3a"
+            },
+            {
+              "payload": "degree_35/c3_first_normal_exp2_dir0_p727.npz",
+              "payload_sha256": "9c4473f6073e394697c6bd7466f611f6b78e8c2a1288ff015eda4eb635c1187b"
+            },
+            {
+              "payload": "degree_35/c3_first_normal_exp2_dir1_p727.npz",
+              "payload_sha256": "8dd6552cdec31f69547ab71bc0ea36086bf229637b82f7230f59b66dbe74a4d0"
+            }
+          ],
+          "input_dimension": 361,
+          "mixed_block": {
+            "payload": "degree_35/c3_second_mixed_p727.npz",
+            "payload_sha256": "9702f4eb68cb754d186409d12b2f10863b58b4a862d80fb19e238ec445a20c6e"
+          },
+          "mixed_combined_kernel_dimension": 204,
+          "mixed_combined_rank": 157,
+          "mixed_scalar_rank": 20,
+          "pure_blocks": [
+            {
+              "normal_exponent": 0,
+              "payload": "degree_35/c3_second_normal_exp0_p727.npz",
+              "payload_sha256": "5b1a474486e40527252470defc57f7542f82725c655e685c18e7c07464e2f7de"
+            },
+            {
+              "normal_exponent": 2,
+              "payload": "degree_35/c3_second_normal_exp2_p727.npz",
+              "payload_sha256": "bc4ad837373e00aa0b882bc546db75da1af7d46382e3d2bdcf8131e85110c7c5"
+            }
+          ],
+          "pure_combined_kernel_dimension": 247,
+          "pure_cumulative_ranks": [
+            82,
+            114
+          ],
+          "pure_scalar_rank": 24,
+          "pure_zero_rank": 138,
+          "second_based_rank": 72,
+          "third_based_dimension": 184,
+          "third_based_rank": 177
+        }
+      },
+      "prime": 727,
+      "zeta11": 46
+    }
+  ],
+  "schema": "cov-m1-c3-second-normal-gate-v1",
+  "scope": "special-fibre necessary recursive pre-elimination; residual nonbased charts and third-based saturation are open"
+}

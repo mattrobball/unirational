@@ -5,7 +5,7 @@ Q-UNDECIDED
 This is a live research status, not a terminal resolution.
 
 - Initial repository commit: `2140419410cfff2f7d7dcca166acef8c16a0d41b`
-- Live repository audit through: `53e267a59b2d24de93c58dd9ddacc2f995fc2d68`
+- Live repository audit through: `35fa8f59b6a1423cc89300aeaceefe91552be5ba`
 - Pinned mathematical baseline: `715faf441289e2589b9325311b6613ea0331bf88`
 - Output directory: `goals_2026-08-01/Q_SCHUR_DESCENT/`
 - Headline: **OPEN**
@@ -47,6 +47,53 @@ D_12 + <p0,...,p(k-1)>,  k=4,5,6,7
 are exactly projectively empty, with the `k=7` run completing after 581.6
 seconds.  These are bounded coefficient-support exclusions, not an all-degree
 or full degree-12 theorem.
+
+Five independent completion audits have now tested the strongest remaining
+interfaces.
+
+1. The valuation audit proves that any henselian local nonpoint must be
+   unramified, have residue transcendence degree at least two and rational
+   rank at most three, and have decomposition group `PSL(2,11)`, one of the
+   two maximal `A5` classes, or maximal `11:5`.  All rational-rank-at-least-four
+   valuations are soluble.  It also proves that a morphism from the full twist
+   to a torsor under a commutative algebraic group can land only in a trivial
+   torsor.  The surviving residue cubic is still an index-one point problem,
+   not a pointlessness certificate.
+2. The primitive quartic is linked on a `K`-twisted cubic to an
+   integral quintic, but Balestrieri's construction is exactly the loop
+   `4 -> 5 -> 4`.  The residue compositum has degree 20, and its Galois package
+   is disjoint from the Schur splitting field.  Thus neither linkage nor raw
+   field intersection descends the quartic.
+3. The three points produced by the quartic's pairing-resolvent construction
+   are not universally collinear: five exact smooth rational test surfaces
+   have projective rank three.  Hence there is no formal second secant descent
+   from the cubic resolvent cycle.
+4. Two full-five-coordinate constant-Krylov point ansatzes over `K_proj` are
+   exactly empty, with Hilbert functions `[1,10,55,80,50,0]` and
+   `[1,15,120,435,820,351,50,0]`.  Gross--Popescu supplies the genuine
+   intertwiner `Lambda^2(V6) ~= Sym^2(W5)`, but its final birational
+   identification with the Klein cubic is explicitly non-equivariant.  These
+   facts close those two constructive shortcuts, not the unrestricted point
+   problem.
+5. Rational-curve incidence gives virtual point counts 192 in degree four
+   and 8 in degree three.  The quartic count allows fixed-point-free `A4` and
+   `S4` actions; the cubic count would force a fixed curve in the `C3` case
+   only if the special resolvent triple lay in a reduced enumerative general
+   fibre and its curves split over the cubic closure.  Neither hypothesis is
+   proved, and `S3` admits fixed-point-free actions on eight objects.  Exact
+   differential ranks `(9,10,6)` show that a general quartet does have a
+   general resolvent triple, but Voisin's Fulton specialization supplies no
+   such generality for the installed quartic.  Moreover, the generic
+   three-point incidence cover is integral of degree eight even after the
+   three marked points split, so cubic-closure splitting would have to be a
+   new Schur-specific theorem.  On the output side the bridge is complete:
+   any actual descended degree-three stable map, including a reducible one,
+   or any generalized-twisted-cubic Hilbert point forces a `K_Schur`-point.
+
+The requirement-by-requirement verdict and the precise missing implications
+are recorded in `COMPLETION_AUDIT.md`.  Every finite certificate listed in
+`REPLAY.md` has an independent verifier.  There is deliberately no
+`SEAL.json`, because neither binary headline is proved.
 
 Completion still requires one of the two headline exits in the goal file.
 

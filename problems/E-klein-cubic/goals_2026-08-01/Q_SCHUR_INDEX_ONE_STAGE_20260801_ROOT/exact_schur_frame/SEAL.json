@@ -1,0 +1,18 @@
+{
+  "bounded_theorem": "exact characteristic-zero Hilbert--90 frame and full 35-coefficient model of the genuine Schur twist",
+  "files": {
+    "README.md": "c95502e0bbefab69fdcfef1bf0d36ef2531dc5c7165e7d845ab6e894c0b59a52",
+    "STATUS.md": "26da23660db164f742d1563fe0f96a34cd0be88ced86defd673df98cc624c72a",
+    "THEOREM.md": "051324fc06253b0bec0a066eb113ea475eb96c1d400577f450f9d954dcc33644",
+    "WORKLOG.md": "f097976a5a07f1efe9751a55c28232328431eab72ac1bff02932436a0c760a07",
+    "exact_frame.json": "53f2d5e6afa2c6afdf49f53723339ccf5755f919471d42f907d5542ddef87e45",
+    "exact_representation_core.py": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4",
+    "make_seal.py": "8eaf056c83aa431d5c50f49a0504944fa70aecd369f976d64210a5b8a78eaafd",
+    "produce_exact_frame.py": "86df099ddb87bec88fb7883b91f375aadae41507421fc5d96a3e4ef9ea44d48e",
+    "verify_all.py": "738ec3c03b8c98dbdf777965a4d030b98a542cf1b42e0db27ca48fd4f11006a6",
+    "verify_exact_frame.py": "64fb5f9dc637343213ec0a3cdbd859d21d21e510b5a99b92933a2c1ff4bf071c"
+  },
+  "governing_status": "Q-UNDECIDED",
+  "schema": "klein-q-schur-exact-frame-seal-v1",
+  "strict_scope": "No K_Schur-point and no pointlessness obstruction is proved."
+}

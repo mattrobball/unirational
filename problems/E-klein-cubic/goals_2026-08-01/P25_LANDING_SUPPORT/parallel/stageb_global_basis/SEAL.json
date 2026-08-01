@@ -1,0 +1,184 @@
+{
+  "file_count": 33,
+  "files": [
+    {
+      "bytes": 9494,
+      "path": "REPORT.md",
+      "sha256": "f680d086d6604f6e559272b00174bdfd61caa26d909d06f1ad732408022a0d21"
+    },
+    {
+      "bytes": 384,
+      "path": "WORK_SCOPE.md",
+      "sha256": "1fa516900f1b6a8aca387cd658b645a362262fe7ebba18f40035f88cb6e8850c"
+    },
+    {
+      "bytes": 7864,
+      "path": "analyze_lt_cover.py",
+      "sha256": "05445f14709fd36d1a581f78166ba1c898746ce18f59f4addb96d7940f47b564"
+    },
+    {
+      "bytes": 5575,
+      "path": "certify_coordinate_lines.py",
+      "sha256": "05d266be9789b86894f1b2d9c0b25ac045cf6baf9dbb4e71a7e02ce93a08d63b"
+    },
+    {
+      "bytes": 6494,
+      "path": "contract_full_p3.py",
+      "sha256": "671d1518bc34c7adaf8108643d88faf6880b0dd8c1152718074e1f7e38b65653"
+    },
+    {
+      "bytes": 4772,
+      "path": "contract_selected_p4.py",
+      "sha256": "b1b8674d4a0c588cdbbc6bb9dbf239887aa462b7ab82d04166081eee41490a17"
+    },
+    {
+      "bytes": 2645,
+      "path": "full_basis_manifest.json",
+      "sha256": "255e1f1835220170d45b9fef1c8db098763337bdbaebccfbc04017645fa5dc97"
+    },
+    {
+      "bytes": 1300,
+      "path": "full_p3_manifest.json",
+      "sha256": "106524b4772871250f0915af57eb2323e1ff4493ee4ade948f838f54f22cbd8e"
+    },
+    {
+      "bytes": 90646,
+      "path": "full_p3_statistics.npz",
+      "sha256": "63eeef3e371bfc9a1619c67fb3522b7d8b763daad8ab3b680f7f9824bf6037dc"
+    },
+    {
+      "bytes": 1478695,
+      "path": "global_basis_statistics.npz",
+      "sha256": "c6d5d276b91494e620d729b34ba46d3c9a0210e872b4064e79b07bf01c2d419e"
+    },
+    {
+      "bytes": 1830,
+      "path": "lt_cover_analysis.json",
+      "sha256": "e1275a14fd8887418d0638437856e07e4b075b08e5be3147b4210ccaf394ded5"
+    },
+    {
+      "bytes": 16941,
+      "path": "lt_cover_nonpure_minor.npz",
+      "sha256": "f7da4f4237290d046976cb5ac9df62aa1888db17f5d657c1cb0e614cb8f9db12"
+    },
+    {
+      "bytes": 1613,
+      "path": "make_seal.py",
+      "sha256": "338623053735b2d77c03e53cefeedca9d22dfd973dd081a1cfd9a6571e277188"
+    },
+    {
+      "bytes": 13830,
+      "path": "produce_full_basis.py",
+      "sha256": "5c3d29b14a0f3a3f86ecbce58501bd74ea63600fd96e62da1df5cbbbdc0c4c68"
+    },
+    {
+      "bytes": 9027,
+      "path": "produce_stageb_cas.py",
+      "sha256": "9d89119b8760d1fc67f96db4490faf6257e06443a7bd5ba66e6616bf3c982439"
+    },
+    {
+      "bytes": 13180,
+      "path": "select_sparse_packet.py",
+      "sha256": "ca1eb2fa64f122c0a9c375c1db242fa21448fa2d3fc4a9a994044196320572a2"
+    },
+    {
+      "bytes": 3437,
+      "path": "stageb_cas_jobs.json",
+      "sha256": "1e2d118636f8dc66d92620642ebfb4e165e47436a038b453aa0ceb17e1cf94eb"
+    },
+    {
+      "bytes": 988,
+      "path": "support_balanced_coordinate_line_certificate.json",
+      "sha256": "da6b8a25bd8a3e15e61064537078f5eb86ae8ad7c5bcd81a7e24d251ab0ef6d4"
+    },
+    {
+      "bytes": 24229,
+      "path": "support_balanced_coordinate_line_minors.npz",
+      "sha256": "3767ad02158ea4c8592661c832083ddf27cc3539b9a35c28db1911caad1dc2c5"
+    },
+    {
+      "bytes": 6026,
+      "path": "support_balanced_r43_certificate.json",
+      "sha256": "65f8982768a70e84aec345731857408c7b15afabe47f01ff4a8ae766ac47a695"
+    },
+    {
+      "bytes": 1555039,
+      "path": "support_balanced_r43_stageB.npz",
+      "sha256": "f1aea8369fd56d5139b3d1f1574a194e2016c7d306006fb1aae37f0223d5fd3a"
+    },
+    {
+      "bytes": 1270,
+      "path": "support_balanced_r43_stageBC.json",
+      "sha256": "3950409c7d9a53c791249284906d57591368ad4a1babc6f4fc719cd8be817c29"
+    },
+    {
+      "bytes": 4235346,
+      "path": "support_balanced_r43_stageBC.npz",
+      "sha256": "821e1340cd6242a1d89a3a59f89d6d0fbee7fa1b4207e931b28d4c402f5fbedb"
+    },
+    {
+      "bytes": 21643276,
+      "path": "support_balanced_r43_stageB_module.sing",
+      "sha256": "80d8a15a5cc20a5ae73e46f776a9b9bfbc106b908a9bcc6e4a1b8060bd8dbd76"
+    },
+    {
+      "bytes": 21645344,
+      "path": "support_balanced_r43_stageB_saturation.sing",
+      "sha256": "43265bdbf49a2427171da9a6fb9c4e06cd7254a09733bbee6eedba881b120be8"
+    },
+    {
+      "bytes": 72310322,
+      "path": "support_balanced_r43_stageC_saturation.sing",
+      "sha256": "3c1eab8bdbb97420a488ca725794316eb8055345be5095e92021f70bebe8d4ba"
+    },
+    {
+      "bytes": 4387,
+      "path": "verify_coordinate_lines.py",
+      "sha256": "3b5ba8199fe099817bc7c3f7b7a68dcafa43efc6fc972192319723cce5f0e005"
+    },
+    {
+      "bytes": 421,
+      "path": "verify_coordinate_lines_result.json",
+      "sha256": "9dd9ae33a4e8157a6da059596a49248056db9432ffcc38ea45d39c0ead557f59"
+    },
+    {
+      "bytes": 3644,
+      "path": "verify_lt_cover.py",
+      "sha256": "f8caf6ab5e7c1708a3143aad642aaca0255abb18b6231d2136e9fa1cde078afe"
+    },
+    {
+      "bytes": 624,
+      "path": "verify_lt_cover_result.json",
+      "sha256": "82fc03dfe7b2568ffe9f192dad14fe19f10c1bb0ec04f0317e864daf88cb9eab"
+    },
+    {
+      "bytes": 1636,
+      "path": "verify_seal.py",
+      "sha256": "3de3a117376c5805f1abe9c4f4b4a99992e8c0f665def27799834ae58cec735b"
+    },
+    {
+      "bytes": 12086,
+      "path": "verify_sparse_packet.py",
+      "sha256": "56ef89c1ba08512f27e5ceb5868594f05dc012835402a71fe5d3eac026642879"
+    },
+    {
+      "bytes": 2354,
+      "path": "verify_sparse_packet_result.json",
+      "sha256": "7c1b6de99b8b94c45b2d4feb48a4b07804629ee6bfda1f6c7fb948beaa9e82f8"
+    }
+  ],
+  "local_rebuildable_artifacts": [
+    {
+      "bytes": 274881638,
+      "path": "full_linear_syzygy_basis.npy",
+      "sha256": "3571e9879bf1af6d6a405d9761522d4253e76e40edd129afd4b9363287d60ca3"
+    },
+    {
+      "bytes": 590397806,
+      "path": "full_p3_contractions.npy",
+      "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019"
+    }
+  ],
+  "scope": "Exact full-basis, P3/P4, LT-obstruction, coordinate-line, and prepared Stage-B/Stage-C CAS artifacts; no saturation verdict.",
+  "status": "SEALED_STAGEB_GLOBAL_BASIS_PACKET"
+}

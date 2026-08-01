@@ -1,0 +1,68 @@
+{
+  "cas": "Singular for arm64-Darwin version 4.4.1 (44105, 64 bit) Nov 11 2025 16:12:34",
+  "exit": "P25-UNDECIDED",
+  "field": 89,
+  "measurement_note": "RSS values are explicit ps samples in KiB, not claimed peaks. Every listed run was interrupted before a saturation basis marker and wrote no result file.",
+  "smallest_unresolved_stratum": "b0=0,b1!=0 after saturation by the q- and b1-irrelevant ideals",
+  "attempts": [
+    {
+      "equations": 48,
+      "method": "global boundary, q-then-b1 sequential saturation",
+      "result": "incomplete_nonverdict",
+      "script_sha256": "f77ad6fe7cdf86e89d2fee64df8a15b0659ef69d2fb21b4f5e1001b9fe928b36",
+      "wall_seconds": 1809.60,
+      "user_cpu_seconds": 1781.93
+    },
+    {
+      "equations": 48,
+      "method": "global boundary, b1-then-q sequential saturation",
+      "result": "incomplete_nonverdict",
+      "script_sha256": "8c0579f90fcbce933ea52036ccfd486d23fc85ee7c9d0d2d6aa31f5184b77d6e",
+      "sampled_rss_kib": 10388624,
+      "wall_seconds": 1817.54,
+      "user_cpu_seconds": 1807.22
+    },
+    {
+      "equations": 48,
+      "method": "affine boundary chart b1_0=1, q saturation",
+      "result": "incomplete_nonverdict",
+      "script_sha256": "4737fd58d790372d28ac50e13b6e6b8804d100c358a02190557854f9057b14fc",
+      "sampled_rss_kib": 8984176,
+      "wall_seconds": 915.32,
+      "user_cpu_seconds": 854.13
+    },
+    {
+      "equations": 43,
+      "method": "global boundary, b1-then-q sequential saturation",
+      "result": "incomplete_nonverdict",
+      "script_sha256": "40e51becf684e7694f8f30705a9ca365f4875cf21771c01c601ed1fcb37bb3e9",
+      "sampled_rss_kib": 6541552,
+      "wall_seconds": 628.74,
+      "user_cpu_seconds": 548.70
+    },
+    {
+      "equations": 96,
+      "method": "global boundary, b1-then-q sequential saturation",
+      "result": "incomplete_nonverdict",
+      "script_sha256": "f7024e529a2d463ee91cec02f8c0ad56a5f868c6df3a90e7a5f35a30e22b8ca8",
+      "sampled_rss_kib": 10874048,
+      "wall_seconds": 1835.49,
+      "user_cpu_seconds": 1432.73
+    },
+    {
+      "contracted_sha256": "2e718c491172480e3aa3f055d5806d28a9414db2627e6daf3f0204bdc3b840ea",
+      "equations": 256,
+      "method": "global boundary, b1-then-q sequential saturation",
+      "result": "incomplete_nonverdict",
+      "script_sha256": "03f54fbad6d1a220520a8ecb84e7dc5b37cbbc6c49092ee8dfb2e1ba19f9188e",
+      "sampled_rss_kib": 10710720,
+      "wall_seconds": 2572.24,
+      "user_cpu_seconds": 1812.78,
+      "system_cpu_seconds": 3.65,
+      "first_saturation_marker_seen": false,
+      "result_file_written": false
+    }
+  ],
+  "special_fibre_empty_proved": false,
+  "unit_ideal_certificate_obtained": false
+}

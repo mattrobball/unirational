@@ -1,0 +1,48 @@
+{
+  "schema": "kls2-configuration-ledger-v1",
+  "exit": "KLS2-NO-FINITE-REDUCTION",
+  "headline": "OPEN",
+  "literal_landing_ledger": {
+    "exhaustive": true,
+    "configurations": [
+      {
+        "id": "LANDING_SMOOTH_H1",
+        "h": "1",
+        "multiplicities": [],
+        "stabilizer_orbit_support": [],
+        "normalization": "identity_on_smooth_Klein_cubic",
+        "conductor": [],
+        "discrepancy_constraints": [],
+        "fifty_five_plane_arrangement": "a separate landing/base-locus constraint; it does not produce conductor support and remains unresolved all-degree",
+        "fixed_locus_orders": "not a conductor datum on the smooth image; no all-degree elimination follows",
+        "quartic_precomposition": "produces degree 4d, not a minimality violation",
+        "scalar_invariant_multiplication": "removed by primitive saturation and does not create a new projective configuration",
+        "existence": "undecided",
+        "eliminated": false
+      }
+    ],
+    "finite_reduction_of_existence_problem": false
+  },
+  "broad_kls_ledger": {
+    "exhaustive": false,
+    "missing_theorems": [
+      "minimality forces A_E(Hnu,C)>=1 at exceptional gcd valuations",
+      "minimality bounds reduced source support dominating conductor primes"
+    ],
+    "scoped_closed_ids": [
+      "NORMAL_P22",
+      "NONNORMAL_LITERAL_P22",
+      "NONNORMAL_P22_SQUAREFREE_EXTRA",
+      "NONNORMAL_P22_POSITIVE_DISCREPANCY_EXTRA",
+      "DEGREE25_28_NORMAL_IMAGE_P22_FIELDS"
+    ],
+    "open_parametric_ids": [
+      "LC_ZERO_PLACE_REPEATED_FACTORS",
+      "NEGATIVE_DISCREPANCY_FACTORS",
+      "ADDITIONAL_CONDUCTOR_SUPPORT",
+      "REPEATED_P22_HIGHER_CONDUCTOR",
+      "NON_P22_STABILIZER_ORBITS",
+      "STABLE_NONRATIONAL_COMPONENTS"
+    ]
+  }
+}

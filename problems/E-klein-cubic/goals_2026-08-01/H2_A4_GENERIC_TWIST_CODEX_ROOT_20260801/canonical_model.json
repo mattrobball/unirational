@@ -1,0 +1,216 @@
+{
+  "adapted_frame_in_decomposition_basis": {
+    "Delta": "(x^2-y^2)*(x^2-z^2)*(y^2-z^2)",
+    "character_columns": [
+      "(L/S)e_U",
+      "(M/S)e_V"
+    ],
+    "full_determinant_up_to_nonzero_constant": "L*M*Delta/(S^2*(x*y*z)^2)",
+    "standard_block_columns": [
+      "S*(x,y,z)^T/(xyz)",
+      "(yz,zx,xy)^T/S",
+      "(x^3,y^3,z^3)^T/(xyz)"
+    ],
+    "standard_block_determinant": "Delta/(x*y*z)^2"
+  },
+  "canonical_open": "S*x*y*z*L*M*Delta != 0",
+  "canonical_source_generators": [
+    [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ]
+  ],
+  "format": "H2-A4-CANONICAL-MODEL-v1",
+  "frame_equivalence": "B(y)=D*diag_blocks(L/S,M/S,Q(y)); T(y)=A_inst(P*y)^(-1)*B(y) is A4-invariant and F(A_inst(P*y)*T(y)*w)=F(B(y)*w)",
+  "installed_generators": [
+    [
+      0,
+      1,
+      10,
+      0
+    ],
+    [
+      3,
+      6,
+      7,
+      7
+    ]
+  ],
+  "installed_input": "H_SUBGROUP_TWISTS_ROOT_019FBE10/twists.json:A4",
+  "installed_open": "product_h d_h(y)*det(A_inst(P*y)) != 0",
+  "installed_seed_denominators_after_P": [
+    {
+      "h": [
+        0,
+        1,
+        10,
+        0
+      ],
+      "linear_form": "-(x + 5*sqrt(5)*x + 2*sqrt(5)*y + 12*y - 3*sqrt(5)*z - z)/4"
+    },
+    {
+      "h": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "linear_form": "(x + 5*sqrt(5)*x + 2*sqrt(5)*y + 12*y + z + 3*sqrt(5)*z)/4"
+    },
+    {
+      "h": [
+        1,
+        8,
+        8,
+        10
+      ],
+      "linear_form": "(x + 5*sqrt(5)*x - 12*y - 2*sqrt(5)*y - 3*sqrt(5)*z - z)/4"
+    },
+    {
+      "h": [
+        3,
+        1,
+        1,
+        8
+      ],
+      "linear_form": "-(x + 5*sqrt(5)*x - 12*y - 2*sqrt(5)*y + z + 3*sqrt(5)*z)/4"
+    },
+    {
+      "h": [
+        3,
+        6,
+        7,
+        7
+      ],
+      "linear_form": "(2*sqrt(5)*x + 12*x + y + 3*sqrt(5)*y + z + 5*sqrt(5)*z)/4"
+    },
+    {
+      "h": [
+        3,
+        7,
+        6,
+        7
+      ],
+      "linear_form": "-(x + 3*sqrt(5)*x - 5*sqrt(5)*y - y + 2*sqrt(5)*z + 12*z)/4"
+    },
+    {
+      "h": [
+        4,
+        3,
+        4,
+        6
+      ],
+      "linear_form": "-(x + 3*sqrt(5)*x + y + 5*sqrt(5)*y - 12*z - 2*sqrt(5)*z)/4"
+    },
+    {
+      "h": [
+        4,
+        4,
+        3,
+        6
+      ],
+      "linear_form": "-(2*sqrt(5)*x + 12*x + y + 3*sqrt(5)*y - 5*sqrt(5)*z - z)/4"
+    },
+    {
+      "h": [
+        4,
+        6,
+        7,
+        8
+      ],
+      "linear_form": "(x + 3*sqrt(5)*x + y + 5*sqrt(5)*y + 2*sqrt(5)*z + 12*z)/4"
+    },
+    {
+      "h": [
+        4,
+        7,
+        6,
+        8
+      ],
+      "linear_form": "(2*sqrt(5)*x + 12*x - 3*sqrt(5)*y - y - 5*sqrt(5)*z - z)/4"
+    },
+    {
+      "h": [
+        5,
+        3,
+        4,
+        7
+      ],
+      "linear_form": "-(2*sqrt(5)*x + 12*x - 3*sqrt(5)*y - y + z + 5*sqrt(5)*z)/4"
+    },
+    {
+      "h": [
+        5,
+        4,
+        3,
+        7
+      ],
+      "linear_form": "(x + 3*sqrt(5)*x - 5*sqrt(5)*y - y - 12*z - 2*sqrt(5)*z)/4"
+    }
+  ],
+  "invariant_field": {
+    "L": "x^2+omega*y^2+omega^2*z^2",
+    "M": "x^2+omega^2*y^2+omega*z^2",
+    "S": "x^2+y^2+z^2",
+    "ell": "L/S",
+    "inverse_fourier": [
+      "x^2/S=(1+ell+m)/3",
+      "y^2/S=(1+omega^2*ell+omega*m)/3",
+      "z^2/S=(1+omega*ell+omega^2*m)/3"
+    ],
+    "m": "M/S",
+    "presentation": "K_A4=C(u,v); m^3=v^3/u",
+    "u": "ell^3",
+    "v": "ell*m"
+  },
+  "source_intertwiner_P": [
+    [
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "(-1 + sqrt(5))/4",
+      "(1 + sqrt(5))/4",
+      "1/2"
+    ],
+    [
+      "(1 + sqrt(5))/4",
+      "1/2",
+      "(-1 + sqrt(5))/4"
+    ]
+  ],
+  "source_intertwiner_determinant": "(-1 + sqrt(5))/4",
+  "source_intertwiner_direction": "y_inst=P*y_can; S_inst(g)P=P*S_can(g)",
+  "twist_point": "For a parameter root p of exact_degree3_map.json, the adapted coordinate vector z(y)=B(y)^(-1)*Phi_p(y) satisfies z(g*y)=chi(g)z(y).  The actual degree-zero K_A4-vector is (M/S)*z(y)/(xyz), because chi(gb)=omega^2 and M(gb*y)=omega*M(y)."
+}

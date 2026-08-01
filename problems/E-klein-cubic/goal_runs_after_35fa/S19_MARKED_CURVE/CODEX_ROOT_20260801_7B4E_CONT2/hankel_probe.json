@@ -1,0 +1,140 @@
+{
+  "best_tested_point": {
+    "family": "random_distinct_assignment",
+    "rank": 20,
+    "tau": [
+      0,
+      1,
+      5,
+      27,
+      52,
+      42,
+      7,
+      3,
+      33,
+      43,
+      6,
+      23,
+      30,
+      25,
+      40,
+      13,
+      54,
+      53,
+      35,
+      22,
+      36,
+      15,
+      51,
+      31,
+      48,
+      38,
+      34,
+      45,
+      26,
+      4,
+      17,
+      50,
+      18,
+      49,
+      14,
+      47,
+      41,
+      39,
+      29,
+      10,
+      19,
+      16,
+      37,
+      11,
+      46,
+      44,
+      24,
+      28,
+      12,
+      2,
+      32,
+      9,
+      21,
+      20,
+      8
+    ]
+  },
+  "candidate": null,
+  "hilbert_function_d0_to_6": [
+    1,
+    4,
+    10,
+    19,
+    31,
+    45,
+    55
+  ],
+  "hyperplane": [
+    1,
+    1,
+    1,
+    2,
+    7
+  ],
+  "matrix_shape": [
+    105,
+    20
+  ],
+  "nonvanishing_target_coordinate": [
+    0,
+    0,
+    0,
+    1
+  ],
+  "prime": 397,
+  "rank_drop_condition": "rank < 20",
+  "rank_histogram": {
+    "20": 5468
+  },
+  "rejected_nondistinct_by_family": {
+    "target_polynomial_degree_le_1": 2433,
+    "target_polynomial_degree_le_2": 2453,
+    "target_polynomial_degree_le_3": 2448,
+    "target_polynomial_degree_le_4": 2449,
+    "target_polynomial_degree_le_5": 2454,
+    "target_polynomial_degree_le_6": 2458,
+    "target_rational_degree_le_1": 2147,
+    "target_rational_degree_le_2": 2112,
+    "target_rational_degree_le_3": 2141,
+    "target_rational_degree_le_4": 2124,
+    "transported_line_parameter": 1
+  },
+  "rejected_undefined_by_family": {
+    "target_rational_degree_le_1": 308,
+    "target_rational_degree_le_2": 351,
+    "target_rational_degree_le_3": 314,
+    "target_rational_degree_le_4": 340
+  },
+  "schema": "s19-hankel-incidence-probe-v2",
+  "seed": 190055,
+  "source_sha256": {
+    "universal_marked_family.json": "3a808167611f66cb39369e243a9c38a9019ab5f7c6b7397d3c2636f3950c08fb"
+  },
+  "strict_scope": [
+    "a full-rank sample does not prove characteristic-zero or geometric emptiness",
+    "a modular rank drop would be discovery evidence until lifted and checked",
+    "the random search is not substituted for the saturated incidence scheme"
+  ],
+  "terminal_marker": "S19_HANKEL_MODULAR_RECONNAISSANCE_COMPLETE",
+  "tested_distinct_by_family": {
+    "random_distinct_assignment": 5000,
+    "target_polynomial_degree_le_1": 67,
+    "target_polynomial_degree_le_2": 47,
+    "target_polynomial_degree_le_3": 52,
+    "target_polynomial_degree_le_4": 51,
+    "target_polynomial_degree_le_5": 46,
+    "target_polynomial_degree_le_6": 42,
+    "target_rational_degree_le_1": 45,
+    "target_rational_degree_le_2": 37,
+    "target_rational_degree_le_3": 45,
+    "target_rational_degree_le_4": 36
+  },
+  "trials_requested_per_full_random_family": 5000,
+  "zeta11": 256
+}

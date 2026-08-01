@@ -1,0 +1,93 @@
+{
+  "as_of": "2026-08-01",
+  "live_commit": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "schema": "kls2-source-manifest-v1",
+  "sources": [
+    {
+      "bytes": 3518,
+      "path": "goals_after_35fa8f/GOAL_KLS2_MINIMALITY_TO_DISCREPANCY.md",
+      "sha256": "00de17a4ee3235591780f5a2722adab01bd6a24e30c893396cf1274ea75dc7b4"
+    },
+    {
+      "bytes": 10474,
+      "path": "goals_after_35fa8f/IMPLEMENTATION_AUDIT.md",
+      "sha256": "9bfe6898b624a659aa72cec25c58f9e5d7c799bad15ef470be5ec68f73eb5444"
+    },
+    {
+      "bytes": 108416,
+      "path": "SPEC.md",
+      "sha256": "a607b0a026f732eee1f6cb281ae2e85732d9e2aac866802fd739a810767df01e"
+    },
+    {
+      "bytes": 200407,
+      "path": "RESOLUTION.md",
+      "sha256": "3eac1aa9787da90cbee21b0e72e9ea0fe538921e74afd9cc20170d5227e64c67"
+    },
+    {
+      "bytes": 3533,
+      "path": "goals_2026-08-01/KLS_MINIMALITY/STATUS.md",
+      "sha256": "364cf234035c986b38faa0ab33721b45335f94da6a897558a4202934cc3fc352"
+    },
+    {
+      "bytes": 4580,
+      "path": "goals_2026-08-01/KLS_MINIMALITY/MINIMALITY_THEOREM.md",
+      "sha256": "31f897f9530a2c41a6def31ec562b4fe8a4f6f0df282c4293bd29523c5066633"
+    },
+    {
+      "bytes": 6473,
+      "path": "goals_2026-08-01/KLS_MINIMALITY/INTERFACE_AUDIT.md",
+      "sha256": "3d18edebfdb7e6c0f4563abf089d953d7a7e06cec80736c4dac47cc51215e084"
+    },
+    {
+      "bytes": 8782,
+      "path": "tmp/kls_structural_successor/REPORT.md",
+      "sha256": "a2ec13581930974417929c51af2281a64c6442af7a2c549ea373b5545acee13d"
+    },
+    {
+      "bytes": 13508,
+      "path": "tmp/kls_global_foliation_theorem/REPORT.md",
+      "sha256": "e013535dc7d481785bdf26e26d07ab9ce780c7cfdf18569a9e2ff9d79e611302"
+    },
+    {
+      "bytes": 23462,
+      "path": "tmp/kls_minimal_contraction_attack/REPORT.md",
+      "sha256": "42f4131a01e347ac20628704add87cfdb7befcf4fc69b6b2963b5edf92ff468a"
+    },
+    {
+      "bytes": 12866,
+      "path": "tmp/kls_actual_conductor_geometry/REPORT.md",
+      "sha256": "63202ab6747ad402c379031f4986b59e8c99b64ca4245f8c62f650804f873652"
+    },
+    {
+      "bytes": 12043,
+      "path": "tmp/kls_actual_conductor_geometry_audit/REPORT.md",
+      "sha256": "d933216b0c8f309eda79e2bb58beee949e093b913e1c10c3e551ca6f9cd0eb1a"
+    },
+    {
+      "bytes": 14487,
+      "path": "tmp/kls_proper_multiple_structure/REPORT.md",
+      "sha256": "b2361cfa06089216438dfb5db25a80d9b2d8da8ae37725f2443813ddae612f07"
+    },
+    {
+      "bytes": 9680,
+      "path": "tmp/kls_proper_multiple_structure_audit/REPORT.md",
+      "sha256": "fcd30dda6601586b5f13d434c10a31760d7129223e3bcdb16cd526081b53615f"
+    },
+    {
+      "bytes": 14184,
+      "path": "tmp/kls_discrepancy_next_gate/REPORT.md",
+      "sha256": "a5b3e47bd1f99c70f1f321bf6bfd2fd21ec36225b84d5c7658128860cc52cdcc"
+    },
+    {
+      "bytes": 7069,
+      "path": "tmp/kls_discrepancy_next_gate_audit/REPORT.md",
+      "sha256": "8fc286196549de556a79e3219e43afc6c01464edb137c6ca9b6d8b5af2bda497"
+    },
+    {
+      "bytes": 18815,
+      "path": "tmp/kls_a5_logarithmic_divisor/REPORT.md",
+      "sha256": "4c047dcfa0ad57d3ba9e7f81b3ef412d943e16d73a3e6ceaed134285e32d3912"
+    }
+  ]
+}

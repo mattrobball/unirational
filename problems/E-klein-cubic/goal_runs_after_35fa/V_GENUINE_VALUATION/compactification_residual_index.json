@@ -1,0 +1,96 @@
+{
+  "schema": "klein_goal_v2_compactification_residual_index_v1",
+  "exit": "V2-FIXED-FRAME-PLACE-NONTRANSFERABLE",
+  "universal_local_index": {
+    "object": "genuine Klein twist",
+    "effective_cycle_degrees": [60, 132, 165, 220],
+    "bezout_coefficients": [-13, 3, 1, 1],
+    "gcd": 1,
+    "warning": "index one does not imply a rational point"
+  },
+  "infinity_place_models": [
+    {
+      "model": "selected fixed ternary cubic",
+      "proper": true,
+      "special_fibre": "smooth plane cubic over C(r,rho,T)",
+      "residual_index": 3,
+      "point_status": "empty",
+      "scope": "AUX selected slice"
+    },
+    {
+      "model": "proper closure of full auxiliary characteristic cubic",
+      "proper": true,
+      "special_fibre": "not identified with the selected plane cubic",
+      "residual_index": 1,
+      "point_status": "has a residue point by specialization of an accepted K-point",
+      "scope": "AUX full"
+    },
+    {
+      "model": "genuine Klein twist",
+      "proper": true,
+      "special_fibre": "not the fixed plane cubic; it has a point if genuine inertia is nontrivial and is the genuine residue twist if inertia is trivial",
+      "residual_index": 1,
+      "point_status": "dichotomy: nonempty in the ramified case, open in the unramified case",
+      "scope": "FULL"
+    },
+    {
+      "model": "twisted F14 common-line section",
+      "proper": true,
+      "special_fibre": "no selected centre or residual equation supplied by the fixed slice",
+      "residual_index": null,
+      "point_status": "undecided",
+      "scope": "GENUINE SUFFICIENT INCIDENCE"
+    }
+  ],
+  "candidate_boundaries": [
+    {
+      "rank": 1,
+      "candidate": "Q5=(f5=0)",
+      "torsor_inertia": "trivial at the generic divisor",
+      "residue_dimension": "positive",
+      "full_twist_status": "open",
+      "decisive_missing_input": "unbounded pointlessness or a point for the full five-coordinate residue twist"
+    },
+    {
+      "rank": 2,
+      "candidate": "Q6=(f6=0)",
+      "torsor_inertia": "trivial at the generic divisor",
+      "residue_dimension": "positive",
+      "full_twist_status": "open",
+      "decisive_missing_input": "unbounded pointlessness or a point for the full five-coordinate residue twist"
+    },
+    {
+      "rank": 3,
+      "candidate": "finite double-root target branch of the primitive sextic",
+      "torsor_inertia": "not supplied by the fixed-frame calculation",
+      "residue_dimension": "positive",
+      "full_twist_status": "open and lacks a negative bridge",
+      "decisive_missing_input": "target normalization plus horizontal Cl/Pic mod 3 and a genuine-object bridge"
+    },
+    {
+      "rank": 4,
+      "candidate": "D infinity leading-coefficient boundary",
+      "torsor_inertia": "unknown for the genuine G-torsor; the separate affine-scaling cover has mu3 inertia",
+      "residue_dimension": "positive",
+      "full_twist_status": "fixed-frame obstruction nontransferable; genuine local point status undecided in the unramified branch",
+      "decisive_missing_input": "actual G-inertia plus the full genuine residue twist, not the scalar mu3 cover or fixed plane slice"
+    },
+    {
+      "rank": 5,
+      "candidate": "subgroup-fixed and exceptional ramified boundaries",
+      "torsor_inertia": "nontrivial",
+      "residue_dimension": "variable",
+      "full_twist_status": "locally soluble",
+      "decisive_missing_input": "retired by the central-inertia theorem"
+    },
+    {
+      "rank": 6,
+      "candidate": "closed-residue toroidal or full Parshin boundary",
+      "torsor_inertia": "arbitrary",
+      "residue_dimension": 0,
+      "full_twist_status": "locally soluble",
+      "decisive_missing_input": "retired; an unramified residue torsor over C is trivial"
+    }
+  ],
+  "candidate_search_verdict": "no new genuine valuation pass; Q5 and Q6 remain the smallest known-unramified sites, while D still needs actual G-inertia and genuine-residue analysis"
+}

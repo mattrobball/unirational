@@ -6,3 +6,9 @@
 /syzygy_r96_q0_b0_1.ms
 /syzygy_r256_q0_b0_1.ms
 /syzygy_r256_q0_b0_0_b1_0_1.ms
+/syzygy_r48_b0_saturate.sing
+/syzygy_r48_boundary_bfirst.sing
+/syzygy_r48_b0_unique.sing
+/syzygy_r48_boundary_replay.sing
+/syzygy_r48_b0_replay.sing
+/syzygy_r256_boundary_saturate.sing

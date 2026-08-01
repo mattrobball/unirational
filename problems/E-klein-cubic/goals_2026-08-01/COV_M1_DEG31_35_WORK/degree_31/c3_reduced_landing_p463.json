@@ -1,0 +1,24 @@
+{
+  "based_restriction_zero_dimension": 177,
+  "c3_gate_rank": 11,
+  "c3_scalar_form_rank": 10,
+  "complete_equation_count": 5349,
+  "decision_status": "complete reduced equations; saturation open",
+  "factored_linear_form_rank": 187,
+  "factored_linear_form_shape": [
+    5349,
+    5,
+    187
+  ],
+  "gate_payload": "degree_31/c3_constant_gate_p463.npz",
+  "gate_payload_sha256": "6327c6138fa878f958e122872abbdd52cf250056000795fd62bf9b5049f08dea",
+  "landing_payload": "degree_31/landing_circuits_p463.npz",
+  "landing_payload_sha256": "065706e7cb6f020c2242826e2485d52fb20f38e270f6bd9fc328f22462b5fc78",
+  "nonbased_chart_count": 10,
+  "nonbased_cover": "the complement of the based stratum is covered by normalizing one of the displayed independent scalar-form coordinates",
+  "original_parameter_dimension": 198,
+  "payload": "degree_31/c3_reduced_landing_p463.npz",
+  "payload_sha256": "62d66f9d8afd7546b622e057f0353bbac3e24af2e5834ae1d83ed5d3bef5b85e",
+  "prime": 463,
+  "reduced_parameter_dimension": 187
+}

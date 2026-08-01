@@ -1,0 +1,99 @@
+{
+  "format": "ambient-eliminant-two-prime-crt-v1",
+  "scope": "provisional integer-height reconstruction; requires a third-prime holdout",
+  "quadratic_field": "Q(c), c^2+c+3=0",
+  "fibres": [
+    {
+      "prime": 23,
+      "c": 18,
+      "conjugate_c": 4,
+      "first_eliminant": [
+        3,
+        14,
+        5,
+        1
+      ],
+      "conjugate_eliminant": [
+        8,
+        21,
+        18,
+        1
+      ],
+      "A_B_residues": [
+        [
+          16,
+          21
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "prime": 67,
+      "c": 42,
+      "conjugate_c": 24,
+      "first_eliminant": [
+        11,
+        47,
+        64,
+        1
+      ],
+      "conjugate_eliminant": [
+        48,
+        30,
+        27,
+        1
+      ],
+      "A_B_residues": [
+        [
+          8,
+          24
+        ],
+        [
+          52,
+          27
+        ],
+        [
+          0,
+          43
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "crt_modulus": 1541,
+  "coefficients_ascending_A_plus_Bc": [
+    [
+      -260,
+      -646
+    ],
+    [
+      253,
+      563
+    ],
+    [
+      -67,
+      579
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "maximum_centered_height": 646,
+  "sympy_factorization": "579*(2*T**3/579 - 713*T**2/579 + sqrt(11)*I*T**2 - 19*T/193 + 563*sqrt(11)*I*T/579 + 42/193 - 646*sqrt(11)*I/579)/2",
+  "theorem_boundary": "two-prime centered CRT is not exact rational reconstruction; no factor or projector is accepted until an unused-prime reduction and direct characteristic-zero substitution pass"
+}

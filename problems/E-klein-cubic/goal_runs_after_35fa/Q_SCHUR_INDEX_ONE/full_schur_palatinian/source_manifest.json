@@ -1,0 +1,10 @@
+{
+  "format": "full-schur-palatinian-source-manifest-v1",
+  "root": "/Users/worker/unirational/problems/E-klein-cubic",
+  "sources": {
+    "tmp/projective_source/character_scan.py": "7d2e94968226bd79d4a365e9636807590f1f3ac05ec707d58ae3f09a573f8256",
+    "tmp/fano14_twist/fano_covariant_scan.py": "b3c93a41ed1f8b5106d93717dbad058b6c60af100bcee8138925485dac6f107e",
+    "tmp/pfaffian_representation_alignment/core.py": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4"
+  },
+  "transitive_note": "character_scan.py imports fano_covariant_scan.py; the invoked core.py functions have no further runtime project-file imports"
+}

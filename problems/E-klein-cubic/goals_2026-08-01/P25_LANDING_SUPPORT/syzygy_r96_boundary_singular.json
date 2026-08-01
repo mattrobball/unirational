@@ -1,0 +1,12 @@
+{
+  "contracted": "syzygy_r96_q0_contracted.npz",
+  "contracted_sha256": "7bfa9b41cabbb2446041ac0fb561b4fa6b35b5a7c00f7e843598de543878c979",
+  "criterion": "Singular elim.lib sat computes the exact ideal saturation. A reduced unit ideal is conclusive; timeout, crash, or nonunit is not emptiness. For the boundary, sequential b1- then q-saturation equals saturation by the product of the two irrelevant ideals.",
+  "prime": 89,
+  "result": "syzygy_r96_boundary_singular_result.txt",
+  "rows": 96,
+  "script": "syzygy_r96_boundary_saturate.sing",
+  "script_bytes": 81827032,
+  "script_sha256": "f7024e529a2d463ee91cec02f8c0ad56a5f868c6df3a90e7a5f35a30e22b8ca8",
+  "stratum": "boundary"
+}

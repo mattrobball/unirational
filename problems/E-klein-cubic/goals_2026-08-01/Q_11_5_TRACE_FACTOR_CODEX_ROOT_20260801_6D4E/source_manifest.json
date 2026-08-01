@@ -1,0 +1,13 @@
+{
+  "format": "Q-11_5-TRACE-SPARSE-SOURCE-MANIFEST-v1",
+  "sources": [
+    {
+      "repo_relative_path": "goal_runs_after_35fa/H_11_5_TWIST/NORM_MODEL.md",
+      "sha256": "566448f33a3157c0e3ff2a5976b7af27e65440efa408442dd262ff5f933af5fd"
+    },
+    {
+      "repo_relative_path": "goal_runs_after_35fa/H_11_5_TWIST/field_model.json",
+      "sha256": "80fdc908633595d6bb3c292d0027aa66295a850b9b6a12cc473f90e3e373ba1e"
+    }
+  ]
+}

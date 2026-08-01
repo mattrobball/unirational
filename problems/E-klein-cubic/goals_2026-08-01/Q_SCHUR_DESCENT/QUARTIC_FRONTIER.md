@@ -85,6 +85,66 @@ This cubic point is not a ground-field point: every cubic surface already has
 degree-three zero-cycles from line sections.  The construction is recorded
 because it is the exact resolvent geometry that any further descent must use.
 
+The tempting next identity also fails.  If the three partition-residual
+points were always collinear, their line would be `K`-defined and its third
+intersection could force a point.  The exact audit in `parallel/root_secant/`
+constructs five smooth cubic surfaces over `QQ` through four marked vertices;
+in every example the three residuals have projective rank three.  This
+refutes universal collinearity, while leaving open a genuinely Schur-specific
+identity.
+
+There is a twisted-cubic link, but no decreasing ladder.  After a primitive
+element is chosen, the full
+span quartic determines a `K`-twisted cubic whose intersection with `S` is
+the reduced partition `4+5`.  Balestrieri's construction applied to the
+linked quintic uses the same lift and returns the original quartic:
+
+```text
+4 -> 5 -> 4.
+```
+
+The quartic and quintic residue fields are linearly disjoint and have
+compositum degree 20.  Their Galois closures are disjoint in the `A4` case;
+in the `S4` case their only possible overlap is the discriminant quadratic,
+over which the quintic remains integral.  The combined Galois closure is
+also disjoint from the degree-660 Schur field.  Finally, restriction of cubic
+forms to the twisted cubic is surjective, so sharing that curve imposes no
+hidden splitting-field relation.  Exact certificates are in
+`parallel/quartic_descent/`.
+
+Known rational-curve counts do not presently close the gap.  After the
+relation `H^3=3[pt]` and the divisor equation are both applied, Zinger's
+degree-three invariant gives 8 twisted cubics through three general points;
+the degree-four virtual invariant gives 192 rational quartics through four
+general points.  The latter permits fixed-point-free regular `A4` and `S4`
+orbits.  In the `A4` branch the resolvent group is `C3`, so a reduced
+enumerative eight-element fibre whose curves split over that cubic closure
+would have a fixed twisted cubic.  However, neither splitting nor membership
+of the special secant-resolvent triple in the general locus is proved, and
+specialization can introduce boundary maps or multiplicities; in the
+`S4/S3` branch even an eight-element set can be fixed-point-free.  See
+`parallel/curve_incidence/` for the exact conditional gate and replay.
+
+The two missing hypotheses have now been separated exactly.  A rational
+quartet on the split Klein cubic has resolvent differential ranks `9`, `10`,
+and `6` for the absolute, joint-hyperplane, and fixed-section maps, proving
+that general quartets do land in the good incidence locus.  Voisin's passage
+to a generic Hilbert subscheme followed by Fulton specialization gives no
+avoidance theorem for the particular quartic, however.  Independently, the
+generic three-marked twisted-cubic incidence space is integral and maps to
+`X^3` with degree eight.  Thus, even after the three marked points are split,
+the generic incidence algebra is one degree-eight field; it is not split by
+their cubic closure.  Details and replays are in `parallel/incidence_generality/`
+and `parallel/incidence_splitting/`.
+
+If an individual incidence object did descend, the remaining bridge would
+be automatic.  The proof in `parallel/fixed_curve_bridge/` shows that every
+actual `K`-defined genus-zero stable map of odd projective degree has a
+`K`-point on its domain, even when reducible.  It also extends the audited
+theta-desingularization argument from `K_proj` to the correct Schur field and
+shows that every actual generalized-twisted-cubic Hilbert point yields a
+point on `X`.
+
 This is a strict frontier, not a headline resolution.  Primitive quartic
 points are the surviving Coray--Cassels--Swinnerton-Dyer case, and their
 residue fields are in fact linearly disjoint from the degree-660 Schur

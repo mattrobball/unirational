@@ -1,0 +1,34 @@
+{
+  "schema": "kls2-minimality-model-v1",
+  "exit": "KLS2-NO-FINITE-REDUCTION",
+  "categories": {
+    "klein_landing": {
+      "conditions": ["primitive", "homogeneous G-self-covariant", "f3(q)=0", "generic_rank_Dq=4"],
+      "minimality": "least positive degree among primitive tuples",
+      "primitive_presentation_unique_up_to": "nonzero scalar",
+      "quartic_precomposition_is_equivalence": false,
+      "image": "smooth Klein cubic",
+      "h": "1",
+      "conductor": []
+    },
+    "kls_rank_drop": {
+      "conditions": ["primitive", "homogeneous G-self-covariant", "det(Dq)=0", "generic_rank_Dq=4"],
+      "minimality": "least positive degree among primitive tuples",
+      "image": "invariant unirational hypersurface, possibly singular",
+      "proven_minimality_consequence": "d<=2m",
+      "finite_conductor_support_proved": false
+    }
+  },
+  "allowed_presentation_operations": {
+    "remove_common_scalar_factor": true,
+    "rescale_by_nonzero_constant": true,
+    "identify_quartic_precomposition": false,
+    "identify_nontrivial_source_birational_precomposition": false
+  },
+  "parametrization_bridge": {
+    "dependency": "accepted exhaustive covariant reduction",
+    "if_nonempty_minimal_representative_exists": true,
+    "reason": "primitive saturation plus well-ordering of positive degrees"
+  }
+}
+

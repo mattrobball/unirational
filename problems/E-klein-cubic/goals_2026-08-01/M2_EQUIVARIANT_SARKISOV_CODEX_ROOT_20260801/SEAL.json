@@ -1,0 +1,162 @@
+{
+  "schema": "m2-equivariant-sarkisov-seal-v1",
+  "created_utc": "2026-08-01T20:17:48Z",
+  "exit": "M2-EXPLICIT-LINK-PASS",
+  "headline": "OPEN",
+  "goal_pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "worker_entry_head": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "python": "3.14.6",
+  "base_field": "K_Schur=C(P(V6))^PSL(2,11)",
+  "selected_link": "blow up the descended smooth Schur-frame plane cubic C_012 and project to P1",
+  "endpoint": "degree-3 del Pezzo Mori fibre space with relative Picard rank 1",
+  "arithmetic_output": "zero-cycles of degrees 3 and 55; section or integral quartic multisection",
+  "local_files": {
+    "ARITHMETIC.md": "2a85ec289e1842d6ae5dde880f84f5c6fd233e2b2e26aff581c8cd7b51d682ff",
+    "CENTRE_CENSUS.md": "881f3905081ea7571d0feb269aea520cc643f71e49704e75ab11aeaf83a3f0fa",
+    "COMPLETION_AUDIT.md": "fbd59b82ce0e1e3b1932ca3beaba908a884989a3ea457f45e6250d699d501a4b",
+    "DESCENT.md": "4c2ff2b94a9b07b6fdd6340081625ea3dae35189e4dc02d406ad13b487654c08",
+    "DIVISOR_COX.md": "ca8aa7dd9c51ba3496eae6e52112d471f01867155d0ebb2a538b8e390328ec97",
+    "REFERENCES.md": "ac0ce4b2b8a8fd863e73f0ecf0e8eca29056aa1d18548999d46b4a7eaa75269f",
+    "STATUS.md": "4c976a27d9b57ea9f0838c398077865fd4aecb6bd37d7da8f292974181a08edc",
+    "THEOREM.md": "b1c193617e4c4ef99c6e3757369ad16091e0556cbaf8a975dd52869fd4de7812",
+    "WORK_SCOPE.md": "ecad8d6bdd81e119d41d8772d338a460647d00539b12c89b6a2c2b5cce479a5d",
+    "links/schur_plane_012_dp3/README.md": "3c1e37aa66224b9a6766078b03938e4b11bbac895cc8e19050e99e0b61f23e36",
+    "links/schur_plane_012_dp3/link_payload.json": "a1c74b36f85bd5c085d1b3d5628da770db3520d97c388950d653a0a8468e9fd5",
+    "links/schur_plane_012_dp3/produce.py": "d6244934ef0724c17dfdac2a537cd18f1e367f730c4f2201f78325d86c853890",
+    "links/schur_plane_012_dp3/verify_link.py": "23caab6640154bb2e65c6be587c428cdf42eb29438394a4bf8c8e36f95f5b528",
+    "payload/centre_census.json": "f5e09a56bb1b358d44990023ebd92a5b74b0d13bacef52c281a065ec307a4958",
+    "payload/mori_cox.json": "ec8e5009ede6d21dcfcfcf71e8edbdf79df5cd1ec268d9b106d741e799b509b0",
+    "verify.py": "e654548fc91d7d01d7eb75d0da544e3d6dd52480c4e5bec94d99f01f62b2c6ca",
+    "verify_census.py": "d714b000e152265ba276d58351c4a6249ce7e74b0773ba4b68e1f9e019aef6cc"
+  },
+  "upstream_files": [
+    {
+      "root": "problem",
+      "path": "goals_after_35fa8f/GOAL_M2_EQUIVARIANT_SARKISOV.md",
+      "sha256": "b09ded43888ab86656eadb718c7989591d542183aa699364f1a5d22b55133c27"
+    },
+    {
+      "root": "problem",
+      "path": "tmp/fano14_twist/fano_covariant_scan.py",
+      "sha256": "b3c93a41ed1f8b5106d93717dbad058b6c60af100bcee8138925485dac6f107e"
+    },
+    {
+      "root": "problem",
+      "path": "tmp/projective_source/character_scan.py",
+      "sha256": "7d2e94968226bd79d4a365e9636807590f1f3ac05ec707d58ae3f09a573f8256"
+    },
+    {
+      "root": "problem",
+      "path": "tmp/projective_source/invariant_scan.py",
+      "sha256": "9db98d363923a691e11655b61e069e9d660829f79ef5489d14ae84be958c8aec"
+    },
+    {
+      "root": "problem",
+      "path": "tmp/projective_source/landing_scan.py",
+      "sha256": "acca599bd1a1f005e83522b72e3db4f01c45c7c96baf85a422b6bfc5cee73c1e"
+    },
+    {
+      "root": "problem",
+      "path": "tmp/projective_source/degree8_m2.py",
+      "sha256": "b1ad4746c528494d71d55b7d2b9a84148517e981fb04c88ca64fcb47e99a32dd"
+    },
+    {
+      "root": "problem",
+      "path": "tmp/projective_source/degree8_rational_frame.py",
+      "sha256": "2348a040ecc4383545c99e73f47b8b3f0587f9216aefa913fbf998a03983c2cc"
+    },
+    {
+      "root": "problem",
+      "path": "tmp/schur_structural_routes/verify.py",
+      "sha256": "9212915b00f3fe221120bea690d00f444edc812d85c3fef638eb5b5e28ae374b"
+    },
+    {
+      "root": "problem",
+      "path": "certificates/exact_weil_check.py",
+      "sha256": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2"
+    },
+    {
+      "root": "problem",
+      "path": "certificates/strata/normal_characters.json",
+      "sha256": "7651f92b990136e5b06415eaab9018606c9765be21357fa3a2b9e467e33170c6"
+    },
+    {
+      "root": "problem",
+      "path": "certificates/strata/verify_normal_characters.py",
+      "sha256": "8c7a0e984ab757294c849340e4b4c3801d81d0c04ffefdb73ef9ad80b1bf1bdf"
+    },
+    {
+      "root": "work",
+      "path": "Q_SCHUR_DESCENT/ZERO_CYCLE_LEDGER.md",
+      "sha256": "fddb775b050cd6efa3439a57ec0159322c0d62c177ec15c4cfab843418740f98"
+    },
+    {
+      "root": "work",
+      "path": "Q_SCHUR_DESCENT/zero_cycle_payload.json",
+      "sha256": "b3c8a4e952e2e3a8d4435aabe0cba5e255291a443a7cc3cc5d6adf2d544fe210"
+    },
+    {
+      "root": "work",
+      "path": "Q_SCHUR_DESCENT/verify_zero_cycle_ledger.py",
+      "sha256": "88e5c5f4315881c5cf79791d090746cd4e4cc95ad96db91fce179876cdcd0a9f"
+    },
+    {
+      "root": "work",
+      "path": "R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO/STATUS.md",
+      "sha256": "95cbef4325c63aaa4fb41f724c7fd4b4f66c96b1ace27e1b2ffcc1779bc6ab4e"
+    },
+    {
+      "root": "work",
+      "path": "S19_SCHUR_CURVE/STATUS.md",
+      "sha256": "ede360b00444ce887d1e9b585e5ac49203da80e7a0ae8db5bbe969075f802ed8"
+    },
+    {
+      "root": "work",
+      "path": "C_PFAFFIAN_FANO_CODEX_ROOT/STATUS.md",
+      "sha256": "e4ad4f1d11079815ad4efaa77e3c2cc5b39dc3b3a0faac138067e27efd9e82a0"
+    },
+    {
+      "root": "work",
+      "path": "H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/STATUS.md",
+      "sha256": "b6e4973ee9cabea762b7b553af03f08923aa7da8e090bbd0c733230ba07dae1f"
+    },
+    {
+      "root": "work",
+      "path": "T_TARGET_BRANCH_INDEX3_ROOT_019FBE13/STATUS.md",
+      "sha256": "92416e3af41071d18f9080c236ffeb9c66178c47d41502e056dd340122d9e36f"
+    }
+  ],
+  "source_statuses": [
+    {
+      "root": "work",
+      "path": "R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO/STATUS.md",
+      "marker": "R-HILBERT-COMPONENT-STRUCTURAL"
+    },
+    {
+      "root": "work",
+      "path": "S19_SCHUR_CURVE/STATUS.md",
+      "marker": "S19-NO-CURVE-SCOPED"
+    },
+    {
+      "root": "work",
+      "path": "C_PFAFFIAN_FANO_CODEX_ROOT/STATUS.md",
+      "marker": "C-UNDECIDED"
+    },
+    {
+      "root": "work",
+      "path": "H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/STATUS.md",
+      "marker": "H-SWEEP-UNDECIDED"
+    },
+    {
+      "root": "work",
+      "path": "T_TARGET_BRANCH_INDEX3_ROOT_019FBE13/STATUS.md",
+      "marker": "T-ROUTE-REFUTED"
+    }
+  ],
+  "external_references": [
+    {
+      "citation": "Claire Voisin, Rank 2 vector bundles and degrees of points of del Pezzo surfaces, arXiv:2509.17996v2, Theorem 1.4",
+      "use": "a smooth cubic surface over a characteristic-zero field with a zero-cycle of degree one has a rational point or a point of degree four"
+    }
+  ]
+}

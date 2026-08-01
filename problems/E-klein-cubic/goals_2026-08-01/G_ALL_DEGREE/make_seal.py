@@ -10,7 +10,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 PINNED_BASELINE = "715faf441289e2589b9325311b6613ea0331bf88"
-ARTIFACTS = (
+LEGACY_REQUIRED = (
     "ATTACKS.md",
     "DECISION.md",
     "FINITE_GENERATION.md",
@@ -72,29 +72,45 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def artifact_names() -> tuple[str, ...]:
+    """Seal the complete durable tree, excluding only generated caches."""
+    return tuple(
+        sorted(
+            str(path.relative_to(HERE))
+            for path in HERE.rglob("*")
+            if path.is_file()
+            and path != HERE / "SEAL.json"
+            and "__pycache__" not in path.parts
+            and path.suffix != ".pyc"
+        )
+    )
+
+
 def main() -> None:
-    missing = [name for name in ARTIFACTS if not (HERE / name).is_file()]
+    names = artifact_names()
+    missing = [name for name in LEGACY_REQUIRED if name not in names]
     if missing:
-        raise FileNotFoundError(f"missing seal artifacts: {missing}")
+        raise FileNotFoundError(f"missing legacy seal artifacts: {missing}")
     status = (HERE / "STATUS.md").read_text().splitlines()[0]
     if status != "G-STRUCTURAL-UNDECIDED":
         raise AssertionError(f"unexpected exit: {status}")
     payload = {
-        "schema": "G_ALL_DEGREE_STRUCTURAL_SEAL_V2",
+        "schema": "G_ALL_DEGREE_STRUCTURAL_SEAL_V3",
         "exit": status,
         "pinned_mathematical_baseline": PINNED_BASELINE,
         "scope": (
             "Corrected all-degree object with checked denominator clearing, "
-            "exact generic cubic, unsaturated all-order local recurrence, "
-            "and exact constructive/valuation/primitive-quartic route "
-            "audits; no rational-point or pointlessness verdict."
+            "exact generic cubic, exact xCD-plane pointlessness, unsaturated "
+            "all-order local recurrence, C1-residue henselian solubility, and "
+            "an exact primitive-quartic frontier; no full rational-point or "
+            "pointlessness verdict."
         ),
-        "artifacts": {name: sha256(HERE / name) for name in ARTIFACTS},
+        "artifacts": {name: sha256(HERE / name) for name in names},
     }
     (HERE / "SEAL.json").write_text(
         json.dumps(payload, indent=2, sort_keys=True) + "\n"
     )
-    print(f"G_ALL_DEGREE_SEAL_WRITTEN artifacts={len(ARTIFACTS)}")
+    print(f"G_ALL_DEGREE_SEAL_WRITTEN artifacts={len(names)}")
 
 
 if __name__ == "__main__":

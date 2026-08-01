@@ -1,0 +1,34 @@
+{
+  "format": "goal-c-codex-root-scoped-seal-v1",
+  "exit": "C-UNDECIDED",
+  "verified_marker": "C-PARTIAL-EXACT-INTERFACE-VERIFIED",
+  "scope": "exact lazy compressed algebra and involution, exact distinguished five-plane before Morita, bounded auxiliary projector audits",
+  "missing_for_positive_exit": [
+    "K_proj-rational self-adjoint reduced-rank-two idempotent",
+    "quaternion corner and explicit 3x3 Hermitian matrices",
+    "simultaneous common isotropic right line",
+    "original-equation Fano point and headline bridge"
+  ],
+  "files_sha256": {
+    "STATUS.md": "d005425b73d058247a8b9759da4710701ec1bf23577130e4a79997bd84264225",
+    "README.md": "aa92b832dc0f8f46047e22a9d4bcef845acf998ee675c8c19e87f9af9d120dc4",
+    "MODEL.md": "03f303f982d18926281b3c87162980cfb867aaa354a2cb0602887d8c4293dbb7",
+    "POINT.md": "c5f11494325d37a5549efa9224da4be3c6fe9b53993f213a1d4d576bee00a660",
+    "MORITA_PROJECTOR_AUDIT.md": "c93b1516e634113133c66599493925070b82b3281de30fa98bb453cdc424680d",
+    "compressed_algebra.json": "bfc2e6c5afcfac7c9925b916cad29098bc5033f1938dd9f0273febc067a55fbb",
+    "involution.json": "e8001963a8361f97e63deb7b8a92f2c9608765b09be9bb631aaa9c4eb5bae077",
+    "distinguished_five_plane.json": "edee4f7e07e95665044ba4fba85239154f4052f27d99b3cbcdd0f48b60d2378a",
+    "ambient_leading_audit.json": "313c3869d2a9cebf7fdebd2c8ec3c87eb7b89a990dbe2d5914daefd96f04d487",
+    "ambient_eliminant_adaptive_through_p397.json": "d1e618d4835be79fb88980957ed7f76193862dd9e3c377ccf18f220dcc6c1010",
+    "ambient_eliminant_holdout_p199.json": "a6d61120cf6f97af5ce2c6de2541272844006e0de7df9648eb592ff7109124a6",
+    "ambient_rur_three_prime.json": "4c5b4f520f9e3e01d8edc0e26dab727cbe1cbcaed452f9af73831d1e1c9b0098",
+    "projector_descent_word_screen_p23.json": "a66e4dbb04ae3f22cec233432ae5f8a1e147fbdd2f8242b617df6eda090357d5",
+    "verify_all.py": "9e96d8c2ab5a087edcccc15a836e8088c2068f3881571486a93fc360e5567c44",
+    "verify_compressed_algebra.py": "6024f54fabaa70f501ff6cd70a02cf1e297d2d225b5da44ef5895724d1107325",
+    "verify_involution.py": "1bf6751436d4161bcf1deff66b7e8e01bd2ea5059569eb8bf71cdb5b770e95d4",
+    "verify_distinguished_five_plane.py": "8aa6afb49dc0a06180c97e662455452ad9a49051515d8e81f8712d5802236d21",
+    "reconstruct_ambient_eliminant_adaptive.py": "e1aa0f75a21eebcb9fe34afc54c2f2c164ae8e0fcf97b6a22c27f675fca7c76e",
+    "search_projector_descent_words.py": "646455d97dc707df4e4674ad52754e7fb0ec5a947e7d180107770ae8bf9fc65d"
+  },
+  "theorem_boundary": "this seal intentionally does not contain C-POINT-HEADLINE-POSITIVE"
+}

@@ -1,0 +1,16 @@
+{
+  "files": {
+    "README.md": "e54a76591867a28e02255cc3c981e22be42f92800494cd5faeddd61ce58fd411",
+    "STATUS.md": "b4180b309d532f9986bcf15255384b601a6d4df2e8b3ae2f562d9d593edeb363",
+    "THEOREM.md": "cf3bba975b2049f3f1cffec73e9a2005fc50def1273435586c43889953396abc",
+    "absolute_specialization_pair04.py": "698d8640b51e2ee782e6764e47297b3652e90abd6a80a4e5ae2d1f0acc588272",
+    "factor_binary_kummer_singular.py": "4fbdea59b7bb8a0cf7da83f76ad714f418a2c5e6b3fab710e5d9e05efc59cff4",
+    "make_seal.py": "d532b4977bd2187bf7079f88a4c77c0732d94371f94e9049feb984098456cc99",
+    "newton_binary_absolute.py": "580199418d452fd9384884453928d4067e1d77dd896257dc83d7056081311c85",
+    "screen_ternary_monomial_ratios.py": "f986bebc2aa782c801079f60ef3c6fa736f11847ddbb7b9feb4ce378048d54d8",
+    "source_manifest.json": "93223642057480cfcca68a347d037004da4e6a965a55af09709fba146a196e96",
+    "trace_core.py": "a5dfa98ecde8cce909909aa7c44eab6ca61b741b04e056a2dfb483e2e2805a7e",
+    "verify_all.py": "01544de1fa7cded7f646ca8637fbc7d4a67671a0ae5be049a30fd1ea9fe1aaf6"
+  },
+  "format": "Q-11_5-TRACE-SPARSE-SEAL-v1"
+}

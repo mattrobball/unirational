@@ -141,9 +141,34 @@ degree-one landing support, of projective degree 48, into degree four.  The
 degree-four special-fibre support is therefore inherited set-theoretically;
 there is no primitive point.
 
-The complement of `P(D_L H_1)` is not proper, so this unit-chart result has
-no automatic characteristic-zero transfer.  It also gives no recurrence in
-arbitrary line degree.  More importantly, even an all-line-degree result on
-this first transverse layer would not exclude a class whose leading
+The complement of `P(D_L H_1)` is not proper, so this unit-chart result alone
+has no automatic characteristic-zero transfer.  It also gives no recurrence
+in arbitrary line degree.  More importantly, even an all-line-degree result
+on this first transverse layer would not exclude a class whose leading
 triple-line term begins in a higher transverse degree.  No result in this
 packet proves `(ID_m)` or decides the generic twisted cubic.
+
+The subsequent scheme audit removes one ambiguity inside the split fibre.
+On each of the eight projective charts of `P(D_L H_1)`, the full degree-four
+chart algebra has length 48 and all three primitive quotient coordinates
+reduce to zero.  Thus the split-67 degree-four scheme is exactly the
+inherited `D_L` multiple scheme, including nilpotent structure.  All 2,024
+maximal minors of the three-column normal Jacobian have empty common
+degeneracy locus on that scheme.  This does not transfer to characteristic
+zero by itself.
+
+The exact cyclotomic calculation in `LINE1_CHAR0_FLATNESS.md` supplies the
+missing transfer.  It reconstructs the full 14-row coefficient ideal over
+`Q(zeta_11)`, reduces all 760 unisolvent coefficient rows against its exact
+RREF, and computes length 48 in both the generic and split-67 fibres.  The
+finite degree-one algebra over the localized cyclotomic DVR is therefore
+flat of rank 48.  Since `D_L X_1 subset X_4` and their special fibres are
+equal scheme-theoretically, flatness plus Nakayama gives
+
+\[
+                         X_4=D_LX_1
+\]
+
+over the DVR and in characteristic zero.  Thus line degree four has no
+primitive point on the first transverse layer.  This does not extend to
+arbitrary line degree or higher transverse layers.

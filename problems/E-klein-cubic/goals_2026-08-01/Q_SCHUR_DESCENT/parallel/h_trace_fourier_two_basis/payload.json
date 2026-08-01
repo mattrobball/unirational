@@ -1,0 +1,39 @@
+{
+  "ansatz": "a=R2*(alpha^p+lambda*U1^v1*U2^v2*U3^v3*U4^v4*alpha^q)",
+  "counts": {
+    "H_nonzero_terms": 35,
+    "basis_pairs": 10,
+    "candidate_shifts": 390,
+    "hits": 0,
+    "support_terms_per_component": 7
+  },
+  "field": {
+    "E": "K(alpha), alpha^5=U1",
+    "K": "C(U1,U2,U3,U4)",
+    "R_i": "1+epsilon^i*alpha+epsilon^(2i)*U2*alpha^2+epsilon^(3i)*U3*alpha^3+epsilon^(4i)*U4*alpha^4",
+    "epsilon": "epsilon^4+epsilon^3+epsilon^2+epsilon+1=0",
+    "sigma": "sigma(alpha)=epsilon*alpha, sigma(R_i)=R_(i+1)"
+  },
+  "format": "H-11_5-FOURIER-TWO-BASIS-LAURENT-v1",
+  "h_polynomial_hash": "3f0eb1e0b4ba36036a8a5b20d45fcd30d635222d428738e35064490c16e94009",
+  "pair_records": [
+    {"candidate_hash": "9ed83e96e8ac0276790c325b556409a73160d1d74b178779014a8c90d6ad26f0", "candidates": 39, "component_hash": "533dd2be05e13e8feba461ad11082274a3e22b28563900bbf311fd07485f6772", "hits": 0, "p": 0, "q": 1},
+    {"candidate_hash": "cc91be8f900588390c569f468a009aca626bf1fa30d835dda5ba28dd4e05eb54", "candidates": 39, "component_hash": "6ae45218541bdae2f1fa24df6d986124276ace0821c1be9e6db04dbd1ed753e5", "hits": 0, "p": 0, "q": 2},
+    {"candidate_hash": "3f9d1c84541e83e34b57141d64c35de62945c6e2443114435412615792a3ad01", "candidates": 39, "component_hash": "fd976fc3b5626ba1eeadbad3a377e39c58a76a5d3085031036c55ece36f4d120", "hits": 0, "p": 0, "q": 3},
+    {"candidate_hash": "5b44ab700c32b0de9d6d27b29ca481c2f3c29f8ac2ec66c90a58d824f1e702df", "candidates": 39, "component_hash": "22929f0e92537cbec255f63b2b85e63dea0717fd0032d6e3a590ccffeafc1fa7", "hits": 0, "p": 0, "q": 4},
+    {"candidate_hash": "5b02ddb889f279e01b0268445f9737759b340e76e123ddef40c18f6a90efb124", "candidates": 39, "component_hash": "e2bcb7715dea90066c45acf819f529f1c359c6a40a7d55103487eb75899aedca", "hits": 0, "p": 1, "q": 2},
+    {"candidate_hash": "ba90463e58833073dcf9943848d408a9e07c4398f581a6dc2e6cf399ea309ac2", "candidates": 39, "component_hash": "6e65db6ffebe482c78ea95299fa5e29d0197dc595c048ef92c221929179c2bcc", "hits": 0, "p": 1, "q": 3},
+    {"candidate_hash": "9193f604d6c744a486a7ba642873745e042775e846b9235ff318f6ca27ed6d3b", "candidates": 39, "component_hash": "8cdc6ec72d5c4d2386cb35671bee4f9882f23e40cb0fc1679a28d9521ed28804", "hits": 0, "p": 1, "q": 4},
+    {"candidate_hash": "2123782b81b40a18753a1ab790763d94781fedc6d26c0ea6d3b33c5d626a31b2", "candidates": 39, "component_hash": "dfdb74786a2bd4a01d9d8dd05a2e4331c93a6a70bc7f610057ca654a689f6d21", "hits": 0, "p": 2, "q": 3},
+    {"candidate_hash": "1ff0f09133927899d6d9e1d494dadd4febe4f4d1a1aec5a4b2134ef515196f40", "candidates": 39, "component_hash": "a67262fb2663e5784d7a1d30467156495a91fea88eac8ce4c42e110d6600e51b", "hits": 0, "p": 2, "q": 4},
+    {"candidate_hash": "05fed5c91949462f4e374836cbd157146f62880b6fa037fa515f353a300267c5", "candidates": 39, "component_hash": "95b497085877cb1014ab7a3139d9b39b33d9c211a46cf37730a634d901f8d89a", "hits": 0, "p": 3, "q": 4}
+  ],
+  "scope_exclusions": [
+    "non-monomial coefficient ratios in K",
+    "three or more Kummer basis terms",
+    "arbitrary elements of E",
+    "a generic-twist pointlessness conclusion"
+  ],
+  "theorem": "For all 0<=p<q<=4, v in Z^4, and lambda in C*, the displayed ansatz has nonzero trace cubic value."
+}
+

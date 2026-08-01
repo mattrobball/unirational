@@ -1,0 +1,135 @@
+{
+  "format": "ambient-projector-rational-residue-points-v1",
+  "scope": "modular auxiliary projectors only",
+  "prime": 353,
+  "zeta11": 131,
+  "scheme_degree": 3,
+  "eliminant_coefficients_ascending": [
+    133,
+    39,
+    131,
+    1
+  ],
+  "rational_roots": [
+    37
+  ],
+  "checks": [
+    {
+      "eliminant_root": 37,
+      "coefficient_vector": [
+        37,
+        278,
+        151,
+        121,
+        344,
+        56,
+        62,
+        339,
+        275,
+        255,
+        324,
+        320,
+        138,
+        12,
+        178,
+        46,
+        257,
+        97,
+        138,
+        91,
+        101,
+        31,
+        148,
+        1,
+        304,
+        274,
+        144,
+        13,
+        62,
+        81,
+        339,
+        69,
+        104,
+        310,
+        197,
+        118,
+        11,
+        96,
+        156,
+        129,
+        2,
+        15,
+        112,
+        345,
+        263,
+        288,
+        342,
+        1
+      ],
+      "support": 48,
+      "evaluations": [
+        {
+          "point": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "0bc094516958418fb0f8f6f71f0aeb1062a7ec5caf6c84076e0b115778b3b58b",
+          "projector_sha256": "edec2d6daa3fde6d5488d4f6ba47dfd9aff755881b4c8bfedcab8558a6d533c5",
+          "distinguished_five_residual": [
+            213,
+            83,
+            165,
+            290,
+            138
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        },
+        {
+          "point": [
+            2,
+            5,
+            7,
+            11,
+            13
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "66c6c337865e57ca8f51d2a15e802e75b6f5fa6051084d2c6b84a2a68ac55878",
+          "projector_sha256": "8cf23e39a0e4a1f742f91f3bd5499dfb5033f15e68d699d255fbaa798e486fde",
+          "distinguished_five_residual": [
+            269,
+            220,
+            64,
+            237,
+            230
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        },
+        {
+          "point": [
+            3,
+            1,
+            4,
+            1,
+            5
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "cb8c53a6327d522df3ce5a1127e0fd5d9e9b569d21cc39327e1e11f1ebdc4c4a",
+          "projector_sha256": "d3190844afecfad2183144b71983b091c6f6fb0669af90bed06916b24a411a70",
+          "distinguished_five_residual": [
+            318,
+            176,
+            297,
+            336,
+            142
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        }
+      ]
+    }
+  ],
+  "theorem_boundary": "residue projectors are neither characteristic-zero Morita data nor points of the genuine Fano section"
+}

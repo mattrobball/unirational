@@ -1,0 +1,54 @@
+{
+  "schema": "q-schur-index-one-source-manifest-v1",
+  "pinned_repository_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "live_head_at_run_start": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "imports": {
+    "GOAL_Q_SCHUR_INDEX_ONE_DECISION.md": {
+      "original_path": "problems/E-klein-cubic/goals_after_35fa8f/GOAL_Q_SCHUR_INDEX_ONE_DECISION.md",
+      "sha256": "e5600e7f41e0744e05c5dd961a0eda9f7a26f5d908b71d590a343b5c0b1446d9"
+    },
+    "f55_twist_payload.json": {
+      "original_path": "problems/E-klein-cubic/goals_2026-08-01/H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/11_5_twist_payload.json",
+      "sha256": "131fde5c7e4df0a47afc6564ac9f8f29fdd21fe3e773cf76b7b2ca33a848f2b8"
+    },
+    "negative_obstruction_audit.json": {
+      "original_path": "problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_DESCENT/parallel/negative_obstruction/audit_payload.json",
+      "sha256": "f9a688322d1395c7568bdc7669f7989ac1a7cfbcc8f435df092b6c898e0e3266",
+      "provenance": "working-tree snapshot at run start; not the pinned 35fa8f blob",
+      "pinned_35fa8f_blob_sha256": "5d1811f0cb6e3f1f4ff0a8df6f79821aa263e2b0196365c01bb9d1b14eebda1d"
+    },
+    "prior_completion_audit.json": {
+      "original_path": "problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_DESCENT/completion_audit.json",
+      "sha256": "989e0585a9f41612d8e002afc2f6613762d2ea4cbd8048e9b0f395209d001d4e"
+    },
+    "q0_ledger.json": {
+      "original_path": "problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_DESCENT/q0_ledger.json",
+      "sha256": "49c869dba8091d2c82fe4176d550094908ba673f202b6455b0aa96eeb7e38da1"
+    },
+    "subgroup_sweep_payload.json": {
+      "original_path": "problems/E-klein-cubic/goals_2026-08-01/H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/subgroup_sweep_payload.json",
+      "sha256": "ed0cfd1ea340c24c132f498936796eeade504a3cf66b518e8e17bd7ac58ed25a"
+    },
+    "zero_cycle_payload.json": {
+      "original_path": "problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_DESCENT/zero_cycle_payload.json",
+      "sha256": "b3c8a4e952e2e3a8d4435aabe0cba5e255291a443a7cc3cc5d6adf2d544fe210"
+    }
+  },
+  "replay_sources": {
+    "certificates/exact_weil_check.py": {
+      "sha256": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2"
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/q0_ledger.json": {
+      "sha256": "49c869dba8091d2c82fe4176d550094908ba673f202b6455b0aa96eeb7e38da1"
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/verify_q0.py": {
+      "sha256": "ce14cb370c1625d1a4ffe5cd19f30d16715647489b6b69b8d798e1312e08bbe9"
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/verify_zero_cycle_ledger.py": {
+      "sha256": "88e5c5f4315881c5cf79791d090746cd4e4cc95ad96db91fce179876cdcd0a9f"
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/zero_cycle_payload.json": {
+      "sha256": "b3c8a4e952e2e3a8d4435aabe0cba5e255291a443a7cc3cc5d6adf2d544fe210"
+    }
+  }
+}

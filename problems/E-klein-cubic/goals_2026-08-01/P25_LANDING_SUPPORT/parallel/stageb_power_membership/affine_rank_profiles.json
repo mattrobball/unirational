@@ -1,0 +1,155 @@
+{
+  "full_p3": {
+    "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_p3_contractions.npy",
+    "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019"
+  },
+  "prime": 89,
+  "profiles": [
+    {
+      "all_affine_degree_at_most_two_columns_independent": true,
+      "axis": 0,
+      "columns_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "fflas_seconds_by_bound": {
+        "0": 0.006405,
+        "1": 0.71856,
+        "2": 2.960146
+      },
+      "rank_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "uint8_sha256_by_bound": {
+        "0": "cb34367ffbb7c4f4ea4fa35541ef66f433d24e88c188773c8246b94a6e912774",
+        "1": "f1c6ef2d05a992fe8ace493ffdd6b89e2ea63b4674c56487b77cd6a5e26abdd7",
+        "2": "700b95dd3e441872a06ff2742e5ea0266070373b7bbfc4a7289c5943dc72c45d"
+      }
+    },
+    {
+      "all_affine_degree_at_most_two_columns_independent": true,
+      "axis": 4,
+      "columns_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "fflas_seconds_by_bound": {
+        "0": 0.001068,
+        "1": 0.615459,
+        "2": 3.324822
+      },
+      "rank_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "uint8_sha256_by_bound": {
+        "0": "5bf0e227abb3a87fb23d15f5b6b28a59f2e82dbb66ba56ef3e8f1d9fb72daaee",
+        "1": "a0fd11f37e395509eabf725cdb08c4a02ee30a58e9c4e6c2a937976c3fe1e9d4",
+        "2": "a78a7535c7f141c32ac01179b5caf5a9327d91ec3b184e8faf8c5b03621791c2"
+      }
+    },
+    {
+      "all_affine_degree_at_most_two_columns_independent": true,
+      "axis": 5,
+      "columns_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "fflas_seconds_by_bound": {
+        "0": 0.000825,
+        "1": 0.660137,
+        "2": 3.479885
+      },
+      "rank_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "uint8_sha256_by_bound": {
+        "0": "151c5dbe327a1884412d0a3a9d31eea2ac31128aa0ef63e2f9c6923a48f47cb3",
+        "1": "e426828da44d2e6b29a1a303be3c1cd2bce99635b98d83d1396f8ba12057365c",
+        "2": "cd38995c33b24ad83d7f7cc8f3bdca57856dd0132f85e29c5a72926731fceaa2"
+      }
+    },
+    {
+      "all_affine_degree_at_most_two_columns_independent": true,
+      "axis": 12,
+      "columns_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "fflas_seconds_by_bound": {
+        "0": 0.00092,
+        "1": 0.616528,
+        "2": 3.075042
+      },
+      "rank_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "uint8_sha256_by_bound": {
+        "0": "dd808c357f95dc08e9dc4b8162b167a4a479b71ef726139fd4563248e1287c7b",
+        "1": "197c446935ebcbe7ff0a39f060da07f46d71bca399dc1d0b847ac6c4c93af095",
+        "2": "31ccbc5f3c48fa6823005c4ad24b2827774e3d17dcf2a629274fba51fb85d2e8"
+      }
+    },
+    {
+      "all_affine_degree_at_most_two_columns_independent": true,
+      "axis": 20,
+      "columns_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "fflas_seconds_by_bound": {
+        "0": 0.001076,
+        "1": 0.62941,
+        "2": 3.171033
+      },
+      "rank_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "uint8_sha256_by_bound": {
+        "0": "1218d856d8f58f87165a05c7c2d967ce80ead644928376d3b1b6c79d842697a0",
+        "1": "46affbef2d4540f1836deec05d253165d85292ad9aa39a5dec3c76091bf74e89",
+        "2": "6f26dd1744d7c5fb213921cf090141a1d347d67a6e3d58295c7724767a8ad2ae"
+      }
+    },
+    {
+      "all_affine_degree_at_most_two_columns_independent": true,
+      "axis": 36,
+      "columns_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "fflas_seconds_by_bound": {
+        "0": 0.001211,
+        "1": 0.530311,
+        "2": 2.821517
+      },
+      "rank_by_bound": {
+        "0": 6,
+        "1": 222,
+        "2": 4218
+      },
+      "uint8_sha256_by_bound": {
+        "0": "b76c13ed23390062cd5f00183254d301effefa5ff1eef9688ff323efe8eab02b",
+        "1": "2d7dbc06db46122d49b04074dd4a68f244abf37799c9ebb1d45fcaaaea879211",
+        "2": "e9518f8c0add0060257e7f4053f1787c9054b640fc281db233e638a4748077e0"
+      }
+    }
+  ],
+  "scope": "Exact rank preflight only. Full low-degree pivot coverage enables a filtered border computation but does not itself decide pure-power membership.",
+  "status": "PASS_EXACT_AFFINE_RANK_PROFILES"
+}

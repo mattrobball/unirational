@@ -1,13 +1,30 @@
 {
-  "exit": "F-UNDECIDED",
-  "format": "goal-F-root-honest-stop-audit-v1",
+  "exit": "F-CONIC-CRITERION-EMPTY",
+  "format": "goal-F-root-terminal-audit-v2",
   "headline": "OPEN",
+  "scope": "auxiliary fixed-frame cubic over K_proj",
   "sha256": {
-    "../SEAL.json": "ed56984545b64172beec8e1aa5de6eb3ff810dd6e67864ddde1e4e6191c5843b",
-    "REPLAY.md": "f05c419ec3ea5a8d54cce5f6fbacbd844e20f667a3625755d5d2cd2e4ce9ce57",
-    "SOURCE_VALUATION_AUDIT.md": "d4ccce22f4e958fd09c93b451e76aa432655bed335f341a3fafa311a2be5522d",
-    "STATUS.md": "401d6ec1dde5359b43e13b6799db66c664304b86f4480121a87bed79cdb202e2",
-    "verify_root_audit.py": "9be44a84c4448d5105f73a0ed4f4a7104cccd2ba34d9ed2ba5a4a4913203455f",
-    "verify_source_hyperplane_stabilizer.py": "3f00faa0c7bffc9e6180d9712aa79fb7f2ca0d3d0990c81061b4b4e7243d2c5b"
+    "../INFINITY_OBSTRUCTION.md": "0a0f4d414b9c3b989dcc67f568d14075c0b8cf92579911aee6f4154850d97a2a",
+    "../SEAL.json": "31d8863087fa8f4977b328921a57ed916fe1b334ad3761e3426092a24bf77394",
+    "../infinity_obstruction.json": "00316341a4d5207d8630e3d8d4411113b8fa2df5f6b3db42b48aa3003e094405",
+    "../verify_infinity_obstruction.py": "756a97638227a1d2e0edbe2f063f940c2db4453b9e804e071943d6468f720d18",
+    "NET_NORMALITY_CERTIFICATE.json": "637fd8680afe6bc2c4110be697df4dbba2962584d44dc28d5fd081cbd0713442",
+    "REPLAY.md": "1a69d544110eb459b0d58ad1948e93d943a646b5b6b72e97a4c943ee5147b196",
+    "RESOLUTION.md": "fdb461cf0ef4376fe4d277556933c4d877cd60be6514886bf5aff126f1075d9e",
+    "STATUS.md": "a54af9528ff071214d74196db14fcf9409ea2fab541b12ba8d73cca2ab36f5b8",
+    "agent_valuation_classgroup/AUDIT.md": "9b745a588b1fd6dbfcc0c5b83924cecc048bef6981d370e3bd7f15676c4a9f4a",
+    "agent_valuation_classgroup/verify_lift_hypotheses.py": "bcb3ba7f2cfc3005e96b6d5a068ed9761fe850ca76ab15dba9c7e8ec34c03484",
+    "build_net_normality_probe.py": "47a65c1fc512391a30c3671112b8b365143c36930142527fa9f839506380288e",
+    "net_normality_X_l0_p89.sing": "d61fe37d4f32436155ec24993b68cae3bcc747262694ff62b4f518a2274c2590",
+    "net_normality_X_l1_p89.sing": "0d59b2c0ac7ea7154e451c2d35a5f74097e68f8ad4d2a87f9e0f698ca86e0d94",
+    "net_normality_X_l2_p89.sing": "e7e3daaae227e7f7d7e14c9245dc4037486c12c67571eec4ab2785444d95544d",
+    "net_normality_w_l0_p89.sing": "abafd96c764cdb25b86e1294b407e76c002ef8617aa74d92ca474a9ff3873a6b",
+    "net_normality_w_l1_p89.sing": "053db4c5c9c8e963adfff4bb2d12cca3245938eed360da8c77d51a36acd5a44a",
+    "net_normality_w_l2_p89.sing": "06bf161b53ff968e3309563997a624c5efc3540ce29468c1343296b68d999ec2",
+    "net_normality_y_l0_p89.sing": "846896c28714865c2873ddc86d2af6ba0011694e3d5acd8ce91d5928215640b3",
+    "net_normality_y_l1_p89.sing": "aca1f3008bc960eda8fc328e75615b07da34a7d705e608c91b0aa0f58dd3c7be",
+    "net_normality_y_l2_p89.sing": "896b07784f2aed01fc8834e242f7eea1020f8c288af1ee980f3ec5117ecf77a4",
+    "produce_root_seal.py": "bcf2083460006795217ab30a69cc95fd3b615f2a6fcca141dc2037e22f0bc605",
+    "verify_root_audit.py": "874c5b40f6d3695e7c66d24d7bd98c586e84b7606ded0fda4b0eda8a45401e6d"
   }
 }

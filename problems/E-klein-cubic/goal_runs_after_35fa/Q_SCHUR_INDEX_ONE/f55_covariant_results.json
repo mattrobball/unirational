@@ -1,0 +1,1319 @@
+{
+  "conclusion": "Every complete homogeneous projective 11:5-covariant landing scheme in degrees 1 through 5 is empty in the split good fibre, hence empty in characteristic zero by proper specialization.",
+  "degrees": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "normal_form": {
+    "c11_weights": [
+      1,
+      9,
+      4,
+      3,
+      5
+    ],
+    "c5_action": "cyclic coordinate shift",
+    "klein_cubic": "sum_i x_i^2*x_(i+1)"
+  },
+  "prime": 331,
+  "prime_is_split": true,
+  "projective_characters_mod_5": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "records": [
+    {
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_size": 1,
+      "character_mod_5": 0,
+      "character_root_prime": 331,
+      "coefficient_equations": 5,
+      "covariant_dimension": 1,
+      "degree": 1,
+      "dim": 0,
+      "elapsed_seconds": 0.0092,
+      "input": "f55_degree1_chi0_p331.sing",
+      "input_sha256": "5c19f71c86ba59a9a9b27c562a8de8ffb74ce43b076bd04c2d7979304224832e",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree1_chi0_p331.sing",
+      "transcript": "f55_degree1_chi0_p331.out",
+      "transcript_sha256": "7878f86c5a7a904257a1e59153e033ef875170f62cffe8d0fd43b0b2462eac1d",
+      "vdim": 3
+    },
+    {
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_size": 1,
+      "character_mod_5": 1,
+      "character_root_prime": 331,
+      "coefficient_equations": 5,
+      "covariant_dimension": 1,
+      "degree": 1,
+      "dim": 0,
+      "elapsed_seconds": 0.008634,
+      "input": "f55_degree1_chi1_p331.sing",
+      "input_sha256": "da9ab33b58475e05253eba4184a40002deee0e77f9dc1444f735fa89edef4ee6",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree1_chi1_p331.sing",
+      "transcript": "f55_degree1_chi1_p331.out",
+      "transcript_sha256": "7878f86c5a7a904257a1e59153e033ef875170f62cffe8d0fd43b0b2462eac1d",
+      "vdim": 3
+    },
+    {
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_size": 1,
+      "character_mod_5": 2,
+      "character_root_prime": 331,
+      "coefficient_equations": 5,
+      "covariant_dimension": 1,
+      "degree": 1,
+      "dim": 0,
+      "elapsed_seconds": 0.008789,
+      "input": "f55_degree1_chi2_p331.sing",
+      "input_sha256": "1b300eadff8e85817b77dde0ec27d9244538d67ca73faa59b29281c8aadc45a9",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree1_chi2_p331.sing",
+      "transcript": "f55_degree1_chi2_p331.out",
+      "transcript_sha256": "7878f86c5a7a904257a1e59153e033ef875170f62cffe8d0fd43b0b2462eac1d",
+      "vdim": 3
+    },
+    {
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_size": 1,
+      "character_mod_5": 3,
+      "character_root_prime": 331,
+      "coefficient_equations": 5,
+      "covariant_dimension": 1,
+      "degree": 1,
+      "dim": 0,
+      "elapsed_seconds": 0.008262,
+      "input": "f55_degree1_chi3_p331.sing",
+      "input_sha256": "11c38c17da8cb511f8881f3779d86202b88f7444337912e0dc402640a44efc8d",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree1_chi3_p331.sing",
+      "transcript": "f55_degree1_chi3_p331.out",
+      "transcript_sha256": "7878f86c5a7a904257a1e59153e033ef875170f62cffe8d0fd43b0b2462eac1d",
+      "vdim": 3
+    },
+    {
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_size": 1,
+      "character_mod_5": 4,
+      "character_root_prime": 331,
+      "coefficient_equations": 5,
+      "covariant_dimension": 1,
+      "degree": 1,
+      "dim": 0,
+      "elapsed_seconds": 0.008323,
+      "input": "f55_degree1_chi4_p331.sing",
+      "input_sha256": "750380262d754a6225e8c8a7f51e3deef2b2a087b1b872735beed877ee9a5311",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree1_chi4_p331.sing",
+      "transcript": "f55_degree1_chi4_p331.out",
+      "transcript_sha256": "7878f86c5a7a904257a1e59153e033ef875170f62cffe8d0fd43b0b2462eac1d",
+      "vdim": 3
+    },
+    {
+      "basis": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "basis_size": 1,
+      "character_mod_5": 0,
+      "character_root_prime": 331,
+      "coefficient_equations": 5,
+      "covariant_dimension": 1,
+      "degree": 2,
+      "dim": 0,
+      "elapsed_seconds": 0.008967,
+      "input": "f55_degree2_chi0_p331.sing",
+      "input_sha256": "5c19f71c86ba59a9a9b27c562a8de8ffb74ce43b076bd04c2d7979304224832e",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree2_chi0_p331.sing",
+      "transcript": "f55_degree2_chi0_p331.out",
+      "transcript_sha256": "7878f86c5a7a904257a1e59153e033ef875170f62cffe8d0fd43b0b2462eac1d",
+      "vdim": 3
+    },
+    {
+      "basis": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "basis_size": 1,
+      "character_mod_5": 1,
+      "character_root_prime": 331,
+      "coefficient_equations": 5,
+      "covariant_dimension": 1,
+      "degree": 2,
+      "dim": 0,
+      "elapsed_seconds": 0.008285,
+      "input": "f55_degree2_chi1_p331.sing",
+      "input_sha256": "da9ab33b58475e05253eba4184a40002deee0e77f9dc1444f735fa89edef4ee6",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree2_chi1_p331.sing",
+      "transcript": "f55_degree2_chi1_p331.out",
+      "transcript_sha256": "7878f86c5a7a904257a1e59153e033ef875170f62cffe8d0fd43b0b2462eac1d",
+      "vdim": 3
+    },
+    {
+      "basis": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "basis_size": 1,
+      "character_mod_5": 2,
+      "character_root_prime": 331,
+      "coefficient_equations": 5,
+      "covariant_dimension": 1,
+      "degree": 2,
+      "dim": 0,
+      "elapsed_seconds": 0.008158,
+      "input": "f55_degree2_chi2_p331.sing",
+      "input_sha256": "1b300eadff8e85817b77dde0ec27d9244538d67ca73faa59b29281c8aadc45a9",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree2_chi2_p331.sing",
+      "transcript": "f55_degree2_chi2_p331.out",
+      "transcript_sha256": "7878f86c5a7a904257a1e59153e033ef875170f62cffe8d0fd43b0b2462eac1d",
+      "vdim": 3
+    },
+    {
+      "basis": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "basis_size": 1,
+      "character_mod_5": 3,
+      "character_root_prime": 331,
+      "coefficient_equations": 5,
+      "covariant_dimension": 1,
+      "degree": 2,
+      "dim": 0,
+      "elapsed_seconds": 0.008555,
+      "input": "f55_degree2_chi3_p331.sing",
+      "input_sha256": "11c38c17da8cb511f8881f3779d86202b88f7444337912e0dc402640a44efc8d",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree2_chi3_p331.sing",
+      "transcript": "f55_degree2_chi3_p331.out",
+      "transcript_sha256": "7878f86c5a7a904257a1e59153e033ef875170f62cffe8d0fd43b0b2462eac1d",
+      "vdim": 3
+    },
+    {
+      "basis": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "basis_size": 1,
+      "character_mod_5": 4,
+      "character_root_prime": 331,
+      "coefficient_equations": 5,
+      "covariant_dimension": 1,
+      "degree": 2,
+      "dim": 0,
+      "elapsed_seconds": 0.008474,
+      "input": "f55_degree2_chi4_p331.sing",
+      "input_sha256": "750380262d754a6225e8c8a7f51e3deef2b2a087b1b872735beed877ee9a5311",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree2_chi4_p331.sing",
+      "transcript": "f55_degree2_chi4_p331.out",
+      "transcript_sha256": "7878f86c5a7a904257a1e59153e033ef875170f62cffe8d0fd43b0b2462eac1d",
+      "vdim": 3
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          1
+        ]
+      ],
+      "basis_size": 10,
+      "character_mod_5": 0,
+      "character_root_prime": 331,
+      "coefficient_equations": 60,
+      "covariant_dimension": 3,
+      "degree": 3,
+      "dim": 0,
+      "elapsed_seconds": 0.008166,
+      "input": "f55_degree3_chi0_p331.sing",
+      "input_sha256": "8369996478806a1fa25d77d37ae3adf12cec52181d93d81ac2847c0d36082b21",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree3_chi0_p331.sing",
+      "transcript": "f55_degree3_chi0_p331.out",
+      "transcript_sha256": "250711c5ef73cc3986f8946b79ea5a4ff6a6c06e4f1ef10f8125eeb10d636d19",
+      "vdim": 10
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          1
+        ]
+      ],
+      "basis_size": 10,
+      "character_mod_5": 1,
+      "character_root_prime": 331,
+      "coefficient_equations": 60,
+      "covariant_dimension": 3,
+      "degree": 3,
+      "dim": 0,
+      "elapsed_seconds": 0.007953,
+      "input": "f55_degree3_chi1_p331.sing",
+      "input_sha256": "4912eccf1fc2f769c9d10baca9e8267197824ebe779a56cce98dfeb24aa669db",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree3_chi1_p331.sing",
+      "transcript": "f55_degree3_chi1_p331.out",
+      "transcript_sha256": "250711c5ef73cc3986f8946b79ea5a4ff6a6c06e4f1ef10f8125eeb10d636d19",
+      "vdim": 10
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          1
+        ]
+      ],
+      "basis_size": 10,
+      "character_mod_5": 2,
+      "character_root_prime": 331,
+      "coefficient_equations": 60,
+      "covariant_dimension": 3,
+      "degree": 3,
+      "dim": 0,
+      "elapsed_seconds": 0.008301,
+      "input": "f55_degree3_chi2_p331.sing",
+      "input_sha256": "fbf6664047aa7bca6db312903abed8afdd66bd160ab107958024f530ef525143",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree3_chi2_p331.sing",
+      "transcript": "f55_degree3_chi2_p331.out",
+      "transcript_sha256": "250711c5ef73cc3986f8946b79ea5a4ff6a6c06e4f1ef10f8125eeb10d636d19",
+      "vdim": 10
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          1
+        ]
+      ],
+      "basis_size": 10,
+      "character_mod_5": 3,
+      "character_root_prime": 331,
+      "coefficient_equations": 60,
+      "covariant_dimension": 3,
+      "degree": 3,
+      "dim": 0,
+      "elapsed_seconds": 0.008006,
+      "input": "f55_degree3_chi3_p331.sing",
+      "input_sha256": "0cd63437a2df7ec4a4325f90ce153024aa8cd51e01b21fe759e0ec575b94978d",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree3_chi3_p331.sing",
+      "transcript": "f55_degree3_chi3_p331.out",
+      "transcript_sha256": "250711c5ef73cc3986f8946b79ea5a4ff6a6c06e4f1ef10f8125eeb10d636d19",
+      "vdim": 10
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          1
+        ]
+      ],
+      "basis_size": 10,
+      "character_mod_5": 4,
+      "character_root_prime": 331,
+      "coefficient_equations": 60,
+      "covariant_dimension": 3,
+      "degree": 3,
+      "dim": 0,
+      "elapsed_seconds": 0.008084,
+      "input": "f55_degree3_chi4_p331.sing",
+      "input_sha256": "6ea8eb5b3c78abaa068a6e8bd9ad70a9b2229ea128d49f4ef4400e672083faff",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree3_chi4_p331.sing",
+      "transcript": "f55_degree3_chi4_p331.out",
+      "transcript_sha256": "250711c5ef73cc3986f8946b79ea5a4ff6a6c06e4f1ef10f8125eeb10d636d19",
+      "vdim": 10
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_size": 107,
+      "character_mod_5": 0,
+      "character_root_prime": 331,
+      "coefficient_equations": 160,
+      "covariant_dimension": 7,
+      "degree": 4,
+      "dim": 0,
+      "elapsed_seconds": 0.016,
+      "input": "f55_degree4_chi0_p331.sing",
+      "input_sha256": "160e971189dc874e46f55ae3f37622444f9b6e3ab54af5909c0ba77fbfa7efa7",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree4_chi0_p331.sing",
+      "transcript": "f55_degree4_chi0_p331.out",
+      "transcript_sha256": "c8bfec3067f81771f3a292dbbe9ba42ae3c13f6f22e6306d5d41764c548e239a",
+      "vdim": 96
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_size": 107,
+      "character_mod_5": 1,
+      "character_root_prime": 331,
+      "coefficient_equations": 160,
+      "covariant_dimension": 7,
+      "degree": 4,
+      "dim": 0,
+      "elapsed_seconds": 0.016062,
+      "input": "f55_degree4_chi1_p331.sing",
+      "input_sha256": "5dd71ce411a1fffc0805c6d40be6e0f3f22cb6ca0a70627398d437a3ef22dee5",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree4_chi1_p331.sing",
+      "transcript": "f55_degree4_chi1_p331.out",
+      "transcript_sha256": "c8bfec3067f81771f3a292dbbe9ba42ae3c13f6f22e6306d5d41764c548e239a",
+      "vdim": 96
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_size": 107,
+      "character_mod_5": 2,
+      "character_root_prime": 331,
+      "coefficient_equations": 160,
+      "covariant_dimension": 7,
+      "degree": 4,
+      "dim": 0,
+      "elapsed_seconds": 0.01557,
+      "input": "f55_degree4_chi2_p331.sing",
+      "input_sha256": "5c6ef96edad745dee650ad2286a72b9edfa5c0833ca5067463b3b9394830cde2",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree4_chi2_p331.sing",
+      "transcript": "f55_degree4_chi2_p331.out",
+      "transcript_sha256": "c8bfec3067f81771f3a292dbbe9ba42ae3c13f6f22e6306d5d41764c548e239a",
+      "vdim": 96
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_size": 107,
+      "character_mod_5": 3,
+      "character_root_prime": 331,
+      "coefficient_equations": 160,
+      "covariant_dimension": 7,
+      "degree": 4,
+      "dim": 0,
+      "elapsed_seconds": 0.016222,
+      "input": "f55_degree4_chi3_p331.sing",
+      "input_sha256": "563734b7a3a584e3fc2250cac8eb8c520a462a6348074989b9531725de962c25",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree4_chi3_p331.sing",
+      "transcript": "f55_degree4_chi3_p331.out",
+      "transcript_sha256": "c8bfec3067f81771f3a292dbbe9ba42ae3c13f6f22e6306d5d41764c548e239a",
+      "vdim": 96
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_size": 107,
+      "character_mod_5": 4,
+      "character_root_prime": 331,
+      "coefficient_equations": 160,
+      "covariant_dimension": 7,
+      "degree": 4,
+      "dim": 0,
+      "elapsed_seconds": 0.016253,
+      "input": "f55_degree4_chi4_p331.sing",
+      "input_sha256": "99079a259246ca5b254bd556ce57f95ecfc6169ff0d4661505ce47a210ee7b0b",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree4_chi4_p331.sing",
+      "transcript": "f55_degree4_chi4_p331.out",
+      "transcript_sha256": "c8bfec3067f81771f3a292dbbe9ba42ae3c13f6f22e6306d5d41764c548e239a",
+      "vdim": 96
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "basis_size": 626,
+      "character_mod_5": 0,
+      "character_root_prime": 331,
+      "coefficient_equations": 351,
+      "covariant_dimension": 11,
+      "degree": 5,
+      "dim": 0,
+      "elapsed_seconds": 0.40254,
+      "input": "f55_degree5_chi0_p331.sing",
+      "input_sha256": "cbcb45cb630c7b7939f68ee9b4eaf214480fb1570fbb3fc14c0804faf14d4087",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree5_chi0_p331.sing",
+      "transcript": "f55_degree5_chi0_p331.out",
+      "transcript_sha256": "9fbeaaa5d312911c43151bd6e6880eabbd75d05e4d7ab2fb511d65f40ca34a1d",
+      "vdim": 541
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "basis_size": 636,
+      "character_mod_5": 1,
+      "character_root_prime": 331,
+      "coefficient_equations": 350,
+      "covariant_dimension": 11,
+      "degree": 5,
+      "dim": 0,
+      "elapsed_seconds": 0.40002,
+      "input": "f55_degree5_chi1_p331.sing",
+      "input_sha256": "dda3cba9c12a1ccb59f086ebca0ce641c1f02a150b3b43434ccfb5868736fed4",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree5_chi1_p331.sing",
+      "transcript": "f55_degree5_chi1_p331.out",
+      "transcript_sha256": "7ea00491f96932dba5384c69089895aa6d5e227604c8424b3a19462b53adf3c1",
+      "vdim": 553
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "basis_size": 636,
+      "character_mod_5": 2,
+      "character_root_prime": 331,
+      "coefficient_equations": 350,
+      "covariant_dimension": 11,
+      "degree": 5,
+      "dim": 0,
+      "elapsed_seconds": 0.413255,
+      "input": "f55_degree5_chi2_p331.sing",
+      "input_sha256": "82a290866a77d205cb9744be9288c9273ea5acdfdf92ab3313eba3c43f61d40b",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree5_chi2_p331.sing",
+      "transcript": "f55_degree5_chi2_p331.out",
+      "transcript_sha256": "7ea00491f96932dba5384c69089895aa6d5e227604c8424b3a19462b53adf3c1",
+      "vdim": 553
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "basis_size": 636,
+      "character_mod_5": 3,
+      "character_root_prime": 331,
+      "coefficient_equations": 350,
+      "covariant_dimension": 11,
+      "degree": 5,
+      "dim": 0,
+      "elapsed_seconds": 0.410701,
+      "input": "f55_degree5_chi3_p331.sing",
+      "input_sha256": "0dacf7aae34770ec3bf95b6fa2e3c433e4f6bf017cf92484f389945f7ae58f36",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree5_chi3_p331.sing",
+      "transcript": "f55_degree5_chi3_p331.out",
+      "transcript_sha256": "7ea00491f96932dba5384c69089895aa6d5e227604c8424b3a19462b53adf3c1",
+      "vdim": 553
+    },
+    {
+      "basis": [
+        [
+          0,
+          0,
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "basis_size": 636,
+      "character_mod_5": 4,
+      "character_root_prime": 331,
+      "coefficient_equations": 350,
+      "covariant_dimension": 11,
+      "degree": 5,
+      "dim": 0,
+      "elapsed_seconds": 0.416573,
+      "input": "f55_degree5_chi4_p331.sing",
+      "input_sha256": "ed30eb412c4ecec424d61c304ecf45c0785d7aa77181bace125c0aa6873489fb",
+      "projective_landing_scheme_empty": true,
+      "singular_input": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/Q_SCHUR_INDEX_ONE_CODEX_ROOT_20260801_9D47/f55_degree5_chi4_p331.sing",
+      "transcript": "f55_degree5_chi4_p331.out",
+      "transcript_sha256": "7ea00491f96932dba5384c69089895aa6d5e227604c8424b3a19462b53adf3c1",
+      "vdim": 553
+    }
+  ],
+  "schema": "klein-f55-all-projective-characters-v1",
+  "strict_nonclaims": [
+    "no all-degree exclusion",
+    "no pointlessness theorem for the 11:5 generic twist",
+    "no point or pointlessness theorem for the genuine Schur twist"
+  ],
+  "subgroup": "11:5 = C11 semidirect C5"
+}

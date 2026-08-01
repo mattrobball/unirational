@@ -1,0 +1,11 @@
+{
+  "format": "ambient-projector-chart-rur-v1",
+  "scope": "modular auxiliary projector scheme only",
+  "prime": 397,
+  "zeta11": 256,
+  "chart": "a47=1",
+  "threads": 4,
+  "elapsed_seconds": 1498.156504915998,
+  "rur_bytes": 1620,
+  "theorem_boundary": "a modular RUR is not a characteristic-zero projector and does not impose the distinguished Fano section"
+}

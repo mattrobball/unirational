@@ -1,0 +1,40 @@
+{
+  "artifact": "coordinate_line_minors.npz",
+  "artifact_sha256": "bd7cfad5c7e5f3638ae830b9b81c84cab06ae9f0fd81a06d235a61545b087a23",
+  "conclusion": "The selected necessary Stage-B contraction matrix has rank six at every point of every q-coordinate line. Hence the original Stage-B incidence has no point whose q-vector has support at most two.",
+  "coordinate_lines": 666,
+  "determinant_degree_bound": 18,
+  "field_scope": "algebraic closure of F_89",
+  "holdout_evaluation_point": 19,
+  "interpolation_points": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "limitation": "Coordinate lines do not cover P^36. No statement is made for q with three or more nonzero coordinates, and no global emptiness follows.",
+  "maximum_minors_per_line": 3,
+  "minor_count_distribution": {
+    "2": 639,
+    "3": 27
+  },
+  "prime": 89,
+  "source": "support_cover_r43_stageB.npz",
+  "source_sha256": "89a6d9feab7d08cdbd6b9ba68853fc7a7d041d2057c1c51982aa3c7ad42b7779",
+  "status": "PASS"
+}

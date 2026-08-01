@@ -1,0 +1,69 @@
+{
+  "schema": "s19-marked-curve-continuation-seal-v1",
+  "date": "2026-08-01",
+  "packet": "goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E",
+  "repository_commit_consumed": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "decision_exit": "S19-UNDECIDED",
+  "decision_meaning": "the canonical family and exact finite component search are certified, but no curve and no branch exclusion is proved",
+  "artifact_sha256": {
+    "CARRIER_PICARD.md": "1ce49432761b957c47d3eae1b0533bf022681bddf8e717c210ee6d9e63c3561d",
+    "COMPLETION_AUDIT.md": "85cb1dcb60edd7f42953c31912f24ef9a1dce2e2896e5b3fe3a2cb2d8a4a8a6b",
+    "EXACT_CURVE_RESIDUAL_GATE.md": "287575f2c968f78311ffcbf66290ad6970ed85e6cdc4148e8374edd814e98a30",
+    "MARKED_COMPONENTS.md": "d89b8ff205a909db2a07e8a13b0d219a031a77bb6b743cb396010e5f185d5a5a",
+    "PREFLIGHT.md": "23576b1f2d223ae2fb384a66194fa65f5ce268b65b5f7d9088bcf63101ccdf8e",
+    "PROOF_REPORT.md": "c532d089eb13611ed95a4d637805ae8e27020329beb979896d36dfd90667192d",
+    "README.md": "9d3f967855c78b6bc065bd10a42762bf6413accc8dbfc834a54f72738a31b1bf",
+    "SOURCE_LEDGER.md": "7c38b7b7dced8655bf4fb7a1376119dc555e8a65ee024daf35a4c87324bbd231",
+    "STATUS.md": "0d5194c78aa205f111ff8020d474a91326278a204cb03b1142db4bfda9bf46f8",
+    "UNIVERSAL_MARKED_FAMILY.md": "e8e99fd8a3f360f228cd86f80028ba64126284bcf018e545610661fecca776f1",
+    "WORK_SCOPE.md": "55d2e57e312c71ba7844e2bb62467603dbd2536b3c4488d3183ab3ab9b421b3c",
+    "build_seal.py": "30b0cb09c33c670489b153b8f0cd0d566901ac78664627e0cebe35d6d17a5ee1",
+    "exact_curve_residual_verification.json": "9750eb56eb5fb274a9a04bdfa5db942a60da446ef0f130e40b497e746d2c324f",
+    "make_seal.py": "c731a7daad9923fe18d12f6c75cf6dab33d6d879e0ca59b8f924c8b9dcb775e3",
+    "marked_component_presentation.json": "3ffc8206f0d1b47b9d3023f92acea34d3c741ea90b6bfe7d271de7bd27e52234",
+    "marked_incidence_presentation.json": "67f0f88f75bdb922696eb0370a73f83d50739d45571c6a0df3a8473794ccf906",
+    "produce_marked_component_presentation.py": "2f6d7d083349c635096abc78f6b0a11867d0ddf8e3906075b9fb2c13046d55c8",
+    "produce_marked_incidence_presentation.py": "752a66b78071c41274ec29bd18938876a77839be816cbb10632ab5000b7bf674",
+    "produce_universal_marked_family.py": "f71b84a99241b5163d60d5b725bab0c9bb0fb14ce991fbbd06078f353fd33f1d",
+    "replay.py": "1f52c7ea97d4def2de5686a10003ebaf548a87b1ae433cca72cc4d2c32aab7ad",
+    "run_all.py": "697f343e1b79ff2bc1f6cdee99beb4552963cc4ac8e7ecbdc20e9b2250df9d1c",
+    "universal_marked_family.json": "3a808167611f66cb39369e243a9c38a9019ab5f7c6b7397d3c2636f3950c08fb",
+    "verify_marked_component_presentation.py": "1b19e0fc3166a49c936911b00b260f2ae0c08d235c8a050dd85745026b7a6898",
+    "verify_marked_incidence_presentation.py": "c7a62b916a78be828318fb5e8a94730c0b5d3be1c8e3b79138a27d4903a1772f",
+    "verify_null_curve_residual.py": "53138ef75817a87ec4942f941472c5cd134ae6dd71b92dc7f479a7dfac773635",
+    "verify_seal.py": "4064b94af9b8f39e734a0892e37498c844ef88e69c84729af13d36dbeb3a45c2",
+    "verify_universal_marked_family.py": "f28c607b07db4f6cecd823eaafc703ebd4388d5fbec28119eb3d52635127f8bd"
+  },
+  "consumed_source_sha256": {
+    "certificates/exact_weil_check.py": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
+    "goals_after_35fa8f/GOAL_S19_MARKED_CURVE_CONTINUATION.md": "93703453b2912417aaa33d9877e6849b4bddb27e5834b6cc05a07414d4a2bf8e",
+    "tmp/schur_degree19_structural_design_audit/certificate.json": "2834a57374bc6fedba883c2f89914c3df911df98de0f4816df553839dd79a5a8",
+    "tmp/schur_degree19_nonacm_attack_audit/certificate.json": "193e5341c01dd70720a06b60339c3e3277e929d443e7ed74139dec1180cad226"
+  },
+  "proved": [
+    "canonical equivariant universal 55-point family on an explicit nonempty dense open",
+    "generic Hilbert function 1,4,10,19,31,45,55,55,... and I_Z(5)=f3*S2 direct-sum <f5>",
+    "exact saturated 220 by 135 marked-map presentation with all admissibility gates",
+    "exact normalized three-mark atlas and universal image ideal for the qualified smooth locus",
+    "exact 96 by 11 rank tests for epsilon 0 and epsilon 1",
+    "smooth fixed-fibre marked tangent dimension 0 and obstruction dimension 34",
+    "smooth epsilon-1 carrier lattice Gram [[5,19],[19,-21]] of determinant -466",
+    "raw Hilbert resource rejection in favor of the sparse finite presentation"
+  ],
+  "not_proved": [
+    "nonemptiness or emptiness of either saturated Rao branch",
+    "an irreducible relative marked Hilbert component or its descended base-field point",
+    "control of the actual special Noether-Lefschetz or singular quintic carrier",
+    "an exact degree-19 curve",
+    "an exact residual degree-two cycle or a rational point on the Schur twist",
+    "the Klein-cubic headline"
+  ],
+  "independent_markers": [
+    "S19_UNIVERSAL_MARKED_FAMILY_INDEPENDENT_REPLAY_OK",
+    "S19_MARKED_INCIDENCE_PRESENTATION_INDEPENDENT_REPLAY_OK",
+    "S19_MARKED_COMPONENT_PRESENTATION_INDEPENDENT_REPLAY_OK",
+    "S19_NULL_CURVE_RESIDUAL_LEDGER_CONSISTENT"
+  ],
+  "terminal_marker": "S19_MARKED_CURVE_CONTINUATION_SEALED_UNDECIDED"
+}

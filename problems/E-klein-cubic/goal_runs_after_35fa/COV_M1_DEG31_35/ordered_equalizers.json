@@ -1,0 +1,49 @@
+{
+  "canonical_bases": "canonical_bases.json",
+  "canonical_bases_sha256": "ca9555a34fa4221851fb77df5077f568a038e1b4d471934efe64e05a2ffec1cf",
+  "coefficient_policy": "One vector c in the fixed literal global K1 basis is used at every stratum. No local coefficient reset or patchwise lift is permitted.",
+  "degrees": {
+    "31": {
+      "final_dimension": 198,
+      "payload": "degree_31/ordered_equalizer.json",
+      "payload_sha256": "43922875055fdf0572618a3709053f23cb1d85304cc974ed898a9d92651d01eb"
+    },
+    "35": {
+      "final_dimension": 361,
+      "payload": "degree_35/ordered_equalizer.json",
+      "payload_sha256": "c7329472194af9c47aad945974f9ab9d2123c825f33fe7fd842bb194ea6af361"
+    }
+  },
+  "dependencies": [
+    {
+      "path": "certificates/global_transition/diagram.json",
+      "sha256": "369f15f46d4e37f0dd7af578361ea9907d17ac0f307c9e5b6b63ef3c01d7708d"
+    },
+    {
+      "path": "certificates/global_transition/necessity_theorem.json",
+      "sha256": "a5a21eff778447bd6edf250a1ecaf17ee0406edf371c56aa35bd6796cd3b3731"
+    },
+    {
+      "path": "certificates/transition_repair/category_repaired.json",
+      "sha256": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0"
+    },
+    {
+      "path": "tmp/symbolic_compatibility_complex/triple_line_symbolic/REPORT.md",
+      "sha256": "8df75db930907a567b3607edb134435bc81c7efad8d3889d915c7e3ddcc0a251"
+    },
+    {
+      "path": "tmp/symbolic_compatibility_complex/point_symbolic/character_results.json",
+      "sha256": "0e3e3f9ae15e6aae4409dbb7c558104f9a6747d653500cf373971791d18c68f8"
+    },
+    {
+      "path": "tmp/m1_t1_f3_colon_degree35_audit/certificate.json",
+      "sha256": "591f38ab12e209b28543759e7d018de9c17185826ca6ec1840506a9dc2475c0c"
+    },
+    {
+      "path": "tmp/m1_t1_char0_d35_gate/certificate.json",
+      "sha256": "319176862ef3bd772c54be2541c11f89c26cb099aed47a93e5ffa75d711d1ffb"
+    }
+  ],
+  "schema": "cov-m1-ordered-global-equalizer-v1",
+  "scope_boundary": "COV2.1 contains the linear incidence/restriction equalizer only. Landing-specific consequences such as projective constancy on a C3 eigenline belong to COV2.3 and are recorded separately in c3_constant_gate.json; they are not asserted to be zero here."
+}

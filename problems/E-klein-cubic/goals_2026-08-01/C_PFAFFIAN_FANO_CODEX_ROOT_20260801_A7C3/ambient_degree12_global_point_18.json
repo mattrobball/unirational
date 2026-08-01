@@ -1,0 +1,14 @@
+{
+  "format": "ambient-degree12-global-point-v1",
+  "index": 18,
+  "point": [
+    22,
+    16,
+    4,
+    15,
+    12
+  ],
+  "cubic_quotient_residual_count": 15,
+  "nonzero_residual_indices": [],
+  "all_zero": true
+}

@@ -1,0 +1,41 @@
+{
+  "canonical_data_sha256": "9d416db54e9eb10d46fdfbb2bffe2d3c10a83529ad923f0092105f71407ecc9f",
+  "dtype": "uint8",
+  "elapsed_seconds": 61.363748,
+  "file": "full_p3_contractions.npy",
+  "file_bytes": 590397806,
+  "file_sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019",
+  "no_singular_launched": true,
+  "observed_free_plus_speculative_gib_before_run": 44.99836730957031,
+  "p3_nnz": {
+    "max": 54293,
+    "mean": 51057.45360824742,
+    "min": 32498,
+    "quantiles": {
+      "0.0": 32498.0,
+      "0.1": 43727.0,
+      "0.25": 50174.0,
+      "0.5": 53256.0,
+      "0.75": 54031.0,
+      "0.9": 54185.0,
+      "1.0": 54293.0
+    }
+  },
+  "prime": 89,
+  "shape": [
+    10767,
+    6,
+    9139
+  ],
+  "source": {
+    "full_basis": "full_linear_syzygy_basis.npy",
+    "full_basis_sha256": "3571e9879bf1af6d6a405d9761522d4253e76e40edd129afd4b9363287d60ca3",
+    "relation_matrix": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/relation_matrix.npz",
+    "relation_matrix_sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb"
+  },
+  "statistics": {
+    "file": "full_p3_statistics.npz",
+    "sha256": "63eeef3e371bfc9a1619c67fb3522b7d8b763daad8ab3b680f7f9824bf6037dc"
+  },
+  "status": "PASS_FULL_P3_CONTRACTION"
+}

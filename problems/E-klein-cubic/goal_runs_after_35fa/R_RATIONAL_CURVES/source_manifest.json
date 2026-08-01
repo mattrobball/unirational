@@ -1,0 +1,77 @@
+{
+  "audited_live_commit": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "dependencies": [
+    {
+      "path": "goals_after_35fa8f/GOAL_R2_RATIONAL_CURVES_ON_GENUINE_TWIST.md",
+      "role": "authoritative R2 work order",
+      "sha256": "6b6aeeb2ac817560622df035e0b67b360a1553d0b7a068545b4c3d47bc58cea2"
+    },
+    {
+      "path": "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/Beauville_Curves_on_Cubic.pdf",
+      "role": "all-smooth-cubic elliptic-quintic Serre bundle and projective-section fibre",
+      "sha256": "699c0f2182a39c1e16bf5a50cecb931bb82999d0464b29e2c26220555250ce0b"
+    },
+    {
+      "path": "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/Iliev_Markushevich.tex",
+      "role": "Pfaffian kernel section space and generic-cubic quartic boundary",
+      "sha256": "1c7f15221bab7adc3dd998c4a99e6bf81ce0760e90477659aa8edcb44d94d48f"
+    },
+    {
+      "path": "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/Roulleau_Klein.tex",
+      "role": "Klein intermediate-Jacobian lattice and automorphism actions",
+      "sha256": "82ff1544b9afe57735ac27bd2eaa4e370c18167a43bcc56496c127b21e9c280a"
+    },
+    {
+      "path": "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO/source_manifest.json",
+      "role": "primary-source manifest for the full R2.0 ranking",
+      "sha256": "63d39cf6cc7a800ca647c958127dbfe09cc98a944d99c407b3f59ce9ad38ac6a"
+    },
+    {
+      "path": "tmp/pfaffian_representation_alignment/core.py",
+      "role": "exact Q(zeta_11) representation alignment core",
+      "sha256": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4"
+    },
+    {
+      "path": "tmp/pfaffian_representation_alignment/certificate.json",
+      "role": "exact B5 to wedge^2(V6*) certificate",
+      "sha256": "90746a65051b863c684c906f7166c70572a2edc319e6f6e6e306042261153848"
+    },
+    {
+      "path": "tmp/pfaffian_representation_alignment_audit/verify.py",
+      "role": "hostile independent representation audit",
+      "sha256": "462f61d35d17051add9f2c60d92607a065d1b19b2c90ef73788c64417fb74a93"
+    },
+    {
+      "path": "tmp/pfaffian_generic_schur_audit/certificate.json",
+      "role": "generic projective-torsor Schur class and index",
+      "sha256": "cb8759ad3e4458c08d488a601c060207f4bc5a7fa13d511a0ef63e2f430913fb"
+    },
+    {
+      "path": "tmp/pfaffian_generic_schur_audit/verify.py",
+      "role": "independent generic Schur-class verifier",
+      "sha256": "d793b6155c125013c2d3cc77b5491394a70cb674162c8cc1917cd30fd28ac1f9"
+    },
+    {
+      "path": "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/fixed_jacobian_payload.json",
+      "role": "exact fixed intermediate-Jacobian payload",
+      "sha256": "9db626c2fab8dae9dfb05255b0951d4aae6a6c713e74074b1d3a9747aadf7cb6"
+    },
+    {
+      "path": "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/verify_fixed_jacobian.py",
+      "role": "independent fixed-Jacobian verifier",
+      "sha256": "4f2953055077cd979d95b336035c2754a9eb44b9ad139ad8bbee912342df3e9f"
+    },
+    {
+      "path": "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/group_cohomology_payload.json",
+      "role": "full H1(G,J[3]) payload",
+      "sha256": "2f6a9de1f4e4059914d444612598024ac46a70a3608e43ed6c94d3f246bcb531"
+    },
+    {
+      "path": "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/verify_group_cohomology.py",
+      "role": "independent full group-cohomology verifier",
+      "sha256": "4f60d12470423fab5698132b86719da0dcbd7e90f0b7a10ea25a5f08841d9fac"
+    }
+  ],
+  "pinned_commit": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "schema": "klein-r2-source-manifest-v1"
+}

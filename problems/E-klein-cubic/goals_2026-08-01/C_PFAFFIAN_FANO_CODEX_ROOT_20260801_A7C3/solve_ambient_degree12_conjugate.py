@@ -13,26 +13,31 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-P = 23
 
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--prime", type=int, default=23)
     parser.add_argument("--zeta", type=int, required=True)
     args = parser.parse_args()
-    zeta = args.zeta % P
-    assert zeta != 1 and pow(zeta, 11, P) == 1
-    stem = f"ambient_degree12_zeta{zeta:02d}_a47"
+    prime = args.prime
+    zeta = args.zeta % prime
+    assert prime > 2 and zeta != 1 and pow(zeta, 11, prime) == 1
+    stem = (
+        f"ambient_degree12_zeta{zeta:02d}_a47"
+        if prime == 23
+        else f"ambient_degree12_p{prime}_zeta{zeta:03d}_a47"
+    )
     source = HERE / f"{stem}.in"
     output = HERE / f"{stem}.rur"
     metadata = HERE / f"{stem}.json"
 
     fw = runpy.run_path(str(ROOT / "tmp" / "pfaffian_rank2_idempotent_attack" / "full_wedge.py"))
     fw_globals = fw["FullWedgeScanner"].__init__.__globals__
-    fw_globals["P"] = P
+    fw_globals["P"] = prime
     fano_namespace = fw_globals["fano"]
     fano_globals = fano_namespace["six_dimensional_generators"].__globals__
-    fano_globals["P"] = P
+    fano_globals["P"] = prime
     fano_globals["ZETA"] = zeta
     assert fano_namespace["six_dimensional_generators"].__globals__["ZETA"] == zeta
     generator_digest = hashlib.sha256(
@@ -60,7 +65,7 @@ def main():
     rur = output.read_text()
     assert rur.lstrip().startswith("[0,")
     metadata.write_text(json.dumps({
-        "prime": P,
+        "prime": prime,
         "zeta11": zeta,
         "degree": 12,
         "dimension": 48,

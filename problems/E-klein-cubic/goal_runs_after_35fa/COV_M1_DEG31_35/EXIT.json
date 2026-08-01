@@ -1,0 +1,17 @@
+{
+  "schema": "cov-m1-exit-v1",
+  "exit": "COV-UNDECIDED",
+  "headline": "OPEN",
+  "proved": [
+    "fixed characteristic-zero K1 bases of dimensions 198 and 361",
+    "complete ordered forward equalizers on one global coefficient vector",
+    "exact zero standard module quotient in degree 35 and upper bound one in degree 31",
+    "exact primitive covariants in both degrees that lie in the invariant-multiple span, refuting that linear span quotient as a primitive quotient",
+    "complete factored landing ideals with 5349 and 8555 equations",
+    "C3-line/C6-point necessary landing gates of ranks 11 and 13, reducing the p=463 decision spaces to dimensions 187 and 348",
+    "complete p=463 reduced factored circuits, split into based dimensions 177 and 336 and 10 plus 12 nonbased normalization charts"
+  ],
+  "smallest_unresolved_gate": "exact projective saturation of the based 177- and 336-dimensional vector strata and exact affine saturation of all 10 plus 12 nonbased charts, away from the actual factorable and composition incidence loci",
+  "shared_dependency": "P25.2 remains undecided; multiplication by nonzero invariants embeds its landing support into degrees 31 and 35",
+  "forbidden_inference": "The zero linear indecomposable-module quotient in degree 35 does not imply full-degree emptiness: sealed line-Bezout certificates prove that its kernel contains primitive covariants, and F(p)=0 does not descend through that quotient."
+}

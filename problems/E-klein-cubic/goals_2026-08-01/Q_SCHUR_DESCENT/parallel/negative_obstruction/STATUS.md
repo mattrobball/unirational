@@ -24,12 +24,12 @@ complete proper-subgroup boundary in Goal H.
 The standard Picard/Albanese/Brauer/Amitsur and additive
 restriction--corestriction packages still vanish.  The installed Mori
 fibration has no point-to-section converse, the D and J invariants are
-realizable on source blowup towers, and Goal F remains an undecided positive
-conic criterion over a different field.  Their conjunction supplies no
-missing implication.
+realizable on source blowup towers, and Goal F now proves its auxiliary
+fixed-frame conic criterion empty over the different field `K_proj` but has
+no bridge from that auxiliary plane cubic to the Schur twist.  Their
+conjunction supplies no missing implication.
 
 The smallest honest negative successor is specified in `THEOREM.md`: exhibit
 one actual unramified Schur-field valuation in the surviving class, write its
 full five-coordinate residue cubic, and prove that cubic pointless despite
 index one and trivial relative Brauer group.
-

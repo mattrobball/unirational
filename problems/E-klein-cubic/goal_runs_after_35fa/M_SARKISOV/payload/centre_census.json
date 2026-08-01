@@ -1,0 +1,150 @@
+{
+  "schema": "m2-equivariant-sarkisov-centres-v1",
+  "base_field": "K_Schur=C(P(V6))^G",
+  "selected_center": "schur_plane_cubic_012",
+  "centers": [
+    {
+      "id": "schur_plane_cubic_012",
+      "rank": 1,
+      "availability": "selected",
+      "field": "K_Schur",
+      "geometry": "smooth plane cubic",
+      "dimension": 1,
+      "degree": 3,
+      "genus": 1,
+      "normal_bundle": "O_C(1)+O_C(1)",
+      "discrepancy": 1,
+      "picard_jump": 1,
+      "post_extraction": "smooth terminal Q-factorial Fano",
+      "output": "degree-3 del Pezzo fibration over P1"
+    },
+    {
+      "id": "degree55_closed_point",
+      "rank": 2,
+      "availability": "exact but not selected",
+      "field": "E^D12, degree 55 over K_Schur",
+      "geometry": "reduced closed point, geometrically 55 points",
+      "dimension": 0,
+      "normal_bundle": "rank-3 tangent space over E^D12",
+      "discrepancy": 2,
+      "picard_jump": 1,
+      "ordinary_blowup_minus_K_cube": -416,
+      "post_extraction": "smooth but not weak Fano by negative anticanonical volume",
+      "output": "retained as arithmetic point, not a center for this link"
+    },
+    {
+      "id": "involution_minus_line_orbit",
+      "rank": 3,
+      "availability": "exact after degree-55 residue extension; used horizontally",
+      "field": "one line over E^D12; full orbit over K_Schur",
+      "geometry": "55 involution minus-lines with special intersections",
+      "dimension": 1,
+      "degree": 1,
+      "genus": 0,
+      "normal_bundle_over_residue_field": "O_L+O_L",
+      "discrepancy_for_one_smooth_line": 1,
+      "picard_jump_for_one_smooth_line": 1,
+      "single_line_minus_K_cube": 18,
+      "post_extraction": "one-line blowup gives the classical conic bundle after residue extension; the full orbit union is not a smooth center",
+      "output": "degree-55 multisection of the selected link"
+    },
+    {
+      "id": "goal_R_rational_curves",
+      "rank": 4,
+      "availability": "no independent center produced",
+      "field": "K_proj/K_Schur route boundary",
+      "geometry": "no line or conic; generalized twisted-cubic point is equivalent to a twist point; higher rational curves unresolved",
+      "normal_bundle": null,
+      "discrepancy": null,
+      "picard_jump": null,
+      "output": "not viable without already crossing the positive headline"
+    },
+    {
+      "id": "goal_S19_marked_curve",
+      "rank": 5,
+      "availability": "literal target empty; corrected ambient-curve problem unresolved",
+      "field": "K_Schur",
+      "geometry": "no certified degree-19 curve center",
+      "normal_bundle": null,
+      "discrepancy": null,
+      "picard_jump": null,
+      "output": "not viable"
+    },
+    {
+      "id": "pfaffian_projector_common_line",
+      "rank": 6,
+      "availability": "unresolved",
+      "field": "K_proj",
+      "geometry": "no explicit self-adjoint rank-two projector in the distinguished five-plane and no common isotropic line",
+      "normal_bundle": null,
+      "discrepancy": null,
+      "picard_jump": null,
+      "output": "no center or F14 link available"
+    },
+    {
+      "id": "A4_geometry",
+      "rank": 7,
+      "availability": "subgroup twists positive, but no genuine-G descended center",
+      "field": "A4 subgroup torsor fields",
+      "geometry": "A4 character points are off the Klein cubic; subgroup solubility does not define a K_Schur center",
+      "normal_bundle": null,
+      "discrepancy": null,
+      "picard_jump": null,
+      "output": "not viable as a Galois-stable center"
+    },
+    {
+      "id": "A5_geometry",
+      "rank": 8,
+      "availability": "both maximal A5 generic twists unresolved",
+      "field": "two nonconjugate A5 quotient fields",
+      "geometry": "no certified curve or point center on the genuine G twist",
+      "normal_bundle": null,
+      "discrepancy": null,
+      "picard_jump": null,
+      "output": "not viable"
+    },
+    {
+      "id": "D12_geometry",
+      "rank": 9,
+      "availability": "accounted for by involution line orbit",
+      "field": "E^D12",
+      "geometry": "contained projective line for every D12 torsor; full G orbit is the degree-55 line scheme",
+      "normal_bundle": "O_L+O_L over E^D12",
+      "discrepancy": 1,
+      "picard_jump": 1,
+      "output": "used as multisection, not as singular full-orbit blowup center"
+    },
+    {
+      "id": "target_branch_singular_center",
+      "rank": 10,
+      "availability": "route refuted/unresolved as a genuine-twist center",
+      "field": "auxiliary target branch fields",
+      "geometry": "fixed-frame branch does not imply a point or center on the generic Klein twist; normalization remains insufficient",
+      "normal_bundle": null,
+      "discrepancy": null,
+      "picard_jump": null,
+      "output": "not viable"
+    }
+  ],
+  "standard_weak_fano_curve_types": [
+    {"g": 0, "d": 1, "volume": 18, "output": "conic bundle"},
+    {"g": 0, "d": 2, "volume": 14, "output": "degree-4 del Pezzo fibration after flop"},
+    {"g": 0, "d": 3, "volume": 10, "output": "terminal Fano after flop"},
+    {"g": 1, "d": 3, "volume": 12, "output": "degree-3 del Pezzo fibration"},
+    {"g": 1, "d": 4, "volume": 8, "output": "divisorial anticanonical contraction"},
+    {"g": 4, "d": 6, "volume": 6, "output": "divisorial anticanonical contraction"},
+    {"g": 0, "d": 4, "volume": 6, "output": "point on V14"},
+    {"g": 0, "d": 5, "volume": 2, "output": "cubic self-link"},
+    {"g": 1, "d": 5, "volume": 4, "output": "curve on V14"},
+    {"g": 2, "d": 6, "volume": 2, "output": "cubic self-link"}
+  ],
+  "line_normal_witness_mod331": {
+    "zeta11": 270,
+    "minus_basis": [[271, 190, 200, 1, 0], [130, 148, 52, 0, 1]],
+    "ambient_complement": [[1, 0, 0, 0, 0], [0, 1, 0, 0, 0], [0, 0, 1, 0, 0]],
+    "quadratic_map_matrix": [[39, 195, 85], [160, 139, 185], [90, 74, 58]],
+    "determinant": 222,
+    "conclusion": "N_L/X=O+O"
+  }
+}
+

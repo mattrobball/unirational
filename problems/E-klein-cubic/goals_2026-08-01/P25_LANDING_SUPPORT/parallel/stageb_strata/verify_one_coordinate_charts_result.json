@@ -1,0 +1,287 @@
+{
+  "backend": "FFLAS-FFPACK 2.5.0 Rank_modular_double",
+  "certificate_sha256": "8b939b9f929e87714d6bb47482239d79c1ff7d73baa5ac48fe1c6aa92de059da",
+  "certified_chart_coordinates": [
+    0,
+    1,
+    2,
+    3,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "global_scope_guard": "The union does not cover support with at least two coordinates outside L.",
+  "max_rss_note": "ru_maxrss units are platform-dependent; on macOS this is bytes",
+  "max_rss_raw": 11765547008,
+  "not_replayed_not_certified_coordinates": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "prime": 89,
+  "replayed_certified_charts": [
+    {
+      "augmented_rank": 1902,
+      "chart_coordinate": 0,
+      "multiplier_degree_bound": 1,
+      "rank_equality": true,
+      "source_map_shape": [
+        2304,
+        2970
+      ],
+      "source_rank": 1902,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 1902,
+      "chart_coordinate": 1,
+      "multiplier_degree_bound": 1,
+      "rank_equality": true,
+      "source_map_shape": [
+        2304,
+        2970
+      ],
+      "source_rank": 1902,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 1902,
+      "chart_coordinate": 2,
+      "multiplier_degree_bound": 1,
+      "rank_equality": true,
+      "source_map_shape": [
+        2304,
+        2970
+      ],
+      "source_rank": 1902,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 1902,
+      "chart_coordinate": 3,
+      "multiplier_degree_bound": 1,
+      "rank_equality": true,
+      "source_map_shape": [
+        2304,
+        2970
+      ],
+      "source_rank": 1902,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 7074,
+      "chart_coordinate": 21,
+      "multiplier_degree_bound": 2,
+      "rank_equality": true,
+      "source_map_shape": [
+        9180,
+        7722
+      ],
+      "source_rank": 7074,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 7074,
+      "chart_coordinate": 22,
+      "multiplier_degree_bound": 2,
+      "rank_equality": true,
+      "source_map_shape": [
+        9360,
+        7722
+      ],
+      "source_rank": 7074,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 7074,
+      "chart_coordinate": 23,
+      "multiplier_degree_bound": 2,
+      "rank_equality": true,
+      "source_map_shape": [
+        9675,
+        7722
+      ],
+      "source_rank": 7074,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 7074,
+      "chart_coordinate": 24,
+      "multiplier_degree_bound": 2,
+      "rank_equality": true,
+      "source_map_shape": [
+        9855,
+        7722
+      ],
+      "source_rank": 7074,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 7074,
+      "chart_coordinate": 25,
+      "multiplier_degree_bound": 2,
+      "rank_equality": true,
+      "source_map_shape": [
+        10215,
+        7722
+      ],
+      "source_rank": 7074,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 7074,
+      "chart_coordinate": 26,
+      "multiplier_degree_bound": 2,
+      "rank_equality": true,
+      "source_map_shape": [
+        10530,
+        7722
+      ],
+      "source_rank": 7074,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 7074,
+      "chart_coordinate": 27,
+      "multiplier_degree_bound": 2,
+      "rank_equality": true,
+      "source_map_shape": [
+        10845,
+        7722
+      ],
+      "source_rank": 7074,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 7074,
+      "chart_coordinate": 28,
+      "multiplier_degree_bound": 2,
+      "rank_equality": true,
+      "source_map_shape": [
+        11025,
+        7722
+      ],
+      "source_rank": 7074,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 7074,
+      "chart_coordinate": 29,
+      "multiplier_degree_bound": 2,
+      "rank_equality": true,
+      "source_map_shape": [
+        11115,
+        7722
+      ],
+      "source_rank": 7074,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 7074,
+      "chart_coordinate": 30,
+      "multiplier_degree_bound": 2,
+      "rank_equality": true,
+      "source_map_shape": [
+        11340,
+        7722
+      ],
+      "source_rank": 7074,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 1902,
+      "chart_coordinate": 31,
+      "multiplier_degree_bound": 1,
+      "rank_equality": true,
+      "source_map_shape": [
+        2304,
+        2970
+      ],
+      "source_rank": 1902,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 1902,
+      "chart_coordinate": 32,
+      "multiplier_degree_bound": 1,
+      "rank_equality": true,
+      "source_map_shape": [
+        2304,
+        2970
+      ],
+      "source_rank": 1902,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 1902,
+      "chart_coordinate": 33,
+      "multiplier_degree_bound": 1,
+      "rank_equality": true,
+      "source_map_shape": [
+        2304,
+        2970
+      ],
+      "source_rank": 1902,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 1902,
+      "chart_coordinate": 34,
+      "multiplier_degree_bound": 1,
+      "rank_equality": true,
+      "source_map_shape": [
+        2304,
+        2970
+      ],
+      "source_rank": 1902,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 1902,
+      "chart_coordinate": 35,
+      "multiplier_degree_bound": 1,
+      "rank_equality": true,
+      "source_map_shape": [
+        2304,
+        2970
+      ],
+      "source_rank": 1902,
+      "verified_unit_module": true
+    },
+    {
+      "augmented_rank": 1902,
+      "chart_coordinate": 36,
+      "multiplier_degree_bound": 1,
+      "rank_equality": true,
+      "source_map_shape": [
+        2304,
+        2970
+      ],
+      "source_rank": 1902,
+      "verified_unit_module": true
+    }
+  ],
+  "source_sha256": "2e718c491172480e3aa3f055d5806d28a9414db2627e6daf3f0204bdc3b840ea",
+  "status": "PASS",
+  "total_seconds": 75.186549207996,
+  "verified_scope": "Each replayed affine chart has unit r256 row module. Failed bounded producer charts are not promoted to survivors and were not replayed."
+}

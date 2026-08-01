@@ -1,0 +1,24 @@
+{
+  "format": "goal-F-exact-field-presentation-v1",
+  "base": "F=C(A,B,Y,Z)",
+  "generic_units": ["B", "5*A-81", "u", "C(A,B,Y,Z)", "delta"],
+  "generators": {
+    "t": "f5^3",
+    "u": "f8/f5",
+    "v": "f10*f5"
+  },
+  "matrix_columns": ["1", "v", "t"],
+  "primitive_equation": "P(A,B,Y,Z,u)=0",
+  "determinant_identity": "det(M)=u*C*P",
+  "selected_embedding": {
+    "u": "class of u modulo P",
+    "delta": "M[0,1]*M[1,2]-M[1,1]*M[0,2]",
+    "v_numerator": "-M[0,0]*M[1,2]+M[1,0]*M[0,2]",
+    "t_numerator": "-M[0,1]*M[1,0]+M[1,1]*M[0,0]"
+  },
+  "payload_sha256": {
+    "determinant_matrix_cells_exact.tsv": "e3633afbfc339753569181ce571ffdda1db042d2ddade506023bf6284dea555f",
+    "global_parameter_content_exact.tsv": "480eb9f376a3d6270b74109613fd5132876338d3112f3d254aaa972684251644",
+    "global_primitive_u_sextic_exact.tsv": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
+  }
+}

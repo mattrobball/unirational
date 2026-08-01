@@ -1,0 +1,28 @@
+{
+  "status": "H-TRACE-UNDECIDED",
+  "subgroup": "C11 semidirect C5",
+  "trace_gate": "exists nonzero a in E with Tr_E/K(r2^-1*a^2*sigma(a)) = 0",
+  "covariant_dimensions_d0_d19": [0, 1, 1, 3, 7, 11, 19, 30, 45, 65, 91, 124, 166, 216, 278, 353, 440, 544, 665, 805],
+  "hsop_degrees": [3, 5, 6, 8, 11],
+  "hsop_and_freeness_input_reconstructed": false,
+  "secondary_multiplicities_d1_d26": [1, 1, 3, 6, 10, 15, 21, 30, 36, 44, 50, 56, 58, 59, 59, 54, 50, 43, 37, 28, 22, 16, 10, 6, 3, 2],
+  "secondary_rank": 720,
+  "primitive_module_counterfamily": "f3^(2+5k)*e_degree1 + f5^(1+3k)*e_degree2 has coprime S-coefficients and degree 7+15k",
+  "newton_counterfamily": {
+    "base_degree": 7,
+    "support_size": 18,
+    "translated_degrees": "7+5k",
+    "invariant_multiplier": "(x0*x1*x2*x3*x4)^k",
+    "conclusion": "no-singleton supports occur in infinitely many degrees; unique-exposed-monomial is not an all-degree proof"
+  },
+  "literature": {
+    "url": "https://arxiv.org/abs/2407.21449",
+    "location": "section 8, table row GAP (55,1)",
+    "recorded_essential_dimension": "3-4"
+  },
+  "strict_nonclaims": [
+    "no rational point is constructed",
+    "no pointlessness theorem is proved",
+    "no primitive all-degree cutoff is proved"
+  ]
+}

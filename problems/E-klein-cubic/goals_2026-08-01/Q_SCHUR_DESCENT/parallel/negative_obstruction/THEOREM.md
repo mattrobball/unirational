@@ -172,7 +172,7 @@ restriction--corestriction calculation cannot decide it.
 | M | one exact cubic-surface Mori fibration and a degree-55 multisection | a section implies a point, but a point on `X` need not sweep out a section; no converse exists |
 | D | standard degree/motive data are reproducible in source blowup closure | the invariant classes overlap rather than separate source and target |
 | J | fixed-centre Albanese/Prym/Hodge data are stabilizable on source towers | the proposed invariant is explicitly too weak without landing/base-ideal constraints |
-| F | six cubic equations characterize a positive conic/point over the fixed-frame extension | the system is undecided and is over the `K_proj/F` presentation, not a proved Schur-field obstruction |
+| F | the auxiliary fixed-frame conic/plane-cubic criterion is exactly empty over `K_proj` | no bridge identifies that auxiliary pointlessness with pointlessness of the genuine Schur twist |
 | H | all proper subgroup twists except two `A5` classes and `11:5` are positive | it narrows `D`; it supplies no pointless remaining subgroup twist |
 
 There is no valid syllogism in which the route-scoped `SEAL.json` files turn

@@ -1,0 +1,196 @@
+{
+  "commit_consumed": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "counterexample": {
+    "field": "C((s))((t))",
+    "gradient_at_point": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "only_possible_minimum_tie": [
+      "x^3",
+      "s*y^3"
+    ],
+    "plane_cubic": "s*y**3 + t*z**3 + x**3",
+    "plane_index": 3,
+    "point": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "residue_obstruction": "v_s(-s)=1 not in 3Z",
+    "smoothness_identities": [
+      "3*x^3=x*Y_x-(w/2)*Y_w",
+      "w^3=w*Y_x-(3*x/2)*Y_w"
+    ],
+    "threefold": "q**3 + s*y**3 + t*z**3 + w**2*x + x**3",
+    "valuation_residues_mod_3": {
+      "s*y^3": 0,
+      "t*z^3": 1,
+      "x^3": 0
+    }
+  },
+  "exit": "T2-ROUTE-REFUTED",
+  "headline": "OPEN",
+  "missing_arrow": "C_fix(K_proj)=empty =/=> X_gen(K_proj)=empty",
+  "normalization_payload_status": "explicitly not constructed because non-load-bearing after terminal bridge refutation",
+  "ordered_place_mismatch": {
+    "conclusion": "not the same ordered valuation",
+    "infinity": {
+      "e": 1,
+      "f": 1
+    },
+    "target": {
+      "e": 2,
+      "f": 1
+    }
+  },
+  "pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "schema": "klein-cubic-T2-target-branch-route-refutation-v1",
+  "scope": {
+    "does_not_prove": [
+      "normalization or conductor of the genuine target branch",
+      "local or global three-primary class-group vanishing on that normalization",
+      "pointlessness or solubility of the genuine generic Klein twist",
+      "non-G-unirationality or an essential-dimension value"
+    ],
+    "proves": [
+      "the sealed infinity place and target branch are not the same ordered place",
+      "the target-normalization route cannot reach the genuine-twist headline",
+      "T2 exits T2-ROUTE-REFUTED"
+    ]
+  },
+  "source_markers": {
+    "bridge_audit": [
+      {
+        "line": 30,
+        "text": "has a **broken first arrow**. The abstract idempotent is Morita / structure"
+      },
+      {
+        "line": 34,
+        "text": "isotropy condition for the descended five-plane `H_T \u2282 Herm_3(D)`."
+      }
+    ],
+    "current_paths": [
+      {
+        "line": 138,
+        "text": "`(e,f)=(2,1)`, so `m=1`.  The degree `21` belongs to the closed point on"
+      }
+    ],
+    "fixed_frame_terminality": [
+      {
+        "line": 204,
+        "text": "C(K_proj) \u2260 \u2205  =/=>  X is G-unirational"
+      },
+      {
+        "line": 199,
+        "text": "| **Scope warning** | this produces a projector for the **fixed-frame** Pfaffian chart, not automatically a common isotropic line of `H_T` or a point of `F_{14,T}`. Path F only claims `C(K_proj)\u2260\u2205`. Bridge to Klein unirationality is a separate arrow outside this packet. |"
+      }
+    ],
+    "goal_b": [
+      {
+        "line": 24,
+        "text": "1. the genuine generic Klein twist over the accepted versal invariant field;"
+      },
+      {
+        "line": 27,
+        "text": "4. the selected fixed ternary frame cubic `C/F`;"
+      },
+      {
+        "line": 83,
+        "text": "Produce a commutative diagram showing the fixed-frame condition is merely sufficient and not necessary. Identify the smallest remaining incidence/torsor whose rational point would bypass the fixed frame."
+      }
+    ],
+    "goal_t2": [
+      {
+        "line": 10,
+        "text": "Complete `BR-T-NEG` on the genuine multiplicity-one target branch: construct its normalization and conductor on one exact open, prove the generic residual cubic retains index three, and conclude that the genuine generic Klein twist is pointless."
+      },
+      {
+        "line": 84,
+        "text": "T2-ROUTE-REFUTED"
+      },
+      {
+        "line": 76,
+        "text": "Verify residue degree one, proper specialization, versality, and the exact field identifications required by `BR-T-NEG`. State the non-`G`-unirationality and essential-dimension consequences separately."
+      }
+    ],
+    "handoff": [
+      {
+        "line": 172,
+        "text": "(e,f)=(2,1),\\qquad [k(R):k(D)]=1."
+      }
+    ],
+    "idempotent_dictionary": [
+      {
+        "line": 88,
+        "text": "**not** a Fano point and **not** a Klein point."
+      }
+    ],
+    "implementation_audit": [
+      {
+        "line": 110,
+        "text": "The worker correctly withholds the Klein-cubic headline because the repaired repository does not identify pointlessness of this auxiliary fixed-frame plane cubic with pointlessness of the genuine generic Klein twist."
+      },
+      {
+        "line": 110,
+        "text": "The worker correctly withholds the Klein-cubic headline because the repaired repository does not identify pointlessness of this auxiliary fixed-frame plane cubic with pointlessness of the genuine generic Klein twist."
+      }
+    ],
+    "infinity_status": [
+      {
+        "line": 32,
+        "text": "This conclusion remains scoped to the auxiliary fixed-frame plane cubic."
+      },
+      {
+        "line": 34,
+        "text": "the genuine generic Klein twist, so the Klein-cubic headline remains"
+      }
+    ],
+    "infinity_theorem": [
+      {
+        "line": 106,
+        "text": "e=1,  f=1,  residue field=C(D)=C(r,rho,T)."
+      },
+      {
+        "line": 27,
+        "text": "This is a theorem about the auxiliary fixed-frame plane cubic.  The repaired"
+      },
+      {
+        "line": 29,
+        "text": "the genuine generic Klein twist, so the Klein headline remains open."
+      }
+    ],
+    "repair": [
+      {
+        "line": 470,
+        "text": "The auxiliary Pfaffian characteristic cubic in Sym(A,sigma)"
+      },
+      {
+        "line": 474,
+        "text": "This is not a point of \\(F_{14,T}\\) or of the generic Klein twist. The `FAIL-SCOPE` bridge audit is authoritative."
+      }
+    ]
+  },
+  "source_sha256": {
+    "bridge_audit": "0c9cf64c0a7c367286afd2636bf8f1c8dc432df8616075fb4d6434dcf0d16031",
+    "current_paths": "664bd6fcc01908c4cea126a05eab2dec50fba8c6bcb191f68e7f69b330647ed6",
+    "fixed_frame_terminality": "606794be144d89c24fe8f0593ff775812c2cd1b325361e6bbbdf2a8b01e73677",
+    "goal_b": "634855e1ba8e9cb803ae9ab72c2df3530b9c804f1531f725a628c2bd1f8ec2cc",
+    "goal_t2": "0e6530f43a830a60bb06275b2ffee84aa9eccf11f48a8c9b72c83f936b7e35b7",
+    "handoff": "748e5fda516777708511c4683c73e0cd50a5aa7f1847d845281fa330f3f4f6ca",
+    "idempotent_dictionary": "d1194af309c13b46ce1c4d5d9c3d24a17ab5308b619559ea82a0bcea79fdefd8",
+    "implementation_audit": "9bfe6898b624a659aa72cec25c58f9e5d7c799bad15ef470be5ec68f73eb5444",
+    "infinity_payload": "00316341a4d5207d8630e3d8d4411113b8fa2df5f6b3db42b48aa3003e094405",
+    "infinity_seal": "31d8863087fa8f4977b328921a57ed916fe1b334ad3761e3426092a24bf77394",
+    "infinity_status": "b87093e6a9b557ad5240abd121474fe6f98f50dfe415326c76df051f5aea153f",
+    "infinity_theorem": "0a0f4d414b9c3b989dcc67f568d14075c0b8cf92579911aee6f4154850d97a2a",
+    "repair": "c7cc9d822885726c5dc6b8168e3a1cf55ab6a5f929b3c8ea16e3f77bd3528e54",
+    "target_equation": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501"
+  },
+  "valid_hypothetical_arrow": "ind(C_fix/k(D_tar))=3 => C_fix(K_proj)=empty"
+}

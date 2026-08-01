@@ -1,0 +1,10 @@
+ring R=89,(x,y),dp;
+module M=[x,0],[y,x],[0,y];
+module G=std(M);
+print("G=");
+print(G);
+print("dim=");
+print(dim(G));
+print("vdim=");
+print(vdim(G));
+quit;

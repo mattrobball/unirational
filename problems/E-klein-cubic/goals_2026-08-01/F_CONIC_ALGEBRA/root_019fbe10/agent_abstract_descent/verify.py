@@ -15,6 +15,7 @@ HERE = Path(__file__).resolve().parent
 GOALS = HERE.parents[2]
 PROBLEM = GOALS.parent
 PAYLOAD = HERE / "proof_payload.json"
+SEAL = HERE / "SEAL.json"
 RESTRICTED = PROBLEM / "certificates/restricted_e3/restricted_algebra.json"
 RESTRICTED_MD = PROBLEM / "certificates/restricted_e3/RESTRICTED_ETALE_ALGEBRA.md"
 DECISION_MD = PROBLEM / "certificates/restricted_e3/DECISION.md"
@@ -152,6 +153,15 @@ def verify_sources(payload: dict) -> None:
         require(payload["sources_sha256"][key] == digest(path), f"hash mismatch {key}")
 
 
+def verify_seal(payload: dict) -> None:
+    seal = json.loads(SEAL.read_text())
+    require(seal["format"] == "goal-F-abstract-descent-seal-v1", "seal format")
+    require(seal["exit"] == "E3-RESTRICTION-INJECTIVE-AND-INFINITY-CONSISTENT", "seal exit")
+    for name, expected in seal["files_sha256"].items():
+        require(digest(HERE / name) == expected, f"sealed file drift: {name}")
+    require(seal["terminal_markers"] == payload["terminal_markers"], "sealed markers")
+
+
 def verify_input_claims(payload: dict) -> None:
     restricted = json.loads(RESTRICTED.read_text())
     infinity = json.loads(INFINITY.read_text())
@@ -196,6 +206,7 @@ def main() -> None:
     payload = json.loads(PAYLOAD.read_text())
     require(payload["format"] == "goal-F-abstract-descent-v1", "payload format")
     verify_sources(payload)
+    verify_seal(payload)
     verify_input_claims(payload)
     verify_normal_quotients_of_s6()
     verify_gl2_and_orbits()

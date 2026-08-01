@@ -1,0 +1,44 @@
+{
+  "coefficient_isogeny_class": {
+    "conclusion": "the class of r2, equivalently of c=r2^-1, has exact order 11 modulo psi(E^*)",
+    "degree": 33,
+    "isogeny": "psi(d)=d^2*sigma(d) on Res_(E/K)(G_m)",
+    "nontriviality": "psi(d)=r2 has no d in E^*: the divisor equation (2+sigma)D=0 forces D=0, then the Laurent-unit exponent system has no integral solution",
+    "order_11_witness": "d=r1*r2^6*r3^-2*r4^2 satisfies psi(d)=r2^11",
+    "point_boundary": "X_T(K) is nonempty iff c*psi(E^*) meets ker(Tr_E/K)"
+  },
+  "cyclic_coefficient": {
+    "c": "beta^2*sigma(beta)=r2^-1",
+    "norm_E_over_K": "product_i sigma^i(c)=1",
+    "warning": "norm one does not solve d^2*sigma(d)=c^-1; that is the 2+sigma isogeny, not multiplicative Hilbert 90"
+  },
+  "degree_11_Kummer_generator": {
+    "beta": "y2/y3",
+    "beta_11": "b=r0^2*r1*r3^4/r2^4",
+    "compatibility": "sigma(b)=r2^-11*b^-2 and sigma^5(beta)=beta",
+    "reconstruction_on_y0_nonzero": {
+      "y1/y0": "r0*r3/(r2*beta^3)",
+      "y2/y0": "r2*beta^3/r3",
+      "y3/y0": "r2*beta^2/r3",
+      "y4/y0": "r2^2*beta^4/r3"
+    },
+    "sigma_beta": "1/(r2*beta^2)"
+  },
+  "degree_five_point": {
+    "field": "E",
+    "image_under_trace_frame": "[beta0*Z0(r0):0:0:0:0]",
+    "polynomial": "Z0(T)=product_(k=1)^4 (T-r_k)",
+    "scope": "a closed point of degree five over K, not a K-rational point"
+  },
+  "format": "H-11_5-NORM-TOWER-v1",
+  "monomial_screen": {
+    "reason": "Phi(a) is the C5-orbit sum of one Laurent monomial; its orbit has size 1 or 5, and distinct Laurent monomials are linearly independent in characteristic zero",
+    "scope": "infinite pure-monomial ansatz only; sums and arbitrary rational functions remain",
+    "statement": "No nonzero Laurent monomial a in C[r_i^+-1]/(product r_i-1) solves Phi(a)=0"
+  },
+  "trace_model": {
+    "coefficient_field": "each coefficient is fixed by cyclic permutation, hence lies in K",
+    "equation": "Phi(z)=Tr_E/K(r2^-1*a^2*sigma(a))=sum_i Z(r_i)^2*Z(r_(i+1))/r_(i+2)=0",
+    "variable": "a in E, written a=Z(r0), Z(T)=z0+z1*T+...+z4*T^4 with z_i in K"
+  }
+}

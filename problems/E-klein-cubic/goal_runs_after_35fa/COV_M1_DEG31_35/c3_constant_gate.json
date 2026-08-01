@@ -1,0 +1,36 @@
+{
+  "decision_status": "necessary reduction proved; residual saturation open",
+  "degrees": {
+    "31": {
+      "allowed_constant_scalar_dimension": 10,
+      "gate_rank": 11,
+      "input_dimension": 198,
+      "reduced_parameter_dimension": 187,
+      "restriction_rank": 21
+    },
+    "35": {
+      "allowed_constant_scalar_dimension": 12,
+      "gate_rank": 13,
+      "input_dimension": 361,
+      "reduced_parameter_dimension": 348,
+      "restriction_rank": 25
+    }
+  },
+  "mathematical_gate": "On a C3 eigenline, X cuts a reduced length-three scheme. The projectivized restriction of a landing covariant is therefore constant on the connected source line minus its base divisor. C6 setwise equivariance forces that constant to be the unique C6-fixed point; the zero restriction is included in the same linear condition.",
+  "prime_records": [
+    {
+      "payload": "c3_constant_gate_probe_p463.json",
+      "payload_sha256": "1028cb0d033bb4529ccf2142460f4f4908f09e2416f69ee16902a2a0ed77661e",
+      "prime": 463,
+      "zeta11": 15
+    },
+    {
+      "payload": "c3_constant_gate_probe_p727.json",
+      "payload_sha256": "3879add80580e19edaebd81c95dd009e417c9008541c0a494b1fa37d0e9d39d3",
+      "prime": 727,
+      "zeta11": 46
+    }
+  ],
+  "schema": "cov-m1-c3-c6-constant-gate-v1",
+  "transfer_scope": "The p=463 gate is a necessary condition on the complete special-fibre landing scheme. Emptiness after imposing it would exclude the characteristic-zero degree by projective proper specialization. Agreement at p=727 is an independent holdout, not by itself an emptiness theorem."
+}

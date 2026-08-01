@@ -1,0 +1,1698 @@
+{
+  "format": "c3-selected-zero-charts-holdout-p23-v1",
+  "scope": "four selected coordinate-zero chart formulas only",
+  "prime": 23,
+  "zeta11": 2,
+  "records": [
+    {
+      "point": [
+        2,
+        13,
+        11,
+        14,
+        22
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            5,
+            12,
+            6,
+            21,
+            1,
+            21,
+            0,
+            2,
+            13,
+            8,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            16,
+            20,
+            15,
+            10,
+            19,
+            20,
+            7,
+            1,
+            2,
+            14,
+            1
+          ],
+          "rational_roots": [
+            8,
+            18
+          ],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            6,
+            4,
+            3,
+            10,
+            2,
+            18,
+            9,
+            13,
+            19,
+            21,
+            1
+          ],
+          "rational_roots": [
+            13
+          ],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            16,
+            2,
+            19,
+            9,
+            0,
+            17,
+            11,
+            13,
+            13,
+            13,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "point": [
+        21,
+        9,
+        10,
+        17,
+        5
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 9,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            6,
+            5,
+            14,
+            5,
+            8,
+            16,
+            14,
+            12,
+            1,
+            1
+          ],
+          "rational_roots": [
+            16
+          ],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            4,
+            19,
+            14,
+            6,
+            3,
+            2,
+            20,
+            13,
+            20,
+            16,
+            1
+          ],
+          "rational_roots": [
+            3,
+            14
+          ],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            7,
+            10,
+            8,
+            20,
+            5,
+            21,
+            16,
+            0,
+            11,
+            20,
+            1
+          ],
+          "rational_roots": [
+            14,
+            22
+          ],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            13,
+            13,
+            15,
+            11,
+            15,
+            1,
+            5,
+            4,
+            6,
+            22,
+            1
+          ],
+          "rational_roots": [
+            16
+          ],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "point": [
+        17,
+        20,
+        3,
+        11,
+        16
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            16,
+            21,
+            17,
+            13,
+            2,
+            0,
+            11,
+            8,
+            22,
+            16,
+            1
+          ],
+          "rational_roots": [
+            21
+          ],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u1",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            8,
+            14,
+            13,
+            1,
+            21,
+            17,
+            12,
+            12,
+            9,
+            19,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 9,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            22,
+            21,
+            16,
+            16,
+            4,
+            4,
+            11,
+            5,
+            3,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u1",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            18,
+            18,
+            21,
+            15,
+            14,
+            10,
+            12,
+            8,
+            6,
+            21,
+            1
+          ],
+          "rational_roots": [
+            13,
+            22
+          ],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "point": [
+        10,
+        9,
+        7,
+        8,
+        1
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 9,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            2,
+            0,
+            12,
+            2,
+            4,
+            16,
+            14,
+            18,
+            15,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            22,
+            15,
+            4,
+            8,
+            11,
+            0,
+            19,
+            14,
+            19,
+            0,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            3,
+            22,
+            12,
+            9,
+            20,
+            4,
+            19,
+            16,
+            15,
+            19,
+            1
+          ],
+          "rational_roots": [
+            18,
+            22
+          ],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 9,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            4,
+            6,
+            21,
+            14,
+            12,
+            6,
+            4,
+            19,
+            7,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "point": [
+        8,
+        8,
+        16,
+        9,
+        9
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            3,
+            8,
+            15,
+            8,
+            15,
+            3,
+            16,
+            4,
+            13,
+            19,
+            1
+          ],
+          "rational_roots": [
+            14
+          ],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            9,
+            9,
+            0,
+            3,
+            5,
+            7,
+            15,
+            11,
+            10,
+            21,
+            1
+          ],
+          "rational_roots": [
+            16
+          ],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            17,
+            4,
+            8,
+            21,
+            16,
+            7,
+            21,
+            22,
+            2,
+            13,
+            1
+          ],
+          "rational_roots": [
+            11
+          ],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            0,
+            2,
+            4,
+            19,
+            13,
+            3,
+            9,
+            13,
+            0,
+            17,
+            1
+          ],
+          "rational_roots": [
+            0
+          ],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "point": [
+        15,
+        4,
+        20,
+        20,
+        1
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            16,
+            15,
+            13,
+            5,
+            13,
+            13,
+            12,
+            9,
+            18,
+            19,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            0,
+            18,
+            16,
+            12,
+            4,
+            6,
+            1,
+            1,
+            11,
+            12,
+            1
+          ],
+          "rational_roots": [
+            0
+          ],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            11,
+            19,
+            9,
+            22,
+            6,
+            16,
+            13,
+            10,
+            17,
+            2,
+            1
+          ],
+          "rational_roots": [
+            5,
+            15
+          ],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            17,
+            2,
+            5,
+            4,
+            3,
+            11,
+            17,
+            8,
+            22,
+            0,
+            1
+          ],
+          "rational_roots": [
+            21
+          ],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "point": [
+        6,
+        5,
+        16,
+        6,
+        20
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            12,
+            19,
+            2,
+            9,
+            21,
+            9,
+            9,
+            18,
+            5,
+            4,
+            1
+          ],
+          "rational_roots": [
+            3
+          ],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            1,
+            10,
+            14,
+            14,
+            12,
+            9,
+            7,
+            6,
+            9,
+            10,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 9,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            7,
+            22,
+            7,
+            5,
+            0,
+            3,
+            10,
+            15,
+            16,
+            1
+          ],
+          "rational_roots": [
+            2
+          ],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            8,
+            16,
+            13,
+            18,
+            7,
+            16,
+            22,
+            18,
+            9,
+            16,
+            1
+          ],
+          "rational_roots": [
+            11
+          ],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "point": [
+        2,
+        11,
+        10,
+        21,
+        18
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            20,
+            20,
+            7,
+            22,
+            14,
+            13,
+            0,
+            1,
+            4,
+            6,
+            1
+          ],
+          "rational_roots": [
+            8,
+            16
+          ],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            4,
+            10,
+            3,
+            3,
+            9,
+            18,
+            12,
+            17,
+            20,
+            13,
+            1
+          ],
+          "rational_roots": [
+            11
+          ],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            2,
+            17,
+            8,
+            20,
+            14,
+            20,
+            21,
+            16,
+            1,
+            5,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            18,
+            16,
+            13,
+            15,
+            0,
+            6,
+            12,
+            4,
+            22,
+            18,
+            1
+          ],
+          "rational_roots": [
+            16,
+            18
+          ],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "point": [
+        10,
+        3,
+        4,
+        2,
+        13
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            10,
+            13,
+            5,
+            14,
+            13,
+            17,
+            13,
+            7,
+            16,
+            9,
+            1
+          ],
+          "rational_roots": [
+            18
+          ],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            10,
+            15,
+            1,
+            11,
+            18,
+            7,
+            5,
+            1,
+            8,
+            9,
+            1
+          ],
+          "rational_roots": [
+            19,
+            22
+          ],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            1,
+            0,
+            9,
+            13,
+            14,
+            9,
+            6,
+            20,
+            16,
+            19,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            22,
+            17,
+            17,
+            19,
+            10,
+            20,
+            20,
+            6,
+            22,
+            19,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "point": [
+        15,
+        17,
+        9,
+        13,
+        15
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            2,
+            0,
+            16,
+            15,
+            12,
+            11,
+            17,
+            20,
+            6,
+            16,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            16,
+            3,
+            2,
+            5,
+            7,
+            10,
+            20,
+            19,
+            14,
+            10,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u1",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            11,
+            4,
+            15,
+            2,
+            12,
+            18,
+            20,
+            22,
+            22,
+            0,
+            1
+          ],
+          "rational_roots": [
+            2,
+            11
+          ],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            6,
+            1,
+            11,
+            0,
+            22,
+            14,
+            7,
+            19,
+            17,
+            13,
+            1
+          ],
+          "rational_roots": [
+            21
+          ],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "point": [
+        14,
+        6,
+        10,
+        18,
+        11
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            5,
+            2,
+            2,
+            19,
+            14,
+            18,
+            9,
+            15,
+            19,
+            12,
+            1
+          ],
+          "rational_roots": [
+            12
+          ],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            2,
+            13,
+            0,
+            15,
+            17,
+            4,
+            2,
+            7,
+            22,
+            1
+          ],
+          "rational_roots": [
+            14,
+            19
+          ],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 5,
+          "parameter_variable": "A",
+          "linear_form": [
+            13,
+            -8,
+            20,
+            -20,
+            -11,
+            13
+          ],
+          "eliminant_coefficients_ascending": [
+            0,
+            22,
+            8,
+            8,
+            0,
+            1
+          ],
+          "rational_roots": [
+            0,
+            10,
+            22
+          ],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            14,
+            13,
+            17,
+            15,
+            15,
+            6,
+            2,
+            5,
+            2,
+            7,
+            1
+          ],
+          "rational_roots": [
+            21
+          ],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "point": [
+        5,
+        13,
+        1,
+        15,
+        11
+      ],
+      "charts": [
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u4",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            18,
+            3,
+            18,
+            4,
+            9,
+            1,
+            4,
+            7,
+            15,
+            8,
+            1
+          ],
+          "rational_roots": [
+            6
+          ],
+          "zero_coordinates": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            19,
+            12,
+            21,
+            18,
+            11,
+            19,
+            13,
+            8,
+            5,
+            14,
+            1
+          ],
+          "rational_roots": [
+            4,
+            6
+          ],
+          "zero_coordinates": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            20,
+            9,
+            17,
+            13,
+            22,
+            2,
+            4,
+            14,
+            19,
+            2,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            8,
+            10,
+            11
+          ]
+        },
+        {
+          "kind": "zero_dimensional",
+          "degree": 10,
+          "parameter_variable": "u0",
+          "linear_form": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "eliminant_coefficients_ascending": [
+            8,
+            6,
+            8,
+            15,
+            0,
+            13,
+            19,
+            3,
+            14,
+            21,
+            1
+          ],
+          "rational_roots": [],
+          "zero_coordinates": [
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    }
+  ],
+  "charts_with_a_rational_root_at_every_regular_point": [],
+  "theorem_boundary": "rejects only the selected chart patterns; no conclusion about arbitrary D^3 lines"
+}

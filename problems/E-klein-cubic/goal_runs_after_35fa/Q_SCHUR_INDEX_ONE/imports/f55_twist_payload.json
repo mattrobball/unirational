@@ -1,0 +1,119 @@
+{
+  "format": "klein-11-5-generic-twist-v1",
+  "generator_orders": [
+    11,
+    5
+  ],
+  "generators_psl2_f11": [
+    [
+      1,
+      2,
+      0,
+      1
+    ],
+    [
+      5,
+      0,
+      0,
+      9
+    ]
+  ],
+  "generic_torsor": "Spec C(P(W)) -> Spec C(P(W))^(11:5), with W the faithful irreducible five-dimensional Klein representation",
+  "good_reduction": {
+    "denominator_product": 27,
+    "frame": [
+      [
+        66,
+        10,
+        60,
+        36,
+        8
+      ],
+      [
+        0,
+        33,
+        70,
+        0,
+        83
+      ],
+      [
+        28,
+        66,
+        77,
+        38,
+        84
+      ],
+      [
+        7,
+        40,
+        62,
+        18,
+        42
+      ],
+      [
+        0,
+        41,
+        75,
+        5,
+        54
+      ]
+    ],
+    "frame_determinant": 57,
+    "prime": 89,
+    "source_point": [
+      36,
+      25,
+      14,
+      68,
+      1
+    ],
+    "specialized_twist_coefficients": {
+      "0,0,0,0,3": 77,
+      "0,0,0,1,2": 72,
+      "0,0,0,2,1": 37,
+      "0,0,0,3,0": 32,
+      "0,0,1,0,2": 32,
+      "0,0,1,1,1": 15,
+      "0,0,1,2,0": 41,
+      "0,0,2,0,1": 23,
+      "0,0,2,1,0": 39,
+      "0,0,3,0,0": 50,
+      "0,1,0,0,2": 54,
+      "0,1,0,1,1": 38,
+      "0,1,0,2,0": 72,
+      "0,1,1,0,1": 58,
+      "0,1,1,1,0": 35,
+      "0,1,2,0,0": 35,
+      "0,2,0,0,1": 3,
+      "0,2,0,1,0": 52,
+      "0,2,1,0,0": 86,
+      "0,3,0,0,0": 32,
+      "1,0,0,0,2": 14,
+      "1,0,0,1,1": 65,
+      "1,0,0,2,0": 58,
+      "1,0,1,0,1": 46,
+      "1,0,1,1,0": 55,
+      "1,0,2,0,0": 70,
+      "1,1,0,0,1": 66,
+      "1,1,1,0,0": 80,
+      "1,2,0,0,0": 30,
+      "2,0,0,0,1": 2,
+      "2,0,0,1,0": 61,
+      "2,0,1,0,0": 59,
+      "2,1,0,0,0": 69,
+      "3,0,0,0,0": 59
+    },
+    "zeta11": 2
+  },
+  "hilbert90_formula": "A(y)=sum_{h in H} c(rho(h^-1)y)rho(h), c=(2*y0+3*y1+5*y2+7*y3+11*y4)/(y0+2*y1+3*y2+4*y3+5*y4)",
+  "index_screen": {
+    "C11_eigenline_orbit_degree": 5,
+    "conclusion": "index one; no index obstruction",
+    "gcd": 1,
+    "hyperplane_zero_cycle_degree": 3
+  },
+  "order": 55,
+  "restriction_character_norm": 1,
+  "subgroup": "11:5=N_G(C11)",
+  "twisted_cubic_equation": "F_H(z)=sum_{i mod 5}(A(y)z)_i^2(A(y)z)_{i+1}=0 over K_H=C(P(W))^H"
+}

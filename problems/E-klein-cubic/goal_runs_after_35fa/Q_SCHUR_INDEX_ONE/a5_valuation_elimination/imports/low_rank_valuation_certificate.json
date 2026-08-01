@@ -1,0 +1,87 @@
+{
+  "schema": "g_low_rank_c1_residue_v1",
+  "object": {
+    "base_field": "K_proj",
+    "group": "PSL_2(F_11)",
+    "group_order": 660,
+    "ambient_dimension": 4,
+    "vector_space_dimension": 5,
+    "equation_degree": 3,
+    "generic_cubic_coefficient_count": 35,
+    "generic_cubic_support": "all degree-three monomials in five variables",
+    "scope": "genuine generic twisted Klein cubic"
+  },
+  "valuation_theorem": {
+    "primary_local_model": "fraction field of the henselized valuation ring K_v^h",
+    "valuation_rank": "arbitrary",
+    "hypothesis": "residue field kappa(v) is C1",
+    "ramified_case": "nontrivial inertia gives a point by the exact centralizer theorem",
+    "unramified_case": "finite-etale extension, split rank-five twisted vector bundle, C1 residue point, smooth Hensel lift",
+    "conclusion": "the genuine twist has a K_v^h-rational point"
+  },
+  "arbitrary_rank_foundations": {
+    "tame_inertia_pairing": "I injects into Hom(Gamma_L/Gamma_K, kappa_L^*) because residue characteristic zero kills wild inertia",
+    "centrality_reason": "conjugation acts through residue action on character values and all roots of unity lie in the fixed base residue field",
+    "unramified_torsor_model": "trivial inertia cocycle factors through the residue Galois group and lifts by finite-etale equivalence",
+    "finite_etale_reference": "Stacks Project Tag 04GK",
+    "smooth_lifting_reference": "Stacks Project Tag 0H74",
+    "noetherian_hypothesis": false,
+    "integral_closure_finiteness_used": false
+  },
+  "decomposition_group_refinement": {
+    "hypothesis": "trivial inertia",
+    "positive_proper_subgroups": "every proper subgroup except the two maximal A5 classes and maximal 11:5",
+    "remaining_decomposition_groups": [
+      "PSL_2(F_11)",
+      "maximal A5 class 1",
+      "maximal A5 class 2",
+      "maximal 11:5"
+    ],
+    "twist_bridge": "Duncan-Reichstein Theorem 1.1",
+    "unirationality_input": "Cheltsov-Tschinkel-Zhang Theorem 5.1",
+    "conclusion": "a negative valuation must be unramified, have non-C1 residue, and have one of the listed decomposition groups"
+  },
+  "c1_ledger": {
+    "variables": 5,
+    "degree": 3,
+    "strict_inequality": true,
+    "transcendence_degree_over_C_covered": [0, 1],
+    "source": {
+      "author": "Serge Lang",
+      "title": "On quasi algebraic closure",
+      "journal": "Annals of Mathematics 55 (1952), 373-390",
+      "doi": "10.2307/1969785"
+    }
+  },
+  "completion_models": {
+    "ordinary_rank_one_completion": "covered because K_v^h embeds in the complete discretely valued field",
+    "successive_complete_dvr_tower": "covered at every finite length when the terminal residue is C1 and all valuations are trivial on C",
+    "unspecified_higher_rank_completion": "not asserted"
+  },
+  "newly_retired_classes": [
+    "rank-one valuations with residue transcendence degree at most one over C",
+    "rank-two valuations with residue transcendence degree at most one over C",
+    "arbitrary-rank valuations with C1 residue",
+    "nongeometric successive complete-DVR towers with C1 terminal residue"
+  ],
+  "strict_nonclaims": [
+    "no global K_proj-point is proved",
+    "no pointless completion is proved",
+    "geometric divisorial residue transcendence degree three remains open",
+    "saturated geometric rank-two residue transcendence degree two remains open",
+    "no unspecified higher-rank completion is identified with the henselization",
+    "Goal G remains undecided"
+  ],
+  "authoritative_sha256": {
+    "G_ALL_DEGREE/generic_cubic.json": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+    "V_VALUATION_TROPICAL/inertia_centralizers.json": "41e54408cf3fe0a30ce98f61b3c29a0e73f386f0ee553f538459a1e99fcbd921",
+    "V_VALUATION_TROPICAL/verify_inertia_centralizers.py": "47c2e18af7a60db3206cb8a1f2f14c3497a6ddc75c3868c4f92f519ec08157e1",
+    "../certificates/exact_weil_check.py": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
+    "../tmp/generic_twist/phi_coefficients.py": "8c217aeaefe300a76e886f0a94803b5812689574299e1a2c72daeec72efd4525",
+    "../tmp/kproj_arithmetic/core.py": "913b6184df2272e4834f81b38abdda9f468a2852ec571a04a469610054468b01",
+    "H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/STATUS.md": "b6e4973ee9cabea762b7b553af03f08923aa7da8e090bbd0c733230ba07dae1f",
+    "H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/VALUATION_INDEX.md": "f8504478b316445734f60e9ac07084c446f54c55f1f97f1a60307caf8ed41848",
+    "H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/verify.py": "149bda819801434eaf350a2cc646f5b935550dc8872fde02cc397fc3d4ece45b",
+    "H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/SEAL.json": "ca3a490f5d6e411d5254c298b0fedae5b503f8ea10a0209626cdb457746641db"
+  }
+}

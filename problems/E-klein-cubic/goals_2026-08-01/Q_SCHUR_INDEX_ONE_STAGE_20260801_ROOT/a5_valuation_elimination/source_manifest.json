@@ -1,0 +1,12 @@
+{
+  "format": "q-schur-a5-valuation-source-manifest-v1",
+  "sources": {
+    "goal_runs_after_35fa/H_A5_TWISTS/SEAL.json": "14e5ebaf8822bbe72e81cbc15f5a7df322252659e910f4f5206a1c67efad08a7",
+    "goal_runs_after_35fa/H_A5_TWISTS/STATUS.md": "2df8d8d157b2f401a44b41aa3bd02dd080ca1747e73f924b0f884fb4ba37e706",
+    "goal_runs_after_35fa/H_A5_TWISTS/A5_class_1/POINT.md": "c37bd3a6a5b4c7b007e0cefa94434ab59d327a840e110752624ff4da6d5748ff",
+    "goal_runs_after_35fa/H_A5_TWISTS/A5_class_2/POINT.md": "e1d6cbe63b4b64c63d4adc54c114bf4098e538031554e11b630403474735285d",
+    "goals_2026-08-01/G_ALL_DEGREE/attacks/low_rank_valuations_v2/THEOREM.md": "d5947fe2d197e7f3b31d2b25ffa9e8362b9697481372dbf009ea3211a749d558",
+    "goals_2026-08-01/G_ALL_DEGREE/attacks/low_rank_valuations_v2/certificate.json": "83ba2a2820856ae675450221a3723f012715dc6f9bf012064c4d223aa553b503",
+    "goals_2026-08-01/G_ALL_DEGREE/attacks/low_rank_valuations_v2/verify.py": "402afeef21db882c231fdb0af61335732f799326934066b6c03351cc844be4aa"
+  }
+}

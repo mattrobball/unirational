@@ -1,0 +1,64 @@
+{
+  "abel_jacobi_descent": {
+    "degree_torsor_consequence": "the degree-two cycle torsor J_2 has one G-fixed point q_2",
+    "fixed_group": "J(C)^G = 0",
+    "moduli_consequence": "the only K_proj-point of the twisted bundle-moduli open is the Pfaffian bundle E_0 over q_2",
+    "torsion_module": "H^1(G,J[3]) = 0"
+  },
+  "dependencies_sha256": {
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/fixed_jacobian_payload.json": "9db626c2fab8dae9dfb05255b0951d4aae6a6c713e74074b1d3a9747aadf7cb6",
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/group_cohomology_payload.json": "2f6a9de1f4e4059914d444612598024ac46a70a3608e43ed6c94d3f246bcb531",
+    "pfaffian_quintic_universal.json": "f0c60f05c2cb676019a9d04dafbbcfc55a02b19480dfa54de6152e31393ce781",
+    "tmp/pfaffian_generic_schur_audit/certificate.json": "cb8759ad3e4458c08d488a601c060207f4bc5a7fa13d511a0ef63e2f430913fb",
+    "tmp/pfaffian_representation_alignment/certificate.json": "90746a65051b863c684c906f7166c70572a2edc319e6f6e6e306042261153848"
+  },
+  "descent_obstruction": {
+    "brauer_class": "-alpha_proj = alpha_proj != 0",
+    "component_K_points": "empty",
+    "index": 2,
+    "proof_chain": [
+      "every Hilbert K-point maps to the unique q_2",
+      "the unique bundle over q_2 is E_0",
+      "its section fibre twists to SB(A_proj^op)",
+      "index(A_proj^op)=2, so that fibre has no K_proj-point"
+    ],
+    "rational_points": "empty",
+    "twisted_fibre": "SB(A_proj^op)",
+    "zero_cycle_index": 2
+  },
+  "exit": "R2-DESCENT-OBSTRUCTED",
+  "field": "K_proj = C(P(W))^PSL_2(F_11)",
+  "generic_torsor": "Spec C(P(W)) -> Spec K_proj",
+  "headline": "OPEN",
+  "pfaffian_model": {
+    "bundle": "E_0(1)=K^*",
+    "module_embedding": "B_5 -> wedge^2(V_6^*)",
+    "payload": "pfaffian_quintic_universal.json",
+    "section_space": "H^0(E_0(1))=V_6^*",
+    "universal_equations": "A(x)*lambda=0, where M(x)*A(x)=Pf(M(x))*I_6"
+  },
+  "point_extraction_boundary": {
+    "meaning": "the scroll construction cannot bypass the missing point on the elliptic curve",
+    "result": "no curve and no point are extracted because the selected Hilbert fibre is nonsplit",
+    "scroll_gate": "a cubic-scroll residual quartic requires Pic^2(E)(K)",
+    "torsor_classes": "the degree-five embedding gives 5*alpha=0; Pic^2(E)(K) gives 2*alpha=0; together they force alpha=0"
+  },
+  "schema": "klein-r2-descended-elliptic-quintic-v1",
+  "selected_component": {
+    "bundle_moduli_dimension": 5,
+    "geometric_dimension": 10,
+    "geometric_fibre": "P^5 = P(H^0(E(1)))",
+    "geometric_integrality_witness": "smooth prime degree-five genus-one good reduction at (23,zeta_11=2), lambda=(1,0,0,0,0,0)",
+    "hilbert_polynomial": "5*t",
+    "name": "smooth elliptic normal quintics on the Klein cubic",
+    "obstruction_h1_normal": 0,
+    "tangent_dimension": 10
+  },
+  "terminal_marker": "R2_DESCENDED_ELLIPTIC_QUINTIC_OBSTRUCTION_CERTIFIED",
+  "universal_curve_on_genuine_twist": {
+    "base_field_member": false,
+    "descent": "the G-equivariant incidence descends over SB(A_proj^op)",
+    "reason": "SB(A_proj^op)(K_proj) is empty",
+    "verified_over_split_torsor": true
+  }
+}

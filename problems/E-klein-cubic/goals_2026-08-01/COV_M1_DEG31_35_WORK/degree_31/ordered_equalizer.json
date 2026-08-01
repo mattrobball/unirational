@@ -1,0 +1,145 @@
+{
+  "conclusion": "The complete forward incidence equalizer is installed on one literal global coefficient vector. No named overlap condition cuts the global image further; nontrivial local compact cokernel classes are excluded by the literal-image correction.",
+  "degree": 31,
+  "field": "K=Q(zeta_11), Phi_11(zeta_11)=0",
+  "final_dimension": 198,
+  "fixed_basis": "degree_31/m1_cross_basis_circuits.json",
+  "fixed_basis_sha256": "8adc3f91db76f97a47d1df6d3f9cccee9e8eef62a825c2dff045ad96db6ff2f6",
+  "input_full_dimension": 410,
+  "literal_global_m1_dimension": 198,
+  "ordered_stages": [
+    {
+      "constraint_rank": 212,
+      "geometry": "55 involution plus-planes",
+      "global_coefficient_vector_preserved": true,
+      "id": "01_all_55_plus_planes_order_one",
+      "input_dimension": 410,
+      "map_type": "full value restriction",
+      "matrix_circuit": {
+        "fixed_kernel_basis": "degree_31/m1_cross_basis_circuits.json",
+        "fixed_kernel_basis_sha256": "8adc3f91db76f97a47d1df6d3f9cccee9e8eef62a825c2dff045ad96db6ff2f6",
+        "formula": "evaluate each fixed full Reynolds circuit on the ternary degree-d grid of one plus-plane; G-equivariance propagates the zero restriction to all 55 planes",
+        "rank_certificate_primes": [
+          419,
+          463
+        ],
+        "schema": "reynolds-plane-restriction-v1"
+      },
+      "output_dimension": 198
+    },
+    {
+      "constraint_rank_on_literal_global_basis": 0,
+      "geometry": "55 A4-stabilized triple lines, three incident plus-planes each",
+      "global_coefficient_vector_preserved": true,
+      "id": "02_V4_triple_line_equalizers",
+      "map_type": "three-branch V4 normal-jet equalizer",
+      "matrix_circuit": {
+        "coefficientwise_proof": "Taylor restriction of one ambient polynomial is independent of the incident-plane route.",
+        "formula": "rho_(sigma<tau)(p)-rho_(sigma'<tau)(p)",
+        "schema": "identical-restriction-difference-v1",
+        "simplified_matrix": "ZERO"
+      },
+      "output_dimension": 198,
+      "target_orbits": 55
+    },
+    {
+      "constraint_rank_on_literal_global_basis": 0,
+      "geometry": "66 D10 points and 55 D12 points",
+      "global_coefficient_vector_preserved": true,
+      "id": "03_residual_multiple_point_kernels",
+      "map_type": "residual quotient after the triple-line image",
+      "matrix_circuit": {
+        "coefficientwise_proof": "All branch Taylor series come from the same ambient polynomial, so their class in the residual cokernel is zero.",
+        "formula": "rho_(sigma<tau)(p)-rho_(sigma'<tau)(p)",
+        "schema": "identical-restriction-difference-v1",
+        "simplified_matrix": "ZERO"
+      },
+      "output_dimension": 198,
+      "target_orbits": {
+        "D10": 66,
+        "D12": 55
+      }
+    },
+    {
+      "constraint_rank_on_literal_global_basis": 0,
+      "geometry": "55 residual-stable source minus-lines",
+      "global_coefficient_vector_preserved": true,
+      "id": "04_D12_source_minus_line_restrictions",
+      "map_type": "source restriction retained as data, not confused with a plane-normal restriction",
+      "matrix_circuit": {
+        "coefficientwise_proof": "The repaired transition category keeps source restriction and normal-cone restriction as separate arrows; both are evaluated from the same p.",
+        "formula": "rho_(sigma<tau)(p)-rho_(sigma'<tau)(p)",
+        "schema": "identical-restriction-difference-v1",
+        "simplified_matrix": "ZERO"
+      },
+      "output_dimension": 198,
+      "target_orbits": 55
+    },
+    {
+      "constraint_rank_on_literal_global_basis": 0,
+      "geometry": "C3 fixed lines with C6 endpoints",
+      "global_coefficient_vector_preserved": true,
+      "id": "05_C3_lines_C6_endpoints",
+      "map_type": "endpoint and line restriction equalizer",
+      "matrix_circuit": {
+        "coefficientwise_proof": "Restriction is transitive for the flag endpoint subset line subset source. This zero residual is only the incidence square; the nonzero landing-constant gate is a separate COV2.3 matrix.",
+        "formula": "rho_(sigma<tau)(p)-rho_(sigma'<tau)(p)",
+        "schema": "identical-restriction-difference-v1",
+        "simplified_matrix": "ZERO"
+      },
+      "output_dimension": 198,
+      "target_orbits": "complete G-orbits from the transition diagram"
+    },
+    {
+      "constraint_rank_on_literal_global_basis": 0,
+      "geometry": "A4, D10, and D12 point-link flags",
+      "global_coefficient_vector_preserved": true,
+      "id": "06_A4_D10_D12_point_links",
+      "map_type": "iterated point-link specialization",
+      "matrix_circuit": {
+        "coefficientwise_proof": "Both paths are the same iterated evaluation/Taylor coefficient of p.",
+        "formula": "rho_(sigma<tau)(p)-rho_(sigma'<tau)(p)",
+        "schema": "identical-restriction-difference-v1",
+        "simplified_matrix": "ZERO"
+      },
+      "output_dimension": 198,
+      "target_orbits": {
+        "A4_lines": 55,
+        "D10_points": 66,
+        "D12_points": 55
+      }
+    },
+    {
+      "constraint_rank_on_literal_global_basis": 0,
+      "geometry": "marked elliptic type-I/type-II charge flags",
+      "global_coefficient_vector_preserved": true,
+      "id": "07_marked_type_I_type_II_elliptic_compatibility",
+      "map_type": "marked restriction and charge compatibility",
+      "matrix_circuit": {
+        "coefficientwise_proof": "The forward necessity theorem assigns the globally fixed charge ledger functorially to an actual global p; no independent local charge is introduced.",
+        "formula": "rho_(sigma<tau)(p)-rho_(sigma'<tau)(p)",
+        "schema": "identical-restriction-difference-v1",
+        "simplified_matrix": "ZERO"
+      },
+      "output_dimension": 198,
+      "target_orbits": "complete marked orbits from the transition diagram"
+    },
+    {
+      "constraint_rank_on_literal_global_basis": 0,
+      "geometry": "irrelevant-support correction",
+      "global_coefficient_vector_preserved": true,
+      "id": "08_finite_irrelevant_torsion_correction",
+      "map_type": "intersection with literal global image",
+      "output_dimension": 198,
+      "torsion": {
+        "characteristic_zero_compact_defect": "not needed for the literal global module",
+        "coefficient_space_used_for_landing": "literal global K1 only",
+        "correction_rule": "Discard every compact/sheaf class not in the image of the fixed literal global Reynolds module. Such a class is not a polynomial self-covariant and cannot enter F(p).",
+        "degree_31_exact_note": "At the audited split fibre 67 the compact saturated and literal spaces both have dimension 198.",
+        "degree_35_special_fibre_ledger": null,
+        "literal_global_dimension": 198
+      }
+    }
+  ],
+  "schema": "cov-m1-degree-ordered-equalizer-v1"
+}

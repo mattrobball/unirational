@@ -137,7 +137,23 @@ one.
 
 Because the primitive complement is not proper, emptiness of its special
 fibre does not transfer by the proper good-reduction argument used for the
-line-constant projective schemes.  A characteristic-zero primitive
-saturation theorem, or an integral projective closure controlling
-specialization into `P(D_L H_1)`, remains missing.  Computations in the next
-line degrees would still be a finite ladder and cannot replace that theorem.
+line-constant projective schemes.  The separate exact cyclotomic computation
+described below is needed for the transfer.  Computations in the next line
+degrees would still be a finite ladder and cannot replace an all-degree
+theorem.
+
+The strengthened scheme audit in `LINE4_SCHEME_RIGIDITY.md` proves more in
+the split fibre: on all eight inherited projective charts the full chart
+algebra has vector-space dimension 48 and the three primitive quotient
+coordinates have zero normal form.  Hence the entire split-67 degree-four
+scheme equals `D_L` times the degree-one scheme scheme-theoretically.  The
+normal Jacobian has rank three everywhere on it.  This replaces the former
+set-theoretic statement.
+
+`LINE1_CHAR0_FLATNESS.md` now reconstructs the complete degree-one landing
+ideal over `Q(zeta_11)`.  Its exact RREF spans all 760 unisolvent coefficient
+rows, and its affine algebra has length 48 both generically and after split-67
+reduction.  This proves finite flatness over the localized cyclotomic DVR.
+The inclusion `D_L X_1 subset X_4`, special-fibre scheme equality, and
+Nakayama then prove `X_4=D_L X_1` in characteristic zero.  The remaining gap
+is an all-line-degree mechanism, not the degree-four base change.

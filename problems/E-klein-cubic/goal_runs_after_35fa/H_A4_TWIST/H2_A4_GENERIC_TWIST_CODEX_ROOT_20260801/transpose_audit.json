@@ -1,0 +1,115 @@
+{
+  "correct_equation": "C*M^T=R*C",
+  "corrected_records": [
+    {
+      "character_exponent": 0,
+      "corrected_covariant_dimension": 1,
+      "degree": 1
+    },
+    {
+      "character_exponent": 1,
+      "corrected_covariant_dimension": 1,
+      "degree": 1
+    },
+    {
+      "character_exponent": 2,
+      "corrected_covariant_dimension": 1,
+      "degree": 1
+    },
+    {
+      "character_exponent": 0,
+      "corrected_covariant_dimension": 3,
+      "degree": 2
+    },
+    {
+      "character_exponent": 1,
+      "corrected_covariant_dimension": 3,
+      "degree": 2
+    },
+    {
+      "character_exponent": 2,
+      "corrected_covariant_dimension": 3,
+      "degree": 2
+    },
+    {
+      "character_exponent": 0,
+      "corrected_covariant_dimension": 3,
+      "degree": 3
+    },
+    {
+      "character_exponent": 1,
+      "charts": [
+        {
+          "basis_size": 3,
+          "chart": 0,
+          "unit_ideal": false
+        },
+        {
+          "basis_size": 3,
+          "chart": 1,
+          "unit_ideal": false
+        },
+        {
+          "basis_size": 3,
+          "chart": 2,
+          "unit_ideal": false
+        },
+        {
+          "basis_size": 3,
+          "chart": 3,
+          "unit_ideal": false
+        }
+      ],
+      "corrected_covariant_dimension": 4,
+      "degree": 3,
+      "landing_geometrically_empty": false
+    },
+    {
+      "character_exponent": 2,
+      "charts": [
+        {
+          "basis_size": 3,
+          "chart": 0,
+          "unit_ideal": false
+        },
+        {
+          "basis_size": 3,
+          "chart": 1,
+          "unit_ideal": false
+        },
+        {
+          "basis_size": 3,
+          "chart": 2,
+          "unit_ideal": false
+        },
+        {
+          "basis_size": 3,
+          "chart": 3,
+          "unit_ideal": false
+        }
+      ],
+      "corrected_covariant_dimension": 4,
+      "degree": 3,
+      "landing_geometrically_empty": false
+    },
+    {
+      "character_exponent": 0,
+      "corrected_covariant_dimension": 7,
+      "degree": 4
+    },
+    {
+      "character_exponent": 1,
+      "corrected_covariant_dimension": 7,
+      "degree": 4
+    },
+    {
+      "character_exponent": 2,
+      "corrected_covariant_dimension": 7,
+      "degree": 4
+    }
+  ],
+  "defect": "old code imposed C*M=R*C although symmetric_action stores m(sigma*y)=M^T*m(y)",
+  "format": "H2-A4-TRANSPOSE-AUDIT-v1",
+  "old_degree1_vector_fails_direct_covariance": true,
+  "prime": 331
+}

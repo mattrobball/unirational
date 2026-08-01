@@ -1,0 +1,215 @@
+{
+  "B1": {
+    "auxiliary_slice_nonexhaustive": true,
+    "exhaustiveness_on_F14": "UNDECIDED",
+    "five_plane_stabilizer_torsor_obstruction_proved": false,
+    "genuine_F14_missed_K_orbit_proved": false,
+    "geometric_or_scheme_image_nonexhaustive_proved": false,
+    "proof": "I_sigma(K_proj) minus the image of C_K^open(K_proj) on K-points is nonempty",
+    "reason": "the known auxiliary projector need not satisfy any h_i(q,q)=0"
+  },
+  "B2": {
+    "abstract_residue_field_birationality": "not tested and insufficient",
+    "accepted_common_theorem_open": false,
+    "compatible_residual_family_proved": false,
+    "infinity": {
+      "base_prime": "D_infinity divides lc_u(P)=c6",
+      "ordered_root": "s=1/u=0",
+      "ramification_index": 1,
+      "residual_index": 3,
+      "residue_degree": 1
+    },
+    "same_base_valuation": false,
+    "same_ordered_residue_embedding": false,
+    "target": {
+      "H_total_degree": 43,
+      "base_prime": "H, irreducible multiplicity-one factor of Res_u(P,P_u)",
+      "generic_residual_cubic_smooth": true,
+      "lc_u_is_unit_generically": true,
+      "ordered_root": "finite simple double root: P=P_u=0, P_uu unit",
+      "ramification_index": 2,
+      "residual_index": "OPEN",
+      "residue_degree": 1,
+      "three_primary_class_group_gate": "OPEN"
+    }
+  },
+  "arrows": [
+    {
+      "class": "closed projective linear slice",
+      "field": "K_proj after ordered base change",
+      "source": "fixed_ternary_cubic",
+      "target": "Z_aux"
+    },
+    {
+      "class": "locally closed linear slice; sufficient construction only",
+      "field": "K_proj",
+      "source": "fixed_ternary_open",
+      "target": "auxiliary_characteristic_open"
+    },
+    {
+      "class": "functional-calculus surjection on the spectral open; section p maps to a=1-p",
+      "field": "K_proj",
+      "source": "auxiliary_characteristic_open",
+      "target": "structure_projectors"
+    },
+    {
+      "class": "open immersion; full cubic also has the c2=0 boundary",
+      "field": "K_proj",
+      "source": "auxiliary_characteristic_open",
+      "target": "Z_aux"
+    },
+    {
+      "class": "open immersion of h_struct-nondegenerate right lines",
+      "field": "K_proj",
+      "source": "structure_projectors",
+      "target": "P^2_D"
+    },
+    {
+      "class": "closed five-form incidence locus; not necessarily contained in the projector open",
+      "field": "K_proj",
+      "source": "F14_T",
+      "target": "P^2_D"
+    },
+    {
+      "class": "no implication; five additional simultaneous equations",
+      "field": "not repaired by a splitting-field Morita gauge",
+      "source": "structure_projector",
+      "target": "F14_T common line"
+    },
+    {
+      "class": "sufficient construction by accepted Pfaffian incidence",
+      "field": "K_proj",
+      "source": "F14_T(K_proj) point",
+      "target": "X_gen(K_proj) point"
+    },
+    {
+      "class": "accepted versal-compression criterion",
+      "field": "K_proj/C",
+      "source": "X_gen(K_proj) point",
+      "target": "G-unirationality"
+    }
+  ],
+  "exact_payloads": {
+    "field_presentation.json": {
+      "local_path": "exact/field_presentation.json",
+      "local_sha256": "6f8c7930a71dbf1125f5003ee39b241e7cfbf006499eccbecb24312025c50dde",
+      "source_sha256": "6f8c7930a71dbf1125f5003ee39b241e7cfbf006499eccbecb24312025c50dde"
+    },
+    "five_forms.json": {
+      "local_path": "exact/five_forms.json",
+      "local_sha256": "61377d6e464f7c78cf1fa91d13610b76dc4567de7b7214256e04de50066c83a4",
+      "source_sha256": "61377d6e464f7c78cf1fa91d13610b76dc4567de7b7214256e04de50066c83a4"
+    },
+    "global_primitive_u_sextic_exact.tsv": {
+      "local_path": "exact/global_primitive_u_sextic_exact.tsv",
+      "local_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+      "source_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
+    }
+  },
+  "exit": "B-UNDECIDED",
+  "fields": {
+    "base": "F=C(A,B,Y,Z)",
+    "degree": 6,
+    "extension": "K_proj=Frac(F[u]/(P(A,B,Y,Z,u)))",
+    "ordered_embedding": "u maps to the class of u modulo the exact primitive sextic P",
+    "primitive_sextic_payload": "exact/global_primitive_u_sextic_exact.tsv"
+  },
+  "formal_section_counterexample": {
+    "ambient": "x^3+s*y^3+t*z^3+w^2*x+q^3=0 in P^4",
+    "ambient_point": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "ambient_smooth": true,
+    "field": "K0=C((s))((t))",
+    "plane": "x^3+s*y^3+t*z^3=0",
+    "plane_index": 3,
+    "scope": "refutes only the formal plane-section principle, not the actual Klein implication"
+  },
+  "gauge": {
+    "distinguished_rational_gauge": "Gamma=PGU(h_struct) cap Stab_{PGL_3(D)}(H_T)",
+    "morita_change_of_basis": "GL_3(D) transports both the line and H_T and is not an action with H_T fixed",
+    "ordered_root_conjugation_discarded": false,
+    "splitting_field_change_sufficient": false
+  },
+  "headline": "OPEN",
+  "live_commit_at_start": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "not_proved": [
+    "F14_T(K_proj) is empty or nonempty",
+    "X_gen(K_proj) is empty or nonempty",
+    "the actual fixed-frame implication is true or false",
+    "the target-branch Cl/Pic mod 3 gate",
+    "a Klein-cubic headline"
+  ],
+  "objects": {
+    "auxiliary_characteristic_cubic": {
+      "K_points": true,
+      "affine_ambient": "Sym(A_proj,sigma), dimension 15",
+      "full_affine_cone": "Z_aux_aff={a in Sym:c3(a)=0}",
+      "full_projective_cubic": "Z_aux={[a] in P(Sym):c3(a)=0}",
+      "projective_spectral_open": "P_aux=Z_aux cap D(c2)",
+      "projector": "p(a)=(a^2-c1(a)*a+c2(a)*1)/c2(a)",
+      "section": "line projector p maps to a=1-p"
+    },
+    "fano_section": {
+      "ambient": "P^2_D=SB_2(A_proj), A_proj=M_3(D)",
+      "chart": "q=(1,x,y), x,y in D: five scalar equations in eight scalar coordinates",
+      "equations": [
+        "h_1(q,q)=0",
+        "h_2(q,q)=0",
+        "h_3(q,q)=0",
+        "h_4(q,q)=0",
+        "h_5(q,q)=0"
+      ],
+      "explicit_quaternion_symbol_and_H_i_matrices_installed": false,
+      "functor": "locally direct-summand right D_R-submodules L of D_R^3 of D_R-rank one with every h_i restricted to L times L zero"
+    },
+    "fixed_ternary_cubic": {
+      "K_points": false,
+      "coefficient_payload": "exact/five_forms.json",
+      "equation": "F0+A*FA+B*FB+Y*FY+(Z-11*A^2/18)*FZ=0",
+      "field": "F then ordered base change to K_proj",
+      "frame": "a=X*S0+y*S1+w*S2"
+    },
+    "generic_twist": {
+      "equation_scope": "splitting-frame presentation of the exact contracted-product functor",
+      "expanded_K_proj_frame_installed": false,
+      "functor": "X_gen(R)=G-equivariant R-morphisms T_proj,R -> X_R; equivalently cocycle-compatible points after a faithfully flat splitting cover",
+      "hilbert90_equation": "F_Klein(H^(-1)x)=0",
+      "klein_form": "x0^2*x1+x1^2*x2+x2^2*x3+x3^2*x4+x4^2*x0",
+      "scheme": "X_gen=T_proj times^G X, the fppf contracted product"
+    }
+  },
+  "pinned_goal_commit": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "schema": "klein-goal-b-fixed-frame-bridge-v1",
+  "smallest_live_gate": {
+    "negative": "a five-plane-preserving exhaustiveness theorem or a direct valuation/class-group proof on F14_T or X_gen",
+    "positive": "a common isotropic right D-line for H_T outside the selected frame"
+  },
+  "source_sha256": {
+    "fano_c0_model": "a425d373c5ecbf2c879b9703e63345a5ce249c705ee7a44eab3f40fa07f7bb2e",
+    "fano_c0_seal": "d7260754e55ba1d7efdf30dadb93ce51287cbb9befa1dd724ab3ec2a566cac85",
+    "field_presentation": "6f8c7930a71dbf1125f5003ee39b241e7cfbf006499eccbecb24312025c50dde",
+    "fixed_five_forms": "61377d6e464f7c78cf1fa91d13610b76dc4567de7b7214256e04de50066c83a4",
+    "fixed_frame_seal": "cd19d977638509297b52e16526c983bc5b13f80a5d9486d8bf678c1ca902fd85",
+    "fold_payload": "60a46087754830702ffee0bf13f6bc0445f0bf78ad4817cba1bde5847c29f33b",
+    "fold_seal": "e2208a67bc3d90709f31cf2c5b6ef00a32b7d7b5c00b6633744c987b5d2d0c71",
+    "goal": "634855e1ba8e9cb803ae9ab72c2df3530b9c804f1531f725a628c2bd1f8ec2cc",
+    "goal_f_infinity": "00316341a4d5207d8630e3d8d4411113b8fa2df5f6b3db42b48aa3003e094405",
+    "goal_f_seal": "31d8863087fa8f4977b328921a57ed916fe1b334ad3761e3426092a24bf77394",
+    "idempotent_dictionary": "d1194af309c13b46ce1c4d5d9c3d24a17ab5308b619559ea82a0bcea79fdefd8",
+    "implementation_audit": "9bfe6898b624a659aa72cec25c58f9e5d7c799bad15ef470be5ec68f73eb5444",
+    "pfaffian_seal": "817e3cb37478a02dca81ecbc77486f466f7e7b5953727b1f5b155721eed36643",
+    "primitive_sextic": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "projector_proof_audit": "b0584719496cfff69bfe89c0188774f14f8b2cf18dd98ccaaa6c88bf5e9cb790",
+    "quaternion_corner": "9ca99aa07b642c6a083149372f5aa605236fb967597b84273510576cb15d60e9",
+    "target_H": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "target_mod3_payload": "981b4d1c5bf7c618b4110560278a7e3f07598b432897c57aae839cda2de3360d",
+    "target_mod3_report": "35b036e67dda0f0f62f89881e28ea10e54ab4edf30f459da9c853babc726e2e1",
+    "target_mod3_seal": "1490b24006a0d0bbb6070d2aa6524a3f62458028b97d81234e7dcde745f1c8e5",
+    "target_seal": "3b95f92c3e25144df234d593332bd79c765cdfc1d67b52540e89337f7c655c97"
+  }
+}

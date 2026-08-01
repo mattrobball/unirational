@@ -1,0 +1,13 @@
+{
+  "artifact_sha256": "3767ad02158ea4c8592661c832083ddf27cc3539b9a35c28db1911caad1dc2c5",
+  "conclusion_scope": "no new-r43 contraction point with q-support <= 2",
+  "coordinate_lines": 666,
+  "minor_count_distribution": {
+    "2": 661,
+    "3": 4,
+    "4": 1
+  },
+  "prime": 89,
+  "source_sha256": "f1aea8369fd56d5139b3d1f1574a194e2016c7d306006fb1aae37f0223d5fd3a",
+  "status": "PASS_REPLAY_ALL_666_COORDINATE_LINES"
+}

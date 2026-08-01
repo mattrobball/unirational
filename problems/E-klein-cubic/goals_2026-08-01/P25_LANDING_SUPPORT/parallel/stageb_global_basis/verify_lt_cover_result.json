@@ -1,0 +1,11 @@
+{
+  "conclusion": "N3 contains no nonzero pure-cube-supported vector, so no admissible degree-three leading-term cover can cover every degree-five term.",
+  "full_p3_sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019",
+  "limitation": "The full degree-five Macaulay map and Stage B remain open.",
+  "minor_rank": 10767,
+  "minor_uint8_sha256": "d84ecf7c699f4338e9f2b5cb3a4b17b5052da21837fc134d174fbfc33071abc0",
+  "prime": 89,
+  "profile_sha256": "f7da4f4237290d046976cb5ac9df62aa1888db17f5d657c1cb0e614cb8f9db12",
+  "pure_cube_columns_deleted": 222,
+  "status": "PASS_REPLAY_LT_COVER_OBSTRUCTION"
+}

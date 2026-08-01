@@ -1,6 +1,10 @@
 {
-  "artifact_count": 250,
+  "artifact_count": 251,
   "files": {
+    ".gitignore": {
+      "bytes": 52,
+      "sha256": "ab94cd55aeaec014d9ede5eef0ca7d824a0cc066e5b6c75d932206537117b53a"
+    },
     "RESULT.md": {
       "bytes": 7096,
       "sha256": "6ab89629b14a7b5130c2d5c2c92b5d4376915b025ba7ab6034133af059979480"

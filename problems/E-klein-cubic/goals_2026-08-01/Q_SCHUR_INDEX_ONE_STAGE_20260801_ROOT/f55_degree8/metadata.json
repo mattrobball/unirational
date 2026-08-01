@@ -1,0 +1,39 @@
+{
+  "coefficient_dimension": 45,
+  "coefficient_term_count": 232875,
+  "degree": 8,
+  "equation_count": 1845,
+  "expected_deletion_results": {
+    "forward": {
+      "result": "NO_STOPPING_SUPPORT",
+      "states": 746332
+    },
+    "reverse": {
+      "result": "NO_STOPPING_SUPPORT",
+      "states": 142634
+    }
+  },
+  "instance_sha256": "0bf4acf0660f1905b3e46b768658c1d5715aedf58ed0efb4b6c6d2dcec548c6d",
+  "prime": 331,
+  "primitive_fifth_root": 64,
+  "schema": "klein-f55-degree8-singleton-instance-v1",
+  "scope": [
+    "complete degree-eight coefficient-support exclusion",
+    "all five projective characters",
+    "not an all-degree theorem"
+  ],
+  "term_support_hashes_by_character": {
+    "0": "126791ac41e5fb3f43798d37589dae24a544d367ce1e6d5ae0d3e02f40b94018",
+    "1": "126791ac41e5fb3f43798d37589dae24a544d367ce1e6d5ae0d3e02f40b94018",
+    "2": "126791ac41e5fb3f43798d37589dae24a544d367ce1e6d5ae0d3e02f40b94018",
+    "3": "126791ac41e5fb3f43798d37589dae24a544d367ce1e6d5ae0d3e02f40b94018",
+    "4": "126791ac41e5fb3f43798d37589dae24a544d367ce1e6d5ae0d3e02f40b94018"
+  },
+  "weights": [
+    1,
+    9,
+    4,
+    3,
+    5
+  ]
+}

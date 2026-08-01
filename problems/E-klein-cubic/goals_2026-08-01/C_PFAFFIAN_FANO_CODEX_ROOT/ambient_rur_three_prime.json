@@ -1,0 +1,1924 @@
+{
+  "format": "ambient-rur-three-prime-rational-reconstruction-v1",
+  "scope": "auxiliary degree-12 chart candidate; unused-prime holdout required",
+  "quadratic_field": "Q(c), c^2+c+3=0",
+  "variable_order": [
+    "a47",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "a8",
+    "a9",
+    "a10",
+    "a11",
+    "a12",
+    "a13",
+    "a14",
+    "a15",
+    "a16",
+    "a17",
+    "a18",
+    "a19",
+    "a20",
+    "a21",
+    "a22",
+    "a23",
+    "a24",
+    "a25",
+    "a26",
+    "a27",
+    "a28",
+    "a29",
+    "a30",
+    "a31",
+    "a32",
+    "a33",
+    "a34",
+    "a35",
+    "a36",
+    "a37",
+    "a38",
+    "a39",
+    "a40",
+    "a41",
+    "a42",
+    "a43",
+    "a44",
+    "a45",
+    "a46",
+    "a0"
+  ],
+  "coordinate_convention": "a_name = -numerator_name(T), denominator 1, modulo eliminant",
+  "reconstruction_primes": [
+    23,
+    67,
+    89
+  ],
+  "crt_modulus": 137149,
+  "eliminant_coefficients_ascending_A_plus_Bc": [
+    [
+      [
+        -145,
+        208
+      ],
+      [
+        -242,
+        29
+      ]
+    ],
+    [
+      [
+        -253,
+        133
+      ],
+      [
+        223,
+        244
+      ]
+    ],
+    [
+      [
+        -67,
+        93
+      ],
+      [
+        259,
+        59
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "coordinate_numerators_padded_degree2_A_plus_Bc": [
+    [
+      [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          -139,
+          62
+        ],
+        null
+      ],
+      [
+        [
+          -57,
+          221
+        ],
+        null
+      ],
+      [
+        [
+          1,
+          66
+        ],
+        [
+          -149,
+          122
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          -166,
+          145
+        ],
+        null
+      ],
+      [
+        [
+          -4,
+          251
+        ],
+        [
+          -244,
+          239
+        ]
+      ],
+      [
+        [
+          -63,
+          11
+        ],
+        [
+          110,
+          217
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        [
+          -183,
+          101
+        ]
+      ],
+      [
+        [
+          -10,
+          127
+        ],
+        [
+          -121,
+          123
+        ]
+      ],
+      [
+        [
+          -14,
+          109
+        ],
+        null
+      ]
+    ],
+    [
+      [
+        [
+          167,
+          102
+        ],
+        null
+      ],
+      [
+        [
+          245,
+          76
+        ],
+        null
+      ],
+      [
+        [
+          59,
+          35
+        ],
+        null
+      ]
+    ],
+    [
+      [
+        [
+          -5,
+          81
+        ],
+        [
+          -31,
+          13
+        ]
+      ],
+      [
+        [
+          31,
+          82
+        ],
+        [
+          -196,
+          173
+        ]
+      ],
+      [
+        [
+          173,
+          249
+        ],
+        null
+      ]
+    ],
+    [
+      [
+        [
+          -235,
+          14
+        ],
+        [
+          164,
+          151
+        ]
+      ],
+      [
+        [
+          154,
+          131
+        ],
+        null
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    [
+      [
+        [
+          58,
+          233
+        ],
+        [
+          -244,
+          103
+        ]
+      ],
+      [
+        [
+          85,
+          14
+        ],
+        [
+          -158,
+          143
+        ]
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    [
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        null
+      ],
+      [
+        [
+          -101,
+          47
+        ],
+        null
+      ]
+    ],
+    [
+      [
+        [
+          -223,
+          183
+        ],
+        [
+          -59,
+          34
+        ]
+      ],
+      [
+        [
+          -167,
+          190
+        ],
+        null
+      ],
+      [
+        null,
+        [
+          163,
+          113
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          225,
+          128
+        ],
+        [
+          229,
+          176
+        ]
+      ],
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        [
+          -197,
+          222
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        [
+          209,
+          237
+        ]
+      ],
+      [
+        [
+          -85,
+          261
+        ],
+        [
+          136,
+          13
+        ]
+      ],
+      [
+        null,
+        [
+          85,
+          219
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        [
+          -93,
+          251
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        [
+          257,
+          205
+        ]
+      ],
+      [
+        [
+          45,
+          256
+        ],
+        [
+          65,
+          4
+        ]
+      ],
+      [
+        [
+          1,
+          214
+        ],
+        [
+          -132,
+          247
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        [
+          -59,
+          65
+        ]
+      ],
+      [
+        [
+          -158,
+          243
+        ],
+        [
+          145,
+          39
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          -85,
+          27
+        ],
+        null
+      ],
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        [
+          -259,
+          159
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        null
+      ],
+      [
+        [
+          13,
+          227
+        ],
+        null
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    [
+      [
+        [
+          -18,
+          55
+        ],
+        null
+      ],
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        [
+          129,
+          1
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          -140,
+          39
+        ],
+        null
+      ],
+      [
+        null,
+        [
+          247,
+          35
+        ]
+      ],
+      [
+        null,
+        [
+          -10,
+          113
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        null
+      ],
+      [
+        [
+          229,
+          157
+        ],
+        null
+      ]
+    ],
+    [
+      [
+        null,
+        [
+          80,
+          153
+        ]
+      ],
+      [
+        [
+          -29,
+          185
+        ],
+        [
+          259,
+          129
+        ]
+      ],
+      [
+        [
+          -55,
+          137
+        ],
+        [
+          244,
+          231
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          -208,
+          171
+        ],
+        null
+      ],
+      [
+        [
+          -199,
+          5
+        ],
+        null
+      ],
+      [
+        [
+          102,
+          203
+        ],
+        null
+      ]
+    ],
+    [
+      [
+        [
+          170,
+          179
+        ],
+        null
+      ],
+      [
+        [
+          -208,
+          153
+        ],
+        null
+      ],
+      [
+        null,
+        [
+          32,
+          127
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          -40,
+          211
+        ],
+        [
+          77,
+          75
+        ]
+      ],
+      [
+        [
+          -83,
+          205
+        ],
+        null
+      ],
+      [
+        [
+          91,
+          177
+        ],
+        null
+      ]
+    ],
+    [
+      [
+        null,
+        [
+          40,
+          77
+        ]
+      ],
+      [
+        null,
+        [
+          234,
+          257
+        ]
+      ],
+      [
+        null,
+        [
+          -103,
+          66
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        null
+      ],
+      [
+        [
+          -123,
+          260
+        ],
+        null
+      ],
+      [
+        [
+          -41,
+          234
+        ],
+        null
+      ]
+    ],
+    [
+      [
+        [
+          187,
+          177
+        ],
+        [
+          -49,
+          200
+        ]
+      ],
+      [
+        [
+          -96,
+          91
+        ],
+        [
+          67,
+          94
+        ]
+      ],
+      [
+        null,
+        [
+          242,
+          155
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          -166,
+          105
+        ],
+        [
+          -238,
+          239
+        ]
+      ],
+      [
+        null,
+        null
+      ],
+      [
+        [
+          259,
+          139
+        ],
+        [
+          122,
+          205
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        null
+      ],
+      [
+        [
+          -236,
+          65
+        ],
+        [
+          95,
+          12
+        ]
+      ],
+      [
+        null,
+        [
+          -115,
+          83
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        [
+          -220,
+          227
+        ]
+      ],
+      [
+        [
+          -253,
+          28
+        ],
+        [
+          -231,
+          41
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          207,
+          65
+        ],
+        null
+      ],
+      [
+        [
+          160,
+          51
+        ],
+        null
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    [
+      [
+        [
+          236,
+          153
+        ],
+        [
+          257,
+          196
+        ]
+      ],
+      [
+        null,
+        null
+      ],
+      [
+        [
+          -242,
+          65
+        ],
+        [
+          -49,
+          118
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        [
+          -52,
+          119
+        ]
+      ],
+      [
+        [
+          -109,
+          62
+        ],
+        null
+      ]
+    ],
+    [
+      [
+        [
+          242,
+          47
+        ],
+        [
+          177,
+          238
+        ]
+      ],
+      [
+        [
+          -81,
+          143
+        ],
+        null
+      ],
+      [
+        null,
+        [
+          224,
+          255
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          75,
+          71
+        ],
+        [
+          -113,
+          173
+        ]
+      ],
+      [
+        null,
+        [
+          -248,
+          247
+        ]
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    [
+      [
+        [
+          148,
+          71
+        ],
+        null
+      ],
+      [
+        null,
+        [
+          19,
+          123
+        ]
+      ],
+      [
+        [
+          17,
+          180
+        ],
+        [
+          253,
+          261
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          44,
+          215
+        ],
+        null
+      ],
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    [
+      [
+        [
+          -99,
+          247
+        ],
+        null
+      ],
+      [
+        null,
+        [
+          -63,
+          218
+        ]
+      ],
+      [
+        null,
+        [
+          147,
+          83
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          78,
+          227
+        ],
+        null
+      ],
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    [
+      [
+        [
+          -4,
+          37
+        ],
+        [
+          147,
+          173
+        ]
+      ],
+      [
+        [
+          -176,
+          241
+        ],
+        [
+          32,
+          183
+        ]
+      ],
+      [
+        [
+          184,
+          261
+        ],
+        null
+      ]
+    ],
+    [
+      [
+        null,
+        null
+      ],
+      [
+        [
+          81,
+          224
+        ],
+        null
+      ],
+      [
+        null,
+        null
+      ]
+    ],
+    [
+      [
+        null,
+        [
+          -115,
+          77
+        ]
+      ],
+      [
+        [
+          -209,
+          206
+        ],
+        null
+      ],
+      [
+        null,
+        [
+          -193,
+          254
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          243,
+          38
+        ],
+        [
+          239,
+          195
+        ]
+      ],
+      [
+        null,
+        [
+          203,
+          61
+        ]
+      ],
+      [
+        [
+          138,
+          133
+        ],
+        [
+          -82,
+          249
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        [
+          -22,
+          167
+        ]
+      ],
+      [
+        null,
+        null
+      ],
+      [
+        [
+          55,
+          3
+        ],
+        [
+          123,
+          182
+        ]
+      ]
+    ],
+    [
+      [
+        null,
+        null
+      ],
+      [
+        null,
+        [
+          -14,
+          183
+        ]
+      ],
+      [
+        [
+          58,
+          199
+        ],
+        [
+          219,
+          11
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          -116,
+          251
+        ],
+        null
+      ],
+      [
+        [
+          -23,
+          154
+        ],
+        [
+          160,
+          191
+        ]
+      ],
+      [
+        [
+          34,
+          33
+        ],
+        null
+      ]
+    ],
+    [
+      [
+        [
+          129,
+          100
+        ],
+        [
+          63,
+          104
+        ]
+      ],
+      [
+        [
+          142,
+          41
+        ],
+        [
+          39,
+          38
+        ]
+      ],
+      [
+        [
+          232,
+          135
+        ],
+        null
+      ]
+    ]
+  ],
+  "unreconstructed_scalar_pairs": [
+    {
+      "scalar_pair_index": 7,
+      "crt_residues_A_B": [
+        6634,
+        61185
+      ]
+    },
+    {
+      "scalar_pair_index": 8,
+      "crt_residues_A_B": [
+        13032,
+        107780
+      ]
+    },
+    {
+      "scalar_pair_index": 10,
+      "crt_residues_A_B": [
+        136202,
+        122833
+      ]
+    },
+    {
+      "scalar_pair_index": 13,
+      "crt_residues_A_B": [
+        37001,
+        63820
+      ]
+    },
+    {
+      "scalar_pair_index": 15,
+      "crt_residues_A_B": [
+        66687,
+        38750
+      ]
+    },
+    {
+      "scalar_pair_index": 16,
+      "crt_residues_A_B": [
+        25549,
+        113767
+      ]
+    },
+    {
+      "scalar_pair_index": 17,
+      "crt_residues_A_B": [
+        5417,
+        73671
+      ]
+    },
+    {
+      "scalar_pair_index": 18,
+      "crt_residues_A_B": [
+        74454,
+        105034
+      ]
+    },
+    {
+      "scalar_pair_index": 21,
+      "crt_residues_A_B": [
+        64995,
+        34920
+      ]
+    },
+    {
+      "scalar_pair_index": 23,
+      "crt_residues_A_B": [
+        54442,
+        63596
+      ]
+    },
+    {
+      "scalar_pair_index": 24,
+      "crt_residues_A_B": [
+        115148,
+        58425
+      ]
+    },
+    {
+      "scalar_pair_index": 27,
+      "crt_residues_A_B": [
+        42596,
+        54039
+      ]
+    },
+    {
+      "scalar_pair_index": 28,
+      "crt_residues_A_B": [
+        7848,
+        24103
+      ]
+    },
+    {
+      "scalar_pair_index": 29,
+      "crt_residues_A_B": [
+        120200,
+        120659
+      ]
+    },
+    {
+      "scalar_pair_index": 30,
+      "crt_residues_A_B": [
+        52523,
+        6215
+      ]
+    },
+    {
+      "scalar_pair_index": 32,
+      "crt_residues_A_B": [
+        9383,
+        131451
+      ]
+    },
+    {
+      "scalar_pair_index": 33,
+      "crt_residues_A_B": [
+        107133,
+        84961
+      ]
+    },
+    {
+      "scalar_pair_index": 35,
+      "crt_residues_A_B": [
+        39512,
+        57643
+      ]
+    },
+    {
+      "scalar_pair_index": 36,
+      "crt_residues_A_B": [
+        85269,
+        58689
+      ]
+    },
+    {
+      "scalar_pair_index": 37,
+      "crt_residues_A_B": [
+        99292,
+        122104
+      ]
+    },
+    {
+      "scalar_pair_index": 39,
+      "crt_residues_A_B": [
+        12912,
+        61373
+      ]
+    },
+    {
+      "scalar_pair_index": 40,
+      "crt_residues_A_B": [
+        39123,
+        120998
+      ]
+    },
+    {
+      "scalar_pair_index": 41,
+      "crt_residues_A_B": [
+        96588,
+        428
+      ]
+    },
+    {
+      "scalar_pair_index": 42,
+      "crt_residues_A_B": [
+        10440,
+        61744
+      ]
+    },
+    {
+      "scalar_pair_index": 43,
+      "crt_residues_A_B": [
+        28328,
+        128453
+      ]
+    },
+    {
+      "scalar_pair_index": 46,
+      "crt_residues_A_B": [
+        124865,
+        123694
+      ]
+    },
+    {
+      "scalar_pair_index": 47,
+      "crt_residues_A_B": [
+        105425,
+        12659
+      ]
+    },
+    {
+      "scalar_pair_index": 49,
+      "crt_residues_A_B": [
+        35554,
+        20516
+      ]
+    },
+    {
+      "scalar_pair_index": 50,
+      "crt_residues_A_B": [
+        83919,
+        122236
+      ]
+    },
+    {
+      "scalar_pair_index": 51,
+      "crt_residues_A_B": [
+        28944,
+        55203
+      ]
+    },
+    {
+      "scalar_pair_index": 52,
+      "crt_residues_A_B": [
+        80656,
+        103715
+      ]
+    },
+    {
+      "scalar_pair_index": 53,
+      "crt_residues_A_B": [
+        120232,
+        117304
+      ]
+    },
+    {
+      "scalar_pair_index": 54,
+      "crt_residues_A_B": [
+        64680,
+        34382
+      ]
+    },
+    {
+      "scalar_pair_index": 55,
+      "crt_residues_A_B": [
+        17455,
+        53491
+      ]
+    },
+    {
+      "scalar_pair_index": 56,
+      "crt_residues_A_B": [
+        97837,
+        135565
+      ]
+    },
+    {
+      "scalar_pair_index": 57,
+      "crt_residues_A_B": [
+        113984,
+        129
+      ]
+    },
+    {
+      "scalar_pair_index": 58,
+      "crt_residues_A_B": [
+        101979,
+        75903
+      ]
+    },
+    {
+      "scalar_pair_index": 59,
+      "crt_residues_A_B": [
+        116488,
+        86215
+      ]
+    },
+    {
+      "scalar_pair_index": 60,
+      "crt_residues_A_B": [
+        74772,
+        120157
+      ]
+    },
+    {
+      "scalar_pair_index": 61,
+      "crt_residues_A_B": [
+        70230,
+        53547
+      ]
+    },
+    {
+      "scalar_pair_index": 62,
+      "crt_residues_A_B": [
+        58450,
+        86822
+      ]
+    },
+    {
+      "scalar_pair_index": 63,
+      "crt_residues_A_B": [
+        36691,
+        126570
+      ]
+    },
+    {
+      "scalar_pair_index": 64,
+      "crt_residues_A_B": [
+        67592,
+        84262
+      ]
+    },
+    {
+      "scalar_pair_index": 67,
+      "crt_residues_A_B": [
+        82609,
+        32371
+      ]
+    },
+    {
+      "scalar_pair_index": 68,
+      "crt_residues_A_B": [
+        27390,
+        95543
+      ]
+    },
+    {
+      "scalar_pair_index": 69,
+      "crt_residues_A_B": [
+        6081,
+        83774
+      ]
+    },
+    {
+      "scalar_pair_index": 70,
+      "crt_residues_A_B": [
+        94243,
+        100916
+      ]
+    },
+    {
+      "scalar_pair_index": 71,
+      "crt_residues_A_B": [
+        27787,
+        119784
+      ]
+    },
+    {
+      "scalar_pair_index": 72,
+      "crt_residues_A_B": [
+        35075,
+        28078
+      ]
+    },
+    {
+      "scalar_pair_index": 74,
+      "crt_residues_A_B": [
+        48169,
+        118706
+      ]
+    },
+    {
+      "scalar_pair_index": 75,
+      "crt_residues_A_B": [
+        71287,
+        33114
+      ]
+    },
+    {
+      "scalar_pair_index": 76,
+      "crt_residues_A_B": [
+        3000,
+        85496
+      ]
+    },
+    {
+      "scalar_pair_index": 77,
+      "crt_residues_A_B": [
+        48325,
+        92323
+      ]
+    },
+    {
+      "scalar_pair_index": 78,
+      "crt_residues_A_B": [
+        33190,
+        76885
+      ]
+    },
+    {
+      "scalar_pair_index": 79,
+      "crt_residues_A_B": [
+        106711,
+        3583
+      ]
+    },
+    {
+      "scalar_pair_index": 80,
+      "crt_residues_A_B": [
+        3692,
+        38387
+      ]
+    },
+    {
+      "scalar_pair_index": 81,
+      "crt_residues_A_B": [
+        6447,
+        110197
+      ]
+    },
+    {
+      "scalar_pair_index": 84,
+      "crt_residues_A_B": [
+        54243,
+        50437
+      ]
+    },
+    {
+      "scalar_pair_index": 86,
+      "crt_residues_A_B": [
+        44647,
+        121498
+      ]
+    },
+    {
+      "scalar_pair_index": 88,
+      "crt_residues_A_B": [
+        14551,
+        131782
+      ]
+    },
+    {
+      "scalar_pair_index": 90,
+      "crt_residues_A_B": [
+        71557,
+        9913
+      ]
+    },
+    {
+      "scalar_pair_index": 91,
+      "crt_residues_A_B": [
+        135461,
+        116995
+      ]
+    },
+    {
+      "scalar_pair_index": 92,
+      "crt_residues_A_B": [
+        22773,
+        106939
+      ]
+    },
+    {
+      "scalar_pair_index": 94,
+      "crt_residues_A_B": [
+        25323,
+        113344
+      ]
+    },
+    {
+      "scalar_pair_index": 95,
+      "crt_residues_A_B": [
+        94125,
+        81820
+      ]
+    },
+    {
+      "scalar_pair_index": 96,
+      "crt_residues_A_B": [
+        105279,
+        21719
+      ]
+    },
+    {
+      "scalar_pair_index": 98,
+      "crt_residues_A_B": [
+        81783,
+        131418
+      ]
+    },
+    {
+      "scalar_pair_index": 100,
+      "crt_residues_A_B": [
+        52652,
+        20248
+      ]
+    },
+    {
+      "scalar_pair_index": 101,
+      "crt_residues_A_B": [
+        39502,
+        131386
+      ]
+    },
+    {
+      "scalar_pair_index": 102,
+      "crt_residues_A_B": [
+        130511,
+        38938
+      ]
+    },
+    {
+      "scalar_pair_index": 104,
+      "crt_residues_A_B": [
+        109335,
+        38927
+      ]
+    },
+    {
+      "scalar_pair_index": 105,
+      "crt_residues_A_B": [
+        9235,
+        26355
+      ]
+    },
+    {
+      "scalar_pair_index": 107,
+      "crt_residues_A_B": [
+        76238,
+        122156
+      ]
+    },
+    {
+      "scalar_pair_index": 108,
+      "crt_residues_A_B": [
+        51957,
+        46824
+      ]
+    },
+    {
+      "scalar_pair_index": 109,
+      "crt_residues_A_B": [
+        119766,
+        13906
+      ]
+    },
+    {
+      "scalar_pair_index": 110,
+      "crt_residues_A_B": [
+        84330,
+        28991
+      ]
+    },
+    {
+      "scalar_pair_index": 112,
+      "crt_residues_A_B": [
+        53584,
+        10814
+      ]
+    },
+    {
+      "scalar_pair_index": 113,
+      "crt_residues_A_B": [
+        31875,
+        18806
+      ]
+    },
+    {
+      "scalar_pair_index": 114,
+      "crt_residues_A_B": [
+        107907,
+        113592
+      ]
+    },
+    {
+      "scalar_pair_index": 115,
+      "crt_residues_A_B": [
+        24431,
+        117273
+      ]
+    },
+    {
+      "scalar_pair_index": 116,
+      "crt_residues_A_B": [
+        136684,
+        47184
+      ]
+    },
+    {
+      "scalar_pair_index": 117,
+      "crt_residues_A_B": [
+        100706,
+        117322
+      ]
+    },
+    {
+      "scalar_pair_index": 118,
+      "crt_residues_A_B": [
+        35647,
+        42531
+      ]
+    },
+    {
+      "scalar_pair_index": 119,
+      "crt_residues_A_B": [
+        6642,
+        110539
+      ]
+    },
+    {
+      "scalar_pair_index": 120,
+      "crt_residues_A_B": [
+        34738,
+        22725
+      ]
+    },
+    {
+      "scalar_pair_index": 123,
+      "crt_residues_A_B": [
+        109825,
+        106443
+      ]
+    },
+    {
+      "scalar_pair_index": 124,
+      "crt_residues_A_B": [
+        111041,
+        73410
+      ]
+    },
+    {
+      "scalar_pair_index": 125,
+      "crt_residues_A_B": [
+        134088,
+        2401
+      ]
+    },
+    {
+      "scalar_pair_index": 126,
+      "crt_residues_A_B": [
+        130897,
+        32605
+      ]
+    },
+    {
+      "scalar_pair_index": 127,
+      "crt_residues_A_B": [
+        14463,
+        28497
+      ]
+    },
+    {
+      "scalar_pair_index": 128,
+      "crt_residues_A_B": [
+        23301,
+        135754
+      ]
+    },
+    {
+      "scalar_pair_index": 129,
+      "crt_residues_A_B": [
+        41323,
+        65334
+      ]
+    },
+    {
+      "scalar_pair_index": 131,
+      "crt_residues_A_B": [
+        18818,
+        69702
+      ]
+    },
+    {
+      "scalar_pair_index": 133,
+      "crt_residues_A_B": [
+        79975,
+        72270
+      ]
+    },
+    {
+      "scalar_pair_index": 134,
+      "crt_residues_A_B": [
+        116847,
+        18062
+      ]
+    },
+    {
+      "scalar_pair_index": 136,
+      "crt_residues_A_B": [
+        23833,
+        77113
+      ]
+    },
+    {
+      "scalar_pair_index": 137,
+      "crt_residues_A_B": [
+        91600,
+        107171
+      ]
+    },
+    {
+      "scalar_pair_index": 139,
+      "crt_residues_A_B": [
+        3278,
+        62279
+      ]
+    },
+    {
+      "scalar_pair_index": 141,
+      "crt_residues_A_B": [
+        132994,
+        71261
+      ]
+    },
+    {
+      "scalar_pair_index": 144,
+      "crt_residues_A_B": [
+        108705,
+        83161
+      ]
+    }
+  ],
+  "maximum_numerator_or_denominator": 261,
+  "theorem_boundary": "rational reconstruction is not accepted as an exact RUR until all coefficients pass at an unused split prime"
+}

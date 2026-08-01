@@ -1,0 +1,23 @@
+{
+  "schema": "klein-cubic-T2-normalization-boundary-v1",
+  "exit": "T2-ROUTE-REFUTED",
+  "target_branch_normalization_constructed": false,
+  "target_branch_conductor_constructed": false,
+  "target_branch_local_class_groups_computed": false,
+  "target_branch_horizontal_degree_image_computed": false,
+  "reason": "The headline route is terminally refuted before these computations: the existing infinity place has e=1 rather than target e=2, and fixed-frame pointlessness does not imply pointlessness of the genuine twist.",
+  "infinity_place": {
+    "ramification_index": 1,
+    "residue_degree": 1,
+    "residual_index": 3,
+    "scope": "auxiliary fixed-frame plane cubic"
+  },
+  "genuine_target_place": {
+    "ramification_index": 2,
+    "residue_degree": 1,
+    "residual_index": null,
+    "normalization": null,
+    "conductor": null
+  },
+  "headline": "OPEN"
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "klein_goal_v2_incidence_scope_v1",
+  "base_field": "K_proj",
+  "objects": [
+    "genuine Klein twist X_gen",
+    "twisted common-isotropic-line section F14_T",
+    "full auxiliary projector open P_aux",
+    "selected fixed ternary cubic C_fix"
+  ],
+  "sound_arrows": [
+    {
+      "source": "C_fix^open",
+      "target": "P_aux",
+      "classification": "locally closed linear slice and sufficient construction only"
+    },
+    {
+      "source": "P_aux",
+      "target": "I_sigma",
+      "classification": "surjective functional-calculus projector map on the spectral open"
+    },
+    {
+      "source": "F14_T(K)",
+      "target": "X_gen(K)",
+      "classification": "sufficient Pfaffian incidence construction"
+    }
+  ],
+  "missing_or_invalid_arrows": [
+    {
+      "source": "I_sigma",
+      "target": "F14_T",
+      "status": "no implication; five simultaneous isotropy equations are missing"
+    },
+    {
+      "source": "X_gen(K)",
+      "target": "F14_T(K)",
+      "status": "not asserted"
+    },
+    {
+      "source": "C_fix(K)=empty",
+      "target": "F14_T(K)=empty",
+      "status": "undecided"
+    },
+    {
+      "source": "C_fix(K)=empty",
+      "target": "X_gen(K)=empty",
+      "status": "undecided"
+    }
+  ],
+  "accepted_point_statements": {
+    "C_fix(K)": "empty",
+    "P_aux(K)": "nonempty",
+    "F14_T(K)": "undecided",
+    "X_gen(K)": "undecided"
+  },
+  "branch_comparison": {
+    "D_infinity": "lc_u(P)=0, u=infinity, (e,f)=(1,1)",
+    "D_target": "lc_u(P) is a unit, finite double root, (e,f)=(2,1)",
+    "verdict": "distinct valued ordered extensions over F"
+  }
+}

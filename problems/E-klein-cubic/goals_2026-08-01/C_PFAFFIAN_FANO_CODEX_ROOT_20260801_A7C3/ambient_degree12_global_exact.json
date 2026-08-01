@@ -1,0 +1,18 @@
+{
+  "format": "ambient-degree12-global-exact-v1",
+  "theorem": "all 15 degree-24 invariant Pluecker residuals vanish identically in the cubic RUR quotient",
+  "reason": "40 integral degree-24 invariant basis columns and a rank-40 evaluation matrix; exact zero at all 40 points",
+  "group_order": 660,
+  "covariant_degree": 12,
+  "residual_degree": 24,
+  "invariant_dimension": 40,
+  "unisolvent_rank_mod_23": 40,
+  "unisolvent_pivot_product_mod_23": 11,
+  "points_checked": 40,
+  "residuals_per_point": 15,
+  "all_exact_zero": true,
+  "source_sha256": {
+    "char0_rur": "54c181762c3c5a263f1dc6522e39d8e690196c7acdc31dfa44f5043481ca3216",
+    "unisolvent_points": "5a6a0bba8e34c1ba081165fee2eaddb9aba51d3371858531cbfbf250dd712fac"
+  }
+}

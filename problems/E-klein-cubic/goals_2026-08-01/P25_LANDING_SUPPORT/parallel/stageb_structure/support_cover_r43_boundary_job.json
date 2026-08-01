@@ -1,0 +1,18 @@
+{
+  "criterion": "Only an exact returned unit ideal proves this necessary-equation Stage-B scheme empty. Nonunit, timeout, or missing output is not a verdict on the original incidence.",
+  "expanded_p3_terms": 1880133,
+  "not_run_by_producer": true,
+  "prime": 89,
+  "result": "support_cover_r43_boundary_result.txt",
+  "rows": 43,
+  "saturation_order": [
+    "b1 irrelevant ideal",
+    "q irrelevant ideal"
+  ],
+  "script": "support_cover_r43_boundary.sing",
+  "script_bytes": 31351466,
+  "script_sha256": "2bb07c31711ece9a73974e29abfbc8565b6367cebfc58af62800d712f6d90f8b",
+  "source": "support_cover_r43_stageB.npz",
+  "source_sha256": "89a6d9feab7d08cdbd6b9ba68853fc7a7d041d2057c1c51982aa3c7ad42b7779",
+  "stratum": "b0=0,b1!=0"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "klein_goal_v2_seal_v1",
+  "exit": "V2-FIXED-FRAME-PLACE-NONTRANSFERABLE",
+  "pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "packet_files": {
+    "BOUNDARY_CENSUS.md": "5636c877b2163c982fa8ba9aa16678ae891bfe92eb19f820e1dfa7fd7b33f940",
+    "NONTRANSFER_THEOREM.md": "ea6a0566c714899788f4be5a0ad758b0728934d351352e50aa625d1c9e9e92ea",
+    "OBJECT_AND_FIELD_MAP.md": "79b345f998d7f016ca6b16b20daebcd3b44534763cdc8bd6c992f209d20c498b",
+    "RAMIFICATION_AND_CENTRES.md": "f6edaaa74f58566fbda14b9adc162ad2a6f9e08a10884f9613310e6e21111ba0",
+    "REPLAY.md": "27ba254ad1b22bc684b5cd0aa2f93dd870a3ff07731783f4d5270e3186651d67",
+    "REQUIREMENTS.md": "af842848d10bd8488be9bb117a13b54b260536e34bec95eb9f56c4700566d55b",
+    "STATUS.md": "b79a7937c0e2e8dbfbb720198e5f32acef4f5092131929f053c03e4d5bc59b31",
+    "VALUATION_TEMPLATE.md": "5bc874a157eb3326ab44fe2eae038ae204042999de6b4e198aca69b2175fdb30",
+    "compactification_residual_index.json": "1f9ffbea2a4af3f5f3666ed6ca7878f4fc2669fc61d10d0e8e3025a8953a5675",
+    "field_ramification.json": "120940ee2104e596bd3766e0c8a3aeaaed1873bcf32e84e2c0aafb9a2e84719f",
+    "incidence_scope.json": "3cbd87a76e0fe93f0baaec617c18ea8b56ed19cb3bab7d08d40c832bb110e5a4",
+    "verify.py": "4333bbd7e1cd36b08e093eb62316fcef70b6e2efc812cdfd3ea63f2bce7cd411",
+    "verify_ramification.py": "8fb9b6af91c382452305cd971fe85f6db1de301a5defd1834185b0aff76454ba"
+  },
+  "upstream_files": {
+    "goals_after_35fa8f/GOAL_V2_GENUINE_TWIST_VALUATION.md": "f3d7b07211c68b1e4a0dfb5c70bddaca7acf99f6a5826459c0e322a048ce999c",
+    "goals_2026-08-01/F_CONIC_ALGEBRA/payload/determinant_matrix_cells_exact.tsv": "e3633afbfc339753569181ce571ffdda1db042d2ddade506023bf6284dea555f",
+    "goals_2026-08-01/F_CONIC_ALGEBRA/payload/global_primitive_u_sextic_exact.tsv": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "goals_2026-08-01/F_CONIC_ALGEBRA/field_presentation.json": "6f8c7930a71dbf1125f5003ee39b241e7cfbf006499eccbecb24312025c50dde",
+    "goals_2026-08-01/F_CONIC_ALGEBRA/FIELD_PRESENTATION.md": "400148436b5f695e8fac2632e6068e9e3b4a68307b4e233853dd7ec68962fdca",
+    "goals_2026-08-01/F_CONIC_ALGEBRA/infinity_obstruction.json": "00316341a4d5207d8630e3d8d4411113b8fa2df5f6b3db42b48aa3003e094405",
+    "goals_2026-08-01/F_CONIC_ALGEBRA/INFINITY_OBSTRUCTION.md": "0a0f4d414b9c3b989dcc67f568d14075c0b8cf92579911aee6f4154850d97a2a",
+    "goals_2026-08-01/V_VALUATION_TROPICAL/inertia_centralizers.json": "41e54408cf3fe0a30ce98f61b3c29a0e73f386f0ee553f538459a1e99fcbd921",
+    "goals_2026-08-01/V_VALUATION_TROPICAL/proof_payload.json": "46d8cc886af7f50c63329bc0382dea67f3262ab3963a30d0041b5c144edb8bca",
+    "goals_2026-08-01/V_VALUATION_TROPICAL/MODEL.md": "bdd827da6fce6f2f91bad55ccd219400fd733a2f91d054396fd935e4dc107127",
+    "goals_2026-08-01/V_VALUATION_TROPICAL/VALUATION_CENSUS.md": "854acf446806764fa83c082060449149039f330f704b0d89c6be288572f9b3b9",
+    "tmp/full_scaled_frame_degree_hostile_audit/REPORT.md": "1f1f2c3c9b54de9b25c3a585d87d32bdc4de5fecca06c9250763dd731bcf63a1",
+    "tmp/full_scaled_frame_degree_attack/REPORT.md": "fa8880adf1d224212a90d3420c862b5d49d5c2bf5a81b5232f35d4799b1aff8c",
+    "tmp/full_scaled_frame_degree_attack/build_projective.py": "d66831cc7540eacb2222c182bbaaa76e36418ff28382bc3aaa85dbbcb7aabbb6"
+  }
+}

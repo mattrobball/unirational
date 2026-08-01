@@ -1,0 +1,83 @@
+{
+  "schema": "klein_goal_v2_field_ramification_v1",
+  "exit": "V2-FIXED-FRAME-PLACE-NONTRANSFERABLE",
+  "constant_field": "C",
+  "fields": {
+    "F": "C(A,B,Y,Z)",
+    "K": "K_proj=C(P(W))^G=Frac(F[u]/(P)) with the selected ordered root u",
+    "L": "C(P(W)), the generic G-splitting field of K",
+    "K_aff": "the residual-scalar affine frame field K(f5), a degree-3 mu3 extension of K",
+    "G": "PSL_2(F_11)",
+    "G_order": 660,
+    "invariant_generators_on_f3_equals_1": {
+      "t": "f5^3",
+      "u": "f8/f5",
+      "vcoord": "f10*f5"
+    }
+  },
+  "infinity_divisor": {
+    "equation": "D(A,B,Y,T)=0 with T=Z-11*A^2/18",
+    "residue_field": "C(r,rho,T)",
+    "normalization_witness": {
+      "r": "0",
+      "rho": "1",
+      "T": "0",
+      "A": "33/2",
+      "B": "-1/200",
+      "Y": "-1349/600",
+      "Z": "1331/8"
+    },
+    "selected_place_K_over_F": {
+      "uniformizer": "s=1/u",
+      "ramification_index": 1,
+      "residue_degree": 1,
+      "u_value": -1
+    }
+  },
+  "cramer_replay": {
+    "matrix_rows": [0, 1],
+    "delta": "b0*c1-b1*c0",
+    "numerator_vcoord": "-a0*c1+a1*c0",
+    "numerator_t": "-b0*a1+b1*a0",
+    "degrees_at_normalization_witness": {
+      "delta": 5,
+      "numerator_vcoord": 5,
+      "numerator_t": 3
+    },
+    "global_u4_coefficient_of_numerator_t": "zero",
+    "values_on_K": {
+      "u": -1,
+      "vcoord": 0,
+      "t": 2
+    }
+  },
+  "scaled_affine_place_K_aff_over_K": {
+    "equation": "f5^3=t",
+    "degree": 3,
+    "ramification_index": 3,
+    "residue_degree": 1,
+    "inertia": "mu3",
+    "normalized_weight_ray": {
+      "f5": 2,
+      "f8": -1,
+      "f10": -2,
+      "normalization": "w|K=3*nu"
+    }
+  },
+  "genuine_splitting_torsor_place_L_over_K": {
+    "intersection_with_K_aff": "K",
+    "reason": "an intersection of degree 3 would give an index-3 subgroup of the simple group PSL_2(F_11), impossible",
+    "inertia": "not determined by the Cramer calculation",
+    "dichotomy": {
+      "nontrivial_inertia": "the genuine local twist has a point by the central-inertia theorem",
+      "trivial_inertia": "the special fibre is the genuine residue twist, has index 1, and its point status is open"
+    },
+    "conclusion": "ramification in K_aff/K is scalar mu3 ramification and cannot be promoted to ramification of L/K"
+  },
+  "scope": {
+    "fixed_frame": "the proper fixed plane-cubic model has residual index 3",
+    "full_auxiliary": "the fixed plane cubic is a nonexhaustive linear slice; the proper auxiliary closure has a residue point",
+    "twisted_F14": "the base valuation is defined, but no point of the fixed slice selects a centre on the F14 function field and no reverse incidence arrow exists",
+    "genuine_twist": "the genuine torsor inertia is undecided; either it is ramified and locally soluble, or it is unramified with a genuine index-1 residue twist whose point status is open"
+  }
+}

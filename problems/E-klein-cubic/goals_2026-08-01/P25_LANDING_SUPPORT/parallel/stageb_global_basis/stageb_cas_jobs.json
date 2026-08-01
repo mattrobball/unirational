@@ -1,0 +1,57 @@
+{
+  "bounded_runner": {
+    "commands_not_run": [
+      "/opt/homebrew/bin/python3 /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/run_bounded.py /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/support_balanced_r43_stageB_module.sing --timeout 7200 --rss-gib 32",
+      "/opt/homebrew/bin/python3 /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/run_bounded.py /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/support_balanced_r43_stageB_saturation.sing --timeout 7200 --rss-gib 32",
+      "/opt/homebrew/bin/python3 /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/run_bounded.py /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/support_balanced_r43_stageC_saturation.sing --timeout 7200 --rss-gib 32"
+    ],
+    "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/run_bounded.py",
+    "path_sha256": "02c89957c1fc22ea31917532f8018333d878887ab741c357bce9d03eaebe0ffd",
+    "suggested_rss_gib": 32,
+    "suggested_wall_seconds": 7200
+  },
+  "coordinate_line_guard": {
+    "certificate": "support_balanced_coordinate_line_minors.npz",
+    "certificate_sha256": "3767ad02158ea4c8592661c832083ddf27cc3539b9a35c28db1911caad1dc2c5",
+    "independent_replay": "verify_coordinate_lines_result.json",
+    "independent_replay_sha256": "9dd9ae33a4e8157a6da059596a49248056db9432ffcc38ea45d39c0ead557f59",
+    "scope": "rank six on all 666 coordinate lines"
+  },
+  "expanded_p3_terms": 1571280,
+  "expanded_p4_terms": 2936758,
+  "logical_scope": "A decisive Stage-B module/saturation result proves Stage B empty; a decisive q-saturated Stage-C result proves the normalized b0=1 stratum empty. A nonunit, timeout, crash, or missing output is not a candidate or verdict on the original incidence.",
+  "module_job": {
+    "criterion": "dim(S^6/N)=0",
+    "result": "support_balanced_r43_stageB_module_result.txt",
+    "script": "support_balanced_r43_stageB_module.sing",
+    "script_bytes": 21643276,
+    "script_sha256": "80d8a15a5cc20a5ae73e46f776a9b9bfbc106b908a9bcc6e4a1b8060bd8dbd76"
+  },
+  "not_run_by_producer": true,
+  "prime": 89,
+  "rows": 43,
+  "saturation_job": {
+    "criterion": "sequentially saturated unit ideal",
+    "result": "support_balanced_r43_stageB_saturation_result.txt",
+    "saturation_order": [
+      "b1 irrelevant ideal",
+      "q irrelevant ideal"
+    ],
+    "script": "support_balanced_r43_stageB_saturation.sing",
+    "script_bytes": 21645344,
+    "script_sha256": "43265bdbf49a2427171da9a6fb9c4e06cd7254a09733bbee6eedba881b120be8"
+  },
+  "source": "support_balanced_r43_stageBC.npz",
+  "source_sha256": "821e1340cd6242a1d89a3a59f89d6d0fbee7fa1b4207e931b28d4c402f5fbedb",
+  "stageC_saturation_job": {
+    "criterion": "q-saturated unit ideal",
+    "normalization": "b0=1",
+    "result": "support_balanced_r43_stageC_saturation_result.txt",
+    "saturation_order": [
+      "q irrelevant ideal"
+    ],
+    "script": "support_balanced_r43_stageC_saturation.sing",
+    "script_bytes": 72310322,
+    "script_sha256": "3c1eab8bdbb97420a488ca725794316eb8055345be5095e92021f70bebe8d4ba"
+  }
+}

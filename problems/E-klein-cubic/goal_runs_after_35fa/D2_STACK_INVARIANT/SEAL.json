@@ -1,0 +1,20 @@
+{
+  "exit": "D2-NO-VALID-BRIDGE",
+  "files": {
+    "ADMISSIBLE_CENTRE_CLOSURE.md": "25530d03b551a98059c77825fe189edc799393e14d786273cf7644d1debffdbd",
+    "COMPLETION_AUDIT.md": "460302626cb1dd164e3dc9c46b9a3b878a9589959c623b653a424bcc981ee579",
+    "COUNTERMODELS.md": "3e2e9be39138aec174c630758e69f299e92c59539118870ee41d0609dbbd5f80",
+    "INVARIANT_DEFINITION.md": "8ff2c0dd7b37280e9a076c154f98964a0db57862b0a7f9db65583f4d01fd0020",
+    "STATUS.md": "3c5d31f0ce1499544e6115465c439459421e0266b0fa750469dd83ecd59c7723",
+    "SYLOW_DETECTION.md": "8838bbf60c9ad316ec48b4c04089d214c7162f129a96af505e102691d50eeedc",
+    "THEOREM_AUDIT.md": "319e33b1ebdca579f63a42798e04344cd8e091b0da70d30ce0017cffcd02d147",
+    "invariant_payload.json": "0808668047d4216a0d039918ba006073a203c63c0c28edcb45ab812c8f3c2364",
+    "produce.py": "6ea4eb8d87a12b1b17d8ee3f1e09943b5f470ed384f7a65b457becb4d8940d09",
+    "seal.py": "e2a0bf561fea6945e16bac5b9255d44bbfa0af402f1b2cab357621fea639125b",
+    "verify.py": "93199c083db683c0bfcdf53a2bfd831620bca29ec1f6db910d8c6adb9e9d9c5a"
+  },
+  "produced_commit": null,
+  "schema": "D2_STACK_INVARIANT.SEAL.v1",
+  "self_hash_included": false,
+  "source_commit": "37d61c19a108781cf74af837e24810a9f7f7c3be"
+}

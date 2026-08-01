@@ -1,0 +1,97 @@
+{
+  "schema": "q-schur-curve-incidence-v1",
+  "headline": "Q-UNDECIDED",
+  "source": {
+    "author": "Aleksey Zinger",
+    "title": "The genus 0 Gromov-Witten invariants of projective complete intersections",
+    "journal": "Geometry & Topology 18 (2014), 1035-1114",
+    "doi": "10.2140/gt.2014.18.1035",
+    "url": "https://msp.org/gt/2014/18-2/gt-v18-n2-p12-s.pdf",
+    "claim_page": 1058,
+    "source_boundary": "The source explicitly says the displayed invariants are enumerative at least for degrees 1, 2, and 3; it does not include degree 4 in that assertion."
+  },
+  "geometry": {
+    "dimension_X": 3,
+    "anticanonical_degree_per_H_degree": 2,
+    "integral_H_cubed": 3,
+    "point_class_relation": "H^3 = 3[pt]",
+    "virtual_dimension_formula": "vdim Mbar_0,n(X,d) = 2d+n",
+    "point_insertions_codimension": 3
+  },
+  "point_counts": [
+    {
+      "degree": 1,
+      "number_of_point_insertions": 1,
+      "raw_H3_invariant": 18,
+      "normalization_divisor": 3,
+      "point_normalized_invariant": 6,
+      "enumerative_in_source": true
+    },
+    {
+      "degree": 2,
+      "number_of_point_insertions": 2,
+      "raw_H3_invariant": 54,
+      "displayed_divisor_augmented_invariant": 108,
+      "divisor_equation_factor": 2,
+      "normalization_divisor": 9,
+      "point_normalized_invariant": 6,
+      "enumerative_in_source": true
+    },
+    {
+      "degree": 3,
+      "number_of_point_insertions": 3,
+      "raw_H3_invariant": 216,
+      "displayed_divisor_augmented_invariant": 648,
+      "divisor_equation_factor": 3,
+      "normalization_divisor": 27,
+      "point_normalized_invariant": 8,
+      "enumerative_in_source": true
+    },
+    {
+      "degree": 4,
+      "number_of_point_insertions": 4,
+      "raw_H3_invariant": 15552,
+      "normalization_divisor": 81,
+      "point_normalized_invariant": 192,
+      "enumerative_in_source": false
+    }
+  ],
+  "descent_tests": [
+    {
+      "cycle": "primitive quartic point",
+      "geometric_curve_degree": 4,
+      "candidate_count": 192,
+      "possible_galois_groups": ["A4", "S4"],
+      "group_orders": [12, 24],
+      "fixed_point_free_models": ["16 regular A4-orbits", "8 regular S4-orbits"],
+      "fixed_curve_forced_by_count": false,
+      "additional_failure": "192 is a virtual invariant and the Voisin-produced quartic support is not proved to lie in an enumerative general-incidence locus."
+    },
+    {
+      "cycle": "cubic-resolvent point",
+      "geometric_curve_degree": 3,
+      "candidate_count": 8,
+      "possible_galois_groups": ["C3", "S3"],
+      "group_orders": [3, 6],
+      "orbit_consequences": {
+        "C3": "A C3-action on a reduced 8-set has a fixed point because nonfixed orbits have size 3 and 8 is not divisible by 3.",
+        "S3": "A fixed-point-free action exists as one orbit of size 2 plus one regular orbit of size 6."
+      },
+      "fixed_curve_forced_if_action_factors_through_cycle_galois_group": {
+        "C3": true,
+        "S3": false
+      },
+      "fixed_curve_forced_unconditionally": false,
+      "additional_failure": "Enumerativity holds only for general incidence; the secant-resolvent triple is not proved general, and the incidence curves are not proved to split over the cubic Galois closure."
+    }
+  ],
+  "combined_gcd_of_candidate_counts": 8,
+  "conclusions": {
+    "quartic_cycle_forces_K_curve": false,
+    "resolvent_cycle_forces_K_curve": false,
+    "incidence_zero_cycle_is_same_as_K_curve": false,
+    "bayer_hilbert_map_converts_closed_orbit_to_K_point": false,
+    "goal_resolved": false,
+    "marker": "Q_SCHUR_CURVE_INCIDENCE_NO_DESCENT_FORCE_EXACT"
+  }
+}

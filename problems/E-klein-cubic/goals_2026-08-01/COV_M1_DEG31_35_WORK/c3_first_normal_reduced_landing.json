@@ -1,0 +1,69 @@
+{
+  "degrees": {
+    "31": {
+      "c3_gate_payload": "degree_31/c3_constant_gate_p463.npz",
+      "c3_gate_payload_sha256": "6327c6138fa878f958e122872abbdd52cf250056000795fd62bf9b5049f08dea",
+      "combined_first_normal_gate_rank": 51,
+      "complete_equation_count": 5349,
+      "decision_status": "complete reduced equations; saturation open",
+      "first_normal_block_payloads": [
+        {
+          "payload": "degree_31/c3_first_normal_exp0_p463.npz",
+          "payload_sha256": "7894918aa8f990917ee330728a88ff3bc6589984885e3aff45702ed4e0b9a2a9"
+        },
+        {
+          "payload": "degree_31/c3_first_normal_exp2_p463.npz",
+          "payload_sha256": "231dd5860ce267f896d2765f15d78cfaed698bcfdcfd4c6765ace76fe23f61a0"
+        }
+      ],
+      "first_normal_nonbased_chart_count": 17,
+      "first_normal_parameter_dimension": 147,
+      "first_normal_scalar_rank": 17,
+      "landing_payload": "degree_31/landing_circuits_p463.npz",
+      "landing_payload_sha256": "065706e7cb6f020c2242826e2485d52fb20f38e270f6bd9fc328f22462b5fc78",
+      "metadata": "degree_31/c3_first_normal_reduced_landing_p463.json",
+      "metadata_sha256": "a3bde2a2844fb61efd2a9f62c840a9c18962aab6079905be91a03383feaf132d",
+      "original_parameter_dimension": 198,
+      "payload": "degree_31/c3_first_normal_reduced_landing_p463.npz",
+      "payload_sha256": "5e62f8eeee5359dc1d087c021f6545a1ca303cf24a9ed46ab06796a32ea772e0",
+      "prime": 463,
+      "second_based_dimension": 130
+    },
+    "35": {
+      "c3_gate_payload": "degree_35/c3_constant_gate_p463.npz",
+      "c3_gate_payload_sha256": "2cec8fc6340045d9080b98846789adeb4350773f7f07fce18737d0257839a432",
+      "combined_first_normal_gate_rank": 61,
+      "complete_equation_count": 8555,
+      "decision_status": "complete reduced equations; saturation open",
+      "first_normal_block_payloads": [
+        {
+          "payload": "degree_35/c3_first_normal_exp0_p463.npz",
+          "payload_sha256": "7f28cca0759d44ffa7da1112da82593736865d97fa5927b6e06541793cf0f62f"
+        },
+        {
+          "payload": "degree_35/c3_first_normal_exp2_dir0_p463.npz",
+          "payload_sha256": "cb7f045782bccf3f1c5fbd487520eb4dbe3724d614f68485f3d2816d9073ee65"
+        },
+        {
+          "payload": "degree_35/c3_first_normal_exp2_dir1_p463.npz",
+          "payload_sha256": "69c7f407c7d7b4bcc5f46a8a2eb947227a5944614b8be8e63c84b4d0fe65cfe8"
+        }
+      ],
+      "first_normal_nonbased_chart_count": 11,
+      "first_normal_parameter_dimension": 300,
+      "first_normal_scalar_rank": 11,
+      "landing_payload": "degree_35/landing_circuits_p463.npz",
+      "landing_payload_sha256": "0d6975f27bd7bf5f961e38ef373ec09f5de51434100e0ed1dd3d52a0010175f1",
+      "metadata": "degree_35/c3_first_normal_reduced_landing_p463.json",
+      "metadata_sha256": "844773bf749dc9ff886c922da7e5cd01b4e7f25e96b894fd8d188f3920d040da",
+      "original_parameter_dimension": 361,
+      "payload": "degree_35/c3_first_normal_reduced_landing_p463.npz",
+      "payload_sha256": "9c1288d734fdb68fa85cb3b5c5b6fecc84d05ef9268c24baca51adfee2319db3",
+      "prime": 463,
+      "second_based_dimension": 289
+    }
+  },
+  "prime": 463,
+  "schema": "cov-m1-c3-first-normal-reduced-landing-v1",
+  "scope": "complete p=463 landing circuits on the C3-based first-normal necessary gate; residual branch saturations are open"
+}

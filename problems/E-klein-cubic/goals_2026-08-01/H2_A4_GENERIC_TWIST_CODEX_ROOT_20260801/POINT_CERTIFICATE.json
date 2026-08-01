@@ -1,0 +1,55 @@
+{
+  "format": "H2-A4-GENERIC-TWIST-POINT-v1",
+  "verdict": "the installed generic A4 twist has a K_A4-rational point",
+  "exit": "H-A4-RATIONAL-POINT",
+  "base_field": "K_A4=C(u,v)",
+  "invariant_field": {
+    "canonical_source": "a=diag(-1,-1,1), b(x,y,z)=(y,z,x)",
+    "X_Y_Z": "X=x^2, Y=y^2, Z=z^2",
+    "A0_A1_A2": "A0=X+Y+Z, A1=X+omega^2*Y+omega*Z, A2=X+omega*Y+omega^2*Z",
+    "chart": "A0 != 0",
+    "r_s": "r=A1/A0, s=A2/A0",
+    "transcendence_basis": "with ell=A2/A0 and m=A1/A0, u=ell^3 and v=ell*m",
+    "fixed_field_identity": "C(P2)^A4=C(u,v), with m^3=v^3/u"
+  },
+  "constant_data": {
+    "cyclotomic_field": "Q(t)/(Phi_33(t)), zeta_11=t^3, omega=t^11, embedded in C",
+    "landing_constants": "(p1,p2,p3) is any C-zero of the exact proper ideal in degree3_character1_exact_chart0.sing with p0=1",
+    "existence_reason": "proper ideal plus algebraic closedness of C"
+  },
+  "canonical_map": {
+    "formula": "Phi(y)=C0(y)+p1*C1(y)+p2*C2(y)+p3*C3(y)",
+    "degree": 3,
+    "character": "chi(ga)=1, chi(gb)=omega^2",
+    "covariance": "Phi(sigma_can(g)y)=chi(g)*rho(g)*Phi(y)",
+    "landing": "F(Phi(y))=0",
+    "exact_payload": "exact_degree3_map.json"
+  },
+  "installed_source_intertwiner": {
+    "formula": "Y=P*y",
+    "P": [
+      ["0", "1", "0"],
+      ["(sqrt(5)-1)/4", "(sqrt(5)+1)/4", "1/2"],
+      ["(sqrt(5)+1)/4", "1/2", "(sqrt(5)-1)/4"]
+    ],
+    "determinant": "(sqrt(5)-1)/4",
+    "identity": "P*sigma_can(h)=sigma_inst(h)*P for all h in A4",
+    "exact_payload": "source_intertwiner.json"
+  },
+  "cleared_frame": {
+    "D": "D(Y)=product_{h in A4} ell(sigma_inst(h^-1)Y)",
+    "B": "B(Y)=D(Y)*A_inst(Y)",
+    "covariance": "B(sigma_inst(g)Y)=rho(g)B(Y)"
+  },
+  "adapted_model_payload": "canonical_model.json",
+  "reduced_twist_payload": "twist_over_Cuv.json",
+  "point_coordinates": "Z_K(y)=(M/(S*x*y*z))*A_inst(P*y)^(-1)*Phi(y), with S=x^2+y^2+z^2 and M=x^2+omega^2*y^2+omega*z^2; the point is [Z_K0:...:Z_K4]",
+  "membership_in_K": "A_inst(P*g*y)^(-1)*Phi(g*y)=chi(g)*A_inst(P*y)^(-1)*Phi(y); M/S has inverse character and 1/(x*y*z) corrects degree 3, so every Z_Ki is a degree-zero A4-invariant in C(u,v)",
+  "substitution_identity": "F(A_inst(P*y)*Z_K(y))=(M/(S*x*y*z))^3*F(Phi(y))=0",
+  "equivalent_homogeneous_formula": "with D=product_h ell(sigma_inst(h^-1)P*y), B_clr=D*A_inst(P*y), N=adj(B_clr)*Phi, the same projective point is [N] and B_clr*N=det(B_clr)*Phi",
+  "denominator_open": "S*x*y*z*det(P)*product_h ell(sigma_inst(h^-1)*P*y)*det(A_inst(P*y)) != 0",
+  "nonvanishing": "every denominator is a nonzero rational function and Phi is nonzero because p0=1 in a linearly independent covariant basis",
+  "independent_verifiers": ["verify_exact_point.py", "verify.py"],
+  "verifier_markers": ["H2_A4_RATIONAL_POINT_VERIFIED", "H2_A4_GENERIC_TWIST_VERIFY_OK"],
+  "scope": "closes the A4 subgroup obstruction only; makes no full PSL(2,F_11) verdict"
+}

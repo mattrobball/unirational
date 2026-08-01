@@ -1,0 +1,65 @@
+{
+  "artifact_sha256": {
+    "COMPLETION_AUDIT.md": "ee024781d9be0c14efe13342d79e4837c517cb75c8b85b32b5b114c87572200c",
+    "HANKEL_COMPRESSION.md": "dedc705bba7b0b8e306b793faf5da4e00b7d7960d19ca6a1511b39ab0b66433f",
+    "PROOF_REPORT.md": "b69e54132ace32587da69da2834d59303e60123991e8eb4053200adc59e37b97",
+    "README.md": "03c4b9c4d842f9ba06c2bff38b276c48385c419cf15e52abb94762b7ba63ce7a",
+    "RESIDUAL_GATE.md": "b787c60666b6c4374349be6b4bc3b2fec0fae42f3201e6dcef498e120cc37a01",
+    "SOURCE_LEDGER.md": "7d00392d505b3e135e3ff49a3955142ae51213c564130c1bd345f29d594d2bd1",
+    "STATUS.md": "97bf236d916a5e3310c1f57ccf27786bcbc9ae48ed8329bd7707fccee5c50e8b",
+    "TRISECANT_DEGENERATION.md": "e7e11e5c8328d3d449879541ab3760e13be86a55cf6ed1e1165fc7f0d8bdcee2",
+    "TWO_TRANSVERSAL_FAMILY.md": "250ad5b17243821655278eff91bde0c9fbad0902633a6c6ed8b4e28bd01175cb",
+    "WORK_SCOPE.md": "d4129c551b42788ec61823da960ecb1b8cb18917b9ec4bae8c94a5e79921c484",
+    "analyze_cover_family_mod67.py": "0080cb4f1e99e36871a8b4ffc6929630c2c490273d49c5dab25508fee2259075",
+    "hankel_probe.json": "a89f8710f4e1d3290ff10574a7d97a213c6ea6653e08ccf8fb853b0967d1b1df",
+    "make_seal.py": "c5a8108bd2c9d9394c5356f4155fe27b8f959cab89ba6da33690d3ba29d35329",
+    "probe_hankel_incidence.py": "d75fefb4b544d28f052aa5140676298183d332d8108001de25f997adcfa4ae92",
+    "produce_trisecant_degeneration.py": "f73bbfeb76f58e6c920f5056ae18702945d21843adb7c377aa6f2a25c19617b3",
+    "run_all.py": "4c9a793a836f97274083ac6db00b25c5f0efb5670ec51a256e338e8c26bbd168",
+    "trisecant_degeneration.json": "3b67d5e939ca9ca41c542f942b17f3532ef5bb06c63a6227745fff8f3c94857b",
+    "two_transversal_family_mod67.json": "c6e8b287f366de30cfae0df6538a46fc33169fc4d1c999fd7fdac48d246ecfab",
+    "verify_hankel_incidence.py": "7dc1c74a9e0ebb4ce3525acb63ca8c41adba14b471fd6fd240375a88146f6016",
+    "verify_seal.py": "5f4bd4f4b3226626e02473e27b841e5ee4f90d8a5a3595d5d220b2488a399163",
+    "verify_trisecant_degeneration.py": "f91dcb2af923f2caabaa6a551dec994707d92923f4d77686ff129b0ab45c4dd8"
+  },
+  "consumed_source_sha256": {
+    "certificates/exact_weil_check.py": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
+    "goals_after_35fa8f/GOAL_S19_MARKED_CURVE_CONTINUATION.md": "93703453b2912417aaa33d9877e6849b4bddb27e5834b6cc05a07414d4a2bf8e",
+    "parent/SEAL.json": "a410bb560a5824ae90f7ee4885287d6e6c73b4fdb0926882e3a811b38d7467a6",
+    "parent/universal_marked_family.json": "3a808167611f66cb39369e243a9c38a9019ab5f7c6b7397d3c2636f3950c08fb"
+  },
+  "date": "2026-08-01",
+  "decision_exit": "S19-UNDECIDED",
+  "decision_meaning": "lossless incidence and exact degeneration boundaries are certified, but no qualifying curve or branch exclusion is proved",
+  "not_proved": [
+    "nonemptiness or emptiness of either saturated Rao branch",
+    "a dominant relative marked-Hilbert component or descended base-field point",
+    "characteristic-zero exclusion of the two-transversal family or any other degeneration family",
+    "an exact geometrically integral rational degree-19 curve",
+    "an exact residual degree-two cycle or rational point",
+    "the Klein-cubic headline"
+  ],
+  "packet": "goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E_CONT2",
+  "parent_seal_sha256": "a410bb560a5824ae90f7ee4885287d6e6c73b4fdb0926882e3a811b38d7467a6",
+  "pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "proved": [
+    "lossless 105 by 20 Reed-Solomon dual Hankel incidence criterion on the distinct affine source chart",
+    "planted degree-19 control drops Hankel rank to 19 and reconstructs all four forms",
+    "5468 bounded modular parameter tests are full rank at F_397, explicitly as a nonverdict",
+    "exact orbit-line 55_3 triangle configuration with minimum universal triangle cover 21",
+    "exact special hyperplane with 19 trisecants covering all 55 marks",
+    "that exact union has 17 components, Hilbert polynomial 19t+17, and arithmetic genus -16",
+    "one affine h4-nonzero chart of the natural two-transversal repair family has no qualified high-edge point over algebraic closure of F_67"
+  ],
+  "replay_markers": [
+    "S19_HANKEL_PROBE_REPRODUCES",
+    "S19_HANKEL_COMPRESSION_INDEPENDENT_REPLAY_OK",
+    "S19_EXACT_TRISECANT_DEGENERATION_REPRODUCES",
+    "S19_EXACT_TRISECANT_DEGENERATION_INDEPENDENT_REPLAY_OK",
+    "S19_TWO_TRANSVERSAL_MOD67_REPRODUCES",
+    "S19_CONTINUATION_2_SEAL_VERIFIED"
+  ],
+  "repository_commit_consumed": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "schema": "s19-marked-curve-continuation-2-seal-v1",
+  "terminal_marker": "S19_MARKED_CURVE_CONTINUATION_2_SEALED_UNDECIDED"
+}

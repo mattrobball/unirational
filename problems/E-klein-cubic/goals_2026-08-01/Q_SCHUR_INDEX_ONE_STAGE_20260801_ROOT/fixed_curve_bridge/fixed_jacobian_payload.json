@@ -1,0 +1,295 @@
+{
+  "checks": {
+    "common_fixed_equations_rank_mod_11": 10,
+    "common_fixed_equations_rank_mod_5": 10,
+    "conjugation": "sigma*tau*sigma^-1=tau^5",
+    "det_tau_minus_identity_abs": 11,
+    "sigma_order": 5,
+    "tau_minus_identity_rank_mod_11": 9,
+    "tau_minus_identity_rank_mod_5": 10,
+    "tau_order": 11
+  },
+  "deduction": {
+    "fixed_points_killed_by": 55,
+    "fixed_subgroup": "trivial",
+    "norm_endomorphism": "zero because the analytic invariant subspace is zero",
+    "primary_checks": [
+      5,
+      11
+    ],
+    "subgroup": "C11 semidirect C5 of order 55",
+    "terminal_marker": "KLEIN_JACOBIAN_COMMON_FIXED_SUBGROUP_TRIVIAL"
+  },
+  "schema": "klein_intermediate_jacobian_fixed_subgroup_v1",
+  "sigma_matrix_Z": [
+    [
+      -3,
+      -36,
+      -6,
+      27,
+      0,
+      0,
+      17,
+      -3,
+      -9,
+      21
+    ],
+    [
+      12,
+      -15,
+      -9,
+      3,
+      0,
+      0,
+      1,
+      16,
+      -7,
+      -2
+    ],
+    [
+      -2,
+      -9,
+      -1,
+      6,
+      0,
+      0,
+      6,
+      -3,
+      -1,
+      6
+    ],
+    [
+      3,
+      -5,
+      -2,
+      1,
+      0,
+      0,
+      1,
+      5,
+      -2,
+      1
+    ],
+    [
+      -8,
+      3,
+      5,
+      3,
+      1,
+      0,
+      2,
+      -9,
+      2,
+      6
+    ],
+    [
+      -1,
+      -7,
+      -1,
+      6,
+      0,
+      1,
+      3,
+      -1,
+      -2,
+      4
+    ],
+    [
+      17,
+      -12,
+      -11,
+      -3,
+      0,
+      0,
+      -2,
+      21,
+      -7,
+      -9
+    ],
+    [
+      4,
+      13,
+      1,
+      -12,
+      0,
+      0,
+      -7,
+      5,
+      3,
+      -10
+    ],
+    [
+      -15,
+      9,
+      10,
+      3,
+      0,
+      0,
+      2,
+      -18,
+      5,
+      9
+    ],
+    [
+      -3,
+      -12,
+      -1,
+      11,
+      0,
+      0,
+      6,
+      -4,
+      -3,
+      8
+    ]
+  ],
+  "source": {
+    "actions": {
+      "sigma": "sigma(v_k)=v_(5k mod 11), order 5",
+      "tau": "tau(v_k)=v_(k+1), order 11"
+    },
+    "basis": [
+      "(v0-3v1+3v2-v3)/(1+2nu)",
+      "(v1-3v2+3v3-v4)/(1+2nu)",
+      "v0",
+      "v1",
+      "v2"
+    ],
+    "period_lattice": "X. Roulleau, The Fano surface of the Klein cubic threefold, Theorem 2 / Theorem 13, arXiv:1001.4853",
+    "ring": "Z[nu], nu^2+nu+3=0"
+  },
+  "tau_matrix_Z": [
+    [
+      0,
+      0,
+      -5,
+      -9,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      6
+    ],
+    [
+      0,
+      0,
+      3,
+      -8,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      1
+    ],
+    [
+      1,
+      0,
+      -3,
+      -3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      -4,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      -2,
+      3,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      5,
+      -9,
+      1,
+      0,
+      0,
+      0,
+      -3,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      2,
+      0,
+      1,
+      0,
+      0,
+      0,
+      -3
+    ],
+    [
+      0,
+      0,
+      -4,
+      6,
+      0,
+      0,
+      1,
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      -2,
+      -2,
+      0,
+      0,
+      0,
+      1,
+      0,
+      3
+    ]
+  ],
+  "z_basis_order": [
+    "b0",
+    "nu*b0",
+    "b1",
+    "nu*b1",
+    "b2",
+    "nu*b2",
+    "b3",
+    "nu*b3",
+    "b4",
+    "nu*b4"
+  ]
+}

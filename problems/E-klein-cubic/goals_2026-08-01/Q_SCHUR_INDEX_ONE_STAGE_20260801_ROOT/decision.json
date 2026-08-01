@@ -1,0 +1,116 @@
+{
+  "schema": "q-schur-index-one-decision-v1",
+  "goal": "GOAL_Q_SCHUR_INDEX_ONE_DECISION.md",
+  "pinned_repository_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "live_head_audited": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "exit": "Q-UNDECIDED",
+  "headline": "OPEN",
+  "binary": {
+    "point_proved": false,
+    "pointlessness_proved": false
+  },
+  "index": {
+    "effective_degrees": [3, 55],
+    "bezout_coefficients": [-18, 1],
+    "value": 1
+  },
+  "exact_genuine_twist": {
+    "characteristic_zero_hilbert90_frame_verified": true,
+    "reynolds_frame_degree": 8,
+    "projective_group_terms": 660,
+    "full_descended_cubic_coefficient_entries": 35,
+    "ordered_reynolds_products": 625,
+    "minimal_invariant_field_presentation_installed": false,
+    "ten_coordinate_fibration_comparison_replayed": false,
+    "K_Schur_point_found": false,
+    "K_Schur_pointlessness_proved": false,
+    "scope": "exact original cubic frame/table; no minimal invariant-field presentation, replayed ten-fibration coordinate comparison, rational zero, or global obstruction"
+  },
+  "a5_valuation_elimination": {
+    "embedded_maximal_classes": 2,
+    "exact_degree11_landing_maps_verified": 2,
+    "honest_source_representation_dimension": 3,
+    "every_twist_over_an_extension_of_C_is_soluble": true,
+    "eliminated_decomposition_groups": ["A5_class_1", "A5_class_2"],
+    "surviving_decomposition_groups": ["PSL(2,11)", "11:5"],
+    "global_K_Schur_point_found": false,
+    "scope": "functorial local solubility and valuation-frontier refinement; no global binary verdict"
+  },
+  "new_exact_result": {
+    "subgroup": "11:5",
+    "projective_character_multipliers": [0, 1, 2, 3, 4],
+    "complete_homogeneous_degrees_excluded": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "coefficient_dimensions": [1, 1, 3, 7, 11, 19, 30, 45, 65],
+    "split_good_prime": 331,
+    "schemes_replayed": 45,
+    "degree9_visited_supports": 26912397,
+    "scope": "bounded degree all-coefficient exclusion"
+  },
+  "trace_ansatz_exclusions": {
+    "constant_coefficient_two_laurent_all_exponents": true,
+    "full_K_two_kummer_basis_pairs": 10,
+    "full_K_two_kummer_basis_pairs_excluded": 10,
+    "three_kummer_coordinate_planes": 10,
+    "three_kummer_coordinate_planes_generically_smooth_integral": 10,
+    "three_kummer_coordinate_boundary_K_points_excluded": true,
+    "three_kummer_single_laurent_coordinates_all_exponents_excluded": 10,
+    "three_kummer_laurent_integral_exponent_candidates_checked": 673010,
+    "plane_012_jacobian_extracted": true,
+    "plane_012_fisher_c4_grouped_terms": 14,
+    "plane_012_fisher_c6_grouped_terms": 40,
+    "plane_012_fisher_c4_sha256": "f06672c95ae3843d645424600b4a6ae118fd34a4d0942b74ff16acb7606fb9f3",
+    "plane_012_fisher_c6_sha256": "c3a56da44cf47a1d26dfbaa52216c664ca705ce94259ecce7078fdcf986e1374",
+    "plane_012_full_substituted_hessian_identity_checked": false,
+    "plane_012_torsor_class_computed": false,
+    "plane_012_K_point_decided": false,
+    "three_kummer_plane_K_points_decided": 0,
+    "three_or_more_kummer_terms_excluded": false,
+    "arbitrary_E_element_excluded": false,
+    "scope": "three exact infinite sparse ansatz exclusions, ten exact genus-one plane frontiers, and the exact C_012 Jacobian; no trace-cubic or plane-torsor decision"
+  },
+  "new_birational_model": {
+    "smooth_elliptic_normal_quintic_over_K_Schur": true,
+    "associated_V14_over_K_Schur": true,
+    "V14_rational_point_proved": false,
+    "tautological_point_lands_on_Palatini": false,
+    "formal_D10_incidence_degree": 66,
+    "D10_66_line_common_incidence_empty": true,
+    "D12_55_line_common_incidence_empty": true,
+    "scope": "exact nonterminal Fano-Iskovskikh model"
+  },
+  "all_degree_boundary": {
+    "hsop_degrees": [3, 5, 6, 8, 11],
+    "secondary_rank": 720,
+    "secondary_degrees": [1, 26],
+    "primitive_module_combinations_unbounded": true,
+    "hsop_and_freeness_input_reconstructed": false,
+    "no_singleton_support_degrees": "7+5k",
+    "essential_dimension_GAP_55_1": "3-4",
+    "scope": "rules out two automatic cutoff arguments; does not decide landing"
+  },
+  "full_schur_palatinian": {
+    "characteristic_zero_B5_lift_verified": true,
+    "palatini_equals_unique_invariant_I4": true,
+    "degree7_projective_frame_verified": true,
+    "constant_coefficient_self_covariants_excluded_through_degree": 7,
+    "invariant_rational_quartic_point_found": false,
+    "scope": "exact nonterminal full-Schur Palatini point model"
+  },
+  "fixed_curve_bridge": {
+    "actual_odd_degree_genus_zero_map_forces_point": true,
+    "actual_generalized_twisted_cubic_hilbert_point_forces_point": true,
+    "actual_object_constructed": false,
+    "virtual_count_is_decisive": false
+  },
+  "fibration_pass": false,
+  "strict_nonclaims": [
+    "no K_Schur point is constructed",
+    "no pointless K_Schur twist is proved",
+    "no all-degree 11:5 covariant exclusion is proved beyond the exact degree-1-through-9 range",
+    "no local nonpoint is constructed",
+    "Problem E remains open",
+    "no minimal invariant-field presentation is installed, and the inherited ten coordinate-fibration comparison is not machine-replayed here; the exact full coefficient table is not rewritten in minimal invariant coordinates",
+    "the trace exclusions do not cover coordinate sums or arbitrary elements of E; none of the ten three-Kummer curves is decided, and the C_012 torsor class is uncomputed",
+    "the Palatini packet gives a point identity but no invariant-rational solution"
+  ]
+}

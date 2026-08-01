@@ -1,0 +1,74 @@
+{
+  "triples": {
+    "012": {
+      "equations": 1046,
+      "nonparallel_pairs": 474832,
+      "integral_candidates": 67301,
+      "viable": [],
+      "parallel_families": []
+    },
+    "013": {
+      "equations": 1046,
+      "nonparallel_pairs": 474832,
+      "integral_candidates": 67301,
+      "viable": [],
+      "parallel_families": []
+    },
+    "014": {
+      "equations": 1046,
+      "nonparallel_pairs": 474832,
+      "integral_candidates": 67301,
+      "viable": [],
+      "parallel_families": []
+    },
+    "023": {
+      "equations": 1046,
+      "nonparallel_pairs": 474832,
+      "integral_candidates": 67301,
+      "viable": [],
+      "parallel_families": []
+    },
+    "024": {
+      "equations": 1046,
+      "nonparallel_pairs": 474832,
+      "integral_candidates": 67301,
+      "viable": [],
+      "parallel_families": []
+    },
+    "034": {
+      "equations": 1046,
+      "nonparallel_pairs": 474832,
+      "integral_candidates": 67301,
+      "viable": [],
+      "parallel_families": []
+    },
+    "123": {
+      "equations": 1046,
+      "nonparallel_pairs": 474832,
+      "integral_candidates": 67301,
+      "viable": [],
+      "parallel_families": []
+    },
+    "124": {
+      "equations": 1046,
+      "nonparallel_pairs": 474832,
+      "integral_candidates": 67301,
+      "viable": [],
+      "parallel_families": []
+    },
+    "134": {
+      "equations": 1046,
+      "nonparallel_pairs": 474832,
+      "integral_candidates": 67301,
+      "viable": [],
+      "parallel_families": []
+    },
+    "234": {
+      "equations": 1046,
+      "nonparallel_pairs": 474832,
+      "integral_candidates": 67301,
+      "viable": [],
+      "parallel_families": []
+    }
+  }
+}

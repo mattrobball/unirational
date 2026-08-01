@@ -13,24 +13,42 @@ REQUIRED = [
     "STATUS.md",
     "SUPPORT.md",
     "candidate_or_empty.json",
-    "produce_msolve_input.py",
-    "produce_standard_input.py",
-    "run_msolve.py",
-    "verify_p25_empty.py",
+    "WORK_SCOPE.md",
+    "ACCEPTANCE_AUDIT.md",
+    "PREFLIGHT.md",
+    "NONVERDICT_RUNS.md",
+    "saturation_attempts.json",
+    "produce_linear_syzygies.py",
+    "produce_syzygy_charts.py",
+    "produce_syzygy_singular.py",
+    "produce_syzygy_bcharts.py",
+    "reconstruct_syzygies96.py",
+    "verify_syzygy_empty.py",
+    "verify_undecided.py",
+    "run_singular.py",
     "verify_seal.py",
     "make_seal.py",
-    "msolve_standard_input.json",
-    "landing_746_standard.ms",
-    "landing_746_standard_leading.out",
-    "landing_746_standard_msolve.log",
-    "landing_746_standard_msolve_result.json",
-    "landing_746_replay_leading.out",
-    "landing_746_replay_msolve.log",
-    "verify_result.json",
+    "syzygy_r48_q0_contracted.npz",
+    "syzygy_r48_q0.json",
+    "linear_syzygies.npz",
+    "linear_syzygies.json",
+    "syzygy_r256_q0_contracted.npz",
+    "syzygy_r256_q0.json",
+    "linear_syzygies_r48_reconstructed.npz",
+    "syzygy_reconstruction_replay.log",
+    "stageA_replay.log",
+    "stageA_replay_result.json",
     "rowrank_replay.log",
     "rowrank_replay_report.json",
     "border_replay.log",
     "dvr_replay.log",
+    "syzygy_r43_boundary_saturate.sing",
+    "syzygy_r43_boundary_singular.json",
+    "syzygy_r96_boundary_saturate.sing",
+    "syzygy_r96_boundary_singular.json",
+    "syzygy_r256_boundary_saturate.sing",
+    "syzygy_r256_boundary_singular.json",
+    "verify_undecided_result.json",
 ]
 
 
@@ -47,8 +65,11 @@ def main() -> None:
     if missing:
         raise SystemExit(f"cannot seal; missing {missing}")
     payload = {
-        "exit": "P25-DEGREE25-EMPTY",
-        "scope": "exact degree-25 landing scheme; headline remains OPEN",
+        "exit": "P25-UNDECIDED",
+        "scope": (
+            "honest stop: Stage B saturated incidence unresolved; no degree-25 "
+            "positive or negative theorem; headline remains OPEN"
+        ),
         "files": {
             name: {
                 "bytes": (HERE / name).stat().st_size,

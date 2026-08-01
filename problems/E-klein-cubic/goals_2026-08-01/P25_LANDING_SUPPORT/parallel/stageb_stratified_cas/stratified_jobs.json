@@ -1,0 +1,112 @@
+{
+  "L9_guard": "The larger L9=P<span(q4,...,q12)> is deliberately not used because the upstream q12 chart certificate has not yet received an independent replay.",
+  "closed_stratum": {
+    "certificate": "parallel/stageb_strata/closed_L_degree6_certificate.json",
+    "certificate_sha256": "89ec13bb2672a8b26e5e3e5beed74dfa21bf4374c4d6d57721b0d475f5f9a41a",
+    "coordinates": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "definition": "q_i=0 for i in H8",
+    "determinant_mod_89": 28,
+    "independent_replay": "parallel/stageb_strata/verify_closed_L_degree6_result.json",
+    "independent_replay_sha256": "b30c9d6555e9d85f7d306736800e8279b644c1e82809b486ec03542174055439",
+    "name": "L8",
+    "stageB_status": "independently certified empty"
+  },
+  "inputs": {
+    "new_r43_stageBC": {
+      "p3_nnz": 1571280,
+      "p4_nnz": 2936758,
+      "path": "parallel/stageb_global_basis/support_balanced_r43_stageBC.npz",
+      "sha256": "821e1340cd6242a1d89a3a59f89d6d0fbee7fa1b4207e931b28d4c402f5fbedb"
+    },
+    "old_r48_stageBC": {
+      "p3_nnz": 2316986,
+      "p4_nnz": 4056914,
+      "path": "syzygy_r48_q0_contracted.npz",
+      "sha256": "ba6d0533ab7fdb8bd93fb9309ce5b7d615f0a4799b22aa5e502e2dfec0bc21bb"
+    }
+  },
+  "jobs": {
+    "stageB_new_r43_L8_complement_Hfirst": {
+      "criterion": "unit of sat(sat(I,H8),b1_irrelevant) proves the selected Stage-B contraction incidence empty on P36 minus L8",
+      "result": "stageB_new_r43_L8_complement_Hfirst_result.txt",
+      "script": "stageB_new_r43_L8_complement_Hfirst.sing",
+      "script_bytes": 21645389,
+      "script_sha256": "a0c86d9d743e74c059a97f2d3344d7a1229b4d9855c943b0d35695fc6298244f",
+      "suggested_command_not_run": "/opt/homebrew/bin/python3 /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/run_bounded.py /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_stratified_cas/stageB_new_r43_L8_complement_Hfirst.sing --timeout 43200 --rss-gib 64"
+    },
+    "stageB_old_r48_L8_complement_Hfirst": {
+      "criterion": "unit of sat(sat(I,H8),b1_irrelevant) proves the selected Stage-B contraction incidence empty on P36 minus L8",
+      "result": "stageB_old_r48_L8_complement_Hfirst_result.txt",
+      "script": "stageB_old_r48_L8_complement_Hfirst.sing",
+      "script_bytes": 32056401,
+      "script_sha256": "510bbb7d399b18e0986a0c618ee6d82d50e6c24ec8ebc04857020d1077e15ac1",
+      "suggested_command_not_run": "/opt/homebrew/bin/python3 /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/run_bounded.py /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_stratified_cas/stageB_old_r48_L8_complement_Hfirst.sing --timeout 43200 --rss-gib 64"
+    },
+    "stageC_new_r43_L8_complement_Hfirst": {
+      "criterion": "unit of sat(I,H8) proves the selected normalized Stage-C contraction incidence empty on P36 minus L8",
+      "result": "stageC_new_r43_L8_complement_Hfirst_result.txt",
+      "script": "stageC_new_r43_L8_complement_Hfirst.sing",
+      "script_bytes": 72310380,
+      "script_sha256": "6b45c4cc6e7474df8b708dc3d9aeeae5f8a0171f915821fac351176e2af5f09e",
+      "suggested_command_not_run": "/opt/homebrew/bin/python3 /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/run_bounded.py /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_stratified_cas/stageC_new_r43_L8_complement_Hfirst.sing --timeout 43200 --rss-gib 64"
+    }
+  },
+  "not_launched": true,
+  "not_launched_reason": "shared PID 13036 Singular job is live; these exact jobs are intentionally deferred",
+  "open_complement": {
+    "geometric_open": "P36 minus L8",
+    "order_reason": "the saturations commute, while H8-first removes the known old-r48 L8 x P5 component before the b1 computation",
+    "outside_coordinates": [
+      0,
+      1,
+      2,
+      3,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "outside_ideal_name": "H8",
+    "saturation_order_stageB": [
+      "H8",
+      "b1 irrelevant ideal"
+    ]
+  },
+  "prime": 89,
+  "status": "JOBS_GENERATED_NOT_LAUNCHED",
+  "theorem_logic": {
+    "nonunit_guard": "a nonunit, timeout, crash, or missing output is only a contraction nonverdict and is not a true incidence point",
+    "stageB": "closed-L8 emptiness plus a unit from either Stage-B H8-complement job proves true Stage B empty globally",
+    "stageC": "a closed-L8 Stage-C unit plus the new-r43 Stage-C H8-complement unit proves true Stage C empty globally"
+  }
+}

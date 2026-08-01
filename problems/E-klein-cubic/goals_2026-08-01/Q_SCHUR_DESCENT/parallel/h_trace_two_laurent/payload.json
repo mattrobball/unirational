@@ -1,0 +1,50 @@
+{
+  "coefficient_scope": "C constants, equivalently one formal scalar t independent of the r_i",
+  "coefficient_vector": [
+    "1",
+    "t",
+    "2*t",
+    "2*t^2",
+    "t^2",
+    "t^3"
+  ],
+  "counts": {
+    "coefficient_viable_partitions": 9,
+    "integer_solvable_systems": 9,
+    "nondegenerate_hits": 0,
+    "partitions": 203,
+    "shift_systems": 7125,
+    "verified_hits": 9
+  },
+  "cyclic_action_matrix": [
+    [0, 0, 0, -1],
+    [1, 0, 0, -1],
+    [0, 1, 0, -1],
+    [0, 0, 1, -1]
+  ],
+  "format": "H-11_5-TRACE-TWO-LAURENT-v1",
+  "hit_summary": {
+    "all_common_roots": "t=-1",
+    "all_nullities": 4,
+    "all_shift_tuples_zero": true,
+    "all_w_projections_zero": true,
+    "consequence": "u=v and t=-1, hence a=0"
+  },
+  "offset_matrices": [
+    "0",
+    "S",
+    "I",
+    "I+S",
+    "2I",
+    "2I+S"
+  ],
+  "quotient_lattice": "Z^5/Z(1,1,1,1,1), represented by exponents of r0,r1,r2,r3 with r4=(r0*r1*r2*r3)^-1",
+  "scope_exclusions": [
+    "nonconstant coefficients in K=E^<sigma>",
+    "three or more Laurent monomials",
+    "arbitrary rational functions in E",
+    "a rational-point or pointlessness decision"
+  ],
+  "theorem": "Every nonzero Laurent polynomial a with at most two monomials and coefficients in C has Tr(r2^-1*a^2*sigma(a)) nonzero."
+}
+

@@ -1,0 +1,65 @@
+{
+  "authoritative_inputs": {
+    "bridge": "660577dd5848eb5f9acb747b4c82877968d3ba5c59181581eb4ba8907d8aa2f8",
+    "exact_strata": "a630b3a85d41eb0b60902a81cf8851c15fd0aa9c615c2d8a36584071dca34810",
+    "exact_weil": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
+    "goal": "8b2e48f89ebc8daa971e618d341390e6803d21f22f411b88abb3dcc28cf0ef2f",
+    "normal_characters": "8cb2a9a7d8b0405672308fc300cecd639de994cd73e29ef272328fa919e5b671",
+    "twists": "e97a32d6f22a8028528bc2b4d27ee009901caeb047fd2ffe5ac2bdd1fab743cd"
+  },
+  "exit": "H-11_5-NORM-MODEL-PASS",
+  "files": {
+    "BRIDGE.md": "9ce1aa0f334ae6a0943ccdc197e1d2721c19946b72ce39a42e80956d848a11aa",
+    "COMPLETION_AUDIT.md": "a6f94024e807185059480b26b4afbda234e30b1eaef4c57c736b2da0a0bbdcda",
+    "FIELD_MODEL.md": "a294d808585cb550cfe60c08559f4a8bc027977bf6292d83833a6efb2e22e745",
+    "NORM_MODEL.md": "566448f33a3157c0e3ff2a5976b7af27e65440efa408442dd262ff5f933af5fd",
+    "POINT_OR_VALUATION.md": "2501dfc6781c74202924588a95593bf3ce88cb54c06a498d52f34a2e091aaefd",
+    "README.md": "55969df7794e06b391400b7a4ba43823c43721c3c82d0327a407bf9623f037c4",
+    "REPLAY.md": "0b724aad29dd53348f707449c013ea398d0fea833c5fdcc009ecb45701d7cc77",
+    "SOURCE_BINDING.md": "9be0358c6d95a9ed32fcd6f1b09334abbeac0b05dce5e736da8479ebbe1ae226",
+    "STATUS.md": "44b2e152e440ce0d692c08b20ef3f0d929259b1ccdc00a6bb891f32c41b58b02",
+    "TWIST_MODEL.md": "f4c780fefe0dbd32a1f74fe6cad8fc2493b1210ca51e83a552624f05594f9b48",
+    "WORK_SCOPE.md": "3626c751e91522bc4de4ca3c46de4866dcd4182e7a1cd2a8f2cbcdd88c66ab91",
+    "decision.json": "2517208d05c71d7493a6b606d8460c13e41bb409077a7dfb385da99eb443a592",
+    "field_model.json": "80fdc908633595d6bb3c292d0027aa66295a850b9b6a12cc473f90e3e373ba1e",
+    "norm_model.json": "1f61adc24bc15bf296b7199f4e13dfa5f538691984d6f623efa8feb9531dc49e",
+    "produce.py": "55424f7732deb7f03ade3bcb565418b4a18ecf6c0445567e5dfeb69b54f55a6d",
+    "seal.py": "2f791ba0e374adc64bd5cd78abe9b15bf9cf4003078313cf20b0584cdf6fccb3",
+    "twist_model.json": "9a5f69b43de4b33aa0185b4714e23bc177b12f74a529510b0b8b4b9ab5e49a11",
+    "verify.py": "33097514c1e6abc823200adf00d86a735f60be0ea5433d8f85c7dd894f77d599"
+  },
+  "format": "H-11_5-GENERIC-TWIST-SEAL-v1",
+  "hash_algorithm": "sha256",
+  "headline": "OPEN",
+  "not_proved": [
+    "a K-rational point",
+    "pointlessness over K",
+    "an unramified-cohomology obstruction",
+    "a decisive valuation",
+    "any positive or negative PSL2(F11) headline"
+  ],
+  "pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "produced_commit": null,
+  "proved": [
+    "minimal rational presentation K=C(U1,U2,U3,U4)",
+    "exact degree-5 cyclic and degree-11 Kummer tower with forward and inverse maps",
+    "exact trace equation Tr_E/K(r2^-1*a^2*sigma(a))=0",
+    "exact invariant transition to the authoritative canonical Hilbert-90 frame",
+    "degree-five closed point and index-one boundary",
+    "nonexistence of a pure Laurent-monomial trace point",
+    "the cyclic coefficient has exact order 11 modulo the degree-33 isogeny d -> d^2*sigma(d)"
+  ],
+  "replay": [
+    "produce.py",
+    "seal.py",
+    "verify.py"
+  ],
+  "repository_commit_consumed": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "scope": "Exact invariant-field, Kummer/cyclic tower, and norm-trace model for the canonical generic 11:5 twist; no K-point or pointlessness theorem.",
+  "self_hash_excluded": true,
+  "terminal_markers": [
+    "H_11_5_PRODUCE_OK",
+    "H_11_5_SEAL_OK",
+    "H_11_5_INDEPENDENT_VERIFY_OK"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/opt/homebrew/bin/Singular",
+    "-q",
+    "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/module_r12_hom_C.sing"
+  ],
+  "complete": false,
+  "elapsed_seconds": 30.037834,
+  "input": "module_r12_hom_C.sing",
+  "input_bytes": 6583120,
+  "input_sha256": "99f06a2c66e60674c3140a4fceb50d50c102d1ceab93a4f4f081bf4dfd9e37a0",
+  "log": "module_r12_hom_C.log",
+  "log_bytes": 76,
+  "log_sha256": "4e16c0e5c867eb0410464a3793ccb59545ea737168427b42d050e66a19381f00",
+  "peak_rss_bytes_polled": 1009893376,
+  "returncode": -9,
+  "rss_limit_bytes": 2147483648,
+  "stop_reason": "timeout",
+  "timeout_seconds": 30.0
+}

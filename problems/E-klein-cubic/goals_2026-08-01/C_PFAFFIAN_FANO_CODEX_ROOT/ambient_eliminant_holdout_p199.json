@@ -1,0 +1,54 @@
+{
+  "format": "ambient-eliminant-unused-prime-holdout-v1",
+  "scope": "auxiliary degree-12 chart only",
+  "reconstruction_primes": [
+    23,
+    67,
+    89
+  ],
+  "holdout_prime": 199,
+  "checks": [
+    {
+      "zeta11": 18,
+      "c": 167,
+      "predicted_eliminant": [
+        26,
+        73,
+        94,
+        1
+      ],
+      "observed_eliminant": [
+        32,
+        83,
+        147,
+        1
+      ],
+      "matches_prediction": false,
+      "rational_roots": [
+        7
+      ]
+    },
+    {
+      "zeta11": 125,
+      "c": 31,
+      "predicted_eliminant": [
+        111,
+        27,
+        67,
+        1
+      ],
+      "observed_eliminant": [
+        92,
+        156,
+        114,
+        1
+      ],
+      "matches_prediction": false,
+      "rational_roots": [
+        57
+      ]
+    }
+  ],
+  "three_prime_candidate_passes_holdout": false,
+  "theorem_boundary": "a failed holdout rejects the three-prime rational reconstruction; a pass would still not reconstruct the RUR coordinate functions"
+}

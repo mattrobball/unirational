@@ -1,0 +1,122 @@
+{
+  "degree_31_exact_linear_conclusion": "There is a fixed 197-dimensional characteristic-zero subspace of positive invariant multiples, so the linear indecomposable-module quotient has dimension at most one. The two special fibres have dimension one; no characteristic-zero upper-rank theorem for every positive-multiple circuit is claimed here.",
+  "degree_35_exact_linear_conclusion": "The 361 fixed positive-multiple circuits are independent in characteristic zero and lie in the 361-dimensional exact K1_35; hence the linear indecomposable-module quotient is exactly zero.",
+  "degrees": {
+    "31": {
+      "ambient_m1_dimension": 198,
+      "characteristic_zero_quotient_upper_bound": 1,
+      "circuits": "degree_31/positive_multiple_circuits.json",
+      "circuits_sha256": "29d63b047c6b296e75a0034f5cd7580073b356282a89cd0a6fd4f3864caa8d35",
+      "fixed_positive_multiple_subspace_dimension": 197
+    },
+    "35": {
+      "ambient_m1_dimension": 361,
+      "characteristic_zero_quotient_upper_bound": 0,
+      "circuits": "degree_35/positive_multiple_circuits.json",
+      "circuits_sha256": "7703511288e002a7184c825901d7a16012f5e8b9272711333c9f24ebfc66225c",
+      "fixed_positive_multiple_subspace_dimension": 361
+    }
+  },
+  "prime_records": {
+    "419": {
+      "degrees": {
+        "31": {
+          "all_positive_multiplier_candidate_rank": 197,
+          "ambient_m1_dimension": 198,
+          "candidates_tested": 1258,
+          "fixed_selected_rank": 197,
+          "payload": "positive_multiples_p419.npz",
+          "payload_sha256": "74c4a529d122597da99f29919d0804a4b8a54c0c7b3f969a90a8cff493481a28",
+          "rank_increments_by_multiplier_degree": {
+            "10": 27,
+            "11": 34,
+            "12": 42,
+            "13": 15,
+            "14": 16,
+            "3": 1,
+            "6": 13,
+            "7": 4,
+            "8": 14,
+            "9": 31
+          },
+          "special_fibre_linear_indecomposable_quotient_dimension": 1
+        },
+        "35": {
+          "all_positive_multiplier_candidate_rank": 361,
+          "ambient_m1_dimension": 361,
+          "candidates_tested": 5719,
+          "fixed_selected_rank": 361,
+          "payload": "positive_multiples_p419.npz",
+          "payload_sha256": "86b1e936be3b388b59c5ae5dd74d12eeb641245fecafdb4571b6bcb0ca92b395",
+          "rank_increments_by_multiplier_degree": {
+            "10": 4,
+            "11": 17,
+            "12": 33,
+            "13": 32,
+            "14": 58,
+            "15": 72,
+            "16": 69,
+            "17": 39,
+            "18": 34,
+            "6": 1,
+            "9": 2
+          },
+          "special_fibre_linear_indecomposable_quotient_dimension": 0
+        }
+      },
+      "prime": 419,
+      "zeta11": 13
+    },
+    "463": {
+      "degrees": {
+        "31": {
+          "all_positive_multiplier_candidate_rank": 197,
+          "ambient_m1_dimension": 198,
+          "candidates_tested": 1258,
+          "fixed_selected_rank": 197,
+          "payload": "positive_multiples_p463.npz",
+          "payload_sha256": "687afbb658f093a749db42170e5bedcd0d139072fe07acbaf66ae1a3a17542bd",
+          "rank_increments_by_multiplier_degree": {
+            "10": 27,
+            "11": 34,
+            "12": 42,
+            "13": 15,
+            "14": 16,
+            "3": 1,
+            "6": 13,
+            "7": 4,
+            "8": 14,
+            "9": 31
+          },
+          "special_fibre_linear_indecomposable_quotient_dimension": 1
+        },
+        "35": {
+          "all_positive_multiplier_candidate_rank": 361,
+          "ambient_m1_dimension": 361,
+          "candidates_tested": 5719,
+          "fixed_selected_rank": 361,
+          "payload": "positive_multiples_p463.npz",
+          "payload_sha256": "919c4c50f9992d03dd7bd0fab72cdacc5c4294a9d899c0a72d00a31b93d387ee",
+          "rank_increments_by_multiplier_degree": {
+            "10": 4,
+            "11": 17,
+            "12": 33,
+            "13": 32,
+            "14": 58,
+            "15": 72,
+            "16": 69,
+            "17": 39,
+            "18": 34,
+            "6": 1,
+            "9": 2
+          },
+          "special_fibre_linear_indecomposable_quotient_dimension": 0
+        }
+      },
+      "prime": 463,
+      "zeta11": 15
+    }
+  },
+  "schema": "cov-m1-primitive-module-audit-v1",
+  "scope_warning": "The linear quotient K1_d/(R_+ K1)_d is not a quotient on which the nonlinear equation F(p)=0 descends. A sum of invariant multiples need not have a common scalar divisor. Therefore even a zero module quotient does not authorize deleting the full degree-d landing scheme."
+}

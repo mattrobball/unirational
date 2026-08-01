@@ -1,0 +1,23 @@
+EXPORTED 10 INTEGRAL INVARIANT GENERATORS
+SEALED 70 FILES
+inputs: 9 hashes and open P25 dependency OK
+canonical d=31: 410 -> K1 198 OK
+canonical d=35: 637 -> K1 361 OK
+ordered equalizer d=31: 8 stages, dim 198 OK
+ordered equalizer d=35: 8 stages, dim 361 OK
+module d=31: positive span 197, linear quotient <= 1 OK
+module d=35: positive span 361, linear quotient <= 0 OK
+primitive d=31: exact R_+ sum with component gcd one OK
+primitive d=35: exact R_+ sum with component gcd one OK
+C3/C6 gate p=463: d31 rank 11, d35 rank 13 OK
+C3/C6 gate p=727: d31 rank 11, d35 rank 13 OK
+C3-reduced d=31: 5349 cubics on 187; based 177, 10 nonbased charts OK
+C3-reduced d=35: 8555 cubics on 348; based 336, 12 nonbased charts OK
+landing d=31, p=419: 5349 complete nodal cubics, rebuilt det=384, circuit spot-check OK
+landing d=31, p=463: 5349 complete nodal cubics, rebuilt det=165, circuit spot-check OK
+landing d=31: independent nodal frame certificate crosscheck OK
+landing d=35, p=419: 8555 complete nodal cubics, rebuilt det=30, circuit spot-check OK
+landing d=35, p=463: 8555 complete nodal cubics, rebuilt det=190, circuit spot-check OK
+landing d=35: independent nodal frame certificate crosscheck OK
+seal: 70 content hashes OK
+COV_M1_DEG31_35_VERIFY_OK

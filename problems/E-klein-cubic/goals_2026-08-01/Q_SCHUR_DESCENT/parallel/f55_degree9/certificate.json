@@ -1,0 +1,50 @@
+{
+  "schema": "klein-f55-degree9-singleton-deletion-certificate-v1",
+  "source_binding": {
+    "repository_head_at_discovery": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+    "reference_model": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/probe_f55_covariants.py",
+    "reference_model_sha256": "eb86170525f680acd8bc5e730b8e902b0fd23aeb2b67a9e1822e453571271952",
+    "self_contained_generator": "generate_instance.py"
+  },
+  "normal_form": {
+    "group": "H=11:5=C11 semidirect C5",
+    "c11_weights": [1, 9, 4, 3, 5],
+    "c5_action": "cyclic coordinate shift",
+    "klein_cubic": "sum_i q_i^2*q_(i+1)",
+    "degree": 9,
+    "projective_characters_mod_5": [0, 1, 2, 3, 4]
+  },
+  "split_good_fibre": {
+    "prime": 331,
+    "primitive_fifth_root": 64,
+    "prime_mod_55": 1
+  },
+  "complete_instance": {
+    "coefficient_dimension": 65,
+    "equation_count": 2860,
+    "coefficient_term_count": 697125,
+    "term_support_sha256_all_characters": "15e485e551f520f7f971038308c6f7a2bee3e28cd58535c2b7a9ac8058a30bcb",
+    "generated_instance_bytes": 11165448,
+    "generated_instance_sha256": "6d76ef7393f5a03131787ec149b9e6f3c43d39464befac19c8bebe312730be03"
+  },
+  "deletion_certificate": {
+    "equation_order": "reverse",
+    "singleton_choice": "fewest distinct coefficient variables",
+    "branch_order": "lower global coefficient-term occurrence count first",
+    "terminal_result": "NO_STOPPING_SUPPORT",
+    "visited_nodes": 26912397,
+    "memoized_supports_seen": 26912397,
+    "terminal_transcript": "terminal_reverse.out"
+  },
+  "theorem": "Every nonempty coefficient support for every degree-nine projective-character H=11:5 homogeneous covariant has a landing equation with exactly one active coefficient monomial. Hence all five degree-nine projective landing schemes are empty over algebraic closure of F_331 and, by proper specialization, in characteristic zero.",
+  "scope": [
+    "complete homogeneous coefficient space in degree nine",
+    "all five projective C5 characters",
+    "singleton-support exclusion only"
+  ],
+  "strict_nonclaims": [
+    "no all-degree covariant exclusion",
+    "no pointlessness theorem for the generic 11:5 twist",
+    "no point or pointlessness theorem for the genuine Schur twist"
+  ]
+}

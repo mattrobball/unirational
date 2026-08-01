@@ -1,0 +1,8 @@
+ring r=331,(c0,c1,c2),dp;
+ideal I=1*c0*c0*c0+2*c1*c1*c2,1*c0*c0*c1,2*c0*c0*c1+1*c0*c0*c2,2*c0*c1*c1,1*c0*c1*c1+2*c0*c1*c2,2*c0*c0*c2+2*c0*c1*c2+2*c0*c2*c2,2*c0*c1*c2+1*c2*c2*c2,2*c0*c0*c2+2*c0*c1*c2+2*c0*c2*c2,1*c1*c1*c1,1*c1*c1*c2,1*c0*c0*c0+2*c1*c1*c2,2*c1*c2*c2,1*c0*c2*c2,1*c1*c2*c2,2*c0*c1*c2+1*c2*c2*c2,1*c0*c0*c0+2*c1*c1*c2,1*c0*c0*c1,2*c0*c0*c1+1*c0*c0*c2,2*c0*c1*c1,1*c0*c1*c1+2*c0*c1*c2,2*c0*c0*c2+2*c0*c1*c2+2*c0*c2*c2,2*c0*c1*c2+1*c2*c2*c2,2*c0*c0*c2+2*c0*c1*c2+2*c0*c2*c2,1*c1*c1*c1,1*c1*c1*c2,2*c1*c2*c2,1*c0*c2*c2,1*c1*c2*c2,2*c0*c1*c2+1*c2*c2*c2,1*c0*c0*c0+2*c1*c1*c2,1*c0*c0*c1,2*c0*c0*c1+1*c0*c0*c2,2*c0*c1*c1,1*c0*c1*c1+2*c0*c1*c2,2*c0*c0*c2+2*c0*c1*c2+2*c0*c2*c2,2*c0*c1*c2+1*c2*c2*c2,1*c1*c1*c1,1*c1*c1*c2,2*c1*c2*c2,1*c0*c2*c2,1*c1*c2*c2,1*c0*c0*c0+2*c1*c1*c2,1*c0*c0*c1,2*c0*c0*c1+1*c0*c0*c2,2*c0*c1*c1,1*c0*c1*c1+2*c0*c1*c2,1*c1*c1*c1,1*c1*c1*c2,2*c1*c2*c2,1*c0*c2*c2,1*c1*c2*c2,1*c0*c0*c1,2*c0*c0*c1+1*c0*c0*c2,2*c0*c1*c1,1*c0*c1*c1+2*c0*c1*c2,1*c1*c1*c1,1*c1*c1*c2,2*c1*c2*c2,1*c0*c2*c2,1*c1*c2*c2;
+option(redSB);
+ideal G=std(I);
+print("BASIS_SIZE="+string(size(G)));
+print("DIM="+string(dim(G)));
+print("VDIM="+string(vdim(G)));
+quit;

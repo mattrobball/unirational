@@ -1,0 +1,604 @@
+{
+  "base": {
+    "dimension": 4,
+    "extra_localization": "h4 is invertible",
+    "hyperplane_identification": "M_h -> P3 uses [X0:X1:X2:X3] and X4=-(h0*X0+...+h3*X3)/h4",
+    "marked_point_coordinates": "P_i,j(h), 0<=j<=3, are read from universal_points.coefficient_tensor in universal_marked_family.json",
+    "ring": "Z[z,h0,h1,h2,h3,h4,Delta^-1]/(1+z+...+z^10)"
+  },
+  "branches": {
+    "epsilon_0": {
+      "carrier": null,
+      "compressed_open": "rank of the 96x11 point-ideal matrix is 11",
+      "equations": "incidence ideal",
+      "nonemptiness": "UNDECIDED",
+      "open": "rank(Sub5)=56, i.e. the union of principal opens of its 56x56 minors",
+      "rao_d0_to_5": [
+        0,
+        16,
+        29,
+        38,
+        42,
+        40
+      ]
+    },
+    "epsilon_1": {
+      "carrier_equation": "F5_h(X)+F3_h(X)*Q2(X)=0",
+      "carrier_uniqueness": "rank 55 gives a one-dimensional quintic kernel; primality and f3 not in I_C force nonzero F5 coefficient, hence a unique Q2",
+      "carrier_variables": [
+        "q_2_0_0_0",
+        "q_1_1_0_0",
+        "q_1_0_1_0",
+        "q_1_0_0_1",
+        "q_0_2_0_0",
+        "q_0_1_1_0",
+        "q_0_1_0_1",
+        "q_0_0_2_0",
+        "q_0_0_1_1",
+        "q_0_0_0_2"
+      ],
+      "compressed_rank_locus": "the 96x11 point-ideal matrix has rank 10 and its one-dimensional kernel has nonzero F5 coordinate",
+      "equations_alternative": "the 96 binary coefficients of F5_h(c)+F3_h(c)*Q2(c) vanish, together with incidence and rank(Sub5)=55",
+      "nonemptiness": "UNDECIDED",
+      "rank_locus": "I_56(Sub5)=0 and rank(Sub5)=55 (open cover by 55x55 minors)",
+      "rao_d0_to_5": [
+        0,
+        16,
+        29,
+        38,
+        42,
+        41
+      ],
+      "restricted_forms": "F3_h=h4^3*f3(X0,X1,X2,X3,-(sum_0^3 h_j*X_j)/h4), similarly F5_h with h4^5"
+    }
+  },
+  "carrier_picard_boundary": {
+    "actual_special_carrier_picard": "UNDECIDED",
+    "base_curve": "Y=V(F3_h,F5_h) is 3H on every S_q",
+    "epsilon_1_family": "S_q=V(F5_h+F3_h*Q2), q in A10",
+    "liaison_does_not_close": "negative residual genus for second carrier degrees 6,7 still allows disconnected or nonreduced residuals",
+    "rank_one_implication": "Pic(S_q)=Z*H excludes degree 19 because H^2=5",
+    "smooth_carrier_adjunction": {
+      "C_dot_H": 19,
+      "C_square": -21
+    }
+  },
+  "degree_five_compressed_point_ideal": {
+    "columns": "the ten substitutions of F3_h(X)*X^beta for |beta|=2, followed by F5_h(X)",
+    "entry_formula": "binary coefficient extraction after X_j=c_j(s,t)",
+    "epsilon_0": "rank 11",
+    "epsilon_1": "rank 10 and the kernel vector has nonzero F5 coordinate",
+    "justification": "incidence gives I_C(5) subset I_Z(5)=F3_h*S2 direct-sum <F5_h>, so this compressed kernel equals the full quintic kernel",
+    "shape": [
+      96,
+      11
+    ]
+  },
+  "degree_five_substitution": {
+    "column_count": 56,
+    "columns": [
+      [
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        1,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        1,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        1
+      ],
+      [
+        3,
+        2,
+        0,
+        0
+      ],
+      [
+        3,
+        1,
+        1,
+        0
+      ],
+      [
+        3,
+        1,
+        0,
+        1
+      ],
+      [
+        3,
+        0,
+        2,
+        0
+      ],
+      [
+        3,
+        0,
+        1,
+        1
+      ],
+      [
+        3,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        3,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        3,
+        0
+      ],
+      [
+        2,
+        0,
+        2,
+        1
+      ],
+      [
+        2,
+        0,
+        1,
+        2
+      ],
+      [
+        2,
+        0,
+        0,
+        3
+      ],
+      [
+        1,
+        4,
+        0,
+        0
+      ],
+      [
+        1,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        3,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        3,
+        0
+      ],
+      [
+        1,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        0,
+        3
+      ],
+      [
+        1,
+        0,
+        4,
+        0
+      ],
+      [
+        1,
+        0,
+        3,
+        1
+      ],
+      [
+        1,
+        0,
+        2,
+        2
+      ],
+      [
+        1,
+        0,
+        1,
+        3
+      ],
+      [
+        1,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        1,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        1
+      ],
+      [
+        0,
+        3,
+        2,
+        0
+      ],
+      [
+        0,
+        3,
+        1,
+        1
+      ],
+      [
+        0,
+        3,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        3,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        4,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        1
+      ],
+      [
+        0,
+        1,
+        2,
+        2
+      ],
+      [
+        0,
+        1,
+        1,
+        3
+      ],
+      [
+        0,
+        1,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        1
+      ],
+      [
+        0,
+        0,
+        3,
+        2
+      ],
+      [
+        0,
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        5
+      ]
+    ],
+    "entry_degree_in_a": 5,
+    "entry_formula": "Sub5[b,alpha]=coefficient of s^(95-b)t^b in product_j c_j(s,t)^alpha_j",
+    "kernel_identification": "on the closed-immersion open, ker(Sub5)=I_C(5)",
+    "row_count": 96,
+    "rows": [
+      "s^95*t^0",
+      "s^94*t^1",
+      "s^93*t^2",
+      "s^92*t^3",
+      "s^91*t^4",
+      "s^90*t^5",
+      "s^89*t^6",
+      "s^88*t^7",
+      "s^87*t^8",
+      "s^86*t^9",
+      "s^85*t^10",
+      "s^84*t^11",
+      "s^83*t^12",
+      "s^82*t^13",
+      "s^81*t^14",
+      "s^80*t^15",
+      "s^79*t^16",
+      "s^78*t^17",
+      "s^77*t^18",
+      "s^76*t^19",
+      "s^75*t^20",
+      "s^74*t^21",
+      "s^73*t^22",
+      "s^72*t^23",
+      "s^71*t^24",
+      "s^70*t^25",
+      "s^69*t^26",
+      "s^68*t^27",
+      "s^67*t^28",
+      "s^66*t^29",
+      "s^65*t^30",
+      "s^64*t^31",
+      "s^63*t^32",
+      "s^62*t^33",
+      "s^61*t^34",
+      "s^60*t^35",
+      "s^59*t^36",
+      "s^58*t^37",
+      "s^57*t^38",
+      "s^56*t^39",
+      "s^55*t^40",
+      "s^54*t^41",
+      "s^53*t^42",
+      "s^52*t^43",
+      "s^51*t^44",
+      "s^50*t^45",
+      "s^49*t^46",
+      "s^48*t^47",
+      "s^47*t^48",
+      "s^46*t^49",
+      "s^45*t^50",
+      "s^44*t^51",
+      "s^43*t^52",
+      "s^42*t^53",
+      "s^41*t^54",
+      "s^40*t^55",
+      "s^39*t^56",
+      "s^38*t^57",
+      "s^37*t^58",
+      "s^36*t^59",
+      "s^35*t^60",
+      "s^34*t^61",
+      "s^33*t^62",
+      "s^32*t^63",
+      "s^31*t^64",
+      "s^30*t^65",
+      "s^29*t^66",
+      "s^28*t^67",
+      "s^27*t^68",
+      "s^26*t^69",
+      "s^25*t^70",
+      "s^24*t^71",
+      "s^23*t^72",
+      "s^22*t^73",
+      "s^21*t^74",
+      "s^20*t^75",
+      "s^19*t^76",
+      "s^18*t^77",
+      "s^17*t^78",
+      "s^16*t^79",
+      "s^15*t^80",
+      "s^14*t^81",
+      "s^13*t^82",
+      "s^12*t^83",
+      "s^11*t^84",
+      "s^10*t^85",
+      "s^9*t^86",
+      "s^8*t^87",
+      "s^7*t^88",
+      "s^6*t^89",
+      "s^5*t^90",
+      "s^4*t^91",
+      "s^3*t^92",
+      "s^2*t^93",
+      "s^1*t^94",
+      "s^0*t^95"
+    ]
+  },
+  "incidence_ideal": {
+    "ambient_dimension_before_equations": 190,
+    "coefficient_source": "the exact cyclotomic integer tensor in universal_marked_family.json",
+    "dimension_ledger": "80 + 52 + 54 + 4 - 220 = -30",
+    "equation_count": 220,
+    "equations": "E_i,j = c_j(s_i,t_i)-lambda_i*P_i,j(h), for 0<=i<=54 and 0<=j<=3, with the four normalizations substituted",
+    "expected_fixed_h_dimension": -34,
+    "expected_relative_dimension": -30,
+    "warning": "expected dimension is not an actual dimension or an emptiness proof"
+  },
+  "normalized_map_atlas": {
+    "binary_forms": "c_j(s,t)=sum_{k=0}^19 a_jk*s^(19-k)*t^k, 0<=j<=3",
+    "coefficient_variables": 80,
+    "normalization": [
+      "alpha_0=[1:0]",
+      "alpha_1=[0:1]",
+      "alpha_2=[1:1]",
+      "lambda_0=1"
+    ],
+    "reason": "three distinct ordered marks give the unique PGL2 slice; lambda_0 removes the common scalar of the four forms",
+    "remaining_scale_variables": "lambda_i for 1<=i<=54",
+    "remaining_source_point_factors": 52,
+    "remaining_source_points": "alpha_i=[s_i:t_i] for 3<=i<=54"
+  },
+  "pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "qualification_localizations": {
+    "basepoint_free": "complement of the projection of V(c0,c1,c2,c3) in coefficient-space x P1; equivalently the open defined by the saturated elimination ideal ((c0,c1,c2,c3):(s,t)^infinity) intersect coefficient-ring",
+    "closed_immersion": "the open where P1 -> P3 is unramified and universally injective, expressed by Fitting ideals of Omega_map and the residual-to-diagonal ideal on P1 x P1",
+    "marked_source_distinct": "invert product_{0<=i<j<=54}(s_i*t_j-s_j*t_i), after inserting the three normalized pairs",
+    "multiplicity_one_at_marks": "invert the 55 values of the pulled-back cubic divided by the simple source factors at the marked parameters",
+    "nondegenerate": "invert a 4x4 coefficient minor of the four binary forms (open cover over all such minors)",
+    "nonzero_image_scales": "invert product_{i=1}^54 lambda_i",
+    "note": "these are exact finite saturation/Fitting constructions; each is an open cover, not an asserted nonempty condition",
+    "proper_cubic_intersection": "f3 is not in the image ideal"
+  },
+  "repository_commit_consumed": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "schema": "s19-marked-component-presentation-v1",
+  "scope": {
+    "curves_parameterized": "closed immersions P1 -> P3 of degree 19 through the 55 ordered sections",
+    "descent": "the PSL(2,11)-equivariant labelled presentation twists to an F-scheme; an F-point, not merely a geometric point, is required",
+    "split_model": "the cyclotomic splitting cover of the genuine Schur twist",
+    "why_complete_for_target": "a geometrically integral curve with Hilbert polynomial 19*t+1 is smooth genus zero; its odd degree-55 point makes the genus-zero curve split over F"
+  },
+  "smallest_remaining_finite_problem": {
+    "epsilon_0_test": "saturate the 220-equation incidence ideal by the qualification opens and an 11-minor of the compressed point-ideal matrix, then eliminate map/source variables to the h-ring",
+    "epsilon_1_test": "use the 220 incidence equations plus rank 10 of the compressed 96x11 matrix (or the 96 carrier coefficients), require nonzero F5 kernel coordinate, saturate, then eliminate to (h,q) and to h",
+    "question": "does either saturated qualified incidence locus M_0 or M_1 dominate the good hyperplane base, and does its twist have an F-point?",
+    "required_negative_certificate": "a unit ideal or non-dominance eliminant after every stated saturation; unsaturated or modular-only emptiness is insufficient",
+    "required_positive_certificate": "exact F-rational normalized coefficients, source parameters, scales, and q for epsilon=1, followed by independent universal-ideal and residual checks"
+  },
+  "source_sha256": {
+    "certificates/schur_degree19/marked_hilbert.json": "161b61e7e94fc32fa1cb579cb7c50a8ecc304aae4e9a773afe5336adf1f09be0",
+    "certificates/schur_degree19/quintic_carriers.json": "2b13c2e9d53e0701a1a5a8c13f6cf42449c5fa7194821a434ca70eec93527859",
+    "certificates/schur_degree19/rao_resolutions.json": "dbca9a60622dece5dbb43ca2826538479a55b7cf2b511197a3d07588b34362b2",
+    "universal_marked_family.json": "3a808167611f66cb39369e243a9c38a9019ab5f7c6b7397d3c2636f3950c08fb"
+  },
+  "strict_nonclaims": [
+    "no point of either marked component is constructed",
+    "no actual component dimension is computed",
+    "neither Rao branch is excluded",
+    "the special carrier Picard group is not determined",
+    "no residual degree-two cycle or rational point is constructed",
+    "the Klein-cubic headline remains open"
+  ],
+  "terminal_marker": "S19_MARKED_COMPONENTS_FINITE_PRESENTATION_EXACT",
+  "universal_image_ideal": {
+    "finite_algorithm": "bihomogeneous saturation followed by elimination in the displayed rings",
+    "formula": "I_univ = (J_graph:(s,t)^infinity) intersect R[X0,X1,X2,X3]",
+    "graph_ideal": "J_graph=<X_j*c_k(s,t)-X_k*c_j(s,t):0<=j<k<=3>",
+    "validity": "on the basepoint-free closed-immersion open this is flat with Hilbert polynomial 19*t+1 and is the universal embedded image"
+  },
+  "vertical_deformation_at_any_geometric_point": {
+    "actual_dimension_consequence": "the qualified fixed-h locus is reduced and zero-dimensional at every geometric point; the relative qualified projection is unramified, so each component has the dimension of its image in the 4-dimensional hyperplane base (at most 4, and exactly 4 if dominant)",
+    "calculation": "both summands have degree at most -2; h1=(35-b1)+(35-b2)=34",
+    "marked_twist": "N_C/P3(-Z)=O(b1-36)+O(b2-36)",
+    "normal_bundle": "N_C/P3=O(19+b1)+O(19+b2), b1,b2>=2, b1+b2=36",
+    "obstruction_space_dimension_h1": 34,
+    "scope": "vertical tangent/obstruction for the fixed hyperplane and fixed 55-point divisor; nonzero H1 is not proof of actual obstruction",
+    "tangent_dimension_h0": 0,
+    "virtual_dimensions": {
+      "fixed_h": -34,
+      "relative_over_h": -30
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "exit": "P25-UNDECIDED",
+  "full_replay_requested": false,
+  "headline": "OPEN",
+  "no_unit_ideal_promoted": true,
+  "smallest_unresolved": "Stage B: b0=0,b1!=0 double saturation",
+  "verdict": "PASS"
+}

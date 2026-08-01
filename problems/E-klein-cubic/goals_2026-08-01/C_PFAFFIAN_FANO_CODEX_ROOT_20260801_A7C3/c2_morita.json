@@ -1,0 +1,810 @@
+{
+  "format": "c2-lazy-exact-morita-v1",
+  "scope": "exact C2 Morita data; not a common line and not a Fano point",
+  "field": "C(P(W))^PSL_2(F_11)",
+  "constant_presentation": {
+    "cyclotomic_generator": "zeta11",
+    "projector_parameter": "t",
+    "relation_source": "ambient_degree12_rur_char0.json",
+    "explanation": "C is algebraically closed, so a chosen root t is a constant already in the stated base field"
+  },
+  "projector_circuit": {
+    "bivector": "p(x,t)=sum_i c_i(t) R_i(x), using the 48 sealed degree-12 Reynolds maps",
+    "bivector_matrix": "P_ij=p_ij, P_ji=-p_ij",
+    "pairing": "s=sum_{i<j} Q_ij(x) p_ij(x,t)",
+    "formula": "e=-P Q/s",
+    "identities": [
+      "e^2=e",
+      "sigma(e)=e",
+      "reduced_rank(e)=2"
+    ]
+  },
+  "corner": {
+    "definition": "D=e A_proj e",
+    "basis_circuits": [
+      {
+        "kind": "projector"
+      },
+      {
+        "kind": "sandwich_frame",
+        "frame_index": 1
+      },
+      {
+        "kind": "sandwich_frame",
+        "frame_index": 2
+      },
+      {
+        "kind": "sandwich_frame",
+        "frame_index": 3
+      }
+    ],
+    "dimension": 4,
+    "multiplication": "multiply the sandwich circuits and recover four coordinates by the saved Cramer minor",
+    "involution": "sigma restricted to D",
+    "quaternion_symbol_circuit": {
+      "i": "d_r-star(d_r), with r selected below",
+      "j0": "d_s-star(d_s), with s selected below",
+      "j": "j0-((i*j0+j0*i)/(2*i^2))*i",
+      "a": "i^2",
+      "b": "j^2",
+      "relations": [
+        "i^2=a",
+        "j^2=b",
+        "i*j=-j*i"
+      ],
+      "selected_basis_indices": [
+        1,
+        2
+      ]
+    }
+  },
+  "morita": {
+    "module": "P=A_proj e as a right D-module",
+    "right_rank": 3,
+    "basis_generator_circuits": [
+      {
+        "kind": "identity"
+      },
+      {
+        "kind": "frame",
+        "frame_index": 1
+      },
+      {
+        "kind": "frame",
+        "frame_index": 2
+      }
+    ],
+    "hermitian_pairing": "h(xe,ye)=e sigma(x) y e",
+    "algebra_map": "A_proj -> End_D(P) by left multiplication"
+  },
+  "distinguished_hermitian_forms": {
+    "names": [
+      "x",
+      "C",
+      "D",
+      "E",
+      "K"
+    ],
+    "section_elements": "S_j=Q(x)^-1 Q(V_j(x)), V_j in [x,C,D,E,K]",
+    "entry_formula": "H_j[r,s]=e sigma(g_r) S_j g_s e",
+    "count": 5
+  },
+  "good_fibre_witness": {
+    "prime": 23,
+    "zeta11": 2,
+    "point": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "rur_root": 1,
+    "pairing": 3,
+    "projector_trace": 2,
+    "corner_basis_rows": [
+      0,
+      1,
+      6,
+      7
+    ],
+    "corner_basis_rank": 4,
+    "corner_basis_values": [
+      [
+        [
+          18,
+          10,
+          0,
+          12,
+          0,
+          20
+        ],
+        [
+          6,
+          10,
+          22,
+          0,
+          9,
+          10
+        ],
+        [
+          11,
+          16,
+          15,
+          6,
+          3,
+          21
+        ],
+        [
+          21,
+          5,
+          1,
+          18,
+          14,
+          20
+        ],
+        [
+          15,
+          6,
+          13,
+          16,
+          21,
+          4
+        ],
+        [
+          22,
+          18,
+          16,
+          2,
+          17,
+          12
+        ]
+      ],
+      [
+        [
+          12,
+          2,
+          3,
+          20,
+          19,
+          11
+        ],
+        [
+          8,
+          22,
+          15,
+          4,
+          3,
+          10
+        ],
+        [
+          1,
+          16,
+          18,
+          19,
+          22,
+          5
+        ],
+        [
+          10,
+          4,
+          1,
+          3,
+          14,
+          18
+        ],
+        [
+          4,
+          8,
+          16,
+          13,
+          17,
+          15
+        ],
+        [
+          12,
+          1,
+          2,
+          16,
+          5,
+          22
+        ]
+      ],
+      [
+        [
+          10,
+          8,
+          5,
+          19,
+          1,
+          20
+        ],
+        [
+          8,
+          5,
+          21,
+          5,
+          18,
+          13
+        ],
+        [
+          0,
+          21,
+          21,
+          15,
+          18,
+          22
+        ],
+        [
+          7,
+          7,
+          21,
+          12,
+          18,
+          17
+        ],
+        [
+          9,
+          7,
+          2,
+          14,
+          5,
+          11
+        ],
+        [
+          4,
+          21,
+          6,
+          19,
+          15,
+          10
+        ]
+      ],
+      [
+        [
+          0,
+          11,
+          11,
+          21,
+          16,
+          17
+        ],
+        [
+          6,
+          0,
+          12,
+          6,
+          7,
+          5
+        ],
+        [
+          2,
+          17,
+          21,
+          1,
+          18,
+          14
+        ],
+        [
+          17,
+          5,
+          16,
+          14,
+          17,
+          9
+        ],
+        [
+          14,
+          7,
+          12,
+          19,
+          7,
+          19
+        ],
+        [
+          19,
+          21,
+          13,
+          11,
+          21,
+          11
+        ]
+      ]
+    ],
+    "corner_star_matrix_columns": [
+      [
+        1,
+        2,
+        17,
+        7
+      ],
+      [
+        0,
+        22,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        22,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        22
+      ]
+    ],
+    "corner_multiplication_left_right_coordinates": [
+      [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          22,
+          14,
+          21
+        ],
+        [
+          17,
+          5,
+          3,
+          11
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          5,
+          18,
+          11,
+          2
+        ],
+        [
+          12,
+          0,
+          17,
+          0
+        ],
+        [
+          12,
+          20,
+          2,
+          22
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          20,
+          14
+        ],
+        [
+          6,
+          3,
+          5,
+          18
+        ],
+        [
+          4,
+          0,
+          0,
+          7
+        ]
+      ]
+    ],
+    "quaternion_symbol": {
+      "i_source_basis_index": 1,
+      "j0_source_basis_index": 2,
+      "orthogonalization_scalar_mod_23": 0,
+      "i_coordinates_mod_23": [
+        21,
+        2,
+        0,
+        0
+      ],
+      "j_coordinates_mod_23": [
+        6,
+        0,
+        2,
+        0
+      ],
+      "ij_coordinates_mod_23": [
+        15,
+        8,
+        6,
+        15
+      ],
+      "a_mod_23": 8,
+      "b_mod_23": 15
+    },
+    "morita_basis_rank": 12,
+    "hermitian_matrices_D_coordinates": [
+      [
+        [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            22,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            8,
+            6,
+            1
+          ]
+        ],
+        [
+          [
+            17,
+            0,
+            22,
+            0
+          ],
+          [
+            14,
+            15,
+            17,
+            22
+          ],
+          [
+            4,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            14,
+            2,
+            12
+          ],
+          [
+            7,
+            4,
+            3,
+            19
+          ]
+        ],
+        [
+          [
+            10,
+            9,
+            21,
+            11
+          ],
+          [
+            16,
+            0,
+            0,
+            0
+          ],
+          [
+            13,
+            11,
+            2,
+            13
+          ]
+        ],
+        [
+          [
+            15,
+            19,
+            20,
+            4
+          ],
+          [
+            22,
+            12,
+            21,
+            10
+          ],
+          [
+            20,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            5,
+            12,
+            10,
+            16
+          ]
+        ],
+        [
+          [
+            9,
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            22,
+            3,
+            6
+          ]
+        ],
+        [
+          [
+            12,
+            11,
+            13,
+            7
+          ],
+          [
+            0,
+            1,
+            20,
+            17
+          ],
+          [
+            11,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            14,
+            19,
+            14,
+            20
+          ],
+          [
+            20,
+            2,
+            0,
+            8
+          ]
+        ],
+        [
+          [
+            16,
+            4,
+            9,
+            3
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            9,
+            12,
+            6,
+            21
+          ]
+        ],
+        [
+          [
+            11,
+            21,
+            0,
+            15
+          ],
+          [
+            6,
+            11,
+            17,
+            2
+          ],
+          [
+            6,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            13,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            18,
+            21
+          ],
+          [
+            21,
+            12,
+            4,
+            1
+          ]
+        ],
+        [
+          [
+            21,
+            21,
+            5,
+            2
+          ],
+          [
+            20,
+            0,
+            0,
+            0
+          ],
+          [
+            21,
+            8,
+            21,
+            5
+          ]
+        ],
+        [
+          [
+            5,
+            11,
+            19,
+            22
+          ],
+          [
+            15,
+            15,
+            2,
+            18
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ]
+    ],
+    "hermitian_span_rank": 5,
+    "bivector": [
+      3,
+      1,
+      20,
+      7,
+      21,
+      10,
+      7,
+      19,
+      11,
+      20,
+      6,
+      18,
+      3,
+      9,
+      0
+    ]
+  },
+  "source_sha256": {
+    "char0_rur": "54c181762c3c5a263f1dc6522e39d8e690196c7acdc31dfa44f5043481ca3216",
+    "global_pluecker": "1a2f8dd96ee9323d3b6c52f0c9559471579168f5626df9931e21832801d73b75",
+    "compressed_algebra": "bfc2e6c5afcfac7c9925b916cad29098bc5033f1938dd9f0273febc067a55fbb",
+    "distinguished_five_plane": "edee4f7e07e95665044ba4fba85239154f4052f27d99b3cbcdd0f48b60d2378a"
+  },
+  "theorem_boundary": "C2 is installed lazily; C3 still requires one right D-line common to all five matrices"
+}

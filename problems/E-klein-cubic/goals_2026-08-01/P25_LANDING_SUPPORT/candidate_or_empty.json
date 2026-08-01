@@ -1,0 +1,43 @@
+{
+  "candidate": null,
+  "empty": null,
+  "exit": "P25-UNDECIDED",
+  "field": 89,
+  "generic_characteristic_zero_empty": null,
+  "headline": "OPEN",
+  "independently_replayed": {
+    "complete_landing_rank": 746,
+    "dvr_model": "PASS",
+    "monic_K3_pivots": 56,
+    "residual_seed_rows": 690,
+    "stageA": {
+      "exit": "P25W-STAGEA-EMPTY",
+      "flatten_rank": 690,
+      "kernel_dimension": 87,
+      "quadratic_span": "3828/3828"
+    },
+    "syzygy_contractions": "PASS: all 48 replay rows rebuild exactly"
+  },
+  "load_bearing_hashes": {
+    "relation_matrix_npz": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+    "linear_syzygies_256_npz": "f3787f317d851900de76da85ecb67018de5b48b0177d4e6e517634312f1c86a9",
+    "contracted_256_npz": "2e718c491172480e3aa3f055d5806d28a9414db2627e6daf3f0204bdc3b840ea",
+    "stageA_certificate_npz": "1ef6ffced4d3dc77f3a572dcef7a1e020772e0e40ca674bcb438c31610bade99",
+    "rowrank_replay_report_json": "cd4b7ae35d1394a1e39c7ef27162d8e3ed187adbfe5dec2eff79504d4ed72eb3"
+  },
+  "smallest_unresolved": {
+    "stage": "B",
+    "stratum": "b0=0,b1!=0",
+    "ideal": "<P3(q)b1>",
+    "required_operation": "saturation by (q0,...,q36)*(b1_0,...,b1_5)",
+    "strongest_measured_floor": {
+      "equations": 256,
+      "wall_seconds": 2572.24,
+      "user_cpu_seconds": 1812.78,
+      "sampled_rss_kib": 10710720,
+      "result": "incomplete_nonverdict"
+    }
+  },
+  "special_fibre_empty": null,
+  "theorem_scope": "No degree-25 positive or negative verdict. Problem E remains open."
+}

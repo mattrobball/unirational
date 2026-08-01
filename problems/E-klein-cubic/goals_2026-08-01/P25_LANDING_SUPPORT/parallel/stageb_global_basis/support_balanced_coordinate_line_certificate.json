@@ -1,0 +1,41 @@
+{
+  "artifact": "support_balanced_coordinate_line_minors.npz",
+  "artifact_sha256": "3767ad02158ea4c8592661c832083ddf27cc3539b9a35c28db1911caad1dc2c5",
+  "conclusion": "The new r43 P3 matrix has rank six over the algebraic closure at every point of every q-coordinate line, excluding q-support <= 2.",
+  "coordinate_lines": 666,
+  "determinant_degree_bound": 18,
+  "field_scope": "algebraic closure of F_89",
+  "holdout_evaluation_point": 19,
+  "interpolation_points": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "limitation": "No global conclusion for q-support at least three.",
+  "maximum_minors_per_line": 4,
+  "minor_count_distribution": {
+    "2": 661,
+    "3": 4,
+    "4": 1
+  },
+  "prime": 89,
+  "source": "support_balanced_r43_stageB.npz",
+  "source_sha256": "f1aea8369fd56d5139b3d1f1574a194e2016c7d306006fb1aae37f0223d5fd3a",
+  "status": "PASS_ALL_666_COORDINATE_LINES"
+}

@@ -1,0 +1,137 @@
+{
+  "compact_radical_certificate": {
+    "criterion": "For one fixed global module order, LT(N) must contain a pure power of every q_i in every component; alternatively certify the 222 actual memberships q_i^n e_j in N.",
+    "natural_lower_bound": "Each component of an irrelevant-primary monomial module needs a pure power of each of 37 variables, hence at least 37 leading generators per component and 222 total.",
+    "pure_power_targets": 222
+  },
+  "direct_degree3_left_syzygy_operator": {
+    "M1_seed_density": 0.9887219026807127,
+    "M1_seed_entries": 2910420,
+    "M1_seed_nonzeros": 2877596,
+    "M2_seed_density": 0.1120343946430903,
+    "M2_seed_entries": 536130,
+    "M2_seed_nonzeros": 60065,
+    "combined_output": 6415578,
+    "constraint_D_M2_in_S4_times_21": 1919190,
+    "exact_shifted_operator_nonzeros": 26847283879,
+    "note": "Solving D M2=0 and D M1=q_i^5 e_j permits all degree-3 left syzygies, so it is safe and potentially stronger than products of the degree-1 syzygies.",
+    "output_D_M1_in_S5_times_6": 4496388,
+    "unknown_D_in_S3_times_690": 6305910
+  },
+  "full_linear_syzygy_dimension": 10767,
+  "graded_dimensions": {
+    "3": {
+      "source_K1_times_S": 10767,
+      "target_Sd_times_6": 54834
+    },
+    "4": {
+      "source_K1_times_S": 398379,
+      "target_Sd_times_6": 548340
+    },
+    "5": {
+      "source_K1_times_S": 7569201,
+      "target_Sd_times_6": 4496388
+    }
+  },
+  "module_components": 6,
+  "prime": 89,
+  "source": {
+    "relation_matrix": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/relation_matrix.npz",
+    "relation_matrix_sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb"
+  },
+  "storage_floors": {
+    "222_dense_K1_times_S2_lifts_uint8_bytes": 1680362622,
+    "222_dense_direct_D_lifts_uint8_bytes": 1399912020,
+    "dense_degree5_macaulay_uint8_entries": 34034064545988,
+    "full_contractions_uint8_bytes": 590397678,
+    "full_syzygy_basis_uint8_bytes": 274881510,
+    "one_dense_K1_times_S2_lift_uint8_bytes": 7569201,
+    "one_dense_direct_D_lift_uint8_bytes": 6305910,
+    "warning": "These are value-byte floors only. Sparse formats also need indices; a useful certificate must exploit sparsity, shared row-operation DAGs, or an exact representation block decomposition."
+  },
+  "term_over_position_prefix_probe": {
+    "complete_cubic_monomial_blocks": 1794,
+    "consequence": "The degree-3 generic-prefix leading shadow cannot be irrelevant-primary; degree-4/5 completion or actual memberships are required.",
+    "missing_pure_cubes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "pure_cube_indices_in_repository_order": [
+      9138,
+      8435,
+      7769,
+      7139,
+      6544,
+      5983,
+      5455,
+      4959,
+      4494,
+      4059,
+      3653,
+      3275,
+      2924,
+      2599,
+      2299,
+      2023,
+      1770,
+      1539,
+      1329,
+      1139,
+      968,
+      815,
+      679,
+      559,
+      454,
+      363,
+      285,
+      219,
+      164,
+      119,
+      83,
+      55,
+      34,
+      19,
+      9,
+      3,
+      0
+    ],
+    "pure_cubes_in_first_complete_blocks": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  "variables": 37
+}

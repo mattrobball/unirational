@@ -1,0 +1,24 @@
+{
+  "status": "Q-UNDECIDED",
+  "decisive_outputs": [
+    "smooth_embedded_twisted_cubic_over_K",
+    "actual_degree_three_genus_zero_stable_map_over_K",
+    "actual_generalized_twisted_cubic_hilbert_point_over_K",
+    "coarse_stable_map_point_with_verified_lift"
+  ],
+  "nondecisive_outputs": [
+    "coarse_stable_map_point_without_verified_lift",
+    "galois_stable_orbit_of_curves",
+    "zero_cycle_on_curve_moduli",
+    "virtual_gromov_witten_count",
+    "even_degree_genus_zero_curve"
+  ],
+  "conditional_c3_gate": {
+    "parameter_space": "fine_hilbert_scheme",
+    "finite_scheme_length": 8,
+    "splitting_group": "C3",
+    "conclusion": "K_rational_hilbert_point_and_hence_X_K_point",
+    "currently_verified": false
+  },
+  "marker": "Q_SCHUR_FIXED_CURVE_BRIDGE_EXACT"
+}

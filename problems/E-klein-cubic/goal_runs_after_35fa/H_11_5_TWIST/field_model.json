@@ -1,0 +1,147 @@
+{
+  "C11_invariants": {
+    "exponent_vectors": [
+      [
+        -2,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -2,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -2,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        -2,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        -2
+      ]
+    ],
+    "formula": "r_i=y_(i+1)*y_(i+2)/y_i^2, indices modulo 5",
+    "four_by_four_exponent_determinant": 11,
+    "product_relation": "product_i r_i=1",
+    "sigma_action": "sigma(f)(y)=f(P^-1 y); sigma(r_i)=r_(i+1)"
+  },
+  "authoritative_input_hashes": {
+    "bridge": "660577dd5848eb5f9acb747b4c82877968d3ba5c59181581eb4ba8907d8aa2f8",
+    "exact_strata": "a630b3a85d41eb0b60902a81cf8851c15fd0aa9c615c2d8a36584071dca34810",
+    "exact_weil": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
+    "goal": "8b2e48f89ebc8daa971e618d341390e6803d21f22f411b88abb3dcc28cf0ef2f",
+    "normal_characters": "8cb2a9a7d8b0405672308fc300cecd639de994cd73e29ef272328fa919e5b671",
+    "twists": "e97a32d6f22a8028528bc2b4d27ee009901caeb047fd2ffe5ac2bdd1fab743cd"
+  },
+  "constant_field": "C containing zeta_11 and epsilon_5",
+  "fields": {
+    "E": "L^<T> = C(r0,...,r4)/(r0*r1*r2*r3*r4-1)",
+    "K": "L^H = E^<sigma> = C(U1,U2,U3,U4)",
+    "L": "C(P(W))",
+    "degrees": {
+      "E_over_K": 5,
+      "L_over_E": 11,
+      "L_over_K": 55
+    }
+  },
+  "finite_field_inverse_map_witness": {
+    "epsilon5": 64,
+    "fourier_ratios": [
+      318,
+      207,
+      283,
+      299
+    ],
+    "fourier_s": [
+      72,
+      57,
+      9,
+      185,
+      13
+    ],
+    "invariants_U": [
+      89,
+      201,
+      132,
+      146
+    ],
+    "inverse_dft_projective_scale": 23,
+    "prime": 331,
+    "projective_R": [
+      1,
+      2,
+      7,
+      19,
+      43
+    ],
+    "shifted_invariants_U": [
+      89,
+      201,
+      132,
+      146
+    ]
+  },
+  "format": "H-11_5-INVARIANT-FIELD-v1",
+  "group": {
+    "P_action": "P(e_i)=e_(i+1), hence (P y)_i=y_(i-1)",
+    "T_weights": [
+      1,
+      9,
+      4,
+      3,
+      5
+    ],
+    "authoritative_generators_psl2_f11": [
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        6
+      ]
+    ],
+    "chosen_generators_inside_same_H": {
+      "P": "rho([4,0,0,3]) = rho([2,0,0,6])^2",
+      "T": "rho([1,2,0,1]) = rho([1,1,0,1])^2"
+    },
+    "presentation": "H=<T,P | T^11=P^5=1, P*T*P^-1=T^5>"
+  },
+  "rational_C5_quotient": {
+    "R_coordinates": "[R0:...:R4]=[1:r0^-1:(r0*r1)^-1:(r0*r1*r2)^-1:(r0*r1*r2*r3)^-1]",
+    "action": "sigma[R_i]=[R_(i+1)]",
+    "common_open": "product_i(y_i)*s0*q1*product_i(R_i) != 0",
+    "diagonal_action": "sigma(q_j)=epsilon_5^j*q_j",
+    "forward_extension": "E=K(alpha), alpha=q1, alpha^5=U1; q_j=U_j*alpha^j for j=2,3,4",
+    "fourier": "s_j=sum_i epsilon_5^(-i*j) R_i; q_j=s_j/s_0",
+    "inverse_DFT": "[R_i]=[1+sum_(j=1)^4 epsilon_5^(i*j) q_j] (common factor 1/5 omitted)",
+    "ratio": "r_i=R_i/R_(i+1)",
+    "transcendence_basis": {
+      "U1": "q1^5",
+      "U2": "q2/q1^2",
+      "U3": "q3/q1^3",
+      "U4": "q4/q1^4"
+    }
+  }
+}

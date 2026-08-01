@@ -47,14 +47,15 @@ def polynomial_string(coefficients: np.ndarray, monomials) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--rows", type=int, choices=(48, 96, 256), default=48)
+    parser.add_argument("--rows", type=int, choices=(43, 48, 96, 256), default=48)
     parser.add_argument("--stratum", choices=("b0", "boundary"), default="boundary")
     args = parser.parse_args()
 
-    contracted = HERE / f"syzygy_r{args.rows}_q0_contracted.npz"
+    source_rows = 48 if args.rows == 43 else args.rows
+    contracted = HERE / f"syzygy_r{source_rows}_q0_contracted.npz"
     with np.load(contracted) as frozen:
-        p4 = frozen["p4"].astype(np.uint8)
-        p3 = frozen["p3"].astype(np.uint8)
+        p4 = frozen["p4"].astype(np.uint8)[: args.rows]
+        p3 = frozen["p3"].astype(np.uint8)[: args.rows]
         assert int(frozen["prime"]) == P
     q3 = weak_compositions(3, 37)
     q4 = weak_compositions(4, 37)
@@ -80,8 +81,12 @@ def main() -> None:
         if args.stratum == "b0":
             handle.write("ideal J=sat(I,qideal);\n")
         else:
-            handle.write("ideal product_ideal=qideal*bideal;\n")
-            handle.write("ideal J=sat(I,product_ideal);\n")
+            # The two sequential saturations commute and equal saturation by
+            # qideal*bideal.  Removing the six-variable b=0 component first is
+            # substantially cheaper than beginning with the 37 q variables.
+            handle.write("ideal Jb=sat(I,bideal);\n")
+            handle.write('print("b-saturated gens="+string(size(Jb)));\n')
+            handle.write("ideal J=sat(Jb,qideal);\n")
         handle.write("int is_unit=(reduce(1,J)==0);\n")
         handle.write('print("sat unit="+string(is_unit)+" ngens="+string(size(J)));\n')
         handle.write(
@@ -106,7 +111,9 @@ def main() -> None:
         "result": result.name,
         "criterion": (
             "Singular elim.lib sat computes the exact ideal saturation. A reduced "
-            "unit ideal is conclusive; timeout, crash, or nonunit is not emptiness."
+            "unit ideal is conclusive; timeout, crash, or nonunit is not emptiness. "
+            "For the boundary, sequential b1- then q-saturation equals saturation "
+            "by the product of the two irrelevant ideals."
         ),
     }
     metadata_path = HERE / f"syzygy_r{args.rows}_{args.stratum}_singular.json"

@@ -86,6 +86,12 @@ def inv_mod(matrix, prime):
     return work[:, n:] % prime
 
 
+def residue_bytes(array, prime):
+    if prime < 256:
+        return bytes(array.astype(np.uint8).flat), "one-byte-residues"
+    return array.astype("<u2").tobytes(), "little-endian-uint16-residues"
+
+
 def projector(wedge, q, pairs, prime):
     pivot = next(pair for value, pair in zip(wedge, pairs) if value % prime)
     i, j = pivot
@@ -164,10 +170,14 @@ def main() -> None:
             except (AssertionError, StopIteration):
                 continue
             residual = domain_basis.T @ wedge % args.prime
+            wedge_bytes, residue_encoding = residue_bytes(wedge, args.prime)
+            projector_bytes, projector_encoding = residue_bytes(e, args.prime)
+            assert projector_encoding == residue_encoding
             evaluations.append({
                 "point": list(point_tuple),
-                "wedge_sha256": hashlib.sha256(bytes(wedge.astype(np.uint16).flat)).hexdigest(),
-                "projector_sha256": hashlib.sha256(bytes(e.astype(np.uint16).flat)).hexdigest(),
+                "residue_digest_encoding": residue_encoding,
+                "wedge_sha256": hashlib.sha256(wedge_bytes).hexdigest(),
+                "projector_sha256": hashlib.sha256(projector_bytes).hexdigest(),
                 "distinguished_five_residual": [int(value) for value in residual],
                 "lies_in_genuine_fano_linear_section": bool(np.all(residual == 0)),
             })

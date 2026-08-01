@@ -1,0 +1,143 @@
+{
+  "charts_cover_projective_space": true,
+  "prime": 23,
+  "records": [
+    {
+      "chart": 0,
+      "input_bytes": 97453,
+      "input_file": "degree6_chi0_p23_chart00.in",
+      "input_sha256": "229121e04261816f6b040d7a201caff34ad14af9f887cd591d7ce5fa469dcf5d",
+      "normalization": "c0=1"
+    },
+    {
+      "chart": 1,
+      "input_bytes": 97453,
+      "input_file": "degree6_chi0_p23_chart01.in",
+      "input_sha256": "8d46ba69d825f99d96634988f8c26d7d7ae2eab0ee52c8bcda454a081f800f1b",
+      "normalization": "c1=1"
+    },
+    {
+      "chart": 2,
+      "input_bytes": 97453,
+      "input_file": "degree6_chi0_p23_chart02.in",
+      "input_sha256": "8e36a1352e2eea1528c9d1867d9342777351bd24560a774aa7f9b7cee51ff342",
+      "normalization": "c2=1"
+    },
+    {
+      "chart": 3,
+      "input_bytes": 97453,
+      "input_file": "degree6_chi0_p23_chart03.in",
+      "input_sha256": "c38573daac2cd35b4bfec77e6a121649549ca9da1822c0eef4ef0410135f6dd6",
+      "normalization": "c3=1"
+    },
+    {
+      "chart": 4,
+      "input_bytes": 97453,
+      "input_file": "degree6_chi0_p23_chart04.in",
+      "input_sha256": "605caff1024af49cb551de9a4c07afe7f941dfdc921f8f991ef676359a737f96",
+      "normalization": "c4=1"
+    },
+    {
+      "chart": 5,
+      "input_bytes": 97453,
+      "input_file": "degree6_chi0_p23_chart05.in",
+      "input_sha256": "ed635b76493ba6db0ed22fb359ca505909a2a5092b9ba02d0b5d42dd920bc1a3",
+      "normalization": "c5=1"
+    },
+    {
+      "chart": 6,
+      "input_bytes": 97453,
+      "input_file": "degree6_chi0_p23_chart06.in",
+      "input_sha256": "b3f17567c73c571535751e728e99c7498a53d5e0012faf9552e60f6747a2445e",
+      "normalization": "c6=1"
+    },
+    {
+      "chart": 7,
+      "input_bytes": 97453,
+      "input_file": "degree6_chi0_p23_chart07.in",
+      "input_sha256": "92b5080c30bdabba894be67ce669a6dd4aeba64ca0db5ca2e5a8f7c9d16f953f",
+      "normalization": "c7=1"
+    },
+    {
+      "chart": 8,
+      "input_bytes": 97453,
+      "input_file": "degree6_chi0_p23_chart08.in",
+      "input_sha256": "fb5765d2c135f0bd6d6a76acdf7fe261c288dd97caab43c2f69da20be732e212",
+      "normalization": "c8=1"
+    },
+    {
+      "chart": 9,
+      "input_bytes": 97453,
+      "input_file": "degree6_chi0_p23_chart09.in",
+      "input_sha256": "7d7f46dbfc2db149472eb19eee4df002e3ca8ade7dc4581666e7ccc9131049ca",
+      "normalization": "c9=1"
+    },
+    {
+      "chart": 10,
+      "input_bytes": 97454,
+      "input_file": "degree6_chi0_p23_chart10.in",
+      "input_sha256": "177484263bbfb1d8409a074432b8f5dd72ceff1e09fcc6092859427d3e104c78",
+      "normalization": "c10=1"
+    },
+    {
+      "chart": 11,
+      "input_bytes": 97454,
+      "input_file": "degree6_chi0_p23_chart11.in",
+      "input_sha256": "828b7cbf0933923f8bff6cb5924bae77b3f799e4f2937c5edf1780160401e1ea",
+      "normalization": "c11=1"
+    },
+    {
+      "chart": 12,
+      "input_bytes": 97454,
+      "input_file": "degree6_chi0_p23_chart12.in",
+      "input_sha256": "4517409325030af339e2d3c31c92ab4089628d54bf15f797c634e9d2af32a359",
+      "normalization": "c12=1"
+    },
+    {
+      "chart": 13,
+      "input_bytes": 97454,
+      "input_file": "degree6_chi0_p23_chart13.in",
+      "input_sha256": "0d431be4a4be99b21105e8c253500b793ee60fcbf67cbddb89ad58569ef0b420",
+      "normalization": "c13=1"
+    },
+    {
+      "chart": 14,
+      "input_bytes": 97454,
+      "input_file": "degree6_chi0_p23_chart14.in",
+      "input_sha256": "de622c99380ecc1698944ad2e41a53498393a942cef3ce3d1707df73b7c548eb",
+      "normalization": "c14=1"
+    },
+    {
+      "chart": 15,
+      "input_bytes": 97454,
+      "input_file": "degree6_chi0_p23_chart15.in",
+      "input_sha256": "8f67909fccf8e44d239418a2cf30b334e01a3455b5e79d0af49d53ba98c5ebcf",
+      "normalization": "c15=1"
+    },
+    {
+      "chart": 16,
+      "input_bytes": 97454,
+      "input_file": "degree6_chi0_p23_chart16.in",
+      "input_sha256": "1b597dfad1e748b8c027ae8fd44d1a08bb3cfd483a55d2da604d832c2734cc91",
+      "normalization": "c16=1"
+    },
+    {
+      "chart": 17,
+      "input_bytes": 97454,
+      "input_file": "degree6_chi0_p23_chart17.in",
+      "input_sha256": "37799788b9a60a460223c67b6528624138551c562d631579c1f07dff93b72c4c",
+      "normalization": "c17=1"
+    },
+    {
+      "chart": 18,
+      "input_bytes": 97454,
+      "input_file": "degree6_chi0_p23_chart18.in",
+      "input_sha256": "9f2143b3558a03d73fdcf1c583c5911e65356a0c99c2a1ff5ca7c82c289f1538",
+      "normalization": "c18=1"
+    }
+  ],
+  "schema": "klein-f55-degree6-chi0-p23-affine-charts-v1",
+  "source_file": "degree6_chi0_p23.in",
+  "source_sha256": "0323ed3fbd287e905bd12de8d564b549bdaad96a4d88955e10a3aef1fc85a7c7",
+  "variables": 19
+}

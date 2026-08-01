@@ -1,0 +1,68 @@
+{
+  "format": "ambient-projector-triple-audit-v1",
+  "scope": "modular auxiliary projectors only",
+  "prime": 23,
+  "zeta11": 4,
+  "point": [
+    2,
+    5,
+    7,
+    11,
+    13
+  ],
+  "eliminant_coefficients_ascending": [
+    8,
+    21,
+    18,
+    1
+  ],
+  "roots": [
+    7,
+    8,
+    13
+  ],
+  "sum_is_identity": false,
+  "sum_minus_identity_rank": 6,
+  "trace_projector_sum_pfaffian_characteristic_ascending": [
+    3,
+    2,
+    20,
+    1
+  ],
+  "trace_projector_sum_roots": [
+    18
+  ],
+  "pairs": [
+    {
+      "roots": [
+        7,
+        8
+      ],
+      "commute": false,
+      "left_right_product_rank": 2,
+      "right_left_product_rank": 2,
+      "orthogonal": false
+    },
+    {
+      "roots": [
+        7,
+        13
+      ],
+      "commute": false,
+      "left_right_product_rank": 2,
+      "right_left_product_rank": 2,
+      "orthogonal": false
+    },
+    {
+      "roots": [
+        8,
+        13
+      ],
+      "commute": false,
+      "left_right_product_rank": 2,
+      "right_left_product_rank": 2,
+      "orthogonal": false
+    }
+  ],
+  "theorem_boundary": "even a spectral residue triple would not supply a K_proj-rational rank-two idempotent without exact characteristic-zero descent"
+}

@@ -1,0 +1,191 @@
+{
+  "algebraic_closure_audit": {
+    "all_pairwise_irreducible_factor_intersections_checked": true,
+    "maximum_nonidentical_edges_before_qualification": 27,
+    "points_with_at_least_16_nonidentical_edges_and_distinct_55_marks_and_19_lines": 0,
+    "required_nonidentical_edges_for_connected_graph": 16
+  },
+  "exact_witness_reduction": {
+    "intersection_edges": [
+      [
+        2,
+        5
+      ],
+      [
+        4,
+        17
+      ],
+      [
+        7,
+        17
+      ]
+    ],
+    "note": "the third modular edge is accidental; the exact Q(zeta11) union has only the first two",
+    "parameters": {
+      "a": 66,
+      "b": 14
+    }
+  },
+  "field": {
+    "prime": 67,
+    "zeta11": 64
+  },
+  "intersection_equations": {
+    "bidegree_histogram": {
+      "(0, 0, 0)": 1,
+      "(0, 2, 2)": 17,
+      "(1, 0, 1)": 2,
+      "(2, 0, 2)": 15,
+      "(2, 2, 3)": 2,
+      "(2, 2, 4)": 132
+    },
+    "factor_edge_multiplicity_histogram": {
+      "1": 140,
+      "2": 15,
+      "3": 8,
+      "7": 1
+    },
+    "identically_meeting_edges": [
+      [
+        2,
+        5
+      ],
+      [
+        4,
+        17
+      ]
+    ],
+    "irreducible_factor_count": 164,
+    "maximum_single_factor_edge_multiplicity": 7,
+    "nonzero_scalar_count": 169
+  },
+  "rational_fiber_audit": {
+    "distinct_marked_fibers": 341,
+    "edge_count_histogram": {
+      "2": 121,
+      "3": 134,
+      "4": 55,
+      "5": 25,
+      "6": 4,
+      "7": 2
+    },
+    "maximum": {
+      "a": 59,
+      "b": 49,
+      "edge_count": 7
+    }
+  },
+  "schema": "s19-two-transversal-family-mod67-v1",
+  "scope": {
+    "cover_line_count": 19,
+    "hyperplane_chart": "h4 != 0",
+    "marked_cover": [
+      [
+        0,
+        5,
+        51
+      ],
+      [
+        1,
+        6,
+        45
+      ],
+      [
+        2,
+        7,
+        50
+      ],
+      [
+        3,
+        31,
+        34
+      ],
+      [
+        4,
+        9,
+        49
+      ],
+      [
+        7,
+        18,
+        21
+      ],
+      [
+        8,
+        12,
+        20
+      ],
+      [
+        10,
+        13,
+        16
+      ],
+      [
+        11,
+        35,
+        42
+      ],
+      [
+        14,
+        37,
+        41
+      ],
+      [
+        15,
+        39,
+        43
+      ],
+      [
+        17,
+        27,
+        30
+      ],
+      [
+        19,
+        36,
+        40
+      ],
+      [
+        22,
+        24,
+        38
+      ],
+      [
+        23,
+        32,
+        33
+      ],
+      [
+        25,
+        44,
+        54
+      ],
+      [
+        26,
+        52,
+        53
+      ],
+      [
+        28,
+        48,
+        49
+      ],
+      [
+        29,
+        46,
+        47
+      ]
+    ],
+    "transversal_parameters": "affine (a,b) chart in P1 x P1"
+  },
+  "source_sha256": {
+    "universal_marked_family.json": "3a808167611f66cb39369e243a9c38a9019ab5f7c6b7397d3c2636f3950c08fb"
+  },
+  "strict_nonclaims": [
+    "This is a finite-characteristic result on one parameter and hyperplane chart.",
+    "It does not exclude algebraic points on the parameter-at-infinity or h4=0 charts.",
+    "It does not imply characteristic-zero emptiness of this family or of either S19 Rao branch.",
+    "It concerns one fixed 19-triple cover and does not exhaust other reducible or integral constructions."
+  ],
+  "terminal_marker": "S19_TWO_TRANSVERSAL_AFFINE_H4_MOD67_NO_LINE_TREE"
+}

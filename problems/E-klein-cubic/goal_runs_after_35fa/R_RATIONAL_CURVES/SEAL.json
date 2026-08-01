@@ -1,0 +1,100 @@
+{
+  "exit": "R2-DESCENT-OBSTRUCTED",
+  "external_dependencies_sha256": {
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/Beauville_Curves_on_Cubic.pdf": "699c0f2182a39c1e16bf5a50cecb931bb82999d0464b29e2c26220555250ce0b",
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/Iliev_Markushevich.tex": "1c7f15221bab7adc3dd998c4a99e6bf81ce0760e90477659aa8edcb44d94d48f",
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/Roulleau_Klein.tex": "82ff1544b9afe57735ac27bd2eaa4e370c18167a43bcc56496c127b21e9c280a",
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/fixed_jacobian_payload.json": "9db626c2fab8dae9dfb05255b0951d4aae6a6c713e74074b1d3a9747aadf7cb6",
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/group_cohomology_payload.json": "2f6a9de1f4e4059914d444612598024ac46a70a3608e43ed6c94d3f246bcb531",
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/verify_fixed_jacobian.py": "4f2953055077cd979d95b336035c2754a9eb44b9ad139ad8bbee912342df3e9f",
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/verify_group_cohomology.py": "4f60d12470423fab5698132b86719da0dcbd7e90f0b7a10ea25a5f08841d9fac",
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO/source_manifest.json": "63d39cf6cc7a800ca647c958127dbfe09cc98a944d99c407b3f59ce9ad38ac6a",
+    "goals_after_35fa8f/GOAL_R2_RATIONAL_CURVES_ON_GENUINE_TWIST.md": "6b6aeeb2ac817560622df035e0b67b360a1553d0b7a068545b4c3d47bc58cea2",
+    "tmp/pfaffian_generic_schur_audit/certificate.json": "cb8759ad3e4458c08d488a601c060207f4bc5a7fa13d511a0ef63e2f430913fb",
+    "tmp/pfaffian_generic_schur_audit/verify.py": "d793b6155c125013c2d3cc77b5491394a70cb674162c8cc1917cd30fd28ac1f9",
+    "tmp/pfaffian_representation_alignment/certificate.json": "90746a65051b863c684c906f7166c70572a2edc319e6f6e6e306042261153848",
+    "tmp/pfaffian_representation_alignment/core.py": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4",
+    "tmp/pfaffian_representation_alignment_audit/verify.py": "462f61d35d17051add9f2c60d92607a065d1b19b2c90ef73788c64417fb74a93"
+  },
+  "headline": "OPEN",
+  "live_state_audited": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "packet": "R_RATIONAL_CURVES",
+  "pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "schema": "klein-r2-rational-curves-seal-v1",
+  "sealed_files": {
+    "CLASS_RANKING.md": {
+      "bytes": 4056,
+      "sha256": "296ae5e963842f9aadcb1dce1b49392423fffb76f0a9acf7c5e6935aefcce7d9"
+    },
+    "COMPLETION_AUDIT.md": {
+      "bytes": 3117,
+      "sha256": "f763e6b081262fff1ab5b5f2a264d678e3af38bff7c886d13e6eef37654e493a"
+    },
+    "DESCENDED_HILBERT_COMPONENT.md": {
+      "bytes": 3426,
+      "sha256": "c1aa4c4ef01024717b9fce48115a1730e591fdaaa9cfd4df8eca2b9066f34f7c"
+    },
+    "POINT_EXTRACTION.md": {
+      "bytes": 2318,
+      "sha256": "eb4f2e26cbef6fe94954a559aeeb7b5178548c4d0a6e70352ed787595755c2b0"
+    },
+    "REPLAY.md": {
+      "bytes": 1449,
+      "sha256": "b8d7a4c5ec8aa6947154531185be22d5cc161a78fe4e7fea32625ae8ec0c99b6"
+    },
+    "SOURCES.md": {
+      "bytes": 3351,
+      "sha256": "d6889cfda8bc5803e6549b4fd5539521a635b85a3d87d858d35dd014d07d1759"
+    },
+    "STATUS.md": {
+      "bytes": 3223,
+      "sha256": "90f9ce93ed098d5bfd57ced6cc2f7c8078450f6d992f741525f9b36e972f4b50"
+    },
+    "UNIVERSAL_CURVE_EQUATIONS.md": {
+      "bytes": 2715,
+      "sha256": "c2d4e91f896510b65f2b1e945a9c82cf3177fb994b9510824f04c19bd47b179c"
+    },
+    "descended_hilbert_payload.json": {
+      "bytes": 3145,
+      "sha256": "cc3d0a606982fb9f7c8c93f184635d941e93977f5fe5a2bd9be22f607d7ef957"
+    },
+    "make_seal.py": {
+      "bytes": 2562,
+      "sha256": "10fe10ca341f85d858dafe14588f5c2c4dcb35cd9a7bf9dd25f9882f814c9d56"
+    },
+    "pfaffian_quintic_universal.json": {
+      "bytes": 613216,
+      "sha256": "f0c60f05c2cb676019a9d04dafbbcfc55a02b19480dfa54de6152e31393ce781"
+    },
+    "produce_descended_component.py": {
+      "bytes": 4963,
+      "sha256": "b8e4d5038c68c85f26bf259d0e26df5072de3e4f1badb1e0f3b1989430b01fbb"
+    },
+    "produce_pfaffian_universal.py": {
+      "bytes": 9203,
+      "sha256": "061c157b1dadbb880ddab1c85b5c4f480f4c755b4855a8436945cd730caa14d8"
+    },
+    "source_manifest.json": {
+      "bytes": 3579,
+      "sha256": "bbc14062d38551a06ec5293d274a77170a7aa1a32971438debdb56812a4d30d3"
+    },
+    "verify_all.py": {
+      "bytes": 5327,
+      "sha256": "3da17e4b38f1eba4c9b89e4ef992611eb7a26fd9070f0341ce2e989614c5a243"
+    },
+    "verify_descended_component.py": {
+      "bytes": 3306,
+      "sha256": "99eae10f6479020b76807ff18536759c401e65565305d02790bcba329cb9844b"
+    },
+    "verify_pfaffian_universal.py": {
+      "bytes": 7953,
+      "sha256": "e50f6cf9b5578d07098ec41ae148e1204b0951a5f79ea10814e7a33e0e287c41"
+    },
+    "verify_seal.py": {
+      "bytes": 2728,
+      "sha256": "b3b1a818e9cf50ff0157da5dbd9c159c881fb68fcfb982f95dbe01773a9708d3"
+    }
+  },
+  "sealed_files_canonical_sha256": "b62daa4e60b6cbf927b70a8ae72f8c2e82797c9516c5c9e05b119c771d64821d",
+  "terminal_marker": "R2_SEAL_CREATED"
+}

@@ -1,0 +1,23 @@
+{
+  "files": {
+    "README.md": "83215846cbd7c819ac0846252fff92159317dfeb0132d6728edaacf4707e7739",
+    "STATUS.md": "4378e88eb27b89b51eba17af69c833d41258816487f75f430c2b575d4b1ab007",
+    "THEOREM.md": "71228a1e60038311417c9a97bb875070bed239bb29fa0fc0e21b4fe212e5f229",
+    "imports/A5_class_1_POINT.md": "c37bd3a6a5b4c7b007e0cefa94434ab59d327a840e110752624ff4da6d5748ff",
+    "imports/A5_class_2_POINT.md": "e1d6cbe63b4b64c63d4adc54c114bf4098e538031554e11b630403474735285d",
+    "imports/H_A5_STATUS.md": "2df8d8d157b2f401a44b41aa3bd02dd080ca1747e73f924b0f884fb4ba37e706",
+    "imports/LOW_RANK_VALUATION_THEOREM.md": "d5947fe2d197e7f3b31d2b25ffa9e8362b9697481372dbf009ea3211a749d558",
+    "imports/low_rank_valuation_certificate.json": "83ba2a2820856ae675450221a3723f012715dc6f9bf012064c4d223aa553b503",
+    "make_seal.py": "b88cefccf285180f2455382400839fd30f2b8353af143649dee04fd6e2c5c4d1",
+    "source_manifest.json": "abecef836080dc9e5b9e74d5fe9f2fb6a9d1857730720a0ca964b60dad902747",
+    "verify.py": "dd124c7f1636bb1b40893c209f513260121eeead7acdbbf072585d025557a399"
+  },
+  "governing_status": "Q-UNDECIDED",
+  "schema": "q-schur-a5-valuation-elimination-seal-v1",
+  "strict_scope": "No global K_Schur point and no pointlessness obstruction is proved.",
+  "surviving_decomposition_groups": [
+    "PSL(2,11)",
+    "11:5"
+  ],
+  "theorem": "both maximal A5 classes are absent from an unramified henselian nonpoint"
+}

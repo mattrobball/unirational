@@ -1,0 +1,89 @@
+{
+  "charts": [
+    {
+      "chart": 0,
+      "chart_variable": "z_0",
+      "equation_count": 24,
+      "path": "chart0.sing",
+      "scheme_path": "scheme_chart0.sing",
+      "scheme_sha256": "ecd2b3f4cd4e432a098a900304a03bd42a3f60d71fe7bbc4946079945d667c31",
+      "sha256": "fa381dfbe44c756c15da3d5b09a3935526cf502f53a0c6c2753b3fe9de4a905b"
+    },
+    {
+      "chart": 1,
+      "chart_variable": "z_1",
+      "equation_count": 24,
+      "path": "chart1.sing",
+      "scheme_path": "scheme_chart1.sing",
+      "scheme_sha256": "d04340727dcdb2b90a6cf4bc0f471f3e5921ffb6e1c6cadfb7d7761500ea0f38",
+      "sha256": "68af184b42af09d79ce2df1e9637cec7db2a653cf74d785100116f3600fa9552"
+    },
+    {
+      "chart": 2,
+      "chart_variable": "z_2",
+      "equation_count": 24,
+      "path": "chart2.sing",
+      "scheme_path": "scheme_chart2.sing",
+      "scheme_sha256": "095a0dcb2ec5c3ab193969ffc4825719e1803b37fa6a785fc53ca60e2f916170",
+      "sha256": "2dee51f47624b5c81df5469e1ff0ce8a3ce9d5751ae76234da44a544cee52748"
+    },
+    {
+      "chart": 3,
+      "chart_variable": "z_3",
+      "equation_count": 24,
+      "path": "chart3.sing",
+      "scheme_path": "scheme_chart3.sing",
+      "scheme_sha256": "4affe608201d2803f61f17ab84415e70158f4f69a4b8e33c36466c77c7e3c245",
+      "sha256": "760013e15a5c75f7d916dd537c46c8c6e65adf225fba29583f064d58991ea330"
+    },
+    {
+      "chart": 4,
+      "chart_variable": "z_4",
+      "equation_count": 24,
+      "path": "chart4.sing",
+      "scheme_path": "scheme_chart4.sing",
+      "scheme_sha256": "2df9fe9fd9d89e1f7ad1d3762263317b7c8b2754e56342ec5b006d6dff50189c",
+      "sha256": "f35c32f4ae09ada5bca184d5215d7830ed6e1295da9eff149ff39d5b6273a646"
+    },
+    {
+      "chart": 5,
+      "chart_variable": "z_5",
+      "equation_count": 24,
+      "path": "chart5.sing",
+      "scheme_path": "scheme_chart5.sing",
+      "scheme_sha256": "9a1bca7176aef91fb28939a951fac9efceba1cc6f2b6d065715359b20757b9c4",
+      "sha256": "15fd85a1f126799b97a9deef04f5a2fdb629ac1720742f4609b658a31607650a"
+    },
+    {
+      "chart": 6,
+      "chart_variable": "z_7",
+      "equation_count": 24,
+      "path": "chart6.sing",
+      "scheme_path": "scheme_chart6.sing",
+      "scheme_sha256": "41a835a916f72adf5c84d2a09cba33d1e648304b9406d5d06d88057e1682104a",
+      "sha256": "21252b28b6351f4e23500b3da078f3a55f695308e7acbd4c8e32fb08d2adb1ba"
+    },
+    {
+      "chart": 7,
+      "chart_variable": "z_8",
+      "equation_count": 24,
+      "path": "chart7.sing",
+      "scheme_path": "scheme_chart7.sing",
+      "scheme_sha256": "8272d4f029b04db0f03589fafd36663086ebf61096275e5b85db5bd3783abc81",
+      "sha256": "09f69a3144e9db2328fdadd8a039886bd5b69acd7355fdf4711b3b004b76ab7f"
+    }
+  ],
+  "inherited_coordinate_count": 8,
+  "landing_cubic_count": 24,
+  "normal_coordinate_change": [
+    "u_0=20*z_1+63*z_5+z_6",
+    "u_1=66*z_0+10*z_4+z_9",
+    "u_2=53*z_2+6*z_3+z_10"
+  ],
+  "normal_coordinate_count": 3,
+  "normal_minor_count": 2024,
+  "prime": 67,
+  "scope": "The chart ideals are the inherited line-degree-one landing equations plus all 3x3 minors of the normal Jacobian of the line-degree-four landing equations. Unit ideals prove full normal rank at every geometric point of the inherited split-F67 support.",
+  "source": "m3_line4_central_landing.ms",
+  "source_sha256": "17aca9e35a567bc9fe3cce06a7d3df4398f66e9732d8f75cd0d9df12aa342223"
+}

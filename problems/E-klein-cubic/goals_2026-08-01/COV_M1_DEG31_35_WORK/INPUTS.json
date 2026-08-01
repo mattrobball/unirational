@@ -1,0 +1,16 @@
+{
+  "schema": "cov-m1-input-ledger-v1",
+  "pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "intake_head": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "files": [
+    {"path": "goals_after_35fa8f/GOAL_COV_M1_EQUALIZERS_DEG31_35.md", "sha256": "c07e8b9d320f8f12fa2489f40f33a629acaa65cc197a541f3261ef8ed1e4b927"},
+    {"path": "SPEC.md", "sha256": "a607b0a026f732eee1f6cb281ae2e85732d9e2aac866802fd739a810767df01e"},
+    {"path": "RESOLUTION.md", "sha256": "3eac1aa9787da90cbee21b0e72e9ea0fe538921e74afd9cc20170d5227e64c67"},
+    {"path": "certificates/global_transition/diagram.json", "sha256": "369f15f46d4e37f0dd7af578361ea9907d17ac0f307c9e5b6b63ef3c01d7708d"},
+    {"path": "certificates/global_transition/necessity_theorem.json", "sha256": "a5a21eff778447bd6edf250a1ecaf17ee0406edf371c56aa35bd6796cd3b3731"},
+    {"path": "certificates/transition_repair/category_repaired.json", "sha256": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0"},
+    {"path": "tmp/m1_t1_f3_colon_degree35_audit/certificate.json", "sha256": "591f38ab12e209b28543759e7d018de9c17185826ca6ec1840506a9dc2475c0c"},
+    {"path": "tmp/m1_t1_char0_d35_gate/certificate.json", "sha256": "319176862ef3bd772c54be2541c11f89c26cb099aed47a93e5ffa75d711d1ffb"},
+    {"path": "goals_2026-08-01/COV_STRUCTURED_SEARCH/global_modules_summary.json", "sha256": "73f5f4cc6cdaa9cc505f38d2386ddc35ce94a4af56824beb8670ee3d4ab4e436"}
+  ]
+}

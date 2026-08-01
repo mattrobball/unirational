@@ -1,0 +1,60 @@
+{
+  "schema": "kls2-elimination-ledger-v1",
+  "exit": "KLS2-NO-FINITE-REDUCTION",
+  "headline_conclusion": null,
+  "new_global_elimination_started": false,
+  "reason": "KLS2.1 supplies no nontrivial exhaustive finite list",
+  "literal_landing": {
+    "configuration": "LANDING_SMOOTH_H1",
+    "eliminated": false,
+    "reason": "elimination is the original all-degree landing-covariant problem"
+  },
+  "historical_scoped_replays": [
+    {
+      "id": "structural_successor",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_structural_successor/verify.py",
+      "terminal": "STRICT NONVERDICT no KLS solution or universal nonvanishing is proved"
+    },
+    {
+      "id": "global_foliation",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_global_foliation_theorem/verify.py",
+      "terminal": "STRICT NONVERDICT singular/noncanonical KLS image branch remains open"
+    },
+    {
+      "id": "minimal_contraction",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_minimal_contraction_attack/verify.py",
+      "terminal": "STRICT NONVERDICT minimal contraction and Klein unirationality remain open"
+    },
+    {
+      "id": "actual_conductor",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_actual_conductor_geometry/verify.py",
+      "terminal": "KLS_ACTUAL_CONDUCTOR_GEOMETRY_EXACT"
+    },
+    {
+      "id": "actual_conductor_audit",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_actual_conductor_geometry_audit/verify.py",
+      "terminal": "KLS_ACTUAL_CONDUCTOR_GEOMETRY_AUDIT_ACCEPTED"
+    },
+    {
+      "id": "proper_multiple",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_proper_multiple_structure/verify.py",
+      "terminal": "KLS_SQUAREFREE_PROPER_P22_BRANCH_EXCLUDED"
+    },
+    {
+      "id": "proper_multiple_audit",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_proper_multiple_structure_audit/verify.py",
+      "terminal": "KLS_PROPER_MULTIPLE_STRUCTURE_AUDIT_ACCEPT"
+    },
+    {
+      "id": "discrepancy",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_discrepancy_next_gate/verify.py",
+      "terminal": "KLS_DISCREPANCY_NEXT_GATE_EXACT"
+    },
+    {
+      "id": "discrepancy_audit",
+      "command": "/opt/homebrew/bin/python3 -u tmp/kls_discrepancy_next_gate_audit/verify.py",
+      "terminal": "KLS_DISCREPANCY_NEXT_GATE_HOSTILE_AUDIT_ACCEPT"
+    }
+  ]
+}
+

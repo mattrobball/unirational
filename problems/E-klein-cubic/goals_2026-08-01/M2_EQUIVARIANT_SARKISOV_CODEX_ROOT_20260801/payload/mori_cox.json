@@ -1,0 +1,55 @@
+{
+  "schema": "m2-plane-cubic-mori-cox-v1",
+  "picard_basis": ["H", "D"],
+  "classes": {
+    "H": [1, 0],
+    "D": [0, 1],
+    "L": [1, -1],
+    "minus_K": [2, -1]
+  },
+  "intersection_ring": {
+    "H3": 3,
+    "H2D": 0,
+    "HD2": -3,
+    "D3": -6,
+    "minus_K_cube": 12,
+    "L2H": 0,
+    "L2D": 0,
+    "L3": 0
+  },
+  "cox": {
+    "variables": {
+      "a0": [1, 0],
+      "a1": [1, 0],
+      "a2": [1, 0],
+      "y3": [1, -1],
+      "y4": [1, -1],
+      "e": [0, 1]
+    },
+    "relation": "Phi(a0,a1,a2,e*y3,e*y4)",
+    "relation_degree": [3, 0],
+    "irrelevant_ideal_components": [
+      ["a0", "a1", "a2", "e"],
+      ["y3", "y4"]
+    ]
+  },
+  "cones": {
+    "effective_rays": [[0, 1], [1, -1]],
+    "movable_rays": [[1, 0], [1, -1]],
+    "nef_rays": [[1, 0], [1, -1]],
+    "stable_base_locus_chambers": [
+      [[0, 1], [1, 0]],
+      [[1, 0], [1, -1]]
+    ]
+  },
+  "curve_pairings": {
+    "q": {"H": 0, "D": -1, "L": 1, "minus_K": 1},
+    "ell": {"H": 1, "D": 1, "L": 0, "minus_K": 1}
+  },
+  "contractions": [
+    {"ray": "q", "map": "pi", "type": "divisorial blowdown to X_T"},
+    {"ray": "ell", "map": "f", "type": "degree-3 del Pezzo fibration to P1"}
+  ],
+  "flops": []
+}
+

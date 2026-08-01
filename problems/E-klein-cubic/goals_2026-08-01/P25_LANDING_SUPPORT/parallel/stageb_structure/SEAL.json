@@ -1,0 +1,81 @@
+{
+  "files": {
+    ".gitignore": {
+      "bytes": 122,
+      "sha256": "4974acd60b56bf3b174e01175e9972fda9d64e55beda5ff082b1c99c638de826"
+    },
+    "REPORT.md": {
+      "bytes": 11005,
+      "sha256": "27b5b702d5e65cb0d9f6a0851a456520d351fcfb9bf1d7c620c159161a96e943"
+    },
+    "WORK_SCOPE.md": {
+      "bytes": 441,
+      "sha256": "f10604da03199e6c88812b435d2737b817fd201a7d6fdea9a13a3341f8a367d4"
+    },
+    "analyze_structure.py": {
+      "bytes": 25868,
+      "sha256": "2a9ce96fc8472804868569825129c20e93816d08a063a59af7e81834cb44fee1"
+    },
+    "certify_coordinate_lines.py": {
+      "bytes": 10541,
+      "sha256": "633b3671b05e6523e710486f733cb5db127278737dcb3b4cb610d83c7757a335"
+    },
+    "coordinate_line_certificate.json": {
+      "bytes": 1082,
+      "sha256": "130d26168128d0672f9802619ac5c0d1b61fa618e2825e548c561f03438cf1a6"
+    },
+    "coordinate_line_minors.npz": {
+      "bytes": 23472,
+      "sha256": "bd7cfad5c7e5f3638ae830b9b81c84cab06ae9f0fd81a06d235a61545b087a23"
+    },
+    "make_seal.py": {
+      "bytes": 1011,
+      "sha256": "8fb5ef4a09a1cf40043a39bfff71d8646b22aeff5af3ea3c115734ad1a8d6ba4"
+    },
+    "produce_support_cover_singular.py": {
+      "bytes": 4689,
+      "sha256": "4eea1c256f1450bd53a1b8294758236513c227eeee1782adbe48c18062a5b55d"
+    },
+    "structure_certificate.json": {
+      "bytes": 24138,
+      "sha256": "85f30944a2baf410acf073e93b183a293ab4c4dae4d97f88e0fb83906f723ba0"
+    },
+    "support_cover_r43_boundary.sing": {
+      "bytes": 31351466,
+      "sha256": "2bb07c31711ece9a73974e29abfbc8565b6367cebfc58af62800d712f6d90f8b"
+    },
+    "support_cover_r43_boundary_job.json": {
+      "bytes": 734,
+      "sha256": "84304eece45d0119f143cb8b4e67a796356ba7088427abfe6bf23ec50338c59f"
+    },
+    "support_cover_r43_stageB.npz": {
+      "bytes": 1791583,
+      "sha256": "89a6d9feab7d08cdbd6b9ba68853fc7a7d041d2057c1c51982aa3c7ad42b7779"
+    },
+    "verify_all.py": {
+      "bytes": 1628,
+      "sha256": "6c0d317f65cba30237c9b3b40a943d5f97b56823bc195894689464c41901cab6"
+    },
+    "verify_coordinate_lines.py": {
+      "bytes": 4049,
+      "sha256": "1a690a53b566b8ad7bebbc87bb19215855ddc2d72bd4d7f7d12a1dd784632167"
+    },
+    "verify_coordinate_lines_result.json": {
+      "bytes": 379,
+      "sha256": "d75c88a3049036a95d4e358b4a2db0e0a21bb0e0141f3e8e44c95b5b9713c58e"
+    },
+    "verify_seal.py": {
+      "bytes": 960,
+      "sha256": "03057b58438fa312f8ff0b81388fe79d006dc7fe35b187a7a0ee7f41c6b15f03"
+    },
+    "verify_structure.py": {
+      "bytes": 11520,
+      "sha256": "2c066a0dab1efdcc4e43aee58500e3b7c2124f3a640d5672c3e4689f84e86f94"
+    },
+    "verify_structure_result.json": {
+      "bytes": 712,
+      "sha256": "5d22670810b05b5b250b1b4608ebd60deeaf0ae18eb6099cf03e13f5024a45d7"
+    }
+  },
+  "scope": "exact Stage-B structural audit; no global emptiness verdict"
+}

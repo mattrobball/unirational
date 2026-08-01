@@ -1,0 +1,50 @@
+{
+  "axis": 0,
+  "elapsed_seconds": 43.334883,
+  "fflas_solve_seconds": 0.0,
+  "full_p3": {
+    "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_p3_contractions.npy",
+    "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019"
+  },
+  "inverse": {
+    "canonical_data_sha256": "8ba1074907d53fb7e7bb244deebd7a69e98ed179f43b9f1c1beaf472ffe1585f",
+    "file": "axis0_low_inverse.npy",
+    "sha256": "39f65bd254787b16b887126f579a611a4e4c008df4324f0c1f026a78b531707f",
+    "verified_product_is_identity": true
+  },
+  "low_block": {
+    "rank": 4218,
+    "sha256": "700b95dd3e441872a06ff2742e5ea0266070373b7bbfc4a7289c5943dc72c45d",
+    "shape": [
+      10767,
+      4218
+    ]
+  },
+  "packet": {
+    "file": "axis0_border_packet.npz",
+    "sha256": "147306837c5077d6b917a8d6392ff43297fecc4faf12254153e09a8a05c41aa2"
+  },
+  "prime": 89,
+  "pure_cubic_tails": {
+    "canonical_data_sha256": "1d139e8fc969a177e3e64b9525560d35202dd12abfa5d41b2652784e41d55eb6",
+    "file": "axis0_border_tails.npy",
+    "sha256": "badcbf56207481ba5350f1547d7a88aec3ed846ce0e672f3ba4f1f56e006f25d",
+    "shape": [
+      4218,
+      50616
+    ]
+  },
+  "scope": "These are exact normalized border rules. They do not decide the degree-five pure-power memberships until the terminal cubic-to-quintic remainders are reduced by all pure-cubic relations.",
+  "selected_minor": {
+    "sha256": "bd9a6a1b73a2b89f76a2ff78ad72ba99664a5598c0fd5ba5e9152dab89819fc8",
+    "shape": [
+      4218,
+      4218
+    ]
+  },
+  "selected_rows": {
+    "file": "axis0_selected_rows.npy",
+    "sha256": "9399ceda054a7c6e49ab856f4bb8e77a2ee3cee2ede152ac78621fa3c5ba60ee"
+  },
+  "status": "PASS_EXACT_AFFINE_BORDER"
+}

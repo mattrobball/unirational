@@ -32,17 +32,27 @@ audit documents remain part of the portable report.
 
 ## Resource strategy
 
-The exact homogeneous quotient is preferable to the 63-variable kernel
-incidence for this run: one Artinian leading ideal decides the whole
-projective scheme, whereas the incidence computation must manage two
-irrelevant ideals and extra kernel variables.
+The initial full homogeneous run was stopped after a measured degree-5 block
+of size `71471 x 1025063` took 2323 seconds, produced 512 new leading terms,
+and produced no zero reductions; the next queue still had 180898 pairs.  This
+is retained only as a resource measurement, never as theorem evidence.
 
-The generic semi-regular Hilbert-series estimate for 746 cubics in 43
-variables first becomes nonpositive in degree 7.  This is only a resource
-estimate, not theorem evidence.  It explains why the full border-adapted row
-set can be easier than a small subsystem: a 128-cubic generic subsystem does
-not reach the corresponding threshold until much later.  Exact completion and
-the 43 pure powers—not this estimate—are the decision criterion.
+The final exact route contracts away the 21 `b2` variables using verified
+linear syzygies.  It has 37 `q` variables, six `b1` variables, and 48 dense
+contracted equations in its smallest main packet, with 96- and 256-equation
+variants used to test whether stronger overdetermination lowers the Groebner
+degree.  Its terminal computations are the correct irrelevant saturations for
+the boundary and normalized `b0=1` strata.
+
+No Hilbert-series estimate, incomplete Groebner run, or empty solver output is
+used as a decision criterion.  Only a completed saturated unit ideal, rebuilt
+by the independent verifier, is accepted.
+
+The strongest bounded boundary run retained all 256 verified contractions.
+It used `2572.24 s` wall / `1812.78 s` user CPU, reached sampled RSS
+`10710720 KiB`, and did not return the first `b1`-saturated basis.  This is the
+measured resource floor in `saturation_attempts.json`; it is not theorem
+evidence.  Since Stage B remains unresolved, Stage C is not interpreted.
 
 Only one high-memory P25 solver should run at a time.  The shared machine has
 128 GiB RAM; the binding route budget is 64 GiB, with live RSS monitoring and

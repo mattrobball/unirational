@@ -1,0 +1,51 @@
+{
+  "character_exponent": 1,
+  "consequence": "the installed degree-1--4 landing emptiness statements are invalid and are not used by H2",
+  "degree": 3,
+  "diagnosis": "upstream solves C*M=R*C, while direct polynomial substitution requires C*M^T=R*C",
+  "direct_covariance_failures": [
+    {
+      "basis_index": 0,
+      "coefficient_disagreements": 50,
+      "generator_index": 0
+    },
+    {
+      "basis_index": 0,
+      "coefficient_disagreements": 50,
+      "generator_index": 1
+    },
+    {
+      "basis_index": 1,
+      "coefficient_disagreements": 50,
+      "generator_index": 0
+    },
+    {
+      "basis_index": 1,
+      "coefficient_disagreements": 50,
+      "generator_index": 1
+    },
+    {
+      "basis_index": 2,
+      "coefficient_disagreements": 50,
+      "generator_index": 0
+    },
+    {
+      "basis_index": 2,
+      "coefficient_disagreements": 50,
+      "generator_index": 1
+    },
+    {
+      "basis_index": 3,
+      "coefficient_disagreements": 50,
+      "generator_index": 0
+    },
+    {
+      "basis_index": 3,
+      "coefficient_disagreements": 50,
+      "generator_index": 1
+    }
+  ],
+  "format": "H2-A4-UPSTREAM-TRANSPOSE-AUDIT-v1",
+  "prime": 331,
+  "upstream_reported_basis_dimension": 4
+}

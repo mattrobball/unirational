@@ -1,0 +1,369 @@
+{
+  "format": "ambient-projector-rational-residue-points-v1",
+  "scope": "modular auxiliary projectors only",
+  "prime": 397,
+  "zeta11": 16,
+  "scheme_degree": 3,
+  "eliminant_coefficients_ascending": [
+    383,
+    308,
+    48,
+    1
+  ],
+  "rational_roots": [
+    150,
+    253,
+    343
+  ],
+  "checks": [
+    {
+      "eliminant_root": 150,
+      "coefficient_vector": [
+        150,
+        252,
+        278,
+        125,
+        125,
+        294,
+        36,
+        178,
+        184,
+        277,
+        218,
+        241,
+        230,
+        379,
+        299,
+        293,
+        89,
+        5,
+        114,
+        123,
+        39,
+        57,
+        194,
+        293,
+        365,
+        90,
+        142,
+        73,
+        204,
+        382,
+        78,
+        54,
+        319,
+        207,
+        284,
+        47,
+        194,
+        188,
+        283,
+        356,
+        300,
+        183,
+        235,
+        217,
+        366,
+        320,
+        208,
+        1
+      ],
+      "support": 48,
+      "evaluations": [
+        {
+          "point": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "52958649b91305c31cab23bbdd2629591d4eba8ead47ed21c7985d4ca0c12eaf",
+          "projector_sha256": "670b588adef97b9c501682e783889de20cdc81f6f88d95d872da88f5eff4945f",
+          "distinguished_five_residual": [
+            7,
+            54,
+            358,
+            245,
+            125
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        },
+        {
+          "point": [
+            2,
+            5,
+            7,
+            11,
+            13
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "4162bd5a9ed9a772465ac4512f73d46e8c767974139e5b7b56507d04d893d87b",
+          "projector_sha256": "28bccf1a2f167b7a7ac1d1820e220de3289b8de8fcac81b3b4dafcc98b8aa4e1",
+          "distinguished_five_residual": [
+            396,
+            298,
+            10,
+            256,
+            353
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        },
+        {
+          "point": [
+            3,
+            1,
+            4,
+            1,
+            5
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "92034a797d351b3bb2468b98a46638391faea1794d6df8b3c07cddbb7c9763fb",
+          "projector_sha256": "097471079cdcd6e5040fa63da4086a711013273dc4dd12069feb69b11cca9279",
+          "distinguished_five_residual": [
+            236,
+            227,
+            287,
+            51,
+            183
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        }
+      ]
+    },
+    {
+      "eliminant_root": 253,
+      "coefficient_vector": [
+        253,
+        238,
+        378,
+        12,
+        47,
+        195,
+        141,
+        141,
+        148,
+        322,
+        192,
+        59,
+        368,
+        108,
+        68,
+        218,
+        116,
+        72,
+        306,
+        319,
+        63,
+        160,
+        90,
+        162,
+        149,
+        117,
+        202,
+        162,
+        34,
+        351,
+        89,
+        117,
+        245,
+        218,
+        100,
+        186,
+        49,
+        249,
+        360,
+        326,
+        211,
+        108,
+        8,
+        110,
+        274,
+        167,
+        320,
+        1
+      ],
+      "support": 48,
+      "evaluations": [
+        {
+          "point": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "1b549de1585b769e5468a5b91fa77e96bba456b2c2876866a8f7a014e8b2c931",
+          "projector_sha256": "53f2fa10ea01f20de08c00f7cb9361c506be27109edc31f568c96299dbe56e3d",
+          "distinguished_five_residual": [
+            74,
+            334,
+            311,
+            121,
+            28
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        },
+        {
+          "point": [
+            2,
+            5,
+            7,
+            11,
+            13
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "365ff6a50128e7efec85dfeccdf498f18061146e650685616b95f223011e5255",
+          "projector_sha256": "265ad05be52b71b4df2f9900b2366db201836c2a1eb4093fb9bf69e0a4627d10",
+          "distinguished_five_residual": [
+            128,
+            35,
+            21,
+            392,
+            198
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        },
+        {
+          "point": [
+            3,
+            1,
+            4,
+            1,
+            5
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "fb3a564271af26d337036fbd7dff923c28f5f4ed1de79ad9a47672e57fc77adc",
+          "projector_sha256": "e1e81b201efbc48eed9b3116e81122f8b7928494937420265bf94a12a0242d82",
+          "distinguished_five_residual": [
+            365,
+            353,
+            194,
+            84,
+            312
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        }
+      ]
+    },
+    {
+      "eliminant_root": 343,
+      "coefficient_vector": [
+        343,
+        388,
+        390,
+        162,
+        251,
+        148,
+        211,
+        83,
+        351,
+        363,
+        198,
+        88,
+        272,
+        168,
+        299,
+        195,
+        15,
+        305,
+        1,
+        147,
+        72,
+        304,
+        216,
+        268,
+        164,
+        106,
+        93,
+        325,
+        251,
+        139,
+        46,
+        256,
+        179,
+        28,
+        68,
+        63,
+        275,
+        91,
+        93,
+        316,
+        71,
+        360,
+        294,
+        118,
+        357,
+        246,
+        341,
+        1
+      ],
+      "support": 48,
+      "evaluations": [
+        {
+          "point": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "5e351be582aee2906e96e31198482bc766212dfb4653577f702c1ad1111d97b1",
+          "projector_sha256": "4c55e73d414a6471eb386403b3ac50f4cc8efac74706807b02f9a59a972ae71d",
+          "distinguished_five_residual": [
+            129,
+            289,
+            164,
+            110,
+            363
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        },
+        {
+          "point": [
+            2,
+            5,
+            7,
+            11,
+            13
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "27e3a241fb7c1013d0e6de613cc83eeba94849b872b9f4d109114697c16254a5",
+          "projector_sha256": "f39d2a6d245045d0875e54c647e077471125dbf55f6f74bc0cbe7085ac81230d",
+          "distinguished_five_residual": [
+            88,
+            228,
+            330,
+            386,
+            215
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        },
+        {
+          "point": [
+            3,
+            1,
+            4,
+            1,
+            5
+          ],
+          "residue_digest_encoding": "little-endian-uint16-residues",
+          "wedge_sha256": "26ac9e6099f4bc42c7d5f2a5f7605535212438a4fdbb0b27e9c83c76064810c1",
+          "projector_sha256": "14bbb79f7a51fdd8b464d6a511bda4c9ff80dd58bf9cd17d7d325807132dcee2",
+          "distinguished_five_residual": [
+            58,
+            137,
+            284,
+            395,
+            222
+          ],
+          "lies_in_genuine_fano_linear_section": false
+        }
+      ]
+    }
+  ],
+  "theorem_boundary": "residue projectors are neither characteristic-zero Morita data nor points of the genuine Fano section"
+}

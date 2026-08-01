@@ -1,0 +1,74 @@
+{
+  "schema": "m2-schur-plane-012-dp3-v1",
+  "field": "K_Schur=C(P(V6))^G",
+  "frame": {
+    "degree": 8,
+    "seeds": [
+      [0, [0, 0, 0, 0, 0, 8]],
+      [1, [0, 0, 0, 0, 0, 8]],
+      [2, [0, 0, 0, 0, 0, 8]],
+      [3, [0, 0, 0, 0, 0, 8]],
+      [4, [0, 0, 0, 0, 0, 8]]
+    ],
+    "normalization": "q_i/I8"
+  },
+  "good_reduction_witness": {
+    "prime": 23,
+    "zeta11": 2,
+    "source_point": [13, 9, 5, 5, 8, 19],
+    "frame_matrix": [
+      [18, 15, 0, 11, 6],
+      [1, 19, 8, 14, 12],
+      [11, 2, 13, 21, 2],
+      [17, 3, 20, 14, 19],
+      [9, 4, 16, 17, 9]
+    ],
+    "frame_determinant": 9,
+    "I8_value": 10,
+    "normalized_determinant": 15
+  },
+  "center": {
+    "plane": [0, 1, 2],
+    "ideal": ["a3", "a4"],
+    "degree": 3,
+    "genus": 1,
+    "normal_bundle": "O_C(1)+O_C(1)",
+    "specialized_terms_centered_mod23": [
+      {"exponents": [3, 0, 0], "coefficient": -3},
+      {"exponents": [2, 1, 0], "coefficient": 2},
+      {"exponents": [2, 0, 1], "coefficient": -4},
+      {"exponents": [1, 2, 0], "coefficient": 5},
+      {"exponents": [1, 1, 1], "coefficient": -5},
+      {"exponents": [1, 0, 2], "coefficient": 4},
+      {"exponents": [0, 3, 0], "coefficient": 2},
+      {"exponents": [0, 2, 1], "coefficient": -10},
+      {"exponents": [0, 1, 2], "coefficient": -5},
+      {"exponents": [0, 0, 3], "coefficient": -2}
+    ],
+    "smooth_projective_charts": [true, true, true]
+  },
+  "line_orbit_avoidance": {
+    "target_group_matrices": 660,
+    "involutions": 55,
+    "setwise_stabilizer": "D12",
+    "stabilizer_order": 12,
+    "incidence_determinants_mod23": [22, 10, 5, 2, 7, 7, 2, 5, 15, 20, 15, 10, 20, 16, 13, 15, 17, 17, 1, 12, 21, 12, 17, 4, 2, 20, 7, 18, 7, 7, 19, 2, 22, 6, 12, 22, 18, 15, 18, 3, 19, 2, 3, 18, 2, 16, 18, 2, 7, 14, 14, 8, 16, 20, 3],
+    "determinant_product_mod23": 10,
+    "determinant_list_sha256": "1e2699a7270e774b7c141adbcc16a5ea27c36335cbc3291480df5b0da20737cf",
+    "conclusion": "Pi_012 is generically disjoint from every involution minus-line"
+  },
+  "map": {
+    "blowup_graph_equation": "a3*t-a4*s=0",
+    "projection": "[a3:a4]",
+    "fibre_substitution": ["a3=s*u", "a4=t*u"],
+    "endpoint": "degree-3 del Pezzo fibration over P1",
+    "relative_picard_rank": 1
+  },
+  "generic_fibre": {
+    "zero_cycle_degrees": [3, 55],
+    "index": 1,
+    "section_frontier": "K-rational section or integral degree-4 multisection",
+    "headline": "OPEN"
+  }
+}
+

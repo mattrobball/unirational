@@ -21,7 +21,7 @@ def sha256(path: Path) -> str:
 
 def main() -> None:
     seal = json.loads((HERE / "SEAL.json").read_text())
-    if seal.get("exit") != "P25-DEGREE25-EMPTY":
+    if seal.get("exit") != "P25-UNDECIDED":
         raise SystemExit("wrong sealed exit")
     for name, record in seal["files"].items():
         path = HERE / name

@@ -1,0 +1,9 @@
+# Rebuildable exact arrays above GitHub's per-file limit.
+/full_linear_syzygy_basis.npy
+/full_p3_contractions.npy
+
+# Future bounded-CAS outputs are nonverdict local run products.
+/*_result.txt
+/*.run.json
+/*.log
+/__pycache__/

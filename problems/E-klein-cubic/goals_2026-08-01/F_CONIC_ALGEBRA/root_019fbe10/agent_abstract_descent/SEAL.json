@@ -1,0 +1,15 @@
+{
+  "exit": "E3-RESTRICTION-INJECTIVE-AND-INFINITY-CONSISTENT",
+  "files_sha256": {
+    "STATUS.md": "dbe9f75864d1a62374084e0167b6abc69fe11f149c07f1dfd311eba28da01116",
+    "THEOREM.md": "063f22b2382292406bbb6d02cc2d8607c6bfa6d295a1f8751e157a0ff3f90420",
+    "produce.py": "a980b3c22aa959de954eaafa42df2ca96935f6580da8be2bb941db56c7b1876b",
+    "proof_payload.json": "d57c184ececae210b60322248558d502fe2a028069de2b59fb719786885b19e3",
+    "verify.py": "b51ff2371169cb69abfa72f11651faf882dae2c98f6ced79664f32ea7a25fd14"
+  },
+  "format": "goal-F-abstract-descent-seal-v1",
+  "terminal_markers": [
+    "GOAL_F_E3_RESTRICTION_INJECTIVE_ACCEPT",
+    "GOAL_F_INFINITY_COHOMOLOGY_CONSISTENT_ACCEPT"
+  ]
+}

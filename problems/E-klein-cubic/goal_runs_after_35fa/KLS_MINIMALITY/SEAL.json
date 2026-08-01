@@ -1,0 +1,78 @@
+{
+  "artifacts": [
+    {
+      "bytes": 3006,
+      "path": "COMPLETION_AUDIT.md",
+      "sha256": "99f0d19b9380498deb084c58b9fb15716498046d45bf1df99eec74173bc24a49"
+    },
+    {
+      "bytes": 1769,
+      "path": "CONFIGURATIONS.json",
+      "sha256": "efcc585ce24acbe4e5d3a38484142921fd0fdbe27304986b018b26c48d3f54a3"
+    },
+    {
+      "bytes": 2424,
+      "path": "COUNTEREXAMPLE_AUDIT.md",
+      "sha256": "ca01228c199dd0228a0042cbcc4346ac83620f2a2d989b56c8302d30848b8a47"
+    },
+    {
+      "bytes": 4084,
+      "path": "DISCREPANCY_THEOREM.md",
+      "sha256": "b77739b8abc46c437139b28b72203575d20dda953fea76e131cc62c6fa769a7d"
+    },
+    {
+      "bytes": 2339,
+      "path": "ELIMINATIONS.json",
+      "sha256": "4c4da7853e76658eb0aa9a7febf07274c5b8f4f7d3e6825b1eb2a01ec99131bf"
+    },
+    {
+      "bytes": 1896,
+      "path": "LITERATURE_AUDIT.md",
+      "sha256": "b95ef3bbfc0de9d6321a980f5246b25fe7663cd9c222d7527155bf10fb2d1bca"
+    },
+    {
+      "bytes": 4298,
+      "path": "MINIMALITY.md",
+      "sha256": "0cc17a73fa2dd3a3c56b845e7df9c942a3b1dc45fc41f3c71e18cce580eaf943"
+    },
+    {
+      "bytes": 1324,
+      "path": "MINIMALITY_MODEL.json",
+      "sha256": "501166495aa483be730fe805563cdcbbf05b385020a717fa9749dee55e14be13"
+    },
+    {
+      "bytes": 902,
+      "path": "README.md",
+      "sha256": "c521967dae2cb7984ff059851331bdbe2a10a892dd0a7b14035f5aa539b7fd98"
+    },
+    {
+      "bytes": 3211,
+      "path": "SOURCE_MANIFEST.json",
+      "sha256": "6f747e98e305e65ce91c7d73e664e08aa6dcbcd0c00dfbb6a7c059f1a20c0f3d"
+    },
+    {
+      "bytes": 3237,
+      "path": "STATUS.md",
+      "sha256": "6c4fa83f07c299d177b40aeeea21953df255ef338b76e3e259b33bb88d77e080"
+    },
+    {
+      "bytes": 1670,
+      "path": "VERIFICATION.md",
+      "sha256": "c2cd998a71c3d534f02b3ce0ad38d1bc69043066a0fa6ce1ed8901db87ff3400"
+    },
+    {
+      "bytes": 3260,
+      "path": "producer.py",
+      "sha256": "77c8783d2a3fd28e34158c80484b004d33706fcf504b699d37407bb05cf9296b"
+    },
+    {
+      "bytes": 9299,
+      "path": "verify.py",
+      "sha256": "ec9285a277bd9bab53da0edca12055fef310b5ede40d6d3e3cb094652431b5a1"
+    }
+  ],
+  "exit": "KLS2-NO-FINITE-REDUCTION",
+  "headline": "OPEN",
+  "schema": "kls2-seal-v1",
+  "self_hash_included": false
+}

@@ -1,0 +1,52 @@
+{
+  "format": "ambient-eliminant-adaptive-rational-reconstruction-v1",
+  "scope": "auxiliary degree-12 chart candidate; holdout required",
+  "reconstruction_primes": [
+    23,
+    67,
+    89,
+    199,
+    331
+  ],
+  "crt_modulus": 9033867481,
+  "coefficients_ascending_A_plus_Bc": [
+    [
+      null,
+      [
+        -57307,
+        56173
+      ]
+    ],
+    [
+      [
+        45977,
+        63649
+      ],
+      [
+        55249,
+        66602
+      ]
+    ],
+    [
+      [
+        10251,
+        2147
+      ],
+      null
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "complete_rational_reconstruction": false,
+  "factor_degrees_over_quadratic_field": [],
+  "maximum_reconstructed_height": 66602,
+  "theorem_boundary": "no candidate is accepted without a frozen unused-prime holdout"
+}

@@ -1,0 +1,219 @@
+{
+  "bounded_exact_low_degree": {
+    "bidegree_2_1_quotient_dimension": 145299,
+    "bidegree_2_1_source_dimension": 25530,
+    "bidegree_2_1_target_dimension": 170829,
+    "full_basis_sha256": "3571e9879bf1af6d6a405d9761522d4253e76e40edd129afd4b9363287d60ca3",
+    "full_m2_syzygy_nullity": 10767,
+    "full_m2_syzygy_rank": 14763,
+    "full_p3_sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019",
+    "observed_free_plus_speculative_gib": 29.523895263671875,
+    "p3_minor_rank_replayed": 10767,
+    "p3_minor_shape": [
+      10767,
+      10767
+    ],
+    "p3_minor_uint8_sha256": "d84ecf7c699f4338e9f2b5cb3a4b17b5052da21837fc134d174fbfc33071abc0",
+    "q_linear_syzygy_dimension": 0,
+    "standard_degree_2_elementary_koszul_relations": 237705,
+    "standard_degree_2_quotient_lower_bound": 14875053,
+    "standard_degree_2_source_dimension": 6203790,
+    "standard_degree_2_target_dimension": 20841138
+  },
+  "geometry": {
+    "ambient_projective_dimension": 8990,
+    "equation_rank": 690,
+    "equations_beyond_expected_empty_threshold": 411,
+    "expected_intersection_dimension": -412,
+    "linear_kernel_projective_dimension": 8300,
+    "linear_kernel_vector_dimension": 8301,
+    "maximal_possible_decomposable_free_vector_dimension": 8712,
+    "q_projective_dimension": 36,
+    "scope": "Expected dimension and the maximal-space bound are not an actual emptiness proof.",
+    "segre_degree": 2432727973719028684039020931262672433303967800,
+    "segre_projective_dimension": 278,
+    "y_projective_dimension": 242
+  },
+  "input_hashes": {
+    "certificates/degree25_finite_module/relation_matrix.npz": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+    "parallel/stageb_global_basis/full_linear_syzygy_basis.npy": "3571e9879bf1af6d6a405d9761522d4253e76e40edd129afd4b9363287d60ca3",
+    "parallel/stageb_global_basis/full_p3_contractions.npy": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019",
+    "parallel/stageb_global_basis/lt_cover_nonpure_minor.npz": "f7da4f4237290d046976cb5ac9df62aa1888db17f5d657c1cb0e614cb8f9db12"
+  },
+  "koszul_euler_preflight": {
+    "diagonal_degrees_0_through_7": [
+      {
+        "degree": 0,
+        "euler_characteristic": 1
+      },
+      {
+        "degree": 1,
+        "euler_characteristic": 8301
+      },
+      {
+        "degree": 2,
+        "euler_characteristic": 14875053
+      },
+      {
+        "degree": 3,
+        "euler_characteristic": 9828648265
+      },
+      {
+        "degree": 4,
+        "euler_characteristic": 2813797322700
+      },
+      {
+        "degree": 5,
+        "euler_characteristic": 329204679236004
+      },
+      {
+        "degree": 6,
+        "euler_characteristic": 3599336490120514
+      },
+      {
+        "degree": 7,
+        "euler_characteristic": -1794038036960727558
+      }
+    ],
+    "first_nonpositive_pairs": [
+      {
+        "a": 3,
+        "b": 10,
+        "euler_characteristic": -18427885804223986545
+      },
+      {
+        "a": 4,
+        "b": 9,
+        "euler_characteristic": -6912442834749515700
+      },
+      {
+        "a": 5,
+        "b": 8,
+        "euler_characteristic": -1648713550883989590
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "euler_characteristic": -304748857405054062
+      },
+      {
+        "a": 7,
+        "b": 6,
+        "euler_characteristic": -42270642767012894
+      },
+      {
+        "a": 8,
+        "b": 5,
+        "euler_characteristic": -2983604087421789
+      }
+    ],
+    "first_nonpositive_total_degree": 13,
+    "formula": "coefficient of H_R(s,t)*(1-s*t)^690",
+    "warning": "These are exact Euler characteristics, not Hilbert values or rank certificates when Koszul homology is unknown."
+  },
+  "macaulay": {
+    "certificate_rule": "Surjectivity at one positive bidegree proves the projective Segre section empty.",
+    "diagonal_first_dimensionally_possible": {
+      "degree": 4,
+      "source_dimension": 15267175641900,
+      "target_dimension": 13607700028650
+    },
+    "first_total_degree": 8,
+    "first_total_degree_pairs": [
+      {
+        "a": 3,
+        "b": 5,
+        "source_dimension": 72225484767450,
+        "source_excess": 5003446625919,
+        "target_dimension": 67222038141531,
+        "total_degree": 8
+      },
+      {
+        "a": 4,
+        "b": 4,
+        "source_dimension": 15267175641900,
+        "source_excess": 1659475613250,
+        "target_dimension": 13607700028650,
+        "total_degree": 8
+      },
+      {
+        "a": 5,
+        "b": 3,
+        "dense_matrix_entries": 3391855451749995300252000,
+        "formal_sparse_nonzeros": 15345242793443160,
+        "source_dimension": 1869450078600,
+        "source_excess": 55090074780,
+        "target_dimension": 1814360003820,
+        "total_degree": 8
+      }
+    ],
+    "necessary_surjectivity_inequality": "690*a*b >= (a+36)*(b+242)",
+    "piece_formula": "dim R_(a,b)=C(a+36,36)*C(b+242,242)",
+    "q_degree_one_endpoint": {
+      "a": 1,
+      "b": 14,
+      "source_dimension": 1565030249233815370308750,
+      "source_excess": 30458145637262659380750,
+      "target_dimension": 1534572103596552710928000,
+      "total_degree": 15
+    },
+    "resource_verdict": "No full dimensionally admissible Macaulay matrix is remotely materializable.",
+    "smallest_target_dimensionally_possible": {
+      "a": 5,
+      "b": 3,
+      "dense_matrix_entries": 3391855451749995300252000,
+      "formal_sparse_nonzeros": 15345242793443160,
+      "source_dimension": 1869450078600,
+      "source_excess": 55090074780,
+      "target_dimension": 1814360003820,
+      "total_degree": 8
+    },
+    "source_formula": "690*dim R_(a-1,b-1)",
+    "y_degree_one_endpoint": {
+      "a": 20,
+      "b": 1,
+      "source_dimension": 193597627818845250,
+      "source_excess": 2693532213131760,
+      "target_dimension": 190904095605713490,
+      "total_degree": 21
+    }
+  },
+  "polarized_map": {
+    "coefficient_density": 0.9129603032984676,
+    "coefficient_nnz": 5663814,
+    "coefficient_tensor_shape": [
+      690,
+      37,
+      243
+    ],
+    "converse": false,
+    "m2_systematic_free_columns": 87,
+    "m2_systematic_unit_columns": 690,
+    "polarization_identity_checked": true,
+    "row_nnz_max": 8255,
+    "row_nnz_mean": 8208.426086956522,
+    "row_nnz_min": 8164,
+    "safe_implication": "Empty polarized Segre kernel implies Stage B empty.",
+    "shape": [
+      690,
+      243
+    ]
+  },
+  "prime": 89,
+  "status": "PASS_POLARIZED_SEGRE_LOW_DEGREE_NONVERDICT",
+  "theorem_boundary": {
+    "not_proved": [
+      "surjectivity at any positive bidegree",
+      "absence of a decomposable tensor in the 8301-dimensional kernel",
+      "global injectivity of L(q)",
+      "Stage-B emptiness or a true Stage-B point"
+    ],
+    "proved": [
+      "the 690 bilinear equations are linearly independent",
+      "the exact raw multigraded Macaulay dimension floors",
+      "the complete polarized equation system has no q-linear syzygy",
+      "the exact bidegree-(2,1) quotient dimension 145299",
+      "the standard degree-two quotient has dimension at least 14875053"
+    ]
+  }
+}

@@ -15,6 +15,12 @@ Installed exact data:
 - a bounded ambient-projector degree audit and multiprime reconstruction
   harness.
 
+The degree-12 auxiliary chart is modularly length three in fourteen split
+fibres (two embeddings at seven primes), but adaptive rational reconstruction
+is still insufficient at CRT modulus `1266015222654821`.  The frozen
+three-prime candidate failed at the unused prime 199.  No characteristic-zero
+projector is claimed from these data.
+
 Not installed:
 
 - an exact self-adjoint rank-two projector;
@@ -29,6 +35,8 @@ Core replay:
 /opt/homebrew/bin/python3 -u verify_involution.py
 /opt/homebrew/bin/python3 -u verify_distinguished_five_plane.py
 /opt/homebrew/bin/python3 -u audit_ambient_leading.py --max-degree 8
+/opt/homebrew/bin/python3 -u search_projector_descent_words.py
+/opt/homebrew/bin/python3 -u reconstruct_ambient_eliminant_adaptive.py --through-prime 397
 ```
 
 The aggregate `verify_all.py` reruns those checks plus the authoritative exact

@@ -101,27 +101,35 @@ def main() -> None:
     started = time.monotonic()
     peak = 0
     stop_reason = None
-    with log.open("w") as log_handle:
-        process = subprocess.Popen(
-            command,
-            text=True,
-            stdout=log_handle,
-            stderr=subprocess.STDOUT,
-            start_new_session=True,
-        )
-        while process.poll() is None:
-            peak = max(peak, rss(process.pid))
-            elapsed = time.monotonic() - started
-            if peak >= args.rss_gib * 1024**3:
-                stop_reason = "memory"
-                os.killpg(process.pid, signal.SIGKILL)
-                break
-            if elapsed >= args.timeout:
-                stop_reason = "timeout"
-                os.killpg(process.pid, signal.SIGKILL)
-                break
-            time.sleep(0.2)
-        returncode = process.wait()
+    process: subprocess.Popen[str] | None = None
+    try:
+        with log.open("w") as log_handle:
+            process = subprocess.Popen(
+                command,
+                text=True,
+                stdout=log_handle,
+                stderr=subprocess.STDOUT,
+                start_new_session=True,
+            )
+            while process.poll() is None:
+                peak = max(peak, rss(process.pid))
+                elapsed = time.monotonic() - started
+                if peak >= args.rss_gib * 1024**3:
+                    stop_reason = "memory"
+                    os.killpg(process.pid, signal.SIGKILL)
+                    break
+                if elapsed >= args.timeout:
+                    stop_reason = "timeout"
+                    os.killpg(process.pid, signal.SIGKILL)
+                    break
+                time.sleep(0.2)
+            returncode = process.wait()
+    except KeyboardInterrupt:
+        stop_reason = "interrupt"
+        if process is not None and process.poll() is None:
+            os.killpg(process.pid, signal.SIGKILL)
+            process.wait()
+        raise
 
     elapsed = time.monotonic() - started
     leading_text = leading.read_text(errors="replace")

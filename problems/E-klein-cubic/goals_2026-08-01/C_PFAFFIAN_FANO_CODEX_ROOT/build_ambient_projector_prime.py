@@ -58,6 +58,13 @@ def main() -> None:
     equations = scanner.landing_equations(seeds, extra_points=180)
     rows = [row for _pivot, row in equations]
     seed_payload = [[int(output), list(exponents)] for output, exponents in seeds]
+    row_array = np.stack(rows)
+    if prime < 256:
+        row_bytes = bytes(row_array.astype(np.uint8).flat)
+        row_encoding = "one-byte-residues"
+    else:
+        row_bytes = row_array.astype("<u2").tobytes()
+        row_encoding = "little-endian-uint16-residues"
 
     p23_payload = json.loads(SHARED_P23.read_text())
     same_seed_frame = seed_payload == p23_payload["seeds"]
@@ -71,9 +78,8 @@ def main() -> None:
         "quadratic_rank": len(rows),
         "same_seed_frame_as_p23": same_seed_frame,
         "seeds": seed_payload,
-        "quadratic_row_sha256": sha256(
-            bytes(np.stack(rows).astype(np.uint16).flat)
-        ).hexdigest(),
+        "quadratic_row_sha256": sha256(row_bytes).hexdigest(),
+        "quadratic_row_encoding": row_encoding,
         "source": str(FULL_WEDGE.relative_to(ROOT)),
         "theorem_boundary": (
             "a modular ambient projector is neither characteristic-zero Morita data "

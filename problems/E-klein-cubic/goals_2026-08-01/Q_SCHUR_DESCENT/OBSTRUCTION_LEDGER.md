@@ -57,6 +57,12 @@ any abelian functorial point obstruction satisfying the usual transfer law:
 it is killed by both 3 and 55 and hence by 1.  This statement does not cover
 an arbitrary nonlinear or nonabelian invariant.
 
+More precisely, if `P/K` is a torsor under any commutative algebraic group
+and there is a `K`-morphism `X_T -> P`, the degree-3 and degree-55 closed
+points make `3[P]=55[P]=0` in `H^1(K,A)`.  Since `55-18*3=1`, `[P]=0`.
+Thus no nontrivial commutative or semiabelian torsor receiving the whole
+threefold can be a point obstruction here.
+
 ## 4. Stable cohomology and the exact remaining scope
 
 The audited stable cohomology with finite constant coefficients vanishes
@@ -103,3 +109,28 @@ obstructions.
 Therefore the standard obstruction side of Q3 is exhausted only at the
 named-package level, not at the level required for the negative headline.
 
+## 7. Exact valuation frontier
+
+Let `E=C(P(V6))`, `K=E^G`, and let `v` be a valuation of `K` trivial on `C`.
+For a prolongation to `E`, write `D` and `I` for decomposition and inertia.
+The independent audit in `parallel/negative_obstruction/` proves that a
+henselian nonpoint can survive only if
+
+```text
+I = 1,
+trdeg_C k(v) >= 2,
+rational_rank(v) <= 3,
+D in {PSL(2,11), A5_class_1, A5_class_2, 11:5}.
+```
+
+In particular, every valuation of rational rank at least four is locally
+soluble.  The proof combines the universal inertia-centralizer theorem,
+smooth henselian reduction, Graber--Harris--Starr in residue transcendence
+degree at most one, the audited proper-subgroup boundary, and Abhyankar's
+inequality in transcendence degree five.
+
+No current theorem supplies a point on the surviving residue cubic over a
+complex surface or threefold field: the standard rational-simple-connectedness
+numerics (`9 <= 4`, or even `9 <= 5`) and the Tsen--Lang inequalities
+(`5 > 9`, `5 > 27`) both fail.  Therefore the valuation theorem is an exact
+obstruction interface, not an obstruction class or a negative headline.

@@ -1,0 +1,28 @@
+{
+  "schema": "klein-cubic-T2-component-comparison-v1",
+  "exit": "T2-ROUTE-REFUTED",
+  "infinity_component": {
+    "equation_payload": "goals_2026-08-01/F_CONIC_ALGEBRA/infinity_obstruction.json",
+    "equation_payload_sha256": "00316341a4d5207d8630e3d8d4411113b8fa2df5f6b3db42b48aa3003e094405",
+    "ramification_index": 1,
+    "residue_degree": 1,
+    "residual_fixed_frame_index": 3
+  },
+  "genuine_target_component": {
+    "equation": "H_primitive(A,B,Y,Z)",
+    "equation_tsv": "certificates/target_branch_global/H_factor/H_primitive_integer.tsv",
+    "equation_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "total_degree": 43,
+    "term_count": 37992,
+    "irreducible_over_Q": true,
+    "ramification_index": 2,
+    "residue_degree": 1,
+    "normalization": null,
+    "conductor": null
+  },
+  "comparison": {
+    "same_ordered_place": false,
+    "proof": "ramification index mismatch 1 != 2",
+    "abstract_residue_field_birationality_sufficient": false
+  }
+}

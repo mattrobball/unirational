@@ -1,0 +1,22 @@
+{
+  "backend": "FFLAS-FFPACK 2.5.0 Det_modular_double",
+  "certificate_sha256": "89ec13bb2672a8b26e5e3e5beed74dfa21bf4374c4d6d57721b0d475f5f9a41a",
+  "determinant_mod_89": 28,
+  "determinant_nonzero": true,
+  "determinant_seconds": 12.12060974999622,
+  "independent_construction": "multiset monomial bases and selected-minor rebuild",
+  "max_rss_note": "ru_maxrss units are platform-dependent; on macOS this is bytes",
+  "max_rss_raw": 1463091200,
+  "prime": 89,
+  "scope_guard": "No claim is made for the complement of L or global Stage B.",
+  "selected_minor_nonzero_entries": 4583853,
+  "selected_minor_shape": [
+    10296,
+    10296
+  ],
+  "selected_minor_uint8_rowmajor_sha256": "3c86bcecfa78008392f7311fcf29c78d54fafac21f725fb6a942daf98cac788d",
+  "source_sha256": "2e718c491172480e3aa3f055d5806d28a9414db2627e6daf3f0204bdc3b840ea",
+  "status": "PASS",
+  "total_seconds": 12.777451166999526,
+  "verified_conclusion": "the selected 10296-row minor is invertible over F_89, hence the closed-L degree-six map is surjective and the r256 Stage-B rank-drop locus is empty on L"
+}

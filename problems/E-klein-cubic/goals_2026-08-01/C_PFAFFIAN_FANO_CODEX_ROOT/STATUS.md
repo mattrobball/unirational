@@ -31,6 +31,26 @@ Current exact progress:
 - genuinely independent split-prime reconstructions at 67 and 89 reproduce
   the same 48-element degree-12 seed frame and equation rank 471.  No point
   or characteristic-zero lift has yet been accepted from that scheme;
+- corrected conjugate solves at 23 and 67 both reproduce a square-free
+  length-three chart.  All extracted rational residue projectors pass direct
+  Pluecker and self-adjoint rank-two checks and fail the genuine five-plane
+  equations.  The three split projectors at `p=23,zeta=4` are neither
+  pairwise commuting nor a decomposition of the identity;
+- the resulting two-prime eliminant CRT has centered height 646 and is
+  explicitly rejected as a reconstruction.  A three-prime rational candidate
+  from 23, 67, and 89 then fails its frozen first-embedding prediction at the
+  unused prime 199 (`[26,73,94,1]` versus `[32,83,147,1]`) and is also
+  rejected;
+- three primes reconstruct only 45 of the 145 scalar `A+B*c` pairs in the
+  full degree-12 RUR.  A finite twelve-point screen also finds no Pfaffian-zero
+  survivor among single, signed-pair, or signed-triple combinations of the 23
+  short Galois-symmetric projector-word orbits;
+- adaptive eliminant reconstruction through both embeddings at the seven
+  primes `23,67,89,199,331,353,397` remains insufficient at CRT modulus
+  `1266015222654821`: only two nontrivial field coordinates validate, at
+  height up to `21557989`.  The final conjugate RUR cost 1498 seconds.  The
+  declared stop rule forbids another reconstruction prime, so there is no
+  accepted characteristic-zero degree-12 eliminant or projector;
 - `distinguished_five_plane.json` uses the exact equivariant Hilbert--90
   frame `x,C,D,E,K` to install the five specific section elements
   `S_j=Q(x)^-1 Q(V_j(x))`.  An independent exact witness gives rank five and

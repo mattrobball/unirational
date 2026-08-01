@@ -1,0 +1,124 @@
+{
+  "canonical_bases": "canonical_bases.json",
+  "canonical_bases_sha256": "ca9555a34fa4221851fb77df5077f568a038e1b4d471934efe64e05a2ffec1cf",
+  "decision_status": "complete coefficientwise ideals constructed; C3/C6 linear elimination installed; projective saturation not decided",
+  "degrees": {
+    "31": {
+      "equation_count": 5349,
+      "independent_nodal_crosscheck": [
+        {
+          "metadata": "degree_31/landing_ideal_p419.json",
+          "metadata_sha256": "f90f7ed2aa3d930e1a109f84c8eaca45802a5103ac952a3ef7bd505f8f2ee5da",
+          "payload": "degree_31/landing_nodes_p419.npz",
+          "payload_sha256": "7ee318de8d170378bfb38c04f26786a4b476b49f431e1bcb8cbf6032f58a6dbf",
+          "prime": 419
+        },
+        {
+          "metadata": "degree_31/landing_ideal_p463.json",
+          "metadata_sha256": "c4b4382f02f73b0a248e75f5ddc5e3f460f238862bd419b0fae1e398ce556d28",
+          "payload": "degree_31/landing_nodes_p463.npz",
+          "payload_sha256": "fea9c94c13cf2c0479d8dbe8d3f12936d9f5a40277688c3e9324e42fd7efa9be",
+          "prime": 463
+        }
+      ],
+      "parameter_dimension": 198,
+      "payload": "degree_31/landing_ideal_circuits.json",
+      "payload_sha256": "fa04088f51a3167934d019430ff0a0ee27bfba0f17f621902dadbc0cfa7ff84d",
+      "prime_records": [
+        {
+          "basis_dimension": 198,
+          "fixed_landing_equation_count": 5349,
+          "invariant_evaluation_rank": 5349,
+          "payload": "landing_circuits_p419.npz",
+          "payload_sha256": "3fb2abf590ff70cb78e54da8e3059b04c8e7f0193b9e143c141f8051cdb20061",
+          "prime": 419,
+          "standard_module_complement_nonlanding_witnesses": [
+            {
+              "Klein_value": 218,
+              "basis_index": 197,
+              "point_index": 0
+            }
+          ],
+          "zeta11": 13
+        },
+        {
+          "basis_dimension": 198,
+          "fixed_landing_equation_count": 5349,
+          "invariant_evaluation_rank": 5349,
+          "payload": "landing_circuits_p463.npz",
+          "payload_sha256": "065706e7cb6f020c2242826e2485d52fb20f38e270f6bd9fc328f22462b5fc78",
+          "prime": 463,
+          "standard_module_complement_nonlanding_witnesses": [
+            {
+              "Klein_value": 114,
+              "basis_index": 197,
+              "point_index": 0
+            }
+          ],
+          "zeta11": 15
+        }
+      ],
+      "source_coefficient_degree": 93
+    },
+    "35": {
+      "equation_count": 8555,
+      "independent_nodal_crosscheck": [
+        {
+          "metadata": "degree_35/landing_ideal_p419.json",
+          "metadata_sha256": "5104e009c1bb6994717194ebc8472267532f1fcc169ded22fb8d41d219a8791d",
+          "payload": "degree_35/landing_nodes_p419.npz",
+          "payload_sha256": "af257c443b3988aac83ac416a6e864c4ee64ad74c31ea8ed01addef41dbd1df5",
+          "prime": 419
+        },
+        {
+          "metadata": "degree_35/landing_ideal_p463.json",
+          "metadata_sha256": "9d48d65aadb1c9d401400184a4c8703fb3f86b25cf8f1c3397d4f948cb280f25",
+          "payload": "degree_35/landing_nodes_p463.npz",
+          "payload_sha256": "ff5b2f0bb02ebd06f4c67e54de30ae0e9cbc305117536f68eb69e95b37235650",
+          "prime": 463
+        }
+      ],
+      "parameter_dimension": 361,
+      "payload": "degree_35/landing_ideal_circuits.json",
+      "payload_sha256": "2261c64a86a73b5e9536e122a3d031cf2cb8f910164e53491166267383a4d57e",
+      "prime_records": [
+        {
+          "basis_dimension": 361,
+          "fixed_landing_equation_count": 8555,
+          "invariant_evaluation_rank": 8555,
+          "payload": "landing_circuits_p419.npz",
+          "payload_sha256": "3695d180bd3ec0092ca313e5e7d934d6e69afea401c9c52251081671640d7ac2",
+          "prime": 419,
+          "standard_module_complement_nonlanding_witnesses": [],
+          "zeta11": 13
+        },
+        {
+          "basis_dimension": 361,
+          "fixed_landing_equation_count": 8555,
+          "invariant_evaluation_rank": 8555,
+          "payload": "landing_circuits_p463.npz",
+          "payload_sha256": "0d6975f27bd7bf5f961e38ef373ec09f5de51434100e0ed1dd3d52a0010175f1",
+          "prime": 463,
+          "standard_module_complement_nonlanding_witnesses": [],
+          "zeta11": 15
+        }
+      ],
+      "source_coefficient_degree": 105
+    }
+  },
+  "dual_generators_sha256": "b9aa1f8fe852e15b1b786b6a0577f06cf3ce200c5b092bcbd4c444678add874b",
+  "linear_elimination": {
+    "payload": "c3_constant_gate.json",
+    "payload_sha256": "950004c554d52bcb2993afae1d3e1929a46cb547ec449d70033fe38d0aeee645",
+    "scope": "necessary linear consequence of the complete cubic landing ideal on the C3/C6 orbit; retained in the original K1 coordinates"
+  },
+  "parameter_basis": "canonical_bases.json",
+  "parameter_basis_sha256": "ca9555a34fa4221851fb77df5077f568a038e1b4d471934efe64e05a2ffec1cf",
+  "reduced_special_fibre": {
+    "payload": "c3_reduced_landing.json",
+    "payload_sha256": "c7dacae931e14c3a5d51606f6f078242cfee5c410d002efbcc49f61cb0f1b9e0",
+    "prime": 463,
+    "scope": "complete factored landing equations on the C3/C6 gate kernel, with based and nonbased C3 strata materialized"
+  },
+  "schema": "cov-m1-complete-factored-landing-ideals-v1"
+}

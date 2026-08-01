@@ -1,0 +1,14 @@
+{
+  "format": "klein-h3-a5-twist-equation-v1",
+  "label": "A5_class_2",
+  "authoritative_generators": [[0, 1, 10, 0], [0, 2, 5, 10]],
+  "canonical_equation": "S+((4-sqrt(-11))/9)D=0",
+  "canonical_parameter_polynomial": "9*T^2-8*T+3",
+  "orbit_basis_equation": "C0+((13+sqrt(-11))/18)C1=0",
+  "orbit_parameter_polynomial": "9*L^2-13*L+5",
+  "minimal_equation": "sum_|e|=3 (A_e(U,V)+((4-sqrt(-11))/9)B_e(U,V))*z^e=0",
+  "coefficient_payload": "../minimal_model_payload.json",
+  "installed_frame": "A_2 from H_SUBGROUP_TWISTS_ROOT_019FBE10/twists.json",
+  "installed_equivalence": "B_2=J_2^-1*A_2 and T_2=C^-1*B_2 in GL_5(C(U,V))",
+  "point_payload": "point.json"
+}

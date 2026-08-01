@@ -1,0 +1,10 @@
+{
+  "prime": 89,
+  "zeta11": 4,
+  "degree": 12,
+  "dimension": 48,
+  "quadratic_rank": 471,
+  "chart": "a47=1",
+  "first_generator_sha256": "6d5aeaa8e130365a66dcab87329448d1cab18d188f879757a2a02b1e00c595e6",
+  "rur_bytes": 1501
+}

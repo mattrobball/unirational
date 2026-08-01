@@ -1,0 +1,47 @@
+{
+  "argument": "Every admissible module order has an absolute least degree-three term q_min^3 e_min. Covering q_min^5 e_min requires that term in in(N3), which would require the pure vector itself. Injectivity of projection to the non-pure coordinates excludes every such vector.",
+  "degree3_leading_term_cover_possible": false,
+  "full_p3": {
+    "file": "full_p3_contractions.npy",
+    "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019",
+    "shape": [
+      10767,
+      6,
+      9139
+    ]
+  },
+  "minor_attempts": [
+    {
+      "column_rule": "term-major balanced prefix",
+      "fflas_seconds": 6.671853,
+      "rank": 9867,
+      "uint8_sha256": "eb67cb7d2876b1f69e1af1f54c2b6957cd066b862e583189dddaa483071a4926"
+    },
+    {
+      "column_rule": "component-major prefix",
+      "fflas_seconds": 6.372623,
+      "rank": 10767,
+      "uint8_sha256": "d84ecf7c699f4338e9f2b5cb3a4b17b5052da21837fc134d174fbfc33071abc0"
+    }
+  ],
+  "no_nonzero_pure_cube_supported_vector_in_N3": true,
+  "nonpure_module_columns": 54612,
+  "nonpure_projection_injective": true,
+  "observed_free_plus_speculative_gib_before_run": 43.74391174316406,
+  "prime": 89,
+  "profile_artifact": {
+    "file": "lt_cover_nonpure_minor.npz",
+    "sha256": "f7da4f4237290d046976cb5ac9df62aa1888db17f5d657c1cb0e614cb8f9db12"
+  },
+  "pure_cube_module_columns": 222,
+  "scope": "This only decides availability of the proposed degree-three LT-cover certificate. It neither decides the full degree-five Macaulay map nor proves a Stage-B point.",
+  "status": "PASS_LT_COVER_OBSTRUCTED",
+  "tested_minor": {
+    "column_rule": "component-major prefix",
+    "columns": 10767,
+    "fflas_seconds": 6.372623,
+    "rank": 10767,
+    "rows": 10767,
+    "uint8_sha256": "d84ecf7c699f4338e9f2b5cb3a4b17b5052da21837fc134d174fbfc33071abc0"
+  }
+}

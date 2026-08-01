@@ -1,0 +1,438 @@
+{
+  "c6_generator": [
+    [
+      768,
+      803,
+      536,
+      137,
+      287
+    ],
+    [
+      720,
+      200,
+      799,
+      16,
+      553
+    ],
+    [
+      807,
+      605,
+      172,
+      893,
+      574
+    ],
+    [
+      855,
+      162,
+      328,
+      609,
+      168
+    ],
+    [
+      255,
+      55,
+      324,
+      43,
+      234
+    ]
+  ],
+  "degrees": {
+    "31": {
+      "allowed_constant_scalar_form_dimension": 10,
+      "constant_gate_kernel_dimension": 187,
+      "constant_gate_matrix_shape": [
+        128,
+        198
+      ],
+      "constant_gate_rank": 11,
+      "input_dimension": 198,
+      "payload": "degree_31/c3_constant_gate_p991.npz",
+      "payload_sha256": "9dc495202c00e44288cd5c10b5974d57ea04691c3e1b116f1797602340a2bbc6",
+      "restriction_map_rank": 21,
+      "source_line_point_count": 32,
+      "target_binary_cubic": {
+        "Fp_rational_root_count": 1,
+        "Fp_rational_roots": [
+          [
+            241,
+            641,
+            972,
+            1,
+            530
+          ]
+        ],
+        "coefficients_s3_s2t_st2_t3": [
+          32,
+          756,
+          359,
+          694
+        ],
+        "discriminant": 439
+      },
+      "target_eigenspace": [
+        [
+          224,
+          886,
+          145,
+          1,
+          0
+        ],
+        [
+          417,
+          869,
+          699,
+          0,
+          1
+        ]
+      ],
+      "target_eigenvalue_exponent": 1,
+      "unique_C6_fixed_root": [
+        241,
+        641,
+        972,
+        1,
+        530
+      ]
+    },
+    "35": {
+      "allowed_constant_scalar_form_dimension": 12,
+      "constant_gate_kernel_dimension": 348,
+      "constant_gate_matrix_shape": [
+        144,
+        361
+      ],
+      "constant_gate_rank": 13,
+      "input_dimension": 361,
+      "payload": "degree_35/c3_constant_gate_p991.npz",
+      "payload_sha256": "45b278caa89f99ce7936db0f26f9df087660e92cdc9c726ba1a16ef61badcf9c",
+      "restriction_map_rank": 25,
+      "source_line_point_count": 36,
+      "target_binary_cubic": {
+        "Fp_rational_root_count": 1,
+        "Fp_rational_roots": [
+          [
+            463,
+            569,
+            509,
+            1,
+            428
+          ]
+        ],
+        "coefficients_s3_s2t_st2_t3": [
+          301,
+          55,
+          463,
+          235
+        ],
+        "discriminant": 836
+      },
+      "target_eigenspace": [
+        [
+          449,
+          584,
+          110,
+          1,
+          0
+        ],
+        [
+          866,
+          771,
+          897,
+          0,
+          1
+        ]
+      ],
+      "target_eigenvalue_exponent": 2,
+      "unique_C6_fixed_root": [
+        463,
+        569,
+        509,
+        1,
+        428
+      ]
+    }
+  },
+  "omega": 113,
+  "order_three_generator": [
+    [
+      815,
+      635,
+      162,
+      893,
+      510
+    ],
+    [
+      520,
+      476,
+      544,
+      324,
+      168
+    ],
+    [
+      255,
+      433,
+      32,
+      90,
+      137
+    ],
+    [
+      553,
+      803,
+      710,
+      310,
+      360
+    ],
+    [
+      353,
+      807,
+      799,
+      800,
+      348
+    ]
+  ],
+  "prime": 991,
+  "schema": "cov-m1-c3-c6-constant-gate-probe-v1",
+  "scope": "discovery; nonlinear residual scheme not decided",
+  "setwise_stabilizer": [
+    [
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        815,
+        635,
+        162,
+        893,
+        510
+      ],
+      [
+        520,
+        476,
+        544,
+        324,
+        168
+      ],
+      [
+        255,
+        433,
+        32,
+        90,
+        137
+      ],
+      [
+        553,
+        803,
+        710,
+        310,
+        360
+      ],
+      [
+        353,
+        807,
+        799,
+        800,
+        348
+      ]
+    ],
+    [
+      [
+        119,
+        904,
+        16,
+        768,
+        952
+      ],
+      [
+        38,
+        858,
+        443,
+        574,
+        200
+      ],
+      [
+        172,
+        839,
+        344,
+        4,
+        855
+      ],
+      [
+        55,
+        609,
+        472,
+        909,
+        897
+      ],
+      [
+        725,
+        536,
+        234,
+        672,
+        742
+      ]
+    ],
+    [
+      [
+        605,
+        16,
+        433,
+        725,
+        168
+      ],
+      [
+        255,
+        328,
+        574,
+        710,
+        904
+      ],
+      [
+        443,
+        803,
+        43,
+        855,
+        800
+      ],
+      [
+        510,
+        4,
+        799,
+        287,
+        55
+      ],
+      [
+        536,
+        520,
+        897,
+        893,
+        720
+      ]
+    ],
+    [
+      [
+        768,
+        803,
+        536,
+        137,
+        287
+      ],
+      [
+        720,
+        200,
+        799,
+        16,
+        553
+      ],
+      [
+        807,
+        605,
+        172,
+        893,
+        574
+      ],
+      [
+        855,
+        162,
+        328,
+        609,
+        168
+      ],
+      [
+        255,
+        55,
+        324,
+        43,
+        234
+      ]
+    ],
+    [
+      [
+        553,
+        720,
+        200,
+        799,
+        16
+      ],
+      [
+        574,
+        807,
+        605,
+        172,
+        893
+      ],
+      [
+        168,
+        855,
+        162,
+        328,
+        609
+      ],
+      [
+        234,
+        255,
+        55,
+        324,
+        43
+      ],
+      [
+        287,
+        768,
+        803,
+        536,
+        137
+      ]
+    ]
+  ],
+  "setwise_stabilizer_order": 6,
+  "source_eigenspace": [
+    [
+      224,
+      886,
+      145,
+      1,
+      0
+    ],
+    [
+      417,
+      869,
+      699,
+      0,
+      1
+    ]
+  ],
+  "zeta11": 42
+}

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -23,6 +24,10 @@ CHECKS = (
     ("verify_line_constant.py", ("G_ALL_DEGREE_LINE_CONSTANT_VERIFY_OK",)),
     ("verify_structural.py", ("G_ALL_DEGREE_STRUCTURAL_VERIFY_OK",)),
     (
+        "verify_literature_frontier.py",
+        ("G_CURRENT_LITERATURE_FRONTIER_2026_07_18_OPEN_OK",),
+    ),
+    (
         "attacks/constructive_point/verify.py",
         ("G_CONSTRUCTIVE_POINT_ATTACK_VERIFY_OK",),
     ),
@@ -41,6 +46,30 @@ CHECKS = (
             "ZERO_CYCLE_CONTAINMENT_ROUTE_AUDIT_OK",
         ),
     ),
+    (
+        "attacks/low_rank_valuations_v2/verify.py",
+        ("G_LOW_RANK_C1_RESIDUE_LOCAL_SOLUBILITY_EXACT",),
+    ),
+    (
+        "attacks/ternary_kproj_v2/verify.py",
+        (
+            "THEOREM Goal-G x,C,D plane has no K_proj,C-point (literal 10-coefficient bind)",
+            "CHAR0_TRANSFER projective special-fibre emptiness at p=101 => geometric QQ/C emptiness",
+            "STRICT_SCOPE xCD plane theorem plus 120 finite common-secondary ansatze; full cubic remains open",
+            "G_TERNARY_KPROJ_V2_VERIFY_OK",
+        ),
+    ),
+    (
+        "attacks/primitive_quartic_v2/verify.py",
+        (
+            "PRIMITIVE_QUARTIC_FORCED_DISJOINTNESS_OK",
+            "PRIMITIVE_QUARTIC_CUBIC_RESOLVENT_OK",
+            "PRIMITIVE_QUARTIC_FINITE_GATE_OK",
+            "PRIMITIVE_QUARTIC_S4_SMOOTH_COUNTERMODEL_OK",
+            "PRIMITIVE_QUARTIC_ROUTE_AUDIT_OK",
+            "HEADLINE_OPEN",
+        ),
+    ),
     ("verify_seal.py", ("G_ALL_DEGREE_SEAL_OK",)),
 )
 
@@ -54,6 +83,7 @@ def main() -> None:
             text=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
+            env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"},
         )
         for marker in markers:
             if marker not in completed.stdout:

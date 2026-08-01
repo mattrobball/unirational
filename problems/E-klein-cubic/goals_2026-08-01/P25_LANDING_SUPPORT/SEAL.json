@@ -1,0 +1,162 @@
+{
+  "exit": "P25-UNDECIDED",
+  "files": {
+    "ACCEPTANCE_AUDIT.md": {
+      "bytes": 3367,
+      "sha256": "92f1b6620e41c7efd260534b1a011e3fde9b8b19429918d0f53c81e26c054848"
+    },
+    "NONVERDICT_RUNS.md": {
+      "bytes": 1753,
+      "sha256": "fac313a7eb6ac293176d4585db654996682f4ae12b75fa4b71560fba67f0044b"
+    },
+    "PREFLIGHT.md": {
+      "bytes": 2655,
+      "sha256": "6ddf86f6a8db474d9946082b1d93b7ae280c08c0477049b791ae1d922f55daf3"
+    },
+    "STATUS.md": {
+      "bytes": 1346,
+      "sha256": "fa349478a2771d1c5cc4a309eeb2488b8ce5e9850c2a3ec9fbe5f2456a77037a"
+    },
+    "SUPPORT.md": {
+      "bytes": 3657,
+      "sha256": "7d727d60302ca304d470868fe96e59a401a678b788eb11debce19bb057def7fd"
+    },
+    "WORK_SCOPE.md": {
+      "bytes": 811,
+      "sha256": "6eee711688fd3920c2278680d8f67e68192c9954304598a9613f7c91a2b0939a"
+    },
+    "border_replay.log": {
+      "bytes": 244,
+      "sha256": "e6b04f91bd33cfea661ac77ef155f33f0cdc853f94aa74f5bb42d25bca193f64"
+    },
+    "candidate_or_empty.json": {
+      "bytes": 1544,
+      "sha256": "bde6b3500b7a8ce396fe664c0eb49b94cdb861bdbdb79f34610751f52dbf10ec"
+    },
+    "dvr_replay.log": {
+      "bytes": 157,
+      "sha256": "ff8aebb4c816d7aa8ac44b0fdd94bdb8c75e125ce747669e4155f172e62643c5"
+    },
+    "linear_syzygies.json": {
+      "bytes": 3666,
+      "sha256": "06b06bcd0d4be6b4cfdbbe80af82c4c2c71f79013e9cf7e304a076eb87850f47"
+    },
+    "linear_syzygies.npz": {
+      "bytes": 932300,
+      "sha256": "f3787f317d851900de76da85ecb67018de5b48b0177d4e6e517634312f1c86a9"
+    },
+    "linear_syzygies_r48_reconstructed.npz": {
+      "bytes": 499280,
+      "sha256": "95fb1405584468b6e327fa36617f8daafd32e7630d29526f9d09ae5f3820d5e8"
+    },
+    "make_seal.py": {
+      "bytes": 2405,
+      "sha256": "4f0f5fe0bef1c68e66c3156e5ebbadefa4776547b631ec326205ed26337e60c6"
+    },
+    "produce_linear_syzygies.py": {
+      "bytes": 8460,
+      "sha256": "0bb92b89ebcc90f140f3d5870532c8d9e235b47e4a6ecda7a8371c11f78322c0"
+    },
+    "produce_syzygy_bcharts.py": {
+      "bytes": 4578,
+      "sha256": "7619b8386f71c6e60e1cbef3898692b36a0d93ca89dceea03adb31ac21b399bb"
+    },
+    "produce_syzygy_charts.py": {
+      "bytes": 8817,
+      "sha256": "741f95e79793d3bfbde8a5c1a8d537b291eb21da73af19c773bbde99cd30cf4d"
+    },
+    "produce_syzygy_singular.py": {
+      "bytes": 4976,
+      "sha256": "e7fc96920921e462c8c640679de1423dd96532a54f5d436c611f857850a3fc1c"
+    },
+    "reconstruct_syzygies96.py": {
+      "bytes": 5906,
+      "sha256": "538dac75037c9874f031be69a984d019c090bae3b5d1a6ccc1ded34d7402152a"
+    },
+    "rowrank_replay.log": {
+      "bytes": 875,
+      "sha256": "daa66e4069d43fc20b51ae00cf41339f415b289e6324b06ea794b736a6efef0b"
+    },
+    "rowrank_replay_report.json": {
+      "bytes": 413,
+      "sha256": "cd4b7ae35d1394a1e39c7ef27162d8e3ed187adbfe5dec2eff79504d4ed72eb3"
+    },
+    "run_singular.py": {
+      "bytes": 4684,
+      "sha256": "227589e1a441bb28c69f550631311422a458da3f3d1adcef680d2db620e61167"
+    },
+    "saturation_attempts.json": {
+      "bytes": 2695,
+      "sha256": "16b0023a28a70979a2d9f7ef8cbc0f81b379d33af42fde16306b1ec0e5be3d7b"
+    },
+    "stageA_replay.log": {
+      "bytes": 159,
+      "sha256": "f89c07239baac6e558e99154e93dcd5c0397b21a692f77193dd1b8d4210c428e"
+    },
+    "stageA_replay_result.json": {
+      "bytes": 157,
+      "sha256": "454a73fb2cbdc9819c54c8ca3f479b48a0c9646ee7ebf6d806c3f6bfa3d6481a"
+    },
+    "syzygy_r256_boundary_saturate.sing": {
+      "bytes": 216514399,
+      "sha256": "03f54fbad6d1a220520a8ecb84e7dc5b37cbbc6c49092ee8dfb2e1ba19f9188e"
+    },
+    "syzygy_r256_boundary_singular.json": {
+      "bytes": 692,
+      "sha256": "361f7a1f7acf96516e8c7edf38c817c9ab4b5b3affa4643c2852265977130a46"
+    },
+    "syzygy_r256_q0.json": {
+      "bytes": 5928,
+      "sha256": "05e01b31247ab689dd07a0a777b2c1125a247dbba499450818f1da6a5f774a53"
+    },
+    "syzygy_r256_q0_contracted.npz": {
+      "bytes": 29854980,
+      "sha256": "2e718c491172480e3aa3f055d5806d28a9414db2627e6daf3f0204bdc3b840ea"
+    },
+    "syzygy_r43_boundary_saturate.sing": {
+      "bytes": 34232186,
+      "sha256": "40e51becf684e7694f8f30705a9ca365f4875cf21771c01c601ed1fcb37bb3e9"
+    },
+    "syzygy_r43_boundary_singular.json": {
+      "bytes": 687,
+      "sha256": "da87480c793273f35e8ee08485bc57669953ed64a955c11361d16e303f06b704"
+    },
+    "syzygy_r48_q0.json": {
+      "bytes": 2023,
+      "sha256": "240a0c647cd877d81f7545da01e7960e57498d04ff9d319f626360697d5aa20f"
+    },
+    "syzygy_r48_q0_contracted.npz": {
+      "bytes": 5479780,
+      "sha256": "ba6d0533ab7fdb8bd93fb9309ce5b7d615f0a4799b22aa5e502e2dfec0bc21bb"
+    },
+    "syzygy_r96_boundary_saturate.sing": {
+      "bytes": 81827032,
+      "sha256": "f7024e529a2d463ee91cec02f8c0ad56a5f868c6df3a90e7a5f35a30e22b8ca8"
+    },
+    "syzygy_r96_boundary_singular.json": {
+      "bytes": 687,
+      "sha256": "2385373a1cff069d96b493e42cf81f3d1c83cf76385a02be31db8388626436b9"
+    },
+    "syzygy_reconstruction_replay.log": {
+      "bytes": 98,
+      "sha256": "fde3ca2c0689e024f9c8770f1e31cd288abf06847bddf56453141f7830e09d4c"
+    },
+    "verify_seal.py": {
+      "bytes": 1050,
+      "sha256": "9bf2ab783dfbe02cf51a2737ed96449702b23eee4c34b6f5c88bcb79af6acb8d"
+    },
+    "verify_syzygy_empty.py": {
+      "bytes": 14244,
+      "sha256": "a83e7f5999a7ee0b764e79c0a3f44254a5951b1732313b9c0d5e77a20903f2e4"
+    },
+    "verify_undecided.py": {
+      "bytes": 3834,
+      "sha256": "d22cfcfa5b7c2dab64f80dd7728394eb932c99d3d0d37ed13e16c22885fdba72"
+    },
+    "verify_undecided_result.json": {
+      "bytes": 207,
+      "sha256": "14b00213c5912895d387937107cea40776a36177ddda919815fdaf5e599a2a30"
+    }
+  },
+  "scope": "honest stop: Stage B saturated incidence unresolved; no degree-25 positive or negative theorem; headline remains OPEN"
+}

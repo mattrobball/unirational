@@ -1,0 +1,191 @@
+{
+  "format": "ambient-eliminant-four-prime-rational-reconstruction-v1",
+  "scope": "auxiliary degree-12 chart candidate; unused-prime holdout required",
+  "quadratic_field": "Q(c), c^2+c+3=0",
+  "fibres": [
+    {
+      "prime": 23,
+      "zeta11": 2,
+      "conjugate_zeta11": 4,
+      "c": 18,
+      "conjugate_c": 4,
+      "first_eliminant": [
+        3,
+        14,
+        5,
+        1
+      ],
+      "conjugate_eliminant": [
+        8,
+        21,
+        18,
+        1
+      ],
+      "A_B_residues": [
+        [
+          16,
+          21
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "prime": 67,
+      "zeta11": 9,
+      "conjugate_zeta11": 14,
+      "c": 42,
+      "conjugate_c": 24,
+      "first_eliminant": [
+        11,
+        47,
+        64,
+        1
+      ],
+      "conjugate_eliminant": [
+        48,
+        30,
+        27,
+        1
+      ],
+      "A_B_residues": [
+        [
+          8,
+          24
+        ],
+        [
+          52,
+          27
+        ],
+        [
+          0,
+          43
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "prime": 89,
+      "zeta11": 2,
+      "conjugate_zeta11": 4,
+      "c": 36,
+      "conjugate_c": 52,
+      "first_eliminant": [
+        84,
+        37,
+        24,
+        1
+      ],
+      "conjugate_eliminant": [
+        18,
+        56,
+        52,
+        1
+      ],
+      "A_B_residues": [
+        [
+          10,
+          7
+        ],
+        [
+          61,
+          29
+        ],
+        [
+          50,
+          24
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "prime": 199,
+      "zeta11": 18,
+      "conjugate_zeta11": 125,
+      "c": 167,
+      "conjugate_c": 31,
+      "first_eliminant": [
+        32,
+        83,
+        147,
+        1
+      ],
+      "conjugate_eliminant": [
+        92,
+        156,
+        114,
+        1
+      ],
+      "A_B_residues": [
+        [
+          53,
+          181
+        ],
+        [
+          19,
+          197
+        ],
+        [
+          26,
+          189
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "crt_modulus": 27292651,
+  "coefficients_ascending_A_plus_Bc": [
+    [
+      null,
+      [
+        2109,
+        314
+      ]
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      [
+        -2948,
+        2045
+      ],
+      null
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "complete_rational_reconstruction": false,
+  "factor_degrees_over_quadratic_field": [],
+  "irreducible_over_quadratic_field": false,
+  "maximum_numerator_or_denominator": 2948,
+  "theorem_boundary": "the four-prime candidate is rejected unless an unused split-prime holdout matches coefficient-by-coefficient"
+}

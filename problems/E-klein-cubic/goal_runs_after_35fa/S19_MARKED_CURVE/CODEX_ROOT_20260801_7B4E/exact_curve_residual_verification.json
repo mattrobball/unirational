@@ -1,0 +1,18 @@
+{
+  "schema": "s19-exact-curve-residual-null-ledger-v1",
+  "status": "NOT_AVAILABLE_S19_UNDECIDED",
+  "curve": null,
+  "residual_degree_two_cycle": null,
+  "rational_point": null,
+  "reason": "No F-point or geometric point of either qualified marked incidence locus was constructed.",
+  "positive_certificate_requirements": [
+    "exact base-field normalized map or saturated universal ideal",
+    "geometric integrality and Hilbert polynomial 19*t+1",
+    "incidence with all 55 universal marked sections",
+    "proper cubic intersection and multiplicity one at every marked point",
+    "exact residual degree-two ideal or cycle",
+    "field and residual-line argument in the original Schur equations",
+    "independent verifier that does not import the producer"
+  ],
+  "terminal_marker": "S19_NO_CURVE_OR_RESIDUAL_TO_VERIFY"
+}

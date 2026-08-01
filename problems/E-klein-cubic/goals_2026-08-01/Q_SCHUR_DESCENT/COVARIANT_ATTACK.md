@@ -81,3 +81,26 @@ A positive result still requires a nonzero coefficient vector, verification
 against the complete 1,124-row special-fibre equation basis, lifting or
 reconstruction in characteristic zero, and substitution in the original
 Klein cubic identity.
+
+## Constant-Krylov and moduli-model audits
+
+The separate exact `K_proj` probe in `parallel/constructive_point/` lets all
+five target coordinates vary in the same constant Krylov space.  The spaces
+`<1,f7>` and `<1,f7,f7^2>` are projectively empty, with exact Hilbert
+functions
+
+```text
+[1,10,55,80,50,0]
+[1,15,120,435,820,351,50,0].
+```
+
+This excludes two structural coefficient ansatzes, but not coefficients in
+the remaining field-basis directions, coefficients depending on the primary
+invariants, or an arbitrary point over either generic field.
+
+The same audit checks the Gross--Popescu level-11 construction.  Its actual
+equivariant linear datum is the 15-dimensional isomorphism
+`Lambda^2(V6) ~= Sym^2(W5)`, not a map `V6 -> W5`.  The eventual birational
+identification with the Klein cubic uses a chosen generic hyperplane and is
+explicitly non-equivariant.  Consequently that model does not furnish the
+required rational `PSL(2,11)`-map from `P(V6)`.

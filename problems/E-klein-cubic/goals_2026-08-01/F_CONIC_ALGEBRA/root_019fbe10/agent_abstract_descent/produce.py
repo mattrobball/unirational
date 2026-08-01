@@ -80,7 +80,16 @@ def main() -> None:
     }
     output = HERE / "proof_payload.json"
     output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+    sealed_names = ["STATUS.md", "THEOREM.md", "produce.py", "verify.py", "proof_payload.json"]
+    seal = {
+        "format": "goal-F-abstract-descent-seal-v1",
+        "exit": "E3-RESTRICTION-INJECTIVE-AND-INFINITY-CONSISTENT",
+        "files_sha256": {name: digest(HERE / name) for name in sealed_names},
+        "terminal_markers": payload["terminal_markers"],
+    }
+    (HERE / "SEAL.json").write_text(json.dumps(seal, indent=2, sort_keys=True) + "\n")
     print(f"wrote {output}")
+    print(f"wrote {HERE / 'SEAL.json'}")
     print("GOAL_F_ABSTRACT_DESCENT_PRODUCED")
 
 

@@ -143,18 +143,29 @@ Crho = (r/4-1/200)*FB + FY/600,
 CT   = -FB/2 + FZ.
 ```
 
-The exact cyclotomic calculations in the parent payload identify the common
-base ideal as
+The exact cyclotomic calculations in the parent payload exhibit a closed
+degree-three subscheme of the common base scheme:
 
 ```text
-(C0,Crho,CT) = (y-c*w, G),
+(C0,Crho,CT) subset (y-c*w, G),
 
 G = X^3 + (a0+a2*r^2)*X*w^2 + (b0+b2*r^2)*w^3.
 ```
 
-The isolated adversarial verifier checks this equality directly in
-characteristic zero over `Q(zeta_11)(r)`, including both projective charts at
-`w=0`; the independent good-reduction replay at `89` provides a second check.
+The right ideal defines a finite flat degree-three scheme `B` over the good
+local cyclotomic model: `G` is monic of degree three on `w=1`, and both charts
+at `w=0` are empty.  At the split prime `89`, a saturated projective
+Groebner replay proves equality of this scheme with the common base scheme
+`Z`.
+
+Here is the exact lift from that good fibre; no heuristic modular inference is
+being used.  The inclusion `B subset Z` gives a surjection
+`O_Z -> O_B` over the local DVR.  Its kernel `Q` is coherent.  Since `B` is
+flat, tensoring with the residue field remains left-exact at `Q`; equality of
+the special fibres gives `Q tensor kappa=0`.  Nakayama therefore makes `Q`
+zero near the special fibre.  If `Q` had nonempty generic support, properness
+of `Z` would make its support meet the special fibre, a contradiction.  Thus
+`Q=0`, so the characteristic-zero base ideal is exactly `(y-c*w,G)`.
 
 Write `G=N(X)+r^2 L(X)` on `w=1`, with `L=a2*X+b2`.  Here `a2` is nonzero and
 `N(-b2/a2)` is nonzero (its good reduction is `17 mod 89`).  Thus `-N/L` has
@@ -259,7 +270,8 @@ Run the command in `REPLAY.md`.  The terminal verifier checks:
 
 1. the sealed parent field and infinity-obstruction packets;
 2. the inverse normalization identities above;
-3. the direct characteristic-zero base-ideal equality;
+3. the exact inclusion, finite-flat degree-three model, and good-fibre ideal
+   equality used in the proper Nakayama lift;
 4. all nine universal-incidence singular-locus charts at the good prime;
 5. this isolated packet's hashes and exact terminal marker.
 

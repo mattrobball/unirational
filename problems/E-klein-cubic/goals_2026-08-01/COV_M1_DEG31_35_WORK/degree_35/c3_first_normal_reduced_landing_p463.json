@@ -1,0 +1,31 @@
+{
+  "c3_gate_payload": "degree_35/c3_constant_gate_p463.npz",
+  "c3_gate_payload_sha256": "2cec8fc6340045d9080b98846789adeb4350773f7f07fce18737d0257839a432",
+  "combined_first_normal_gate_rank": 61,
+  "complete_equation_count": 8555,
+  "decision_status": "complete reduced equations; saturation open",
+  "first_normal_block_payloads": [
+    {
+      "payload": "degree_35/c3_first_normal_exp0_p463.npz",
+      "payload_sha256": "7f28cca0759d44ffa7da1112da82593736865d97fa5927b6e06541793cf0f62f"
+    },
+    {
+      "payload": "degree_35/c3_first_normal_exp2_dir0_p463.npz",
+      "payload_sha256": "cb7f045782bccf3f1c5fbd487520eb4dbe3724d614f68485f3d2816d9073ee65"
+    },
+    {
+      "payload": "degree_35/c3_first_normal_exp2_dir1_p463.npz",
+      "payload_sha256": "69c7f407c7d7b4bcc5f46a8a2eb947227a5944614b8be8e63c84b4d0fe65cfe8"
+    }
+  ],
+  "first_normal_nonbased_chart_count": 11,
+  "first_normal_parameter_dimension": 300,
+  "first_normal_scalar_rank": 11,
+  "landing_payload": "degree_35/landing_circuits_p463.npz",
+  "landing_payload_sha256": "0d6975f27bd7bf5f961e38ef373ec09f5de51434100e0ed1dd3d52a0010175f1",
+  "original_parameter_dimension": 361,
+  "payload": "degree_35/c3_first_normal_reduced_landing_p463.npz",
+  "payload_sha256": "9c1288d734fdb68fa85cb3b5c5b6fecc84d05ef9268c24baca51adfee2319db3",
+  "prime": 463,
+  "second_based_dimension": 289
+}

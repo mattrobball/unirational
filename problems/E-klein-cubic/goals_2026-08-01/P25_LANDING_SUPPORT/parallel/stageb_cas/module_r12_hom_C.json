@@ -1,0 +1,14 @@
+{
+  "criterion": "homogeneous dim(S^6/N)=0",
+  "logical_scope": "A decisive result proves emptiness for the retained contracted subsystem, hence for Stage B. Incomplete or nondecisive output proves nothing.",
+  "module_order": "C",
+  "prime": 89,
+  "q_chart": null,
+  "result": "module_r12_hom_C_result.txt",
+  "rows": 12,
+  "script": "module_r12_hom_C.sing",
+  "script_bytes": 6583120,
+  "script_sha256": "99f06a2c66e60674c3140a4fceb50d50c102d1ceab93a4f4f081bf4dfd9e37a0",
+  "source": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/syzygy_r48_q0_contracted.npz",
+  "source_sha256": "ba6d0533ab7fdb8bd93fb9309ce5b7d615f0a4799b22aa5e502e2dfec0bc21bb"
+}

@@ -5,7 +5,8 @@ G-STRUCTURAL-UNDECIDED
 This is the isolated workspace for the 2026-08-01 Goal G run.  The live
 repository commit at intake was
 `2140419410cfff2f7d7dcca166acef8c16a0d41b`; the shared waypoint advanced
-through `53e267a59b2d24de93c58dd9ddacc2f995fc2d68` during the run.  The pinned
+through `53e267a59b2d24de93c58dd9ddacc2f995fc2d68` and then
+`35fa8f59b6a1423cc89300aeaceefe91552be5ba` during the run.  The pinned
 mathematical baseline in the work order is
 `715faf441289e2589b9325311b6613ea0331bf88`, and the verifier checks that it
 is an ancestor of the live commit.

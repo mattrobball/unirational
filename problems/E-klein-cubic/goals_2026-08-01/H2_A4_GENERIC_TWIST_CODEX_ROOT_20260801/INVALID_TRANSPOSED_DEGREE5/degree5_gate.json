@@ -1,0 +1,328 @@
+{
+  "format": "H2-A4-DEGREE5-GATE-v1",
+  "omega3": 31,
+  "prime": 331,
+  "records": [
+    {
+      "character_exponent": 0,
+      "charts": [
+        {
+          "chart": 0,
+          "equation_count": 133,
+          "input": "degree5_character0_chart0.sing",
+          "input_sha256": "06eafecfb7be26d3be432a472a7534456898f98c8b65a84180a0188a74f413e9",
+          "transcript": "degree5_character0_chart0.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 1,
+          "equation_count": 133,
+          "input": "degree5_character0_chart1.sing",
+          "input_sha256": "f8b758fe2e7a4ca997b1a89755e0476a2aa9af8893fdcb933be0eab606596de4",
+          "transcript": "degree5_character0_chart1.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 2,
+          "equation_count": 133,
+          "input": "degree5_character0_chart2.sing",
+          "input_sha256": "c66903263b0ad78a193dc03409de502a563651135d7bab2bfb9096d2cffd5bf0",
+          "transcript": "degree5_character0_chart2.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 3,
+          "equation_count": 133,
+          "input": "degree5_character0_chart3.sing",
+          "input_sha256": "88286ace96b4a310d2faa0a5a18c7ee1e2fe856a81b88c421609e1c87b36357f",
+          "transcript": "degree5_character0_chart3.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 4,
+          "equation_count": 133,
+          "input": "degree5_character0_chart4.sing",
+          "input_sha256": "10540cd73ce1760819581e9e0ba96a82db11f733021d73ed03047bd501e0c2c3",
+          "transcript": "degree5_character0_chart4.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 5,
+          "equation_count": 133,
+          "input": "degree5_character0_chart5.sing",
+          "input_sha256": "d8cfa85055c48c03bf493c6e14b20fff0b1b635e59c91b4558844718e9d9ba9c",
+          "transcript": "degree5_character0_chart5.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 6,
+          "equation_count": 133,
+          "input": "degree5_character0_chart6.sing",
+          "input_sha256": "7bfb425e0028eaa3cec820eb9d6f989fb3c02f4a7558d2715a5d8647d2ea92a4",
+          "transcript": "degree5_character0_chart6.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 7,
+          "equation_count": 133,
+          "input": "degree5_character0_chart7.sing",
+          "input_sha256": "1a43f66a865e22641b5e263af2895f552fc9234fde956a8bafd56fb639a73bcb",
+          "transcript": "degree5_character0_chart7.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 8,
+      "geometrically_empty_mod_331": true,
+      "landing_coefficient_count": 133,
+      "parameter_space": "P7",
+      "source_monomials": 21
+    },
+    {
+      "character_exponent": 1,
+      "charts": [
+        {
+          "chart": 0,
+          "equation_count": 133,
+          "input": "degree5_character1_chart0.sing",
+          "input_sha256": "de8c9cb44a0466200a296a32d8fb7fdade5107691c43519f2ddb9581b0926d7e",
+          "transcript": "degree5_character1_chart0.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 1,
+          "equation_count": 133,
+          "input": "degree5_character1_chart1.sing",
+          "input_sha256": "98ede29da2e3d9943ed778928ef549f2b19068fda8438538eaf1f97873063d7a",
+          "transcript": "degree5_character1_chart1.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 2,
+          "equation_count": 133,
+          "input": "degree5_character1_chart2.sing",
+          "input_sha256": "4848e456ae927898eb1f6269aadb70b636266e0c14cd454f9134940dc9bd44d7",
+          "transcript": "degree5_character1_chart2.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 3,
+          "equation_count": 133,
+          "input": "degree5_character1_chart3.sing",
+          "input_sha256": "37bfe1da8edbb34165cdb12d652a75f33c07c7f76f93f53d1079d1dd00603b67",
+          "transcript": "degree5_character1_chart3.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 4,
+          "equation_count": 133,
+          "input": "degree5_character1_chart4.sing",
+          "input_sha256": "76ca2aa21d10b6fdda3b74f3d5a271fb6787cbf22305d57aa4269f469ffcf84d",
+          "transcript": "degree5_character1_chart4.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 5,
+          "equation_count": 133,
+          "input": "degree5_character1_chart5.sing",
+          "input_sha256": "87f660dc6f389a50f4396e64412b31d95685022a026205e5828529c5e6b05b16",
+          "transcript": "degree5_character1_chart5.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 6,
+          "equation_count": 133,
+          "input": "degree5_character1_chart6.sing",
+          "input_sha256": "e879328a10b7dfaaf4bdb6d2c8843932d59834de1db473d542d837f20dab3938",
+          "transcript": "degree5_character1_chart6.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 7,
+          "equation_count": 133,
+          "input": "degree5_character1_chart7.sing",
+          "input_sha256": "df802f920f3e2279e855b147fa86c39540cb0e4bd0a80ba52cb3d22f519e956e",
+          "transcript": "degree5_character1_chart7.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 8,
+      "geometrically_empty_mod_331": true,
+      "landing_coefficient_count": 133,
+      "parameter_space": "P7",
+      "source_monomials": 21
+    },
+    {
+      "character_exponent": 2,
+      "charts": [
+        {
+          "chart": 0,
+          "equation_count": 133,
+          "input": "degree5_character2_chart0.sing",
+          "input_sha256": "243a842cc0543f8fba60a221598610629060b38bc5d02478b71de3bd5cd98f6b",
+          "transcript": "degree5_character2_chart0.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 1,
+          "equation_count": 133,
+          "input": "degree5_character2_chart1.sing",
+          "input_sha256": "4daf3e9a3d5f3b45f0e868d4b112e292a9718629629ed915e8106e875eb8655e",
+          "transcript": "degree5_character2_chart1.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 2,
+          "equation_count": 133,
+          "input": "degree5_character2_chart2.sing",
+          "input_sha256": "1ff75ab74fab3fddd0050993575cdae6ad7bf272a6eeabe649ab307fadb0893a",
+          "transcript": "degree5_character2_chart2.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 3,
+          "equation_count": 133,
+          "input": "degree5_character2_chart3.sing",
+          "input_sha256": "7ef9c4c1128fa3bfa8b9ecc1c7543fab06dedf460ef3f0184bf625a91bce07ef",
+          "transcript": "degree5_character2_chart3.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 4,
+          "equation_count": 133,
+          "input": "degree5_character2_chart4.sing",
+          "input_sha256": "be38308a0a5f8058281588add98d9485e77fd1449d4bbb3e663a1ea60be8036b",
+          "transcript": "degree5_character2_chart4.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 5,
+          "equation_count": 133,
+          "input": "degree5_character2_chart5.sing",
+          "input_sha256": "81e5841e9ea772ac23bdf960b9c3d0492ff3acda487e5d7b5ab7f318092641a9",
+          "transcript": "degree5_character2_chart5.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 6,
+          "equation_count": 133,
+          "input": "degree5_character2_chart6.sing",
+          "input_sha256": "7a2be86def55377bed9175fb858fa8ba94d4c77f61638de542b2292cb0495908",
+          "transcript": "degree5_character2_chart6.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        },
+        {
+          "chart": 7,
+          "equation_count": 133,
+          "input": "degree5_character2_chart7.sing",
+          "input_sha256": "75859bc4d263781bbea3b8cf372dc4a85a30232103ad17e164dac8b96b6dfa40",
+          "transcript": "degree5_character2_chart7.txt",
+          "transcript_lines": [
+            "UNIT"
+          ],
+          "transcript_sha256": "06f163b1b91b2509841a330f8e49b5056b8d9296989a653563fe6494bdd9e524",
+          "unit_ideal": true
+        }
+      ],
+      "covariant_dimension": 8,
+      "geometrically_empty_mod_331": true,
+      "landing_coefficient_count": 133,
+      "parameter_space": "P7",
+      "source_monomials": 21
+    }
+  ],
+  "scope": "complete degree-five projective A4-equivariant landing schemes for all three character multipliers",
+  "sqrt5": 98,
+  "zeta11": 74
+}

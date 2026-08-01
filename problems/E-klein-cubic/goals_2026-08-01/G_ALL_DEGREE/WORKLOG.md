@@ -17,11 +17,14 @@ The pinned baseline is an ancestor of `HEAD`.  The binding Goal G inputs are
 unchanged on that ancestry interval; the later degree-25 work is relevant
 only as an additional warning that sampled closure can fail.
 
-During the run the shared worktree advanced through the committed waypoint
-`53e267a59b2d24de93c58dd9ddacc2f995fc2d68`.  The Goal G directory was
-re-audited after that change.  All edits and generated artifacts from this
-run remain confined to this directory; sibling worker changes were neither
-rewritten nor staged.
+During the run the shared worktree advanced through the committed waypoints
+`53e267a59b2d24de93c58dd9ddacc2f995fc2d68` and
+`35fa8f59b6a1423cc89300aeaceefe91552be5ba`.  The latter concurrent
+publication included the in-progress Goal G tree.  The directory was
+re-audited against the new live commit, and the full aggregate replay passed
+there.  All edits and generated artifacts from this run remain confined to
+this directory; sibling worker changes were neither rewritten nor staged by
+this run.
 
 ## Requirement audit
 
@@ -76,7 +79,7 @@ maps.  Its generic fiber is the explicit twisted Klein cubic.  The remaining
 support question is therefore a single rational-point problem, while the
 symbolic equalizer remains a necessary filtration used to attack that point.
 
-The next new theorem under development is the all-order first-plane gate:
+The resulting all-order first-plane theorem says that
 at every odd plane order, the first nonautomatic landing equation is a
 quadratic-Veronese syzygy.  It forces the even successor jet into the ideal
 of the primitive components of the odd leading jet.  Any divisorial common
@@ -109,7 +112,7 @@ support.  They are not imported as evidence for either headline.
 
 ## Parallel exact attacks
 
-The post-reduction phase used four isolated subdirectories.  Every theorem
+The post-reduction phase used seven isolated subdirectories.  Every theorem
 below has its own verifier and is included in the aggregate replay.
 
 1. `attacks/constructive_point/` rebuilt all ten binary frame restrictions
@@ -137,6 +140,26 @@ below has its own verifier and is included in the aggregate replay.
    the missing splitting-field hypothesis in the small-residual route,
    verifies a smooth cubic countermodel, and checks that the installed
    closed-point degree bound does not yield a decreasing iteration.
+5. `attacks/ternary_kproj_v2/` literally binds the normalized `x,C,D` plane
+   to the sealed general-slice theorem and proves it has no `K_proj,C`-point.
+   It also excludes 110 common-pencil `P5` and ten fixed common-plane `P8`
+   constant-secondary-support families by exact characteristic-zero equation
+   reconstruction and geometric special-fibre emptiness at `p=101`.  The
+   restriction to finite constant supports is enforced in the report.
+6. `attacks/low_rank_valuations_v2/` proves henselian local solubility for
+   every arbitrary-rank Krull valuation trivial on `C` with `C1` residue.
+   Its arbitrary-rank tame-inertia and non-noetherian finite-etale steps are
+   audited separately.  Unramified non-`C1` residues remain, with divisorial
+   trdeg three and saturated rank-two trdeg two as central geometric cases.
+7. `attacks/primitive_quartic_v2/` proves `E cap N=K`, constructs the
+   degree-three cubic-resolvent point, and writes the primitive full-span
+   quartic gate as four exact remainder equations on five charts.  The packet
+   therefore removes `E`-containment from the list of possible field-theory
+   shortcuts rather than assuming it.
+
+The ternary packet stores 120 leading-ideal certificates with the suffix
+`.leading.out`.  Its nested `.gitignore` explicitly re-includes those files so
+that an ordinary publication step does not silently omit sealed evidence.
 
 The consolidated requirement ledger is `ATTACKS.md`.  These are structural
 route decisions only; the binary generic-cubic support remains undecided.

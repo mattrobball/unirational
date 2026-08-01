@@ -34,14 +34,25 @@ The headline problem is not decided.  The proved structural results are:
    The full support is nevertheless nonempty because it contains the
    degree-48 support inherited from line degree one.  The default recovered
    RUR claiming a primitive component is rejected by direct substitution.
+8. a new eight-chart scheme audit proves that the full split-67 line-degree-
+   four scheme equals the inherited `D_L` multiple scheme
+   scheme-theoretically: every chart has length 48 and all three primitive
+   coordinates have zero normal form.  The 2,024 maximal normal-Jacobian
+   minors have unit degeneracy ideal on every chart;
+9. the complete degree-one characteristic-zero coefficient ideal is now
+   reconstructed over `Q(zeta_11)`: an exact RREF reduces all 760 unisolvent
+   coefficient rows to rank 14, and Singular gives length 48 both in
+   characteristic zero and after reduction at `(67,zeta_11-64)`.  The
+   resulting DVR algebra is finite flat of rank 48.  Nakayama therefore
+   upgrades the degree-four equality to characteristic zero:
+   `X_4=D_L X_1`, with no primitive degree-four point on this layer.
 
-The smallest local frontier is now the characteristic-zero primitive
-saturation in line degree four: the split special fibre is empty on the
-nonproper complement, so proper good reduction does not transfer it.  A
-genuine all-line-degree recurrence would still leave every higher transverse
-layer and the global image problem.  Globally the exact unresolved question
-is existence of a rational point on the explicit generic twisted cubic over
-the projective invariant field.
+The smallest local frontier is now a genuine all-line-degree theorem; the
+former characteristic-zero degree-four transfer gap is closed.  Even such an
+all-line theorem would still leave every higher transverse layer and the
+global image problem.  Globally the exact unresolved question is existence
+of a rational point on the explicit generic twisted cubic over the projective
+invariant field.
 
 Replay from `goals_2026-08-01`:
 
@@ -51,4 +62,6 @@ python3 G_ALL_DEGREE_ROOT_20260801/verify.py
 python3 G_ALL_DEGREE_ROOT_20260801/verify_boundary_recurrence.py
 python3 G_ALL_DEGREE_ROOT_20260801/verify_line4_primitive.py
 python3 G_ALL_DEGREE_ROOT_20260801/verify_line4_primitive_rur.py
+python3 G_ALL_DEGREE_ROOT_20260801/verify_line4_normal_rigidity.py
+/opt/homebrew/bin/python3 G_ALL_DEGREE_ROOT_20260801/verify_line1_char0.py
 ```

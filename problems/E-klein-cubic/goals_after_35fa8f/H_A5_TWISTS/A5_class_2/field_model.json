@@ -1,0 +1,16 @@
+{
+  "format": "klein-h3-a5-field-model-v1",
+  "label": "A5_class_2",
+  "base_field": "K=C(U,V)",
+  "invariant_coordinates": {
+    "U": "f6/f2^3",
+    "V": "f10/f2^5"
+  },
+  "invariant_ring": "C[f2,f6,f10,f15]/(f15^2-R30)",
+  "primary_degrees": [2, 6, 10],
+  "secondary_degree": 15,
+  "source_model": "faithful icosahedral three-space over Q(sqrt(5))",
+  "target_model": "augmentation representation on the six Sylow-5 subgroups",
+  "minimal_homogeneous_frame_degree": 10,
+  "coefficient_payload": "../minimal_model_payload.json"
+}

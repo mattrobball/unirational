@@ -1,0 +1,23 @@
+{
+  "theorem_id": "H_TRACE_THREE_KUMMER_LAURENT_MONOMIAL_ALL_EXPONENT_EXCLUSION",
+  "marker": "H_TRACE_THREE_KUMMER_LAURENT_MONOMIAL_ALL_EXPONENT_EXCLUSION_OK",
+    "upstream_component_table_bytes": 32505,
+    "upstream_component_table_sha256": "159083ac76fab70bb22dad65f3381e5b2dad908deb37cfd6a03fcb4d2d3e728a",
+    "algorithm_sha256": "9f891d99dacccc6ddbc01205a24326af3ade80906fbb7740f4e091161f09c668",
+  "scope": "For each p<q<r and all nonzero constants c_i in C and exponent vectors m_i in Z^4, no sum c_p U^m_p alpha^p + c_q U^m_q alpha^q + c_r U^m_r alpha^r lies on the H=11:5 trace cubic after the R2 normalization.",
+  "per_triple": {
+    "expanded_nonzero_terms": 70,
+    "collision_equations": 1046,
+    "nonparallel_equation_pairs": 474832,
+    "integral_exponent_candidates": 67301,
+    "viable_finite_supports": 0,
+    "viable_parallel_support_families": 0
+  },
+  "triples": ["012", "013", "014", "023", "024", "034", "123", "124", "134", "234"],
+  "strict_nonclaims": [
+    "No coordinate is allowed to be a sum of two or more Laurent monomials.",
+    "No arbitrary rational-function coordinate is treated.",
+    "No K-rational point or pointlessness theorem for a whole plane cubic is proved.",
+    "No K-rational point or pointlessness theorem for the ambient twist is proved."
+  ]
+}

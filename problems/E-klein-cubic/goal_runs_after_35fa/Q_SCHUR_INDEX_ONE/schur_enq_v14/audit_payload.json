@@ -1,0 +1,116 @@
+{
+  "schema": "q-schur-enq-v14-audit-v1",
+  "date": "2026-08-01",
+  "headline": "Q-UNDECIDED",
+  "field": {
+    "name": "K_Schur",
+    "definition": "C(P(V6))^PSL2(F11)",
+    "transcendence_degree": 5,
+    "projective_schur_boundary": 0,
+    "twisted_PV6": "P5",
+    "twisted_dual_PV6": "P5",
+    "twisted_Gr2V6": "Gr(2,6)"
+  },
+  "pfaffian": {
+    "section_parameter_space": "P(V6*)=P5",
+    "smooth_member_exists_over_K": true,
+    "member_degree": 5,
+    "member_genus": 1,
+    "member_geometrically_integral": true,
+    "associated_fano": "V14=Gr(2,V6) cap P(B5^perp)",
+    "palatini_degree": 4,
+    "tautological_point_on_palatini": false
+  },
+  "schubert_cycles": [
+    {
+      "partition": [3, 0],
+      "dual_partition": [4, 1],
+      "geometric_condition": "represented line meets a fixed P1",
+      "degree": 4
+    },
+    {
+      "partition": [2, 1],
+      "dual_partition": [3, 2],
+      "geometric_condition": "represented line lies in a fixed P4 and meets a fixed P2",
+      "degree": 5
+    }
+  ],
+  "fano_index_certificate": {
+    "effective_degrees": [4, 5],
+    "gcd": 1,
+    "conclusion": "ind(V14)=1, not V14(K) nonempty"
+  },
+  "links": {
+    "fano_iskovskikh": {
+      "source_center": "smooth elliptic normal quintic C",
+      "source_linear_system": "O_X(7)-4C",
+      "flop_count": 25,
+      "target_center": "smooth elliptic normal quintic B",
+      "target_inverse_linear_system": "O_V14(3)-4B"
+    },
+    "tregub_takeuchi": {
+      "source_center": "rational normal quartic Gamma",
+      "source_linear_system": "O_X(8)-5Gamma",
+      "flop_count": 16,
+      "target_center": "point P",
+      "target_inverse_linear_system": "O_V14(2)-5P"
+    },
+    "actual_V14_K_point_implies_X_K_point": true,
+    "reason": "K-defined birational map plus Nishimura"
+  },
+  "known_cycles_against_center": {
+    "degree_3": {
+      "integral_in_no_point_branch": true,
+      "intersection_with_C": "empty",
+      "proof_key": "six defining quadrics cannot vanish on a length-3 divisor of P1 without containing the whole line",
+      "torsor_gcd_with_5": 1,
+      "actual_divisor_produced": false
+    },
+    "degree_55": {
+      "integral": true,
+      "intersection_with_C": "empty for every descended Pfaffian member",
+      "degree_if_contained": 55,
+      "torsor_gcd_with_5": 5,
+      "new_torsor_information": false
+    },
+    "ambient_divisor_degree_on_center_is_multiple_of": 5,
+    "pic2_point_would_already_split_center": true
+  },
+  "line_orbit_exit": {
+    "stabilizer": "D10",
+    "orbit_degree": 66,
+    "intersection_length_if_nonempty": 1,
+    "divisor_degree_on_C": 66,
+    "gcd_with_polarization_degree": 1,
+    "implication": "C meets descended D10 orbit => C(K) nonempty => X(K) nonempty",
+    "status": "formal gate closed inside the descended Pfaffian family by full quadric span"
+  },
+  "good_reduction_restriction_check": {
+    "prime": 331,
+    "zeta11": 74,
+    "zeta5": 64,
+    "orbits": ["D10", "D12"],
+    "adjugate_ranks_at_u_v_u_plus_v": [2, 2, 2],
+    "binary_coefficient_stack_rank": 4,
+    "two_point_evaluation_rank": 4,
+    "characteristic_zero_splitting": "O(1)+O(1)",
+    "fixed_line_incidence": "rank-4 resultant quadric in P5 with P1 vertex",
+    "orbit_quadric_span_ranks": {
+      "D10_66_lines": 21,
+      "D12_55_lines": 21
+    },
+    "common_projective_incidence_loci": {
+      "D10_66_lines": "empty",
+      "D12_55_lines": "empty"
+    }
+  },
+  "source_files": {
+    "pfaffian_payload": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_35fa/R_RATIONAL_CURVES/pfaffian_quintic_universal.json",
+    "pfaffian_payload_sha256": "f0c60f05c2cb676019a9d04dafbbcfc55a02b19480dfa54de6152e31393ce781",
+    "subgroup_verifier": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/verify.py",
+    "subgroup_verifier_sha256": "149bda819801434eaf350a2cc646f5b935550dc8872fde02cc397fc3d4ece45b",
+    "primary_tex": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A/Iliev_Markushevich.tex",
+    "primary_tex_sha256": "1c7f15221bab7adc3dd998c4a99e6bf81ce0760e90477659aa8edcb44d94d48f"
+  },
+  "terminal_marker": "Q_SCHUR_ENQ_V14_AUDIT_EXACT_NONTERMINAL"
+}

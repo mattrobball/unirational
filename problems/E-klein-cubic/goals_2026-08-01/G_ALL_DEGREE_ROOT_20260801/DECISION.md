@@ -15,9 +15,9 @@ line-degree-four split fibre is also classified: it has no primitive point,
 but contains the nonempty support inherited as `D_L` times line degree one.
 The smallest missing problems can be stated as:
 
-1. locally, decide the characteristic-zero primitive saturation in line
-   degree four with an integral/projective specialization argument, then
-   obtain a genuine all-line-degree theorem;
+1. locally, obtain a genuine all-line-degree theorem on the first transverse
+   layer; the characteristic-zero line-degree-four saturation and the needed
+   rank-48 finite flatness are now proved;
 2. propagate any such theorem through every higher transverse layer and the
    image of the complete global equalizer;
 3. equivalently at headline level, decide whether `Phi=0` has a point over
@@ -28,3 +28,11 @@ good-reduction argument.  The affine primitive-chart calculation is not:
 its nonproper complement allows a generic point to specialize into the
 `D_L`-multiple boundary.  Neither special-fibre result is used as a sole
 decision fibre for the global problem.
+
+The new scheme and cyclotomic certificates close that caveat in line degree
+four.  Over `F_67` the entire degree-four scheme, including nilpotents, is the
+inherited length-48 scheme and its normal Jacobian has full rank three.  The
+full characteristic-zero degree-one ideal also has length 48; the resulting
+DVR algebra is finite flat, so Nakayama proves the characteristic-zero
+degree-four scheme is inherited as well.  No analogous theorem is installed
+for arbitrary line degree.

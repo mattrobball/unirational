@@ -1,0 +1,26 @@
+{
+  "exit": "H-11_5-NORM-MODEL-PASS",
+  "format": "H-11_5-DECISION-v1",
+  "headline": "OPEN",
+  "not_proved": [
+    "a K-rational point",
+    "pointlessness over K",
+    "an unramified-cohomology obstruction",
+    "a decisive valuation",
+    "any positive or negative PSL2(F11) headline"
+  ],
+  "pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "proved": [
+    "minimal rational presentation K=C(U1,U2,U3,U4)",
+    "exact degree-5 cyclic and degree-11 Kummer tower with forward and inverse maps",
+    "exact trace equation Tr_E/K(r2^-1*a^2*sigma(a))=0",
+    "exact invariant transition to the authoritative canonical Hilbert-90 frame",
+    "degree-five closed point and index-one boundary",
+    "nonexistence of a pure Laurent-monomial trace point",
+    "the cyclic coefficient has exact order 11 modulo the degree-33 isogeny d -> d^2*sigma(d)"
+  ],
+  "rational_point_over_K": null,
+  "repository_commit_consumed": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "smallest_remaining_theorem": "Decide whether there is a nonzero a in E with Tr_E/K(r2^-1*a^2*sigma(a))=0.",
+  "valuation_obstruction": null
+}

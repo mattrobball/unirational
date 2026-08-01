@@ -1,0 +1,109 @@
+{
+  "centre_curve": {
+    "H1_rank": 206,
+    "contains_fixed_elliptic_factor": true,
+    "contains_target_prym_factor": true,
+    "degree_to_fixed_elliptic": 24,
+    "degree_to_prym_cover": 3,
+    "genus": 103,
+    "line_bundle_bidegrees": [
+      24,
+      3
+    ],
+    "normalization_genus": 103,
+    "plane_model_degree": 207,
+    "surface": "Prym_cover x E_t"
+  },
+  "coefficient_coupling": {
+    "new_F_of_p_equations": 0,
+    "plane_order_changed": false,
+    "point_link_multiplicities_changed": false,
+    "reason": "the source blowup tower changes but p does not",
+    "transition_divisors_changed": false
+  },
+  "consumed_repository_head": "37d61c19a108781cf74af837e24810a9f7f7c3be",
+  "exit": "J2-UNRESTRICTED-COUNTERMODEL-EXTENDS",
+  "fixed_one_motive": {
+    "affine_class_group": "Z/3",
+    "affine_class_order": 3,
+    "degree_divisible_by_3": true,
+    "elliptic_map_degree": 24,
+    "fixed_locus_dominance_forced": false,
+    "regular_S3_components_carry_affine_quotient": true,
+    "resolution_invariant": false
+  },
+  "forced_base": {
+    "all_55_planes_based": true,
+    "covariant_changed": false,
+    "generic_centre_order": "m",
+    "ideal_chain": "I_p subset I_Pt^(m) = I_Pt^m subset I_Cbar^m",
+    "primitive_minimality_changed": false,
+    "stratum": "P(E_+(t)) = P^2",
+    "symbolic_order": "m",
+    "symbolic_order_parity": "odd"
+  },
+  "hodge_prym_split": {
+    "C2_target_invariant_rank": 6,
+    "CM_field": "Q(sqrt(-11))",
+    "averaging_scalar": 198,
+    "induced_centre_H1_rank": 67980,
+    "integral_injection_after_clearing_denominators": true,
+    "integral_principal_polarization_claimed": false,
+    "polarization_strength": "positive rational scalar",
+    "primitive_integral_direct_factor_claimed": false,
+    "safe_localization": "Z[1/198]",
+    "target_rank": 10
+  },
+  "normal_slice": {
+    "both_pic0_alb_equal_base_curve": true,
+    "fixed_exceptional_fibres": [
+      "P^0",
+      "P^1"
+    ],
+    "minus_eigenrank": 2,
+    "plus_eigenrank": 1
+  },
+  "orbit": {
+    "component_stabilizer": "C2",
+    "component_stabilizer_order": 2,
+    "components_fixed_by_selected_involution": 6,
+    "fixed_component_decomposition": {
+      "sign": 1,
+      "standard": 2,
+      "trivial": 1
+    },
+    "fixed_component_permutation_character": [
+      6,
+      0,
+      0
+    ],
+    "group_order": 660,
+    "normalizer": "D12",
+    "normalizer_order": 12,
+    "orbit_components": 330,
+    "residual": "S3",
+    "residual_order": 6
+  },
+  "overall_problem_headline": "OPEN",
+  "packet": "J_BASELOCUS_PRYM",
+  "pinned_state": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "route_audit": {
+    "canonical_minimal_principalization_supplied": false,
+    "centre_inventory_invariant_under_refinement": false,
+    "landing_covariant_constructed": false,
+    "landing_covariant_refuted": false,
+    "logical_conclusion": "base-locus Prym centre data do not obstruct all equivariant resolutions",
+    "ordinary_equivariant_log_resolutions_excluded": false
+  },
+  "schema": "J_BASELOCUS_PRYM.v1",
+  "self_sha256": "d47b359f6e4fafa7ee303a5b56527404e858560dd366eb917e18c9306062e888",
+  "source_sha256": {
+    "certificates/LOCAL_TRANSITION_MODULES.md": "74aabb31fa52d7c742c6d9d9d0dea476e71e28d1e69f7ac2b7e743c7cf6aa346",
+    "certificates/hodge_centers/character_screen.json": "ea262bb56a6ddd1c41e1a586eebe1c1d3cd5dcab17520c0d1ba0492a05050f45",
+    "certificates/strata/normal_characters.json": "7651f92b990136e5b06415eaab9018606c9765be21357fa3a2b9e467e33170c6",
+    "goals_2026-08-01/D_EQUIVARIANT_MOTIVE/invariants.json": "382633339987e20dc34172828226aaf35e5257b9ca07c17952cb08d2a2f5f187",
+    "goals_2026-08-01/G_ALL_DEGREE/FIRST_GATE.md": "dbb7cbd2eab5fcce3958ac91336559643c332cf71142fa2ef3e72ac0c179cb40",
+    "goals_2026-08-01/J_FIXED_CENTRE_PRYM/payload.json": "4c5bb34bfe4fcdf729779848069925f2319471d556a5b03dcacdbfdc8875a5ce",
+    "goals_after_35fa8f/GOAL_J2_BASELOCUS_CONSTRAINED_PRYM.md": "7adac2e7a5d37490ab2050e341331129275d67db5fb2c71128a17d2fe90ce1f6"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "exit": "J2-UNRESTRICTED-COUNTERMODEL-EXTENDS",
+  "files": {
+    "BASE_IDEAL_CONSTRAINTS.md": "e0e5b119f26c152e0c0851394804448456123d4226caf210b6eb6e90eb29ed16",
+    "COMPLETION_AUDIT.md": "17b8a1efd0b7221a90bafc4802dc07c873db6e64e8532ea420f292e29f83c2f4",
+    "D_COUNTERMODEL_AUDIT.md": "c3d7f01d0c7f832a0412154b3f3d36f74fc48e90575224ece9fc9fad28254bbc",
+    "FIXED_CENTRE_1MOTIVE.md": "fbd4ba9680e5ed1ac6709162874c0baae6b74ae1ee87630f14ad8d668aec20cc",
+    "POLARIZATION_ISOGENY.md": "20c38ea19ccdcc1e9709bd680c8d2d87dc2dc1efe9268de59a8e9f1363ab0316",
+    "SOURCES.md": "0cf6dc5ccbef403e34d5bbbb6886186a156ba2d06fe66fca418cbbd6f779afad",
+    "STATUS.md": "9c596b18bd9f6d743affc0c817c83b2d75fba0e71e6d4d1fabdde640f23bbe0d",
+    "make_seal.py": "4d979a13544735130a5d4d822e3aed1807f342730001f6583ecc21855bb69916",
+    "payload.json": "61fe3ce6c3ed7b7b52991d83754ae64e673e97574d2a3d2691d4f12370f8f1c7",
+    "produce.py": "52a32f9886545ca00869eb1021931ae48fdc204491d57a3c6db539390a09dd1a",
+    "verify.py": "9fd2798e1dcffc89539a688dd1a0fa5a2678c695961bd4869bbeb34e7256ba24"
+  },
+  "hash_algorithm": "sha256",
+  "packet": "J_BASELOCUS_PRYM",
+  "self_hash": "omitted by design"
+}
