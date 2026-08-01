@@ -1,0 +1,242 @@
+{
+  "packet": "certificates/fano_c3",
+  "track": "C3.1-preflight",
+  "workorder": "WORKORDER_CAS_T11_P25V_C3.md \u00a75 C3.1",
+  "exit_this_round": "C3-RECTANGULAR-BASIS-MODULAR",
+  "c31_exit": "C3-RECONSTRUCTION-UNDECIDED",
+  "next_exit_target": "C3-APROJ-EXECUTABLE",
+  "headline": "OPEN",
+  "compressed_route": {
+    "objects": [
+      "m_a(T) in K_proj[T], monic degree 6 (6 K-coeffs)",
+      "e_j in E, j=0..5, for b^6 = sum_j b^j e_j (6 E-elements)",
+      "L_a in Mat_6(E) (36 E-elements)"
+    ],
+    "E_basis": "1,a,...,a^5",
+    "total_E_elements": 42,
+    "total_K_coords": 258,
+    "note": "L_b is the companion matrix over E determined by the e_j",
+    "vs_C21": "2592 Mat_36(K) entries; C2.1 floor deg>=5 for ~1249 varying",
+    "vs_full_structure": 46656
+  },
+  "method": {
+    "1_modular_tables": "At primes p\u22611 mod 11 (excluding sole use of 67), sample projective Reynolds frames at deterministic points; extract minpoly, e_coords, La_E.",
+    "2_adaptive_interpolation": "Multivariate rational interpolation in the rank-12 K_proj model (P0=Q(t3,t6,t8,t11) free basis of 12). No fixed degree cap below the C2.1 proven floor of 5.",
+    "3_rational_reconstruction": "CRT + certificates/degree25_exact/common_p25x.py:226 (never SymPy private helper).",
+    "4_verification": [
+      "Holdout prime unused in reconstruction",
+      "Exact identities: m_a(a)=0, b^6=sum b^j e_j, a*b^j = sum_k b^k La[k,j]",
+      "Rectangular det nonzero on a dense open",
+      "Congruence check of every reconstructed rational function"
+    ]
+  },
+  "low_degree_probes": {
+    "degree_probe_prime": 353,
+    "n_samples": 918,
+    "coordinate_system": "rank-12 free module over P0=Q(t3,t6,t8,t11): x = sum_k r_k(t)*beta_k with beta = normalized (1,f7,f9,f10,f12,f14,f7^2,f7*f9,f9^2,f9*f10,f7^3,f9^2*f10)",
+    "max_D_tested": 4,
+    "unknowns_at_D": {
+      "0": 12,
+      "1": 60,
+      "2": 180,
+      "3": 420,
+      "4": 840
+    },
+    "minpoly_floors": {
+      "n_entries": 6,
+      "n_measured": 6,
+      "n_insufficient": 0,
+      "n_floor_gt_4": 5,
+      "n_floor_0": 1,
+      "n_floor_1": 0,
+      "n_floor_2": 0,
+      "n_floor_3": 0,
+      "n_floor_4": 0,
+      "n_floor_ge_5": 5,
+      "max_measured_floor": 5,
+      "min_nonzero_floor": 5,
+      "ansatz": "x = sum_{k=0..11} r_k(t)*beta_k with r_k total-degree \u2264 D in (t3,t6,t8,t11); free basis of certified K_proj model",
+      "max_D_tested": 4,
+      "unknowns_at_max_D": 840
+    },
+    "e_coords_floors": {
+      "n_entries": 36,
+      "n_measured": 36,
+      "n_insufficient": 0,
+      "n_floor_gt_4": 5,
+      "n_floor_0": 31,
+      "n_floor_1": 0,
+      "n_floor_2": 0,
+      "n_floor_3": 0,
+      "n_floor_4": 0,
+      "n_floor_ge_5": 5,
+      "max_measured_floor": 5,
+      "min_nonzero_floor": 5,
+      "ansatz": "x = sum_{k=0..11} r_k(t)*beta_k with r_k total-degree \u2264 D in (t3,t6,t8,t11); free basis of certified K_proj model",
+      "max_D_tested": 4,
+      "unknowns_at_max_D": 840
+    },
+    "La_E_floors": {
+      "n_entries": 216,
+      "n_measured": 216,
+      "n_insufficient": 0,
+      "n_floor_gt_4": 180,
+      "n_floor_0": 36,
+      "n_floor_1": 0,
+      "n_floor_2": 0,
+      "n_floor_3": 0,
+      "n_floor_4": 0,
+      "n_floor_ge_5": 180,
+      "max_measured_floor": 5,
+      "min_nonzero_floor": 5,
+      "ansatz": "x = sum_{k=0..11} r_k(t)*beta_k with r_k total-degree \u2264 D in (t3,t6,t8,t11); free basis of certified K_proj model",
+      "max_D_tested": 4,
+      "unknowns_at_max_D": 840
+    },
+    "constants_at_probe_prime": {
+      "minpoly_of_6": 1,
+      "e_of_36": 31,
+      "La_of_216": 36
+    },
+    "comparison_to_C21_floor": {
+      "C21_varying_degree_floor": 5,
+      "C21_method": "same free-module ansatz; modular systems inconsistent at D=0..4 for varying shortlex L_a/L_b entries",
+      "C3_entries_with_floor_ge_5": 190,
+      "C3_entries_with_floor_le_4": 68,
+      "interpretation": "Entries with free-module floor \u22655 match C2.1's proven degree floor. That does not justify falling back to the 36^3 table (\u00a72.10): compression still reduces object count from 2592 to ~258 K-coords (or 42 E-elements + 6 minpoly coeffs). Adaptive interpolation with no cap below 5 remains the authorized route."
+    },
+    "multi_prime_const_scan": {
+      "minpoly": [
+        {
+          "p": 23,
+          "const_mask": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "const_vals": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            0
+          ]
+        },
+        {
+          "p": 89,
+          "const_mask": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "const_vals": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            0
+          ]
+        },
+        {
+          "p": 199,
+          "const_mask": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "const_vals": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            0
+          ]
+        }
+      ],
+      "e": [
+        {
+          "p": 23,
+          "n_const": 31
+        },
+        {
+          "p": 89,
+          "n_const": 31
+        },
+        {
+          "p": 199,
+          "n_const": 31
+        }
+      ],
+      "La": [
+        {
+          "p": 23,
+          "n_const": 36
+        },
+        {
+          "p": 89,
+          "n_const": 36
+        },
+        {
+          "p": 199,
+          "n_const": 36
+        }
+      ]
+    },
+    "probe_records": [
+      {
+        "prime": 23,
+        "zeta": 2,
+        "n_samples": 16
+      },
+      {
+        "prime": 89,
+        "zeta": 2,
+        "n_samples": 20
+      },
+      {
+        "prime": 199,
+        "zeta": 18,
+        "n_samples": 23
+      }
+    ]
+  },
+  "resource_floor": {
+    "objects": "~258 K_proj elements (vs 2592 for C2.1, 46656 full table)",
+    "modular_sample_cost": "group orbit + 36 Reynolds per point; measured C3.0 peak below",
+    "reconstruction_estimate": "If degrees stay moderate after adaptive interpolation in the free module, wall time minutes\u2013hours under 8 GiB. If degrees climb, still prefer compressed route over entrywise 36-word reconstruction.",
+    "heavy_slot": "C3 has third claim after T11 and P25V; this round stays under 8 GiB"
+  },
+  "failure_modes": [
+    "Rectangle det vanishes on a divisor \u2014 work on the open where it is a unit",
+    "Minpoly degree drops or becomes inseparable on a divisor \u2014 exclude that locus",
+    "False rational reconstructions that pass CRT but fail holdout (C2.1 caught 12 such L_b)",
+    "No fixed degree cap below 5: low-degree inconsistency is not a route failure"
+  ],
+  "out_of_scope_this_round": [
+    "C3.2 involution / Morita corner / Hermitian forms (gated on C3-APROJ-EXECUTABLE)",
+    "C3.3 common-isotropic-line search",
+    "Full 36^3 structure-constant reconstruction (\u00a72.10 ban)"
+  ],
+  "language_bans": [
+    "Never write: the cubic has a K_proj-point abstractly",
+    "Never write: the generic Schur twist has no rational point",
+    "No auxiliary projector is a Fano point (FAIL-SCOPE)"
+  ],
+  "common_p25x_helper_line": 226,
+  "common_p25x_sha256": "b5d27fe9174e859a88a9b1704963e07a4ff53f96ddd259d83c5a7d148d9588bc",
+  "elapsed_seconds": 42.119,
+  "peak_rss_bytes": 246317056,
+  "peak_rss_MiB": 234.91
+}

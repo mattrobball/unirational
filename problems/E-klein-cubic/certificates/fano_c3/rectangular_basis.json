@@ -1,0 +1,313 @@
+{
+  "packet": "certificates/fano_c3",
+  "track": "C3.0",
+  "workorder": "WORKORDER_CAS_T11_P25V_C3.md",
+  "exit": "C3-RECTANGULAR-BASIS-MODULAR",
+  "headline": "OPEN",
+  "proves": "At the sealed F_23 and F_89 split witnesses, the pure Reynolds-frame pair (e_1, e_2) has separable minimal polynomial of degree six for a, and the rectangular K-basis {b^j a^i : 0<=i,j<6} has nonzero determinant in the Reynolds frame (equivalently, 1,b,...,b^5 is a right E-basis with E=F_p[a]). Same exponent rectangle at both primes. Modular only.",
+  "does_not_prove": "Does not install m_a, e_j, or L_a over K_proj; does not install the involution, Morita corner, Hermitian forms, or a Fano point. Modular rectangular generation does not silently promote to a characteristic-zero compressed regular representation.",
+  "pair": {
+    "a_frame_index": 1,
+    "b_frame_index": 2,
+    "form": "pure_frame",
+    "a_coeffs": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "b_coeffs": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "source": "sealed_C2_pair"
+  },
+  "search": {
+    "order": "sealed_C2_pair_first_then_pure_pairs_lex_then_small_lincomb",
+    "rng": "none",
+    "sealed_pair_succeeded": true,
+    "pairs_examined_beyond_sealed": 0,
+    "log_head": []
+  },
+  "primary_witness": {
+    "prime": 23,
+    "zeta_11": 2,
+    "point": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "frame_det": 6,
+    "minpoly_coeffs": [
+      14,
+      0,
+      18,
+      2,
+      16,
+      0,
+      1
+    ],
+    "minpoly_degree": 6,
+    "separable": true,
+    "rect_det_m6": 5,
+    "rect_det_frame": 20,
+    "rect_det_is_unit": true,
+    "e_coords": [
+      [
+        9,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        22,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        21,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        14,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "b6_identity_ok": true,
+    "La_identity_ok": true
+  },
+  "secondary_witness": {
+    "prime": 89,
+    "zeta_11": 2,
+    "point": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "frame_det": 5,
+    "minpoly_coeffs": [
+      65,
+      38,
+      0,
+      0,
+      50,
+      0,
+      1
+    ],
+    "minpoly_degree": 6,
+    "separable": true,
+    "rect_det_m6": 58,
+    "rect_det_frame": 65,
+    "rect_det_is_unit": true,
+    "e_coords": [
+      [
+        32,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        71,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        62,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        70,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "b6_identity_ok": true,
+    "La_identity_ok": true,
+    "note": "p=67 is never used as sole decision fibre"
+  },
+  "holdout_modular": {
+    "prime": 199,
+    "zeta_11": 18,
+    "point": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "minpoly_degree": 6,
+    "separable": true,
+    "rect_det_m6": 187,
+    "rect_det_frame": 195,
+    "success": true
+  },
+  "holdout_probe_prime": {
+    "prime": 463,
+    "zeta_11": 15,
+    "point": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "minpoly_degree": 6,
+    "separable": true,
+    "rect_det_m6": 228,
+    "success": true,
+    "compressed_ok": true
+  },
+  "rectangle_ordering": {
+    "description": "column-major: index = 6*j + i for b^j a^i, 0<=i,j<6",
+    "E_basis": "1, a, a^2, a^3, a^4, a^5",
+    "right_E_basis": "1, b, b^2, b^3, b^4, b^5"
+  },
+  "compression_count": {
+    "minpoly_K_coeffs": 6,
+    "e_j_in_E": 6,
+    "La_entries_in_E": 36,
+    "E_elements_total": 42,
+    "K_coords_per_E": 6,
+    "vs_C21_entries": 2592,
+    "vs_full_structure": 46656
+  },
+  "inputs_consumed": {
+    "structure_constants_f23.npz": "369d08ddb2cb9681c50dbe43f077da4236676f045c3f26dcf28f8b8f2f3d6b83",
+    "alignment_certificate.json": "90746a65051b863c684c906f7166c70572a2edc319e6f6e6e306042261153848",
+    "kproj_core.py": "913b6184df2272e4834f81b38abdda9f468a2852ec571a04a469610054468b01",
+    "word_basis.json": "6760fc38ad536320fd8fc0b697bacababdb96166424d1233ce33615bad6e9d7e"
+  },
+  "specific_input_note": "Consumes the sealed PSL(2,11) Reynolds-frame pair (e_1,e_2) from C2.0, generator alignment A->TSTS, B->T^8S, and homogenization via tmp/kproj_arithmetic. Not an arbitrary degree-six CSA over an arbitrary field: the specific descended A_proj frame is the only input.",
+  "trap_named": "A construction valid for an arbitrary degree-six CSA over an arbitrary field is too weak for C3.2/C3.3 \u2014 that generality yields individual isotropy of Hermitian forms and fails to give a common line. This packet only seals the rectangular/maximal-\u00e9tale model of the specific A_proj.",
+  "elapsed_seconds": 42.119,
+  "peak_rss_bytes": 246317056,
+  "peak_rss_MiB": 234.91,
+  "theorem_boundary": "Proved modularly: the sealed pure frame pair admits a maximal-\u00e9tale subalgebra E=F_p[a] of degree six and a right E-basis 1..b^5 at two good split primes (and holdouts), with unit rectangular-basis determinants. Not proved: executable compressed regular representation over K_proj, nor any Fano-section point."
+}

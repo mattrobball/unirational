@@ -1,0 +1,83 @@
+{
+  "exit_c30": "C3-RECTANGULAR-BASIS-MODULAR",
+  "exit_c31": "C3-RECONSTRUCTION-UNDECIDED",
+  "headline": "OPEN",
+  "pair": {
+    "a_frame_index": 1,
+    "b_frame_index": 2,
+    "source": "sealed_C2_pair"
+  },
+  "primary": {
+    "p": 23,
+    "minpoly_degree": 6,
+    "separable": true,
+    "rect_det_m6": 5,
+    "rect_det_frame": 20
+  },
+  "secondary": {
+    "p": 89,
+    "minpoly_degree": 6,
+    "separable": true,
+    "rect_det_m6": 58,
+    "rect_det_frame": 65
+  },
+  "degree_probe": {
+    "prime": 353,
+    "n_samples": 918,
+    "minpoly_floors": {
+      "n_entries": 6,
+      "n_measured": 6,
+      "n_insufficient": 0,
+      "n_floor_gt_4": 5,
+      "n_floor_0": 1,
+      "n_floor_1": 0,
+      "n_floor_2": 0,
+      "n_floor_3": 0,
+      "n_floor_4": 0,
+      "n_floor_ge_5": 5,
+      "max_measured_floor": 5,
+      "min_nonzero_floor": 5,
+      "ansatz": "x = sum_{k=0..11} r_k(t)*beta_k with r_k total-degree \u2264 D in (t3,t6,t8,t11); free basis of certified K_proj model",
+      "max_D_tested": 4,
+      "unknowns_at_max_D": 840
+    },
+    "e_floors": {
+      "n_entries": 36,
+      "n_measured": 36,
+      "n_insufficient": 0,
+      "n_floor_gt_4": 5,
+      "n_floor_0": 31,
+      "n_floor_1": 0,
+      "n_floor_2": 0,
+      "n_floor_3": 0,
+      "n_floor_4": 0,
+      "n_floor_ge_5": 5,
+      "max_measured_floor": 5,
+      "min_nonzero_floor": 5,
+      "ansatz": "x = sum_{k=0..11} r_k(t)*beta_k with r_k total-degree \u2264 D in (t3,t6,t8,t11); free basis of certified K_proj model",
+      "max_D_tested": 4,
+      "unknowns_at_max_D": 840
+    },
+    "La_floors": {
+      "n_entries": 216,
+      "n_measured": 216,
+      "n_insufficient": 0,
+      "n_floor_gt_4": 180,
+      "n_floor_0": 36,
+      "n_floor_1": 0,
+      "n_floor_2": 0,
+      "n_floor_3": 0,
+      "n_floor_4": 0,
+      "n_floor_ge_5": 180,
+      "max_measured_floor": 5,
+      "min_nonzero_floor": 5,
+      "ansatz": "x = sum_{k=0..11} r_k(t)*beta_k with r_k total-degree \u2264 D in (t3,t6,t8,t11); free basis of certified K_proj model",
+      "max_D_tested": 4,
+      "unknowns_at_max_D": 840
+    },
+    "entries_floor_ge_5": 190,
+    "entries_floor_le_4": 68
+  },
+  "peak_rss_MiB": 234.91,
+  "elapsed_seconds": 42.119
+}

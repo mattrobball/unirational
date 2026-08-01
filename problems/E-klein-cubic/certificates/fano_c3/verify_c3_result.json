@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "checks": [
+    "exit_claims",
+    "pair_vs_c2",
+    "primary_p23",
+    "secondary_p89",
+    "holdout_p199",
+    "holdout_p463",
+    "identities",
+    "preflight",
+    "self_hashes"
+  ],
+  "recomputed": {
+    "p23": {
+      "minpoly": [
+        14,
+        0,
+        18,
+        2,
+        16,
+        0,
+        1
+      ],
+      "separable": true,
+      "rect_det_m6": 5,
+      "rect_det_frame": 20
+    },
+    "p89": {
+      "minpoly": [
+        65,
+        38,
+        0,
+        0,
+        50,
+        0,
+        1
+      ],
+      "separable": true,
+      "rect_det_m6": 58,
+      "rect_det_frame": 65
+    }
+  },
+  "exit_c30": "C3-RECTANGULAR-BASIS-MODULAR",
+  "exit_c31": "C3-RECONSTRUCTION-UNDECIDED",
+  "headline": "OPEN",
+  "elapsed_seconds": 0.908,
+  "peak_rss_MiB": 84.12
+}
