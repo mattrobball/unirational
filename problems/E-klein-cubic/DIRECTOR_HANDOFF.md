@@ -23,6 +23,16 @@ pull  ->  brief  ->  dispatch  ->  verify  ->  commit + push
 1. **Pull.** New work orders arrive on `origin/main` from the owner, often
    mid-round. Always `git fetch` before asserting sync state (see §4).
    `git pull --ff-only origin main` is the normal move.
+
+   **Standing arrangement (owner, 2026-07-31): watch for orders and dispatch on
+   arrival — do not wait to be told.** Arm a persistent `Monitor` on a poll loop
+   that fetches every ~5 min and emits a line when the `WORKORDER_*` blob listing
+   under `problems/E-klein-cubic/` changes on `origin/main` (compare
+   `git ls-tree -r` hashes, so an *edited* order is caught as well as a new one).
+   A `Monitor` is the right tool rather than a subagent: it costs no model tokens,
+   survives the whole session, and fires once per arrival. A polling agent would
+   spend its turns asleep and can die silently on a turn limit. The monitor is
+   session-only — re-arm it at the start of each session.
 2. **Brief.** Write a self-contained markdown brief per worker to the session
    scratchpad. The worker starts fresh with no conversation context —
    everything it needs must be in the brief or in a file it is told to read.
