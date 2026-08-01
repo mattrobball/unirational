@@ -1,0 +1,61 @@
+{
+  "schema": "klein-cubic-T11.1-preflight-v1",
+  "gate": "T11.1",
+  "claimed_heavy_slot": true,
+  "depends_on": "T11-MODULAR-SIMPLE-POINT",
+  "selected_modular_point": {
+    "pair": ["A", "u"],
+    "A": 63,
+    "u": 35,
+    "prime": 101,
+    "B": 74,
+    "Y": 15,
+    "Z": 15,
+    "selected_triple": ["PB", "PY", "PZ"],
+    "selected_minor_value_mod_101": 5,
+    "multiplicity": 1
+  },
+  "route": "A_preferred_then_B",
+  "selected_equations": {
+    "chart_generators": ["P_B", "P_Y", "P_Z"],
+    "remaining_to_reduce": ["P", "P_u", "P_A"],
+    "full_I_sing": ["P", "P_u", "P_A", "P_B", "P_Y", "P_Z"],
+    "gates_named": ["ell", "C", "L=A-15", "M=B", "Q4", "P_uu", "delta", "G=c*L*M^4*Q4*F27^2"],
+    "saturation_policy": "factorwise / separate Rabinowitsch or norm nonvanishing — never expanded full gate product as single poly in exact GB"
+  },
+  "term_counts": {
+    "P": 1593,
+    "P_u": 1213,
+    "P_A": 1206,
+    "P_B": 942,
+    "P_Y": 996,
+    "P_Z": 862,
+    "ell": 31,
+    "C": 2630,
+    "P_uu": 881,
+    "delta": 10507,
+    "Q4": 21,
+    "F27_mod_101": 6288
+  },
+  "field_representation": "Q(A,u)[B,Y,Z] (parametric grevlex) or multiprime CRT of degree-6 monic RUR over F_p with rational reconstruction of coefficient functions",
+  "expected_finite_degree": 6,
+  "factor_selection_method": "component reducing to modular point (B,Y,Z)=(74,15,15) at (A,u)=(63,35) mod 101; square-free RUR degree 6",
+  "checkpoint_plan": [
+    "1. Exploratory Route A under 8 GiB: std(PB,PY,PZ) over Q(A,u); reduce P,Pu,PA; if nonzero, saturate by Jacobian minor Delta",
+    "2. If unit/empty or timeout: Route B full I_sing with per-gate Rabinowitsch (separate t_i) under 64 GiB heavy slot",
+    "3. Multiprime fallback: monic degree-6 eliminants at many (A,u) mod p; CRT + rational reconstruction of finite Q(A,u)-algebra",
+    "4. On success: verify remaining gens have normal form 0; prove gates and Delta invertible via norms",
+    "5. Independent verifier recomputes membership / algebra without importing producer"
+  ],
+  "independent_verifier": "certificates/fold_t11/verify_exact_chart.py (to be written with packet) — loads sealed P; rebuilds generators; checks normal forms / identities / finite algebra degree and gate norms",
+  "memory_authorization_MiB": 65536,
+  "memory_cap_note": "8 GiB exploratory first; one preflighted job up to 64 GiB authorized for T11; 96 GiB not authorized",
+  "inputs": {
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "H_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501"
+  },
+  "scripts": {
+    "routeA_singular": "tmp/t11_exact/routeA_triple.sing",
+    "routeA_m2": "tmp/t11_exact/routeA_triple.m2"
+  }
+}

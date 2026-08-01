@@ -1,0 +1,148 @@
+{
+  "elapsed_s": 1.059617042541504,
+  "exit": "T11-MODULAR-SIMPLE-POINT",
+  "geometric_points_summary": [
+    {
+      "all_gates_nonzero": true,
+      "coords": {
+        "A": 63,
+        "B": 74,
+        "Y": 15,
+        "Z": 15,
+        "u": 35
+      },
+      "ext_deg": 1,
+      "n_nonzero_BYZ_minors": 10
+    },
+    {
+      "all_gates_nonzero": true,
+      "coords": {
+        "ext": "F_101^2"
+      },
+      "ext_deg": 2,
+      "n_nonzero_BYZ_minors": null
+    },
+    {
+      "all_gates_nonzero": true,
+      "coords": {
+        "ext": "F_101^3"
+      },
+      "ext_deg": 3,
+      "n_nonzero_BYZ_minors": null
+    }
+  ],
+  "headline": "OPEN",
+  "inputs": {
+    "F27_mod_path": "tmp/t2r45/G_modp/F27_p101.tsv",
+    "F27_n_terms": 6288,
+    "G_content_c_mod_101": 48,
+    "H_sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "P_n_terms": 1593,
+    "P_sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
+  },
+  "memory_note": "under 8 GiB exploratory ceiling",
+  "method": {
+    "G_evaluation": "G = c*L*M^4*Q4*F27^2 with c=48 calibrated at H!=0 probes; F27 from modular sparse TSV",
+    "Jacobian": "6x5 of (P,P_u,P_A,P_B,P_Y,P_Z) w.r.t (A,B,Y,Z,u); 3x3 minors in columns (B,Y,Z)",
+    "saturation": "single Rabinowitsch t for product ell*C*Q4*P_uu*delta*M (L constant nonzero)",
+    "solver": "msolve 0.10.1 solve-mode RUR over F_101"
+  },
+  "modular_point_sha256": "ce77e795b315e748535328e2ab4d05ecf88403fc6b5788e9e0268c8e9c6eec6c",
+  "object": "Sing(S_G) specialized fibre \u2014 discovery + Hensel chart, NOT T11-FOLD-HEIGHT1",
+  "rur": {
+    "coord_formula": "var_i = -v_i(T)/den(T) at roots T of w",
+    "degree": 6,
+    "elim_poly_low_to_high": [
+      12,
+      30,
+      94,
+      47,
+      4,
+      13,
+      1
+    ],
+    "factors": [
+      [
+        12,
+        1
+      ],
+      [
+        90,
+        25,
+        1
+      ],
+      [
+        55,
+        98,
+        77,
+        1
+      ]
+    ],
+    "param_var": "t",
+    "square_free": true
+  },
+  "schema": "klein-cubic-T11.0-modular-simple-point-v1",
+  "selected_point": {
+    "all_gates_nonzero": true,
+    "coords_mod_p": {
+      "A": 63,
+      "B": 74,
+      "Y": 15,
+      "Z": 15,
+      "u": 35
+    },
+    "gates": {
+      "C": 31,
+      "F27": 10,
+      "G": 39,
+      "L": 48,
+      "M": 74,
+      "P_uu": 12,
+      "Q4": 28,
+      "delta": 19,
+      "ell": 87
+    },
+    "multiplicity": 1,
+    "multiplicity_justification": "msolve RUR eliminant w is square-free over F_101 (gcd(w,w')=1); selected point is the unique simple F_101-root of the linear factor of w; saturated fibre degree equals sum of factor degrees = 6",
+    "n_nonzero_BYZ_minors": 10,
+    "nonzero_BYZ_minors": {
+      "PA,PB,PY": 28,
+      "PA,PB,PZ": 50,
+      "PA,PY,PZ": 66,
+      "PB,PY,PZ": 5,
+      "Pu,PA,PB": 60,
+      "Pu,PA,PY": 13,
+      "Pu,PA,PZ": 91,
+      "Pu,PB,PY": 85,
+      "Pu,PB,PZ": 4,
+      "Pu,PY,PZ": 79
+    },
+    "selected_minor_key": "PB,PY,PZ",
+    "selected_minor_value": 5,
+    "selected_triple": [
+      "PB",
+      "PY",
+      "PZ"
+    ]
+  },
+  "specialization": {
+    "A": 63,
+    "pair": [
+      "A",
+      "u"
+    ],
+    "prime": 101,
+    "u": 35
+  },
+  "theorem_boundary": {
+    "does_not_prove": [
+      "existence of a horizontal two-dimensional component over Q",
+      "T11-FOLD-HEIGHT1 / nonnormality of the fold S_G",
+      "any statement about the target branch B (already sealed nonnormal separately)"
+    ],
+    "proves": [
+      "At (A,u)=(63,35) mod 101 the gate-saturated I_sing fibre is zero-dimensional of degree 6",
+      "There exists a geometric point over F_101 with all named gates nonzero, a nonzero 3x3 (B,Y,Z)-minor, and multiplicity one"
+    ]
+  }
+}

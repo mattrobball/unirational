@@ -1,0 +1,54 @@
+{
+  "schema": "klein-cubic-T11-exit-v1",
+  "exits": [
+    "T11-MODULAR-SIMPLE-POINT",
+    "T11-FOLD-UNDECIDED"
+  ],
+  "headline": "OPEN",
+  "object": "Sing(S_G) of the fold algebra — not the target branch B",
+  "selected_modular_point": {
+    "pair": ["A", "u"],
+    "prime": 101,
+    "A": 63,
+    "u": 35,
+    "B": 74,
+    "Y": 15,
+    "Z": 15,
+    "gates_all_nonzero": true,
+    "selected_triple": ["PB", "PY", "PZ"],
+    "selected_minor_value": 5,
+    "multiplicity": 1
+  },
+  "route": {
+    "preferred": "A",
+    "progress": {
+      "A": "chart minor sealed mod 101; parametric GB of (PB,PY,PZ) unfinished; triple alone pos-dim deg 39 after gate sat",
+      "B": "specialized exact deg-6 fibres over Q at 8 integer (A,u) including (63,35); generic Q(A,u) algebra unfinished",
+      "C": "not started"
+    },
+    "finite_algebra_dim_QAu": null,
+    "expected_degree": 6
+  },
+  "heavy_slot": {
+    "claimed": true,
+    "preflight": "certificates/fold_t11/preflight_t111.json",
+    "authorization_MiB": 65536,
+    "peak_RSS_measured_MiB": 336,
+    "peak_RSS_context": "M2 sequential sat specialized fibre over QQ"
+  },
+  "bottleneck": "BOTTLENECK-T111-GENERIC-QAu-ALGEBRA",
+  "named_next": "Exact monic degree-6 eliminant / finite algebra over Q(A,u) for gate-saturated I_sing; verify normal forms and gate norms",
+  "specialized_exact": {
+    "path": "certificates/fold_t11/specialized_exact_fibres.json",
+    "n_points": 8,
+    "all_sat_dim0_deg6": true
+  },
+  "theorem_boundary": {
+    "branch_B": "nonnormal sealed previously; not revisited",
+    "fold_S_G": "S_2 and dim Sing<=2 accepted; HEIGHT1 / nonnormality of fold not sealed"
+  },
+  "intended_commit_split": [
+    "certificates/fold_t11/: T11.0 modular simple point + verifier",
+    "certificates/fold_t11/: T11.1 preflight, specialized exact fibres, undecided chart note, exit"
+  ]
+}
