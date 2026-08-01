@@ -275,6 +275,14 @@ discharged where?** An uncited hypothesis is a landmine for the next reuse.
   (89, 101, 103, 107, 199, 331, 353 have all been used successfully).
 - **Empty msolve output is not emptiness.** It is a failed run. Record as
   discovery.
+- **Worse: msolve in characteristic zero has returned a FALSE EMPTY.** On the
+  T11 gate-saturated `(A,u)` fibres it positively reported no solutions, where
+  M2 over `QQ` finds a degree-6 fibre — confirmed at eight integer `(A,u)`
+  values including `(63,35)` (2026-07-31, `certificates/fold_t11/`). The
+  standing rule covers *empty output*; this is a wrong *answer*. Believed, it
+  would have produced a bogus `T11-PAIR-EMPTY` and a false claim that the
+  generic fibre is empty. **For char-0 saturations of these systems, M2/`QQ` is
+  the trusted engine; never let msolve alone certify emptiness in char 0.**
 - **SymPy's private rational-reconstruction helper skips a final congruence
   check** and silently corrupts results when a prime shares a factor with the
   CRT modulus. It corrupted a packet here. Implement the congruence check
