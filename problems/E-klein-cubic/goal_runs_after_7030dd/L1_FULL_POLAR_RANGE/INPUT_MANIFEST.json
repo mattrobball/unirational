@@ -1,0 +1,43 @@
+{
+  "accepted_exact_sha256_from_historical_payload": {
+    "certificates/global_transition/level1_marked_states.json": "c6056cdf94e9a5324a5ec17950a170511d0f3c7a3edf0cb92bfc12b010675f19",
+    "certificates/transition_repair/category_repaired.json": "d8eecc5acbb1184c9b1d7f0790f5ad01c9bc0671b3c3969c7a95abdaa9e5a0c0",
+    "certificates/transitions/involution_plane/module.json": "85e5676c3076ef6d9b267194ef6685eb6d7dc82e01d94ad22009e4b34f097312"
+  },
+  "cas": {
+    "engines_used": [],
+    "exact_computation": "Python Fraction and finite combinatorics",
+    "external_CAS_required": false
+  },
+  "historical_inputs": {
+    "problems/E-klein-cubic/WORKORDER_STRATA_LIFTING_BLOCKERS.md": {
+      "git_blob_sha": "6d88f8b852e5bf101449420d45d04add9b3eee8f",
+      "role": "WP-L1 specification"
+    },
+    "problems/E-klein-cubic/certificates/NONLINEAR_LIFTING_EQUATIONS.md": {
+      "git_blob_sha": "ccf93c97c9df94996635f5fe047a6a4c15af47f9",
+      "role": "historical proof note"
+    },
+    "problems/E-klein-cubic/certificates/lifting/polar_expansion.json": {
+      "git_blob_sha": "21436cd9e81fb93daa4012076de6346e51148812",
+      "role": "historical sealed payload",
+      "sha256": "1231694bdc41f6c06c690c2b8eb58dca42402acf1cfaacdc284157b00033098e"
+    },
+    "problems/E-klein-cubic/certificates/lifting/polar_expansion.py": {
+      "git_blob_sha": "47e0f41b196982e385f1eb61a36006ee8c3ea119",
+      "role": "historical exact producer, sealed through 3m+3"
+    },
+    "problems/E-klein-cubic/certificates/lifting/verify_polar_expansion.py": {
+      "git_blob_sha": "342407d17cdd6b7583bf0f0ed3bad9701533e1d3",
+      "role": "historical independent verifier"
+    }
+  },
+  "packet": "L1_FULL_POLAR_RANGE",
+  "pinned_base_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "preservation_policy": {
+    "historical_sealed_files_modified": false,
+    "reason": "Downstream packets bind the historical polar_expansion.json hash; this completion is additive."
+  },
+  "repository": "mattrobball/unirational",
+  "self_sha256": "23da1be141066804d00f56f20dc2e442a9189958fc56736fe5fc6ddbbebf812b"
+}

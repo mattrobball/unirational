@@ -1,0 +1,438 @@
+{
+  "accepted_parity_input": {
+    "degree": "d >= m",
+    "eigenspaces": "p_{m+s} is E_- for s even and E_+ for s odd; F(p(-t))=F(p(t)); F|_{E_-}=0",
+    "jet": "p(t)=sum_{r=m}^d p_r t^r",
+    "m": "odd positive integer",
+    "source": "historical exact WP-L1 packet and corrected source/normal/target incidence theorem, pinned in INPUT_MANIFEST.json"
+  },
+  "cas": {
+    "conditional_claims": [],
+    "engines_used": [],
+    "exact_engine": "Python standard library Fraction + exhaustive combinatorics",
+    "external_CAS_required": false
+  },
+  "completed_boundary": "all F-orders 3m <= N <= 3d for every odd m and d >= m",
+  "exit": "L1-FULL-RANGE-PASS",
+  "first_nonautomatic_equations": {
+    "order_3m+1": "B(b_{m+1};a_m,a_m)=0",
+    "order_3m+3": "B(b_{m+3};a_m,a_m)+2B(b_{m+1};a_m,a_{m+2})+F_+(b_{m+1})=0",
+    "status": "REPRODUCED_EXACTLY"
+  },
+  "full_range_theorem": {
+    "automatic_orders": "delta even gives odd N, hence C_delta=0 by involution parity",
+    "coefficient": "C_delta=sum_{s1+s2+s3=delta, 0<=si<=q} Phi(p_{m+s1},p_{m+s2},p_{m+s3}) over ordered triples",
+    "completeness": "F(p)=0 iff every nonautomatic isolation equation and every terminal compatibility equation in 0<=delta<=3q vanishes",
+    "isolation_range": "for odd delta <= q, the unique term containing p_{m+delta} is (0,0,delta), so L_delta(u)=B(u;a_m,a_m) and L_delta(b_{m+delta})=-R_delta",
+    "obstruction": "omega_delta=[R_delta] in coker(L_delta)",
+    "offset": "q=d-m, N=3m+delta, 0 <= delta <= 3q",
+    "sorted_form": "equivalently sum over 0<=s1<=s2<=s3<=q with multiplicity 1,3,6",
+    "terminal_tail": "for odd q < delta <= 3q there is no p_{m+delta}; the remaining equation is the terminal compatibility T_delta=C_delta=0"
+  },
+  "headline": "OPEN",
+  "historical_packet_boundary": "historical WP-L1 stopped at F-order 3m+3",
+  "incidence_compatibility": {
+    "claims": [
+      "The recurrence concerns normal jets on the exceptional normal cone.",
+      "The source-line condition remains the separate terminal coefficient p_d(0,y).",
+      "No source fixed line is identified with a subvariety of the plus-plane.",
+      "A solution of the coefficient tower is only a formal landing jet, not a global covariant."
+    ],
+    "status": "PRESERVED"
+  },
+  "ordered_vs_sorted": {
+    "claim": "The sorted-triple ledger with multiplicities 1,3,6 equals the ordered coefficient sum defining [t^N]F(p(t)).",
+    "delta_cases_checked": 532,
+    "ordered_triples_counted": 36100,
+    "q_range": [
+      0,
+      18
+    ],
+    "status": "PASS"
+  },
+  "packet": "L1_FULL_POLAR_RANGE",
+  "pinned_base_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "polarization": {
+    "F": "sum_{i in Z/5} x_i^2 x_{i+1}",
+    "Phi": "(1/3) sum_i (u_i v_i w_{i+1} + u_i w_i v_{i+1} + v_i w_i u_{i+1})",
+    "basis_triples_checked": 125,
+    "field": "Q",
+    "mixed_polar": "B(z;y1,y2)=3 Phi(z,y1,y2)",
+    "normalization": "Phi(x,x,x)=F(x)",
+    "status": "PROVED_BY_STRUCTURE_CONSTANTS"
+  },
+  "producer": {
+    "does_not_import_verifier": true,
+    "independent_verifier": "goal_runs_after_7030dd/L1_FULL_POLAR_RANGE/verify.py",
+    "path": "goal_runs_after_7030dd/L1_FULL_POLAR_RANGE/produce.py"
+  },
+  "regression_cases": [
+    {
+      "automatic_deltas": [
+        0
+      ],
+      "d": 1,
+      "first_terminal_delta": null,
+      "isolation_deltas": [],
+      "last_nonautomatic_delta": null,
+      "m": 1,
+      "mode_counts": {
+        "automatic": 1,
+        "isolation": 0,
+        "terminal": 0
+      },
+      "normal_F_order_range": [
+        3,
+        3
+      ],
+      "number_of_coefficients_in_range": 1,
+      "q": 0,
+      "stage_summaries_sha256": "52727a37f946eb218f69969a18fc49c29182022453e764a606fa9ece003e4996",
+      "stage_term_counts_sha256": "d758f9aad1cc8112cd45089a5d02c62d5080922560596632231c1c58bf8ef7a6",
+      "terminal_deltas": []
+    },
+    {
+      "automatic_deltas": [
+        0,
+        2
+      ],
+      "d": 2,
+      "first_terminal_delta": 3,
+      "isolation_deltas": [
+        1
+      ],
+      "last_nonautomatic_delta": 3,
+      "m": 1,
+      "mode_counts": {
+        "automatic": 2,
+        "isolation": 1,
+        "terminal": 1
+      },
+      "normal_F_order_range": [
+        3,
+        6
+      ],
+      "number_of_coefficients_in_range": 4,
+      "q": 1,
+      "stage_summaries_sha256": "c5dd859c2ba2b6ae6438d7e84485867c20991b14d2dbbc6441edd130c4118f5d",
+      "stage_term_counts_sha256": "6cc23f8b248d6b8f85747982aa4b3c386799b65b808c49c208e8d67cce7f2a42",
+      "terminal_deltas": [
+        3
+      ]
+    },
+    {
+      "automatic_deltas": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18
+      ],
+      "d": 7,
+      "first_terminal_delta": 7,
+      "isolation_deltas": [
+        1,
+        3,
+        5
+      ],
+      "last_nonautomatic_delta": 17,
+      "m": 1,
+      "mode_counts": {
+        "automatic": 10,
+        "isolation": 3,
+        "terminal": 6
+      },
+      "normal_F_order_range": [
+        3,
+        21
+      ],
+      "number_of_coefficients_in_range": 19,
+      "q": 6,
+      "stage_summaries_sha256": "220f327390a98e58bca0a401b929b56398a75d5d592142159025163996645682",
+      "stage_term_counts_sha256": "659291ed5ff00685e2e002ac6947658535370bb1449a6918a88724c472b742ee",
+      "terminal_deltas": [
+        7,
+        9,
+        11,
+        13,
+        15,
+        17
+      ]
+    },
+    {
+      "automatic_deltas": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "d": 13,
+      "first_terminal_delta": 13,
+      "isolation_deltas": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "last_nonautomatic_delta": 35,
+      "m": 1,
+      "mode_counts": {
+        "automatic": 19,
+        "isolation": 6,
+        "terminal": 12
+      },
+      "normal_F_order_range": [
+        3,
+        39
+      ],
+      "number_of_coefficients_in_range": 37,
+      "q": 12,
+      "stage_summaries_sha256": "e24cfa319832029147bf671b0251ff348f616c95d1f7a3d8ffc68bd2302ca665",
+      "stage_term_counts_sha256": "a91ba89c77afe5067c65af182b72c6893d59c81ad7fcc6e14d40d050b792e3b1",
+      "terminal_deltas": [
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35
+      ]
+    },
+    {
+      "automatic_deltas": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48
+      ],
+      "d": 19,
+      "first_terminal_delta": 17,
+      "isolation_deltas": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ],
+      "last_nonautomatic_delta": 47,
+      "m": 3,
+      "mode_counts": {
+        "automatic": 25,
+        "isolation": 8,
+        "terminal": 16
+      },
+      "normal_F_order_range": [
+        9,
+        57
+      ],
+      "number_of_coefficients_in_range": 49,
+      "q": 16,
+      "stage_summaries_sha256": "51b26d2cf3a1bd3c79319bd4f7aaf071fee8a727a5add00aba3d63ddbc5c0cb3",
+      "stage_term_counts_sha256": "9e050386f1feecad7cd7fbe36df415936682478b31098416c24fad8cd806db87",
+      "terminal_deltas": [
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47
+      ]
+    },
+    {
+      "automatic_deltas": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68,
+        70,
+        72,
+        74,
+        76,
+        78,
+        80,
+        82,
+        84,
+        86,
+        88,
+        90
+      ],
+      "d": 35,
+      "first_terminal_delta": 31,
+      "isolation_deltas": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29
+      ],
+      "last_nonautomatic_delta": 89,
+      "m": 5,
+      "mode_counts": {
+        "automatic": 46,
+        "isolation": 15,
+        "terminal": 30
+      },
+      "normal_F_order_range": [
+        15,
+        105
+      ],
+      "number_of_coefficients_in_range": 91,
+      "q": 30,
+      "stage_summaries_sha256": "90f58c484e1a528735e59e9736df26db2d189013f9c414e3fec5322922855086",
+      "stage_term_counts_sha256": "1af8d8f11b4819446de893c0eebc2796885f16c0d01e51623a98690b9ea65b57",
+      "terminal_deltas": [
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        61,
+        63,
+        65,
+        67,
+        69,
+        71,
+        73,
+        75,
+        77,
+        79,
+        81,
+        83,
+        85,
+        87,
+        89
+      ]
+    }
+  ],
+  "self_sha256": "ba150def899d749119d21c1579955c943c3ff2db9097e54e4e2f6582481af635",
+  "theorem_boundary": {
+    "not_proved": [
+      "surjectivity of L_delta on any global survivor family",
+      "vanishing of omega_delta or T_delta for any global survivor family",
+      "existence or algebraization of a formal lift",
+      "existence of a homogeneous landing covariant",
+      "the Problem-E headline"
+    ],
+    "proved": [
+      "exact Klein polarization over Q",
+      "complete coefficient ledger from 3m through 3d",
+      "uniform isolation operator at every available odd correction offset",
+      "terminal compatibility tail after the final degree-d coefficient",
+      "equivalence between the full finite ledger and coefficientwise F(p)=0"
+    ]
+  },
+  "work_package": "WP-L1"
+}

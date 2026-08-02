@@ -1,0 +1,26 @@
+{
+  "cas": {
+    "engines_used": [],
+    "exact_engine": "Python Fraction + exhaustive combinatorics",
+    "external_CAS_required": false
+  },
+  "exit": "L1-FULL-RANGE-PASS",
+  "files_sha256": {
+    "FULL_RANGE.json": "4cfdd05bcfc68c59a1c2c4f47acc9dcd5906849441d8d5da874e6371318200f8",
+    "INPUT_MANIFEST.json": "1058c11e42d66d94f2565614af5961aacc82849ccbdb2444aee33b83cbc45495",
+    "REPLAY.md": "fb35f36a43582721536b4adfa2432f511e30e1faa5baea2892bf248ef5888e18",
+    "STATUS.md": "fb7aa45f997f7f64b50f24cf6c9eb8131faddcd06527fcffe27e4882c6595ccf",
+    "THEOREM.md": "94620202c70f0416f8c47120fee63b407f4a7ab87d11f62cde836ab7c08a6b96",
+    "produce.py": "59363ef688ce94a01c0fb74c8e32caf2ebaaec454b157d3f0e0c732f68f90a1c",
+    "verify.py": "e2c1009d9a8a675410e1d9e7d870b2eef329bb7d357c5d8db7f836e01f3c68c1"
+  },
+  "headline": "OPEN",
+  "historical_seals_preserved": true,
+  "packet": "L1_FULL_POLAR_RANGE",
+  "payload": "FULL_RANGE.json",
+  "pinned_base_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "producer": "produce.py",
+  "self_sha256": "3a5f583f1ee64194be48550b8aad80225d383f64925ba4277520572c604fe847",
+  "terminal_marker": "L1_FULL_RANGE_VERIFY_OK",
+  "verifier": "verify.py"
+}
