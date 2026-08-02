@@ -1,0 +1,200 @@
+{
+  "arithmetic_conclusion": {
+    "line_splitting_field": "E(q)/K(q) with Gal=G",
+    "meaning": "a degree-four point supplied by the section-or-quartic theorem, if the section branch fails, cannot have residue field contained in E(q)",
+    "quartic_subfield_in_line_splitting_field": false
+  },
+  "element_order_histogram": {
+    "1": 1,
+    "11": 120,
+    "2": 55,
+    "3": 110,
+    "5": 264,
+    "6": 110
+  },
+  "group": "PSL_2(F_11)",
+  "group_order": 660,
+  "index_four": {
+    "exists": false,
+    "proof": "an index-four subgroup gives a transitive homomorphism G->S4; simplicity makes the kernel trivial or all of G, while an injection is impossible because 660>24"
+  },
+  "line_cover": {
+    "chosen_involution": [
+      0,
+      1,
+      10,
+      0
+    ],
+    "model": "conjugacy class of involutions = G/C_G(t)",
+    "permutation_digest": "a3f84d90c87239a8fb6f897b217adb320d1309fcc46b20885cd54057b0ff87fd",
+    "points": 55,
+    "stabilizer_order": 12,
+    "stabilizer_order_histogram": {
+      "1": 1,
+      "2": 7,
+      "3": 2,
+      "6": 2
+    },
+    "stabilizer_type": "D12",
+    "subdegrees": [
+      1,
+      3,
+      3,
+      6,
+      6,
+      6,
+      6,
+      12,
+      12
+    ]
+  },
+  "pair_orbit_sizes": [
+    165,
+    165,
+    165,
+    330,
+    330,
+    330
+  ],
+  "pair_orbits": [
+    {
+      "digest": "032c7325235594065b2305d63e8122203b956a7f441033fb5e8fcdaa9214f991",
+      "seed": [
+        0,
+        1
+      ],
+      "size": 330
+    },
+    {
+      "digest": "c32add26e03debc47b812a4cd27a9ffa53d5d198c50a68bdf8eed81fa4f150ec",
+      "seed": [
+        0,
+        2
+      ],
+      "size": 330
+    },
+    {
+      "digest": "26f216dffbe5a1d68bdd1f3bf44d84696b15214aea3b5e083400ffdafde69ddf",
+      "seed": [
+        0,
+        7
+      ],
+      "size": 165
+    },
+    {
+      "digest": "74543cb4cc24c4ae83b4034eb8c43977532345dae5ce9cb0a10f7a3bcf9a1e7a",
+      "seed": [
+        0,
+        8
+      ],
+      "size": 165
+    },
+    {
+      "digest": "568b78561f268cf0be08a110fc76ce2f2607c035b61d8320755733a8ab459bd7",
+      "seed": [
+        0,
+        10
+      ],
+      "size": 165
+    },
+    {
+      "digest": "2e8c77e93b342c59029ed62894503d4f81ec4a5fb9e233abb98529e8c5b89724",
+      "seed": [
+        0,
+        15
+      ],
+      "size": 330
+    }
+  ],
+  "schema": "m3-residual-galois-v1",
+  "simple_certificate": {
+    "conclusion": "every nonidentity normal closure is the full group",
+    "nonidentity_conjugacy_classes": [
+      {
+        "class_size": 55,
+        "element_order": 2,
+        "normal_closure_order": 660,
+        "representative": [
+          0,
+          1,
+          10,
+          0
+        ]
+      },
+      {
+        "class_size": 110,
+        "element_order": 3,
+        "normal_closure_order": 660,
+        "representative": [
+          0,
+          1,
+          10,
+          1
+        ]
+      },
+      {
+        "class_size": 60,
+        "element_order": 11,
+        "normal_closure_order": 660,
+        "representative": [
+          0,
+          1,
+          10,
+          2
+        ]
+      },
+      {
+        "class_size": 132,
+        "element_order": 5,
+        "normal_closure_order": 660,
+        "representative": [
+          0,
+          1,
+          10,
+          3
+        ]
+      },
+      {
+        "class_size": 132,
+        "element_order": 5,
+        "normal_closure_order": 660,
+        "representative": [
+          0,
+          1,
+          10,
+          4
+        ]
+      },
+      {
+        "class_size": 110,
+        "element_order": 6,
+        "normal_closure_order": 660,
+        "representative": [
+          0,
+          1,
+          10,
+          5
+        ]
+      },
+      {
+        "class_size": 60,
+        "element_order": 11,
+        "normal_closure_order": 660,
+        "representative": [
+          0,
+          1,
+          10,
+          9
+        ]
+      }
+    ]
+  },
+  "triple_orbit_histogram": {
+    "110": 4,
+    "165": 4,
+    "220": 1,
+    "330": 21,
+    "55": 3,
+    "660": 27
+  }
+}
