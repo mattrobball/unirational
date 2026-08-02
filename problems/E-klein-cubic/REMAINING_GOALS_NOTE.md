@@ -59,7 +59,7 @@ For G2, the intrinsic generic twist and exact all-degree equivalence are sealed;
 | **G** universal-cubic arithmetic | `G2-FINITE-GENERATION-PASS`; arithmetic gate **OPEN** | Research | Universal object, primitive/scalar reduction, and all-degree theorem are complete. Decide \(V(\Phi)(K_{\mathrm{proj}})\neq\varnothing\) with dominance, or prove pointlessness and replay the accepted source-exhaustiveness bridge. |
 | **H** subgroup twists | `H-SWEEP-UNDECIDED` | Research (mostly retired) | Later H2/H3 closed A4 and both A5 classes with points. **Only 11:5 remains** (see H4/H5). |
 | **Q** Schur index-one descent | `Q-UNDECIDED` | Research | Same binary as 35fa Q; live multi-packet research status. |
-| **V** valuation / tropical | `V-UNDECIDED` | Research | No pointless genuine completion. Residual unramified full-twist problems (for example \(f_5\), \(f_6\)). |
+| **V** valuation / tropical | `V-UNDECIDED`; `V3-RESIDUE-NORMAL-FORM-PASS` | Research | Valuation mechanics are sealed: every possible nonpoint is unramified, non-`C1`, rank at most two, index one, with decomposition group `G` or `11:5`. Decide the full residue twist at `f5=0` or `f6=0`, or the `11:5` trace cubic. |
 
 **Completed in this portfolio (for reference):** F, T, S19 (literal scoped empty), KLS, COV structured search, M, J, R, D; the G/G2 structural mission is complete at `G2-FINITE-GENERATION-PASS`.
 
@@ -81,7 +81,7 @@ Ordered by how close they are to a finite close-out, not by headline strength.
 | 8 | **T3** target branch mod 3 | bd610a | Scratch; route already weak from T/T2 | Research |
 | 9 | **G** universal-cubic arithmetic | 0801 / 35fa | G2 structural pass sealed; point/pointlessness open | Research |
 | 10 | **S19** continuation | 35fa | Reformulated; no curve | Research |
-| 11 | **V** valuation | 0801 | Residual residue sites | Research |
+| 11 | **V** valuation | 0801 / bd610a | Normal form sealed; only unramified rank-at-most-two residue binaries for `G` or `11:5` remain | Research |
 
 ---
 
@@ -96,6 +96,7 @@ These already have authorized terminal exits (Problem E may still be open):
 - **H2 / H3** — A4 and both A5 twists have rational points  
 - **T / T2** — target-branch negative route refuted / bridge blocked  
 - **J / J2, D / D2, KLS / KLS2, V2** — route-level exits  
+- **V3 mechanics** — ramified, `C1`-residue, rank-at-least-three, and both maximal-`A5` valuation sites are retired (`V3-RESIDUE-NORMAL-FORM-PASS`); the residual point binaries remain V  
 - **R / R2, M / M2** — structural / link exits (section is M3)  
 - **S19 (0801 literal)** — goal-qualified locus empty (`S19-NO-CURVE-SCOPED`)  
 - **COV structured (0801)** — selected higher-order ansätze empty; full \(m=1\) is a separate goal  
@@ -119,7 +120,7 @@ Run independent fronts concurrently. **Hard rule:** at most one unrelated job ex
 ### Wave B — heavy CAS (serialize; pick one)
 
 | Slot | Front | Agent task | Notes |
-|---|---|---|---|
+|---|---|---|
 | B1 | **P25** | Launch prepared `parallel/r66_pair_split/` when unsandboxed RSS census allows | `PREPARED_NOT_RUN`; prior OOM nonverdict |
 | B2 | **COV m=1** | Residual chart cover (prefer charts already reduced) | Modular `[1]` is not characteristic-zero emptiness without transfer |
 
@@ -129,7 +130,7 @@ Run independent fronts concurrently. **Hard rule:** at most one unrelated job ex
 |---|---|
 | **G arithmetic** | Decide the single `V(Phi)(K_proj)` point/pointlessness gate; no degree ladder substitute |
 | **S19** continuation | Hankel / Rao branch decision |
-| **V** | Residue sites \(f_5,f_6\) |
+| **V** | Full residue binary at `f5`/`f6` or `11:5`; no separate valuation-mechanics shortcut remains |
 | **T3** | Only if still wanted after T/T2 route refutation |
 
 ### Orchestrator checklist
@@ -168,5 +169,5 @@ Run independent fronts concurrently. **Hard rule:** at most one unrelated job ex
 | G2 (completed structural theorem) | `goal_runs_after_35fa/G_UNIVERSAL/STATUS.md` |
 | G arithmetic | `goal_runs_after_35fa/G_UNIVERSAL/DECISION.md` |
 | S19 continuation | `goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E_CONT2/STATUS.md` |
-| V | `goals_2026-08-01/V_VALUATION_TROPICAL_CODEX_ROOT_20260801/STATUS.md` |
+| V | `goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/STATUS.md` |
 | T3 | `goals_after_bd610a/scratch_t3/` |
