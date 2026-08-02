@@ -1,0 +1,472 @@
+{
+  "format": "c6-morita-descent-v1",
+  "consumes_sha256": {
+    "exact_points.json": "8e69417ab068d6044759618d199f1c1c2a74d8f2119e194c2bd803badef6bfe8",
+    "residual_search.json": "2c68121aa75eee530562f8e5175ec756d6b76b09890a25bf0fd06292737648c2",
+    "five_form_matrix.json": "20a2a4bd28c80fa1a74a7da2964cc104a9f7d92d71cc552a86b32bc484341a09",
+    "quartic.json": "1da8fa09a20aa4b8f4b81e8ac163efd62af01ca484cce79163a3eb65d0428886",
+    "generic_pluecker_incidence.json": "c13b4a9f375ba1a45127f155c3607ec68fc153028f19850169b8c6d4e3c80309",
+    "morita_generic_dag.json": "67ed0e94de5efdd39cf29f3512958a7f8145774f54dd0d7dac17bf8bab6c8a7f",
+    "morita_generic_split_dag.json": "df2db37184d16b242e863c368928c4941c25d30c296d4070977722adf51d572f",
+    "involution.json": "e8001963a8361f97e63deb7b8a92f2c9608765b09be9bb631aaa9c4eb5bae077",
+    "distinguished_five_plane.json": "edee4f7e07e95665044ba4fba85239154f4052f27d99b3cbcdd0f48b60d2378a",
+    "fano_covariant_scan.py": "b3c93a41ed1f8b5106d93717dbad058b6c60af100bcee8138925485dac6f107e"
+  },
+  "scope": "Morita / Hilbert-90 / Galois descent analysis of the 12 sealed split-model common lines; search for genuine D(K_proj) beyond constant Q",
+  "group_action": {
+    "source": "tmp/fano14_twist/fano_covariant_scan.py::six_dimensional_generators",
+    "prime": 23,
+    "group_order_generated": 1320,
+    "note": "Order 1320 = |SL(2,F_11)| double cover of PSL_2(F_11)=660; projective action factors through PSL",
+    "dim_invariants_V": 0,
+    "dim_invariants_wedge2_V": 0,
+    "constant_G_equivariant_line_exists": false,
+    "obstruction": "(\u2227\u00b2V)^G = 0 over F_23 \u21d2 no G-invariant decomposable bivector \u21d2 no constant (x-independent) line can satisfy L(gx)=\u03c1(g)L(x) for all g. V^G = 0 similarly blocks constant G-fixed u \u2208 P(V)."
+  },
+  "lines": [
+    {
+      "index": 0,
+      "u": [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 4,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    },
+    {
+      "index": 1,
+      "u": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 4,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    },
+    {
+      "index": 2,
+      "u": [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 6,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    },
+    {
+      "index": 3,
+      "u": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 24,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    },
+    {
+      "index": 4,
+      "u": [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 6,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    },
+    {
+      "index": 5,
+      "u": [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 6,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    },
+    {
+      "index": 6,
+      "u": [
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 6,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    },
+    {
+      "index": 7,
+      "u": [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 6,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    },
+    {
+      "index": 8,
+      "u": [
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 6,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    },
+    {
+      "index": 9,
+      "u": [
+        1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 24,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    },
+    {
+      "index": 10,
+      "u": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 6,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    },
+    {
+      "index": 11,
+      "u": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "rebuild_ok": true,
+      "rank_M": 4,
+      "minors_zero": true,
+      "omegas_zero": [
+        true,
+        true
+      ],
+      "plucker_quadrics_ok": true,
+      "plucker_hyperplanes_identically_zero": true,
+      "galois": {
+        "galois_group_order": 10,
+        "stabilizer_size": 5,
+        "projective_orbit_size": 2,
+        "field_of_definition_degree": 2,
+        "fixed_by_squares_subgroup": true
+      },
+      "plucker_in_Q_sqrt_m11": true,
+      "modular_G_plane_stabilizer_order_p23": 6,
+      "modular_G_group_order_p23": 1320,
+      "constant_section_G_equivariant": false,
+      "K_proj_fano_point_claimed": false,
+      "descent_verdict": "OBSTRUCTION: line defined over Q(\u221a\u221211) not Q; constant section fails G-equivariance of the twisted Pl\u00fccker bundle (plane not G-stable; (\u2227\u00b2V)^G=0 so no constant equivariant line exists)"
+    }
+  ],
+  "Qsqrt_point_search": {
+    "method": "multi-prime sieve of u \u2208 P^5(Q(\u221a\u221211)) on the same rational x-fibre; projective-rational hits are the sealed Q-points (scaled by \u221a\u221211)",
+    "primes": [
+      331,
+      419,
+      463,
+      617
+    ],
+    "height1_scanned_primitive": 265720,
+    "height1_projectively_Q_on_D": 48,
+    "height1_genuine_Qsqrt_on_D": [],
+    "height1_genuine_count": 0,
+    "random_height2_trials": 200000,
+    "random_height2_genuine_on_D": [],
+    "random_height2_genuine_count": 0,
+    "verdict": "no projectively-new height-1 point of D over Q(\u221a\u221211); no genuine hit in 200000 random height-\u22642 trials"
+  },
+  "secondary_covariant_residual": {
+    "attempted": true,
+    "constant_secondary_Q_points": "already sealed as the 12 height-\u22641 Q-points; none yield G-equivariant lines",
+    "homogeneous_covariant_landing": "C5 DEGREE16_FANO_EXCLUSION excludes homogeneous landing covariants through degree 16; PROJECTIVE_MIXED_REDUCTION reduces rational projective formulas to some homogeneous covariant degree",
+    "short_morita_words": "C5 DESCENT_COMPATIBLE_ANSATZ_AUDIT excludes 341 short Morita words and the constant twelve-word ansatz over F_23",
+    "new_K_proj_point_found": false
+  },
+  "summary": {
+    "n_lines": 12,
+    "all_plucker_hyperplanes_ok": true,
+    "all_field_of_definition_Q_sqrt_m11": true,
+    "any_constant_G_equivariant": false,
+    "any_K_proj_fano_point": false,
+    "headline_bridge": false,
+    "marker": "C6-MORITA-DESCENT-OBSTRUCTION",
+    "primary_packet_exit_unchanged": "C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS"
+  },
+  "residual_gates": [
+    "Named obstruction: Gal(Q(\u03b611)/Q) orbits of the 12 lines have size 2 (field Q(\u221a\u221211), not Q)",
+    "Named obstruction: constant split lines fail twisted Pl\u00fccker G-equivariance; (\u2227\u00b2V)^G=0",
+    "No new exact u \u2208 D(K_proj) beyond sealed constant Q-sections found in height/Q(\u221a\u221211)/covariant residual lanes",
+    "Full C6.3 bridge not entered (no K_proj Fano point)",
+    "Optional: nonconstant secondary-basis sections of D of positive degree / rational-function Morita words",
+    "Optional: scheme-theoretic rank\u22643 primary decomposition over K_proj"
+  ],
+  "resources": {
+    "wall_seconds": 20.755663871765137,
+    "peak_rss_mb": 53.78125,
+    "heavy_GB_msolve": false
+  },
+  "marker": "C6_MORITA_DESCENT_PRODUCE_OK"
+}

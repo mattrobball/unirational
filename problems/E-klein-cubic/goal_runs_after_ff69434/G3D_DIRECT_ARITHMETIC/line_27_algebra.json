@@ -266,6 +266,8 @@
     "Brauer_class": "undecided"
   },
   "wall_time_s": 7.396,
-  "marker": "G3D-LINE-27-ALGEBRA-PARTIAL",
-  "point_from_line": false
+  "marker": "G3D-LINE-27-ALGEBRA-PARTIAL+RUR-SPECIALIZED",
+  "point_from_line": false,
+  "line27_rur_subpacket": "line27_exact/",
+  "line27_rur_marker": "G3D-LINE-27-RUR-SPECIALIZED-PASS"
 }

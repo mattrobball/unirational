@@ -1,0 +1,42 @@
+option(redSB);
+ring r0 = 10007, (a,b,c,d), dp;
+poly f0 = -88535*a^3 - 25095798*a^2*b + 1354860*a^2 - 2144490363*a*b^2 + 96849390*a*b - 9925578*a - 128269894*b^3 - 964748082*b^2 + 21874770*b - 313740;
+poly f1 = -265605*a^2*c - 25095798*a^2*d + 595464*a^2 - 50191596*a*b*c - 4288980726*a*b*d - 168009048*a*b + 2709720*a*c + 96849390*a*d + 91213740*a - 2144490363*b^2*c - 384809682*b^2*d + 3862922352*b^2 + 96849390*b*c - 1929496164*b*d - 140691420*b - 9925578*c + 21874770*d + 306720;
+poly f2 = -265605*a*c^2 - 50191596*a*c*d + 1190928*a*c - 2144490363*a*d^2 - 168009048*a*d + 325436040*a - 25095798*b*c^2 - 4288980726*b*c*d - 168009048*b*c - 384809682*b*d^2 + 7725844704*b*d + 11084942338*b + 1354860*c^2 + 96849390*c*d + 91213740*c - 964748082*d^2 - 140691420*d + 58347888;
+poly f3 = -88535*c^3 - 25095798*c^2*d + 595464*c^2 - 2144490363*c*d^2 - 168009048*c*d + 325436040*c - 128269894*d^3 + 3862922352*d^2 + 11084942338*d + 151303140;
+ideal I = f0,f1,f2,f3;
+ideal J = std(I);
+print(sprintf("mod|dim=%s|vdim=%s", string(dim(J)), string(vdim(J))));
+ring rlex = 10007, (a,b,c,d), lp;
+ideal Ilex = fetch(r0, I);
+ideal Glex = std(Ilex);
+poly m = Glex[1]/leadcoef(Glex[1]);
+list fm = factorize(m);
+int nlin = 0;
+poly lin0;
+for (int k=1; k<=size(fm[1]); k++) {
+  if (deg(fm[1][k]) == 1) { nlin = nlin + 1; if (nlin == 1) { lin0 = fm[1][k]/leadcoef(fm[1][k]); } }
+}
+print(sprintf("mod|nlin=%s", string(nlin)));
+if (nlin > 0) {
+  poly rdpoly = -subst(lin0, d, 0);
+  poly pa = subst(Glex[4], d, rdpoly); pa = pa/leadcoef(pa);
+  poly pb = subst(Glex[3], d, rdpoly); pb = pb/leadcoef(pb);
+  poly pc = subst(Glex[2], d, rdpoly); pc = pc/leadcoef(pc);
+  poly a0p = -subst(pa, a, 0);
+  poly b0p = -subst(pb, b, 0);
+  poly c0p = -subst(pc, c, 0);
+  print(sprintf("mod|a=%s|b=%s|c=%s|d=%s", string(a0p), string(b0p), string(c0p), string(rdpoly)));
+  setring r0;
+  poly aa = imap(rlex, a0p);
+  poly bb = imap(rlex, b0p);
+  poly cc = imap(rlex, c0p);
+  poly dd = imap(rlex, rdpoly);
+  poly e0 = subst(subst(subst(subst(f0,a,aa),b,bb),c,cc),d,dd);
+  poly e1 = subst(subst(subst(subst(f1,a,aa),b,bb),c,cc),d,dd);
+  poly e2 = subst(subst(subst(subst(f2,a,aa),b,bb),c,cc),d,dd);
+  poly e3 = subst(subst(subst(subst(f3,a,aa),b,bb),c,cc),d,dd);
+  print(sprintf("mod|e0=%s|e1=%s|e2=%s|e3=%s", string(e0), string(e1), string(e2), string(e3)));
+  int ok = (e0 == 0) and (e1 == 0) and (e2 == 0) and (e3 == 0);
+  print(sprintf("mod|chart_eqs_ok=%s", string(ok)));
+}

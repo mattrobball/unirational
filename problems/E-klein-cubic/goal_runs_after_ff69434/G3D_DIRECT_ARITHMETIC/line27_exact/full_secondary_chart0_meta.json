@@ -1,0 +1,231 @@
+{
+  "t": [
+    2,
+    3,
+    5,
+    7
+  ],
+  "n_eqs": 44,
+  "eq_index": [
+    {
+      "comp": 0,
+      "bin": 0,
+      "nterms": 10
+    },
+    {
+      "comp": 0,
+      "bin": 1,
+      "nterms": 18
+    },
+    {
+      "comp": 0,
+      "bin": 2,
+      "nterms": 18
+    },
+    {
+      "comp": 0,
+      "bin": 3,
+      "nterms": 10
+    },
+    {
+      "comp": 1,
+      "bin": 0,
+      "nterms": 8
+    },
+    {
+      "comp": 1,
+      "bin": 1,
+      "nterms": 17
+    },
+    {
+      "comp": 1,
+      "bin": 2,
+      "nterms": 18
+    },
+    {
+      "comp": 1,
+      "bin": 3,
+      "nterms": 10
+    },
+    {
+      "comp": 2,
+      "bin": 0,
+      "nterms": 8
+    },
+    {
+      "comp": 2,
+      "bin": 1,
+      "nterms": 15
+    },
+    {
+      "comp": 2,
+      "bin": 2,
+      "nterms": 16
+    },
+    {
+      "comp": 2,
+      "bin": 3,
+      "nterms": 9
+    },
+    {
+      "comp": 3,
+      "bin": 0,
+      "nterms": 7
+    },
+    {
+      "comp": 3,
+      "bin": 1,
+      "nterms": 14
+    },
+    {
+      "comp": 3,
+      "bin": 2,
+      "nterms": 15
+    },
+    {
+      "comp": 3,
+      "bin": 3,
+      "nterms": 8
+    },
+    {
+      "comp": 4,
+      "bin": 0,
+      "nterms": 7
+    },
+    {
+      "comp": 4,
+      "bin": 1,
+      "nterms": 12
+    },
+    {
+      "comp": 4,
+      "bin": 2,
+      "nterms": 13
+    },
+    {
+      "comp": 4,
+      "bin": 3,
+      "nterms": 8
+    },
+    {
+      "comp": 5,
+      "bin": 0,
+      "nterms": 5
+    },
+    {
+      "comp": 5,
+      "bin": 1,
+      "nterms": 11
+    },
+    {
+      "comp": 5,
+      "bin": 2,
+      "nterms": 12
+    },
+    {
+      "comp": 5,
+      "bin": 3,
+      "nterms": 7
+    },
+    {
+      "comp": 6,
+      "bin": 0,
+      "nterms": 5
+    },
+    {
+      "comp": 6,
+      "bin": 1,
+      "nterms": 11
+    },
+    {
+      "comp": 6,
+      "bin": 2,
+      "nterms": 12
+    },
+    {
+      "comp": 6,
+      "bin": 3,
+      "nterms": 7
+    },
+    {
+      "comp": 7,
+      "bin": 0,
+      "nterms": 3
+    },
+    {
+      "comp": 7,
+      "bin": 1,
+      "nterms": 8
+    },
+    {
+      "comp": 7,
+      "bin": 2,
+      "nterms": 9
+    },
+    {
+      "comp": 7,
+      "bin": 3,
+      "nterms": 5
+    },
+    {
+      "comp": 8,
+      "bin": 0,
+      "nterms": 4
+    },
+    {
+      "comp": 8,
+      "bin": 1,
+      "nterms": 6
+    },
+    {
+      "comp": 8,
+      "bin": 2,
+      "nterms": 7
+    },
+    {
+      "comp": 8,
+      "bin": 3,
+      "nterms": 4
+    },
+    {
+      "comp": 9,
+      "bin": 0,
+      "nterms": 2
+    },
+    {
+      "comp": 9,
+      "bin": 1,
+      "nterms": 5
+    },
+    {
+      "comp": 9,
+      "bin": 2,
+      "nterms": 6
+    },
+    {
+      "comp": 9,
+      "bin": 3,
+      "nterms": 4
+    },
+    {
+      "comp": 10,
+      "bin": 0,
+      "nterms": 2
+    },
+    {
+      "comp": 10,
+      "bin": 1,
+      "nterms": 3
+    },
+    {
+      "comp": 10,
+      "bin": 2,
+      "nterms": 4
+    },
+    {
+      "comp": 10,
+      "bin": 3,
+      "nterms": 3
+    }
+  ]
+}

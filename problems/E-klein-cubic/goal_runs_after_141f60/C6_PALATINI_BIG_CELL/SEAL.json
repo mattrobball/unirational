@@ -1,10 +1,11 @@
 {
-  "format": "c6-seal-v2",
+  "format": "c6-seal-v3",
   "primary_exit": "C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS",
   "also_achieved": [
     "C6-FIVE-FORM-MATRIX-PASS",
     "C6-RANK-STRATUM-REDUCTION-PASS",
-    "C6-EXACT-SPLIT-POINTS-PASS"
+    "C6-EXACT-SPLIT-POINTS-PASS",
+    "C6-MORITA-DESCENT-OBSTRUCTION"
   ],
   "not_achieved": [
     "C6-POINT-HEADLINE-POSITIVE"
@@ -64,16 +65,16 @@
       "bytes": 2150
     },
     "POINT.md": {
-      "sha256": "da928d05ff1381f73a0e6979a97dde33d657b80cd29bb64f5df132ceb615714d",
-      "bytes": 3077
+      "sha256": "aa7f1f2d28332284fb71f4d5079fbf27fb7a0fe40a91f03c361565fb1f26acd9",
+      "bytes": 3576
     },
     "STATUS.md": {
-      "sha256": "e9754c097a1c349fa5d06022d32569fba573dd070cd9edb5f789e9c3f29a6b64",
-      "bytes": 1998
+      "sha256": "49fd5f46474c61d3cf48a58842d37400213c233399e979c77d1d18ee7b12bcc6",
+      "bytes": 2575
     },
     "REPLAY.md": {
-      "sha256": "351bc172809c4c11615a77807a13f028db6b425c5587ae3dad598e0ea6f7df26",
-      "bytes": 1382
+      "sha256": "22e068de475563389f2700af3fa344a8230788dcc59d5b451a48404626b73f10",
+      "bytes": 1901
     },
     "produce.py": {
       "sha256": "28aca4b0ecd745f899e5683d57da7610a5066a37187b326d6d2884213e4d001b",
@@ -106,6 +107,26 @@
     "c6_exact.py": {
       "sha256": "170b138b17c49dad98d070054f4a245011e4fd0f205cefd5eb4baac03649cff4",
       "bytes": 10268
+    },
+    "phase_morita_descent/produce_descent.py": {
+      "sha256": "fabc4dce88442925d7b32dbe8528be4f719916b94c0443ef1560f7839fcc7fb9",
+      "bytes": 26048
+    },
+    "phase_morita_descent/verify_descent.py": {
+      "sha256": "2a06bb969212ba23b45b438a47ee1f9a8aaf012bb169489be62f6e1a887df319",
+      "bytes": 11234
+    },
+    "phase_morita_descent/descent.json": {
+      "sha256": "2b673c82b6c009d997c9f36711e13dd9c60ab1316bfa187f64a8bb214750e8dc",
+      "bytes": 16269
+    },
+    "phase_morita_descent/produce_meta.json": {
+      "sha256": "60ab5214959c419bf1f60c90db0b2ee6bf14a051de39c9486092281f3896fa6e",
+      "bytes": 200
+    },
+    "phase_morita_descent/DESCENT.md": {
+      "sha256": "e7305dbf6b39b4a672bfd32478cb32c5a4d298656932c973827d0023891e566e",
+      "bytes": 2680
     }
   },
   "marker": "C6_SEAL_OK"

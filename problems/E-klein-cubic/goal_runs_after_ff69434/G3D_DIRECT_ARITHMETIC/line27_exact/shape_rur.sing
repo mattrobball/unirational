@@ -1,0 +1,30 @@
+LIB "primdec.lib";
+option(redSB);
+ring r0 = 0, (a,b,c,d), dp;
+poly f0 = -88535*a^3 - 25095798*a^2*b + 1354860*a^2 - 2144490363*a*b^2 + 96849390*a*b - 9925578*a - 128269894*b^3 - 964748082*b^2 + 21874770*b - 313740;
+poly f1 = -265605*a^2*c - 25095798*a^2*d + 595464*a^2 - 50191596*a*b*c - 4288980726*a*b*d - 168009048*a*b + 2709720*a*c + 96849390*a*d + 91213740*a - 2144490363*b^2*c - 384809682*b^2*d + 3862922352*b^2 + 96849390*b*c - 1929496164*b*d - 140691420*b - 9925578*c + 21874770*d + 306720;
+poly f2 = -265605*a*c^2 - 50191596*a*c*d + 1190928*a*c - 2144490363*a*d^2 - 168009048*a*d + 325436040*a - 25095798*b*c^2 - 4288980726*b*c*d - 168009048*b*c - 384809682*b*d^2 + 7725844704*b*d + 11084942338*b + 1354860*c^2 + 96849390*c*d + 91213740*c - 964748082*d^2 - 140691420*d + 58347888;
+poly f3 = -88535*c^3 - 25095798*c^2*d + 595464*c^2 - 2144490363*c*d^2 - 168009048*c*d + 325436040*c - 128269894*d^3 + 3862922352*d^2 + 11084942338*d + 151303140;
+ideal I = f0,f1,f2,f3;
+ring rlex = 0, (a,b,c,d), lp;
+ideal Ilex = fetch(r0, I);
+ideal Glex = std(Ilex);
+print("size"); print(size(Glex));
+// Shape lemma check: gens should be a-A(d), b-B(d), c-C(d), m(d)
+for (int i=1; i<=size(Glex); i++) {
+  poly g = Glex[i];
+  print(sprintf("G[%s] deg_total=%s lead=%s", string(i), string(deg(g)), string(lead(g))));
+}
+// write each generator
+write(":w rur_G1.txt", Glex[1]);
+write(":w rur_G2.txt", Glex[2]);
+write(":w rur_G3.txt", Glex[3]);
+write(":w rur_G4.txt", Glex[4]);
+// factor minpoly
+list fac = factorize(Glex[1]);
+print("nfac"); print(size(fac[1]));
+for (int j=1; j<=size(fac[1]); j++) { print(sprintf("fac %s deg=%s mult=%s", string(j), string(deg(fac[1][j])), string(fac[2][j]))); }
+// monic minpoly coeffs via coef
+matrix C = coef(Glex[1], d);
+write(":w minpoly_coef_matrix.txt", C);
+print("done");

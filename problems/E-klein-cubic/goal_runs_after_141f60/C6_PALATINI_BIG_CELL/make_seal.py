@@ -44,6 +44,11 @@ def main() -> None:
         "verify_residual.py",
         "c6_core.py",
         "c6_exact.py",
+        "phase_morita_descent/produce_descent.py",
+        "phase_morita_descent/verify_descent.py",
+        "phase_morita_descent/descent.json",
+        "phase_morita_descent/produce_meta.json",
+        "phase_morita_descent/DESCENT.md",
     ]
     also = [
         "C6-FIVE-FORM-MATRIX-PASS",
@@ -51,8 +56,10 @@ def main() -> None:
     ]
     if (HERE / "exact_points.json").exists():
         also.append("C6-EXACT-SPLIT-POINTS-PASS")
+    if (HERE / "phase_morita_descent" / "descent.json").exists():
+        also.append("C6-MORITA-DESCENT-OBSTRUCTION")
     payload = {
-        "format": "c6-seal-v2",
+        "format": "c6-seal-v3",
         "primary_exit": "C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS",
         "also_achieved": also,
         "not_achieved": ["C6-POINT-HEADLINE-POSITIVE"],

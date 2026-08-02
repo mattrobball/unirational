@@ -1,0 +1,34 @@
+{
+  "format": "g3d-line27-rur-seal-v1",
+  "exit": "G3D-LINE-27-RUR-SPECIALIZED-PASS",
+  "residual": "G3D-LINE-27-RUR-KPROJ-OPEN",
+  "headline": "OPEN",
+  "parent": "G3D_DIRECT_ARITHMETIC",
+  "verify": "G3D_LINE27_RUR_OK",
+  "files": {
+    "LINE_27_RUR.md": "595254c66521692c15283b267d05d268a68db7ab818eab35c4f36d8215e53af5",
+    "chart_equations_specialized.json": "1bcc8a45acdbdbf3e1702040ec65eefe1c9db82c49134b48fd1fc7b4e3c11076",
+    "cubic_specialized_t2357.txt": "1b23a25fc531f60ce37ee4bfad86349e86e89ba9b4a0c37a1862fbb57b423ada",
+    "lex_gb.txt": "c054651cacb47a64ebd6bf6ed539a0818fd1a96e4a0b25c295c30561581a5101",
+    "line_27_rur.json": "e67bbab14531544d47caebbfa9afa6e3207aa03f432bff8b08d02afd0d139241",
+    "minpoly_coef_matrix.txt": "f4aa098789268c97d42cf2d5fd3b393abecb5a68ee1c9e8a65cdba0272eb630e",
+    "minpoly_d.txt": "66f7fd5f416564713e303a465247289aae2c9941cb05074b307ba4077a913403",
+    "minpoly_d_factors.txt": "1d1c808ef2e81bccd146ed9ea1e2bcec505c069142305f39fca637a20dce178e",
+    "multi_spec_degrees.json": "f4c53b681ddd87ca60dcbe3798c357ed3183eaedb0d64a704d9546ad4beb011b",
+    "produce_line27_rur.py": "a9e64055263021cbfac57de4d2400802da7743c781f7e77b6b592bfebc9d8e1e",
+    "rur_G1.txt": "66f7fd5f416564713e303a465247289aae2c9941cb05074b307ba4077a913403",
+    "rur_G2.txt": "bb1d223665e6ed1b1a7b9859d3c132665521721fa9f774aed43f2882b3cbb193",
+    "rur_G2_c.txt": "bb1d223665e6ed1b1a7b9859d3c132665521721fa9f774aed43f2882b3cbb193",
+    "rur_G3.txt": "c2138343c025c5fb487743dcf65c2666777ad9ce69128a8cd426d4091c03caec",
+    "rur_G3_b.txt": "c2138343c025c5fb487743dcf65c2666777ad9ce69128a8cd426d4091c03caec",
+    "rur_G4.txt": "faf03bd9d110e4e8b329bf5f0ef362f983f3fa9fbe47bd3a5999d5c651d96853",
+    "rur_G4_a.txt": "faf03bd9d110e4e8b329bf5f0ef362f983f3fa9fbe47bd3a5999d5c651d96853",
+    "verify_line27_rur.py": "ca8275a03ee1530757ba168cccb50e022789b1ac607a183ce5f5a3780fe0db2a"
+  },
+  "nonclaims": [
+    "no K_proj-rational line",
+    "no full free-K_proj RUR (secondary generators free)",
+    "no Problem-E headline point",
+    "specialized secondary-0 surface over QQ, not generic K surface itself"
+  ]
+}

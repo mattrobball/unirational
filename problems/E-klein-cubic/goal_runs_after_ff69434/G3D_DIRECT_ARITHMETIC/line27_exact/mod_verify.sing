@@ -1,0 +1,61 @@
+
+option(redSB);
+ring r0 = 10007, (a,b,c,d), dp;
+poly f0 = -88535*a^3 - 25095798*a^2*b + 1354860*a^2 - 2144490363*a*b^2 + 96849390*a*b - 9925578*a - 128269894*b^3 - 964748082*b^2 + 21874770*b - 313740;
+poly f1 = -265605*a^2*c - 25095798*a^2*d + 595464*a^2 - 50191596*a*b*c - 4288980726*a*b*d - 168009048*a*b + 2709720*a*c + 96849390*a*d + 91213740*a - 2144490363*b^2*c - 384809682*b^2*d + 3862922352*b^2 + 96849390*b*c - 1929496164*b*d - 140691420*b - 9925578*c + 21874770*d + 306720;
+poly f2 = -265605*a*c^2 - 50191596*a*c*d + 1190928*a*c - 2144490363*a*d^2 - 168009048*a*d + 325436040*a - 25095798*b*c^2 - 4288980726*b*c*d - 168009048*b*c - 384809682*b*d^2 + 7725844704*b*d + 11084942338*b + 1354860*c^2 + 96849390*c*d + 91213740*c - 964748082*d^2 - 140691420*d + 58347888;
+poly f3 = -88535*c^3 - 25095798*c^2*d + 595464*c^2 - 2144490363*c*d^2 - 168009048*c*d + 325436040*c - 128269894*d^3 + 3862922352*d^2 + 11084942338*d + 151303140;
+
+ideal I = f0,f1,f2,f3;
+ideal J = std(I);
+print(sprintf("Fp dim=%s vdim=%s", string(dim(J)), string(vdim(J))));
+ring rlex = 10007, (a,b,c,d), lp;
+ideal Ilex = fetch(r0, I);
+ideal Glex = std(Ilex);
+poly m = Glex[1];
+m = m / leadcoef(m);
+list fm = factorize(m);
+int nlin = 0;
+list roots_d;
+for (int k=1; k<=size(fm[1]); k++) {
+  if (deg(fm[1][k]) == 1) {
+    nlin = nlin + 1;
+    poly lin = fm[1][k] / leadcoef(fm[1][k]);
+    // monic: d + c0  => root = -c0
+    number rd = -subst(lin, d, 0);
+    roots_d = insert(roots_d, rd, size(roots_d));
+  }
+}
+print(sprintf("n_linear_factors=%s", string(nlin)));
+// For first root, solve a,b,c from Glex[2,3,4]
+if (nlin > 0) {
+  number rd = roots_d[1];
+  print(sprintf("d0=%s", string(rd)));
+  poly pa = subst(Glex[4], d, rd); // in a only
+  poly pb = subst(Glex[3], d, rd);
+  poly pc = subst(Glex[2], d, rd);
+  // normalize monic in a,b,c
+  pa = pa / leadcoef(pa);
+  pb = pb / leadcoef(pb);
+  pc = pc / leadcoef(pc);
+  // pa = a - a0  or a + ...
+  number a0 = -subst(pa, a, 0);
+  number b0 = -subst(pb, b, 0);
+  number c0 = -subst(pc, c, 0);
+  print(sprintf("a0=%s b0=%s c0=%s", string(a0), string(b0), string(c0)));
+  // verify ideal membership: f_i(a0,b0,c0,rd)=0
+  setring r0;
+  number aa = imap(rlex, a0);
+  number bb = imap(rlex, b0);
+  number cc = imap(rlex, c0);
+  number dd = imap(rlex, rd);
+  poly e0 = subst(subst(subst(subst(f0,a,aa),b,bb),c,cc),d,dd);
+  poly e1 = subst(subst(subst(subst(f1,a,aa),b,bb),c,cc),d,dd);
+  poly e2 = subst(subst(subst(subst(f2,a,aa),b,bb),c,cc),d,dd);
+  poly e3 = subst(subst(subst(subst(f3,a,aa),b,bb),c,cc),d,dd);
+  print(sprintf("eqs_at_point %s %s %s %s", string(e0), string(e1), string(e2), string(e3)));
+  // chart 0 pivots (0,1): u=(1,0,a,b), v=(0,1,c,d) in y1..y4 indexing 0..3
+  // y = s*u + t*v = (s, t, a*s+c*t, b*s+d*t)
+  // Evaluate cubic G on a few points of the line
+}
+print("mod_verify_done");

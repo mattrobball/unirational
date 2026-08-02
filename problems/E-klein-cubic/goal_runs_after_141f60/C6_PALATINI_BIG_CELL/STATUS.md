@@ -1,13 +1,14 @@
 C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS
 
-# Goal C6 status — Palatini / determinantal big cell (residual update)
+# Goal C6 status — Palatini / determinantal big cell (Morita descent residual)
 
 **Primary exit:** `C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS`
 
 **Also achieved:**
 - `C6-FIVE-FORM-MATRIX-PASS`
 - `C6-RANK-STRATUM-REDUCTION-PASS`
-- `C6-EXACT-SPLIT-POINTS-PASS` (residual; split model only)
+- `C6-EXACT-SPLIT-POINTS-PASS` (split model; 12 lines over Q(ζ11))
+- `C6-MORITA-DESCENT-OBSTRUCTION` (named residual for constant-line descent)
 
 **Not achieved:**
 - `C6-POINT-HEADLINE-POSITIVE`
@@ -24,38 +25,48 @@ C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS
 Five-form matrix, \(m(u)=Q(u)\,u\), rank-4 inverse formulas, rank-stratum
 reduction.  Not rebuilt in this residual pass.
 
-### C6.2 — point search (residual, deepened)
+### C6.2 — exact split points (sealed, retained)
 
-Lanes A–D re-run with multi-prime exact methods and \(Q(\zeta_{11})\)
-arithmetic:
+Twelve height-\(\le 1\) points \(u\in D(\mathbf Q)\) with \(\operatorname{rank} M(u)=4\)
+and reconstructed common lines over \(\mathbf Q(\zeta_{11})\).  See
+`exact_points.json`, `POINT.md`.
 
-- **Exact** \(u\in D(\mathbf Q)\) with rank \(M(u)=4\) (constant sections).
-- Reconstructed common lines over \(\mathbf Q(\zeta_{11})\) with coefficientwise
-  Plücker hyperplane identities in \(x\).
-- **Not** claimed: \(K_{\mathrm{proj}}\)-points of the twisted \(F_{14,T}\).
+### C6.2b — Morita / \(K_{\mathrm{proj}}\) descent (this pass)
 
-Count of height-\(\le 1\) certified points: **12**.
-See `POINT.md`, `exact_points.json`, `residual_search.json`.
+Packet: `phase_morita_descent/`.
+
+1. **Galois.**  Every sealed Plücker line has
+   \(\mathrm{Gal}(\mathbf Q(\zeta_{11})/\mathbf Q)\)-orbit size **2** and
+   coordinates in \(\mathbf Q(\sqrt{-11})\).  Not defined over \(\mathbf Q\).
+2. **Twisted equivariance.**  Constant sections cannot satisfy
+   \(L(gx)=\rho(g)L(x)\): over \(p=23\), \(\dim(\wedge^2 V)^G=0\) and \(V^G=0\)
+   for the sealed 6-dimensional representation (group order 1320).  None of the
+   12 planes is G-stable.
+3. **New \(D(K_{\mathrm{proj}})\) search.**  No projectively-new height-1 point of
+   \(D\) over \(\mathbf Q(\sqrt{-11})\); 0 genuine hits in 200000 random
+   height-\(\le 2\) trials; C5 degree-\(\le 16\) covariant / short Morita-word
+   exclusions retained.
+
+**Not claimed:** any \(K_{\mathrm{proj}}\)-point of \(F_{14,T}\).
 
 ### C6.3 — headline bridge
 
-Not entered.  Split-model lines still require Morita / \(K_{\mathrm{proj}}\) descent,
-Pfaffian–Klein bridge, and G3A dominance.
+Not entered.
 
 ## Residual gates
 
-1. \(K_{\mathrm{proj}}\) / Morita descent of the \(Q(\zeta_{11})\) common lines.
-2. Full C6.3 bridge (Plücker already checked on the split model; open conditions /
-   dominance remain).
-3. Optional flat secondary-basis expansion of \(M/Q\).
-4. Optional scheme-theoretic rank-\(\le 3\) primary decomposition over \(K_{\mathrm{proj}}\).
+1. Constant-split-line Morita descent blocked (Gal orbit 2 + \((\wedge^2 V)^G=0\)).
+2. No new exact \(u\in D(K_{\mathrm{proj}})\) beyond sealed constant \(\mathbf Q\)-sections
+   in the lanes run.
+3. Optional: positive-degree secondary-basis sections / rational-function Morita words.
+4. Optional: scheme-theoretic rank-\(\le 3\) primary decomposition over \(K_{\mathrm{proj}}\).
 5. Exact singular locus of the generic quartic (char-0).
 
-## Peak resource (residual)
+## Peak resource (Morita descent residual)
 
-- wall \(\approx 11.38\) s
-- peak RSS \(\approx 80.5\) MB
-- GB / msolve: **not invoked** (linear charts + exact cyclotomic linear algebra)
+- wall \(\approx 20.6\) s
+- peak RSS \(\approx 53.7\) MB
+- GB / msolve: **not invoked**
 
 ## Replay
 

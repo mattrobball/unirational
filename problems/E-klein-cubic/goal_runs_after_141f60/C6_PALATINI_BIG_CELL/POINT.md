@@ -43,10 +43,23 @@ defined over \(\mathbf Q\).  It is a point of the **split** five-form Fano model
 over \(\mathbf Q(\zeta_{11})\), not a verified \(K_{\mathrm{proj}}\)-point of the
 twisted form \(F_{14,T}\).
 
+## Morita / \(K_{\mathrm{proj}}\) descent (see `phase_morita_descent/`)
+
+Independently certified residual:
+
+- every line has Gal-orbit size 2 over \(\mathbf Q(\zeta_{11})/\mathbf Q\) and
+  Plücker coordinates in \(\mathbf Q(\sqrt{-11})\);
+- constant sections fail twisted Plücker \(G\)-equivariance:
+  \(\dim(\wedge^2 V)^G=0\) at \(p=23\);
+- no new height-bounded \(D\)-point over \(\mathbf Q(\sqrt{-11})\) beyond
+  projectively rational ones.
+
+Marker: `C6-MORITA-DESCENT-OBSTRUCTION`.  Still **not** a \(K_{\mathrm{proj}}\)
+Fano point.
+
 ## What is still residual
 
-- Morita / \(K_{\mathrm{proj}}\) descent of these split lines (Galois equivariance /
-  secondary-basis coordinates);
+- Nonconstant secondary-basis / rational-function Morita sections of \(D\);
 - Pfaffian–Klein bridge and G3A dominance for a true \(K_{\mathrm{proj}}\) Fano point;
 - scheme-theoretic singular locus and rank \(\le 3\) primary decomposition over
   \(K_{\mathrm{proj}}\).

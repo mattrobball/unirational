@@ -71,3 +71,15 @@ No exact `K_proj`-point of `V(Φ)` was produced and promoted through G2/G3A.
 - Structural / residual packet only.
 - Does **not** claim `X_gen(K_proj) ≠ ∅` or emptiness.
 - Does **not** rehabilitate G7B coset orbits or illegal odd-degree cubic descent.
+
+
+## Line-27 RUR addendum (post-seal)
+
+Subpacket `line27_exact/`:
+
+- Marker: `G3D-LINE-27-RUR-SPECIALIZED-PASS`
+- Residual: `G3D-LINE-27-RUR-KPROJ-OPEN`
+- All 6 charts + 5 t-specializations: reduced 0-dim **degree 27**, single prime
+- Chart-0 shape-lemma RUR: irreducible deg-27 minpoly over QQ; no QQ-line
+- Modular reconstruction at p=10007: chart equations vanish
+- No K_proj-line; no headline point
