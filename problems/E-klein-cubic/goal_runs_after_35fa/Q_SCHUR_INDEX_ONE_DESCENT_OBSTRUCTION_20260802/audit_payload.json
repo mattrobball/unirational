@@ -1,0 +1,50 @@
+{
+  "schema": "q2.1-descent-obstruction-audit-v1",
+  "repository": "mattrobball/unirational",
+  "audit_base_commit": "6dab7c47cddbb0854db6179db2b021c435e64092",
+  "goal_exit": "Q-UNDECIDED",
+  "scoped_exit": "Q2.1-DESCENT-OBSTRUCTION-AUDIT-PASS",
+  "bezout": {
+    "coefficient_degree_3": -18,
+    "coefficient_degree_55": 1,
+    "value": 1
+  },
+  "geometric_etale_pi1_trivial": true,
+  "surviving_local_decomposition_groups": [
+    "PSL(2,11)",
+    "11:5"
+  ],
+  "source_blobs": {
+    "goal": "d2fc6ebd90be1452b9ee272930abd5a7fb8a478f",
+    "zero_cycle_ledger": "c3fcc5d56532683dd03ae00610926236b949a438",
+    "descent_obstruction": "0cd8c3ab7bf3f91295ff0e13c17941e1bd87e59a",
+    "status": "bd79079b67bfa6551186903bc4485839828b359b",
+    "continuation_audit": "c57e19f7d7405d51edf2cb0da001ae1f7e182c69"
+  },
+  "external_theorem_inputs": [
+    {
+      "author": "Jodi Black",
+      "title": "Zero Cycles of Degree One on Principal Homogeneous Spaces",
+      "arxiv": "1009.4621"
+    },
+    {
+      "authors": "Reed Gordon-Sarney and Venapally Suresh",
+      "title": "Totaro's Question on Zero-Cycles on Torsors",
+      "arxiv": "1702.00516"
+    }
+  ],
+  "closed_mechanisms": [
+    "abelian_transfer_classes",
+    "commutative_torsor_recipients",
+    "constant_finite_group_torsor_recipients",
+    "geometric_finite_etale_descent",
+    "black_class_semisimple_torsor_recipients"
+  ],
+  "binary_claim_made": false,
+  "effective_zero_cycle_degrees": [
+    3,
+    55
+  ],
+  "degree_3_cycle_separable": true,
+  "degree_55_is_single_closed_point": true
+}
