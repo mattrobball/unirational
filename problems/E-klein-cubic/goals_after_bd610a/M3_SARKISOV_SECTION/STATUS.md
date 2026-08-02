@@ -18,7 +18,6 @@ object is the full-span primitive `A4/S4` quartic stratum.  The actual
 27-line monodromy and algebraic Brauer group remain uncomputed; the stored
 full-`W(E6)` lattice and `H1` calculation is conditional.
 
-<<<<<<< HEAD
 Residual after multisection (exit unchanged): see `SECTION_RESIDUAL.md` and
 `residual_gate.json`.  Exact residual dichotomy is section ⇔ imprimitive
 quartic versus no-section ⇔ primitive `A4`/`S4` only.  Light residual-gate
@@ -26,8 +25,6 @@ check confirms the transitive `S4` lattice and monodromy/Brauer firewalls;
 it does not decide the section.  Smallest decision gate remains the saturated
 `H`-degree-4 section scheme over `K` (or any other `K`-section).
 
-=======
->>>>>>> refs/remotes/origin/main
 The binding M2 top-level replay currently fails on one stale non-load-bearing
 status hash.  Fresh independent replays of the selected link, centre census,
 exact projective frame, and quartic group reductions pass.  See

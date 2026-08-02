@@ -1,0 +1,15 @@
+{
+  "exit": "B-BRIDGE-REFUTED",
+  "files": {
+    "EXHAUSTIVENESS_THEOREM.md": "17f3dbc849186fde6f63891628633d3ebfcb9e32d7763760fd04068b557baad7",
+    "README.md": "482e8e1d98ee9c998c9c4f4edf9059dc439138f6bb723ce241b45ee4c9f2122c",
+    "REPLAY.md": "81e397d50fa3ef25c136964aa468c3ad80c98ca62944f9e70b959808e8eae590",
+    "STATUS.md": "ddcce961a36085dd18bc4f6785ffa598c61b3c8bd748a8c81d126f91902a5073",
+    "bridge_refutation.json": "84a89160983c13edc6a9246afb84116a0830243df7d6dbe002ae880946582fa8",
+    "produce.py": "f24b693582c9e7908d79474426aa5509774d18c2e53d4b8ab56b623de72e1015",
+    "produce_seal.py": "b473eced95481ed090fcc95605ad63b7eabed8e635e95eefbd02a7b43dc72092",
+    "verify.py": "592a814c974a12e650ae00708cb661caee7a42025522594e4de1fe3b8946ab75"
+  },
+  "headline": "OPEN",
+  "schema": "klein-goal-b-exhaustiveness-refutation-seal-v1"
+}
