@@ -1,0 +1,122 @@
+{
+  "goal": "H6_TRACE_CUBIC_DECISION",
+  "h6_slices": [
+    "H6.1",
+    "H6.2",
+    "H6.3",
+    "H6.4"
+  ],
+  "consumed_commit": "eb21458bea684d2399ad18f003e2be8ebdd161ce",
+  "h6a_exit": "H6-PROJECTIVE-11-ISOGENY-PASS",
+  "h4_exit": "H-11_5-NORM-MODEL-PASS",
+  "h5_exit": "H5-UNDECIDED",
+  "v3_exit": "V-UNDECIDED",
+  "non_rerun": [
+    "H6.0 projective isogeny (consumed from H6A)",
+    "H5 constant-coeff / bounded Laurent / pure monom / random finite-fibre as exhaustive"
+  ],
+  "inputs": [
+    {
+      "path": "goal_runs_after_141f60/H6A_PROJECTIVE_11_ISOGENY/STATUS.md",
+      "exists": true,
+      "sha256": "510d414755dae08e910ca00f93b416a38a43c6db95e103c767812e303c4e4fd6",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_141f60/H6A_PROJECTIVE_11_ISOGENY/SEAL.json",
+      "exists": true,
+      "sha256": "a0a34d3c8edee11d4b6c3d1afa334f797d2eaaf3042baa4837bc6df2e4434f87",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_141f60/H6A_PROJECTIVE_11_ISOGENY/isogeny.json",
+      "exists": true,
+      "sha256": "07255a85f503fe73e5e2574788652b28102692ff2c68c4d7dcb89afc4954b5d1",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_141f60/H6A_PROJECTIVE_11_ISOGENY/ISOGENY.md",
+      "exists": true,
+      "sha256": "f18e94aa13f56887d8658267f5d845ce4d5571cb15331c635ca8a32eb415a7ec",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_35fa/H_11_5_TWIST/STATUS.md",
+      "exists": true,
+      "sha256": "44b2e152e440ce0d692c08b20ef3f0d929259b1ccdc00a6bb891f32c41b58b02",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_35fa/H_11_5_TWIST/SEAL.json",
+      "exists": true,
+      "sha256": "9b790a67185edc94be385993276ea4b4e35a6cfba4739981c083dd6d9886eb25",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_35fa/H_11_5_TWIST/field_model.json",
+      "exists": true,
+      "sha256": "80fdc908633595d6bb3c292d0027aa66295a850b9b6a12cc473f90e3e373ba1e",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_35fa/H_11_5_TWIST/norm_model.json",
+      "exists": true,
+      "sha256": "1f61adc24bc15bf296b7199f4e13dfa5f538691984d6f623efa8feb9531dc49e",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_35fa/H_11_5_TWIST/twist_model.json",
+      "exists": true,
+      "sha256": "9a5f69b43de4b33aa0185b4714e23bc177b12f74a529510b0b8b4b9ab5e49a11",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/STATUS.md",
+      "exists": true,
+      "sha256": "e7212157aa5b63bac1a54c434798077a41fdc3eec6d77946f27164e9db13fc69",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/SEAL.json",
+      "exists": true,
+      "sha256": "e8540056540c2d856d25945e333443ffdf36c66e88cdc329cbfd2eb85c4daed7",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/TRACE_CUBIC.json",
+      "exists": true,
+      "sha256": "3bc7fdcfbd7bfe4dbe7dd65791a2f09373670e95ae98676fd52d2f79d634ff13",
+      "required": true
+    },
+    {
+      "path": "goals_after_bd610a/GOAL_H5_11_5_TRACE_CUBIC_DECISION.md",
+      "exists": true,
+      "sha256": "6fe6183595e331db92c29fbe83aba068caa8a54e14e0ccaabb949dbe5f5f37ef",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/STATUS.md",
+      "exists": true,
+      "sha256": "f363e8fde807c6abfe38461531cdbec0cfb3f131996cdf975a25f7ab88961f8b",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/SEAL.json",
+      "exists": true,
+      "sha256": "14bf61091b9babe46f48634283a80310477e22edca583c6819e423cee5702918",
+      "required": true
+    },
+    {
+      "path": "goals_after_141f60/GOAL_H6_PROJECTIVE_11_ISOGENY.md",
+      "exists": true,
+      "sha256": "99be9712a547c2779c607e3ba9f4f037bc819b3e08d8a1abefcaa331caf81396",
+      "required": true
+    },
+    {
+      "path": "tmp/dispatch/H6_RESIDUAL_BRIEF.md",
+      "exists": true,
+      "sha256": "574427e8f06c70fdae9192595aa5666790de0173727ed6baee5f7c52a35b1e1d",
+      "required": true
+    }
+  ]
+}

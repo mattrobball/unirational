@@ -1,0 +1,56 @@
+{
+  "schema": "g4a-phi-lemmas-v1",
+  "composition": "F(p_i)=F(rho(g_i) Psi)=F(Psi)=0 by lemma_H + lemma_G",
+  "free_tensor_F_R_not_required": true,
+  "lemma_G": {
+    "lemma": "G",
+    "pass": true,
+    "samples": 24,
+    "marker": "LEMMA_G_F_RHO_INVARIANT_PASS",
+    "note": "F(rho(g)v)=F(v) on Klein rep (exact_weil_check)"
+  },
+  "classes": {
+    "1": {
+      "lemma_H": {
+        "lemma": "H",
+        "pass": true,
+        "exit": "H-A5-CLASS1-RATIONAL-POINT",
+        "class": "A5_class_1",
+        "modular_F_zero": true,
+        "fiber_mod89": [
+          50,
+          29,
+          12,
+          54,
+          80
+        ],
+        "g_mod": 16,
+        "marker": "LEMMA_H_H_A5_LANDING_PASS",
+        "H_A5_status": "goal_runs_after_35fa/H_A5_TWISTS/STATUS.md",
+        "note": "consumes sealed H_A5 landing; modular smoke only (no free-R F_R monoid)"
+      },
+      "composition": "F(p_i)=F(rho(g_i) Psi)=F(Psi)=0 by H+G"
+    },
+    "2": {
+      "lemma_H": {
+        "lemma": "H",
+        "pass": true,
+        "exit": "H-A5-CLASS2-RATIONAL-POINT",
+        "class": "A5_class_2",
+        "modular_F_zero": true,
+        "fiber_mod89": [
+          46,
+          33,
+          49,
+          46,
+          52
+        ],
+        "g_mod": 73,
+        "marker": "LEMMA_H_H_A5_LANDING_PASS",
+        "H_A5_status": "goal_runs_after_35fa/H_A5_TWISTS/STATUS.md",
+        "note": "consumes sealed H_A5 landing; modular smoke only (no free-R F_R monoid)"
+      },
+      "composition": "F(p_i)=F(rho(g_i) Psi)=F(Psi)=0 by H+G"
+    }
+  }
+}

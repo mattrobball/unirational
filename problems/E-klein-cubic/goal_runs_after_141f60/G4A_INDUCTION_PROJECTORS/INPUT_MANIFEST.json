@@ -4,6 +4,7 @@
   "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
   "g3a_exit": "G3A-ARITHMETIC-DOMINANCE-PASS",
   "g2_exit": "G2-FINITE-GENERATION-PASS",
+  "core": "g4a_core.py",
   "inputs": [
     {
       "path": "goal_runs_after_35fa/H_A5_TWISTS/STATUS.md",
@@ -31,6 +32,11 @@
       "exists": true
     },
     {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/common/degree11_covariants_raw_exact.json",
+      "sha256": "a63757c9ecf5452f5b5d9af7796f8997d31bc187e7eb4a239620ec09b22ff985",
+      "exists": true
+    },
+    {
       "path": "goal_runs_after_35fa/G_UNIVERSAL/STATUS.md",
       "sha256": "fe8a88bac91187539498a82a5cbb3589a3d76c0cef5358696341aba132023532",
       "exists": true
@@ -53,21 +59,6 @@
     {
       "path": "certificates/exact_weil_check.py",
       "sha256": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
-      "exists": true
-    },
-    {
-      "path": "goal_runs_after_141f60/G4A_INDUCTION_PROJECTORS/h_a5_base_class_1.json",
-      "sha256": "f14c5a363e1d0f80926bec1bf01402ac33aff03e9254b498aff21764d9c6879a",
-      "exists": true
-    },
-    {
-      "path": "goal_runs_after_141f60/G4A_INDUCTION_PROJECTORS/h_a5_base_class_2.json",
-      "sha256": "7493835f6be63a9770bb0f3859dce9435324317bc09c04d9b3c3fb0593de882f",
-      "exists": true
-    },
-    {
-      "path": "goal_runs_after_141f60/G4A_INDUCTION_PROJECTORS/klein_witnesses_mod89.json",
-      "sha256": "4827c6f91799df5e2293affe141829ffccf919ce641f1eb9359c218a1c778d4a",
       "exists": true
     }
   ]

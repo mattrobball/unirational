@@ -1,31 +1,52 @@
-# G7.3 — double induced degree-11 cycles
+# G7.3 — induced double cycles (REDO residual)
 
-Both nonconjugate maximal A5 classes yield explicit eleven-point cycles in the
-normalized G3 frame (Klein `W ≅ P⁴`):
+## Materialization status: RESIDUAL
+
+No well-defined G3-frame coordinates for the two degree-11 induced cycles are
+installed. Primary residual gate:
 
 ```text
-P = {p_0,…,p_10},   Q = {q_0,…,q_10}
-p_i = ρ(g_i)·base,  base = (1:0:0:0:0),  F_Klein(p_i) = 0
+need L_H cocycle coordinates from H_A5 formula in G3 frame (no well-defined H-fixed cone lift; rho(g)·e0 refuted)
 ```
 
-exactly in `Q(ζ₁₁)`, with coset representatives of the sealed H_A5 base
-subgroup for that class. `F_Klein` is the split specialization of `Φ`
-(G2 / G3A frame).
+## Why not `rho(g_i)·e_0`
 
-## Checks
+The withdrawn construction
 
-- all **22** substitutions: `F_Klein = 0` (raw and chart-normalized);
-- coset actions `s_perm`, `t_perm` of image order 660 for both classes;
-- cycles defined over `K_proj` as Galois-stable unordered 11-sets (degree 11
-  finite-etale closed points of `X_gen`);
-- H_A5 binding: `point.json` exits `H-A5-CLASS*-RATIONAL-POINT` kept separate;
-- every ambient/frame reference agrees with G3A (`P(W)`, Phi→F split).
+```text
+p_i = ρ(g_i)·e_0,   e_0 = (1:0:0:0:0)
+```
 
-## Theorem boundary
+is representative-dependent: `|Stab_G([e_0])|=11`, so `H ⊈ Stab([e_0])`.
+Coset well-definedness fails; equivariance `ρ(g)p_i ~ p_{g·i}` fails 44/44.
 
-- Structural materialization of G4 residual coordinates for both classes.
-- **Not** a `K_proj`-point of `X_gen` (headline remains OPEN).
-- Coordinates are over `Q(ζ₁₁)` on the split model `V(F)≅X`; the abstract
-  induced point lives over `L_H/K_proj` and specializes to this Gal-orbit.
+See `INDUCED_CYCLE_REFUTATION.md` and `audit_induced_refutation.py`.
+Historical artifact: `cycles_WITHDRAWN_rho_e0.json` (non-consumable).
 
-Marker: **`G7-INDUCED-DOUBLE-CYCLE-PASS`**
+## What is installed (structural)
+
+For each A5 class:
+
+1. Coset action `s_perm`, `t_perm` of image order 660 (from sealed H_A5 gens).
+2. Binding to H_A5 `point.json` formula path (degree-11 Reynolds / frame map).
+3. Abstract G4 induction theorem (L_H, Gal-stable unordered 11-set).
+4. Explicit list of **required** checks for a future pass (well-definedness,
+   equivariance, landing, descent proof object, Galois agreement, incidence).
+
+## What is NOT installed
+
+- No 22 correct G3-frame 5-tuples.
+- No `defined_over_K_proj: true` Boolean without a proof object.
+- No claim that constant-field W-orbits are the induced cycle (G4 boundary).
+
+## Path to a correct pass
+
+**A. H_A5 formula path (preferred):** transport sealed H_A5 point
+`z = A^{-1} J Φ` along genuine coset / H-reduction / generic G-twist into the
+G3A frame over `L_H`, or as an explicit Galois cocycle of 11 conjugates over
+`K_proj`.
+
+**B. H-fixed cone lift:** only if the affine cone vector is H-invariant up to
+scalar on the open used (proved), so `gH ↦ [vector]` is well-defined.
+
+Until then: exit is **not** `G7-INDUCED-DOUBLE-CYCLE-PASS`.

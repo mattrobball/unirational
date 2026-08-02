@@ -1,0 +1,423 @@
+{
+  "schema": "h6-valuation-ledger-v1",
+  "status": "structural_inventory_with_residue_template",
+  "v3_binding": {
+    "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/",
+    "exit": "V-UNDECIDED",
+    "constraints": "Negative henselian site must be unramified, non-C1 residue, rank <=2, decomposition group in {PSL(2,11), 11:5}. Only unresolved proper-decomp site is this 11:5 trace cubic."
+  },
+  "rules": {
+    "use_valuations_of_K": true,
+    "not_only_after_splitting_E": true,
+    "forbidden": [
+      "special fibre empty => generic pointless",
+      "valuation on split E only => obstruction for K-points",
+      "order-11 class of c alone => pointless"
+    ]
+  },
+  "toric_compactification": {
+    "ambient": "product-one torus T in G_m^5",
+    "C5_action": "cycle coordinates",
+    "fan_note": "First primitive rays/orbits enumerated below; not a complete fan census. Each orbit descends to a valuation of K by summing conjugates."
+  },
+  "orbits": [
+    {
+      "name": "single_coord",
+      "representative_v": [
+        1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "orbit_size": 5,
+      "orbit": [
+        [
+          1,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          -1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          1
+        ]
+      ],
+      "descends_to_K": true,
+      "reason_descend": "C5-orbit sum of divisors is Gal(E/K)-invariant",
+      "v_c_on_orbit": [
+        0,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "leading_torsor_term": {
+        "includes_c_translation": true,
+        "status": "structural",
+        "note": "Leading form of kappa=psi_B(b c^{-1}) along the valuation is a residue class in the residue torus modulo 11th powers, translated by the leading term of c."
+      },
+      "residue_anisotropy": "not_proved",
+      "cancellation_patterns": "not_fully_enumerated"
+    },
+    {
+      "name": "adjacent_pair",
+      "representative_v": [
+        1,
+        1,
+        0,
+        0,
+        -2
+      ],
+      "orbit_size": 5,
+      "orbit": [
+        [
+          1,
+          1,
+          0,
+          0,
+          -2
+        ],
+        [
+          -2,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          -2,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -2,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          -2,
+          1
+        ]
+      ],
+      "descends_to_K": true,
+      "reason_descend": "C5-orbit sum of divisors is Gal(E/K)-invariant",
+      "v_c_on_orbit": [
+        0,
+        -1,
+        -1,
+        2,
+        0
+      ],
+      "leading_torsor_term": {
+        "includes_c_translation": true,
+        "status": "structural",
+        "note": "Leading form of kappa=psi_B(b c^{-1}) along the valuation is a residue class in the residue torus modulo 11th powers, translated by the leading term of c."
+      },
+      "residue_anisotropy": "not_proved",
+      "cancellation_patterns": "not_fully_enumerated"
+    },
+    {
+      "name": "skip_pair",
+      "representative_v": [
+        1,
+        0,
+        1,
+        0,
+        -2
+      ],
+      "orbit_size": 5,
+      "orbit": [
+        [
+          1,
+          0,
+          1,
+          0,
+          -2
+        ],
+        [
+          -2,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          -2,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          -2,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          -2,
+          1
+        ]
+      ],
+      "descends_to_K": true,
+      "reason_descend": "C5-orbit sum of divisors is Gal(E/K)-invariant",
+      "v_c_on_orbit": [
+        -1,
+        0,
+        -1,
+        2,
+        0
+      ],
+      "leading_torsor_term": {
+        "includes_c_translation": true,
+        "status": "structural",
+        "note": "Leading form of kappa=psi_B(b c^{-1}) along the valuation is a residue class in the residue torus modulo 11th powers, translated by the leading term of c."
+      },
+      "residue_anisotropy": "not_proved",
+      "cancellation_patterns": "not_fully_enumerated"
+    },
+    {
+      "name": "triple",
+      "representative_v": [
+        1,
+        1,
+        1,
+        0,
+        -3
+      ],
+      "orbit_size": 5,
+      "orbit": [
+        [
+          1,
+          1,
+          1,
+          0,
+          -3
+        ],
+        [
+          -3,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          -3,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          -3,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          -3,
+          1
+        ]
+      ],
+      "descends_to_K": true,
+      "reason_descend": "C5-orbit sum of divisors is Gal(E/K)-invariant",
+      "v_c_on_orbit": [
+        -1,
+        -1,
+        -1,
+        3,
+        0
+      ],
+      "leading_torsor_term": {
+        "includes_c_translation": true,
+        "status": "structural",
+        "note": "Leading form of kappa=psi_B(b c^{-1}) along the valuation is a residue class in the residue torus modulo 11th powers, translated by the leading term of c."
+      },
+      "residue_anisotropy": "not_proved",
+      "cancellation_patterns": "not_fully_enumerated"
+    },
+    {
+      "name": "balanced_2_2",
+      "representative_v": [
+        2,
+        -1,
+        2,
+        -1,
+        -2
+      ],
+      "orbit_size": 5,
+      "orbit": [
+        [
+          2,
+          -1,
+          2,
+          -1,
+          -2
+        ],
+        [
+          -2,
+          2,
+          -1,
+          2,
+          -1
+        ],
+        [
+          -1,
+          -2,
+          2,
+          -1,
+          2
+        ],
+        [
+          2,
+          -1,
+          -2,
+          2,
+          -1
+        ],
+        [
+          -1,
+          2,
+          -1,
+          -2,
+          2
+        ]
+      ],
+      "descends_to_K": true,
+      "reason_descend": "C5-orbit sum of divisors is Gal(E/K)-invariant",
+      "v_c_on_orbit": [
+        -2,
+        1,
+        -2,
+        2,
+        1
+      ],
+      "leading_torsor_term": {
+        "includes_c_translation": true,
+        "status": "structural",
+        "note": "Leading form of kappa=psi_B(b c^{-1}) along the valuation is a residue class in the residue torus modulo 11th powers, translated by the leading term of c."
+      },
+      "residue_anisotropy": "not_proved",
+      "cancellation_patterns": "not_fully_enumerated"
+    },
+    {
+      "name": "two_one_minus",
+      "representative_v": [
+        2,
+        1,
+        0,
+        0,
+        -3
+      ],
+      "orbit_size": 5,
+      "orbit": [
+        [
+          2,
+          1,
+          0,
+          0,
+          -3
+        ],
+        [
+          -3,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          -3,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -3,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          -3,
+          2
+        ]
+      ],
+      "descends_to_K": true,
+      "reason_descend": "C5-orbit sum of divisors is Gal(E/K)-invariant",
+      "v_c_on_orbit": [
+        0,
+        -1,
+        -2,
+        3,
+        0
+      ],
+      "leading_torsor_term": {
+        "includes_c_translation": true,
+        "status": "structural",
+        "note": "Leading form of kappa=psi_B(b c^{-1}) along the valuation is a residue class in the residue torus modulo 11th powers, translated by the leading term of c."
+      },
+      "residue_anisotropy": "not_proved",
+      "cancellation_patterns": "not_fully_enumerated"
+    }
+  ],
+  "residue_template": {
+    "for_each_orbit": [
+      "1. descend orbit sum valuation w of K",
+      "2. extend w to E (ramification index 1 or 5)",
+      "3. leading term of 11-torsor invariant kappa including c-translation",
+      "4. for each cancellation pattern among Phi summands, form residue torsor/cubic",
+      "5. prove residue anisotropic OR prove class always trivializes and retire family"
+    ],
+    "smoothness_requirement": "Final residue must be smooth or singular branches classified (goal H6.3).",
+    "completion": "not_completed"
+  },
+  "anisotropic_residue": null,
+  "marker_valuation_reduction": null,
+  "summary": "Inventory + residue template recorded; no anisotropic completion; no H6-VALUATION-REDUCTION-PASS."
+}

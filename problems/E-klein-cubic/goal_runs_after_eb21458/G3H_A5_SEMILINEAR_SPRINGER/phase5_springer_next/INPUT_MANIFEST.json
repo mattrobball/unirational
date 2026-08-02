@@ -1,0 +1,19 @@
+{
+  "bindings_sha256": {
+    "G3A/STATUS.md": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811",
+    "G3P/STATUS.md": "48fe7896db3bf24fd3285777b0c4b817d1e13a283b246b531c553a90e0d36295",
+    "G3P/polar_system.json": "d55afb8ff0add8af002f53e639e785942d819e21285ff68d4fe14bcf539049cc",
+    "G4/coset_actions.json": "381c046fa4bdb0273e933df10959df21d45eef1631cf2a3db082a87284e7121c",
+    "dispatch_brief": "55e1b721efa0aa1b1cd4abb7d23f8e6554af5eb550c341d277c9b763b8d10a3b",
+    "generic_cubic.json": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+    "goal": "63368d2687cdf0709c7371a9498d992b6af4c888684a67f8858ed91da5665014",
+    "phase4/g3_frame.json": "c7590d34ed7057f937bf5f0fc66fbd88f6a229637162885c1effb017f403d1b1"
+  },
+  "consumed_commit": "d1f43d6e393618412dfbe223e9f828a64509f629",
+  "resources": {
+    "peak_rss_mb": 66.03125,
+    "python": "3.14.6",
+    "wall_seconds": 0.3266329765319824
+  },
+  "schema": "g3h-phase5-next-input-manifest-v1"
+}

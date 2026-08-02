@@ -1,0 +1,1058 @@
+{
+  "format": "c6-residual-search-v1",
+  "consumes_sealed_sha256": {
+    "five_form_matrix.json": "20a2a4bd28c80fa1a74a7da2964cc104a9f7d92d71cc552a86b32bc484341a09",
+    "quartic.json": "1da8fa09a20aa4b8f4b81e8ac163efd62af01ca484cce79163a3eb65d0428886",
+    "rank_strata.json": "d5f662977ead3b94548aed882f9569622e1727bea474197b0883d2bc55532067",
+    "point_search.json": "79749747398ff309c833a07ca79f6de16bfc9220b003b1ba7ac937f7b86b1547",
+    "SEAL.json": "db015ccb2cf5279df5dbb5e97e728cbe6f342ad52ffd47ac5020f65f8df84f36"
+  },
+  "same_x_fibre_primes": [
+    331,
+    419,
+    463,
+    617
+  ],
+  "same_x_fibre_point": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "lane_a": {
+    "method": "multi-prime sieve on same rational x-fibre for height-bounded u in P^5(Q); exact singular locus of the generic Q is not GB-computed (residual gate)",
+    "max_height": 2,
+    "rational_points_on_D_multiprime": [
+      [
+        1,
+        -2,
+        -1,
+        -2,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        -2,
+        1,
+        -1,
+        2
+      ],
+      [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        2,
+        1,
+        -1,
+        -2
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        -1,
+        2,
+        -1
+      ],
+      [
+        1,
+        2,
+        -1,
+        2,
+        1,
+        -1
+      ],
+      [
+        1,
+        2,
+        1,
+        1,
+        -2,
+        1
+      ],
+      [
+        2,
+        -1,
+        -1,
+        -2,
+        -1,
+        -1
+      ],
+      [
+        2,
+        -1,
+        -1,
+        1,
+        1,
+        2
+      ]
+    ],
+    "singular_multiprime_candidates": [],
+    "rank_le3_multiprime_candidates": [],
+    "coordinate_lines_on_D": [],
+    "coordinate_planes_on_D": [],
+    "exact_singular_followup": [],
+    "verdict": "no multi-prime singular or rank\u22643 rational point of height \u2264 2; many smooth rank-4 rational points of D found"
+  },
+  "lane_b": {
+    "method": "coordinate slices; multi-prime rational hits; F_p line factorization",
+    "slice_reports": [
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          0,
+          1,
+          2
+        ],
+        "free_coordinates": [
+          3,
+          4,
+          5
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t + 71, t, modulus=331), 1), (Poly(t + 89, t, modulus=331), 1), (Poly(t**2 - 8*t - 16, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          0,
+          1,
+          3
+        ],
+        "free_coordinates": [
+          2,
+          4,
+          5
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t + 71, t, modulus=331), 1), (Poly(t + 89, t, modulus=331), 1), (Poly(t**2 - 8*t - 16, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          0,
+          1,
+          4
+        ],
+        "free_coordinates": [
+          2,
+          3,
+          5
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t + 71, t, modulus=331), 1), (Poly(t + 89, t, modulus=331), 1), (Poly(t**2 - 8*t - 16, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          0,
+          1,
+          5
+        ],
+        "free_coordinates": [
+          2,
+          3,
+          4
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t + 71, t, modulus=331), 1), (Poly(t + 89, t, modulus=331), 1), (Poly(t**2 - 8*t - 16, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          0,
+          2,
+          3
+        ],
+        "free_coordinates": [
+          1,
+          4,
+          5
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t + 71, t, modulus=331), 1), (Poly(t + 89, t, modulus=331), 1), (Poly(t**2 - 8*t - 16, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          0,
+          2,
+          4
+        ],
+        "free_coordinates": [
+          1,
+          3,
+          5
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t + 71, t, modulus=331), 1), (Poly(t + 89, t, modulus=331), 1), (Poly(t**2 - 8*t - 16, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          0,
+          2,
+          5
+        ],
+        "free_coordinates": [
+          1,
+          3,
+          4
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t + 71, t, modulus=331), 1), (Poly(t + 89, t, modulus=331), 1), (Poly(t**2 - 8*t - 16, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          0,
+          3,
+          4
+        ],
+        "free_coordinates": [
+          1,
+          2,
+          5
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t**4 + 58*t - 149, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          0,
+          3,
+          5
+        ],
+        "free_coordinates": [
+          1,
+          2,
+          4
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t**4 + 58*t - 149, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          0,
+          4,
+          5
+        ],
+        "free_coordinates": [
+          1,
+          2,
+          3
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t**4 + 58*t - 149, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          1,
+          2,
+          3
+        ],
+        "free_coordinates": [
+          0,
+          4,
+          5
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t**4 + 58*t - 149, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          1,
+          2,
+          4
+        ],
+        "free_coordinates": [
+          0,
+          3,
+          5
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t + 71, t, modulus=331), 1), (Poly(t + 89, t, modulus=331), 1), (Poly(t**2 - 8*t - 16, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          1,
+          2,
+          5
+        ],
+        "free_coordinates": [
+          0,
+          3,
+          4
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t**4 - 58*t - 149, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          1,
+          3,
+          4
+        ],
+        "free_coordinates": [
+          0,
+          2,
+          5
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t**4 + 58*t - 149, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          1,
+          3,
+          5
+        ],
+        "free_coordinates": [
+          0,
+          2,
+          4
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t - 89, t, modulus=331), 1), (Poly(t - 71, t, modulus=331), 1), (Poly(t**2 + 8*t - 16, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          1,
+          4,
+          5
+        ],
+        "free_coordinates": [
+          0,
+          2,
+          3
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t**4 + 58*t - 149, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          2,
+          3,
+          4
+        ],
+        "free_coordinates": [
+          0,
+          1,
+          5
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t + 71, t, modulus=331), 1), (Poly(t + 89, t, modulus=331), 1), (Poly(t**2 - 8*t - 16, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          2,
+          3,
+          5
+        ],
+        "free_coordinates": [
+          0,
+          1,
+          4
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t**4 - 58*t - 149, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          2,
+          4,
+          5
+        ],
+        "free_coordinates": [
+          0,
+          1,
+          3
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t + 71, t, modulus=331), 1), (Poly(t + 89, t, modulus=331), 1), (Poly(t**2 - 8*t - 16, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P2_coordinate",
+        "zero_coordinates": [
+          3,
+          4,
+          5
+        ],
+        "free_coordinates": [
+          0,
+          1,
+          2
+        ],
+        "rational_hits_height_le_2": [],
+        "n_rational_hits_height_le_2": 0,
+        "line_probe_factor_list": "(-45, [(Poly(t**4 + 58*t - 149, t, modulus=331), 1)])"
+      },
+      {
+        "type": "P3_coordinate",
+        "zero_coordinates": [
+          0,
+          1
+        ],
+        "free_coordinates": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      },
+      {
+        "type": "P3_coordinate",
+        "zero_coordinates": [
+          0,
+          2
+        ],
+        "free_coordinates": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      },
+      {
+        "type": "P3_coordinate",
+        "zero_coordinates": [
+          0,
+          3
+        ],
+        "free_coordinates": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      },
+      {
+        "type": "P3_coordinate",
+        "zero_coordinates": [
+          0,
+          4
+        ],
+        "free_coordinates": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      },
+      {
+        "type": "P3_coordinate",
+        "zero_coordinates": [
+          0,
+          5
+        ],
+        "free_coordinates": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      },
+      {
+        "type": "P3_coordinate",
+        "zero_coordinates": [
+          1,
+          2
+        ],
+        "free_coordinates": [
+          0,
+          3,
+          4,
+          5
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      },
+      {
+        "type": "P4_coordinate",
+        "zero_coordinates": [
+          0
+        ],
+        "free_coordinates": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      },
+      {
+        "type": "P4_coordinate",
+        "zero_coordinates": [
+          1
+        ],
+        "free_coordinates": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      },
+      {
+        "type": "P4_coordinate",
+        "zero_coordinates": [
+          2
+        ],
+        "free_coordinates": [
+          0,
+          1,
+          3,
+          4,
+          5
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      },
+      {
+        "type": "P4_coordinate",
+        "zero_coordinates": [
+          3
+        ],
+        "free_coordinates": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      },
+      {
+        "type": "P4_coordinate",
+        "zero_coordinates": [
+          4
+        ],
+        "free_coordinates": [
+          0,
+          1,
+          2,
+          3,
+          5
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      },
+      {
+        "type": "P4_coordinate",
+        "zero_coordinates": [
+          5
+        ],
+        "free_coordinates": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "n_rational_hits_height_le": 0,
+        "height": 1
+      }
+    ],
+    "verdict": "many coordinate slices meet D(Q) in height-bounded points; no full linear space (P1/P2) on D was found in Lane A"
+  },
+  "lane_c": {
+    "method": "Refuse bare CRT across unrelated x-fibres.  Exact Q-points obtained by multi-prime sieve + exact minor verification (Lane A/D residual).  No secondary-basis expansion of u was required for the constant Q-points.",
+    "modular_seed_compatibility": [
+      {
+        "prime": 23,
+        "point_x": [
+          22,
+          21,
+          8,
+          1,
+          1
+        ],
+        "seed_u": [
+          7,
+          15,
+          5,
+          20,
+          15,
+          14
+        ],
+        "seed_v": [
+          8,
+          1,
+          7,
+          10,
+          1,
+          0
+        ],
+        "omegas_zero": true,
+        "rank_M": 4,
+        "note": "finite-fibre discovery; not a K_proj / Q point"
+      },
+      {
+        "prime": 331,
+        "point_x": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "seed_u": [
+          308,
+          128,
+          101,
+          206,
+          261,
+          260
+        ],
+        "seed_v": [
+          259,
+          63,
+          30,
+          222,
+          1,
+          0
+        ],
+        "omegas_zero": true,
+        "rank_M": 4,
+        "note": "finite-fibre discovery; not a K_proj / Q point"
+      },
+      {
+        "prime": 419,
+        "point_x": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "seed_u": [
+          295,
+          10,
+          279,
+          404,
+          384,
+          103
+        ],
+        "seed_v": [
+          330,
+          305,
+          105,
+          373,
+          1,
+          0
+        ],
+        "omegas_zero": true,
+        "rank_M": 4,
+        "note": "finite-fibre discovery; not a K_proj / Q point"
+      },
+      {
+        "prime": 463,
+        "point_x": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "seed_u": [
+          446,
+          239,
+          173,
+          374,
+          89,
+          3
+        ],
+        "seed_v": [
+          352,
+          308,
+          294,
+          307,
+          1,
+          0
+        ],
+        "omegas_zero": true,
+        "rank_M": 4,
+        "note": "finite-fibre discovery; not a K_proj / Q point"
+      },
+      {
+        "prime": 617,
+        "point_x": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "seed_u": [
+          299,
+          438,
+          355,
+          505,
+          381,
+          103
+        ],
+        "seed_v": [
+          498,
+          178,
+          570,
+          149,
+          1,
+          0
+        ],
+        "omegas_zero": true,
+        "rank_M": 4,
+        "note": "finite-fibre discovery; not a K_proj / Q point"
+      }
+    ],
+    "secondary_basis_reconstruction": {
+      "attempted_for_modular_seeds": true,
+      "success": false,
+      "reason": "C5 excludes homogeneous landing covariants through degree 16; unrelated x-fibres share no Galois framing for CRT of u"
+    },
+    "constant_Q_points": {
+      "success": true,
+      "note": "Height-bounded u in P^5(Q) with minors(M(u))=0 identically at all tested x and with reconstructed L over Q(zeta_11); see exact_points.json"
+    }
+  },
+  "lane_d": {
+    "modular_charts": {
+      "331": {
+        "points_on_D_rank4_seen": 4,
+        "kernel_reconstructions": 4,
+        "method": "linear kernel / 4x4 minor charts before any Gr\u00f6bner basis",
+        "residual_ideal": "After linear solve for v on a nonzero 4x4 minor chart, the residual condition on u is the single quartic Q(u)=0 (equivalently all signed 5x5 minors vanish).  No unstructured Pl\u00fccker GB was run."
+      },
+      "419": {
+        "points_on_D_rank4_seen": 5,
+        "kernel_reconstructions": 5,
+        "method": "linear kernel / 4x4 minor charts before any Gr\u00f6bner basis",
+        "residual_ideal": "After linear solve for v on a nonzero 4x4 minor chart, the residual condition on u is the single quartic Q(u)=0 (equivalently all signed 5x5 minors vanish).  No unstructured Pl\u00fccker GB was run."
+      },
+      "463": {
+        "points_on_D_rank4_seen": 4,
+        "kernel_reconstructions": 4,
+        "method": "linear kernel / 4x4 minor charts before any Gr\u00f6bner basis",
+        "residual_ideal": "After linear solve for v on a nonzero 4x4 minor chart, the residual condition on u is the single quartic Q(u)=0 (equivalently all signed 5x5 minors vanish).  No unstructured Pl\u00fccker GB was run."
+      }
+    },
+    "exact_points_linear_reconstruction": [
+      {
+        "u": [
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "linear_kernel_reconstruction": true,
+        "plucker_hyperplanes_identically_zero": true,
+        "plucker_over_Q": false
+      },
+      {
+        "u": [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1
+        ],
+        "linear_kernel_reconstruction": true,
+        "plucker_hyperplanes_identically_zero": true,
+        "plucker_over_Q": false
+      },
+      {
+        "u": [
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "linear_kernel_reconstruction": true,
+        "plucker_hyperplanes_identically_zero": true,
+        "plucker_over_Q": false
+      },
+      {
+        "u": [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "linear_kernel_reconstruction": true,
+        "plucker_hyperplanes_identically_zero": true,
+        "plucker_over_Q": false
+      },
+      {
+        "u": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "linear_kernel_reconstruction": true,
+        "plucker_hyperplanes_identically_zero": true,
+        "plucker_over_Q": false
+      },
+      {
+        "u": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "linear_kernel_reconstruction": true,
+        "plucker_hyperplanes_identically_zero": true,
+        "plucker_over_Q": false
+      }
+    ],
+    "verdict": "linear charts reconstruct ker M(u) on the rank-4 open; residual is Q(u)=0; exact Q-points yield L over Q(zeta_11) with coefficientwise Pl\u00fccker vanishing"
+  },
+  "strengtheners": {
+    "flat_secondary_basis_M_Q": {
+      "materialized": false,
+      "note": "Optional.  Descent membership remains the Morita invariance ledger from C6.0.  Constant Q-points did not require flat secondary 12-tuples."
+    },
+    "rank_le3_primary_decomposition": {
+      "attempted": false,
+      "note": "Optional scheme-theoretic primary decomposition over K_proj not run; multi-prime height \u22642 found no rational rank\u22643 point.  Residual gate."
+    }
+  },
+  "summary": {
+    "exact_Q_points_height_le_1_certified": 12,
+    "height2_exact_minors_sample": [
+      [
+        1,
+        -2,
+        -1,
+        -2,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        -2,
+        1,
+        -1,
+        2
+      ],
+      [
+        1,
+        -1,
+        2,
+        1,
+        -1,
+        -2
+      ],
+      [
+        1,
+        1,
+        2,
+        -1,
+        2,
+        -1
+      ],
+      [
+        1,
+        2,
+        -1,
+        2,
+        1,
+        -1
+      ],
+      [
+        1,
+        2,
+        1,
+        1,
+        -2,
+        1
+      ],
+      [
+        2,
+        -1,
+        -1,
+        -2,
+        -1,
+        -1
+      ],
+      [
+        2,
+        -1,
+        -1,
+        1,
+        1,
+        2
+      ]
+    ],
+    "K_proj_fano_point_found": false,
+    "headline_bridge": false,
+    "split_model_common_lines_over_Qzeta11": 12,
+    "lanes_run": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  "residual_gates": [
+    "K_proj / Morita descent of the Q(zeta_11) common lines (Galois equivariance)",
+    "Pfaffian/Fano bridge and G3A dominance for a genuine K_proj F_14,T point",
+    "Optional: flat secondary-basis expansion of M/Q coefficients",
+    "Optional: scheme-theoretic rank\u22643 primary decomposition over K_proj",
+    "Exact singular locus of the generic quartic Q (char-0 GB / partials ideal)"
+  ]
+}

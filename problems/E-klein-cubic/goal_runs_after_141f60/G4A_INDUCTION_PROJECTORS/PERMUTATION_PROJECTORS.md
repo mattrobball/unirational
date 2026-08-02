@@ -1,3 +1,3 @@
 # G4A projectors
 
-Ind=1+10; two A5-restriction P5s.
+P1,P10 over Q; two A5-restriction P5 (character formula).

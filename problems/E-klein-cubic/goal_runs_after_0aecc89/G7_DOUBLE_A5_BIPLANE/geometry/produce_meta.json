@@ -1,0 +1,16 @@
+{
+  "schema": "g7c-produce-meta-v1",
+  "wall_s": 5.177525043487549,
+  "peak_rss_mb": 36.21875,
+  "exit": "G7-RESIDUAL-GEOMETRY-PASS",
+  "headline": "OPEN",
+  "stages": [
+    "G7.4",
+    "G7.5",
+    "G7.6"
+  ],
+  "n_operations": 116,
+  "n_third_pairs": 121,
+  "n_lines_on_split_cubic": 4,
+  "n_rational_residuals_Q": 0
+}

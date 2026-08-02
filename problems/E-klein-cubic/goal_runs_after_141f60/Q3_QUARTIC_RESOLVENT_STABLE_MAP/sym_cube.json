@@ -1,0 +1,42 @@
+{
+  "format": "q3-symmetric-cube-pullback-v1",
+  "parameterization": {
+    "object": "Sym^3(X) = Hilb^3(X) / unordered triple of points",
+    "rationality": "X is a cubic threefold; Sym^3(X) is unirational over the base field of X when X has a rational point, but over K_Schur the presence of X(K_Schur) is the headline question \u2014 cannot assume it.",
+    "resolvent_locus": "The cubic-resolvent map sends the primitive-quartic stratum into a closed locus R \u2282 Sym^3(X) of triples arising as pairing residuals."
+  },
+  "fibre_product": {
+    "incidence_cover": "I \u2192 X^3 degree 8 (ordered triples)",
+    "unordered": "I_sym \u2192 Sym^3(X) by quotient S3 on marks",
+    "pullback_to_R": "I_sym \u00d7_{Sym^3} R \u2192 R",
+    "generic_degree_over_R": "unknown a priori; \u22648; may jump by boundary excess on special R"
+  },
+  "searches": {
+    "rational_section_over_R": {
+      "result": "NOT FOUND",
+      "reason": "No K_Schur-rational choice of twisted cubic through the installed resolvent triple; triple itself is only known to exist after cubic base change, and no multisection of I_sym|R of degree 1 is constructed."
+    },
+    "low_degree_multisection": {
+      "result": "NOT FOUND",
+      "tested_degrees": [
+        1,
+        2
+      ],
+      "reason": "No explicit equations of the special fibre product over K_Schur."
+    },
+    "conic_or_quadric_split_fibre": {
+      "result": "NOT PROVED",
+      "note": "If the residual incidence after one rational condition were a conic with a K-point, descent would follow; no such splitting is established for the Schur resolvent locus."
+    },
+    "rational_boundary_component": {
+      "result": "NOT FOUND",
+      "see": "BOUNDARY_STABLE_MAPS.md"
+    }
+  },
+  "installed_quartic_check": {
+    "coordinates_of_voisin_quartic": "NOT EXHIBITED",
+    "coordinates_of_resolvent_triple": "NOT EXHIBITED over K_Schur",
+    "generic_triple_checks_insufficient": true
+  },
+  "marker": "Q3_SYMMETRIC_CUBE_PULLBACK_RECORDED"
+}

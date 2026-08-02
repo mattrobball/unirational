@@ -1,0 +1,65 @@
+{
+  "schema": "g7c-input-manifest-v1",
+  "inputs": [
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/design/STATUS.md",
+      "sha256": "598d77cc6c50b6b5da773095e8f8ca27d2d799521031d8d1aea8b5f501fda435",
+      "role": "design_status"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/design/SEAL.json",
+      "sha256": "01d4c57b85ec020320b5ed15832e5833e15706c3dc8aa9e993343b597097fc64",
+      "role": "design_seal"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/design/incidence_N.json",
+      "sha256": "1aba2b04b2deee319936a40428d86484403ac06c6c784d5e01c103ae0eebf47f",
+      "role": "design_N"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/design/projectors.json",
+      "sha256": "a710cbcdeb997498649d8a9c42521e4336a5710acf2baa2291f8e9704d30f098",
+      "role": "projectors"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/STATUS.md",
+      "sha256": "c7ba3ec1dff0dc3bfd0d99b87967e6d32e75b7f15eddc6f4df5c9b488b0302ae",
+      "role": "cycles_status"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/SEAL.json",
+      "sha256": "d9de387477d3d7b73f1047ba7cd0e36914c0067a1d81698c9ffb4156b8749bd1",
+      "role": "cycles_seal"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/cycles.json",
+      "sha256": "24b568b08b284d395fa1134f926d29fd85fb28e722593e93993b0113a46dd4f9",
+      "role": "cycles"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/incidence_correspondence.json",
+      "sha256": "eeabf126d1c9bc487829416235623ed88fb654ed5ab8d0b34a288c7d298f4a7a",
+      "role": "incidence"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/scaling_interface.json",
+      "sha256": "c01345576f078edcc1b2f707d5ec1a57d5a80fdbf8697e60249a09d03b1001fc",
+      "role": "scaling"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md",
+      "sha256": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811",
+      "role": "g3a_status"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/SEAL.json",
+      "sha256": "b289c6cff44fc669c1565b1ef508756156b2453b0fe99b28ab020a6a5e40fe00",
+      "role": "g3a_seal"
+    },
+    {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json",
+      "sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+      "role": "generic_cubic"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "classes": [
+    {
+      "class_index": 1,
+      "expansion_binding": {
+        "dual_formulas": "INSTALLED",
+        "power_basis": "INSTALLED",
+        "residual_gate": "G3H-AI-SECONDARY-TABLE-OPEN",
+        "secondary_tables": "RESIDUAL_OPEN"
+      },
+      "forbidden_inference": {
+        "statement": "Q_q(L_i) nonempty => X_gen(K_proj) nonempty",
+        "status": "REJECTED"
+      },
+      "illegal_cubic_odd_degree_descent": {
+        "statement": "X_gen(L_i) nonempty and [L_i:K]=11 odd => X_gen(K) nonempty",
+        "status": "REJECTED"
+      },
+      "label": "A5_class_1",
+      "polar_data": {
+        "A": "Phi(q)=t3 e_0 (exact secondary)",
+        "C": "L\u00b7a_i with L fully secondary-expanded",
+        "D": "a_i^T M a_i with M fully secondary-expanded"
+      },
+      "produces_K_proj_cubic_point": false,
+      "springer_applied": false,
+      "springer_checklist": {
+        "1_quadratic_object_over_K_proj": {
+          "defined_over_K_proj": true,
+          "object": "Q_q: B(q,v,v)=0",
+          "source": "G3P-POLAR-SYSTEM-PASS + exact secondary M",
+          "status": "YES"
+        },
+        "2_L_i_point_on_that_object": {
+          "hunt_ref": "L_point_hunt.json",
+          "reason": "No certified L_i-point on a K_proj-defined quadratic object was obtained from a_i and q.",
+          "status": "NOT_CERTIFIED"
+        },
+        "3_degree_odd": {
+          "degree": 11,
+          "status": "YES"
+        },
+        "4_explicit_map_back_to_X_gen": {
+          "reason": "No map-back theorem from K_proj-points of Q_q (or other polars) to X_gen(K_proj) is installed. Forbidden bare inference rejected.",
+          "status": "NO"
+        }
+      }
+    },
+    {
+      "class_index": 2,
+      "expansion_binding": {
+        "dual_formulas": "INSTALLED",
+        "power_basis": "INSTALLED",
+        "residual_gate": "G3H-AI-SECONDARY-TABLE-OPEN",
+        "secondary_tables": "RESIDUAL_OPEN"
+      },
+      "forbidden_inference": {
+        "statement": "Q_q(L_i) nonempty => X_gen(K_proj) nonempty",
+        "status": "REJECTED"
+      },
+      "illegal_cubic_odd_degree_descent": {
+        "statement": "X_gen(L_i) nonempty and [L_i:K]=11 odd => X_gen(K) nonempty",
+        "status": "REJECTED"
+      },
+      "label": "A5_class_2",
+      "polar_data": {
+        "A": "Phi(q)=t3 e_0 (exact secondary)",
+        "C": "L\u00b7a_i with L fully secondary-expanded",
+        "D": "a_i^T M a_i with M fully secondary-expanded"
+      },
+      "produces_K_proj_cubic_point": false,
+      "springer_applied": false,
+      "springer_checklist": {
+        "1_quadratic_object_over_K_proj": {
+          "defined_over_K_proj": true,
+          "object": "Q_q: B(q,v,v)=0",
+          "source": "G3P-POLAR-SYSTEM-PASS + exact secondary M",
+          "status": "YES"
+        },
+        "2_L_i_point_on_that_object": {
+          "hunt_ref": "L_point_hunt.json",
+          "reason": "No certified L_i-point on a K_proj-defined quadratic object was obtained from a_i and q.",
+          "status": "NOT_CERTIFIED"
+        },
+        "3_degree_odd": {
+          "degree": 11,
+          "status": "YES"
+        },
+        "4_explicit_map_back_to_X_gen": {
+          "reason": "No map-back theorem from K_proj-points of Q_q (or other polars) to X_gen(K_proj) is installed. Forbidden bare inference rejected.",
+          "status": "NO"
+        }
+      }
+    }
+  ],
+  "marker": "G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED",
+  "progress_beyond_phase5": [
+    "dual power-basis calculus for a_i installed (exact equivalent of expansion)",
+    "polar forms L,M,A fully secondary-expanded over K_proj",
+    "C,D formulas as L_i-elements with K_proj secondary structure constants",
+    "named L_i-point hunt on K_proj quadrics (negative)",
+    "residual gate G3H-AI-SECONDARY-TABLE-OPEN for cancelled beta tables"
+  ],
+  "residual_gates": [
+    {
+      "description": "Fully cancelled secondary-basis numerators/denominators of the power-basis coefficients beta_{r,k} of a_i",
+      "name": "G3H-AI-SECONDARY-TABLE-OPEN"
+    },
+    {
+      "description": "Certified L_i-point on Q_q (or other K_proj quadratic from q,a_i)",
+      "name": "G3H-LI-POINT-ON-KPROJ-QUADRATIC-OPEN"
+    },
+    {
+      "description": "Explicit inverse-polar / reconstruction map Q_q -- > X_gen",
+      "name": "G3H-SPRINGER-MAPBACK-OPEN"
+    }
+  ],
+  "resources": {
+    "peak_rss_mb": 66.03125,
+    "python": "3.14.6",
+    "wall_seconds": 0.3266329765319824
+  },
+  "schema": "g3h-phase5-next-springer-decision-v1",
+  "stronger_markers_not_claimed": [
+    "G3H-QUADRATIC-SPRINGER-REDUCTION-PASS",
+    "G3P-POINT-HEADLINE-POSITIVE"
+  ],
+  "theorem_boundary": {
+    "not_proved": [
+      "cancelled secondary 12-vectors for each beta_{r,k}",
+      "L_i-point of Q_q",
+      "Springer reduction",
+      "map-back to X_gen(K_proj)",
+      "Problem E headline"
+    ],
+    "proved": [
+      "dual-trace power-basis expansion structure for a_i (both classes)",
+      "exact secondary expansions of A=Phi(q), L (second polar), M (first polar)",
+      "C,D as explicit L_i-polynomials in a_i with K_proj secondary coeffs",
+      "Q_q over K_proj; [L_i:K_proj]=11 odd",
+      "no certified L_i-point on K_proj quadratic from the sealed hunt"
+    ]
+  }
+}

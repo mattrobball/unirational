@@ -1,0 +1,188 @@
+{
+  "format": "q3-degree8-monodromy-v1",
+  "generic_geometric_monodromy": {
+    "statement": "Harris\u2013Roth\u2013Starr: H_{3,0}(X) smooth irreducible dim 6; I = U\u00d7_H U\u00d7_H U integral dim 9; eval I\u2192X^3 generically finite of degree 8 (Zinger).  Over C(X^3) the fibre is Spec of one degree-eight field.",
+    "after_three_points_split": "still one integral degree-eight extension",
+    "cubic_closure_does_not_split_generic_fibre": true,
+    "source_packets": [
+      "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/incidence_splitting/REPORT.md",
+      "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/incidence_generality/REPORT.md"
+    ]
+  },
+  "pullback_to_primitive_quartic_strata": {
+    "A4": {
+      "resolvent_galois": "C3",
+      "conditional_gate": "IF the special incidence fibre is a finite K-scheme of length 8 in the Hilbert locus AND geometric points split over the cyclic cubic resolvent, THEN C3-orbits have size 1 or 3, and since 8 \u2261 2 (mod 3) there are at least two K-rational support points.",
+      "c3_orbit_partitions_on_8": [
+        {
+          "fixed_points": 8,
+          "three_orbits": 0,
+          "forces_fixed_point": true,
+          "min_fixed": 8
+        },
+        {
+          "fixed_points": 5,
+          "three_orbits": 1,
+          "forces_fixed_point": true,
+          "min_fixed": 5
+        },
+        {
+          "fixed_points": 2,
+          "three_orbits": 2,
+          "forces_fixed_point": true,
+          "min_fixed": 2
+        }
+      ],
+      "c3_always_has_fixed_point_on_reduced_8_set": true,
+      "min_fixed_points_if_c3_action": 2,
+      "hypotheses_proved_for_installed_schur_quartic": {
+        "finite_length_8_hilbert_scheme": false,
+        "split_over_cyclic_cubic": false,
+        "reduced_support": false,
+        "avoids_excess_boundary": false
+      },
+      "fixed_component_proved": false,
+      "odd_orbit_proved": false,
+      "prime_to_cover_zero_cycle_proved": false
+    },
+    "S4": {
+      "resolvent_galois": "S3",
+      "conditional_gate": "Even for a reduced honest 8-set, S3 admits fixed-point-free actions (e.g. orbit type 2+6).  Length-mod-3 alone does not force a K-point.",
+      "s3_orbit_partitions_on_8": [
+        {
+          "fixed_points": 0,
+          "two_orbits": 4,
+          "three_orbits": 0,
+          "six_orbits": 0,
+          "forces_fixed_point": false
+        },
+        {
+          "fixed_points": 2,
+          "two_orbits": 3,
+          "three_orbits": 0,
+          "six_orbits": 0,
+          "forces_fixed_point": true
+        },
+        {
+          "fixed_points": 4,
+          "two_orbits": 2,
+          "three_orbits": 0,
+          "six_orbits": 0,
+          "forces_fixed_point": true
+        },
+        {
+          "fixed_points": 6,
+          "two_orbits": 1,
+          "three_orbits": 0,
+          "six_orbits": 0,
+          "forces_fixed_point": true
+        },
+        {
+          "fixed_points": 8,
+          "two_orbits": 0,
+          "three_orbits": 0,
+          "six_orbits": 0,
+          "forces_fixed_point": true
+        },
+        {
+          "fixed_points": 0,
+          "two_orbits": 1,
+          "three_orbits": 2,
+          "six_orbits": 0,
+          "forces_fixed_point": false
+        },
+        {
+          "fixed_points": 2,
+          "two_orbits": 0,
+          "three_orbits": 2,
+          "six_orbits": 0,
+          "forces_fixed_point": true
+        },
+        {
+          "fixed_points": 0,
+          "two_orbits": 1,
+          "three_orbits": 0,
+          "six_orbits": 1,
+          "forces_fixed_point": false
+        },
+        {
+          "fixed_points": 2,
+          "two_orbits": 0,
+          "three_orbits": 0,
+          "six_orbits": 1,
+          "forces_fixed_point": true
+        }
+      ],
+      "fixed_point_free_s3_action_exists": true,
+      "example_fpf_types": [
+        {
+          "fixed_points": 0,
+          "two_orbits": 4,
+          "three_orbits": 0,
+          "six_orbits": 0,
+          "forces_fixed_point": false
+        },
+        {
+          "fixed_points": 0,
+          "two_orbits": 1,
+          "three_orbits": 2,
+          "six_orbits": 0,
+          "forces_fixed_point": false
+        },
+        {
+          "fixed_points": 0,
+          "two_orbits": 1,
+          "three_orbits": 0,
+          "six_orbits": 1,
+          "forces_fixed_point": false
+        }
+      ],
+      "hypotheses_proved_for_installed_schur_quartic": {
+        "finite_length_8_hilbert_scheme": false,
+        "action_factors_through_s3": false,
+        "reduced_support": false
+      },
+      "fixed_component_proved": false
+    }
+  },
+  "schur_specific_relation": {
+    "description": "The three marked points are not a general triple in X^3: they arise as pairing-residuals of a full-span primitive quartic tetrahedron on a smooth hyperplane section.  The joint map quartet\u2192(span,triple) is dominant on the split Klein cubic (differential ranks 9,10,6), but Voisin specialization does not preserve generality for the installed Schur quartic.",
+    "dominance_on_split_klein": true,
+    "dominance_ranks": {
+      "quartet_to_triple": 9,
+      "quartet_to_span_and_triple": 10,
+      "quartet_on_fixed_section_to_triple": 6
+    },
+    "dominance_source": "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/incidence_generality/",
+    "installed_quartic_in_good_locus": "UNPROVED",
+    "new_schur_identity_forcing_monodromy_drop": "NOT FOUND"
+  },
+  "arithmetic_vs_geometric": {
+    "geometric_generic": "integral degree-8 cover of X^3",
+    "arithmetic_after_resolvent_split": "base change to cubic resolvent recovers the same integral generic cover; Gal(M/K) = C3 or S3 acts on the base of the cover, not automatically as the full monodromy of the eight sheets",
+    "stabilizers_of_eight_maps": "not computed for the special fibre (no coordinates)",
+    "ramification_boundary_monodromy": "boundary of GTC compactification may absorb specialization; not controlled for the installed quartic"
+  },
+  "decisive_outcomes_checked": {
+    "one_rational_component": false,
+    "odd_degree_component_plus_descent": false,
+    "degree_one_zero_cycle_on_RC_component": false,
+    "canonical_boundary_map_fixed_by_schur_monodromy": false
+  },
+  "forbidden_inference": "virtual count eight alone does not yield a K_Schur-point",
+  "marker_candidate": "Q3-SCHUR-MONODROMY-PASS",
+  "marker_achieved": true,
+  "marker_scope": "exact orbit-arithmetic + generic monodromy + named residual hypotheses; not a rational component of the special fibre",
+  "dominance_recompute": {
+    "status": "COMPUTED",
+    "quartet_projective_rank": 4,
+    "triple_projective_rank": 3,
+    "pairing_residual_reconstruction_ok": true,
+    "imported_sealed_ranks": {
+      "quartet_to_triple": 9,
+      "quartet_to_span_and_triple": 10,
+      "quartet_on_fixed_section_to_triple": 6,
+      "source": "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/incidence_generality/"
+    }
+  }
+}

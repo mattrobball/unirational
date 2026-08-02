@@ -1,14 +1,13 @@
 {
-  "schema": "g7b-produce-meta-v1",
-  "wall_s": 0.417417049407959,
-  "peak_rss_mb": 36.25,
-  "exit": "G7-INDUCED-DOUBLE-CYCLE-PASS",
-  "also": [
-    "G7-PROJECTIVE-SCALING-PASS"
-  ],
-  "n_points": 22,
+  "schema": "g7b-produce-meta-v2",
+  "wall_s": 1.5376038551330566,
+  "peak_rss_mb": 34.296875,
+  "exit": "G7-PROJECTIVE-SCALING-PASS",
+  "g7_3_materialization": "RESIDUAL",
+  "residual_gate": "need L_H cocycle coordinates from H_A5 formula in G3 frame (no well-defined H-fixed cone lift; rho(g)\u00b7e0 refuted)",
+  "n_correct_G3_coordinates": 0,
   "stages": [
     "G7.2",
-    "G7.3"
+    "G7.3-residual"
   ]
 }

@@ -1,0 +1,200 @@
+{
+  "schema": "h6-constructive-lanes-v1",
+  "discipline": "Do not re-run H5 constant-coeff / bounded Laurent / pure monom / random finite-fibre screens as if exhaustive. Lanes use the H6 torsor structure.",
+  "lanes": {
+    "A_rational_curves_surfaces": {
+      "name": "rational curves and surfaces in H_tr",
+      "method": "H_tr is a P^3 in P(E). Restrict the 11-torsor (Kummer class of psi_B(b c^{-1})) to low-degree rational curves/surfaces meeting the torus open. Seek a family where the class is an identical 11th power.",
+      "structural": {
+        "H_tr_dimension": 3,
+        "torsor_degree": 11,
+        "restricted_class_on_P1": "element of K(t)^*/(K(t)^*)^{11} with C5-semilinear *9 action"
+      },
+      "probes": {
+        "constant_z_residual_box": {
+          "tested": 8,
+          "identity_hits": 0,
+          "note": "tiny residual; H5 already empty on larger constant box"
+        },
+        "skip_one_lines_on_B_frame_cubic": {
+          "source": "H5_WAVE2 projection geometry (bound, not re-run exhaustive)",
+          "L_i": "span(e_i, e_{i+2}) lies on F=sum x_i^2 x_{i+1}",
+          "galois": "orbit size 5; no single L_i defined over K",
+          "K_point": false
+        }
+      },
+      "identity_hits": 0,
+      "K_point": null,
+      "status": "no_family_with_identically_trivial_class"
+    },
+    "B_additive_hilbert_90": {
+      "name": "additive Hilbert 90",
+      "equation": "c * psi(a) = u - sigma(u) for some u in E",
+      "equivalence": "ker Tr = {u-sigma(u)} by additive H90 for cyclic E/K",
+      "probes": {
+        "general_u": "Parameter u general in E is the full problem; reduced to searching a directly via Phi. No closed-form factorization of the 11-class as a norm from a decidable conic/SB fibration was obtained.",
+        "retired_monomial_u": "H5 additive monoms empty (bound)",
+        "modular_specialized_Phi_points": "specialized fibres routinely nonempty (H5 modular_screen; residual samples below)"
+      },
+      "K_point": null,
+      "status": "no_exact_section"
+    },
+    "C_projection_degree_five": {
+      "name": "projection from degree-five closed point",
+      "degree_five_point": {
+        "field": "E",
+        "image_under_trace_frame": "[beta0*Z0(r0):0:0:0:0]",
+        "polynomial": "Z0(T)=product_(k=1)^4 (T-r_k)",
+        "scope": "a closed point of degree five over K, not a K-rational point"
+      },
+      "B_frame_orbit": "five coordinate points e_i over E (index one, not K-point)",
+      "projection": {
+        "skip_one_lines": "L_i=span(e_i,e_{i+2}) on F; residual conic bundle over E",
+        "galois_descent": "orbit size 5 blocks single-line projection over K; residual SB/conic class over K not trivialized in this residual",
+        "source_binding": "H5_WAVE2 PROJECTION.md / projection.json (not re-run as exhaustive)"
+      },
+      "C11_eigenpoints": {
+        "weights": [
+          1,
+          9,
+          4,
+          3,
+          5
+        ],
+        "note": "eigengeometry used for index one only; no new K-section"
+      },
+      "K_point": null,
+      "status": "geometry_recorded_no_K_point"
+    },
+    "D_multiprime_reconstruction": {
+      "name": "exact multi-prime reconstruction",
+      "method": "Use F_p points on specialized fibres as discovery only; require a stable rational component and compatible torsor trivialization at several primes, then reconstruct over K.",
+      "attempts": [
+        {
+          "p": 89,
+          "specialized_points_found": 3,
+          "samples": [
+            {
+              "r": [
+                44,
+                2,
+                63,
+                81,
+                86
+              ],
+              "z": [
+                15,
+                64,
+                2,
+                47,
+                84
+              ]
+            },
+            {
+              "r": [
+                81,
+                15,
+                77,
+                38,
+                83
+              ],
+              "z": [
+                86,
+                46,
+                60,
+                0,
+                17
+              ]
+            }
+          ],
+          "stable_rational_component": false,
+          "note": "no CRT/interpolation produced a K-identity"
+        },
+        {
+          "p": 101,
+          "specialized_points_found": 3,
+          "samples": [
+            {
+              "r": [
+                47,
+                9,
+                87,
+                72,
+                8
+              ],
+              "z": [
+                0,
+                88,
+                24,
+                91,
+                47
+              ]
+            },
+            {
+              "r": [
+                69,
+                24,
+                23,
+                22,
+                48
+              ],
+              "z": [
+                83,
+                73,
+                100,
+                71,
+                2
+              ]
+            }
+          ],
+          "stable_rational_component": false,
+          "note": "no CRT/interpolation produced a K-identity"
+        },
+        {
+          "p": 131,
+          "specialized_points_found": 3,
+          "samples": [
+            {
+              "r": [
+                31,
+                73,
+                127,
+                85,
+                108
+              ],
+              "z": [
+                88,
+                129,
+                1,
+                21,
+                93
+              ]
+            },
+            {
+              "r": [
+                15,
+                19,
+                31,
+                130,
+                70
+              ],
+              "z": [
+                50,
+                29,
+                130,
+                21,
+                20
+              ]
+            }
+          ],
+          "stable_rational_component": false,
+          "note": "no CRT/interpolation produced a K-identity"
+        }
+      ],
+      "K_point": null,
+      "status": "no_stable_component_reconstructed"
+    }
+  },
+  "points_over_K": [],
+  "summary": "no_K_point_constructed"
+}

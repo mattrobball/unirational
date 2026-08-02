@@ -1,5 +1,5 @@
 {
-  "schema": "g4a-coset-actions-v3",
+  "schema": "g4a-coset-actions-v4",
   "group": "PSL(2,11)",
   "group_order": 660,
   "generators": {

@@ -1,0 +1,1037 @@
+{
+  "format": "q3-boundary-stable-maps-v1",
+  "boundary_types": {
+    "line_plus_conic": {
+      "domain": "P1 \u222a_pt P1 (two components meeting at a node)",
+      "degrees": [
+        1,
+        2
+      ],
+      "incidence_through_resolvent_triple": "Partition the three marks as (1 on line + 2 on conic) or (2 on line + 1 on conic).  A line through two marks is the chord; its residual on X is a third point R.  The residual plane cubic in a plane through the line meets X in line+conic; the conic must pass through the remaining mark(s).",
+      "galois": "For a C3-orbit of marks, a line through two marks is not K-rational (the two marks are not a Gal-stable subset).  A K-line would require all three marks on the line, i.e. collinear resolvent \u2014 refuted in general by root_secant, and modularly rare.",
+      "K_Schur_object_found": false
+    },
+    "three_lines": {
+      "domain": "triangle of three P1's",
+      "degrees": [
+        1,
+        1,
+        1
+      ],
+      "incidence": "The three chords of the resolvent triple.  Each chord meets X in a third residual; containment fails on a smooth cubic surface (no line of the triangle lies on S for a general triple).",
+      "galois": "The three chords form a Gal-orbit under C3/S3.  A K-rational three-line stable map would need the whole triangle defined over K, hence the three lines as a Gal-set \u2014 possible as a single object only if the map descends.  No descent constructed.",
+      "K_Schur_object_found": false
+    },
+    "double_line_plus_line": {
+      "domain": "nonreduced: 2L + L'",
+      "incidence": "requires a line of X through at least one mark with multiplicity",
+      "active_field_no_K_line": "Authoritative Schur twist has no K_Schur-line (inherited from index / line-orbit analysis).  A K-rational double line is therefore excluded.",
+      "K_Schur_object_found": false
+    },
+    "nonreduced_gtc": {
+      "description": "nonreduced structure sheaves in Tbar boundary",
+      "K_Schur_object_found": false,
+      "note": "Hilbert point would still force a point by Theorem B if defined over K"
+    },
+    "embedded_point_boundary": {
+      "description": "Hilbert schemes with embedded points",
+      "K_Schur_object_found": false
+    }
+  },
+  "exact_rational_sample": {
+    "quartet": [
+      [
+        3,
+        -3,
+        3,
+        0,
+        0
+      ],
+      [
+        2,
+        -1,
+        -1,
+        -1,
+        -2
+      ],
+      [
+        3,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        3,
+        -2,
+        2,
+        -1,
+        2
+      ]
+    ],
+    "triple_rank": 3,
+    "line_conic_triangle_probe": {
+      "line_01": {
+        "residual_equals_third": false,
+        "three_points_collinear": false,
+        "residual": [
+          "2235354276933170302757397331968",
+          "8378421741976719303895523328000",
+          "-6579469956762052861566814322688",
+          "814429374211653174859456512000",
+          "-13268562368822697173744664576000"
+        ]
+      },
+      "line_02": {
+        "residual_equals_third": false,
+        "three_points_collinear": false,
+        "residual": [
+          "-86105136609935303692080513024",
+          "62791652902261346265259966464",
+          "45941186994416335343136079872",
+          "92813290604553783030345105408",
+          "-60827310611591970315264196608"
+        ]
+      },
+      "line_12": {
+        "residual_equals_third": false,
+        "three_points_collinear": false,
+        "residual": [
+          "-161066417758222235322306281472",
+          "-61529981113606756918724222976",
+          "139474659713749829656202870784",
+          "101666434702013843923191398400",
+          "113796440022678655385693306880"
+        ]
+      }
+    },
+    "plane_of_triple": "rank-ok",
+    "triple_collinear": false
+  },
+  "modular_scan": {
+    "method": "uniform random points on Klein cubic mod p; full-span quartet + resolvent",
+    "scope": "modular discovery only \u2014 not char-0 reconstruction; does not install the Schur quartic",
+    "per_prime": [
+      {
+        "prime": 23,
+        "trials": 800,
+        "fullspan_quartets_with_resolvent": 377,
+        "collinear_resolvent_triples": 4,
+        "triple_span_rank_lt_3": 4,
+        "triangle_contained_chord_incidents": 10,
+        "residual_equals_third_incidents": 3,
+        "samples": [
+          {
+            "quartet": [
+              [
+                15,
+                14,
+                9,
+                12,
+                21
+              ],
+              [
+                4,
+                3,
+                6,
+                12,
+                20
+              ],
+              [
+                1,
+                2,
+                3,
+                13,
+                19
+              ],
+              [
+                20,
+                17,
+                17,
+                19,
+                0
+              ]
+            ],
+            "triple": [
+              [
+                14,
+                8,
+                13,
+                19,
+                21
+              ],
+              [
+                3,
+                17,
+                19,
+                1,
+                19
+              ],
+              [
+                22,
+                5,
+                4,
+                22,
+                5
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          },
+          {
+            "quartet": [
+              [
+                4,
+                3,
+                12,
+                13,
+                22
+              ],
+              [
+                15,
+                5,
+                15,
+                4,
+                19
+              ],
+              [
+                7,
+                17,
+                11,
+                9,
+                5
+              ],
+              [
+                22,
+                5,
+                4,
+                7,
+                21
+              ]
+            ],
+            "triple": [
+              [
+                0,
+                13,
+                18,
+                8,
+                9
+              ],
+              [
+                11,
+                12,
+                2,
+                17,
+                7
+              ],
+              [
+                11,
+                14,
+                6,
+                20,
+                13
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          },
+          {
+            "quartet": [
+              [
+                22,
+                21,
+                1,
+                19,
+                12
+              ],
+              [
+                20,
+                6,
+                2,
+                16,
+                22
+              ],
+              [
+                15,
+                21,
+                20,
+                1,
+                2
+              ],
+              [
+                8,
+                12,
+                9,
+                4,
+                16
+              ]
+            ],
+            "triple": [
+              [
+                18,
+                18,
+                9,
+                13,
+                8
+              ],
+              [
+                9,
+                7,
+                3,
+                18,
+                19
+              ],
+              [
+                14,
+                6,
+                10,
+                9,
+                22
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          }
+        ]
+      },
+      {
+        "prime": 31,
+        "trials": 800,
+        "fullspan_quartets_with_resolvent": 202,
+        "collinear_resolvent_triples": 0,
+        "triple_span_rank_lt_3": 0,
+        "triangle_contained_chord_incidents": 1,
+        "residual_equals_third_incidents": 0,
+        "samples": [
+          {
+            "quartet": [
+              [
+                3,
+                9,
+                26,
+                7,
+                7
+              ],
+              [
+                0,
+                24,
+                28,
+                5,
+                14
+              ],
+              [
+                3,
+                4,
+                26,
+                19,
+                29
+              ],
+              [
+                15,
+                27,
+                26,
+                22,
+                8
+              ]
+            ],
+            "triple": [
+              [
+                9,
+                19,
+                19,
+                22,
+                21
+              ],
+              [
+                15,
+                11,
+                6,
+                6,
+                21
+              ],
+              [
+                18,
+                29,
+                3,
+                1,
+                19
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          },
+          {
+            "quartet": [
+              [
+                21,
+                6,
+                27,
+                12,
+                15
+              ],
+              [
+                21,
+                18,
+                7,
+                1,
+                3
+              ],
+              [
+                27,
+                30,
+                25,
+                14,
+                9
+              ],
+              [
+                8,
+                21,
+                3,
+                28,
+                8
+              ]
+            ],
+            "triple": [
+              [
+                16,
+                4,
+                13,
+                6,
+                6
+              ],
+              [
+                11,
+                1,
+                20,
+                25,
+                18
+              ],
+              [
+                18,
+                9,
+                30,
+                8,
+                6
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          },
+          {
+            "quartet": [
+              [
+                12,
+                19,
+                19,
+                16,
+                24
+              ],
+              [
+                8,
+                23,
+                0,
+                22,
+                5
+              ],
+              [
+                30,
+                0,
+                28,
+                0,
+                0
+              ],
+              [
+                14,
+                2,
+                0,
+                30,
+                4
+              ]
+            ],
+            "triple": [
+              [
+                21,
+                7,
+                7,
+                1,
+                2
+              ],
+              [
+                15,
+                17,
+                3,
+                30,
+                7
+              ],
+              [
+                13,
+                11,
+                12,
+                22,
+                20
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          }
+        ]
+      },
+      {
+        "prime": 43,
+        "trials": 800,
+        "fullspan_quartets_with_resolvent": 112,
+        "collinear_resolvent_triples": 1,
+        "triple_span_rank_lt_3": 1,
+        "triangle_contained_chord_incidents": 1,
+        "residual_equals_third_incidents": 0,
+        "samples": [
+          {
+            "quartet": [
+              [
+                41,
+                0,
+                7,
+                17,
+                16
+              ],
+              [
+                37,
+                35,
+                20,
+                30,
+                26
+              ],
+              [
+                32,
+                30,
+                2,
+                42,
+                8
+              ],
+              [
+                42,
+                38,
+                6,
+                13,
+                34
+              ]
+            ],
+            "triple": [
+              [
+                39,
+                6,
+                11,
+                40,
+                13
+              ],
+              [
+                14,
+                21,
+                14,
+                32,
+                37
+              ],
+              [
+                42,
+                28,
+                21,
+                17,
+                20
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          },
+          {
+            "quartet": [
+              [
+                18,
+                25,
+                15,
+                25,
+                30
+              ],
+              [
+                24,
+                41,
+                24,
+                0,
+                1
+              ],
+              [
+                22,
+                20,
+                13,
+                7,
+                20
+              ],
+              [
+                6,
+                7,
+                5,
+                21,
+                15
+              ]
+            ],
+            "triple": [
+              [
+                35,
+                24,
+                31,
+                39,
+                27
+              ],
+              [
+                23,
+                3,
+                13,
+                14,
+                18
+              ],
+              [
+                35,
+                14,
+                3,
+                24,
+                31
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          },
+          {
+            "quartet": [
+              [
+                14,
+                28,
+                2,
+                17,
+                39
+              ],
+              [
+                1,
+                39,
+                5,
+                23,
+                17
+              ],
+              [
+                30,
+                42,
+                35,
+                27,
+                34
+              ],
+              [
+                28,
+                32,
+                40,
+                2,
+                40
+              ]
+            ],
+            "triple": [
+              [
+                2,
+                33,
+                23,
+                28,
+                28
+              ],
+              [
+                27,
+                38,
+                38,
+                33,
+                24
+              ],
+              [
+                9,
+                31,
+                0,
+                19,
+                1
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          }
+        ]
+      },
+      {
+        "prime": 67,
+        "trials": 800,
+        "fullspan_quartets_with_resolvent": 37,
+        "collinear_resolvent_triples": 0,
+        "triple_span_rank_lt_3": 0,
+        "triangle_contained_chord_incidents": 0,
+        "residual_equals_third_incidents": 0,
+        "samples": [
+          {
+            "quartet": [
+              [
+                2,
+                52,
+                13,
+                23,
+                32
+              ],
+              [
+                9,
+                51,
+                33,
+                53,
+                46
+              ],
+              [
+                65,
+                8,
+                49,
+                41,
+                37
+              ],
+              [
+                3,
+                62,
+                16,
+                12,
+                16
+              ]
+            ],
+            "triple": [
+              [
+                2,
+                3,
+                2,
+                38,
+                34
+              ],
+              [
+                24,
+                48,
+                24,
+                65,
+                57
+              ],
+              [
+                39,
+                41,
+                17,
+                2,
+                37
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          },
+          {
+            "quartet": [
+              [
+                58,
+                65,
+                15,
+                28,
+                14
+              ],
+              [
+                33,
+                57,
+                66,
+                9,
+                17
+              ],
+              [
+                27,
+                23,
+                60,
+                13,
+                15
+              ],
+              [
+                38,
+                54,
+                27,
+                66,
+                51
+              ]
+            ],
+            "triple": [
+              [
+                21,
+                16,
+                36,
+                16,
+                45
+              ],
+              [
+                20,
+                30,
+                66,
+                53,
+                50
+              ],
+              [
+                51,
+                7,
+                60,
+                23,
+                62
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          },
+          {
+            "quartet": [
+              [
+                53,
+                24,
+                58,
+                39,
+                64
+              ],
+              [
+                12,
+                7,
+                18,
+                13,
+                56
+              ],
+              [
+                8,
+                27,
+                22,
+                62,
+                25
+              ],
+              [
+                4,
+                1,
+                21,
+                62,
+                5
+              ]
+            ],
+            "triple": [
+              [
+                61,
+                53,
+                46,
+                64,
+                57
+              ],
+              [
+                5,
+                45,
+                27,
+                35,
+                35
+              ],
+              [
+                66,
+                34,
+                21,
+                55,
+                27
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          }
+        ]
+      },
+      {
+        "prime": 89,
+        "trials": 800,
+        "fullspan_quartets_with_resolvent": 18,
+        "collinear_resolvent_triples": 0,
+        "triple_span_rank_lt_3": 0,
+        "triangle_contained_chord_incidents": 0,
+        "residual_equals_third_incidents": 0,
+        "samples": [
+          {
+            "quartet": [
+              [
+                36,
+                39,
+                76,
+                47,
+                45
+              ],
+              [
+                19,
+                75,
+                20,
+                3,
+                23
+              ],
+              [
+                38,
+                77,
+                55,
+                56,
+                79
+              ],
+              [
+                28,
+                41,
+                23,
+                50,
+                88
+              ]
+            ],
+            "triple": [
+              [
+                1,
+                67,
+                43,
+                0,
+                6
+              ],
+              [
+                71,
+                5,
+                36,
+                16,
+                52
+              ],
+              [
+                58,
+                42,
+                26,
+                66,
+                76
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          },
+          {
+            "quartet": [
+              [
+                74,
+                34,
+                43,
+                54,
+                14
+              ],
+              [
+                69,
+                68,
+                40,
+                61,
+                86
+              ],
+              [
+                76,
+                28,
+                15,
+                38,
+                88
+              ],
+              [
+                65,
+                4,
+                30,
+                13,
+                22
+              ]
+            ],
+            "triple": [
+              [
+                82,
+                23,
+                30,
+                42,
+                46
+              ],
+              [
+                19,
+                30,
+                63,
+                17,
+                78
+              ],
+              [
+                7,
+                33,
+                88,
+                27,
+                70
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          },
+          {
+            "quartet": [
+              [
+                55,
+                11,
+                74,
+                60,
+                75
+              ],
+              [
+                45,
+                42,
+                69,
+                17,
+                81
+              ],
+              [
+                38,
+                38,
+                2,
+                84,
+                53
+              ],
+              [
+                83,
+                84,
+                53,
+                29,
+                7
+              ]
+            ],
+            "triple": [
+              [
+                37,
+                60,
+                34,
+                34,
+                11
+              ],
+              [
+                62,
+                4,
+                3,
+                86,
+                30
+              ],
+              [
+                75,
+                26,
+                42,
+                34,
+                8
+              ]
+            ],
+            "triple_rank": 3,
+            "triangle_contained_chords": 0
+          }
+        ]
+      }
+    ]
+  },
+  "conclusions": {
+    "line_plus_conic_K_object": false,
+    "three_lines_K_object": false,
+    "double_line_excluded_by_no_K_line": true,
+    "any_boundary_stable_map_over_K_Schur": false,
+    "boundary_reduction_pass": false
+  },
+  "marker_candidate": "Q3-BOUNDARY-REDUCTION-PASS",
+  "marker_achieved": false,
+  "residual": "Need either a K_Schur-defined reducible stable cubic through the installed resolvent triple, or a new identity forcing one of the boundary types to descend."
+}

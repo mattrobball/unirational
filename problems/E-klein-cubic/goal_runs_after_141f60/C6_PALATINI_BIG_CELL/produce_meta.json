@@ -1,0 +1,26 @@
+{
+  "format": "c6-produce-meta-v1",
+  "wall_seconds": 4.245499849319458,
+  "peak_rss_mb": 104.671875,
+  "fibres": 5,
+  "exact_form_nonzero_entries": [
+    30,
+    30,
+    30,
+    30,
+    30
+  ],
+  "primary_exit": "C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS",
+  "also_achieved": [
+    "C6-FIVE-FORM-MATRIX-PASS",
+    "C6-RANK-STRATUM-REDUCTION-PASS"
+  ],
+  "not_achieved": [
+    "C6-POINT-HEADLINE-POSITIVE"
+  ],
+  "heavy_cas": {
+    "gb_msolve_invoked": false,
+    "linear_elim_before_gb": true,
+    "timeout_or_oom": false
+  }
+}

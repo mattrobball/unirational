@@ -1,0 +1,495 @@
+{
+  "classes": [
+    {
+      "Psi_binding": {
+        "ambient_map": "Psi_1(y)=J_1*Phi_1(y)",
+        "equation_check_sealed": "F(A_i*z_i)=F(Psi_i)=0 exactly",
+        "exit": "H-A5-CLASS1-RATIONAL-POINT",
+        "map_degree": 11,
+        "sha256": "89b9a3405db00c5b87c72016afd3b05d0e397d133752d0e7da91898bd9f72a0f",
+        "source": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_1/point.json"
+      },
+      "Y_binding": {
+        "degree": 3,
+        "sha256": "69fdf668b859f372a12cc7c0c851b43086a433539cfad0ae6b60302524a94e76",
+        "source": "phase2_cubic_compression/Y_class_1.json"
+      },
+      "class_index": 1,
+      "composition_degree": 33,
+      "construction": "P_i = Psi_i o Y_i",
+      "label": "A5_class_1",
+      "marker_class": "semilinear-landing-class-ok",
+      "sample_evaluations_Y": [
+        {
+          "C0_Y_w_nonzero": true,
+          "Y_w": [
+            {
+              "rational": [
+                585,
+                1
+              ],
+              "sqrt5": [
+                225,
+                1
+              ]
+            },
+            {
+              "rational": [
+                484,
+                1
+              ],
+              "sqrt5": [
+                158,
+                1
+              ]
+            },
+            {
+              "rational": [
+                540,
+                1
+              ],
+              "sqrt5": [
+                252,
+                1
+              ]
+            }
+          ],
+          "Y_w_nonzero": true,
+          "w": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "C0_Y_w_nonzero": true,
+          "Y_w": [
+            {
+              "rational": [
+                -1,
+                2
+              ],
+              "sqrt5": [
+                -1,
+                2
+              ]
+            },
+            {
+              "rational": [
+                -1,
+                1
+              ],
+              "sqrt5": [
+                0,
+                1
+              ]
+            },
+            {
+              "rational": [
+                -1,
+                1
+              ],
+              "sqrt5": [
+                0,
+                1
+              ]
+            }
+          ],
+          "Y_w_nonzero": true,
+          "w": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "C0_Y_w_nonzero": false,
+          "Y_w": [
+            {
+              "rational": [
+                0,
+                1
+              ],
+              "sqrt5": [
+                0,
+                1
+              ]
+            },
+            {
+              "rational": [
+                0,
+                1
+              ],
+              "sqrt5": [
+                0,
+                1
+              ]
+            },
+            {
+              "rational": [
+                0,
+                1
+              ],
+              "sqrt5": [
+                0,
+                1
+              ]
+            }
+          ],
+          "Y_w_nonzero": false,
+          "w": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "C0_Y_w_nonzero": true,
+          "Y_w": [
+            {
+              "rational": [
+                -60,
+                1
+              ],
+              "sqrt5": [
+                -18,
+                1
+              ]
+            },
+            {
+              "rational": [
+                -30,
+                1
+              ],
+              "sqrt5": [
+                6,
+                1
+              ]
+            },
+            {
+              "rational": [
+                42,
+                1
+              ],
+              "sqrt5": [
+                6,
+                1
+              ]
+            }
+          ],
+          "Y_w_nonzero": true,
+          "w": [
+            2,
+            -1,
+            3,
+            0,
+            1
+          ]
+        },
+        {
+          "C0_Y_w_nonzero": true,
+          "Y_w": [
+            {
+              "rational": [
+                102,
+                1
+              ],
+              "sqrt5": [
+                -12,
+                1
+              ]
+            },
+            {
+              "rational": [
+                267,
+                2
+              ],
+              "sqrt5": [
+                -45,
+                2
+              ]
+            },
+            {
+              "rational": [
+                33,
+                1
+              ],
+              "sqrt5": [
+                42,
+                1
+              ]
+            }
+          ],
+          "Y_w_nonzero": true,
+          "w": [
+            1,
+            2,
+            0,
+            -1,
+            4
+          ]
+        }
+      ],
+      "structural_landing": {
+        "A5_equivariance": "P_i(h w)=rho(h) P_i(w) by equivariance of Y_i and Psi_i",
+        "P_nonzero_open": "Y_i nonzero on a Zariski open (Jacobian minor); Psi_i nonzero on the landing chart a0=1; composition nonzero on an open",
+        "composition": "F_Klein(P_i(w))=F_Klein(Psi_i(Y_i(w)))=0 for all w",
+        "identity": "F_Klein(Psi_i(y))=0 for all y (H_A5 sealed)"
+      }
+    },
+    {
+      "Psi_binding": {
+        "ambient_map": "Psi_2(y)=J_2*Phi_2(y)",
+        "equation_check_sealed": "F(A_i*z_i)=F(Psi_i)=0 exactly",
+        "exit": "H-A5-CLASS2-RATIONAL-POINT",
+        "map_degree": 11,
+        "sha256": "cb8366eee4d6a8a096365b65d0c75372b3529a7a621411d8b6f524820d73bfb4",
+        "source": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_2/point.json"
+      },
+      "Y_binding": {
+        "degree": 3,
+        "sha256": "ce118b045d7ffcb1b6f0fadc619fe8b07788d56f49487f72d39ae3c89f15e532",
+        "source": "phase2_cubic_compression/Y_class_2.json"
+      },
+      "class_index": 2,
+      "composition_degree": 33,
+      "construction": "P_i = Psi_i o Y_i",
+      "label": "A5_class_2",
+      "marker_class": "semilinear-landing-class-ok",
+      "sample_evaluations_Y": [
+        {
+          "C0_Y_w_nonzero": true,
+          "Y_w": [
+            {
+              "rational": [
+                585,
+                1
+              ],
+              "sqrt5": [
+                -225,
+                1
+              ]
+            },
+            {
+              "rational": [
+                484,
+                1
+              ],
+              "sqrt5": [
+                -158,
+                1
+              ]
+            },
+            {
+              "rational": [
+                540,
+                1
+              ],
+              "sqrt5": [
+                -252,
+                1
+              ]
+            }
+          ],
+          "Y_w_nonzero": true,
+          "w": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "C0_Y_w_nonzero": true,
+          "Y_w": [
+            {
+              "rational": [
+                -1,
+                2
+              ],
+              "sqrt5": [
+                1,
+                2
+              ]
+            },
+            {
+              "rational": [
+                -1,
+                1
+              ],
+              "sqrt5": [
+                0,
+                1
+              ]
+            },
+            {
+              "rational": [
+                -1,
+                1
+              ],
+              "sqrt5": [
+                0,
+                1
+              ]
+            }
+          ],
+          "Y_w_nonzero": true,
+          "w": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "C0_Y_w_nonzero": false,
+          "Y_w": [
+            {
+              "rational": [
+                0,
+                1
+              ],
+              "sqrt5": [
+                0,
+                1
+              ]
+            },
+            {
+              "rational": [
+                0,
+                1
+              ],
+              "sqrt5": [
+                0,
+                1
+              ]
+            },
+            {
+              "rational": [
+                0,
+                1
+              ],
+              "sqrt5": [
+                0,
+                1
+              ]
+            }
+          ],
+          "Y_w_nonzero": false,
+          "w": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "C0_Y_w_nonzero": true,
+          "Y_w": [
+            {
+              "rational": [
+                -60,
+                1
+              ],
+              "sqrt5": [
+                18,
+                1
+              ]
+            },
+            {
+              "rational": [
+                -30,
+                1
+              ],
+              "sqrt5": [
+                -6,
+                1
+              ]
+            },
+            {
+              "rational": [
+                42,
+                1
+              ],
+              "sqrt5": [
+                -6,
+                1
+              ]
+            }
+          ],
+          "Y_w_nonzero": true,
+          "w": [
+            2,
+            -1,
+            3,
+            0,
+            1
+          ]
+        },
+        {
+          "C0_Y_w_nonzero": true,
+          "Y_w": [
+            {
+              "rational": [
+                102,
+                1
+              ],
+              "sqrt5": [
+                12,
+                1
+              ]
+            },
+            {
+              "rational": [
+                267,
+                2
+              ],
+              "sqrt5": [
+                45,
+                2
+              ]
+            },
+            {
+              "rational": [
+                33,
+                1
+              ],
+              "sqrt5": [
+                -42,
+                1
+              ]
+            }
+          ],
+          "Y_w_nonzero": true,
+          "w": [
+            1,
+            2,
+            0,
+            -1,
+            4
+          ]
+        }
+      ],
+      "structural_landing": {
+        "A5_equivariance": "P_i(h w)=rho(h) P_i(w) by equivariance of Y_i and Psi_i",
+        "P_nonzero_open": "Y_i nonzero on a Zariski open (Jacobian minor); Psi_i nonzero on the landing chart a0=1; composition nonzero on an open",
+        "composition": "F_Klein(P_i(w))=F_Klein(Psi_i(Y_i(w)))=0 for all w",
+        "identity": "F_Klein(Psi_i(y))=0 for all y (H_A5 sealed)"
+      }
+    }
+  ],
+  "marker": "G3H-SEMILINEAR-LANDING-PASS",
+  "peak_rss_mb": 83.28125,
+  "raw_covariant_basis_sha256": "a63757c9ecf5452f5b5d9af7796f8997d31bc187e7eb4a239620ec09b22ff985",
+  "schema": "g3h-phase3-semilinear-landing-v1",
+  "wall_seconds": 0.05749678611755371
+}

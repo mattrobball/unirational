@@ -1,3 +1,3 @@
-# G4A coset actions
+# G4A cosets
 
-Both A5 classes from H_A5 generators; image 660.
+Both A5 classes from sealed H_A5 generators; image 660; Ind=1+10.

@@ -1,0 +1,18 @@
+{
+  "format": "q3-produce-meta-v1",
+  "exit": "Q3-SCHUR-MONODROMY-PASS",
+  "wall_s": 0.45810723304748535,
+  "peak_rss_mb": 65.25,
+  "stages": [
+    "Q3.0",
+    "Q3.1",
+    "Q3.2",
+    "Q3.3",
+    "Q3.4"
+  ],
+  "headline": "OPEN",
+  "stable_map_found": false,
+  "gtc_point_found": false,
+  "external_cas": [],
+  "marker": "Q3_PRODUCE_OK"
+}

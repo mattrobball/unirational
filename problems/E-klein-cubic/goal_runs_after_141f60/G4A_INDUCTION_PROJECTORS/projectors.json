@@ -1,5 +1,5 @@
 {
-  "schema": "g4a-projectors-v3",
+  "schema": "g4a-projectors-v4",
   "G_module_decomposition": "1 + 10",
   "shared_projectors_over_Q": {
     "P_trivial": [
@@ -1026,24 +1026,16 @@
     "idempotent_checks": {
       "P1^2=P1": true,
       "P10^2=P10": true,
-      "P1 P10=0": true,
       "P1+P10=I": true
     },
-    "klein_companion_note": "G Klein/companion 5s not summands; two P5s are A5-restriction per class"
+    "klein_companion_note": "G Klein/companion 5s not summands of Ind; two P5s are A5-restriction isotypics (character formula)"
   },
   "two_five_dimensional_projectors": {
-    "meaning": "A5-restriction 5-isotypics for two maximal A5 classes",
-    "class_1": "classes[0].five_dimensional_projector_A5",
-    "class_2": "classes[1].five_dimensional_projector_A5"
+    "meaning": "A5-restriction 5-dim projectors for both maximal classes"
   },
   "classes": [
     {
       "label": "A5_class_1",
-      "uses_shared_G_projectors": true,
-      "A5_restriction": {
-        "decomposition_Res_aug": "1 \u2295 4 \u2295 5",
-        "inner_product_aug_with_A5_5": 1
-      },
       "five_dimensional_projector_A5": [
         [
           {
@@ -1553,19 +1545,21 @@
         ]
       ],
       "traces": {
-        "P5": 5
+        "P5": 5,
+        "P1": 1,
+        "P10": 10
       },
       "idempotent_checks": {
-        "P5^2=P5": true
+        "P5^2=P5": true,
+        "rank": 5
+      },
+      "A5_restriction": {
+        "decomposition_Res_aug": "1 \u2295 4 \u2295 5",
+        "inner_product_aug_with_A5_5": 1
       }
     },
     {
       "label": "A5_class_2",
-      "uses_shared_G_projectors": true,
-      "A5_restriction": {
-        "decomposition_Res_aug": "1 \u2295 4 \u2295 5",
-        "inner_product_aug_with_A5_5": 1
-      },
       "five_dimensional_projector_A5": [
         [
           {
@@ -2075,10 +2069,17 @@
         ]
       ],
       "traces": {
-        "P5": 5
+        "P5": 5,
+        "P1": 1,
+        "P10": 10
       },
       "idempotent_checks": {
-        "P5^2=P5": true
+        "P5^2=P5": true,
+        "rank": 5
+      },
+      "A5_restriction": {
+        "decomposition_Res_aug": "1 \u2295 4 \u2295 5",
+        "inner_product_aug_with_A5_5": 1
       }
     }
   ]

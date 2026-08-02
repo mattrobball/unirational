@@ -1,0 +1,48 @@
+{
+  "format": "g7c-double-a5-geometry-seal-v1",
+  "exit": "G7-RESIDUAL-GEOMETRY-PASS",
+  "headline": "OPEN",
+  "stages": [
+    "G7.4",
+    "G7.5",
+    "G7.6"
+  ],
+  "consumed_commit": "eb21458bea684d2399ad18f003e2be8ebdd161ce",
+  "n_operations": 116,
+  "n_third_pairs": 121,
+  "n_lines_on_split_cubic": 4,
+  "n_rational_residuals_Q": 0,
+  "peak_rss_mb": 36.21875,
+  "wall_s": 5.177525043487549,
+  "files": {
+    "INPUT_MANIFEST.json": "d25435334c16001a1adc913f186958f57d6ea4d82b53d9a22db04277329a4676",
+    "operations.json": "ad98b375c24d2a4ec2d30121b5fcb0feab49eb8d3ed669ba1f3e17d534a37f92",
+    "residual_cycles.json": "a8ffbf3cd85f59138a6782c07ba29d528f97cf84ed9b14e9ac74a3aaa7e5d231",
+    "effective_cycles.json": "341dcca8069849634278d5aa8fd6512e99a819918353eea6530679f75d235eef",
+    "CROSS_OPERATIONS.md": "a3274652fb42e2554a36be3d81a412dddb93f33372202a8e6656841f176d1d15",
+    "THIRD_INTERSECTIONS.md": "a7dc69f46734332b786a517abfde842d937fac99c59ff410f1b65d9a76e4e123",
+    "EFFECTIVE_CYCLES.md": "1033c7a23c68265fb014087e836a9cf7a22aff029c4a20a7bd4e3106aa8696df",
+    "produce_geometry.py": "71e2e5239e83d64d1a79d584ba1c609c45d502974bfbef4718f1d3d4dd4e1ee0",
+    "produce_meta.json": "10cb70de551024047ce8302729f2b02549fe2dca17b3471ff9986d292ffe5dd4",
+    "verify_geometry.py": "a6a10f25f4978b03db9c8bd25be142753b92361322fbaba8fe71e05f4c2acaa7",
+    "verify_point.py": "57116219c0632b548d395e16c057730ca5e193336a9ac7c6d1a7f7c31db1873b",
+    "REPLAY.md": "88fae1e964fa81e512f43956662c870e949a34d4ce38e53dc50e19f09166a970",
+    "STATUS.md": "2639707443a40879c3add2b9c12b1b6ffb294e4361e7dce57e4cf945082d16a0",
+    "make_seal.py": "1bd2a7eff986b241b72eacf7a20e13433f16809137a444f5ed7cfd4f158966ae"
+  },
+  "nonclaims": [
+    "no K_proj-point of X_gen",
+    "no effective length-two over K_proj",
+    "no BRIDGE_DOUBLE_A5_POS",
+    "not G7-POINT-HEADLINE-POSITIVE",
+    "not G7-EFFECTIVE-DEGREE2-HEADLINE-POSITIVE",
+    "does not reseal G7A/G7B/G3A/H_A5/G4",
+    "split-model lines on V(F) are not K_proj-lines on X_gen",
+    "CH_0 / signed deg-1 is not effective deg-2"
+  ],
+  "residual_gates": [
+    "K_proj-point of X_gen from outside this finite op space",
+    "equivariant descent of split-model lines to X_gen",
+    "Springer / non-split L_H cocycle lifts"
+  ]
+}

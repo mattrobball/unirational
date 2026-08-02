@@ -1,0 +1,118 @@
+{
+  "format": "q3-input-manifest-v1",
+  "pinned_goal_baseline": "141f6042f628f984771fc79d8d16beb12cedcb94",
+  "binding_inputs": {
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/STATUS.md": {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/STATUS.md",
+      "sha256": "7a220792d960293d8ac05328e042a7a05bae31a966eb8b40e9ceec5209e4b9d2",
+      "bytes": 4212
+    },
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/COMPLETION_AUDIT.md": {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/COMPLETION_AUDIT.md",
+      "sha256": "ff7ceaa9bf9a7b24bb9eb276d8cd965f5d2557eab9893f9cabcd32a41114cb9a",
+      "bytes": 3160
+    },
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/fixed_curve_bridge/THEOREM.md": {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/fixed_curve_bridge/THEOREM.md",
+      "sha256": "d9f5e69dfbeee8eff5de8e6499aae7574cd924dea0e5e7c0655852959f92c5a6",
+      "bytes": 7416
+    },
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/fixed_curve_bridge/STATUS.md": {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/fixed_curve_bridge/STATUS.md",
+      "sha256": "6c701c4314d6d93c3878b4577a8aa85be27c91014b7139c6e8f841be96f3a732",
+      "bytes": 912
+    },
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/SOURCE_MANIFEST.json": {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/SOURCE_MANIFEST.json",
+      "sha256": "5bdb74bba74dd452b217208f23af717cf62cec94b1ceb1553437da37fda4d041",
+      "bytes": 2853
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/STATUS.md": {
+      "path": "goals_2026-08-01/Q_SCHUR_DESCENT/STATUS.md",
+      "sha256": "f305a26c200f895c3e30c1afe3743f10ce1d80bac36a35c7fc8abceee65324c4",
+      "bytes": 5586
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/COMPLETION_AUDIT.md": {
+      "path": "goals_2026-08-01/Q_SCHUR_DESCENT/COMPLETION_AUDIT.md",
+      "sha256": "03dbcff7d52c9c196a206ede0c9395b6229053e54b4b1af80b2fba71e8617ac4",
+      "bytes": 5609
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/QUARTIC_FRONTIER.md": {
+      "path": "goals_2026-08-01/Q_SCHUR_DESCENT/QUARTIC_FRONTIER.md",
+      "sha256": "ce6592f4c0134bb8a5f4526614bf746da6ff1a3bf0dfc1601ec509cf0c2dcf9e",
+      "bytes": 7625
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/quartic_frontier.json": {
+      "path": "goals_2026-08-01/Q_SCHUR_DESCENT/quartic_frontier.json",
+      "sha256": "ba026625e02c278c0150b963a620fa50b99eb99b49ff064c774b9dd7de35ccbf",
+      "bytes": 1139
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/quartic_descent/field_certificate.json": {
+      "path": "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/quartic_descent/field_certificate.json",
+      "sha256": "0ac52e4f2289b2b976e1998bdc26d14cfa038bbe6ff23e71dc69f6435bae0d7d",
+      "bytes": 2095
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/quartic_descent/geometry_certificate.json": {
+      "path": "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/quartic_descent/geometry_certificate.json",
+      "sha256": "1e6d98ccc79b26f706de8827a73c427027bbb588c97e4b396d79feed3942aa2a",
+      "bytes": 3841
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/curve_incidence/incidence_certificate.json": {
+      "path": "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/curve_incidence/incidence_certificate.json",
+      "sha256": "f3ab0f5843de6daeccb53ea56f1b2fbc09f6cca80e3cd01dc999e051ab0e8efe",
+      "bytes": 3605
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/incidence_generality/REPORT.md": {
+      "path": "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/incidence_generality/REPORT.md",
+      "sha256": "25c1feef52ea1dd92b6aa51348e1a8cf3bd8698d7689e98860ceda12c85228fb",
+      "bytes": 2142
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/incidence_splitting/REPORT.md": {
+      "path": "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/incidence_splitting/REPORT.md",
+      "sha256": "19441e318b9af2b05162da70d384e6bdaecb4be7da55e854a2a67bf5a4b7c72c",
+      "bytes": 2478
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/root_secant/REPORT.md": {
+      "path": "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/root_secant/REPORT.md",
+      "sha256": "292f5257130d2d5c7f4c1494c99b0a1667c60b510bcbb89fec24cf7e2b6ebb23",
+      "bytes": 2201
+    },
+    "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/fixed_curve_bridge/THEOREM.md": {
+      "path": "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/fixed_curve_bridge/THEOREM.md",
+      "sha256": "285ff67e2b1fcea3049792b7ffceb86e5a47f45139863fb5f12c5cff94900790",
+      "bytes": 7241
+    },
+    "goals_after_bd610a/M3_SARKISOV_SECTION/STATUS.md": {
+      "path": "goals_after_bd610a/M3_SARKISOV_SECTION/STATUS.md",
+      "sha256": "e0a2a63a2973f4bf989b1b841639aa29abcd0a7304ea9910191d08cba12b155e",
+      "bytes": 1848
+    },
+    "goals_after_bd610a/M3_SARKISOV_SECTION/DEGREE4.md": {
+      "path": "goals_after_bd610a/M3_SARKISOV_SECTION/DEGREE4.md",
+      "sha256": "11a21b9839f943aaddf71e9546f82f2dcbfdedb742959b586bf741d3164b31d3",
+      "bytes": 1223
+    },
+    "goals_after_bd610a/M3_SARKISOV_SECTION/SECTION_RESIDUAL.md": {
+      "path": "goals_after_bd610a/M3_SARKISOV_SECTION/SECTION_RESIDUAL.md",
+      "sha256": "f2e66fbcb5e0ce52649f276447d5d75ec131b555f95a86af2307954c9f47be07",
+      "bytes": 10311
+    },
+    "goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E/STATUS.md": {
+      "path": "goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E/STATUS.md",
+      "sha256": "0d5194c78aa205f111ff8020d474a91326278a204cb03b1142db4bfda9bf46f8",
+      "bytes": 1645
+    },
+    "goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E_CONT2/STATUS.md": {
+      "path": "goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E_CONT2/STATUS.md",
+      "sha256": "97bf236d916a5e3310c1f57ccf27786bcbc9ae48ed8329bd7707fccee5c50e8b",
+      "bytes": 1670
+    },
+    "goals_after_141f60/GOAL_Q3_QUARTIC_RESOLVENT_STABLE_MAP.md": {
+      "path": "goals_after_141f60/GOAL_Q3_QUARTIC_RESOLVENT_STABLE_MAP.md",
+      "sha256": "7cdf8e3c103774704cef7b2f63810ce25fba9a8cacb20a4eb2ae20baedba3897",
+      "bytes": 5702
+    }
+  },
+  "missing": [],
+  "marker": "Q3_INPUTS_HASHED"
+}

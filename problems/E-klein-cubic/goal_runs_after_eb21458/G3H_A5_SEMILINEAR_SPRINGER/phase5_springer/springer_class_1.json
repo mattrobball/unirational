@@ -1,0 +1,52 @@
+{
+  "class_index": 1,
+  "forbidden_inference": {
+    "reason": "missing map-back (checklist item 4); item 2 also open",
+    "statement": "Q_q(L_i) nonempty => X_gen(K_proj) nonempty",
+    "status": "REJECTED"
+  },
+  "illegal_cubic_odd_degree_descent": {
+    "statement": "X_gen(L_i) nonempty and [L_i:K]=11 odd => X_gen(K) nonempty",
+    "status": "REJECTED"
+  },
+  "inputs": {
+    "A_Phi_q": "t3 (nonzero on G3P open)",
+    "a_i": "phase4 G3-frame L_i-point with Phi(a_i)=0",
+    "polar_objects": [
+      "H_q",
+      "Q_q",
+      "D_q",
+      "I_q"
+    ],
+    "q": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "label": "A5_class_1",
+  "produces_K_proj_cubic_point": false,
+  "springer_applied": false,
+  "springer_checklist": {
+    "1_quadratic_object_over_K_proj": {
+      "defined_over_K_proj": true,
+      "object": "Q_q: B(q,v,v)=0",
+      "source": "G3P-POLAR-SYSTEM-PASS",
+      "status": "YES"
+    },
+    "2_L_i_point_on_that_object": {
+      "reason": "Existence of a_i in X_gen(L_i) does not by itself place a vector on Q_q. A residual construction (e.g. polar line residual or tangent incidence section) is required and is not sealed as an explicit L_i-point of Q_q in this packet.",
+      "status": "NOT_CERTIFIED"
+    },
+    "3_degree_odd": {
+      "degree": 11,
+      "status": "YES"
+    },
+    "4_explicit_map_back_to_X_gen": {
+      "reason": "Even if Springer produced a K_proj-point of Q_q, G3P forbids promoting it to X_gen(K_proj) without an explicit inverse-polar / reconstruction map. No such map-back theorem is installed here.",
+      "status": "NO"
+    }
+  }
+}

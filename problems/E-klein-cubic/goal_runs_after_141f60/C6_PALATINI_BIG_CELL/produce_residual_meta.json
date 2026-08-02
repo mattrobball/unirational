@@ -1,0 +1,14 @@
+{
+  "format": "c6-residual-meta-v1",
+  "wall_seconds": 11.380664110183716,
+  "peak_rss_mb": 80.53125,
+  "heavy_cas": {
+    "gb_msolve_invoked": false,
+    "singular_invoked": false,
+    "linear_elim_before_gb": true,
+    "timeout_or_oom": false
+  },
+  "certified_exact_Q_points": 12,
+  "primary_exit_retained": "C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS",
+  "headline": "OPEN"
+}

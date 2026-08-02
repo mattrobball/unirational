@@ -32,6 +32,11 @@
       "role": "g4_seal"
     },
     {
+      "path": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/induced_points.json",
+      "sha256": "863116102af5103d8ba0e24f7220784417c569f56f0a2bff3f0d7e479a74c797",
+      "role": "g4_induced"
+    },
+    {
       "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md",
       "sha256": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811",
       "role": "g3a_status"

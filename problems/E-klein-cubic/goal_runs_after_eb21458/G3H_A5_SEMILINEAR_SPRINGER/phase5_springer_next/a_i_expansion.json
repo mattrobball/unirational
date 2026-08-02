@@ -1,0 +1,37 @@
+{
+  "classes": [
+    {
+      "class_index": 1,
+      "expansion_status": {
+        "dual_trace_formulas": "INSTALLED",
+        "marker": "G3H-AI-EXPANSION-DUAL-PASS",
+        "power_basis_structure": "INSTALLED",
+        "residual_gate": "G3H-AI-SECONDARY-TABLE-OPEN",
+        "secondary_basis_tables_of_beta": "RESIDUAL_OPEN",
+        "vandermonde_reconstruction": "INSTALLED"
+      },
+      "n_coordinates": 5,
+      "n_power_coeffs_per_coord": 11
+    },
+    {
+      "class_index": 2,
+      "expansion_status": {
+        "dual_trace_formulas": "INSTALLED",
+        "marker": "G3H-AI-EXPANSION-DUAL-PASS",
+        "power_basis_structure": "INSTALLED",
+        "residual_gate": "G3H-AI-SECONDARY-TABLE-OPEN",
+        "secondary_basis_tables_of_beta": "RESIDUAL_OPEN",
+        "vandermonde_reconstruction": "INSTALLED"
+      },
+      "n_coordinates": 5,
+      "n_power_coeffs_per_coord": 11
+    }
+  ],
+  "marker": "G3H-AI-EXPANSION-DUAL-PASS",
+  "phase4_binding": {
+    "g3_frame_sha256": "c7590d34ed7057f937bf5f0fc66fbd88f6a229637162885c1effb017f403d1b1",
+    "marker": "G3H-SEMILINEAR-G3-FRAME-PASS"
+  },
+  "residual_gate": "G3H-AI-SECONDARY-TABLE-OPEN",
+  "schema": "g3h-phase5-next-ai-expansion-v1"
+}

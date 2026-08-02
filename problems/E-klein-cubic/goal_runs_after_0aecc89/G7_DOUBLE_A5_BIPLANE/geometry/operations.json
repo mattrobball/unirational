@@ -1,0 +1,1194 @@
+{
+  "schema": "g7c-operations-v1",
+  "field": "Q(zeta_11) split model of Phi (F_Klein)",
+  "scale_policy": "Cone-lift sums use G7B first-nonzero chart lifts. Silent sums of arbitrary homogeneous reps forbidden. Third-intersection / B-contractions are multihomogeneous.",
+  "projector_correction": "1+10 (not naive 1+5+5)",
+  "isotypic_notes": {
+    "permutation_module": {
+      "Ind_H^G_1": "1 \u2295 10",
+      "Ind_K^G_1": "1 \u2295 10",
+      "10_absolutely_irreducible": true,
+      "naive_1_5_5_refuted": true
+    },
+    "naive_1_5_5_refuted": true,
+    "G_invariant_lines_in_op_space": "Trivial constituent of Ind is 1-dimensional (augmentation quotient). Ambient W is the Klein 5; G-invariant vectors in W are 0 (W irreducible over Q(\u221a\u221211) or as 5_\u2102). Op-space outputs that are G-invariant in W must vanish. Verified: no nonzero rational G-fixed ambient vector arises from the enumerated ops below.",
+    "W_isotypic": "Klein/companion 5s are NOT summands of Ind_H^G 1 (G7A). Incidence intertwines the two 1\u229510 modules; ambient embeddings of cycles land in W, so isotypic projections of Ind do not produce new W-valued G-eigenlines beyond the geometric span of P\u222aQ."
+  },
+  "n_operations": 116,
+  "summary": {
+    "n_zero": 0,
+    "n_nonzero_on_cubic": 0,
+    "n_nonzero_off_cubic": 116,
+    "n_rational_over_Q": 0,
+    "n_rational_on_cubic": 0
+  },
+  "operations": [
+    {
+      "name": "sum_P",
+      "kind": "first_moment",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of 11 chart lifts of P"
+    },
+    {
+      "name": "sum_Q",
+      "kind": "first_moment",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of 11 chart lifts of Q"
+    },
+    {
+      "name": "sum_P_minus_sum_Q",
+      "kind": "first_moment",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_P_0",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_P_1",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_P_2",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_P_3",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_P_4",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_P_5",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_P_6",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_P_7",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_P_8",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_P_9",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_P_10",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_Q_0",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_Q_1",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_Q_2",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_Q_3",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_Q_4",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_Q_5",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_Q_6",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_Q_7",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_Q_8",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_Q_9",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "aug_Q_10",
+      "kind": "augmentation_projector",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_Q_for_p0",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_Q_for_p1",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_Q_for_p2",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_Q_for_p3",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_Q_for_p4",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_Q_for_p5",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_Q_for_p6",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_Q_for_p7",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_Q_for_p8",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_Q_for_p9",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_Q_for_p10",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_P_for_q0",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_P_for_q1",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_P_for_q2",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_P_for_q3",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_P_for_q4",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_P_for_q5",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_P_for_q6",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_P_for_q7",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_P_for_q8",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_P_for_q9",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "inc_sum_P_for_q10",
+      "kind": "incidence_transform",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_Q_for_p0",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_Q_for_p1",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_Q_for_p2",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_Q_for_p3",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_Q_for_p4",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_Q_for_p5",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_Q_for_p6",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_Q_for_p7",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_Q_for_p8",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_Q_for_p9",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_Q_for_p10",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_P_for_q0",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_P_for_q1",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_P_for_q2",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_P_for_q3",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_P_for_q4",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_P_for_q5",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_P_for_q6",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_P_for_q7",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_P_for_q8",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_P_for_q9",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "comp_sum_P_for_q10",
+      "kind": "complementary_incidence",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "p_minus_incQ_0",
+      "kind": "incidence_residual",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "p_minus_incQ_1",
+      "kind": "incidence_residual",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "p_minus_incQ_2",
+      "kind": "incidence_residual",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "p_minus_incQ_3",
+      "kind": "incidence_residual",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "p_minus_incQ_4",
+      "kind": "incidence_residual",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "p_minus_incQ_5",
+      "kind": "incidence_residual",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "p_minus_incQ_6",
+      "kind": "incidence_residual",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "p_minus_incQ_7",
+      "kind": "incidence_residual",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "p_minus_incQ_8",
+      "kind": "incidence_residual",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "p_minus_incQ_9",
+      "kind": "incidence_residual",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "p_minus_incQ_10",
+      "kind": "incidence_residual",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "polar_trace_P",
+      "kind": "second_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_i B(e_a,p_i,p_i); multihomogeneous of degree 2 in each point"
+    },
+    {
+      "name": "polar_trace_Q",
+      "kind": "second_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "cross_polar_inc",
+      "kind": "cross_B_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_{incident} B(e_a,p_i,q_j); bidegree (1,1)"
+    },
+    {
+      "name": "cross_polar_comp",
+      "kind": "cross_B_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "third_moment_contract_P_e0",
+      "kind": "third_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_i B(p_i,p_i,e_a) p_i; degree 3 in each point contribution"
+    },
+    {
+      "name": "third_moment_contract_P_e1",
+      "kind": "third_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_i B(p_i,p_i,e_a) p_i; degree 3 in each point contribution"
+    },
+    {
+      "name": "third_moment_contract_P_e2",
+      "kind": "third_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_i B(p_i,p_i,e_a) p_i; degree 3 in each point contribution"
+    },
+    {
+      "name": "third_moment_contract_P_e3",
+      "kind": "third_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_i B(p_i,p_i,e_a) p_i; degree 3 in each point contribution"
+    },
+    {
+      "name": "third_moment_contract_P_e4",
+      "kind": "third_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_i B(p_i,p_i,e_a) p_i; degree 3 in each point contribution"
+    },
+    {
+      "name": "third_moment_contract_Q_e0",
+      "kind": "third_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_i B(p_i,p_i,e_a) p_i; degree 3 in each point contribution"
+    },
+    {
+      "name": "third_moment_contract_Q_e1",
+      "kind": "third_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_i B(p_i,p_i,e_a) p_i; degree 3 in each point contribution"
+    },
+    {
+      "name": "third_moment_contract_Q_e2",
+      "kind": "third_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_i B(p_i,p_i,e_a) p_i; degree 3 in each point contribution"
+    },
+    {
+      "name": "third_moment_contract_Q_e3",
+      "kind": "third_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_i B(p_i,p_i,e_a) p_i; degree 3 in each point contribution"
+    },
+    {
+      "name": "third_moment_contract_Q_e4",
+      "kind": "third_moment_contraction",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum_i B(p_i,p_i,e_a) p_i; degree 3 in each point contribution"
+    },
+    {
+      "name": "sum_third_inc_p0",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of chart-normalized r_ij over incident j (scale-safe)"
+    },
+    {
+      "name": "sum_third_noninc_p0",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "sum_third_inc_p1",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of chart-normalized r_ij over incident j (scale-safe)"
+    },
+    {
+      "name": "sum_third_noninc_p1",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "sum_third_inc_p2",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of chart-normalized r_ij over incident j (scale-safe)"
+    },
+    {
+      "name": "sum_third_noninc_p2",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "sum_third_inc_p3",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of chart-normalized r_ij over incident j (scale-safe)"
+    },
+    {
+      "name": "sum_third_noninc_p3",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "sum_third_inc_p4",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of chart-normalized r_ij over incident j (scale-safe)"
+    },
+    {
+      "name": "sum_third_noninc_p4",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "sum_third_inc_p5",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of chart-normalized r_ij over incident j (scale-safe)"
+    },
+    {
+      "name": "sum_third_noninc_p5",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "sum_third_inc_p6",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of chart-normalized r_ij over incident j (scale-safe)"
+    },
+    {
+      "name": "sum_third_noninc_p6",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "sum_third_inc_p7",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of chart-normalized r_ij over incident j (scale-safe)"
+    },
+    {
+      "name": "sum_third_noninc_p7",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "sum_third_inc_p8",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of chart-normalized r_ij over incident j (scale-safe)"
+    },
+    {
+      "name": "sum_third_noninc_p8",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "sum_third_inc_p9",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of chart-normalized r_ij over incident j (scale-safe)"
+    },
+    {
+      "name": "sum_third_noninc_p9",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    },
+    {
+      "name": "sum_third_inc_p10",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": "sum of chart-normalized r_ij over incident j (scale-safe)"
+    },
+    {
+      "name": "sum_third_noninc_p10",
+      "kind": "design_weighted_third_sum",
+      "zero": false,
+      "scale_safe": true,
+      "on_cubic": false,
+      "rational_over_Q": false,
+      "F_zero": false,
+      "notes": ""
+    }
+  ],
+  "one_param_families": [],
+  "landing": {
+    "any_op_on_cubic": false,
+    "any_rational_on_cubic": false,
+    "K_proj_point_from_ops": false,
+    "reason": "No enumerated design-generated ambient vector lands on F=0. No Q-rational op output on the split cubic. Split-model rational points of V(F) already known (e.g. e_i) are not K_proj-points of X_gen without equivariant descent/bridge."
+  }
+}

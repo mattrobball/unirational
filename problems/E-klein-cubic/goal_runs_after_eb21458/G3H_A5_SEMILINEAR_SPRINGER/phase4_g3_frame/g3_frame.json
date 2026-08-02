@@ -1,0 +1,150 @@
+{
+  "classes": [
+    {
+      "class_index": 1,
+      "direct_phi_zero": {
+        "identity": "Phi(a_i)=0",
+        "proof": "On the frame open, M a_i is projectively equal to P_i (after tau-normalization of weights). Phase 3 gives F(P_i)=0. By definition Phi(a)=F(sum a_r frame_r / tau^{deg}), so Phi(a_i)=0 as an identity of L_i-valued functions on the open."
+      },
+      "field_L_i": {
+        "base": "K_proj = k(P(W))^G",
+        "coset_basis_interface": {
+          "n_cosets": 11,
+          "note": "G4 supplies executable coset permutation of order-image 660",
+          "sha256": "381c046fa4bdb0273e933df10959df21d45eef1631cf2a3db082a87284e7121c",
+          "source": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/coset_actions.json"
+        },
+        "degree": 11,
+        "degree_odd": true,
+        "galois_module": "permutation module on G/H_i (coset basis)",
+        "presentation": "L_i = k(P(W))^{H_i}",
+        "primitive_element": {
+          "construction": "Any H_i-invariant rational function on P(W) with full orbit size 11 under G; standard choice is a ratio of Reynolds averages of a linear form to a high even power (cf. A5Q FIELD_L*). Characteristic polynomial is the degree-11 resolvent with coefficients in K_proj.",
+          "multiplication": "reduce mod minimal polynomial mu_i",
+          "name": "theta_1",
+          "norm": "(-1)^{11} constant term of mu_i",
+          "power_basis": [
+            "theta_1^0",
+            "theta_1^1",
+            "theta_1^2",
+            "theta_1^3",
+            "theta_1^4",
+            "theta_1^5",
+            "theta_1^6",
+            "theta_1^7",
+            "theta_1^8",
+            "theta_1^9",
+            "theta_1^10"
+          ],
+          "trace": "sum of Galois conjugates = -coeff of T^{10}"
+        }
+      },
+      "g3_frame_point": {
+        "definition": "a_i = Mbar^{-1}(P_i / tau^{33})",
+        "frame": [
+          "x",
+          "C",
+          "D",
+          "E",
+          "K_7"
+        ],
+        "frame_degrees": [
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariance": "a_i is H_i-invariant rational map, hence L_i-valued",
+        "landing": "Phi(a_i)=0 by F(M a_i)=F(P_i)=0 (phase 3)",
+        "open": "det M(w) != 0 and P_i(w) != 0 and tau != 0",
+        "power_basis_reduction": {
+          "explicit_coefficient_table": "formula-level; modular interpolation certificates in modular_frame_samples.json",
+          "method": "Vandermonde on the eleven Galois conjugates a_i(g_j \u00b7 w) for coset representatives g_j; solve for coefficients in K_proj of each coordinate in the power basis 1,theta,...,theta^{10}",
+          "status": "INTERFACE_INSTALLED"
+        },
+        "tau": "f3^2/f5"
+      },
+      "label": "A5_class_1",
+      "phi_binding": {
+        "g3a_status": "G3A-ARITHMETIC-DOMINANCE-PASS",
+        "generic_cubic_sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53"
+      }
+    },
+    {
+      "class_index": 2,
+      "direct_phi_zero": {
+        "identity": "Phi(a_i)=0",
+        "proof": "On the frame open, M a_i is projectively equal to P_i (after tau-normalization of weights). Phase 3 gives F(P_i)=0. By definition Phi(a)=F(sum a_r frame_r / tau^{deg}), so Phi(a_i)=0 as an identity of L_i-valued functions on the open."
+      },
+      "field_L_i": {
+        "base": "K_proj = k(P(W))^G",
+        "coset_basis_interface": {
+          "n_cosets": 11,
+          "note": "G4 supplies executable coset permutation of order-image 660",
+          "sha256": "381c046fa4bdb0273e933df10959df21d45eef1631cf2a3db082a87284e7121c",
+          "source": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/coset_actions.json"
+        },
+        "degree": 11,
+        "degree_odd": true,
+        "galois_module": "permutation module on G/H_i (coset basis)",
+        "presentation": "L_i = k(P(W))^{H_i}",
+        "primitive_element": {
+          "construction": "Any H_i-invariant rational function on P(W) with full orbit size 11 under G; standard choice is a ratio of Reynolds averages of a linear form to a high even power (cf. A5Q FIELD_L*). Characteristic polynomial is the degree-11 resolvent with coefficients in K_proj.",
+          "multiplication": "reduce mod minimal polynomial mu_i",
+          "name": "theta_2",
+          "norm": "(-1)^{11} constant term of mu_i",
+          "power_basis": [
+            "theta_2^0",
+            "theta_2^1",
+            "theta_2^2",
+            "theta_2^3",
+            "theta_2^4",
+            "theta_2^5",
+            "theta_2^6",
+            "theta_2^7",
+            "theta_2^8",
+            "theta_2^9",
+            "theta_2^10"
+          ],
+          "trace": "sum of Galois conjugates = -coeff of T^{10}"
+        }
+      },
+      "g3_frame_point": {
+        "definition": "a_i = Mbar^{-1}(P_i / tau^{33})",
+        "frame": [
+          "x",
+          "C",
+          "D",
+          "E",
+          "K_7"
+        ],
+        "frame_degrees": [
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariance": "a_i is H_i-invariant rational map, hence L_i-valued",
+        "landing": "Phi(a_i)=0 by F(M a_i)=F(P_i)=0 (phase 3)",
+        "open": "det M(w) != 0 and P_i(w) != 0 and tau != 0",
+        "power_basis_reduction": {
+          "explicit_coefficient_table": "formula-level; modular interpolation certificates in modular_frame_samples.json",
+          "method": "Vandermonde on the eleven Galois conjugates a_i(g_j \u00b7 w) for coset representatives g_j; solve for coefficients in K_proj of each coordinate in the power basis 1,theta,...,theta^{10}",
+          "status": "INTERFACE_INSTALLED"
+        },
+        "tau": "f3^2/f5"
+      },
+      "label": "A5_class_2",
+      "phi_binding": {
+        "g3a_status": "G3A-ARITHMETIC-DOMINANCE-PASS",
+        "generic_cubic_sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53"
+      }
+    }
+  ],
+  "marker": "G3H-SEMILINEAR-G3-FRAME-PASS",
+  "peak_rss_mb": 83.3125,
+  "schema": "g3h-phase4-g3-frame-v1",
+  "wall_seconds": 0.0013151168823242188
+}

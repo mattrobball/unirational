@@ -1,0 +1,30 @@
+{
+  "bindings_sha256": {
+    "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811",
+    "goal_runs_after_0aecc89/G3P_POLAR_ODD_DEGREE_DESCENT/STATUS.md": "48fe7896db3bf24fd3285777b0c4b817d1e13a283b246b531c553a90e0d36295",
+    "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/INDUCED_CYCLE_REFUTATION.md": "a2828c084a24e067a6096f29a0e8dc85675f06d4cdd74b97bc276219817c9e1f",
+    "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/STATUS.md": "53e4e5e97951af7066c7f7aadfd8f11f831f50df4070bc95f18da33cd1358aaa",
+    "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/audit_induced_refutation.py": "7ff154384de1856dd65b125bdacac3be8f539b301a54e26ec980f52fc46616d4",
+    "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/cycles.json": "08da83ac0e6aabdc6852318a670c842210ad4850e9a29f3219e82cda07e82834",
+    "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/STATUS.md": "cdb871f8ef2f9f247439cec2108f748c8af7636743d478e3c77efb01ac54e03d",
+    "goal_runs_after_35fa/G_UNIVERSAL/STATUS.md": "fe8a88bac91187539498a82a5cbb3589a3d76c0cef5358696341aba132023532",
+    "goal_runs_after_35fa/H_A5_TWISTS/STATUS.md": "2df8d8d157b2f401a44b41aa3bd02dd080ca1747e73f924b0f884fb4ba37e706",
+    "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+    "goals_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER.md": "63368d2687cdf0709c7371a9498d992b6af4c888684a67f8858ed91da5665014"
+  },
+  "consumed_commit": "d1f43d6e393618412dfbe223e9f828a64509f629",
+  "phase_markers": [
+    "G3H-G7B-QUARANTINE-PASS",
+    "G3H-CUBIC-COMPRESSION-PASS",
+    "G3H-SEMILINEAR-LANDING-PASS",
+    "G3H-SEMILINEAR-G3-FRAME-PASS",
+    "G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED"
+  ],
+  "pinned_main_target": "eb21458bea684d2399ad18f003e2be8ebdd161ce",
+  "resources": {
+    "peak_rss_mb": 83.3125,
+    "python": "3.14.6",
+    "wall_seconds": 25.798941373825073
+  },
+  "schema": "g3h-input-manifest-v1"
+}

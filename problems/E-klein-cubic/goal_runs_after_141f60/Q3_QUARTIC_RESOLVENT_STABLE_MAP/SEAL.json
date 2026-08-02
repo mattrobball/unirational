@@ -1,0 +1,107 @@
+{
+  "format": "q3-seal-v1",
+  "primary_exit": "Q3-SCHUR-MONODROMY-PASS",
+  "also_achieved": [
+    "Q3-QUARTIC-RESOLVENT-MODEL-PASS",
+    "Q3-SCHUR-MONODROMY-PASS"
+  ],
+  "not_achieved": [
+    "Q3-STABLE-MAP-HEADLINE-POSITIVE",
+    "Q3-GENERALIZED-TWISTED-CUBIC-HEADLINE-POSITIVE",
+    "Q3-BOUNDARY-REDUCTION-PASS",
+    "BRIDGE_STABLE_CUBIC_POS"
+  ],
+  "headline": "OPEN",
+  "pinned_goal_baseline": "141f6042f628f984771fc79d8d16beb12cedcb94",
+  "peak_rss_mb": 65.25,
+  "wall_s": 0.45810723304748535,
+  "files": {
+    "INPUT_MANIFEST.json": {
+      "sha256": "9474866a684ac0dcb51a06f8072d43c360e1c70b2657014b092dbe6476e5408f",
+      "bytes": 6016
+    },
+    "quartic_resolvent.json": {
+      "sha256": "6bd3d56a0d77ee637e994f2b62b1e763064186981098b3fae2cb63a43a6ed5d3",
+      "bytes": 3741
+    },
+    "monodromy.json": {
+      "sha256": "51f0ed059da5cb5689e6549f26ff0406cb8e142f03c4fa20a5eb1c4b7aeec19f",
+      "bytes": 6885
+    },
+    "dominance_sample.json": {
+      "sha256": "635c11f50c0def868e9799f57156583446dfe6e9b5f4874923942973517d2142",
+      "bytes": 1493
+    },
+    "sym_cube.json": {
+      "sha256": "70bfa38dbfecf708c86e1f447b88f8aa985372a637a26ef8794ed340f0a327a6",
+      "bytes": 1989
+    },
+    "boundary.json": {
+      "sha256": "1a65e952030b603511de43dd820e461522bcf053817ea55f5ffd4ad1464eb29b",
+      "bytes": 22451
+    },
+    "bridge_status.json": {
+      "sha256": "0264b39ea5a2166905770d57db6bafdae5448112cdfcfa0abdc7a181ffc8d6b6",
+      "bytes": 531
+    },
+    "produce_meta.json": {
+      "sha256": "28b23604a289b891627815617e3a210a6f50694f45dbf5a43fded46abb871d09",
+      "bytes": 339
+    },
+    "QUARTIC_RESOLVENT_MODEL.md": {
+      "sha256": "8925a52f8209e624d973f7792569f5cf454fa1f7f2564ff9c78ba8a8b1cf0865",
+      "bytes": 2620
+    },
+    "DEGREE8_PULLBACK.md": {
+      "sha256": "1942e3c4ba129816beceea6dfbc0b27ae317b459ee301a82fb85cb83788b9546",
+      "bytes": 2551
+    },
+    "SYMMETRIC_CUBE_PULLBACK.md": {
+      "sha256": "96adeaef9b25156ee42c124259f88ba02013651dfc550c6eceb7675b131e1c21",
+      "bytes": 747
+    },
+    "BOUNDARY_STABLE_MAPS.md": {
+      "sha256": "1fab686a5839c533eb6b12a3db98f0e6cecfecb4b63ef55b4b581c522d9ba87b",
+      "bytes": 1307
+    },
+    "STATUS.md": {
+      "sha256": "21f3b5c219e6ccafc98bb79ac39bc620cac57ed2a6a1cd1c1b32f08213b1f442",
+      "bytes": 2044
+    },
+    "REPLAY.md": {
+      "sha256": "09ac197eec59b4295fc7d60a20df234f1a70dcffa1b6029d7d80166469ba4646",
+      "bytes": 965
+    },
+    "produce.py": {
+      "sha256": "7ae0d08ba2a84ef7efbc09cf8edc96c44f1bb9b70fc864cae5b333172c4edd48",
+      "bytes": 48368
+    },
+    "q3_core.py": {
+      "sha256": "8a56efc574133ce56f98ffb85bd023a3e3e72b7ce47ad31260dfe2d4be6c220d",
+      "bytes": 15956
+    },
+    "verify_monodromy.py": {
+      "sha256": "1f5da0195bb3746f4977444d79415c133d6e1887c00b7e3f3497b9659ea37549",
+      "bytes": 4255
+    },
+    "verify_stable_map.py": {
+      "sha256": "1dc467d72672f95eac3b4282f17de9f70702446d18b33f48a8915352dfd8f2bb",
+      "bytes": 3704
+    },
+    "verify_point.py": {
+      "sha256": "043329df07f5bbaab4da38879fd387333822d081c553a669f703c1bcf5d90a7c",
+      "bytes": 2149
+    },
+    "make_seal.py": {
+      "sha256": "318f7d848a98832b33b8fbb1c859aa9eef30cea1ea5d865a4cb2643fb7167006",
+      "bytes": 2318
+    }
+  },
+  "nonclaims": [
+    "no K_Schur-point from virtual count eight",
+    "no fabricated stable map or GTC Hilbert point",
+    "no replacement of installed Schur quartic by a general quartet",
+    "modular Klein probes are not char-0 reconstruction"
+  ],
+  "marker": "Q3_SEAL_OK"
+}

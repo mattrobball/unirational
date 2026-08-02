@@ -1,0 +1,26 @@
+{
+  "audit_marker": "G7B-INDUCED-CYCLE-REFUTED",
+  "audit_stdout_tail": "PASS g^2=-11\nPASS S^2=T^11=(ST)^3=1\nPASS ST^3ST^4ST^3=P, P^5=1\nPASS F(Sx)=F(Tx)=F(Px)=F(x) exactly in Q(zeta_11)\nPASS exact Cayley consistency on all 660 elements of PSL_2(F_11)\nStab([e0]) = 11\n|G\u00b7[e0]| = 60\nclass 1: |H \u2229 Stab([e0])| = 1\nclass 1: equivar fails s=11/11 t=11/11\nclass 1: well-defined failures coset0 = 59/60\nclass 2: |H \u2229 Stab([e0])| = 1\nclass 2: equivar fails s=11/11 t=11/11\nclass 2: well-defined failures coset0 = 59/60\nTOTAL equivar failures 44 of 44\nG7B-INDUCED-CYCLE-REFUTED\nG7B_AUDIT_OK",
+  "cycles_materialization_status": "RESIDUAL",
+  "cycles_schema": "g7b-induced-double-cycles-residual-v2",
+  "defects_recorded": {
+    "Stab_G_e0": 11,
+    "base_line_e0_stabilized_by_A5": false,
+    "coset_map_well_defined": false,
+    "equivariance_failures": "44/44",
+    "forbidden_construction": "p_i = rho(g_i)*e0",
+    "orbit_G_e0": 60
+  },
+  "historical_hashes": {
+    "INDUCED_CYCLE_REFUTATION.md": "a2828c084a24e067a6096f29a0e8dc85675f06d4cdd74b97bc276219817c9e1f",
+    "STATUS.md_first_line": "G7-PROJECTIVE-SCALING-PASS",
+    "audit_induced_refutation.py": "7ff154384de1856dd65b125bdacac3be8f539b301a54e26ec980f52fc46616d4",
+    "cycles.json": "08da83ac0e6aabdc6852318a670c842210ad4850e9a29f3219e82cda07e82834"
+  },
+  "historical_rewrite": false,
+  "marker": "G3H-G7B-QUARANTINE-PASS",
+  "peak_rss_mb": 74.140625,
+  "policy": "G3H consumes G7B audit read-only; does not rewrite G7B seals",
+  "schema": "g3h-phase1-g7b-quarantine-v1",
+  "wall_seconds": 20.64119005203247
+}

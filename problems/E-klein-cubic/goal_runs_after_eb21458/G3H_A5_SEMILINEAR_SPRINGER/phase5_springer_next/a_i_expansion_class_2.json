@@ -1,0 +1,670 @@
+{
+  "class_index": 2,
+  "coordinates": [
+    {
+      "coefficients": [
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_0)",
+          "power_index": 0,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_0_0",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_1)",
+          "power_index": 1,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_0_1",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_2)",
+          "power_index": 2,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_0_2",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_3)",
+          "power_index": 3,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_0_3",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_4)",
+          "power_index": 4,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_0_4",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_5)",
+          "power_index": 5,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_0_5",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_6)",
+          "power_index": 6,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_0_6",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_7)",
+          "power_index": 7,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_0_7",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_8)",
+          "power_index": 8,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_0_8",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_9)",
+          "power_index": 9,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_0_9",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_10)",
+          "power_index": 10,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_0_10",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        }
+      ],
+      "element_of": "L_2 = K_proj[theta_2]/(mu_2)",
+      "frame_coordinate_index": 0,
+      "frame_name": "x",
+      "power_basis_expansion": "a^{(r)} = sum_{k=0}^{10} beta_2_0_10 * theta_2^k"
+    },
+    {
+      "coefficients": [
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_0)",
+          "power_index": 0,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_1_0",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_1)",
+          "power_index": 1,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_1_1",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_2)",
+          "power_index": 2,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_1_2",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_3)",
+          "power_index": 3,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_1_3",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_4)",
+          "power_index": 4,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_1_4",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_5)",
+          "power_index": 5,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_1_5",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_6)",
+          "power_index": 6,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_1_6",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_7)",
+          "power_index": 7,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_1_7",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_8)",
+          "power_index": 8,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_1_8",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_9)",
+          "power_index": 9,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_1_9",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_10)",
+          "power_index": 10,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_1_10",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        }
+      ],
+      "element_of": "L_2 = K_proj[theta_2]/(mu_2)",
+      "frame_coordinate_index": 1,
+      "frame_name": "C",
+      "power_basis_expansion": "a^{(r)} = sum_{k=0}^{10} beta_2_1_10 * theta_2^k"
+    },
+    {
+      "coefficients": [
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_0)",
+          "power_index": 0,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_2_0",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_1)",
+          "power_index": 1,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_2_1",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_2)",
+          "power_index": 2,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_2_2",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_3)",
+          "power_index": 3,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_2_3",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_4)",
+          "power_index": 4,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_2_4",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_5)",
+          "power_index": 5,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_2_5",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_6)",
+          "power_index": 6,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_2_6",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_7)",
+          "power_index": 7,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_2_7",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_8)",
+          "power_index": 8,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_2_8",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_9)",
+          "power_index": 9,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_2_9",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_10)",
+          "power_index": 10,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_2_10",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        }
+      ],
+      "element_of": "L_2 = K_proj[theta_2]/(mu_2)",
+      "frame_coordinate_index": 2,
+      "frame_name": "D",
+      "power_basis_expansion": "a^{(r)} = sum_{k=0}^{10} beta_2_2_10 * theta_2^k"
+    },
+    {
+      "coefficients": [
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_0)",
+          "power_index": 0,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_3_0",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_1)",
+          "power_index": 1,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_3_1",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_2)",
+          "power_index": 2,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_3_2",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_3)",
+          "power_index": 3,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_3_3",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_4)",
+          "power_index": 4,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_3_4",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_5)",
+          "power_index": 5,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_3_5",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_6)",
+          "power_index": 6,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_3_6",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_7)",
+          "power_index": 7,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_3_7",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_8)",
+          "power_index": 8,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_3_8",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_9)",
+          "power_index": 9,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_3_9",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_10)",
+          "power_index": 10,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_3_10",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        }
+      ],
+      "element_of": "L_2 = K_proj[theta_2]/(mu_2)",
+      "frame_coordinate_index": 3,
+      "frame_name": "E",
+      "power_basis_expansion": "a^{(r)} = sum_{k=0}^{10} beta_2_3_10 * theta_2^k"
+    },
+    {
+      "coefficients": [
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_0)",
+          "power_index": 0,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_4_0",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_1)",
+          "power_index": 1,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_4_1",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_2)",
+          "power_index": 2,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_4_2",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_3)",
+          "power_index": 3,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_4_3",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_4)",
+          "power_index": 4,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_4_4",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_5)",
+          "power_index": 5,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_4_5",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_6)",
+          "power_index": 6,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_4_6",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_7)",
+          "power_index": 7,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_4_7",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_8)",
+          "power_index": 8,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_4_8",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_9)",
+          "power_index": 9,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_4_9",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        },
+        {
+          "as_element_of": "K_proj",
+          "dual_trace_formula": "Tr(a^{(r)} * omega_10)",
+          "power_index": 10,
+          "secondary_basis_status": "SLOT_INSTALLED_DUAL_FORMULA",
+          "secondary_components": null,
+          "secondary_residual": "Cancelled secondary numerators/denominators of beta require invariant reduction of degree-33 frame inverse; see residual gate G3H-AI-SECONDARY-TABLE-OPEN.",
+          "symbol": "beta_2_4_10",
+          "vandermonde_formula": "row_r of V^{-1} applied to conjugate vector (a_r(g_0 w),...,a_r(g_10 w))"
+        }
+      ],
+      "element_of": "L_2 = K_proj[theta_2]/(mu_2)",
+      "frame_coordinate_index": 4,
+      "frame_name": "K_7",
+      "power_basis_expansion": "a^{(r)} = sum_{k=0}^{10} beta_2_4_10 * theta_2^k"
+    }
+  ],
+  "definition": "a_i = Mbar^{-1}(P_i / tau^{33})",
+  "dual_calculus": {
+    "coefficient_extraction": {
+      "equivalent_Vandermonde": "If x^{(j)} = x(g_j\u00b7w) and theta^{(j)}=theta(g_j\u00b7w) are the eleven coset conjugates, then (beta_0,...,beta_10)^T = V^{-1} (x^{(j)})_j with V the Vandermonde matrix V_{j k}=(theta^{(j)})^k.",
+      "formula": "beta_k(x) = Tr_{L_i/K_proj}(x * omega_k) \u2208 K_proj",
+      "secondary_expansion_of_beta": "Each beta_k is a degree-0 G-invariant rational function, hence a 12-vector over P0 in the certified secondary basis ['1', 'f7', 'f9', 'f10', 'f12', 'f14', 'f7^2', 'f7*f9', 'f9^2', 'f9*f10', 'f7^3', 'f9^2*f10']. Explicit cancelled numerators/denominators require Reynolds projection of the dual-trace (or multipoint interpolation of the Vandermonde system) applied to the weight-0 rational map a_i = Mbar^{-1}(P_i/tau^{33})."
+    },
+    "degree": 11,
+    "dual_basis": {
+      "b_recurrence": "b_10 = 1; b_j = theta * b_{j+1} + c_{j+1} for j=9..0 (Horner: mu(T)=(T-theta) sum b_j T^j)",
+      "formula": "omega_k = b_k / mu'(theta)",
+      "name": "omega_k",
+      "trace_duality": "Tr(theta^i * omega_k) = delta_{ik}"
+    },
+    "minimal_polynomial": {
+      "coefficients_in": "K_proj (secondary 12-vectors over P0=Q(t3,t6,t8,t11))",
+      "construction": "mu is the characteristic polynomial of multiplication-by-theta on the coset permutation module; equivalently the resolvent of a separating H_i-invariant. G4 coset action supplies the Gal(L/K) permutation of order-image 660 on the 11 roots.",
+      "shape": "mu(T)=T^11 + c_10 T^10 + ... + c_0",
+      "source_coset": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/coset_actions.json"
+    },
+    "power_basis": [
+      "theta^0",
+      "theta^1",
+      "theta^2",
+      "theta^3",
+      "theta^4",
+      "theta^5",
+      "theta^6",
+      "theta^7",
+      "theta^8",
+      "theta^9",
+      "theta^10"
+    ]
+  },
+  "exact_equivalent_note": "The dual-trace presentation beta_k=Tr(a_r omega_k) is an exact equivalent of the power-basis expansion: omega_k and Tr are explicit once mu and theta are fixed, and beta_k is uniquely determined in K_proj. Fully cancelled secondary 12-vectors for each beta remain residual (degree-33 invariant reduction).",
+  "expansion_status": {
+    "dual_trace_formulas": "INSTALLED",
+    "marker": "G3H-AI-EXPANSION-DUAL-PASS",
+    "power_basis_structure": "INSTALLED",
+    "residual_gate": "G3H-AI-SECONDARY-TABLE-OPEN",
+    "secondary_basis_tables_of_beta": "RESIDUAL_OPEN",
+    "vandermonde_reconstruction": "INSTALLED"
+  },
+  "field": {
+    "K_proj": "k(P(W))^G",
+    "L_i": "k(P(W))^{H_2}",
+    "coset_interface": {
+      "class_label": "A5_class_2",
+      "g4_sha256": "381c046fa4bdb0273e933df10959df21d45eef1631cf2a3db082a87284e7121c",
+      "image_order_note": 660,
+      "n_cosets": 11
+    },
+    "degree": 11,
+    "degree_odd": true,
+    "power_basis": [
+      "theta^0",
+      "theta^1",
+      "theta^2",
+      "theta^3",
+      "theta^4",
+      "theta^5",
+      "theta^6",
+      "theta^7",
+      "theta^8",
+      "theta^9",
+      "theta^10"
+    ],
+    "primitive_element": "theta_2"
+  },
+  "label": "A5_class_2",
+  "open": "det M(w) != 0 and P_i(w) != 0 and tau != 0",
+  "phi_zero": {
+    "identity": "Phi(a_i)=0",
+    "proof": "On the frame open, M a_i is projectively equal to P_i (after tau-normalization of weights). Phase 3 gives F(P_i)=0. By definition Phi(a)=F(sum a_r frame_r / tau^{deg}), so Phi(a_i)=0 as an identity of L_i-valued functions on the open."
+  }
+}

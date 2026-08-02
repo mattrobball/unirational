@@ -1,0 +1,75 @@
+{
+  "status": "COMPUTED",
+  "sample_quartet": [
+    [
+      3,
+      -3,
+      3,
+      0,
+      0
+    ],
+    [
+      2,
+      -1,
+      -1,
+      -1,
+      -2
+    ],
+    [
+      3,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      3,
+      -2,
+      2,
+      -1,
+      2
+    ]
+  ],
+  "hyperplane": [
+    "4/3",
+    "-2/3",
+    "-2",
+    "10/3",
+    "1"
+  ],
+  "resolvent_triple": [
+    [
+      "-865728",
+      "-47889792",
+      "-10443168",
+      "-27060480",
+      "38543040"
+    ],
+    [
+      "16442352",
+      "34542936",
+      "-56277504",
+      "-10235160",
+      "-77332320"
+    ],
+    [
+      "-6800112",
+      "-285768",
+      "2449440",
+      "4304016",
+      "-571536"
+    ]
+  ],
+  "triple_projective_rank": 3,
+  "quartet_projective_rank": 4,
+  "all_points_on_klein_cubic": true,
+  "pairing_residual_reconstruction_ok": true,
+  "differential_rank_quartet_to_triple": null,
+  "note": "Exact rational sample on the split Klein cubic over Q: full-span quartet, resolvent triple on the cubic, pairing residuals reconstruct.  Proves the geometry of the resolvent map is realized over Q on the split model.  Does not certify the installed Schur-quartic resolvent triple.  Dominance ranks 9/10/6 are imported from the sealed incidence_generality packet.",
+  "imported_sealed_ranks": {
+    "quartet_to_triple": 9,
+    "quartet_to_span_and_triple": 10,
+    "quartet_on_fixed_section_to_triple": 6,
+    "source": "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/incidence_generality/"
+  }
+}

@@ -1,3 +1,3 @@
 # G4A ops
 
-W-valued projector applications (M·cycle)_j=sum M_ji W_i.
+Full W-vectors `(M·cycle)_j` for P1,P10,P5; M2/M3 + 27 F-polarizations.

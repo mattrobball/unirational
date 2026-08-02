@@ -1,0 +1,1343 @@
+{
+  "schema": "g7c-third-intersections-v1",
+  "polarization": {
+    "formula": "B(u,v,w) = (1/3) sum_i (u_i v_i w_{i+1} + u_i w_i v_{i+1} + v_i w_i u_{ip})",
+    "normalization": "B(x,x,x)=F(x)=sum_i x_i^2 x_{i+1}",
+    "third_intersection": "r = B(p,q,q)p - B(p,p,q)q",
+    "bidegree": {
+      "p": 2,
+      "q": 2
+    },
+    "formula_verified_sample": true
+  },
+  "n_pairs": 121,
+  "n_incident": 55,
+  "n_nonincident": 66,
+  "status_counts": {
+    "coincide_pq": 6,
+    "ok": 109,
+    "line_on_cubic": 4,
+    "coincide_r_p": 2
+  },
+  "status_by_incidence": {
+    "False:coincide_pq": 6,
+    "True:ok": 51,
+    "False:ok": 58,
+    "True:line_on_cubic": 4,
+    "False:coincide_r_p": 2
+  },
+  "lines_on_cubic": [
+    {
+      "i": 2,
+      "j": 7,
+      "incident": true,
+      "p_rational_Q": false,
+      "q_rational_Q": false,
+      "both_rational_Q": false,
+      "note": "Line span(p,q) \u2282 V(F) because F(sp+tq)\u22610 (B(p,p,q)=B(p,q,q)=0 and F(p)=F(q)=0)."
+    },
+    {
+      "i": 6,
+      "j": 2,
+      "incident": true,
+      "p_rational_Q": false,
+      "q_rational_Q": false,
+      "both_rational_Q": false,
+      "note": "Line span(p,q) \u2282 V(F) because F(sp+tq)\u22610 (B(p,p,q)=B(p,q,q)=0 and F(p)=F(q)=0)."
+    },
+    {
+      "i": 6,
+      "j": 8,
+      "incident": true,
+      "p_rational_Q": false,
+      "q_rational_Q": false,
+      "both_rational_Q": false,
+      "note": "Line span(p,q) \u2282 V(F) because F(sp+tq)\u22610 (B(p,p,q)=B(p,q,q)=0 and F(p)=F(q)=0)."
+    },
+    {
+      "i": 8,
+      "j": 0,
+      "incident": true,
+      "p_rational_Q": true,
+      "q_rational_Q": true,
+      "both_rational_Q": true,
+      "note": "Line span(p,q) \u2282 V(F) because F(sp+tq)\u22610 (B(p,p,q)=B(p,q,q)=0 and F(p)=F(q)=0)."
+    }
+  ],
+  "coincide_pq_pairs": [
+    {
+      "i": 0,
+      "j": 0,
+      "incident": false
+    },
+    {
+      "i": 1,
+      "j": 1,
+      "incident": false
+    },
+    {
+      "i": 2,
+      "j": 2,
+      "incident": false
+    },
+    {
+      "i": 3,
+      "j": 3,
+      "incident": false
+    },
+    {
+      "i": 4,
+      "j": 4,
+      "incident": false
+    },
+    {
+      "i": 6,
+      "j": 7,
+      "incident": false
+    }
+  ],
+  "n_nonzero_residuals": 111,
+  "n_unique_residual_proj_points": 97,
+  "multiplicity_hits": {
+    "3638711991": [
+      {
+        "i": 0,
+        "j": 1,
+        "incident": true
+      },
+      {
+        "i": 1,
+        "j": 0,
+        "incident": false
+      }
+    ],
+    "3983705847": [
+      {
+        "i": 0,
+        "j": 2,
+        "incident": false
+      },
+      {
+        "i": 2,
+        "j": 0,
+        "incident": true
+      }
+    ],
+    "1675559362": [
+      {
+        "i": 0,
+        "j": 3,
+        "incident": false
+      },
+      {
+        "i": 3,
+        "j": 0,
+        "incident": true
+      }
+    ],
+    "611528301": [
+      {
+        "i": 0,
+        "j": 4,
+        "incident": true
+      },
+      {
+        "i": 4,
+        "j": 0,
+        "incident": false
+      }
+    ],
+    "3918053069": [
+      {
+        "i": 0,
+        "j": 7,
+        "incident": true
+      },
+      {
+        "i": 6,
+        "j": 0,
+        "incident": true
+      }
+    ],
+    "1905873861": [
+      {
+        "i": 1,
+        "j": 2,
+        "incident": true
+      },
+      {
+        "i": 2,
+        "j": 1,
+        "incident": false
+      }
+    ],
+    "829833825": [
+      {
+        "i": 1,
+        "j": 3,
+        "incident": true
+      },
+      {
+        "i": 3,
+        "j": 1,
+        "incident": false
+      }
+    ],
+    "3175383306": [
+      {
+        "i": 1,
+        "j": 4,
+        "incident": false
+      },
+      {
+        "i": 4,
+        "j": 1,
+        "incident": true
+      }
+    ],
+    "882366858": [
+      {
+        "i": 1,
+        "j": 7,
+        "incident": true
+      },
+      {
+        "i": 6,
+        "j": 1,
+        "incident": false
+      }
+    ],
+    "775305871": [
+      {
+        "i": 2,
+        "j": 3,
+        "incident": true
+      },
+      {
+        "i": 3,
+        "j": 2,
+        "incident": false
+      }
+    ],
+    "3670858833": [
+      {
+        "i": 2,
+        "j": 4,
+        "incident": false
+      },
+      {
+        "i": 4,
+        "j": 2,
+        "incident": true
+      }
+    ],
+    "4103994049": [
+      {
+        "i": 3,
+        "j": 4,
+        "incident": true
+      },
+      {
+        "i": 4,
+        "j": 3,
+        "incident": false
+      }
+    ],
+    "3560199188": [
+      {
+        "i": 3,
+        "j": 7,
+        "incident": true
+      },
+      {
+        "i": 6,
+        "j": 3,
+        "incident": false
+      }
+    ],
+    "2571005491": [
+      {
+        "i": 4,
+        "j": 7,
+        "incident": true
+      },
+      {
+        "i": 6,
+        "j": 4,
+        "incident": true
+      }
+    ]
+  },
+  "n_rational_residual_Q": 0,
+  "residual_points": [
+    {
+      "i": 0,
+      "j": 1,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3638711991"
+    },
+    {
+      "i": 0,
+      "j": 2,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3983705847"
+    },
+    {
+      "i": 0,
+      "j": 3,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1675559362"
+    },
+    {
+      "i": 0,
+      "j": 4,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "611528301"
+    },
+    {
+      "i": 0,
+      "j": 5,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3646449193"
+    },
+    {
+      "i": 0,
+      "j": 6,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "49889470"
+    },
+    {
+      "i": 0,
+      "j": 7,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3918053069"
+    },
+    {
+      "i": 0,
+      "j": 8,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3479547285"
+    },
+    {
+      "i": 0,
+      "j": 9,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3810562314"
+    },
+    {
+      "i": 0,
+      "j": 10,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "610898601"
+    },
+    {
+      "i": 1,
+      "j": 0,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3638711991"
+    },
+    {
+      "i": 1,
+      "j": 2,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1905873861"
+    },
+    {
+      "i": 1,
+      "j": 3,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "829833825"
+    },
+    {
+      "i": 1,
+      "j": 4,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3175383306"
+    },
+    {
+      "i": 1,
+      "j": 5,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "796508122"
+    },
+    {
+      "i": 1,
+      "j": 6,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "155355476"
+    },
+    {
+      "i": 1,
+      "j": 7,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "882366858"
+    },
+    {
+      "i": 1,
+      "j": 8,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2501530891"
+    },
+    {
+      "i": 1,
+      "j": 9,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "935499884"
+    },
+    {
+      "i": 1,
+      "j": 10,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3671338657"
+    },
+    {
+      "i": 2,
+      "j": 0,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3983705847"
+    },
+    {
+      "i": 2,
+      "j": 1,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1905873861"
+    },
+    {
+      "i": 2,
+      "j": 3,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "775305871"
+    },
+    {
+      "i": 2,
+      "j": 4,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3670858833"
+    },
+    {
+      "i": 2,
+      "j": 5,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3643424859"
+    },
+    {
+      "i": 2,
+      "j": 6,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 1,
+      "proj_key_hash": "1135918515"
+    },
+    {
+      "i": 2,
+      "j": 8,
+      "incident": false,
+      "status": "coincide_r_p",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1799903497"
+    },
+    {
+      "i": 2,
+      "j": 9,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "604726675"
+    },
+    {
+      "i": 2,
+      "j": 10,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2865762112"
+    },
+    {
+      "i": 3,
+      "j": 0,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1675559362"
+    },
+    {
+      "i": 3,
+      "j": 1,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "829833825"
+    },
+    {
+      "i": 3,
+      "j": 2,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "775305871"
+    },
+    {
+      "i": 3,
+      "j": 4,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 1,
+      "proj_key_hash": "4103994049"
+    },
+    {
+      "i": 3,
+      "j": 5,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3335982304"
+    },
+    {
+      "i": 3,
+      "j": 6,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "146668591"
+    },
+    {
+      "i": 3,
+      "j": 7,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3560199188"
+    },
+    {
+      "i": 3,
+      "j": 8,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2333655966"
+    },
+    {
+      "i": 3,
+      "j": 9,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "785139664"
+    },
+    {
+      "i": 3,
+      "j": 10,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "908002432"
+    },
+    {
+      "i": 4,
+      "j": 0,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "611528301"
+    },
+    {
+      "i": 4,
+      "j": 1,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3175383306"
+    },
+    {
+      "i": 4,
+      "j": 2,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3670858833"
+    },
+    {
+      "i": 4,
+      "j": 3,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 1,
+      "proj_key_hash": "4103994049"
+    },
+    {
+      "i": 4,
+      "j": 5,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "724290950"
+    },
+    {
+      "i": 4,
+      "j": 6,
+      "incident": false,
+      "status": "coincide_r_p",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1137100818"
+    },
+    {
+      "i": 4,
+      "j": 7,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2571005491"
+    },
+    {
+      "i": 4,
+      "j": 8,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3777314187"
+    },
+    {
+      "i": 4,
+      "j": 9,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3000174592"
+    },
+    {
+      "i": 4,
+      "j": 10,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2064425212"
+    },
+    {
+      "i": 5,
+      "j": 0,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1062197213"
+    },
+    {
+      "i": 5,
+      "j": 1,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2104060900"
+    },
+    {
+      "i": 5,
+      "j": 2,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1638737941"
+    },
+    {
+      "i": 5,
+      "j": 3,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2805495934"
+    },
+    {
+      "i": 5,
+      "j": 4,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "820933299"
+    },
+    {
+      "i": 5,
+      "j": 5,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "585533877"
+    },
+    {
+      "i": 5,
+      "j": 6,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "406120078"
+    },
+    {
+      "i": 5,
+      "j": 7,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2491102613"
+    },
+    {
+      "i": 5,
+      "j": 8,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "737005196"
+    },
+    {
+      "i": 5,
+      "j": 9,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3593946904"
+    },
+    {
+      "i": 5,
+      "j": 10,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "335002408"
+    },
+    {
+      "i": 6,
+      "j": 0,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3918053069"
+    },
+    {
+      "i": 6,
+      "j": 1,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "882366858"
+    },
+    {
+      "i": 6,
+      "j": 3,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3560199188"
+    },
+    {
+      "i": 6,
+      "j": 4,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2571005491"
+    },
+    {
+      "i": 6,
+      "j": 5,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3034650198"
+    },
+    {
+      "i": 6,
+      "j": 6,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "536556459"
+    },
+    {
+      "i": 6,
+      "j": 9,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2310082591"
+    },
+    {
+      "i": 6,
+      "j": 10,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "4104434426"
+    },
+    {
+      "i": 7,
+      "j": 0,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2559331896"
+    },
+    {
+      "i": 7,
+      "j": 1,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2510989213"
+    },
+    {
+      "i": 7,
+      "j": 2,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "806748568"
+    },
+    {
+      "i": 7,
+      "j": 3,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2412023088"
+    },
+    {
+      "i": 7,
+      "j": 4,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1336952659"
+    },
+    {
+      "i": 7,
+      "j": 5,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3885270875"
+    },
+    {
+      "i": 7,
+      "j": 6,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "99486802"
+    },
+    {
+      "i": 7,
+      "j": 7,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 1,
+      "proj_key_hash": "3078124657"
+    },
+    {
+      "i": 7,
+      "j": 8,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2737735545"
+    },
+    {
+      "i": 7,
+      "j": 9,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1914200145"
+    },
+    {
+      "i": 7,
+      "j": 10,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3094068241"
+    },
+    {
+      "i": 8,
+      "j": 1,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3071393113"
+    },
+    {
+      "i": 8,
+      "j": 2,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "348233118"
+    },
+    {
+      "i": 8,
+      "j": 3,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1882755212"
+    },
+    {
+      "i": 8,
+      "j": 4,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3639159757"
+    },
+    {
+      "i": 8,
+      "j": 5,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3936697972"
+    },
+    {
+      "i": 8,
+      "j": 6,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1987397146"
+    },
+    {
+      "i": 8,
+      "j": 7,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1619305437"
+    },
+    {
+      "i": 8,
+      "j": 8,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2635939015"
+    },
+    {
+      "i": 8,
+      "j": 9,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2635037257"
+    },
+    {
+      "i": 8,
+      "j": 10,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3794221864"
+    },
+    {
+      "i": 9,
+      "j": 0,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "596548072"
+    },
+    {
+      "i": 9,
+      "j": 1,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1903125701"
+    },
+    {
+      "i": 9,
+      "j": 2,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2158298872"
+    },
+    {
+      "i": 9,
+      "j": 3,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "871890373"
+    },
+    {
+      "i": 9,
+      "j": 4,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2466320629"
+    },
+    {
+      "i": 9,
+      "j": 5,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "994790323"
+    },
+    {
+      "i": 9,
+      "j": 6,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "847390031"
+    },
+    {
+      "i": 9,
+      "j": 7,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1684318423"
+    },
+    {
+      "i": 9,
+      "j": 8,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3562146547"
+    },
+    {
+      "i": 9,
+      "j": 9,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1124052349"
+    },
+    {
+      "i": 9,
+      "j": 10,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "352790356"
+    },
+    {
+      "i": 10,
+      "j": 0,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1096771338"
+    },
+    {
+      "i": 10,
+      "j": 1,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "2507477501"
+    },
+    {
+      "i": 10,
+      "j": 2,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "463202484"
+    },
+    {
+      "i": 10,
+      "j": 3,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "1866094234"
+    },
+    {
+      "i": 10,
+      "j": 4,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "271539082"
+    },
+    {
+      "i": 10,
+      "j": 5,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "305934121"
+    },
+    {
+      "i": 10,
+      "j": 6,
+      "incident": true,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3766215131"
+    },
+    {
+      "i": 10,
+      "j": 7,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3608295767"
+    },
+    {
+      "i": 10,
+      "j": 8,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3048664500"
+    },
+    {
+      "i": 10,
+      "j": 9,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3691191369"
+    },
+    {
+      "i": 10,
+      "j": 10,
+      "incident": false,
+      "status": "ok",
+      "rational_over_Q": false,
+      "chart_index": 0,
+      "proj_key_hash": "3403733146"
+    }
+  ],
+  "neighbor_secants_2_11_5_2": {
+    "Q_secants_among_neighbors_of_p": {
+      "n_pairs_expected": 110,
+      "n_lines_on_cubic": 4,
+      "n_rational_thirds_Q": 0
+    },
+    "P_secants_among_neighbors_of_q": {
+      "n_lines_on_cubic": 6,
+      "n_rational_thirds_Q": 0
+    },
+    "samples_line": [
+      {
+        "p_i": 0,
+        "j1": 7,
+        "j2": 8,
+        "status": "line_on_cubic"
+      },
+      {
+        "p_i": 1,
+        "j1": 2,
+        "j2": 7,
+        "status": "line_on_cubic"
+      },
+      {
+        "p_i": 1,
+        "j1": 7,
+        "j2": 8,
+        "status": "line_on_cubic"
+      },
+      {
+        "p_i": 4,
+        "j1": 2,
+        "j2": 7,
+        "status": "line_on_cubic"
+      }
+    ]
+  },
+  "within_class_secants": {
+    "P": {
+      "n_pairs": 55,
+      "n_lines_on_cubic": 3,
+      "n_nonzero_thirds": 52,
+      "n_rational_thirds_Q": 0
+    },
+    "Q": {
+      "n_pairs": 55,
+      "n_lines_on_cubic": 2,
+      "n_nonzero_thirds": 53,
+      "n_rational_thirds_Q": 0
+    }
+  },
+  "span_ranks": {
+    "P_lifts_Q_rank": 11,
+    "Q_lifts_Q_rank": 11,
+    "P_union_Q_Q_rank": 16,
+    "residual_incident_Q_rank": 41,
+    "residual_nonincident_Q_rank": 41,
+    "residual_all_Q_rank": 41,
+    "note": "Ranks are over Q of the 50-dimensional Q-embedding of Q(\u03b6\u2081\u2081)\u2075. Ambient projective span over Q(\u03b6\u2081\u2081) is at most 5."
+  },
+  "search": {
+    "K_proj_rational_residual_component": false,
+    "Q_rational_third_point": false,
+    "fixed_point_from_residuals": false,
+    "line_on_X_gen_from_incident": true,
+    "line_note": "4 incident pairs have span contained in V(F) on the split model. One of them is the classical coordinate line e0\u2013e2 (both endpoints Q-rational). These are split-model lines on the specialized Klein cubic; they are NOT automatically K_proj-lines on X_gen (require equivariant descent / G3B-style Fano section). No new bridge installed.",
+    "plane_conic_with_residual_line": false,
+    "effective_degree_two_subscheme": false,
+    "effective_degree_two_reason": "No residual Gal/scheme-theoretic length-two subscheme over K_proj was obtained. Multi-hit residual points are still degree >2 over the base after orbit closure. Signed CH_0 classes are not used as effective degree-two exits."
+  }
+}

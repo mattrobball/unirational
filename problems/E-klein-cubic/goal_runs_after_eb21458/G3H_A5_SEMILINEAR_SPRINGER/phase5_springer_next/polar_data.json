@@ -1,0 +1,6584 @@
+{
+  "Phi_q": {
+    "components": [
+      {
+        "den": "1",
+        "num": "t3",
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1",
+        "str": "t3"
+      }
+    ],
+    "full_12": {
+      "components": [
+        {
+          "den": "1",
+          "num": "t3",
+          "str": "t3"
+        },
+        {
+          "den": "1",
+          "num": "0",
+          "str": "0"
+        },
+        {
+          "den": "1",
+          "num": "0",
+          "str": "0"
+        },
+        {
+          "den": "1",
+          "num": "0",
+          "str": "0"
+        },
+        {
+          "den": "1",
+          "num": "0",
+          "str": "0"
+        },
+        {
+          "den": "1",
+          "num": "0",
+          "str": "0"
+        },
+        {
+          "den": "1",
+          "num": "0",
+          "str": "0"
+        },
+        {
+          "den": "1",
+          "num": "0",
+          "str": "0"
+        },
+        {
+          "den": "1",
+          "num": "0",
+          "str": "0"
+        },
+        {
+          "den": "1",
+          "num": "0",
+          "str": "0"
+        },
+        {
+          "den": "1",
+          "num": "0",
+          "str": "0"
+        },
+        {
+          "den": "1",
+          "num": "0",
+          "str": "0"
+        }
+      ],
+      "is_zero": false,
+      "nonzero": [
+        {
+          "basis": 0,
+          "degree": 0,
+          "den": "1",
+          "name": "1",
+          "num": "t3",
+          "str": "t3"
+        }
+      ]
+    },
+    "is_zero": false,
+    "nonzero_count": 1
+  },
+  "first_polar_M": [
+    [
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "t3",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "t3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "t3",
+              "str": "t3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "t3",
+              "str": "t3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      },
+      {
+        "components": [
+          {
+            "den": "3",
+            "num": "t6",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "t6/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "3",
+              "num": "t6",
+              "str": "t6/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "3",
+              "name": "1",
+              "num": "t6",
+              "str": "t6/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      },
+      {
+        "components": [
+          {
+            "den": "3",
+            "num": "1",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "1/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "3",
+              "num": "1",
+              "str": "1/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "3",
+              "name": "f7",
+              "num": "1",
+              "str": "1/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      },
+      {
+        "components": [
+          {
+            "den": "3",
+            "num": "t8",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "t8/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "3",
+              "num": "t8",
+              "str": "t8/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "3",
+              "name": "1",
+              "num": "t8",
+              "str": "t8/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      },
+      {
+        "components": [
+          {
+            "den": "3",
+            "num": "1",
+            "secondary_degree": 9,
+            "secondary_index": 2,
+            "secondary_name": "f9",
+            "str": "1/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "3",
+              "num": "1",
+              "str": "1/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 2,
+              "degree": 9,
+              "den": "3",
+              "name": "f9",
+              "num": "1",
+              "str": "1/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      }
+    ],
+    [
+      {
+        "components": [
+          {
+            "den": "3",
+            "num": "t6",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "t6/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "3",
+              "num": "t6",
+              "str": "t6/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "3",
+              "name": "1",
+              "num": "t6",
+              "str": "t6/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "24*t3**3 + t3*t6/3",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "24*t3**3 + t3*t6/3"
+          },
+          {
+            "den": "3",
+            "num": "-1",
+            "secondary_degree": 9,
+            "secondary_index": 2,
+            "secondary_name": "f9",
+            "str": "-1/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "24*t3**3 + t3*t6/3",
+              "str": "24*t3**3 + t3*t6/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "3",
+              "num": "-1",
+              "str": "-1/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "24*t3**3 + t3*t6/3",
+              "str": "24*t3**3 + t3*t6/3"
+            },
+            {
+              "basis": 2,
+              "degree": 9,
+              "den": "3",
+              "name": "f9",
+              "num": "-1",
+              "str": "-1/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 2
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "2*t3",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "2*t3"
+          },
+          {
+            "den": "3",
+            "num": "2",
+            "secondary_degree": 10,
+            "secondary_index": 3,
+            "secondary_name": "f10",
+            "str": "2/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "2*t3",
+              "str": "2*t3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "3",
+              "num": "2",
+              "str": "2/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "1",
+              "name": "f7",
+              "num": "2*t3",
+              "str": "2*t3"
+            },
+            {
+              "basis": 3,
+              "degree": 10,
+              "den": "3",
+              "name": "f10",
+              "num": "2",
+              "str": "2/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 2
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+              "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+              "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+          },
+          {
+            "den": "9",
+            "num": "t3**2",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "t3**2/9"
+          },
+          {
+            "den": "3",
+            "num": "5*t3",
+            "secondary_degree": 9,
+            "secondary_index": 2,
+            "secondary_name": "f9",
+            "str": "5*t3/3"
+          },
+          {
+            "den": "9",
+            "num": "-1",
+            "secondary_degree": 12,
+            "secondary_index": 4,
+            "secondary_name": "f12",
+            "str": "-1/9"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+              "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+            },
+            {
+              "den": "9",
+              "num": "t3**2",
+              "str": "t3**2/9"
+            },
+            {
+              "den": "3",
+              "num": "5*t3",
+              "str": "5*t3/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "9",
+              "num": "-1",
+              "str": "-1/9"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+              "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+            },
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "9",
+              "name": "f7",
+              "num": "t3**2",
+              "str": "t3**2/9"
+            },
+            {
+              "basis": 2,
+              "degree": 9,
+              "den": "3",
+              "name": "f9",
+              "num": "5*t3",
+              "str": "5*t3/3"
+            },
+            {
+              "basis": 4,
+              "degree": 12,
+              "den": "9",
+              "name": "f12",
+              "num": "-1",
+              "str": "-1/9"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 4
+      }
+    ],
+    [
+      {
+        "components": [
+          {
+            "den": "3",
+            "num": "1",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "1/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "3",
+              "num": "1",
+              "str": "1/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "3",
+              "name": "f7",
+              "num": "1",
+              "str": "1/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "2*t3",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "2*t3"
+          },
+          {
+            "den": "3",
+            "num": "2",
+            "secondary_degree": 10,
+            "secondary_index": 3,
+            "secondary_name": "f10",
+            "str": "2/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "2*t3",
+              "str": "2*t3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "3",
+              "num": "2",
+              "str": "2/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "1",
+              "name": "f7",
+              "num": "2*t3",
+              "str": "2*t3"
+            },
+            {
+              "basis": 3,
+              "degree": 10,
+              "den": "3",
+              "name": "f10",
+              "num": "2",
+              "str": "2/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 2
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3",
+              "str": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3",
+              "str": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+          },
+          {
+            "den": "9",
+            "num": "-2*t3**2",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "-2*t3**2/9"
+          },
+          {
+            "den": "3",
+            "num": "-t3",
+            "secondary_degree": 9,
+            "secondary_index": 2,
+            "secondary_name": "f9",
+            "str": "-t3/3"
+          },
+          {
+            "den": "9",
+            "num": "2",
+            "secondary_degree": 12,
+            "secondary_index": 4,
+            "secondary_name": "f12",
+            "str": "2/9"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+              "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+            },
+            {
+              "den": "9",
+              "num": "-2*t3**2",
+              "str": "-2*t3**2/9"
+            },
+            {
+              "den": "3",
+              "num": "-t3",
+              "str": "-t3/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "9",
+              "num": "2",
+              "str": "2/9"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+              "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+            },
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "9",
+              "name": "f7",
+              "num": "-2*t3**2",
+              "str": "-2*t3**2/9"
+            },
+            {
+              "basis": 2,
+              "degree": 9,
+              "den": "3",
+              "name": "f9",
+              "num": "-t3",
+              "str": "-t3/3"
+            },
+            {
+              "basis": 4,
+              "degree": 12,
+              "den": "9",
+              "name": "f12",
+              "num": "2",
+              "str": "2/9"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 4
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "-16*t3**5/3 + t3**2*t8/3",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "-16*t3**5/3 + t3**2*t8/3"
+          },
+          {
+            "den": "1",
+            "num": "37*t3**2/3 - 7*t6/9",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "37*t3**2/3 - 7*t6/9"
+          },
+          {
+            "den": "1",
+            "num": "-t3",
+            "secondary_degree": 10,
+            "secondary_index": 3,
+            "secondary_name": "f10",
+            "str": "-t3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "-16*t3**5/3 + t3**2*t8/3",
+              "str": "-16*t3**5/3 + t3**2*t8/3"
+            },
+            {
+              "den": "1",
+              "num": "37*t3**2/3 - 7*t6/9",
+              "str": "37*t3**2/3 - 7*t6/9"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "-t3",
+              "str": "-t3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "-16*t3**5/3 + t3**2*t8/3",
+              "str": "-16*t3**5/3 + t3**2*t8/3"
+            },
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "1",
+              "name": "f7",
+              "num": "37*t3**2/3 - 7*t6/9",
+              "str": "37*t3**2/3 - 7*t6/9"
+            },
+            {
+              "basis": 3,
+              "degree": 10,
+              "den": "1",
+              "name": "f10",
+              "num": "-t3",
+              "str": "-t3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 3
+      }
+    ],
+    [
+      {
+        "components": [
+          {
+            "den": "3",
+            "num": "t8",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "t8/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "3",
+              "num": "t8",
+              "str": "t8/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "3",
+              "name": "1",
+              "num": "t8",
+              "str": "t8/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+              "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+              "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+          },
+          {
+            "den": "9",
+            "num": "-2*t3**2",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "-2*t3**2/9"
+          },
+          {
+            "den": "3",
+            "num": "-t3",
+            "secondary_degree": 9,
+            "secondary_index": 2,
+            "secondary_name": "f9",
+            "str": "-t3/3"
+          },
+          {
+            "den": "9",
+            "num": "2",
+            "secondary_degree": 12,
+            "secondary_index": 4,
+            "secondary_name": "f12",
+            "str": "2/9"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+              "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+            },
+            {
+              "den": "9",
+              "num": "-2*t3**2",
+              "str": "-2*t3**2/9"
+            },
+            {
+              "den": "3",
+              "num": "-t3",
+              "str": "-t3/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "9",
+              "num": "2",
+              "str": "2/9"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+              "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+            },
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "9",
+              "name": "f7",
+              "num": "-2*t3**2",
+              "str": "-2*t3**2/9"
+            },
+            {
+              "basis": 2,
+              "degree": 9,
+              "den": "3",
+              "name": "f9",
+              "num": "-t3",
+              "str": "-t3/3"
+            },
+            {
+              "basis": 4,
+              "degree": 12,
+              "den": "9",
+              "name": "f12",
+              "num": "2",
+              "str": "2/9"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 4
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "8*t3**5/3 + t3**2*t8/3",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "8*t3**5/3 + t3**2*t8/3"
+          },
+          {
+            "den": "1",
+            "num": "-5*t3**2/12 + t6/36",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "-5*t3**2/12 + t6/36"
+          },
+          {
+            "den": "3",
+            "num": "t3",
+            "secondary_degree": 10,
+            "secondary_index": 3,
+            "secondary_name": "f10",
+            "str": "t3/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "8*t3**5/3 + t3**2*t8/3",
+              "str": "8*t3**5/3 + t3**2*t8/3"
+            },
+            {
+              "den": "1",
+              "num": "-5*t3**2/12 + t6/36",
+              "str": "-5*t3**2/12 + t6/36"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "3",
+              "num": "t3",
+              "str": "t3/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "8*t3**5/3 + t3**2*t8/3",
+              "str": "8*t3**5/3 + t3**2*t8/3"
+            },
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "1",
+              "name": "f7",
+              "num": "-5*t3**2/12 + t6/36",
+              "str": "-5*t3**2/12 + t6/36"
+            },
+            {
+              "basis": 3,
+              "degree": 10,
+              "den": "3",
+              "name": "f10",
+              "num": "t3",
+              "str": "t3/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 3
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+          },
+          {
+            "den": "30",
+            "num": "t3**2",
+            "secondary_degree": 9,
+            "secondary_index": 2,
+            "secondary_name": "f9",
+            "str": "t3**2/30"
+          },
+          {
+            "den": "30",
+            "num": "1",
+            "secondary_degree": 14,
+            "secondary_index": 5,
+            "secondary_name": "f14",
+            "str": "1/30"
+          },
+          {
+            "den": "120",
+            "num": "1",
+            "secondary_degree": 14,
+            "secondary_index": 6,
+            "secondary_name": "f7^2",
+            "str": "1/120"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+              "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "30",
+              "num": "t3**2",
+              "str": "t3**2/30"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "30",
+              "num": "1",
+              "str": "1/30"
+            },
+            {
+              "den": "120",
+              "num": "1",
+              "str": "1/120"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+              "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+            },
+            {
+              "basis": 2,
+              "degree": 9,
+              "den": "30",
+              "name": "f9",
+              "num": "t3**2",
+              "str": "t3**2/30"
+            },
+            {
+              "basis": 5,
+              "degree": 14,
+              "den": "30",
+              "name": "f14",
+              "num": "1",
+              "str": "1/30"
+            },
+            {
+              "basis": 6,
+              "degree": 14,
+              "den": "120",
+              "name": "f7^2",
+              "num": "1",
+              "str": "1/120"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 4
+      }
+    ],
+    [
+      {
+        "components": [
+          {
+            "den": "3",
+            "num": "1",
+            "secondary_degree": 9,
+            "secondary_index": 2,
+            "secondary_name": "f9",
+            "str": "1/3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "3",
+              "num": "1",
+              "str": "1/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 2,
+              "degree": 9,
+              "den": "3",
+              "name": "f9",
+              "num": "1",
+              "str": "1/3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+          },
+          {
+            "den": "9",
+            "num": "t3**2",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "t3**2/9"
+          },
+          {
+            "den": "3",
+            "num": "5*t3",
+            "secondary_degree": 9,
+            "secondary_index": 2,
+            "secondary_name": "f9",
+            "str": "5*t3/3"
+          },
+          {
+            "den": "9",
+            "num": "-1",
+            "secondary_degree": 12,
+            "secondary_index": 4,
+            "secondary_name": "f12",
+            "str": "-1/9"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+              "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+            },
+            {
+              "den": "9",
+              "num": "t3**2",
+              "str": "t3**2/9"
+            },
+            {
+              "den": "3",
+              "num": "5*t3",
+              "str": "5*t3/3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "9",
+              "num": "-1",
+              "str": "-1/9"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+              "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+            },
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "9",
+              "name": "f7",
+              "num": "t3**2",
+              "str": "t3**2/9"
+            },
+            {
+              "basis": 2,
+              "degree": 9,
+              "den": "3",
+              "name": "f9",
+              "num": "5*t3",
+              "str": "5*t3/3"
+            },
+            {
+              "basis": 4,
+              "degree": 12,
+              "den": "9",
+              "name": "f12",
+              "num": "-1",
+              "str": "-1/9"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 4
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "-16*t3**5/3 + t3**2*t8/3",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "-16*t3**5/3 + t3**2*t8/3"
+          },
+          {
+            "den": "1",
+            "num": "37*t3**2/3 - 7*t6/9",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "37*t3**2/3 - 7*t6/9"
+          },
+          {
+            "den": "1",
+            "num": "-t3",
+            "secondary_degree": 10,
+            "secondary_index": 3,
+            "secondary_name": "f10",
+            "str": "-t3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "-16*t3**5/3 + t3**2*t8/3",
+              "str": "-16*t3**5/3 + t3**2*t8/3"
+            },
+            {
+              "den": "1",
+              "num": "37*t3**2/3 - 7*t6/9",
+              "str": "37*t3**2/3 - 7*t6/9"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "-t3",
+              "str": "-t3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "-16*t3**5/3 + t3**2*t8/3",
+              "str": "-16*t3**5/3 + t3**2*t8/3"
+            },
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "1",
+              "name": "f7",
+              "num": "37*t3**2/3 - 7*t6/9",
+              "str": "37*t3**2/3 - 7*t6/9"
+            },
+            {
+              "basis": 3,
+              "degree": 10,
+              "den": "1",
+              "name": "f10",
+              "num": "-t3",
+              "str": "-t3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 3
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+          },
+          {
+            "den": "30",
+            "num": "t3**2",
+            "secondary_degree": 9,
+            "secondary_index": 2,
+            "secondary_name": "f9",
+            "str": "t3**2/30"
+          },
+          {
+            "den": "30",
+            "num": "1",
+            "secondary_degree": 14,
+            "secondary_index": 5,
+            "secondary_name": "f14",
+            "str": "1/30"
+          },
+          {
+            "den": "120",
+            "num": "1",
+            "secondary_degree": 14,
+            "secondary_index": 6,
+            "secondary_name": "f7^2",
+            "str": "1/120"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+              "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "30",
+              "num": "t3**2",
+              "str": "t3**2/30"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "30",
+              "num": "1",
+              "str": "1/30"
+            },
+            {
+              "den": "120",
+              "num": "1",
+              "str": "1/120"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+              "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+            },
+            {
+              "basis": 2,
+              "degree": 9,
+              "den": "30",
+              "name": "f9",
+              "num": "t3**2",
+              "str": "t3**2/30"
+            },
+            {
+              "basis": 5,
+              "degree": 14,
+              "den": "30",
+              "name": "f14",
+              "num": "1",
+              "str": "1/30"
+            },
+            {
+              "basis": 6,
+              "degree": 14,
+              "den": "120",
+              "name": "f7^2",
+              "num": "1",
+              "str": "1/120"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 4
+      },
+      {
+        "components": [
+          {
+            "den": "1",
+            "num": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648"
+          },
+          {
+            "den": "18",
+            "num": "11*t3**3",
+            "secondary_degree": 7,
+            "secondary_index": 1,
+            "secondary_name": "f7",
+            "str": "11*t3**3/18"
+          },
+          {
+            "den": "1",
+            "num": "47*t3**2/2 - 25*t6/18",
+            "secondary_degree": 9,
+            "secondary_index": 2,
+            "secondary_name": "f9",
+            "str": "47*t3**2/2 - 25*t6/18"
+          },
+          {
+            "den": "3",
+            "num": "8*t3**2",
+            "secondary_degree": 10,
+            "secondary_index": 3,
+            "secondary_name": "f10",
+            "str": "8*t3**2/3"
+          },
+          {
+            "den": "36",
+            "num": "11*t3",
+            "secondary_degree": 12,
+            "secondary_index": 4,
+            "secondary_name": "f12",
+            "str": "11*t3/36"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648",
+              "str": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648"
+            },
+            {
+              "den": "18",
+              "num": "11*t3**3",
+              "str": "11*t3**3/18"
+            },
+            {
+              "den": "1",
+              "num": "47*t3**2/2 - 25*t6/18",
+              "str": "47*t3**2/2 - 25*t6/18"
+            },
+            {
+              "den": "3",
+              "num": "8*t3**2",
+              "str": "8*t3**2/3"
+            },
+            {
+              "den": "36",
+              "num": "11*t3",
+              "str": "11*t3/36"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648",
+              "str": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648"
+            },
+            {
+              "basis": 1,
+              "degree": 7,
+              "den": "18",
+              "name": "f7",
+              "num": "11*t3**3",
+              "str": "11*t3**3/18"
+            },
+            {
+              "basis": 2,
+              "degree": 9,
+              "den": "1",
+              "name": "f9",
+              "num": "47*t3**2/2 - 25*t6/18",
+              "str": "47*t3**2/2 - 25*t6/18"
+            },
+            {
+              "basis": 3,
+              "degree": 10,
+              "den": "3",
+              "name": "f10",
+              "num": "8*t3**2",
+              "str": "8*t3**2/3"
+            },
+            {
+              "basis": 4,
+              "degree": 12,
+              "den": "36",
+              "name": "f12",
+              "num": "11*t3",
+              "str": "11*t3/36"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 5
+      }
+    ]
+  ],
+  "frame": [
+    "x",
+    "C",
+    "D",
+    "E",
+    "K_7"
+  ],
+  "g3p_polar_sha256": "d55afb8ff0add8af002f53e639e785942d819e21285ff68d4fe14bcf539049cc",
+  "g3p_status": "G3P-POLAR-SYSTEM-PASS",
+  "generic_cubic_sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+  "polar_applied_to_a_i": {
+    "A": {
+      "definition": "Phi(q)=B(q,q,q)",
+      "nonzero_open": "t3 != 0",
+      "value_in_K_proj": {
+        "components": [
+          {
+            "den": "1",
+            "num": "t3",
+            "secondary_degree": 0,
+            "secondary_index": 0,
+            "secondary_name": "1",
+            "str": "t3"
+          }
+        ],
+        "full_12": {
+          "components": [
+            {
+              "den": "1",
+              "num": "t3",
+              "str": "t3"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            },
+            {
+              "den": "1",
+              "num": "0",
+              "str": "0"
+            }
+          ],
+          "is_zero": false,
+          "nonzero": [
+            {
+              "basis": 0,
+              "degree": 0,
+              "den": "1",
+              "name": "1",
+              "num": "t3",
+              "str": "t3"
+            }
+          ]
+        },
+        "is_zero": false,
+        "nonzero_count": 1
+      }
+    },
+    "C": {
+      "L_j_secondary": [
+        {
+          "components": [
+            {
+              "den": "1",
+              "num": "t3",
+              "secondary_degree": 0,
+              "secondary_index": 0,
+              "secondary_name": "1",
+              "str": "t3"
+            }
+          ],
+          "full_12": {
+            "components": [
+              {
+                "den": "1",
+                "num": "t3",
+                "str": "t3"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              }
+            ],
+            "is_zero": false,
+            "nonzero": [
+              {
+                "basis": 0,
+                "degree": 0,
+                "den": "1",
+                "name": "1",
+                "num": "t3",
+                "str": "t3"
+              }
+            ]
+          },
+          "is_zero": false,
+          "nonzero_count": 1
+        },
+        {
+          "components": [
+            {
+              "den": "3",
+              "num": "t6",
+              "secondary_degree": 0,
+              "secondary_index": 0,
+              "secondary_name": "1",
+              "str": "t6/3"
+            }
+          ],
+          "full_12": {
+            "components": [
+              {
+                "den": "3",
+                "num": "t6",
+                "str": "t6/3"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              }
+            ],
+            "is_zero": false,
+            "nonzero": [
+              {
+                "basis": 0,
+                "degree": 0,
+                "den": "3",
+                "name": "1",
+                "num": "t6",
+                "str": "t6/3"
+              }
+            ]
+          },
+          "is_zero": false,
+          "nonzero_count": 1
+        },
+        {
+          "components": [
+            {
+              "den": "3",
+              "num": "1",
+              "secondary_degree": 7,
+              "secondary_index": 1,
+              "secondary_name": "f7",
+              "str": "1/3"
+            }
+          ],
+          "full_12": {
+            "components": [
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "3",
+                "num": "1",
+                "str": "1/3"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              }
+            ],
+            "is_zero": false,
+            "nonzero": [
+              {
+                "basis": 1,
+                "degree": 7,
+                "den": "3",
+                "name": "f7",
+                "num": "1",
+                "str": "1/3"
+              }
+            ]
+          },
+          "is_zero": false,
+          "nonzero_count": 1
+        },
+        {
+          "components": [
+            {
+              "den": "3",
+              "num": "t8",
+              "secondary_degree": 0,
+              "secondary_index": 0,
+              "secondary_name": "1",
+              "str": "t8/3"
+            }
+          ],
+          "full_12": {
+            "components": [
+              {
+                "den": "3",
+                "num": "t8",
+                "str": "t8/3"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              }
+            ],
+            "is_zero": false,
+            "nonzero": [
+              {
+                "basis": 0,
+                "degree": 0,
+                "den": "3",
+                "name": "1",
+                "num": "t8",
+                "str": "t8/3"
+              }
+            ]
+          },
+          "is_zero": false,
+          "nonzero_count": 1
+        },
+        {
+          "components": [
+            {
+              "den": "3",
+              "num": "1",
+              "secondary_degree": 9,
+              "secondary_index": 2,
+              "secondary_name": "f9",
+              "str": "1/3"
+            }
+          ],
+          "full_12": {
+            "components": [
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "3",
+                "num": "1",
+                "str": "1/3"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              },
+              {
+                "den": "1",
+                "num": "0",
+                "str": "0"
+              }
+            ],
+            "is_zero": false,
+            "nonzero": [
+              {
+                "basis": 2,
+                "degree": 9,
+                "den": "3",
+                "name": "f9",
+                "num": "1",
+                "str": "1/3"
+              }
+            ]
+          },
+          "is_zero": false,
+          "nonzero_count": 1
+        }
+      ],
+      "as_L_i_element": "C = sum_{t=0}^{10} gamma_t theta^t with gamma_t = sum_j L_j * beta_{j t} \u2208 K_proj (secondary multiply-add)",
+      "definition": "B(q,q,a_i) = sum_j L_j a_i^{(j)}",
+      "requires": "power-basis betas of a_i",
+      "status": "FORMULA_INSTALLED_SECONDARY_L"
+    },
+    "D": {
+      "M_jk_secondary": [
+        [
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "t3",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "t3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "t3",
+                  "str": "t3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "t3",
+                  "str": "t3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          },
+          {
+            "components": [
+              {
+                "den": "3",
+                "num": "t6",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "t6/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "3",
+                  "num": "t6",
+                  "str": "t6/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "3",
+                  "name": "1",
+                  "num": "t6",
+                  "str": "t6/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          },
+          {
+            "components": [
+              {
+                "den": "3",
+                "num": "1",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "1/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "3",
+                  "num": "1",
+                  "str": "1/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "3",
+                  "name": "f7",
+                  "num": "1",
+                  "str": "1/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          },
+          {
+            "components": [
+              {
+                "den": "3",
+                "num": "t8",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "t8/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "3",
+                  "num": "t8",
+                  "str": "t8/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "3",
+                  "name": "1",
+                  "num": "t8",
+                  "str": "t8/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          },
+          {
+            "components": [
+              {
+                "den": "3",
+                "num": "1",
+                "secondary_degree": 9,
+                "secondary_index": 2,
+                "secondary_name": "f9",
+                "str": "1/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "3",
+                  "num": "1",
+                  "str": "1/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 2,
+                  "degree": 9,
+                  "den": "3",
+                  "name": "f9",
+                  "num": "1",
+                  "str": "1/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          }
+        ],
+        [
+          {
+            "components": [
+              {
+                "den": "3",
+                "num": "t6",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "t6/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "3",
+                  "num": "t6",
+                  "str": "t6/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "3",
+                  "name": "1",
+                  "num": "t6",
+                  "str": "t6/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "24*t3**3 + t3*t6/3",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "24*t3**3 + t3*t6/3"
+              },
+              {
+                "den": "3",
+                "num": "-1",
+                "secondary_degree": 9,
+                "secondary_index": 2,
+                "secondary_name": "f9",
+                "str": "-1/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "24*t3**3 + t3*t6/3",
+                  "str": "24*t3**3 + t3*t6/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "3",
+                  "num": "-1",
+                  "str": "-1/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "24*t3**3 + t3*t6/3",
+                  "str": "24*t3**3 + t3*t6/3"
+                },
+                {
+                  "basis": 2,
+                  "degree": 9,
+                  "den": "3",
+                  "name": "f9",
+                  "num": "-1",
+                  "str": "-1/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 2
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "2*t3",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "2*t3"
+              },
+              {
+                "den": "3",
+                "num": "2",
+                "secondary_degree": 10,
+                "secondary_index": 3,
+                "secondary_name": "f10",
+                "str": "2/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "2*t3",
+                  "str": "2*t3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "3",
+                  "num": "2",
+                  "str": "2/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "1",
+                  "name": "f7",
+                  "num": "2*t3",
+                  "str": "2*t3"
+                },
+                {
+                  "basis": 3,
+                  "degree": 10,
+                  "den": "3",
+                  "name": "f10",
+                  "num": "2",
+                  "str": "2/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 2
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+                  "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+                  "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+              },
+              {
+                "den": "9",
+                "num": "t3**2",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "t3**2/9"
+              },
+              {
+                "den": "3",
+                "num": "5*t3",
+                "secondary_degree": 9,
+                "secondary_index": 2,
+                "secondary_name": "f9",
+                "str": "5*t3/3"
+              },
+              {
+                "den": "9",
+                "num": "-1",
+                "secondary_degree": 12,
+                "secondary_index": 4,
+                "secondary_name": "f12",
+                "str": "-1/9"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+                  "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+                },
+                {
+                  "den": "9",
+                  "num": "t3**2",
+                  "str": "t3**2/9"
+                },
+                {
+                  "den": "3",
+                  "num": "5*t3",
+                  "str": "5*t3/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "9",
+                  "num": "-1",
+                  "str": "-1/9"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+                  "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+                },
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "9",
+                  "name": "f7",
+                  "num": "t3**2",
+                  "str": "t3**2/9"
+                },
+                {
+                  "basis": 2,
+                  "degree": 9,
+                  "den": "3",
+                  "name": "f9",
+                  "num": "5*t3",
+                  "str": "5*t3/3"
+                },
+                {
+                  "basis": 4,
+                  "degree": 12,
+                  "den": "9",
+                  "name": "f12",
+                  "num": "-1",
+                  "str": "-1/9"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 4
+          }
+        ],
+        [
+          {
+            "components": [
+              {
+                "den": "3",
+                "num": "1",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "1/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "3",
+                  "num": "1",
+                  "str": "1/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "3",
+                  "name": "f7",
+                  "num": "1",
+                  "str": "1/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "2*t3",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "2*t3"
+              },
+              {
+                "den": "3",
+                "num": "2",
+                "secondary_degree": 10,
+                "secondary_index": 3,
+                "secondary_name": "f10",
+                "str": "2/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "2*t3",
+                  "str": "2*t3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "3",
+                  "num": "2",
+                  "str": "2/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "1",
+                  "name": "f7",
+                  "num": "2*t3",
+                  "str": "2*t3"
+                },
+                {
+                  "basis": 3,
+                  "degree": 10,
+                  "den": "3",
+                  "name": "f10",
+                  "num": "2",
+                  "str": "2/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 2
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3",
+                  "str": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3",
+                  "str": "t11/3 - 20*t3**2*t6/9 + 10*t3*t8/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+              },
+              {
+                "den": "9",
+                "num": "-2*t3**2",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "-2*t3**2/9"
+              },
+              {
+                "den": "3",
+                "num": "-t3",
+                "secondary_degree": 9,
+                "secondary_index": 2,
+                "secondary_name": "f9",
+                "str": "-t3/3"
+              },
+              {
+                "den": "9",
+                "num": "2",
+                "secondary_degree": 12,
+                "secondary_index": 4,
+                "secondary_name": "f12",
+                "str": "2/9"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+                  "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+                },
+                {
+                  "den": "9",
+                  "num": "-2*t3**2",
+                  "str": "-2*t3**2/9"
+                },
+                {
+                  "den": "3",
+                  "num": "-t3",
+                  "str": "-t3/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "9",
+                  "num": "2",
+                  "str": "2/9"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+                  "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+                },
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "9",
+                  "name": "f7",
+                  "num": "-2*t3**2",
+                  "str": "-2*t3**2/9"
+                },
+                {
+                  "basis": 2,
+                  "degree": 9,
+                  "den": "3",
+                  "name": "f9",
+                  "num": "-t3",
+                  "str": "-t3/3"
+                },
+                {
+                  "basis": 4,
+                  "degree": 12,
+                  "den": "9",
+                  "name": "f12",
+                  "num": "2",
+                  "str": "2/9"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 4
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "-16*t3**5/3 + t3**2*t8/3",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "-16*t3**5/3 + t3**2*t8/3"
+              },
+              {
+                "den": "1",
+                "num": "37*t3**2/3 - 7*t6/9",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "37*t3**2/3 - 7*t6/9"
+              },
+              {
+                "den": "1",
+                "num": "-t3",
+                "secondary_degree": 10,
+                "secondary_index": 3,
+                "secondary_name": "f10",
+                "str": "-t3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "-16*t3**5/3 + t3**2*t8/3",
+                  "str": "-16*t3**5/3 + t3**2*t8/3"
+                },
+                {
+                  "den": "1",
+                  "num": "37*t3**2/3 - 7*t6/9",
+                  "str": "37*t3**2/3 - 7*t6/9"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "-t3",
+                  "str": "-t3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "-16*t3**5/3 + t3**2*t8/3",
+                  "str": "-16*t3**5/3 + t3**2*t8/3"
+                },
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "1",
+                  "name": "f7",
+                  "num": "37*t3**2/3 - 7*t6/9",
+                  "str": "37*t3**2/3 - 7*t6/9"
+                },
+                {
+                  "basis": 3,
+                  "degree": 10,
+                  "den": "1",
+                  "name": "f10",
+                  "num": "-t3",
+                  "str": "-t3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 3
+          }
+        ],
+        [
+          {
+            "components": [
+              {
+                "den": "3",
+                "num": "t8",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "t8/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "3",
+                  "num": "t8",
+                  "str": "t8/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "3",
+                  "name": "1",
+                  "num": "t8",
+                  "str": "t8/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+                  "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3",
+                  "str": "3*t3**4 - t3**2*t6/9 + 5*t3*t8/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+              },
+              {
+                "den": "9",
+                "num": "-2*t3**2",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "-2*t3**2/9"
+              },
+              {
+                "den": "3",
+                "num": "-t3",
+                "secondary_degree": 9,
+                "secondary_index": 2,
+                "secondary_name": "f9",
+                "str": "-t3/3"
+              },
+              {
+                "den": "9",
+                "num": "2",
+                "secondary_degree": 12,
+                "secondary_index": 4,
+                "secondary_name": "f12",
+                "str": "2/9"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+                  "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+                },
+                {
+                  "den": "9",
+                  "num": "-2*t3**2",
+                  "str": "-2*t3**2/9"
+                },
+                {
+                  "den": "3",
+                  "num": "-t3",
+                  "str": "-t3/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "9",
+                  "num": "2",
+                  "str": "2/9"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162",
+                  "str": "45*t3**4/2 + 4*t3**2*t6/3 - 49*t6**2/162"
+                },
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "9",
+                  "name": "f7",
+                  "num": "-2*t3**2",
+                  "str": "-2*t3**2/9"
+                },
+                {
+                  "basis": 2,
+                  "degree": 9,
+                  "den": "3",
+                  "name": "f9",
+                  "num": "-t3",
+                  "str": "-t3/3"
+                },
+                {
+                  "basis": 4,
+                  "degree": 12,
+                  "den": "9",
+                  "name": "f12",
+                  "num": "2",
+                  "str": "2/9"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 4
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "8*t3**5/3 + t3**2*t8/3",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "8*t3**5/3 + t3**2*t8/3"
+              },
+              {
+                "den": "1",
+                "num": "-5*t3**2/12 + t6/36",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "-5*t3**2/12 + t6/36"
+              },
+              {
+                "den": "3",
+                "num": "t3",
+                "secondary_degree": 10,
+                "secondary_index": 3,
+                "secondary_name": "f10",
+                "str": "t3/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "8*t3**5/3 + t3**2*t8/3",
+                  "str": "8*t3**5/3 + t3**2*t8/3"
+                },
+                {
+                  "den": "1",
+                  "num": "-5*t3**2/12 + t6/36",
+                  "str": "-5*t3**2/12 + t6/36"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "3",
+                  "num": "t3",
+                  "str": "t3/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "8*t3**5/3 + t3**2*t8/3",
+                  "str": "8*t3**5/3 + t3**2*t8/3"
+                },
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "1",
+                  "name": "f7",
+                  "num": "-5*t3**2/12 + t6/36",
+                  "str": "-5*t3**2/12 + t6/36"
+                },
+                {
+                  "basis": 3,
+                  "degree": 10,
+                  "den": "3",
+                  "name": "f10",
+                  "num": "t3",
+                  "str": "t3/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 3
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+              },
+              {
+                "den": "30",
+                "num": "t3**2",
+                "secondary_degree": 9,
+                "secondary_index": 2,
+                "secondary_name": "f9",
+                "str": "t3**2/30"
+              },
+              {
+                "den": "30",
+                "num": "1",
+                "secondary_degree": 14,
+                "secondary_index": 5,
+                "secondary_name": "f14",
+                "str": "1/30"
+              },
+              {
+                "den": "120",
+                "num": "1",
+                "secondary_degree": 14,
+                "secondary_index": 6,
+                "secondary_name": "f7^2",
+                "str": "1/120"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+                  "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "30",
+                  "num": "t3**2",
+                  "str": "t3**2/30"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "30",
+                  "num": "1",
+                  "str": "1/30"
+                },
+                {
+                  "den": "120",
+                  "num": "1",
+                  "str": "1/120"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+                  "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+                },
+                {
+                  "basis": 2,
+                  "degree": 9,
+                  "den": "30",
+                  "name": "f9",
+                  "num": "t3**2",
+                  "str": "t3**2/30"
+                },
+                {
+                  "basis": 5,
+                  "degree": 14,
+                  "den": "30",
+                  "name": "f14",
+                  "num": "1",
+                  "str": "1/30"
+                },
+                {
+                  "basis": 6,
+                  "degree": 14,
+                  "den": "120",
+                  "name": "f7^2",
+                  "num": "1",
+                  "str": "1/120"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 4
+          }
+        ],
+        [
+          {
+            "components": [
+              {
+                "den": "3",
+                "num": "1",
+                "secondary_degree": 9,
+                "secondary_index": 2,
+                "secondary_name": "f9",
+                "str": "1/3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "3",
+                  "num": "1",
+                  "str": "1/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 2,
+                  "degree": 9,
+                  "den": "3",
+                  "name": "f9",
+                  "num": "1",
+                  "str": "1/3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 1
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+              },
+              {
+                "den": "9",
+                "num": "t3**2",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "t3**2/9"
+              },
+              {
+                "den": "3",
+                "num": "5*t3",
+                "secondary_degree": 9,
+                "secondary_index": 2,
+                "secondary_name": "f9",
+                "str": "5*t3/3"
+              },
+              {
+                "den": "9",
+                "num": "-1",
+                "secondary_degree": 12,
+                "secondary_index": 4,
+                "secondary_name": "f12",
+                "str": "-1/9"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+                  "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+                },
+                {
+                  "den": "9",
+                  "num": "t3**2",
+                  "str": "t3**2/9"
+                },
+                {
+                  "den": "3",
+                  "num": "5*t3",
+                  "str": "5*t3/3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "9",
+                  "num": "-1",
+                  "str": "-1/9"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81",
+                  "str": "-153*t3**4 + 58*t3**2*t6/3 - 44*t6**2/81"
+                },
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "9",
+                  "name": "f7",
+                  "num": "t3**2",
+                  "str": "t3**2/9"
+                },
+                {
+                  "basis": 2,
+                  "degree": 9,
+                  "den": "3",
+                  "name": "f9",
+                  "num": "5*t3",
+                  "str": "5*t3/3"
+                },
+                {
+                  "basis": 4,
+                  "degree": 12,
+                  "den": "9",
+                  "name": "f12",
+                  "num": "-1",
+                  "str": "-1/9"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 4
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "-16*t3**5/3 + t3**2*t8/3",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "-16*t3**5/3 + t3**2*t8/3"
+              },
+              {
+                "den": "1",
+                "num": "37*t3**2/3 - 7*t6/9",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "37*t3**2/3 - 7*t6/9"
+              },
+              {
+                "den": "1",
+                "num": "-t3",
+                "secondary_degree": 10,
+                "secondary_index": 3,
+                "secondary_name": "f10",
+                "str": "-t3"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "-16*t3**5/3 + t3**2*t8/3",
+                  "str": "-16*t3**5/3 + t3**2*t8/3"
+                },
+                {
+                  "den": "1",
+                  "num": "37*t3**2/3 - 7*t6/9",
+                  "str": "37*t3**2/3 - 7*t6/9"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "-t3",
+                  "str": "-t3"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "-16*t3**5/3 + t3**2*t8/3",
+                  "str": "-16*t3**5/3 + t3**2*t8/3"
+                },
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "1",
+                  "name": "f7",
+                  "num": "37*t3**2/3 - 7*t6/9",
+                  "str": "37*t3**2/3 - 7*t6/9"
+                },
+                {
+                  "basis": 3,
+                  "degree": 10,
+                  "den": "1",
+                  "name": "f10",
+                  "num": "-t3",
+                  "str": "-t3"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 3
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+              },
+              {
+                "den": "30",
+                "num": "t3**2",
+                "secondary_degree": 9,
+                "secondary_index": 2,
+                "secondary_name": "f9",
+                "str": "t3**2/30"
+              },
+              {
+                "den": "30",
+                "num": "1",
+                "secondary_degree": 14,
+                "secondary_index": 5,
+                "secondary_name": "f14",
+                "str": "1/30"
+              },
+              {
+                "den": "120",
+                "num": "1",
+                "secondary_degree": 14,
+                "secondary_index": 6,
+                "secondary_name": "f7^2",
+                "str": "1/120"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+                  "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "30",
+                  "num": "t3**2",
+                  "str": "t3**2/30"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "30",
+                  "num": "1",
+                  "str": "1/30"
+                },
+                {
+                  "den": "120",
+                  "num": "1",
+                  "str": "1/120"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180",
+                  "str": "-9*t3**5/10 - t3**3*t6/18 + 179*t3**2*t8/60 - 31*t6*t8/180"
+                },
+                {
+                  "basis": 2,
+                  "degree": 9,
+                  "den": "30",
+                  "name": "f9",
+                  "num": "t3**2",
+                  "str": "t3**2/30"
+                },
+                {
+                  "basis": 5,
+                  "degree": 14,
+                  "den": "30",
+                  "name": "f14",
+                  "num": "1",
+                  "str": "1/30"
+                },
+                {
+                  "basis": 6,
+                  "degree": 14,
+                  "den": "120",
+                  "name": "f7^2",
+                  "num": "1",
+                  "str": "1/120"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 4
+          },
+          {
+            "components": [
+              {
+                "den": "1",
+                "num": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648",
+                "secondary_degree": 0,
+                "secondary_index": 0,
+                "secondary_name": "1",
+                "str": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648"
+              },
+              {
+                "den": "18",
+                "num": "11*t3**3",
+                "secondary_degree": 7,
+                "secondary_index": 1,
+                "secondary_name": "f7",
+                "str": "11*t3**3/18"
+              },
+              {
+                "den": "1",
+                "num": "47*t3**2/2 - 25*t6/18",
+                "secondary_degree": 9,
+                "secondary_index": 2,
+                "secondary_name": "f9",
+                "str": "47*t3**2/2 - 25*t6/18"
+              },
+              {
+                "den": "3",
+                "num": "8*t3**2",
+                "secondary_degree": 10,
+                "secondary_index": 3,
+                "secondary_name": "f10",
+                "str": "8*t3**2/3"
+              },
+              {
+                "den": "36",
+                "num": "11*t3",
+                "secondary_degree": 12,
+                "secondary_index": 4,
+                "secondary_name": "f12",
+                "str": "11*t3/36"
+              }
+            ],
+            "full_12": {
+              "components": [
+                {
+                  "den": "1",
+                  "num": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648",
+                  "str": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648"
+                },
+                {
+                  "den": "18",
+                  "num": "11*t3**3",
+                  "str": "11*t3**3/18"
+                },
+                {
+                  "den": "1",
+                  "num": "47*t3**2/2 - 25*t6/18",
+                  "str": "47*t3**2/2 - 25*t6/18"
+                },
+                {
+                  "den": "3",
+                  "num": "8*t3**2",
+                  "str": "8*t3**2/3"
+                },
+                {
+                  "den": "36",
+                  "num": "11*t3",
+                  "str": "11*t3/36"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                },
+                {
+                  "den": "1",
+                  "num": "0",
+                  "str": "0"
+                }
+              ],
+              "is_zero": false,
+              "nonzero": [
+                {
+                  "basis": 0,
+                  "degree": 0,
+                  "den": "1",
+                  "name": "1",
+                  "num": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648",
+                  "str": "25*t3**6/3 - 9687*t3**5/8 + 569*t3**3*t6/4 - 2821*t3*t6**2/648"
+                },
+                {
+                  "basis": 1,
+                  "degree": 7,
+                  "den": "18",
+                  "name": "f7",
+                  "num": "11*t3**3",
+                  "str": "11*t3**3/18"
+                },
+                {
+                  "basis": 2,
+                  "degree": 9,
+                  "den": "1",
+                  "name": "f9",
+                  "num": "47*t3**2/2 - 25*t6/18",
+                  "str": "47*t3**2/2 - 25*t6/18"
+                },
+                {
+                  "basis": 3,
+                  "degree": 10,
+                  "den": "3",
+                  "name": "f10",
+                  "num": "8*t3**2",
+                  "str": "8*t3**2/3"
+                },
+                {
+                  "basis": 4,
+                  "degree": 12,
+                  "den": "36",
+                  "name": "f12",
+                  "num": "11*t3",
+                  "str": "11*t3/36"
+                }
+              ]
+            },
+            "is_zero": false,
+            "nonzero_count": 5
+          }
+        ]
+      ],
+      "a_i_on_Q_q_iff": "D = 0 in L_i",
+      "as_L_i_element": "D = sum_{s,t} (sum_{j,k} M_jk beta_{j s} beta_{k t}) theta^{s+t} reduced mod mu",
+      "definition": "B(q,a_i,a_i) = sum_{j,k} M_jk a_i^{(j)} a_i^{(k)}",
+      "requires": "power-basis betas of a_i",
+      "status": "FORMULA_INSTALLED_SECONDARY_M"
+    },
+    "line_residual_binary_quadratic": {
+      "defined_over": "L_i (coeffs A in K_proj, C,D in L_i)",
+      "defined_over_K_proj": false,
+      "note": "Residual intersection of line(q,a_i) with X_gen after removing the known point a_i. Not a K_proj-quadratic unless C,D \u2208 K_proj.",
+      "object": "A s^2 + 3 C s t + 3 D t^2 = 0 on P^1",
+      "usable_for_Springer_item1": false
+    }
+  },
+  "q": [
+    1,
+    0,
+    0,
+    0,
+    0
+  ],
+  "schema": "g3h-phase5-next-polar-v1",
+  "second_polar_L": [
+    {
+      "components": [
+        {
+          "den": "1",
+          "num": "t3",
+          "secondary_degree": 0,
+          "secondary_index": 0,
+          "secondary_name": "1",
+          "str": "t3"
+        }
+      ],
+      "full_12": {
+        "components": [
+          {
+            "den": "1",
+            "num": "t3",
+            "str": "t3"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          }
+        ],
+        "is_zero": false,
+        "nonzero": [
+          {
+            "basis": 0,
+            "degree": 0,
+            "den": "1",
+            "name": "1",
+            "num": "t3",
+            "str": "t3"
+          }
+        ]
+      },
+      "is_zero": false,
+      "nonzero_count": 1
+    },
+    {
+      "components": [
+        {
+          "den": "3",
+          "num": "t6",
+          "secondary_degree": 0,
+          "secondary_index": 0,
+          "secondary_name": "1",
+          "str": "t6/3"
+        }
+      ],
+      "full_12": {
+        "components": [
+          {
+            "den": "3",
+            "num": "t6",
+            "str": "t6/3"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          }
+        ],
+        "is_zero": false,
+        "nonzero": [
+          {
+            "basis": 0,
+            "degree": 0,
+            "den": "3",
+            "name": "1",
+            "num": "t6",
+            "str": "t6/3"
+          }
+        ]
+      },
+      "is_zero": false,
+      "nonzero_count": 1
+    },
+    {
+      "components": [
+        {
+          "den": "3",
+          "num": "1",
+          "secondary_degree": 7,
+          "secondary_index": 1,
+          "secondary_name": "f7",
+          "str": "1/3"
+        }
+      ],
+      "full_12": {
+        "components": [
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "3",
+            "num": "1",
+            "str": "1/3"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          }
+        ],
+        "is_zero": false,
+        "nonzero": [
+          {
+            "basis": 1,
+            "degree": 7,
+            "den": "3",
+            "name": "f7",
+            "num": "1",
+            "str": "1/3"
+          }
+        ]
+      },
+      "is_zero": false,
+      "nonzero_count": 1
+    },
+    {
+      "components": [
+        {
+          "den": "3",
+          "num": "t8",
+          "secondary_degree": 0,
+          "secondary_index": 0,
+          "secondary_name": "1",
+          "str": "t8/3"
+        }
+      ],
+      "full_12": {
+        "components": [
+          {
+            "den": "3",
+            "num": "t8",
+            "str": "t8/3"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          }
+        ],
+        "is_zero": false,
+        "nonzero": [
+          {
+            "basis": 0,
+            "degree": 0,
+            "den": "3",
+            "name": "1",
+            "num": "t8",
+            "str": "t8/3"
+          }
+        ]
+      },
+      "is_zero": false,
+      "nonzero_count": 1
+    },
+    {
+      "components": [
+        {
+          "den": "3",
+          "num": "1",
+          "secondary_degree": 9,
+          "secondary_index": 2,
+          "secondary_name": "f9",
+          "str": "1/3"
+        }
+      ],
+      "full_12": {
+        "components": [
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "3",
+            "num": "1",
+            "str": "1/3"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          },
+          {
+            "den": "1",
+            "num": "0",
+            "str": "0"
+          }
+        ],
+        "is_zero": false,
+        "nonzero": [
+          {
+            "basis": 2,
+            "degree": 9,
+            "den": "3",
+            "name": "f9",
+            "num": "1",
+            "str": "1/3"
+          }
+        ]
+      },
+      "is_zero": false,
+      "nonzero_count": 1
+    }
+  ]
+}

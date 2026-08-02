@@ -1,0 +1,19 @@
+{
+  "generic_cubic_coefficient_count": 35,
+  "note": "Surrogate modular check of degree-11 residue arithmetic and Phi specialization API. Full cyclotomic frame evaluation is available from certificates/exact_covariants_check.py; G3H binds the structural identity above as the load-bearing Phi(a_i)=0 proof.",
+  "prime": 89,
+  "residue_degree": 11,
+  "samples": [
+    {
+      "a": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "G3P_q_Phi_secondary0",
+      "note": "Phi(q)=t3 on secondary-0 slice (G3P sealed)"
+    }
+  ]
+}

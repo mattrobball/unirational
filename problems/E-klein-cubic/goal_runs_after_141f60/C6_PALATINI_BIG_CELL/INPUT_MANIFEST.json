@@ -1,0 +1,40 @@
+{
+  "format": "c6-input-manifest-v1",
+  "pinned_goal_baseline": "141f6042f628f984771fc79d8d16beb12cedcb94",
+  "binding_inputs": {
+    "c5_status": {
+      "path": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/STATUS.md",
+      "sha256": "94f58b4d3211ef5ac6d20bfced5ed01dbed414606be170275d26bc55d5fcb3b1"
+    },
+    "generic_pluecker_incidence": {
+      "path": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/generic_pluecker_incidence.json",
+      "sha256": "c13b4a9f375ba1a45127f155c3607ec68fc153028f19850169b8c6d4e3c80309"
+    },
+    "morita_generic_dag": {
+      "path": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/morita_generic_dag.json",
+      "sha256": "67ed0e94de5efdd39cf29f3512958a7f8145774f54dd0d7dac17bf8bab6c8a7f"
+    },
+    "morita_generic_split_dag": {
+      "path": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/morita_generic_split_dag.json",
+      "sha256": "df2db37184d16b242e863c368928c4941c25d30c296d4070977722adf51d572f"
+    },
+    "involution": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/involution.json",
+      "sha256": "e8001963a8361f97e63deb7b8a92f2c9608765b09be9bb631aaa9c4eb5bae077"
+    },
+    "distinguished_five_plane": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/distinguished_five_plane.json",
+      "sha256": "edee4f7e07e95665044ba4fba85239154f4052f27d99b3cbcdd0f48b60d2378a"
+    },
+    "c5_input_manifest": {
+      "path": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/INPUT_MANIFEST.json",
+      "sha256": "3a40d89abb53a85c2d520dc4e4e9e5d775b64c1737734b835f88edd9b74b3a45"
+    }
+  },
+  "retired_equations_forbidden": [
+    "e^2=e",
+    "Trd(e)=2",
+    "e*S_0*e=0"
+  ],
+  "marker": "C6_INPUTS_HASHED"
+}

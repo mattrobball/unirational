@@ -1,0 +1,13 @@
+{
+  "format": "q3-bridge-status-v1",
+  "stable_map_or_gtc_obtained": false,
+  "bridge_stable_cubic_pos": false,
+  "point_md": false,
+  "headline_candidate_exits": {
+    "Q3-STABLE-MAP-HEADLINE-POSITIVE": false,
+    "Q3-GENERALIZED-TWISTED-CUBIC-HEADLINE-POSITIVE": false
+  },
+  "output_bridge_ready": "fixed_curve_bridge Theorems A/B: any actual odd-degree genus-zero stable map or GTC Hilbert point over K_Schur forces a point",
+  "not_entered": true,
+  "reason": "No verified K_Schur stable map or Hilbert point was produced."
+}

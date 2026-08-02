@@ -1,0 +1,50 @@
+{
+  "attempts": [
+    {
+      "candidate": "a_i",
+      "criterion": "D = B(q,a_i,a_i) = 0 in L_i",
+      "defined_over_K_proj": true,
+      "name": "a_i_on_Q_q",
+      "quadratic": "Q_q: B(q,v,v)=0",
+      "reason": "No identity forces D=0 for the genuine G3-frame point a_i. The cubic condition Phi(a_i)=0 is independent of the polar quadric Q_q of the tautological ambient point q. Modular probes (secondary-0 specializations of M, independent of a_i expansion) show Q_q is a nondegenerate form; without D=0 the candidate fails.",
+      "status": "NOT_CERTIFIED"
+    },
+    {
+      "candidate": "a_i",
+      "criterion": "C = B(q,q,a_i) = 0",
+      "defined_over_K_proj": true,
+      "name": "a_i_on_H_q",
+      "quadratic": "H_q is linear (not quadratic); recorded for completeness",
+      "reason": "No identity forces C=0; H_q is not a quadratic object.",
+      "status": "NOT_CERTIFIED"
+    },
+    {
+      "candidate": "roots in P^1(L_i)",
+      "defined_over_K_proj": false,
+      "name": "line_residual_binary",
+      "quadratic": "A s^2 + 3 C s t + 3 D t^2",
+      "reason": "Object is defined over L_i, not K_proj. Springer item 1 fails.",
+      "status": "REJECTED_FOR_SPRINGER"
+    },
+    {
+      "candidate": "norm/trace constructions from residual line points",
+      "defined_over_K_proj": true,
+      "name": "galois_norm_of_residual_direction",
+      "quadratic": "Q_q",
+      "reason": "No sealed construction produces an L_i-rational isotropic vector for Q_q from the residual binary form's Galois data. Norm of a scalar disc is not a point of Q_q.",
+      "status": "NOT_CERTIFIED"
+    },
+    {
+      "candidate": "a_i as isotropic for some pencil member",
+      "defined_over_K_proj": true,
+      "name": "polar_pencil_fibre",
+      "quadratic": "lambda Q_q + mu (other K_proj quadrics from frame)",
+      "reason": "Membership of a_i in a K_proj-pencil member other than Q_q would still require an explicit L_i equation and a map-back path; not sealed.",
+      "status": "NOT_CERTIFIED"
+    }
+  ],
+  "certified_L_i_point_on_K_proj_quadratic": false,
+  "conclusion": "No certified L_i-point on a K_proj-defined quadratic object was obtained from a_i and q.",
+  "n_certified": 0,
+  "schema": "g3h-phase5-next-L-point-hunt-v1"
+}

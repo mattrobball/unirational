@@ -7,34 +7,34 @@ tensor formulas for projective operations.
 
 ### Cone lifts
 
-For each of the 22 geometric points the producer stores:
-
-1. a raw homogeneous representative `rho(g_i)·base ∈ Q(ζ₁₁)⁵`;
-2. the **chart-normalized** lift with first nonzero coordinate equal to `1`.
-
-Nonvanishing opens appearing among the charts:
+Chart normalization: first nonzero coordinate scaled to `1`. Sample F=0 points
+(not induced-cycle points) exercise the interface. Nonvanishing opens among
+samples:
 
 ```text
 x_0 != 0
-x_2 != 0
 ```
 
-Galois compatibility: the chart is the minimal index of a nonzero coordinate.
-On the open where that coordinate remains nonzero, the lift is the unique
-vector on the line with that coordinate `1`. Residual `C*`-scales never enter
-projective constructions.
+On the open where the chosen chart coordinate remains nonzero, the lift is the
+unique vector on the line with that coordinate `1`. Residual `C*`-scales never
+enter projective constructions.
 
 ### Multihomogeneous operations
 
 - Third intersection on a line through `p,q`:
   `r = B(p,q,q)p − B(p,p,q)q` (bidegree (2,2) — projectively meaningful).
-- Incidence-weighted sums require the stored chart lifts (or a common
+- Incidence-weighted sums require audited chart lifts (or a common
   Galois-compatible unit scale). **Silent sums of arbitrary homogeneous
   representatives are forbidden** and fail the scaling verifier.
 
+### Binding
+
+This gate does **not** claim induced-cycle coordinates. It seals the
+scale-safe operation interface for any later geometric points.
+
 ### Verifier contract
 
-`verify_scaling.py` deliberately rescales every input point independently and
+`verify_scaling.py` deliberately rescales every sample point independently and
 checks projective outputs are unchanged. Marker:
 
 ```text

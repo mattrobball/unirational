@@ -1,0 +1,473 @@
+{
+  "schema": "h6-trace-hyperplane-11-torsor-v1",
+  "consumed_h6a": {
+    "path": "goal_runs_after_141f60/H6A_PROJECTIVE_11_ISOGENY/",
+    "exit": "H6-PROJECTIVE-11-ISOGENY-PASS",
+    "isogeny_degree": 11,
+    "kernel": "mu_11 etale; C5 acts by *9 on Z/11",
+    "det_A_aug": 11,
+    "operators": {
+      "A_coeffs_sigma_powers": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "B_coeffs_sigma_powers": [
+        5,
+        -3,
+        1,
+        -1,
+        0
+      ]
+    }
+  },
+  "fields": {
+    "E": "L^<T> = C(r0,...,r4)/(r0*r1*r2*r3*r4-1)",
+    "K": "L^H = E^<sigma> = C(U1,U2,U3,U4)",
+    "c": "r2^{-1}",
+    "sigma": "sigma(r_i)=r_{i+1}",
+    "Phi": "Tr_{E/K}(c a^2 sigma(a)) = sum_i Z(r_i)^2 Z(r_{i+1})/r_{i+2}"
+  },
+  "trace_hyperplane": {
+    "H_tr": "{[b] in P(E) : Tr_{E/K}(b)=0}",
+    "ambient": "P(E) \u2245 P^4_K",
+    "not_a_subtorus": true,
+    "reason": "Tr is additive K-linear; intersection with product-one torus is a hypersurface",
+    "quotient_torus_coordinates": {
+      "ambient_torus": "product-one T={prod r_i=1} with character lattice L={sum m_i=0}",
+      "augmentation_chart": "Z^4 with basis e_i - e_4",
+      "R_coordinates": "[R0:...:R4]=[1:r0^-1:(r0*r1)^-1:(r0*r1*r2)^-1:(r0*r1*r2*r3)^-1]",
+      "note": "Coordinates for H_tr are the ambient torus/projective coordinates restricted by Tr(b)=0; they are not a quotient-torus lattice of H_tr itself."
+    }
+  },
+  "fibre_product": {
+    "Y": "{([a],[b]) : [b]=[c * phi(a)], Tr(b)=0}",
+    "phi": "[a] |-> [a^2 sigma(a)]",
+    "map_H_tr_to_T": "[b] |-> [b * c^{-1}] = [b * r2] (on torus open)",
+    "structure": "degree-11 torsor under ker(phi)\u2245mu_11 on the dense torus open of H_tr",
+    "galois_module": {
+      "kernel": "mu_11",
+      "C5_action_multiplier": 9,
+      "resolvent_kernel": "X^11-1 with sigma(X)=X^9"
+    }
+  },
+  "kummer_resolvent_invariant": {
+    "dual_multiplicative": "psi_B(m)_i = m_i^5 * m_{i-1}^{-3} * m_{i-2} * m_{i-3}^{-1}",
+    "identity": "psi_B o psi_A = [11] on product-one torus (verified modularly)",
+    "fibre_equation": "psi_A(r)=m  =>  r^{11} = psi_B(m)  (componentwise on product-one)",
+    "class": "For m = b*c^{-1} on the torus open, the mu_11-torsor class is the class of kappa=psi_B(m) in T/T^{11} (Kummer), with C5-action by *9 on the mu_11 coordinate after choosing a geometric generator with exponents c=(5,3,4,9,1).",
+    "single_generator_obstruction": {
+      "description": "On augmentation lattice, A_aug has SNF diag(1,1,1,11); solving A_aug u = v is obstructed by B_aug v \u2261 0 mod 11 (since A B = 11 I).",
+      "e0_obstruction_B_aug_mod_11": [
+        8,
+        7,
+        2,
+        10
+      ],
+      "sigma_multiplier_on_coker": 9
+    },
+    "dual_composition_samples": [
+      {
+        "p": 23,
+        "r": [
+          8,
+          18,
+          1,
+          7,
+          17
+        ],
+        "psi_A": [
+          7,
+          16,
+          18,
+          3,
+          22
+        ],
+        "psi_B_psi_A": [
+          1,
+          1,
+          1,
+          22,
+          22
+        ],
+        "r_to_11": [
+          1,
+          1,
+          1,
+          22,
+          22
+        ],
+        "equals": true
+      },
+      {
+        "p": 23,
+        "r": [
+          7,
+          10,
+          20,
+          16,
+          11
+        ],
+        "psi_A": [
+          10,
+          10,
+          21,
+          14,
+          4
+        ],
+        "psi_B_psi_A": [
+          22,
+          22,
+          22,
+          1,
+          22
+        ],
+        "r_to_11": [
+          22,
+          22,
+          22,
+          1,
+          22
+        ],
+        "equals": true
+      },
+      {
+        "p": 23,
+        "r": [
+          9,
+          10,
+          4,
+          10,
+          2
+        ],
+        "psi_A": [
+          1,
+          3,
+          22,
+          9,
+          17
+        ],
+        "psi_B_psi_A": [
+          1,
+          22,
+          1,
+          22,
+          1
+        ],
+        "r_to_11": [
+          1,
+          22,
+          1,
+          22,
+          1
+        ],
+        "equals": true
+      },
+      {
+        "p": 23,
+        "r": [
+          7,
+          12,
+          4,
+          7,
+          4
+        ],
+        "psi_A": [
+          12,
+          19,
+          8,
+          12,
+          20
+        ],
+        "psi_B_psi_A": [
+          22,
+          1,
+          1,
+          22,
+          1
+        ],
+        "r_to_11": [
+          22,
+          1,
+          1,
+          22,
+          1
+        ],
+        "equals": true
+      },
+      {
+        "p": 23,
+        "r": [
+          17,
+          14,
+          2,
+          6,
+          6
+        ],
+        "psi_A": [
+          9,
+          20,
+          10,
+          3,
+          9
+        ],
+        "psi_B_psi_A": [
+          22,
+          22,
+          1,
+          1,
+          1
+        ],
+        "r_to_11": [
+          22,
+          22,
+          1,
+          1,
+          1
+        ],
+        "equals": true
+      },
+      {
+        "p": 23,
+        "r": [
+          16,
+          13,
+          4,
+          15,
+          5
+        ],
+        "psi_A": [
+          15,
+          13,
+          1,
+          3,
+          7
+        ],
+        "psi_B_psi_A": [
+          1,
+          1,
+          1,
+          22,
+          22
+        ],
+        "r_to_11": [
+          1,
+          1,
+          1,
+          22,
+          22
+        ],
+        "equals": true
+      }
+    ],
+    "kummer_kernel_samples": [
+      {
+        "p": 23,
+        "m": [
+          8,
+          18,
+          12,
+          2,
+          4
+        ],
+        "kappa_psi_B_m": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "particular_r": [
+          12,
+          6,
+          18,
+          8,
+          9
+        ],
+        "kernel_translate_also_hits_m": true,
+        "zeta11": 4
+      },
+      {
+        "p": 23,
+        "m": [
+          13,
+          2,
+          17,
+          22,
+          9
+        ],
+        "kappa_psi_B_m": [
+          1,
+          22,
+          22,
+          1,
+          1
+        ],
+        "particular_r": [
+          13,
+          20,
+          5,
+          3,
+          16
+        ],
+        "kernel_translate_also_hits_m": true,
+        "zeta11": 4
+      },
+      {
+        "p": 23,
+        "m": [
+          1,
+          17,
+          21,
+          2,
+          1
+        ],
+        "kappa_psi_B_m": [
+          22,
+          22,
+          1,
+          1,
+          1
+        ],
+        "particular_r": [
+          19,
+          17,
+          13,
+          3,
+          13
+        ],
+        "kernel_translate_also_hits_m": true,
+        "zeta11": 4
+      },
+      {
+        "p": 23,
+        "m": [
+          19,
+          8,
+          14,
+          14,
+          10
+        ],
+        "kappa_psi_B_m": [
+          1,
+          22,
+          22,
+          22,
+          22
+        ],
+        "particular_r": [
+          3,
+          15,
+          21,
+          19,
+          20
+        ],
+        "kernel_translate_also_hits_m": true,
+        "zeta11": 4
+      }
+    ]
+  },
+  "c_translation": {
+    "statement": "The torsor class of Y over [b] is the pullback of phi along m=b*c^{-1}. It factors as the class of psi_B(b) times the fixed translation class of psi_B(c^{-1})=psi_B(r2).",
+    "order_11_of_c": {
+      "c": "r2^{-1}",
+      "witness_d": "r1 * r2^6 * r3^{-2} * r4^2",
+      "psi_d": "r2^{11} on product-one (exact exponent identity)",
+      "conclusion": "class of c (equivalently r2) has exact order 11 modulo psi(E^*); it appears as a *term* in the torsor class, not a free-standing obstruction (promotion forbidden; H4/H5/H6A).",
+      "exponent_check_Ae": [
+        2,
+        2,
+        13,
+        2,
+        2
+      ],
+      "modular_checks": [
+        {
+          "p": 23,
+          "r": [
+            11,
+            9,
+            12,
+            1,
+            20
+          ],
+          "d_exp": [
+            0,
+            1,
+            6,
+            -2,
+            2
+          ],
+          "psi_d_exp_equals_r2_11_on_product_one": true,
+          "monom_check": true
+        },
+        {
+          "p": 67,
+          "r": [
+            65,
+            41,
+            66,
+            52,
+            53
+          ],
+          "d_exp": [
+            0,
+            1,
+            6,
+            -2,
+            2
+          ],
+          "psi_d_exp_equals_r2_11_on_product_one": true,
+          "monom_check": true
+        },
+        {
+          "p": 89,
+          "r": [
+            42,
+            57,
+            30,
+            19,
+            64
+          ],
+          "d_exp": [
+            0,
+            1,
+            6,
+            -2,
+            2
+          ],
+          "psi_d_exp_equals_r2_11_on_product_one": true,
+          "monom_check": true
+        },
+        {
+          "p": 331,
+          "r": [
+            260,
+            218,
+            108,
+            300,
+            259
+          ],
+          "d_exp": [
+            0,
+            1,
+            6,
+            -2,
+            2
+          ],
+          "psi_d_exp_equals_r2_11_on_product_one": true,
+          "monom_check": true
+        }
+      ]
+    },
+    "promotion_forbidden": true
+  },
+  "Y_K_equivalence": {
+    "open_torus": "Nonzero a in the torus open with Phi(a)=0  <=>  exists [b] with ([a],[b]) in Y(K) and b in torus open (set b=c*psi(a)).",
+    "proof_sketch": "Tr is K-linear: Tr(c psi(a))=0 iff Tr(lambda c psi(a))=0 for lambda in K^*. Projective class [b]=[c psi(a)] lands in H_tr. Conversely a point of Y on the open gives Phi(a)=0. a=0 is excluded projectively.",
+    "boundary": "see BOUNDARY_AUDIT.md; separate from open equivalence"
+  },
+  "marker": "H6-TORSOR-CLASS-PASS"
+}

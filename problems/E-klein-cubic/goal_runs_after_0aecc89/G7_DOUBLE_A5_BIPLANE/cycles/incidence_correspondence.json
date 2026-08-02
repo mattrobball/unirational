@@ -1,5 +1,7 @@
 {
   "schema": "g7b-incidence-correspondence-v1",
+  "scope": "abstract_coset_modules_only",
+  "note": "N maps between the two degree-11 coset permutation modules. It is NOT a map of geometric induced-cycle points until G7.3 materialization exists.",
   "source_algebra": {
     "label": "A5_class_1",
     "design_label": "A5_class_H",
@@ -904,7 +906,7 @@
     }
   },
   "descent": {
-    "statement": "N is constant on the coset bases of the two finite-etale K_proj-algebras L_H, L_K and is G-equivariant for the joint conjugation/coset action (installed G = Aut of the design). It is not a bare matrix detached from descent: bases are the same coset bases carrying the induced cycles and Gal actions.",
+    "statement": "N is constant on the coset bases of the two finite-etale K_proj-algebras L_H, L_K and is G-equivariant for the joint conjugation/coset action. Geometric cycle incidence requires G7.3 materialization (currently residual).",
     "G_equivariance": "Conjugation by g\u2208G permutes both conjugacy orbits and preserves intersection type; transported N intertwines the two perm modules."
   },
   "direct_intersection_rebuild_matches": true,

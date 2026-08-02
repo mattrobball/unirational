@@ -1,0 +1,79 @@
+{
+  "schema": "g7c-effective-cycles-v1",
+  "effective_length_two_over_K_proj": false,
+  "K_proj_point_of_X_gen": false,
+  "K_proj_line_on_X_gen": false,
+  "plane_conic_residual_line": false,
+  "candidates_examined": [
+    {
+      "type": "line_on_split_cubic",
+      "data": {
+        "i": 2,
+        "j": 7,
+        "incident": true,
+        "p_rational_Q": false,
+        "q_rational_Q": false,
+        "both_rational_Q": false,
+        "note": "Line span(p,q) \u2282 V(F) because F(sp+tq)\u22610 (B(p,p,q)=B(p,q,q)=0 and F(p)=F(q)=0)."
+      },
+      "headline_eligible": false,
+      "reason": "Split-model line on V(F). Not promoted: no equivariant K_proj-descent / G3A dominance bridge / BRIDGE_DOUBLE_A5_POS."
+    },
+    {
+      "type": "line_on_split_cubic",
+      "data": {
+        "i": 6,
+        "j": 2,
+        "incident": true,
+        "p_rational_Q": false,
+        "q_rational_Q": false,
+        "both_rational_Q": false,
+        "note": "Line span(p,q) \u2282 V(F) because F(sp+tq)\u22610 (B(p,p,q)=B(p,q,q)=0 and F(p)=F(q)=0)."
+      },
+      "headline_eligible": false,
+      "reason": "Split-model line on V(F). Not promoted: no equivariant K_proj-descent / G3A dominance bridge / BRIDGE_DOUBLE_A5_POS."
+    },
+    {
+      "type": "line_on_split_cubic",
+      "data": {
+        "i": 6,
+        "j": 8,
+        "incident": true,
+        "p_rational_Q": false,
+        "q_rational_Q": false,
+        "both_rational_Q": false,
+        "note": "Line span(p,q) \u2282 V(F) because F(sp+tq)\u22610 (B(p,p,q)=B(p,q,q)=0 and F(p)=F(q)=0)."
+      },
+      "headline_eligible": false,
+      "reason": "Split-model line on V(F). Not promoted: no equivariant K_proj-descent / G3A dominance bridge / BRIDGE_DOUBLE_A5_POS."
+    },
+    {
+      "type": "line_on_split_cubic",
+      "data": {
+        "i": 8,
+        "j": 0,
+        "incident": true,
+        "p_rational_Q": true,
+        "q_rational_Q": true,
+        "both_rational_Q": true,
+        "note": "Line span(p,q) \u2282 V(F) because F(sp+tq)\u22610 (B(p,p,q)=B(p,q,q)=0 and F(p)=F(q)=0)."
+      },
+      "headline_eligible": false,
+      "reason": "Split-model line on V(F). Not promoted: no equivariant K_proj-descent / G3A dominance bridge / BRIDGE_DOUBLE_A5_POS."
+    }
+  ],
+  "bridge": {
+    "BRIDGE_DOUBLE_A5_POS": false,
+    "Phi_authoritative": false,
+    "G2_clear_denominators": false,
+    "Klein_equivariance": false,
+    "G3A_dominance_ledger": false,
+    "reason": "No K_proj-point or effective length-two subscheme of X_gen was produced by the finite design operation space. Headline remains OPEN. CH_0 / signed degree-1 classes are not effective degree-two exits."
+  },
+  "residual_gates": [
+    "No K_proj-rational point of X_gen from G7C op space",
+    "No effective length-two Z \u2282 X_gen over K_proj",
+    "Split-model lines on V(F) lack equivariant descent bridge",
+    "Springer / non-split L_H cocycle lifts remain outside G7C finite op space"
+  ]
+}

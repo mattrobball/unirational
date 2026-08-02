@@ -1,0 +1,130 @@
+{
+  "format": "q3-quartic-resolvent-model-v1",
+  "field": "K_Schur = C(P(V6))^PSL2(F11)",
+  "cubic_model": "genuine Schur twist X_Schur (installed degree-8 Reynolds frame)",
+  "primitive_full_span_quartic": {
+    "existence_source": "Voisin arXiv:2509.17996 Thm 1.5 + imprimitivity exclusion",
+    "no_point_branch_only": true,
+    "galois_closures_kept_separate": [
+      "A4",
+      "S4"
+    ],
+    "span": "P3",
+    "linearly_disjoint_from_PSL2_11": true,
+    "psl2_11_order_checked": 660,
+    "common_quotients_with_PSL2_11": {
+      "A4": [
+        1
+      ],
+      "S4": [
+        1
+      ]
+    }
+  },
+  "A4": {
+    "order": 12,
+    "vertex_orbit": 4,
+    "edge_orbit": 6,
+    "pairing_orbit": 3,
+    "pairing_image_order": 3,
+    "pairing_image_name": "C3",
+    "pairing_kernel_order": 4,
+    "pairing_kernel_name": "V4",
+    "cubic_resolvent_galois": "C3",
+    "cubic_resolvent_degree": 3
+  },
+  "S4": {
+    "order": 24,
+    "vertex_orbit": 4,
+    "edge_orbit": 6,
+    "pairing_orbit": 3,
+    "pairing_image_order": 6,
+    "pairing_image_name": "S3",
+    "pairing_kernel_order": 4,
+    "pairing_kernel_name": "V4",
+    "cubic_resolvent_galois": "S3",
+    "cubic_resolvent_degree": 3
+  },
+  "pairings": {
+    "labels": [
+      "01|23",
+      "02|13",
+      "03|12"
+    ],
+    "as_double_pairs": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    ]
+  },
+  "three_marked_points": {
+    "construction": "For conjugates P0..P3 of the primitive quartic on a smooth hyperplane section S, set Q_ij = third point of PiPj on S; for each pairing pi=ij|kl set R_pi = third point of Q_ij Q_kl on S. The triple (R_01|23, R_02|13, R_03|12) is the cubic-resolvent marked triple.",
+    "defined_over": "cubic resolvent algebra M/K_Schur of degree 3",
+    "galois_on_triple": {
+      "A4": "C3",
+      "S4": "S3"
+    },
+    "not_universally_collinear": true,
+    "collinearity_refutation": "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/root_secant/"
+  },
+  "degree_eight_incidence": {
+    "source": "Zinger GT 18 (2014) p.1058; Harris\u2013Roth\u2013Starr arXiv:math/0202067 Thm 4.4",
+    "smooth_twisted_cubic_locus_dimension": 6,
+    "three_marked_incidence_dimension": 9,
+    "evaluation_map_to_X3_generic_degree": 8,
+    "generic_fibre_after_points_split": "one integral degree-eight field",
+    "generic_not_split_by_cubic_closure": true,
+    "enumerative_on_general_locus": true,
+    "special_resolvent_triple_generality": "NOT PROVED for installed Schur quartic",
+    "virtual_count_eight_implies_point": false
+  },
+  "gtc_hilbert_compactification": {
+    "smooth_locus": "H_{3,0}(X) smooth irreducible of dimension 6",
+    "closure": "Tbar in Hilb(X)",
+    "boundary_types": [
+      "line + conic",
+      "three lines",
+      "double line + line",
+      "nonreduced generalized twisted cubics",
+      "embedded-point Hilbert boundary"
+    ],
+    "bayer_map": "Tbar -> M_X -> Theta = Bl_0 J(X), exceptional fibre X",
+    "bridge_theorem": "actual K_Schur GTC Hilbert point or odd-degree genus-zero stable map forces X_Schur(K_Schur) nonempty (fixed_curve_bridge/THEOREM.md)",
+    "coarse_kontsevich_gerbe_caveat": true
+  },
+  "galois_commuting_diagrams": {
+    "S4_acts_on_vertices_edges_pairings": true,
+    "pairing_homomorphism_exact_sequence": "1 -> V4 -> S4 -> S3 -> 1",
+    "A4_restriction": "1 -> V4 -> A4 -> C3 -> 1",
+    "resolvent_points_equivariant": true,
+    "schur_and_quartic_closures_disjoint": true
+  },
+  "marker": "Q3-QUARTIC-RESOLVENT-MODEL-PASS"
+}

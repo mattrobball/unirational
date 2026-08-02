@@ -1,42 +1,52 @@
 {
-  "format": "g7b-double-a5-cycles-seal-v1",
-  "exit": "G7-INDUCED-DOUBLE-CYCLE-PASS",
-  "also": [
-    "G7-PROJECTIVE-SCALING-PASS"
-  ],
+  "format": "g7b-double-a5-cycles-seal-v2",
+  "exit": "G7-PROJECTIVE-SCALING-PASS",
+  "also": [],
+  "g7_3_materialization": "RESIDUAL",
+  "residual_gate": "need L_H cocycle coordinates from H_A5 formula in G3 frame (no well-defined H-fixed cone lift; rho(g)\u00b7e0 refuted)",
   "headline": "OPEN",
   "stages": [
     "G7.2",
-    "G7.3"
+    "G7.3-residual"
   ],
-  "consumed_commit": "0222cc7ee4dd44d8d578628d1d4cc874e4249f82",
-  "n_points_explicit": 22,
-  "G3_frame_coordinates": true,
-  "both_classes": true,
+  "consumed_commit": "eb21458bea684d2399ad18f003e2be8ebdd161ce",
+  "n_correct_G3_coordinates": 0,
+  "both_classes_materialized": false,
   "files": {
-    "INPUT_MANIFEST.json": "74b87a509586649998eed653a4792adec2deea72e54e066e49504b462de64ad2",
-    "scaling_interface.json": "c01345576f078edcc1b2f707d5ec1a57d5a80fdbf8697e60249a09d03b1001fc",
-    "cycles.json": "24b568b08b284d395fa1134f926d29fd85fb28e722593e93993b0113a46dd4f9",
-    "incidence_correspondence.json": "eeabf126d1c9bc487829416235623ed88fb654ed5ab8d0b34a288c7d298f4a7a",
-    "PROJECTIVE_SCALING.md": "c5b9b9f7a7d4adf846c31c805285f89c576cfb054610952a4f5afc3a7714d3f9",
-    "CYCLES.md": "01679291ae3bb46c37e02d0b41ab207ae0cd5ed137ae25317a4592d12269c6ea",
-    "INCIDENCE_CORRESPONDENCE.md": "84b9a6d80b60face5e764e6408279b2fd2725e05885923f53fb67e2005f6d04f",
-    "produce.py": "a490a20e7b8a09512697b770078dde47e452fc4566633679cae9ce13458bb2d4",
-    "produce_meta.json": "0b7dc0b93e2d5e2e2315d586d442cffa4c5aed184d3568e07a71462758d23eae",
-    "verify_scaling.py": "520f93e817276835c7bb366b057c6b99e462af4258f71de888c198f185e74de6",
-    "verify_cycles.py": "a12141201773b239b8ffb5cfa0a97ebfa070b0cd83851c57fa26c15cf8788263",
-    "REPLAY.md": "fafde2d1c7ffb2e252ab1d423d4133d344a88593f1d79f4574618dca77c5f5a3",
-    "STATUS.md": "c7ba3ec1dff0dc3bfd0d99b87967e6d32e75b7f15eddc6f4df5c9b488b0302ae",
-    "make_seal.py": "2147f43fe00f12dddf9313fcc2146a5d05c0211f9b26df600b21e48bff03c969"
+    "INPUT_MANIFEST.json": "6522584c0d754cc0e5b209c58ff594c888d3c7b532c6ccb149addc60454a8570",
+    "scaling_interface.json": "ef881bc4bf9bc76315fd418cfd151aad4325198f6e0d9820018d25cd3eb6892a",
+    "cycles.json": "08da83ac0e6aabdc6852318a670c842210ad4850e9a29f3219e82cda07e82834",
+    "incidence_correspondence.json": "04683b0759d7f27e163e8952ef9c471e8af1d1b569a2eff39491832053cdd4b3",
+    "PROJECTIVE_SCALING.md": "9cfee131b75b490c7a27283a06aec148f7f8ee1124ed05f60b2e2fdd3047d131",
+    "CYCLES.md": "7fbd03d22b70f3ed0cd764319cd1b7d49d525ab3c7f9064d8ef5dfe2dacb84c8",
+    "INCIDENCE_CORRESPONDENCE.md": "f4281b71d6fa513f4b936972f04cf78c1fdf4a6f71e2dfb57389992a51c99762",
+    "INDUCED_CYCLE_REFUTATION.md": "a2828c084a24e067a6096f29a0e8dc85675f06d4cdd74b97bc276219817c9e1f",
+    "produce.py": "593d063b19bc1122ab2a5373d3e3702492b78c4f4dcd6fbebd34c11d18f3bba5",
+    "produce_meta.json": "3c0a971176dfa0b16b6defaf2dc80d6f249ddd3bc849df5501f01d769e79d79f",
+    "verify_scaling.py": "caed27e02afb3f0ef508c66e9856cd2fc8b567424b928f00b0f5db78ef147706",
+    "verify_cycles.py": "7e4656b32c7dd49a998aff8d57809fc0400b2a4a50394673b3201ac3b65c6838",
+    "audit_induced_refutation.py": "7ff154384de1856dd65b125bdacac3be8f539b301a54e26ec980f52fc46616d4",
+    "REPLAY.md": "6d5c63394adc6fb689ca909c513727f979cf4b7476adda3c788865d066aaaa48",
+    "STATUS.md": "53e4e5e97951af7066c7f7aadfd8f11f831f50df4070bc95f18da33cd1358aaa",
+    "make_seal.py": "6457f0fc74c22ac8cea9c26af6c0dc275f9bdedf5ab5cc9a1712d07619b19c6b",
+    "cycles_WITHDRAWN_rho_e0.json": "24b568b08b284d395fa1134f926d29fd85fb28e722593e93993b0113a46dd4f9"
   },
   "nonclaims": [
     "no K_proj-point of X_gen",
     "no G7C geometry (G7.4+)",
     "does not reseal H_A5, G4, G7A, G3A",
-    "split-model coordinates over Q(zeta_11); abstract point over L_H"
+    "no G7-INDUCED-DOUBLE-CYCLE-PASS without well-defined materialization",
+    "withdrawn rho(g_i)\u00b7e0 construction is non-consumable"
   ],
   "residual_gates": [
-    "G7C cross-ops / third intersections / residual geometry",
-    "Springer path may still need non-split L_H-valued cocycle lifts"
-  ]
+    "need L_H cocycle coordinates from H_A5 formula in G3 frame (no well-defined H-fixed cone lift; rho(g)\u00b7e0 refuted)",
+    "G7C cross-ops / third intersections only after correct cycles",
+    "G3P.3 Springer needs genuine G3-frame induced points"
+  ],
+  "supersedes": {
+    "prior_exit": "G7-INDUCED-DOUBLE-CYCLE-PASS",
+    "prior_construction": "rho(g_i)*e0",
+    "status": "non-consumable",
+    "artifact": "cycles_WITHDRAWN_rho_e0.json"
+  }
 }
