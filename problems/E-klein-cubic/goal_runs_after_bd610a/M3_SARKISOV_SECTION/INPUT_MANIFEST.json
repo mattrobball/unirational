@@ -1,0 +1,60 @@
+{
+  "binding_geometry": {
+    "SPEC.md": {
+      "git_blob_sha1": "25021a19000bb5871732d30146f94621044e2fde",
+      "use": "generic Schur twist has no K-line and no geometrically integral K-plane conic"
+    },
+    "goals_2026-08-01/R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO/STATUS.md": {
+      "sha256_from_m2_seal": "95cbef4325c63aaa4fb41f724c7fd4b4f66c96b1ace27e1b2ffcc1779bc6ab4e",
+      "use": "all-conic exclusion and rational-curve point bridge"
+    }
+  },
+  "exact_schur_frame": {
+    "files_sha256": {
+      "THEOREM.md": "051324fc06253b0bec0a066eb113ea475eb96c1d400577f450f9d954dcc33644",
+      "exact_frame.json": "53f2d5e6afa2c6afdf49f53723339ccf5755f919471d42f907d5542ddef87e45",
+      "exact_representation_core.py": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4",
+      "produce_exact_frame.py": "86df099ddb87bec88fb7883b91f375aadae41507421fc5d96a3e4ef9ea44d48e"
+    },
+    "root": "problems/E-klein-cubic/goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame"
+  },
+  "external_references": [
+    {
+      "citation": "Claire Voisin, Rank 2 vector bundles and degrees of points of del Pezzo surfaces, arXiv:2509.17996v2, Theorem 1.5 and its proof",
+      "use": "section-or-degree-four point alternative and the proof boundary: no containment in the input splitting field is supplied"
+    }
+  ],
+  "goal": {
+    "git_blob_sha1": "25a99509060441f51b4d8e6a0fffd20c50212095",
+    "path": "problems/E-klein-cubic/goals_after_bd610a/GOAL_M3_SARKISOV_SECTION.md"
+  },
+  "live_head_audited": "b49fc8148ca3ad8a23b959c140d68e7544fc8031",
+  "m2_packet": {
+    "files_sha256": {
+      "ARITHMETIC.md": "2a85ec289e1842d6ae5dde880f84f5c6fd233e2b2e26aff581c8cd7b51d682ff",
+      "DESCENT.md": "4c2ff2b94a9b07b6fdd6340081625ea3dae35189e4dc02d406ad13b487654c08",
+      "STATUS.md": "4c976a27d9b57ea9f0838c398077865fd4aecb6bd37d7da8f292974181a08edc",
+      "THEOREM.md": "b1c193617e4c4ef99c6e3757369ad16091e0556cbaf8a975dd52869fd4de7812",
+      "links/schur_plane_012_dp3/link_payload.json": "a1c74b36f85bd5c085d1b3d5628da770db3520d97c388950d653a0a8468e9fd5"
+    },
+    "root": "problems/E-klein-cubic/goal_runs_after_35fa/M_SARKISOV",
+    "seal_git_blob_sha1": "c7e51bb6cafe9772d796f837dabc70a24068b55c"
+  },
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "post_pinned_inputs": {
+    "Q_SCHUR_INDEX_ONE_DESCENT_OBSTRUCTION_20260802/STATUS.md": {
+      "git_blob_sha1": "e62921f0fb801183da46c70c34d6a3b531925498",
+      "use": "records primitive A4/S4 quartic descent as a live frontier and standard finite descent as exhausted"
+    },
+    "Q_SCHUR_INDEX_ONE_DESCENT_OBSTRUCTION_20260802/TRANSFER_AND_DESCENT_THEOREM.md": {
+      "git_blob_sha1": "433be6aadd3ef8df0989fd8030fd9df481546494",
+      "use": "coprime-degree transfer and finite-torsor boundary"
+    }
+  },
+  "repository": "mattrobball/unirational",
+  "representation_source": {
+    "path": "problems/E-klein-cubic/certificates/exact_weil_check.py",
+    "sha256_from_m2_seal": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2"
+  },
+  "schema": "m3-input-manifest-v1"
+}
