@@ -1,16 +1,11 @@
 G2-FINITE-GENERATION-PASS
 
-# Goal G / G2 status — universal object and all-degree theorem
+# Goal G / G2 status — universal object and all-degree theorem complete
 
-**Consumed commit:** `4378e3dfe2dcf0caeeeb6f73117d785f5aa9f794`  
-**Date:** 2026-08-02  
-**Headline problem:** **OPEN**
-
-This packet closes the universal-object and all-degree-reduction portion of
-Goals G and G2.  It does not claim a rational point or a pointlessness
-certificate for the generic Klein twist.
-
-## Exact result
+The structural G/G2 mission is complete.  The correct universal object is not
+a finite list of symbolic-order bidegrees.  It is the generic
+`PSL(2,11)`-twist of the Klein cubic over the projective invariant field,
+with the global covariant lattice retained before localization.
 
 Let
 
@@ -19,91 +14,84 @@ S=\operatorname{Sym}(W^*),\qquad R=S^G,\qquad
 M=(S\otimes W)^G,
 \]
 
-and let `q(p)=F(p)` be the cubic landing law.  The installed homogeneous
-frame
+and let `q(p)=F(p)`.  On the generically free open of `P(W)`, write
 
 \[
-B=(x,C,D,E,K_7),\qquad \deg B=(1,4,5,6,7),
+K_{\rm proj}=k(\mathbf P(W))^G
 \]
 
-is a basis after passage to `Frac(R)`.  With
-`tau=f3^2/f5` of degree one and `K_proj=Frac(R)_0`, put
+and let `T/K_proj` be the generic `G`-torsor.  The universal landing object is
 
 \[
-\Phi(a_0,\ldots,a_4)=
-F\!\left(\sum_{i=0}^4a_iB_i/\tau^{\deg B_i}\right).
+X_T=T\times^G X,
 \]
 
-Then
+where `X=(F=0) subset P(W)`.  The packet proves the canonical bijections
 
 \[
-\boxed{
-\exists d\;\exists 0\ne p\in M_d\text{ with }F(p)=0
-\quad\Longleftrightarrow\quad
-V(\Phi)(K_{\rm proj})\ne\varnothing .}
+X_T(K_{\rm proj})
+\longleftrightarrow
+\{G\text{-equivariant rational maps }\mathbf P(W)\dashrightarrow X\}
+\longleftrightarrow
+\frac{\{0\ne p\in M_d\text{ for some }d:F(p)=0\}}
+     {\text{homogeneous invariant scalar multiplication}}.
 \]
 
-The forward implication normalizes the unique frame coordinates of `p`.
-The reverse implication clears homogeneous invariant denominators without
-mixing source degrees.  The proof identifies all homogeneous polynomial
-representatives on the same rational scalar-saturation line and proves that
-homogeneous precomposition preserves the landing equation.
+For the Klein representation, the homogeneous frame
 
-The symbolic plane-order filtration
+```text
+B = (x,C,D,E,K_7),       degrees = (1,4,5,6,7)
+```
+
+and the degree-one element `tau=f3^2/f5` identify `X_T` with the explicit
+cubic
 
 \[
-\mathcal F^mM=
-\left(\left(\bigcap_tP_t^m\right)\otimes W\right)^G
+V(\Phi)\subset \mathbf P^4_{K_{\rm proj}}.
 \]
 
-is retained as an exact stratification of this global object.  Plane jets,
-`V4` equalizers, residual point kernels, minus-line and marked-elliptic data,
-and irrelevant torsion are simultaneous restrictions of one global
-coefficient vector; independently chosen local states are not added as
-points.  The order `m` is evaluated on each polynomial representative and can
-change under invariant multiplication; the projective `K_proj`-point records
-the whole rational scalar-saturation class.
+The 35 coefficients of `Phi` are the already sealed exact data in
+`goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json`.  Denominator clearing and
+the reverse normalization are proved term by term, so this is an exact
+all-degree theorem rather than a degree ladder.
 
-Consequently
+Primitive versus scalar-multiple covariants are also closed.  The gcd of the
+coordinates of a genuine covariant is a semi-invariant.  The exact
+12-point permutation model verifies that `PSL(2,11)` has order 660 and equals
+its commutator subgroup, hence has no nontrivial characters; the gcd is
+therefore invariant.  Dividing it out preserves equivariance and landing,
+and primitive representatives are unique up to a ground-field scalar.
+
+The 55 symbolic plus-plane orders, `V4` triple-line equalizers, point kernels,
+minus-line and `C3/C6/A4/D10/D12` links, marked elliptic data, and finite
+irrelevant torsion remain present as functorial restrictions of the one global
+polynomial vector obtained after clearing denominators.  No converse from an
+independently chosen local inverse-limit state is asserted.
+
+The Hironaka presentation
 
 \[
-V(\Phi)(K_{\rm proj})\ne\varnothing
-\quad\Longleftrightarrow\quad
-\bigcup_{d,m}\mathcal L_{m,d}\ne\varnothing.
+A=k[f_3,f_5,f_6,f_8,f_{11}],\qquad
+\operatorname{rank}_A R=12,\qquad \operatorname{rank}_A M=60
 \]
 
-## Finite presentation
+is finite and noetherian.  The packet also proves the necessary scope fence:
+finite generation does not imply a bound for the first primitive cubic zero,
+and no finite bidegree cutoff is claimed.  The degree-free generic twist is
+the corrected effective reduction.
 
-Over `A=k[f3,f5,f6,f8,f11]`, the certified Hironaka data give
+## Headline scope
+
+The Klein cubic headline remains **OPEN**.  This exit proves the universal
+object and the all-degree equivalence.  It does not decide
 
 \[
-\operatorname{rank}_A R=12,
-\qquad
-\operatorname{rank}_A M=60.
+V(\Phi)(K_{\rm proj})=\varnothing
+\quad\text{versus}\quad
+V(\Phi)(K_{\rm proj})\ne\varnothing.
 \]
 
-Thus the global universal landing object is a finite-type noetherian scheme
-given by twelve weighted cubic equations in sixty module coordinates over
-`A`.  After generic frame localization and degree-zero normalization it is
-the single cubic \(V(\Phi)\subset\mathbf P^4_{K_{\rm proj}}\), with all 35
-coefficients stored in the existing `generic_cubic.json` packet.
-
-This is the valid all-degree replacement for a degree ladder.  It does **not**
-imply a finite upper bound for the first homogeneous representative; the
-nonlinear zero locus is not a module, and high-degree cancellations are not
-controlled by module-generator degrees.  No finite-generation claim is made
-for the complete symbolic multi-Rees algebra, because that claim is neither
-needed for nor implied by the theorem above.
-
-## Remaining binary gate
-
-- **Positive:** produce a \(K_{\rm proj}\)-point of \(V(\Phi)\), clear it to a global
-  covariant, and verify projective Jacobian rank four (dominance).
-- **Negative:** prove \(V(\Phi)(K_{\rm proj})=\varnothing\), then replay the accepted
-  source-exhaustiveness bridge.
-
-Until one branch is completed, neither a positive nor a negative headline
-exit is authorized.
+That single arithmetic alternative is now the only remaining G-route gate.
 
 ## Replay
 
@@ -111,10 +99,4 @@ From `problems/E-klein-cubic`:
 
 ```text
 python3 goal_runs_after_35fa/G_UNIVERSAL/verify.py
-```
-
-Successful replay ends with
-
-```text
-G2_UNIVERSAL_VERIFIER_ACCEPT
 ```
