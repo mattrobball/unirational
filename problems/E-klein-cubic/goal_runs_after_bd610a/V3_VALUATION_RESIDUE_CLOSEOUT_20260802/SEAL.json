@@ -1,0 +1,19 @@
+{
+  "files_sha256": {
+    "F5_DEGREE16_SMALL_SUPPORT.md": "b3ac03b89f1cdc3f83c5888c45b6a5b9c16afe8d6ad7bad42bcff6e90d00e45d",
+    "README.md": "32674bf08620c72cfccfd6127717f2da0b8027ba9f7abaead5046f6a51df39ee",
+    "REPLAY.md": "6909da88b65bdd80e471b0794fe99cf7c29996a60bab27d83ac45fb4b8391701",
+    "RESIDUE_NORMAL_FORM_THEOREM.md": "37aebf4f3838944691d4b675e3b32e71a1d805422790dfda1de3c59ca21e7aba",
+    "STATUS.md": "f363e8fde807c6abfe38461531cdbec0cfb3f131996cdf975a25f7ab88961f8b",
+    "audit_payload.json": "bb9b78fd852bd17e3faea186fbbe75c6460ff314cc2376deb7e3d66df7a0dcdf",
+    "f5_degree16_support_payload.json": "113c874f0736ea50fae8c99a09c4a7e7f30bf51c2bd74b62b3277b530a04cf5b",
+    "make_seal.py": "b6d1f1273468c9fb2b99fd31d946824aa0fb573de6278b4362c255d65b731de2",
+    "reproduce_f5_degree16_support.py": "eb4d3039a5ca9d12e99249a35d6df28dc18851ce92ab2a6934560554f2a6f31a",
+    "verify.py": "8d01f6c29db3e3e6c38423841dddb2f43532db8a80925b5023aeaffbdf0b50ab"
+  },
+  "finite_exit": "V-F5-DEGREE16-SUPPORT-LE5-EMPTY",
+  "goal_exit": "V-UNDECIDED",
+  "problem_e_headline": "OPEN",
+  "schema": "klein-v3-valuation-residue-seal-v1",
+  "scoped_exit": "V3-RESIDUE-NORMAL-FORM-PASS"
+}
