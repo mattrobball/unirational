@@ -151,7 +151,7 @@ V(\Phi)(K_{\rm proj})\ne\varnothing.
 This is an all-degree theorem: no degree is omitted and no bounded degree
 search is assumed.
 
-## 5. Scalar multiples and primitive representatives
+## 5. Scalar saturation and primitive representatives
 
 Let \(s\in R_h\) be nonzero and homogeneous.  If \(p\in M_d\), then the normalized
 coordinates of `sp` are
@@ -163,14 +163,26 @@ a_i(sp)=(s/\tau^h)a_i(p).
 Because \(s/\tau^h\in K_{\rm proj}^*\), `p` and `sp` define the same projective generic
 point.  Conversely, two denominator clearings of the same projective generic
 point become equal after multiplication by nonzero homogeneous invariants.
-Therefore \(V(\Phi)(K_{\rm proj})\) parametrizes the scalar-saturated, or primitive,
-classes relevant to existence; clearing denominators may choose a
-nonprimitive representative but cannot create or destroy a class.
+Thus \(V(\Phi)(K_{\rm proj})\) parametrizes homogeneous rational
+scalar-saturation lines in \(M\otimes_RK\).
+
+For a point `ell`, its polynomial representatives are the nonzero homogeneous
+elements of the lattice
+
+\[
+M\cap \ell \subset M\otimes_RK.
+\]
+
+Over a nonfactorial invariant ring this lattice need not have a unique
+primitive generator.  “Primitive” is therefore a divisibility/incidence
+condition on polynomial representatives, not the linear quotient by
+`R_+M`.  Clearing denominators may select a nonprimitive representative, but
+it cannot create or destroy the rational line.
 
 This also explains why a finite list of primitive degrees is not supplied by
 Noetherianity: one projective generic point can have polynomial
-representatives in arbitrarily many degrees, while the least primitive degree
-is a height question over `K_proj`.
+representatives in arbitrarily many degrees, while a least primitive degree,
+when defined, is a height problem over `K_proj`.
 
 ## 6. Multiplication and precomposition
 
@@ -200,7 +212,17 @@ is used.
 Every nonzero global homogeneous landing covariant has a finite true
 symbolic order along the involution plus-plane arrangement.  Its restrictions
 therefore determine a point of one exact stratum `L_{m,d}` and satisfy every
-installed triple-line, point-link, marked-elliptic, and torsion condition.
+installed triple-line, point-link, marked-elliptic, and torsion condition.  In
+particular,
+
+\[
+V(\Phi)(K_{\rm proj})\ne\varnothing
+\quad\Longleftrightarrow\quad
+\bigcup_{d,m}\mathcal L_{m,d}\ne\varnothing.
+\]
+
+The pair `(m,d)` belongs to a polynomial representative, not to its projective
+rational line; invariant multiplication can shift both values.
 Conversely, the theorem clears only a `K_proj`-point to an element of `M`; it
 does not algebraize an arbitrary compatible-looking local inverse-limit
 state.  This is exactly the global-image requirement missing from purely
