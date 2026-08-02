@@ -97,18 +97,19 @@ polynomials
 Q_1(y_1,\ldots,y_{60}),\ldots,Q_{12}(y_1,\ldots,y_{60})
 \]
 
-with coefficients in `A`.  Hence
+with coefficients in `A`.  Hence the affine coefficient cone
 
 \[
-\mathscr Z=
-\operatorname{Proj}_{\mathrm{wt}}
+\mathscr C=
+\operatorname{Spec}
 A[y_1,\ldots,y_{60}]/(Q_1,\ldots,Q_{12})
 \]
 
-is a finite-type noetherian coefficient object.  Its homogeneous polynomial
-sections, in every weight, are precisely the global homogeneous landing
-covariants.  Local transition conditions require no extra independent
-coordinates: they are functorial restrictions of a section of `M`.
+and its weighted projectivization are finite-type noetherian objects.  A
+homogeneous `A`-valued solution of total source weight `d` is exactly an
+element \(p\in M_d\) with \(q(p)=0\).  Local transition conditions require no
+extra independent coordinates: they are functorial restrictions of the same
+element of `M`.
 
 This finite presentation must not be misread as a degree bound.  An
 `A`-valued point may have coordinates of arbitrarily high weighted degree,
@@ -123,7 +124,7 @@ B=(B_0,\ldots,B_4)=(x,C,D,E,K_7),
 \qquad e=(1,4,5,6,7),
 \]
 
-is a basis of `M tensor_R Frac(R)`.  Put
+is a basis of \(M\otimes_R\operatorname{Frac}(R)\).  Put
 
 \[
 \tau=f_3^2/f_5,\qquad \deg\tau=1,
@@ -155,8 +156,11 @@ pre-existing verifier checks all 35 expanded identities.
 
 The all-degree theorem in `ALL_DEGREE_THEOREM.md` proves that the union of all
 `Z_d` is nonempty exactly when `X_gen(K_proj)` is nonempty.  The symbolic
-filtration then recovers the true exact-order stratum of any cleared global
-representative.  Consequently the generic cubic loses no plane, line, point,
-elliptic, torsion, or coefficient condition: those conditions were never
-separate choices, but consequences of the single global vector recovered by
-denominator clearing.
+filtration then recovers the true exact-order stratum of each cleared global
+representative.  Multiplying by a homogeneous invariant may change both `d`
+and `m`, so `m` is not an invariant of the projective generic point; the full
+rational scalar-saturation line contains all such representatives.
+
+Consequently the generic cubic loses no plane, line, point, elliptic, torsion,
+or coefficient condition: those conditions were never separate choices, but
+consequences of the single global vector recovered by denominator clearing.
