@@ -40,13 +40,13 @@ This note lists only goals that still have work left. Goals that already reached
 | **P25** enlarged closure & support | `P25-UNDECIDED` (live under `goals_2026-08-01/P25_LANDING_SUPPORT/`) | **Finite CAS** (resource-blocked) | Finite certified cover of Stage B/C charts on \(D(H_8)\). Pair-split job sealed as `PREPARED_NOT_RUN`; prior F4 OOM / nonverdict. No char-0 covariant and no full special-fibre unit ideal yet. |
 | **C** Morita + common line | `C-UNDECIDED` | Research | C0–C2 partial; still need simultaneous common isotropic line, original Fano equations, headline bridge (C3–C4). |
 | **COV m=1** equalizers deg 31/35 | `COV-UNDECIDED` | Finite CAS + transfer gap | Full \(m=1\) modules and landing equations exist. Projective saturations undecided. Large residual affine chart cover; modular `[1]` on some charts does **not** transfer by proper specialization alone. |
-| **G2** universal Noetherianity | *no run* | Research | Correct multigraded universal object + effective all-degree decision. |
 | **S19** marked-curve continuation | `S19-UNDECIDED` | Research | Qualifying deg-19 curve / exclude both Rao branches / residual degree-2 cycle. Hankel reformulation installed; still nondecisional. |
 | **Q** Schur index-one decision | `Q-UNDECIDED` | Research | Binary: \(X_{\mathrm{Schur}}(K_{\mathrm{Schur}})\) nonempty vs empty. Many scoped exclusions; neither binary proved. |
 | **H4** 11:5 generic twist | `H-11_5-NORM-MODEL-PASS` | Research | Model sealed. Remaining theorem: existence of \(0\neq a\in E\) with \(\mathrm{Tr}_{E/K}(r_2^{-1}a^2\sigma(a))=0\). Feeds H5. |
 
-**Completed in this portfolio (for reference):** B (`B-BRIDGE-REFUTED`), H2, H3, T2, KLS2, J2, V2, D2, R2, M2.  
-For B, the functorial fixed-frame exhaustiveness theorem is refuted; the direct arithmetic decision for `F14_T(K_proj)` remains C/C5.
+**Completed in this portfolio (for reference):** B (`B-BRIDGE-REFUTED`), G2 (`G2-FINITE-GENERATION-PASS`), H2, H3, T2, KLS2, J2, V2, D2, R2, M2.  
+For B, the functorial fixed-frame exhaustiveness theorem is refuted; the direct arithmetic decision for `F14_T(K_proj)` remains C/C5.  
+For G2, the intrinsic generic twist and exact all-degree equivalence are sealed; only the arithmetic point/pointlessness gate on `V(Phi)` remains under G.
 
 ---
 
@@ -56,12 +56,12 @@ For B, the functorial fixed-frame exhaustiveness theorem is refuted; the direct 
 |---|---|---|---|
 | **C** Pfaffian Fano point | `C-UNDECIDED` | Research | Same frontier as 35fa C / bd610a C5: common line + original equations. |
 | **P25** landing support | `P25-UNDECIDED` | **Finite CAS** (resource-blocked) | Same as 35fa P25: 34 Stage-B + 29 Stage-C opens on \(D(H_8)\); prepared pair-split not launched. |
-| **G** all-degree lifting | `G-STRUCTURAL-UNDECIDED` | Research | Structural advances sealed. Still need a twist point **or** all-degree landing-emptiness + bridge. |
+| **G** universal-cubic arithmetic | `G2-FINITE-GENERATION-PASS`; arithmetic gate **OPEN** | Research | Universal object, primitive/scalar reduction, and all-degree theorem are complete. Decide \(V(\Phi)(K_{\mathrm{proj}})\neq\varnothing\) with dominance, or prove pointlessness and replay the accepted source-exhaustiveness bridge. |
 | **H** subgroup twists | `H-SWEEP-UNDECIDED` | Research (mostly retired) | Later H2/H3 closed A4 and both A5 classes with points. **Only 11:5 remains** (see H4/H5). |
 | **Q** Schur index-one descent | `Q-UNDECIDED` | Research | Same binary as 35fa Q; live multi-packet research status. |
 | **V** valuation / tropical | `V-UNDECIDED` | Research | No pointless genuine completion. Residual unramified full-twist problems (for example \(f_5\), \(f_6\)). |
 
-**Completed in this portfolio (for reference):** F, T, S19 (literal scoped empty), KLS, COV structured search, M, J, R, D.
+**Completed in this portfolio (for reference):** F, T, S19 (literal scoped empty), KLS, COV structured search, M, J, R, D; the G/G2 structural mission is complete at `G2-FINITE-GENERATION-PASS`.
 
 ---
 
@@ -79,7 +79,7 @@ Ordered by how close they are to a finite close-out, not by headline strength.
 | 6 | **M3** del Pezzo section | bd610a | Multisection yes; section undecided | Research |
 | 7 | **Q** Schur binary | 0801 / 35fa | Frame installed; binary open | Research |
 | 8 | **T3** target branch mod 3 | bd610a | Scratch; route already weak from T/T2 | Research |
-| 9 | **G / G2** all-degree | 0801 / 35fa | Structural only / not started | Research |
+| 9 | **G** universal-cubic arithmetic | 0801 / 35fa | G2 structural pass sealed; point/pointlessness open | Research |
 | 10 | **S19** continuation | 35fa | Reformulated; no curve | Research |
 | 11 | **V** valuation | 0801 | Residual residue sites | Research |
 
@@ -92,6 +92,7 @@ These already have authorized terminal exits (Problem E may still be open):
 - **A5Q** — degree-4 rescue emptied  
 - **B** — fixed-frame exhaustiveness refuted (`B-BRIDGE-REFUTED`); direct Fano arithmetic is C/C5  
 - **F** — fixed-frame conic criterion empty  
+- **G2** — intrinsic universal object, exact all-degree theorem, and primitive/scalar reduction complete (`G2-FINITE-GENERATION-PASS`); the residual arithmetic binary is G  
 - **H2 / H3** — A4 and both A5 twists have rational points  
 - **T / T2** — target-branch negative route refuted / bridge blocked  
 - **J / J2, D / D2, KLS / KLS2, V2** — route-level exits  
@@ -126,7 +127,7 @@ Run independent fronts concurrently. **Hard rule:** at most one unrelated job ex
 
 | Front | Note |
 |---|---|
-| **G / G2** | Theorem-first; no degree ladder substitute |
+| **G arithmetic** | Decide the single `V(Phi)(K_proj)` point/pointlessness gate; no degree ladder substitute |
 | **S19** continuation | Hankel / Rao branch decision |
 | **V** | Residue sites \(f_5,f_6\) |
 | **T3** | Only if still wanted after T/T2 route refutation |
@@ -164,7 +165,8 @@ Run independent fronts concurrently. **Hard rule:** at most one unrelated job ex
 | M3 | `goals_after_bd610a/M3_SARKISOV_SECTION/STATUS.md` |
 | Q | `goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/STATUS.md` |
 | B (completed) | `goal_runs_after_35fa/B_FIXED_FRAME_EXHAUSTIVENESS_20260802/STATUS.md` |
-| G | `goals_2026-08-01/G_ALL_DEGREE/STATUS.md` |
+| G2 (completed structural theorem) | `goal_runs_after_35fa/G_UNIVERSAL/STATUS.md` |
+| G arithmetic | `goal_runs_after_35fa/G_UNIVERSAL/DECISION.md` |
 | S19 continuation | `goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E_CONT2/STATUS.md` |
 | V | `goals_2026-08-01/V_VALUATION_TROPICAL_CODEX_ROOT_20260801/STATUS.md` |
 | T3 | `goals_after_bd610a/scratch_t3/` |
