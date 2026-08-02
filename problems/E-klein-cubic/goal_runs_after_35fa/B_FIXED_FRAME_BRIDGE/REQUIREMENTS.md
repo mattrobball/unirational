@@ -8,6 +8,7 @@
 | B1 exhaustiveness test on the genuine five-plane | `INCIDENCE_DIAGRAM.md`, `BRIDGE_THEOREM.md` | **undecided**: auxiliary non-exhaustiveness is proved, but the goal's ambient-projector warning prevents promotion |
 | B2 compare infinity and target branches | `BRANCH_COMPARISON.md`, `bridge_payload.json` | complete negative identification: distinct base valuations and ramification indices |
 | B3 terminal theorem | `BRIDGE_THEOREM.md`, `STATUS.md` | `B-UNDECIDED` |
+| Precise remaining gate + F-scope consistency | `REMAINING_GATE.md`, `STATUS.md` | complete at undecided boundary: implication `C(K)=>F14_T(K)` open; F fence preserved |
 | Exact field/equation payload | `bridge_payload.json`, `exact/field_presentation.json`, `exact/global_primitive_u_sextic_exact.tsv`, `exact/five_forms.json` | complete and byte-bound to sources |
 | Independent verification | `verify.py` | complete |
 | Replay and seal | `REPLAY.md`, `produce_seal.py`, `SEAL.json` | complete |

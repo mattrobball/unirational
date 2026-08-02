@@ -1,0 +1,257 @@
+{
+  "schema": "A0_CANONICAL_STATE_V1",
+  "audit_utc": "2026-08-02T10:14:49Z",
+  "live_head": "8e7f074cb9a9ccc15cd7239970635af588bf5c95",
+  "pinned_august_publish": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "headline": "OPEN",
+  "routes_2026_08_01": [
+    {
+      "id": "C",
+      "portfolio": "goals_2026-08-01",
+      "exit": "C-UNDECIDED",
+      "marker": "C-PARTIAL-EXACT-INTERFACE-VERIFIED",
+      "canonical": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT",
+      "status_class": "partial",
+      "headline": false
+    },
+    {
+      "id": "COV",
+      "portfolio": "goals_2026-08-01",
+      "exit": "COV-NEW-ANSATZ-STRUCTURAL",
+      "canonical_exit_repair": "COV-HIGHER-ORDER-BRANCHES-EMPTY-SCOPED",
+      "canonical": "goals_2026-08-01/COV_STRUCTURED_SEARCH",
+      "status_class": "structural",
+      "headline": false,
+      "m1_open": true
+    },
+    {
+      "id": "D",
+      "portfolio": "goals_2026-08-01",
+      "exit": "D-INVARIANT-REPRODUCIBLE",
+      "canonical": "goals_2026-08-01/D_EQUIVARIANT_MOTIVE",
+      "status_class": "completed_negative_route",
+      "headline": false
+    },
+    {
+      "id": "F",
+      "portfolio": "goals_2026-08-01",
+      "exit": "F-CONIC-CRITERION-EMPTY",
+      "canonical": "goals_2026-08-01/F_CONIC_ALGEBRA",
+      "status_class": "completed_scoped",
+      "headline": false,
+      "bridge_to_genuine_twist": false
+    },
+    {
+      "id": "G",
+      "portfolio": "goals_2026-08-01",
+      "exit": "G-STRUCTURAL-UNDECIDED",
+      "canonical": "goals_2026-08-01/G_ALL_DEGREE",
+      "status_class": "structural",
+      "headline": false
+    },
+    {
+      "id": "H",
+      "portfolio": "goals_2026-08-01",
+      "exit": "H-SWEEP-UNDECIDED",
+      "canonical": "goals_2026-08-01/H_SUBGROUP_TWISTS_ROOT_019FBE10",
+      "status_class": "undecided_at_dispatch",
+      "headline": false,
+      "later": "H2/H3 points close A4 and both A5"
+    },
+    {
+      "id": "J",
+      "portfolio": "goals_2026-08-01",
+      "exit": "J-INVARIANT-TOO-WEAK",
+      "canonical": "goals_2026-08-01/J_FIXED_CENTRE_PRYM",
+      "status_class": "completed_negative_route",
+      "headline": false
+    },
+    {
+      "id": "KLS",
+      "portfolio": "goals_2026-08-01",
+      "exit": "KLS-NO-THEOREM",
+      "canonical": "goals_2026-08-01/KLS_MINIMALITY",
+      "status_class": "completed_negative_route",
+      "headline": false
+    },
+    {
+      "id": "M",
+      "portfolio": "goals_2026-08-01",
+      "exit": "M-NEW-MORI-FIBRE-STRUCTURAL",
+      "canonical": "goals_2026-08-01/M_SARKISOV",
+      "status_class": "structural",
+      "headline": false
+    },
+    {
+      "id": "P25",
+      "portfolio": "goals_2026-08-01",
+      "exit": "P25-UNDECIDED",
+      "sub_exits": [
+        "P25V-PRESENTATION-ENLARGED",
+        "P25V-SUPPORT-UNDECIDED"
+      ],
+      "canonical": "certificates/degree25_p25v",
+      "landing": "goals_2026-08-01/P25_LANDING_SUPPORT",
+      "status_class": "partial_cas",
+      "headline": false
+    },
+    {
+      "id": "Q",
+      "portfolio": "goals_2026-08-01",
+      "exit": "Q-UNDECIDED",
+      "canonical": "goals_2026-08-01/Q_SCHUR_DESCENT",
+      "status_class": "undecided",
+      "headline": false
+    },
+    {
+      "id": "R",
+      "portfolio": "goals_2026-08-01",
+      "exit": "R-HILBERT-COMPONENT-STRUCTURAL",
+      "canonical": "goals_2026-08-01/R_RATIONAL_CURVES_CODEX",
+      "status_class": "structural",
+      "headline": false
+    },
+    {
+      "id": "S19",
+      "portfolio": "goals_2026-08-01",
+      "exit": "S19-NO-CURVE-SCOPED",
+      "canonical": "goals_2026-08-01/S19_SCHUR_CURVE",
+      "status_class": "completed_scoped",
+      "headline": false
+    },
+    {
+      "id": "T",
+      "portfolio": "goals_2026-08-01",
+      "exit": "T-ROUTE-REFUTED",
+      "canonical": "goals_2026-08-01/T_TARGET_BRANCH_INDEX3_ROOT_019FBE13",
+      "status_class": "completed_negative_route",
+      "headline": false
+    },
+    {
+      "id": "V",
+      "portfolio": "goals_2026-08-01",
+      "exit": "V-UNDECIDED",
+      "canonical": "goals_2026-08-01/V_VALUATION_TROPICAL",
+      "status_class": "undecided",
+      "headline": false
+    }
+  ],
+  "post_35fa8f_packets": [
+    {
+      "id": "B",
+      "path": "goal_runs_after_35fa/B_FIXED_FRAME_BRIDGE",
+      "exit": "B-UNDECIDED"
+    },
+    {
+      "id": "COV_m1",
+      "path": "goal_runs_after_35fa/COV_M1_DEG31_35",
+      "exit": "COV-UNDECIDED"
+    },
+    {
+      "id": "D2",
+      "path": "goal_runs_after_35fa/D2_STACK_INVARIANT",
+      "exit": "D2-NO-VALID-BRIDGE"
+    },
+    {
+      "id": "H2",
+      "path": "goal_runs_after_35fa/H_A4_TWIST",
+      "exit": "H-A4-RATIONAL-POINT"
+    },
+    {
+      "id": "H3",
+      "path": "goal_runs_after_35fa/H_A5_TWISTS",
+      "exit": "H-A5-CLASS1-RATIONAL-POINT+H-A5-CLASS2-RATIONAL-POINT"
+    },
+    {
+      "id": "H4",
+      "path": "goal_runs_after_35fa/H_11_5_TWIST",
+      "exit": "H-11_5-NORM-MODEL-PASS"
+    },
+    {
+      "id": "J2",
+      "path": "goal_runs_after_35fa/J_BASELOCUS_PRYM",
+      "exit": "J2-UNRESTRICTED-COUNTERMODEL-EXTENDS"
+    },
+    {
+      "id": "KLS2",
+      "path": "goal_runs_after_35fa/KLS_MINIMALITY",
+      "exit": "KLS2-NO-FINITE-REDUCTION"
+    },
+    {
+      "id": "M2",
+      "path": "goal_runs_after_35fa/M_SARKISOV",
+      "exit": "M2-EXPLICIT-LINK-PASS"
+    },
+    {
+      "id": "Q_35fa",
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE",
+      "exit": "Q-UNDECIDED"
+    },
+    {
+      "id": "R2",
+      "path": "goal_runs_after_35fa/R_RATIONAL_CURVES",
+      "exit": "R2-DESCENT-OBSTRUCTED"
+    },
+    {
+      "id": "S19_cont",
+      "path": "goal_runs_after_35fa/S19_MARKED_CURVE",
+      "exit": "S19-UNDECIDED"
+    },
+    {
+      "id": "T2",
+      "path": "goal_runs_after_35fa/T_TARGET_BRANCH",
+      "exit": "T2-ROUTE-REFUTED"
+    },
+    {
+      "id": "V2",
+      "path": "goal_runs_after_35fa/V_GENUINE_VALUATION",
+      "exit": "V2-FIXED-FRAME-PLACE-NONTRANSFERABLE"
+    }
+  ],
+  "authority": {
+    "C": {
+      "canonical": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT",
+      "siblings": [
+        {
+          "path": "goals_2026-08-01/C_PFAFFIAN_FANO",
+          "role": "historical_shared"
+        },
+        {
+          "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3",
+          "role": "unsealed_continuation"
+        }
+      ],
+      "quarantine": "invalid cyclotomic-conjugate / failed-holdout ambient RURs; ambient projector auxiliary"
+    },
+    "COV": {
+      "canonical": "goals_2026-08-01/COV_STRUCTURED_SEARCH",
+      "canonical_exit": "COV-NEW-ANSATZ-STRUCTURAL",
+      "sibling_exit_raw": "COV-STRUCTURED-DEGREES-EMPTY-SCOPED",
+      "sibling_exit_repaired": "COV-HIGHER-ORDER-BRANCHES-EMPTY-SCOPED",
+      "sibling": "goals_2026-08-01/COV_STRUCTURED_SEARCH_ROOT",
+      "m1_open": true
+    },
+    "P25": {
+      "presentation": "certificates/degree25_p25v",
+      "landing": "goals_2026-08-01/P25_LANDING_SUPPORT",
+      "bulk_counts": {
+        "n_Ti_out": 4140,
+        "n_comm_out": 315,
+        "rank_S1V0": 25530,
+        "prime": 89
+      },
+      "structural": {
+        "n_Tq0_out_V0": 126,
+        "rank_V0": 690
+      }
+    }
+  },
+  "next_round_priorities": [
+    "P25 D(H8) Stage-B/C affine cover (CAS)",
+    "COV m=1 saturations/chart cover",
+    "C common line + original Fano",
+    "H5 11:5 trace cubic binary",
+    "B fixed-frame to genuine-twist bridge"
+  ]
+}

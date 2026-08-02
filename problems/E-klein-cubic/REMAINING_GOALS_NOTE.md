@@ -101,6 +101,55 @@ These already have authorized terminal exits (Problem E may still be open):
 
 ---
 
+<<<<<<< HEAD
+## 6. Parallel dispatch plan (subagents)
+
+Run independent fronts concurrently. **Hard rule:** at most one unrelated job expected to exceed ~8 GiB RSS at a time. Do not co-schedule heavy P25 F4/`msolve` with heavy COV m=1 chart CAS.
+
+### Wave A — always parallel (light / medium)
+
+| Slot | Front | Agent task | Output dir | Conflict |
+|---|---|---|---|---|
+| A1 | **A0** | Inventory + replay + `CANONICAL_STATE.md/.json` + seal | `goal_runs_after_35fa/A0_CANONICAL_AUDIT/` | None |
+| A2 | **H5** (from H4 model) | Point search / first exact charts on \(\Phi=0\); or setup sealed H5 workspace | `goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/` | None |
+| A3 | **C / C5** | Next exact chart toward common line / projector; no full expanded \(L_a\) | `goal_runs_after_bd610a/C5_*` or C worktree | Shares algebra inputs read-only with B |
+| A4 | **Q** | Scoped successor only (document smallest gate; optional light search) | existing `Q_SCHUR_*` dirs | None |
+| A5 | **M3** | Section vs multisection residual analysis (theorem/CAS light) | `goals_after_bd610a/M3_SARKISOV_SECTION/` | None |
+| A6 | **B** | Theorem-first bridge ledger; no heavy Fano solve | `goal_runs_after_35fa/B_FIXED_FRAME_BRIDGE/` | Read-only on C outputs |
+
+### Wave B — heavy CAS (serialize; pick one)
+
+| Slot | Front | Agent task | Notes |
+|---|---|---|---|
+| B1 | **P25** | Launch prepared `parallel/r66_pair_split/` when unsandboxed RSS census allows | `PREPARED_NOT_RUN`; prior OOM nonverdict |
+| B2 | **COV m=1** | Residual chart cover (prefer charts already reduced) | Modular `[1]` ≠ char-0 without transfer |
+
+### Wave C — deferred research (parallel among themselves, not with Wave B)
+
+| Front | Note |
+|---|---|
+| **G / G2** | Theorem-first; no degree ladder substitute |
+| **S19** cont. | Hankel / Rao branch decision |
+| **V** | Residue sites \(f_5,f_6\) |
+| **T3** | Only if still wanted after T/T2 route refutation |
+
+### Orchestrator checklist
+
+1. Spawn Wave A slots **in parallel** (subagents).  
+2. Assign **at most one** Wave B heavy job.  
+3. Do not edit sealed historical packets; new artifacts only in route-specific dirs.  
+4. Each subagent returns: exit string, `STATUS.md` delta, seal/replay command, resource peak if CAS.  
+5. After Wave A joins, refresh this note’s states from returned exits.
+
+---
+
+## 7. Practical next actions
+
+1. **Wave A in parallel (subagents):** A0, H5 setup, C/C5 next gate, M3 residual, B bridge ledger, Q gate note.  
+2. **Wave B (single heavy):** P25 prepared pair-split **or** one COV m=1 chart family — not both.  
+3. Treat CAS timeouts/OOM as nonverdicts; do not promote modular emptiness without transfer.  
+4. Do not treat structural `*-UNDECIDED` exits as headline-ready.
+=======
 ## 6. Practical next actions
 
 1. **A0** — pure process: replay verifiers, fix authority, publish `CANONICAL_STATE`.  
@@ -109,6 +158,7 @@ These already have authorized terminal exits (Problem E may still be open):
 4. **H5** — attack the sealed H4 trace cubic (point search or pointlessness).  
 5. **C5 / C** — common-line / projector incidence over \(K_{\mathrm{proj}}\).  
 6. Keep **Q, B, M3, G** as parallel research; do not treat structural undecided exits as headline-ready.
+>>>>>>> refs/remotes/origin/main
 
 ---
 

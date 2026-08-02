@@ -1,0 +1,29 @@
+{
+  "ambient": "affine norm-one torus r0*r1*r2*r3*r4=1 with C5 cycling coordinates",
+  "forbidden_implication": "special fibre empty-looking => generic pointless is invalid here",
+  "primitive_boundary_orbits_enumerated": [
+    {
+      "descends_to_K": "yes (orbit sum of valuations is C5-invariant)",
+      "leading_c": "v(c)=v(r2^{-1})=0 on this representative; orbit has mixed signs",
+      "name": "single_coordinate_vanishing",
+      "orbit_size": 5,
+      "representative": "v(r0)=1, v(r1)=v(r2)=v(r3)=0, v(r4)=-1",
+      "residue_anisotropy": "NOT PROVED"
+    },
+    {
+      "descends_to_K": "yes",
+      "name": "adjacent_pair",
+      "orbit_size": 5,
+      "representative": "v(r0)=v(r1)=1, v(r2)=v(r3)=0, v(r4)=-2",
+      "residue_anisotropy": "NOT PROVED"
+    },
+    {
+      "name": "balanced_weight",
+      "note": "placeholder class; full primitive-ray census not completed",
+      "representative": "v(r0)=2, v(r1)=-1, v(r2)=2, v(r3)=-1, v(r4)=-2 adjusted to sum 0",
+      "residue_anisotropy": "NOT PROVED"
+    }
+  ],
+  "tropical_cancellation": "not enumerated to residue equations in this run",
+  "verdict": "structural_inventory_only"
+}

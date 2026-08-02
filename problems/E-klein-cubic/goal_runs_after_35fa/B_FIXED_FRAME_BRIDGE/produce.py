@@ -251,8 +251,18 @@ def main() -> None:
             "scope": "refutes only the formal plane-section principle, not the actual Klein implication",
         },
         "smallest_live_gate": {
+            "implication": "C(K_proj)=empty => F14_T(K_proj)=empty",
+            "status": "UNDECIDED",
             "positive": "a common isotropic right D-line for H_T outside the selected frame",
-            "negative": "a five-plane-preserving exhaustiveness theorem or a direct valuation/class-group proof on F14_T or X_gen",
+            "negative": "a five-plane-preserving exhaustiveness theorem under Gamma=PGU(h_struct) cap Stab(H_T)",
+            "alternative_negative_not_fixed_frame": "direct valuation/class-group on F14_T or X_gen, or BR-T-NEG Cl/Pic mod 3",
+            "ledger": "REMAINING_GATE.md",
+        },
+        "goal_f_scope_consistency": {
+            "upstream_exit": "F-CONIC-CRITERION-EMPTY",
+            "upstream_scope": "auxiliary fixed-frame plane cubic and its exhaustive conic criterion",
+            "enlarged_to_F14_or_X_gen": False,
+            "headline_claimed_from_F": False,
         },
         "not_proved": [
             "F14_T(K_proj) is empty or nonempty",

@@ -1,0 +1,138 @@
+{
+  "format": "c5-morita-source-leaf-binding-v1",
+  "scope": "prose-leaf binding and modular multiprime recipe table for Morita DAGs; not a K_proj-point and not full char-0 rational expansion",
+  "field": "K_proj embedded; evaluation fibre F_23",
+  "binding": {
+    "prime": 23,
+    "zeta11": 2,
+    "source_point": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "rur_root": 1,
+    "leaves": {
+      "P": {
+        "recipe": "degree12_bivector_matrix_from_modular_projector_wedge",
+        "source_path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_rur_char0.json",
+        "evaluator": "produce_c2_morita.modular_projector -> skew(wedge)"
+      },
+      "Q": {
+        "recipe": "aligned_pfaffian_Q(x)_from_domain_basis",
+        "source_path": "tmp/pfaffian_rank2_idempotent_attack/full_wedge.py",
+        "evaluator": "domain_basis @ point"
+      },
+      "a": {
+        "recipe": "projective_reynolds_frame[1]",
+        "source_path": "certificates/fano_c3/produce_c3.py",
+        "evaluator": "build_projective_reynolds_frame(p,zeta).basis_mats[1]"
+      },
+      "b": {
+        "recipe": "projective_reynolds_frame[2]",
+        "source_path": "certificates/fano_c3/produce_c3.py",
+        "evaluator": "build_projective_reynolds_frame(p,zeta).basis_mats[2]"
+      },
+      "B0": {
+        "recipe": "Q(V_x(x)) via Hilbert-90 frame",
+        "source_path": "tmp/generic_twist/phi_coefficients.py",
+        "evaluator": "skew(domain_basis @ hilbert90[i])",
+        "section_name": "x"
+      },
+      "B1": {
+        "recipe": "Q(V_C(x)) via Hilbert-90 frame",
+        "source_path": "tmp/generic_twist/phi_coefficients.py",
+        "evaluator": "skew(domain_basis @ hilbert90[i])",
+        "section_name": "C"
+      },
+      "B2": {
+        "recipe": "Q(V_D(x)) via Hilbert-90 frame",
+        "source_path": "tmp/generic_twist/phi_coefficients.py",
+        "evaluator": "skew(domain_basis @ hilbert90[i])",
+        "section_name": "D"
+      },
+      "B3": {
+        "recipe": "Q(V_E(x)) via Hilbert-90 frame",
+        "source_path": "tmp/generic_twist/phi_coefficients.py",
+        "evaluator": "skew(domain_basis @ hilbert90[i])",
+        "section_name": "E"
+      },
+      "B4": {
+        "recipe": "Q(V_K(x)) via Hilbert-90 frame",
+        "source_path": "tmp/generic_twist/phi_coefficients.py",
+        "evaluator": "skew(domain_basis @ hilbert90[i])",
+        "section_name": "K"
+      },
+      "M[0]": {
+        "recipe": "identity_6",
+        "evaluator": "I_6"
+      },
+      "M[1]": {
+        "recipe": "frame[1]",
+        "evaluator": "basis_mats[1]"
+      },
+      "M[2]": {
+        "recipe": "frame[2]",
+        "evaluator": "basis_mats[2]"
+      },
+      "M[3]": {
+        "recipe": "frame[3]",
+        "evaluator": "basis_mats[3]"
+      },
+      "G[0]": {
+        "recipe": "identity_6",
+        "evaluator": "I_6"
+      },
+      "G[1]": {
+        "recipe": "frame[1]",
+        "evaluator": "basis_mats[1]"
+      },
+      "G[2]": {
+        "recipe": "frame[2]",
+        "evaluator": "basis_mats[2]"
+      },
+      "s": {
+        "recipe": "pairing sum_{i<j} Q_ij P_ij",
+        "value_mod_p": 3
+      },
+      "e": {
+        "recipe": "-P Q / s",
+        "value_trace_mod_p": 2
+      }
+    },
+    "open_witnesses": {
+      "pfaffian_Q": 17,
+      "s": 3,
+      "f14": 17,
+      "corner_rank": 4
+    }
+  },
+  "source_sha256": {
+    "morita_generic_dag": {
+      "path": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/morita_generic_dag.json",
+      "sha256": "67ed0e94de5efdd39cf29f3512958a7f8145774f54dd0d7dac17bf8bab6c8a7f"
+    },
+    "morita_generic_split_dag": {
+      "path": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/morita_generic_split_dag.json",
+      "sha256": "df2db37184d16b242e863c368928c4941c25d30c296d4070977722adf51d572f"
+    },
+    "c2_morita": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/c2_morita.json",
+      "sha256": "0201a89f9087250a4313ef2732398adbddcadd3d2f234183736088760aec645f"
+    },
+    "compressed_algebra": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/compressed_algebra.json",
+      "sha256": "bfc2e6c5afcfac7c9925b916cad29098bc5033f1938dd9f0273febc067a55fbb"
+    },
+    "distinguished_five_plane": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/distinguished_five_plane.json",
+      "sha256": "edee4f7e07e95665044ba4fba85239154f4052f27d99b3cbcdd0f48b60d2378a"
+    },
+    "char0_rur": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_rur_char0.json",
+      "sha256": "54c181762c3c5a263f1dc6522e39d8e690196c7acdc31dfa44f5043481ca3216"
+    }
+  },
+  "theorem_boundary": "Leaves are bound to sealed modular evaluation recipes at the accepted good fibre.  Full char-0 expansion into QQ(t3,t6,t8,t11) is not installed."
+}

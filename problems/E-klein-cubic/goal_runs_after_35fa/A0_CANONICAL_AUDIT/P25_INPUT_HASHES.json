@@ -1,0 +1,61 @@
+{
+  "tmp/p25v_closure/V0_u8.bin": {
+    "sha256": "379bd8e4563473b5645e25f6d318371d2cdac609a2444ee9274217b5050ce6b7",
+    "size": 6305910
+  },
+  "tmp/p25v_closure/mul_maps_i32.bin": {
+    "sha256": "b1c135565175c7f9cab212ee252d6309a2842547cd25513ab03052e58ca716fa",
+    "size": 1352572
+  },
+  "tmp/p25v_closure/Tq0_u8.bin": {
+    "sha256": "92ce3b19091e3597ae10ff111d2d12e10f6d2c522fce432a30d0879c936acf8b",
+    "size": 1151514
+  },
+  "tmp/p25v_closure/seed_quad_u8.bin": {
+    "sha256": "92c6ea3e891b904d8239b3ae58716ad7b7d2e99f1b09841eb1bf8e1625361fc5",
+    "size": 536130
+  },
+  "tmp/p25v_closure/Tq_quad_u8.bin": {
+    "sha256": "c587cbffc4e42a5581cc37506ab8741e505f1b9bdd183df0c2f9baf7ac19fc7c",
+    "size": 97902
+  },
+  "tmp/p25v_closure/deg0_result.json": {
+    "sha256": "4e382984ce3b81741da9271f14927fd0577b01b377e372e29bfd1d8fae233136",
+    "size": 1065
+  },
+  "tmp/p25v_closure/pivots_i32.bin": {
+    "sha256": "5d5cbaec89c0eb74001a5400d130211b5009298fa9fd358adff1e66159a46d20",
+    "size": 102120
+  },
+  "tmp/p25v_closure/rank_meta.txt": {
+    "sha256": "7b6e3a3be8e7144c1405c26bacd3c3f41deed71ad151e133bdaa0cba41860178",
+    "size": 43
+  },
+  "certificates/degree25_finite_module/relation_matrix.npz": {
+    "sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+    "size": 7661361
+  },
+  "certificates/degree25_finite_module/multiplication_matrices.npz": {
+    "sha256": "cdee1a9cd2989f2d17e7771321b49723d8a9dfc71d2bd5a791f83a30142aa418",
+    "size": 1399218
+  },
+  "certificates/degree25_p25v/exit_p25v0.json": {
+    "sha256": "fdd9425b5741bf27a56a9b46dc296fd7804aab5590bb89819cac564a64cb4671",
+    "size": 3608
+  },
+  "certificates/degree25_p25v/deg0_structural_cert.npz": {
+    "sha256": "41df32d27e1a12c55e34f2847d96175bd0a97f63341c634b5de20e2f098100ec",
+    "size": 6123048
+  },
+  "certificates/degree25_p25v/verify_p25v0_result.json": {
+    "sha256": "d14f946e952677aa50c9ec30952905c6dfe6e368e07bef78eec44bd022315a82",
+    "size": 354
+  },
+  "exit_declared": {
+    "n_Ti_out": 4140,
+    "n_comm_out": 315,
+    "rank_S1V0": 25530,
+    "seed_F3_sha256": "c6baf33b2266375b1f53278177bda9e96a3525368ca0c6b8117531429b2d97f9",
+    "T_quad_F3_sha256": "63d863a73873f4959842b5b8351b18d7c599a329ecccbe97d8027400450f9256"
+  }
+}

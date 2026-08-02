@@ -18,6 +18,7 @@ ARTIFACTS = [
     "INCIDENCE_DIAGRAM.md",
     "INPUTS.md",
     "OBJECT_DICTIONARY.md",
+    "REMAINING_GATE.md",
     "REPLAY.md",
     "REQUIREMENTS.md",
     "STATUS.md",

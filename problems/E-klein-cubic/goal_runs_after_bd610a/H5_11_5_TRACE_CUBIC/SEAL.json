@@ -1,0 +1,43 @@
+{
+  "exit": "H5-UNDECIDED",
+  "files": {
+    "COEFFICIENT_CLASS.md": "790362a42103e0f3baa98f8fabf7378ac59d083444af594153732d5b9abfc8a9",
+    "CONSTRUCTIVE_SEARCH.md": "b2fe01b25d38373b2f8dd25413a9703fe9d363f78f5d399dfc88772509cfe03e",
+    "FIELD_AND_MODEL.md": "dc866f05719ca159fdc2fc27232ccf595c0f120987119e7ee9a6c2fa10a97f14",
+    "INPUT_MANIFEST.json": "b69869f32280eead2886d71aa679b89eb31ddf7040d930ef54e798a684701933",
+    "POINT.md": "b6125a2a1e13e40b5cf77007110675f1a229a3dd241fd655341b6c68f3d59983",
+    "README.md": "0719f5b1b059610f40f77b6dbb35853ebc57c0aa551f353d64ad62d04f5775a8",
+    "REPLAY.md": "8669190cb050c4874a3a92742f2e28403c824972d406bf132f8d4e9543aed0e7",
+    "STATUS.md": "e7212157aa5b63bac1a54c434798077a41fdc3eec6d77946f27164e9db13fc69",
+    "TRACE_CUBIC.json": "3bc7fdcfbd7bfe4dbe7dd65791a2f09373670e95ae98676fd52d2f79d634ff13",
+    "VALUATION_LEDGER.md": "5e67e2a7eac8e52bf547434d62468016ea1000fe7a92f4d723c9b94f0b81eb7c",
+    "coefficient_class.json": "043b7001a3757882bd1c357e4aa732626a72740312cb173029b40e820359029c",
+    "constructive_search.json": "a26f33a7f2b4f7ce22d18e85626b32fe13eb81458819102eb5abd384966b25e2",
+    "decision.json": "c4f4dd65322570c40db0300a877003317271f6cff9f82095b4a7bc8b169e1888",
+    "modular_screen.json": "cef1464b0d79a8c4bde5f075267cce50921290daf9bf0d19f86d789641fd00ff",
+    "point.json": "e6f474ef938dc7f247737d1ebce69c4edcb4d5b76a514669e4897fd781bba66a",
+    "produce.py": "ea3eb0e5ec974cfa7c9c9ed9519bf540adbc12dbd6724bc6b0c1b0f6d889b71e",
+    "seal.py": "1cd6e725b99c0e9eb76b7fd1ea1686b0afe2ac773fd9341efbd2cf1aa8928749",
+    "valuation_ledger.json": "914e4be161295c5992bba1c06475d9de54c86a5b4e2beca007166ca1a1cce6db",
+    "verify.py": "2b5a4d69d214c8c67e7bf5225b63c0904dabf0bacca03afea5a0873caf84a427"
+  },
+  "format": "H5-11_5-TRACE-CUBIC-SEAL-v1",
+  "h4_exit_consumed": "H-11_5-NORM-MODEL-PASS",
+  "hash_algorithm": "sha256",
+  "headline": "OPEN",
+  "not_proved": [
+    "existence of nonzero a in E with Tr(r2^{-1} a^2 sigma(a))=0 over K",
+    "pointlessness of the genuine 11:5 twist over K",
+    "anisotropic completion / valuation obstruction",
+    "that the order-11 coefficient class controls points",
+    "any positive or negative Problem E headline"
+  ],
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "self_hash_excluded": true,
+  "smallest_remaining_theorem": "Decide whether there exists nonzero a in E with Tr_{E/K}(r2^{-1} a^2 sigma(a))=0.",
+  "terminal_markers": [
+    "H5_PRODUCE_OK",
+    "H5_SEAL_OK",
+    "H5_INDEPENDENT_VERIFY_OK"
+  ]
+}

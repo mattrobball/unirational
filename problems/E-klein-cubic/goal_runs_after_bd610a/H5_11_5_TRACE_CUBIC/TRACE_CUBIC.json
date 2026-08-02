@@ -1,0 +1,35 @@
+{
+  "canonical_equivalence": {
+    "common_open_witness_prime": 89,
+    "identity": "F(A u)=F(B z)=Phi(z)",
+    "source": "H4 twist_model"
+  },
+  "equation": "Phi(a)=Tr_{E/K}(r2^{-1} a^2 sigma(a))=0",
+  "equivalent_z_form": "Phi(z)=sum_{i in Z/5} Z(r_i)^2 Z(r_{i+1})/r_{i+2} with Z(T)=z0+z1 T+...+z4 T^4, z_j in K, a=Z(r0)",
+  "fields": {
+    "E": "C(r0,...,r4)/(r0 r1 r2 r3 r4 - 1)",
+    "K": "E^{<sigma>} = C(U1,U2,U3,U4)",
+    "c": "r2^{-1}",
+    "sigma": "sigma(r_i)=r_{i+1}"
+  },
+  "format": "H5-11_5-TRACE-CUBIC-v1",
+  "h4_smallest_remaining_theorem": "Decide whether there is a nonzero a in E with Tr_E/K(r2^-1*a^2*sigma(a))=0.",
+  "index_one_boundary": {
+    "degree_five_point": {
+      "field": "E",
+      "image_under_trace_frame": "[beta0*Z0(r0):0:0:0:0]",
+      "polynomial": "Z0(T)=product_(k=1)^4 (T-r_k)",
+      "scope": "a closed point of degree five over K, not a K-rational point"
+    },
+    "note": "index one is already recorded; not a K-point"
+  },
+  "retired_scopes_not_rerun": [
+    "homogeneous 11:5 landing covariants degrees 1..9 empty",
+    "constant-coefficient two-Laurent arbitrary exponents empty",
+    "two-Kummer-basis arbitrary coefficient ratio empty",
+    "single-monomial three-coordinate Kummer plane patterns empty",
+    "four-Kummer Laurent-monomial hyperplane patterns empty",
+    "pure Laurent monomials empty (H4)",
+    "c has exact order 11 modulo d |-> d^2 sigma(d)"
+  ]
+}

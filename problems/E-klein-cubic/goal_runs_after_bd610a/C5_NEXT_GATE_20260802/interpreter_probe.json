@@ -1,0 +1,143 @@
+{
+  "format": "c5-morita-record-interpreter-probe-v1",
+  "exit_marker": "C5-MORITA-RECORD-INTERPRETER-P23-PASS",
+  "gate": "G_MORITA_SOURCE_INTERPRETER",
+  "status": "partial",
+  "claims": {
+    "consumes_stored_factor_strings": true,
+    "consumes_split_dag_nodes": true,
+    "matches_independent_corner_tables_p23": true,
+    "seed_line_residuals_zero_p23": true,
+    "corruption_self_test": true,
+    "char0_K_proj_expansion": false,
+    "holdout_prime_generic_P_bivector": false,
+    "common_line_over_K_proj": false,
+    "executable_full_incidence_exit": false
+  },
+  "fibre": {
+    "prime": 23,
+    "zeta11": 2,
+    "source_point": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "rur_root": 1,
+    "sealed_residue_line": [
+      1,
+      0,
+      0,
+      0,
+      13,
+      9,
+      8,
+      10,
+      0,
+      20,
+      7,
+      1
+    ],
+    "seed_residuals": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "inventory": {
+    "homogeneous_coefficients": 390,
+    "normalized_chart_coefficients": 675,
+    "ordered_terms_evaluated": 1935,
+    "distinct_factor_tokens": [
+      "B[0]",
+      "B[1]",
+      "B[2]",
+      "B[3]",
+      "B[4]",
+      "G[0]",
+      "G[1]",
+      "G[2]",
+      "M[0]",
+      "M[1]",
+      "M[2]",
+      "M[3]",
+      "P",
+      "Q",
+      "transpose(G[0])",
+      "transpose(G[1])",
+      "transpose(G[2])",
+      "transpose(M[0])",
+      "transpose(M[1])",
+      "transpose(M[2])",
+      "transpose(M[3])"
+    ],
+    "split_dag_nodes_evaluated": 517,
+    "split_op_counts": {
+      "source": 9,
+      "pairing": 1,
+      "matmul": 17,
+      "scale_by_inverse": 1,
+      "alias": 2,
+      "select_columns": 1,
+      "select_rows": 1,
+      "inverse": 2,
+      "corner_action_representation": 1,
+      "trace_bilinear_coefficient": 225,
+      "quadratic_block_change_coefficient": 225,
+      "affine_polynomial": 25,
+      "determinant_polynomial": 6,
+      "determinant": 1
+    },
+    "Delta_at_v0_mod_p": 1,
+    "Jminor_det_mod_p": 5,
+    "T_corner_to_entries_det_mod_p": 18
+  },
+  "checksums_sha256": {
+    "homogeneous_values_mod_p": "b5dab447821bd4ff1f2552b2f3309a6a749ada74c5194b3eeeb2734661939ce3",
+    "chart_values_mod_p": "883af34fddd2cb401e3a0f7c92dd209e538c441e17ac79a7354d04cd5c453245",
+    "split_original_roots_mod_p": "b324f021bd253553937dd8e6c201d969ac061013013c4fc253f701ec3a2e122d",
+    "source_leaf_binding": "d076c530410e2ab8bc8becf6eeeb4569768db8361d4939a448018fc05e58a2d7"
+  },
+  "corruption_self_test": {
+    "original_value_mod_p": 1,
+    "corrupted_P_to_Q_value_mod_p": 11,
+    "values_differ": true,
+    "unbound_token_raises": true,
+    "mechanism": "factor-string walk evaluates stored tokens; structural left/right metadata alone cannot keep a corrupted factors list silent"
+  },
+  "remaining_for_full_gate": [
+    "bind and evaluate P,Q,B_i at a second unused good prime with independent bivector",
+    "optional: lower coefficients to preferred length-12 K_proj normal form",
+    "then G_HENSEL_ELIMINANT_LINEAR_FACTOR on q0=1 chart"
+  ],
+  "source_sha256": {
+    "morita_generic_dag": {
+      "path": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/morita_generic_dag.json",
+      "sha256": "67ed0e94de5efdd39cf29f3512958a7f8145774f54dd0d7dac17bf8bab6c8a7f"
+    },
+    "morita_generic_split_dag": {
+      "path": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/morita_generic_split_dag.json",
+      "sha256": "df2db37184d16b242e863c368928c4941c25d30c296d4070977722adf51d572f"
+    },
+    "c2_morita": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/c2_morita.json",
+      "sha256": "0201a89f9087250a4313ef2732398adbddcadd3d2f234183736088760aec645f"
+    },
+    "compressed_algebra": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/compressed_algebra.json",
+      "sha256": "bfc2e6c5afcfac7c9925b916cad29098bc5033f1938dd9f0273febc067a55fbb"
+    },
+    "distinguished_five_plane": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/distinguished_five_plane.json",
+      "sha256": "edee4f7e07e95665044ba4fba85239154f4052f27d99b3cbcdd0f48b60d2378a"
+    },
+    "char0_rur": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_rur_char0.json",
+      "sha256": "54c181762c3c5a263f1dc6522e39d8e690196c7acdc31dfa44f5043481ca3216"
+    }
+  },
+  "not_to_do": "see NOT_TO_DO.md (stale RUR quarantine; no L_a expansion; no Magma)"
+}

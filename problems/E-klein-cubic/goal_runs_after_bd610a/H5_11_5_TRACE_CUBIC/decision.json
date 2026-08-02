@@ -1,0 +1,26 @@
+{
+  "coefficient_class_decision": null,
+  "exit": "H5-UNDECIDED",
+  "format": "H5-11_5-DECISION-v1",
+  "h4_exit_consumed": "H-11_5-NORM-MODEL-PASS",
+  "headline": "OPEN",
+  "next_finite_gate": "H5.1.A: exact three-or-more Laurent support classification with coefficients in K (not only C), or H5.1.C projection from the degree-five point to a decidable residual fibration; alternatively H5.2 complete one toric valuation with residue anisotropy.",
+  "not_proved": [
+    "existence of nonzero a in E with Tr(r2^{-1} a^2 sigma(a))=0 over K",
+    "pointlessness of the genuine 11:5 twist over K",
+    "anisotropic completion / valuation obstruction",
+    "that the order-11 coefficient class controls points",
+    "any positive or negative Problem E headline"
+  ],
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "pointlessness": null,
+  "proved_in_this_packet": [
+    "H4 model consumed by path+hash with independent lattice/equation audit",
+    "scoped constructive screens listed in constructive_search.json are empty of K-identities",
+    "specialized Phi fibres over many F_p are typically nonempty under random search"
+  ],
+  "rational_point_over_K": null,
+  "runtime_seconds": 1.36,
+  "smallest_remaining_theorem": "Decide whether there exists nonzero a in E with Tr_{E/K}(r2^{-1} a^2 sigma(a))=0.",
+  "valuation_obstruction": null
+}

@@ -4,10 +4,17 @@
   "launch_gate_snapshot": {
     "escalated_process_inspection_and_runner_execution": "unavailable until 2026-08-08",
     "memory": {
+<<<<<<< HEAD
+      "free_pages": 3968821,
+      "free_plus_speculative_bytes": 75259412480,
+      "page_size": 16384,
+      "speculative_pages": 624649
+=======
       "free_pages": 1525264,
       "free_plus_speculative_bytes": 25847119872,
       "page_size": 16384,
       "speculative_pages": 52319
+>>>>>>> refs/remotes/origin/main
     },
     "memory_gate_pass": true,
     "minimum_free_plus_speculative_bytes": 15032385536,

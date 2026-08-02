@@ -1,0 +1,208 @@
+{
+  "method": "random r with product 1; random z search for Phi=0",
+  "role": "fibre-nonemptiness heuristic over F_p; not K-rationality",
+  "rows": [
+    {
+      "prime": 31,
+      "sample_nonzero_coeff_count": 35,
+      "sample_r": [
+        21,
+        7,
+        26,
+        2,
+        19
+      ],
+      "sample_z": [
+        3,
+        17,
+        27,
+        15,
+        6
+      ],
+      "specializations_tested": 40,
+      "specializations_with_random_z_hit": 40
+    },
+    {
+      "prime": 41,
+      "sample_nonzero_coeff_count": 35,
+      "sample_r": [
+        7,
+        9,
+        22,
+        12,
+        38
+      ],
+      "sample_z": [
+        40,
+        4,
+        31,
+        3,
+        25
+      ],
+      "specializations_tested": 40,
+      "specializations_with_random_z_hit": 40
+    },
+    {
+      "prime": 61,
+      "sample_nonzero_coeff_count": 34,
+      "sample_r": [
+        27,
+        34,
+        54,
+        36,
+        33
+      ],
+      "sample_z": [
+        37,
+        45,
+        57,
+        15,
+        54
+      ],
+      "specializations_tested": 40,
+      "specializations_with_random_z_hit": 40
+    },
+    {
+      "prime": 71,
+      "sample_nonzero_coeff_count": 35,
+      "sample_r": [
+        42,
+        43,
+        11,
+        7,
+        21
+      ],
+      "sample_z": [
+        31,
+        68,
+        14,
+        24,
+        27
+      ],
+      "specializations_tested": 40,
+      "specializations_with_random_z_hit": 40
+    },
+    {
+      "prime": 89,
+      "sample_nonzero_coeff_count": 35,
+      "sample_r": [
+        8,
+        37,
+        61,
+        15,
+        48
+      ],
+      "sample_z": [
+        81,
+        29,
+        56,
+        8,
+        41
+      ],
+      "specializations_tested": 40,
+      "specializations_with_random_z_hit": 40
+    },
+    {
+      "prime": 101,
+      "sample_nonzero_coeff_count": 35,
+      "sample_r": [
+        81,
+        28,
+        66,
+        65,
+        36
+      ],
+      "sample_z": [
+        17,
+        27,
+        47,
+        100,
+        72
+      ],
+      "specializations_tested": 40,
+      "specializations_with_random_z_hit": 39
+    },
+    {
+      "prime": 131,
+      "sample_nonzero_coeff_count": 35,
+      "sample_r": [
+        74,
+        52,
+        87,
+        121,
+        50
+      ],
+      "sample_z": [
+        33,
+        19,
+        127,
+        120,
+        33
+      ],
+      "specializations_tested": 40,
+      "specializations_with_random_z_hit": 36
+    },
+    {
+      "prime": 151,
+      "sample_nonzero_coeff_count": 35,
+      "sample_r": [
+        139,
+        90,
+        83,
+        42,
+        101
+      ],
+      "sample_z": [
+        23,
+        44,
+        123,
+        2,
+        101
+      ],
+      "specializations_tested": 40,
+      "specializations_with_random_z_hit": 36
+    },
+    {
+      "prime": 181,
+      "sample_nonzero_coeff_count": 35,
+      "sample_r": [
+        30,
+        48,
+        134,
+        137,
+        119
+      ],
+      "sample_z": [
+        113,
+        134,
+        129,
+        107,
+        85
+      ],
+      "specializations_tested": 40,
+      "specializations_with_random_z_hit": 32
+    },
+    {
+      "prime": 199,
+      "sample_nonzero_coeff_count": 35,
+      "sample_r": [
+        111,
+        53,
+        171,
+        167,
+        32
+      ],
+      "sample_z": [
+        79,
+        66,
+        8,
+        54,
+        185
+      ],
+      "specializations_tested": 40,
+      "specializations_with_random_z_hit": 35
+    }
+  ],
+  "transfer": "no characteristic-zero point is claimed",
+  "verdict": "modular_fibres_typically_nonempty"
+}

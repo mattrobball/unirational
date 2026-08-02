@@ -1,0 +1,11 @@
+{
+  "c": "r2^{-1}",
+  "degree": 33,
+  "h5_3_status": "recorded; no obstruction theorem and no counterexample point",
+  "isogeny": "psi(d)=d^2*sigma(d) on Res_(E/K)(G_m)",
+  "norm_one": true,
+  "order_11_witness": "d=r1*r2^6*r3^-2*r4^2 satisfies psi(d)=r2^11",
+  "order_modulo_psi": 11,
+  "point_boundary": "X_T(K) is nonempty iff c*psi(E^*) meets ker(Tr_E/K)",
+  "promotion": "FORBIDDEN: order-11 class alone is not a pointlessness theorem"
+}

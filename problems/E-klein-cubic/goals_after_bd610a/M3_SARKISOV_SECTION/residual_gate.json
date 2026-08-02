@@ -1,0 +1,310 @@
+{
+  "elementary_obstruction": {
+    "argument": "Restriction to residue fields of the degree-3 and degree-55 points kills the elementary obstruction; corestriction yields 3*ob=55*ob=0 hence ob=0 because gcd(3,55)=1.",
+    "bezout_degree": 1,
+    "bezout_degree_one_cycle": "z_55 - 18*z_3",
+    "effective_zero_cycle_degrees": [
+      3,
+      55
+    ],
+    "elementary_obstruction": 0,
+    "index_divides": 1,
+    "is_rational_point_theorem": false
+  },
+  "field": "F=K(q), K=C(P(V6))^PSL2(F11)",
+  "headline": "OPEN",
+  "inputs_sha256": {
+    "DEGREE4.md": "11a21b9839f943aaddf71e9546f82f2dcbfdedb742959b586bf741d3164b31d3",
+    "LINE_MONODROMY.md": "26d4fd1259af255ac12235eed673be831b0f312238b6c32450794d191182724c",
+    "QUARTIC_MULTISECTIONS.md": "ac633eedb52bc92f0fd9c5862fb6a9e8ae754406a58044972c4b6827b2e3a87d",
+    "RESIDUAL_CONSTRUCTIONS.md": "5ed68a2fd2020567287fe99620944b814b6d6caaac86eb78d1f447c3007f07e1",
+    "SECTION_CLASSES.json": "1abc18995c76924aa064af61c49ca9e06fc72ae3b5e7befd1baa861935b9d865",
+    "SECTION_SEARCH.md": "5177b76c9f6e7ccf62e67869ab26b248c89cc2be51a48e91665b49389b3a351c",
+    "STATUS.md": "e0a2a63a2973f4bf989b1b841639aa29abcd0a7304ea9910191d08cba12b155e",
+    "fibration_model.json": "1c4dadce593853e6233ea00565f5d6ae0ea6063e9373dd2d59a30f6edbeb0d1f",
+    "line_frobenius_specializations.json": "fc4276a094f82f696caae0ffe49e2f4af4601c0740537242b7c7787b47d56fe5",
+    "line_monodromy.json": "c6e5389ba68da4e40b2b9a68399c7bbfe16610edf6d878f6af1d869037e0caa8",
+    "quartic_branch.json": "543295e412789010a031d0f4d96095f23db4291848cbcb294aea84326c3142d6"
+  },
+  "monodromy_brauer_ledger": {
+    "actual_arithmetic_27_line_monodromy": "UNRESOLVED",
+    "actual_geometric_27_line_monodromy": "UNRESOLVED",
+    "algebraic_brauer_group_computed": false,
+    "conditional_H1_applies_to_generic_fibre": "NOT ESTABLISHED: requires proof that the actual arithmetic line monodromy is the full W(E6).",
+    "conditional_H1_full_W_E6": "H^1(W(E6), Pic(S_bar)) = 0",
+    "does_not_decide_section": true,
+    "frobenius_specializations": {
+      "count": 6,
+      "element_counts": [
+        {
+          "cycle_type": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "element_count": 1620
+        },
+        {
+          "cycle_type": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            6,
+            6,
+            6
+          ],
+          "element_count": 1440
+        },
+        {
+          "cycle_type": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            6,
+            6
+          ],
+          "element_count": 2160
+        },
+        {
+          "cycle_type": [
+            1,
+            4,
+            4,
+            6,
+            12
+          ],
+          "element_count": 4320
+        },
+        {
+          "cycle_type": [
+            3,
+            12,
+            12
+          ],
+          "element_count": 4320
+        }
+      ],
+      "observed_cycle_types_compatible_with_W_E6": true,
+      "schema": "m3-27-line-frobenius-specializations-v1",
+      "status_marker": "ACTUAL_GENERIC_27_LINE_MONODROMY_UNRESOLVED"
+    },
+    "lefschetz_transverse_A1_count": 24,
+    "reason_brauer_not_computed": "Algebraic Brauer quotient requires the actual arithmetic image in W(E6); the sealed H1 vanishing is only for the full abstract group."
+  },
+  "ordered_gates": [
+    {
+      "decides_section_positively": true,
+      "id": "G0",
+      "name": "exceptional_centre_point",
+      "object": "C_012(K)",
+      "status": "open"
+    },
+    {
+      "K_point_known": false,
+      "coefficient_equations": 13,
+      "decides_section_positively": true,
+      "geometric_emptiness_known": false,
+      "id": "G1",
+      "name": "saturated_H_degree_4_section_scheme",
+      "object": "K-points of the basepoint-free open of the 13-cubic locus in P18_K",
+      "priority": 1,
+      "projective_parameter_space": "P18_K",
+      "status": "open_primary_computational_gate"
+    },
+    {
+      "id": "G2",
+      "imprimitive_implies_section": true,
+      "name": "explicit_primitive_or_imprimitive_quartic_tuple",
+      "object": "field-algebra chart in quartic_branch.json primitive_quartic_incidence",
+      "primitive_alone_implies_no_section": false,
+      "priority": 3,
+      "status": "open_refinement_only"
+    },
+    {
+      "id": "G3",
+      "name": "actual_27_line_monodromy_and_algebraic_Brauer",
+      "priority": 4,
+      "rational_point_theorem": false,
+      "removes_A4_or_S4": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "G4",
+      "name": "characteristic_zero_pair_residual_descent",
+      "priority": 5,
+      "status": "unresolved"
+    },
+    {
+      "admissible_prefix": [
+        4,
+        7,
+        10,
+        13
+      ],
+      "id": "G5",
+      "name": "higher_d_congruent_1_mod_3_section_schemes",
+      "priority": 6,
+      "status": "deferred_until_G1"
+    }
+  ],
+  "producer": "produce_residual_gate.py",
+  "residual_alternative": {
+    "after_sealed_multisection": true,
+    "branches": {
+      "R1_section": {
+        "equivalent": [
+          "rational section of Y/P1_K",
+          "imprimitive integral quartic exists"
+        ],
+        "statement": "S(F) nonempty"
+      },
+      "R2_no_section": {
+        "equivalent": [
+          "every integral quartic is primitive of type A4 or S4",
+          "cubic resolvent irreducible and full P3 span"
+        ],
+        "galois_excluded": [
+          "C4",
+          "V4",
+          "D4"
+        ],
+        "galois_remaining": [
+          "A4",
+          "S4"
+        ],
+        "statement": "S(F) empty"
+      }
+    },
+    "multisection_selects_branch": false,
+    "unconditional_in_both_branches": "integral finite-flat degree-four multisection (already sealed)"
+  },
+  "s4_transitive_lattice": {
+    "ambient": "S4 on four geometric points of an integral quartic",
+    "exclusion_reason": "Each of C4, V4, D4 preserves a 2+2 block system.  A conjugate pair then yields a degree-two cycle over the quadratic block field whose secant residual is an F-point, contradicting the no-section branch.",
+    "line_monodromy_caveat": "A quartic point need not lie on any of the 27 lines, so 27-line monodromy alone cannot remove A4 or S4.",
+    "no_section_excluded": [
+      "C4",
+      "V4",
+      "D4"
+    ],
+    "no_section_remaining": [
+      "A4",
+      "S4"
+    ],
+    "remaining_reason": "A4 and S4 are the primitive transitive subgroups of S4; they do not preserve a 2+2 system, so the conjugate-pair residual does not descend to F.",
+    "transitive_types": {
+      "A4": {
+        "imprimitive": false,
+        "order": 12,
+        "primitive": true,
+        "subgroup_count_up_to_equality": 1
+      },
+      "C4": {
+        "imprimitive": true,
+        "order": 4,
+        "primitive": false,
+        "subgroup_count_up_to_equality": 3
+      },
+      "D4": {
+        "imprimitive": true,
+        "order": 8,
+        "primitive": false,
+        "subgroup_count_up_to_equality": 3
+      },
+      "S4": {
+        "imprimitive": false,
+        "order": 24,
+        "primitive": true,
+        "subgroup_count_up_to_equality": 1
+      },
+      "V4": {
+        "imprimitive": true,
+        "order": 4,
+        "primitive": false,
+        "subgroup_count_up_to_equality": 1
+      }
+    }
+  },
+  "schema": "m3-section-residual-gate-v1",
+  "section_acceptance": {
+    "accepted_objects": [
+      {
+        "class_H_D_L": [
+          0,
+          -1,
+          1
+        ],
+        "exists_iff": "C_012(K) nonempty",
+        "name": "exceptional_section"
+      },
+      {
+        "conditional_congruence_if_no_section": "d \u2261 1 mod 3",
+        "first_open_H_degree": 4,
+        "model": "Phi(A0,A1,A2,s*r,t*r)=0 with gcd(A0,A1,A2,r)=1",
+        "name": "nonexceptional_section"
+      },
+      {
+        "equivalent_to": "rational section",
+        "name": "generic_fibre_point"
+      }
+    ],
+    "field": "K_Schur=C(P(V6))^PSL2(F11)",
+    "m35_bridge_steps_required": [
+      "cubic identity over K(q)",
+      "coordinates not all zero",
+      "degree one to base",
+      "extension or K-rational evaluation",
+      "blowdown to authoritative X_T",
+      "separate versality bridge ledger"
+    ],
+    "not_accepted": [
+      "index one alone",
+      "elementary obstruction vanishing alone",
+      "modular sections at good reductions",
+      "coordinate-free multisection existence",
+      "formal CH0 arithmetic or gcd of multisection degrees",
+      "conditional H1(W(E6),Pic)=0"
+    ]
+  },
+  "section_question": "UNDECIDED",
+  "smallest_decision_gate": {
+    "id": "G1",
+    "statement": "Decide whether the saturated H-degree-4 section scheme over K is nonempty, or produce any other K-section (exceptional / higher d\u22611 mod 3).",
+    "why_smallest": "Direct positive close-out of the section question; modular smooth gcd-free d=4 points already exist at p=23 and p=67, while monodromy/Brauer cannot force a section and cannot remove A4/S4."
+  },
+  "strict_boundaries": {
+    "actual_arithmetic_27_line_monodromy": false,
+    "actual_geometric_27_line_monodromy": false,
+    "algebraic_brauer_group_computed": false,
+    "authoritative_twist_point": false,
+    "explicit_quartic_coordinates": false,
+    "multisection_reproved_here": false,
+    "positive_versality_bridge": false,
+    "rational_section": false
+  },
+  "terminal_exit_unchanged": "M3-INTEGRAL-DEGREE4-MULTISECTION",
+  "verdict": {
+    "integral_degree_four_multisection_sealed": true,
+    "light_check": "S4 transitive lattice + residual dichotomy + monodromy/Brauer conditional ledger; no new monodromy computation",
+    "residual_stratum_if_no_section": [
+      "A4",
+      "S4"
+    ],
+    "section_still_undecided": true
+  }
+}

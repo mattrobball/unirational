@@ -37,8 +37,13 @@
       "sha256": "2be3fdc21a9f5a52d77ffb5f29634093ca6f275423759b722848f46b2cd8dd51"
     },
     "verify_prepared_result.json": {
+<<<<<<< HEAD
+      "bytes": 2573,
+      "sha256": "367011b24f076543d9d3c95922d53918f7d878e18c8d5f2094f83ea7b9e8ac01"
+=======
       "bytes": 2572,
       "sha256": "a28c706357fbdcf1bca8a415c75befe26509c8508dd966e13786102b20e91033"
+>>>>>>> refs/remotes/origin/main
     },
     "verify_seal.py": {
       "bytes": 2392,

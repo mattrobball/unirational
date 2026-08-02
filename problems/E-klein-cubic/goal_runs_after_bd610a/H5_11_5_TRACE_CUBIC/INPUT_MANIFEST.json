@@ -1,0 +1,104 @@
+{
+  "format": "H5-11_5-INPUT-MANIFEST-v1",
+  "h4_exit": "H-11_5-NORM-MODEL-PASS",
+  "inputs": {
+    "binding_goal": {
+      "path_relative_to_problem": "goals_after_bd610a/GOAL_H5_11_5_TRACE_CUBIC_DECISION.md",
+      "role": "authoritative H5 work order",
+      "sha256": "6fe6183595e331db92c29fbe83aba068caa8a54e14e0ccaabb949dbe5f5f37ef"
+    },
+    "four_kummer_seal": {
+      "bytes": 909,
+      "path_relative_to_problem": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_four_kummer_laurent/SEAL.json",
+      "role": "retired/scoped prior ansatz exclusion (not re-run as exhaustive)",
+      "sha256": "de82effb870aac2b67bf368c3bfc0cf8ec36ebe65de4d8e56e5150a64eddae5c"
+    },
+    "fourier_pair_payload": {
+      "bytes": 3363,
+      "path_relative_to_problem": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_fourier_pair_k/payload.json",
+      "role": "retired/scoped prior ansatz exclusion (not re-run as exhaustive)",
+      "sha256": "afb11e06e285115bb71d62cc44343aff79e72ff9a00f871960f453659f900f0a"
+    },
+    "h4_FIELD_MODEL_md": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/FIELD_MODEL.md",
+      "role": "H4 authoritative model payload",
+      "sha256": "a294d808585cb550cfe60c08559f4a8bc027977bf6292d83833a6efb2e22e745"
+    },
+    "h4_NORM_MODEL_md": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/NORM_MODEL.md",
+      "role": "H4 authoritative model payload",
+      "sha256": "566448f33a3157c0e3ff2a5976b7af27e65440efa408442dd262ff5f933af5fd"
+    },
+    "h4_STATUS_md": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/STATUS.md",
+      "role": "H4 authoritative model payload",
+      "sha256": "44b2e152e440ce0d692c08b20ef3f0d929259b1ccdc00a6bb891f32c41b58b02"
+    },
+    "h4_TWIST_MODEL_md": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/TWIST_MODEL.md",
+      "role": "H4 authoritative model payload",
+      "sha256": "f4c780fefe0dbd32a1f74fe6cad8fc2493b1210ca51e83a552624f05594f9b48"
+    },
+    "h4_decision_json": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/decision.json",
+      "role": "H4 authoritative model payload",
+      "sha256": "2517208d05c71d7493a6b606d8460c13e41bb409077a7dfb385da99eb443a592"
+    },
+    "h4_field_model_json": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/field_model.json",
+      "role": "H4 authoritative model payload",
+      "sha256": "80fdc908633595d6bb3c292d0027aa66295a850b9b6a12cc473f90e3e373ba1e"
+    },
+    "h4_norm_model_json": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/norm_model.json",
+      "role": "H4 authoritative model payload",
+      "sha256": "1f61adc24bc15bf296b7199f4e13dfa5f538691984d6f623efa8feb9531dc49e"
+    },
+    "h4_produce_py": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/produce.py",
+      "role": "H4 authoritative model payload",
+      "sha256": "55424f7732deb7f03ade3bcb565418b4a18ecf6c0445567e5dfeb69b54f55a6d"
+    },
+    "h4_seal": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/SEAL.json",
+      "role": "sealed H4 model packet (H-11_5-NORM-MODEL-PASS)",
+      "sha256": "9b790a67185edc94be385993276ea4b4e35a6cfba4739981c083dd6d9886eb25"
+    },
+    "h4_twist_model_json": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/twist_model.json",
+      "role": "H4 authoritative model payload",
+      "sha256": "9a5f69b43de4b33aa0185b4714e23bc177b12f74a529510b0b8b4b9ab5e49a11"
+    },
+    "h4_verify_py": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/verify.py",
+      "role": "H4 authoritative model payload",
+      "sha256": "33097514c1e6abc823200adf00d86a735f60be0ea5433d8f85c7dd894f77d599"
+    },
+    "three_kummer_laurent_payload": {
+      "bytes": 1301,
+      "path_relative_to_problem": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_three_kummer_laurent/payload.json",
+      "role": "retired/scoped prior ansatz exclusion (not re-run as exhaustive)",
+      "sha256": "cbb677932dfa33136c1b5772a4ba9537cd285a37756751c07bbb6dbddeba44ae"
+    },
+    "three_kummer_planes_payload": {
+      "bytes": 4127,
+      "path_relative_to_problem": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_three_kummer_planes/payload.json",
+      "role": "retired/scoped prior ansatz exclusion (not re-run as exhaustive)",
+      "sha256": "b41bc4a493afb132c0ee6a15e51740a6df0f45239f79ddfdf384a1966f02f0a3"
+    },
+    "two_laurent_payload": {
+      "bytes": 1272,
+      "path_relative_to_problem": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_two_laurent/payload.json",
+      "role": "retired/scoped prior ansatz exclusion (not re-run as exhaustive)",
+      "sha256": "6e7bc9d6fad06f12525f12a43a0026b1455ca40b47a79d6bc6c3059e69a7cd22"
+    },
+    "two_laurent_report": {
+      "bytes": 2806,
+      "path_relative_to_problem": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_two_laurent/REPORT.md",
+      "role": "retired/scoped prior ansatz exclusion (not re-run as exhaustive)",
+      "sha256": "0d9d2e413aadb13bc94ec2fb9b76e369380a6f22a9dc199dc5679ad7b7ae763c"
+    }
+  },
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "provenance_note": "H5 consumes the sealed H4 field/twist/norm model by path+hash. Retired ansatz exclusions under Q_SCHUR h_trace_* are bound only as scope constraints; this packet does not re-prove them."
+}

@@ -125,6 +125,10 @@ def verify_packet_semantics() -> None:
         "QUARTIC_MULTISECTIONS.md",
         "RESIDUAL_CONSTRUCTIONS.md",
         "SECTION_CLASSES.json",
+<<<<<<< HEAD
+        "SECTION_RESIDUAL.md",
+=======
+>>>>>>> refs/remotes/origin/main
         "SECTION_SEARCH.md",
         "STATUS.md",
         "fibration_model.json",
@@ -140,6 +144,10 @@ def verify_packet_semantics() -> None:
         "quartic_slice_p23.json",
         "quartic_slice_p67.in",
         "quartic_slice_p67.json",
+<<<<<<< HEAD
+        "residual_gate.json",
+=======
+>>>>>>> refs/remotes/origin/main
         "SEAL.json",
     }
     assert all((HERE / name).is_file() for name in required)
@@ -190,6 +198,21 @@ def verify_packet_semantics() -> None:
     assert "finite-field" in residual["theorem_boundary"]
     assert "characteristic-zero" in residual["theorem_boundary"]
 
+<<<<<<< HEAD
+    residual_gate = json.loads((HERE / "residual_gate.json").read_text())
+    assert residual_gate["schema"] == "m3-section-residual-gate-v1"
+    assert residual_gate["terminal_exit_unchanged"] == "M3-INTEGRAL-DEGREE4-MULTISECTION"
+    assert residual_gate["section_question"] == "UNDECIDED"
+    assert residual_gate["verdict"]["section_still_undecided"] is True
+    assert residual_gate["verdict"]["residual_stratum_if_no_section"] == ["A4", "S4"]
+    assert residual_gate["smallest_decision_gate"]["id"] == "G1"
+    assert residual_gate["monodromy_brauer_ledger"][
+        "algebraic_brauer_group_computed"
+    ] is False
+    assert (HERE / "SECTION_RESIDUAL.md").is_file()
+
+=======
+>>>>>>> refs/remotes/origin/main
     for prime in (23, 67):
         boundary = json.loads(
             (HERE / f"modular_section_boundary_p{prime}.json").read_text()
@@ -317,6 +340,13 @@ def main() -> None:
         HERE / "verify_line_pair_residuals.py",
         "M3_LINE_PAIR_RESIDUALS_INDEPENDENT_VERIFY_OK",
     )
+<<<<<<< HEAD
+    run(
+        HERE / "verify_residual_gate.py",
+        "M3_RESIDUAL_GATE_CERTIFICATE_OK",
+    )
+=======
+>>>>>>> refs/remotes/origin/main
 
     verify_packet_semantics()
     compare_json_producer(HERE / "produce_seal.py", HERE / "SEAL.json")

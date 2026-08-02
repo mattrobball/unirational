@@ -69,8 +69,8 @@ EXPECTED_SOURCE_SHA256 = {
 
 EXPECTED_ARTIFACTS = {
     "BRANCH_COMPARISON.md", "BRIDGE_THEOREM.md", "INCIDENCE_DIAGRAM.md",
-    "INPUTS.md", "OBJECT_DICTIONARY.md", "REPLAY.md", "REQUIREMENTS.md",
-    "STATUS.md", "WORKLOG.md", "bridge_payload.json",
+    "INPUTS.md", "OBJECT_DICTIONARY.md", "REMAINING_GATE.md", "REPLAY.md",
+    "REQUIREMENTS.md", "STATUS.md", "WORKLOG.md", "bridge_payload.json",
     "counterexample_payload.json", "exact/field_presentation.json",
     "exact/five_forms.json", "exact/global_primitive_u_sextic_exact.tsv",
     "produce.py", "produce_seal.py", "verify.py", "verify_counterexample.py",
@@ -257,10 +257,29 @@ def main() -> None:
             "target residual smoothness drift")
     require(payload["B2"]["same_base_valuation"] is False,
             "distinct valuations incorrectly identified")
+    gate = payload["smallest_live_gate"]
+    require(gate["status"] == "UNDECIDED", "remaining gate status overclaim")
+    require("C(K_proj)=empty => F14_T(K_proj)=empty" in gate["implication"],
+            "remaining implication drift")
+    require(gate["ledger"] == "REMAINING_GATE.md", "remaining gate ledger drift")
+    require(payload["goal_f_scope_consistency"]["upstream_exit"] ==
+            "F-CONIC-CRITERION-EMPTY", "F scope consistency exit drift")
+    require(payload["goal_f_scope_consistency"]["enlarged_to_F14_or_X_gen"] is False,
+            "F scope illegally enlarged")
+    require(payload["goal_f_scope_consistency"]["headline_claimed_from_F"] is False,
+            "headline claimed from fixed-frame emptiness")
+    remaining = (HERE / "REMAINING_GATE.md").read_text()
+    for phrase in ("C(K) = ∅   ⇒   F14_T(K) = ∅",
+                   "common isotropic right `D`-line",
+                   "Γ = PGU(h_struct)",
+                   "F-CONIC-CRITERION-EMPTY",
+                   "B-UNDECIDED"):
+        require(phrase in remaining, f"REMAINING_GATE phrase missing: {phrase}")
     print("B_OBJECT_DICTIONARY_ACCEPT")
     print("B_AUXILIARY_SCOPE_BOUNDARY_ACCEPT")
     print("B_BRANCH_VALUATIONS_DISTINCT_ACCEPT")
     print("B_TARGET_FOLD_SEALED_INPUT_ACCEPT")
+    print("B_REMAINING_GATE_AND_F_SCOPE_ACCEPT")
 
     run_verifier(
         HERE / "verify_projector_dictionary.py",

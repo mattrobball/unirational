@@ -1,0 +1,21 @@
+{
+  "method": "sparse_random_column_projection_flint_rref",
+  "prime": 89,
+  "R": 2048,
+  "S": 48,
+  "proj_seed": 20260802,
+  "rank_pi_G": 2048,
+  "n_Ti_tests": 4140,
+  "n_Ti_out_certified": 0,
+  "n_Ti_projection_zero_remainder": 4140,
+  "n_Ti_zero": 0,
+  "n_comm_tests": 315,
+  "n_comm_out_certified": 0,
+  "n_comm_projection_zero_remainder": 315,
+  "n_comm_zero": 0,
+  "ok": false,
+  "elapsed_seconds": 21.767,
+  "soundness": "if projected remainder nonzero then original vector not in S1·V0",
+  "reads_4140_from_json": false,
+  "expected": {"n_Ti_out": 4140, "n_comm_out": 315}
+}

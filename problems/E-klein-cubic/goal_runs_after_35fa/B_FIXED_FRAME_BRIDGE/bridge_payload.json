@@ -135,6 +135,12 @@
     "ordered_root_conjugation_discarded": false,
     "splitting_field_change_sufficient": false
   },
+  "goal_f_scope_consistency": {
+    "enlarged_to_F14_or_X_gen": false,
+    "headline_claimed_from_F": false,
+    "upstream_exit": "F-CONIC-CRITERION-EMPTY",
+    "upstream_scope": "auxiliary fixed-frame plane cubic and its exhaustive conic criterion"
+  },
   "headline": "OPEN",
   "live_commit_at_start": "37d61c19a108781cf74af837e24810a9f7f7c3be",
   "not_proved": [
@@ -186,8 +192,12 @@
   "pinned_goal_commit": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
   "schema": "klein-goal-b-fixed-frame-bridge-v1",
   "smallest_live_gate": {
-    "negative": "a five-plane-preserving exhaustiveness theorem or a direct valuation/class-group proof on F14_T or X_gen",
-    "positive": "a common isotropic right D-line for H_T outside the selected frame"
+    "alternative_negative_not_fixed_frame": "direct valuation/class-group on F14_T or X_gen, or BR-T-NEG Cl/Pic mod 3",
+    "implication": "C(K_proj)=empty => F14_T(K_proj)=empty",
+    "ledger": "REMAINING_GATE.md",
+    "negative": "a five-plane-preserving exhaustiveness theorem under Gamma=PGU(h_struct) cap Stab(H_T)",
+    "positive": "a common isotropic right D-line for H_T outside the selected frame",
+    "status": "UNDECIDED"
   },
   "source_sha256": {
     "fano_c0_model": "a425d373c5ecbf2c879b9703e63345a5ce249c705ee7a44eab3f40fa07f7bb2e",
