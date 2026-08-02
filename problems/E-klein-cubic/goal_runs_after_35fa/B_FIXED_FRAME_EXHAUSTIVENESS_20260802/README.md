@@ -13,9 +13,9 @@ The selected ternary frame has image of dimension at most one in the right-line
 space.  The subgroup of the five-plane-preserving gauge that acts effectively
 on the genuine Fano threefold is finite, because the split target is a smooth
 Picard-rank-one Fano threefold of genus eight, whose automorphism group is
-finite.  Hence the gauge saturation of the fixed-frame image still has
-dimension at most one and cannot exhaust the three-dimensional twisted Fano
-section.
+finite.  Hence the gauge saturation
+of the fixed-frame image still has dimension at most one and cannot exhaust the
+three-dimensional twisted Fano section.
 
 A concrete counterexample to universal exhaustiveness is the generic point of
 `F14_T` over `K_proj(F14_T)`.  This is a theorem-level refutation of the bridge,
