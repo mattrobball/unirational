@@ -34,28 +34,40 @@ Result: **PASS** — compressions r∈{28,32,40,64} intact; no false emptiness c
 
 **Defect repaired:** stock `verify_p25v0.py` only asserts JSON fields `n_Ti_out=4140` and `n_comm_out=315` without rebuilding `S_1 ⊗ V_0 → S_4`.
 
-**Independent recompute:**
+**Independent recompute (authoritative for A0):**
 
 1. Hash-lock binary inputs under `tmp/p25v_closure/` (see `P25_INPUT_HASHES.json`).
-2. Cross-check `V0_u8.bin` / `Tq0_u8.bin` against sealed
-   `certificates/degree25_finite_module/{relation_matrix,multiplication_matrices}.npz`.
-3. Full FLINT rref + membership via existing C driver:
+2. Sparse random-column projection + FLINT RREF of projected generators:
+
+```bash
+./goal_runs_after_35fa/A0_CANONICAL_AUDIT/verify_p25_bulk_projection
+```
+
+Log: `replay_p25_bulk_projection.log`  
+Result: `verify_p25_bulk_projection_result.json`
+
+```text
+ok=true
+n_Ti_out_certified=4140
+n_comm_out_certified=315
+rank_pi_G=25530
+n_*_projection_zero_remainder=0
+elapsed_seconds≈1592
+reads_4140_from_json=false
+```
+
+Soundness: nonzero projected remainder ⇒ original vector not in \(S_1\cdot V_0\).
+
+**Full dense deg-0 FLINT RREF (abandoned):**
 
 ```bash
 ./tmp/p25v_closure/solve_deg0_flint tmp/p25v_closure_replay_a0
 ```
 
-Log: `replay_p25_flint_full.log`  
-Output: `tmp/p25v_closure_replay_a0/deg0_result.json` → copied to
-`flint_deg0_result_replay.json` when complete.
-
-Expected: `rank_S1V0=25530`, `n_Ti_out=4140`, `n_comm_out=315`, `membership_all=false`.
-
-Resource note: full map is ~45 GiB / ~2.2 h (above 8 GiB floor). Structural 126-certificate is the light independent certificate; bulk is the decisive quartic nonmembership map.
-
-Projection experiment (`verify_p25_bulk_projection.c`) documented in
-`replay_p25_bulk_projection.log`: R≤rank(G) is vacuous; R=28000 rref was
-superseded by full FLINT for authoritative counts.
+Log: `replay_p25_flint_full.log` — filled G (25530×91390), then hung at
+`computing rref...` for ~1 h with no further log growth. Process **killed**
+2026-08-02; incomplete; **not** load-bearing for A0 pass. Optional future
+resource job only.
 
 ### C — merge authority
 

@@ -1,0 +1,69 @@
+Initial seed for pseudo-random number generator is 1785669831
+
+--------------- INPUT DATA ---------------
+#variables                      38
+#equations                     137
+#invalid equations               0
+field characteristic           463
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         4
+info level                       1
+generate pbm files               0
+------------------------------------------
+
+---------------- TIMINGS ----------------
+overall(elapsed)      854.05 sec
+overall(cpu)         3255.35 sec
+select                 20.79 sec   2.4%
+symbolic prep.          9.77 sec   1.1%
+update                 22.28 sec   2.6%
+convert                 0.14 sec   0.0%
+linear algebra        800.96 sec  93.8%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                     1
+#terms in basis                   1
+#pairs reduced                80568
+#GM criterion              45201117
+#redundant elements            9518
+#rows reduced                161145
+#zero reductions              71190
+max. matrix data             173670 x 102870 (2.386%)
+max. symbolic hash table size  2^17
+max. basis hash table size     2^22
+-----------------------------------------
+
+Grobner basis has a single element
+No solution
+
+
+------------------------------------------------------------------------------------
+msolve overall time         854.13 sec (elapsed) / 3255.43 sec (cpu)
+------------------------------------------------------------------------------------
+      854.16 real      3252.19 user         3.26 sys
+          4925194240  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              324039  page reclaims
+                   6  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+              305014  involuntary context switches
+      39248135196421  instructions retired
+      12188534903480  cycles elapsed
+          3682503728  peak memory footprint

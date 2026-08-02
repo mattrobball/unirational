@@ -1,0 +1,526 @@
+{
+  "format": "c5-morita-multiprime-ledger-v1",
+  "gate": "G_MORITA_SOURCE_INTERPRETER",
+  "exit_marker": "C5-MORITA-MULTIPRIME-HOLDOUT-PASS",
+  "status": "partial",
+  "claims": {
+    "consumes_stored_factor_strings": true,
+    "independent_bivector_specialization": true,
+    "holdout_prime_generic_P_bivector": true,
+    "multiprime_open_ledger_nonvanishing": true,
+    "matches_independent_trace_formula_all_fibres": true,
+    "matches_sealed_corner_tables_p23": true,
+    "chart_coefficients_cross_checked": true,
+    "char0_K_proj_expansion": false,
+    "common_line_over_K_proj": false,
+    "executable_full_incidence_exit": false
+  },
+  "source_point": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "fibres": [
+    {
+      "witness": {
+        "prime": 23,
+        "zeta11": 2,
+        "role": "accepted_seed",
+        "rur_path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_a47_chart.rur",
+        "rur_sha256": "b6506feeb0a1cdbb45eef9868455976e5693cde2c158310c35a4cea86a056bbb",
+        "eliminant_roots": [
+          1,
+          6,
+          11
+        ],
+        "selected_root": 1,
+        "source_point": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "bivector": [
+          3,
+          1,
+          20,
+          7,
+          21,
+          10,
+          7,
+          19,
+          11,
+          20,
+          6,
+          18,
+          3,
+          9,
+          0
+        ],
+        "pairing_s": 3,
+        "pfaffian_Q": 17,
+        "det_Q": 13,
+        "f14": 17,
+        "frame_denominator": 17,
+        "projector_trace": 2,
+        "corner_rank": 4,
+        "corner_minor_rows_0_1_6_7": 16,
+        "morita_module_minor": 19,
+        "open_2": 2,
+        "P_specialization": {
+          "method": "modular_rur_coefficient_vector_times_multprime_degree12_reynolds",
+          "independent_of_p23_sealed_wedge": false
+        }
+      },
+      "opens_nonvanishing": {
+        "2": true,
+        "Pf(Q)": true,
+        "s": true,
+        "f14": true,
+        "frame_denominator": true,
+        "corner_rank_4": true,
+        "corner_minor": true,
+        "morita_module_minor": true
+      },
+      "inventory": {
+        "homogeneous_coefficients": 390,
+        "chart_coefficients": 675,
+        "ordered_terms_evaluated": 1935,
+        "distinct_factor_tokens": [
+          "B[0]",
+          "B[1]",
+          "B[2]",
+          "B[3]",
+          "B[4]",
+          "G[0]",
+          "G[1]",
+          "G[2]",
+          "M[0]",
+          "M[1]",
+          "M[2]",
+          "M[3]",
+          "P",
+          "Q",
+          "transpose(G[0])",
+          "transpose(G[1])",
+          "transpose(G[2])",
+          "transpose(M[0])",
+          "transpose(M[1])",
+          "transpose(M[2])",
+          "transpose(M[3])"
+        ],
+        "nonzero_homogeneous_coefficients": 362,
+        "nonzero_chart_coefficients": 620
+      },
+      "checksums_sha256": {
+        "homogeneous_values_mod_p": "b5dab447821bd4ff1f2552b2f3309a6a749ada74c5194b3eeeb2734661939ce3",
+        "chart_values_mod_p": "883af34fddd2cb401e3a0f7c92dd209e538c441e17ac79a7354d04cd5c453245",
+        "bivector": "9d954dc6fa4681474461c39bc3426e75123b6d6466805a7c0f692695e914b081"
+      },
+      "matches_independent_trace_formula": true,
+      "matches_sealed_c2_corner_tables_p23": true,
+      "matches_sealed_bivector_p23": true,
+      "corruption_self_test": {
+        "mechanism": "replace first stored factor P by Q on form0 monom0",
+        "values_differ": true,
+        "original_homogeneous_00": 1,
+        "corrupted_homogeneous_00": 11
+      }
+    },
+    {
+      "witness": {
+        "prime": 331,
+        "zeta11": 74,
+        "role": "discovery",
+        "rur_path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_p331_zeta074_a47.rur",
+        "rur_sha256": "8737aa7c2db7761947826ccb6c5599553a61aab97158a3d405f070c86470967a",
+        "eliminant_roots": [
+          209
+        ],
+        "selected_root": 209,
+        "source_point": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "bivector": [
+          153,
+          23,
+          308,
+          57,
+          13,
+          259,
+          248,
+          255,
+          269,
+          219,
+          169,
+          304,
+          51,
+          263,
+          111
+        ],
+        "pairing_s": 324,
+        "pfaffian_Q": 114,
+        "det_Q": 87,
+        "f14": 6,
+        "frame_denominator": 6,
+        "projector_trace": 2,
+        "corner_rank": 4,
+        "corner_minor_rows_0_1_6_7": 262,
+        "morita_module_minor": 214,
+        "open_2": 2,
+        "P_specialization": {
+          "method": "modular_rur_coefficient_vector_times_multprime_degree12_reynolds",
+          "independent_of_p23_sealed_wedge": true
+        }
+      },
+      "opens_nonvanishing": {
+        "2": true,
+        "Pf(Q)": true,
+        "s": true,
+        "f14": true,
+        "frame_denominator": true,
+        "corner_rank_4": true,
+        "corner_minor": true,
+        "morita_module_minor": true
+      },
+      "inventory": {
+        "homogeneous_coefficients": 390,
+        "chart_coefficients": 675,
+        "ordered_terms_evaluated": 1935,
+        "distinct_factor_tokens": [
+          "B[0]",
+          "B[1]",
+          "B[2]",
+          "B[3]",
+          "B[4]",
+          "G[0]",
+          "G[1]",
+          "G[2]",
+          "M[0]",
+          "M[1]",
+          "M[2]",
+          "M[3]",
+          "P",
+          "Q",
+          "transpose(G[0])",
+          "transpose(G[1])",
+          "transpose(G[2])",
+          "transpose(M[0])",
+          "transpose(M[1])",
+          "transpose(M[2])",
+          "transpose(M[3])"
+        ],
+        "nonzero_homogeneous_coefficients": 388,
+        "nonzero_chart_coefficients": 672
+      },
+      "checksums_sha256": {
+        "homogeneous_values_mod_p": "5ed38beaeaffea9490048f46295f54298a915f314365e2f37f997ae6d7127f81",
+        "chart_values_mod_p": "c4969fe50e004c15513f78a1c170b58a4bb579bd442d53bd669c7b6c1c2d85b9",
+        "bivector": "f1c7bb6758d335a5a6835cc9171f887412f40e5d343165ceb65bce093010f47c"
+      },
+      "matches_independent_trace_formula": true,
+      "corruption_self_test": {
+        "mechanism": "replace first stored factor P by Q on form0 monom0",
+        "values_differ": true,
+        "original_homogeneous_00": 1,
+        "corrupted_homogeneous_00": 20
+      }
+    },
+    {
+      "witness": {
+        "prime": 199,
+        "zeta11": 18,
+        "role": "discovery",
+        "rur_path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_p199_zeta018_a47.rur",
+        "rur_sha256": "f7a5f73d050bb2b877737f90e3ffbd2ed418d549cb01ce0ada8ca620fb434980",
+        "eliminant_roots": [
+          7
+        ],
+        "selected_root": 7,
+        "source_point": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "bivector": [
+          77,
+          112,
+          5,
+          135,
+          15,
+          156,
+          35,
+          68,
+          151,
+          170,
+          58,
+          197,
+          18,
+          34,
+          68
+        ],
+        "pairing_s": 87,
+        "pfaffian_Q": 75,
+        "det_Q": 53,
+        "f14": 198,
+        "frame_denominator": 198,
+        "projector_trace": 2,
+        "corner_rank": 4,
+        "corner_minor_rows_0_1_6_7": 169,
+        "morita_module_minor": 147,
+        "open_2": 2,
+        "P_specialization": {
+          "method": "modular_rur_coefficient_vector_times_multprime_degree12_reynolds",
+          "independent_of_p23_sealed_wedge": true
+        }
+      },
+      "opens_nonvanishing": {
+        "2": true,
+        "Pf(Q)": true,
+        "s": true,
+        "f14": true,
+        "frame_denominator": true,
+        "corner_rank_4": true,
+        "corner_minor": true,
+        "morita_module_minor": true
+      },
+      "inventory": {
+        "homogeneous_coefficients": 390,
+        "chart_coefficients": 675,
+        "ordered_terms_evaluated": 1935,
+        "distinct_factor_tokens": [
+          "B[0]",
+          "B[1]",
+          "B[2]",
+          "B[3]",
+          "B[4]",
+          "G[0]",
+          "G[1]",
+          "G[2]",
+          "M[0]",
+          "M[1]",
+          "M[2]",
+          "M[3]",
+          "P",
+          "Q",
+          "transpose(G[0])",
+          "transpose(G[1])",
+          "transpose(G[2])",
+          "transpose(M[0])",
+          "transpose(M[1])",
+          "transpose(M[2])",
+          "transpose(M[3])"
+        ],
+        "nonzero_homogeneous_coefficients": 390,
+        "nonzero_chart_coefficients": 675
+      },
+      "checksums_sha256": {
+        "homogeneous_values_mod_p": "770a3d750a501fbf08dfadf01e22d69bc7d44538cfdcd4fed4c706e893487093",
+        "chart_values_mod_p": "c0a420ef1f893b5368033eca66f8fc252aafdb1c948d6807adfb3cede0b26617",
+        "bivector": "4efdb5735f0f347c2ffa808ae0c0af8644f7926bc63d27a4768bbd67ba7f6f65"
+      },
+      "matches_independent_trace_formula": true,
+      "corruption_self_test": {
+        "mechanism": "replace first stored factor P by Q on form0 monom0",
+        "values_differ": true,
+        "original_homogeneous_00": 1,
+        "corrupted_homogeneous_00": 161
+      }
+    },
+    {
+      "witness": {
+        "prime": 353,
+        "zeta11": 58,
+        "role": "holdout",
+        "rur_path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_p353_zeta058_a47.rur",
+        "rur_sha256": "282976a643ca288931301f4a47653da5ace4f749c69b3998605f3b21893ece3e",
+        "eliminant_roots": [
+          143
+        ],
+        "selected_root": 143,
+        "source_point": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "bivector": [
+          174,
+          72,
+          154,
+          54,
+          287,
+          192,
+          327,
+          232,
+          138,
+          221,
+          219,
+          276,
+          185,
+          234,
+          143
+        ],
+        "pairing_s": 203,
+        "pfaffian_Q": 335,
+        "det_Q": 324,
+        "f14": 324,
+        "frame_denominator": 324,
+        "projector_trace": 2,
+        "corner_rank": 4,
+        "corner_minor_rows_0_1_6_7": 45,
+        "morita_module_minor": 241,
+        "open_2": 2,
+        "P_specialization": {
+          "method": "modular_rur_coefficient_vector_times_multprime_degree12_reynolds",
+          "independent_of_p23_sealed_wedge": true
+        }
+      },
+      "opens_nonvanishing": {
+        "2": true,
+        "Pf(Q)": true,
+        "s": true,
+        "f14": true,
+        "frame_denominator": true,
+        "corner_rank_4": true,
+        "corner_minor": true,
+        "morita_module_minor": true
+      },
+      "inventory": {
+        "homogeneous_coefficients": 390,
+        "chart_coefficients": 675,
+        "ordered_terms_evaluated": 1935,
+        "distinct_factor_tokens": [
+          "B[0]",
+          "B[1]",
+          "B[2]",
+          "B[3]",
+          "B[4]",
+          "G[0]",
+          "G[1]",
+          "G[2]",
+          "M[0]",
+          "M[1]",
+          "M[2]",
+          "M[3]",
+          "P",
+          "Q",
+          "transpose(G[0])",
+          "transpose(G[1])",
+          "transpose(G[2])",
+          "transpose(M[0])",
+          "transpose(M[1])",
+          "transpose(M[2])",
+          "transpose(M[3])"
+        ],
+        "nonzero_homogeneous_coefficients": 390,
+        "nonzero_chart_coefficients": 675
+      },
+      "checksums_sha256": {
+        "homogeneous_values_mod_p": "6603fdfc618dd1edf67ae220282c310d80146c828de508c7238355c853317201",
+        "chart_values_mod_p": "bd28efe4b932a23a115d65e3e8eead6bc63196734f5e1d9d4694477d4a1d6863",
+        "bivector": "ff22aca268529267f1e91d50ee61ddb6036845a5c40c17a4697f377c35a466bd"
+      },
+      "matches_independent_trace_formula": true,
+      "corruption_self_test": {
+        "mechanism": "replace first stored factor P by Q on form0 monom0",
+        "values_differ": true,
+        "original_homogeneous_00": 1,
+        "corrupted_homogeneous_00": 64
+      }
+    }
+  ],
+  "holdout_prime": 353,
+  "open_ledger_summary": {
+    "required_opens": [
+      "2!=0",
+      "Pf(Q)!=0",
+      "s!=0",
+      "f14!=0",
+      "frame_denominator!=0",
+      "corner_rank==4",
+      "corner_minor!=0",
+      "morita_module_minor!=0"
+    ],
+    "all_fibres_nonvanishing": true,
+    "per_prime": {
+      "23": {
+        "role": "accepted_seed",
+        "s": 3,
+        "Pf(Q)": 17,
+        "f14": 17,
+        "corner_minor": 16,
+        "morita_module_minor": 19
+      },
+      "331": {
+        "role": "discovery",
+        "s": 324,
+        "Pf(Q)": 114,
+        "f14": 6,
+        "corner_minor": 262,
+        "morita_module_minor": 214
+      },
+      "199": {
+        "role": "discovery",
+        "s": 87,
+        "Pf(Q)": 75,
+        "f14": 198,
+        "corner_minor": 169,
+        "morita_module_minor": 147
+      },
+      "353": {
+        "role": "holdout",
+        "s": 203,
+        "Pf(Q)": 335,
+        "f14": 324,
+        "corner_minor": 45,
+        "morita_module_minor": 241
+      }
+    }
+  },
+  "source_sha256": {
+    "morita_generic_dag": {
+      "path": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/morita_generic_dag.json",
+      "sha256": "67ed0e94de5efdd39cf29f3512958a7f8145774f54dd0d7dac17bf8bab6c8a7f"
+    },
+    "c2_morita": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/c2_morita.json",
+      "sha256": "0201a89f9087250a4313ef2732398adbddcadd3d2f234183736088760aec645f"
+    },
+    "char0_rur": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_rur_char0.json",
+      "sha256": "54c181762c3c5a263f1dc6522e39d8e690196c7acdc31dfa44f5043481ca3216"
+    },
+    "a47_chart": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_a47_chart.json",
+      "sha256": "49129610562ed3a807bd2c721d197c987cb68b2caf920cad7f2b73e9ec2a43e2"
+    },
+    "compressed_algebra": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/compressed_algebra.json",
+      "sha256": "bfc2e6c5afcfac7c9925b916cad29098bc5033f1938dd9f0273febc067a55fbb"
+    },
+    "distinguished_five_plane": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/distinguished_five_plane.json",
+      "sha256": "edee4f7e07e95665044ba4fba85239154f4052f27d99b3cbcdd0f48b60d2378a"
+    },
+    "involution": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/involution.json",
+      "sha256": "e8001963a8361f97e63deb7b8a92f2c9608765b09be9bb631aaa9c4eb5bae077"
+    }
+  },
+  "remaining_for_full_gate": [
+    "char-0 / preferred length-12 K_proj normal form of coefficient classes",
+    "then G_HENSEL_ELIMINANT_LINEAR_FACTOR on q0=1 chart"
+  ],
+  "theorem_boundary": "Multiprime modular executability of every serialized Morita factor record with independent P-specialisation and open nonvanishing. Not a K_proj-point and not full char-0 rational expansion."
+}

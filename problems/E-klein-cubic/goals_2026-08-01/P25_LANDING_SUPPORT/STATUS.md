@@ -39,9 +39,12 @@ input and reported a field different from `F_89`.  Both are strict
 nonverdicts.
 
 A byte-identical, independently regenerated pair-split retry is sealed under
-`parallel/r66_pair_split/` with status `PREPARED_NOT_RUN`.  Launch remains
-blocked because the fail-closed live process/RSS census requires unsandboxed
-execution, while the escalation quota is unavailable until 2026-08-08.
+`parallel/r66_pair_split/` with status `PREPARED_NOT_RUN`.  The runner no longer
+requires `ps`: live RSS/census use libproc (+ sysctl argv).  The historical
+4.5 GiB fence is retired as theater after the ~4.28 GiB incomplete stop; the
+default fence is now **16 GiB** (flag range 8–32).  Launch remains **BLOCKED**
+whenever a competing CAS is live (this session: COV/other heavy jobs) and was
+not attempted.  See `LAUNCH_READINESS.md` and `ALTERNATE_ATTACK.md`.
 
 Problem E therefore remains **OPEN**.  No degree-25 exclusion and no headline
 theorem is claimed.

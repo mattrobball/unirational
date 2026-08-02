@@ -1,0 +1,43 @@
+{
+  "headline": "OPEN",
+  "next_chart_to_attack": "d31 pure-third residual affine chart 3 (32 vars after elim) with prepare+seal and hard timeout; or rebuild d35 mixed-third at holdout prime 727 for transfer-adjacent evidence (still not char-0).",
+  "packet_exit": "COV-UNDECIDED",
+  "residual_char0_chart_counts": {
+    "breakdown": {
+      "c3_nonbased": "10+12",
+      "first_normal_tangent": "15+9",
+      "mixed_second_tangent": "9+16",
+      "mixed_third_tangent_d35": 9,
+      "pure_second": "7+24",
+      "pure_third": "6+31"
+    },
+    "degree_31_total": 47,
+    "degree_35_total": 101,
+    "grand_total": 148
+  },
+  "schema": "cov-m1-wave-20260802-modular-inventory-v2",
+  "still_open_smallest": [
+    "d31 pure-third residual affine charts 2,3 (32\u201333 vars, ~107\u2013117MB cubic systems; prior outs empty)",
+    "d31 pure-third vandermonde residual chart 2",
+    "d31 mixed-second tangent charts (9 charts, \u226445 vars)",
+    "all larger covers (C3-nonbased, first-normal, pure-second, d35 pure-third)"
+  ],
+  "transfer_limitation": "Modular Groebner basis [1] over F_p does not transfer to characteristic zero without a proper-specialization / integral-model theorem. Affine charts and kernels are fibre-specific.",
+  "wave_completed_modular": {
+    "d31_pure_third_affine_charts_4_5_catalogued": {
+      "source": "WORK twin prior runs hardlinked into wave",
+      "transfer": "special-fibre only",
+      "unit": true
+    },
+    "d31_pure_third_sealed_charts_0_1": {
+      "source": "sealed packet",
+      "transfer": "special-fibre only",
+      "unit": true
+    },
+    "d35_mixed_third_quadratic_all_9_charts_F463": {
+      "detail": "d35_mixed_third_quadratic_msolve.json",
+      "transfer": "special-fibre only",
+      "unit": true
+    }
+  }
+}

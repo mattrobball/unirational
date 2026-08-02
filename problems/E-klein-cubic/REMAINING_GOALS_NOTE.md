@@ -1,182 +1,79 @@
 # Remaining worker goals — state note
 
 **Date:** 2026-08-02  
-**Scope:** open tasks under `goals_after_bd610a/`, `goals_after_35fa8f/`, and `goals_2026-08-01/`  
-**Problem E headline:** still **OPEN** (no positive or negative headline in any portfolio)
+**Problem E headline:** **OPEN**
 
-This note lists only goals that still have work left. Goals that already reached an authorized terminal exit (route refutation, scoped empty, structural pass, subgroup point, etc.) are omitted.
+## Active queue (this worker)
 
----
+Computational / process fronts only. Analytic/research-only fronts are **out of queue** (dispatched elsewhere).
 
-## How to read status
+| # | Front | State | Work |
+|---:|---|---|---|
+| 1 | **P25** | `P25-UNDECIDED` | 63 residual charts; launch **BLOCKED** (`ps` + weak fence). `LAUNCH_READINESS.md` |
+| 2 | **COV m=1** | `COV-UNDECIDED` | Residual chart cover + char-0 transfer (no modular `[1]` alone) |
+| 3 | **C / C5** | `C5-UNDECIDED` | Generic/`K_proj` Morita interpreter → common line → Fano. p23 walker is **not** credit |
+| 4 | **H5** | `H5-UNDECIDED` | Point search / certified emptiness on H4 trace cubic \(\Phi=0\) |
 
-| Label | Meaning |
+**A0 closed:** `A0-CANONICAL-AUDIT-PASS` (projection bulk 4140/315; full dense RREF killed).
+
+**Heavy CAS rule:** at most one of P25 F4/`msolve` **or** COV m=1 heavy charts at a time.
+
+### Parallel wave 2026-08-02 — **complete**
+
+| Slot | Front | Outcome |
+|---|---|---|
+| W1 | H5 deep | `H5-UNDECIDED` — large K-screens empty; projection residual over \(E\); full verifier re-run (`H5_WAVE2_LAURENT_PROJ/`) |
+| W2 | C5 multiprime | Partial: holdout 353 + multiprime ledger (`C5-MORITA-MULTIPRIME-HOLDOUT-PASS`); still undecided |
+| W3 | COV m=1 | 148 residual charts catalogued; d35 mixed-third 0–8 modular `[1]` @463 only; no char-0 transfer |
+| W4 | P25 | BLOCKED + ALTERNATE; libproc; 16 GiB fence; residual 63 |
+| W5 | H5 fibration | modular discovery only; soluble samples; no K-point |
+
+**Headline still OPEN.** No degree-empty / BR-FANO / H5 binary.
+
+### Pointers (active)
+
+| Front | Path |
 |---|---|
-| **Mechanical** | Audit / replay / seal / prepared CAS cover — no new theorem required to “close the packet” |
-| **Finite CAS** | Named finite chart cover or prepared job; may still fail, timeout, or need transfer |
-| **Research** | Needs a new point, bridge, emptiness theorem, or genuine mathematical decision |
+| A0 | `goal_runs_after_35fa/A0_CANONICAL_AUDIT/` |
+| P25 | `goals_2026-08-01/P25_LANDING_SUPPORT/` |
+| COV m=1 | `goal_runs_after_35fa/COV_M1_DEG31_35/` |
+| C5 live | `goals_after_bd610a/C5_PROJECTOR_INCIDENCE/` |
+| C cont. | `goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/` |
+| H5 | `goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/` |
+| H4 model | `goal_runs_after_35fa/H_11_5_TWIST/` |
 
 ---
 
-## 1. `goals_after_bd610a`
+## Off queue — analytic / research only
 
-| Goal | Exit / state | Class | Remaining work |
-|---|---|---|---|
-| **C5** projector incidence | `C5-UNDECIDED` | Research | Solve corrected full Fano / self-adjoint projector incidence over \(K_{\mathrm{proj}}\) (or prove emptiness). Executable incidence is installed; no \(K_{\mathrm{proj}}\)-point. |
-| **H5** 11:5 trace cubic | *no sealed run* | Research | Binary decision on the genuine cyclic trace cubic \(\Phi=\mathrm{Tr}(r_2^{-1}a^2\sigma(a))=0\). Model work lives under H4. |
-| **T3** target-branch mod 3 | `T3-UNDECIDED` (scratch only) | Research | Normalize genuine target branch; decide horizontal \((\mathrm{Cl}/\mathrm{Pic})[3]\). |
-| **M3** Sarkisov section | `M3-INTEGRAL-DEGREE4-MULTISECTION`; `section_question: UNDECIDED` | Research | Multisection existence is sealed. Still need rational section vs full no-section analysis of the degree-3 del Pezzo fibration. |
-| **P25/COV** finite support | `PC-UNDECIDED` | Finite CAS + research | Transition-stable structure advanced; full deg-25/31/35 landing support still open. See also P25 / COV m=1 below. |
+**Owner:** external / more capable agents. Do not schedule here.
 
-**Completed in this portfolio (for reference):** A5Q (`A5Q-DEGREE4-RESCUE-EMPTY-SCOPED`).
+| Front | State | Why off queue |
+|---|---|---|
+| **B** | `B-UNDECIDED` | Bridge/exhaustiveness theorem |
+| **M3** section | multisection sealed; section undecided | Residual Galois / section theorem |
+| **Q** | `Q-UNDECIDED` | Schur binary / descent theory |
+| **G / G2** | structural / not started | All-degree / universal object |
+| **V** | `V-UNDECIDED` | Valuation/residue obstruction |
+| **T3** | scratch undecided | Cl/Pic[3] after T/T2 refutation |
+| **S19** cont. | `S19-UNDECIDED` | Curve/Rao (mostly geometric research) |
 
----
+### Pointers (dispatched elsewhere)
 
-## 2. `goals_after_35fa8f`
-
-| Goal | Exit / state | Class | Remaining work |
-|---|---|---|---|
-| **A0** canonical audit | No `CANONICAL_STATE`; only `IMPLEMENTATION_AUDIT.md` | **Mechanical** | Inventory, clean replay of load-bearing claims (esp. P25 quartic nonmembership), merge C/COV authority, write `CANONICAL_STATE.md` / `.json`, seal. Exit target: `A0-CANONICAL-AUDIT-PASS`. |
-| **B** fixed-frame → generic bridge | `B-UNDECIDED` | Research | Smallest gate: common isotropic right \(D\)-line for the distinguished five-plane outside the ternary frame, **or** an exhaustiveness theorem. Fixed-frame emptiness alone does not transfer. |
-| **P25** enlarged closure & support | `P25-UNDECIDED` (live under `goals_2026-08-01/P25_LANDING_SUPPORT/`) | **Finite CAS** (resource-blocked) | Finite certified cover of Stage B/C charts on \(D(H_8)\). Pair-split job sealed as `PREPARED_NOT_RUN`; prior F4 OOM / nonverdict. No char-0 covariant and no full special-fibre unit ideal yet. |
-| **C** Morita + common line | `C-UNDECIDED` | Research | C0–C2 partial; still need simultaneous common isotropic line, original Fano equations, headline bridge (C3–C4). |
-| **COV m=1** equalizers deg 31/35 | `COV-UNDECIDED` | Finite CAS + transfer gap | Full \(m=1\) modules and landing equations exist. Projective saturations undecided. Large residual affine chart cover; modular `[1]` on some charts does **not** transfer by proper specialization alone. |
-| **G2** universal Noetherianity | *no run* | Research | Correct multigraded universal object + effective all-degree decision. |
-| **S19** marked-curve continuation | `S19-UNDECIDED` | Research | Qualifying deg-19 curve / exclude both Rao branches / residual degree-2 cycle. Hankel reformulation installed; still nondecisional. |
-| **Q** Schur index-one decision | `Q-UNDECIDED` | Research | Binary: \(X_{\mathrm{Schur}}(K_{\mathrm{Schur}})\) nonempty vs empty. Many scoped exclusions; neither binary proved. |
-| **H4** 11:5 generic twist | `H-11_5-NORM-MODEL-PASS` | Research | Model sealed. Remaining theorem: existence of \(0\neq a\in E\) with \(\mathrm{Tr}_{E/K}(r_2^{-1}a^2\sigma(a))=0\). Feeds H5. |
-
-**Completed in this portfolio (for reference):** H2, H3, T2, KLS2, J2, V2, D2, R2, M2.
-
----
-
-## 3. `goals_2026-08-01`
-
-| Goal | Exit / state | Class | Remaining work |
-|---|---|---|---|
-| **C** Pfaffian Fano point | `C-UNDECIDED` | Research | Same frontier as 35fa C / bd610a C5: common line + original equations. |
-| **P25** landing support | `P25-UNDECIDED` | **Finite CAS** (resource-blocked) | Same as 35fa P25: 34 Stage-B + 29 Stage-C opens on \(D(H_8)\); prepared pair-split not launched. |
-| **G** all-degree lifting | `G-STRUCTURAL-UNDECIDED` | Research | Structural advances sealed. Still need a twist point **or** all-degree landing-emptiness + bridge. |
-| **H** subgroup twists | `H-SWEEP-UNDECIDED` | Research (mostly retired) | Later H2/H3 closed A4 and both A5 classes with points. **Only 11:5 remains** (see H4/H5). |
-| **Q** Schur index-one descent | `Q-UNDECIDED` | Research | Same binary as 35fa Q; live multi-packet research status. |
-| **V** valuation / tropical | `V-UNDECIDED` | Research | No pointless genuine completion. Residual unramified full-twist problems (e.g. \(f_5\), \(f_6\)). |
-
-**Completed in this portfolio (for reference):** F, T, S19 (literal scoped empty), KLS, COV structured search, M, J, R, D.
-
----
-
-## 4. Consolidated open fronts (deduplicated)
-
-Ordered by how close they are to a finite close-out, not by headline strength.
-
-| # | Front | Portfolios | State | Class |
-|---:|---|---|---|---|
-| 1 | **A0** canonical ledger | 35fa | Not sealed | Mechanical |
-| 2 | **P25** deg-25 support | 0801 / 35fa / bd610a | Finite chart cover; CAS blocked / nonverdict | Finite CAS |
-| 3 | **COV m=1** deg 31/35 | 35fa (+ bd610a P25/COV) | Equations ready; saturations / chart cover open | Finite CAS + transfer |
-| 4 | **C / C5** Fano–common line | 0801 / 35fa / bd610a | Algebra partial; no point | Research |
-| 5 | **H4 / H5** 11:5 trace cubic | 35fa / bd610a | Exact model; binary open | Research |
-| 6 | **M3** del Pezzo section | bd610a | Multisection yes; section undecided | Research |
-| 7 | **Q** Schur binary | 0801 / 35fa | Frame installed; binary open | Research |
-| 8 | **B** fixed-frame bridge | 35fa | Emptiness known; bridge missing | Research |
-| 9 | **T3** target branch mod 3 | bd610a | Scratch; route already weak from T/T2 | Research |
-| 10 | **G / G2** all-degree | 0801 / 35fa | Structural only / not started | Research |
-| 11 | **S19** continuation | 35fa | Reformulated; no curve | Research |
-| 12 | **V** valuation | 0801 | Residual residue sites | Research |
-
----
-
-## 5. What is *not* still open as a worker mission
-
-These already have authorized terminal exits (Problem E may still be open):
-
-- **A5Q** — degree-4 rescue emptied  
-- **F** — fixed-frame conic criterion empty  
-- **H2 / H3** — A4 and both A5 twists have rational points  
-- **T / T2** — target-branch negative route refuted / bridge blocked  
-- **J / J2, D / D2, KLS / KLS2, V2** — route-level exits  
-- **R / R2, M / M2** — structural / link exits (section is M3)  
-- **S19 (0801 literal)** — goal-qualified locus empty (`S19-NO-CURVE-SCOPED`)  
-- **COV structured (0801)** — selected higher-order ansätze empty; full \(m=1\) is a separate goal  
-
----
-
-<<<<<<< HEAD
-## 6. Parallel dispatch plan (subagents)
-
-Run independent fronts concurrently. **Hard rule:** at most one unrelated job expected to exceed ~8 GiB RSS at a time. Do not co-schedule heavy P25 F4/`msolve` with heavy COV m=1 chart CAS.
-
-### Wave A — always parallel (light / medium)
-
-| Slot | Front | Agent task | Output dir | Conflict |
-|---|---|---|---|---|
-| A1 | **A0** | Inventory + replay + `CANONICAL_STATE.md/.json` + seal | `goal_runs_after_35fa/A0_CANONICAL_AUDIT/` | None |
-| A2 | **H5** (from H4 model) | Point search / first exact charts on \(\Phi=0\); or setup sealed H5 workspace | `goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/` | None |
-| A3 | **C / C5** | Next exact chart toward common line / projector; no full expanded \(L_a\) | `goal_runs_after_bd610a/C5_*` or C worktree | Shares algebra inputs read-only with B |
-| A4 | **Q** | Scoped successor only (document smallest gate; optional light search) | existing `Q_SCHUR_*` dirs | None |
-| A5 | **M3** | Section vs multisection residual analysis (theorem/CAS light) | `goals_after_bd610a/M3_SARKISOV_SECTION/` | None |
-| A6 | **B** | Theorem-first bridge ledger; no heavy Fano solve | `goal_runs_after_35fa/B_FIXED_FRAME_BRIDGE/` | Read-only on C outputs |
-
-### Wave B — heavy CAS (serialize; pick one)
-
-| Slot | Front | Agent task | Notes |
-|---|---|---|---|
-| B1 | **P25** | Launch prepared `parallel/r66_pair_split/` when unsandboxed RSS census allows | `PREPARED_NOT_RUN`; prior OOM nonverdict |
-| B2 | **COV m=1** | Residual chart cover (prefer charts already reduced) | Modular `[1]` ≠ char-0 without transfer |
-
-### Wave C — deferred research (parallel among themselves, not with Wave B)
-
-| Front | Note |
+| Front | Path |
 |---|---|
-| **G / G2** | Theorem-first; no degree ladder substitute |
-| **S19** cont. | Hankel / Rao branch decision |
-| **V** | Residue sites \(f_5,f_6\) |
-| **T3** | Only if still wanted after T/T2 route refutation |
-
-### Orchestrator checklist
-
-1. Spawn Wave A slots **in parallel** (subagents).  
-2. Assign **at most one** Wave B heavy job.  
-3. Do not edit sealed historical packets; new artifacts only in route-specific dirs.  
-4. Each subagent returns: exit string, `STATUS.md` delta, seal/replay command, resource peak if CAS.  
-5. After Wave A joins, refresh this note’s states from returned exits.
-
----
-
-## 7. Practical next actions
-
-1. **Wave A in parallel (subagents):** A0, H5 setup, C/C5 next gate, M3 residual, B bridge ledger, Q gate note.  
-2. **Wave B (single heavy):** P25 prepared pair-split **or** one COV m=1 chart family — not both.  
-3. Treat CAS timeouts/OOM as nonverdicts; do not promote modular emptiness without transfer.  
-4. Do not treat structural `*-UNDECIDED` exits as headline-ready.
-=======
-## 6. Practical next actions
-
-1. **A0** — pure process: replay verifiers, fix authority, publish `CANONICAL_STATE`.  
-2. **P25** — launch prepared pair-split / remaining affine charts when unsandboxed resources allow; treat timeouts as nonverdicts.  
-3. **COV m=1** — continue residual chart cover; do not promote modular `[1]` without a transfer theorem.  
-4. **H5** — attack the sealed H4 trace cubic (point search or pointlessness).  
-5. **C5 / C** — common-line / projector incidence over \(K_{\mathrm{proj}}\).  
-6. Keep **Q, B, M3, G** as parallel research; do not treat structural undecided exits as headline-ready.
->>>>>>> refs/remotes/origin/main
-
----
-
-## Artifact pointers
-
-| Front | Primary status path |
-|---|---|
-| A0 | `goals_after_35fa8f/IMPLEMENTATION_AUDIT.md` (goal: `GOAL_A0_…`) |
-| P25 | `goals_2026-08-01/P25_LANDING_SUPPORT/STATUS.md` |
-| COV m=1 | `goal_runs_after_35fa/COV_M1_DEG31_35/STATUS.md` |
-| C | `goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/STATUS.md` |
-| C5 | `goals_after_bd610a/C5_PROJECTOR_INCIDENCE/STATUS.md` |
-| H4 | `goal_runs_after_35fa/H_11_5_TWIST/STATUS.md` |
-| H5 | `goals_after_bd610a/GOAL_H5_11_5_TRACE_CUBIC_DECISION.md` (no run yet) |
-| M3 | `goals_after_bd610a/M3_SARKISOV_SECTION/STATUS.md` |
-| Q | `goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/STATUS.md` |
-| B | `goal_runs_after_35fa/B_FIXED_FRAME_BRIDGE/STATUS.md` |
-| G | `goals_2026-08-01/G_ALL_DEGREE/STATUS.md` |
-| S19 cont. | `goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E_CONT2/STATUS.md` |
-| V | `goals_2026-08-01/V_VALUATION_TROPICAL_CODEX_ROOT_20260801/STATUS.md` |
+| B | `goal_runs_after_35fa/B_FIXED_FRAME_BRIDGE/` |
+| M3 | `goals_after_bd610a/M3_SARKISOV_SECTION/` |
+| Q | `goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/` |
+| G | `goals_2026-08-01/G_ALL_DEGREE/` |
+| V | `goals_2026-08-01/V_VALUATION_TROPICAL_CODEX_ROOT_20260801/` |
 | T3 | `goals_after_bd610a/scratch_t3/` |
+| S19 | `goal_runs_after_35fa/S19_MARKED_CURVE/` |
+
+---
+
+## Already terminal (not on queue)
+
+A5Q, F, T/T2, H2/H3, J/J2, D/D2, KLS/KLS2, V2, R/R2, M/M2 (link only), S19 literal, COV structured.
+
+Wave-A packaging (B note, M3 residual, C5 p23 walker, P25 readiness) is process only — not gate closes.

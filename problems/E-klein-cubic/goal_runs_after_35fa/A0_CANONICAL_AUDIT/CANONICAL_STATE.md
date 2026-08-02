@@ -40,7 +40,7 @@ record consumption rules.
 |---|---|
 | **C** three directories | Canonical = `C_PFAFFIAN_FANO_CODEX_ROOT/` (sealed). `C_PFAFFIAN_FANO/` historical; `..._A7C3/` continuation without joining seal — research only. |
 | **COV** two exits | Canonical exit `COV-NEW-ANSATZ-STRUCTURAL`. Root label `COV-STRUCTURED-DEGREES-EMPTY-SCOPED` repaired to **higher-order-branch** emptiness only (`COV-HIGHER-ORDER-BRANCHES-EMPTY-SCOPED`). |
-| **P25** verifier gap | Structural 126 cubic nonmembership independently replayed. Bulk 4140/315: independent full FLINT recompute launched under audit (see `REPLAY.md`); input binaries and prior `deg0_result.json` hash-locked. |
+| **P25** verifier gap | Structural 126 cubic nonmembership independently replayed. Bulk 4140/315: **closed** by independent sparse projection FLINT certificate (`verify_p25_bulk_projection_result.json`: 4140/315, zero projection-zero remainders). Full dense 25530×91390 RREF abandoned as multi-hour trap (killed; nonverdict). |
 
 ---
 
@@ -71,7 +71,7 @@ record consumption rules.
 2. **D / D2:** do not rerun unrestricted equivariant motive; route refuted / bridge invalid.
 3. **H:** D10/D12 soluble; A4 and both A5 classes have points (H2/H3). Remaining subgroup gate is **11:5** (H4 model; H5 binary).
 4. **COV:** higher-order + named-ansatz emptiness only; **not** deg-25/31/35 wide empty; full `m=1` is COV m=1 goal.
-5. **P25:** may use `P25V-PRESENTATION-ENLARGED` after bulk 4140/315 independent confirmation (this audit). Support emptiness **not** proved. Enlarge presentation before claiming T-stable module.
+5. **P25:** may use `P25V-PRESENTATION-ENLARGED` after bulk 4140/315 independent confirmation in this audit (`verify_p25_bulk_projection_result.json`). Support emptiness **not** proved. Enlarge presentation before claiming T-stable module.
 6. **C:** use sealed lazy algebra + involution + five-plane only from canonical CODEX_ROOT. Ambient projector is auxiliary. No Morita/common-line theorem yet.
 7. **T/T2, J/J2, KLS/KLS2, R/R2, S19 (0801 scoped), M/M2:** consume at stated scoped exits; none is a Problem E headline.
 

@@ -5,20 +5,20 @@
       "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
     },
     "REPORT.md": {
-      "bytes": 2523,
-      "sha256": "4bf71e3fc09017e699ad795ae349bf85732f05f8009d3605ae20bbf054000b01"
+      "bytes": 2581,
+      "sha256": "3b92f2bfcc157b5600f7ea24f4ec0e0398ff75775279efd11038a203b4723d1f"
     },
     "WORK_SCOPE.md": {
-      "bytes": 1261,
-      "sha256": "3008f50c013a23e4e3944ef12d8606a57fa35f6b8ebdd955880e7e19987c1809"
+      "bytes": 1441,
+      "sha256": "9f7c0acc463f02f7d4ea5f667bc7e28f90ca592ec97b11fc6a523c75654a4c7f"
     },
     "input_manifest.json": {
       "bytes": 922,
       "sha256": "01d831198138a57679931fb70798b4fb41da750070192ccf7fd380c496055d50"
     },
     "make_seal.py": {
-      "bytes": 2607,
-      "sha256": "a02638e83b7dbd6b50c9ea601619b42a7b3aaa304d80d0781d94e07398ed44e7"
+      "bytes": 3007,
+      "sha256": "2bd708ecc6ee4be0a73b546827af2887439cfe69e676ccbd6e191836004c69b8"
     },
     "prepare_chart.py": {
       "bytes": 6350,
@@ -29,25 +29,20 @@
       "sha256": "9fc5d17aeb9c2bf1341c0871ffd1e0fce07682701a1490a12b2f64ed3378f34b"
     },
     "run_pair_split.py": {
-      "bytes": 11145,
-      "sha256": "19141cdda2395d40e13b4edcc683722373e250013e16bc5db6c8a50bd648af05"
+      "bytes": 18349,
+      "sha256": "7b7a8dadb28003a199da32ec0b88ad65cc8b9eceae7006781d063cd5ef559c49"
     },
     "verify_prepared.py": {
-      "bytes": 7339,
-      "sha256": "2be3fdc21a9f5a52d77ffb5f29634093ca6f275423759b722848f46b2cd8dd51"
+      "bytes": 9283,
+      "sha256": "5468c51e94d55715c7efd60e4c36257a41aa97378c3dacb3830222a28c5965a8"
     },
     "verify_prepared_result.json": {
-<<<<<<< HEAD
-      "bytes": 2573,
-      "sha256": "367011b24f076543d9d3c95922d53918f7d878e18c8d5f2094f83ea7b9e8ac01"
-=======
-      "bytes": 2572,
-      "sha256": "a28c706357fbdcf1bca8a415c75befe26509c8508dd966e13786102b20e91033"
->>>>>>> refs/remotes/origin/main
+      "bytes": 10405,
+      "sha256": "a5ff45745c55a52a69cb8331d4ed305b6702536d08d80dc5788410d869af2cec"
     },
     "verify_seal.py": {
-      "bytes": 2392,
-      "sha256": "4390f6197dac3094f9057e900f1a74d2efa0595f2bc98e4649000e67ed6d64f0"
+      "bytes": 2683,
+      "sha256": "e1c02a87cf8c9f058f1030ff1985e465f2b5931a786c91a2470e6ef957acffad"
     }
   },
   "msolve_binary_sha256": "b2008fb403f38f6a2ae230d12e3023776ae0196761c49966d97fe10747131c60",
@@ -55,9 +50,27 @@
     "/opt/homebrew/bin/python3",
     "-u",
     "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/r66_pair_split/run_pair_split.py",
-    "--confirm-parent-notified"
+    "--confirm-parent-notified",
+    "--rss-gib",
+    "16",
+    "--timeout-seconds",
+    "1200"
   ],
   "r66_packet_sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+  "resource_fence": {
+    "census_backend": "libproc+sysctl_no_ps",
+    "retired_theater_rss_gib": 4.5,
+    "rss_gib_default": 16,
+    "rss_gib_range": [
+      8,
+      32
+    ],
+    "timeout_seconds_default": 1200,
+    "timeout_seconds_range": [
+      60,
+      3600
+    ]
+  },
   "run_artifacts": [],
   "scope": "r66 Stage-B affine chart q0=1,b1_0=1 pair-split retry only",
   "scope_guard": "No CAS retry was launched. A future completed exact unit ideal would prove only this chart empty; every other result is a nonverdict.",

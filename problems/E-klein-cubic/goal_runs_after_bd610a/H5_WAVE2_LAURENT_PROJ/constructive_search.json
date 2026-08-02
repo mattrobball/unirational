@@ -1,0 +1,522 @@
+{
+  "any_identity_hit": false,
+  "approx_patterns_tested": 126390,
+  "format": "H5-WAVE2-CONSTRUCTIVE-v1",
+  "hard_review_fix": "verify.py independently re-runs every screen class (not only JSON boolean checks on a tiny subset)",
+  "hit_screen_names": [],
+  "modular_holdout_replay": {
+    "all_ok": true,
+    "checks": [
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 31
+      },
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 41
+      },
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 61
+      },
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 71
+      },
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 89
+      },
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 101
+      },
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 131
+      },
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 151
+      },
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 181
+      },
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 199
+      },
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 211
+      },
+      {
+        "ok": true,
+        "phi": 0,
+        "prime": 227
+      }
+    ]
+  },
+  "modular_specialization": {
+    "role": "fibre-nonemptiness over F_p; NOT a K-point",
+    "rows": [
+      {
+        "prime": 31,
+        "sample": {
+          "r": [
+            26,
+            8,
+            18,
+            1,
+            22
+          ],
+          "z": [
+            18,
+            16,
+            29,
+            27,
+            24
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 50
+      },
+      {
+        "prime": 41,
+        "sample": {
+          "r": [
+            14,
+            27,
+            33,
+            34,
+            24
+          ],
+          "z": [
+            22,
+            30,
+            6,
+            3,
+            5
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 50
+      },
+      {
+        "prime": 61,
+        "sample": {
+          "r": [
+            28,
+            53,
+            33,
+            12,
+            6
+          ],
+          "z": [
+            42,
+            33,
+            38,
+            32,
+            41
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 50
+      },
+      {
+        "prime": 71,
+        "sample": {
+          "r": [
+            1,
+            55,
+            32,
+            12,
+            28
+          ],
+          "z": [
+            58,
+            60,
+            4,
+            43,
+            10
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 50
+      },
+      {
+        "prime": 89,
+        "sample": {
+          "r": [
+            41,
+            73,
+            15,
+            31,
+            12
+          ],
+          "z": [
+            49,
+            75,
+            19,
+            63,
+            75
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 50
+      },
+      {
+        "prime": 101,
+        "sample": {
+          "r": [
+            30,
+            5,
+            57,
+            94,
+            47
+          ],
+          "z": [
+            96,
+            61,
+            45,
+            40,
+            18
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 50
+      },
+      {
+        "prime": 131,
+        "sample": {
+          "r": [
+            108,
+            87,
+            65,
+            33,
+            73
+          ],
+          "z": [
+            121,
+            42,
+            48,
+            19,
+            39
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 47
+      },
+      {
+        "prime": 151,
+        "sample": {
+          "r": [
+            109,
+            83,
+            131,
+            34,
+            35
+          ],
+          "z": [
+            56,
+            25,
+            51,
+            130,
+            106
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 49
+      },
+      {
+        "prime": 181,
+        "sample": {
+          "r": [
+            104,
+            95,
+            94,
+            161,
+            1
+          ],
+          "z": [
+            56,
+            145,
+            100,
+            56,
+            177
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 49
+      },
+      {
+        "prime": 199,
+        "sample": {
+          "r": [
+            26,
+            22,
+            56,
+            48,
+            61
+          ],
+          "z": [
+            19,
+            175,
+            68,
+            105,
+            54
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 49
+      },
+      {
+        "prime": 211,
+        "sample": {
+          "r": [
+            157,
+            159,
+            39,
+            193,
+            168
+          ],
+          "z": [
+            107,
+            36,
+            186,
+            112,
+            122
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 45
+      },
+      {
+        "prime": 227,
+        "sample": {
+          "r": [
+            116,
+            218,
+            81,
+            220,
+            10
+          ],
+          "z": [
+            22,
+            220,
+            21,
+            84,
+            144
+          ]
+        },
+        "specializations_tested": 50,
+        "with_random_z_hit": 44
+      }
+    ],
+    "transfer": "no characteristic-zero point claimed",
+    "verdict": "modular_fibres_typically_nonempty"
+  },
+  "points_found_over_K": [],
+  "screens": {
+    "additive_h90_k_scaled": {
+      "ansatz": "a = c (m - sigma(m)), c invariant-menu",
+      "identity_hits": [],
+      "scope": "Additive Hilbert-90 monoms with nontrivial K scaling",
+      "tested": 336,
+      "verdict": "empty_scoped"
+    },
+    "binary_ratio_invariant_menu": {
+      "ansatz": "a = 1 + s*m with s invariant-menu (binary free coeff specialized in K)",
+      "elimination_note": "Phi(1+s m) is a genuine cubic polynomial in s with coefficients in K. Existence of s in K is equivalent to that binary cubic having a K-root. No menu root works for any monom in scope.",
+      "identity_hits": [],
+      "scope": "Specializes the free K-coefficient on two-support {1,m} to menu elements; does not solve the binary cubic over the full field K",
+      "tested": 336,
+      "verdict": "empty_scoped"
+    },
+    "four_cyclic_k_coeffs": {
+      "ansatz": "a = sum_{j<4} c_j sigma^j(m), c_j invariant-menu",
+      "exponent_bound": 1,
+      "identity_hits": [],
+      "scope": "Four-term incomplete cyclic orbit with K-menu coeffs",
+      "tested": 25536,
+      "verdict": "empty_scoped"
+    },
+    "local_cyclic_poly": {
+      "ansatz": "a_i = f(r_i,r_{i+1},r_{i+2}) cyclic, deg<=2, coeffs in {-1,0,1}, supp<=3",
+      "basis_size": 10,
+      "identity_hits": [],
+      "scope": "Translation-invariant local polynomial ansatz (constant coeffs in C)",
+      "tested": 1160,
+      "verdict": "empty_scoped"
+    },
+    "multiplicative_h90_k_scaled": {
+      "ansatz": "a = c * m/sigma(m) = c * Laurent monom",
+      "identity_hits": [],
+      "note": "H4 already excludes pure monoms in char 0; c in K scales Phi by c^3",
+      "scope": "Replay with K-scaling; should stay empty",
+      "tested": 168,
+      "verdict": "empty_scoped"
+    },
+    "named_formulas": {
+      "ansatz": "named closed-form cyclic formulas",
+      "cases": {
+        "a_eq_c": {
+          "identity": false,
+          "verdict": "empty_scoped"
+        },
+        "additive_quad_b_sigma_b": {
+          "identity": false,
+          "verdict": "empty_scoped"
+        },
+        "centered": {
+          "identity": false,
+          "verdict": "empty_scoped"
+        },
+        "cube_diff": {
+          "identity": false,
+          "verdict": "empty_scoped"
+        },
+        "disc_like": {
+          "identity": false,
+          "verdict": "empty_scoped"
+        },
+        "inv_diff": {
+          "identity": false,
+          "verdict": "empty_scoped"
+        },
+        "linear_invariant_weights": {
+          "identity": false,
+          "verdict": "empty_scoped"
+        },
+        "p1_minus_ri": {
+          "identity": false,
+          "verdict": "empty_scoped"
+        },
+        "ratio_quad_b_sigma_b": {
+          "identity": false,
+          "verdict": "empty_scoped"
+        },
+        "skip_diff": {
+          "identity": false,
+          "verdict": "empty_scoped"
+        }
+      },
+      "identity_hits": [],
+      "scope": "Explicit geometric/algebraic candidates; not exhaustive",
+      "verdict": "empty_scoped"
+    },
+    "sparse_z_invariants": {
+      "ansatz": "z in K^5 sparse support size<=3 from invariant menu; a=Z(r0)",
+      "identity_hits": [],
+      "menu": [
+        "1",
+        "p1",
+        "p2",
+        "p3",
+        "pm1",
+        "pm2",
+        "e11",
+        "e12",
+        "e21",
+        "e13",
+        "p1p1",
+        "p1pm1",
+        "p1e11",
+        "e11e11",
+        "s_e12e21"
+      ],
+      "scope": "Sparse power-basis coefficients that are pure menu invariants",
+      "tested": 36075,
+      "verdict": "empty_scoped"
+    },
+    "structure_k_laurent_monoms": {
+      "ansatz": "Laurent monoms fixed by sigma (candidates for elements of K)",
+      "consequence_for_H5_1_A": "Coefficients in K for multi-support Laurent ansatze cannot themselves be nonconstant Laurent monoms; they must be genuine cyclic invariants (power sums, U_j, etc.). Screens below use an invariant menu.",
+      "exponent_bound": 2,
+      "nonfixed_count": 3120,
+      "sigma_fixed_count": 4,
+      "sigma_fixed_exponents": [
+        [
+          -2,
+          -2,
+          -2,
+          -2,
+          -2
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "theorem": "A Laurent monom m=prod r_i^{e_i} satisfies sigma(m)=m for all product-one r iff e is diagonal (all equal). On r0...r4=1 every diagonal monom is the constant 1. Hence the only Laurent-monomial elements of K are constants in C*.",
+      "verdict": "structure_recorded"
+    },
+    "three_cyclic_k_coeffs": {
+      "ansatz": "a = x m + y sigma(m) + z sigma^2(m), x,y,z invariant-menu",
+      "coeff_menu": [
+        "0",
+        "1",
+        "p1",
+        "pm1",
+        "e11",
+        "p2",
+        "e13",
+        "p1e11"
+      ],
+      "exponent_bound": 1,
+      "identity_hits": [],
+      "monoms": 42,
+      "scope": "Three-term cyclic support with K-menu coeffs; elimination not closed-form",
+      "tested": 20580,
+      "verdict": "empty_scoped"
+    },
+    "two_support_k_coeffs": {
+      "ansatz": "a = c1*m1 + c2*m2, c_j in invariant menu, m_j Laurent monoms",
+      "coeff_menu": [
+        "1",
+        "p1",
+        "pm1",
+        "e11",
+        "p2",
+        "e13",
+        "p1pm1"
+      ],
+      "exponent_bound": 1,
+      "identity_hits": [],
+      "monoms_classified_up_to_cyclic_diagonal": 42,
+      "scope": "Two-support Laurent with coefficients in a finite invariant menu (not only C). Not an all-K theorem.",
+      "tested": 42189,
+      "verdict": "empty_scoped"
+    }
+  },
+  "verdict": "no_K_point_in_scoped_screens"
+}

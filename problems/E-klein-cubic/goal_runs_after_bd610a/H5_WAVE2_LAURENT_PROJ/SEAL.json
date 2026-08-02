@@ -1,0 +1,27 @@
+{
+  "exit": "H5-UNDECIDED",
+  "file_count": 18,
+  "files": {
+    "CONSTRUCTIVE_SEARCH.md": "5f2e4bf680ddbb26fc888a4097342722efa7ea273e9564cca185dbe803e74d00",
+    "FIELD_AND_MODEL.md": "93a48f4de667a19d7236aef24e44cba950f6bce95ebccdd47386669401d3695e",
+    "INPUT_MANIFEST.json": "80554fdea37b89381d711300d38a7ef0d000bfd836b8bbfb3f1810a9908490a3",
+    "LAURENT_SUPPORT.md": "6ed6ddaa6df1c36a10e087c3f0e7794936e4bf044b2dc42f9bf50fe78520e02c",
+    "POINT.md": "65ba1fa6470c7acbadd3066b0ff4affe9b362cfafd7310061b0fb30225d2a4c0",
+    "PROJECTION.md": "c6c1bc166bee93aa436ed8587d2aad75a3f7d0ccfde5b23dbcedcfa44052ef2e",
+    "README.md": "16c6ba494bc1b461f63f84eeff4697930020174af4e56518e2e6b43c9c0ad21b",
+    "REPLAY.md": "49138529cd065e1ceacc87190ddf001d78af058418b1bb284da1adfc8a66dd2b",
+    "STATUS.md": "aea419f83371736133de32ab4e722755588c111b38e3a2dc6561a23ffe6e7937",
+    "TRACE_CUBIC.json": "cf9bf9a2141e9faab4f46f692989a71194f558d9c76f18f59a80df374db335df",
+    "constructive_search.json": "937e2e88c874447f2b171b0bf20e845205a4fb3c858babdd42981a64aa149d09",
+    "decision.json": "b3cb041919e446a600d059253534c468b83a8851763a24136b88391bbc6cfb9a",
+    "modular_screen.json": "04f6913e75dbe6c8bd73bcb7d0270451eafabab6f75be3a1e70facbd909d6cf8",
+    "point.json": "3116ea10233afe20690796d4f17e343274ff476d4046ee8fef134ebe6b2a233e",
+    "produce.py": "61047e9e046f639d1b98eed64624a85f03bda25151fba3c9394d0f4d82a05aee",
+    "projection.json": "4dc90b57df4d94a18ec37771eefedb2d478ab6ace95d5d517891b5e356f09c7f",
+    "seal.py": "9c699cc8d230983f318dd9e8f602cf00ebcfbbf481fb1a276b84ad2a9b859272",
+    "verify.py": "2ec78fde1f57fde7bf51a84b68270467bb3ff624f3b1a0ec085587258c01144a"
+  },
+  "format": "H5-WAVE2-SEAL-v1",
+  "headline": "OPEN",
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f"
+}

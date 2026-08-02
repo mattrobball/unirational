@@ -4,14 +4,75 @@
 **Exit (overall):** `P25-UNDECIDED`  
 **Pair-split package:** `parallel/r66_pair_split/`  
 **Package status:** `PREPARED_NOT_RUN` / `SEALED_PREPARED_NOT_RUN`  
-**Readiness verdict:** **`BLOCKED`** (not `LAUNCH_OK`)
+**Readiness verdict:** **`BLOCKED`** (not `LAUNCH_OK`) — technical non-`ps` path **exists**; live competing **COV** msolve blocks safe launch  
+**Chart run outcome:** **none** (no msolve child spawned for P25 pair-split)
 
-This note is readiness + light verification only. No multi-hour / multi-GB F4
-or msolve job was launched.
+This note is readiness + light verification + runner repair. No multi-hour /
+multi-GB F4 job was launched for P25 (COV was already heavy).
 
 ---
 
-## 1. Prepared input verification (this session)
+## 1. Mission answers (this session)
+
+### 1.1 Non-runner / non-`ps` fail-safe path — **FOUND**
+
+Sandbox still denies `ps` (`Operation not permitted`). That is **no longer** a
+binding blocker for the pair-split runner.
+
+| Mechanism | Purpose | Status |
+|---|---|---|
+| `libproc.proc_pidinfo` (PROC_PIDTASKINFO) | live RSS of msolve leader / group | **works** |
+| `libproc.proc_listpids` + `PROC_PIDTBSDINFO` | process census (pid/ppid/pgid) | **works** |
+| `sysctl(KERN_PROCARGS2)` | argv strings for competing-CAS markers | **works** (best-effort) |
+| `vm_stat` free+speculative | prelaunch memory gate | **works** |
+| fail-closed | any census/RSS failure → stop / refuse | **kept** |
+
+This matches the pattern already used by `r66_stagec/run_guarded.py` and other
+P25 `run_bounded*.py` helpers. Aggregate process-group RSS sums libproc rows
+sharing the child `pgid` (fallback: leader-only).
+
+**Honest impossibility claim:** a `ps`-only launch path remains impossible in
+this sandbox. A **libproc** launch path is possible and implemented.
+
+### 1.2 Fence proposal — **16 GiB default (flag 8–32); 4.5 GiB retired**
+
+Hard review is accepted: **4.5 GiB is theater** after the incomplete stop at
+~**4.275 GiB** (`4,482,960 KiB`). Raising by 230 MiB does not constitute a
+completion plan on a 128 GiB host.
+
+| Parameter | Old (theater) | New default | Flag range |
+|---|---:|---:|---|
+| RSS hard stop | 4.5 GiB | **16 GiB** | **[8, 32] GiB** |
+| Wall timeout | 1200 s | **1200 s** | **[60, 3600] s** |
+| Threads | 4 | 4 | fixed |
+| Prelaunch free+spec | ≥14 GiB | ≥14 GiB | fixed |
+| Pair cap | `-m 100` | `-m 100` | fixed (source seal) |
+
+CLI (after gates):
+
+```sh
+/opt/homebrew/bin/python3 -u \
+  .../parallel/r66_pair_split/run_pair_split.py \
+  --confirm-parent-notified \
+  --rss-gib 16 \
+  --timeout-seconds 1200
+```
+
+### 1.3 Single-chart launch — **not executed**
+
+Would be safe only if: memory gate pass, **no competing CAS**, parent
+attestation. Observed competing COV_M1 deg-35 msolve (~3.5 GiB RSS) →
+`BLOCKED_COMPETING_PROBE_GATE` if launch were attempted. Mission: prefer
+alternate structural attack when COV is heavy → **no P25 F4 spawn**.
+
+### 1.4 Alternate attack doc
+
+See `ALTERNATE_ATTACK.md` (Rank A secondary splits, Rank C Fitting/weight
+strata, engine notes, sequencing).
+
+---
+
+## 2. Prepared input verification (this session)
 
 From
 
@@ -21,7 +82,7 @@ goals_2026-08-01/P25_LANDING_SUPPORT/parallel/r66_pair_split/
 
 | Step | Command | Result |
 |---|---|---|
-| Prepare audit | `/opt/homebrew/bin/python3 verify_prepared.py` | `PREPARED_NOT_RUN` (exit 0) |
+| Prepare audit | `/opt/homebrew/bin/python3 verify_prepared.py` | `PREPARED_NOT_RUN` (exit 0); process backend available |
 | Reseal | `/opt/homebrew/bin/python3 make_seal.py` | `SEALED_PREPARED_NOT_RUN` |
 | Seal check | `/opt/homebrew/bin/python3 verify_seal.py` | `PASS_SEALED_PREPARED_NOT_RUN` |
 
@@ -41,21 +102,18 @@ Immutable chart bindings (unchanged):
 | Hash-table reset | OFF (`-u` omitted) |
 | Run artifacts present | **none** (`.leading`, `.log`, `.run.json`, `.prelaunch.json` absent) |
 
-`verify_prepared.py` rewrites `verify_prepared_result.json` with a live memory
-snapshot; after re-verify, `make_seal.py` was re-run so the seal matches the
-new snapshot. Source / runner / packet hashes are unchanged.
-
 ---
 
-## 2. Exact launch command (when gates pass)
+## 3. Exact launch command (when gates pass)
 
-**Do not run in the managed sandbox.** An unavailable `ps` poll is a binding
-failure, not permission to continue.
+**Do not launch while any COV/P25 competing msolve/singular is live.**
 
 ```sh
 /opt/homebrew/bin/python3 -u \
   /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/r66_pair_split/run_pair_split.py \
-  --confirm-parent-notified
+  --confirm-parent-notified \
+  --rss-gib 16 \
+  --timeout-seconds 1200
 ```
 
 Underlying msolve invocation (constructed by the runner):
@@ -72,51 +130,53 @@ Pre-launch parent message is mandatory (`--confirm-parent-notified`).
 
 ---
 
-## 3. Expected memory / resource plan (RSS)
+## 4. Expected memory / resource plan (RSS)
 
 | Fence / estimate | Value |
 |---|---:|
-| Runner RSS hard stop (aggregate process-group) | **4.5 GiB** (`4831838208` bytes) |
-| Wall timeout | **1200 s** |
+| Runner RSS hard stop (default) | **16 GiB** |
+| Allowed `--rss-gib` | **8–32** |
+| Wall timeout (default) | **1200 s** (flag up to 3600) |
 | Threads | **4** |
-| Pre-launch free+speculative minimum | **14 GiB** |
-| Prior ordinary F4 (`-m 0`) on same chart | degree 5 complete; entered 1708-pair degree-6; **manual stop at ~4.28 GiB RSS** (`4,482,960 KiB`) after ~549 s — **strict nonverdict** |
-| Pair-cap intent (`-m 100`) | caps pairs per F4 matrix so the 1708-pair degree-6 batch cannot enter one matrix; **not** a fixed 18-block partition; peak RSS still expected to approach the 4.5 GiB fence |
-| Host RAM | 128 GiB |
-| This-session free+speculative (vm_stat) | **~96.4 GiB** → memory gate **PASS** |
+| Pre-launch free+speculative minimum | **14 GiB** |
+| Prior ordinary F4 (`-m 0`) on same chart | degree 5 complete; entered 1708-pair degree-6; **manual stop at ~4.28 GiB RSS** after ~549 s — **strict nonverdict** |
+| Pair-cap intent (`-m 100`) | caps pairs per F4 matrix so the 1708-pair degree-6 batch cannot enter one matrix; **not** a fixed 18-block partition |
+| Host RAM | 128 GiB |
+| This-session free+speculative (vm_stat) | **~93 GiB** → memory gate **PASS** |
+| Competing CAS (libproc census) | **live non-ancestor msolve and/or Singular** (session saw COV msolve ~3.5 GiB, later Singular ~0.4 GiB) → process gate **FAIL** |
 
-**RSS monitoring plan (required by runner, fail-closed):**
+**RSS monitoring plan (fail-closed, no `ps`):**
 
-1. Before spawn: `vm_stat` free+speculative ≥ 14 GiB.  
-2. Before spawn: live `ps -axo pid=,ppid=,pgid=,rss=,command=` census succeeds.  
-3. Before spawn: no competing P25 bounded CAS (`msolve` / `singular` /
-   `run_bounded` / related), except the documented shared Singular PID 13036
-   if still the historical boundary job.  
-4. During run: poll process-group RSS every 0.25 s; stop on RSS > 4.5 GiB or
-   wall > 1200 s or any `ps` failure (`rss_poll_unavailable`).  
-5. Host policy: at most one unrelated job expected to exceed ~8 GiB RSS at a
-   time; do not co-schedule this job with heavy COV m=1 chart CAS.
+1. Before spawn: `vm_stat` free+speculative ≥ 14 GiB.  
+2. Before spawn: live **libproc** census succeeds.  
+3. Before spawn: no competing CAS markers (`msolve` / `singular` /
+   `run_bounded` / `run_pair_split` / related), except documented shared
+   Singular PID 13036 if still the historical boundary job.  
+4. During run: poll process-group RSS every 0.25 s via libproc; stop on
+   RSS > fence or wall > timeout or any poll failure
+   (`rss_poll_unavailable`).  
+5. Host policy: at most one high-memory job; **never** co-schedule with
+   heavy COV m=1 chart CAS.
 
 ---
 
-## 4. Launch gates — this session
+## 5. Launch gates — this session
 
 | Gate | Required | Observed | Pass? |
 |---|---|---|---|
 | Prepared source + seal | `PREPARED_NOT_RUN` sealed | verified + resealed | **yes** |
-| Free+speculative memory | ≥ 14 GiB | ~96.4 GiB | **yes** |
-| Live `ps` process census | available + no competing probes | `ps`: **Operation not permitted** | **no** |
-| Parent notification / mission | readiness-only; no heavy launch | readiness mission; no launch | **blocks launch** |
-| Escalation for unsandboxed `ps` | historically noted until 2026-08-08 | still unavailable in this environment | **blocks launch** |
+| Free+speculative memory | ≥ 14 GiB | ~93 GiB | **yes** |
+| Live process census | available + no competing probes | libproc **available**; **COV msolve competing** | **no** |
+| Parent notification / mission | single chart only if safe | COV heavy → no launch | **blocks launch** |
+| Fence realism | not theater | 16 GiB default (4.5 retired) | **yes** |
 
 **Verdict: `BLOCKED`.**  
-Memory alone would allow a launch attempt. The fail-closed runner cannot start
-without a live process census, which this environment denies. No CAS child was
-spawned.
+Non-`ps` path removes the old census impossibility. Runtime safety still
+fails on competing COV. No P25 CAS child was spawned.
 
 ---
 
-## 5. Residual chart list on `D(H8)` (from STATUS / cover certs)
+## 6. Residual chart list on `D(H8)` (from STATUS / cover certs)
 
 Closed (not residual):
 
@@ -140,9 +200,7 @@ H8 = (q0,q1,q2,q3,q12,...,q36)   # 29 coordinates
 | Certified paired MDS opens | **34** | **0** |
 | **Remaining opens** | **34** | — |
 
-Cover: Reed–Solomon paired opens  
-`D(ℓ_k(q)) ∩ D(m_k(b1))`, `k = 0,…,33`, length 34, MDS support argument
-`6 + 29 > 34`. Certificate replay this session:
+Cover replay this session:
 
 ```text
 PASS_INDEPENDENT_STAGEB_MDS34_COVER_REPLAY
@@ -162,7 +220,7 @@ strict nonverdict (resource stop).
 
 Prepared Stage-C chart package (separate, also not launched):  
 `parallel/r66_stagec/` — `q0=1, b0=1`, 66 eqs / 42 vars, status
-`PREPARED_NOT_RUN` (preferred msolve `-m 100`, 16 GiB fence, long wall).
+`PREPARED_NOT_RUN` (preferred msolve `-m 100`, long wall / large fence).
 
 ### Residual summary
 
@@ -177,7 +235,7 @@ No chart has returned a completed exact unit ideal.
 
 ---
 
-## 6. Success criteria (unit ideal vs nonverdict)
+## 7. Success criteria (unit ideal vs nonverdict)
 
 For the pair-split runner only (`run_pair_split.py`):
 
@@ -200,30 +258,13 @@ not established.
 
 ---
 
-## 7. Holdout / sequencing plan
-
-1. **Holdout chart:** keep `q0=1, b1_0=1` as the first Stage-B residual until a
-   completed unit or a documented nonverdict under the pair-cap fence.  
-2. **Serialize heavy CAS:** at most one high-memory P25 job; never with COV
-   m=1 chart CAS.  
-3. **After this chart:** if unit, mark chart 0 empty and prepare the next
-   MDS open (same r66 contractions, next paired flag). If nonverdict, either
-   raise pair-cap/RSS carefully under a new sealed workdir or switch engine —
-   do not reinterpret incomplete F4 as empty.  
-4. **Stage C:** only after Stage B residuals shrink or a parallel resource
-   window exists; Stage-C term count is ~2.88× the Stage-B neighbor.  
-5. **Transfer:** only after the full special fibre is unit on every chart of
-   the certified covers; then invoke the existing conditional DVR implication
-   — never modular emptiness alone.
-
----
-
 ## 8. Light structural check (this session)
 
 | Check | Result |
 |---|---|
 | `verify_mds_stageB_cover.py` | `PASS_INDEPENDENT_STAGEB_MDS34_COVER_REPLAY` |
-| Heavy F4 / msolve | **not run** |
+| libproc census self-test | available; competing COV detected |
+| Heavy F4 / msolve (P25) | **not run** |
 
 ---
 
@@ -231,9 +272,12 @@ not established.
 
 | Path | Action |
 |---|---|
-| `LAUNCH_READINESS.md` (this file) | **created** |
-| `parallel/r66_pair_split/verify_prepared_result.json` | refreshed by `verify_prepared.py` (memory snapshot) |
-| `parallel/r66_pair_split/SEAL.json` | resealed after refresh |
+| `LAUNCH_READINESS.md` (this file) | **rewritten** |
+| `ALTERNATE_ATTACK.md` | **created** (ranked non-F4 / shrink-chart plan) |
+| `parallel/r66_pair_split/run_pair_split.py` | **rewritten**: libproc+sysctl census/RSS; `--rss-gib` / `--timeout-seconds`; default 16 GiB |
+| `parallel/r66_pair_split/verify_prepared.py` | **updated** for new backend + fence fields |
+| `parallel/r66_pair_split/verify_prepared_result.json` | refreshed (no merge conflict; live gates) |
+| `parallel/r66_pair_split/SEAL.json` | resealed |
 | `parallel/determinantal_cover/verify_mds_stageB_cover_result.json` | refreshed by light cover replay |
 
 No run artifacts under `r66_pair_split/`. No claim of `P25-DEGREE-EMPTY`.
@@ -244,7 +288,11 @@ No run artifacts under `r66_pair_split/`. No claim of `P25-DEGREE-EMPTY`.
 
 ```text
 READINESS: BLOCKED
+  non-ps launch path: OK (libproc)
+  fence: 16 GiB default (4.5 theater retired)
   residual Stage-B opens: 34
   residual Stage-C opens: 29
-  prepared pair-split: PREPARED_NOT_RUN (memory OK, ps census FAIL)
+  prepared pair-split: PREPARED_NOT_RUN
+  chart run: none (COV msolve competing)
+  alternate: ALTERNATE_ATTACK.md
 ```

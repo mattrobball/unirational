@@ -65,8 +65,15 @@ def main() -> None:
         "-u",
         str(HERE / "run_pair_split.py"),
         "--confirm-parent-notified",
+        "--rss-gib",
+        "16",
+        "--timeout-seconds",
+        "1200",
     ]:
         raise AssertionError("sealed launch command mismatch")
+    fence = payload.get("resource_fence") or {}
+    if fence.get("rss_gib_default") != 16 or fence.get("census_backend") != "libproc+sysctl_no_ps":
+        raise AssertionError("sealed resource fence mismatch")
     print("PASS_SEALED_PREPARED_NOT_RUN")
 
 

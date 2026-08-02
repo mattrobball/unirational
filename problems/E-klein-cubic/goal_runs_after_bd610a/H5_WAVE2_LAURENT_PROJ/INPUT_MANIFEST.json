@@ -1,0 +1,43 @@
+{
+  "format": "H5-WAVE2-INPUT-MANIFEST-v1",
+  "h4_exit": "H-11_5-NORM-MODEL-PASS",
+  "inputs": {
+    "binding_goal": {
+      "path_relative_to_problem": "goals_after_bd610a/GOAL_H5_11_5_TRACE_CUBIC_DECISION.md",
+      "role": "authoritative H5 work order",
+      "sha256": "6fe6183595e331db92c29fbe83aba068caa8a54e14e0ccaabb949dbe5f5f37ef"
+    },
+    "h4_decision": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/decision.json",
+      "sha256": "2517208d05c71d7493a6b606d8460c13e41bb409077a7dfb385da99eb443a592"
+    },
+    "h4_field_model": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/field_model.json",
+      "sha256": "80fdc908633595d6bb3c292d0027aa66295a850b9b6a12cc473f90e3e373ba1e"
+    },
+    "h4_norm_model": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/norm_model.json",
+      "sha256": "1f61adc24bc15bf296b7199f4e13dfa5f538691984d6f623efa8feb9531dc49e"
+    },
+    "h4_seal": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/SEAL.json",
+      "role": "sealed H4 model",
+      "sha256": "9b790a67185edc94be385993276ea4b4e35a6cfba4739981c083dd6d9886eb25"
+    },
+    "h4_twist_model": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/twist_model.json",
+      "sha256": "9a5f69b43de4b33aa0185b4714e23bc177b12f74a529510b0b8b4b9ab5e49a11"
+    },
+    "h5_wave1_seal": {
+      "path_relative_to_problem": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/SEAL.json",
+      "sha256": "e8540056540c2d856d25945e333443ffdf36c66e88cdc329cbfd2eb85c4daed7"
+    },
+    "h5_wave1_status": {
+      "path_relative_to_problem": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/STATUS.md",
+      "role": "prior H5-UNDECIDED first wave (not modified)",
+      "sha256": "e7212157aa5b63bac1a54c434798077a41fdc3eec6d77946f27164e9db13fc69"
+    }
+  },
+  "parent_exit": "H5-UNDECIDED",
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f"
+}

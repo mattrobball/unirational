@@ -1,0 +1,259 @@
+{
+  "role": "fibre-nonemptiness over F_p; NOT a K-point",
+  "rows": [
+    {
+      "prime": 31,
+      "sample": {
+        "r": [
+          26,
+          8,
+          18,
+          1,
+          22
+        ],
+        "z": [
+          18,
+          16,
+          29,
+          27,
+          24
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 50
+    },
+    {
+      "prime": 41,
+      "sample": {
+        "r": [
+          14,
+          27,
+          33,
+          34,
+          24
+        ],
+        "z": [
+          22,
+          30,
+          6,
+          3,
+          5
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 50
+    },
+    {
+      "prime": 61,
+      "sample": {
+        "r": [
+          28,
+          53,
+          33,
+          12,
+          6
+        ],
+        "z": [
+          42,
+          33,
+          38,
+          32,
+          41
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 50
+    },
+    {
+      "prime": 71,
+      "sample": {
+        "r": [
+          1,
+          55,
+          32,
+          12,
+          28
+        ],
+        "z": [
+          58,
+          60,
+          4,
+          43,
+          10
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 50
+    },
+    {
+      "prime": 89,
+      "sample": {
+        "r": [
+          41,
+          73,
+          15,
+          31,
+          12
+        ],
+        "z": [
+          49,
+          75,
+          19,
+          63,
+          75
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 50
+    },
+    {
+      "prime": 101,
+      "sample": {
+        "r": [
+          30,
+          5,
+          57,
+          94,
+          47
+        ],
+        "z": [
+          96,
+          61,
+          45,
+          40,
+          18
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 50
+    },
+    {
+      "prime": 131,
+      "sample": {
+        "r": [
+          108,
+          87,
+          65,
+          33,
+          73
+        ],
+        "z": [
+          121,
+          42,
+          48,
+          19,
+          39
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 47
+    },
+    {
+      "prime": 151,
+      "sample": {
+        "r": [
+          109,
+          83,
+          131,
+          34,
+          35
+        ],
+        "z": [
+          56,
+          25,
+          51,
+          130,
+          106
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 49
+    },
+    {
+      "prime": 181,
+      "sample": {
+        "r": [
+          104,
+          95,
+          94,
+          161,
+          1
+        ],
+        "z": [
+          56,
+          145,
+          100,
+          56,
+          177
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 49
+    },
+    {
+      "prime": 199,
+      "sample": {
+        "r": [
+          26,
+          22,
+          56,
+          48,
+          61
+        ],
+        "z": [
+          19,
+          175,
+          68,
+          105,
+          54
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 49
+    },
+    {
+      "prime": 211,
+      "sample": {
+        "r": [
+          157,
+          159,
+          39,
+          193,
+          168
+        ],
+        "z": [
+          107,
+          36,
+          186,
+          112,
+          122
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 45
+    },
+    {
+      "prime": 227,
+      "sample": {
+        "r": [
+          116,
+          218,
+          81,
+          220,
+          10
+        ],
+        "z": [
+          22,
+          220,
+          21,
+          84,
+          144
+        ]
+      },
+      "specializations_tested": 50,
+      "with_random_z_hit": 44
+    }
+  ],
+  "transfer": "no characteristic-zero point claimed",
+  "verdict": "modular_fibres_typically_nonempty"
+}

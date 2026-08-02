@@ -1,0 +1,42 @@
+{
+  "audit_utc": "2026-08-02T11:16:54Z",
+  "exit": "A0-CANONICAL-AUDIT-PASS",
+  "files": {
+    "CANONICAL_STATE.json": "a5e4bf691429880bb2edf84b62139b28b9440ed478d5034fff07a88de7660724",
+    "CANONICAL_STATE.md": "dba619a893050366cd6d598c1b15b8a619d7e096ac031539c212021ee700e672",
+    "P25_INPUT_HASHES.json": "c422f43a25b561312635901fa1370aac156f1f0ae57586c261730cd387855c35",
+    "REPLAY.md": "7612cfb8e8ae894b441333c90582dda887997d1b62dda2736f4e84add5efda5c",
+    "ROUTE_REQUIREMENTS.csv": "3e9beb8dee257ea2f5cb049117e3bc678c1b14831afbf3539160b70c8672b4c5",
+    "STATUS.md": "e87fb96ed368a44d11b1aab036fd52afb4d555259cfd1cd403647815808b5265",
+    "SUPERSEDED_ARTIFACTS.md": "fdf5d522e85fbf2fb860631d39e85ac8f935b3f9a3b687951478c22efa8e6011",
+    "VERIFIER_REPLAY.md": "b4c66fe6f41326da0d588fe2dbc301a52bb149b09380ec7a9fbeeec9f2709c01",
+    "replay_c_codex.log": "6105b90f5e70707f61d186d63de1a49089afc2cf62c25915b0e25cd74c6aa05b",
+    "replay_cov_root.log": "42dd7241eca800ed35960e1c6e9c4878754df19bfe909df09c7c7e5b046649ea",
+    "replay_cov_structured.log": "db8afe012a7785d6e7cedca228d229eeaefb9db4f2b49d36e472b75056596788",
+    "replay_d.log": "770202187dd3ea0f4eadf0dbc267b7a4189626cf66cabbd96042992824da0620",
+    "replay_f.log": "67d613f4b36c9173f64424bac87def92d7c30d2e5f8d989fd3abbda72b86f978",
+    "replay_h.log": "c183085b1d9a5ce9fa414d276f08f263df7e44c702cf3ef91c9200bae150ce15",
+    "replay_p25_bulk_projection.log": "f5e1fe78f908b7394016eae7887f729bead00ff8d68be7d9a56890525cb92453",
+    "replay_p25_flint_full.log": "34d137ce6699568703d322ecda646815cbd0ead95146de6a6142022ab835f86c",
+    "replay_p25v0_structural.log": "d398ce5670c6da360e4fd3d870e7aff22ed7992f2cf1bfa947c85a354ca61c30",
+    "replay_p25v1.log": "1c6cca87cceefd755c2686aa36937fc07b738421dcc51bb3a4b829c8ec018aca",
+    "verify_p25_bulk_projection": "b46a868b6e544c1e66c30d9da88e6691dbcc99ebebaecb47d658bfc998e3213c",
+    "verify_p25_bulk_projection.c": "9ea829843e269c317fd8eabf55df57db39e6093394fd65f40129f0ba4d2cd30a",
+    "verify_p25_bulk_projection.py": "ff3345573546adfbb105012a9414b19facd76968c0ca41913cf00ef060f0feae",
+    "verify_p25_bulk_projection_result.json": "dc24bd01e21bdd15ed87c035042a695460897d71db8f360a45ea5fb5c3543b53"
+  },
+  "full_dense_rref": {
+    "log": "replay_p25_flint_full.log",
+    "reason": "multi-hour trap after fill; not required for A0 pass",
+    "status": "KILLED_INCOMPLETE"
+  },
+  "headline": "OPEN",
+  "p25_bulk": {
+    "method": "sparse_random_column_projection_flint_rref",
+    "n_Ti_out_certified": 4140,
+    "n_comm_out_certified": 315,
+    "ok": true,
+    "result_file": "verify_p25_bulk_projection_result.json"
+  },
+  "schema": "A0_SEAL_V1"
+}

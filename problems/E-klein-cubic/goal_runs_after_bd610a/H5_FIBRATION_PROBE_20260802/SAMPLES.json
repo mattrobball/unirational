@@ -1,0 +1,3560 @@
+{
+  "format": "H5-FIBRATION-PROBE-SAMPLES-v1",
+  "role": "replay anchors for independent verifier",
+  "rows": [
+    {
+      "c": [
+        19,
+        1,
+        24,
+        6,
+        4
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 30784,
+      "point_stats_mode": "exact",
+      "prime": 31,
+      "r": [
+        26,
+        8,
+        18,
+        1,
+        22
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 273,
+        "singular_double": 12,
+        "split": 315
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 26,
+          "B": 16,
+          "C": 12,
+          "direction": [
+            3,
+            9,
+            26,
+            29
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 26,
+          "B": 20,
+          "C": 11,
+          "direction": [
+            26,
+            27,
+            6,
+            22
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 8,
+          "B": 5,
+          "C": 25,
+          "direction": [
+            8,
+            25,
+            25,
+            20
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 17,
+          "B": 7,
+          "C": 3,
+          "direction": [
+            17,
+            14,
+            16,
+            23
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 1,
+          "B": 8,
+          "C": 16,
+          "direction": [
+            22,
+            17,
+            14,
+            15
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 16,
+          "B": 1,
+          "C": 16,
+          "direction": [
+            11,
+            13,
+            28,
+            30
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 13,
+          "B": 8,
+          "C": 6,
+          "direction": [
+            7,
+            28,
+            5,
+            15
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 6,
+          "B": 7,
+          "C": 24,
+          "direction": [
+            8,
+            23,
+            30,
+            10
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        4,
+        16,
+        3,
+        19,
+        26
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        3,
+        11,
+        9,
+        21,
+        26
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 30784,
+      "point_stats_mode": "exact",
+      "prime": 31,
+      "r": [
+        3,
+        6,
+        21,
+        17,
+        7
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 289,
+        "singular_double": 15,
+        "split": 296
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 23,
+          "B": 13,
+          "C": 17,
+          "direction": [
+            18,
+            14,
+            10,
+            4
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 25,
+          "B": 23,
+          "C": 18,
+          "direction": [
+            29,
+            30,
+            17,
+            13
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 26,
+          "B": 17,
+          "C": 15,
+          "direction": [
+            19,
+            4,
+            12,
+            28
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 30,
+          "B": 21,
+          "C": 6,
+          "direction": [
+            10,
+            19,
+            10,
+            8
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 2,
+          "B": 23,
+          "C": 8,
+          "direction": [
+            3,
+            20,
+            0,
+            7
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 26,
+          "B": 24,
+          "C": 27,
+          "direction": [
+            8,
+            29,
+            5,
+            16
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 5,
+          "B": 27,
+          "C": 7,
+          "direction": [
+            23,
+            16,
+            4,
+            3
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 22,
+          "B": 24,
+          "C": 15,
+          "direction": [
+            30,
+            8,
+            18,
+            25
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        7,
+        19,
+        14,
+        23,
+        21
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        8,
+        18,
+        5,
+        12,
+        24
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 30784,
+      "point_stats_mode": "exact",
+      "prime": 31,
+      "r": [
+        13,
+        22,
+        4,
+        19,
+        25
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 304,
+        "singular_double": 27,
+        "split": 269
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 1,
+          "B": 30,
+          "C": 8,
+          "direction": [
+            4,
+            26,
+            2,
+            3
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 0,
+          "B": 0,
+          "C": 28,
+          "direction": [
+            0,
+            17,
+            8,
+            0
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 21,
+          "B": 3,
+          "C": 30,
+          "direction": [
+            22,
+            15,
+            10,
+            29
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 5,
+          "B": 0,
+          "C": 0,
+          "direction": [
+            20,
+            0,
+            0,
+            0
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 15,
+          "B": 0,
+          "C": 0,
+          "direction": [
+            29,
+            26,
+            19,
+            0
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 7,
+          "B": 17,
+          "C": 7,
+          "direction": [
+            28,
+            25,
+            22,
+            8
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 13,
+          "B": 15,
+          "C": 24,
+          "direction": [
+            21,
+            1,
+            28,
+            19
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 8,
+          "B": 23,
+          "C": 2,
+          "direction": [
+            1,
+            17,
+            1,
+            17
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        28,
+        3,
+        26,
+        30,
+        6
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        15,
+        30,
+        17,
+        38,
+        37
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 70644,
+      "point_stats_mode": "exact",
+      "prime": 41,
+      "r": [
+        27,
+        10,
+        11,
+        26,
+        29
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 292,
+        "singular_double": 16,
+        "split": 292
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 27,
+          "B": 32,
+          "C": 11,
+          "direction": [
+            10,
+            7,
+            40,
+            22
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 34,
+          "B": 25,
+          "C": 26,
+          "direction": [
+            5,
+            39,
+            32,
+            2
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 6,
+          "B": 18,
+          "C": 34,
+          "direction": [
+            25,
+            36,
+            32,
+            37
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 40,
+          "B": 16,
+          "C": 18,
+          "direction": [
+            30,
+            24,
+            6,
+            18
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 36,
+          "B": 21,
+          "C": 21,
+          "direction": [
+            27,
+            32,
+            35,
+            13
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 24,
+          "B": 22,
+          "C": 17,
+          "direction": [
+            9,
+            16,
+            19,
+            23
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 33,
+          "B": 3,
+          "C": 1,
+          "direction": [
+            38,
+            14,
+            7,
+            19
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 32,
+          "B": 13,
+          "C": 1,
+          "direction": [
+            12,
+            21,
+            28,
+            15
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        31,
+        39,
+        17,
+        17,
+        21
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        6,
+        24,
+        18,
+        28,
+        7
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 70644,
+      "point_stats_mode": "exact",
+      "prime": 41,
+      "r": [
+        22,
+        6,
+        7,
+        12,
+        16
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 277,
+        "singular_double": 18,
+        "split": 305
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 14,
+          "B": 3,
+          "C": 17,
+          "direction": [
+            16,
+            25,
+            27,
+            10
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 2,
+          "B": 7,
+          "C": 1,
+          "direction": [
+            14,
+            4,
+            28,
+            1
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 26,
+          "B": 27,
+          "C": 35,
+          "direction": [
+            25,
+            21,
+            18,
+            5
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 14,
+          "B": 24,
+          "C": 22,
+          "direction": [
+            4,
+            14,
+            28,
+            39
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 18,
+          "B": 13,
+          "C": 20,
+          "direction": [
+            1,
+            0,
+            5,
+            22
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 6,
+          "B": 12,
+          "C": 6,
+          "direction": [
+            14,
+            27,
+            39,
+            12
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 19,
+          "B": 0,
+          "C": 0,
+          "direction": [
+            17,
+            22,
+            22,
+            0
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 13,
+          "B": 4,
+          "C": 35,
+          "direction": [
+            40,
+            4,
+            17,
+            8
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        3,
+        10,
+        9,
+        19,
+        35
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        13,
+        10,
+        17,
+        33,
+        9
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 70644,
+      "point_stats_mode": "exact",
+      "prime": 41,
+      "r": [
+        5,
+        32,
+        19,
+        37,
+        29
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 271,
+        "singular_double": 15,
+        "split": 314
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 34,
+          "B": 2,
+          "C": 35,
+          "direction": [
+            31,
+            13,
+            16,
+            33
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 12,
+          "B": 0,
+          "C": 0,
+          "direction": [
+            23,
+            18,
+            28,
+            0
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 14,
+          "B": 20,
+          "C": 13,
+          "direction": [
+            20,
+            6,
+            1,
+            5
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 36,
+          "B": 34,
+          "C": 16,
+          "direction": [
+            20,
+            32,
+            31,
+            20
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 14,
+          "B": 7,
+          "C": 6,
+          "direction": [
+            26,
+            39,
+            1,
+            16
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 7,
+          "B": 13,
+          "C": 28,
+          "direction": [
+            13,
+            7,
+            9,
+            40
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 16,
+          "B": 14,
+          "C": 21,
+          "direction": [
+            18,
+            30,
+            21,
+            15
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 33,
+          "B": 9,
+          "C": 9,
+          "direction": [
+            14,
+            36,
+            0,
+            28
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        38,
+        38,
+        39,
+        31,
+        7
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        19,
+        6,
+        38,
+        8,
+        23
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 235783.13375,
+      "point_stats_mode": "monte_carlo",
+      "prime": 61,
+      "r": [
+        23,
+        8,
+        45,
+        51,
+        53
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 289,
+        "singular_double": 13,
+        "split": 298
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 54,
+          "B": 51,
+          "C": 40,
+          "direction": [
+            51,
+            52,
+            54,
+            15
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 5,
+          "B": 43,
+          "C": 4,
+          "direction": [
+            42,
+            39,
+            56,
+            10
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 24,
+          "B": 11,
+          "C": 54,
+          "direction": [
+            43,
+            30,
+            7,
+            24
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 4,
+          "B": 60,
+          "C": 42,
+          "direction": [
+            21,
+            26,
+            52,
+            57
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 12,
+          "B": 47,
+          "C": 60,
+          "direction": [
+            2,
+            43,
+            30,
+            38
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 34,
+          "B": 7,
+          "C": 34,
+          "direction": [
+            33,
+            30,
+            55,
+            33
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 33,
+          "B": 51,
+          "C": 10,
+          "direction": [
+            41,
+            40,
+            6,
+            10
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 29,
+          "B": 35,
+          "C": 50,
+          "direction": [
+            12,
+            34,
+            27,
+            4
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        3,
+        13,
+        10,
+        44,
+        5
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        19,
+        41,
+        57,
+        20,
+        25
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 214668.22625,
+      "point_stats_mode": "monte_carlo",
+      "prime": 61,
+      "r": [
+        58,
+        22,
+        45,
+        3,
+        15
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 297,
+        "singular_double": 11,
+        "split": 292
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 15,
+          "B": 15,
+          "C": 19,
+          "direction": [
+            4,
+            45,
+            57,
+            5
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 55,
+          "B": 56,
+          "C": 32,
+          "direction": [
+            43,
+            6,
+            0,
+            43
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 47,
+          "B": 46,
+          "C": 45,
+          "direction": [
+            19,
+            24,
+            1,
+            22
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 43,
+          "B": 5,
+          "C": 31,
+          "direction": [
+            7,
+            20,
+            11,
+            46
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 34,
+          "B": 57,
+          "C": 36,
+          "direction": [
+            22,
+            56,
+            24,
+            54
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 36,
+          "B": 0,
+          "C": 0,
+          "direction": [
+            14,
+            37,
+            7,
+            0
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        },
+        {
+          "A": 13,
+          "B": 48,
+          "C": 49,
+          "direction": [
+            22,
+            34,
+            4,
+            7
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        },
+        {
+          "A": 44,
+          "B": 57,
+          "C": 50,
+          "direction": [
+            53,
+            32,
+            56,
+            45
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        5,
+        12,
+        18,
+        7,
+        56
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        16,
+        49,
+        39,
+        10,
+        24
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 211149.07499999998,
+      "point_stats_mode": "monte_carlo",
+      "prime": 61,
+      "r": [
+        55,
+        28,
+        42,
+        5,
+        36
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 307,
+        "singular_double": 5,
+        "split": 288
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 24,
+          "B": 36,
+          "C": 44,
+          "direction": [
+            10,
+            30,
+            57,
+            27
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 5,
+          "B": 12,
+          "C": 56,
+          "direction": [
+            31,
+            4,
+            33,
+            26
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        },
+        {
+          "A": 33,
+          "B": 17,
+          "C": 35,
+          "direction": [
+            9,
+            37,
+            36,
+            52
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        },
+        {
+          "A": 34,
+          "B": 18,
+          "C": 58,
+          "direction": [
+            37,
+            60,
+            45,
+            40
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        },
+        {
+          "A": 39,
+          "B": 31,
+          "C": 48,
+          "direction": [
+            55,
+            13,
+            11,
+            27
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        37,
+        2,
+        30,
+        51,
+        35
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        39,
+        43,
+        3,
+        42,
+        12
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 393064.25125,
+      "point_stats_mode": "monte_carlo",
+      "prime": 71,
+      "r": [
+        22,
+        6,
+        51,
+        38,
+        24
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 294,
+        "singular_double": 14,
+        "split": 292
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 5,
+          "B": 3,
+          "C": 4,
+          "direction": [
+            42,
+            37,
+            30,
+            36
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 27,
+          "B": 40,
+          "C": 49,
+          "direction": [
+            28,
+            12,
+            22,
+            13
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 61,
+          "B": 57,
+          "C": 59,
+          "direction": [
+            58,
+            18,
+            39,
+            49
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 22,
+          "B": 61,
+          "C": 56,
+          "direction": [
+            55,
+            65,
+            4,
+            49
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 25,
+          "B": 65,
+          "C": 60,
+          "direction": [
+            27,
+            46,
+            27,
+            64
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 58,
+          "B": 26,
+          "C": 58,
+          "direction": [
+            3,
+            31,
+            35,
+            30
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 24,
+          "B": 66,
+          "C": 1,
+          "direction": [
+            60,
+            23,
+            46,
+            61
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 42,
+          "B": 6,
+          "C": 56,
+          "direction": [
+            14,
+            51,
+            15,
+            50
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        40,
+        31,
+        16,
+        60,
+        7
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        5,
+        37,
+        70,
+        2,
+        52
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 393064.25125,
+      "point_stats_mode": "monte_carlo",
+      "prime": 71,
+      "r": [
+        36,
+        56,
+        57,
+        48,
+        70
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 276,
+        "singular_double": 12,
+        "split": 312
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 26,
+          "B": 28,
+          "C": 13,
+          "direction": [
+            62,
+            13,
+            52,
+            19
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 11,
+          "B": 19,
+          "C": 55,
+          "direction": [
+            31,
+            55,
+            5,
+            36
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 5,
+          "B": 10,
+          "C": 5,
+          "direction": [
+            27,
+            18,
+            45,
+            12
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 13,
+          "B": 0,
+          "C": 0,
+          "direction": [
+            58,
+            26,
+            53,
+            0
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 47,
+          "B": 10,
+          "C": 67,
+          "direction": [
+            24,
+            39,
+            16,
+            57
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 57,
+          "B": 48,
+          "C": 40,
+          "direction": [
+            14,
+            9,
+            59,
+            48
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 15,
+          "B": 25,
+          "C": 40,
+          "direction": [
+            56,
+            35,
+            36,
+            8
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 24,
+          "B": 3,
+          "C": 60,
+          "direction": [
+            47,
+            50,
+            47,
+            59
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        61,
+        44,
+        65,
+        20,
+        6
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        46,
+        56,
+        21,
+        29,
+        51
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 386620.575,
+      "point_stats_mode": "monte_carlo",
+      "prime": 71,
+      "r": [
+        49,
+        39,
+        17,
+        52,
+        44
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 313,
+        "singular_double": 12,
+        "split": 275
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 49,
+          "B": 42,
+          "C": 9,
+          "direction": [
+            52,
+            41,
+            29,
+            54
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 55,
+          "B": 0,
+          "C": 0,
+          "direction": [
+            12,
+            0,
+            2,
+            0
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 49,
+          "B": 21,
+          "C": 20,
+          "direction": [
+            52,
+            61,
+            37,
+            31
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 16,
+          "B": 53,
+          "C": 45,
+          "direction": [
+            51,
+            9,
+            45,
+            7
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 19,
+          "B": 17,
+          "C": 1,
+          "direction": [
+            65,
+            23,
+            3,
+            17
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 28,
+          "B": 65,
+          "C": 13,
+          "direction": [
+            36,
+            15,
+            59,
+            53
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 58,
+          "B": 34,
+          "C": 16,
+          "direction": [
+            2,
+            21,
+            57,
+            54
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        },
+        {
+          "A": 61,
+          "B": 47,
+          "C": 14,
+          "direction": [
+            7,
+            15,
+            50,
+            68
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        2,
+        67,
+        23,
+        20,
+        38
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        82,
+        11,
+        78,
+        51,
+        64
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 698007.431,
+      "point_stats_mode": "monte_carlo",
+      "prime": 89,
+      "r": [
+        7,
+        32,
+        38,
+        81,
+        8
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 279,
+        "singular_double": 9,
+        "split": 312
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 41,
+          "B": 11,
+          "C": 74,
+          "direction": [
+            45,
+            35,
+            77,
+            68
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 86,
+          "B": 57,
+          "C": 63,
+          "direction": [
+            64,
+            17,
+            85,
+            69
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 16,
+          "B": 70,
+          "C": 71,
+          "direction": [
+            50,
+            3,
+            68,
+            41
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 25,
+          "B": 14,
+          "C": 34,
+          "direction": [
+            67,
+            63,
+            76,
+            49
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 83,
+          "B": 28,
+          "C": 86,
+          "direction": [
+            48,
+            15,
+            67,
+            21
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 27,
+          "B": 53,
+          "C": 12,
+          "direction": [
+            38,
+            2,
+            62,
+            33
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 74,
+          "B": 11,
+          "C": 41,
+          "direction": [
+            58,
+            54,
+            31,
+            88
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 39,
+          "B": 10,
+          "C": 44,
+          "direction": [
+            45,
+            38,
+            9,
+            86
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        57,
+        57,
+        76,
+        48,
+        21
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        49,
+        8,
+        77,
+        64,
+        23
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 682143.6257499999,
+      "point_stats_mode": "monte_carlo",
+      "prime": 89,
+      "r": [
+        32,
+        31,
+        20,
+        78,
+        37
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 300,
+        "singular_double": 6,
+        "split": 294
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 25,
+          "B": 83,
+          "C": 68,
+          "direction": [
+            55,
+            64,
+            44,
+            80
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 25,
+          "B": 56,
+          "C": 10,
+          "direction": [
+            55,
+            31,
+            49,
+            32
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 72,
+          "B": 57,
+          "C": 53,
+          "direction": [
+            9,
+            57,
+            22,
+            28
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 51,
+          "B": 20,
+          "C": 77,
+          "direction": [
+            62,
+            79,
+            37,
+            69
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 87,
+          "B": 85,
+          "C": 87,
+          "direction": [
+            15,
+            49,
+            47,
+            69
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 71,
+          "B": 59,
+          "C": 32,
+          "direction": [
+            47,
+            20,
+            13,
+            74
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        38,
+        58,
+        11,
+        34,
+        75
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        46,
+        84,
+        16,
+        17,
+        51
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 904236.89925,
+      "point_stats_mode": "monte_carlo",
+      "prime": 89,
+      "r": [
+        21,
+        7,
+        60,
+        71,
+        39
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 284,
+        "singular_double": 9,
+        "split": 307
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 11,
+          "B": 58,
+          "C": 36,
+          "direction": [
+            37,
+            33,
+            3,
+            53
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 35,
+          "B": 54,
+          "C": 31,
+          "direction": [
+            53,
+            3,
+            49,
+            72
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 88,
+          "B": 30,
+          "C": 42,
+          "direction": [
+            29,
+            22,
+            1,
+            78
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 14,
+          "B": 61,
+          "C": 14,
+          "direction": [
+            15,
+            37,
+            58,
+            10
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 81,
+          "B": 23,
+          "C": 53,
+          "direction": [
+            55,
+            35,
+            24,
+            32
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 12,
+          "B": 45,
+          "C": 70,
+          "direction": [
+            74,
+            57,
+            21,
+            81
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        },
+        {
+          "A": 6,
+          "B": 17,
+          "C": 38,
+          "direction": [
+            37,
+            48,
+            30,
+            60
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        },
+        {
+          "A": 14,
+          "B": 11,
+          "C": 26,
+          "direction": [
+            27,
+            87,
+            28,
+            47
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        19,
+        31,
+        56,
+        46,
+        30
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        1,
+        53,
+        90,
+        96,
+        36
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 840808.04,
+      "point_stats_mode": "monte_carlo",
+      "prime": 101,
+      "r": [
+        20,
+        87,
+        1,
+        61,
+        55
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 300,
+        "singular_double": 5,
+        "split": 295
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 49,
+          "B": 74,
+          "C": 30,
+          "direction": [
+            69,
+            47,
+            34,
+            75
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 49,
+          "B": 89,
+          "C": 77,
+          "direction": [
+            69,
+            56,
+            19,
+            50
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 20,
+          "B": 50,
+          "C": 6,
+          "direction": [
+            97,
+            16,
+            33,
+            86
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        },
+        {
+          "A": 65,
+          "B": 76,
+          "C": 16,
+          "direction": [
+            100,
+            95,
+            98,
+            45
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        },
+        {
+          "A": 11,
+          "B": 4,
+          "C": 83,
+          "direction": [
+            48,
+            98,
+            59,
+            79
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        3,
+        62,
+        92,
+        9,
+        7
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        17,
+        15,
+        84,
+        11,
+        31
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 893358.5425000001,
+      "point_stats_mode": "monte_carlo",
+      "prime": 101,
+      "r": [
+        46,
+        88,
+        6,
+        27,
+        95
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 306,
+        "singular_double": 9,
+        "split": 285
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 22,
+          "B": 21,
+          "C": 36,
+          "direction": [
+            31,
+            23,
+            84,
+            38
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 6,
+          "B": 97,
+          "C": 68,
+          "direction": [
+            61,
+            56,
+            44,
+            73
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 34,
+          "B": 82,
+          "C": 94,
+          "direction": [
+            9,
+            10,
+            16,
+            54
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 51,
+          "B": 61,
+          "C": 93,
+          "direction": [
+            98,
+            21,
+            54,
+            58
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 99,
+          "B": 12,
+          "C": 83,
+          "direction": [
+            12,
+            57,
+            84,
+            18
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 35,
+          "B": 10,
+          "C": 44,
+          "direction": [
+            50,
+            8,
+            9,
+            37
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        },
+        {
+          "A": 88,
+          "B": 32,
+          "C": 58,
+          "direction": [
+            68,
+            48,
+            3,
+            82
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        },
+        {
+          "A": 89,
+          "B": 75,
+          "C": 28,
+          "direction": [
+            55,
+            5,
+            95,
+            4
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        3,
+        27,
+        31,
+        60,
+        91
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        12,
+        30,
+        37,
+        16,
+        91
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 761982.28625,
+      "point_stats_mode": "monte_carlo",
+      "prime": 101,
+      "r": [
+        19,
+        10,
+        59,
+        64,
+        71
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 316,
+        "singular_double": 4,
+        "split": 280
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 36,
+          "B": 7,
+          "C": 81,
+          "direction": [
+            82,
+            74,
+            81,
+            3
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 59,
+          "B": 35,
+          "C": 39,
+          "direction": [
+            39,
+            9,
+            22,
+            67
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 6,
+          "B": 81,
+          "C": 84,
+          "direction": [
+            13,
+            78,
+            3,
+            14
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        },
+        {
+          "A": 46,
+          "B": 79,
+          "C": 18,
+          "direction": [
+            56,
+            56,
+            74,
+            17
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        35,
+        48,
+        38,
+        86,
+        6
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        121,
+        16,
+        54,
+        15,
+        115
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 2077357.135,
+      "point_stats_mode": "monte_carlo",
+      "prime": 131,
+      "r": [
+        35,
+        90,
+        13,
+        41,
+        17
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 302,
+        "singular_double": 1,
+        "split": 297
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 37,
+          "B": 5,
+          "C": 40,
+          "direction": [
+            105,
+            56,
+            101,
+            104
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        100,
+        44,
+        19,
+        98,
+        129
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        96,
+        54,
+        94,
+        80,
+        99
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 2893461.72375,
+      "point_stats_mode": "monte_carlo",
+      "prime": 131,
+      "r": [
+        113,
+        45,
+        116,
+        17,
+        46
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 294,
+        "singular_double": 6,
+        "split": 300
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 74,
+          "B": 59,
+          "C": 60,
+          "direction": [
+            69,
+            130,
+            44,
+            67
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 20,
+          "B": 64,
+          "C": 25,
+          "direction": [
+            93,
+            89,
+            39,
+            103
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 117,
+          "B": 55,
+          "C": 84,
+          "direction": [
+            79,
+            38,
+            117,
+            95
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 46,
+          "B": 83,
+          "C": 41,
+          "direction": [
+            20,
+            95,
+            21,
+            25
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 16,
+          "B": 123,
+          "C": 1,
+          "direction": [
+            65,
+            83,
+            61,
+            119
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        },
+        {
+          "A": 12,
+          "B": 61,
+          "C": 113,
+          "direction": [
+            16,
+            14,
+            33,
+            122
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        35,
+        25,
+        107,
+        89,
+        67
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        33,
+        11,
+        90,
+        53,
+        30
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 2819270.3975,
+      "point_stats_mode": "monte_carlo",
+      "prime": 131,
+      "r": [
+        89,
+        83,
+        4,
+        12,
+        115
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 283,
+        "singular_double": 4,
+        "split": 313
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 98,
+          "B": 82,
+          "C": 88,
+          "direction": [
+            130,
+            55,
+            29,
+            115
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 69,
+          "B": 64,
+          "C": 68,
+          "direction": [
+            42,
+            62,
+            46,
+            115
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 108,
+          "B": 112,
+          "C": 63,
+          "direction": [
+            117,
+            49,
+            32,
+            29
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 2,
+          "B": 52,
+          "C": 76,
+          "direction": [
+            99,
+            95,
+            27,
+            121
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        16,
+        16,
+        110,
+        57,
+        65
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        143,
+        63,
+        38,
+        45,
+        20
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 3270946.90625,
+      "point_stats_mode": "monte_carlo",
+      "prime": 151,
+      "r": [
+        47,
+        68,
+        132,
+        12,
+        4
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 321,
+        "singular_double": 4,
+        "split": 275
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 30,
+          "B": 56,
+          "C": 6,
+          "direction": [
+            58,
+            14,
+            46,
+            12
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 24,
+          "B": 6,
+          "C": 57,
+          "direction": [
+            96,
+            91,
+            110,
+            26
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 112,
+          "B": 63,
+          "C": 82,
+          "direction": [
+            146,
+            36,
+            50,
+            1
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 96,
+          "B": 76,
+          "C": 122,
+          "direction": [
+            35,
+            143,
+            121,
+            34
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        100,
+        7,
+        27,
+        79,
+        76
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        97,
+        45,
+        36,
+        126,
+        142
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 4579325.66875,
+      "point_stats_mode": "monte_carlo",
+      "prime": 151,
+      "r": [
+        6,
+        67,
+        137,
+        47,
+        21
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 312,
+        "singular_double": 2,
+        "split": 286
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 30,
+          "B": 37,
+          "C": 63,
+          "direction": [
+            51,
+            118,
+            77,
+            29
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 77,
+          "B": 47,
+          "C": 41,
+          "direction": [
+            9,
+            121,
+            149,
+            9
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        84,
+        12,
+        81,
+        146,
+        0
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        28,
+        17,
+        9,
+        31,
+        149
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 4186812.04,
+      "point_stats_mode": "monte_carlo",
+      "prime": 151,
+      "r": [
+        39,
+        75,
+        27,
+        80,
+        84
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 271,
+        "singular_double": 4,
+        "split": 325
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 93,
+          "B": 102,
+          "C": 140,
+          "direction": [
+            95,
+            133,
+            138,
+            141
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 92,
+          "B": 16,
+          "C": 132,
+          "direction": [
+            27,
+            23,
+            77,
+            125
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 79,
+          "B": 59,
+          "C": 130,
+          "direction": [
+            143,
+            80,
+            132,
+            48
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 135,
+          "B": 21,
+          "C": 104,
+          "direction": [
+            131,
+            142,
+            20,
+            109
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        66,
+        124,
+        91,
+        135,
+        116
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        159,
+        67,
+        160,
+        7,
+        69
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 8633966.44,
+      "point_stats_mode": "monte_carlo",
+      "prime": 181,
+      "r": [
+        26,
+        21,
+        74,
+        154,
+        112
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 303,
+        "singular_double": 7,
+        "split": 290
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 20,
+          "B": 141,
+          "C": 20,
+          "direction": [
+            3,
+            45,
+            127,
+            29
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 92,
+          "B": 150,
+          "C": 130,
+          "direction": [
+            50,
+            171,
+            89,
+            125
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 86,
+          "B": 146,
+          "C": 123,
+          "direction": [
+            31,
+            8,
+            65,
+            135
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 124,
+          "B": 106,
+          "C": 173,
+          "direction": [
+            132,
+            93,
+            85,
+            45
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 88,
+          "B": 91,
+          "C": 95,
+          "direction": [
+            116,
+            113,
+            27,
+            150
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        },
+        {
+          "A": 102,
+          "B": 61,
+          "C": 14,
+          "direction": [
+            151,
+            14,
+            63,
+            92
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        },
+        {
+          "A": 102,
+          "B": 58,
+          "C": 81,
+          "direction": [
+            151,
+            42,
+            176,
+            28
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        37,
+        17,
+        178,
+        60,
+        101
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        6,
+        160,
+        51,
+        77,
+        94
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 5666040.47625,
+      "point_stats_mode": "monte_carlo",
+      "prime": 181,
+      "r": [
+        134,
+        52,
+        151,
+        112,
+        71
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 296,
+        "singular_double": 2,
+        "split": 302
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 18,
+          "B": 138,
+          "C": 174,
+          "direction": [
+            3,
+            123,
+            165,
+            29
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 133,
+          "B": 91,
+          "C": 37,
+          "direction": [
+            84,
+            163,
+            160,
+            44
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        124,
+        41,
+        161,
+        61,
+        113
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        170,
+        18,
+        105,
+        148,
+        43
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 5666040.47625,
+      "point_stats_mode": "monte_carlo",
+      "prime": 181,
+      "r": [
+        170,
+        80,
+        148,
+        171,
+        50
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 280,
+        "singular_double": 6,
+        "split": 314
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 79,
+          "B": 99,
+          "C": 145,
+          "direction": [
+            108,
+            66,
+            15,
+            77
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 136,
+          "B": 8,
+          "C": 64,
+          "direction": [
+            103,
+            42,
+            108,
+            120
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 7,
+          "B": 40,
+          "C": 83,
+          "direction": [
+            169,
+            51,
+            134,
+            18
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 92,
+          "B": 173,
+          "C": 71,
+          "direction": [
+            75,
+            46,
+            156,
+            73
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 50,
+          "B": 179,
+          "C": 105,
+          "direction": [
+            174,
+            44,
+            122,
+            9
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        },
+        {
+          "A": 44,
+          "B": 144,
+          "C": 52,
+          "direction": [
+            81,
+            110,
+            59,
+            81
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": null,
+      "singular_found": false
+    },
+    {
+      "c": [
+        64,
+        165,
+        113,
+        121,
+        109
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 7486758.10475,
+      "point_stats_mode": "monte_carlo",
+      "prime": 199,
+      "r": [
+        125,
+        42,
+        28,
+        158,
+        118
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 310,
+        "singular_double": 1,
+        "split": 289
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 135,
+          "B": 0,
+          "C": 0,
+          "direction": [
+            159,
+            145,
+            91,
+            0
+          ],
+          "eigen_index": 3,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": null,
+      "singular_found": false
+    },
+    {
+      "c": [
+        35,
+        166,
+        65,
+        21,
+        80
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 5910598.50375,
+      "point_stats_mode": "monte_carlo",
+      "prime": 199,
+      "r": [
+        19,
+        102,
+        91,
+        6,
+        49
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 300,
+        "singular_double": 4,
+        "split": 296
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 129,
+          "B": 79,
+          "C": 176,
+          "direction": [
+            197,
+            175,
+            46,
+            59
+          ],
+          "eigen_index": 0,
+          "kind": "singular_double"
+        },
+        {
+          "A": 184,
+          "B": 182,
+          "C": 98,
+          "direction": [
+            109,
+            153,
+            190,
+            170
+          ],
+          "eigen_index": 1,
+          "kind": "singular_double"
+        },
+        {
+          "A": 12,
+          "B": 166,
+          "C": 60,
+          "direction": [
+            190,
+            148,
+            138,
+            198
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 39,
+          "B": 176,
+          "C": 71,
+          "direction": [
+            197,
+            72,
+            67,
+            89
+          ],
+          "eigen_index": 4,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        194,
+        66,
+        155,
+        3,
+        92
+      ],
+      "singular_found": false
+    },
+    {
+      "c": [
+        72,
+        25,
+        67,
+        57,
+        167
+      ],
+      "locally_soluble": true,
+      "point_count_or_estimate": 8274837.905250001,
+      "point_stats_mode": "monte_carlo",
+      "prime": 199,
+      "r": [
+        7,
+        143,
+        47,
+        8,
+        101
+      ],
+      "residual_fibre_totals": {
+        "contained_line": 0,
+        "nonsplit": 308,
+        "singular_double": 2,
+        "split": 290
+      },
+      "sample_Fp_point": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_special_fibres": [
+        {
+          "A": 24,
+          "B": 123,
+          "C": 27,
+          "direction": [
+            36,
+            142,
+            34,
+            63
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        },
+        {
+          "A": 164,
+          "B": 29,
+          "C": 21,
+          "direction": [
+            47,
+            156,
+            12,
+            113
+          ],
+          "eigen_index": 2,
+          "kind": "singular_double"
+        }
+      ],
+      "sample_z_phi_zero": [
+        0,
+        101,
+        144,
+        117,
+        143
+      ],
+      "singular_found": false
+    }
+  ],
+  "seed": 20260802
+}

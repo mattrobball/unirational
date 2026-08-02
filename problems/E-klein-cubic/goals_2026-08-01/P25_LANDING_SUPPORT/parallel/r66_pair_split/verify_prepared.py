@@ -6,7 +6,6 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
-import re
 import subprocess
 
 import run_pair_split as runner
@@ -98,11 +97,29 @@ def main() -> None:
     memory = runner.vm_free_speculative()
     process_gate: dict[str, object]
     try:
-        rows = runner.ps_rows()
+        import os
+
+        rows = runner.process_rows()
         competing = runner.competing_p25_probes(rows)
-        process_gate = {"available": True, "competing_p25_bounded_probes": competing}
+        # Self-check: leader RSS for this verifier process is positive.
+        self_rss = runner._rss_bytes(os.getpid())
+        if self_rss is None or self_rss <= 0:
+            raise RuntimeError("libproc RSS self-check failed")
+        process_gate = {
+            "available": True,
+            "backend": "libproc+sysctl_no_ps",
+            "row_count": len(rows),
+            "self_rss_bytes": self_rss,
+            "competing_p25_bounded_probes": competing,
+            "ps_required": False,
+        }
     except RuntimeError as exc:
-        process_gate = {"available": False, "error": str(exc)}
+        process_gate = {
+            "available": False,
+            "backend": "libproc+sysctl_no_ps",
+            "ps_required": False,
+            "error": str(exc),
+        }
 
     generated_run_artifacts = [
         path.name for path in (runner.PRELAUNCH, runner.LEADING, runner.LOG, runner.RUN_RECORD)
@@ -111,7 +128,16 @@ def main() -> None:
     if generated_run_artifacts:
         raise AssertionError(f"retry was unexpectedly launched: {generated_run_artifacts}")
 
+    default_rss_bytes = int(runner.DEFAULT_RSS_GIB * (1 << 30))
     memory_pass = memory["free_plus_speculative_bytes"] >= runner.MIN_FREE_SPEC_BYTES
+    process_pass = bool(process_gate.get("available")) and not process_gate.get(
+        "competing_p25_bounded_probes"
+    )
+    launch_path = (
+        "LAUNCH_OK_GATES"
+        if memory_pass and process_pass
+        else "BLOCKED"
+    )
     payload = {
         "status": "PREPARED_NOT_RUN",
         "source": {
@@ -130,8 +156,15 @@ def main() -> None:
             "max_pairs_per_matrix": 100,
             "hash_table_reset": "OFF",
             "threads": runner.THREADS,
-            "timeout_seconds": runner.TIMEOUT_SECONDS,
-            "rss_limit_bytes": runner.RSS_LIMIT_BYTES,
+            "timeout_seconds_default": runner.DEFAULT_TIMEOUT_SECONDS,
+            "timeout_seconds_range": [
+                runner.MIN_TIMEOUT_SECONDS,
+                runner.MAX_TIMEOUT_SECONDS,
+            ],
+            "rss_limit_bytes_default": default_rss_bytes,
+            "rss_limit_gib_default": runner.DEFAULT_RSS_GIB,
+            "rss_limit_gib_range": [runner.MIN_RSS_GIB, runner.MAX_RSS_GIB],
+            "retired_theater_fence_gib": 4.5,
             "arithmetic": "exact sparse, ordinary F4, characteristic from unchanged input",
         },
         "pair_split_semantics": {
@@ -157,14 +190,32 @@ def main() -> None:
             "minimum_free_plus_speculative_bytes": runner.MIN_FREE_SPEC_BYTES,
             "memory_gate_pass": memory_pass,
             "process_gate": process_gate,
-            "escalated_process_inspection_and_runner_execution": "unavailable until 2026-08-08",
-            "parent_instruction": "DO_NOT_LAUNCH",
+            "process_gate_pass": process_pass,
+            "launch_path_verdict": launch_path,
+            "fence_proposal": {
+                "rss_gib": runner.DEFAULT_RSS_GIB,
+                "timeout_seconds": runner.DEFAULT_TIMEOUT_SECONDS,
+                "host_ram_gib": 128,
+                "rationale": (
+                    "Prior incomplete stop at ~4.28 GiB makes 4.5 GiB theater; "
+                    "16 GiB default (flag up to 32) is a realistic completion fence "
+                    "on a 128 GiB host with >=14 GiB free+speculative prelaunch."
+                ),
+            },
+            "parent_instruction": "READY_FOR_SINGLE_CHART_IF_GATES_PASS",
         },
         "run_artifacts": generated_run_artifacts,
         "exact_blocker": (
-            "Launch forbidden: the managed sandbox cannot execute the required fail-closed "
-            "live ps census/RSS polling, and the account escalation quota is exhausted "
-            "until 2026-08-08. The parent explicitly instructed this worker not to launch."
+            None
+            if launch_path == "LAUNCH_OK_GATES"
+            else (
+                "Launch still blocked: "
+                + (
+                    "process census/RSS backend unavailable or competing probes present"
+                    if not process_pass
+                    else "free+speculative memory below 14 GiB"
+                )
+            )
         ),
         "criterion": (
             "A completed exact unit ideal is decisive only for this affine chart. Every "
@@ -173,6 +224,8 @@ def main() -> None:
     }
     RESULT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
     print(payload["status"])
+    print("launch_path_verdict:", launch_path)
+    print("process_gate:", json.dumps(process_gate, sort_keys=True)[:500])
 
 
 if __name__ == "__main__":

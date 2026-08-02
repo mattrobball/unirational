@@ -1,0 +1,28 @@
+{
+  "coefficient_class_decision": null,
+  "exit": "H5-UNDECIDED",
+  "format": "H5-WAVE2-DECISION-v1",
+  "h4_exit_consumed": "H-11_5-NORM-MODEL-PASS",
+  "headline": "OPEN",
+  "next_finite_gate": "H5.1.C: complete Galois descent of the residual conic bundle from the skip-one line orbit (or prove the descended Brauer/Severi-Brauer obstruction); OR exact binary-cubic solubility for a=1+s*m over the full field K (not menu specialization); OR one toric valuation with residue anisotropy.",
+  "not_proved": [
+    "existence of nonzero a in E with Tr(r2^{-1} a^2 sigma(a))=0 over K",
+    "pointlessness of the genuine 11:5 twist over K",
+    "full Galois descent of the skip-one conic bundle",
+    "binary cubic for a=1+s m always anisotropic over K",
+    "any Problem E headline"
+  ],
+  "parent_packet": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/",
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "pointlessness": null,
+  "proved_in_this_packet": [
+    "Only constant Laurent monoms lie in K (sigma-fixed => diagonal => constant on product-one torus)",
+    "Scoped multi-support Laurent ansatze with invariant-menu K-coefficients listed in constructive_search.json are empty of K-identities",
+    "Skip-one lines span(e_i,e_{i+2}) lie on F; residual conic equation recorded; no linear residual section; no K-point from projection in this wave",
+    "Specialized Phi fibres over many F_p remain typically nonempty (honest nonverdict)"
+  ],
+  "rational_point_over_K": null,
+  "runtime_seconds": 3.419,
+  "smallest_remaining_theorem": "Decide whether there exists nonzero a in E with Tr_{E/K}(r2^{-1} a^2 sigma(a))=0.",
+  "valuation_obstruction": null
+}

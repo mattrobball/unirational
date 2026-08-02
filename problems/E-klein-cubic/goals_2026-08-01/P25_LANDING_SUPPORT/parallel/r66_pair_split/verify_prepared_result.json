@@ -1,28 +1,81 @@
 {
   "criterion": "A completed exact unit ideal is decisive only for this affine chart. Every other result, including a completed nonunit basis, is a nonverdict.",
-  "exact_blocker": "Launch forbidden: the managed sandbox cannot execute the required fail-closed live ps census/RSS polling, and the account escalation quota is exhausted until 2026-08-08. The parent explicitly instructed this worker not to launch.",
+  "exact_blocker": "Launch still blocked: process census/RSS backend unavailable or competing probes present",
   "launch_gate_snapshot": {
-    "escalated_process_inspection_and_runner_execution": "unavailable until 2026-08-08",
+    "fence_proposal": {
+      "host_ram_gib": 128,
+      "rationale": "Prior incomplete stop at ~4.28 GiB makes 4.5 GiB theater; 16 GiB default (flag up to 32) is a realistic completion fence on a 128 GiB host with >=14 GiB free+speculative prelaunch.",
+      "rss_gib": 16.0,
+      "timeout_seconds": 1200.0
+    },
+    "launch_path_verdict": "BLOCKED",
     "memory": {
-<<<<<<< HEAD
-      "free_pages": 3968821,
-      "free_plus_speculative_bytes": 75259412480,
+      "free_pages": 5397933,
+      "free_plus_speculative_bytes": 99203530752,
       "page_size": 16384,
-      "speculative_pages": 624649
-=======
-      "free_pages": 1525264,
-      "free_plus_speculative_bytes": 25847119872,
-      "page_size": 16384,
-      "speculative_pages": 52319
->>>>>>> refs/remotes/origin/main
+      "speculative_pages": 656970
     },
     "memory_gate_pass": true,
     "minimum_free_plus_speculative_bytes": 15032385536,
-    "parent_instruction": "DO_NOT_LAUNCH",
+    "parent_instruction": "READY_FOR_SINGLE_CHART_IF_GATES_PASS",
     "process_gate": {
-      "available": false,
-      "error": "live ps unavailable: [Errno 1] Operation not permitted: 'ps'"
-    }
+      "available": true,
+      "backend": "libproc+sysctl_no_ps",
+      "competing_p25_bounded_probes": [
+        {
+          "command": "Singular -q --no-rc",
+          "path": "/opt/homebrew/Cellar/singular/4.4.1p5_3/bin/Singular",
+          "pgid": 11523,
+          "pid": 11530,
+          "ppid": 11528,
+          "rss_bytes": 413302784
+        },
+        {
+          "command": "/usr/bin/time -l Singular -q --no-rc",
+          "path": "/usr/bin/time",
+          "pgid": 11523,
+          "pid": 11528,
+          "ppid": 11527,
+          "rss_bytes": 1294336
+        },
+        {
+          "command": "/bin/zsh -c snap=$(command cat <&3); builtin setopt nonomatch 2>/dev/null; builtin eval \"$snap\"; builtin export GROK_AGENT=1; builtin export PWD=\"$(builtin pwd)\"; builtin setopt aliases 2>/dev/null; unalias find 2>/dev/null || true; find() { local __grok_bin=''; [ -x \"$__grok_bin\" ] || __grok_bin=$(command -v bfs 2>/dev/null) || __grok_bin=''; if [ -z \"$__grok_bin\" ]; then command find \"$@\"; return; fi; if [[ -z ${ZSH_VERSION-} ]] && (( BASH_SUBSHELL > 0 )); then exec -a find \"$__grok_bin\" \"$@\"; else (exec -a find \"$__grok_bin\" \"$@\"); fi; }; __grok_shadow_find=1; unalias grep 2>/dev/null || true; grep() { local __grok_bin=''; [ -x \"$__grok_bin\" ] || __grok_bin=$(command -v ugrep 2>/dev/null) || __grok_bin=''; if [ -z \"$__grok_bin\" ]; then command grep \"$@\"; return; fi; if [[ -z ${ZSH_VERSION-} ]] && (( BASH_SUBSHELL > 0 )); then exec -a grep \"$__grok_bin\" -G --ignore-files --hidden -I --exclude-dir=.git --exclude-dir=.svn --exclude-dir=.hg --exclude-dir=.bzr --exclude-dir=.jj --exclude-dir=.sl \"$@\"; else (exec -a grep \"$__grok_bin\" -G --ignore-files --hidden -I --exclude-dir=.git --exclude-dir=.svn --exclude-dir=.hg --exclude-dir=.bzr --exclude-dir=.jj --exclude-dir=.sl \"$@\"); fi; }; __grok_shadow_grep=1; __grok_user_cmd=\"$1\"; builtin typeset +x __grok_user_cmd 2>/dev/null; builtin set --; builtin eval \"$__grok_user_cmd\" 2>&1 -- WAVE=/Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_35fa/COV_M1_DEG31_35/wave_20260802\nls -la \"$WAVE/degree_35/\"*.sing\n# Fix singular invocation: feed via stdin\n(\n  /usr/bin/time -l Singular -q --no-rc < \"$WAVE/degree_35/d35_mixed_third_quadratic_chart0_p463.eliminated.sing\" \\\n    > \"$WAVE/logs/singular_d35_chart0.log\" 2> \"$WAVE/logs/singular_d35_chart0.err\"\n  echo singular_chart0_exit:$? >> \"$WAVE/logs/singular_d35_chart0.err\"\n) &\necho singular_pid:$!\n\n# Restart chart2 msolve if dead\npgrep -lf 'msolve.*chart2' || (\n  /usr/bin/time -l msolve \\\n    -f \"$WAVE/degree_35/d35_mixed_third_quadratic_chart2_p463.eliminated.in\" \\\n    -o \"$WAVE/degree_35/d35_mixed_third_quadratic_chart2_p463.eliminated.msolve.out\" \\\n    -g 1 -t 4 -v 1 \\\n    > \"$WAVE/logs/msolve_d35_chart2.log\" 2> \"$WAVE/logs/msolve_d35_chart2.err\"\n  echo msolve_chart2_exit:$? >> \"$WAVE/logs/msolve_d35_chart2.err\"\n) &\necho chart2_launcher:$!\n\nsleep 3\npgrep -lf 'msolve|Singular' || true\n/bin/ps -ax -o pid,rss,etime,command 2>/dev/null | rg -i 'msolve|Singular' | head -20\n",
+          "path": "/bin/zsh",
+          "pgid": 11523,
+          "pid": 11527,
+          "ppid": 1,
+          "rss_bytes": 1687552
+        },
+        {
+          "command": "msolve -f /Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_35fa/COV_M1_DEG31_35/wave_20260802/degree_35/d35_mixed_third_quadratic_chart0_p463.eliminated.in -o /Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_35fa/COV_M1_DEG31_35/wave_20260802/degree_35/d35_mixed_third_quadratic_chart0_p463.eliminated.msolve.replay.out -g 1 -t 4 -v 1",
+          "path": "/opt/homebrew/Cellar/msolve/0.10.1/bin/msolve",
+          "pgid": 11469,
+          "pid": 11480,
+          "ppid": 11475,
+          "rss_bytes": 3640573952
+        },
+        {
+          "command": "/usr/bin/time -l msolve -f /Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_35fa/COV_M1_DEG31_35/wave_20260802/degree_35/d35_mixed_third_quadratic_chart0_p463.eliminated.in -o /Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_35fa/COV_M1_DEG31_35/wave_20260802/degree_35/d35_mixed_third_quadratic_chart0_p463.eliminated.msolve.replay.out -g 1 -t 4 -v 1",
+          "path": "/usr/bin/time",
+          "pgid": 11469,
+          "pid": 11475,
+          "ppid": 11473,
+          "rss_bytes": 1294336
+        },
+        {
+          "command": "/bin/zsh -c snap=$(command cat <&3); builtin setopt nonomatch 2>/dev/null; builtin eval \"$snap\"; builtin export GROK_AGENT=1; builtin export PWD=\"$(builtin pwd)\"; builtin setopt aliases 2>/dev/null; unalias find 2>/dev/null || true; find() { local __grok_bin=''; [ -x \"$__grok_bin\" ] || __grok_bin=$(command -v bfs 2>/dev/null) || __grok_bin=''; if [ -z \"$__grok_bin\" ]; then command find \"$@\"; return; fi; if [[ -z ${ZSH_VERSION-} ]] && (( BASH_SUBSHELL > 0 )); then exec -a find \"$__grok_bin\" \"$@\"; else (exec -a find \"$__grok_bin\" \"$@\"); fi; }; __grok_shadow_find=1; unalias grep 2>/dev/null || true; grep() { local __grok_bin=''; [ -x \"$__grok_bin\" ] || __grok_bin=$(command -v ugrep 2>/dev/null) || __grok_bin=''; if [ -z \"$__grok_bin\" ]; then command grep \"$@\"; return; fi; if [[ -z ${ZSH_VERSION-} ]] && (( BASH_SUBSHELL > 0 )); then exec -a grep \"$__grok_bin\" -G --ignore-files --hidden -I --exclude-dir=.git --exclude-dir=.svn --exclude-dir=.hg --exclude-dir=.bzr --exclude-dir=.jj --exclude-dir=.sl \"$@\"; else (exec -a grep \"$__grok_bin\" -G --ignore-files --hidden -I --exclude-dir=.git --exclude-dir=.svn --exclude-dir=.hg --exclude-dir=.bzr --exclude-dir=.jj --exclude-dir=.sl \"$@\"); fi; }; __grok_shadow_grep=1; __grok_user_cmd=\"$1\"; builtin typeset +x __grok_user_cmd 2>/dev/null; builtin set --; builtin eval \"$__grok_user_cmd\" 2>&1 -- WAVE=/Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_35fa/COV_M1_DEG31_35/wave_20260802\n# Long msolve replay chart0 (expect ~30min based on prior WORK timestamps)\n(\n  /usr/bin/time -l msolve \\\n    -f \"$WAVE/degree_35/d35_mixed_third_quadratic_chart0_p463.eliminated.in\" \\\n    -o \"$WAVE/degree_35/d35_mixed_third_quadratic_chart0_p463.eliminated.msolve.replay.out\" \\\n    -g 1 -t 4 -v 1 \\\n    > \"$WAVE/logs/msolve_d35_chart0_replay.log\" 2> \"$WAVE/logs/msolve_d35_chart0_replay.err\"\n  echo msolve_chart0_exit:$? >> \"$WAVE/logs/msolve_d35_chart0_replay.err\"\n) &\necho msolve_chart0_pid:$!\n\n# Independent Singular verifier chart0\n(\n  /usr/bin/time -l Singular -q --no-rc \\\n    \"$WAVE/degree_35/d35_mixed_third_quadratic_chart0_p463.eliminated.sing\" \\\n    > \"$WAVE/logs/singular_d35_chart0.log\" 2> \"$WAVE/logs/singular_d35_chart0.err\"\n  echo singular_chart0_exit:$? >> \"$WAVE/logs/singular_d35_chart0.err\"\n) &\necho singular_chart0_pid:$!\n\n# Attack unfinished chart2 with msolve\n(\n  /usr/bin/time -l msolve \\\n    -f \"$WAVE/degree_35/d35_mixed_third_quadratic_chart2_p463.eliminated.in\" \\\n    -o \"$WAVE/degree_35/d35_mixed_third_quadratic_chart2_p463.eliminated.msolve.out\" \\\n    -g 1 -t 4 -v 1 \\\n    > \"$WAVE/logs/msolve_d35_chart2.log\" 2> \"$WAVE/logs/msolve_d35_chart2.err\"\n  echo msolve_chart2_exit:$? >> \"$WAVE/logs/msolve_d35_chart2.err\"\n) &\necho msolve_chart2_pid:$!\n\nsleep 2\nls -la \"$WAVE/logs/\"\n",
+          "path": "/bin/zsh",
+          "pgid": 11469,
+          "pid": 11473,
+          "ppid": 1,
+          "rss_bytes": 1802240
+        }
+      ],
+      "ps_required": false,
+      "row_count": 365,
+      "self_rss_bytes": 110608384
+    },
+    "process_gate_pass": false
   },
   "ordinary_msolve_retry": {
     "arithmetic": "exact sparse, ordinary F4, characteristic from unchanged input",
@@ -35,9 +88,19 @@
     "binary_sha256": "b2008fb403f38f6a2ae230d12e3023776ae0196761c49966d97fe10747131c60",
     "hash_table_reset": "OFF",
     "max_pairs_per_matrix": 100,
-    "rss_limit_bytes": 4831838208,
+    "retired_theater_fence_gib": 4.5,
+    "rss_limit_bytes_default": 17179869184,
+    "rss_limit_gib_default": 16.0,
+    "rss_limit_gib_range": [
+      8.0,
+      32.0
+    ],
     "threads": 4,
-    "timeout_seconds": 1200.0,
+    "timeout_seconds_default": 1200.0,
+    "timeout_seconds_range": [
+      60.0,
+      3600.0
+    ],
     "version": "0.10.1"
   },
   "pair_split_semantics": {

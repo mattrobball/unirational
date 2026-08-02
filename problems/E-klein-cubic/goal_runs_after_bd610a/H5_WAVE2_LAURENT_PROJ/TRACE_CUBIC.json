@@ -1,0 +1,10 @@
+{
+  "binding": "H4 norm/twist model by path+hash",
+  "equation": "Phi(a)=Tr_{E/K}(r2^{-1} a^2 sigma(a))=0",
+  "fields": {
+    "E": "C(r0,...,r4)/(r0 r1 r2 r3 r4 - 1)",
+    "K": "E^{<sigma>} = C(U1,U2,U3,U4)",
+    "c": "r2^{-1}"
+  },
+  "format": "H5-WAVE2-TRACE-CUBIC-v1"
+}

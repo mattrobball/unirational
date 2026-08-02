@@ -1,0 +1,76 @@
+{
+  "K_point_found_via_projection": null,
+  "all_skip_one_checks_ok": true,
+  "ambient_equation": "F = sum_{i in Z/5} x_i^2 x_{i+1}",
+  "degree_five_point": {
+    "image_B_frame": "[beta0*Z0(r0):0:0:0:0] and cyclic conjugates",
+    "not_K_point": true,
+    "statement": "Z0(T)=prod_{k=1..4}(T-r_k) gives Phi=0 over E (H4); Gal orbit is the five eigenpoints e_i in the B-frame"
+  },
+  "equivalence": "F(B z) = Phi(z) on the H4 common open",
+  "format": "H5-WAVE2-PROJECTION-v1",
+  "galois_descent": {
+    "invariant_hyperplane": "The unique Gal-invariant linear form without roots of unity is sum x_i. The cubic surface X \u2229 {sum x_i=0} is defined over K; small-integer search finds constant points on F=0 \u2229 sum=0, but constant B-frame points need not arise from z in K (B depends on r).",
+    "linear_conic_sections_found": 0,
+    "no_single_line_over_K": "No line in the orbit is fixed by sigma, so none is defined over K. A K-rational line on X would give a conic-bundle projection over K.",
+    "residual_status": "Residual conic bundle after projecting from a skip-one line is defined over E, not over K. No linear polynomial section of the residual equation was found. Full descent of the conic bundle / Brauer analysis is not completed in this wave.",
+    "skip_one_lines": "L_i=span(e_i, e_{i+2}) form a Gal(E/K)-orbit of size 5"
+  },
+  "line_checks": [
+    {
+      "consecutive_sample_off": 5,
+      "consecutive_sample_on": 0,
+      "prime": 31,
+      "skip_one_lines_on_F": true
+    },
+    {
+      "consecutive_sample_off": 5,
+      "consecutive_sample_on": 0,
+      "prime": 41,
+      "skip_one_lines_on_F": true
+    },
+    {
+      "consecutive_sample_off": 5,
+      "consecutive_sample_on": 0,
+      "prime": 61,
+      "skip_one_lines_on_F": true
+    },
+    {
+      "consecutive_sample_off": 5,
+      "consecutive_sample_on": 0,
+      "prime": 71,
+      "skip_one_lines_on_F": true
+    },
+    {
+      "consecutive_sample_off": 5,
+      "consecutive_sample_on": 0,
+      "prime": 89,
+      "skip_one_lines_on_F": true
+    },
+    {
+      "consecutive_sample_off": 5,
+      "consecutive_sample_on": 0,
+      "prime": 101,
+      "skip_one_lines_on_F": true
+    },
+    {
+      "consecutive_sample_off": 5,
+      "consecutive_sample_on": 0,
+      "prime": 199,
+      "skip_one_lines_on_F": true
+    }
+  ],
+  "linear_sections": [],
+  "residual_equation_from_L0": "u*s^2 + w^2*s + v*t^2 + u^2*t + v^2*w = 0",
+  "residual_variables": {
+    "complementary_P2": "(u : v : w) ~ (x1 : x3 : x4)",
+    "line_coords": "(s : t) on L0=span(e0,e2)"
+  },
+  "skip_one_lines_theorem": "For each i, the line span(e_i, e_{i+2}) lies on F=0 (only coordinates i and i+2 nonzero => every monomial of F vanishes).",
+  "smoothness": {
+    "computational_check": "only solution of all partials over Q is the origin (singular locus of the cone)",
+    "conclusion": "projective cubic threefold F=0 is smooth over C",
+    "partials": "dF/dx_j = 2 x_j x_{j+1} + x_{j-1}^2"
+  },
+  "verdict": "geometry_recorded_no_K_point"
+}

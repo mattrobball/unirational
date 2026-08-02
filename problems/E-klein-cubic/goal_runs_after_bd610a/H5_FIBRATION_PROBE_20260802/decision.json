@@ -1,0 +1,10 @@
+{
+  "elapsed_seconds": 34.462,
+  "exit": "H5-UNDECIDED",
+  "format": "H5-FIBRATION-PROBE-DECISION-v1",
+  "headline": "OPEN",
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "pointlessness": null,
+  "probe": "modular residual fibration statistics only",
+  "rational_point_over_K": null
+}

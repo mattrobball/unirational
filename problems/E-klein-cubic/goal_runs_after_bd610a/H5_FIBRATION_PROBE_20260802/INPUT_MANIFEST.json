@@ -1,0 +1,56 @@
+{
+  "format": "H5-FIBRATION-PROBE-INPUT-MANIFEST-v1",
+  "geometry": {
+    "degree_five_orbit": "when r_i in F_p distinct, eigenpoints e_0..e_4 lie on G",
+    "equivalence": "G(Z(r_0),...,Z(r_4))=Phi(z) on the Vandermonde open",
+    "fibre_types": [
+      "contained_line (A=B=C=0)",
+      "singular_double (disc=0, form nonzero)",
+      "split (disc nonzero square)",
+      "nonsplit (disc nonsquare)"
+    ],
+    "residual_fibration": "project from e_m; lines through e_m form P^3; residual is binary quadratic A s^2 + B s t + C t^2 with disc = B^2-4AC",
+    "specialized_equation": "G(x)=sum_{i} (1/r_{i+2}) x_i^2 x_{i+1} = 0 in P^4"
+  },
+  "inputs": {
+    "goal": {
+      "path_relative_to_problem": "goals_after_bd610a/GOAL_H5_11_5_TRACE_CUBIC_DECISION.md",
+      "sha256": "6fe6183595e331db92c29fbe83aba068caa8a54e14e0ccaabb949dbe5f5f37ef"
+    },
+    "h4_field_model": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/field_model.json",
+      "sha256": "80fdc908633595d6bb3c292d0027aa66295a850b9b6a12cc473f90e3e373ba1e"
+    },
+    "h4_norm_model": {
+      "degree_five_point": "Z0(T)=prod_(k=1)^4(T-r_k) -> eigenpoint orbit",
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/norm_model.json",
+      "sha256": "1f61adc24bc15bf296b7199f4e13dfa5f538691984d6f623efa8feb9531dc49e"
+    },
+    "h4_seal": {
+      "exit": "H-11_5-NORM-MODEL-PASS",
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/SEAL.json",
+      "sha256": "9b790a67185edc94be385993276ea4b4e35a6cfba4739981c083dd6d9886eb25"
+    },
+    "h4_twist_model": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_11_5_TWIST/twist_model.json",
+      "sha256": "9a5f69b43de4b33aa0185b4714e23bc177b12f74a529510b0b8b4b9ab5e49a11"
+    },
+    "h5_status": {
+      "exit": "H5-UNDECIDED",
+      "path_relative_to_problem": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/STATUS.md",
+      "sha256": "e7212157aa5b63bac1a54c434798077a41fdc3eec6d77946f27164e9db13fc69"
+    },
+    "h5_trace_cubic": {
+      "path_relative_to_problem": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/TRACE_CUBIC.json",
+      "sha256": "3bc7fdcfbd7bfe4dbe7dd65791a2f09373670e95ae98676fd52d2f79d634ff13"
+    }
+  },
+  "not_claimed": [
+    "K-rational point on the generic trace cubic",
+    "pointlessness of the generic 11:5 twist",
+    "any Problem E headline",
+    "anisotropic completion"
+  ],
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "role": "discovery modular residual fibration probe; not a decision packet"
+}

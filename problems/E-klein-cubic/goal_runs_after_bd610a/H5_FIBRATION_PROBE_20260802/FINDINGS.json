@@ -1,0 +1,346 @@
+{
+  "exit": "H5-UNDECIDED",
+  "fibre_dirs_per_eigenpoint": 120,
+  "format": "H5-FIBRATION-PROBE-FINDINGS-v1",
+  "global_notes": {
+    "all_sampled_specs_locally_soluble": true,
+    "interpretation": "Specialized residual fibrations from the degree-five eigenpoint orbit are typically locally soluble over F_p, with a positive density of split residual fibres and rare contained-line / double fibres.  This is a modular discovery statistic only; it does not produce a K-point and does not prove emptiness.",
+    "max_local_solubility_rate": 1.0,
+    "mean_residual_split_rate_noncontained": 0.49970488836030286,
+    "min_local_solubility_rate": 1.0,
+    "singular_cubics_seen": 0
+  },
+  "headline": "OPEN",
+  "holdout_prime": 199,
+  "not_proved": [
+    "existence of nonzero a in E with Tr(r2^{-1} a^2 sigma(a))=0 over K",
+    "pointlessness of the genuine 11:5 twist over K",
+    "any positive or negative Problem E headline"
+  ],
+  "primes": [
+    31,
+    41,
+    61,
+    71,
+    89,
+    101,
+    131,
+    151,
+    181,
+    199
+  ],
+  "seed": 20260802,
+  "specializations_per_prime": 24,
+  "summaries_by_prime": [
+    {
+      "P4_order": 954305,
+      "exact_point_count_mean": 30784.0,
+      "exact_point_counts": [
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784,
+        30784
+      ],
+      "holdout": false,
+      "locally_soluble_count": 24,
+      "locally_soluble_rate": 1.0,
+      "mc_point_count_estimates_mean": null,
+      "prime": 31,
+      "residual_fibre_counts": {
+        "contained_line": 1,
+        "nonsplit": 6695,
+        "singular_double": 457,
+        "split": 7247
+      },
+      "residual_fibre_rates": {
+        "contained_line": 6.944444444444444e-05,
+        "nonsplit": 0.46493055555555557,
+        "singular_double": 0.03173611111111111,
+        "split": 0.5032638888888888
+      },
+      "residual_split_rate_among_noncontained": 0.5032988401972359,
+      "singular_cubic_heuristic_count": 0,
+      "singular_cubic_heuristic_rate": 0.0,
+      "specializations": 24
+    },
+    {
+      "P4_order": 2896405,
+      "exact_point_count_mean": 70644.0,
+      "exact_point_counts": [
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644,
+        70644
+      ],
+      "holdout": false,
+      "locally_soluble_count": 24,
+      "locally_soluble_rate": 1.0,
+      "mc_point_count_estimates_mean": null,
+      "prime": 41,
+      "residual_fibre_counts": {
+        "contained_line": 1,
+        "nonsplit": 6808,
+        "singular_double": 369,
+        "split": 7222
+      },
+      "residual_fibre_rates": {
+        "contained_line": 6.944444444444444e-05,
+        "nonsplit": 0.4727777777777778,
+        "singular_double": 0.025625,
+        "split": 0.5015277777777778
+      },
+      "residual_split_rate_among_noncontained": 0.5015626085144802,
+      "singular_cubic_heuristic_count": 0,
+      "singular_cubic_heuristic_rate": 0.0,
+      "specializations": 24
+    },
+    {
+      "P4_order": 14076605,
+      "exact_point_count_mean": null,
+      "exact_point_counts": [],
+      "holdout": false,
+      "locally_soluble_count": 24,
+      "locally_soluble_rate": 1.0,
+      "mc_point_count_estimates_mean": 225518.94260416666,
+      "prime": 61,
+      "residual_fibre_counts": {
+        "contained_line": 1,
+        "nonsplit": 7009,
+        "singular_double": 204,
+        "split": 7186
+      },
+      "residual_fibre_rates": {
+        "contained_line": 6.944444444444444e-05,
+        "nonsplit": 0.4867361111111111,
+        "singular_double": 0.014166666666666666,
+        "split": 0.4990277777777778
+      },
+      "residual_split_rate_among_noncontained": 0.4990624348913119,
+      "singular_cubic_heuristic_count": 0,
+      "singular_cubic_heuristic_rate": 0.0,
+      "specializations": 24
+    },
+    {
+      "P4_order": 25774705,
+      "exact_point_count_mean": null,
+      "exact_point_counts": [],
+      "holdout": false,
+      "locally_soluble_count": 24,
+      "locally_soluble_rate": 1.0,
+      "mc_point_count_estimates_mean": 369168.9518229167,
+      "prime": 71,
+      "residual_fibre_counts": {
+        "contained_line": 0,
+        "nonsplit": 7036,
+        "singular_double": 227,
+        "split": 7137
+      },
+      "residual_fibre_rates": {
+        "contained_line": 0.0,
+        "nonsplit": 0.4886111111111111,
+        "singular_double": 0.01576388888888889,
+        "split": 0.495625
+      },
+      "residual_split_rate_among_noncontained": 0.495625,
+      "singular_cubic_heuristic_count": 0,
+      "singular_cubic_heuristic_rate": 0.0,
+      "specializations": 24
+    },
+    {
+      "P4_order": 63455221,
+      "exact_point_count_mean": null,
+      "exact_point_counts": [],
+      "holdout": false,
+      "locally_soluble_count": 24,
+      "locally_soluble_rate": 1.0,
+      "mc_point_count_estimates_mean": 709905.2849375,
+      "prime": 89,
+      "residual_fibre_counts": {
+        "contained_line": 0,
+        "nonsplit": 6928,
+        "singular_double": 196,
+        "split": 7276
+      },
+      "residual_fibre_rates": {
+        "contained_line": 0.0,
+        "nonsplit": 0.4811111111111111,
+        "singular_double": 0.01361111111111111,
+        "split": 0.5052777777777778
+      },
+      "residual_split_rate_among_noncontained": 0.5052777777777778,
+      "singular_cubic_heuristic_count": 0,
+      "singular_cubic_heuristic_rate": 0.0,
+      "specializations": 24
+    },
+    {
+      "P4_order": 105101005,
+      "exact_point_count_mean": null,
+      "exact_point_counts": [],
+      "holdout": false,
+      "locally_soluble_count": 24,
+      "locally_soluble_rate": 1.0,
+      "mc_point_count_estimates_mean": 1047725.64359375,
+      "prime": 101,
+      "residual_fibre_counts": {
+        "contained_line": 0,
+        "nonsplit": 7180,
+        "singular_double": 146,
+        "split": 7074
+      },
+      "residual_fibre_rates": {
+        "contained_line": 0.0,
+        "nonsplit": 0.4986111111111111,
+        "singular_double": 0.010138888888888888,
+        "split": 0.49125
+      },
+      "residual_split_rate_among_noncontained": 0.49125,
+      "singular_cubic_heuristic_count": 0,
+      "singular_cubic_heuristic_rate": 0.0,
+      "specializations": 24
+    },
+    {
+      "P4_order": 296765305,
+      "exact_point_count_mean": null,
+      "exact_point_counts": [],
+      "holdout": false,
+      "locally_soluble_count": 24,
+      "locally_soluble_rate": 1.0,
+      "mc_point_count_estimates_mean": 2371031.1347395834,
+      "prime": 131,
+      "residual_fibre_counts": {
+        "contained_line": 0,
+        "nonsplit": 7156,
+        "singular_double": 101,
+        "split": 7143
+      },
+      "residual_fibre_rates": {
+        "contained_line": 0.0,
+        "nonsplit": 0.49694444444444447,
+        "singular_double": 0.007013888888888889,
+        "split": 0.49604166666666666
+      },
+      "residual_split_rate_among_noncontained": 0.49604166666666666,
+      "singular_cubic_heuristic_count": 0,
+      "singular_cubic_heuristic_rate": 0.0,
+      "specializations": 24
+    },
+    {
+      "P4_order": 523351505,
+      "exact_point_count_mean": null,
+      "exact_point_counts": [],
+      "holdout": false,
+      "locally_soluble_count": 24,
+      "locally_soluble_rate": 1.0,
+      "mc_point_count_estimates_mean": 3723427.8949479167,
+      "prime": 151,
+      "residual_fibre_counts": {
+        "contained_line": 0,
+        "nonsplit": 7101,
+        "singular_double": 103,
+        "split": 7196
+      },
+      "residual_fibre_rates": {
+        "contained_line": 0.0,
+        "nonsplit": 0.493125,
+        "singular_double": 0.007152777777777778,
+        "split": 0.49972222222222223
+      },
+      "residual_split_rate_among_noncontained": 0.49972222222222223,
+      "singular_cubic_heuristic_count": 0,
+      "singular_cubic_heuristic_rate": 0.0,
+      "specializations": 24
+    },
+    {
+      "P4_order": 1079245805,
+      "exact_point_count_mean": null,
+      "exact_point_counts": [],
+      "holdout": false,
+      "locally_soluble_count": 24,
+      "locally_soluble_rate": 1.0,
+      "mc_point_count_estimates_mean": 6003304.7903125,
+      "prime": 181,
+      "residual_fibre_counts": {
+        "contained_line": 0,
+        "nonsplit": 7101,
+        "singular_double": 78,
+        "split": 7221
+      },
+      "residual_fibre_rates": {
+        "contained_line": 0.0,
+        "nonsplit": 0.493125,
+        "singular_double": 0.005416666666666667,
+        "split": 0.5014583333333333
+      },
+      "residual_split_rate_among_noncontained": 0.5014583333333333,
+      "singular_cubic_heuristic_count": 0,
+      "singular_cubic_heuristic_rate": 0.0,
+      "specializations": 24
+    },
+    {
+      "P4_order": 1576159601,
+      "exact_point_count_mean": null,
+      "exact_point_counts": [],
+      "holdout": true,
+      "locally_soluble_count": 24,
+      "locally_soluble_rate": 1.0,
+      "mc_point_count_estimates_mean": 8077817.955124999,
+      "prime": 199,
+      "residual_fibre_counts": {
+        "contained_line": 0,
+        "nonsplit": 7079,
+        "singular_double": 67,
+        "split": 7254
+      },
+      "residual_fibre_rates": {
+        "contained_line": 0.0,
+        "nonsplit": 0.49159722222222224,
+        "singular_double": 0.004652777777777777,
+        "split": 0.50375
+      },
+      "residual_split_rate_among_noncontained": 0.50375,
+      "singular_cubic_heuristic_count": 0,
+      "singular_cubic_heuristic_rate": 0.0,
+      "specializations": 24
+    }
+  ]
+}

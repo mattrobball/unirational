@@ -16,20 +16,35 @@ fixed partition into 18 batches: new basis elements can change the later pair
 list.  Hash reset remains OFF because the purpose of this first retry is to
 isolate the pair-cap change.
 
-The immutable fences are 1,200 seconds, 4.5 GiB aggregate process-group RSS,
-four threads, at least 14 GiB free-plus-speculative memory before launch, and
-a successful live process census showing no competing P25 bounded probe other
-than shared PID 13036.  The runner fails closed on every unavailable `ps`
-poll.
+## Fences and monitoring (2026-08-02 update)
 
-At the no-launch decision, the parent reported only about 5.85 GiB of
-free-plus-speculative memory, below the required 14 GiB.  Memory is volatile:
-the final preparation verifier observed a later snapshot above the threshold.
-That later memory snapshot does not authorize a launch.  The managed sandbox
-still denies the mandatory live `ps` census/RSS polling, the account's
-escalation quota is exhausted until 2026-08-08, and the parent explicitly
-instructed this worker not to launch.  No run artifact exists.
-`verify_prepared_result.json` contains the exact final no-run snapshot.
+Hard review: the historical **4.5 GiB** RSS fence is **theater** after the
+~**4.275 GiB** incomplete stop.  Defaults are now:
+
+| Fence | Default | Flag range |
+|---|---:|---|
+| RSS | **16 GiB** | 8–32 GiB (`--rss-gib`) |
+| Wall | **1200 s** | 60–3600 s (`--timeout-seconds`) |
+| Threads | 4 | fixed |
+| Prelaunch free+speculative | ≥14 GiB | fixed |
+
+The runner **does not require `ps`**.  Live process census and RSS use macOS
+`libproc` (`proc_listpids` / `proc_pidinfo`) plus best-effort
+`sysctl(KERN_PROCARGS2)` argv strings.  Every unavailable census or RSS poll
+fails closed.
+
+## Why still not launched
+
+At the latest gate check:
+
+- free+speculative memory was far above 14 GiB;
+- libproc census **succeeded**;
+- a **competing COV_M1** msolve job was live (~3.5 GiB), so the competing-probe
+  gate fails;
+- mission policy prefers structural alternates while COV is heavy.
+
+No run artifact exists under this directory.  See parent
+`LAUNCH_READINESS.md` and `ALTERNATE_ATTACK.md`.
 
 A future completed exact unit ideal proves only this affine chart empty.  Any
 other outcome is a strict nonverdict.
@@ -42,11 +57,8 @@ Preparation and replay:
 ```
 
 Only after all launch gates pass and the parent has been messaged immediately
-before launch, the proposed unsandboxed command is exactly:
+before launch, the proposed command is exactly:
 
 ```sh
-/opt/homebrew/bin/python3 -u /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/r66_pair_split/run_pair_split.py --confirm-parent-notified
+/opt/homebrew/bin/python3 -u /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/r66_pair_split/run_pair_split.py --confirm-parent-notified --rss-gib 16 --timeout-seconds 1200
 ```
-
-It must not be invoked in the managed sandbox: an unavailable `ps` poll is a
-binding failure, not permission to continue.

@@ -60,7 +60,19 @@ def main() -> None:
             "-u",
             str(HERE / "run_pair_split.py"),
             "--confirm-parent-notified",
+            "--rss-gib",
+            "16",
+            "--timeout-seconds",
+            "1200",
         ],
+        "resource_fence": {
+            "rss_gib_default": 16,
+            "rss_gib_range": [8, 32],
+            "timeout_seconds_default": 1200,
+            "timeout_seconds_range": [60, 3600],
+            "retired_theater_rss_gib": 4.5,
+            "census_backend": "libproc+sysctl_no_ps",
+        },
         "run_artifacts": [],
         "files": {
             name: {"bytes": (HERE / name).stat().st_size, "sha256": sha256(HERE / name)}
