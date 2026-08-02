@@ -1,0 +1,77 @@
+{
+  "schema": "klein-v3-valuation-residue-closeout-v1",
+  "repository_head_at_start": "b49fc8148ca3ad8a23b959c140d68e7544fc8031",
+  "pinned_mathematical_baseline": "715faf441289e2589b9325311b6613ea0331bf88",
+  "goal_exit": "V-UNDECIDED",
+  "scoped_exit": "V3-RESIDUE-NORMAL-FORM-PASS",
+  "finite_exit": "V-F5-DEGREE16-SUPPORT-LE5-EMPTY",
+  "problem_e_headline": "OPEN",
+  "headline_claim_made": false,
+  "field": {
+    "name": "K_proj=C(P(W))^PSL(2,11)",
+    "transcendence_degree_over_C": 4,
+    "twist": "genuine five-coordinate Klein cubic twist"
+  },
+  "normal_form": {
+    "universal_local_index": 1,
+    "nontrivial_inertia_has_point": true,
+    "unramified_point_iff_residue_point": true,
+    "C1_residue_has_point": true,
+    "negative_residue_transcendence_degree_lower_bound": 2,
+    "negative_rational_rank_upper_bound": 2,
+    "negative_krull_rank_upper_bound": 2,
+    "rank_two_negative_site_is_abhyankar": true,
+    "surviving_decomposition_groups": [
+      "PSL(2,11)",
+      "11:5"
+    ],
+    "residue_twist_index": 1
+  },
+  "retired_mechanisms": [
+    "nontrivial torsor inertia",
+    "pure value-group or tropical nonintersection",
+    "local index divisible by three",
+    "specialization degree subgroup 3Z",
+    "all special-fibre multiplicities divisible by three with an index-three conclusion",
+    "ordinary relative Brauer obstruction",
+    "residue fields of transcendence degree at most one over C",
+    "all Krull valuations of rank at least three",
+    "both maximal A5 decomposition classes",
+    "the selected fixed-frame index-three special fibre"
+  ],
+  "remaining_named_residue_gates": [
+    "full G residue twist at f5=0",
+    "full G residue twist at f6=0",
+    "maximal 11:5 cyclic trace cubic Tr(r2^-1 a^2 sigma(a))=0"
+  ],
+  "f5_degree16": {
+    "prime": 67,
+    "variables": 19,
+    "necessary_cubic_rank": 151,
+    "excluded_support_size_upper_bound": 5,
+    "full_degree16_decision": "OPEN",
+    "all_degree_decision": "OPEN"
+  },
+  "source_git_blobs": {
+    "goals_2026-08-01/GOAL_V_VALUATION_TROPICAL_POINTLESSNESS.md": "e4c8edd35743df19bc071255ae55c348b2736d06",
+    "goals_2026-08-01/V_VALUATION_TROPICAL/MODEL.md": "4f752b4c3779abbc0cfdde60463cf3348c13cb6c",
+    "goals_2026-08-01/V_VALUATION_TROPICAL/proof_payload.json": "544f0084f9a83ed234f164237ed5f5a6c6953f1f",
+    "goals_2026-08-01/V_VALUATION_TROPICAL/search_full_frame_bounded.py": "5bd35bc7ad66feacc78c637858ec2fce50848822",
+    "goals_2026-08-01/V_VALUATION_TROPICAL_CODEX_ROOT_20260801/route_decision.json": "ba6445ba96bb25a65c850ffee4507d48bc239ed1",
+    "goals_2026-08-01/G_ALL_DEGREE/attacks/low_rank_valuations_v2/THEOREM.md": "63344bec0c18e0ebaea0dade9e5d5e6a58656a64",
+    "goals_2026-08-01/G_ALL_DEGREE/attacks/low_rank_valuations_v2/VALUATION_FOUNDATIONS.md": "6aa3e60af2081b913c8fa7e78ecca5e8bb33f969",
+    "goals_2026-08-01/Q_SCHUR_A5_VALUATION_ELIMINATION_CODEX_ROOT_20260801_EA52/THEOREM.md": "c18d674aee4cd95b000a058733df644744905a2b",
+    "goal_runs_after_35fa/V_GENUINE_VALUATION/STATUS.md": "b8031a9708001f37cb286fa27bac376df3e5f742",
+    "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/STATUS.md": "27ae5f267bc0c68d855580bb93e1aa74d123b1ff",
+    "certificates/generic_frame_planes_specialization.py": "d33a72674a965ef7056a571f5f4736fa0ee4b384"
+  },
+  "strict_nonclaims": [
+    "no K_proj-rational point is proved",
+    "no pointless completion is proved",
+    "no full f5 or f6 residue decision is proved",
+    "no 11:5 trace-cubic decision is proved",
+    "no full degree-16 emptiness is proved",
+    "no all-degree landing theorem is proved",
+    "Problem E remains open"
+  ]
+}
