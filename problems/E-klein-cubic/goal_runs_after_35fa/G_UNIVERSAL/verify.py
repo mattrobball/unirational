@@ -58,6 +58,10 @@ def check_status_and_machine_ledger() -> None:
     require(theorem["exit"] == "G2-FINITE-GENERATION-PASS", "machine exit mismatch")
     require(theorem["headline"] == "OPEN", "headline overclaim")
     require(theorem["theorem"]["equivalence"] is True, "equivalence not recorded")
+    require(theorem["theorem"]["primitive_is_lattice_condition_not_linear_quotient"] is True,
+            "primitive quotient boundary missing")
+    require(theorem["theorem"]["symbolic_order_is_representative_dependent"] is True,
+            "symbolic-order boundary missing")
     require(theorem["scope"]["symbolic_multi_rees_finite_generation_claimed"] is False,
             "symbolic multi-Rees overclaim")
     require(theorem["scope"]["finite_degree_cutoff_claimed"] is False,
@@ -185,9 +189,10 @@ def check_document_scope() -> None:
 
     for phrase in (
         "No highest-component extraction is used",
-        "Scalar multiples and primitive representatives",
+        "Scalar saturation and primitive representatives",
         "Multiplication and precomposition",
         "does not algebraize an arbitrary compatible-looking local inverse-limit state",
+        "M\\cap \\ell",
     ):
         require(phrase in all_degree, f"all-degree proof missing {phrase!r}")
 
@@ -200,6 +205,8 @@ def check_document_scope() -> None:
 
     require("not a collection of independently chosen fixed-locus restrictions" in universal,
             "global-image boundary missing")
+    require("is not an invariant of the projective generic point" in universal,
+            "representative-wise symbolic order missing")
     require("map must have Jacobian rank four" in decision, "positive dominance gate missing")
     require("source-exhaustiveness" in decision, "negative bridge gate missing")
 
