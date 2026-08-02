@@ -1,0 +1,58 @@
+{
+  "schema": "G2_UNIVERSAL_ALL_DEGREE_V1",
+  "date": "2026-08-02",
+  "source_commit": "4378e3dfe2dcf0caeeeb6f73117d785f5aa9f794",
+  "exit": "G2-FINITE-GENERATION-PASS",
+  "headline": "OPEN",
+  "global_object": {
+    "invariant_module_rank_over_A": 12,
+    "covariant_module_rank_over_A": 60,
+    "landing_law_degree": 3,
+    "coefficient_equations": 12,
+    "coefficient_slots": 60
+  },
+  "generic_object": {
+    "frame_names": [
+      "x",
+      "C",
+      "D",
+      "E",
+      "K"
+    ],
+    "frame_degrees": [
+      1,
+      4,
+      5,
+      6,
+      7
+    ],
+    "normalizer": "tau=f3^2/f5",
+    "normalizer_degree": 1,
+    "projective_base": [
+      "t3",
+      "t6",
+      "t8",
+      "t11"
+    ],
+    "projective_field_degree": 12,
+    "cubic_coefficient_count": 35,
+    "source_payload": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json"
+  },
+  "theorem": {
+    "left": "exists d and nonzero p in M_d with F(p)=0",
+    "right": "V(Phi)(K_proj) is nonempty",
+    "equivalence": true,
+    "forward_map": "normalize unique homogeneous frame coordinates",
+    "reverse_map": "clear homogeneous invariant denominators",
+    "scalar_multiples_projectivized": true,
+    "homogeneous_precomposition_preserves_landing": true
+  },
+  "scope": {
+    "symbolic_filtration_retained": true,
+    "local_states_are_restrictions_of_one_global_vector": true,
+    "symbolic_multi_rees_finite_generation_claimed": false,
+    "finite_degree_cutoff_claimed": false,
+    "generic_point_decided": false,
+    "headline_decided": false
+  }
+}
