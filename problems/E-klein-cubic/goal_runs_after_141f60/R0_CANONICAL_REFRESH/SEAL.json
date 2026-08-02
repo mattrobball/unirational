@@ -1,0 +1,29 @@
+{
+  "format": "r0-canonical-refresh-seal-v1",
+  "exit": "R0-CANONICAL-REFRESH-PASS",
+  "headline": "OPEN",
+  "goal": "R0_CANONICAL_REFRESH",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "pinned_state": "141f6042f628f984771fc79d8d16beb12cedcb94",
+  "live_ledger_updated": [
+    "REMAINING_GOALS_NOTE.md"
+  ],
+  "historical_packets_resealed": [],
+  "files": {
+    "INPUT_MANIFEST.json": "4d48f9c5f60c7fbcd2fac37c87d766449dcd1be1031548b3ab10aa84775d825a",
+    "CANONICAL_STATE.md": "c3457622fe53d54462fc4c8916d5dcd9e9456f497791fac8cb96c855ed8dbecd",
+    "canonical_state.json": "16da3847053bfddec8802846d5c461f59907a5a2d8ca476f41cfdbb1e3d0359d",
+    "SUPERSEDED_STATUS.md": "bb6fb1da6558afc126196f5211eebb419915d3039af763f306fc777603f2f0bd",
+    "REPLAY.md": "04a6cb85a63157d985dd0d3ce195d110e1bc7c23328628b7317fe642b5482f2f",
+    "verify.py": "4539ae6d182528c0ba1833430ee2da601ff82b34f9e155b79262ca607c9c515c",
+    "STATUS.md": "542f054860ed455aa3de9b0ef6c1dd54efc45044fddf134edc558e5e1f4a59ff"
+  },
+  "replay": {
+    "G2": "PASS",
+    "V3": "PASS",
+    "H5": "PASS",
+    "B_full": "FAIL_PIN_DRIFT",
+    "B_subcheck": "PASS",
+    "A0_subcheck": "PASS"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "format": "g4-a5-index11-transfer-seal-v1",
+  "exit": "G4-INDUCED-DEGREE11-POINT-PASS",
+  "also_notes": [
+    "G-module of Ind is 1+10 (not 1+5+5)",
+    "G4.2 landing residual: needs G3-frame coordinates",
+    "G4.3 secant residual: no deg 1-2 residual obtained"
+  ],
+  "headline": "OPEN",
+  "stages": [
+    "G4.0",
+    "G4.1",
+    "G4.2",
+    "G4.3"
+  ],
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "files": {
+    "INPUT_MANIFEST.json": "2e9010545e3e33cfb519e993234e4c647d6deca2f3e144e012f8926f46a3deaf",
+    "coset_actions.json": "381c046fa4bdb0273e933df10959df21d45eef1631cf2a3db082a87284e7121c",
+    "induced_points.json": "863116102af5103d8ba0e24f7220784417c569f56f0a2bff3f0d7e479a74c797",
+    "projectors.json": "c3eaf4543bf7cf360eeb290173625b06731e01950e812f737e37341ac08fba25",
+    "operations.json": "a16bc372e92ab5958051ffae96de200cb7cf2be21dd0db9d902e4b99dfa44aa1",
+    "landing_tests.json": "1bb6096b714032746aaef4f9a083a202ded2160ad2ef30203faf1aa7214d7646",
+    "secant_geometry.json": "6e517c44c2a4e75af1e0b8311b9e30b5ccfca8d7d671a3af119f658560b31bc0",
+    "COSET_ACTIONS.md": "774a55b142f1297d82ba6888688b78cda7c61b8c418b670c49d4e542b7f0fef9",
+    "INDUCED_POINTS.md": "4610197dd6a833b600695ae1023611fc689261756014beaa1257d1feb8667b3c",
+    "PERMUTATION_PROJECTORS.md": "14465c2288de92a957154fe14b352b193824150ef8cbda1169b8ed8e3043be9f",
+    "LOW_ARITY_OPERATIONS.md": "d3e22f17c0a893fd2c834591d5703eed71b72f5058eac59aed8714bd733d0486",
+    "SECANT_GEOMETRY.md": "705fcb69cd058aadfd54a976cc483c4aa8947e3683154a116ebdcdf510d08170",
+    "produce.py": "11a61af460b52dcb6fcc6de7af46f8996494ba23aa0ca4d936545666602c8fce",
+    "produce_meta.json": "b4e8702a38fc3b38b17e4df87fbedb8e8536e4f010f82b56fe72b42afa3a9312",
+    "verify_induction.py": "e64cbf27913dadc97cb3cd06d2b5a8d8561e5c160319e274fc06150a270a4547",
+    "verify_operations.py": "6964d29fbb82b760b2193b1b1934df9fd096a2376a7f9b19ac879beee06ab25f",
+    "verify_point.py": "a076d828979454d30a52a974f7df35ad30499beff89b08d137b9fbd70a20b17a",
+    "REPLAY.md": "0389600eebb819ea0c23f86845b8f707f9562470816c95c8ebff305cfda83504",
+    "STATUS.md": "cdb871f8ef2f9f247439cec2108f748c8af7636743d478e3c77efb01ac54e03d",
+    "make_seal.py": "ad8443054f61923c3f9aec7536898b7160632a54101a2b6105545e0694107eb8"
+  },
+  "nonclaims": [
+    "no G4-POINT-HEADLINE-POSITIVE",
+    "no fabricated K_proj-point",
+    "no G3-frame numeric Phi substitution for all 11 conjugates",
+    "Klein/companion 5s of G not summands of Ind_H^G 1"
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "schema": "g3b-line-residual-v1",
+  "specialization": "secondary-0, t*=1 over QQ",
+  "coordinate_pair_lines": [
+    {
+      "type": "coordinate_span",
+      "A": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "B": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "on_cubic": false,
+      "conditions": {
+        "Phi_A": "1",
+        "B_AAB": "1/3",
+        "B_ABB": "73/3",
+        "Phi_B": "0"
+      }
+    },
+    {
+      "type": "coordinate_span",
+      "A": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "B": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "on_cubic": false,
+      "conditions": {
+        "Phi_A": "1",
+        "B_AAB": "0",
+        "B_ABB": "13/9",
+        "Phi_B": "38336/9"
+      }
+    },
+    {
+      "type": "coordinate_span",
+      "A": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "B": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "on_cubic": false,
+      "conditions": {
+        "Phi_A": "1",
+        "B_AAB": "1/3",
+        "B_ABB": "3",
+        "Phi_B": "-457/162"
+      }
+    },
+    {
+      "type": "coordinate_span",
+      "A": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "B": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "on_cubic": false,
+      "conditions": {
+        "Phi_A": "1",
+        "B_AAB": "0",
+        "B_ABB": "-344945/324",
+        "Phi_B": "-3644401/54"
+      }
+    },
+    {
+      "type": "coordinate_span",
+      "A": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "B": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "on_cubic": false,
+      "conditions": {
+        "Phi_A": "0",
+        "B_AAB": "7/3",
+        "B_ABB": "14443/45",
+        "Phi_B": "38336/9"
+      }
+    },
+    {
+      "type": "coordinate_span",
+      "A": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "B": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "on_cubic": false,
+      "conditions": {
+        "Phi_A": "0",
+        "B_AAB": "-10337/90",
+        "B_ABB": "9",
+        "Phi_B": "-457/162"
+      }
+    },
+    {
+      "type": "coordinate_span",
+      "A": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "B": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "on_cubic": false,
+      "conditions": {
+        "Phi_A": "0",
+        "B_AAB": "9535/108",
+        "B_ABB": "-912347/162",
+        "Phi_B": "-3644401/54"
+      }
+    },
+    {
+      "type": "coordinate_span",
+      "A": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "B": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "on_cubic": false,
+      "conditions": {
+        "Phi_A": "38336/9",
+        "B_AAB": "-347/18",
+        "B_ABB": "-29557/405",
+        "Phi_B": "-457/162"
+      }
+    },
+    {
+      "type": "coordinate_span",
+      "A": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "B": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "on_cubic": false,
+      "conditions": {
+        "Phi_A": "38336/9",
+        "B_AAB": "-26189/108",
+        "B_ABB": "-201661/180",
+        "Phi_B": "-3644401/54"
+      }
+    },
+    {
+      "type": "coordinate_span",
+      "A": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "B": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "on_cubic": false,
+      "conditions": {
+        "Phi_A": "-457/162",
+        "B_AAB": "-4487/60",
+        "B_ABB": "-214771/810",
+        "Phi_B": "-3644401/54"
+      }
+    }
+  ],
+  "sparse_integer_search": {
+    "coord_range": [
+      -2,
+      2
+    ],
+    "pairs_checked": 4876080,
+    "lines_found_on_cubic": [],
+    "K_proj_transfer": false,
+    "note": "Empty sparse search is nonverdict for full K_proj Fano scheme"
+  },
+  "modular_discovery": {
+    "67": {
+      "n_found": 0,
+      "samples": [],
+      "scope": "discovery-only; no char-0 transfer claimed"
+    },
+    "89": {
+      "n_found": 0,
+      "samples": [],
+      "scope": "discovery-only; no char-0 transfer claimed"
+    },
+    "23": {
+      "n_found": 0,
+      "samples": [],
+      "scope": "discovery-only; no char-0 transfer claimed"
+    }
+  },
+  "smallest_open_gate": "K_proj-point of the 4-equation Fano scheme of lines in any Grassmann chart (full secondary basis coefficients)"
+}

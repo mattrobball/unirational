@@ -1,0 +1,29 @@
+{
+  "format": "m3b-g1-section-gate-seal-v1",
+  "exit": "M3B-G1-MODULAR-NONEMPTY-PASS",
+  "headline": "OPEN",
+  "section_question": "UNDECIDED",
+  "parent_exit": "M3-INTEGRAL-DEGREE4-MULTISECTION",
+  "parent_packet": "goals_after_bd610a/M3_SARKISOV_SECTION/",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "primes": [
+    23,
+    67
+  ],
+  "files": {
+    "INPUT_MANIFEST.json": "0b4506a27adaa115c8935bd1653e73971fc18647757d3f6ae3c3df634f5f008a",
+    "G1_THEOREM.md": "d339901b22d1a2d5f57999d5ee598f6f45c8eb35f3325052eeb34fb3929df692",
+    "g1_equations_p23.json": "735858e5715997f461b014c4ee6f35cefef919d09bc20609e905e193da56676a",
+    "g1_equations_p67.json": "069ca01c178ed8750821741aee96f0d9d856af73cd8a5806553fb6fc455a6e59",
+    "produce_g1.py": "a5f54aab5949a562202eb53ed7ce29979be5bdb1001bce1a79a373ea34e305c0",
+    "verify.py": "5e6f57d86094098933c1f83b0fe5fdec4bae6f770a752861ab2959328be3d73e",
+    "REPLAY.md": "a0c8d61b29d0484e1da33a33667ad3b2914a25f0b030a35becf459cf94f3559e",
+    "STATUS.md": "aee21b1b1cb090a112fc77d59a4c504c5c8b6c057e405becaa05efa0ad27b390",
+    "produce_report.json": "a2dc70bde80f8e84af886f87da423cbfd04cee4922ed08251ff29fd226580c23"
+  },
+  "nonclaims": [
+    "no K_Schur section",
+    "no BRIDGE_SARKISOV_POS",
+    "no Problem-E headline"
+  ]
+}

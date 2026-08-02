@@ -1,0 +1,4696 @@
+{
+  "schema": "g4a-low-arity-ops-v2",
+  "arity_1": [
+    {
+      "name": "P_trivial",
+      "output": "1-dim trivial G",
+      "exact": true
+    },
+    {
+      "name": "P_10",
+      "output": "10-dim irrep of G",
+      "exact": true
+    },
+    {
+      "name": "P5_A5_class_1",
+      "output": "5-dim A5 isotypic on class1 cosets",
+      "exact": true
+    },
+    {
+      "name": "P5_A5_class_2",
+      "output": "5-dim A5 isotypic on class2 cosets",
+      "exact": true
+    }
+  ],
+  "arity_2": [
+    {
+      "name": "M2_full",
+      "formula": "sum_{i,j} e_i\u2297e_j",
+      "exact_matrix": true
+    },
+    {
+      "name": "M2_then_P10",
+      "formula": "P10 M2 P10",
+      "exact_matrix": true
+    },
+    {
+      "name": "M2_then_P5",
+      "formula": "P5 M2 P5",
+      "exact_matrix": true
+    },
+    {
+      "name": "M2_P1_block",
+      "formula": "P1 M2 P1",
+      "exact_matrix": true
+    },
+    {
+      "name": "M2_trace_contract",
+      "formula": "tr(P10 M2 P10)",
+      "exact_scalar": true
+    }
+  ],
+  "arity_3": [
+    {
+      "name": "M3_diagonal",
+      "formula": "sum_i e_i\u22973",
+      "exact": true
+    },
+    {
+      "name": "M3_P10_trace",
+      "formula": "sum_i (P10_ii)^3",
+      "exact": true
+    },
+    {
+      "name": "polar_Phi_template",
+      "formula": "polarize F/Phi on P10/P5 W-vectors"
+    },
+    {
+      "name": "mixed_P1_P10_P5",
+      "formula": "all mixed projectors on 3 factors",
+      "count": 27
+    }
+  ],
+  "total_named_ops": 13,
+  "by_class": [
+    {
+      "arity_1": {
+        "P1_on_all_ones": {
+          "on_all_ones_cycle": [
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            }
+          ],
+          "trace_weight": {
+            "num": 11,
+            "den": 1
+          }
+        },
+        "P10_on_all_ones": {
+          "on_all_ones_cycle": [
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            }
+          ],
+          "trace_weight": {
+            "num": 0,
+            "den": 1
+          }
+        },
+        "P5_A5_on_all_ones": {
+          "on_all_ones_cycle": [
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            }
+          ],
+          "trace_weight": {
+            "num": 0,
+            "den": 1
+          }
+        },
+        "P4_A5_on_all_ones": {
+          "on_all_ones_cycle": [
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            }
+          ],
+          "trace_weight": {
+            "num": 0,
+            "den": 1
+          }
+        }
+      },
+      "arity_2": {
+        "M2_all_ones": {
+          "description": "sum_{i,j} e_i\u2297e_j",
+          "matrix_11x11": [
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ]
+          ]
+        },
+        "P10_M2_P10": {
+          "description": "(P10\u2297P10) M2",
+          "matrix_11x11": [
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ]
+          ],
+          "frobenius_norm_sq": {
+            "num": 0,
+            "den": 1
+          }
+        },
+        "P5_M2_P5": {
+          "description": "(P5\u2297P5) M2 on A5 5-isotypic",
+          "matrix_11x11": [
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ]
+          ],
+          "frobenius_norm_sq": {
+            "num": 0,
+            "den": 1
+          }
+        },
+        "P1_M2_P1": {
+          "description": "(P1\u2297P1) M2",
+          "matrix_11x11": [
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ]
+          ]
+        },
+        "trace_contract_P10": {
+          "description": "sum_i (P10 M2 P10)_{ii}",
+          "value": {
+            "num": 0,
+            "den": 1
+          }
+        }
+      },
+      "arity_3": {
+        "M3_diagonal_all_ones": {
+          "description": "sum_i e_i\u2297e_i\u2297e_i",
+          "on_P10_then_trace": {
+            "num": 1000,
+            "den": 121
+          }
+        },
+        "polar_template": {
+          "description": "Cubic polarization of F_Klein / Phi on P10- and P5-valued formal W-vectors from the 11-cycle (secant landing = G4.2+)",
+          "inputs": [
+            "P10_cycle_W",
+            "P5_cycle_W",
+            "F_Klein_trilinear"
+          ]
+        },
+        "mixed_P1_P10_P5": {
+          "description": "all ordered triples of {P1,P10,P5} on 3 factors",
+          "count_named": 27
+        }
+      },
+      "W_valued_cycle": {
+        "description": "Eleven G3-frame points stored in induced_points.json; projectors act on the coset index of the formal sum sum_i point_i \u2297 e_i in W \u2297 Q^{11}.",
+        "n_points": 11,
+        "each_on_V_F": true
+      },
+      "class": "A5_class_1"
+    },
+    {
+      "arity_1": {
+        "P1_on_all_ones": {
+          "on_all_ones_cycle": [
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            },
+            {
+              "num": 1,
+              "den": 1
+            }
+          ],
+          "trace_weight": {
+            "num": 11,
+            "den": 1
+          }
+        },
+        "P10_on_all_ones": {
+          "on_all_ones_cycle": [
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            }
+          ],
+          "trace_weight": {
+            "num": 0,
+            "den": 1
+          }
+        },
+        "P5_A5_on_all_ones": {
+          "on_all_ones_cycle": [
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            }
+          ],
+          "trace_weight": {
+            "num": 0,
+            "den": 1
+          }
+        },
+        "P4_A5_on_all_ones": {
+          "on_all_ones_cycle": [
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            },
+            {
+              "num": 0,
+              "den": 1
+            }
+          ],
+          "trace_weight": {
+            "num": 0,
+            "den": 1
+          }
+        }
+      },
+      "arity_2": {
+        "M2_all_ones": {
+          "description": "sum_{i,j} e_i\u2297e_j",
+          "matrix_11x11": [
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ]
+          ]
+        },
+        "P10_M2_P10": {
+          "description": "(P10\u2297P10) M2",
+          "matrix_11x11": [
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ]
+          ],
+          "frobenius_norm_sq": {
+            "num": 0,
+            "den": 1
+          }
+        },
+        "P5_M2_P5": {
+          "description": "(P5\u2297P5) M2 on A5 5-isotypic",
+          "matrix_11x11": [
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              },
+              {
+                "num": 0,
+                "den": 1
+              }
+            ]
+          ],
+          "frobenius_norm_sq": {
+            "num": 0,
+            "den": 1
+          }
+        },
+        "P1_M2_P1": {
+          "description": "(P1\u2297P1) M2",
+          "matrix_11x11": [
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ],
+            [
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              },
+              {
+                "num": 1,
+                "den": 1
+              }
+            ]
+          ]
+        },
+        "trace_contract_P10": {
+          "description": "sum_i (P10 M2 P10)_{ii}",
+          "value": {
+            "num": 0,
+            "den": 1
+          }
+        }
+      },
+      "arity_3": {
+        "M3_diagonal_all_ones": {
+          "description": "sum_i e_i\u2297e_i\u2297e_i",
+          "on_P10_then_trace": {
+            "num": 1000,
+            "den": 121
+          }
+        },
+        "polar_template": {
+          "description": "Cubic polarization of F_Klein / Phi on P10- and P5-valued formal W-vectors from the 11-cycle (secant landing = G4.2+)",
+          "inputs": [
+            "P10_cycle_W",
+            "P5_cycle_W",
+            "F_Klein_trilinear"
+          ]
+        },
+        "mixed_P1_P10_P5": {
+          "description": "all ordered triples of {P1,P10,P5} on 3 factors",
+          "count_named": 27
+        }
+      },
+      "W_valued_cycle": {
+        "description": "Eleven G3-frame points stored in induced_points.json; projectors act on the coset index of the formal sum sum_i point_i \u2297 e_i in W \u2297 Q^{11}.",
+        "n_points": 11,
+        "each_on_V_F": true
+      },
+      "class": "A5_class_2"
+    }
+  ],
+  "applied_to_formal_cycle": {
+    "cycle": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "P1_cycle": "all-ones / 11",
+    "P10_cycle": "0",
+    "M2_all_ones_is_pure_trivial": true,
+    "note": "Exact matrices in by_class[*].arity_2"
+  },
+  "note": "Complete low-arity catalogue with exact Q-matrices for coset projectors applied to the all-ones cycle and its moments; W-points in induced_points.json. Secants = G4.3."
+}

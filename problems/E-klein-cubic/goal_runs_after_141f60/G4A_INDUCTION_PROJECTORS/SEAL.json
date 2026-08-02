@@ -1,0 +1,32 @@
+{
+  "format": "g4a-induction-projectors-seal-v2",
+  "exit": "G4-INDUCED-DEGREE11-POINT-PASS",
+  "also_exits": [
+    "G4-COSET-PROJECTOR-REDUCTION-PASS"
+  ],
+  "headline": "OPEN",
+  "slice": "G4.0+G4.1",
+  "G_module": "1+10",
+  "five_dimensional_projectors": "A5-restriction per class (x2)",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "files": {
+    "INPUT_MANIFEST.json": "9e3f53560c7bb33f87f7e7a2851be38888247d754de477f23fc4c08bcbdd892a",
+    "coset_actions.json": "2fb42520437448c679b8bbfe1608c2d48fe0d922e463df8f7f8abd045f1b4244",
+    "induced_points.json": "44b4274f60d1aa2319529d0ddb1b83f922966c9ec641f40185bf25d7b36c6a5d",
+    "projectors.json": "dd6f450197c889344c3c58c2c75879bc97ef60d1c887849b069360bf359199b9",
+    "operations.json": "808a08dcf72324e2f83e6dbf846df0088157741d27cd71d939877b0e68ce1c77",
+    "COSET_ACTIONS.md": "7e9baed55982bc5236e2e909b74364d8d131b39f6f1d1ebf1ca3f2c1792389af",
+    "PERMUTATION_PROJECTORS.md": "64334df7fd86765ca147f5a300852e1c69e708477e80cd75b73312a822d4d74d",
+    "INDUCED_POINTS.md": "272d845f14745452af4d6ec356b5eb1630fcde3ee23258a32fb608d63bdedef8",
+    "LOW_ARITY_OPERATIONS.md": "760143c1a9430aa46b84bbcf942b497c3e2643faaf2ced46c20c5126e8d02d46",
+    "REPLAY.md": "4499855f9596e5886143521254a0d425407ce6629a7fd5367206e69f6e4365ab",
+    "STATUS.md": "57fc84d0a99457c5f3c482014b1fcf66206447f49738ae8c430b375ec057dc72",
+    "verify_all.py": "2a8ef8fe4085a85652727ce60e1e0570431fa85b756b08922e0d580c1832d7aa",
+    "produce_g4a.py": "17f982deb696b1f611906deb7a095f72fa06b59e59c7d27f88f90b4064bf358c"
+  },
+  "nonclaims": [
+    "no G4-POINT-HEADLINE-POSITIVE",
+    "no secant geometry (G4.3)",
+    "Klein/companion 5s of G not summands of Ind"
+  ]
+}

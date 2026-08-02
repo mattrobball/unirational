@@ -1,0 +1,1518 @@
+{
+  "field": "Q",
+  "decomposition": {
+    "Ind_H^G_1": "1 \u2295 10",
+    "Ind_K^G_1": "1 \u2295 10",
+    "10_absolutely_irreducible": true,
+    "naive_1_5_5_refuted": true
+  },
+  "P_trivial": [
+    [
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      },
+      {
+        "num": 1,
+        "den": 11
+      }
+    ]
+  ],
+  "P_10": [
+    [
+      {
+        "num": 10,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": 10,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": 10,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": 10,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": 10,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": 10,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": 10,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": 10,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": 10,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": 10,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      }
+    ],
+    [
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": -1,
+        "den": 11
+      },
+      {
+        "num": 10,
+        "den": 11
+      }
+    ]
+  ],
+  "traces": {
+    "trivial": 1,
+    "ten": 10
+  },
+  "idempotent_checks": {
+    "P1^2=P1": true,
+    "P10^2=P10": true,
+    "P1 P10=0": true,
+    "P1+P10=I": true
+  },
+  "incidence_matrix_N": [
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ]
+  ],
+  "N_as_intertwiner": {
+    "domain": "Q^{11}_K (functions on K-class / blocks)",
+    "codomain": "Q^{11}_H (functions on H-class / points)",
+    "NNt": "3I+2J",
+    "NtN": "3I+2J",
+    "on_trivial": "eigenvalue 5",
+    "on_augmentation_inverse": "(1/3) N^t",
+    "aug_inverse_verified": true,
+    "P10_N_Nt_P10_equals_3_P10": true
+  },
+  "denominator_gate": {
+    "denominator": 3,
+    "forbidden_characteristics": [
+      3
+    ],
+    "note": "On the augmentation modules, N^{-1} = (1/3) N^t exactly. This is valid over any field of characteristic not 3 (and not dividing the group order issues separately). Over Q the inverse is exact."
+  },
+  "klein_companion": {
+    "in_permutation_module": false,
+    "decomposition_of_Ind": "1 \u2295 10",
+    "expected_naive": "1 \u2295 W \u2295 W' (W,W' the two 5-dim irreps)",
+    "correction": "Naive 1+5+5 is false for Ind_H^G 1. Character theory gives ||chi_perm||^2 = 2 and ||chi_aug||^2 = 1, so Ind \u2245 1 \u2295 V_10 with V_10 absolutely irreducible. The Klein and companion 5-dimensional irreps of PSL(2,11) have character field Q(\u221a(-11)) and are Galois conjugates of each other; neither is a summand of either degree-11 permutation module.",
+    "galois_action_on_5s": "Gal(Q(\u221a(-11))/Q) swaps the two 5-dimensional irreducible characters.",
+    "restriction_to_A5": "Res_H(1 \u2295 10) \u2245 1 \u2295 5 \u2295 5 as A5-modules (A5-internal 5-dim irrep with multiplicity structure 5+5); this is not the Klein/companion pair of G.",
+    "N_action_on_constituents": {
+      "trivial_to_trivial": {
+        "eigenvalue": 5,
+        "map": "N : 1_K \u2192 1_H multiplies by r=5"
+      },
+      "ten_to_ten": {
+        "relation": "N^t N = 3 I on aug_K; N N^t = 3 I on aug_H",
+        "inverse": "(1/3) N^t : aug_H \u2192 aug_K is the inverse of N|aug",
+        "field": "Q",
+        "no_sqrt3_needed": true
+      }
+    }
+  },
+  "matrices_rational": {
+    "N": [
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "Nt": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "P_trivial_entries": "all 1/11",
+    "P_10_diag": "10/11",
+    "P_10_off": "-1/11",
+    "aug_inverse": "(1/3) N^t restricted to aug"
+  },
+  "schema": "g7a-projectors-intertwiners-v1",
+  "markers": {
+    "G7-CROSS-CLASS-PROJECTOR-PASS": true,
+    "module_shape_correction": "1+10 not 1+5+5"
+  }
+}

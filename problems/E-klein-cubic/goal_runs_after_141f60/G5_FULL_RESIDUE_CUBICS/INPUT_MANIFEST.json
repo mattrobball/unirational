@@ -1,0 +1,92 @@
+{
+  "goal": "G5_FULL_RESIDUE_CUBICS",
+  "stages": [
+    "G5.0",
+    "G5.1",
+    "G5.2"
+  ],
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "pinned_goal_baseline": "141f6042f628f984771fc79d8d16beb12cedcb94",
+  "inputs": [
+    {
+      "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/STATUS.md",
+      "exists": true,
+      "sha256": "f363e8fde807c6abfe38461531cdbec0cfb3f131996cdf975a25f7ab88961f8b"
+    },
+    {
+      "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/SEAL.json",
+      "exists": true,
+      "sha256": "14bf61091b9babe46f48634283a80310477e22edca583c6819e423cee5702918"
+    },
+    {
+      "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/RESIDUE_NORMAL_FORM_THEOREM.md",
+      "exists": true,
+      "sha256": "37aebf4f3838944691d4b675e3b32e71a1d805422790dfda1de3c59ca21e7aba"
+    },
+    {
+      "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/F5_DEGREE16_SMALL_SUPPORT.md",
+      "exists": true,
+      "sha256": "b3ac03b89f1cdc3f83c5888c45b6a5b9c16afe8d6ad7bad42bcff6e90d00e45d"
+    },
+    {
+      "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/f5_degree16_support_payload.json",
+      "exists": true,
+      "sha256": "113c874f0736ea50fae8c99a09c4a7e7f30bf51c2bd74b62b3277b530a04cf5b"
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/STATUS.md",
+      "exists": true,
+      "sha256": "fe8a88bac91187539498a82a5cbb3589a3d76c0cef5358696341aba132023532"
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/SEAL.json",
+      "exists": true,
+      "sha256": "568525463349639a6b3b6eecc9596771e36ba1f4464c123cb1292bd1dd58ba8e"
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/UNIVERSAL_OBJECT.md",
+      "exists": true,
+      "sha256": "ec17dbf330abdcfd63b7922ed3f3f0bd66d5d9590cdd593fc51d4ff35f64b114"
+    },
+    {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json",
+      "exists": true,
+      "sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53"
+    },
+    {
+      "path": "goals_2026-08-01/V_VALUATION_TROPICAL_CODEX_ROOT_20260801/STATUS.md",
+      "exists": true,
+      "sha256": "900cb0279b0fb6db889d81f779b903a9d019c51feab9d89821ba92e8e9bfe582"
+    },
+    {
+      "path": "goals_2026-08-01/V_VALUATION_TROPICAL_CODEX_ROOT_20260801/SEAL.json",
+      "exists": true,
+      "sha256": "18d406c42db7ca2fa90150aa0e76e1f2e1c5468422fd32ce022b1ba8021977b0"
+    },
+    {
+      "path": "goals_2026-08-01/V_VALUATION_TROPICAL_CODEX_ROOT_20260801/VALUATION_CENSUS.md",
+      "exists": true,
+      "sha256": "03f4b30a724dbcb339640004b8b35d4b2852c9aaf93a0a408145e6639d2bd2a7"
+    },
+    {
+      "path": "goals_2026-08-01/V_VALUATION_TROPICAL_CODEX_ROOT_20260801/MODEL.md",
+      "exists": true,
+      "sha256": "848e267a465cb2fe3bd9b815072c9f6d234a5e019edac4a71bda7faa15483b43"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md",
+      "exists": true,
+      "sha256": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/SEAL.json",
+      "exists": true,
+      "sha256": "b289c6cff44fc669c1565b1ef508756156b2453b0fe99b28ab020a6a5e40fe00"
+    },
+    {
+      "path": "tmp/kproj_arithmetic/normalized_kproj_table.json",
+      "exists": true,
+      "sha256": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f"
+    }
+  ]
+}

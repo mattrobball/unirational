@@ -1,0 +1,312 @@
+{
+  "format": "r0-canonical-state-v1",
+  "headline": "OPEN",
+  "r0_exit": "R0-CANONICAL-REFRESH-PASS",
+  "pinned_state": "141f6042f628f984771fc79d8d16beb12cedcb94",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "dispatch_authority": "goals_after_141f60/README.md",
+  "dispatch_order": [
+    {
+      "priority": 0,
+      "goal": "R0",
+      "state": "this packet"
+    },
+    {
+      "priority": 1,
+      "goal": "G3",
+      "state": "OPEN arithmetic on V(Phi)"
+    },
+    {
+      "priority": 2,
+      "goal": "C6",
+      "state": "NOT-STARTED"
+    },
+    {
+      "priority": 3,
+      "goal": "G4",
+      "state": "NOT-STARTED"
+    },
+    {
+      "priority": 4,
+      "goal": "H6",
+      "state": "NOT-STARTED"
+    },
+    {
+      "priority": 5,
+      "goal": "G5",
+      "state": "NOT-STARTED"
+    },
+    {
+      "priority": 6,
+      "goal": "Q3",
+      "state": "NOT-STARTED"
+    }
+  ],
+  "available_but_demoted": [
+    "P25",
+    "COV_m1",
+    "T3"
+  ],
+  "terminal_not_missions": [
+    "A0",
+    "B",
+    "G2_structural",
+    "V3_mechanics (scoped pass)",
+    "H4_model",
+    "M3 multisection structural"
+  ],
+  "fronts": [
+    {
+      "front": "A0",
+      "canonical_packet": "goal_runs_after_35fa/A0_CANONICAL_AUDIT/",
+      "exact_exit": "A0-CANONICAL-AUDIT-PASS",
+      "scoped_exit": null,
+      "headline_relevance": "none (process ledger)",
+      "remaining_binary": "none",
+      "replay_command": "python3 -u goal_runs_after_35fa/A0_CANONICAL_AUDIT/verify_p25_bulk_projection.py  # full ~1592s; R0 used result JSON subcheck",
+      "superseded_packets": [],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Bulk projection 4140/315 certified; full dense RREF killed as nonverdict."
+    },
+    {
+      "front": "B",
+      "canonical_packet": "goal_runs_after_35fa/B_FIXED_FRAME_EXHAUSTIVENESS_20260802/",
+      "exact_exit": "B-BRIDGE-REFUTED",
+      "scoped_exit": null,
+      "headline_relevance": "none (terminal negative for exhaustiveness bridge)",
+      "remaining_binary": "none \u2014 direct Fano arithmetic is C/C5/C6",
+      "replay_command": "python3 -u goal_runs_after_35fa/B_FIXED_FRAME_EXHAUSTIVENESS_20260802/verify.py  # full verify fails pin string drift; R0 subcheck of bridge_refutation.json OK",
+      "superseded_packets": [
+        "goal_runs_after_35fa/B_FIXED_FRAME_BRIDGE/"
+      ],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Full verify fails: C5 STATUS no longer contains \"dimension three and degree fourteen\". Payload+seal subcheck OK."
+    },
+    {
+      "front": "G2_structural",
+      "canonical_packet": "goal_runs_after_35fa/G_UNIVERSAL/",
+      "exact_exit": "G2-FINITE-GENERATION-PASS",
+      "scoped_exit": null,
+      "headline_relevance": "structural only; enables G3 arithmetic",
+      "remaining_binary": "none as G2 mission \u2014 residual arithmetic is G3/G",
+      "replay_command": "python3 -u goal_runs_after_35fa/G_UNIVERSAL/verify.py",
+      "superseded_packets": [
+        "goals_2026-08-01/G_ALL_DEGREE/ (as open degree-ladder mission)"
+      ],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Universal object + all-degree theorem sealed. Not an open mission."
+    },
+    {
+      "front": "G3_arithmetic",
+      "canonical_packet": "goal_runs_after_35fa/G_UNIVERSAL/DECISION.md",
+      "exact_exit": "G-ARITHMETIC-OPEN",
+      "scoped_exit": null,
+      "headline_relevance": "primary positive/negative headline target",
+      "remaining_binary": "V(Phi)(K_proj) nonempty vs empty",
+      "replay_command": "python3 -u goal_runs_after_35fa/G_UNIVERSAL/verify.py  # structural; arithmetic binary open",
+      "superseded_packets": [],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Dispatched as goals_after_141f60/GOAL_G3_UNIVERSAL_CUBIC_ARITHMETIC.md; G3A/G3P refine under goals_after_0aecc89/"
+    },
+    {
+      "front": "C5_corrected",
+      "canonical_packet": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/",
+      "exact_exit": "C5-UNDECIDED",
+      "scoped_exit": null,
+      "headline_relevance": "positive input to C6 / BR-FANO-POS",
+      "remaining_binary": "K_proj common line for five alternating forms / Fano point",
+      "replay_command": "python3 -u goals_after_bd610a/C5_PROJECTOR_INCIDENCE/verify_all.py  # if present; see packet REPLAY",
+      "superseded_packets": [
+        "idempotent encoding with e*S_0*e=0 (inconsistent; retired)"
+      ],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Canonical model: corrected square-zero / Pluecker alternating-form incidence. STATUS first line C5-UNDECIDED. SEAL may name geometric partial C5-EXECUTABLE-FULL-INCIDENCE \u2014 not a K_proj-point."
+    },
+    {
+      "front": "C6",
+      "canonical_packet": "goals_after_141f60/GOAL_C6_PALATINI_BIG_CELL.md",
+      "exact_exit": "NOT-STARTED",
+      "scoped_exit": null,
+      "headline_relevance": "positive headline candidate via determinantal big cell",
+      "remaining_binary": "K_proj point of corrected Fano section",
+      "replay_command": "n/a (goal file only; no run dir yet)",
+      "superseded_packets": [],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Supersedes C5 as preferred attack route; consumes C5 corrected artifacts."
+    },
+    {
+      "front": "H4_model",
+      "canonical_packet": "goal_runs_after_35fa/H_11_5_TWIST/",
+      "exact_exit": "H-11_5-NORM-MODEL-PASS",
+      "scoped_exit": null,
+      "headline_relevance": "model only",
+      "remaining_binary": "none \u2014 decision is H5/H6",
+      "replay_command": "python3 -u goal_runs_after_35fa/H_11_5_TWIST/verify.py",
+      "superseded_packets": [],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Exact 11:5 norm model sealed."
+    },
+    {
+      "front": "H5",
+      "canonical_packet": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/",
+      "exact_exit": "H5-UNDECIDED",
+      "scoped_exit": null,
+      "headline_relevance": "negative/subgroup site; inputs H6",
+      "remaining_binary": "Tr(r2^{-1} a^2 sigma(a))=0 over K nonempty vs empty",
+      "replay_command": "python3 -u goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/verify.py",
+      "superseded_packets": [],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Sealed run exists (H5-UNDECIDED). Wave2/fibration probes empty of K-points."
+    },
+    {
+      "front": "H6",
+      "canonical_packet": "goals_after_141f60/GOAL_H6_PROJECTIVE_11_ISOGENY.md",
+      "exact_exit": "NOT-STARTED",
+      "scoped_exit": null,
+      "headline_relevance": "negative or retire last proper-decomp site",
+      "remaining_binary": "genuine 11:5 trace cubic via degree-11 torus isogeny",
+      "replay_command": "n/a (goal file only)",
+      "superseded_packets": [],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Preferred successor method for H5 binary."
+    },
+    {
+      "front": "V3_mechanics",
+      "canonical_packet": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/",
+      "exact_exit": "V-UNDECIDED",
+      "scoped_exit": "V3-RESIDUE-NORMAL-FORM-PASS",
+      "headline_relevance": "mechanics closed; residual residue binaries open",
+      "remaining_binary": "full f5=0, f6=0 residue cubics; 11:5 site",
+      "replay_command": "python3 -u goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/verify.py",
+      "superseded_packets": [
+        "ramified/C1/rank>=3/maximal-A5 valuation missions"
+      ],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Also V-F5-DEGREE16-SUPPORT-LE5-EMPTY. Mechanics not an open mission."
+    },
+    {
+      "front": "G5_residue",
+      "canonical_packet": "goals_after_141f60/GOAL_G5_FULL_RESIDUE_CUBICS.md",
+      "exact_exit": "NOT-STARTED",
+      "scoped_exit": null,
+      "headline_relevance": "negative headline candidate",
+      "remaining_binary": "pointlessness of full f5 or f6 residue twist",
+      "replay_command": "n/a (goal file only)",
+      "superseded_packets": [],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Consumes V3; does not re-open valuation mechanics."
+    },
+    {
+      "front": "Q2_1",
+      "canonical_packet": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE_DESCENT_OBSTRUCTION_20260802/",
+      "exact_exit": "Q-UNDECIDED",
+      "scoped_exit": "Q2.1-DESCENT-OBSTRUCTION-AUDIT-PASS",
+      "headline_relevance": "obstruction package closed; Schur binary open",
+      "remaining_binary": "X_Schur(K_Schur) nonempty vs empty",
+      "replay_command": "python3 -u goal_runs_after_35fa/Q_SCHUR_INDEX_ONE_DESCENT_OBSTRUCTION_20260802/verify.py",
+      "superseded_packets": [
+        "transfer-compatible abelian/commutative/finite/semisimple obstruction searches as open missions"
+      ],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": ""
+    },
+    {
+      "front": "Q3",
+      "canonical_packet": "goals_after_141f60/GOAL_Q3_QUARTIC_RESOLVENT_STABLE_MAP.md",
+      "exact_exit": "NOT-STARTED",
+      "scoped_exit": null,
+      "headline_relevance": "positive via stable cubic from primitive quartic",
+      "remaining_binary": "descend degree-three stable map / residual point",
+      "replay_command": "n/a (goal file only)",
+      "superseded_packets": [],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Preferred residual after Q2.1."
+    },
+    {
+      "front": "G4",
+      "canonical_packet": "goals_after_141f60/GOAL_G4_A5_INDEX11_TRANSFER.md",
+      "exact_exit": "NOT-STARTED",
+      "scoped_exit": null,
+      "headline_relevance": "positive via A5 index-11 transfer",
+      "remaining_binary": "K_proj point from induced degree-11 A5 cycles",
+      "replay_command": "n/a (goal file only)",
+      "superseded_packets": [],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": ""
+    },
+    {
+      "front": "P25",
+      "canonical_packet": "goals_2026-08-01/P25_LANDING_SUPPORT/",
+      "exact_exit": "P25-UNDECIDED",
+      "scoped_exit": null,
+      "headline_relevance": "demoted \u2014 finite positive witness / chart close-out only",
+      "remaining_binary": "char-0 covariant or complete special-fibre emptiness on residual 63 charts",
+      "replay_command": "see LAUNCH_READINESS.md; pair-split PREPARED_NOT_RUN",
+      "superseded_packets": [],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Not an all-degree proxy after G2. Heavy CAS serial with COV."
+    },
+    {
+      "front": "COV_m1",
+      "canonical_packet": "goal_runs_after_35fa/COV_M1_DEG31_35/",
+      "exact_exit": "COV-UNDECIDED",
+      "scoped_exit": null,
+      "headline_relevance": "demoted \u2014 finite chart cover + transfer only",
+      "remaining_binary": "projective saturations / 148 residual charts char-0",
+      "replay_command": "packet-local msolve/chart scripts",
+      "superseded_packets": [
+        "goals_2026-08-01/COV_STRUCTURED_SEARCH/ as full-degree claim"
+      ],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Modular [1] alone is not char-0 emptiness."
+    },
+    {
+      "front": "M3_section",
+      "canonical_packet": "goals_after_bd610a/M3_SARKISOV_SECTION/",
+      "exact_exit": "M3-INTEGRAL-DEGREE4-MULTISECTION",
+      "scoped_exit": null,
+      "headline_relevance": "structural multisection sealed; section open",
+      "remaining_binary": "rational section of del Pezzo fibration vs residual primitive A4/S4",
+      "replay_command": "python3 -u goals_after_bd610a/M3_SARKISOV_SECTION/verify_all.py",
+      "superseded_packets": [],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Conflict markers resolved at 5d7e686; mathematical exit unchanged. Section still UNDECIDED."
+    },
+    {
+      "front": "T3",
+      "canonical_packet": "goals_after_5899d0/T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER/",
+      "exact_exit": "T3-UNDECIDED",
+      "scoped_exit": null,
+      "headline_relevance": "auxiliary fixed-frame only (not headline after B)",
+      "remaining_binary": "(Cl/Pic)[3]_horizontal = 0 vs explicit 3-primary class",
+      "replay_command": "see LOCAL_RUNNER_COMMANDS.md / WORKER_GOALS.md",
+      "superseded_packets": [
+        "goals_after_bd610a/scratch_t3/ as undifferentiated primary task"
+      ],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": "Local-runner portfolio: T3-RUR \u2192 NORM \u2192 DISC/PIC \u2192 INTEGRATE. Also goals_2026-08-02/T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER/."
+    },
+    {
+      "front": "S19_cont",
+      "canonical_packet": "goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E_CONT2/",
+      "exact_exit": "S19-UNDECIDED",
+      "scoped_exit": null,
+      "headline_relevance": "research off primary dispatch",
+      "remaining_binary": "qualifying deg-19 curve / Rao branches",
+      "replay_command": "packet verify if present",
+      "superseded_packets": [
+        "goals_2026-08-01/S19_SCHUR_CURVE/ literal scoped empty"
+      ],
+      "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+      "notes": ""
+    }
+  ],
+  "stale_active_patterns_forbidden": [
+    "B-UNDECIDED as active",
+    "G2 structural as open mission",
+    "V3 mechanics as open mission",
+    "H5 no sealed run",
+    "C5 idempotent e*S_0*e=0 as model",
+    "T3 only as goals_after_bd610a/scratch_t3 without local-runner"
+  ]
+}

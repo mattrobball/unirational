@@ -1,0 +1,70 @@
+{
+  "goal": "G4_A5_INDEX11_TRANSFER",
+  "stages": [
+    "G4.0",
+    "G4.1",
+    "G4.2",
+    "G4.3"
+  ],
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "h_a5_exit": "# Goal H3 status",
+  "g3a_exit": "G3A-ARITHMETIC-DOMINANCE-PASS",
+  "g2_exit": "G2-FINITE-GENERATION-PASS",
+  "inputs": [
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/STATUS.md",
+      "sha256": "2df8d8d157b2f401a44b41aa3bd02dd080ca1747e73f924b0f884fb4ba37e706",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/SEAL.json",
+      "sha256": "14e5ebaf8822bbe72e81cbc15f5a7df322252659e910f4f5206a1c67efad08a7",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_1/point.json",
+      "sha256": "89b9a3405db00c5b87c72016afd3b05d0e397d133752d0e7da91898bd9f72a0f",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_2/point.json",
+      "sha256": "cb8366eee4d6a8a096365b65d0c75372b3529a7a621411d8b6f524820d73bfb4",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/STATUS.md",
+      "sha256": "fe8a88bac91187539498a82a5cbb3589a3d76c0cef5358696341aba132023532",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/SEAL.json",
+      "sha256": "568525463349639a6b3b6eecc9596771e36ba1f4464c123cb1292bd1dd58ba8e",
+      "exists": true
+    },
+    {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json",
+      "sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md",
+      "sha256": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/SEAL.json",
+      "sha256": "b289c6cff44fc669c1565b1ef508756156b2453b0fe99b28ab020a6a5e40fe00",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/phi_exact.json",
+      "sha256": "e647609d220e897dd05074db0f78da09b4b599db8ece8db41210f5f37d4760a6",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_141f60/G4A_INDUCTION_PROJECTORS/STATUS.md",
+      "sha256": "e87457686cd0baa0a9ec20157eea6a7d13481e248a3256611826882077c23102",
+      "exists": true
+    }
+  ]
+}

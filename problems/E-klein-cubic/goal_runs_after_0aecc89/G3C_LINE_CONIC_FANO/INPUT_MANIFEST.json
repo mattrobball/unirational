@@ -1,0 +1,64 @@
+{
+  "goal": "G3C_LINE_CONIC_FANO",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "g3a_exit": "G3A-ARITHMETIC-DOMINANCE-PASS",
+  "g3b_exit": "G3B-UNDECIDED",
+  "lane": "B_residual_full_K_proj_Fano",
+  "inputs": [
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md",
+      "sha256": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/SEAL.json",
+      "sha256": "b289c6cff44fc669c1565b1ef508756156b2453b0fe99b28ab020a6a5e40fe00",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/phi_exact.json",
+      "sha256": "e647609d220e897dd05074db0f78da09b4b599db8ece8db41210f5f37d4760a6",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/src/field_api.py",
+      "sha256": "65e96e6c093161e17ef2fffc86063c47efe029cb1ba663cf2b482107b6fa5c7f",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/src/phi_api.py",
+      "sha256": "c4e321b53881e19a6c648738bb06ced36f9dbaae0a5278edd4a73174eb9ba41e",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3B_LINE_CONIC_SEARCH/STATUS.md",
+      "sha256": "723dae454a1ba5f8962ad69c899001d6abc05246f3d9da12c67ec7a0f2610659",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3B_LINE_CONIC_SEARCH/SEAL.json",
+      "sha256": "89d3f7e3b191705f26d081142c4980a0536859155d0d707fe88c0c4c9955e86d",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3B_LINE_CONIC_SEARCH/formal_line_recipe.json",
+      "sha256": "0eb2720961b37f33516e5ac469bcbe747dd954eba66ddcc28e4ecdb6799658cd",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3B_LINE_CONIC_SEARCH/line_scheme.json",
+      "sha256": "b525da86921f702544d770581d7ee3c18fb3560717f081f207ac0d6f50de995e",
+      "exists": true
+    },
+    {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json",
+      "sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+      "exists": true
+    },
+    {
+      "path": "goals_after_141f60/GOAL_G3_UNIVERSAL_CUBIC_ARITHMETIC.md",
+      "sha256": "528cab7683ef687f259412f2b537c46a9564c97b5ccf57ba18476e66ebb79b25",
+      "exists": true
+    }
+  ]
+}

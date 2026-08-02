@@ -1,0 +1,44 @@
+{
+  "format": "g5-full-residue-cubics-seal-v1",
+  "exit": "G5-F5-CUBIC-MODEL-PASS",
+  "also_exits": [
+    "G5-F6-CUBIC-MODEL-PASS",
+    "G5-RESIDUE-TORSOR-MODEL-PASS"
+  ],
+  "headline": "OPEN",
+  "stages": [
+    "G5.0",
+    "G5.1",
+    "G5.2"
+  ],
+  "point_decision": "UNDECIDED",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "peak_rss_mb_approx": 63.52,
+  "wall_seconds": 0.792,
+  "files": {
+    "INPUT_MANIFEST.json": "bf2ee2e92ef3607667cd82c94e05f284f30f4ae15f35162f75016e5e317ea25c",
+    "VALUATION_MODELS.md": "79f57b0ce1ff5007c832b6dd0b4a8379ba4eb281b1b989343517643dae581a6e",
+    "valuation_models.json": "b57eb2382495099f8c9669a86292b5ab7205cd8ea0a50c701e33102ad7178231",
+    "f5/residue_cubic.json": "1aed65c37fb9bb5f103a2d1b71a45b5335ad5a947eb440b1f88c293c97a2ddf8",
+    "f6/residue_cubic.json": "fdb9152fcd597e3f3667b5486bff828c6b85f59dd30f03e2416b4e2ae9c5d5f9",
+    "SMOOTHNESS.md": "2f728e06cf06a3396d27ccd50f111265ce30ac30bde2268577323974b467fd57",
+    "POINT_SEARCH.md": "cf37a4365962936e81a2b23ce2f5ab549fb3cf23d75e6f0b4afd346c797e7f52",
+    "point_search.json": "b1519e2592c5137ce25e2987e8882b1d9768537577e22de5bbc670011e73b3ac",
+    "produce_residues.py": "00e5246822fcb0c8fe98c43098280b7ff20ef0e4154800c844928e27f9ab96e5",
+    "produce_meta.json": "a32d3a875aadd6f8de641f2d58fe53e183c5cb469cc12ee5041b0a31b7b5f1d4",
+    "verify_models.py": "31bb338db389c709c126e3cf4e4acd24e7c4d47a602ec925f3e72d2ab7761b1b",
+    "verify_decision.py": "08bb1b94455cbe66422556d5467dcae3bb9142a6655f120131dc15a4465d62d3",
+    "REPLAY.md": "c0881cced80d36b96597c11f234bc8dc870469416d8687ea0ca03aa765cdcc58",
+    "STATUS.md": "c8da2e02c63f175d9f0445ffe5953b9b80d17f8d497470ed687955bf7c775ed8",
+    "make_seal.py": "4c45a6ab08f48edc5474d20305043ba58f8ae2c717e003120690fa764ac428df"
+  },
+  "nonclaims": [
+    "no G5-F5/F6-POINTLESS-HEADLINE-NEGATIVE",
+    "no G5-F5/F6-RESIDUE-POINT",
+    "no BRIDGE_RESIDUE_NEG",
+    "no promotion of modular specialization points to kappa-points",
+    "f5 support-le5 emptiness not used as full residue pointlessness",
+    "index one does not supply a residue point",
+    "Problem E remains OPEN"
+  ]
+}

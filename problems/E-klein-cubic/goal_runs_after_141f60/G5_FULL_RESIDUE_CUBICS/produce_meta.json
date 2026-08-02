@@ -1,0 +1,32 @@
+{
+  "schema": "g5-produce-meta-v1",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "generic_cubic_sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+  "wall_seconds": 0.792,
+  "peak_rss_mb_approx": 63.52,
+  "exits": {
+    "primary": "G5-F5-CUBIC-MODEL-PASS",
+    "per_site": {
+      "f5": "G5-F5-CUBIC-MODEL-PASS",
+      "f6": "G5-F6-CUBIC-MODEL-PASS",
+      "torsor": "G5-RESIDUE-TORSOR-MODEL-PASS"
+    },
+    "point_decision": "UNDECIDED"
+  },
+  "f5_stats": {
+    "total_residue_terms": 174,
+    "min_terms_per_coeff": 1,
+    "max_terms_per_coeff": 15,
+    "nonzero_coefficients": 35
+  },
+  "f6_stats": {
+    "total_residue_terms": 190,
+    "min_terms_per_coeff": 0,
+    "max_terms_per_coeff": 15,
+    "nonzero_coefficients": 34
+  },
+  "f5_vanishing": [],
+  "f6_vanishing": [
+    "x*x*C"
+  ]
+}

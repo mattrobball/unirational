@@ -1,0 +1,347 @@
+{
+  "schema": "g3p-quadratic-invariants-v1",
+  "Q_q_rank_generic": 5,
+  "Q_q_smooth": true,
+  "H_q_cap_Q_q_rank_generic": 4,
+  "probes": {
+    "Q_q_ambient": "P^4 (directions in k^5; form B(q,v,v))",
+    "generic_rank_claim": 5,
+    "ranks_seen_under_specialization": [
+      5
+    ],
+    "det_nonzero_count": 12,
+    "specialization_trials": 12,
+    "specializations": [
+      {
+        "tvals": [
+          11,
+          5,
+          13,
+          2
+        ],
+        "svals_head": [
+          1,
+          -13,
+          11,
+          2
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      },
+      {
+        "tvals": [
+          3,
+          14,
+          14,
+          3
+        ],
+        "svals_head": [
+          1,
+          -8,
+          -13,
+          2
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      },
+      {
+        "tvals": [
+          19,
+          2,
+          19,
+          19
+        ],
+        "svals_head": [
+          1,
+          -3,
+          -14,
+          -8
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      },
+      {
+        "tvals": [
+          4,
+          19,
+          10,
+          18
+        ],
+        "svals_head": [
+          1,
+          11,
+          6,
+          -10
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      },
+      {
+        "tvals": [
+          3,
+          19,
+          2,
+          20
+        ],
+        "svals_head": [
+          1,
+          -9,
+          0,
+          6
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      },
+      {
+        "tvals": [
+          12,
+          10,
+          8,
+          6
+        ],
+        "svals_head": [
+          1,
+          7,
+          9,
+          -8
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      },
+      {
+        "tvals": [
+          15,
+          10,
+          20,
+          3
+        ],
+        "svals_head": [
+          1,
+          -12,
+          1,
+          -2
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      },
+      {
+        "tvals": [
+          3,
+          18,
+          19,
+          11
+        ],
+        "svals_head": [
+          1,
+          -5,
+          7,
+          -4
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      },
+      {
+        "tvals": [
+          9,
+          16,
+          3,
+          2
+        ],
+        "svals_head": [
+          1,
+          8,
+          7,
+          -6
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      },
+      {
+        "tvals": [
+          12,
+          1,
+          15,
+          12
+        ],
+        "svals_head": [
+          1,
+          -10,
+          4,
+          -12
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      },
+      {
+        "tvals": [
+          13,
+          13,
+          16,
+          3
+        ],
+        "svals_head": [
+          1,
+          -10,
+          -1,
+          -3
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      },
+      {
+        "tvals": [
+          9,
+          14,
+          12,
+          13
+        ],
+        "svals_head": [
+          1,
+          15,
+          -8,
+          -11
+        ],
+        "rank_Q": 5,
+        "det_Q_zero": false,
+        "restricted_to_H_rank": 4
+      }
+    ],
+    "restricted_H_rank_claim": 4,
+    "singular_locus": "empty on the open where rank(Q_q)=5 (verified under all probes)",
+    "isotropic_mod_p_first_point": {
+      "13": [
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "17": [
+        1,
+        0,
+        0,
+        1,
+        2
+      ],
+      "19": [
+        1,
+        0,
+        0,
+        0,
+        3
+      ],
+      "23": [
+        1,
+        0,
+        0,
+        0,
+        12
+      ],
+      "29": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "31": [
+        1,
+        0,
+        0,
+        3,
+        1
+      ]
+    },
+    "local_solubility_note": "Smooth quadric 3-folds are often locally soluble; mod-p isotropic vectors are not K_proj-points. No Brauer obstruction is claimed (Q2.1).",
+    "clifford_invariant": {
+      "status": "not fully expanded over Frac(K_proj)",
+      "reason": "Clifford algebra of the rank-5 form over the etale P0-algebra K_proj is recorded only as a residual exact computation; specialized det/rank data above control the Witt class probes used in this packet.",
+      "disc_samples_secondary0": [
+        {
+          "tvals": [
+            3,
+            5,
+            7,
+            11
+          ],
+          "secondary_slice": "e0-only",
+          "det_M": "92518050782801799702803/28697814",
+          "rank": 5
+        },
+        {
+          "tvals": [
+            4,
+            5,
+            7,
+            11
+          ],
+          "secondary_slice": "e0-only",
+          "det_M": "7489890615186683647163257327/17218688400",
+          "rank": 5
+        },
+        {
+          "tvals": [
+            5,
+            5,
+            7,
+            11
+          ],
+          "secondary_slice": "e0-only",
+          "det_M": "1662871369592139126749431975/86093442",
+          "rank": 5
+        },
+        {
+          "tvals": [
+            6,
+            5,
+            7,
+            11
+          ],
+          "secondary_slice": "e0-only",
+          "det_M": "1223758272117905269071726388333/2869781400",
+          "rank": 5
+        },
+        {
+          "tvals": [
+            7,
+            5,
+            7,
+            11
+          ],
+          "secondary_slice": "e0-only",
+          "det_M": "12526457157879701475472490374001/2152336050",
+          "rank": 5
+        }
+      ],
+      "use_policy": "Clifford data may be used only as part of an explicit quadratic fibration whose section yields a cubic point (goal G3P.1 / Q2.1)."
+    },
+    "rational_linear_spaces": {
+      "lines_on_Q_q": "not found over K_proj in construction probes",
+      "forced_by_frame": "none beyond the polar hyperplane H_q itself"
+    },
+    "section_search": {
+      "Q_q_section": false,
+      "H_cap_Q_section": false,
+      "odd_degree_multisection_K_proj": false,
+      "note": "G4 degree-11 cubic points are not automatically multisections of Q_q"
+    }
+  },
+  "constructions_summary": {
+    "specialized_A_hits_total": 0,
+    "specialized_B_hits_total": 0,
+    "specialized_C_hits_total": 3,
+    "promotion": "none \u2014 specialization hits are discovery-only; full K_proj certificates required",
+    "K_proj_section_found": false
+  }
+}

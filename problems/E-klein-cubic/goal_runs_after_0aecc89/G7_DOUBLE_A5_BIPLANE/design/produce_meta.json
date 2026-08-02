@@ -1,0 +1,11 @@
+{
+  "schema": "g7a-produce-meta-v1",
+  "wall_seconds": 0.4523348808288574,
+  "peak_rss_raw": 65470464,
+  "peak_rss_mb_approx": 62.4375,
+  "exit_primary": "G7-CROSS-CLASS-PROJECTOR-PASS",
+  "also": [
+    "G7-PALEY-BIPLANE-IDENTIFIED"
+  ],
+  "module_correction": "Ind = 1+10 (not 1+5+5)"
+}

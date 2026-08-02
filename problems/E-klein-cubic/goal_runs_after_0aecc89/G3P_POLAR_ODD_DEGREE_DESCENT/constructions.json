@@ -1,0 +1,142 @@
+{
+  "A_second_polar_directions": [
+    {
+      "specialization_index": 0,
+      "tvals": [
+        3,
+        5,
+        7,
+        11
+      ],
+      "on_H_hits_with_rational_t": 0,
+      "examples": []
+    },
+    {
+      "specialization_index": 1,
+      "tvals": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "on_H_hits_with_rational_t": 0,
+      "examples": []
+    },
+    {
+      "specialization_index": 2,
+      "tvals": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "on_H_hits_with_rational_t": 0,
+      "examples": []
+    }
+  ],
+  "B_first_polar_directions": [
+    {
+      "specialization_index": 0,
+      "on_Q_hits_with_rational_t": 0,
+      "examples": []
+    },
+    {
+      "specialization_index": 1,
+      "on_Q_hits_with_rational_t": 0,
+      "examples": []
+    },
+    {
+      "specialization_index": 2,
+      "on_Q_hits_with_rational_t": 0,
+      "examples": []
+    }
+  ],
+  "C_tangent_incidence": [
+    {
+      "specialization_index": 0,
+      "disc0_with_rational_double_root": 1,
+      "examples": [
+        {
+          "v": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "t": "-1",
+          "disc": 0
+        }
+      ]
+    },
+    {
+      "specialization_index": 1,
+      "disc0_with_rational_double_root": 1,
+      "examples": [
+        {
+          "v": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "t": "-1",
+          "disc": 0
+        }
+      ]
+    },
+    {
+      "specialization_index": 2,
+      "disc0_with_rational_double_root": 1,
+      "examples": [
+        {
+          "v": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "t": "-1",
+          "disc": 0
+        }
+      ]
+    }
+  ],
+  "D_singular_polar": [
+    {
+      "specialization_index": 0,
+      "matrix_rank": 5,
+      "nullspace_dim": 0,
+      "singular_rational_point": false,
+      "note": "rank 5 \u21d2 empty singular locus of the polar quadric"
+    },
+    {
+      "specialization_index": 1,
+      "matrix_rank": 5,
+      "nullspace_dim": 0,
+      "singular_rational_point": false,
+      "note": "rank 5 \u21d2 empty singular locus of the polar quadric"
+    },
+    {
+      "specialization_index": 2,
+      "matrix_rank": 5,
+      "nullspace_dim": 0,
+      "singular_rational_point": false,
+      "note": "rank 5 \u21d2 empty singular locus of the polar quadric"
+    }
+  ],
+  "K_proj_point_found": false,
+  "notes": [
+    "No inverse-projection formula from a K_proj-rational singular point of Q_q (rank 5).",
+    "Tangent incidence I_q is cut by P_v(t)=P_v'(t)=0 in P(directions)\u00d7A^1; projection to P(V/<q>)\u2245P^3 is the discriminant quartic D_q."
+  ],
+  "summary": {
+    "specialized_A_hits_total": 0,
+    "specialized_B_hits_total": 0,
+    "specialized_C_hits_total": 3,
+    "promotion": "none \u2014 specialization hits are discovery-only; full K_proj certificates required",
+    "K_proj_section_found": false
+  }
+}

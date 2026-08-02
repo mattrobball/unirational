@@ -1,0 +1,428 @@
+{
+  "schema": "g5-point-search-v1",
+  "f5": {
+    "constant_points": {
+      "range": [
+        -2,
+        2
+      ],
+      "projective_representatives_tested": 1562,
+      "hits": [],
+      "conclusion": "no constant P^4(Z)-point with Phi divisible by the primary"
+    },
+    "coordinate_lines": [
+      {
+        "line": [
+          "x",
+          "C"
+        ],
+        "forms": 6,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "x",
+          "D"
+        ],
+        "forms": 11,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "x",
+          "E"
+        ],
+        "forms": 11,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "x",
+          "K"
+        ],
+        "forms": 23,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "C",
+          "D"
+        ],
+        "forms": 16,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "C",
+          "E"
+        ],
+        "forms": 14,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "C",
+          "K"
+        ],
+        "forms": 33,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "D",
+          "E"
+        ],
+        "forms": 26,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "D",
+          "K"
+        ],
+        "forms": 37,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "E",
+          "K"
+        ],
+        "forms": 40,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      }
+    ],
+    "modular_specializations": {
+      "prime": 67,
+      "trials": 40,
+      "specializations_with_point": 40,
+      "smooth_points_among_them": 40,
+      "bad_or_zero_forms": 0,
+      "samples": [
+        {
+          "point": [
+            25,
+            28,
+            1,
+            43,
+            40
+          ],
+          "primaries": [
+            49,
+            0,
+            5,
+            33,
+            65
+          ],
+          "secondary_gens": [
+            62,
+            51,
+            38,
+            61,
+            45
+          ],
+          "gradient_nonzero": true
+        },
+        {
+          "point": [
+            0,
+            37,
+            47,
+            3,
+            29
+          ],
+          "primaries": [
+            41,
+            0,
+            18,
+            32,
+            19
+          ],
+          "secondary_gens": [
+            48,
+            37,
+            60,
+            8,
+            10
+          ],
+          "gradient_nonzero": true
+        },
+        {
+          "point": [
+            45,
+            63,
+            2,
+            31,
+            30
+          ],
+          "primaries": [
+            18,
+            0,
+            58,
+            14,
+            61
+          ],
+          "secondary_gens": [
+            44,
+            33,
+            16,
+            3,
+            26
+          ],
+          "gradient_nonzero": true
+        }
+      ],
+      "interpretation": "Finite-field specializations of the residue cubic almost always have smooth points; this is discovery metadata only and is not a generic residue-field point."
+    }
+  },
+  "f6": {
+    "constant_points": {
+      "range": [
+        -2,
+        2
+      ],
+      "projective_representatives_tested": 1562,
+      "hits": [],
+      "conclusion": "no constant P^4(Z)-point with Phi divisible by the primary"
+    },
+    "coordinate_lines": [
+      {
+        "line": [
+          "x",
+          "C"
+        ],
+        "forms": 4,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "x",
+          "D"
+        ],
+        "forms": 10,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "x",
+          "E"
+        ],
+        "forms": 12,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "x",
+          "K"
+        ],
+        "forms": 23,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "C",
+          "D"
+        ],
+        "forms": 17,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "C",
+          "E"
+        ],
+        "forms": 15,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "C",
+          "K"
+        ],
+        "forms": 32,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "D",
+          "E"
+        ],
+        "forms": 28,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "D",
+          "K"
+        ],
+        "forms": 41,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      },
+      {
+        "line": [
+          "E",
+          "K"
+        ],
+        "forms": 45,
+        "gcd": "1",
+        "gcd_total_degree": 0,
+        "identically_on_cubic": false,
+        "common_zero_in_P1": false
+      }
+    ],
+    "modular_specializations": {
+      "prime": 67,
+      "trials": 40,
+      "specializations_with_point": 40,
+      "smooth_points_among_them": 40,
+      "bad_or_zero_forms": 0,
+      "samples": [
+        {
+          "point": [
+            9,
+            42,
+            60,
+            12,
+            45
+          ],
+          "primaries": [
+            49,
+            53,
+            0,
+            33,
+            65
+          ],
+          "secondary_gens": [
+            62,
+            51,
+            38,
+            61,
+            45
+          ],
+          "gradient_nonzero": true
+        },
+        {
+          "point": [
+            57,
+            55,
+            53,
+            3,
+            63
+          ],
+          "primaries": [
+            55,
+            40,
+            0,
+            61,
+            56
+          ],
+          "secondary_gens": [
+            66,
+            33,
+            7,
+            1,
+            11
+          ],
+          "gradient_nonzero": true
+        },
+        {
+          "point": [
+            41,
+            50,
+            13,
+            6,
+            18
+          ],
+          "primaries": [
+            41,
+            32,
+            0,
+            45,
+            9
+          ],
+          "secondary_gens": [
+            15,
+            45,
+            3,
+            44,
+            44
+          ],
+          "gradient_nonzero": true
+        }
+      ],
+      "interpretation": "Finite-field specializations of the residue cubic almost always have smooth points; this is discovery metadata only and is not a generic residue-field point."
+    }
+  },
+  "retired_bounded": {
+    "f5_degree16_support_le5": "V-F5-DEGREE16-SUPPORT-LE5-EMPTY",
+    "scope": "finite homogeneous support only; not full residue pointlessness"
+  },
+  "verdict": {
+    "f5_residue_point": "UNDECIDED",
+    "f6_residue_point": "UNDECIDED",
+    "f5_pointless": "NOT_PROVED",
+    "f6_pointless": "NOT_PROVED"
+  },
+  "residual_gates": [
+    "generic rational point on the smooth index-one residue cubic over kappa5 (trdeg 3)",
+    "generic rational point on the smooth index-one residue cubic over kappa6 (trdeg 3)",
+    "or an authorized Lane-B obstruction (anisotropic fibration / complete descent / terminal unramified pointless residue respecting V3)"
+  ]
+}

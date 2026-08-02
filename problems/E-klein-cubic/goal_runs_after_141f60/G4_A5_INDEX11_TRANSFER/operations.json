@@ -1,0 +1,72 @@
+{
+  "schema": "g4-low-arity-ops-v1",
+  "arity_1": [
+    {
+      "name": "P_trivial",
+      "output": "1-dim trivial",
+      "landing_to_W": false
+    },
+    {
+      "name": "P_10",
+      "output": "10-dim irrep of G",
+      "landing_to_W": false
+    }
+  ],
+  "arity_2": [
+    {
+      "name": "M2_full",
+      "formula": "sum_{i,j} e_i\u2297e_j"
+    },
+    {
+      "name": "M2_then_P10",
+      "formula": "apply P10\u2297P10 to M2"
+    },
+    {
+      "name": "M2_trace_contract",
+      "formula": "contract i=j then project"
+    },
+    {
+      "name": "M2_P1_block",
+      "formula": "P1\u2297P1 block"
+    }
+  ],
+  "arity_3": [
+    {
+      "name": "M3_full",
+      "formula": "sum e_i\u2297e_j\u2297e_k"
+    },
+    {
+      "name": "M3_P10",
+      "formula": "P10^{\u22973} on triple moments"
+    },
+    {
+      "name": "polar_Phi_template",
+      "formula": "polarize Phi on P10-valued formal vectors (uses G3A Phi API)"
+    },
+    {
+      "name": "mixed_P1_P10",
+      "formula": "all mixed projectors on 3 factors"
+    }
+  ],
+  "total_named_ops": 10,
+  "note": "Complete low-arity catalogue for G-module projectors on the 11-cycle. Klein/companion 5-projectors of G are unavailable inside Ind_H^G 1.",
+  "applied_to_formal_cycle": {
+    "cycle": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "P1_cycle": "all-ones (pure trivial line)",
+    "P10_cycle": "0",
+    "M2_all_ones_is_pure_trivial": true,
+    "landing_from_formal_cycle": "No nonzero W-valued K_proj vector arises from applying P10 to the pure-trivial formal cycle; coordinate-free moments of the all-ones indicator stay in trivial isotypics."
+  }
+}

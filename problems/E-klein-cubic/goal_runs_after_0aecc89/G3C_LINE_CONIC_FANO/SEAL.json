@@ -1,0 +1,35 @@
+{
+  "format": "g3c-line-conic-fano-seal-v1",
+  "exit": "G3C-UNDECIDED",
+  "headline": "OPEN",
+  "lane": "B_residual_full_K_proj_Fano",
+  "g3a_exit": "G3A-ARITHMETIC-DOMINANCE-PASS",
+  "g3b_exit": "G3B-UNDECIDED",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "K_proj_line_found": false,
+  "K_proj_conic_found": false,
+  "peak_rss_mb": 85.828125,
+  "elapsed_sec": 16.61983895301819,
+  "files": {
+    "INPUT_MANIFEST.json": "ed55784a385e7f225d3c27f69744d31895fb6ead8559d47bedb29079459bdf83",
+    "line_fano_kproj.json": "e2c9fb9b0a412c8143182f3979833a83dd45642bae590a24cecc052418e14233",
+    "conic_plane.json": "0f1b2d06d93a32ab3cca331cec041b1d49ce51450faeedfc2392b8b68512028b",
+    "LINE_FANO_KPROJ.md": "5ebdfc1aeb54dac525adfa60fcc33c9777330a7fea5172704bf9977ab47cde44",
+    "CONIC_PLANE.md": "12774446c493af03d9d53672e5d8fb6a4d0524a5e5143d85f7fcc88315a90d6f",
+    "produce.py": "0b387014a7cc6abb3a42f4378f246ee971b97baf2b393ebd9a6f413d8fbfcdd1",
+    "verify.py": "d79af3d7dabbce35477021737d299573a40b54174d0e7e05ad9ce5b8b78878cc",
+    "REPLAY.md": "4ff50e393d542701ebcbb18f91b63a31ee30ad96bfc4bc483d493ad73f51772e",
+    "STATUS.md": "410c9d5dbf46d9546b057cf016b983bfc01bf1c47d56cdb78a6a2a9b150ffff6"
+  },
+  "nonclaims": [
+    "no G3-POINT-HEADLINE-POSITIVE",
+    "modular lines discovery-only",
+    "specialized secondary-0 residual CAS is not K_proj emptiness",
+    "scalar free-param emptiness is not full K_proj Fano emptiness"
+  ],
+  "smallest_open_gates": [
+    "K_proj-point of any Grassmann chart with free params valued in full K_proj (not only P0-scalars), after linear B-elimination",
+    "zero-dimensional residual CAS on a chart family with full secondary free-param coordinates (72 P0-vars / 48 eqs)",
+    "K_proj-plane whose cubic restriction factors as line x conic"
+  ]
+}

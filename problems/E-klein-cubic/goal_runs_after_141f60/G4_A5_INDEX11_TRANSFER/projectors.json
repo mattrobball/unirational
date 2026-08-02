@@ -1,0 +1,1054 @@
+{
+  "schema": "g4-projectors-v1",
+  "G_module_decomposition": "1 + 10",
+  "shared_projectors_over_Q": {
+    "P_trivial": [
+      [
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        },
+        {
+          "num": 1,
+          "den": 11
+        }
+      ]
+    ],
+    "P_10": [
+      [
+        {
+          "num": 10,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": 10,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": 10,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": 10,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": 10,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": 10,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": 10,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": 10,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": 10,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": 10,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        }
+      ],
+      [
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": -1,
+          "den": 11
+        },
+        {
+          "num": 10,
+          "den": 11
+        }
+      ]
+    ],
+    "field": "Q",
+    "traces": {
+      "trivial": 1,
+      "ten": 10
+    },
+    "idempotent_checks": {
+      "P1^2=P1": true,
+      "P10^2=P10": true,
+      "P1 P10=0": true,
+      "P1+P10=I": true
+    },
+    "klein_companion_note": "Klein and companion 5-dim irreps of G do not appear in this permutation module; A5-restriction of the 10 is 5\u22955 (A5 5-dim irrep with multiplicity accounting as 5+5)."
+  },
+  "classes": [
+    {
+      "label": "A5_class_1",
+      "uses_shared_G_projectors": true,
+      "A5_restriction": {
+        "H_image_order": 60,
+        "norm_sq_res_perm": 6.0,
+        "conclusion": "Res_H of the permutation module has inner-product norm 6.0; for A5 this equals 6 = <1+5+5,1+5+5>, so Res_H(1+10) \u2245 1 \u2295 5 \u2295 5 (A5 irreps)."
+      }
+    },
+    {
+      "label": "A5_class_2",
+      "uses_shared_G_projectors": true,
+      "A5_restriction": {
+        "H_image_order": 60,
+        "norm_sq_res_perm": 6.0,
+        "conclusion": "Res_H of the permutation module has inner-product norm 6.0; for A5 this equals 6 = <1+5+5,1+5+5>, so Res_H(1+10) \u2245 1 \u2295 5 \u2295 5 (A5 irreps)."
+      }
+    }
+  ]
+}

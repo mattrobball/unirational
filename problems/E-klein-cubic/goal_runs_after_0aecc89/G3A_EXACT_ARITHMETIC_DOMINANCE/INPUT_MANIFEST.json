@@ -1,0 +1,123 @@
+{
+  "goal": "G3A_EXACT_ARITHMETIC_DOMINANCE",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "parent_structural_exit": "G2-FINITE-GENERATION-PASS",
+  "pinned_goal_state": "0aecc89f0598cfd982295107352e6cc6e9fb04e9",
+  "headline": "OPEN",
+  "inputs": [
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/STATUS.md",
+      "exists": true,
+      "sha256": "fe8a88bac91187539498a82a5cbb3589a3d76c0cef5358696341aba132023532",
+      "size": 3136
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/SEAL.json",
+      "exists": true,
+      "sha256": "568525463349639a6b3b6eecc9596771e36ba1f4464c123cb1292bd1dd58ba8e",
+      "size": 1168
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/DECISION.md",
+      "exists": true,
+      "sha256": "b20d4688716e6482a4302fc571361bcf185d0ec79e6e1e80908566fb13e01c44",
+      "size": 2471
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/UNIVERSAL_OBJECT.md",
+      "exists": true,
+      "sha256": "ec17dbf330abdcfd63b7922ed3f3f0bd66d5d9590cdd593fc51d4ff35f64b114",
+      "size": 8021
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/ALL_DEGREE_THEOREM.md",
+      "exists": true,
+      "sha256": "0943fde772d22a19bc909517d36097b5dae951b59707eea67d6fbb76f9d74fab",
+      "size": 4130
+    },
+    {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json",
+      "exists": true,
+      "sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+      "size": 162861
+    },
+    {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/verify_generic_cubic.py",
+      "exists": true,
+      "sha256": "cf4bc9c7ee4fea19b9f8d37d647956ad800b6554730d533a572d02fbbe392748",
+      "size": 2910
+    },
+    {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/verify_all.py",
+      "exists": true,
+      "sha256": "51d244f3273bb06deb533794661b02385cf3aa713a322525cdaa180c3299a8fd",
+      "size": 3136
+    },
+    {
+      "path": "certificates/global_transition/necessity_theorem.json",
+      "exists": true,
+      "sha256": "a5a21eff778447bd6edf250a1ecaf17ee0406edf371c56aa35bd6796cd3b3731",
+      "size": 4126
+    },
+    {
+      "path": "SPEC.md",
+      "exists": true,
+      "sha256": "a607b0a026f732eee1f6cb281ae2e85732d9e2aac866802fd739a810767df01e",
+      "size": 108416
+    },
+    {
+      "path": "REPAIR.md",
+      "exists": true,
+      "sha256": "c7cc9d822885726c5dc6b8168e3a1cf55ab6a5f929b3c8ea16e3f77bd3528e54",
+      "size": 16620
+    },
+    {
+      "path": "tmp/kproj_arithmetic/normalized_kproj_table.json",
+      "exists": true,
+      "sha256": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f",
+      "size": 1607863
+    },
+    {
+      "path": "tmp/kproj_arithmetic/affine_multiplication_table.json",
+      "exists": true,
+      "sha256": "e0b23d69e7620c5390dbf0a63ccb09757610ef75fd34c3ffa6a382487061ce0c",
+      "size": 1742949
+    },
+    {
+      "path": "tmp/kproj_arithmetic/certificate.json",
+      "exists": true,
+      "sha256": "048e0b5a9ae5badbfaf291da6599d0c18ffa94b2e7919b980a25ce962fc03639",
+      "size": 8096
+    },
+    {
+      "path": "tmp/kproj_arithmetic/model.py",
+      "exists": true,
+      "sha256": "e28b0d187e2bfa967c2360b4073b06f1172e3353195d9436b65b2023984cad3a",
+      "size": 3385
+    },
+    {
+      "path": "tmp/kproj_arithmetic/core.py",
+      "exists": true,
+      "sha256": "913b6184df2272e4834f81b38abdda9f468a2852ec571a04a469610054468b01",
+      "size": 5223
+    },
+    {
+      "path": "tmp/kproj_arithmetic/verify.py",
+      "exists": true,
+      "sha256": "b8fa069d05e1c295e27ff637e24c9ffdb5e14264a86f893fd3655297a78df5a5",
+      "size": 6662
+    },
+    {
+      "path": "tmp/generic_twist/phi_coefficients.py",
+      "exists": true,
+      "sha256": "8c217aeaefe300a76e886f0a94803b5812689574299e1a2c72daeec72efd4525",
+      "size": 6748
+    },
+    {
+      "path": "certificates/exact_covariants_check.py",
+      "exists": true,
+      "sha256": "89847a3203bf7d842b00a551a29377bc9d1cdd36dca9cb5d192c54de0abd2a6e",
+      "size": 4621
+    }
+  ]
+}

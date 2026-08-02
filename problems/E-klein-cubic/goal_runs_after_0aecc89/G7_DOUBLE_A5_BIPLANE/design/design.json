@@ -1,0 +1,2838 @@
+{
+  "schema": "g7a-double-a5-design-v1",
+  "group": {
+    "name": "PSL(2,11)",
+    "order": 660,
+    "generators_mobius": {
+      "S": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "T": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "permutation_degree": 12,
+    "note": "G reconstructed as M\u00f6bius transformations on P^1(F_11) (12 points), same installed generators as G4/H packets."
+  },
+  "classes": [
+    {
+      "label": "A5_class_H",
+      "class_index": 1,
+      "H_order": 60,
+      "orbit_size_under_conjugation": 11,
+      "base_H_gens_12perms": {
+        "rho": [
+          0,
+          3,
+          7,
+          6,
+          10,
+          2,
+          8,
+          4,
+          11,
+          9,
+          5,
+          1
+        ],
+        "tau": [
+          2,
+          8,
+          0,
+          4,
+          3,
+          7,
+          10,
+          5,
+          1,
+          11,
+          6,
+          9
+        ]
+      },
+      "base_H_gens_orders": {
+        "rho": 5,
+        "tau": 2,
+        "rho_tau": 3
+      },
+      "coset_action": {
+        "n_cosets": 11,
+        "s_perm": [
+          6,
+          3,
+          10,
+          1,
+          7,
+          5,
+          0,
+          4,
+          8,
+          9,
+          2
+        ],
+        "t_perm": [
+          8,
+          9,
+          1,
+          0,
+          7,
+          3,
+          10,
+          6,
+          4,
+          5,
+          2
+        ],
+        "image_order": 660,
+        "character_stats": {
+          "norm_sq_perm": 2.0,
+          "norm_sq_aug": 1.0,
+          "decomposition_G": "1 + 10 (10 absolutely irreducible over C and over Q)",
+          "not_1_plus_5_plus_5": "The two 5-dimensional irreps of PSL(2,11) (Klein and companion) are NOT direct summands of Ind_H^G 1; ||chi_aug||^2 = 1 forces a single 10-dimensional irrep summand."
+        }
+      },
+      "conjugation_action_on_class": {
+        "s_perm": [
+          2,
+          10,
+          0,
+          4,
+          3,
+          5,
+          9,
+          7,
+          8,
+          6,
+          1
+        ],
+        "t_perm": [
+          8,
+          2,
+          4,
+          6,
+          3,
+          7,
+          5,
+          9,
+          10,
+          0,
+          1
+        ],
+        "image_order": 660
+      },
+      "subgroups": [
+        {
+          "index": 0,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 1,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 2,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 3,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 4,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 5,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 6,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 7,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 8,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 9,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 10,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        }
+      ]
+    },
+    {
+      "label": "A5_class_K",
+      "class_index": 2,
+      "H_order": 60,
+      "orbit_size_under_conjugation": 11,
+      "base_H_gens_12perms": {
+        "rho": [
+          0,
+          3,
+          6,
+          9,
+          1,
+          4,
+          7,
+          10,
+          2,
+          5,
+          8,
+          11
+        ],
+        "tau": [
+          2,
+          5,
+          0,
+          7,
+          11,
+          1,
+          8,
+          3,
+          6,
+          10,
+          9,
+          4
+        ]
+      },
+      "base_H_gens_orders": {
+        "rho": 5,
+        "tau": 2,
+        "rho_tau": 3
+      },
+      "coset_action": {
+        "n_cosets": 11,
+        "s_perm": [
+          0,
+          4,
+          2,
+          6,
+          1,
+          9,
+          3,
+          10,
+          8,
+          5,
+          7
+        ],
+        "t_perm": [
+          8,
+          4,
+          9,
+          0,
+          5,
+          10,
+          1,
+          2,
+          6,
+          3,
+          7
+        ],
+        "image_order": 660,
+        "character_stats": {
+          "norm_sq_perm": 2.0,
+          "norm_sq_aug": 1.0,
+          "decomposition_G": "1 + 10 (10 absolutely irreducible over C and over Q)",
+          "not_1_plus_5_plus_5": "The two 5-dimensional irreps of PSL(2,11) (Klein and companion) are NOT direct summands of Ind_H^G 1; ||chi_aug||^2 = 1 forces a single 10-dimensional irrep summand."
+        }
+      },
+      "conjugation_action_on_class": {
+        "s_perm": [
+          0,
+          6,
+          8,
+          10,
+          4,
+          9,
+          1,
+          7,
+          2,
+          5,
+          3
+        ],
+        "t_perm": [
+          4,
+          9,
+          10,
+          1,
+          2,
+          7,
+          8,
+          6,
+          0,
+          5,
+          3
+        ],
+        "image_order": 660
+      },
+      "subgroups": [
+        {
+          "index": 0,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 1,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 2,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 3,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 4,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 5,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 6,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 7,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 8,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 9,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        },
+        {
+          "index": 10,
+          "min_element_12perm": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "order": 60
+        }
+      ]
+    }
+  ],
+  "cross_intersections": {
+    "count": 121,
+    "order_histogram": {
+      "10": 66,
+      "12": 55
+    },
+    "type_histogram": {
+      "order_10_D5": 66,
+      "order_12_A4": 55
+    },
+    "table": [
+      {
+        "H_index": 0,
+        "K_index": 0,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 0,
+        "K_index": 1,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 0,
+        "K_index": 2,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 0,
+        "K_index": 3,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 0,
+        "K_index": 4,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 0,
+        "K_index": 5,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 0,
+        "K_index": 6,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 0,
+        "K_index": 7,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 0,
+        "K_index": 8,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 0,
+        "K_index": 9,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 0,
+        "K_index": 10,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 1,
+        "K_index": 0,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 1,
+        "K_index": 1,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 1,
+        "K_index": 2,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 1,
+        "K_index": 3,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 1,
+        "K_index": 4,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 1,
+        "K_index": 5,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 1,
+        "K_index": 6,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 1,
+        "K_index": 7,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 1,
+        "K_index": 8,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 1,
+        "K_index": 9,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 1,
+        "K_index": 10,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 2,
+        "K_index": 0,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 2,
+        "K_index": 1,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 2,
+        "K_index": 2,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 2,
+        "K_index": 3,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 2,
+        "K_index": 4,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 2,
+        "K_index": 5,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 2,
+        "K_index": 6,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 2,
+        "K_index": 7,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 2,
+        "K_index": 8,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 2,
+        "K_index": 9,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 2,
+        "K_index": 10,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 3,
+        "K_index": 0,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 3,
+        "K_index": 1,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 3,
+        "K_index": 2,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 3,
+        "K_index": 3,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 3,
+        "K_index": 4,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 3,
+        "K_index": 5,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 3,
+        "K_index": 6,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 3,
+        "K_index": 7,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 3,
+        "K_index": 8,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 3,
+        "K_index": 9,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 3,
+        "K_index": 10,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 4,
+        "K_index": 0,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 4,
+        "K_index": 1,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 4,
+        "K_index": 2,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 4,
+        "K_index": 3,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 4,
+        "K_index": 4,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 4,
+        "K_index": 5,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 4,
+        "K_index": 6,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 4,
+        "K_index": 7,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 4,
+        "K_index": 8,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 4,
+        "K_index": 9,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 4,
+        "K_index": 10,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 5,
+        "K_index": 0,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 5,
+        "K_index": 1,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 5,
+        "K_index": 2,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 5,
+        "K_index": 3,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 5,
+        "K_index": 4,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 5,
+        "K_index": 5,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 5,
+        "K_index": 6,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 5,
+        "K_index": 7,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 5,
+        "K_index": 8,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 5,
+        "K_index": 9,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 5,
+        "K_index": 10,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 6,
+        "K_index": 0,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 6,
+        "K_index": 1,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 6,
+        "K_index": 2,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 6,
+        "K_index": 3,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 6,
+        "K_index": 4,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 6,
+        "K_index": 5,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 6,
+        "K_index": 6,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 6,
+        "K_index": 7,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 6,
+        "K_index": 8,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 6,
+        "K_index": 9,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 6,
+        "K_index": 10,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 7,
+        "K_index": 0,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 7,
+        "K_index": 1,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 7,
+        "K_index": 2,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 7,
+        "K_index": 3,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 7,
+        "K_index": 4,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 7,
+        "K_index": 5,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 7,
+        "K_index": 6,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 7,
+        "K_index": 7,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 7,
+        "K_index": 8,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 7,
+        "K_index": 9,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 7,
+        "K_index": 10,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 8,
+        "K_index": 0,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 8,
+        "K_index": 1,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 8,
+        "K_index": 2,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 8,
+        "K_index": 3,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 8,
+        "K_index": 4,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 8,
+        "K_index": 5,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 8,
+        "K_index": 6,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 8,
+        "K_index": 7,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 8,
+        "K_index": 8,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 8,
+        "K_index": 9,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 8,
+        "K_index": 10,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 9,
+        "K_index": 0,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 9,
+        "K_index": 1,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 9,
+        "K_index": 2,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 9,
+        "K_index": 3,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 9,
+        "K_index": 4,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 9,
+        "K_index": 5,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 9,
+        "K_index": 6,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 9,
+        "K_index": 7,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 9,
+        "K_index": 8,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 9,
+        "K_index": 9,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 9,
+        "K_index": 10,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 10,
+        "K_index": 0,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 10,
+        "K_index": 1,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 10,
+        "K_index": 2,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 10,
+        "K_index": 3,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 10,
+        "K_index": 4,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 10,
+        "K_index": 5,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 10,
+        "K_index": 6,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 10,
+        "K_index": 7,
+        "order": 10,
+        "iso_type": "D5",
+        "element_order_signature": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        },
+        "incident": false
+      },
+      {
+        "H_index": 10,
+        "K_index": 8,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 10,
+        "K_index": 9,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      },
+      {
+        "H_index": 10,
+        "K_index": 10,
+        "order": 12,
+        "iso_type": "A4",
+        "element_order_signature": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "incident": true
+      }
+    ],
+    "derived_incidence_rule": "H_i incident K_j  \u27fa  |H_i \u2229 K_j| = 12  \u27fa  H_i \u2229 K_j \u2245 A4. Nonincident  \u27fa  |H_i \u2229 K_j| = 10  \u27fa  H_i \u2229 K_j \u2245 D5."
+  },
+  "G_orbits_on_HxK": {
+    "count": 2,
+    "orbits": [
+      {
+        "size": 55,
+        "intersection_order": 12,
+        "iso_type": "A4",
+        "n_pairs_listed": 55
+      },
+      {
+        "size": 66,
+        "intersection_order": 10,
+        "iso_type": "D5",
+        "n_pairs_listed": 66
+      }
+    ],
+    "unique_nontrivial_cross_relation": {
+      "orbit_size": 55,
+      "intersection": "A4 order 12",
+      "regularity": "5 neighbors on each side"
+    }
+  },
+  "incidence_matrix_N": [
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ]
+  ],
+  "design_identities": {
+    "row_sums": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "col_sums": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "row_sums_all_5": true,
+    "col_sums_all_5": true,
+    "any_two_rows_meet_in_2": true,
+    "any_two_cols_meet_in_2": true,
+    "NNt_equals_3I_plus_2J": true,
+    "NtN_equals_3I_plus_2J": true,
+    "parameters": {
+      "v": 11,
+      "b": 11,
+      "r": 5,
+      "k": 5,
+      "lambda": 2,
+      "design": "symmetric 2-(11,5,2)",
+      "common_name": "Paley biplane of order 11"
+    },
+    "is_paley_biplane": true
+  },
+  "NNt": [
+    [
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      5
+    ]
+  ],
+  "NtN": [
+    [
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      5
+    ]
+  ],
+  "automorphism_action": {
+    "installed_G_image_order_on_design": 660,
+    "preserves_incidence": true,
+    "equals_full_Aut_of_unique_biplane": "Unique 2-(11,5,2) has |Aut|=660; installed G acts faithfully as Aut(design).",
+    "conjugation_s_on_H": [
+      2,
+      10,
+      0,
+      4,
+      3,
+      5,
+      9,
+      7,
+      8,
+      6,
+      1
+    ],
+    "conjugation_t_on_H": [
+      8,
+      2,
+      4,
+      6,
+      3,
+      7,
+      5,
+      9,
+      10,
+      0,
+      1
+    ],
+    "conjugation_s_on_K": [
+      0,
+      6,
+      8,
+      10,
+      4,
+      9,
+      1,
+      7,
+      2,
+      5,
+      3
+    ],
+    "conjugation_t_on_K": [
+      4,
+      9,
+      10,
+      1,
+      2,
+      7,
+      8,
+      6,
+      0,
+      5,
+      3
+    ]
+  },
+  "complementary_relation": {
+    "N_comp": [
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "row_sums": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "parameters": "each point in 6 nonincident blocks (2-(11,6,3) complement)"
+  },
+  "markers": {
+    "G7-PALEY-BIPLANE-IDENTIFIED": true
+  },
+  "H_A5_binding": {
+    "note": "Both conjugacy classes of maximal A5 are reconstructed. Labels A5_class_H / A5_class_K are the two nonconjugate classes; they correspond setwise to H_A5 A5_class_1 / A5_class_2 (class index matching is by nonconjugacy, not generator matrix identity).",
+    "H_A5_class_1_exit": "H-A5-CLASS1-RATIONAL-POINT",
+    "H_A5_class_2_exit": "H-A5-CLASS2-RATIONAL-POINT"
+  }
+}

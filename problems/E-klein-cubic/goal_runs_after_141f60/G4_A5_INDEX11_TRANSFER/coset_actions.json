@@ -1,0 +1,245 @@
+{
+  "schema": "g4-coset-actions-v1",
+  "group": "PSL(2,11)",
+  "group_order": 660,
+  "generators": {
+    "S": "[[0,-1],[1,0]]",
+    "T": "[[1,1],[0,1]]"
+  },
+  "classes": [
+    {
+      "label": "A5_class_1",
+      "H_order": 60,
+      "orbit_size_under_conjugation": 11,
+      "H_gens_as_12perms": {
+        "rho": [
+          10,
+          9,
+          5,
+          3,
+          4,
+          1,
+          2,
+          0,
+          7,
+          6,
+          11,
+          8
+        ],
+        "tau": [
+          11,
+          8,
+          4,
+          10,
+          2,
+          6,
+          5,
+          9,
+          1,
+          7,
+          3,
+          0
+        ]
+      },
+      "H_gens_as_11perms": {
+        "rho": [
+          10,
+          0,
+          6,
+          2,
+          3,
+          4,
+          5,
+          9,
+          8,
+          1,
+          7
+        ],
+        "tau": [
+          0,
+          3,
+          6,
+          1,
+          10,
+          9,
+          2,
+          7,
+          8,
+          5,
+          4
+        ]
+      },
+      "H_gens_orders": {
+        "rho": 5,
+        "tau": 2,
+        "rho_tau": 3
+      },
+      "coset_action": {
+        "n_cosets": 11,
+        "s_perm": [
+          0,
+          4,
+          8,
+          3,
+          1,
+          5,
+          9,
+          10,
+          2,
+          6,
+          7
+        ],
+        "t_perm": [
+          5,
+          9,
+          4,
+          2,
+          0,
+          1,
+          8,
+          3,
+          10,
+          6,
+          7
+        ],
+        "image_order": 660
+      },
+      "character_stats": {
+        "norm_sq_perm": 2.0,
+        "norm_sq_aug": 1.0,
+        "fix_by_order_avg": {
+          "1": 11.0,
+          "2": 3.0,
+          "3": 2.0,
+          "5": 1.0,
+          "6": 0.0,
+          "11": 0.0
+        },
+        "decomposition_G": "1 + 10 (10 absolutely irreducible)",
+        "note_5plus5": "The two 5-dimensional irreps of PSL(2,11) are NOT direct summands of Ind_H^G 1; character theory gives ||chi_aug||^2=1."
+      },
+      "A5_restriction": {
+        "H_image_order": 60,
+        "norm_sq_res_perm": 6.0,
+        "conclusion": "Res_H of the permutation module has inner-product norm 6.0; for A5 this equals 6 = <1+5+5,1+5+5>, so Res_H(1+10) \u2245 1 \u2295 5 \u2295 5 (A5 irreps)."
+      }
+    },
+    {
+      "label": "A5_class_2",
+      "H_order": 60,
+      "orbit_size_under_conjugation": 11,
+      "H_gens_as_12perms": {
+        "rho": [
+          10,
+          9,
+          5,
+          3,
+          4,
+          1,
+          2,
+          0,
+          7,
+          6,
+          11,
+          8
+        ],
+        "tau": [
+          4,
+          6,
+          11,
+          9,
+          0,
+          8,
+          1,
+          10,
+          5,
+          3,
+          7,
+          2
+        ]
+      },
+      "H_gens_as_11perms": {
+        "rho": [
+          0,
+          5,
+          10,
+          6,
+          8,
+          4,
+          2,
+          3,
+          9,
+          1,
+          7
+        ],
+        "tau": [
+          0,
+          1,
+          5,
+          6,
+          7,
+          2,
+          3,
+          4,
+          8,
+          10,
+          9
+        ]
+      },
+      "H_gens_orders": {
+        "rho": 5,
+        "tau": 2,
+        "rho_tau": 3
+      },
+      "coset_action": {
+        "n_cosets": 11,
+        "s_perm": [
+          2,
+          9,
+          0,
+          3,
+          7,
+          5,
+          8,
+          4,
+          6,
+          1,
+          10
+        ],
+        "t_perm": [
+          10,
+          9,
+          8,
+          5,
+          0,
+          4,
+          7,
+          3,
+          6,
+          2,
+          1
+        ],
+        "image_order": 660
+      },
+      "character_stats": {
+        "norm_sq_perm": 2.0,
+        "norm_sq_aug": 1.0,
+        "fix_by_order_avg": {
+          "1": 11.0,
+          "2": 3.0,
+          "3": 2.0,
+          "5": 1.0,
+          "6": 0.0,
+          "11": 0.0
+        },
+        "decomposition_G": "1 + 10 (10 absolutely irreducible)",
+        "note_5plus5": "The two 5-dimensional irreps of PSL(2,11) are NOT direct summands of Ind_H^G 1; character theory gives ||chi_aug||^2=1."
+      },
+      "A5_restriction": {
+        "H_image_order": 60,
+        "norm_sq_res_perm": 6.0,
+        "conclusion": "Res_H of the permutation module has inner-product norm 6.0; for A5 this equals 6 = <1+5+5,1+5+5>, so Res_H(1+10) \u2245 1 \u2295 5 \u2295 5 (A5 irreps)."
+      }
+    }
+  ]
+}

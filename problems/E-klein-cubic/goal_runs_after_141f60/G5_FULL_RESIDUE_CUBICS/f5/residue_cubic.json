@@ -1,0 +1,5066 @@
+{
+  "schema": "g5-residue-cubic-f5-v1",
+  "site": "f5",
+  "divisor": "f5=0",
+  "drop_primary_index": 1,
+  "drop_primary_name": "f5",
+  "source": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json",
+  "source_sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+  "model": {
+    "ambient": "P^4 over residue field kappa",
+    "equation": "Phi_bar(a0:a1:a2:a3:a4)=0",
+    "construction": "coefficientwise reduction of the sealed affine Hilbert-90 cubic F(a0*x+a1*C+a2*D+a3*E+a4*K) in the free Hironaka module; drop every primary monomial divisible by f5; no uniformizer content to clear (every coefficient has valuation 0)",
+    "frame_names": [
+      "x",
+      "C",
+      "D",
+      "E",
+      "K"
+    ],
+    "frame_degrees": [
+      1,
+      4,
+      5,
+      6,
+      7
+    ],
+    "secondary_names": [
+      "1",
+      "f7",
+      "f9",
+      "f10",
+      "f12",
+      "f14",
+      "f7^2",
+      "f7*f9",
+      "f9^2",
+      "f9*f10",
+      "f7^3",
+      "f9^2*f10"
+    ],
+    "secondary_degrees": [
+      0,
+      7,
+      9,
+      10,
+      12,
+      14,
+      14,
+      16,
+      18,
+      19,
+      21,
+      28
+    ],
+    "residual_primary_names": [
+      "f3",
+      "f6",
+      "f8",
+      "f11"
+    ],
+    "residual_ring_presentation": "R/(f5) free of rank 12 over C[f3,f6,f8,f11] on the sealed secondary basis; structure constants are the affine multiplication table reduced by the same primary",
+    "residue_field": "kappa = Frac(R/(f5)); for the K_proj valuation, take the degree-zero subfield of the residue of K_aff"
+  },
+  "coefficient_count": 35,
+  "vanishing_coefficients": [],
+  "has_unit_coefficient": true,
+  "unit_like_constant_terms": [],
+  "statistics": {
+    "total_residue_terms": 174,
+    "min_terms_per_coeff": 1,
+    "max_terms_per_coeff": 15,
+    "nonzero_coefficients": 35
+  },
+  "index_one": {
+    "effective_cycle_degrees": [
+      60,
+      132,
+      165,
+      220
+    ],
+    "bezout": "-13*60 + 3*132 + 165 + 220 = 1",
+    "note": "universal fixed-subgroup cycles survive every scalar extension, including the residue field; index one does not supply a point"
+  },
+  "coefficients": [
+    {
+      "label": "x*x*x",
+      "triple": [
+        0,
+        0,
+        0
+      ],
+      "frame_degree": 3,
+      "generic_term_count": 1,
+      "residue_term_count": 1,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        }
+      ]
+    },
+    {
+      "label": "x*x*C",
+      "triple": [
+        0,
+        0,
+        1
+      ],
+      "frame_degree": 6,
+      "generic_term_count": 1,
+      "residue_term_count": 1,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        }
+      ]
+    },
+    {
+      "label": "x*x*D",
+      "triple": [
+        0,
+        0,
+        2
+      ],
+      "frame_degree": 7,
+      "generic_term_count": 1,
+      "residue_term_count": 1,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "x*x*E",
+      "triple": [
+        0,
+        0,
+        3
+      ],
+      "frame_degree": 8,
+      "generic_term_count": 1,
+      "residue_term_count": 1,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f8"
+        }
+      ]
+    },
+    {
+      "label": "x*x*K",
+      "triple": [
+        0,
+        0,
+        4
+      ],
+      "frame_degree": 9,
+      "generic_term_count": 1,
+      "residue_term_count": 1,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "x*C*C",
+      "triple": [
+        0,
+        1,
+        1
+      ],
+      "frame_degree": 9,
+      "generic_term_count": 3,
+      "residue_term_count": 3,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6"
+        },
+        {
+          "numerator": 72,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3"
+        },
+        {
+          "numerator": -1,
+          "denominator": 1,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "x*C*D",
+      "triple": [
+        0,
+        1,
+        2
+      ],
+      "frame_degree": 10,
+      "generic_term_count": 2,
+      "residue_term_count": 2,
+      "entries": [
+        {
+          "numerator": 12,
+          "denominator": 1,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        },
+        {
+          "numerator": 4,
+          "denominator": 1,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "x*C*E",
+      "triple": [
+        0,
+        1,
+        3
+      ],
+      "frame_degree": 11,
+      "generic_term_count": 3,
+      "residue_term_count": 1,
+      "entries": [
+        {
+          "numerator": 10,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f8"
+        }
+      ]
+    },
+    {
+      "label": "x*C*K",
+      "triple": [
+        0,
+        1,
+        4
+      ],
+      "frame_degree": 12,
+      "generic_term_count": 6,
+      "residue_term_count": 5,
+      "entries": [
+        {
+          "numerator": -88,
+          "denominator": 27,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6^2"
+        },
+        {
+          "numerator": 116,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f6"
+        },
+        {
+          "numerator": -918,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^4"
+        },
+        {
+          "numerator": 10,
+          "denominator": 1,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        },
+        {
+          "numerator": -2,
+          "denominator": 3,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "x*D*D",
+      "triple": [
+        0,
+        2,
+        2
+      ],
+      "frame_degree": 11,
+      "generic_term_count": 3,
+      "residue_term_count": 2,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f11"
+        },
+        {
+          "numerator": 10,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f8"
+        }
+      ]
+    },
+    {
+      "label": "x*D*E",
+      "triple": [
+        0,
+        2,
+        3
+      ],
+      "frame_degree": 12,
+      "generic_term_count": 6,
+      "residue_term_count": 5,
+      "entries": [
+        {
+          "numerator": -49,
+          "denominator": 27,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6^2"
+        },
+        {
+          "numerator": 8,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f6"
+        },
+        {
+          "numerator": 135,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^4"
+        },
+        {
+          "numerator": -2,
+          "denominator": 1,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        },
+        {
+          "numerator": 4,
+          "denominator": 3,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "x*D*K",
+      "triple": [
+        0,
+        2,
+        4
+      ],
+      "frame_degree": 13,
+      "generic_term_count": 5,
+      "residue_term_count": 3,
+      "entries": [
+        {
+          "numerator": -14,
+          "denominator": 3,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": 74,
+          "denominator": 1,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        },
+        {
+          "numerator": -6,
+          "denominator": 1,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        }
+      ]
+    },
+    {
+      "label": "x*E*E",
+      "triple": [
+        0,
+        3,
+        3
+      ],
+      "frame_degree": 13,
+      "generic_term_count": 5,
+      "residue_term_count": 3,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 12,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": -5,
+          "denominator": 4,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        },
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        }
+      ]
+    },
+    {
+      "label": "x*E*K",
+      "triple": [
+        0,
+        3,
+        4
+      ],
+      "frame_degree": 14,
+      "generic_term_count": 7,
+      "residue_term_count": 4,
+      "entries": [
+        {
+          "numerator": -31,
+          "denominator": 30,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6*f8"
+        },
+        {
+          "numerator": 179,
+          "denominator": 10,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f8"
+        },
+        {
+          "numerator": 1,
+          "denominator": 5,
+          "secondary": 5,
+          "secondary_name": "f14",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        },
+        {
+          "numerator": 1,
+          "denominator": 20,
+          "secondary": 6,
+          "secondary_name": "f7^2",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "x*K*K",
+      "triple": [
+        0,
+        4,
+        4
+      ],
+      "frame_degree": 15,
+      "generic_term_count": 9,
+      "residue_term_count": 6,
+      "entries": [
+        {
+          "numerator": -2821,
+          "denominator": 216,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6^2"
+        },
+        {
+          "numerator": 1707,
+          "denominator": 4,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            3,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3*f6"
+        },
+        {
+          "numerator": -29061,
+          "denominator": 8,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^5"
+        },
+        {
+          "numerator": -25,
+          "denominator": 6,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": 141,
+          "denominator": 2,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        },
+        {
+          "numerator": 11,
+          "denominator": 12,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        }
+      ]
+    },
+    {
+      "label": "C*C*C",
+      "triple": [
+        1,
+        1,
+        1
+      ],
+      "frame_degree": 12,
+      "generic_term_count": 1,
+      "residue_term_count": 1,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "C*C*D",
+      "triple": [
+        1,
+        1,
+        2
+      ],
+      "frame_degree": 13,
+      "generic_term_count": 5,
+      "residue_term_count": 3,
+      "entries": [
+        {
+          "numerator": 5,
+          "denominator": 6,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": 39,
+          "denominator": 2,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        },
+        {
+          "numerator": 15,
+          "denominator": 1,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        }
+      ]
+    },
+    {
+      "label": "C*C*E",
+      "triple": [
+        1,
+        1,
+        3
+      ],
+      "frame_degree": 14,
+      "generic_term_count": 7,
+      "residue_term_count": 4,
+      "entries": [
+        {
+          "numerator": 971,
+          "denominator": 60,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6*f8"
+        },
+        {
+          "numerator": -4779,
+          "denominator": 20,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f8"
+        },
+        {
+          "numerator": 9,
+          "denominator": 10,
+          "secondary": 5,
+          "secondary_name": "f14",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        },
+        {
+          "numerator": -1,
+          "denominator": 40,
+          "secondary": 6,
+          "secondary_name": "f7^2",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "C*C*K",
+      "triple": [
+        1,
+        1,
+        4
+      ],
+      "frame_degree": 15,
+      "generic_term_count": 10,
+      "residue_term_count": 7,
+      "entries": [
+        {
+          "numerator": 215,
+          "denominator": 72,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6^2"
+        },
+        {
+          "numerator": -99,
+          "denominator": 4,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            3,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3*f6"
+        },
+        {
+          "numerator": 1053,
+          "denominator": 8,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^5"
+        },
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f8"
+        },
+        {
+          "numerator": 13,
+          "denominator": 6,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": -15,
+          "denominator": 2,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        },
+        {
+          "numerator": -13,
+          "denominator": 4,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        }
+      ]
+    },
+    {
+      "label": "C*D*D",
+      "triple": [
+        1,
+        2,
+        2
+      ],
+      "frame_degree": 14,
+      "generic_term_count": 8,
+      "residue_term_count": 5,
+      "entries": [
+        {
+          "numerator": -169,
+          "denominator": 30,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6*f8"
+        },
+        {
+          "numerator": 4,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f11"
+        },
+        {
+          "numerator": 1341,
+          "denominator": 10,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f8"
+        },
+        {
+          "numerator": -1,
+          "denominator": 5,
+          "secondary": 5,
+          "secondary_name": "f14",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        },
+        {
+          "numerator": 9,
+          "denominator": 20,
+          "secondary": 6,
+          "secondary_name": "f7^2",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "C*D*E",
+      "triple": [
+        1,
+        2,
+        3
+      ],
+      "frame_degree": 15,
+      "generic_term_count": 9,
+      "residue_term_count": 6,
+      "entries": [
+        {
+          "numerator": -5,
+          "denominator": 6,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6^2"
+        },
+        {
+          "numerator": -249,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            3,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3*f6"
+        },
+        {
+          "numerator": 5643,
+          "denominator": 2,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^5"
+        },
+        {
+          "numerator": 5,
+          "denominator": 3,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": -33,
+          "denominator": 1,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        },
+        {
+          "numerator": 9,
+          "denominator": 1,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        }
+      ]
+    },
+    {
+      "label": "C*D*K",
+      "triple": [
+        1,
+        2,
+        4
+      ],
+      "frame_degree": 16,
+      "generic_term_count": 10,
+      "residue_term_count": 6,
+      "entries": [
+        {
+          "numerator": -5,
+          "denominator": 2,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            2,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f8^2"
+        },
+        {
+          "numerator": -463,
+          "denominator": 24,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6"
+        },
+        {
+          "numerator": 2451,
+          "denominator": 8,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3"
+        },
+        {
+          "numerator": -41,
+          "denominator": 3,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": 393,
+          "denominator": 2,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        },
+        {
+          "numerator": 5,
+          "denominator": 4,
+          "secondary": 7,
+          "secondary_name": "f7*f9",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "C*E*E",
+      "triple": [
+        1,
+        3,
+        3
+      ],
+      "frame_degree": 16,
+      "generic_term_count": 5,
+      "residue_term_count": 3,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            2,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f8^2"
+        },
+        {
+          "numerator": -1,
+          "denominator": 3,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": 9,
+          "denominator": 1,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        }
+      ]
+    },
+    {
+      "label": "C*E*K",
+      "triple": [
+        1,
+        3,
+        4
+      ],
+      "frame_degree": 17,
+      "generic_term_count": 12,
+      "residue_term_count": 6,
+      "entries": [
+        {
+          "numerator": -1,
+          "denominator": 3,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6*f11"
+        },
+        {
+          "numerator": -2503,
+          "denominator": 60,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6*f8"
+        },
+        {
+          "numerator": 5,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f11"
+        },
+        {
+          "numerator": 13707,
+          "denominator": 20,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3*f8"
+        },
+        {
+          "numerator": -7,
+          "denominator": 10,
+          "secondary": 5,
+          "secondary_name": "f14",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        },
+        {
+          "numerator": 13,
+          "denominator": 40,
+          "secondary": 6,
+          "secondary_name": "f7^2",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        }
+      ]
+    },
+    {
+      "label": "C*K*K",
+      "triple": [
+        1,
+        4,
+        4
+      ],
+      "frame_degree": 18,
+      "generic_term_count": 15,
+      "residue_term_count": 10,
+      "entries": [
+        {
+          "numerator": 649,
+          "denominator": 216,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6^3"
+        },
+        {
+          "numerator": -12839,
+          "denominator": 72,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f6^2"
+        },
+        {
+          "numerator": 26319,
+          "denominator": 8,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            4,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^4*f6"
+        },
+        {
+          "numerator": -158895,
+          "denominator": 8,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^6"
+        },
+        {
+          "numerator": -22,
+          "denominator": 3,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6"
+        },
+        {
+          "numerator": 126,
+          "denominator": 1,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3"
+        },
+        {
+          "numerator": 4,
+          "denominator": 1,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f8"
+        },
+        {
+          "numerator": 7,
+          "denominator": 12,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": -23,
+          "denominator": 4,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        },
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 8,
+          "secondary_name": "f9^2",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "D*D*D",
+      "triple": [
+        2,
+        2,
+        2
+      ],
+      "frame_degree": 15,
+      "generic_term_count": 9,
+      "residue_term_count": 7,
+      "entries": [
+        {
+          "numerator": 695,
+          "denominator": 36,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6^2"
+        },
+        {
+          "numerator": -1335,
+          "denominator": 2,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            3,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3*f6"
+        },
+        {
+          "numerator": 19791,
+          "denominator": 4,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            5,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^5"
+        },
+        {
+          "numerator": -5,
+          "denominator": 2,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f8"
+        },
+        {
+          "numerator": 10,
+          "denominator": 3,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": -45,
+          "denominator": 1,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        },
+        {
+          "numerator": 5,
+          "denominator": 1,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        }
+      ]
+    },
+    {
+      "label": "D*D*E",
+      "triple": [
+        2,
+        2,
+        3
+      ],
+      "frame_degree": 16,
+      "generic_term_count": 10,
+      "residue_term_count": 6,
+      "entries": [
+        {
+          "numerator": -1,
+          "denominator": 2,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            2,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f8^2"
+        },
+        {
+          "numerator": -71,
+          "denominator": 24,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6"
+        },
+        {
+          "numerator": 387,
+          "denominator": 8,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3"
+        },
+        {
+          "numerator": 4,
+          "denominator": 3,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": -39,
+          "denominator": 2,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        },
+        {
+          "numerator": -1,
+          "denominator": 4,
+          "secondary": 7,
+          "secondary_name": "f7*f9",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "D*D*K",
+      "triple": [
+        2,
+        2,
+        4
+      ],
+      "frame_degree": 17,
+      "generic_term_count": 13,
+      "residue_term_count": 7,
+      "entries": [
+        {
+          "numerator": -8,
+          "denominator": 3,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6*f11"
+        },
+        {
+          "numerator": -1601,
+          "denominator": 24,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6*f8"
+        },
+        {
+          "numerator": 44,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f11"
+        },
+        {
+          "numerator": 8733,
+          "denominator": 8,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3*f8"
+        },
+        {
+          "numerator": -4,
+          "denominator": 1,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f8"
+        },
+        {
+          "numerator": -1,
+          "denominator": 4,
+          "secondary": 5,
+          "secondary_name": "f14",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        },
+        {
+          "numerator": -5,
+          "denominator": 16,
+          "secondary": 6,
+          "secondary_name": "f7^2",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        }
+      ]
+    },
+    {
+      "label": "D*E*E",
+      "triple": [
+        2,
+        3,
+        3
+      ],
+      "frame_degree": 17,
+      "generic_term_count": 13,
+      "residue_term_count": 7,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 6,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6*f11"
+        },
+        {
+          "numerator": 202,
+          "denominator": 15,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6*f8"
+        },
+        {
+          "numerator": -5,
+          "denominator": 2,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f11"
+        },
+        {
+          "numerator": -1098,
+          "denominator": 5,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3*f8"
+        },
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f8"
+        },
+        {
+          "numerator": 1,
+          "denominator": 5,
+          "secondary": 5,
+          "secondary_name": "f14",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        },
+        {
+          "numerator": -1,
+          "denominator": 5,
+          "secondary": 6,
+          "secondary_name": "f7^2",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        }
+      ]
+    },
+    {
+      "label": "D*E*K",
+      "triple": [
+        2,
+        3,
+        4
+      ],
+      "frame_degree": 18,
+      "generic_term_count": 14,
+      "residue_term_count": 9,
+      "entries": [
+        {
+          "numerator": 517,
+          "denominator": 162,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6^3"
+        },
+        {
+          "numerator": -2771,
+          "denominator": 36,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f6^2"
+        },
+        {
+          "numerator": 342,
+          "denominator": 1,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            4,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^4*f6"
+        },
+        {
+          "numerator": 5967,
+          "denominator": 4,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^6"
+        },
+        {
+          "numerator": 5,
+          "denominator": 3,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6"
+        },
+        {
+          "numerator": -33,
+          "denominator": 1,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3"
+        },
+        {
+          "numerator": -4,
+          "denominator": 1,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f8"
+        },
+        {
+          "numerator": -20,
+          "denominator": 9,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": 67,
+          "denominator": 2,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        }
+      ]
+    },
+    {
+      "label": "D*K*K",
+      "triple": [
+        2,
+        4,
+        4
+      ],
+      "frame_degree": 19,
+      "generic_term_count": 16,
+      "residue_term_count": 8,
+      "entries": [
+        {
+          "numerator": 1,
+          "denominator": 4,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            2,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            2,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f8^2"
+        },
+        {
+          "numerator": 187,
+          "denominator": 36,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6^2"
+        },
+        {
+          "numerator": -7877,
+          "denominator": 48,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f6"
+        },
+        {
+          "numerator": 20709,
+          "denominator": 16,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^4"
+        },
+        {
+          "numerator": 161,
+          "denominator": 3,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6"
+        },
+        {
+          "numerator": -3495,
+          "denominator": 4,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3"
+        },
+        {
+          "numerator": -1,
+          "denominator": 8,
+          "secondary": 7,
+          "secondary_name": "f7*f9",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        },
+        {
+          "numerator": 4,
+          "denominator": 1,
+          "secondary": 9,
+          "secondary_name": "f9*f10",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "E*E*E",
+      "triple": [
+        3,
+        3,
+        3
+      ],
+      "frame_degree": 18,
+      "generic_term_count": 11,
+      "residue_term_count": 6,
+      "entries": [
+        {
+          "numerator": -19,
+          "denominator": 648,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6^3"
+        },
+        {
+          "numerator": 11,
+          "denominator": 24,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f6^2"
+        },
+        {
+          "numerator": 15,
+          "denominator": 8,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            4,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^4*f6"
+        },
+        {
+          "numerator": -81,
+          "denominator": 8,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            6,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^6"
+        },
+        {
+          "numerator": 1,
+          "denominator": 18,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": -1,
+          "denominator": 1,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        }
+      ]
+    },
+    {
+      "label": "E*E*K",
+      "triple": [
+        3,
+        3,
+        4
+      ],
+      "frame_degree": 19,
+      "generic_term_count": 16,
+      "residue_term_count": 8,
+      "entries": [
+        {
+          "numerator": -1,
+          "denominator": 4,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            2,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            2,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f8^2"
+        },
+        {
+          "numerator": -5,
+          "denominator": 36,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6^2"
+        },
+        {
+          "numerator": 277,
+          "denominator": 48,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f6"
+        },
+        {
+          "numerator": -909,
+          "denominator": 16,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^4"
+        },
+        {
+          "numerator": 20,
+          "denominator": 3,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6"
+        },
+        {
+          "numerator": -429,
+          "denominator": 4,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3"
+        },
+        {
+          "numerator": 1,
+          "denominator": 8,
+          "secondary": 7,
+          "secondary_name": "f7*f9",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        },
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 9,
+          "secondary_name": "f9*f10",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    },
+    {
+      "label": "E*K*K",
+      "triple": [
+        3,
+        4,
+        4
+      ],
+      "frame_degree": 20,
+      "generic_term_count": 21,
+      "residue_term_count": 11,
+      "entries": [
+        {
+          "numerator": -1547,
+          "denominator": 540,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            0,
+            0,
+            2,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6^2*f8"
+        },
+        {
+          "numerator": 1,
+          "denominator": 6,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6*f11"
+        },
+        {
+          "numerator": 13457,
+          "denominator": 120,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f6*f8"
+        },
+        {
+          "numerator": -5,
+          "denominator": 2,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3*f11"
+        },
+        {
+          "numerator": -8637,
+          "denominator": 8,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            4,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            4,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^4*f8"
+        },
+        {
+          "numerator": 1,
+          "denominator": 1,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f8"
+        },
+        {
+          "numerator": 1,
+          "denominator": 12,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f8"
+        },
+        {
+          "numerator": -9,
+          "denominator": 20,
+          "secondary": 5,
+          "secondary_name": "f14",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": 8,
+          "denominator": 1,
+          "secondary": 5,
+          "secondary_name": "f14",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        },
+        {
+          "numerator": -17,
+          "denominator": 240,
+          "secondary": 6,
+          "secondary_name": "f7^2",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6"
+        },
+        {
+          "numerator": 9,
+          "denominator": 8,
+          "secondary": 6,
+          "secondary_name": "f7^2",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2"
+        }
+      ]
+    },
+    {
+      "label": "K*K*K",
+      "triple": [
+        4,
+        4,
+        4
+      ],
+      "frame_degree": 21,
+      "generic_term_count": 25,
+      "residue_term_count": 15,
+      "entries": [
+        {
+          "numerator": 76909,
+          "denominator": 4320,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            1,
+            0,
+            3,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            3,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6^3"
+        },
+        {
+          "numerator": -416453,
+          "denominator": 480,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            3,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3*f6^2"
+        },
+        {
+          "numerator": 2311149,
+          "denominator": 160,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            5,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            5,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^5*f6"
+        },
+        {
+          "numerator": -13133421,
+          "denominator": 160,
+          "secondary": 0,
+          "secondary_name": "1",
+          "primary_exponents_full": [
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            7,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^7"
+        },
+        {
+          "numerator": 7,
+          "denominator": 120,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6*f8"
+        },
+        {
+          "numerator": -43,
+          "denominator": 40,
+          "secondary": 1,
+          "secondary_name": "f7",
+          "primary_exponents_full": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f8"
+        },
+        {
+          "numerator": 203,
+          "denominator": 48,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f6^2"
+        },
+        {
+          "numerator": -3449,
+          "denominator": 24,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^2*f6"
+        },
+        {
+          "numerator": 97701,
+          "denominator": 80,
+          "secondary": 2,
+          "secondary_name": "f9",
+          "primary_exponents_full": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^4"
+        },
+        {
+          "numerator": 1,
+          "denominator": 20,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f11"
+        },
+        {
+          "numerator": -5,
+          "denominator": 4,
+          "secondary": 3,
+          "secondary_name": "f10",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f8"
+        },
+        {
+          "numerator": -21,
+          "denominator": 10,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3*f6"
+        },
+        {
+          "numerator": 691,
+          "denominator": 20,
+          "secondary": 4,
+          "secondary_name": "f12",
+          "primary_exponents_full": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3^3"
+        },
+        {
+          "numerator": -1,
+          "denominator": 20,
+          "secondary": 8,
+          "secondary_name": "f9^2",
+          "primary_exponents_full": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "f3"
+        },
+        {
+          "numerator": 1,
+          "denominator": 160,
+          "secondary": 10,
+          "secondary_name": "f7^3",
+          "primary_exponents_full": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_exponents": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "residual_primary_names": [
+            "f3",
+            "f6",
+            "f8",
+            "f11"
+          ],
+          "primary_label": "1"
+        }
+      ]
+    }
+  ],
+  "scope": "Exact residue cubic model only. No K_proj-point, no residue point, and no pointlessness claim is made by this payload alone."
+}

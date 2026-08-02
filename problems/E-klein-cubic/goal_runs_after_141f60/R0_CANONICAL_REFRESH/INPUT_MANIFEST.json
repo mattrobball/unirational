@@ -1,0 +1,242 @@
+{
+  "goal": "R0_CANONICAL_REFRESH",
+  "pinned_state": "141f6042f628f984771fc79d8d16beb12cedcb94",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "inventory_packet_count_scanned": 102,
+  "inputs": [
+    {
+      "path": "goals_after_141f60/GOAL_R0_CANONICAL_REFRESH.md",
+      "exists": true,
+      "sha256": "618dfa6457cd77f9133a43c51c68b363e18585f684d5d5846224325b542601ac",
+      "status_first_line": null
+    },
+    {
+      "path": "goals_after_141f60/README.md",
+      "exists": true,
+      "sha256": "ffc66824cd2b057cedeb07d8dde11fe3beb350dda7e9dcd8df1c6c52b278b681",
+      "status_first_line": null
+    },
+    {
+      "path": "goals_after_141f60/REASSESSMENT.md",
+      "exists": true,
+      "sha256": "3faa2705892259b65f1cbe9db873a82c6f3148e98af072a7d33bdde0932f8a46",
+      "status_first_line": null
+    },
+    {
+      "path": "REMAINING_GOALS_NOTE.md",
+      "exists": true,
+      "sha256": "8c554bee8b94506fc6a3b22d68a1f4a869d24edcb498fdeff0208a4dc146256e",
+      "status_first_line": null
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/STATUS.md",
+      "exists": true,
+      "sha256": "fe8a88bac91187539498a82a5cbb3589a3d76c0cef5358696341aba132023532",
+      "status_first_line": "G2-FINITE-GENERATION-PASS"
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/SEAL.json",
+      "exists": true,
+      "sha256": "568525463349639a6b3b6eecc9596771e36ba1f4464c123cb1292bd1dd58ba8e",
+      "status_first_line": null
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/DECISION.md",
+      "exists": true,
+      "sha256": "b20d4688716e6482a4302fc571361bcf185d0ec79e6e1e80908566fb13e01c44",
+      "status_first_line": null
+    },
+    {
+      "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/STATUS.md",
+      "exists": true,
+      "sha256": "f363e8fde807c6abfe38461531cdbec0cfb3f131996cdf975a25f7ab88961f8b",
+      "status_first_line": "V-UNDECIDED"
+    },
+    {
+      "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/SEAL.json",
+      "exists": true,
+      "sha256": "14bf61091b9babe46f48634283a80310477e22edca583c6819e423cee5702918",
+      "status_first_line": null
+    },
+    {
+      "path": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/STATUS.md",
+      "exists": true,
+      "sha256": "e7212157aa5b63bac1a54c434798077a41fdc3eec6d77946f27164e9db13fc69",
+      "status_first_line": "H5-UNDECIDED"
+    },
+    {
+      "path": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/SEAL.json",
+      "exists": true,
+      "sha256": "e8540056540c2d856d25945e333443ffdf36c66e88cdc329cbfd2eb85c4daed7",
+      "status_first_line": null
+    },
+    {
+      "path": "goal_runs_after_35fa/B_FIXED_FRAME_EXHAUSTIVENESS_20260802/STATUS.md",
+      "exists": true,
+      "sha256": "ddcce961a36085dd18bc4f6785ffa598c61b3c8bd748a8c81d126f91902a5073",
+      "status_first_line": "B-BRIDGE-REFUTED"
+    },
+    {
+      "path": "goal_runs_after_35fa/B_FIXED_FRAME_EXHAUSTIVENESS_20260802/SEAL.json",
+      "exists": true,
+      "sha256": "11d06360673ed47b83c25451949d77bbd7552d3d5f4974c8006cfb87d9d4f97e",
+      "status_first_line": null
+    },
+    {
+      "path": "goal_runs_after_35fa/B_FIXED_FRAME_EXHAUSTIVENESS_20260802/bridge_refutation.json",
+      "exists": true,
+      "sha256": "84a89160983c13edc6a9246afb84116a0830243df7d6dbe002ae880946582fa8",
+      "status_first_line": null
+    },
+    {
+      "path": "goal_runs_after_35fa/A0_CANONICAL_AUDIT/STATUS.md",
+      "exists": true,
+      "sha256": "e87fb96ed368a44d11b1aab036fd52afb4d555259cfd1cd403647815808b5265",
+      "status_first_line": "A0-CANONICAL-AUDIT-PASS"
+    },
+    {
+      "path": "goal_runs_after_35fa/A0_CANONICAL_AUDIT/SEAL.json",
+      "exists": true,
+      "sha256": "2cf4ab4c153b0c454876b2d30a4f57d9c2d7b89d6fd70e8363c942d50171add5",
+      "status_first_line": null
+    },
+    {
+      "path": "goal_runs_after_35fa/A0_CANONICAL_AUDIT/verify_p25_bulk_projection_result.json",
+      "exists": true,
+      "sha256": "dc24bd01e21bdd15ed87c035042a695460897d71db8f360a45ea5fb5c3543b53",
+      "status_first_line": null
+    },
+    {
+      "path": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/STATUS.md",
+      "exists": true,
+      "sha256": "94f58b4d3211ef5ac6d20bfced5ed01dbed414606be170275d26bc55d5fcb3b1",
+      "status_first_line": "C5-UNDECIDED"
+    },
+    {
+      "path": "goals_after_bd610a/M3_SARKISOV_SECTION/STATUS.md",
+      "exists": true,
+      "sha256": "e0a2a63a2973f4bf989b1b841639aa29abcd0a7304ea9910191d08cba12b155e",
+      "status_first_line": "M3-INTEGRAL-DEGREE4-MULTISECTION"
+    },
+    {
+      "path": "goals_2026-08-01/P25_LANDING_SUPPORT/STATUS.md",
+      "exists": true,
+      "sha256": "8985f708622578b12d82e9ccd80272a1e196215945ddcba9c7c6da578d7c331b",
+      "status_first_line": "P25-UNDECIDED"
+    },
+    {
+      "path": "goal_runs_after_35fa/COV_M1_DEG31_35/STATUS.md",
+      "exists": true,
+      "sha256": "1e8fc7352945a224c28c57c4fee6a2264db7040f485a3f5ef847dc60dfbde6e8",
+      "status_first_line": "COV-UNDECIDED"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE_DESCENT_OBSTRUCTION_20260802/STATUS.md",
+      "exists": true,
+      "sha256": "b55f69d9dc6933f6c66f36e79c0e1eef6c0c17a3a411056f371fdae33da6fb0e",
+      "status_first_line": "Q-UNDECIDED"
+    },
+    {
+      "path": "goals_after_5899d0/T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER/README.md",
+      "exists": true,
+      "sha256": "1f93ae0240fbd3a9171bb238b5782c7bd05eecc68fe170bd15cbc79b057c46dd",
+      "status_first_line": null
+    },
+    {
+      "path": "goals_2026-08-02/T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER/README.md",
+      "exists": true,
+      "sha256": "7758b9c85c60d09aedaad7291b88f6d3e0a4460084daaff27032b2c36cc44ae8",
+      "status_first_line": null
+    }
+  ],
+  "audit_items": [
+    {
+      "id": 1,
+      "item": "H5 described as no sealed run",
+      "status": "already_fixed",
+      "evidence": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/STATUS.md first line H5-UNDECIDED; verify H5_INDEPENDENT_VERIFY_OK; REMAINING_GOALS_NOTE already points at sealed run",
+      "action": "leave_untouched_packet; refresh ranking note only"
+    },
+    {
+      "id": 2,
+      "item": "A0 status may say job running while projection complete",
+      "status": "already_fixed",
+      "evidence": "A0 STATUS first line A0-CANONICAL-AUDIT-PASS; verify_p25_bulk_projection_result.json ok with 4140/315",
+      "action": "leave_untouched"
+    },
+    {
+      "id": 3,
+      "item": "M3 STATUS merge-conflict markers",
+      "status": "already_fixed",
+      "evidence": "commit 5d7e686 M3: resolve residual status conflict; no <<<<<< markers; exit M3-INTEGRAL-DEGREE4-MULTISECTION",
+      "action": "leave_untouched"
+    },
+    {
+      "id": 4,
+      "item": "G/G2 structural complete",
+      "status": "reflected_in_canonical_state",
+      "evidence": "G2-FINITE-GENERATION-PASS; residual G3 arithmetic open",
+      "action": "live_ledger_update"
+    },
+    {
+      "id": 5,
+      "item": "V3 mechanics complete",
+      "status": "reflected_in_canonical_state",
+      "evidence": "V3-RESIDUE-NORMAL-FORM-PASS scoped; V-UNDECIDED residual",
+      "action": "live_ledger_update"
+    },
+    {
+      "id": 6,
+      "item": "B terminal not on active dispatch",
+      "status": "corrected_in_live_ledger",
+      "evidence": "B-BRIDGE-REFUTED; remove from any active queue",
+      "action": "live_ledger_update"
+    },
+    {
+      "id": 7,
+      "item": "C5 corrected alternating-form/Pluecker model",
+      "status": "corrected_in_live_ledger",
+      "evidence": "STATUS/CORRECTED_INCIDENCE; not e*S0*e=0",
+      "action": "live_ledger_update"
+    },
+    {
+      "id": 8,
+      "item": "T3 local-worker dirs replace scratch-only",
+      "status": "corrected_in_live_ledger",
+      "evidence": "goals_after_5899d0/... and goals_2026-08-02/...",
+      "action": "live_ledger_update"
+    }
+  ],
+  "replay_summary": {
+    "G_UNIVERSAL": {
+      "result": "PASS",
+      "marker": "G2_UNIVERSAL_VERIFIER_ACCEPT"
+    },
+    "V3": {
+      "result": "PASS",
+      "marker": "V3_VALUATION_RESIDUE_CLOSEOUT_OK"
+    },
+    "H5": {
+      "result": "PASS",
+      "marker": "H5_INDEPENDENT_VERIFY_OK"
+    },
+    "B_full_verify": {
+      "result": "FAIL",
+      "error": "C5 threefold source pin absent (STATUS text drift)"
+    },
+    "B_payload_subcheck": {
+      "result": "PASS",
+      "marker": "B_SUBCHECK_OK"
+    },
+    "A0_full_projection": {
+      "result": "NOT_RERUN",
+      "reason": "~1592s FLINT; result JSON subcheck used"
+    },
+    "A0_result_subcheck": {
+      "result": "PASS",
+      "marker": "A0_PROJECTION_RESULT_SUBCHECK_OK",
+      "n_Ti": 4140,
+      "n_comm": 315
+    }
+  }
+}

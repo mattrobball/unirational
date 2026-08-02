@@ -1,0 +1,109 @@
+{
+  "goal": "G3P_POLAR_ODD_DEGREE_DESCENT",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "pinned_goal_state": "0aecc89f0598cfd982295107352e6cc6e9fb04e9",
+  "parent_exits": {
+    "G3A": "G3A-ARITHMETIC-DOMINANCE-PASS",
+    "G4": "G4-INDUCED-DEGREE11-POINT-PASS",
+    "G2": "G2-FINITE-GENERATION-PASS"
+  },
+  "headline": "OPEN",
+  "inputs": [
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md",
+      "exists": true,
+      "sha256": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811",
+      "size": 1118
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/SEAL.json",
+      "exists": true,
+      "sha256": "b289c6cff44fc669c1565b1ef508756156b2453b0fe99b28ab020a6a5e40fe00",
+      "size": 2384
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/EXPORTS.md",
+      "exists": true,
+      "sha256": "9811d72e5da34ac1255855ae7e1fb4e6f4ad50b86f7097fbeaed17a639dc74c6",
+      "size": 695
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/field_model.json",
+      "exists": true,
+      "sha256": "556149a93461973a5e2a21c20dc2c9a359b0932f5494897a768b9cbd95801a21",
+      "size": 662
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/phi_exact.json",
+      "exists": true,
+      "sha256": "e647609d220e897dd05074db0f78da09b4b599db8ece8db41210f5f37d4760a6",
+      "size": 1790
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/dominance_bridge.json",
+      "exists": true,
+      "sha256": "a6e6d99dc01a9a4766afd9b6956c5b33fe3ff51e90e1734456814c8079603015",
+      "size": 2020
+    },
+    {
+      "path": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/STATUS.md",
+      "exists": true,
+      "sha256": "cdb871f8ef2f9f247439cec2108f748c8af7636743d478e3c77efb01ac54e03d",
+      "size": 2352
+    },
+    {
+      "path": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/SEAL.json",
+      "exists": true,
+      "sha256": "a135db04f6081c3f14ee54eeebe5d426cb6bf72a609f40403aad5533e93fa3b3",
+      "size": 2512
+    },
+    {
+      "path": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/induced_points.json",
+      "exists": true,
+      "sha256": "863116102af5103d8ba0e24f7220784417c569f56f0a2bff3f0d7e479a74c797",
+      "size": 17508
+    },
+    {
+      "path": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/landing_tests.json",
+      "exists": true,
+      "sha256": "1bb6096b714032746aaef4f9a083a202ded2160ad2ef30203faf1aa7214d7646",
+      "size": 975
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/STATUS.md",
+      "exists": true,
+      "sha256": "fe8a88bac91187539498a82a5cbb3589a3d76c0cef5358696341aba132023532",
+      "size": 3136
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/SEAL.json",
+      "exists": true,
+      "sha256": "568525463349639a6b3b6eecc9596771e36ba1f4464c123cb1292bd1dd58ba8e",
+      "size": 1168
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/UNIVERSAL_OBJECT.md",
+      "exists": true,
+      "sha256": "ec17dbf330abdcfd63b7922ed3f3f0bd66d5d9590cdd593fc51d4ff35f64b114",
+      "size": 8021
+    },
+    {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json",
+      "exists": true,
+      "sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+      "size": 162861
+    },
+    {
+      "path": "goals_after_0aecc89/GOAL_G3P_POLAR_ODD_DEGREE_DESCENT.md",
+      "exists": true,
+      "sha256": "d5ff80eda3c88f6104bae269bd3c65fd0e30a822ca2d5f88297daef879383927",
+      "size": 6946
+    },
+    {
+      "path": "tmp/kproj_arithmetic/normalized_kproj_table.json",
+      "exists": true,
+      "sha256": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f",
+      "size": 1607863
+    }
+  ]
+}

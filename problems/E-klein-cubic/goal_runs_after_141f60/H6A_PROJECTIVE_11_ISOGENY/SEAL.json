@@ -1,0 +1,24 @@
+{
+  "format": "h6a-projective-11-isogeny-seal-v1",
+  "exit": "H6-PROJECTIVE-11-ISOGENY-PASS",
+  "headline": "OPEN",
+  "slice": "H6.0",
+  "h4_exit": "H-11_5-NORM-MODEL-PASS",
+  "isogeny_degree": 11,
+  "kernel": "mu_11 etale with C5-action by *9 on Z/11",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "files": {
+    "INPUT_MANIFEST.json": "4dc211543985d9ccb86b29218e363ac14a6bd6330fa9a0c8a1f3d8f4501a9f99",
+    "isogeny.json": "07255a85f503fe73e5e2574788652b28102692ff2c68c4d7dcb89afc4954b5d1",
+    "ISOGENY.md": "f18e94aa13f56887d8658267f5d845ce4d5571cb15331c635ca8a32eb415a7ec",
+    "produce_isogeny.py": "96e348cc53a3623190066923577baac7cd7a8c3d21514348ad0dc8598c3142ca",
+    "verify_isogeny.py": "0547338408b75e49d04c9d6db0ca2c1a7cbea603870c2fabbd767e7f9880d93b",
+    "REPLAY.md": "edd1be5b03cc4931b39d5884c41b3d71047e10f75b61da6f04a1fbf507454003",
+    "STATUS.md": "510d414755dae08e910ca00f93b416a38a43c6db95e103c767812e303c4e4fd6"
+  },
+  "nonclaims": [
+    "no H6-POINTLESS-HEADLINE-NEGATIVE",
+    "no H6-RATIONAL-POINT",
+    "no torsor class decision (H6.1)"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "g7a-input-manifest-v1",
+  "inputs": [
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/STATUS.md",
+      "sha256": "2df8d8d157b2f401a44b41aa3bd02dd080ca1747e73f924b0f884fb4ba37e706",
+      "role": "binding_input"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/SEAL.json",
+      "sha256": "14e5ebaf8822bbe72e81cbc15f5a7df322252659e910f4f5206a1c67efad08a7",
+      "role": "binding_input"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_1/point.json",
+      "sha256": "89b9a3405db00c5b87c72016afd3b05d0e397d133752d0e7da91898bd9f72a0f",
+      "role": "binding_input"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_2/point.json",
+      "sha256": "cb8366eee4d6a8a096365b65d0c75372b3529a7a621411d8b6f524820d73bfb4",
+      "role": "binding_input"
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/STATUS.md",
+      "sha256": "fe8a88bac91187539498a82a5cbb3589a3d76c0cef5358696341aba132023532",
+      "role": "binding_input"
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/SEAL.json",
+      "sha256": "568525463349639a6b3b6eecc9596771e36ba1f4464c123cb1292bd1dd58ba8e",
+      "role": "binding_input"
+    },
+    {
+      "path": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/coset_actions.json",
+      "sha256": "381c046fa4bdb0273e933df10959df21d45eef1631cf2a3db082a87284e7121c",
+      "role": "binding_input"
+    },
+    {
+      "path": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/STATUS.md",
+      "sha256": "cdb871f8ef2f9f247439cec2108f748c8af7636743d478e3c77efb01ac54e03d",
+      "role": "binding_input"
+    }
+  ],
+  "group_generators": {
+    "S": "[[0,-1],[1,0]]",
+    "T": "[[1,1],[0,1]]",
+    "source": "installed M\u00f6bius generators (same as G4 produce.py)"
+  }
+}

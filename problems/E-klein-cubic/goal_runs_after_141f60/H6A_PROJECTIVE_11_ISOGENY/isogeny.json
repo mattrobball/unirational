@@ -1,0 +1,600 @@
+{
+  "schema": "h6a-projective-11-isogeny-v1",
+  "group": "C5=<sigma>",
+  "group_ring_identity": {
+    "left": "(2+sigma)*(5-3*sigma+sigma^2-sigma^3)",
+    "right": "11-(1+sigma+sigma^2+sigma^3+sigma^4)",
+    "verified_as_matrices": true
+  },
+  "operators": {
+    "sigma_cycle_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "A_2_plus_sigma": [
+      [
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        2
+      ]
+    ],
+    "B_dual": [
+      [
+        5,
+        0,
+        -1,
+        1,
+        -3
+      ],
+      [
+        -3,
+        5,
+        0,
+        -1,
+        1
+      ],
+      [
+        1,
+        -3,
+        5,
+        0,
+        -1
+      ],
+      [
+        -1,
+        1,
+        -3,
+        5,
+        0
+      ],
+      [
+        0,
+        -1,
+        1,
+        -3,
+        5
+      ]
+    ],
+    "N_norm": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "A_coeffs_sigma_powers": [
+      2,
+      1,
+      0,
+      0,
+      0
+    ],
+    "B_coeffs_sigma_powers": [
+      5,
+      -3,
+      1,
+      -1,
+      0
+    ]
+  },
+  "projective_torus": {
+    "description": "Product-one torus with sigma(r_i)=r_{i+1} (H4); character lattice L={m in Z^5: sum m_i=0}",
+    "character_lattice_basis": [
+      [
+        1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        -1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        -1
+      ]
+    ],
+    "map_phi_on_characters": "A = 2I + sigma",
+    "dual_on_characters": "B = 5I - 3 sigma + sigma^2 - sigma^3",
+    "multiplicative_psi": "psi(r)_i = r_i^2 * r_{i-1}"
+  },
+  "augmentation_restriction": {
+    "A_aug": [
+      [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        2
+      ]
+    ],
+    "B_aug": [
+      [
+        8,
+        3,
+        2,
+        4
+      ],
+      [
+        -4,
+        4,
+        -1,
+        -2
+      ],
+      [
+        2,
+        -2,
+        6,
+        1
+      ],
+      [
+        -1,
+        1,
+        -3,
+        5
+      ]
+    ],
+    "S_aug": [
+      [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "det_A_aug": 11,
+    "A_B_equals_11_I": true,
+    "isogeny_degree": 11,
+    "smith_normal_form_diagonal": [
+      1,
+      1,
+      1,
+      11
+    ]
+  },
+  "kernel": {
+    "group_scheme": "etale mu_11 (order-11 multiplicative kernel of phi on the projective/norm-1 torus over alg closed fields)",
+    "galois_module": "Z/11Z with C5-action by multiplication by unit k in (Z/11Z)* of order 5",
+    "coker_of_A_on_L": {
+      "group": "Z/11Z",
+      "generator_class": "class of e0=(1,0,0,0) in Z^4 / A_aug(Z^4) (augmentation coords)",
+      "order_of_generator": 11,
+      "sigma_action_multiplier_k": 9,
+      "order_of_k_in_F11_star": 5,
+      "check": "S_aug [e0] = k [e0] in coker"
+    },
+    "geometric_kernel_exponents": {
+      "description": "Over alg closed field, a_i=zeta^{c_i} for primitive 11th root zeta lies in ker psi on the product-one torus and generates the order-11 etale kernel.",
+      "c": [
+        5,
+        3,
+        4,
+        9,
+        1
+      ],
+      "sum_c_mod_11": 0,
+      "A_c_mod_11": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sigma_action_on_exponents": {
+        "rule": "(sigma.a)_i = a_{i-1} => c |-> (c_{i-1})_i",
+        "multiplier_lambda": 9,
+        "c_shifted": [
+          1,
+          5,
+          3,
+          4,
+          9
+        ]
+      }
+    },
+    "resolvent": {
+      "presentation": "X^11 - 1 = 0 for the mu_11 coordinate on the kernel (after choosing zeta)",
+      "C5_semidirect": "sigma(X) = X^9 on the mu_11 generator X=zeta",
+      "note": "Resolvent of the torsor class over the trace hyperplane is H6.1, not H6.0"
+    },
+    "modular_kernel_witnesses": [
+      {
+        "prime": 23,
+        "zeta11": 4,
+        "a": [
+          12,
+          18,
+          3,
+          13,
+          4
+        ],
+        "psi_a_equals_1": true
+      },
+      {
+        "prime": 67,
+        "zeta11": 64,
+        "a": [
+          25,
+          40,
+          14,
+          15,
+          64
+        ],
+        "psi_a_equals_1": true
+      }
+    ]
+  },
+  "scalar_vs_projective": {
+    "det_A_on_Z5": 33,
+    "factorization": "33 = 3 * 11",
+    "projective_degree": 11,
+    "scalar_diagonal_factor": 3,
+    "note": "Full map d |-> d^2 sigma(d) on E^* has degree 33; projectivized torus isogeny degree is 11."
+  },
+  "inverse_up_to_11": {
+    "statement": "B o A = A o B = [11] on the projective/augmentation torus",
+    "samples": [
+      {
+        "v": [
+          1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "A_v": [
+          2,
+          -1,
+          -1,
+          0,
+          0
+        ],
+        "B_A_v": [
+          11,
+          -11,
+          0,
+          0,
+          0
+        ],
+        "equals_11v": true
+      },
+      {
+        "v": [
+          1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        "A_v": [
+          2,
+          1,
+          -2,
+          -1,
+          0
+        ],
+        "B_A_v": [
+          11,
+          0,
+          -11,
+          0,
+          0
+        ],
+        "equals_11v": true
+      },
+      {
+        "v": [
+          1,
+          1,
+          1,
+          1,
+          -4
+        ],
+        "A_v": [
+          -2,
+          3,
+          3,
+          3,
+          -7
+        ],
+        "B_A_v": [
+          11,
+          11,
+          11,
+          11,
+          -44
+        ],
+        "equals_11v": true
+      },
+      {
+        "v": [
+          2,
+          -1,
+          -1,
+          0,
+          0
+        ],
+        "A_v": [
+          4,
+          0,
+          -3,
+          -1,
+          0
+        ],
+        "B_A_v": [
+          22,
+          -11,
+          -11,
+          0,
+          0
+        ],
+        "equals_11v": true
+      }
+    ]
+  },
+  "h4_field_binding": {
+    "field_model_path": "goal_runs_after_35fa/H_11_5_TWIST/field_model.json",
+    "norm_model_path": "goal_runs_after_35fa/H_11_5_TWIST/norm_model.json",
+    "format_field": "H-11_5-INVARIANT-FIELD-v1",
+    "format_norm": "H-11_5-NORM-TOWER-v1",
+    "E": "L^<T> = C(r0,...,r4)/(r0*r1*r2*r3*r4-1)",
+    "K": "L^H = E^<sigma> = C(U1,U2,U3,U4)",
+    "sigma_action_r": "sigma(f)(y)=f(P^-1 y); sigma(r_i)=r_(i+1)",
+    "r_formula": "r_i=y_(i+1)*y_(i+2)/y_i^2, indices modulo 5",
+    "product_relation": "product_i r_i=1",
+    "r_exponent_vectors": [
+      [
+        -2,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -2,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -2,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        -2,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        -2
+      ]
+    ],
+    "four_by_four_exponent_determinant": 11,
+    "trace_coefficient_c": {
+      "c": "beta^2*sigma(beta)=r2^-1",
+      "norm_E_over_K": "product_i sigma^i(c)=1",
+      "warning": "norm one does not solve d^2*sigma(d)=c^-1; that is the 2+sigma isogeny, not multiplicative Hilbert 90"
+    },
+    "coefficient_isogeny_class": {
+      "degree": 33,
+      "order_11_witness": "d=r1*r2^6*r3^-2*r4^2 satisfies psi(d)=r2^11",
+      "conclusion": "the class of r2, equivalently of c=r2^-1, has exact order 11 modulo psi(E^*)"
+    },
+    "finite_field_witness_prime": 331,
+    "multiplicative_psi_samples": [
+      {
+        "p": 89,
+        "r": [
+          50,
+          54,
+          6,
+          34,
+          72
+        ],
+        "psi_componentwise": [
+          42,
+          18,
+          75,
+          83,
+          36
+        ],
+        "prod_r": 1
+      },
+      {
+        "p": 67,
+        "r": [
+          66,
+          63,
+          52,
+          39,
+          27
+        ],
+        "psi_componentwise": [
+          27,
+          51,
+          38,
+          32,
+          23
+        ],
+        "prod_r": 1
+      },
+      {
+        "p": 23,
+        "r": [
+          16,
+          12,
+          19,
+          7,
+          4
+        ],
+        "psi_componentwise": [
+          12,
+          4,
+          8,
+          11,
+          20
+        ],
+        "prod_r": 1
+      }
+    ]
+  },
+  "multiplicative_formulas": {
+    "phi": "[a] |-> [a^2 * sigma(a)]",
+    "component_on_product_one_torus": "psi(r)_i = r_i^2 * r_{i-1}",
+    "dual_from_group_ring": "B = 5 - 3 sigma + sigma^2 - sigma^3"
+  },
+  "scope": "H6.0 structural isogeny only; no torsor decision, no point/pointless"
+}

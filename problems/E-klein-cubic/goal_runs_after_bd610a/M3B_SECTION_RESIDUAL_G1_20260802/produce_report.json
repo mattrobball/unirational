@@ -1,0 +1,53 @@
+{
+  "primes": {
+    "23": {
+      "zeta11": 2,
+      "term_counts": [
+        19,
+        48,
+        102,
+        169,
+        249,
+        297,
+        322,
+        297,
+        249,
+        169,
+        102,
+        48,
+        19
+      ],
+      "witness": {
+        "equations_all_zero": true,
+        "gcd_degree": 0,
+        "jacobian_rank": 13
+      },
+      "path": "g1_equations_p23.json"
+    },
+    "67": {
+      "zeta11": 9,
+      "term_counts": [
+        20,
+        50,
+        106,
+        176,
+        258,
+        308,
+        334,
+        308,
+        258,
+        176,
+        106,
+        50,
+        20
+      ],
+      "witness": {
+        "equations_all_zero": true,
+        "gcd_degree": 0,
+        "jacobian_rank": 13
+      },
+      "path": "g1_equations_p67.json"
+    }
+  },
+  "schema": "m3b-g1-produce-report-v1"
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "g3a-dominance-bridge-v1",
+  "verdict": "G3-DOMINANCE-AUTOMATIC",
+  "jacobian_rank_four_required": false,
+  "headline": "OPEN",
+  "positive_steps": [
+    {
+      "id": 1,
+      "name": "image_irreducible",
+      "status": "PASS",
+      "check": "Z=closure(image f) irreducible by definition",
+      "citation": "G2 UNIVERSAL_OBJECT / standard"
+    },
+    {
+      "id": 2,
+      "name": "kernel_normal",
+      "status": "PASS",
+      "check": "kernel of G-action on Z is normal",
+      "citation": "group action"
+    },
+    {
+      "id": 3,
+      "name": "kernel_not_G",
+      "status": "PASS",
+      "check": "W^G=0 for irreducible Klein rep => X^G empty",
+      "citation": "SPEC.md No global fixed point"
+    },
+    {
+      "id": 4,
+      "name": "faithful",
+      "status": "PASS",
+      "check": "PSL(2,11) simple of order 660",
+      "citation": "G2_PSL211_PERFECTNESS_EXACT_OK"
+    },
+    {
+      "id": 5,
+      "name": "generically_free",
+      "status": "PASS",
+      "check": "faithful finite-group action in char 0 is generically free",
+      "citation": "standard; UNIVERSAL_OBJECT freeness"
+    },
+    {
+      "id": 6,
+      "name": "ed_bound",
+      "status": "ACCEPTED_INPUT",
+      "check": "ed_C(PSL(2,11))>=3",
+      "citation": "SPEC Beauville essential dimension 3; accepted lower bound"
+    },
+    {
+      "id": 7,
+      "name": "dominance",
+      "status": "PASS",
+      "check": "dim Z>=3 and dim X=3 => Z=X",
+      "citation": "dimension count"
+    }
+  ],
+  "loopholes": {
+    "constant_map": "forbidden by X^G empty",
+    "affine_cone": "closed by projective G2 conventions"
+  },
+  "negative": {
+    "source": "goal_runs_after_35fa/G_UNIVERSAL/ (G2-FINITE-GENERATION-PASS; ALL_DEGREE_THEOREM.md; DECISION.md)",
+    "statement": "X_gen(K_proj)=empty iff no nonzero homogeneous G-equivariant landing map W->W to the Klein cubic (linear-source maps excluded)",
+    "headline_promotion": "requires accepted source-exhaustiveness bridge named by G2/DECISION; not re-proved in G3A"
+  }
+}

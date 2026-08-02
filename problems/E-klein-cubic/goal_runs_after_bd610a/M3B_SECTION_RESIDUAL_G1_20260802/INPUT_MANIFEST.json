@@ -1,0 +1,49 @@
+{
+  "goal": "M3B_SECTION_RESIDUAL_G1",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "parent_exit": "M3-INTEGRAL-DEGREE4-MULTISECTION",
+  "section_question": "UNDECIDED",
+  "headline": "OPEN",
+  "inputs": [
+    {
+      "path": "goals_2026-08-01/Q_SCHUR_EXPLICIT_FRAME_CODEX_ROOT_20260801_8F3D/exact_frame.json",
+      "sha256": "53f2d5e6afa2c6afdf49f53723339ccf5755f919471d42f907d5542ddef87e45",
+      "exists": true
+    },
+    {
+      "path": "goals_after_bd610a/M3_SARKISOV_SECTION/modular_residual_section_p23.json",
+      "sha256": "0a2c25bf8e2a7f67fdf61df286661dd28dc1bdd2b386c52932bc8309c98f217c",
+      "exists": true
+    },
+    {
+      "path": "goals_after_bd610a/M3_SARKISOV_SECTION/modular_residual_section_p67.json",
+      "sha256": "b5a56bf820c8170ca35e72b99c9c29bdd2f0630547475a82070b772d940ad896",
+      "exists": true
+    },
+    {
+      "path": "goals_after_bd610a/M3_SARKISOV_SECTION/SECTION_RESIDUAL.md",
+      "sha256": "f2e66fbcb5e0ce52649f276447d5d75ec131b555f95a86af2307954c9f47be07",
+      "exists": true
+    },
+    {
+      "path": "goals_after_bd610a/M3_SARKISOV_SECTION/residual_gate.json",
+      "sha256": "a60da6e0a109ff06379ead2b709c588c86cac19e7c169adcd5804ff2fe03fe54",
+      "exists": true
+    },
+    {
+      "path": "goals_after_bd610a/M3_SARKISOV_SECTION/SECTION_CLASSES.json",
+      "sha256": "1abc18995c76924aa064af61c49ca9e06fc72ae3b5e7befd1baa861935b9d865",
+      "exists": true
+    },
+    {
+      "path": "goals_after_bd610a/M3_SARKISOV_SECTION/STATUS.md",
+      "sha256": "e0a2a63a2973f4bf989b1b841639aa29abcd0a7304ea9910191d08cba12b155e",
+      "exists": true
+    },
+    {
+      "path": "goals_after_bd610a/M3_SARKISOV_SECTION/SEAL.json",
+      "sha256": "26d2972b1a21366bfa8114c9f1cddd3b2fe86fab1fbd120153db6f944bb64f6f",
+      "exists": true
+    }
+  ]
+}

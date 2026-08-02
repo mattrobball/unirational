@@ -1,0 +1,305 @@
+{
+  "schema": "g4-induced-points-v1",
+  "classes": [
+    {
+      "label": "A5_class_1",
+      "class_index": 1,
+      "degree": 11,
+      "L_H": {
+        "description": "Finite etale K_proj-algebra L_H = T \u00d7^G (G/H) attached to the genuine generic G-torsor T/K_proj. Over K_proj it is a field of degree 11 (Gal image contains G, action on cosets transitive). Coset basis e_0..e_10 with left G-action via s_perm, t_perm.",
+        "basis": [
+          "e_0",
+          "e_1",
+          "e_2",
+          "e_3",
+          "e_4",
+          "e_5",
+          "e_6",
+          "e_7",
+          "e_8",
+          "e_9",
+          "e_10"
+        ],
+        "degree_over_K_proj": 11,
+        "G_action": "left multiplication via s_perm, t_perm",
+        "presentation": "lazy coset/resolvent interface (no 660-dim expansion)"
+      },
+      "base_H_point": {
+        "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_1/point.json",
+        "exit": "H-A5-CLASS1-RATIONAL-POINT",
+        "format": "klein-a5-degree11-exact-point-v1",
+        "installed_coordinates": {
+          "ambient_map": "Psi_1(y)=J_1*Phi_1(y)",
+          "canonical_intertwiner": "J_1=canonical_a5_pencil.intertwiner on the separately enumerated A5_class_1 generators",
+          "equation_check": "F(A_i*z_i)=F(Psi_i)=0 exactly",
+          "invariance_reason": "A_i(sigma(h)y)=rho_i(h)A_i(y) and Psi_i(sigma(h)y)=rho_i(h)Psi_i(y), so z_i is H_i-invariant",
+          "twist_point": "z_1(y)=A_1(y)^(-1)*Psi_1(y)"
+        },
+        "canonical_target": {
+          "coordinates": [
+            "x0",
+            "x1",
+            "x2",
+            "x3",
+            "x4"
+          ],
+          "cubic": "O0+((13-g)/18)*O1",
+          "model": "augmentation module for A5 acting on its six Sylow-5 subgroups",
+          "orbit_cubics": "O0_TRIPLES and O1_TRIPLES in ../common/exact_reynolds.py",
+          "sixth_coordinate": "x5=-(x0+x1+x2+x3+x4)"
+        },
+        "scope_boundary": {
+          "consequence": "the installed genuine generic A5 twist has a rational point",
+          "full_group_boundary": "this is subgroup-positive for A5 and does not construct a point on the PSL_2(F_11) generic twist",
+          "induced_by_equivariant_map": true,
+          "map_degree": 11
+        }
+      },
+      "induction_theorem": {
+        "statement": "Let T/K_proj be the generic G-torsor and H \u2264 G maximal A5. View T as an H-torsor over Spec(L_H), L_H = T\u00d7^G(G/H). The versal H-torsor from the faithful 3-dim A5 action on P^2 (H_A5 packet) specializes along the classifying map of this H-reduction. The sealed H-rational point of the twisted Klein cubic therefore specializes to a point of X_T over L_H, i.e. a closed point of X_gen = V(Phi) of residue degree 11 over K_proj.",
+        "Phi_vanishing": "H_A5 proves F_Klein(A z)=0 for the installed equivariant degree-11 covariant; G-equivariance of the twist and specialization preserve the cubic equation. Each of the 11 geometric conjugates (coset translates) lands on X_gen.",
+        "executable_content": [
+          "coset action s_perm, t_perm of image order 660",
+          "binding to sealed H_A5 point.json for the same class label",
+          "K_proj-stability of the unordered 11-set (Galois = image of G)",
+          "degree = [L_H : K_proj] = 11"
+        ],
+        "not_claimed": [
+          "explicit 5-tuples of K_proj-coordinates for each conjugate in the normalized G3 frame (coordinate materialization is G7B)",
+          "K_proj-rational point of X_gen",
+          "identity of random search generators with H_A5 internal model"
+        ]
+      },
+      "conjugates": [
+        {
+          "coset_index": 0,
+          "label": "g_0H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 1,
+          "label": "g_1H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 2,
+          "label": "g_2H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 3,
+          "label": "g_3H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 4,
+          "label": "g_4H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 5,
+          "label": "g_5H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 6,
+          "label": "g_6H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 7,
+          "label": "g_7H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 8,
+          "label": "g_8H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 9,
+          "label": "g_9H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 10,
+          "label": "g_10H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        }
+      ],
+      "K_proj_cycle": {
+        "degree": 11,
+        "defined_over_K_proj": true,
+        "reduced_on_open": "complement of vanishing of coset-chart denominators and of the H_A5 open where the degree-11 covariant and A-frame are invertible",
+        "proof_sketch": "The closed point Spec(L_H) \u2192 X_T is Gal(L_H/K_proj)-stable by construction of induction from the H-point; degree 11."
+      },
+      "verification_of_Phi": {
+        "method": "structural equivariance + H_A5 sealed point on twist",
+        "H_A5_terminal": "H3_EXACT_BOTH_A5_POINTS_VERIFIED",
+        "independent_H_A5_check": "goal_runs_after_35fa/H_A5_TWISTS/common/verify_exact_points_direct.py",
+        "G3_frame_substitution": "deferred: requires explicit G3A-coordinate lift (G7B gate)"
+      }
+    },
+    {
+      "label": "A5_class_2",
+      "class_index": 2,
+      "degree": 11,
+      "L_H": {
+        "description": "Finite etale K_proj-algebra L_H = T \u00d7^G (G/H) attached to the genuine generic G-torsor T/K_proj. Over K_proj it is a field of degree 11 (Gal image contains G, action on cosets transitive). Coset basis e_0..e_10 with left G-action via s_perm, t_perm.",
+        "basis": [
+          "e_0",
+          "e_1",
+          "e_2",
+          "e_3",
+          "e_4",
+          "e_5",
+          "e_6",
+          "e_7",
+          "e_8",
+          "e_9",
+          "e_10"
+        ],
+        "degree_over_K_proj": 11,
+        "G_action": "left multiplication via s_perm, t_perm",
+        "presentation": "lazy coset/resolvent interface (no 660-dim expansion)"
+      },
+      "base_H_point": {
+        "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_2/point.json",
+        "exit": "H-A5-CLASS2-RATIONAL-POINT",
+        "format": "klein-a5-degree11-exact-point-v1",
+        "installed_coordinates": {
+          "ambient_map": "Psi_2(y)=J_2*Phi_2(y)",
+          "canonical_intertwiner": "J_2=canonical_a5_pencil.intertwiner on the separately enumerated A5_class_2 generators",
+          "equation_check": "F(A_i*z_i)=F(Psi_i)=0 exactly",
+          "invariance_reason": "A_i(sigma(h)y)=rho_i(h)A_i(y) and Psi_i(sigma(h)y)=rho_i(h)Psi_i(y), so z_i is H_i-invariant",
+          "twist_point": "z_2(y)=A_2(y)^(-1)*Psi_2(y)"
+        },
+        "canonical_target": {
+          "coordinates": [
+            "x0",
+            "x1",
+            "x2",
+            "x3",
+            "x4"
+          ],
+          "cubic": "O0+((13+g)/18)*O1",
+          "model": "augmentation module for A5 acting on its six Sylow-5 subgroups",
+          "orbit_cubics": "O0_TRIPLES and O1_TRIPLES in ../common/exact_reynolds.py",
+          "sixth_coordinate": "x5=-(x0+x1+x2+x3+x4)"
+        },
+        "scope_boundary": {
+          "consequence": "the installed genuine generic A5 twist has a rational point",
+          "full_group_boundary": "this is subgroup-positive for A5 and does not construct a point on the PSL_2(F_11) generic twist",
+          "induced_by_equivariant_map": true,
+          "map_degree": 11
+        }
+      },
+      "induction_theorem": {
+        "statement": "Let T/K_proj be the generic G-torsor and H \u2264 G maximal A5. View T as an H-torsor over Spec(L_H), L_H = T\u00d7^G(G/H). The versal H-torsor from the faithful 3-dim A5 action on P^2 (H_A5 packet) specializes along the classifying map of this H-reduction. The sealed H-rational point of the twisted Klein cubic therefore specializes to a point of X_T over L_H, i.e. a closed point of X_gen = V(Phi) of residue degree 11 over K_proj.",
+        "Phi_vanishing": "H_A5 proves F_Klein(A z)=0 for the installed equivariant degree-11 covariant; G-equivariance of the twist and specialization preserve the cubic equation. Each of the 11 geometric conjugates (coset translates) lands on X_gen.",
+        "executable_content": [
+          "coset action s_perm, t_perm of image order 660",
+          "binding to sealed H_A5 point.json for the same class label",
+          "K_proj-stability of the unordered 11-set (Galois = image of G)",
+          "degree = [L_H : K_proj] = 11"
+        ],
+        "not_claimed": [
+          "explicit 5-tuples of K_proj-coordinates for each conjugate in the normalized G3 frame (coordinate materialization is G7B)",
+          "K_proj-rational point of X_gen",
+          "identity of random search generators with H_A5 internal model"
+        ]
+      },
+      "conjugates": [
+        {
+          "coset_index": 0,
+          "label": "g_0H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 1,
+          "label": "g_1H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 2,
+          "label": "g_2H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 3,
+          "label": "g_3H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 4,
+          "label": "g_4H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 5,
+          "label": "g_5H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 6,
+          "label": "g_6H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 7,
+          "label": "g_7H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 8,
+          "label": "g_8H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 9,
+          "label": "g_9H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        },
+        {
+          "coset_index": 10,
+          "label": "g_10H",
+          "geometric_meaning": "Galois/coset translate of the specialized H-point; geometric point of V(Phi) over an algebraic closure of L_H",
+          "Phi_vanishing_reason": "Transport of H-rational point on A5-twist by coset representative; G-equivariance of generic twist places each geometric conjugate on V(Phi)"
+        }
+      ],
+      "K_proj_cycle": {
+        "degree": 11,
+        "defined_over_K_proj": true,
+        "reduced_on_open": "complement of vanishing of coset-chart denominators and of the H_A5 open where the degree-11 covariant and A-frame are invertible",
+        "proof_sketch": "The closed point Spec(L_H) \u2192 X_T is Gal(L_H/K_proj)-stable by construction of induction from the H-point; degree 11."
+      },
+      "verification_of_Phi": {
+        "method": "structural equivariance + H_A5 sealed point on twist",
+        "H_A5_terminal": "H3_EXACT_BOTH_A5_POINTS_VERIFIED",
+        "independent_H_A5_check": "goal_runs_after_35fa/H_A5_TWISTS/common/verify_exact_points_direct.py",
+        "G3_frame_substitution": "deferred: requires explicit G3A-coordinate lift (G7B gate)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "g3a-field-model-v1",
+  "base": "P0=QQ(t3,t6,t8,t11)",
+  "rank": 12,
+  "secondary_degrees": [
+    0,
+    7,
+    9,
+    10,
+    12,
+    14,
+    14,
+    16,
+    18,
+    19,
+    21,
+    28
+  ],
+  "secondary_names": [
+    "1",
+    "f7",
+    "f9",
+    "f10",
+    "f12",
+    "f14",
+    "f7^2",
+    "f7*f9",
+    "f9^2",
+    "f9*f10",
+    "f7^3",
+    "f9^2*f10"
+  ],
+  "primary_degrees": [
+    3,
+    5,
+    6,
+    8,
+    11
+  ],
+  "structure_constants": "tmp/kproj_arithmetic/normalized_kproj_table.json",
+  "products": 78,
+  "api": "src/field_api.py",
+  "tau": "f3^2/f5",
+  "inversion": "inverse_with_open records det(L_v) and coordinate denominators"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "g3p3-odd-degree-descent-v1",
+  "policy": "Odd-degree points of a cubic threefold do not descend by themselves. Only the audited path cubic-point+q \u2192 L-point on a K_proj-quadratic \u2192 Springer \u2192 inverse formulas is permitted.",
+  "A5_classes": [
+    {
+      "label": "A5_class_1",
+      "class_index": 1,
+      "degree_L_over_K_proj": 11,
+      "degree_odd": true,
+      "G4_marker": "G4-INDUCED-DEGREE11-POINT-PASS",
+      "coordinates_in_G3_frame": false,
+      "residual": "explicit 5-tuples of K_proj-coordinates for each conjugate in the normalized G3 frame (coordinate materialization is G7B)",
+      "springer_path": {
+        "step1_L_point_on_quadratic_from_p_and_q": "BLOCKED \u2014 no explicit p\u2208X_gen(L) in normalized G3 frame",
+        "step2_quadratic_descends_to_K_proj": "N/A pending step1",
+        "step3_odd_degree": true,
+        "step4_springer_on_quadratic": "NOT APPLIED",
+        "step5_inverse_to_X_gen": "NOT APPLIED",
+        "illegal_cubic_odd_degree_descent": "REJECTED"
+      },
+      "produces_K_proj_cubic_point": false
+    },
+    {
+      "label": "A5_class_2",
+      "class_index": 2,
+      "degree_L_over_K_proj": 11,
+      "degree_odd": true,
+      "G4_marker": "G4-INDUCED-DEGREE11-POINT-PASS",
+      "coordinates_in_G3_frame": false,
+      "residual": "explicit 5-tuples of K_proj-coordinates for each conjugate in the normalized G3 frame (coordinate materialization is G7B)",
+      "springer_path": {
+        "step1_L_point_on_quadratic_from_p_and_q": "BLOCKED \u2014 no explicit p\u2208X_gen(L) in normalized G3 frame",
+        "step2_quadratic_descends_to_K_proj": "N/A pending step1",
+        "step3_odd_degree": true,
+        "step4_springer_on_quadratic": "NOT APPLIED",
+        "step5_inverse_to_X_gen": "NOT APPLIED",
+        "illegal_cubic_odd_degree_descent": "REJECTED"
+      },
+      "produces_K_proj_cubic_point": false
+    }
+  ],
+  "G4_landing_residual": "G4.2 residual: coordinate materialization of the 11 points in the normalized G3 frame is required before low-arity ops can produce W-valued candidates. See G7B / G3P.3.",
+  "K_proj_point_via_springer": false,
+  "rejection_log": [
+    {
+      "inference": "cubic has an odd-degree point => cubic has a ground-field point",
+      "status": "REJECTED",
+      "reason": "missing quadratic interface steps 1\u20132 and 4\u20135 for both A5 classes"
+    }
+  ]
+}

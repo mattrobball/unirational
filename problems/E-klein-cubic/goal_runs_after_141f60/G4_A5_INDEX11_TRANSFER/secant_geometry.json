@@ -1,0 +1,24 @@
+{
+  "schema": "g4-secant-geometry-v1",
+  "input": "unordered Galois-stable 11-point closed subscheme of X_gen",
+  "linear_span": {
+    "expected_in_P4": "Eleven points on a smooth cubic threefold in P^4 typically span P^4; without coordinates the span dimension is not certified.",
+    "certified": false
+  },
+  "galois_stable_loci": {
+    "secants": "Galois orbits of chords join pairs; orbit sizes divide 11\u00b710=110; no K_proj-rational chord is forced by 1+10 alone (no 2-dim G-sub of W).",
+    "trisecants": "Triple intersections with lines require coordinates; residual gate.",
+    "tangents": "Not computed without embedded coordinates."
+  },
+  "residual_intersections": {
+    "degree_1_or_2_found": false,
+    "note": "No nonfunctorial binary chord tree was run. A residual K_proj point or line requires either coordinates (G7B) or the cross-class biplane incidence (G7)."
+  },
+  "line_or_conic_on_X_gen": {
+    "A5_class_1": null,
+    "A5_class_2": null,
+    "certified": false
+  },
+  "K_proj_point_from_secants": false,
+  "residual": "G4.3 residual: abstract Galois-stable geometry recorded; explicit secant residual intersections deferred pending coordinate lifts."
+}

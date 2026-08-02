@@ -1,0 +1,1465 @@
+{
+  "schema": "g7a-cross-intersections-v1",
+  "order_histogram": {
+    "10": 66,
+    "12": 55
+  },
+  "type_histogram": {
+    "order_10_D5": 66,
+    "order_12_A4": 55
+  },
+  "table": [
+    {
+      "H_index": 0,
+      "K_index": 0,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 0,
+      "K_index": 1,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 0,
+      "K_index": 2,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 0,
+      "K_index": 3,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 0,
+      "K_index": 4,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 0,
+      "K_index": 5,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 0,
+      "K_index": 6,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 0,
+      "K_index": 7,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 0,
+      "K_index": 8,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 0,
+      "K_index": 9,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 0,
+      "K_index": 10,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 1,
+      "K_index": 0,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 1,
+      "K_index": 1,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 1,
+      "K_index": 2,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 1,
+      "K_index": 3,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 1,
+      "K_index": 4,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 1,
+      "K_index": 5,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 1,
+      "K_index": 6,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 1,
+      "K_index": 7,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 1,
+      "K_index": 8,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 1,
+      "K_index": 9,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 1,
+      "K_index": 10,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 2,
+      "K_index": 0,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 2,
+      "K_index": 1,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 2,
+      "K_index": 2,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 2,
+      "K_index": 3,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 2,
+      "K_index": 4,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 2,
+      "K_index": 5,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 2,
+      "K_index": 6,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 2,
+      "K_index": 7,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 2,
+      "K_index": 8,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 2,
+      "K_index": 9,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 2,
+      "K_index": 10,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 3,
+      "K_index": 0,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 3,
+      "K_index": 1,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 3,
+      "K_index": 2,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 3,
+      "K_index": 3,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 3,
+      "K_index": 4,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 3,
+      "K_index": 5,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 3,
+      "K_index": 6,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 3,
+      "K_index": 7,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 3,
+      "K_index": 8,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 3,
+      "K_index": 9,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 3,
+      "K_index": 10,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 4,
+      "K_index": 0,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 4,
+      "K_index": 1,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 4,
+      "K_index": 2,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 4,
+      "K_index": 3,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 4,
+      "K_index": 4,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 4,
+      "K_index": 5,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 4,
+      "K_index": 6,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 4,
+      "K_index": 7,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 4,
+      "K_index": 8,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 4,
+      "K_index": 9,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 4,
+      "K_index": 10,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 5,
+      "K_index": 0,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 5,
+      "K_index": 1,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 5,
+      "K_index": 2,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 5,
+      "K_index": 3,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 5,
+      "K_index": 4,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 5,
+      "K_index": 5,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 5,
+      "K_index": 6,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 5,
+      "K_index": 7,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 5,
+      "K_index": 8,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 5,
+      "K_index": 9,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 5,
+      "K_index": 10,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 6,
+      "K_index": 0,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 6,
+      "K_index": 1,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 6,
+      "K_index": 2,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 6,
+      "K_index": 3,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 6,
+      "K_index": 4,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 6,
+      "K_index": 5,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 6,
+      "K_index": 6,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 6,
+      "K_index": 7,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 6,
+      "K_index": 8,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 6,
+      "K_index": 9,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 6,
+      "K_index": 10,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 7,
+      "K_index": 0,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 7,
+      "K_index": 1,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 7,
+      "K_index": 2,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 7,
+      "K_index": 3,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 7,
+      "K_index": 4,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 7,
+      "K_index": 5,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 7,
+      "K_index": 6,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 7,
+      "K_index": 7,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 7,
+      "K_index": 8,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 7,
+      "K_index": 9,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 7,
+      "K_index": 10,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 8,
+      "K_index": 0,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 8,
+      "K_index": 1,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 8,
+      "K_index": 2,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 8,
+      "K_index": 3,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 8,
+      "K_index": 4,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 8,
+      "K_index": 5,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 8,
+      "K_index": 6,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 8,
+      "K_index": 7,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 8,
+      "K_index": 8,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 8,
+      "K_index": 9,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 8,
+      "K_index": 10,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 9,
+      "K_index": 0,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 9,
+      "K_index": 1,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 9,
+      "K_index": 2,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 9,
+      "K_index": 3,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 9,
+      "K_index": 4,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 9,
+      "K_index": 5,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 9,
+      "K_index": 6,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 9,
+      "K_index": 7,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 9,
+      "K_index": 8,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 9,
+      "K_index": 9,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 9,
+      "K_index": 10,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 10,
+      "K_index": 0,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 10,
+      "K_index": 1,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 10,
+      "K_index": 2,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 10,
+      "K_index": 3,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 10,
+      "K_index": 4,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 10,
+      "K_index": 5,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 10,
+      "K_index": 6,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 10,
+      "K_index": 7,
+      "order": 10,
+      "iso_type": "D5",
+      "element_order_signature": {
+        "1": 1,
+        "2": 5,
+        "5": 4
+      },
+      "incident": false
+    },
+    {
+      "H_index": 10,
+      "K_index": 8,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 10,
+      "K_index": 9,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    },
+    {
+      "H_index": 10,
+      "K_index": 10,
+      "order": 12,
+      "iso_type": "A4",
+      "element_order_signature": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "incident": true
+    }
+  ]
+}

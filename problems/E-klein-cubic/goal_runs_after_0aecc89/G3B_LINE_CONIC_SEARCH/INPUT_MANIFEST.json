@@ -1,0 +1,49 @@
+{
+  "goal": "G3B_LINE_CONIC_SEARCH",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "g3a_exit": "G3A-ARITHMETIC-DOMINANCE-PASS",
+  "g2_exit": "G2-FINITE-GENERATION-PASS",
+  "specialization_note": "Executable line/conic ledgers use secondary-0 slice at t3=t6=t8=t11=1 over QQ. Full K_proj coefficients remain in generic_cubic.json. Modular hits are discovery-only.",
+  "inputs": [
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md",
+      "sha256": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/SEAL.json",
+      "sha256": "b289c6cff44fc669c1565b1ef508756156b2453b0fe99b28ab020a6a5e40fe00",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/dominance_bridge.json",
+      "sha256": "a6e6d99dc01a9a4766afd9b6956c5b33fe3ff51e90e1734456814c8079603015",
+      "exists": true
+    },
+    {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json",
+      "sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/STATUS.md",
+      "sha256": "fe8a88bac91187539498a82a5cbb3589a3d76c0cef5358696341aba132023532",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/DECISION.md",
+      "sha256": "b20d4688716e6482a4302fc571361bcf185d0ec79e6e1e80908566fb13e01c44",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/src/phi_api.py",
+      "sha256": "c4e321b53881e19a6c648738bb06ced36f9dbaae0a5278edd4a73174eb9ba41e",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/phi_exact.json",
+      "sha256": "e647609d220e897dd05074db0f78da09b4b599db8ece8db41210f5f37d4760a6",
+      "exists": true
+    }
+  ]
+}

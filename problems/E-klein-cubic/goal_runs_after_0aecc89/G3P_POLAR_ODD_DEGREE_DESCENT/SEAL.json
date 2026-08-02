@@ -1,0 +1,50 @@
+{
+  "format": "g3p-polar-odd-degree-descent-seal-v1",
+  "exit": "G3P-POLAR-SYSTEM-PASS",
+  "headline": "OPEN",
+  "parent_exits": {
+    "G3A": "G3A-ARITHMETIC-DOMINANCE-PASS",
+    "G4": "G4-INDUCED-DEGREE11-POINT-PASS",
+    "G2": "G2-FINITE-GENERATION-PASS"
+  },
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "pinned_goal_state": "0aecc89f0598cfd982295107352e6cc6e9fb04e9",
+  "markers": [
+    "G3P_POLARS_VERIFY_OK",
+    "G3P_QUADRICS_VERIFY_OK",
+    "G3P_POINT_BOUNDARY_OK",
+    "G3P_VERIFY_ALL_OK"
+  ],
+  "files": {
+    "INPUT_MANIFEST.json": "0092f34a4c9eb372442f4526e449288a883e84fa9849e16e4d9dbcdadd6ea5e0",
+    "ODD_DEGREE_DESCENT.md": "2e1c647fa633a449a3c06737db9e6065b47d4017e85da5f3b2ed370ebdde1634",
+    "POLAR_SYSTEM.md": "58394da51e2a8087421844c410a5ae92ea8bebd69cf15ab223924ecb18b0a4f2",
+    "QUADRATIC_INVARIANTS.md": "a68629c80445575161047500a84ba5868d8f20c9557862de6d1f86a6d7bb8701",
+    "REPLAY.md": "26aa2f0d8dec4b36e43ea82c1447f03746e1a1cfa1908e1bcf1354cda1a25eb7",
+    "STATUS.md": "48fe7896db3bf24fd3285777b0c4b817d1e13a283b246b531c553a90e0d36295",
+    "TANGENT_INCIDENCE.md": "1784e6d0f7efedb9fe4007c30e368da37114cbef728649d85ba2e49775bf3b5d",
+    "TAUTOLOGICAL_POINT.md": "651472ab0fccccbc2ae0e0d9c3a1dace514defdaf9be7297b8327c9a1d4a6017",
+    "constructions.json": "01c66368249d93d642b35d8fedbc9c80695dd55b546e0e1b9b4183ebf5c8e44f",
+    "odd_degree_descent.json": "96a400232adb71a51cf7aa28b9bd848c1654b06621fb32adb9c27205aad2c00c",
+    "polar_system.json": "d55afb8ff0add8af002f53e639e785942d819e21285ff68d4fe14bcf539049cc",
+    "produce.py": "ee17b13d401490658eded000eaf51279dce8cc0817ceed792237b4f24617a99a",
+    "quadratic_invariants.json": "cd929ff6dedb3f693b9a72b57885ab1949c185a02871748bba21092efb8d209f",
+    "src/polar_core.py": "76d9a7cf576f61e3fb8d7b01d8a7b73b4c3a6c9a6fa9552b1d6dbf915e3b3967",
+    "verify_all.py": "049b4cf8f826c52428553c12727c46f39818c64c3c8c752ac479d60383121cb0",
+    "verify_point.py": "c86f0ddb70858e2bf7cf02526ffd603ee21b5301d7af39decc28b9369cd7ac7f",
+    "verify_polars.py": "5c0f8bbcb0b59cf5c1a7fc83c7af58e97acb6f6935602198cc37268bd96e26ee",
+    "verify_quadrics.py": "cb9bd8fc22c334ec2a5d0b92d9e92090e3dd1dc6aaeee7012d39a5e38b6d8923"
+  },
+  "sha256sums": "fcf0d257cafcb2e726cab0b699dc9b69b04b6eb5cc1e8d07539bdfb81f7dd47f",
+  "nonclaims": [
+    "no K_proj-point of X_gen",
+    "no G3P-POINT-HEADLINE-POSITIVE",
+    "no illegal cubic odd-degree descent",
+    "not a Problem-E headline",
+    "Clifford class over full K_proj not expanded"
+  ],
+  "residual_gates": [
+    "section of Q_q or I_q over K_proj",
+    "G3-frame materialization of G4 degree-11 points for Springer path"
+  ]
+}

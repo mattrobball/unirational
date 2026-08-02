@@ -1,0 +1,38 @@
+{
+  "schema": "g5-valuation-models-v1",
+  "field": "K_proj = C(P(W))^G with trdeg_C = 4; K_aff = C(W)^G pure transcendental of degree 1 over K_proj",
+  "group": "G = PSL_2(F_11), order 660, perfect",
+  "sites": {
+    "f5": {
+      "divisor_source": "V(f5) subset P(W), integral normal quintic",
+      "quotient_center": "image D5 of V(f5) in the geometric quotient; one prime (geometrically integral)",
+      "uniformizer_K_aff": "f5 (source order 1 => e(E/D)=1)",
+      "uniformizer_K_proj_open": "pi5 = f3*f5/f8 on the open f3*f8 != 0",
+      "ramification": "e = 1 (unramified quotient valuation)",
+      "inertia": "trivial: a nonidentity projective linear g cannot fix an irreducible nonlinear hypersurface pointwise",
+      "decomposition_group": "full G (only surviving unramified full-group class after V3/A5 elimination)",
+      "residue_transcendence_degree_K_proj": 3,
+      "residue_field": "kappa5 = Frac(R/(f5)) degree-zero part for K_proj; free rank-12 over C(f3,f6,f8,f11) before localization",
+      "residue_G_torsor": "unramified generic G-torsor reduces to a genuine G-torsor over kappa5 (finite-etale equivalence for henselian rings; not a single H90 matrix reduction)",
+      "gauge_independence": "any two Hilbert-90 frames differ by GL_5 on a common open; integral models with unit determinant reduce to isomorphic residue twists",
+      "retired_bounded_fact": "degree-16 support-at-most-five emptiness on the Hironaka quotient (V-F5-DEGREE16-SUPPORT-LE5-EMPTY) is consumed only as a finite support theorem, not as full residue pointlessness"
+    },
+    "f6": {
+      "divisor_source": "V(f6) subset P(W), geometrically integral sextic",
+      "quotient_center": "image D6 of V(f6); one prime",
+      "uniformizer_K_aff": "f6",
+      "uniformizer_K_proj_open": "pi6 = f3^2/f5 * (f6-free alternate) or f6/f3^2 after tau-open; use affine f6 on K_aff",
+      "alternate_weight_one_gauge": "q6 = f3^2/f5 is a unit at f6=0 when f3,f5 != 0",
+      "ramification": "e = 1",
+      "inertia": "trivial (same hypersurface argument)",
+      "decomposition_group": "full G",
+      "residue_transcendence_degree_K_proj": 3,
+      "residue_field": "kappa6 = Frac(R/(f6)) degree-zero part",
+      "residue_G_torsor": "unramified reduction of the generic G-torsor; genuine residue G-torsor",
+      "gauge_independence": "same GL_5 open argument as f5"
+    }
+  },
+  "v3_normal_form_input": "V3-RESIDUE-NORMAL-FORM-PASS",
+  "generic_cubic_sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+  "marker": "G5-RESIDUE-TORSOR-MODEL-PASS"
+}

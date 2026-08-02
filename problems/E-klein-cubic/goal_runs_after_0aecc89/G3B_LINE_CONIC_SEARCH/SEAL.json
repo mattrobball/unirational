@@ -1,0 +1,27 @@
+{
+  "format": "g3b-line-conic-seal-v1",
+  "exit": "G3B-UNDECIDED",
+  "headline": "OPEN",
+  "lane": "B_lines_and_plane_conics",
+  "g3a_exit": "G3A-ARITHMETIC-DOMINANCE-PASS",
+  "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
+  "K_proj_line_found": false,
+  "K_proj_conic_found": false,
+  "files": {
+    "INPUT_MANIFEST.json": "778a62ef566d8403fe170259bfa78fddc600e203fc30e0b4f3b34e97952f821d",
+    "line_scheme.json": "b525da86921f702544d770581d7ee3c18fb3560717f081f207ac0d6f50de995e",
+    "line_search.json": "5fb5177a7ed46dbfbf1b2bf67052f8ab69b20e4eaf6201f3e6705ce6226a3c9d",
+    "conic_search.json": "b1cf6502fc9fdde3c6b458eeb70f3322235bee1a85d4edbd26978567d50ccdd3",
+    "formal_line_recipe.json": "eee24ba6f51605427309cf0bcb0b5d61fe75a8467e5bbe1fa4bcd3ab28ea8422",
+    "LINE_CONIC_SEARCH.md": "02848c30b15899b89ed8dcee8c4d05717451c539afe7980d5582062e5a2f653b",
+    "produce_g3b.py": "780d98b6590b73b4320e42a21f1aa978685f4bfa36b6ae2c79ea9c3ab5fca086",
+    "verify.py": "98fa67d613d613343701f6c3cbde3edaf056503afe9f28c282f51d93faf256ec",
+    "REPLAY.md": "b852b0d5ec8b8762ff1bbd0a547d2b6696f3ab1c13023a351a287e48f49ca493",
+    "STATUS.md": "723dae454a1ba5f8962ad69c899001d6abc05246f3d9da12c67ec7a0f2610659"
+  },
+  "nonclaims": [
+    "no G3-POINT-HEADLINE-POSITIVE",
+    "modular lines discovery-only",
+    "specialized emptiness not full K_proj emptiness"
+  ]
+}
