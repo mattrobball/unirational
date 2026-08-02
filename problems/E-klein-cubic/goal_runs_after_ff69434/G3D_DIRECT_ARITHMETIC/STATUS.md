@@ -83,3 +83,25 @@ Subpacket `line27_exact/`:
 - Chart-0 shape-lemma RUR: irreducible deg-27 minpoly over QQ; no QQ-line
 - Modular reconstruction at p=10007: chart equations vanish
 - No K_proj-line; no headline point
+
+
+## K_proj line algebra progress
+
+- `G3D-LINE-27-KPROJ-PARTIAL` in `line27_exact/`
+- No QQ-param line on full multi-component G_q (empty ideal)
+- Secondary-0 RUR lines fail higher secondary components
+- **K_t Fano decided** (see below); residual is free unspecialized K_proj only
+
+
+## Weil/Fano over K_t (closed)
+
+Subpacket `line27_exact/`:
+
+- Marker: `G3D-WEIL-FANO-KT-DEGREE27-PASS`
+- K_t = QQ(f7) at t=(2,3,5,7), field deg 12
+- Chart-0 Fano over K_t: modular multi-prime Singular dim=0, **vdim=27** (p=103,151,641,691,701; irred minpoly primes 151+)
+- No K_t-line certified; expected Weil degree over QQ if étale = 324
+- Residual free K_proj only: `G3D-LINE-27-RUR-KPROJ-OPEN`
+- Verify: `G3D_WEIL_FANO_KT_OK`
+- Reducedness: real radical attempt with captured timeout → residual non-verdict (not claimed reduced)
+

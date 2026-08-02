@@ -1,21 +1,43 @@
 {
-  "format": "g3d-line27-rur-seal-v1",
-  "exit": "G3D-LINE-27-RUR-SPECIALIZED-PASS",
+  "format": "g3d-line27-rur-seal-v5",
+  "exit": "G3D-WEIL-FANO-KT-DEGREE27-PASS",
+  "also_exits": [
+    "G3D-LINE-27-RUR-SPECIALIZED-PASS",
+    "G3D-LINE-27-KPROJ-PARTIAL"
+  ],
   "residual": "G3D-LINE-27-RUR-KPROJ-OPEN",
+  "residual_scope": "free unspecialized K_proj only",
+  "reducedness": "RESIDUAL_NONVERDICT",
+  "reducedness_error": "TimeoutExpired",
+  "reducedness_cas_log": "radical_timeout_p151.log",
   "headline": "OPEN",
-  "parent": "G3D_DIRECT_ARITHMETIC",
-  "verify": "G3D_LINE27_RUR_OK",
+  "produce_entry": "produce_weil_fano.py \u2192 run_modular_fano.main",
+  "verify_markers": [
+    "G3D_LINE27_RUR_OK",
+    "G3D_WEIL_FANO_KT_OK"
+  ],
   "files": {
+    "LINE_27_KPROJ.md": "bfdc34200be6e956b903bccd64be3f574f0bd8f5e8aa2bc2669072fd28002d20",
     "LINE_27_RUR.md": "595254c66521692c15283b267d05d268a68db7ab818eab35c4f36d8215e53af5",
+    "WEIL_FANO_KT.md": "0e822f59805179d677468f64a8e58f3b64015eaaa28f693a73964b63825d3eab",
     "chart_equations_specialized.json": "1bcc8a45acdbdbf3e1702040ec65eefe1c9db82c49134b48fd1fc7b4e3c11076",
     "cubic_specialized_t2357.txt": "1b23a25fc531f60ce37ee4bfad86349e86e89ba9b4a0c37a1862fbb57b423ada",
+    "finalize_packet.py": "660404d8653e87311737ef97afb801a081f64a95bdcdc7b91b00c63180a724c1",
+    "full_secondary_chart0_meta.json": "f795f5e6bcc754c44a73ff5abd7466a70a92160e0a422c08ab20960b28b89930",
+    "k_t_field.json": "66b8c8dc4733e8f38dddaed6f5779555528c3d79288375abe1d50585dad2f4e3",
+    "k_t_minpoly.sing.txt": "7b9f401bfd0e7d34156a54bca8a74a2de44c2f4030e5996bd86c599ea8b1283a",
+    "kt_model.py": "806ceaf38546b33431d0e64dad13d094c434fce3dacb9f100299c4ba6334f8e4",
     "lex_gb.txt": "c054651cacb47a64ebd6bf6ed539a0818fd1a96e4a0b25c295c30561581a5101",
+    "line_27_kproj_progress.json": "25cda51743d93d6130eb978d8f44ec3182b1855178502ba7d2eaf885ae9e395d",
     "line_27_rur.json": "e67bbab14531544d47caebbfa9afa6e3207aa03f432bff8b08d02afd0d139241",
     "minpoly_coef_matrix.txt": "f4aa098789268c97d42cf2d5fd3b393abecb5a68ee1c9e8a65cdba0272eb630e",
     "minpoly_d.txt": "66f7fd5f416564713e303a465247289aae2c9941cb05074b307ba4077a913403",
     "minpoly_d_factors.txt": "1d1c808ef2e81bccd146ed9ea1e2bcec505c069142305f39fca637a20dce178e",
+    "modular_Kt_fano.json": "9032c5fe4d730afdf734aebf0f77889c9308ad4b6329b79f77ed70600cbf5b4a",
     "multi_spec_degrees.json": "f4c53b681ddd87ca60dcbe3798c357ed3183eaedb0d64a704d9546ad4beb011b",
     "produce_line27_rur.py": "a9e64055263021cbfac57de4d2400802da7743c781f7e77b6b592bfebc9d8e1e",
+    "produce_weil_fano.py": "d0560c3c56e2b5271d6ec6b1c5d05ecb920fed8cb703b0fd721c75610357d530",
+    "run_modular_fano.py": "c0d910ce60384316b3fca7fc7f2c87054f4e7c4965db0c3252a54d0f8d4db1aa",
     "rur_G1.txt": "66f7fd5f416564713e303a465247289aae2c9941cb05074b307ba4077a913403",
     "rur_G2.txt": "bb1d223665e6ed1b1a7b9859d3c132665521721fa9f774aed43f2882b3cbb193",
     "rur_G2_c.txt": "bb1d223665e6ed1b1a7b9859d3c132665521721fa9f774aed43f2882b3cbb193",
@@ -23,12 +45,15 @@
     "rur_G3_b.txt": "c2138343c025c5fb487743dcf65c2666777ad9ce69128a8cd426d4091c03caec",
     "rur_G4.txt": "faf03bd9d110e4e8b329bf5f0ef362f983f3fa9fbe47bd3a5999d5c651d96853",
     "rur_G4_a.txt": "faf03bd9d110e4e8b329bf5f0ef362f983f3fa9fbe47bd3a5999d5c651d96853",
-    "verify_line27_rur.py": "ca8275a03ee1530757ba168cccb50e022789b1ac607a183ce5f5a3780fe0db2a"
+    "verify_line27_rur.py": "ca8275a03ee1530757ba168cccb50e022789b1ac607a183ce5f5a3780fe0db2a",
+    "verify_weil_fano.py": "9781330b4dbf4e7b1fe144134eab1f6abd60df002d1ad52c40f3b202e99ca0b1",
+    "weil_fano_kt.json": "2ad9b9b7414338ed10dbef090a068a0e73bdb57ded2ce89cedf540d6ef987481",
+    "weil_fano_kt_eqs.json": "9a397db59fe674584db14b4ba686ad5c0c855a9209848b65092126b01ea50344"
   },
   "nonclaims": [
-    "no K_proj-rational line",
-    "no full free-K_proj RUR (secondary generators free)",
-    "no Problem-E headline point",
-    "specialized secondary-0 surface over QQ, not generic K surface itself"
+    "no K_t-rational line certified",
+    "no free-K_proj RUR",
+    "no Problem-E headline",
+    "modular reducedness RESIDUAL_NONVERDICT with captured TimeoutExpired"
   ]
 }

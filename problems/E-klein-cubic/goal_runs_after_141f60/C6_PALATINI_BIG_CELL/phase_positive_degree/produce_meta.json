@@ -1,0 +1,15 @@
+{
+  "wall_seconds": 63.1788809299469,
+  "peak_rss_mb": 63.578125,
+  "marker": "C6-POSITIVE-DEGREE-RESIDUAL",
+  "lanes": [
+    "homogeneous_linear_u_equals_A_x",
+    "affine_u_equals_A_x_plus_b",
+    "diagonal_quadratic_plus_affine",
+    "rational_degree_1_over_1",
+    "lines_on_D_through_sealed_height_le_H",
+    "secondary_sparse_constant_vectors",
+    "morita_twelve_word_linear_coefficients",
+    "constant_section_equivariance_refresh"
+  ]
+}

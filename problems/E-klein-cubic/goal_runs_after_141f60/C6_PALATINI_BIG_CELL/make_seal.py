@@ -49,6 +49,11 @@ def main() -> None:
         "phase_morita_descent/descent.json",
         "phase_morita_descent/produce_meta.json",
         "phase_morita_descent/DESCENT.md",
+        "phase_positive_degree/produce_positive.py",
+        "phase_positive_degree/verify_positive.py",
+        "phase_positive_degree/positive_degree.json",
+        "phase_positive_degree/produce_meta.json",
+        "phase_positive_degree/POSITIVE_DEGREE.md",
     ]
     also = [
         "C6-FIVE-FORM-MATRIX-PASS",
@@ -58,6 +63,8 @@ def main() -> None:
         also.append("C6-EXACT-SPLIT-POINTS-PASS")
     if (HERE / "phase_morita_descent" / "descent.json").exists():
         also.append("C6-MORITA-DESCENT-OBSTRUCTION")
+    if (HERE / "phase_positive_degree" / "positive_degree.json").exists():
+        also.append("C6-POSITIVE-DEGREE-RESIDUAL")
     payload = {
         "format": "c6-seal-v3",
         "primary_exit": "C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS",

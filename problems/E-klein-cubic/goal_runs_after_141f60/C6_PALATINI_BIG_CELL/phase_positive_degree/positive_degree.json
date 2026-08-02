@@ -1,0 +1,717 @@
+{
+  "format": "c6-positive-degree-v1",
+  "marker": "C6-POSITIVE-DEGREE-RESIDUAL",
+  "consumes_sha256": {
+    "exact_points.json": "8e69417ab068d6044759618d199f1c1c2a74d8f2119e194c2bd803badef6bfe8",
+    "quartic.json": "1da8fa09a20aa4b8f4b81e8ac163efd62af01ca484cce79163a3eb65d0428886",
+    "five_form_matrix.json": "20a2a4bd28c80fa1a74a7da2964cc104a9f7d92d71cc552a86b32bc484341a09",
+    "phase_morita_descent/descent.json": "2b673c82b6c009d997c9f36711e13dd9c60ab1316bfa187f64a8bb214750e8dc",
+    "generic_pluecker_incidence.json": "c13b4a9f375ba1a45127f155c3607ec68fc153028f19850169b8c6d4e3c80309",
+    "morita_generic_dag.json": "67ed0e94de5efdd39cf29f3512958a7f8145774f54dd0d7dac17bf8bab6c8a7f",
+    "morita_generic_split_dag.json": "df2db37184d16b242e863c368928c4941c25d30c296d4070977722adf51d572f",
+    "descent_compatible_ansatz_audit.json": "64fc82b4893b6a53848cc1b95324e632d80b40ea5333038285e6f1f54d04e8bb",
+    "degree16_fano_exclusion.json": "d1fedc86eb7416f314440a6dfff45f9f065c52bef96e1e8f42215aa62a3b91b1"
+  },
+  "scope": "Bounded positive-degree / rational-function / Morita-linear-coefficient search for non-constant sections of D and equivariant common lines over K_proj after constant Morita obstruction",
+  "interface": {
+    "u_ambient": "P^5 with coordinates u0..u5 (split model after Hilbert-90)",
+    "D": "V(Q) \u2282 P^5, Q the determinantal quartic of M(u); fibre-independent on tested open",
+    "K_proj_secondary_basis": [
+      "1",
+      "f7",
+      "f9",
+      "f10",
+      "f12",
+      "f14",
+      "f7^2",
+      "f7*f9",
+      "f9^2",
+      "f9*f10",
+      "f7^3",
+      "f9^2*f10"
+    ],
+    "secondary_degrees": [
+      0,
+      7,
+      9,
+      10,
+      12,
+      14,
+      14,
+      16,
+      18,
+      19,
+      21,
+      28
+    ],
+    "P0": "Q(t3,t6,t8,t11)",
+    "morita_frame": {
+      "dag": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/morita_generic_dag.json",
+      "split_dag": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/morita_generic_split_dag.json",
+      "twelve_word_module": "C5 descent_compatible_ansatz_audit constant twelve-word basis"
+    },
+    "positive_degree_means": "coordinates of u (or of Pl\u00fccker of L) involve nonconstant elements of K_proj / nonconstant polynomial or rational functions of the base x, not merely a constant Q-point of D",
+    "forbidden": [
+      "reclaiming the 12 constant Q(\u03b611) lines as K_proj Fano points",
+      "retired e*S0*e=0 model",
+      "modular-only headline"
+    ]
+  },
+  "fibre_independence": {
+    "statement": "At good primes the normalized quartic Q_x / Q_x(e0) is independent of the tested rational x-fibres; sealed constant points of D lie on every tested fibre.  Thus D subset P^5 is a fixed hypersurface for the relative determinantal model on the tested open.",
+    "modular_reports": [
+      {
+        "prime": 23,
+        "fibres": [
+          {
+            "point": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "status": "ok",
+            "normalized_sha16": "cfb5773785834c45",
+            "normalized_first8": [
+              1,
+              20,
+              3,
+              20,
+              3,
+              20,
+              12,
+              22
+            ]
+          },
+          {
+            "point": [
+              2,
+              3,
+              5,
+              7,
+              11
+            ],
+            "status": "ok",
+            "normalized_sha16": "cfb5773785834c45",
+            "normalized_first8": [
+              1,
+              20,
+              3,
+              20,
+              3,
+              20,
+              12,
+              22
+            ]
+          },
+          {
+            "point": [
+              22,
+              21,
+              8,
+              1,
+              1
+            ],
+            "status": "ok",
+            "normalized_sha16": "cfb5773785834c45",
+            "normalized_first8": [
+              1,
+              20,
+              3,
+              20,
+              3,
+              20,
+              12,
+              22
+            ]
+          }
+        ],
+        "projectively_identical_among_ok": true,
+        "ok_fibre_count": 3
+      },
+      {
+        "prime": 67,
+        "fibres": [
+          {
+            "point": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "status": "ok",
+            "normalized_sha16": "3d4823f9be2908b5",
+            "normalized_first8": [
+              1,
+              30,
+              37,
+              30,
+              37,
+              30,
+              36,
+              62
+            ]
+          },
+          {
+            "point": [
+              2,
+              3,
+              5,
+              7,
+              11
+            ],
+            "status": "ok",
+            "normalized_sha16": "3d4823f9be2908b5",
+            "normalized_first8": [
+              1,
+              30,
+              37,
+              30,
+              37,
+              30,
+              36,
+              62
+            ]
+          },
+          {
+            "point": [
+              22,
+              21,
+              8,
+              1,
+              1
+            ],
+            "status": "ok",
+            "normalized_sha16": "3d4823f9be2908b5",
+            "normalized_first8": [
+              1,
+              30,
+              37,
+              30,
+              37,
+              30,
+              36,
+              62
+            ]
+          }
+        ],
+        "projectively_identical_among_ok": true,
+        "ok_fibre_count": 3
+      },
+      {
+        "prime": 89,
+        "fibres": [
+          {
+            "point": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "status": "ok",
+            "normalized_sha16": "d2e19b4305291abb",
+            "normalized_first8": [
+              1,
+              22,
+              67,
+              22,
+              67,
+              22,
+              48,
+              82
+            ]
+          },
+          {
+            "point": [
+              2,
+              3,
+              5,
+              7,
+              11
+            ],
+            "status": "ok",
+            "normalized_sha16": "d2e19b4305291abb",
+            "normalized_first8": [
+              1,
+              22,
+              67,
+              22,
+              67,
+              22,
+              48,
+              82
+            ]
+          },
+          {
+            "point": [
+              22,
+              21,
+              8,
+              1,
+              1
+            ],
+            "status": "ok",
+            "normalized_sha16": "d2e19b4305291abb",
+            "normalized_first8": [
+              1,
+              22,
+              67,
+              22,
+              67,
+              22,
+              48,
+              82
+            ]
+          }
+        ],
+        "projectively_identical_among_ok": true,
+        "ok_fibre_count": 3
+      }
+    ],
+    "exact_sealed_multi_fibre": [
+      {
+        "u": [
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "minors_zero": true
+      },
+      {
+        "u": [
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "minors_zero": true
+      }
+    ],
+    "modular_all_sealed_multi_fibre_p23": [
+      {
+        "u": [
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "on_D_all_three_fibres_p23": true
+      },
+      {
+        "u": [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1
+        ],
+        "on_D_all_three_fibres_p23": true
+      },
+      {
+        "u": [
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "on_D_all_three_fibres_p23": true
+      },
+      {
+        "u": [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "on_D_all_three_fibres_p23": true
+      },
+      {
+        "u": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "on_D_all_three_fibres_p23": true
+      },
+      {
+        "u": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "on_D_all_three_fibres_p23": true
+      },
+      {
+        "u": [
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "on_D_all_three_fibres_p23": true
+      },
+      {
+        "u": [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1
+        ],
+        "on_D_all_three_fibres_p23": true
+      },
+      {
+        "u": [
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "on_D_all_three_fibres_p23": true
+      },
+      {
+        "u": [
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "on_D_all_three_fibres_p23": true
+      },
+      {
+        "u": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "on_D_all_three_fibres_p23": true
+      },
+      {
+        "u": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1
+        ],
+        "on_D_all_three_fibres_p23": true
+      }
+    ],
+    "all_exact_sealed_ok": true,
+    "all_modular_sealed_ok": true
+  },
+  "ansatz_bounds": {
+    "linear_maps_degree": 1,
+    "affine_maps_degree": 1,
+    "diagonal_quadratic_degree": 2,
+    "rational_degree": "1/1",
+    "lines_through_sealed_direction_height": 2,
+    "secondary_sparse_support": 2,
+    "morita_linear_coeff_degree": 1,
+    "morita_word_basis_size": 12,
+    "random_trial_floor": {
+      "linear": 12000,
+      "affine": 12000,
+      "diagonal_quadratic": 8000,
+      "rational_1_1": 6000,
+      "morita_linear": "<=4000 nonconstant on up to 8 fibres",
+      "lines_height3_sample": 4000
+    },
+    "retained_c5_exclusions": {
+      "homogeneous_fano_covariants": "excluded through degree 16 (C5 DEGREE16_FANO_EXCLUSION)",
+      "short_morita_words": "341 words length \u22644 and two-word scalars excluded over F_23",
+      "constant_twelve_word": "Sym^2 rank 78 over F_23 (no nonzero constant c)",
+      "degree17_sparse_support_le4": "all supports size \u22644 excluded over F_23"
+    }
+  },
+  "lanes": [
+    {
+      "family": "homogeneous_linear_u_equals_A_x",
+      "degree": 1,
+      "coefficient_space": "M_{6x5}(F_p)",
+      "ambient_dim_params": 30,
+      "trials": 12000,
+      "survivors": [],
+      "survivor_count": 0,
+      "prime": 23,
+      "verdict": "no survivor in random trials"
+    },
+    {
+      "family": "affine_u_equals_A_x_plus_b",
+      "degree": 1,
+      "coefficient_space": "M_{6x5} x A^6",
+      "ambient_dim_params": 36,
+      "trials": 12000,
+      "survivors": [],
+      "survivor_count": 0,
+      "prime": 23,
+      "verdict": "no nonconstant survivor in random trials"
+    },
+    {
+      "family": "diagonal_quadratic_plus_affine",
+      "degree": 2,
+      "support": "only pure squares x_j^2 (no cross terms x_j x_k)",
+      "ambient_dim_params": 66,
+      "trials": 8000,
+      "survivors": [],
+      "survivor_count": 0,
+      "prime": 23,
+      "verdict": "no survivor in random trials"
+    },
+    {
+      "family": "rational_degree_1_over_1",
+      "numerator_degree": 1,
+      "denominator_degree": 1,
+      "trials": 6000,
+      "survivors": [],
+      "survivor_count": 0,
+      "prime": 23,
+      "verdict": "no nonconstant survivor in random trials"
+    },
+    {
+      "family": "lines_on_D_through_sealed_height_le_H",
+      "max_height_exhaustive": 2,
+      "max_height": 2,
+      "height3_random_trials": 4000,
+      "height3_modular_hits": 0,
+      "exhaustive_directions_scanned": 89364,
+      "modular_hits_p23": [],
+      "modular_hit_count_p23": 0,
+      "multi_prime_survivors": [],
+      "multi_prime_survivor_count": 0,
+      "verdict": "no multi-prime line of exhaustive height \u2264 2 (plus height-3 sample) through sealed points"
+    },
+    {
+      "family": "secondary_sparse_constant_vectors",
+      "secondary_basis": [
+        "1",
+        "f7",
+        "f9",
+        "f10",
+        "f12",
+        "f14",
+        "f7^2",
+        "f7*f9",
+        "f9^2",
+        "f9*f10",
+        "f7^3",
+        "f9^2*f10"
+      ],
+      "secondary_degrees": [
+        0,
+        7,
+        9,
+        10,
+        12,
+        14,
+        14,
+        16,
+        18,
+        19,
+        21,
+        28
+      ],
+      "support_bounds": {
+        "max_secondary_summands": 2,
+        "coefficient_vectors": "constant in Q^6",
+        "note": "support-1 = constant sections (sealed / Morita-blocked for Fano); support-2 with free secondary parameter reduces to lines on D"
+      },
+      "reduction": "delegated_to_line_ansatz_and_constant_residual",
+      "new_K_proj_fano_point": false,
+      "verdict": "no new nonconstant secondary-sparse section within support \u22642 beyond the line/constant residual already recorded"
+    },
+    {
+      "family": "morita_twelve_word_linear_coefficients",
+      "basis_words": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "coefficient_model": "c_j(x)=a_j0 + sum_{k=0..4} a_jk x_k",
+      "param_dim": 72,
+      "fibres_used": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          22,
+          21,
+          8,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          14,
+          13,
+          5
+        ],
+        [
+          2,
+          13,
+          11,
+          14,
+          22
+        ],
+        [
+          10,
+          11,
+          11,
+          14,
+          22
+        ],
+        [
+          13,
+          13,
+          22,
+          12,
+          10
+        ],
+        [
+          7,
+          21,
+          3,
+          6,
+          12
+        ],
+        [
+          11,
+          6,
+          11,
+          11,
+          7
+        ]
+      ],
+      "random_trials_nonconstant": 4000,
+      "survivors": 0,
+      "random_hits": 0,
+      "consumes_c5_constant_exclusion": {
+        "final_quadratic_rank": 78,
+        "short_word_survivors": 0
+      },
+      "verdict": "no nonconstant linear-coefficient twelve-word survivor on the 8-fibre screen in 4000 trials",
+      "new_K_proj_fano_point": false
+    },
+    {
+      "family": "constant_section_equivariance_refresh",
+      "group_order_p23": 1320,
+      "dim_invariants_V": 0,
+      "dim_invariants_wedge2_V": 0,
+      "constant_G_equivariant_line_exists": false,
+      "source": "phase_morita_descent/descent.json",
+      "note": "Constant equivariant lines remain obstructed by (\u2227\u00b2V)^G=0 from the sealed Morita descent residual.  Positive-degree sections are not constrained by that constant obstruction alone."
+    }
+  ],
+  "summary": {
+    "constructive_survivor_in_bounds": false,
+    "K_proj_fano_point_found": false,
+    "headline_bridge": false,
+    "constant_Q_lines_reclaimed": false,
+    "C6_3_entered": false,
+    "primary_packet_exit_unchanged": "C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS",
+    "residual_marker": "C6-POSITIVE-DEGREE-RESIDUAL"
+  },
+  "residual_gates": [
+    "Constant-split-line Morita descent remains blocked (Gal orbit 2, (\u2227\u00b2V)^G=0)",
+    "No linear / affine / diagonal-quadratic / rational(1/1) polynomial section of D found in the stated random-trial bounds over F_23",
+    "No multi-prime line on D through sealed Q-points at exhaustive direction height <=2 (plus height-3 random sample)",
+    "Secondary support<=2 reduces to constants/lines already residual",
+    "Morita twelve-word with degree-1 F_23 coefficients: no survivor on the multi-fibre screen in the stated trials",
+    "C5 exclusions retained through degree-16 homogeneous Fano covariants and short/constant Morita words",
+    "Not claimed: emptiness of all of D(K_proj) or of all positive-degree sections"
+  ],
+  "resources": {
+    "wall_seconds": 63.1788809299469,
+    "peak_rss_mb": 63.578125,
+    "gb_msolve_invoked": false
+  }
+}

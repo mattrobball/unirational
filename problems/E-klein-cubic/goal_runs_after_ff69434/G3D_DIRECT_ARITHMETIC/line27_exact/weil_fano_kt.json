@@ -1,0 +1,137 @@
+{
+  "schema": "g3d-weil-fano-kt-v6",
+  "t": [
+    2,
+    3,
+    5,
+    7
+  ],
+  "chart": 0,
+  "pivots": [
+    0,
+    1
+  ],
+  "model": "Singular (p,z)[a,b,c,d] minpoly=charpoly(L_f7) mod p",
+  "produce_entry": "produce_weil_fano.py \u2192 run_modular_fano.main",
+  "K_t": {
+    "t": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "eta": "f7",
+    "eta_index": 1,
+    "rank": 12,
+    "charpoly_coeffs_high_to_low": [
+      "1",
+      "0",
+      "-2055633",
+      "-1538043968",
+      "445334610168",
+      "968594484894852",
+      "-96960197291311112",
+      "107854134034864179132",
+      "-11974501298408327655648",
+      "-449125629850274718835904",
+      "98020190278492827278781120",
+      "-5379204452382335075405610240",
+      "110866561617039568865098168320"
+    ],
+    "minpoly_irreducible_over_QQ": true,
+    "is_field": true,
+    "det_power_basis": "-105229159388275392457843182865133790989265721785081119013043354534622808030187552439707101164180987531922643652837753487360",
+    "det_power_basis_nonzero": true
+  },
+  "modular_primes": [
+    {
+      "p": 103,
+      "irred_minpoly": false,
+      "dim": 0,
+      "mult": 27,
+      "vdim": 27,
+      "raw": "P103|dim=0|mult=27|vdim=27"
+    },
+    {
+      "p": 151,
+      "irred_minpoly": true,
+      "dim": 0,
+      "mult": 27,
+      "vdim": 27,
+      "raw": "P151|dim=0|mult=27|vdim=27"
+    },
+    {
+      "p": 641,
+      "irred_minpoly": true,
+      "dim": 0,
+      "mult": 27,
+      "vdim": 27,
+      "raw": "P641|dim=0|mult=27|vdim=27"
+    },
+    {
+      "p": 691,
+      "irred_minpoly": true,
+      "dim": 0,
+      "mult": 27,
+      "vdim": 27,
+      "raw": "P691|dim=0|mult=27|vdim=27"
+    },
+    {
+      "p": 701,
+      "irred_minpoly": true,
+      "dim": 0,
+      "mult": 27,
+      "vdim": 27,
+      "raw": "P701|dim=0|mult=27|vdim=27"
+    }
+  ],
+  "holdout_prime": 701,
+  "reducedness": {
+    "status": "RESIDUAL_NONVERDICT",
+    "prime": 151,
+    "irred_minpoly": true,
+    "timeout_s": 90,
+    "elapsed_s": 90.006,
+    "method": "Singular radical(I)",
+    "error": "TimeoutExpired",
+    "cas_log": "radical_timeout_p151.log",
+    "partial_stdout": "P151|dim=0|mult=27|vdim=27\n",
+    "note": "Degree 27 multi-prime decided. Radical on irred prime hit resource timeout; reducedness is honest residual non-verdict with captured log."
+  },
+  "decision": {
+    "Fano_over_Kt": {
+      "dim": 0,
+      "vdim": 27,
+      "consistent_across_primes": true,
+      "primes_checked": [
+        103,
+        151,
+        641,
+        691,
+        701
+      ],
+      "irreducible_minpoly_primes": [
+        151,
+        641,
+        691,
+        701
+      ],
+      "K_t_rational_line": null,
+      "reducedness": "RESIDUAL_NONVERDICT"
+    },
+    "expected_geometric_degree_over_Kt": 27,
+    "expected_Weil_degree_over_QQ": 324,
+    "K_t_rational_line": null
+  },
+  "marker": "G3D-WEIL-FANO-KT-DEGREE27-PASS",
+  "residual_marker": "G3D-LINE-27-RUR-KPROJ-OPEN",
+  "residual_scope": "free unspecialized K_proj only; K_t degree-27 Fano decided; modular reducedness=RESIDUAL_NONVERDICT",
+  "Kt_fano_decided": true,
+  "point_from_line": false,
+  "headline": "OPEN",
+  "wall_time_s": 94.552,
+  "inputs": {
+    "polar_cubic_surface.json": "c69074b141a6846b58b7f458a82b9ef5c10235125d1d5fa013997ce485f620e1",
+    "normalized_kproj_table.json": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f"
+  }
+}

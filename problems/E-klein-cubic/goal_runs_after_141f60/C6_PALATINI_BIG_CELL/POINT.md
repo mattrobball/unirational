@@ -57,9 +57,16 @@ Independently certified residual:
 Marker: `C6-MORITA-DESCENT-OBSTRUCTION`.  Still **not** a \(K_{\mathrm{proj}}\)
 Fano point.
 
+## Positive-degree residual (see `phase_positive_degree/`)
+
+Bounded non-constant ansätze for sections of \(D\) and Morita-linear words were
+run and sealed as `C6-POSITIVE-DEGREE-RESIDUAL` (no constructive \(K_{\mathrm{proj}}\)
+Fano point within the named degree/support bounds).  Not an emptiness claim for
+all of \(D(K_{\mathrm{proj}})\).
+
 ## What is still residual
 
-- Nonconstant secondary-basis / rational-function Morita sections of \(D\);
+- Higher-degree / larger-support positive-degree sections beyond the sealed bounds;
 - Pfaffian–Klein bridge and G3A dominance for a true \(K_{\mathrm{proj}}\) Fano point;
 - scheme-theoretic singular locus and rank \(\le 3\) primary decomposition over
   \(K_{\mathrm{proj}}\).

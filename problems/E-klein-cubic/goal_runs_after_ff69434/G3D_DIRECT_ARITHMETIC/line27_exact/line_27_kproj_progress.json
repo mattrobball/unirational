@@ -1,0 +1,197 @@
+{
+  "schema": "g3d-line27-kproj-progress-v1",
+  "specialized_sec0_RUR": "G3D-LINE-27-RUR-SPECIALIZED-PASS",
+  "K_t_model": {
+    "t": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "eta": "f7",
+    "minpoly_degree": 12,
+    "minpoly_irreducible_over_QQ": true
+  },
+  "full_secondary_QQ_param_lines": {
+    "multi_specializations": [
+      {
+        "t": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "n_eqs": 44,
+        "dim": -1,
+        "mult": 0,
+        "vdim": 0,
+        "empty": true
+      },
+      {
+        "t": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "n_eqs": 44,
+        "dim": -1,
+        "mult": 0,
+        "vdim": 0,
+        "empty": true
+      },
+      {
+        "t": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "n_eqs": 44,
+        "dim": -1,
+        "mult": 0,
+        "vdim": 0,
+        "empty": true
+      }
+    ],
+    "conclusion": "EMPTY (dim=-1,vdim=0) \u2014 no QQ-param line on full multi-component equation"
+  },
+  "sec0_RUR_line_vs_higher_components": {
+    "prime": 10007,
+    "sec0_modular_point": {
+      "a": 3775,
+      "b": -345,
+      "c": 4669,
+      "d": -1948
+    },
+    "component_binary_coeffs": [
+      {
+        "comp": 0,
+        "binary_mod_p": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "all_zero": true
+      },
+      {
+        "comp": 1,
+        "binary_mod_p": [
+          2579,
+          7761,
+          4901,
+          8831
+        ],
+        "all_zero": false
+      },
+      {
+        "comp": 2,
+        "binary_mod_p": [
+          6346,
+          6463,
+          3296,
+          300
+        ],
+        "all_zero": false
+      },
+      {
+        "comp": 3,
+        "binary_mod_p": [
+          4682,
+          36,
+          6160,
+          3356
+        ],
+        "all_zero": false
+      },
+      {
+        "comp": 4,
+        "binary_mod_p": [
+          4016,
+          1818,
+          5355,
+          4358
+        ],
+        "all_zero": false
+      },
+      {
+        "comp": 5,
+        "binary_mod_p": [
+          8806,
+          4060,
+          6625,
+          146
+        ],
+        "all_zero": false
+      },
+      {
+        "comp": 6,
+        "binary_mod_p": [
+          2756,
+          4618,
+          8905,
+          3812
+        ],
+        "all_zero": false
+      },
+      {
+        "comp": 7,
+        "binary_mod_p": [
+          1412,
+          2817,
+          7369,
+          1338
+        ],
+        "all_zero": false
+      },
+      {
+        "comp": 8,
+        "binary_mod_p": [
+          7877,
+          483,
+          5260,
+          8997
+        ],
+        "all_zero": false
+      },
+      {
+        "comp": 9,
+        "binary_mod_p": [
+          9843,
+          4871,
+          2633,
+          7494
+        ],
+        "all_zero": false
+      },
+      {
+        "comp": 10,
+        "binary_mod_p": [
+          6396,
+          8874,
+          1683,
+          5394
+        ],
+        "all_zero": false
+      },
+      {
+        "comp": 11,
+        "all_zero": true
+      }
+    ],
+    "only_comp0_vanishes": true
+  },
+  "weil_restriction_Fano_over_K_t": {
+    "status": "DECIDED",
+    "marker": "G3D-WEIL-FANO-KT-DEGREE27-PASS",
+    "ledger": "weil_fano_kt.json",
+    "degree_over_Kt": 27,
+    "expected_Weil_degree_over_QQ_if_etale": 324,
+    "note": "K_t Fano degree closed by modular multi-prime (vdim=27); reducedness residual non-verdict; free K_proj residual only"
+  },
+  "K_rational_line": null,
+  "marker": "G3D-LINE-27-KPROJ-PARTIAL",
+  "residual_marker": "G3D-LINE-27-RUR-KPROJ-OPEN",
+  "residual_scope": "free unspecialized K_proj only"
+}
