@@ -1,5 +1,5 @@
 {
-  "schema": "g4a-coset-actions-v2",
+  "schema": "g4a-coset-actions-v3",
   "group": "PSL(2,11)",
   "group_order": 660,
   "generators": {
@@ -272,16 +272,7 @@
       "character_stats": {
         "norm_sq_perm": 2.0,
         "norm_sq_aug": 1.0,
-        "fix_by_order_avg": {
-          "1": 11.0,
-          "2": 3.0,
-          "3": 2.0,
-          "5": 1.0,
-          "6": 0.0,
-          "11": 0.0
-        },
-        "decomposition_G": "1 + 10 (10 absolutely irreducible)",
-        "note_5plus5": "The two 5-dimensional irreps of PSL(2,11) are NOT direct summands of Ind_H^G 1; ||chi_aug||^2=1."
+        "decomposition_G": "1 + 10 (10 absolutely irreducible)"
       }
     },
     {
@@ -549,16 +540,7 @@
       "character_stats": {
         "norm_sq_perm": 2.0,
         "norm_sq_aug": 1.0,
-        "fix_by_order_avg": {
-          "1": 11.0,
-          "2": 3.0,
-          "3": 2.0,
-          "5": 1.0,
-          "6": 0.0,
-          "11": 0.0
-        },
-        "decomposition_G": "1 + 10 (10 absolutely irreducible)",
-        "note_5plus5": "The two 5-dimensional irreps of PSL(2,11) are NOT direct summands of Ind_H^G 1; ||chi_aug||^2=1."
+        "decomposition_G": "1 + 10 (10 absolutely irreducible)"
       }
     }
   ]

@@ -54,6 +54,16 @@
       "path": "certificates/exact_weil_check.py",
       "sha256": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
       "exists": true
+    },
+    {
+      "path": "goal_runs_after_141f60/G4A_INDUCTION_PROJECTORS/h_a5_base_class_1.json",
+      "sha256": "f14c5a363e1d0f80926bec1bf01402ac33aff03e9254b498aff21764d9c6879a",
+      "exists": true
+    },
+    {
+      "path": "goal_runs_after_141f60/G4A_INDUCTION_PROJECTORS/h_a5_base_class_2.json",
+      "sha256": "7493835f6be63a9770bb0f3859dce9435324317bc09c04d9b3c3fb0593de882f",
+      "exists": true
     }
   ]
 }
