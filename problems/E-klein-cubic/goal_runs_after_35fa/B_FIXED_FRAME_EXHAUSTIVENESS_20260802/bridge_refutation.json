@@ -1,0 +1,48 @@
+{
+  "exit": "B-BRIDGE-REFUTED",
+  "field": "K_proj",
+  "headline": "OPEN",
+  "objects": {
+    "fano": {
+      "degree": 14,
+      "dimension": 3,
+      "geometrically_integral": true,
+      "symbol": "Y=F14_T"
+    },
+    "fixed_frame_image": {
+      "dimension_upper_bound": 1,
+      "source": "C_K^open, an open of a projective plane cubic",
+      "symbol": "Sigma"
+    },
+    "gauge": {
+      "effective_action_finite": true,
+      "factorization": "Gamma_eff is a subgroup of Aut(F14_T,Kbar)",
+      "finiteness_theorem": "Kuznetsov-Prokhorov-Shramov Theorem 1.1.2: smooth Picard-rank-one genus-8 Fano threefolds have finite automorphism group",
+      "symbol": "Gamma=PGU(h_struct) cap Stab(H_T)"
+    }
+  },
+  "schema": "klein-goal-b-exhaustiveness-refutation-v1",
+  "scope": {
+    "F14_T_K_proj_points": "UNDECIDED",
+    "X_gen_K_proj_points": "UNDECIDED",
+    "bare_single_field_implication": "UNDECIDED",
+    "fixed_frame_normalization_bridge": "REFUTED",
+    "klein_headline": "OPEN",
+    "successor_front": "C/C5 direct common-line point or direct emptiness"
+  },
+  "source_paths": {
+    "c0_audit": "certificates/fano_interface_c0/C0_AUDIT.md",
+    "c5_status": "goals_after_bd610a/C5_PROJECTOR_INCIDENCE/STATUS.md",
+    "goal": "goals_after_35fa8f/GOAL_B_FIXED_FRAME_TO_GENERIC_BRIDGE.md",
+    "old_dictionary": "goal_runs_after_35fa/B_FIXED_FRAME_BRIDGE/OBJECT_DICTIONARY.md",
+    "old_gate": "goal_runs_after_35fa/B_FIXED_FRAME_BRIDGE/REMAINING_GATE.md"
+  },
+  "theorem": {
+    "counterexample_field": "K_proj(F14_T)",
+    "counterexample_point": "generic point eta_F14_T",
+    "dimension_upper_bound": 1,
+    "normalizable_locus": "Y_Kbar intersect union_{g in Gamma_eff} g(Sigma_Kbar)",
+    "proper_in_fano": true,
+    "universal_exhaustiveness": false
+  }
+}
