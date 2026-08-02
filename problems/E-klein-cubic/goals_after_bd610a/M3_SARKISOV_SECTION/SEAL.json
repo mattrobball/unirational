@@ -1,11 +1,7 @@
 {
   "base_field": "K_Schur=C(P(V6))^PSL2(F11)",
   "files": {
-<<<<<<< HEAD
     "COMPLETION_AUDIT.md": "dcfe8ba63ade6205c4eb8e9385f838f668f47ca5cfc241691547844e5e3536ad",
-=======
-    "COMPLETION_AUDIT.md": "d84e37f806c24eb2bed61f56804c5c8d65c968bb52f78c600b1c2df5160d554b",
->>>>>>> refs/remotes/origin/main
     "DEGREE4.md": "11a21b9839f943aaddf71e9546f82f2dcbfdedb742959b586bf741d3164b31d3",
     "FIBRATION_MODEL.md": "e818d479931dfde9c8934f325a508feb3e4798969aa218d7c116aeacbcaefba8",
     "INPUT_MANIFEST.json": "91915da4c62a9f514aef1157b0783507d3a02cb43a0ff531c60f29b61eb1565a",
@@ -15,14 +11,9 @@
     "QUARTIC_MULTISECTIONS.md": "ac633eedb52bc92f0fd9c5862fb6a9e8ae754406a58044972c4b6827b2e3a87d",
     "RESIDUAL_CONSTRUCTIONS.md": "5ed68a2fd2020567287fe99620944b814b6d6caaac86eb78d1f447c3007f07e1",
     "SECTION_CLASSES.json": "1abc18995c76924aa064af61c49ca9e06fc72ae3b5e7befd1baa861935b9d865",
-<<<<<<< HEAD
     "SECTION_RESIDUAL.md": "f2e66fbcb5e0ce52649f276447d5d75ec131b555f95a86af2307954c9f47be07",
     "SECTION_SEARCH.md": "5177b76c9f6e7ccf62e67869ab26b248c89cc2be51a48e91665b49389b3a351c",
     "STATUS.md": "e0a2a63a2973f4bf989b1b841639aa29abcd0a7304ea9910191d08cba12b155e",
-=======
-    "SECTION_SEARCH.md": "5177b76c9f6e7ccf62e67869ab26b248c89cc2be51a48e91665b49389b3a351c",
-    "STATUS.md": "509144572d4fdd37c9ee87f7861bd23f448d9b4d0a93f054333f28dc99696b0d",
->>>>>>> refs/remotes/origin/main
     "emit_quartic_slice.py": "ddf71931b1cef95da1d28d618e506c3743925f5ed3bc640cc6a8fa99d6b049d3",
     "fibration_model.json": "1c4dadce593853e6233ea00565f5d6ae0ea6063e9373dd2d59a30f6edbeb0d1f",
     "line_frobenius_specializations.json": "fc4276a094f82f696caae0ffe49e2f4af4601c0740537242b7c7787b47d56fe5",
@@ -41,10 +32,7 @@
     "produce_modular_residual_sections.py": "cf78660e5eb0c11a375f91cc69afc43f9d3f187ee3fb474c5e262af32cef4c02",
     "produce_modular_sections.py": "569260f207dc89edcbbabd9c8a0969cd10750b1e467626d2d24aa61b549f8b69",
     "produce_quartic_branch.py": "daf1f93fb66c237d058f91eec1493a5f09ce590e2d8da197159cb9f4bef351ca",
-<<<<<<< HEAD
     "produce_residual_gate.py": "3ec4535cbec4618ae6b04a23a91d66b5ddc20978f672bb3bd2342658f5f81480",
-=======
->>>>>>> refs/remotes/origin/main
     "produce_seal.py": "f915903dcd4b25929788c87b50c47daf239714a0098b0f4f8c64133bdbb37265",
     "produce_section_classes.py": "d50648c9c884eff1b9fed2c98fe89fe4305d6b8e61f7ec48140444ac678a0f2e",
     "quartic_branch.json": "543295e412789010a031d0f4d96095f23db4291848cbcb294aea84326c3142d6",
@@ -52,22 +40,14 @@
     "quartic_slice_p23.json": "6ec3e1b5305664a2b0073058d50cc47dac6f025176489eab562da03c0b2eaedc",
     "quartic_slice_p67.in": "8bd5565fc63f9b16ef29c455badb861888afc6f47efb7d48ff5aeb717624c1ef",
     "quartic_slice_p67.json": "42ceee20ea601aab7adb64b0c3efada79594c3487080a2499b019113bf78984b",
-<<<<<<< HEAD
     "residual_gate.json": "a60da6e0a109ff06379ead2b709c588c86cac19e7c169adcd5804ff2fe03fe54",
     "verify_all.py": "70cd8bbac316003934c1512586a39f0de574915820eb0c902d325090759db48f",
-=======
-    "verify_all.py": "57eaf6540b5b3b62e4b4d881f591b3ee82adf05756344245172c88cf5b97afca",
->>>>>>> refs/remotes/origin/main
     "verify_fibration_sections.py": "db83aced568bb53afdbea326b9db3f8e794524bd86061ba1a264f287207d3513",
     "verify_line_frobenius.py": "ebf8992581146fff8512d503f5e9bf119a3b47c84abd4dbd68dfd5e2ffd80650",
     "verify_line_monodromy.py": "79ffcbca5f62a36ac64eb28c416251a8720e206c62ca06a901b5777ec7ec8b53",
     "verify_line_pair_residuals.py": "e5f83f268df7d9f269bb4e0f405bc2443b955024c5028f102833ba16991326e4",
-<<<<<<< HEAD
     "verify_quartic_branch.py": "481748907ef52d31d042b445779619ec54355d59929cb8444acecbe36ff9112c",
     "verify_residual_gate.py": "e26ec519f26966e69e676a805858e985aedb3f4bd8f00cd560311d41625061fe"
-=======
-    "verify_quartic_branch.py": "481748907ef52d31d042b445779619ec54355d59929cb8444acecbe36ff9112c"
->>>>>>> refs/remotes/origin/main
   },
   "headline": "OPEN",
   "input_manifest_sha256": "91915da4c62a9f514aef1157b0783507d3a02cb43a0ff531c60f29b61eb1565a",
