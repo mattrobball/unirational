@@ -1,0 +1,92 @@
+{
+  "format": "c012-one-parameter-bounded-stop-v1",
+  "marker": "C012_ONE_PARAMETER_BOUNDED_STOP_OK",
+  "specialization": {
+    "coefficient_field": "Q(epsilon), epsilon^4+epsilon^3+epsilon^2+epsilon+1=0",
+    "parameters": {
+      "U1": "s",
+      "U2": 3,
+      "U3": 5,
+      "U4": 7
+    },
+    "normalization": "one fifth of the integral trace cubic; this does not change the plane over characteristic zero or modulo 11",
+    "shape": "F=X^3+s*F1+s^2*F2+s^3*F3",
+    "term_count": 26,
+    "sha256": "e577a7b5489327d9c6a93474e50941ab4b8d288ca563745ed8c5cb376b382250",
+    "term_encoding": "exp=[s,X,Y,Z], coeff=[1,epsilon,epsilon^2,epsilon^3]",
+    "terms": [
+      {"exp": [3, 1, 1, 1], "coeff": ["-686", "-686", "0", "0"]},
+      {"exp": [3, 1, 0, 2], "coeff": ["-245", "490", "0", "-490"]},
+      {"exp": [3, 0, 3, 0], "coeff": ["0", "0", "0", "343"]},
+      {"exp": [3, 0, 2, 1], "coeff": ["980", "980", "245", "0"]},
+      {"exp": [3, 0, 1, 2], "coeff": ["-553", "-847", "-378", "441"]},
+      {"exp": [3, 0, 0, 3], "coeff": ["308", "335", "210", "49"]},
+      {"exp": [2, 3, 0, 0], "coeff": ["0", "469", "350", "147"]},
+      {"exp": [2, 2, 1, 0], "coeff": ["-223", "-670", "-929", "-362"]},
+      {"exp": [2, 2, 0, 1], "coeff": ["233", "190", "334", "61"]},
+      {"exp": [2, 1, 2, 0], "coeff": ["140", "493", "452", "283"]},
+      {"exp": [2, 1, 1, 1], "coeff": ["-90", "-280", "-320", "-124"]},
+      {"exp": [2, 1, 0, 2], "coeff": ["77", "60", "67", "128"]},
+      {"exp": [2, 0, 3, 0], "coeff": ["-33", "-98", "-95", "-53"]},
+      {"exp": [2, 0, 2, 1], "coeff": ["-13", "31", "100", "9"]},
+      {"exp": [2, 0, 1, 2], "coeff": ["11", "-8", "-16", "-55"]},
+      {"exp": [2, 0, 0, 3], "coeff": ["-26", "-23", "-12", "-17"]},
+      {"exp": [1, 3, 0, 0], "coeff": ["11", "-19", "2", "15"]},
+      {"exp": [1, 2, 1, 0], "coeff": ["25", "26", "55", "20"]},
+      {"exp": [1, 2, 0, 1], "coeff": ["-31", "-12", "-26", "-19"]},
+      {"exp": [1, 1, 2, 0], "coeff": ["2", "-25", "-14", "-11"]},
+      {"exp": [1, 1, 1, 1], "coeff": ["4", "18", "12", "8"]},
+      {"exp": [1, 1, 0, 2], "coeff": ["2", "-2", "-1", "0"]},
+      {"exp": [1, 0, 3, 0], "coeff": ["3", "2", "7", "0"]},
+      {"exp": [1, 0, 2, 1], "coeff": ["-3", "-5", "-5", "-3"]},
+      {"exp": [1, 0, 1, 2], "coeff": ["0", "1", "2", "0"]},
+      {"exp": [0, 3, 0, 0], "coeff": ["1", "0", "0", "0"]}
+    ],
+    "fiber_at_s_zero": "X^3=0, a triple line in this plane model"
+  },
+  "jacobian": {
+    "equation": "y^2=x^3-27*c4*x-54*c6",
+    "invariants": {
+      "c4": {"degree": 12, "valuation_at_zero": 3, "univariate_terms": 10, "sha256": "f5caa573f560567f2c22cd30ef3f1d6257ad605b35c80ece1426006862851793"},
+      "c6": {"degree": 18, "valuation_at_zero": 4, "univariate_terms": 15, "sha256": "5891f8dc7ff167b1d45dd993fec628226da623c5298c9a78c8328c91c19f8974"},
+      "Delta_reduced=c4^3-c6^2": {"degree": 35, "valuation_at_zero": 8, "univariate_terms": 28, "sha256": "64736c54f2c3d96100bee9dcf7b9feb28b18b6c80274f8c402ead3fb779651b1"}
+    },
+    "factorization_over_Q_epsilon": {
+      "c4": "unit*s^3*q9, q9 irreducible of degree 9",
+      "c6": "unit*s^4*q14, q14 irreducible of degree 14",
+      "Delta_reduced": "unit*s^8*q27, q27 irreducible of degree 27"
+    },
+    "kodaira_fibers": [
+      {"place": "s=0", "type": "IV*", "discriminant_order": 8},
+      {"place": "the 27 roots of q27", "type": "I1", "count": 27},
+      {"place": "s=infinity", "type": "I1", "discriminant_order": 1}
+    ]
+  },
+  "bounded_section_exclusion": {
+    "prime": 11,
+    "epsilon_image": 3,
+    "cyclotomic_check": "3^4+3^3+3^2+3+1=0 mod 11 and 3!=1",
+    "coordinate_bound": 3,
+    "coefficient_variables": 12,
+    "coefficient_equations": 13,
+    "equation_system_sha256": "e334ddd33a5e878ee60bcc1523bda3b9c671ee67cea1ac3b2c20df43ca07ced4",
+    "projective_charts": 12,
+    "result": "every first-nonzero-coefficient chart has unit ideal over F_11",
+    "characteristic_zero_consequence": "there is no nonzero triple X(s),Y(s),Z(s) over an extension of Q(epsilon), each of degree at most 3, satisfying F identically"
+  },
+  "scope": {
+    "status": "C012_GENERIC_SECTION_UNDECIDED",
+    "proved": [
+      "the exact one-parameter specialization at (U2,U3,U4)=(3,5,7)",
+      "the displayed Jacobian fiber data for that specialization",
+      "nonexistence of polynomial-coordinate representatives of degree at most 3 on that specialization"
+    ],
+    "not_proved": [
+      "nonexistence of polynomial-coordinate representatives of degree greater than 3",
+      "pointlessness or solubility of the specialized genus-one curve over Q(epsilon)(s)",
+      "absence or existence of a section for generic (U2,U3,U4)",
+      "nontriviality or triviality of the generic C_012 torsor class",
+      "a rational point or pointlessness theorem for the full Schur twist"
+    ]
+  }
+}

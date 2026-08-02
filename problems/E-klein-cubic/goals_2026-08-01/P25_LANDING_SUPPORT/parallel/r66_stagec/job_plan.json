@@ -1,0 +1,37 @@
+{
+  "cas_launched": false,
+  "decision_rule": "Only a return-code-zero, non-resource-stopped, exact unit sentinel proves this one chart empty. Every other outcome is a nonverdict.",
+  "input_manifest": "r66_stageC_q0_1_b0_1.json",
+  "input_manifest_sha256": "68060fbe1cb1c4b9e23a7cee1c65498fa6c802916952519f939213764121f32e",
+  "jobs": [
+    {
+      "algorithm": "exact ordinary F4 with at most 100 pairs selected per matrix",
+      "command_not_run": "/opt/homebrew/bin/python3 P25_LANDING_SUPPORT/parallel/r66_stagec/run_guarded.py --engine msolve --tag paircap100 --pair-cap 100 --threads 4 --timeout 43200 --rss-gib 16 --execute",
+      "name": "msolve_paircap100_preferred",
+      "note": "-m 100 splits F4 matrices; it is not a resumable decomposition and has no force unless the full job completes with a unit sentinel."
+    },
+    {
+      "algorithm": "exact ordinary F4, unlimited pairs per matrix",
+      "command_not_run": "/opt/homebrew/bin/python3 P25_LANDING_SUPPORT/parallel/r66_stagec/run_guarded.py --engine msolve --tag ordinary --pair-cap 0 --threads 4 --timeout 43200 --rss-gib 32 --execute",
+      "name": "msolve_ordinary_all_pairs",
+      "note": "Do not run concurrently with another large CAS job."
+    },
+    {
+      "algorithm": "Singular exact std in characteristic 89, degree-reverse-lex order",
+      "command_not_run": "/opt/homebrew/bin/python3 P25_LANDING_SUPPORT/parallel/r66_stagec/run_guarded.py --engine singular --tag std --threads 1 --timeout 43200 --rss-gib 32 --execute",
+      "name": "singular_std",
+      "note": "Do not run concurrently with another large CAS job."
+    }
+  ],
+  "msolve_input_sha256": "c4e99a95d9ad3bc24bed2c0bcad1d9fc3376c9a8be06018e628783ac173b0f84",
+  "resource_forecast": {
+    "current_gate": "Do not launch with only about 5.85 GiB free+speculative memory or while the main Singular process is active.",
+    "observed_neighbor": "The simpler r66 Stage-B q0=1,b1_0=1 job (41 variables, 2,363,052 terms) reached 4.2753 GiB RSS during its incomplete all-pairs degree-six round after 548.96 seconds.",
+    "recommended_sequence": "After contention ends, try pair-cap 100 alone with at least 20 GiB genuinely available and the 16-GiB fail-closed fence. Treat a fence stop as a nonverdict. Reserve ordinary msolve or Singular for a window with at least 40 GiB available and a 32-GiB fence. These are scheduling estimates, not completion guarantees.",
+    "this_job": "Stage C has 42 variables and 6,809,430 terms (2.881 times the neighbor's term count), including 4,446,378 added P4 terms. It must not be assumed to fit below the neighbor's peak."
+  },
+  "runner": "run_guarded.py",
+  "runner_sha256": "56971c8810c6c7f975f72001be3b40ebcba70455541b9a533a248e9022ee33f3",
+  "singular_input_sha256": "26a0fa4a62216bf1b30043782884220d66213a8b18ae58505d4f0b6db3119089",
+  "status": "PREPARED_NOT_RUN"
+}

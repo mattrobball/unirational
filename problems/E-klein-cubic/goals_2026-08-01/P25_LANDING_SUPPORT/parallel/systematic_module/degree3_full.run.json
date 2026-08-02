@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/opt/homebrew/bin/python3",
+    "-u",
+    "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/systematic_module/profile_degree3_closure.py",
+    "--block",
+    "4096"
+  ],
+  "complete": true,
+  "elapsed_seconds": 110.698515,
+  "log": "degree3_full.log",
+  "log_bytes": 4531,
+  "log_sha256": "9fd58aeb2701e283ccf321964444b71433f211c5674fa5fbb2ebe7d45a5392ce",
+  "peak_rss_bytes_polled": 3208937472,
+  "returncode": 0,
+  "rss_limit_bytes": 8589934592,
+  "script": "profile_degree3_closure.py",
+  "script_sha256": "a0f5ebfcc95ea4cf5ce1e4f0940ee830db5ec8b2e6d6692fd8fd652c6163dd49",
+  "stop_reason": null,
+  "timeout_seconds": 600.0
+}

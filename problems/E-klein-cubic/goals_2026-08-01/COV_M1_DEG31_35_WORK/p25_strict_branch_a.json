@@ -1,0 +1,39 @@
+{
+  "conclusion": "imposing the binding common-line order-two strict equalizer reduces common P25 branch A from the 51-dimensional arrangement upper bound to dimension at most 37 in characteristic zero; its leading scalar cover has rank five",
+  "prime_records": [
+    {
+      "c3_gate_rank": 6,
+      "landing_sample_count": 1600,
+      "leading_scalar_rank": 5,
+      "payload": "p25_strict_branch_a_p199.npz",
+      "payload_sha256": "d378ceda079145fe2843f5e76ac5f558b8945235926942294df396fe87fc1724",
+      "prime": 199,
+      "restricted_cubic_monomial_count": 9139,
+      "restricted_landing_cubic_rank": 716,
+      "strict_branch_dimension": 37,
+      "strict_dimension": 43,
+      "zeta11": 61
+    },
+    {
+      "c3_gate_rank": 6,
+      "landing_sample_count": 1600,
+      "leading_scalar_rank": 5,
+      "payload": "p25_strict_branch_a_p331.npz",
+      "payload_sha256": "ea7a95a8c008e4a17e77062ebdfc4b0a046bbb25f48117639451ab069201dc7d",
+      "prime": 331,
+      "restricted_cubic_monomial_count": 9139,
+      "restricted_landing_cubic_rank": 716,
+      "strict_branch_dimension": 37,
+      "strict_dimension": 43,
+      "zeta11": 270
+    }
+  ],
+  "schema": "cov-m1-p25-strict-branch-a-v1",
+  "scope": "fixed-circuit two-prime linear localization plus exact modular sample landing spans; the 716 sampled cubics are a necessary subsystem, and no normalized affine chart or projective branch is declared empty",
+  "source_landing_sample_basis": "certificates/degree25_exact/landing_cubics.npz",
+  "source_landing_sample_basis_sha256": "8712d6215fdfdd6c45e7c568ae8dd6125066ae250e25716cce1352ac658d8978",
+  "source_reynolds_seeds": "tmp/degree25_structural_probe/seeds.json",
+  "source_reynolds_seeds_sha256": "436a46f55e7919e699c67cbaf2bef0587050353fe61b307403c007d6434b4270",
+  "source_strict_basis": "certificates/degree25_exact/covariant_basis/basis43_multiprime.npz",
+  "source_strict_basis_sha256": "83c268a9fdbe11f03b662deb3914b7a2267b189dee5e1e7981ef8d7ef708d3ba"
+}

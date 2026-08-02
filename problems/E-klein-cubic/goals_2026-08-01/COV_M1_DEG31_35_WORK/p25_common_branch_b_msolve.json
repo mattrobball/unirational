@@ -1,0 +1,72 @@
+{
+  "branch_dimension": 20,
+  "closed_charts": [
+    {
+      "chart": 0,
+      "normalization": "branch_B_scalar_form_0=1",
+      "payload": "p25_common_branch_b_chart0_p463.msolve.out",
+      "payload_sha256": "f63131965721749d4a989efb38463cbb7ce8cf5898cef6c6988554745c45b659",
+      "rebuild_input_command": "/opt/homebrew/bin/python3 -B export_p25_common_branch_b_msolve.py --chart 0",
+      "replay_command": "/opt/homebrew/bin/msolve -f p25_common_branch_b_chart0_p463.in -o p25_common_branch_b_chart0_p463.msolve.out -g 1 -t 8"
+    },
+    {
+      "chart": 1,
+      "normalization": "branch_B_scalar_form_1=1",
+      "payload": "p25_common_branch_b_chart1_p463.msolve.out",
+      "payload_sha256": "f63131965721749d4a989efb38463cbb7ce8cf5898cef6c6988554745c45b659",
+      "rebuild_input_command": "/opt/homebrew/bin/python3 -B export_p25_common_branch_b_msolve.py --chart 1",
+      "replay_command": "/opt/homebrew/bin/msolve -f p25_common_branch_b_chart1_p463.in -o p25_common_branch_b_chart1_p463.msolve.out -g 1 -t 8"
+    },
+    {
+      "chart": 2,
+      "normalization": "branch_B_scalar_form_2=1",
+      "payload": "p25_common_branch_b_chart2_p463.msolve.out",
+      "payload_sha256": "f63131965721749d4a989efb38463cbb7ce8cf5898cef6c6988554745c45b659",
+      "rebuild_input_command": "/opt/homebrew/bin/python3 -B export_p25_common_branch_b_msolve.py --chart 2",
+      "replay_command": "/opt/homebrew/bin/msolve -f p25_common_branch_b_chart2_p463.in -o p25_common_branch_b_chart2_p463.msolve.out -g 1 -t 8"
+    },
+    {
+      "chart": 3,
+      "normalization": "branch_B_scalar_form_3=1",
+      "payload": "p25_common_branch_b_chart3_p463.msolve.out",
+      "payload_sha256": "f63131965721749d4a989efb38463cbb7ce8cf5898cef6c6988554745c45b659",
+      "rebuild_input_command": "/opt/homebrew/bin/python3 -B export_p25_common_branch_b_msolve.py --chart 3",
+      "replay_command": "/opt/homebrew/bin/msolve -f p25_common_branch_b_chart3_p463.in -o p25_common_branch_b_chart3_p463.msolve.out -g 1 -t 8"
+    },
+    {
+      "chart": 4,
+      "normalization": "branch_B_scalar_form_4=1",
+      "payload": "p25_common_branch_b_chart4_p463.msolve.out",
+      "payload_sha256": "f63131965721749d4a989efb38463cbb7ce8cf5898cef6c6988554745c45b659",
+      "rebuild_input_command": "/opt/homebrew/bin/python3 -B export_p25_common_branch_b_msolve.py --chart 4",
+      "replay_command": "/opt/homebrew/bin/msolve -f p25_common_branch_b_chart4_p463.in -o p25_common_branch_b_chart4_p463.msolve.out -g 1 -t 8"
+    },
+    {
+      "chart": 5,
+      "normalization": "branch_B_scalar_form_5=1",
+      "payload": "p25_common_branch_b_chart5_p463.msolve.out",
+      "payload_sha256": "f63131965721749d4a989efb38463cbb7ce8cf5898cef6c6988554745c45b659",
+      "rebuild_input_command": "/opt/homebrew/bin/python3 -B export_p25_common_branch_b_msolve.py --chart 5",
+      "replay_command": "/opt/homebrew/bin/msolve -f p25_common_branch_b_chart5_p463.in -o p25_common_branch_b_chart5_p463.msolve.out -g 1 -t 8"
+    },
+    {
+      "chart": 6,
+      "normalization": "branch_B_scalar_form_6=1",
+      "payload": "p25_common_branch_b_chart6_p463.msolve.out",
+      "payload_sha256": "f63131965721749d4a989efb38463cbb7ce8cf5898cef6c6988554745c45b659",
+      "rebuild_input_command": "/opt/homebrew/bin/python3 -B export_p25_common_branch_b_msolve.py --chart 6",
+      "replay_command": "/opt/homebrew/bin/msolve -f p25_common_branch_b_chart6_p463.in -o p25_common_branch_b_chart6_p463.msolve.out -g 1 -t 8"
+    }
+  ],
+  "common_branch_record": "p25_common_nonbased_branches.json",
+  "common_branch_record_sha256": "da8fb32a0f8bd3e781a3480a26712fc4d8cebb51cc1f004b7080034814058ea8",
+  "complete_cubic_monomial_count": 1540,
+  "complete_cubic_span_rank": 574,
+  "conclusion": "all seven nonzero-scalar charts have exact unit Groebner bases; the common scalar-zero boundary is contained in the separately empty degree-31 pure-second tree, so common branch B is projectively empty over F_463 and in characteristic zero by proper specialization",
+  "prime": 463,
+  "scalar_cover_rank": 7,
+  "scalar_zero_boundary_record": "p25_d31_pure_second_cubic_span.json",
+  "scalar_zero_boundary_record_sha256": "7628ee8c726681f1470a1e51e6b14ab97ce1f8f5772d84a32f7117db6ef0e8c9",
+  "schema": "cov-m1-p25-common-branch-b-msolve-v1",
+  "scope": "the intrinsic 20-dimensional P25 branch realized as degree-31 first-normal nonbased and degree-35 mixed-second nonbased; common branch A and P25.2 remain undecided"
+}

@@ -1,0 +1,1225 @@
+{
+  "format": "degree18-matched-fano-input-p23-v1",
+  "scope": "complete degree-18 homogeneous polynomial covariant space",
+  "prime": 23,
+  "degree": 18,
+  "covariant_dimension": 121,
+  "quadratic_monomial_count": 7381,
+  "landing_equation_rank": 1925,
+  "extra_evaluation_points": 500,
+  "covariant_selection_point_count": 17,
+  "seed_labels": [
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        18
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        18
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        1,
+        17
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        1,
+        17
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        1,
+        17
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        1,
+        17
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        16
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        16
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        16
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        16
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        16
+      ]
+    },
+    {
+      "output": 5,
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        16
+      ]
+    },
+    {
+      "output": 6,
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        16
+      ]
+    },
+    {
+      "output": 7,
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        16
+      ]
+    },
+    {
+      "output": 8,
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        16
+      ]
+    },
+    {
+      "output": 9,
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        16
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "output": 5,
+      "exponents": [
+        0,
+        0,
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "output": 6,
+      "exponents": [
+        0,
+        0,
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "output": 7,
+      "exponents": [
+        0,
+        0,
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "output": 8,
+      "exponents": [
+        0,
+        0,
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "output": 9,
+      "exponents": [
+        0,
+        0,
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        4,
+        14
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        4,
+        14
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        4,
+        14
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        4,
+        14
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        4,
+        14
+      ]
+    },
+    {
+      "output": 5,
+      "exponents": [
+        0,
+        0,
+        0,
+        4,
+        14
+      ]
+    },
+    {
+      "output": 6,
+      "exponents": [
+        0,
+        0,
+        0,
+        4,
+        14
+      ]
+    },
+    {
+      "output": 7,
+      "exponents": [
+        0,
+        0,
+        0,
+        4,
+        14
+      ]
+    },
+    {
+      "output": 8,
+      "exponents": [
+        0,
+        0,
+        0,
+        4,
+        14
+      ]
+    },
+    {
+      "output": 9,
+      "exponents": [
+        0,
+        0,
+        0,
+        4,
+        14
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        5,
+        13
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        5,
+        13
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        5,
+        13
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        5,
+        13
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        5,
+        13
+      ]
+    },
+    {
+      "output": 5,
+      "exponents": [
+        0,
+        0,
+        0,
+        5,
+        13
+      ]
+    },
+    {
+      "output": 6,
+      "exponents": [
+        0,
+        0,
+        0,
+        5,
+        13
+      ]
+    },
+    {
+      "output": 7,
+      "exponents": [
+        0,
+        0,
+        0,
+        5,
+        13
+      ]
+    },
+    {
+      "output": 8,
+      "exponents": [
+        0,
+        0,
+        0,
+        5,
+        13
+      ]
+    },
+    {
+      "output": 9,
+      "exponents": [
+        0,
+        0,
+        0,
+        5,
+        13
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "output": 5,
+      "exponents": [
+        0,
+        0,
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "output": 6,
+      "exponents": [
+        0,
+        0,
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "output": 7,
+      "exponents": [
+        0,
+        0,
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "output": 8,
+      "exponents": [
+        0,
+        0,
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "output": 9,
+      "exponents": [
+        0,
+        0,
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        7,
+        11
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        7,
+        11
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        7,
+        11
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        7,
+        11
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        7,
+        11
+      ]
+    },
+    {
+      "output": 5,
+      "exponents": [
+        0,
+        0,
+        0,
+        7,
+        11
+      ]
+    },
+    {
+      "output": 6,
+      "exponents": [
+        0,
+        0,
+        0,
+        7,
+        11
+      ]
+    },
+    {
+      "output": 7,
+      "exponents": [
+        0,
+        0,
+        0,
+        7,
+        11
+      ]
+    },
+    {
+      "output": 8,
+      "exponents": [
+        0,
+        0,
+        0,
+        7,
+        11
+      ]
+    },
+    {
+      "output": 9,
+      "exponents": [
+        0,
+        0,
+        0,
+        7,
+        11
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        8,
+        10
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        8,
+        10
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        8,
+        10
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        8,
+        10
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        8,
+        10
+      ]
+    },
+    {
+      "output": 5,
+      "exponents": [
+        0,
+        0,
+        0,
+        8,
+        10
+      ]
+    },
+    {
+      "output": 6,
+      "exponents": [
+        0,
+        0,
+        0,
+        8,
+        10
+      ]
+    },
+    {
+      "output": 7,
+      "exponents": [
+        0,
+        0,
+        0,
+        8,
+        10
+      ]
+    },
+    {
+      "output": 8,
+      "exponents": [
+        0,
+        0,
+        0,
+        8,
+        10
+      ]
+    },
+    {
+      "output": 9,
+      "exponents": [
+        0,
+        0,
+        0,
+        8,
+        10
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        9,
+        9
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        9,
+        9
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        9,
+        9
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        9,
+        9
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        9,
+        9
+      ]
+    },
+    {
+      "output": 5,
+      "exponents": [
+        0,
+        0,
+        0,
+        9,
+        9
+      ]
+    },
+    {
+      "output": 6,
+      "exponents": [
+        0,
+        0,
+        0,
+        9,
+        9
+      ]
+    },
+    {
+      "output": 7,
+      "exponents": [
+        0,
+        0,
+        0,
+        9,
+        9
+      ]
+    },
+    {
+      "output": 8,
+      "exponents": [
+        0,
+        0,
+        0,
+        9,
+        9
+      ]
+    },
+    {
+      "output": 9,
+      "exponents": [
+        0,
+        0,
+        0,
+        9,
+        9
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        10,
+        8
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        10,
+        8
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        10,
+        8
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        10,
+        8
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        10,
+        8
+      ]
+    },
+    {
+      "output": 5,
+      "exponents": [
+        0,
+        0,
+        0,
+        10,
+        8
+      ]
+    },
+    {
+      "output": 6,
+      "exponents": [
+        0,
+        0,
+        0,
+        10,
+        8
+      ]
+    },
+    {
+      "output": 7,
+      "exponents": [
+        0,
+        0,
+        0,
+        10,
+        8
+      ]
+    },
+    {
+      "output": 8,
+      "exponents": [
+        0,
+        0,
+        0,
+        10,
+        8
+      ]
+    },
+    {
+      "output": 9,
+      "exponents": [
+        0,
+        0,
+        0,
+        10,
+        8
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        11,
+        7
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        11,
+        7
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        11,
+        7
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        11,
+        7
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        11,
+        7
+      ]
+    },
+    {
+      "output": 5,
+      "exponents": [
+        0,
+        0,
+        0,
+        11,
+        7
+      ]
+    },
+    {
+      "output": 6,
+      "exponents": [
+        0,
+        0,
+        0,
+        11,
+        7
+      ]
+    },
+    {
+      "output": 7,
+      "exponents": [
+        0,
+        0,
+        0,
+        11,
+        7
+      ]
+    },
+    {
+      "output": 8,
+      "exponents": [
+        0,
+        0,
+        0,
+        11,
+        7
+      ]
+    },
+    {
+      "output": 9,
+      "exponents": [
+        0,
+        0,
+        0,
+        11,
+        7
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        12,
+        6
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        12,
+        6
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        12,
+        6
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        12,
+        6
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        12,
+        6
+      ]
+    },
+    {
+      "output": 5,
+      "exponents": [
+        0,
+        0,
+        0,
+        12,
+        6
+      ]
+    },
+    {
+      "output": 6,
+      "exponents": [
+        0,
+        0,
+        0,
+        12,
+        6
+      ]
+    },
+    {
+      "output": 7,
+      "exponents": [
+        0,
+        0,
+        0,
+        12,
+        6
+      ]
+    },
+    {
+      "output": 8,
+      "exponents": [
+        0,
+        0,
+        0,
+        12,
+        6
+      ]
+    },
+    {
+      "output": 9,
+      "exponents": [
+        0,
+        0,
+        0,
+        12,
+        6
+      ]
+    },
+    {
+      "output": 0,
+      "exponents": [
+        0,
+        0,
+        0,
+        13,
+        5
+      ]
+    },
+    {
+      "output": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        13,
+        5
+      ]
+    },
+    {
+      "output": 2,
+      "exponents": [
+        0,
+        0,
+        0,
+        13,
+        5
+      ]
+    },
+    {
+      "output": 3,
+      "exponents": [
+        0,
+        0,
+        0,
+        13,
+        5
+      ]
+    },
+    {
+      "output": 4,
+      "exponents": [
+        0,
+        0,
+        0,
+        13,
+        5
+      ]
+    }
+  ],
+  "input_file": "degree18_fano_p23.in",
+  "theorem_boundary": "the input alone gives no projective-scheme verdict"
+}

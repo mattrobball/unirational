@@ -1,0 +1,8 @@
+ring S=(0,A,u),(B,Y,Z),dp;
+poly f=A*B+u*Y+Z;
+ring R=(0,A,u),(Z),dp;
+poly b=Z+A;
+poly y=Z+u;
+map phi=S,b,y,Z;
+print(phi(f));
+quit;

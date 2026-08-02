@@ -1,0 +1,6769 @@
+{
+  "abstract_group": {
+    "A5_class_orbit_sizes": [
+      11,
+      11
+    ],
+    "generators_ST": [
+      [
+        0,
+        2,
+        5,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        1
+      ]
+    ],
+    "maximal_A5_class_count": 2,
+    "model": "SL2(F11)/{+I,-I} with lexicographic sign canonicalization",
+    "order": 660,
+    "projective_relations_in_V6": [
+      "S^2=-1",
+      "T^11=1",
+      "(ST)^3=-1"
+    ],
+    "relations_in_W5": [
+      "S^2=1",
+      "T^11=1",
+      "(ST)^3=1"
+    ]
+  },
+  "deterministic_search": {
+    "class_specific_witnesses": true,
+    "initial_candidates_then_lcg": true,
+    "p89_certificate_witnesses_tried_first_at_p199": true,
+    "records": [
+      {
+        "attempts": 1,
+        "class": "A5_class_1",
+        "integer_witness": [
+          22,
+          2,
+          13,
+          21,
+          22,
+          4
+        ],
+        "prime": 89,
+        "recorded_early_failures": [],
+        "used_p89_preferred_witness": true
+      },
+      {
+        "attempts": 1,
+        "class": "A5_class_2",
+        "integer_witness": [
+          71,
+          10,
+          17,
+          18,
+          13,
+          44
+        ],
+        "prime": 89,
+        "recorded_early_failures": [],
+        "used_p89_preferred_witness": true
+      },
+      {
+        "attempts": 1,
+        "class": "A5_class_1",
+        "integer_witness": [
+          22,
+          2,
+          13,
+          21,
+          22,
+          4
+        ],
+        "prime": 199,
+        "recorded_early_failures": [],
+        "used_p89_preferred_witness": true
+      },
+      {
+        "attempts": 3,
+        "class": "A5_class_2",
+        "integer_witness": [
+          1,
+          1,
+          2,
+          3,
+          5,
+          8
+        ],
+        "prime": 199,
+        "recorded_early_failures": [
+          {
+            "reason": "orbit distinctness/rank gate failed",
+            "witness": [
+              71,
+              10,
+              17,
+              18,
+              13,
+              44
+            ]
+          },
+          {
+            "reason": "orbit distinctness/rank gate failed",
+            "witness": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        ],
+        "used_p89_preferred_witness": false
+      }
+    ]
+  },
+  "format": "a5q-modular-index11-discovery-v1",
+  "input_files": {
+    "degree11_covariants": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_A5_TWISTS/common/degree11_covariants_raw_exact.json",
+      "sha256": "a63757c9ecf5452f5b5d9af7796f8997d31bc187e7eb4a239620ec09b22ff985"
+    },
+    "point_class_1": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_1/point.json",
+      "sha256": "89b9a3405db00c5b87c72016afd3b05d0e397d133752d0e7da91898bd9f72a0f"
+    },
+    "point_class_2": {
+      "path_relative_to_problem": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_2/point.json",
+      "sha256": "cb8366eee4d6a8a096365b65d0c75372b3529a7a621411d8b6f524820d73bfb4"
+    }
+  },
+  "primes": [
+    {
+      "class_witness_runs": [
+        {
+          "classes": [
+            {
+              "all_11_canonical_and_installed_cubic_landings": true,
+              "all_60_H_invariance_checks": true,
+              "available_alpha_roots_considered": [
+                80
+              ],
+              "base_canonical_landing_point": [
+                83,
+                65,
+                37,
+                87,
+                56
+              ],
+              "base_full_twist_point": [
+                83,
+                3,
+                26,
+                13,
+                23
+              ],
+              "base_installed_landing_point": [
+                63,
+                32,
+                59,
+                54,
+                75
+              ],
+              "base_quartic_frame_B": [
+                [
+                  31,
+                  54,
+                  24
+                ],
+                [
+                  28,
+                  4,
+                  80
+                ],
+                [
+                  26,
+                  23,
+                  17
+                ]
+              ],
+              "base_quartic_frame_determinant": 55,
+              "base_source_free_locus": {
+                "nonidentity_checks": 59,
+                "nonidentity_minor_product": 69,
+                "projective_stabilizer": [
+                  [
+                    1,
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "projective_stabilizer_order": 1
+              },
+              "base_source_point_y_equals_Be0": [
+                31,
+                28,
+                26
+              ],
+              "canonical_cubic_parameter": 56,
+              "canonical_to_installed_intertwiner_J": [
+                [
+                  69,
+                  37,
+                  86,
+                  10,
+                  14
+                ],
+                [
+                  55,
+                  61,
+                  46,
+                  81,
+                  21
+                ],
+                [
+                  73,
+                  17,
+                  10,
+                  15,
+                  53
+                ],
+                [
+                  24,
+                  42,
+                  47,
+                  15,
+                  53
+                ],
+                [
+                  41,
+                  21,
+                  1,
+                  52,
+                  35
+                ]
+              ],
+              "class": "A5_class_1",
+              "conjugate_coset_representatives": [
+                [
+                  0,
+                  1,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  1
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  2
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  3
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  4
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  5
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  6
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  7
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  8
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  9
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  10
+                ]
+              ],
+              "conjugate_quartic_frame_determinants": [
+                55,
+                72,
+                1,
+                54,
+                38,
+                66,
+                75,
+                70,
+                7,
+                21,
+                44
+              ],
+              "coordinate_matrix": [
+                [
+                  83,
+                  3,
+                  26,
+                  13,
+                  23
+                ],
+                [
+                  24,
+                  22,
+                  55,
+                  28,
+                  21
+                ],
+                [
+                  40,
+                  53,
+                  23,
+                  58,
+                  6
+                ],
+                [
+                  47,
+                  36,
+                  80,
+                  11,
+                  20
+                ],
+                [
+                  88,
+                  81,
+                  10,
+                  10,
+                  8
+                ],
+                [
+                  57,
+                  8,
+                  52,
+                  19,
+                  53
+                ],
+                [
+                  71,
+                  84,
+                  4,
+                  29,
+                  9
+                ],
+                [
+                  9,
+                  77,
+                  39,
+                  60,
+                  78
+                ],
+                [
+                  58,
+                  66,
+                  65,
+                  53,
+                  13
+                ],
+                [
+                  55,
+                  64,
+                  21,
+                  39,
+                  33
+                ],
+                [
+                  34,
+                  49,
+                  50,
+                  7,
+                  56
+                ]
+              ],
+              "coordinate_rank": 5,
+              "coordinate_rank_minor": {
+                "columns": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "determinant_mod_p": 60,
+                "rows": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              "intertwiner_determinant": 57,
+              "landing_parameter_vector": [
+                1,
+                25,
+                36,
+                32,
+                80
+              ],
+              "pairwise_product_column_pairs": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  4,
+                  4
+                ]
+              ],
+              "pairwise_product_matrix": [
+                [
+                  36,
+                  71,
+                  22,
+                  11,
+                  40,
+                  9,
+                  78,
+                  39,
+                  69,
+                  53,
+                  71,
+                  64,
+                  80,
+                  32,
+                  84
+                ],
+                [
+                  42,
+                  83,
+                  74,
+                  49,
+                  59,
+                  39,
+                  53,
+                  82,
+                  17,
+                  88,
+                  27,
+                  87,
+                  72,
+                  54,
+                  85
+                ],
+                [
+                  87,
+                  73,
+                  30,
+                  6,
+                  62,
+                  50,
+                  62,
+                  48,
+                  51,
+                  84,
+                  88,
+                  49,
+                  71,
+                  81,
+                  36
+                ],
+                [
+                  73,
+                  1,
+                  22,
+                  72,
+                  50,
+                  50,
+                  32,
+                  40,
+                  8,
+                  81,
+                  79,
+                  87,
+                  32,
+                  42,
+                  44
+                ],
+                [
+                  1,
+                  8,
+                  79,
+                  79,
+                  81,
+                  64,
+                  9,
+                  9,
+                  25,
+                  11,
+                  11,
+                  80,
+                  11,
+                  80,
+                  64
+                ],
+                [
+                  45,
+                  11,
+                  27,
+                  15,
+                  84,
+                  64,
+                  60,
+                  63,
+                  68,
+                  34,
+                  9,
+                  86,
+                  5,
+                  28,
+                  50
+                ],
+                [
+                  57,
+                  1,
+                  17,
+                  12,
+                  16,
+                  25,
+                  69,
+                  33,
+                  44,
+                  16,
+                  27,
+                  36,
+                  40,
+                  83,
+                  81
+                ],
+                [
+                  81,
+                  70,
+                  84,
+                  6,
+                  79,
+                  55,
+                  66,
+                  81,
+                  43,
+                  8,
+                  26,
+                  16,
+                  40,
+                  52,
+                  32
+                ],
+                [
+                  71,
+                  1,
+                  32,
+                  48,
+                  42,
+                  84,
+                  18,
+                  27,
+                  57,
+                  42,
+                  63,
+                  44,
+                  50,
+                  66,
+                  80
+                ],
+                [
+                  88,
+                  49,
+                  87,
+                  9,
+                  35,
+                  2,
+                  9,
+                  4,
+                  65,
+                  85,
+                  18,
+                  70,
+                  8,
+                  41,
+                  21
+                ],
+                [
+                  88,
+                  64,
+                  9,
+                  60,
+                  35,
+                  87,
+                  47,
+                  76,
+                  74,
+                  8,
+                  83,
+                  41,
+                  49,
+                  36,
+                  21
+                ]
+              ],
+              "pairwise_product_rank": 11,
+              "pairwise_product_rank_minor": {
+                "columns": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10
+                ],
+                "determinant_mod_p": 2,
+                "rows": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10
+                ]
+              },
+              "point_input_denominators": {
+                "all_nonzero": true,
+                "count": 48,
+                "product_mod_p": 4
+              },
+              "point_orbit_separator": {
+                "all_distinct": true,
+                "degree11_separator_polynomial_coefficients_ascending": [
+                  45,
+                  62,
+                  15,
+                  88,
+                  40,
+                  73,
+                  16,
+                  29,
+                  13,
+                  6,
+                  65,
+                  1
+                ],
+                "values": [
+                  31,
+                  49,
+                  29,
+                  56,
+                  19,
+                  50,
+                  68,
+                  85,
+                  76,
+                  20,
+                  75
+                ],
+                "vandermonde_product_mod_p": 40
+              },
+              "point_orbit_separator_formula": "r_i(v)=sum_{h in H_i} ((rho6(h)v)_5)^4",
+              "projective_noncollision": {
+                "all_projectively_distinct": true,
+                "first_nonzero_minor_for_each_pair": [
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      63
+                    ],
+                    "rows": [
+                      0,
+                      1
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      7
+                    ],
+                    "rows": [
+                      0,
+                      2
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      88
+                    ],
+                    "rows": [
+                      0,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      51
+                    ],
+                    "rows": [
+                      0,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      48
+                    ],
+                    "rows": [
+                      0,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      84
+                    ],
+                    "rows": [
+                      0,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      45
+                    ],
+                    "rows": [
+                      0,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      53
+                    ],
+                    "rows": [
+                      0,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      74
+                    ],
+                    "rows": [
+                      0,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      49
+                    ],
+                    "rows": [
+                      0,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      36
+                    ],
+                    "rows": [
+                      1,
+                      2
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      8
+                    ],
+                    "rows": [
+                      1,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      8
+                    ],
+                    "rows": [
+                      1,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      6
+                    ],
+                    "rows": [
+                      1,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      9
+                    ],
+                    "rows": [
+                      1,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      48
+                    ],
+                    "rows": [
+                      1,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      41
+                    ],
+                    "rows": [
+                      1,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      59
+                    ],
+                    "rows": [
+                      1,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      72
+                    ],
+                    "rows": [
+                      1,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      17
+                    ],
+                    "rows": [
+                      2,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      2,
+                      67
+                    ],
+                    "rows": [
+                      2,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      58
+                    ],
+                    "rows": [
+                      2,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      42
+                    ],
+                    "rows": [
+                      2,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      22
+                    ],
+                    "rows": [
+                      2,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      11
+                    ],
+                    "rows": [
+                      2,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      1
+                    ],
+                    "rows": [
+                      2,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      69
+                    ],
+                    "rows": [
+                      2,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      16
+                    ],
+                    "rows": [
+                      3,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      15
+                    ],
+                    "rows": [
+                      3,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      57
+                    ],
+                    "rows": [
+                      3,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      2
+                    ],
+                    "rows": [
+                      3,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      35
+                    ],
+                    "rows": [
+                      3,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      49
+                    ],
+                    "rows": [
+                      3,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      11
+                    ],
+                    "rows": [
+                      3,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      3
+                    ],
+                    "rows": [
+                      4,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      39
+                    ],
+                    "rows": [
+                      4,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      84
+                    ],
+                    "rows": [
+                      4,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      42
+                    ],
+                    "rows": [
+                      4,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      20
+                    ],
+                    "rows": [
+                      4,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      45
+                    ],
+                    "rows": [
+                      4,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      37
+                    ],
+                    "rows": [
+                      5,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      45
+                    ],
+                    "rows": [
+                      5,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      5
+                    ],
+                    "rows": [
+                      5,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      4
+                    ],
+                    "rows": [
+                      5,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      29
+                    ],
+                    "rows": [
+                      5,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      83
+                    ],
+                    "rows": [
+                      6,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      81
+                    ],
+                    "rows": [
+                      6,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      13
+                    ],
+                    "rows": [
+                      6,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      2,
+                      32
+                    ],
+                    "rows": [
+                      6,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      44
+                    ],
+                    "rows": [
+                      7,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      79
+                    ],
+                    "rows": [
+                      7,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      48
+                    ],
+                    "rows": [
+                      7,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      82
+                    ],
+                    "rows": [
+                      8,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      64
+                    ],
+                    "rows": [
+                      8,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      74
+                    ],
+                    "rows": [
+                      9,
+                      10
+                    ]
+                  }
+                ],
+                "minor_product_mod_p": 45,
+                "pair_count": 55
+              },
+              "quartic_reynolds_formula": "B_i(v)=sum_{h in H_i} sigma_i(h)^(-1)*((rho6(h)v)_5)^4",
+              "selected_alpha": 80,
+              "source_map_presentation_images": [
+                [
+                  0,
+                  2,
+                  1,
+                  4,
+                  3
+                ],
+                [
+                  1,
+                  3,
+                  2,
+                  0,
+                  4
+                ]
+              ],
+              "subgroup_generators": [
+                [
+                  0,
+                  1,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  5,
+                  1
+                ]
+              ],
+              "subgroup_index": 11,
+              "subgroup_order": 60
+            }
+          ],
+          "degree11_covariant_input_denominators": {
+            "all_nonzero": true,
+            "count": 2824,
+            "product_mod_p": 4
+          },
+          "direct_Q_covariance_checks_for_ST": true,
+          "full_schur_frame_Q": [
+            [
+              26,
+              2,
+              85,
+              77,
+              67
+            ],
+            [
+              75,
+              25,
+              74,
+              43,
+              80
+            ],
+            [
+              84,
+              4,
+              74,
+              55,
+              64
+            ],
+            [
+              47,
+              79,
+              74,
+              40,
+              18
+            ],
+            [
+              85,
+              82,
+              5,
+              2,
+              66
+            ]
+          ],
+          "full_schur_frame_determinant": 86,
+          "full_schur_reynolds_formula": "Q_rj(v)=sum_{g in G}(rho5(g)^(-1))_rj*((rho6(g)v)_5)^8",
+          "full_schur_scalar_I8": 84,
+          "gauss_sum": 73,
+          "group_order": 660,
+          "icosahedral_source_generator_matrices": [
+            [
+              [
+                79,
+                10,
+                88
+              ],
+              [
+                79,
+                1,
+                0
+              ],
+              [
+                79,
+                10,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                88,
+                10
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                88,
+                10,
+                0
+              ]
+            ]
+          ],
+          "icosahedral_source_presentation_permutations": [
+            [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              2
+            ]
+          ],
+          "integer_witness_reduced": [
+            22,
+            2,
+            13,
+            21,
+            22,
+            4
+          ],
+          "prime": 89,
+          "role": "discovery_certificate",
+          "schur_V6_generators_ST": [
+            [
+              [
+                1,
+                0,
+                0,
+                53,
+                88,
+                88
+              ],
+              [
+                2,
+                0,
+                88,
+                52,
+                36,
+                88
+              ],
+              [
+                38,
+                1,
+                0,
+                54,
+                88,
+                52
+              ],
+              [
+                54,
+                0,
+                0,
+                51,
+                37,
+                88
+              ],
+              [
+                53,
+                0,
+                0,
+                88,
+                1,
+                88
+              ],
+              [
+                52,
+                0,
+                0,
+                87,
+                1,
+                36
+              ]
+            ],
+            [
+              [
+                52,
+                0,
+                0,
+                0,
+                0,
+                88
+              ],
+              [
+                51,
+                0,
+                0,
+                88,
+                0,
+                36
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                88
+              ],
+              [
+                87,
+                0,
+                0,
+                0,
+                88,
+                37
+              ],
+              [
+                88,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                35,
+                1,
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          ],
+          "schur_V6_supporting_generators_AB": [
+            [
+              [
+                0,
+                36,
+                88,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                37,
+                0,
+                53,
+                88,
+                0
+              ],
+              [
+                0,
+                35,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                38,
+                0,
+                52,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                88,
+                0,
+                0
+              ],
+              [
+                88,
+                2,
+                0,
+                88,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                1,
+                88,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                88,
+                0,
+                0
+              ],
+              [
+                37,
+                0,
+                88,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                88,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                88
+              ]
+            ]
+          ],
+          "sqrt5": 19,
+          "sqrt_minus11": 73,
+          "weil_W5_generators_ST": [
+            [
+              [
+                35,
+                2,
+                7,
+                75,
+                60
+              ],
+              [
+                2,
+                7,
+                75,
+                60,
+                35
+              ],
+              [
+                7,
+                75,
+                60,
+                35,
+                2
+              ],
+              [
+                75,
+                60,
+                35,
+                2,
+                7
+              ],
+              [
+                60,
+                35,
+                2,
+                7,
+                75
+              ]
+            ],
+            [
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                67,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                16,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                8,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                32
+              ]
+            ]
+          ],
+          "zeta11": 2
+        },
+        {
+          "classes": [
+            {
+              "all_11_canonical_and_installed_cubic_landings": true,
+              "all_60_H_invariance_checks": true,
+              "available_alpha_roots_considered": [
+                49
+              ],
+              "base_canonical_landing_point": [
+                70,
+                77,
+                61,
+                37,
+                23
+              ],
+              "base_full_twist_point": [
+                42,
+                78,
+                69,
+                20,
+                32
+              ],
+              "base_installed_landing_point": [
+                15,
+                80,
+                82,
+                42,
+                7
+              ],
+              "base_quartic_frame_B": [
+                [
+                  42,
+                  78,
+                  20
+                ],
+                [
+                  12,
+                  41,
+                  61
+                ],
+                [
+                  40,
+                  27,
+                  45
+                ]
+              ],
+              "base_quartic_frame_determinant": 78,
+              "base_source_free_locus": {
+                "nonidentity_checks": 59,
+                "nonidentity_minor_product": 32,
+                "projective_stabilizer": [
+                  [
+                    1,
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "projective_stabilizer_order": 1
+              },
+              "base_source_point_y_equals_Be0": [
+                42,
+                12,
+                40
+              ],
+              "canonical_cubic_parameter": 74,
+              "canonical_to_installed_intertwiner_J": [
+                [
+                  69,
+                  46,
+                  24,
+                  19,
+                  30
+                ],
+                [
+                  86,
+                  74,
+                  8,
+                  39,
+                  64
+                ],
+                [
+                  43,
+                  11,
+                  40,
+                  78,
+                  88
+                ],
+                [
+                  86,
+                  39,
+                  23,
+                  55,
+                  25
+                ],
+                [
+                  22,
+                  8,
+                  24,
+                  26,
+                  41
+                ]
+              ],
+              "class": "A5_class_2",
+              "conjugate_coset_representatives": [
+                [
+                  0,
+                  1,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  1
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  2
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  3
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  4
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  5
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  6
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  7
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  8
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  9
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  10
+                ]
+              ],
+              "conjugate_quartic_frame_determinants": [
+                78,
+                25,
+                30,
+                46,
+                17,
+                3,
+                60,
+                49,
+                33,
+                45,
+                58
+              ],
+              "coordinate_matrix": [
+                [
+                  42,
+                  78,
+                  69,
+                  20,
+                  32
+                ],
+                [
+                  53,
+                  65,
+                  87,
+                  46,
+                  52
+                ],
+                [
+                  73,
+                  62,
+                  47,
+                  56,
+                  74
+                ],
+                [
+                  31,
+                  26,
+                  62,
+                  45,
+                  63
+                ],
+                [
+                  19,
+                  26,
+                  69,
+                  2,
+                  78
+                ],
+                [
+                  45,
+                  83,
+                  46,
+                  51,
+                  78
+                ],
+                [
+                  17,
+                  13,
+                  82,
+                  69,
+                  34
+                ],
+                [
+                  24,
+                  36,
+                  56,
+                  35,
+                  30
+                ],
+                [
+                  10,
+                  35,
+                  60,
+                  71,
+                  19
+                ],
+                [
+                  35,
+                  6,
+                  79,
+                  28,
+                  64
+                ],
+                [
+                  85,
+                  60,
+                  64,
+                  32,
+                  49
+                ]
+              ],
+              "coordinate_rank": 5,
+              "coordinate_rank_minor": {
+                "columns": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "determinant_mod_p": 23,
+                "rows": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              "intertwiner_determinant": 62,
+              "landing_parameter_vector": [
+                1,
+                55,
+                87,
+                56,
+                49
+              ],
+              "pairwise_product_column_pairs": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  4,
+                  4
+                ]
+              ],
+              "pairwise_product_matrix": [
+                [
+                  73,
+                  72,
+                  50,
+                  39,
+                  9,
+                  32,
+                  42,
+                  47,
+                  4,
+                  44,
+                  45,
+                  72,
+                  44,
+                  17,
+                  45
+                ],
+                [
+                  50,
+                  63,
+                  72,
+                  35,
+                  86,
+                  42,
+                  48,
+                  53,
+                  87,
+                  4,
+                  86,
+                  74,
+                  69,
+                  78,
+                  34
+                ],
+                [
+                  78,
+                  76,
+                  49,
+                  83,
+                  62,
+                  17,
+                  66,
+                  1,
+                  49,
+                  73,
+                  51,
+                  7,
+                  21,
+                  50,
+                  47
+                ],
+                [
+                  71,
+                  5,
+                  53,
+                  60,
+                  84,
+                  53,
+                  10,
+                  13,
+                  36,
+                  17,
+                  31,
+                  79,
+                  67,
+                  76,
+                  53
+                ],
+                [
+                  5,
+                  49,
+                  65,
+                  38,
+                  58,
+                  53,
+                  14,
+                  52,
+                  70,
+                  44,
+                  49,
+                  42,
+                  4,
+                  67,
+                  32
+                ],
+                [
+                  67,
+                  86,
+                  23,
+                  70,
+                  39,
+                  36,
+                  80,
+                  50,
+                  66,
+                  69,
+                  32,
+                  28,
+                  20,
+                  62,
+                  32
+                ],
+                [
+                  22,
+                  43,
+                  59,
+                  16,
+                  44,
+                  80,
+                  87,
+                  7,
+                  86,
+                  49,
+                  51,
+                  29,
+                  44,
+                  32,
+                  88
+                ],
+                [
+                  42,
+                  63,
+                  9,
+                  39,
+                  8,
+                  50,
+                  58,
+                  14,
+                  12,
+                  21,
+                  2,
+                  78,
+                  68,
+                  71,
+                  10
+                ],
+                [
+                  11,
+                  83,
+                  66,
+                  87,
+                  12,
+                  68,
+                  53,
+                  82,
+                  42,
+                  40,
+                  77,
+                  72,
+                  57,
+                  14,
+                  5
+                ],
+                [
+                  68,
+                  32,
+                  6,
+                  1,
+                  15,
+                  36,
+                  29,
+                  79,
+                  28,
+                  11,
+                  76,
+                  72,
+                  72,
+                  12,
+                  2
+                ],
+                [
+                  16,
+                  27,
+                  11,
+                  50,
+                  71,
+                  40,
+                  13,
+                  51,
+                  3,
+                  2,
+                  1,
+                  21,
+                  45,
+                  55,
+                  87
+                ]
+              ],
+              "pairwise_product_rank": 11,
+              "pairwise_product_rank_minor": {
+                "columns": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10
+                ],
+                "determinant_mod_p": 31,
+                "rows": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10
+                ]
+              },
+              "point_input_denominators": {
+                "all_nonzero": true,
+                "count": 48,
+                "product_mod_p": 4
+              },
+              "point_orbit_separator": {
+                "all_distinct": true,
+                "degree11_separator_polynomial_coefficients_ascending": [
+                  32,
+                  58,
+                  51,
+                  54,
+                  22,
+                  40,
+                  12,
+                  10,
+                  81,
+                  51,
+                  80,
+                  1
+                ],
+                "values": [
+                  2,
+                  28,
+                  33,
+                  8,
+                  47,
+                  31,
+                  80,
+                  9,
+                  83,
+                  34,
+                  10
+                ],
+                "vandermonde_product_mod_p": 37
+              },
+              "point_orbit_separator_formula": "r_i(v)=sum_{h in H_i} ((rho6(h)v)_5)^4",
+              "projective_noncollision": {
+                "all_projectively_distinct": true,
+                "first_nonzero_minor_for_each_pair": [
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      20
+                    ],
+                    "rows": [
+                      0,
+                      1
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      25
+                    ],
+                    "rows": [
+                      0,
+                      2
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      9
+                    ],
+                    "rows": [
+                      0,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      55
+                    ],
+                    "rows": [
+                      0,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      65
+                    ],
+                    "rows": [
+                      0,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      21
+                    ],
+                    "rows": [
+                      0,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      85
+                    ],
+                    "rows": [
+                      0,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      67
+                    ],
+                    "rows": [
+                      0,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      14
+                    ],
+                    "rows": [
+                      0,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      73
+                    ],
+                    "rows": [
+                      0,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      54
+                    ],
+                    "rows": [
+                      1,
+                      2
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      75
+                    ],
+                    "rows": [
+                      1,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      54
+                    ],
+                    "rows": [
+                      1,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      50
+                    ],
+                    "rows": [
+                      1,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      29
+                    ],
+                    "rows": [
+                      1,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      81
+                    ],
+                    "rows": [
+                      1,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      48
+                    ],
+                    "rows": [
+                      1,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      1
+                    ],
+                    "rows": [
+                      1,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      58
+                    ],
+                    "rows": [
+                      1,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      65
+                    ],
+                    "rows": [
+                      2,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      8
+                    ],
+                    "rows": [
+                      2,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      65
+                    ],
+                    "rows": [
+                      2,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      73
+                    ],
+                    "rows": [
+                      2,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      72
+                    ],
+                    "rows": [
+                      2,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      66
+                    ],
+                    "rows": [
+                      2,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      48
+                    ],
+                    "rows": [
+                      2,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      2,
+                      54
+                    ],
+                    "rows": [
+                      2,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      45
+                    ],
+                    "rows": [
+                      3,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      68
+                    ],
+                    "rows": [
+                      3,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      50
+                    ],
+                    "rows": [
+                      3,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      47
+                    ],
+                    "rows": [
+                      3,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      24
+                    ],
+                    "rows": [
+                      3,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      77
+                    ],
+                    "rows": [
+                      3,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      6
+                    ],
+                    "rows": [
+                      3,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      51
+                    ],
+                    "rows": [
+                      4,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      72
+                    ],
+                    "rows": [
+                      4,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      60
+                    ],
+                    "rows": [
+                      4,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      49
+                    ],
+                    "rows": [
+                      4,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      5
+                    ],
+                    "rows": [
+                      4,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      87
+                    ],
+                    "rows": [
+                      4,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      64
+                    ],
+                    "rows": [
+                      5,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      73
+                    ],
+                    "rows": [
+                      5,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      33
+                    ],
+                    "rows": [
+                      5,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      35
+                    ],
+                    "rows": [
+                      5,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      6
+                    ],
+                    "rows": [
+                      5,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      33
+                    ],
+                    "rows": [
+                      6,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      20
+                    ],
+                    "rows": [
+                      6,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      3
+                    ],
+                    "rows": [
+                      6,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      4
+                    ],
+                    "rows": [
+                      6,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      35
+                    ],
+                    "rows": [
+                      7,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      41
+                    ],
+                    "rows": [
+                      7,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      71
+                    ],
+                    "rows": [
+                      7,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      81
+                    ],
+                    "rows": [
+                      8,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      28
+                    ],
+                    "rows": [
+                      8,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      77
+                    ],
+                    "rows": [
+                      9,
+                      10
+                    ]
+                  }
+                ],
+                "minor_product_mod_p": 33,
+                "pair_count": 55
+              },
+              "quartic_reynolds_formula": "B_i(v)=sum_{h in H_i} sigma_i(h)^(-1)*((rho6(h)v)_5)^4",
+              "selected_alpha": 49,
+              "source_map_presentation_images": [
+                [
+                  0,
+                  2,
+                  1,
+                  4,
+                  3
+                ],
+                [
+                  1,
+                  3,
+                  2,
+                  0,
+                  4
+                ]
+              ],
+              "subgroup_generators": [
+                [
+                  0,
+                  1,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  5,
+                  10
+                ]
+              ],
+              "subgroup_index": 11,
+              "subgroup_order": 60
+            }
+          ],
+          "degree11_covariant_input_denominators": {
+            "all_nonzero": true,
+            "count": 2824,
+            "product_mod_p": 4
+          },
+          "direct_Q_covariance_checks_for_ST": true,
+          "full_schur_frame_Q": [
+            [
+              3,
+              5,
+              2,
+              26,
+              50
+            ],
+            [
+              37,
+              76,
+              88,
+              54,
+              18
+            ],
+            [
+              43,
+              71,
+              53,
+              7,
+              41
+            ],
+            [
+              83,
+              41,
+              0,
+              77,
+              28
+            ],
+            [
+              22,
+              72,
+              42,
+              4,
+              56
+            ]
+          ],
+          "full_schur_frame_determinant": 12,
+          "full_schur_reynolds_formula": "Q_rj(v)=sum_{g in G}(rho5(g)^(-1))_rj*((rho6(g)v)_5)^8",
+          "full_schur_scalar_I8": 51,
+          "gauss_sum": 73,
+          "group_order": 660,
+          "icosahedral_source_generator_matrices": [
+            [
+              [
+                79,
+                10,
+                88
+              ],
+              [
+                79,
+                1,
+                0
+              ],
+              [
+                79,
+                10,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                88,
+                10
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                88,
+                10,
+                0
+              ]
+            ]
+          ],
+          "icosahedral_source_presentation_permutations": [
+            [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              2
+            ]
+          ],
+          "integer_witness_reduced": [
+            71,
+            10,
+            17,
+            18,
+            13,
+            44
+          ],
+          "prime": 89,
+          "role": "discovery_certificate",
+          "schur_V6_generators_ST": [
+            [
+              [
+                1,
+                0,
+                0,
+                53,
+                88,
+                88
+              ],
+              [
+                2,
+                0,
+                88,
+                52,
+                36,
+                88
+              ],
+              [
+                38,
+                1,
+                0,
+                54,
+                88,
+                52
+              ],
+              [
+                54,
+                0,
+                0,
+                51,
+                37,
+                88
+              ],
+              [
+                53,
+                0,
+                0,
+                88,
+                1,
+                88
+              ],
+              [
+                52,
+                0,
+                0,
+                87,
+                1,
+                36
+              ]
+            ],
+            [
+              [
+                52,
+                0,
+                0,
+                0,
+                0,
+                88
+              ],
+              [
+                51,
+                0,
+                0,
+                88,
+                0,
+                36
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                88
+              ],
+              [
+                87,
+                0,
+                0,
+                0,
+                88,
+                37
+              ],
+              [
+                88,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                35,
+                1,
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          ],
+          "schur_V6_supporting_generators_AB": [
+            [
+              [
+                0,
+                36,
+                88,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                37,
+                0,
+                53,
+                88,
+                0
+              ],
+              [
+                0,
+                35,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                38,
+                0,
+                52,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                88,
+                0,
+                0
+              ],
+              [
+                88,
+                2,
+                0,
+                88,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                1,
+                88,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                88,
+                0,
+                0
+              ],
+              [
+                37,
+                0,
+                88,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                88,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                88
+              ]
+            ]
+          ],
+          "sqrt5": 19,
+          "sqrt_minus11": 73,
+          "weil_W5_generators_ST": [
+            [
+              [
+                35,
+                2,
+                7,
+                75,
+                60
+              ],
+              [
+                2,
+                7,
+                75,
+                60,
+                35
+              ],
+              [
+                7,
+                75,
+                60,
+                35,
+                2
+              ],
+              [
+                75,
+                60,
+                35,
+                2,
+                7
+              ],
+              [
+                60,
+                35,
+                2,
+                7,
+                75
+              ]
+            ],
+            [
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                67,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                16,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                8,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                32
+              ]
+            ]
+          ],
+          "zeta11": 2
+        }
+      ],
+      "prime": 89,
+      "role": "discovery_certificate"
+    },
+    {
+      "class_witness_runs": [
+        {
+          "classes": [
+            {
+              "all_11_canonical_and_installed_cubic_landings": true,
+              "all_60_H_invariance_checks": true,
+              "available_alpha_roots_considered": [
+                76
+              ],
+              "base_canonical_landing_point": [
+                28,
+                179,
+                43,
+                50,
+                89
+              ],
+              "base_full_twist_point": [
+                156,
+                9,
+                32,
+                170,
+                90
+              ],
+              "base_installed_landing_point": [
+                90,
+                86,
+                49,
+                138,
+                75
+              ],
+              "base_quartic_frame_B": [
+                [
+                  20,
+                  68,
+                  109
+                ],
+                [
+                  125,
+                  3,
+                  60
+                ],
+                [
+                  108,
+                  102,
+                  10
+                ]
+              ],
+              "base_quartic_frame_determinant": 55,
+              "base_source_free_locus": {
+                "nonidentity_checks": 59,
+                "nonidentity_minor_product": 182,
+                "projective_stabilizer": [
+                  [
+                    1,
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "projective_stabilizer_order": 1
+              },
+              "base_source_point_y_equals_Be0": [
+                20,
+                125,
+                108
+              ],
+              "canonical_cubic_parameter": 159,
+              "canonical_to_installed_intertwiner_J": [
+                [
+                  67,
+                  3,
+                  76,
+                  184,
+                  82
+                ],
+                [
+                  91,
+                  116,
+                  170,
+                  45,
+                  128
+                ],
+                [
+                  107,
+                  34,
+                  140,
+                  106,
+                  100
+                ],
+                [
+                  140,
+                  48,
+                  167,
+                  21,
+                  124
+                ],
+                [
+                  36,
+                  197,
+                  140,
+                  85,
+                  180
+                ]
+              ],
+              "class": "A5_class_1",
+              "conjugate_coset_representatives": [
+                [
+                  0,
+                  1,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  1
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  2
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  3
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  4
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  5
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  6
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  7
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  8
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  9
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  10
+                ]
+              ],
+              "conjugate_quartic_frame_determinants": [
+                55,
+                15,
+                36,
+                189,
+                153,
+                55,
+                38,
+                72,
+                7,
+                69,
+                128
+              ],
+              "coordinate_matrix": [
+                [
+                  156,
+                  9,
+                  32,
+                  170,
+                  90
+                ],
+                [
+                  121,
+                  102,
+                  173,
+                  74,
+                  115
+                ],
+                [
+                  180,
+                  70,
+                  137,
+                  35,
+                  50
+                ],
+                [
+                  148,
+                  165,
+                  133,
+                  28,
+                  176
+                ],
+                [
+                  29,
+                  131,
+                  170,
+                  62,
+                  174
+                ],
+                [
+                  108,
+                  94,
+                  193,
+                  52,
+                  194
+                ],
+                [
+                  149,
+                  93,
+                  100,
+                  8,
+                  118
+                ],
+                [
+                  21,
+                  101,
+                  143,
+                  72,
+                  96
+                ],
+                [
+                  140,
+                  33,
+                  84,
+                  15,
+                  27
+                ],
+                [
+                  144,
+                  149,
+                  168,
+                  175,
+                  43
+                ],
+                [
+                  153,
+                  166,
+                  42,
+                  53,
+                  68
+                ]
+              ],
+              "coordinate_rank": 5,
+              "coordinate_rank_minor": {
+                "columns": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "determinant_mod_p": 106,
+                "rows": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              "intertwiner_determinant": 3,
+              "landing_parameter_vector": [
+                1,
+                124,
+                93,
+                93,
+                76
+              ],
+              "pairwise_product_column_pairs": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  4,
+                  4
+                ]
+              ],
+              "pairwise_product_matrix": [
+                [
+                  58,
+                  11,
+                  17,
+                  53,
+                  110,
+                  81,
+                  89,
+                  137,
+                  14,
+                  29,
+                  67,
+                  94,
+                  45,
+                  176,
+                  140
+                ],
+                [
+                  114,
+                  4,
+                  38,
+                  198,
+                  184,
+                  56,
+                  134,
+                  185,
+                  188,
+                  79,
+                  66,
+                  194,
+                  103,
+                  152,
+                  91
+                ],
+                [
+                  162,
+                  63,
+                  183,
+                  131,
+                  45,
+                  124,
+                  38,
+                  62,
+                  117,
+                  63,
+                  19,
+                  84,
+                  31,
+                  158,
+                  112
+                ],
+                [
+                  14,
+                  142,
+                  182,
+                  164,
+                  178,
+                  161,
+                  55,
+                  43,
+                  185,
+                  177,
+                  142,
+                  125,
+                  187,
+                  152,
+                  131
+                ],
+                [
+                  45,
+                  18,
+                  154,
+                  7,
+                  71,
+                  47,
+                  181,
+                  162,
+                  108,
+                  45,
+                  192,
+                  128,
+                  63,
+                  42,
+                  28
+                ],
+                [
+                  122,
+                  3,
+                  148,
+                  44,
+                  57,
+                  80,
+                  33,
+                  112,
+                  127,
+                  36,
+                  86,
+                  30,
+                  117,
+                  138,
+                  25
+                ],
+                [
+                  112,
+                  126,
+                  174,
+                  197,
+                  70,
+                  92,
+                  146,
+                  147,
+                  29,
+                  50,
+                  4,
+                  59,
+                  64,
+                  148,
+                  193
+                ],
+                [
+                  43,
+                  131,
+                  18,
+                  119,
+                  26,
+                  52,
+                  115,
+                  108,
+                  144,
+                  151,
+                  147,
+                  196,
+                  10,
+                  146,
+                  62
+                ],
+                [
+                  98,
+                  43,
+                  19,
+                  110,
+                  198,
+                  94,
+                  185,
+                  97,
+                  95,
+                  91,
+                  66,
+                  79,
+                  26,
+                  7,
+                  132
+                ],
+                [
+                  40,
+                  163,
+                  113,
+                  126,
+                  23,
+                  112,
+                  157,
+                  6,
+                  39,
+                  165,
+                  147,
+                  60,
+                  178,
+                  162,
+                  58
+                ],
+                [
+                  126,
+                  125,
+                  58,
+                  149,
+                  56,
+                  94,
+                  7,
+                  42,
+                  144,
+                  172,
+                  37,
+                  70,
+                  23,
+                  22,
+                  47
+                ]
+              ],
+              "pairwise_product_rank": 11,
+              "pairwise_product_rank_minor": {
+                "columns": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10
+                ],
+                "determinant_mod_p": 147,
+                "rows": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10
+                ]
+              },
+              "point_input_denominators": {
+                "all_nonzero": true,
+                "count": 48,
+                "product_mod_p": 76
+              },
+              "point_orbit_separator": {
+                "all_distinct": true,
+                "degree11_separator_polynomial_coefficients_ascending": [
+                  176,
+                  7,
+                  28,
+                  25,
+                  162,
+                  156,
+                  5,
+                  5,
+                  195,
+                  101,
+                  157,
+                  1
+                ],
+                "values": [
+                  94,
+                  23,
+                  55,
+                  26,
+                  25,
+                  30,
+                  154,
+                  143,
+                  96,
+                  65,
+                  127
+                ],
+                "vandermonde_product_mod_p": 153
+              },
+              "point_orbit_separator_formula": "r_i(v)=sum_{h in H_i} ((rho6(h)v)_5)^4",
+              "projective_noncollision": {
+                "all_projectively_distinct": true,
+                "first_nonzero_minor_for_each_pair": [
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      97
+                    ],
+                    "rows": [
+                      0,
+                      1
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      146
+                    ],
+                    "rows": [
+                      0,
+                      2
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      130
+                    ],
+                    "rows": [
+                      0,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      76
+                    ],
+                    "rows": [
+                      0,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      160
+                    ],
+                    "rows": [
+                      0,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      33
+                    ],
+                    "rows": [
+                      0,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      45
+                    ],
+                    "rows": [
+                      0,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      107
+                    ],
+                    "rows": [
+                      0,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      58
+                    ],
+                    "rows": [
+                      0,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      42
+                    ],
+                    "rows": [
+                      0,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      60
+                    ],
+                    "rows": [
+                      1,
+                      2
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      93
+                    ],
+                    "rows": [
+                      1,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      157
+                    ],
+                    "rows": [
+                      1,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      159
+                    ],
+                    "rows": [
+                      1,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      35
+                    ],
+                    "rows": [
+                      1,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      129
+                    ],
+                    "rows": [
+                      1,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      61
+                    ],
+                    "rows": [
+                      1,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      157
+                    ],
+                    "rows": [
+                      1,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      102
+                    ],
+                    "rows": [
+                      1,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      37
+                    ],
+                    "rows": [
+                      2,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      58
+                    ],
+                    "rows": [
+                      2,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      7
+                    ],
+                    "rows": [
+                      2,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      141
+                    ],
+                    "rows": [
+                      2,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      193
+                    ],
+                    "rows": [
+                      2,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      120
+                    ],
+                    "rows": [
+                      2,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      24
+                    ],
+                    "rows": [
+                      2,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      66
+                    ],
+                    "rows": [
+                      2,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      76
+                    ],
+                    "rows": [
+                      3,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      72
+                    ],
+                    "rows": [
+                      3,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      124
+                    ],
+                    "rows": [
+                      3,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      140
+                    ],
+                    "rows": [
+                      3,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      92
+                    ],
+                    "rows": [
+                      3,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      83
+                    ],
+                    "rows": [
+                      3,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      119
+                    ],
+                    "rows": [
+                      3,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      120
+                    ],
+                    "rows": [
+                      4,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      93
+                    ],
+                    "rows": [
+                      4,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      178
+                    ],
+                    "rows": [
+                      4,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      129
+                    ],
+                    "rows": [
+                      4,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      183
+                    ],
+                    "rows": [
+                      4,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      94
+                    ],
+                    "rows": [
+                      4,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      18
+                    ],
+                    "rows": [
+                      5,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      178
+                    ],
+                    "rows": [
+                      5,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      155
+                    ],
+                    "rows": [
+                      5,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      168
+                    ],
+                    "rows": [
+                      5,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      163
+                    ],
+                    "rows": [
+                      5,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      161
+                    ],
+                    "rows": [
+                      6,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      56
+                    ],
+                    "rows": [
+                      6,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      53
+                    ],
+                    "rows": [
+                      6,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      157
+                    ],
+                    "rows": [
+                      6,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      85
+                    ],
+                    "rows": [
+                      7,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      127
+                    ],
+                    "rows": [
+                      7,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      172
+                    ],
+                    "rows": [
+                      7,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      188
+                    ],
+                    "rows": [
+                      8,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      82
+                    ],
+                    "rows": [
+                      8,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      112
+                    ],
+                    "rows": [
+                      9,
+                      10
+                    ]
+                  }
+                ],
+                "minor_product_mod_p": 6,
+                "pair_count": 55
+              },
+              "quartic_reynolds_formula": "B_i(v)=sum_{h in H_i} sigma_i(h)^(-1)*((rho6(h)v)_5)^4",
+              "selected_alpha": 76,
+              "source_map_presentation_images": [
+                [
+                  0,
+                  2,
+                  1,
+                  4,
+                  3
+                ],
+                [
+                  1,
+                  3,
+                  2,
+                  0,
+                  4
+                ]
+              ],
+              "subgroup_generators": [
+                [
+                  0,
+                  1,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  5,
+                  1
+                ]
+              ],
+              "subgroup_index": 11,
+              "subgroup_order": 60
+            }
+          ],
+          "degree11_covariant_input_denominators": {
+            "all_nonzero": true,
+            "count": 2824,
+            "product_mod_p": 172
+          },
+          "direct_Q_covariance_checks_for_ST": true,
+          "full_schur_frame_Q": [
+            [
+              20,
+              143,
+              129,
+              147,
+              126
+            ],
+            [
+              140,
+              76,
+              166,
+              148,
+              186
+            ],
+            [
+              159,
+              100,
+              134,
+              189,
+              166
+            ],
+            [
+              138,
+              69,
+              76,
+              107,
+              183
+            ],
+            [
+              30,
+              83,
+              79,
+              15,
+              61
+            ]
+          ],
+          "full_schur_frame_determinant": 179,
+          "full_schur_reynolds_formula": "Q_rj(v)=sum_{g in G}(rho5(g)^(-1))_rj*((rho6(g)v)_5)^8",
+          "full_schur_scalar_I8": 141,
+          "gauss_sum": 136,
+          "group_order": 660,
+          "icosahedral_source_generator_matrices": [
+            [
+              [
+                61,
+                138,
+                198
+              ],
+              [
+                61,
+                1,
+                0
+              ],
+              [
+                61,
+                138,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                198,
+                138
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                198,
+                138,
+                0
+              ]
+            ]
+          ],
+          "icosahedral_source_presentation_permutations": [
+            [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              2
+            ]
+          ],
+          "integer_witness_reduced": [
+            22,
+            2,
+            13,
+            21,
+            22,
+            4
+          ],
+          "prime": 199,
+          "role": "unused_holdout",
+          "schur_V6_generators_ST": [
+            [
+              [
+                1,
+                0,
+                0,
+                32,
+                198,
+                198
+              ],
+              [
+                2,
+                0,
+                198,
+                31,
+                167,
+                198
+              ],
+              [
+                169,
+                1,
+                0,
+                33,
+                198,
+                31
+              ],
+              [
+                33,
+                0,
+                0,
+                30,
+                168,
+                198
+              ],
+              [
+                32,
+                0,
+                0,
+                198,
+                1,
+                198
+              ],
+              [
+                31,
+                0,
+                0,
+                197,
+                1,
+                167
+              ]
+            ],
+            [
+              [
+                31,
+                0,
+                0,
+                0,
+                0,
+                198
+              ],
+              [
+                30,
+                0,
+                0,
+                198,
+                0,
+                167
+              ],
+              [
+                32,
+                0,
+                0,
+                0,
+                0,
+                198
+              ],
+              [
+                197,
+                0,
+                0,
+                0,
+                198,
+                168
+              ],
+              [
+                198,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                166,
+                1,
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          ],
+          "schur_V6_supporting_generators_AB": [
+            [
+              [
+                0,
+                167,
+                198,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                168,
+                0,
+                32,
+                198,
+                0
+              ],
+              [
+                0,
+                166,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                169,
+                0,
+                31,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                198,
+                0,
+                0
+              ],
+              [
+                198,
+                2,
+                0,
+                198,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                1,
+                198,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                198,
+                0,
+                0
+              ],
+              [
+                168,
+                0,
+                198,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                198,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                32,
+                0,
+                0,
+                0,
+                0,
+                198
+              ]
+            ]
+          ],
+          "sqrt5": 76,
+          "sqrt_minus11": 136,
+          "weil_W5_generators_ST": [
+            [
+              [
+                158,
+                17,
+                136,
+                148,
+                139
+              ],
+              [
+                17,
+                136,
+                148,
+                139,
+                158
+              ],
+              [
+                136,
+                148,
+                139,
+                158,
+                17
+              ],
+              [
+                148,
+                139,
+                158,
+                17,
+                136
+              ],
+              [
+                139,
+                158,
+                17,
+                136,
+                148
+              ]
+            ],
+            [
+              [
+                18,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                121,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                103,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                61,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                63
+              ]
+            ]
+          ],
+          "zeta11": 18
+        },
+        {
+          "classes": [
+            {
+              "all_11_canonical_and_installed_cubic_landings": true,
+              "all_60_H_invariance_checks": true,
+              "available_alpha_roots_considered": [
+                120
+              ],
+              "base_canonical_landing_point": [
+                64,
+                62,
+                198,
+                181,
+                40
+              ],
+              "base_full_twist_point": [
+                104,
+                62,
+                139,
+                50,
+                96
+              ],
+              "base_installed_landing_point": [
+                180,
+                111,
+                192,
+                160,
+                83
+              ],
+              "base_quartic_frame_B": [
+                [
+                  156,
+                  50,
+                  119
+                ],
+                [
+                  136,
+                  78,
+                  135
+                ],
+                [
+                  167,
+                  55,
+                  64
+                ]
+              ],
+              "base_quartic_frame_determinant": 181,
+              "base_source_free_locus": {
+                "nonidentity_checks": 59,
+                "nonidentity_minor_product": 51,
+                "projective_stabilizer": [
+                  [
+                    1,
+                    0,
+                    0,
+                    1
+                  ]
+                ],
+                "projective_stabilizer_order": 1
+              },
+              "base_source_point_y_equals_Be0": [
+                156,
+                136,
+                167
+              ],
+              "canonical_cubic_parameter": 152,
+              "canonical_to_installed_intertwiner_J": [
+                [
+                  67,
+                  130,
+                  176,
+                  6,
+                  81
+                ],
+                [
+                  149,
+                  95,
+                  58,
+                  29,
+                  154
+                ],
+                [
+                  139,
+                  53,
+                  187,
+                  96,
+                  171
+                ],
+                [
+                  33,
+                  8,
+                  80,
+                  7,
+                  133
+                ],
+                [
+                  97,
+                  112,
+                  11,
+                  148,
+                  168
+                ]
+              ],
+              "class": "A5_class_2",
+              "conjugate_coset_representatives": [
+                [
+                  0,
+                  1,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  1
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  2
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  3
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  4
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  5
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  6
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  7
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  8
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  9
+                ],
+                [
+                  0,
+                  1,
+                  10,
+                  10
+                ]
+              ],
+              "conjugate_quartic_frame_determinants": [
+                181,
+                25,
+                102,
+                133,
+                41,
+                23,
+                39,
+                73,
+                135,
+                181,
+                66
+              ],
+              "coordinate_matrix": [
+                [
+                  104,
+                  62,
+                  139,
+                  50,
+                  96
+                ],
+                [
+                  2,
+                  119,
+                  145,
+                  2,
+                  195
+                ],
+                [
+                  143,
+                  166,
+                  154,
+                  55,
+                  99
+                ],
+                [
+                  43,
+                  170,
+                  27,
+                  114,
+                  93
+                ],
+                [
+                  43,
+                  145,
+                  13,
+                  57,
+                  68
+                ],
+                [
+                  88,
+                  34,
+                  53,
+                  99,
+                  151
+                ],
+                [
+                  194,
+                  105,
+                  101,
+                  52,
+                  182
+                ],
+                [
+                  5,
+                  75,
+                  195,
+                  136,
+                  184
+                ],
+                [
+                  195,
+                  67,
+                  140,
+                  122,
+                  54
+                ],
+                [
+                  3,
+                  15,
+                  178,
+                  173,
+                  188
+                ],
+                [
+                  118,
+                  155,
+                  60,
+                  109,
+                  186
+                ]
+              ],
+              "coordinate_rank": 5,
+              "coordinate_rank_minor": {
+                "columns": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "determinant_mod_p": 93,
+                "rows": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              "intertwiner_determinant": 136,
+              "landing_parameter_vector": [
+                1,
+                72,
+                134,
+                182,
+                120
+              ],
+              "pairwise_product_column_pairs": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  4,
+                  4
+                ]
+              ],
+              "pairwise_product_matrix": [
+                [
+                  70,
+                  80,
+                  128,
+                  26,
+                  34,
+                  63,
+                  61,
+                  115,
+                  181,
+                  18,
+                  184,
+                  11,
+                  112,
+                  24,
+                  62
+                ],
+                [
+                  4,
+                  39,
+                  91,
+                  4,
+                  191,
+                  32,
+                  141,
+                  39,
+                  121,
+                  130,
+                  91,
+                  17,
+                  4,
+                  191,
+                  16
+                ],
+                [
+                  151,
+                  57,
+                  132,
+                  104,
+                  28,
+                  94,
+                  92,
+                  175,
+                  116,
+                  35,
+                  112,
+                  122,
+                  40,
+                  72,
+                  50
+                ],
+                [
+                  58,
+                  146,
+                  166,
+                  126,
+                  19,
+                  45,
+                  13,
+                  77,
+                  89,
+                  132,
+                  93,
+                  123,
+                  61,
+                  55,
+                  92
+                ],
+                [
+                  58,
+                  66,
+                  161,
+                  63,
+                  138,
+                  130,
+                  94,
+                  106,
+                  109,
+                  169,
+                  144,
+                  88,
+                  65,
+                  95,
+                  47
+                ],
+                [
+                  182,
+                  7,
+                  87,
+                  155,
+                  154,
+                  161,
+                  11,
+                  182,
+                  159,
+                  23,
+                  73,
+                  43,
+                  50,
+                  24,
+                  115
+                ],
+                [
+                  25,
+                  72,
+                  92,
+                  138,
+                  85,
+                  80,
+                  58,
+                  87,
+                  6,
+                  52,
+                  78,
+                  74,
+                  117,
+                  111,
+                  90
+                ],
+                [
+                  25,
+                  176,
+                  179,
+                  83,
+                  124,
+                  53,
+                  98,
+                  51,
+                  69,
+                  16,
+                  53,
+                  60,
+                  188,
+                  149,
+                  26
+                ],
+                [
+                  16,
+                  130,
+                  37,
+                  109,
+                  182,
+                  111,
+                  27,
+                  15,
+                  36,
+                  98,
+                  165,
+                  197,
+                  158,
+                  21,
+                  130
+                ],
+                [
+                  9,
+                  45,
+                  136,
+                  121,
+                  166,
+                  26,
+                  83,
+                  8,
+                  34,
+                  43,
+                  148,
+                  32,
+                  79,
+                  87,
+                  121
+                ],
+                [
+                  193,
+                  181,
+                  115,
+                  126,
+                  58,
+                  145,
+                  146,
+                  179,
+                  174,
+                  18,
+                  172,
+                  16,
+                  140,
+                  175,
+                  169
+                ]
+              ],
+              "pairwise_product_rank": 11,
+              "pairwise_product_rank_minor": {
+                "columns": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10
+                ],
+                "determinant_mod_p": 94,
+                "rows": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10
+                ]
+              },
+              "point_input_denominators": {
+                "all_nonzero": true,
+                "count": 48,
+                "product_mod_p": 76
+              },
+              "point_orbit_separator": {
+                "all_distinct": true,
+                "degree11_separator_polynomial_coefficients_ascending": [
+                  34,
+                  37,
+                  65,
+                  136,
+                  136,
+                  22,
+                  111,
+                  188,
+                  86,
+                  189,
+                  107,
+                  1
+                ],
+                "values": [
+                  145,
+                  166,
+                  142,
+                  161,
+                  116,
+                  160,
+                  95,
+                  19,
+                  83,
+                  28,
+                  171
+                ],
+                "vandermonde_product_mod_p": 87
+              },
+              "point_orbit_separator_formula": "r_i(v)=sum_{h in H_i} ((rho6(h)v)_5)^4",
+              "projective_noncollision": {
+                "all_projectively_distinct": true,
+                "first_nonzero_minor_for_each_pair": [
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      113
+                    ],
+                    "rows": [
+                      0,
+                      1
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      40
+                    ],
+                    "rows": [
+                      0,
+                      2
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      89
+                    ],
+                    "rows": [
+                      0,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      76
+                    ],
+                    "rows": [
+                      0,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      70
+                    ],
+                    "rows": [
+                      0,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      86
+                    ],
+                    "rows": [
+                      0,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      127
+                    ],
+                    "rows": [
+                      0,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      52
+                    ],
+                    "rows": [
+                      0,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      180
+                    ],
+                    "rows": [
+                      0,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      48
+                    ],
+                    "rows": [
+                      0,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      31
+                    ],
+                    "rows": [
+                      1,
+                      2
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      198
+                    ],
+                    "rows": [
+                      1,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      148
+                    ],
+                    "rows": [
+                      1,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      143
+                    ],
+                    "rows": [
+                      1,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      9
+                    ],
+                    "rows": [
+                      1,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      152
+                    ],
+                    "rows": [
+                      1,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      13
+                    ],
+                    "rows": [
+                      1,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      71
+                    ],
+                    "rows": [
+                      1,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      198
+                    ],
+                    "rows": [
+                      1,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      58
+                    ],
+                    "rows": [
+                      2,
+                      3
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      65
+                    ],
+                    "rows": [
+                      2,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      5
+                    ],
+                    "rows": [
+                      2,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      124
+                    ],
+                    "rows": [
+                      2,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      144
+                    ],
+                    "rows": [
+                      2,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      96
+                    ],
+                    "rows": [
+                      2,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      55
+                    ],
+                    "rows": [
+                      2,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      189
+                    ],
+                    "rows": [
+                      2,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      119
+                    ],
+                    "rows": [
+                      3,
+                      4
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      34
+                    ],
+                    "rows": [
+                      3,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      191
+                    ],
+                    "rows": [
+                      3,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      186
+                    ],
+                    "rows": [
+                      3,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      178
+                    ],
+                    "rows": [
+                      3,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      135
+                    ],
+                    "rows": [
+                      3,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      137
+                    ],
+                    "rows": [
+                      3,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      45
+                    ],
+                    "rows": [
+                      4,
+                      5
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      66
+                    ],
+                    "rows": [
+                      4,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      112
+                    ],
+                    "rows": [
+                      4,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      78
+                    ],
+                    "rows": [
+                      4,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      11
+                    ],
+                    "rows": [
+                      4,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      102
+                    ],
+                    "rows": [
+                      4,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      57
+                    ],
+                    "rows": [
+                      5,
+                      6
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      62
+                    ],
+                    "rows": [
+                      5,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      62
+                    ],
+                    "rows": [
+                      5,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      24
+                    ],
+                    "rows": [
+                      5,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      76
+                    ],
+                    "rows": [
+                      5,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      95
+                    ],
+                    "rows": [
+                      6,
+                      7
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      85
+                    ],
+                    "rows": [
+                      6,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      8
+                    ],
+                    "rows": [
+                      6,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      168
+                    ],
+                    "rows": [
+                      6,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      38
+                    ],
+                    "rows": [
+                      7,
+                      8
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      49
+                    ],
+                    "rows": [
+                      7,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      84
+                    ],
+                    "rows": [
+                      7,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      137
+                    ],
+                    "rows": [
+                      8,
+                      9
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      31
+                    ],
+                    "rows": [
+                      8,
+                      10
+                    ]
+                  },
+                  {
+                    "minor": [
+                      0,
+                      1,
+                      88
+                    ],
+                    "rows": [
+                      9,
+                      10
+                    ]
+                  }
+                ],
+                "minor_product_mod_p": 51,
+                "pair_count": 55
+              },
+              "quartic_reynolds_formula": "B_i(v)=sum_{h in H_i} sigma_i(h)^(-1)*((rho6(h)v)_5)^4",
+              "selected_alpha": 120,
+              "source_map_presentation_images": [
+                [
+                  0,
+                  2,
+                  1,
+                  4,
+                  3
+                ],
+                [
+                  1,
+                  3,
+                  2,
+                  0,
+                  4
+                ]
+              ],
+              "subgroup_generators": [
+                [
+                  0,
+                  1,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  5,
+                  10
+                ]
+              ],
+              "subgroup_index": 11,
+              "subgroup_order": 60
+            }
+          ],
+          "degree11_covariant_input_denominators": {
+            "all_nonzero": true,
+            "count": 2824,
+            "product_mod_p": 172
+          },
+          "direct_Q_covariance_checks_for_ST": true,
+          "full_schur_frame_Q": [
+            [
+              38,
+              14,
+              152,
+              35,
+              16
+            ],
+            [
+              51,
+              21,
+              116,
+              79,
+              86
+            ],
+            [
+              158,
+              94,
+              173,
+              70,
+              132
+            ],
+            [
+              140,
+              82,
+              155,
+              120,
+              47
+            ],
+            [
+              184,
+              72,
+              93,
+              77,
+              198
+            ]
+          ],
+          "full_schur_frame_determinant": 167,
+          "full_schur_reynolds_formula": "Q_rj(v)=sum_{g in G}(rho5(g)^(-1))_rj*((rho6(g)v)_5)^8",
+          "full_schur_scalar_I8": 180,
+          "gauss_sum": 136,
+          "group_order": 660,
+          "icosahedral_source_generator_matrices": [
+            [
+              [
+                61,
+                138,
+                198
+              ],
+              [
+                61,
+                1,
+                0
+              ],
+              [
+                61,
+                138,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                198,
+                138
+              ],
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                198,
+                138,
+                0
+              ]
+            ]
+          ],
+          "icosahedral_source_presentation_permutations": [
+            [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              2
+            ]
+          ],
+          "integer_witness_reduced": [
+            1,
+            1,
+            2,
+            3,
+            5,
+            8
+          ],
+          "prime": 199,
+          "role": "unused_holdout",
+          "schur_V6_generators_ST": [
+            [
+              [
+                1,
+                0,
+                0,
+                32,
+                198,
+                198
+              ],
+              [
+                2,
+                0,
+                198,
+                31,
+                167,
+                198
+              ],
+              [
+                169,
+                1,
+                0,
+                33,
+                198,
+                31
+              ],
+              [
+                33,
+                0,
+                0,
+                30,
+                168,
+                198
+              ],
+              [
+                32,
+                0,
+                0,
+                198,
+                1,
+                198
+              ],
+              [
+                31,
+                0,
+                0,
+                197,
+                1,
+                167
+              ]
+            ],
+            [
+              [
+                31,
+                0,
+                0,
+                0,
+                0,
+                198
+              ],
+              [
+                30,
+                0,
+                0,
+                198,
+                0,
+                167
+              ],
+              [
+                32,
+                0,
+                0,
+                0,
+                0,
+                198
+              ],
+              [
+                197,
+                0,
+                0,
+                0,
+                198,
+                168
+              ],
+              [
+                198,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                166,
+                1,
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          ],
+          "schur_V6_supporting_generators_AB": [
+            [
+              [
+                0,
+                167,
+                198,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                168,
+                0,
+                32,
+                198,
+                0
+              ],
+              [
+                0,
+                166,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                169,
+                0,
+                31,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                198,
+                0,
+                0
+              ],
+              [
+                198,
+                2,
+                0,
+                198,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                1,
+                198,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                198,
+                0,
+                0
+              ],
+              [
+                168,
+                0,
+                198,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                198,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                32,
+                0,
+                0,
+                0,
+                0,
+                198
+              ]
+            ]
+          ],
+          "sqrt5": 76,
+          "sqrt_minus11": 136,
+          "weil_W5_generators_ST": [
+            [
+              [
+                158,
+                17,
+                136,
+                148,
+                139
+              ],
+              [
+                17,
+                136,
+                148,
+                139,
+                158
+              ],
+              [
+                136,
+                148,
+                139,
+                158,
+                17
+              ],
+              [
+                148,
+                139,
+                158,
+                17,
+                136
+              ],
+              [
+                139,
+                158,
+                17,
+                136,
+                148
+              ]
+            ],
+            [
+              [
+                18,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                121,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                103,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                61,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                63
+              ]
+            ]
+          ],
+          "zeta11": 18
+        }
+      ],
+      "prime": 199,
+      "role": "unused_holdout"
+    }
+  ],
+  "required_gates": {
+    "all_11_cubic_landings": true,
+    "all_11_full_twist_points_projectively_distinct": true,
+    "all_11_point_orbit_separator_values_distinct": true,
+    "all_J_B_Q_determinants_nonzero": true,
+    "all_rational_input_denominators_nonzero": true,
+    "all_selected_alpha_relations": true,
+    "all_source_points_in_free_projective_A5_locus": true,
+    "coordinate_matrix_rank": 5,
+    "p89_discovery_and_p199_holdout": true,
+    "pairwise_product_matrix_rank": 11,
+    "separator_is_not_the_audited_primitive_tau_resolvent": true
+  },
+  "scope": "finite-field discovery and replay only; this does not construct the characteristic-zero fixed fields or prove the A5Q headline",
+  "terminal_marker": "A5Q_MODULAR_INDEX11_DISCOVERY_REPLAY_OK"
+}

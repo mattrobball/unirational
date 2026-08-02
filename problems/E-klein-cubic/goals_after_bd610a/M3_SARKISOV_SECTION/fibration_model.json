@@ -1,0 +1,1566 @@
+{
+  "base_field": "K=C(P(V6))^PSL2(F11)",
+  "characteristic_zero_model": {
+    "I8_formula": "sum_g ((rho6(g)v)_5)^8",
+    "Phi_normalized": "Phi_numerator/I8^3",
+    "Phi_numerator": "sum_i (sum_j Q_ij*a_j)^2*(sum_j Q_(i+1)j*a_j)",
+    "Q_entry_formula": "sum_g (rho5(g)^(-1))_rj * ((rho6(g)v)_5)^8",
+    "coefficient_table_source": "exact_frame.json:cubic_coefficient_table; 35 coefficients, 625 ordered triple products",
+    "frame": "R_j=Q_j/I8, j=0,...,4",
+    "generic_fibre_t_nonzero": "Phi_numerator(a0,a1,a2,q*u,u)=0 over K(q)",
+    "graph": [
+      "Phi_numerator=0",
+      "a3*t-a4*s=0"
+    ],
+    "q_convention": "q=s/t"
+  },
+  "denominator_ledger": {
+    "basis_open": "I8*det(Q) != 0",
+    "frame_denominator": "I8",
+    "generic_fibre_chart_denominator": "t (only for q=s/t; the other chart is symmetric)",
+    "good_reduction_proves_nonzero_over_characteristic_zero": true,
+    "graph_additional_denominators": [],
+    "normalized_cubic_denominator": "I8^3"
+  },
+  "generic_fibre": {
+    "ambient": "P3_K(q) with coordinates [a0:a1:a2:u]",
+    "hyperplane_class": "h=H|S=-K_S",
+    "index": 1,
+    "relative_anticanonical": "-K_(Y/P1)=D=H-L; on S this restricts to H|S",
+    "smooth": true,
+    "smoothness_reason": "two good-fibre Jacobian-unit witnesses below, and hence an open characteristic-zero generic-smoothness certificate",
+    "zero_cycles": [
+      {
+        "construction": "u=0 gives the plane cubic C_012; intersect it with a K-line",
+        "degree": 3
+      },
+      {
+        "construction": "connected D12 orbit of involution minus-lines, each horizontal of degree one",
+        "degree": 55
+      }
+    ]
+  },
+  "good_reductions": [
+    {
+      "I8": 10,
+      "cubic_terms": [
+        {
+          "coefficient": 9,
+          "exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 21,
+          "exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 12,
+          "exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 14,
+          "exponents": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 16,
+          "exponents": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": 13,
+          "exponents": [
+            1,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 17,
+          "exponents": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 18,
+          "exponents": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 15,
+          "exponents": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": 4,
+          "exponents": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 15,
+          "exponents": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 5,
+          "exponents": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": 6,
+          "exponents": [
+            1,
+            0,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 18,
+          "exponents": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 6,
+          "exponents": [
+            1,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": 20,
+          "exponents": [
+            0,
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 3,
+          "exponents": [
+            0,
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 7,
+          "exponents": [
+            0,
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 2,
+          "exponents": [
+            0,
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": 12,
+          "exponents": [
+            0,
+            1,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 7,
+          "exponents": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 10,
+          "exponents": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": 11,
+          "exponents": [
+            0,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 18,
+          "exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 14,
+          "exponents": [
+            0,
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": 12,
+          "exponents": [
+            0,
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 3,
+          "exponents": [
+            0,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 4,
+          "exponents": [
+            0,
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 1,
+          "exponents": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 21,
+          "exponents": [
+            0,
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": 2,
+          "exponents": [
+            0,
+            0,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": 21,
+          "exponents": [
+            0,
+            0,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient": 20,
+          "exponents": [
+            0,
+            0,
+            0,
+            0,
+            3
+          ]
+        }
+      ],
+      "frame": [
+        [
+          7,
+          10,
+          3,
+          2,
+          12
+        ],
+        [
+          18,
+          15,
+          1,
+          3,
+          1
+        ],
+        [
+          17,
+          4,
+          0,
+          15,
+          1
+        ],
+        [
+          18,
+          8,
+          10,
+          17,
+          14
+        ],
+        [
+          2,
+          17,
+          8,
+          16,
+          13
+        ]
+      ],
+      "frame_determinant": 21,
+      "generic_fibre_smoothness": {
+        "coefficient_field": "F_23(q)",
+        "projective_charts": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "singular_jacobian_ideal_is_unit_on_every_chart": true,
+        "singular_transcript": [
+          "CHART_0_EMPTY",
+          "CHART_1_EMPTY",
+          "CHART_2_EMPTY",
+          "CHART_3_EMPTY"
+        ]
+      },
+      "generic_fibre_terms_a0_a1_a2_u_q": [
+        {
+          "coefficient": 9,
+          "exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 21,
+          "exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 12,
+          "exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 14,
+          "exponents": [
+            2,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 16,
+          "exponents": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 13,
+          "exponents": [
+            1,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 17,
+          "exponents": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 18,
+          "exponents": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 15,
+          "exponents": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 4,
+          "exponents": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 15,
+          "exponents": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 5,
+          "exponents": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 6,
+          "exponents": [
+            1,
+            0,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "coefficient": 18,
+          "exponents": [
+            1,
+            0,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": 6,
+          "exponents": [
+            1,
+            0,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 20,
+          "exponents": [
+            0,
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 3,
+          "exponents": [
+            0,
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 7,
+          "exponents": [
+            0,
+            2,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 2,
+          "exponents": [
+            0,
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 12,
+          "exponents": [
+            0,
+            1,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 7,
+          "exponents": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 10,
+          "exponents": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 11,
+          "exponents": [
+            0,
+            1,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "coefficient": 18,
+          "exponents": [
+            0,
+            1,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": 14,
+          "exponents": [
+            0,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 12,
+          "exponents": [
+            0,
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 3,
+          "exponents": [
+            0,
+            0,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 4,
+          "exponents": [
+            0,
+            0,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "coefficient": 1,
+          "exponents": [
+            0,
+            0,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": 21,
+          "exponents": [
+            0,
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 2,
+          "exponents": [
+            0,
+            0,
+            0,
+            3,
+            2
+          ]
+        },
+        {
+          "coefficient": 21,
+          "exponents": [
+            0,
+            0,
+            0,
+            3,
+            1
+          ]
+        },
+        {
+          "coefficient": 20,
+          "exponents": [
+            0,
+            0,
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "prime": 23,
+      "source_witness": [
+        22,
+        2,
+        13,
+        21,
+        22,
+        4
+      ],
+      "zeta11": 2
+    },
+    {
+      "I8": 59,
+      "cubic_terms": [
+        {
+          "coefficient": 47,
+          "exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 18,
+          "exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 45,
+          "exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 5,
+          "exponents": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 54,
+          "exponents": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": 22,
+          "exponents": [
+            1,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 47,
+          "exponents": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 13,
+          "exponents": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 22,
+          "exponents": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": 54,
+          "exponents": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 54,
+          "exponents": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 24,
+          "exponents": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": 1,
+          "exponents": [
+            1,
+            0,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 65,
+          "exponents": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 12,
+          "exponents": [
+            1,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": 5,
+          "exponents": [
+            0,
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 27,
+          "exponents": [
+            0,
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 3,
+          "exponents": [
+            0,
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 1,
+          "exponents": [
+            0,
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": 42,
+          "exponents": [
+            0,
+            1,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 19,
+          "exponents": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 24,
+          "exponents": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": 25,
+          "exponents": [
+            0,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 61,
+          "exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 22,
+          "exponents": [
+            0,
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": 51,
+          "exponents": [
+            0,
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 54,
+          "exponents": [
+            0,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 17,
+          "exponents": [
+            0,
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": 50,
+          "exponents": [
+            0,
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 60,
+          "exponents": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 4,
+          "exponents": [
+            0,
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient": 7,
+          "exponents": [
+            0,
+            0,
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "coefficient": 56,
+          "exponents": [
+            0,
+            0,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": 14,
+          "exponents": [
+            0,
+            0,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient": 66,
+          "exponents": [
+            0,
+            0,
+            0,
+            0,
+            3
+          ]
+        }
+      ],
+      "frame": [
+        [
+          56,
+          26,
+          39,
+          55,
+          61
+        ],
+        [
+          52,
+          30,
+          42,
+          51,
+          37
+        ],
+        [
+          1,
+          43,
+          19,
+          52,
+          24
+        ],
+        [
+          54,
+          8,
+          21,
+          59,
+          0
+        ],
+        [
+          12,
+          0,
+          58,
+          38,
+          27
+        ]
+      ],
+      "frame_determinant": 50,
+      "generic_fibre_smoothness": {
+        "coefficient_field": "F_67(q)",
+        "projective_charts": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "singular_jacobian_ideal_is_unit_on_every_chart": true,
+        "singular_transcript": [
+          "CHART_0_EMPTY",
+          "CHART_1_EMPTY",
+          "CHART_2_EMPTY",
+          "CHART_3_EMPTY"
+        ]
+      },
+      "generic_fibre_terms_a0_a1_a2_u_q": [
+        {
+          "coefficient": 47,
+          "exponents": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 18,
+          "exponents": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 45,
+          "exponents": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 5,
+          "exponents": [
+            2,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 54,
+          "exponents": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 22,
+          "exponents": [
+            1,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 47,
+          "exponents": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 13,
+          "exponents": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 22,
+          "exponents": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 54,
+          "exponents": [
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 54,
+          "exponents": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 24,
+          "exponents": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 1,
+          "exponents": [
+            1,
+            0,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "coefficient": 65,
+          "exponents": [
+            1,
+            0,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": 12,
+          "exponents": [
+            1,
+            0,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 5,
+          "exponents": [
+            0,
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 27,
+          "exponents": [
+            0,
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 3,
+          "exponents": [
+            0,
+            2,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 1,
+          "exponents": [
+            0,
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 42,
+          "exponents": [
+            0,
+            1,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 19,
+          "exponents": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 24,
+          "exponents": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 25,
+          "exponents": [
+            0,
+            1,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "coefficient": 61,
+          "exponents": [
+            0,
+            1,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": 22,
+          "exponents": [
+            0,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 51,
+          "exponents": [
+            0,
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient": 54,
+          "exponents": [
+            0,
+            0,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": 17,
+          "exponents": [
+            0,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": 50,
+          "exponents": [
+            0,
+            0,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "coefficient": 60,
+          "exponents": [
+            0,
+            0,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": 4,
+          "exponents": [
+            0,
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient": 7,
+          "exponents": [
+            0,
+            0,
+            0,
+            3,
+            3
+          ]
+        },
+        {
+          "coefficient": 56,
+          "exponents": [
+            0,
+            0,
+            0,
+            3,
+            2
+          ]
+        },
+        {
+          "coefficient": 14,
+          "exponents": [
+            0,
+            0,
+            0,
+            3,
+            1
+          ]
+        },
+        {
+          "coefficient": 66,
+          "exponents": [
+            0,
+            0,
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "prime": 67,
+      "source_witness": [
+        22,
+        2,
+        13,
+        21,
+        22,
+        4
+      ],
+      "zeta11": 9
+    }
+  ],
+  "inputs": {
+    "goal_runs_after_35fa/M_SARKISOV/links/schur_plane_012_dp3/link_payload.json": "a1c74b36f85bd5c085d1b3d5628da770db3520d97c388950d653a0a8468e9fd5",
+    "goal_runs_after_35fa/M_SARKISOV/payload/mori_cox.json": "ec8e5009ede6d21dcfcfcf71e8edbdf79df5cd1ec268d9b106d741e799b509b0",
+    "goals_2026-08-01/Q_SCHUR_EXPLICIT_FRAME_CODEX_ROOT_20260801_8F3D/exact_frame.json": "53f2d5e6afa2c6afdf49f53723339ccf5755f919471d42f907d5542ddef87e45",
+    "goals_2026-08-01/Q_SCHUR_EXPLICIT_FRAME_CODEX_ROOT_20260801_8F3D/exact_representation_core.py": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4"
+  },
+  "schema": "m3-genuine-projective-schur-fibration-v1",
+  "scope": {
+    "headline": "OPEN",
+    "rational_section_produced": false,
+    "split_prime_section_search_is_discovery_only": true
+  },
+  "section_to_twist_evaluation": {
+    "basepoint_condition": "A0,A1,A2,q0 have no common zero on P1",
+    "evaluation": "evaluate at any [s0:t0] where the displayed tuple is nonzero, map to Y, then apply the blowdown pi to obtain a K-point of the authoritative twist",
+    "extension": "properness of Y over P1 extends a K(q)-point to a section",
+    "identity": "Phi(A0,A1,A2,s*q0,t*q0)=0",
+    "section_tuple": "[A0(s,t):A1(s,t):A2(s,t):s*q0(s,t):t*q0(s,t)]"
+  }
+}

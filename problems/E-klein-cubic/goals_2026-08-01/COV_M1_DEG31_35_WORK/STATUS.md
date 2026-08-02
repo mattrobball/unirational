@@ -60,6 +60,26 @@ authorize either scoped full-degree emptiness exit or a positive headline.
   with `13` and `20` nonbased charts.  Vanishing of the mixed scalar leaves
   true third-based dimensions `65` and `184`; the complete landing cubics are
   explicitly materialized there.  These ranks also agree at both primes.
+- Continuing from the third-based systems, the pure cubic normal gates have
+  dimensions `36` and `140`, with `6` and `31` nonbased charts.  The
+  scalar-zero degree-31 continuation and the scalar-zero degree-35
+  mixed/quartic continuation each reach an exact five-dimensional linear
+  gate.  On both gates the complete landing equations span all `35` cubic
+  monomials over `F_463`, so both deepest projective tails are empty; the
+  prerequisite linear ranks agree at `p=463` and `p=727`.
+- Exact `msolve` runs on the first two degree-31 pure-third normalization
+  charts return one-element Groebner bases `[1]`.  These two affine charts are
+  empty over `F_463`, so that special fibre has a residual four-chart cover.
+  The kernels and charts are prime-specific and affine, so this result does
+  not transfer by proper specialization; all six charts remain open for the
+  characteristic-zero landing scheme.
+- On nonzero-root branches the next coefficient of the Klein equation gives
+  the exact tangent condition.  It reduces the first-normal nonbased kernels
+  to `137,266` variables and their scalar chart counts to `15,9`.  On the
+  degree-35 mixed-third nonbased branch it gives a `39`-variable kernel and
+  nine scalar charts.  On the mixed-second nonbased branches the same tangent
+  gate reduces the kernels to `45,156` variables and the chart counts from
+  `13,20` to `9,16`.  These tangent ranks also agree at both primes.
 - No one- or two-basis-direction survivor exists at `F_419`.  This is a
   discovery diagnostic only.
 
@@ -73,13 +93,45 @@ cannot be relabelled as `COV35-FULL-DEGREE-EMPTY-SCOPED`.
 
 There is also a binding lower-degree dependency.  If `q` is a degree-25
 landing covariant, then `f6*q` and `f10*q` are landing covariants in degrees
-31 and 35 because `F(f*q)=f^3 F(q)`.  Goal P25.2 remains undecided.  Hence a
+31 and 35 because `F(f*q)=f^3 F(q)`.  The full fixed 59-dimensional `K1_25`
+module has now been embedded by both multipliers at `p=463,727`.  Along the
+degree-31 tree the allowed/scalar-zero preimage pairs are `51/46`, `27/18`,
+and `3/0` at C3-constant, first-normal, and pure-second order, followed by
+zero.  On the three-dimensional pure-second allowed gate, the scalar-zero
+restriction has rank three and the complete landing equations span all
+`10/10` cubics.  Hence that projective branch is empty over `F_463` and in
+characteristic zero by proper specialization: P25 can enter degree 31 only
+at C3-constant or first-normal nonbased order.  In degree 35
+the pairs are `59/59`, `51/46`, `38/38`, `27/18`, `13/10`, and `1/1`,
+followed by a zero b2-allowed preimage.  Hence P25 can enter only the
+first-normal, mixed-second, and pure-third nonbased orders there, and the
+fifth-based/fourth-order tree is independent of P25.2.  The nonzero fixed
+minors give the corresponding characteristic-zero upper bounds.  The two
+remaining nonlinear pieces coincide across degrees at the arrangement level:
+branch A has dimension `51` and scalar rank `5` (`d31` C3-constant = `d35`
+first-normal tangent),
+while branch B has dimension `20` and scalar rank `7` (`d31` first-normal
+tangent = `d35` mixed-second tangent).  Their complete branch-B cubic row
+spaces agree with rank `574/1540`; all seven normalized charts have exact
+unit bases `[1]`, and the scalar-zero boundary is the already empty
+pure-second tree.  Thus branch B is projectively empty in characteristic
+zero.  The binding P25 common-line order-two equalizer further cuts branch A
+inside the strict 43-dimensional coefficient space.  Fixed circuits at
+`p=199,331` give gate rank `6`, hence a characteristic-zero upper bound of
+`37` variables, with scalar rank `5` at both primes.  The directly sampled
+landing subsystem has rank `716/9139` at both fibres, but none of its five
+normalized affine charts has been certified empty.  Goal P25.2 is therefore
+confined here to that strict 37-dimensional branch, which remains undecided.
+Hence a
 negative full-degree exit here would in particular settle an unresolved
 subscheme of P25.2, which this run has not done.
 
 The remaining exact cover consists of the original `10+12` C3-nonbased
-charts, `17+11` first-normal charts, `7+24` pure second-normal charts, `13+20`
-mixed second-normal charts, and the third-based projective strata of vector
-dimensions `65` and `184`.  Each must be saturated away from the actual
-scalar-factor and known composition incidence loci.  Until every branch is
-decided, the only authorized exit is `COV-UNDECIDED`.
+charts, `15+9` tangent-reduced first-normal charts, `7+24` pure second-normal
+charts, `9+16` tangent-reduced mixed second-normal charts, six degree-31
+pure-third charts, and degree-35 covers by `31`
+pure-third plus nine tangent-reduced mixed-third
+charts.  There is no remaining deepest projective stratum.  Every chart must
+still be saturated away from the actual scalar-factor and known composition
+incidence loci.  Until every branch is decided, the only authorized exit is
+`COV-UNDECIDED`.

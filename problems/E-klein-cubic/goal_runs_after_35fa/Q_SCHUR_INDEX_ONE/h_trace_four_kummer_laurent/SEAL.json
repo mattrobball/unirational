@@ -1,0 +1,15 @@
+{
+  "files": {
+    "README.md": "ccd2bde0d39a2cd9bf802ae9c3deacf46b9c25674418515d595375aeb7939d3a",
+    "STATUS.md": "c00313fd69db3826e88fafc9c5a826cee4293eedf3bb38cad4ee67619937cf85",
+    "THEOREM.md": "dc9617deb3a2a59a2492748f87b3f0cc3e6e3294f5f57729f4dc73f672671e8f",
+    "exact_four_low_rank.py": "e1177df7b13bd57c667d4aaaca985eb0c3077abb9ca1b93ac0822471fca0559c",
+    "exact_four_rank3.py": "cc23537254fff4f94fdebab9b46142e66f9b90d7d82a386fc9047f670bcb3792",
+    "make_seal.py": "6d62a805f0e709046729c51e4a14384951b98337d6faaec3b18feac932d242e4",
+    "screen_four_modular.py": "6ad5165d9333aa487689869725137c3cd5f06b8292825121471567479f10eeab",
+    "source_manifest.json": "7f9c88e3eb4b8284cb3f0d51133cdeb30e01c6d4a4ffb2e482824fe16f7574c9",
+    "verify_all.py": "75d90693a4ae4fc9e567070c68c7da3d57102996293db446d3dabd94c02d85f4"
+  },
+  "format": "Q-11_5-FOUR-KUMMER-SEAL-v1",
+  "status": "Q-UNDECIDED"
+}

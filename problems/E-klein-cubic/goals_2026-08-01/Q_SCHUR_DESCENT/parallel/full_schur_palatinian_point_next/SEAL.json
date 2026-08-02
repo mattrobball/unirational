@@ -1,0 +1,129 @@
+{
+  "bounded_theorems": [
+    "ten natural Palatini pencils are irreducible in the good fibre",
+    "the q1--q3 pencil has no algebraic-constant rational root",
+    "no nonzero constant-coefficient degree-nine polynomial Schur self-covariant lands identically on the Palatini quartic"
+  ],
+  "files": {
+    "REPLAY.md": {
+      "bytes": 1688,
+      "sha256": "06c3aa0c5f509b00130bacaca2070c43272467b28ac0c0c5d9dfe273f746429f"
+    },
+    "REPORT.md": {
+      "bytes": 8024,
+      "sha256": "b5f01993777833372065ba2bf28c555c414f7cbdbcbbd15457173dc958d85f23"
+    },
+    "certificate.json": {
+      "bytes": 7354,
+      "sha256": "9f632160c10ae75d138ad2435610722f15bbf5d256ce80d545fefcebaa43f72f"
+    },
+    "degree9_binary_clauses_f529.json": {
+      "bytes": 1455263,
+      "sha256": "7dbd717a242b4f1b76dcfe7e9653a24905938199542937e853b4749239238294"
+    },
+    "degree9_binary_factor_sat.py": {
+      "bytes": 12549,
+      "sha256": "630411ea9461f90bc48e682a04f29ccf73f1c6265cf57edc22852b3e6a752198"
+    },
+    "degree9_binary_factor_sat_exhaustive.py": {
+      "bytes": 15590,
+      "sha256": "8534f5b85315047fc7fe26af42dc705915fd2b34fe9c2957cc624578feb05703"
+    },
+    "degree9_fast_linear_sat.py": {
+      "bytes": 10587,
+      "sha256": "1dd5d917f32fc2479bcfab2792f6000a1f91b54d70457b52fca07e37f9660c74"
+    },
+    "degree9_fast_linear_sat_f529.json": {
+      "bytes": 5219,
+      "sha256": "6de9536db02fd6d2259c34167d3d71dc2d5ba6869a757de716de3b41623776bf"
+    },
+    "degree9_full_landing.py": {
+      "bytes": 25388,
+      "sha256": "7512c7255a5bb0b45ea7e98a4365074431a4a8a28589aa3149cc525ae5f873a9"
+    },
+    "degree9_projective_emptiness_certificate.json": {
+      "bytes": 3123,
+      "sha256": "8cd20ab2c9efefb21ac8aeb299a5ce46a449ce2bd5e6afa7bbc0638758e1885b"
+    },
+    "degree9_rank_one_eigenlines_f529.json": {
+      "bytes": 138611,
+      "sha256": "1d913d8db1730e79960391094caa780d5dea76b3256fc44e17cc2b0d1dc67e3e"
+    },
+    "eigenline_rank_one_probe.py": {
+      "bytes": 9623,
+      "sha256": "f24957dc6399cf0bc11d97b236b730db1ee8baa708e224be15ebd8f9c5dff182"
+    },
+    "factor_natural_pencil_mod23.py": {
+      "bytes": 4679,
+      "sha256": "9babd4db898309ecfa4135acfeed6666dabcebc43e79355bcea58d178ea77143"
+    },
+    "make_degree9_certificate.py": {
+      "bytes": 4078,
+      "sha256": "37635358f539799ae49689ea8b858f87a9a043bbdd1e1ec0892cc7d21923c858"
+    },
+    "make_seal.py": {
+      "bytes": 2740,
+      "sha256": "3899b5e665046f9c2e2bc22073ccd67459977b158d1dcc575fa3cae5fa732fde"
+    },
+    "pencil_mod23.py": {
+      "bytes": 10093,
+      "sha256": "981a1a6d8f6e8862dba7f02c1e241ee19132edd9d0c4b97e626e02c7b732b6b2"
+    },
+    "produce_certificate.py": {
+      "bytes": 4905,
+      "sha256": "c115e60224d14a0f52b064ef363d19f221530da092153668182cd055d83e7fba"
+    },
+    "source_manifest.json": {
+      "bytes": 870,
+      "sha256": "29c6d7a2fd184d24251f802871843e26a060f3235737b98e435603f85067aa3b"
+    },
+    "verify.py": {
+      "bytes": 4959,
+      "sha256": "79f9dbf51765adefd7293603febb80b53e444ed043d701080fbd8a398018a66e"
+    },
+    "verify_degree9_projective_emptiness.py": {
+      "bytes": 6315,
+      "sha256": "ba54d99e968d85445716010fac1d4767dceecaeeb1f89daa7c04d2cfaa23265d"
+    },
+    "verify_seal.py": {
+      "bytes": 1407,
+      "sha256": "79781c4bb8d0028c948190b252024b5a9b724141eb65b505ff5e08900be3e958"
+    }
+  },
+  "governing_status": "Q-UNDECIDED",
+  "groups": {
+    "certificates_and_manifests": [
+      "certificate.json",
+      "degree9_projective_emptiness_certificate.json",
+      "source_manifest.json"
+    ],
+    "frozen_replay_data": [
+      "degree9_rank_one_eigenlines_f529.json",
+      "degree9_binary_clauses_f529.json",
+      "degree9_fast_linear_sat_f529.json"
+    ],
+    "replay_sources": [
+      "pencil_mod23.py",
+      "factor_natural_pencil_mod23.py",
+      "produce_certificate.py",
+      "degree9_full_landing.py",
+      "eigenline_rank_one_probe.py",
+      "degree9_binary_factor_sat.py",
+      "degree9_binary_factor_sat_exhaustive.py",
+      "degree9_fast_linear_sat.py",
+      "make_degree9_certificate.py",
+      "make_seal.py"
+    ],
+    "report_and_replay": [
+      "REPORT.md",
+      "REPLAY.md"
+    ],
+    "verifiers": [
+      "verify.py",
+      "verify_degree9_projective_emptiness.py",
+      "verify_seal.py"
+    ]
+  },
+  "schema": "full-schur-palatinian-point-next-strict-seal-v1",
+  "strict_scope": "No arbitrary K_Schur-rational frame coefficient verdict, no V14(K_Schur) or X_Schur(K_Schur) point, and no binary Q verdict."
+}

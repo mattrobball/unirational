@@ -1,0 +1,114 @@
+{
+  "cubic_ledger": {
+    "T_tail_distinct_rows": 56,
+    "T_tail_rows": 126,
+    "V0_plus_W_sha256": "eec403efddef62560b82c7822c1185cb1c057a08980d328833e7139e4b45b201",
+    "V0_shape": [
+      690,
+      9139
+    ],
+    "W_shape": [
+      56,
+      9139
+    ],
+    "intersection_dimension": 0,
+    "rank_V0": 690,
+    "rank_V0_plus_W": 746,
+    "rank_W": 56
+  },
+  "inputs": {
+    "certificates/degree25_finite_module/multiplication_matrices.npz": "cdee1a9cd2989f2d17e7771321b49723d8a9dfc71d2bd5a791f83a30142aa418",
+    "certificates/degree25_finite_module/relation_matrix.npz": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb"
+  },
+  "multiplication_map": {
+    "certificate_logic": "The selected-row restriction proves the displayed lower rank. Its independent kernel basis is substituted coefficient-by-coefficient into all 91390 rows of the complete multiplication map and vanishes. The matching lower and upper bounds prove the exact full rank/kernel.",
+    "codomain_dimension": 91390,
+    "domain_dimension": 27602,
+    "full_image_rank": 27583,
+    "full_kernel_identity_nonzero_coefficients": 0,
+    "kernel_S1_V0_dimension": 0,
+    "kernel_S1_W_dimension": 0,
+    "kernel_basis_file": "pc0_multiplication_kernel.npz",
+    "kernel_basis_file_sha256": "d08b22ea873111a3849fd03c16374d7ee83fce775f974b0ccde7db8f6a64830a",
+    "kernel_basis_rank": 19,
+    "kernel_basis_sha256": "34fc4dd29f283bd3f6ffd399c9836ddbec2427235c10dd2a8c9dfa6b820089ae",
+    "kernel_dimension": 19,
+    "kernel_projection_to_S1_V0_rank": 19,
+    "kernel_projection_to_S1_W_rank": 19,
+    "map": "S_1 tensor (V0+W) -> S_4",
+    "quotient_image_dimension": 2053,
+    "rank_S1_V0": 25530,
+    "rank_S1_W": 2072,
+    "rank_transcript": [
+      "rows=30000",
+      "columns=27602",
+      "prime=89",
+      "rank=27583",
+      "nullity=19"
+    ],
+    "selected_degree4_rows": 30000,
+    "selected_matrix_nullity": 19,
+    "selected_matrix_rank": 27583,
+    "selected_matrix_sha256": "675def3c13d04a0b44c3fcbcd64bab5ae1b5ec062d743fcc87d1ab5c661fd903",
+    "selection_file": "pc0_selected_degree4_rows.npz",
+    "selection_file_sha256": "a640a0019530575a40e6ca7bb23225966e4ac8f1bcec8e43c5bcbab454d73186",
+    "selection_seed": 2026080125
+  },
+  "prime": 89,
+  "resource": {
+    "elapsed_seconds": 141.0991324170027,
+    "float_rank_working_bytes": 3312240000,
+    "historical_45_GiB_rref_repeated": false,
+    "scratch_directory": "/tmp/p25_cov_pc0_multiplication",
+    "selected_matrix_scratch_bytes": 828060024
+  },
+  "status": "PC0-INDEPENDENT-RANK-REPLICATION-PASS",
+  "theorem_boundary": {
+    "does_not_prove": "Stabilization of the coupled transition module, projective support emptiness/nonemptiness, a characteristic-zero rank statement, or a headline covariant.",
+    "proves": "Exactly over F_89: V0 direct-sum W has dimensions 690+56=746; S_1 tensor (V0+W) -> S_4 has rank 27583 and kernel dimension 19; all 4140 transitions span a 2072-dimensional quartic subspace; all 315 commutators span rank 210 and add no direction. The complete quotient and individual membership ledger is recorded above."
+  },
+  "transition_subspaces": {
+    "ambient_dimension": 2072,
+    "ambient_formal_tensor": "S_1 tensor W",
+    "combined_scratch_binary_sha256": "2e09964838afd344c2971774d406b46fac15cac0f816d7cbb34123ed2ddd7327",
+    "combined_span_rank": 2072,
+    "commutator_image_rank": 210,
+    "commutator_intersection_S1V0_dimension": 0,
+    "commutator_matrix_sha256": "56aa3a77777525ff4fb3c1f1b5df83fc37b385557380dbcac34ceae99d006fe6",
+    "commutator_rank_mod_S1V0": 210,
+    "commutator_rows": 315,
+    "commutator_rows_in_S1V0": 0,
+    "commutator_rows_outside_S1V0": 315,
+    "commutator_scratch_binary_sha256": "9b3d6ffc0ca951905828e1e4eb14b1ba2673aaba4739f5c7392c9b1435e70aad",
+    "commutator_span_rank": 210,
+    "commutator_zero_rows": 0,
+    "commutators_add_directions": 0,
+    "polynomial_consequence": "The full kernel meets each tensor summand trivially, so the formal transition and commutator ranks are their exact quartic image ranks. Membership modulo S1 V0 is decided against the 19-dimensional W projection of the full kernel, not inferred from nonzero formal rows.",
+    "transition_block_ranks": [
+      690,
+      690,
+      690,
+      690,
+      690,
+      690
+    ],
+    "transition_cumulative_ranks": [
+      690,
+      1332,
+      1702,
+      1924,
+      2035,
+      2072
+    ],
+    "transition_image_rank": 2072,
+    "transition_intersection_S1V0_dimension": 19,
+    "transition_matrix_sha256": "334975f81d101dd2abd5e1e7ad08b3eaddfd4f8e6511fec0efb89e54c0db62e4",
+    "transition_rank_mod_S1V0": 2053,
+    "transition_rows": 4140,
+    "transition_rows_in_S1V0": 0,
+    "transition_rows_outside_S1V0": 4140,
+    "transition_scratch_binary_sha256": "56f4391ddb96220546da724fecb0cd7e68b1e161053756355dac682c1e6aa12d",
+    "transition_span_rank": 2072,
+    "transition_zero_rows": 0
+  }
+}

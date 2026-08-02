@@ -1,0 +1,38 @@
+{
+  "T": {
+    "degree": 11,
+    "max_coefficient_bits": 80,
+    "max_exponents": [
+      11,
+      6,
+      9,
+      6
+    ],
+    "sha256": "f1a413ce9e0f38ca386118079146afa55da64bf6dac591ce3e95b3f816135614",
+    "terms": 647
+  },
+  "T_coordinate": "T=Z-11*A^2/18",
+  "Z": {
+    "degree": 15,
+    "factorization_over_QQ": "irreducible, exponent 1",
+    "max_coefficient_bits": 99,
+    "max_exponents": [
+      15,
+      6,
+      9,
+      6
+    ],
+    "sha256": "14f1209efc4a60613d4c28cffd666a0e97861ad891440e7b9a726e211d814d4f",
+    "terms": 719
+  },
+  "coefficient_field_before_descent": "QQ(zeta_11)",
+  "delta_convention": "(c4^3-c6^2)/1728",
+  "equation": "F0+A*FA+B*FB+Y*FY+(Z-11*A^2/18)*FZ",
+  "object": "fixed-frame depressed plane cubic, not xCD",
+  "rational_descent": "one nonzero QQ(zeta_11) scalar times a primitive ZZ polynomial",
+  "schema": "t3-authoritative-fixed-frame-discriminant-v1",
+  "sources": {
+    "certificates/fixed_frame_arithmetic/five_forms.json": "61377d6e464f7c78cf1fa91d13610b76dc4567de7b7214256e04de50066c83a4",
+    "tmp/xcd_descent_algebra/universal_invariants.json": "06be31c1803edee90647a8bd100295ea7779761e25f4053c990c79d5d4834986"
+  }
+}

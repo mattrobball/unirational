@@ -1,0 +1,37 @@
+{
+  "failures": [],
+  "identity_degree_bound": {
+    "NB_NY_QZprime_max_u_degree": 12,
+    "QZ_Z_degree": 6,
+    "QZ_leading_coefficient_u_degree": 8,
+    "QZ_other_coefficient_max_u_degree": 12,
+    "conclusion": "451 distinct integral u-slices force every pseudoremainder coefficient to vanish identically",
+    "construction": "pseudo-remainder in Z of cleared F by QZ",
+    "max_cleared_F_Z_degree": 36,
+    "max_cleared_F_u_degree": 78,
+    "max_pseudoremainder_u_degree": 450,
+    "pseudo_reduction_steps": 31,
+    "reason": "78 + 31*max(8,12) = 450"
+  },
+  "input_sha256": {
+    "NB": "3ffd1fad77d6e66d40ee8f447bb898c87d0fefb936ef6ea1bf24a02ac7a228ee",
+    "NY": "5a57c14e530a4ec111731b09a59da510f578f850d8655e31e7c318849a5209ae",
+    "QZ": "23be9dbe72a9a4089924accde05fc9f8d43b13e644a2e2c8528fabdb3608ef9f",
+    "primitive": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344",
+    "slice_emitter": "89460d2d7b3c2cceee1381aec3c0e789759a39ca8ffc9e3498aae1af135a55c5"
+  },
+  "integer_slice_leading_coefficient": {
+    "factor": "(u^2-8u-29)^4 up to a nonzero rational constant",
+    "nonzero_on_all_integer_slices": true,
+    "reason": "u^2-8u-29 has nonsquare discriminant 180 and no integer root"
+  },
+  "passed_count": 451,
+  "schema": "klein-t111-cleared-rur-u-grid-v1",
+  "status": "PASS",
+  "u_value_count": 451,
+  "u_values": [
+    -225,
+    225
+  ],
+  "workers": 4
+}

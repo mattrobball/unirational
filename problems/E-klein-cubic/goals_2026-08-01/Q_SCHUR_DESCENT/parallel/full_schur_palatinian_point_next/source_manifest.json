@@ -1,0 +1,11 @@
+{
+  "schema": "full-schur-palatinian-point-next-sources-v1",
+  "root": "/Users/worker/unirational/problems/E-klein-cubic",
+  "sources": {
+    "tmp/pfaffian_representation_alignment/core.py": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4",
+    "tmp/fano14_twist/fano_covariant_scan.py": "b3c93a41ed1f8b5106d93717dbad058b6c60af100bcee8138925485dac6f107e",
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/full_schur_palatinian/source_manifest.json": "9bfe8494b2d74efa9b8cecedefa3b0c47d618b05ae6542cbc076d099fd657d9d",
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/full_schur_palatinian/verify_palatinian_equation.py": "c06dc7f8115cf0aaf39298a1ac49726def8a8daf58b47fd7bef0e61c4669e0f0",
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/full_schur_palatinian/verify_char0_palatinian_lift.py": "cccbce2ef39f5ce3f0133f9bd8950bf63dfbf86ed4075d89dc02e635cf538ab7"
+  }
+}

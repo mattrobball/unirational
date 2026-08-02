@@ -1,0 +1,399 @@
+{
+  "degrees": {
+    "31": {
+      "full_basis": "degree_31/full_reynolds_circuits.json",
+      "full_basis_sha256": "049165ce4f6da3d6ca307ee47f2d1951a0ab292319e44995bd1a459a5d7860ed",
+      "full_dimension": 410,
+      "m1_basis": "degree_31/m1_cross_basis_circuits.json",
+      "m1_basis_sha256": "8adc3f91db76f97a47d1df6d3f9cccee9e8eef62a825c2dff045ad96db6ff2f6",
+      "m1_dimension": 198
+    },
+    "35": {
+      "full_basis": "degree_35/full_reynolds_circuits.json",
+      "full_basis_sha256": "a1d3cf22731d4bce9c37b4c2743df1e8f5735bf049e731067e11305861183ba2",
+      "full_dimension": 637,
+      "m1_basis": "degree_35/m1_cross_basis_circuits.json",
+      "m1_basis_sha256": "f28effc9a4c9e8923980b4726d264672141a030a61a23a416534b426a301775a",
+      "m1_dimension": 361
+    }
+  },
+  "dual_generators": "dual_hironaka_generators.json",
+  "dual_generators_sha256": "b9aa1f8fe852e15b1b786b6a0577f06cf3ce200c5b092bcbd4c444678add874b",
+  "field": "K=Q(zeta_11), Phi_11(zeta_11)=0",
+  "integral_open": "O=Z[zeta_11,1/(660*Delta_dual*Delta_full31*Delta_m1_31*Delta_full35*Delta_m1_35)]. Each Delta is the determinant circuit defined by the fixed integral points and fixed maximal-minor rows in this packet; its reductions at 419 and 463 are nonzero.",
+  "prime_records": {
+    "419": {
+      "degrees": {
+        "31": {
+          "candidate_directions_examined_at_selection_prime": 2049,
+          "cross_basis_rank": 198,
+          "fixed_cross_minor_rank": 198,
+          "fixed_full_minor_rank": 410,
+          "full_basis_rank": 410,
+          "full_dimension": 410,
+          "payload": "basis_holdout_p419.npz",
+          "payload_sha256": "f926676dd32f16574813856c42d3cc95a6fc5a4d97a9c54d143eca54cc2ae46e",
+          "plane_grid_cross_rank": 0,
+          "restriction_kernel_upper_bound": 198,
+          "restriction_rank": 212
+        },
+        "35": {
+          "candidate_directions_examined_at_selection_prime": 5897,
+          "cross_basis_rank": 361,
+          "fixed_cross_minor_rank": 361,
+          "fixed_full_minor_rank": 637,
+          "full_basis_rank": 637,
+          "full_dimension": 637,
+          "payload": "basis_holdout_p419.npz",
+          "payload_sha256": "e3762fbead7f37ff641c0a13606a48e29bdf827e3078a6111e2523174b766f73",
+          "plane_grid_cross_rank": 0,
+          "restriction_kernel_upper_bound": 361,
+          "restriction_rank": 276
+        }
+      },
+      "dual_hironaka_ledger": [
+        {
+          "degree": 0,
+          "full_dual_covariant_dimension": 0,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 0
+        },
+        {
+          "degree": 1,
+          "full_dual_covariant_dimension": 0,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 0
+        },
+        {
+          "degree": 2,
+          "full_dual_covariant_dimension": 1,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 3,
+          "full_dual_covariant_dimension": 0,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 0
+        },
+        {
+          "degree": 4,
+          "full_dual_covariant_dimension": 1,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 5,
+          "full_dual_covariant_dimension": 2,
+          "inherited_primary_multiple_rank": 1,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 6,
+          "full_dual_covariant_dimension": 2,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 2
+        },
+        {
+          "degree": 7,
+          "full_dual_covariant_dimension": 4,
+          "inherited_primary_multiple_rank": 2,
+          "new_hironaka_generators": 2
+        },
+        {
+          "degree": 8,
+          "full_dual_covariant_dimension": 5,
+          "inherited_primary_multiple_rank": 3,
+          "new_hironaka_generators": 2
+        },
+        {
+          "degree": 9,
+          "full_dual_covariant_dimension": 6,
+          "inherited_primary_multiple_rank": 3,
+          "new_hironaka_generators": 3
+        },
+        {
+          "degree": 10,
+          "full_dual_covariant_dimension": 10,
+          "inherited_primary_multiple_rank": 7,
+          "new_hironaka_generators": 3
+        },
+        {
+          "degree": 11,
+          "full_dual_covariant_dimension": 12,
+          "inherited_primary_multiple_rank": 8,
+          "new_hironaka_generators": 4
+        },
+        {
+          "degree": 12,
+          "full_dual_covariant_dimension": 15,
+          "inherited_primary_multiple_rank": 12,
+          "new_hironaka_generators": 3
+        },
+        {
+          "degree": 13,
+          "full_dual_covariant_dimension": 22,
+          "inherited_primary_multiple_rank": 17,
+          "new_hironaka_generators": 5
+        },
+        {
+          "degree": 14,
+          "full_dual_covariant_dimension": 26,
+          "inherited_primary_multiple_rank": 21,
+          "new_hironaka_generators": 5
+        },
+        {
+          "degree": 15,
+          "full_dual_covariant_dimension": 31,
+          "inherited_primary_multiple_rank": 27,
+          "new_hironaka_generators": 4
+        },
+        {
+          "degree": 16,
+          "full_dual_covariant_dimension": 42,
+          "inherited_primary_multiple_rank": 37,
+          "new_hironaka_generators": 5
+        },
+        {
+          "degree": 17,
+          "full_dual_covariant_dimension": 49,
+          "inherited_primary_multiple_rank": 45,
+          "new_hironaka_generators": 4
+        },
+        {
+          "degree": 18,
+          "full_dual_covariant_dimension": 59,
+          "inherited_primary_multiple_rank": 55,
+          "new_hironaka_generators": 4
+        },
+        {
+          "degree": 19,
+          "full_dual_covariant_dimension": 73,
+          "inherited_primary_multiple_rank": 71,
+          "new_hironaka_generators": 2
+        },
+        {
+          "degree": 20,
+          "full_dual_covariant_dimension": 86,
+          "inherited_primary_multiple_rank": 82,
+          "new_hironaka_generators": 4
+        },
+        {
+          "degree": 21,
+          "full_dual_covariant_dimension": 100,
+          "inherited_primary_multiple_rank": 99,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 22,
+          "full_dual_covariant_dimension": 121,
+          "inherited_primary_multiple_rank": 120,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 23,
+          "full_dual_covariant_dimension": 139,
+          "inherited_primary_multiple_rank": 138,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 24,
+          "full_dual_covariant_dimension": 162,
+          "inherited_primary_multiple_rank": 161,
+          "new_hironaka_generators": 1
+        }
+      ],
+      "prime": 419,
+      "zeta11": 13
+    },
+    "463": {
+      "degrees": {
+        "31": {
+          "candidate_directions_examined_at_selection_prime": 0,
+          "cross_basis_rank": 198,
+          "fixed_cross_minor_rank": 198,
+          "fixed_full_minor_rank": 410,
+          "full_basis_rank": 410,
+          "full_dimension": 410,
+          "payload": "basis_holdout_p463.npz",
+          "payload_sha256": "58fa2b96daed56f34a13229d888cfb257a75f3c439a4a171a546ab1233f4d75f",
+          "plane_grid_cross_rank": 0,
+          "restriction_kernel_upper_bound": 198,
+          "restriction_rank": 212
+        },
+        "35": {
+          "candidate_directions_examined_at_selection_prime": 0,
+          "cross_basis_rank": 361,
+          "fixed_cross_minor_rank": 361,
+          "fixed_full_minor_rank": 637,
+          "full_basis_rank": 637,
+          "full_dimension": 637,
+          "payload": "basis_holdout_p463.npz",
+          "payload_sha256": "4ad2ea5b0e2121ca2cbb0e7047df157677dc81de5e6aac2b6faf24cbda36001f",
+          "plane_grid_cross_rank": 0,
+          "restriction_kernel_upper_bound": 361,
+          "restriction_rank": 276
+        }
+      },
+      "dual_hironaka_ledger": [
+        {
+          "degree": 0,
+          "full_dual_covariant_dimension": 0,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 0
+        },
+        {
+          "degree": 1,
+          "full_dual_covariant_dimension": 0,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 0
+        },
+        {
+          "degree": 2,
+          "full_dual_covariant_dimension": 1,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 3,
+          "full_dual_covariant_dimension": 0,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 0
+        },
+        {
+          "degree": 4,
+          "full_dual_covariant_dimension": 1,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 5,
+          "full_dual_covariant_dimension": 2,
+          "inherited_primary_multiple_rank": 1,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 6,
+          "full_dual_covariant_dimension": 2,
+          "inherited_primary_multiple_rank": 0,
+          "new_hironaka_generators": 2
+        },
+        {
+          "degree": 7,
+          "full_dual_covariant_dimension": 4,
+          "inherited_primary_multiple_rank": 2,
+          "new_hironaka_generators": 2
+        },
+        {
+          "degree": 8,
+          "full_dual_covariant_dimension": 5,
+          "inherited_primary_multiple_rank": 3,
+          "new_hironaka_generators": 2
+        },
+        {
+          "degree": 9,
+          "full_dual_covariant_dimension": 6,
+          "inherited_primary_multiple_rank": 3,
+          "new_hironaka_generators": 3
+        },
+        {
+          "degree": 10,
+          "full_dual_covariant_dimension": 10,
+          "inherited_primary_multiple_rank": 7,
+          "new_hironaka_generators": 3
+        },
+        {
+          "degree": 11,
+          "full_dual_covariant_dimension": 12,
+          "inherited_primary_multiple_rank": 8,
+          "new_hironaka_generators": 4
+        },
+        {
+          "degree": 12,
+          "full_dual_covariant_dimension": 15,
+          "inherited_primary_multiple_rank": 12,
+          "new_hironaka_generators": 3
+        },
+        {
+          "degree": 13,
+          "full_dual_covariant_dimension": 22,
+          "inherited_primary_multiple_rank": 17,
+          "new_hironaka_generators": 5
+        },
+        {
+          "degree": 14,
+          "full_dual_covariant_dimension": 26,
+          "inherited_primary_multiple_rank": 21,
+          "new_hironaka_generators": 5
+        },
+        {
+          "degree": 15,
+          "full_dual_covariant_dimension": 31,
+          "inherited_primary_multiple_rank": 27,
+          "new_hironaka_generators": 4
+        },
+        {
+          "degree": 16,
+          "full_dual_covariant_dimension": 42,
+          "inherited_primary_multiple_rank": 37,
+          "new_hironaka_generators": 5
+        },
+        {
+          "degree": 17,
+          "full_dual_covariant_dimension": 49,
+          "inherited_primary_multiple_rank": 45,
+          "new_hironaka_generators": 4
+        },
+        {
+          "degree": 18,
+          "full_dual_covariant_dimension": 59,
+          "inherited_primary_multiple_rank": 55,
+          "new_hironaka_generators": 4
+        },
+        {
+          "degree": 19,
+          "full_dual_covariant_dimension": 73,
+          "inherited_primary_multiple_rank": 71,
+          "new_hironaka_generators": 2
+        },
+        {
+          "degree": 20,
+          "full_dual_covariant_dimension": 86,
+          "inherited_primary_multiple_rank": 82,
+          "new_hironaka_generators": 4
+        },
+        {
+          "degree": 21,
+          "full_dual_covariant_dimension": 100,
+          "inherited_primary_multiple_rank": 99,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 22,
+          "full_dual_covariant_dimension": 121,
+          "inherited_primary_multiple_rank": 120,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 23,
+          "full_dual_covariant_dimension": 139,
+          "inherited_primary_multiple_rank": 138,
+          "new_hironaka_generators": 1
+        },
+        {
+          "degree": 24,
+          "full_dual_covariant_dimension": 162,
+          "inherited_primary_multiple_rank": 161,
+          "new_hironaka_generators": 1
+        }
+      ],
+      "prime": 463,
+      "zeta11": 15
+    }
+  },
+  "schema": "cov-m1-canonical-bases-v2",
+  "unused_good_primes": [
+    419,
+    463
+  ]
+}

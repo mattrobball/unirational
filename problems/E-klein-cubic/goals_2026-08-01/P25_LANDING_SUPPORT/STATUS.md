@@ -2,36 +2,46 @@ P25-UNDECIDED
 
 # Degree-25 landing support status
 
-The complete projective degree-25 landing scheme is **not decided** by this
-packet.  No characteristic-zero covariant was constructed, and no exact unit
-ideal was obtained for the complete special fibre.
+The complete projective degree-25 landing scheme is not yet decided.  No
+characteristic-zero covariant has been constructed, and no exact certificate
+empties the complete prime-89 special fibre.
 
-The smallest unresolved piece is Stage B:
+The exact unresolved locus is now much smaller and has a finite certified
+cover.  Put
 
 ```text
-b0 = 0, b1 != 0,
-sat(<P3(q)b1>, (q0,...,q36)*(b1_0,...,b1_5)).
+L8 = P<span(q4,...,q11)>,
+H8 = (q0,...,q3,q12,...,q36).
 ```
+
+Both Stage B and normalized Stage C are independently certified empty on
+`L8`.  On `D(H8)`, Stage B is covered by 34 exact paired Reed--Solomon affine
+opens, and Stage C by the 29 outside-q opens.  None of those remaining affine
+opens has yet returned a unit ideal.
 
 What is exact and independently replayed:
 
-- the prime-89 rank-43 DVR model and its transfer boundary;
-- complete landing-row rank `746` (not the retired 842-row packet);
-- the `56 + 690` monic-border/seed decomposition;
-- Stage A (`b0=b1=0`) is empty;
-- deterministic linear syzygies `C(q)M2(q)=0` and all stored `P4/P3`
-  contractions rebuild coefficient-by-coefficient.
+- P0: the rank-43 DVR model, landing-row rank `746`, `56` monic pivots, and
+  all `690` residual seed relations;
+- Stage A is empty;
+- Stage B on `L8`: rank `10296/10296` with a nonzero selected determinant;
+- normalized Stage C on `L8`: compatibility rank `6435/6435`;
+- the r66 necessary contractions have augmented rank seven on every
+  coordinate line, and the full Stage-B coefficient maps exclude
+  `b1`-support one;
+- the 34-open Stage-B complement cover and all theorem-scope guards.
 
-What is not proved:
+The strongest remaining-chart attempt used the safe r66 contractions on
+`q0=1,b1_0=1`.  Exact ordinary F4 completed degree five and entered degree
+six, then was manually stopped at observed RSS `4,482,960 KiB` before any
+basis or unit output.  Signature mode is unusable: it rejected the affine
+input and reported a field different from `F_89`.  Both are strict
+nonverdicts.
 
-- the Stage B double saturation is the unit ideal;
-- the Stage C `b0=1` saturation is the unit ideal;
-- special-fibre or characteristic-zero degree-25 emptiness;
-- a degree-25 covariant or the headline unirationality statement.
+A byte-identical, independently regenerated pair-split retry is sealed under
+`parallel/r66_pair_split/` with status `PREPARED_NOT_RUN`.  Launch remains
+blocked because the fail-closed live process/RSS census requires unsandboxed
+execution, while the escalation quota is unavailable until 2026-08-08.
 
-The strongest bounded Stage B run used all 256 verified contractions.  It was
-stopped after `2572.24` seconds wall / `1812.78` seconds user CPU, with sampled
-resident memory about `10.2 GiB`, before Singular returned even the first
-`b1`-saturated basis.  Missing output is recorded only as a resource floor.
-
-Problem E therefore remains **OPEN**.
+Problem E therefore remains **OPEN**.  No degree-25 exclusion and no headline
+theorem is claimed.

@@ -1,0 +1,63 @@
+{
+  "cas_launched": false,
+  "decision_rule": "Only a future completed exact unit result proves this one chart empty; all other outcomes are nonverdicts. No global Stage-C/P25 claim.",
+  "files": {
+    "REPORT.md": {
+      "bytes": 4377,
+      "sha256": "c9352b0a3a74c4371e2b23553dddccdbf647dc75eb72dc7d53f9a116d6479ac9"
+    },
+    "WORK_SCOPE.md": {
+      "bytes": 914,
+      "sha256": "abde50d60f0ecf221a760a53c6e0b5ccf84e5f610ed7ad951bf908fefe4b7f7d"
+    },
+    "job_plan.json": {
+      "bytes": 2860,
+      "sha256": "846c05cb3c97d25bad0f565a80fb6772809f6bad00882fd7e780672d57ac0fda"
+    },
+    "make_job_plan.py": {
+      "bytes": 4097,
+      "sha256": "33995f0036ae621c0be89acac17a9aea811fa083e495c5c1d673cba1356c89ee"
+    },
+    "make_seal.py": {
+      "bytes": 2644,
+      "sha256": "0e58282b7069562d546813e9ec782f40dc8e4de2ce609f844fb50b362c2c46a0"
+    },
+    "produce_stagec_q0.py": {
+      "bytes": 12378,
+      "sha256": "3cb45e6aac302488ff7789b2df2f2dc90b655321bdd298a23b670d3a6c7eb5aa"
+    },
+    "r66_stageC_q0_1_b0_1.json": {
+      "bytes": 74576,
+      "sha256": "68060fbe1cb1c4b9e23a7cee1c65498fa6c802916952519f939213764121f32e"
+    },
+    "r66_stageC_q0_1_b0_1.ms": {
+      "bytes": 118337283,
+      "sha256": "c4e99a95d9ad3bc24bed2c0bcad1d9fc3376c9a8be06018e628783ac173b0f84"
+    },
+    "r66_stageC_q0_1_b0_1.sing": {
+      "bytes": 118338632,
+      "sha256": "26a0fa4a62216bf1b30043782884220d66213a8b18ae58505d4f0b6db3119089"
+    },
+    "run_guarded.py": {
+      "bytes": 9121,
+      "sha256": "56971c8810c6c7f975f72001be3b40ebcba70455541b9a533a248e9022ee33f3"
+    },
+    "verify_seal.py": {
+      "bytes": 1892,
+      "sha256": "42e9d2adcfb0e43a81f1f03b51a3bd7edb3edc6fbad80f571b1ea09b28c40e5d"
+    },
+    "verify_stagec_q0.py": {
+      "bytes": 13876,
+      "sha256": "bc7aed9087441fe00c790fb6be8d1db83a19b1dc1258c7c0d481ce7908387658"
+    },
+    "verify_stagec_q0_result.json": {
+      "bytes": 915,
+      "sha256": "2676fab06a703d2f2b419a8cb69eca42d4537348ca9a6c036fc97be0493a5871"
+    }
+  },
+  "msolve_input_sha256": "c4e99a95d9ad3bc24bed2c0bcad1d9fc3376c9a8be06018e628783ac173b0f84",
+  "packet_sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+  "scope": "one selected normalized Stage-C affine chart D(q0), b0=1",
+  "singular_input_sha256": "26a0fa4a62216bf1b30043782884220d66213a8b18ae58505d4f0b6db3119089",
+  "status": "PREPARED_NOT_RUN"
+}

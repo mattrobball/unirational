@@ -1,0 +1,31 @@
+{
+  "affine_input_sha256": "9fc5d17aeb9c2bf1341c0871ffd1e0fce07682701a1490a12b2f64ed3378f34b",
+  "exact_theorem": {
+    "all_chart_emptiness_results": 0,
+    "covered_locus": "D(H8) x P5_b1",
+    "stageB_mds_opens": 34
+  },
+  "not_proved": [
+    "any affine chart empty",
+    "Stage B empty on D(H8)",
+    "Stage C empty on D(H8)",
+    "any H8-power minor identity or polynomial left inverse",
+    "P25 degree-25 emptiness"
+  ],
+  "ordinary_run": {
+    "degree6_incomplete": true,
+    "f4_completed_degree5": true,
+    "manual_last_observed_rss_bytes": 4590551040,
+    "returncode": -15,
+    "strict_nonverdict": true
+  },
+  "r66_packet_sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+  "signature_run": {
+    "live_rss_guard_verified": true,
+    "peak_rss_bytes": 433258496,
+    "rejected_nonhomogeneous_input": true,
+    "reported_wrong_characteristic": 1073741827,
+    "strict_nonverdict": true
+  },
+  "status": "PASS_DETERMINANTAL_COVER_PHASE_AUDIT_NONVERDICT"
+}

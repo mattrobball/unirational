@@ -1,0 +1,12 @@
+{
+  "status": "MANUAL_RESOURCE_STOP_STRICT_NONVERDICT",
+  "run_record": "r66_stageB_qflag00_bflag0.run.json",
+  "child_pid": 25955,
+  "signal": "SIGTERM",
+  "returncode": -15,
+  "last_observed_rss_kib_from_escalated_ps": 4482960,
+  "last_observed_rss_bytes": 4590551040,
+  "declared_limit_bytes": 4294967296,
+  "reason": "The original runner invoked ps inside the managed sandbox. The ps call was denied, its exception was incorrectly converted to zero RSS, and the run record therefore shows peak_rss_bytes_polled=0 and stop_reason=null. An external escalated ps check observed 4482960 KiB RSS, above the promised 4-GiB fence, so this worker sent SIGTERM only to its own msolve child PID 25955.",
+  "scope_guard": "This attests the operational stop only. The incomplete degree-six F4 round is a mathematical nonverdict and supplies neither a point nor an emptiness certificate."
+}

@@ -1,0 +1,335 @@
+{
+  "schema": "full-schur-palatinian-ten-pencil-v1",
+  "prime": 23,
+  "zeta11_reduction": 2,
+  "maps": {
+    "q1": "identity",
+    "q3": "Reynolds(output=0, seed=x5^3)",
+    "q5_0": "Reynolds(output=0, seed=x5^5)",
+    "q5_1": "Reynolds(output=1, seed=x5^5)",
+    "q5_5": "Reynolds(output=5, seed=x5^5)"
+  },
+  "external_source_sha256": {
+    "tmp/pfaffian_representation_alignment/core.py": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4",
+    "tmp/fano14_twist/fano_covariant_scan.py": "b3c93a41ed1f8b5106d93717dbad058b6c60af100bcee8138925485dac6f107e"
+  },
+  "records": [
+    {
+      "name": "q1__q3",
+      "extension_degree": 1,
+      "singular_source_sha256": "fb323a633590c9ebb91dbefeb6294f44e330573b1fdb674860fc3254ec21b122",
+      "expanded_terms": 10525,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 16,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          16,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q1__q3",
+      "extension_degree": 2,
+      "singular_source_sha256": "506d36645dbdb8028e1700833cf18bd09f00cb1434f27a5edb1882ecc0a5514d",
+      "expanded_terms": 10525,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 16,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          16,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q1__q3",
+      "extension_degree": 3,
+      "singular_source_sha256": "a0b7cff594168502bd35fe3568bc5fbaac2f30f485fa9de87db7a25dac4e7433",
+      "expanded_terms": 10525,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 16,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          16,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q1__q3",
+      "extension_degree": 4,
+      "singular_source_sha256": "fefaba19171648ddaaa0a4d24d38c18bfd9af0cdb886731b5b88c134a6b24c8d",
+      "expanded_terms": 10525,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 16,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          16,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q1__q5_0",
+      "extension_degree": 1,
+      "singular_source_sha256": "3ac74a4ccaebbf5ff2e9105a87ebedef6f4644d0a7c99b5c81d22a517a37af11",
+      "expanded_terms": 77583,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 24,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          24,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q1__q5_1",
+      "extension_degree": 1,
+      "singular_source_sha256": "4362971a58843468a6d5d43cf5785ae1cb001a66ce940479a0292018f47f0cc5",
+      "expanded_terms": 77743,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 24,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          24,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q1__q5_5",
+      "extension_degree": 1,
+      "singular_source_sha256": "4e152a8e430f82512cbd0c3b99ec2f4851627b5ab4a5b0e092f42f579011c588",
+      "expanded_terms": 77526,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 24,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          24,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q3__q5_0",
+      "extension_degree": 1,
+      "singular_source_sha256": "2abb8c56ddd44174c666500c1bf6c5fa6877aa3adf219192d5441835c4ed555e",
+      "expanded_terms": 119096,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 24,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          24,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q3__q5_1",
+      "extension_degree": 1,
+      "singular_source_sha256": "0a3838a037ad116bbe3fbe08b637fa642f8e0353ec5cb916291284291c4253b7",
+      "expanded_terms": 119023,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 24,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          24,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q3__q5_5",
+      "extension_degree": 1,
+      "singular_source_sha256": "0d3c7511e48c672d5cff964e6170136e3c274316629f73488a6b15f884b8b332",
+      "expanded_terms": 118850,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 24,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          24,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q5_0__q5_1",
+      "extension_degree": 1,
+      "singular_source_sha256": "74b89d88f31ade48bb8b78757cb3dca31c596ccf02beaaf8877720034968d6c5",
+      "expanded_terms": 254395,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 24,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          24,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q5_0__q5_5",
+      "extension_degree": 1,
+      "singular_source_sha256": "41e7ba5c4cb2342eee59e827604da18d5e2a2ddb80a9d6863d47b4a4ec271590",
+      "expanded_terms": 254733,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 24,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          24,
+          4
+        ]
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "q5_1__q5_5",
+      "extension_degree": 1,
+      "singular_source_sha256": "c3595c991eeff7662705bb32ec2eeddfe6af3092ac2ea88f593c79deaf63c0ae",
+      "expanded_terms": 253563,
+      "factor_count_with_unit": 2,
+      "input_total_degree": 24,
+      "input_t_degree": 4,
+      "factors": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          24,
+          4
+        ]
+      ],
+      "return_code": 0
+    }
+  ],
+  "scope": {
+    "all_ten": "irreducible over F_23[x0,...,x5,t], hence no F_23(x)-rational root and no Q(zeta_11)(x)-rational root by the Gauss-valuation argument",
+    "q1_q3": "no t-linear factor after constant extensions F_(23^m), m=1,2,3,4; hence no algebraic-constant rational root in this pencil",
+    "nonclaim": "no point or pointlessness statement for the full six-coordinate K_Schur quartic"
+  }
+}

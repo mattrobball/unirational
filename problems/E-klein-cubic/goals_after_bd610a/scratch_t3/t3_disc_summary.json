@@ -1,0 +1,870 @@
+{
+  "boundary": "Exact Delta is authoritative, but componentwise pullback valuations on the normal target branch and conductor/infinity exhaustiveness are not computed here.",
+  "c4_stats": {
+    "degrees": [
+      5,
+      2,
+      3,
+      2
+    ],
+    "terms": 32,
+    "total_degree": 5,
+    "variables": [
+      "A",
+      "B",
+      "Y",
+      "Z"
+    ]
+  },
+  "c6_stats": {
+    "degrees": [
+      7,
+      3,
+      4,
+      3
+    ],
+    "terms": 88,
+    "total_degree": 7,
+    "variables": [
+      "A",
+      "B",
+      "Y",
+      "Z"
+    ]
+  },
+  "degree12_RUR_A0_B2": {
+    "H_degree": 12,
+    "delta_remainder_degree": 11,
+    "delta_remainder_sha256": "9b783aed854b820363b7217898b1f42bd87361a19a50d9652cd27c5fba5de442",
+    "delta_remainder_zero": false,
+    "gcd_degree": 0,
+    "gcd_is_unit": true
+  },
+  "delta_stats": {
+    "degrees": [
+      15,
+      6,
+      9,
+      6
+    ],
+    "terms": 719,
+    "total_degree": 15,
+    "variables": [
+      "A",
+      "B",
+      "Y",
+      "Z"
+    ]
+  },
+  "exact_factorization": {
+    "seconds": 10,
+    "status": "TIMEOUT"
+  },
+  "global_target_factor": {
+    "accepted_irreducible_total_degree": 43,
+    "conclusion": "The full degree-43 polynomial H cannot divide nonzero Delta; generic noncontainment of the selected target component is certified separately by gcd(Delta|(1,2,3,s),H21)=1.",
+    "delta_total_degree": 15,
+    "path": "certificates/target_branch_global/H_factor/H_primitive_integer.tsv",
+    "sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501"
+  },
+  "mod67_factorization": {
+    "message": "multivariate polynomials over finite fields",
+    "prime": 67,
+    "status": "SYMPY_UNAVAILABLE",
+    "zeta11": 9
+  },
+  "mod67_slice_sample_confusion": {
+    "proxy0_delta0": 63,
+    "proxy1_delta0": 1,
+    "proxy1_delta1": 1
+  },
+  "mod67_slice_samples": [
+    {
+      "delta_mod67": 51,
+      "point_ABYZ": [
+        0,
+        2,
+        1,
+        15
+      ],
+      "proxy": false,
+      "u": 7
+    },
+    {
+      "delta_mod67": 66,
+      "point_ABYZ": [
+        0,
+        2,
+        2,
+        7
+      ],
+      "proxy": false,
+      "u": 54
+    },
+    {
+      "delta_mod67": 30,
+      "point_ABYZ": [
+        0,
+        2,
+        2,
+        24
+      ],
+      "proxy": false,
+      "u": 52
+    },
+    {
+      "delta_mod67": 15,
+      "point_ABYZ": [
+        0,
+        2,
+        2,
+        62
+      ],
+      "proxy": false,
+      "u": 16
+    },
+    {
+      "delta_mod67": 56,
+      "point_ABYZ": [
+        0,
+        2,
+        3,
+        63
+      ],
+      "proxy": false,
+      "u": 62
+    },
+    {
+      "delta_mod67": 47,
+      "point_ABYZ": [
+        0,
+        2,
+        4,
+        49
+      ],
+      "proxy": false,
+      "u": 1
+    },
+    {
+      "delta_mod67": 62,
+      "point_ABYZ": [
+        0,
+        2,
+        5,
+        5
+      ],
+      "proxy": false,
+      "u": 27
+    },
+    {
+      "delta_mod67": 1,
+      "point_ABYZ": [
+        0,
+        2,
+        6,
+        5
+      ],
+      "proxy": false,
+      "u": 38
+    },
+    {
+      "delta_mod67": 46,
+      "point_ABYZ": [
+        0,
+        2,
+        10,
+        29
+      ],
+      "proxy": false,
+      "u": 5
+    },
+    {
+      "delta_mod67": 32,
+      "point_ABYZ": [
+        0,
+        2,
+        11,
+        25
+      ],
+      "proxy": false,
+      "u": 47
+    },
+    {
+      "delta_mod67": 16,
+      "point_ABYZ": [
+        0,
+        2,
+        11,
+        56
+      ],
+      "proxy": false,
+      "u": 53
+    },
+    {
+      "delta_mod67": 7,
+      "point_ABYZ": [
+        0,
+        2,
+        13,
+        65
+      ],
+      "proxy": false,
+      "u": 46
+    },
+    {
+      "delta_mod67": 11,
+      "point_ABYZ": [
+        0,
+        2,
+        14,
+        13
+      ],
+      "proxy": false,
+      "u": 48
+    },
+    {
+      "delta_mod67": 65,
+      "point_ABYZ": [
+        0,
+        2,
+        15,
+        39
+      ],
+      "proxy": false,
+      "u": 17
+    },
+    {
+      "delta_mod67": 58,
+      "point_ABYZ": [
+        0,
+        2,
+        15,
+        65
+      ],
+      "proxy": false,
+      "u": 34
+    },
+    {
+      "delta_mod67": 50,
+      "point_ABYZ": [
+        0,
+        2,
+        16,
+        37
+      ],
+      "proxy": false,
+      "u": 5
+    },
+    {
+      "delta_mod67": 11,
+      "point_ABYZ": [
+        0,
+        2,
+        16,
+        43
+      ],
+      "proxy": false,
+      "u": 43
+    },
+    {
+      "delta_mod67": 13,
+      "point_ABYZ": [
+        0,
+        2,
+        21,
+        17
+      ],
+      "proxy": false,
+      "u": 59
+    },
+    {
+      "delta_mod67": 28,
+      "point_ABYZ": [
+        0,
+        2,
+        23,
+        28
+      ],
+      "proxy": false,
+      "u": 11
+    },
+    {
+      "delta_mod67": 25,
+      "point_ABYZ": [
+        0,
+        2,
+        23,
+        43
+      ],
+      "proxy": false,
+      "u": 15
+    },
+    {
+      "delta_mod67": 65,
+      "point_ABYZ": [
+        0,
+        2,
+        24,
+        24
+      ],
+      "proxy": false,
+      "u": 24
+    },
+    {
+      "delta_mod67": 57,
+      "point_ABYZ": [
+        0,
+        2,
+        26,
+        45
+      ],
+      "proxy": false,
+      "u": 8
+    },
+    {
+      "delta_mod67": 64,
+      "point_ABYZ": [
+        0,
+        2,
+        28,
+        29
+      ],
+      "proxy": false,
+      "u": 4
+    },
+    {
+      "delta_mod67": 12,
+      "point_ABYZ": [
+        0,
+        2,
+        29,
+        55
+      ],
+      "proxy": false,
+      "u": 48
+    },
+    {
+      "delta_mod67": 32,
+      "point_ABYZ": [
+        0,
+        2,
+        30,
+        17
+      ],
+      "proxy": false,
+      "u": 3
+    },
+    {
+      "delta_mod67": 64,
+      "point_ABYZ": [
+        0,
+        2,
+        30,
+        26
+      ],
+      "proxy": false,
+      "u": 44
+    },
+    {
+      "delta_mod67": 41,
+      "point_ABYZ": [
+        0,
+        2,
+        30,
+        41
+      ],
+      "proxy": true,
+      "u": 56
+    },
+    {
+      "delta_mod67": 15,
+      "point_ABYZ": [
+        0,
+        2,
+        31,
+        12
+      ],
+      "proxy": false,
+      "u": 41
+    },
+    {
+      "delta_mod67": 64,
+      "point_ABYZ": [
+        0,
+        2,
+        31,
+        49
+      ],
+      "proxy": false,
+      "u": 54
+    },
+    {
+      "delta_mod67": 11,
+      "point_ABYZ": [
+        0,
+        2,
+        32,
+        19
+      ],
+      "proxy": false,
+      "u": 29
+    },
+    {
+      "delta_mod67": 28,
+      "point_ABYZ": [
+        0,
+        2,
+        32,
+        58
+      ],
+      "proxy": false,
+      "u": 53
+    },
+    {
+      "delta_mod67": 62,
+      "point_ABYZ": [
+        0,
+        2,
+        33,
+        30
+      ],
+      "proxy": false,
+      "u": 49
+    },
+    {
+      "delta_mod67": 6,
+      "point_ABYZ": [
+        0,
+        2,
+        34,
+        56
+      ],
+      "proxy": false,
+      "u": 0
+    },
+    {
+      "delta_mod67": 33,
+      "point_ABYZ": [
+        0,
+        2,
+        34,
+        63
+      ],
+      "proxy": false,
+      "u": 62
+    },
+    {
+      "delta_mod67": 16,
+      "point_ABYZ": [
+        0,
+        2,
+        35,
+        9
+      ],
+      "proxy": false,
+      "u": 35
+    },
+    {
+      "delta_mod67": 57,
+      "point_ABYZ": [
+        0,
+        2,
+        35,
+        26
+      ],
+      "proxy": false,
+      "u": 37
+    },
+    {
+      "delta_mod67": 37,
+      "point_ABYZ": [
+        0,
+        2,
+        37,
+        29
+      ],
+      "proxy": false,
+      "u": 41
+    },
+    {
+      "delta_mod67": 46,
+      "point_ABYZ": [
+        0,
+        2,
+        37,
+        51
+      ],
+      "proxy": false,
+      "u": 26
+    },
+    {
+      "delta_mod67": 60,
+      "point_ABYZ": [
+        0,
+        2,
+        38,
+        2
+      ],
+      "proxy": false,
+      "u": 27
+    },
+    {
+      "delta_mod67": 55,
+      "point_ABYZ": [
+        0,
+        2,
+        38,
+        46
+      ],
+      "proxy": false,
+      "u": 53
+    },
+    {
+      "delta_mod67": 32,
+      "point_ABYZ": [
+        0,
+        2,
+        40,
+        2
+      ],
+      "proxy": false,
+      "u": 31
+    },
+    {
+      "delta_mod67": 37,
+      "point_ABYZ": [
+        0,
+        2,
+        40,
+        45
+      ],
+      "proxy": false,
+      "u": 26
+    },
+    {
+      "delta_mod67": 41,
+      "point_ABYZ": [
+        0,
+        2,
+        41,
+        21
+      ],
+      "proxy": false,
+      "u": 58
+    },
+    {
+      "delta_mod67": 29,
+      "point_ABYZ": [
+        0,
+        2,
+        42,
+        41
+      ],
+      "proxy": false,
+      "u": 9
+    },
+    {
+      "delta_mod67": 18,
+      "point_ABYZ": [
+        0,
+        2,
+        44,
+        2
+      ],
+      "proxy": false,
+      "u": 2
+    },
+    {
+      "delta_mod67": 40,
+      "point_ABYZ": [
+        0,
+        2,
+        44,
+        13
+      ],
+      "proxy": false,
+      "u": 42
+    },
+    {
+      "delta_mod67": 0,
+      "point_ABYZ": [
+        0,
+        2,
+        45,
+        35
+      ],
+      "proxy": true,
+      "u": 22
+    },
+    {
+      "delta_mod67": 52,
+      "point_ABYZ": [
+        0,
+        2,
+        47,
+        28
+      ],
+      "proxy": false,
+      "u": 11
+    },
+    {
+      "delta_mod67": 57,
+      "point_ABYZ": [
+        0,
+        2,
+        47,
+        56
+      ],
+      "proxy": false,
+      "u": 23
+    },
+    {
+      "delta_mod67": 66,
+      "point_ABYZ": [
+        0,
+        2,
+        48,
+        62
+      ],
+      "proxy": false,
+      "u": 29
+    },
+    {
+      "delta_mod67": 45,
+      "point_ABYZ": [
+        0,
+        2,
+        51,
+        7
+      ],
+      "proxy": false,
+      "u": 6
+    },
+    {
+      "delta_mod67": 20,
+      "point_ABYZ": [
+        0,
+        2,
+        51,
+        54
+      ],
+      "proxy": false,
+      "u": 16
+    },
+    {
+      "delta_mod67": 37,
+      "point_ABYZ": [
+        0,
+        2,
+        52,
+        11
+      ],
+      "proxy": false,
+      "u": 47
+    },
+    {
+      "delta_mod67": 10,
+      "point_ABYZ": [
+        0,
+        2,
+        53,
+        14
+      ],
+      "proxy": false,
+      "u": 65
+    },
+    {
+      "delta_mod67": 38,
+      "point_ABYZ": [
+        0,
+        2,
+        54,
+        27
+      ],
+      "proxy": false,
+      "u": 34
+    },
+    {
+      "delta_mod67": 23,
+      "point_ABYZ": [
+        0,
+        2,
+        54,
+        42
+      ],
+      "proxy": false,
+      "u": 30
+    },
+    {
+      "delta_mod67": 66,
+      "point_ABYZ": [
+        0,
+        2,
+        54,
+        51
+      ],
+      "proxy": false,
+      "u": 16
+    },
+    {
+      "delta_mod67": 11,
+      "point_ABYZ": [
+        0,
+        2,
+        56,
+        51
+      ],
+      "proxy": false,
+      "u": 35
+    },
+    {
+      "delta_mod67": 66,
+      "point_ABYZ": [
+        0,
+        2,
+        58,
+        13
+      ],
+      "proxy": false,
+      "u": 2
+    },
+    {
+      "delta_mod67": 19,
+      "point_ABYZ": [
+        0,
+        2,
+        58,
+        45
+      ],
+      "proxy": false,
+      "u": 20
+    },
+    {
+      "delta_mod67": 27,
+      "point_ABYZ": [
+        0,
+        2,
+        58,
+        65
+      ],
+      "proxy": false,
+      "u": 48
+    },
+    {
+      "delta_mod67": 38,
+      "point_ABYZ": [
+        0,
+        2,
+        61,
+        19
+      ],
+      "proxy": false,
+      "u": 57
+    },
+    {
+      "delta_mod67": 55,
+      "point_ABYZ": [
+        0,
+        2,
+        62,
+        65
+      ],
+      "proxy": false,
+      "u": 0
+    },
+    {
+      "delta_mod67": 35,
+      "point_ABYZ": [
+        0,
+        2,
+        66,
+        23
+      ],
+      "proxy": false,
+      "u": 54
+    },
+    {
+      "delta_mod67": 35,
+      "point_ABYZ": [
+        0,
+        2,
+        66,
+        23
+      ],
+      "proxy": false,
+      "u": 65
+    }
+  ],
+  "payload": "t3_disc_delta_cub_qzeta11.json.gz",
+  "payload_gzip_bytes": 57422,
+  "payload_gzip_sha256": "88ec8a6449117463debc54eb51e03dbd79e6c391e815f021fb19dd81f28ff014",
+  "payload_uncompressed_bytes": 441556,
+  "payload_uncompressed_terms_sha256": "8dc4c9bfda27b8b28148202dd9faa9487e4ac7ad4e02de89d69e2b2d5802becf",
+  "schema": "klein-cubic-t3-fixed-frame-discriminant-summary-v1",
+  "singular_factorization": {
+    "exact_qzeta11": {
+      "factor_list_size_including_unit": 2,
+      "irreducible": true,
+      "log": "t3_disc_factor_qzeta11.log",
+      "records": [
+        {
+          "exponent": 1,
+          "index": 1,
+          "terms": 1,
+          "total_degree": 0
+        },
+        {
+          "exponent": 1,
+          "index": 2,
+          "terms": 719,
+          "total_degree": 15
+        }
+      ],
+      "returncode": 0,
+      "script": "t3_disc_factor_qzeta11.sing",
+      "status": "PASS"
+    },
+    "mod67_zeta9": {
+      "factor_list_size_including_unit": 2,
+      "irreducible": true,
+      "log": "t3_disc_factor_mod67.log",
+      "records": [
+        {
+          "exponent": 1,
+          "index": 1,
+          "terms": 1,
+          "total_degree": 0
+        },
+        {
+          "exponent": 1,
+          "index": 2,
+          "terms": 715,
+          "total_degree": 15
+        }
+      ],
+      "returncode": 0,
+      "script": "t3_disc_factor_mod67.sing",
+      "status": "PASS"
+    }
+  },
+  "source_sha256": {
+    "certificates/fixed_frame_arithmetic/SEAL.json": "cd19d977638509297b52e16526c983bc5b13f80a5d9486d8bf678c1ca902fd85",
+    "certificates/fixed_frame_arithmetic/five_forms.json": "61377d6e464f7c78cf1fa91d13610b76dc4567de7b7214256e04de50066c83a4",
+    "tmp/full_scaled_frame_branch_line_hostile_audit/certificate.json": "594683557ec657f89e107e5582b7622e7339081acdfb7a91bbe3997af46efd05",
+    "tmp/pfaffian_minimal_ternary_model/certificate.json": "02adb86f676cdef7c4200c483d7309de5e8ae207d64becc541ac33122ef42895",
+    "tmp/target_branch_delta_saturated_singularity/qq_rur_hprime_certificate.json": "928fe51809049d0256cbf941011af4697645c8272e605be948aa5fd5660822ba",
+    "tmp/wp_t1_mod3/discovery_p67.json": "d8a54327c09077beb9bca799b85c03444358d8be8d33abcfcb243d5c7af2cea1"
+  },
+  "target_line": {
+    "H21_degree": 21,
+    "delta_degree": 6,
+    "delta_line_terms_sha256": "b64987812708d6d896eecc0e84d579c0bf7b22ee0bcd1ac942c878fcf2ca3a18",
+    "factorization": {
+      "seconds": 10,
+      "status": "TIMEOUT"
+    },
+    "gcd_degree": 0,
+    "gcd_is_unit": true,
+    "line": "(A,B,Y,Z)=(1,2,3,s)"
+  }
+}

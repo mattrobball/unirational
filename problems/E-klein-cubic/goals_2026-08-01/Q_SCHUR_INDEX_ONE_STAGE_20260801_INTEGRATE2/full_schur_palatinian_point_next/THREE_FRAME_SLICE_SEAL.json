@@ -1,0 +1,44 @@
+{
+  "files": {
+    "THREE_FRAME_SLICE_REPLAY.md": {
+      "bytes": 1341,
+      "sha256": "48d2dfe1a57aeadca7f4f91b1770d0e965999692d1c32592bf082c84c8cdccd0"
+    },
+    "THREE_FRAME_SLICE_REPORT.md": {
+      "bytes": 4520,
+      "sha256": "2d35ff37d32d432673cb0b6dcd8aec506edc6ade5947897af1761254d7d18fbf"
+    },
+    "make_three_frame_slice_seal.py": {
+      "bytes": 1600,
+      "sha256": "52cfb407120a3c92de68ce13a7480d6e376814f3380df561b79c0deec80b9e20"
+    },
+    "three_frame_slice_certificate.json": {
+      "bytes": 15274,
+      "sha256": "a536d94b7632c7239c6fc51f0977fdd7dd28efa45e020e134b9cd7ab515055b0"
+    },
+    "three_frame_slice_geometry.py": {
+      "bytes": 18265,
+      "sha256": "328008f2e4c01f56fe2eb152c085172cc53591b1fce4d9b572c0b14ab59002a6"
+    },
+    "three_frame_slice_probe.py": {
+      "bytes": 8251,
+      "sha256": "5b387ca98fa611b9b566b866abccc836157281f94bb5944760ad031467f31768"
+    },
+    "three_frame_slice_specializations_f23.json": {
+      "bytes": 165323,
+      "sha256": "d4e7a37f1412b1c6207e7fab128b332ddcb9ee202a651ea2af9db40e8d2912d8"
+    },
+    "verify_three_frame_slice.py": {
+      "bytes": 2791,
+      "sha256": "a9dcd0d2cd2724e679afff47e3b22c012339793a99028944a03feceac5401458"
+    },
+    "verify_three_frame_slice_seal.py": {
+      "bytes": 1037,
+      "sha256": "e6ef1bc2516eadb1ed3b5f34474a4dc530747772beae3bcbc21c480095a3c066"
+    }
+  },
+  "governing_status": "Q-UNDECIDED",
+  "proved_scope": "generic C_015 is a smooth geometrically integral genus-three plane quartic and the recorded invariant-ratio ansatz has no survivor",
+  "schema": "full-schur-canonical-three-frame-slice-seal-v1",
+  "strict_nonclaim": "no K_Schur-rational point is found or excluded"
+}

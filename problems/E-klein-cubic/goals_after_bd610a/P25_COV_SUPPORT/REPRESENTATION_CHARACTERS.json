@@ -1,0 +1,217 @@
+{
+  "status": "PC1-REPRESENTATION-CHARACTERS-SCOPED-PASS",
+  "field": {
+    "prime": 89,
+    "group_order": 660,
+    "semisimple_for_PSL2_11": true
+  },
+  "coefficient_side_PSL2_11": {
+    "group": "PSL_2(F_11)",
+    "class_count": 8,
+    "class_order": [
+      "1a",
+      "11a",
+      "11b",
+      "2a",
+      "3a",
+      "6a",
+      "5a",
+      "5b"
+    ],
+    "class_element_orders": [
+      1,
+      11,
+      11,
+      2,
+      3,
+      6,
+      5,
+      5
+    ],
+    "canonical_action": "The degree-25 coefficient space is a subspace of Hom_G(Sym^25 W,W)=(Sym^25 W^* tensor W)^G. The conjugation action of G fixes this invariant space pointwise. Therefore V25, Q, K, the coefficient polynomial ring, and every coefficient-side relation subspace carry only the trivial G-action unless an additional external symmetry is explicitly installed.",
+    "trivial_character_ledger": [
+      {
+        "object": "V25 strict coefficient space",
+        "dimension": 43,
+        "character": [43, 43, 43, 43, 43, 43, 43, 43]
+      },
+      {
+        "object": "Q coefficient block",
+        "dimension": 37,
+        "character": [37, 37, 37, 37, 37, 37, 37, 37]
+      },
+      {
+        "object": "K coefficient block",
+        "dimension": 6,
+        "character": [6, 6, 6, 6, 6, 6, 6, 6]
+      },
+      {
+        "object": "B=1+K+Sym2(K) state carrier",
+        "dimension": 28,
+        "character": [28, 28, 28, 28, 28, 28, 28, 28]
+      },
+      {
+        "object": "old cubic residual seed space V0",
+        "dimension": 690,
+        "character": [690, 690, 690, 690, 690, 690, 690, 690]
+      },
+      {
+        "object": "missing direct cubic block W_missing",
+        "dimension": 56,
+        "character": [56, 56, 56, 56, 56, 56, 56, 56]
+      },
+      {
+        "object": "complete accepted direct cubic row space",
+        "dimension": 746,
+        "character": [746, 746, 746, 746, 746, 746, 746, 746]
+      },
+      {
+        "object": "degree-4 q multiples of the 690 seeds",
+        "dimension": 25530,
+        "character": [25530, 25530, 25530, 25530, 25530, 25530, 25530, 25530]
+      },
+      {
+        "object": "raw first-transition rows",
+        "dimension": 4140,
+        "character": [4140, 4140, 4140, 4140, 4140, 4140, 4140, 4140]
+      },
+      {
+        "object": "pure-q transition image",
+        "dimension": 2072,
+        "character": [2072, 2072, 2072, 2072, 2072, 2072, 2072, 2072]
+      },
+      {
+        "object": "pure-q transition quotient modulo S1 V0",
+        "dimension": 2053,
+        "character": [2053, 2053, 2053, 2053, 2053, 2053, 2053, 2053]
+      },
+      {
+        "object": "formal row-label source for the 315 raw quadratic commutators (actual image dimension 210)",
+        "dimension": 315,
+        "character": [315, 315, 315, 315, 315, 315, 315, 315]
+      },
+      {
+        "object": "universal commutator cycle syzygies",
+        "dimension": 105,
+        "character": [105, 105, 105, 105, 105, 105, 105, 105]
+      },
+      {
+        "object": "commutator image and selected basis",
+        "dimension": 210,
+        "character": [210, 210, 210, 210, 210, 210, 210, 210]
+      },
+      {
+        "object": "new coupled degree-4 generators",
+        "dimension": 4350,
+        "character": [4350, 4350, 4350, 4350, 4350, 4350, 4350, 4350]
+      },
+      {
+        "object": "complete certified coupled degree-4 relation space",
+        "dimension": 29880,
+        "character": [29880, 29880, 29880, 29880, 29880, 29880, 29880, 29880]
+      }
+    ],
+    "interpretation": "These characters are exact but vacuous for block rank: every coefficient-side block is a sum of trivial representations. They do not supply a nontrivial representation-block decomposition."
+  },
+  "D12_source_jet_only": {
+    "group": "H=C_G(t)=D12=<r,s | r^6=s^2=1, srs=r^-1>",
+    "class_order": [
+      "1",
+      "r^3",
+      "{r,r^5}",
+      "{r^2,r^4}",
+      "even reflections",
+      "odd reflections"
+    ],
+    "irreducible_characters": {
+      "chi00": [1, 1, 1, 1, 1, 1],
+      "chi01": [1, 1, 1, 1, -1, -1],
+      "chi10": [1, -1, -1, 1, 1, -1],
+      "chi11": [1, -1, -1, 1, -1, 1],
+      "rho1": [2, -2, 1, -1, 0, 0],
+      "rho2": [2, 2, -1, -1, 0, 0]
+    },
+    "installed_characters": {
+      "W": [5, 1, 1, -1, 1, 1],
+      "E_plus": [3, 3, 0, 0, 1, 1],
+      "E_minus": [2, -2, 1, -1, 0, 0]
+    },
+    "decompositions": {
+      "W": "chi00 + rho2 + rho1",
+      "E_plus": "chi00 + rho2",
+      "E_minus": "rho1"
+    },
+    "degree25_local_blocks": {
+      "ordinary_target": {
+        "chi00": 65,
+        "rho2": 117,
+        "rho1": 0
+      },
+      "ordinary_restriction_projected_ranks": {
+        "chi00": 56,
+        "rho2": 102,
+        "rho1": 0
+      },
+      "ordinary_stacked_rank": 130,
+      "first_jet_target": {
+        "chi00": 0,
+        "rho2": 0,
+        "rho1": 217
+      },
+      "first_jet_rank_on_arrangement_kernel": {
+        "chi00": 0,
+        "rho2": 0,
+        "rho1": 56
+      }
+    },
+    "non_applicability": "This D12 action is installed on the five-dimensional source/target representation and its plus/minus jet targets. The Q/K frame is a kernel plus monic complement inside the G-invariant coefficient multiplicity space. No D12 action matrices on Q, K, the 690 seeds, the 4140 transition rows, or the commutator spaces are installed. The D12 jet blocks must not be relabelled as characters of the PC.1 coefficient relation module."
+  },
+  "K_coordinate_permutation_audit": {
+    "candidate_group_tested": "all 6! permutations of the named K coordinates, with all Q coordinates fixed",
+    "permutations_tested": 720,
+    "criterion": "Simultaneously permute the leading pure-K cubic exponent, the B component, and the corresponding rule label, then byte-compare every coefficient of every sealed rewrite tail.",
+    "preserving_count": 1,
+    "preserving_permutations": [[0, 1, 2, 3, 4, 5]],
+    "conclusion": "No nontrivial pure-K permutation, and in particular no installed S6 coordinate action with Q fixed, preserves the actual rewrite tensor. The 315x336 path incidence has abstract monomial combinatorics, but that does not promote to an S6 action on the coupled module with its asymmetric rewrite tails. No simultaneous nontrivial action mixing Q was supplied by any consumed artifact."
+  },
+  "installed_action_inventory": {
+    "full_group_source_action": "The exact 660 matrices of PSL_2(F_11) act on the five-dimensional Klein source/target representation used by Reynolds averaging.",
+    "local_stabilizer_action": "D12 acts on W, E_plus, and E_minus, with the exact characters recorded above.",
+    "coefficient_module_action": "Only the canonical trivial restriction of the G conjugation action is defined.",
+    "absent": [
+      "nontrivial PSL_2(F_11) matrices on V25, Q, or K",
+      "D12 matrices on Q or K",
+      "S6 matrices or permutations on Q plus K preserving the sealed rules",
+      "outer-automorphism or Galois representation matrices on the coefficient module"
+    ]
+  },
+  "minimality_boundary": {
+    "B_is_minimal_S_generating_carrier": true,
+    "proof": "Let S=F_89[q_0,...,q_36] and m=(q_0,...,q_36). The 56 monic pure-K cubic rules reduce all K-degree at least three to B={1,K,Sym2 K}, so 28 states generate. Every residual or transition-hull relation is homogeneous of total degree at least three, while every B state has degree at most two; hence every coefficient of every such relation lies in m. At q=0 the rules become all pure K^3=0 and no relation among B remains, so (R/J_N) tensor_S S/m has dimension 1+6+21=28. Any S-generating carrier must therefore have at least 28 elements. This state-count proof does not require a degree-5 computation.",
+    "degree3_minimal_generators_certified": 690,
+    "degree4_new_minimal_generators_certified": 4350,
+    "degree4_breakdown": {
+      "transitions": 4140,
+      "commutators_after_105_cycle_syzygies": 210
+    },
+    "transition_stable_relation_presentation_is_minimal": false,
+    "stabilization_proved_by_this_representation_packet": false,
+    "finite_nonminimal_stabilization_proved_elsewhere": true,
+    "finite_nonminimal_stabilization_evidence": "pc1_border_stability.json and verify_pc1_border_stability_result.json prove a 25200-state stable kernel hull through degree 6",
+    "reason": "The representation calculation certifies the minimal 28-state S-carrier and the minimal graded relation generators through degree four. A later border packet proves finite nonminimal stabilization, but the complete minimal degree-5/6 ranks, syzygies, normal forms, characters, and transition matrices remain unknown. Therefore the minimal stabilized presentation and PC25-STABLE-PRESENTATION-PASS remain unauthorized."
+  },
+  "theorem_boundary": {
+    "proves": "The only canonical coefficient-side finite-group action is trivial; exact trivial character ledgers are recorded. The actual nontrivial D12 source/jet characters are separated from the coefficient module. No nontrivial pure-K permutation with Q fixed preserves the sealed rewrite tensor. The 28-state carrier is minimal over S.",
+    "does_not_prove": "This representation packet does not replay the separately certified finite nonminimal border stabilization. It does not prove a nontrivial character-block decomposition, a complete minimal relation presentation, projective support, or a characteristic-zero landing statement."
+  },
+  "inputs": {
+    "../../certificates/degree25_molien/molien_values.json": "996ff09154efced55712124c527ec6f7120a9dc032c70bd05220da6e2aaa3c7c",
+    "../../certificates/degree25_exact/change_of_basis/matrices_multiprime.npz": "815666837ff861bb279f37d22d0a1bbe1f8f5745f42be46354ddbef865ac7614",
+    "../../certificates/degree25_finite_module/basis_B.json": "8224008341d458b5768ef7a418309f375cbcc47380b118e02af7cdd15d7dd045",
+    "../../certificates/degree25_finite_module/rewrite_rules.npz": "9dd25476c3927e533b2587e5048028ad0304141d6849f6649ca921ed5d057028",
+    "../../certificates/degree25_finite_module/relation_matrix.npz": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+    "../../certificates/degree25_finite_module/multiplication_matrices.npz": "cdee1a9cd2989f2d17e7771321b49723d8a9dfc71d2bd5a791f83a30142aa418",
+    "imports_pc1/results_d25.json": "8555137c5a3db1c99394591e4045ff974870ce22bdb4b9f4e30876dd4f9dc4c3",
+    "pc1_coupled_degree4.json": "b739639dc5aa575017fe19bdc804ee190f8f07dfeea21449fbbb6e1a4412d380"
+  }
+}

@@ -1,0 +1,22 @@
+ring r=0,(e,s,Y),dp;
+
+poly T0=e^3*(735*s^2+75*s)+e^2*(1750*s^2+10*s)
+       +e*(2345*s^2-95*s)+55*s+5;
+poly T1=e^3*(-135*s^2-15*s)+e^2*(-1675*s^2+115*s)
+       +e*(-1430*s^2+30*s)-625*s^2+55*s;
+poly T3=e^3*(165*s^2-15*s)+e^2*(1715*s^3-100*s^2-15*s)
+       +e*(-310*s^2+20*s)-325*s^2-5*s;
+poly T4=e^3*(-2450*s^3+90*s^2+10*s)
+       +e^2*(-2450*s^3-25*s^2+5*s)
+       +e*(-2450*s^3+250*s^2)-1225*s^3+155*s^2;
+poly G=e*(T3/s)*Y^3+(e^2+2*e)*(T4/s)*Y^2
+       +(2*e^2+e)*T0*Y+e^2*T1;
+poly phi=e^4+e^3+e^2+e+1;
+poly N=resultant(G,phi,e);
+
+ring q=0,(s,Y),dp;
+poly N=imap(r,N);
+LIB "absfact.lib";
+def S=absFactorize(N,"a");
+setring S;
+absolute_factors;

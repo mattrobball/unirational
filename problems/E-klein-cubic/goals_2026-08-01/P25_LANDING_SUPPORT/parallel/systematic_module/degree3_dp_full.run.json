@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/opt/homebrew/bin/python3",
+    "-u",
+    "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/systematic_module/profile_degree3_dprevlex.py",
+    "--block",
+    "4096"
+  ],
+  "complete": true,
+  "elapsed_seconds": 167.37892,
+  "log": "degree3_dp_full.log",
+  "log_bytes": 9190,
+  "log_sha256": "a8083efdbdbfbd934e759f776b8ebedac25327a85865eec78984459f7f03f118",
+  "peak_rss_bytes_polled": 4482547712,
+  "returncode": 0,
+  "rss_limit_bytes": 8589934592,
+  "script": "profile_degree3_dprevlex.py",
+  "script_sha256": "695c4504d30bc1638a1a8301610e9567a6acb6a5ee4298a872cd1ecc5afe8e2d",
+  "stop_reason": null,
+  "timeout_seconds": 600.0
+}

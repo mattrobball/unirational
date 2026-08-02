@@ -1,0 +1,11 @@
+{
+  "canonical_affine_chart_sha256": "9fc5d17aeb9c2bf1341c0871ffd1e0fce07682701a1490a12b2f64ed3378f34b",
+  "cas_launched": false,
+  "field": "F_89",
+  "module_include_sha256": "0e147261a6f27a97a3c318528f0d190ec2c09e9402e80da672d767284dd3a8e0",
+  "packet_sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+  "status": "PASS_R66_SINGULAR_PREPARED_NOT_RUN_AUDIT",
+  "strongest_job": "r66_stageB_q0_1_all_b_module_std_notBuckets.sing",
+  "strongest_job_sha256": "94c9b17e05c58d4033d26c1fcc0f53a20c79ee10bf7ec736de663218e8926199",
+  "theorem_status": "P25-UNDECIDED"
+}

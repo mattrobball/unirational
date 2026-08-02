@@ -1,0 +1,45 @@
+{
+  "does_not_prove": [
+    "generic full-fibre length at most six without a finiteness/no-escape certificate",
+    "generic membership of q in the unconstrained saturated critical ideal"
+  ],
+  "full_saturated_affine_fibre": {
+    "constrained_degree": 6,
+    "constrained_dimension": 0,
+    "degree": 6,
+    "dimension": 0,
+    "q_remainder_zero": true
+  },
+  "proves": [
+    "the reconstructed q is irreducible and squarefree over Q(A,u)",
+    "the full gate-saturated affine fibre at (17,1) has length six",
+    "the specialized q belongs to that full saturated fibre ideal"
+  ],
+  "q": {
+    "degree": 6,
+    "factor_degrees_and_multiplicities": [
+      [
+        6,
+        1
+      ]
+    ],
+    "gcd_with_derivative_degree": 0,
+    "primitive_coefficients_constant_first": [
+      314537302315918688513890711273,
+      -12122517175010480770330641948,
+      191726849592692080794823734,
+      -1597812841513108725990300,
+      7417035895807053859113,
+      -18213897447111412224,
+      18509302102818816
+    ],
+    "raw_content": 16,
+    "raw_leading_coefficient": 296148833645101056
+  },
+  "q_tsv_sha256": "23be9dbe72a9a4089924accde05fc9f8d43b13e644a2e2c8528fabdb3608ef9f",
+  "schema": "klein-t111-q-irreducible-special-fibre-verify-v1",
+  "specialization": {
+    "A": 17,
+    "u": 1
+  }
+}

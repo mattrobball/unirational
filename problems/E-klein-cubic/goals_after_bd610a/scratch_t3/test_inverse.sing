@@ -1,0 +1,8 @@
+ring r=(0,a),(x),lp;
+poly q=x^2+a;
+poly f=x;
+ideal I=q,f;
+matrix M=lift(I,ideal(1));
+print(M);
+print(reduce(M[1,1]*q+M[2,1]*f,std(ideal(q))));
+quit;

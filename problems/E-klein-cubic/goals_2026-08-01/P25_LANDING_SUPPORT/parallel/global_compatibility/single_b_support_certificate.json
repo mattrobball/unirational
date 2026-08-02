@@ -1,0 +1,46 @@
+{
+  "artifact": {
+    "file": "single_b_support_minors.npz",
+    "sha256": "980c190eddb99404fa995fe1ee8a3be023decd2ef17b7291bff5053673d32081"
+  },
+  "component_coefficient_ranks": [
+    9139,
+    9139,
+    9139,
+    9139,
+    9139,
+    9139
+  ],
+  "component_minor_uint8_sha256": [
+    "4906cab2157e68603bbf8b56207556b0fe9f1e6576642d8481bedebe161af181",
+    "234067f77d8a725d23ed4e479a752e61ec29a043e3001caee1b165239fa3b33e",
+    "167a7cccec037a7cc26867df48bdb4ab1cd664eb5f2be3c9c91ada9ca8d3f513",
+    "58744b667754317ee2be5990e4a874d221d6967c1cba282b96f9eefc6bb7915e",
+    "597ff9e5b3c4188860c1b9f7b17b09ae4ddced5fc1458a81fbd895cd82c172d6",
+    "961ab6bd3f975c6dd0fec576f9c770cf1319dd96fa60f00928fcdbe703b5bb63"
+  ],
+  "fflas_seconds": [
+    13.720469791995129,
+    13.908717166996212,
+    13.890506875002757,
+    14.91962191699713,
+    14.981471666003927,
+    16.16589220899914
+  ],
+  "field_scope": "algebraic closure of F_89",
+  "full_p3": {
+    "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_p3_contractions.npy",
+    "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019",
+    "shape": [
+      10767,
+      6,
+      9139
+    ]
+  },
+  "limitation": "This does not treat b1-support at least two, nor the augmented Stage-C equation involving P4.",
+  "observed_free_plus_speculative_gib": 8.165664672851562,
+  "prime": 89,
+  "status": "PASS_STAGEB_SINGLE_B_SUPPORT_EXCLUDED",
+  "stronger_linearized_statement": "Each of the six maps from the full 9,139-dimensional cubic coefficient space to the 10,767 contraction rows is injective.",
+  "theorem": "For every projective q and every b1 with exactly one nonzero coordinate, P3(q)b1 is nonzero."
+}

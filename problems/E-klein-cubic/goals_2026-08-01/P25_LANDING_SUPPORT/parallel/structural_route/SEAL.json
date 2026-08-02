@@ -1,0 +1,65 @@
+{
+  "binding_source_sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+  "files": [
+    {
+      "bytes": 616,
+      "file": "WORK_SCOPE.md",
+      "sha256": "4e23d4c167c7501a2268caa48a9701b2298997727f560bd1cb54d7f0020d26e2"
+    },
+    {
+      "bytes": 7369,
+      "file": "REPORT.md",
+      "sha256": "e21829dbe8fcd05318e43d60f14127a22d232553d18156de1b6c3cdc5e1dba37"
+    },
+    {
+      "bytes": 4820,
+      "file": "produce_mds_cover.py",
+      "sha256": "6a5abc2261085167f1cf8e101bb86d80048753e1de8cbc8650f84471e1889c76"
+    },
+    {
+      "bytes": 3785,
+      "file": "verify_mds_cover.py",
+      "sha256": "7f63da055a993fd6127dae0fe0806f0029f1917c14fb8561ac86290c71a34a4d"
+    },
+    {
+      "bytes": 9933,
+      "file": "audit_structure.py",
+      "sha256": "1397b278e056ab2161ec0ef3b7bc94140a05a14f1b2159d4464afdb863381cb6"
+    },
+    {
+      "bytes": 1977,
+      "file": "stageB_H8_mds_cover.npz",
+      "sha256": "6eeaf0e2c1ea3878c348d0696fdd4571663562a9ff600a10f8b5f3282baf572f"
+    },
+    {
+      "bytes": 2273,
+      "file": "stageB_H8_mds_cover.json",
+      "sha256": "a1544d047e742dc3a72e37aefd270d4a6a2edc17cbb0d10cfd78583aea3fcfb1"
+    },
+    {
+      "bytes": 576,
+      "file": "verify_mds_cover_result.json",
+      "sha256": "1f968d9bde25ab66724677d24cf3f95bff5de80f321b14d8c10f060bf26c4492"
+    },
+    {
+      "bytes": 5897,
+      "file": "structural_audit.json",
+      "sha256": "7cb5afdf1eca41681743eed25b9a7ed632298b6e74711cc7844541a4dda79b91"
+    },
+    {
+      "bytes": 1499,
+      "file": "make_seal.py",
+      "sha256": "f63197d755a6858185c633cc46b0dd234e321875e04c27227ce25d5dbc494b28"
+    },
+    {
+      "bytes": 1850,
+      "file": "verify_seal.py",
+      "sha256": "2ac13153747ba239f5c1333f80dcd53e8a451e06ce44b2be6d0f84abeb8ab07e"
+    }
+  ],
+  "p25_decided": false,
+  "stageB_H8_mds_charts": 34,
+  "stageB_decided": false,
+  "stageC_decided": false,
+  "status": "SEALED_STRUCTURAL_ROUTE_EXACT_COVER_REDUCTION_NONVERDICT"
+}

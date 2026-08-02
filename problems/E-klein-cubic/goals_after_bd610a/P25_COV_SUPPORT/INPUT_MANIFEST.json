@@ -1,0 +1,258 @@
+{
+  "consumption_rule": "Local producers consume the five hash-pinned binary inputs above. PC.3 reporting consumes named core artifacts by their current hashes, not the mutable sibling directory as an intact seal.",
+  "field": "F_89 for PC.0--PC.2 computations; characteristic-zero and split-prime evidence is reported only at its inherited scope",
+  "inputs": [
+    {
+      "bytes": 7430,
+      "expected_core_hash_match": null,
+      "path": "goals_after_bd610a/GOAL_P25_COV_FINITE_SUPPORT.md",
+      "sha256": "2485862e24b30e9d9024cc9ef80b1879c1c6ee2b37af30a84f87e5e0f003acab"
+    },
+    {
+      "bytes": 7661361,
+      "expected_core_hash_match": true,
+      "path": "certificates/degree25_finite_module/relation_matrix.npz",
+      "sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb"
+    },
+    {
+      "bytes": 1399218,
+      "expected_core_hash_match": true,
+      "path": "certificates/degree25_finite_module/multiplication_matrices.npz",
+      "sha256": "cdee1a9cd2989f2d17e7771321b49723d8a9dfc71d2bd5a791f83a30142aa418"
+    },
+    {
+      "bytes": 622695,
+      "expected_core_hash_match": true,
+      "path": "certificates/degree25_finite_module/rewrite_rules.npz",
+      "sha256": "9dd25476c3927e533b2587e5048028ad0304141d6849f6649ca921ed5d057028"
+    },
+    {
+      "bytes": 2254,
+      "expected_core_hash_match": true,
+      "path": "certificates/degree25_finite_module/basis_B.json",
+      "sha256": "8224008341d458b5768ef7a418309f375cbcc47380b118e02af7cdd15d7dd045"
+    },
+    {
+      "bytes": 6005,
+      "expected_core_hash_match": true,
+      "path": "certificates/degree25_molien/molien_values.json",
+      "sha256": "996ff09154efced55712124c527ec6f7120a9dc032c70bd05220da6e2aaa3c7c"
+    },
+    {
+      "bytes": 83951,
+      "expected_core_hash_match": true,
+      "path": "certificates/degree25_exact/change_of_basis/matrices_multiprime.npz",
+      "sha256": "815666837ff861bb279f37d22d0a1bbe1f8f5745f42be46354ddbef865ac7614"
+    },
+    {
+      "bytes": 22083,
+      "expected_core_hash_match": true,
+      "path": "certificates/degree25_exact/common_p25x.py",
+      "sha256": "b5d27fe9174e859a88a9b1704963e07a4ff53f96ddd259d83c5a7d148d9588bc"
+    },
+    {
+      "bytes": 16414,
+      "expected_core_hash_match": true,
+      "path": "tmp/d12_block_attack/results_d25.json",
+      "sha256": "8555137c5a3db1c99394591e4045ff974870ce22bdb4b9f4e30876dd4f9dc4c3"
+    },
+    {
+      "bytes": 7695,
+      "expected_core_hash_match": null,
+      "path": "certificates/degree25_direct_support/DVR_MODEL.md",
+      "sha256": "00609b8289065ea2310cc0a7b2c5b1ca272fd753d11f26f91ebdd65187e1d4bd"
+    },
+    {
+      "bytes": 7002,
+      "expected_core_hash_match": null,
+      "path": "certificates/degree25_direct_support/dvr_certificate.json",
+      "sha256": "24bc48c8a586ff3d5336b983953e44c9570aaa85d03ddbb3d0a3b316c3bcb22e"
+    },
+    {
+      "bytes": 3428,
+      "expected_core_hash_match": null,
+      "path": "certificates/degree25_rowrank/ROW_RANK.md",
+      "sha256": "01d3086eb28c99d8a83f45c507846f172db3e6890951a1a148ecf1c760cccd04"
+    },
+    {
+      "bytes": 3900,
+      "expected_core_hash_match": null,
+      "path": "certificates/degree25_rowrank/rank_certificate.json",
+      "sha256": "d9bc4d0a691cfdf5761f817468abcd3fcf05a9666fb837eee63acbde286af53c"
+    },
+    {
+      "bytes": 1981,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/P25_LANDING_SUPPORT/STATUS.md",
+      "sha256": "2fb16794bcf54c88da193c0cfae15deb7073e2d9dfcb2de0f631490fae6b8513"
+    },
+    {
+      "bytes": 3367,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/P25_LANDING_SUPPORT/ACCEPTANCE_AUDIT.md",
+      "sha256": "92f1b6620e41c7efd260534b1a011e3fde9b8b19429918d0f53c81e26c054848"
+    },
+    {
+      "bytes": 1753,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/P25_LANDING_SUPPORT/NONVERDICT_RUNS.md",
+      "sha256": "fac313a7eb6ac293176d4585db654996682f4ae12b75fa4b71560fba67f0044b"
+    },
+    {
+      "bytes": 7274,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/P25_LANDING_SUPPORT/SEAL.json",
+      "sha256": "015cccad0f28783964a82b2c4c207c6b2908bd0dbea9c3069d089b041f6a81bb"
+    },
+    {
+      "bytes": 274881638,
+      "expected_core_hash_match": true,
+      "path": "goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_linear_syzygy_basis.npy",
+      "sha256": "3571e9879bf1af6d6a405d9761522d4253e76e40edd129afd4b9363287d60ca3"
+    },
+    {
+      "bytes": 590397806,
+      "expected_core_hash_match": true,
+      "path": "goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_p3_contractions.npy",
+      "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019"
+    },
+    {
+      "bytes": 8428,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/STATUS.md",
+      "sha256": "77b5e1588554fb6e4261627446bb2192ab7339331db595d2ff1beca151cad719"
+    },
+    {
+      "bytes": 27699,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/SEAL.json",
+      "sha256": "c4b254e1a980fd8af83f2e12d584f7d7748da65a1c480681fc9f102629580847"
+    },
+    {
+      "bytes": 12730,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/canonical_bases.json",
+      "sha256": "ca9555a34fa4221851fb77df5077f568a038e1b4d471934efe64e05a2ffec1cf"
+    },
+    {
+      "bytes": 8493,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/landing_ideals.json",
+      "sha256": "b0eb2d55f4b6bbc3c0c0fd191564b35031da8d76cfc1f247e4ba6f5a2184222f"
+    },
+    {
+      "bytes": 7994,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/primitive_module.json",
+      "sha256": "a19861aa5367f780d62283d8714e509c392a0f71ee65cd1f69db977660e7fbee"
+    },
+    {
+      "bytes": 11848,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/primitive_quotient_counterexample.json",
+      "sha256": "8acef970d0ea95d964623bc9a44808da757f0c20214a77b7cf4714bbcec932a0"
+    },
+    {
+      "bytes": 25941,
+      "expected_core_hash_match": true,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_25_fixed_k1_basis.json",
+      "sha256": "73e6132e19105d4489d70093edf310c766051b90583536ba3b3fa85e223722b1"
+    },
+    {
+      "bytes": 13141,
+      "expected_core_hash_match": true,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/dual_hironaka_generators.json",
+      "sha256": "b9aa1f8fe852e15b1b786b6a0577f06cf3ce200c5b092bcbd4c444678add874b"
+    },
+    {
+      "bytes": 112927,
+      "expected_core_hash_match": true,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/invariant_generators.json",
+      "sha256": "1912db3e0c30c09d7485804adb03e9aeaed739076e2b87b8a2890007727c6421"
+    },
+    {
+      "bytes": 25761,
+      "expected_core_hash_match": true,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/produce_cross_basis.py",
+      "sha256": "7b99bf7712fdf3dd898ab27ff3cb469c9f5213bdab1c35902813993ce6210f68"
+    },
+    {
+      "bytes": 94280,
+      "expected_core_hash_match": true,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_31/m1_cross_basis_circuits.json",
+      "sha256": "8adc3f91db76f97a47d1df6d3f9cccee9e8eef62a825c2dff045ad96db6ff2f6"
+    },
+    {
+      "bytes": 167174,
+      "expected_core_hash_match": true,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_35/m1_cross_basis_circuits.json",
+      "sha256": "f28effc9a4c9e8923980b4726d264672141a030a61a23a416534b426a301775a"
+    },
+    {
+      "bytes": 1596,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/c3_constant_gate.json",
+      "sha256": "950004c554d52bcb2993afae1d3e1929a46cb547ec449d70033fe38d0aeee645"
+    },
+    {
+      "bytes": 6549,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/c3_first_normal_gate.json",
+      "sha256": "df2da9608eb13621846ddbe839f59a07809bc18014f99eb98b639bf4c8611ff2"
+    },
+    {
+      "bytes": 9060,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/c3_second_normal_gate.json",
+      "sha256": "c4bd146fb6717ed708cda9e23a0e001a2ae9d7733731be7319e903247aba7b6c"
+    },
+    {
+      "bytes": 14188,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/c3_deep_normal_gate.json",
+      "sha256": "b4d014bd90ee02cd0e35b9d1a1896492c4fa6f57065265903ba514f79af274b2"
+    },
+    {
+      "bytes": 4165,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_31/p25_multiplier_embedding_p463.npz",
+      "sha256": "5a2bdfe722ebc716c1698390600952fb99d0bdad02bf44e33c883365984470a5"
+    },
+    {
+      "bytes": 4234,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_31/p25_multiplier_embedding_p727.npz",
+      "sha256": "a10f0ba4767988610a1328c2d19956214dda5682d36a004a0fa496cd1a314ca0"
+    },
+    {
+      "bytes": 10636,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_35/p25_multiplier_embedding_p463.npz",
+      "sha256": "6863f608d21811b324a681ceb9b8d72824a8331c6a8f1904820232445c7289ae"
+    },
+    {
+      "bytes": 10767,
+      "expected_core_hash_match": null,
+      "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_35/p25_multiplier_embedding_p727.npz",
+      "sha256": "3920f47ddf67eb8ba25de0d4cdb4211e171af859da2cc45c4c167994660fb261"
+    }
+  ],
+  "observed_head": "e77298c9e9277b3ee209e92884edbcb83180cbd3",
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "pinned_state_resolves_to": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "schema": "p25-cov-support-input-manifest-v1",
+  "sibling_seal_audits": {
+    "cov_m1_deg31_35_work": {
+      "intact": true,
+      "mismatches": [],
+      "records": 182,
+      "seal": "goals_2026-08-01/COV_M1_DEG31_35_WORK/SEAL.json"
+    },
+    "p25_landing_support": {
+      "intact": true,
+      "mismatches": [],
+      "records": 48,
+      "seal": "goals_2026-08-01/P25_LANDING_SUPPORT/SEAL.json"
+    }
+  }
+}

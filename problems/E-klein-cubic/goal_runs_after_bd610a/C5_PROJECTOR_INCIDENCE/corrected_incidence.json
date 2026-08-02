@@ -1,0 +1,381 @@
+{
+  "format": "c5-corrected-self-adjoint-nilpotent-incidence-v1",
+  "field": "Q(zeta11)(P(W))^PSL_2(F_11)",
+  "ambient": "P(Sym(A,sigma))=P^14",
+  "symmetric_basis": [
+    {
+      "name": "q_0",
+      "definition": "M_0+sigma(M_0)",
+      "frame_index": 0,
+      "rectangle_coordinates": "R^-1*vec(M_0+Q(x)^-1*M_0^t*Q(x))"
+    },
+    {
+      "name": "q_1",
+      "definition": "M_1+sigma(M_1)",
+      "frame_index": 1,
+      "rectangle_coordinates": "R^-1*vec(M_1+Q(x)^-1*M_1^t*Q(x))"
+    },
+    {
+      "name": "q_2",
+      "definition": "M_2+sigma(M_2)",
+      "frame_index": 2,
+      "rectangle_coordinates": "R^-1*vec(M_2+Q(x)^-1*M_2^t*Q(x))"
+    },
+    {
+      "name": "q_3",
+      "definition": "M_3+sigma(M_3)",
+      "frame_index": 3,
+      "rectangle_coordinates": "R^-1*vec(M_3+Q(x)^-1*M_3^t*Q(x))"
+    },
+    {
+      "name": "q_4",
+      "definition": "M_4+sigma(M_4)",
+      "frame_index": 4,
+      "rectangle_coordinates": "R^-1*vec(M_4+Q(x)^-1*M_4^t*Q(x))"
+    },
+    {
+      "name": "q_5",
+      "definition": "M_5+sigma(M_5)",
+      "frame_index": 5,
+      "rectangle_coordinates": "R^-1*vec(M_5+Q(x)^-1*M_5^t*Q(x))"
+    },
+    {
+      "name": "q_6",
+      "definition": "M_6+sigma(M_6)",
+      "frame_index": 6,
+      "rectangle_coordinates": "R^-1*vec(M_6+Q(x)^-1*M_6^t*Q(x))"
+    },
+    {
+      "name": "q_7",
+      "definition": "M_7+sigma(M_7)",
+      "frame_index": 7,
+      "rectangle_coordinates": "R^-1*vec(M_7+Q(x)^-1*M_7^t*Q(x))"
+    },
+    {
+      "name": "q_8",
+      "definition": "M_8+sigma(M_8)",
+      "frame_index": 8,
+      "rectangle_coordinates": "R^-1*vec(M_8+Q(x)^-1*M_8^t*Q(x))"
+    },
+    {
+      "name": "q_9",
+      "definition": "M_9+sigma(M_9)",
+      "frame_index": 9,
+      "rectangle_coordinates": "R^-1*vec(M_9+Q(x)^-1*M_9^t*Q(x))"
+    },
+    {
+      "name": "q_10",
+      "definition": "M_10+sigma(M_10)",
+      "frame_index": 10,
+      "rectangle_coordinates": "R^-1*vec(M_10+Q(x)^-1*M_10^t*Q(x))"
+    },
+    {
+      "name": "q_11",
+      "definition": "M_11+sigma(M_11)",
+      "frame_index": 11,
+      "rectangle_coordinates": "R^-1*vec(M_11+Q(x)^-1*M_11^t*Q(x))"
+    },
+    {
+      "name": "q_12",
+      "definition": "M_12+sigma(M_12)",
+      "frame_index": 12,
+      "rectangle_coordinates": "R^-1*vec(M_12+Q(x)^-1*M_12^t*Q(x))"
+    },
+    {
+      "name": "q_13",
+      "definition": "M_13+sigma(M_13)",
+      "frame_index": 13,
+      "rectangle_coordinates": "R^-1*vec(M_13+Q(x)^-1*M_13^t*Q(x))"
+    },
+    {
+      "name": "q_14",
+      "definition": "M_15+sigma(M_15)",
+      "frame_index": 15,
+      "rectangle_coordinates": "R^-1*vec(M_15+Q(x)^-1*M_15^t*Q(x))"
+    }
+  ],
+  "generic_element": "n(t)=sum_{j=0}^14 t_j*q_j",
+  "homogeneous_equations": {
+    "square_zero": [
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 0,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 1,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 2,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 3,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 4,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 5,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 6,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 7,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 8,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 9,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 10,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 11,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 12,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 13,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 14,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 15,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 16,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 17,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 18,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 19,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 20,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 21,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 22,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 23,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 24,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 25,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 26,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 27,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 28,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 29,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 30,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 31,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 32,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 33,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 34,
+        "degree": 2
+      },
+      {
+        "source": "n(t)^2",
+        "rectangle_coordinate": 35,
+        "degree": 2
+      }
+    ],
+    "fano_hyperplanes": [
+      {
+        "source": "Trd(n(t)*S_0)",
+        "degree": 1
+      },
+      {
+        "source": "Trd(n(t)*S_1)",
+        "degree": 1
+      },
+      {
+        "source": "Trd(n(t)*S_2)",
+        "degree": 1
+      },
+      {
+        "source": "Trd(n(t)*S_3)",
+        "degree": 1
+      },
+      {
+        "source": "Trd(n(t)*S_4)",
+        "degree": 1
+      }
+    ],
+    "discarded_full_algebra_coordinates": 0
+  },
+  "projective_cover": [
+    {
+      "chart": 0,
+      "normalization": "t_0=1"
+    },
+    {
+      "chart": 1,
+      "normalization": "t_1=1"
+    },
+    {
+      "chart": 2,
+      "normalization": "t_2=1"
+    },
+    {
+      "chart": 3,
+      "normalization": "t_3=1"
+    },
+    {
+      "chart": 4,
+      "normalization": "t_4=1"
+    },
+    {
+      "chart": 5,
+      "normalization": "t_5=1"
+    },
+    {
+      "chart": 6,
+      "normalization": "t_6=1"
+    },
+    {
+      "chart": 7,
+      "normalization": "t_7=1"
+    },
+    {
+      "chart": 8,
+      "normalization": "t_8=1"
+    },
+    {
+      "chart": 9,
+      "normalization": "t_9=1"
+    },
+    {
+      "chart": 10,
+      "normalization": "t_10=1"
+    },
+    {
+      "chart": 11,
+      "normalization": "t_11=1"
+    },
+    {
+      "chart": 12,
+      "normalization": "t_12=1"
+    },
+    {
+      "chart": 13,
+      "normalization": "t_13=1"
+    },
+    {
+      "chart": 14,
+      "normalization": "t_14=1"
+    }
+  ],
+  "opens": [
+    "char(K_proj) != 2 and the degree-six Azumaya/CSA open",
+    "f14*f11*disc(m_a)*det(R)*Pf(Q(x)) != 0 when using the maximal-etale presentation",
+    "the sealed 15x15 symmetric-basis minor != 0",
+    "the distinguished five-plane rank minor != 0",
+    "projective nonzero condition covered by t_j!=0",
+    "no target inverse of <Q(x),p_U>; that quantity is the first Fano equation and equals zero"
+  ],
+  "rank_argument": "sigma(n)=n makes Qn alternating; n^2=0 gives rank(n)<=3; alternating rank is even, so every nonzero point has ordinary rank two",
+  "projective_scalar_quotient": "nonzero n determines its right ideal nA and image nP; scalar multiples determine the same D-line, so the bijection is projective",
+  "fano_equivalence": "for n=P_U*Q(x), Trd(n*S_i)=Tr(P_U*Q(V_i))=-2*<Q(V_i),p_U>; zero is exactly the five Pluecker hyperplanes",
+  "scheme_caveat": "entries(n^2) alone define a doubled degree-28 structure; the retained i=0 equation Trd(n*S_0)=Trd(n)=0 is essential and makes the ideal equal to Trd(n) plus the fifteen Pluecker quadrics after splitting",
+  "basis_source_sha256": "093b0bc4e680bdf9632381a778ed6d88f4787a18df293992def38a3d23097682",
+  "scope": "exact exhaustive genuine Fano incidence; no K_proj-rational point is supplied"
+}

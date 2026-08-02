@@ -1,0 +1,102 @@
+{
+  "char0_boundary": "The fixed Reynolds/cross/group/minor formulas are arithmetic circuits over Q(zeta_11), and good-fibre nonzero minors certify that their exact Cramer denominators are nonzero. No entrywise characteristic-zero matrices were expanded or reconstructed. Two finite-field replays alone do not prove an entrywise lift and do not decide the nonlinear PC.2 landing scheme.",
+  "independent_implementation": {
+    "cross_evaluator": "goals_2026-08-01/COV_M1_DEG31_35_WORK/produce_cross_basis.py",
+    "cross_evaluator_sha256": "7b99bf7712fdf3dd898ab27ff3cb469c9f5213bdab1c35902813993ce6210f68",
+    "historical_strict_helper": "certificates/degree25_exact/common_p25x.py",
+    "historical_strict_helper_sha256": "b5d27fe9174e859a88a9b1704963e07a4ff53f96ddd259d83c5a7d148d9588bc",
+    "producer_imported": false,
+    "stored_matrices_used_as_computational_inputs": false
+  },
+  "prime_results": [
+    {
+      "degrees": {
+        "31": {
+          "all_400_evaluation_residual_nonzeros": 0,
+          "map_rank": 43,
+          "map_sha256": "508f9a02f26c85cce4955c96318bf246d6c876deac2c2750979835fefc9ce707"
+        },
+        "35": {
+          "all_400_evaluation_residual_nonzeros": 0,
+          "map_rank": 43,
+          "map_sha256": "a29a82d12cb36e041fda3c3050b86cff079a95fd4710854a19ff74c180e348c6"
+        }
+      },
+      "historical_strict_bridge": {
+        "arrangement_rank": 59,
+        "fixed_cross_equals_historical_arrangement": true,
+        "fixed_strict_equals_historical_strict": true,
+        "historical_monic_pivots_prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "historical_order2_rank": 16,
+        "historical_strict_coordinate_sha256": "ad7f7b04f643a38076a01ab0242f45b978739c42edbf97c7e48641912d7cea18",
+        "historical_strict_rank": 43
+      },
+      "order2_rank": 16,
+      "prime": 419,
+      "source_rank": 59,
+      "strict_order2_residual_nonzeros": 0,
+      "strict_rank": 43,
+      "zeta11": 13
+    },
+    {
+      "degrees": {
+        "31": {
+          "all_400_evaluation_residual_nonzeros": 0,
+          "map_rank": 43,
+          "map_sha256": "dfe1896d6f05b89c202e76ff5ae558c43bc66e8a0c433f24d71f96205dce62b9"
+        },
+        "35": {
+          "all_400_evaluation_residual_nonzeros": 0,
+          "map_rank": 43,
+          "map_sha256": "ede24a817cb8c2d98144ecc2655ba66ce694896ad56d28a6e58721c10d515999"
+        }
+      },
+      "historical_strict_bridge": {
+        "arrangement_rank": 59,
+        "fixed_cross_equals_historical_arrangement": true,
+        "fixed_strict_equals_historical_strict": true,
+        "historical_monic_pivots_prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "historical_order2_rank": 16,
+        "historical_strict_coordinate_sha256": "cce6f2f5e4e821b8ccccb80bc3034b7bc18900db1917f0ba039d181e2948a35f",
+        "historical_strict_rank": 43
+      },
+      "order2_rank": 16,
+      "prime": 463,
+      "source_rank": 59,
+      "strict_order2_residual_nonzeros": 0,
+      "strict_rank": 43,
+      "zeta11": 15
+    }
+  ],
+  "producer_artifact_sha256": "1821aa187af7573833bb132769e262af61858622657f7684116d104466451110",
+  "producer_metadata_sha256": "6a21bf8a0d11ff5cd8db6878f1f3d43ef62c65b7c32c354697f2487beeaa4905",
+  "schema": "verify-pc3-fixed-p25-strict-multiplier-circuits-v1",
+  "scope": "Independent exact finite-field replay at p=419 and p=463 of the fixed 59x43 Cramer inclusion and the induced 198x43 f6 and 361x43 f10 maps. The fixed cross source agrees with the separately installed Reynolds arrangement and strict spaces at both fibres.",
+  "verdict": "PASS"
+}

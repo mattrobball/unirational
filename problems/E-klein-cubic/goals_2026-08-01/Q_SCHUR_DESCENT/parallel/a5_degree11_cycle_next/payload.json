@@ -1,0 +1,42 @@
+{
+  "format": "Q-SCHUR-A5-DEGREE11-CYCLE-v1",
+  "headline": "Q-UNDECIDED",
+  "group": {
+    "name": "PSL_2(F_11)",
+    "order": 660,
+    "subgroup": "A5",
+    "subgroup_order": 60,
+    "index": 11,
+    "maximality_reason": "the subgroup has prime index 11"
+  },
+  "source_theorem": {
+    "statement": "For each of the two maximal A5 classes, an exact nonzero degree-11 A5-equivariant covariant P2 --> X lands identically on the restricted Klein cubic.",
+    "terminal_marker": "H3_EXACT_BOTH_A5_POINTS_VERIFIED"
+  },
+  "bridge": {
+    "lemma": "A nonempty A5-equivariant rational map from the projectivization of a linear representation to X makes every A5 twist of X soluble over every infinite extension field containing C.",
+    "domain_twist": "The twist of the source three-space is a three-dimensional vector space by linear descent, so its projectivization is P2 and its rational points meet every nonempty open.",
+    "application": "For a generic G-torsor E/K and L=E^A5, the base change of the full twist to L is the A5 twist by E/L and therefore has an L-point.",
+    "zero_cycle_degree": 11,
+    "closed_point_dichotomy": "The resulting point has residue degree 1 or 11 over K because [L:K]=11 is prime."
+  },
+  "scope": {
+    "proved": "The genuine generic Schur twist has an effective zero-cycle of degree 11; equivalently it has a K-point or a degree-11 closed point.",
+    "not_proved": "No K-rational point is constructed and no functorial pointlessness obstruction is obtained.",
+    "binary_goal_status": "Q-UNDECIDED"
+  },
+  "sources": {
+    "goals_after_35fa8f/point_attack_degree11_20260801/verify_exact_point.py": "9eee326abdc17c132d461ec49d315677403fc3ac77ffb4c67ff8bca4d7219f45",
+    "goals_after_35fa8f/point_attack_degree11_20260801/exact_reynolds.py": "6d912b5b98e6b4de6435cec88ed8e0b125598986c3cf769a10438ebb7a58df30",
+    "goals_after_35fa8f/point_attack_degree11_20260801/exact_eval_singular.py": "c472057f28c248c37b0880deff8e938976e622455b8fccd71d4424e499cad11f",
+    "goals_after_35fa8f/point_attack_degree11_20260801/canonical_modp.py": "5120b0019b4edf1aed99a8ab900c1cc1b05325d2c663523551414cc8dd49f802",
+    "goals_after_35fa8f/point_attack_degree11_20260801/degree11_reconstructed_relations.json": "e1dd860640ff6890fcc22335aa8281c4ec72d27378bb28c192f71d086546cf00",
+    "goals_after_35fa8f/canonical_a5_pencil.py": "d6a5890b356008705d2ed1a9d693d278f97c7daa2d176448bbf7583c0dda32af",
+    "goals_2026-08-01/H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/build_a5_twists.py": "afad8836a7a4a54c659b2e6722e00afa990c52a187e96711031992193ed34ddd",
+    "goals_2026-08-01/H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/low_degree_search.py": "96ccfa7d9fdc491fe07c932d967b9b2ae2074f9bd034eab36a5f99066994b29a",
+    "goals_2026-08-01/H_SUBGROUP_TWISTS_CODEX_ROOT_20260801/a5_degree5_7_search.py": "b030f715a6baa14b200a77c1dd37e469abc0de29eea07e2f09d815873e922a1e",
+    "goals_2026-08-01/H_SUBGROUP_TWISTS_ROOT_019FBE10/produce.py": "29961a81786f493bc0362b67b4a4a9979224ccee9874a5e1046af5aa942e1f8b",
+    "goals_2026-08-01/H_SUBGROUP_TWISTS_ROOT_019FBE10/twists.json": "e97a32d6f22a8028528bc2b4d27ee009901caeb047fd2ffe5ac2bdd1fab743cd",
+    "certificates/exact_weil_check.py": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2"
+  }
+}

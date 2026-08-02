@@ -1,0 +1,14 @@
+{
+  "format": "c012-one-parameter-bounded-stop-seal-v1",
+  "marker": "C012_ONE_PARAMETER_BOUNDED_STOP_OK",
+  "files": {
+    "REPORT.md": "4c284fba2d8be953521bff31fce27679e2678d7c63e0d380854db8e81dfa4a9a",
+    "REPLAY.md": "02f98148026fd0b7655ee4b1c9c61862b387513cc325caa2ef89e9b9e1161de6",
+    "payload.json": "6fa5c52635c5ec60a469a940266197c90618e5a49f39f418b7161b31f5e54ff3",
+    "source_manifest.json": "67761d723306ff8149eeda944a4717deeb0452b547f21d390729f150431f5269",
+    "verify.py": "a082f342904a3f0ef4e761cad70582ee001f1af1ed74377c50c13d768bd79c6f",
+    "analyze_specialization.py": "5a7f6d0e03a503da7061f2ffe6b3a52d87117cd81b7fe224a4418452247bae81",
+    "search_polynomial_sections.py": "1d9c2ff2ee06918e9cf9dde13c6930e570e8b331107473b2218323c1607f2796",
+    "search_degree3_msolve.py": "26e0e2d0c58fb0e7865c94fa95fe3ba51fd2041bd5f765a77f3314c12a52a798"
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "attempts": [
+    {
+      "block_number": 0,
+      "candidate_columns": 4096,
+      "candidate_uint8_sha256": "0b4093fdc468c943bfb57d29ec2bc3087569bb935c8d9a316f19cf0f2c4e8bdc",
+      "fflas_seconds": 8.047796,
+      "modular_double_bytes": 352813056,
+      "ordered_columns_seen": 4096,
+      "rank": 4096,
+      "uint8_bytes": 44101632
+    },
+    {
+      "block_number": 1,
+      "candidate_columns": 8192,
+      "candidate_uint8_sha256": "0e1b8bd4ef5fe8fcde31fbeb43e5ec90f157decf5a4aa9c7972bd59a4e73d421",
+      "fflas_seconds": 21.066777,
+      "modular_double_bytes": 705626112,
+      "ordered_columns_seen": 8192,
+      "rank": 8192,
+      "uint8_bytes": 88203264
+    },
+    {
+      "block_number": 2,
+      "candidate_columns": 12288,
+      "candidate_uint8_sha256": "d045d8112eb2b5db2866ab5051b31156f06d9b724e4748328e9de3c0a403dd44",
+      "fflas_seconds": 29.367455,
+      "modular_double_bytes": 1058439168,
+      "ordered_columns_seen": 12288,
+      "rank": 10767,
+      "uint8_bytes": 132304896
+    }
+  ],
+  "elapsed_seconds": 110.308324,
+  "matrix_shape": [
+    10767,
+    54834
+  ],
+  "ordered_columns_examined_until_full_rank": 10767,
+  "pair_criteria": {
+    "cross_component_pairs": "omitted: module leading terms in distinct components have zero S-polynomial",
+    "higher_lcm_pairs": "omitted from the degree-four layer only; homogeneous Buchberger/F4 processes them when their lcm degree is reached",
+    "same_lcm_fibers": "for each degree-four product monomial, keep a spanning tree of representations q_i*LT(g); every other pair is a linear combination of tree differences in the same fiber"
+  },
+  "pivot_profile": {
+    "bytes": 162727,
+    "file": "degree3_pivot_profile.npz",
+    "pivot_columns_sha256": "c0078668769bac8b7feb138cc4e38ef87f417119bd250550936cc1ccdf225b56",
+    "pivot_exponents_sha256": "8d8ad6e73eff5357f26255d31d76c67cb40e851d2843538afd9e6eec7f46e1eb",
+    "sha256": "2aee7c0e2fd8a2b03a7a5133ed02f36ef7d881a8a1a29e39b617f2619da47b69"
+  },
+  "prime": 89,
+  "rank": 10767,
+  "scope": "Exact degree-three pivots and monomial-shadow counts only. New degree-four/degree-five S-polynomial coefficients were not reduced, so no target membership or Stage-B verdict follows.",
+  "shadows": {
+    "degree4": {
+      "all_one_variable_prolongations": 398379,
+      "ambient_module_terms": 548340,
+      "distinct_initial_shadow": 143415,
+      "duplicate_lcm_fiber_relations": 254964,
+      "standard_terms_before_new_degree4_pivots": 404925
+    },
+    "degree5": {
+      "all_quadratic_prolongations": 7569201,
+      "ambient_module_terms": 4496388,
+      "distinct_initial_shadow": 1437126,
+      "duplicate_prolongations": 6132075,
+      "standard_terms_before_degree4_or_degree5_new_pivots": 3059262
+    },
+    "pure_power_targets": {
+      "covered": [
+        {
+          "axis": 5,
+          "component": 0
+        },
+        {
+          "axis": 6,
+          "component": 0
+        },
+        {
+          "axis": 7,
+          "component": 0
+        },
+        {
+          "axis": 5,
+          "component": 1
+        },
+        {
+          "axis": 6,
+          "component": 1
+        },
+        {
+          "axis": 7,
+          "component": 1
+        },
+        {
+          "axis": 5,
+          "component": 2
+        },
+        {
+          "axis": 6,
+          "component": 2
+        },
+        {
+          "axis": 7,
+          "component": 2
+        },
+        {
+          "axis": 5,
+          "component": 3
+        },
+        {
+          "axis": 6,
+          "component": 3
+        },
+        {
+          "axis": 7,
+          "component": 3
+        },
+        {
+          "axis": 5,
+          "component": 4
+        },
+        {
+          "axis": 6,
+          "component": 4
+        },
+        {
+          "axis": 7,
+          "component": 4
+        },
+        {
+          "axis": 5,
+          "component": 5
+        },
+        {
+          "axis": 6,
+          "component": 5
+        },
+        {
+          "axis": 7,
+          "component": 5
+        }
+      ],
+      "covered_by_degree3_initial_shadow": 18,
+      "total": 222,
+      "uncovered_before_higher_pairs": 204
+    }
+  },
+  "source": {
+    "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_p3_contractions.npy",
+    "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019"
+  },
+  "status": "PASS_EXACT_DEGREE3_PIVOT_PROFILE",
+  "term_order": {
+    "module_component_tiebreak": "gen(6)>...>gen(1)",
+    "singular": "(Dp,C)",
+    "variables": [
+      "q5",
+      "q6",
+      "q7",
+      "q8",
+      "q9",
+      "q10",
+      "q11",
+      "q12",
+      "q13",
+      "q14",
+      "q15",
+      "q16",
+      "q17",
+      "q18",
+      "q19",
+      "q20",
+      "q21",
+      "q22",
+      "q23",
+      "q24",
+      "q25",
+      "q26",
+      "q27",
+      "q28",
+      "q29",
+      "q30",
+      "q31",
+      "q32",
+      "q33",
+      "q34",
+      "q35",
+      "q36",
+      "q4",
+      "q0",
+      "q1",
+      "q2",
+      "q3"
+    ]
+  }
+}

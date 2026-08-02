@@ -1,0 +1,73 @@
+{
+  "checks": {
+    "Bgate": {
+      "gcd_with_q_degree": 0,
+      "remainder_degree": 5,
+      "unit": true
+    },
+    "Cgate": {
+      "gcd_with_q_degree": 0,
+      "remainder_degree": 5,
+      "unit": true
+    },
+    "PuuGate": {
+      "gcd_with_q_degree": 0,
+      "remainder_degree": 5,
+      "unit": true
+    },
+    "Q4": {
+      "gcd_with_q_degree": 0,
+      "remainder_degree": 5,
+      "unit": true
+    },
+    "bordered_hessian": {
+      "gcd_with_q_degree": 0,
+      "remainder_degree": 5,
+      "unit": true
+    },
+    "chart_hessian": {
+      "gcd_with_q_degree": 0,
+      "remainder_degree": 5,
+      "unit": true
+    },
+    "delta": {
+      "gcd_with_q_degree": 0,
+      "remainder_degree": 5,
+      "unit": true
+    },
+    "ell": {
+      "gcd_with_q_degree": 0,
+      "remainder_degree": 5,
+      "unit": true
+    },
+    "qprime": {
+      "gcd_with_q_degree": 0,
+      "remainder_degree": 5,
+      "unit": true
+    }
+  },
+  "does_not_prove": [
+    "by itself, equality of the RUR component with the full gate-localized critical ideal"
+  ],
+  "input_sha256": {
+    "NB": "3ffd1fad77d6e66d40ee8f447bb898c87d0fefb936ef6ea1bf24a02ac7a228ee",
+    "NY": "5a57c14e530a4ec111731b09a59da510f578f850d8655e31e7c318849a5209ae",
+    "QZ": "23be9dbe72a9a4089924accde05fc9f8d43b13e644a2e2c8528fabdb3608ef9f"
+  },
+  "proves": [
+    "all required gate, q-prime, and Hessian classes are nonzero generically on the irreducible degree-six RUR component",
+    "at the exact witness (17,1), every listed class is a unit in the specialized degree-six field"
+  ],
+  "q_factor_degrees_and_multiplicities": [
+    [
+      6,
+      1
+    ]
+  ],
+  "schema": "klein-t111-rur-special-unit-witness-v1",
+  "specialization": {
+    "A": 17,
+    "u": 1
+  },
+  "status": "PASS"
+}

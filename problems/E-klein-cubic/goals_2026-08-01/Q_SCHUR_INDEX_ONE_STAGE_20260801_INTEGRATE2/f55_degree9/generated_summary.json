@@ -1,0 +1,14 @@
+{
+  "coefficient_dimension": 65,
+  "coefficient_term_count": 697125,
+  "equation_count": 2860,
+  "instance_bytes": 11165448,
+  "instance_sha256": "6d76ef7393f5a03131787ec149b9e6f3c43d39464befac19c8bebe312730be03",
+  "term_support_hashes_by_character": {
+    "0": "15e485e551f520f7f971038308c6f7a2bee3e28cd58535c2b7a9ac8058a30bcb",
+    "1": "15e485e551f520f7f971038308c6f7a2bee3e28cd58535c2b7a9ac8058a30bcb",
+    "2": "15e485e551f520f7f971038308c6f7a2bee3e28cd58535c2b7a9ac8058a30bcb",
+    "3": "15e485e551f520f7f971038308c6f7a2bee3e28cd58535c2b7a9ac8058a30bcb",
+    "4": "15e485e551f520f7f971038308c6f7a2bee3e28cd58535c2b7a9ac8058a30bcb"
+  }
+}

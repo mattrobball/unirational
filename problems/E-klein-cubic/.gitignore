@@ -2,3 +2,6 @@
 
 # Local CAS session state, never part of a research packet.
 **/.singularhistory
+
+# msolve inputs: large, regenerable from build/produce scripts; not remote material.
+*.in

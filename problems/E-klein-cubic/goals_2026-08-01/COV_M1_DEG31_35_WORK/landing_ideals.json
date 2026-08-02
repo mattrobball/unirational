@@ -136,6 +136,45 @@
     "payload_sha256": "c4bd146fb6717ed708cda9e23a0e001a2ae9d7733731be7319e903247aba7b6c",
     "scope": "necessary pure and mixed second-normal C3 branch gates"
   },
+  "deep_normal_pre_elimination": {
+    "payload": "c3_deep_normal_gate.json",
+    "payload_sha256": "b4d014bd90ee02cd0e35b9d1a1896492c4fa6f57065265903ba514f79af274b2",
+    "prime": 463,
+    "scope": "tangent reduction of both mixed-second nonbased branches, third/fourth-normal recursive gates, and exact full-cubic-span emptiness of the two deepest five-dimensional gates"
+  },
+  "d31_third_pure_chart_saturation": {
+    "payload": "d31_third_pure_msolve.json",
+    "payload_sha256": "600baa04d97a39495a6a269ffb434f2367776ab1ac3cd5f8b607c144f85b61e9",
+    "prime": 463,
+    "scope": "exact msolve unit bases exclude two of six degree-31 pure-third normalization charts only over F_463, leaving four in that special fibre; all six prime-specific affine charts remain open in characteristic zero"
+  },
+  "p25_dependency_localization": {
+    "payload": "p25_dependency_localization.json",
+    "payload_sha256": "54191c5e047b3f35ac8a77a543b0bd304469f3a1755f0d08c4b05a28a68da2b4",
+    "scope": "two-prime fixed-circuit localization of the f6 and f10 images of K1_25 inside the necessary C3 Taylor gate tree; P25.2 remains undecided"
+  },
+  "p25_d31_pure_second_branch": {
+    "payload": "p25_d31_pure_second_cubic_span.json",
+    "payload_sha256": "7628ee8c726681f1470a1e51e6b14ab97ce1f8f5772d84a32f7117db6ef0e8c9",
+    "prime": 463,
+    "scope": "exact scalar-zero rank 3 and full 10-of-10 cubic-span minor empty the projective degree-31 f6(K1_25) pure-second branch"
+  },
+  "p25_common_nonbased_branches": {
+    "payload": "p25_common_nonbased_branches.json",
+    "payload_sha256": "da8fb32a0f8bd3e781a3480a26712fc4d8cebb51cc1f004b7080034814058ea8",
+    "scope": "two-prime identification of the two intrinsic P25 nonbased branches across the degree-31 and degree-35 multiplier trees"
+  },
+  "p25_common_branch_b_closure": {
+    "payload": "p25_common_branch_b_msolve.json",
+    "payload_sha256": "c99b92dbf87a1eb9a85dce776fdf407d10ca2886517152e0c0742c7f5b52dc6f",
+    "prime": 463,
+    "scope": "seven exact unit charts plus the separately empty scalar-zero boundary prove common P25 branch B projectively empty"
+  },
+  "p25_strict_branch_a_localization": {
+    "payload": "p25_strict_branch_a.json",
+    "payload_sha256": "1e414b3b95980ec831ada100be0befabd0bd0ff06efed63adc45696eea67adcd",
+    "scope": "two-prime fixed-circuit intersection with the binding 43-dimensional strict P25 equalizer cuts arrangement branch A from dimension 51 to a characteristic-zero upper bound of 37; its affine landing charts remain open"
+  },
   "third_based_reduced_special_fibre": {
     "payload": "c3_third_based_reduced_landing.json",
     "payload_sha256": "4cb7945f33219a336ce0bce9424ebffc2e36175ab8df458761844002cc501044",

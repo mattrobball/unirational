@@ -1,5 +1,4 @@
-EXPORTED 10 INTEGRAL INVARIANT GENERATORS
-SEALED 70 FILES
+SEALED 159 FILES
 inputs: 9 hashes and open P25 dependency OK
 canonical d=31: 410 -> K1 198 OK
 canonical d=35: 637 -> K1 361 OK
@@ -13,11 +12,34 @@ C3/C6 gate p=463: d31 rank 11, d35 rank 13 OK
 C3/C6 gate p=727: d31 rank 11, d35 rank 13 OK
 C3-reduced d=31: 5349 cubics on 187; based 177, 10 nonbased charts OK
 C3-reduced d=35: 8555 cubics on 348; based 336, 12 nonbased charts OK
+C3 first-normal p=463, d=31: ranks [21, 32, 51], kernel 147 OK
+C3 first-normal p=463, d=35: ranks [25, 38, 61, 61], kernel 300 OK
+C3 first-normal p=727, d=31: ranks [21, 32, 51], kernel 147 OK
+C3 first-normal p=727, d=35: ranks [25, 38, 61, 61], kernel 300 OK
+first-normal reduced d=31: 5349 cubics on 147; second-based 130, 17 nonbased charts OK
+first-normal reduced d=35: 8555 cubics on 300; second-based 289, 11 nonbased charts OK
+C3 second-normal p=463, d=31: pure [76, 99], mixed 120, third-based 65 OK
+C3 second-normal p=463, d=35: pure [82, 114], mixed 157, third-based 184 OK
+C3 second-normal p=727, d=31: pure [76, 99], mixed 120, third-based 65 OK
+C3 second-normal p=727, d=35: pure [82, 114], mixed 157, third-based 184 OK
+C3 deep-normal p=463, d=31 OK
+C3 deep-normal p=463, d=35 OK
+C3 deep-normal p=727, d=31 OK
+C3 deep-normal p=727, d=35 OK
+deep cubic span d=31: rank 35/35 OK
+deep cubic span d=35: rank 35/35 OK
+d31 third-pure msolve: 2 special-fibre unit charts; char0 cover 6 OK
+P25 localization p=463, d=31: [51, 46, 18, 0, 0, 0] OK
+P25 localization p=463, d=35: [59, 59, 46, 38, 18, 10] OK
+P25 localization p=727, d=31: [51, 46, 18, 0, 0, 0] OK
+P25 localization p=727, d=35: [59, 59, 46, 38, 18, 10] OK
+third-based reduced d=31: 5349 cubics on 65 OK
+third-based reduced d=35: 8555 cubics on 184 OK
 landing d=31, p=419: 5349 complete nodal cubics, rebuilt det=384, circuit spot-check OK
 landing d=31, p=463: 5349 complete nodal cubics, rebuilt det=165, circuit spot-check OK
 landing d=31: independent nodal frame certificate crosscheck OK
 landing d=35, p=419: 8555 complete nodal cubics, rebuilt det=30, circuit spot-check OK
 landing d=35, p=463: 8555 complete nodal cubics, rebuilt det=190, circuit spot-check OK
 landing d=35: independent nodal frame certificate crosscheck OK
-seal: 70 content hashes OK
+seal: 166 content hashes OK
 COV_M1_DEG31_35_VERIFY_OK

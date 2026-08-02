@@ -1,0 +1,640 @@
+{
+  "attempts": [
+    {
+      "block_number": 0,
+      "candidate_columns": 4096,
+      "candidate_uint8_sha256": "7a946d2e29cb375ce29b0b79d0fb6b4fafc22b2aaf8ed240721d5d5fb1567d3a",
+      "fflas_seconds": 7.323956,
+      "modular_double_bytes": 352813056,
+      "ordered_columns_seen": 4096,
+      "rank": 4096,
+      "uint8_bytes": 44101632
+    },
+    {
+      "block_number": 1,
+      "candidate_columns": 8192,
+      "candidate_uint8_sha256": "ea85009039ca714b4206dac1e4b6f3caac13abd9f1a43375ecb4e2bd49827b13",
+      "fflas_seconds": 19.867351,
+      "modular_double_bytes": 705626112,
+      "ordered_columns_seen": 8192,
+      "rank": 8192,
+      "uint8_bytes": 88203264
+    },
+    {
+      "block_number": 2,
+      "candidate_columns": 12288,
+      "candidate_uint8_sha256": "c00aa7e5d1c3dda9577f85c17662dbb66a8b01cde16f4bca3692bff50f94266d",
+      "fflas_seconds": 29.204272,
+      "modular_double_bytes": 1058439168,
+      "ordered_columns_seen": 12288,
+      "rank": 10011,
+      "uint8_bytes": 132304896
+    },
+    {
+      "block_number": 3,
+      "candidate_columns": 14107,
+      "candidate_uint8_sha256": "102f32b1bd1700bd9c6dc0ad979562b311e479f0d27c041013b1e0426f930781",
+      "fflas_seconds": 21.582298,
+      "modular_double_bytes": 1215120552,
+      "ordered_columns_seen": 16384,
+      "rank": 10425,
+      "uint8_bytes": 151890069
+    },
+    {
+      "block_number": 4,
+      "candidate_columns": 14521,
+      "candidate_uint8_sha256": "78f3fb768447330afb7c3ff620bc92e5a7a482b94a56f4d6012e2c084cca6f32",
+      "fflas_seconds": 22.390891,
+      "modular_double_bytes": 1250780856,
+      "ordered_columns_seen": 20480,
+      "rank": 10692,
+      "uint8_bytes": 156347607
+    },
+    {
+      "block_number": 5,
+      "candidate_columns": 14788,
+      "candidate_uint8_sha256": "c809b3e4a3e25600cbfbdf793bc48e27160bd54e2d7baad088533ee4ff8f10c9",
+      "fflas_seconds": 21.780621,
+      "modular_double_bytes": 1273779168,
+      "ordered_columns_seen": 24576,
+      "rank": 10767,
+      "uint8_bytes": 159222396
+    }
+  ],
+  "elapsed_seconds": 166.931331,
+  "implementation_dependency": {
+    "file": "profile_degree3_closure.py",
+    "sha256": "a0f5ebfcc95ea4cf5ce1e4f0940ee830db5ec8b2e6d6692fd8fd652c6163dd49"
+  },
+  "matrix_shape": [
+    10767,
+    54834
+  ],
+  "ordered_columns_examined_until_full_rank": 21999,
+  "pair_criteria": {
+    "different_components": "omit by the module product criterion",
+    "lcm_degree_above4": "defer, never discard, until that homogeneous layer",
+    "same_degree4_lcm": "one spanning tree per product fiber suffices because every pair difference is a linear combination of tree differences"
+  },
+  "pivot_profile": {
+    "bytes": 178687,
+    "file": "degree3_dp_pivot_profile.npz",
+    "pivot_columns_sha256": "1c1c43459ec876056303adc20f23050f194611b33c2269d0ead5148735ee5c86",
+    "pivot_exponents_sha256": "cd47fea90c4e90d41bbdab6080e933a5e8d3be7a7bac1cd3ef50911f43c1615f",
+    "sha256": "1e2720652bd938683250dea5c3ef8da685f6e9bd1b8126e83bf27b48a9dc8502"
+  },
+  "prime": 89,
+  "rank": 10767,
+  "scope": "Exact P3 pivots/shadows only; no higher-pair reduction or membership verdict.",
+  "shadows": {
+    "degree4": {
+      "all_one_variable_prolongations": 398379,
+      "ambient_module_terms": 548340,
+      "distinct_initial_shadow": 232326,
+      "duplicate_lcm_fiber_relations": 166053,
+      "standard_terms_before_new_degree4_pivots": 316014
+    },
+    "degree5": {
+      "all_quadratic_prolongations": 7569201,
+      "ambient_module_terms": 4496388,
+      "distinct_initial_shadow": 2746869,
+      "duplicate_prolongations": 4822332,
+      "standard_terms_before_degree4_or_degree5_new_pivots": 1749519
+    },
+    "pure_power_targets": {
+      "covered": [
+        {
+          "axis": 5,
+          "component": 0
+        },
+        {
+          "axis": 6,
+          "component": 0
+        },
+        {
+          "axis": 7,
+          "component": 0
+        },
+        {
+          "axis": 8,
+          "component": 0
+        },
+        {
+          "axis": 9,
+          "component": 0
+        },
+        {
+          "axis": 10,
+          "component": 0
+        },
+        {
+          "axis": 11,
+          "component": 0
+        },
+        {
+          "axis": 12,
+          "component": 0
+        },
+        {
+          "axis": 13,
+          "component": 0
+        },
+        {
+          "axis": 14,
+          "component": 0
+        },
+        {
+          "axis": 15,
+          "component": 0
+        },
+        {
+          "axis": 16,
+          "component": 0
+        },
+        {
+          "axis": 17,
+          "component": 0
+        },
+        {
+          "axis": 18,
+          "component": 0
+        },
+        {
+          "axis": 19,
+          "component": 0
+        },
+        {
+          "axis": 20,
+          "component": 0
+        },
+        {
+          "axis": 21,
+          "component": 0
+        },
+        {
+          "axis": 22,
+          "component": 0
+        },
+        {
+          "axis": 23,
+          "component": 0
+        },
+        {
+          "axis": 24,
+          "component": 0
+        },
+        {
+          "axis": 5,
+          "component": 1
+        },
+        {
+          "axis": 6,
+          "component": 1
+        },
+        {
+          "axis": 7,
+          "component": 1
+        },
+        {
+          "axis": 8,
+          "component": 1
+        },
+        {
+          "axis": 9,
+          "component": 1
+        },
+        {
+          "axis": 10,
+          "component": 1
+        },
+        {
+          "axis": 11,
+          "component": 1
+        },
+        {
+          "axis": 12,
+          "component": 1
+        },
+        {
+          "axis": 13,
+          "component": 1
+        },
+        {
+          "axis": 14,
+          "component": 1
+        },
+        {
+          "axis": 15,
+          "component": 1
+        },
+        {
+          "axis": 16,
+          "component": 1
+        },
+        {
+          "axis": 17,
+          "component": 1
+        },
+        {
+          "axis": 18,
+          "component": 1
+        },
+        {
+          "axis": 19,
+          "component": 1
+        },
+        {
+          "axis": 20,
+          "component": 1
+        },
+        {
+          "axis": 21,
+          "component": 1
+        },
+        {
+          "axis": 22,
+          "component": 1
+        },
+        {
+          "axis": 23,
+          "component": 1
+        },
+        {
+          "axis": 24,
+          "component": 1
+        },
+        {
+          "axis": 5,
+          "component": 2
+        },
+        {
+          "axis": 6,
+          "component": 2
+        },
+        {
+          "axis": 7,
+          "component": 2
+        },
+        {
+          "axis": 8,
+          "component": 2
+        },
+        {
+          "axis": 9,
+          "component": 2
+        },
+        {
+          "axis": 10,
+          "component": 2
+        },
+        {
+          "axis": 11,
+          "component": 2
+        },
+        {
+          "axis": 12,
+          "component": 2
+        },
+        {
+          "axis": 13,
+          "component": 2
+        },
+        {
+          "axis": 14,
+          "component": 2
+        },
+        {
+          "axis": 15,
+          "component": 2
+        },
+        {
+          "axis": 16,
+          "component": 2
+        },
+        {
+          "axis": 17,
+          "component": 2
+        },
+        {
+          "axis": 18,
+          "component": 2
+        },
+        {
+          "axis": 19,
+          "component": 2
+        },
+        {
+          "axis": 20,
+          "component": 2
+        },
+        {
+          "axis": 21,
+          "component": 2
+        },
+        {
+          "axis": 22,
+          "component": 2
+        },
+        {
+          "axis": 23,
+          "component": 2
+        },
+        {
+          "axis": 24,
+          "component": 2
+        },
+        {
+          "axis": 5,
+          "component": 3
+        },
+        {
+          "axis": 6,
+          "component": 3
+        },
+        {
+          "axis": 7,
+          "component": 3
+        },
+        {
+          "axis": 8,
+          "component": 3
+        },
+        {
+          "axis": 9,
+          "component": 3
+        },
+        {
+          "axis": 10,
+          "component": 3
+        },
+        {
+          "axis": 11,
+          "component": 3
+        },
+        {
+          "axis": 12,
+          "component": 3
+        },
+        {
+          "axis": 13,
+          "component": 3
+        },
+        {
+          "axis": 14,
+          "component": 3
+        },
+        {
+          "axis": 15,
+          "component": 3
+        },
+        {
+          "axis": 16,
+          "component": 3
+        },
+        {
+          "axis": 17,
+          "component": 3
+        },
+        {
+          "axis": 18,
+          "component": 3
+        },
+        {
+          "axis": 19,
+          "component": 3
+        },
+        {
+          "axis": 20,
+          "component": 3
+        },
+        {
+          "axis": 21,
+          "component": 3
+        },
+        {
+          "axis": 22,
+          "component": 3
+        },
+        {
+          "axis": 23,
+          "component": 3
+        },
+        {
+          "axis": 24,
+          "component": 3
+        },
+        {
+          "axis": 5,
+          "component": 4
+        },
+        {
+          "axis": 6,
+          "component": 4
+        },
+        {
+          "axis": 7,
+          "component": 4
+        },
+        {
+          "axis": 8,
+          "component": 4
+        },
+        {
+          "axis": 9,
+          "component": 4
+        },
+        {
+          "axis": 10,
+          "component": 4
+        },
+        {
+          "axis": 11,
+          "component": 4
+        },
+        {
+          "axis": 12,
+          "component": 4
+        },
+        {
+          "axis": 13,
+          "component": 4
+        },
+        {
+          "axis": 14,
+          "component": 4
+        },
+        {
+          "axis": 15,
+          "component": 4
+        },
+        {
+          "axis": 16,
+          "component": 4
+        },
+        {
+          "axis": 17,
+          "component": 4
+        },
+        {
+          "axis": 18,
+          "component": 4
+        },
+        {
+          "axis": 19,
+          "component": 4
+        },
+        {
+          "axis": 20,
+          "component": 4
+        },
+        {
+          "axis": 21,
+          "component": 4
+        },
+        {
+          "axis": 22,
+          "component": 4
+        },
+        {
+          "axis": 23,
+          "component": 4
+        },
+        {
+          "axis": 24,
+          "component": 4
+        },
+        {
+          "axis": 5,
+          "component": 5
+        },
+        {
+          "axis": 6,
+          "component": 5
+        },
+        {
+          "axis": 7,
+          "component": 5
+        },
+        {
+          "axis": 8,
+          "component": 5
+        },
+        {
+          "axis": 9,
+          "component": 5
+        },
+        {
+          "axis": 10,
+          "component": 5
+        },
+        {
+          "axis": 11,
+          "component": 5
+        },
+        {
+          "axis": 12,
+          "component": 5
+        },
+        {
+          "axis": 13,
+          "component": 5
+        },
+        {
+          "axis": 14,
+          "component": 5
+        },
+        {
+          "axis": 15,
+          "component": 5
+        },
+        {
+          "axis": 16,
+          "component": 5
+        },
+        {
+          "axis": 17,
+          "component": 5
+        },
+        {
+          "axis": 18,
+          "component": 5
+        },
+        {
+          "axis": 19,
+          "component": 5
+        },
+        {
+          "axis": 20,
+          "component": 5
+        },
+        {
+          "axis": 21,
+          "component": 5
+        },
+        {
+          "axis": 22,
+          "component": 5
+        },
+        {
+          "axis": 23,
+          "component": 5
+        },
+        {
+          "axis": 24,
+          "component": 5
+        }
+      ],
+      "covered_by_degree3_initial_shadow": 120,
+      "total": 222,
+      "uncovered_before_higher_pairs": 102
+    }
+  },
+  "source": {
+    "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_p3_contractions.npy",
+    "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019"
+  },
+  "status": "PASS_EXACT_DEGREE3_DP_PIVOT_PROFILE",
+  "term_order": {
+    "homogeneous_tie": "Singular dp (degree reverse lexicographic)",
+    "module_component_tiebreak": "gen(6)>...>gen(1)",
+    "variables": [
+      "q5",
+      "q6",
+      "q7",
+      "q8",
+      "q9",
+      "q10",
+      "q11",
+      "q12",
+      "q13",
+      "q14",
+      "q15",
+      "q16",
+      "q17",
+      "q18",
+      "q19",
+      "q20",
+      "q21",
+      "q22",
+      "q23",
+      "q24",
+      "q25",
+      "q26",
+      "q27",
+      "q28",
+      "q29",
+      "q30",
+      "q31",
+      "q32",
+      "q33",
+      "q34",
+      "q35",
+      "q36",
+      "q4",
+      "q0",
+      "q1",
+      "q2",
+      "q3"
+    ]
+  }
+}

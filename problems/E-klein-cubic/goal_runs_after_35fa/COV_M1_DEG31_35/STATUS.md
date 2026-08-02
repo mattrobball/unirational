@@ -48,6 +48,38 @@ authorize either scoped full-degree emptiness exit or a positive headline.
   vector-space dimensions `177` and `336`; their complements are covered by
   `10` and `12` affine normalization charts from independent scalar-form
   coordinates.  These are exact decision circuits, not a saturation result.
+- On the based branch, the first transverse Taylor coefficient gives further
+  necessary linear landing gates.  Their cumulative ranks are `51` and `61`,
+  leaving dimensions `147` and `300`; the complete factored equations are
+  materialized on both kernels.  The remaining first-normal nonbased pieces
+  have `17` and `11` normalization charts, while the second-based pieces have
+  dimensions `130` and `289`.  Every rank agrees at `p=463` and `p=727`.
+- On the second-based branch, the pure quadratic normal blocks reduce the
+  fibres to `99` and `247` variables, with `7` and `24` nonbased charts.  If
+  those scalars vanish, the mixed quadratic block reduces to `78` and `204`,
+  with `13` and `20` nonbased charts.  Vanishing of the mixed scalar leaves
+  true third-based dimensions `65` and `184`; the complete landing cubics are
+  explicitly materialized there.  These ranks also agree at both primes.
+- Continuing from the third-based systems, the pure cubic normal gates have
+  dimensions `36` and `140`, with `6` and `31` nonbased charts.  The
+  scalar-zero degree-31 continuation and the scalar-zero degree-35
+  mixed/quartic continuation each reach an exact five-dimensional linear
+  gate.  On both gates the complete landing equations span all `35` cubic
+  monomials over `F_463`, so both deepest projective tails are empty; the
+  prerequisite linear ranks agree at `p=463` and `p=727`.
+- Exact `msolve` runs on the first two degree-31 pure-third normalization
+  charts return one-element Groebner bases `[1]`.  These two affine charts are
+  empty over `F_463`, so that special fibre has a residual four-chart cover.
+  The kernels and charts are prime-specific and affine, so this result does
+  not transfer by proper specialization; all six charts remain open for the
+  characteristic-zero landing scheme.
+- On nonzero-root branches the next coefficient of the Klein equation gives
+  the exact tangent condition.  It reduces the first-normal nonbased kernels
+  to `137,266` variables and their scalar chart counts to `15,9`.  On the
+  degree-35 mixed-third nonbased branch it gives a `39`-variable kernel and
+  nine scalar charts.  On the mixed-second nonbased branches the same tangent
+  gate reduces the kernels to `45,156` variables and the chart counts from
+  `13,20` to `9,16`.  These tangent ranks also agree at both primes.
 - No one- or two-basis-direction survivor exists at `F_419`.  This is a
   discovery diagnostic only.
 
@@ -61,12 +93,23 @@ cannot be relabelled as `COV35-FULL-DEGREE-EMPTY-SCOPED`.
 
 There is also a binding lower-degree dependency.  If `q` is a degree-25
 landing covariant, then `f6*q` and `f10*q` are landing covariants in degrees
-31 and 35 because `F(f*q)=f^3 F(q)`.  Goal P25.2 remains undecided.  Hence a
+31 and 35 because `F(f*q)=f^3 F(q)`.  The full fixed 59-dimensional `K1_25`
+module has now been embedded by both multipliers at `p=463,727`.  Along the
+degree-31 based Taylor tree the `f6` preimage dimensions are
+`46,18,0,0,0`, so a nonzero fixed minor proves that no characteristic-zero
+P25 image reaches the pure-second based branch; it can only enter earlier
+nonbased covers.  For degree 35 the `f10` preimage dimensions are
+`59,46,38,18,10`, giving the same characteristic-zero upper bounds.  Goal
+P25.2 itself remains undecided.  Hence a
 negative full-degree exit here would in particular settle an unresolved
 subscheme of P25.2, which this run has not done.
 
-The smallest remaining computation is exact saturation of the two based
-strata (`177`, `336` vector coordinates) and the `10+12` nonbased affine
-charts of the `C3/C6`-reduced factored ideals, away from the union of actual
-scalar-factor and known composition incidence loci.  Until every branch is
-decided, the only authorized exit is `COV-UNDECIDED`.
+The remaining exact cover consists of the original `10+12` C3-nonbased
+charts, `15+9` tangent-reduced first-normal charts, `7+24` pure second-normal
+charts, `9+16` tangent-reduced mixed second-normal charts, six degree-31
+pure-third charts, and degree-35 covers by `31`
+pure-third plus nine tangent-reduced mixed-third
+charts.  There is no remaining deepest projective stratum.  Every chart must
+still be saturated away from the actual scalar-factor and known composition
+incidence loci.  Until every branch is decided, the only authorized exit is
+`COV-UNDECIDED`.

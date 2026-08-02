@@ -1,0 +1,149 @@
+{
+  "conditional_congruence": {
+    "admissible_degrees": [
+      4,
+      7,
+      10,
+      13
+    ],
+    "assumption": "there is no rational section",
+    "center_index": 3,
+    "conclusion": "every nonexceptional section has d congruent to 1 modulo 3",
+    "list_is_prefix": true,
+    "reason": "a plane line gives a degree-3 divisor on C_012; index 1 on a smooth genus-one curve gives a degree-1 line bundle and hence a K-point by Riemann-Roch, which would give an exceptional section"
+  },
+  "degree_four_gate": {
+    "K_point_known": false,
+    "binary_degree": 12,
+    "coefficient_equations": 13,
+    "coefficient_oracle": {
+      "phi_coefficients": "the 35 exact straight-line coefficients in exact_frame.json, each a sum of products of three Reynolds entries",
+      "substitution": "expand the 35 monomials after the displayed binary-form substitution and equate s^(12-k)t^k for k=0,...,12"
+    },
+    "equation": "Phi(A_0,A_1,A_2,s*r,t*r)=0",
+    "equation_parameter_degree": 3,
+    "forms": {
+      "A_i": "A_i(s,t)=sum_(j=0)^4 A_i_j*s^(4-j)*t^j, i=0,1,2",
+      "map": "[A_0:A_1:A_2:s*r:t*r]",
+      "r": "r(s,t)=sum_(j=0)^3 r_j*s^(3-j)*t^j"
+    },
+    "geometric_emptiness_known": false,
+    "projective_parameter_space": "P18_K",
+    "required_open": {
+      "basepoint_free": "there is no [s:t] with A_0=A_1=A_2=r=0; equivalently remove the projection of that incidence locus",
+      "common_factor": "gcd(A_0,A_1,A_2,r)=1",
+      "degree_one_to_base": "automatic from [a3:a4]=[s*r:t*r] on r != 0",
+      "nonexceptional": "r is not the zero form",
+      "nonvertical": true
+    },
+    "source_automorphisms": "only common scalar is quotiented: a section is tied to the identity map of the fixed pencil base, so an arbitrary PGL2 reparametrization is not an automorphism of this section problem",
+    "variables": [
+      "A0_0",
+      "A0_1",
+      "A0_2",
+      "A0_3",
+      "A0_4",
+      "A1_0",
+      "A1_1",
+      "A1_2",
+      "A1_3",
+      "A1_4",
+      "A2_0",
+      "A2_1",
+      "A2_2",
+      "A2_3",
+      "A2_4",
+      "r_0",
+      "r_1",
+      "r_2",
+      "r_3"
+    ]
+  },
+  "divisors": {
+    "D": "exceptional divisor",
+    "H": "pullback of O_X(1)",
+    "L": "H-D=f^*O_P1(1)",
+    "minus_K_Y": "2H-D=H+L",
+    "minus_K_Y_over_P1": "D=H-L"
+  },
+  "field": "K=C(P(V6))^PSL2(F11)",
+  "geometric_component_interface": {
+    "component_count_and_irreducibility": "UNRESOLVED",
+    "raw_locus": "13 cubic coefficient equations in P18_K",
+    "section_condition": "projection from Pi_012 has degree one, equivalently intersection length three with C_012, together with the graph/basepoint open",
+    "smallest_unresolved_twisted_piece": "the saturated common-zero-free d=4 open over K; a K-point is exactly an H-degree-4 section and hence headline-positive"
+  },
+  "increasing_degree_audit": [
+    {
+      "class": [
+        0,
+        -1
+      ],
+      "d": 0,
+      "verdict": "equivalent to a K-point of C_012 and hence already headline-positive"
+    },
+    {
+      "class": [
+        1,
+        0
+      ],
+      "d": 1,
+      "verdict": "excluded by the binding no-K-line theorem for the genuine Schur twist"
+    },
+    {
+      "class": [
+        2,
+        1
+      ],
+      "d": 2,
+      "verdict": "excluded conditional on no section, because ind(C_012)=3"
+    },
+    {
+      "class": [
+        3,
+        2
+      ],
+      "d": 3,
+      "verdict": "excluded conditional on no section, because ind(C_012)=3"
+    },
+    {
+      "class": [
+        4,
+        3
+      ],
+      "d": 4,
+      "verdict": "first unresolved nonexceptional section class"
+    }
+  ],
+  "inputs": {
+    "RESOLUTION.md": "3eac1aa9787da90cbee21b0e72e9ea0fe538921e74afd9cc20170d5227e64c67",
+    "goal_runs_after_35fa/M_SARKISOV/payload/mori_cox.json": "ec8e5009ede6d21dcfcfcf71e8edbdf79df5cd1ec268d9b106d741e799b509b0",
+    "goals_2026-08-01/Q_SCHUR_EXPLICIT_FRAME_CODEX_ROOT_20260801_8F3D/exact_frame.json": "53f2d5e6afa2c6afdf49f53723339ccf5755f919471d42f907d5542ddef87e45"
+  },
+  "schema": "m3-section-classes-and-degree4-gate-v1",
+  "section_curve_classes": {
+    "exceptional": {
+      "exists_iff": "C_012(K) is nonempty",
+      "pair_H_D": [
+        0,
+        -1
+      ],
+      "proof": "D=P_C(O_C(1)+O_C(1))=C_012 x P1 and any P1-to-C_012 morphism is constant"
+    },
+    "nonexceptional": {
+      "image": "a geometrically rational degree-d curve on X meeting C_012 in scheme length d-1",
+      "pair_H_D": [
+        "d",
+        "d-1"
+      ],
+      "parameter": "d=H.R >= 1",
+      "proof": "L.R=(H-D).R=1 and D.R is effective"
+    }
+  },
+  "strict_boundaries": {
+    "a_degree4_multisection_is_not_a_degree4_section": true,
+    "bounded_constant_coefficient_search_cannot_exclude_K_rational_functions": true,
+    "no_section_is_not_a_negative_headline_without_a_converse_bridge": true,
+    "split_good_fibre_lines_are_not_K_sections": true
+  }
+}

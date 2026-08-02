@@ -1,0 +1,836 @@
+{
+  "artifact": "pc3_p25_multiplier_maps.npz",
+  "artifact_sha256": "1821aa187af7573833bb132769e262af61858622657f7684116d104466451110",
+  "field": "K=Q(zeta_11), Phi_11(zeta_11)=0",
+  "fixed_source": {
+    "ambient_dimension": 59,
+    "basis": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_25_fixed_k1_basis.json",
+    "cramer_chart_rows": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cramer_formula": "For free columns F, N[F,:]=I_43 and N[P,:]=-J[R,P]^(-1)J[R,F].",
+    "cramer_pivot_columns": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      35
+    ],
+    "evaluation_points": [
+      [
+        208,
+        24,
+        104,
+        248,
+        103
+      ],
+      [
+        241,
+        85,
+        218,
+        117,
+        30
+      ],
+      [
+        178,
+        195,
+        97,
+        184,
+        19
+      ],
+      [
+        34,
+        78,
+        108,
+        197,
+        130
+      ],
+      [
+        158,
+        50,
+        125,
+        178,
+        224
+      ],
+      [
+        10,
+        68,
+        137,
+        55,
+        10
+      ],
+      [
+        183,
+        118,
+        31,
+        202,
+        225
+      ],
+      [
+        47,
+        165,
+        58,
+        60,
+        220
+      ],
+      [
+        207,
+        77,
+        210,
+        207,
+        230
+      ],
+      [
+        19,
+        50,
+        217,
+        23,
+        133
+      ],
+      [
+        123,
+        174,
+        131,
+        212,
+        8
+      ],
+      [
+        99,
+        1,
+        24,
+        32,
+        33
+      ],
+      [
+        160,
+        219,
+        164,
+        223,
+        81
+      ],
+      [
+        243,
+        148,
+        213,
+        8,
+        243
+      ],
+      [
+        218,
+        129,
+        245,
+        36,
+        93
+      ],
+      [
+        181,
+        247,
+        97,
+        69,
+        36
+      ],
+      [
+        207,
+        226,
+        188,
+        165,
+        157
+      ],
+      [
+        79,
+        204,
+        243,
+        21,
+        213
+      ],
+      [
+        124,
+        104,
+        91,
+        47,
+        88
+      ],
+      [
+        210,
+        248,
+        228,
+        128,
+        34
+      ],
+      [
+        211,
+        35,
+        84,
+        77,
+        124
+      ],
+      [
+        180,
+        228,
+        1,
+        33,
+        176
+      ],
+      [
+        217,
+        140,
+        210,
+        107,
+        174
+      ],
+      [
+        74,
+        43,
+        141,
+        175,
+        26
+      ],
+      [
+        210,
+        80,
+        86,
+        145,
+        61
+      ],
+      [
+        63,
+        34,
+        219,
+        102,
+        135
+      ],
+      [
+        19,
+        65,
+        30,
+        157,
+        163
+      ],
+      [
+        231,
+        164,
+        222,
+        125,
+        47
+      ],
+      [
+        199,
+        172,
+        41,
+        59,
+        26
+      ],
+      [
+        213,
+        37,
+        215,
+        189,
+        92
+      ],
+      [
+        35,
+        178,
+        142,
+        224,
+        134
+      ],
+      [
+        162,
+        142,
+        39,
+        86,
+        14
+      ],
+      [
+        102,
+        182,
+        242,
+        45,
+        244
+      ],
+      [
+        44,
+        59,
+        112,
+        94,
+        145
+      ],
+      [
+        125,
+        83,
+        75,
+        202,
+        182
+      ],
+      [
+        140,
+        162,
+        189,
+        30,
+        70
+      ],
+      [
+        39,
+        227,
+        155,
+        107,
+        188
+      ],
+      [
+        69,
+        178,
+        125,
+        132,
+        168
+      ],
+      [
+        236,
+        178,
+        83,
+        12,
+        2
+      ],
+      [
+        37,
+        12,
+        26,
+        79,
+        2
+      ],
+      [
+        170,
+        224,
+        97,
+        0,
+        206
+      ],
+      [
+        97,
+        96,
+        11,
+        95,
+        170
+      ],
+      [
+        72,
+        243,
+        28,
+        192,
+        34
+      ],
+      [
+        108,
+        64,
+        235,
+        31,
+        183
+      ],
+      [
+        32,
+        102,
+        79,
+        93,
+        151
+      ],
+      [
+        105,
+        229,
+        112,
+        148,
+        88
+      ],
+      [
+        237,
+        201,
+        15,
+        244,
+        211
+      ],
+      [
+        206,
+        239,
+        232,
+        62,
+        97
+      ],
+      [
+        17,
+        40,
+        77,
+        9,
+        85
+      ],
+      [
+        144,
+        248,
+        103,
+        179,
+        34
+      ],
+      [
+        213,
+        51,
+        223,
+        234,
+        153
+      ],
+      [
+        142,
+        47,
+        119,
+        15,
+        131
+      ],
+      [
+        46,
+        43,
+        48,
+        112,
+        209
+      ],
+      [
+        107,
+        56,
+        136,
+        86,
+        207
+      ],
+      [
+        55,
+        14,
+        249,
+        175,
+        79
+      ],
+      [
+        61,
+        88,
+        186,
+        194,
+        211
+      ],
+      [
+        11,
+        59,
+        6,
+        244,
+        42
+      ],
+      [
+        36,
+        28,
+        76,
+        33,
+        214
+      ],
+      [
+        11,
+        233,
+        208,
+        204,
+        12
+      ],
+      [
+        138,
+        95,
+        136,
+        47,
+        120
+      ],
+      [
+        220,
+        56,
+        229,
+        230,
+        178
+      ],
+      [
+        132,
+        169,
+        243,
+        220,
+        236
+      ],
+      [
+        199,
+        111,
+        166,
+        214,
+        249
+      ],
+      [
+        110,
+        119,
+        139,
+        203,
+        81
+      ],
+      [
+        143,
+        109,
+        188,
+        89,
+        193
+      ],
+      [
+        194,
+        64,
+        96,
+        133,
+        60
+      ],
+      [
+        38,
+        121,
+        240,
+        103,
+        102
+      ],
+      [
+        16,
+        49,
+        229,
+        26,
+        176
+      ],
+      [
+        142,
+        249,
+        71,
+        164,
+        117
+      ],
+      [
+        236,
+        186,
+        53,
+        110,
+        144
+      ],
+      [
+        27,
+        84,
+        191,
+        83,
+        213
+      ],
+      [
+        135,
+        189,
+        54,
+        219,
+        99
+      ],
+      [
+        156,
+        122,
+        99,
+        204,
+        163
+      ],
+      [
+        80,
+        0,
+        22,
+        121,
+        124
+      ],
+      [
+        158,
+        131,
+        131,
+        82,
+        3
+      ],
+      [
+        159,
+        136,
+        211,
+        48,
+        69
+      ],
+      [
+        211,
+        172,
+        141,
+        126,
+        119
+      ],
+      [
+        131,
+        88,
+        28,
+        32,
+        46
+      ],
+      [
+        112,
+        196,
+        102,
+        108,
+        100
+      ],
+      [
+        51,
+        186,
+        77,
+        196,
+        89
+      ]
+    ],
+    "first_involution": "rho((0,2,5,0)) = S = installed module.A",
+    "fixed_source_minor_rows": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      50,
+      51,
+      52,
+      53,
+      55,
+      56,
+      57,
+      58,
+      60,
+      61
+    ],
+    "joint_eigenspace_order": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        -1,
+        -1
+      ]
+    ],
+    "order2_map": "For directions (0,1,1),(1,0,1),(1,1,0), evaluate at z=(1,t,s*direction), t=0..23, s=0..25; transform output by the inverse joint eigenbasis; extract the s^2 coefficient and components 2,3,4 respectively. Stack to a 72x59 matrix J.",
+    "second_involution_group_index": 609,
+    "second_involution_psl_key": [
+      4,
+      8,
+      2,
+      7
+    ],
+    "strict_dimension": 43
+  },
+  "input_hashes": {
+    "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_25_fixed_k1_basis.json": "73e6132e19105d4489d70093edf310c766051b90583536ba3b3fa85e223722b1",
+    "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_31/m1_cross_basis_circuits.json": "8adc3f91db76f97a47d1df6d3f9cccee9e8eef62a825c2dff045ad96db6ff2f6",
+    "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_35/m1_cross_basis_circuits.json": "f28effc9a4c9e8923980b4726d264672141a030a61a23a416534b426a301775a",
+    "goals_2026-08-01/COV_M1_DEG31_35_WORK/dual_hironaka_generators.json": "b9aa1f8fe852e15b1b786b6a0577f06cf3ce200c5b092bcbd4c444678add874b",
+    "goals_2026-08-01/COV_M1_DEG31_35_WORK/invariant_generators.json": "1912db3e0c30c09d7485804adb03e9aeaed739076e2b87b8a2890007727c6421"
+  },
+  "prime_records": [
+    {
+      "commuting_involution_candidate_indices": [
+        108,
+        109,
+        188,
+        189,
+        608,
+        609
+      ],
+      "degrees": {
+        "31": {
+          "all_400_evaluation_residual_nonzeros": 0,
+          "existing_embedding_crosscheck": null,
+          "map_rank": 43,
+          "map_sha256": "508f9a02f26c85cce4955c96318bf246d6c876deac2c2750979835fefc9ce707",
+          "map_shape": [
+            198,
+            43
+          ],
+          "multiplier": "f6",
+          "multiplier_values_sha256": "99ed5f84e65d62f974dde43beb0ddbf8348d91448782eda255dbd8f483d938ae",
+          "target_dimension": 198,
+          "target_minor_rows_sha256": "69149606b03ad4076f84d2600c113b5af327f40cba5b8484577f3b15a2f9dfc9"
+        },
+        "35": {
+          "all_400_evaluation_residual_nonzeros": 0,
+          "existing_embedding_crosscheck": null,
+          "map_rank": 43,
+          "map_sha256": "a29a82d12cb36e041fda3c3050b86cff079a95fd4710854a19ff74c180e348c6",
+          "map_shape": [
+            361,
+            43
+          ],
+          "multiplier": "f10",
+          "multiplier_values_sha256": "e958ab588539ac6085484534098e746c94cd51e3175987439bef367059e3de08",
+          "target_dimension": 361,
+          "target_minor_rows_sha256": "20a8de9318631bc9a23d454e5379ff3b1a6600947965a477f0ffe49fda3316a8"
+        }
+      },
+      "order2_chart_rank": 16,
+      "order2_map_sha256": "dc054cf123ea23d785fcbf384de5b38ac4ea471b58775c380705930de2337b5f",
+      "order2_rank": 16,
+      "prime": 419,
+      "source_minor_rank": 59,
+      "source_rank": 59,
+      "strict_evaluation_rank": 43,
+      "strict_inclusion_rank": 43,
+      "strict_inclusion_sha256": "67a86e07c7b7ab151f9fba0e6a17b60c4d4aaaf69a1315d3b4d24a76108e4fa5",
+      "strict_order2_residual_nonzeros": 0,
+      "zeta11": 13
+    },
+    {
+      "commuting_involution_candidate_indices": [
+        108,
+        109,
+        188,
+        189,
+        608,
+        609
+      ],
+      "degrees": {
+        "31": {
+          "all_400_evaluation_residual_nonzeros": 0,
+          "existing_embedding_crosscheck": {
+            "identity": "old_59_column_embedding * fixed_59x43_inclusion = new_map",
+            "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_31/p25_multiplier_embedding_p463.npz",
+            "sha256": "5a2bdfe722ebc716c1698390600952fb99d0bdad02bf44e33c883365984470a5"
+          },
+          "map_rank": 43,
+          "map_sha256": "dfe1896d6f05b89c202e76ff5ae558c43bc66e8a0c433f24d71f96205dce62b9",
+          "map_shape": [
+            198,
+            43
+          ],
+          "multiplier": "f6",
+          "multiplier_values_sha256": "83e4e2fba36a9ecc7e9729f32bce4bbd05d3ea52c2ca9d345510220533786374",
+          "target_dimension": 198,
+          "target_minor_rows_sha256": "69149606b03ad4076f84d2600c113b5af327f40cba5b8484577f3b15a2f9dfc9"
+        },
+        "35": {
+          "all_400_evaluation_residual_nonzeros": 0,
+          "existing_embedding_crosscheck": {
+            "identity": "old_59_column_embedding * fixed_59x43_inclusion = new_map",
+            "path": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_35/p25_multiplier_embedding_p463.npz",
+            "sha256": "6863f608d21811b324a681ceb9b8d72824a8331c6a8f1904820232445c7289ae"
+          },
+          "map_rank": 43,
+          "map_sha256": "ede24a817cb8c2d98144ecc2655ba66ce694896ad56d28a6e58721c10d515999",
+          "map_shape": [
+            361,
+            43
+          ],
+          "multiplier": "f10",
+          "multiplier_values_sha256": "a3fe8602fad5fb721d66261a8e918d11950b91e9e001c18ee9a4694e1021303e",
+          "target_dimension": 361,
+          "target_minor_rows_sha256": "20a8de9318631bc9a23d454e5379ff3b1a6600947965a477f0ffe49fda3316a8"
+        }
+      },
+      "order2_chart_rank": 16,
+      "order2_map_sha256": "a7be8ff9455dbb91c37435895d3f1e5b183fd077d8402615a8dea459388c44a2",
+      "order2_rank": 16,
+      "prime": 463,
+      "source_minor_rank": 59,
+      "source_rank": 59,
+      "strict_evaluation_rank": 43,
+      "strict_inclusion_rank": 43,
+      "strict_inclusion_sha256": "f8f6e0bc08b6fee30323f91dd0e3895e45da8dad534ab7301ba39de08164e09b",
+      "strict_order2_residual_nonzeros": 0,
+      "zeta11": 15
+    }
+  ],
+  "schema": "pc3-fixed-p25-strict-multiplier-circuits-v1",
+  "target_maps": {
+    "31": {
+      "formula": "D31[R31]^(-1) * (f6 * L25 * N)[R31]",
+      "multiplier": "the installed integral invariant f6",
+      "target_basis": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_31/m1_cross_basis_circuits.json",
+      "target_dimension": 198
+    },
+    "35": {
+      "formula": "D35[R35]^(-1) * (f10 * L25 * N)[R35]",
+      "multiplier": "the installed integral invariant f10",
+      "target_basis": "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_35/m1_cross_basis_circuits.json",
+      "target_dimension": 361
+    }
+  },
+  "theorem_scope": {
+    "exact_circuit": "The input Reynolds/cross circuits, frozen PSL group elements, Cramer minors, and target coordinate formulas define maps over Q(zeta_11). A nonzero good-fibre Cramer minor proves each denominator circuit is nonzero in characteristic zero; multiplication by nonzero f6/f10 has rank 43 on the exact 43-space.",
+    "materialized": "Exact finite-field reductions of the fixed circuits at p=419 and p=463, including 59x43 inclusions, 198x43/361x43 multiplier maps, ranks, and all-400-row evaluation identities.",
+    "open": "No entrywise Q(zeta_11) matrices are materialized here. The two modular arrays are not a rational reconstruction, and this packet does not decide the authoritative nonlinear PC.2 landing scheme or its images."
+  }
+}

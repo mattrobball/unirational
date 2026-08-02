@@ -1,0 +1,45 @@
+{
+  "all_stages_faithful_W3": {
+    "A1_dimension": 14134,
+    "A2_dimension": 14894461,
+    "A2_terms": {
+      "S2V_tensor_Sym2B2": 162393,
+      "S3V_tensor_B1_tensor_B2": 1151514,
+      "S4V_tensor_B2": 1919190,
+      "S4V_tensor_Sym2B1": 1919190,
+      "S5V_tensor_B1": 4496388,
+      "S6V_b0_squared": 5245786
+    },
+    "K_dimension": 13444,
+    "Sym2_K_dimension": 90377290,
+    "conclusion": "The simultaneous restricted outer minors cannot span Sym2(K^*); at least 5379706 quadratic classes survive.",
+    "degree_two_quotient_lower_bound": 5379706,
+    "multiplication_rank_upper_bound": 9514755,
+    "raw_outer_minor_count": 297692010,
+    "restricted_minor_rank_upper_bound": 84997584,
+    "seed_times_A1_source": 9752460
+  },
+  "prime": 89,
+  "proof_note": "For the faithful rank-one coordinate ring A, imposing the 690 independent seed linear forms in degree one uses the multiplication map L tensor A1 -> A2.  The injective alternating map Lambda2(L) -> L tensor A1 lies in its kernel because A is commutative and p is odd.",
+  "relation_sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+  "scope_guard": "Failure of quadratic full span is not a point and does not disprove emptiness.  It only retires this proposed degree-two certificate.",
+  "seed_rank": 690,
+  "stageA_plus_B_faithful_W": {
+    "A1_dimension": 4995,
+    "A2_dimension": 3233097,
+    "A2_terms": {
+      "S2V_tensor_Sym2B2": 162393,
+      "S3V_tensor_B1_tensor_B2": 1151514,
+      "S4V_tensor_Sym2B1": 1919190
+    },
+    "K_dimension": 4305,
+    "Sym2_K_dimension": 9268665,
+    "conclusion": "The restricted outer 2x2 minors cannot span Sym2(K^*); at least 24252 quadratic classes survive.",
+    "degree_two_quotient_lower_bound": 24252,
+    "multiplication_rank_upper_bound": 3208845,
+    "restricted_minor_rank_upper_bound": 9244413,
+    "seed_times_A1_source": 3446550
+  },
+  "status": "PASS_QUADRATIC_FULL_SPAN_REFUTED_BY_EXACT_DIMENSIONS",
+  "unavoidable_degree_two_Koszul_kernel": 237705
+}

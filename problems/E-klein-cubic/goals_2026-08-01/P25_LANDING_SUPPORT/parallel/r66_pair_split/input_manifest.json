@@ -1,0 +1,25 @@
+{
+  "audited_baseline": "parallel/determinantal_cover/r66_stageB_qflag00_bflag0.ms",
+  "byte_for_byte_equal_to_audited_baseline": true,
+  "chart": {
+    "b1_0": 1,
+    "q0": 1
+  },
+  "equations": 66,
+  "input": "r66_stageB_q0_1_b1_0_1_m100.ms",
+  "input_bytes": 41537116,
+  "input_sha256": "9fc5d17aeb9c2bf1341c0871ffd1e0fce07682701a1490a12b2f64ed3378f34b",
+  "prime": 89,
+  "printed_terms": 2363052,
+  "r66_p3_shape": [
+    66,
+    6,
+    9139
+  ],
+  "r66_packet": "parallel/global_compatibility/support_augmented_r66_stageBC.npz",
+  "r66_packet_sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+  "scope_guard": "This is one affine chart only. A completed exact unit ideal proves only this chart empty; every other CAS result is a nonverdict.",
+  "specialization": "Stage B: retain P3 only; q0=1; b1_0=1; no zero flags",
+  "status": "PASS_IMMUTABLE_R66_CHART_REGENERATED",
+  "variables": 41
+}

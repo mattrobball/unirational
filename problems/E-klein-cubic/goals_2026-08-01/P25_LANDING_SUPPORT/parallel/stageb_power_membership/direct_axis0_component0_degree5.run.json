@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/opt/homebrew/bin/Singular",
+    "-q",
+    "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_power_membership/direct_axis0_component0_degree5.sing"
+  ],
+  "complete": false,
+  "elapsed_seconds": 300.066322,
+  "input": "direct_axis0_component0_degree5.sing",
+  "input_bytes": 29830987,
+  "input_sha256": "2394fd6136f4f8c3c3266513e8db516019fa38f257952115f4a04271ac67b65c",
+  "log": "direct_axis0_component0_degree5.log",
+  "log_bytes": 5436,
+  "log_sha256": "c0ec66a7a03af58bbbc6ecabe80194f3ae08b14c55b62cbd98e7b71e3502ecd8",
+  "peak_rss_bytes_polled": 1281376256,
+  "returncode": -9,
+  "rss_limit_bytes": 8589934592,
+  "stop_reason": "timeout",
+  "timeout_seconds": 300.0
+}

@@ -1,0 +1,359 @@
+{
+  "K1_result": {
+    "degree_35": "For each ordered pure composition family, restriction to one full degree-35 triangular grid on an involution plus-plane has full source-linearization rank at p=419 and p=463. Thus neither projective graph meets the literal K1_35 space in characteristic zero.",
+    "scope": "This excludes only the two pure lower-degree composition graphs from literal K1_35. It is not a landing-ideal saturation or a statement about the complement of the composition union."
+  },
+  "incidence_intersections": {
+    "D_after_M7_with_literal_K1_35": "empty",
+    "M7_after_D_with_literal_K1_35": "empty",
+    "either_graph_with_corrected_exhaustive_common_factor_locus_in_full_M35": "not computed",
+    "either_graph_with_literal_K1_35_and_any_common_factor_locus": "empty, formally because each graph already has empty intersection with literal K1_35",
+    "factor_boundary": "The corrected common-factor incidence must allow h*H in literal K1 even when H is not in a lower literal K1 space, because the invariant factor h may itself vanish on every involution plane. The smaller union I_e*K1_(35-e) is not used here as the exhaustive factor locus.",
+    "mutual_intersection_of_the_two_full_M35_graphs": "not computed"
+  },
+  "certificate": {
+    "arrays": {
+      "fixed_evaluation_points": [
+        140,
+        5
+      ],
+      "k1_obstruction_D_after_M7_p419": [
+        276,
+        56
+      ],
+      "k1_obstruction_D_after_M7_p463": [
+        276,
+        56
+      ],
+      "k1_obstruction_M7_after_D_p419": [
+        276,
+        4
+      ],
+      "k1_obstruction_M7_after_D_p463": [
+        276,
+        4
+      ],
+      "k1_quotient_p419": [
+        276,
+        637
+      ],
+      "k1_quotient_p463": [
+        276,
+        637
+      ],
+      "k1_target_frame_p419": [
+        637,
+        361
+      ],
+      "k1_target_frame_p463": [
+        637,
+        361
+      ],
+      "plus_basis_p419": [
+        3,
+        5
+      ],
+      "plus_basis_p463": [
+        3,
+        5
+      ],
+      "plus_plane_restriction_D_after_M7_p419": [
+        3330,
+        56
+      ],
+      "plus_plane_restriction_D_after_M7_p463": [
+        3330,
+        56
+      ],
+      "plus_plane_restriction_M7_after_D_p419": [
+        3330,
+        4
+      ],
+      "plus_plane_restriction_M7_after_D_p463": [
+        3330,
+        4
+      ],
+      "target_frame_rows": [
+        637
+      ],
+      "target_kernel_D_after_M7_p419": [
+        56,
+        0
+      ],
+      "target_kernel_D_after_M7_p463": [
+        56,
+        0
+      ],
+      "target_kernel_M7_after_D_p419": [
+        4,
+        0
+      ],
+      "target_kernel_M7_after_D_p463": [
+        4,
+        0
+      ],
+      "target_map_D_after_M7_p419": [
+        637,
+        56
+      ],
+      "target_map_D_after_M7_p463": [
+        637,
+        56
+      ],
+      "target_map_M7_after_D_p419": [
+        637,
+        4
+      ],
+      "target_map_M7_after_D_p463": [
+        637,
+        4
+      ],
+      "veronese_degree5_exponents": [
+        56,
+        4
+      ],
+      "veronese_quadratic_circuits": [
+        1310,
+        4
+      ]
+    },
+    "file": "pc3_composition_graphs.npz",
+    "sha256": "1edee8d2f920c9c12fa7982e7a0c22943bdc91823735a26a09b155fe2f4b17b3"
+  },
+  "degree_arithmetic": {
+    "31": {
+      "conclusion": "No pure lower-degree two-fold composition has degree 31.",
+      "factorization": "31 is prime",
+      "nontrivial_pure_composition_components": []
+    },
+    "35": {
+      "complete_union": true,
+      "factorization": "35=5*7=7*5",
+      "nontrivial_pure_composition_components": [
+        "D_after_M7",
+        "M7_after_D"
+      ]
+    },
+    "primitive_quartic": "Degree 4 divides neither 31 nor 35. Any old degree-31/35 direction containing C therefore also has a positive invariant multiplier and belongs to the common scalar-factor union, not the pure composition union."
+  },
+  "field": "Q(zeta_11), with exact integral lower-map circuits and good reductions at 419 and 463",
+  "global_status": "PC-UNDECIDED",
+  "inputs": {
+    "certificates/exact_covariants_check.py": "89847a3203bf7d842b00a551a29377bc9d1cdd36dca9cb5d192c54de0abd2a6e",
+    "certificates/septic_landing_check.py": "3fe1bcdad8340102bf4a8c241411001ab6c769b0b821bf8ca8ee04c5ecd6c98b",
+    "goals_2026-08-01/COV_M1_DEG31_35_WORK/canonical_bases.json": "ca9555a34fa4221851fb77df5077f568a038e1b4d471934efe64e05a2ffec1cf",
+    "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_35/full_reynolds_circuits.json": "a1d3cf22731d4bce9c37b4c2743df1e8f5735bf049e731067e11305861183ba2",
+    "goals_2026-08-01/COV_M1_DEG31_35_WORK/degree_35/m1_cross_basis_circuits.json": "f28effc9a4c9e8923980b4726d264672141a030a61a23a416534b426a301775a",
+    "goals_2026-08-01/COV_M1_DEG31_35_WORK/dual_hironaka_generators.json": "b9aa1f8fe852e15b1b786b6a0577f06cf3ce200c5b092bcbd4c444678add874b",
+    "goals_2026-08-01/COV_STRUCTURED_SEARCH/degree_31/ansatz.json": "8b918211822eac05df7dec931e5ec5a4b3283918000825b2297fe08a3337b25e",
+    "goals_2026-08-01/COV_STRUCTURED_SEARCH/degree_35/ansatz.json": "f161f2a557f3dd36bd3db4070a71a48fcc10e5f493a9e1de048997cbfa9c7088"
+  },
+  "lower_self_covariant_spaces": {
+    "circuit_source": "certificates/exact_covariants_check.py",
+    "degree_1": {
+      "basis": [
+        "x"
+      ],
+      "dimension": 1,
+      "parameter_space": "P^0"
+    },
+    "degree_2": {
+      "basis": [],
+      "dimension": 0,
+      "parameter_space": "empty"
+    },
+    "degree_3": {
+      "basis": [],
+      "dimension": 0,
+      "parameter_space": "empty"
+    },
+    "degree_4": {
+      "basis": [
+        "F*x",
+        "C=grad(F_dual)(grad(F))"
+      ],
+      "dimension": 2,
+      "parameter_space": "P^1",
+      "primitive_quotient": "M4/<F*x> is one-dimensional, represented by C"
+    },
+    "degree_5": {
+      "basis": [
+        "D"
+      ],
+      "dimension": 1,
+      "parameter_space": "P^0"
+    },
+    "degree_6": {
+      "basis": [
+        "H*x",
+        "E"
+      ],
+      "dimension": 2,
+      "parameter_space": "P^1"
+    },
+    "degree_7": {
+      "basis": [
+        "K",
+        "F*C",
+        "F^2*x",
+        "J*x"
+      ],
+      "dimension": 4,
+      "parameter_space": "P^3"
+    },
+    "septic_basis_source": "certificates/septic_landing_check.py"
+  },
+  "old_named_ansatz_classification": {
+    "degree_31": {
+      "classification": "Positive-invariant-scaled directions belong to the common scalar-factor union. They are not components of the pure composition locus.",
+      "old_named_composition_directions": 8,
+      "positive_invariant_scaled_named_directions": 8,
+      "pure_named_directions": []
+    },
+    "degree_35": {
+      "classification": "Positive-invariant-scaled directions belong to the common scalar-factor union. They are not components of the pure composition locus.",
+      "old_named_composition_directions": 12,
+      "positive_invariant_scaled_named_directions": 10,
+      "pure_named_directions": [
+        [
+          "D",
+          "K"
+        ],
+        [
+          "K",
+          "D"
+        ]
+      ]
+    },
+    "warning": "The old ansatz files tested fixed directions and linear spans; they are not definitions of the nonlinear composition graphs constructed here."
+  },
+  "prime_records": {
+    "419": {
+      "families": {
+        "D_after_M7": {
+          "K1_obstruction_rank": 56,
+          "K1_obstruction_sha256": "dc5c36a7d0b646aa754ecd460ffae912f8309e61eea0f5feaa4430785c686a27",
+          "K1_projective_intersection_empty": true,
+          "graph_samples_checked": 3,
+          "plus_plane_restriction_rank": 56,
+          "plus_plane_restriction_sha256": "d7e9423905218f94db28646d8ed0ac4c987e6c0f8f264a5fd33ebc3cc0ad943e",
+          "source_linearization_columns": 56,
+          "target_map_kernel_dimension": 0,
+          "target_map_rank": 56,
+          "target_map_sha256": "1af77f1a32b6682770bfa40eaa870849595eb089443fd9d86a890cc18de993fb"
+        },
+        "M7_after_D": {
+          "K1_obstruction_rank": 4,
+          "K1_obstruction_sha256": "52ba58115d599360069c28146a60bec3e92e320e31c11cc36cf717fdf63deeca",
+          "K1_projective_intersection_empty": true,
+          "graph_samples_checked": 3,
+          "plus_plane_restriction_rank": 4,
+          "plus_plane_restriction_sha256": "a33a0e0836e1899f5d2d7edcd7a309c2b1005f3dba3120f79361cdc6bef36f3c",
+          "source_linearization_columns": 4,
+          "target_map_kernel_dimension": 0,
+          "target_map_rank": 4,
+          "target_map_sha256": "18b81766d5f6a86aed93c89f6253b03319417aa1e374c412dcfb68e98b53cc28"
+        }
+      },
+      "installed_lower_basis_ranks": {
+        "1": 1,
+        "4": 2,
+        "5": 1,
+        "6": 2,
+        "7": 4
+      },
+      "prime": 419,
+      "self_covariant_dimensions_d0_through_d7": [
+        0,
+        1,
+        0,
+        0,
+        2,
+        1,
+        2,
+        4
+      ],
+      "target_K1_frame_rank": 361,
+      "target_K1_quotient_rank": 276,
+      "target_full_frame_rank": 637,
+      "zeta11": 13
+    },
+    "463": {
+      "families": {
+        "D_after_M7": {
+          "K1_obstruction_rank": 56,
+          "K1_obstruction_sha256": "aff103946f2a2e7e190380cd334ae9eb868b3e4c906f165524594c0eae8392f7",
+          "K1_projective_intersection_empty": true,
+          "graph_samples_checked": 3,
+          "plus_plane_restriction_rank": 56,
+          "plus_plane_restriction_sha256": "00f29c1865e4e9977082a2acb3920de4afcb6c23c2bca005543da170c4e8c8e7",
+          "source_linearization_columns": 56,
+          "target_map_kernel_dimension": 0,
+          "target_map_rank": 56,
+          "target_map_sha256": "aeaa750a69d4f962aa2b64c2f2332a90a1c4807f005a9ff7fad613073c1e0b71"
+        },
+        "M7_after_D": {
+          "K1_obstruction_rank": 4,
+          "K1_obstruction_sha256": "4a6dbb6a32f4c0483676dc6029090e7837d879894518bab5b32bf4aed2139fa7",
+          "K1_projective_intersection_empty": true,
+          "graph_samples_checked": 3,
+          "plus_plane_restriction_rank": 4,
+          "plus_plane_restriction_sha256": "ac18e0af329781d2430e55e63c913be79f2d44b565cb2edb49627eccf22444ec",
+          "source_linearization_columns": 4,
+          "target_map_kernel_dimension": 0,
+          "target_map_rank": 4,
+          "target_map_sha256": "cb64c46d42d84ca8486efc0fa96bd4d376d7e20e0d25c6609f11009661500607"
+        }
+      },
+      "installed_lower_basis_ranks": {
+        "1": 1,
+        "4": 2,
+        "5": 1,
+        "6": 2,
+        "7": 4
+      },
+      "prime": 463,
+      "self_covariant_dimensions_d0_through_d7": [
+        0,
+        1,
+        0,
+        0,
+        2,
+        1,
+        2,
+        4
+      ],
+      "target_K1_frame_rank": 361,
+      "target_K1_quotient_rank": 276,
+      "target_full_frame_rank": 637,
+      "zeta11": 15
+    }
+  },
+  "projective_graphs": {
+    "D_after_M7": {
+      "K1_intersection": "Add Qy=0, equivalently the exact plus-plane restriction matrix times z equals zero.",
+      "graph_equations": "Veronese quadrics in z and y wedge (Tz)=0",
+      "kernel_guard": "Saturate by the entries of Tz if ker(T) meets the source. Here T has zero linear kernel at both good primes, so there is no projective base locus.",
+      "map": "[z] -> [T_D_after_M7 z]",
+      "source": "P(M7)=P^3",
+      "source_embedding": "fifth Veronese nu_5:P^3->P^55",
+      "target": "P(M35)=P^636 in the fixed 637-coordinate evaluation frame",
+      "veronese_coordinates": 56,
+      "veronese_quadratic_circuits": 1310
+    },
+    "M7_after_D": {
+      "K1_intersection": "Add Qy=0, equivalently the exact plus-plane restriction matrix times a equals zero.",
+      "graph_equations": "y wedge (Ta)=0",
+      "kernel_guard": "T has zero kernel at both good primes, so this is a projective linear embedding.",
+      "map": "[a] -> [T_M7_after_D a]",
+      "source": "P(M7)=P^3",
+      "target": "P(M35)=P^636 in the fixed 637-coordinate evaluation frame"
+    }
+  },
+  "schema": "pc3-pure-composition-projective-graphs-v1",
+  "status": "PC3-COMPOSITION-GRAPHS-SCOPED-PASS",
+  "theorem_boundary": {
+    "does_not_prove": "A common-factor incidence result, equality with any linear span, a named-ansatz union theorem, saturation away from composition/factor loci, a degree-31/35 landing survivor or emptiness theorem, or the headline.",
+    "proves": "The exact lower self-map parameter spaces through degree seven; the complete pure-composition census in degrees 31 and 35; two kernel-aware degree-35 projective graph constructions; and emptiness of their intersections with literal K1_35."
+  }
+}

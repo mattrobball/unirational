@@ -1,0 +1,98 @@
+{
+  "format": "c5-projective-mixed-reduction-p23-v1",
+  "prime": 23,
+  "zeta": 2,
+  "point": [
+    17,
+    22,
+    21,
+    8,
+    17
+  ],
+  "tau": 8,
+  "hilbert90_degrees": [
+    1,
+    4,
+    5,
+    6,
+    7
+  ],
+  "selected_pair_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "selected_pairs": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "selected_degrees": [
+    2,
+    5,
+    6,
+    7,
+    8,
+    8,
+    9,
+    10,
+    11,
+    10
+  ],
+  "target_frame_determinant": 2,
+  "relation_test_frame_determinant": 21,
+  "pluecker_tensor_shape": [
+    15,
+    55
+  ],
+  "pluecker_tensor_rank_at_point": 15,
+  "scalar_translate_checked": 7,
+  "group_translates_checked": 2,
+  "commutator_normal_closure_order": 660,
+  "exact_scope": "the nonzero good-fibre minors prove that the polarized degree-two covariant applied to the exact x,C,D,E,K frame gives a 10-vector K_proj basis after tau-normalization; the 15-pair full quadratic frame gives invariant scalar Pluecker equations",
+  "not_proved": "a K_proj solution of the resulting 15 quadrics"
+}

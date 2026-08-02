@@ -1,0 +1,52 @@
+{
+  "schema": "full-schur-degree9-projective-emptiness-v1",
+  "prime": 23,
+  "quadratic_extension": "F_23[u]/(u^2-5)",
+  "coefficient_dimension": 19,
+  "quartic_coefficient_monomials": 7315,
+  "degree36_invariant_dimension": 1157,
+  "theorem": "no nonzero degree-nine polynomial self-covariant over Q(zeta_11) lands identically on the Palatini quartic",
+  "special_fibre_geometry": "the projective landing locus in P^18 over algebraic closure of F_23 is empty",
+  "local_source_sha256": {
+    "pencil_mod23.py": "981a1a6d8f6e8862dba7f02c1e241ee19132edd9d0c4b97e626e02c7b732b6b2",
+    "degree9_full_landing.py": "7512c7255a5bb0b45ea7e98a4365074431a4a8a28589aa3149cc525ae5f873a9",
+    "eigenline_rank_one_probe.py": "f24957dc6399cf0bc11d97b236b730db1ee8baa708e224be15ebd8f9c5dff182",
+    "degree9_binary_factor_sat.py": "630411ea9461f90bc48e682a04f29ccf73f1c6265cf57edc22852b3e6a752198",
+    "degree9_binary_factor_sat_exhaustive.py": "8534f5b85315047fc7fe26af42dc705915fd2b34fe9c2957cc624578feb05703",
+    "degree9_fast_linear_sat.py": "1dd5d917f32fc2479bcfab2792f6000a1f91b54d70457b52fca07e37f9660c74"
+  },
+  "external_source_sha256": {
+    "tmp/pfaffian_representation_alignment/core.py": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4",
+    "tmp/fano14_twist/fano_covariant_scan.py": "b3c93a41ed1f8b5106d93717dbad058b6c60af100bcee8138925485dac6f107e",
+    "tmp/projective_source/character_scan.py": "7d2e94968226bd79d4a365e9636807590f1f3ac05ec707d58ae3f09a573f8256",
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/full_schur_palatinian/probe_self_covariants_palatinian.py": "cff1d000ce543ac00c47a2791d8a2b161ad52608bf96a5a8e4eeb8f208ce8847",
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/full_schur_palatinian/schur_self_molien.py": "ea6b398022b374bae3810d5985b211202563191a754dcff3426d5611ec598701",
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/full_schur_palatinian/verify_palatinian_equation.py": "c06dc7f8115cf0aaf39298a1ac49726def8a8daf58b47fd7bef0e61c4669e0f0",
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/full_schur_palatinian/verify_char0_palatinian_lift.py": "cccbce2ef39f5ce3f0133f9bd8950bf63dfbf86ed4075d89dc02e635cf538ab7"
+  },
+  "artifacts": {
+    "degree9_rank_one_eigenlines_f529.json": {
+      "sha256": "1d913d8db1730e79960391094caa780d5dea76b3256fc44e17cc2b0d1dc67e3e",
+      "record_count": 108
+    },
+    "degree9_binary_clauses_f529.json": {
+      "sha256": "7dbd717a242b4f1b76dcfe7e9653a24905938199542937e853b4749239238294",
+      "mandatory_rank": 8,
+      "clause_count": 395,
+      "exhausted_projective_lines": 3180
+    },
+    "degree9_fast_linear_sat_f529.json": {
+      "semantic_sha256_ignoring_elapsed_seconds": "59bc303f3a7201ca89c16b04ced64eed906bbbe891477de2359ef7715e5575bf",
+      "sat_status": "closed",
+      "nodes": 13612,
+      "memoized_closed_states": 5444,
+      "adaptive_state_count": 5
+    }
+  },
+  "strict_scope": [
+    "constant-coefficient degree-nine polynomial self-covariants only",
+    "not arbitrary rational-function coefficients in the seven-frame Palatini equation",
+    "not a K_Schur pointlessness theorem",
+    "not either binary Q headline"
+  ]
+}

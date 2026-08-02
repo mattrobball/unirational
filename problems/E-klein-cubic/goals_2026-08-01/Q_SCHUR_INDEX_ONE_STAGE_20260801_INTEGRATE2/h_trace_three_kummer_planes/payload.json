@@ -1,0 +1,93 @@
+{
+  "theorem_id": "H_TRACE_THREE_KUMMER_TEN_GENERIC_SMOOTH",
+  "marker": "H_TRACE_THREE_KUMMER_TEN_GENERIC_SMOOTH_OK",
+  "field": "K=C(U1,U2,U3,U4), E=K(alpha), alpha^5=U1, sigma(alpha)=epsilon*alpha",
+  "normalization": "H=R2*R3^2 and Phi(R2*b)=Tr(H*b^2*sigma(b))",
+  "formula": {
+    "trace_symbol": "T_m=Tr(H*alpha^m), T_(m+5)=U1*T_m",
+    "diagonal": "coeff(X_p^3)=epsilon^p*T_(3p)",
+    "two_one": "coeff(X_p^2*X_q)=(2*epsilon^p+epsilon^q)*T_(2p+q)",
+    "one_two": "coeff(X_p*X_q^2)=(epsilon^p+2*epsilon^q)*T_(p+2q)",
+    "mixed": "coeff(X_p*X_q*X_r)=2*(epsilon^p+epsilon^q+epsilon^r)*T_(p+q+r)"
+  },
+  "triples": [
+    [0, 1, 2],
+    [0, 1, 3],
+    [0, 1, 4],
+    [0, 2, 3],
+    [0, 2, 4],
+    [0, 3, 4],
+    [1, 2, 3],
+    [1, 2, 4],
+    [1, 3, 4],
+    [2, 3, 4]
+  ],
+  "smooth_specialization": {
+    "U": [2, 3, 5, 7],
+    "coefficient_field": "Q(epsilon), epsilon^4+epsilon^3+epsilon^2+epsilon+1=0",
+    "certificate": "For each triple, the three dehomogenized gradient ideals on X=1, Y=1, Z=1 are the unit ideal."
+  },
+  "trace_coefficients": {
+    "0": [
+      {"u": [0, 0, 0, 0], "c": ["5", "0", "0", "0"]},
+      {"u": [1, 0, 0, 1], "c": ["0", "0", "-10", "-10"]},
+      {"u": [1, 0, 1, 0], "c": ["-10", "-10", "-5", "-10"]},
+      {"u": [1, 1, 1, 0], "c": ["10", "0", "10", "10"]},
+      {"u": [1, 2, 0, 0], "c": ["-5", "-5", "-5", "5"]},
+      {"u": [2, 0, 2, 1], "c": ["0", "5", "10", "0"]},
+      {"u": [2, 1, 0, 2], "c": ["0", "10", "0", "5"]}
+    ],
+    "1": [
+      {"u": [1, 0, 0, 1], "c": ["0", "0", "10", "5"]},
+      {"u": [1, 0, 1, 0], "c": ["-10", "0", "0", "-10"]},
+      {"u": [1, 1, 0, 0], "c": ["5", "10", "0", "0"]},
+      {"u": [1, 2, 0, 0], "c": ["10", "0", "5", "0"]},
+      {"u": [2, 0, 0, 2], "c": ["0", "5", "0", "10"]},
+      {"u": [2, 0, 3, 0], "c": ["-5", "-5", "-5", "-5"]},
+      {"u": [2, 1, 1, 1], "c": ["0", "-10", "-10", "0"]}
+    ],
+    "2": [
+      {"u": [1, 0, 0, 0], "c": ["0", "0", "0", "5"]},
+      {"u": [1, 0, 1, 0], "c": ["-10", "-5", "-10", "-10"]},
+      {"u": [1, 1, 0, 0], "c": ["-10", "-10", "0", "0"]},
+      {"u": [2, 0, 0, 2], "c": ["5", "-5", "-5", "-5"]},
+      {"u": [2, 0, 1, 1], "c": ["10", "10", "0", "10"]},
+      {"u": [2, 1, 2, 0], "c": ["0", "10", "5", "0"]},
+      {"u": [2, 2, 0, 1], "c": ["5", "0", "10", "0"]}
+    ],
+    "3": [
+      {"u": [1, 0, 0, 0], "c": ["10", "5", "0", "0"]},
+      {"u": [1, 1, 0, 0], "c": ["-5", "5", "-5", "-5"]},
+      {"u": [2, 0, 1, 1], "c": ["0", "10", "10", "10"]},
+      {"u": [2, 0, 2, 0], "c": ["5", "0", "0", "10"]},
+      {"u": [2, 1, 0, 1], "c": ["0", "-10", "0", "-10"]},
+      {"u": [2, 2, 1, 0], "c": ["-10", "-10", "-10", "-5"]},
+      {"u": [3, 0, 0, 3], "c": ["0", "0", "5", "0"]}
+    ],
+    "4": [
+      {"u": [1, 0, 0, 0], "c": ["0", "0", "5", "10"]},
+      {"u": [2, 0, 0, 1], "c": ["-5", "-5", "5", "-5"]},
+      {"u": [2, 0, 2, 0], "c": ["10", "0", "0", "5"]},
+      {"u": [2, 1, 0, 1], "c": ["-10", "0", "-10", "0"]},
+      {"u": [2, 1, 1, 0], "c": ["10", "10", "10", "0"]},
+      {"u": [2, 3, 0, 0], "c": ["0", "5", "0", "0"]},
+      {"u": [3, 0, 1, 2], "c": ["-5", "-10", "-10", "-10"]}
+    ]
+  },
+  "source_hashes": {
+    "field_model.json": "80fdc908633595d6bb3c292d0027aa66295a850b9b6a12cc473f90e3e373ba1e",
+    "FIELD_MODEL.md": "a294d808585cb550cfe60c08559f4a8bc027977bf6292d83833a6efb2e22e745",
+    "NORM_MODEL.md": "566448f33a3157c0e3ff2a5976b7af27e65440efa408442dd262ff5f933af5fd",
+    "TWIST_MODEL.md": "f4c780fefe0dbd32a1f74fe6cad8fc2493b1210ca51e83a552624f05594f9b48"
+  },
+  "scope": {
+    "proved": "All ten generic three-Kummer coordinate-plane cubics are geometrically smooth and hence geometrically integral genus-one curves.",
+    "imported": "The verified full-K two-basis theorem excludes boundary points with exactly two nonzero coordinates; the reconstructed nonzero diagonal coefficients exclude the vertices.",
+    "not_proved": [
+      "a K-rational point on any of the ten curves",
+      "K-pointlessness of any of the ten curves",
+      "a Jacobian or torsor-class computation",
+      "a K-rational point or obstruction for the ambient twisted cubic threefold"
+    ]
+  }
+}

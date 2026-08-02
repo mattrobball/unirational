@@ -1,0 +1,18 @@
+{
+  "complete_landing_equation_count": 5349,
+  "conclusion": "the scalar-zero intersection is only the affine origin and the complete landing cubics span all cubics on the remaining P2; hence the degree-31 f6(K1_25) pure-second branch is projectively empty over F_463 and in characteristic zero by proper specialization",
+  "cubic_monomial_count": 10,
+  "cubic_span_rank": 10,
+  "degree25_input_dimension": 59,
+  "embedding_payload": "degree_31/p25_multiplier_embedding_p463.npz",
+  "embedding_payload_sha256": "5a2bdfe722ebc716c1698390600952fb99d0bdad02bf44e33c883365984470a5",
+  "landing_payload": "degree_31/landing_circuits_p463.npz",
+  "landing_payload_sha256": "065706e7cb6f020c2242826e2485d52fb20f38e270f6bd9fc328f22462b5fc78",
+  "payload": "degree_31/p25_pure_second_cubic_span_p463.npz",
+  "payload_sha256": "0a615072afcff006f780d1c0604fba9bf13498d765ee159d1bcde0046cf4cd45",
+  "prime": 463,
+  "projective_gate_vector_dimension": 3,
+  "pure_second_scalar_zero_rank": 3,
+  "schema": "cov-m1-p25-d31-pure-second-span-v1",
+  "scope": "fixed-circuit degree-25 multiplier image inside the degree-31 pure-second allowed C3 Taylor gate; earlier nonbased branches and P25.2 remain undecided"
+}

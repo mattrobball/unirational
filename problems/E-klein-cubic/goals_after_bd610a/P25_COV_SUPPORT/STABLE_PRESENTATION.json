@@ -1,0 +1,110 @@
+{
+  "schema": "p25-transition-presentation-progress-v2",
+  "status": "PC1-NONMINIMAL-STABLE-KERNEL-PRESENTATION-PASS",
+  "prime": 89,
+  "ambient_module": {
+    "ring": "F_89[q0,...,q36]",
+    "module": "S + S(-1)^6 + S(-2)^21",
+    "components": 28,
+    "minimal_S_generating_carrier": true,
+    "minimality_proof": "The q=0 fibre is F_89[K]/(K)^3 with basis 1+K+Sym2(K), so graded Nakayama gives a lower bound of 28, attained by the installed carrier."
+  },
+  "object_separation": {
+    "direct_landing_cubics": "V0 direct-sum W, dimension 746 in polynomial degree 3",
+    "multiplication_closure": "S-multiples of already installed graded relation generators",
+    "transition_relation_module": "smallest S-submodule containing the residual seeds and all actual transition/commutator consequences",
+    "support_quotient": "F/M over F_89, where the border certificate proves that the finite nonminimal hull M equals the true transition-stable relation kernel"
+  },
+  "graded_ledger": {
+    "3": {
+      "seed_generators": 690,
+      "rank": 690,
+      "status": "exact"
+    },
+    "4": {
+      "multiplication_rows": 25530,
+      "new_transition_generators": 4140,
+      "raw_commutators": 315,
+      "commutator_cycle_syzygies": 105,
+      "new_commutator_generators": 210,
+      "rank": 29880,
+      "new_generators": 4350,
+      "kernel_dimension_after_cycle_reduction": 0,
+      "status": "exact"
+    },
+    "5": {
+      "ambient_dimension": 1489657,
+      "multiplication_source_rows": 646020,
+      "controlling_transition_candidates_upper_bound": 15750,
+      "rank": null,
+      "new_generators": null,
+      "syzygies": null,
+      "nonminimal_seed_states": 14490,
+      "nonminimal_linear_commutator_states": 1260,
+      "status": "finite nonminimal state hull exact; minimal ledger not computed"
+    },
+    "6": {
+      "nonminimal_quadratic_commutator_states": 4410,
+      "rank": null,
+      "new_generators": null,
+      "syzygies": null,
+      "status": "finite nonminimal state hull exact; minimal ledger not computed"
+    }
+  },
+  "normal_forms": {
+    "degree4_pure_q": "19 multiplication-kernel pivots eliminated; 2053 nonpivot transition coordinates",
+    "degree4_coupled": "105 universal commutator cycles removed; the remaining 29880 ordered rows are independent",
+    "degree5_and_higher": "explicit border-circuit reductions for the finite redundant state hull; minimal graded normal forms remain open"
+  },
+  "representation_characters": {
+    "status": "exact scoped ledger for the canonical trivial coefficient-side PSL2_11 action",
+    "values": {
+      "nontrivial_PSL2_11_action_sealed": false,
+      "nontrivial_character_decomposition_authorized": false,
+      "class_count": 8,
+      "rule": "each recorded character is constant with value equal to the subspace dimension",
+      "ledger": "REPRESENTATION_CHARACTERS.json",
+      "pure_K_permutations_tested": 720,
+      "pure_K_permutations_preserving_rewrite_tensor": 1
+    }
+  },
+  "transition_matrices": {
+    "degree3_to_degree4": "reconstructed exactly by produce_pc1_coupled_degree4.py",
+    "nonminimal_hull": "encoded exactly by the sealed T operators and the border-circuit reductions on B=1+K+Sym2(K)",
+    "minimal_degree4_to_degree5": null,
+    "minimal_degree5_to_degree6": null,
+    "terminal_stability_check": "all 56 constant, 336 linear, and 1176 quadratic border columns reduce to the commutator hull, proving every T_i preserves all 25200 state generators"
+  },
+  "stabilization": {
+    "proved": true,
+    "scope": "finite nonminimal S-module presentation over F_89",
+    "generator_degree_bound": 6,
+    "state_generators": 25200,
+    "nonminimal_free_source": "S(-3)^690 + S(-4)^4350 + S(-5)^15750 + S(-6)^4410",
+    "minimal_generator_bounds": {
+      "beta_0_3": 690,
+      "beta_0_4": 4350,
+      "beta_0_5_upper_bound": 15750,
+      "beta_0_6_upper_bound": 4410,
+      "beta_0_d_for_d_at_least_7": 0
+    },
+    "naive_degree8_bound_valid": false,
+    "proof": "Exact border circuits show D_m(F) lies in the commutator hull for every cubic rule, so the 25200-state hull is T-stable. Commuting induced operators and monic-reduction inverse maps identify it with the true kernel.",
+    "remaining_minimal_gate": "Compute minimal G_d, S-syzygies, normal forms, characters, and transition matrices in degrees 5 and 6; the monomial Betti chain does not provide these data."
+  },
+  "evidence": [
+    "pc0_rank_certificate.json",
+    "pc1_degree4_closure.json",
+    "pc1_coupled_degree4.json",
+    "verify_pc1_degree4_result.json",
+    "verify_pc1_coupled_degree4_result.json",
+    "REPRESENTATION_CHARACTERS.json",
+    "verify_representation_characters_result.json",
+    "pc1_border_stability.json",
+    "pc1_border_stability_certificate.npz",
+    "verify_pc1_border_stability_result.json",
+    "PC1_HIGHER_BOUND_AUDIT.md"
+  ],
+  "exit_authorized": "PC-UNDECIDED",
+  "exit_not_authorized": "PC25-STABLE-PRESENTATION-PASS"
+}

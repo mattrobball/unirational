@@ -1,0 +1,65 @@
+{
+  "format": "klein-h-subgroup-sweep-v1",
+  "exit": "H-SWEEP-UNDECIDED",
+  "headline_negative": false,
+  "smallest_unresolved": {
+    "subgroup": "A5_class_1",
+    "base_field": "C(P2)^A5_class_1",
+    "transcendence_degree": 2,
+    "equation_payload": "a5_twist_payload.json#records[0]",
+    "question": "Does the displayed generic twist have a rational point?"
+  },
+  "classes": [
+    {
+      "label": "A5_class_1",
+      "decision": "unresolved",
+      "generic_twist": "a5_twist_payload.json#records[0]",
+      "index": 1,
+      "index_witness": {
+        "degrees": [3, "divisor_of_20_prime_to_3"],
+        "source": "linear section and an orbit of a C3-projectively-fixed point"
+      },
+      "valuation_obstruction": "none proved",
+      "direct_search": "complete honest homogeneous landing covariants through degree 9 are empty; specified two-column function-field frame lines have no geometric t-linear factor"
+    },
+    {
+      "label": "A5_class_2",
+      "decision": "unresolved",
+      "generic_twist": "a5_twist_payload.json#records[1]",
+      "index": 1,
+      "index_witness": {
+        "degrees": [3, "divisor_of_20_prime_to_3"],
+        "source": "linear section and an orbit of a C3-projectively-fixed point"
+      },
+      "valuation_obstruction": "none proved",
+      "direct_search": "complete honest homogeneous landing covariants through degree 9 are empty; specified two-column function-field frame lines have no geometric t-linear factor"
+    },
+    {
+      "label": "11:5",
+      "decision": "unresolved",
+      "generic_twist": "11_5_twist_payload.json",
+      "index": 1,
+      "index_witness": {
+        "degrees": [3, 5],
+        "source": "linear section and exact orbit of the five C11 eigenlines"
+      },
+      "valuation_obstruction": "none proved"
+    },
+    {
+      "label": "D12",
+      "decision": "all_torsors_soluble",
+      "certificate": "contained projective line P(E_minus(t))"
+    },
+    {
+      "label": "A4",
+      "decision": "all_torsors_soluble",
+      "certificate": "CTZ Theorem 5.1 and Duncan-Reichstein Theorem 1.1"
+    },
+    {
+      "label": "D10",
+      "decision": "all_torsors_soluble",
+      "certificate": "contained projective line spanned by inverse C5 eigenvectors"
+    }
+  ],
+  "complete_boundary": "By CTZ Theorem 5.1 and inherited Condition (A), no other proper subgroup of PSL2(F11) remains unresolved."
+}

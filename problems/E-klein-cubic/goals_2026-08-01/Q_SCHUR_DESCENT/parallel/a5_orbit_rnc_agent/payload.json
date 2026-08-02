@@ -1,0 +1,82 @@
+{
+  "theorem_id": "A5_DEGREE11_TRANSFERRED_ORBITS_FAIL_RNC_QUADRIC_TEST",
+  "marker": "A5_DEGREE11_TRANSFERRED_ORBITS_FAIL_RNC_QUADRIC_TEST_OK",
+  "field": "characteristic zero, certified by good reduction at F_89",
+  "good_prime": {
+    "p": 89,
+    "zeta11": 2,
+    "sqrt5": 19,
+    "sqrt_minus11": 73,
+    "full_source_point": [1, 4, 5, 5, 6]
+  },
+  "transfer": {
+    "domain": "the genuine five-dimensional Schur source restricted to H=A5",
+    "target": "the faithful three-dimensional icosahedral H-source",
+    "functional": "ell(v)=v0+2*v1+3*v2+4*v3+5*v4",
+    "frame": "B_H(v)=sum_h (rho(h^-1)v)_0/ell(rho(h^-1)v) * sigma(h)",
+    "source_vector": "y_H(v)=B_H(v)e0",
+    "landing_map": "q_H(v)=J_H Phi_H(y_H(v))",
+    "twist_point": "A_G(v)^-1 q_H(v) in X_Schur(E^H)",
+    "class_1_transfer_determinant_mod_89": 64,
+    "class_2_transfer_determinant_mod_89": 73
+  },
+  "conjugates": "p_g(v)=rho(g)q_H(rho(g^-1)v), indexed by the eleven right cosets gH; applying the common A_G(v)^-1 does not change RNC incidence",
+  "rnc_necessary_condition": "eleven points on a rational normal quartic have quadric evaluation rank at most h0(P1,O(8))=9, equivalently at least six independent quadrics vanish on them",
+  "results": [
+    {
+      "class": "A5_class_1",
+      "radical_sign": -1,
+      "alpha_cubic_mod_89": [1, 56, 69, 18],
+      "alpha_root_mod_89": 80,
+      "parameter_vector_mod_89": [1, 25, 36, 32, 80],
+      "distinct_conjugates": 11,
+      "quadric_evaluation_rank": 11,
+      "quadrics_through_conjugates": 4,
+      "rational_normal_quartic": false
+    },
+    {
+      "class": "A5_class_2",
+      "radical_sign": 1,
+      "alpha_cubic_mod_89": [1, 3, 31, 9],
+      "alpha_root_mod_89": 49,
+      "parameter_vector_mod_89": [1, 55, 87, 56, 49],
+      "distinct_conjugates": 11,
+      "quadric_evaluation_rank": 11,
+      "quadrics_through_conjugates": 4,
+      "rational_normal_quartic": false
+    },
+    {
+      "class": "A5_class_2",
+      "radical_sign": 1,
+      "alpha_cubic_mod_89": [1, 3, 31, 9],
+      "alpha_root_mod_89": 51,
+      "parameter_vector_mod_89": [1, 61, 10, 37, 51],
+      "distinct_conjugates": 11,
+      "quadric_evaluation_rank": 11,
+      "quadrics_through_conjugates": 4,
+      "rational_normal_quartic": false
+    },
+    {
+      "class": "A5_class_2",
+      "radical_sign": 1,
+      "alpha_cubic_mod_89": [1, 3, 31, 9],
+      "alpha_root_mod_89": 75,
+      "parameter_vector_mod_89": [1, 12, 46, 22, 75],
+      "distinct_conjugates": 11,
+      "quadric_evaluation_rank": 11,
+      "quadrics_through_conjugates": 4,
+      "rational_normal_quartic": false
+    }
+  ],
+  "scope": {
+    "proved": "For the displayed natural Hilbert-90 transfer of each exact degree-11 A5 landing point to the genuine Schur source, the eleven conjugates do not lie on a rational normal quartic over the generic field.",
+    "authenticity": "The upstream P2 packet is not literally the restriction of the full G-source. It does use the exact restricted Klein target and an exact H-equivariant landing map. The displayed B_H composition is the additional bridge producing an E^H-point on the genuine full Schur twist.",
+    "not_proved": [
+      "no other E^H-rational point has an eleven-point orbit on a rational normal quartic",
+      "no other Hilbert-90 transfer column or rational source section succeeds",
+      "the eleven points lie on no other useful K-defined curve",
+      "a rational point or pointlessness for the full Schur twist"
+    ],
+    "status": "Q-UNDECIDED"
+  }
+}

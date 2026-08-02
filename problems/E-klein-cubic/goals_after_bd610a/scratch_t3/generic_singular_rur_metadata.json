@@ -1,0 +1,1539 @@
+{
+  "A_degree_ledger": [
+    {
+      "A_degree": 16,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 0
+    },
+    {
+      "A_degree": 15,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 1
+    },
+    {
+      "A_degree": 15,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 2
+    },
+    {
+      "A_degree": 14,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 3
+    },
+    {
+      "A_degree": 14,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 4
+    },
+    {
+      "A_degree": 13,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 5
+    },
+    {
+      "A_degree": 13,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 6
+    },
+    {
+      "A_degree": 12,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 7
+    },
+    {
+      "A_degree": 12,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 8
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 9
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 10
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 11
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 12
+    },
+    {
+      "A_degree": 14,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 0
+    },
+    {
+      "A_degree": 13,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 1
+    },
+    {
+      "A_degree": 13,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 2
+    },
+    {
+      "A_degree": 12,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 3
+    },
+    {
+      "A_degree": 12,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 4
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 5
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 6
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 7
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 8
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 9
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 10
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 11
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 12
+    },
+    {
+      "A_degree": 12,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 0
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 1
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 2
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 3
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 4
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 5
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 6
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 7
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 8
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 9
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 10
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 11
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 12
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 0
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 1
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 2
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 3
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 4
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 5
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 6
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 7
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 8
+    },
+    {
+      "A_degree": 5,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 9
+    },
+    {
+      "A_degree": 5,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 10
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 11
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 12
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 0
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 1
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 2
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 3
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 4
+    },
+    {
+      "A_degree": 5,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 5
+    },
+    {
+      "A_degree": 5,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 6
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 7
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 8
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 9
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 10
+    },
+    {
+      "A_degree": 2,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 11
+    },
+    {
+      "A_degree": 2,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 12
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 0
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 1
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 2
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 3
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 4
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 5
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 6
+    },
+    {
+      "A_degree": 2,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 7
+    },
+    {
+      "A_degree": 2,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 8
+    },
+    {
+      "A_degree": 1,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 9
+    },
+    {
+      "A_degree": 1,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 10
+    },
+    {
+      "A_degree": 0,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 11
+    },
+    {
+      "A_degree": 0,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NB",
+      "u_power": 12
+    },
+    {
+      "A_degree": 15,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 0
+    },
+    {
+      "A_degree": 15,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 1
+    },
+    {
+      "A_degree": 14,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 2
+    },
+    {
+      "A_degree": 14,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 3
+    },
+    {
+      "A_degree": 13,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 4
+    },
+    {
+      "A_degree": 13,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 5
+    },
+    {
+      "A_degree": 12,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 6
+    },
+    {
+      "A_degree": 12,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 7
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 8
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 9
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 10
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 11
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 0,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 12
+    },
+    {
+      "A_degree": 13,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 0
+    },
+    {
+      "A_degree": 13,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 1
+    },
+    {
+      "A_degree": 12,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 2
+    },
+    {
+      "A_degree": 12,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 3
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 4
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 5
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 6
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 7
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 8
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 9
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 10
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 11
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 1,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 12
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 0
+    },
+    {
+      "A_degree": 11,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 1
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 2
+    },
+    {
+      "A_degree": 10,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 3
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 4
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 5
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 6
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 7
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 8
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 9
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 10
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 11
+    },
+    {
+      "A_degree": 5,
+      "Z_power": 2,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 12
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 0
+    },
+    {
+      "A_degree": 9,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 1
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 2
+    },
+    {
+      "A_degree": 8,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 3
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 4
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 5
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 6
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 7
+    },
+    {
+      "A_degree": 5,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 8
+    },
+    {
+      "A_degree": 5,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 9
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 10
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 11
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 3,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 12
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 0
+    },
+    {
+      "A_degree": 7,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 1
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 2
+    },
+    {
+      "A_degree": 6,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 3
+    },
+    {
+      "A_degree": 5,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 4
+    },
+    {
+      "A_degree": 5,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 5
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 6
+    },
+    {
+      "A_degree": 4,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 7
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 8
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 9
+    },
+    {
+      "A_degree": 2,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 10
+    },
+    {
+      "A_degree": 2,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 11
+    },
+    {
+      "A_degree": 1,
+      "Z_power": 4,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 12
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 0
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 1
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 2
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 3
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 4
+    },
+    {
+      "A_degree": 3,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 5
+    },
+    {
+      "A_degree": 2,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 6
+    },
+    {
+      "A_degree": 2,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 7
+    },
+    {
+      "A_degree": 1,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 8
+    },
+    {
+      "A_degree": 1,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 9
+    },
+    {
+      "A_degree": 0,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 10
+    },
+    {
+      "A_degree": 0,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 11
+    },
+    {
+      "A_degree": null,
+      "Z_power": 5,
+      "holdouts_valid": true,
+      "label": "NY",
+      "u_power": 12
+    }
+  ],
+  "common_integral_scale": 176319369216,
+  "equations": [
+    "QZ(A,u,Z)=0",
+    "B*dQZ/dZ-NB(A,u,Z)=0",
+    "Y*dQZ/dZ-NY(A,u,Z)=0"
+  ],
+  "input": "scratch_t3/singular_relation_samples_Aminus6_16.json",
+  "input_sha256": "7d6f6587cfb5a91f00060a35ce04e2a23887334c0f3109f9803c254ed658dc4b",
+  "per_A_u_degrees": {
+    "-1": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "-2": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "-3": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "-4": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "-5": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "-6": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "0": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "1": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "10": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "11": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "12": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "13": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "14": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "16": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "2": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "3": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "4": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "5": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "6": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "7": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "8": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    },
+    "9": {
+      "NB": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "NY": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        11
+      ]
+    }
+  },
+  "polynomials": {
+    "NB": {
+      "degrees": {
+        "A": 16,
+        "Z": 5,
+        "total": 22,
+        "u": 12
+      },
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_after_bd610a/scratch_t3/generic_singular_rur_NB.tsv",
+      "sha256": "3ffd1fad77d6e66d40ee8f447bb898c87d0fefb936ef6ea1bf24a02ac7a228ee",
+      "terms": 680
+    },
+    "NY": {
+      "degrees": {
+        "A": 15,
+        "Z": 5,
+        "total": 21,
+        "u": 12
+      },
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_after_bd610a/scratch_t3/generic_singular_rur_NY.tsv",
+      "sha256": "5a57c14e530a4ec111731b09a59da510f578f850d8655e31e7c318849a5209ae",
+      "terms": 636
+    },
+    "QZ": {
+      "degrees": {
+        "A": 16,
+        "Z": 6,
+        "total": 22,
+        "u": 12
+      },
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_after_bd610a/scratch_t3/generic_singular_rur_QZ.tsv",
+      "sha256": "23be9dbe72a9a4089924accde05fc9f8d43b13e644a2e2c8528fabdb3608ef9f",
+      "terms": 689
+    }
+  },
+  "schema": "klein-t3-generic-singular-rur-v1",
+  "scope": "exact interpolation with A holdouts; direct generator reductions pending"
+}

@@ -349,6 +349,42 @@ def main() -> None:
                 "kernel, with based and nonbased C3 strata materialized"
             ),
         }
+    first_normal_path = HERE / "c3_first_normal_gate.json"
+    if first_normal_path.is_file():
+        summary["first_normal_pre_elimination"] = {
+            "payload": first_normal_path.name,
+            "payload_sha256": sha256(first_normal_path),
+            "scope": "necessary first-normal gates on the C3-based branch",
+        }
+    first_reduced_path = HERE / "c3_first_normal_reduced_landing.json"
+    if first_reduced_path.is_file():
+        summary["first_normal_reduced_special_fibre"] = {
+            "prime": 463,
+            "payload": first_reduced_path.name,
+            "payload_sha256": sha256(first_reduced_path),
+            "scope": (
+                "complete factored equations on the first-normal gate kernels, "
+                "with first-normal nonbased and second-based strata materialized"
+            ),
+        }
+    second_normal_path = HERE / "c3_second_normal_gate.json"
+    if second_normal_path.is_file():
+        summary["second_normal_pre_elimination"] = {
+            "payload": second_normal_path.name,
+            "payload_sha256": sha256(second_normal_path),
+            "scope": "necessary pure and mixed second-normal C3 branch gates",
+        }
+    third_based_path = HERE / "c3_third_based_reduced_landing.json"
+    if third_based_path.is_file():
+        summary["third_based_reduced_special_fibre"] = {
+            "prime": 463,
+            "payload": third_based_path.name,
+            "payload_sha256": sha256(third_based_path),
+            "scope": (
+                "complete factored equations after the C3 line and its first "
+                "and second normal jets vanish"
+            ),
+        }
     output = HERE / "landing_ideals.json"
     output.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
     print("COV_M1_COMPLETE_LANDING_IDEALS_PRODUCED")

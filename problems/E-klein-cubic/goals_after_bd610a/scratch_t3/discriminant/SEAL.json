@@ -1,0 +1,175 @@
+{
+  "artifacts": [
+    {
+      "bytes": 6491,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/REPORT.md",
+      "sha256": "b7dd9cdb0bf7112eb75d441461bda873b635ba4dcc48fb20770ce7edc934693b"
+    },
+    {
+      "bytes": 1232,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/REPLAY.md",
+      "sha256": "02f04e3b46479d23cd599ea2ffa8cd06e3633174fb7bd6a3406959dde32a4727"
+    },
+    {
+      "bytes": 6279,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/produce_discriminant.py",
+      "sha256": "441db6791a3fed1ff9b5e1a09ca2c544a982487c6002d0dac98280f2dca0a6d2"
+    },
+    {
+      "bytes": 13991,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/fixed_frame_discriminant_T.tsv",
+      "sha256": "f1a413ce9e0f38ca386118079146afa55da64bf6dac591ce3e95b3f816135614"
+    },
+    {
+      "bytes": 19390,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/fixed_frame_discriminant_Z.tsv",
+      "sha256": "14f1209efc4a60613d4c28cffd666a0e97861ad891440e7b9a726e211d814d4f"
+    },
+    {
+      "bytes": 1176,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/discriminant_payload.json",
+      "sha256": "cada6d8f35722ca2d0da7eefbee531a472a45d830ff40bbfac05d955966e473e"
+    },
+    {
+      "bytes": 6247,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/produce_boundary_contacts.py",
+      "sha256": "f705e32583299045ef12ca5cb5f352c183fae62d17e1678519449e88dee5647e"
+    },
+    {
+      "bytes": 2534,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/boundary_contact_payload.json",
+      "sha256": "fb8904a4d9b0c0281a22ee6a151282feddf199adcc12659afc85c976ba30ec7e"
+    },
+    {
+      "bytes": 8904,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/analyze_affine_plane.py",
+      "sha256": "7331cbae79a195e8905c6cb9b968b036921e728dc22ec81d841b30c6a639f730"
+    },
+    {
+      "bytes": 16103,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/affine_plane_contact_numerator.tsv",
+      "sha256": "4edbc97622b21d4f8c2c8d8438db0e856032baa3792d38a1dc738c601814c740"
+    },
+    {
+      "bytes": 3360,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/affine_plane_F15.tsv",
+      "sha256": "55e8862a318950b31a7e4cc2a9b5067199cebd52c0cfb53a5ede5bbe9d1cafd0"
+    },
+    {
+      "bytes": 2496,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/affine_plane_contact_payload.json",
+      "sha256": "3e5fd29aa324c5fed8ad13a00c0b2e7e023f6e767a050f143cdfd010833d85a9"
+    },
+    {
+      "bytes": 10143,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/check_plane_codim3.py",
+      "sha256": "50f91a22fa1aab23d6b30ce56b234138569a19840009f3e5b410d28d9558f998"
+    },
+    {
+      "bytes": 454260,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/plane_codim3_payload.json",
+      "sha256": "14d52c44eaf178c6dd2c856b0d0d756ea013fe4573f61cb76f64dc45ac8fdab7"
+    },
+    {
+      "bytes": 19110,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/check_plane_local_types.py",
+      "sha256": "9e11ec39c9cc72a9bd437b3417854b16d80ae1b2ae1008527c5fffef19bda142"
+    },
+    {
+      "bytes": 13576,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/plane_local_types_payload.json",
+      "sha256": "4b7e79139d0a085d18e2beed4c0f02778e552c59c2d312cc2d97868f9c8b81ba"
+    },
+    {
+      "bytes": 4993,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/check_conductor_delta.py",
+      "sha256": "69607e898beb014e8bd46a7eba3a8657bf3c13dbe0555d02ca33d35199bf29cc"
+    },
+    {
+      "bytes": 4191,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/conductor_delta_payload.json",
+      "sha256": "c27e5f4eb12bcec1568869ad53a59a6a99ef92358d60cc43737fa207d9c1d883"
+    },
+    {
+      "bytes": 8614,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/projective_slice_audit.py",
+      "sha256": "c87ca6608f1fb0495c0b8f3aed6a9989a1c2a6a161575cb7d89e559808ba0a2b"
+    },
+    {
+      "bytes": 862994,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/projective_slice_p1009.sing",
+      "sha256": "91997fc657de7cbda42917ec5aa5de0393c2a9fa6d351462771bcea4f986b71a"
+    },
+    {
+      "bytes": 2845,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/projective_slice_p1009.out",
+      "sha256": "cbc74b7df1bd40dd3b9ece5281ff6d786bce112cb97f43785a797880f50e5777"
+    },
+    {
+      "bytes": 1560,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/projective_slice_payload.json",
+      "sha256": "694a8c475c63b9bbe85be9980fadc1ae93de727f6bed473a519d91d350721e9c"
+    },
+    {
+      "bytes": 14030,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/verify.py",
+      "sha256": "cb138190ece6149ff953bd0c7d0e276fa32da94c7c9b6c27f3c8aa1b373e1385"
+    },
+    {
+      "bytes": 2725,
+      "path": "goals_after_bd610a/scratch_t3/discriminant/make_seal.py",
+      "sha256": "1dbcc2f9fee04d50e1a7c91ffb7efb1314dcc7e17a6fb727b44f1656cc3da559"
+    }
+  ],
+  "coordinate": "T=Z-11*A^2/18",
+  "open_obstructions": [
+    "authoritative finite birational normalization and conductor",
+    "exhaustive normalized height-one support",
+    "normalization/local class groups above J1, J2, and F15",
+    "identification and exhaustion of the candidate degree-six RUR conductor prime"
+  ],
+  "proved_contact_orders": {
+    "E=(L,A), every generic normalization branch": {
+      "mod_3": 1,
+      "valuation": 4
+    },
+    "S=(A-15L,Y-12L)": {
+      "mod_3": 2,
+      "valuation": 2
+    }
+  },
+  "schema": "t3-fixed-frame-discriminant-partial-seal-v1",
+  "sources": [
+    {
+      "bytes": 44396,
+      "path": "certificates/fixed_frame_arithmetic/five_forms.json",
+      "sha256": "61377d6e464f7c78cf1fa91d13610b76dc4567de7b7214256e04de50066c83a4"
+    },
+    {
+      "bytes": 2742917,
+      "path": "certificates/target_branch_global/H_factor/H_primitive_integer.tsv",
+      "sha256": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501"
+    },
+    {
+      "bytes": 4377,
+      "path": "tmp/xcd_descent_algebra/universal_invariants.json",
+      "sha256": "06be31c1803edee90647a8bd100295ea7779761e25f4053c990c79d5d4834986"
+    },
+    {
+      "bytes": 19127,
+      "path": "goals_after_bd610a/scratch_t3/generic_singular_rur_QZ.tsv",
+      "sha256": "23be9dbe72a9a4089924accde05fc9f8d43b13e644a2e2c8528fabdb3608ef9f"
+    },
+    {
+      "bytes": 19339,
+      "path": "goals_after_bd610a/scratch_t3/generic_singular_rur_NB.tsv",
+      "sha256": "3ffd1fad77d6e66d40ee8f447bb898c87d0fefb936ef6ea1bf24a02ac7a228ee"
+    },
+    {
+      "bytes": 18123,
+      "path": "goals_after_bd610a/scratch_t3/generic_singular_rur_NY.tsv",
+      "sha256": "5a57c14e530a4ec111731b09a59da510f578f850d8655e31e7c318849a5209ae"
+    }
+  ],
+  "status": "exact partial packet; global normalized T3.D ledger open"
+}

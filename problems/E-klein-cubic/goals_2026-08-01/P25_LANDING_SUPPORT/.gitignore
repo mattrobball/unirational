@@ -12,3 +12,15 @@
 /syzygy_r48_boundary_replay.sing
 /syzygy_r48_b0_replay.sing
 /syzygy_r256_boundary_saturate.sing
+
+# Additional dumps over GitHub's hard 100 MB limit (keep local, regenerate).
+/parallel/affine_chart_solver/r64_combined_q0_eq_1_slimgb.sing
+/parallel/affine_chart_solver/r64_combined_q0_eq_1_std.sing
+/parallel/complement_strategy/affine_q0_r64_augmented_module.sing
+/parallel/enlarged_closure/augmented_r64_p4_p3_module.sing
+/parallel/r66_stagec/r66_stageC_q0_1_b0_1.ms
+/parallel/r66_stagec/r66_stageC_q0_1_b0_1.sing
+/parallel/stageb_stratified_cas/combined_old_r48_L8_complement_Hfirst.sing
+/parallel/stageb_stratified_cas/combined_r64_L8_complement_Hfirst.sing
+/parallel/stageb_stratified_cas/stageC_old_r48_L8_complement_Hfirst.sing
+/parallel/systematic_module/systematic_full28_homogenized_degree8.sing

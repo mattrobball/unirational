@@ -1,0 +1,47 @@
+{
+  "branch_A": {
+    "degree_31_realization": "C3-constant nonbased",
+    "degree_35_realization": "first-normal nonbased after tangent",
+    "dimension": 51,
+    "scalar_rank": 5
+  },
+  "branch_B": {
+    "cross_degree_cubic_union_rank": 574,
+    "cubic_monomial_count": 1540,
+    "d31_cubic_span_rank": 574,
+    "d35_cubic_span_rank": 574,
+    "degree_31_realization": "first-normal nonbased after tangent",
+    "degree_35_realization": "mixed-second nonbased after tangent",
+    "dimension": 20,
+    "fixed_row_profile_length": 574,
+    "scalar_rank": 7
+  },
+  "payload": "p25_common_nonbased_branches_p463.npz",
+  "payload_sha256": "75b46f0b6e5d017c05e826803621eeb28bf70e45fce2f289f714c6711e1b5151",
+  "prime_records": [
+    {
+      "branch_A_cross_degree_union_rank": 51,
+      "branch_A_dimension": 51,
+      "branch_A_scalar_rank": 5,
+      "branch_A_scalar_union_rank": 5,
+      "branch_B_cross_degree_union_rank": 20,
+      "branch_B_dimension": 20,
+      "branch_B_scalar_rank": 7,
+      "branch_B_scalar_union_rank": 7,
+      "prime": 463
+    },
+    {
+      "branch_A_cross_degree_union_rank": 51,
+      "branch_A_dimension": 51,
+      "branch_A_scalar_rank": 5,
+      "branch_A_scalar_union_rank": 5,
+      "branch_B_cross_degree_union_rank": 20,
+      "branch_B_dimension": 20,
+      "branch_B_scalar_rank": 7,
+      "branch_B_scalar_union_rank": 7,
+      "prime": 727
+    }
+  ],
+  "schema": "cov-m1-p25-common-nonbased-branches-v1",
+  "scope": "two intrinsic fixed-circuit P25 nonbased branches identified in the degree-31 and degree-35 multiplier trees; their affine scalar chart saturations remain undecided"
+}

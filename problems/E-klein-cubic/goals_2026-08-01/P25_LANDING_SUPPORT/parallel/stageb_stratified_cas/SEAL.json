@@ -1,0 +1,195 @@
+{
+  "closed_stratum": {
+    "name": "L8=P<span(q4,...,q11)>",
+    "stageB": "independently certified empty",
+    "stageC": "independently certified empty",
+    "stageC_certificate_sha256": "8bae2e072bc64a68cebcad7743c0884a1901eb3ae3026e5168dd8598f99bc6bb",
+    "stageC_degree8_rank": 6435,
+    "stageC_degree8_target": 6435,
+    "stageC_replay_sha256": "72efd550a199412961ca48bb68f38de200e3f645c4e4fc917a93803c2c7fd6c4"
+  },
+  "dependencies": {
+    "P25:linear_syzygies_r48_reconstructed.npz": {
+      "bytes": 499280,
+      "sha256": "95fb1405584468b6e327fa36617f8daafd32e7630d29526f9d09ae5f3820d5e8"
+    },
+    "P25:parallel/enlarged_closure/support_balanced_r64_stageBC.npz": {
+      "bytes": 6174985,
+      "sha256": "c50de97aa4fc9465793f3fe84b544731b36cec1a2807113e94817c955897be2b"
+    },
+    "P25:parallel/enlarged_closure/verify_augmented_module_jobs_result.json": {
+      "bytes": 465,
+      "sha256": "c20d291bd15031b0bcd3a688fcf117cf57d08ddf7d18644980b3d55981d11df6"
+    },
+    "P25:parallel/stageb_global_basis/support_balanced_r43_stageBC.npz": {
+      "bytes": 4235346,
+      "sha256": "821e1340cd6242a1d89a3a59f89d6d0fbee7fa1b4207e931b28d4c402f5fbedb"
+    },
+    "P25:parallel/stageb_global_basis/verify_sparse_packet_result.json": {
+      "bytes": 2354,
+      "sha256": "7c1b6de99b8b94c45b2d4feb48a4b07804629ee6bfda1f6c7fb948beaa9e82f8"
+    },
+    "P25:parallel/stageb_strata/closed_L_degree6_certificate.json": {
+      "bytes": 333327,
+      "sha256": "89ec13bb2672a8b26e5e3e5beed74dfa21bf4374c4d6d57721b0d475f5f9a41a"
+    },
+    "P25:parallel/stageb_strata/verify_closed_L_degree6_result.json": {
+      "bytes": 1080,
+      "sha256": "b30c9d6555e9d85f7d306736800e8279b644c1e82809b486ec03542174055439"
+    },
+    "P25:syzygy_r256_q0_contracted.npz": {
+      "bytes": 29854980,
+      "sha256": "2e718c491172480e3aa3f055d5806d28a9414db2627e6daf3f0204bdc3b840ea"
+    },
+    "P25:syzygy_r48_q0_contracted.npz": {
+      "bytes": 5479780,
+      "sha256": "ba6d0533ab7fdb8bd93fb9309ce5b7d615f0a4799b22aa5e502e2dfec0bc21bb"
+    },
+    "ROOT:certificates/degree25_finite_module/relation_matrix.npz": {
+      "bytes": 7661361,
+      "sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb"
+    }
+  },
+  "files": {
+    "REPORT.md": {
+      "bytes": 3692,
+      "sha256": "9ecc621d60e50de09584f15301c168cb86ee2b98ebc2debfba8f1b30667c6903"
+    },
+    "WORK_SCOPE.md": {
+      "bytes": 929,
+      "sha256": "f51fe4949c16f52d81e073a692ddc356a3dbe6922cd920b96f771cac1303f538"
+    },
+    "audit_closed_L8_stageC.py": {
+      "bytes": 6728,
+      "sha256": "2f56d6810205cc510c0f2eaeea24ffb6a9cbfbcc70e2590816bc50b64683bda1"
+    },
+    "closed_L8_augmented_module_deglex.sing": {
+      "bytes": 1093093,
+      "sha256": "385d3afa4b14b7fd74fa1e85157e011ff5bc1c8c23925b261a6f0196d251499f"
+    },
+    "closed_L8_augmented_module_degrevlex.log": {
+      "bytes": 11083,
+      "sha256": "121f649a0e44fd549149dd2a196129c120892abc53cab640b38d1ed7692e61a3"
+    },
+    "closed_L8_augmented_module_degrevlex.sing": {
+      "bytes": 1093099,
+      "sha256": "660c820464d96590116c59faab6142ac0c89cc24e052d6d5bc090906748325c0"
+    },
+    "closed_L8_augmented_module_jobs.json": {
+      "bytes": 2610,
+      "sha256": "038ce1b9f019385f6929927a28b657ffe0f955946efa9bec130ecb31cab7db0a"
+    },
+    "closed_L8_stageC_certificate.json": {
+      "bytes": 3826,
+      "sha256": "8bae2e072bc64a68cebcad7743c0884a1901eb3ae3026e5168dd8598f99bc6bb"
+    },
+    "closed_L8_stageC_compatibility.npz": {
+      "bytes": 38059645,
+      "sha256": "ad64848d98316eff00793814a5e8be09978f61c13057e4256e9a586375093957"
+    },
+    "closed_L8_stageC_preflight.json": {
+      "bytes": 3336,
+      "sha256": "178ece1580cfd1eee9c5867ab55540155724bfbccef389e1a5f7375d3d5cf4d5"
+    },
+    "combined_old_r48_L8_complement_Hfirst.sing": {
+      "bytes": 102153636,
+      "sha256": "91c8b2d4a056ad88fe3d76ccf3b9323d91614ddcd4930e649770a64751ba6899"
+    },
+    "combined_r64_L8_complement_Hfirst.sing": {
+      "bytes": 104650220,
+      "sha256": "fe115d3f85667f943701af73a14379d2782f8fb3e99539c4fc3ad04c1c50e09a"
+    },
+    "make_seal.py": {
+      "bytes": 6197,
+      "sha256": "a70787231673b696ad4b0af7d8d9bdc5192107dfb0fa6f2e8a43acf2e16177b0"
+    },
+    "produce_closed_L8_augmented_module.py": {
+      "bytes": 8020,
+      "sha256": "19e5c8b2f67604495d786d79cb8f5936d427fc6cfdaa740b88755d251b1b81a7"
+    },
+    "produce_closed_L8_stageC.log": {
+      "bytes": 246,
+      "sha256": "a94930bd305e3765a573a732ce422488e75f5221f7d01b8ef2b29d3c0293058f"
+    },
+    "produce_closed_L8_stageC.py": {
+      "bytes": 17987,
+      "sha256": "9ee568556a5de35fb55966a5a6ddc1dea653888f8b8203afdf00e91480cbc6fb"
+    },
+    "produce_closed_L8_stageC.run.json": {
+      "bytes": 635,
+      "sha256": "598249a00f0519c2007a3cc44c12a771f730b61270cae0fd6adfef9895b3a5c3"
+    },
+    "produce_stratified_jobs.py": {
+      "bytes": 17281,
+      "sha256": "afb1c91b66005007284f111053aa9537c9eec119db3d9a365ed46ba9805b9454"
+    },
+    "run_bounded_python.py": {
+      "bytes": 3170,
+      "sha256": "fe9a1ed0fb37e19dfb7f09657026dda00765d9ceb87537d3fb8674b9b87e09da"
+    },
+    "run_closed_L8_augmented_module.py": {
+      "bytes": 4858,
+      "sha256": "e47c3c7d3841e69956a41f61808cb62b4e23dfd44ce2d3c3b3a1a5e5f3c7002b"
+    },
+    "stageB_new_r43_L8_complement_Hfirst.sing": {
+      "bytes": 21645389,
+      "sha256": "a0c86d9d743e74c059a97f2d3344d7a1229b4d9855c943b0d35695fc6298244f"
+    },
+    "stageB_old_r48_L8_complement_Hfirst.sing": {
+      "bytes": 32056401,
+      "sha256": "510bbb7d399b18e0986a0c618ee6d82d50e6c24ec8ebc04857020d1077e15ac1"
+    },
+    "stageC_new_r43_L8_complement_Hfirst.sing": {
+      "bytes": 72310380,
+      "sha256": "6b45c4cc6e7474df8b708dc3d9aeeae5f8a0171f915821fac351176e2af5f09e"
+    },
+    "stageC_old_r48_L8_complement_Hfirst.sing": {
+      "bytes": 102153205,
+      "sha256": "23054f47869c03420aa49740a4c153bcdd4428bfa8519e2fb8ff781392fa9293"
+    },
+    "stratified_jobs.json": {
+      "bytes": 9142,
+      "sha256": "5f5e1446fd038eb071ce6cb4c9d107ae00534e7774c5748f75ed5ee130e067ae"
+    },
+    "verify_closed_L8_stageC.log": {
+      "bytes": 251,
+      "sha256": "ae0cc53a58cad14e319d25895cc6afe8668453717e410f2637b2aa9337aaa68a"
+    },
+    "verify_closed_L8_stageC.py": {
+      "bytes": 14419,
+      "sha256": "647341677e05c9bfec52e3fefaa72cfc22a6fce469275ed1caa1e6e305e98fce"
+    },
+    "verify_closed_L8_stageC.run.json": {
+      "bytes": 634,
+      "sha256": "fc5acd087bdc754170996099d60c6c20c3fbd9d63ae2bd96fa89468b24248387"
+    },
+    "verify_closed_L8_stageC_result.json": {
+      "bytes": 1446,
+      "sha256": "72efd550a199412961ca48bb68f38de200e3f645c4e4fc917a93803c2c7fd6c4"
+    },
+    "verify_seal.py": {
+      "bytes": 4184,
+      "sha256": "9375a5f941d87e20d04b37e734273b50ee4dc8b8447f078beaee17de56b899af"
+    },
+    "verify_stratified_inputs.py": {
+      "bytes": 12973,
+      "sha256": "8d5d80b814307e9fa6d6bfa358ba36d79a60cc42f3b3be1a3caa5854f2d94da4"
+    },
+    "verify_stratified_inputs_result.json": {
+      "bytes": 2487,
+      "sha256": "154026eba68f829c17a9b7b2fef8ee9ed20b752e05277753129bdbf75e748688"
+    }
+  },
+  "open_complement": {
+    "jobs_launched": false,
+    "ledger_replay_sha256": "154026eba68f829c17a9b7b2fef8ee9ed20b752e05277753129bdbf75e748688",
+    "ledger_sha256": "5f5e1446fd038eb071ce6cb4c9d107ae00534e7774c5748f75ed5ee130e067ae",
+    "name": "P36 minus L8",
+    "prepared_exact_jobs": 6,
+    "provenance_guard": "Only the script hashes in this ledger identify the current regenerated H8-first block-order inputs. Any earlier preflight or result against an overwritten pathname with a different hash is provenance-invalid; in particular this applies to stageB_old_r48_L8_complement_Hfirst.sing.",
+    "status": "UNDECIDED"
+  },
+  "prime": 89,
+  "scope_guard": "This seal proves Stage B and normalized Stage C empty only on L8. It seals prepared but unlaunched exact jobs for P36 minus L8; it does not claim global Stage-B or Stage-C emptiness.",
+  "status": "SEALED_CLOSED_L8_B_AND_C_EMPTY_COMPLEMENT_OPEN"
+}

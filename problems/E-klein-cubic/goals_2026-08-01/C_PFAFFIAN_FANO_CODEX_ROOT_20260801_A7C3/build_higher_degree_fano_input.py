@@ -37,8 +37,16 @@ def main():
     pipeline = load_pipeline()
     scanner_module = pipeline.load_scanner_module()
     scanner = scanner_module.Scanner()
+    # The historical scanner uses ten 10-coordinate evaluation blocks, so
+    # its discovery matrix has rank at most 100.  Higher degrees need more
+    # deterministic blocks before Reynolds seed selection.
+    required_selection_points = (dimension + 9) // 10 + 4
+    while len(scanner.selection_points) < required_selection_points:
+        scanner.selection_points.append(
+            scanner.rng.integers(0, P, size=5, dtype=scanner.selection_points[0].dtype)
+        )
     seeds = scanner.covariant_basis(degree)
-    assert len(seeds) == dimension
+    assert len(seeds) == dimension, (len(seeds), dimension)
     print(f"covariantDimension={len(seeds)}", flush=True)
     equations = scanner.landing_equations(seeds, extra_points=args.extra_points)
     rows = [row for _pivot, row in equations]
@@ -61,6 +69,7 @@ def main():
         "quadratic_monomial_count": len(pairs),
         "landing_equation_rank": len(equations),
         "extra_evaluation_points": args.extra_points,
+        "covariant_selection_point_count": len(scanner.selection_points),
         "seed_labels": [
             {"output": int(seed.output), "exponents": list(seed.exponents)} for seed in seeds
         ],

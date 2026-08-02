@@ -1,0 +1,46 @@
+{
+  "exact_qzeta11": {
+    "factor_list_size_including_unit": 2,
+    "irreducible": true,
+    "log": "t3_disc_factor_qzeta11.log",
+    "records": [
+      {
+        "exponent": 1,
+        "index": 1,
+        "terms": 1,
+        "total_degree": 0
+      },
+      {
+        "exponent": 1,
+        "index": 2,
+        "terms": 719,
+        "total_degree": 15
+      }
+    ],
+    "returncode": 0,
+    "script": "t3_disc_factor_qzeta11.sing",
+    "status": "PASS"
+  },
+  "mod67_zeta9": {
+    "factor_list_size_including_unit": 2,
+    "irreducible": true,
+    "log": "t3_disc_factor_mod67.log",
+    "records": [
+      {
+        "exponent": 1,
+        "index": 1,
+        "terms": 1,
+        "total_degree": 0
+      },
+      {
+        "exponent": 1,
+        "index": 2,
+        "terms": 715,
+        "total_degree": 15
+      }
+    ],
+    "returncode": 0,
+    "script": "t3_disc_factor_mod67.sing",
+    "status": "PASS"
+  }
+}

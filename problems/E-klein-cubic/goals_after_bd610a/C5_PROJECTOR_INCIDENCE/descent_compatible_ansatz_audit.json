@@ -1,0 +1,124 @@
+{
+  "format": "c5-descent-compatible-ansatz-audit-v1",
+  "prime": 23,
+  "zeta11": 2,
+  "scope": "finite-prime, finite-word, finite-support audit; not an all-degree or generic-point verdict",
+  "sources": {
+    "tmp/pfaffian_rank2_idempotent_attack/full_wedge.py": "0c3416fb549906e69da2553af70dd65c2ccd6134a537c4fe5b65caafe6fe9a88",
+    "tmp/fano14_twist/fano_covariant_scan.py": "b3c93a41ed1f8b5106d93717dbad058b6c60af100bcee8138925485dac6f107e",
+    "tmp/generic_twist/phi_coefficients.py": "8c217aeaefe300a76e886f0a94803b5812689574299e1a2c72daeec72efd4525",
+    "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_points_p23.json": "a226f5b506ba9a4ecb53fc7d991fa41a37bf395b853717ccf41eea8b44676d72",
+    "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_a47_chart.json": "49129610562ed3a807bd2c721d197c987cb68b2caf920cad7f2b73e9ec2a43e2",
+    "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/degree17_fano_p23.in": "3cfe7219ca307745fb501c9f9dad09f5d4952c4ab4cd8a1a19849a5aa78a4c40",
+    "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/degree17_fano_p23.json": "7c90ec27efa4286bbbbf5897e84ad7242aefacbcf0b92bdea25767e996be5035"
+  },
+  "descent_compatible_word_ansatz": {
+    "equations": "e0*sigma(g)*S_i*g*e0=0 for i=0,...,4, with rank(g*e0)=2",
+    "sigma": "sigma(g)=q^{-1}*transpose(g)*q",
+    "interpretation": "the image of g*e0 is automatically defined in the accepted Morita model whenever g is a word in the installed endomorphisms",
+    "short_word_screen": {
+      "alphabet": [1, 2, 3, 4],
+      "maximum_word_length": 4,
+      "word_count": 341,
+      "fibres": [
+        [1, 2, 3, 4, 5],
+        [22, 21, 8, 1, 1],
+        [10, 15, 18, 0, 16],
+        [2, 8, 4, 22, 3],
+        [6, 4, 5, 6, 22],
+        [7, 11, 13, 17, 19],
+        [5, 7, 11, 13, 17]
+      ],
+      "single_word_tests": 341,
+      "single_word_survivors": 0,
+      "two_word_scalar_tests": 1275340,
+      "two_word_scalar_survivors": 0,
+      "scalar_range": "c in F_23^* for W+cW' and unordered distinct W,W'"
+    },
+    "constant_twelve_word_screen": {
+      "basis_words": [
+        [],
+        [1],
+        [2],
+        [3],
+        [4],
+        [1, 1],
+        [1, 2],
+        [1, 3],
+        [1, 4],
+        [2, 1],
+        [2, 2],
+        [2, 3]
+      ],
+      "primary_fibre_module_rank": 12,
+      "coefficient_dimension": 12,
+      "quadratic_monomial_count": 78,
+      "fibres": [
+        [1, 2, 3, 4, 5],
+        [22, 21, 8, 1, 1],
+        [3, 1, 14, 13, 5],
+        [2, 13, 11, 14, 22],
+        [10, 11, 11, 14, 22],
+        [13, 13, 22, 12, 10],
+        [7, 21, 3, 6, 12],
+        [11, 6, 11, 11, 7],
+        [21, 9, 10, 17, 5],
+        [17, 20, 3, 11, 16],
+        [10, 9, 7, 8, 1],
+        [8, 8, 16, 9, 9],
+        [15, 4, 20, 20, 1],
+        [6, 5, 16, 6, 20],
+        [2, 11, 10, 21, 18],
+        [10, 3, 4, 2, 13]
+      ],
+      "cumulative_quadratic_ranks": [5, 10, 15, 20, 23, 28, 33, 38, 43, 48, 53, 58, 63, 68, 73, 78],
+      "final_quadratic_rank": 78,
+      "nonzero_constant_coefficient_survivors": 0
+    }
+  },
+  "degree17_sparse_support": {
+    "covariant_dimension": 98,
+    "landing_equation_rank": 1597,
+    "quadratic_monomial_count": 4851,
+    "basis": "installed degree-17 Reynolds basis in degree17_fano_p23.json",
+    "support_sizes": [1, 2, 3, 4],
+    "support_counts": {
+      "1": 98,
+      "2": 4753,
+      "3": 152096,
+      "4": 3612280
+    },
+    "required_restricted_ranks": {
+      "1": 1,
+      "2": 3,
+      "3": 6,
+      "4": 10
+    },
+    "deficient_support_counts": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "projection_certificate": {
+      "rng": "numpy default_rng PCG64",
+      "seed": 20260801,
+      "projection_count": 6,
+      "projection_rows": 10,
+      "logic": "full column rank after any linear projection proves full column rank before projection; any unresolved support is checked against the original matrix"
+    }
+  },
+  "conclusions": [
+    "Over F_23, none of the 341 words of length at most four and none of the 1275340 tested two-word scalar combinations satisfies the genuine isotropy equations on all seven listed regular fibres.",
+    "Over F_23, the full constant-coefficient span of the listed twelve Morita words has only the zero solution to the isotropy identities on the sixteen listed regular fibres.",
+    "Over F_23, no degree-17 coefficient vector supported on at most four installed Reynolds-basis coordinates satisfies the 1597 landing equations."
+  ],
+  "nonconclusions": [
+    "No K_proj-rational point or rational section is constructed.",
+    "The p=23 smooth seed gives only split-fibre and local lifting evidence, not a generic rational point.",
+    "No ansatz with K_proj-rational coefficient functions is excluded.",
+    "No degree-17 empty-projective-scheme verdict is claimed.",
+    "No all-degree obstruction is claimed.",
+    "The index-one zero-cycle information is not upgraded to a rational point."
+  ]
+}

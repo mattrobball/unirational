@@ -1,0 +1,34 @@
+{
+  "backend": "independent balanced-double FFLAS rank plus all-row kernel substitution",
+  "cubic_ranks": {
+    "V0": 690,
+    "V0_plus_W": 746,
+    "W": 56
+  },
+  "formal_ranks": {
+    "combined": 2072,
+    "commutators": 210,
+    "transitions": 2072
+  },
+  "full_kernel_identity_nonzero_coefficients": 0,
+  "full_kernel_rank": 19,
+  "full_multiplication_rank": 27583,
+  "individual_membership": {
+    "commutators_in_S1V0": 0,
+    "transitions_in_S1V0": 0
+  },
+  "kernel_dimension": 19,
+  "kernel_projection_ranks": {
+    "V0": 19,
+    "W": 19
+  },
+  "ok": true,
+  "prime": 89,
+  "quotient_augmented_ranks": {
+    "commutators_plus_kernel": 229,
+    "transitions_plus_kernel": 2072
+  },
+  "quotient_image_dimension": 2053,
+  "selected_multiplication_rank": 27583,
+  "status": "PASS_INDEPENDENT_PC0_REPLAY"
+}

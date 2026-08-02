@@ -1,0 +1,18 @@
+{
+  "inputs": 39,
+  "ok": true,
+  "scope": "This verifies file identity and current sibling-seal state. It does not reprove the mathematical contents of inherited PC.3 artifacts.",
+  "sibling_seals": {
+    "cov_m1_deg31_35_work": {
+      "intact": true,
+      "mismatches": 0,
+      "records": 182
+    },
+    "p25_landing_support": {
+      "intact": true,
+      "mismatches": 0,
+      "records": 48
+    }
+  },
+  "status": "PASS_REPORTED_INPUT_REPLAY"
+}

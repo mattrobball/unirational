@@ -1,0 +1,118 @@
+{
+  "compactification": "coefficient-space P4 with coordinates [L:A:B:Y:T]",
+  "conclusion": "every normalized branch above the sole boundary support has contact 4; no boundary 3-primary contact",
+  "discriminant_residual_degree": 11,
+  "discriminant_top_factors": [
+    [
+      "A",
+      4
+    ],
+    [
+      "19*A + 4*Y",
+      3
+    ],
+    [
+      "106835*A**4 - 1260*A**3*B - 4692*A**3*T + 81807*A**3*Y + 5*A**2*B**2 + 68*A**2*B*T - 532*A**2*B*Y + 368*A**2*T**2 - 1736*A**2*T*Y + 23508*A**2*Y**2 + A*B**2*Y + 16*A*B*T*Y - 56*A*B*Y**2 + 64*A*T**2*Y - 160*A*T*Y**2 + 3004*A*Y**3 + 144*Y**4",
+      1
+    ]
+  ],
+  "edge_weight_2_D_initial": "2985984*Y**7*(4*Y + c**2)**2",
+  "edge_weight_2_factors": [
+    [
+      "Y",
+      22
+    ],
+    [
+      "6*B + 3*T + c**2",
+      2
+    ],
+    [
+      "-192*B**4 + 2784*B**3*T - 64*B**3*c**2 - 2124*B**2*T**2 + 1416*B**2*T*c**2 - 12*B**2*c**4 + 552*B*T**3 - 372*B*T**2*c**2 + 348*B*T*c**4 - 48*T**4 - 8*T**3*c**2 + 69*T**2*c**4 + 36*T*c**6",
+      1
+    ]
+  ],
+  "edge_weight_2_gcd_degree": 0,
+  "edge_weight_3_D_initial": "2985984*Y**7*c**4",
+  "edge_weight_3_factors": [
+    [
+      "T",
+      1
+    ],
+    [
+      "Y",
+      10
+    ],
+    [
+      "c",
+      10
+    ],
+    [
+      "2*Y**2 + c**3",
+      1
+    ],
+    [
+      "27000*Y**10 + 32800*Y**8*c**3 + 12440*Y**6*c**6 + 904*Y**4*c**9 - 172*Y**2*c**12 + c**15",
+      1
+    ]
+  ],
+  "intersection_cycle_check": {
+    "Delta_is_A4_times_a_unit_on_every_normalized_edge_branch": true,
+    "ambient_complete_intersection_multiplicity_at_E_A": 44,
+    "explanation": "i_E(H,Delta)=4*i_E(H,A)=4*ord_L(H(L,0))=44; this cycle multiplicity is not the per-normalization-branch valuation, which is 4",
+    "ord_L_H_at_A_zero": 11
+  },
+  "newton_vertices": [
+    [
+      0,
+      11
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      28,
+      0
+    ]
+  ],
+  "normalization_contact_orders": [
+    {
+      "mod_3": 1,
+      "ramification_index_of_L": 2,
+      "v_A": 1,
+      "v_Delta": 4
+    },
+    {
+      "mod_3": 1,
+      "ramification_index_of_L": 3,
+      "v_A": 1,
+      "v_Delta": 4
+    }
+  ],
+  "only_common_boundary_support": "E_A=(L=A=0)",
+  "schema": "t3-fixed-frame-boundary-contact-v1",
+  "slopes": [
+    "-1/2",
+    "-1/3"
+  ],
+  "target_degree": 39,
+  "target_top_factors": [
+    [
+      "A",
+      28
+    ],
+    [
+      "53*A + 6*Y",
+      2
+    ],
+    [
+      "29*A + 6*Y",
+      6
+    ],
+    [
+      "963*A**3 - 1225*A**2*T + 372*A**2*Y + 54*A*T**2 - 420*A*T*Y + 36*A*Y**2 - 36*T*Y**2",
+      1
+    ]
+  ],
+  "top_gcd": "A^4"
+}

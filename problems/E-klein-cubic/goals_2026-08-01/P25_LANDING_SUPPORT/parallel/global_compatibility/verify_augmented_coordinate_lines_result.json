@@ -1,0 +1,16 @@
+{
+  "certificate_sha256": "ec4230542e561878ed641ba2294abf8012130a9cd13774b92f33bd46c6ce7adc",
+  "coordinate_lines": 666,
+  "full_basis_sha256": "3571e9879bf1af6d6a405d9761522d4253e76e40edd129afd4b9363287d60ca3",
+  "full_p3_sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019",
+  "minor_count_distribution": {
+    "2": 655,
+    "3": 8,
+    "4": 3
+  },
+  "prime": 89,
+  "r66_packet_sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+  "relation_matrix_sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+  "scope": "Exact augmented rank seven for q-support at most two only; no global emptiness conclusion.",
+  "status": "PASS_INDEPENDENT_AUGMENTED_COORDINATE_LINE_REPLAY"
+}

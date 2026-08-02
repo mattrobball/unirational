@@ -1,0 +1,227 @@
+{
+  "format": "a5q-fixed-field-formula-certificate-v1",
+  "class": "A5_class_1",
+  "scope": {
+    "proved_here": "L_1=E^H_1 is generated over K by primitive tau_1, and the exact transported point P_1 has residue field L_1 and defines a reduced degree-11 closed point on X_T",
+    "transport_status": "certified by modular_index11_discovery.json at p=89 with an unused p=199 holdout, then lifted by the nonzero-minor argument in CHARACTERISTIC_ZERO_LIFT.md",
+    "not_claimed": [
+      "a K-rational point on X_T",
+      "a degree-four interpolation solution or residual point",
+      "an A5Q residual-point or rational-curve headline"
+    ]
+  },
+  "installed_sources": {
+    "subgroup_record": "goals_2026-08-01/H_SUBGROUP_TWISTS_ROOT_019FBE10/twists.json:records[label=A5_class_1]",
+    "a5_point_packet": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_1/point.json",
+    "full_schur_frame": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/exact_frame.json"
+  },
+  "galois_object": {
+    "group": "G=PSL_2(F_11)",
+    "group_order": 660,
+    "subgroup": "H_1",
+    "subgroup_order": 60,
+    "subgroup_index": 11,
+    "generic_field": "E=C(P(V6))",
+    "base_field": "K=E^G",
+    "fixed_field": "L_1=E^H_1",
+    "coset_convention": "left cosets H_1*g, evaluated as f(rho6(g)*v)"
+  },
+  "primitive_element": {
+    "name": "tau_1",
+    "definition": "tau_1(v)=N_1(v)/D_1(v)",
+    "linear_form_coefficients_v0_through_v5": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "exponent": 18,
+    "numerator_formula": "N_1(v)=sum_{h in H_1} ell_1(rho6(h)*v)^18",
+    "denominator_formula": "D_1(v)=sum_{g in G} ell_1(rho6(g)*v)^18",
+    "lift_independence": "the exponent is even, so the central Schur-lift sign cancels",
+    "invariance_reindexing": {
+      "numerator": "N_1(rho6(k)*v)=N_1(v) for k in H_1 by h -> h*k",
+      "denominator": "D_1(rho6(k)*v)=D_1(v) for k in G by g -> g*k"
+    }
+  },
+  "exact_resolvent": {
+    "name": "p_1(T)",
+    "formula": "product_{H_1*g in H_1\\G} (T-tau_1(rho6(g)*v))",
+    "degree": 11,
+    "coefficient_field": "K, because G permutes the eleven factors",
+    "coefficient_symbols": [
+      "1",
+      "c_1_10",
+      "c_1_9",
+      "c_1_8",
+      "c_1_7",
+      "c_1_6",
+      "c_1_5",
+      "c_1_4",
+      "c_1_3",
+      "c_1_2",
+      "c_1_1",
+      "c_1_0"
+    ],
+    "coefficient_order": "T^11,T^10,...,T^1,T^0",
+    "field_presentation": "L_1 is isomorphic to K[T]/(p_1(T)), with T mapping to tau_1"
+  },
+  "good_reduction_certificate": {
+    "purpose": "a nonvanishing certificate for D_1 and pairwise distinctness of the eleven exact conjugate rational functions",
+    "prime": 23,
+    "zeta_11_residue": 2,
+    "zeta_check": "2^11=1 mod 23 and 2!=1 mod 23",
+    "schur_vector_v0_through_v5": [
+      22,
+      2,
+      13,
+      21,
+      22,
+      4
+    ],
+    "denominator_value": 11,
+    "numerator_coset_values": [
+      0,
+      1,
+      2,
+      3,
+      11,
+      15,
+      16,
+      17,
+      18,
+      21,
+      22
+    ],
+    "normalized_resolvent_roots_sorted": [
+      0,
+      1,
+      2,
+      4,
+      10,
+      12,
+      14,
+      16,
+      17,
+      19,
+      21
+    ],
+    "monic_resolvent_coefficients_high_to_low": [
+      1,
+      22,
+      5,
+      21,
+      21,
+      12,
+      0,
+      7,
+      3,
+      3,
+      20,
+      0
+    ],
+    "coefficient_order": "T^11,T^10,...,T^1,T^0",
+    "discriminant_mod_23": 16,
+    "replay_equalities": [
+      "each sorted root is a numerator coset value times 11^(-1) modulo 23",
+      "the coefficient list is the product of T-r over the eleven sorted roots modulo 23",
+      "the discriminant is product_{r<s}(root_r-root_s)^2 modulo 23"
+    ],
+    "logical_consequence": "the exact orbit has size 11, so Stab_G(tau_1)=H_1 and K(tau_1)=L_1"
+  },
+  "power_basis_interface": {
+    "basis": [
+      "1",
+      "tau_1",
+      "tau_1^2",
+      "tau_1^3",
+      "tau_1^4",
+      "tau_1^5",
+      "tau_1^6",
+      "tau_1^7",
+      "tau_1^8",
+      "tau_1^9",
+      "tau_1^10"
+    ],
+    "exact_companion_rule": "if p_1=T^11+sum_{r=0}^{10} c_1_r*T^r, then C_1[j+1,j]=1 for 0<=j<10 and C_1[r,10]=-c_1_r",
+    "multiplication_rule": "for a=sum_{r=0}^{10} a_r*tau_1^r, M_1(a)=sum_{r=0}^{10} a_r*C_1^r and coordinates(a*b)=M_1(a)*coordinates(b)",
+    "inverse_rule": "coordinates(a^(-1)) is the solution of M_1(a)*u=e_0 when det(M_1(a)) is nonzero",
+    "trace_rule": "Tr_{L_1/K}(a)=trace(M_1(a))=sum_{H_1*g} a(rho6(g)*v)",
+    "norm_rule": "Nm_{L_1/K}(a)=det(M_1(a))=product_{H_1*g} a(rho6(g)*v)",
+    "orbit_to_power_basis_rule": "solve V*q=a_orbit with V[g,j]=tau_1(rho6(g)*v)^j; discriminant nonzero makes V invertible",
+    "companion_matrix_mod_23_rows": [
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3],
+      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 20],
+      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 20],
+      [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 16],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 11],
+      [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2],
+      [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 2],
+      [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 18],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+    ]
+  },
+  "transport_formula_schema": {
+    "source_frame": "B_1(v)=sum_{h in H_1} sigma_1(h)^(-1)*((rho6(h)*v)_5)^4",
+    "source_point": "Y_1(v)=B_1(v)*e_0 with e_0=(1,0,0)^t",
+    "a5_covariant": "Phi_1 is the exact degree-11 polynomial covariant from the installed A5 point packet",
+    "target_intertwiner": "J_1*r_1(h)=rho5(h)*J_1",
+    "upstairs_point": "x_1(v)=J_1*Phi_1(Y_1(v))",
+    "full_frame": "Q(v)=sum_{g in G} rho5(g)^(-1)*((rho6(g)*v)_5)^8",
+    "descended_point": "P_1(v)=Q(v)^(-1)*x_1(v)",
+    "covariance": [
+      "B_1(rho6(h)*v)=sigma_1(h)*B_1(v)",
+      "Y_1(rho6(h)*v)=sigma_1(h)*Y_1(v)",
+      "x_1(rho6(h)*v)=rho5(h)*x_1(v)",
+      "Q(rho6(h)*v)=rho5(h)*Q(v)",
+      "P_1(rho6(h)*v)=P_1(v)"
+    ],
+    "degree_warning": "11 is the polynomial degree of Phi_1; the field degree 11 comes independently from [G:H_1] and the primitive resolvent"
+  },
+  "satisfied_transport_certificate": {
+    "raw_result": "goal_runs_after_bd610a/A5Q_QUARTIC_RESCUE/modular_index11_discovery.json",
+    "producer": "goal_runs_after_bd610a/A5Q_QUARTIC_RESCUE/discover_modular_index11.py",
+    "characteristic_zero_lift": "goal_runs_after_bd610a/A5Q_QUARTIC_RESCUE/CHARACTERISTIC_ZERO_LIFT.md",
+    "discovery_p89": {
+      "record": "primes[prime=89].class_witness_runs[0].classes[0]",
+      "integer_witness": [22, 2, 13, 21, 22, 4],
+      "det_B": 55,
+      "det_Q": 86,
+      "det_J": 57,
+      "source_projective_stabilizer_order": 1,
+      "projective_noncollision_minor_product": 45,
+      "coordinate_rank": 5,
+      "coordinate_rank_minor_determinant": 60,
+      "pairwise_product_rank": 11,
+      "pairwise_product_rank_minor_determinant": 2
+    },
+    "unused_holdout_p199": {
+      "record": "primes[prime=199].class_witness_runs[0].classes[0]",
+      "integer_witness": [22, 2, 13, 21, 22, 4],
+      "det_B": 55,
+      "det_Q": 179,
+      "det_J": 3,
+      "source_projective_stabilizer_order": 1,
+      "projective_noncollision_minor_product": 6,
+      "coordinate_rank": 5,
+      "coordinate_rank_minor_determinant": 106,
+      "pairwise_product_rank": 11,
+      "pairwise_product_rank_minor_determinant": 147
+    },
+    "raw_replay_gates": [
+      "all rational input denominators are nonzero",
+      "B_1, Q, and J_1 are invertible at the recorded witnesses",
+      "Y_1 has trivial projective H_1-stabilizer",
+      "all eleven canonical and installed cubic landings vanish",
+      "all eleven full-twist point rows are pairwise projectively distinct",
+      "the point-coordinate matrix has rank 5",
+      "the pairwise-product matrix has rank 11"
+    ],
+    "required_marker": "A5Q_INDEX11_CLOSED_POINT_OK",
+    "scoped_exit": "A5Q-INDEX11-CLOSED-POINT-PASS"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "binding_goal": "goals_after_bd610a/GOAL_A5Q_INDEX11_QUARTIC_RESCUE.md",
+  "files": {
+    "CHARACTERISTIC_ZERO_LIFT.md": {
+      "bytes": 4111,
+      "sha256": "b955c83846087c12fdb5b464a51a1482f2531909c4edb1011db9f9bbf8b15271"
+    },
+    "COMPLETION_AUDIT.md": {
+      "bytes": 6134,
+      "sha256": "59b45a2d6048344378334ed0bef9050df26c60807291ca2f0ab4e6f99a5866b9"
+    },
+    "FIELD_L1.json": {
+      "bytes": 7828,
+      "sha256": "440fca40a8d1c42b64f00df71d445519c5e79e42a6190a8dce92eceb6ee5c956"
+    },
+    "FIELD_L2.json": {
+      "bytes": 7821,
+      "sha256": "54d775e1fde7ab42f8a5aa6dd9e5848881ab0473cb6b04be0061dc0e3cad5491"
+    },
+    "INDEX11_POINT_CLASS1.json": {
+      "bytes": 10224,
+      "sha256": "8676b6126444f3c9d379f5db041e8f1f70ac6b30276323239420e700e2a3f5e9"
+    },
+    "INDEX11_POINT_CLASS2.json": {
+      "bytes": 10219,
+      "sha256": "ba566c719844f9780d4f82deace77af12f146b19445e537761e04c31a314381b"
+    },
+    "INPUT_MANIFEST.json": {
+      "bytes": 4470,
+      "sha256": "b1c4705473c29c7d22d999157b7723f3184bb9a17067d7c04e8b29e83a182aba"
+    },
+    "INTERPOLATION_INCIDENCE.md": {
+      "bytes": 14155,
+      "sha256": "e5119e5f9d8cada9dc41607d6d4d74f0891ddf04a20ac0e0a5f823132f33eed5"
+    },
+    "REPLAY.md": {
+      "bytes": 2757,
+      "sha256": "99fc54421dec9bd85b1f555e54f5a2d78cfab9e4072a130390b103385acb3ab7"
+    },
+    "RESIDUAL_IDENTITY.md": {
+      "bytes": 1960,
+      "sha256": "6834f95cc0693197f7a748ebe0d254edda0ee92ec32bc43a0dd525123b34aacf"
+    },
+    "STATUS.md": {
+      "bytes": 3018,
+      "sha256": "d94c6e195138eb099f37076a7319db6a2c90f70bf761c6ba8dff975ec1bf8fb7"
+    },
+    "SUBGROUP_DESCENT.md": {
+      "bytes": 11443,
+      "sha256": "2bbd2e82d06077f363ece4fbf29bd7ad6a812b2cd2c0a1033d198d5824cde190"
+    },
+    "VARIANTS.md": {
+      "bytes": 6288,
+      "sha256": "d3991ccd756954d8f5337b3943eb44f272423fe6ce9af5878f2882a8b9c86e15"
+    },
+    "discover_modular_index11.py": {
+      "bytes": 48260,
+      "sha256": "7bf1f53410889c0343f0964e9cea2398960d4f0ea297d6e8ca9a2d5769979c33"
+    },
+    "make_seal.py": {
+      "bytes": 2604,
+      "sha256": "8ecd0a99ea0e1b95655875b548a7c1cc2a672ee8497ca07a6f53c3f1842b0c86"
+    },
+    "modular_index11_discovery.json": {
+      "bytes": 153191,
+      "sha256": "f33472fd35f1fa1b3ed32466f9d5e9c9d9ff53bc3e00141a2dd781f4d467c7c3"
+    },
+    "produce_packet_artifacts.py": {
+      "bytes": 13092,
+      "sha256": "52e1e763a9a86e6b962334fb2a10fb35373992f95db787fa1fcd26616cfa7e21"
+    },
+    "verify_all.py": {
+      "bytes": 40523,
+      "sha256": "51d25ed43676559025ace42f840b4bc0c55045b550dc7f692ede49639e8cd33d"
+    }
+  },
+  "format": "a5q-quartic-rescue-seal-v1",
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "scope": "two exact transported index-11 points and full degree-four interpolation emptiness for those points only",
+  "terminal_markers": [
+    "A5Q_INDEX11_CLOSED_POINT_OK",
+    "A5Q-INDEX11-CLOSED-POINT-PASS",
+    "A5Q-DEGREE4-RESCUE-EMPTY-SCOPED"
+  ]
+}

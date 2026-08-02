@@ -1,0 +1,69 @@
+{
+  "degree4_ledger": {
+    "full_degree4_kernel_dimension": 0,
+    "independent_candidate_rows": 29880,
+    "new_commutator_generators": 210,
+    "new_transition_generators": 4140,
+    "old_q_seed_rows": 25530
+  },
+  "formal_projection": {
+    "W_sha256": "3b14bf3bf1b145a2f71d62c9b9678f36904ebcf0f00573a5dddfaa0b1c503bbe",
+    "commutator_rank": 210,
+    "commutator_sha256": "56aa3a77777525ff4fb3c1f1b5df83fc37b385557380dbcac34ceae99d006fe6",
+    "extra_rank": 2072,
+    "formal_dependency_dimension": 2278,
+    "tail_to_W_sha256": "ce0754ab23a3a41b15057d24003d794d463cce89a0a169af610f5c9cd7bfe4f7",
+    "transition_rank": 2072,
+    "transition_sha256": "334975f81d101dd2abd5e1e7ad08b3eaddfd4f8e6511fec0efb89e54c0db62e4"
+  },
+  "inputs": {
+    "certificates/degree25_finite_module/multiplication_matrices.npz": "cdee1a9cd2989f2d17e7771321b49723d8a9dfc71d2bd5a791f83a30142aa418",
+    "certificates/degree25_finite_module/relation_matrix.npz": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+    "certificates/degree25_finite_module/rewrite_rules.npz": "9dd25476c3927e533b2587e5048028ad0304141d6849f6649ca921ed5d057028",
+    "pc0_multiplication_kernel.npz": "d08b22ea873111a3849fd03c16374d7ee83fce775f974b0ccde7db8f6a64830a",
+    "pc0_rank_certificate.json": "6325b84e9ee5b429041bf7d551a937a75033ff9b224d44b4d903bfee886ed790",
+    "pc1_coupled_degree4.json": "b739639dc5aa575017fe19bdc804ee190f8f07dfeea21449fbbb6e1a4412d380",
+    "pc1_coupled_degree4_certificate.npz": "bf80f407629bcf285fc9e3765fc09c3e0783abce36173ad31792af075958f38a",
+    "produce_pc1_coupled_degree4.py": "a73c50c658c57e4a4666120b31dd9072eac8a977d2f24e4a27eb335c9eac5603",
+    "verify_pc1_coupled_degree4.py": "b455f27f3e3400ed13cf28025d89d476dd1aa8237894bb358a3e660e18fb7bd5"
+  },
+  "ok": true,
+  "prime": 89,
+  "pure_q_kernel_witness": {
+    "dependency_sha256": "a8ce87be6442094dd7596b653e7ffa7b45149cb422189c9dddf11f3bbfa0b85b",
+    "formal_dependencies": 2278,
+    "lifted_pc0_dependencies": 19,
+    "total_dimension": 2297
+  },
+  "selected_coupled_residual": {
+    "F4_offsets_sha256": "ed30d630449c0b9b4ff2885f45c84bfafdc54ec455b2b3ca7b90e03bf5c1cf87",
+    "candidate_restriction_sha256": "9ec493d8c5b8b25a47f7db480974c3c7b1ac9690fe61a2724da32e2e713ebbf3",
+    "rank": 2297,
+    "rank_backend": "FLINT nmod_mat_rank over F_89, independent of producer FFLAS-FFPACK",
+    "residual_sha256": "e0d2c4938f10c61cb2a0dc6a6a41c24b140474b177d3572c7a3c08974163c407",
+    "residual_shape": [
+      2297,
+      3000
+    ],
+    "selected_columns": 3000,
+    "selection_seed": 2026080126
+  },
+  "status": "PASS_INDEPENDENT_PC1_COUPLED_DEGREE4_REPLAY",
+  "theorem_boundary": {
+    "does_not_prove": "T-stability in degree five or above, a finite stabilization or regularity bound, representation characters, projective support, or any characteristic-zero statement.",
+    "proves": "Exactly over F_89, the 315 raw quadratic commutators have a 105-dimensional universal cycle space and rank 210.  After one commutator basis is selected, the 29,880 coupled degree-four candidate relations are linearly independent."
+  },
+  "universal_commutator_cycles": {
+    "all_coordinate_factorization_checked": true,
+    "canonical_cycle_basis_sha256": "7525ff11d843ecaf6c31b50c484012f42a214efd6258c6b8334773a7b06c7042",
+    "cycle_dimension": 105,
+    "incidence_rank": 210,
+    "incidence_sha256": "f41b6156202ad331f33b4eb2ee153d2177416cd8626dc1dfe8dc0460da00df6d",
+    "path_inputs_sha256": "2ff1bb1767d9abf64a9bebc3d9e0365af25684900606d773b61d1a723751f607",
+    "path_nodes": 336,
+    "quartic_components": 126,
+    "raw_edges": 315,
+    "selected_path_images_sha256": "4aaee5f50c3bf08eed2012435b4ab2307c2a88143dd046d2cf031c0683c845a7",
+    "stored_cycle_basis_sha256": "7525ff11d843ecaf6c31b50c484012f42a214efd6258c6b8334773a7b06c7042"
+  }
+}

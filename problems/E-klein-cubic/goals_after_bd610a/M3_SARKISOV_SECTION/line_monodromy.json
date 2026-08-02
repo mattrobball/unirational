@@ -1,0 +1,994 @@
+{
+  "characteristic_zero_consequence": {
+    "reason": "At two integral good specializations the frame denominators are units, the discriminant is squarefree of degree 24, the critical Jacobian is invertible at all 24 points, and the fibre at infinity is smooth. These are nonvanishing open conditions.",
+    "statement": "The exact generic characteristic-zero pencil has geometric discriminant degree 24 with 24 distinct transverse A1 fibres.",
+    "status": "certified open-condition consequence"
+  },
+  "component_status": "LEFSCHETZ-AND-CONDITIONAL-WEYL-REDUCTION-CERTIFIED",
+  "good_reduction_lefschetz_certificates": [
+    {
+      "finite_base_chart": {
+        "a0_zero_projective_complement_empty": {
+          "a1": true,
+          "a2": true,
+          "u": true
+        },
+        "affine_critical_length": 24,
+        "base_derivative_nonzero_at_every_critical_point": true,
+        "critical_length": 24,
+        "critical_projective_chart": "a0=1",
+        "discriminant_coefficients_ascending_mod_p": [
+          14,
+          8,
+          17,
+          12,
+          20,
+          4,
+          10,
+          14,
+          10,
+          9,
+          20,
+          16,
+          12,
+          4,
+          12,
+          6,
+          17,
+          9,
+          17,
+          3,
+          21,
+          12,
+          0,
+          2,
+          1
+        ],
+        "discriminant_degree": 24,
+        "discriminant_gcd_derivative_degree": 0,
+        "discriminant_sha256": "09bead32786f01f91c3f61b381ad56fe3a821b9f83de0f9f3e83bc7b4b7f517d",
+        "discriminant_variable": "q=s/t",
+        "distinct_singular_fibres": 24,
+        "elimination_ideal_size": 1,
+        "factor_degrees_over_Fp": [
+          {
+            "degree": 4,
+            "multiplicity": 1
+          },
+          {
+            "degree": 6,
+            "multiplicity": 1
+          },
+          {
+            "degree": 14,
+            "multiplicity": 1
+          }
+        ],
+        "four_by_four_critical_jacobian_nonzero_at_every_point": true,
+        "one_critical_point_per_singular_fibre": true,
+        "spatial_hessian_nonzero_at_every_critical_point": true,
+        "transverse_A1_fibre_count": 24
+      },
+      "good_frame_checks": {
+        "I8_mod_p": 10,
+        "I8_nonzero": true,
+        "frame_determinant_mod_p": 21,
+        "frame_determinant_nonzero": true
+      },
+      "infinite_base_chart": {
+        "base_chart": "s=1, r=t/s",
+        "coordinate_substitution": "a3=u, a4=r*u",
+        "fibre_at_infinity": "r=0",
+        "fibre_at_infinity_smooth": true,
+        "projective_gradient_unit_by_chart": {
+          "a0": true,
+          "a1": true,
+          "a2": true,
+          "u": true
+        }
+      },
+      "prime": 23,
+      "source_witness": [
+        22,
+        2,
+        13,
+        21,
+        22,
+        4
+      ]
+    },
+    {
+      "finite_base_chart": {
+        "a0_zero_projective_complement_empty": {
+          "a1": true,
+          "a2": true,
+          "u": true
+        },
+        "affine_critical_length": 24,
+        "base_derivative_nonzero_at_every_critical_point": true,
+        "critical_length": 24,
+        "critical_projective_chart": "a0=1",
+        "discriminant_coefficients_ascending_mod_p": [
+          60,
+          64,
+          16,
+          58,
+          48,
+          51,
+          7,
+          52,
+          40,
+          66,
+          40,
+          39,
+          15,
+          2,
+          60,
+          50,
+          59,
+          13,
+          34,
+          59,
+          5,
+          66,
+          60,
+          13,
+          1
+        ],
+        "discriminant_degree": 24,
+        "discriminant_gcd_derivative_degree": 0,
+        "discriminant_sha256": "04f1c9979a6efe5d841f4384f74edeacdb0ded618a8b61b2bfa7f0d3f34fd2aa",
+        "discriminant_variable": "q=s/t",
+        "distinct_singular_fibres": 24,
+        "elimination_ideal_size": 1,
+        "factor_degrees_over_Fp": [
+          {
+            "degree": 1,
+            "multiplicity": 1
+          },
+          {
+            "degree": 4,
+            "multiplicity": 1
+          },
+          {
+            "degree": 4,
+            "multiplicity": 1
+          },
+          {
+            "degree": 6,
+            "multiplicity": 1
+          },
+          {
+            "degree": 9,
+            "multiplicity": 1
+          }
+        ],
+        "four_by_four_critical_jacobian_nonzero_at_every_point": true,
+        "one_critical_point_per_singular_fibre": true,
+        "spatial_hessian_nonzero_at_every_critical_point": true,
+        "transverse_A1_fibre_count": 24
+      },
+      "good_frame_checks": {
+        "I8_mod_p": 59,
+        "I8_nonzero": true,
+        "frame_determinant_mod_p": 50,
+        "frame_determinant_nonzero": true
+      },
+      "infinite_base_chart": {
+        "base_chart": "s=1, r=t/s",
+        "coordinate_substitution": "a3=u, a4=r*u",
+        "fibre_at_infinity": "r=0",
+        "fibre_at_infinity_smooth": true,
+        "projective_gradient_unit_by_chart": {
+          "a0": true,
+          "a1": true,
+          "a2": true,
+          "u": true
+        }
+      },
+      "prime": 67,
+      "source_witness": [
+        22,
+        2,
+        13,
+        21,
+        22,
+        4
+      ]
+    }
+  ],
+  "input": {
+    "base_field": "K=C(P(V6))^PSL2(F11)",
+    "generic_fibre": "Phi_numerator(a0,a1,a2,q*u,u)=0 over K(q)",
+    "path": "fibration_model.json",
+    "sha256": "1c4dadce593853e6233ea00565f5d6ae0ea6063e9373dd2d59a30f6edbeb0d1f"
+  },
+  "installed_generic_fibre_picard_input": {
+    "calculation": "Pic(Y)=Z*H + Z*D and the fibre class is L=H-D. Thus the relative quotient is generated by H|S=-K_S.",
+    "conclusion": "Pic(S) = Z*(-K_S)",
+    "kind": "installed geometric input, not inferred from node computation",
+    "source": [
+      "../goal_runs_after_35fa/M_SARKISOV/THEOREM.md:Theorem M2.1",
+      "../goal_runs_after_35fa/M_SARKISOV/DIVISOR_COX.md:Picard and intersections"
+    ]
+  },
+  "integral_W_E6_lattice": {
+    "H1_full_Weyl_group": {
+      "Z1_rank": 6,
+      "coboundary_matrix_sha256": "c0202c2cea854372c8c85185451c5eb10291641c6292596b601ff452098ef23f",
+      "coboundary_rank": 6,
+      "cocycle_unknown_count": 42,
+      "conclusion": "H^1(W(E6), Pic(S_bar)) = 0",
+      "coxeter_relation_count": 21,
+      "coxeter_relation_ledger": [
+        {
+          "name": "s1^2",
+          "word_zero_based": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "s2^2",
+          "word_zero_based": [
+            1,
+            1
+          ]
+        },
+        {
+          "name": "s3^2",
+          "word_zero_based": [
+            2,
+            2
+          ]
+        },
+        {
+          "name": "s4^2",
+          "word_zero_based": [
+            3,
+            3
+          ]
+        },
+        {
+          "name": "s5^2",
+          "word_zero_based": [
+            4,
+            4
+          ]
+        },
+        {
+          "name": "s6^2",
+          "word_zero_based": [
+            5,
+            5
+          ]
+        },
+        {
+          "name": "(s1s2)^3",
+          "word_zero_based": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "name": "(s1s3)^2",
+          "word_zero_based": [
+            0,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "name": "(s1s4)^2",
+          "word_zero_based": [
+            0,
+            3,
+            0,
+            3
+          ]
+        },
+        {
+          "name": "(s1s5)^2",
+          "word_zero_based": [
+            0,
+            4,
+            0,
+            4
+          ]
+        },
+        {
+          "name": "(s1s6)^2",
+          "word_zero_based": [
+            0,
+            5,
+            0,
+            5
+          ]
+        },
+        {
+          "name": "(s2s3)^3",
+          "word_zero_based": [
+            1,
+            2,
+            1,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "name": "(s2s4)^2",
+          "word_zero_based": [
+            1,
+            3,
+            1,
+            3
+          ]
+        },
+        {
+          "name": "(s2s5)^2",
+          "word_zero_based": [
+            1,
+            4,
+            1,
+            4
+          ]
+        },
+        {
+          "name": "(s2s6)^2",
+          "word_zero_based": [
+            1,
+            5,
+            1,
+            5
+          ]
+        },
+        {
+          "name": "(s3s4)^3",
+          "word_zero_based": [
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "(s3s5)^2",
+          "word_zero_based": [
+            2,
+            4,
+            2,
+            4
+          ]
+        },
+        {
+          "name": "(s3s6)^3",
+          "word_zero_based": [
+            2,
+            5,
+            2,
+            5,
+            2,
+            5
+          ]
+        },
+        {
+          "name": "(s4s5)^3",
+          "word_zero_based": [
+            3,
+            4,
+            3,
+            4,
+            3,
+            4
+          ]
+        },
+        {
+          "name": "(s4s6)^2",
+          "word_zero_based": [
+            3,
+            5,
+            3,
+            5
+          ]
+        },
+        {
+          "name": "(s5s6)^2",
+          "word_zero_based": [
+            4,
+            5,
+            4,
+            5
+          ]
+        }
+      ],
+      "generic_fibre_applicability": "NOT ESTABLISHED: requires proof that the actual arithmetic line monodromy is the full W(E6).",
+      "integral_relation_matrix_rank_Q": 36,
+      "integral_relation_matrix_sha256": "8b2f8f5a1a65ea343e2dcf62b8a4decdebe1012166f91b16084f36cbf493c182",
+      "integral_relation_matrix_shape": [
+        147,
+        42
+      ],
+      "saturation_argument": "The rank-six coboundary image has a 6x6 minor of determinant +/-1, so it is saturated in Z^42. The Coxeter relation matrix has kernel rank six and contains that image; hence Z1=B1 integrally.",
+      "status": "proved for the abstract full W(E6) action only",
+      "unimodular_minor": {
+        "determinant": -1,
+        "omitted_source_column_zero_based": 1,
+        "source_columns_zero_based": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "target_rows_zero_based": [
+          1,
+          9,
+          17,
+          25,
+          33,
+          35
+        ]
+      }
+    },
+    "anticanonical_vector": [
+      3,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "basis": [
+      "h",
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6"
+    ],
+    "coxeter_diagram_edges_zero_based": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "group_enumeration": {
+      "enumerated_group_order": 51840,
+      "line_class_orbit_size": 27,
+      "root_orbit_size": 72,
+      "sorted_matrix_set_sha256": "7f4a519c283eb6131198e348e0b38cd5358590f031430312bc654144b78c0410"
+    },
+    "integral_invariants": {
+      "conclusion": "Pic^W(E6) = Z*(-K)",
+      "primitive_kernel_generator": [
+        3,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "stacked_generator_minus_identity_rank_Q": 6,
+      "stacked_generator_minus_identity_shape": [
+        42,
+        7
+      ]
+    },
+    "intersection_form_diagonal": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "simple_reflection_matrices": [
+      [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          2,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    ],
+    "simple_roots": [
+      [
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "obstruction_ledger": {
+    "actual_algebraic_Brauer_quotient": "UNRESOLVED: Pic(S)=Z*(-K) determines invariants but does not determine H^1 of the unknown Galois subgroup.",
+    "actual_arithmetic_27_line_monodromy": "UNRESOLVED",
+    "actual_geometric_27_line_monodromy": "UNRESOLVED",
+    "conditional_full_Weyl_Brauer_quotient": "If the actual action is full W(E6), the lattice certificate gives H^1(W(E6),Pic)=0 and hence the corresponding algebraic Brauer quotient vanishes (subject to the standard Hochschild-Serre edge).",
+    "elementary_obstruction": {
+      "bezout_identity": "37*3 - 2*55 = 1",
+      "conclusion": "zero-cycle of degree one; elementary obstruction vanishes",
+      "installed_zero_cycle_degrees": [
+        3,
+        55
+      ],
+      "warning": "This is not a rational-point or section theorem."
+    },
+    "external_theorem_boundary": "Universal cubic-surface monodromy is W(E6), but applying that universal result to this special one-parameter pencil requires a surjectivity/generality or labelled-transport argument not present in the installed packet.",
+    "external_theorem_inputs_not_promoted_to_computation": [
+      {
+        "reference": "P. Deligne, La formule de Picard-Lefschetz, SGA 7 II, Expose XV, Theoreme 3.4, LNM 340 (1973)",
+        "scope": "A transverse ordinary quadratic singularity has local Picard-Lefschetz reflection monodromy.",
+        "used_here": "Only to interpret each certified A1 critical point as a local reflection; it does not identify the generated group."
+      },
+      {
+        "reference": "J. Harris, Galois groups of enumerative problems, Duke Math. J. 46 (1979), 685-724, section III.2, doi:10.1215/S0012-7094-79-04635-0",
+        "scope": "The universal 27-line cover of smooth cubic surfaces has group W(E6).",
+        "used_here": "Boundary reference only; no theorem in the certificate shows that this special pencil surjects onto universal monodromy."
+      }
+    ],
+    "why_nodes_do_not_close_monodromy": "The 24 local Picard-Lefschetz reflections are not labelled as permutations of the 27 lines, and their generated subgroup has not been computed. Transverse A1 fibres alone do not prove W(E6)."
+  },
+  "schema": "m3-line-monodromy-and-brauer-boundary-v1",
+  "scope": "Exact Lefschetz good-reduction certificate plus an abstract integral W(E6)-lattice calculation; not a 27-line monodromy certificate."
+}

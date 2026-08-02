@@ -1,0 +1,82 @@
+{
+  "schema": "h-trace-constant-five-coordinate-two-basis-v1",
+  "theorem_id": "H_TRACE_CONSTANT_FIVE_COORDINATE_TWO_BASIS_EXCLUSION",
+  "marker": "H_TRACE_CONSTANT_FIVE_COORDINATE_TWO_BASIS_EXCLUSION_OK",
+  "field": "K=C(U1,U2,U3,U4), E=K(alpha), alpha^5=U1, sigma(alpha)=epsilon*alpha",
+  "trace_model": "Phi(a)=Tr_E/K(r2^-1*a^2*sigma(a)), with r2^-1=R3/R2",
+  "families": {
+    "kummer": {
+      "normalized_ansatz": "a=R2*b, b=sum_(i=0)^4 c_i*alpha^i, c_i in C",
+      "equation": "Tr_E/K(H*b^2*sigma(b))=0, H=R2*R3^2",
+      "u_coefficient_equations": 55,
+      "total_cubic_terms": 245,
+      "conclusion": "the coefficient scheme in P^4_C is empty"
+    },
+    "r_basis": {
+      "ansatz": "a=sum_(i=0)^4 c_i*R_i, c_i in C",
+      "clearing_identity": "N*Phi(a)=Tr_E/K(R0*R1*R3^2*R4*a^2*sigma(a)), N=product_i R_i != 0",
+      "u_coefficient_equations": 99,
+      "total_cubic_terms": 3444,
+      "conclusion": "the coefficient scheme in P^4_C is empty"
+    }
+  },
+  "reductions": {
+    "11": {
+      "epsilon_image": 3,
+      "kummer": {
+        "nonzero_equations": 52,
+        "chart_empty": [true, true, true, true, true],
+        "all_five_charts_empty": true
+      },
+      "r_basis": {
+        "nonzero_equations": 99,
+        "chart_empty": [true, true, true, true, true],
+        "all_five_charts_empty": true
+      }
+    },
+    "31": {
+      "epsilon_image": 2,
+      "kummer": {
+        "nonzero_equations": 55,
+        "chart_empty": [true, true, true, true, true],
+        "all_five_charts_empty": true
+      },
+      "r_basis": {
+        "nonzero_equations": 99,
+        "chart_empty": [true, true, true, true, true],
+        "all_five_charts_empty": true
+      }
+    }
+  },
+  "certificate": {
+    "method": "For each homogeneous coefficient ideal and each j=0,...,4, Singular proves 1 belongs to the dehomogenized ideal c_j=1. The five charts cover projective coefficient space over the algebraic closure.",
+    "lifting": "A nonempty characteristic-zero projective coefficient scheme would have nonempty special fibre at every good prime by properness. Either empty special fibre therefore excludes a characteristic-zero constant vector; both primes are replayed independently.",
+    "primes_are_independent": true
+  },
+  "source_hashes": {
+    "field_model.json": "80fdc908633595d6bb3c292d0027aa66295a850b9b6a12cc473f90e3e373ba1e",
+    "FIELD_MODEL.md": "a294d808585cb550cfe60c08559f4a8bc027977bf6292d83833a6efb2e22e745",
+    "NORM_MODEL.md": "566448f33a3157c0e3ff2a5976b7af27e65440efa408442dd262ff5f933af5fd",
+    "TWIST_MODEL.md": "f4c780fefe0dbd32a1f74fe6cad8fc2493b1210ca51e83a552624f05594f9b48"
+  },
+  "producer_hash": "fd76b6f315a60086bac5ac3ee2ed507d02a276eba6b8d54968f75f29ab8f3325",
+  "verifier_hash": "0809092b01294a14b5e0163758fc0ca7d92ec3866ec75957388c5f56f807bee6",
+  "program_hashes": {
+    "constant_kummer_p11.sing": "afff727b049e03693c7dfab89f0997b60e28feb4b1d76cac722fd0411f47707b",
+    "constant_kummer_p31.sing": "30da719303760722eb9cd13ec59e6c0653897db7d764f600b4c8736dedb04e41",
+    "constant_r_basis_p11.sing": "338b49fec4b37b66d3e93d6bf914d796cc1224ed97d7550f129771ff902c0529",
+    "constant_r_basis_p31.sing": "67cf365ec5f620ea4c7e509e954a0f3a3e590e313802a6de07922381908c9433"
+  },
+  "scope": {
+    "proved": [
+      "no nonzero constant vector in the normalized five-coordinate Kummer basis",
+      "no nonzero constant vector in the five-coordinate R_i basis"
+    ],
+    "not_proved": [
+      "exclusion of coefficients in K=C(U1,U2,U3,U4)",
+      "exclusion of other structured rational-function or Laurent families",
+      "pointlessness of the trace cubic",
+      "pointlessness of the twisted Klein cubic"
+    ]
+  }
+}

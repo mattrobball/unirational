@@ -1,0 +1,42 @@
+{
+  "format": "q-schur-a5-degree11-rnc-incidence-seal-v1",
+  "marker": "Q_SCHUR_A5_DEGREE11_RNC_INCIDENCE_EXACT",
+  "status": "Q-UNDECIDED",
+  "binary_headline_resolved": false,
+  "rnc_point_constructed": false,
+  "proved": [
+    "A K-defined noncontained rational normal quartic through the reduced degree-11 A5 orbit leaves a K-rational residual intersection point.",
+    "On the seven-point general-position chart the unique rational normal quartic and all four remaining membership conditions are explicit.",
+    "The transverse geometric incidence locus has dimension 21 and is generically degree 120 over an open subset of X^7.",
+    "Odd degree 11 splits the genus-zero quartic after it exists, but does not force the incidence variety to have a K-point.",
+    "The six installed constant A5 landing maps are already excluded by upstream quadric-rank 11 certificates."
+  ],
+  "remaining_open_chart": [
+    "A=[z0 z1 z2 z3 z4] is invertible.",
+    "All coordinates of a=A^-1 z5 are nonzero.",
+    "For v=diag(a_i^-1)A^-1 z6, all v_i are nonzero and pairwise distinct."
+  ],
+  "remaining_rank_conditions": [
+    "rank((v_i*w_i^(7),-v_i,w_i^(7))_{i=0}^4)<=2",
+    "rank((v_i*w_i^(8),-v_i,w_i^(8))_{i=0}^4)<=2",
+    "rank((v_i*w_i^(9),-v_i,w_i^(9))_{i=0}^4)<=2",
+    "rank((v_i*w_i^(10),-v_i,w_i^(10))_{i=0}^4)<=2"
+  ],
+  "strict_nonclaims": [
+    "No L-point satisfying the four rank conditions is constructed.",
+    "No theorem makes geometric nonemptiness imply a K-point.",
+    "No rationality or rational-connectedness theorem for the descended incidence variety is proved.",
+    "No exhaustive search over all rational source sections of the A5 map is claimed.",
+    "No positive or negative Schur headline is claimed."
+  ],
+  "files": {
+    "A5_DEGREE11_RNC.md": "c43a6e6d26c248d20ec287cb7655afeecd8be719adca674f8902c1cca6d49643",
+    "REPLAY.md": "57e2a1e4143b9f651ddd4e070772a6ff9fb19051592f69b6a5ae44930ba983e6",
+    "verify_a5_rnc_chart.py": "f90de8d2dc359fcca7f31b3366a4379ddd607f1c47a2c6a8362c11202700c1b5"
+  },
+  "upstream_dependencies": {
+    "../a5_degree11_cycle_next/SEAL.json": "3f026535baa292d744f7e1ea46e85b36addb98140e25508126fdfb02a16421ef",
+    "../degree11_secant_descent_agent/REPORT.md": "644dcff6e4acb35243113d07280878057820672d533ccc8f0c96556d00a42957",
+    "../degree11_secant_descent_agent/SEAL.json": "f0e61e30caa37469f5bb4edf11b53ae67fa0a3558339e5b283c10ec2fb15ba57"
+  }
+}

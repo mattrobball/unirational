@@ -1,0 +1,15 @@
+{
+  "artifact_sha256": "b96b734f99c31f457a94dd0eda0e56da6b670c76945a857e57480f9f37da50dd",
+  "b1_code_distance": 29,
+  "q_code_distance": 6,
+  "scope_guard": "Finite-cover theorem only; no chart emptiness and no Stage-C conclusion.",
+  "status": "PASS_INDEPENDENT_STAGEB_MDS34_COVER_REPLAY",
+  "support_intersection_lower_bound": 1,
+  "systematic_chart_census": {
+    "coordinate_q_coordinate_b1": 6,
+    "coordinate_q_dense_b1": 23,
+    "dense_q_dense_b1": 5,
+    "total": 34
+  },
+  "theorem": "The 34 opens D(l_k(h)m_k(b1)) cover D(H8) x P5_b1 over algebraic_closure(F_89)."
+}

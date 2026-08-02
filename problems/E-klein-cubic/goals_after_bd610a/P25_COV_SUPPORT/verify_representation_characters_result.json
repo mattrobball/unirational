@@ -1,0 +1,26 @@
+{
+  "coefficient_side_action": "trivial",
+  "coefficient_side_class_count": 8,
+  "coefficient_side_group": "PSL_2(F_11)",
+  "finite_nonminimal_stabilization_proved_by_separate_border_packet": true,
+  "minimal_state_carrier_dimension": 28,
+  "ok": true,
+  "prime": 89,
+  "pure_K_permutations_preserving_rewrite_tensor": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  "pure_K_permutations_tested": 720,
+  "status": "PASS_PC1_REPRESENTATION_CHARACTERS_SCOPED",
+  "theorem_boundary": {
+    "does_not_prove": "This representation packet does not replay the separately certified finite nonminimal border stabilization. It does not prove a nontrivial character-block decomposition, a complete minimal relation presentation, projective support, or a characteristic-zero landing statement.",
+    "proves": "The only canonical coefficient-side finite-group action is trivial; exact trivial character ledgers are recorded. The actual nontrivial D12 source/jet characters are separated from the coefficient module. No nontrivial pure-K permutation with Q fixed preserves the sealed rewrite tensor. The 28-state carrier is minimal over S."
+  },
+  "transition_stabilization_replayed_by_this_verifier": false
+}

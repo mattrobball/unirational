@@ -1,0 +1,14 @@
+T=QQ[a,t,b];
+P0=a*b+t^2;
+PA0=diff(a,P0);
+Pt0=diff(t,P0);
+kk=frac(QQ[A,u]);
+R=kk[B];
+phi=map(R,T,{A,u,B});
+P=phi P0;
+PA=phi PA0;
+Pt=phi Pt0;
+<< P << endl;
+<< PA << endl;
+<< Pt << endl;
+exit 0;

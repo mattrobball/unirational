@@ -1,0 +1,26 @@
+{
+  "cas_launched": false,
+  "certificate": {
+    "bytes": 3109618,
+    "file": "module_preconditioner.npz",
+    "sha256": "e6d2fd11f0c782bf8533878eb41f9234675e573846956ecceb52834e54e0cc5d"
+  },
+  "criterion": "A completed full=1 proves N=R^6 on q0=1 and excludes all Stage-B b1 directions there.",
+  "include": {
+    "bytes": 48454332,
+    "file": "r66_stageB_q0_1_module_preconditioned.inc",
+    "sha256": "b6623ecdca332700709e7400997dd5ae0156afca2e4c9fda72f6327e08953a4f"
+  },
+  "job": {
+    "bytes": 1030,
+    "file": "r66_stageB_q0_1_all_b_module_preconditioned_std_notBuckets.sing",
+    "sha256": "09e393aec8b996b55b601c08a098c420d0ebac9c6079ca1e2e55ab4d92c28917"
+  },
+  "packet_sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+  "pivot_block_identity": true,
+  "pivot_count": 66,
+  "prime": 89,
+  "proof": "The invertible constant 66x66 transform preserves the row module exactly.",
+  "status": "PREPARED_NOT_RUN",
+  "transform_rank": 66
+}

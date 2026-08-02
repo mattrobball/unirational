@@ -1,0 +1,19 @@
+{
+  "b_flag_index": 0,
+  "b_zero_coordinates": [],
+  "criterion": "A completed exact Groebner basis equal to [1] proves this affine q/b flag chart empty over the algebraic closure of F_89. Any timeout, resource stop, nonunit basis, or incomplete output is a nonverdict.",
+  "equations": 66,
+  "input": "r66_stageB_qflag00_bflag0.ms",
+  "input_bytes": 41537116,
+  "input_sha256": "9fc5d17aeb9c2bf1341c0871ffd1e0fce07682701a1490a12b2f64ed3378f34b",
+  "prime": 89,
+  "printed_terms": 2363052,
+  "q_flag_index": 0,
+  "q_unit_coordinate": 0,
+  "q_zero_coordinates": [],
+  "r66_packet": "parallel/global_compatibility/support_augmented_r66_stageBC.npz",
+  "r66_packet_sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+  "stage": "B",
+  "status": "PASS_R66_AFFINE_INCIDENCE_PREPARED",
+  "variables": 41
+}

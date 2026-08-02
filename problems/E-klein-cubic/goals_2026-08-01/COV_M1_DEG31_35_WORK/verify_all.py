@@ -16,6 +16,7 @@ import importlib.util
 import json
 import math
 from pathlib import Path
+import struct
 import sys
 
 import numpy as np
@@ -129,6 +130,28 @@ def determinant_mod(matrix: np.ndarray, prime: int) -> int:
         value.shape[1], True,
     )
     return int(round(result)) % prime
+
+
+def rank_mod_ffpack_int32(matrix: np.ndarray, prime: int) -> int:
+    """Exact rank for a large dense matrix via the independent C interface."""
+    value = np.asarray(matrix, dtype=np.int32, order="C").copy()
+    row_permutation = np.empty(value.shape[0], dtype=np.uintp)
+    column_permutation = np.empty(value.shape[1], dtype=np.uintp)
+    function = ctypes.CDLL(FFPACK).RowEchelonForm_modular_int32_t
+    function.argtypes = [
+        ctypes.c_int32, ctypes.c_size_t, ctypes.c_size_t,
+        ctypes.POINTER(ctypes.c_int32), ctypes.c_size_t,
+        ctypes.POINTER(ctypes.c_size_t), ctypes.POINTER(ctypes.c_size_t),
+        ctypes.c_bool, ctypes.c_int, ctypes.c_bool,
+    ]
+    function.restype = ctypes.c_size_t
+    return int(function(
+        prime, value.shape[0], value.shape[1],
+        value.ctypes.data_as(ctypes.POINTER(ctypes.c_int32)), value.shape[1],
+        row_permutation.ctypes.data_as(ctypes.POINTER(ctypes.c_size_t)),
+        column_permutation.ctypes.data_as(ctypes.POINTER(ctypes.c_size_t)),
+        False, 2, True,
+    ))
 
 
 def evaluate_sparse(terms, nodes: np.ndarray, prime: int,
@@ -1263,6 +1286,1375 @@ def nullspace_mod_for_verifier(matrix: np.ndarray, prime: int) -> np.ndarray:
     return kernel
 
 
+def c3_gate_from_values(values: np.ndarray, root: np.ndarray,
+                        dimension: int, prime: int) -> np.ndarray:
+    if not len(root):
+        return values.reshape(-1, dimension) % prime
+    pivot = int(np.flatnonzero(root)[0])
+    return np.concatenate([
+        root[pivot] * values[:, output, :] - root[output] * values[:, pivot, :]
+        for output in range(5) if output != pivot
+    ], axis=0) % prime
+
+
+def klein_gradient_for_verifier(root: np.ndarray, prime: int) -> np.ndarray:
+    return np.asarray([
+        2 * int(root[index]) * int(root[(index + 1) % 5])
+        + int(root[(index - 1) % 5]) ** 2
+        for index in range(5)
+    ], dtype=np.int64) % prime
+
+
+def third_lower_matrix_for_verifier(degree: int, dimension: int,
+                                    prime: int) -> np.ndarray:
+    arrays = []
+    with np.load(
+        HERE / f"degree_{degree}/c3_constant_gate_p{prime}.npz",
+        allow_pickle=False,
+    ) as frozen:
+        arrays.append(frozen["basis_values"].astype(np.int64).reshape(-1, dimension))
+    first_paths = [HERE / f"degree_{degree}/c3_first_normal_exp0_p{prime}.npz"]
+    if degree == 31:
+        first_paths.append(HERE / f"degree_31/c3_first_normal_exp2_p{prime}.npz")
+    else:
+        first_paths.extend([
+            HERE / f"degree_35/c3_first_normal_exp2_dir0_p{prime}.npz",
+            HERE / f"degree_35/c3_first_normal_exp2_dir1_p{prime}.npz",
+        ])
+    for path in first_paths:
+        with np.load(path, allow_pickle=False) as frozen:
+            arrays.append(
+                frozen["derivative_values"].astype(np.int64).reshape(-1, dimension)
+            )
+    for exponent in (0, 2):
+        with np.load(
+            HERE / f"degree_{degree}/c3_second_normal_exp{exponent}_p{prime}.npz",
+            allow_pickle=False,
+        ) as frozen:
+            arrays.append(
+                frozen["second_normal_values"].astype(np.int64).reshape(-1, dimension)
+            )
+    with np.load(
+        HERE / f"degree_{degree}/c3_second_mixed_p{prime}.npz",
+        allow_pickle=False,
+    ) as frozen:
+        arrays.append(
+            frozen["mixed_second_values"].astype(np.int64).reshape(-1, dimension)
+        )
+    return np.concatenate(arrays) % prime
+
+
+def cubic_coefficients_five(values: np.ndarray, prime: int) -> np.ndarray:
+    monomials = list(__import__("itertools").combinations_with_replacement(range(5), 3))
+    index = {monomial: position for position, monomial in enumerate(monomials)}
+    matrix = np.zeros((len(values), 35), dtype=np.int64)
+    for node, linear in enumerate(values.astype(np.int64)):
+        for target in range(5):
+            successor = (target + 1) % 5
+            for left in range(5):
+                for right in range(5):
+                    coefficient = linear[target, left] * linear[target, right] % prime
+                    for last in range(5):
+                        matrix[node, index[tuple(sorted((left, right, last)))]] += (
+                            coefficient * linear[successor, last]
+                        )
+        matrix[node] %= prime
+    return matrix
+
+
+def verify_c3_deep_normal_gate() -> None:
+    root = load_json(HERE / "c3_deep_normal_gate.json")
+    require(root["schema"] == "cov-m1-c3-deep-normal-gate-v1",
+            "deep-normal schema")
+    expected_third = {
+        31: ([140, 162], 36, 6, 30, 181, 0, 181, 193, 4, 197, 5),
+        35: ([187, 221], 140, 31, 109, 269, 13, 282, 301, 0, 301, 60),
+    }
+    expected_first_tangent = {
+        31: (51, 10, 61, 137, 15),
+        35: (61, 34, 95, 266, 9),
+    }
+    expected_second_mixed_tangent = {
+        31: (120, 153, 45, 9),
+        35: (157, 205, 156, 16),
+    }
+    expected_fourth = ([306, 331], 30, 0, 30, 339, 356, 5, 361, 5)
+    deep_gates = {}
+    for prime_record in root["prime_records"]:
+        prime = int(prime_record["prime"])
+        for degree, dimension in ((31, 198), (35, 361)):
+            first_tangent = prime_record["degrees"][str(degree)][
+                "first_normal_nonbased_tangent"
+            ]
+            first_actual = (
+                first_tangent["first_gate_rank"],
+                first_tangent["tangent_extra_rank"],
+                first_tangent["combined_rank"],
+                first_tangent["tangent_kernel_dimension"],
+                first_tangent["leading_scalar_rank"],
+            )
+            require(first_actual == expected_first_tangent[degree],
+                    "first-normal nonbased tangent ledger")
+            with np.load(
+                HERE / f"degree_{degree}/c3_constant_gate_p{prime}.npz",
+                allow_pickle=False,
+            ) as frozen:
+                first_gate_parts = [
+                    frozen["basis_values"].astype(np.int64).reshape(-1, dimension)
+                ]
+            first_paths = [
+                HERE / f"degree_{degree}/c3_first_normal_exp0_p{prime}.npz"
+            ]
+            if degree == 31:
+                first_paths.append(
+                    HERE / f"degree_31/c3_first_normal_exp2_p{prime}.npz"
+                )
+            else:
+                first_paths.extend([
+                    HERE / f"degree_35/c3_first_normal_exp2_dir0_p{prime}.npz",
+                    HERE / f"degree_35/c3_first_normal_exp2_dir1_p{prime}.npz",
+                ])
+            for path in first_paths:
+                with np.load(path, allow_pickle=False) as frozen:
+                    first_gate_parts.append(
+                        frozen["extra_gate_matrix"].astype(np.int64)
+                    )
+            first_gate = np.concatenate(first_gate_parts) % prime
+            leading_path = HERE / first_tangent["leading_block"]["payload"]
+            require_hash(leading_path,
+                         first_tangent["leading_block"]["payload_sha256"])
+            with np.load(leading_path, allow_pickle=False) as frozen:
+                leading_values = frozen["derivative_values"].astype(np.int64)
+                leading_root = frozen["target_root"].astype(np.int64)
+            gradient = klein_gradient_for_verifier(leading_root, prime)
+            tangent_parts = []
+            for exponent in (0, 2):
+                with np.load(
+                    HERE / f"degree_{degree}/c3_second_normal_exp{exponent}_p{prime}.npz",
+                    allow_pickle=False,
+                ) as frozen:
+                    tangent_parts.append(np.einsum(
+                        "i,pin->pn", gradient,
+                        frozen["second_normal_values"].astype(np.int64),
+                    ) % prime)
+            with np.load(
+                HERE / f"degree_{degree}/c3_second_mixed_p{prime}.npz",
+                allow_pickle=False,
+            ) as frozen:
+                tangent_parts.append(np.einsum(
+                    "i,pin->pn", gradient,
+                    frozen["mixed_second_values"].astype(np.int64),
+                ) % prime)
+            tangent_gate = np.concatenate(tangent_parts)
+            first_combined = np.concatenate([first_gate, tangent_gate]) % prime
+            require(rank_mod(first_combined, prime) == first_tangent["combined_rank"],
+                    "first-normal tangent rank")
+            first_kernel = nullspace_mod_for_verifier(first_combined, prime)
+            first_restricted = np.einsum(
+                "pjn,nk->pjk", leading_values, first_kernel
+            ) % prime
+            leading_pivot = int(np.flatnonzero(leading_root)[0])
+            first_scalar = (
+                pow(int(leading_root[leading_pivot]), -1, prime)
+                * first_restricted[:, leading_pivot, :]
+            ) % prime
+            require(rank_mod(first_scalar, prime) ==
+                    first_tangent["leading_scalar_rank"],
+                    "first-normal tangent scalar rank")
+
+            record = prime_record["degrees"][str(degree)]["third_normal"]
+            expected = expected_third[degree]
+            actual = (
+                record["pure_cumulative_ranks"], record["pure_gate_dimension"],
+                record["pure_scalar_rank"], record["pure_zero_dimension"],
+                record["mixed_b1_gate_rank"], record["mixed_b1_scalar_rank"],
+                record["mixed_b1_zero_rank"], record["mixed_b2_gate_rank"],
+                record["mixed_b2_scalar_rank"], record["mixed_b2_zero_rank"],
+                record["mixed_deep_gate_dimension"],
+            )
+            require(actual == expected, "third-normal ledger")
+            lower = third_lower_matrix_for_verifier(degree, dimension, prime)
+            pure_values = []
+            pure_gates = []
+            pure_roots = []
+            for block in record["pure_blocks"]:
+                path = HERE / block["payload"]
+                require_hash(path, block["payload_sha256"])
+                with np.load(path, allow_pickle=False) as frozen:
+                    values = frozen["third_normal_values"].astype(np.int64)
+                    gate = frozen["extra_gate_matrix"].astype(np.int64)
+                    target_root = frozen["target_root"].astype(np.int64)
+                require(np.array_equal(
+                    c3_gate_from_values(values, target_root, dimension, prime),
+                    gate % prime,
+                ), "third-normal gate serialization")
+                pure_values.append(values)
+                pure_gates.append(gate)
+                pure_roots.append(target_root)
+            cumulative = [
+                rank_mod(np.concatenate([lower, *pure_gates[:end]]), prime)
+                for end in (1, 2)
+            ]
+            require(cumulative == expected[0], "third-normal cumulative ranks")
+            pure_gate = np.concatenate([lower, *pure_gates]) % prime
+            pure_kernel = nullspace_mod_for_verifier(pure_gate, prime)
+            scalar_blocks = []
+            for values, target_root in zip(pure_values, pure_roots):
+                restricted = np.einsum("pjn,nk->pjk", values, pure_kernel) % prime
+                pivot = int(np.flatnonzero(target_root)[0])
+                scalar_blocks.append(
+                    pow(int(target_root[pivot]), -1, prime)
+                    * restricted[:, pivot, :] % prime
+                )
+            require(rank_mod(np.concatenate(scalar_blocks), prime) == expected[2],
+                    "third-normal scalar rank")
+            pure_zero = np.concatenate([
+                lower, *[values.reshape(-1, dimension) for values in pure_values]
+            ]) % prime
+            require(rank_mod(pure_zero, prime) == dimension - expected[3],
+                    "third-normal pure-zero rank")
+            mixed = record["mixed_block"]
+            mixed_path = HERE / mixed["payload"]
+            require_hash(mixed_path, mixed["payload_sha256"])
+            with np.load(mixed_path, allow_pickle=False) as frozen:
+                b1_values = frozen["b1_values"].astype(np.int64)
+                b1_gate = frozen["b1_extra_gate_matrix"].astype(np.int64)
+                b1_root = frozen["b1_target_root"].astype(np.int64)
+                b2_values = frozen["b2_values"].astype(np.int64)
+                b2_gate = frozen["b2_extra_gate_matrix"].astype(np.int64)
+                b2_root = frozen["b2_target_root"].astype(np.int64)
+            require(np.array_equal(
+                c3_gate_from_values(b1_values, b1_root, dimension, prime),
+                b1_gate % prime,
+            ), "third-mixed b1 gate serialization")
+            require(np.array_equal(
+                c3_gate_from_values(b2_values, b2_root, dimension, prime),
+                b2_gate % prime,
+            ), "third-mixed b2 gate serialization")
+            b1_zero = (np.concatenate([pure_zero, b1_values.reshape(-1, dimension)])
+                       if len(b1_root) else np.concatenate([pure_zero, b1_gate])) % prime
+            require(rank_mod(b1_zero, prime) == expected[6], "third-mixed b1 zero")
+            b2_gated = np.concatenate([b1_zero, b2_gate]) % prime
+            require(rank_mod(b2_gated, prime) == expected[7], "third-mixed b2 gate")
+
+            second_tangent = prime_record["degrees"][str(degree)][
+                "second_mixed_nonbased_tangent"
+            ]
+            second_tangent_path = HERE / second_tangent["payload"]
+            require_hash(second_tangent_path,
+                         second_tangent["payload_sha256"])
+            with np.load(second_tangent_path, allow_pickle=False) as frozen:
+                stored_second_base = frozen["base_gate_matrix"].astype(np.int64)
+                stored_second_tangent = frozen["tangent_gate_matrix"].astype(
+                    np.int64
+                )
+                stored_second_kernel = frozen[
+                    "combined_kernel_basis"
+                ].astype(np.int64)
+                stored_second_scalar = frozen[
+                    "leading_scalar_forms"
+                ].astype(np.int64)
+                stored_second_root = frozen[
+                    "leading_target_root"
+                ].astype(np.int64)
+            with np.load(
+                HERE / f"degree_{degree}/c3_second_mixed_p{prime}.npz",
+                allow_pickle=False,
+            ) as frozen:
+                second_leading = frozen["mixed_second_values"].astype(np.int64)
+                second_leading_gate = frozen["extra_gate_matrix"].astype(np.int64)
+                second_root = frozen["target_root"].astype(np.int64)
+            with np.load(
+                HERE / f"degree_{degree}/c3_constant_gate_p{prime}.npz",
+                allow_pickle=False,
+            ) as frozen:
+                second_prior_parts = [
+                    frozen["basis_values"].astype(np.int64).reshape(-1, dimension)
+                ]
+            for path in first_paths:
+                with np.load(path, allow_pickle=False) as frozen:
+                    second_prior_parts.append(
+                        frozen["derivative_values"].astype(np.int64).reshape(
+                            -1, dimension
+                        )
+                    )
+            for exponent in (0, 2):
+                with np.load(
+                    HERE / f"degree_{degree}/c3_second_normal_exp{exponent}_p{prime}.npz",
+                    allow_pickle=False,
+                ) as frozen:
+                    second_prior_parts.append(
+                        frozen["second_normal_values"].astype(np.int64).reshape(
+                            -1, dimension
+                        )
+                    )
+            rebuilt_second_base = np.concatenate([
+                *second_prior_parts, second_leading_gate
+            ]) % prime
+            require(np.array_equal(
+                rebuilt_second_base, stored_second_base % prime
+            ), "second-mixed tangent base serialization")
+            second_gradient = klein_gradient_for_verifier(second_root, prime)
+            rebuilt_second_tangent = np.concatenate([
+                np.einsum("i,pin->pn", second_gradient, values) % prime
+                for values in [*pure_values, b1_values, b2_values]
+            ])
+            require(np.array_equal(
+                rebuilt_second_tangent, stored_second_tangent % prime
+            ), "second-mixed tangent serialization")
+            second_combined = np.concatenate([
+                rebuilt_second_base, rebuilt_second_tangent
+            ]) % prime
+            second_actual = (
+                second_tangent["base_gate_rank"],
+                second_tangent["tangent_combined_rank"],
+                second_tangent["tangent_kernel_dimension"],
+                second_tangent["leading_scalar_rank"],
+            )
+            require(second_actual == expected_second_mixed_tangent[degree],
+                    "second-mixed tangent ledger")
+            require(rank_mod(rebuilt_second_base, prime) ==
+                    second_tangent["base_gate_rank"],
+                    "second-mixed tangent base rank")
+            require(rank_mod(second_combined, prime) ==
+                    second_tangent["tangent_combined_rank"],
+                    "second-mixed tangent combined rank")
+            require(stored_second_kernel.shape == (
+                dimension, second_tangent["tangent_kernel_dimension"]
+            ), "second-mixed tangent kernel shape")
+            require(rank_mod(stored_second_kernel, prime) ==
+                    second_tangent["tangent_kernel_dimension"],
+                    "second-mixed tangent kernel independence")
+            require(not np.any(
+                second_combined @ stored_second_kernel % prime
+            ), "second-mixed tangent kernel equations")
+            require(np.array_equal(
+                stored_second_root % prime, second_root % prime
+            ), "second-mixed tangent root")
+            second_restricted = np.einsum(
+                "pjn,nk->pjk", second_leading, stored_second_kernel
+            ) % prime
+            second_pivot = int(np.flatnonzero(second_root)[0])
+            rebuilt_second_scalar = (
+                pow(int(second_root[second_pivot]), -1, prime)
+                * second_restricted[:, second_pivot, :]
+            ) % prime
+            require(np.array_equal(
+                rebuilt_second_scalar, stored_second_scalar % prime
+            ), "second-mixed tangent scalar serialization")
+            require(all(np.array_equal(
+                second_restricted[:, output, :] % prime,
+                second_root[output] * rebuilt_second_scalar % prime,
+            ) for output in range(5)),
+                    "second-mixed tangent scalar proportionality")
+            require(rank_mod(rebuilt_second_scalar, prime) ==
+                    second_tangent["leading_scalar_rank"],
+                    "second-mixed tangent scalar rank")
+            if prime == 463 and degree == 31:
+                deep_gates[31] = b2_gated
+
+            if degree == 35:
+                fourth_record = prime_record["degrees"]["35"]["fourth_normal"]
+                fourth_actual = (
+                    fourth_record["pure_cumulative_ranks"],
+                    fourth_record["pure_gate_dimension"],
+                    fourth_record["pure_scalar_rank"],
+                    fourth_record["pure_zero_dimension"],
+                    fourth_record["mixed_b1_zero_rank"],
+                    fourth_record["mixed_b2_gate_rank"],
+                    fourth_record["mixed_b2_scalar_rank"],
+                    fourth_record["mixed_b2_zero_rank"],
+                    fourth_record["mixed_deep_gate_dimension"],
+                )
+                require(fourth_actual == expected_fourth, "fourth-normal ledger")
+                fifth_based = np.concatenate([
+                    pure_zero,
+                    b1_values.reshape(-1, dimension),
+                    b2_values.reshape(-1, dimension),
+                ]) % prime
+                require(rank_mod(fifth_based, prime) == 301, "fifth-based rank")
+                fourth_values = []
+                fourth_gates = []
+                for block in fourth_record["pure_blocks"]:
+                    path = HERE / block["payload"]
+                    require_hash(path, block["payload_sha256"])
+                    with np.load(path, allow_pickle=False) as frozen:
+                        values = frozen["fourth_normal_values"].astype(np.int64)
+                        gate = frozen["extra_gate_matrix"].astype(np.int64)
+                        target_root = frozen["target_root"].astype(np.int64)
+                    require(np.array_equal(
+                        c3_gate_from_values(values, target_root, dimension, prime),
+                        gate % prime,
+                    ), "fourth-normal gate serialization")
+                    fourth_values.append(values)
+                    fourth_gates.append(gate)
+                require([
+                    rank_mod(np.concatenate([fifth_based, *fourth_gates[:end]]), prime)
+                    for end in (1, 2)
+                ] == expected_fourth[0], "fourth-normal cumulative ranks")
+                fourth_zero = np.concatenate([
+                    fifth_based,
+                    *[values.reshape(-1, dimension) for values in fourth_values],
+                ]) % prime
+                mixed_path = HERE / fourth_record["mixed_block"]["payload"]
+                require_hash(mixed_path,
+                             fourth_record["mixed_block"]["payload_sha256"])
+                with np.load(mixed_path, allow_pickle=False) as frozen:
+                    q1_values = frozen["b1_values"].astype(np.int64)
+                    q2_values = frozen["b2_values"].astype(np.int64)
+                    q3_values = frozen["b3_values"].astype(np.int64)
+                    q2_gate = frozen["b2_extra_gate_matrix"].astype(np.int64)
+                    q2_root = frozen["b2_target_root"].astype(np.int64)
+                require(np.array_equal(
+                    c3_gate_from_values(q2_values, q2_root, dimension, prime),
+                    q2_gate % prime,
+                ), "fourth-mixed b2 gate serialization")
+                q1_zero = np.concatenate([
+                    fourth_zero, q1_values.reshape(-1, dimension)
+                ]) % prime
+                deep_gate = np.concatenate([q1_zero, q2_gate]) % prime
+                require(rank_mod(deep_gate, prime) == 356,
+                        "fourth-mixed deep gate rank")
+                if prime == 463:
+                    deep_gates[35] = deep_gate
+
+                tangent_record = prime_record["degrees"]["35"][
+                    "third_mixed_nonbased_tangent"
+                ]
+                tangent_path = HERE / tangent_record["payload"]
+                require_hash(tangent_path, tangent_record["payload_sha256"])
+                with np.load(tangent_path, allow_pickle=False) as frozen:
+                    stored_base = frozen["base_gate_matrix"].astype(np.int64)
+                    stored_tangent = frozen["tangent_gate_matrix"].astype(np.int64)
+                    stored_kernel = frozen["combined_kernel_basis"].astype(np.int64)
+                    stored_scalar = frozen["leading_scalar_forms"].astype(np.int64)
+                    stored_root = frozen["leading_target_root"].astype(np.int64)
+                nonbased_base = np.concatenate([
+                    pure_zero, b1_gate, b2_gate
+                ]) % prime
+                require(np.array_equal(nonbased_base, stored_base % prime),
+                        "third-mixed tangent base serialization")
+                third_gradient = klein_gradient_for_verifier(b1_root, prime)
+                rebuilt_tangent = np.concatenate([
+                    np.einsum("i,pin->pn", third_gradient, values) % prime
+                    for values in [*fourth_values, q1_values, q2_values, q3_values]
+                ])
+                require(np.array_equal(rebuilt_tangent, stored_tangent % prime),
+                        "third-mixed tangent serialization")
+                tangent_combined = np.concatenate([
+                    nonbased_base, rebuilt_tangent
+                ]) % prime
+                require((tangent_record["base_gate_rank"],
+                         tangent_record["tangent_combined_rank"],
+                         tangent_record["tangent_kernel_dimension"],
+                         tangent_record["leading_scalar_rank"]) ==
+                        (288, 322, 39, 9), "third-mixed tangent ledger")
+                require(not np.any(tangent_combined @ stored_kernel % prime),
+                        "third-mixed tangent kernel equations")
+                require(np.array_equal(stored_root % prime, b1_root % prime),
+                        "third-mixed tangent root")
+                tangent_restricted = np.einsum(
+                    "pjn,nk->pjk", b1_values, stored_kernel
+                ) % prime
+                tangent_pivot = int(np.flatnonzero(b1_root)[0])
+                tangent_scalar = (
+                    pow(int(b1_root[tangent_pivot]), -1, prime)
+                    * tangent_restricted[:, tangent_pivot, :]
+                ) % prime
+                require(np.array_equal(tangent_scalar, stored_scalar % prime),
+                        "third-mixed tangent scalar serialization")
+            print(f"C3 deep-normal p={prime}, d={degree} OK")
+
+    for degree, dimension in ((31, 198), (35, 361)):
+        record = root["deep_cubic_spans"][str(degree)]
+        path = HERE / record["payload"]
+        require_hash(path, record["payload_sha256"])
+        with np.load(path, allow_pickle=False) as frozen:
+            stored_kernel = frozen["deep_gate_kernel_basis"].astype(np.int64)
+            stored_reduced = frozen["reduced_basis_values"].astype(np.int64)
+            stored_coefficients = frozen["cubic_coefficient_matrix"].astype(np.int64)
+            rows = frozen["fixed_minor_rows"].astype(np.int64)
+        kernel = nullspace_mod_for_verifier(deep_gates[degree], 463)
+        require(kernel.shape == (dimension, 5), "deep gate kernel shape")
+        require(np.array_equal(kernel, stored_kernel % 463), "deep gate kernel")
+        with np.load(
+            HERE / f"degree_{degree}/landing_circuits_p463.npz", allow_pickle=False
+        ) as frozen:
+            old_values = frozen["basis_values"].astype(np.int64)
+        reduced = np.einsum("pjn,nk->pjk", old_values, kernel) % 463
+        require(np.array_equal(reduced, stored_reduced % 463),
+                "deep reduced landing values")
+        rebuilt = cubic_coefficients_five(reduced, 463)
+        require(np.array_equal(rebuilt, stored_coefficients % 463),
+                "deep cubic coefficient serialization")
+        require(len(rows) == 35 and rank_mod(rebuilt[rows], 463) == 35,
+                "deep cubic full-span minor")
+        print(f"deep cubic span d={degree}: rank 35/35 OK")
+
+
+def verify_d31_third_pure_msolve() -> None:
+    record = load_json(HERE / "d31_third_pure_msolve.json")
+    require(record["schema"] == "cov-m1-d31-third-pure-msolve-v1",
+            "d31 msolve schema")
+    require((record["prime"], record["gate_dimension"],
+             record["complete_landing_equation_count"],
+             record["cubic_monomial_count"],
+             record["landing_cubic_span_rank"],
+             record["leading_scalar_rank"]) ==
+            (463, 36, 5349, 8436, 1198, 6), "d31 msolve ledger")
+    source_path = HERE / record["compact_source"]["payload"]
+    profile_path = HERE / record["fixed_row_profile"]["payload"]
+    require_hash(source_path, record["compact_source"]["payload_sha256"])
+    require_hash(profile_path, record["fixed_row_profile"]["payload_sha256"])
+    with np.load(source_path, allow_pickle=False) as frozen:
+        kernel = frozen["gate_kernel_basis"].astype(np.int64)
+        scalars = frozen["independent_scalar_forms"].astype(np.int64)
+        reduced = frozen["reduced_basis_values"].astype(np.int64)
+        monomials = frozen["cubic_monomials"].astype(np.int64)
+        coefficients = frozen["landing_cubic_coefficients"].astype(np.int64)
+    require(kernel.shape == (198, 36), "d31 msolve kernel shape")
+    require(scalars.shape == (6, 36), "d31 msolve scalar shape")
+    require(reduced.shape == (5349, 5, 36), "d31 msolve reduced shape")
+    expected_monomials = np.asarray(list(
+        __import__("itertools").combinations_with_replacement(range(36), 3)
+    ), dtype=np.int64)
+    require(np.array_equal(monomials, expected_monomials),
+            "d31 msolve monomial ordering")
+    require(coefficients.shape == (5349, 8436),
+            "d31 msolve coefficient shape")
+    with profile_path.open("rb") as stream:
+        count = struct.unpack("<Q", stream.read(8))[0]
+        profile = np.frombuffer(stream.read(), dtype="<u8").astype(np.int64)
+    require(count == len(profile) == 1198, "d31 msolve row profile")
+    require(len(set(map(int, profile))) == 1198 and
+            int(profile.min()) >= 0 and int(profile.max()) < 5349,
+            "d31 msolve row profile range")
+    require(rank_mod_ffpack_int32(coefficients[profile], 463) == 1198,
+            "d31 msolve cubic span rank")
+
+    lower = third_lower_matrix_for_verifier(31, 198, 463)
+    pure_values = []
+    pure_gates = []
+    pure_roots = []
+    for exponent in (0, 2):
+        with np.load(
+            HERE / f"degree_31/c3_third_normal_exp{exponent}_p463.npz",
+            allow_pickle=False,
+        ) as frozen:
+            pure_values.append(frozen["third_normal_values"].astype(np.int64))
+            pure_gates.append(frozen["extra_gate_matrix"].astype(np.int64))
+            pure_roots.append(frozen["target_root"].astype(np.int64))
+    rebuilt_kernel = nullspace_mod_for_verifier(
+        np.concatenate([lower, *pure_gates]) % 463, 463
+    )
+    require(np.array_equal(rebuilt_kernel, kernel % 463),
+            "d31 msolve gate kernel")
+    all_scalars = []
+    for values, root in zip(pure_values, pure_roots):
+        restricted = np.einsum("pjn,nk->pjk", values, kernel) % 463
+        pivot = int(np.flatnonzero(root)[0])
+        all_scalars.append(
+            pow(int(root[pivot]), -1, 463) * restricted[:, pivot, :] % 463
+        )
+    all_scalars = np.concatenate(all_scalars)
+    selected = []
+    current = np.empty((0, 36), dtype=np.int64)
+    for row in all_scalars:
+        candidate = np.vstack([current, row])
+        if rank_mod(candidate, 463) > len(selected):
+            selected.append(row)
+            current = candidate
+            if len(selected) == 6:
+                break
+    require(np.array_equal(np.asarray(selected) % 463, scalars % 463),
+            "d31 msolve scalar basis")
+    with np.load(
+        HERE / "degree_31/landing_circuits_p463.npz", allow_pickle=False
+    ) as frozen:
+        old_values = frozen["basis_values"].astype(np.int64)
+    spot = [0, 2674, 5348]
+    require(np.array_equal(
+        np.einsum("pjn,nk->pjk", old_values[spot], kernel) % 463,
+        reduced[spot] % 463,
+    ), "d31 msolve reduced landing spot-check")
+
+    index = {tuple(map(int, item)): position
+             for position, item in enumerate(monomials)}
+    for node in spot:
+        rebuilt = np.zeros(8436, dtype=np.int64)
+        linear = reduced[node] % 463
+        for target in range(5):
+            successor = (target + 1) % 5
+            for left in range(36):
+                for right in range(36):
+                    factor = linear[target, left] * linear[target, right] % 463
+                    if not factor:
+                        continue
+                    for last in range(36):
+                        rebuilt[index[tuple(sorted((left, right, last)))]] += (
+                            factor * linear[successor, last]
+                        )
+            rebuilt %= 463
+        require(np.array_equal(rebuilt % 463, coefficients[node] % 463),
+                "d31 msolve cubic coefficient spot-check")
+    require(record["remaining_cover"] == {
+        "equations": ["scalar_form_0=0", "scalar_form_1=0"],
+        "normalization_chart_count": 4,
+        "remaining_scalar_rank": 4,
+    }, "d31 msolve remaining cover")
+    for chart, chart_record in enumerate(record["closed_charts"]):
+        require(chart_record["chart"] == chart, "d31 msolve chart order")
+        output = HERE / chart_record["payload"]
+        require_hash(output, chart_record["payload_sha256"])
+        text = output.read_text()
+        require("#length of basis:      1 element" in text and
+                text.rstrip().endswith("[1]:"), "d31 msolve unit output")
+    print("d31 third-pure msolve: 2 special-fibre unit charts; char0 cover 6 OK")
+
+
+def verify_p25_dependency_localization() -> None:
+    root = load_json(HERE / "p25_dependency_localization.json")
+    require(root["schema"] == "cov-m1-p25-dependency-localization-v1",
+            "P25 localization schema")
+    basis_path = HERE / root["degree25_basis"]
+    require_hash(basis_path, root["degree25_basis_sha256"])
+    dual_path = HERE / "dual_hironaka_generators.json"
+    require_hash(dual_path, root["dual_generators_sha256"])
+    lower_record = load_json(basis_path)
+    require((lower_record["degree"], lower_record["dimension"],
+             lower_record["candidate_count"], len(lower_record["basis"])) ==
+            (25, 59, 190, 59), "P25 fixed-basis ledger")
+    dual = load_json(dual_path)["generators"]
+    invariant = load_json(HERE / "invariant_generators.json")
+    expected = {
+        31: [51, 46, 27, 18, 3, 0, 0, 0, 0, 0],
+        35: [59, 59, 51, 46, 38, 38, 27, 18, 13, 10,
+             1, 1, 0, 0, 0, 0, 0, 0, 0],
+    }
+
+    def first_paths(degree: int, prime: int) -> list[Path]:
+        paths = [HERE / f"degree_{degree}/c3_first_normal_exp0_p{prime}.npz"]
+        if degree == 31:
+            paths.append(HERE / f"degree_31/c3_first_normal_exp2_p{prime}.npz")
+        else:
+            paths.extend([
+                HERE / f"degree_35/c3_first_normal_exp2_dir0_p{prime}.npz",
+                HERE / f"degree_35/c3_first_normal_exp2_dir1_p{prime}.npz",
+            ])
+        return paths
+
+    def hierarchy(degree: int, dimension: int, prime: int):
+        with np.load(
+            HERE / f"degree_{degree}/c3_constant_gate_p{prime}.npz",
+            allow_pickle=False,
+        ) as frozen:
+            allowed = frozen["gate_matrix"].astype(np.int64) % prime
+            based = frozen["basis_values"].astype(np.int64).reshape(
+                -1, dimension
+            ) % prime
+        result = [("c3_allowed", allowed), ("c3_based", based)]
+        allowed_parts = [based]
+        zero_parts = [based]
+        for path in first_paths(degree, prime):
+            with np.load(path, allow_pickle=False) as frozen:
+                allowed_parts.append(
+                    frozen["extra_gate_matrix"].astype(np.int64) % prime
+                )
+                zero_parts.append(frozen["derivative_values"].astype(np.int64).reshape(
+                    -1, dimension
+                ) % prime)
+        result.append(("first_normal_allowed", np.concatenate(allowed_parts)))
+        result.append(("second_based", np.concatenate(zero_parts)))
+        pure_allowed_parts = list(zero_parts)
+        pure_zero_parts = list(zero_parts)
+        for exponent in (0, 2):
+            with np.load(
+                HERE / f"degree_{degree}/c3_second_normal_exp{exponent}_p{prime}.npz",
+                allow_pickle=False,
+            ) as frozen:
+                pure_allowed_parts.append(
+                    frozen["extra_gate_matrix"].astype(np.int64) % prime
+                )
+                pure_zero_parts.append(frozen["second_normal_values"].astype(np.int64).reshape(
+                    -1, dimension
+                ) % prime)
+        result.append(("pure_second_allowed", np.concatenate(pure_allowed_parts)))
+        pure_zero = np.concatenate(pure_zero_parts)
+        result.append(("pure_second_scalar_zero", pure_zero))
+        with np.load(
+            HERE / f"degree_{degree}/c3_second_mixed_p{prime}.npz",
+            allow_pickle=False,
+        ) as frozen:
+            mixed_gate = frozen["extra_gate_matrix"].astype(np.int64) % prime
+            mixed_values = frozen["mixed_second_values"].astype(np.int64).reshape(
+                -1, dimension
+            ) % prime
+        result.append((
+            "mixed_second_allowed", np.concatenate([pure_zero, mixed_gate])
+        ))
+        third_based = np.concatenate([pure_zero, mixed_values])
+        result.append(("third_based", third_based))
+        third_allowed_parts = [third_based]
+        third_zero_parts = [third_based]
+        for exponent in (0, 2):
+            with np.load(
+                HERE / f"degree_{degree}/c3_third_normal_exp{exponent}_p{prime}.npz",
+                allow_pickle=False,
+            ) as frozen:
+                third_allowed_parts.append(
+                    frozen["extra_gate_matrix"].astype(np.int64) % prime
+                )
+                third_zero_parts.append(frozen["third_normal_values"].astype(np.int64).reshape(
+                    -1, dimension
+                ) % prime)
+        result.append(("pure_third_allowed", np.concatenate(third_allowed_parts)))
+        pure_third_zero = np.concatenate(third_zero_parts)
+        result.append(("pure_third_scalar_zero", pure_third_zero))
+        if degree == 35:
+            with np.load(
+                HERE / f"degree_35/c3_third_mixed_p{prime}.npz",
+                allow_pickle=False,
+            ) as frozen:
+                b1_values = frozen["b1_values"].astype(np.int64).reshape(-1, dimension) % prime
+                b1_gate = frozen["b1_extra_gate_matrix"].astype(np.int64) % prime
+                b2_values = frozen["b2_values"].astype(np.int64).reshape(-1, dimension) % prime
+                b2_gate = frozen["b2_extra_gate_matrix"].astype(np.int64) % prime
+            result.append((
+                "third_mixed_b1_allowed", np.concatenate([pure_third_zero, b1_gate])
+            ))
+            b1_zero = np.concatenate([pure_third_zero, b1_values])
+            result.append(("third_mixed_b1_scalar_zero", b1_zero))
+            result.append((
+                "third_mixed_b2_allowed", np.concatenate([b1_zero, b2_gate])
+            ))
+            fifth_based = np.concatenate([pure_third_zero, b1_values, b2_values])
+            result.append(("fifth_based", fifth_based))
+            fourth_allowed_parts = [fifth_based]
+            fourth_zero_parts = [fifth_based]
+            for exponent in (0, 2):
+                with np.load(
+                    HERE / f"degree_35/c3_fourth_normal_exp{exponent}_p{prime}.npz",
+                    allow_pickle=False,
+                ) as frozen:
+                    fourth_allowed_parts.append(
+                        frozen["extra_gate_matrix"].astype(np.int64) % prime
+                    )
+                    fourth_zero_parts.append(
+                        frozen["fourth_normal_values"].astype(np.int64).reshape(
+                            -1, dimension
+                        ) % prime
+                    )
+            result.append((
+                "fourth_pure_allowed", np.concatenate(fourth_allowed_parts)
+            ))
+            fourth_zero = np.concatenate(fourth_zero_parts)
+            result.append(("fourth_pure_scalar_zero", fourth_zero))
+            with np.load(
+                HERE / f"degree_35/c3_fourth_mixed_p{prime}.npz",
+                allow_pickle=False,
+            ) as frozen:
+                q1_values = frozen["b1_values"].astype(np.int64).reshape(-1, dimension) % prime
+                q2_values = frozen["b2_values"].astype(np.int64).reshape(-1, dimension) % prime
+                q2_gate = frozen["b2_extra_gate_matrix"].astype(np.int64) % prime
+            q1_zero = np.concatenate([fourth_zero, q1_values])
+            result.append(("fourth_mixed_b1_zero", q1_zero))
+            result.append((
+                "fourth_mixed_b2_allowed", np.concatenate([q1_zero, q2_gate])
+            ))
+            result.append((
+                "fourth_mixed_b2_scalar_zero", np.concatenate([q1_zero, q2_values])
+            ))
+        return result
+
+    for prime_record in root["prime_records"]:
+        prime = int(prime_record["prime"])
+        module = load_group_module(prime, int(prime_record["zeta11"]))
+        for degree, dimension in ((31, 198), (35, 361)):
+            degree_record = prime_record["degrees"][str(degree)]
+            path = HERE / degree_record["payload"]
+            require_hash(path, degree_record["payload_sha256"])
+            with np.load(path, allow_pickle=False) as frozen:
+                points = frozen["fixed_evaluation_points"].astype(np.int64)
+                rows = frozen["target_basis_minor_rows"].astype(np.int64)
+                multiplier = frozen["multiplier_values"].astype(np.int64)
+                embedding = frozen["multiplier_embedding"].astype(np.int64)
+            require(points.shape == (80, 5), "P25 evaluation points")
+            lower_values = independently_evaluate_crosses(
+                module, points, prime, dual, lower_record["basis"], invariant
+            ).reshape(400, 59)
+            target_basis = load_json(
+                HERE / f"degree_{degree}/m1_cross_basis_circuits.json"
+            )["basis"]
+            target_values = independently_evaluate_crosses(
+                module, points, prime, dual, target_basis, invariant
+            ).reshape(400, dimension)
+            require(rank_mod(lower_values, prime) == 59,
+                    "P25 fixed basis rank")
+            require(len(rows) == dimension and
+                    rank_mod(target_values[rows], prime) == dimension,
+                    "P25 target coordinate minor")
+            primary, secondary = invariant_factors_at_nodes(
+                points, prime, invariant
+            )
+            rebuilt_multiplier = primary[2] if degree == 31 else secondary[3]
+            require(np.array_equal(multiplier % prime, rebuilt_multiplier % prime),
+                    "P25 multiplier serialization")
+            multiplied = (
+                lower_values.reshape(80, 5, 59)
+                * rebuilt_multiplier[:, None, None]
+            ).reshape(400, 59) % prime
+            require(embedding.shape == (dimension, 59) and
+                    rank_mod(embedding, prime) == 59,
+                    "P25 multiplier embedding rank")
+            require(np.array_equal(target_values @ embedding % prime, multiplied),
+                    "P25 multiplier embedding reconstruction")
+            actual = []
+            for stage_record, (stage, gate) in zip(
+                degree_record["stages"], hierarchy(degree, dimension, prime)
+            ):
+                restricted_rank = rank_mod(gate @ embedding % prime, prime)
+                require(stage_record == {
+                    "stage": stage,
+                    "restricted_gate_rank": restricted_rank,
+                    "degree25_preimage_dimension": 59 - restricted_rank,
+                }, "P25 stage ledger")
+                actual.append(59 - restricted_rank)
+            require(actual == expected[degree], "P25 localization dimensions")
+            print(f"P25 localization p={prime}, d={degree}: {actual} OK")
+            del (lower_values, target_values, multiplied, embedding, points,
+                 rows, multiplier, primary, secondary)
+            gc.collect()
+
+
+def verify_p25_d31_pure_second_span() -> None:
+    record = load_json(HERE / "p25_d31_pure_second_cubic_span.json")
+    require(record["schema"] == "cov-m1-p25-d31-pure-second-span-v1",
+            "P25 d31 pure-second schema")
+    require((record["prime"], record["degree25_input_dimension"],
+             record["projective_gate_vector_dimension"],
+             record["pure_second_scalar_zero_rank"],
+             record["complete_landing_equation_count"],
+             record["cubic_monomial_count"], record["cubic_span_rank"]) ==
+            (463, 59, 3, 3, 5349, 10, 10),
+            "P25 d31 pure-second ledger")
+    embedding_path = HERE / record["embedding_payload"]
+    landing_path = HERE / record["landing_payload"]
+    payload_path = HERE / record["payload"]
+    require_hash(embedding_path, record["embedding_payload_sha256"])
+    require_hash(landing_path, record["landing_payload_sha256"])
+    require_hash(payload_path, record["payload_sha256"])
+    with np.load(embedding_path, allow_pickle=False) as frozen:
+        embedding = frozen["multiplier_embedding"].astype(np.int64)
+    with np.load(payload_path, allow_pickle=False) as frozen:
+        stored_kernel = frozen["degree25_preimage_kernel"].astype(np.int64)
+        stored_target = frozen["target_kernel_basis"].astype(np.int64)
+        stored_scalar_zero = frozen["scalar_zero_restriction"].astype(np.int64)
+        stored_reduced = frozen["reduced_basis_values"].astype(np.int64)
+        monomials = frozen["cubic_monomials"].astype(np.int64)
+        coefficients = frozen["cubic_coefficient_matrix"].astype(np.int64)
+        rows = frozen["fixed_minor_rows"].astype(np.int64)
+
+    dimension = 198
+    with np.load(
+        HERE / "degree_31/c3_constant_gate_p463.npz", allow_pickle=False
+    ) as frozen:
+        based = frozen["basis_values"].astype(np.int64).reshape(-1, dimension)
+    zero_parts = [based]
+    for path in (
+        HERE / "degree_31/c3_first_normal_exp0_p463.npz",
+        HERE / "degree_31/c3_first_normal_exp2_p463.npz",
+    ):
+        with np.load(path, allow_pickle=False) as frozen:
+            zero_parts.append(
+                frozen["derivative_values"].astype(np.int64).reshape(-1, dimension)
+            )
+    allowed_parts = list(zero_parts)
+    scalar_zero_parts = list(zero_parts)
+    for exponent in (0, 2):
+        with np.load(
+            HERE / f"degree_31/c3_second_normal_exp{exponent}_p463.npz",
+            allow_pickle=False,
+        ) as frozen:
+            allowed_parts.append(frozen["extra_gate_matrix"].astype(np.int64))
+            scalar_zero_parts.append(
+                frozen["second_normal_values"].astype(np.int64).reshape(
+                    -1, dimension
+                )
+            )
+    allowed = np.concatenate(allowed_parts) % 463
+    rebuilt_kernel = nullspace_mod_for_verifier(allowed @ embedding % 463, 463)
+    require(rebuilt_kernel.shape == (59, 3) and
+            np.array_equal(rebuilt_kernel, stored_kernel % 463),
+            "P25 d31 pure-second preimage kernel")
+    rebuilt_target = embedding @ rebuilt_kernel % 463
+    require(np.array_equal(rebuilt_target, stored_target % 463),
+            "P25 d31 target kernel")
+    rebuilt_scalar_zero = (
+        np.concatenate(scalar_zero_parts) @ rebuilt_target % 463
+    )
+    require(np.array_equal(rebuilt_scalar_zero, stored_scalar_zero % 463) and
+            rank_mod(rebuilt_scalar_zero, 463) == 3,
+            "P25 d31 scalar-zero exclusion")
+    with np.load(landing_path, allow_pickle=False) as frozen:
+        old_values = frozen["basis_values"].astype(np.int64)
+    rebuilt_reduced = np.einsum(
+        "pjn,nk->pjk", old_values, rebuilt_target
+    ) % 463
+    require(np.array_equal(rebuilt_reduced, stored_reduced % 463),
+            "P25 d31 reduced landing")
+    expected_monomials = np.asarray(list(
+        __import__("itertools").combinations_with_replacement(range(3), 3)
+    ), dtype=np.int64)
+    require(np.array_equal(monomials, expected_monomials),
+            "P25 d31 cubic monomials")
+    rebuilt_coefficients = np.zeros((len(rebuilt_reduced), 10), dtype=np.int64)
+    index = {tuple(map(int, item)): position
+             for position, item in enumerate(monomials)}
+    for node, linear in enumerate(rebuilt_reduced):
+        for target in range(5):
+            successor = (target + 1) % 5
+            for left in range(3):
+                for right in range(3):
+                    factor = linear[target, left] * linear[target, right] % 463
+                    if not factor:
+                        continue
+                    for last in range(3):
+                        rebuilt_coefficients[
+                            node, index[tuple(sorted((left, right, last)))]
+                        ] += factor * linear[successor, last]
+        rebuilt_coefficients[node] %= 463
+    require(np.array_equal(rebuilt_coefficients, coefficients % 463),
+            "P25 d31 cubic coefficient reconstruction")
+    require(len(rows) == 10 and rank_mod(coefficients[rows], 463) == 10,
+            "P25 d31 full cubic-span minor")
+    print("P25 d31 pure-second branch: scalar-zero rank 3, cubics 10/10 EMPTY")
+
+
+def verify_p25_common_nonbased_branches() -> None:
+    record = load_json(HERE / "p25_common_nonbased_branches.json")
+    require(record["schema"] == "cov-m1-p25-common-nonbased-branches-v1",
+            "P25 common branches schema")
+    payload_path = HERE / record["payload"]
+    require_hash(payload_path, record["payload_sha256"])
+    require(record["branch_A"] == {
+        "dimension": 51,
+        "scalar_rank": 5,
+        "degree_31_realization": "C3-constant nonbased",
+        "degree_35_realization": "first-normal nonbased after tangent",
+    }, "P25 common branch A ledger")
+    require(record["branch_B"] == {
+        "dimension": 20,
+        "scalar_rank": 7,
+        "degree_31_realization": "first-normal nonbased after tangent",
+        "degree_35_realization": "mixed-second nonbased after tangent",
+        "cubic_monomial_count": 1540,
+        "d31_cubic_span_rank": 574,
+        "d35_cubic_span_rank": 574,
+        "cross_degree_cubic_union_rank": 574,
+        "fixed_row_profile_length": 574,
+    }, "P25 common branch B ledger")
+    with np.load(payload_path, allow_pickle=False) as frozen:
+        stored_a = frozen["branch_A_degree25_kernel"].astype(np.int64)
+        stored_a_scalar = frozen["branch_A_scalar_forms"].astype(np.int64)
+        stored_b = frozen["branch_B_degree25_kernel"].astype(np.int64)
+        stored_b_scalar = frozen["branch_B_scalar_forms"].astype(np.int64)
+        stored_b31_target = frozen["branch_B_d31_target_kernel"].astype(np.int64)
+        stored_b35_target = frozen["branch_B_d35_target_kernel"].astype(np.int64)
+        stored_d31_reduced = frozen["d31_reduced_basis_values"].astype(np.int64)
+        stored_d35_reduced = frozen["d35_reduced_basis_values"].astype(np.int64)
+        monomials = frozen["cubic_monomials"].astype(np.int64)
+        d31_coefficients = frozen["d31_cubic_coefficients"].copy()
+        d35_coefficients = frozen["d35_cubic_coefficients"].copy()
+        rows = frozen["d31_fixed_row_profile"].astype(np.int64)
+
+    def first_paths(degree: int, prime: int) -> list[Path]:
+        paths = [HERE / f"degree_{degree}/c3_first_normal_exp0_p{prime}.npz"]
+        if degree == 31:
+            paths.append(HERE / f"degree_31/c3_first_normal_exp2_p{prime}.npz")
+        else:
+            paths.extend([
+                HERE / f"degree_35/c3_first_normal_exp2_dir0_p{prime}.npz",
+                HERE / f"degree_35/c3_first_normal_exp2_dir1_p{prime}.npz",
+            ])
+        return paths
+
+    def first_tangent(degree: int, dimension: int, prime: int):
+        with np.load(
+            HERE / f"degree_{degree}/c3_constant_gate_p{prime}.npz",
+            allow_pickle=False,
+        ) as frozen:
+            parts = [frozen["basis_values"].astype(np.int64).reshape(-1, dimension)]
+        paths = first_paths(degree, prime)
+        for path in paths:
+            with np.load(path, allow_pickle=False) as frozen:
+                parts.append(frozen["extra_gate_matrix"].astype(np.int64))
+        leading_path = paths[1] if degree == 31 else paths[0]
+        with np.load(leading_path, allow_pickle=False) as frozen:
+            leading = frozen["derivative_values"].astype(np.int64)
+            root = frozen["target_root"].astype(np.int64)
+        gradient = klein_gradient_for_verifier(root, prime)
+        values = []
+        for exponent in (0, 2):
+            with np.load(
+                HERE / f"degree_{degree}/c3_second_normal_exp{exponent}_p{prime}.npz",
+                allow_pickle=False,
+            ) as frozen:
+                values.append(frozen["second_normal_values"].astype(np.int64))
+        with np.load(
+            HERE / f"degree_{degree}/c3_second_mixed_p{prime}.npz",
+            allow_pickle=False,
+        ) as frozen:
+            values.append(frozen["mixed_second_values"].astype(np.int64))
+        parts.extend([
+            np.einsum("i,pin->pn", gradient, value) % prime for value in values
+        ])
+        return np.concatenate(parts) % prime, leading, root
+
+    def scalar_forms(values: np.ndarray, root: np.ndarray,
+                     target_kernel: np.ndarray, prime: int) -> np.ndarray:
+        restricted = np.einsum("pjn,nk->pjk", values, target_kernel) % prime
+        pivot = int(np.flatnonzero(root)[0])
+        scalar = (
+            pow(int(root[pivot]), -1, prime) * restricted[:, pivot, :]
+        ) % prime
+        require(all(np.array_equal(
+            restricted[:, output, :] % prime,
+            root[output] * scalar % prime,
+        ) for output in range(5)), "P25 common scalar proportionality")
+        return scalar
+
+    def selected_rows(matrix: np.ndarray, count: int, prime: int) -> np.ndarray:
+        selected = []
+        current = np.empty((0, matrix.shape[1]), dtype=np.int64)
+        for row in matrix:
+            candidate = np.vstack([current, row])
+            if rank_mod(candidate, prime) > len(selected):
+                selected.append(row)
+                current = candidate
+                if len(selected) == count:
+                    break
+        require(len(selected) == count, "P25 common scalar selection")
+        return np.asarray(selected)
+
+    for prime_record in record["prime_records"]:
+        prime = int(prime_record["prime"])
+        c31 = np.load(
+            HERE / f"degree_31/p25_multiplier_embedding_p{prime}.npz",
+            allow_pickle=False,
+        )["multiplier_embedding"].astype(np.int64)
+        c35 = np.load(
+            HERE / f"degree_35/p25_multiplier_embedding_p{prime}.npz",
+            allow_pickle=False,
+        )["multiplier_embedding"].astype(np.int64)
+        with np.load(
+            HERE / f"degree_31/c3_constant_gate_p{prime}.npz",
+            allow_pickle=False,
+        ) as frozen:
+            a31_gate = frozen["gate_matrix"].astype(np.int64)
+            a31_values = frozen["basis_values"].astype(np.int64)
+            a31_root = frozen["unique_c6_root"].astype(np.int64)
+        a31 = nullspace_mod_for_verifier(a31_gate @ c31 % prime, prime)
+        a35_gate, a35_values, a35_root = first_tangent(35, 361, prime)
+        a35 = nullspace_mod_for_verifier(a35_gate @ c35 % prime, prime)
+        b31_gate, b31_values, b31_root = first_tangent(31, 198, prime)
+        b31 = nullspace_mod_for_verifier(b31_gate @ c31 % prime, prime)
+        with np.load(
+            HERE / f"degree_35/c3_second_mixed_nonbased_tangent_p{prime}.npz",
+            allow_pickle=False,
+        ) as frozen:
+            b35_gate = np.concatenate([
+                frozen["base_gate_matrix"].astype(np.int64),
+                frozen["tangent_gate_matrix"].astype(np.int64),
+            ]) % prime
+        b35 = nullspace_mod_for_verifier(b35_gate @ c35 % prime, prime)
+        with np.load(
+            HERE / f"degree_35/c3_second_mixed_p{prime}.npz",
+            allow_pickle=False,
+        ) as frozen:
+            b35_values = frozen["mixed_second_values"].astype(np.int64)
+            b35_root = frozen["target_root"].astype(np.int64)
+        require((a31.shape, a35.shape, b31.shape, b35.shape) ==
+                ((59, 51), (59, 51), (59, 20), (59, 20)),
+                "P25 common branch dimensions")
+        require(rank_mod(np.column_stack([a31, a35]), prime) == 51 and
+                rank_mod(np.column_stack([b31, b35]), prime) == 20,
+                "P25 cross-degree branch equality")
+        a31_scalar = scalar_forms(a31_values, a31_root, c31 @ a31, prime)
+        a35_scalar = scalar_forms(a35_values, a35_root, c35 @ a31, prime)
+        b31_scalar = scalar_forms(b31_values, b31_root, c31 @ b31, prime)
+        b35_scalar = scalar_forms(b35_values, b35_root, c35 @ b31, prime)
+        actual = {
+            "prime": prime,
+            "branch_A_dimension": 51,
+            "branch_A_scalar_rank": rank_mod(a31_scalar, prime),
+            "branch_A_cross_degree_union_rank": rank_mod(
+                np.column_stack([a31, a35]), prime
+            ),
+            "branch_A_scalar_union_rank": rank_mod(
+                np.vstack([a31_scalar, a35_scalar]), prime
+            ),
+            "branch_B_dimension": 20,
+            "branch_B_scalar_rank": rank_mod(b31_scalar, prime),
+            "branch_B_cross_degree_union_rank": rank_mod(
+                np.column_stack([b31, b35]), prime
+            ),
+            "branch_B_scalar_union_rank": rank_mod(
+                np.vstack([b31_scalar, b35_scalar]), prime
+            ),
+        }
+        require(actual == prime_record, "P25 common prime ledger")
+        if prime == 463:
+            require(np.array_equal(a31, stored_a % prime) and
+                    np.array_equal(b31, stored_b % prime),
+                    "P25 common kernel serialization")
+            require(np.array_equal(
+                selected_rows(a31_scalar, 5, prime), stored_a_scalar % prime
+            ) and np.array_equal(
+                selected_rows(b31_scalar, 7, prime), stored_b_scalar % prime
+            ), "P25 common scalar serialization")
+            require(np.array_equal(c31 @ b31 % prime, stored_b31_target % prime) and
+                    np.array_equal(c35 @ b31 % prime, stored_b35_target % prime),
+                    "P25 common target kernels")
+        print(f"P25 common branches p={prime}: A 51/5, B 20/7 OK")
+
+    expected_monomials = np.asarray(list(
+        __import__("itertools").combinations_with_replacement(range(20), 3)
+    ), dtype=np.int64)
+    require(np.array_equal(monomials, expected_monomials),
+            "P25 common cubic monomials")
+    for degree, target_kernel, stored_reduced, stored_coefficients in (
+        (31, stored_b31_target, stored_d31_reduced, d31_coefficients),
+        (35, stored_b35_target, stored_d35_reduced, d35_coefficients),
+    ):
+        with np.load(
+            HERE / f"degree_{degree}/landing_circuits_p463.npz",
+            allow_pickle=False,
+        ) as frozen:
+            old_values = frozen["basis_values"].astype(np.int64)
+        rebuilt_reduced = np.einsum(
+            "pjn,nk->pjk", old_values, target_kernel
+        ) % 463
+        require(np.array_equal(rebuilt_reduced, stored_reduced % 463),
+                "P25 common reduced landing")
+        left, middle, right = monomials.T
+        all_equal = left == right
+        left_pair = (left == middle) & (middle != right)
+        right_pair = (left != middle) & (middle == right)
+        distinct = (left != middle) & (middle != right)
+        for start in range(0, len(rebuilt_reduced), 128):
+            stop = min(start + 128, len(rebuilt_reduced))
+            block = rebuilt_reduced[start:stop]
+            rebuilt = np.zeros((stop - start, len(monomials)), dtype=np.int64)
+            for target in range(5):
+                a = block[:, target]
+                b = block[:, (target + 1) % 5]
+                rebuilt[:, all_equal] += a[:, left[all_equal]] ** 2 * b[:, left[all_equal]]
+                rebuilt[:, left_pair] += (
+                    a[:, left[left_pair]] ** 2 * b[:, right[left_pair]]
+                    + 2 * a[:, left[left_pair]] * a[:, right[left_pair]]
+                    * b[:, left[left_pair]]
+                )
+                rebuilt[:, right_pair] += (
+                    a[:, right[right_pair]] ** 2 * b[:, left[right_pair]]
+                    + 2 * a[:, left[right_pair]] * a[:, right[right_pair]]
+                    * b[:, right[right_pair]]
+                )
+                rebuilt[:, distinct] += 2 * (
+                    a[:, left[distinct]] * a[:, middle[distinct]] * b[:, right[distinct]]
+                    + a[:, left[distinct]] * a[:, right[distinct]] * b[:, middle[distinct]]
+                    + a[:, middle[distinct]] * a[:, right[distinct]] * b[:, left[distinct]]
+                )
+            require(np.array_equal(
+                rebuilt % 463, stored_coefficients[start:stop].astype(np.int64) % 463
+            ), "P25 common cubic coefficient serialization")
+    require(rank_mod_ffpack_int32(d31_coefficients, 463) == 574 and
+            rank_mod_ffpack_int32(d35_coefficients, 463) == 574 and
+            rank_mod_ffpack_int32(
+                np.vstack([d31_coefficients, d35_coefficients]), 463
+            ) == 574, "P25 common cubic row-space equality")
+    require(len(rows) == 574 and
+            rank_mod_ffpack_int32(d31_coefficients[rows], 463) == 574,
+            "P25 common fixed row profile")
+    print("P25 common branch B cubics: d31=d35 rank 574/1540 OK")
+
+
+def verify_p25_common_branch_b_msolve() -> None:
+    record = load_json(HERE / "p25_common_branch_b_msolve.json")
+    require(record["schema"] == "cov-m1-p25-common-branch-b-msolve-v1",
+            "P25 branch B msolve schema")
+    require((record["prime"], record["branch_dimension"],
+             record["scalar_cover_rank"], record["complete_cubic_span_rank"],
+             record["complete_cubic_monomial_count"]) ==
+            (463, 20, 7, 574, 1540), "P25 branch B msolve ledger")
+    require_hash(HERE / record["common_branch_record"],
+                 record["common_branch_record_sha256"])
+    require_hash(HERE / record["scalar_zero_boundary_record"],
+                 record["scalar_zero_boundary_record_sha256"])
+    require(len(record["closed_charts"]) == 7, "P25 branch B chart count")
+    for chart, chart_record in enumerate(record["closed_charts"]):
+        require(chart_record["chart"] == chart, "P25 branch B chart order")
+        path = HERE / chart_record["payload"]
+        require_hash(path, chart_record["payload_sha256"])
+        text = path.read_text()
+        require("#length of basis:      1 element" in text and
+                text.rstrip().endswith("[1]:"), "P25 branch B unit output")
+    print("P25 common branch B: 7 unit charts plus empty boundary PROJECTIVELY EMPTY")
+
+
+def verify_p25_strict_branch_a() -> None:
+    record = load_json(HERE / "p25_strict_branch_a.json")
+    require(record["schema"] == "cov-m1-p25-strict-branch-a-v1",
+            "P25 strict branch A schema")
+    basis_path = REPO / record["source_strict_basis"]
+    landing_path = REPO / record["source_landing_sample_basis"]
+    seeds_path = REPO / record["source_reynolds_seeds"]
+    require_hash(basis_path, record["source_strict_basis_sha256"])
+    require_hash(landing_path, record["source_landing_sample_basis_sha256"])
+    require_hash(seeds_path, record["source_reynolds_seeds_sha256"])
+    seed_records = load_json(seeds_path)
+    with np.load(basis_path, allow_pickle=False) as frozen:
+        strict_bases = {
+            prime: frozen[f"basis43_p{prime}"].astype(np.int64)
+            for prime in (199, 331)
+        }
+    expected_monomials = np.asarray(list(
+        __import__("itertools").combinations_with_replacement(range(37), 3)
+    ), dtype=np.int64)
+    require(len(record["prime_records"]) == 2,
+            "P25 strict branch A prime count")
+    for prime_record, prime, zeta in zip(
+        record["prime_records"], (199, 331), (61, 270)
+    ):
+        require((prime_record["prime"], prime_record["zeta11"],
+                 prime_record["strict_dimension"],
+                 prime_record["c3_gate_rank"],
+                 prime_record["strict_branch_dimension"],
+                 prime_record["leading_scalar_rank"],
+                 prime_record["landing_sample_count"],
+                 prime_record["restricted_landing_cubic_rank"],
+                 prime_record["restricted_cubic_monomial_count"]) ==
+                (prime, zeta, 43, 6, 37, 5, 1600, 716, 9139),
+                "P25 strict branch A ledger")
+        path = HERE / prime_record["payload"]
+        require_hash(path, prime_record["payload_sha256"])
+        with np.load(path, allow_pickle=False) as frozen:
+            source_points = frozen["source_points"].astype(np.int64)
+            basis_values = frozen["strict_c3_basis_values"].astype(np.int64)
+            gate = frozen["strict_c3_gate"].astype(np.int64)
+            kernel = frozen["strict_branch_kernel"].astype(np.int64)
+            reduced_c3 = frozen["strict_c3_reduced_values"].astype(np.int64)
+            root = frozen["leading_target_root"].astype(np.int64)
+            scalars = frozen["independent_scalar_forms"].astype(np.int64)
+            landing_points = frozen["landing_sample_points"].astype(np.int64)
+            reduced = frozen["reduced_basis_values"].astype(np.int64)
+            monomials = frozen["cubic_monomials"].astype(np.int64)
+            coefficients = frozen["landing_cubic_coefficients"].astype(np.int64)
+            rows = frozen["landing_fixed_row_profile"].astype(np.int64)
+        require(source_points.shape == (26, 5) and
+                basis_values.shape == (26, 5, 43),
+                "P25 strict C3 values")
+        pivot = int(np.flatnonzero(root)[0])
+        rebuilt_gate = np.concatenate([
+            (int(root[pivot]) * basis_values[:, target]
+             - int(root[target]) * basis_values[:, pivot]) % prime
+            for target in range(5) if target != pivot
+        ])
+        require(np.array_equal(gate % prime, rebuilt_gate),
+                "P25 strict C3 gate reconstruction")
+        require(gate.shape == (104, 43) and rank_mod(gate, prime) == 6,
+                "P25 strict C3 gate rank")
+        require(kernel.shape == (43, 37) and not np.any(gate @ kernel % prime),
+                "P25 strict branch kernel")
+        rebuilt_reduced = np.einsum(
+            "pjn,nk->pjk", basis_values, kernel
+        ) % prime
+        require(np.array_equal(rebuilt_reduced, reduced_c3 % prime),
+                "P25 strict C3 reduced serialization")
+        all_scalars = (
+            pow(int(root[pivot]), -1, prime)
+            * reduced_c3[:, pivot, :] % prime
+        )
+        require(scalars.shape == (5, 37) and rank_mod(scalars, prime) == 5 and
+                rank_mod(np.vstack([scalars, all_scalars]), prime) == 5,
+                "P25 strict scalar row space")
+
+        # Re-evaluate four source points from the bound Reynolds seed circuit.
+        module = load_group_module(prime, zeta)
+        chosen = np.asarray([0, 1, 13, 25], dtype=np.int64)
+        nodes = source_points[chosen]
+        transformed = np.einsum(
+            "gij,pj->pgi", np.asarray(module.GROUP, dtype=np.int64), nodes
+        ) % prime
+        reynolds = np.empty((len(nodes), 5, len(seed_records)), dtype=np.int64)
+        for index, seed in enumerate(seed_records):
+            values = np.ones(transformed.shape[:2], dtype=np.int64)
+            for coordinate, exponent in enumerate(seed["exponents"]):
+                if int(exponent):
+                    values = values * pow_array(
+                        transformed[:, :, coordinate], int(exponent), prime
+                    ) % prime
+            reynolds[:, :, index] = (
+                values @ np.asarray(
+                    module.INVERSES[:, :, int(seed["output"])], dtype=np.int64
+                )
+            ) % prime
+        rebuilt_values = np.einsum(
+            "psw,bw->psb", reynolds, strict_bases[prime]
+        ) % prime
+        require(np.array_equal(rebuilt_values, basis_values[chosen] % prime),
+                "P25 strict Reynolds spot-check")
+
+        require(landing_points.shape == (1600, 5) and
+                reduced.shape == (1600, 5, 37),
+                "P25 strict landing samples")
+        require(np.array_equal(monomials, expected_monomials),
+                "P25 strict cubic monomials")
+        require(coefficients.shape == (716, 9139) and rows.shape == (716,) and
+                np.max(rows) < 1600, "P25 strict cubic profile")
+        left, middle, right = monomials.T
+        all_equal = left == right
+        left_pair = (left == middle) & (middle != right)
+        right_pair = (left != middle) & (middle == right)
+        distinct = (left != middle) & (middle != right)
+        rebuilt = np.empty((len(reduced), len(monomials)), dtype=np.uint16)
+        for start in range(0, len(reduced), 64):
+            stop = min(start + 64, len(reduced))
+            block = reduced[start:stop]
+            piece = np.zeros((stop - start, len(monomials)), dtype=np.int64)
+            for target in range(5):
+                a = block[:, target]
+                b = block[:, (target + 1) % 5]
+                piece[:, all_equal] += (
+                    a[:, left[all_equal]] ** 2 * b[:, left[all_equal]]
+                )
+                piece[:, left_pair] += (
+                    a[:, left[left_pair]] ** 2 * b[:, right[left_pair]]
+                    + 2 * a[:, left[left_pair]] * a[:, right[left_pair]]
+                    * b[:, left[left_pair]]
+                )
+                piece[:, right_pair] += (
+                    a[:, right[right_pair]] ** 2 * b[:, left[right_pair]]
+                    + 2 * a[:, left[right_pair]] * a[:, right[right_pair]]
+                    * b[:, right[right_pair]]
+                )
+                piece[:, distinct] += 2 * (
+                    a[:, left[distinct]] * a[:, middle[distinct]] * b[:, right[distinct]]
+                    + a[:, left[distinct]] * a[:, right[distinct]] * b[:, middle[distinct]]
+                    + a[:, middle[distinct]] * a[:, right[distinct]] * b[:, left[distinct]]
+                )
+            rebuilt[start:stop] = (piece % prime).astype(np.uint16)
+        require(np.array_equal(
+            rebuilt[rows].astype(np.int64) % prime, coefficients % prime
+        ), "P25 strict cubic serialization")
+        require(rank_mod_ffpack_int32(rebuilt, prime) == 716 and
+                rank_mod_ffpack_int32(coefficients, prime) == 716,
+                "P25 strict cubic sample rank")
+        print(f"P25 strict branch A p={prime}: 43 -> 37, scalar 5, "
+              "sample cubics 716/9139 OK")
+
+
+
+
 def verify_c3_third_based_reduced_landing() -> None:
     root = load_json(HERE / "c3_third_based_reduced_landing.json")
     require(root["schema"] == "cov-m1-c3-third-based-reduced-landing-v1",
@@ -1349,6 +2741,29 @@ def verify_landing_ideals() -> None:
     second_normal_record = root["second_normal_pre_elimination"]
     require_hash(HERE / second_normal_record["payload"],
                  second_normal_record["payload_sha256"])
+    deep_normal_record = root["deep_normal_pre_elimination"]
+    require(deep_normal_record["prime"] == 463, "deep-normal prime")
+    require_hash(HERE / deep_normal_record["payload"],
+                 deep_normal_record["payload_sha256"])
+    msolve_record = root["d31_third_pure_chart_saturation"]
+    require(msolve_record["prime"] == 463, "d31 msolve landing prime")
+    require_hash(HERE / msolve_record["payload"],
+                 msolve_record["payload_sha256"])
+    p25_record = root["p25_dependency_localization"]
+    require_hash(HERE / p25_record["payload"],
+                 p25_record["payload_sha256"])
+    p25_span_record = root["p25_d31_pure_second_branch"]
+    require_hash(HERE / p25_span_record["payload"],
+                 p25_span_record["payload_sha256"])
+    p25_common_record = root["p25_common_nonbased_branches"]
+    require_hash(HERE / p25_common_record["payload"],
+                 p25_common_record["payload_sha256"])
+    p25_b_record = root["p25_common_branch_b_closure"]
+    require_hash(HERE / p25_b_record["payload"],
+                 p25_b_record["payload_sha256"])
+    p25_strict_record = root["p25_strict_branch_a_localization"]
+    require_hash(HERE / p25_strict_record["payload"],
+                 p25_strict_record["payload_sha256"])
     third_based_record = root["third_based_reduced_special_fibre"]
     require(third_based_record["prime"] == 463,
             "third-based reduced landing prime")
@@ -1488,7 +2903,7 @@ def verify_status_and_seal() -> None:
     require(status.startswith("COV-UNDECIDED\n"), "wrong status first line")
     exit_record = load_json(HERE / "EXIT.json")
     require(exit_record["exit"] == "COV-UNDECIDED", "wrong exit")
-    require("projective saturation" in exit_record["smallest_unresolved_gate"],
+    require("affine saturation" in exit_record["smallest_unresolved_gate"],
             "missing smallest unresolved gate")
     seal_path = HERE / "SEAL.json"
     require(seal_path.is_file(), "SEAL.json has not been generated")
@@ -1520,6 +2935,13 @@ def main() -> None:
     verify_c3_first_normal_gate()
     verify_c3_first_normal_reduced_landing()
     verify_c3_second_normal_gate()
+    verify_c3_deep_normal_gate()
+    verify_d31_third_pure_msolve()
+    verify_p25_dependency_localization()
+    verify_p25_d31_pure_second_span()
+    verify_p25_common_nonbased_branches()
+    verify_p25_common_branch_b_msolve()
+    verify_p25_strict_branch_a()
     verify_c3_third_based_reduced_landing()
     verify_landing_ideals()
     verify_status_and_seal()

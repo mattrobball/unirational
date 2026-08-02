@@ -14,12 +14,12 @@
       "sha256": "6ddf86f6a8db474d9946082b1d93b7ae280c08c0477049b791ae1d922f55daf3"
     },
     "STATUS.md": {
-      "bytes": 1346,
-      "sha256": "fa349478a2771d1c5cc4a309eeb2488b8ce5e9850c2a3ec9fbe5f2456a77037a"
+      "bytes": 1981,
+      "sha256": "2fb16794bcf54c88da193c0cfae15deb7073e2d9dfcb2de0f631490fae6b8513"
     },
     "SUPPORT.md": {
-      "bytes": 3657,
-      "sha256": "7d727d60302ca304d470868fe96e59a401a678b788eb11debce19bb057def7fd"
+      "bytes": 4919,
+      "sha256": "a5889a36a3383008c9956221eb113fb0e2733c904631c0a0930c96306f089cf8"
     },
     "WORK_SCOPE.md": {
       "bytes": 811,
@@ -30,8 +30,8 @@
       "sha256": "e6b04f91bd33cfea661ac77ef155f33f0cdc853f94aa74f5bb42d25bca193f64"
     },
     "candidate_or_empty.json": {
-      "bytes": 1544,
-      "sha256": "bde6b3500b7a8ce396fe664c0eb49b94cdb861bdbdb79f34610751f52dbf10ec"
+      "bytes": 2746,
+      "sha256": "a07bcac10787eadf09efe6f5e159b68ca7fe4f3b9c527e79242ac79f31c492d1"
     },
     "dvr_replay.log": {
       "bytes": 157,
@@ -50,8 +50,44 @@
       "sha256": "95fb1405584468b6e327fa36617f8daafd32e7630d29526f9d09ae5f3820d5e8"
     },
     "make_seal.py": {
-      "bytes": 2405,
-      "sha256": "4f0f5fe0bef1c68e66c3156e5ebbadefa4776547b631ec326205ed26337e60c6"
+      "bytes": 2884,
+      "sha256": "f42f7d4054a4c230ffd367da3cc756349b961337c2106d05819f9360d5f8d751"
+    },
+    "parallel/complement_strategy/SEAL.json": {
+      "bytes": 6976,
+      "sha256": "5aba56cf5b1d5cffc481b901b7acd2435f93d10a445dbb60042f4c5358b6dad3"
+    },
+    "parallel/determinantal_cover/SEAL.json": {
+      "bytes": 3846,
+      "sha256": "3f68e5422a4e82de3db03e6560c1aaf422edc79b859f6af3f4c58acdcb7efe16"
+    },
+    "parallel/global_compatibility/SEAL.json": {
+      "bytes": 3666,
+      "sha256": "dd90b70d6a1f6864630e9d8ced8919948ffce49974cb1dd50a530a9c1b04c108"
+    },
+    "parallel/r66_pair_split/SEAL.json": {
+      "bytes": 2350,
+      "sha256": "3e9fdabefef8d83a0731bc73500884271c75a19073d37982a93755889723fc7e"
+    },
+    "parallel/r66_singular/SEAL.json": {
+      "bytes": 3750,
+      "sha256": "2b35861ca5e24f09b7a951d96e64d6b4f514787c224b2856500e3e9ea18fd9e4"
+    },
+    "parallel/r66_stagec/SEAL.json": {
+      "bytes": 2396,
+      "sha256": "698d3b3737fc0e3060aadd10b503884472077735fd50ba798c8ca83a1bd321e2"
+    },
+    "parallel/stageb_stratified_cas/SEAL.json": {
+      "bytes": 8042,
+      "sha256": "612349a097ade942852ea57f36758d0c061c55e4d2f62e461f5715adb24db3a2"
+    },
+    "parallel/structural_route/SEAL.json": {
+      "bytes": 1979,
+      "sha256": "7d923f09ffaa7f10fb2b76af4046ccb08b1deef891c53e182e494e5527ab8ec8"
+    },
+    "parallel/systematic_module/SEAL.json": {
+      "bytes": 9160,
+      "sha256": "0a4a817b8c468ce7232900ecb29b5328b063adfb85629f2c96906c40bca3ace1"
     },
     "produce_linear_syzygies.py": {
       "bytes": 8460,
@@ -150,13 +186,13 @@
       "sha256": "a83e7f5999a7ee0b764e79c0a3f44254a5951b1732313b9c0d5e77a20903f2e4"
     },
     "verify_undecided.py": {
-      "bytes": 3834,
-      "sha256": "d22cfcfa5b7c2dab64f80dd7728394eb932c99d3d0d37ed13e16c22885fdba72"
+      "bytes": 5554,
+      "sha256": "bd9cd274f8a16683a654c90ef426e6a4ddaf069314b19ab32db7d16f8daec163"
     },
     "verify_undecided_result.json": {
-      "bytes": 207,
-      "sha256": "14b00213c5912895d387937107cea40776a36177ddda919815fdaf5e599a2a30"
+      "bytes": 402,
+      "sha256": "a1d8aca77e8080701620928637fbef5ab39d5df181268ae022e559cee8c730d0"
     }
   },
-  "scope": "honest stop: Stage B saturated incidence unresolved; no degree-25 positive or negative theorem; headline remains OPEN"
+  "scope": "honest stop: Stage B and Stage C are empty on closed L8, while the certified 34-chart Stage-B and 29-chart Stage-C complements remain unresolved; no degree-25 terminal theorem; headline OPEN"
 }

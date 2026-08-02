@@ -1,0 +1,21 @@
+{
+  "decomposition_sha256": "b3d9469f35b64436404053012d34c032fc16c0f3c9c1363446d8604f1f3c119d",
+  "flattening_shape": [
+    690,
+    777
+  ],
+  "free_columns": 87,
+  "identity_minor": true,
+  "leading_check_script_sha256": "be8e2378be620d58bdcbe1f14f56311f09b5f79fbdf2f638005d0de96e8b2a69",
+  "scope": "Exact term-order verification only; no Stage-B or P25 verdict.",
+  "singular_markers": [
+    "SYSTEMATIC_LT_CHECK=1",
+    "LEADING_CHECK_ONLY_COMPLETE"
+  ],
+  "singular_returncode": 0,
+  "source_sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+  "standard_basis_completed": false,
+  "status": "PASS_INDEPENDENT_SYSTEMATIC_LEADING_TERMS",
+  "tail_nnz": 59375,
+  "unit_columns": 690
+}

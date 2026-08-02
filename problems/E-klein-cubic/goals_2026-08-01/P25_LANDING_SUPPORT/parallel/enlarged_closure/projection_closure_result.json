@@ -1,0 +1,99 @@
+{
+  "certificate": {
+    "file": "projection_closure_certificate.npz",
+    "sha256": "561249ec4cfdbde36de07672de6a0980fe254cafbdd69f31ac2cc8ba034189ff"
+  },
+  "cubic_projection": {
+    "Tq0_distinct_rows": 56,
+    "Tq0_rows": 126,
+    "V0_shape": [
+      690,
+      9139
+    ],
+    "basis_minor_sha256": "b4eea7f05a11b7893abf8a0f38916c17d3a3af468f375725f5a2efab9ef0502c",
+    "basis_minor_shape": [
+      746,
+      746
+    ],
+    "complete_746_pure_q_row_multiset_equal": true,
+    "direct_sum": true,
+    "rank_V0": 690,
+    "rank_V0_plus_W": 746,
+    "rank_W": 56
+  },
+  "degree4_formal_tensor": {
+    "T_i_block_ranks": [
+      690,
+      690,
+      690,
+      690,
+      690,
+      690
+    ],
+    "T_i_cumulative_ranks": [
+      690,
+      1332,
+      1702,
+      1924,
+      2035,
+      2072
+    ],
+    "T_i_seed_rows": 4140,
+    "T_i_seed_span_is_entire_formal_tensor": true,
+    "T_i_seed_span_rank": 2072,
+    "T_i_seed_zero_rows": 0,
+    "ambient_dimension": 2072,
+    "commutator_rows": 315,
+    "commutator_span_rank": 210,
+    "commutator_zero_rows": 0,
+    "commutators_add_formal_directions": 0,
+    "full_rank_minor_rule": "FFLAS exact row-rank profile",
+    "full_rank_minor_sha256": "0f8768acf911e65bc6d2c1bcbbb2f2f22cd32cba9f3d3714aed8d49d3e95c875",
+    "full_rank_minor_shape": [
+      2072,
+      2072
+    ],
+    "rank_after_adding_commutators": 2072,
+    "space": "S_1 tensor ((V0+W)/V0)"
+  },
+  "inputs": {
+    "complete_rref_cache": "tmp/p25z1_probe/rref_A.npz",
+    "complete_rref_cache_sha256": "22bf80b120c073713458ad066f96922f1dfd345c2726185c7aa27423e6bbbe22",
+    "multiplication_matrices": "certificates/degree25_finite_module/multiplication_matrices.npz",
+    "multiplication_matrices_sha256": "cdee1a9cd2989f2d17e7771321b49723d8a9dfc71d2bd5a791f83a30142aa418",
+    "permutation_sha256": "d49babb7cfd91bca566d01c25d855c686fa0566f9107d2b18f8bfe4a481838e3",
+    "relation_matrix": "certificates/degree25_finite_module/relation_matrix.npz",
+    "relation_matrix_sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb"
+  },
+  "iteration": {
+    "all_higher_degrees": "By symmetric multiplication, q-multiples of the degree-4 formal span cover S_d tensor W for every d>=1. This stabilizes only the pure-q formal quotient; coupled module closure may still enlarge.",
+    "degree4": "one T-step spans all S_1 tensor W formally",
+    "degree5": {
+      "covered_by_q_multiples_of_degree4": true,
+      "dimension": 39368,
+      "formal_q_multiple_space": "S_2 tensor W"
+    }
+  },
+  "prime": 89,
+  "resource": {
+    "elapsed_seconds": 28.859223,
+    "largest_rank_matrix_float64_mib": 70.425,
+    "largest_rank_matrix_shape": [
+      4455,
+      2072
+    ],
+    "old_45_GiB_rref_replayed": false,
+    "singular_launched": false
+  },
+  "status": "PASS_ENLARGED_CLOSURE_PROJECTION",
+  "superseding_degree5_dimension": {
+    "full_surjectivity_possible": false,
+    "source_upper_bound": 4386720,
+    "target_dimension": 4496388
+  },
+  "theorem_boundary": {
+    "does_not_prove": "Injectivity or exact rank of multiplication S_1 tensor (V0+W)->S_4; the 2,072-dimensional rank of the polynomial quotient S_1(V0+W)/S_1V0; individual quartic nonmembership; stabilization of the full coupled S-module; a pure-q annihilator; or support emptiness.",
+    "proves": "Over F_89, the complete 746-cubic pure-q projection is exactly V0 direct-sum W with dimensions 690+56. The 4,140 first T-closure classes span the full 2,072-dimensional formal tensor S_1 tensor W; the 315 commutator classes add no formal direction. Hence the pure-q part of the first enlargement is controlled by 2,072 directions, not 4,455 separately adjoined rows.",
+    "safe_polynomial_consequence": "The polynomial images of all first-step T_i(seed) pure-q components span the entire image of S_1 tensor W modulo S_1V0, whatever its eventual dimension. This is a generator reduction, not a membership verdict."
+  }
+}

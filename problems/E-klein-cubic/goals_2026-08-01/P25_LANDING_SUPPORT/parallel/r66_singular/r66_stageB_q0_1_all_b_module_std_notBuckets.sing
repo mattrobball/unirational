@@ -1,0 +1,16 @@
+ring R=89,(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21,q22,q23,q24,q25,q26,q27,q28,q29,q30,q31,q32,q33,q34,q35,q36),(dp,C);
+option(prot);
+option(notBuckets);
+execute(read("r66_stageB_q0_1_module.inc"));
+print("R66_MODULE_INPUT characteristic="+string(char(R))+",vars="+string(nvars(R))+",rows="+string(size(N)));
+timer=1;
+module G=std(N);
+int elapsed=timer;
+module E=freemodule(6);
+module rem=simplify(reduce(E,G),2);
+int remainder_zero=(size(rem)==0);
+int quotient_dim=dim(G);
+int full=(remainder_zero && quotient_dim==-1);
+print("R66_MODULE_RESULT full="+string(full)+",remainder_zero="+string(remainder_zero)+",quotient_dim="+string(quotient_dim)+",basis_gens="+string(size(G))+",elapsed_ms="+string(elapsed));
+write(":w r66_stageB_q0_1_all_b_module_std_notBuckets.result.txt","full="+string(full)+",remainder_zero="+string(remainder_zero)+",quotient_dim="+string(quotient_dim)+",basis_gens="+string(size(G))+",elapsed_ms="+string(elapsed));
+quit;

@@ -1,0 +1,253 @@
+{
+  "checks": {
+    "cubic_identities": 1485,
+    "graph_identities": 1485,
+    "line_triangle_count": 55,
+    "pair_orbit_sizes": [
+      165,
+      330,
+      165,
+      330,
+      165,
+      330
+    ],
+    "residual_map_fibre_size_histogram": {
+      "1": 1320,
+      "3": 55
+    },
+    "total_distinct_residual_maps": 1375,
+    "unordered_pairs": 1485
+  },
+  "conclusions": [
+    "At the frozen F_23 witness, the triangle-pair orbit folds three-to-one onto the 55 specialized line maps.",
+    "The other five specialized pair orbits have sizes 165 or 330 at this exact witness.",
+    "Each nontriangle orbit contains a residual map over F_23 with coordinate gcd one and residual H-degree four."
+  ],
+  "inputs": {
+    "goal_runs_after_35fa/M_SARKISOV/links/schur_plane_012_dp3/link_payload.json": "a1c74b36f85bd5c085d1b3d5628da770db3520d97c388950d653a0a8468e9fd5",
+    "tmp/fano14_twist/fano_covariant_scan.py": "b3c93a41ed1f8b5106d93717dbad058b6c60af100bcee8138925485dac6f107e",
+    "tmp/projective_source/character_scan.py": "7d2e94968226bd79d4a365e9636807590f1f3ac05ec707d58ae3f09a573f8256",
+    "tmp/projective_source/degree8_m2.py": "b1ad4746c528494d71d55b7d2b9a84148517e981fb04c88ca64fcb47e99a32dd",
+    "tmp/projective_source/degree8_rational_frame.py": "2348a040ecc4383545c99e73f47b8b3f0587f9216aefa913fbf998a03983c2cc",
+    "tmp/projective_source/invariant_scan.py": "9db98d363923a691e11655b61e069e9d660829f79ef5489d14ae84be958c8aec",
+    "tmp/projective_source/landing_scan.py": "acca599bd1a1f005e83522b72e3db4f01c45c7c96baf85a422b6bfc5cee73c1e"
+  },
+  "pair_orbits": [
+    {
+      "coordinate_gcd_degree_histogram": {
+        "3": 165
+      },
+      "distinct_input_line_outputs": 55,
+      "distinct_residual_maps": 55,
+      "id": "O0",
+      "line_span_rank_histogram": {
+        "3": 165
+      },
+      "pairs_returning_input_line": 165,
+      "pointwise_stabilizer_order": 4,
+      "representative": [
+        0,
+        1
+      ],
+      "residual_H_degree_histogram": {
+        "1": 165
+      },
+      "scoped_interpretation": "55 specialized line triangles; residual returns the third specialized line map",
+      "size": 165,
+      "stabilizer_order": 4,
+      "swapping_elements": 0
+    },
+    {
+      "coordinate_gcd_degree_histogram": {
+        "0": 305,
+        "1": 25
+      },
+      "distinct_input_line_outputs": 0,
+      "distinct_residual_maps": 330,
+      "id": "O1",
+      "line_span_rank_histogram": {
+        "4": 330
+      },
+      "pairs_returning_input_line": 0,
+      "pointwise_stabilizer_order": 1,
+      "representative": [
+        0,
+        2
+      ],
+      "residual_H_degree_histogram": {
+        "3": 25,
+        "4": 305
+      },
+      "scoped_interpretation": "all residual maps distinct at the frozen witness; the orbit contains a gcd-free coordinate-degree-four graph map",
+      "size": 330,
+      "stabilizer_order": 2,
+      "swapping_elements": 1
+    },
+    {
+      "coordinate_gcd_degree_histogram": {
+        "0": 156,
+        "1": 6,
+        "2": 3
+      },
+      "distinct_input_line_outputs": 0,
+      "distinct_residual_maps": 165,
+      "id": "O2",
+      "line_span_rank_histogram": {
+        "4": 165
+      },
+      "pairs_returning_input_line": 0,
+      "pointwise_stabilizer_order": 2,
+      "representative": [
+        0,
+        3
+      ],
+      "residual_H_degree_histogram": {
+        "2": 3,
+        "3": 6,
+        "4": 156
+      },
+      "scoped_interpretation": "all residual maps distinct at the frozen witness; the orbit contains a gcd-free coordinate-degree-four graph map",
+      "size": 165,
+      "stabilizer_order": 4,
+      "swapping_elements": 2
+    },
+    {
+      "coordinate_gcd_degree_histogram": {
+        "0": 304,
+        "1": 26
+      },
+      "distinct_input_line_outputs": 0,
+      "distinct_residual_maps": 330,
+      "id": "O3",
+      "line_span_rank_histogram": {
+        "4": 330
+      },
+      "pairs_returning_input_line": 0,
+      "pointwise_stabilizer_order": 2,
+      "representative": [
+        0,
+        4
+      ],
+      "residual_H_degree_histogram": {
+        "3": 26,
+        "4": 304
+      },
+      "scoped_interpretation": "all residual maps distinct at the frozen witness; the orbit contains a gcd-free coordinate-degree-four graph map",
+      "size": 330,
+      "stabilizer_order": 2,
+      "swapping_elements": 0
+    },
+    {
+      "coordinate_gcd_degree_histogram": {
+        "0": 152,
+        "1": 13
+      },
+      "distinct_input_line_outputs": 0,
+      "distinct_residual_maps": 165,
+      "id": "O4",
+      "line_span_rank_histogram": {
+        "4": 165
+      },
+      "pairs_returning_input_line": 0,
+      "pointwise_stabilizer_order": 2,
+      "representative": [
+        0,
+        5
+      ],
+      "residual_H_degree_histogram": {
+        "3": 13,
+        "4": 152
+      },
+      "scoped_interpretation": "all residual maps distinct at the frozen witness; the orbit contains a gcd-free coordinate-degree-four graph map",
+      "size": 165,
+      "stabilizer_order": 4,
+      "swapping_elements": 2
+    },
+    {
+      "coordinate_gcd_degree_histogram": {
+        "0": 301,
+        "1": 29
+      },
+      "distinct_input_line_outputs": 0,
+      "distinct_residual_maps": 330,
+      "id": "O5",
+      "line_span_rank_histogram": {
+        "4": 330
+      },
+      "pairs_returning_input_line": 0,
+      "pointwise_stabilizer_order": 1,
+      "representative": [
+        0,
+        6
+      ],
+      "residual_H_degree_histogram": {
+        "3": 29,
+        "4": 301
+      },
+      "scoped_interpretation": "all residual maps distinct at the frozen witness; the orbit contains a gcd-free coordinate-degree-four graph map",
+      "size": 330,
+      "stabilizer_order": 2,
+      "swapping_elements": 1
+    }
+  ],
+  "residual_formula": {
+    "R_ij": "-beta_ij*P_i+alpha_ij*P_j",
+    "alpha_ij": "dPhi_(P_i)(P_j)",
+    "beta_ij": "dPhi_(P_j)(P_i)"
+  },
+  "schema": "m3-line-pair-residuals-p23-v1",
+  "scope": "exact frozen F_23 good-reduction specialization; pair-secant census only",
+  "theorem_boundary": "This finite-field certificate concerns only the displayed F_23 witness, specialized line maps, residual maps, and orbit census; it makes no characteristic-zero inference.",
+  "witness": {
+    "all_projection_minors_nonzero": true,
+    "frame_matrix": [
+      [
+        18,
+        15,
+        0,
+        11,
+        6
+      ],
+      [
+        1,
+        19,
+        8,
+        14,
+        12
+      ],
+      [
+        11,
+        2,
+        13,
+        21,
+        2
+      ],
+      [
+        17,
+        3,
+        20,
+        14,
+        19
+      ],
+      [
+        9,
+        4,
+        16,
+        17,
+        9
+      ]
+    ],
+    "involution_line_count": 55,
+    "prime": 23,
+    "source_point": [
+      13,
+      9,
+      5,
+      5,
+      8,
+      19
+    ],
+    "target_group_order": 660,
+    "zeta11": 2
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "deliberately_absent": [
+    "direct_axis0_component0_degree5.result"
+  ],
+  "external_inputs": [
+    {
+      "bytes": 590397806,
+      "path": "../stageb_global_basis/full_p3_contractions.npy",
+      "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019"
+    },
+    {
+      "bytes": 7661361,
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/relation_matrix.npz",
+      "sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb"
+    }
+  ],
+  "local_files": [
+    {
+      "bytes": 668,
+      "path": "WORK_SCOPE.md",
+      "sha256": "2cc3a59fac4e2a7d7cde61109c89394dc406f37df28bb0d19d296bd2e0445331"
+    },
+    {
+      "bytes": 8294,
+      "path": "REPORT.md",
+      "sha256": "37967e43b6e7050ad475edc28e14fc3c9ffc2bca5da0d876302b076fc20c4362"
+    },
+    {
+      "bytes": 4650,
+      "path": "analyze_affine_profiles.py",
+      "sha256": "f73fc82e3c350934b983550a3644c4c4bf9cd14ef076a83e8110dcbd1e2aa61c"
+    },
+    {
+      "bytes": 4485,
+      "path": "affine_rank_profiles.json",
+      "sha256": "c77385c7106759597b475fa96ba14dbdc94f537ad7eaa5ac965e4c7287c088e4"
+    },
+    {
+      "bytes": 11352,
+      "path": "produce_affine_border.py",
+      "sha256": "c01db6104bd946d6464eaabeb6ce9d0a0f09880e0393ff1296e109f4764aed8c"
+    },
+    {
+      "bytes": 17000,
+      "path": "axis0_selected_rows.npy",
+      "sha256": "9399ceda054a7c6e49ab856f4bb8e77a2ee3cee2ede152ac78621fa3c5ba60ee"
+    },
+    {
+      "bytes": 17791652,
+      "path": "axis0_low_inverse.npy",
+      "sha256": "39f65bd254787b16b887126f579a611a4e4c008df4324f0c1f026a78b531707f"
+    },
+    {
+      "bytes": 213498416,
+      "path": "axis0_border_tails.npy",
+      "sha256": "badcbf56207481ba5350f1547d7a88aec3ed846ce0e672f3ba4f1f56e006f25d"
+    },
+    {
+      "bytes": 97240,
+      "path": "axis0_border_packet.npz",
+      "sha256": "147306837c5077d6b917a8d6392ff43297fecc4faf12254153e09a8a05c41aa2"
+    },
+    {
+      "bytes": 1763,
+      "path": "axis0_border_manifest.json",
+      "sha256": "0be7d034773f5d26fc2f5ff1caa226fa2f8f76afc7eb146643ebc947fde9ce42"
+    },
+    {
+      "bytes": 11860,
+      "path": "reduce_affine_border.py",
+      "sha256": "6a25e24b075d59867ebf88da62ca74a80c62f7e6b70fa732634eaaba40a796cd"
+    },
+    {
+      "bytes": 3715904,
+      "path": "axis0_border_reduction.npz",
+      "sha256": "ef3111f516522558d1f8920dad6e711c62421c7d350be14a47c5ac16ad3270f2"
+    },
+    {
+      "bytes": 1250,
+      "path": "axis0_border_reduction.json",
+      "sha256": "8cde17210f52e3c1a90043f31a3a0af17efbdfa24d4fdaa52f4d006dd49c5b22"
+    },
+    {
+      "bytes": 5523,
+      "path": "produce_direct_module_singular.py",
+      "sha256": "127312cba47307b1c14ed0f7803f93e8d06e0ed9fe2d8f726bdd375125396c69"
+    },
+    {
+      "bytes": 29830987,
+      "path": "direct_axis0_component0_degree5.sing",
+      "sha256": "2394fd6136f4f8c3c3266513e8db516019fa38f257952115f4a04271ac67b65c"
+    },
+    {
+      "bytes": 1198,
+      "path": "direct_axis0_component0_degree5.json",
+      "sha256": "220068c1ada3148a33a813a284d29c05be67fc5f9956868ead4b0719153297fb"
+    },
+    {
+      "bytes": 3947,
+      "path": "run_bounded_singular.py",
+      "sha256": "c535dcd332dc7b4cbff0d6671ade9c6f0ff09d592e86304a8ff0e3a95c6bab42"
+    },
+    {
+      "bytes": 5436,
+      "path": "direct_axis0_component0_degree5.log",
+      "sha256": "c0ec66a7a03af58bbbc6ecabe80194f3ae08b14c55b62cbd98e7b71e3502ecd8"
+    },
+    {
+      "bytes": 748,
+      "path": "direct_axis0_component0_degree5.run.json",
+      "sha256": "266c07b7a4de19f137932254c98646d6418e785113a03f53ce400b8015fe3c7d"
+    },
+    {
+      "bytes": 12838,
+      "path": "verify_affine_border.py",
+      "sha256": "0325abe3dd0c43a357532424b442357569d7da292acb61ecce7b4c561a2397c4"
+    },
+    {
+      "bytes": 804,
+      "path": "verify_affine_border_result.json",
+      "sha256": "176dc3d0d6cc49c7f4de9f81d6196768ca38cce5d580caaff974538001fd362e"
+    },
+    {
+      "bytes": 2492,
+      "path": "make_seal.py",
+      "sha256": "164453df0532b7672c71c3decaaad3f03aeb24989df23d51d489c7f5613317ba"
+    }
+  ],
+  "prime": 89,
+  "scope": "Exact affine-border construction and bounded direct-test record. The packet contains no membership or nonmembership verdict.",
+  "status": "SEALED_EXACT_NONVERDICT_PACKET",
+  "verdict": "PURE_POWER_MEMBERSHIP_UNDECIDED"
+}

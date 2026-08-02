@@ -1,0 +1,13 @@
+ring R=89,(b1_1,b1_2,b1_3,b1_4,b1_5,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21,q22,q23,q24,q25,q26,q27,q28,q29,q30,q31,q32,q33,q34,q35,q36),dp;
+option(prot);
+option(notBuckets);
+execute(read("r66_stageB_q0_1_b10_1_equations.inc"));
+print("R66_SCALAR_INPUT characteristic="+string(char(R))+",vars="+string(nvars(R))+",eqs="+string(size(I)));
+timer=1;
+ideal G=std(I);
+int elapsed=timer;
+poly one_nf=reduce(1,G);
+int unit=(one_nf==0);
+print("R66_SCALAR_RESULT unit="+string(unit)+",basis_gens="+string(size(G))+",elapsed_ms="+string(elapsed));
+write(":w r66_stageB_q0_1_b10_1_std_bfirst_notBuckets.result.txt","unit="+string(unit)+",basis_gens="+string(size(G))+",elapsed_ms="+string(elapsed));
+quit;

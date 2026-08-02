@@ -1,0 +1,13 @@
+{
+  "status": "timeout_nonverdict",
+  "equations": 32,
+  "timeout_seconds": 120,
+  "max_pairs_per_matrix": 16,
+  "elapsed_seconds": 120.03125029199873,
+  "input_file": "degree9_full_landing_32.in",
+  "input_bytes": 3464951,
+  "input_sha256": "957cb8bc0272f42296e6160e38728ab7f95407f2b81107ed9362d8911d65c916",
+  "log_file": "degree9_full_landing_32_msolve.log",
+  "log_bytes": 2694,
+  "log_sha256": "90c13eb8dd8c377f8de7b3df7ced733acdb51b5e1a3dc765736cb5d781448d6b"
+}

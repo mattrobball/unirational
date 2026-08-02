@@ -1,0 +1,31 @@
+{
+  "schema": "q-schur-completion-audit-v1",
+  "date": "2026-08-01",
+  "repository_head_audited": "35fa8f59b6a1423cc89300aeaceefe91552be5ba",
+  "headline": "Q-UNDECIDED",
+  "binary_exits": {
+    "Q-SCHUR-POINT-HEADLINE-POSITIVE": false,
+    "Q-SCHUR-POINTLESS-HEADLINE-NEGATIVE": false
+  },
+  "seal_present": false,
+  "exact_frontiers": {
+    "index": 1,
+    "primitive_quartic_groups": ["A4", "S4"],
+    "linked_residue_compositum_degree": 20,
+    "degree_three_point_incidence_count": 8,
+    "degree_four_virtual_point_incidence_count": 192,
+    "generic_twisted_cubic_incidence_degree": 8,
+    "actual_odd_degree_stable_map_forces_point": true,
+    "special_incidence_splitting_verified": false,
+    "valuation_nonpoint_maximum_rational_rank": 3,
+    "surviving_decomposition_groups": [
+      "PSL(2,11)",
+      "A5_class_1",
+      "A5_class_2",
+      "11:5"
+    ]
+  },
+  "missing_positive_premise": "No unrestricted K_Schur point or unconditional descent from the primitive quartic is proved.",
+  "missing_negative_premise": "No surviving index-one residue cubic or global proper-model obstruction is proved pointless.",
+  "marker": "Q_SCHUR_COMPLETION_AUDIT_NONTERMINAL_EXACT"
+}

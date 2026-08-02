@@ -1,0 +1,15 @@
+{
+  "component_ranks": [
+    9139,
+    9139,
+    9139,
+    9139,
+    9139,
+    9139
+  ],
+  "prime": 89,
+  "profile_size": 9139,
+  "profile_source_component": 0,
+  "scope": "Preflight only; full ranks at six b-axes do not prove constant rank on P5.",
+  "status": "PASS_COMMON_PROFILE"
+}

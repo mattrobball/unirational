@@ -18,7 +18,12 @@
     "independent_replay": "parallel/stageb_strata/verify_closed_L_degree6_result.json",
     "independent_replay_sha256": "b30c9d6555e9d85f7d306736800e8279b644c1e82809b486ec03542174055439",
     "name": "L8",
-    "stageB_status": "independently certified empty"
+    "stageB_status": "independently certified empty",
+    "stageC_certificate": "closed_L8_stageC_certificate.json",
+    "stageC_certificate_sha256": "8bae2e072bc64a68cebcad7743c0884a1901eb3ae3026e5168dd8598f99bc6bb",
+    "stageC_independent_replay": "verify_closed_L8_stageC_result.json",
+    "stageC_independent_replay_sha256": "72efd550a199412961ca48bb68f38de200e3f645c4e4fc917a93803c2c7fd6c4",
+    "stageC_status": "independently certified empty"
   },
   "inputs": {
     "new_r43_stageBC": {
@@ -32,12 +37,42 @@
       "p4_nnz": 4056914,
       "path": "syzygy_r48_q0_contracted.npz",
       "sha256": "ba6d0533ab7fdb8bd93fb9309ce5b7d615f0a4799b22aa5e502e2dfec0bc21bb"
+    },
+    "support_balanced_r64_stageBC": {
+      "p3_nnz": 2254680,
+      "p4_nnz": 4265696,
+      "path": "parallel/enlarged_closure/support_balanced_r64_stageBC.npz",
+      "sha256": "c50de97aa4fc9465793f3fe84b544731b36cec1a2807113e94817c955897be2b",
+      "upstream_replay": "parallel/enlarged_closure/verify_augmented_module_jobs_result.json",
+      "upstream_replay_sha256": "c20d291bd15031b0bcd3a688fcf117cf57d08ddf7d18644980b3d55981d11df6"
     }
   },
   "jobs": {
+    "combined_old_r48_L8_complement_Hfirst": {
+      "criterion": "unit of sat(sat(I,H8),(b0,b1)-irrelevant) proves the selected combined projective Stage-B-plus-C contraction incidence empty on P36 minus L8",
+      "job_type": "combined",
+      "result": "combined_old_r48_L8_complement_Hfirst_result.txt",
+      "ring_order": "(dp(7),dp(37))",
+      "script": "combined_old_r48_L8_complement_Hfirst.sing",
+      "script_bytes": 102153636,
+      "script_sha256": "91c8b2d4a056ad88fe3d76ccf3b9323d91614ddcd4930e649770a64751ba6899",
+      "suggested_command_not_run": "/opt/homebrew/bin/python3 /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/run_bounded.py /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_stratified_cas/combined_old_r48_L8_complement_Hfirst.sing --timeout 43200 --rss-gib 64"
+    },
+    "combined_r64_L8_complement_Hfirst": {
+      "criterion": "unit of sat(sat(I,H8),(b0,b1)-irrelevant) proves the selected combined projective Stage-B-plus-C contraction incidence empty on P36 minus L8",
+      "job_type": "combined",
+      "result": "combined_r64_L8_complement_Hfirst_result.txt",
+      "ring_order": "(dp(7),dp(37))",
+      "script": "combined_r64_L8_complement_Hfirst.sing",
+      "script_bytes": 104650220,
+      "script_sha256": "fe115d3f85667f943701af73a14379d2782f8fb3e99539c4fc3ad04c1c50e09a",
+      "suggested_command_not_run": "/opt/homebrew/bin/python3 /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/run_bounded.py /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_stratified_cas/combined_r64_L8_complement_Hfirst.sing --timeout 43200 --rss-gib 64"
+    },
     "stageB_new_r43_L8_complement_Hfirst": {
       "criterion": "unit of sat(sat(I,H8),b1_irrelevant) proves the selected Stage-B contraction incidence empty on P36 minus L8",
+      "job_type": "stageB",
       "result": "stageB_new_r43_L8_complement_Hfirst_result.txt",
+      "ring_order": "(dp(6),dp(37))",
       "script": "stageB_new_r43_L8_complement_Hfirst.sing",
       "script_bytes": 21645389,
       "script_sha256": "a0c86d9d743e74c059a97f2d3344d7a1229b4d9855c943b0d35695fc6298244f",
@@ -45,7 +80,9 @@
     },
     "stageB_old_r48_L8_complement_Hfirst": {
       "criterion": "unit of sat(sat(I,H8),b1_irrelevant) proves the selected Stage-B contraction incidence empty on P36 minus L8",
+      "job_type": "stageB",
       "result": "stageB_old_r48_L8_complement_Hfirst_result.txt",
+      "ring_order": "(dp(6),dp(37))",
       "script": "stageB_old_r48_L8_complement_Hfirst.sing",
       "script_bytes": 32056401,
       "script_sha256": "510bbb7d399b18e0986a0c618ee6d82d50e6c24ec8ebc04857020d1077e15ac1",
@@ -53,11 +90,23 @@
     },
     "stageC_new_r43_L8_complement_Hfirst": {
       "criterion": "unit of sat(I,H8) proves the selected normalized Stage-C contraction incidence empty on P36 minus L8",
+      "job_type": "stageC",
       "result": "stageC_new_r43_L8_complement_Hfirst_result.txt",
+      "ring_order": "(dp(6),dp(37))",
       "script": "stageC_new_r43_L8_complement_Hfirst.sing",
       "script_bytes": 72310380,
       "script_sha256": "6b45c4cc6e7474df8b708dc3d9aeeae5f8a0171f915821fac351176e2af5f09e",
       "suggested_command_not_run": "/opt/homebrew/bin/python3 /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/run_bounded.py /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_stratified_cas/stageC_new_r43_L8_complement_Hfirst.sing --timeout 43200 --rss-gib 64"
+    },
+    "stageC_old_r48_L8_complement_Hfirst": {
+      "criterion": "unit of sat(I,H8) proves the selected normalized Stage-C contraction incidence empty on P36 minus L8",
+      "job_type": "stageC",
+      "result": "stageC_old_r48_L8_complement_Hfirst_result.txt",
+      "ring_order": "(dp(6),dp(37))",
+      "script": "stageC_old_r48_L8_complement_Hfirst.sing",
+      "script_bytes": 102153205,
+      "script_sha256": "23054f47869c03420aa49740a4c153bcdd4428bfa8519e2fb8ff781392fa9293",
+      "suggested_command_not_run": "/opt/homebrew/bin/python3 /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_cas/run_bounded.py /Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_stratified_cas/stageC_old_r48_L8_complement_Hfirst.sing --timeout 43200 --rss-gib 64"
     }
   },
   "not_launched": true,
@@ -103,10 +152,12 @@
     ]
   },
   "prime": 89,
+  "provenance_guard": "Only the script hashes in this ledger identify the current regenerated H8-first block-order inputs. Any earlier preflight or result against an overwritten pathname with a different hash is provenance-invalid; in particular this applies to stageB_old_r48_L8_complement_Hfirst.sing.",
   "status": "JOBS_GENERATED_NOT_LAUNCHED",
   "theorem_logic": {
+    "combined": "independently certified Stage-B and Stage-C emptiness on L8 plus either combined H8-complement unit proves true Stage B and Stage C empty globally in one calculation",
     "nonunit_guard": "a nonunit, timeout, crash, or missing output is only a contraction nonverdict and is not a true incidence point",
     "stageB": "closed-L8 emptiness plus a unit from either Stage-B H8-complement job proves true Stage B empty globally",
-    "stageC": "a closed-L8 Stage-C unit plus the new-r43 Stage-C H8-complement unit proves true Stage C empty globally"
+    "stageC": "independently certified closed-L8 Stage-C emptiness plus either Stage-C H8-complement unit proves true Stage C empty globally"
   }
 }

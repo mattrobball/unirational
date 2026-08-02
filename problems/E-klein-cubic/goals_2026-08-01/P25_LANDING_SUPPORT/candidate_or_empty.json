@@ -7,7 +7,7 @@
   "headline": "OPEN",
   "independently_replayed": {
     "complete_landing_rank": 746,
-    "dvr_model": "PASS",
+    "dvr_model": "PASS_CONDITIONAL_TRANSFER",
     "monic_K3_pivots": 56,
     "residual_seed_rows": 690,
     "stageA": {
@@ -16,26 +16,54 @@
       "kernel_dimension": 87,
       "quadratic_span": "3828/3828"
     },
-    "syzygy_contractions": "PASS: all 48 replay rows rebuild exactly"
+    "closed_L8": {
+      "coordinates": [4, 5, 6, 7, 8, 9, 10, 11],
+      "stageB_rank": "10296/10296",
+      "stageB_selected_determinant_mod_89": 28,
+      "stageC_kernel_dimension": 3384,
+      "stageC_compatibility_rank": "6435/6435"
+    },
+    "stageB_complement_cover": {
+      "status": "PASS_INDEPENDENT_STAGEB_H8_MDS_COVER",
+      "outside_q_dimension": 29,
+      "paired_opens": 34,
+      "all_charts_decided": false
+    },
+    "stageC_complement_cover": {
+      "outside_q_opens": 29,
+      "all_charts_decided": false
+    },
+    "r66_coordinate_lines": "PASS_AUGMENTED_RANK7_ALL_666_COORDINATE_LINES",
+    "single_b1_support": "PASS_ALL_SIX_COMPONENT_RANKS_9139"
   },
   "load_bearing_hashes": {
     "relation_matrix_npz": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
-    "linear_syzygies_256_npz": "f3787f317d851900de76da85ecb67018de5b48b0177d4e6e517634312f1c86a9",
-    "contracted_256_npz": "2e718c491172480e3aa3f055d5806d28a9414db2627e6daf3f0204bdc3b840ea",
+    "r66_stageBC_npz": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+    "closed_L8_stageC_npz": "ad64848d98316eff00793814a5e8be09978f61c13057e4256e9a586375093957",
     "stageA_certificate_npz": "1ef6ffced4d3dc77f3a572dcef7a1e020772e0e40ca674bcb438c31610bade99",
-    "rowrank_replay_report_json": "cd4b7ae35d1394a1e39c7ef27162d8e3ed187adbfe5dec2eff79504d4ed72eb3"
+    "r66_pair_split_input": "9fc5d17aeb9c2bf1341c0871ffd1e0fce07682701a1490a12b2f64ed3378f34b",
+    "r66_pair_split_runner": "19141cdda2395d40e13b4edcc683722373e250013e16bc5db6c8a50bd648af05",
+    "r66_pair_split_seal": "3e9fdabefef8d83a0731bc73500884271c75a19073d37982a93755889723fc7e",
+    "r66_stageC_input": "c4e99a95d9ad3bc24bed2c0bcad1d9fc3376c9a8be06018e628783ac173b0f84"
   },
   "smallest_unresolved": {
     "stage": "B",
-    "stratum": "b0=0,b1!=0",
-    "ideal": "<P3(q)b1>",
-    "required_operation": "saturation by (q0,...,q36)*(b1_0,...,b1_5)",
-    "strongest_measured_floor": {
-      "equations": 256,
-      "wall_seconds": 2572.24,
-      "user_cpu_seconds": 1812.78,
-      "sampled_rss_kib": 10710720,
-      "result": "incomplete_nonverdict"
+    "locus": "D(H8) x P5_b1",
+    "certified_affine_cover_size": 34,
+    "first_chart": "q0=1,b1_0=1",
+    "first_chart_status": "UNDECIDED",
+    "strongest_exact_attempt": {
+      "engine": "msolve 0.10.1 ordinary exact F4",
+      "degree5_complete": true,
+      "degree6_pairs_selected": 1708,
+      "observed_rss_kib_at_manual_stop": 4482960,
+      "unit_output": false,
+      "interpretation": "strict_nonverdict"
+    },
+    "next_job": {
+      "status": "PREPARED_NOT_RUN",
+      "change": "max pairs per F4 matrix from 0 to 100",
+      "launch_blocker": "fail-closed unsandboxed process census unavailable until 2026-08-08"
     }
   },
   "special_fibre_empty": null,

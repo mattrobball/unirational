@@ -1,0 +1,93 @@
+{
+  "actual_head_at_production": "e77298c9e9277b3ee209e92884edbcb83180cbd3",
+  "binding_goal": "goals_after_bd610a/GOAL_A5Q_INDEX11_QUARTIC_RESCUE.md",
+  "format": "a5q-input-manifest-v1",
+  "inputs": {
+    "a5_exact_landing_verifier": {
+      "bytes": 10734,
+      "path_relative_to_problem": "goal_runs_after_35fa/H_A5_TWISTS/common/verify_exact_points_direct.py",
+      "role": "independent exact characteristic-zero landing replay",
+      "sha256": "3cd58c227a0dcdace3a368501b6f48edf80e37d9d76a010942560319420c2454"
+    },
+    "a5_packet_seal": {
+      "bytes": 6110,
+      "path_relative_to_problem": "goal_runs_after_35fa/H_A5_TWISTS/SEAL.json",
+      "role": "sealed exact A5 packet",
+      "sha256": "14e5ebaf8822bbe72e81cbc15f5a7df322252659e910f4f5206a1c67efad08a7"
+    },
+    "a5_point_class_1": {
+      "bytes": 9359,
+      "path_relative_to_problem": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_1/point.json",
+      "role": "exact class-1 landing covariant",
+      "sha256": "89b9a3405db00c5b87c72016afd3b05d0e397d133752d0e7da91898bd9f72a0f"
+    },
+    "a5_point_class_2": {
+      "bytes": 9357,
+      "path_relative_to_problem": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_2/point.json",
+      "role": "exact class-2 landing covariant",
+      "sha256": "cb8366eee4d6a8a096365b65d0c75372b3529a7a621411d8b6f524820d73bfb4"
+    },
+    "binding_goal": {
+      "bytes": 6805,
+      "path_relative_to_problem": "goals_after_bd610a/GOAL_A5Q_INDEX11_QUARTIC_RESCUE.md",
+      "role": "authoritative work order",
+      "sha256": "38809c6ec1b57ea63c5c6a2bd2ac5af073c1438f1c8b9c30987f5214ed077335"
+    },
+    "degree11_covariants": {
+      "bytes": 237902,
+      "path_relative_to_problem": "goal_runs_after_35fa/H_A5_TWISTS/common/degree11_covariants_raw_exact.json",
+      "role": "exact Reynolds covariant coefficients",
+      "sha256": "a63757c9ecf5452f5b5d9af7796f8997d31bc187e7eb4a239620ec09b22ff985"
+    },
+    "director_review": {
+      "bytes": 9388,
+      "path_relative_to_problem": "DIRECTOR_REVIEW_AFTER_BD610A.md",
+      "role": "post-pinned program boundary",
+      "sha256": "e4bac37b47ec2f1438ee3e8a37f7e55b2de5988c54bf128755fb311b142e5492"
+    },
+    "installed_subgroup_records": {
+      "bytes": 52768,
+      "path_relative_to_problem": "goals_2026-08-01/H_SUBGROUP_TWISTS_ROOT_019FBE10/twists.json",
+      "role": "two installed maximal A5 classes and representation conventions",
+      "sha256": "e97a32d6f22a8028528bc2b4d27ee009901caeb047fd2ffe5ac2bdd1fab743cd"
+    },
+    "problem_spec": {
+      "bytes": 108416,
+      "path_relative_to_problem": "SPEC.md",
+      "role": "Problem E theorem boundary",
+      "sha256": "a607b0a026f732eee1f6cb281ae2e85732d9e2aac866802fd739a810767df01e"
+    },
+    "repair_status": {
+      "bytes": 16620,
+      "path_relative_to_problem": "REPAIR.md",
+      "role": "current repair boundary",
+      "sha256": "c7cc9d822885726c5dc6b8168e3a1cf55ab6a5f929b3c8ea16e3f77bd3528e54"
+    },
+    "schur_exact_frame": {
+      "bytes": 220187,
+      "path_relative_to_problem": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/exact_frame.json",
+      "role": "exact full degree-eight Reynolds frame",
+      "sha256": "53f2d5e6afa2c6afdf49f53723339ccf5755f919471d42f907d5542ddef87e45"
+    },
+    "schur_exact_frame_verifier": {
+      "bytes": 7907,
+      "path_relative_to_problem": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/verify_exact_frame.py",
+      "role": "independent exact frame replay",
+      "sha256": "64fb5f9dc637343213ec0a3cdbd859d21d21e510b5a99b92933a2c1ff4bf071c"
+    },
+    "schur_frame_seal": {
+      "bytes": 1223,
+      "path_relative_to_problem": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/SEAL.json",
+      "role": "sealed authoritative Schur-frame packet",
+      "sha256": "13e8d3bbf9ab8391c08285b6732b4b6385cd52e40ea81023a08e353c0a7fb22b"
+    },
+    "schur_representation_core": {
+      "bytes": 25277,
+      "path_relative_to_problem": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/exact_representation_core.py",
+      "role": "exact Schur and Weil representation conventions",
+      "sha256": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4"
+    }
+  },
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "provenance_note": "The work order pins bd610a and explicitly consumes post-pinned immutable packets. Every load-bearing consumed file is bound by content hash; unrelated worktree state is outside this packet."
+}

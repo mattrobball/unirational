@@ -1,0 +1,34 @@
+{
+  "bfirst": {
+    "distinct_initial_leading_monomials": 1,
+    "equal_leading_monomial_pairs": 2145,
+    "leading_component_census": {
+      "0": 0,
+      "1": 66,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "max_equal_leading_multiplicity": 66,
+    "scope": "input-leading-term scheduling diagnostic only; not a Groebner or emptiness certificate",
+    "variable_order": "bfirst"
+  },
+  "qfirst": {
+    "distinct_initial_leading_monomials": 1,
+    "equal_leading_monomial_pairs": 2145,
+    "leading_component_census": {
+      "0": 0,
+      "1": 66,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "max_equal_leading_multiplicity": 66,
+    "scope": "input-leading-term scheduling diagnostic only; not a Groebner or emptiness certificate",
+    "variable_order": "qfirst"
+  },
+  "status": "PASS_CAS_FREE_INPUT_LEADING_PROFILES",
+  "warning": "These exact input-leading profiles are scheduling evidence only."
+}

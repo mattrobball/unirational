@@ -1,0 +1,12 @@
+{
+  "closed_L8_stageB_empty": true,
+  "closed_L8_stageC_degree8_rank": 6435,
+  "closed_L8_stageC_empty": true,
+  "complement_jobs_launched": false,
+  "global_stageB_or_stageC_verdict": "UNDECIDED",
+  "prepared_complement_jobs": 6,
+  "seal_sha256": "612349a097ade942852ea57f36758d0c061c55e4d2f62e461f5715adb24db3a2",
+  "sealed_dependencies": 10,
+  "sealed_files": 32,
+  "status": "PASS_STRATIFIED_PACKET_SEAL"
+}

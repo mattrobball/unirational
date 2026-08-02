@@ -1,0 +1,1057 @@
+{
+  "schema": "full-schur-canonical-three-frame-slice-v1",
+  "prime": 23,
+  "selected_triple": [
+    0,
+    1,
+    5
+  ],
+  "selection_reason": "the independently selected complete degree-five Reynolds basis has output indices 0,1,5; this is a canonical tie-break among the six same-seed degree-seven frame columns",
+  "degree_five_basis": [
+    [
+      0,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ]
+    ],
+    [
+      1,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ]
+    ],
+    [
+      5,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ]
+    ]
+  ],
+  "degree_seven_frame_basis": [
+    [
+      0,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
+    ],
+    [
+      1,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
+    ],
+    [
+      2,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
+    ],
+    [
+      3,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
+    ],
+    [
+      4,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
+    ],
+    [
+      5,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
+    ]
+  ],
+  "local_source_sha256": {
+    "three_frame_slice_probe.py": "5b387ca98fa611b9b566b866abccc836157281f94bb5944760ad031467f31768",
+    "three_frame_slice_geometry.py": "328008f2e4c01f56fe2eb152c085172cc53591b1fce4d9b572c0b14ab59002a6",
+    "three_frame_slice_specializations_f23.json": "d4e7a37f1412b1c6207e7fab128b332ddcb9ee202a651ea2af9db40e8d2912d8",
+    "degree9_full_landing.py": "7512c7255a5bb0b45ea7e98a4365074431a4a8a28589aa3149cc525ae5f873a9",
+    "SEAL.json": "a5f1726365e5ae873ca70c98c64174bd6550072d338ee0879cc1ac6ebbb29ae8",
+    "source_manifest.json": "29c6d7a2fd184d24251f802871843e26a060f3235737b98e435603f85067aa3b"
+  },
+  "external_source_sha256": {
+    "tmp/projective_source/character_scan.py": "7d2e94968226bd79d4a365e9636807590f1f3ac05ec707d58ae3f09a573f8256",
+    "tmp/pfaffian_representation_alignment/core.py": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4",
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/full_schur_palatinian/probe_self_covariants_palatinian.py": "cff1d000ce543ac00c47a2791d8a2b161ad52608bf96a5a8e4eeb8f208ce8847",
+    "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/full_schur_palatinian/verify_char0_palatinian_lift.py": "cccbce2ef39f5ce3f0133f9bd8950bf63dfbf86ed4075d89dc02e635cf538ab7"
+  },
+  "all_coordinate_triples": {
+    "count": 20,
+    "specializations_per_triple": 12,
+    "irreducible_over_F23": 240,
+    "total_specializations": 240
+  },
+  "selected_slice": {
+    "coefficient_rows": [
+      [
+        6,
+        9,
+        15,
+        5,
+        17,
+        11,
+        1,
+        18,
+        10,
+        16,
+        19,
+        22,
+        3,
+        21,
+        0
+      ],
+      [
+        1,
+        2,
+        15,
+        6,
+        9,
+        4,
+        4,
+        14,
+        9,
+        12,
+        17,
+        14,
+        5,
+        22,
+        11
+      ],
+      [
+        10,
+        10,
+        17,
+        2,
+        13,
+        16,
+        17,
+        17,
+        2,
+        9,
+        13,
+        4,
+        14,
+        2,
+        9
+      ],
+      [
+        3,
+        0,
+        19,
+        15,
+        0,
+        0,
+        21,
+        11,
+        11,
+        22,
+        2,
+        7,
+        13,
+        18,
+        4
+      ],
+      [
+        21,
+        17,
+        16,
+        15,
+        8,
+        13,
+        22,
+        12,
+        6,
+        14,
+        21,
+        6,
+        18,
+        9,
+        0
+      ],
+      [
+        15,
+        13,
+        13,
+        12,
+        16,
+        13,
+        8,
+        5,
+        2,
+        3,
+        19,
+        15,
+        14,
+        12,
+        13
+      ],
+      [
+        2,
+        7,
+        8,
+        11,
+        12,
+        16,
+        9,
+        20,
+        21,
+        12,
+        17,
+        20,
+        21,
+        19,
+        17
+      ],
+      [
+        10,
+        22,
+        0,
+        20,
+        15,
+        4,
+        19,
+        4,
+        10,
+        8,
+        12,
+        21,
+        5,
+        15,
+        3
+      ],
+      [
+        8,
+        8,
+        16,
+        2,
+        17,
+        18,
+        12,
+        13,
+        0,
+        18,
+        16,
+        15,
+        11,
+        11,
+        8
+      ],
+      [
+        16,
+        19,
+        4,
+        14,
+        11,
+        13,
+        5,
+        18,
+        0,
+        0,
+        14,
+        19,
+        8,
+        22,
+        14
+      ],
+      [
+        11,
+        4,
+        3,
+        21,
+        19,
+        20,
+        14,
+        20,
+        12,
+        7,
+        12,
+        5,
+        8,
+        17,
+        2
+      ],
+      [
+        16,
+        22,
+        1,
+        1,
+        18,
+        6,
+        18,
+        16,
+        9,
+        2,
+        5,
+        9,
+        20,
+        18,
+        1
+      ]
+    ],
+    "factorizations_with_unit": [
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ],
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ],
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ],
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ],
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ],
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ],
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ],
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ],
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ],
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ],
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ],
+      [
+        {
+          "degree": 0,
+          "multiplicity": 1
+        },
+        {
+          "degree": 4,
+          "multiplicity": 1
+        }
+      ]
+    ],
+    "irreducible_specializations": 12,
+    "projectively_smooth_over_algebraic_closure": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "smooth_specializations": 12,
+    "F23_projective_point_counts": [
+      24,
+      29,
+      32,
+      23,
+      31,
+      35,
+      31,
+      32,
+      20,
+      33,
+      18,
+      29
+    ],
+    "point_count_min": 18,
+    "point_count_max": 35,
+    "witness_base_point": [
+      9,
+      18,
+      15,
+      18,
+      2,
+      19
+    ],
+    "witness_quartic": "6*z2^4+9*z1*z2^3+15*z1^2*z2^2+5*z1^3*z2+17*z1^4+11*z0*z2^3+1*z0*z1*z2^2+18*z0*z1^2*z2+10*z0*z1^3+16*z0^2*z2^2+19*z0^2*z1*z2+22*z0^2*z1^2+3*z0^3*z2+21*z0^3*z1",
+    "witness_specialized_point": [
+      1,
+      0,
+      0
+    ]
+  },
+  "invariant_dimensions": {
+    "8": {
+      "dimension": 4,
+      "residues": [
+        4,
+        4,
+        4
+      ],
+      "crt_modulus": 137149,
+      "elementary_upper_bound": 1287
+    },
+    "10": {
+      "dimension": 4,
+      "residues": [
+        4,
+        4,
+        4
+      ],
+      "crt_modulus": 137149,
+      "elementary_upper_bound": 3003
+    },
+    "12": {
+      "dimension": 14,
+      "residues": [
+        14,
+        14,
+        14
+      ],
+      "crt_modulus": 137149,
+      "elementary_upper_bound": 6188
+    },
+    "14": {
+      "dimension": 16,
+      "residues": [
+        16,
+        16,
+        16
+      ],
+      "crt_modulus": 137149,
+      "elementary_upper_bound": 11628
+    }
+  },
+  "invariant_reynolds_bases": {
+    "8": {
+      "reynolds_seed_exponents": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          7
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          7
+        ]
+      ],
+      "training_rank": 4
+    },
+    "10": {
+      "reynolds_seed_exponents": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          10
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          8
+        ]
+      ],
+      "training_rank": 4
+    },
+    "12": {
+      "reynolds_seed_exponents": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          12
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          11
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          10
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          4,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          11
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          10
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          2,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          3,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          4,
+          7
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          1,
+          9
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          9
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          2,
+          8
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          7
+        ]
+      ],
+      "training_rank": 14
+    },
+    "14": {
+      "reynolds_seed_exponents": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          14
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          13
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          12
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          11
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          4,
+          10
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          13
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          12
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          2,
+          11
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          3,
+          10
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          4,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          5,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          1,
+          11
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          2,
+          10
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          11
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          2,
+          10
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          10
+        ]
+      ],
+      "training_rank": 16
+    }
+  },
+  "invariant_basis_training_rng_seed": 2026080161,
+  "invariant_basis_training_points": [
+    [
+      13,
+      4,
+      12,
+      17,
+      20,
+      18
+    ],
+    [
+      7,
+      0,
+      12,
+      15,
+      12,
+      10
+    ],
+    [
+      7,
+      12,
+      2,
+      16,
+      8,
+      21
+    ],
+    [
+      1,
+      8,
+      7,
+      11,
+      21,
+      7
+    ],
+    [
+      6,
+      10,
+      21,
+      10,
+      11,
+      13
+    ],
+    [
+      4,
+      16,
+      12,
+      4,
+      6,
+      19
+    ],
+    [
+      9,
+      17,
+      19,
+      7,
+      21,
+      15
+    ],
+    [
+      2,
+      8,
+      5,
+      22,
+      11,
+      15
+    ],
+    [
+      6,
+      21,
+      2,
+      8,
+      15,
+      14
+    ],
+    [
+      21,
+      10,
+      11,
+      17,
+      6,
+      9
+    ],
+    [
+      9,
+      1,
+      17,
+      1,
+      8,
+      2
+    ],
+    [
+      13,
+      5,
+      22,
+      7,
+      19,
+      1
+    ],
+    [
+      0,
+      0,
+      22,
+      16,
+      1,
+      6
+    ],
+    [
+      15,
+      6,
+      10,
+      15,
+      15,
+      17
+    ],
+    [
+      5,
+      8,
+      10,
+      17,
+      14,
+      3
+    ],
+    [
+      21,
+      18,
+      15,
+      15,
+      13,
+      6
+    ],
+    [
+      14,
+      5,
+      16,
+      14,
+      12,
+      2
+    ],
+    [
+      1,
+      1,
+      22,
+      1,
+      9,
+      10
+    ],
+    [
+      2,
+      6,
+      3,
+      15,
+      2,
+      4
+    ],
+    [
+      3,
+      0,
+      1,
+      20,
+      5,
+      3
+    ]
+  ],
+  "low_complexity_invariant_ratio_search": {
+    "candidate_function_behaviors_after_deduplication": 14785,
+    "ordered_candidate_pairs": 218596225,
+    "eligible_pairs_defined_on_at_least_six_common_samples": 218596225,
+    "minimum_required_common_samples": 6,
+    "survivor_count": 0,
+    "survivors": [],
+    "ansatz": "a and b are each a constant or a scalar times one basis invariant divided by another of the same degree; degrees 8,10,12,14 and the fifteen degree-28 plane-quartic coefficients are tested"
+  },
+  "proved_generic_geometry": "the characteristic-zero generic selected plane section is a smooth geometrically integral plane quartic of genus 3, hence it has no rational parametrization",
+  "strict_scope": [
+    "no K_Schur-rational point is found or excluded",
+    "the displayed F23 point is specialized and is not a rational section",
+    "the finite quotient search excludes only its stated single-basis-term ansatz",
+    "smooth genus three excludes parametrizing the whole generic plane curve, not a K_Schur point",
+    "no V14(K_Schur), X_Schur(K_Schur), or binary Q verdict"
+  ]
+}

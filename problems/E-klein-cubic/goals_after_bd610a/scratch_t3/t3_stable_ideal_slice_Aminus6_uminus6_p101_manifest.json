@@ -1,0 +1,19 @@
+{
+  "status": "discovery_only",
+  "characteristic": 101,
+  "specialization": {"A": -6, "u": -6},
+  "fold_curve_dimension": 1,
+  "fold_curve_degree": 22,
+  "singular_prime_dimension": 0,
+  "singular_prime_degree": 6,
+  "singular_generators": ["q(Z)", "rY", "rB"],
+  "claims": {
+    "each_pair_generates_J_modulo_K": true,
+    "J_squared_equals_cJ_after_localizing_at_J_for_each_ordered_pair_shown": true,
+    "colon_c_by_d_equals_J_after_localizing_at_J_for_each_ordered_pair_shown": true,
+    "global_equalities_without_localization": false
+  },
+  "script_sha256": "25fa76e3ab82c9328dfd58f185cffb128730b282734297c74d2f0e088b66f23d",
+  "replay": "Singular scratch_t3/t3_stable_ideal_slice_Aminus6_uminus6_p101.sing | rg '^(INPUTS|PAIR_|GENERATES_|STABLE_|COLON_|[0-9]+$)'",
+  "scope_warning": "This finite characteristic specialized calculation selects a viable normalization pattern but is not a characteristic-zero generic certificate."
+}

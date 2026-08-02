@@ -1,0 +1,26 @@
+{
+  "criterion": "Only a completed terminal passed=222,all_member=1 would prove the 222 memberships. This packet has not run std.",
+  "leading_check": {
+    "bytes": 30004117,
+    "file": "systematic_stageB_hblock_dp_leading_check.sing",
+    "markers": [
+      "SYSTEMATIC_LT_CHECK=1",
+      "LEADING_CHECK_ONLY_COMPLETE"
+    ],
+    "returncode": 0,
+    "sha256": "e8dc53604dd53964aa7f2306a19ac96e00eb3807d87603bd8f360b6199e3889a"
+  },
+  "proof": "The a-row compares total degree first; all transformed row terms tie. lp(1) then makes h*M2 exceed M1. The q order keeps every pivot q5..q36 above free q4,q0..q3; q4 pivot ties are resolved by C exactly as in the Dp packet. Runtime checks verify all 690 rows.",
+  "scope": "Exact leading terms and immutable job only; no membership verdict.",
+  "script": {
+    "bytes": 30077408,
+    "file": "systematic_stageB_hblock_dp_all222.sing",
+    "sha256": "659592ed319cff6ddceb6287ef7c6811f2bebf8baa499e4245f19b956d1401f1"
+  },
+  "source_job": {
+    "file": "systematic_stageB_homogenized_all222.sing",
+    "sha256": "139789585e7efd3e234965f2404595c7efe67c2efe70fd816b7db4e03bfc35a7"
+  },
+  "status": "PASS_EXACT_HBLOCK_DP_LEADING_TERMS_PREPARED_NOT_RUN",
+  "term_order": "a(total degree), lp(h block), dp(q5..q36,q4,q0..q3), C"
+}

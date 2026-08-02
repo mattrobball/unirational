@@ -1,0 +1,38 @@
+{
+  "cell_free_ids": {
+    "path": "faithful_cell_free_ids.raw",
+    "sha256": "6bc2fd9096d702efcd9a2b9f0d61f59642ca84f20367870fec71314d709734e8"
+  },
+  "coefficient_map_rank": 690,
+  "coefficient_map_shape": [
+    690,
+    4995
+  ],
+  "component_labels": {
+    "path": "faithful_free_minor_components.raw",
+    "sha256": "493e3639f79d09fb41382b55b0e70b210cf5105d90b8727266fa66537eae8c7c"
+  },
+  "elapsed_seconds": 3.9705,
+  "free_minor_block": {
+    "all_free_minors": 14078658,
+    "minors_with_0_pivot_cells": 14078658,
+    "minors_with_1_pivot_cells": 153408,
+    "minors_with_2_pivot_cells": 4912248,
+    "minors_with_3_pivot_cells": 21312,
+    "minors_with_4_pivot_cells": 416772,
+    "nonzero_edges": 14078658,
+    "nquad": 9268665,
+    "quotient_components": 2534087,
+    "successful_unions": 6734578
+  },
+  "kernel_basis": {
+    "path": "faithful_kernel_basis.npy",
+    "sha256": "dcf5bd0362a051d45677c5ac5f7700f4ceeb87522fee9d8cdd93488557aed7db"
+  },
+  "kernel_dimension": 4305,
+  "prime": 89,
+  "quadratic_target_dimension": 9268665,
+  "relation_sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+  "scope_guard": "This quotients by every restricted outer minor whose four W coordinates are systematic free coordinates. Pivot-containing minors remain to be projected and ranked; no Stage-B conclusion follows yet.",
+  "status": "PASS_FAITHFUL_SEGRE_FREE_BLOCK_NONVERDICT"
+}

@@ -1,0 +1,52 @@
+{
+  "format": "c5-degree16-matched-fano-leading-certificate-v1",
+  "date": "2026-08-01",
+  "upstream": {
+    "basis_path_from_packet": "../../goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/degree16_l44_leading.out",
+    "basis_sha256": "aa9958021e630be5ab19884a5b74520b492710bb7b32a4e6568b6ee435e113d2",
+    "basis_bytes": 512494,
+    "producer_report_path_from_packet": "../../goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/STATUS.md",
+    "producer_pipeline_path_from_packet": "../../tmp/fano14_degree12/degree12_msolve.py",
+    "covariant_scanner_path_from_packet": "../../tmp/fano14_twist/fano_covariant_scan.py",
+    "reported_solver": "msolve exact finite-field Groebner run",
+    "reported_elapsed_seconds": 2203,
+    "replay_boundary": "This packet pins and parses the saved leading basis.  It does not rerun msolve or reconstruct the degree-16 coefficient equations."
+  },
+  "coefficient_system": {
+    "prime": 23,
+    "covariant_degree": 16,
+    "covariant_dimension": 80,
+    "variables": "a0,...,a79",
+    "variable_order": "a0,a1,...,a79",
+    "monomial_order": "graded reverse lexicographical",
+    "producer_scope": "complete degree-16 homogeneous Fano-target covariant coefficient space with necessary Pluecker landing equations"
+  },
+  "leading_ideal_certificate": {
+    "basis_length": 28383,
+    "leading_degree_tally": {
+      "2": 1313,
+      "3": 26984,
+      "4": 86
+    },
+    "pure_power_profile": {
+      "a0_through_a49": 2,
+      "a50_through_a78": 3,
+      "a79": 4
+    },
+    "pure_power_variable_count": 80,
+    "hilbert_function_degrees_0_through_4": [
+      1,
+      80,
+      1927,
+      86,
+      0
+    ],
+    "special_fibre_conclusion": "the saved leading ideal has irrelevant radical, so its projective zero locus over F_23 is empty"
+  },
+  "scope": {
+    "direct_conclusion": "the accepted matched-Fano calculation excludes degree-16 homogeneous Fano-valued covariants",
+    "combined_bounded_conclusion": "together with the previously accepted lower-degree calculations, homogeneous Fano-valued covariants are excluded only through degree 16",
+    "not_a_kproj_verdict": "this gives neither a K_proj-rational point nor a proof that the corrected K_proj incidence has no point",
+    "not_all_degree": "there is no degree bound for a primitive projective covariant, so degree 17 and higher remain outside this certificate"
+  }
+}

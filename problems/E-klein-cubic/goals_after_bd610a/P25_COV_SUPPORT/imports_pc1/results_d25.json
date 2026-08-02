@@ -1,0 +1,821 @@
+{
+  "degree": 25,
+  "degree_computation": {
+    "covariant_dimension": 189,
+    "first_jet_target_blocks": {
+      "chi00": 0,
+      "rho1": 217,
+      "rho2": 0
+    },
+    "first_jet_target_total": 217,
+    "full_first_jet_block_ranks_on_kernel": {
+      "chi00": 0,
+      "rho1": 56,
+      "rho2": 0
+    },
+    "full_first_jet_rank_on_kernel": 56,
+    "kernel_dimension": 59,
+    "ordinary_target_blocks": {
+      "chi00": 65,
+      "rho1": 0,
+      "rho2": 117
+    },
+    "ordinary_target_total": 182,
+    "restriction_block_ranks": {
+      "chi00": 56,
+      "rho1": 0,
+      "rho2": 102
+    },
+    "restriction_rank": 130
+  },
+  "dimension_ledger": [
+    {
+      "degree": 0,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 0,
+        "rho2": 0
+      },
+      "first_jet_total": 0,
+      "ordinary_blocks": {
+        "chi00": 1,
+        "rho1": 0,
+        "rho2": 0
+      },
+      "ordinary_total": 1
+    },
+    {
+      "degree": 1,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 1,
+        "rho2": 0
+      },
+      "first_jet_total": 1,
+      "ordinary_blocks": {
+        "chi00": 1,
+        "rho1": 0,
+        "rho2": 1
+      },
+      "ordinary_total": 2
+    },
+    {
+      "degree": 2,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 2,
+        "rho2": 0
+      },
+      "first_jet_total": 2,
+      "ordinary_blocks": {
+        "chi00": 2,
+        "rho1": 0,
+        "rho2": 2
+      },
+      "ordinary_total": 4
+    },
+    {
+      "degree": 3,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 4,
+        "rho2": 0
+      },
+      "first_jet_total": 4,
+      "ordinary_blocks": {
+        "chi00": 3,
+        "rho1": 0,
+        "rho2": 3
+      },
+      "ordinary_total": 6
+    },
+    {
+      "degree": 4,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 7,
+        "rho2": 0
+      },
+      "first_jet_total": 7,
+      "ordinary_blocks": {
+        "chi00": 4,
+        "rho1": 0,
+        "rho2": 5
+      },
+      "ordinary_total": 9
+    },
+    {
+      "degree": 5,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 10,
+        "rho2": 0
+      },
+      "first_jet_total": 10,
+      "ordinary_blocks": {
+        "chi00": 5,
+        "rho1": 0,
+        "rho2": 7
+      },
+      "ordinary_total": 12
+    },
+    {
+      "degree": 6,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 14,
+        "rho2": 0
+      },
+      "first_jet_total": 14,
+      "ordinary_blocks": {
+        "chi00": 7,
+        "rho1": 0,
+        "rho2": 9
+      },
+      "ordinary_total": 16
+    },
+    {
+      "degree": 7,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 19,
+        "rho2": 0
+      },
+      "first_jet_total": 19,
+      "ordinary_blocks": {
+        "chi00": 8,
+        "rho1": 0,
+        "rho2": 12
+      },
+      "ordinary_total": 20
+    },
+    {
+      "degree": 8,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 24,
+        "rho2": 0
+      },
+      "first_jet_total": 24,
+      "ordinary_blocks": {
+        "chi00": 10,
+        "rho1": 0,
+        "rho2": 15
+      },
+      "ordinary_total": 25
+    },
+    {
+      "degree": 9,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 30,
+        "rho2": 0
+      },
+      "first_jet_total": 30,
+      "ordinary_blocks": {
+        "chi00": 12,
+        "rho1": 0,
+        "rho2": 18
+      },
+      "ordinary_total": 30
+    },
+    {
+      "degree": 10,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 37,
+        "rho2": 0
+      },
+      "first_jet_total": 37,
+      "ordinary_blocks": {
+        "chi00": 14,
+        "rho1": 0,
+        "rho2": 22
+      },
+      "ordinary_total": 36
+    },
+    {
+      "degree": 11,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 44,
+        "rho2": 0
+      },
+      "first_jet_total": 44,
+      "ordinary_blocks": {
+        "chi00": 16,
+        "rho1": 0,
+        "rho2": 26
+      },
+      "ordinary_total": 42
+    },
+    {
+      "degree": 12,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 52,
+        "rho2": 0
+      },
+      "first_jet_total": 52,
+      "ordinary_blocks": {
+        "chi00": 19,
+        "rho1": 0,
+        "rho2": 30
+      },
+      "ordinary_total": 49
+    },
+    {
+      "degree": 13,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 61,
+        "rho2": 0
+      },
+      "first_jet_total": 61,
+      "ordinary_blocks": {
+        "chi00": 21,
+        "rho1": 0,
+        "rho2": 35
+      },
+      "ordinary_total": 56
+    },
+    {
+      "degree": 14,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 70,
+        "rho2": 0
+      },
+      "first_jet_total": 70,
+      "ordinary_blocks": {
+        "chi00": 24,
+        "rho1": 0,
+        "rho2": 40
+      },
+      "ordinary_total": 64
+    },
+    {
+      "degree": 15,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 80,
+        "rho2": 0
+      },
+      "first_jet_total": 80,
+      "ordinary_blocks": {
+        "chi00": 27,
+        "rho1": 0,
+        "rho2": 45
+      },
+      "ordinary_total": 72
+    },
+    {
+      "degree": 16,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 91,
+        "rho2": 0
+      },
+      "first_jet_total": 91,
+      "ordinary_blocks": {
+        "chi00": 30,
+        "rho1": 0,
+        "rho2": 51
+      },
+      "ordinary_total": 81
+    },
+    {
+      "degree": 17,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 102,
+        "rho2": 0
+      },
+      "first_jet_total": 102,
+      "ordinary_blocks": {
+        "chi00": 33,
+        "rho1": 0,
+        "rho2": 57
+      },
+      "ordinary_total": 90
+    },
+    {
+      "degree": 18,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 114,
+        "rho2": 0
+      },
+      "first_jet_total": 114,
+      "ordinary_blocks": {
+        "chi00": 37,
+        "rho1": 0,
+        "rho2": 63
+      },
+      "ordinary_total": 100
+    },
+    {
+      "degree": 19,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 127,
+        "rho2": 0
+      },
+      "first_jet_total": 127,
+      "ordinary_blocks": {
+        "chi00": 40,
+        "rho1": 0,
+        "rho2": 70
+      },
+      "ordinary_total": 110
+    },
+    {
+      "degree": 20,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 140,
+        "rho2": 0
+      },
+      "first_jet_total": 140,
+      "ordinary_blocks": {
+        "chi00": 44,
+        "rho1": 0,
+        "rho2": 77
+      },
+      "ordinary_total": 121
+    },
+    {
+      "degree": 21,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 154,
+        "rho2": 0
+      },
+      "first_jet_total": 154,
+      "ordinary_blocks": {
+        "chi00": 48,
+        "rho1": 0,
+        "rho2": 84
+      },
+      "ordinary_total": 132
+    },
+    {
+      "degree": 22,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 169,
+        "rho2": 0
+      },
+      "first_jet_total": 169,
+      "ordinary_blocks": {
+        "chi00": 52,
+        "rho1": 0,
+        "rho2": 92
+      },
+      "ordinary_total": 144
+    },
+    {
+      "degree": 23,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 184,
+        "rho2": 0
+      },
+      "first_jet_total": 184,
+      "ordinary_blocks": {
+        "chi00": 56,
+        "rho1": 0,
+        "rho2": 100
+      },
+      "ordinary_total": 156
+    },
+    {
+      "degree": 24,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 200,
+        "rho2": 0
+      },
+      "first_jet_total": 200,
+      "ordinary_blocks": {
+        "chi00": 61,
+        "rho1": 0,
+        "rho2": 108
+      },
+      "ordinary_total": 169
+    },
+    {
+      "degree": 25,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 217,
+        "rho2": 0
+      },
+      "first_jet_total": 217,
+      "ordinary_blocks": {
+        "chi00": 65,
+        "rho1": 0,
+        "rho2": 117
+      },
+      "ordinary_total": 182
+    },
+    {
+      "degree": 26,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 234,
+        "rho2": 0
+      },
+      "first_jet_total": 234,
+      "ordinary_blocks": {
+        "chi00": 70,
+        "rho1": 0,
+        "rho2": 126
+      },
+      "ordinary_total": 196
+    },
+    {
+      "degree": 27,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 252,
+        "rho2": 0
+      },
+      "first_jet_total": 252,
+      "ordinary_blocks": {
+        "chi00": 75,
+        "rho1": 0,
+        "rho2": 135
+      },
+      "ordinary_total": 210
+    },
+    {
+      "degree": 28,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 271,
+        "rho2": 0
+      },
+      "first_jet_total": 271,
+      "ordinary_blocks": {
+        "chi00": 80,
+        "rho1": 0,
+        "rho2": 145
+      },
+      "ordinary_total": 225
+    },
+    {
+      "degree": 29,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 290,
+        "rho2": 0
+      },
+      "first_jet_total": 290,
+      "ordinary_blocks": {
+        "chi00": 85,
+        "rho1": 0,
+        "rho2": 155
+      },
+      "ordinary_total": 240
+    },
+    {
+      "degree": 30,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 310,
+        "rho2": 0
+      },
+      "first_jet_total": 310,
+      "ordinary_blocks": {
+        "chi00": 91,
+        "rho1": 0,
+        "rho2": 165
+      },
+      "ordinary_total": 256
+    },
+    {
+      "degree": 31,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 331,
+        "rho2": 0
+      },
+      "first_jet_total": 331,
+      "ordinary_blocks": {
+        "chi00": 96,
+        "rho1": 0,
+        "rho2": 176
+      },
+      "ordinary_total": 272
+    },
+    {
+      "degree": 32,
+      "first_jet_blocks": {
+        "chi00": 0,
+        "rho1": 352,
+        "rho2": 0
+      },
+      "first_jet_total": 352,
+      "ordinary_blocks": {
+        "chi00": 102,
+        "rho1": 0,
+        "rho2": 187
+      },
+      "ordinary_total": 289
+    }
+  ],
+  "overlap_incidence": {
+    "line_branch_count": 3,
+    "line_stabilizer_order": 12,
+    "line_stabilizer_order_spectrum": {
+      "1": 1,
+      "2": 3,
+      "3": 8
+    },
+    "overlap_W_multiplicity_ledger": [
+      {
+        "degree": 0,
+        "line_W_multiplicity": 2,
+        "overlap_W_multiplicity": 4,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 1,
+        "line_W_multiplicity": 2,
+        "overlap_W_multiplicity": 4,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 2,
+        "line_W_multiplicity": 4,
+        "overlap_W_multiplicity": 6,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 3,
+        "line_W_multiplicity": 6,
+        "overlap_W_multiplicity": 8,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 4,
+        "line_W_multiplicity": 6,
+        "overlap_W_multiplicity": 8,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 5,
+        "line_W_multiplicity": 8,
+        "overlap_W_multiplicity": 10,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 6,
+        "line_W_multiplicity": 10,
+        "overlap_W_multiplicity": 12,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 7,
+        "line_W_multiplicity": 10,
+        "overlap_W_multiplicity": 12,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 8,
+        "line_W_multiplicity": 12,
+        "overlap_W_multiplicity": 14,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 9,
+        "line_W_multiplicity": 14,
+        "overlap_W_multiplicity": 16,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 10,
+        "line_W_multiplicity": 14,
+        "overlap_W_multiplicity": 16,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 11,
+        "line_W_multiplicity": 16,
+        "overlap_W_multiplicity": 18,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 12,
+        "line_W_multiplicity": 18,
+        "overlap_W_multiplicity": 20,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 13,
+        "line_W_multiplicity": 18,
+        "overlap_W_multiplicity": 20,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 14,
+        "line_W_multiplicity": 20,
+        "overlap_W_multiplicity": 22,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 15,
+        "line_W_multiplicity": 22,
+        "overlap_W_multiplicity": 24,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 16,
+        "line_W_multiplicity": 22,
+        "overlap_W_multiplicity": 24,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 17,
+        "line_W_multiplicity": 24,
+        "overlap_W_multiplicity": 26,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 18,
+        "line_W_multiplicity": 26,
+        "overlap_W_multiplicity": 28,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 19,
+        "line_W_multiplicity": 26,
+        "overlap_W_multiplicity": 28,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 20,
+        "line_W_multiplicity": 28,
+        "overlap_W_multiplicity": 30,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 21,
+        "line_W_multiplicity": 30,
+        "overlap_W_multiplicity": 32,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 22,
+        "line_W_multiplicity": 30,
+        "overlap_W_multiplicity": 32,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 23,
+        "line_W_multiplicity": 32,
+        "overlap_W_multiplicity": 34,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 24,
+        "line_W_multiplicity": 34,
+        "overlap_W_multiplicity": 36,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 25,
+        "line_W_multiplicity": 34,
+        "overlap_W_multiplicity": 36,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 26,
+        "line_W_multiplicity": 36,
+        "overlap_W_multiplicity": 38,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 27,
+        "line_W_multiplicity": 38,
+        "overlap_W_multiplicity": 40,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 28,
+        "line_W_multiplicity": 38,
+        "overlap_W_multiplicity": 40,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 29,
+        "line_W_multiplicity": 40,
+        "overlap_W_multiplicity": 42,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 30,
+        "line_W_multiplicity": 42,
+        "overlap_W_multiplicity": 44,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 31,
+        "line_W_multiplicity": 42,
+        "overlap_W_multiplicity": 44,
+        "point_W_multiplicity": 2
+      },
+      {
+        "degree": 32,
+        "line_W_multiplicity": 44,
+        "overlap_W_multiplicity": 46,
+        "point_W_multiplicity": 2
+      }
+    ],
+    "point_component_distribution": {
+      "planes=5,components=5,sizes=(1, 1, 1, 1, 1)": 66,
+      "planes=7,components=1,sizes=(7,)": 55
+    },
+    "point_orbits": {
+      "5": {
+        "component_sizes": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "line_connected_components": 5,
+        "orbit_size": 66,
+        "residual_point_equalities": 4,
+        "stabilizer_order": 10,
+        "stabilizer_order_spectrum": {
+          "1": 1,
+          "2": 5,
+          "5": 4
+        }
+      },
+      "7": {
+        "component_sizes": [
+          7
+        ],
+        "line_connected_components": 1,
+        "orbit_size": 55,
+        "residual_point_equalities": 0,
+        "stabilizer_order": 12,
+        "stabilizer_order_spectrum": {
+          "1": 1,
+          "2": 7,
+          "3": 2,
+          "6": 2
+        }
+      }
+    }
+  },
+  "plane_stabilizer": {
+    "W_restriction": "chi00 + rho2 + rho1",
+    "adapted_basis_columns": [
+      [
+        53,
+        17,
+        38,
+        13,
+        42
+      ],
+      [
+        43,
+        38,
+        50,
+        29,
+        63
+      ],
+      [
+        63,
+        23,
+        53,
+        24,
+        28
+      ],
+      [
+        36,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "minus_restriction": "rho1",
+    "order": 12,
+    "plus_restriction": "chi00 + rho2",
+    "presentation": "r^6=s^2=1, srs=r^-1, t=r^3"
+  },
+  "prime": 67
+}

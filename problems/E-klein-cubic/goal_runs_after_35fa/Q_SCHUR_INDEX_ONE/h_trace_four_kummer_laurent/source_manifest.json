@@ -1,0 +1,21 @@
+{
+  "format": "Q-11_5-FOUR-KUMMER-SOURCE-MANIFEST-v1",
+  "sources": [
+    {
+      "repo_relative_path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_three_kummer_planes/verify.py",
+      "sha256": "0b47408f6c66887833cf6aea37b9de7ae1d6e46acf0c7a8f430c51f3cbffed99"
+    },
+    {
+      "repo_relative_path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_three_kummer_planes/payload.json",
+      "sha256": "b41bc4a493afb132c0ee6a15e51740a6df0f45239f79ddfdf384a1966f02f0a3"
+    },
+    {
+      "repo_relative_path": "goal_runs_after_35fa/H_11_5_TWIST/NORM_MODEL.md",
+      "sha256": "566448f33a3157c0e3ff2a5976b7af27e65440efa408442dd262ff5f933af5fd"
+    },
+    {
+      "repo_relative_path": "goal_runs_after_35fa/H_11_5_TWIST/field_model.json",
+      "sha256": "80fdc908633595d6bb3c292d0027aa66295a850b9b6a12cc473f90e3e373ba1e"
+    }
+  ]
+}

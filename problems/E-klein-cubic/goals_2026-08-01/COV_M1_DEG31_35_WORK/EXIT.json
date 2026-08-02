@@ -11,9 +11,17 @@
     "C3-line/C6-point necessary landing gates of ranks 11 and 13, reducing the p=463 decision spaces to dimensions 187 and 348",
     "complete p=463 reduced factored circuits, split into based dimensions 177 and 336 and 10 plus 12 nonbased normalization charts",
     "first-normal based-branch gates of cumulative ranks 51 and 61, with complete circuits on dimensions 147 and 300, split into 17 plus 11 nonbased charts and second-based dimensions 130 and 289",
-    "pure and mixed second-normal gates reducing the deep based branches through dimensions 99 and 247, then 78 and 204, to complete third-based systems on dimensions 65 and 184"
+    "pure and mixed second-normal gates reducing the deep based branches through dimensions 99 and 247, then 78 and 204, to complete third-based systems on dimensions 65 and 184",
+    "third- and fourth-normal gates at split primes 463 and 727, with exact 35-of-35 cubic-span minors over F_463 proving both deepest five-dimensional projective tails empty",
+    "exact tangent gates reducing first-normal nonbased covers to 15 plus 9 charts, mixed-second nonbased covers to 9 plus 16 charts, and the degree-35 mixed-third nonbased branch to a 39-dimensional, nine-chart cover",
+    "exact msolve unit Groebner bases proving two of the six degree-31 pure-third normalization charts empty over F_463",
+    "two-prime fixed-circuit localization of the 59-dimensional degree-25 multiplier images, proving the f6 image cannot reach the degree-31 pure-second scalar-zero branch leading into the mixed-second/deeper tree in characteristic zero",
+    "exact scalar-zero rank 3 and 10-of-10 complete-cubic-span minor proving the projective degree-31 f6(K1_25) pure-second branch empty",
+    "two-prime cross-degree identification of intrinsic P25 branches A (dimension 51, scalar rank 5) and B (dimension 20, scalar rank 7), with equal rank-574 complete cubic row spaces for branch B",
+    "seven exact branch-B unit Groebner charts plus its separately empty scalar-zero boundary, proving common P25 branch B projectively empty in characteristic zero",
+    "two-prime fixed-circuit intersection with the binding strict P25 equalizer, cutting residual arrangement branch A from dimension 51 to a characteristic-zero upper bound of 37 with scalar rank 5; the sampled landing span has rank 716 in 9139 cubics at both primes"
   ],
-  "smallest_unresolved_gate": "exact projective saturation of the third-based 65- and 184-dimensional vector strata and exact affine saturation of the 10 plus 12 C3-nonbased, 17 plus 11 first-normal, 7 plus 24 pure second-normal, and 13 plus 20 mixed second-normal charts, away from the actual factorable and composition incidence loci",
-  "shared_dependency": "P25.2 remains undecided; multiplication by nonzero invariants embeds its landing support into degrees 31 and 35",
+  "smallest_unresolved_gate": "exact characteristic-zero affine saturation of the 10 plus 12 C3-nonbased, 15 plus 9 tangent-reduced first-normal, 7 plus 24 pure second-normal, 9 plus 16 tangent-reduced mixed second-normal, 6 degree-31 pure-third, and 31 plus 9 degree-35 third-order charts, away from the actual factorable and composition incidence loci; the two F_463 unit-chart screens do not transfer to these affine characteristic-zero charts, while both deepest projective tails are empty",
+  "shared_dependency": "P25.2 remains undecided but, after imposing its binding strict equalizer, is confined here to a 37-dimensional scalar-rank-5 subspace of intrinsic arrangement branch A, realized as degree-31 C3-constant nonbased and degree-35 first-normal nonbased; the common branch B and every deeper P25 branch are projectively empty",
   "forbidden_inference": "The zero linear indecomposable-module quotient in degree 35 does not imply full-degree emptiness: sealed line-Bezout certificates prove that its kernel contains primitive covariants, and F(p)=0 does not descend through that quotient."
 }

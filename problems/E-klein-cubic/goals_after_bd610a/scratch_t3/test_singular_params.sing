@@ -1,0 +1,14 @@
+ring T=0,(A,u,B,Y,Z),dp;
+poly P=A*B+u^2+Y;
+ideal I=P,diff(P,u),diff(P,A);
+ring R=(0,A,u),(B,Y,Z),dp;
+ideal J=imap(T,I);
+J;
+ideal G=slimgb(J);
+dim(G);
+vdim(G);
+LIB "fglm.lib";
+ring S=(0,A,u),(B,Y,Z),lp;
+ideal L=fglm(R,G);
+L;
+quit;

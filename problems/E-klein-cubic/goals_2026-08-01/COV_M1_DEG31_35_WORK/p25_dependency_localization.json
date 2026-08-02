@@ -1,0 +1,350 @@
+{
+  "conclusion": "The f6 image has zero characteristic-zero intersection with the degree-31 pure-second scalar-zero branch: its only possible degree-31 nonbased orders are C3-constant, first-normal, and pure-second.  The f10 image can enter only the degree-35 first-normal, mixed-second, and pure-third nonbased orders and has zero intersection with the fifth-based/fourth-order tree.",
+  "degree25_basis": "degree_25_fixed_k1_basis.json",
+  "degree25_basis_sha256": "73e6132e19105d4489d70093edf310c766051b90583536ba3b3fa85e223722b1",
+  "dual_generators_sha256": "b9aa1f8fe852e15b1b786b6a0577f06cf3ce200c5b092bcbd4c444678add874b",
+  "prime_records": [
+    {
+      "degree25_basis_rank": 59,
+      "degrees": {
+        "31": {
+          "embedding_rank": 59,
+          "multiplier": "f6",
+          "payload": "degree_31/p25_multiplier_embedding_p463.npz",
+          "payload_sha256": "5a2bdfe722ebc716c1698390600952fb99d0bdad02bf44e33c883365984470a5",
+          "stages": [
+            {
+              "degree25_preimage_dimension": 51,
+              "restricted_gate_rank": 8,
+              "stage": "c3_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 46,
+              "restricted_gate_rank": 13,
+              "stage": "c3_based"
+            },
+            {
+              "degree25_preimage_dimension": 27,
+              "restricted_gate_rank": 32,
+              "stage": "first_normal_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 18,
+              "restricted_gate_rank": 41,
+              "stage": "second_based"
+            },
+            {
+              "degree25_preimage_dimension": 3,
+              "restricted_gate_rank": 56,
+              "stage": "pure_second_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "pure_second_scalar_zero"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "mixed_second_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "third_based"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "pure_third_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "pure_third_scalar_zero"
+            }
+          ],
+          "target_dimension": 198
+        },
+        "35": {
+          "embedding_rank": 59,
+          "multiplier": "f10",
+          "payload": "degree_35/p25_multiplier_embedding_p463.npz",
+          "payload_sha256": "6863f608d21811b324a681ceb9b8d72824a8331c6a8f1904820232445c7289ae",
+          "stages": [
+            {
+              "degree25_preimage_dimension": 59,
+              "restricted_gate_rank": 0,
+              "stage": "c3_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 59,
+              "restricted_gate_rank": 0,
+              "stage": "c3_based"
+            },
+            {
+              "degree25_preimage_dimension": 51,
+              "restricted_gate_rank": 8,
+              "stage": "first_normal_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 46,
+              "restricted_gate_rank": 13,
+              "stage": "second_based"
+            },
+            {
+              "degree25_preimage_dimension": 38,
+              "restricted_gate_rank": 21,
+              "stage": "pure_second_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 38,
+              "restricted_gate_rank": 21,
+              "stage": "pure_second_scalar_zero"
+            },
+            {
+              "degree25_preimage_dimension": 27,
+              "restricted_gate_rank": 32,
+              "stage": "mixed_second_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 18,
+              "restricted_gate_rank": 41,
+              "stage": "third_based"
+            },
+            {
+              "degree25_preimage_dimension": 13,
+              "restricted_gate_rank": 46,
+              "stage": "pure_third_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 10,
+              "restricted_gate_rank": 49,
+              "stage": "pure_third_scalar_zero"
+            },
+            {
+              "degree25_preimage_dimension": 1,
+              "restricted_gate_rank": 58,
+              "stage": "third_mixed_b1_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 1,
+              "restricted_gate_rank": 58,
+              "stage": "third_mixed_b1_scalar_zero"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "third_mixed_b2_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fifth_based"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fourth_pure_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fourth_pure_scalar_zero"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fourth_mixed_b1_zero"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fourth_mixed_b2_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fourth_mixed_b2_scalar_zero"
+            }
+          ],
+          "target_dimension": 361
+        }
+      },
+      "prime": 463,
+      "zeta11": 15
+    },
+    {
+      "degree25_basis_rank": 59,
+      "degrees": {
+        "31": {
+          "embedding_rank": 59,
+          "multiplier": "f6",
+          "payload": "degree_31/p25_multiplier_embedding_p727.npz",
+          "payload_sha256": "a10f0ba4767988610a1328c2d19956214dda5682d36a004a0fa496cd1a314ca0",
+          "stages": [
+            {
+              "degree25_preimage_dimension": 51,
+              "restricted_gate_rank": 8,
+              "stage": "c3_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 46,
+              "restricted_gate_rank": 13,
+              "stage": "c3_based"
+            },
+            {
+              "degree25_preimage_dimension": 27,
+              "restricted_gate_rank": 32,
+              "stage": "first_normal_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 18,
+              "restricted_gate_rank": 41,
+              "stage": "second_based"
+            },
+            {
+              "degree25_preimage_dimension": 3,
+              "restricted_gate_rank": 56,
+              "stage": "pure_second_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "pure_second_scalar_zero"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "mixed_second_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "third_based"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "pure_third_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "pure_third_scalar_zero"
+            }
+          ],
+          "target_dimension": 198
+        },
+        "35": {
+          "embedding_rank": 59,
+          "multiplier": "f10",
+          "payload": "degree_35/p25_multiplier_embedding_p727.npz",
+          "payload_sha256": "3920f47ddf67eb8ba25de0d4cdb4211e171af859da2cc45c4c167994660fb261",
+          "stages": [
+            {
+              "degree25_preimage_dimension": 59,
+              "restricted_gate_rank": 0,
+              "stage": "c3_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 59,
+              "restricted_gate_rank": 0,
+              "stage": "c3_based"
+            },
+            {
+              "degree25_preimage_dimension": 51,
+              "restricted_gate_rank": 8,
+              "stage": "first_normal_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 46,
+              "restricted_gate_rank": 13,
+              "stage": "second_based"
+            },
+            {
+              "degree25_preimage_dimension": 38,
+              "restricted_gate_rank": 21,
+              "stage": "pure_second_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 38,
+              "restricted_gate_rank": 21,
+              "stage": "pure_second_scalar_zero"
+            },
+            {
+              "degree25_preimage_dimension": 27,
+              "restricted_gate_rank": 32,
+              "stage": "mixed_second_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 18,
+              "restricted_gate_rank": 41,
+              "stage": "third_based"
+            },
+            {
+              "degree25_preimage_dimension": 13,
+              "restricted_gate_rank": 46,
+              "stage": "pure_third_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 10,
+              "restricted_gate_rank": 49,
+              "stage": "pure_third_scalar_zero"
+            },
+            {
+              "degree25_preimage_dimension": 1,
+              "restricted_gate_rank": 58,
+              "stage": "third_mixed_b1_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 1,
+              "restricted_gate_rank": 58,
+              "stage": "third_mixed_b1_scalar_zero"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "third_mixed_b2_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fifth_based"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fourth_pure_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fourth_pure_scalar_zero"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fourth_mixed_b1_zero"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fourth_mixed_b2_allowed"
+            },
+            {
+              "degree25_preimage_dimension": 0,
+              "restricted_gate_rank": 59,
+              "stage": "fourth_mixed_b2_scalar_zero"
+            }
+          ],
+          "target_dimension": 361
+        }
+      },
+      "prime": 727,
+      "zeta11": 46
+    }
+  ],
+  "schema": "cov-m1-p25-dependency-localization-v1",
+  "scope": "exact two-prime fixed-circuit linear localization of the f6 and f10 images of K1_25 inside the necessary C3 Taylor gate tree; the displayed fibre dimensions are characteristic-zero upper bounds by their nonzero fixed minors, but this neither decides the P25.2 landing scheme nor closes an affine chart"
+}

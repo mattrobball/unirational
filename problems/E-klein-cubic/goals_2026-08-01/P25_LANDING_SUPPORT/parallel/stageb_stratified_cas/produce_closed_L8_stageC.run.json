@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/homebrew/bin/python3",
+    "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_stratified_cas/produce_closed_L8_stageC.py",
+    "--min-free-gib",
+    "24.0"
+  ],
+  "complete": true,
+  "elapsed_seconds": 73.71184516699577,
+  "log_bytes": 246,
+  "log_sha256": "a94930bd305e3765a573a732ce422488e75f5221f7d01b8ef2b29d3c0293058f",
+  "peak_rss_bytes_polled": 5162008576,
+  "returncode": 0,
+  "rss_limit_bytes": 6442450944,
+  "script_sha256": "9ee568556a5de35fb55966a5a6ddc1dea653888f8b8203afdf00e91480cbc6fb",
+  "stop_reason": null,
+  "timeout_seconds": 1800.0
+}

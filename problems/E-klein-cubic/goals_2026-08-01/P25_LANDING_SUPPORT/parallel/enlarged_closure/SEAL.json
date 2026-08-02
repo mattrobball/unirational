@@ -1,0 +1,77 @@
+{
+  "files": {
+    "REPORT.md": {
+      "bytes": 6342,
+      "sha256": "23eaded9d294568e6a71f8cdf8d197faf671a1567e073b515109b5ae3b6e902a"
+    },
+    "WORK_SCOPE.md": {
+      "bytes": 1173,
+      "sha256": "63434734452678f0857474b165998224f027e0b302fdc0d9efab0d6832e6e7a4"
+    },
+    "augmented_module_jobs.json": {
+      "bytes": 6089,
+      "sha256": "06ec7f491fb7c6d8c99fe5693bfef0a5c4ff8334ceee93d3670a4f306ac827a0"
+    },
+    "augmented_r43_p4_p3_module.sing": {
+      "bytes": 72308419,
+      "sha256": "64bbcca64a403676c7e0204f992ab543da420be6e7efd5453ec94b4587d54ebe"
+    },
+    "augmented_r64_p4_p3_module.sing": {
+      "bytes": 104646907,
+      "sha256": "51eb2699740375a6bedf6db7529254a430d1c714e66cbe314518406a696eb809"
+    },
+    "make_seal.py": {
+      "bytes": 1930,
+      "sha256": "26671f7b3fef817fea89139a2c75539ad34f59437fc24854093bc2fdb7b39ca7"
+    },
+    "produce_augmented_module_jobs.py": {
+      "bytes": 13263,
+      "sha256": "e41cc6676acba41ba86b09e3130b7e45b1da7988178daeb784c8966032bb39cb"
+    },
+    "produce_projection_closure.py": {
+      "bytes": 18351,
+      "sha256": "0b948918cba0c94e55f23a11914bb474d4b3a4ac02bd85ec53a1385630dbc746"
+    },
+    "projection_closure_certificate.npz": {
+      "bytes": 464444,
+      "sha256": "561249ec4cfdbde36de07672de6a0980fe254cafbdd69f31ac2cc8ba034189ff"
+    },
+    "projection_closure_result.json": {
+      "bytes": 3921,
+      "sha256": "a731aa8f7b7fbccdf93917ab786e9348d31140939b410f0b617bd893eb531fe8"
+    },
+    "support_balanced_r64_stageBC.json": {
+      "bytes": 2498,
+      "sha256": "93ef681bd7d89dda2390af4fc58b83d09a6e9a2e4e26a5304e2398ae3dc9dbe5"
+    },
+    "support_balanced_r64_stageBC.npz": {
+      "bytes": 6174985,
+      "sha256": "c50de97aa4fc9465793f3fe84b544731b36cec1a2807113e94817c955897be2b"
+    },
+    "verify_augmented_module_jobs.py": {
+      "bytes": 6505,
+      "sha256": "225c65e4667092ceada873d5f3b59bb15ee227a83e335c6b7a602e912a7f8576"
+    },
+    "verify_augmented_module_jobs_result.json": {
+      "bytes": 465,
+      "sha256": "c20d291bd15031b0bcd3a688fcf117cf57d08ddf7d18644980b3d55981d11df6"
+    },
+    "verify_projection_closure.py": {
+      "bytes": 10524,
+      "sha256": "2dda6f861182f6e54fe44ab9234520bea56a2bda6242ef6db9549cd026236968"
+    },
+    "verify_projection_closure_result.json": {
+      "bytes": 469,
+      "sha256": "f9b04f0f1326ba61a1b05ef6f0ea938425d415bf8db049d876abe814036fe384"
+    },
+    "verify_seal.py": {
+      "bytes": 1010,
+      "sha256": "96f285b1cba6f91cab85e41e4805ffc38c3a756e184b6f21ed0745f2817d46b3"
+    }
+  },
+  "pid_13036_left_untouched": true,
+  "prime": 89,
+  "scope": "Exact 690+56 cubic projection split, 2,072-dimensional formal first closure, and prepared unlaunched r43/r64 augmented P4|P3 module jobs. No full T-stable presentation or support verdict.",
+  "singular_launched": false,
+  "status": "SEALED_ENLARGED_CLOSURE_PACKET"
+}

@@ -1,0 +1,106 @@
+{
+  "field": "QQ(zeta11)(B,Z)",
+  "identities": {
+    "Delta_A_nonzero": true,
+    "Delta_Y_on_plane": 0,
+    "Delta_on_plane": 0,
+    "H_A_nonzero": true,
+    "H_Y_on_plane": 0,
+    "H_on_plane": 0,
+    "N_nonzero": true
+  },
+  "mod67_witness": {
+    "Delta_YY_minus_Delta_A_over_H_A_times_H_YY": 20,
+    "embedding": "zeta11=9",
+    "normalization_ratio_to_worker_M2_discriminant": 62,
+    "point_BZ": [
+      37,
+      56
+    ],
+    "quadratic_coefficient_N_over_2H_A": 10,
+    "values": {
+      "Delta_A": 17,
+      "Delta_YY": 1,
+      "H_A": 34,
+      "H_YY": 29,
+      "N": 10
+    },
+    "worker_M2_values": {
+      "Delta_A": 10,
+      "Delta_YY": 40,
+      "N": 65
+    }
+  },
+  "normal_expansion": {
+    "Delta_on_H": "(N/(2*H_A))*y^2+O(y^3)",
+    "H_solution": "a=-(H_YY/(2*H_A))*y^2+O(y^3)",
+    "N": "Delta_YY*H_A-Delta_A*H_YY",
+    "coordinates": "a=A-15, y=Y-12",
+    "generic_contact_multiplicity": 2,
+    "normalization_note": "H_A is generically nonzero, so H is smooth at the generic point of the plane and normalization is an isomorphism there."
+  },
+  "payload": "t3_disc_plane_contact_qzeta11.json.gz",
+  "payload_gzip_bytes": 101273,
+  "payload_sha256": "87570b9cef31f09c3f6c29550b00744a25998c2acb8121f5c3653aca641c97aa",
+  "payload_uncompressed_bytes": 512542,
+  "plane": [
+    "A-15",
+    "Y-12"
+  ],
+  "polynomial_sha256": {
+    "Delta_A": "9ea2b1149e7a66fa7dd7172b66f660de4245852182665f89f637287784d97956",
+    "Delta_YY": "6aeba70248e3b9d3c0670b62cd197cd63c94bb22766aba5bd7eb9bccafc370ee",
+    "H_A": "199ddd9c10f3584e15172c72fe5bdda5d8d34bc580112c5787415390cf618082",
+    "H_YY": "7ed05b11bdef29c95aa2a86e0941361e199df8d33cbe1bdd6f7f787846519f75",
+    "N": "60b37022424ed200a40e654467861a27d76faf15b355853a0006598cd98d6dfd"
+  },
+  "polynomial_stats": {
+    "Delta_A": {
+      "degrees_BZ": [
+        6,
+        6
+      ],
+      "terms": 28,
+      "total_degree_BZ": 6
+    },
+    "Delta_YY": {
+      "degrees_BZ": [
+        5,
+        5
+      ],
+      "terms": 21,
+      "total_degree_BZ": 5
+    },
+    "H_A": {
+      "degrees_BZ": [
+        22,
+        21
+      ],
+      "terms": 274,
+      "total_degree_BZ": 22
+    },
+    "H_YY": {
+      "degrees_BZ": [
+        21,
+        20
+      ],
+      "terms": 251,
+      "total_degree_BZ": 21
+    },
+    "N": {
+      "degrees_BZ": [
+        27,
+        26
+      ],
+      "terms": 404,
+      "total_degree_BZ": 27
+    }
+  },
+  "schema": "klein-cubic-t3-plane-contact-exact-v1",
+  "scope": "Exact generic contact on the plane component only; no exhaustive normalization/conductor/infinity contact ledger.",
+  "source_sha256": {
+    "certificates/target_branch_global/H_factor/H_primitive_integer.tsv": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "scratch_t3/t3_disc_build.py": "b99d27a08f9aca24d0b8ca184d2118427fc889e1f9ab6b198515313550c8aeae",
+    "t3_disc_delta_cub_qzeta11.json.gz": "88ec8a6449117463debc54eb51e03dbd79e6c391e815f021fb19dd81f28ff014"
+  }
+}

@@ -1,0 +1,1247 @@
+{
+  "basis": [
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 7,
+        "secondary_index": 1,
+        "secondary_name": "f7"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        6
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 7,
+        "secondary_index": 1,
+        "secondary_name": "f7"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        7
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        7
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        8
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        8
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        9
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        10
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        15
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        2,
+        16
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 7,
+        "secondary_index": 1,
+        "secondary_name": "f7"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        6
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        6
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        8
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        12
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        13
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        14
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        22
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        3,
+        23
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        4,
+        7
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        4,
+        8
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        4,
+        12
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        4,
+        13
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        1,
+        4,
+        22
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        3,
+        6
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        3,
+        9
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        3,
+        10
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        3,
+        19
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        4,
+        9
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        4,
+        19
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        5,
+        7
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        2,
+        7,
+        12
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        3,
+        4,
+        7
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        3,
+        4,
+        15
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        0,
+        3,
+        5,
+        12
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        1,
+        2,
+        3,
+        12
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        1,
+        2,
+        3,
+        13
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        1,
+        2,
+        3,
+        14
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        1,
+        2,
+        4,
+        12
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        1,
+        2,
+        4,
+        13
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    },
+    {
+      "circuit": "multiplier times the signed 4x4 maximal minors of the four listed dual Reynolds covariants",
+      "dual_generator_indices": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "multiplier": {
+        "primary_exponents": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "secondary_degree": 0,
+        "secondary_index": 0,
+        "secondary_name": "1"
+      }
+    }
+  ],
+  "candidate_count": 190,
+  "degree": 25,
+  "dimension": 59,
+  "schema": "cov-m1-fixed-degree25-k1-circuits-v1"
+}

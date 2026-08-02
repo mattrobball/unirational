@@ -1,0 +1,85 @@
+{
+  "graph_identity_zero": true,
+  "jacobian_rank_of_13_equations": 13,
+  "line_section_matrices": [
+    [
+      [
+        0,
+        5
+      ],
+      [
+        13,
+        19
+      ],
+      [
+        15,
+        4
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        12
+      ],
+      [
+        17,
+        11
+      ],
+      [
+        16,
+        11
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "pair_indices": [
+    0,
+    1
+  ],
+  "prime": 23,
+  "projective_local_dimension_if_smooth": 5,
+  "residual_H_degree": 4,
+  "residual_common_gcd_degree": 0,
+  "residual_parameters": [
+    0,
+    8,
+    21,
+    4,
+    5,
+    20,
+    17,
+    11,
+    2,
+    19,
+    7,
+    8,
+    1,
+    17,
+    4,
+    8,
+    13,
+    2,
+    1
+  ],
+  "schema": "m3-two-prime-gcd-free-residual-section-v1",
+  "scope": "split good-reduction component evidence only",
+  "section_equations_zero": true,
+  "theorem_boundary": "This is a genuine section over the frozen finite field, not a K_Schur-rational section or an invariant characteristic-zero branch.",
+  "usable_involution_line_sections": 53,
+  "zeta11": 2
+}

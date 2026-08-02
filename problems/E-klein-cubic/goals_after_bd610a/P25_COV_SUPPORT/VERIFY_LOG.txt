@@ -1,0 +1,151 @@
+=== verify_reported_inputs.py ===
+PASS_REPORTED_INPUT_REPLAY
+=== verify_pc0_multiplication.py ===
+In file included from /Users/worker/unirational/problems/E-klein-cubic/goals_after_bd610a/P25_COV_SUPPORT/verify_rank_u8_double.cpp:8:
+In file included from /opt/homebrew/Cellar/givaro/4.2.2/include/givaro/modular-balanced.h:23:
+In file included from /opt/homebrew/Cellar/givaro/4.2.2/include/givaro/modular-balanced-double.h:16:
+In file included from /opt/homebrew/Cellar/givaro/4.2.2/include/givaro/givinteger.h:19:
+In file included from /opt/homebrew/Cellar/givaro/4.2.2/include/gmp++/gmp++.h:34:
+/opt/homebrew/opt/gmp/include/gmpxx.h:2163:29: warning: identifier '_mpz' preceded by whitespace in a literal operator declaration is deprecated [-Wdeprecated-literal-operator]
+ 2163 | inline mpz_class operator"" _mpz(const char* s)
+      |                  ~~~~~~~~~~~^~~~
+      |                  operator""_mpz
+/opt/homebrew/opt/gmp/include/gmpxx.h:2168:29: warning: identifier '_mpq' preceded by whitespace in a literal operator declaration is deprecated [-Wdeprecated-literal-operator]
+ 2168 | inline mpq_class operator"" _mpq(const char* s)
+      |                  ~~~~~~~~~~~^~~~
+      |                  operator""_mpq
+/opt/homebrew/opt/gmp/include/gmpxx.h:2175:29: warning: identifier '_mpf' preceded by whitespace in a literal operator declaration is deprecated [-Wdeprecated-literal-operator]
+ 2175 | inline mpf_class operator"" _mpf(const char* s)
+      |                  ~~~~~~~~~~~^~~~
+      |                  operator""_mpf
+3 warnings generated.
+ld: warning: ignoring duplicate libraries: '-lomp'
+  verify V0: shape=(690, 9139) rank=690
+  verify W: shape=(56, 9139) rank=56
+  verify V0_plus_W: shape=(746, 9139) rank=746
+  verify transitions: shape=(4140, 2072) rank=2072
+  verify commutators: shape=(315, 2072) rank=210
+  verify combined: shape=(4455, 2072) rank=2072
+  verify kernel_transpose: shape=(19, 27602) rank=19
+  verify kernel_V0: shape=(25530, 19) rank=19
+  verify kernel_W: shape=(2072, 19) rank=19
+  verify transitions_plus_kernel: shape=(4159, 2072) rank=2072
+  verify commutators_plus_kernel: shape=(334, 2072) rank=229
+  verify selected rows 5000/30000
+  verify selected rows 10000/30000
+  verify selected rows 15000/30000
+  verify selected rows 20000/30000
+  verify selected rows 25000/30000
+  verify selected rows 30000/30000
+  verify selected multiplication rank=27583
+PASS_INDEPENDENT_PC0_REPLAY
+=== verify_pc1_degree4_closure.py ===
+exact sparse transition row-profile replay
+exact sparse commutator row-profile replay
+PASS_INDEPENDENT_PC1_DEGREE4_REPLAY
+=== verify_pc1_coupled_degree4.py ===
+  FLINT incidence: shape=(315, 336) rank=210
+  FLINT canonical_cycles: shape=(105, 315) rank=105
+  FLINT formal_transitions: shape=(4140, 2072) rank=2072
+  FLINT formal_commutator_basis: shape=(210, 2072) rank=210
+  FLINT stored_cycle_syzygies: shape=(105, 315) rank=105
+  FLINT formal_dependency_witness: shape=(2278, 4350) rank=2278
+  FLINT mu_v0_projection: shape=(19, 25530) rank=19
+  rebuilt selected T_0 seed block
+  rebuilt selected T_1 seed block
+  rebuilt selected T_2 seed block
+  rebuilt selected T_3 seed block
+  rebuilt selected T_4 seed block
+  rebuilt selected T_5 seed block
+  FLINT coupled_residual: shape=(2297, 3000) rank=2297
+PASS_INDEPENDENT_PC1_COUPLED_DEGREE4_REPLAY
+=== verify_representation_characters.py ===
+PASS_PC1_REPRESENTATION_CHARACTERS_SCOPED
+PASS_ONLY_IDENTITY_PURE_K_PERMUTATION
+PASS_MINIMAL_28_STATE_CARRIER_NOT_STABILIZED_RELATION_PRESENTATION
+=== verify_pc2_coordinate_planes.py ===
+verified all selected C*M2 identities
+rebuilt P3 from C*M1
+rebuilt P4 from C*M0
+independent coordinate triples 1000/7770
+independent coordinate triples 2000/7770
+independent coordinate triples 3000/7770
+independent coordinate triples 4000/7770
+independent coordinate triples 5000/7770
+independent coordinate triples 6000/7770
+independent coordinate triples 7000/7770
+independent coordinate triples 7770/7770
+PASS_INDEPENDENT_PC2_COORDINATE_PLANES_SUPPORT_LE3
+=== verify_pc3_inherited_bezout.py ===
+{
+  "bezout_replay": {
+    "31": {
+      "bezout_identity_coefficients_ascending_mod419": [
+        1
+      ],
+      "component_count": 5,
+      "nonzero_at_infinity": true,
+      "positive_multiple_basis_sha256": "6d4d38db048e62d0c7e62537d284ab8e4cd1ee5758af93f0708396442828c157",
+      "summand_indices": [
+        0,
+        9
+      ]
+    },
+    "35": {
+      "bezout_identity_coefficients_ascending_mod419": [
+        1
+      ],
+      "component_count": 5,
+      "nonzero_at_infinity": true,
+      "positive_multiple_basis_sha256": "ec96830b43ca7ee4125f5366a7745048f436090c2a134931a1c2b35ec41e3ac3",
+      "summand_indices": [
+        0,
+        18
+      ]
+    }
+  },
+  "inherited_open_chart_cover": {
+    "31": {
+      "components": {
+        "c3_nonbased": 10,
+        "first_normal_tangent": 15,
+        "mixed_second_tangent": 9,
+        "mixed_third_tangent": 0,
+        "pure_second": 7,
+        "pure_third": 6
+      },
+      "open_characteristic_zero_affine_charts": 47
+    },
+    "35": {
+      "components": {
+        "c3_nonbased": 12,
+        "first_normal_tangent": 9,
+        "mixed_second_tangent": 16,
+        "mixed_third_tangent": 9,
+        "pure_second": 24,
+        "pure_third": 31
+      },
+      "open_characteristic_zero_affine_charts": 101
+    }
+  },
+  "ok": true,
+  "seal": {
+    "exit": "COV-UNDECIDED",
+    "sha256": "c4b254e1a980fd8af83f2e12d584f7d7748da65a1c480681fc9f102629580847",
+    "snapshot_records_rehashed": 15,
+    "source_records": 182,
+    "theorem_boundary": "Fixed characteristic-zero K1 bases, the ordered literal-global equalizer, the standard module quotient bounds, and complete landing ideals are certified, including empty deepest C3-normal tails and two empty degree-31 pure-third charts only in the special fibre over F_463. The characteristic-zero cover, the remaining affine chart saturations and the single residual 51-dimensional P25 branch A remain open."
+  },
+  "status": "PASS_INDEPENDENT_PC3_INHERITED_BEZOUT_REPLAY",
+  "theorem_boundary": {
+    "does_not_prove": "No actual common-factor, invariant-multiple scheme-image, primitive-quartic/lower-map composition, or named-ansatz incidence locus is constructed here; no remaining affine chart is saturated away from their union; no degree-31 or degree-35 survivor or degree-wide emptiness statement follows; and the inherited fixed 59-dimensional K1_25 multiplier analysis is not the authoritative current PC.2 scheme image. PC-FACTOR-INCIDENCE-PASS and all PC.3 positive/empty exits remain unauthorized.",
+    "proves": "The pinned load-bearing snapshot from the 182-record inherited COV packet is hash-intact; its two F_419[u] Bezout identities equal 1, so the displayed positive-multiple sums have component gcd one and refute the false linear primitive quotient; its branch records leave 47 and 101 characteristic-zero affine charts in degrees 31 and 35.",
+    "required_goal_status": "PC-UNDECIDED"
+  }
+}
+PASS_INDEPENDENT_PC3_INHERITED_BEZOUT_REPLAY
+=== verify_pc3_p25_multiplier_maps.py ===
+verify p=419: rebuilding all circuits
+verify p=463: rebuilding all circuits
+PC3_P25_MULTIPLIER_MAPS_VERIFIED
+PASS_P25_COV_SUPPORT_PARTIAL_PACKET_FULL_REPLAY

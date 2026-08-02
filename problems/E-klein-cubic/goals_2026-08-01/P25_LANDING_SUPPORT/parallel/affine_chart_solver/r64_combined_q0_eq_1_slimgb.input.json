@@ -1,0 +1,19 @@
+{
+  "algorithm": "slimgb",
+  "chart": 0,
+  "columns": 7,
+  "decisive_criterion": "dim(std(N))=-1 and reduce(freemodule(7),std(N))=0",
+  "not_run": true,
+  "packet": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/enlarged_closure/support_balanced_r64_stageBC.npz",
+  "packet_sha256": "c50de97aa4fc9465793f3fe84b544731b36cec1a2807113e94817c955897be2b",
+  "prime": 89,
+  "remaining_variables": 36,
+  "result": "r64_combined_q0_eq_1_slimgb.result.txt",
+  "rows": 64,
+  "scope_if_decisive": "combined r64 rank seven everywhere on D(q0)",
+  "script": "r64_combined_q0_eq_1_slimgb.sing",
+  "script_bytes": 101996160,
+  "script_sha256": "9e3f55c55fdeb03b22979f1b6a8c7ed5e18af0c37eea56bff78b6b2a57d77e3a",
+  "status": "PASS_AFFINE_R64_INPUT_PREPARED",
+  "substitution": "q0=1"
+}

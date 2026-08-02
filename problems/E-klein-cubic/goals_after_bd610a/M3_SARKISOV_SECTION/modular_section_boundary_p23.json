@@ -1,0 +1,68 @@
+{
+  "degree1_equations_zero": true,
+  "degree1_section_parameters": [
+    7,
+    11,
+    9,
+    20,
+    17,
+    1,
+    1
+  ],
+  "degree4_boundary_parameters": [
+    7,
+    11,
+    7,
+    18,
+    11,
+    9,
+    20,
+    9,
+    6,
+    20,
+    17,
+    1,
+    17,
+    18,
+    1,
+    1,
+    0,
+    1,
+    1
+  ],
+  "degree4_common_factor": [
+    1,
+    0,
+    1,
+    1
+  ],
+  "degree4_common_zero_free": false,
+  "degree4_equations_zero": true,
+  "degree4_jacobian_rank_at_boundary": 7,
+  "degree4_raw_local_affine_dimension_upper_bound": 12,
+  "involution_line_count": 55,
+  "involution_lines_disjoint_from_selected_plane": 53,
+  "line_basis_vectors": [
+    [
+      0,
+      6,
+      9,
+      4,
+      10
+    ],
+    [
+      13,
+      8,
+      7,
+      7,
+      3
+    ]
+  ],
+  "line_source": "first lexicographic usable involution-minus-line",
+  "prime": 23,
+  "projection_minor_a3a4": 11,
+  "schema": "m3-projective-schur-modular-line-boundary-v1",
+  "scope": "modular discovery only",
+  "theorem_boundary": "A split-fibre line and its common-factor quartic boundary do not define a K_Schur section.",
+  "zeta11": 2
+}

@@ -1,0 +1,47 @@
+{
+  "contains_control_common_factor_point": true,
+  "degree_bound": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "dimension_status": "unresolved; square equation count does not imply dimension zero",
+  "equation_count": 13,
+  "fixed": {
+    "A0_0": 51,
+    "A0_1": 31,
+    "b_0": 1,
+    "b_1": 0,
+    "b_2": 1,
+    "b_3": 1
+  },
+  "genuine_section_test": "reconstructed A0,A1,A2,b have gcd one in F_p[s,t]",
+  "prime": 67,
+  "schema": "m3-degree4-section-fixed-b-square-slice-v1",
+  "scope": "modular discovery only",
+  "unknowns": [
+    "A0_2",
+    "A0_3",
+    "A0_4",
+    "A1_0",
+    "A1_1",
+    "A1_2",
+    "A1_3",
+    "A1_4",
+    "A2_0",
+    "A2_1",
+    "A2_2",
+    "A2_3",
+    "A2_4"
+  ]
+}

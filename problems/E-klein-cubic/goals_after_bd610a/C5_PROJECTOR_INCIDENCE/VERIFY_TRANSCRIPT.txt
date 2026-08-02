@@ -1,0 +1,119 @@
+Fresh exact replay transcript - 2026-08-01
+==========================================
+
+Working directory:
+  problems/E-klein-cubic/goal_runs_after_bd610a/C5_PROJECTOR_INCIDENCE
+
+Producer markers
+----------------
+produce.py:
+  C5_CANONICAL_ALGEBRA_OK
+  C5-CONVENTION-INCONSISTENCY
+
+build_corrected_incidence.py:
+  C5-CORRECTED-FULL-INCIDENCE-THREE-PRIME-GEOMETRY
+
+build_generic_pluecker_incidence.py:
+  linearFormTermCounts=[75, 450, 675, 1050, 1800]
+  equationPayloadSha256=c8119e3a1956757fa1833d141f8b14261dd4dcbffb0c3418f87590c96b5d5c4a
+  C5_GENERIC_PLUECKER_INCIDENCE_EXACT
+
+morita_generic_build.py:
+  C5-MORITA-GENERIC-390-COEFFICIENT-DAG
+
+morita_generic_split_build.py:
+  DAG_NODES=517 ORIGINAL_ROOTS=225 SPLIT_ROOTS=225
+  MORITA-GENERIC-SPLIT-DAG-BUILT
+
+make_seal.py:
+  C5-SEAL-OK
+
+Independent verifier markers
+----------------------------
+verify.py and verify_incidence.py:
+  PASS all canonical and audit-only input hashes
+  PASS exact Hilbert--90 first vector V_0=x
+  PASS Q(x) is skew and invertible at two independent good reductions
+  PASS S_0=Q(x)^-1 Q(x)=1_A
+  PASS exact unit-ideal certificate for the prescribed projector incidence
+  PASS corrected boundary: this is not emptiness of the genuine Fano scheme
+  C5_CONVENTION_GATE_FAIL_INDEPENDENTLY_VERIFIED
+
+verify_corrected_incidence.py:
+  PASS independently rebuilt all three five-hyperplane Pluecker sections
+  PASS exact QQ ideal equality after retaining the essential trace equation
+  PASS every structural and 15-chart smoothness Singular input is exact
+  PASS fresh Singular replays give smooth integral degree-14 threefold fibres at 331, 463, and holdout 419
+  SCOPE corrected genuine incidence and structural fibres; no K_proj-rational point
+  C5_CORRECTED_INCIDENCE_GEOMETRY_INDEPENDENTLY_VERIFIED
+
+verify_generic_pluecker_incidence.py:
+  PASS independently rebuilt all five exact Q(zeta11)[x] Pluecker hyperplanes
+  PASS all fifteen Pluecker quadrics and all fifteen Grassmann charts
+  PASS recorded fibres 331,463,419 and fresh-prime fibre 617
+  SCOPE exact generic split equations with explicit descent warning; no K_proj point
+  C5_GENERIC_PLUECKER_INCIDENCE_INDEPENDENTLY_VERIFIED
+
+morita_generic_verify.py:
+  PASS all source hashes and the independent homogeneous 5x78 plus three-chart inventory
+  PASS all 390 homogeneous and 675 normalized-chart trace records equal the original Morita tables mod 23
+  PASS recovered sealed q0=1 line=[1,0,0,0,13,9,8,10,0,20,7,1] with zero residuals and Jacobian minor=11
+  PASS denominator-minimal ordered trace identity with s=3
+  PASS generic D is nonsplit (period=index=2); the split 4+4 determinant is not a K_proj descent
+  SCOPE exact generic Morita coefficient DAG only; no K_proj common line
+  C5-MORITA-GENERIC-390-COEFFICIENT-DAG-INDEPENDENTLY-VERIFIED
+
+morita_generic_split_verify.py:
+  sourceHashes=8 dagNodes=517 originalRoots=225 splitRoots=225
+  cornerRank=4 splitChangeDet=18
+  A0Rank=4 rank4Minors=[13,10,4,5,10] DeltaAtV0=1
+  SCOPE=selected-v0-ansatz-only;no-common-line;no-12-vector-lowering
+  MORITA-GENERIC-SPLIT-DAG-VERIFIED
+
+verify_modular_seed_p23.py:
+  dependency_hashes=PASS
+  trace_matrix_rank=5 trace_kernel_dimension=10 target_match=PASS
+  rank_P=2 rank_n=2 n2=0 sigma_n=n traces=0 pluecker=0
+  restricted_pluecker_jacobian_rank=6 affine_tangent_dimension=4 projective_tangent_dimension=3
+  six_fibre_stacked_trace_rank=15 constant_coefficient_kernel_dimension=0
+  C5_MODULAR_SEED_P23_OK
+
+verify_morita_seed_p23.py:
+  PASS independently rebuilt the quaternion involution and five scalar q^*H_iq quadrics
+  PASS exhaustive affine 23^4 reduction: det0=13476 ranks={3:391,4:279450} consistent={3:3,4:13085} normalizedSolutions=13154
+  PASS five D-valued residuals are zero
+  PASS normalized 5x8 Jacobian rank=5 minorColumns=[4,5,6,7,8] minor=20
+  C5-MORITA-SEED-P23-INDEPENDENTLY-VERIFIED
+
+verify_projective_mixed_reduction.py:
+  TARGET_FRAME_DET=2
+  RELATION_FRAME_DET=21
+  COMMUTATOR_NORMAL_CLOSURE_ORDER=660
+  PLUECKER_SYSTEM=15 invariant quadrics in 10 K_proj coordinates
+  PASS tau normalization is scalar-invariant
+  PASS direct group-translate tensor invariance
+  C5_PROJECTIVE_MIXED_REDUCTION_OK
+
+verify_degree16_fano_exclusion.py:
+  PASS pinned upstream SHA256 aa9958021e630be5ab19884a5b74520b492710bb7b32a4e6568b6ee435e113d2 (512494 bytes)
+  PASS leading-degree tally {2:1313,3:26984,4:86}
+  PASS Hilbert function H[0..4]=[1,80,1927,86,0]
+  PASS saved leading ideal has irrelevant radical and empty projective locus
+  SCOPE homogeneous Fano-valued covariants only through degree 16
+  C5_DEGREE16_FANO_EXCLUSION_INDEPENDENTLY_VERIFIED
+
+verify_descent_compatible_ansatz.py:
+  SOURCE HASHES PASS
+  TWELVE-WORD RANK PASS: [5,10,15,20,23,28,33,38,43,48,53,58,63,68,73,78]
+  SHORT WORDS PASS: 341 single and 1275340 two-word tests
+  DEGREE-17 SUPPORT 1 PASS: 98 supports, 0 deficient
+  DEGREE-17 SUPPORT 2 PASS: 4753 supports, 0 deficient
+  DEGREE-17 SUPPORT 3 PASS: 152096 supports, 0 deficient
+  DEGREE-17 SUPPORT 4 PASS: 3612280 supports, 0 deficient
+  ALL CHECKS PASS -- BOUNDED AUDIT ONLY; NO ALL-DEGREE VERDICT
+
+Scope boundary
+--------------
+The replay proves an exact executable full incidence.  No modular seed,
+formal lift, pairwise line, or bounded covariant exclusion is asserted to be
+a K_proj-rational point of the five-form target.

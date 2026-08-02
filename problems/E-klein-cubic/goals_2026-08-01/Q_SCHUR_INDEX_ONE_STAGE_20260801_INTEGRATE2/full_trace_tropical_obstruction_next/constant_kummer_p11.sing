@@ -1,0 +1,26 @@
+ring r=11,(c0,c1,c2,c3,c4),dp;
+ideal I=5*c0^3,3*c0^2*c1+3*c0^3,7*c0^3,8*c0^2*c1+8*c0^3,4*c0^3,6*c0^3,7*c1^3+2*c0*c1*c2+6*c0*c1^2+9*c0^2*c3+10*c0^2*c1,1*c0*c1^2+6*c0^2*c1,5*c0^2*c1,1*c0^2*c1,6*c1*c2^2+6*c1^2*c2+9*c1^3+7*c0*c2*c3+1*c0*c2^2+3*c0*c1*c4+5*c0*c1*c3+1*c0*c1*c2+10*c0*c1^2+9*c0^2*c4+10*c0^2*c3,4*c1^3+9*c0*c1*c2+3*c0*c1^2+2*c0^2*c3,5*c0*c1^2,8*c0*c1^2,7*c1^2*c2+2*c1^3+3*c0*c2^2+4*c0*c1*c3+10*c0*c1*c2+5*c0^2*c4+1*c0^2*c3,8*c1^2*c2+5*c0*c2^2+3*c0*c1*c3+1*c0^2*c4,8*c1^3+7*c0*c1*c2+4*c0^2*c3,3*c1^3+4*c0*c1*c2+7*c0^2*c3,1*c2^3+5*c1*c2*c3+8*c1*c2^2+6*c1^2*c4+8*c0*c2*c4+2*c0*c2*c3+4*c0*c1*c4,4*c1*c2^2+3*c1^2*c2+1*c0*c2*c3+6*c0*c2^2+2*c0*c1*c4+8*c0*c1*c3+10*c0^2*c4,5*c1^2*c2+10*c0*c2^2+6*c0*c1*c3+2*c0^2*c4,4*c1^2*c2+8*c0*c2^2+7*c0*c1*c3+6*c0^2*c4,10*c2^3+6*c1*c2*c3+3*c1*c2^2+5*c1^2*c4+3*c0*c2*c4+9*c0*c2*c3+7*c0*c1*c4,7*c1*c2^2+10*c0*c2*c3+9*c0*c1*c4,5*c1*c2^2+4*c0*c2*c3+8*c0*c1*c4,4*c2*c3^2+4*c2^2*c3+7*c2^3+1*c1*c3*c4+8*c1*c3^2+7*c1*c2*c4+2*c1*c2*c3+9*c1^2*c4+10*c0*c4^2+3*c0*c3*c4+1*c0*c2*c4,8*c2^2*c3+2*c2^3+5*c1*c3^2+3*c1*c2*c4+10*c1*c2*c3+1*c1^2*c4+6*c0*c3*c4+5*c0*c2*c4,9*c2^3+1*c1*c2*c3+10*c1^2*c4+6*c0*c2*c4,4*c2^3+9*c1*c2*c3+2*c1^2*c4+10*c0*c2*c4,4*c3^2*c4+2*c3^3+8*c2*c4^2+10*c2*c3*c4+2*c2*c3^2+3*c2^2*c3+6*c1*c3*c4+6*c1*c3^2+8*c1*c2*c4+5*c0*c4^2+5*c0*c3*c4,7*c2*c3^2+2*c2^2*c3+10*c1*c3*c4+4*c1*c3^2+9*c1*c2*c4+1*c0*c4^2+7*c0*c3*c4,7*c2^2*c3+3*c1*c3^2+4*c1*c2*c4+8*c0*c3*c4,9*c2^2*c3+7*c1*c3^2+2*c1*c2*c4+4*c0*c3*c4,6*c3^3+8*c2*c3*c4+9*c2*c3^2+5*c1*c3*c4+6*c0*c4^2,10*c3^3+6*c2*c3*c4,3*c2*c3^2+9*c1*c3*c4+2*c0*c4^2,8*c2*c3^2+2*c1*c3*c4+9*c0*c4^2,10*c3*c4^2+9*c3^2*c4+7*c2*c4^2,10*c3^2*c4+1*c3^3+9*c2*c4^2+5*c2*c3*c4,9*c3^3+1*c2*c3*c4,5*c3^3+3*c2*c3*c4,1*c3*c4^2+2*c3^2*c4+4*c2*c4^2,1*c3^2*c4+2*c2*c4^2,7*c3^2*c4+3*c2*c4^2,5*c4^3+4*c3*c4^2,10*c4^3+9*c3*c4^2,2*c3*c4^2,7*c3*c4^2,1*c4^3,8*c4^3,6*c4^3,3*c4^3;
+print("PRIME=11");
+print("FIFTH_ROOT=3");
+print("NONZERO_EQUATIONS=52");
+ideal I0=subst(I,c0,1);
+ideal G0=std(I0);
+poly r0=reduce(1,G0);
+if (r0==0) { print("CHART_0_EMPTY=true"); } else { print("CHART_0_EMPTY=false"); }
+ideal I1=subst(I,c1,1);
+ideal G1=std(I1);
+poly r1=reduce(1,G1);
+if (r1==0) { print("CHART_1_EMPTY=true"); } else { print("CHART_1_EMPTY=false"); }
+ideal I2=subst(I,c2,1);
+ideal G2=std(I2);
+poly r2=reduce(1,G2);
+if (r2==0) { print("CHART_2_EMPTY=true"); } else { print("CHART_2_EMPTY=false"); }
+ideal I3=subst(I,c3,1);
+ideal G3=std(I3);
+poly r3=reduce(1,G3);
+if (r3==0) { print("CHART_3_EMPTY=true"); } else { print("CHART_3_EMPTY=false"); }
+ideal I4=subst(I,c4,1);
+ideal G4=std(I4);
+poly r4=reduce(1,G4);
+if (r4==0) { print("CHART_4_EMPTY=true"); } else { print("CHART_4_EMPTY=false"); }
+quit;

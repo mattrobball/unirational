@@ -1,0 +1,330 @@
+{
+  "decision_status": "mixed-second nonbased branches tangent-reduced and deep tails empty; earlier nonbased chart saturations open",
+  "deep_cubic_spans": {
+    "31": {
+      "conclusion": "the complete landing cubics span every cubic on the deep gate, so its projectivization is empty over F_463",
+      "cubic_monomial_count": 35,
+      "fixed_minor_rank": 35,
+      "gate_dimension": 5,
+      "payload": "degree_31/d31_deep_cubic_span_p463.npz",
+      "payload_sha256": "5bd7ae15ae97f7ae376d8b654c9c56e42738483f601b60db69f86a551029df47"
+    },
+    "35": {
+      "conclusion": "the complete landing cubics span every cubic on the deep gate, so its projectivization is empty over F_463",
+      "cubic_monomial_count": 35,
+      "fixed_minor_rank": 35,
+      "gate_dimension": 5,
+      "payload": "degree_35/d35_deep_cubic_span_p463.npz",
+      "payload_sha256": "141d94a410b10d85df5282ab47701124865e5167347998f5dc4b4386b8cfb5a2"
+    }
+  },
+  "mathematical_gate": "On the scalar-zero branch of every lower normal order, the first nonzero next normal coefficient must lie in a character-compatible Klein fixed-root line or vanish. On a nonzero fixed-root branch, the next Klein coefficient imposes the exact tangent condition dF_R(q)=0. This reduces the mixed-second nonbased branches to smaller scalar chart covers. The two resulting five-dimensional deepest gates are empty because the complete landing cubics span their full degree-three coordinate spaces.",
+  "prime_records": [
+    {
+      "degrees": {
+        "31": {
+          "first_normal_nonbased_tangent": {
+            "combined_rank": 61,
+            "first_gate_rank": 51,
+            "leading_block": {
+              "payload": "degree_31/c3_first_normal_exp2_p463.npz",
+              "payload_sha256": "231dd5860ce267f896d2765f15d78cfaed698bcfdcfd4c6765ace76fe23f61a0"
+            },
+            "leading_scalar_rank": 15,
+            "tangent_extra_rank": 10,
+            "tangent_kernel_dimension": 137
+          },
+          "second_mixed_nonbased_tangent": {
+            "base_gate_rank": 120,
+            "conclusion": "the necessary tangent gate reduces this nonbased branch to the displayed kernel and independent leading-scalar chart cover",
+            "leading_scalar_rank": 9,
+            "payload": "degree_31/c3_second_mixed_nonbased_tangent_p463.npz",
+            "payload_sha256": "c40fd8a86b610d598b287262f104e2737d803f9194838575ca49dc1379d0daa0",
+            "tangent_combined_rank": 153,
+            "tangent_kernel_dimension": 45
+          },
+          "third_normal": {
+            "mixed_b1_gate_rank": 181,
+            "mixed_b1_scalar_rank": 0,
+            "mixed_b1_zero_rank": 181,
+            "mixed_b2_gate_rank": 193,
+            "mixed_b2_scalar_rank": 4,
+            "mixed_b2_zero_rank": 197,
+            "mixed_block": {
+              "payload": "degree_31/c3_third_mixed_p463.npz",
+              "payload_sha256": "45ffa39c1a175280e594b0c713d521360eb7d5ceab3500554e531175974a2250"
+            },
+            "mixed_deep_gate_dimension": 5,
+            "pure_blocks": [
+              {
+                "normal_exponent": 0,
+                "payload": "degree_31/c3_third_normal_exp0_p463.npz",
+                "payload_sha256": "e9b526a6bf896e0857b8a7f06d075e5de81882f5eb396a8d9e7fec627bab4693"
+              },
+              {
+                "normal_exponent": 2,
+                "payload": "degree_31/c3_third_normal_exp2_p463.npz",
+                "payload_sha256": "7ddc160fbbe750375b85af1b5930a448c1e8cbdbef6b97de2bc723ea03dbab70"
+              }
+            ],
+            "pure_cumulative_ranks": [
+              140,
+              162
+            ],
+            "pure_gate_dimension": 36,
+            "pure_scalar_rank": 6,
+            "pure_zero_dimension": 30
+          }
+        },
+        "35": {
+          "first_normal_nonbased_tangent": {
+            "combined_rank": 95,
+            "first_gate_rank": 61,
+            "leading_block": {
+              "payload": "degree_35/c3_first_normal_exp0_p463.npz",
+              "payload_sha256": "7f28cca0759d44ffa7da1112da82593736865d97fa5927b6e06541793cf0f62f"
+            },
+            "leading_scalar_rank": 9,
+            "tangent_extra_rank": 34,
+            "tangent_kernel_dimension": 266
+          },
+          "fourth_normal": {
+            "mixed_b1_zero_rank": 339,
+            "mixed_b2_gate_rank": 356,
+            "mixed_b2_scalar_rank": 5,
+            "mixed_b2_zero_rank": 361,
+            "mixed_block": {
+              "payload": "degree_35/c3_fourth_mixed_p463.npz",
+              "payload_sha256": "c6448a6e85f2c367d9c00c8ab76390a00b77bb78ea94d2b346d8698c72b46c87"
+            },
+            "mixed_deep_gate_dimension": 5,
+            "pure_blocks": [
+              {
+                "normal_exponent": 0,
+                "payload": "degree_35/c3_fourth_normal_exp0_p463.npz",
+                "payload_sha256": "9791072fbf159a00a4bef01af57aabc0d9397dd279cbbd0773fdea9985263697"
+              },
+              {
+                "normal_exponent": 2,
+                "payload": "degree_35/c3_fourth_normal_exp2_p463.npz",
+                "payload_sha256": "2c9b7c3fef31855fe181169c6cd17f2ae466cc6978741ca5a723d79939f75b80"
+              }
+            ],
+            "pure_cumulative_ranks": [
+              306,
+              331
+            ],
+            "pure_gate_dimension": 30,
+            "pure_scalar_rank": 0,
+            "pure_zero_dimension": 30
+          },
+          "second_mixed_nonbased_tangent": {
+            "base_gate_rank": 157,
+            "conclusion": "the necessary tangent gate reduces this nonbased branch to the displayed kernel and independent leading-scalar chart cover",
+            "leading_scalar_rank": 16,
+            "payload": "degree_35/c3_second_mixed_nonbased_tangent_p463.npz",
+            "payload_sha256": "cc6200db831a53f753f5fa048f98c53f77018157bf29c70358e6a3b7e74cb339",
+            "tangent_combined_rank": 205,
+            "tangent_kernel_dimension": 156
+          },
+          "third_mixed_nonbased_tangent": {
+            "base_gate_rank": 288,
+            "leading_scalar_rank": 9,
+            "payload": "degree_35/c3_third_mixed_nonbased_tangent_p463.npz",
+            "payload_sha256": "5d7a71656961c55649d619878a54faf7218a099ec10947d9ae1bd09e9ecfb860",
+            "tangent_combined_rank": 322,
+            "tangent_kernel_dimension": 39
+          },
+          "third_normal": {
+            "mixed_b1_gate_rank": 269,
+            "mixed_b1_scalar_rank": 13,
+            "mixed_b1_zero_rank": 282,
+            "mixed_b2_gate_rank": 301,
+            "mixed_b2_scalar_rank": 0,
+            "mixed_b2_zero_rank": 301,
+            "mixed_block": {
+              "payload": "degree_35/c3_third_mixed_p463.npz",
+              "payload_sha256": "849c0d729c77e24123759827ec611985a61f37b18f2db260aade3f957596674f"
+            },
+            "mixed_deep_gate_dimension": 60,
+            "pure_blocks": [
+              {
+                "normal_exponent": 0,
+                "payload": "degree_35/c3_third_normal_exp0_p463.npz",
+                "payload_sha256": "72364905b9c9ed178ff379bf6cf6bc13e377780c2df884c4f333a1259487432a"
+              },
+              {
+                "normal_exponent": 2,
+                "payload": "degree_35/c3_third_normal_exp2_p463.npz",
+                "payload_sha256": "ffa1bf20096f1fe9620654463d1a2561cbf5d6c45ba26c5790f9549aeac00d92"
+              }
+            ],
+            "pure_cumulative_ranks": [
+              187,
+              221
+            ],
+            "pure_gate_dimension": 140,
+            "pure_scalar_rank": 31,
+            "pure_zero_dimension": 109
+          }
+        }
+      },
+      "prime": 463,
+      "zeta11": 15
+    },
+    {
+      "degrees": {
+        "31": {
+          "first_normal_nonbased_tangent": {
+            "combined_rank": 61,
+            "first_gate_rank": 51,
+            "leading_block": {
+              "payload": "degree_31/c3_first_normal_exp2_p727.npz",
+              "payload_sha256": "b80c44372a4ea56b1ba737823b63e35f868a185b7ebb294d39993c58f26c00a4"
+            },
+            "leading_scalar_rank": 15,
+            "tangent_extra_rank": 10,
+            "tangent_kernel_dimension": 137
+          },
+          "second_mixed_nonbased_tangent": {
+            "base_gate_rank": 120,
+            "conclusion": "the necessary tangent gate reduces this nonbased branch to the displayed kernel and independent leading-scalar chart cover",
+            "leading_scalar_rank": 9,
+            "payload": "degree_31/c3_second_mixed_nonbased_tangent_p727.npz",
+            "payload_sha256": "88981e3a7caf554c4e1da3082362b3e0a6c207672a9e48db52ba206b4c2f2b4b",
+            "tangent_combined_rank": 153,
+            "tangent_kernel_dimension": 45
+          },
+          "third_normal": {
+            "mixed_b1_gate_rank": 181,
+            "mixed_b1_scalar_rank": 0,
+            "mixed_b1_zero_rank": 181,
+            "mixed_b2_gate_rank": 193,
+            "mixed_b2_scalar_rank": 4,
+            "mixed_b2_zero_rank": 197,
+            "mixed_block": {
+              "payload": "degree_31/c3_third_mixed_p727.npz",
+              "payload_sha256": "6855302f7b1b22efd0a4ae18c3fb79d910297febf8c4d41cef633bb246d4db8e"
+            },
+            "mixed_deep_gate_dimension": 5,
+            "pure_blocks": [
+              {
+                "normal_exponent": 0,
+                "payload": "degree_31/c3_third_normal_exp0_p727.npz",
+                "payload_sha256": "83ee7585bff3794c2d694a4b1680a0e6a92c917aa52e461a91dff15214917f3d"
+              },
+              {
+                "normal_exponent": 2,
+                "payload": "degree_31/c3_third_normal_exp2_p727.npz",
+                "payload_sha256": "d69761274df549e5a7bd4f59611c8f31ad3fae971ece65a3460c4838084e9568"
+              }
+            ],
+            "pure_cumulative_ranks": [
+              140,
+              162
+            ],
+            "pure_gate_dimension": 36,
+            "pure_scalar_rank": 6,
+            "pure_zero_dimension": 30
+          }
+        },
+        "35": {
+          "first_normal_nonbased_tangent": {
+            "combined_rank": 95,
+            "first_gate_rank": 61,
+            "leading_block": {
+              "payload": "degree_35/c3_first_normal_exp0_p727.npz",
+              "payload_sha256": "62ade3e078baf82a2d71819ba48e0f894e2a30299fb0298ca7e1c4fb6ac78a3a"
+            },
+            "leading_scalar_rank": 9,
+            "tangent_extra_rank": 34,
+            "tangent_kernel_dimension": 266
+          },
+          "fourth_normal": {
+            "mixed_b1_zero_rank": 339,
+            "mixed_b2_gate_rank": 356,
+            "mixed_b2_scalar_rank": 5,
+            "mixed_b2_zero_rank": 361,
+            "mixed_block": {
+              "payload": "degree_35/c3_fourth_mixed_p727.npz",
+              "payload_sha256": "1428b6cfbd35263a01cd43bfce1d043f148ff4868ea3a53ee4c5d0d1645a6186"
+            },
+            "mixed_deep_gate_dimension": 5,
+            "pure_blocks": [
+              {
+                "normal_exponent": 0,
+                "payload": "degree_35/c3_fourth_normal_exp0_p727.npz",
+                "payload_sha256": "ef82863fee4e3fb3e524b193c28534aeff2d5e8be79d9b7bc0eb9b2ae80c4faf"
+              },
+              {
+                "normal_exponent": 2,
+                "payload": "degree_35/c3_fourth_normal_exp2_p727.npz",
+                "payload_sha256": "07c997a06299b5e93169daa1357d0a9ca14740e13484117d50101fdc08819165"
+              }
+            ],
+            "pure_cumulative_ranks": [
+              306,
+              331
+            ],
+            "pure_gate_dimension": 30,
+            "pure_scalar_rank": 0,
+            "pure_zero_dimension": 30
+          },
+          "second_mixed_nonbased_tangent": {
+            "base_gate_rank": 157,
+            "conclusion": "the necessary tangent gate reduces this nonbased branch to the displayed kernel and independent leading-scalar chart cover",
+            "leading_scalar_rank": 16,
+            "payload": "degree_35/c3_second_mixed_nonbased_tangent_p727.npz",
+            "payload_sha256": "24a87aba2a771aaea04d550df701504f9d41e31d76d76e8b42e29006ea2e9369",
+            "tangent_combined_rank": 205,
+            "tangent_kernel_dimension": 156
+          },
+          "third_mixed_nonbased_tangent": {
+            "base_gate_rank": 288,
+            "leading_scalar_rank": 9,
+            "payload": "degree_35/c3_third_mixed_nonbased_tangent_p727.npz",
+            "payload_sha256": "a93a816193b80997a28947bb8cf1a22c0de7d76757c32101c984d7b34616a16c",
+            "tangent_combined_rank": 322,
+            "tangent_kernel_dimension": 39
+          },
+          "third_normal": {
+            "mixed_b1_gate_rank": 269,
+            "mixed_b1_scalar_rank": 13,
+            "mixed_b1_zero_rank": 282,
+            "mixed_b2_gate_rank": 301,
+            "mixed_b2_scalar_rank": 0,
+            "mixed_b2_zero_rank": 301,
+            "mixed_block": {
+              "payload": "degree_35/c3_third_mixed_p727.npz",
+              "payload_sha256": "8d048e9c737896c948216cd2d084117a921f268c8f13f0abfa75929a1d419934"
+            },
+            "mixed_deep_gate_dimension": 60,
+            "pure_blocks": [
+              {
+                "normal_exponent": 0,
+                "payload": "degree_35/c3_third_normal_exp0_p727.npz",
+                "payload_sha256": "34f378d98e4d10dd45e541afaa2fb06207bc371b1df688bf00563b54b5a8afc3"
+              },
+              {
+                "normal_exponent": 2,
+                "payload": "degree_35/c3_third_normal_exp2_p727.npz",
+                "payload_sha256": "5dec5d35999ba7f3a817d14eceb974bd9d1436152c0d8dd78708fca7c0463c5d"
+              }
+            ],
+            "pure_cumulative_ranks": [
+              187,
+              221
+            ],
+            "pure_gate_dimension": 140,
+            "pure_scalar_rank": 31,
+            "pure_zero_dimension": 109
+          }
+        }
+      },
+      "prime": 727,
+      "zeta11": 46
+    }
+  ],
+  "schema": "cov-m1-c3-deep-normal-gate-v1",
+  "scope": "special-fibre necessary recursive gates; tangent reduction of mixed-second nonbased branches and exact closure of the two deepest five-dimensional gates; earlier nonbased charts remain separate"
+}

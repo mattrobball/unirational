@@ -1,0 +1,203 @@
+{
+  "format": "c5-canonical-input-manifest-v1",
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "field": "Q(zeta11)(P(W))^PSL_2(F_11)",
+  "authoritative_inputs": {
+    "minimal_polynomials": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO/c0_minpoly_exact.json",
+      "sha256": "86704ae4482d8a40a88eed5a6680a6b9dd46293f88ddc5e6b24a63d9224454fc",
+      "bytes": 156224,
+      "format": "c0-exact-minpolys-v2"
+    },
+    "compressed_algebra": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/compressed_algebra.json",
+      "sha256": "bfc2e6c5afcfac7c9925b916cad29098bc5033f1938dd9f0273febc067a55fbb",
+      "bytes": 2591824,
+      "format": "c0-compressed-algebra-lazy-v1"
+    },
+    "involution": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/involution.json",
+      "sha256": "e8001963a8361f97e63deb7b8a92f2c9608765b09be9bb631aaa9c4eb5bae077",
+      "bytes": 103590,
+      "format": "c1-lazy-symplectic-involution-v1"
+    },
+    "distinguished_five_plane": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/distinguished_five_plane.json",
+      "sha256": "edee4f7e07e95665044ba4fba85239154f4052f27d99b3cbcdd0f48b60d2378a",
+      "bytes": 51144,
+      "format": "c2-distinguished-five-plane-lazy-v1"
+    },
+    "refined_involution_transport": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/c1_involution.json",
+      "sha256": "dfd42ec2cadeec947f765a5923782d9f92b920372909492662fae6f9754a8b67",
+      "bytes": 3681,
+      "format": "goal-c-c1-lazy-involution-v1"
+    },
+    "auxiliary_projector_rur": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_rur_char0.json",
+      "sha256": "54c181762c3c5a263f1dc6522e39d8e690196c7acdc31dfa44f5043481ca3216",
+      "bytes": 729242,
+      "format": "ambient-degree12-rur-char0-qzeta11-v1"
+    },
+    "auxiliary_projector_global_check": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/ambient_degree12_global_exact.json",
+      "sha256": "1a2f8dd96ee9323d3b6c52f0c9559471579168f5626df9931e21832801d73b75",
+      "bytes": 737,
+      "format": "ambient-degree12-global-exact-v1"
+    },
+    "auxiliary_projector_unisolvent_points": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/degree24_unisolvent_points.json",
+      "sha256": "5a6a0bba8e34c1ba081165fee2eaddb9aba51d3371858531cbfbf250dd712fac",
+      "bytes": 18401,
+      "format": "degree24-invariant-unisolvent-p23-v1"
+    },
+    "morita_five_forms": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/c2_morita.json",
+      "sha256": "0201a89f9087250a4313ef2732398adbddcadd3d2f234183736088760aec645f",
+      "bytes": 12191,
+      "format": "c2-lazy-exact-morita-v1"
+    },
+    "alignment_core": {
+      "path": "tmp/pfaffian_representation_alignment/core.py",
+      "sha256": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4",
+      "bytes": 25277
+    },
+    "alignment_certificate": {
+      "path": "tmp/pfaffian_representation_alignment/certificate.json",
+      "sha256": "90746a65051b863c684c906f7166c70572a2edc319e6f6e6e306042261153848",
+      "bytes": 65786,
+      "format": "pfaffian-representation-alignment-v1"
+    },
+    "kproj_core": {
+      "path": "tmp/kproj_arithmetic/core.py",
+      "sha256": "913b6184df2272e4834f81b38abdda9f468a2852ec571a04a469610054468b01",
+      "bytes": 5223
+    },
+    "kproj_table": {
+      "path": "tmp/kproj_arithmetic/normalized_kproj_table.json",
+      "sha256": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f",
+      "bytes": 1607863,
+      "format": null
+    },
+    "hilbert90_covariants": {
+      "path": "tmp/generic_twist/phi_coefficients.py",
+      "sha256": "8c217aeaefe300a76e886f0a94803b5812689574299e1a2c72daeec72efd4525",
+      "bytes": 6748
+    },
+    "fano_c3_source": {
+      "path": "certificates/fano_c3/produce_c3.py",
+      "sha256": "c8e4dc5ef161e4d8d41e9dd21ecb286ff7d6d76a2b67b678b2e273709af565f7",
+      "bytes": 60323
+    },
+    "symmetric_basis_certificate": {
+      "path": "tmp/pfaffian_rank2_idempotent_attack/certificate.json",
+      "sha256": "093b0bc4e680bdf9632381a778ed6d88f4787a18df293992def38a3d23097682",
+      "bytes": 11229,
+      "format": "pfaffian-rank2-idempotent-attack-v1"
+    },
+    "symmetric_basis_builder": {
+      "path": "tmp/pfaffian_rank2_idempotent_attack/attack_core.py",
+      "sha256": "d44132e529618c0a639039d6af5604d6700fc7e8653be2ad7c060c9be282eb05",
+      "bytes": 22536
+    },
+    "full_wedge_source": {
+      "path": "tmp/pfaffian_rank2_idempotent_attack/full_wedge.py",
+      "sha256": "0c3416fb549906e69da2553af70dd65c2ccd6134a537c4fe5b65caafe6fe9a88",
+      "bytes": 14152
+    },
+    "modular_seed_fano_source": {
+      "path": "tmp/fano14_twist/fano_covariant_scan.py",
+      "sha256": "b3c93a41ed1f8b5106d93717dbad058b6c60af100bcee8138925485dac6f107e",
+      "bytes": 16864
+    },
+    "modular_seed_descent_core": {
+      "path": "tmp/pfaffian_25plus11_descent/descent_core.py",
+      "sha256": "59fa59a249f02af563173e6279360af13da1a6ee748338a43086b0697c79d436",
+      "bytes": 29044
+    },
+    "modular_seed_descent_certificate": {
+      "path": "tmp/pfaffian_25plus11_descent/certificate.json",
+      "sha256": "8361006e7fa78cb7269e3efbe9542dba676fedce35303528aee03b79320736bd",
+      "bytes": 533940,
+      "format": "pfaffian-25plus11-descent-v1"
+    },
+    "exact_covariants_replay": {
+      "path": "certificates/exact_covariants_check.py",
+      "sha256": "89847a3203bf7d842b00a551a29377bc9d1cdd36dca9cb5d192c54de0abd2a6e",
+      "bytes": 4621
+    }
+  },
+  "audit_only_inputs": {
+    "superseded_partial_compressed_algebra": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO/compressed_algebra.json",
+      "sha256": "9ad09fb89f2028273a281d7603f12f455f5da9db37302b0267f67eb840f0c349",
+      "bytes": 944,
+      "format": "goal-c-compressed-algebra-progress-v1"
+    },
+    "namespace_quarantine_audit": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/MORITA_PROJECTOR_AUDIT.md",
+      "sha256": "c93b1516e634113133c66599493925070b82b3281de30fa98bb453cdc424680d",
+      "bytes": 5699
+    },
+    "corrected_cyclotomic_builder": {
+      "path": "goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/build_ambient_projector_prime.py",
+      "sha256": "00b5217d958b3133216b3cd52418370f3a9959ed9c310d1f25c5b6e77755e06a",
+      "bytes": 3929
+    },
+    "symmetric_basis_proof_audit": {
+      "path": "tmp/pfaffian_rank2_idempotent_attack/PROOF_AUDIT.md",
+      "sha256": "b0584719496cfff69bfe89c0188774f14f8b2cf18dd98ccaaa6c88bf5e9cb790",
+      "bytes": 4239
+    },
+    "implementation_quarantine_audit": {
+      "path": "goals_after_35fa8f/IMPLEMENTATION_AUDIT.md",
+      "sha256": "9bfe6898b624a659aa72cec25c58f9e5d7c799bad15ef470be5ec68f73eb5444",
+      "bytes": 10474
+    },
+    "lane_a_rank2_attack_core": {
+      "path": "tmp/pfaffian_rank2_idempotent_attack/attack_core.py",
+      "sha256": "d44132e529618c0a639039d6af5604d6700fc7e8653be2ad7c060c9be282eb05",
+      "bytes": 22536
+    },
+    "lane_a_fano_covariant_scan": {
+      "path": "tmp/fano14_twist/fano_covariant_scan.py",
+      "sha256": "b3c93a41ed1f8b5106d93717dbad058b6c60af100bcee8138925485dac6f107e",
+      "bytes": 16864
+    },
+    "lane_a_descent_core": {
+      "path": "tmp/pfaffian_25plus11_descent/descent_core.py",
+      "sha256": "59fa59a249f02af563173e6279360af13da1a6ee748338a43086b0697c79d436",
+      "bytes": 29044
+    },
+    "lane_a_descent_certificate": {
+      "path": "tmp/pfaffian_25plus11_descent/certificate.json",
+      "sha256": "8361006e7fa78cb7269e3efbe9542dba676fedce35303528aee03b79320736bd",
+      "bytes": 533940,
+      "format": "pfaffian-25plus11-descent-v1"
+    },
+    "lane_a_modular_covariant_scan": {
+      "path": "certificates/modular_covariant_scan.py",
+      "sha256": "8f226209cb479587d7e1a36cbb86c62ab3c9be9e8d7798c9c7db569017520349",
+      "bytes": 13392
+    }
+  },
+  "canonical_choices": {
+    "compressed_algebra": "the complete lazy v1 packet supersedes the C0-PARTIAL progress file",
+    "involution": "the root involution is consumed by the exact five-plane; c1_involution is a compatible refined transport audit",
+    "five_plane": "the exact x,C,D,E,K packet consumed by c2_morita",
+    "auxiliary_projector": "the characteristic-zero RUR whose source hashes are sealed in c2_morita",
+    "symmetric_basis": "the exact 15 symmetrizations with frame indices 0,...,13,15 and a nonzero good-fibre minor",
+    "unisolvent_points": "the exact point set named by the accepted global Pluecker certificate"
+  },
+  "quarantine": {
+    "consumed_namespace_mutated_rur": false,
+    "reason": "the audits record a historical namespace-copy conjugate output, but do not name or retain its blob",
+    "historical_bad_blob": "absent or unnamed in the current tracked tree",
+    "current_p23_zeta4_status": "corrected tracked copies are valid and differ from zeta2",
+    "consumption_rule": "consume no modular RUR except an explicitly hash-bound authoritative input; only the char0 RUR is consumed here",
+    "corrected_builder_hash": "00b5217d958b3133216b3cd52418370f3a9959ed9c310d1f25c5b6e77755e06a"
+  },
+  "duplicate_verdict": "no semantic disagreement among the selected authoritative objects; the smaller compressed_algebra file is explicitly C0-PARTIAL",
+  "mathematical_input_failure": "the selected five-plane has V_0=x and therefore S_0=Q(x)^-1 Q(x)=1, contradicting the proposed self-adjoint-projector incidence",
+  "marker": "C5_CANONICAL_INPUTS_HASHED"
+}

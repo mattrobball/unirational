@@ -1,0 +1,51 @@
+{
+  "axis": 0,
+  "component": 0,
+  "criterion": "reduce(q0^5*gen(1),std(N)) == 0",
+  "degree_bound": 5,
+  "generators": 690,
+  "log": "direct_axis0_component0_degree5.log",
+  "module_component_weights": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "module_components": 27,
+  "prime": 89,
+  "relation_matrix": {
+    "path": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/relation_matrix.npz",
+    "sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb"
+  },
+  "result": "direct_axis0_component0_degree5.result",
+  "scope": "A completed zero remainder is an exact membership certificate. A completed nonzero remainder is exact only because the global dp order and degree bound include every reducer of a degree-five target. Timeout, RSS kill, or missing result is a nonverdict.",
+  "script": {
+    "bytes": 29830987,
+    "file": "direct_axis0_component0_degree5.sing",
+    "sha256": "2394fd6136f4f8c3c3266513e8db516019fa38f257952115f4a04271ac67b65c"
+  },
+  "status": "PREPARED_NOT_RUN"
+}

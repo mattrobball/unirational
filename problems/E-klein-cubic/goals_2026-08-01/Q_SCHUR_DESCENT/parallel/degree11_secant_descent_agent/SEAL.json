@@ -1,0 +1,14 @@
+{
+  "files": {
+    "REPLAY.md": "b9adfbb5f7898ea49cf61dc08ac52c7f2c51e65c7eb93eba8a654e1979cde000",
+    "REPORT.md": "644dcff6e4acb35243113d07280878057820672d533ccc8f0c96556d00a42957",
+    "analyze.py": "663f95e23f5ed1b78806fae5b0738786d2515cf218340e11d4ba5f20d9ff4da0",
+    "computed.json": "1d089deb7b8cb75a68e814966b3c311c9443dc3da8cd55fff9685c196def8b86",
+    "make_packet.py": "a3bacb7092c197cd081b359c903353c32d75a5bb266d64dc975cd436aff7f44c",
+    "source_manifest.json": "e60075990707c1f1aeff99e6e06ced22228e4f68abd62644b4f40b1261a3bbe9",
+    "verify.py": "06275571bca2fd1273e1a081445e5df190c47add2548aeb8490472400c37b02a"
+  },
+  "format": "a5-degree11-all-six-secant-descent-seal-v1",
+  "marker": "A5_DEGREE11_ALL_SIX_SECANT_DESCENT_AUDIT_OK",
+  "strict_scope": "All six transferred A5 point orbits, their exact good-fibre ranks, proper pair secants, D12 residual orbit, corresponding-line nonincidence, and the signed CH0 relation only; no K-point and no pointlessness theorem."
+}

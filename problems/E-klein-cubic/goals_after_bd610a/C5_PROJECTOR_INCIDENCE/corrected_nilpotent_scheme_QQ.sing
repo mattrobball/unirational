@@ -1,0 +1,68 @@
+// Corrected C5 square-zero scheme over QQ in a standard symplectic splitting.
+ring r=0,(p01,p02,p03,p04,p05,p12,p13,p14,p15,p23,p24,p25,p34,p35,p45),dp;
+matrix P[6][6]=
+  0,p01,p02,p03,p04,p05,
+  -p01,0,p12,p13,p14,p15,
+  -p02,-p12,0,p23,p24,p25,
+  -p03,-p13,-p23,0,p34,p35,
+  -p04,-p14,-p24,-p34,0,p45,
+  -p05,-p15,-p25,-p35,-p45,0;
+matrix Q[6][6]=
+  0,0,0,1,0,0,
+  0,0,0,0,1,0,
+  0,0,0,0,0,1,
+  -1,0,0,0,0,0,
+  0,-1,0,0,0,0,
+  0,0,-1,0,0,0;
+matrix N=P*Q;
+matrix N2=N*N;
+poly trN=N[1,1]+N[2,2]+N[3,3]+N[4,4]+N[5,5]+N[6,6];
+ideal I0=
+  N2[1,1],N2[1,2],N2[1,3],N2[1,4],N2[1,5],N2[1,6],
+  N2[2,1],N2[2,2],N2[2,3],N2[2,4],N2[2,5],N2[2,6],
+  N2[3,1],N2[3,2],N2[3,3],N2[3,4],N2[3,5],N2[3,6],
+  N2[4,1],N2[4,2],N2[4,3],N2[4,4],N2[4,5],N2[4,6],
+  N2[5,1],N2[5,2],N2[5,3],N2[5,4],N2[5,5],N2[5,6],
+  N2[6,1],N2[6,2],N2[6,3],N2[6,4],N2[6,5],N2[6,6];
+ideal I=I0,trN;
+ideal J=trN,
+  p01*p23-p02*p13+p03*p12,
+  p01*p24-p02*p14+p04*p12,
+  p01*p25-p02*p15+p05*p12,
+  p01*p34-p03*p14+p04*p13,
+  p01*p35-p03*p15+p05*p13,
+  p01*p45-p04*p15+p05*p14,
+  p02*p34-p03*p24+p04*p23,
+  p02*p35-p03*p25+p05*p23,
+  p02*p45-p04*p25+p05*p24,
+  p03*p45-p04*p35+p05*p34,
+  p12*p34-p13*p24+p14*p23,
+  p12*p35-p13*p25+p15*p23,
+  p12*p45-p14*p25+p15*p24,
+  p13*p45-p14*p35+p15*p34,
+  p23*p45-p24*p35+p25*p34;
+ideal G0=std(I0);
+ideal GI=std(I);
+ideal GJ=std(J);
+ideal remIJ=reduce(I,GJ);
+ideal remJI=reduce(J,GI);
+if ((size(std(remIJ))==0) and (size(std(remJI))==0))
+{
+  print("C5_TRACE_REPAIRED_IDEAL_EQUALITY=1");
+}
+else
+{
+  print("C5_TRACE_REPAIRED_IDEAL_EQUALITY=0");
+}
+print("C5_SQUARE_ZERO_RING_DIM="+string(dim(G0)));
+print("C5_SQUARE_ZERO_DEGREE_BEGIN");
+string degree0=degree(G0);
+print(degree0);
+print("C5_SQUARE_ZERO_DEGREE_END");
+print("C5_REDUCED_RING_DIM="+string(dim(GJ)));
+print("C5_REDUCED_DEGREE_BEGIN");
+string degreeJ=degree(GJ);
+print(degreeJ);
+print("C5_REDUCED_DEGREE_END");
+print("C5_STANDARD_NILPOTENT_SCHEME_DONE");
+quit;

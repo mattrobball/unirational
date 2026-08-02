@@ -1,0 +1,34 @@
+{
+  "artifact_sha256": "ad64848d98316eff00793814a5e8be09978f61c13057e4256e9a586375093957",
+  "certificate_sha256": "8bae2e072bc64a68cebcad7743c0884a1901eb3ae3026e5168dd8598f99bc6bb",
+  "closed_L8_stageC_empty": true,
+  "compatibility_shape": [
+    3384,
+    3432
+  ],
+  "compatibility_uint8_sha256": "770f3d266eb5f1c3d7891ce0c4a63129e0c1f1e67ce92eb730ebb114cc4e70ee",
+  "kernel_shape": [
+    3384,
+    13680
+  ],
+  "kernel_uint8_sha256": "673d49d7543a22aae14cafe6ab84ace82b7d15217198d4553bfbf29cb5f3485c",
+  "prime": 89,
+  "resources": {
+    "elapsed_seconds": 39.43417162500555,
+    "max_rss_note": "on macOS ru_maxrss is bytes",
+    "max_rss_raw": 3766534144,
+    "observed_free_plus_speculative_gib": 22.982086181640625
+  },
+  "restricted_p3_uint8_sha256": "536ae37016fd555069c4cd12cd99c8d7713e3ec23d6dd2f3ac9a2e12d12228e4",
+  "restricted_p4_uint8_sha256": "dcdbdde97f6494281c3893f90eae38051d40406159879642ecfc3924a9591031",
+  "scope_guard": "No conclusion is made on P36 minus L8.",
+  "selected_minor_rank": 6435,
+  "selected_minor_shape": [
+    6435,
+    6435
+  ],
+  "selected_minor_uint8_sha256": "203c2f225aa11959c96ab50f5573e63a0950e171dc3918d41e4cac3f02194817",
+  "source_sha256": "2e718c491172480e3aa3f055d5806d28a9414db2627e6daf3f0204bdc3b840ea",
+  "status": "PASS_INDEPENDENT_CLOSED_L8_STAGEC_EMPTY",
+  "theorem": "The compatibility ideal contains S_8, so the normalized Stage-C incidence is empty at every projective point of L8."
+}

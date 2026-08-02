@@ -1,0 +1,13 @@
+{
+  "artifact": "pc1_border_stability_certificate.npz",
+  "artifact_sha256": "861cdeb09d09335793a0c00d4f38836f8622d3809d47a636c94686532c7c31ac",
+  "authorized_exit": "PC1-NONMINIMAL-BORDER-HULL-PASS",
+  "diagnostic_specializations_are_not_proof": true,
+  "expected_independent_marker": "PASS_INDEPENDENT_PC1_BORDER_STABILITY_REPLAY",
+  "full_coordinate_algebraic_replay_required": true,
+  "minimal_graded_ledger": "OPEN",
+  "producer_status": "PC1-NONMINIMAL-BORDER-HULL-PASS",
+  "quadratic_defects": 1176,
+  "status": "READY_FOR_INDEPENDENT_REPLAY",
+  "unauthorized_exit": "PC25-STABLE-PRESENTATION-PASS"
+}

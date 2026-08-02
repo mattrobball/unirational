@@ -1,0 +1,18 @@
+{
+  "axis": 0,
+  "chart": "q0=1",
+  "criterion": "all seven free generators reduce to zero modulo std(N)",
+  "implication": "If decisive=1, the verified r64 augmented contraction module is unit on D(q_axis), hence both Stage B and Stage C are empty there.",
+  "packet": {
+    "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/enlarged_closure/support_balanced_r64_stageBC.npz",
+    "sha256": "c50de97aa4fc9465793f3fe84b544731b36cec1a2807113e94817c955897be2b"
+  },
+  "prime": 89,
+  "result": "affine_q0_r64_augmented_module.result.txt",
+  "script": {
+    "bytes": 101995996,
+    "path": "affine_q0_r64_augmented_module.sing",
+    "sha256": "c9fb79809264cd5c5b0f396cce88e85310e7b4f4c036ed7d124ace497f097bcf"
+  },
+  "status": "PREPARED_NOT_RUN"
+}

@@ -1,0 +1,17 @@
+{
+  "cas_launched": false,
+  "equations_replayed_entrywise": 66,
+  "manifest": "r66_stageC_q0_1_b0_1.json",
+  "manifest_sha256": "68060fbe1cb1c4b9e23a7cee1c65498fa6c802916952519f939213764121f32e",
+  "msolve_sha256": "c4e99a95d9ad3bc24bed2c0bcad1d9fc3376c9a8be06018e628783ac173b0f84",
+  "p3_sha256": "00b2ea7c59b74741982d4731424ac7d19df8b31770aa1a56a190ca7c456030c9",
+  "p3_terms": 2363052,
+  "p4_sha256": "32197337d815ed4b2600d3d2965499a276fab5a3589559f10d8fe2488199771b",
+  "p4_terms": 4446378,
+  "packet_sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+  "scope_guard": "Prepared exact necessary equations for only D(q0), b0=1. No chart emptiness, global Stage-C result, or P25 verdict is claimed.",
+  "singular_sha256": "26a0fa4a62216bf1b30043782884220d66213a8b18ae58505d4f0b6db3119089",
+  "status": "PASS_INPUT_REPLAY_PREPARED_NOT_RUN",
+  "total_terms": 6809430,
+  "variables": 42
+}

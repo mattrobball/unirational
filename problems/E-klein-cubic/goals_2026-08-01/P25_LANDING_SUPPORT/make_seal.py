@@ -49,6 +49,15 @@ REQUIRED = [
     "syzygy_r256_boundary_saturate.sing",
     "syzygy_r256_boundary_singular.json",
     "verify_undecided_result.json",
+    "parallel/stageb_stratified_cas/SEAL.json",
+    "parallel/complement_strategy/SEAL.json",
+    "parallel/global_compatibility/SEAL.json",
+    "parallel/determinantal_cover/SEAL.json",
+    "parallel/structural_route/SEAL.json",
+    "parallel/systematic_module/SEAL.json",
+    "parallel/r66_pair_split/SEAL.json",
+    "parallel/r66_singular/SEAL.json",
+    "parallel/r66_stagec/SEAL.json",
 ]
 
 
@@ -67,8 +76,9 @@ def main() -> None:
     payload = {
         "exit": "P25-UNDECIDED",
         "scope": (
-            "honest stop: Stage B saturated incidence unresolved; no degree-25 "
-            "positive or negative theorem; headline remains OPEN"
+            "honest stop: Stage B and Stage C are empty on closed L8, while "
+            "the certified 34-chart Stage-B and 29-chart Stage-C complements "
+            "remain unresolved; no degree-25 terminal theorem; headline OPEN"
         ),
         "files": {
             name: {

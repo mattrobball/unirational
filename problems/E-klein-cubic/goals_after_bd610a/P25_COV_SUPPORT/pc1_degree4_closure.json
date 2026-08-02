@@ -1,0 +1,74 @@
+{
+  "actual_new_quotient_dimension": 2053,
+  "artifact": "pc1_degree4_closure.npz",
+  "artifact_sha256": "6b77fa511c2adf4e9d3e99dbac1ec718a78d799c57c712fbdb0c8f50953ffb8b",
+  "commutator_quotient_sha256": "f8737c283bbffb69354e13caca8e2c89771b23b0f872d71ffebea7e8fbf68e93",
+  "commutator_rank_mod_old": 210,
+  "commutator_rows": 315,
+  "commutator_syzygy_dimension_mod_old": 105,
+  "commutators_add_directions": 0,
+  "formal_missing_tensor_dimension": 2072,
+  "individual_commutator_memberships_old": 0,
+  "individual_transition_memberships_old": 0,
+  "inputs": {
+    "certificates/degree25_finite_module/multiplication_matrices.npz": "cdee1a9cd2989f2d17e7771321b49723d8a9dfc71d2bd5a791f83a30142aa418",
+    "certificates/degree25_finite_module/relation_matrix.npz": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+    "pc0_multiplication_kernel.npz": "d08b22ea873111a3849fd03c16374d7ee83fce775f974b0ccde7db8f6a64830a",
+    "pc0_rank_certificate.json": "6325b84e9ee5b429041bf7d551a937a75033ff9b224d44b4d903bfee886ed790"
+  },
+  "minimal_transition_generators": 2053,
+  "minimal_transition_labels_sha256": "20c0aad146053a12fdbad0b93e99eceb76047e133cdf8e7da1bfe49226da0fce",
+  "multiplication_kernel_dimension": 19,
+  "new_degree4_rank": 27583,
+  "normal_form": {
+    "kernel_pivot_columns": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      56,
+      57,
+      58,
+      112
+    ],
+    "quotient_basis_dimension": 2053,
+    "rule": "eliminate the 19 kernel-W pivots, then retain the 2053 nonpivot coordinates"
+  },
+  "old_degree4_rank": 25530,
+  "prime": 89,
+  "status": "PC1-DEGREE4-CLOSURE-PASS",
+  "theorem_boundary": {
+    "does_not_prove": "Closure of the coupled 28-component module in degree five or higher, a stabilization/regularity bound, representation characters, or support.",
+    "proves": "The exact pure-q degree-four closure quotient over F_89 has dimension 2053, with a canonical normal-form basis and minimal selected transition generators. Commutators have quotient rank 210 and add no direction."
+  },
+  "transition_block_ranks_mod_old": [
+    690,
+    690,
+    690,
+    690,
+    690,
+    690
+  ],
+  "transition_cumulative_ranks_mod_old": [
+    690,
+    1332,
+    1702,
+    1923,
+    2031,
+    2053
+  ],
+  "transition_quotient_sha256": "de33fb85e695914b3d175bbd17d30129631f7a97a46848e7e9995e34112d8f46",
+  "transition_rows": 4140,
+  "transition_syzygy_dimension_in_quotient": 2087
+}

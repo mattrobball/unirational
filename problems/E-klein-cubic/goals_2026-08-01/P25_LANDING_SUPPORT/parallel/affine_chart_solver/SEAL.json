@@ -1,0 +1,77 @@
+{
+  "files": [
+    {
+      "bytes": 4323,
+      "path": "REPORT.md",
+      "sha256": "d97dd1a8c2e471ebfac5a992063a92230a9e3b4a83e311131a1ce78d4e4f6cab"
+    },
+    {
+      "bytes": 5467,
+      "path": "produce_affine_module.py",
+      "sha256": "5d286d83a9c02f2938d90e40605216da44a12facf29eee9af802d15511555f1a"
+    },
+    {
+      "bytes": 4163,
+      "path": "run_bounded.py",
+      "sha256": "f6747c5795c531eedee9ec6f8c58635eb4959ea3e8a360444edd2b7019c30511"
+    },
+    {
+      "bytes": 4516,
+      "path": "audit_affine_runs.py",
+      "sha256": "61f8ea88be4f3754090b51259a9113b364274a36bbf442b8b8923985fcfc8e22"
+    },
+    {
+      "bytes": 1925,
+      "path": "affine_chart_plan.json",
+      "sha256": "85a2449c3d0afac5ffffd6f7b5719741c490ccaca859bbbe49332cbc9eb59f71"
+    },
+    {
+      "bytes": 810,
+      "path": "r64_combined_q0_eq_1_std.input.json",
+      "sha256": "38ff4942de06c03f64d32718508f5355c0162f93cdef15a22e113740e1e9b00b"
+    },
+    {
+      "bytes": 723,
+      "path": "r64_combined_q0_eq_1_std.run.json",
+      "sha256": "85499824402af060d727f5c6b9a01db2ae36a1d09ce46d2dc3eb11fe01c6f9e5"
+    },
+    {
+      "bytes": 465,
+      "path": "r64_combined_q0_eq_1_std.log",
+      "sha256": "06496d97ac57fb84fb750f9f3f45b01988642f9cb4cb3b688736fa69320889b0"
+    },
+    {
+      "bytes": 101996154,
+      "path": "r64_combined_q0_eq_1_std.sing",
+      "sha256": "62f9fa92ed3a88c75fa06f417627a9a10a2824116d79d2b6390cf83243773ebe"
+    },
+    {
+      "bytes": 819,
+      "path": "r64_combined_q0_eq_1_slimgb.input.json",
+      "sha256": "fcd08a1f4d91c95cb0550a4c1724656c012572dd75e9e86f5a0becb3267bccef"
+    },
+    {
+      "bytes": 727,
+      "path": "r64_combined_q0_eq_1_slimgb.run.json",
+      "sha256": "01abb76e9e2fc72beff5b833c25b58df39b0e0e7e5dc9b24d57a79faaeb759f6"
+    },
+    {
+      "bytes": 51,
+      "path": "r64_combined_q0_eq_1_slimgb.log",
+      "sha256": "3ca3761a6e65e782df856b7e89f6c913842f4caf9791ecb25de57be1a69d682f"
+    },
+    {
+      "bytes": 101996160,
+      "path": "r64_combined_q0_eq_1_slimgb.sing",
+      "sha256": "9e3f55c55fdeb03b22979f1b6a8c7ed5e18af0c37eea56bff78b6b2a57d77e3a"
+    },
+    {
+      "bytes": 1666,
+      "path": "make_seal.py",
+      "sha256": "afc31c0dcf59e95696fccdc56a85a6ae3be5f340e7b567f597bbd086bf977fdb"
+    }
+  ],
+  "scope": "Exact r64 combined-module formulation and two bounded q0=1 preflights; no chart emptiness or global support verdict.",
+  "status": "SEALED_AFFINE_CHART_STRATEGY_NONVERDICT",
+  "theorem_status": "P25-UNDECIDED"
+}

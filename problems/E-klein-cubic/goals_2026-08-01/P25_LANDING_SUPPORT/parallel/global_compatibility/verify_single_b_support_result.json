@@ -1,0 +1,16 @@
+{
+  "artifact_sha256": "980c190eddb99404fa995fe1ee8a3be023decd2ef17b7291bff5053673d32081",
+  "certificate_sha256": "6e1a171ed3de5b11d5b1f0e72c16a347e174967493134643703572d99e228864",
+  "component_ranks": [
+    9139,
+    9139,
+    9139,
+    9139,
+    9139,
+    9139
+  ],
+  "full_p3_sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019",
+  "prime": 89,
+  "scope": "Global Stage-B exclusion only for b1-support exactly one.",
+  "status": "PASS_INDEPENDENT_SINGLE_B_SUPPORT_REPLAY"
+}

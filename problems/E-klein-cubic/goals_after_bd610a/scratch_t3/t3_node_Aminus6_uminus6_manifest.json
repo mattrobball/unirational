@@ -1,0 +1,57 @@
+{
+  "schema": "klein-cubic-t3-exact-node-specialization-v1",
+  "scope": "exact characteristic-zero specialization; generic promotion conditional",
+  "specialization": {
+    "A": -6,
+    "u": -6
+  },
+  "input": {
+    "path": "tmp/target_branch_delta_saturated_singularity/global_primitive_u_sextic_exact.tsv",
+    "sha256": "921816025f014da4667c53aa64dddf0983e575d3afa907f4e3f821509068c344"
+  },
+  "artifacts": {
+    "T3_NODE_Aminus6_uminus6.md": {
+      "bytes": 4964,
+      "sha256": "47ffd099bee7ff52dc31fa922cb1b09fcd25d24980d7dba14e7943be6e11f40f"
+    },
+    "t3_node_Aminus6_uminus6.m2": {
+      "bytes": 33308,
+      "sha256": "b5477145bc47fb08226c123569132346996b3987fbfa78f213d15a451fef4f5b"
+    },
+    "t3_node_Aminus6_uminus6.out": {
+      "bytes": 5591,
+      "sha256": "f7bcc9d6cd5e1ff8eb8b67035518e8c030fa4acb9f15c6604d4ac08baaab7c2b"
+    },
+    "verify_t3_node_Aminus6_uminus6.py": {
+      "bytes": 6351,
+      "sha256": "8971921be7cf5cc864a11a67630abc35d3b61ed1f1aec3fa9b2b02678722cdb3"
+    },
+    "verify_t3_node_Aminus6_uminus6.out": {
+      "bytes": 393,
+      "sha256": "cad0c1b7c23405383c8bca9e3d8f16f9e1e1571b9fc9c1e23a504ea3278f3322"
+    }
+  },
+  "engines": {
+    "Macaulay2": "1.26.06",
+    "Python": "/opt/homebrew/bin/python3",
+    "SymPy": "1.14.0"
+  },
+  "results": {
+    "field_degree": 6,
+    "eliminant_irreducible_over_Q": true,
+    "chart_determinant_unit": true,
+    "bordered_hessian_unit": true,
+    "bordered_hessian_square": false,
+    "norm_squarefree_part": "1225218781398035017274311805993749028078559822648842787814154826112957440765",
+    "local_type": "nonsplit ordinary node",
+    "normalization_residue_degree": 2,
+    "conductor_exponent": 1
+  },
+  "generic_promotion_requires": [
+    "directly verified finite degree-six algebra over Q(A,u)",
+    "irreducibility or component decomposition of that generic algebra",
+    "regular integral chart through the (-6,-6) specialization",
+    "exhaustiveness of dominant singular and conductor components",
+    "global finite normalization presentation and normality check"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "expected_cycle": {
+    "E_intersection_multiplicity": 44,
+    "S_intersection_multiplicity": 2,
+    "complete_intersection_degree": 429,
+    "residual_degree": 383,
+    "tangency_lengths": {
+      "E": 43,
+      "S": 1,
+      "residual": 0
+    }
+  },
+  "plane_map": {
+    "A": "x+15*z",
+    "B": "2*x+3*y+5*z",
+    "L": "z",
+    "T": "7*x+11*y+13*z",
+    "Y": "y+12*z",
+    "affine_contact_point_S": "[0:0:1]",
+    "boundary_point_E": "[0:1:0]"
+  },
+  "results": [
+    {
+      "ci_degree": 429,
+      "ci_dimension_affine_cone": 1,
+      "ci_off_E_degree": 385,
+      "ci_off_S_degree": 427,
+      "ci_residual_degree": 383,
+      "jacobian_degree": 44,
+      "jacobian_off_E_degree": 1,
+      "jacobian_off_S_degree": 43,
+      "jacobian_residual_dimension": -1,
+      "jacobian_residual_first": 1,
+      "jacobian_residual_size": 1,
+      "log_sha256": "cbc74b7df1bd40dd3b9ece5281ff6d786bce112cb97f43785a797880f50e5777",
+      "prime": 1009,
+      "restricted_D_terms": 70,
+      "restricted_H_terms": 665,
+      "script_sha256": "91997fc657de7cbda42917ec5aa5de0393c2a9fa6d351462771bcea4f986b71a"
+    }
+  ],
+  "schema": "t3-fixed-frame-projective-slice-audit-v1",
+  "scope": "good-reduction audit only; not a characteristic-zero normalization or exhaustive factorization certificate",
+  "sources": {
+    "certificates/target_branch_global/H_factor/H_primitive_integer.tsv": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "fixed_frame_discriminant_T.tsv": "f1a413ce9e0f38ca386118079146afa55da64bf6dac591ce3e95b3f816135614"
+  }
+}

@@ -1,0 +1,4904 @@
+{
+  "ambient_W_E6_compatibility": {
+    "basis": [
+      "h",
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6"
+    ],
+    "enumerated_group_order": 51840,
+    "line_action_degree": 27,
+    "line_classes": "6 exceptional + 15 transforms of plane lines + 6 transforms of conics",
+    "meaning": "Every observed factor pattern is a cycle type occurring in W(E6).",
+    "observed_cycle_type_element_counts_in_full_W_E6": [
+      {
+        "cycle_type": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "element_count": 1620
+      },
+      {
+        "cycle_type": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          6,
+          6,
+          6
+        ],
+        "element_count": 1440
+      },
+      {
+        "cycle_type": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          6,
+          6
+        ],
+        "element_count": 2160
+      },
+      {
+        "cycle_type": [
+          1,
+          4,
+          4,
+          6,
+          12
+        ],
+        "element_count": 4320
+      },
+      {
+        "cycle_type": [
+          3,
+          12,
+          12
+        ],
+        "element_count": 4320
+      }
+    ]
+  },
+  "input": {
+    "fibration_model": "fibration_model.json",
+    "fibration_model_sha256": "1c4dadce593853e6233ea00565f5d6ae0ea6063e9373dd2d59a30f6edbeb0d1f",
+    "generic_fibre_term_key": "generic_fibre_terms_a0_a1_a2_u_q"
+  },
+  "modular_arithmetic_monodromy_constraints": {
+    "cycle_types_by_prime": {
+      "23": [
+        [
+          1,
+          4,
+          4,
+          6,
+          12
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          1,
+          4,
+          4,
+          6,
+          12
+        ]
+      ],
+      "67": [
+        [
+          3,
+          12,
+          12
+        ],
+        [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          6,
+          6,
+          6
+        ],
+        [
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          6,
+          6
+        ]
+      ]
+    },
+    "meaning": "For each characteristic separately, the arithmetic monodromy of the 27-line cover over the smooth q-locus contains Frobenius elements with every displayed cycle type."
+  },
+  "producer": "produce_line_frobenius.py",
+  "schema": "m3-27-line-frobenius-specializations-v1",
+  "specializations": [
+    {
+      "grassmann_chart": {
+        "chart_parametrization_y": [
+          "S",
+          "T",
+          "u0*S+u1*T",
+          "u2*S+u3*T"
+        ],
+        "coordinate_matrix_original_x_equals_matrix_times_chart_y_mod_p": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "matrix_determinant_mod_p": 1,
+        "plucker_open": "p01 != 0 after the recorded coordinate change"
+      },
+      "line_scheme": {
+        "all_27_geometric_lines_lie_in_this_chart": true,
+        "coefficient_equations": [
+          [
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                3,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 21,
+              "exponents": [
+                1,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 20,
+              "exponents": [
+                0,
+                0,
+                3,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 6,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 16,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 13,
+              "exponents": [
+                2,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 19,
+              "exponents": [
+                1,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 10,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 21,
+              "exponents": [
+                0,
+                1,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                0,
+                0,
+                2,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 15,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 16,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 21,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 13,
+              "exponents": [
+                1,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 1,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 21,
+              "exponents": [
+                1,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 10,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 3,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 19,
+              "exponents": [
+                0,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 10,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                0,
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 2,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 6,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 15,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 13,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                3,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 21,
+              "exponents": [
+                0,
+                1,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 10,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 3,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 20,
+              "exponents": [
+                0,
+                0,
+                0,
+                3
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 2,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 20,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        ],
+        "coefficient_order": [
+          "S^3",
+          "S^2*T",
+          "S*T^2",
+          "T^3"
+        ],
+        "completeness_reason": "the surface is smooth, hence has exactly 27 geometric lines; this affine line scheme is reduced of length 27",
+        "eliminant_degree": 27,
+        "eliminant_sha256": "eb52ef4b6d58953ef7727c0eb63cfeaaadf91d01c67b94a75a3b80e8902c9a15",
+        "eliminant_squarefree": true,
+        "elimination_ideal_in_Fp_u3_generator_coefficients_ascending": [
+          18,
+          0,
+          5,
+          12,
+          21,
+          0,
+          5,
+          12,
+          6,
+          0,
+          22,
+          2,
+          20,
+          18,
+          5,
+          19,
+          2,
+          10,
+          2,
+          6,
+          18,
+          6,
+          2,
+          19,
+          17,
+          5,
+          18,
+          1
+        ],
+        "frobenius_cycle_lengths_on_27_lines": [
+          1,
+          4,
+          4,
+          6,
+          12
+        ],
+        "frobenius_permutation_order": 12,
+        "irreducible_factor_degrees": [
+          1,
+          4,
+          4,
+          6,
+          12
+        ],
+        "quotient_dimension_over_Fp": 27,
+        "u3_is_primitive": true,
+        "u3_primitive_reason": "the u3 minimal polynomial and the line quotient algebra both have dimension 27"
+      },
+      "prime": 23,
+      "q0": 0,
+      "smooth_surface": {
+        "method": "projective gradient ideal is the unit ideal in every xi=1 chart",
+        "projective_gradient_unit_by_chart": {
+          "x0": true,
+          "x1": true,
+          "x2": true,
+          "x3": true
+        }
+      },
+      "specialized_cubic_terms": [
+        {
+          "coefficient_mod_p": 9,
+          "exponents": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 21,
+          "exponents": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 16,
+          "exponents": [
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 13,
+          "exponents": [
+            1,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 17,
+          "exponents": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 15,
+          "exponents": [
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 4,
+          "exponents": [
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 5,
+          "exponents": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 6,
+          "exponents": [
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 20,
+          "exponents": [
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 3,
+          "exponents": [
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 2,
+          "exponents": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 10,
+          "exponents": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 14,
+          "exponents": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            0,
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 21,
+          "exponents": [
+            0,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 20,
+          "exponents": [
+            0,
+            0,
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "grassmann_chart": {
+        "chart_parametrization_y": [
+          "S",
+          "T",
+          "u0*S+u1*T",
+          "u2*S+u3*T"
+        ],
+        "coordinate_matrix_original_x_equals_matrix_times_chart_y_mod_p": [
+          [
+            10,
+            22,
+            8,
+            4
+          ],
+          [
+            6,
+            5,
+            6,
+            6
+          ],
+          [
+            20,
+            14,
+            16,
+            3
+          ],
+          [
+            13,
+            21,
+            1,
+            0
+          ]
+        ],
+        "matrix_determinant_mod_p": 9,
+        "plucker_open": "p01 != 0 after the recorded coordinate change"
+      },
+      "line_scheme": {
+        "all_27_geometric_lines_lie_in_this_chart": true,
+        "coefficient_equations": [
+          [
+            {
+              "coefficient_mod_p": 21,
+              "exponents": [
+                3,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                2,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                1,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 7,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                0,
+                0,
+                3,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 10,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 15,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                2,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                2,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                1,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 13,
+              "exponents": [
+                1,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 10,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                0,
+                1,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 7,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                0,
+                0,
+                2,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 20,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 15,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                1,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                1,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                1,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 15,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                0,
+                2,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 13,
+              "exponents": [
+                0,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 10,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                0,
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 10,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 21,
+              "exponents": [
+                0,
+                3,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                0,
+                2,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                0,
+                1,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 15,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                0,
+                0,
+                0,
+                3
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 6,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        ],
+        "coefficient_order": [
+          "S^3",
+          "S^2*T",
+          "S*T^2",
+          "T^3"
+        ],
+        "completeness_reason": "the surface is smooth, hence has exactly 27 geometric lines; this affine line scheme is reduced of length 27",
+        "eliminant_degree": 27,
+        "eliminant_sha256": "c2aa0fbc8cbbccff16040c44e179d31999c3e962b797c6be672a8b65a48a9efa",
+        "eliminant_squarefree": true,
+        "elimination_ideal_in_Fp_u3_generator_coefficients_ascending": [
+          0,
+          20,
+          10,
+          20,
+          20,
+          0,
+          16,
+          4,
+          22,
+          11,
+          10,
+          9,
+          11,
+          7,
+          7,
+          1,
+          17,
+          9,
+          8,
+          11,
+          1,
+          4,
+          18,
+          10,
+          18,
+          11,
+          6,
+          1
+        ],
+        "frobenius_cycle_lengths_on_27_lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "frobenius_permutation_order": 4,
+        "irreducible_factor_degrees": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "quotient_dimension_over_Fp": 27,
+        "u3_is_primitive": true,
+        "u3_primitive_reason": "the u3 minimal polynomial and the line quotient algebra both have dimension 27"
+      },
+      "prime": 23,
+      "q0": 1,
+      "smooth_surface": {
+        "method": "projective gradient ideal is the unit ideal in every xi=1 chart",
+        "projective_gradient_unit_by_chart": {
+          "x0": true,
+          "x1": true,
+          "x2": true,
+          "x3": true
+        }
+      },
+      "specialized_cubic_terms": [
+        {
+          "coefficient_mod_p": 9,
+          "exponents": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 21,
+          "exponents": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 7,
+          "exponents": [
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 13,
+          "exponents": [
+            1,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 17,
+          "exponents": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 10,
+          "exponents": [
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 4,
+          "exponents": [
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 20,
+          "exponents": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 7,
+          "exponents": [
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 20,
+          "exponents": [
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 3,
+          "exponents": [
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 9,
+          "exponents": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 17,
+          "exponents": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 20,
+          "exponents": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            0,
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 3,
+          "exponents": [
+            0,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 3,
+          "exponents": [
+            0,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 20,
+          "exponents": [
+            0,
+            0,
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "grassmann_chart": {
+        "chart_parametrization_y": [
+          "S",
+          "T",
+          "u0*S+u1*T",
+          "u2*S+u3*T"
+        ],
+        "coordinate_matrix_original_x_equals_matrix_times_chart_y_mod_p": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "matrix_determinant_mod_p": 1,
+        "plucker_open": "p01 != 0 after the recorded coordinate change"
+      },
+      "line_scheme": {
+        "all_27_geometric_lines_lie_in_this_chart": true,
+        "coefficient_equations": [
+          [
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                3,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                2,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                1,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                0,
+                0,
+                3,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 22,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 13,
+              "exponents": [
+                2,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                2,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                1,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                1,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                0,
+                1,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                0,
+                2,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 6,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 21,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 21,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 13,
+              "exponents": [
+                1,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                1,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 1,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                1,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 3,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                0,
+                2,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                0,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 22,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 13,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                3,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                0,
+                2,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 14,
+              "exponents": [
+                0,
+                1,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 3,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                0,
+                0,
+                0,
+                3
+              ]
+            },
+            {
+              "coefficient_mod_p": 6,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 20,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        ],
+        "coefficient_order": [
+          "S^3",
+          "S^2*T",
+          "S*T^2",
+          "T^3"
+        ],
+        "completeness_reason": "the surface is smooth, hence has exactly 27 geometric lines; this affine line scheme is reduced of length 27",
+        "eliminant_degree": 27,
+        "eliminant_sha256": "4dbb59db36dae20fe0a519ae7f289c074183af5100f5517c4b6577ac12cf7ed5",
+        "eliminant_squarefree": true,
+        "elimination_ideal_in_Fp_u3_generator_coefficients_ascending": [
+          21,
+          11,
+          6,
+          15,
+          22,
+          1,
+          6,
+          19,
+          6,
+          3,
+          0,
+          16,
+          10,
+          6,
+          6,
+          10,
+          6,
+          4,
+          17,
+          20,
+          5,
+          12,
+          22,
+          5,
+          19,
+          0,
+          18,
+          1
+        ],
+        "frobenius_cycle_lengths_on_27_lines": [
+          1,
+          4,
+          4,
+          6,
+          12
+        ],
+        "frobenius_permutation_order": 12,
+        "irreducible_factor_degrees": [
+          1,
+          4,
+          4,
+          6,
+          12
+        ],
+        "quotient_dimension_over_Fp": 27,
+        "u3_is_primitive": true,
+        "u3_primitive_reason": "the u3 minimal polynomial and the line quotient algebra both have dimension 27"
+      },
+      "prime": 23,
+      "q0": 3,
+      "smooth_surface": {
+        "method": "projective gradient ideal is the unit ideal in every xi=1 chart",
+        "projective_gradient_unit_by_chart": {
+          "x0": true,
+          "x1": true,
+          "x2": true,
+          "x3": true
+        }
+      },
+      "specialized_cubic_terms": [
+        {
+          "coefficient_mod_p": 9,
+          "exponents": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 21,
+          "exponents": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 13,
+          "exponents": [
+            1,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 17,
+          "exponents": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 4,
+          "exponents": [
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 4,
+          "exponents": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 22,
+          "exponents": [
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 20,
+          "exponents": [
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 3,
+          "exponents": [
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 8,
+          "exponents": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 6,
+          "exponents": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            0,
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 9,
+          "exponents": [
+            0,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 14,
+          "exponents": [
+            0,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 9,
+          "exponents": [
+            0,
+            0,
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "grassmann_chart": {
+        "chart_parametrization_y": [
+          "S",
+          "T",
+          "u0*S+u1*T",
+          "u2*S+u3*T"
+        ],
+        "coordinate_matrix_original_x_equals_matrix_times_chart_y_mod_p": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "matrix_determinant_mod_p": 1,
+        "plucker_open": "p01 != 0 after the recorded coordinate change"
+      },
+      "line_scheme": {
+        "all_27_geometric_lines_lie_in_this_chart": true,
+        "coefficient_equations": [
+          [
+            {
+              "coefficient_mod_p": 51,
+              "exponents": [
+                3,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                2,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 54,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                1,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 24,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 45,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 66,
+              "exponents": [
+                0,
+                0,
+                3,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 54,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 19,
+              "exponents": [
+                2,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                2,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 42,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 34,
+              "exponents": [
+                1,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 41,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                1,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 24,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 24,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                1,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 24,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 45,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 64,
+              "exponents": [
+                0,
+                0,
+                2,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 22,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 24,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 22,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 54,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 19,
+              "exponents": [
+                1,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 34,
+              "exponents": [
+                1,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                1,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 24,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 27,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                0,
+                2,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 54,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                0,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 24,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 24,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 64,
+              "exponents": [
+                0,
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 44,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 1,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 22,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 22,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 51,
+              "exponents": [
+                0,
+                3,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                0,
+                2,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 42,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                1,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 24,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 27,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 66,
+              "exponents": [
+                0,
+                0,
+                0,
+                3
+              ]
+            },
+            {
+              "coefficient_mod_p": 22,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 1,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        ],
+        "coefficient_order": [
+          "S^3",
+          "S^2*T",
+          "S*T^2",
+          "T^3"
+        ],
+        "completeness_reason": "the surface is smooth, hence has exactly 27 geometric lines; this affine line scheme is reduced of length 27",
+        "eliminant_degree": 27,
+        "eliminant_sha256": "bf29b3d9aeb4b7e8c7074c52699c26b82c726657eac6dc7f744384481907b15e",
+        "eliminant_squarefree": true,
+        "elimination_ideal_in_Fp_u3_generator_coefficients_ascending": [
+          25,
+          33,
+          40,
+          55,
+          17,
+          23,
+          26,
+          6,
+          22,
+          42,
+          54,
+          66,
+          35,
+          22,
+          28,
+          47,
+          5,
+          7,
+          47,
+          8,
+          10,
+          55,
+          6,
+          5,
+          54,
+          34,
+          48,
+          1
+        ],
+        "frobenius_cycle_lengths_on_27_lines": [
+          3,
+          12,
+          12
+        ],
+        "frobenius_permutation_order": 12,
+        "irreducible_factor_degrees": [
+          3,
+          12,
+          12
+        ],
+        "quotient_dimension_over_Fp": 27,
+        "u3_is_primitive": true,
+        "u3_primitive_reason": "the u3 minimal polynomial and the line quotient algebra both have dimension 27"
+      },
+      "prime": 67,
+      "q0": 0,
+      "smooth_surface": {
+        "method": "projective gradient ideal is the unit ideal in every xi=1 chart",
+        "projective_gradient_unit_by_chart": {
+          "x0": true,
+          "x1": true,
+          "x2": true,
+          "x3": true
+        }
+      },
+      "specialized_cubic_terms": [
+        {
+          "coefficient_mod_p": 47,
+          "exponents": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 18,
+          "exponents": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 45,
+          "exponents": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 54,
+          "exponents": [
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 22,
+          "exponents": [
+            1,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 47,
+          "exponents": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 22,
+          "exponents": [
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 54,
+          "exponents": [
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 24,
+          "exponents": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 5,
+          "exponents": [
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 27,
+          "exponents": [
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 1,
+          "exponents": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 42,
+          "exponents": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 24,
+          "exponents": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 22,
+          "exponents": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 51,
+          "exponents": [
+            0,
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 17,
+          "exponents": [
+            0,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 4,
+          "exponents": [
+            0,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 66,
+          "exponents": [
+            0,
+            0,
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "grassmann_chart": {
+        "chart_parametrization_y": [
+          "S",
+          "T",
+          "u0*S+u1*T",
+          "u2*S+u3*T"
+        ],
+        "coordinate_matrix_original_x_equals_matrix_times_chart_y_mod_p": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "matrix_determinant_mod_p": 1,
+        "plucker_open": "p01 != 0 after the recorded coordinate change"
+      },
+      "line_scheme": {
+        "all_27_geometric_lines_lie_in_this_chart": true,
+        "coefficient_equations": [
+          [
+            {
+              "coefficient_mod_p": 51,
+              "exponents": [
+                3,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                2,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 54,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                1,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 11,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 45,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                0,
+                0,
+                3,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 11,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 59,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 19,
+              "exponents": [
+                2,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                2,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 42,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                1,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 41,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 27,
+              "exponents": [
+                1,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 43,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 11,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                0,
+                1,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 11,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 45,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 27,
+              "exponents": [
+                0,
+                0,
+                2,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 41,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 22,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 35,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 59,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 19,
+              "exponents": [
+                1,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 8,
+              "exponents": [
+                1,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                1,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 43,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 27,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                2,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 54,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 27,
+              "exponents": [
+                0,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 43,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 11,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 27,
+              "exponents": [
+                0,
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 15,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 11,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 35,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 22,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 51,
+              "exponents": [
+                0,
+                3,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                2,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 42,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                0,
+                1,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 43,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 27,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 9,
+              "exponents": [
+                0,
+                0,
+                0,
+                3
+              ]
+            },
+            {
+              "coefficient_mod_p": 41,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 4,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        ],
+        "coefficient_order": [
+          "S^3",
+          "S^2*T",
+          "S*T^2",
+          "T^3"
+        ],
+        "completeness_reason": "the surface is smooth, hence has exactly 27 geometric lines; this affine line scheme is reduced of length 27",
+        "eliminant_degree": 27,
+        "eliminant_sha256": "90128e50fa5b5ea3067a69c0d7eaa039c679ae0ac026775fb9c922b211051b25",
+        "eliminant_squarefree": true,
+        "elimination_ideal_in_Fp_u3_generator_coefficients_ascending": [
+          11,
+          26,
+          5,
+          32,
+          50,
+          53,
+          41,
+          4,
+          62,
+          10,
+          9,
+          52,
+          15,
+          9,
+          47,
+          62,
+          55,
+          32,
+          49,
+          42,
+          24,
+          38,
+          29,
+          50,
+          44,
+          44,
+          39,
+          1
+        ],
+        "frobenius_cycle_lengths_on_27_lines": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          6,
+          6,
+          6
+        ],
+        "frobenius_permutation_order": 6,
+        "irreducible_factor_degrees": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          6,
+          6,
+          6
+        ],
+        "quotient_dimension_over_Fp": 27,
+        "u3_is_primitive": true,
+        "u3_primitive_reason": "the u3 minimal polynomial and the line quotient algebra both have dimension 27"
+      },
+      "prime": 67,
+      "q0": 1,
+      "smooth_surface": {
+        "method": "projective gradient ideal is the unit ideal in every xi=1 chart",
+        "projective_gradient_unit_by_chart": {
+          "x0": true,
+          "x1": true,
+          "x2": true,
+          "x3": true
+        }
+      },
+      "specialized_cubic_terms": [
+        {
+          "coefficient_mod_p": 47,
+          "exponents": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 18,
+          "exponents": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 45,
+          "exponents": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 59,
+          "exponents": [
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 22,
+          "exponents": [
+            1,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 47,
+          "exponents": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 35,
+          "exponents": [
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 54,
+          "exponents": [
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 11,
+          "exponents": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 11,
+          "exponents": [
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 5,
+          "exponents": [
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 27,
+          "exponents": [
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 4,
+          "exponents": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 42,
+          "exponents": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 43,
+          "exponents": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 41,
+          "exponents": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 51,
+          "exponents": [
+            0,
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 4,
+          "exponents": [
+            0,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 47,
+          "exponents": [
+            0,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 9,
+          "exponents": [
+            0,
+            0,
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "grassmann_chart": {
+        "chart_parametrization_y": [
+          "S",
+          "T",
+          "u0*S+u1*T",
+          "u2*S+u3*T"
+        ],
+        "coordinate_matrix_original_x_equals_matrix_times_chart_y_mod_p": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "matrix_determinant_mod_p": 1,
+        "plucker_open": "p01 != 0 after the recorded coordinate change"
+      },
+      "line_scheme": {
+        "all_27_geometric_lines_lie_in_this_chart": true,
+        "coefficient_equations": [
+          [
+            {
+              "coefficient_mod_p": 51,
+              "exponents": [
+                3,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 58,
+              "exponents": [
+                2,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 54,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 56,
+              "exponents": [
+                1,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 65,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 45,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 39,
+              "exponents": [
+                0,
+                0,
+                3,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 64,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 19,
+              "exponents": [
+                2,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 58,
+              "exponents": [
+                2,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 42,
+              "exponents": [
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 49,
+              "exponents": [
+                1,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 41,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 45,
+              "exponents": [
+                1,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 62,
+              "exponents": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 65,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 56,
+              "exponents": [
+                0,
+                1,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 65,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 45,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 50,
+              "exponents": [
+                0,
+                0,
+                2,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 43,
+              "exponents": [
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 24,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 48,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 64,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 18,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 19,
+              "exponents": [
+                1,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 49,
+              "exponents": [
+                1,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 17,
+              "exponents": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 56,
+              "exponents": [
+                1,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 62,
+              "exponents": [
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 27,
+              "exponents": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 58,
+              "exponents": [
+                0,
+                2,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 54,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 45,
+              "exponents": [
+                0,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 62,
+              "exponents": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 65,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 47,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 50,
+              "exponents": [
+                0,
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 19,
+              "exponents": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 7,
+              "exponents": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 12,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 48,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 22,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "coefficient_mod_p": 51,
+              "exponents": [
+                0,
+                3,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 58,
+              "exponents": [
+                0,
+                2,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 42,
+              "exponents": [
+                0,
+                2,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 56,
+              "exponents": [
+                0,
+                1,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 62,
+              "exponents": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 27,
+              "exponents": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "coefficient_mod_p": 39,
+              "exponents": [
+                0,
+                0,
+                0,
+                3
+              ]
+            },
+            {
+              "coefficient_mod_p": 43,
+              "exponents": [
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "coefficient_mod_p": 7,
+              "exponents": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "coefficient_mod_p": 5,
+              "exponents": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        ],
+        "coefficient_order": [
+          "S^3",
+          "S^2*T",
+          "S*T^2",
+          "T^3"
+        ],
+        "completeness_reason": "the surface is smooth, hence has exactly 27 geometric lines; this affine line scheme is reduced of length 27",
+        "eliminant_degree": 27,
+        "eliminant_sha256": "f7d7492460488031a994e6ad48b91fc15a5f1ee63c5d811ec3e67cc545b23e28",
+        "eliminant_squarefree": true,
+        "elimination_ideal_in_Fp_u3_generator_coefficients_ascending": [
+          65,
+          15,
+          35,
+          23,
+          52,
+          28,
+          25,
+          37,
+          38,
+          12,
+          37,
+          41,
+          0,
+          3,
+          63,
+          57,
+          49,
+          50,
+          29,
+          64,
+          23,
+          50,
+          23,
+          38,
+          20,
+          47,
+          23,
+          1
+        ],
+        "frobenius_cycle_lengths_on_27_lines": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          6,
+          6
+        ],
+        "frobenius_permutation_order": 6,
+        "irreducible_factor_degrees": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          6,
+          6
+        ],
+        "quotient_dimension_over_Fp": 27,
+        "u3_is_primitive": true,
+        "u3_primitive_reason": "the u3 minimal polynomial and the line quotient algebra both have dimension 27"
+      },
+      "prime": 67,
+      "q0": 2,
+      "smooth_surface": {
+        "method": "projective gradient ideal is the unit ideal in every xi=1 chart",
+        "projective_gradient_unit_by_chart": {
+          "x0": true,
+          "x1": true,
+          "x2": true,
+          "x3": true
+        }
+      },
+      "specialized_cubic_terms": [
+        {
+          "coefficient_mod_p": 47,
+          "exponents": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 18,
+          "exponents": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 45,
+          "exponents": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 64,
+          "exponents": [
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 22,
+          "exponents": [
+            1,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 47,
+          "exponents": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 48,
+          "exponents": [
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 54,
+          "exponents": [
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 65,
+          "exponents": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 12,
+          "exponents": [
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 5,
+          "exponents": [
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 27,
+          "exponents": [
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 7,
+          "exponents": [
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 42,
+          "exponents": [
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 62,
+          "exponents": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 43,
+          "exponents": [
+            0,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 51,
+          "exponents": [
+            0,
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "coefficient_mod_p": 58,
+          "exponents": [
+            0,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient_mod_p": 56,
+          "exponents": [
+            0,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficient_mod_p": 39,
+          "exponents": [
+            0,
+            0,
+            0,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "strict_scope": {
+    "characteristic_zero_bridge": "Transferring these Frobenius classes to one characteristic-zero arithmetic generic group requires a verified common integral 27-line cover and the relevant specialization maps; transferring them to geometric monodromy requires an additional constant-field/geometric argument.",
+    "not_established": [
+      "simultaneous labels for Frobenius elements from different fibres or primes",
+      "the Schlaefli incidence graph in any displayed line algebra",
+      "generators or the order of the actual generic line-monodromy subgroup",
+      "full arithmetic or geometric W(E6) monodromy",
+      "the algebraic Brauer group or a rational point or section"
+    ],
+    "status_marker": "ACTUAL_GENERIC_27_LINE_MONODROMY_UNRESOLVED",
+    "unconditional": [
+      "six displayed finite-field cubic surfaces are smooth",
+      "each displayed Grassmann chart contains the complete reduced 27-line scheme",
+      "the displayed factor degrees are exact Frobenius cycle lengths",
+      "the p=23 and p=67 modular arithmetic monodromy groups contain the recorded types"
+    ]
+  }
+}

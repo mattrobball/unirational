@@ -1,0 +1,66 @@
+{
+  "artifact": "pc1_coupled_degree4_certificate.npz",
+  "artifact_sha256": "bf80f407629bcf285fc9e3765fc09c3e0783abce36173ad31792af075958f38a",
+  "candidate_ledger": {
+    "all_coordinate_factorization": "Every T_i input is byte-matched to its monic-rule path before application. By S-linearity, the full F4 commutator matrix equals the 315x336 path incidence times the 336 path images on all 160987 coordinates; the 105 incidence-cycle syzygies are therefore full coupled identities.",
+    "commutator_path_inputs_sha256": "2ff1bb1767d9abf64a9bebc3d9e0365af25684900606d773b61d1a723751f607",
+    "minimal_candidate_rows": 29880,
+    "old_q_seed_rows": 25530,
+    "quadratic_commutator_cycle_syzygies": 105,
+    "quadratic_commutator_rank": 210,
+    "quadratic_commutator_rows_raw": 315,
+    "raw_total_rows": 29985,
+    "transition_rows": 4140
+  },
+  "coupled_residual": {
+    "ambient_dimension": 69597,
+    "candidate_restriction_sha256": "9ec493d8c5b8b25a47f7db480974c3c7b1ac9690fe61a2724da32e2e713ebbf3",
+    "residual_rank": 2297,
+    "residual_sha256": "e0d2c4938f10c61cb2a0dc6a6a41c24b140474b177d3572c7a3c08974163c407",
+    "residual_shape": [
+      2297,
+      3000
+    ],
+    "selected_columns": 3000,
+    "selected_columns_sha256": "d0c6940d70a944b835edc700564ab5364d9103a3279cb9229647e50eb821cada",
+    "selection_seed": 2026080126
+  },
+  "full_degree4": {
+    "kernel_dimension": 0,
+    "new_commutator_generators": 210,
+    "new_generators_total": 4350,
+    "new_transition_generators": 4140,
+    "normal_form_statement": "After quotienting the 105 universal commutator cycle syzygies, the 29,880 ordered candidate rows are a basis of the degree-four closure subspace; their deterministic selected coupled restriction is injective on the complete 2,297-dimensional pure-q kernel.",
+    "old_rank": 25530,
+    "rank": 29880
+  },
+  "inputs": {
+    "certificates/degree25_finite_module/multiplication_matrices.npz": "cdee1a9cd2989f2d17e7771321b49723d8a9dfc71d2bd5a791f83a30142aa418",
+    "certificates/degree25_finite_module/relation_matrix.npz": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+    "certificates/degree25_finite_module/rewrite_rules.npz": "9dd25476c3927e533b2587e5048028ad0304141d6849f6649ca921ed5d057028",
+    "pc0_multiplication_kernel.npz": "d08b22ea873111a3849fd03c16374d7ee83fce775f974b0ccde7db8f6a64830a"
+  },
+  "prime": 89,
+  "pure_q_projection": {
+    "dependency_basis_rank": 2297,
+    "dependency_basis_sha256": "a8ce87be6442094dd7596b653e7ffa7b45149cb422189c9dddf11f3bbfa0b85b",
+    "formal_extra_kernel_dimension": 2278,
+    "formal_extra_rank": 2072,
+    "kernel_dimension": 2297,
+    "lifted_multiplication_kernel_dimension": 19,
+    "rank": 27583
+  },
+  "resource": {
+    "elapsed_seconds": 40.344243250001455,
+    "historical_full_F4_dense_elimination_repeated": false,
+    "largest_durable_dense_shape": [
+      2297,
+      29880
+    ]
+  },
+  "status": "PC1-COUPLED-DEGREE4-PASS",
+  "theorem_boundary": {
+    "does_not_prove": "T-stability in degree five or above, a finite stabilization or regularity bound, representation characters, projective support, or any characteristic-zero statement.",
+    "proves": "Exactly over F_89, the 315 raw quadratic commutators have their 105 universal cycle syzygies and rank 210. After selecting a 210-row commutator basis, all 29,880 coupled degree-four relation candidates are linearly independent. Thus degree four adds all 4,140 transitions and 210 commutator generators to the 25,530 q-multiples of the seeds."
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "base_stratum": {
+    "H_A_unit_at_generic_line_point": true,
+    "hessian_equals_unit_times_line": true,
+    "hessian_line": "B+8*Z-992",
+    "normal_parameter_on_H": "y=Y-12",
+    "normalization": "H_A is a unit at the generic line point, so H is smooth and its normalization is an isomorphism there.",
+    "plane": [
+      "A-15",
+      "Y-12"
+    ],
+    "target_equation": "H=0"
+  },
+  "central_cubic": {
+    "F_XX_nonzero": true,
+    "direction_resultant_unit_at_generic_line_point": true,
+    "fibre_hessian_rank": 1,
+    "not_nodal": true,
+    "type": "irreducible ordinary cusp A2"
+  },
+  "contact": {
+    "A_series": {
+      "y2": "-H_YY/(2*H_A)",
+      "y3": "H_AY*H_YY/(2*H_A^2)-H_YYY/(6*H_A)"
+    },
+    "Delta_on_H_y2": "N2/(2*H_A)",
+    "Delta_on_H_y3": "N3/(6*H_A^2)",
+    "N2": "Delta_YY*H_A-Delta_A*H_YY",
+    "N2_cofactor_unit_at_generic_line_point": true,
+    "N2_hessian_line_valuation": 2,
+    "N3": "3*Delta_A*H_AY*H_YY-Delta_A*H_YYY*H_A-3*Delta_AY*H_YY*H_A+Delta_YYY*H_A^2",
+    "N3_unit_at_generic_line_point": true,
+    "height_one_warning": "This is the y-adic order after the codimension-two base specialization hessian_line=0.  The height-one plane valuation in the unspecialized normalized base remains two.",
+    "normal_slice_contact_order": 3
+  },
+  "exact_polynomial_stats": {
+    "N2": {
+      "degrees": [
+        27,
+        26
+      ],
+      "terms": 404,
+      "total_degree": 27
+    },
+    "N2_after_hessian_line_squared": {
+      "degrees": [
+        25,
+        24
+      ],
+      "terms": 349,
+      "total_degree": 25
+    },
+    "N3": {
+      "degrees": [
+        48,
+        46
+      ],
+      "terms": 1219,
+      "total_degree": 48
+    },
+    "total_hessian_numerator": {
+      "degrees": [
+        22,
+        21
+      ],
+      "terms": 274,
+      "total_degree": 22
+    }
+  },
+  "field": "QQ(zeta11)",
+  "line_remainder_sha256": {
+    "H_A_on_hessian_line": "3d94123926acafdaf956e0abec3f0f43925c51f653e5af1c547bb22d1ea8d83e",
+    "N2_over_hessian_line_squared_on_hessian_line": "2921297e25752ef5b5215fbc7f5558417746fd79567dcae3984845fe6b9beb76",
+    "N3_on_hessian_line": "65a86b1b691f2c97c28ac603b768666671f8615655550545b19ba9783f677861",
+    "direction_resultant_on_hessian_line": "13fd6660c41cac7f5c0a047f5fbc2222f0dbe13ab5f0efa943570a30f2d9b75b",
+    "total_hessian_numerator_on_hessian_line": "807c7f48913be24d454235fb70dd5902f22ac4fe1892a0eba9a25c46a0f1caef"
+  },
+  "mod67_witness": {
+    "hessian_line": 0,
+    "point_BZ": [
+      54,
+      0
+    ],
+    "prime": 67,
+    "values": {
+      "H_A": 38,
+      "N2_over_hessian_line_squared": 15,
+      "N3": 4,
+      "direction_resultant": 33,
+      "infinity_obstruction": 19,
+      "total_hessian_numerator": 63
+    },
+    "zeta11": 9
+  },
+  "payload": "t3_disc_plane_cusp_m3_payload.json.gz",
+  "payload_gzip_bytes": 45470,
+  "payload_sha256": "5d8acd92850d578d7cacddce38511a9447a95054e2b5604ede5cbd55d69255ba",
+  "payload_uncompressed_bytes": 157492,
+  "schema": "klein-cubic-t3-plane-cusp-m3-exact-v1",
+  "scope": "Exact at the generic point of the Hessian line inside the deleted plane.  Intersections with the reducibility and infinity-failure loci, and the rest of the global T3.E ledger, are not classified here.",
+  "source_sha256": {
+    "certificates/fixed_frame_arithmetic/five_forms.json": "61377d6e464f7c78cf1fa91d13610b76dc4567de7b7214256e04de50066c83a4",
+    "t3_disc_delta_cub_qzeta11.json.gz": "88ec8a6449117463debc54eb51e03dbd79e6c391e815f021fb19dd81f28ff014",
+    "t3_disc_plane_contact.py": "b757d2cfdf23ef34bd5a50613653b1f0647f7b7832f48dfa923e5add3be668e6",
+    "t3_disc_plane_contact_qzeta11.json.gz": "87570b9cef31f09c3f6c29550b00744a25998c2acb8121f5c3653aca641c97aa",
+    "t3_disc_plane_node_payload.json.gz": "ab09938b59c23f656dcc60e096f1b6d49a444b8fbde3e997464b70b0741b08dc"
+  },
+  "total_incidence": {
+    "cleared_determinant_unit_at_generic_line_point": true,
+    "cleared_transverse_hessian_determinant": "H_A*det(Hess_{X,t,y}(F restricted to H))",
+    "descent": "A split form is reached after an extension of 2-power degree; restriction-corestriction therefore excludes odd-primary, in particular 3-primary, torsion before splitting.",
+    "formal_type_after_finite_2_power_separable_extension": "ordinary A1 surface crossing times a smooth parameter, k[[s,u,v,w]]/(u*v-w^2)",
+    "geometric_local_class_group": "Z/2",
+    "not_xy_equals_pi3_reason": "xy=pi^3 has transverse quadratic rank two, whereas the exact total-incidence transverse Hessian here has rank three.",
+    "singular_locus_parameter": "hessian_line inside the plane",
+    "three_primary_local_class_group": 0,
+    "transverse_hessian_rank": 3,
+    "transverse_variables": [
+      "X-x0",
+      "t-t0",
+      "y=Y-12"
+    ]
+  },
+  "verdict": {
+    "actual_local_Cl_3": 0,
+    "dangerous_three_primary_class_found": false,
+    "nodal_xy_equals_pi_m_template_applies": false,
+    "normal_slice_m_equals": 3
+  }
+}

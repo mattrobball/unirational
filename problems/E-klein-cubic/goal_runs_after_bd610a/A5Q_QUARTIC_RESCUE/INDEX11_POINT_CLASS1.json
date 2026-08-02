@@ -1,0 +1,450 @@
+{
+  "characteristic_zero_lift": {
+    "argument": "each stored nonzero minor is the good reduction of a minor of the exact straight-line matrix, hence that characteristic-zero minor is nonzero; row counts give the matching upper bounds",
+    "coordinate_span_dimension": 5,
+    "pairwise_product_span_dimension": 11,
+    "reference": "CHARACTERISTIC_ZERO_LIFT.md"
+  },
+  "class": "A5_class_1",
+  "conjugate_closed_point": {
+    "conjugates": "P_1(rho6(g)v), one for each left coset H_1*g in H_1\\G",
+    "effective_closed_subscheme": "Z_1=Spec(L_1) -> X_T",
+    "orbit_size": 11,
+    "reduced_reason": "L_i/K is separable in characteristic zero",
+    "residue_field": "L_1"
+  },
+  "degree_four_incidence": {
+    "actual_dimension": 11,
+    "empty": true,
+    "exit": "A5Q-DEGREE4-RESCUE-EMPTY-SCOPED",
+    "necessary_dimension_for_quartic_interpolation": 9,
+    "reference": "INTERPOLATION_INCIDENCE.md"
+  },
+  "exact_transport": {
+    "H_invariance": "P_1(rho6(h)v)=P_1(v) for all h in H_1",
+    "authoritative_equation": "F(Q(v)P(v))=0",
+    "coordinate_representation": "the displayed straight-line rational-function circuit; power-basis coordinates are obtained by the certified 11-by-11 Vandermonde solve in FIELD_Li.json",
+    "descended_point": "P_1(v)=Q(v)^(-1)x_1(v)",
+    "exact_identity_source": "the upstream exact polynomial landing identity for Phi, followed by the exact intertwiner J and exact Schur frame Q",
+    "full_schur_frame": "Q(v)=sum_(g in G) rho5(g)^(-1)*((rho6(g)v)_5)^8",
+    "installed_point_upstairs": "x_1(v)=J_1*Phi_1(Y_1(v))",
+    "klein_cubic": "F(x)=sum_(j mod 5) x_j^2*x_(j+1)",
+    "landing_covariant": "Phi_1 from goal_runs_after_35fa/H_A5_TWISTS/A5_class_1/point.json",
+    "source_frame": "B_1(v)=sum_(h in H_1) sigma_1(h)^(-1)*((rho6(h)v)_5)^4",
+    "source_point": "Y_1(v)=B_1(v)e_0"
+  },
+  "fixed_field": {
+    "definition": "L_1=E^H_1",
+    "degree_over_K": 11,
+    "exact_resolvent": {
+      "coefficient_field": "K, because G permutes the eleven factors",
+      "coefficient_order": "T^11,T^10,...,T^1,T^0",
+      "coefficient_symbols": [
+        "1",
+        "c_1_10",
+        "c_1_9",
+        "c_1_8",
+        "c_1_7",
+        "c_1_6",
+        "c_1_5",
+        "c_1_4",
+        "c_1_3",
+        "c_1_2",
+        "c_1_1",
+        "c_1_0"
+      ],
+      "degree": 11,
+      "field_presentation": "L_1 is isomorphic to K[T]/(p_1(T)), with T mapping to tau_1",
+      "formula": "product_{H_1*g in H_1\\G} (T-tau_1(rho6(g)*v))",
+      "name": "p_1(T)"
+    },
+    "field_certificate": "FIELD_L1.json",
+    "primitive_element": {
+      "definition": "tau_1(v)=N_1(v)/D_1(v)",
+      "denominator_formula": "D_1(v)=sum_{g in G} ell_1(rho6(g)*v)^18",
+      "exponent": 18,
+      "invariance_reindexing": {
+        "denominator": "D_1(rho6(k)*v)=D_1(v) for k in G by g -> g*k",
+        "numerator": "N_1(rho6(k)*v)=N_1(v) for k in H_1 by h -> h*k"
+      },
+      "lift_independence": "the exponent is even, so the central Schur-lift sign cancels",
+      "linear_form_coefficients_v0_through_v5": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "name": "tau_1",
+      "numerator_formula": "N_1(v)=sum_{h in H_1} ell_1(rho6(h)*v)^18"
+    }
+  },
+  "format": "a5q-exact-index11-transported-point-v1",
+  "markers": [
+    "A5Q_INDEX11_CLOSED_POINT_OK",
+    "A5Q-INDEX11-CLOSED-POINT-PASS",
+    "A5Q-DEGREE4-RESCUE-EMPTY-SCOPED"
+  ],
+  "modular_nonzero_minor_certificates": [
+    {
+      "all_11_cubic_landings": true,
+      "all_60_H_invariance_checks": true,
+      "all_projectively_distinct": true,
+      "coordinate_rank": 5,
+      "coordinate_rank_minor": {
+        "columns": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "determinant_mod_p": 60,
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "input_denominators": {
+        "covariant_basis": {
+          "all_nonzero": true,
+          "count": 2824,
+          "product_mod_p": 4
+        },
+        "point_packet": {
+          "all_nonzero": true,
+          "count": 48,
+          "product_mod_p": 4
+        }
+      },
+      "nonzero_determinants": {
+        "canonical_to_installed_intertwiner_J": 57,
+        "full_schur_frame_Q": 86,
+        "source_reynolds_frame_B": 55
+      },
+      "pairwise_product_rank": 11,
+      "pairwise_product_rank_minor": {
+        "columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "determinant_mod_p": 2,
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "prime": 89,
+      "projective_conjugate_count": 11,
+      "projective_noncollision_pair_count": 55,
+      "raw_matrix_record": {
+        "path": "modular_index11_discovery.json",
+        "selector": "primes[prime=89].class_witness_runs[].classes[class=A5_class_1]"
+      },
+      "role": "discovery_certificate",
+      "schur_vector_v0_through_v5": [
+        22,
+        2,
+        13,
+        21,
+        22,
+        4
+      ],
+      "selected_alpha": 80,
+      "source_nonidentity_stabilizer_checks": 59,
+      "source_projective_stabilizer_order": 1,
+      "sqrt5": 19,
+      "sqrt_minus11_induced_by_zeta11": 73,
+      "zeta11": 2
+    },
+    {
+      "all_11_cubic_landings": true,
+      "all_60_H_invariance_checks": true,
+      "all_projectively_distinct": true,
+      "coordinate_rank": 5,
+      "coordinate_rank_minor": {
+        "columns": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "determinant_mod_p": 106,
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "input_denominators": {
+        "covariant_basis": {
+          "all_nonzero": true,
+          "count": 2824,
+          "product_mod_p": 172
+        },
+        "point_packet": {
+          "all_nonzero": true,
+          "count": 48,
+          "product_mod_p": 76
+        }
+      },
+      "nonzero_determinants": {
+        "canonical_to_installed_intertwiner_J": 3,
+        "full_schur_frame_Q": 179,
+        "source_reynolds_frame_B": 55
+      },
+      "pairwise_product_rank": 11,
+      "pairwise_product_rank_minor": {
+        "columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "determinant_mod_p": 147,
+        "rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "prime": 199,
+      "projective_conjugate_count": 11,
+      "projective_noncollision_pair_count": 55,
+      "raw_matrix_record": {
+        "path": "modular_index11_discovery.json",
+        "selector": "primes[prime=199].class_witness_runs[].classes[class=A5_class_1]"
+      },
+      "role": "unused_holdout",
+      "schur_vector_v0_through_v5": [
+        22,
+        2,
+        13,
+        21,
+        22,
+        4
+      ],
+      "selected_alpha": 76,
+      "source_nonidentity_stabilizer_checks": 59,
+      "source_projective_stabilizer_order": 1,
+      "sqrt5": 76,
+      "sqrt_minus11_induced_by_zeta11": 136,
+      "zeta11": 18
+    }
+  ],
+  "multiplication_trace_norm_interface": {
+    "basis": [
+      "1",
+      "tau_1",
+      "tau_1^2",
+      "tau_1^3",
+      "tau_1^4",
+      "tau_1^5",
+      "tau_1^6",
+      "tau_1^7",
+      "tau_1^8",
+      "tau_1^9",
+      "tau_1^10"
+    ],
+    "companion_matrix_mod_23_rows": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        11
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        18
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "exact_companion_rule": "if p_1=T^11+sum_{r=0}^{10} c_1_r*T^r, then C_1[j+1,j]=1 for 0<=j<10 and C_1[r,10]=-c_1_r",
+    "inverse_rule": "coordinates(a^(-1)) is the solution of M_1(a)*u=e_0 when det(M_1(a)) is nonzero",
+    "multiplication_rule": "for a=sum_{r=0}^{10} a_r*tau_1^r, M_1(a)=sum_{r=0}^{10} a_r*C_1^r and coordinates(a*b)=M_1(a)*coordinates(b)",
+    "norm_rule": "Nm_{L_1/K}(a)=det(M_1(a))=product_{H_1*g} a(rho6(g)*v)",
+    "orbit_to_power_basis_rule": "solve V*q=a_orbit with V[g,j]=tau_1(rho6(g)*v)^j; discriminant nonzero makes V invertible",
+    "trace_rule": "Tr_{L_1/K}(a)=trace(M_1(a))=sum_{H_1*g} a(rho6(g)*v)"
+  },
+  "scope": {
+    "not_proved": [
+      "a K-rational residual point",
+      "a rational curve on the twist",
+      "pointlessness of the full twist",
+      "a positive or negative Problem E headline"
+    ],
+    "proved": "an exact reduced degree-11 closed point Z_1 on the authoritative full Schur twist and emptiness of the degree-four interpolation incidence for this point"
+  }
+}

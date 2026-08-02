@@ -15,6 +15,7 @@ P25 = HERE.parents[1]
 ROOT = HERE.parents[3]
 GLOBAL = P25 / "parallel" / "stageb_global_basis"
 STRATA = P25 / "parallel" / "stageb_strata"
+ENLARGED = P25 / "parallel" / "enlarged_closure"
 RELATION = ROOT / "certificates" / "degree25_finite_module" / "relation_matrix.npz"
 NEW_PACKET = GLOBAL / "support_balanced_r43_stageBC.npz"
 NEW_REPLAY = GLOBAL / "verify_sparse_packet_result.json"
@@ -22,6 +23,10 @@ OLD_SYZYGIES = P25 / "linear_syzygies_r48_reconstructed.npz"
 OLD_PACKET = P25 / "syzygy_r48_q0_contracted.npz"
 CLOSED_CERT = STRATA / "closed_L_degree6_certificate.json"
 CLOSED_VERIFY = STRATA / "verify_closed_L_degree6_result.json"
+R64_PACKET = ENLARGED / "support_balanced_r64_stageBC.npz"
+R64_REPLAY = ENLARGED / "verify_augmented_module_jobs_result.json"
+CLOSED_STAGEC_CERT = HERE / "closed_L8_stageC_certificate.json"
+CLOSED_STAGEC_VERIFY = HERE / "verify_closed_L8_stageC_result.json"
 METADATA = HERE / "stratified_jobs.json"
 OUTPUT = HERE / "verify_stratified_inputs_result.json"
 
@@ -111,6 +116,10 @@ def main() -> None:
         OLD_PACKET,
         CLOSED_CERT,
         CLOSED_VERIFY,
+        R64_PACKET,
+        R64_REPLAY,
+        CLOSED_STAGEC_CERT,
+        CLOSED_STAGEC_VERIFY,
         METADATA,
     ]
     for path in required:
@@ -125,6 +134,17 @@ def main() -> None:
     packet_key = str(NEW_PACKET)
     if replay_hashes.get(packet_key) != sha256(NEW_PACKET):
         raise AssertionError("new r43 packet/replay hash mismatch")
+    with R64_REPLAY.open() as handle:
+        r64_replay = json.load(handle)
+    if r64_replay.get("status") != "PASS_AUGMENTED_MODULE_JOBS_REPLAY":
+        raise AssertionError("r64 upstream replay is not PASS")
+    with np.load(R64_PACKET, allow_pickle=False) as frozen:
+        r64_p3 = frozen["p3"].astype(np.uint8)
+        r64_p4 = frozen["p4"].astype(np.uint8)
+        if int(frozen["prime"]) != P:
+            raise AssertionError("r64 prime mismatch")
+    if r64_p3.shape != (64, 6, 9139) or r64_p4.shape != (64, 91390):
+        raise AssertionError("r64 tensor shapes changed")
 
     with np.load(RELATION, allow_pickle=False) as frozen:
         seeds = frozen["seed_F3"].astype(np.uint8)
@@ -193,6 +213,25 @@ def main() -> None:
         raise AssertionError("closed L8 independent certificate failed")
     if closed.get("certificate_sha256") != sha256(CLOSED_CERT):
         raise AssertionError("closed L8 certificate hash mismatch")
+    with CLOSED_STAGEC_VERIFY.open() as handle:
+        closed_stagec = json.load(handle)
+    if closed_stagec.get("status") != "PASS_INDEPENDENT_CLOSED_L8_STAGEC_EMPTY":
+        raise AssertionError("closed L8 Stage-C independent certificate failed")
+    if closed_stagec.get("certificate_sha256") != sha256(CLOSED_STAGEC_CERT):
+        raise AssertionError("closed L8 Stage-C certificate hash mismatch")
+
+    q3_index = {monomial: i for i, monomial in enumerate(q3)}
+    q4_index = {monomial: i for i, monomial in enumerate(q4)}
+    l8_q3: list[int] = []
+    l8_q4: list[int] = []
+    for degree, target in ((3, l8_q3), (4, l8_q4)):
+        for local in weak_compositions(degree, 8):
+            exponent = [0] * NQ
+            for variable, power in zip(range(4, 12), local):
+                exponent[variable] = power
+            target.append((q3_index if degree == 3 else q4_index)[tuple(exponent)])
+    if np.any(stored_p3[:, :, l8_q3]) or np.any(stored_p4[:, l8_q4]):
+        raise AssertionError("old-r48 tensors no longer vanish identically on L8")
 
     with METADATA.open() as handle:
         metadata = json.load(handle)
@@ -205,6 +244,11 @@ def main() -> None:
         "b1 irrelevant ideal",
     ]:
         raise AssertionError("unsafe Stage-B saturation order")
+    provenance_guard = metadata.get("provenance_guard", "")
+    if "overwritten pathname with a different hash is provenance-invalid" not in provenance_guard:
+        raise AssertionError("missing overwritten-script provenance guard")
+    if "stageB_old_r48_L8_complement_Hfirst.sing" not in provenance_guard:
+        raise AssertionError("old-r48 overwritten-script guard is not explicit")
 
     script_hashes: dict[str, str] = {}
     for name, job in metadata["jobs"].items():
@@ -215,14 +259,22 @@ def main() -> None:
         expected_hideal = "ideal hideal=" + ",".join(f"q{i}" for i in H8) + ";"
         if expected_hideal not in text:
             raise AssertionError(f"wrong H8 definition: {name}")
-        if name.startswith("stageB_"):
+        job_type = job.get("job_type")
+        expected_order = "(dp(7),dp(37))" if job_type == "combined" else "(dp(6),dp(37))"
+        if job.get("ring_order") != expected_order or expected_order not in text:
+            raise AssertionError(f"wrong block term order: {name}")
+        if job_type in ("stageB", "combined"):
             first = text.index("ideal JH=sat(I,hideal)")
             second = text.index("ideal J=sat(JH,bideal)")
             if first >= second:
                 raise AssertionError(f"H8 saturation is not first: {name}")
-        else:
+            if job_type == "combined" and "ideal bideal=b0,b1_0" not in text:
+                raise AssertionError(f"combined irrelevant ideal omits b0: {name}")
+        elif job_type == "stageC":
             if "ideal J=sat(I,hideal)" not in text:
                 raise AssertionError("Stage-C complement does not saturate by H8")
+        else:
+            raise AssertionError(f"unknown job type: {name}")
         script_hashes[name] = sha256(script)
 
     payload = {
@@ -231,6 +283,8 @@ def main() -> None:
         "relation_matrix_sha256": sha256(RELATION),
         "new_r43_packet_sha256": sha256(NEW_PACKET),
         "new_r43_upstream_replay_sha256": sha256(NEW_REPLAY),
+        "support_balanced_r64_packet_sha256": sha256(R64_PACKET),
+        "support_balanced_r64_upstream_replay_sha256": sha256(R64_REPLAY),
         "old_r48_syzygies_sha256": sha256(OLD_SYZYGIES),
         "old_r48_contractions_sha256": sha256(OLD_PACKET),
         "old_r48_syzygies_checked": 48,
@@ -238,9 +292,13 @@ def main() -> None:
         "old_r48_p4_rows_rebuilt": 48,
         "closed_L8_certificate_sha256": sha256(CLOSED_CERT),
         "closed_L8_independent_replay_sha256": sha256(CLOSED_VERIFY),
+        "closed_L8_stageC_certificate_sha256": sha256(CLOSED_STAGEC_CERT),
+        "closed_L8_stageC_independent_replay_sha256": sha256(CLOSED_STAGEC_VERIFY),
+        "old_r48_p3_and_p4_vanish_on_L8": True,
         "H8_coordinates": list(H8),
         "generated_script_hashes": script_hashes,
         "jobs_launched": False,
+        "overwritten_old_r48_preflight_provenance_invalid": True,
         "scope": "Exact input and script replay only; no open-complement saturation result.",
     }
     OUTPUT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
@@ -249,4 +307,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -1,0 +1,66 @@
+{
+  "bezout_replay": {
+    "31": {
+      "bezout_identity_coefficients_ascending_mod419": [
+        1
+      ],
+      "component_count": 5,
+      "nonzero_at_infinity": true,
+      "positive_multiple_basis_sha256": "6d4d38db048e62d0c7e62537d284ab8e4cd1ee5758af93f0708396442828c157",
+      "summand_indices": [
+        0,
+        9
+      ]
+    },
+    "35": {
+      "bezout_identity_coefficients_ascending_mod419": [
+        1
+      ],
+      "component_count": 5,
+      "nonzero_at_infinity": true,
+      "positive_multiple_basis_sha256": "ec96830b43ca7ee4125f5366a7745048f436090c2a134931a1c2b35ec41e3ac3",
+      "summand_indices": [
+        0,
+        18
+      ]
+    }
+  },
+  "inherited_open_chart_cover": {
+    "31": {
+      "components": {
+        "c3_nonbased": 10,
+        "first_normal_tangent": 15,
+        "mixed_second_tangent": 9,
+        "mixed_third_tangent": 0,
+        "pure_second": 7,
+        "pure_third": 6
+      },
+      "open_characteristic_zero_affine_charts": 47
+    },
+    "35": {
+      "components": {
+        "c3_nonbased": 12,
+        "first_normal_tangent": 9,
+        "mixed_second_tangent": 16,
+        "mixed_third_tangent": 9,
+        "pure_second": 24,
+        "pure_third": 31
+      },
+      "open_characteristic_zero_affine_charts": 101
+    }
+  },
+  "ok": true,
+  "seal": {
+    "exit": "COV-UNDECIDED",
+    "sha256": "c4b254e1a980fd8af83f2e12d584f7d7748da65a1c480681fc9f102629580847",
+    "snapshot_records_rehashed": 15,
+    "source_records": 182,
+    "theorem_boundary": "Fixed characteristic-zero K1 bases, the ordered literal-global equalizer, the standard module quotient bounds, and complete landing ideals are certified, including empty deepest C3-normal tails and two empty degree-31 pure-third charts only in the special fibre over F_463. The characteristic-zero cover, the remaining affine chart saturations and the single residual 51-dimensional P25 branch A remain open."
+  },
+  "status": "PASS_INDEPENDENT_PC3_INHERITED_BEZOUT_REPLAY",
+  "theorem_boundary": {
+    "does_not_prove": "No actual common-factor, invariant-multiple scheme-image, primitive-quartic/lower-map composition, or named-ansatz incidence locus is constructed here; no remaining affine chart is saturated away from their union; no degree-31 or degree-35 survivor or degree-wide emptiness statement follows; and the inherited fixed 59-dimensional K1_25 multiplier analysis is not the authoritative current PC.2 scheme image. PC-FACTOR-INCIDENCE-PASS and all PC.3 positive/empty exits remain unauthorized.",
+    "proves": "The pinned load-bearing snapshot from the 182-record inherited COV packet is hash-intact; its two F_419[u] Bezout identities equal 1, so the displayed positive-multiple sums have component gcd one and refute the false linear primitive quotient; its branch records leave 47 and 101 characteristic-zero affine charts in degrees 31 and 35.",
+    "required_goal_status": "PC-UNDECIDED"
+  }
+}

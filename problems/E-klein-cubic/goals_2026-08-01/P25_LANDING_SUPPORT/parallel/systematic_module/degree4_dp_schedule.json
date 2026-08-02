@@ -1,0 +1,65 @@
+{
+  "coverage_proof": {
+    "different_components": "Module terms in different components never coincide; their module S-polynomial is zero, so no cross-component pair row is missing.",
+    "higher_lcm_degree": "Pairs whose lcm has degree above four are deferred to that homogeneous layer, not discarded.",
+    "same_product_fiber": "Replacing k prolongations by one canonical row and k-1 differences against it is a determinant-one row transform. Every omitted pair difference is the difference of two stored star-tree rows, so the complete degree-four Macaulay row space is preserved."
+  },
+  "degree4_schedule": {
+    "all_one_variable_prolongations": 398379,
+    "array_hashes": {
+      "canonical_product_column": "5478a6b2694bc41e2731f808c0864c6d57aea342fcc232341a37101c472d82a6",
+      "duplicate_product_column": "c48b7116b7b9bdc1e22d51a6b78e8fdd7761ecf64725ef193ac2618dfc8e8b70",
+      "duplicate_schedule_order": "798c023ba64522d8af87e4b44fe880a620c7316951eb97aa8f4000330618e89c"
+    },
+    "canonical_rows": 232326,
+    "distinct_product_fibers": 232326,
+    "fiber_size_histogram": {
+      "1": 152220,
+      "2": 25611,
+      "3": 23043,
+      "4": 31452
+    },
+    "maximum_fiber_size": 4,
+    "packet": {
+      "bytes": 3975355,
+      "file": "degree4_dp_schedule.npz",
+      "sha256": "7e1aa3d950521e4cb765101b6ec7dd54ff19d32c94419e07cb2da25cd47b3652"
+    },
+    "standard_columns_before_new_pivots": 316014,
+    "star_tree_difference_rows": 166053
+  },
+  "first_shifted_m2_layer": {
+    "degree2_m2_ambient_terms": 14763,
+    "free_free_standard_terms": 225,
+    "pure_m1_cubic_kernel_rows": 10767,
+    "rank_argument": "The sealed 14763-rank degree-two M2 coefficient map contains a triangular 14538-pivot systematic shadow block; hence its 225-column standard quotient has rank 225. Eliminating it from the 10992 same-component pairs leaves 10767 kernel rows.",
+    "residual_10992_by_225_rank": 225,
+    "same_component_spairs": 10992,
+    "systematic_shadow_pivots": 14538
+  },
+  "inputs": {
+    "degree3_dp_profile": {
+      "file": "degree3_dp_pivot_profile.npz",
+      "sha256": "1e2720652bd938683250dea5c3ef8da685f6e9bd1b8126e83bf27b48a9dc8502"
+    },
+    "full_p3": {
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_p3_contractions.npy",
+      "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019"
+    },
+    "sealed_full_basis_manifest": {
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_basis_manifest.json",
+      "sha256": "255e1f1835220170d45b9fef1c8db098763337bdbaebccfbc04017645fa5dc97"
+    },
+    "sealed_full_p3_manifest": {
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_p3_manifest.json",
+      "sha256": "106524b4772871250f0915af57eb2323e1ff4493ee4ade948f838f54f22cbd8e"
+    },
+    "upstream_seal": {
+      "path": "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/SEAL.json",
+      "sha256": "2ae567ad31c1d93d5e3e9e9755bfc4bb8a143cf040c419ba75fe2fea3f5e551b"
+    }
+  },
+  "prime": 89,
+  "scope": "Exact combinatorial row-space schedule and first-layer rank split. No degree-four coefficient elimination, new pivot rank, target membership, or Stage-B conclusion is asserted.",
+  "status": "PASS_EXACT_COMPACT_DEGREE4_DP_SCHEDULE"
+}

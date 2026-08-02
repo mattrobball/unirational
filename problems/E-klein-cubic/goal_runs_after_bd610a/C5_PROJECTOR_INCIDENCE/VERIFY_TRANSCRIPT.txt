@@ -1,0 +1,101 @@
+Fresh exact replay transcript — 2026-08-01
+==========================================
+
+Local packet
+------------
+Working directory:
+  problems/E-klein-cubic/goal_runs_after_bd610a/C5_PROJECTOR_INCIDENCE
+
+Command:
+  PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3 -u produce.py
+Output:
+  WROTE INPUT_MANIFEST.json
+  WROTE canonical_algebra_api.json
+  WROTE projector_incidence.json
+  C5_CANONICAL_ALGEBRA_OK
+  C5-CONVENTION-INCONSISTENCY
+
+Command:
+  PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3 -u build_corrected_incidence.py
+Output:
+  WROTE corrected_incidence.json
+  WROTE corrected_incidence_geometry.json
+  C5-CORRECTED-FULL-INCIDENCE-THREE-PRIME-GEOMETRY
+
+Command:
+  PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3 -u make_seal.py
+Output:
+  WROTE SEAL.json
+  C5-SEAL-OK
+
+Command:
+  PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3 -u verify.py
+Output:
+  PASS all canonical and audit-only input hashes
+  PASS exact Hilbert--90 first vector V_0=x
+  PASS Q(x) is skew and invertible at two independent good reductions
+  PASS S_0=Q(x)^-1 Q(x)=1_A
+  PASS exact unit-ideal certificate for the prescribed projector incidence
+  PASS corrected boundary: this is not emptiness of the genuine Fano scheme
+  C5_CONVENTION_GATE_FAIL_INDEPENDENTLY_VERIFIED
+
+Command:
+  PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3 -u verify_corrected_incidence.py
+Output:
+  PASS independently rebuilt all three five-hyperplane Pluecker sections
+  PASS exact QQ ideal equality after retaining the essential trace equation
+  PASS every structural and 15-chart smoothness Singular input is exact
+  PASS fresh Singular replays give smooth integral degree-14 threefold fibres at 331, 463, and holdout 419
+  SCOPE corrected genuine incidence and structural fibres; no K_proj-rational point
+  C5_CORRECTED_INCIDENCE_GEOMETRY_INDEPENDENTLY_VERIFIED
+
+Command:
+  PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3 -u verify_modular_seed_p23.py
+Output (load-bearing lines):
+  dependency_hashes=PASS
+  trace_matrix_rank=5 trace_kernel_dimension=10 target_match=PASS
+  deterministic_discovery_trial=49
+  rank_P=2 rank_n=2 n2=0 sigma_n=n traces=0 pluecker=0
+  restricted_pluecker_jacobian_rank=6 affine_tangent_dimension=4 projective_tangent_dimension=3
+  six_fibre_stacked_trace_rank=15 constant_coefficient_kernel_dimension=0
+  C5_MODULAR_SEED_P23_OK
+
+Command:
+  PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3 -u verify_morita_seed_p23.py
+Output (load-bearing lines):
+  PASS c2_morita.json sha256=0201a89f9087250a4313ef2732398adbddcadd3d2f234183736088760aec645f
+  PASS four bound C2 source hashes are current
+  PASS independently rebuilt the quaternion involution and five scalar q^*H_iq quadrics
+  PASS exhaustive affine 23^4 reduction: det0=13476 ranks={3:391,4:279450} consistent={3:3,4:13085} normalizedSolutions=13154
+  PASS five D-valued residuals=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+  PASS normalized 5x8 Jacobian rank=5 minorColumns=[4,5,6,7,8] minor=20
+  C5-MORITA-SEED-P23-INDEPENDENTLY-VERIFIED
+
+Command:
+  PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3 -u verify_incidence.py
+Output:
+  PASS all canonical and audit-only input hashes
+  PASS exact Hilbert--90 first vector V_0=x
+  PASS Q(x) is skew and invertible at two independent good reductions
+  PASS S_0=Q(x)^-1 Q(x)=1_A
+  PASS exact unit-ideal certificate for the prescribed projector incidence
+  PASS corrected boundary: this is not emptiness of the genuine Fano scheme
+  C5_CONVENTION_GATE_FAIL_INDEPENDENTLY_VERIFIED
+
+Upstream exact replay markers
+-----------------------------
+
+goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/verify_compressed_algebra.py:
+  C3-APROJ-LAZY-EXECUTABLE-VERIFIED
+
+goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/verify_involution.py:
+  C1-LAZY-INVOLUTION-EXACT-VERIFIED
+
+goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT/verify_distinguished_five_plane.py:
+  C2-DISTINGUISHED-FIVE-PLANE-LAZY-VERIFIED
+
+goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3/verify_c2_morita.py:
+  C2-MORITA-FIVE-HERMITIAN-INDEPENDENTLY-VERIFIED
+
+The last upstream verifier explicitly reports that no simultaneous common
+right D-line has been supplied.

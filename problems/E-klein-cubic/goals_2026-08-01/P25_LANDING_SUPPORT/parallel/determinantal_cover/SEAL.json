@@ -1,0 +1,101 @@
+{
+  "binding_input": {
+    "r66_packet": "parallel/global_compatibility/support_augmented_r66_stageBC.npz",
+    "sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84"
+  },
+  "exact_conclusions": {
+    "all_stageB_chart_emptiness_results": 0,
+    "all_stageC_chart_emptiness_results": 0,
+    "covered_locus": "D(H8) x P5_b1",
+    "live_rss_guard_verified_on_signature_run": true,
+    "manual_resource_stop_bound": true,
+    "ordinary_run_strict_nonverdict": true,
+    "signature_run_strict_nonverdict": true,
+    "stageB_mds34_cover": true
+  },
+  "files": {
+    "REPORT.md": {
+      "bytes": 7550,
+      "sha256": "ce3ed6360895a6eb2e9d20e949924372415914030307dbb6770b9a077f0099f8"
+    },
+    "audit_phase.py": {
+      "bytes": 5444,
+      "sha256": "2b8d5954a594cd09695f9d8021b1e50c6a140c6bd88edbaa65f395a3234cc10e"
+    },
+    "certify_mds_stageB_cover.py": {
+      "bytes": 5127,
+      "sha256": "a5fc37d9997eb5d8bdc5280a7031d91f65503e14b4aeb4050fa5d973718a79f4"
+    },
+    "manual_stop_provenance.json": {
+      "bytes": 882,
+      "sha256": "3332ed09b44129a7155d990f7c69ee217f7f19217b7042fb87f7cc9e46dce60f"
+    },
+    "phase_audit_result.json": {
+      "bytes": 996,
+      "sha256": "714b0f3d870730a87ab99230413944641413fb851495895a3233dd895b9bce2d"
+    },
+    "produce_affine_incidence.py": {
+      "bytes": 6781,
+      "sha256": "d12d6c910d9438bed9e9a8111eb3fec80cebe47e213f6baf27d28199798fefdc"
+    },
+    "r66_stageB_qflag00_bflag0.json": {
+      "bytes": 825,
+      "sha256": "031610017ddcadedde97a15b9a5928e235f41103adf05f6c366357b75212be05"
+    },
+    "r66_stageB_qflag00_bflag0.leading": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "r66_stageB_qflag00_bflag0.log": {
+      "bytes": 1673,
+      "sha256": "a4a82f78999088e4b928940bf3213ceef0b824f2c6160c32bc59d13589fa9b64"
+    },
+    "r66_stageB_qflag00_bflag0.ms": {
+      "bytes": 41537116,
+      "sha256": "9fc5d17aeb9c2bf1341c0871ffd1e0fce07682701a1490a12b2f64ed3378f34b"
+    },
+    "r66_stageB_qflag00_bflag0.run.json": {
+      "bytes": 1384,
+      "sha256": "7b00a270a1790a90250b94aec35941b2347ca8ec5d269a23435140789841d68b"
+    },
+    "r66_stageB_qflag00_bflag0.sig1.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "r66_stageB_qflag00_bflag0.sig1_guarded.leading": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "r66_stageB_qflag00_bflag0.sig1_guarded.log": {
+      "bytes": 715,
+      "sha256": "556a85d030ea794103ff623ef632f9e566c0f843f248d212310ce19878fed776"
+    },
+    "r66_stageB_qflag00_bflag0.sig1_guarded.run.json": {
+      "bytes": 1555,
+      "sha256": "6d90457cf7f5570fc9e1448780cb1d5f184d48f9e95a8bf03c07d5c4e3bba8d6"
+    },
+    "run_bounded_msolve.py": {
+      "bytes": 4926,
+      "sha256": "d4aee835045de001ad9b40d7807d07d3a6467c2751d1b4fa5f2c66a340671d5a"
+    },
+    "stageB_mds34_cover.npz": {
+      "bytes": 2760,
+      "sha256": "b96b734f99c31f457a94dd0eda0e56da6b670c76945a857e57480f9f37da50dd"
+    },
+    "stageB_mds34_cover_certificate.json": {
+      "bytes": 1600,
+      "sha256": "6a0de1506eaf5d160d46590bc5fb8b39d5cca524774fddf8a0766c8e5d24ac7a"
+    },
+    "verify_mds_stageB_cover.py": {
+      "bytes": 3854,
+      "sha256": "86f5ebddd159f8bb955d64ba6e6854bf23e7a934c579626146cfc5d3b9e8b7d6"
+    },
+    "verify_mds_stageB_cover_result.json": {
+      "bytes": 579,
+      "sha256": "751ed83c7cdc8c470903d37ca8505c305462988c2d96ab96a31241fc8d6ee26b"
+    }
+  },
+  "headline": "P25-UNDECIDED",
+  "not_proved": "any affine chart empty; Stage B or Stage C empty on D(H8); any H8-power minor identity or polynomial left inverse; P25 degree-25 emptiness; positive covariant",
+  "status": "SEALED_MDS34_COVER_ALL_CHARTS_UNSOLVED"
+}

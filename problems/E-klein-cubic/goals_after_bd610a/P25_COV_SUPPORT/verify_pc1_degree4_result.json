@@ -1,0 +1,94 @@
+{
+  "all_producer_arrays_match": true,
+  "all_producer_ledger_fields_match": true,
+  "commutator_quotient": {
+    "directions_added_to_transition_span": 0,
+    "matrix_sha256": "f8737c283bbffb69354e13caca8e2c89771b23b0f872d71ffebea7e8fbf68e93",
+    "rank": 210,
+    "row_profile_sha256": "269dc1dfde506df2d5c7b566e43af30f6ecd710368ab8c70d5cfdb94516fc2eb",
+    "syzygy_dimension": 105,
+    "zero_rows": 0
+  },
+  "degree4_rank_ledger": {
+    "closed_degree4_rank": 27583,
+    "new_quotient_rank": 2053,
+    "old_S1_V0_rank": 25530
+  },
+  "inputs": {
+    "certificates/degree25_finite_module/multiplication_matrices.npz": "cdee1a9cd2989f2d17e7771321b49723d8a9dfc71d2bd5a791f83a30142aa418",
+    "certificates/degree25_finite_module/relation_matrix.npz": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+    "pc0_multiplication_kernel.npz": "d08b22ea873111a3849fd03c16374d7ee83fce775f974b0ccde7db8f6a64830a",
+    "pc0_rank_certificate.json": "6325b84e9ee5b429041bf7d551a937a75033ff9b224d44b4d903bfee886ed790"
+  },
+  "normal_form": {
+    "kernel_pivot_columns": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      56,
+      57,
+      58,
+      112
+    ],
+    "kernel_rref_sha256": "66ab471c8161d92bc87ff29ff3126a7911c5ace45974515d58f58476ea709e36",
+    "quotient_dimension": 2053,
+    "quotient_nonpivot_columns_sha256": "67dc747d777a2e1971ce733f06aec6d8f6a76fce7b3e8a12ecca9b642ea091c5"
+  },
+  "ok": true,
+  "prime": 89,
+  "producer_artifact_sha256": "6b77fa511c2adf4e9d3e99dbac1ec718a78d799c57c712fbdb0c8f50953ffb8b",
+  "rank_backend": "independent pure-Python sparse Gaussian elimination over F_89; no producer import and no FFLAS row-profile call",
+  "source_reconstruction": {
+    "W_rank": 56,
+    "W_rows": 56,
+    "W_sha256": "3b14bf3bf1b145a2f71d62c9b9678f36904ebcf0f00573a5dddfaa0b1c503bbe",
+    "commutator_formal_sha256": "56aa3a77777525ff4fb3c1f1b5df83fc37b385557380dbcac34ceae99d006fe6",
+    "commutator_rows": 315,
+    "kernel_W_projection_rank": 19,
+    "kernel_W_projection_sha256": "59f4ac4a8e1f93fa03760e25637504ba24204b71b8bde1a88421535b557a04f3",
+    "tail_to_W_sha256": "ce0754ab23a3a41b15057d24003d794d463cce89a0a169af610f5c9cd7bfe4f7",
+    "transition_formal_sha256": "334975f81d101dd2abd5e1e7ad08b3eaddfd4f8e6511fec0efb89e54c0db62e4",
+    "transition_rows": 4140
+  },
+  "status": "PASS_INDEPENDENT_PC1_DEGREE4_REPLAY",
+  "theorem_boundary": {
+    "does_not_prove": "Coupled-module closure in degree five or above, stabilization or regularity, representation characters, projective support, or any characteristic-zero statement.",
+    "proves": "Exactly over F_89, the pure-q degree-four quotient by S1 V0 has dimension 2053; the lexicographic minimal transition basis has 2053 rows; the 315 commutators have quotient rank 210 and add no direction."
+  },
+  "transition_quotient": {
+    "block_ranks": [
+      690,
+      690,
+      690,
+      690,
+      690,
+      690
+    ],
+    "cumulative_ranks": [
+      690,
+      1332,
+      1702,
+      1923,
+      2031,
+      2053
+    ],
+    "matrix_sha256": "de33fb85e695914b3d175bbd17d30129631f7a97a46848e7e9995e34112d8f46",
+    "rank": 2053,
+    "row_profile_sha256": "902e0a4d4de067bb72c5df9da83194e281733a41d4c440d534076ce14e81ca0e",
+    "selected_labels_sha256": "20c0aad146053a12fdbad0b93e99eceb76047e133cdf8e7da1bfe49226da0fce",
+    "syzygy_dimension": 2087,
+    "zero_rows": 0
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "boundary": "Target-only eliminated ideals and entrywise Q(zeta_11) tensors are not materialized.",
+  "factor_degrees": [
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "kernel_bearing_degrees": [
+    6,
+    8,
+    9,
+    11,
+    12
+  ],
+  "prime_records": [
+    {
+      "components": {
+        "10": {
+          "flattened_rank": 177,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 59,
+          "tangent_rank": 61,
+          "tensor_sha256": "b8e7c8029239456a8bf2e55a310d5a454c153862a17d7114d73b56d7bab6a336"
+        },
+        "11": {
+          "flattened_rank": 173,
+          "graph_samples": 3,
+          "kernel_dimension": 3,
+          "lower_rank": 44,
+          "tangent_rank": 47,
+          "tensor_sha256": "179beb265f0171c835234b1b94d9ef5456704513915722340a49755027b36809"
+        },
+        "12": {
+          "flattened_rank": 200,
+          "graph_samples": 3,
+          "kernel_dimension": 4,
+          "lower_rank": 34,
+          "tangent_rank": 39,
+          "tensor_sha256": "451589674494fcc4862188b7459d1c7cc165e50c3b605c8fec907903b724a6a6"
+        },
+        "13": {
+          "flattened_rank": 125,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 25,
+          "tangent_rank": 29,
+          "tensor_sha256": "dcc7767a6a011e7111e769d373ecf4454738b977f8f2f8f6ed4d88e17c73f801"
+        },
+        "14": {
+          "flattened_rank": 128,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 16,
+          "tangent_rank": 23,
+          "tensor_sha256": "405752e91dd596e62f3e4480dc00cf8ff6b5c12d97c4794d06fb7c1e2b64f4fc"
+        },
+        "15": {
+          "flattened_rank": 110,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 11,
+          "tangent_rank": 20,
+          "tensor_sha256": "1c99a97db6796ce3447f844e8f10dcb854ea798ae021f24b48b30d86b9120e9d"
+        },
+        "16": {
+          "flattened_rank": 70,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 7,
+          "tangent_rank": 16,
+          "tensor_sha256": "6b8857beb1c810a2d80736614e7895520c4896b614ba6985c83a3eaacb339039"
+        },
+        "17": {
+          "flattened_rank": 39,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 3,
+          "tangent_rank": 15,
+          "tensor_sha256": "cb98480f5465dcbbcc881dc0b99b9d01ca4df063acabecc3882c869d95b570e9"
+        },
+        "18": {
+          "flattened_rank": 34,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 2,
+          "tangent_rank": 18,
+          "tensor_sha256": "cdd80792c322454345b50846ff6a93211cfb9806cf65d9c989c995cd64c905de"
+        },
+        "3": {
+          "flattened_rank": 232,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 232,
+          "tangent_rank": 232,
+          "tensor_sha256": "328912e5b05f00d12cf112fa94716ddcd701288e664a255929cee9bd52639bcd"
+        },
+        "5": {
+          "flattened_rank": 165,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 165,
+          "tangent_rank": 165,
+          "tensor_sha256": "1314716fce0197600eadd993847a36d485ae0f57523ec8d2a55a0ec3edc2021a"
+        },
+        "6": {
+          "flattened_rank": 242,
+          "graph_samples": 3,
+          "kernel_dimension": 34,
+          "lower_rank": 138,
+          "tangent_rank": 139,
+          "tensor_sha256": "2f007298dc194bac9bbe52e79dbc220acc121dee1bdbc43bf6b0d6321e22dd52"
+        },
+        "7": {
+          "flattened_rank": 115,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 115,
+          "tangent_rank": 115,
+          "tensor_sha256": "c65f5c3be665eb51d6334cd1700167e32f514392a0158d4902ae1045cde1adf4"
+        },
+        "8": {
+          "flattened_rank": 175,
+          "graph_samples": 3,
+          "kernel_dimension": 7,
+          "lower_rank": 91,
+          "tangent_rank": 92,
+          "tensor_sha256": "04ea529f66c265e0c1fb3635418bca4dcb75481fb6d1f9b458e7582e8690df6a"
+        },
+        "9": {
+          "flattened_rank": 210,
+          "graph_samples": 3,
+          "kernel_dimension": 15,
+          "lower_rank": 75,
+          "tangent_rank": 77,
+          "tensor_sha256": "592ceb547ea1d86e52235fe9b725061297f2674851c55983e52562cb8c161113"
+        }
+      },
+      "prime": 419
+    },
+    {
+      "components": {
+        "10": {
+          "flattened_rank": 177,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 59,
+          "tangent_rank": 61,
+          "tensor_sha256": "9c76f74286631d7aea2e7b9ed71b29251cfbe3f9b35dcb46efbd86036c0e0316"
+        },
+        "11": {
+          "flattened_rank": 173,
+          "graph_samples": 3,
+          "kernel_dimension": 3,
+          "lower_rank": 44,
+          "tangent_rank": 47,
+          "tensor_sha256": "75e8cd72ea8331cf928e0f584aad96aadb0c30248612f0b0e8c25f67b541a68f"
+        },
+        "12": {
+          "flattened_rank": 200,
+          "graph_samples": 3,
+          "kernel_dimension": 4,
+          "lower_rank": 34,
+          "tangent_rank": 39,
+          "tensor_sha256": "f520b0c94d15c81218220e8fff4ccc4306e96a95a306d013539d36619a38c51b"
+        },
+        "13": {
+          "flattened_rank": 125,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 25,
+          "tangent_rank": 29,
+          "tensor_sha256": "32b65023636bdc667b373b72832a9b99104a51f2147fc24fa24973b80b7fd018"
+        },
+        "14": {
+          "flattened_rank": 128,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 16,
+          "tangent_rank": 23,
+          "tensor_sha256": "ba8334223ebfb07ce6468e7f38a74d2f931b8fb43e77514dffc4ffcdadda7e4d"
+        },
+        "15": {
+          "flattened_rank": 110,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 11,
+          "tangent_rank": 20,
+          "tensor_sha256": "ca9819248be73e4f2cb49427d5e1351cd241eb8f21d4e12d49e38d8109c28aa0"
+        },
+        "16": {
+          "flattened_rank": 70,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 7,
+          "tangent_rank": 16,
+          "tensor_sha256": "5588fc6b0c0f802176a2aebeceaf021002c8e5441e5bf8419b0d4513a2503730"
+        },
+        "17": {
+          "flattened_rank": 39,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 3,
+          "tangent_rank": 15,
+          "tensor_sha256": "cb98480f5465dcbbcc881dc0b99b9d01ca4df063acabecc3882c869d95b570e9"
+        },
+        "18": {
+          "flattened_rank": 34,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 2,
+          "tangent_rank": 18,
+          "tensor_sha256": "cdd80792c322454345b50846ff6a93211cfb9806cf65d9c989c995cd64c905de"
+        },
+        "3": {
+          "flattened_rank": 232,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 232,
+          "tangent_rank": 232,
+          "tensor_sha256": "f4adc847005d66275709416ee42bb86665bb0147996c99ec653200dc10cbc6c0"
+        },
+        "5": {
+          "flattened_rank": 165,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 165,
+          "tangent_rank": 165,
+          "tensor_sha256": "b3c6dca1d6410549007c20453dfd7cdf80a7d8f71b898617155e322af97c61ca"
+        },
+        "6": {
+          "flattened_rank": 242,
+          "graph_samples": 3,
+          "kernel_dimension": 34,
+          "lower_rank": 138,
+          "tangent_rank": 139,
+          "tensor_sha256": "20fefaae069e1b59b5c15ceb568d0bbe88bfc8a182dbbcf0efeaa2a5453dfee6"
+        },
+        "7": {
+          "flattened_rank": 115,
+          "graph_samples": 3,
+          "kernel_dimension": 0,
+          "lower_rank": 115,
+          "tangent_rank": 115,
+          "tensor_sha256": "334cb74e9ce8d4050a6d17ca35d9c575458dc6773078c4cc995d361dc6c7ffc2"
+        },
+        "8": {
+          "flattened_rank": 175,
+          "graph_samples": 3,
+          "kernel_dimension": 7,
+          "lower_rank": 91,
+          "tangent_rank": 92,
+          "tensor_sha256": "34c9285b4e88d42781428b6019bb2856c694a1a97ce5c937b8c80a1679bacfce"
+        },
+        "9": {
+          "flattened_rank": 210,
+          "graph_samples": 3,
+          "kernel_dimension": 15,
+          "lower_rank": 75,
+          "tangent_rank": 77,
+          "tensor_sha256": "da67d0fb95eafbd6ad793f02ee0d389b5f100f7768108bfbabe753b4c1cf9423"
+        }
+      },
+      "prime": 463
+    }
+  ],
+  "producer_artifact_sha256": "f7bafcba11d93884a1d529b5c6b648cd5843ed2db2e12dd0f97081a0dc8f2bab",
+  "producer_imported": false,
+  "producer_metadata_sha256": "3de8f2b02102b3abc5dc20ce97159a840547010fe5163e14ef0936f8a826e32e",
+  "schema": "verify-pc3-d35-common-factor-union-v1",
+  "scope": "Independent two-prime replay of all fifteen installed projective degree-35 common-factor graphs in literal K1 spaces.",
+  "stored_arrays_used_as_computational_inputs": false,
+  "strict_f10_crosscheck": true,
+  "verdict": "PASS"
+}

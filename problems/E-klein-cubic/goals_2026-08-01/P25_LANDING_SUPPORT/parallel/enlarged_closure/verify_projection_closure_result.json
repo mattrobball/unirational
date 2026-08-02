@@ -1,0 +1,13 @@
+{
+  "basis_minor_sha256": "b4eea7f05a11b7893abf8a0f38916c17d3a3af468f375725f5a2efab9ef0502c",
+  "formal_T_rank": 2072,
+  "formal_augmented_rank": 2072,
+  "formal_commutator_rank": 210,
+  "formal_minor_sha256": "0f8768acf911e65bc6d2c1bcbbb2f2f22cd32cba9f3d3714aed8d49d3e95c875",
+  "old_45_GiB_rref_replayed": false,
+  "rank_V0": 690,
+  "rank_V0_plus_W": 746,
+  "rank_W": 56,
+  "status": "PASS_INDEPENDENT_PROJECTION_CLOSURE_REPLAY",
+  "theorem_boundary_checked": true
+}

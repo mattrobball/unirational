@@ -1,0 +1,85 @@
+{
+  "theorem_id": "H_TRACE_PLANE_012_FISHER_COVER_AND_U1_LOCAL_POINT",
+  "marker": "H_TRACE_PLANE_012_FISHER_COVER_AND_U1_LOCAL_POINT_OK",
+  "field": "K=C(U1,U2,U3,U4), with epsilon a primitive fifth root of unity",
+  "plane": "C_012: F_012=Tr(R2*R3^2*(X+Y*alpha+Z*alpha^2)^2*sigma(X+Y*alpha+Z*alpha^2))=0",
+  "generic_coefficient_order": ["a", "b", "c", "a2", "a3", "b1", "b3", "c1", "c2", "m"],
+  "C012_coefficient_substitution": {
+    "a": "t0",
+    "b": "epsilon*t3",
+    "c": "epsilon^2*s*t1",
+    "a2": "(2+epsilon)*t1",
+    "a3": "(2+epsilon^2)*t2",
+    "b1": "(1+2*epsilon)*t2",
+    "b3": "(2*epsilon+epsilon^2)*t4",
+    "c1": "(1+2*epsilon^2)*t4",
+    "c2": "(epsilon+2*epsilon^2)*s*t0",
+    "m": "2*(1+epsilon+epsilon^2)*t3"
+  },
+  "fisher_covariants": {
+    "H": "(-1/2)*det(second derivative matrix of F)",
+    "mixed_adjugate": "{Q1,Q2}=coefficient of q in adj(A1+q*A2), where Qi=(1/2)*x^T*Ai*x",
+    "M": "sum_(i,j) {F_i,H_j}*x_i*x_j",
+    "Theta": "grad(F)^T*M*grad(H)",
+    "J": "(1/3)*det(grad(F),grad(H),grad(Theta)), with gradients as rows",
+    "cover": "pi:C_012->J_012, (Z:X:Y)=(H^3:Theta*H:J)",
+    "syzygy_mod_F": "J^2=Theta^3-27*c4*Theta*H^4-54*c6*H^6"
+  },
+  "generic_covariants": {
+    "variable_order": ["X", "Y", "Z", "a", "b", "c", "a2", "a3", "b1", "b3", "c1", "c2", "m"],
+    "H_terms": 73,
+    "H_sha256": "0572ad2856006e4c570c87798407397b092468b1e9df4c5c5e62576276b04c45",
+    "Theta_terms": 6952,
+    "Theta_sha256": "c660c018f93184e9459c6c672a52e9187ae427bc43331df3feb1c70885296ab2",
+    "J_representation": "exact determinant recipe; the 83744-term generic expansion is deliberately not serialized"
+  },
+  "hesse_calibration": {
+    "family": "ha*(X^3+Y^3+Z^3)-3*hb*X*Y*Z",
+    "c4": "3^4*(8*ha^3+hb^3)*hb",
+    "c6": "3^6*(8*ha^6+20*ha^3*hb^3-hb^6)",
+    "H_terms": 5,
+    "Theta_terms": 27,
+    "J_terms": 24,
+    "syzygy_remainder_mod_F": 0
+  },
+  "U1_adic_point": {
+    "residue_field": "k0=C(U2,U3,U4)",
+    "completion": "k0((s)), s=U1",
+    "chart": "X=0,Z=1",
+    "equation": "B(Y)=epsilon*T3*Y^3+(epsilon^2+2*epsilon)*T4*Y^2+(2*epsilon^2+epsilon)*s*T0*Y+epsilon^2*s*T1",
+    "trace_residues": "T0=5 mod s and T1,T3,T4 are divisible by s",
+    "hensel_root": "Y=0 mod s",
+    "derivative": "5*(2*epsilon^2+epsilon), a unit",
+    "first_coefficient": "Y/s mod s=-epsilon^2*A1/(5*(2*epsilon^2+epsilon))",
+    "A1": "(10*epsilon^2+5*epsilon^3)*U4+(-10-10*epsilon^3)*U3+(5+10*epsilon)*U2+(10+5*epsilon^2)*U2^2"
+  },
+  "imported_theorems": [
+    "Fisher Proposition 5.2 identifies (H^3:Theta*H:J) as the canonical 3-covering map to y^2=x^3-27*c4*x-54*c6.",
+    "The period-index obstruction of a Brauer-Severi diagram is the Brauer class of its target; here the target is the split P^2_K.",
+    "Hensel's lemma lifts the displayed simple residue root."
+  ],
+  "source_hashes": {
+    "h_trace_plane_012_jacobian/REPORT.md": "45dfa3b38f82886bcef29ce70cb1c7a728bba2191678998091ca5bb11a4a93d4",
+    "h_trace_plane_012_jacobian/payload.json": "5a1b24fd0cf02a120146b10fb7d046e7cc5efb67b28d1dedcd799a407f308b9e",
+    "h_trace_plane_012_jacobian/verify.py": "9c1c27d1739f736b6efbc3275e8e2e1767dddf9883917ec02dae1ec5ac269ee5",
+    "h_trace_plane_012_jacobian/REPLAY.md": "465de3a2f423717baf3f6973073f6fe24286cdcac95a7cd5d0c7e263f2105bdb",
+    "h_trace_three_kummer_planes/payload.json": "a63f611864e660a187d1a4d241e18a79b4536d332940da95f488cc6a3cd40898"
+  },
+  "scope": {
+    "proved": [
+      "the exact C_012 specialization of Fisher's generic ternary-cubic covariant recipe",
+      "an explicit canonical 3-covering map C_012->J_012, conditional only on the cited general Fisher theorem",
+      "C_012 has a point over C(U2,U3,U4)((U1)), with the displayed first series coefficient",
+      "the U1-adic valuation supplies no obstruction"
+    ],
+    "structural_nonverdict": "The canonical obstruction algebra is split because the plane model already targets P^2_K; this says Ob_3(xi)=0, not xi=0.",
+    "not_proved": [
+      "xi=0 or xi!=0 in H^1(K,J_012[3])",
+      "the image [C_012]=0 or [C_012]!=0 in H^1(K,J_012)",
+      "a K-rational flex on C_012",
+      "a K-rational point or K-pointlessness for C_012",
+      "a point or obstruction for the ambient twisted cubic threefold",
+      "the full expanded Fisher syzygy after the C_012 trace substitution"
+    ]
+  }
+}

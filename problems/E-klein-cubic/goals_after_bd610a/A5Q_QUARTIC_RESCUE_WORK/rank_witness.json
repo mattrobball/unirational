@@ -1,0 +1,1060 @@
+{
+  "format": "a5q-canonical-quartic-rank-witness-v1",
+  "inputs": [
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/exact_representation_core.py",
+      "sha256": "4adce14eae3e7f6c4ace7e398946b4e9efe686dbe68f6808c0289e2c7e73f5b4"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/exact_frame.json",
+      "sha256": "53f2d5e6afa2c6afdf49f53723339ccf5755f919471d42f907d5542ddef87e45"
+    },
+    {
+      "path": "goals_2026-08-01/H_SUBGROUP_TWISTS_ROOT_019FBE10/twists.json",
+      "sha256": "e97a32d6f22a8028528bc2b4d27ee009901caeb047fd2ffe5ac2bdd1fab743cd"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/common/degree11_covariants_raw_exact.json",
+      "sha256": "a63757c9ecf5452f5b5d9af7796f8997d31bc187e7eb4a239620ec09b22ff985"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/common/degree11_reconstructed_relations.json",
+      "sha256": "e1dd860640ff6890fcc22335aa8281c4ec72d27378bb28c192f71d086546cf00"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_1/point.json",
+      "sha256": "89b9a3405db00c5b87c72016afd3b05d0e397d133752d0e7da91898bd9f72a0f"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_2/point.json",
+      "sha256": "cb8366eee4d6a8a096365b65d0c75372b3529a7a621411d8b6f524820d73bfb4"
+    }
+  ],
+  "primes": [
+    {
+      "classes": {
+        "A5_class_1": {
+          "alpha_polynomial": {
+            "ascending": [
+              18,
+              69,
+              56,
+              1
+            ]
+          },
+          "alpha_roots": [
+            80
+          ],
+          "coset_representatives_ST": [
+            "",
+            "S",
+            "ST",
+            "STS",
+            "STT",
+            "STST",
+            "STTS",
+            "STTST",
+            "STTSTS",
+            "STTSTT",
+            "STTSTTT"
+          ],
+          "index": 11,
+          "maps": {
+            "canonical_quartic": {
+              "B_at_witness": [
+                [
+                  31,
+                  54,
+                  24
+                ],
+                [
+                  28,
+                  4,
+                  80
+                ],
+                [
+                  26,
+                  23,
+                  17
+                ]
+              ],
+              "B_det": 55,
+              "I8": 84,
+              "Q_det": 86,
+              "Y_at_witness": [
+                31,
+                28,
+                26
+              ],
+              "branches": [
+                {
+                  "Phi_at_identity": [
+                    83,
+                    65,
+                    37,
+                    87,
+                    56
+                  ],
+                  "Phi_nonzero": true,
+                  "alpha": 80,
+                  "klein_value": 0,
+                  "minor": {
+                    "columns": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6,
+                      7,
+                      8,
+                      9,
+                      10
+                    ],
+                    "det": 84,
+                    "monomials": [
+                      [
+                        0,
+                        0
+                      ],
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        0,
+                        2
+                      ],
+                      [
+                        0,
+                        3
+                      ],
+                      [
+                        0,
+                        4
+                      ],
+                      [
+                        1,
+                        1
+                      ],
+                      [
+                        1,
+                        2
+                      ],
+                      [
+                        1,
+                        3
+                      ],
+                      [
+                        1,
+                        4
+                      ],
+                      [
+                        2,
+                        2
+                      ],
+                      [
+                        2,
+                        3
+                      ]
+                    ],
+                    "rows": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6,
+                      7,
+                      8,
+                      9,
+                      10
+                    ]
+                  },
+                  "parameter": [
+                    1,
+                    25,
+                    36,
+                    32,
+                    80
+                  ],
+                  "point_rank": 5,
+                  "points": [
+                    [
+                      1,
+                      44,
+                      55,
+                      72,
+                      11
+                    ],
+                    [
+                      1,
+                      40,
+                      2,
+                      80,
+                      54
+                    ],
+                    [
+                      1,
+                      58,
+                      34,
+                      66,
+                      68
+                    ],
+                    [
+                      1,
+                      8,
+                      79,
+                      79,
+                      81
+                    ],
+                    [
+                      1,
+                      22,
+                      54,
+                      30,
+                      79
+                    ],
+                    [
+                      1,
+                      8,
+                      74,
+                      86,
+                      58
+                    ],
+                    [
+                      1,
+                      50,
+                      32,
+                      40,
+                      8
+                    ],
+                    [
+                      1,
+                      38,
+                      6,
+                      16,
+                      12
+                    ],
+                    [
+                      1,
+                      25,
+                      69,
+                      33,
+                      44
+                    ],
+                    [
+                      1,
+                      25,
+                      80,
+                      29,
+                      54
+                    ],
+                    [
+                      1,
+                      84,
+                      18,
+                      27,
+                      57
+                    ]
+                  ],
+                  "points_semantics": "11x5 projective rows in the common Q(v) frame, ordered by coset_representatives_ST and normalized by first nonzero coordinate=1",
+                  "quadratic_rank": 11,
+                  "tau": {
+                    "companion": [
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        43
+                      ],
+                      [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        87
+                      ],
+                      [
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        62
+                      ],
+                      [
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        52
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        26
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        47
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        53
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        65
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        73
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        71
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        27
+                      ]
+                    ],
+                    "definition": "P0/P2",
+                    "denominator_form": {
+                      "coordinate": 2
+                    },
+                    "norm": 43,
+                    "numerator_form": {
+                      "coordinate": 0
+                    },
+                    "orbit_polynomial_ascending": [
+                      46,
+                      2,
+                      27,
+                      37,
+                      63,
+                      42,
+                      36,
+                      24,
+                      16,
+                      18,
+                      62,
+                      1
+                    ],
+                    "trace": 27,
+                    "values": [
+                      34,
+                      45,
+                      55,
+                      80,
+                      61,
+                      83,
+                      64,
+                      15,
+                      40,
+                      79,
+                      5
+                    ]
+                  }
+                }
+              ],
+              "projective_H_orbit_size": 60,
+              "seed": {
+                "covariance": "B(rho6(h)v)=sigma(h)B(v)",
+                "degree": 4,
+                "formula": "B(v)=sum_h sigma(h)^(-1)*((rho6(h)v)_5)^4; Y=B(v)e0",
+                "source_coordinate": 5,
+                "target_basis_column": 0
+              },
+              "witness": [
+                22,
+                2,
+                13,
+                21,
+                22,
+                4
+              ]
+            }
+          },
+          "subgroup_order": 60
+        },
+        "A5_class_2": {
+          "alpha_polynomial": {
+            "ascending": [
+              9,
+              31,
+              3,
+              1
+            ]
+          },
+          "alpha_roots": [
+            49,
+            51,
+            75
+          ],
+          "coset_representatives_ST": [
+            "",
+            "S",
+            "T",
+            "TT",
+            "TTS",
+            "TTT",
+            "TTTS",
+            "TTTT",
+            "TTTST",
+            "TTTTT",
+            "TTTSTS"
+          ],
+          "index": 11,
+          "maps": {
+            "canonical_quartic": {
+              "B_at_witness": [
+                [
+                  42,
+                  78,
+                  20
+                ],
+                [
+                  12,
+                  41,
+                  61
+                ],
+                [
+                  40,
+                  27,
+                  45
+                ]
+              ],
+              "B_det": 78,
+              "I8": 51,
+              "Q_det": 12,
+              "Y_at_witness": [
+                42,
+                12,
+                40
+              ],
+              "branches": [
+                {
+                  "Phi_at_identity": [
+                    70,
+                    77,
+                    61,
+                    37,
+                    23
+                  ],
+                  "Phi_nonzero": true,
+                  "alpha": 49,
+                  "klein_value": 0,
+                  "minor": {
+                    "columns": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6,
+                      7,
+                      8,
+                      9,
+                      10
+                    ],
+                    "det": 19,
+                    "monomials": [
+                      [
+                        0,
+                        0
+                      ],
+                      [
+                        0,
+                        1
+                      ],
+                      [
+                        0,
+                        2
+                      ],
+                      [
+                        0,
+                        3
+                      ],
+                      [
+                        0,
+                        4
+                      ],
+                      [
+                        1,
+                        1
+                      ],
+                      [
+                        1,
+                        2
+                      ],
+                      [
+                        1,
+                        3
+                      ],
+                      [
+                        1,
+                        4
+                      ],
+                      [
+                        2,
+                        2
+                      ],
+                      [
+                        2,
+                        3
+                      ]
+                    ],
+                    "rows": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6,
+                      7,
+                      8,
+                      9,
+                      10
+                    ]
+                  },
+                  "parameter": [
+                    1,
+                    55,
+                    87,
+                    56,
+                    49
+                  ],
+                  "point_rank": 5,
+                  "points": [
+                    [
+                      1,
+                      40,
+                      8,
+                      81,
+                      5
+                    ],
+                    [
+                      1,
+                      74,
+                      36,
+                      41,
+                      51
+                    ],
+                    [
+                      1,
+                      79,
+                      76,
+                      72,
+                      12
+                    ],
+                    [
+                      1,
+                      46,
+                      32,
+                      20,
+                      68
+                    ],
+                    [
+                      1,
+                      81,
+                      13,
+                      61,
+                      65
+                    ],
+                    [
+                      1,
+                      77,
+                      3,
+                      13,
+                      67
+                    ],
+                    [
+                      1,
+                      74,
+                      73,
+                      81,
+                      10
+                    ],
+                    [
+                      1,
+                      64,
+                      2,
+                      56,
+                      25
+                    ],
+                    [
+                      1,
+                      48,
+                      6,
+                      16,
+                      82
+                    ],
+                    [
+                      1,
+                      60,
+                      5,
+                      63,
+                      48
+                    ],
+                    [
+                      1,
+                      6,
+                      31,
+                      25,
+                      2
+                    ]
+                  ],
+                  "points_semantics": "11x5 projective rows in the common Q(v) frame, ordered by coset_representatives_ST and normalized by first nonzero coordinate=1",
+                  "quadratic_rank": 11,
+                  "tau": {
+                    "companion": [
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        12
+                      ],
+                      [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        51
+                      ],
+                      [
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        27
+                      ],
+                      [
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        26
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        76
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        60
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        2
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        43
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        12
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        82
+                      ],
+                      [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        14
+                      ]
+                    ],
+                    "definition": "P0/P2",
+                    "denominator_form": {
+                      "coordinate": 2
+                    },
+                    "norm": 12,
+                    "numerator_form": {
+                      "coordinate": 0
+                    },
+                    "orbit_polynomial_ascending": [
+                      77,
+                      38,
+                      62,
+                      63,
+                      13,
+                      29,
+                      87,
+                      46,
+                      77,
+                      7,
+                      75,
+                      1
+                    ],
+                    "trace": 14,
+                    "values": [
+                      78,
+                      47,
+                      41,
+                      64,
+                      48,
+                      30,
+                      50,
+                      45,
+                      15,
+                      18,
+                      23
+                    ]
+                  }
+                }
+              ],
+              "projective_H_orbit_size": 60,
+              "seed": {
+                "covariance": "B(rho6(h)v)=sigma(h)B(v)",
+                "degree": 4,
+                "formula": "B(v)=sum_h sigma(h)^(-1)*((rho6(h)v)_5)^4; Y=B(v)e0",
+                "source_coordinate": 5,
+                "target_basis_column": 0
+              },
+              "witness": [
+                71,
+                10,
+                17,
+                18,
+                13,
+                44
+              ]
+            }
+          },
+          "subgroup_order": 60
+        }
+      },
+      "group_order_invertible": true,
+      "p": 89,
+      "quadratic_monomial_order": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "role": "primary good-reduction nonvanishing witness",
+      "sqrt5": 19,
+      "sqrt_minus11": 73,
+      "zeta11": 2
+    },
+    {
+      "classes": {
+        "A5_class_1": {
+          "index": 11,
+          "maps": {
+            "canonical_quartic": {
+              "branches": [
+                {
+                  "alpha": 76,
+                  "tau": {
+                    "definition": "P0/P2",
+                    "denominator_form": {
+                      "coordinate": 2
+                    },
+                    "numerator_form": {
+                      "coordinate": 0
+                    }
+                  }
+                }
+              ],
+              "seed": {
+                "degree": 4,
+                "formula": "B(v)=sum_h sigma(h)^(-1)*((rho6(h)v)_5)^4; Y=B(v)e0",
+                "source_coordinate": 5,
+                "target_basis_column": 0
+              },
+              "witness": [
+                141,
+                180,
+                170,
+                70,
+                138,
+                170
+              ]
+            }
+          },
+          "subgroup_order": 60
+        },
+        "A5_class_2": {
+          "index": 11,
+          "maps": {
+            "canonical_quartic": {
+              "branches": [
+                {
+                  "alpha": 120,
+                  "tau": {
+                    "definition": "P0/P2",
+                    "denominator_form": {
+                      "coordinate": 2
+                    },
+                    "numerator_form": {
+                      "coordinate": 0
+                    }
+                  }
+                }
+              ],
+              "seed": {
+                "degree": 4,
+                "formula": "B(v)=sum_h sigma(h)^(-1)*((rho6(h)v)_5)^4; Y=B(v)e0",
+                "source_coordinate": 5,
+                "target_basis_column": 0
+              },
+              "witness": [
+                39,
+                25,
+                181,
+                57,
+                69,
+                50
+              ]
+            }
+          },
+          "subgroup_order": 60
+        }
+      },
+      "group_order_invertible": true,
+      "p": 199,
+      "role": "unused holdout; seed data only, all outcomes reconstructed by independent verifier",
+      "sqrt5": 76,
+      "sqrt_minus11": 136,
+      "zeta11": 18
+    }
+  ],
+  "theorem_boundary": "A nonzero good-reduction rank-11 minor proves that each selected exact degree-eleven cycle is not interpolated by a basepoint-free degree-four map. It is scoped to these canonical quartic specializations."
+}

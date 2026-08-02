@@ -1,0 +1,89 @@
+{
+  "Q3": "B**3 + 24*B**2*T - 324*B**2 + 192*B*T**2 + 2592*B*T - 7776*B + 512*T**3 + 18144*T**2 + 194400*T + 554040",
+  "artifacts": {
+    "affine_plane_F15.tsv": "55e8862a318950b31a7e4cc2a9b5067199cebd52c0cfb53a5ede5bbe9d1cafd0",
+    "affine_plane_contact_numerator.tsv": "4edbc97622b21d4f8c2c8d8438db0e856032baa3792d38a1dc738c601814c740"
+  },
+  "coefficient_stats": {
+    "Delta_02": {
+      "degrees_BT": [
+        5,
+        5
+      ],
+      "terms": 21,
+      "total_degree": 5
+    },
+    "Delta_10": {
+      "degrees_BT": [
+        6,
+        6
+      ],
+      "terms": 27,
+      "total_degree": 6
+    },
+    "F15": {
+      "degrees_BT": [
+        15,
+        14
+      ],
+      "terms": 134,
+      "total_degree": 15
+    },
+    "H_02": {
+      "degrees_BT": [
+        21,
+        20
+      ],
+      "terms": 251,
+      "total_degree": 21
+    },
+    "H_10": {
+      "degrees_BT": [
+        22,
+        21
+      ],
+      "terms": 274,
+      "total_degree": 22
+    },
+    "contact_numerator": {
+      "degrees_BT": [
+        27,
+        26
+      ],
+      "terms": 404,
+      "total_degree": 27
+    }
+  },
+  "coordinates": "u=A-15, v=Y-12, T=Z-11*A^2/18",
+  "gate_note": "the plane lies in the complementary-resultant gate A-15, so it was absent from the earlier D(G) fold chart",
+  "generic_contact_mod_3": 2,
+  "generic_contact_order": 2,
+  "generic_normalization": "H_u is nonzero at the generic point, so H is smooth and normalization is an isomorphism there",
+  "identities": {
+    "Delta_on_plane": 0,
+    "Delta_u_nonzero": true,
+    "Delta_v_on_plane": 0,
+    "H_on_plane": 0,
+    "H_u_nonzero": true,
+    "H_v_on_plane": 0,
+    "quadratic_contact_numerator_nonzero": true
+  },
+  "normal_expansion": "u=-(H_02/H_10)*v^2+O(v^3); Delta|H=((H_10*D_02-D_10*H_02)/H_10)*v^2+O(v^3)",
+  "plane": [
+    "A-15",
+    "Y-12"
+  ],
+  "schema": "t3-fixed-frame-affine-plane-contact-v1",
+  "sources": {
+    "certificates/target_branch_global/H_factor/H_primitive_integer.tsv": "b727ee2f004f6b237881ff1c933f0148420727f5e76a938916759feb6979d501",
+    "fixed_frame_discriminant_T.tsv": "f1a413ce9e0f38ca386118079146afa55da64bf6dac591ce3e95b3f816135614"
+  },
+  "special_locus_factorization_BT": "unit*(B-10*T-117)^2*(B+8*T+108)^2*(2*B-2*T-9)*(4*B+2*T+9)^4*Q3*F15",
+  "special_locus_labels_BZ": {
+    "cancellation_line": "B-Z+133",
+    "direction_resultant": "Q3 after T=Z-275/2",
+    "hessian_line": "B+8*Z-992",
+    "target_jacobian_line_1": "B-10*Z+1258",
+    "target_jacobian_line_2": "2*B+Z-133"
+  }
+}

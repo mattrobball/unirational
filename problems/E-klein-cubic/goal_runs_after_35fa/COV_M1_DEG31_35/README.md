@@ -37,6 +37,39 @@ This packet addresses
   kernels.  The restriction-zero strata have dimensions `177,336`; the
   nonzero-restriction complements have exact covers by `10,12` scalar-form
   normalization charts.
+- The based branch is reduced again by its first transverse Taylor landing
+  condition.  Cumulative ranks `51,61` leave complete systems on `147,300`
+  variables; these split into `17,11` first-normal nonbased charts and
+  second-based vector dimensions `130,289`.  The ranks agree at `p=463,727`.
+- Pure and mixed second-normal gates continue the based recursion through
+  `99,247` and `78,204`.  Their nonzero scalar branches have `7,24` and
+  `13,20` charts; the scalar-zero third-based systems have complete factored
+  equations on only `65,184` variables.  All ranks agree at both primes.
+- Third- and fourth-normal recursion now closes both deepest tails.  The
+  degree-31 third-pure gate has dimension `36` and initially six nonbased
+  charts.  Exact `msolve` unit bases show that the first two prime-specific
+  normalization charts are empty over `F_463`, leaving four only in that
+  special fibre.  Because these are affine charts in a fibre-specific kernel,
+  this does not close either chart in characteristic zero; the characteristic-
+  zero cover still has six charts.  The
+  scalar-zero continuation reaches a five-dimensional gate on which the
+  complete landing cubics span all `35` cubic monomials.  In degree 35 the
+  corresponding dimensions are `140` with `31` charts, then a mixed-third
+  nonbased tangent gate of dimension `39` with nine charts; the remaining
+  scalar-zero continuation again reaches a five-dimensional full-cubic-span
+  gate.  Hence neither degree retains a deepest projective tail.  Every
+  linear rank agrees at `p=463,727`, and the two full-span minors are exact at
+  `p=463`.
+- The tangent equation on the earlier first-normal nonbased branch also
+  reduces its decision kernels to dimensions `137,266` and its affine covers
+  from `17,11` to `15,9` charts, with identical ranks at both split primes.
+  Applied to the mixed-second nonbased branches, the tangent gate reduces the
+  kernels to dimensions `45,156` and the affine covers from `13,20` to
+  `9,16` charts.
+- The sealed degree-31 finite-field screen includes the compact complete-cubic
+  coefficient source, a fixed exact rank-`1198` row profile, and the two
+  `msolve` outputs ending in `[1]`.  It is not a characteristic-zero
+  saturation certificate.
 
 ## Boundary
 
@@ -46,8 +79,11 @@ not itself have a common factor. The projective saturation of the full landing i
 actual factorable and composition incidence loci remains undecided. Goal
 P25.2 is also a binding dependency, since a degree-25 landing covariant can
 be multiplied by degree-6 and degree-10 invariants to land in degrees 31 and
-35. Accordingly this packet proves neither full-degree emptiness nor a
-positive covariant.
+35.  The sealed fixed-circuit localization shows that the `f6` image cannot
+reach the degree-31 pure-second based branch in characteristic zero and gives
+successive `f10` preimage upper bounds `59,46,38,18,10` in degree 35, but it
+does not decide P25.2. Accordingly this packet proves neither full-degree
+emptiness nor a positive covariant.
 
 ## Replay
 
@@ -64,3 +100,7 @@ unsealed exploratory and diagnostic files are not part of the result. The
 verifier independently rebuilds the four square invariant evaluation
 matrices and their exact modular determinants; the degree-35 step therefore
 needs roughly one GiB of available memory.
+
+Some generated degree-31 chart inputs exceed GitHub's 100 MB per-file limit
+and are intentionally local and unsealed.  They are exploratory saturation
+inputs, not part of the accepted theorem packet.

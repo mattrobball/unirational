@@ -1,0 +1,12 @@
+{
+  "status": "timeout_nonverdict",
+  "equations": 128,
+  "elapsed_seconds": 300.04385970799194,
+  "timeout_seconds": 300,
+  "max_pairs": 256,
+  "input_file": "degree9_rank_one_residual_128.in",
+  "input_bytes": 3187568,
+  "input_sha256": "c3d537cb3cfd04954296ad92e8d2c6e98ce1d97973d0a0b16ce9276b1d568e2c",
+  "log_file": "degree9_rank_one_residual_128_msolve.log",
+  "log_sha256": "dd9fd98e699e4c57458354ed5b7ece57bb88d050519365977a2c52c0243c6a66"
+}

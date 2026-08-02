@@ -1,0 +1,46 @@
+{
+  "all_coordinate_verdict": {
+    "M_C5": "S1*C + sum_i T_i(C)",
+    "memberships": "1176/1176",
+    "pass": true,
+    "reason": "The verifier independently reconstructed every signed forest path and every coefficient from the complete sealed rewrite vectors. The incidence telescoping and byte-matched endpoint identities are polynomial identities, so all 1,489,657 F5 coordinates are covered."
+  },
+  "artifact_sha256": "861cdeb09d09335793a0c00d4f38836f8622d3809d47a636c94686532c7c31ac",
+  "diagnostic_specializations": {
+    "linear_checks": 1008,
+    "points": 3,
+    "quadratic_checks": 3528,
+    "role": "independent diagnostic only",
+    "seed": 2026080197,
+    "values_sha256": "602700dc6e1a4d08c6ef0d0799e06dd11b35c55197845278c169cb4ca51d8104"
+  },
+  "kernel_equality": {
+    "N": "smallest T-stable S-submodule containing both the 690 seeds and the 210 forest overlap defects",
+    "argument": "The border circuits make M stable, hence N subset M, and every M generator is a true relation. On F/N the induced T_i commute on all of B; the 56 monic rules and 690 residual cubic rows vanish. Therefore monic reduction defines inverse maps F/N <-> R/J_N, giving M=N=ker(F->R/J_N).",
+    "pass": true,
+    "seed_only_hull_used": false
+  },
+  "prime": 89,
+  "reconstructed": {
+    "T_circuit_sha256": "42ef1bce99fff500a22904fc3842dfd96acc35a11d74172f71b041ad3b051ab6",
+    "commutator_vertices": 336,
+    "endpoint_byte_checks": 14112,
+    "forest_rows": 210,
+    "linear_defects": 336,
+    "low_commutator_checks": 105,
+    "q_circuit_sha256": "3ec68a1533a621f0eee1d84e68e50c1f90762833cf6fe4f0f4e2665988a1f0f6",
+    "quadratic_defects": 1176,
+    "raw_commutators": 315,
+    "raw_to_forest_sha256": "dd995953b3e8e34f6d27e4a2c329892f0337c484da3f35e11e5828eb05af05a1",
+    "rewrite_decomposition_byte_checks": 126
+  },
+  "scope": {
+    "PC25_STABLE_PRESENTATION_PASS_authorized": false,
+    "finite_nonminimal_stable_hull": "PASS",
+    "minimal_degree_5_quotient_rank": "OPEN",
+    "minimal_degree_6_quotient_rank": "OPEN",
+    "minimal_graded_betti_ledger": "OPEN"
+  },
+  "status": "PASS_INDEPENDENT_PC1_BORDER_STABILITY_REPLAY",
+  "terminal_marker": "PASS_INDEPENDENT_PC1_BORDER_STABILITY_REPLAY"
+}

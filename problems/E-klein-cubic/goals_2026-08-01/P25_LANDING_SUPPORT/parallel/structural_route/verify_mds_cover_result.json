@@ -1,0 +1,24 @@
+{
+  "b1_code": [
+    34,
+    6,
+    29
+  ],
+  "charts": 34,
+  "closed_L8_certificate_bound": true,
+  "field_scope": "algebraic closure of F_89",
+  "minimal_among_paired_linear_code_covers": true,
+  "nodes_distinct": true,
+  "pairwise_differences_checked": 561,
+  "prime": 89,
+  "q_code": [
+    34,
+    29,
+    6
+  ],
+  "scope": "Exact finite-cover reduction only; each all-690 affine chart still requires a unit-ideal certificate.",
+  "stageB_decided": false,
+  "stageC_decided_by_this_packet": false,
+  "status": "PASS_INDEPENDENT_STAGEB_H8_MDS_COVER",
+  "support_sum": 35
+}

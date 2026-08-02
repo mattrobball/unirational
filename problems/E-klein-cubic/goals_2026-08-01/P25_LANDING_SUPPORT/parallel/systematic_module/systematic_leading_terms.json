@@ -1,0 +1,479 @@
+{
+  "decomposition": {
+    "bytes": 52542,
+    "file": "systematic_m2_decomposition.npz",
+    "sha256": "b3d9469f35b64436404053012d34c032fc16c0f3c9c1363446d8604f1f3c119d"
+  },
+  "embedding": "iota_w(p e_j)=h^w_j p e_j",
+  "flattening_shape": [
+    690,
+    777
+  ],
+  "free_columns": 87,
+  "free_coordinates": [
+    {
+      "b2": 0,
+      "q": 0
+    },
+    {
+      "b2": 0,
+      "q": 1
+    },
+    {
+      "b2": 0,
+      "q": 2
+    },
+    {
+      "b2": 0,
+      "q": 3
+    },
+    {
+      "b2": 0,
+      "q": 4
+    },
+    {
+      "b2": 1,
+      "q": 0
+    },
+    {
+      "b2": 1,
+      "q": 1
+    },
+    {
+      "b2": 1,
+      "q": 2
+    },
+    {
+      "b2": 1,
+      "q": 3
+    },
+    {
+      "b2": 1,
+      "q": 4
+    },
+    {
+      "b2": 2,
+      "q": 0
+    },
+    {
+      "b2": 2,
+      "q": 1
+    },
+    {
+      "b2": 2,
+      "q": 2
+    },
+    {
+      "b2": 2,
+      "q": 3
+    },
+    {
+      "b2": 2,
+      "q": 4
+    },
+    {
+      "b2": 3,
+      "q": 0
+    },
+    {
+      "b2": 3,
+      "q": 1
+    },
+    {
+      "b2": 3,
+      "q": 2
+    },
+    {
+      "b2": 3,
+      "q": 3
+    },
+    {
+      "b2": 4,
+      "q": 0
+    },
+    {
+      "b2": 4,
+      "q": 1
+    },
+    {
+      "b2": 4,
+      "q": 2
+    },
+    {
+      "b2": 4,
+      "q": 3
+    },
+    {
+      "b2": 5,
+      "q": 0
+    },
+    {
+      "b2": 5,
+      "q": 1
+    },
+    {
+      "b2": 5,
+      "q": 2
+    },
+    {
+      "b2": 5,
+      "q": 3
+    },
+    {
+      "b2": 6,
+      "q": 0
+    },
+    {
+      "b2": 6,
+      "q": 1
+    },
+    {
+      "b2": 6,
+      "q": 2
+    },
+    {
+      "b2": 6,
+      "q": 3
+    },
+    {
+      "b2": 7,
+      "q": 0
+    },
+    {
+      "b2": 7,
+      "q": 1
+    },
+    {
+      "b2": 7,
+      "q": 2
+    },
+    {
+      "b2": 7,
+      "q": 3
+    },
+    {
+      "b2": 8,
+      "q": 0
+    },
+    {
+      "b2": 8,
+      "q": 1
+    },
+    {
+      "b2": 8,
+      "q": 2
+    },
+    {
+      "b2": 8,
+      "q": 3
+    },
+    {
+      "b2": 9,
+      "q": 0
+    },
+    {
+      "b2": 9,
+      "q": 1
+    },
+    {
+      "b2": 9,
+      "q": 2
+    },
+    {
+      "b2": 9,
+      "q": 3
+    },
+    {
+      "b2": 10,
+      "q": 0
+    },
+    {
+      "b2": 10,
+      "q": 1
+    },
+    {
+      "b2": 10,
+      "q": 2
+    },
+    {
+      "b2": 10,
+      "q": 3
+    },
+    {
+      "b2": 11,
+      "q": 0
+    },
+    {
+      "b2": 11,
+      "q": 1
+    },
+    {
+      "b2": 11,
+      "q": 2
+    },
+    {
+      "b2": 11,
+      "q": 3
+    },
+    {
+      "b2": 12,
+      "q": 0
+    },
+    {
+      "b2": 12,
+      "q": 1
+    },
+    {
+      "b2": 12,
+      "q": 2
+    },
+    {
+      "b2": 12,
+      "q": 3
+    },
+    {
+      "b2": 13,
+      "q": 0
+    },
+    {
+      "b2": 13,
+      "q": 1
+    },
+    {
+      "b2": 13,
+      "q": 2
+    },
+    {
+      "b2": 13,
+      "q": 3
+    },
+    {
+      "b2": 14,
+      "q": 0
+    },
+    {
+      "b2": 14,
+      "q": 1
+    },
+    {
+      "b2": 14,
+      "q": 2
+    },
+    {
+      "b2": 14,
+      "q": 3
+    },
+    {
+      "b2": 15,
+      "q": 0
+    },
+    {
+      "b2": 15,
+      "q": 1
+    },
+    {
+      "b2": 15,
+      "q": 2
+    },
+    {
+      "b2": 15,
+      "q": 3
+    },
+    {
+      "b2": 16,
+      "q": 0
+    },
+    {
+      "b2": 16,
+      "q": 1
+    },
+    {
+      "b2": 16,
+      "q": 2
+    },
+    {
+      "b2": 16,
+      "q": 3
+    },
+    {
+      "b2": 17,
+      "q": 0
+    },
+    {
+      "b2": 17,
+      "q": 1
+    },
+    {
+      "b2": 17,
+      "q": 2
+    },
+    {
+      "b2": 17,
+      "q": 3
+    },
+    {
+      "b2": 18,
+      "q": 0
+    },
+    {
+      "b2": 18,
+      "q": 1
+    },
+    {
+      "b2": 18,
+      "q": 2
+    },
+    {
+      "b2": 18,
+      "q": 3
+    },
+    {
+      "b2": 19,
+      "q": 0
+    },
+    {
+      "b2": 19,
+      "q": 1
+    },
+    {
+      "b2": 19,
+      "q": 2
+    },
+    {
+      "b2": 19,
+      "q": 3
+    },
+    {
+      "b2": 20,
+      "q": 0
+    },
+    {
+      "b2": 20,
+      "q": 1
+    },
+    {
+      "b2": 20,
+      "q": 2
+    },
+    {
+      "b2": 20,
+      "q": 3
+    }
+  ],
+  "jobs": [
+    {
+      "criterion": "A terminal all_member=1 after SYSTEMATIC_LT_CHECK=1 is an exact membership certificate for every listed target.",
+      "degree_bound": 5,
+      "homogenized_generator_degree": 2,
+      "module_components": 27,
+      "nonverdicts": "Any missing leading-term check, timeout, resource kill, crash, or nonzero target remainder.",
+      "result": "systematic_stageB_homogenized_all222.result",
+      "script": {
+        "bytes": 30077319,
+        "file": "systematic_stageB_homogenized_all222.sing",
+        "immutable_rebuild_match": true,
+        "sha256": "139789585e7efd3e234965f2404595c7efe67c2efe70fd816b7db4e03bfc35a7"
+      },
+      "source_component_weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "status": "PREPARED_NOT_RUN",
+      "stem": "systematic_stageB_homogenized_all222",
+      "target_count": 222,
+      "targets": "q_i^5 e_j for 37 axes and six M1 components",
+      "term_order": "degree lexicographic (Dp,C), variables h,q5..q36,q4,q0..q3"
+    },
+    {
+      "criterion": "A terminal all_member=1 after SYSTEMATIC_LT_CHECK=1 is an exact membership certificate for every listed target.",
+      "degree_bound": 8,
+      "homogenized_generator_degree": 3,
+      "module_components": 28,
+      "nonverdicts": "Any missing leading-term check, timeout, resource kill, crash, or nonzero target remainder.",
+      "result": "systematic_full28_homogenized_degree8.result",
+      "script": {
+        "bytes": 122206482,
+        "file": "systematic_full28_homogenized_degree8.sing",
+        "immutable_rebuild_match": true,
+        "sha256": "4ebc0c03c9ec88abf77512eae22e0db3df4d006bf29195325f78578dbab2030f"
+      },
+      "source_component_weights": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "status": "PREPARED_NOT_RUN",
+      "stem": "systematic_full28_homogenized_degree8",
+      "target_count": 1036,
+      "targets": "h^w_j q_i^(8-w_j) e_j for 37 axes and all 28 components",
+      "term_order": "degree lexicographic (Dp,C), variables h,q5..q36,q4,q0..q3"
+    }
+  ],
+  "membership_equivalence": "Forward direction applies iota to an S-linear combination; reverse direction evaluates a homogenized S[h]-linear combination at h=1.",
+  "prime": 89,
+  "same_component_initial_spairs": 10992,
+  "scope": "This proves the term-order claim and prepares exact jobs. It does not assert that either standard-basis computation has completed.",
+  "source": {
+    "path": "/Users/worker/unirational/problems/E-klein-cubic/certificates/degree25_finite_module/relation_matrix.npz",
+    "sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb"
+  },
+  "status": "PASS_EXACT_SYSTEMATIC_LEADING_TERM_PROOF",
+  "systematic_identity_minor": true,
+  "tail_nnz": 59375,
+  "tail_shape": [
+    690,
+    87
+  ],
+  "term_order_proof": "All relation entries have one ordinary degree after iota. Dp first maximizes h exponent, hence selects M2. The variable order makes q5..q36 larger than q4 and q0..q3. The only q4 free terms occupy b2_0..b2_2, while every q4 pivot occupies b2_3..b2_20 and is larger under trailing C. Therefore all 690 displayed unit M2 coordinates are exactly the input leading terms.",
+  "unit_columns": 690
+}

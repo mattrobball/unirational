@@ -1,0 +1,47 @@
+{
+  "closed_charts": [
+    {
+      "chart": 0,
+      "conclusion": "the normalized affine chart has exact Groebner basis [1]",
+      "normalization": "scalar_form_0=1",
+      "payload": "degree_31/d31_third_pure_chart0_p463.msolve.out",
+      "payload_sha256": "7da42286c216b5d9a707975a0b1147ed36b0ce25ce6c8e7bf7c73ec6502ccf05",
+      "rebuild_input_command": "/opt/homebrew/bin/python3 -B -u export_d31_third_pure_msolve.py --chart 0 --cover original --mode normalize",
+      "replay_command": "/opt/homebrew/bin/msolve -f degree_31/d31_third_pure_chart0_p463.in -o degree_31/d31_third_pure_chart0_p463.msolve.out -g 1"
+    },
+    {
+      "chart": 1,
+      "conclusion": "the normalized affine chart has exact Groebner basis [1]",
+      "normalization": "scalar_form_1=1",
+      "payload": "degree_31/d31_third_pure_chart1_p463.msolve.out",
+      "payload_sha256": "7da42286c216b5d9a707975a0b1147ed36b0ce25ce6c8e7bf7c73ec6502ccf05",
+      "rebuild_input_command": "/opt/homebrew/bin/python3 -B -u export_d31_third_pure_msolve.py --chart 1 --cover original --mode normalize",
+      "replay_command": "/opt/homebrew/bin/msolve -f degree_31/d31_third_pure_chart1_p463.in -o degree_31/d31_third_pure_chart1_p463.msolve.out -g 1"
+    }
+  ],
+  "compact_source": {
+    "payload": "degree_31/d31_third_pure_scalar_cubes_p463.npz",
+    "payload_sha256": "c40627ecae405f49a2dc02c5269b7615a203f720c54f0393b7c484e747f70c6d"
+  },
+  "complete_landing_equation_count": 5349,
+  "cubic_monomial_count": 8436,
+  "decision_status": "two exact special-fibre unit charts; no characteristic-zero affine closure inferred",
+  "fixed_row_profile": {
+    "payload": "degree_31/d31_third_pure_scalar_cubes_p463.bin.rows",
+    "payload_sha256": "902e6923fe64a90cf3b582ea0469bfc259775fa47d25871c616d528931f20cdf"
+  },
+  "gate_dimension": 36,
+  "landing_cubic_span_rank": 1198,
+  "leading_scalar_rank": 6,
+  "prime": 463,
+  "remaining_cover": {
+    "equations": [
+      "scalar_form_0=0",
+      "scalar_form_1=0"
+    ],
+    "normalization_chart_count": 4,
+    "remaining_scalar_rank": 4
+  },
+  "schema": "cov-m1-d31-third-pure-msolve-v1",
+  "scope": "two of six degree-31 pure-third nonbased charts are empty over F_463, leaving four charts only in that special fibre; all six prime-specific affine charts remain open for the characteristic-zero landing scheme"
+}

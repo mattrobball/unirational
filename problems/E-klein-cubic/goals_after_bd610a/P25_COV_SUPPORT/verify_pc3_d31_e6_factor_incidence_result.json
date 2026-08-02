@@ -1,0 +1,51 @@
+{
+  "boundary": "This verifies the degree-6 factor component, not the complete finite union of degree-31 factor components, a target-only elimination ideal, or the unresolved PC.2 landing pullback.",
+  "prime_records": [
+    {
+      "full_graph_samples_checked": 7,
+      "kernel_dimension": 7,
+      "kernel_residual_nonzeros": 0,
+      "pencil_gcd": [
+        1
+      ],
+      "pencil_infinity_rank": 59,
+      "pencil_minor_degrees": [
+        19,
+        20
+      ],
+      "prime": 419,
+      "projective_tangent_augmented_rank": 60,
+      "tensor_rank": 111,
+      "tensor_sha256": "244632699ef22dc4885bdc3ba24c0872d77ba6572f1d28c6309dc39cadc69874"
+    },
+    {
+      "full_graph_samples_checked": 7,
+      "kernel_dimension": 7,
+      "kernel_residual_nonzeros": 0,
+      "pencil_gcd": [
+        1
+      ],
+      "pencil_infinity_rank": 59,
+      "pencil_minor_degrees": [
+        19,
+        20
+      ],
+      "prime": 463,
+      "projective_tangent_augmented_rank": 60,
+      "tensor_rank": 111,
+      "tensor_sha256": "8e88ae8977819155b95bdbacbbde19ce485087c85624b7e19927f19cec723875"
+    }
+  ],
+  "producer_artifact_sha256": "1027adb91bdb5722996584a0384cc8ec50f46bb5825e7021c719890a76f76b99",
+  "producer_imported": false,
+  "producer_metadata_sha256": "62f1272448757b2c01262bc61a4aed3f4ddaea666c753b848132134977769755",
+  "schema": "verify-pc3-d31-e6-common-factor-incidence-v1",
+  "scope": "Independent two-prime replay of the literal 198x2x59 multiplication tensor, its rank-111/kernel-7 flattening, basepoint-free pencil, rank-59 projective tangent witness, and kernel-aware Segre graph.",
+  "stored_arrays_used_as_computational_inputs": false,
+  "verdict": "PASS",
+  "verified_equations": {
+    "deterministic_graph_points_per_prime": 7,
+    "graph_linear_equations": 198,
+    "segree_quadrics": 1711
+  }
+}

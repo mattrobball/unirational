@@ -1,0 +1,14 @@
+ring R=89,(q0,q1),(dp,C);
+module N=
+[q0^3,q1^2],
+[q1^3,q0^2];
+attrib(N,"isHomog",intvec(0,1));
+degBound=4;
+module G=std(N);
+vector target=q0^4*gen(1);
+vector rem=reduce(target,G);
+int member=(rem==0);
+write(":w singular_weighted_syntax_smoke.result","member="+string(member));
+write(":a singular_weighted_syntax_smoke.result","status=SMOKE_COMPLETE");
+print("SMOKE_COMPLETE MEMBER="+string(member));
+quit;

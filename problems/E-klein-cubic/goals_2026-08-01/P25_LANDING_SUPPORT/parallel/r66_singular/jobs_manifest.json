@@ -1,0 +1,53 @@
+{
+  "canonical_msolve_expected_sha256": "9fc5d17aeb9c2bf1341c0871ffd1e0fce07682701a1490a12b2f64ed3378f34b",
+  "canonical_msolve_sha256": "9fc5d17aeb9c2bf1341c0871ffd1e0fce07682701a1490a12b2f64ed3378f34b",
+  "chart": {
+    "b1_0": 1,
+    "q0": 1
+  },
+  "field": "F_89",
+  "includes": {
+    "r66_stageB_q0_1_b10_1_equations.inc": {
+      "bytes": 41536963,
+      "sha256": "bc8f865003bba2cb2e5f17b9745117213c40ddda7b2f70deac2eb99fb34f9023"
+    },
+    "r66_stageB_q0_1_module.inc": {
+      "bytes": 31692013,
+      "sha256": "0e147261a6f27a97a3c318528f0d190ec2c09e9402e80da672d767284dd3a8e0"
+    }
+  },
+  "jobs": {
+    "r66_stageB_q0_1_all_b_module_std_notBuckets.sing": {
+      "bytes": 982,
+      "sha256": "94c9b17e05c58d4033d26c1fcc0f53a20c79ee10bf7ec736de663218e8926199"
+    },
+    "r66_stageB_q0_1_b10_1_slimgb_qfirst.sing": {
+      "bytes": 705,
+      "sha256": "804c4709ed202cbe0d93bc1a41f13309f3f610dc3f9e91316e1eb5d102a1ab50"
+    },
+    "r66_stageB_q0_1_b10_1_std_bfirst_notBuckets.sing": {
+      "bytes": 730,
+      "sha256": "b33ad18a46fcda8504574e47b7ffe941d9d69ce0076d2bed098b8a326b796179"
+    },
+    "r66_stageB_q0_1_b10_1_std_qfirst_notBuckets.sing": {
+      "bytes": 730,
+      "sha256": "f7d53e6322a79ac4762a305c3b5d1bf8cc17e29dc33d8450735b8c4b712b0922"
+    }
+  },
+  "nonverdict_guard": "Not run. Timeout, resource stop, crash, missing result, completed scalar nonunit, or completed non-full selected module is not an emptiness verdict.",
+  "p3_shape": [
+    66,
+    6,
+    9139
+  ],
+  "packet": "parallel/global_compatibility/support_augmented_r66_stageBC.npz",
+  "packet_sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+  "prime": 89,
+  "printed_terms": 2363052,
+  "scalar_criterion": "A completed unit=1 result proves only the exact affine chart q0=1,b1_0=1 empty.",
+  "scalar_equations": 66,
+  "scalar_variables": 41,
+  "status": "PREPARED_NOT_RUN",
+  "strongest_criterion": "A completed full=1 result proves the r66 P3 row module equals R^6 on q0=1, hence excludes every projective b1 and in particular b1_0=1.",
+  "strongest_job": "r66_stageB_q0_1_all_b_module_std_notBuckets.sing"
+}

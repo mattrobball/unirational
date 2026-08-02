@@ -1,0 +1,35 @@
+{
+  "all_six_memberships_proved": false,
+  "axis": 0,
+  "elapsed_seconds": 80.605999,
+  "inputs": {
+    "border_inverse": {
+      "file": "axis0_low_inverse.npy",
+      "sha256": "39f65bd254787b16b887126f579a611a4e4c008df4324f0c1f026a78b531707f"
+    },
+    "border_packet": {
+      "file": "axis0_border_packet.npz",
+      "sha256": "147306837c5077d6b917a8d6392ff43297fecc4faf12254153e09a8a05c41aa2"
+    },
+    "border_tails": {
+      "file": "axis0_border_tails.npy",
+      "sha256": "badcbf56207481ba5350f1547d7a88aec3ed846ce0e672f3ba4f1f56e006f25d"
+    }
+  },
+  "prime": 89,
+  "result": {
+    "file": "axis0_border_reduction.npz",
+    "sha256": "ef3111f516522558d1f8920dad6e711c62421c7d350be14a47c5ac16ad3270f2"
+  },
+  "scope": "A zero terminal remainder is an exact membership proof. A nonzero remainder is only relative to this deterministic border reduction; cubic-only relations and border ambiguities remain available.",
+  "status": "NONVERDICT_NONZERO_BORDER_REMAINDERS",
+  "targets": [
+    {
+      "component": 0,
+      "normalized_lift_nnz": 529886,
+      "terminal_degree5_nnz": 3879712,
+      "terminal_degree5_sha256": "bc38ad975f5da24460257426fa71474104aa14150887ede93ef61dd11470a0d9",
+      "terminal_degree5_zero": false
+    }
+  ]
+}

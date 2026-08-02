@@ -1,0 +1,243 @@
+{
+  "canonical_bases": "canonical_bases.json",
+  "canonical_bases_sha256": "ca9555a34fa4221851fb77df5077f568a038e1b4d471934efe64e05a2ffec1cf",
+  "characteristic_zero_scope": "The displayed fixed factorable circuits give characteristic-zero subspaces of dimensions at least 197 and 361. Hence the standard module quotient has dimension at most 1 in degree 31 and is exactly zero in degree 35. Equality 1 in degree 31 requires an exact upper certificate for the full R_+ image; two agreeing reductions alone are not that certificate.",
+  "definition": "N_d is the span of invariant multiples I*p with deg(I)>0 and p in a lower literal K1 space; the displayed wedge presentation covers every lower source degree needed for d=31,35.",
+  "degrees": {
+    "31": {
+      "fixed_complement_dimension": 1,
+      "fixed_factorable_subspace_dimension": 197,
+      "payload": "degree_31/fixed_invariant_multiple_basis.json",
+      "payload_sha256": "6d4d38db048e62d0c7e62537d284ab8e4cd1ee5758af93f0708396442828c157"
+    },
+    "35": {
+      "fixed_complement_dimension": 0,
+      "fixed_factorable_subspace_dimension": 361,
+      "payload": "degree_35/fixed_invariant_multiple_basis.json",
+      "payload_sha256": "ec96830b43ca7ee4125f5366a7745048f436090c2a134931a1c2b35ec41e3ac3"
+    }
+  },
+  "dual_generators_sha256": "b9aa1f8fe852e15b1b786b6a0577f06cf3ce200c5b092bcbd4c444678add874b",
+  "prime_records": {
+    "419": {
+      "degrees": {
+        "31": {
+          "fixed_complement_indices": [
+            197
+          ],
+          "fixed_positive_basis_rank": 197,
+          "literal_K1_dimension": 198,
+          "positive_multiplier_candidate_count": 1258,
+          "positive_multiplier_span_rank_in_this_fibre": 197,
+          "standard_module_quotient_dimension_in_this_fibre": 1
+        },
+        "35": {
+          "fixed_complement_indices": [],
+          "fixed_positive_basis_rank": 361,
+          "literal_K1_dimension": 361,
+          "positive_multiplier_candidate_count": 5719,
+          "positive_multiplier_span_rank_in_this_fibre": 361,
+          "standard_module_quotient_dimension_in_this_fibre": 0
+        }
+      },
+      "lower_wedge_coverage": {
+        "17": {
+          "candidate_count": 2,
+          "literal_K1_dimension": 2,
+          "wedge_rank": 2
+        },
+        "18": {
+          "candidate_count": 3,
+          "literal_K1_dimension": 3,
+          "wedge_rank": 3
+        },
+        "19": {
+          "candidate_count": 7,
+          "literal_K1_dimension": 7,
+          "wedge_rank": 7
+        },
+        "20": {
+          "candidate_count": 14,
+          "literal_K1_dimension": 11,
+          "wedge_rank": 11
+        },
+        "21": {
+          "candidate_count": 24,
+          "literal_K1_dimension": 16,
+          "wedge_rank": 16
+        },
+        "22": {
+          "candidate_count": 44,
+          "literal_K1_dimension": 25,
+          "wedge_rank": 25
+        },
+        "23": {
+          "candidate_count": 73,
+          "literal_K1_dimension": 34,
+          "wedge_rank": 34
+        },
+        "24": {
+          "candidate_count": 119,
+          "literal_K1_dimension": 44,
+          "wedge_rank": 44
+        },
+        "25": {
+          "candidate_count": 190,
+          "literal_K1_dimension": 59,
+          "wedge_rank": 59
+        },
+        "26": {
+          "candidate_count": 299,
+          "literal_K1_dimension": 75,
+          "wedge_rank": 75
+        },
+        "27": {
+          "candidate_count": 451,
+          "literal_K1_dimension": 91,
+          "wedge_rank": 91
+        },
+        "28": {
+          "candidate_count": 682,
+          "literal_K1_dimension": 115,
+          "wedge_rank": 115
+        },
+        "29": {
+          "candidate_count": 1007,
+          "literal_K1_dimension": 138,
+          "wedge_rank": 138
+        },
+        "30": {
+          "candidate_count": 1459,
+          "literal_K1_dimension": 165,
+          "wedge_rank": 165
+        },
+        "31": {
+          "candidate_count": 2102,
+          "literal_K1_dimension": 198,
+          "wedge_rank": 198
+        },
+        "32": {
+          "candidate_count": 2978,
+          "literal_K1_dimension": 232,
+          "wedge_rank": 232
+        }
+      },
+      "prime": 419,
+      "zeta11": 13
+    },
+    "463": {
+      "degrees": {
+        "31": {
+          "fixed_complement_indices": [
+            197
+          ],
+          "fixed_positive_basis_rank": 197,
+          "literal_K1_dimension": 198,
+          "positive_multiplier_candidate_count": 1258,
+          "positive_multiplier_span_rank_in_this_fibre": 197,
+          "standard_module_quotient_dimension_in_this_fibre": 1
+        },
+        "35": {
+          "fixed_complement_indices": [],
+          "fixed_positive_basis_rank": 361,
+          "literal_K1_dimension": 361,
+          "positive_multiplier_candidate_count": 5719,
+          "positive_multiplier_span_rank_in_this_fibre": 361,
+          "standard_module_quotient_dimension_in_this_fibre": 0
+        }
+      },
+      "lower_wedge_coverage": {
+        "17": {
+          "candidate_count": 2,
+          "literal_K1_dimension": 2,
+          "wedge_rank": 2
+        },
+        "18": {
+          "candidate_count": 3,
+          "literal_K1_dimension": 3,
+          "wedge_rank": 3
+        },
+        "19": {
+          "candidate_count": 7,
+          "literal_K1_dimension": 7,
+          "wedge_rank": 7
+        },
+        "20": {
+          "candidate_count": 14,
+          "literal_K1_dimension": 11,
+          "wedge_rank": 11
+        },
+        "21": {
+          "candidate_count": 24,
+          "literal_K1_dimension": 16,
+          "wedge_rank": 16
+        },
+        "22": {
+          "candidate_count": 44,
+          "literal_K1_dimension": 25,
+          "wedge_rank": 25
+        },
+        "23": {
+          "candidate_count": 73,
+          "literal_K1_dimension": 34,
+          "wedge_rank": 34
+        },
+        "24": {
+          "candidate_count": 119,
+          "literal_K1_dimension": 44,
+          "wedge_rank": 44
+        },
+        "25": {
+          "candidate_count": 190,
+          "literal_K1_dimension": 59,
+          "wedge_rank": 59
+        },
+        "26": {
+          "candidate_count": 299,
+          "literal_K1_dimension": 75,
+          "wedge_rank": 75
+        },
+        "27": {
+          "candidate_count": 451,
+          "literal_K1_dimension": 91,
+          "wedge_rank": 91
+        },
+        "28": {
+          "candidate_count": 682,
+          "literal_K1_dimension": 115,
+          "wedge_rank": 115
+        },
+        "29": {
+          "candidate_count": 1007,
+          "literal_K1_dimension": 138,
+          "wedge_rank": 138
+        },
+        "30": {
+          "candidate_count": 1459,
+          "literal_K1_dimension": 165,
+          "wedge_rank": 165
+        },
+        "31": {
+          "candidate_count": 2102,
+          "literal_K1_dimension": 198,
+          "wedge_rank": 198
+        },
+        "32": {
+          "candidate_count": 2978,
+          "literal_K1_dimension": 232,
+          "wedge_rank": 232
+        }
+      },
+      "prime": 463,
+      "zeta11": 15
+    }
+  },
+  "primitive_quotient_counterexample": {
+    "conclusion": "In each selected degree an exact sum of two invariant-multiple directions has component gcd one. Hence the linear quotient provably deletes primitive covariants.",
+    "payload": "primitive_quotient_counterexample.json",
+    "payload_sha256": "8acef970d0ea95d964623bc9a44808da757f0c20214a77b7cf4714bbcec932a0"
+  },
+  "projective_warning": "K1_d/N_d is an indecomposable-module quotient only. F(p)=0 does not descend under p -> p+n, and the sealed counterexamples prove that a sum of factorable covariants can have component gcd one in both selected degrees. It is therefore forbidden to infer full-degree landing emptiness from quotient dimensions 1 or 0.",
+  "required_landing_operation": "Retain all K1 coefficients and saturate the landing ideal away from the actual factorable and composition incidence loci.",
+  "schema": "cov-m1-standard-primitive-module-v1"
+}

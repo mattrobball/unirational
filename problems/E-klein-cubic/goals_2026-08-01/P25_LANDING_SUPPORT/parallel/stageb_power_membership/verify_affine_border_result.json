@@ -1,0 +1,22 @@
+{
+  "axis": 0,
+  "checks": {
+    "affine_partition_dimensions": [
+      6,
+      222,
+      4218,
+      50616
+    ],
+    "all_50616_normalized_tail_columns_recomputed": true,
+    "bounded_singular_run_stopped_by_timeout": true,
+    "sealed_file_hashes": true,
+    "selected_minor_inverse_exact": true,
+    "stored_terminal_remainder_nnz": 3879712,
+    "stored_terminal_remainder_nonzero": true
+  },
+  "elapsed_seconds": 46.449687,
+  "prime": 89,
+  "scope": "Exact replay of the normalized axis-0 affine border and byte binding of its nonzero deterministic remainder. This is not a nonmembership certificate: cubic-only relations and border ambiguities remain.",
+  "source_p3_sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019",
+  "status": "PASS_EXACT_BORDER_NONVERDICT_REPLAY"
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/opt/homebrew/bin/Singular",
+    "-q",
+    "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/affine_chart_solver/r64_combined_q0_eq_1_std.sing"
+  ],
+  "complete": false,
+  "elapsed_seconds": 600.123451,
+  "input": "r64_combined_q0_eq_1_std.sing",
+  "input_bytes": 101996154,
+  "input_sha256": "62f9fa92ed3a88c75fa06f417627a9a10a2824116d79d2b6390cf83243773ebe",
+  "log": "r64_combined_q0_eq_1_std.log",
+  "log_bytes": 465,
+  "log_sha256": "06496d97ac57fb84fb750f9f3f45b01988642f9cb4cb3b688736fa69320889b0",
+  "peak_rss_bytes_polled": 3506012160,
+  "returncode": -9,
+  "rss_limit_bytes": 8589934592,
+  "stop_reason": "timeout",
+  "timeout_seconds": 600.0
+}

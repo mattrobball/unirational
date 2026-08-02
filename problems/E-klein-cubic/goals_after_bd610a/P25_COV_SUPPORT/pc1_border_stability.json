@@ -1,0 +1,95 @@
+{
+  "artifact": "pc1_border_stability_certificate.npz",
+  "artifact_sha256": "861cdeb09d09335793a0c00d4f38836f8622d3809d47a636c94686532c7c31ac",
+  "border_gate": {
+    "M_C5_source_rows": 9030,
+    "T_C_source_rows": 1260,
+    "T_circuit_nonzeros": 1960,
+    "all_coordinate_proof": "Each circuit is a coefficientwise polynomial identity. Forest paths telescope in the 336-vertex universal incidence graph; all decompositions of every cubic rewrite are byte-matched; the only scalar coefficients used are the sealed q-linear quadratic tail coefficients. Hence the identities hold on all 1,489,657 coordinates of F5, not merely at diagnostic points.",
+    "constant_defects": 56,
+    "constant_defects_zero": 56,
+    "linear_circuit_nonzeros": 280,
+    "linear_defects": 336,
+    "linear_defects_in_C4": 336,
+    "q_C_source_rows": 7770,
+    "q_circuit_nonzeros": 148740,
+    "quadratic_defects": 1176,
+    "quadratic_defects_in_M_C5": 1176
+  },
+  "canonical_state_hull": {
+    "basis_size": 28,
+    "commutator_forest_states": {
+      "degree_4": 210,
+      "degree_5": 1260,
+      "degree_6": 4410,
+      "total": 5880
+    },
+    "seed_states": {
+      "degree_3": 690,
+      "degree_4": 4140,
+      "degree_5": 14490,
+      "total": 19320
+    },
+    "total_state_generators_nonminimal": 25200
+  },
+  "diagnostic_specializations": {
+    "defect_values_sha256": "60ed949d5cad89f66299c20a85f4092a8294c83b7dd535f0de344d0b941e0304",
+    "linear_defects_checked": 1344,
+    "points": 4,
+    "quadratic_defects_checked": 4704,
+    "role": "diagnostic only; the forest circuit derivation is the all-coordinate proof",
+    "seed": 2026080141
+  },
+  "forest": {
+    "all_raw_rows_replayed": true,
+    "cycle_dimension": 105,
+    "forest_rows": 210,
+    "quartic_components": 126,
+    "raw_commutators": 315,
+    "raw_to_forest_sha256": "dd995953b3e8e34f6d27e4a2c329892f0337c484da3f35e11e5828eb05af05a1",
+    "vertices": 336
+  },
+  "inputs": {
+    "certificates/degree25_finite_module/multiplication_matrices.npz": "cdee1a9cd2989f2d17e7771321b49723d8a9dfc71d2bd5a791f83a30142aa418",
+    "certificates/degree25_finite_module/relation_matrix.npz": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+    "certificates/degree25_finite_module/rewrite_rules.npz": "9dd25476c3927e533b2587e5048028ad0304141d6849f6649ca921ed5d057028",
+    "pc1_coupled_degree4.json": "b739639dc5aa575017fe19bdc804ee190f8f07dfeea21449fbbb6e1a4412d380",
+    "pc1_coupled_degree4_certificate.npz": "bf80f407629bcf285fc9e3765fc09c3e0783abce36173ad31792af075958f38a",
+    "verify_pc1_coupled_degree4_result.json": "a248f0c89f483bc7e86fe2a36108f532d6137010fbccd6e73c28b32baaca3d15"
+  },
+  "minimal_graded_ledger": {
+    "consequence": "The stable hull is an exact finite but possibly redundant S-module presentation. It is not the required minimal homogeneous relation module or per-stage Betti/character ledger.",
+    "degree_3_new_rank": 690,
+    "degree_4_breakdown": {
+      "commutators": 210,
+      "seed_transitions": 4140
+    },
+    "degree_4_new_rank": 4350,
+    "degree_5_candidate_breakdown": {
+      "linear_commutator_states": 1260,
+      "quadratic_seed_states": 14490
+    },
+    "degree_5_candidate_states": 15750,
+    "degree_5_minimal_quotient_rank": null,
+    "degree_6_minimal_quotient_rank": null,
+    "degree_6_quadratic_commutator_states": 4410,
+    "status": "OPEN"
+  },
+  "prime": 89,
+  "resource": {
+    "elapsed_seconds": 21.04798612500599
+  },
+  "stability_and_kernel_equality": {
+    "M_C_definition": "M_C=sum_{b in B} S P_b({210 forest commutators})",
+    "M_definition": "M=sum_{b in B} S P_b({690 seeds} union {210 forest commutators})",
+    "N_definition": "N is the smallest T-stable S-submodule containing the 690 residual seeds and the 210 forest overlap/commutator defects. It is not the seed-only hull asserted in the obsolete finite-presentation note.",
+    "kernel_congruence_argument": "On F/N the induced T_i commute: their commutators vanish exactly on basis degrees 0 and 1, while all quadratic columns are spanned by the forest generators. Hence p(k) maps to p(T)e_1 independently of word order. The 56 monic cubics vanish by the byte-matched border rules and the remaining 690 cubic generators vanish by the seeds. Thus R/J_N maps to F/N. The reverse map sends e_b to b; both compositions fix the algebra generators and B, so they are inverse. Consequently ker(F->R/J_N)=N=M.",
+    "stability": "For deg(b)<=1, T_i P_b is canonical modulo C. For quadratic b, T_i P_b=sum_c r_c P_c+D_m. The certified constant, linear, and quadratic columns give D_m(F) subset M_C. Thus T_i(M) subset M.",
+    "stable_hull_inclusion": "M is T-stable and contains the defining seeds and forest defects, so N is contained in M. Every displayed state in M is a true polynomial relation, so M is contained in ker(F->R/J_N)."
+  },
+  "status": "PC1-NONMINIMAL-BORDER-HULL-PASS",
+  "theorem_boundary": {
+    "does_not_prove": "The degree-five or degree-six minimal quotient ranks, a minimal graded Betti ledger, representation characters, projective support, or any characteristic-zero statement. PC25-STABLE-PRESENTATION-PASS remains unauthorized.",
+    "proves": "Over F_89, all 1,176 quadratic border defects lie in M_C5=S1*C+sum_i T_i(C), all 336 linear border defects lie in C, and the displayed finite nonminimal hull equals the T-stable relation kernel."
+  }
+}

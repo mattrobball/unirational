@@ -1,0 +1,94 @@
+{
+  "artifact": "PC1_HIGHER_BOUND_AUDIT.md",
+  "date": "2026-08-01",
+  "chronological_update": {
+    "superseding_route": "pc1_border_stability.json",
+    "result": "A later exact border-circuit argument proves a finite nonminimal 25200-state kernel presentation through degree 6. This audit remains authoritative only for rejection of the naive degree-8 monomial argument and for the conditional minimal degree-5 ledger."
+  },
+  "field": "F_89",
+  "status": "PC1-HIGHER-OPEN",
+  "degree4_input": {
+    "minimal_generators_degree3": 690,
+    "old_q_multiples_rank": 25530,
+    "new_transition_generators": 4140,
+    "new_commutator_generators": 210,
+    "minimal_generators_degree4": 4350,
+    "coupled_rank_degree4": 29880
+  },
+  "naive_degree8_bound_audit": {
+    "leading_monomial_ideal": "(K)^3 in F_89[K0,...,K5]",
+    "monomial_resolution_generator_degrees": [3, 4, 5, 6, 7, 8],
+    "monomial_resolution_betti_counts": [56, 210, 336, 280, 120, 21],
+    "valid_stabilization_bound": false,
+    "failure": "The first 210 lifted degree-four leading syzygies have nonzero coupled commutator remainders. The 56 deformed rules are therefore not a Groebner or border basis; after adjoining the remainders, new lower-K and q-leading critical pairs are not controlled by the old monomial resolution and may extend beyond degree eight.",
+    "required_to_make_a_small_bound_valid": "An exact lifted-Schreyer or finite-state replay must dynamically adjoin every nonzero remainder, recompute the leading module and all new pairs, and verify the terminal transition frontier."
+  },
+  "degree5": {
+    "ambient": {
+      "S5": 749398,
+      "six_S4": 548340,
+      "twentyone_S3": 191919,
+      "F5": 1489657,
+      "R5": 1533939,
+      "raw_to_normal_form_dimension_gap": 44282
+    },
+    "existing_multiplication_space": {
+      "formula": "M5 = S2*G3 + S1*G4",
+      "S2_times_G3_rows": 485070,
+      "S1_times_G4_rows": 160950,
+      "canonical_source_rows": 646020,
+      "rank_certified": false,
+      "syzygy_basis_certified": false
+    },
+    "transition_frontier": {
+      "ordered_T_of_G4_rows": 26100,
+      "canonical_symmetric_second_seed_paths": 14490,
+      "K_times_commutator_paths": 1260,
+      "canonical_rows_modulo_M5_upper_count": 15750,
+      "quotient_rank_certified": false
+    },
+    "pure_q_factor": {
+      "map": "mu2: S2 tensor U -> S5",
+      "dim_U": 746,
+      "source_dimension": 524438,
+      "target_dimension": 749398,
+      "full_kernel_certified": false,
+      "coupled_residual_certified": false
+    },
+    "dense_resource_warning": {
+      "M5_shape": [646020, 1489657],
+      "uint8_GiB": 896.2566,
+      "binary64_GiB": 7170.0529,
+      "dense_materialization_allowed": false
+    }
+  },
+  "conditional_predictions_not_results": {
+    "assumption_1": "The raw degree-five Macaulay map for the 746 cubics has no quadratic syzygies and rank 705716.",
+    "conditional_normal_form_rank": 661434,
+    "assumption_2": "M5 has rank 646020 and the canonical transition frontier spans the complete degree-five normal-form kernel.",
+    "conditional_new_degree5_rank": 15414,
+    "conditional_frontier_nullity": 336,
+    "certified": false,
+    "warning": "The appearance of 336 in the monomial Betti table is not a certificate of this conditional nullity."
+  },
+  "required_finite_state_certificate": {
+    "per_degree": [
+      "certify the canonical S-multiplication rank and every graded syzygy",
+      "apply all six transition operators to every minimal generator on the current frontier",
+      "reduce exactly modulo the existing S-module and select the quotient basis",
+      "store normal-form coefficients, unit-minor or pivot data, transition matrices, and hashes",
+      "independently replay from the sealed rewrite rules, seeds, and raw commutators"
+    ],
+    "termination_test": "After constructing the last nonzero G_D, every T_i(G_D) must reduce to zero modulo the generated module in degree D+1; all earlier generator transitions must also have recorded exact reductions.",
+    "unchanged_degree_ranks_suffice": false
+  },
+  "representation_boundary": {
+    "nontrivial_action_installed": false,
+    "canonical_multiplicity_action": "trivial",
+    "nontrivial_character_claim_allowed": false
+  },
+  "theorem_boundary": {
+    "proves": "The naive degree-eight stabilization inference is invalid and gives the exact source/ambient/candidate ledger for the next degree-five computation.",
+    "does_not_prove": "This naive-bound audit does not prove any degree-five minimal rank, higher minimal transition ledger, regularity bound, finite stabilization, nontrivial representation decomposition, projective support, or characteristic-zero statement. A later independent border packet proves finite nonminimal stabilization by a different argument."
+  }
+}

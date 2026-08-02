@@ -1,0 +1,14 @@
+{
+  "criterion": "Exit zero with SYSTEMATIC_LT_CHECK=1 and LEADING_CHECK_ONLY_COMPLETE, and with no LT_FAIL line.",
+  "scope": "Checks input leading terms only; never computes a standard basis.",
+  "script": {
+    "bytes": 30004028,
+    "file": "systematic_stageB_leading_check.sing",
+    "sha256": "be8e2378be620d58bdcbe1f14f56311f09b5f79fbdf2f638005d0de96e8b2a69"
+  },
+  "source": {
+    "file": "systematic_stageB_homogenized_all222.sing",
+    "sha256": "139789585e7efd3e234965f2404595c7efe67c2efe70fd816b7db4e03bfc35a7"
+  },
+  "status": "PREPARED_VALIDATION_ONLY"
+}

@@ -107,6 +107,17 @@
     }
   },
   "dual_generators_sha256": "b9aa1f8fe852e15b1b786b6a0577f06cf3ce200c5b092bcbd4c444678add874b",
+  "first_normal_pre_elimination": {
+    "payload": "c3_first_normal_gate.json",
+    "payload_sha256": "df2da9608eb13621846ddbe839f59a07809bc18014f99eb98b639bf4c8611ff2",
+    "scope": "necessary first-normal gates on the C3-based branch"
+  },
+  "first_normal_reduced_special_fibre": {
+    "payload": "c3_first_normal_reduced_landing.json",
+    "payload_sha256": "5d3b2040dbb36d6a51d6036696ce482577d35696ee8dd01c72b4a74587970b1b",
+    "prime": 463,
+    "scope": "complete factored equations on the first-normal gate kernels, with first-normal nonbased and second-based strata materialized"
+  },
   "linear_elimination": {
     "payload": "c3_constant_gate.json",
     "payload_sha256": "950004c554d52bcb2993afae1d3e1929a46cb547ec449d70033fe38d0aeee645",
@@ -119,6 +130,34 @@
     "payload_sha256": "c7dacae931e14c3a5d51606f6f078242cfee5c410d002efbcc49f61cb0f1b9e0",
     "prime": 463,
     "scope": "complete factored landing equations on the C3/C6 gate kernel, with based and nonbased C3 strata materialized"
+  },
+  "second_normal_pre_elimination": {
+    "payload": "c3_second_normal_gate.json",
+    "payload_sha256": "c4bd146fb6717ed708cda9e23a0e001a2ae9d7733731be7319e903247aba7b6c",
+    "scope": "necessary pure and mixed second-normal C3 branch gates"
+  },
+  "deep_normal_pre_elimination": {
+    "payload": "c3_deep_normal_gate.json",
+    "payload_sha256": "b4d014bd90ee02cd0e35b9d1a1896492c4fa6f57065265903ba514f79af274b2",
+    "prime": 463,
+    "scope": "tangent reduction of both mixed-second nonbased branches, third/fourth-normal recursive gates, and exact full-cubic-span emptiness of the two deepest five-dimensional gates"
+  },
+  "d31_third_pure_chart_saturation": {
+    "payload": "d31_third_pure_msolve.json",
+    "payload_sha256": "600baa04d97a39495a6a269ffb434f2367776ab1ac3cd5f8b607c144f85b61e9",
+    "prime": 463,
+    "scope": "exact msolve unit bases exclude two of six degree-31 pure-third normalization charts only over F_463, leaving four in that special fibre; all six prime-specific affine charts remain open in characteristic zero"
+  },
+  "p25_dependency_localization": {
+    "payload": "p25_dependency_localization.json",
+    "payload_sha256": "b3ea48214ddce93c836f1c57748e0b63d3a254979deba050340df5481a137f45",
+    "scope": "two-prime fixed-circuit localization of the f6 and f10 images of K1_25 inside the necessary C3 Taylor gate tree; P25.2 remains undecided"
+  },
+  "third_based_reduced_special_fibre": {
+    "payload": "c3_third_based_reduced_landing.json",
+    "payload_sha256": "4cb7945f33219a336ce0bce9424ebffc2e36175ab8df458761844002cc501044",
+    "prime": 463,
+    "scope": "complete factored equations after the C3 line and its first and second normal jets vanish"
   },
   "schema": "cov-m1-complete-factored-landing-ideals-v1"
 }

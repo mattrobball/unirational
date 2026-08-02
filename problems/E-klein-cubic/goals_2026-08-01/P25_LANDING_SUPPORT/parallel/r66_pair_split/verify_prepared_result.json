@@ -1,0 +1,55 @@
+{
+  "criterion": "A completed exact unit ideal is decisive only for this affine chart. Every other result, including a completed nonunit basis, is a nonverdict.",
+  "exact_blocker": "Launch forbidden: the managed sandbox cannot execute the required fail-closed live ps census/RSS polling, and the account escalation quota is exhausted until 2026-08-08. The parent explicitly instructed this worker not to launch.",
+  "launch_gate_snapshot": {
+    "escalated_process_inspection_and_runner_execution": "unavailable until 2026-08-08",
+    "memory": {
+      "free_pages": 1525264,
+      "free_plus_speculative_bytes": 25847119872,
+      "page_size": 16384,
+      "speculative_pages": 52319
+    },
+    "memory_gate_pass": true,
+    "minimum_free_plus_speculative_bytes": 15032385536,
+    "parent_instruction": "DO_NOT_LAUNCH",
+    "process_gate": {
+      "available": false,
+      "error": "live ps unavailable: [Errno 1] Operation not permitted: 'ps'"
+    }
+  },
+  "ordinary_msolve_retry": {
+    "arithmetic": "exact sparse, ordinary F4, characteristic from unchanged input",
+    "baseline_nonpath_option_delta": {
+      "-m": [
+        "0",
+        "100"
+      ]
+    },
+    "binary_sha256": "b2008fb403f38f6a2ae230d12e3023776ae0196761c49966d97fe10747131c60",
+    "hash_table_reset": "OFF",
+    "max_pairs_per_matrix": 100,
+    "rss_limit_bytes": 4831838208,
+    "threads": 4,
+    "timeout_seconds": 1200.0,
+    "version": "0.10.1"
+  },
+  "pair_split_semantics": {
+    "effect": "Each F4 matrix selects at most 100 pairs, so the observed 1708-pair degree-6 batch cannot be selected as one matrix. Basis updates may change the later pair list, so this is a cap, not a fixed 18-block partition.",
+    "hash_reset_not_enabled": "No reset is justified before observing the isolated -m 100 retry; omitting -u preserves the baseline OFF setting and isolates pair batching.",
+    "ideal_or_field_change": false,
+    "local_help_statement": "Maximal number of pairs used per matrix.",
+    "reason": "The input is byte-identical over F_89 and every nonpath option is identical except the documented F4 per-matrix pair cap.",
+    "supported_by_local_help": true
+  },
+  "run_artifacts": [],
+  "source": {
+    "byte_for_byte_baseline_identical": true,
+    "bytes": 41537116,
+    "chart": "Stage B q0=1,b1_0=1",
+    "field": 89,
+    "independently_regenerated_from_r66": true,
+    "r66_packet_sha256": "b2d09782beb0bc6a3727f3abae582f8b9b09a78c5d424c73ba38c307f4945d84",
+    "sha256": "9fc5d17aeb9c2bf1341c0871ffd1e0fce07682701a1490a12b2f64ed3378f34b"
+  },
+  "status": "PREPARED_NOT_RUN"
+}

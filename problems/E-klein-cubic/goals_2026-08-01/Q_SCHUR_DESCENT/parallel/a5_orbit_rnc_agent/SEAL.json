@@ -1,0 +1,12 @@
+{
+  "format": "a5-degree11-transferred-orbit-rnc-seal-v1",
+  "marker": "A5_DEGREE11_TRANSFERRED_ORBITS_FAIL_RNC_QUADRIC_TEST_OK",
+  "files": {
+    "REPORT.md": "a1441eb73622146ebff672dc2cb0544198bf078fe525b3bc47a984e71c15d3aa",
+    "REPLAY.md": "2c31edd53839023ee69edf4b28f5509fd64aa6c1378a95ed1a296d337bef10ba",
+    "payload.json": "590c84de8407fb2926a98f80cf18ad6e2ef0cacad3558c118ea321def044495c",
+    "probe_rnc_rank.py": "ffdea8a25350777f3271169c0ef0c9af3dbd9b3abf9388bd0bef2eecc1aad70e",
+    "source_manifest.json": "dc96a65fe544edec583a65bdd768cedf9d5f05610596999d43f707bb9a403372",
+    "verify.py": "10513e8c99ed59a01b201ba9d213fcb87f9962ce9d463f9d2bc8a6fc9b0b1743"
+  }
+}

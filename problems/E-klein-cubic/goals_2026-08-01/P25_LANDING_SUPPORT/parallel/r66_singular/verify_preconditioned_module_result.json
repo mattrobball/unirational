@@ -1,0 +1,8 @@
+{
+  "cas_launched": false,
+  "job_sha256": "09e393aec8b996b55b601c08a098c420d0ebac9c6079ca1e2e55ab4d92c28917",
+  "pivot_block_identity": true,
+  "status": "PASS_PRECONDITIONED_R66_MODULE_PREPARED_NOT_RUN",
+  "theorem_status": "P25-UNDECIDED",
+  "transform_rank": 66
+}

@@ -1,0 +1,23 @@
+{
+  "clearing_denominator_lcm": 176319369216,
+  "degrees": {
+    "A": 16,
+    "Z": 6,
+    "total": 22,
+    "u": 12
+  },
+  "input_report": "scratch_t3/interpolation_report_Aminus6_16.json",
+  "input_report_sha256": "378570dc70aeff763067c24589cb1dd5092b2875705133e01e21e1687cd31a30",
+  "interpolation_denominator": "(u**2 - 8*u - 29)**4",
+  "removed_integer_content": 1,
+  "schema": "klein-t3-reconstructed-singular-Z-eliminant-v1",
+  "scope": "discovery pending direct generic ideal-membership verification",
+  "terms": 689,
+  "tsv": "/Users/worker/unirational/problems/E-klein-cubic/goals_after_bd610a/scratch_t3/singular_Z_eliminant_reconstructed.tsv",
+  "tsv_sha256": "23be9dbe72a9a4089924accde05fc9f8d43b13e644a2e2c8528fabdb3608ef9f",
+  "variables": [
+    "A",
+    "u",
+    "Z"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "exact_implication_checked": true,
+  "jobs_unlaunched": true,
+  "r43_script_sha256": "64bbcca64a403676c7e0204f992ab543da420be6e7efd5453ec94b4587d54ebe",
+  "r64_p3_component_ranks": [
+    64,
+    64,
+    64,
+    64,
+    64,
+    64
+  ],
+  "r64_p3_total_rank": 64,
+  "r64_p4_recomputed_byte_equal": true,
+  "r64_rows": 64,
+  "r64_script_sha256": "51eb2699740375a6bedf6db7529254a430d1c714e66cbe314518406a696eb809",
+  "status": "PASS_AUGMENTED_MODULE_JOBS_REPLAY"
+}

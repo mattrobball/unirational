@@ -76,6 +76,46 @@ def main() -> None:
     require("VERIFY OK" in (HERE / "dvr_replay.log").read_text(),
             "DVR replay failed")
 
+    closed_l8 = json.loads(
+        (HERE / "parallel/stageb_stratified_cas/verify_closed_L8_stageC_result.json").read_text()
+    )
+    require(
+        closed_l8["status"] == "PASS_INDEPENDENT_CLOSED_L8_STAGEC_EMPTY"
+        and closed_l8["closed_L8_stageC_empty"] is True
+        and closed_l8["selected_minor_rank"] == 6435,
+        "closed-L8 Stage-C replay failed",
+    )
+    require(
+        closed_l8["artifact_sha256"]
+        == "ad64848d98316eff00793814a5e8be09978f61c13057e4256e9a586375093957",
+        "closed-L8 Stage-C artifact mismatch",
+    )
+
+    mds = json.loads(
+        (HERE / "parallel/structural_route/verify_mds_cover_result.json").read_text()
+    )
+    require(
+        mds["status"] == "PASS_INDEPENDENT_STAGEB_H8_MDS_COVER"
+        and mds["charts"] == 34
+        and mds["q_code"] == [34, 29, 6]
+        and mds["b1_code"] == [34, 6, 29]
+        and mds["stageB_decided"] is False,
+        "Stage-B MDS-cover replay failed",
+    )
+
+    pair_split = json.loads(
+        (HERE / "parallel/r66_pair_split/verify_prepared_result.json").read_text()
+    )
+    require(pair_split["status"] == "PREPARED_NOT_RUN",
+            "pair-split retry was unexpectedly promoted or run")
+    require(pair_split["run_artifacts"] == [],
+            "unexpected pair-split run artifacts")
+    require(
+        pair_split["source"]["sha256"]
+        == "9fc5d17aeb9c2bf1341c0871ffd1e0fce07682701a1490a12b2f64ed3378f34b",
+        "pair-split input hash mismatch",
+    )
+
     if args.full_replay:
         subprocess.run(
             [sys.executable, str(HERE / "verify_syzygy_empty.py"), "--equations-only"],
@@ -87,7 +127,13 @@ def main() -> None:
         "exit": "P25-UNDECIDED",
         "verdict": "PASS",
         "full_replay_requested": args.full_replay,
-        "smallest_unresolved": "Stage B: b0=0,b1!=0 double saturation",
+        "smallest_unresolved": (
+            "Stage B on D(H8): 34 certified affine cover charts, first chart undecided"
+        ),
+        "closed_L8_stageB_and_stageC": True,
+        "stageB_complement_chart_count": 34,
+        "stageC_complement_chart_count": 29,
+        "pair_split_retry": "PREPARED_NOT_RUN",
         "no_unit_ideal_promoted": True,
         "headline": "OPEN",
     }

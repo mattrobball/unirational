@@ -1,0 +1,29 @@
+{
+  "status": "PREPARED_NO_COMPLETED_CERTIFICATE",
+  "prime": 89,
+  "field_scope_if_decisive": "algebraic closure of F_89",
+  "script": {
+    "file": "certify_b_star_lines.py",
+    "sha256": "ce003f553ebc7eb3ef1f939c0c58e4c97173b11b612fd08134f1daa2366c5078"
+  },
+  "input": {
+    "file": "../stageb_global_basis/full_p3_contractions.npy",
+    "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019",
+    "shape": [10767, 6, 9139]
+  },
+  "common_pivot_preflight": {
+    "status": "PASS_COMMON_PROFILE",
+    "component_ranks": [9139, 9139, 9139, 9139, 9139, 9139],
+    "scope": "Six axis minors only; not a projective constant-rank theorem."
+  },
+  "lines": [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5]],
+  "exact_criterion": "For each normalized pencil, rank([U;UT;...;UT^5])=9139, where the stack has shape 9768x9139.",
+  "implication_if_decisive": "Surjectivity of the exact homogeneous degree-six Macaulay map makes the pencil cokernel zero from degree six onward; A(b) then has column rank 9139 at every geometric point of that projective line.",
+  "no_sampling": true,
+  "limitation": "Even five decisive star-line certificates would not cover P^5 and would not by themselves prove global Stage-B emptiness.",
+  "run_observations": [
+    "The first attempted launch was refused before allocation because free+speculative memory was 0.07 GiB, below the 6 GiB guard.",
+    "A later guarded attempt reached the common pivot inversion but stopped at the independent inverse-product check before any Krylov rank; this produced no certificate.",
+    "The inverse path was changed to in-place FFLAS with integer-rounded modular verification, but the corrected script was not rerun because free+speculative memory again fell below 6 GiB."
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "decision_status": "necessary first-normal reduction proved; saturation open",
+  "degrees": {
+    "31": {
+      "based_dimension": 177,
+      "first_normal_dimension": 147
+    },
+    "35": {
+      "based_dimension": 336,
+      "first_normal_dimension": 300
+    }
+  },
+  "mathematical_gate": "On the C3-based stratum p|_L=0, the first transverse Taylor coefficient Dp must land in the Klein cubic. Its C3 target eigenblock is either the non-Klein one-dimensional fixed space, forcing Dp=0, or a line meeting the Klein cubic in three reduced points, forcing projective constancy at the unique C6-fixed root. These are necessary linear equations.",
+  "prime_records": [
+    {
+      "degrees": {
+        "31": {
+          "based_restriction_rank": 21,
+          "blocks": [
+            {
+              "normal_direction_count": 1,
+              "payload": "degree_31/c3_first_normal_exp0_p463.npz",
+              "payload_sha256": "7894918aa8f990917ee330728a88ff3bc6589984885e3aff45702ed4e0b9a2a9",
+              "row_count": 155,
+              "target_eigenspace_dimension": 1,
+              "target_kind": "zero"
+            },
+            {
+              "normal_direction_count": 2,
+              "payload": "degree_31/c3_first_normal_exp2_p463.npz",
+              "payload_sha256": "231dd5860ce267f896d2765f15d78cfaed698bcfdcfd4c6765ace76fe23f61a0",
+              "row_count": 248,
+              "target_eigenspace_dimension": 2,
+              "target_kind": "fixed-root"
+            }
+          ],
+          "c3_gate_payload": "degree_31/c3_constant_gate_p463.npz",
+          "c3_gate_payload_sha256": "6327c6138fa878f958e122872abbdd52cf250056000795fd62bf9b5049f08dea",
+          "combined_gate_rank": 51,
+          "combined_kernel_dimension": 147,
+          "cumulative_ranks": [
+            21,
+            32,
+            51
+          ],
+          "input_dimension": 198
+        },
+        "35": {
+          "based_restriction_rank": 25,
+          "blocks": [
+            {
+              "normal_direction_count": 1,
+              "payload": "degree_35/c3_first_normal_exp0_p463.npz",
+              "payload_sha256": "7f28cca0759d44ffa7da1112da82593736865d97fa5927b6e06541793cf0f62f",
+              "row_count": 140,
+              "target_eigenspace_dimension": 2,
+              "target_kind": "fixed-root"
+            },
+            {
+              "normal_direction_count": 1,
+              "payload": "degree_35/c3_first_normal_exp2_dir0_p463.npz",
+              "payload_sha256": "cb7f045782bccf3f1c5fbd487520eb4dbe3724d614f68485f3d2816d9073ee65",
+              "row_count": 175,
+              "target_eigenspace_dimension": 1,
+              "target_kind": "zero"
+            },
+            {
+              "normal_direction_count": 1,
+              "payload": "degree_35/c3_first_normal_exp2_dir1_p463.npz",
+              "payload_sha256": "69c7f407c7d7b4bcc5f46a8a2eb947227a5944614b8be8e63c84b4d0fe65cfe8",
+              "row_count": 175,
+              "target_eigenspace_dimension": 1,
+              "target_kind": "zero"
+            }
+          ],
+          "c3_gate_payload": "degree_35/c3_constant_gate_p463.npz",
+          "c3_gate_payload_sha256": "2cec8fc6340045d9080b98846789adeb4350773f7f07fce18737d0257839a432",
+          "combined_gate_rank": 61,
+          "combined_kernel_dimension": 300,
+          "cumulative_ranks": [
+            25,
+            38,
+            61,
+            61
+          ],
+          "input_dimension": 361
+        }
+      },
+      "prime": 463,
+      "zeta11": 15
+    },
+    {
+      "degrees": {
+        "31": {
+          "based_restriction_rank": 21,
+          "blocks": [
+            {
+              "normal_direction_count": 1,
+              "payload": "degree_31/c3_first_normal_exp0_p727.npz",
+              "payload_sha256": "9f02b8db5dd396566848b1931e72d77c23d603f67683d37419a0e5e4f5fa3987",
+              "row_count": 155,
+              "target_eigenspace_dimension": 1,
+              "target_kind": "zero"
+            },
+            {
+              "normal_direction_count": 2,
+              "payload": "degree_31/c3_first_normal_exp2_p727.npz",
+              "payload_sha256": "b80c44372a4ea56b1ba737823b63e35f868a185b7ebb294d39993c58f26c00a4",
+              "row_count": 248,
+              "target_eigenspace_dimension": 2,
+              "target_kind": "fixed-root"
+            }
+          ],
+          "c3_gate_payload": "degree_31/c3_constant_gate_p727.npz",
+          "c3_gate_payload_sha256": "4fe4de2a354ecff6288f8129e6bb1ceb9d2bcca257012b4bff6398925e35bd39",
+          "combined_gate_rank": 51,
+          "combined_kernel_dimension": 147,
+          "cumulative_ranks": [
+            21,
+            32,
+            51
+          ],
+          "input_dimension": 198
+        },
+        "35": {
+          "based_restriction_rank": 25,
+          "blocks": [
+            {
+              "normal_direction_count": 1,
+              "payload": "degree_35/c3_first_normal_exp0_p727.npz",
+              "payload_sha256": "62ade3e078baf82a2d71819ba48e0f894e2a30299fb0298ca7e1c4fb6ac78a3a",
+              "row_count": 140,
+              "target_eigenspace_dimension": 2,
+              "target_kind": "fixed-root"
+            },
+            {
+              "normal_direction_count": 1,
+              "payload": "degree_35/c3_first_normal_exp2_dir0_p727.npz",
+              "payload_sha256": "9c4473f6073e394697c6bd7466f611f6b78e8c2a1288ff015eda4eb635c1187b",
+              "row_count": 175,
+              "target_eigenspace_dimension": 1,
+              "target_kind": "zero"
+            },
+            {
+              "normal_direction_count": 1,
+              "payload": "degree_35/c3_first_normal_exp2_dir1_p727.npz",
+              "payload_sha256": "8dd6552cdec31f69547ab71bc0ea36086bf229637b82f7230f59b66dbe74a4d0",
+              "row_count": 175,
+              "target_eigenspace_dimension": 1,
+              "target_kind": "zero"
+            }
+          ],
+          "c3_gate_payload": "degree_35/c3_constant_gate_p727.npz",
+          "c3_gate_payload_sha256": "bab3b9fa15897938f30e9dad51d51ca884aab5f7b9130587d5284e3c9dcf941c",
+          "combined_gate_rank": 61,
+          "combined_kernel_dimension": 300,
+          "cumulative_ranks": [
+            25,
+            38,
+            61,
+            61
+          ],
+          "input_dimension": 361
+        }
+      },
+      "prime": 727,
+      "zeta11": 46
+    }
+  ],
+  "schema": "cov-m1-c3-first-normal-gate-v1",
+  "scope": "special-fibre necessary pre-elimination on the based branch; residual projective saturation is not decided"
+}

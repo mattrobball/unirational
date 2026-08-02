@@ -1,8 +1,12 @@
 {
+  "closed_L8_stageB_and_stageC": true,
   "exit": "P25-UNDECIDED",
   "full_replay_requested": false,
   "headline": "OPEN",
   "no_unit_ideal_promoted": true,
-  "smallest_unresolved": "Stage B: b0=0,b1!=0 double saturation",
+  "pair_split_retry": "PREPARED_NOT_RUN",
+  "smallest_unresolved": "Stage B on D(H8): 34 certified affine cover charts, first chart undecided",
+  "stageB_complement_chart_count": 34,
+  "stageC_complement_chart_count": 29,
   "verdict": "PASS"
 }

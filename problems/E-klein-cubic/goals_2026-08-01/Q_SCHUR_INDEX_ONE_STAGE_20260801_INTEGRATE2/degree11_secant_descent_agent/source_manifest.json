@@ -1,0 +1,12 @@
+{
+  "certificates/exact_weil_check.py": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
+  "goals_2026-08-01/H_SUBGROUP_TWISTS_ROOT_019FBE10/produce.py": "29961a81786f493bc0362b67b4a4a9979224ccee9874a5e1046af5aa942e1f8b",
+  "goals_2026-08-01/H_SUBGROUP_TWISTS_ROOT_019FBE10/twists.json": "e97a32d6f22a8028528bc2b4d27ee009901caeb047fd2ffe5ac2bdd1fab743cd",
+  "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/a5_orbit_rnc_agent/SEAL.json": "a72455efbebbf4cc12045072e1318410cd536547d0d9801debe80a2ea7826248",
+  "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/a5_orbit_rnc_agent/probe_rnc_rank.py": "ffdea8a25350777f3271169c0ef0c9af3dbd9b3abf9388bd0bef2eecc1aad70e",
+  "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/a5_orbit_rnc_agent/source_manifest.json": "dc96a65fe544edec583a65bdd768cedf9d5f05610596999d43f707bb9a403372",
+  "goals_2026-08-01/Q_SCHUR_DESCENT/parallel/a5_orbit_rnc_agent/verify.py": "10513e8c99ed59a01b201ba9d213fcb87f9962ce9d463f9d2bc8a6fc9b0b1743",
+  "goals_after_35fa8f/point_attack_degree11_20260801/degree11_covariants_raw_exact.json": "a63757c9ecf5452f5b5d9af7796f8997d31bc187e7eb4a239620ec09b22ff985",
+  "goals_after_35fa8f/point_attack_degree11_20260801/degree11_reconstructed_relations.json": "e1dd860640ff6890fcc22335aa8281c4ec72d27378bb28c192f71d086546cf00",
+  "goals_after_35fa8f/point_attack_degree11_20260801/verify_exact_point.py": "9eee326abdc17c132d461ec49d315677403fc3ac77ffb4c67ff8bca4d7219f45"
+}

@@ -1,0 +1,8 @@
+{
+  "Q_SCHUR_DESCENT/parallel/h_trace_three_kummer_planes/payload.json": "a63f611864e660a187d1a4d241e18a79b4536d332940da95f488cc6a3cd40898",
+  "Q_SCHUR_DESCENT/parallel/h_trace_three_kummer_planes/verify.py": "fd85f9aa1543d572aaf21d0490b6c445acb5809f740678f8e01af93c7afd0893",
+  "Q_SCHUR_DESCENT/parallel/h_trace_plane_012_torsor_next/payload.json": "358c8bd64ac66b82741ae47cee20992c82a663388312aa3b5bafe4ffcf8b382c",
+  "Q_SCHUR_DESCENT/parallel/h_trace_plane_012_torsor_next/verify.py": "1328b25fe7c3faaabba12ca0e250886e03145cb7836e0bea0b05bb3032d2e54d",
+  "Q_SCHUR_DESCENT/parallel/h_trace_plane_012_jacobian/payload.json": "5a1b24fd0cf02a120146b10fb7d046e7cc5efb67b28d1dedcd799a407f308b9e",
+  "Q_SCHUR_DESCENT/parallel/h_trace_plane_012_jacobian/verify.py": "9c1c27d1739f736b6efbc3275e8e2e1767dddf9883917ec02dae1ec5ac269ee5"
+}

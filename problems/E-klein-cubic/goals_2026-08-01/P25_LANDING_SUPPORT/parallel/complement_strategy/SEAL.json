@@ -1,0 +1,226 @@
+{
+  "artifact_manifest": {
+    "REPORT.md": {
+      "bytes": 12281,
+      "sha256": "19f1db89b71abab9264845bbc2ad27783f3eb22f7e491fc4121a3a605b23d49f"
+    },
+    "affine_q0_r64_augmented_module.json": {
+      "bytes": 798,
+      "sha256": "01bc29ab1bcdeca26462ac1b6bc36272698410e1b82ab798e7d838216e551c67"
+    },
+    "affine_q0_r64_augmented_module.sing": {
+      "bytes": 101995996,
+      "sha256": "c9fb79809264cd5c5b0f396cce88e85310e7b4f4c036ed7d124ace497f097bcf"
+    },
+    "affine_q0_r64_augmented_module.superseded.log": {
+      "bytes": 410,
+      "sha256": "c73e7cc315c1691edb7eb6928ff7ffa30d9f67daa95ae190bcb8e37cefa6206f"
+    },
+    "analyze_faithful_segre.py": {
+      "bytes": 7262,
+      "sha256": "803b9ded77d2854f194a58a7019e47b2e6570bcf73dd75eb9f3cf9a301a40d30"
+    },
+    "audit_free_quotient.py": {
+      "bytes": 3729,
+      "sha256": "7bf29ddb04280077838da0fd1e8b5974d521050bf3452189ee2fcda253983c58"
+    },
+    "audit_inputs.py": {
+      "bytes": 8415,
+      "sha256": "12ace3bfbf069ee6e5c6f0b9a23e2dafd8a6ae65c0c4f0e854f037ca151716f8"
+    },
+    "audit_result.json": {
+      "bytes": 3871,
+      "sha256": "42e34f16f9a263ab7de4bd77eb54937fb7e4c59972f563a4ab394074e73415d9"
+    },
+    "canonical_free_quotient_result.json": {
+      "bytes": 7188,
+      "sha256": "458071ceabfd00aace227bc6fe9dc505cb6f7056f93cbd2db1ca4c034551c75b"
+    },
+    "faithful_cell_free_ids.raw": {
+      "bytes": 35964,
+      "sha256": "6bc2fd9096d702efcd9a2b9f0d61f59642ca84f20367870fec71314d709734e8"
+    },
+    "faithful_free_minor_components.raw": {
+      "bytes": 37074660,
+      "sha256": "493e3639f79d09fb41382b55b0e70b210cf5105d90b8727266fa66537eae8c7c"
+    },
+    "faithful_kernel_basis.npy": {
+      "bytes": 21503603,
+      "sha256": "dcf5bd0362a051d45677c5ac5f7700f4ceeb87522fee9d8cdd93488557aed7db"
+    },
+    "faithful_segre_dimension_audit.py": {
+      "bytes": 4567,
+      "sha256": "49a2df3b4048aa6dacf345ce7e9c788a76994a1159fbaec9d68219a1fcd3cb6e"
+    },
+    "faithful_segre_dimension_result.json": {
+      "bytes": 2009,
+      "sha256": "08de0b31c3f69e39766657d9bd4b441a7ea57781399c570acd5e424778ab482f"
+    },
+    "faithful_segre_free_block.json": {
+      "bytes": 1411,
+      "sha256": "0ffc2cb840b34ee4ad0518f4900e0a84e03e6e781cd26ec7d8ab13567b62cd69"
+    },
+    "free_minor_union": {
+      "bytes": 39040,
+      "sha256": "8a5f7d839611fb328a1a80a6a510d7db69137a3b1c5617b36e26103056abea3a"
+    },
+    "free_minor_union.cpp": {
+      "bytes": 3996,
+      "sha256": "6a93cb0127115e3fc558946d2e88d4704d1c4b447451ba7cac8d70c48771c13e"
+    },
+    "make_seal.py": {
+      "bytes": 5786,
+      "sha256": "2752ef25d676d789059b5fc40b3e060e905df618a5bbee31fa1106683124add3"
+    },
+    "produce_affine_augmented_module.py": {
+      "bytes": 5503,
+      "sha256": "ab0e5aa3a16ca7944b3eccfc670da3dd58f96e32afd7585abf0bb94d26ac0edc"
+    },
+    "run_bounded.py": {
+      "bytes": 3954,
+      "sha256": "cbc707099b68da50c5ba3859d1542eeb8f0e60cdcfd8b71ce541b1c2db68cd60"
+    },
+    "verify_seal.py": {
+      "bytes": 2691,
+      "sha256": "5e98152984a2fbf098d87a6767676f39fbeec3dbb27910f395504c1ad668b48d"
+    }
+  },
+  "date": "2026-08-01",
+  "exact_conclusions": {
+    "closed_L8_stageB_empty": true,
+    "closed_L8_stageC_empty": true,
+    "faithful_stageA_plus_B_free_block": {
+      "all_free_minor_rank": 6734578,
+      "all_free_quotient_dimension": 2534087
+    },
+    "old_r48_retired_on_H8_complement": {
+      "P3_rank": 4,
+      "P3_target_rank": 6,
+      "augmented_rank": 4,
+      "augmented_target_rank": 7,
+      "meaning": "These are exact points of the compressed r48 necessary systems, not points of the full landing incidence.",
+      "normalized_stageC_witness_b1": [
+        74,
+        51,
+        64,
+        74,
+        0,
+        0
+      ],
+      "point": "q=e12",
+      "stageB_witness_b1": [
+        54,
+        14,
+        19,
+        35,
+        1,
+        0
+      ]
+    },
+    "quadratic_full_span_refuted": {
+      "all_stages_degree_two_lower_bound": 5379706,
+      "meaning": "Failure of quadratic full span is not a landing point and does not prove nonemptiness.",
+      "stageA_plus_B_degree_two_lower_bound": 24252
+    },
+    "r64_viable_cover": {
+      "chart_count": 29,
+      "charts": [
+        0,
+        1,
+        2,
+        3,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "completed_unit_charts_in_this_packet": 0,
+      "criterion": "all seven free generators reduce to zero modulo std(N)"
+    }
+  },
+  "global_theorem_status": "P25-UNDECIDED",
+  "input_bindings": {
+    "closed_stageB_certificate": {
+      "sha256": "89ec13bb2672a8b26e5e3e5beed74dfa21bf4374c4d6d57721b0d475f5f9a41a"
+    },
+    "closed_stageB_replay": {
+      "sha256": "b30c9d6555e9d85f7d306736800e8279b644c1e82809b486ec03542174055439"
+    },
+    "closed_stageC_artifact": {
+      "sha256": "ad64848d98316eff00793814a5e8be09978f61c13057e4256e9a586375093957"
+    },
+    "closed_stageC_certificate": {
+      "sha256": "8bae2e072bc64a68cebcad7743c0884a1901eb3ae3026e5168dd8598f99bc6bb"
+    },
+    "closed_stageC_replay": {
+      "sha256": "72efd550a199412961ca48bb68f38de200e3f645c4e4fc917a93803c2c7fd6c4"
+    },
+    "old_r48": {
+      "sha256": "ba6d0533ab7fdb8bd93fb9309ce5b7d615f0a4799b22aa5e502e2dfec0bc21bb",
+      "shape_p3": [
+        48,
+        6,
+        9139
+      ]
+    },
+    "r64": {
+      "sha256": "c50de97aa4fc9465793f3fe84b544731b36cec1a2807113e94817c955897be2b",
+      "shape_p3": [
+        64,
+        6,
+        9139
+      ]
+    },
+    "r64_replay": {
+      "sha256": "c20d291bd15031b0bcd3a688fcf117cf57d08ddf7d18644980b3d55981d11df6"
+    }
+  },
+  "prime": 89,
+  "replay_markers": [
+    "PASS_EXACT_INPUT_AUDIT_NONVERDICT",
+    "PASS_FAITHFUL_SEGRE_FREE_BLOCK_NONVERDICT",
+    "PASS_CANONICAL_FREE_QUOTIENT_NONVERDICT",
+    "PASS_QUADRATIC_FULL_SPAN_REFUTED_BY_EXACT_DIMENSIONS",
+    "PASS_COMPLEMENT_STRATEGY_SEAL"
+  ],
+  "resource_floor": {
+    "canonical_mu_shape": [
+      3233097,
+      3446550
+    ],
+    "coefficient_bytes_lower_bound": 14673616695,
+    "conclusion": "No deterministic sub-8-GiB, sub-10-minute exact higher-degree certificate route was identified.",
+    "degree_three_ambient_dimension": 767100243,
+    "maximum_residual_rank": 2509835,
+    "ordinary_CSR_estimate_bytes": 73368083475,
+    "raw_product_terms": 14673616695,
+    "residual_columns": 2534087
+  },
+  "schema": "P25_COMPLEMENT_STRATEGY_SEAL_V1",
+  "scope_guard": {
+    "not_proved": "any r64 chart unit result; Stage B/C emptiness on D(H8); global degree-25 emptiness; characteristic-zero covariant",
+    "proved": "old-r48 retirement; closed-L8 bindings; exact faithful-Segre free block and Koszul dimension obstructions"
+  },
+  "status": "P25_COMPLEMENT_STRATEGY_UNDECIDED_EXACT_AUDIT"
+}

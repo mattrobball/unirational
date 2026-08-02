@@ -1,0 +1,208 @@
+{
+  "backend": {
+    "determinant": "FFLAS-FFPACK Det_modular_double",
+    "rank": "FFLAS-FFPACK RowRankProfile_modular_double, PLUQ"
+  },
+  "certificate": {
+    "bytes": 56466,
+    "file": "pc2_coordinate_plane_certificate.npz",
+    "sha256": "703cbe9f9bd3ebb2312a7a79fe5491e66f6b433b6625ec1bebe144cc1000d97a"
+  },
+  "contractions": {
+    "P3": {
+      "byte_matches_complete_stored_P3": true,
+      "identity": "P3 = C M1",
+      "sha256": "deb3815b6a0998081dadd93fc4af9b5e2312c4df43c674f209e5052fe3c6bbf8",
+      "shape": [
+        412,
+        6,
+        9139
+      ]
+    },
+    "P4": {
+      "identity": "P4 = C M0",
+      "sha256": "353e268cbffb18bae00453c83f8299c45d708d4eee0327840adbf372c03a74ce",
+      "shape": [
+        412,
+        91390
+      ]
+    },
+    "exact_modular_double_bound": "690*88*88=5343360 < 2^53"
+  },
+  "coordinate_plane_certificate": {
+    "coordinate_triples": 7770,
+    "determinant_histogram_mod89": {
+      "1": 69,
+      "10": 94,
+      "11": 91,
+      "12": 99,
+      "13": 87,
+      "14": 99,
+      "15": 77,
+      "16": 88,
+      "17": 92,
+      "18": 96,
+      "19": 92,
+      "2": 97,
+      "20": 81,
+      "21": 99,
+      "22": 84,
+      "23": 93,
+      "24": 85,
+      "25": 86,
+      "26": 98,
+      "27": 86,
+      "28": 82,
+      "29": 84,
+      "3": 88,
+      "30": 83,
+      "31": 86,
+      "32": 101,
+      "33": 97,
+      "34": 91,
+      "35": 96,
+      "36": 70,
+      "37": 96,
+      "38": 82,
+      "39": 107,
+      "4": 85,
+      "40": 97,
+      "41": 89,
+      "42": 94,
+      "43": 113,
+      "44": 78,
+      "45": 96,
+      "46": 88,
+      "47": 80,
+      "48": 93,
+      "49": 93,
+      "5": 112,
+      "50": 82,
+      "51": 86,
+      "52": 89,
+      "53": 90,
+      "54": 89,
+      "55": 82,
+      "56": 100,
+      "57": 88,
+      "58": 80,
+      "59": 83,
+      "6": 76,
+      "60": 77,
+      "61": 88,
+      "62": 74,
+      "63": 88,
+      "64": 88,
+      "65": 105,
+      "66": 84,
+      "67": 101,
+      "68": 84,
+      "69": 83,
+      "7": 74,
+      "70": 90,
+      "71": 92,
+      "72": 84,
+      "73": 84,
+      "74": 70,
+      "75": 88,
+      "76": 92,
+      "77": 107,
+      "78": 79,
+      "79": 89,
+      "8": 87,
+      "80": 83,
+      "81": 102,
+      "82": 79,
+      "83": 89,
+      "84": 84,
+      "85": 95,
+      "86": 71,
+      "87": 87,
+      "88": 69,
+      "9": 84
+    },
+    "local_projective_space": "P^2 on each coordinate triple",
+    "local_quartic_dimension": 15,
+    "local_six_cubic_dimension": 60,
+    "matrix_shape_each": [
+      412,
+      75
+    ],
+    "nonzero_selected_minors": 7770,
+    "rank_histogram": {
+      "75": 7770
+    },
+    "restricted_matrices_sha256": "b4812cec6037b31d5be75b5b17fe9316f6a7820e8f2bf33c4fc46e4967b83dbc",
+    "row_rank_profiles_shape": [
+      7770,
+      75
+    ],
+    "selected_minors_sha256": "0e31d31c037aad3ab2bf1bdb5bb947f24acdece8415c2bf7fefac5f778d4c756",
+    "target_dimension": 75
+  },
+  "identity_replay": {
+    "components": 21,
+    "identities": "C(q) M2(q) = 0",
+    "quadratic_coefficients_per_component": 703,
+    "residual_nonzero_coefficients": 0,
+    "residual_sha256": "999dfa86d7e2c6f5b1c5ccf56646ea942e01d74eb7dd0211711625f08735cc86",
+    "rows_checked": 412
+  },
+  "inputs": {
+    "full_linear_syzygy_basis": {
+      "bytes": 274881638,
+      "path": "goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_linear_syzygy_basis.npy",
+      "sha256": "3571e9879bf1af6d6a405d9761522d4253e76e40edd129afd4b9363287d60ca3",
+      "shape": [
+        10767,
+        690,
+        37
+      ]
+    },
+    "full_p3_contractions": {
+      "bytes": 590397806,
+      "path": "goals_2026-08-01/P25_LANDING_SUPPORT/parallel/stageb_global_basis/full_p3_contractions.npy",
+      "sha256": "93eb010020c7b808039243cd64aede54677c95f74c17efe8e3abb03c5dbf2019",
+      "shape": [
+        10767,
+        6,
+        9139
+      ]
+    },
+    "relation_matrix": {
+      "bytes": 7661361,
+      "path": "certificates/degree25_finite_module/relation_matrix.npz",
+      "sha256": "6aeeeb0b1bdc81dafec9872f7543468f426336ccc3ed11087bfa56e9dddaa4fb",
+      "shape": [
+        690,
+        14134
+      ]
+    }
+  },
+  "prime": 89,
+  "resource": {
+    "max_rss_note": "On macOS ru_maxrss is bytes.",
+    "max_rss_raw": 447578112
+  },
+  "selection": {
+    "rows": 412,
+    "rule": "sort the first 412 entries of numpy PCG64 permutation(10767) with seed 2026080125; persist the explicit row list",
+    "seed": 2026080125,
+    "selected_rows_sha256": "d6df5a14bbad060ed255a50bb149e83d7c0db4caee2055dbe849f921488edd66",
+    "selected_syzygies_sha256": "058ee61e00d4463b8733829ae35b78b7b4c8485b83319a9874f0afba46224b6c"
+  },
+  "status": "PC2-COORDINATE-PLANES-PASS",
+  "theorem": {
+    "does_not_prove": "Any statement for q-support at least four, global Stage B or Stage C, the complete projective degree-25 support, characteristic-zero emptiness, transition stabilization, or the Problem E headline.",
+    "implication": "Every original 690-row incidence point satisfies the contraction equations, so the true special-fibre Stage-B/Stage-C loci also have no point with q-support at most three.",
+    "proved": "Over F_89, the selected genuine contraction rows have augmented rank seven at every nonzero q with coordinate support at most three. Thus the combined Stage B (b0=0,b1!=0) and normalized Stage C (b0!=0) necessary-equation loci are empty on that bounded union.",
+    "status_guard": "PC-UNDECIDED remains required globally."
+  },
+  "timing": {
+    "cm2_identity_seconds": 0.979984792007599,
+    "coordinate_plane_rank_and_minor_seconds": 40.703372709002,
+    "p3_rebuild_seconds": 5.504506083991146,
+    "p4_rebuild_seconds": 12.508744209000724,
+    "total_seconds": 62.13320825000119
+  }
+}

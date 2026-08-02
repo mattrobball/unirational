@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/opt/homebrew/bin/python3",
+    "-u",
+    "/Users/worker/unirational/problems/E-klein-cubic/goals_2026-08-01/P25_LANDING_SUPPORT/parallel/systematic_module/sample_degree4_dp_pairs.py",
+    "--pairs",
+    "8",
+    "--chunk",
+    "512"
+  ],
+  "complete": true,
+  "elapsed_seconds": 30.697372,
+  "log": "degree4_dp_sample8.log",
+  "log_bytes": 8882,
+  "log_sha256": "46bf79a872181c38776a65cccbb46fd99344e71e9087d8e84b602c28160d3b2b",
+  "peak_rss_bytes_polled": 2440871936,
+  "returncode": 0,
+  "rss_limit_bytes": 8589934592,
+  "script": "sample_degree4_dp_pairs.py",
+  "script_sha256": "5903c58b2e6725abb552cd115efd81340fa40ac7b28a3c37084ee72dfcd7148f",
+  "stop_reason": null,
+  "timeout_seconds": 600.0
+}

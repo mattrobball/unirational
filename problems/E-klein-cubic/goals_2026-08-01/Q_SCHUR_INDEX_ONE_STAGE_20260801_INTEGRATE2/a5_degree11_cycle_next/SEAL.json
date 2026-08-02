@@ -1,0 +1,11 @@
+{
+  "format": "q-schur-a5-degree11-cycle-seal-v1",
+  "marker": "Q_SCHUR_EFFECTIVE_DEGREE11_ZERO_CYCLE_VERIFIED",
+  "status": "Q-UNDECIDED",
+  "files": {
+    "REPORT.md": "7a7497210ded6e5a14a997d8e739570457e5f21c94b9cfff4dd0d19a31d6a05d",
+    "REPLAY.md": "9ac592e49244ca108f1a4e3c6bb55e685d7a4bbb20fe06283f8b55084080e956",
+    "payload.json": "8de83cdf2ab4f423a2d6e5838396f8a77c649344d956da632bba88c6d4e1fb42",
+    "verify.py": "5eb6cdeed809d9c339ffd4f8dbb4a20d99435c4700d53a31b0aadba1d3700653"
+  }
+}
