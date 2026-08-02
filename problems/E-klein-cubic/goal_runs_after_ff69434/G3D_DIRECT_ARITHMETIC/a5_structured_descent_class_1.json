@@ -1,0 +1,19 @@
+{
+  "A5_class": 1,
+  "H_A5_status": "H-A5-CLASS1-RATIONAL-POINT",
+  "G4_induced_degree11": "G4-INDUCED-DEGREE11-POINT-PASS",
+  "G3H_frame": "G3H-SEMILINEAR-G3-FRAME-PASS (optional accelerator)",
+  "L_i_over_K": "degree 11 finite \u00e9tale (G4 coset algebra)",
+  "quadratic_springer_on_Q_q": {
+    "status": "OPEN",
+    "blocker": "G3H residual: L_i-point on K_proj quadric / secondary beta tables; no certified isotropic K-line reconstructed yet"
+  },
+  "Clifford_2primary": {
+    "status": "OPEN",
+    "note": "Requires exact even Clifford class of Q_q over K"
+  },
+  "sixer_3primary": {
+    "status": "N/A_NO_SIXER"
+  },
+  "illegal_cubic_descent_rejected": true
+}

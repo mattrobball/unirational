@@ -1,0 +1,23 @@
+{
+  "primary_exit": "G3D-UNDECIDED",
+  "also_exits": [
+    "G3D-K-SIMPLE-MODEL-PASS",
+    "G3D-POLAR-CUBIC-SURFACE-PASS",
+    "G3D-HESSIAN-KERNEL-PASS",
+    "G3D-HESSIAN-CUBE-REDUCTION-PASS",
+    "G3D-A5-STRUCTURED-DESCENT-PASS"
+  ],
+  "phases": {
+    "k_simple": "G3D-K-SIMPLE-MODEL-PASS",
+    "polar_surface": "G3D-POLAR-CUBIC-SURFACE-PASS",
+    "lines": "G3D-LINE-27-ALGEBRA-PARTIAL",
+    "hessian": "G3D-HESSIAN-KERNEL-PASS",
+    "cube": "G3D-HESSIAN-CUBE-REDUCTION-PASS",
+    "witt": "G3D-POLAR-CLIFFORD-PARTIAL",
+    "spinor": "G3D-SPINOR-DISCRIMINANT-PARTIAL",
+    "a5": "G3D-A5-STRUCTURED-DESCENT-PASS"
+  },
+  "errors": [],
+  "wall_time_s": 53.65,
+  "headline": "OPEN"
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "g3d-hessian-cube-cover-v1",
+  "map": "(z,v,[s:t]) |-> s z + t v lands on X_gen when s^3 Phi(z)+t^3 Phi(v)=0 and M(z)v=0",
+  "identity_on_Gamma": "B(z,z,v)=B(z,v,v)=0 => Phi(sz+tv)=s^3 Phi(z)+t^3 Phi(v)",
+  "ratio_cube_test": "residual: generic ratio Phi(z)/Phi(v(z)) cube-class in function field of Hessian components",
+  "status": "STRUCTURAL_REDUCTION_INSTALLED",
+  "rank4_adjugate_charts": "kernel from nonzero adjugate column when rank=4",
+  "specialized_rank4_count": 0,
+  "marker": "G3D-HESSIAN-CUBE-REDUCTION-PASS",
+  "point_produced": false
+}

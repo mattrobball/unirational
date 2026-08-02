@@ -1,0 +1,6 @@
+{
+  "schema": "g3d-surface-determinantal-v1",
+  "status": "NO_DETERMINANTAL_MATRIX_OVER_K",
+  "reason": "no certified K-sixer with vanishing Brauer class",
+  "sixer_link": "sixer_descent.json"
+}

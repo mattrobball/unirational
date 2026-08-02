@@ -1,0 +1,271 @@
+{
+  "schema": "g3d-line-27-algebra-v1",
+  "surface": "S_q specialized secondary-0 slice at t=(2,3,5,7)",
+  "open": "t3 != 0; dens of G_q recorded in polar_cubic_surface.json",
+  "charts": [
+    {
+      "pivots": [
+        0,
+        1
+      ],
+      "free": [
+        2,
+        3
+      ],
+      "equations": [
+        "-19123560*a**3 - 5420692368*a**2*b + 292649760*a**2 - 463209918408*a*b**2 + 20919468240*a*b - 2143924848*a - 27706297104*b**3 - 208385585712*b**2 + 4724950320*b - 67767840",
+        "-57370680*a**2*c - 5420692368*a**2*d + 128620224*a**2 - 10841384736*a*b*c - 926419836816*a*b*d - 36289954368*a*b + 585299520*a*c + 20919468240*a*d + 19702167840*a - 463209918408*b**2*c - 83118891312*b**2*d + 834391228032*b**2 + 20919468240*b*c - 416771171424*b*d - 30389346720*b - 2143924848*c + 4724950320*d + 66251520",
+        "-57370680*a*c**2 - 10841384736*a*c*d + 257240448*a*c - 463209918408*a*d**2 - 36289954368*a*d + 70294184640*a - 5420692368*b*c**2 - 926419836816*b*c*d - 36289954368*b*c - 83118891312*b*d**2 + 1668782456064*b*d + 2394347545008*b + 292649760*c**2 + 20919468240*c*d + 19702167840*c - 208385585712*d**2 - 30389346720*d + 12603143808",
+        "-19123560*c**3 - 5420692368*c**2*d + 128620224*c**2 - 463209918408*c*d**2 - 36289954368*c*d + 70294184640*c - 27706297104*d**3 + 834391228032*d**2 + 2394347545008*d + 32681478240"
+      ],
+      "equation_meta": [
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        }
+      ],
+      "n_solutions_affine": "residual_exact_RUR",
+      "solutions_sample": [],
+      "note": "exact zero-dimensional solve residual; box search used for rational discovery"
+    },
+    {
+      "pivots": [
+        0,
+        2
+      ],
+      "free": [
+        1,
+        3
+      ],
+      "equations": [
+        "32681478240*a**3 + 2394347545008*a**2*b + 12603143808*a**2 + 834391228032*a*b**2 - 30389346720*a*b + 66251520*a - 27706297104*b**3 - 208385585712*b**2 + 4724950320*b - 67767840",
+        "98044434720*a**2*c + 2394347545008*a**2*d + 70294184640*a**2 + 4788695090016*a*b*c + 1668782456064*a*b*d - 36289954368*a*b + 25206287616*a*c - 30389346720*a*d + 19702167840*a + 834391228032*b**2*c - 83118891312*b**2*d - 463209918408*b**2 - 30389346720*b*c - 416771171424*b*d + 20919468240*b + 66251520*c + 4724950320*d - 2143924848",
+        "98044434720*a*c**2 + 4788695090016*a*c*d + 140588369280*a*c + 834391228032*a*d**2 - 36289954368*a*d + 128620224*a + 2394347545008*b*c**2 + 1668782456064*b*c*d - 36289954368*b*c - 83118891312*b*d**2 - 926419836816*b*d - 5420692368*b + 12603143808*c**2 - 30389346720*c*d + 19702167840*c - 208385585712*d**2 + 20919468240*d + 292649760",
+        "32681478240*c**3 + 2394347545008*c**2*d + 70294184640*c**2 + 834391228032*c*d**2 - 36289954368*c*d + 128620224*c - 27706297104*d**3 - 463209918408*d**2 - 5420692368*d - 19123560"
+      ],
+      "equation_meta": [
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        }
+      ],
+      "n_solutions_affine": "residual_exact_RUR",
+      "solutions_sample": [],
+      "note": "exact zero-dimensional solve residual; box search used for rational discovery"
+    },
+    {
+      "pivots": [
+        0,
+        3
+      ],
+      "free": [
+        1,
+        2
+      ],
+      "equations": [
+        "32681478240*a**3 + 70294184640*a**2*b + 12603143808*a**2 + 128620224*a*b**2 + 19702167840*a*b + 66251520*a - 19123560*b**3 + 292649760*b**2 - 2143924848*b - 67767840",
+        "98044434720*a**2*c + 70294184640*a**2*d + 2394347545008*a**2 + 140588369280*a*b*c + 257240448*a*b*d - 36289954368*a*b + 25206287616*a*c + 19702167840*a*d - 30389346720*a + 128620224*b**2*c - 57370680*b**2*d - 5420692368*b**2 + 19702167840*b*c + 585299520*b*d + 20919468240*b + 66251520*c - 2143924848*d + 4724950320",
+        "98044434720*a*c**2 + 140588369280*a*c*d + 4788695090016*a*c + 128620224*a*d**2 - 36289954368*a*d + 834391228032*a + 70294184640*b*c**2 + 257240448*b*c*d - 36289954368*b*c - 57370680*b*d**2 - 10841384736*b*d - 463209918408*b + 12603143808*c**2 + 19702167840*c*d - 30389346720*c + 292649760*d**2 + 20919468240*d - 208385585712",
+        "32681478240*c**3 + 70294184640*c**2*d + 2394347545008*c**2 + 128620224*c*d**2 - 36289954368*c*d + 834391228032*c - 19123560*d**3 - 5420692368*d**2 - 463209918408*d - 27706297104"
+      ],
+      "equation_meta": [
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        }
+      ],
+      "n_solutions_affine": "residual_exact_RUR",
+      "solutions_sample": [],
+      "note": "exact zero-dimensional solve residual; box search used for rational discovery"
+    },
+    {
+      "pivots": [
+        1,
+        2
+      ],
+      "free": [
+        0,
+        3
+      ],
+      "equations": [
+        "-67767840*a**3 + 4724950320*a**2*b + 66251520*a**2 - 208385585712*a*b**2 - 30389346720*a*b + 12603143808*a - 27706297104*b**3 + 834391228032*b**2 + 2394347545008*b + 32681478240",
+        "-203303520*a**2*c + 4724950320*a**2*d - 2143924848*a**2 + 9449900640*a*b*c - 416771171424*a*b*d + 20919468240*a*b + 132503040*a*c - 30389346720*a*d + 19702167840*a - 208385585712*b**2*c - 83118891312*b**2*d - 463209918408*b**2 - 30389346720*b*c + 1668782456064*b*d - 36289954368*b + 12603143808*c + 2394347545008*d + 70294184640",
+        "-203303520*a*c**2 + 9449900640*a*c*d - 4287849696*a*c - 208385585712*a*d**2 + 20919468240*a*d + 292649760*a + 4724950320*b*c**2 - 416771171424*b*c*d + 20919468240*b*c - 83118891312*b*d**2 - 926419836816*b*d - 5420692368*b + 66251520*c**2 - 30389346720*c*d + 19702167840*c + 834391228032*d**2 - 36289954368*d + 128620224",
+        "-67767840*c**3 + 4724950320*c**2*d - 2143924848*c**2 - 208385585712*c*d**2 + 20919468240*c*d + 292649760*c - 27706297104*d**3 - 463209918408*d**2 - 5420692368*d - 19123560"
+      ],
+      "equation_meta": [
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        }
+      ],
+      "n_solutions_affine": "residual_exact_RUR",
+      "solutions_sample": [],
+      "note": "exact zero-dimensional solve residual; box search used for rational discovery"
+    },
+    {
+      "pivots": [
+        1,
+        3
+      ],
+      "free": [
+        0,
+        2
+      ],
+      "equations": [
+        "-67767840*a**3 - 2143924848*a**2*b + 66251520*a**2 + 292649760*a*b**2 + 19702167840*a*b + 12603143808*a - 19123560*b**3 + 128620224*b**2 + 70294184640*b + 32681478240",
+        "-203303520*a**2*c - 2143924848*a**2*d + 4724950320*a**2 - 4287849696*a*b*c + 585299520*a*b*d + 20919468240*a*b + 132503040*a*c + 19702167840*a*d - 30389346720*a + 292649760*b**2*c - 57370680*b**2*d - 5420692368*b**2 + 19702167840*b*c + 257240448*b*d - 36289954368*b + 12603143808*c + 70294184640*d + 2394347545008",
+        "-203303520*a*c**2 - 4287849696*a*c*d + 9449900640*a*c + 292649760*a*d**2 + 20919468240*a*d - 208385585712*a - 2143924848*b*c**2 + 585299520*b*c*d + 20919468240*b*c - 57370680*b*d**2 - 10841384736*b*d - 463209918408*b + 66251520*c**2 + 19702167840*c*d - 30389346720*c + 128620224*d**2 - 36289954368*d + 834391228032",
+        "-67767840*c**3 - 2143924848*c**2*d + 4724950320*c**2 + 292649760*c*d**2 + 20919468240*c*d - 208385585712*c - 19123560*d**3 - 5420692368*d**2 - 463209918408*d - 27706297104"
+      ],
+      "equation_meta": [
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        }
+      ],
+      "n_solutions_affine": "residual_exact_RUR",
+      "solutions_sample": [],
+      "note": "exact zero-dimensional solve residual; box search used for rational discovery"
+    },
+    {
+      "pivots": [
+        2,
+        3
+      ],
+      "free": [
+        0,
+        1
+      ],
+      "equations": [
+        "-67767840*a**3 + 66251520*a**2*b - 2143924848*a**2 + 12603143808*a*b**2 + 19702167840*a*b + 292649760*a + 32681478240*b**3 + 70294184640*b**2 + 128620224*b - 19123560",
+        "-203303520*a**2*c + 66251520*a**2*d + 4724950320*a**2 + 132503040*a*b*c + 25206287616*a*b*d - 30389346720*a*b - 4287849696*a*c + 19702167840*a*d + 20919468240*a + 12603143808*b**2*c + 98044434720*b**2*d + 2394347545008*b**2 + 19702167840*b*c + 140588369280*b*d - 36289954368*b + 292649760*c + 128620224*d - 5420692368",
+        "-203303520*a*c**2 + 132503040*a*c*d + 9449900640*a*c + 12603143808*a*d**2 - 30389346720*a*d - 208385585712*a + 66251520*b*c**2 + 25206287616*b*c*d - 30389346720*b*c + 98044434720*b*d**2 + 4788695090016*b*d + 834391228032*b - 2143924848*c**2 + 19702167840*c*d + 20919468240*c + 70294184640*d**2 - 36289954368*d - 463209918408",
+        "-67767840*c**3 + 66251520*c**2*d + 4724950320*c**2 + 12603143808*c*d**2 - 30389346720*c*d - 208385585712*c + 32681478240*d**3 + 2394347545008*d**2 + 834391228032*d - 27706297104"
+      ],
+      "equation_meta": [
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 18
+        },
+        {
+          "zero": false,
+          "total_degree": 3,
+          "nterms": 10
+        }
+      ],
+      "n_solutions_affine": "residual_exact_RUR",
+      "solutions_sample": [],
+      "note": "exact zero-dimensional solve residual; box search used for rational discovery"
+    }
+  ],
+  "total_affine_solutions_summed_over_charts": "residual_exact_RUR",
+  "rational_lines_secondary0_slice": [],
+  "rational_lines_all_components": [],
+  "K_rational_line": null,
+  "geometric_degree": {
+    "expected_if_smooth": 27,
+    "classical_reference": "27 lines on smooth cubic surface",
+    "exact_RUR_over_K": "residual (resource-scoped)"
+  },
+  "sixer_descent": {
+    "status": "NO_K_SIXER_CERTIFIED",
+    "note": "Sixer/double-six reconstruction requires the exact 27-line algebra over K. Specialized probes did not yield a Galois-stable sixer over the base. Severi\u2013Brauer obstruction for determinantal descent is load-bearing; not claimed from Galois-stable sets alone.",
+    "determinantal_matrix": null,
+    "Brauer_class": "undecided"
+  },
+  "wall_time_s": 7.396,
+  "marker": "G3D-LINE-27-ALGEBRA-PARTIAL",
+  "point_from_line": false
+}

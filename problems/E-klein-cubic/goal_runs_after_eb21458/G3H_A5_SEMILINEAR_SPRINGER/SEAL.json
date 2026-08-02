@@ -1,17 +1,24 @@
 {
-  "consumed_commit": "d1f43d6e393618412dfbe223e9f828a64509f629",
+  "consumed_commit": "d6862836f2c6198ec1ed95a6627b70f168260beb",
   "exit": "G3H-SEMILINEAR-G3-FRAME-PASS",
   "goal": "G3H_A5_SEMILINEAR_SPRINGER",
   "headline": "OPEN",
-  "phase5_next": {
-    "dir": "phase5_springer_next/",
-    "expansion_marker": "G3H-AI-EXPANSION-DUAL-PASS",
-    "marker": "G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED",
-    "residual_gates": [
+  "phase5_beta_li_springer": {
+    "L_i_point_marker": "G3H-LI-POINT-ON-KPROJ-QUADRATIC-CLOSED-NO",
+    "dir": "phase5_beta_li_springer/",
+    "gates_closed": [
       "G3H-AI-SECONDARY-TABLE-OPEN",
       "G3H-LI-POINT-ON-KPROJ-QUADRATIC-OPEN",
       "G3H-SPRINGER-MAPBACK-OPEN"
-    ]
+    ],
+    "marker": "G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED",
+    "route1_decision": "KILL",
+    "secondary_marker": "G3H-AI-SECONDARY-TABLE-OBSTRUCTION"
+  },
+  "phase5_next": {
+    "dir": "phase5_springer_next/",
+    "expansion_marker": "G3H-AI-EXPANSION-DUAL-PASS",
+    "marker": "G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED"
   },
   "phase_markers": [
     "G3H-G7B-QUARANTINE-PASS",
@@ -19,13 +26,15 @@
     "G3H-SEMILINEAR-LANDING-PASS",
     "G3H-SEMILINEAR-G3-FRAME-PASS",
     "G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED",
-    "G3H-AI-EXPANSION-DUAL-PASS"
+    "G3H-AI-EXPANSION-DUAL-PASS",
+    "G3H-AI-SECONDARY-TABLE-OBSTRUCTION",
+    "G3H-LI-POINT-ON-KPROJ-QUADRATIC-CLOSED-NO"
   ],
   "pinned_main_target": "eb21458bea684d2399ad18f003e2be8ebdd161ce",
   "resources": {
-    "peak_rss_mb": 66.03125,
+    "peak_rss_mb": 64.125,
     "python": "3.14.6",
-    "wall_seconds": 0.3266329765319824
+    "wall_seconds": 0.1189267635345459
   },
-  "timestamp_unix": 1785696800
+  "timestamp_unix": 1785698593
 }

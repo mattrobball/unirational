@@ -1,0 +1,21 @@
+{
+  "schema": "g3d-spinor-discriminant-v1",
+  "t": [
+    2,
+    3,
+    5,
+    7
+  ],
+  "n_isotropic_vectors_scanned": 0,
+  "n_lines_on_Q": 0,
+  "lines_sample": [],
+  "Delta_zero_nontrivial": [],
+  "repeated_root_K_points": [],
+  "note": "Specialized secondary-0 spinor chart; exact F_q Severi\u2013Brauer residual",
+  "repeated_root_extractions": [],
+  "formula_Delta": "162abcd-108b^3d+81b^2c^2-108ac^3-27a^2d^2",
+  "marker": "G3D-SPINOR-DISCRIMINANT-PARTIAL",
+  "point_produced": false,
+  "headline_point": null,
+  "residual": "Exact discriminant divisor on F_q over K residual; specialized secondary-0 line probes installed with binary-cubic Delta formula verified independently."
+}

@@ -1,0 +1,14 @@
+{
+  "application_to_Q_q": {
+    "L": "L_i = K_proj[\u03b8_i]/(\u03bc_i), [L_i:K_proj]=11 odd (both A5 classes)",
+    "conclusion": "Q_q(L_i) \u2260 \u2205  \u21d4  Q_q(K_proj) \u2260 \u2205",
+    "consequence_for_Route1": "Manufacturing an L_i-point of Q_q is existence-equivalent to the G3P residual of finding a K_proj-point of Q_q. The genuine degree-11 cubic point a_i \u2208 X_gen(L_i) cannot create Q_q-isotropy over L_i unless either (i) a_i itself is isotropic (D=0) \u2014 an independent condition not forced by Phi(a_i)=0 \u2014 or (ii) some other construction yields an isotropic vector, which by Springer is still equivalent to K_proj-solubility of Q_q. Route-1 cannot use odd degree alone to bypass the K_proj-point residual on Q_q.",
+    "k": "K_proj (Frac of the sealed rank-12 secondary model; char 0)",
+    "quadratic_form": "Q_q: v \u21a6 B(q,v,v) with q=[1:0:0:0:0], matrix M fully secondary-expanded"
+  },
+  "char_open": "t3 \u2260 0 and 2 \u2260 0 on the sealed polar open (char 0 base)",
+  "name": "Springer theorem for quadratic forms (1952)",
+  "reference": "T.A. Springer, Sur les formes quadratiques d'indice z\u00e9ro, C. R. Acad. Sci. Paris 234 (1952); standard modern treatments in Lam, Introduction to Quadratic Forms over Fields, Ch. VII.",
+  "schema": "g3h-phase5-bls-springer-qf-v1",
+  "statement": "Let k be a field of characteristic not 2 and q a quadratic form over k. Let L/k be a finite field extension of odd degree. Then q has a nontrivial zero over L if and only if q has a nontrivial zero over k."
+}

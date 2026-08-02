@@ -1,0 +1,74 @@
+{
+  "schema": "g3d-hessian-rank-strata-v1",
+  "specializations": [
+    {
+      "t": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "s_secondary": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rank_histogram": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 40
+      },
+      "rank4_kernel_samples": [],
+      "rank_le_3_samples": [],
+      "n_samples": 40
+    },
+    {
+      "t": [
+        3,
+        5,
+        7,
+        11
+      ],
+      "s_secondary": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rank_histogram": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 40
+      },
+      "rank4_kernel_samples": [],
+      "rank_le_3_samples": [],
+      "n_samples": 40
+    }
+  ],
+  "expected_codim_rank_le_3": "not imposed; actual ranks recorded on samples",
+  "primary_decomposition": "residual exact CAS over K",
+  "marker": "G3D-HESSIAN-KERNEL-PASS"
+}

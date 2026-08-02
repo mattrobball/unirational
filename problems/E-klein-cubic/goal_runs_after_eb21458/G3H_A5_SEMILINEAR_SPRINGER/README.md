@@ -9,3 +9,7 @@ Phase 5 next (`phase5_springer_next/`): dual power-basis expansion calculus for
 quadrics, Springer honesty (scoped no-go).
 
 Primary exit: see `STATUS.md`. Replay: `REPLAY.md`.
+
+Phase 5 BLS (`phase5_beta_li_springer/`): secondary β obstruction, L_i-point
+decision (NO for attempted family + Springer q.f. theorem), Route-1 kill via
+\(Q_q\).

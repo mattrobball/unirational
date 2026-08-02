@@ -1,0 +1,132 @@
+{
+  "attempts": [
+    {
+      "candidate": "a_i \u2208 X_gen(L_i)",
+      "criterion": "D = B(q,a_i,a_i) = 0 in L_i",
+      "decision": "NOT_A_POINT_OF_Q_q_FORCED",
+      "defined_over_K_proj": true,
+      "family": "Q_q",
+      "name": "a_i_on_Q_q",
+      "proof": {
+        "residual_explicit_D": "Fully expanded D as an L_i-element (power basis with cancelled secondary coeffs) requires secondary \u03b2 tables (obstruction A). Non-containment + independence suffice to reject a_i as a forced L_i-point of Q_q.",
+        "steps": [
+          "Phi(a_i)=0 is the cubic landing (phase 4). D=0 is the independent polar condition a_i \u2208 Q_q.",
+          "Non-containment: X_gen \u2284 Q_q by specialization certificate (off-Q fraction 0.9925 at p=97, rank Q_q=5).",
+          "No identity in the phase-2/3/4 construction (Y_i, Psi_i, frame inverse) imposes the polar equation D=0. G3P ledger: 'G4 degree-11 cubic points are not automatically multisections of Q_q'.",
+          "Therefore a_i is not certified on Q_q; membership would be an accidental vanishing of an independent section. Route-1 does not install D=0. Gate for this candidate: NO."
+        ]
+      },
+      "quadratic": "Q_q: B(q,v,v)=0 over K_proj",
+      "status": "NO"
+    },
+    {
+      "candidate": "a_i",
+      "criterion": "C = B(q,q,a_i) = 0",
+      "decision": "NOT_QUADRATIC_OBJECT",
+      "defined_over_K_proj": true,
+      "family": "H_q",
+      "name": "a_i_on_H_q",
+      "proof": {
+        "steps": [
+          "H_q is a hyperplane, not a quadratic. Springer checklist item 1 fails for H_q alone.",
+          "No identity forces C=0 for a_i."
+        ]
+      },
+      "quadratic": "H_q is linear (second polar), not quadratic",
+      "status": "NO"
+    },
+    {
+      "candidate": "roots in P^1(L_i)",
+      "decision": "REJECTED_NOT_OVER_K_proj",
+      "defined_over": "L_i",
+      "defined_over_K_proj": false,
+      "family": "residual_binary",
+      "name": "line_residual_binary",
+      "proof": {
+        "steps": [
+          "Coefficients C,D lie in L_i in general, so the binary quadratic is not K_proj-defined.",
+          "Springer item 1 fails."
+        ]
+      },
+      "quadratic": "A s^2 + 3 C s t + 3 D t^2 on P^1",
+      "status": "NO"
+    },
+    {
+      "candidate": "norm/trace of residual line points",
+      "decision": "NO_SEALED_ISOTROPIC_VECTOR",
+      "defined_over_K_proj": true,
+      "family": "Q_q",
+      "name": "galois_norm_of_residual_direction",
+      "proof": {
+        "steps": [
+          "Norm of a scalar discriminant is not a point of Q_q.",
+          "No sealed construction produces an L_i-rational isotropic vector for Q_q from residual Galois data.",
+          "Manufacturing an L_i-point of Q_q is existence-equivalent to the G3P residual of finding a K_proj-point of Q_q. The genuine degree-11 cubic point a_i \u2208 X_gen(L_i) cannot create Q_q-isotropy over L_i unless either (i) a_i itself is isotropic (D=0) \u2014 an independent condition not forced by Phi(a_i)=0 \u2014 or (ii) some other construction yields an isotropic vector, which by Springer is still equivalent to K_proj-solubility of Q_q. Route-1 cannot use odd degree alone to bypass the K_proj-point residual on Q_q."
+        ]
+      },
+      "quadratic": "Q_q",
+      "status": "NO"
+    },
+    {
+      "candidate": "arbitrary L_i-point",
+      "decision": "EQUIVALENT_TO_K_proj_SOLUBILITY_G3P_RESIDUAL",
+      "defined_over_K_proj": true,
+      "family": "Q_q",
+      "name": "any_L_i_point_on_Q_q",
+      "proof": {
+        "steps": [
+          "Let k be a field of characteristic not 2 and q a quadratic form over k. Let L/k be a finite field extension of odd degree. Then q has a nontrivial zero over L if and only if q has a nontrivial zero over k.",
+          "Q_q(L_i) \u2260 \u2205  \u21d4  Q_q(K_proj) \u2260 \u2205",
+          "G3P sealed residual: no certified K_proj-point of Q_q (G3P-POLAR-SYSTEM-PASS). Existence of L_i-points on Q_q is therefore equivalent to an unsolved G3P residual and is not provided by a_i.",
+          "Route-1 interface via Q_q as a target for L_i-points manufactured from a_i is killed: either Q_q(K_proj)\u2260\u2205 already (then Springer on L_i is unnecessary for Q_q; map-back from K_proj-points of Q_q remains G3P residual), or Q_q(L_i)=\u2205 and no L_i-point exists."
+        ]
+      },
+      "quadratic": "Q_q",
+      "status": "NO"
+    },
+    {
+      "candidate": "a_i (criterion Tr(Phi(a_i))=0 \u21d2 Q_Tr(a_i)=0)",
+      "decision": "L_i_POINT_IF_FORM_NONDEGENERATE_MAPBACK_ABSENT",
+      "defined_over_K_proj": true,
+      "family": "Q_Tr",
+      "name": "trace_polar_Q_Tr_a_i",
+      "proof": {
+        "steps": [
+          "Q_Tr is K_proj-defined (coefficients are traces of L_i-elements).",
+          "Q_Tr(a_i) = Tr(B(a_i,a_i,a_i)) = Tr(Phi(a_i)) = Tr(0) = 0.",
+          "If Tr(a_i)=0 as a vector then Q_Tr\u22610 (degenerate); nondegeneracy is uncertified without \u03b2 tables.",
+          "Even if nondegenerate, no sealed map-back from isotropic vectors of Q_Tr to X_gen(K_proj) is installed.",
+          "Springer on Q_Tr would only yield a K_proj-point of Q_Tr, not of X_gen."
+        ]
+      },
+      "quadratic": "Q_Tr(v) = Tr_{L_i/K_proj}(B(a_i,v,v)) = B(Tr(a_i),v,v) (first polar of Tr_{L_i/K}(a_i))",
+      "status": "CONDITIONAL"
+    },
+    {
+      "candidate": "a_i isotropic for some pencil member",
+      "decision": "NOT_SEALED",
+      "defined_over_K_proj": true,
+      "family": "pencil",
+      "name": "polar_pencil_fibre",
+      "proof": {
+        "steps": [
+          "No sealed equation identifying a K_proj-pencil member through a_i other than constructions above.",
+          "Map-back path not installed."
+        ]
+      },
+      "quadratic": "\u03bb Q_q + \u03bc (other K_proj quadrics)",
+      "status": "NO"
+    }
+  ],
+  "certified_L_i_point_on_K_proj_quadratic_with_mapback": false,
+  "certified_unconditional_L_i_point_on_Q_q": false,
+  "closed_gate": "G3H-LI-POINT-ON-KPROJ-QUADRATIC-OPEN",
+  "closure_mode": "NO_FOR_ATTEMPTED_FAMILY_WITH_PROOFS",
+  "conclusion": "For the attempted family (a_i on Q_q; residual line; Galois norms; any L_i-point on Q_q; trace polar; pencil): no certified L_i-point of Q_q is obtained from a_i; existence of any L_i-point on Q_q is Springer-equivalent to the unsolved G3P K_proj residual; conditional trace-polar point lacks map-back and nondegeneracy certificate.",
+  "marker": "G3H-LI-POINT-ON-KPROJ-QUADRATIC-CLOSED-NO",
+  "n_attempts": 7,
+  "n_yes": 0,
+  "noncontainment_ref": "noncontainment_Xgen_Qq.json",
+  "schema": "g3h-phase5-bls-L-point-hunt-v1",
+  "springer_qf_equivalence": "Q_q(L_i) \u2260 \u2205  \u21d4  Q_q(K_proj) \u2260 \u2205"
+}

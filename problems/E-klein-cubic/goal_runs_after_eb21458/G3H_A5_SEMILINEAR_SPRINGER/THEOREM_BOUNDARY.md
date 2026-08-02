@@ -40,3 +40,15 @@
 - Q_q(L_i) nonempty => X_gen(K_proj) nonempty without map-back
 - pure cubic odd-degree descent
 - Problem E headline
+
+## Phase5 BLS addendum (Route-1 kill)
+
+7. **Springer quadratic-form theorem on \(Q_q\).** With \([L_i:K_{\mathrm{proj}}]=11\)
+   odd, \(Q_q(L_i)\ne\varnothing\Leftrightarrow Q_q(K_{\mathrm{proj}})\ne\varnothing\).
+8. **Non-containment** \(X_{\mathrm{gen}}\not\subset Q_q\) (specialization certificate).
+9. **Secondary β obstruction.** Cancelled secondary tables blocked by
+   degree-33 Reynolds expansion; dual-trace remains the abstract determination.
+10. **Route-1 kill.** Springer via \(Q_q\) closed as an interface for producing
+    \(L_i\)-isotropy from \(a_i\); map-back unsealed; no headline.
+
+See `phase5_beta_li_springer/THEOREM_BOUNDARY_BLS.md`.

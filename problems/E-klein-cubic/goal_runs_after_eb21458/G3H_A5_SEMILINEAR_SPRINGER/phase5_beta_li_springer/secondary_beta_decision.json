@@ -1,0 +1,238 @@
+{
+  "classes": [
+    {
+      "class_index": 1,
+      "dual_calculus_binding": {
+        "marker": "G3H-AI-EXPANSION-DUAL-PASS",
+        "sha256": "5c32feb47e7ca6ff6ba7e5a9cbb0b30b1ebc96384a7f5e0e021f21dac6de2ab1",
+        "source": "phase5_springer_next/a_i_expansion_class_1.json",
+        "status": "INSTALLED"
+      },
+      "label": "A5_class_1",
+      "n_beta_slots": 55,
+      "n_coordinates": 5,
+      "n_power_coeffs_per_coord": 11,
+      "n_slots_obstructed": 55,
+      "secondary_tables_status": "OBSTRUCTION",
+      "slots_sample": [
+        {
+          "class_index": 1,
+          "dual_trace_formula": "Tr(a^{(r)} * omega_0)",
+          "frame_coordinate_index": 0,
+          "frame_name": "x",
+          "obstruction": "Cancelled secondary numerators/denominators require Reynolds / invariant reduction of the degree-33 equivariant rational map a_i = Mbar^{-1}(P_i/tau^{33}) into the rank-12 secondary model of K_proj. Dual-trace beta_k = Tr(a^{(r)} omega_k) determines the element of K_proj uniquely but does not expand it in the secondary basis. No sealed multipoint interpolation table of the 55 x 12 secondary components is installed.",
+          "power_index": 0,
+          "secondary_basis": [
+            "1",
+            "f7",
+            "f9",
+            "f10",
+            "f12",
+            "f14",
+            "f7^2",
+            "f7*f9",
+            "f9^2",
+            "f9*f10",
+            "f7^3",
+            "f9^2*f10"
+          ],
+          "secondary_components": null,
+          "status": "OBSTRUCTION",
+          "symbol": "beta_1_0_0"
+        },
+        {
+          "class_index": 1,
+          "dual_trace_formula": "Tr(a^{(r)} * omega_1)",
+          "frame_coordinate_index": 0,
+          "frame_name": "x",
+          "obstruction": "Cancelled secondary numerators/denominators require Reynolds / invariant reduction of the degree-33 equivariant rational map a_i = Mbar^{-1}(P_i/tau^{33}) into the rank-12 secondary model of K_proj. Dual-trace beta_k = Tr(a^{(r)} omega_k) determines the element of K_proj uniquely but does not expand it in the secondary basis. No sealed multipoint interpolation table of the 55 x 12 secondary components is installed.",
+          "power_index": 1,
+          "secondary_basis": [
+            "1",
+            "f7",
+            "f9",
+            "f10",
+            "f12",
+            "f14",
+            "f7^2",
+            "f7*f9",
+            "f9^2",
+            "f9*f10",
+            "f7^3",
+            "f9^2*f10"
+          ],
+          "secondary_components": null,
+          "status": "OBSTRUCTION",
+          "symbol": "beta_1_0_1"
+        },
+        {
+          "class_index": 1,
+          "dual_trace_formula": "Tr(a^{(r)} * omega_2)",
+          "frame_coordinate_index": 0,
+          "frame_name": "x",
+          "obstruction": "Cancelled secondary numerators/denominators require Reynolds / invariant reduction of the degree-33 equivariant rational map a_i = Mbar^{-1}(P_i/tau^{33}) into the rank-12 secondary model of K_proj. Dual-trace beta_k = Tr(a^{(r)} omega_k) determines the element of K_proj uniquely but does not expand it in the secondary basis. No sealed multipoint interpolation table of the 55 x 12 secondary components is installed.",
+          "power_index": 2,
+          "secondary_basis": [
+            "1",
+            "f7",
+            "f9",
+            "f10",
+            "f12",
+            "f14",
+            "f7^2",
+            "f7*f9",
+            "f9^2",
+            "f9*f10",
+            "f7^3",
+            "f9^2*f10"
+          ],
+          "secondary_components": null,
+          "status": "OBSTRUCTION",
+          "symbol": "beta_1_0_2"
+        }
+      ]
+    },
+    {
+      "class_index": 2,
+      "dual_calculus_binding": {
+        "marker": "G3H-AI-EXPANSION-DUAL-PASS",
+        "sha256": "a07455ee75f5588bb09884458d51d00425714fc9f79460b3efeefc032c271c62",
+        "source": "phase5_springer_next/a_i_expansion_class_2.json",
+        "status": "INSTALLED"
+      },
+      "label": "A5_class_2",
+      "n_beta_slots": 55,
+      "n_coordinates": 5,
+      "n_power_coeffs_per_coord": 11,
+      "n_slots_obstructed": 55,
+      "secondary_tables_status": "OBSTRUCTION",
+      "slots_sample": [
+        {
+          "class_index": 2,
+          "dual_trace_formula": "Tr(a^{(r)} * omega_0)",
+          "frame_coordinate_index": 0,
+          "frame_name": "x",
+          "obstruction": "Cancelled secondary numerators/denominators require Reynolds / invariant reduction of the degree-33 equivariant rational map a_i = Mbar^{-1}(P_i/tau^{33}) into the rank-12 secondary model of K_proj. Dual-trace beta_k = Tr(a^{(r)} omega_k) determines the element of K_proj uniquely but does not expand it in the secondary basis. No sealed multipoint interpolation table of the 55 x 12 secondary components is installed.",
+          "power_index": 0,
+          "secondary_basis": [
+            "1",
+            "f7",
+            "f9",
+            "f10",
+            "f12",
+            "f14",
+            "f7^2",
+            "f7*f9",
+            "f9^2",
+            "f9*f10",
+            "f7^3",
+            "f9^2*f10"
+          ],
+          "secondary_components": null,
+          "status": "OBSTRUCTION",
+          "symbol": "beta_2_0_0"
+        },
+        {
+          "class_index": 2,
+          "dual_trace_formula": "Tr(a^{(r)} * omega_1)",
+          "frame_coordinate_index": 0,
+          "frame_name": "x",
+          "obstruction": "Cancelled secondary numerators/denominators require Reynolds / invariant reduction of the degree-33 equivariant rational map a_i = Mbar^{-1}(P_i/tau^{33}) into the rank-12 secondary model of K_proj. Dual-trace beta_k = Tr(a^{(r)} omega_k) determines the element of K_proj uniquely but does not expand it in the secondary basis. No sealed multipoint interpolation table of the 55 x 12 secondary components is installed.",
+          "power_index": 1,
+          "secondary_basis": [
+            "1",
+            "f7",
+            "f9",
+            "f10",
+            "f12",
+            "f14",
+            "f7^2",
+            "f7*f9",
+            "f9^2",
+            "f9*f10",
+            "f7^3",
+            "f9^2*f10"
+          ],
+          "secondary_components": null,
+          "status": "OBSTRUCTION",
+          "symbol": "beta_2_0_1"
+        },
+        {
+          "class_index": 2,
+          "dual_trace_formula": "Tr(a^{(r)} * omega_2)",
+          "frame_coordinate_index": 0,
+          "frame_name": "x",
+          "obstruction": "Cancelled secondary numerators/denominators require Reynolds / invariant reduction of the degree-33 equivariant rational map a_i = Mbar^{-1}(P_i/tau^{33}) into the rank-12 secondary model of K_proj. Dual-trace beta_k = Tr(a^{(r)} omega_k) determines the element of K_proj uniquely but does not expand it in the secondary basis. No sealed multipoint interpolation table of the 55 x 12 secondary components is installed.",
+          "power_index": 2,
+          "secondary_basis": [
+            "1",
+            "f7",
+            "f9",
+            "f10",
+            "f12",
+            "f14",
+            "f7^2",
+            "f7*f9",
+            "f9^2",
+            "f9*f10",
+            "f7^3",
+            "f9^2*f10"
+          ],
+          "secondary_components": null,
+          "status": "OBSTRUCTION",
+          "symbol": "beta_2_0_2"
+        }
+      ]
+    }
+  ],
+  "closed_gate": "G3H-AI-SECONDARY-TABLE-OPEN",
+  "closure_mode": "NAMED_EXACT_OBSTRUCTION",
+  "exact_obstruction": {
+    "complexity_note": "Ambient composition degree 33; secondary top degree 28; invariant ring of PSL_2(F_11) on P^4; full symbolic Reynolds for all 55 coefficients exceeds the sealed local-CAS budget of this residual close-or-kill run. Modular multipoint witnesses can probe individual specializations but do not replace cancelled generic secondary numerators.",
+    "name": "DEGREE-33-REYNOLDS-SECONDARY-EXPANSION",
+    "statement": "For each of the 55 power-basis coefficients \u03b2_{r,k} \u2208 K_proj of a_i (both A5 classes: 2\u00d755), a cancelled secondary 12-vector (numerators/denominators over P0 in the certified secondary basis) is exactly the image of \u03b2_{r,k} under the structure isomorphism K_proj \u2245 P0^{12} (secondary model). Computing that image from the geometric definition a_i = Mbar^{-1}(P_i/\u03c4^{33}) requires G-invariant reduction (Reynolds projection / SAGBI elimination) of a degree-33 equivariant rational map on P(W) into the secondary generators of degrees [0, 7, 9, 10, 12, 14, 14, 16, 18, 19, 21, 28]. Dual-trace / Vandermonde formulas determine \u03b2_{r,k} as abstract elements of K_proj but are not a secondary expansion. This packet records the obstruction and does not install fake cancelled tables.",
+    "what_is_installed": [
+      "dual-trace formulas \u03b2_k = Tr(a^{(r)} \u03c9_k) (phase5_springer_next)",
+      "Vandermonde reconstruction on 11 coset conjugates",
+      "per-slot secondary basis names and obstruction tags"
+    ],
+    "what_is_not_installed": [
+      "cancelled num/den secondary 12-vectors for each \u03b2_{r,k}"
+    ]
+  },
+  "marker": "G3H-AI-SECONDARY-TABLE-OBSTRUCTION",
+  "phase5_next_expansion_sha256": "c7e02286931a03671a0e361b57a2b9e054254ad9385be149d71cee05cc515722",
+  "schema": "g3h-phase5-bls-secondary-beta-v1",
+  "secondary_basis": {
+    "base": "P0 = Q(t3,t6,t8,t11)",
+    "degrees": [
+      0,
+      7,
+      9,
+      10,
+      12,
+      14,
+      14,
+      16,
+      18,
+      19,
+      21,
+      28
+    ],
+    "dim": 12,
+    "names": [
+      "1",
+      "f7",
+      "f9",
+      "f10",
+      "f12",
+      "f14",
+      "f7^2",
+      "f7*f9",
+      "f9^2",
+      "f9*f10",
+      "f7^3",
+      "f9^2*f10"
+    ]
+  }
+}

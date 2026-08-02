@@ -1,0 +1,170 @@
+{
+  "goal": "G3D_DIRECT_ARITHMETIC",
+  "consumed_commit": "d6862836f2c6198ec1ed95a6627b70f168260beb",
+  "pinned_goal_state": "ff69434ffa49062402234c0661fef69e07416dd7",
+  "headline": "OPEN",
+  "parent_structural_exits": [
+    "G2-FINITE-GENERATION-PASS",
+    "G3A-ARITHMETIC-DOMINANCE-PASS",
+    "G3P-POLAR-SYSTEM-PASS",
+    "G4-INDUCED-DEGREE11-POINT-PASS"
+  ],
+  "inputs": [
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/STATUS.md",
+      "exists": true,
+      "sha256": "fe8a88bac91187539498a82a5cbb3589a3d76c0cef5358696341aba132023532",
+      "size": 3136
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL/SEAL.json",
+      "exists": true,
+      "sha256": "568525463349639a6b3b6eecc9596771e36ba1f4464c123cb1292bd1dd58ba8e",
+      "size": 1168
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md",
+      "exists": true,
+      "sha256": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811",
+      "size": 1118
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/SEAL.json",
+      "exists": true,
+      "sha256": "b289c6cff44fc669c1565b1ef508756156b2453b0fe99b28ab020a6a5e40fe00",
+      "size": 2384
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/field_model.json",
+      "exists": true,
+      "sha256": "556149a93461973a5e2a21c20dc2c9a359b0932f5494897a768b9cbd95801a21",
+      "size": 662
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/phi_exact.json",
+      "exists": true,
+      "sha256": "e647609d220e897dd05074db0f78da09b4b599db8ece8db41210f5f37d4760a6",
+      "size": 1790
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/src/field_api.py",
+      "exists": true,
+      "sha256": "65e96e6c093161e17ef2fffc86063c47efe029cb1ba663cf2b482107b6fa5c7f",
+      "size": 4587
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/src/phi_api.py",
+      "exists": true,
+      "sha256": "c4e321b53881e19a6c648738bb06ced36f9dbaae0a5278edd4a73174eb9ba41e",
+      "size": 10966
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3B_LINE_CONIC_SEARCH/STATUS.md",
+      "exists": true,
+      "sha256": "723dae454a1ba5f8962ad69c899001d6abc05246f3d9da12c67ec7a0f2610659",
+      "size": 777
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3B_LINE_CONIC_SEARCH/SEAL.json",
+      "exists": true,
+      "sha256": "89d3f7e3b191705f26d081142c4980a0536859155d0d707fe88c0c4c9955e86d",
+      "size": 1379
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3C_LINE_CONIC_FANO/STATUS.md",
+      "exists": true,
+      "sha256": "410c9d5dbf46d9546b057cf016b983bfc01bf1c47d56cdb78a6a2a9b150ffff6",
+      "size": 1108
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3C_LINE_CONIC_FANO/SEAL.json",
+      "exists": true,
+      "sha256": "eb536c690bd5a41be0856be7b6f5b814bf8bd90e7fa7039d4c036a56860f257f",
+      "size": 1811
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3P_POLAR_ODD_DEGREE_DESCENT/STATUS.md",
+      "exists": true,
+      "sha256": "48fe7896db3bf24fd3285777b0c4b817d1e13a283b246b531c553a90e0d36295",
+      "size": 1951
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3P_POLAR_ODD_DEGREE_DESCENT/SEAL.json",
+      "exists": true,
+      "sha256": "4d8b97b69a7b564f338ba5528300e24881bbfbe67323db89b7729cb215f54f86",
+      "size": 2662
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3P_POLAR_ODD_DEGREE_DESCENT/polar_system.json",
+      "exists": true,
+      "sha256": "d55afb8ff0add8af002f53e639e785942d819e21285ff68d4fe14bcf539049cc",
+      "size": 62198
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3P_POLAR_ODD_DEGREE_DESCENT/src/polar_core.py",
+      "exists": true,
+      "sha256": "76d9a7cf576f61e3fb8d7b01d8a7b73b4c3a6c9a6fa9552b1d6dbf915e3b3967",
+      "size": 7039
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/STATUS.md",
+      "exists": true,
+      "sha256": "2df8d8d157b2f401a44b41aa3bd02dd080ca1747e73f924b0f884fb4ba37e706",
+      "size": 1248
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/SEAL.json",
+      "exists": true,
+      "sha256": "14e5ebaf8822bbe72e81cbc15f5a7df322252659e910f4f5206a1c67efad08a7",
+      "size": 6110
+    },
+    {
+      "path": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/STATUS.md",
+      "exists": true,
+      "sha256": "cdb871f8ef2f9f247439cec2108f748c8af7636743d478e3c77efb01ac54e03d",
+      "size": 2352
+    },
+    {
+      "path": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/SEAL.json",
+      "exists": true,
+      "sha256": "a135db04f6081c3f14ee54eeebe5d426cb6bf72a609f40403aad5533e93fa3b3",
+      "size": 2512
+    },
+    {
+      "path": "goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/STATUS.md",
+      "exists": true,
+      "sha256": "17a640e6a15968cd1604519d953725e85bb0b06bb83e0cda9e677117fd940d12",
+      "size": 2230
+    },
+    {
+      "path": "goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/SEAL.json",
+      "exists": true,
+      "sha256": "c1bdb42c328277672332edf64e8eb18506ad0316566849a18204df651ecab9f4",
+      "size": 940
+    },
+    {
+      "path": "goals_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER.md",
+      "exists": true,
+      "sha256": "63368d2687cdf0709c7371a9498d992b6af4c888684a67f8858ed91da5665014",
+      "size": 3301
+    },
+    {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json",
+      "exists": true,
+      "sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+      "size": 162861
+    },
+    {
+      "path": "tmp/kproj_arithmetic/normalized_kproj_table.json",
+      "exists": true,
+      "sha256": "5def3f471698753cb81a6c4c8a3f97f0a4a6e7989d5fdcec196a6e754af0ae7f",
+      "size": 1607863
+    },
+    {
+      "path": "goals_after_ff69434/GOAL_G3D_DIRECT_ARITHMETIC.md",
+      "exists": true,
+      "sha256": "1e64295a3543eef9a66e268ae1a59dc25a2682d1d7337f22b9f40639f95d22dd",
+      "size": 21182
+    }
+  ]
+}

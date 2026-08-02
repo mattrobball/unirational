@@ -1,0 +1,47 @@
+{
+  "D_q_specialized": 3,
+  "Phi_q_specialized": 3,
+  "Q_q_matrix_rank": 5,
+  "Q_q_smooth_probe": true,
+  "conclusion": "At the sealed secondary-0 specialization, rank(Q_q)=5 and a positive density of F_p-points of the specialized cubic lie off Q_q. Therefore the cubic hypersurface is not contained in Q_q as schemes over the specialization, hence not over K_proj. Membership of a point of X_gen in Q_q is an independent condition from Phi=0.",
+  "cubic_pts_off_Q_q": 397,
+  "cubic_pts_on_Q_q": 3,
+  "cubic_sample_size": 400,
+  "example_cubic_not_on_Q_q": {
+    "D": 43,
+    "Phi": 0,
+    "a": [
+      16,
+      80,
+      41,
+      13,
+      89
+    ]
+  },
+  "example_cubic_on_Q_q": {
+    "D": 0,
+    "Phi": 0,
+    "a": [
+      78,
+      61,
+      10,
+      48,
+      56
+    ]
+  },
+  "fraction_off_Q_q": 0.9925,
+  "generic_cubic_sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53",
+  "polar_data_sha256": "c1a73082b19a12bd99cae287fc35ce0ebe2168ebd630e3daf0b0a43a37bd6be9",
+  "schema": "g3h-phase5-bls-noncontainment-v1",
+  "specialization": {
+    "prime": 97,
+    "secondary": "secondary-0 slice (s0=1, s_{>0}=0)",
+    "tvals": [
+      3,
+      5,
+      7,
+      11
+    ]
+  },
+  "statement": "X_gen is not contained in Q_q (specialization certificate)"
+}

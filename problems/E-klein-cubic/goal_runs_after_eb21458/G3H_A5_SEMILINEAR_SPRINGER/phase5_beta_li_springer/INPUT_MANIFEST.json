@@ -1,0 +1,50 @@
+{
+  "inputs": [
+    {
+      "exists": true,
+      "path": "goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/phase5_springer_next/a_i_expansion.json",
+      "sha256": "c7e02286931a03671a0e361b57a2b9e054254ad9385be149d71cee05cc515722"
+    },
+    {
+      "exists": true,
+      "path": "goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/phase5_springer_next/polar_data.json",
+      "sha256": "c1a73082b19a12bd99cae287fc35ce0ebe2168ebd630e3daf0b0a43a37bd6be9"
+    },
+    {
+      "exists": true,
+      "path": "goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/phase5_springer_next/springer_decision.json",
+      "sha256": "a2b1ddc341b5d7c05a51c0bc63d951d73853f09f20586f38fae71aa1c4527605"
+    },
+    {
+      "exists": true,
+      "path": "goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/phase4_g3_frame/g3_frame.json",
+      "sha256": "c7590d34ed7057f937bf5f0fc66fbd88f6a229637162885c1effb017f403d1b1"
+    },
+    {
+      "exists": true,
+      "path": "goal_runs_after_0aecc89/G3P_POLAR_ODD_DEGREE_DESCENT/STATUS.md",
+      "sha256": "48fe7896db3bf24fd3285777b0c4b817d1e13a283b246b531c553a90e0d36295"
+    },
+    {
+      "exists": true,
+      "path": "goal_runs_after_0aecc89/G3P_POLAR_ODD_DEGREE_DESCENT/quadratic_invariants.json",
+      "sha256": "cd929ff6dedb3f693b9a72b57885ab1949c185a02871748bba21092efb8d209f"
+    },
+    {
+      "exists": true,
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md",
+      "sha256": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811"
+    },
+    {
+      "exists": true,
+      "path": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json",
+      "sha256": "2573277995d439011c9051f01c3412519059c505a729def80cde58aa2ca09d53"
+    },
+    {
+      "exists": true,
+      "path": "tmp/dispatch/G3H_BETA_LI_SPRINGER_BRIEF.md",
+      "sha256": "0f114aa304c2309897a391eb581c3ed3a1b7d040e5fe99b4db28a368360856ac"
+    }
+  ],
+  "schema": "g3h-phase5-bls-input-manifest-v1"
+}

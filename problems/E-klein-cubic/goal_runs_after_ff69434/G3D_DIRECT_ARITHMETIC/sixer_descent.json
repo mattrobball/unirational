@@ -1,0 +1,6 @@
+{
+  "status": "NO_K_SIXER_CERTIFIED",
+  "note": "Sixer/double-six reconstruction requires the exact 27-line algebra over K. Specialized probes did not yield a Galois-stable sixer over the base. Severi\u2013Brauer obstruction for determinantal descent is load-bearing; not claimed from Galois-stable sets alone.",
+  "determinantal_matrix": null,
+  "Brauer_class": "undecided"
+}

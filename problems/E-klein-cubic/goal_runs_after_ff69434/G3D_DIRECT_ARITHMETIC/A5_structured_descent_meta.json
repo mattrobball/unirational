@@ -1,0 +1,63 @@
+{
+  "schema": "g3d-a5-structured-descent-v1",
+  "authorized_uses": {
+    "quadratic_forms": "Odd-degree extension preserves anisotropic kernel. If Q_q acquires an isotropic line over L_i, Witt index already \u22652 over K; reconstruct K-line.",
+    "two_primary_Clifford": "If even Clifford class restricts to 0 over L_i then 11\u03b1=0; on 2-primary torsion \u00d711 is invertible \u21d2 \u03b1=0.",
+    "three_primary_sixer": "If twisted sixer / degree-3 Severi\u2013Brauer splits over L_i, Brauer class is 3-primary and restriction/corestriction forces split over K.",
+    "finite_component_id": "Factor 27-line, sixer, Hessian, spinor-discriminant algebras after base change to L_i; compute Galois action for descent."
+  },
+  "forbidden_uses": [
+    "X(L_i) nonempty \u21d2 X(K) nonempty",
+    "line scheme has odd-degree point \u21d2 line scheme has K-point",
+    "sixer exists over L_i \u21d2 honest K determinantal matrix exists"
+  ],
+  "inputs": {
+    "H_A5": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_35fa/H_A5_TWISTS",
+    "G4": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER",
+    "G3H": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER",
+    "G3H_optional": true
+  },
+  "classes": [
+    {
+      "A5_class": 1,
+      "H_A5_status": "H-A5-CLASS1-RATIONAL-POINT",
+      "G4_induced_degree11": "G4-INDUCED-DEGREE11-POINT-PASS",
+      "G3H_frame": "G3H-SEMILINEAR-G3-FRAME-PASS (optional accelerator)",
+      "L_i_over_K": "degree 11 finite \u00e9tale (G4 coset algebra)",
+      "quadratic_springer_on_Q_q": {
+        "status": "OPEN",
+        "blocker": "G3H residual: L_i-point on K_proj quadric / secondary beta tables; no certified isotropic K-line reconstructed yet"
+      },
+      "Clifford_2primary": {
+        "status": "OPEN",
+        "note": "Requires exact even Clifford class of Q_q over K"
+      },
+      "sixer_3primary": {
+        "status": "N/A_NO_SIXER"
+      },
+      "illegal_cubic_descent_rejected": true
+    },
+    {
+      "A5_class": 2,
+      "H_A5_status": "H-A5-CLASS2-RATIONAL-POINT",
+      "G4_induced_degree11": "G4-INDUCED-DEGREE11-POINT-PASS",
+      "G3H_frame": "G3H-SEMILINEAR-G3-FRAME-PASS (optional accelerator)",
+      "L_i_over_K": "degree 11 finite \u00e9tale (G4 coset algebra)",
+      "quadratic_springer_on_Q_q": {
+        "status": "OPEN",
+        "blocker": "G3H residual: L_i-point on K_proj quadric / secondary beta tables; no certified isotropic K-line reconstructed yet"
+      },
+      "Clifford_2primary": {
+        "status": "OPEN",
+        "note": "Requires exact even Clifford class of Q_q over K"
+      },
+      "sixer_3primary": {
+        "status": "N/A_NO_SIXER"
+      },
+      "illegal_cubic_descent_rejected": true
+    }
+  ],
+  "marker": "G3D-A5-STRUCTURED-DESCENT-PASS",
+  "note": "Structural protocol installed and illegal pure-cubic odd-degree descent rejected. No headline point from A5 path in this packet.",
+  "point_produced": false
+}

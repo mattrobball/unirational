@@ -1,0 +1,7 @@
+{
+  "schema": "g3d-spinor-model-v1",
+  "witt_link": "polar_quadric_witt.json",
+  "F_q": "OGr(2, Q_q)",
+  "split_status": "undecided over K; specialized isotropic lines on secondary-0 slices",
+  "marker": "G3D-POLAR-CLIFFORD-PARTIAL"
+}

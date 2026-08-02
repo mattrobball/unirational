@@ -1,0 +1,124 @@
+{
+  "classes": [
+    {
+      "class_index": 1,
+      "forbidden_inference": {
+        "statement": "Q_q(L_i) nonempty => X_gen(K_proj) nonempty",
+        "status": "REJECTED"
+      },
+      "illegal_cubic_odd_degree_descent": {
+        "statement": "X_gen(L_i) nonempty and [L_i:K]=11 odd => X_gen(K) nonempty",
+        "status": "REJECTED"
+      },
+      "label": "A5_class_1",
+      "produces_K_proj_cubic_point": false,
+      "springer_applied": false,
+      "springer_checklist": {
+        "1_quadratic_object_over_K_proj": {
+          "defined_over_K_proj": true,
+          "object": "Q_q: B(q,v,v)=0",
+          "source": "G3P-POLAR-SYSTEM-PASS + phase5_next secondary M",
+          "status": "YES"
+        },
+        "2_L_i_point_on_that_object": {
+          "hunt_ref": "L_point_decision.json",
+          "reason": "For the attempted family (a_i on Q_q; residual line; Galois norms; any L_i-point on Q_q; trace polar; pencil): no certified L_i-point of Q_q is obtained from a_i; existence of any L_i-point on Q_q is Springer-equivalent to the unsolved G3P K_proj residual; conditional trace-polar point lacks map-back and nondegeneracy certificate.",
+          "springer_equivalence": "Q_q(L_i) \u2260 \u2205  \u21d4  Q_q(K_proj) \u2260 \u2205",
+          "status": "NO"
+        },
+        "3_degree_odd": {
+          "degree": 11,
+          "status": "YES"
+        },
+        "4_explicit_map_back_to_X_gen": {
+          "reason": "No inverse-polar / reconstruction map from K_proj-points of Q_q (or Q_Tr) to X_gen(K_proj) is sealed. G3P residual. Forbidden bare inference Q_q(L_i)\u2260\u2205 \u21d2 X_gen(K)\u2260\u2205 rejected.",
+          "status": "NO"
+        }
+      }
+    },
+    {
+      "class_index": 2,
+      "forbidden_inference": {
+        "statement": "Q_q(L_i) nonempty => X_gen(K_proj) nonempty",
+        "status": "REJECTED"
+      },
+      "illegal_cubic_odd_degree_descent": {
+        "statement": "X_gen(L_i) nonempty and [L_i:K]=11 odd => X_gen(K) nonempty",
+        "status": "REJECTED"
+      },
+      "label": "A5_class_2",
+      "produces_K_proj_cubic_point": false,
+      "springer_applied": false,
+      "springer_checklist": {
+        "1_quadratic_object_over_K_proj": {
+          "defined_over_K_proj": true,
+          "object": "Q_q: B(q,v,v)=0",
+          "source": "G3P-POLAR-SYSTEM-PASS + phase5_next secondary M",
+          "status": "YES"
+        },
+        "2_L_i_point_on_that_object": {
+          "hunt_ref": "L_point_decision.json",
+          "reason": "For the attempted family (a_i on Q_q; residual line; Galois norms; any L_i-point on Q_q; trace polar; pencil): no certified L_i-point of Q_q is obtained from a_i; existence of any L_i-point on Q_q is Springer-equivalent to the unsolved G3P K_proj residual; conditional trace-polar point lacks map-back and nondegeneracy certificate.",
+          "springer_equivalence": "Q_q(L_i) \u2260 \u2205  \u21d4  Q_q(K_proj) \u2260 \u2205",
+          "status": "NO"
+        },
+        "3_degree_odd": {
+          "degree": 11,
+          "status": "YES"
+        },
+        "4_explicit_map_back_to_X_gen": {
+          "reason": "No inverse-polar / reconstruction map from K_proj-points of Q_q (or Q_Tr) to X_gen(K_proj) is sealed. G3P residual. Forbidden bare inference Q_q(L_i)\u2260\u2205 \u21d2 X_gen(K)\u2260\u2205 rejected.",
+          "status": "NO"
+        }
+      }
+    }
+  ],
+  "g3a_status": "G3A-ARITHMETIC-DOMINANCE-PASS",
+  "g3p_status": "G3P-POLAR-SYSTEM-PASS",
+  "gates": {
+    "G3H-AI-SECONDARY-TABLE-OPEN": {
+      "marker": "G3H-AI-SECONDARY-TABLE-OBSTRUCTION",
+      "status": "CLOSED_AS_OBSTRUCTION"
+    },
+    "G3H-LI-POINT-ON-KPROJ-QUADRATIC-OPEN": {
+      "marker": "G3H-LI-POINT-ON-KPROJ-QUADRATIC-CLOSED-NO",
+      "status": "CLOSED_NO"
+    },
+    "G3H-SPRINGER-MAPBACK-OPEN": {
+      "reason": "Map-back for Q_q is the G3P residual (inverse polar formulas). With item 2 failing for Route-1 via a_i and Springer equivalence reducing Q_q(L_i) to Q_q(K_proj), the map-back gate is not enterable from this interface; recorded as interface-killed residual of G3P.",
+      "status": "CLOSED_WITH_INTERFACE_KILL"
+    }
+  },
+  "kill_statement": "Route-1 Springer via Q_q is closed as an interface: checklist items 2 and 4 fail with named proofs; Springer quadratic-form theorem shows L_i-isotropy of Q_q is equivalent to the G3P K_proj residual, so the degree-11 cubic point a_i does not open a new path to Q_q-points; map-back remains unsealed; illegal cubic odd-degree descent rejected.",
+  "marker": "G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED",
+  "noncontainment_sha256": "99de2521dbf4cd9ffce3181c2534017eb8fc5172f3e33d95b3baacec62c8eb90",
+  "resources": {
+    "peak_rss_mb": 64.125,
+    "python": "3.14.6",
+    "wall_seconds": 0.1189267635345459
+  },
+  "route1_decision": "KILL",
+  "route1_interface": "Q_q (and listed alternatives from polar data of q,a_i)",
+  "schema": "g3h-phase5-bls-springer-decision-v1",
+  "stronger_markers_not_claimed": [
+    "G3H-QUADRATIC-SPRINGER-REDUCTION-PASS",
+    "G3P-POINT-HEADLINE-POSITIVE"
+  ],
+  "theorem_boundary": {
+    "not_proved": [
+      "cancelled secondary 12-vectors for each \u03b2_{r,k}",
+      "Q_q(K_proj)=\u2205 (emptiness not claimed)",
+      "Q_q(L_i)=\u2205 beyond Springer equivalence with K_proj residual",
+      "Springer reduction to X_gen(K_proj)",
+      "Problem E headline"
+    ],
+    "proved": [
+      "Springer quadratic-form theorem applied to Q_q/L_i/K_proj",
+      "X_gen not contained in Q_q (specialization certificate)",
+      "a_i not forced onto Q_q; D=0 independent of Phi(a_i)=0",
+      "residual binary not over K_proj",
+      "secondary \u03b2 cancelled tables: exact obstruction named",
+      "Route-1 via Q_q interface killed"
+    ]
+  }
+}
