@@ -19,7 +19,7 @@ where
 \]
 
 The field `K_proj` is the degree-zero invariant fraction field and is a
-12-dimensional extension of `k(t3,t6,t8,t11)` in the certified secondary
+degree-12 extension of `k(t3,t6,t8,t11)` in the certified secondary
 basis.  The 35 coefficients of `Phi` are recorded exactly in
 
 ```text
@@ -47,7 +47,9 @@ A point
 \]
 
 clears to one nonzero homogeneous global `G`-equivariant polynomial map
-`p:W->W` satisfying the original identity `F(p)=0`.  To promote this to
+`p:W->W` satisfying the original identity `F(p)=0`.  Different clearings lie
+on the same rational scalar-saturation line; primitivity must be checked as an
+actual divisibility/incidence condition, not by quotienting by `R_+M`.  To promote this to
 `G2-COVARIANT-HEADLINE-POSITIVE`, the cleared vector must then be checked in
 the original coordinates and group generators, and the induced projective
 map must have Jacobian rank four at some point.  The all-degree theorem proves
