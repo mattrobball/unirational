@@ -1,0 +1,15 @@
+{
+  "binary_claim_made": false,
+  "git_blob_sha1": {
+    "OBSTRUCTION_FRONTIER.md": "dfc2064d60b78aaf749999e41247933e2a105446",
+    "README.md": "dbb6cfa83161af339fb9ebc280c939221ee6317c",
+    "REPLAY.md": "8dea8947c8ed40058a6d528716c14890ff9ade30",
+    "STATUS.md": "e62921f0fb801183da46c70c34d6a3b531925498",
+    "TRANSFER_AND_DESCENT_THEOREM.md": "433be6aadd3ef8df0989fd8030fd9df481546494",
+    "audit_payload.json": "984e5224bedf6f58e2dd4d29dcc0d47c278a0b7d",
+    "verify.py": "769c939e9d7fdf47bd96c9bcfe0f45a50364031f"
+  },
+  "goal_exit": "Q-UNDECIDED",
+  "schema": "q2.1-descent-obstruction-seal-v1",
+  "scoped_exit": "Q2.1-DESCENT-OBSTRUCTION-AUDIT-PASS"
+}
