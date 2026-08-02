@@ -45,9 +45,9 @@ V(\Phi)(K_{\rm proj})\ne\varnothing .}
 
 The forward implication normalizes the unique frame coordinates of `p`.
 The reverse implication clears homogeneous invariant denominators without
-mixing source degrees.  The proof also identifies invariant scalar multiples
-with the same projective `K_proj`-point and proves that homogeneous
-precomposition preserves the landing equation.
+mixing source degrees.  The proof identifies all homogeneous polynomial
+representatives on the same rational scalar-saturation line and proves that
+homogeneous precomposition preserves the landing equation.
 
 The symbolic plane-order filtration
 
@@ -60,7 +60,17 @@ is retained as an exact stratification of this global object.  Plane jets,
 `V4` equalizers, residual point kernels, minus-line and marked-elliptic data,
 and irrelevant torsion are simultaneous restrictions of one global
 coefficient vector; independently chosen local states are not added as
-points.
+points.  The order `m` is evaluated on each polynomial representative and can
+change under invariant multiplication; the projective `K_proj`-point records
+the whole rational scalar-saturation class.
+
+Consequently
+
+\[
+V(\Phi)(K_{\rm proj})\ne\varnothing
+\quad\Longleftrightarrow\quad
+\bigcup_{d,m}\mathcal L_{m,d}\ne\varnothing.
+\]
 
 ## Finite presentation
 
@@ -75,8 +85,8 @@ Over `A=k[f3,f5,f6,f8,f11]`, the certified Hironaka data give
 Thus the global universal landing object is a finite-type noetherian scheme
 given by twelve weighted cubic equations in sixty module coordinates over
 `A`.  After generic frame localization and degree-zero normalization it is
-the single cubic \(V(\Phi)\subset\mathbf P^4_{K_{\rm proj}}\) with all 35 coefficients stored
-in the existing `generic_cubic.json` packet.
+the single cubic \(V(\Phi)\subset\mathbf P^4_{K_{\rm proj}}\), with all 35
+coefficients stored in the existing `generic_cubic.json` packet.
 
 This is the valid all-degree replacement for a degree ladder.  It does **not**
 imply a finite upper bound for the first homogeneous representative; the
