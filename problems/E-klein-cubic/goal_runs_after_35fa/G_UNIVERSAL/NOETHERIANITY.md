@@ -24,9 +24,9 @@ coordinate ring
 A[y_1,\ldots,y_{60}]/(Q_1,\ldots,Q_{12})
 \]
 
-is therefore finitely generated and noetherian.  This is the complete global
-landing object: its points are global coefficient vectors, so every local
-transition equation is automatically imposed after restriction.
+is therefore finitely generated and noetherian.  Its homogeneous `A`-valued
+solutions are the global coefficient vectors, so every local transition
+equation is automatically imposed after restriction.
 
 Localizing the generic frame and passing to degree zero yields a still smaller
 finite object: one cubic in five variables over `K_proj`, with exactly 35
@@ -93,7 +93,10 @@ Consequently:
 
 - finite global presentation is **proved**;
 - exact recovery of all polynomial degrees is **proved**;
-- scalar saturation and homogeneous precomposition are **proved** compatible;
+- rational scalar saturation, representative-wise symbolic order, and
+  homogeneous precomposition are **proved** compatible;
+- primitive reduction is a lattice/incidence condition, not the quotient by
+  positive invariant multiples;
 - a bounded exceptional list of degrees is neither needed nor claimed;
 - rational-point existence or pointlessness on `V(Phi)` remains the sole
   arithmetic decision.
