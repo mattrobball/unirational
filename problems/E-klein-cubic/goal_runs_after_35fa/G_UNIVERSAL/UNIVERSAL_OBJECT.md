@@ -1,166 +1,327 @@
-# The corrected universal landing object
+# The universal object for all homogeneous landing covariants
 
-## 1. The global coefficient module
+## 1. Global coefficient lattice
 
 Work over a characteristic-zero field `k` containing the character values of
-`G=PSL(2,11)`.  Set
 
 \[
-S=\operatorname{Sym}(W^*),\qquad R=S^G,
-\qquad M=(S\otimes W)^G.
+G=\operatorname{PSL}_2(\mathbf F_{11}).
 \]
 
-The degree-`d` piece `M_d` is exactly the vector space of homogeneous
-`G`-equivariant polynomial maps `W -> W` of degree `d`.  Polarization of the
-Klein cubic `F` gives a homogeneous cubic polynomial law
+Let `W` be the five-dimensional Klein representation, let
 
 \[
-q:M\longrightarrow R,\qquad q(p)=F(p),
-\qquad q(M_d)\subset R_{3d}.
+F(x_0,\ldots,x_4)=\sum_{i\in\mathbf Z/5}x_i^2x_{i+1},
+\qquad X=V(F)\subset\mathbf P(W),
 \]
 
-The literal degree-`d` landing scheme is therefore
+and put
 
 \[
-Z_d=V(q_d)\subset \mathbf P(M_d),
+S=\operatorname{Sym}(W^*),\qquad R=S^G,\qquad
+M=(S\otimes W)^G.
 \]
 
-where `q_d=0` means that every coefficient of the polynomial `F(p(w))`
-vanishes.  A point of `Z_d` is one global coefficient vector, not a collection
-of independently chosen fixed-locus restrictions.
-
-## 2. Symbolic plane order is a filtration, not a second source of points
-
-For the 55 involution plus-plane ideals `P_t`, define
+The graded piece `M_d` is exactly the space of degree-`d` polynomial
+`G`-equivariant maps `W -> W`.  Polarization of `F` gives a cubic polynomial
+law
 
 \[
-A_m=\bigcap_tP_t^m,
-\qquad
-\mathcal F^mM=(A_m\otimes W)^G.
+q:M\longrightarrow R,\qquad q(p)=F(p),\qquad q(M_d)\subset R_{3d}.
 \]
 
-The intersection is literal and symbolic.  It is not replaced by an ordinary
-power of the ideal of the reduced union.  The exact order-`m`, degree-`d`
-landing stratum is
+Thus the literal degree-`d` landing scheme is
 
 \[
-\mathcal L_{m,d}=
-\{[p]\in Z_d:
- p\in\mathcal F^mM_d,
- p\notin\mathcal F^{m+2}M_d\}.
+Z_d=V(q_d)\subset\mathbf P(M_d).
 \]
 
-Every installed local datum is obtained by restricting the same element of
-`M_d`:
+This is the primary object.  Every local plane, line, point, or marked datum
+is obtained by restricting one element of `M_d`; independent local choices
+are never substituted for a global coefficient vector.
 
-- the 55 plane-normal jets;
-- the three-branch equalizer on each `V4` line;
-- residual `D10` and `D12` point kernels;
-- source minus-line, exceptional normal-direction line, and target minus-line
-  as distinct objects;
-- `C3`, `C6`, `A4`, `D10`, and `D12` links;
-- type-I and type-II elliptic markings;
-- the finite irrelevant-torsion correction between literal graded pieces and
-  sheaf sections.
+## 2. Intrinsic generic twist
 
-The sheaf architecture remains
+The action of the finite faithful group `G` on `P(W)` is generically free:
+for every `1 != g in G`, the fixed locus of `g` is a proper closed subset,
+and their finite union is proper.  Choose a `G`-stable free open
+`U subset P(W)` and let
 
-```text
-plane normalization -> triple-line equalizer -> residual point kernel.
-```
+\[
+B=U/G,\qquad K_{\rm proj}=k(B)=k(\mathbf P(W))^G.
+\]
 
-It is a restriction presentation of the filtered global module.  Its inverse
-limit of independent local states can be strictly larger than the image of
-`M`; such extra states are not points of the universal landing object.
+The generic fibre
 
-## 3. Finite-type coefficient scheme
+\[
+T=U\times_B\operatorname{Spec}K_{\rm proj}
+\]
+
+is a `G`-torsor.  Define the twist
+
+\[
+X_T=T\times^G X.
+\]
+
+This projective threefold over `K_proj` is the universal all-degree landing
+object.
+
+### Proposition 2.1 — rational sections
+
+There is a canonical bijection
+
+\[
+X_T(K_{\rm proj})
+\simeq
+\{G\text{-equivariant rational maps }\mathbf P(W)\dashrightarrow X\}.
+\]
+
+Indeed, the associated bundle
+
+\[
+U\times^G X\longrightarrow B
+\]
+
+has generic fibre `X_T`.  A `K_proj`-point of the generic fibre is a rational
+section over `B`; pulling it back to `U` gives a `G`-equivariant rational map
+to `X`.  Conversely, descent of such a map gives the rational section.  The
+two constructions are inverse on generic points.
+
+## 3. Polynomialization and the character issue
+
+A rational map `P(W) --> P(W)` can be represented by a primitive tuple
+
+\[
+p=(p_0,\ldots,p_4)
+\]
+
+of homogeneous polynomials of one degree.  Here primitive means
+`gcd(p_0,...,p_4)=1` in the UFD `S`.
+
+If the projective map is `G`-equivariant, then for every `g in G` the two
+primitive tuples `p(gx)` and `g p(x)` represent the same projective map.
+Two primitive polynomial tuples representing the same rational projective
+map differ by a scalar in `k^*`: writing the ratio as coprime `a/b` forces
+`b` to divide every coordinate of the first tuple and `a` to divide every
+coordinate of the second.  Consequently
+
+\[
+p(gx)=\chi(g)g p(x)
+\]
+
+for a character `chi:G -> k^*`.
+
+The verifier constructs the action of the standard matrices
+
+\[
+S:z\mapsto-1/z,\qquad T:z\mapsto z+1
+\]
+
+on `P^1(F_11)`, enumerates the generated permutation group, and obtains order
+660.  It then enumerates the normal closure of `[S,T]` and again obtains 660.
+Thus `G=[G,G]`, so `chi=1`.  Every `G`-equivariant rational projective map
+therefore has a genuine homogeneous polynomial covariant representative.
+If its image lies in `X`, then `F(p)=0` as a polynomial identity.
+
+This proves the intrinsic bijection
+
+\[
+X_T(K_{\rm proj})
+\simeq
+\frac{\{0\ne p\in M_d\text{ for some }d:F(p)=0\}}
+     {\text{projective scalar equivalence}}.
+\]
+
+## 4. Primitive and scalar-multiple covariants
+
+Let `p in M_d` be nonzero and let `delta` be the gcd of its five coordinates.
+For `g in G`, equivariance and invertibility of the target matrix imply that
+`g(delta)` and `delta` are associates.  Hence
+
+\[
+g(\delta)=\chi_\delta(g)\delta
+\]
+
+for a character `chi_delta`.  Perfectness of `G` gives `chi_delta=1`, so
+`delta in R`.  Therefore
+
+\[
+p_{\rm prim}=p/\delta
+\]
+
+is again a homogeneous `G`-covariant, and
+
+\[
+F(p)=\delta^3F(p_{\rm prim}).
+\]
+
+Thus landing is preserved by primitive reduction.  Conversely, for every
+nonzero homogeneous `h in R`,
+
+\[
+F(hp)=h^3F(p),
+\]
+
+so invariant scalar multiplication preserves landing and the induced
+projective map.  Two primitive representatives of the same map differ by a
+constant in `k^*`.  This is the exact treatment of primitive versus
+scalar-multiple covariants requested in G2.
+
+## 5. Explicit Klein trivialization
+
+The certified homogeneous frame is
+
+\[
+B=(x,C,D,E,K_7),\qquad e=(1,4,5,6,7).
+\]
 
 Let
 
 \[
-A=k[f_3,f_5,f_6,f_8,f_{11}].
+\tau=f_3^2/f_5,
 \]
 
-The certified Hironaka decompositions are
+which has source degree one.  Over the projective invariant field the five
+vectors
 
 \[
-R\simeq\bigoplus_{j=1}^{12}A(-\nu_j),
-\qquad
-M\simeq\bigoplus_{i=1}^{60}A(-\mu_i).
+\bar B_j=B_j/\tau^{e_j}
 \]
 
-Choose the certified secondary basis of `R` and a homogeneous `A`-basis of
-`M`.  Expanding `q` in these bases gives twelve weighted-homogeneous cubic
-polynomials
+form a basis of the twisted rank-five vector space.  Hence `X_T` is the cubic
 
 \[
-Q_1(y_1,\ldots,y_{60}),\ldots,Q_{12}(y_1,\ldots,y_{60})
+\Phi(a_0,\ldots,a_4)
+=F\!\left(\sum_{j=0}^4a_j\bar B_j\right)=0
 \]
 
-with coefficients in `A`.  Hence the affine coefficient cone
-
-\[
-\mathscr C=
-\operatorname{Spec}
-A[y_1,\ldots,y_{60}]/(Q_1,\ldots,Q_{12})
-\]
-
-and its weighted projectivization are finite-type noetherian objects.  A
-homogeneous `A`-valued solution of total source weight `d` is exactly an
-element \(p\in M_d\) with \(q(p)=0\).  Local transition conditions require no
-extra independent coordinates: they are functorial restrictions of the same
-element of `M`.
-
-This finite presentation must not be misread as a degree bound.  An
-`A`-valued point may have coordinates of arbitrarily high weighted degree,
-and the zero set of a cubic law is not closed under addition.
-
-## 4. Generic degree-zero fibre
-
-The certified frame
-
-\[
-B=(B_0,\ldots,B_4)=(x,C,D,E,K_7),
-\qquad e=(1,4,5,6,7),
-\]
-
-is a basis of \(M\otimes_R\operatorname{Frac}(R)\).  Put
-
-\[
-\tau=f_3^2/f_5,\qquad \deg\tau=1,
-\qquad K_{\rm proj}=\operatorname{Frac}(R)_0.
-\]
-
-The normalized frame vectors `B_i/tau^{e_i}` have source weight zero.  The
-universal generic degree-zero fibre is the cubic hypersurface
-
-\[
-X_{\rm gen}=V(\Phi)\subset\mathbf P^4_{K_{\rm proj}},
-\qquad
-\Phi(a)=q\!\left(\sum_{i=0}^4a_iB_i/\tau^{e_i}\right).
-\]
-
-The projective field is a degree-12 extension of
-`k(t3,t6,t8,t11)`.  All 35 symmetric cubic coefficients of `Phi` are stored
-in
+in `P^4_{K_proj}`.  Its 35 symmetric coefficients are stored exactly in
 
 ```text
 goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json
 ```
 
-in the normalized twelve-element secondary basis.  The pre-existing producer
-reconstructs these coefficients from the original Klein equation, and the
-pre-existing verifier checks all 35 expanded identities.
+in the normalized twelve-element secondary basis over
+`k(t3,t6,t8,t11)`.
 
-## 5. Fibre recovery
+## 6. Denominator clearing is the all-degree theorem
 
-The all-degree theorem in `ALL_DEGREE_THEOREM.md` proves that the union of all
-`Z_d` is nonempty exactly when `X_gen(K_proj)` is nonempty.  The symbolic
-filtration then recovers the true exact-order stratum of each cleared global
-representative.  Multiplying by a homogeneous invariant may change both `d`
-and `m`, so `m` is not an invariant of the projective generic point; the full
-rational scalar-saturation line contains all such representatives.
+Let `[a_0:...:a_4]` be a `K_proj`-point of `V(Phi)`.  The element
+`a_j tau^{-e_j}` has degree `-e_j` in the graded fraction field of `R`, so
+choose homogeneous `n_j,d_j in R` with
 
-Consequently the generic cubic loses no plane, line, point, elliptic, torsion,
-or coefficient condition: those conditions were never separate choices, but
-consequences of the single global vector recovered by denominator clearing.
+\[
+a_j\tau^{-e_j}=n_j/d_j,
+\qquad \deg n_j=\deg d_j-e_j.
+\]
+
+Put `h=product_j d_j`, `H=deg h`, and
+
+\[
+p=h\sum_j a_jB_j/\tau^{e_j}
+ =\sum_j\left(n_j\prod_{k\ne j}d_k\right)B_j.
+\]
+
+The coefficient of `B_j` has degree `H-e_j`; every summand has degree `H`.
+Moreover
+
+\[
+F(p)=h^3\Phi(a)=0.
+\]
+
+The normalized frame is independent and `a` is nonzero, so `p` is nonzero.
+This produces a literal polynomial element of `M_H`, not only a sheaf
+section or formal state.
+
+Conversely, if `0 != p in M_d` and `F(p)=0`, expand uniquely
+
+\[
+p=\sum_j c_jB_j,
+\qquad \deg c_j=d-e_j.
+\]
+
+Then
+
+\[
+a_j=c_j\tau^{e_j-d}\in K_{\rm proj},
+\qquad
+p/\tau^d=\sum_ja_jB_j/\tau^{e_j},
+\]
+
+and
+
+\[
+\Phi(a)=F(p)/\tau^{3d}=0.
+\]
+
+The two constructions are inverse after projective scalar equivalence.
+Therefore
+
+\[
+V(\Phi)(K_{\rm proj})\ne\varnothing
+\Longleftrightarrow
+\exists d\; Z_d\ne\varnothing.
+\]
+
+This equivalence has no hidden bounded-degree hypothesis.
+
+## 7. Exact symbolic-order fibres and transition data
+
+For the 55 involution plus-plane ideals `P_t`, put
+
+\[
+A_m=\bigcap_tP_t^m,
+\qquad \mathcal F^mM=(A_m\otimes W)^G.
+\]
+
+For an actual polynomial covariant `p`, its true order is the maximal odd `m`
+with `p in F^mM`.  The exact support is
+
+\[
+\mathcal L_{m,d}
+=\{[p]\in Z_d:p\in\mathcal F^mM_d,
+                  p\notin\mathcal F^{m+2}M_d\}.
+\]
+
+Restriction of the one global class of `p` gives, simultaneously,
+
+- all 55 plane-normal jets;
+- every `V4` triple-line equalizer;
+- residual multiple-point kernels;
+- source fixed lines, exceptional normal-direction lines, and target fixed
+  lines as distinct objects;
+- `C3`, `C6`, `A4`, `D10`, and `D12` links;
+- type-I/type-II marked elliptic data;
+- the finite irrelevant-torsion correction between literal graded pieces and
+  sheaf sections.
+
+The authoritative necessity theorem is
+
+```text
+certificates/global_transition/necessity_theorem.json
+```
+
+and its direction remains forward only.  The generic-twist point clears to a
+literal global polynomial before these restrictions are taken, so no local
+compatibility or low-degree torsion term is lost.  Conversely, this theorem
+does not turn an independently chosen local inverse-limit state into a global
+covariant.
+
+## 8. Finite type and scope
+
+With
+
+\[
+A=k[f_3,f_5,f_6,f_8,f_{11}],
+\]
+
+`R` and `M` are graded free `A`-modules of ranks 12 and 60.  Expansion of the
+cubic law gives twelve cubic equations in sixty coefficient slots over `A`.
+This is a noetherian finite-type coefficient scheme.
+
+Its graded polynomial sections have unbounded degree, so finite type does not
+imply a finite first-landing-degree bound.  The generic twist is the correct
+finite object because it quotients exactly by invariant denominators and
+projective scalar multiplication.  It reduces the union of all bidegree
+supports to one explicit rational-point problem without claiming a false
+finite degree ladder.
