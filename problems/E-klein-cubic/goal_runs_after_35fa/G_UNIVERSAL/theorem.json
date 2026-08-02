@@ -1,54 +1,81 @@
 {
-  "schema": "G2_UNIVERSAL_ALL_DEGREE_V1",
+  "schema": "G2_UNIVERSAL_ALL_DEGREE_V2",
   "date": "2026-08-02",
-  "source_commit": "4378e3dfe2dcf0caeeeb6f73117d785f5aa9f794",
+  "source_commit": "b49fc8148ca3ad8a23b959c140d68e7544fc8031",
   "exit": "G2-FINITE-GENERATION-PASS",
   "headline": "OPEN",
+  "upstream": {
+    "generic_cubic": {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json",
+      "git_blob_sha1": "965abb5fd13c0513b1aeb3bcfbc247de0a288a3c"
+    },
+    "transition_necessity": {
+      "path": "certificates/global_transition/necessity_theorem.json",
+      "git_blob_sha1": "c9d9c7640cae49538084bb6d6e32d4b2a32f6d03"
+    },
+    "prior_universal_proof": {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/UNIVERSAL_OBJECT.md",
+      "git_blob_sha1": "09d0daab0cd046dd18fd96e54305ee80adb2fc51"
+    },
+    "prior_universal_verifier": {
+      "path": "goals_2026-08-01/G_ALL_DEGREE/verify_universal_object.py",
+      "git_blob_sha1": "3cd1164a4e5dbf39de5786742fc5c657bfd339c7"
+    }
+  },
+  "group": {
+    "name": "PSL(2,11)",
+    "permutation_degree": 12,
+    "order": 660,
+    "derived_subgroup_order": 660,
+    "character_group": "trivial"
+  },
   "global_object": {
+    "primary_invariants": ["f3", "f5", "f6", "f8", "f11"],
+    "primary_degrees": [3, 5, 6, 8, 11],
     "invariant_module_rank_over_A": 12,
     "covariant_module_rank_over_A": 60,
+    "generic_covariant_rank": 5,
     "landing_law_degree": 3,
     "coefficient_equations": 12,
     "coefficient_slots": 60
   },
   "generic_object": {
-    "frame_names": [
-      "x",
-      "C",
-      "D",
-      "E",
-      "K"
-    ],
-    "frame_degrees": [
-      1,
-      4,
-      5,
-      6,
-      7
-    ],
+    "intrinsic": "generic twist T times^G X over K_proj",
+    "frame_names": ["x", "C", "D", "E", "K"],
+    "frame_degrees": [1, 4, 5, 6, 7],
     "normalizer": "tau=f3^2/f5",
     "normalizer_degree": 1,
-    "projective_base": [
-      "t3",
-      "t6",
-      "t8",
-      "t11"
-    ],
-    "projective_field_degree": 12,
-    "cubic_coefficient_count": 35,
-    "source_payload": "goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json"
+    "projective_base": ["t3", "t6", "t8", "t11"],
+    "projective_field_basis_size": 12,
+    "cubic_coefficient_count": 35
   },
+  "transition_steps": [
+    "N.1_forced_base_jets",
+    "N.2_symbolic_powers",
+    "N.3_associated_graded",
+    "N.4_specialization",
+    "N.5_iterated_incidences",
+    "N.6_irrelevant_torsion",
+    "N.7_projective_scalars",
+    "N.8_C3_A4_marked",
+    "N.9_no_short_Cech"
+  ],
   "theorem": {
-    "left": "exists d and nonzero p in M_d with F(p)=0",
-    "right": "V(Phi)(K_proj) is nonempty",
-    "equivalence": true,
+    "equivalent_sets": [
+      "K_proj-points of the generic twist",
+      "G-equivariant rational maps P(W) to X",
+      "homogeneous landing covariants in arbitrary degree modulo rational invariant scalar saturation",
+      "primitive homogeneous landing covariants modulo k-star",
+      "K_proj-points of the explicit cubic V(Phi)"
+    ],
     "forward_map": "normalize unique homogeneous frame coordinates",
     "reverse_map": "clear homogeneous invariant denominators",
+    "projective_lift": "perfectness kills the projective equivariance character",
+    "primitive_reduction": "coordinate gcd is invariant because PSL(2,11) is perfect",
+    "scalar_rule": "F(hp)=h^3 F(p) for homogeneous invariant h",
     "homogeneous_precomposition_preserves_landing": true,
-    "rational_scalar_saturation_projectivized": true,
-    "primitive_is_lattice_condition_not_linear_quotient": true,
-    "symbolic_order_is_representative_dependent": true,
-    "all_symbolic_orders_union_equivalent": true
+    "all_symbolic_orders_union_equivalent": true,
+    "headline": "OPEN"
   },
   "scope": {
     "symbolic_filtration_retained": true,
