@@ -44,8 +44,11 @@
     "equivalence": true,
     "forward_map": "normalize unique homogeneous frame coordinates",
     "reverse_map": "clear homogeneous invariant denominators",
-    "scalar_multiples_projectivized": true,
-    "homogeneous_precomposition_preserves_landing": true
+    "homogeneous_precomposition_preserves_landing": true,
+    "rational_scalar_saturation_projectivized": true,
+    "primitive_is_lattice_condition_not_linear_quotient": true,
+    "symbolic_order_is_representative_dependent": true,
+    "all_symbolic_orders_union_equivalent": true
   },
   "scope": {
     "symbolic_filtration_retained": true,
