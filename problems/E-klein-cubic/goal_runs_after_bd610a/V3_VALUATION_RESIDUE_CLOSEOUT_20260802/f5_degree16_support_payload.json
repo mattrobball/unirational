@@ -1,0 +1,811 @@
+{
+  "c_only_support_witness": {
+    "coefficient_evaluation_matrix": [
+      [
+        9,
+        37,
+        53,
+        22,
+        58
+      ],
+      [
+        14,
+        29,
+        1,
+        57,
+        39
+      ],
+      [
+        22,
+        10,
+        3,
+        58,
+        43
+      ],
+      [
+        0,
+        26,
+        31,
+        10,
+        6
+      ],
+      [
+        33,
+        47,
+        23,
+        28,
+        39
+      ]
+    ],
+    "consequence": "f12 is nonzero at all five points and the Q-evaluation matrix is invertible, so no nonzero Q coefficient vector lands on this support even over an algebraic closure",
+    "determinant_mod_67": 48,
+    "f12_values": [
+      23,
+      57,
+      6,
+      42,
+      48
+    ],
+    "identity": "F(Q*C)=Q^3*F(C)=Q^3*f12",
+    "point_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "points_f67": [
+      [
+        23,
+        33,
+        11,
+        17,
+        18
+      ],
+      [
+        23,
+        33,
+        11,
+        17,
+        7
+      ],
+      [
+        23,
+        33,
+        11,
+        17,
+        25
+      ],
+      [
+        31,
+        40,
+        52,
+        52,
+        0
+      ],
+      [
+        54,
+        27,
+        42,
+        27,
+        4
+      ]
+    ],
+    "support": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "conclusion": "all coefficient supports of size at most five are projectively empty; a degree-16 polynomial survivor must use at least six of the nineteen quotient-basis coefficients",
+  "cubic_monomial_count": 1330,
+  "deficient_size5_supports": [
+    {
+      "kernel_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54,
+        60,
+        35,
+        1,
+        0
+      ],
+      "nonveronese_minor": {
+        "degree2_columns": [
+          [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "determinant_mod_67": 54,
+        "entries": [
+          [
+            54,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "rows": [
+          0,
+          1
+        ]
+      },
+      "nullity": 1,
+      "rank": 34,
+      "support": [
+        0,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "kernel_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54,
+        60,
+        35,
+        1,
+        0
+      ],
+      "nonveronese_minor": {
+        "degree2_columns": [
+          [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "determinant_mod_67": 54,
+        "entries": [
+          [
+            54,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "rows": [
+          0,
+          1
+        ]
+      },
+      "nullity": 1,
+      "rank": 34,
+      "support": [
+        1,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "kernel_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54,
+        60,
+        35,
+        1,
+        0
+      ],
+      "nonveronese_minor": {
+        "degree2_columns": [
+          [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "determinant_mod_67": 54,
+        "entries": [
+          [
+            54,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "rows": [
+          0,
+          1
+        ]
+      },
+      "nullity": 1,
+      "rank": 34,
+      "support": [
+        2,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "kernel_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54,
+        60,
+        35,
+        1,
+        0
+      ],
+      "nonveronese_minor": {
+        "degree2_columns": [
+          [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "determinant_mod_67": 54,
+        "entries": [
+          [
+            54,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "rows": [
+          0,
+          1
+        ]
+      },
+      "nullity": 1,
+      "rank": 34,
+      "support": [
+        3,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "kernel_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54,
+        60,
+        35,
+        1,
+        0
+      ],
+      "nonveronese_minor": {
+        "degree2_columns": [
+          [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "determinant_mod_67": 54,
+        "entries": [
+          [
+            54,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "rows": [
+          0,
+          1
+        ]
+      },
+      "nullity": 1,
+      "rank": 34,
+      "support": [
+        4,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "kernel_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54,
+        60,
+        35,
+        1,
+        0
+      ],
+      "nonveronese_minor": {
+        "degree2_columns": [
+          [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "determinant_mod_67": 54,
+        "entries": [
+          [
+            54,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "rows": [
+          0,
+          1
+        ]
+      },
+      "nullity": 1,
+      "rank": 34,
+      "support": [
+        5,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "kernel_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54,
+        60,
+        35,
+        1,
+        0
+      ],
+      "nonveronese_minor": {
+        "degree2_columns": [
+          [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "determinant_mod_67": 54,
+        "entries": [
+          [
+            54,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "rows": [
+          0,
+          1
+        ]
+      },
+      "nullity": 1,
+      "rank": 34,
+      "support": [
+        6,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "nullity": 5,
+      "rank": 30,
+      "support": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "equation_points_f67_uint8_base64": "FyELERIXIQsRBxchCxEZHyg0NAA2GyobBDYbKhsrNhsqGzxCCkAlEUIKQCULQgpAJSMzLyAhCTUMAh4aNQwCHjA1DAIeHCAJHBcJM0AkMjYHEAYcPwcQBhw6NUAfQj8CESAlLQIRICUQAhEgJQkqBwoHMTotQTQnGy8GDhMVGjUIIBUaNQgIFRo1CBciKCYXDyIoJhc1IigmFwUlDjodAykhNiIkASgGOAYBDwk3FhM2OhEEGBsUDBQVMDslPg09LzIGOQEDABIwExAXHhELKjMoHCcaLzMPDTMUOA8NMxQvDw0zFAgpDxo7JSkPGjsgKQ8aOy8+MStBNz4xK0ExPjErQRAEFxgVKhUYHz4iOAAxEh0MMidCMyIRGD4aFyAeNDIXIB40KxwyFxFCEB0oQhEDMyEsNAMzISwzAzMhLD4vNjgDAwAZEjoGEEAAOzUQQAA7NhBAADsbKTc5ChsSQBEZMAMVQQ4UMQw6CzUrJRoBMSslGgEmKyUaAT40DxE3JzkzAzMJLQw8MwINCAgEJg0ICAQ2GQ4fPiopOUFAEAAgHiIuAi4sCDULHBUHFwscFQcQFiAWIzYQJQUNLCUwQjw6GAgOHhMYCA4eGzwEIRANITk+PCooPTIzQhlCLSQNAUAHHj8BQAceMAgtLRY5BR4XIzoFHhcjBAUeFyM9BzILCh49ADIXGT0AMhcUJDolKgUWIisDPxYiKwMsFiIrAxwRQBsUKTM9QjwyLQovFzs8M0EvPzwzQS8OPzsZKSctJxwYHCkALBINLCkyEDUEQCA9CjM2HScNMzYdJywDLRkxMDEJHA9BQg4kBAk/FQYvEyAEGywkDT0TDQQNPRMNKQ09Ew06DgISDRkzBzgKDTMHLTZBMxgVOww8HBQnB0ABORoVQAE5GihAATkaLTUQBh0WPSIrJRIrGi8wHDoZLA0YOhksDTw3LBknChE8KSArKh8UEhYqHxQSPAUqPBIeFQ41HjEVDjUeQRUONR49ORUWPTo=",
+  "equation_points_shape": [
+    151,
+    5
+  ],
+  "frame_blocks": [
+    {
+      "coefficient_degree": 15,
+      "dimension": 7,
+      "frame_degree": 1,
+      "name": "x",
+      "variable_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient_degree": 12,
+      "dimension": 5,
+      "frame_degree": 4,
+      "name": "C",
+      "variable_indices": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "coefficient_degree": 11,
+      "dimension": 2,
+      "frame_degree": 5,
+      "name": "D",
+      "variable_indices": [
+        12,
+        13
+      ]
+    },
+    {
+      "coefficient_degree": 10,
+      "dimension": 2,
+      "frame_degree": 6,
+      "name": "E",
+      "variable_indices": [
+        14,
+        15
+      ]
+    },
+    {
+      "coefficient_degree": 9,
+      "dimension": 3,
+      "frame_degree": 7,
+      "name": "K",
+      "variable_indices": [
+        16,
+        17,
+        18
+      ]
+    }
+  ],
+  "group_order": 660,
+  "headline_claim": false,
+  "necessary_equation_rank": 151,
+  "prime": 67,
+  "proper_specialization_consequence": "the corresponding characteristic-zero projective coefficient-support strata are empty because projective closure over the DVR at zeta11 -> 9 has empty geometric special fibre",
+  "reynolds_seed_exponents_uint8_base64": "AAAACgUAAAEECgAAAgkEAAADAwkAAAQIAwAABQIIAAAGBwIAAAAIBAAAAQIJAAACBwMAAAMBCAAABAYCAAAAAAsAAAEFBQAAAAMHAAABCAEAAAAGAwAAAQAIAAACBQI=",
+  "reynolds_seed_shape": [
+    19,
+    5
+  ],
+  "row_matrix_uint8_sha256": "0d77c030d4ed687c03f88c124534df6cf96cb964cafd7512c12af6eb325e7f67",
+  "schema": "klein-v-f5-degree16-support-v2",
+  "scope": "necessary degree-16 polynomial landing equations on the full five-column residue frame at f5=0; this is not a rational-residue-point or all-degree theorem",
+  "support_rank_histograms": [
+    {
+      "cubic_dimension": 1,
+      "ranks": {
+        "1": 19
+      },
+      "support_size": 1,
+      "total": 19
+    },
+    {
+      "cubic_dimension": 4,
+      "ranks": {
+        "4": 171
+      },
+      "support_size": 2,
+      "total": 171
+    },
+    {
+      "cubic_dimension": 10,
+      "ranks": {
+        "10": 969
+      },
+      "support_size": 3,
+      "total": 969
+    },
+    {
+      "cubic_dimension": 20,
+      "ranks": {
+        "20": 3876
+      },
+      "support_size": 4,
+      "total": 3876
+    },
+    {
+      "cubic_dimension": 35,
+      "ranks": {
+        "30": 1,
+        "34": 7,
+        "35": 11620
+      },
+      "support_size": 5,
+      "total": 11628
+    }
+  ],
+  "target": "f5=0",
+  "total_degree": 16,
+  "variable_count": 19,
+  "zeta11": 9
+}
