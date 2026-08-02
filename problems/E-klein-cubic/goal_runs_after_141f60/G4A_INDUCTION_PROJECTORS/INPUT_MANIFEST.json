@@ -64,6 +64,11 @@
       "path": "goal_runs_after_141f60/G4A_INDUCTION_PROJECTORS/h_a5_base_class_2.json",
       "sha256": "7493835f6be63a9770bb0f3859dce9435324317bc09c04d9b3c3fb0593de882f",
       "exists": true
+    },
+    {
+      "path": "goal_runs_after_141f60/G4A_INDUCTION_PROJECTORS/klein_witnesses_mod89.json",
+      "sha256": "4827c6f91799df5e2293affe141829ffccf919ce641f1eb9359c218a1c778d4a",
+      "exists": true
     }
   ]
 }

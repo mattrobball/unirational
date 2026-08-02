@@ -1,0 +1,915 @@
+{
+  "schema": "g7b-incidence-correspondence-v1",
+  "source_algebra": {
+    "label": "A5_class_1",
+    "design_label": "A5_class_H",
+    "basis": [
+      "e_0",
+      "e_1",
+      "e_2",
+      "e_3",
+      "e_4",
+      "e_5",
+      "e_6",
+      "e_7",
+      "e_8",
+      "e_9",
+      "e_10"
+    ],
+    "meaning": "coset basis of L_H = T\u00d7^G(G/H) for class_1 base H"
+  },
+  "target_algebra": {
+    "label": "A5_class_2",
+    "design_label": "A5_class_K",
+    "basis": [
+      "f_0",
+      "f_1",
+      "f_2",
+      "f_3",
+      "f_4",
+      "f_5",
+      "f_6",
+      "f_7",
+      "f_8",
+      "f_9",
+      "f_10"
+    ],
+    "meaning": "coset basis of L_K = T\u00d7^G(G/K) for class_2 base K"
+  },
+  "identification": {
+    "coset_to_conjugate": "gH \u2194 g H g^{-1}",
+    "class1_matches_design": "H",
+    "sigma_class1_to_design_orbit": [
+      8,
+      4,
+      2,
+      7,
+      1,
+      5,
+      0,
+      9,
+      6,
+      10,
+      3
+    ],
+    "sigma_class2_to_design_orbit": [
+      7,
+      0,
+      3,
+      10,
+      8,
+      5,
+      1,
+      2,
+      6,
+      4,
+      9
+    ],
+    "design_N_sha256": "1aba2b04b2deee319936a40428d86484403ac06c6c784d5e01c103ae0eebf47f"
+  },
+  "incidence_matrix_N_coset": [
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "complementary_matrix": [
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "derived_rule": "e_i incident f_j  \u27fa  |g_i H g_i^{-1} \u2229 g_j' K g_j'^{-1}| = 12 \u27fa A4 intersection \u27fa N_ij = 1",
+  "module_map": {
+    "formula": "N_*(e_i) = sum_j N_ij f_j",
+    "transpose_formula": "N^*(f_j) = sum_i N_ij e_i",
+    "augmentation_inverse": {
+      "formula": "N^{-1} = (1/3) N^t on augmentation modules (char \u2260 3)",
+      "matrix_Nt_over_3": [
+        [
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          }
+        ],
+        [
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          }
+        ],
+        [
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          }
+        ],
+        [
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          }
+        ],
+        [
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          }
+        ],
+        [
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          }
+        ],
+        [
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          }
+        ],
+        [
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          }
+        ],
+        [
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          }
+        ],
+        [
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          }
+        ],
+        [
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 1,
+            "den": 3
+          },
+          {
+            "num": 0,
+            "den": 3
+          }
+        ]
+      ]
+    },
+    "biplane_identities": {
+      "row_sums": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "col_sums": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "NNt_equals_3I_plus_2J": true,
+      "parameters": "symmetric 2-(11,5,2) Paley biplane"
+    }
+  },
+  "descent": {
+    "statement": "N is constant on the coset bases of the two finite-etale K_proj-algebras L_H, L_K and is G-equivariant for the joint conjugation/coset action (installed G = Aut of the design). It is not a bare matrix detached from descent: bases are the same coset bases carrying the induced cycles and Gal actions.",
+    "G_equivariance": "Conjugation by g\u2208G permutes both conjugacy orbits and preserves intersection type; transported N intertwines the two perm modules."
+  },
+  "direct_intersection_rebuild_matches": true,
+  "design_packet": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/design",
+  "design_exit": {
+    "G7-PALEY-BIPLANE-IDENTIFIED": true
+  }
+}

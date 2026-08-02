@@ -1,5 +1,5 @@
 {
-  "format": "g4a-induction-projectors-seal-v2",
+  "format": "g4a-induction-projectors-seal-v3",
   "exit": "G4-INDUCED-DEGREE11-POINT-PASS",
   "also_exits": [
     "G4-COSET-PROJECTOR-REDUCTION-PASS"
@@ -8,25 +8,30 @@
   "slice": "G4.0+G4.1",
   "G_module": "1+10",
   "five_dimensional_projectors": "A5-restriction per class (x2)",
+  "H_A5_formula_base_change": true,
   "consumed_commit": "7030ddafb53acdea23070b0d9d20050b592ceb1b",
   "files": {
-    "INPUT_MANIFEST.json": "9e3f53560c7bb33f87f7e7a2851be38888247d754de477f23fc4c08bcbdd892a",
-    "coset_actions.json": "2fb42520437448c679b8bbfe1608c2d48fe0d922e463df8f7f8abd045f1b4244",
-    "induced_points.json": "44b4274f60d1aa2319529d0ddb1b83f922966c9ec641f40185bf25d7b36c6a5d",
-    "projectors.json": "dd6f450197c889344c3c58c2c75879bc97ef60d1c887849b069360bf359199b9",
-    "operations.json": "808a08dcf72324e2f83e6dbf846df0088157741d27cd71d939877b0e68ce1c77",
-    "COSET_ACTIONS.md": "7e9baed55982bc5236e2e909b74364d8d131b39f6f1d1ebf1ca3f2c1792389af",
-    "PERMUTATION_PROJECTORS.md": "64334df7fd86765ca147f5a300852e1c69e708477e80cd75b73312a822d4d74d",
-    "INDUCED_POINTS.md": "272d845f14745452af4d6ec356b5eb1630fcde3ee23258a32fb608d63bdedef8",
-    "LOW_ARITY_OPERATIONS.md": "760143c1a9430aa46b84bbcf942b497c3e2643faaf2ced46c20c5126e8d02d46",
-    "REPLAY.md": "4499855f9596e5886143521254a0d425407ce6629a7fd5367206e69f6e4365ab",
-    "STATUS.md": "57fc84d0a99457c5f3c482014b1fcf66206447f49738ae8c430b375ec057dc72",
-    "verify_all.py": "2a8ef8fe4085a85652727ce60e1e0570431fa85b756b08922e0d580c1832d7aa",
-    "produce_g4a.py": "17f982deb696b1f611906deb7a095f72fa06b59e59c7d27f88f90b4064bf358c"
+    "INPUT_MANIFEST.json": "0bfde8b2fc5b85d58cb08fe01acfc28266dda53480d57f25ab00dd460ff32710",
+    "coset_actions.json": "b7ff571e0382841e5c6ea7e11969935a37e370d510318bd44fdfc6dc88612c18",
+    "induced_points.json": "67f99515c96a402df1b0fb0cbb4ed86ddf4bc172f5092c56a5c08c7d9288fa98",
+    "projectors.json": "60f39bbc1d6e681e735012ddb889771751169a16804ea11a5d19ad0b39960408",
+    "operations.json": "66fef84cb732de5031e9f0b108d843c9683e1f039cc33499b793c157d103c6c7",
+    "h_a5_base_class_1.json": "f14c5a363e1d0f80926bec1bf01402ac33aff03e9254b498aff21764d9c6879a",
+    "h_a5_base_class_2.json": "7493835f6be63a9770bb0f3859dce9435324317bc09c04d9b3c3fb0593de882f",
+    "klein_witnesses_mod89.json": "4827c6f91799df5e2293affe141829ffccf919ce641f1eb9359c218a1c778d4a",
+    "COSET_ACTIONS.md": "38444ef08d2f295e852f0540f7e4fdce8bca7cab5cd208ff8b5cee789101dd1f",
+    "PERMUTATION_PROJECTORS.md": "290f695377d48da1ed1f67a9a8b9d986b8cee737218dbdc3b63e71cd62c55cdb",
+    "INDUCED_POINTS.md": "911aff767c19b8ca7f0da4cad9465541631525f763a351b13dd80784d79e7c79",
+    "LOW_ARITY_OPERATIONS.md": "ff7cf7a067a6d7a60ce6266f12dda1781b387653bebc8116001c0e657debc9d0",
+    "REPLAY.md": "948e9fd891c9981ebe38437f88534a9023faed3fea42eec190db6dfa556cbc61",
+    "STATUS.md": "411075cb07e87006a1b9955a8b5a0da3222ea01935d9cffe8621869aa82647ef",
+    "verify_all.py": "92fd5d06fef11fcb09112d0b1a46848a90180916cb445c9500b924b84e3719bf",
+    "produce_g4a.py": "8c0e620f9add3df08d6ffff59cb1d48f7d16eb69d5ca8b5800f4fdca3f8b69f4"
   },
   "nonclaims": [
     "no G4-POINT-HEADLINE-POSITIVE",
     "no secant geometry (G4.3)",
-    "Klein/companion 5s of G not summands of Ind"
+    "Klein/companion 5s of G not summands of Ind",
+    "ordered constant-field W-tuple not H-fixed (no line in Res Klein 5)"
   ]
 }

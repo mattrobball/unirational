@@ -1,0 +1,42 @@
+{
+  "format": "g7b-double-a5-cycles-seal-v1",
+  "exit": "G7-INDUCED-DOUBLE-CYCLE-PASS",
+  "also": [
+    "G7-PROJECTIVE-SCALING-PASS"
+  ],
+  "headline": "OPEN",
+  "stages": [
+    "G7.2",
+    "G7.3"
+  ],
+  "consumed_commit": "0222cc7ee4dd44d8d578628d1d4cc874e4249f82",
+  "n_points_explicit": 22,
+  "G3_frame_coordinates": true,
+  "both_classes": true,
+  "files": {
+    "INPUT_MANIFEST.json": "74b87a509586649998eed653a4792adec2deea72e54e066e49504b462de64ad2",
+    "scaling_interface.json": "c01345576f078edcc1b2f707d5ec1a57d5a80fdbf8697e60249a09d03b1001fc",
+    "cycles.json": "24b568b08b284d395fa1134f926d29fd85fb28e722593e93993b0113a46dd4f9",
+    "incidence_correspondence.json": "eeabf126d1c9bc487829416235623ed88fb654ed5ab8d0b34a288c7d298f4a7a",
+    "PROJECTIVE_SCALING.md": "c5b9b9f7a7d4adf846c31c805285f89c576cfb054610952a4f5afc3a7714d3f9",
+    "CYCLES.md": "01679291ae3bb46c37e02d0b41ab207ae0cd5ed137ae25317a4592d12269c6ea",
+    "INCIDENCE_CORRESPONDENCE.md": "84b9a6d80b60face5e764e6408279b2fd2725e05885923f53fb67e2005f6d04f",
+    "produce.py": "a490a20e7b8a09512697b770078dde47e452fc4566633679cae9ce13458bb2d4",
+    "produce_meta.json": "0b7dc0b93e2d5e2e2315d586d442cffa4c5aed184d3568e07a71462758d23eae",
+    "verify_scaling.py": "520f93e817276835c7bb366b057c6b99e462af4258f71de888c198f185e74de6",
+    "verify_cycles.py": "a12141201773b239b8ffb5cfa0a97ebfa070b0cd83851c57fa26c15cf8788263",
+    "REPLAY.md": "fafde2d1c7ffb2e252ab1d423d4133d344a88593f1d79f4574618dca77c5f5a3",
+    "STATUS.md": "c7ba3ec1dff0dc3bfd0d99b87967e6d32e75b7f15eddc6f4df5c9b488b0302ae",
+    "make_seal.py": "2147f43fe00f12dddf9313fcc2146a5d05c0211f9b26df600b21e48bff03c969"
+  },
+  "nonclaims": [
+    "no K_proj-point of X_gen",
+    "no G7C geometry (G7.4+)",
+    "does not reseal H_A5, G4, G7A, G3A",
+    "split-model coordinates over Q(zeta_11); abstract point over L_H"
+  ],
+  "residual_gates": [
+    "G7C cross-ops / third intersections / residual geometry",
+    "Springer path may still need non-split L_H-valued cocycle lifts"
+  ]
+}

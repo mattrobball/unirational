@@ -1,0 +1,14 @@
+{
+  "schema": "g7b-produce-meta-v1",
+  "wall_s": 0.417417049407959,
+  "peak_rss_mb": 36.25,
+  "exit": "G7-INDUCED-DOUBLE-CYCLE-PASS",
+  "also": [
+    "G7-PROJECTIVE-SCALING-PASS"
+  ],
+  "n_points": 22,
+  "stages": [
+    "G7.2",
+    "G7.3"
+  ]
+}

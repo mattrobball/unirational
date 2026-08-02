@@ -9,20 +9,25 @@ G4-INDUCED-DEGREE11-POINT-PASS
 
 ## Decision
 
-1. **Cosets.** Both A5 classes from sealed H_A5 generators; s_perm/t_perm match rebuild.
-2. **Induced cycles.** Base-change of **sealed H_A5 installed formula** (point.json parameters
-   fully used; exact Phi_params(y) in A5 space in h_a5_base_class_*.json). Eleven coset-labeled
-   conjugates in G3/coefficient frame + Klein W witnesses on V(F) with F=0.
-3. **Phi.** H_A5 landing seal + exact F on W fibers + G3A identity Phi=F(Frame); generic_cubic bound.
-4. **Projectors.** G: 1+10 (P1,P10). Two 5-dim = A5-restriction P5 per class.
-5. **Operations.** W-valued (M·cycle)_j=sum M_ji W_i plus coset M2/M3 tensors.
+1. **Cosets.** Both A5 classes from sealed H_A5 generators; `s_perm`/`t_perm` match independent rebuild.
+2. **H_A5 formula base-change.** `point.json` parameters used exactly: Phi_params(y) in A5 space
+   (`h_a5_base_class_*.json`) and Klein landing Psi=J*Phi_params(y) reconstructed mod 89
+   (`klein_witnesses_mod89.json`). Conjugates: rho(g_i)*Psi with F=0 mod 89 for all 11×2.
+3. **G3 frame.** Coefficient-frame content = sealed H_A5 parameter vector + exact A5 evaluation;
+   Klein W witnesses from the same formula (not a bare e0 orbit).
+4. **Phi.** H_A5 char-0 form identity F(J*Phi_params)=0; modular F=0 on all witnesses;
+   G3A identity Phi=F(Frame); generic_cubic.json bound by SHA-256.
+5. **Projectors.** G-module 1+10 (P1,P10); two five-dimensional A5-restriction P5s.
+6. **Operations.** W-valued (M·cycle)_j=sum_i M_ji W_i on H_A5-derived W-cycle; coset M2/M3.
 
 ## Equivariance boundary
 
-H_A5 map equivariance Psi(h·y)=rho(h)Psi(y) is sealed (defines the twist point).
-Ordered constant-field W-tuples cannot be H-fixed in the Klein 5 (irreducible Res);
-the induced L_H-point uses the twist cocycle / formula base-change, not an H-line in W.
+H_A5 map equivariance Psi(h·y)=rho(h)Psi(y) is sealed and makes the twist point well-defined.
+Ordered constant-field tuples p_i=rho(g_i)Psi(y0) are **not** G-equivariant as maps G/H→X
+(no H-line in the Klein 5). The induced L_H-point uses formula base-change / semi-linear
+Gal action of the torsor, not an H-fixed vector in W. Coset labeling of the degree-11
+module Ind is exact.
 
 ## Replay
 
-See REPLAY.md. Marker: G4A_VERIFY_OK.
+See REPLAY.md. Markers: G4A_VERIFY_OK, G4A_PHI_SUBSTITUTION_OK.

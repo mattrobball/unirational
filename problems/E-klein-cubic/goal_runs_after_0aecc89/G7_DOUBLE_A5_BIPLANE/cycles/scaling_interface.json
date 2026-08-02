@@ -1,0 +1,198 @@
+{
+  "schema": "g7b-projective-scaling-v1",
+  "interface": "cone_lifts_plus_multihomogeneous",
+  "marker": "G7-PROJECTIVE-SCALING-PASS",
+  "cone_lifts": {
+    "method": "first_nonzero_coordinate_chart_to_1",
+    "field": "Q(zeta_11)",
+    "n_points": 22,
+    "galois_compatible": "Chart choice is the minimal index of a nonzero coordinate; on the open where that coordinate stays nonzero under Gal conjugates of a fixed geometric point the lift is unique. Stored lifts are explicit; projective outputs ignore residual scales.",
+    "points": [
+      {
+        "class": "A5_class_1",
+        "coset_index": 0,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_1",
+        "coset_index": 1,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_1",
+        "coset_index": 2,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_1",
+        "coset_index": 3,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_1",
+        "coset_index": 4,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_1",
+        "coset_index": 5,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_1",
+        "coset_index": 6,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_1",
+        "coset_index": 7,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_1",
+        "coset_index": 8,
+        "chart_index": 2,
+        "open": "x_2 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_1",
+        "coset_index": 9,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_1",
+        "coset_index": 10,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_2",
+        "coset_index": 0,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_2",
+        "coset_index": 1,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_2",
+        "coset_index": 2,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_2",
+        "coset_index": 3,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_2",
+        "coset_index": 4,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_2",
+        "coset_index": 5,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_2",
+        "coset_index": 6,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_2",
+        "coset_index": 7,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_2",
+        "coset_index": 8,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_2",
+        "coset_index": 9,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      },
+      {
+        "class": "A5_class_2",
+        "coset_index": 10,
+        "chart_index": 0,
+        "open": "x_0 != 0",
+        "nonzero": true
+      }
+    ],
+    "nonvanishing_opens": [
+      "x_0 != 0",
+      "x_2 != 0"
+    ]
+  },
+  "multihomogeneous_ops": {
+    "third_intersection": {
+      "name": "third_intersection_on_line",
+      "formula": "r_ij = B(p_i,q_j,q_j) p_i - B(p_i,p_i,q_j) q_j",
+      "bidegree": {
+        "p": 2,
+        "q": 2
+      },
+      "projectively_meaningful": true,
+      "scale_test": "p\u2192\u03bbp, q\u2192\u03bcq \u21d2 B scales by \u03bb \u03bc\u00b2 and \u03bb\u00b2 \u03bc respectively so r \u2192 \u03bb\u00b2 \u03bc\u00b2 r (overall scalar); [r] unchanged"
+    },
+    "incidence_sum_policy": {
+      "name": "incidence_weighted_sum",
+      "formula": "s_i = sum_j N_ij \u00b7 lift(q_j)  (requires cone lifts)",
+      "requires": "audited affine cone lifts on a common open",
+      "forbidden": "silent sum of arbitrary homogeneous representatives",
+      "scale_safe_when": "each q_j uses the stored chart-normalized lift, or each is scaled by the same Galois-compatible unit; otherwise use multihomogeneous symmetric tensors instead of raw sums"
+    },
+    "polarization_B": {
+      "source": "G3A POLARIZATION.md / Phi = B(x,x,x)",
+      "symmetry": "fully symmetric trilinear"
+    }
+  },
+  "verifier_contract": {
+    "verify_scaling.py": "Independently rescale every geometric point by a random nonzero scalar in Q(zeta_11) and check: (1) F still 0; (2) projective equality with stored line; (3) third-intersection sample is scale-invariant; (4) raw unnormalized sums of two lifts differ from chart-normalized incidence sums when scales disagree (demonstrating the silent-sum failure mode)."
+  },
+  "silent_sum_forbidden": true
+}

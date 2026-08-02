@@ -501,35 +501,17 @@ def build_incidence_correspondence(G, classes_data, design_N, design_doc):
     assert sorted(sigma_H) == list(range(11))
     assert sorted(sigma_K) == list(range(11))
 
-    # N_design is 11x11 on design H × design K indices
-    # Transport to coset bases: N_coset[i,j] = N_design[sigma_H[i], sigma_K[j]]
-    # Wait: if map_class1_to_design == "K", design N is still H-rows × K-cols.
-    # We need incidence between class_1 cosets and class_2 cosets.
+    # N_design is 11×11 on design H-rows × design K-cols.
+    # Transport to class1-coset rows × class2-coset cols.
     N_des = design_N
     if map_class1_to_design == "H":
-        # rows = class1 (H), cols = class2 (K)
+        # class1 → design H (sigma_H), class2 → design K (sigma_K)
         N_coset = [
             [N_des[sigma_H[i]][sigma_K[j]] for j in range(11)] for i in range(11)
         ]
     else:
-        # class1 is design K, class2 is design H: use N^t
-        N_coset = [
-            [N_des[sigma_K[j]][sigma_H[i]] for j in range(11)] for i in range(11)
-        ]
-        # Fix: N_des[h][k]; we want class1(K)×class2(H) incidence = N^t
-        N_coset = [
-            [N_des[sigma_K[j]][sigma_H[i]] for j in range(11)]  # wrong
-            for i in range(11)
-        ]
-        # class1 coset i → design K index sigma_H[i] (since class1 matched to K orbit
-        # stored in H_design_orbit variable which is design_Ks)
-        # Actually when map_class1_to_design=="K":
-        #   H_design_orbit = design_Ks, K_design_orbit = design_Hs
-        #   sigma_H aligns class1 cosets to design K indices
-        #   sigma_K aligns class2 cosets to design H indices
-        # Incidence design: N[h][k]=1 for H_h ~ K_k
-        # class1 coset i ~ design K_{sigma_H[i]}, class2 j ~ design H_{sigma_K[j]}
-        # incident iff N[sigma_K[j]][sigma_H[i]] == 1
+        # class1 → design K (sigma_H into K_orbit), class2 → design H (sigma_K)
+        # incident iff N_des[design_H_of_class2][design_K_of_class1] = 1
         N_coset = [
             [N_des[sigma_K[j]][sigma_H[i]] for j in range(11)] for i in range(11)
         ]
