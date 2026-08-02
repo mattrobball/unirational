@@ -112,7 +112,7 @@ Run independent fronts concurrently. **Hard rule:** at most one unrelated job ex
 | Slot | Front | Agent task | Output dir | Conflict |
 |---|---|---|---|---|
 | A1 | **A0** | Inventory + replay + `CANONICAL_STATE.md/.json` + seal | `goal_runs_after_35fa/A0_CANONICAL_AUDIT/` | None |
-| A2 | **H5** (from H4 model) | Point search / first exact charts on \(\Phi=0\); or setup sealed H5 workspace | `goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/` | None |
+| A2 | **H5** (from H4 model) | Point search / first exact charts on \(Phi=0\); or setup sealed H5 workspace | `goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/` | None |
 | A3 | **C / C5** | Next exact chart toward common line / projector; no full expanded \(L_a\) | `goal_runs_after_bd610a/C5_*` or C worktree | None |
 | A4 | **Q** | Scoped successor only (document smallest gate; optional light search) | existing `Q_SCHUR_*` dirs | None |
 | A5 | **M3** | Section vs multisection residual analysis (theorem/CAS light) | `goals_after_bd610a/M3_SARKISOV_SECTION/` | None |
@@ -120,7 +120,7 @@ Run independent fronts concurrently. **Hard rule:** at most one unrelated job ex
 ### Wave B — heavy CAS (serialize; pick one)
 
 | Slot | Front | Agent task | Notes |
-|---|---|---|
+|---|---|---|---|
 | B1 | **P25** | Launch prepared `parallel/r66_pair_split/` when unsandboxed RSS census allows | `PREPARED_NOT_RUN`; prior OOM nonverdict |
 | B2 | **COV m=1** | Residual chart cover (prefer charts already reduced) | Modular `[1]` is not characteristic-zero emptiness without transfer |
 
