@@ -1,5 +1,9 @@
 {
-  "as_of_commit": "dd5cbda",
+  "as_of_commit": {
+    "source_repository_commit": "e15a568",
+    "manifest_generated_from_commit": "dd5cbda",
+    "manifest_updated_at_commit": "e15a568"
+  },
   "generated": "2026-08-03",
   "headline": "OPEN",
   "records": [
@@ -58,7 +62,7 @@
       "entry": "E17",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "G7-CROSS-CLASS-PROJECTOR-PASS",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -68,7 +72,7 @@
       "entry": "E17",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "G7-RESIDUAL-GEOMETRY-PASS",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -88,7 +92,7 @@
       "entry": "E08",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -98,7 +102,7 @@
       "entry": "E08",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -118,7 +122,7 @@
       "entry": "E04",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "G4-INDUCED-DEGREE11-POINT-PASS",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -148,7 +152,7 @@
       "entry": "E18",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "H6-TORSOR-CLASS-PASS",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -158,7 +162,7 @@
       "entry": "E18",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "H6-PROJECTIVE-11-ISOGENY-PASS",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -298,7 +302,7 @@
       "entry": "E11",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -308,7 +312,7 @@
       "entry": "E11",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -358,7 +362,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "Q-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -378,7 +382,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "Q-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -388,7 +392,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "Q-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -398,7 +402,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "Q-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -408,7 +412,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -418,7 +422,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -428,7 +432,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -438,7 +442,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -448,7 +452,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "Q-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -458,7 +462,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -468,7 +472,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "Q-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -478,7 +482,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -488,7 +492,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -498,7 +502,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -508,7 +512,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -518,7 +522,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -528,7 +532,7 @@
       "entry": "E27",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -608,7 +612,7 @@
       "entry": "E04",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUPERSEDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -658,7 +662,7 @@
       "entry": "E18",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "H5-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -668,7 +672,7 @@
       "entry": "E18",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "H5-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -708,7 +712,7 @@
       "entry": "E17",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -718,7 +722,7 @@
       "entry": "E17",
       "kind": "goal_run",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "SUBRUN-ONLY",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -757,8 +761,8 @@
       "path": "certificates/audit_a1",
       "entry": "E03",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "NO-VERIFIER",
+      "primary_exit": "AUDIT-A1-COMPLETE",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -767,8 +771,8 @@
       "path": "certificates/border_support",
       "entry": "E34",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -777,8 +781,8 @@
       "path": "certificates/degree25_direct_support",
       "entry": "E25",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": "modular-only",
       "tracked": "main"
@@ -788,7 +792,7 @@
       "entry": "E25",
       "kind": "certificate",
       "verification_class": "PARTIAL-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": "modular-only",
       "tracked": "main"
@@ -798,7 +802,7 @@
       "entry": "E25",
       "kind": "certificate",
       "verification_class": "PARTIAL-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "P25Z-FINITE-PRESENTATION",
       "superseded_by": null,
       "char0_scope": "modular-only",
       "tracked": "main"
@@ -808,7 +812,7 @@
       "entry": "E25",
       "kind": "certificate",
       "verification_class": "PARTIAL-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": "modular-only",
       "tracked": "main"
@@ -817,9 +821,9 @@
       "path": "certificates/degree25_molien",
       "entry": "E25",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
-      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- P25Y-DVR-PASS Molien wording (F5, SCOPE-DRIFT)",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
+      "superseded_by": "certificates/audit_a1 layer (2026-07-31, 78abba4) -- P25Y-DVR-PASS Molien wording (F5, SCOPE-DRIFT)",
       "char0_scope": "modular-only",
       "tracked": "main"
     },
@@ -827,8 +831,8 @@
       "path": "certificates/degree25_p25v",
       "entry": "E25",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": "modular-only",
       "tracked": "main"
@@ -837,8 +841,8 @@
       "path": "certificates/degree25_p25w",
       "entry": "E25",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": "modular-only",
       "tracked": "main"
@@ -848,7 +852,7 @@
       "entry": "E25",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "P25W-RANK-K-UNDECIDED",
       "superseded_by": null,
       "char0_scope": "modular-only",
       "tracked": "main"
@@ -857,9 +861,9 @@
       "path": "certificates/degree25_rowrank",
       "entry": "E25",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
-      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- stale rank-746-lower-bound-only phrasing (F6, SCOPE-DRIFT)",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
+      "superseded_by": "certificates/audit_a1 layer (2026-07-31, 78abba4) -- stale rank-746-lower-bound-only phrasing (F6, SCOPE-DRIFT)",
       "char0_scope": "modular-only",
       "tracked": "main"
     },
@@ -867,8 +871,8 @@
       "path": "certificates/degree25_support_f4",
       "entry": "E25",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": "modular-only",
       "tracked": "main"
@@ -878,7 +882,7 @@
       "entry": "E25",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "P25-TOWER-SURVIVES",
       "superseded_by": null,
       "char0_scope": "modular-only",
       "tracked": "main"
@@ -888,7 +892,7 @@
       "entry": "E28",
       "kind": "certificate",
       "verification_class": "CONSISTENCY-ONLY",
-      "primary_exit": null,
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -897,8 +901,8 @@
       "path": "certificates/fano_c1",
       "entry": "E07",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "C1-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -907,8 +911,8 @@
       "path": "certificates/fano_c2",
       "entry": "E07",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "C2-TWO-GENERATORS-MODULAR",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -918,7 +922,7 @@
       "entry": "E07",
       "kind": "certificate",
       "verification_class": "PARTIAL-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "C2-1-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -927,8 +931,8 @@
       "path": "certificates/fano_c3",
       "entry": "E07",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -938,8 +942,8 @@
       "entry": "E07",
       "kind": "certificate",
       "verification_class": "CONSISTENCY-ONLY",
-      "primary_exit": null,
-      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- C0 order-12 residual clause (F8, UNSUPPORTED)",
+      "primary_exit": "C0-UNDECIDED",
+      "superseded_by": "certificates/audit_a1 layer (2026-07-31, 78abba4) -- C0 order-12 residual clause (F8, UNSUPPORTED)",
       "char0_scope": null,
       "tracked": "main"
     },
@@ -947,8 +951,8 @@
       "path": "certificates/fixed_frame_arithmetic",
       "entry": "E13",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": "EXISTENCE-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -958,8 +962,8 @@
       "entry": "E32",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
-      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- unconditional reading of T-BRANCH-NONNORMAL (F1, UNSUPPORTED+SCOPE-DRIFT)",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
+      "superseded_by": "certificates/audit_a1 layer (2026-07-31, 78abba4) -- unconditional reading of T-BRANCH-NONNORMAL (F1, UNSUPPORTED+SCOPE-DRIFT)",
       "char0_scope": null,
       "tracked": "main"
     },
@@ -968,7 +972,7 @@
       "entry": "E32",
       "kind": "certificate",
       "verification_class": "PARTIAL-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "T2R-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -978,8 +982,8 @@
       "entry": "E32",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
-      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- sealed T8 Jacobian prose (F4, UNSUPPORTED residual)",
+      "primary_exit": "T8-S1-UNDECIDED",
+      "superseded_by": "certificates/audit_a1 layer (2026-07-31, 78abba4) -- sealed T8 Jacobian prose (F4, UNSUPPORTED residual)",
       "char0_scope": null,
       "tracked": "main"
     },
@@ -988,7 +992,7 @@
       "entry": "E32",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "T8-N1-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -998,7 +1002,7 @@
       "entry": "E32",
       "kind": "certificate",
       "verification_class": "PARTIAL-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "T-BIRATIONAL",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1008,7 +1012,7 @@
       "entry": "E32",
       "kind": "certificate",
       "verification_class": "PARTIAL-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "T2R-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1017,8 +1021,8 @@
       "path": "certificates/fold_normalization_t3",
       "entry": "E32",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "NO-VERIFIER",
+      "primary_exit": "NO-INDEPENDENT-EXIT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1028,7 +1032,7 @@
       "entry": "E32",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1038,7 +1042,7 @@
       "entry": "E32",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "T11B-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1048,7 +1052,7 @@
       "entry": "E16",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1057,8 +1061,8 @@
       "path": "certificates/global_lifting",
       "entry": "E16",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "CONSISTENCY-ONLY",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1068,7 +1072,7 @@
       "entry": "E16",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "G-SCOPED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1078,7 +1082,7 @@
       "entry": "E16",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1087,8 +1091,8 @@
       "path": "certificates/global_transition",
       "entry": "E16",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "P",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1097,8 +1101,8 @@
       "path": "certificates/headline_cas_order",
       "entry": "E02",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "CONSISTENCY-ONLY",
+      "primary_exit": "NO-INDEPENDENT-EXIT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1108,7 +1112,7 @@
       "entry": "E19",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1117,8 +1121,8 @@
       "path": "certificates/lifting",
       "entry": "E34",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "L-P",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main",
@@ -1131,7 +1135,7 @@
       "entry": "E26",
       "kind": "certificate",
       "verification_class": "NO-VERIFIER",
-      "primary_exit": null,
+      "primary_exit": "FAIL-SCOPE",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1140,8 +1144,8 @@
       "path": "certificates/restricted_e3",
       "entry": "E13",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1151,7 +1155,7 @@
       "entry": "E30",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "STOP-3",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1161,7 +1165,7 @@
       "entry": "E01",
       "kind": "certificate",
       "verification_class": "PARTIAL-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1170,8 +1174,8 @@
       "path": "certificates/strata",
       "entry": "E34",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1181,7 +1185,7 @@
       "entry": "E32",
       "kind": "certificate",
       "verification_class": "PARTIAL-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "STOP-2",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main",
@@ -1194,7 +1198,7 @@
       "entry": "E32",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": null,
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main",
@@ -1207,8 +1211,8 @@
       "entry": "E32",
       "kind": "certificate",
       "verification_class": "PARTIAL-RECOMPUTE",
-      "primary_exit": null,
-      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- unconditional reading of T10-BINODAL-NO-3-DEFECT (F2, UNCITED-HYPOTHESIS as geometry)",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
+      "superseded_by": "certificates/audit_a1 layer (2026-07-31, 78abba4) -- unconditional reading of T10-BINODAL-NO-3-DEFECT (F2, UNCITED-HYPOTHESIS as geometry)",
       "char0_scope": null,
       "tracked": "main",
       "also_entries": [
@@ -1219,8 +1223,8 @@
       "path": "certificates/transition_repair",
       "entry": "E34",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "CONSISTENCY-ONLY",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1229,8 +1233,8 @@
       "path": "certificates/transitions",
       "entry": "E34",
       "kind": "certificate",
-      "verification_class": "UNCLASSIFIED",
-      "primary_exit": null,
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
@@ -1239,23 +1243,25 @@
       "path": "goal_runs_after_eb21458/G3P_A5_SEMILINEAR_QUADRATIC",
       "entry": "E17",
       "kind": "goal_run",
-      "verification_class": "UNCLASSIFIED",
+      "verification_class": "NO-VERIFIER",
       "primary_exit": "G3P-UNDECIDED",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "branch-only",
-      "branch": "agent/g3p-a5-semilinear-20260802"
+      "branch": "agent/g3p-a5-semilinear-20260802",
+      "branch_head_sha": "086e08928bd3a0d360018e6f809739517f72702e"
     },
     {
       "path": "goal_runs_after_bd610a/M3_SARKISOV_SECTION",
       "entry": "E24",
       "kind": "goal_run",
-      "verification_class": "UNCLASSIFIED",
+      "verification_class": "PARTIAL-RECOMPUTE",
       "primary_exit": "M3-SECTION-COMPONENT-PASS",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "branch-only",
-      "branch": "agent/m3-sarkisov-section-residual"
+      "branch": "agent/m3-sarkisov-section-residual",
+      "branch_head_sha": "6fdac74fc2c850dd062288691bf6daba5ec0228d"
     }
   ]
 }
