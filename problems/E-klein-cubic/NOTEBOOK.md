@@ -1,11 +1,15 @@
 # Problem E notebook — PSL(2,11)-unirationality of the Klein cubic
 
 Single cohesive record of every attempt at the headline, its justification, status,
-and outcome. Supersedes `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02.md` as the tracking
-document; binding mathematical status remains governed by `REPAIR.md` and
-`CURRENT_PATHS.md` as described below.
+and outcome. Supersedes `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02.md` and
+`GOALS_NEXT_10_ROUTES_2026-08-02.md` as the tracking documents; mathematical
+status is resolved by the layered precedence rule in Binding rules below (the
+theorem-boundary correction layers `REPAIR.md` and `certificates/audit_a1`,
+then explicit supersession, then chronology and dependency).
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
+As-of commit: repository state at `aaa186b` (2026-08-03); this file's own
+commit is its child — `git log -1 -- problems/E-klein-cubic/NOTEBOOK.md`.
 
 Citation-verified 2026-08-03: a four-agent sweep checked 92 status labels, 279 cited
 paths, and 103 commit hashes against artifacts. **Paths, labels, and hashes were
@@ -66,6 +70,67 @@ genuine generic twist pointless.
    portable provenance is `goal_runs_*/`, `certificates/`, and the committed
    documents. Where an entry's only provenance is `tmp/`, its evidence is
    **local-only** and cannot be checked by anyone working from the pushed repo.
+
+## Live state summary (as of 2026-08-03)
+
+The current defensible ledger, in eight lines. Details and evidence in the
+entries cited.
+
+1. **Headline:** OPEN.
+2. **Central exact reduction** ([E37](#e37), [E16](#e16)): the problem is
+   equivalent to the arithmetic binary `C_gen(K_proj) ≠ ∅` vs `= ∅`,
+   equivalently the point problem for the explicit 35-coefficient cubic
+   `V(Φ)` over `K_proj`. `G2-FINITE-GENERATION-PASS` is a structural pass;
+   the equivalence itself is proved analytically in `RESOLUTION.md`.
+3. **Dominance** ([E17](#e17), `G3A-ARITHMETIC-DOMINANCE-PASS`): once a genuine
+   generic-twist point or nonzero landing covariant exists, no separate
+   dominance gate remains.
+4. **Bounded landing ladder** ([E25](#e25)): no homogeneous landing
+   self-covariant exists in degrees ≤ 24, characteristic zero. At degree 25 the
+   order-3 branch is closed in characteristic zero (V4 Theorem 2.12); the
+   order-2 and order-≥4 branches are excluded only over `F_67` (independently
+   audited at that modular level; no characteristic-zero transfer exists — the
+   packet label `DEGREE25-LANDING-EMPTY` overstates its char-0 scope). The
+   degree-25 char-0 completion — transfer of the modular branches or the
+   63-chart route — is a live bounded gate. No all-degree bound exists.
+5. **G3 arithmetic** ([E17](#e17)): OPEN. G3H is an installed symbolic
+   interface, not an executable degree-11 field point; G3D is
+   partial/undecided.
+6. **Live positive gates:** the direct generic-cubic point problem (G3); the
+   Fano common-isotropic-line problem ([E07](#e07)/[E08](#e08) — **sufficient**
+   for the headline, not equivalent); the M3 rational-section problem
+   ([E24](#e24)); the Schur and rational-curve classes not closed by R2
+   ([E28](#e28), [E30](#e30), [E31](#e31)).
+7. **Live negative gates:** the genuine `11:5` trace cubic and genuine-twist
+   arithmetic ([E18](#e18)); residue-twist binaries ([E33](#e33)). The B
+   fixed-frame bridge is dead ([E06](#e06)); the T normalization route is
+   auxiliary after B and suspended at its exact normality/class-group gates
+   ([E32](#e32) — `T-BRANCH-NONNORMAL` analytic-only, `T10-BINODAL-NO-3-DEFECT`
+   conditional).
+8. **Scoped terminal results (none a headline theorem):** `B-BRIDGE-REFUTED`;
+   J2 unrestricted Prym/one-motive invariant neutralized ([E21](#e21)); R2
+   selected elliptic-quintic component obstructed at index 2 ([E28](#e28));
+   theta/Schwarz refuted ([E36](#e36)); finite binary secant constructions
+   excluded ([E42](#e42)); xCD distinguished plane closed ([E35](#e35));
+   several KLS and Fable subfamilies closed ([E22](#e22), [E15](#e15)); V4
+   blanket local-path strategy refuted ([E33](#e33)).
+
+### Supersession map
+
+Compact `supersedes` / `superseded_by` record; only genuine, evidence-backed
+supersessions are listed. Each also appears in the affected entries.
+
+| Superseding artifact (date) | Supersedes | Affected entries |
+|---|---|---|
+| `REPAIR.md` theorem-boundary layer (07-31) | pre-repair labels: `G13/G19-OBSTRUCTION`→sample residuals; `T-NONNORMAL`, `dim Sing_S=2` suspended; Path-A single-minor→all-minors; Hodge-center proof substitution; Schur "no rational point" phrasing | E16, E32, E01, E19, E31, E55 |
+| `certificates/audit_a1` layer (08-02) | unconditional readings of `T-BRANCH-NONNORMAL`, `T10-BINODAL-NO-3-DEFECT`; `P25Z` exact-iso naming; sealed T8 Jacobian prose; `P25Y` Molien wording; stale rank-746 note; `P25X0` char-0 titling; C0 order-12 clause | E03, E32, E25, E08 |
+| V4 packet Theorem 2.12 (08-02) | E25's order-3 branch question (closed char-0). Does **not** supersede the order-2/order-≥4 modular branches or the 63-chart route | E25, E33 |
+| commit `4a5beac` (08-02) | `eb21458` G7B cycles packet — induced-cycle claim refuted (`G7B-INDUCED-CYCLE-REFUTED`), withdrawn data quarantined | E17 |
+| `B-BRIDGE-REFUTED` (`5899d05`, 08-02) | the B fixed-frame exhaustiveness program; demotes T3 to non-headline | E06, E32 |
+| H2/H3 exact twist points (08-01) | the prior "A4 generic twist pointless" narrative (transpose-convention error) | E11 |
+| C6 corrected Plücker/alternating model (08-02) | C5's inconsistent idempotent encoding `e·S_0·e = 0` | E08 |
+| later landings L1, G3A, G3P, G4, G7A, G5, H6, G7B-fix (08-02) | `R0-CANONICAL-REFRESH-PASS` (stale on arrival) | E29 |
+| `NOTEBOOK.md` (08-03) | `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02.md`, `GOALS_NEXT_10_ROUTES_2026-08-02.md` as tracking documents | — |
 
 ## History
 
