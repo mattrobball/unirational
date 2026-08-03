@@ -1,0 +1,261 @@
+{
+  "alpha": 49,
+  "character_multiplicities": {
+    "degree3": 1,
+    "degree4": 2,
+    "degree5": 5
+  },
+  "classes": [
+    {
+      "F_psi": 0,
+      "F_w": 3,
+      "class_index": 1,
+      "degree11_seeds": [
+        [
+          0,
+          [
+            0,
+            1,
+            10
+          ]
+        ],
+        [
+          0,
+          [
+            0,
+            2,
+            9
+          ]
+        ],
+        [
+          0,
+          [
+            0,
+            3,
+            8
+          ]
+        ],
+        [
+          0,
+          [
+            0,
+            4,
+            7
+          ]
+        ],
+        [
+          0,
+          [
+            1,
+            2,
+            8
+          ]
+        ]
+      ],
+      "degree3_dimension": 1,
+      "degree3_seed": [
+        0,
+        [
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "degree4_dimension": 2,
+      "degree4_full_family": {
+        "evaluation_count": 12,
+        "gcd_H": "1",
+        "gcd_Q": "1",
+        "polynomial_digest": "cdb151a5000f0813c581f7699900349622ba5fda16d1503f6dccfd03b1ba6d7e",
+        "seeds": [
+          [
+            0,
+            [
+              0,
+              0,
+              0,
+              0,
+              4
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              0,
+              0,
+              1,
+              3
+            ]
+          ]
+        ]
+      },
+      "degree5_dimension": 5,
+      "first_polar_Q": 78,
+      "jacobian_rank": 3,
+      "point_coefficients_mod89": [
+        1,
+        74,
+        67,
+        5,
+        49
+      ],
+      "psi_at_witness": [
+        74,
+        18,
+        32,
+        55,
+        65
+      ],
+      "second_polar_H": 11,
+      "witness_w": [
+        43,
+        7,
+        73,
+        36,
+        21
+      ],
+      "witness_y": [
+        77,
+        65,
+        53
+      ]
+    },
+    {
+      "F_psi": 0,
+      "F_w": 1,
+      "class_index": 2,
+      "degree11_seeds": [
+        [
+          0,
+          [
+            0,
+            1,
+            10
+          ]
+        ],
+        [
+          0,
+          [
+            0,
+            2,
+            9
+          ]
+        ],
+        [
+          0,
+          [
+            0,
+            3,
+            8
+          ]
+        ],
+        [
+          0,
+          [
+            0,
+            4,
+            7
+          ]
+        ],
+        [
+          0,
+          [
+            1,
+            2,
+            8
+          ]
+        ]
+      ],
+      "degree3_dimension": 1,
+      "degree3_seed": [
+        0,
+        [
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "degree4_dimension": 2,
+      "degree4_full_family": {
+        "evaluation_count": 12,
+        "gcd_H": "1",
+        "gcd_Q": "1",
+        "polynomial_digest": "5abf59af2bc8ce0f939169306856617a26cabe7fad1e9d412931effa14e13882",
+        "seeds": [
+          [
+            0,
+            [
+              0,
+              0,
+              0,
+              0,
+              4
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              0,
+              0,
+              1,
+              3
+            ]
+          ]
+        ]
+      },
+      "degree5_dimension": 5,
+      "first_polar_Q": 34,
+      "jacobian_rank": 3,
+      "point_coefficients_mod89": [
+        1,
+        74,
+        67,
+        5,
+        49
+      ],
+      "psi_at_witness": [
+        59,
+        52,
+        88,
+        59,
+        28
+      ],
+      "second_polar_H": 11,
+      "witness_w": [
+        45,
+        88,
+        25,
+        2,
+        15
+      ],
+      "witness_y": [
+        68,
+        47,
+        26
+      ]
+    }
+  ],
+  "current_exit": "G3P-UNDECIDED",
+  "external_CAS_used": false,
+  "field": "F_89 good reduction",
+  "pinned_main": "eb21458bea684d2399ad18f003e2be8ebdd161ce",
+  "polar_transport": {
+    "H_q": "tau^-2 B_F(w,w,Psi_H(Y_H(w)))",
+    "Q_q": "tau^-1 B_F(w,Psi_H(Y_H(w)),Psi_H(Y_H(w)))"
+  },
+  "schema": "g3p-a5-semilinear-quadratic-v1",
+  "scoped_markers": [
+    "G3P-A5-SEMILINEAR-MATERIALIZATION-PASS",
+    "G3P-A5-CANONICAL-POLAR-MISS",
+    "G3P-A5-CLASSIFYING-DEGREE-LE4-POLAR-EMPTY"
+  ],
+  "semilinear_circuit": "a_H(w)=diag(tau^(1,4,5,6,7))*B_poly(w)^(-1)*J_H*Phi_H(Y_H(w))",
+  "sqrt5": 19,
+  "zeta11": 2
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "m3-section-classes-v1",
+  "divisors": {
+    "H": "pullback of the hyperplane class on X_T",
+    "D": "exceptional divisor of Bl_C(X_T)",
+    "L": "H-D=f^*O_P1(1)",
+    "minus_K_Y": "H+L=2H-D"
+  },
+  "section_formula": {
+    "base_degree": "L.Gamma=1",
+    "H_degree": "d=H.Gamma",
+    "exceptional_intersection": "D.Gamma=d-1"
+  },
+  "components": [
+    {
+      "H_degree": 0,
+      "type": "exceptional",
+      "model": "C_012",
+      "status": "OPEN",
+      "meaning": "a K-point of C_012 is an exceptional section"
+    },
+    {
+      "H_degree": 1,
+      "type": "nonexceptional",
+      "blowdown": "K-line disjoint from C_012",
+      "status": "EMPTY_BY_NO_LINE"
+    },
+    {
+      "H_degree": 2,
+      "type": "nonexceptional",
+      "blowdown": "geometrically integral K-plane conic meeting C_012 once",
+      "status": "EMPTY_BY_NO_CONIC"
+    },
+    {
+      "H_degree": 3,
+      "type": "nonexceptional",
+      "parameter_space": "P14",
+      "equations": "10 coefficient cubics of Phi(A0,A1,A2,sU,tU)",
+      "geometric_status": "HORIZONTAL_PROJECTIVE_DIMENSION_4_COMPONENT",
+      "arithmetic_status": "NO_K_POINT_PRODUCED"
+    }
+  ],
+  "higher_degrees": "OPEN"
+}

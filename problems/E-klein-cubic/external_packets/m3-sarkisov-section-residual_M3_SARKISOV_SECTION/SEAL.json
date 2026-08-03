@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-08-02T11:35:33Z",
+  "exit": "M3-SECTION-COMPONENT-PASS",
+  "headline": "OPEN",
+  "local_files": {
+    "COMPLETION_AUDIT.md": "c568ad5e9bc8ae1bbdfc695eb7d6e7cbb28371c2cfc8f9c45021367c397c56bb",
+    "DEGREE4.md": "31f6a3cf1cd45c9b2d7331113f358800d01826f70884d493b419c3739f43560a",
+    "FIBRATION_MODEL.md": "e58e96dfa8f8c605d4afb77f31df70ba6f56aec30786af4ba901866f76f2e236",
+    "INPUT_MANIFEST.json": "699c407be38204fda45e84986b7383d1afb562a1c53d7afda43db64661c66032",
+    "LINE_MONODROMY.md": "49cdbda337af1fa60bcf4193a96ba2e25f480026f25e9577fc8ef3abd1d5b581",
+    "MODEL.md": "49f64a4748753714bbb6b28bfdc8c7f6dba39a72c3b56fc5e43012f388628b4d",
+    "MONODROMY.md": "370ccc430521ce4206ed3c3bad6a3bf90986a67ac084292a596512a75ba59fb2",
+    "QUARTIC_MULTISECTIONS.md": "dce681fd6e1a844865408f39b7e62f291e0c0b159a99706a7f5eef83cca1a368",
+    "README.md": "bb99381eb61c1622a756777ebfa0e092cd0eec73f22c70c8ead8f14d24ca3936",
+    "SECTION_CLASSES.json": "5c6183784be20551586f95d8c2347113cd77adebd93eda4518422f9c0d3934d1",
+    "SECTION_SEARCH.md": "79bbbea8963dd06a841b42a496f8828184b37b191201e9ad4b09e47ef4611818",
+    "STATUS.md": "37f01598c10e6967e55176ccc4af82e29322faca05b692d8e1d2b2689945c54c",
+    "THEOREM.md": "07e0c42cca044c4414c21c5a7a8f2fb4f4241404afb7f8752e63b345715818b3",
+    "make_seal.py": "55f930dbd350293a1d4a1c63f589f78eeee50cdff2ad7f426274feb814997b5d",
+    "produce_residual_galois.py": "f6603a54b2ce146cc9d4736900a3933bb34190a80f87571e11b3e19643bacd0c",
+    "produce_section_search.py": "1c03b75cbb47b222d46ebbfb6610193b0bf0ebf4a96aceecd52a39b8327e87e7",
+    "residual_galois.json": "8961fa02c411e49ab801832e7ffd063371ec2f9f7d59fa2794f68c6f5b210b91",
+    "section_search_payload.json": "0d600830251186ddf75f4cde19ae92da60f4bee728fa7ac0993e193bd7772f4d",
+    "verify_all.py": "21cf5f6521fd495d7e3b5dbeebdb6c89a8957bdff8b71f6c879deb8396f2668a",
+    "verify_residual_galois.py": "a75614eac08b25a0f258f9541b04020aa8f4fe3368d9f0ba850bb0481c7208b3",
+    "verify_section_search.py": "db377c9bc95b7e5d76307c3514ea4664125b9fef201ff14eee62632189021b93"
+  },
+  "markers": [
+    "M3_RESIDUAL_GALOIS_INDEPENDENT_VERIFY_OK",
+    "M3_SECTION_SEARCH_INDEPENDENT_VERIFY_OK",
+    "M3_SARKISOV_SECTION_PACKET_OK"
+  ],
+  "pinned_state": "bd610a032bb9561d2daeb91a2cb60c48c082ca2f",
+  "schema": "m3-sarkisov-section-seal-v1",
+  "strict_scope": "Residual Galois, binary secants, section classes through degree three, and a geometric component are certified. No K-section, point, quartic multisection, or quartic-locus emptiness is claimed."
+}

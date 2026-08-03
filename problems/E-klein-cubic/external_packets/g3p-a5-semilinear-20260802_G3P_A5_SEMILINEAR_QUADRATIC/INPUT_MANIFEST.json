@@ -1,0 +1,48 @@
+{
+  "schema": "g3p-a5-semilinear-input-manifest-v1",
+  "repository": "mattrobball/unirational",
+  "pinned_main": "eb21458bea684d2399ad18f003e2be8ebdd161ce",
+  "inputs": [
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md",
+      "sha256": "c8f2fb5cd1d8ee2e532824077e3738778ea5e996e9ce81f6b90d0e839e946811",
+      "role": "exact K_proj arithmetic and dominance"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/phi_exact.json",
+      "sha256": "e647609d220e897dd05074db0f78da09b4b599db8ece8db41210f5f37d4760a6",
+      "role": "normalized generic cubic"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3P_POLAR_ODD_DEGREE_DESCENT/STATUS.md",
+      "sha256": "48fe7896db3bf24fd3285777b0c4b817d1e13a283b246b531c553a90e0d36295",
+      "role": "parent polar system"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_1/point.json",
+      "sha256": "89b9a3405db00c5b87c72016afd3b05d0e397d133752d0e7da91898bd9f72a0f",
+      "role": "class-1 exact H-A5 point"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_2/point.json",
+      "sha256": "cb8366eee4d6a8a096365b65d0c75372b3529a7a621411d8b6f524820d73bfb4",
+      "role": "class-2 exact H-A5 point"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/common/degree11_covariants_raw_exact.json",
+      "sha256": "a63757c9ecf5452f5b5d9af7796f8997d31bc187e7eb4a239620ec09b22ff985",
+      "role": "degree-eleven Reynolds module"
+    },
+    {
+      "path": "certificates/exact_weil_check.py",
+      "sha256": "14c9bda195ccc39e3ae2cd6d6d42bbb8f45397e114b5137947fb41dd665cc2b2",
+      "role": "exact Klein representation"
+    },
+    {
+      "path": "goal_runs_after_141f60/G4A_INDUCTION_PROJECTORS/klein_witnesses_mod89.json",
+      "sha256": "4827c6f91799df5e2293affe141829ffccf919ce641f1eb9359c218a1c778d4a",
+      "role": "accepted good-fibre H-A5 evaluations"
+    }
+  ],
+  "external_CAS_used": false
+}
