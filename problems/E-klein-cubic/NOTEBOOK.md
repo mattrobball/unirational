@@ -97,49 +97,69 @@ genuine generic twist pointless.
    keyed to a bare token (e.g. "F terminal") is unresolvable without the
    glossary and must not be consumed as a status.
 
-## Live state summary (as of 2026-08-03)
+## Strategic dashboard (as of 2026-08-03)
 
-The current defensible ledger, in eight lines. Details and evidence in the
-entries cited.
+The one-page map. Everything below this section is ledger, provenance, and
+appendix; this is the current mathematical position. **Headline: OPEN.**
 
-1. **Headline:** OPEN.
-2. **Central exact reduction** ([E37](#e37), [E16](#e16)): the problem is
-   equivalent to the arithmetic binary `C_gen(K_proj) ≠ ∅` vs `= ∅`,
-   equivalently the point problem for the explicit 35-coefficient cubic
-   `V(Φ)` over `K_proj`. `G2-FINITE-GENERATION-PASS` is a structural pass;
-   the equivalence itself is proved analytically in `RESOLUTION.md`.
-3. **Dominance** ([E17](#e17), `G3A-ARITHMETIC-DOMINANCE-PASS`): once a genuine
-   generic-twist point or nonzero landing covariant exists, no separate
-   dominance gate remains.
-4. **Bounded landing ladder** ([E25](#e25)): no homogeneous landing
-   self-covariant exists in degrees ≤ 24, characteristic zero. At degree 25 the
-   order-3 branch is closed in characteristic zero (V4 Theorem 2.12); the
-   order-2 and order-≥4 branches are excluded only over `F_67` (independently
-   audited at that modular level; no characteristic-zero transfer exists — the
-   packet label `DEGREE25-LANDING-EMPTY` overstates its char-0 scope). The
-   degree-25 char-0 completion — transfer of the modular branches or the
-   63-chart route — is a live bounded gate. No all-degree bound exists.
-5. **G3 arithmetic** ([E17](#e17)): OPEN. G3H is an installed symbolic
-   interface, not an executable degree-11 field point; G3D is
-   partial/undecided.
-6. **Live positive gates:** the direct generic-cubic point problem (G3); the
-   Fano common-isotropic-line problem ([E07](#e07)/[E08](#e08) — **sufficient**
-   for the headline, not equivalent); the M3 rational-section problem
-   ([E24](#e24)); the Schur and rational-curve classes not closed by R2
-   ([E28](#e28), [E30](#e30), [E31](#e31)).
-7. **Live negative gates:** the genuine `11:5` trace cubic and genuine-twist
-   arithmetic ([E18](#e18)); residue-twist binaries ([E33](#e33)). The B
-   fixed-frame bridge is dead ([E06](#e06)); the T normalization route is
-   auxiliary after B and suspended at its exact normality/class-group gates
-   ([E32](#e32) — `T-BRANCH-NONNORMAL` analytic-only, `T10-BINODAL-NO-3-DEFECT`
-   conditional).
-8. **Scoped terminal results (none a headline theorem):** `B-BRIDGE-REFUTED`;
-   J2 unrestricted Prym/one-motive invariant neutralized ([E21](#e21)); R2
-   selected elliptic-quintic component obstructed at index 2 ([E28](#e28));
-   theta/Schwarz refuted ([E36](#e36)); finite binary secant constructions
-   excluded ([E42](#e42)); xCD distinguished plane closed ([E35](#e35));
-   several KLS and Fable subfamilies closed ([E22](#e22), [E15](#e15)); V4
-   blanket local-path strategy refuted ([E33](#e33)).
+### The decision tree
+
+```text
+X is G-unirational  ⟺  ed_C(G) = 3                       [E37, proved]
+        ⇕
+C_gen has a K_proj-point?                                 [the binary]
+        ⇕
+V(Φ) (explicit 35-coefficient cubic) has a K_proj-point?  [E16, proved ⟺]
+
+Once any genuine point or nonzero landing covariant exists, dominance is
+automatic (G3A) — no separate gate.                       [E17]
+```
+
+### Active headline routes
+
+| Route | Headline implication | Current exact gate | State | Evidence strength | Next decisive fact |
+|---|---|---|---|---|---|
+| G3 direct arithmetic ([E17](#e17)) | exact `K_proj`-point ⇒ **positive** | solve `V(Φ)(K_proj)`; G3H interface needs a materialized degree-11 field point; G3D Clifford/spinor stages PARTIAL | OPEN | strong reduction, weak arithmetic (interface-level) | an executable field model with `Φ(a)=0` verified by arithmetic |
+| Common isotropic `D`-line ([E07](#e07)/[E08](#e08)) | Fano point ⇒ `C_gen` point ⇒ **positive** (sufficient only; converse unproved) | exact solve of the corrected C6 Plücker/alternating incidence | OPEN | model installed (C6 birational-model PASS); no point | a `K_proj`-solution of the C6 incidence system |
+| M3 rational section ([E24](#e24)) | dP3-fibration section ⇒ **positive** | `C_012(K)`, then the degree-3 section component | OPEN (multisection closed) | strong structure; section undecided; branch packet's exit not machine-verified | a `K`-point of the lowest section gate `C_012` |
+| Landing-covariant ladder ([E16](#e16)/[E25](#e25)/[E09](#e09)) | covariant ⇒ **positive**; all-degree emptiness ⇒ **negative** | degree-25 char-0 completion (transfer the `F_67` branches or run the 63 charts); degrees 31/35 m=1 | ≤24 closed char-0; 25 partial | theorem-grade through 24; modular beyond; no all-degree bound possible by search | char-0 transfer for the order-2/order-≥4 branches |
+| Genuine `11:5` trace cubic ([E18](#e18)) | pointless genuine twist ⇒ **negative** | decide `Tr_{E/K}(r₂⁻¹a²σ(a))=0` via the degree-11 torus/isogeny structure | OPEN — smallest genuine twist left | exact model sealed (`H-11_5-NORM-MODEL-PASS`); no decision | either a point or a torsor-class obstruction on `H_tr` |
+| Residue-twist binaries ([E33](#e33)) | pointless residue twist ⇒ **negative** | full-`G` residue twists at `f5=0`, `f6=0` | OPEN (mechanics closed, `V3` normal form) | models installed (`G5-F5/F6-CUBIC-MODEL-PASS`); binaries undecided | local solubility verdict at either residue twist |
+
+### Established infrastructure (load-bearing, done)
+
+The reduction spine: exact action and invariant theory ([E38](#e38)), the
+covariant frame ([E39](#e39)), the `ed`-equivalence ([E37](#e37)), the
+universal object and five-way all-degree equivalence ([E16](#e16)), automatic
+dominance ([E17](#e17)), the degree-free flat-connection form ([E40](#e40)),
+and the strata/transition machinery ([E34](#e34)).
+
+### Retired or scoped-closed routes (none a headline theorem)
+
+`B-BRIDGE-REFUTED` — the fixed-frame exhaustiveness bridge is **false**
+([E06](#e06)), demoting the whole fixed-frame T-track to auxiliary/suspended
+([E32](#e32)). Subgroup obstructions refuted by exact points — A4 and both A5
+twists have points, no `G`-map results ([E11](#e11)). Problem-F mechanism
+transfer fails on the Klein's rational fixed lines ([E14](#e14)); Fable closed
+at its `I^(11)/I^(13)` gate ([E15](#e15)). The standard invariant shelf —
+motives, Hodge screen, Prym/one-motive, Voisin `C^[3]`, Amitsur, Burnside,
+prime-local `ed`, superrigidity — is neutralized, non-binding, or conditional
+([E10](#e10), [E19](#e19), [E21](#e21), [E41](#e41), [E43](#e43)–[E50](#e50)).
+Scoped closures: R2's selected elliptic-quintic component (index 2,
+[E28](#e28)); the xCD distinguished plane ([E35](#e35)); theta/Schwarz
+([E36](#e36)); finite secant constructions ([E42](#e42)); V4 blanket
+local-path strategy ([E33](#e33)).
+
+### Current verification hazards (top of the debt list)
+
+`B-BRIDGE-REFUTED` rests on an analytic finiteness citation under a
+consistency-only verifier; G3H phase 4 is interface bookkeeping; the
+branch-only G3P packet has **no verifier** and the branch-only M3 packet's
+exit is asserted by JSON reads (its section-search verifier is missing);
+degree-22–24 exclusions and other load-bearing computations live only in
+untracked `tmp/`; the A4/A5 points deserve an independent convention check
+(a convention error previously reversed that very result). Full list:
+Verification debt below.
 
 ### Supersession map
 
@@ -245,7 +265,8 @@ correction layers (REPAIR.md, Audit A1) plus the notebook's own review
 rounds. Not mathematics about the cubic, but the reason the mathematics can
 be trusted.
 
-Standalone records (no thread): [E36](#e36) theta11 parametrization test.
+One record carries `Thread: standalone`: [E36](#e36), the theta11
+parametrization test.
 
 ## Nomenclature glossary
 
@@ -316,63 +337,63 @@ genuinely dual, two) of those nine values. `state` is the reconciled state from
 
 Each entry carries a `Thread:` line locating it in the Research threads map above; ambiguous historical tokens resolve only through the Nomenclature glossary.
 
-| ID | Name | Target | Method | State |
-|---|---|---|---|---|
-| [E01](#e01) | A — Path A Schur–Krylov degree-55 field algebra | positive | mixed | UNDECIDED-STOPPED |
-| [E02](#e02) | A0 — canonical audit / CAS baseline | infrastructure | CAS | TERMINAL-PASS (infra only) |
-| [E03](#e03) | A1-AUD — Path A theorem-boundary audit packet | audit/repair | CAS | CHARACTERIZED — second correction layer, 8 ranked findings |
-| [E04](#e04) | A5Q — A5 index-11 transfer / quartic rescue | positive | CAS | PARTIAL |
-| [E05](#e05) | Attempt1–5 — five-attempts dispatch wave | infrastructure | mixed | COMPLETED-WAVE |
-| [E06](#e06) | B — fixed-frame exhaustiveness bridge | negative | mixed | TERMINAL-NEGATIVE (bridge refuted) |
-| [E07](#e07) | C0–C3 — direct twisted Fano section | positive | CAS | OPEN-UNDECIDED |
-| [E08](#e08) | C5/C6 — corrected Palatini / Plücker big cell | positive | CAS | OPEN (top-ranked positive) |
-| [E09](#e09) | COV — degree-31/35 m=1 landing modules | positive/negative | CAS | OPEN/DEFERRED |
-| [E10](#e10) | D/D2 — equivariant motive / stack invariant | negative | analytic | TERMINAL-NEGATIVE-FOR-THE-ROUTE |
-| [E11](#e11) | E/H2/H3 — proper-subgroup generic twists | negative (outcome positive) | CAS | SCOPED-POSITIVE (route closed) |
-| [E12](#e12) | Elo — ten-paths ranking system | infrastructure | mixed (process) | COMPLETED-PROCESS |
-| [E13](#e13) | F — Path F fixed-frame genus-one torsor | positive/negative | mixed | UNDECIDED |
-| [E14](#e14) | F-IMPORT — Problem F / F-engine technique import | negative | analytic | REFUTED-AS-TRANSFER |
-| [E15](#e15) | Fable — A4 trisection / Koszul lifting | positive | mixed | CLOSED-IN-CURRENT-FORM |
-| [E16](#e16) | G — Path G universal object / degree ladder | positive (neg. exit) | CAS | STRUCTURAL-PASS, ARITHMETIC-OPEN |
-| [E17](#e17) | G3 — universal cubic arithmetic (A/B/C/D/H/P/S) | positive | mixed | OPEN (highest priority) |
-| [E18](#e18) | H11:5 / H5 / H6 — 11:5 trace-cubic programme | negative | mixed | OPEN |
-| [E19](#e19) | Hodge-center — split-injection / CM screen | negative | mixed | SALVAGED-BUT-NONBINDING |
-| [E20](#e20) | I — Hermitian five-plane intersection theory | positive/negative | analytic | UNRESOLVED/UNRUN |
-| [E21](#e21) | J/J2 — canonical-dimension invariant / Prym | negative | analytic | TERMINAL (countermodel) |
-| [E22](#e22) | KLS — self-covariant landing framework | positive/negative | mixed | CONFLICT → reduction closed, framework open |
-| [E23](#e23) | L1 — full polar range recursion | infrastructure | CAS | PASS |
-| [E24](#e24) | M/M2/M3 — Sarkisov link / dP3 section search | positive | mixed | OPEN-NARROWED |
-| [E25](#e25) | P25 — degree-25 landing self-covariant | positive (neg. exit) | CAS | OPEN at degree 25 — order-3 branch closed in char 0; other branches modular-only |
-| [E26](#e26) | Pfaffian — Pfaffian/Morita quaternionic descent | positive | mixed | OPEN-AT-THE-COMMON-LINE-GATE |
-| [E27](#e27) | Q/Q3 — Schur index-one descent obstruction | negative | mixed | PARTIAL-OPEN |
-| [E28](#e28) | R/R2 — rational curves / elliptic descent | negative | mixed | TERMINAL-OBSTRUCTED |
-| [E29](#e29) | R0 — canonical live-ledger refresh | infrastructure | mixed | PASS |
-| [E30](#e30) | S19 — degree-19 Cayley–Bacharach residual curve | positive | mixed | UNDECIDED |
-| [E31](#e31) | Schur — six-dimensional projective-source route | positive | CAS | OPEN-STALLED |
-| [E32](#e32) | T — fold-algebra / target-branch index-three | negative | CAS | SUSPENDED-PENDING-T2R (conflict) |
-| [E33](#e33) | V/V2/V3/V4 (+G5) — valuation / residue-twist | negative | mixed | PARTIAL |
-| [E34](#e34) | WP-strata — stabilizer strata / normal-cone machine | infrastructure/negative | CAS | INFRASTRUCTURE-PARTIAL |
-| [E35](#e35) | xCD — plane-section flex / 3-descent | positive/negative | mixed | CLOSED-SCOPED-NEGATIVE |
-| [E36](#e36) | theta11 — level-11 theta/Schwarz construction | positive | CAS | CLOSED-REFUTED |
-| [E37](#e37) | ED-REDUCTION — G-unirational ⟺ ed_C(G)=3 | infrastructure | analytic | PROVED-INFRASTRUCTURE |
-| [E38](#e38) | INV-INFRA — exact action & invariant theory (E0) | infrastructure | CAS | CERTIFIED-INFRASTRUCTURE |
-| [E39](#e39) | FRAME — generic covariant frame (x,C,D,E,K) | infrastructure | CAS | CERTIFIED-INFRASTRUCTURE |
-| [E40](#e40) | PDE-FLAT — K_proj flat-connection all-degree PDE | infrastructure (reformulation) | mixed | OPEN-REFORMULATION |
-| [E41](#e41) | VOISIN — C^[3] very-versality pullback | positive | analytic | CLOSED-CIRCULAR |
-| [E42](#e42) | ZC-SECANT — zero-cycle / secant chord-tree | positive | mixed | CLOSED-FOR-FINITE-CONSTRUCTIONS |
-| [E43](#e43) | GROSS-POPESCU — modular-moduli reinterpretation | positive | analytic | REJECTED (restates problem) |
-| [E44](#e44) | KRESCH-TSCHINKEL — diagonal / equiv. Burnside | negative | analytic | REJECTED (wrong implication) |
-| [E45](#e45) | AMITSUR — universal-torsor / higher Amitsur (E3) | negative | analytic | CLOSED-EXHAUSTED |
-| [E46](#e46) | ED-P — prime-local essential dimension | negative | analytic | REJECTED (numerics) |
-| [E47](#e47) | SUPERRIGID — birational superrigidity | negative | analytic | REJECTED (wrong statement) |
-| [E48](#e48) | CSD — Cassels–Swinnerton-Dyer | conditional (positive) | analytic | CONDITIONAL |
-| [E49](#e49) | DR88 — Duncan–Reichstein Conjecture 8.8 | conditional (positive) | analytic | CONDITIONAL |
-| [E50](#e50) | DOLGACHEV — Crdim(G) ≤ ed(G) | conditional (negative) | analytic | CONDITIONAL |
-| [E51](#e51) | LIT-AUDIT — literature & tool audit | infrastructure | analytic | ONGOING-CLEARANCE |
-| [E52](#e52) | DP-REPLAY — del Pezzo closure-mechanism replay | positive (proposed) | analytic | PROPOSED-UNRUN |
-| [E53](#e53) | UNKNOWN-EX — hidden intermediate-variety search | positive (proposed) | analytic | PROPOSED-UNRUN |
-| [E54](#e54) | CTR-TWIST — counterexample twist target | negative (target) | analytic | OPEN-TARGET |
-| [E55](#e55) | REPAIR — 2026-07-31 theorem-boundary audit | infrastructure | analytic | APPLIED |
+| ID | Name | Target | Method | State | headline consequence |
+|---|---|---|---|---|---|
+| [E01](#e01) | A — Path A Schur–Krylov degree-55 field algebra | positive | mixed | UNDECIDED-STOPPED | positive |
+| [E02](#e02) | A0 — canonical audit / CAS baseline | infrastructure | CAS | TERMINAL-PASS (infra only) | none |
+| [E03](#e03) | A1-AUD — Path A theorem-boundary audit packet | audit/repair | CAS | CHARACTERIZED — second correction layer, 8 ranked findings | none |
+| [E04](#e04) | A5Q — A5 index-11 transfer / quartic rescue | positive | CAS | PARTIAL | positive |
+| [E05](#e05) | Attempt1–5 — five-attempts dispatch wave | infrastructure | mixed | COMPLETED-WAVE | none |
+| [E06](#e06) | B — fixed-frame exhaustiveness bridge | negative | mixed | RETIRED — EXHAUSTIVENESS BRIDGE FALSE | route refuted |
+| [E07](#e07) | C0–C3 — direct twisted Fano section | positive | CAS | OPEN-UNDECIDED | sufficient only |
+| [E08](#e08) | C5/C6 — corrected Palatini / Plücker big cell | positive | CAS | OPEN (top-ranked positive) | sufficient only |
+| [E09](#e09) | COV — degree-31/35 m=1 landing modules | positive/negative | CAS | OPEN/DEFERRED | both |
+| [E10](#e10) | D/D2 — equivariant motive / stack invariant | negative | analytic | TERMINAL-NEGATIVE-FOR-THE-ROUTE | route refuted |
+| [E11](#e11) | E/H2/H3 — proper-subgroup generic twists | negative (outcome positive) | CAS | SUBGROUP OBSTRUCTIONS REFUTED — NO G-LEVEL MAP | route refuted |
+| [E12](#e12) | Elo — ten-paths ranking system | infrastructure | mixed (process) | COMPLETED-PROCESS | none |
+| [E13](#e13) | F — Path F fixed-frame genus-one torsor | positive/negative | mixed | UNDECIDED | none |
+| [E14](#e14) | F-IMPORT — Problem F / F-engine technique import | negative | analytic | REFUTED-AS-TRANSFER | route refuted |
+| [E15](#e15) | Fable — A4 trisection / Koszul lifting | positive | mixed | CLOSED-IN-CURRENT-FORM | route refuted |
+| [E16](#e16) | G — Path G universal object / degree ladder | positive (neg. exit) | CAS | STRUCTURAL-PASS, ARITHMETIC-OPEN | both |
+| [E17](#e17) | G3 — universal cubic arithmetic (A/B/C/D/H/P/S) | positive | mixed | OPEN (highest priority) | positive |
+| [E18](#e18) | H11:5 / H5 / H6 — 11:5 trace-cubic programme | negative | mixed | OPEN | negative |
+| [E19](#e19) | Hodge-center — split-injection / CM screen | negative | mixed | SALVAGED-BUT-NONBINDING | none |
+| [E20](#e20) | I — Hermitian five-plane intersection theory | positive/negative | analytic | UNRESOLVED/UNRUN | sufficient only |
+| [E21](#e21) | J/J2 — canonical-dimension invariant / Prym | negative | analytic | TERMINAL (countermodel) | route refuted |
+| [E22](#e22) | KLS — self-covariant landing framework | positive/negative | mixed | CONFLICT → reduction closed, framework open | both |
+| [E23](#e23) | L1 — full polar range recursion | infrastructure | CAS | PASS | none |
+| [E24](#e24) | M/M2/M3 — Sarkisov link / dP3 section search | positive | mixed | OPEN-NARROWED | positive |
+| [E25](#e25) | P25 — degree-25 landing self-covariant | positive (neg. exit) | CAS | CHAR-0 CLOSED THROUGH 24; DEGREE 25 PARTIAL | both |
+| [E26](#e26) | Pfaffian — Pfaffian/Morita quaternionic descent | positive | mixed | OPEN-AT-THE-COMMON-LINE-GATE | sufficient only |
+| [E27](#e27) | Q/Q3 — Schur index-one descent obstruction | negative | mixed | PARTIAL-OPEN | negative |
+| [E28](#e28) | R/R2 — rational curves / elliptic descent | negative | mixed | SELECTED ELLIPTIC-QUINTIC COMPONENT OBSTRUCTED | negative (scoped) |
+| [E29](#e29) | R0 — canonical live-ledger refresh | infrastructure | mixed | PASS | none |
+| [E30](#e30) | S19 — degree-19 Cayley–Bacharach residual curve | positive | mixed | UNDECIDED | positive |
+| [E31](#e31) | Schur — six-dimensional projective-source route | positive | CAS | OPEN-STALLED | positive |
+| [E32](#e32) | T — fold-algebra / target-branch index-three | negative | CAS | AUXILIARY/SUSPENDED AFTER B-BRIDGE REFUTATION | negative (auxiliary) |
+| [E33](#e33) | V/V2/V3/V4 (+G5) — valuation / residue-twist | negative | mixed | PARTIAL | negative |
+| [E34](#e34) | WP-strata — stabilizer strata / normal-cone machine | infrastructure/negative | CAS | INFRASTRUCTURE-PARTIAL | negative |
+| [E35](#e35) | xCD — plane-section flex / 3-descent | positive/negative | mixed | CLOSED-SCOPED-NEGATIVE | none (scoped closure) |
+| [E36](#e36) | theta11 — level-11 theta/Schwarz construction | positive | CAS | CLOSED-REFUTED | route refuted |
+| [E37](#e37) | ED-REDUCTION — G-unirational ⟺ ed_C(G)=3 | infrastructure | analytic | PROVED-INFRASTRUCTURE | none (reduction) |
+| [E38](#e38) | INV-INFRA — exact action & invariant theory (E0) | infrastructure | CAS | CERTIFIED-INFRASTRUCTURE | none |
+| [E39](#e39) | FRAME — generic covariant frame (x,C,D,E,K) | infrastructure | CAS | CERTIFIED-INFRASTRUCTURE | none |
+| [E40](#e40) | PDE-FLAT — K_proj flat-connection all-degree PDE | infrastructure (reformulation) | mixed | OPEN-REFORMULATION | both |
+| [E41](#e41) | VOISIN — C^[3] very-versality pullback | positive | analytic | CLOSED-CIRCULAR | route refuted |
+| [E42](#e42) | ZC-SECANT — zero-cycle / secant chord-tree | positive | mixed | CLOSED-FOR-FINITE-CONSTRUCTIONS | route refuted |
+| [E43](#e43) | GROSS-POPESCU — modular-moduli reinterpretation | positive | analytic | REJECTED (restates problem) | route refuted |
+| [E44](#e44) | KRESCH-TSCHINKEL — diagonal / equiv. Burnside | negative | analytic | REJECTED (wrong implication) | route refuted |
+| [E45](#e45) | AMITSUR — universal-torsor / higher Amitsur (E3) | negative | analytic | CLOSED-EXHAUSTED | route refuted |
+| [E46](#e46) | ED-P — prime-local essential dimension | negative | analytic | REJECTED (numerics) | route refuted |
+| [E47](#e47) | SUPERRIGID — birational superrigidity | negative | analytic | REJECTED (wrong statement) | route refuted |
+| [E48](#e48) | CSD — Cassels–Swinnerton-Dyer | conditional (positive) | analytic | CONDITIONAL | conditional |
+| [E49](#e49) | DR88 — Duncan–Reichstein Conjecture 8.8 | conditional (positive) | analytic | CONDITIONAL | conditional |
+| [E50](#e50) | DOLGACHEV — Crdim(G) ≤ ed(G) | conditional (negative) | analytic | CONDITIONAL | conditional |
+| [E51](#e51) | LIT-AUDIT — literature & tool audit | infrastructure | analytic | ONGOING-CLEARANCE | none |
+| [E52](#e52) | DP-REPLAY — del Pezzo closure-mechanism replay | positive (proposed) | analytic | PROPOSED-UNRUN | both (proposed) |
+| [E53](#e53) | UNKNOWN-EX — hidden intermediate-variety search | positive (proposed) | analytic | PROPOSED-UNRUN | none |
+| [E54](#e54) | CTR-TWIST — counterexample twist target | negative (target) | analytic | OPEN-TARGET | negative |
+| [E55](#e55) | REPAIR — 2026-07-31 theorem-boundary audit | infrastructure | analytic | APPLIED | none |
 
 ## Attempts
 
@@ -1754,11 +1775,11 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 
 ## External sessions
 
-18 offline ChatGPT sessions: 15 are summarized in
-`notebook_build/sessions_batch{1,2,3,4}.md`; three direct review sessions
-(`notebook-review-6a707542.md`, `notebook-review2-6a70834f.md`, and
-`notebook-review3-6a708f54.md`) post-date that build and are recorded from
-`external_sessions/` directly. Per Binding
+19 offline ChatGPT sessions: 15 are summarized in
+`notebook_build/sessions_batch{1,2,3,4}.md`; four direct review sessions
+(`notebook-review-6a707542.md`, `notebook-review2-6a70834f.md`,
+`notebook-review3-6a708f54.md`, and `notebook-review4-6a70a498.md`) post-date
+that build and are recorded from `external_sessions/` directly. Per Binding
 rule 4, **nothing below is
 machine-verifiable**; claims must be re-derived in-repo before affecting the
 headline. Where a session's push landed in the repo, the commit is cited in the
@@ -1784,6 +1805,7 @@ corresponding attempt entry above with the tag `source: external-chatgpt`.
 | `notebook-review-6a707542.md` | "Review of NOTEBOOK.md" | 2026-08-03 | review | 8 material corrections + structural changes proposed; adjudicated against artifacts before application (Binding rule 4). **CONFIRMED:** E03/E28 content misses, E32 T10 conditionality, G3H interface-only, G3D internal contradiction, F14 sufficient-not-equivalent. **REFUTED:** the A0 downgrade, unconditional degree-25 closure. **PARTIAL:** E25 staleness | none |
 | `notebook-review2-6a70834f.md` | "Review Notebook Accuracy" (review of commit `aaa186b`) | 2026-08-03 | review | Verdict: "comprehensive and substantially accurate at the canonical route-family level; not literally every attempt; not yet mechanically authoritative." Findings, all adjudicated: E03/E55 chronology error — **CONFIRMED** via git, fixed; stale build provenance — **CONFIRMED**, fixed by freezing `canonical_attempts.md` and adding `manifest.json`; opening-sentence overclaim — **CONFIRMED**, reworded; session-count clarification — applied; two unmerged-branch packets omitted — **CONFIRMED**, now recorded in [E17](#e17)/[E24](#e24) | none |
 | `notebook-review3-6a708f54.md` | "Review of NOTEBOOK.md" (accuracy audit of commit `32d5862`) | 2026-08-03 | review | Verdict: endorses the notebook as the canonical human-readable account of Problem E — no headline-state errors; degree-25, G3H/G3D, B-bridge, M3, and branch adjudications independently confirmed. Residual findings all archival/provenance: stale as-of metadata, six remaining audit-A1 date strings, incomplete verification taxonomy, manifest nulls, debt-18 wording — all **CONFIRMED** and fixed this round (`## 2026-08-03 review round`, Round 3) | none |
+| `notebook-review4-6a70a498.md` | "Review of NOTEBOOK.md" (strategic audit of `6f2624e`) | 2026-08-03 | review | Verdict: no missing headline-changing result, no incorrect status, no unrecorded branch packet; corrections around degree 25/G3H/G3D/B/M3 called careful and materially important; remaining critique strategic — the ledger buried the attack map. Adjudication: all four concrete defects confirmed and fixed (opaque manifest metadata → four-field block; five misreadable index labels → relabeled + new headline-consequence column; thread-language inconsistency → fixed; strategic-dashboard recommendation → adopted, replacing the live-state summary) (`## 2026-08-03 review round`, Round 4) | none |
 
 ### Sessions that made load-bearing claims
 
@@ -1814,6 +1836,8 @@ corresponding attempt entry above with the tag `source: external-chatgpt`.
 **`notebook-review2-6a70834f.md`** — a second review *of this notebook*, against commit `aaa186b` (the notebook as corrected by the first review round), also producing no repo artifacts. Its verdict: "comprehensive and substantially accurate at the canonical route-family level; not literally every attempt; not yet mechanically authoritative." It re-derived the proposed replacement opening sentence used in this file's preamble, and its branch audit (a shallow clone against the live GitHub remote) found two distinct route packets that exist only on unmerged agent branches and are absent from the notebook: unmerged G3P correction work (`agent/g3p-a5-semilinear-20260802`) and an earlier M3 residual packet (`agent/m3-sarkisov-section-residual`) — both now recorded in [E17](#e17) and [E24](#e24) respectively. It also flagged stale build provenance (`canonical_attempts.md` regenerated without the corrections) and a session-count ambiguity, both applied here. Disposition of all five required repairs is in `## 2026-08-03 review round`, Round 2.
 
 **`notebook-review3-6a708f54.md`** — a third review *of this notebook*, against commit `32d5862` (the notebook as corrected by the first two review rounds), also producing no repo artifacts. Its verdict: "the best human-readable canonical account of Problem E"; it found no missing headline-changing result, no incorrect current headline status, no additional unrecorded Problem-E packet on an open PR or remote branch, and no major completed route still described as unstarted, independently re-confirming the degree-25, G3H/G3D, `B-BRIDGE-REFUTED`, M3, and two-unmerged-branch adjudications. Its residual findings were archival/provenance only, all **CONFIRMED**: stale snapshot metadata (preamble `aaa186b` vs. manifest `dd5cbda` vs. actual notebook commit `32d5862`); Audit A1 still dated `(2026-08-02)` in the identity table and in six manifest `superseded_by` strings; the "each record carries a verification class" opening claim was false (~23 manifest records `UNCLASSIFIED`, and 26 of 55 canonical entries lacked the field); manifest `primary_exit: null` fields with no explicit role; and Verification debt item 18's stale "neither is referenced by any main commit" wording, which conflated reference visibility with content merger. It also proposed a stated-granularity opening sentence, a per-run appendix, a generated parity checker, and promoting load-bearing `tmp/` results into portable packets. Disposition of all repairs is in `## 2026-08-03 review round`, Round 3.
+
+**`notebook-review4-6a70a498.md`** — a fourth review *of this notebook*, a strategic audit against commit `6f2624e`, also producing no repo artifacts. Its verdict: no missing headline-changing result, no incorrect current headline status, and no unrecorded substantive branch packet; it called the corrections around degree 25, G3H, G3D, B, and M3 "careful and materially important." Its residual critique was strategic rather than factual — the ledger is an excellent forensic record but buries the attack map, and it proposed a one-page decision tree, an active-route table (`Route | Headline implication | Current exact gate | State | Evidence strength | Next decisive fact`), a strategic-category split (active/infrastructure/retired/hazards), opaque `as_of_commit` metadata restructured into four unambiguous fields, and index relabels for E06/E11/E28/E32/E25 plus a new headline-consequence column. All four concrete defects it identified were confirmed and fixed this round: the manifest's opaque `as_of_commit` block became a four-field `audited_repository_head`/`manifest_source_head`/`manifest_generated_by_commit`/`notebook_head` block; the five misreadable index labels were relabeled and the headline-consequence column added; the thread-language inconsistency around E36 was fixed; and its Strategic-dashboard recommendation was adopted, replacing the former Live state summary. Disposition of all repairs is in `## 2026-08-03 review round`, Round 4.
 
 ### Sessions with no load-bearing repo claims
 
@@ -1935,7 +1959,26 @@ citation, which did not occur in E17's text); a thread-assignment audit
 no defects found); a layer-claims audit of the glossary, supersession map,
 and threads sections (found and fixed 5 citation defects — the `D`, `V2`, and
 `G7` glossary rows, the `audit_a1` supersession-map row, and the T3 thread
-paragraph); and a live-state summary re-check (no defects found).
+paragraph); and a Strategic dashboard re-check (no defects found).
+
+### Round 4
+
+A fourth external review (`external_sessions/notebook-review4-6a70a498.md`,
+"Review of NOTEBOOK.md", a strategic audit of commit `6f2624e`) endorsed the
+notebook's completeness and accuracy — no missing headline-changing result, no
+incorrect headline status, no unrecorded substantive branch packet — and
+called the degree-25/G3H/G3D/B/M3 corrections "careful and materially
+important." Its residuals were presentational rather than factual:
+
+| Residual | Disposition |
+|---|---|
+| Manifest `as_of_commit` block named three ambiguous fields (`e15a568`, `dd5cbda`, `e15a568`) despite later adjudicating commits | **Fixed** — restructured into four unambiguous fields: `audited_repository_head` / `manifest_source_head` / `manifest_generated_by_commit` / `notebook_head`; `scripts/check_manifest_parity.py` still PASSes against the restructured block |
+| Five index state cells easy to misread out of context (E06, E11, E28, E32, E25) | **Fixed** — relabeled to `RETIRED — EXHAUSTIVENESS BRIDGE FALSE`, `SUBGROUP OBSTRUCTIONS REFUTED — NO G-LEVEL MAP`, `SELECTED ELLIPTIC-QUINTIC COMPONENT OBSTRUCTED`, `AUXILIARY/SUSPENDED AFTER B-BRIDGE REFUTATION`, and `CHAR-0 CLOSED THROUGH 24; DEGREE 25 PARTIAL` respectively |
+| No per-row signal of what a record's success or failure means for the headline | **Fixed** — a `headline consequence` column was added to the Index table (55/55 rows: positive / negative / both / sufficient only / conditional / route refuted / none) |
+| The principal attack map was buried under nomenclature, supersession history, and verification taxonomy | **Adopted** — the `## Strategic dashboard` section (decision tree; active-route table with per-route implication/gate/evidence/next-decisive-fact; established-infrastructure, retired/scoped-closed, and verification-hazards separation) now replaces the former Live state summary as the single strategic layer at the top of the file |
+| E36 thread-language inconsistency (a stray "no thread" phrasing against the `Thread: standalone` line) | **Fixed** — normalized to "carries `Thread: standalone`" throughout |
+
+Session count updated from 18 to 19 (`## External sessions`).
 
 ---
 
