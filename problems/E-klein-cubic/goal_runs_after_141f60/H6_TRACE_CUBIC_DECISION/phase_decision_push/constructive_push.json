@@ -1,0 +1,242 @@
+{
+  "schema": "h6-push-constructive-v1",
+  "discipline": "Not an exhaustive re-run of H5 constant/Laurent/monom screens. New probes use torsor-aligned multi-support, K-coeff power-sum forms, cyclic rational partial sums, and multiplicative H90 ratios.",
+  "lanes": {
+    "A_families_in_H_tr": {
+      "two_support_laurent": {
+        "checked": 3784,
+        "degenerate": 4,
+        "refuted": 3780,
+        "survives": 0,
+        "hits": []
+      },
+      "three_support_laurent": {
+        "checked": 66220,
+        "degenerate": 0,
+        "refuted": 66220,
+        "survives": 0,
+        "hits": []
+      },
+      "k_coeff_power_sum_sparse": {
+        "checked": 25930,
+        "survives": 0,
+        "hits": []
+      },
+      "status": "no_family_with_identically_trivial_class"
+    },
+    "B_additive_multiplicative_H90": {
+      "cyclic_partial_rational": {
+        "checked": 17424,
+        "survives": 0,
+        "hits": []
+      },
+      "ratio_family_a_eq_b_over_sigma_b": {
+        "model": "a=(1+s*r0)/(1+s*r1), s tested in F_p",
+        "primes": {
+          "89": {
+            "trials": 142,
+            "root_count_hist": {
+              "0": 49,
+              "1": 51,
+              "2": 35,
+              "ge3": 7
+            }
+          },
+          "101": {
+            "trials": 139,
+            "root_count_hist": {
+              "0": 57,
+              "1": 56,
+              "2": 17,
+              "ge3": 9
+            }
+          }
+        }
+      },
+      "equation": "c*psi(a)=u-sigma(u) (additive); a=b/sigma(b) family probed",
+      "status": "no_exact_section"
+    },
+    "C_projection_degree_five": {
+      "degree_five_point": {
+        "field": "E",
+        "image_under_trace_frame": "[beta0*Z0(r0):0:0:0:0]",
+        "polynomial": "Z0(T)=product_(k=1)^4 (T-r_k)",
+        "scope": "a closed point of degree five over K, not a K-rational point"
+      },
+      "skip_one_lines": "L_i=span(e_i,e_{i+2}) on F=sum x_i^2 x_{i+1}",
+      "galois_orbit_size": 5,
+      "defined_over_K": false,
+      "residual_conic_bundle": "over E, not over K",
+      "wave2_bind": {
+        "path": "goal_runs_after_bd610a/H5_WAVE2_LAURENT_PROJ",
+        "exists": true
+      },
+      "descent_status": "not_completed",
+      "K_point": null,
+      "skip_one_lines_on_F_modular": true
+    },
+    "D_multiprime": {
+      "attempts": [
+        {
+          "p": 89,
+          "n_samples": 4,
+          "samples": [
+            {
+              "r": [
+                28,
+                60,
+                74,
+                80,
+                35
+              ],
+              "z": [
+                69,
+                4,
+                22,
+                41,
+                10
+              ]
+            },
+            {
+              "r": [
+                13,
+                20,
+                53,
+                63,
+                55
+              ],
+              "z": [
+                28,
+                40,
+                87,
+                18,
+                83
+              ]
+            }
+          ],
+          "note": "discovery only; no K-interpolation"
+        },
+        {
+          "p": 101,
+          "n_samples": 4,
+          "samples": [
+            {
+              "r": [
+                36,
+                31,
+                88,
+                14,
+                100
+              ],
+              "z": [
+                68,
+                55,
+                47,
+                65,
+                69
+              ]
+            },
+            {
+              "r": [
+                39,
+                89,
+                69,
+                42,
+                14
+              ],
+              "z": [
+                78,
+                84,
+                7,
+                25,
+                88
+              ]
+            }
+          ],
+          "note": "discovery only; no K-interpolation"
+        },
+        {
+          "p": 131,
+          "n_samples": 4,
+          "samples": [
+            {
+              "r": [
+                81,
+                25,
+                55,
+                58,
+                102
+              ],
+              "z": [
+                56,
+                124,
+                80,
+                88,
+                79
+              ]
+            },
+            {
+              "r": [
+                75,
+                93,
+                124,
+                100,
+                1
+              ],
+              "z": [
+                69,
+                5,
+                127,
+                58,
+                104
+              ]
+            }
+          ],
+          "note": "discovery only; no K-interpolation"
+        },
+        {
+          "p": 199,
+          "n_samples": 4,
+          "samples": [
+            {
+              "r": [
+                94,
+                107,
+                96,
+                139,
+                33
+              ],
+              "z": [
+                139,
+                81,
+                19,
+                40,
+                110
+              ]
+            },
+            {
+              "r": [
+                50,
+                72,
+                180,
+                40,
+                160
+              ],
+              "z": [
+                38,
+                54,
+                73,
+                133,
+                133
+              ]
+            }
+          ],
+          "note": "discovery only; no K-interpolation"
+        }
+      ],
+      "stable_rational_component": false
+    }
+  },
+  "points_over_K": [],
+  "summary": "no_K_point_constructed"
+}

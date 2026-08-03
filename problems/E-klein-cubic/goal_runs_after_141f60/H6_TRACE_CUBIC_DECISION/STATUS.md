@@ -7,16 +7,17 @@ H6-TORSOR-CLASS-PASS
 **H6A input:** `H6-PROJECTIVE-11-ISOGENY-PASS` (consumed, not re-proved)  
 **H4 input:** `H-11_5-NORM-MODEL-PASS`  
 **H5 input:** `H5-UNDECIDED`  
-**V3 input:** `V-UNDECIDED`
+**V3 input:** `V-UNDECIDED`  
+**Decision push:** `phase_decision_push/` (independent rebuild + expanded H6.2–H6.4)
 
 ## Decision summary
 
 | Stage | Result |
 |---|---|
 | H6.0 isogeny | consumed from H6A |
-| H6.1 torsor on `H_tr` | **H6-TORSOR-CLASS-PASS** |
-| H6.2 constructive lanes | no K-point |
-| H6.3 valuation | structural inventory only |
+| H6.1 torsor on `H_tr` | **H6-TORSOR-CLASS-PASS** (parent + push rebuild) |
+| H6.2 constructive lanes | no K-point (parent residual + push multi-support / K-coeff) |
+| H6.3 valuation | structural inventory + tropical masks + series samples |
 | H6.4 bridge | not entered |
 
 ## What was sealed
@@ -27,6 +28,10 @@ H6-TORSOR-CLASS-PASS
 4. `c`-translation as an order-11 *term* (promotion forbidden).
 5. Open equivalence `Y(K) ↔ Phi=0`, plus boundary audit honesty bounds.
 6. Lanes A–D residual probes; valuation orbit inventory + residue template.
+7. **Push:** independent torsor rebuild; two/three-support Laurent + sparse
+   power-sum K-coeff screens (all empty after degeneracy filter); cyclic
+   partial sums; ratio-family modular root stats; skip-one recheck; tropical
+   min-masks and single_coord series heads.
 
 ## What was not obtained
 
@@ -40,9 +45,11 @@ Does the degree-11 torsor `Y → H_tr` admit a `K`-point?
 
 ## Replay
 
-See `REPLAY.md`. Markers:
+See `REPLAY.md` and `phase_decision_push/REPLAY.md`. Markers:
 
 ```text
 H6_TORSOR_VERIFY_OK
 H6_DECISION_VERIFY_OK
+H6_PUSH_TORSOR_VERIFY_OK
+H6_PUSH_DECISION_VERIFY_OK
 ```

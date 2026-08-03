@@ -1,0 +1,102 @@
+{
+  "goal": "H6_TRACE_CUBIC_DECISION/phase_decision_push",
+  "consumed_commit": "f1b5aad84ba29ce98920d0e1e8e7bb736a53b673",
+  "h6_slices": [
+    "H6.1-rebuild",
+    "H6.2",
+    "H6.3",
+    "H6.4"
+  ],
+  "exits_authorized": [
+    "H6-POINTLESS-HEADLINE-NEGATIVE",
+    "H6-RATIONAL-POINT",
+    "H6-VALUATION-REDUCTION-PASS",
+    "H6-TORSOR-CLASS-PASS",
+    "H6-UNDECIDED",
+    "H6-CANONICAL-INPUT-FAIL"
+  ],
+  "non_rerun": [
+    "H6.0 projective isogeny (consumed H6A)",
+    "H5 constant-coeff / bounded Laurent / pure monom / random finite-fibre as exhaustive"
+  ],
+  "inputs": [
+    {
+      "path": "goal_runs_after_141f60/H6A_PROJECTIVE_11_ISOGENY/STATUS.md",
+      "exists": true,
+      "sha256": "510d414755dae08e910ca00f93b416a38a43c6db95e103c767812e303c4e4fd6",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_141f60/H6A_PROJECTIVE_11_ISOGENY/SEAL.json",
+      "exists": true,
+      "sha256": "a0a34d3c8edee11d4b6c3d1afa334f797d2eaaf3042baa4837bc6df2e4434f87",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_141f60/H6A_PROJECTIVE_11_ISOGENY/isogeny.json",
+      "exists": true,
+      "sha256": "07255a85f503fe73e5e2574788652b28102692ff2c68c4d7dcb89afc4954b5d1",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_141f60/H6_TRACE_CUBIC_DECISION/STATUS.md",
+      "exists": true,
+      "sha256": "512e37a7a21ab3ceb3da968a604bd530cdaf0336ec788c5f76bd9565df2eef98",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_141f60/H6_TRACE_CUBIC_DECISION/SEAL.json",
+      "exists": true,
+      "sha256": "b9fa5f47efa3d29b1ffcb9ee7288f12327975f4bfe681409921b0824ce9335e2",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_141f60/H6_TRACE_CUBIC_DECISION/torsor_class.json",
+      "exists": true,
+      "sha256": "e59cf83757c8e8e99e7548492b32b52eebf3ced94364b0ac24924e964f04e3d9",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_35fa/H_11_5_TWIST/STATUS.md",
+      "exists": true,
+      "sha256": "44b2e152e440ce0d692c08b20ef3f0d929259b1ccdc00a6bb891f32c41b58b02",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_35fa/H_11_5_TWIST/field_model.json",
+      "exists": true,
+      "sha256": "80fdc908633595d6bb3c292d0027aa66295a850b9b6a12cc473f90e3e373ba1e",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_35fa/H_11_5_TWIST/norm_model.json",
+      "exists": true,
+      "sha256": "1f61adc24bc15bf296b7199f4e13dfa5f538691984d6f623efa8feb9531dc49e",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/STATUS.md",
+      "exists": true,
+      "sha256": "e7212157aa5b63bac1a54c434798077a41fdc3eec6d77946f27164e9db13fc69",
+      "required": true
+    },
+    {
+      "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/STATUS.md",
+      "exists": true,
+      "sha256": "f363e8fde807c6abfe38461531cdbec0cfb3f131996cdf975a25f7ab88961f8b",
+      "required": true
+    },
+    {
+      "path": "goals_after_141f60/GOAL_H6_PROJECTIVE_11_ISOGENY.md",
+      "exists": true,
+      "sha256": "99be9712a547c2779c607e3ba9f4f037bc819b3e08d8a1abefcaa331caf81396",
+      "required": true
+    },
+    {
+      "path": "tmp/dispatch/H6_DECISION_PUSH_BRIEF.md",
+      "exists": true,
+      "sha256": "947e568cacb1b62b6fa8c8408a41f3d300e3535165bef4b93d03ed3535fc2d65",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "schema": "h6-push-torsor-rebuild-v1",
+  "marker": "H6-TORSOR-CLASS-PASS",
+  "consumed": {
+    "h6a": "H6-PROJECTIVE-11-ISOGENY-PASS",
+    "h4": "H-11_5-NORM-MODEL-PASS",
+    "parent_h6": "H6-TORSOR-CLASS-PASS"
+  },
+  "lattice": {
+    "A_B_identity": "(2+sigma)B = 11 - N",
+    "det_A_aug": 11,
+    "A_aug_B_aug": "11 I_4",
+    "e0_obstruction_B_aug_mod_11": [
+      8,
+      7,
+      2,
+      10
+    ],
+    "sigma_on_coker": 9,
+    "kernel_exponents": [
+      5,
+      3,
+      4,
+      9,
+      1
+    ]
+  },
+  "dual_composition_checks": 60,
+  "kummer_kernel_checks": 12,
+  "c_translation": {
+    "c": "r2^{-1}",
+    "witness_d_exp": [
+      0,
+      1,
+      6,
+      -2,
+      2
+    ],
+    "psi_d_exp_identity": "Ae = 11 e2 + 2*(1,1,1,1,1)",
+    "order_11": true,
+    "promotion_forbidden": true
+  },
+  "fibre_product": {
+    "Y": "{([a],[b]): [b]=[c phi(a)], Tr(b)=0}",
+    "H_tr": "{Tr(b)=0} subset P(E)",
+    "structure": "mu_11-torsor degree 11 on torus open of H_tr",
+    "equivalence_open": "Y(K) nonempty on torus open <=> nonzero a in E with Phi(a)=0"
+  },
+  "specialized_phi_nonempty": [
+    {
+      "p": 89,
+      "found": true,
+      "sample": {
+        "p": 89,
+        "r": [
+          1,
+          26,
+          19,
+          59,
+          29
+        ],
+        "z": [
+          16,
+          64,
+          0,
+          59,
+          6
+        ]
+      }
+    },
+    {
+      "p": 101,
+      "found": true,
+      "sample": {
+        "p": 101,
+        "r": [
+          46,
+          6,
+          73,
+          87,
+          77
+        ],
+        "z": [
+          65,
+          70,
+          31,
+          0,
+          11
+        ]
+      }
+    },
+    {
+      "p": 131,
+      "found": true,
+      "sample": {
+        "p": 131,
+        "r": [
+          95,
+          117,
+          92,
+          71,
+          127
+        ],
+        "z": [
+          58,
+          46,
+          52,
+          32,
+          5
+        ]
+      }
+    },
+    {
+      "p": 199,
+      "found": true,
+      "sample": {
+        "p": 199,
+        "r": [
+          56,
+          1,
+          32,
+          87,
+          183
+        ],
+        "z": [
+          37,
+          56,
+          162,
+          73,
+          81
+        ]
+      }
+    }
+  ],
+  "parent_torsor_marker": "H6-TORSOR-CLASS-PASS",
+  "fields": {
+    "E": "L^<T> = C(r0,...,r4)/(r0*r1*r2*r3*r4-1)",
+    "K": "L^H = E^<sigma> = C(U1,U2,U3,U4)",
+    "Phi": "Tr(c a^2 sigma(a)), c=r2^{-1}"
+  }
+}

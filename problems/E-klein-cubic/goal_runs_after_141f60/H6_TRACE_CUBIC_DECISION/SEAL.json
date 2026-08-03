@@ -15,7 +15,7 @@
   "torsor_degree": 11,
   "kernel": "mu_11 etale with C5-action by *9 on Z/11",
   "consumed_commit": "eb21458bea684d2399ad18f003e2be8ebdd161ce",
-  "peak_rss_mb": 61.09,
+  "peak_rss_mb": 67.58,
   "elapsed_sec": 0.021,
   "files": {
     "INPUT_MANIFEST.json": "404efe1df3ceb5adc1ce75c80e93f93c398e557a7cac0f77ff672581d4db94d4",
@@ -23,17 +23,17 @@
     "TRACE_HYPERPLANE_TORSOR.md": "37d323de398bade78e8e75abab57bbde7cb0e85f4dda838a58590daef0ffd608",
     "BOUNDARY_AUDIT.md": "11610ffd1498021464d3817b3dbaaf2a8371af39d93e58c74c4adb9e02d39858",
     "constructive_search.json": "ca7a92a40a8b8570bb82c4a0ecb9b4d68af880298d5a0b044e4b017c8598b637",
-    "CONSTRUCTIVE_SEARCH.md": "28a415b24bd230e4ce64604f3329663fd72f4ba31760448534ef8088a899e0a1",
+    "CONSTRUCTIVE_SEARCH.md": "81d6c96db46e6ee2c683ca00ad91795473c5cde3ab1e80fa83dec6f30f370b6f",
     "valuation_ledger.json": "be7872575d11796a1b19a350687b8fa492759112111ef98b685a64b613a54f5c",
-    "VALUATION_LEDGER.md": "8820f7be739191e7e976eceb69ac41ce759df308b92c99cb76dcd0d840082d7f",
-    "decision.json": "4b2db69413e06db9b8634c937cd4f84ae2694b33ae5d392339235c837d84930d",
+    "VALUATION_LEDGER.md": "92ec290e207e67b15738865cb511a9c421c43a9aa036db9612432d79925960d7",
+    "decision.json": "34cf299405699212ec4b6570db7da4c51922a116beb2282d8e8a3a90020db1bc",
     "POINT.md": "52c81f625b8d5a97770fae51b43a0be3ad0dc3fe52d3e1ac701cc48a480b8f09",
     "produce.py": "d882bb3edc5af7893a552547c666a8ca0609ba36cb1a85152b90625a566572d5",
     "verify_torsor.py": "136813ad9072a097388733a1691c7ab7a985d6f762eba89f324683a94e03dc07",
     "verify_decision.py": "ab102efc7af1d2cf83984ed30f74e6a1480864d4fd9459a5675ed6efb3a35c77",
-    "REPLAY.md": "ff8f94acac84ee43f0638b008b6b579f4d629633a92d60821d321a4d38beab2f",
-    "STATUS.md": "9b80def65dfeac899801a5e85fe2d5a985308c44070ff1e5e4e680ce49c8fa85",
-    "produce_meta.json": "560c6e37ef5f4c20ac536d2c1b21a1d4411c971051dc300b648c4e6c2706e769"
+    "REPLAY.md": "300018efaede38d9230b10d746dc4b557b770ba4a3e67485db59678c1afa8e98",
+    "STATUS.md": "512e37a7a21ab3ceb3da968a604bd530cdaf0336ec788c5f76bd9565df2eef98",
+    "produce_meta.json": "3d8a01dc6a4f5f27a2536cda13913db31fbad9ac70c6cb6c5982f4f8332fd5ac"
   },
   "nonclaims": [
     "no H6-POINTLESS-HEADLINE-NEGATIVE",
@@ -42,5 +42,8 @@
     "no BRIDGE_11_5_NEG",
     "no re-proof of H6.0 (consumed H6A)",
     "c order-11 class not promoted to obstruction"
-  ]
+  ],
+  "decision_push": "phase_decision_push/",
+  "push_peak_rss_mb": 67.5,
+  "push_elapsed_sec": 2.168
 }
