@@ -16,8 +16,20 @@ packets are indexed one-per-record in `notebook_build/manifest.json` (the
 per-artifact crosswalk, parity-checked by `scripts/check_manifest_parity.py`);
 this document is not an event-by-event log.
 
+**Coverage contract.** Complete at canonical route-family level as of the
+stated parent head. Machine-parity coverage applies to `goal_runs_after_*`
+run directories and direct `certificates/*` packets (structural checks plus
+coverage-by-mention for `goals_*` worker roots, `external_sessions/`, and
+`external_packets/`); proposal, session, branch, and local-only evidence is
+manually indexed. The checker verifies structure and pins, not mathematical
+semantics.
+
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — repository state audited: `f7f6e48` (2026-08-03).
+Snapshot metadata — notebook parent head: `85bec8e` (2026-08-03; the
+repository state this revision was authored against — a file cannot carry its
+own commit hash, so the committing revision is always `git log -1 --
+problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
+verifies at pre-commit time that this stated parent equals the current HEAD.
 Manifest snapshot: the `as_of_commit` block inside
 `notebook_build/manifest.json`. Branch inventory: 2026-08-03, pinned heads
 `086e0892…` (G3P) and `6fdac74f…` (M3). This file's own commit is the child of
@@ -102,6 +114,24 @@ genuine generic twist pointless.
 The one-page map. Everything below this section is ledger, provenance, and
 appendix; this is the current mathematical position. **Headline: OPEN.**
 
+After the exact reduction, the entire project is three programs:
+
+1. **Produce a point on the generic twist** — solve `V(Φ)` directly (G3), a
+   common isotropic quaternionic line (C6/Fano), a Sarkisov section (M3), or
+   a point through Schur geometry (curves, residual constructions).
+2. **Construct — or universally exclude — a landing covariant** — one nonzero
+   landing covariant proves the positive answer; an all-degree nonexistence
+   theorem proves the negative; no finite-degree search can settle the
+   negative side (KLS, the polar recursion, the strata machine, and the
+   flat-connection PDE are the all-degree attempts).
+3. **Exhibit a genuinely pointless twist** — the `11:5` trace cubic, the
+   full-`G` residue twists at `f5=0`/`f6=0`, or any explicit `G`-torsor whose
+   Klein twist has no point.
+
+Everything else in this notebook is infrastructure, a failed transfer, a
+scoped closure, or an audit showing a standard invariant does not decide one
+of these three.
+
 ### The decision tree
 
 ```text
@@ -115,16 +145,27 @@ Once any genuine point or nonzero landing covariant exists, dominance is
 automatic (G3A) — no separate gate.                       [E17]
 ```
 
-### Active headline routes
+### Principal active headline routes
 
 | Route | Headline implication | Current exact gate | State | Evidence strength | Next decisive fact |
 |---|---|---|---|---|---|
-| G3 direct arithmetic ([E17](#e17)) | exact `K_proj`-point ⇒ **positive** | solve `V(Φ)(K_proj)`; G3H interface needs a materialized degree-11 field point; G3D Clifford/spinor stages PARTIAL | OPEN | strong reduction, weak arithmetic (interface-level) | an executable field model with `Φ(a)=0` verified by arithmetic |
+| G3 direct arithmetic ([E17](#e17)) | exact `K_proj`-point ⇒ **positive** | solve `V(Φ)(K_proj)`; G3H needs an independently verified executable degree-11 field realization satisfying `Φ(a)=0` (the branch-only G3P packet already gives a formula-level semilinear materialization; its canonical-polar route failed through degree 4); G3D Clifford/spinor stages PARTIAL | OPEN | strong reduction, weak arithmetic (interface-level) | an executable field model with `Φ(a)=0` verified by arithmetic |
 | Common isotropic `D`-line ([E07](#e07)/[E08](#e08)) | Fano point ⇒ `C_gen` point ⇒ **positive** (sufficient only; converse unproved) | exact solve of the corrected C6 Plücker/alternating incidence | OPEN | model installed (C6 birational-model PASS); no point | a `K_proj`-solution of the C6 incidence system |
 | M3 rational section ([E24](#e24)) | dP3-fibration section ⇒ **positive** | `C_012(K)`, then the degree-3 section component | OPEN (multisection closed) | strong structure; section undecided; branch packet's exit not machine-verified | a `K`-point of the lowest section gate `C_012` |
 | Landing-covariant ladder ([E16](#e16)/[E25](#e25)/[E09](#e09)) | covariant ⇒ **positive**; all-degree emptiness ⇒ **negative** | degree-25 char-0 completion (transfer the `F_67` branches or run the 63 charts); degrees 31/35 m=1 | ≤24 closed char-0; 25 partial | theorem-grade through 24; modular beyond; no all-degree bound possible by search | char-0 transfer for the order-2/order-≥4 branches |
 | Genuine `11:5` trace cubic ([E18](#e18)) | pointless genuine twist ⇒ **negative** | decide `Tr_{E/K}(r₂⁻¹a²σ(a))=0` via the degree-11 torus/isogeny structure | OPEN — smallest genuine twist left | exact model sealed (`H-11_5-NORM-MODEL-PASS`); no decision | either a point or a torsor-class obstruction on `H_tr` |
 | Residue-twist binaries ([E33](#e33)) | pointless residue twist ⇒ **negative** | full-`G` residue twists at `f5=0`, `f6=0` | OPEN (mechanics closed, `V3` normal form) | models installed (`G5-F5/F6-CUBIC-MODEL-PASS`); binaries undecided | local solubility verdict at either residue twist |
+
+### Secondary live routes
+
+Deprioritized but not closed; any could re-enter the principal table.
+
+| Route | Headline implication | Current gate | State |
+|---|---|---|---|
+| Schur projective source ([E31](#e31)) | degree-12 landing map ⇒ **positive** | the degree-12 constant-coefficient solve (rank 1,124; timed out) | OPEN-STALLED |
+| S19 residual curve ([E30](#e30)) | degree-19 curve through the degree-55 point ⇒ **positive** | both non-ACM Rao branches | UNDECIDED |
+| Q3 quartic-resolvent descent ([E27](#e27)) | stable-resolvent obstruction ⇒ **negative** | the descent decision past the monodromy pass | PARTIAL-OPEN |
+| Degree-74 semilinear curve ([E42](#e42)) | torsor-dependent interpolation curve ⇒ **positive** | constructing the curve (named target; finite chords closed) | NAMED TARGET |
 
 ### Established infrastructure (load-bearing, done)
 
@@ -328,11 +369,14 @@ Chronology and hash anchors from `notebook_build/lens_gitlog.md`.
 
 ## Index
 
-55 canonical **records**. They are not all "attempts" in the sense of tried-and-failed
-routes: the set spans construction, obstruction, reduction, bounded computation,
-infrastructure, audit/repair, dispatch/process, conditional implication, and
-proposal/unrun. Each entry carries a **Record type:** line assigning one (or, where
-genuinely dual, two) of those nine values. `state` is the reconciled state from
+55 canonical **records** (56 index rows after the E21a/E21b split — [E21](#e21)
+is one record presented as two clearly-labeled sub-records under a shared
+entry and anchor, per Round 5 below). They are not all "attempts" in the
+sense of tried-and-failed routes: the set spans construction, obstruction,
+reduction, bounded computation, infrastructure, audit/repair,
+dispatch/process, conditional implication, and proposal/unrun. Each entry
+carries a **Record type:** line assigning one (or, where genuinely dual, two)
+of those nine values. `state` is the reconciled state from
 `canonical_attempts.md`, not a verbatim exit label.
 
 Each entry carries a `Thread:` line locating it in the Research threads map above; ambiguous historical tokens resolve only through the Nomenclature glossary.
@@ -359,7 +403,8 @@ Each entry carries a `Thread:` line locating it in the Research threads map abov
 | [E18](#e18) | H11:5 / H5 / H6 — 11:5 trace-cubic programme | negative | mixed | OPEN | negative |
 | [E19](#e19) | Hodge-center — split-injection / CM screen | negative | mixed | SALVAGED-BUT-NONBINDING | none |
 | [E20](#e20) | I — Hermitian five-plane intersection theory | positive/negative | analytic | UNRESOLVED/UNRUN | sufficient only |
-| [E21](#e21) | J/J2 — canonical-dimension invariant / Prym | negative | analytic | TERMINAL (countermodel) | route refuted |
+| [E21a](#e21) | J — Elo "Path J" candidate-invariant survey (unrun) | negative (proposed) | analytic | UNRUN (theory watch) | negative (proposed) |
+| [E21b](#e21) | J2 — Goal J / `J_BASELOCUS_PRYM` base-locus Prym obstruction | negative | analytic | COUNTERMODEL — INVARIANT NEUTRALIZED | route refuted |
 | [E22](#e22) | KLS — self-covariant landing framework | positive/negative | mixed | CONFLICT → reduction closed, framework open | both |
 | [E23](#e23) | L1 — full polar range recursion | infrastructure | CAS | PASS | none |
 | [E24](#e24) | M/M2/M3 — Sarkisov link / dP3 section search | positive | mixed | OPEN-NARROWED | positive |
@@ -942,8 +987,66 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 <a id="e21"></a>
 ### E21 — J/J2 — Direct essential/canonical-dimension invariant; base-locus Prym countermodel
 
-- **Target:** negative — prove `ed_C(G)=4` directly via a cohomological / canonical-dimension / motivic invariant that survives every 3-dimensional compression, auditing candidate invariants (cohomological invariants, equivariant Chow/Steenrod operations, canonical dimension/incompressibility, motives of generic projective representations, unramified cohomology) against four required criteria; realized as an equivariant resolution of the landing covariant's base locus with analysis of the resulting Prym factors.
-- **Justification:** A single invariant that cannot drop under compression settles `ed_C(G)=4` outright.
+**Conflict (route content) — ADJUDICATED-SPLIT (2026-08-03).** This entry
+bundles two distinct programs sharing only the letter J. The Elo "Path J"
+charter (candidate-invariant survey; task list and exit vocabulary
+`N-J`/`J-CANDIDATE`/`J-STOP`, "theory watch", never run) and Goal J /
+`J_BASELOCUS_PRYM` (executed fixed-centre Albanese–Prym obstruction; gates
+`J0–J4`, exit `J2-UNRESTRICTED-COUNTERMODEL-EXTENDS`) share nothing in task
+list or exit vocabulary, and no document anywhere asserts their identity;
+the earlier provisional-identity claim is withdrawn (see conflict 11). They
+are recorded below as sub-records **E21a**/**E21b** under this one entry and
+anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
+
+---
+
+**E21a — Elo "Path J": direct canonical-dimension invariant survey (unexecuted).**
+
+- **Target:** negative (proposed) — prove `ed_C(G)=4` directly via a
+  cohomological / canonical-dimension / motivic invariant that survives
+  every 3-dimensional compression; audit candidate invariants (cohomological
+  invariants, equivariant Chow groups and Steenrod operations, canonical
+  dimension/incompressibility, motives of generic projective representations,
+  unramified cohomology) against four required criteria — degree; value on
+  the generic `G`-torsor; why it must vanish on every field of transcendence
+  degree at most three or every threefold compression; whether existing
+  subgroup restrictions already force it to vanish — before any candidate
+  proceeds.
+- **Justification:** A single invariant that cannot drop under compression
+  would settle `ed_C(G)=4` outright.
+- **Method:** analytic
+- **Record type:** proposal/unrun
+- **Thread:** T7 — cohomological/motivic obstruction sweep
+- **Verification class:** PROPOSAL-UNRUN — a fully specified Elo route
+  (`WORKORDER_ELO_TEN_PATHS.md` Path J) with no execution and nothing to
+  verify.
+- **Status:** UNRUN (theory watch) — defined with exits, never dispatched to
+  a verdict.
+  - Ranked #10/10, Elo 1379, queue status "theory watch"; decision exits
+    `N-J`, `J-CANDIDATE`, `J-STOP` — none resolved [WORK,
+    `WORKORDER_ELO_TEN_PATHS.md` Path J]
+- **What was actually established:** nothing. The route exists as a Gate-J1
+  candidate-invariant-audit specification only; no candidate was ever listed
+  or scored against the four required criteria.
+- **Aliases:** Path J (Elo #10); exits `N-J`, `J-CANDIDATE`, `J-STOP`
+- **Provenance:** J1 candidate-invariant audit (planned). No external
+  session matches.
+- **Pointers:** `WORKORDER_ELO_TEN_PATHS.md` (Path J, ranked #10)
+- *Lenses 1/7 (WORK) — **single-lens**; confidence certain as a stated
+  route, no execution evidence.*
+
+---
+
+**E21b — Goal J / `J_BASELOCUS_PRYM`: fixed-centre Albanese–Prym obstruction (executed).**
+
+- **Target:** negative — realized as an equivariant resolution of the
+  landing covariant's base locus with analysis of the resulting Prym
+  factors, testing whether an unrestricted point-sensitive invariant on that
+  resolution obstructs the generic twist.
+- **Justification:** If the base-locus resolution's unrestricted invariant
+  cannot vary across the family, it settles `ed_C(G)=4`; this packet tests
+  that directly rather than surveying candidates in the abstract (E21a's
+  unrun charter).
 - **Method:** analytic (with CAS resolution/Prym computation)
 - **Record type:** obstruction
 - **Thread:** T7 — cohomological/motivic obstruction sweep
@@ -951,24 +1054,14 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Status:** TERMINAL — the unrestricted invariant admits an extending countermodel; no point-sensitive invariant found.
   - `J2-UNRESTRICTED-COUNTERMODEL-EXTENDS` [DIR, `goal_runs_after_35fa/J_BASELOCUS_PRYM/STATUS.md`]
   - **Structural content of the packet (recorded 2026-08-03; previously omitted).** From `goal_runs_after_35fa/J_BASELOCUS_PRYM/` (`STATUS.md`, `FIXED_CENTRE_1MOTIVE.md`, `POLARIZATION_ISOGENY.md`, `D_COUNTERMODEL_AUDIT.md`, `BASE_IDEAL_CONSTRAINTS.md`): for **any** hypothetical primitive landing covariant there is an equivariant log resolution of its base ideal whose centre has stabilizer `C₂`, orbit size **330**, six `S₃`-permuted fixed components, and normal eigenranks `(1,2)`. The blowup contribution splits off a copy of `H³(X,ℚ)(1)` with exact averaging scalar **198** and a **CM discriminant −11** factor tied to the polarization, together with an `S₃`-equivariant quotient carrying the order-three Albanese class of `E_t`. This is real structure about the base locus of any landing covariant, independent of the countermodel that terminates the route.
-  - "theory watch" (queue status); decision exits `N-J`, `J-CANDIDATE`, `J-STOP` — none resolved [WORK, `WORKORDER_ELO_TEN_PATHS.md` Path J]
-  - Bundled `TERMINAL — Prior local obstructions/witnesses exhausted — Background only` [STAT, 08-02 ledger; STAT notes "content entirely unknown from this lens"]
-  - **Conflict (route content) — ADJUDICATED-SPLIT (2026-08-03).** The Elo
-    "Path J" (candidate-invariant survey; task list and exit vocabulary
-    `N-J`/`J-CANDIDATE`/`J-STOP`, "theory watch", never run) and Goal J /
-    `J_BASELOCUS_PRYM` (executed fixed-centre Albanese–Prym obstruction;
-    gates `J0–J4`, exit `J2-UNRESTRICTED-COUNTERMODEL-EXTENDS`) are two
-    distinct programs sharing only the letter — the Elo charter's task list
-    and exit vocabulary share nothing with the executed goal's, and no
-    document anywhere asserts their identity. The record is kept unified
-    here for continuity; the earlier provisional-identity claim is
-    withdrawn. See conflict 11.
-- **What was actually established:** (i) that the unrestricted invariant does not obstruct (a countermodel extends); (ii) the base-locus structure theorem above — an equivariant log resolution of any primitive landing covariant's base ideal with `C₂`-stabilized centre, orbit size 330, six `S₃`-permuted fixed components, normal eigenranks `(1,2)`, an `H³(X,ℚ)(1)` summand with averaging scalar 198 and CM discriminant −11, and an `S₃`-equivariant quotient carrying `E_t`'s order-three Albanese class. NOT established: any statement about restricted or point-sensitive invariants.
-- **Aliases:** Path J (Elo #10); Goal J; `J_BASELOCUS_PRYM`; exits `N-J`, `J-CANDIDATE`, `J-STOP`
-- **Provenance:** `goal_runs_after_35fa/J_BASELOCUS_PRYM`; J1 candidate-invariant audit (planned).
+  - Bundled `TERMINAL — Prior local obstructions/witnesses exhausted — Background only` [STAT, 08-02 ledger; STAT notes "content entirely unknown from this lens"; this citation predates the E21a/E21b split and its bundling target is unclear — treated as background only, not attributed specifically to either sub-record].
+- **What was actually established:** (i) that the unrestricted invariant does not obstruct (a countermodel extends); (ii) the base-locus structure theorem above — an equivariant log resolution of any primitive landing covariant's base ideal with `C₂`-stabilized centre, orbit size 330, six `S₃`-permuted fixed components, normal eigenranks `(1,2)`, an `H³(X,ℚ)(1)` summand with averaging scalar 198 and CM discriminant −11, and an `S₃`-equivariant quotient carrying `E_t`'s order-three Albanese class. NOT established: any statement about restricted or point-sensitive invariants — that survey is E21a's unrun charter, not this packet's target.
+- **Aliases:** Goal J; `J_BASELOCUS_PRYM`
+- **Provenance:** `goal_runs_after_35fa/J_BASELOCUS_PRYM`.
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` authored `GOAL_J_FIXED_CENTRE_PRYM.md` (added by `fa543e2`; indexed in `3569d63`); its Prym/one-motive analysis is also reported in § `progress-on-klein-cubic-6a705563.md` as "decisively demoted — should not be redispatched unchanged".
-- **Pointers:** `goal_runs_after_35fa/J_BASELOCUS_PRYM/STATUS.md`; `WORKORDER_ELO_TEN_PATHS.md` (Path J)
-- *Lenses 3/7 (DIR, STAT, WORK); confidence medium for the identity of the two descriptions.*
+- **Pointers:** `goal_runs_after_35fa/J_BASELOCUS_PRYM/STATUS.md`
+- *Lenses 2/7 (DIR, STAT — STAT's bundled content is unknown from this
+  lens); confidence certain as the executed program.*
 
 ---
 
@@ -1775,11 +1868,12 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 
 ## External sessions
 
-19 offline ChatGPT sessions: 15 are summarized in
-`notebook_build/sessions_batch{1,2,3,4}.md`; four direct review sessions
+20 offline ChatGPT sessions: 15 are summarized in
+`notebook_build/sessions_batch{1,2,3,4}.md`; five direct review sessions
 (`notebook-review-6a707542.md`, `notebook-review2-6a70834f.md`,
-`notebook-review3-6a708f54.md`, and `notebook-review4-6a70a498.md`) post-date
-that build and are recorded from `external_sessions/` directly. Per Binding
+`notebook-review3-6a708f54.md`, `notebook-review4-6a70a498.md`, and
+`notebook-review5-6a70ad1a.md`) post-date that build and are recorded from
+`external_sessions/` directly. Per Binding
 rule 4, **nothing below is
 machine-verifiable**; claims must be re-derived in-repo before affecting the
 headline. Where a session's push landed in the repo, the commit is cited in the
@@ -1806,6 +1900,7 @@ corresponding attempt entry above with the tag `source: external-chatgpt`.
 | `notebook-review2-6a70834f.md` | "Review Notebook Accuracy" (review of commit `aaa186b`) | 2026-08-03 | review | Verdict: "comprehensive and substantially accurate at the canonical route-family level; not literally every attempt; not yet mechanically authoritative." Findings, all adjudicated: E03/E55 chronology error — **CONFIRMED** via git, fixed; stale build provenance — **CONFIRMED**, fixed by freezing `canonical_attempts.md` and adding `manifest.json`; opening-sentence overclaim — **CONFIRMED**, reworded; session-count clarification — applied; two unmerged-branch packets omitted — **CONFIRMED**, now recorded in [E17](#e17)/[E24](#e24) | none |
 | `notebook-review3-6a708f54.md` | "Review of NOTEBOOK.md" (accuracy audit of commit `32d5862`) | 2026-08-03 | review | Verdict: endorses the notebook as the canonical human-readable account of Problem E — no headline-state errors; degree-25, G3H/G3D, B-bridge, M3, and branch adjudications independently confirmed. Residual findings all archival/provenance: stale as-of metadata, six remaining audit-A1 date strings, incomplete verification taxonomy, manifest nulls, debt-18 wording — all **CONFIRMED** and fixed this round (`## 2026-08-03 review round`, Round 3) | none |
 | `notebook-review4-6a70a498.md` | "Review of NOTEBOOK.md" (strategic audit of `6f2624e`) | 2026-08-03 | review | Verdict: no missing headline-changing result, no incorrect status, no unrecorded branch packet; corrections around degree 25/G3H/G3D/B/M3 called careful and materially important; remaining critique strategic — the ledger buried the attack map. Adjudication: all four concrete defects confirmed and fixed (opaque manifest metadata → four-field block; five misreadable index labels → relabeled + new headline-consequence column; thread-language inconsistency → fixed; strategic-dashboard recommendation → adopted, replacing the live-state summary) (`## 2026-08-03 review round`, Round 4) | none |
+| `notebook-review5-6a70ad1a.md` | "Notebook.md Review" (audit of `85bec8e`) | 2026-08-03 | review | Verdict: substance fully endorsed — no omitted headline-changing result, no unrecorded substantive branch packet, no canonical mathematical status that should presently change. One definite defect found (stale snapshot metadata, a third recurrence of the same class of error) plus seven presentational recommendations, all adjudicated **CONFIRMED** and adopted this round (`## 2026-08-03 review round`, Round 5) | none |
 
 ### Sessions that made load-bearing claims
 
@@ -1839,6 +1934,8 @@ corresponding attempt entry above with the tag `source: external-chatgpt`.
 
 **`notebook-review4-6a70a498.md`** — a fourth review *of this notebook*, a strategic audit against commit `6f2624e`, also producing no repo artifacts. Its verdict: no missing headline-changing result, no incorrect current headline status, and no unrecorded substantive branch packet; it called the corrections around degree 25, G3H, G3D, B, and M3 "careful and materially important." Its residual critique was strategic rather than factual — the ledger is an excellent forensic record but buries the attack map, and it proposed a one-page decision tree, an active-route table (`Route | Headline implication | Current exact gate | State | Evidence strength | Next decisive fact`), a strategic-category split (active/infrastructure/retired/hazards), opaque `as_of_commit` metadata restructured into four unambiguous fields, and index relabels for E06/E11/E28/E32/E25 plus a new headline-consequence column. All four concrete defects it identified were confirmed and fixed this round: the manifest's opaque `as_of_commit` block became a four-field `audited_repository_head`/`manifest_source_head`/`manifest_generated_by_commit`/`notebook_head` block; the five misreadable index labels were relabeled and the headline-consequence column added; the thread-language inconsistency around E36 was fixed; and its Strategic-dashboard recommendation was adopted, replacing the former Live state summary. Disposition of all repairs is in `## 2026-08-03 review round`, Round 4.
 
+**`notebook-review5-6a70ad1a.md`** — a fifth review *of this notebook* ("Notebook.md Review"), auditing commit `85bec8e` (the Round-4-corrected notebook) via a fresh sparse-checkout clone against live `main`, also producing no repo artifacts. Its verdict: substantively yes, the notebook captures every major Problem E route family, every headline-relevant outcome, and the present mathematical state — **no omitted headline-changing result, no unrecorded substantive branch packet, and no canonical mathematical status that should presently be changed**; the branch audit reconfirmed G3P and the M3 section-component packet as the only two mathematically distinct unmerged packets. It found exactly **one definite factual defect** — stale snapshot metadata: the preamble said "repository state audited: `f7f6e48`" while the notebook's own commit `85bec8e` is actually the child of `6f2624e` (the Round-4-audited head), and the manifest's `manifest_generated_by_commit: f7f6e48` field was self-referentially confusing since the manifest itself was rewritten in `85bec8e` — this is the **third recurrence** of stale-snapshot-metadata as a review finding (after Round 3's and, before that, the preamble/manifest drift Round 2 addressed), so the fix this round moves the field semantics from "self-describing audited state" to plain **parent-head** (the notebook records only the head it was authored against, never its own hash) with a **pre-commit staleness check** in the parity checker rather than another one-off correction. It made seven presentational recommendations, all adjudicated **CONFIRMED** and adopted this round: (1) parent-head metadata fix as above; (2) a stated coverage contract; (3) an expanded checker (parent-head check, entry-id/duplicate validation, fetch-based branch pins, coverage-by-mention for `goals_after_*`/`goals_2026-*`/`external_sessions/`/`external_packets/`); (4) the three-meta-thrust summary (produce a point; construct/exclude a landing covariant; exhibit a pointless twist) placed above the route table; (5) "Active headline routes" renamed **Principal active headline routes**, with a new **Secondary live routes** table for E31, E30, E27, and the degree-74 target; (6) [E21](#e21) split into E21a/E21b, since the notebook itself already proved the two J programs are not the same attempt (conflict 11); (7) the G3 dashboard phrase "materialized degree-11 field point" replaced by "independently verified executable degree-11 field realization satisfying `Φ(a)=0`", crediting the branch-only G3P packet's formula-level semilinear materialization while being precise about what remains unverified. Disposition of all repairs is in `## 2026-08-03 review round`, Round 5.
+
 ### Sessions with no load-bearing repo claims
 
 `t3-normalization-push-6a70553b.md` delivered a work-order packet only, with no proof and no exit ([E32](#e32)); it also accidentally triggered GitHub Actions runs against an explicit local-runner-only instruction. `g-equivariant-rational-maps-6a7055aa.md`, `g-equivariant-rational-maps-6a70559f.md`, and `mathematical-machine-implementation-6a7055b7.md` are theory/planning sessions that pushed nothing; the latter two nevertheless assert repo facts (Klein involution fixed-locus structure, the character of the repo's PSL(2,7) argument, OD16/Fermat fixed-scheme data) that were never machine-checked.
@@ -1852,6 +1949,55 @@ corresponding attempt entry above with the tag `source: external-chatgpt`.
 **(c) `g-equivariant-rational-maps-6a7055aa.md` had NO repo access.** The assistant states plainly (verbatim): "I do not have the repository contents available from the current tool context, so I cannot honestly claim to have read the exact implementation" — paraphrased above as "could not access the repository contents" — and produced a from-scratch generic framework instead. Its apparent matches to repo terminology (fixed-locus obstruction, stratification monotonicity, inertia/quotient-stack formulation) are **coincidental**. If that framework is ever invoked to justify or extend an in-repo obstruction argument (B, Q2.1, V3, H5/H6), it must first be checked against those packets' actual definitions.
 
 **(d) "L1" name collision.** `mattrobball-unirational-task-6a7054e2.md` uses `L1` for the **full polar range recursion** ([E23](#e23), commit `82de03d`, `goal_runs_after_7030dd/L1_FULL_POLAR_RANGE/`). `github-repo-task-update-6a7054fb.md` independently coins `L1` for **"ambient self-map rigidity"**, an entirely different proposed route citing a "G-birationally superrigid" theorem. These are two different objects sharing one label; the first session had to spend effort disambiguating what "packet L1" even meant. Do not conflate them, and do not read `L1-FULL-RANGE-PASS` as bearing on self-map rigidity.
+
+---
+
+## Goal-wave worker roots
+
+Added Round 5 (`## 2026-08-03 review round`), after the expanded
+`scripts/check_manifest_parity.py` coverage-by-mention check surfaced 43
+level-1 children of `goals_2026-08-01/`, `goals_after_35fa8f/`, and
+`goals_after_bd610a/` that were never mentioned by name anywhere in this
+document. These are **worker-root scratch directories**, not canonical
+records: parallel or successor isolated workspaces from the 2026-08-01/02
+dispatch waves (often several per goal, distinguished by `_CODEX_ROOT`/
+`_ROOT_<hex>` suffixes where concurrent workers collided on a shared
+directory name), consumed and superseded by the canonical `goal_runs_after_*`
+packets and `tmp/` results already cited under the entries below. None
+carries a headline-changing claim — every one is `OPEN`/`*-UNDECIDED` or a
+scoped/structural exit already subsumed by its entry's recorded state. Per
+the Coverage contract, this appendix satisfies coverage-by-mention; it does
+not create new per-record manifest entries.
+
+| Worker root(s) (batch dir) | Exit label(s) seen | Disposition |
+|---|---|---|
+| `C_PFAFFIAN_FANO`, `C_PFAFFIAN_FANO_CODEX_ROOT`, `C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3` (`goals_2026-08-01/`) | `C-UNDECIDED` (all three) | Three successive/parallel worker-root attempts at a Pfaffian-constructed common line for a Fano point (compressed algebra, minimal polynomials, ambient-degree RUR searches); none closes. → [E07](#e07)/[E26](#e26) |
+| `D_EQUIVARIANT_MOTIVE` (`goals_2026-08-01/`) | `D-INVARIANT-REPRODUCIBLE` | The selected equivariant motive/cohomology lattice is reproducible but Rost/Merkurjev index formulas are vacuous at index one; headline OPEN — matches E10's neutralized reading. → [E10](#e10) |
+| `F_CONIC_ALGEBRA` (`goals_2026-08-01/`) | `F-CONIC-CRITERION-EMPTY` | Proves an auxiliary conic-intersection object empty (`C(K_proj)=empty` for a locally-defined `C`, not `C_gen`); scoped, does not decide the headline. Bare token "F" is ambiguous (Nomenclature glossary); nearest canonical home is the fixed-frame/common-line family. → [E13](#e13)/[E07](#e07) |
+| `G_ALL_DEGREE_ROOT_20260801` (`goals_2026-08-01/`) | `G-STRUCTURAL-UNDECIDED` | Structural line-scheme rigidity results for the landing-covariant ladder at every odd plane order; does not decide the ladder. → [E16](#e16) |
+| `H_SUBGROUP_TWISTS_CODEX_ROOT_20260801`, `H_SUBGROUP_TWISTS_ROOT_019FBE10` (`goals_2026-08-01/`) | `H-SWEEP-UNDECIDED` | Worker roots for the proper-subgroup twist sweep; `BR-SUBGROUP-NEG` proved but no proper-subgroup twist is pointless (both maximal `A5` classes and `11:5` survive) — content later superseded by the exact A5 twist points recorded at [E11](#e11). |
+| `M_SARKISOV_CODEX_ROOT_20260801`, `M2_EQUIVARIANT_SARKISOV_CODEX_ROOT_20260801` (`goals_2026-08-01/`) | `M-NEW-MORI-FIBRE-STRUCTURAL`, `M2-EXPLICIT-LINK-PASS` | Both install the exact type-I Sarkisov link (blowup of the plane cubic `C_012`, del Pezzo-3 fibration over `P¹`); structural, no section produced — predecessor worker roots for the packet recorded at [E24](#e24). |
+| `Q_11_5_FIVE_KUMMER_CODEX_ROOT_20260801_5FIVE`, `Q_11_5_FOUR_KUMMER_CODEX_ROOT_20260801_B91C`, `Q_11_5_TRACE_BINOMIAL_CODEX_ROOT_20260801_C71A`, `Q_11_5_TRACE_FACTOR_CODEX_ROOT_20260801_6D4E` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Sparse-exclusion child packets for the genuine Schur twist's `11:5`-decomposition trace equation (Kummer-vector and monomial-coefficient exclusions); each self-declares "nonterminal `Q-UNDECIDED`". → [E27](#e27) |
+| `Q_A5_VALUATION_REPLAY_20260801_D2B9` (`goals_2026-08-01/`) | (embeds `H-A5-CLASS1/2-RATIONAL-POINT`, `H-A5-STRUCTURAL-MODEL-PASS`) | Replays the exact A5-twist rational points ([E11](#e11)) as an input to Q's valuation/decomposition-group elimination argument. → [E27](#e27), input from [E11](#e11) |
+| `Q_SCHUR_A5_PARENT_INTEGRATION_20260801_EA52`, `Q_SCHUR_A5_VALUATION_ELIMINATION_CODEX_ROOT_20260801_EA52` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Both maximal `A5` decomposition classes eliminated functorially via the exact degree-11 point maps, narrowing the surviving decomposition groups to `{PSL(2,11), 11:5}`; the genuine Schur twist itself remains undecided. → [E27](#e27) |
+| `Q_SCHUR_DEGREE6_11_5_20260801_2A6C`, `Q_SCHUR_H4_DEG6_CODEX_ROOT_20260801_2A6C` (`goals_2026-08-01/`) | `Q_F55_DEGREE6_ALL_PROJECTIVE_CHARACTERS_EMPTY_EXACT` (child of `Q-UNDECIDED`) | Complete degree-1..6 `11:5` homogeneous landing-scheme exclusion for all five projective characters; bounded, does not decide the genuine Schur point. → [E27](#e27) |
+| `Q_SCHUR_DESCENT`, `Q_SCHUR_DESCENT_CODEX_ROOT_20260801_5F31` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Live-status worker roots for the generic Schur index-one descent binary (`X_Schur(K_Schur)≠∅` vs. `=∅`); neither side proved. → [E27](#e27) |
+| `Q_SCHUR_EXACT_FRAME_PARENT_INTEGRATION_20260801_8F3D`, `Q_SCHUR_EXPLICIT_FRAME_CODEX_ROOT_20260801_8F3D` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Install the exact characteristic-zero Hilbert–90 frame and 35-coefficient descended-cubic table for the genuine Schur twist (`Q_SCHUR_EXACT_FRAME_INDEPENDENT_REPLAY_OK`); infrastructure only. → [E27](#e27) |
+| `Q_SCHUR_FOUR_KUMMER_PARENT_INTEGRATION_20260801_B91C` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Reconstructs the five Reynolds/Hilbert-90 frame columns for the four-Kummer trace decision; nonterminal. → [E27](#e27) |
+| `Q_SCHUR_INDEX_ONE_STAGE_20260801_INTEGRATE2`, `Q_SCHUR_INDEX_ONE_STAGE_20260801_ROOT` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Duplicate isolated packets for the Goal Q2 index-one decision stage (same content, collision-driven copies). → [E27](#e27) |
+| `R_RATIONAL_CURVES_CODEX`, `R_RATIONAL_CURVES_ROOT_20260801A`, `R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO` (`goals_2026-08-01/`) | `R-HILBERT-COMPONENT-STRUCTURAL` | Rational-curve Hilbert-component structural closures (degrees 2–3, then through degree 5 with an all-degree secant bridge); no point on the genuine twist produced — predecessor worker roots for [E28](#e28). |
+| `S19_SCHUR_CURVE_CODEX_ROOT_20260801_7B4E` (`goals_2026-08-01/`) | `S19-NO-CURVE-SCOPED` | Proves the *literal* S19 target curve empty in both live Rao branches (containment-in-`X_F` plus proper finite intersection is jointly impossible); the corrected ambient-curve problem is untouched. → [E30](#e30) |
+| `T_TARGET_BRANCH_INDEX3`, `T_TARGET_BRANCH_INDEX3_ROOT_019FBE13`, `T_TARGET_BRANCH_INDEX3_codex_root` (`goals_2026-08-01/`) | checklist stage / `T-ROUTE-REFUTED` (`T-BRIDGE-BLOCKED`) | Worker roots for the T0 target-branch audit; two independently reach `T-ROUTE-REFUTED` — the target branch controls only the auxiliary fixed-frame plane cubic, not the genuine twist — consistent with [E32](#e32)'s recorded auxiliary/suspended status. |
+| `V_VALUATION_TROPICAL_CODEX_ROOT_20260801` (`goals_2026-08-01/`) | `V-UNDECIDED` | Valuation/tropical route does not prove a pointless completion of the genuine twist; the permitted undecided exit. → [E33](#e33) |
+| `COV_M1_DEG31_35_WORK`, `COV_STRUCTURED_SEARCH`, `COV_STRUCTURED_SEARCH_ROOT` (`goals_2026-08-01/`) | `COV-UNDECIDED`, `COV-NEW-ANSATZ-STRUCTURAL`, `COV-STRUCTURED-DEGREES-EMPTY-SCOPED` | Degree-31/35 `m=1` module and structured-search worker roots. The third exit label, `COV-STRUCTURED-DEGREES-EMPTY-SCOPED`, was **flagged as invalid** by an independent faithfulness audit (`mathematical-equivariance-query-6a70557e.md`, § External sessions) — recorded here, not promoted. → [E09](#e09) |
+| `H3_A5_CANONICAL_MODEL_INVARIANT_20260801`, `point_attack_degree11_20260801`, `source_audit_canonical` (`goals_after_35fa8f/`) | `H-A5-CLASS1/2-RATIONAL-POINT`; independent audit PASS | The canonical-model payload, modular point-attack scripts, and independent `EXACT_DEGREE11_AUDIT.md` re-verification underlying the exact A5-twist rational points recorded at [E11](#e11) (different path names from the entry's cited provenance). |
+| `A5Q_QUARTIC_RESCUE_WORK` (`goals_after_bd610a/`) | (no terminal exit; `SUBGROUP_DESCENT.md`) | Exact subgroup-to-full-twist descent theory underlying [E04](#e04)'s A5 index-11 quartic-rescue transfer. |
+| `P25_COV_SUPPORT` (`goals_after_bd610a/`) | `PC-UNDECIDED` | P25/COV finite-support packet; closes sub-gate PC.0 over `F_89` but does not decide the mission. → [E25](#e25)/[E09](#e09) |
+| `scratch_t3` (`goals_after_bd610a/`) | none (raw scratch) | Discriminant/eliminant probe scripts for the T3 normalization stage; no synthesized status document. → [E32](#e32) |
+
+All 43 are worker-root scratch, none headline-changing; no Index or manifest
+changes follow from this appendix beyond the coverage-by-mention citations
+above.
 
 ---
 
@@ -1979,6 +2125,47 @@ important." Its residuals were presentational rather than factual:
 | E36 thread-language inconsistency (a stray "no thread" phrasing against the `Thread: standalone` line) | **Fixed** — normalized to "carries `Thread: standalone`" throughout |
 
 Session count updated from 18 to 19 (`## External sessions`).
+
+### Round 5
+
+A fifth external review (`external_sessions/notebook-review5-6a70ad1a.md`,
+"Notebook.md Review", auditing commit `85bec8e`) endorsed the notebook's
+substance without qualification — no omitted headline-changing result, no
+unrecorded substantive branch packet, and no canonical mathematical status
+that should presently change — and found one definite factual defect plus
+six presentational recommendations (its seventh, splitting E21, is tracked
+separately below). Disposition:
+
+| Recommendation | Disposition |
+|---|---|
+| Stale snapshot metadata — preamble said "repository state audited: `f7f6e48`" while the notebook's own commit `85bec8e` is the child of `6f2624e`; manifest `manifest_generated_by_commit` was self-referentially confusing (the manifest itself was rewritten in `85bec8e`). Third recurrence of this defect class (after Round 3's stale values and Round 4's ambiguous field names) | **Fixed, structurally this time** — the preamble now states a **notebook parent head** (`85bec8e`) rather than a self-describing "audited state"; the manifest's `as_of_commit` block was renamed to `audited_repository_head` / `notebook_parent_head` / `manifest_records_based_on`; and `scripts/check_manifest_parity.py` gained a **pre-commit staleness check** (`notebook_parent_head_current`) that fails the build if the stated parent head ever again drifts from actual `HEAD` — converting a recurring manual fix into an enforced invariant |
+| No formal coverage contract | **Added** — a **Coverage contract** paragraph now opens the preamble, stating machine-parity scope (`goal_runs_after_*`, direct `certificates/*`) versus manually-indexed, coverage-by-mention scope (`goals_*` worker roots, `external_sessions/`, `external_packets/`) versus proposal/session/branch/local-only evidence indexed by hand only |
+| Checker narrower than the prose coverage claim — did not discover `goals_after_*`/`goals_2026-*`, validate entry identifiers, detect duplicates, or verify branch pins are current | **Expanded** — `scripts/check_manifest_parity.py` gained: a parent-head staleness check (above); entry-id validation against `E01`–`E55[ab]` plus duplicate-path detection; `git fetch`-based branch-pin verification (no longer trusting a stale local ref); and coverage-by-mention, which literally greps `NOTEBOOK.md` for every level-1 child of `goals_after_*`/`goals_2026-*` and every `external_sessions/`/`external_packets/` file |
+| Three genuine attack thrusts not stated up front (produce a point; construct/exclude a landing covariant; exhibit a pointless twist) | **Added** — a three-item summary now opens `## Strategic dashboard`, immediately after the one-page-map sentence and before the decision tree |
+| "Active headline routes" table title implied completeness but omitted E31, E30, E27, and the degree-74 target | **Fixed** — renamed **Principal active headline routes**; a new **Secondary live routes** table added directly below it for Schur projective source ([E31](#e31)), S19 residual curve ([E30](#e30)), Q3 quartic-resolvent descent ([E27](#e27)), and the degree-74 semilinear curve ([E42](#e42)) |
+| G3 dashboard phrase "materialized degree-11 field point" overstated G3H and undercredited the branch-only G3P packet | **Fixed** — reworded to "an independently verified executable degree-11 field realization satisfying `Φ(a)=0`", with a parenthetical crediting G3P's formula-level semilinear materialization and noting its canonical-polar route failed through degree 4 |
+
+**Split E21 into E21a/E21b** (the review's seventh recommendation) is applied
+above at [E21](#e21): the Elo "Path J" charter (unexecuted candidate-invariant
+survey) and Goal J / `J_BASELOCUS_PRYM` (executed base-locus Prym obstruction)
+are now two clearly-labeled sub-records under the shared entry and anchor,
+matching the ADJUDICATED-SPLIT conflict-11 finding the notebook already
+carried. The Index gains a row (55 canonical records, 56 index rows); the
+manifest's sole `E21`-mapped record (`goal_runs_after_35fa/J_BASELOCUS_PRYM`)
+was retargeted to `E21b`.
+
+**Coverage-by-mention fallout.** Running the expanded checker for the first
+time surfaced 44 manually-indexed items never mentioned in `NOTEBOOK.md`: one
+was this review's own session file (resolved by adding it to `## External
+sessions` above) and the remaining **43 are goal-wave worker-root
+directories** under `goals_2026-08-01/`, `goals_after_35fa8f/`, and
+`goals_after_bd610a/` — parallel or successor scratch workspaces from the
+2026-08-01/02 dispatch waves that were never individually cited by name in
+this document (their content is covered, but under different path names, by
+the canonical entries already recorded above). All 43 are dispositioned in
+the new `## Goal-wave worker roots` appendix.
+
+Session count updated from 19 to 20 (`## External sessions`).
 
 ---
 

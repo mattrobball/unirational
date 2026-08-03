@@ -15,7 +15,16 @@ Checks:
   5. No manifest record has verification_class == "UNCLASSIFIED" or a
      null primary_exit.
   6. Every branch-only record's pinned branch_head_sha still matches the
-     live branch head (git rev-parse origin/<branch>).
+     live branch head (after git fetch; git rev-parse origin/<branch>).
+  7. NOTEBOOK.md's stated notebook parent head equals the current HEAD
+     (pre-commit staleness guard: run this checker after updating the
+     preamble, before committing).
+  8. Every manifest "entry" value matches E01-E55 (optional a/b suffix);
+     no duplicate manifest paths.
+  9. Coverage-by-mention: every goals_after_*/goals_2026-* level-1
+     subdirectory, external_sessions/ file, and external_packets/ snapshot
+     is at least mentioned in NOTEBOOK.md (these are manually indexed, not
+     per-record manifest entries — see the coverage contract).
 """
 
 from __future__ import annotations
@@ -83,6 +92,14 @@ def find_certificate_dirs() -> set[str]:
         if child.is_dir() and not is_ignorable_dir_name(child.name):
             found.add(str(child.relative_to(PROBLEM_ROOT)))
     return found
+
+
+def git_fetch_quiet() -> None:
+    try:
+        subprocess.run(["git", "-C", str(PROBLEM_ROOT), "fetch", "-q", "origin"],
+                       capture_output=True, timeout=30)
+    except Exception:
+        pass  # offline is tolerable; rev-parse then uses the last-known refs
 
 
 def git_rev_parse(ref: str) -> str | None:
@@ -176,6 +193,7 @@ def main() -> int:
         print(f"OK   no_null_primary_exit: 0 remaining null primary_exit ({len(records)} records checked)")
 
     # --- Check 6: branch-only heads still match pinned SHA -----------------
+    git_fetch_quiet()
     branch_records = [r for r in records if r.get("tracked") == "branch-only"]
     branch_mismatches = []
     branch_unresolved = []
@@ -197,6 +215,67 @@ def main() -> int:
             print(f"    {m}")
     else:
         print(f"OK   branch_head_sha_pinned: {len(branch_records)} branch-only record(s), all match live branch heads")
+
+    # --- Check 7: notebook parent head == current HEAD ---------------------
+    import re
+    notebook_text = (PROBLEM_ROOT / "NOTEBOOK.md").read_text(encoding="utf-8")
+    m = re.search(r"notebook parent head: `([0-9a-f]{7,40})`", notebook_text)
+    head = git_rev_parse("HEAD")
+    if not m:
+        failures += 1
+        print("FAIL notebook_parent_head_current: no 'notebook parent head: `<sha>`' line found in NOTEBOOK.md")
+    elif head is None:
+        failures += 1
+        print("FAIL notebook_parent_head_current: could not resolve HEAD")
+    elif not head.startswith(m.group(1)):
+        failures += 1
+        print(f"FAIL notebook_parent_head_current: NOTEBOOK.md states `{m.group(1)}` but HEAD is {head[:12]} — update the preamble before committing")
+    else:
+        print(f"OK   notebook_parent_head_current: stated parent `{m.group(1)}` matches HEAD")
+
+    # --- Check 8: entry-id validity and duplicate paths --------------------
+    bad_ids = [r["path"] for r in records
+               if not re.fullmatch(r"E(0[1-9]|[1-4][0-9]|5[0-5])[ab]?", str(r.get("entry", "")))]
+    seen: dict[str, int] = {}
+    for r in records:
+        seen[r["path"]] = seen.get(r["path"], 0) + 1
+    dupes = sorted(p for p, n in seen.items() if n > 1)
+    if bad_ids or dupes:
+        failures += 1
+        print(f"FAIL entry_ids_and_duplicates: {len(bad_ids)} invalid entry id(s), {len(dupes)} duplicate path(s):")
+        for p in bad_ids:
+            print(f"    bad-id {p}")
+        for p in dupes:
+            print(f"    dup    {p}")
+    else:
+        print(f"OK   entry_ids_and_duplicates: all entry ids valid (E01-E55[ab]), no duplicate paths")
+
+    # --- Check 9: coverage-by-mention for manually indexed families --------
+    unmentioned = []
+    mention_targets: list[str] = []
+    for pattern in ("goals_after_*", "goals_2026-*"):
+        for batch in sorted(PROBLEM_ROOT.glob(pattern)):
+            if batch.is_dir():
+                for child in sorted(batch.iterdir()):
+                    if child.is_dir() and not is_ignorable_dir_name(child.name):
+                        mention_targets.append(child.name)
+    for fam in ("external_sessions", "external_packets"):
+        fam_dir = PROBLEM_ROOT / fam
+        if fam_dir.is_dir():
+            for child in sorted(fam_dir.iterdir()):
+                if is_ignorable_dir_name(child.name) or child.name == "README.md":
+                    continue
+                mention_targets.append(child.name.removesuffix(".md"))
+    for name in mention_targets:
+        if name not in notebook_text:
+            unmentioned.append(name)
+    if unmentioned:
+        failures += 1
+        print(f"FAIL coverage_by_mention: {len(unmentioned)} of {len(mention_targets)} manually-indexed item(s) never mentioned in NOTEBOOK.md:")
+        for p in unmentioned:
+            print(f"    {p}")
+    else:
+        print(f"OK   coverage_by_mention: {len(mention_targets)} manually-indexed items all mentioned in NOTEBOOK.md")
 
     print()
     if failures:

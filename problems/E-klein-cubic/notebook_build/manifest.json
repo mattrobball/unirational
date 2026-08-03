@@ -1,9 +1,8 @@
 {
  "as_of_commit": {
-  "audited_repository_head": "6f2624e",
-  "manifest_source_head": "dd5cbda",
-  "manifest_generated_by_commit": "f7f6e48",
-  "notebook_head": "the committing revision of NOTEBOOK.md, child of audited_repository_head"
+  "audited_repository_head": "85bec8e",
+  "notebook_parent_head": "85bec8e",
+  "manifest_records_based_on": "f7f6e48"
  },
  "generated": "2026-08-03",
  "headline": "OPEN",
@@ -320,7 +319,7 @@
   },
   {
    "path": "goal_runs_after_35fa/J_BASELOCUS_PRYM",
-   "entry": "E21",
+   "entry": "E21b",
    "kind": "goal_run",
    "verification_class": "ALGEBRAIC-RECOMPUTE",
    "primary_exit": "J2-UNRESTRICTED-COUNTERMODEL-EXTENDS",
