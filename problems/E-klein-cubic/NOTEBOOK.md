@@ -81,6 +81,13 @@ genuine generic twist pointless.
    portable provenance is `goal_runs_*/`, `certificates/`, and the committed
    documents. Where an entry's only provenance is `tmp/`, its evidence is
    **local-only** and cannot be checked by anyone working from the pushed repo.
+6. **Nomenclature.** Bare route letters are ambiguous historical tokens — `F`
+   alone names three unrelated programs, `dP` four. The canonical citation
+   form is the **E-number** (optionally plus a run directory). The
+   Nomenclature glossary below is the disambiguation authority; new documents
+   must not introduce bare-letter route names, and any historical status line
+   keyed to a bare token (e.g. "F terminal") is unresolvable without the
+   glossary and must not be consumed as a status.
 
 ## Live state summary (as of 2026-08-03)
 
@@ -143,6 +150,121 @@ supersessions are listed. Each also appears in the affected entries.
 | later landings L1, G3A, G3P, G4, G7A, G5, H6, G7B-fix (08-02) | `R0-CANONICAL-REFRESH-PASS` (stale on arrival) | E29 |
 | `NOTEBOOK.md` (08-03) | `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02.md`, `GOALS_NEXT_10_ROUTES_2026-08-02.md` as tracking documents | — |
 
+## Research threads
+
+The 55 records are route-level units; the work itself runs in a small number of
+narrative threads that cross them. Every entry carries a `Thread:` line; this
+section is the map. Reconstructing any of these stories previously required
+stitching entries by hand — that fragility was itself a symptom, cured here.
+
+**T1 — Reduction spine** ([E38](#e38) → [E39](#e39) → [E37](#e37) →
+[E16](#e16) → [E17](#e17); degree-free form [E40](#e40)). The load-bearing
+chain: exact action and invariant infrastructure → the covariant frame
+`(x,C,D,E,K)` → the proved equivalence "`X` `G`-unirational ⟺ `ed_C(G)=3`" →
+the universal object and all-degree theorem reducing everything to the binary
+`V(Φ)(K_proj) ≠ ∅?` → the live G3 arithmetic on that binary (with dominance
+free by `G3A`). Every other thread either feeds this binary or tries to bypass
+it.
+
+**T2 — Landing-covariant degree ladder and all-degree frameworks**
+([E16](#e16) ladder → [E25](#e25) → [E09](#e09); frameworks [E22](#e22),
+[E23](#e23), [E34](#e34); closure input [E33](#e33)). The bounded negative
+program: exclude landing self-covariants degree by degree (≤24 char-0; degree
+25 order-3 branch closed char-0 by the V4 theorem, remainder modular), with
+the KLS framework, the L1 polar recursion, and the strata machine as its
+all-degree superstructure. No all-degree cutoff exists (S5 counterexample;
+quartic-endomorphism `4ⁿd` scaling), so this thread cannot finish by search
+alone.
+
+**T3 — Mechanism transfer from solved examples** ([E14](#e14) → [E15](#e15) →
+[E34](#e34); proposals [E52](#e52), [E53](#e53)). The thread this section's
+name usually evokes: Problem F's del Pezzo `V₄`-exceptional-path obstruction
+imported verbatim (fails — the Klein involution fixed locus contains a
+rational line, so the constant-image step breaks), generalized as the
+F-engine ("closes rather than obstructs"), pivoted into the Fable positive
+construction, institutionalized as the WP-strata transition machine, and
+continued offline as the transition-cosheaf and universal fixed-stratum
+proposals with the unverified OD16/Fermat-cubic side claims. [E52](#e52)
+(DP-REPLAY) belongs here but is a *different* del Pezzo lesson — find the
+equivalent object, not the obstruction — and [E24](#e24)'s "dP3" is unrelated
+(it is the fibration target of the Sarkisov link).
+
+**T4 — Pfaffian / fixed-frame / common-line arithmetic** ([E26](#e26) →
+[E05](#e05)-Attempt1 → [E07](#e07) → [E08](#e08) → [E20](#e20); frame
+arithmetic [E13](#e13), [E35](#e35); bridge and fold [E06](#e06) →
+[E32](#e32)). The quaternionic descent (Brauer class index 2, `SB_2 = P²_D`)
+and the hunt for a common isotropic right `D`-line — sufficient, not
+equivalent, for the positive headline. The fixed-frame reductions live here
+too: the B exhaustiveness bridge (refuted), the target-branch/fold T-track it
+leaves behind (auxiliary), and the plane-section programs (`F`-torsor, xCD —
+the xCD plane is closed negatively; the fixed-frame cubic's pointlessness does
+not transfer).
+
+**T5 — Schur-source and curve constructions** ([E31](#e31) → [E01](#e01) →
+[E30](#e30) → [E28](#e28) → [E24](#e24) → [E27](#e27); finite constructions
+[E42](#e42)). Everything over `K_Schur`/`P(V_6)`: the projective-source degree
+ladder, the degree-55 Krylov algebra and marked point, the degree-19 rescue
+curve, the rational-curve routes (selected elliptic-quintic component
+obstructed at index 2), the Sarkisov dP3-fibration section search
+(multisection closed, section open), and the descent-obstruction audit (Q →
+Q3 resolvent).
+
+**T6 — Genuine subgroup twists and residue arithmetic** ([E11](#e11) →
+[E04](#e04) → [E18](#e18); residue side [E33](#e33); negative target
+[E54](#e54)). The genuine-twist ladder: A4 and both A5 twists have exact
+points (subgroup obstructions dead, no dominant `G`-map produced), the
+degree-11 transfer and quartic rescue try to promote them, and the `11:5`
+trace cubic — the smallest genuine twist left — plus the `f5/f6` residue-twist
+binaries carry the live negative hope. An explicit pointless genuine twist
+([E54](#e54)) would end the problem negatively.
+
+**T7 — Cohomological, motivic, and conditional obstruction sweep**
+([E10](#e10), [E19](#e19), [E21](#e21), [E41](#e41), [E43](#e43)–[E47](#e47);
+conditionals [E48](#e48)–[E50](#e50)). The systematic check that no standard
+invariant decides the binary: motives/stack invariants, the Hodge-center
+screen, the Prym/one-motive countermodel, Voisin's `C^[3]`, Gross–Popescu,
+Kresch–Tschinkel, Amitsur, prime-local `ed`, superrigidity — all either
+neutralized, non-binding, or conditional (CSD, Duncan–Reichstein 8.8,
+Dolgachev). Outcome: the deciding invariant, if any, is not on the standard
+shelf.
+
+**T8 — Process, audits, and correction layers** ([E05](#e05), [E12](#e12),
+[E02](#e02), [E29](#e29), [E51](#e51), [E55](#e55) → [E03](#e03)). Dispatch
+waves, Elo ranking, canonical audits, literature sweeps, and the two binding
+correction layers (REPAIR.md, Audit A1) plus the notebook's own review
+rounds. Not mathematics about the cubic, but the reason the mathematics can
+be trusted.
+
+Standalone records (no thread): [E36](#e36) theta11 parametrization test.
+
+## Nomenclature glossary
+
+The repo's historical documents use bare letters that collide. This table is
+the disambiguation authority; the canonical citation form is the E-number
+(optionally with a run directory). **Binding rule 6 below forbids new bare
+tokens.**
+
+| Token | Distinct referents |
+|---|---|
+| `F` | [E13](#e13) Path F fixed-frame genus-one torsor; [E14](#e14) Problem-F technique import / F-engine; [E15](#e15) Fable trisection; Problem F itself (the solved dP example, external to E); `F_{14,T}` the twisted Fano ([E07](#e07)/[E26](#e26)); `f3,f5,f6,f8,f11` the primary invariants; `F` the Klein form. Ledger rows saying "F terminal" are ambiguous (conflict 4). |
+| `dP` / del Pezzo | Problem F's dP (the solved obstruction example, T3); [E24](#e24)'s degree-3 dP *fibration* (Sarkisov target, T5); [E52](#e52) DP-REPLAY (equivalent-object proposal, T3); the OD16 Fermat *quartic* dP2 (session-only claim, unverified). |
+| Fermat cubic | The session-claimed `C9⋊C3` non-unirationality of the Fermat cubic *threefold* — an example **outside Problem E**, never machine-checked, internally disputed in its own session. Not the Klein cubic. |
+| `G4` | Path G4/G4.1 symbolic free-fibre recurrence ([E16](#e16)); the A5 index-11 transfer run `G4_A5_INDEX11_TRANSFER` + `G4A` projectors (grouped under [E17](#e17)/[E04](#e04)). Conflict 6. |
+| `G7` | Path-G degree-7 sample residual, downgraded label ([E16](#e16)); the double-A5 biplane program `G7A/B/C` ([E17](#e17)), whose `G7B` induced-cycle claim was refuted and quarantined. Conflict 7. |
+| `V2` | The "V2 Track" work-order wave labels (process, [E12](#e12)/[E32](#e32)); the exit `V2-FIXED-FRAME-PLACE-NONTRANSFERABLE` ([E33](#e33)). Conflict 8. |
+| `H` | Goal H subgroup-twist sweep ([E11](#e11)); the `H5/H6/H11:5` trace-cubic program ([E18](#e18)); `WP-H1` Hodge screen ([E34](#e34)/[E19](#e19)); `H_6 = V(f_6)` the invariant sextic ([E35](#e35)); `H_q` the canonical polar ([E17](#e17)); `H = V(...)` the fold hypersurface with `B = V(H)` ([E32](#e32)). Conflict 9. |
+| `L1` | The full-polar-range recursion ([E23](#e23)); the "ambient self-map rigidity" route coined by one offline session and never materialized (alias only, conflict 14). |
+| `A1` | Path A Gate A1 ([E01](#e01)); Audit A1 = `certificates/audit_a1`, commit `78abba4` ([E03](#e03)). |
+| `B` | Task B fixed-frame exhaustiveness bridge ([E06](#e06)); Path B "upstairs simple fold" precursor wave ([E32](#e32) provenance); `B = V(H)` the fold hypersurface ([E32](#e32)); `b` in the KLS divisibility `rad(h) | b` ([E22](#e22)). |
+| `C` | Route C quaternion/Hermitian Fano stages `C0–C3` ([E07](#e07)); `C5/C6` Palatini common-line ([E08](#e08)); `C` the Klein cubic in reduction quotes ([E37](#e37)); `C_gen` the generic twist; `C_{012}` the center cubic ([E24](#e24)); the xCD plane cubic ([E35](#e35)). |
+| `D` | Goal D equivariant motive / `D2` stack invariant ([E10](#e10)); the `D5` residue gate ([E13](#e13)/[E32](#e32)); `D`/`D_proj` the quaternion algebra ([E26](#e26)); `D10/D12` dihedral stabilizers (arrangement geometry); ELO "Path D" = Hodge ([E19](#e19)). |
+| `T` | The T-track fold program `T/T2/T2R/T3/T6/T8–T11` ([E32](#e32)); `T_m` the irrelevant-torsion module ([E16](#e16)/[E09](#e09)); `X_T` the twist parameter ([E16](#e16)); `𝒯_X` the proposed transition cosheaf (session-only, [E34](#e34)). |
+| `R` | R rational-curves route ([E28](#e28)); `R0` canonical refresh ([E29](#e29)); `R = X∩P(T)` the Fable base orbit ([E15](#e15)); `R1–R32`/`RES-01–28` lens-local labels (exist only in `notebook_build/`, never in repo documents). |
+| `Q` | Q descent-obstruction route ([E27](#e27)); `Q_q` the canonical polar quadric ([E17](#e17)); `Q=0` the Fable section constraint ([E15](#e15)); `Q3` the resolvent successor ([E27](#e27)). |
+| `V` | The valuation/residue program `V/V2/V3/V4` ([E33](#e33)); `V₄` the Klein four-group (group theory, everywhere); `V(Φ)` the universal cubic ([E16](#e16)); `V_6` the Schur representation ([E26](#e26)/[E31](#e31)); `V_Z` the Path A interface object ([E01](#e01)). |
+| `M` | M/M3 Sarkisov section program ([E24](#e24)); `M̄` the G3H frame matrix ([E17](#e17)); `m` the plane-order parameter ([E09](#e09)/[E25](#e25)); `M_d` the covariant module ([E16](#e16)). |
+| `Attempt1–5` | The 2026-07-30 dispatch wave ([E05](#e05)): Attempt1 = Pfaffian idempotent (→ [E26](#e26)), Attempt2 = fold/T (→ [E32](#e32)), Attempt3 = S19 (→ [E30](#e30)), Attempt4 = KLS (→ [E22](#e22)), Attempt5 = Path G (→ [E16](#e16)). |
+
 ## History
 
 Chronology and hash anchors from `notebook_build/lens_gitlog.md`.
@@ -172,6 +294,8 @@ infrastructure, audit/repair, dispatch/process, conditional implication, and
 proposal/unrun. Each entry carries a **Record type:** line assigning one (or, where
 genuinely dual, two) of those nine values. `state` is the reconciled state from
 `canonical_attempts.md`, not a verbatim exit label.
+
+Each entry carries a `Thread:` line locating it in the Research threads map above; ambiguous historical tokens resolve only through the Nomenclature glossary.
 
 | ID | Name | Target | Method | State |
 |---|---|---|---|---|
@@ -251,6 +375,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A marked closed point of degree 55 with an executable field-algebra presentation would let the `P¹`-reduction convert index data into an actual `K_proj`-point of the generic Schur twist, which by E37 closes the headline positively.
 - **Method:** mixed (CAS elimination + structural algebra)
 - **Record type:** construction
+- **Thread:** T5 — Schur-source and curve constructions
 - **Verification class:** `certificates/schur_krylov` PARTIAL-RECOMPUTE.
 - **Status:** UNDECIDED-STOPPED — the `P¹`-reduction and index-34 duality survive the repair; the executable `(L,V_Z)` extraction is only an abstract interface and the direct 52-variable Krylov elimination is computationally retired.
   - PRE-REPAIR: "some 55×55 minor is nonzero at every primitive tau" (single global minor claim); A2 packet described as having installed "exact generic coordinates" [STAT, `REPAIR.md` §§9–10]
@@ -275,6 +400,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Every downstream route computes inside this action and these counts; an error here would silently invalidate the whole ledger. It is a precondition, not a route.
 - **Method:** CAS
 - **Record type:** infrastructure
+- **Thread:** T8 — process and audits
 - **Verification class:** ALGEBRAIC-RECOMPUTE — `verify_p25_bulk_projection.c` independently rebuilds `π(G)` and all 4140+315 test vectors from sealed, hash-cross-checked binary inputs and recomputes membership by random sparse projection + FLINT RREF over `F_89` (`reads_4140_from_json: false`; expected values are hardcoded pass literals, freshly computed at runtime).
 - **Status:** TERMINAL-PASS (infrastructure only; not a mathematical route).
   - `A0-CANONICAL-AUDIT-PASS` [DIR, `goal_runs_after_35fa/A0_CANONICAL_AUDIT/STATUS.md`; also WORK/`REMAINING_GOALS_NOTE.md`]
@@ -299,6 +425,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Cannot close the headline; it governs the truth-value of claims other entries assert. Per Binding rule 1(i) its verdicts override anything they predate, within their stated scope.
 - **Method:** CAS / document audit
 - **Record type:** audit/repair
+- **Thread:** T8 — process and audits
 - **Status:** CHARACTERIZED (2026-08-03) — `certificates/audit_a1/AUDIT_FINDINGS.md` is a 510-line ranked theorem-boundary audit, a second correction layer after `REPAIR.md` (2026-07-31, `db37f58`/`07d1c4e`), performed 2026-07-31 21:38, commit `78abba4` ("Klein cubic: audit A1 -- theorem-boundary audit of every standing exit"; message states `AUDIT-A1-COMPLETE`, "No computation performed, no narrative file edited, no sealed packet edited").
   - Verdict vocabulary: **SOUND** / **SCOPE-DRIFT** / **UNSUPPORTED** / **UNCITED-HYPOTHESIS**, applied against a bill of ~20 markers.
   - Eight ranked findings:
@@ -326,6 +453,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A rational residual point on the generic twist is exactly a `K_proj`-point, which closes the headline positively via E37. The A5 twists already have exact points (E11), so only the transfer is missing.
 - **Method:** CAS
 - **Record type:** construction
+- **Thread:** T6 — genuine subgroup twists
 - **Verification class:** ALGEBRAIC-RECOMPUTE (both `A5Q` runs, `G4`, `G4A`).
 - **Status:** PARTIAL — index-11 closed point installed (PASS); the degree-4 quartic rescue is empty in the scoped range; transfer to a full G-point not achieved.
   - `A5Q-INDEX11-CLOSED-POINT-PASS`; `A5Q-DEGREE4-RESCUE-EMPTY-SCOPED` [DIR, run `STATUS.md`]
@@ -354,6 +482,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Process, not mathematics: it allocated scarce CAS resource across five candidate closers simultaneously so that the cheapest stop would be found first.
 - **Method:** mixed (dispatch/process)
 - **Record type:** dispatch/process
+- **Thread:** T8 — process and audits
 - **Status:** COMPLETED-WAVE — all five exited at scope/resource stops; the wave is closed and its content lives in the successor route entries.
   - `1c07871` "Attempt 1 Gates 1-2 — `FAIL-SCOPE` on the bridge" [GIT]; `FAIL-SCOPE`: "idempotent gives a point of auxiliary `P^2_D`, not of `F_{14,T}`" [WORK, `WORKORDER_ELO_TEN_PATHS.md` §1]
   - `b7be961` "Attempt 2 Gate 1 — `STOP-2` at measured 9.4 GB"; `a5b3d66` "option (c) — degree-43 factor reconstructed" [GIT]
@@ -374,6 +503,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** The fixed-frame cubic was already proved pointless; if the fixed slice were exhaustive, that single arithmetic fact would transfer to the whole generic twist and settle the headline negatively.
 - **Method:** mixed (exact CAS + arithmetic geometry)
 - **Record type:** obstruction
+- **Thread:** T4 — Pfaffian / fixed-frame / common-line
 - **Verification class:** bridge run `B_FIXED_FRAME_BRIDGE` PARTIAL-RECOMPUTE; exhaustiveness run `B_FIXED_FRAME_EXHAUSTIVENESS_20260802` **CONSISTENCY-ONLY** (JSON dimension fields and text markers only). `B-BRIDGE-REFUTED` therefore rests on a consistency-only verifier sitting over an analytic finiteness citation — it stays at the top of Verification debt.
 - **Status:** TERMINAL-NEGATIVE (as a bridge) — the exhaustiveness bridge is refuted; the fixed-frame arithmetic survives as scoped, now non-headline, fact.
   - `B-UNDECIDED` [DIR, `goal_runs_after_35fa/B_FIXED_FRAME_BRIDGE/STATUS.md`]
@@ -407,6 +537,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** By the Pfaffian bridge ([E26](#e26)), a `K_proj`-point of `F_{14,T}` is **sufficient** for the headline-positive answer — the chain runs forward only, and no converse is asserted anywhere. Arrow B (common isotropic `D`-line ⟺ `F14_T(K)≠∅` ⇒ `C_gen(K)≠∅`) and Arrow C (`C_gen` point ⇒ `G`-unirational) both PASS; Arrow A (idempotent ⇒ common line) is `FAIL-SCOPE` (`certificates/pfaffian_point/BRIDGE_AUDIT.md`:160–161). Note `BRIDGE_AUDIT.md` §5, the "Stable-factor trap (Tschinkel–Zhang)": the stable equivalence `X×P²×P(V) ~_G Y×P²×P(V)` does **not** transport unirationality once `P(V)` is replaced by a nonsplit Severi–Brauer variety with no rational point, so any argument that cites only the stable product formula to move a point onto `C_gen` is invalid in the twisted setting. The quaternion reduction makes the search a finite-dimensional isotropy problem over an explicit algebra.
 - **Method:** CAS (exact linear algebra over cyclotomic / multiprime, msolve/M2)
 - **Record type:** construction
+- **Thread:** T4 — Pfaffian / fixed-frame / common-line
 - **Verification class:** `certificates/fano_interface_c0` CONSISTENCY-ONLY (the `C0-UNDECIDED` boundary is asserted, not re-derived); `certificates/fano_c2_1` PARTIAL-RECOMPUTE.
 - **Status:** OPEN-UNDECIDED — model installation advanced through C3 (bases sealed, modular only); the common-isotropic-line solve is not reached, char-0 transfer not made.
   - `C0-UNDECIDED — verified`; "no executable Fano model; needs `A_proj` descent → Morita symbol" [WORK, `DIRECTOR_HANDOFF.md` §8]
@@ -430,6 +561,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Same target as E07 but with a consistent encoding; WORK ranks it Rank 1 — "All ingredients except the final full incidence solve are already available. An exact point executes `BR-FANO-POS` and closes the headline positively."
 - **Method:** CAS (multiprime + determinantal/Plücker elimination)
 - **Record type:** construction
+- **Thread:** T4 — Pfaffian / fixed-frame / common-line
 - **Verification class:** ALGEBRAIC-RECOMPUTE (all three C5 runs; C6 and its two phases).
 - **Status:** OPEN — highest-ranked live positive route as of 2026-08-02; the C6 birational determinantal model PASSES, residual is the positive-degree section lift; the full incidence solve is not executed.
   - `C5-UNDECIDED` [DIR, run `STATUS.md`; WORK, `REMAINING_GOALS_NOTE.md`]
@@ -455,6 +587,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A nonzero module in degree 31 or 35 is a candidate landing covariant (headline-positive); emptiness in char 0 would extend the exclusion ladder of E16 upward.
 - **Method:** CAS (modular / multiprime)
 - **Record type:** bounded computation
+- **Thread:** T2 — degree ladder
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`COV_M1_DEG31_35`).
 - **Status:** OPEN/DEFERRED — modular results only; char-0 transfer is the blocking gap.
   - `COV-UNDECIDED` [DIR, run `STATUS.md`; WORK, `REMAINING_GOALS_NOTE.md`]
@@ -479,6 +612,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A dimension-bounding invariant preserved by every compression would rule out all 3-dimensional compressions at once, closing the headline negatively without any covariant search.
 - **Method:** analytic (with CAS character/representation screens)
 - **Record type:** obstruction
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`D2_STACK_INVARIANT`).
 - **Status:** TERMINAL-NEGATIVE-FOR-THE-ROUTE — no valid bridge from the stack invariant to a dimension bound.
   - `D2-NO-VALID-BRIDGE` [DIR, `goal_runs_after_35fa/D2_STACK_INVARIANT/STATUS.md`]
@@ -502,6 +636,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A single pointless maximal-subgroup twist would immediately force the negative headline. Cheapest possible negative route, since subgroup twists are far smaller objects than the full generic twist.
 - **Method:** CAS (exact cyclotomic + Reynolds covariants)
 - **Record type:** obstruction / construction (dual — negative route, scoped-positive outcome)
+- **Thread:** T6 — genuine subgroup twists
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`H_A4`, `H_A5` and all subpackets).
 - **Status:** SCOPED-POSITIVE (route closed) — all three maximal-subgroup obstructions are closed positively; no promotion to a dominant G-map exists, so the headline is untouched.
   - `H-A4-RATIONAL-POINT`, `H-A4-STRUCTURAL-MODEL-PASS` [DIR, `goal_runs_after_35fa/H_A4_TWIST/H2_A4_GENERIC_TWIST_CODEX_ROOT_20260801/STATUS.md`]
@@ -527,6 +662,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Process only. It determined which of E01–E22 received compute, so it shapes what is and is not known, but it proves nothing.
 - **Method:** mixed (process)
 - **Record type:** dispatch/process
+- **Thread:** T8 — process and audits
 - **Status:** COMPLETED-PROCESS — ranking wave executed; superseded by the post-Elo construction dispatch and later by the goal-run regime.
   - `c5e71be` "issue post-Elo finite-lifting work order"; `5e765ce` "Elo cycle-1 gate report"; `c28bb08` "Path G post-Elo" [GIT]
   - `3bfbd01` "post-Elo gate 1 — record Path F"; `d96b408` "Path T post-Elo — Gate T1 `T-BIRATIONAL`" [GIT]
@@ -546,6 +682,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** The fixed-frame genus-one curve is small enough for full 3-descent; a decision either way feeds the fixed-frame programme (though after `B-BRIDGE-REFUTED` the negative branch no longer transfers to the headline).
 - **Method:** mixed (CAS + descent arithmetic)
 - **Record type:** construction / obstruction (dual)
+- **Thread:** T4 — Pfaffian / fixed-frame / common-line
 - **Status:** UNDECIDED — F1 terminality audit passes and F1/F2/F3 artifacts exist, but no decision exit is recorded.
   - `56e61c3` "Path F Gate F1-P — terminality audit passes"; `865b262` "Paths F and G cycle 2 — F existence undecided"; `3bfbd01` "post-Elo gate 1 — record Path F" [GIT]
   - Decision exits defined `N-F`, `P-F`, `F-LOCAL-SOLUBLE`, `F-STOP`; **no exit verbatim-resolved**; headline "OPEN" [WORK]
@@ -555,6 +692,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
     - *Side 1 (STAT):* the 08-02 ledger's bundled `TERMINAL` token "F" may denote this route.
     - *Side 2 (WORK + GIT + CERT):* Path F is a distinct in-repo route with its own gates and certificate dirs; the token "F" is equally readable as the Problem-F import ([E14](#e14)) or "Fable" ([E15](#e15)).
     - STAT itself cannot determine the referent. The `TERMINAL` label may be attached to the wrong object; unresolved.
+- **Note:** Not to be confused with [E14](#e14) (Problem-F technique import) or [E15](#e15) (Fable) — the ledger token `F` is ambiguous across all three (glossary; conflict 4).
 - **What was actually established:** the F1 terminality audit passes; the restricted étale algebra, mod-3 divisor cube test, and group-cohomological restriction artifacts exist. NOT established: existence or nonexistence of a point; no decision exit.
 - **Aliases:** Path F (Elo #2); F0–F4; Fork F1-N / Fork F1-P; gate `F1-P`; CERT `restricted_e3`, `fixed_frame_arithmetic`; GIT `F1`, `PathF`
 - **Provenance:** F1 restricted étale algebra; F2 divisor-cube test mod 3; F3 group-cohomological restriction; F4 consequences; Fork F1-N (new divisorial obstruction) vs Fork F1-P (conic/intersection-algebra construction).
@@ -571,6 +709,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Problem F was resolved negatively by exactly this mechanism; a verbatim transfer would have settled Problem E negatively in one step.
 - **Method:** analytic (with CAS arrangement modules)
 - **Record type:** obstruction
+- **Thread:** T3 — mechanism transfer from solved examples (tooling also feeds T2 — degree ladder)
 - **Status:** REFUTED-AS-TRANSFER — the verbatim import fails and the generalized engine closes rather than obstructs; explicitly deprioritized.
   - Header label "AUDIT PASSED, resolution committed" (for Problem F itself: "RESOLVED NEGATIVE") [HAND `R16`]
   - For the Klein-cubic transfer: "**the verbatim transfer fails**"; generalized engine — "the transition system closes rather than obstructs"; this outcome "weighs toward a POSITIVE construction... instead" [HAND `R16`]
@@ -595,6 +734,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A local positive construction that lifts to a global section of the symbolic sheaf would *be* the landing covariant, closing the headline positively.
 - **Method:** mixed (equivariant geometry + CAS module/rank computations)
 - **Record type:** construction
+- **Thread:** T3 — mechanism transfer from solved examples
 - **Verification class:** not covered by `notebook_build/verifier_depth.md` — provenance is `tmp/` scratch only, so the evidence is local-only (Binding rule 5).
 - **Status:** CLOSED-IN-CURRENT-FORM — one-centre trisection and the first Koszul gate are positive results; both continuations to `I^(11)/I^(13)` are obstructed.
   - "the first local positive gate is solved" / "the one-centre trisection gate is solved"; "does not automatically define a section of the full 55-plane symbolic sheaf" [HAND `R17`, RES `RES-11`]
@@ -625,6 +765,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A landing self-covariant in any degree is equivalent to the headline-positive answer; an all-degree emptiness theorem is equivalent to the headline-negative answer. This is the only route with both exits built in.
 - **Method:** CAS (Macaulay2 / msolve / multiprime linear algebra) with structural theorems
 - **Record type:** construction / reduction (dual — the bounded ladder is a construction search; G2 is a proved reduction)
+- **Thread:** T1 — reduction spine; also T2 — degree ladder
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`G_UNIVERSAL`; certificates `global_finite_lifting`, `global_lifting_decision`, `global_terminal_module`).
 - **Status:** STRUCTURAL-PASS, ARITHMETIC-OPEN — G2 achieves the all-degree finite-generation reduction and the mission is formally retired; the bounded ladder excludes degrees ≤24; the degree-13/19 "obstructions" are only sample residuals post-repair; everything hands off to [E17](#e17) and [E25](#e25).
   - PRE-REPAIR: degree-13/19 packets labeled `G13-OBSTRUCTION` / `G19-OBSTRUCTION`, read as degree-wide obstruction theorems [STAT/`REPAIR.md` §§11–12]
@@ -656,6 +797,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** After `G2-FINITE-GENERATION-PASS` this single rational-point question **is** the headline; any exact point closes it positively, and `G3A` claims to remove the separate dominance gate.
 - **Method:** mixed (CAS + arithmetic)
 - **Record type:** construction
+- **Thread:** T1 — reduction spine
 - **Verification class:** mixed — G3A/G3B/G3C/G3P/G3D (+`line27_exact`) and the G3H phase-5 subpackets ALGEBRAIC-RECOMPUTE; `G3H_A5_SEMILINEAR_SPRINGER` **top level PARTIAL-RECOMPUTE** (phase 2 rebuilds the covariant `Y`; phases 1/4/5 are hash/flag checks, and phase 4 is the `INTERFACE_INSTALLED` frame).
 - **Status:** OPEN — highest-priority live route as of 2026-08-02; dominance and polar-system sub-gates PASS, the A5 semilinear G3 frame is **interface-installed only** (demoted 2026-08-03), the A5 semilinear quadratic interface is a scoped NO-GO, and the point decision itself is undecided.
   - "OPEN — Decide `V(Phi)(K_proj)` — Highest priority" [STAT, 08-02 ledger]; "G3 arithmetic OPEN" [WORK, `REMAINING_GOALS_NOTE.md`]
@@ -689,6 +831,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** It is "the smallest exact genuine twist left" — a pointless 11:5 twist forces the negative headline, and unlike the fixed-frame route the object is genuine, not a proxy.
 - **Method:** mixed (CAS + arithmetic: elliptic/torsor)
 - **Record type:** obstruction
+- **Thread:** T6 — genuine subgroup twists
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`H_11_5`, all three H5 runs, `H6` +phase, `H6A`).
 - **Status:** OPEN — norm model and `μ₁₁`-torsor class installed and PASSING; the arithmetic binary is unresolved; ranked second-strongest negative route.
   - `H-11_5-NORM-MODEL-PASS` [DIR, `goal_runs_after_35fa/H_11_5_TWIST/STATUS.md`; WORK]
@@ -715,6 +858,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** If no admissible family of blowup centres can supply `H^{2,1}(X)` as a G-representation, no dominant equivariant map exists and the headline closes negatively.
 - **Method:** mixed (Hodge theory + CAS character screens)
 - **Record type:** obstruction
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`certificates/hodge_centers`).
 - **Status:** SALVAGED-BUT-NONBINDING — the split-injection theorem survives the §8 rewrite, but the screen yields no numerical contradiction (40 representation channels survive).
   - PRE-REPAIR: proof via "generically finite" pushforward `f_*:H³(Z)→H³(X)` — **relative-dimension error**: since `dim Z=4`, `dim X=3`, a dominant `f` has relative dimension one, not zero, so the displayed degree-`d` identity is invalid [STAT/`REPAIR.md` §7]
@@ -738,6 +882,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** The ordinary Chow class cannot see rational points; a point-sensitive refinement would decide the common-line problem of E07/E08 without solving it.
 - **Method:** analytic
 - **Record type:** proposal/unrun
+- **Thread:** T4 — Pfaffian / fixed-frame / common-line
 - **Status:** UNRESOLVED/UNRUN — defined with exits, never dispatched to a verdict.
   - Ranked "structural", Elo 1473; decision exits `N-I`, `P-I`, `I-STOP` — none resolved [WORK, `WORKORDER_ELO_TEN_PATHS.md` Path I]
 - **What was actually established:** nothing. The route exists as a specification only.
@@ -755,6 +900,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A single invariant that cannot drop under compression settles `ed_C(G)=4` outright.
 - **Method:** analytic (with CAS resolution/Prym computation)
 - **Record type:** obstruction
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`J_BASELOCUS_PRYM`).
 - **Status:** TERMINAL — the unrestricted invariant admits an extending countermodel; no point-sensitive invariant found.
   - `J2-UNRESTRICTED-COUNTERMODEL-EXTENDS` [DIR, `goal_runs_after_35fa/J_BASELOCUS_PRYM/STATUS.md`]
@@ -781,6 +927,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** The KLS criterion is an exact iff for the headline; the negative branch would give `ed(G)=4` from birational geometry alone, with no degree search.
 - **Method:** mixed (birational geometry / foliation theory + CAS sweeps)
 - **Record type:** construction / obstruction (dual — the KLS criterion is an exact iff, worked from both sides)
+- **Thread:** T2 — degree ladder
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`KLS_MINIMALITY`).
 - **Status:** CONFLICT → best reconciliation: the *minimality-to-conductor reduction* is closed (`KLS2-NO-FINITE-REDUCTION`) and the A5-quadric/P22 branch is closed; the framework as a whole remains **open but unauthorized for further large computation** pending a precise theorem.
   - Jacobian-zero criterion: "every such covariant through degree 11 is dominant; no degree cutoff is known"; degree 12 "remains open only on a proper closed exceptional locus" [HAND `R4`]; "Neither the KLS theorem nor finite generation of the covariant module gives an all-degree cutoff; an explicit `S5`-module counterexample rules out that shortcut" [RES `RES-09`]
@@ -812,6 +959,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** The Path G lifting tower needs coefficient recursions past the historical `3m+3` boundary; without the full range, every all-degree lifting statement is truncated.
 - **Method:** CAS
 - **Record type:** infrastructure
+- **Thread:** T2 — degree ladder
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`L1_FULL_POLAR_RANGE`).
 - **Status:** PASS — universal finite formal recursion certified across the full odd-order range.
   - `L1-FULL-RANGE-PASS` [DIR, `goal_runs_after_7030dd/L1_FULL_POLAR_RANGE/STATUS.md`]
@@ -828,10 +976,11 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 <a id="e24"></a>
 ### E24 — M / M2 / M3 — Sarkisov link / degree-3 del Pezzo fibration section search
 
-- **Target:** positive/structural — construct an exact type-I Sarkisov link (blow up a smooth plane cubic on the Schur generic Klein twist) to a relative degree-3 del Pezzo fibration over `P¹` with multisections of degree 3 and 55 (hence index 1), then search in Cox coordinates for an actual **rational section** (headline-positive) as opposed to only a degree-4 multisection (which proves index 1 only).
+- **Target:** positive/structural — construct an exact type-I Sarkisov link (blow up a smooth plane cubic on the Schur generic Klein twist) to a relative degree-3 del Pezzo fibration over `P¹` with multisections of degree 3 and 55 (hence index 1), then search in Cox coordinates for an actual **rational section** (headline-positive) as opposed to only a degree-4 multisection (which proves index 1 only) (the 'dP3' here is the fibration target of the Sarkisov link — unrelated to Problem F's del Pezzo obstruction, see the Nomenclature glossary).
 - **Justification:** A rational section of the dP3 fibration gives a `K_Schur`-point directly, closing the headline positively; the link is explicit and the search is finite-dimensional in Cox coordinates.
 - **Method:** mixed (birational geometry + CAS Cox-ring search)
 - **Record type:** construction
+- **Thread:** T5 — Schur-source and curve constructions
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`M_SARKISOV`, `M3B`).
 - **Status:** OPEN-NARROWED — the explicit Sarkisov link and the degree-4 integral multisection are terminal PASSes; the rational-section question remains open as a residual Galois-descent route.
   - `M2-EXPLICIT-LINK-PASS` [DIR, `goal_runs_after_35fa/M_SARKISOV/STATUS.md`]
@@ -862,6 +1011,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Degree 25 is the first unresolved degree in the landing ladder of [E16](#e16); a covariant there closes the headline positively, and proved emptiness advances the ladder by one rung.
 - **Method:** CAS (multiprime linear algebra, border bases, msolve/F4, DVR arguments)
 - **Record type:** bounded computation
+- **Thread:** T2 — degree ladder
 - **Verification class:** mixed — `degree25_tower`, `degree25_rank_k` ALGEBRAIC-RECOMPUTE; `degree25_exact`, `degree25_global`, `degree25_finite_module` PARTIAL-RECOMPUTE.
 - **Status:** **OPEN at degree 25 — order-3 branch closed in char 0; other branches modular-only.** (Adjudicated 2026-08-03; supersedes the earlier flat `OPEN/DEFERRED`.) Extensive partial structure; further slices unauthorized; the route is still "not headline without a bridge".
   - **Adjudication (conflict 13), 2026-08-03.** V4's **Theorem 2.12** (`goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/THEOREM.md` §2.3) genuinely closes the **37-dimensional order-three branch in characteristic zero, for all line degrees**. The **order-two and order-≥4** branch exclusions are proved **only over the split fibre `F_67`** — `HANDOFF.md` states its own caveat, "no characteristic-zero exclusion is claimed" (~line 1060). They were, however, **independently audited at that modular level**: a from-scratch audit rebuilt the complete degree-25 space, both jet filtrations, the 56/56 landing span, and the 3124/3124 overlap rank (`HANDOFF.md` ~1061–1066; `tmp/degree25_structural_probe_independent_audit/REPORT.md` — local-only per Binding rule 5). Their correct description is therefore **independently audited, modular-only** — *not* "inherited unverified", the phrasing this entry previously carried.
@@ -895,6 +1045,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** This is the structural parent of the whole C-family: it converts the headline into an isotropy problem over an explicit quaternion algebra, and the target space `P²_D` is rational.
 - **Method:** mixed (Brauer/algebra-with-involution theory + CAS)
 - **Record type:** construction / reduction (dual)
+- **Thread:** T4 — Pfaffian / fixed-frame / common-line
 - **Verification class:** NO-VERIFIER — `certificates/pfaffian_point` hosts the `FAIL-SCOPE` bridge audit as an analytic audit document; there is no machine verifier by nature.
 - **Status:** OPEN-AT-THE-COMMON-LINE-GATE — the Brauer reduction is a solid proved theorem and the anisotropic-member escape is closed; the abstract idempotent exists but its `K_proj` coordinates do not, and the bridge from it to a Klein point is scope-failed.
   - "now proved nonzero"; "generic Brauer class has period and index exactly two"; "anisotropic-member certificate is now impossible"; residual "common isotropic right D-line" gate "open" [HAND `R9`]
@@ -918,6 +1069,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** The generic Schur twist already carries a degree-one zero-cycle; a surviving descent obstruction would show the cycle cannot be effectivized, giving the negative headline.
 - **Method:** mixed (descent arithmetic + CAS)
 - **Record type:** obstruction
+- **Thread:** T5 — Schur-source and curve constructions; also T7 — cohomological/motivic obstruction sweep
 - **Verification class:** mixed — `Q_SCHUR_INDEX_ONE` (+13 subpackets) and `Q3` ALGEBRAIC-RECOMPUTE; the descent-obstruction run `Q_SCHUR_INDEX_ONE_DESCENT_OBSTRUCTION_20260802` is **CONSISTENCY-ONLY** (git-blob hashes and markers only), matching that session's own disclosure.
 - **Status:** PARTIAL-OPEN — the standard obstruction package is audited and found insufficient (scoped PASS); Q3's Schur-monodromy gate PASSES but the quartic-resolvent descent has produced no decision.
   - `Q-UNDECIDED` [DIR, `goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/STATUS.md`; WORK]
@@ -944,6 +1096,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Rational curves through a marked cycle are the standard way to convert index data into a point; obstructing them closes that family of positive constructions.
 - **Method:** mixed (elliptic/Picard arithmetic + CAS)
 - **Record type:** obstruction
+- **Thread:** T5 — Schur-source and curve constructions
 - **Verification class:** `R_RATIONAL_CURVES` ALGEBRAIC-RECOMPUTE; the contested `certificates/elliptic_lifting` CONSISTENCY-ONLY (its internal `PROVED_AS_REGRESSION` marker is accepted via hash-check/field-read only).
 - **Status:** TERMINAL-OBSTRUCTED — the descent obstruction closes this rational-curve route.
   - `R2-DESCENT-OBSTRUCTED` [DIR, `goal_runs_after_35fa/R_RATIONAL_CURVES/STATUS.md`]
@@ -969,6 +1122,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Bookkeeping. It determines which routes downstream dispatches treat as open.
 - **Method:** mixed (document/CAS audit)
 - **Record type:** audit/repair
+- **Thread:** T8 — process and audits
 - **Verification class:** **CONSISTENCY-ONLY** — the only `-PASS` primary exit in the goal_runs layer resting on a consistency-only verifier, and already stale.
 - **Status:** PASS — infrastructure only.
   - `R0-CANONICAL-REFRESH-PASS` [DIR, `goal_runs_after_141f60/R0_CANONICAL_REFRESH/STATUS.md`]
@@ -989,6 +1143,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Cayley–Bacharach converts an index-one configuration into an actual rational point if the right residual curve exists — a direct positive closure.
 - **Method:** mixed (CAS Hilbert function / Rao module / Quot scheme + classical projective geometry)
 - **Record type:** construction
+- **Thread:** T5 — Schur-source and curve constructions
 - **Verification class:** ALGEBRAIC-RECOMPUTE (both `S19` runs; `certificates/schur_degree19`).
 - **Status:** UNDECIDED — the ACM branch is excluded for one hyperplane choice; both non-ACM Rao branches remain live; deprioritized behind the T/P25/C tracks.
   - "index one, but no rational point is currently known" [HAND `R15`; also `REPAIR.md` §14, correcting an earlier "no rational point" phrasing that implied proved pointlessness]
@@ -1013,6 +1168,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** The projective-source lemma removes the dominance requirement entirely — merely landing in `X` from `P(V6)` suffices.
 - **Method:** CAS (constant-coefficient exhaustive solves) + Picard/fibration theory
 - **Record type:** construction
+- **Thread:** T5 — Schur-source and curve constructions
 - **Status:** OPEN-STALLED — degrees 4/6/8/10 empty, degree 12 blocked by a terminal solver nonverdict; the genus-one fibration no-section theorem is real but does not obstruct points.
   - "Complete constant-coefficient landing loci are empty in degrees 4, 6, 8, 10"; degree 12 "remains open"; "Finite scans still cannot prove a negative answer" [HAND `R5`]
   - degree 12 reconstructed (dim 48) but only decomposable/low-primitive-support slices excluded; full-rank char-23 solve (rank 1,124) times out [HAND `R5`]
@@ -1035,6 +1191,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** WORK calls it "the strongest developed negative route... needed facts are finite and local" — an index-3 obstruction on a genuine versal twist would close the headline negatively.
 - **Method:** CAS (msolve, Macaulay2, Singular; saturation, subresultants, RUR)
 - **Record type:** obstruction
+- **Thread:** T4 — Pfaffian / fixed-frame / common-line
 - **Verification class:** mixed — `T_TARGET_BRANCH` PARTIAL-RECOMPUTE (mostly hash/field checks plus an embedded sympy partial-derivative identity); `fold_decision_t8`, `fold_decision_t8n1`, `fold_binodal_t9`, `fold_t11`, `fold_t11b`, `target_branch_mod3` ALGEBRAIC-RECOMPUTE; `fold_normalization`, `fold_normalization_t2r`, `fold_decision_t6`, `target_branch_global`, `target_branch_t10` PARTIAL-RECOMPUTE.
 - **Status:** SUSPENDED-PENDING-T2R — `T-BIRATIONAL` retained; `T-NONNORMAL` and `dim Sing_S=2` suspended/unproved; sub-gates T6/T8/T9 sealed at analytic non-unit results; T10/T11 sealed with `.1` stages undecided; T3 demoted to non-headline after `B-BRIDGE-REFUTED`.
   - PRE-REPAIR (historical): `T-NONNORMAL` proved, `dim Sing_S=2` proved, terminal marker `FOLD_NORMALIZATION_T2_VERIFIER_ACCEPT` treated as proof [STAT/`REPAIR.md`]
@@ -1078,6 +1235,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A henselian valuation whose residue twist is pointless would give a genuine (not proxy) pointlessness certificate, closing the headline negatively — the failure mode that sank [E06](#e06) is exactly non-transferability, which this route attacks head-on.
 - **Method:** mixed (CAS + valuation-theoretic argument)
 - **Record type:** obstruction
+- **Thread:** T6 — genuine subgroup twists; also T2 — degree ladder
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`V_GENUINE_VALUATION`, `V3`, `V4`, `G5`).
 - **Status:** PARTIAL — the fixed-frame place is proved non-transferable and the residue normal form / `f5`-`f6` cubic models PASS; V4's simultaneous-normal classification PASSES but its local-path headline route is REFUTED; only residue binaries remain.
   - `V2-FIXED-FRAME-PLACE-NONTRANSFERABLE` [DIR, `goal_runs_after_35fa/V_GENUINE_VALUATION/STATUS.md`]
@@ -1105,6 +1263,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** If the inverse limit of transition conditions is empty, no landing covariant exists in any degree — an all-degree negative with no search.
 - **Method:** CAS
 - **Record type:** infrastructure / obstruction (dual)
+- **Thread:** T3 — mechanism transfer from solved examples; also T2 — degree ladder
 - **Status:** INFRASTRUCTURE-PARTIAL — the stratification, local transition modules, global transition diagram, and border/Fitting integration are built and checked in; WP-6 exited STOP with a formulation; the machine produced no all-degree obstruction.
   - "Problem E remains open" (file-wide) [WORK, `WORKORDER_STRATA_MACHINE.md`]
   - Environment addendum: GAP / SageMath / Singular / PARI / Julia "NOT INSTALLED", blocking WP-1/WP-3 as literally specified [WORK]
@@ -1127,6 +1286,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A point on a distinguished plane section would be a point of the twist; conversely a full 3-descent obstruction on a canonical section was the most concrete available negative sub-target.
 - **Method:** mixed (descent arithmetic + heavy CAS)
 - **Record type:** construction / obstruction (dual — closed scoped-negative)
+- **Thread:** T4 — Pfaffian / fixed-frame / common-line
 - **Status:** CLOSED-SCOPED-NEGATIVE — the distinguished plane component provably has no point; explicitly not a headline obstruction; the route is retired.
   - "the original projective xCD plane cubic has no `K_proj,C`-point" (proved for this plane) [RES `RES-04`]
   - "This closes only the plane section `F(a*x+b*C+c*D)=0`, not the full generic twisted Klein cubic threefold; the headline remains open" [RES `RES-04`, SPEC E3]
@@ -1151,6 +1311,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A ready-made modular parametrization matching the Klein representation would supply the landing map directly.
 - **Method:** CAS (series expansion)
 - **Record type:** construction
+- **Thread:** standalone
 - **Status:** CLOSED-REFUTED.
   - "does not lie on the Klein cubic: `F(HΦ₁₁)=ξ₄₄⁵u¹¹+O(u⁹⁹)`... Close this as a headline path" [HAND `R26`]
   - "This particular recent modular lead is therefore closed"; "all 25 classical Hessian-minor tests are nonzero" [RES `RES-14`]
@@ -1170,6 +1331,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** It is the reduction every other entry presupposes: it converts a birational-geometry question into a single rational-point question.
 - **Method:** analytic
 - **Record type:** reduction
+- **Thread:** T1 — reduction spine
 - **Status:** **PROVED-ANALYTIC-IN-RESOLUTION** (reclassified 2026-08-03) — the single most load-bearing reduction in the problem; decides nothing on its own. The canonical proof lives in `RESOLUTION.md`: minimal-dimensional versality; Prokhorov's classification; the cubic/`F14` stable birational bridge; index-≤2 splitting; quadratic descent; and the weakly-versal-to-very-versal upgrade. The cited packet `tmp/step4_essential_dimension/` exists **locally only and is not tracked in git** (Binding rule 5), so `RESOLUTION.md` — not that packet — is the portable source for this theorem.
   - "This proves the theorem" — proved unconditionally [RES `RES-23`]
   - "This exact reduction still does not choose between the two values, so the headline remains open" [RES `RES-23`, SPEC]
@@ -1190,6 +1352,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Every other entry computes inside this data; an error here invalidates everything downstream.
 - **Method:** CAS
 - **Record type:** infrastructure
+- **Thread:** T1 — reduction spine
 - **Status:** CERTIFIED-INFRASTRUCTURE — underlies every other route.
   - "This is infrastructure, not a resolution" [RES `RES-24`, SPEC E0]
   - "certified/checked-in; no obstruction/positive claim itself" [HAND `INF2`]
@@ -1209,6 +1372,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** This is the coordinate system in which the headline is stated as a single cubic equation — the object `V(Φ)` that [E16](#e16)/[E17](#e17) try to find a point on.
 - **Method:** CAS
 - **Record type:** infrastructure
+- **Thread:** T1 — reduction spine
 - **Status:** CERTIFIED-INFRASTRUCTURE — the standing coordinate system for [E06](#e06), [E17](#e17), [E35](#e35), [E40](#e40).
   - "This completes the generic ambient-space descent explicitly. It does not produce a nonzero `a∈K_0^5` with `Φ(a)=0`; that is precisely the remaining generic-twist point problem" [RES `RES-03`]
   - "explicitly trivializes"; ten coordinate lines "excluded"; frame point must use ≥3 coordinates [HAND `INF3`]
@@ -1229,6 +1393,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** It removes the artificial polynomial-degree parameter that makes every other search a bounded scan; a solution is a landing covariant and universal nonvanishing is the negative answer.
 - **Method:** mixed (CAS arithmetic circuits + analytic PDE)
 - **Record type:** infrastructure
+- **Thread:** T1 — reduction spine
 - **Status:** OPEN-REFORMULATION — the cleanest degree-free statement of the headline; unsolved, and the finite-generation shortcut is provably unavailable.
   - "certified"; "No solution or universal-nonvanishing theorem is known"; 121 constant / 440 Hironaka-linear ansätze and 15 gradient-cross-product covariants "fail to land" [HAND `INF4`]
   - infrastructure complete (`[K_proj:P0]=12`; rank-12 Hironaka basis; connection matrices as exact arithmetic circuits); "the full rational PDE remains unsolved" [STAT]
@@ -1248,6 +1413,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Very-versality of `C^[3]` is a genuine positive result; if a single point of the degree-3 cycle could be selected equivariantly, the headline would close positively.
 - **Method:** analytic
 - **Record type:** construction
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Status:** CLOSED-CIRCULAR — the versality is real; the selection step is circular.
   - "`C^[3]` is `G`-very-versal" (proved positive infrastructure) [RES `RES-12`]
   - "gives a source birationally fibered over C and is therefore **circular** for the missing point" [HAND `R28`]
@@ -1268,6 +1434,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** The most elementary possible positive construction: if any chord tree folds an orbit to a singleton, that singleton is the required point.
 - **Method:** mixed (analytic + CAS enumeration)
 - **Record type:** construction
+- **Thread:** T5 — Schur-source and curve constructions
 - **Status:** CLOSED-FOR-FINITE-CONSTRUCTIONS — binary chord folding is excluded; the degree-74 semilinear interpolation curve remains a named open positive target.
   - "these are finite-construction no-gos, not an exclusion of continuous covariants"; "A torsor-dependent semilinear degree-74 curve remains a precise positive target" [HAND `R27`]
   - "This excludes only finite-orbit binary folding. It does not exclude a continuous covariant mixing an entire orbit at once"; "no such binary chord tree reaches a singleton or a two-point orbit" [RES `RES-13`]
@@ -1287,6 +1454,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A moduli interpretation with the right action could produce a rational source for free.
 - **Method:** analytic (literature)
 - **Record type:** construction
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Status:** REJECTED — restates the problem.
   - "This does not furnish an equivariant parametrization... No linear or already very versal source for the deck action is produced, so the modular interpretation **restates rather than solves** the current problem" [RES `RES-15`]
 - **What was actually established:** that the identification exists but supplies no source. Nothing usable.
@@ -1304,6 +1472,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** These are the standard modern obstructions to equivariant rationality; if one applied, it would close the headline negatively.
 - **Method:** analytic (literature)
 - **Record type:** obstruction
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Status:** REJECTED — wrong direction of implication in both senses.
   - "does not furnish a new obstruction here... failure of decomposition would not obstruct mere `G`-unirationality. Conversely, its existence would not prove `G`-unirationality" [RES `RES-16`]
 - **What was actually established:** the logical mismatch. Nothing about `X`.
@@ -1321,6 +1490,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** A nonvanishing cohomological class surviving restriction to all subgroups would obstruct the map.
 - **Method:** analytic
 - **Record type:** obstruction
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Status:** CLOSED-EXHAUSTED.
   - "the higher Amitsur route is **exhausted** here because `Pic(X)=Z[H]` and `O_X(1)` is honestly `G`-linearized, so the relevant groups vanish after restriction to every subgroup" [HAND `R30`]
   - "The ordinary and all higher Amitsur obstructions vanish, even after restriction to subgroups... These are necessary-condition checks, not point theorems" [RES `RES-17`]
@@ -1340,6 +1510,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** `ed_p(G) ≤ ed(G)`; a prime-local value of 4 would settle it.
 - **Method:** analytic
 - **Record type:** obstruction
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Status:** REJECTED — numerically impossible.
   - "Prime-local essential dimension **cannot** force the value four: the local values are two at 2 and one at 3, 5, and 11" [RES `RES-18`]
 - **What was actually established:** the explicit local values (2 at p=2; 1 at p=3,5,11), which are all too small. Route is dead on numerics.
@@ -1357,6 +1528,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Superrigidity is a strong known theorem about `X`; if it applied it would be free.
 - **Method:** analytic
 - **Record type:** obstruction
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Status:** REJECTED — proves the wrong statement.
   - "Birational rigidity is not a negative answer... a dominant map `U⇢X` may have degree greater than one" [RES `RES-19`, SPEC pitfalls]
   - "Equivariant birational superrigidity excludes birational linearization, not a dominant equivariant map of higher degree" [RES `RES-19`]
@@ -1376,6 +1548,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** The degree-one zero-cycle is already established; CSD would convert it to a point immediately.
 - **Method:** analytic (conditional)
 - **Record type:** conditional implication
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Status:** CONDITIONAL — would settle the headline positively; not usable as a resolution.
   - "would prove that `X` is `G`-unirational and `ed(G)=3`" (conditional, unproved) [RES `RES-20`]
   - "A proof conditional on one of the conjectures below is **not a resolution** unless that conjecture is proved in the required case" [RES `RES-20`, SPEC]
@@ -1394,6 +1567,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** The hypothesis is already verified for `X`; only the conjecture is missing.
 - **Method:** analytic (conditional)
 - **Record type:** conditional implication
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Status:** CONDITIONAL — and raises the stakes of a negative answer.
   - "would prove that `X` is `G`-unirational and that `ed(G)=3`" (conditional, unproved) [RES `RES-21`]
   - a negative headline resolution "would also **refute** Duncan–Reichstein Conjecture 8.8 in this example, because every Sylow restriction is already versal" [RES `RES-21`]
@@ -1412,6 +1586,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** `Crdim(G)=4` is a proved input; only the inequality is conjectural.
 - **Method:** analytic (conditional)
 - **Record type:** conditional implication
+- **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Status:** CONDITIONAL — the mirror-image stake to [E49](#e49).
   - "would instead give `ed(G)=4`, which rules out `G`-unirationality of `X`" (conditional, unproved) [RES `RES-22`]
   - "a positive solution would give `ed(G)=3` and a **counterexample to Dolgachev's proposed inequality**" [RES `RES-22`]
@@ -1430,6 +1605,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Prevents wasted effort on already-solved sub-problems and catches any theorem that would close the headline outright.
 - **Method:** analytic (literature/tool audit)
 - **Record type:** audit/repair
+- **Thread:** T8 — process and audits
 - **Status:** ONGOING-CLEARANCE — no turnkey theorem exists; one absorbed import (Poonen–Stoll).
   - "found no recent theorem that closes the headline" [HAND `R32`]
   - Poonen–Stoll "closes those components as local-obstruction places... says nothing about the global torsor"; Jung–Saito "does not compute `Cl(B)` or `Cl(C6)`"; Groebner.jl "the public high-level route is stopped"; BSS/Koszul "generic hyperplane-fan theorems do not apply directly" [HAND `R32`]
@@ -1449,9 +1625,11 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 ### E52 — DP-REPLAY — del Pezzo closure-mechanism replay
 
 - **Target:** proposed positive/analytic search — identify the Problem-E analogue of a prior successful del Pezzo closure mechanism: a canonical torsor, universal family section, or equivariant intermediate object whose existence is *equivalent* to `G`-unirationality of `X`.
+- Distinct from [E14](#e14) (which imported Problem F's *obstruction*, and failed) and from [E24](#e24)'s degree-3 del Pezzo fibration (a Sarkisov target, unrelated to Problem F): this proposal replays the *equivalent-object* lesson of the dP closures.
 - **Justification:** The del Pezzo problems in this repo were closed by finding such an equivalent object; the same move might work here.
 - **Method:** analytic
 - **Record type:** proposal/unrun
+- **Thread:** T3 — mechanism transfer from solved examples
 - **Status:** PROPOSED-UNRUN.
   - Listed as priority-2 dispatch item; "Type: analytic"; **not yet run** [WORK]
 - **What was actually established:** nothing; specification only.
@@ -1469,6 +1647,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Every in-repo positive attempt goes through representation covariants; a different published mechanism would be a genuinely new attack.
 - **Method:** analytic (literature)
 - **Record type:** proposal/unrun
+- **Thread:** T3 — mechanism transfer from solved examples
 - **Status:** PROPOSED-UNRUN.
   - Listed as priority-9 dispatch item; **not yet run** [WORK]
 - **What was actually established:** nothing; specification only.
@@ -1486,6 +1665,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** This is the canonical statement of what a negative resolution looks like; every negative route is ultimately trying to produce or certify such an object.
 - **Method:** analytic/construction
 - **Record type:** proposal/unrun
+- **Thread:** T6 — genuine subgroup twists
 - **Status:** OPEN-TARGET — no candidate constructed.
   - "An explicit `G`-torsor whose Klein twist has no point would prove both the negative headline and `ed(G)=4`" [HAND `R29`]
   - "The sharp negative target is any boundary-zero `G`-torsor ... whose Klein twist has no point" [HAND, "2026-07-30 audited delta" item 2]
@@ -1504,6 +1684,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Governs the truth-value of every other entry. Per Binding rule 1 its verdicts outrank all later narrative documents including the offline 08-02 ledger.
 - **Method:** analytic (document/proof audit)
 - **Record type:** audit/repair
+- **Thread:** T8 — process and audits
 - **Status:** APPLIED — the FIRST binding correction layer (the `audit_a1` layer of [E03](#e03), same day and ~13h later, is the SECOND).
   - `db37f58` (2026-07-31 08:50) "Klein cubic: record analytic audit repairs and suspend overstated certificates" introduces `REPAIR.md`; `07d1c4e` (2026-07-31 09:01) "Klein cubic: apply REPAIR.md theorem-boundary corrections (Parts II-VI)" applies it [GIT]. (`78abba4`, 21:38 the same day, is the separate `audit_a1` layer — see [E03](#e03); it is not part of this entry.)
   - "Trusted results retained": Path A `P¹`-reduction; Path A index-34 duality; corrected Hodge-center split-injection theorem after §8 substitution; Path G finite truncation and isolation cutoff; Path G4.1 free-fibre recurrence; P25.1 `P25-TOWER-SURVIVES`; `T-BIRATIONAL` [HAND, RES, STAT]
