@@ -39,11 +39,18 @@ problems' directories — swept (no substantive E work; only cross-references
 and the F-side source of E14's transfer story, `F-dp2-psl27/RESOLUTION.md`);
 (xi) NON-ENUMERABLE remainder, permanently outside any sweep: scratch trees
 on other workers' machines, and external sessions never shared into
-`external_sessions/`. New work landing in families (i)–(x) is caught by the
-parity checker; the remainder is a disclosed boundary, not a coverage claim.
+`external_sessions/`. Families (i)–(x) were manually swept as of 2026-08-03.
+The checker **continuously** enforces only: the enumerated run/certificate
+structure, manifest typing, pinned branch heads, the remote-branch inventory,
+and name-level mention coverage (goal roots, sessions, packets, top-level
+documents, `tmp/` against its disposition inventory). It does not detect new
+content placed inside an already-mentioned directory, new PRs/issues, future
+deletions, cross-problem placement, or semantic drift inside packets — those
+families require periodic manual resweeps. The non-enumerable remainder is a
+disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `ce1c2c8` (2026-08-03; the
+Snapshot metadata — notebook parent head: `4c757af` (2026-08-03; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -132,39 +139,47 @@ genuine generic twist pointless.
 The one-page map. Everything below this section is ledger, provenance, and
 appendix; this is the current mathematical position. **Headline: OPEN.**
 
-After the exact reduction, the entire project is four programs:
+The logical decision is single (the tree below): the positive exit is a
+generic-twist point ⟺ a primitive landing covariant; the negative exit is
+their universal nonexistence, witnessed either arithmetically (a pointless
+genuine twist) or by an all-degree theorem. The *work* divides into four
+method families — different ways of forcing that one decision, not four
+parallel alternatives:
 
-1. **Produce a point on the generic twist** — solve `V(Φ)` directly (G3), a
-   common isotropic quaternionic line (C6/Fano), a Sarkisov section (M3), or
-   a point through Schur geometry (curves, residual constructions).
-2. **Construct — or universally exclude — a landing covariant** — one nonzero
-   landing covariant proves the positive answer; an all-degree nonexistence
-   theorem proves the negative; no finite-degree search can settle the
-   negative side (KLS, the polar recursion, and the flat-connection PDE are
-   the module-theoretic all-degree attempts).
-3. **Exhibit a genuinely pointless twist** — the `11:5` trace cubic, the
-   full-`G` residue twists at `f5=0`/`f6=0`, or any explicit `G`-torsor whose
-   Klein twist has no point.
-4. **Intrinsic equivariant-geometry obstruction — the dP/Fermat closing
-   method** ([E14](#e14) → [E34](#e34); proposals [E52](#e52), [E53](#e53)).
-   The mechanism that actually closed Problem F's del Pezzo and (per
-   session-level claims) the OD16 and Fermat-cubic examples: kill all
-   equivariant maps from *any* source at once via fixed-stratum,
-   fixed-divisor, and normal-cone/transition analysis on `X` itself — no
-   covariant computation, no twist arithmetic. As a statement its negative
-   exit coincides with program 2's (by the all-degree equivalence); as a
-   method it is independent. Current state: the verbatim transfer is refuted
-   (the Klein involution fixed loci contain rational lines — [E14](#e14));
-   the generalized machine is built and reformulated as a covariant screen
-   ([E34](#e34), no obstruction produced); the genuinely distinct
-   continuations — the transition cosheaf `H⁰(𝒯_X^land)=0 ⇒ non-unirational`
-   on the 55-plane incidence complex, the equivalent-object dP-replay
-   ([E52](#e52)), the hidden-intermediate-variety import ([E53](#e53)) — are
-   proposed and unrun. This is the only program that could yield a
-   search-free all-degree negative.
+1. **Arithmetic of twists** — solve `V(Φ)` directly (G3); decide the `11:5`
+   trace cubic and the full-`G` residue twists at `f5=0`/`f6=0` (negative
+   witnesses); or any explicit `G`-torsor whose Klein twist has no point.
+2. **Covariant and module theory** — the degree ladder (≤24 closed, 25
+   partial), P25/COV, and the theoretical all-degree arguments: KLS
+   minimality-conductor, the polar recursion, the flat-connection PDE. No
+   finite-degree search can settle the negative side; these aim past it.
+3. **Birational and intermediate geometry** — a point via an auxiliary
+   variety: the common isotropic quaternionic line (C6/Fano, sufficient
+   only), the M3 Sarkisov section, the Schur curves and residual
+   constructions (S19, R-class, Q3).
+4. **Intrinsic fixed-stratum geometry — the dP/Fermat closing method**
+   ([E14](#e14) → [E15](#e15) → [E34](#e34)). The mechanism that closed
+   Problem F's del Pezzo and (per unverified session-level claims) the OD16
+   and Fermat-cubic examples: kill all equivariant maps from *any* source at
+   once via fixed-stratum, fixed-divisor, and normal-cone/transition
+   analysis on `X` itself — no covariant computation, no twist arithmetic.
+   The verbatim transfer is refuted (the Klein involution fixed loci contain
+   rational lines); the generalized machine is built but reformulated as a
+   covariant screen with no obstruction produced; the live successor is the
+   proposed transition-cosheaf computation `H⁰(𝒯_X^land)=0 ⇒ non-unirational`
+   on the 55-plane incidence complex (unrun — see the Secondary table). This
+   is the only currently articulated **geometry-first** route to a
+   search-free all-degree negative that avoids the covariant/PDE module
+   problem; families 2's theoretical arguments target the same exit
+   module-theoretically.
+
+Method-discovery proposals sit outside the four families: the
+equivalent-object dP-replay ([E52](#e52)) and the hidden-intermediate-variety
+import ([E53](#e53)) search for a *new* method of either sign, replaying the
+del Pezzo closures' other lesson.
 
 Everything else in this notebook is infrastructure, a scoped closure, or an
-audit showing a standard invariant does not decide one of these four.
+audit showing a standard invariant does not decide the binary.
 
 ### The decision tree
 
@@ -200,6 +215,7 @@ Deprioritized but not closed; any could re-enter the principal table.
 | S19 residual curve ([E30](#e30)) | degree-19 curve through the degree-55 point ⇒ **positive** | both non-ACM Rao branches | UNDECIDED |
 | Q3 quartic-resolvent descent ([E27](#e27)) | stable-resolvent obstruction ⇒ **negative** | the descent decision past the monodromy pass | PARTIAL-OPEN |
 | Degree-74 semilinear curve ([E42](#e42)) | torsor-dependent interpolation curve ⇒ **positive** | constructing the curve (named target; finite chords closed) | NAMED TARGET |
+| Transition cosheaf ([E34](#e34), method family 4) | `H⁰(𝒯_X^land)=0` ⇒ **negative** (all-degree, search-free) | formulate and compute `𝒯_X` on the 55-plane incidence complex (session-proposed; Priority-0 checkers unbuilt) | PROPOSED-UNRUN |
 
 ### Established infrastructure (load-bearing, done)
 
@@ -930,6 +946,18 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Method:** mixed (CAS + arithmetic)
 - **Record type:** construction
 - **Thread:** T1 — reduction spine
+
+| Subroute | Exact target | Last outcome | State | Governing artifact |
+|---|---|---|---|---|
+| G3A | exact arithmetic + automatic dominance (removes the separate Jacobian-rank-4 gate for any exact `K_proj`-point) | `G3A-ARITHMETIC-DOMINANCE-PASS` | structural pass | `goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/STATUS.md` |
+| G3B | rational conic sections satisfying tautological polar constraints (line-conic search) | `G3B-UNDECIDED` | UNDECIDED | `goal_runs_after_0aecc89/G3B_LINE_CONIC_SEARCH/STATUS.md` |
+| G3C | rational conic sections satisfying tautological polar constraints (line-conic Fano) | `G3C-UNDECIDED` | UNDECIDED | `goal_runs_after_0aecc89/G3C_LINE_CONIC_FANO/STATUS.md` |
+| G3D | direct arithmetic on the generic twist | `G3D-UNDECIDED` (primary exit); Clifford/spinor-discriminant/27-line-algebra stages PARTIAL | STATUS-ledger `PASS`-vs-`PARTIAL` JSON bug; `SEAL.json` governs | `goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC/{STATUS.md,SEAL.json}` |
+| G3H | A5 quadratic-Springer semilinear lift | `G3H-SEMILINEAR-G3-FRAME-PASS` (demoted); `G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED` | interface installed only — no executable field point materialized or verified | `goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/phase4_g3_frame/G3_FRAME.md` |
+| G3P | tautological-polar / odd-degree descent | `G3P-POLAR-SYSTEM-PASS` (main); branch-only `G3P-UNDECIDED` | PASS on main; branch packet's canonical-polar route misses, archived snapshot | `goal_runs_after_0aecc89/G3P_POLAR_ODD_DEGREE_DESCENT/STATUS.md`; branch `agent/g3p-a5-semilinear-20260802` at `external_packets/g3p-a5-semilinear-20260802_G3P_A5_SEMILINEAR_QUADRATIC/` |
+| G3S | structured direct arithmetic (execution order) | none recorded | dispatched | commit `7da4fdf` "Add G3S structured direct arithmetic execution order" |
+| G7A/B/C | double-A5 biplane (induced cycles / projective scaling / cross-class projector) | `G7-PROJECTIVE-SCALING-PASS` (re-derived) | re-derived pass; induced-cycle claim `G7B-INDUCED-CYCLE-REFUTED` and quarantined | `goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/STATUS.md` (`4a5beac`) |
+
 - **Verification class:** mixed — G3A/G3B/G3C/G3P/G3D (+`line27_exact`) and the G3H phase-5 subpackets ALGEBRAIC-RECOMPUTE; `G3H_A5_SEMILINEAR_SPRINGER` **top level PARTIAL-RECOMPUTE** (phase 2 rebuilds the covariant `Y`; phases 1/4/5 are hash/flag checks, and phase 4 is the `INTERFACE_INSTALLED` frame).
 - **Status:** OPEN — highest-priority live route as of 2026-08-02; dominance and polar-system sub-gates PASS, the A5 semilinear G3 frame is **interface-installed only** (demoted 2026-08-03), the A5 semilinear quadratic interface is a scoped NO-GO, and the point decision itself is undecided.
   - "OPEN — Decide `V(Phi)(K_proj)` — Highest priority" [STAT, 08-02 ledger]; "G3 arithmetic OPEN" [WORK, `REMAINING_GOALS_NOTE.md`]
@@ -1168,6 +1196,15 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 - **Method:** mixed (birational geometry + CAS Cox-ring search)
 - **Record type:** construction
 - **Thread:** T5 — Schur-source and curve constructions
+
+| Subroute | Exact target | Last outcome | State | Governing artifact |
+|---|---|---|---|---|
+| M/M2 | exact type-I Sarkisov link (blow up a plane cubic on the Schur generic Klein twist → degree-3 dP fibration over `P¹`) | `M2-EXPLICIT-LINK-PASS` | terminal PASS | `goal_runs_after_35fa/M_SARKISOV/STATUS.md` |
+| M3 multisection | integral finite-flat degree-4 multisection (proves index 1 only) | `M3-INTEGRAL-DEGREE4-MULTISECTION` | terminal (multisection only, not a section) | artifact pointer `M3_SARKISOV_SECTION` |
+| M3 section question | a `K_Schur`-rational section (headline-positive), vs. multisection only | not selected by the multisection packet | UNDECIDED; lowest section gate `C_012(K)` | `DIRECTOR_REVIEW_AFTER_BD610A.md` §2.2; branch packet `M3_SARKISOV_SECTION` (unmerged) |
+| M3B residual G1 | residual Galois-descent modular nonemptiness check | `M3B-G1-MODULAR-NONEMPTY-PASS` | residual PASS | `goal_runs_after_bd610a/M3B_SECTION_RESIDUAL_G1_20260802` |
+| Branch section-component packet | classify nonexceptional degree-1/2/3 sections; 55-line splitting-field structure | `M3-SECTION-COMPONENT-PASS` | branch-only; `verify_all.py` references a missing `verify_section_search.py`; archived | `external_packets/m3-sarkisov-section-residual_M3_SARKISOV_SECTION/` (branch `agent/m3-sarkisov-section-residual`, head `6fdac74`) |
+
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`M_SARKISOV`, `M3B`).
 - **Status:** OPEN-NARROWED — the explicit Sarkisov link and the degree-4 integral multisection are terminal PASSes; the rational-section question remains open as a residual Galois-descent route.
   - `M2-EXPLICIT-LINK-PASS` [DIR, `goal_runs_after_35fa/M_SARKISOV/STATUS.md`]
@@ -1382,6 +1419,18 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 - **Method:** CAS (msolve, Macaulay2, Singular; saturation, subresultants, RUR)
 - **Record type:** obstruction
 - **Thread:** T4 — Pfaffian / fixed-frame / common-line
+
+| Subroute | Exact target | Last outcome | State | Governing artifact |
+|---|---|---|---|---|
+| T/T2 | fold-algebra birationality and normalization of `S_G` (`T-NONNORMAL`, `dim Sing_S=2`) | `T-BIRATIONAL` retained; `T-NONNORMAL` and `dim Sing_S=2` suspended/unproved | suspended pending T2R | `REPAIR.md` §§1–3 |
+| T2R | `S₂`/`R₁` normality gate | `T2R-UNDECIDED` (`S₂` proved, `dim Sing(S_G)≤2`, `R₁` undecided) | UNDECIDED; mandatory and pending | `DIRECTOR_HANDOFF.md` §8; commit `7fdbe42` |
+| T3 | fixed-frame index-three theorem (local runner) | no promoted packet on `main`; `scratch_t3` worker root has an executed discriminant computation | unpromoted, worker-root evidence only | `goals_after_bd610a/scratch_t3` |
+| T6 | fold decision T6 | `T60-UNDECIDED` | UNDECIDED | `DIRECTOR_HANDOFF.md` §8; commit `11474f5` |
+| T8/T8n1 | analytic non-unit / Jacobian results at fold decision T8 | `T8-S1-NONUNIT-ANALYTIC` confirmed; T8-N1 Jacobian correction sealed | analytic non-unit results stand; sealed T8 Jacobian prose UNSUPPORTED per `audit_a1` F4 | `certificates/audit_a1/AUDIT_FINDINGS.md` (F4) |
+| T9 | Hensel non-unit result at the binodal locus | `T9-HENSEL-NONUNIT-SEALED` | sealed at its own scope; does NOT seal the completed ordinary-node local model | `certificates/audit_a1/AUDIT_FINDINGS.md` (F1) |
+| T10 | no 3-primary local Picard defect at the binodal locus | `T10-BINODAL-NO-3-DEFECT`; T10.0 sealed, T10.1 UNDECIDED | conditional on the unsealed ordinary-node hypothesis | `certificates/audit_a1/AUDIT_FINDINGS.md` (F2) |
+| T11/T11b | exact local chart at the simple point; Route C obstruction test | T11.0 sealed, T11.1 UNDECIDED; T11b Route C obstructed | exact local chart established; route C obstructed | commits `faf6169`, `715faf4` |
+
 - **Verification class:** mixed — `T_TARGET_BRANCH` PARTIAL-RECOMPUTE (mostly hash/field checks plus an embedded sympy partial-derivative identity); `fold_decision_t8`, `fold_decision_t8n1`, `fold_binodal_t9`, `fold_t11`, `fold_t11b`, `target_branch_mod3` ALGEBRAIC-RECOMPUTE; `fold_normalization`, `fold_normalization_t2r`, `fold_decision_t6`, `target_branch_global`, `target_branch_t10` PARTIAL-RECOMPUTE.
 - **Status:** SUSPENDED-PENDING-T2R — `T-BIRATIONAL` retained; `T-NONNORMAL` and `dim Sing_S=2` suspended/unproved; sub-gates T6/T8/T9 sealed at analytic non-unit results; T10/T11 sealed with `.1` stages undecided; T3 demoted to non-headline after `B-BRIDGE-REFUTED`.
   - PRE-REPAIR (historical): `T-NONNORMAL` proved, `dim Sing_S=2` proved, terminal marker `FOLD_NORMALIZATION_T2_VERIFIER_ACCEPT` treated as proof [STAT/`REPAIR.md`]
@@ -1423,7 +1472,7 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 - **Established only conditionally / analytically (per `audit_a1`):** the "divisorial binodal locus" `T-BRANCH-NONNORMAL` is an **analytic work-order input**, not a CAS-sealed local form — T9 does not seal the completed ordinary-node model. `T10-BINODAL-NO-3-DEFECT` holds **conditionally**: as pure algebra on an abstract ordinary node it is sound, but as a statement about *this* branch it presupposes the unsealed ordinary-node hypothesis. Neither belongs in the unconditional list.
 - **NOT established:** `R₁`, `T-NONNORMAL`, `dim Sing_S = 2`, any class-group vanishing, the index-three obstruction, or the T8 Jacobian determinants asserted in sealed prose. The T2 verifier marker is explicitly not a proof.
 - **Aliases:** Path T; T1–T4, T2R, T3, T3A, T6, T8, T8n1, T9, T10, T11, T11b; `T_TARGET_BRANCH`; `T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER`; Attempt 2; Path B "upstairs simple fold" (Elo ten paths); WP-T1; HAND `R11`/`R12`; RES `RES-25`; CERT `fold_*` and (contested) `target_branch_*`
-- **Provenance:** `goal_runs_after_35fa/T_TARGET_BRANCH`; T1–T4 (POST_ELO); T3.1–T4 (HEADLINE); T2R.4–T2R.5 (REVISED); T6.0–T6.3; T8.1–T8.4; T9.0–T9.3; T10.0–T10.3 (+`_CORRECTION.md`); T11.0–T11.3; T3A local RUR exhaustiveness (`c9d75e1`); T3 split into local worker goals (`b49fc81`, `74045be`, `823beb1`); WP-T1; Path B B1–B4 upstairs normalization; `certificates/fold_normalization`, `fold_normalization_t2r`, `fold_normalization_t3`, `fold_decision_t6`, `fold_decision_t8`, `fold_decision_t8n1`, `fold_binodal_t9`, `fold_t11`, `fold_t11b`.
+- **Provenance:** `goal_runs_after_35fa/T_TARGET_BRANCH`; T1–T4 (POST_ELO); T3.1–T4 (HEADLINE); T2R.4–T2R.5 (REVISED); T6.0–T6.3; T8.1–T8.4; T9.0–T9.3; T10.0–T10.3 (+`WORKORDER_CAS_T10_P25W_C2_CORRECTION.md`, the binding Q→Q_101 wording correction); T11.0–T11.3; T3A local RUR exhaustiveness (`c9d75e1`); T3 split into local worker goals (`b49fc81`, `74045be`, `823beb1`); WP-T1; Path B B1–B4 upstairs normalization; `certificates/fold_normalization`, `fold_normalization_t2r`, `fold_normalization_t3`, `fold_decision_t6`, `fold_decision_t8`, `fold_decision_t8n1`, `fold_binodal_t9`, `fold_t11`, `fold_t11b`.
   - `source: external-chatgpt` — `sessions_batch2.md` § `t3-normalization-push-6a70553b.md`; pushed `goals_after_5899d0/T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER/` directly to main at `b49fc81` (README, WORK_ORDER, LOCAL_RUNNER_COMMANDS, ACCEPTANCE_MATRIX, WORKER_GOALS) — **planning documents only, no computed result or verifier packet**. The session delivered no proof, confirms "No T3 workflow exists on main" (true of this push, but not true globally — `goals_after_bd610a/scratch_t3` is a separate, later-surfaced worker root with an executed T3 computation; see Verification debt item 14), and notes it accidentally triggered GitHub Actions runs against an explicit local-runner-only instruction (runs failed at a preliminary boundary-audit step; the PR was closed with no changes). The packet itself states a successful T3 would prove only the "fixed-frame index-three theorem" and would **not** close Problem E after `B-BRIDGE-REFUTED`.
   - `source: external-chatgpt` — `sessions_batch1.md` § `github-repo-task-update-6a7054fb.md` records the T3 split into local workers (T3-RUR/NORM/DISC/PIC/INTEGRATE), fixed-frame only after B's failure.
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` authored `Goal T` (`aaab49f`) and `GOAL_T2_TARGET_BRANCH_NORMALIZATION.md` (added by `ba5aa87`; indexed in `37d61c1`); § `progress-on-klein-cubic-6a705563.md` reports the target branch reduced to `ind(C/F)=3`, `C(F)=∅`, `Pic⁰(C)(F)=0`, `Pic(T_D)=ZH_z⊕ZH_λ`, the only escape being the horizontal 3-primary part of `(Cl(T_D)/Pic(T_D))[3]`, and that the critical locus is a **degree-14 curve, not 12 nodes** (killing a hoped-for ODP shortcut).
@@ -1440,6 +1489,15 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 - **Method:** mixed (CAS + valuation-theoretic argument)
 - **Record type:** obstruction
 - **Thread:** T6 — genuine subgroup twists; also T2 — degree ladder
+
+| Subroute | Exact target | Last outcome | State | Governing artifact |
+|---|---|---|---|---|
+| V | test fixed-frame place transferability to the genuine (non-fixed-frame) twist | `V2-FIXED-FRAME-PLACE-NONTRANSFERABLE` | established (non-transferable) | `goal_runs_after_35fa/V_GENUINE_VALUATION/STATUS.md` |
+| V3 | residue normal-form theorem constraining which valuations could give a nonpoint | `V3-RESIDUE-NORMAL-FORM-PASS` | PASS; governing exit remains `V-UNDECIDED` | `goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/` |
+| V-f5 degree-16 support | size-≤5 coefficient-support search for degree-16 `f5=0` landing survivors | `V-F5-DEGREE16-SUPPORT-LE5-EMPTY` (all `C(19,5)=11,628` supports mod 67 empty) | modular; any survivor now needs ≥6 nonzero coefficients | `goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802/` |
+| G5 | full residue cubic models at `f5=0`, `f6=0` | `G5-F5-CUBIC-MODEL-PASS`, `G5-F6-CUBIC-MODEL-PASS` | PASS; local-solubility binaries undecided | `goal_runs_after_141f60/G5_FULL_RESIDUE_CUBICS/STATUS.md` |
+| V4 | classify simultaneous odd normal coefficients; test the trisection genus-two-quotient local-path strategy | `V4-SIMULTANEOUS-CLASSIFICATION-PASS`; `V4-LOCAL-PATH-HEADLINE-ROUTE-REFUTED` | classification PASS (Thm 2.12, char-0 only); blanket local-path strategy refuted by an explicit counterexample | `goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/STATUS.md` |
+
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`V_GENUINE_VALUATION`, `V3`, `V4`, `G5`).
 - **Status:** PARTIAL — the fixed-frame place is proved non-transferable and the residue normal form / `f5`-`f6` cubic models PASS; V4's simultaneous-normal classification PASSES but its local-path headline route is REFUTED; only residue binaries remain.
   - `V2-FIXED-FRAME-PLACE-NONTRANSFERABLE` [DIR, `goal_runs_after_35fa/V_GENUINE_VALUATION/STATUS.md`]
@@ -1926,12 +1984,12 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 
 ## External sessions
 
-20 offline ChatGPT sessions: 15 are summarized in
-`notebook_build/sessions_batch{1,2,3,4}.md`; five direct review sessions
+21 offline ChatGPT sessions: 15 are summarized in
+`notebook_build/sessions_batch{1,2,3,4}.md`; six direct review sessions
 (`notebook-review-6a707542.md`, `notebook-review2-6a70834f.md`,
-`notebook-review3-6a708f54.md`, `notebook-review4-6a70a498.md`, and
-`notebook-review5-6a70ad1a.md`) post-date that build and are recorded from
-`external_sessions/` directly. Per Binding
+`notebook-review3-6a708f54.md`, `notebook-review4-6a70a498.md`,
+`notebook-review5-6a70ad1a.md`, and `notebook-review6-6a70c4d4.md`) post-date
+that build and are recorded from `external_sessions/` directly. Per Binding
 rule 4, **nothing below is
 machine-verifiable**; claims must be re-derived in-repo before affecting the
 headline. Where a session's push landed in the repo, the commit is cited in the
@@ -1959,6 +2017,7 @@ corresponding attempt entry above with the tag `source: external-chatgpt`.
 | `notebook-review3-6a708f54.md` | "Review of NOTEBOOK.md" (accuracy audit of commit `32d5862`) | 2026-08-03 | review | Verdict: endorses the notebook as the canonical human-readable account of Problem E — no headline-state errors; degree-25, G3H/G3D, B-bridge, M3, and branch adjudications independently confirmed. Residual findings all archival/provenance: stale as-of metadata, six remaining audit-A1 date strings, incomplete verification taxonomy, manifest nulls, debt-18 wording — all **CONFIRMED** and fixed this round (`## 2026-08-03 review round`, Round 3) | none |
 | `notebook-review4-6a70a498.md` | "Review of NOTEBOOK.md" (strategic audit of `6f2624e`) | 2026-08-03 | review | Verdict: no missing headline-changing result, no incorrect status, no unrecorded branch packet; corrections around degree 25/G3H/G3D/B/M3 called careful and materially important; remaining critique strategic — the ledger buried the attack map. Adjudication: all four concrete defects confirmed and fixed (opaque manifest metadata → four-field block; five misreadable index labels → relabeled + new headline-consequence column; thread-language inconsistency → fixed; strategic-dashboard recommendation → adopted, replacing the live-state summary) (`## 2026-08-03 review round`, Round 4) | none |
 | `notebook-review5-6a70ad1a.md` | "Notebook.md Review" (audit of `85bec8e`) | 2026-08-03 | review | Verdict: substance fully endorsed — no omitted headline-changing result, no unrecorded substantive branch packet, no canonical mathematical status that should presently change. One definite defect found (stale snapshot metadata, a third recurrence of the same class of error) plus seven presentational recommendations, all adjudicated **CONFIRMED** and adopted this round (`## 2026-08-03 review round`, Round 5) | none |
+| `notebook-review6-6a70c4d4.md` | "Notebook Review Request" (audit of commit `4c757af`) | 2026-08-03 | review | Verdict: notebook state and branch evidence endorsed — no omitted headline-changing route, unique branch packets and PR/issue inventory accurate. Found four technical defects (coverage-frontier enforcement overclaim; stale manifest `notebook_parent_head`; non-replayable parent-head check; fetch-tolerant branch check) — all **CONFIRMED** and fixed — plus conceptual corrections adopted this round: method-families reframe replacing the four-parallel-programs framing, E52/E53 reclassified as method-discovery, "only program" wording narrowed to geometry-first, a transition-cosheaf row added to the Secondary table, and subroute tables added to E17/E24/E32/E33 (`## 2026-08-03 review round`, Round 6) | none |
 
 ### Sessions that made load-bearing claims
 
@@ -1993,6 +2052,33 @@ corresponding attempt entry above with the tag `source: external-chatgpt`.
 **`notebook-review4-6a70a498.md`** — a fourth review *of this notebook*, a strategic audit against commit `6f2624e`, also producing no repo artifacts. Its verdict: no missing headline-changing result, no incorrect current headline status, and no unrecorded substantive branch packet; it called the corrections around degree 25, G3H, G3D, B, and M3 "careful and materially important." Its residual critique was strategic rather than factual — the ledger is an excellent forensic record but buries the attack map, and it proposed a one-page decision tree, an active-route table (`Route | Headline implication | Current exact gate | State | Evidence strength | Next decisive fact`), a strategic-category split (active/infrastructure/retired/hazards), opaque `as_of_commit` metadata restructured into four unambiguous fields, and index relabels for E06/E11/E28/E32/E25 plus a new headline-consequence column. All four concrete defects it identified were confirmed and fixed this round: the manifest's opaque `as_of_commit` block became a four-field `audited_repository_head`/`manifest_source_head`/`manifest_generated_by_commit`/`notebook_head` block; the five misreadable index labels were relabeled and the headline-consequence column added; the thread-language inconsistency around E36 was fixed; and its Strategic-dashboard recommendation was adopted, replacing the former Live state summary. Disposition of all repairs is in `## 2026-08-03 review round`, Round 4.
 
 **`notebook-review5-6a70ad1a.md`** — a fifth review *of this notebook* ("Notebook.md Review"), auditing commit `85bec8e` (the Round-4-corrected notebook) via a fresh sparse-checkout clone against live `main`, also producing no repo artifacts. Its verdict: substantively yes, the notebook captures every major Problem E route family, every headline-relevant outcome, and the present mathematical state — **no omitted headline-changing result, no unrecorded substantive branch packet, and no canonical mathematical status that should presently be changed**; the branch audit reconfirmed G3P and the M3 section-component packet as the only two mathematically distinct unmerged packets. It found exactly **one definite factual defect** — stale snapshot metadata: the preamble said "repository state audited: `f7f6e48`" while the notebook's own commit `85bec8e` is actually the child of `6f2624e` (the Round-4-audited head), and the manifest's `manifest_generated_by_commit: f7f6e48` field was self-referentially confusing since the manifest itself was rewritten in `85bec8e` — this is the **third recurrence** of stale-snapshot-metadata as a review finding (after Round 3's and, before that, the preamble/manifest drift Round 2 addressed), so the fix this round moves the field semantics from "self-describing audited state" to plain **parent-head** (the notebook records only the head it was authored against, never its own hash) with a **pre-commit staleness check** in the parity checker rather than another one-off correction. It made seven presentational recommendations, all adjudicated **CONFIRMED** and adopted this round: (1) parent-head metadata fix as above; (2) a stated coverage contract; (3) an expanded checker (parent-head check, entry-id/duplicate validation, fetch-based branch pins, coverage-by-mention for `goals_after_*`/`goals_2026-*`/`external_sessions/`/`external_packets/`); (4) the three-meta-thrust summary (produce a point; construct/exclude a landing covariant; exhibit a pointless twist) placed above the route table; (5) "Active headline routes" renamed **Principal active headline routes**, with a new **Secondary live routes** table for E31, E30, E27, and the degree-74 target; (6) [E21](#e21) split into E21a/E21b, since the notebook itself already proved the two J programs are not the same attempt (conflict 11); (7) the G3 dashboard phrase "materialized degree-11 field point" replaced by "independently verified executable degree-11 field realization satisfying `Φ(a)=0`", crediting the branch-only G3P packet's formula-level semilinear materialization while being precise about what remains unverified. Disposition of all repairs is in `## 2026-08-03 review round`, Round 5.
+
+**`notebook-review6-6a70c4d4.md`** — a sixth review *of this notebook*
+("Notebook Review Request"), auditing commit `4c757af`, also producing no
+repo artifacts. Its verdict: the notebook's state and branch evidence are
+substantively endorsed — no omitted headline-changing route, unique branch
+packets (G3P, M3-section-component) and the PR/issue inventory both
+accurate — but it is "a reliable canonical human-readable account... at the
+route-family level," not yet "mechanically authoritative or literally
+exhaustive." It found **four technical defects**, all **CONFIRMED** and
+fixed this round: the coverage-frontier paragraph overclaimed what
+`scripts/check_manifest_parity.py` continuously enforces; `manifest.json`'s
+`as_of_commit` block was stale and self-referential for a fourth time
+running; the `notebook_parent_head_current` check could only pass
+pre-commit and never on the committed canonical state; and
+`git_fetch_quiet()` silently tolerated fetch failures, letting a stale
+cached ref masquerade as a live-branch match. It also raised a
+**conceptual-clarity critique**: the four-program dashboard conflated
+logical exits, equivalent formulations, and research methods; it proposed a
+two-layer logical-decision/method-family replacement, flagged E52/E53 as
+mislabeled fixed-stratum continuations (they are method-discovery
+proposals, not obstruction work), objected to the overbroad "only program"
+wording, noted the transition-cosheaf successor had no row in any
+active-route table, and recommended per-umbrella-entry subroute tables plus
+a new normalized per-record state enum. All were adopted this round except
+the state enum, which was **declined** as field proliferation (a `Status`
+line and the Round-4 headline-consequence column already serve that role).
+Disposition of all repairs is in `## 2026-08-03 review round`, Round 6.
 
 ### Sessions with no load-bearing repo claims
 
@@ -2332,6 +2418,65 @@ into WORKDIR/AUDIT-COPY/DISTINCT-UNRECORDED, with 19 genuinely unrecorded
 items found and recorded into [E16](#e16)/[E35](#e35); full inventory in
 `notebook_build/tmp_disposition.md`). See the preamble's **Coverage
 frontier** paragraph for the full enumeration.
+
+### Round 6
+
+A sixth external review (`external_sessions/notebook-review6-6a70c4d4.md`,
+"Notebook Review Request", an audit of commit `4c757af`) endorsed the
+notebook's state and branch evidence — no omitted headline-changing route,
+no incorrect canonical status, unique branch packets and the PR/issue
+inventory both accurate — and found four technical defects plus a
+conceptual-clarity critique. Disposition:
+
+| Defect | Disposition |
+|---|---|
+| Coverage-frontier paragraph overclaimed checker enforcement ("New work landing in families (i)–(x) is caught by the parity checker") | **Fixed** — reworded to state exactly what `scripts/check_manifest_parity.py` continuously enforces (enumerated run/certificate structure, manifest typing, pinned branch heads, the remote-branch inventory, name-level mention coverage) versus what requires periodic manual resweeps (new content inside an already-mentioned directory, new PRs/issues, future deletions, cross-problem placement, semantic drift inside packets) |
+| `manifest.json`'s `as_of_commit` block carried stale, self-referential provenance (`audited_repository_head`/`notebook_parent_head`/`manifest_records_based_on` still `85bec8e`/`85bec8e`/`f7f6e48`) | **Fixed** — replaced with `artifact_inventory_audited_at` / `manual_frontier_audited_at` only, plus an explicit note that the notebook's own parent head lives solely in `NOTEBOOK.md`'s preamble, checked there by the parity script — removing the recurring self-reference rather than renaming it again (fourth recurrence of this defect class, after Rounds 3, 4, and 5) |
+| The `notebook_parent_head_current` check compared the stated parent against checked-out `HEAD`, so it could pass only *before* the notebook edit was committed — not replayable on the committed canonical commit itself | **Fixed** — the check now passes if the stated parent matches either `HEAD` (pre-commit mode) or the parent of the most recent commit touching `NOTEBOOK.md` (post-commit replay mode, for a fresh checkout of the committed state) |
+| `git_fetch_quiet()` swallowed all fetch failures silently, so a stale local ref could be reported as matching "live branch heads" | **Fixed** — the fetch now returns whether it actually succeeded, and every branch/ref-dependent check line reports "live refs" vs. "CACHED refs only (fetch unavailable)" |
+
+Two new checks were added on the same pass, both raised by the review's
+analysis of what the checker does *not* enforce: top-level Problem-E
+document mention coverage (every `*.md` sibling of `NOTEBOOK.md` must be
+named in it), and a remote-branch inventory (`known_branches` in the
+manifest) with unknown-branch detection against live `origin` refs.
+
+**Conceptual repair.** The review's central critique — that the
+four-program dashboard mixed logical exits, equivalent formulations, and
+research methods — was accepted. The preamble's four-program framing is
+replaced by a **two-layer map**: a single logical decision (positive ⟺
+generic-twist point ⟺ primitive landing covariant; negative ⟺ their
+universal nonexistence, witnessed arithmetically or by an all-degree
+theorem) and four **method families** that attack it (arithmetic of
+twists; covariant and module theory; birational and intermediate geometry;
+intrinsic fixed-stratum geometry). [E52](#e52)/[E53](#e53) are moved out of
+the fixed-stratum program and relabeled **method-discovery** proposals,
+since both search for a *new* method of either sign rather than extend the
+fixed-stratum obstruction. The overbroad "this is the only program that
+could yield a search-free all-degree negative" is narrowed to "the only
+currently articulated **geometry-first** route ... that avoids the
+covariant/PDE module problem," crediting KLS/the polar recursion/the
+flat-connection PDE as theoretical all-degree arguments in their own
+right. A **Transition cosheaf** row is added to the Secondary live routes
+table so the fixed-stratum program's live successor appears in an
+active-route table rather than only in prose.
+
+**Declined.** The review's proposal for a new normalized per-record state
+enum (`LIVE`/`CLOSED-SCOPED`/`REFUTED`/`INFRASTRUCTURE`/`UNRUN`/
+`CONDITIONAL`) is **declined** — the notebook already carries a `Status`
+line, a `headline consequence` column (Round 4), and free-text state
+detail per record; a sixth parallel field would be redundant field
+proliferation without its own enforcement mechanism. Noted here so the
+recommendation isn't silently dropped.
+
+**Subroute tables added** to the four large umbrella entries the review
+named ([E17](#e17), [E24](#e24), [E32](#e32), [E33](#e33)), each a compact
+`Subroute | Exact target | Last outcome | State | Governing artifact` table
+compressing that entry's existing sub-attack content — preserving the
+55-record canonical count while making every subattempt and its terminal
+state locatable from the top of its entry.
+
+Session count updated from 20 to 21 (`## External sessions`).
 
 ---
 

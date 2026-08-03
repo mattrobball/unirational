@@ -94,12 +94,14 @@ def find_certificate_dirs() -> set[str]:
     return found
 
 
-def git_fetch_quiet() -> None:
+def git_fetch_quiet() -> bool:
+    """Returns True iff a live fetch succeeded; False means cached refs only."""
     try:
-        subprocess.run(["git", "-C", str(PROBLEM_ROOT), "fetch", "-q", "origin"],
-                       capture_output=True, timeout=30)
+        r = subprocess.run(["git", "-C", str(PROBLEM_ROOT), "fetch", "-q", "origin"],
+                           capture_output=True, timeout=30)
+        return r.returncode == 0
     except Exception:
-        pass  # offline is tolerable; rev-parse then uses the last-known refs
+        return False
 
 
 def git_rev_parse(ref: str) -> str | None:
@@ -193,7 +195,8 @@ def main() -> int:
         print(f"OK   no_null_primary_exit: 0 remaining null primary_exit ({len(records)} records checked)")
 
     # --- Check 6: branch-only heads still match pinned SHA -----------------
-    git_fetch_quiet()
+    live_fetch = git_fetch_quiet()
+    ref_mode = "live refs" if live_fetch else "CACHED refs only (fetch unavailable)"
     branch_records = [r for r in records if r.get("tracked") == "branch-only"]
     branch_mismatches = []
     branch_unresolved = []
@@ -214,24 +217,39 @@ def main() -> int:
         for m in branch_mismatches + branch_unresolved:
             print(f"    {m}")
     else:
-        print(f"OK   branch_head_sha_pinned: {len(branch_records)} branch-only record(s), all match live branch heads")
+        print(f"OK   branch_head_sha_pinned: {len(branch_records)} branch-only record(s), all match pinned heads ({ref_mode})")
 
-    # --- Check 7: notebook parent head == current HEAD ---------------------
+    # --- Check 7: notebook parent head is current (replayable) -------------
+    # Passes if the stated parent equals EITHER the parent of the last commit
+    # that touched NOTEBOOK.md (post-commit replay on a fresh clone) OR the
+    # current HEAD (pre-commit guard while the edit is still staged).
     import re
     notebook_text = (PROBLEM_ROOT / "NOTEBOOK.md").read_text(encoding="utf-8")
     m = re.search(r"notebook parent head: `([0-9a-f]{7,40})`", notebook_text)
     head = git_rev_parse("HEAD")
+    last_touch = None
+    try:
+        out = subprocess.run(
+            ["git", "-C", str(PROBLEM_ROOT), "log", "-1", "--format=%H",
+             "--", "problems/E-klein-cubic/NOTEBOOK.md"],
+            capture_output=True, text=True, check=True)
+        last_touch = out.stdout.strip() or None
+    except subprocess.CalledProcessError:
+        pass
+    touch_parent = git_rev_parse(last_touch + "^") if last_touch else None
     if not m:
         failures += 1
         print("FAIL notebook_parent_head_current: no 'notebook parent head: `<sha>`' line found in NOTEBOOK.md")
     elif head is None:
         failures += 1
         print("FAIL notebook_parent_head_current: could not resolve HEAD")
-    elif not head.startswith(m.group(1)):
-        failures += 1
-        print(f"FAIL notebook_parent_head_current: NOTEBOOK.md states `{m.group(1)}` but HEAD is {head[:12]} — update the preamble before committing")
+    elif head.startswith(m.group(1)):
+        print(f"OK   notebook_parent_head_current: stated parent `{m.group(1)}` matches HEAD (pre-commit mode)")
+    elif touch_parent and touch_parent.startswith(m.group(1)):
+        print(f"OK   notebook_parent_head_current: stated parent `{m.group(1)}` matches parent of last NOTEBOOK.md commit (replay mode)")
     else:
-        print(f"OK   notebook_parent_head_current: stated parent `{m.group(1)}` matches HEAD")
+        failures += 1
+        print(f"FAIL notebook_parent_head_current: stated `{m.group(1)}`; HEAD {head[:12]}; parent-of-last-touch {(touch_parent or 'unknown')[:12]} — update the preamble")
 
     # --- Check 8: entry-id validity and duplicate paths --------------------
     bad_ids = [r["path"] for r in records
@@ -269,6 +287,13 @@ def main() -> int:
     for name in mention_targets:
         if name not in notebook_text:
             unmentioned.append(name)
+    # top-level problem documents must be mentioned in NOTEBOOK.md
+    for doc in sorted(PROBLEM_ROOT.glob("*.md")):
+        if doc.name == "NOTEBOOK.md":
+            continue
+        mention_targets.append(doc.name)
+        if doc.name not in notebook_text:
+            unmentioned.append(doc.name)
     # tmp/ top-level dirs must be accounted for in the committed disposition
     # inventory (notebook_build/tmp_disposition.md) or NOTEBOOK.md itself.
     tmp_root = PROBLEM_ROOT / "tmp"
@@ -288,6 +313,31 @@ def main() -> int:
             print(f"    {p}")
     else:
         print(f"OK   coverage_by_mention: {len(mention_targets)} manually-indexed items all mentioned in NOTEBOOK.md")
+
+    # --- Check 10: no unknown remote branches ------------------------------
+    known = set(manifest.get("known_branches", []))
+    if known:
+        try:
+            out = subprocess.run(
+                ["git", "-C", str(PROBLEM_ROOT), "for-each-ref",
+                 "--format=%(refname:short)", "refs/remotes/origin"],
+                capture_output=True, text=True, check=True)
+            live_branches = {b.removeprefix("origin/") for b in out.stdout.split()
+                             if b not in ("origin", "origin/HEAD")}
+            unknown = sorted(live_branches - known)
+        except subprocess.CalledProcessError:
+            unknown = None
+        if unknown is None:
+            print("WARN unknown_remote_branches: could not enumerate remote refs")
+        elif unknown:
+            failures += 1
+            print(f"FAIL unknown_remote_branches: {len(unknown)} branch(es) not in manifest inventory ({ref_mode}):")
+            for b in unknown:
+                print(f"    {b}")
+        else:
+            print(f"OK   unknown_remote_branches: {len(live_branches)} remote branch(es), all in manifest inventory ({ref_mode})")
+    else:
+        print("WARN unknown_remote_branches: manifest has no 'known_branches' inventory")
 
     print()
     if failures:
