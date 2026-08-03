@@ -1072,7 +1072,7 @@
       "entry": "E16",
       "kind": "certificate",
       "verification_class": "ALGEBRAIC-RECOMPUTE",
-      "primary_exit": "G-CONSTRUCTION",
+      "primary_exit": "EVIDENCE-FOR-PARENT",
       "superseded_by": null,
       "char0_scope": null,
       "tracked": "main"
