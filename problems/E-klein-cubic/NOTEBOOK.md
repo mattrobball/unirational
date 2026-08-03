@@ -7,7 +7,12 @@ document; binding mathematical status remains governed by `REPAIR.md` and
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
 
-Citation-verified 2026-08-03: a four-agent sweep checked 92 status labels, 279 cited paths, and 103 commit hashes against artifacts; all corrections applied. Lens and session provenance in `notebook_build/`.
+Citation-verified 2026-08-03: a four-agent sweep checked 92 status labels, 279 cited
+paths, and 103 commit hashes against artifacts. **Paths, labels, and hashes were
+citation-checked; semantic and theorem-boundary conflicts are not thereby settled and
+are tracked in Open conflicts below.** A second review round (2026-08-03, an external
+review confirmed/refuted claim-by-claim against repo artifacts) is recorded in
+`## 2026-08-03 review round`. Lens and session provenance in `notebook_build/`.
 
 Content source for the attempt entries: `notebook_build/canonical_attempts.md`
 (55 merged entries from seven independent lens reports). External-session content:
@@ -25,10 +30,24 @@ genuine generic twist pointless.
 
 ## Binding rules (read before trusting any status below)
 
-1. **Precedence.** Where documents conflict: `REPAIR.md` > `CURRENT_PATHS.md` >
-   run `STATUS.md` files > workorders > narrative docs (`RESOLUTION.md`,
-   `HANDOFF.md`, `SPEC.md`). The 2026-07-31 repair downgraded several historical
-   labels; a pre-repair claim never overrides its post-repair replacement.
+1. **Precedence (layered, not a fixed document ranking).** Where documents
+   conflict, resolve in this order:
+   (i) **Theorem-boundary correction layers override anything they predate,
+   within their stated scope** — `REPAIR.md` (2026-07-31) and the `audit_a1`
+   layer (2026-08-02). A pre-repair claim never overrides its post-repair
+   replacement.
+   (ii) A later artifact supersedes an earlier one **only** via an explicit
+   supersession statement that itself survives its own verification class.
+   (iii) Otherwise order by **chronology and dependency**, never by document
+   identity.
+   (iv) Bounded or modular results **never** override characteristic-zero
+   statements (see rule 2).
+   (v) Narrative documents never override packet-level artifacts.
+   *This layered rule replaced the earlier static order (`REPAIR.md` >
+   `CURRENT_PATHS.md` > run `STATUS.md` > workorders > narrative docs) after the
+   2026-08-03 review round, whose degree-25 case showed that a static order
+   freezes stale states: the highest-ranked document simply kept an outdated
+   verdict that a later packet had partially superseded.*
 2. **Ledger rule.** Finite computations, modular ranks, and formal states are
    not headline conclusions unless an explicit characteristic-zero geometric
    bridge is supplied.
@@ -40,6 +59,13 @@ genuine generic twist pointless.
    external-chatgpt` entries record offline sessions (see
    `external_sessions/`); their claims are **not machine-verifiable** and must
    be re-derived in-repo before affecting the headline.
+5. **`tmp/` is local-only.** Every `tmp/...` citation in this notebook refers to
+   local scratch that is **not tracked in the pushed repository** — all 50 of the
+   50 cited `tmp` paths are untracked, and the problem-level `.gitignore`
+   excludes `/tmp/`. These directories are retained for local replay only;
+   portable provenance is `goal_runs_*/`, `certificates/`, and the committed
+   documents. Where an entry's only provenance is `tmp/`, its evidence is
+   **local-only** and cannot be checked by anyone working from the pushed repo.
 
 ## History
 
@@ -63,14 +89,18 @@ Chronology and hash anchors from `notebook_build/lens_gitlog.md`.
 
 ## Index
 
-55 canonical attempts. `state` is the reconciled state from `canonical_attempts.md`,
-not a verbatim exit label.
+55 canonical **records**. They are not all "attempts" in the sense of tried-and-failed
+routes: the set spans construction, obstruction, reduction, bounded computation,
+infrastructure, audit/repair, dispatch/process, conditional implication, and
+proposal/unrun. Each entry carries a **Record type:** line assigning one (or, where
+genuinely dual, two) of those nine values. `state` is the reconciled state from
+`canonical_attempts.md`, not a verbatim exit label.
 
 | ID | Name | Target | Method | State |
 |---|---|---|---|---|
 | [E01](#e01) | A — Path A Schur–Krylov degree-55 field algebra | positive | mixed | UNDECIDED-STOPPED |
 | [E02](#e02) | A0 — canonical audit / CAS baseline | infrastructure | CAS | TERMINAL-PASS (infra only) |
-| [E03](#e03) | A1-AUD — Path A audit packet | infrastructure | CAS | INFRASTRUCTURE (uncharacterized) |
+| [E03](#e03) | A1-AUD — Path A theorem-boundary audit packet | audit/repair | CAS | CHARACTERIZED — second correction layer, 8 ranked findings |
 | [E04](#e04) | A5Q — A5 index-11 transfer / quartic rescue | positive | CAS | PARTIAL |
 | [E05](#e05) | Attempt1–5 — five-attempts dispatch wave | infrastructure | mixed | COMPLETED-WAVE |
 | [E06](#e06) | B — fixed-frame exhaustiveness bridge | negative | mixed | TERMINAL-NEGATIVE (bridge refuted) |
@@ -92,7 +122,7 @@ not a verbatim exit label.
 | [E22](#e22) | KLS — self-covariant landing framework | positive/negative | mixed | CONFLICT → reduction closed, framework open |
 | [E23](#e23) | L1 — full polar range recursion | infrastructure | CAS | PASS |
 | [E24](#e24) | M/M2/M3 — Sarkisov link / dP3 section search | positive | mixed | OPEN-NARROWED |
-| [E25](#e25) | P25 — degree-25 landing self-covariant | positive (neg. exit) | CAS | OPEN/DEFERRED |
+| [E25](#e25) | P25 — degree-25 landing self-covariant | positive (neg. exit) | CAS | OPEN at degree 25 — order-3 branch closed in char 0; other branches modular-only |
 | [E26](#e26) | Pfaffian — Pfaffian/Morita quaternionic descent | positive | mixed | OPEN-AT-THE-COMMON-LINE-GATE |
 | [E27](#e27) | Q/Q3 — Schur index-one descent obstruction | negative | mixed | PARTIAL-OPEN |
 | [E28](#e28) | R/R2 — rational curves / elliptic descent | negative | mixed | TERMINAL-OBSTRUCTED |
@@ -126,6 +156,12 @@ not a verbatim exit label.
 
 ## Attempts
 
+The 55 records below span nine types — construction, obstruction, reduction, bounded
+computation, infrastructure, audit/repair, dispatch/process, conditional implication,
+proposal/unrun — recorded per entry on the **Record type:** line. Entries with
+substantial run or certificate provenance also carry a **Verification class:** line
+sourced from `notebook_build/verifier_depth.md`.
+
 Lens abbreviations in status citations: **DIR** directories, **GIT** gitlog,
 **CERT** certificates, **HAND** handoff, **RES** resolution/spec, **STAT** status
 docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02.md`
@@ -137,6 +173,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive construction — install an executable degree-55 field-algebra / marked-point interface on the generic Schur twist (monogenic schema `B_34(τ,V_Z)`, rank-55 maximal-minor matrix, "index-34 duality", a `P¹`-reduction theorem), yielding an algebra-code pair `(L,V_Z)` from which a rational point / landing construction could be extracted.
 - **Justification:** A marked closed point of degree 55 with an executable field-algebra presentation would let the `P¹`-reduction convert index data into an actual `K_proj`-point of the generic Schur twist, which by E37 closes the headline positively.
 - **Method:** mixed (CAS elimination + structural algebra)
+- **Record type:** construction
+- **Verification class:** `certificates/schur_krylov` PARTIAL-RECOMPUTE.
 - **Status:** UNDECIDED-STOPPED — the `P¹`-reduction and index-34 duality survive the repair; the executable `(L,V_Z)` extraction is only an abstract interface and the direct 52-variable Krylov elimination is computationally retired.
   - PRE-REPAIR: "some 55×55 minor is nonzero at every primitive tau" (single global minor claim); A2 packet described as having installed "exact generic coordinates" [STAT, `REPAIR.md` §§9–10]
   - POST-REPAIR: quantifier corrected to `∀τ ∃M_τ: M_τ(τ)≠0`, i.e. the ideal of **all** maximal minors, `V(I_55(B_34))∩U_primitive=∅` [STAT/`REPAIR.md` §9]
@@ -159,12 +197,15 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure — certify the baseline exact 660-element `PSL(2,11)` action, Klein-cubic invariance, and the "projection bulk 4140/315" figures as a replayable checked-in certificate package; verify authoritative P25 nonmembership counts and canonical state.
 - **Justification:** Every downstream route computes inside this action and these counts; an error here would silently invalidate the whole ledger. It is a precondition, not a route.
 - **Method:** CAS
+- **Record type:** infrastructure
+- **Verification class:** ALGEBRAIC-RECOMPUTE — `verify_p25_bulk_projection.c` independently rebuilds `π(G)` and all 4140+315 test vectors from sealed, hash-cross-checked binary inputs and recomputes membership by random sparse projection + FLINT RREF over `F_89` (`reads_4140_from_json: false`; expected values are hardcoded pass literals, freshly computed at runtime).
 - **Status:** TERMINAL-PASS (infrastructure only; not a mathematical route).
   - `A0-CANONICAL-AUDIT-PASS` [DIR, `goal_runs_after_35fa/A0_CANONICAL_AUDIT/STATUS.md`; also WORK/`REMAINING_GOALS_NOTE.md`]
   - "TERMINAL PASS — Projection bulk data certified (4140/315) — Infrastructure only" [STAT, 08-02 ledger]
   - "already terminal, not an open mission" [WORK]
   - `HEADLINE_CAS_BASELINE_ACCEPT` marker, "distinguished from mathematical verification" [STAT/`REPAIR.md` §0]
-- **What was actually established:** the exact action, invariance, and the 4140/315 projection-bulk counts are certified and replayable. NOT established: anything about the headline; the marker is explicitly distinguished from mathematical verification.
+  - **4140/315 independence adjudicated 2026-08-03 (review claim REFUTED).** A proposal to downgrade A0 to packet-consistency-only was checked and rejected. `verify_p25_bulk_projection.c` **independently rebuilds** `π(G)` and all 4140+315 test vectors from sealed, hash-cross-checked binary inputs, then recomputes membership via random sparse projection + FLINT RREF over `F_89`; `verify_p25_bulk_projection_result.json` records `reads_4140_from_json: false`, and the expected values are hardcoded pass literals compared against figures freshly computed at runtime. The genuine defect — the stock `verify_p25v0.py` asserting JSON fields only — was identified and repaired **by A0 itself** (`VERIFIER_REPLAY.md`:33–35). The external-session flag below ("read from producer JSON, not independently recomputed") is therefore superseded; Verification debt item 13's 4140/315 sub-claim is RESOLVED.
+- **What was actually established:** the exact action, invariance, and the 4140/315 projection-bulk counts are certified, independently recomputed, and replayable. NOT established: anything about the headline; the marker is explicitly distinguished from mathematical verification.
 - **Aliases:** `A0_CANONICAL_AUDIT`; "canonical audit of projection bulk"; `HEADLINE_CAS_BASELINE_ACCEPT` (link inferred); CERT `headline_cas_order`
 - **Provenance:** `goal_runs_after_35fa/A0_CANONICAL_AUDIT`; `certificates/headline_cas_order/`.
   - `source: external-chatgpt` — `sessions_batch1.md` § `github-repo-task-update-6a7054fb.md`: A0 bulk P25 replay succeeded at payload level (4,140 `T_i` tests + 315 commutator tests certified) while `STATUS.md` still read "running" — flagged there as a bookkeeping inconsistency only.
@@ -177,16 +218,26 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 <a id="e03"></a>
 ### E03 — A1-AUD — Path A audit packet
 
-- **Target:** infrastructure/audit — an audit packet recording findings for Path A (`AUDIT_FINDINGS.md`, `audit_findings.json`).
-- **Justification:** Cannot close the headline; it exists to record what a Path A audit found. Listed because a whole certificate directory has no narrative owner.
+- **Target:** audit/repair — a ranked theorem-boundary audit of standing claims (`AUDIT_FINDINGS.md`, `audit_findings.json`), functioning as the **second correction layer** after `REPAIR.md`.
+- **Justification:** Cannot close the headline; it governs the truth-value of claims other entries assert. Per Binding rule 1(i) its verdicts override anything they predate, within their stated scope.
 - **Method:** CAS / document audit
-- **Status:** INFRASTRUCTURE — contents not characterized by any lens.
-  - No verbatim status label exists. CERT records only file inventory (`audit_a1/AUDIT_FINDINGS.md`, `README.md`, `audit_findings.json`) [CERT, "confidence: inferred-from-name"]
-- **What was actually established:** unknown. No lens reads the packet's contents; only its file inventory is recorded.
-- **Aliases:** CERT `AUD — AUD-A1`; `certificates/audit_a1`; possibly GIT `78abba4` "audit theorem-boundary" or `cdc016b` "Path A Gates A1-A3 — A1 PASS"
-- **Provenance:** `certificates/audit_a1/`. No external session matches.
-- **Pointers:** `certificates/audit_a1/AUDIT_FINDINGS.md`
-- *Lenses 1/7 (CERT) — **single-lens**; confidence low. Possibly-same-as [E55](#e55) and/or the Path A `A1 PASS` gate of [E01](#e01); no lens disambiguates — ambiguity carried forward.*
+- **Record type:** audit/repair
+- **Status:** CHARACTERIZED (2026-08-03) — `certificates/audit_a1/AUDIT_FINDINGS.md` is a 510-line ranked theorem-boundary audit, a second correction layer after `REPAIR.md` (2026-07-31), dated 2026-08-02.
+  - Verdict vocabulary: **SOUND** / **SCOPE-DRIFT** / **UNSUPPORTED** / **UNCITED-HYPOTHESIS**, applied against a bill of ~20 markers.
+  - Eight ranked findings:
+    - **F1 (critical)** — `T-BRANCH-NONNORMAL` / T10 local-model attribution: **UNSUPPORTED + SCOPE-DRIFT**. T9 explicitly does not seal the completed ordinary-node local model `K'[[x,y,z1,z2]]/(xy)`; the "divisorial binodal locus" is analytic work-order input, not a CAS-sealed local form (`AUDIT_FINDINGS.md`:47–49, 73–75). See [E32](#e32).
+    - **F2 (high)** — `T10-BINODAL-NO-3-DEFECT`: **SOUND as algebra**, **UNCITED-HYPOTHESIS as geometry**. The theorem is conditional: *if* the completed local ring is an ordinary node, *then* there is no 3-primary local Picard defect (`AUDIT_FINDINGS.md`:90–94, 119–120).
+    - **F3 (high)** — `P25Z-FINITE-PRESENTATION`: **SCOPE-DRIFT**.
+    - **F4 (high)** — sealed T8 prose asserts Jacobian determinants that were never computed: **UNSUPPORTED residual**.
+    - **F5 (medium)** — `P25Y-DVR-PASS`'s Molien claims: **SCOPE-DRIFT**.
+    - **F6 (medium)** — the stale "746 lower bound only" phrasing: **SCOPE-DRIFT**.
+    - **F7 (low–medium)** — `P25X0-PASS` is titled characteristic-zero but is multiprime: **SCOPE-DRIFT**.
+    - **F8 (low)** — the C0 order-12 table's known-residual clause: **UNSUPPORTED**.
+- **What was actually established:** a ranked, scoped correction of eight standing claims across the T-track and the P25 family, with an explicit verdict vocabulary. NOT established: anything new about the headline — this is a correction layer, not a route.
+- **Aliases:** CERT `AUD — AUD-A1`; `certificates/audit_a1`; "the audit_a1 layer"; possibly GIT `78abba4` "audit theorem-boundary" or `cdc016b` "Path A Gates A1-A3 — A1 PASS"
+- **Provenance:** `certificates/audit_a1/` (`AUDIT_FINDINGS.md`, `README.md`, `audit_findings.json`). No external session matches.
+- **Pointers:** `certificates/audit_a1/AUDIT_FINDINGS.md`; downstream consumers [E25](#e25) (F3/F5/F6/F7), [E32](#e32) (F1/F2/F4)
+- *Lenses 1/7 (CERT) — **single-lens** by lens count, but the packet's contents were read directly and characterized on 2026-08-03; confidence high for the content, medium for its relationship to [E55](#e55) and the Path A `A1 PASS` gate of [E01](#e01).*
 
 ---
 
@@ -196,6 +247,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive construction — transport the exact degree-11 closed points obtained from the A5 subgroup twists into a genuine PSL(2,11) projective generic-twist point via induced-representation/coset projectors and field descent; then test whether the degree-11 closed point on the full generic twist lies on a descended rational normal quartic in `P⁴` (meeting the cubic in degree 12, leaving a rational residual point).
 - **Justification:** A rational residual point on the generic twist is exactly a `K_proj`-point, which closes the headline positively via E37. The A5 twists already have exact points (E11), so only the transfer is missing.
 - **Method:** CAS
+- **Record type:** construction
+- **Verification class:** ALGEBRAIC-RECOMPUTE (both `A5Q` runs, `G4`, `G4A`).
 - **Status:** PARTIAL — index-11 closed point installed (PASS); the degree-4 quartic rescue is empty in the scoped range; transfer to a full G-point not achieved.
   - `A5Q-INDEX11-CLOSED-POINT-PASS`; `A5Q-DEGREE4-RESCUE-EMPTY-SCOPED` [DIR, run `STATUS.md`]
   - `G4-INDUCED-DEGREE11-POINT-PASS` [DIR, `goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER/STATUS.md`]
@@ -222,6 +275,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure/dispatch — a five-way competitive dispatch (2026-07-30) gating five routes in parallel. Mapping: Attempt 1 = Pfaffian–Morita idempotent ([E26](#e26)); Attempt 2 = T fold-algebra/target branch ([E32](#e32)); Attempt 3 = S19 degree-19 rescue curve ([E30](#e30)); Attempt 4 = KLS minimality-conductor ([E22](#e22)); Attempt 5 = G global lifting ([E16](#e16)).
 - **Justification:** Process, not mathematics: it allocated scarce CAS resource across five candidate closers simultaneously so that the cheapest stop would be found first.
 - **Method:** mixed (dispatch/process)
+- **Record type:** dispatch/process
 - **Status:** COMPLETED-WAVE — all five exited at scope/resource stops; the wave is closed and its content lives in the successor route entries.
   - `1c07871` "Attempt 1 Gates 1-2 — `FAIL-SCOPE` on the bridge" [GIT]; `FAIL-SCOPE`: "idempotent gives a point of auxiliary `P^2_D`, not of `F_{14,T}`" [WORK, `WORKORDER_ELO_TEN_PATHS.md` §1]
   - `b7be961` "Attempt 2 Gate 1 — `STOP-2` at measured 9.4 GB"; `a5b3d66` "option (c) — degree-43 factor reconstructed" [GIT]
@@ -241,6 +295,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative obstruction — descend the full Klein-twist problem to the fixed four-parameter frame `F=C(A,B,Y,Z)`, build the depressed genus-one/ternary cubic over `K_proj`, prove it pointless, and then argue the fixed projector slice is **exhaustive** in the full Fano/projector variety, so that fixed-frame pointlessness certifies non-unirationality.
 - **Justification:** The fixed-frame cubic was already proved pointless; if the fixed slice were exhaustive, that single arithmetic fact would transfer to the whole generic twist and settle the headline negatively.
 - **Method:** mixed (exact CAS + arithmetic geometry)
+- **Record type:** obstruction
+- **Verification class:** bridge run `B_FIXED_FRAME_BRIDGE` PARTIAL-RECOMPUTE; exhaustiveness run `B_FIXED_FRAME_EXHAUSTIVENESS_20260802` **CONSISTENCY-ONLY** (JSON dimension fields and text markers only). `B-BRIDGE-REFUTED` therefore rests on a consistency-only verifier sitting over an analytic finiteness citation — it stays at the top of Verification debt.
 - **Status:** TERMINAL-NEGATIVE (as a bridge) — the exhaustiveness bridge is refuted; the fixed-frame arithmetic survives as scoped, now non-headline, fact.
   - `B-UNDECIDED` [DIR, `goal_runs_after_35fa/B_FIXED_FRAME_BRIDGE/STATUS.md`]
   - `B-BRIDGE-REFUTED` [DIR, `goal_runs_after_35fa/B_FIXED_FRAME_EXHAUSTIVENESS_20260802/STATUS.md`; WORK, `REMAINING_GOALS_NOTE.md`]
@@ -270,8 +326,10 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 ### E07 — C0–C3 — Direct twisted Fano section (quaternion / Hermitian common isotropic line)
 
 - **Target:** positive construction — install an executable model of the descended central simple algebra `A_proj` (quaternion corner `D=eAe`, five Hermitian matrices `h₁..h₅ ∈ Herm₃(D)`), independently construct restricted Plücker / rank-one equations for `F_{14,T}`, and search for a common isotropic right `D`-line, i.e. a `K_proj`-point of `F_{14,T}` (⇒ `BR-FANO-POS`).
-- **Justification:** By the Pfaffian bridge (E26), a `K_proj`-point of `F_{14,T}` is equivalent to the headline-positive answer; the quaternion reduction makes the search a finite-dimensional isotropy problem over an explicit algebra.
+- **Justification:** By the Pfaffian bridge ([E26](#e26)), a `K_proj`-point of `F_{14,T}` is **sufficient** for the headline-positive answer — the chain runs forward only, and no converse is asserted anywhere. Arrow B (common isotropic `D`-line ⟺ `F14_T(K)≠∅` ⇒ `C_gen(K)≠∅`) and Arrow C (`C_gen` point ⇒ `G`-unirational) both PASS; Arrow A (idempotent ⇒ common line) is `FAIL-SCOPE` (`certificates/pfaffian_point/BRIDGE_AUDIT.md`:160–161). Note `BRIDGE_AUDIT.md` §5, the "Stable-factor trap (Tschinkel–Zhang)": the stable equivalence `X×P²×P(V) ~_G Y×P²×P(V)` does **not** transport unirationality once `P(V)` is replaced by a nonsplit Severi–Brauer variety with no rational point, so any argument that cites only the stable product formula to move a point onto `C_gen` is invalid in the twisted setting. The quaternion reduction makes the search a finite-dimensional isotropy problem over an explicit algebra.
 - **Method:** CAS (exact linear algebra over cyclotomic / multiprime, msolve/M2)
+- **Record type:** construction
+- **Verification class:** `certificates/fano_interface_c0` CONSISTENCY-ONLY (the `C0-UNDECIDED` boundary is asserted, not re-derived); `certificates/fano_c2_1` PARTIAL-RECOMPUTE.
 - **Status:** OPEN-UNDECIDED — model installation advanced through C3 (bases sealed, modular only); the common-isotropic-line solve is not reached, char-0 transfer not made.
   - `C0-UNDECIDED — verified`; "no executable Fano model; needs `A_proj` descent → Morita symbol" [WORK, `DIRECTOR_HANDOFF.md` §8]
   - "Two clean negatives... no such mechanism exists geometrically... No model installed" [WORK, §8]
@@ -293,6 +351,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive construction, corrected alternative to Route C — represent the common isotropic right line directly via a self-adjoint reduced-rank-two idempotent `e` in the exact lazy algebra with involution (`e²=e`, `σ(e)=e`, `Trd(e)=2`, `eSᵢe=0` for i=1..5), using a corrected alternating-form / Plücker / square-zero common-line incidence model (retiring the earlier inconsistent encoding `e·S₀·e=0`); C6 then lifts split points to constant-line or positive-degree sections via Morita descent on a Palatini determinantal big cell.
 - **Justification:** Same target as E07 but with a consistent encoding; WORK ranks it Rank 1 — "All ingredients except the final full incidence solve are already available. An exact point executes `BR-FANO-POS` and closes the headline positively."
 - **Method:** CAS (multiprime + determinantal/Plücker elimination)
+- **Record type:** construction
+- **Verification class:** ALGEBRAIC-RECOMPUTE (all three C5 runs; C6 and its two phases).
 - **Status:** OPEN — highest-ranked live positive route as of 2026-08-02; the C6 birational determinantal model PASSES, residual is the positive-degree section lift; the full incidence solve is not executed.
   - `C5-UNDECIDED` [DIR, run `STATUS.md`; WORK, `REMAINING_GOALS_NOTE.md`]
   - `C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS`; `C6-POSITIVE-DEGREE-RESIDUAL` [DIR, `goal_runs_after_141f60/C6_PALATINI_BIG_CELL/STATUS.md`]
@@ -316,12 +376,15 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive/negative bounded-degree — decide the plane-order-one (`m=1`) covariant landing modules `[(I^(m)/I^(m+2))_d ⊗ W]^G` in degrees 31 and 35 (and their based/nonbased C3/C6 linear gates), coupled to degree 25 by invariant multiplication; sibling of P25 at higher degree.
 - **Justification:** A nonzero module in degree 31 or 35 is a candidate landing covariant (headline-positive); emptiness in char 0 would extend the exclusion ladder of E16 upward.
 - **Method:** CAS (modular / multiprime)
+- **Record type:** bounded computation
+- **Verification class:** ALGEBRAIC-RECOMPUTE (`COV_M1_DEG31_35`).
 - **Status:** OPEN/DEFERRED — modular results only; char-0 transfer is the blocking gap.
   - `COV-UNDECIDED` [DIR, run `STATUS.md`; WORK, `REMAINING_GOALS_NOTE.md`]
   - "148 residual charts; modular [1] ≠ char-0 transfer" [WORK, `REMAINING_GOALS_NOTE.md`]
   - "Degrees 31 and 35 still require saturation of their based and nonbased C3/C6 charts and are coupled to degree 25 by invariant multiplication"; "the degree-35 zero linear quotient is not a degree-wide emptiness theorem" [WORK, `DIRECTOR_REVIEW_AFTER_BD610A.md` §2.6, §1 item 6]
   - "OPEN/DEFERRED — Modular information only — Needs characteristic-zero transfer" [STAT, 08-02 ledger]
   - `[(T_1)_d⊗W]^G = 0` through degree 34 and for degree ≥164, but **dimension 1 at degree 35** in the split-`F_67` fibre — "this does not lift to characteristic zero" [STAT, `CURRENT_PATHS.md`]
+  - **Research lead (unexploited, flagged 2026-08-03):** V4's `M1-TRIPLE-ORDER3-ALL-LINE-DEGREE-EMPTY` theorem (`goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/THEOREM.md`) is a **characteristic-zero, all-line-degree** emptiness result for the `m=1` triple-line order-three stratum, and it has **never been invoked against the sibling degree-31/35 `m=1` modules** — no packet applies it there. It closed the corresponding branch at degree 25 (see [E25](#e25)); applying it here is a potential char-0 closure route for part of this entry's question, and is the cheapest unexplored move on E09.
 - **What was actually established:** modular vanishing through degree 34 and above 164, with a one-dimensional `T₁` residue at degree 35 over the split `F_67` fibre. NOT established: any char-0 statement; the degree-35 residue is precisely what refutes the all-degree colon shortcut used in [E16](#e16).
 - **Aliases:** `COV_M1_DEG31_35`; STAT "COV — m=1 charts"; `tmp/covariant_arrangement_module`; `tmp/m1_*`
 - **Provenance:** `goal_runs_after_35fa/COV_M1_DEG31_35`; `tmp/m1_t1_saturation`, `tmp/m1_t1_f3_colon_attack`, `tmp/m1_t1_f3_colon_degree35_audit`, `tmp/m1_t1_char0_d35_gate`, `tmp/covariant_arrangement_module/verify_all.py`.
@@ -337,6 +400,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative obstruction — find a mixed-prime additive or nonadditive **stack invariant** (equivariant motive / equivariant Burnside-style) that bounds the dimension of any compression, i.e. forces `ed_C(G)=4`.
 - **Justification:** A dimension-bounding invariant preserved by every compression would rule out all 3-dimensional compressions at once, closing the headline negatively without any covariant search.
 - **Method:** analytic (with CAS character/representation screens)
+- **Record type:** obstruction
+- **Verification class:** ALGEBRAIC-RECOMPUTE (`D2_STACK_INVARIANT`).
 - **Status:** TERMINAL-NEGATIVE-FOR-THE-ROUTE — no valid bridge from the stack invariant to a dimension bound.
   - `D2-NO-VALID-BRIDGE` [DIR, `goal_runs_after_35fa/D2_STACK_INVARIANT/STATUS.md`]
   - `fc4e490` "Resolve Goal D equivariant motive route"; `e1fc474` "Record Goal D artifact commit and seal" [GIT]
@@ -358,6 +423,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative-first strategy — since `X` G-unirational ⇒ `H`-unirational for every `H≤G`, test one maximal-subgroup class at a time for a **pointless** generic `H`-twist (⇒ `BR-SUBGROUP-NEG`). The outcome was positive instead.
 - **Justification:** A single pointless maximal-subgroup twist would immediately force the negative headline. Cheapest possible negative route, since subgroup twists are far smaller objects than the full generic twist.
 - **Method:** CAS (exact cyclotomic + Reynolds covariants)
+- **Record type:** obstruction / construction (dual — negative route, scoped-positive outcome)
+- **Verification class:** ALGEBRAIC-RECOMPUTE (`H_A4`, `H_A5` and all subpackets).
 - **Status:** SCOPED-POSITIVE (route closed) — all three maximal-subgroup obstructions are closed positively; no promotion to a dominant G-map exists, so the headline is untouched.
   - `H-A4-RATIONAL-POINT`, `H-A4-STRUCTURAL-MODEL-PASS` [DIR, `goal_runs_after_35fa/H_A4_TWIST/H2_A4_GENERIC_TWIST_CODEX_ROOT_20260801/STATUS.md`]
   - `H-A5-CLASS1-RATIONAL-POINT`, `H-A5-CLASS2-RATIONAL-POINT`, `H-A5-STRUCTURAL-MODEL-PASS` [DIR, `goal_runs_after_35fa/H_A5_TWISTS/STATUS.md`]
@@ -381,6 +448,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure/process — Elo-style competitive ranking over ten candidate paths (A–J) to allocate scarce CAS resource, followed by post-Elo re-dispatch.
 - **Justification:** Process only. It determined which of E01–E22 received compute, so it shapes what is and is not known, but it proves nothing.
 - **Method:** mixed (process)
+- **Record type:** dispatch/process
 - **Status:** COMPLETED-PROCESS — ranking wave executed; superseded by the post-Elo construction dispatch and later by the goal-run regime.
   - `c5e71be` "issue post-Elo finite-lifting work order"; `5e765ce` "Elo cycle-1 gate report"; `c28bb08` "Path G post-Elo" [GIT]
   - `3bfbd01` "post-Elo gate 1 — record Path F"; `d96b408` "Path T post-Elo — Gate T1 `T-BIRATIONAL`" [GIT]
@@ -399,6 +467,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive/negative — decide rationality of an explicit fixed-frame genus-one curve / restricted `E[3]`-Selmer class over `K_proj`: either find a divisorial local obstruction (Kummer-image nonmembership ⇒ pointless) **or** construct a rational point via a conic/intersection-algebra reformulation (a length-6 conic ∩ curve whose coordinate algebra `≅ K_proj`).
 - **Justification:** The fixed-frame genus-one curve is small enough for full 3-descent; a decision either way feeds the fixed-frame programme (though after `B-BRIDGE-REFUTED` the negative branch no longer transfers to the headline).
 - **Method:** mixed (CAS + descent arithmetic)
+- **Record type:** construction / obstruction (dual)
 - **Status:** UNDECIDED — F1 terminality audit passes and F1/F2/F3 artifacts exist, but no decision exit is recorded.
   - `56e61c3` "Path F Gate F1-P — terminality audit passes"; `865b262` "Paths F and G cycle 2 — F existence undecided"; `3bfbd01` "post-Elo gate 1 — record Path F" [GIT]
   - Decision exits defined `N-F`, `P-F`, `F-LOCAL-SOLUBLE`, `F-STOP`; **no exit verbatim-resolved**; headline "OPEN" [WORK]
@@ -423,6 +492,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative obstruction by technique transfer — import Problem F's all-degree `V₄`-fixed exceptional-path obstruction (parity forcing, forced basepoints, pointwise-fixed exceptional curves, path-lemma tree argument) to kill all equivariant maps `P(W)⇢C` at once; later generalized as the "F-engine" and used to push the bounded landing-covariant analysis past degree 24 via the full 55-plane / 55-line / D10 / D12-point arrangement.
 - **Justification:** Problem F was resolved negatively by exactly this mechanism; a verbatim transfer would have settled Problem E negatively in one step.
 - **Method:** analytic (with CAS arrangement modules)
+- **Record type:** obstruction
 - **Status:** REFUTED-AS-TRANSFER — the verbatim import fails and the generalized engine closes rather than obstructs; explicitly deprioritized.
   - Header label "AUDIT PASSED, resolution committed" (for Problem F itself: "RESOLVED NEGATIVE") [HAND `R16`]
   - For the Klein-cubic transfer: "**the verbatim transfer fails**"; generalized engine — "the transition system closes rather than obstructs"; this outcome "weighs toward a POSITIVE construction... instead" [HAND `R16`]
@@ -446,6 +516,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive construction — at a `V₄`-fixed centre (normalizer `A₄`), blow up the length-3 base orbit `R=X∩P(T)`, prove every `A₄`-equivariant `P(U)⇢X` has projected degree divisible by 3, and explicitly construct a degree-3 `A₄`-equivariant birational map `P(U)⇢S⊂X` onto a cubic surface `S(a,b,c)`; then lift compatibility across the whole 55-plane / D10 / D12 arrangement via symbolic Rees powers `I^(m)/I^(m+2)` and a Koszul construction, aiming at an actual landing covariant.
 - **Justification:** A local positive construction that lifts to a global section of the symbolic sheaf would *be* the landing covariant, closing the headline positively.
 - **Method:** mixed (equivariant geometry + CAS module/rank computations)
+- **Record type:** construction
+- **Verification class:** not covered by `notebook_build/verifier_depth.md` — provenance is `tmp/` scratch only, so the evidence is local-only (Binding rule 5).
 - **Status:** CLOSED-IN-CURRENT-FORM — one-centre trisection and the first Koszul gate are positive results; both continuations to `I^(11)/I^(13)` are obstructed.
   - "the first local positive gate is solved" / "the one-centre trisection gate is solved"; "does not automatically define a section of the full 55-plane symbolic sheaf" [HAND `R17`, RES `RES-11`]
   - "This solves exactly the first formal landing correction"; "the theorem closes only `I^(9)/I^(11)`" [HAND `R18`]
@@ -474,6 +546,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive construction with a built-in negative exit — build a nonzero homogeneous `G`-equivariant landing self-covariant `p:W→W` with `F(p)=0`, via formal normal-cone / polar lifting along the exact stabilizer stratification (finite-truncation theorem with isolation cutoff `N⋆=d+2m+1`, terminal-residual towers at degrees 7/13/19, global-state-image vs nonlinear-rank-drop analysis, an equivariant-resolution "G3-algebraization" shortcut); `G-NEGATIVE` is the all-degree negative fallback if every family's universal terminal projective zero support is empty. The bounded degree ladder (degrees 7–24 excluded) is its executable face.
 - **Justification:** A landing self-covariant in any degree is equivalent to the headline-positive answer; an all-degree emptiness theorem is equivalent to the headline-negative answer. This is the only route with both exits built in.
 - **Method:** CAS (Macaulay2 / msolve / multiprime linear algebra) with structural theorems
+- **Record type:** construction / reduction (dual — the bounded ladder is a construction search; G2 is a proved reduction)
+- **Verification class:** ALGEBRAIC-RECOMPUTE (`G_UNIVERSAL`; certificates `global_finite_lifting`, `global_lifting_decision`, `global_terminal_module`).
 - **Status:** STRUCTURAL-PASS, ARITHMETIC-OPEN — G2 achieves the all-degree finite-generation reduction and the mission is formally retired; the bounded ladder excludes degrees ≤24; the degree-13/19 "obstructions" are only sample residuals post-repair; everything hands off to [E17](#e17) and [E25](#e25).
   - PRE-REPAIR: degree-13/19 packets labeled `G13-OBSTRUCTION` / `G19-OBSTRUCTION`, read as degree-wide obstruction theorems [STAT/`REPAIR.md` §§11–12]
   - POST-REPAIR: downgraded to `G13-SAMPLE-RESIDUAL`, `G19-SAMPLE-RESIDUAL`, `G-PATTERN` — "proven only that the residual map is not identically zero, not that its zero locus (`Θ⁻¹(0)`) is empty" [STAT/`REPAIR.md` §§11–12; HAND `R1`; RES `RES-26`]
@@ -503,19 +577,23 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive/arithmetic successor to Path G — having reduced the headline to a "surviving universal object", decide whether its associated cubic `Φ` has a `K_proj`-rational point, i.e. decide `V(Φ)(K_proj) ≠ ∅`; sub-attacks via exact field arithmetic + automatic dominance (G3A), rational conic sections satisfying tautological polar constraints (G3B/G3C), direct arithmetic on the generic twist (G3D/G3S), an A5 quadratic-Springer semilinear lift (G3H), and tautological-polar / odd-degree descent (G3P).
 - **Justification:** After `G2-FINITE-GENERATION-PASS` this single rational-point question **is** the headline; any exact point closes it positively, and `G3A` claims to remove the separate dominance gate.
 - **Method:** mixed (CAS + arithmetic)
-- **Status:** OPEN — highest-priority live route as of 2026-08-02; dominance and polar-system sub-gates PASS, the A5 semilinear quadratic interface is a scoped NO-GO, and the point decision itself is undecided.
+- **Record type:** construction
+- **Verification class:** mixed — G3A/G3B/G3C/G3P/G3D (+`line27_exact`) and the G3H phase-5 subpackets ALGEBRAIC-RECOMPUTE; `G3H_A5_SEMILINEAR_SPRINGER` **top level PARTIAL-RECOMPUTE** (phase 2 rebuilds the covariant `Y`; phases 1/4/5 are hash/flag checks, and phase 4 is the `INTERFACE_INSTALLED` frame).
+- **Status:** OPEN — highest-priority live route as of 2026-08-02; dominance and polar-system sub-gates PASS, the A5 semilinear G3 frame is **interface-installed only** (demoted 2026-08-03), the A5 semilinear quadratic interface is a scoped NO-GO, and the point decision itself is undecided.
   - "OPEN — Decide `V(Phi)(K_proj)` — Highest priority" [STAT, 08-02 ledger]; "G3 arithmetic OPEN" [WORK, `REMAINING_GOALS_NOTE.md`]
   - `G3A-ARITHMETIC-DOMINANCE-PASS` [DIR]
   - `G3P-POLAR-SYSTEM-PASS` [DIR]
   - `G3H-SEMILINEAR-G3-FRAME-PASS`, `G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED` [DIR]
+  - **G3H demoted (adjudicated 2026-08-03).** `G3H-SEMILINEAR-G3-FRAME-PASS` is an **interface/schema installation**, not a constructed field point. The primitive element is abstract — "A primitive element θᵢ is any separating Hᵢ-invariant rational function" (`goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/phase4_g3_frame/G3_FRAME.md`:14) — and the deliverable is the *formal expression* `a_i = M̄^{-1}(P_i/τ^33)`. The power-basis reduction status is verbatim `INTERFACE_INSTALLED`. `verify_phase4.py` checks only marker-string equality, `coefficient_count == 35`, sha256 comparisons, `len(power_basis) == 11`, and substring membership of `"Phi(a_i)=0"` — **no field reconstruction and no arithmetic evaluation**. Effective state: **interface installed; the executable degree-11 field point is neither materialized nor verified.** The scoped quadratic no-go `G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED` stands at its stated level and is unaffected.
+  - **G3D internal contradiction adjudicated 2026-08-03.** The `PASS`-vs-`PARTIAL` conflict is an **in-repo bug**, not a genuine disagreement: in `goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC/STATUS.md` the embedded phase-ledger JSON block (lines ~44–56) marks the witt/spinor phases `G3D-POLAR-CLIFFORD-PASS` / `G3D-SPINOR-DISCRIMINANT-PASS`, contradicting the same file's prose (line ~5) and `SEAL.json` plus the stage documents, all of which read `*-PARTIAL`. **`SEAL.json` governs.** Canonical state: the simple-field model, polar cubic surface, Hessian-kernel and cube reduction are structural passes at their stated scope; **Clifford, spinor discriminant, and the 27-line algebra are PARTIAL**; the exit is `G3D-UNDECIDED`. The sealed packet is deliberately **not** edited (hash seals); the bug is recorded here and in Verification debt.
   - `G3B-UNDECIDED` [DIR, `goal_runs_after_0aecc89/G3B_LINE_CONIC_SEARCH/STATUS.md`]; `G3C-UNDECIDED` [DIR, `goal_runs_after_0aecc89/G3C_LINE_CONIC_FANO/STATUS.md`]; `G3D-UNDECIDED` (primary exit) [DIR, `goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC/STATUS.md`] — G3D also records five structural PASS sub-labels (`G3D-K-SIMPLE-MODEL-PASS`, `G3D-POLAR-CUBIC-SURFACE-PASS`, `G3D-HESSIAN-KERNEL-PASS`, `G3D-HESSIAN-CUBE-REDUCTION-PASS`, `G3D-A5-STRUCTURED-DESCENT-PASS`) and three PARTIAL sub-labels (`G3D-POLAR-CLIFFORD-PARTIAL`, `G3D-SPINOR-DISCRIMINANT-PARTIAL`, `G3D-LINE-27-ALGEBRA-PARTIAL`)
   - `62a3fcb` "Path G3 — exit `G-PATTERN`"; `5eb1214` "add G3 universal cubic arithmetic goal"; `5cb3d11` "add G3A arithmetic and dominance goal"; `d1f43d6` "Add G3H A5 semilinear Springer execution order"; `7da4fdf` "Add G3S structured direct arithmetic execution order" [GIT]
   - **G7B invalidation resolved in-repo (confirmed 2026-08-03):** `4a5beac` (2026-08-02 14:54, ~2h after the flawed packet at `eb21458`) rewrote `goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/STATUS.md`: primary exit is now `G7-PROJECTIVE-SCALING-PASS` (re-derived by an independent chart-normalization/cone-lift method), the induced-cycle claim is downgraded to RESIDUAL, a refutation marker `G7B-INDUCED-CYCLE-REFUTED` is installed, the defect is documented in `cycles/INDUCED_CYCLE_REFUTATION.md` (`|Stab_G([e0])|=11`, `|G·[e0]|=60`, 44/44 equivariance checks failed), the withdrawn data is quarantined as `cycles/cycles_WITHDRAWN_rho_e0.json`, and the verifier is hardened (`verify_cycles.py` + `cycles/audit_induced_refutation.py`). See Verification debt item 4.
-  - **Conflict (external audit vs run labels), unresolved here:**
+  - **Conflict (external audit vs run labels) — ADJUDICATED 2026-08-03, in favour of Side 2:**
     - *Side 1 (DIR run labels):* `G3A-ARITHMETIC-DOMINANCE-PASS`, `G3P-POLAR-SYSTEM-PASS`, `G3H-SEMILINEAR-G3-FRAME-PASS`.
     - *Side 2 (`sessions_batch4.md` § `2026-08-03-problem-e-review.md`):* "G3H phase-4 'executable field points' are unbuilt (formula-level/interpolated only, `INTERFACE_INSTALLED`)"; "phase-3/4 'independent verifiers' check hashes/strings, not algebra"; "G3D's internal phase ledger says `PASS` while prose says Clifford/spinor stages are partial/`UNDECIDED` (a direct self-contradiction flagged in-repo)".
-    - The session's meta-claims about repo state may themselves be stale; both sides recorded.
-- **What was actually established:** an exact arithmetic/dominance frame (`G3A`) — reported as proving `G3-DOMINANCE-AUTOMATIC`, i.e. that any exact `K_proj`-point automatically yields a dominant equivariant map with no separate Jacobian-rank-4 gate — plus a polar-system pass and a semilinear G3 frame. NOT established: a point of `V(Φ)`; the A5 quadratic interface is a scoped NO-GO; G3B/G3C/G3D carry no captured exit label.
+    - *Resolution:* both Side-2 claims were checked against the artifacts and **confirmed** — see the two adjudication bullets above. G3H is interface-only; the G3D contradiction is a JSON-block bug in `STATUS.md` overridden by `SEAL.json`. `G3A-ARITHMETIC-DOMINANCE-PASS` and `G3P-POLAR-SYSTEM-PASS` are untouched by this and stand (both ALGEBRAIC-RECOMPUTE). See conflict 15.
+- **What was actually established:** an exact arithmetic/dominance frame (`G3A`) — reported as proving `G3-DOMINANCE-AUTOMATIC`, i.e. that any exact `K_proj`-point automatically yields a dominant equivariant map with no separate Jacobian-rank-4 gate — plus a polar-system pass (`G3P`), and, from G3D at scope, the simple-field model, polar cubic surface, Hessian-kernel and cube reduction. NOT established: a point of `V(Φ)`; the G3H semilinear frame is an **installed interface only**, with no materialized or verified executable degree-11 field point; the A5 quadratic interface is a scoped NO-GO; G3D's Clifford, spinor-discriminant and 27-line-algebra stages are PARTIAL with exit `G3D-UNDECIDED`; G3B/G3C carry no captured exit label.
 - **Aliases:** "G3 universal cubic arithmetic"; `G3A_EXACT_ARITHMETIC_DOMINANCE`, `G3B_LINE_CONIC_SEARCH`, `G3C_LINE_CONIC_FANO`, `G3D_DIRECT_ARITHMETIC`, `G3H_A5_SEMILINEAR_SPRINGER`, `G3P_POLAR_ODD_DEGREE_DESCENT`, `G3S`; GIT `G3`, `G3A`, `G3H`, `G3S`
 - **Provenance:** `goal_runs_after_0aecc89/{G3A_EXACT_ARITHMETIC_DOMINANCE, G3B_LINE_CONIC_SEARCH, G3C_LINE_CONIC_FANO, G3P_POLAR_ODD_DEGREE_DESCENT, G7_DOUBLE_A5_BIPLANE}`; `goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC`; `goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER`; G3S execution order.
   - `source: external-chatgpt` — `sessions_batch1.md` § `mattrobball-unirational-task-6a7054e2.md`: dispatched Route 1 (`G3H_A5_SEMILINEAR_SPRINGER`, commit `d1f43d6`) and Route 2 (`GOAL_G3D_DIRECT_ARITHMETIC`, commit `b1915a5`); pushed then withdrew `G3B_C_STRUCTURED_ARITHMETIC_SEARCH.md` (`7da4fdf`, deleted by `ff69434` after user pushback). Accepted `G3A-ARITHMETIC-DOMINANCE-PASS` and its `G3-DOMINANCE-AUTOMATIC` consequence. **Also declared `G7-INDUCED-DOUBLE-CYCLE-PASS` / `G7-PROJECTIVE-SCALING-PASS` INVALID** by independent recomputation of point stabilizers in the 660-element model: `|Stab_G([e0])|=11`, `|G·[e0]|=60`, so `[e0]` is fixed by neither maximal A5; all 44/44 generator-point equivariance checks failed — representative-dependent, not a genuine induced cycle. Accepted `G7-CROSS-CLASS-PROJECTOR-PASS` but noted it "weakens the motivating route": the permutation module is `1⊕V10` with `V10` absolutely irreducible, not the hoped-for `1⊕V5⊕V5'`.
@@ -531,6 +609,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative/structural obstruction for the proper subgroup `C11⋊C5 ≤ G` — reduce the generic 11:5 twist exactly to a genuine cyclic trace cubic `Tr_{E/K}(r₂⁻¹ a² σ(a)) = 0` over a rational four-parameter invariant field, then decide the trace cubic's pointlessness using the degree-11 torus / `μ₁₁`-torsor / isogeny structure (⇒ `BR-SUBGROUP-NEG` if pointless).
 - **Justification:** It is "the smallest exact genuine twist left" — a pointless 11:5 twist forces the negative headline, and unlike the fixed-frame route the object is genuine, not a proxy.
 - **Method:** mixed (CAS + arithmetic: elliptic/torsor)
+- **Record type:** obstruction
+- **Verification class:** ALGEBRAIC-RECOMPUTE (`H_11_5`, all three H5 runs, `H6` +phase, `H6A`).
 - **Status:** OPEN — norm model and `μ₁₁`-torsor class installed and PASSING; the arithmetic binary is unresolved; ranked second-strongest negative route.
   - `H-11_5-NORM-MODEL-PASS` [DIR, `goal_runs_after_35fa/H_11_5_TWIST/STATUS.md`; WORK]
   - `H5-UNDECIDED` [DIR, `goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/STATUS.md`]; "no K-point; binary open" [WORK]
@@ -555,6 +635,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative necessary-condition screen — from a hypothetical dominant equivariant `P⁴⇢X` and its equivariant resolution `f:Z→X`, use the split injection `H³(X)↪H³(Z)` and the blowup formula `H³(Bl_C Y)≅H³(Y)⊕H¹(C)(-1)` to force `H^{2,1}(X)` as a `G`-representation to be supplied by `H^{1,0}` of positive-irregularity blowup centres, then upgrade to the integral polarized intermediate-Jacobian structure (CM order, principal polarization) and force a contradiction via minimum-genus/orbit-size bounds (Riemann–Hurwitz / Chevalley–Weil).
 - **Justification:** If no admissible family of blowup centres can supply `H^{2,1}(X)` as a G-representation, no dominant equivariant map exists and the headline closes negatively.
 - **Method:** mixed (Hodge theory + CAS character screens)
+- **Record type:** obstruction
+- **Verification class:** ALGEBRAIC-RECOMPUTE (`certificates/hodge_centers`).
 - **Status:** SALVAGED-BUT-NONBINDING — the split-injection theorem survives the §8 rewrite, but the screen yields no numerical contradiction (40 representation channels survive).
   - PRE-REPAIR: proof via "generically finite" pushforward `f_*:H³(Z)→H³(X)` — **relative-dimension error**: since `dim Z=4`, `dim X=3`, a dominant `f` has relative dimension one, not zero, so the displayed degree-`d` identity is invalid [STAT/`REPAIR.md` §7]
   - POST-REPAIR: "Hodge-center conclusion — salvageable; proof rewritten via relatively ample class (`REPAIR.md` §8)"; "corrected Hodge-center split-injection theorem after §8 substitution" listed among trusted retained results [HAND `R31`, RES `RES-28`, STAT]
@@ -576,6 +658,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive/negative via arithmetic invariants — study the common zero locus of the five Hermitian sections on `SB_2(A) ≅ P²_D` using **intersection theory** rather than direct elimination; look for a "point-sensitive" invariant (Chow–Witt Euler class, Witt-group obstruction, unramified cohomology, canonical dimension/incompressibility, Hermitian Euler class) beyond the ordinary Chow class.
 - **Justification:** The ordinary Chow class cannot see rational points; a point-sensitive refinement would decide the common-line problem of E07/E08 without solving it.
 - **Method:** analytic
+- **Record type:** proposal/unrun
 - **Status:** UNRESOLVED/UNRUN — defined with exits, never dispatched to a verdict.
   - Ranked "structural", Elo 1473; decision exits `N-I`, `P-I`, `I-STOP` — none resolved [WORK, `WORKORDER_ELO_TEN_PATHS.md` Path I]
 - **What was actually established:** nothing. The route exists as a specification only.
@@ -592,15 +675,18 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative — prove `ed_C(G)=4` directly via a cohomological / canonical-dimension / motivic invariant that survives every 3-dimensional compression, auditing candidate invariants (cohomological invariants, equivariant Chow/Steenrod operations, canonical dimension/incompressibility, motives of generic projective representations, unramified cohomology) against four required criteria; realized as an equivariant resolution of the landing covariant's base locus with analysis of the resulting Prym factors.
 - **Justification:** A single invariant that cannot drop under compression settles `ed_C(G)=4` outright.
 - **Method:** analytic (with CAS resolution/Prym computation)
+- **Record type:** obstruction
+- **Verification class:** ALGEBRAIC-RECOMPUTE (`J_BASELOCUS_PRYM`).
 - **Status:** TERMINAL — the unrestricted invariant admits an extending countermodel; no point-sensitive invariant found.
   - `J2-UNRESTRICTED-COUNTERMODEL-EXTENDS` [DIR, `goal_runs_after_35fa/J_BASELOCUS_PRYM/STATUS.md`]
+  - **Structural content of the packet (recorded 2026-08-03; previously omitted).** From `goal_runs_after_35fa/J_BASELOCUS_PRYM/` (`STATUS.md`, `FIXED_CENTRE_1MOTIVE.md`, `POLARIZATION_ISOGENY.md`, `D_COUNTERMODEL_AUDIT.md`, `BASE_IDEAL_CONSTRAINTS.md`): for **any** hypothetical primitive landing covariant there is an equivariant log resolution of its base ideal whose centre has stabilizer `C₂`, orbit size **330**, six `S₃`-permuted fixed components, and normal eigenranks `(1,2)`. The blowup contribution splits off a copy of `H³(X,ℚ)(1)` with exact averaging scalar **198** and a **CM discriminant −11** factor tied to the polarization, together with an `S₃`-equivariant quotient carrying the order-three Albanese class of `E_t`. This is real structure about the base locus of any landing covariant, independent of the countermodel that terminates the route.
   - "theory watch" (queue status); decision exits `N-J`, `J-CANDIDATE`, `J-STOP` — none resolved [WORK, `WORKORDER_ELO_TEN_PATHS.md` Path J]
   - Bundled `TERMINAL — Prior local obstructions/witnesses exhausted — Background only` [STAT, 08-02 ledger; STAT notes "content entirely unknown from this lens"]
   - **Conflict (route content):**
     - *Side 1 (WORK):* Path J is an *invariant audit* never executed ("theory watch").
     - *Side 2 (DIR):* an executed run whose exit is a *countermodel*, `J2-UNRESTRICTED-COUNTERMODEL-EXTENDS`.
     - Same letter, plausibly the same route after execution; no lens states the link. The canonical ledger's best reconciliation: J is the motivic/canonical-dimension invariant route, executed as the base-locus Prym analysis and terminated by a countermodel — parallel to the finding for D ([E10](#e10)).
-- **What was actually established:** that the unrestricted invariant does not obstruct (a countermodel extends). NOT established: any statement about restricted or point-sensitive invariants.
+- **What was actually established:** (i) that the unrestricted invariant does not obstruct (a countermodel extends); (ii) the base-locus structure theorem above — an equivariant log resolution of any primitive landing covariant's base ideal with `C₂`-stabilized centre, orbit size 330, six `S₃`-permuted fixed components, normal eigenranks `(1,2)`, an `H³(X,ℚ)(1)` summand with averaging scalar 198 and CM discriminant −11, and an `S₃`-equivariant quotient carrying `E_t`'s order-three Albanese class. NOT established: any statement about restricted or point-sensitive invariants.
 - **Aliases:** Path J (Elo #10); Goal J; `J_BASELOCUS_PRYM`; exits `N-J`, `J-CANDIDATE`, `J-STOP`
 - **Provenance:** `goal_runs_after_35fa/J_BASELOCUS_PRYM`; J1 candidate-invariant audit (planned).
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` authored `GOAL_J_FIXED_CENTRE_PRYM.md` (added by `fa543e2`; indexed in `3569d63`); its Prym/one-motive analysis is also reported in § `progress-on-klein-cubic-6a705563.md` as "decisively demoted — should not be redispatched unchanged".
@@ -615,6 +701,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** general framework, both directions — (positive) seek a primitive rank-4 self-covariant `q:W→W` whose Gauss-map/adjugate structure lands equivariantly on the Klein cone; equivalently (KLS theorem) `ed(G)=3` iff some nonzero homogeneous self-covariant `W→W` has identically zero Jacobian determinant; (negative) prove no minimal landing self-covariant exists (`h=1`, `ed(G)=4`) via the image hypersurface `H=V(F)`, the contracted-gradient gcd `h`, log-canonicity of the induced foliation, vertical/nonnormal divisor geometry, and a minimality-to-conductor reduction.
 - **Justification:** The KLS criterion is an exact iff for the headline; the negative branch would give `ed(G)=4` from birational geometry alone, with no degree search.
 - **Method:** mixed (birational geometry / foliation theory + CAS sweeps)
+- **Record type:** construction / obstruction (dual — the KLS criterion is an exact iff, worked from both sides)
+- **Verification class:** ALGEBRAIC-RECOMPUTE (`KLS_MINIMALITY`).
 - **Status:** CONFLICT → best reconciliation: the *minimality-to-conductor reduction* is closed (`KLS2-NO-FINITE-REDUCTION`) and the A5-quadric/P22 branch is closed; the framework as a whole remains **open but unauthorized for further large computation** pending a precise theorem.
   - Jacobian-zero criterion: "every such covariant through degree 11 is dominant; no degree cutoff is known"; degree 12 "remains open only on a proper closed exceptional locus" [HAND `R4`]; "Neither the KLS theorem nor finite generation of the covariant module gives an all-degree cutoff; an explicit `S5`-module counterexample rules out that shortcut" [RES `RES-09`]
   - Degree-12: parameter-free top ideal certified (Hilbert function `[1,12,78,364,1365,3647,3726,0,0]`, colength 9,193); "no relative Fitting determinant has yet been produced" [STAT]
@@ -644,6 +732,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure/positive — construct a universal finite formal-recursion certificate valid for **all odd normal orders**, completing the polar-expansion range used by the Path G lifting tower.
 - **Justification:** The Path G lifting tower needs coefficient recursions past the historical `3m+3` boundary; without the full range, every all-degree lifting statement is truncated.
 - **Method:** CAS
+- **Record type:** infrastructure
+- **Verification class:** ALGEBRAIC-RECOMPUTE (`L1_FULL_POLAR_RANGE`).
 - **Status:** PASS — universal finite formal recursion certified across the full odd-order range.
   - `L1-FULL-RANGE-PASS` [DIR, `goal_runs_after_7030dd/L1_FULL_POLAR_RANGE/STATUS.md`]
 - **What was actually established:** a complete universal coefficient recursion for `F(p)` over the full odd-order range. NOT established: anything about existence of `p` itself; this is tower infrastructure.
@@ -662,6 +752,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive/structural — construct an exact type-I Sarkisov link (blow up a smooth plane cubic on the Schur generic Klein twist) to a relative degree-3 del Pezzo fibration over `P¹` with multisections of degree 3 and 55 (hence index 1), then search in Cox coordinates for an actual **rational section** (headline-positive) as opposed to only a degree-4 multisection (which proves index 1 only).
 - **Justification:** A rational section of the dP3 fibration gives a `K_Schur`-point directly, closing the headline positively; the link is explicit and the search is finite-dimensional in Cox coordinates.
 - **Method:** mixed (birational geometry + CAS Cox-ring search)
+- **Record type:** construction
+- **Verification class:** ALGEBRAIC-RECOMPUTE (`M_SARKISOV`, `M3B`).
 - **Status:** OPEN-NARROWED — the explicit Sarkisov link and the degree-4 integral multisection are terminal PASSes; the rational-section question remains open as a residual Galois-descent route.
   - `M2-EXPLICIT-LINK-PASS` [DIR, `goal_runs_after_35fa/M_SARKISOV/STATUS.md`]
   - `M3-INTEGRAL-DEGREE4-MULTISECTION` (terminal, multisection only); `M3B-G1-MODULAR-NONEMPTY-PASS` (residual); "K-section open" [WORK]
@@ -689,24 +781,29 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive construction with a negative-emptiness exit — build an exact, primitive, characteristic-zero **degree-25** homogeneous `G`-equivariant landing self-covariant `p:W→W` with `F(p)=0` and generic Jacobian rank 4, via increasingly rigorous finite/global coefficient models, border/Fitting-module presentations, and projective-support decisions (with DVR-properness arguments for emptiness).
 - **Justification:** Degree 25 is the first unresolved degree in the landing ladder of [E16](#e16); a covariant there closes the headline positively, and proved emptiness advances the ladder by one rung.
 - **Method:** CAS (multiprime linear algebra, border bases, msolve/F4, DVR arguments)
-- **Status:** OPEN/DEFERRED — extensive partial structure, but the degree-25 landing locus is neither populated nor proved empty; further slices unauthorized and the route is explicitly "not headline without a bridge".
+- **Record type:** bounded computation
+- **Verification class:** mixed — `degree25_tower`, `degree25_rank_k` ALGEBRAIC-RECOMPUTE; `degree25_exact`, `degree25_global`, `degree25_finite_module` PARTIAL-RECOMPUTE.
+- **Status:** **OPEN at degree 25 — order-3 branch closed in char 0; other branches modular-only.** (Adjudicated 2026-08-03; supersedes the earlier flat `OPEN/DEFERRED`.) Extensive partial structure; further slices unauthorized; the route is still "not headline without a bridge".
+  - **Adjudication (conflict 13), 2026-08-03.** V4's **Theorem 2.12** (`goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/THEOREM.md` §2.3) genuinely closes the **37-dimensional order-three branch in characteristic zero, for all line degrees**. The **order-two and order-≥4** branch exclusions are proved **only over the split fibre `F_67`** — `HANDOFF.md` states its own caveat, "no characteristic-zero exclusion is claimed" (~line 1060). They were, however, **independently audited at that modular level**: a from-scratch audit rebuilt the complete degree-25 space, both jet filtrations, the 56/56 landing span, and the 3124/3124 overlap rank (`HANDOFF.md` ~1061–1066; `tmp/degree25_structural_probe_independent_audit/REPORT.md` — local-only per Binding rule 5). Their correct description is therefore **independently audited, modular-only** — *not* "inherited unverified", the phrasing this entry previously carried.
+  - The packet label `DEGREE25-LANDING-EMPTY` **overstates its characteristic-zero scope** and violates Binding rule 2 (modular ranks require an explicit char-0 bridge).
+  - The **63-chart P25 route** (`goals_2026-08-01/P25_LANDING_SUPPORT`, `PREPARED_NOT_RUN`) targets the same characteristic-zero binary through an **unreconciled independent presentation** and **remains live**. It is the route that would close the remaining branches in char 0.
+  - **The bounded char-0 cutoff is unchanged: through degree 24, with degree 25 partially closed** (order-3 branch in char 0; the remainder modular). Do not restate the cutoff as 25.
   - `P25-TOWER-EMPTY` / `P25-TOWER-SURVIVES`; `P25R0/1/2-*`; `P25X0/1/2-PASS/FAIL/UNDECIDED`; `P25Y-DVR-PASS`; `P25Z-ROW-RANK-746` ("the direct landing row rank is exactly 746"); `P25Z-FINITE-PRESENTATION-LOWER`; `P25W-PRESENTATION-EXACT/ENLARGE/UNDECIDED`; `P25-DEGREE25-EMPTY`; targets `P25-COVARIANT`/`P25-POLYNOMIAL` **not reached** [WORK]
   - `P25-UNDECIDED`; "63 charts on `D(H_8)`... `PREPARED_NOT_RUN`" [WORK, `REMAINING_GOALS_NOTE.md`]
   - historical 842-row / rank-28 packets "quarantined" and later "retired on mathematical grounds" [WORK, `DIRECTOR_HANDOFF.md`]
   - "P25.1 `P25-TOWER-SURVIVES` — retained as scoped free-fibre/degree-25 continuation"; "dim Z<=15"; "`P^21` a strict nonverdict (`3933 ≤ rank ≤ 7910`)"; "No `P^22` or successor slice is authorized" [HAND `R3`]
   - "OPEN/DEFERRED — Finite chart computation only — Not headline without bridge" [STAT, 08-02 ledger]; "Degree 25 remains open" [STAT, `CURRENT_PATHS.md`]
   - `19da967` "P25W — Stage A kernel incidence EMPTY"; `841005b` "P25Z.3 — direct landing row rank EXACTLY 746"; `2140419` "P25V.0 — degree-four closure FAILS"; `6096429` "V2 Track P25Y — `P25Y-DVR-PASS`"; `5e72d8e` "V2 Track P25X — `P25X0-PASS`, `P25X1-FAIL`; the 842 basis is not recovered" [GIT]
-  - **Conflict (degree-25 emptiness), unresolved here:**
+  - **Conflict (degree-25 emptiness) — ADJUDICATED 2026-08-03, split resolution:**
     - *Side 1 (canonical ledger, run artifacts):* the degree-25 landing locus is **neither populated nor proved empty**; `P25-UNDECIDED`; 63 charts `PREPARED_NOT_RUN`.
     - *Side 2 (`sessions_batch4.md` § `2026-08-03-problem-e-review.md`):* claims exit `DEGREE25-LANDING-EMPTY` — "no homogeneous degree-25 landing self-covariant in char 0" — derived as a corollary of the V4 simultaneous-normal classification, and committed under `goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/DEGREE25_COROLLARY.md` (added by `ac5e899`, "Close degree-25 landing stratum using V4 theorem"; `72147bd` only modified `STATUS.md`).
-    - The canonical ledger files that corollary under [E33](#e33) and does not update E25's state. Do not treat degree 25 as closed on this basis without re-derivation.
-    - **Verified scoping (confirmed 2026-08-03):** `DEGREE25_COROLLARY.md` is explicitly a "Bounded corollary" whose own packet proves only the order-three branch of the degree-25 filtration — via Theorem 2.12 of `THEOREM.md`, scoped to `A4`-equivariant simultaneous landing families with involution-plane order `m=1` and exact triple-line order three, independent of line degree. The order-two (parity-excluded) and order-≥4 (rank 56/56) branches asserted in the same corollary are **inherited unverified** from the HANDOFF-era degree-25 structural filtration — the same P25 family this entry records as `P25-UNDECIDED` with 63 charts `PREPARED_NOT_RUN`. The corollary's own text states: "It is not an all-degree theorem and does not settle equivariant unirationality." The conflict is real and stands; the headline stays OPEN.
-- **What was actually established:** `dim Z ≤ 15`; direct landing row rank exactly 746; a DVR-properness pass; Stage-A kernel incidence empty; `P^21` a strict nonverdict (`3933 ≤ rank ≤ 7910`); the 842-row basis is not recoverable. NOT established: a degree-25 covariant, or (per the run artifacts) its nonexistence.
+    - *Resolution:* **neither side is wholly right.** Side 2's char-0 closure is real **for the order-three branch only** (Theorem 2.12, all line degrees, `A4`-equivariant, involution-plane order `m=1`, exact triple-line order three). Side 1's "not proved empty" is right for the **order-two and order-≥4** branches, which are proved only over the split fibre `F_67` — but those branches were **independently audited at that modular level**, so they are *modular-only*, not unverified. `DEGREE25_COROLLARY.md` is explicitly a "Bounded corollary" and states: "It is not an all-degree theorem and does not settle equivariant unirationality." Net state: degree 25 is **partially closed**; the exit label `DEGREE25-LANDING-EMPTY` overstates its char-0 scope; the char-0 bounded cutoff stays at 24; the headline stays OPEN. See conflict 13.
+- **What was actually established:** `dim Z ≤ 15`; direct landing row rank exactly 746; a DVR-properness pass; Stage-A kernel incidence empty; `P^21` a strict nonverdict (`3933 ≤ rank ≤ 7910`); the 842-row basis is not recoverable; and — via V4 Theorem 2.12 — **characteristic-zero emptiness of the order-three branch of the degree-25 filtration, for all line degrees**. NOT established: a degree-25 covariant; char-0 emptiness of the order-two and order-≥4 branches (audited over `F_67` only, no char-0 bridge); therefore not degree-25 emptiness as a whole. Per `audit_a1` (see [E03](#e03)), several P25 labels also carry SCOPE-DRIFT verdicts: `P25Z-FINITE-PRESENTATION` (F3), `P25Y-DVR-PASS`'s Molien claims (F5), the stale "746 lower bound only" phrasing (F6), and `P25X0-PASS`, which is titled characteristic-zero but is in fact multiprime (F7).
 - **Aliases:** P25; P25.1–P25.4; P25R, P25V, P25W, P25X, P25Y, P25Z; `P25W-RankK`, ROW-RANK, SUPPORT-F4, TOWER, MOLIEN; HAND `R3`; CERT bucket `P` (`degree25_*`)
 - **Provenance:** P25.1–P25.4 (CAS_HEADLINE); P25R.0–P25R.3 (REVISED); P25X.0–P25X.2 (DECISION/_V2); P25Y.1–P25Y.4 (AFTER_5E72D8E); P25Z.1–P25Z.3 (T9_P25Z); P25W.0–P25W.3 (T10_P25W_C2); P25V.0–P25V.3 (T11_P25V_C3); WP-B1, WP-6; `tmp/m1_relative_border_*`, `char0_lift_p19_d5`, `char0_lift_p20_d5`, `tmp/degree25_structural_probe`; `certificates/degree25_{exact, global, tower, finite_module, direct_support, support_f4, rowrank, rank_k, molien, p25v, p25w}`.
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` authored `Goal P25` (`28faa47`) and `GOAL_P25_ENLARGED_CLOSURE_AND_SUPPORT.md` (added by `27fcc1b`; indexed in `37d61c1`); audited returns `P25V-PRESENTATION-ENLARGED` ("strongly supported, not canonical — decisive counts 4140/315 read from producer JSON, not independently recomputed") and `P25V-SUPPORT-UNDECIDED` (faithful).
   - `source: external-chatgpt` — `sessions_batch3.md` § `progress-on-klein-cubic-6a705563.md` issues a correction: "`K₁/(R₊K₁)` is NOT the primitive-covariant quotient — degree 25 must be rebuilt from the full 746-dim relation space."
-- **Pointers:** `WORKORDER_CAS_HEADLINE.md` §5; `WORKORDER_CAS_HEADLINE_REVISED.md` §3; `WORKORDER_CAS_T9_P25Z.md`; `WORKORDER_CAS_T10_P25W_C2.md`; `WORKORDER_CAS_T11_P25V_C3.md`; `DIRECTOR_HANDOFF.md`; `HANDOFF.md` repair table line 41; `CURRENT_PATHS.md` Ranking A item 1
+- **Pointers:** `WORKORDER_CAS_HEADLINE.md` §5; `WORKORDER_CAS_HEADLINE_REVISED.md` §3; `WORKORDER_CAS_T9_P25Z.md`; `WORKORDER_CAS_T10_P25W_C2.md`; `WORKORDER_CAS_T11_P25V_C3.md`; `DIRECTOR_HANDOFF.md`; `HANDOFF.md` repair table line 41 and ~1060–1066 (modular-scope caveat + independent audit); `CURRENT_PATHS.md` Ranking A item 1; `goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/THEOREM.md` §2.3; `goals_2026-08-01/P25_LANDING_SUPPORT` (63 charts, `PREPARED_NOT_RUN`); `certificates/audit_a1/AUDIT_FINDINGS.md`
 - *Lenses 6/7 (GIT, CERT, HAND, RES, STAT, WORK); confidence certain.*
 
 ---
@@ -717,6 +814,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive construction + structural reduction — via Tschinkel–Zhang's Pfaffian bridge `X ↔ F14`, prove the generic projective Schur boundary class is nonzero of **period and index exactly 2** in `Br(K_proj)`, so the `P(V6)`-twist is a nonsplit non-stably-rational Severi–Brauer fivefold; pass to 2-planes to get `SB_2(A_proj)=P²_{D_proj}` (rational), reducing the headline to a **common isotropic right `D`-line for five Hermitian forms**; construct explicitly a reduced-rank-two `σ`-self-adjoint idempotent `e=(a²-c₁(a)a+c₂(a)1)/c₂(a)` by solving `c₃(a)=0, c₂(a)≠0`; separately search for matched polynomial covariants landing in the `F14` Pfaffian cone.
 - **Justification:** This is the structural parent of the whole C-family: it converts the headline into an isotropy problem over an explicit quaternion algebra, and the target space `P²_D` is rational.
 - **Method:** mixed (Brauer/algebra-with-involution theory + CAS)
+- **Record type:** construction / reduction (dual)
+- **Verification class:** NO-VERIFIER — `certificates/pfaffian_point` hosts the `FAIL-SCOPE` bridge audit as an analytic audit document; there is no machine verifier by nature.
 - **Status:** OPEN-AT-THE-COMMON-LINE-GATE — the Brauer reduction is a solid proved theorem and the anisotropic-member escape is closed; the abstract idempotent exists but its `K_proj` coordinates do not, and the bridge from it to a Klein point is scope-failed.
   - "now proved nonzero"; "generic Brauer class has period and index exactly two"; "anisotropic-member certificate is now impossible"; residual "common isotropic right D-line" gate "open" [HAND `R9`]
   - "every individual Hermitian member is isotropic... only simultaneous common-line isotropy remains open"; "no explicit `K_proj` coordinates, quaternion corner, or common isotropic line are known" [RES `RES-07`]
@@ -738,6 +837,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative/structural — decide a "Schur point" binary via a descent-obstruction audit on the Schur index-one locus (prove the index-one locus contains a rational point, or obstruct it via a valuation); when the standard descent-obstruction package proved insufficient, replace it with a **stable-cubic/resolvent descent from a primitive quartic resolvent** (Q3) and prove any resulting obstruction transfers to the headline.
 - **Justification:** The generic Schur twist already carries a degree-one zero-cycle; a surviving descent obstruction would show the cycle cannot be effectivized, giving the negative headline.
 - **Method:** mixed (descent arithmetic + CAS)
+- **Record type:** obstruction
+- **Verification class:** mixed — `Q_SCHUR_INDEX_ONE` (+13 subpackets) and `Q3` ALGEBRAIC-RECOMPUTE; the descent-obstruction run `Q_SCHUR_INDEX_ONE_DESCENT_OBSTRUCTION_20260802` is **CONSISTENCY-ONLY** (git-blob hashes and markers only), matching that session's own disclosure.
 - **Status:** PARTIAL-OPEN — the standard obstruction package is audited and found insufficient (scoped PASS); Q3's Schur-monodromy gate PASSES but the quartic-resolvent descent has produced no decision.
   - `Q-UNDECIDED` [DIR, `goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/STATUS.md`; WORK]
   - `Q2.1-DESCENT-OBSTRUCTION-AUDIT-PASS` (scoped pass, the actual exit recorded in `Q_SCHUR_INDEX_ONE_DESCENT_OBSTRUCTION_20260802/STATUS.md`); "Q3 preferred" as successor [WORK]
@@ -762,10 +863,17 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative obstruction — prove a descent obstruction for the Pfaffian elliptic quintic and its residual quartic components, i.e. rule out the relevant rational-curve constructions on the twist.
 - **Justification:** Rational curves through a marked cycle are the standard way to convert index data into a point; obstructing them closes that family of positive constructions.
 - **Method:** mixed (elliptic/Picard arithmetic + CAS)
+- **Record type:** obstruction
+- **Verification class:** `R_RATIONAL_CURVES` ALGEBRAIC-RECOMPUTE; the contested `certificates/elliptic_lifting` CONSISTENCY-ONLY (its internal `PROVED_AS_REGRESSION` marker is accepted via hash-check/field-read only).
 - **Status:** TERMINAL-OBSTRUCTED — the descent obstruction closes this rational-curve route.
   - `R2-DESCENT-OBSTRUCTED` [DIR, `goal_runs_after_35fa/R_RATIONAL_CURVES/STATUS.md`]
-  - "prior terminals" [WORK, `REMAINING_GOALS_NOTE.md` "Already terminal" table] — WORK explicitly notes "no mathematical description is given in any document read under this lens"
-- **What was actually established:** the exit label only. No lens supplies the mathematical content of the obstruction.
+  - "prior terminals" [WORK, `REMAINING_GOALS_NOTE.md` "Already terminal" table] — WORK notes "no mathematical description is given in any document read under this lens"; the content was recovered directly from the packet on 2026-08-03 and is recorded below.
+- **What was actually established (recovered 2026-08-03 from `goal_runs_after_35fa/R_RATIONAL_CURVES/STATUS.md`:19–67):**
+  - (i) Over the splitting field, the Pfaffian kernel bundle `E_0` has `H⁰(E_0(1)) = V_6^*`, with universal section-zero curve given by `A(x)λ = 0` and the identity `M(x)A(x) = Pf(M(x))·I_6`.
+  - (ii) `Pf(M(x))` is a nonzero scalar multiple of the Klein cubic. An **independent good-reduction check** verifies that the resulting curve is a smooth, geometrically integral **elliptic normal quintic**: degree 5, Hilbert polynomial `5t`, tangent dimension 10, `H¹(N_{C/X}) = 0`.
+  - (iii) Exact **period-lattice and group-cohomology certificates** give `J(C)^G = 0` and `H¹(G, J[3]) = 0`, so the degree-two Abel–Jacobi torsor has exactly **one fixed point `q_2`**.
+  - (iv) The Hilbert fibre twists to `SB(A_proj^op)` with `ind(A_proj) = 2`; hence the selected Hilbert component has **no `K`-point**. That is the obstruction.
+- **Explicitly NOT excluded:** unmarked rational quartics and quintics; higher free rational curves; incidence constructions through the degree-55 orbit; the Schur-source route over `K_Schur`.
 - **Aliases:** `R_RATIONAL_CURVES`; WORK "R/M-stub"; CERT `certificates/elliptic_lifting` (`PICARD_OBSTRUCTION.md`) — link plausible, contested.
 - **Provenance:** `goal_runs_after_35fa/R_RATIONAL_CURVES`; `certificates/elliptic_lifting/` (candidate).
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` authored `GOAL_R_RATIONAL_CURVES_ON_TWIST.md` (added by `8a14d67`; indexed in `3569d63`).
@@ -780,6 +888,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure — update and verify the canonical live-ledger state after the G2, V3 and B results and the post-pin refinements.
 - **Justification:** Bookkeeping. It determines which routes downstream dispatches treat as open.
 - **Method:** mixed (document/CAS audit)
+- **Record type:** audit/repair
+- **Verification class:** **CONSISTENCY-ONLY** — the only `-PASS` primary exit in the goal_runs layer resting on a consistency-only verifier, and already stale.
 - **Status:** PASS — infrastructure only.
   - `R0-CANONICAL-REFRESH-PASS` [DIR, `goal_runs_after_141f60/R0_CANONICAL_REFRESH/STATUS.md`]
 - **What was actually established:** the ledger state was refreshed and verified at that commit. NOT established: anything mathematical; and see the staleness note below.
@@ -798,6 +908,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive construction — starting from the accepted degree-55 `D12`-stabilized closed point of **index one** on the generic Schur twist, build a `G`-equivariant, geometrically integral degree-19 genus-0 curve through it so the residual cubic intersection is a length-2 cycle, forcing a `K_proj`-point (⇒ `BR-SCHUR19-POS`); alternatively seek a torsor-dependent no-point obstruction.
 - **Justification:** Cayley–Bacharach converts an index-one configuration into an actual rational point if the right residual curve exists — a direct positive closure.
 - **Method:** mixed (CAS Hilbert function / Rao module / Quot scheme + classical projective geometry)
+- **Record type:** construction
+- **Verification class:** ALGEBRAIC-RECOMPUTE (both `S19` runs; `certificates/schur_degree19`).
 - **Status:** UNDECIDED — the ACM branch is excluded for one hyperplane choice; both non-ACM Rao branches remain live; deprioritized behind the T/P25/C tracks.
   - "index one, but no rational point is currently known" [HAND `R15`; also `REPAIR.md` §14, correcting an earlier "no rational point" phrasing that implied proved pointlessness]
   - "ACM Hilbert-function obstruction on one hyperplane choice; non-ACM branch and a `(3,5)` complete-intersection `Y` with Rao-ledger analysis left open"; "neither the no-quintic branch nor the special quintic-carrier branch is closed" [HAND `R15`]
@@ -820,6 +932,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive construction — find a rational `G`-equivariant map `P(V6)⇢X` from the six-dimensional Schur representation of `SL₂(11)`; by the projective-source lemma any such map is automatically dominant and, with index-2 Brauer splitting plus quadratic descent, solves the headline. Includes a degree-8 Reynolds-covariant all-degree normal form and a structural study of the ten coordinate-line genus-one fibrations.
 - **Justification:** The projective-source lemma removes the dominance requirement entirely — merely landing in `X` from `P(V6)` suffices.
 - **Method:** CAS (constant-coefficient exhaustive solves) + Picard/fibration theory
+- **Record type:** construction
 - **Status:** OPEN-STALLED — degrees 4/6/8/10 empty, degree 12 blocked by a terminal solver nonverdict; the genus-one fibration no-section theorem is real but does not obstruct points.
   - "Complete constant-coefficient landing loci are empty in degrees 4, 6, 8, 10"; degree 12 "remains open"; "Finite scans still cannot prove a negative answer" [HAND `R5`]
   - degree 12 reconstructed (dim 48) but only decomposable/low-primitive-support slices excluded; full-rank char-23 solve (rank 1,124) times out [HAND `R5`]
@@ -841,6 +954,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative obstruction — prove the normalized target branch / fold algebra `S_G=(B[u]/(P,P_u))[Σ⁻¹]` retains a residue-degree-one branch of Cramer index 3, i.e. `(Cl/Pic)[3]=0` on a normalized cubic-discriminant-contact model, giving a pointless versal Klein twist (⇒ `BR-T-NEG`). Chain: finite birationality `S→B`; Serre normality (`S₂`+`R₁`); conductor/discriminant contact mod 3; class-group assembly; later reframed to normalize `S_G` directly (avoiding raw elimination of the degree-43 target-branch hypersurface) via subresultant / Hensel / binodal analysis.
 - **Justification:** WORK calls it "the strongest developed negative route... needed facts are finite and local" — an index-3 obstruction on a genuine versal twist would close the headline negatively.
 - **Method:** CAS (msolve, Macaulay2, Singular; saturation, subresultants, RUR)
+- **Record type:** obstruction
+- **Verification class:** mixed — `T_TARGET_BRANCH` PARTIAL-RECOMPUTE (mostly hash/field checks plus an embedded sympy partial-derivative identity); `fold_decision_t8`, `fold_decision_t8n1`, `fold_binodal_t9`, `fold_t11`, `fold_t11b`, `target_branch_mod3` ALGEBRAIC-RECOMPUTE; `fold_normalization`, `fold_normalization_t2r`, `fold_decision_t6`, `target_branch_global`, `target_branch_t10` PARTIAL-RECOMPUTE.
 - **Status:** SUSPENDED-PENDING-T2R — `T-BIRATIONAL` retained; `T-NONNORMAL` and `dim Sing_S=2` suspended/unproved; sub-gates T6/T8/T9 sealed at analytic non-unit results; T10/T11 sealed with `.1` stages undecided; T3 demoted to non-headline after `B-BRIDGE-REFUTED`.
   - PRE-REPAIR (historical): `T-NONNORMAL` proved, `dim Sing_S=2` proved, terminal marker `FOLD_NORMALIZATION_T2_VERIFIER_ACCEPT` treated as proof [STAT/`REPAIR.md`]
   - POST-REPAIR: "Path T: `T-BIRATIONAL` — retained at its stated generic/open theorem boundary"; "`T-NONNORMAL` — **suspended**; not proved by the current T2 packet; pending T2R gate"; "`dim Sing_S = 2` — **unproved**; current exact cuts do not establish it; pending T2R"; required interim label `T2-UNDECIDED pending exact saturated same-open dimension proof`; verifier explicitly must **not** be consumed as proof; "'normalization defect is divisorial' — unproved"; "'`Ann_B(S/B)` is the normalization conductor' — false notation; conductors separated" [HAND `R12`, RES `RES-25`, STAT/`REPAIR.md` §§1–3, §15]
@@ -850,6 +965,10 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
   - `T60-UNDECIDED` [WORK, `DIRECTOR_HANDOFF.md` §8; GIT `11474f5`]
   - `T8-S1-UNDECIDED` (`dc43a86`); `T8-S1-NONUNIT-ANALYTIC` confirmed (`7866c68`); `T9-HENSEL-NONUNIT-SEALED`; `T8-N1` Jacobian correction sealed (`2645c91`) [GIT, WORK]
   - `T-BRANCH-NONNORMAL` (divisorial binodal locus); `T10-BINODAL-NO-3-DEFECT`; `T10.0` sealed, `T10.1 UNDECIDED` (`19e9490`); `T11.0` simple point sealed, `T11.1 UNDECIDED` (`faf6169`); `T11b Route C obstructed` (`715faf4`) [GIT, WORK]
+  - **Qualified by `audit_a1` (2026-08-02 layer; applied here 2026-08-03) — see [E03](#e03):**
+    - **F1 (critical):** `T-BRANCH-NONNORMAL`, the "divisorial binodal locus", is **UNSUPPORTED + SCOPE-DRIFT as a CAS-sealed local form**. It is **analytic work-order input only**: T9 explicitly does **not** seal the completed ordinary-node local model `K'[[x,y,z1,z2]]/(xy)` (`certificates/audit_a1/AUDIT_FINDINGS.md`:47–49, 73–75).
+    - **F2 (high):** `T10-BINODAL-NO-3-DEFECT` is **conditional** — SOUND as pure algebra on an abstract ordinary node, UNCITED-HYPOTHESIS as geometry. Its correct statement is: *if* the completed local ring is an ordinary node, *then* there is no 3-primary local Picard defect (`AUDIT_FINDINGS.md`:90–94, 119–120). The hypothesis is exactly what F1 says is unsealed.
+    - **F4 (high):** the sealed T8 prose asserts Jacobian determinants that were never computed — an **UNSUPPORTED residual**.
   - `T10-FOLD-HEIGHT1`/`T11-FOLD-HEIGHT1` sought but undecided [WORK]
   - `T3-UNDECIDED`; "Local-runner portfolio only; fixed-frame; **not headline after `B-BRIDGE-REFUTED`**" [WORK, `REMAINING_GOALS_NOTE.md`]; ledger: T3 `AUXILIARY OPEN — Fixed-frame/non-headline after B — Local runner only` [STAT]
   - "the strongest developed negative route... needed facts are finite and local"; "Ordinary Picard theory is complete... Neither its vanishing nor a dangerous class has been proved" [WORK, `DIRECTOR_REVIEW_AFTER_BD610A.md` §4 Rank3, §2.4]
@@ -859,13 +978,15 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
     - *Side 2 (`REPAIR.md` + run artifacts):* the T2R gate is **mandatory and pending** with no certified exit among `T2R-NONNORMAL`/`T2R-NORMAL`/`T2R-UNDECIDED`; T3 is blocked from consuming `T-NONNORMAL` until T2R exits; `7fdbe42` leaves T2R.5 explicitly `T2R-UNDECIDED`.
     - Per Binding rule 1, `REPAIR.md` and the run-level artifacts outrank the ledger: suspended-pending-T2R, not terminal. Separately, DIR's `T2-ROUTE-REFUTED` and GIT's `T-NONNORMAL` exit describe the same T2 packet whose conclusion `REPAIR.md` later suspended.
   - **Conflict (certificate ownership):** as in [E06](#e06) — CERT assigns `certificates/target_branch_{global,mod3,t10}` to route B; GIT/WORK tie `target_branch_t10` to T10 and HAND `R11`/`R12` place "target branch" inside Path T. Recorded in both entries; not merged.
-- **What was actually established:** `T-BIRATIONAL` (at its stated generic/open boundary); `S₂` for `S_G`; `dim Sing(S_G) ≤ 2`; analytic non-unit results at T8/T9; a divisorial binodal locus with `T10-BINODAL-NO-3-DEFECT`. NOT established: `R₁`, `T-NONNORMAL`, `dim Sing_S = 2`, any class-group vanishing, or the index-three obstruction. The T2 verifier marker is explicitly not a proof.
+- **What was actually established (flat, unconditional):** `T-BIRATIONAL` (at its stated generic/open boundary); `S₂` for `S_G`; `dim Sing(S_G) ≤ 2`; analytic non-unit results at T8/T9.
+- **Established only conditionally / analytically (per `audit_a1`):** the "divisorial binodal locus" `T-BRANCH-NONNORMAL` is an **analytic work-order input**, not a CAS-sealed local form — T9 does not seal the completed ordinary-node model. `T10-BINODAL-NO-3-DEFECT` holds **conditionally**: as pure algebra on an abstract ordinary node it is sound, but as a statement about *this* branch it presupposes the unsealed ordinary-node hypothesis. Neither belongs in the unconditional list.
+- **NOT established:** `R₁`, `T-NONNORMAL`, `dim Sing_S = 2`, any class-group vanishing, the index-three obstruction, or the T8 Jacobian determinants asserted in sealed prose. The T2 verifier marker is explicitly not a proof.
 - **Aliases:** Path T; T1–T4, T2R, T3, T3A, T6, T8, T8n1, T9, T10, T11, T11b; `T_TARGET_BRANCH`; `T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER`; Attempt 2; Path B "upstairs simple fold" (Elo ten paths); WP-T1; HAND `R11`/`R12`; RES `RES-25`; CERT `fold_*` and (contested) `target_branch_*`
 - **Provenance:** `goal_runs_after_35fa/T_TARGET_BRANCH`; T1–T4 (POST_ELO); T3.1–T4 (HEADLINE); T2R.4–T2R.5 (REVISED); T6.0–T6.3; T8.1–T8.4; T9.0–T9.3; T10.0–T10.3 (+`_CORRECTION.md`); T11.0–T11.3; T3A local RUR exhaustiveness (`c9d75e1`); T3 split into local worker goals (`b49fc81`, `74045be`, `823beb1`); WP-T1; Path B B1–B4 upstairs normalization; `certificates/fold_normalization`, `fold_normalization_t2r`, `fold_normalization_t3`, `fold_decision_t6`, `fold_decision_t8`, `fold_decision_t8n1`, `fold_binodal_t9`, `fold_t11`, `fold_t11b`.
   - `source: external-chatgpt` — `sessions_batch2.md` § `t3-normalization-push-6a70553b.md`; pushed `goals_after_5899d0/T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER/` directly to main at `b49fc81` (README, WORK_ORDER, LOCAL_RUNNER_COMMANDS, ACCEPTANCE_MATRIX, WORKER_GOALS) — **planning documents only, no computed result or verifier packet**. The session delivered no proof, confirms "No T3 workflow exists on main", and notes it accidentally triggered GitHub Actions runs against an explicit local-runner-only instruction (runs failed at a preliminary boundary-audit step; the PR was closed with no changes). The packet itself states a successful T3 would prove only the "fixed-frame index-three theorem" and would **not** close Problem E after `B-BRIDGE-REFUTED`.
   - `source: external-chatgpt` — `sessions_batch1.md` § `github-repo-task-update-6a7054fb.md` records the T3 split into local workers (T3-RUR/NORM/DISC/PIC/INTEGRATE), fixed-frame only after B's failure.
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` authored `Goal T` (`aaab49f`) and `GOAL_T2_TARGET_BRANCH_NORMALIZATION.md` (added by `ba5aa87`; indexed in `37d61c1`); § `progress-on-klein-cubic-6a705563.md` reports the target branch reduced to `ind(C/F)=3`, `C(F)=∅`, `Pic⁰(C)(F)=0`, `Pic(T_D)=ZH_z⊕ZH_λ`, the only escape being the horizontal 3-primary part of `(Cl(T_D)/Pic(T_D))[3]`, and that the critical locus is a **degree-14 curve, not 12 nodes** (killing a hoped-for ODP shortcut).
-- **Pointers:** `REPAIR.md` Parts I, VI, §§1–3, §6, §15; `WORKORDER_CAS_HEADLINE.md` §3; `WORKORDER_CAS_HEADLINE_REVISED.md` §4; `DIRECTOR_HANDOFF.md`; `DIRECTOR_REVIEW_AFTER_BD610A.md`; `CURRENT_PATHS.md` lines 19–90; `certificates/fold_*/`
+- **Pointers:** `REPAIR.md` Parts I, VI, §§1–3, §6, §15; `certificates/audit_a1/` (`AUDIT_FINDINGS.md` F1/F2/F4 — the second correction layer over this track); `WORKORDER_CAS_HEADLINE.md` §3; `WORKORDER_CAS_HEADLINE_REVISED.md` §4; `DIRECTOR_HANDOFF.md`; `DIRECTOR_REVIEW_AFTER_BD610A.md`; `CURRENT_PATHS.md` lines 19–90; `certificates/fold_*/`
 - *Lenses 7/7; confidence certain.*
 
 ---
@@ -876,6 +997,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative obstruction — analyze divisorial valuations on the twist and test whether a place is **transferable** to the genuine (non-fixed-frame) twist via inertia; decide pointlessness of the full residual `f5`/`f6` twist (a valuation/residue construction tied to the degree-11 torus structure) rather than of finite proxies; then classify simultaneous odd normal coefficients and test the trisection genus-two quotient approach (V4).
 - **Justification:** A henselian valuation whose residue twist is pointless would give a genuine (not proxy) pointlessness certificate, closing the headline negatively — the failure mode that sank [E06](#e06) is exactly non-transferability, which this route attacks head-on.
 - **Method:** mixed (CAS + valuation-theoretic argument)
+- **Record type:** obstruction
+- **Verification class:** ALGEBRAIC-RECOMPUTE (`V_GENUINE_VALUATION`, `V3`, `V4`, `G5`).
 - **Status:** PARTIAL — the fixed-frame place is proved non-transferable and the residue normal form / `f5`-`f6` cubic models PASS; V4's simultaneous-normal classification PASSES but its local-path headline route is REFUTED; only residue binaries remain.
   - `V2-FIXED-FRAME-PLACE-NONTRANSFERABLE` [DIR, `goal_runs_after_35fa/V_GENUINE_VALUATION/STATUS.md`]
   - `V-UNDECIDED`; `V3-RESIDUE-NORMAL-FORM-PASS` ("mechanics closed; residual is residue binaries only") [WORK, `REMAINING_GOALS_NOTE.md`]
@@ -891,7 +1014,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
   - `source: external-chatgpt` — `sessions_batch4.md` § `2026-08-03-problem-e-review.md`; packet `goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/` (`THEOREM.md`, `GENUS2_QUOTIENT.md`, `DEGREE25_COROLLARY.md`, `STATUS.md`, `verify.py`, `verify_kappa_genus2.py`), latest commit `fb4bcea`; corroborated by repo log entries `ebb5769`, `08859c0`, `72147bd`. Claimed exits: `V4-SIMULTANEOUS-CLASSIFICATION-PASS`; `M1-TRIPLE-ORDER3-ALL-LINE-DEGREE-EMPTY`; `V4-TRISECTION-GENUS2-QUOTIENT-PASS` (smooth genus-2 curve `C: y²=(κ₊t³+κ₋)((κ₊+4)t³+κ₋+4)`, smooth since resultant `64(κ₊−κ₋)³≠0`, with exact Weil-representation values `κ± = (13±3√33)/16`); `DEGREE25-LANDING-EMPTY`; and `V4-LOCAL-PATH-HEADLINE-ROUTE-REFUTED`, disproved by an explicit primitive line-degree-6 toric-boundary counterexample family (`κ=(B³−1)²/B³`, landing identity `κw³+w(u0²+u1²+u2²)+u0u1u2=0`).
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` authored `GOAL_V_VALUATION_TROPICAL_POINTLESSNESS.md` (added by `400c138`; indexed in `3569d63`).
 - **Pointers:** the four run dirs; `REMAINING_GOALS_NOTE.md`; `GOALS_NEXT_10_ROUTES_2026-08-02.md` #6
-- *Lenses 4/7 (DIR, GIT, STAT, WORK); confidence certain. The `DEGREE25-LANDING-EMPTY` corollary is in tension with [E25](#e25) — see that entry's conflict.*
+- *Lenses 4/7 (DIR, GIT, STAT, WORK); confidence certain. The `DEGREE25-LANDING-EMPTY` corollary was **adjudicated 2026-08-03** (conflict 13): its char-0 content is the order-three branch only — real, and for all line degrees — while the order-two and order-≥4 branches are audited but modular-only. The label overstates its char-0 scope; see [E25](#e25).*
 
 ---
 
@@ -901,6 +1024,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure/negative — build a portable characteristic-zero stabilizer stratification of `P⁴` and `X`, tangent/normal character decorations, local transition modules, and a global inverse-limit ("normal-cone necessity theorem") as an **all-degree necessary-condition screen** for any hypothetical landing covariant; feeds Path G.
 - **Justification:** If the inverse limit of transition conditions is empty, no landing covariant exists in any degree — an all-degree negative with no search.
 - **Method:** CAS
+- **Record type:** infrastructure / obstruction (dual)
 - **Status:** INFRASTRUCTURE-PARTIAL — the stratification, local transition modules, global transition diagram, and border/Fitting integration are built and checked in; WP-6 exited STOP with a formulation; the machine produced no all-degree obstruction.
   - "Problem E remains open" (file-wide) [WORK, `WORKORDER_STRATA_MACHINE.md`]
   - Environment addendum: GAP / SageMath / Singular / PARI / Julia "NOT INSTALLED", blocking WP-1/WP-3 as literally specified [WORK]
@@ -922,6 +1046,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive/negative — decide whether the explicit characteristic-zero ternary cubic `F(a·x+b·C+c·D)=0` (a distinguished Schur-derived plane section of the generic twist) has a `K_proj,C`-point, via genuine elliptic 3-descent (flex algebra, `E[3]`-Kummer class `α_R` built by a typed nested-étale Čech circuit) and via singularity/factoriality analysis of the total space `C6` over the Klein sextic base `H6=V(f6)`.
 - **Justification:** A point on a distinguished plane section would be a point of the twist; conversely a full 3-descent obstruction on a canonical section was the most concrete available negative sub-target.
 - **Method:** mixed (descent arithmetic + heavy CAS)
+- **Record type:** construction / obstruction (dual — closed scoped-negative)
 - **Status:** CLOSED-SCOPED-NEGATIVE — the distinguished plane component provably has no point; explicitly not a headline obstruction; the route is retired.
   - "the original projective xCD plane cubic has no `K_proj,C`-point" (proved for this plane) [RES `RES-04`]
   - "This closes only the plane section `F(a*x+b*C+c*D)=0`, not the full generic twisted Klein cubic threefold; the headline remains open" [RES `RES-04`, SPEC E3]
@@ -945,6 +1070,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive construction — test whether the July-2026 level-11 theta-series / Schwarz-map construction, matched to the repository's exact 5-dimensional Klein representation after monomial conjugacy, yields a Klein-cubic parametrization / landing map.
 - **Justification:** A ready-made modular parametrization matching the Klein representation would supply the landing map directly.
 - **Method:** CAS (series expansion)
+- **Record type:** construction
 - **Status:** CLOSED-REFUTED.
   - "does not lie on the Klein cubic: `F(HΦ₁₁)=ξ₄₄⁵u¹¹+O(u⁹⁹)`... Close this as a headline path" [HAND `R26`]
   - "This particular recent modular lead is therefore closed"; "all 25 classical Hessian-minor tests are nonzero" [RES `RES-14`]
@@ -963,13 +1089,14 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure/positive framework — via Prokhorov's Cremona-rank-3 two-model classification, the Tschinkel–Zhang twisted Pfaffian bridge to `F14` (index ≤2 Brauer class), and a "quadratic descent for cubics" lemma, prove the headline equivalent to the single numeric dichotomy `ed_C(G) ∈ {3,4}`, i.e. to whether the generic projective torsor `C_gen` has a `K_proj`-point.
 - **Justification:** It is the reduction every other entry presupposes: it converts a birational-geometry question into a single rational-point question.
 - **Method:** analytic
-- **Status:** PROVED-INFRASTRUCTURE — the single most load-bearing reduction in the problem; decides nothing on its own.
+- **Record type:** reduction
+- **Status:** **PROVED-ANALYTIC-IN-RESOLUTION** (reclassified 2026-08-03) — the single most load-bearing reduction in the problem; decides nothing on its own. The canonical proof lives in `RESOLUTION.md`: minimal-dimensional versality; Prokhorov's classification; the cubic/`F14` stable birational bridge; index-≤2 splitting; quadratic descent; and the weakly-versal-to-very-versal upgrade. The cited packet `tmp/step4_essential_dimension/` exists **locally only and is not tracked in git** (Binding rule 5), so `RESOLUTION.md` — not that packet — is the portable source for this theorem.
   - "This proves the theorem" — proved unconditionally [RES `RES-23`]
   - "This exact reduction still does not choose between the two values, so the headline remains open" [RES `RES-23`, SPEC]
   - "none of the audited local, Brauer, Amitsur, or standard stable-cohomology invariants decides whether it has a point"; headline "OPEN" [HAND `INF1`]
 - **What was actually established:** the equivalence, unconditionally, in both directions. NOT established: which of the two values holds.
 - **Aliases:** HAND `INF1`; RES `RES-23`; "essential-dimension reduction"; `tmp/step4_essential_dimension`
-- **Provenance:** `tmp/step4_essential_dimension/` (`REPORT.md`, `verify_reductions.py`).
+- **Provenance:** `RESOLUTION.md` "Exact reduction to essential dimension" (portable, committed). Also `tmp/step4_essential_dimension/` (`REPORT.md`, `verify_reductions.py`) — **untracked local scratch**, retained for replay only.
   - `source: external-chatgpt` — `sessions_batch3.md` § `klein-cubic-threefold-psl-6a6b6514.md` reports an apparently from-scratch re-derivation of the same equivalence in-session (equivariant MMP / Prokhorov X-vs-F14 dichotomy, Brauer-index argument with degree-6 CSA of index ∈{1,2}, quadratic-descent lemma for cubic hypersurfaces, Duncan–Reichstein weakly-versal ⇒ very-versal upgrade), reducing to `X_gen(K_proj)≠∅` over the degree-1/4/5/6/7 covariant frame. No commits from that session.
 - **Pointers:** `RESOLUTION.md` "Exact reduction to essential dimension"; `SPEC.md` "There is also a stronger unconditional reduction..."; `HANDOFF.md` "Strongest proved progress" item 1
 - *Lenses 2/7 (HAND, RES); confidence certain.*
@@ -982,6 +1109,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure — fix exact cyclotomic matrices for `G→GL(W)` (660 elements), verify faithfulness and Klein-cubic invariance, compute exact Molien dimensions, and construct an explicit generic torsor / Hilbert-90 model; Sylow/abelian fixed loci.
 - **Justification:** Every other entry computes inside this data; an error here invalidates everything downstream.
 - **Method:** CAS
+- **Record type:** infrastructure
 - **Status:** CERTIFIED-INFRASTRUCTURE — underlies every other route.
   - "This is infrastructure, not a resolution" [RES `RES-24`, SPEC E0]
   - "certified/checked-in; no obstruction/positive claim itself" [HAND `INF2`]
@@ -1000,6 +1128,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure/positive partial construction — build an explicit Hilbert-90 trivialization of the generic twisted ambient five-space from primitive covariants `x, C, D, E, K` of degrees 1,4,5,6,7 (determinant `Δ` nonzero at a sample point), writing `F(Ma)=0` over `C(W)^G` and reducing the generic-twist point problem to one cubic `Φ(a)=0` in five variables over `K_proj = C(P(W))^G`; exclude all ten frame coordinate lines as trivial roots.
 - **Justification:** This is the coordinate system in which the headline is stated as a single cubic equation — the object `V(Φ)` that [E16](#e16)/[E17](#e17) try to find a point on.
 - **Method:** CAS
+- **Record type:** infrastructure
 - **Status:** CERTIFIED-INFRASTRUCTURE — the standing coordinate system for [E06](#e06), [E17](#e17), [E35](#e35), [E40](#e40).
   - "This completes the generic ambient-space descent explicitly. It does not produce a nonzero `a∈K_0^5` with `Φ(a)=0`; that is precisely the remaining generic-twist point problem" [RES `RES-03`]
   - "explicitly trivializes"; ten coordinate lines "excluded"; frame point must use ≥3 coordinates [HAND `INF3`]
@@ -1019,6 +1148,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure / degree-free reformulation of the KLS landing problem — prove algebraic independence of the five primaries `f3,f5,f6,f8,f11`, install a free Hironaka basis (12 secondaries), the full multiplication table and a `τ=f3²/f5`-normalized degree-12 model, define a flat connection `∇` on `K_proj⁵`, and recast the headline as solving (or proving universal nonvanishing of) the rational PDE `det[a,∇₁a,…,∇₄a]=0` over `P⁴(C(P(W))^G)`.
 - **Justification:** It removes the artificial polynomial-degree parameter that makes every other search a bounded scan; a solution is a landing covariant and universal nonvanishing is the negative answer.
 - **Method:** mixed (CAS arithmetic circuits + analytic PDE)
+- **Record type:** infrastructure
 - **Status:** OPEN-REFORMULATION — the cleanest degree-free statement of the headline; unsolved, and the finite-generation shortcut is provably unavailable.
   - "certified"; "No solution or universal-nonvanishing theorem is known"; 121 constant / 440 Hironaka-linear ansätze and 15 gradient-cross-product covariants "fail to land" [HAND `INF4`]
   - infrastructure complete (`[K_proj:P0]=12`; rank-12 Hironaka basis; connection matrices as exact arithmetic circuits); "the full rational PDE remains unsolved" [STAT]
@@ -1037,6 +1167,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive construction — use Voisin's rank-2-vector-bundle construction (a dominant map from a product of Grassmannians to the Hilbert scheme `X^[3]` of 3 points on the Klein cubic), prove `C^[3]` is `G`-very-versal, and equivariantly select one of the three points to reduce to `X`.
 - **Justification:** Very-versality of `C^[3]` is a genuine positive result; if a single point of the degree-3 cycle could be selected equivariantly, the headline would close positively.
 - **Method:** analytic
+- **Record type:** construction
 - **Status:** CLOSED-CIRCULAR — the versality is real; the selection step is circular.
   - "`C^[3]` is `G`-very-versal" (proved positive infrastructure) [RES `RES-12`]
   - "gives a source birationally fibered over C and is therefore **circular** for the missing point" [HAND `R28`]
@@ -1056,6 +1187,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive classical-geometry construction — build an equivariant point from orbit configurations (`C11, C5, V4, C3` fixed loci; the 220-point orbit and its complete-intersection links) using secant/chord (third-intersection) constructions, iteratively reducing a `G`-orbit to a single point or a pair.
 - **Justification:** The most elementary possible positive construction: if any chord tree folds an orbit to a singleton, that singleton is the required point.
 - **Method:** mixed (analytic + CAS enumeration)
+- **Record type:** construction
 - **Status:** CLOSED-FOR-FINITE-CONSTRUCTIONS — binary chord folding is excluded; the degree-74 semilinear interpolation curve remains a named open positive target.
   - "these are finite-construction no-gos, not an exclusion of continuous covariants"; "A torsor-dependent semilinear degree-74 curve remains a precise positive target" [HAND `R27`]
   - "This excludes only finite-orbit binary folding. It does not exclude a continuous covariant mixing an entire orbit at once"; "no such binary chord tree reaches a singleton or a two-point orbit" [RES `RES-13`]
@@ -1074,6 +1206,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** positive — examine whether Gross–Popescu's identification of the level-11 abelian-surface moduli space `A^lev_11` with the Klein cubic (with matching change-of-level `G`-action) furnishes an equivariant parametrization.
 - **Justification:** A moduli interpretation with the right action could produce a rational source for free.
 - **Method:** analytic (literature)
+- **Record type:** construction
 - **Status:** REJECTED — restates the problem.
   - "This does not furnish an equivariant parametrization... No linear or already very versal source for the deck action is produced, so the modular interpretation **restates rather than solves** the current problem" [RES `RES-15`]
 - **What was actually established:** that the identification exists but supplies no source. Nothing usable.
@@ -1090,6 +1223,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative — test whether equivariant integral-decomposition-of-the-diagonal / equivariant Burnside-invariant machinery supplies an obstruction.
 - **Justification:** These are the standard modern obstructions to equivariant rationality; if one applied, it would close the headline negatively.
 - **Method:** analytic (literature)
+- **Record type:** obstruction
 - **Status:** REJECTED — wrong direction of implication in both senses.
   - "does not furnish a new obstruction here... failure of decomposition would not obstruct mere `G`-unirationality. Conversely, its existence would not prove `G`-unirationality" [RES `RES-16`]
 - **What was actually established:** the logical mismatch. Nothing about `X`.
@@ -1106,6 +1240,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative obstruction — seek a cohomological obstruction (universal-torsor class, higher Amitsur groups, Brauer group of twists) to `G`-unirationality.
 - **Justification:** A nonvanishing cohomological class surviving restriction to all subgroups would obstruct the map.
 - **Method:** analytic
+- **Record type:** obstruction
 - **Status:** CLOSED-EXHAUSTED.
   - "the higher Amitsur route is **exhausted** here because `Pic(X)=Z[H]` and `O_X(1)` is honestly `G`-linearized, so the relevant groups vanish after restriction to every subgroup" [HAND `R30`]
   - "The ordinary and all higher Amitsur obstructions vanish, even after restriction to subgroups... These are necessary-condition checks, not point theorems" [RES `RES-17`]
@@ -1124,6 +1259,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative — force `ed(G)=4` via prime-local essential dimensions.
 - **Justification:** `ed_p(G) ≤ ed(G)`; a prime-local value of 4 would settle it.
 - **Method:** analytic
+- **Record type:** obstruction
 - **Status:** REJECTED — numerically impossible.
   - "Prime-local essential dimension **cannot** force the value four: the local values are two at 2 and one at 3, 5, and 11" [RES `RES-18`]
 - **What was actually established:** the explicit local values (2 at p=2; 1 at p=3,5,11), which are all too small. Route is dead on numerics.
@@ -1140,6 +1276,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative — examine whether the known `G`-birational superrigidity of `X` supplies a negative resolution.
 - **Justification:** Superrigidity is a strong known theorem about `X`; if it applied it would be free.
 - **Method:** analytic
+- **Record type:** obstruction
 - **Status:** REJECTED — proves the wrong statement.
   - "Birational rigidity is not a negative answer... a dominant map `U⇢X` may have degree greater than one" [RES `RES-19`, SPEC pitfalls]
   - "Equivariant birational superrigidity excludes birational linearization, not a dominant equivariant map of higher degree" [RES `RES-19`]
@@ -1158,6 +1295,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** conditional positive — invoke the CSD conjecture (a cubic hypersurface with a zero-cycle of degree prime to 3 has a rational point) for the restricted family of Klein-cubic twists, all of which already carry a degree-one zero-cycle.
 - **Justification:** The degree-one zero-cycle is already established; CSD would convert it to a point immediately.
 - **Method:** analytic (conditional)
+- **Record type:** conditional implication
 - **Status:** CONDITIONAL — would settle the headline positively; not usable as a resolution.
   - "would prove that `X` is `G`-unirational and `ed(G)=3`" (conditional, unproved) [RES `RES-20`]
   - "A proof conditional on one of the conjectures below is **not a resolution** unless that conjecture is proved in the required case" [RES `RES-20`, SPEC]
@@ -1175,6 +1313,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** conditional positive — invoke Conjecture 8.8 (Sylow-subgroup versality implies `G`-versality); since every Sylow restriction on `X` is already versal (Condition A holds), this gives `G`-unirationality directly.
 - **Justification:** The hypothesis is already verified for `X`; only the conjecture is missing.
 - **Method:** analytic (conditional)
+- **Record type:** conditional implication
 - **Status:** CONDITIONAL — and raises the stakes of a negative answer.
   - "would prove that `X` is `G`-unirational and that `ed(G)=3`" (conditional, unproved) [RES `RES-21`]
   - a negative headline resolution "would also **refute** Duncan–Reichstein Conjecture 8.8 in this example, because every Sylow restriction is already versal" [RES `RES-21`]
@@ -1192,6 +1331,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** conditional negative — invoke Dolgachev's proposed inequality `Crdim(G) ≤ ed(G)`; since Prokhorov proves `Crdim(G)=4`, this forces `ed(G)=4` and rules out `G`-unirationality.
 - **Justification:** `Crdim(G)=4` is a proved input; only the inequality is conjectural.
 - **Method:** analytic (conditional)
+- **Record type:** conditional implication
 - **Status:** CONDITIONAL — the mirror-image stake to [E49](#e49).
   - "would instead give `ed(G)=4`, which rules out `G`-unirationality of `X`" (conditional, unproved) [RES `RES-22`]
   - "a positive solution would give `ed(G)=3` and a **counterexample to Dolgachev's proposed inequality**" [RES `RES-22`]
@@ -1209,6 +1349,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure/negative-clearance — recurring due-diligence sweep for a turnkey theorem or software that would shortcut a route: Kresch–Tschinkel versal-twist reduction, Poonen–Stoll discriminant-valuation theorem, Jung–Saito defect/factoriality revisions, Spicer–Tasin, Robbiano border-basis survey, Groebner.jl change-matrix API, June-2026 BSS/Koszul-homology spline paper, Magma/OSCAR/HomotopyContinuation.jl availability, and the 2026-07-18 Cheltsov–Tschinkel–Zhang manuscript.
 - **Justification:** Prevents wasted effort on already-solved sub-problems and catches any theorem that would close the headline outright.
 - **Method:** analytic (literature/tool audit)
+- **Record type:** audit/repair
 - **Status:** ONGOING-CLEARANCE — no turnkey theorem exists; one absorbed import (Poonen–Stoll).
   - "found no recent theorem that closes the headline" [HAND `R32`]
   - Poonen–Stoll "closes those components as local-obstruction places... says nothing about the global torsor"; Jung–Saito "does not compute `Cl(B)` or `Cl(C6)`"; Groebner.jl "the public high-level route is stopped"; BSS/Koszul "generic hyperplane-fan theorems do not apply directly" [HAND `R32`]
@@ -1230,6 +1371,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** proposed positive/analytic search — identify the Problem-E analogue of a prior successful del Pezzo closure mechanism: a canonical torsor, universal family section, or equivariant intermediate object whose existence is *equivalent* to `G`-unirationality of `X`.
 - **Justification:** The del Pezzo problems in this repo were closed by finding such an equivalent object; the same move might work here.
 - **Method:** analytic
+- **Record type:** proposal/unrun
 - **Status:** PROPOSED-UNRUN.
   - Listed as priority-2 dispatch item; "Type: analytic"; **not yet run** [WORK]
 - **What was actually established:** nothing; specification only.
@@ -1246,6 +1388,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** proposed positive search — look through cubic threefolds, Fano varieties and finite-simple-group actions for previously unknown examples where equivariant unirationality was settled by a **hidden intermediate variety** rather than by representation covariants, in order to import the technique.
 - **Justification:** Every in-repo positive attempt goes through representation covariants; a different published mechanism would be a genuinely new attack.
 - **Method:** analytic (literature)
+- **Record type:** proposal/unrun
 - **Status:** PROPOSED-UNRUN.
   - Listed as priority-9 dispatch item; **not yet run** [WORK]
 - **What was actually established:** nothing; specification only.
@@ -1262,6 +1405,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** negative construction (proposed, not executed) — exhibit an explicit `G`-torsor over an infinite field whose Klein twist has **no** rational point, which would prove both the negative headline and `ed(G)=4`.
 - **Justification:** This is the canonical statement of what a negative resolution looks like; every negative route is ultimately trying to produce or certify such an object.
 - **Method:** analytic/construction
+- **Record type:** proposal/unrun
 - **Status:** OPEN-TARGET — no candidate constructed.
   - "An explicit `G`-torsor whose Klein twist has no point would prove both the negative headline and `ed(G)=4`" [HAND `R29`]
   - "The sharp negative target is any boundary-zero `G`-torsor ... whose Klein twist has no point" [HAND, "2026-07-30 audited delta" item 2]
@@ -1279,6 +1423,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Target:** infrastructure/meta — audit every standing exit label in the project against its actual proof, downgrade overclaimed labels, and specify mandatory repair gates.
 - **Justification:** Governs the truth-value of every other entry. Per Binding rule 1 its verdicts outrank all later narrative documents including the offline 08-02 ledger.
 - **Method:** analytic (document/proof audit)
+- **Record type:** audit/repair
 - **Status:** APPLIED — the governing correction layer.
   - `78abba4` "Klein cubic: audit A1 -- theorem-boundary audit of every standing exit" [GIT]
   - "Trusted results retained": Path A `P¹`-reduction; Path A index-34 duality; corrected Hodge-center split-injection theorem after §8 substitution; Path G finite truncation and isolation cutoff; Path G4.1 free-fibre recurrence; P25.1 `P25-TOWER-SURVIVES`; `T-BIRATIONAL` [HAND, RES, STAT]
@@ -1293,11 +1438,13 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 
 ## External sessions
 
-15 offline ChatGPT sessions, summarized in `notebook_build/sessions_batch{1,2,3,4}.md`.
-Per Binding rule 4, **nothing below is machine-verifiable**; claims must be
-re-derived in-repo before affecting the headline. Where a session's push landed
-in the repo, the commit is cited in the corresponding attempt entry above with
-the tag `source: external-chatgpt`.
+16 offline ChatGPT sessions. The first 15 are summarized in
+`notebook_build/sessions_batch{1,2,3,4}.md`; the 16th
+(`notebook-review-6a707542.md`) post-dates that build and is recorded from
+`external_sessions/` directly. Per Binding rule 4, **nothing below is
+machine-verifiable**; claims must be re-derived in-repo before affecting the
+headline. Where a session's push landed in the repo, the commit is cited in the
+corresponding attempt entry above with the tag `source: external-chatgpt`.
 
 | Session file | Title / gist | Date | Kind | Key outcomes | Repo artifacts |
 |---|---|---|---|---|---|
@@ -1316,6 +1463,7 @@ the tag `source: external-chatgpt`.
 | `g-equivariant-rational-maps-6a70559f.md` (b4) | Obstructions from fixed strata / normal cones (LaTeX) | 2026-07-31 | planning (theory + survey) | Graph/valuative/normal-cone necessity theorems; retracts "exceptional-chain" for "fixed-divisor constancy"; proves **no inheritance theorem**; Klein involution locus has both a rational line and an elliptic curve | none (sandbox `.tex`/`.pdf` only) |
 | `mathematical-machine-implementation-6a7055b7.md` (b4) | Universal fixed-stratum machine work order (P0–P8) | none (refs `62a3fcb`) | planning (work order + proof notes) | 9-part work order; LaTeX proof notes for OD16 and C9⋊C3; **Priority-0 checkers never built or run** | none (sandbox `.md`/`.tex`/`.pdf`/`.zip`) |
 | `2026-08-03-problem-e-review.md` (b4) | Problem E review, ledger, ranking, V4 proof attempt | 2026-08-02 content / 2026-08-03 session | mixed (ledger + self-critique + execution) | Pushed the 08-02 ledger and 10-route goals; self-audit found them "already materially stale"; V4 classification PASS, genus-2 quotient PASS, `DEGREE25-LANDING-EMPTY`, and `V4-LOCAL-PATH-HEADLINE-ROUTE-REFUTED` | `61b1902`, `f1f0be5`, `fb4bcea` (+ `ebb5769`, `08859c0`, `72147bd`) |
+| `notebook-review-6a707542.md` | "Review of NOTEBOOK.md" | 2026-08-03 | review | 8 material corrections + structural changes proposed; adjudicated against artifacts before application (Binding rule 4). **CONFIRMED:** E03/E28 content misses, E32 T10 conditionality, G3H interface-only, G3D internal contradiction, F14 sufficient-not-equivalent. **REFUTED:** the A0 downgrade, unconditional degree-25 closure. **PARTIAL:** E25 staleness | none |
 
 ### Sessions that made load-bearing claims
 
@@ -1341,6 +1489,8 @@ the tag `source: external-chatgpt`.
 
 **`2026-08-03-problem-e-review.md`** — pushed `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02.md` (`61b1902`) and `GOALS_NEXT_10_ROUTES_2026-08-02.md` (`f1f0be5`), then self-audited both as "already materially stale" (G4/H6/G5/Q3 had completed packets listed as "not started"; G3H phase-4 field points unbuilt; phase-3/4 "independent verifiers" check hashes and strings, not algebra; G3D's phase ledger says `PASS` while its prose says `UNDECIDED`). Its own execution attempt produced `V4-SIMULTANEOUS-CLASSIFICATION-PASS`, `M1-TRIPLE-ORDER3-ALL-LINE-DEGREE-EMPTY`, `V4-TRISECTION-GENUS2-QUOTIENT-PASS` (`κ± = (13±3√33)/16`; genus-2 curve smooth since resultant `64(κ₊−κ₋)³≠0`) and a `DEGREE25-LANDING-EMPTY` corollary — but then found an explicit primitive line-degree-6 toric-boundary counterexample family refuting the blanket local-V4-path strategy (`V4-LOCAL-PATH-HEADLINE-ROUTE-REFUTED`). Headline left OPEN, with a stated personal "modestly negative" lean.
 
+**`notebook-review-6a707542.md`** — a review *of this notebook* rather than of the mathematics; it produced no repo artifacts. It proposed eight material corrections plus structural changes (record typing, verification-class data, a layered precedence rule). Per Binding rule 4 its claims were **adjudicated against repo artifacts before any of them were applied**, and the split matters. **Confirmed:** [E03](#e03) and [E28](#e28) were carrying real content misses (an entire 8-finding audit layer, and a four-part theorem, both described in the notebook as "unknown" / "exit label only"); [E32](#e32)'s `T10-BINODAL-NO-3-DEFECT` is conditional, not flat; G3H is interface-only; G3D contains a genuine internal contradiction; the `F_{14,T}` bridge is sufficient, not equivalent. **Refuted:** its proposal to downgrade A0 to packet-consistency-only (A0 in fact recomputes 4140/315 independently — see [E02](#e02)), and its reading that degree 25 is unconditionally closed (the order-two and order-≥4 branches lack a characteristic-zero transfer, so the bounded cutoff stays at 24). **Partial:** its "E25 is stale" complaint — the order-three branch closure is real, but the closure is not the whole degree. Applied corrections are listed in `## 2026-08-03 review round`.
+
 ### Sessions with no load-bearing repo claims
 
 `t3-normalization-push-6a70553b.md` delivered a work-order packet only, with no proof and no exit ([E32](#e32)); it also accidentally triggered GitHub Actions runs against an explicit local-runner-only instruction. `g-equivariant-rational-maps-6a7055aa.md`, `g-equivariant-rational-maps-6a70559f.md`, and `mathematical-machine-implementation-6a7055b7.md` are theory/planning sessions that pushed nothing; the latter two nevertheless assert repo facts (Klein involution fixed-locus structure, the character of the repo's PSL(2,7) argument, OD16/Fermat fixed-scheme data) that were never machine-checked.
@@ -1349,11 +1499,51 @@ the tag `source: external-chatgpt`.
 
 **(a) Connector/tool outputs are redacted and unrecoverable.** The share pages redact tool output. `repo-push-results-6a70552d.md` alone ran ~500 tool calls that are "almost entirely redacted". The derivations behind several sealed claims — notably the `Γ_eff` finiteness argument in `task-b-in-repo-6a70554b.md` — are therefore not inspectable from the transcripts at all.
 
-**(b) Session claims are not machine-verifiable (Binding rule 4).** Nothing in this section may move the headline until re-derived in-repo. Where a session's packet ships a `verify.py`, that script generally checks hashes, JSON validity, and text markers — not the algebra (see Verification debt item 1).
+**(b) Session claims are not machine-verifiable (Binding rule 4).** Nothing in this section may move the headline until re-derived in-repo. Where a session's packet ships a `verify.py`, that script **usually does recompute the algebra** — measured 2026-08-03 as 69 of 75 `goal_runs` verifiers and 13+10 of 26 sampled certificate packets. The exceptions are named and few: `R0`, `B_FIXED_FRAME_EXHAUSTIVENESS_20260802`, the Q descent-obstruction run, G3H phase 4, `elliptic_lifting`, and `pfaffian_point` (see Verification debt item 1 and `notebook_build/verifier_depth.md`).
 
 **(c) `g-equivariant-rational-maps-6a7055aa.md` had NO repo access.** The assistant states plainly (verbatim): "I do not have the repository contents available from the current tool context, so I cannot honestly claim to have read the exact implementation" — paraphrased above as "could not access the repository contents" — and produced a from-scratch generic framework instead. Its apparent matches to repo terminology (fixed-locus obstruction, stratification monotonicity, inertia/quotient-stack formulation) are **coincidental**. If that framework is ever invoked to justify or extend an in-repo obstruction argument (B, Q2.1, V3, H5/H6), it must first be checked against those packets' actual definitions.
 
 **(d) "L1" name collision.** `mattrobball-unirational-task-6a7054e2.md` uses `L1` for the **full polar range recursion** ([E23](#e23), commit `82de03d`, `goal_runs_after_7030dd/L1_FULL_POLAR_RANGE/`). `github-repo-task-update-6a7054fb.md` independently coins `L1` for **"ambient self-map rigidity"**, an entirely different proposed route citing a "G-birationally superrigid" theorem. These are two different objects sharing one label; the first session had to spend effort disambiguating what "packet L1" even meant. Do not conflate them, and do not read `L1-FULL-RANGE-PASS` as bearing on self-map rigidity.
+
+---
+
+## 2026-08-03 review round
+
+An external review of this notebook (`external_sessions/notebook-review-6a707542.md`)
+was extracted; its claims were then **confirmed or refuted against repo artifacts by
+three confirmation agents**, and four class sweeps were run over the notebook as a
+whole:
+
+- **Verifier depth (×2 sweeps)** — every `goal_runs` verifier and 26 sampled
+  certificate packets were classified ALGEBRAIC-RECOMPUTE / PARTIAL-RECOMPUTE /
+  CONSISTENCY-ONLY / NO-VERIFIER. Result: `notebook_build/verifier_depth.md`, now
+  the source for every **Verification class:** line above and for the rewritten
+  Verification debt item 1.
+- **Thin-entry / mixed-label sweep** — looked for entries whose recorded content
+  was thinner than their packets. **One additional miss found beyond those the
+  review named: [E21](#e21)**, whose base-locus/Prym structure theorem was absent.
+  Now fixed.
+- **Cross-route supersession sweep** — checked whether any route silently
+  supersedes another. **None found beyond the known V4→P25 case** (conflict 13).
+- **Sub-PASS context sweep** — confirmed every sub-`PASS` label in the notebook
+  carries its governing context (scope, parent exit, or conditionality).
+
+Corrections applied in this round, by entry:
+
+| Entry / section | Correction |
+|---|---|
+| [E02](#e02) + debt 13 | A0's 4140/315 **independence confirmed** (C/FLINT recompute, `reads_4140_from_json: false`); the review's downgrade proposal REFUTED; that debt sub-claim RESOLVED |
+| [E03](#e03) + Index + identity table | "Contents not characterized" replaced by the actual 510-line, 8-finding audit layer; record type set to audit/repair; identity-table verdict UNRESOLVED → characterized |
+| [E07](#e07) | `F_{14,T}` `K_proj`-point restated as **sufficient, one-directional** (Arrows B and C PASS; Arrow A `FAIL-SCOPE`); stable-factor trap cited. [E08](#e08) checked — already forward-only; [E26](#e26) already correct |
+| [E09](#e09) | Research lead added: V4's char-0 all-line-degree `M1-TRIPLE-ORDER3-...-EMPTY` has never been applied to the degree-31/35 `m=1` modules |
+| [E17](#e17) + conflict 15 | G3H demoted to interface-installed (`INTERFACE_INSTALLED`, marker/hash-only verifier); G3D contradiction adjudicated as a `STATUS.md` JSON-block bug with `SEAL.json` governing |
+| [E21](#e21) | Base-locus log-resolution / Prym structure recorded (stabilizer `C₂`, orbit 330, averaging scalar 198, CM discriminant −11) |
+| [E25](#e25) + Index + conflict 13 + debt 6 | State → "OPEN at degree 25 — order-3 branch closed in char 0; other branches modular-only"; "inherited unverified" → "independently audited, modular-only"; char-0 cutoff **kept at 24** |
+| [E28](#e28) | "Exit label only" replaced by the four-part Pfaffian/elliptic-quintic theorem and its explicit non-exclusions |
+| [E32](#e32) | `T-BRANCH-NONNORMAL` and `T10-BINODAL-NO-3-DEFECT` moved out of the flat established list into conditional/analytic form, per `audit_a1` F1/F2/F4 |
+| [E37](#e37) | Reclassified PROVED-ANALYTIC-IN-RESOLUTION; `RESOLUTION.md` named as the portable source (its `tmp/` packet is untracked) |
+| Binding rules | Rule 1 replaced by a layered precedence rule; new rule 5 records that all `tmp/` citations are untracked local scratch |
+| Whole notebook | 55 **Record type:** lines and 26 **Verification class:** lines added; "55 attempts" reframed as "55 records"; Verification debt item 1 rewritten from a blanket claim to a measured one |
 
 ---
 
@@ -1363,12 +1553,20 @@ Aggregated from the `verify_flags` of all four sessions files plus the canonical
 ledger's conflicts. Priority order 1–8 is fixed by the strategic weight of the
 claim; 9+ are ordered by route.
 
-### 1. Packet `verify.py` scripts check hashes and markers, not algebra — systemic
+### 1. Verifier depth — the weak spots are six named packets, not the whole seal regime
 
-- **Claim under test:** that a `verify.py`/`SEAL.json` replay constitutes verification of a packet's mathematics.
-- **Why load-bearing:** this is the foundation of the entire seal regime, and it is false. Three independent sessions say so: `repo-push-request-6a705556.md` ("checks only self-consistency — Bézout arithmetic, git-blob hashes, presence of required text markers — and explicitly does **not** machine-verify the cited Grothendieck–Lefschetz or Jodi Black theorems; mathematical correctness of Theorems 2.1–5.1 rests entirely on unverified prose/LaTeX"); `finish-g-g2-theorem-6a705522.md` ("only local packet self-consistency checks (hashing, JSON structure, text markers) were executed"); `2026-08-03-problem-e-review.md` ("phase-3/4 'independent verifiers' check hashes/strings, not algebra"). Binding rule 3 already states this; the debt is that packets are nonetheless cited as if replay settled them.
-- **Where it lives:** every `goal_runs_after_*/*/verify.py` and `SEAL.json`.
-- **What verification looks like:** a per-packet triage marking each verifier as `HASH-ONLY`, `ARITHMETIC`, or `ALGEBRA`; then, for every packet whose exit label is cited in a headline argument, an independent re-derivation of the mathematical step rather than a replay.
+- **Claim under test:** the blanket statement that "packet `verify.py` scripts check hashes and markers, not algebra", i.e. that a `verify.py`/`SEAL.json` replay never verifies a packet's mathematics.
+- **Measured result (2026-08-03, `notebook_build/verifier_depth.md`):** the blanket claim is **wrong as a generalization**. In the `goal_runs` layer, **69 of 75** run/sub-run verifiers ALGEBRAIC-RECOMPUTE — they independently reconstruct the objects and re-verify identities, ranks, or emptiness computationally; there are **zero** packets with no verifier at all. In the certificates layer, **13 of 26** sampled packets ALGEBRAIC-RECOMPUTE and a further **10** PARTIAL-RECOMPUTE. The weak verifiers number roughly 6 out of ~100.
+- **The actual weak spots — these, and only these, are the debt:**
+  - `R0_CANONICAL_REFRESH` ([E29](#e29)) — CONSISTENCY-ONLY, and the only `-PASS` primary exit resting on one. Already marked stale.
+  - `B_FIXED_FRAME_EXHAUSTIVENESS_20260802` ([E06](#e06)) — CONSISTENCY-ONLY (JSON dimension fields and text markers), and it backs `B-BRIDGE-REFUTED`, a headline-load-bearing negative sitting over an analytic finiteness citation. **This is the one that matters** — see debt item 3.
+  - `Q_SCHUR_INDEX_ONE_DESCENT_OBSTRUCTION_20260802` ([E27](#e27)) — CONSISTENCY-ONLY (git-blob hashes and markers), matching that session's own disclosure.
+  - G3H phase 4 ([E17](#e17)) — interface bookkeeping only; the `INTERFACE_INSTALLED` frame.
+  - `certificates/elliptic_lifting` ([E28](#e28)) — its internal `PROVED_AS_REGRESSION` marker is accepted by hash-check/field-read only.
+  - `certificates/pfaffian_point` ([E26](#e26)) — NO-VERIFIER; it hosts the `FAIL-SCOPE` bridge audit, which is an analytic audit document by nature.
+- **Why still load-bearing:** Binding rule 3 stands — replay is not verification of an analytic implication a verifier merely reads from JSON or Markdown. But the correct posture is targeted, not systemic: re-derive the six above rather than distrusting all ~100.
+- **Where it lives:** `notebook_build/verifier_depth.md` holds the full per-packet tables for both layers.
+- **What verification looks like:** for each of the six named packets whose exit label is cited in a headline argument, an independent re-derivation of the mathematical step rather than a replay. The per-packet triage this item used to ask for **has now been done** — it is `verifier_depth.md`.
 
 ### 2. G2 five-way reduction + `G3-DOMINANCE-AUTOMATIC` — foundation of the current strategy
 
@@ -1405,7 +1603,7 @@ claim; 9+ are ordered by route.
 - **Why load-bearing:** `κ±` underpins both the emptiness theorem and the genus-2/degree-25 corollary, while the counterexample family is the sole reason `V4-LOCAL-PATH-HEADLINE-ROUTE-REFUTED` was declared and the whole local strategy abandoned. If the counterexample is wrong, a live negative route was abandoned prematurely.
 - **Where it lives:** `goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/` (`THEOREM.md`, `GENUS2_QUOTIENT.md`, `DEGREE25_COROLLARY.md`, `verify.py`, `verify_kappa_genus2.py`); commits `04d1d1c`, `bc56247`, `ebb5769`, `fb4bcea`, `08859c0`, `72147bd`.
 - **What verification looks like:** re-derive `κ±` from the certified Weil representation ([E38](#e38)); actually run `verify_kappa_genus2.py` (the reviewing session described the replay but did not re-run it independently); recompute the resultant and the counterexample family's landing identity symbolically. **Also resolve the `DEGREE25-LANDING-EMPTY` vs [E25](#e25) tension** — see conflict 13.
-- **Verified scoping (confirmed 2026-08-03):** `DEGREE25_COROLLARY.md` proves only the order-three branch of the degree-25 filtration (via Theorem 2.12, scoped to `A4`-equivariant, `m=1` involution-plane order, exact triple-line order three, any line degree); the order-two and order-≥4 branches are inherited unverified from the HANDOFF-era filtration. The corollary's own text: "It is not an all-degree theorem and does not settle equivariant unirationality." See [E25](#e25) and conflict 13.
+- **Verified scoping (adjudicated 2026-08-03):** `DEGREE25_COROLLARY.md` proves only the order-three branch of the degree-25 filtration — but it proves it **in characteristic zero for all line degrees** (Theorem 2.12, scoped to `A4`-equivariant, `m=1` involution-plane order, exact triple-line order three). The order-two and order-≥4 branches are **independently audited but modular-only** (split fibre `F_67`; the from-scratch audit rebuilt the complete degree-25 space, both jet filtrations, the 56/56 landing span and the 3124/3124 overlap rank — `HANDOFF.md` ~1061–1066), *not* "inherited unverified" as previously written. What they lack is a characteristic-zero bridge, so the exit label `DEGREE25-LANDING-EMPTY` overstates its char-0 scope. The corollary's own text: "It is not an all-degree theorem and does not settle equivariant unirationality." See [E25](#e25) and conflict 13.
 
 ### 7. M3 full replay never executed
 
@@ -1451,10 +1649,11 @@ claim; 9+ are ordered by route.
 
 ### 13. Degree-exclusion and covariant-module computations
 
-- **Claims:** per-degree exclusions for 22–24 ("unit ideal on all charts", computational); the P25 quartic-membership counts 4140/315, **explicitly self-flagged as read from producer JSON and not independently recomputed**; the COV zero-module claims for `(d,m,e)=(25,3,7),(31,5,1),(35,5,5)`.
+- **Claims:** per-degree exclusions for 22–24 ("unit ideal on all charts", computational); ~~the P25 quartic-membership counts 4140/315~~ (**RESOLVED**, see below); the COV zero-module claims for `(d,m,e)=(25,3,7),(31,5,1),(35,5,5)`.
 - **Why load-bearing:** the degree ladder of [E16](#e16) and the "degree 25 is first open" framing rest on them, as does the reduction of degrees 25/31/35 to the `m=1` case.
-- **Where:** `tmp/degree22_compression`, `degree23_common_line_landing`, `degree24_landing`; `goal_runs_after_35fa/A0_CANONICAL_AUDIT`; `goal_runs_after_35fa/COV_M1_DEG31_35`.
-- **Verification:** independently recompute 4140/315 from the certified action rather than reading the producer JSON; re-run the chart computations for 22–24; re-derive the three zero-module claims. Also retire or correct the invalid exit label `COV-STRUCTURED-DEGREES-EMPTY-SCOPED`.
+- **Where:** `tmp/degree22_compression`, `degree23_common_line_landing`, `degree24_landing` (all untracked local scratch, Binding rule 5); `goal_runs_after_35fa/A0_CANONICAL_AUDIT`; `goal_runs_after_35fa/COV_M1_DEG31_35`.
+- **4140/315 sub-claim — RESOLVED 2026-08-03.** A0 **does** recompute these independently, contrary to the external session's self-flag and to a later review's proposal to downgrade A0 to packet-consistency-only. `verify_p25_bulk_projection.c` rebuilds `π(G)` and all 4140+315 test vectors from sealed, hash-cross-checked binary inputs and recomputes membership by random sparse projection + FLINT RREF over `F_89`; `verify_p25_bulk_projection_result.json` records `reads_4140_from_json: false`, and the expected values are hardcoded pass literals compared against runtime-computed figures. The real defect — the stock `verify_p25v0.py` asserting JSON fields only — was found and repaired **by A0 itself** (`VERIFIER_REPLAY.md`:33–35). See [E02](#e02).
+- **Verification (remaining):** re-run the chart computations for 22–24; re-derive the three zero-module claims. Also retire or correct the invalid exit label `COV-STRUCTURED-DEGREES-EMPTY-SCOPED`.
 
 ### 14. Was T3.0–T3.5 ever executed?
 
@@ -1477,7 +1676,17 @@ The three with headline consequences are: **T-track terminality** (the 08-02 led
 says `TERMINAL`, `REPAIR.md` holds the T2R gate pending — resolve by exiting T2R);
 **KLS terminality** (ledger says `TERMINAL`, `CURRENT_PATHS.md` lists open branches
 — resolve by deciding whether the framework is authorized); and the **`certificates/elliptic_lifting` ownership**
-question, which determines whether [E28](#e28)'s exit label has any mathematical content behind it.
+question. (That last one no longer bears on whether [E28](#e28)'s exit has mathematical
+content — the R/R2 theorem was recovered from the packet on 2026-08-03 — but it still
+determines which route owns the certificate.)
+
+### 17. G3D `STATUS.md` phase-ledger bug — an invalid `PASS` pair left standing in a sealed packet
+
+- **Defect (adjudicated 2026-08-03, not merely alleged):** in `goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC/STATUS.md`, the embedded phase-ledger JSON block (lines ~44–56) marks the witt and spinor phases `G3D-POLAR-CLIFFORD-PASS` and `G3D-SPINOR-DISCRIMINANT-PASS`. This contradicts the same file's own prose (line ~5), `SEAL.json`, and every stage document, all of which read `*-PARTIAL`.
+- **Why load-bearing:** it is exactly the failure mode of debt item 4 (G7B) — a machine-readable `PASS` that a later route can consume as established. Any tool reading the JSON block rather than the prose gets the wrong answer about the Clifford and spinor-discriminant stages of [E17](#e17).
+- **Governing artifact:** **`SEAL.json`.** Canonical state: simple-field model, polar cubic surface, Hessian-kernel and cube reduction are structural passes at scope; Clifford, spinor discriminant and the 27-line algebra are **PARTIAL**; exit `G3D-UNDECIDED`.
+- **Why it is not fixed in place:** the packet is hash-sealed, so editing `STATUS.md` would break the seal. The correction is recorded here and in [E17](#e17) instead.
+- **What resolution looks like:** either re-seal the packet with a corrected phase ledger, or add a machine-readable erratum next to `SEAL.json` that consumers are required to read. Until then, treat the JSON block as unreliable for this packet.
 
 ---
 
@@ -1500,9 +1709,18 @@ question, which determines whether [E28](#e28)'s exit label has any mathematical
 
 ### Additional conflicts surfaced by the session merge
 
-13. **Degree-25 emptiness** ([E25](#e25) vs [E33](#e33)). Run artifacts and the canonical ledger hold degree 25 `OPEN/DEFERRED` — neither populated nor proved empty, with 63 charts `PREPARED_NOT_RUN`. Against: `2026-08-03-problem-e-review.md` claims exit `DEGREE25-LANDING-EMPTY` ("no homogeneous degree-25 landing self-covariant in char 0") as a corollary of the V4 classification, committed at `ac5e899` under the V4 packet (`72147bd` only touched `STATUS.md`). **Verified scoping (confirmed 2026-08-03):** the corollary's own packet, `DEGREE25_COROLLARY.md`, proves only the order-three branch of the degree-25 filtration (via Theorem 2.12, scoped to `A4`-equivariant, involution-plane order `m=1`, exact triple-line order three, any line degree); the order-two (parity) and order-≥4 (rank 56/56) branches are inherited unverified from the HANDOFF-era degree-25 structural filtration — the same P25 family E25 records as `P25-UNDECIDED` with 63 charts `PREPARED_NOT_RUN`. The corollary's own text: "It is not an all-degree theorem and does not settle equivariant unirationality." **Unresolved** — the conflict is real and stands; do not treat degree 25 as closed without re-derivation.
+13. **Degree-25 emptiness** ([E25](#e25) vs [E33](#e33)) — **ADJUDICATED 2026-08-03.** Run artifacts and the canonical ledger held degree 25 `OPEN/DEFERRED` — neither populated nor proved empty, with 63 charts `PREPARED_NOT_RUN`. Against: `2026-08-03-problem-e-review.md` claims exit `DEGREE25-LANDING-EMPTY` ("no homogeneous degree-25 landing self-covariant in char 0") as a corollary of the V4 classification, committed at `ac5e899` under the V4 packet (`72147bd` only touched `STATUS.md`).
+    *Resolution — degree 25 is **partially** closed; neither side was wholly right:*
+    - V4's **Theorem 2.12** (`goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/THEOREM.md` §2.3) **genuinely closes the 37-dimensional order-three branch in characteristic zero, for all line degrees.** That much of the review's claim is correct and the notebook was stale in denying it.
+    - The **order-two and order-≥4** branch exclusions are proved **only over the split fibre `F_67`**; `HANDOFF.md` carries its own caveat, "no characteristic-zero exclusion is claimed" (~line 1060). They **were** independently audited at that modular level — a from-scratch audit rebuilt the complete degree-25 space, both jet filtrations, the 56/56 landing span and the 3124/3124 overlap rank (`HANDOFF.md` ~1061–1066; `tmp/degree25_structural_probe_independent_audit/REPORT.md`). The notebook's former phrasing "inherited unverified" was therefore also wrong; the correct description is **independently audited, modular-only**.
+    - The packet label `DEGREE25-LANDING-EMPTY` **overstates its characteristic-zero scope** and violates Binding rule 2 — modular ranks need an explicit char-0 bridge.
+    - The **63-chart P25 route** (`goals_2026-08-01/P25_LANDING_SUPPORT`, `PREPARED_NOT_RUN`) attacks the same char-0 binary via an unreconciled independent presentation and **remains live**.
+    - **The char-0 bounded cutoff is unchanged: through degree 24, with degree 25 partially closed.** Do not restate the cutoff as 25 anywhere. Headline stays OPEN.
 14. **"L1" collision across sessions** ([E23](#e23) vs a proposed route). `mattrobball-unirational-task-6a7054e2.md`: `L1` = full polar range recursion (commit `82de03d`). `github-repo-task-update-6a7054fb.md`: `L1` = "ambient self-map rigidity", a different proposed route citing a `G`-birational superrigidity theorem. Two objects, one label; the first session had to disambiguate before starting.
-15. **G3 sub-packet labels vs external audit** ([E17](#e17)). DIR run labels record `G3A-ARITHMETIC-DOMINANCE-PASS`, `G3P-POLAR-SYSTEM-PASS`, `G3H-SEMILINEAR-G3-FRAME-PASS`. Against: `2026-08-03-problem-e-review.md` reports G3H phase-4 field points unbuilt (`INTERFACE_INSTALLED`, formula-level/interpolated only) and a direct self-contradiction inside G3D (phase ledger `PASS` vs prose `UNDECIDED`). That session's repo-state claims may themselves be stale. **Unresolved.**
+15. **G3 sub-packet labels vs external audit** ([E17](#e17)) — **ADJUDICATED 2026-08-03, in favour of the audit.** DIR run labels record `G3A-ARITHMETIC-DOMINANCE-PASS`, `G3P-POLAR-SYSTEM-PASS`, `G3H-SEMILINEAR-G3-FRAME-PASS`. Against: `2026-08-03-problem-e-review.md` reports G3H phase-4 field points unbuilt (`INTERFACE_INSTALLED`, formula-level/interpolated only) and a direct self-contradiction inside G3D (phase ledger `PASS` vs prose `UNDECIDED`). Both claims were checked against the artifacts and **confirmed**:
+    - **G3H:** `G3H-SEMILINEAR-G3-FRAME-PASS` is an interface/schema installation. The primitive element is abstract ("A primitive element θᵢ is any separating Hᵢ-invariant rational function", `phase4_g3_frame/G3_FRAME.md`:14); the deliverable is the formal expression `a_i = M̄^{-1}(P_i/τ^33)`; power-basis reduction status is verbatim `INTERFACE_INSTALLED`; and `verify_phase4.py` checks only marker-string equality, `coefficient_count == 35`, sha256 comparisons, `len(power_basis) == 11`, and substring membership of `"Phi(a_i)=0"` — no field reconstruction, no arithmetic evaluation. **Effective state: interface installed; executable degree-11 field point neither materialized nor verified.** The scoped quadratic no-go is unaffected.
+    - **G3D:** the contradiction is an **in-repo bug**, not a live disagreement — the embedded phase-ledger JSON block in `goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC/STATUS.md` (lines ~44–56) marks witt/spinor `PASS` against its own prose (line ~5), `SEAL.json`, and the stage documents, all `*-PARTIAL`. **`SEAL.json` governs:** simple-field model, polar cubic surface, Hessian-kernel and cube reduction are structural passes at scope; Clifford, spinor discriminant and 27-line algebra are PARTIAL; exit `G3D-UNDECIDED`. The sealed packet is deliberately not edited (hash seals); see Verification debt item 17.
+    - `G3A-ARITHMETIC-DOMINANCE-PASS` and `G3P-POLAR-SYSTEM-PASS` are untouched by this adjudication and stand (both ALGEBRAIC-RECOMPUTE).
 
 ### Identity questions (from `canonical_attempts.md` §(c))
 
@@ -1518,11 +1736,11 @@ question, which determines whether [E28](#e28)'s exit label has any mathematical
 | [E28](#e28) R/R2 ↔ `certificates/elliptic_lifting` / WP-E1 | both concern an elliptic Picard/`Pic⁰` obstruction | WP-E1 sits inside Path G's lifting blockers; R/R2 is an Aug-1 goal run | **UNRESOLVED** (conflict 12) |
 | [E13](#e13) F ↔ [E14](#e14) F-IMPORT ↔ [E15](#e15) Fable | all three are addressed by the single ledger token "F" | contents unrelated (fixed-frame genus-one torsor vs Problem-F involution import vs A4 trisection) | **KEPT SEPARATE**; ledger token ambiguous (conflict 4) |
 | [E18](#e18) H6 route ↔ `H_6=V(f_6)` in xCD ([E35](#e35)) | symbol match | STAT: "no explicit cross-reference found"; H6 is a trace-cubic torsor decision, `H_6` is the Klein sextic | **KEPT SEPARATE** |
-| [E03](#e03) A1-AUD ↔ [E55](#e55) REPAIR or [E01](#e01)'s A1 gate | `certificates/audit_a1` has no narrative owner; both `78abba4` (theorem-boundary audit) and `cdc016b` (Path A gate A1 PASS) are candidate parents | no lens characterizes the packet's contents | **UNRESOLVED** |
+| [E03](#e03) A1-AUD ↔ [E55](#e55) REPAIR or [E01](#e01)'s A1 gate | both `78abba4` (theorem-boundary audit) and `cdc016b` (Path A gate A1 PASS) are candidate parents | the packet is a **later, separate** correction layer (2026-08-02) with its own verdict vocabulary and 8 ranked findings spanning the T-track and P25 — not a Path A gate, and not `REPAIR.md` | **CHARACTERIZED 2026-08-03** — contents read and recorded in [E03](#e03); it is a distinct second correction layer. Parentage of the *directory name* remains undetermined but no longer matters |
 
 ### Single-lens attempts flagged for a second look
 
-[E03](#e03) (CERT only — orphan certificate directory), [E20](#e20) (WORK only — fully specified Elo path with no execution trace), [E23](#e23) (DIR only — carries a PASS no other lens records), [E52](#e52), [E53](#e53) (WORK only — proposed, unrun), [E54](#e54) (HAND only — the canonical negative target).
+[E03](#e03) (CERT only by lens count — **no longer an orphan**: the packet was read and characterized on 2026-08-03 as a second theorem-boundary correction layer), [E20](#e20) (WORK only — fully specified Elo path with no execution trace), [E23](#e23) (DIR only — carries a PASS no other lens records), [E52](#e52), [E53](#e53) (WORK only — proposed, unrun), [E54](#e54) (HAND only — the canonical negative target).
 
 [E43](#e43), [E44](#e44), [E46](#e46), [E47](#e47), [E48](#e48), [E49](#e49), [E50](#e50) are single-lens (RES) only because `RESOLUTION.md`/`SPEC.md` are the sole carriers of the "Other audited boundaries" and "Conditional forks and stakes" sections. That is a document-structure artifact, **not** weak evidence.
 
