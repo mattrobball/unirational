@@ -1,7 +1,11 @@
 # Problem E notebook — PSL(2,11)-unirationality of the Klein cubic
 
-Single cohesive record of every attempt at the headline, its justification, status,
-and outcome. Supersedes `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02.md` and
+A canonical record of all recoverable Problem E route families, executed runs,
+dispatched-but-unexecuted proposals, correction layers, and imported session
+records represented in the tracked repository as of the as-of commit below,
+with branch-level and local-only supplements noted inline. Each record carries
+its justification, status, verification class, and outcome. Supersedes
+`PROBLEM_E_ATTEMPT_LEDGER_2026-08-02.md` and
 `GOALS_NEXT_10_ROUTES_2026-08-02.md` as the tracking documents; mathematical
 status is resolved by the layered precedence rule in Binding rules below (the
 theorem-boundary correction layers `REPAIR.md` and `certificates/audit_a1`,
@@ -18,10 +22,14 @@ are tracked in Open conflicts below.** A second review round (2026-08-03, an ext
 review confirmed/refuted claim-by-claim against repo artifacts) is recorded in
 `## 2026-08-03 review round`. Lens and session provenance in `notebook_build/`.
 
-Content source for the attempt entries: `notebook_build/canonical_attempts.md`
-(55 merged entries from seven independent lens reports). External-session content:
-`notebook_build/sessions_batch1.md` … `sessions_batch4.md` (15 offline ChatGPT
-sessions). History anchors: `notebook_build/lens_gitlog.md`.
+Content provenance is two-stage: `notebook_build/canonical_attempts.md` is the
+frozen PRE-adjudication merge of seven lens reports (it retains pre-correction
+states for E03, E25, E17, E28, E32 and the retired static precedence rule — do
+not regenerate from it); the 2026-08-03 review rounds then applied adjudicated
+corrections directly in this file. Machine-readable current state:
+`notebook_build/manifest.json`. External-session content:
+`notebook_build/sessions_batch1.md` … `sessions_batch4.md`. History anchors:
+`notebook_build/lens_gitlog.md`.
 
 ## Headline
 
@@ -37,9 +45,12 @@ genuine generic twist pointless.
 1. **Precedence (layered, not a fixed document ranking).** Where documents
    conflict, resolve in this order:
    (i) **Theorem-boundary correction layers override anything they predate,
-   within their stated scope** — `REPAIR.md` (2026-07-31) and the `audit_a1`
-   layer (2026-08-02). A pre-repair claim never overrides its post-repair
-   replacement.
+   within their stated scope** — `REPAIR.md` (2026-07-31 08:50, `db37f58`;
+   applied by `07d1c4e`) and the `audit_a1` layer (2026-07-31 21:38, `78abba4`).
+   A pre-repair claim never overrides its post-repair replacement. Audit A1 is
+   same-day but later; it corrects only artifacts predating it (the 07-31
+   T8/T9/T10/P25 exits) and does not override the 08-01/08-02 goal-wave
+   artifacts.
    (ii) A later artifact supersedes an earlier one **only** via an explicit
    supersession statement that itself survives its own verification class.
    (iii) Otherwise order by **chronology and dependency**, never by document
@@ -123,7 +134,7 @@ supersessions are listed. Each also appears in the affected entries.
 | Superseding artifact (date) | Supersedes | Affected entries |
 |---|---|---|
 | `REPAIR.md` theorem-boundary layer (07-31) | pre-repair labels: `G13/G19-OBSTRUCTION`→sample residuals; `T-NONNORMAL`, `dim Sing_S=2` suspended; Path-A single-minor→all-minors; Hodge-center proof substitution; Schur "no rational point" phrasing | E16, E32, E01, E19, E31, E55 |
-| `certificates/audit_a1` layer (08-02) | unconditional readings of `T-BRANCH-NONNORMAL`, `T10-BINODAL-NO-3-DEFECT`; `P25Z` exact-iso naming; sealed T8 Jacobian prose; `P25Y` Molien wording; stale rank-746 note; `P25X0` char-0 titling; C0 order-12 clause | E03, E32, E25, E08 |
+| `certificates/audit_a1` layer (07-31, `78abba4`) | unconditional readings of `T-BRANCH-NONNORMAL`, `T10-BINODAL-NO-3-DEFECT`; `P25Z` exact-iso naming; sealed T8 Jacobian prose; `P25Y` Molien wording; stale rank-746 note; `P25X0` char-0 titling; C0 order-12 clause | E03, E32, E25, E08 |
 | V4 packet Theorem 2.12 (08-02) | E25's order-3 branch question (closed char-0). Does **not** supersede the order-2/order-≥4 modular branches or the 63-chart route | E25, E33 |
 | commit `4a5beac` (08-02) | `eb21458` G7B cycles packet — induced-cycle claim refuted (`G7B-INDUCED-CYCLE-REFUTED`), withdrawn data quarantined | E17 |
 | `B-BRIDGE-REFUTED` (`5899d05`, 08-02) | the B fixed-frame exhaustiveness program; demotes T3 to non-headline | E06, E32 |
@@ -146,7 +157,8 @@ Chronology and hash anchors from `notebook_build/lens_gitlog.md`.
 - **2026-07-31** — C-track model installs: `1ad97cf` `C0-UNDECIDED`; `3f71710` `C1-UNDECIDED`, char-0 floor named; `d769885`/`4da9f8f` C2 two-generator word basis and partial constants sealed; `0cf23e5` C3 rectangular basis installed.
 - **2026-07-31 → 08-01** — P25 variant sweep: `19da967` P25W Stage-A kernel incidence EMPTY; `841005b` P25Z.3 direct landing row rank EXACTLY 746; `5e72d8e` P25X0-PASS / P25X1-FAIL (the 842 basis is not recovered); `6096429` `P25Y-DVR-PASS`; `2140419` P25V.0 degree-four closure FAILS.
 - **2026-07-31** — `9bee33a` Path A statement A_empty; `3c9b385` A_empty attack exits `A_EMPTY_UNDECIDED`; `827f0da`/`4e44e73` Q descent-obstruction close-out sealed.
-- **2026-07-31** — `78abba4` **theorem-boundary repair audit** of every standing exit (E55): `T-NONNORMAL` and `dim Sing_S=2` suspended pending T2R; `G13/G19-OBSTRUCTION` → `G13/G19-SAMPLE-RESIDUAL`; Path A single-minor → ideal of all maximal minors and `(L,V_Z)` → abstract interface; Hodge-center proof rewritten via a relatively ample class; Schur "no rational point" → "no rational point is currently known".
+- **2026-07-31 morning** — `db37f58` (08:50) introduces `REPAIR.md`, the **first** theorem-boundary correction layer (E55); `07d1c4e` (09:01) applies Parts II–VI: `T-NONNORMAL` and `dim Sing_S=2` suspended pending T2R; `G13/G19-OBSTRUCTION` → `G13/G19-SAMPLE-RESIDUAL`; Path A single-minor → ideal of all maximal minors and `(L,V_Z)` → abstract interface; Hodge-center proof rewritten via a relatively ample class; Schur "no rational point" → "no rational point is currently known".
+- **2026-07-31 evening** — `78abba4` (21:38) **Audit A1**, the **second** theorem-boundary correction layer, ~13h after REPAIR.md (E03): an 8-finding ranked audit of the T-track and P25 family; F1 finds the `T-BRANCH-NONNORMAL` citation unsupported as provenance, but the director's commit-message refinement records nonzero 2×2 minors mod p at the witnesses establishing the mathematics is sound at the modular-witness level.
 - **2026-08-01** — Goal-mode waves begin, anchors `35fa8f5` (publish August goal-route reports) and `bd610a0` (publish post-35fa route audits): `2301a43`/`53e267a` Goal H subgroup-twist sweep resolved; `20be6ba` generic-twist continuation; `fc4e490`/`e1fc474` Goal D equivariant-motive route resolved and sealed; `0d16f55`/`6737bec` KLS goals; `83d35f7` index-11 quartic rescue; `715faf4` T11b Route C obstructed.
 - **2026-08-02** — Anchors `141f604`, `0aecc89`, `eb21458`, `ff69434`, `7030dda`, `f1f0be5`, `5899d05`. G2 reduction lands: `23f40f7` finish G/G2 universal all-degree theorem, `6a2ccaa` retire completed G2 structural mission, `5ded147` post-G2 headline reassessment; successors dispatched `5eb1214` G3, `5cb3d11` G3A, `d1f43d6` G3H, `7da4fdf` G3S; `027e002` H6 degree-11 isogeny; `1b764bf` C6 determinantal Fano.
 - **2026-08-02** — B refutation and adjacent close-outs: `5899d05` finish Task B fixed-frame exhaustiveness (→ `B-BRIDGE-REFUTED`); `b77b04c` record V3 residue normal form; `96195e8`/`139ab6c`/`5167255` M3 residual section close-out; `b49fc81`/`74045be`/`823beb1`/`c9d75e1` T3/T3A split into local-runner goals; `30cccfa` index-11 transfer goal.
@@ -287,10 +299,11 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Cannot close the headline; it governs the truth-value of claims other entries assert. Per Binding rule 1(i) its verdicts override anything they predate, within their stated scope.
 - **Method:** CAS / document audit
 - **Record type:** audit/repair
-- **Status:** CHARACTERIZED (2026-08-03) — `certificates/audit_a1/AUDIT_FINDINGS.md` is a 510-line ranked theorem-boundary audit, a second correction layer after `REPAIR.md` (2026-07-31), dated 2026-08-02.
+- **Status:** CHARACTERIZED (2026-08-03) — `certificates/audit_a1/AUDIT_FINDINGS.md` is a 510-line ranked theorem-boundary audit, a second correction layer after `REPAIR.md` (2026-07-31, `db37f58`/`07d1c4e`), performed 2026-07-31 21:38, commit `78abba4` ("Klein cubic: audit A1 -- theorem-boundary audit of every standing exit"; message states `AUDIT-A1-COMPLETE`, "No computation performed, no narrative file edited, no sealed packet edited").
   - Verdict vocabulary: **SOUND** / **SCOPE-DRIFT** / **UNSUPPORTED** / **UNCITED-HYPOTHESIS**, applied against a bill of ~20 markers.
   - Eight ranked findings:
     - **F1 (critical)** — `T-BRANCH-NONNORMAL` / T10 local-model attribution: **UNSUPPORTED + SCOPE-DRIFT**. T9 explicitly does not seal the completed ordinary-node local model `K'[[x,y,z1,z2]]/(xy)`; the "divisorial binodal locus" is analytic work-order input, not a CAS-sealed local form (`AUDIT_FINDINGS.md`:47–49, 73–75). See [E32](#e32).
+      - **Director's refinement (recorded in the `78abba4` commit message):** F1 is "correct as PROVENANCE but the mathematics is not in doubt". The branch differentials `dh_i = grad_x P(·,u_i)` have a nonzero 2×2 minor modulo p at each witness (director's values 14, 155, 40), and a minor nonzero mod p is nonzero in `Z_p`, so `dh_1`, `dh_2` are independent at the lifted `Q_101` point; with `P_uu(u_i)` units, distinct roots, and `G` a unit, the formal Morse/Weierstrass factorization `H = unit·h_1·h_2` follows — so `T-BRANCH-NONNORMAL` is sound, and what is wrong is only the citation (it rests on the work order's analytic section 1.2 plus modular data that provably lifts, not on T9 or a CAS identity). Still modular-witness support; a char-0/formal sealing remains the open item.
     - **F2 (high)** — `T10-BINODAL-NO-3-DEFECT`: **SOUND as algebra**, **UNCITED-HYPOTHESIS as geometry**. The theorem is conditional: *if* the completed local ring is an ordinary node, *then* there is no 3-primary local Picard defect (`AUDIT_FINDINGS.md`:90–94, 119–120).
     - **F3 (high)** — `P25Z-FINITE-PRESENTATION`: **SCOPE-DRIFT**.
     - **F4 (high)** — sealed T8 prose asserts Jacobian determinants that were never computed: **UNSUPPORTED residual**.
@@ -299,7 +312,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
     - **F7 (low–medium)** — `P25X0-PASS` is titled characteristic-zero but is multiprime: **SCOPE-DRIFT**.
     - **F8 (low)** — the C0 order-12 table's known-residual clause: **UNSUPPORTED**.
 - **What was actually established:** a ranked, scoped correction of eight standing claims across the T-track and the P25 family, with an explicit verdict vocabulary. NOT established: anything new about the headline — this is a correction layer, not a route.
-- **Aliases:** CERT `AUD — AUD-A1`; `certificates/audit_a1`; "the audit_a1 layer"; possibly GIT `78abba4` "audit theorem-boundary" or `cdc016b` "Path A Gates A1-A3 — A1 PASS"
+- **Aliases:** CERT `AUD — AUD-A1`; `certificates/audit_a1`; "the audit_a1 layer"; GIT `78abba4` "audit theorem-boundary" (confirmed); possibly also `cdc016b` "Path A Gates A1-A3 — A1 PASS"
 - **Provenance:** `certificates/audit_a1/` (`AUDIT_FINDINGS.md`, `README.md`, `audit_findings.json`). No external session matches.
 - **Pointers:** `certificates/audit_a1/AUDIT_FINDINGS.md`; downstream consumers [E25](#e25) (F3/F5/F6/F7), [E32](#e32) (F1/F2/F4)
 - *Lenses 1/7 (CERT) — **single-lens** by lens count, but the packet's contents were read directly and characterized on 2026-08-03; confidence high for the content, medium for its relationship to [E55](#e55) and the Path A `A1 PASS` gate of [E01](#e01).*
@@ -651,6 +664,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
   - `G3H-SEMILINEAR-G3-FRAME-PASS`, `G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED` [DIR]
   - **G3H demoted (adjudicated 2026-08-03).** `G3H-SEMILINEAR-G3-FRAME-PASS` is an **interface/schema installation**, not a constructed field point. The primitive element is abstract — "A primitive element θᵢ is any separating Hᵢ-invariant rational function" (`goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/phase4_g3_frame/G3_FRAME.md`:14) — and the deliverable is the *formal expression* `a_i = M̄^{-1}(P_i/τ^33)`. The power-basis reduction status is verbatim `INTERFACE_INSTALLED`. `verify_phase4.py` checks only marker-string equality, `coefficient_count == 35`, sha256 comparisons, `len(power_basis) == 11`, and substring membership of `"Phi(a_i)=0"` — **no field reconstruction and no arithmetic evaluation**. Effective state: **interface installed; the executable degree-11 field point is neither materialized nor verified.** The scoped quadratic no-go `G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED` stands at its stated level and is unaffected.
   - **G3D internal contradiction adjudicated 2026-08-03.** The `PASS`-vs-`PARTIAL` conflict is an **in-repo bug**, not a genuine disagreement: in `goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC/STATUS.md` the embedded phase-ledger JSON block (lines ~44–56) marks the witt/spinor phases `G3D-POLAR-CLIFFORD-PASS` / `G3D-SPINOR-DISCRIMINANT-PASS`, contradicting the same file's prose (line ~5) and `SEAL.json` plus the stage documents, all of which read `*-PARTIAL`. **`SEAL.json` governs.** Canonical state: the simple-field model, polar cubic surface, Hessian-kernel and cube reduction are structural passes at their stated scope; **Clifford, spinor discriminant, and the 27-line algebra are PARTIAL**; the exit is `G3D-UNDECIDED`. The sealed packet is deliberately **not** edited (hash seals); the bug is recorded here and in Verification debt.
+  - **Unmerged-branch packet (recorded 2026-08-03, provenance `branch-only (unmerged)`).** `goal_runs_after_eb21458/G3P_A5_SEMILINEAR_QUADRATIC/` exists **only** on branch `agent/g3p-a5-semilinear-20260802` (head `086e089`, pinned to main `eb21458`) — **not on main**. Exit `G3P-UNDECIDED`; scoped markers `G3P-A5-SEMILINEAR-MATERIALIZATION-PASS`, `G3P-A5-CANONICAL-POLAR-MISS`, `G3P-A5-CLASSIFYING-DEGREE-LE4-POLAR-EMPTY`. Content: the genuine degree-11 A5 points are expressed in the normalized G3 frame by an `H`-invariant circuit `a_H(w) = diag(τ^(1,4,5,6,7))·B_poly(w)^{-1}·J_H·Φ_H(Y_H(w))` — closing the missing-coordinate gate at formula level — but exact good-reduction witnesses show the pulled-back point lies on neither canonical polar `H_q` nor `Q_q`, and the complete constant-coefficient classifying-map family through degree 4 is excluded from both polar identities; the first remaining family has degree 5 and dimension 5 (local CAS order pending in the packet's `CAS_NEXT_ORDER.md`). The packet also contains `G7B_SCOPE_CORRECTION.md`: independent corroboration of the G7B refutation (the assignment `gH → [ρ(g)e0]` requires `[e0]` `H`-fixed, which it is not), listing what survives — the abstract degree-11 étale algebra `L_H/K_proj`, the `H`-`A5` semilinear point, and the Paley 2-(11,5,2) incidence matrix.
   - `G3B-UNDECIDED` [DIR, `goal_runs_after_0aecc89/G3B_LINE_CONIC_SEARCH/STATUS.md`]; `G3C-UNDECIDED` [DIR, `goal_runs_after_0aecc89/G3C_LINE_CONIC_FANO/STATUS.md`]; `G3D-UNDECIDED` (primary exit) [DIR, `goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC/STATUS.md`] — G3D also records five structural PASS sub-labels (`G3D-K-SIMPLE-MODEL-PASS`, `G3D-POLAR-CUBIC-SURFACE-PASS`, `G3D-HESSIAN-KERNEL-PASS`, `G3D-HESSIAN-CUBE-REDUCTION-PASS`, `G3D-A5-STRUCTURED-DESCENT-PASS`) and three PARTIAL sub-labels (`G3D-POLAR-CLIFFORD-PARTIAL`, `G3D-SPINOR-DISCRIMINANT-PARTIAL`, `G3D-LINE-27-ALGEBRA-PARTIAL`)
   - `62a3fcb` "Path G3 — exit `G-PATTERN`"; `5eb1214` "add G3 universal cubic arithmetic goal"; `5cb3d11` "add G3A arithmetic and dominance goal"; `d1f43d6` "Add G3H A5 semilinear Springer execution order"; `7da4fdf` "Add G3S structured direct arithmetic execution order" [GIT]
   - **G7B invalidation resolved in-repo (confirmed 2026-08-03):** `4a5beac` (2026-08-02 14:54, ~2h after the flawed packet at `eb21458`) rewrote `goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/STATUS.md`: primary exit is now `G7-PROJECTIVE-SCALING-PASS` (re-derived by an independent chart-normalization/cone-lift method), the induced-cycle claim is downgraded to RESIDUAL, a refutation marker `G7B-INDUCED-CYCLE-REFUTED` is installed, the defect is documented in `cycles/INDUCED_CYCLE_REFUTATION.md` (`|Stab_G([e0])|=11`, `|G·[e0]|=60`, 44/44 equivariance checks failed), the withdrawn data is quarantined as `cycles/cycles_WITHDRAWN_rho_e0.json`, and the verifier is hardened (`verify_cycles.py` + `cycles/audit_induced_refutation.py`). See Verification debt item 4.
@@ -829,6 +843,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
   - **Conflict (referent of "M3 multisection closed"):**
     - *Side 1 (STAT):* cannot disambiguate whether it refers to the Fable `A₄` multisection-index-3 theorem or the Schur ten-fibration no-section theorem.
     - *Side 2 (WORK):* the Sarkisov description (degree-3 dP fibration, degree-3 and degree-55 multisections) is more specific and is adopted by the canonical ledger.
+  - **Unmerged-branch packet (recorded 2026-08-03, provenance `branch-only (unmerged)`).** `goal_runs_after_bd610a/M3_SARKISOV_SECTION/` exists **only** on branch `agent/m3-sarkisov-section-residual` (head `6fdac74`) — **not on main**, and **distinct** from the merged `goals_after_bd610a/M3_SARKISOV_SECTION` close-out packet. Exit `M3-SECTION-COMPONENT-PASS`. Proved (at its stated boundary): exceptional sections are exactly the points of the center cubic `C_012`; nonexceptional sections of `H`-degree 1 and 2 are impossible (binding no-line and no-conic theorems); the first nonexceptional degree-3 section scheme has a horizontal projective four-dimensional geometric component (standard-smooth points mod 23 and 67); the 55-line splitting field has Galois group `PSL_2(F_11)` and contains **no** quartic subfield; all six pair orbits of the 55 horizontal line sections have non-singleton fibrewise-secant images (min image cardinality 55 at both split primes). Not proved: existence or nonexistence of a `K`-rational section; an explicit integral degree-4 multisection. Lowest section gate: `C_012(K)`. Note the interaction with the merged dichotomy: the no-quartic-subfield theorem forces any integral quartic to generate an extension not contained in the 55-line field.
 - **What was actually established:** the explicit type-I link `X_T ← Bl_{C012}(X_T) → P¹_K`; an integral finite-flat degree-4 multisection, claimed unconditional; index one. NOT established: a rational section, a `K_Schur`-point, or any positive unirationality bridge. The nonemptiness of the quartic locus alone provably cannot select the section branch.
 - **Aliases:** `M_SARKISOV`, `M3_SARKISOV_SECTION`, `M3B_SECTION_RESIDUAL_G1_20260802`; STAT "M3 — section vs multisection"; WORK "R/M-stub"; GIT `M3`
 - **Provenance:** `goal_runs_after_35fa/M_SARKISOV`; `goal_runs_after_bd610a/M3B_SECTION_RESIDUAL_G1_20260802`; artifact pointer `M3_SARKISOV_SECTION`.
@@ -1031,7 +1046,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
   - `T8-S1-UNDECIDED` (`dc43a86`); `T8-S1-NONUNIT-ANALYTIC` confirmed (`7866c68`); `T9-HENSEL-NONUNIT-SEALED`; `T8-N1` Jacobian correction sealed (`2645c91`) [GIT, WORK]
   - `T-BRANCH-NONNORMAL` (divisorial binodal locus); `T10-BINODAL-NO-3-DEFECT`; `T10.0` sealed, `T10.1 UNDECIDED` (`19e9490`); `T11.0` simple point sealed, `T11.1 UNDECIDED` (`faf6169`); `T11b Route C obstructed` (`715faf4`) [GIT, WORK]
   - **Qualified by `audit_a1` (2026-08-02 layer; applied here 2026-08-03) — see [E03](#e03):**
-    - **F1 (critical):** `T-BRANCH-NONNORMAL`, the "divisorial binodal locus", is **UNSUPPORTED + SCOPE-DRIFT as a CAS-sealed local form**. It is **analytic work-order input only**: T9 explicitly does **not** seal the completed ordinary-node local model `K'[[x,y,z1,z2]]/(xy)` (`certificates/audit_a1/AUDIT_FINDINGS.md`:47–49, 73–75).
+    - **F1 (critical):** `T-BRANCH-NONNORMAL`, the "divisorial binodal locus", is **UNSUPPORTED + SCOPE-DRIFT as a CAS-sealed local form**. It is **analytic work-order input only**: T9 explicitly does **not** seal the completed ordinary-node local model `K'[[x,y,z1,z2]]/(xy)` (`certificates/audit_a1/AUDIT_FINDINGS.md`:47–49, 73–75). The conditional/UNCITED-HYPOTHESIS reading stands at the char-0/formal level; but the `78abba4` audit commit itself records the director's verification that the branch differentials have nonzero 2×2 minors mod p at the witnesses (values 14, 155, 40), which is independence at the lifted `Q_101` point and supports the ordinary-node factorization at the modular level — see [E03](#e03) for the full argument.
     - **F2 (high):** `T10-BINODAL-NO-3-DEFECT` is **conditional** — SOUND as pure algebra on an abstract ordinary node, UNCITED-HYPOTHESIS as geometry. Its correct statement is: *if* the completed local ring is an ordinary node, *then* there is no 3-primary local Picard defect (`AUDIT_FINDINGS.md`:90–94, 119–120). The hypothesis is exactly what F1 says is unsealed.
     - **F4 (high):** the sealed T8 prose asserts Jacobian determinants that were never computed — an **UNSUPPORTED residual**.
   - `T10-FOLD-HEIGHT1`/`T11-FOLD-HEIGHT1` sought but undecided [WORK]
@@ -1489,12 +1504,12 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Justification:** Governs the truth-value of every other entry. Per Binding rule 1 its verdicts outrank all later narrative documents including the offline 08-02 ledger.
 - **Method:** analytic (document/proof audit)
 - **Record type:** audit/repair
-- **Status:** APPLIED — the governing correction layer.
-  - `78abba4` "Klein cubic: audit A1 -- theorem-boundary audit of every standing exit" [GIT]
+- **Status:** APPLIED — the FIRST binding correction layer (the `audit_a1` layer of [E03](#e03), same day and ~13h later, is the SECOND).
+  - `db37f58` (2026-07-31 08:50) "Klein cubic: record analytic audit repairs and suspend overstated certificates" introduces `REPAIR.md`; `07d1c4e` (2026-07-31 09:01) "Klein cubic: apply REPAIR.md theorem-boundary corrections (Parts II-VI)" applies it [GIT]. (`78abba4`, 21:38 the same day, is the separate `audit_a1` layer — see [E03](#e03); it is not part of this entry.)
   - "Trusted results retained": Path A `P¹`-reduction; Path A index-34 duality; corrected Hodge-center split-injection theorem after §8 substitution; Path G finite truncation and isolation cutoff; Path G4.1 free-fibre recurrence; P25.1 `P25-TOWER-SURVIVES`; `T-BIRATIONAL` [HAND, RES, STAT]
   - "Suspended or downgraded": `T-NONNORMAL`, `dim Sing_S=2`, `G13/G19-OBSTRUCTION`, Path A single-minor formulation, Path A executable `L,V_Z` claim [HAND, RES]
 - **What was actually established:** the corrected boundary of every standing claim. Specific outcomes: Path T `T-NONNORMAL` and `dim Sing_S=2` suspended pending T2R; Path G `G13/G19-OBSTRUCTION` → `SAMPLE-RESIDUAL`; Path A single-minor → ideal of all maximal minors, `(L,V_Z)` → abstract interface; Hodge-center proof rewritten via a relatively ample class (fixing a relative-dimension error); Pfaffian "abstract `K_proj`-point" scoped to the auxiliary characteristic cubic only; Schur "no rational point" → "no rational point is currently known".
-- **Aliases:** `REPAIR.md`; "theorem-boundary audit of every standing exit"; GIT `78abba4`; the repair tables are reproduced identically in `HANDOFF.md`, `RESOLUTION.md`, `SPEC.md`, `CURRENT_PATHS.md`
+- **Aliases:** `REPAIR.md`; "theorem-boundary audit of every standing exit"; GIT `db37f58` (introduces), `07d1c4e` (applies Parts II–VI); the repair tables are reproduced identically in `HANDOFF.md`, `RESOLUTION.md`, `SPEC.md`, `CURRENT_PATHS.md`
 - **Provenance:** `REPAIR.md` §§0–17; mandated file edits (`certificates/hodge_centers/HODGE_CENTER_NECESSITY.md`, `certificates/schur_krylov/*`, `certificates/fold_normalization*`). No external session; note that the offline 08-02 ledger post-dates this repair and conflicts with it in several places (see Open conflicts).
 - **Pointers:** `REPAIR.md`; `HANDOFF.md` "2026-07-31 theorem-boundary repair"; `RESOLUTION.md`/`SPEC.md` repair tables; `CURRENT_PATHS.md` lines 19–90
 - *Lenses 4/7 (GIT, HAND, RES, STAT); confidence certain.*
@@ -1503,10 +1518,11 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 
 ## External sessions
 
-16 offline ChatGPT sessions. The first 15 are summarized in
-`notebook_build/sessions_batch{1,2,3,4}.md`; the 16th
-(`notebook-review-6a707542.md`) post-dates that build and is recorded from
-`external_sessions/` directly. Per Binding rule 4, **nothing below is
+17 offline ChatGPT sessions: 15 are summarized in
+`notebook_build/sessions_batch{1,2,3,4}.md`; two direct review sessions
+(`notebook-review-6a707542.md` and `notebook-review2-6a70834f.md`) post-date
+that build and are recorded from `external_sessions/` directly. Per Binding
+rule 4, **nothing below is
 machine-verifiable**; claims must be re-derived in-repo before affecting the
 headline. Where a session's push landed in the repo, the commit is cited in the
 corresponding attempt entry above with the tag `source: external-chatgpt`.
@@ -1529,6 +1545,7 @@ corresponding attempt entry above with the tag `source: external-chatgpt`.
 | `mathematical-machine-implementation-6a7055b7.md` (b4) | Universal fixed-stratum machine work order (P0–P8) | none (refs `62a3fcb`) | planning (work order + proof notes) | 9-part work order; LaTeX proof notes for OD16 and C9⋊C3; **Priority-0 checkers never built or run** | none (sandbox `.md`/`.tex`/`.pdf`/`.zip`) |
 | `2026-08-03-problem-e-review.md` (b4) | Problem E review, ledger, ranking, V4 proof attempt | 2026-08-02 content / 2026-08-03 session | mixed (ledger + self-critique + execution) | Pushed the 08-02 ledger and 10-route goals; self-audit found them "already materially stale"; V4 classification PASS, genus-2 quotient PASS, `DEGREE25-LANDING-EMPTY`, and `V4-LOCAL-PATH-HEADLINE-ROUTE-REFUTED` | `61b1902`, `f1f0be5`, `fb4bcea` (+ `ebb5769`, `08859c0`, `72147bd`) |
 | `notebook-review-6a707542.md` | "Review of NOTEBOOK.md" | 2026-08-03 | review | 8 material corrections + structural changes proposed; adjudicated against artifacts before application (Binding rule 4). **CONFIRMED:** E03/E28 content misses, E32 T10 conditionality, G3H interface-only, G3D internal contradiction, F14 sufficient-not-equivalent. **REFUTED:** the A0 downgrade, unconditional degree-25 closure. **PARTIAL:** E25 staleness | none |
+| `notebook-review2-6a70834f.md` | "Review Notebook Accuracy" (review of commit `aaa186b`) | 2026-08-03 | review | Verdict: "comprehensive and substantially accurate at the canonical route-family level; not literally every attempt; not yet mechanically authoritative." Findings, all adjudicated: E03/E55 chronology error — **CONFIRMED** via git, fixed; stale build provenance — **CONFIRMED**, fixed by freezing `canonical_attempts.md` and adding `manifest.json`; opening-sentence overclaim — **CONFIRMED**, reworded; session-count clarification — applied; two unmerged-branch packets omitted — **CONFIRMED**, now recorded in [E17](#e17)/[E24](#e24) | none |
 
 ### Sessions that made load-bearing claims
 
@@ -1555,6 +1572,8 @@ corresponding attempt entry above with the tag `source: external-chatgpt`.
 **`2026-08-03-problem-e-review.md`** — pushed `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02.md` (`61b1902`) and `GOALS_NEXT_10_ROUTES_2026-08-02.md` (`f1f0be5`), then self-audited both as "already materially stale" (G4/H6/G5/Q3 had completed packets listed as "not started"; G3H phase-4 field points unbuilt; phase-3/4 "independent verifiers" check hashes and strings, not algebra; G3D's phase ledger says `PASS` while its prose says `UNDECIDED`). Its own execution attempt produced `V4-SIMULTANEOUS-CLASSIFICATION-PASS`, `M1-TRIPLE-ORDER3-ALL-LINE-DEGREE-EMPTY`, `V4-TRISECTION-GENUS2-QUOTIENT-PASS` (`κ± = (13±3√33)/16`; genus-2 curve smooth since resultant `64(κ₊−κ₋)³≠0`) and a `DEGREE25-LANDING-EMPTY` corollary — but then found an explicit primitive line-degree-6 toric-boundary counterexample family refuting the blanket local-V4-path strategy (`V4-LOCAL-PATH-HEADLINE-ROUTE-REFUTED`). Headline left OPEN, with a stated personal "modestly negative" lean.
 
 **`notebook-review-6a707542.md`** — a review *of this notebook* rather than of the mathematics; it produced no repo artifacts. It proposed eight material corrections plus structural changes (record typing, verification-class data, a layered precedence rule). Per Binding rule 4 its claims were **adjudicated against repo artifacts before any of them were applied**, and the split matters. **Confirmed:** [E03](#e03) and [E28](#e28) were carrying real content misses (an entire 8-finding audit layer, and a four-part theorem, both described in the notebook as "unknown" / "exit label only"); [E32](#e32)'s `T10-BINODAL-NO-3-DEFECT` is conditional, not flat; G3H is interface-only; G3D contains a genuine internal contradiction; the `F_{14,T}` bridge is sufficient, not equivalent. **Refuted:** its proposal to downgrade A0 to packet-consistency-only (A0 in fact recomputes 4140/315 independently — see [E02](#e02)), and its reading that degree 25 is unconditionally closed (the order-two and order-≥4 branches lack a characteristic-zero transfer, so the bounded cutoff stays at 24). **Partial:** its "E25 is stale" complaint — the order-three branch closure is real, but the closure is not the whole degree. Applied corrections are listed in `## 2026-08-03 review round`.
+
+**`notebook-review2-6a70834f.md`** — a second review *of this notebook*, against commit `aaa186b` (the notebook as corrected by the first review round), also producing no repo artifacts. Its verdict: "comprehensive and substantially accurate at the canonical route-family level; not literally every attempt; not yet mechanically authoritative." It re-derived the proposed replacement opening sentence used in this file's preamble, and its branch audit (a shallow clone against the live GitHub remote) found two distinct route packets that exist only on unmerged agent branches and are absent from the notebook: unmerged G3P correction work (`agent/g3p-a5-semilinear-20260802`) and an earlier M3 residual packet (`agent/m3-sarkisov-section-residual`) — both now recorded in [E17](#e17) and [E24](#e24) respectively. It also flagged stale build provenance (`canonical_attempts.md` regenerated without the corrections) and a session-count ambiguity, both applied here. Disposition of all five required repairs is in `## 2026-08-03 review round`, Round 2.
 
 ### Sessions with no load-bearing repo claims
 
@@ -1609,6 +1628,36 @@ Corrections applied in this round, by entry:
 | [E37](#e37) | Reclassified PROVED-ANALYTIC-IN-RESOLUTION; `RESOLUTION.md` named as the portable source (its `tmp/` packet is untracked) |
 | Binding rules | Rule 1 replaced by a layered precedence rule; new rule 5 records that all `tmp/` citations are untracked local scratch |
 | Whole notebook | 55 **Record type:** lines and 26 **Verification class:** lines added; "55 attempts" reframed as "55 records"; Verification debt item 1 rewritten from a blanket claim to a measured one |
+
+### Round 2
+
+A second external review (`external_sessions/notebook-review2-6a70834f.md`, "Review
+Notebook Accuracy", of commit `aaa186b` — the Round-1-corrected notebook) required
+five repairs; disposition of each:
+
+| Required repair | Disposition |
+|---|---|
+| E03/E55 chronology error (`78abba4` conflated with `REPAIR.md`) | **Fixed** — `REPAIR.md` reattributed to `db37f58` (introduces, 07-31 08:50)/`07d1c4e` (applies, 09:01); `78abba4` (07-31 21:38) reattributed solely to Audit A1/[E03](#e03); split throughout Binding rule 1(i), the supersession map, History, [E03](#e03), [E55](#e55) |
+| Stale build provenance (`canonical_attempts.md` regenerated without corrections) | **Frozen + manifest** — `notebook_build/canonical_attempts.md` is now marked frozen pre-adjudication; `notebook_build/manifest.json` is the machine-readable current-state source |
+| Opening-sentence overclaim ("every attempt") | **Reworded** — preamble now states coverage "as of the as-of commit below, with branch-level and local-only supplements noted inline" |
+| Session-count clarification | **Applied** — External sessions now states 17 (15 batch-summarized + 2 direct review sessions) |
+| Two unmerged-branch packets omitted | **Confirmed, now recorded** — [E17](#e17) (`G3P_A5_SEMILINEAR_QUADRATIC`, branch `agent/g3p-a5-semilinear-20260802`) and [E24](#e24) (`M3_SARKISOV_SECTION`, branch `agent/m3-sarkisov-section-residual`), both marked `branch-only (unmerged)` |
+
+**Branch audit result** (all remote branches enumerated and checked against
+`main`): the squash-merged branches `agent/g2-universal-all-degree-20260802`,
+`agent/klein-b-exhaustiveness-refutation`, and
+`agent/v3-valuation-residue-closeout-20260802` are verified **content-identical**
+on main (empty diffs on every file each branch touched, relative to its own
+merge-base). Two branches carry unique unmerged packets —
+`agent/g3p-a5-semilinear-20260802` and `agent/m3-sarkisov-section-residual` — now
+recorded in [E17](#e17)/[E24](#e24) (see Verification debt item 18).
+`agent/close-profile327-n3` touches only `problems/D-2d-conic-bundles/` and
+belongs to a different problem. The remaining branches —
+`agent/klein-bd610a-closure-goals`, `agent/l1-full-polar-range-20260802`,
+`agent/m3-section-closeout-20260802`,
+`agent/t3-normalization-clpic3-20260802`,
+`agent/formalize-conic-bundle-and-audit-klein-cubic`, and
+`agent/weaken-hypotheses` — are fully merged (ancestors of `main`).
 
 ---
 
@@ -1752,6 +1801,26 @@ determines which route owns the certificate.)
 - **Governing artifact:** **`SEAL.json`.** Canonical state: simple-field model, polar cubic surface, Hessian-kernel and cube reduction are structural passes at scope; Clifford, spinor discriminant and the 27-line algebra are **PARTIAL**; exit `G3D-UNDECIDED`.
 - **Why it is not fixed in place:** the packet is hash-sealed, so editing `STATUS.md` would break the seal. The correction is recorded here and in [E17](#e17) instead.
 - **What resolution looks like:** either re-seal the packet with a corrected phase ledger, or add a machine-readable erratum next to `SEAL.json` that consumers are required to read. Until then, treat the JSON block as unreliable for this packet.
+
+### 18. Two branch-only packets are unverified from `main`
+
+- **Claim under test:** the branch-only packets recorded in [E17](#e17)
+  (`goal_runs_after_eb21458/G3P_A5_SEMILINEAR_QUADRATIC/`, branch
+  `agent/g3p-a5-semilinear-20260802`) and [E24](#e24)
+  (`goal_runs_after_bd610a/M3_SARKISOV_SECTION/`, branch
+  `agent/m3-sarkisov-section-residual`).
+- **Why load-bearing:** both packets carry real theorem content (the G3P
+  A5-semilinear formula-level materialization and canonical-polar miss; the
+  M3-SECTION-COMPONENT-PASS proofs about `C_012`, the no-line/no-conic
+  theorems, and the no-quartic-subfield result) that is not checkable from a
+  `main`-only checkout, since the packets do not exist there.
+- **Where it lives:** the two branches named above; neither is referenced by
+  any `main` commit.
+- **What verification looks like:** replay requires checking out the branch
+  directly (`git checkout agent/g3p-a5-semilinear-20260802` /
+  `agent/m3-sarkisov-section-residual`) and re-running each packet's
+  verifier. A merge-or-retire decision is pending for both branches — until
+  one is made, treat both packets as local-to-branch, not repository state.
 
 ---
 

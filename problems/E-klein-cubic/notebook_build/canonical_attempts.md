@@ -1,5 +1,13 @@
 # Problem E (Klein cubic, PSL(2,11)-equivariant unirationality) — Canonical Attempt Ledger
 
+> **FROZEN — PRE-ADJUDICATION MERGE (2026-08-03).** This file is the
+> seven-lens merge as synthesized BEFORE the 2026-08-03 review rounds. It
+> retains superseded content — E03 "uncharacterized", E25 "inherited
+> unverified", the static precedence rule, pre-demotion G3H/G3D readings, and
+> the E28 "exit label only" account. Do not regenerate the notebook from this
+> file. Current state: `NOTEBOOK.md` (adjudicated) and
+> `notebook_build/manifest.json` (machine-readable).
+
 Merged from seven independent lens reports in `tmp/notebook_build/`:
 `lens_directories.md`, `lens_gitlog.md`, `lens_certificates.md`, `lens_handoff.md`,
 `lens_resolution_spec.md`, `lens_status_docs.md`, `lens_workorders.md`.

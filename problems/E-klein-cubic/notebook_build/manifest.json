@@ -1,0 +1,1261 @@
+{
+  "as_of_commit": "dd5cbda",
+  "generated": "2026-08-03",
+  "headline": "OPEN",
+  "records": [
+    {
+      "path": "goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "G3A-ARITHMETIC-DOMINANCE-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3B_LINE_CONIC_SEARCH",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "G3B-UNDECIDED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3C_LINE_CONIC_FANO",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "G3C-UNDECIDED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G3P_POLAR_ODD_DEGREE_DESCENT",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "G3P-POLAR-SYSTEM-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "G7-PROJECTIVE-SCALING-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/design",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/geometry",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_141f60/C6_PALATINI_BIG_CELL",
+      "entry": "E08",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "C6-DETERMINANTAL-BIRATIONAL-MODEL-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_141f60/C6_PALATINI_BIG_CELL/phase_morita_descent",
+      "entry": "E08",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_141f60/C6_PALATINI_BIG_CELL/phase_positive_degree",
+      "entry": "E08",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER",
+      "entry": "E04",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "G4-INDUCED-DEGREE11-POINT-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_141f60/G4A_INDUCTION_PROJECTORS",
+      "entry": "E04",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_141f60/G5_FULL_RESIDUE_CUBICS",
+      "entry": "E33",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "G5-F5-CUBIC-MODEL-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_141f60/H6_TRACE_CUBIC_DECISION",
+      "entry": "E18",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "H6-TORSOR-CLASS-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_141f60/H6_TRACE_CUBIC_DECISION/phase_decision_push",
+      "entry": "E18",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_141f60/H6A_PROJECTIVE_11_ISOGENY",
+      "entry": "E18",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_141f60/Q3_QUARTIC_RESOLVENT_STABLE_MAP",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "Q3-SCHUR-MONODROMY-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_141f60/R0_CANONICAL_REFRESH",
+      "entry": "E29",
+      "kind": "goal_run",
+      "verification_class": "CONSISTENCY-ONLY",
+      "primary_exit": "R0-CANONICAL-REFRESH-PASS",
+      "superseded_by": "later landings L1, G3A, G3P, G4, G7A, G5, H6, G7B-fix (2026-08-02)",
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/A0_CANONICAL_AUDIT",
+      "entry": "E02",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "A0-CANONICAL-AUDIT-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/B_FIXED_FRAME_BRIDGE",
+      "entry": "E06",
+      "kind": "goal_run",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": "B-UNDECIDED",
+      "superseded_by": "B-BRIDGE-REFUTED (5899d05, 2026-08-02)",
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/B_FIXED_FRAME_EXHAUSTIVENESS_20260802",
+      "entry": "E06",
+      "kind": "goal_run",
+      "verification_class": "CONSISTENCY-ONLY",
+      "primary_exit": "B-BRIDGE-REFUTED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/COV_M1_DEG31_35",
+      "entry": "E09",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "COV-UNDECIDED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/D2_STACK_INVARIANT",
+      "entry": "E10",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "D2-NO-VALID-BRIDGE",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/G_UNIVERSAL",
+      "entry": "E16",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "G2-FINITE-GENERATION-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_11_5_TWIST",
+      "entry": "E18",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "H-11_5-NORM-MODEL-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A4_TWIST/H2_A4_GENERIC_TWIST_CODEX_ROOT_20260801",
+      "entry": "E11",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "H-A4-RATIONAL-POINT",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS",
+      "entry": "E11",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "H-A5-STRUCTURAL-MODEL-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_1",
+      "entry": "E11",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "H-A5-CLASS1-RATIONAL-POINT",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/A5_class_2",
+      "entry": "E11",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "H-A5-CLASS2-RATIONAL-POINT",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/common",
+      "entry": "E11",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/H_A5_TWISTS/independent",
+      "entry": "E11",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/J_BASELOCUS_PRYM",
+      "entry": "E21",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "J2-UNRESTRICTED-COUNTERMODEL-EXTENDS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/KLS_MINIMALITY",
+      "entry": "E22",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "KLS2-NO-FINITE-REDUCTION",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/M_SARKISOV",
+      "entry": "E24",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "M2-EXPLICIT-LINK-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "Q-UNDECIDED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE_DEGREE6_11_5_20260801_2A6C",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE_DESCENT_OBSTRUCTION_20260802",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "CONSISTENCY-ONLY",
+      "primary_exit": "Q2.1-DESCENT-OBSTRUCTION-AUDIT-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE_EXACT_FRAME_20260801_8F3D",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/a5_valuation_elimination",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/f55_all_degree_boundary",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/f55_degree6_degree7",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/f55_degree8",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/f55_degree9",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/fixed_curve_bridge",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/full_schur_palatinian",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_four_kummer_laurent",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_fourier_pair_k",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_plane_012_jacobian",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_three_kummer_laurent",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_three_kummer_planes",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/h_trace_two_laurent",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/schur_enq_v14",
+      "entry": "E27",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/R_RATIONAL_CURVES",
+      "entry": "E28",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "R2-DESCENT-OBSTRUCTED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E",
+      "entry": "E30",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "S19-UNDECIDED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/S19_MARKED_CURVE/CODEX_ROOT_20260801_7B4E_CONT2",
+      "entry": "E30",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "S19-UNDECIDED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/T_TARGET_BRANCH",
+      "entry": "E32",
+      "kind": "goal_run",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": "T2-ROUTE-REFUTED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_35fa/V_GENUINE_VALUATION",
+      "entry": "E33",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "V2-FIXED-FRAME-PLACE-NONTRANSFERABLE",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_7030dd/L1_FULL_POLAR_RANGE",
+      "entry": "E23",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "L1-FULL-RANGE-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_bd610a/A5Q_QUARTIC_RESCUE",
+      "entry": "E04",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "A5Q-INDEX11-CLOSED-POINT-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_bd610a/A5Q_QUARTIC_RESCUE_old",
+      "entry": "E04",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_bd610a/C5_MULTIPRIME_20260802",
+      "entry": "E08",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "C5-UNDECIDED",
+      "superseded_by": "C6 corrected Plucker/alternating model (2026-08-02)",
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_bd610a/C5_NEXT_GATE_20260802",
+      "entry": "E08",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "C5-UNDECIDED",
+      "superseded_by": "C6 corrected Plucker/alternating model (2026-08-02)",
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_bd610a/C5_PROJECTOR_INCIDENCE",
+      "entry": "E08",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "C5-UNDECIDED",
+      "superseded_by": "C6 corrected Plucker/alternating model (2026-08-02)",
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC",
+      "entry": "E18",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "H5-UNDECIDED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_bd610a/H5_FIBRATION_PROBE_20260802",
+      "entry": "E18",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_bd610a/H5_WAVE2_LAURENT_PROJ",
+      "entry": "E18",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_bd610a/M3B_SECTION_RESIDUAL_G1_20260802",
+      "entry": "E24",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "M3B-G1-MODULAR-NONEMPTY-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_bd610a/V3_VALUATION_RESIDUE_CLOSEOUT_20260802",
+      "entry": "E33",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "V3-RESIDUE-NORMAL-FORM-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": "G3H-SEMILINEAR-G3-FRAME-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/phase5_beta_li_springer",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/phase5_springer_next",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802",
+      "entry": "E33",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "V4-SIMULTANEOUS-CLASSIFICATION-PASS",
+      "superseded_by": null,
+      "char0_scope": "char0",
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "G3D-UNDECIDED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC/line27_exact",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": "G3D-LINE-27-ALGEBRA-PARTIAL",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/audit_a1",
+      "entry": "E03",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/border_support",
+      "entry": "E34",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/degree25_direct_support",
+      "entry": "E25",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": "modular-only",
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/degree25_exact",
+      "entry": "E25",
+      "kind": "certificate",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": "modular-only",
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/degree25_finite_module",
+      "entry": "E25",
+      "kind": "certificate",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": "modular-only",
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/degree25_global",
+      "entry": "E25",
+      "kind": "certificate",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": "modular-only",
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/degree25_molien",
+      "entry": "E25",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- P25Y-DVR-PASS Molien wording (F5, SCOPE-DRIFT)",
+      "char0_scope": "modular-only",
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/degree25_p25v",
+      "entry": "E25",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": "modular-only",
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/degree25_p25w",
+      "entry": "E25",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": "modular-only",
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/degree25_rank_k",
+      "entry": "E25",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": "modular-only",
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/degree25_rowrank",
+      "entry": "E25",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- stale rank-746-lower-bound-only phrasing (F6, SCOPE-DRIFT)",
+      "char0_scope": "modular-only",
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/degree25_support_f4",
+      "entry": "E25",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": "modular-only",
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/degree25_tower",
+      "entry": "E25",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": "modular-only",
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/elliptic_lifting",
+      "entry": "E28",
+      "kind": "certificate",
+      "verification_class": "CONSISTENCY-ONLY",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fano_c1",
+      "entry": "E07",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fano_c2",
+      "entry": "E07",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fano_c2_1",
+      "entry": "E07",
+      "kind": "certificate",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fano_c3",
+      "entry": "E07",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fano_interface_c0",
+      "entry": "E07",
+      "kind": "certificate",
+      "verification_class": "CONSISTENCY-ONLY",
+      "primary_exit": null,
+      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- C0 order-12 residual clause (F8, UNSUPPORTED)",
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fixed_frame_arithmetic",
+      "entry": "E13",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fold_binodal_t9",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- unconditional reading of T-BRANCH-NONNORMAL (F1, UNSUPPORTED+SCOPE-DRIFT)",
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fold_decision_t6",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fold_decision_t8",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- sealed T8 Jacobian prose (F4, UNSUPPORTED residual)",
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fold_decision_t8n1",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fold_normalization",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fold_normalization_t2r",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fold_normalization_t3",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fold_t11",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/fold_t11b",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/global_finite_lifting",
+      "entry": "E16",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/global_lifting",
+      "entry": "E16",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/global_lifting_decision",
+      "entry": "E16",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/global_terminal_module",
+      "entry": "E16",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/global_transition",
+      "entry": "E16",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/headline_cas_order",
+      "entry": "E02",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/hodge_centers",
+      "entry": "E19",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/lifting",
+      "entry": "E34",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main",
+      "also_entries": [
+        "E23"
+      ]
+    },
+    {
+      "path": "certificates/pfaffian_point",
+      "entry": "E26",
+      "kind": "certificate",
+      "verification_class": "NO-VERIFIER",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/restricted_e3",
+      "entry": "E13",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/schur_degree19",
+      "entry": "E30",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/schur_krylov",
+      "entry": "E01",
+      "kind": "certificate",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/strata",
+      "entry": "E34",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/target_branch_global",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main",
+      "also_entries": [
+        "E06"
+      ]
+    },
+    {
+      "path": "certificates/target_branch_mod3",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "ALGEBRAIC-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main",
+      "also_entries": [
+        "E06"
+      ]
+    },
+    {
+      "path": "certificates/target_branch_t10",
+      "entry": "E32",
+      "kind": "certificate",
+      "verification_class": "PARTIAL-RECOMPUTE",
+      "primary_exit": null,
+      "superseded_by": "certificates/audit_a1 layer (2026-08-02) -- unconditional reading of T10-BINODAL-NO-3-DEFECT (F2, UNCITED-HYPOTHESIS as geometry)",
+      "char0_scope": null,
+      "tracked": "main",
+      "also_entries": [
+        "E06"
+      ]
+    },
+    {
+      "path": "certificates/transition_repair",
+      "entry": "E34",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "certificates/transitions",
+      "entry": "E34",
+      "kind": "certificate",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": null,
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "main"
+    },
+    {
+      "path": "goal_runs_after_eb21458/G3P_A5_SEMILINEAR_QUADRATIC",
+      "entry": "E17",
+      "kind": "goal_run",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": "G3P-UNDECIDED",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "branch-only",
+      "branch": "agent/g3p-a5-semilinear-20260802"
+    },
+    {
+      "path": "goal_runs_after_bd610a/M3_SARKISOV_SECTION",
+      "entry": "E24",
+      "kind": "goal_run",
+      "verification_class": "UNCLASSIFIED",
+      "primary_exit": "M3-SECTION-COMPONENT-PASS",
+      "superseded_by": null,
+      "char0_scope": null,
+      "tracked": "branch-only",
+      "branch": "agent/m3-sarkisov-section-residual"
+    }
+  ]
+}
