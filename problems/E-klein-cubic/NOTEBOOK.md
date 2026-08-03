@@ -24,8 +24,26 @@ coverage-by-mention for `goals_*` worker roots, `external_sessions/`, and
 manually indexed. The checker verifies structure and pins, not mathematical
 semantics.
 
+**Coverage frontier (closed 2026-08-03).** The full space of places Problem E
+work can exist, enumerated and swept: (i) top-level documents — swept (7
+lenses); (ii) `goal_runs_after_*` run dirs — swept, manifest+checker (75);
+(iii) `certificates/*` — swept, manifest+checker (47); (iv) `goals_*` goal
+files — swept; (v) `goals_*` worker roots — swept (43; 7 unpromoted results
+recorded); (vi) `tmp/` — fully inventoried in
+`notebook_build/tmp_disposition.md` (362 dirs: 245 corpus-cited, 117 triaged,
+19 previously unrecorded now in [E16](#e16)/[E35](#e35)); checker-enforced;
+(vii) deleted-in-history paths — swept, closed (233 regenerable msolve inputs
++ 2 accounted files); (viii) remote branches — swept (13; 2 unique packets
+archived); (ix) PRs/issues — swept (6 PRs all recorded, 0 issues); (x) other
+problems' directories — swept (no substantive E work; only cross-references
+and the F-side source of E14's transfer story, `F-dp2-psl27/RESOLUTION.md`);
+(xi) NON-ENUMERABLE remainder, permanently outside any sweep: scratch trees
+on other workers' machines, and external sessions never shared into
+`external_sessions/`. New work landing in families (i)–(x) is caught by the
+parity checker; the remainder is a disclosed boundary, not a coverage claim.
+
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `8d199ec` (2026-08-03; the
+Snapshot metadata — notebook parent head: `ce1c2c8` (2026-08-03; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -834,7 +852,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Provenance:** `tmp/involution_exceptional_divisor` (+`verify_v4.py`), `tmp/d12_line_restriction`, `tmp/v4_surface_slice_audit`; D10/D12 symbolic module and `m1_compact_degree25` plane/line/point construction (+2 independent audits); `m3_line_point_boundary` D12 rank-8/8 point closure.
   - `source: external-chatgpt` — `sessions_batch3.md` § `klein-cubic-threefold-psl-6a6b6514.md` reconstructed the PSL(2,7)/Problem-F obstruction from scratch, abstracted it into a "normalizer fixed-stratum descent" machine, and confirmed independently that it fails on the Klein cubic ("rational lines in involution fixed loci give escape transitions"); proposed a "transition cosheaf" `𝒯_X` as successor. No commits.
   - `source: external-chatgpt` — `sessions_batch4.md` § `g-equivariant-rational-maps-6a70559f.md` and § `mathematical-machine-implementation-6a7055b7.md` further generalize the same mechanism (fixed-divisor constancy, rational-chain going-down principle) and both assert the Klein involution fixed locus contains **both** a rational line and an elliptic curve — the stated reason the cheap test fails. Sandbox LaTeX/PDF only; nothing committed.
-- **Pointers:** `HANDOFF.md` 2026-07-28 sections; `RESOLUTION.md` "2026-07-29 structural advances" items 12–13; `CURRENT_PATHS.md` Deprioritized work
+- **Pointers:** `HANDOFF.md` 2026-07-28 sections; `RESOLUTION.md` "2026-07-29 structural advances" items 12–13; `CURRENT_PATHS.md` Deprioritized work; `F-dp2-psl27/RESOLUTION.md` (the F-side source of the transfer assessment; verified 2026-08-03 to contain no independent E work)
 - *Lenses 4/7 (GIT, HAND, RES, STAT); confidence certain. The letter "F" is overloaded — see [E13](#e13), [E15](#e15).*
 
 ---
@@ -893,6 +911,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
   - "Marked state gives a boundary map — not proved"; "Equivariant interpolation from projective endpoint data — false without a common-character hypothesis"; "Affine completion has the same formal-rational field as the full completion — false"; "G-unirationality — not proved" [WORK, `NOTES_PATH_G_GLOBAL_LIFTING.md` §18]
 - **What was actually established:** (i) degrees ≤24 contain no landing self-covariant, explicitly a bounded exclusion with no degree bound available; (ii) the finite-truncation/isolation-cutoff theorem; (iii) the G4.1 free-fibre recurrence at its stated boundary; (iv) `G2-FINITE-GENERATION-PASS`, the all-degree reduction of the headline to a single arithmetic question. NOT established: the covariant, its nonexistence, or any finite global presentation — and finite generation explicitly does **not** give a finite degree cutoff.
 - **Worker-root, unpromoted/unverified:** `goals_2026-08-01/G_ALL_DEGREE_ROOT_20260801` is a self-acknowledged isolated delta (concurrent-worker collision) with 8 unmerged structural results, e.g. an eight-chart scheme audit proving the split-67 line-degree-four scheme equals the inherited `D_L` multiple scheme scheme-theoretically. See Goal-wave worker roots.
+- **Research lead, uncited/unpursued (recorded 2026-08-03):** `tmp/alternative_covariants` (worker-root, uncited anywhere until 2026-08-03) computes exact Molien-style multiplicities of `Hom_G(Sym^n(source), W)` for alternative source representations `W⊕1`, `W⊕W`, `∧²W`, `Sym²W`, plus a modular landing scan for `∧²W→W` — a genuinely different covariant-source strategy from every named route above (all of which use `W` itself as the source). Raw multiplicity tables only, no conclusion drawn, never pursued further.
 - **Aliases:** Path G; G0–G5; G1 finite truncation; G2 finite generation; G4.1 symbolic free-fibre recurrence; G7 degree-7 exit; `G_UNIVERSAL`; SPEC task **E1**; HAND `R1`–`R3`; RES `RES-01`, `RES-26`; CERT bucket `GLIFT`
 - **Provenance:** G1–G5, G4.1–G4.4, G-A/G-B/G-C/G-D; `goal_runs_after_35fa/G_UNIVERSAL`; degree exclusions 7–24 (`tmp/structural_degree13`, `degree14_structural`, `degree15_structural`, `degree16_landing_probe`, `degree16_exceptional_search`, `covariant_arrangement_module` for 17–21, `degree22_compression`, `degree23_common_line_landing`, `degree24_landing`); `tmp/symbolic_global_exactness`, `m1_compact_graded_pilot`, `m1_t1_*`; `tmp/local_symbolic_rees`; `certificates/global_*`, `certificates/lifting/`.
   - `source: external-chatgpt` — `sessions_batch2.md` § `finish-g-g2-theorem-6a705522.md`; branch `agent/g2-universal-all-degree-20260802`, PR #3 squash-merged as `23f40f7`, ledger commit `6a2ccaa`; packet `goal_runs_after_35fa/G_UNIVERSAL/` (`STATUS.md`, `UNIVERSAL_OBJECT.md`, `ALL_DEGREE_THEOREM.md`, `NOETHERIANITY.md`, `DECISION.md`, `theorem.json`, `verify.py`, `SEAL.json`; upstream source `goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json`, blob `965abb5`). Claims: universal object = generic twist `X_T = T×^G X` over `K_proj`; five-way all-degree equivalence; `F(p)=h³Φ(a)` two-way denominator clearing; `PSL(2,11)` verified perfect of order 660 ⇒ primitive representatives unique up to `k^×`; Hironaka presentation `rank_A R=12`, `rank_A M=60` over `A=k[f3,f5,f6,f8,f11]`; explicit counterexample that finite generation does **not** imply a finite degree cutoff.
@@ -1484,6 +1503,7 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   - Multiprime radical experiment: "still failed withheld-prime rational reconstruction"; "This makes no QQ support claim and is retired for the census" [HAND `R22`]
   - "refuted and retired" [WORK, `WORKORDER_ORDER12.md` line 4]
 - **What was actually established:** the distinguished plane section has no `K_proj,C`-point (proved); `Cl(H6)=Pic(H6)=Z[O(1)]` with zero defect; horizontal Weil degree image `3Z`. NOT established: anything about the threefold — explicitly scoped to one plane.
+- **Documented dead branch (tmp, dated 2026-07-29, recorded 2026-08-03):** an 18-directory `tmp/xcd_*` family (`xcd_mf_*`, `xcd_lower_cech_*`, `xcd_slice_*` — full list in `notebook_build/tmp_disposition.md`) attacked the `def(Y)=0` Q-factoriality question via two independent sub-attempts: (a) an order-by-order weighted-Rees matrix-factorization ladder, where orders 1–4 survive but is explicitly labeled "not an all-order formal factorization"; and (b) a lower-Čech/Brieskorn pole-complex chain whose key local comparison formula is explicitly labeled CONJECTURAL ("GAP: not a proof"). Abandoned; superseded by the recorded rank-720/Bertini closure of `def(Y)=0` above.
 - **Aliases:** "xCD plane cubic"; `F(a·x+b·C+c·D)=0`; SPEC task **E3** (partly); HAND `R21`–`R25`; RES `RES-04`
 - **Provenance:** `tmp/xcd_*` (29 directories: `invariant_fibre_discriminants`, `repeated_factor_incidence`, `singular_curve_enumeration_audit`, `general_slice_completion`, `actual_class_image`, `picard_restriction`, `singular_locus_bound`, `invariant_module_multiprime`, `control_next`, `generic_cech_next`, `first_descent_next`, `genuine_descent`, `nonzero_kummer`, `total_normality`, `local_class_defect`, `class_globalization_next`, `zariski_descent_gate`, `formal_mf_all_order`, `formal_algebraization_audit`, `class_image_attack`, `ca_class_group`, `algebraic_null_polar`, `zariski_morse_chart`, `discriminant_divisor`, `gauge_divisors`, `residue_class_gate`, `arithmetic_next`, `descent_algebra`, `invariant_field`). No external session executed this route; the Poonen–Stoll import from [E51](#e51) was absorbed here.
 - **Pointers:** `RESOLUTION.md` "The xCD flex and 3-descent audit"; `SPEC.md` task E3; `HANDOFF.md` "2026-07-29 xCD completion and Fable update", "2026-07-30 audited delta" item 3; `CURRENT_PATHS.md` §4
@@ -2301,7 +2321,17 @@ summary as a false taxonomy: it folded the dP/Fermat intrinsic-geometry
 obstruction program ([E14](#e14)–[E34](#e34)) into the landing-covariant
 thrust, even though it is mechanism-distinct — no covariant computation,
 no twist arithmetic. The Strategic dashboard now states **four** programs,
-not three.
+not three. (c) The coverage-frontier closure (2026-08-03): four further
+sweeps closed the remaining places Problem E work could exist —
+deleted-in-history paths (closed: 233 regenerable msolve inputs + 2
+accounted files), PRs/issues (closed: 6 PRs all recorded, 0 issues),
+cross-problem directories (closed: no substantive E work found outside
+this problem, only cross-references and `F-dp2-psl27/RESOLUTION.md`), and
+uncited `tmp/` scratch (triaged: 117 previously-uncited directories sorted
+into WORKDIR/AUDIT-COPY/DISTINCT-UNRECORDED, with 19 genuinely unrecorded
+items found and recorded into [E16](#e16)/[E35](#e35); full inventory in
+`notebook_build/tmp_disposition.md`). See the preamble's **Coverage
+frontier** paragraph for the full enumeration.
 
 ---
 

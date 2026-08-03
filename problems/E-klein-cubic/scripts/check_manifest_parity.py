@@ -269,6 +269,18 @@ def main() -> int:
     for name in mention_targets:
         if name not in notebook_text:
             unmentioned.append(name)
+    # tmp/ top-level dirs must be accounted for in the committed disposition
+    # inventory (notebook_build/tmp_disposition.md) or NOTEBOOK.md itself.
+    tmp_root = PROBLEM_ROOT / "tmp"
+    disp_path = PROBLEM_ROOT / "notebook_build" / "tmp_disposition.md"
+    disp_text = disp_path.read_text(encoding="utf-8") if disp_path.is_file() else ""
+    if tmp_root.is_dir():
+        for child in sorted(tmp_root.iterdir()):
+            if not child.is_dir() or is_ignorable_dir_name(child.name):
+                continue
+            mention_targets.append(child.name)
+            if child.name not in notebook_text and child.name not in disp_text:
+                unmentioned.append("tmp/" + child.name)
     if unmentioned:
         failures += 1
         print(f"FAIL coverage_by_mention: {len(unmentioned)} of {len(mention_targets)} manually-indexed item(s) never mentioned in NOTEBOOK.md:")
