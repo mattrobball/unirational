@@ -25,7 +25,7 @@ manually indexed. The checker verifies structure and pins, not mathematical
 semantics.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `85bec8e` (2026-08-03; the
+Snapshot metadata — notebook parent head: `8d199ec` (2026-08-03; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -114,7 +114,7 @@ genuine generic twist pointless.
 The one-page map. Everything below this section is ledger, provenance, and
 appendix; this is the current mathematical position. **Headline: OPEN.**
 
-After the exact reduction, the entire project is three programs:
+After the exact reduction, the entire project is four programs:
 
 1. **Produce a point on the generic twist** — solve `V(Φ)` directly (G3), a
    common isotropic quaternionic line (C6/Fano), a Sarkisov section (M3), or
@@ -122,15 +122,31 @@ After the exact reduction, the entire project is three programs:
 2. **Construct — or universally exclude — a landing covariant** — one nonzero
    landing covariant proves the positive answer; an all-degree nonexistence
    theorem proves the negative; no finite-degree search can settle the
-   negative side (KLS, the polar recursion, the strata machine, and the
-   flat-connection PDE are the all-degree attempts).
+   negative side (KLS, the polar recursion, and the flat-connection PDE are
+   the module-theoretic all-degree attempts).
 3. **Exhibit a genuinely pointless twist** — the `11:5` trace cubic, the
    full-`G` residue twists at `f5=0`/`f6=0`, or any explicit `G`-torsor whose
    Klein twist has no point.
+4. **Intrinsic equivariant-geometry obstruction — the dP/Fermat closing
+   method** ([E14](#e14) → [E34](#e34); proposals [E52](#e52), [E53](#e53)).
+   The mechanism that actually closed Problem F's del Pezzo and (per
+   session-level claims) the OD16 and Fermat-cubic examples: kill all
+   equivariant maps from *any* source at once via fixed-stratum,
+   fixed-divisor, and normal-cone/transition analysis on `X` itself — no
+   covariant computation, no twist arithmetic. As a statement its negative
+   exit coincides with program 2's (by the all-degree equivalence); as a
+   method it is independent. Current state: the verbatim transfer is refuted
+   (the Klein involution fixed loci contain rational lines — [E14](#e14));
+   the generalized machine is built and reformulated as a covariant screen
+   ([E34](#e34), no obstruction produced); the genuinely distinct
+   continuations — the transition cosheaf `H⁰(𝒯_X^land)=0 ⇒ non-unirational`
+   on the 55-plane incidence complex, the equivalent-object dP-replay
+   ([E52](#e52)), the hidden-intermediate-variety import ([E53](#e53)) — are
+   proposed and unrun. This is the only program that could yield a
+   search-free all-degree negative.
 
-Everything else in this notebook is infrastructure, a failed transfer, a
-scoped closure, or an audit showing a standard invariant does not decide one
-of these three.
+Everything else in this notebook is infrastructure, a scoped closure, or an
+audit showing a standard invariant does not decide one of these four.
 
 ### The decision tree
 
@@ -552,6 +568,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
     - *Side 2 (DIR + WORK + GIT):* A5Q = "A5 quartic rescue / index-11 transfer".
     - The canonical ledger notes the two-lens rule favours side 2 and that the KLS A5-quadric branch is a genuinely distinct object recorded inside [E22](#e22). Both readings are preserved.
 - **What was actually established:** an exact index-11 closed point on the induced object (PASS), and emptiness of the degree-4 quartic rescue **in the scoped range only**. NOT established: a rational point on the full generic twist; the field-descent/compatibility step is unbuilt.
+- **Worker-root, unpromoted/unverified:** `goals_after_bd610a/A5Q_QUARTIC_RESCUE_WORK/COMMON_CYCLE_VARIANT.md` claims that per class the 11×15 quadratic-evaluation matrix has rank 11, and that stacking both classes gives a 22×15 matrix of rank 15 with a nonzero combined-submatrix determinant — absent from the sealed A5Q packet. See Goal-wave worker roots.
 - **Aliases:** `A5Q_QUARTIC_RESCUE`, `A5Q_QUARTIC_RESCUE_old`; `G4_A5_INDEX11_TRANSFER`; `G4A_INDUCTION_PROJECTORS`; WORK `G4/A5Q`; GIT `A5`
 - **Provenance:** `goal_runs_after_bd610a/A5Q_QUARTIC_RESCUE`, `.../A5Q_QUARTIC_RESCUE_old`, `goal_runs_after_141f60/G4_A5_INDEX11_TRANSFER`, `.../G4A_INDUCTION_PROJECTORS`.
   - `source: external-chatgpt` — `sessions_batch3.md` § `progress-on-klein-cubic-6a705563.md`, branch `agent/klein-bd610a-closure-goals` head `83d35f7`, draft PR #1 (8 files: director review, dispatch index, six goal files). The session opened the draft PR but did not itself merge it; the merge landed as `e77298c` ("Merge pull request #1 ..."), 2026-08-01 20:21:41, 8 minutes after the head commit.
@@ -633,6 +650,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
   - Sub-installation exits `C0-MODEL-PASS`/`C1-MODEL-PASS`/`C2-FANO-MODEL`/`C3-FANO-MODEL-PASS`, `C2-TWO-GENERATORS-MODULAR`, `C3-RECTANGULAR-BASIS-MODULAR`; target exit `C-POSITIVE`/`C-FANO-POINT` **not reached** [WORK]
   - "every individual Hermitian member is isotropic... only simultaneous common-line isotropy remains open"; "no explicit `K_proj` coordinates, quaternion corner, or common isotropic line are known" [RES `RES-07`]
 - **What was actually established:** partial algebra models through C3, all modular; individual Hermitian isotropy. NOT established: the common isotropic line, explicit `K_proj` coordinates, or any char-0 lift.
+- **Worker-root note:** a compact unpromoted/unverified claim (`C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3`) shared between this entry and [E08](#e08) is recorded at [E08](#e08) and in Goal-wave worker roots.
 - **Aliases:** Route C; Path C; Tracks C0, C1, C2, C2.1, C3; SPEC task **E4**; RES `RES-07`; CERT `fano_interface_c0`, `fano_c1`, `fano_c2`, `fano_c2_1`, `fano_c3`
 - **Provenance:** C1/C2/C3 (CAS_HEADLINE, REVISED); C0.1–C0.2 (`WORKORDER_CAS_AFTER_5E72D8E.md`); C1.1–C1.2 (`WORKORDER_CAS_T9_P25Z.md`); C2.0–C2.3 (`WORKORDER_CAS_T10_P25W_C2.md`); C3.0–C3.3 (`WORKORDER_CAS_T11_P25V_C3.md`); certificate dirs incl. `certificates/fano_interface_c0/DIRECTOR_CORRECTION_C0.md`.
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` audited the worker return as `C-UNDECIDED`, "faithful but fragmented, no self-adjoint idempotent/quaternion corner/common line yet"; authored `GOAL_C_EXPLICIT_MORITA_AND_COMMON_LINE.md` (round-3 push, head `37d61c1`) and earlier `Goal C` (`e495a58`).
@@ -658,6 +676,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
   - "OPEN — Corrected Plucker/alternating model survives — Possible geometric construction/refutation" [STAT, 08-02 ledger]
   - `1b764bf` "add C6 determinantal Fano goal" [GIT]
 - **What was actually established:** the corrected incidence encoding and a birational determinantal model of the big cell (PASS). NOT established: a point; the residual is a positive-degree section lift and the full incidence solve was never run.
+- **Worker-root, unpromoted/unverified** (shared with [E07](#e07)): `goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3` ("research only" per A0) claims a degree-12 full-wedge covariant with nonzero symplectic contraction, an idempotent of reduced rank two, and Morita corner ranks 4/12/5 — not promoted. See Goal-wave worker roots.
 - **Aliases:** `C5_PROJECTOR_INCIDENCE`, `C5_MULTIPRIME_20260802`, `C5_NEXT_GATE_20260802`, `C6_PALATINI_BIG_CELL`; `GOAL_C6_PALATINI_BIG_CELL.md`; STAT "C5/C6 common-line Fano"; GIT `C6`
 - **Provenance:** `goal_runs_after_bd610a/C5_PROJECTOR_INCIDENCE`, `.../C5_MULTIPRIME_20260802`, `.../C5_NEXT_GATE_20260802`; `goal_runs_after_141f60/C6_PALATINI_BIG_CELL`.
   - `source: external-chatgpt` — `sessions_batch2.md` § `task-b-in-repo-6a70554b.md` (commit `5899d05`) explicitly reassigns "the remaining direct common-line problem solely to C/C5" after refuting B.
@@ -684,6 +703,8 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
   - `[(T_1)_d⊗W]^G = 0` through degree 34 and for degree ≥164, but **dimension 1 at degree 35** in the split-`F_67` fibre — "this does not lift to characteristic zero" [STAT, `CURRENT_PATHS.md`]
   - **Research lead (unexploited, flagged 2026-08-03):** V4's `M1-TRIPLE-ORDER3-ALL-LINE-DEGREE-EMPTY` theorem (`goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/THEOREM.md`) is a **characteristic-zero, all-line-degree** emptiness result for the `m=1` triple-line order-three stratum, and it has **never been invoked against the sibling degree-31/35 `m=1` modules** — no packet applies it there. It closed the corresponding branch at degree 25 (see [E25](#e25)); applying it here is a potential char-0 closure route for part of this entry's question, and is the cheapest unexplored move on E09.
 - **What was actually established:** modular vanishing through degree 34 and above 164, with a one-dimensional `T₁` residue at degree 35 over the split `F_67` fibre. NOT established: any char-0 statement; the degree-35 residue is precisely what refutes the all-degree colon shortcut used in [E16](#e16).
+- **Worker-root note:** a compact unpromoted/unverified claim (`P25_COV_SUPPORT`) shared between this entry and [E25](#e25) is recorded at [E25](#e25) and in Goal-wave worker roots.
+- **COV caveat:** A0's `CANONICAL_STATE.md` (`goal_runs_after_35fa/A0_CANONICAL_AUDIT/CANONICAL_STATE.md`:42) downgraded/repaired the invalid worker-root exit label `COV-STRUCTURED-DEGREES-EMPTY-SCOPED` to `COV-HIGHER-ORDER-BRANCHES-EMPTY-SCOPED` (higher-order-branch emptiness only); this repair is recorded as **done** (Verification debt item 13), not an open item.
 - **Aliases:** `COV_M1_DEG31_35`; STAT "COV — m=1 charts"; `tmp/covariant_arrangement_module`; `tmp/m1_*`
 - **Provenance:** `goal_runs_after_35fa/COV_M1_DEG31_35`; `tmp/m1_t1_saturation`, `tmp/m1_t1_f3_colon_attack`, `tmp/m1_t1_f3_colon_degree35_audit`, `tmp/m1_t1_char0_d35_gate`, `tmp/covariant_arrangement_module/verify_all.py`.
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` authored `GOAL_COV_STRUCTURED_POSITIVE_SEARCH.md` (`3569d63`) and `GOAL_COV_M1_EQUALIZERS_DEG31_35.md` (`37d61c1`); claims the triples `(d,m,e)=(25,3,7),(31,5,1),(35,5,5)` have zero global coefficient module ⇒ any covariant in degrees 25/31/35 must have `m=1`; and flags one worker exit label `COV-STRUCTURED-DEGREES-EMPTY-SCOPED` as overclaiming/invalid.
@@ -733,6 +754,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
   - Decision exits `N-E`, `P-E-SCOPED`, `E-STOP` — none resolved [WORK]
   - `08859c0` "Certify exact A4 surface parameters"; `20be6ba` "generic-twist continuation goal"; `2301a43` "resolve Goal H subgroup-twist sweep" [GIT]
 - **What was actually established:** exact rational points on the generic `A4` twist and on both maximal `A5`-class generic twists; the corresponding subgroup obstructions are therefore dead. NOT established: any dominant G-map; the image dimension of the constructed maps is ≤2.
+- **Worker-root, unpromoted/unverified:** `goals_2026-08-01/H_SUBGROUP_TWISTS_CODEX_ROOT_20260801` claims a COMPLETE proper-subgroup decision boundary — "every proper subgroup of an A5 or 11:5 not already displayed is outside the possible exceptions of CTZ Theorem 5.1" — stronger than the canonical packet; if verified this upgrades this entry's scope from finite sample to complete boundary. See Goal-wave worker roots.
 - **Aliases:** Path E (Elo #8); Goal H / "Route H" (`WORKORDER_CAS_HEADLINE.md` §9); `H_A4_TWIST/H2_A4_GENERIC_TWIST_CODEX_ROOT_20260801`; `H_A5_TWISTS`; GIT `A4`, `A5`, `H`
 - **Provenance:** the two `goal_runs_after_35fa/H_*` dirs; E1 one-A5-class pilot; H1 two maximal A5 classes (`WORKORDER_CAS_HEADLINE.md` §9); `goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER` (interface attempt — see [E17](#e17)).
   - `source: external-chatgpt` — `sessions_batch3.md` § `progress-on-klein-cubic-6a705563.md` (branch head `83d35f7`): reports the A4 twist's prior emptiness computation was invalidated by a **wrong transpose convention**, and that both maximal A5 twists get exact points via degree-11 Reynolds covariants — "kills A4/A5 subgroup-pointlessness routes but gives no dominant G-map, image dimension ≤2".
@@ -870,6 +892,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
   - "no finite global presentation was constructed... nonexistence of such a presentation is not proved" [WORK, `WORKORDER_CAS_HEADLINE_REVISED.md`, parked]
   - "Marked state gives a boundary map — not proved"; "Equivariant interpolation from projective endpoint data — false without a common-character hypothesis"; "Affine completion has the same formal-rational field as the full completion — false"; "G-unirationality — not proved" [WORK, `NOTES_PATH_G_GLOBAL_LIFTING.md` §18]
 - **What was actually established:** (i) degrees ≤24 contain no landing self-covariant, explicitly a bounded exclusion with no degree bound available; (ii) the finite-truncation/isolation-cutoff theorem; (iii) the G4.1 free-fibre recurrence at its stated boundary; (iv) `G2-FINITE-GENERATION-PASS`, the all-degree reduction of the headline to a single arithmetic question. NOT established: the covariant, its nonexistence, or any finite global presentation — and finite generation explicitly does **not** give a finite degree cutoff.
+- **Worker-root, unpromoted/unverified:** `goals_2026-08-01/G_ALL_DEGREE_ROOT_20260801` is a self-acknowledged isolated delta (concurrent-worker collision) with 8 unmerged structural results, e.g. an eight-chart scheme audit proving the split-67 line-degree-four scheme equals the inherited `D_L` multiple scheme scheme-theoretically. See Goal-wave worker roots.
 - **Aliases:** Path G; G0–G5; G1 finite truncation; G2 finite generation; G4.1 symbolic free-fibre recurrence; G7 degree-7 exit; `G_UNIVERSAL`; SPEC task **E1**; HAND `R1`–`R3`; RES `RES-01`, `RES-26`; CERT bucket `GLIFT`
 - **Provenance:** G1–G5, G4.1–G4.4, G-A/G-B/G-C/G-D; `goal_runs_after_35fa/G_UNIVERSAL`; degree exclusions 7–24 (`tmp/structural_degree13`, `degree14_structural`, `degree15_structural`, `degree16_landing_probe`, `degree16_exceptional_search`, `covariant_arrangement_module` for 17–21, `degree22_compression`, `degree23_common_line_landing`, `degree24_landing`); `tmp/symbolic_global_exactness`, `m1_compact_graded_pilot`, `m1_t1_*`; `tmp/local_symbolic_rees`; `certificates/global_*`, `certificates/lifting/`.
   - `source: external-chatgpt` — `sessions_batch2.md` § `finish-g-g2-theorem-6a705522.md`; branch `agent/g2-universal-all-degree-20260802`, PR #3 squash-merged as `23f40f7`, ledger commit `6a2ccaa`; packet `goal_runs_after_35fa/G_UNIVERSAL/` (`STATUS.md`, `UNIVERSAL_OBJECT.md`, `ALL_DEGREE_THEOREM.md`, `NOETHERIANITY.md`, `DECISION.md`, `theorem.json`, `verify.py`, `SEAL.json`; upstream source `goals_2026-08-01/G_ALL_DEGREE/generic_cubic.json`, blob `965abb5`). Claims: universal object = generic twist `X_T = T×^G X` over `K_proj`; five-way all-degree equivalence; `F(p)=h³Φ(a)` two-way denominator clearing; `PSL(2,11)` verified perfect of order 660 ⇒ primitive representatives unique up to `k^×`; Hironaka presentation `rank_A R=12`, `rank_A M=60` over `A=k[f3,f5,f6,f8,f11]`; explicit counterexample that finite generation does **not** imply a finite degree cutoff.
@@ -1174,6 +1197,7 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
     - *Side 2 (`sessions_batch4.md` § `2026-08-03-problem-e-review.md`):* claims exit `DEGREE25-LANDING-EMPTY` — "no homogeneous degree-25 landing self-covariant in char 0" — derived as a corollary of the V4 simultaneous-normal classification, and committed under `goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/DEGREE25_COROLLARY.md` (added by `ac5e899`, "Close degree-25 landing stratum using V4 theorem"; `72147bd` only modified `STATUS.md`).
     - *Resolution:* **neither side is wholly right.** Side 2's char-0 closure is real **for the order-three branch only** (Theorem 2.12, all line degrees, `A4`-equivariant, involution-plane order `m=1`, exact triple-line order three). Side 1's "not proved empty" is right for the **order-two and order-≥4** branches, which are proved only over the split fibre `F_67` — but those branches were **independently audited at that modular level**, so they are *modular-only*, not unverified. `DEGREE25_COROLLARY.md` is explicitly a "Bounded corollary" and states: "It is not an all-degree theorem and does not settle equivariant unirationality." Net state: degree 25 is **partially closed**; the exit label `DEGREE25-LANDING-EMPTY` overstates its char-0 scope; the char-0 bounded cutoff stays at 24; the headline stays OPEN. See conflict 13.
 - **What was actually established:** `dim Z ≤ 15`; direct landing row rank exactly 746; a DVR-properness pass; Stage-A kernel incidence empty; `P^21` a strict nonverdict (`3933 ≤ rank ≤ 7910`); the 842-row basis is not recoverable; and — via V4 Theorem 2.12 — **characteristic-zero emptiness of the order-three branch of the degree-25 filtration, for all line degrees**. NOT established: a degree-25 covariant; char-0 emptiness of the order-two and order-≥4 branches (audited over `F_67` only, no char-0 bridge); therefore not degree-25 emptiness as a whole. Per `audit_a1` (see [E03](#e03)), several P25 labels also carry SCOPE-DRIFT verdicts: `P25Z-FINITE-PRESENTATION` (F3), `P25Y-DVR-PASS`'s Molien claims (F5), the stale "746 lower bound only" phrasing (F6), and `P25X0-PASS`, which is titled characteristic-zero but is in fact multiprime (F7).
+- **Worker-root, unpromoted/unverified** (shared with [E09](#e09)): `goals_after_bd610a/P25_COV_SUPPORT` claims exact `F_89` ranks 690/56/746; multiplication rank 27583; kernel dim 19; a coupled degree-4 relation space of rank 29880; a 25200-state transition-stable border hull; and contraction rank 75/75 on all 7770 three-coordinate q-planes — none of these figures appear in any packet. See Goal-wave worker roots.
 - **Aliases:** P25; P25.1–P25.4; P25R, P25V, P25W, P25X, P25Y, P25Z; `P25W-RankK`, ROW-RANK, SUPPORT-F4, TOWER, MOLIEN; HAND `R3`; CERT bucket `P` (`degree25_*`)
 - **Provenance:** P25.1–P25.4 (CAS_HEADLINE); P25R.0–P25R.3 (REVISED); P25X.0–P25X.2 (DECISION/_V2); P25Y.1–P25Y.4 (AFTER_5E72D8E); P25Z.1–P25Z.3 (T9_P25Z); P25W.0–P25W.3 (T10_P25W_C2); P25V.0–P25V.3 (T11_P25V_C3); WP-B1, WP-6; `tmp/m1_relative_border_*`, `char0_lift_p19_d5`, `char0_lift_p20_d5`, `tmp/degree25_structural_probe`; `certificates/degree25_{exact, global, tower, finite_module, direct_support, support_f4, rowrank, rank_k, molien, p25v, p25w}`.
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` authored `Goal P25` (`28faa47`) and `GOAL_P25_ENLARGED_CLOSURE_AND_SUPPORT.md` (added by `27fcc1b`; indexed in `37d61c1`); audited returns `P25V-PRESENTATION-ENLARGED` ("strongly supported, not canonical — decisive counts 4140/315 read from producer JSON, not independently recomputed") and `P25V-SUPPORT-UNDECIDED` (faithful).
@@ -1252,6 +1276,7 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   - (iii) Exact **period-lattice and group-cohomology certificates** give `J(C)^G = 0` and `H¹(G, J[3]) = 0`, so the degree-two Abel–Jacobi torsor has exactly **one fixed point `q_2`**.
   - (iv) The Hilbert fibre twists to `SB(A_proj^op)` with `ind(A_proj) = 2`; hence the selected Hilbert component has **no `K`-point**. That is the obstruction.
 - **Explicitly NOT excluded:** unmarked rational quartics and quintics; higher free rational curves; incidence constructions through the degree-55 orbit; the Schur-source route over `K_Schur`.
+- **Worker-root, unpromoted/unverified:** `goals_2026-08-01/R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO` extends the canonical degree-2/3 closure: every geometrically integral K-curve on the twist with genus-zero normalization forces a K-point (degree-two anticanonical divisor spans a K-secant line), plus claimed irreducibility/dimensions 8 and 10 for rational quartic/quintic loci with dominant Abel–Jacobi maps — absent from this entry's canonical packet. See Goal-wave worker roots.
 - **Aliases:** `R_RATIONAL_CURVES`; WORK "R/M-stub"; CERT `certificates/elliptic_lifting` (`PICARD_OBSTRUCTION.md`) — link plausible, contested.
 - **Provenance:** `goal_runs_after_35fa/R_RATIONAL_CURVES`; `certificates/elliptic_lifting/` (candidate).
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` authored `GOAL_R_RATIONAL_CURVES_ON_TWIST.md` (added by `8a14d67`; indexed in `3569d63`).
@@ -1354,6 +1379,19 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
     - **F4 (high):** the sealed T8 prose asserts Jacobian determinants that were never computed — an **UNSUPPORTED residual**.
   - `T10-FOLD-HEIGHT1`/`T11-FOLD-HEIGHT1` sought but undecided [WORK]
   - `T3-UNDECIDED`; "Local-runner portfolio only; fixed-frame; **not headline after `B-BRIDGE-REFUTED`**" [WORK, `REMAINING_GOALS_NOTE.md`]; ledger: T3 `AUXILIARY OPEN — Fixed-frame/non-headline after B — Local runner only` [STAT]
+  - **Correction (2026-08-03 goal-wave sweep):** the notebook previously
+    recorded T3 as never executed. That is false as a global statement: no
+    *promoted* T3 packet exists on `main`, but a separate worker root,
+    `goals_after_bd610a/scratch_t3` (distinct from the planning-only
+    `T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER` push cited below), contains an
+    **actually-executed** T3 fixed-frame computation: an exact discriminant
+    constructed and factored, with the plane boundary `A=15, Y=12` certified
+    to have contact order two and one generic ordinary node (`Δ_cub`
+    irreducible of degree 15 over `Q(ζ₁₁)`, 719 terms), markers
+    `T3_FIXED_FRAME_DISCRIMINANT_DISCOVERY_DONE` and
+    `T3_DISC_PLANE_GENERIC_ONE_ORDINARY_NODE`. This is worker-root evidence
+    only — unpromoted, unverified, no synthesized packet or verifier. See
+    Goal-wave worker roots and Verification debt item 14.
   - "the strongest developed negative route... needed facts are finite and local"; "Ordinary Picard theory is complete... Neither its vanishing nor a dangerous class has been proved" [WORK, `DIRECTOR_REVIEW_AFTER_BD610A.md` §4 Rank3, §2.4]
   - Ledger: T/T2 bundled `TERMINAL — Prior local obstructions/witnesses exhausted — Background only` [STAT, 08-02 ledger]
   - **Conflict (terminality):**
@@ -1367,7 +1405,7 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 - **NOT established:** `R₁`, `T-NONNORMAL`, `dim Sing_S = 2`, any class-group vanishing, the index-three obstruction, or the T8 Jacobian determinants asserted in sealed prose. The T2 verifier marker is explicitly not a proof.
 - **Aliases:** Path T; T1–T4, T2R, T3, T3A, T6, T8, T8n1, T9, T10, T11, T11b; `T_TARGET_BRANCH`; `T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER`; Attempt 2; Path B "upstairs simple fold" (Elo ten paths); WP-T1; HAND `R11`/`R12`; RES `RES-25`; CERT `fold_*` and (contested) `target_branch_*`
 - **Provenance:** `goal_runs_after_35fa/T_TARGET_BRANCH`; T1–T4 (POST_ELO); T3.1–T4 (HEADLINE); T2R.4–T2R.5 (REVISED); T6.0–T6.3; T8.1–T8.4; T9.0–T9.3; T10.0–T10.3 (+`_CORRECTION.md`); T11.0–T11.3; T3A local RUR exhaustiveness (`c9d75e1`); T3 split into local worker goals (`b49fc81`, `74045be`, `823beb1`); WP-T1; Path B B1–B4 upstairs normalization; `certificates/fold_normalization`, `fold_normalization_t2r`, `fold_normalization_t3`, `fold_decision_t6`, `fold_decision_t8`, `fold_decision_t8n1`, `fold_binodal_t9`, `fold_t11`, `fold_t11b`.
-  - `source: external-chatgpt` — `sessions_batch2.md` § `t3-normalization-push-6a70553b.md`; pushed `goals_after_5899d0/T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER/` directly to main at `b49fc81` (README, WORK_ORDER, LOCAL_RUNNER_COMMANDS, ACCEPTANCE_MATRIX, WORKER_GOALS) — **planning documents only, no computed result or verifier packet**. The session delivered no proof, confirms "No T3 workflow exists on main", and notes it accidentally triggered GitHub Actions runs against an explicit local-runner-only instruction (runs failed at a preliminary boundary-audit step; the PR was closed with no changes). The packet itself states a successful T3 would prove only the "fixed-frame index-three theorem" and would **not** close Problem E after `B-BRIDGE-REFUTED`.
+  - `source: external-chatgpt` — `sessions_batch2.md` § `t3-normalization-push-6a70553b.md`; pushed `goals_after_5899d0/T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER/` directly to main at `b49fc81` (README, WORK_ORDER, LOCAL_RUNNER_COMMANDS, ACCEPTANCE_MATRIX, WORKER_GOALS) — **planning documents only, no computed result or verifier packet**. The session delivered no proof, confirms "No T3 workflow exists on main" (true of this push, but not true globally — `goals_after_bd610a/scratch_t3` is a separate, later-surfaced worker root with an executed T3 computation; see Verification debt item 14), and notes it accidentally triggered GitHub Actions runs against an explicit local-runner-only instruction (runs failed at a preliminary boundary-audit step; the PR was closed with no changes). The packet itself states a successful T3 would prove only the "fixed-frame index-three theorem" and would **not** close Problem E after `B-BRIDGE-REFUTED`.
   - `source: external-chatgpt` — `sessions_batch1.md` § `github-repo-task-update-6a7054fb.md` records the T3 split into local workers (T3-RUR/NORM/DISC/PIC/INTEGRATE), fixed-frame only after B's failure.
   - `source: external-chatgpt` — `sessions_batch3.md` § `mathematical-equivariance-query-6a70557e.md` authored `Goal T` (`aaab49f`) and `GOAL_T2_TARGET_BRANCH_NORMALIZATION.md` (added by `ba5aa87`; indexed in `37d61c1`); § `progress-on-klein-cubic-6a705563.md` reports the target branch reduced to `ind(C/F)=3`, `C(F)=∅`, `Pic⁰(C)(F)=0`, `Pic(T_D)=ZH_z⊕ZH_λ`, the only escape being the horizontal 3-primary part of `(Cl(T_D)/Pic(T_D))[3]`, and that the critical locus is a **degree-14 curve, not 12 nodes** (killing a hoped-for ODP shortcut).
 - **Pointers:** `REPAIR.md` Parts I, VI, §§1–3, §6, §15; `certificates/audit_a1/` (`AUDIT_FINDINGS.md` F1/F2/F4 — the second correction layer over this track); `WORKORDER_CAS_HEADLINE.md` §3; `WORKORDER_CAS_HEADLINE_REVISED.md` §4; `DIRECTOR_HANDOFF.md`; `DIRECTOR_REVIEW_AFTER_BD610A.md`; `CURRENT_PATHS.md` lines 19–90; `certificates/fold_*/`
@@ -1887,7 +1925,7 @@ corresponding attempt entry above with the tag `source: external-chatgpt`.
 | `g-equivariant-rational-maps-6a7055aa.md` (b1) | Generalize obstruction to arbitrary `X⇢Y` | none stated | planning (theory only) | Generic obstruction schema; **explicitly had no repo access** | none |
 | `finish-g-g2-theorem-6a705522.md` (b2) | Finish G/G2 universal object / all-degree theorem | 2026-08-02 | mixed (execute + verify + push) | `G2-FINITE-GENERATION-PASS`; five-way all-degree equivalence; Hironaka presentation; finite generation ≠ degree cutoff | PR #3 → `23f40f7`; `6a2ccaa` |
 | `repo-push-results-6a70552d.md` (b2) | Finish V — valuation/residue obstruction | 2026-08-02 | execution (heavy `F_p` linear algebra) + push | `V3-RESIDUE-NORMAL-FORM-PASS`; `V-F5-DEGREE16-SUPPORT-LE5-EMPTY` (11,628 supports mod 67); governing exit stays `V-UNDECIDED` | PR #5 → `30ce03b`; `b77b04c`, `141f604` |
-| `t3-normalization-push-6a70553b.md` (b2) | Finish T3 — normalization + Cl/Pic[3] | ~2026-08-02 | planning (work order only) | **No proof, no exit**; pushed T3.0–T3.5 program for a local runner; confirms no T3 workflow on main | `b49fc81` |
+| `t3-normalization-push-6a70553b.md` (b2) | Finish T3 — normalization + Cl/Pic[3] | ~2026-08-02 | planning (work order only) | **No proof, no exit**; pushed T3.0–T3.5 program for a local runner; confirms no T3 workflow on main *for this push* (a separate worker root, `scratch_t3`, was later found to carry an executed T3 computation — Verification debt item 14) | `b49fc81` |
 | `task-b-in-repo-6a70554b.md` (b2) | Finish task B — bridge/exhaustiveness theorem | 2026-08-02 | mixed (research + proof + push) | `B-BRIDGE-REFUTED` — the exhaustiveness theorem is **false**, via finiteness of `Γ_eff` in `Aut(Y_K̄)` | PR #4 → `5899d05` |
 | `repo-push-request-6a705556.md` (b2) | Finish Q (mostly) — descent/obstruction theory | 2026-08-02 | mixed (theorems + literature + push) | `Q2.1-DESCENT-OBSTRUCTION-AUDIT-PASS`; transfer-annihilation Thm 2.1; `π₁^et(X_K̄)=1`; goal exit stays `Q-UNDECIDED` | `4e44e73` |
 | `progress-on-klein-cubic-6a705563.md` (b3) | Director review of worker returns through `bd610a0` | none explicit | mixed (review + dispatch) | A4 + both A5 twists have exact rational points (prior emptiness invalidated by wrong transpose convention); Sarkisov disjunction; critical locus is a degree-14 curve, not 12 nodes | branch head `83d35f7`; draft PR #1 (**never merged in-session**) |
@@ -1958,46 +1996,127 @@ Added Round 5 (`## 2026-08-03 review round`), after the expanded
 `scripts/check_manifest_parity.py` coverage-by-mention check surfaced 43
 level-1 children of `goals_2026-08-01/`, `goals_after_35fa8f/`, and
 `goals_after_bd610a/` that were never mentioned by name anywhere in this
-document. These are **worker-root scratch directories**, not canonical
-records: parallel or successor isolated workspaces from the 2026-08-01/02
-dispatch waves (often several per goal, distinguished by `_CODEX_ROOT`/
-`_ROOT_<hex>` suffixes where concurrent workers collided on a shared
-directory name), consumed and superseded by the canonical `goal_runs_after_*`
-packets and `tmp/` results already cited under the entries below. None
-carries a headline-changing claim — every one is `OPEN`/`*-UNDECIDED` or a
-scoped/structural exit already subsumed by its entry's recorded state. Per
-the Coverage contract, this appendix satisfies coverage-by-mention; it does
-not create new per-record manifest entries.
+document. A disposition sweep then classified all 43: **21 PROMOTED** (the
+worker root's content is already carried by a named `goal_runs_after_*`
+packet or the entry cited in the table below — the worker root itself is
+superseded infrastructure), **15 SCRATCH** (unexecuted, superseded, or a
+staging/duplicate snapshot with no independent claim), and **7
+UNPROMOTED-RESULT** (the worker root contains an executed computation with
+a specific claim absent from every packet and every entry above). The key
+cross-reference for the PROMOTED dispositions is
+`goal_runs_after_35fa/A0_CANONICAL_AUDIT/CANONICAL_STATE.md`, which names
+most `goals_2026-08-01/*` directories as canonical packets (or, in one
+case, repairs the label under which a directory's content is canonical).
+Per the Coverage contract, this appendix satisfies coverage-by-mention; it
+does not create new per-record manifest entries. The 7 UNPROMOTED-RESULT
+dirs are independent verification debt — see Verification debt item 20.
 
-| Worker root(s) (batch dir) | Exit label(s) seen | Disposition |
+| dir | class | owning packet/entry or claim |
 |---|---|---|
-| `C_PFAFFIAN_FANO`, `C_PFAFFIAN_FANO_CODEX_ROOT`, `C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3` (`goals_2026-08-01/`) | `C-UNDECIDED` (all three) | Three successive/parallel worker-root attempts at a Pfaffian-constructed common line for a Fano point (compressed algebra, minimal polynomials, ambient-degree RUR searches); none closes. → [E07](#e07)/[E26](#e26) |
-| `D_EQUIVARIANT_MOTIVE` (`goals_2026-08-01/`) | `D-INVARIANT-REPRODUCIBLE` | The selected equivariant motive/cohomology lattice is reproducible but Rost/Merkurjev index formulas are vacuous at index one; headline OPEN — matches E10's neutralized reading. → [E10](#e10) |
-| `F_CONIC_ALGEBRA` (`goals_2026-08-01/`) | `F-CONIC-CRITERION-EMPTY` | Proves an auxiliary conic-intersection object empty (`C(K_proj)=empty` for a locally-defined `C`, not `C_gen`); scoped, does not decide the headline. Bare token "F" is ambiguous (Nomenclature glossary); nearest canonical home is the fixed-frame/common-line family. → [E13](#e13)/[E07](#e07) |
-| `G_ALL_DEGREE_ROOT_20260801` (`goals_2026-08-01/`) | `G-STRUCTURAL-UNDECIDED` | Structural line-scheme rigidity results for the landing-covariant ladder at every odd plane order; does not decide the ladder. → [E16](#e16) |
-| `H_SUBGROUP_TWISTS_CODEX_ROOT_20260801`, `H_SUBGROUP_TWISTS_ROOT_019FBE10` (`goals_2026-08-01/`) | `H-SWEEP-UNDECIDED` | Worker roots for the proper-subgroup twist sweep; `BR-SUBGROUP-NEG` proved but no proper-subgroup twist is pointless (both maximal `A5` classes and `11:5` survive) — content later superseded by the exact A5 twist points recorded at [E11](#e11). |
-| `M_SARKISOV_CODEX_ROOT_20260801`, `M2_EQUIVARIANT_SARKISOV_CODEX_ROOT_20260801` (`goals_2026-08-01/`) | `M-NEW-MORI-FIBRE-STRUCTURAL`, `M2-EXPLICIT-LINK-PASS` | Both install the exact type-I Sarkisov link (blowup of the plane cubic `C_012`, del Pezzo-3 fibration over `P¹`); structural, no section produced — predecessor worker roots for the packet recorded at [E24](#e24). |
-| `Q_11_5_FIVE_KUMMER_CODEX_ROOT_20260801_5FIVE`, `Q_11_5_FOUR_KUMMER_CODEX_ROOT_20260801_B91C`, `Q_11_5_TRACE_BINOMIAL_CODEX_ROOT_20260801_C71A`, `Q_11_5_TRACE_FACTOR_CODEX_ROOT_20260801_6D4E` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Sparse-exclusion child packets for the genuine Schur twist's `11:5`-decomposition trace equation (Kummer-vector and monomial-coefficient exclusions); each self-declares "nonterminal `Q-UNDECIDED`". → [E27](#e27) |
-| `Q_A5_VALUATION_REPLAY_20260801_D2B9` (`goals_2026-08-01/`) | (embeds `H-A5-CLASS1/2-RATIONAL-POINT`, `H-A5-STRUCTURAL-MODEL-PASS`) | Replays the exact A5-twist rational points ([E11](#e11)) as an input to Q's valuation/decomposition-group elimination argument. → [E27](#e27), input from [E11](#e11) |
-| `Q_SCHUR_A5_PARENT_INTEGRATION_20260801_EA52`, `Q_SCHUR_A5_VALUATION_ELIMINATION_CODEX_ROOT_20260801_EA52` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Both maximal `A5` decomposition classes eliminated functorially via the exact degree-11 point maps, narrowing the surviving decomposition groups to `{PSL(2,11), 11:5}`; the genuine Schur twist itself remains undecided. → [E27](#e27) |
-| `Q_SCHUR_DEGREE6_11_5_20260801_2A6C`, `Q_SCHUR_H4_DEG6_CODEX_ROOT_20260801_2A6C` (`goals_2026-08-01/`) | `Q_F55_DEGREE6_ALL_PROJECTIVE_CHARACTERS_EMPTY_EXACT` (child of `Q-UNDECIDED`) | Complete degree-1..6 `11:5` homogeneous landing-scheme exclusion for all five projective characters; bounded, does not decide the genuine Schur point. → [E27](#e27) |
-| `Q_SCHUR_DESCENT`, `Q_SCHUR_DESCENT_CODEX_ROOT_20260801_5F31` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Live-status worker roots for the generic Schur index-one descent binary (`X_Schur(K_Schur)≠∅` vs. `=∅`); neither side proved. → [E27](#e27) |
-| `Q_SCHUR_EXACT_FRAME_PARENT_INTEGRATION_20260801_8F3D`, `Q_SCHUR_EXPLICIT_FRAME_CODEX_ROOT_20260801_8F3D` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Install the exact characteristic-zero Hilbert–90 frame and 35-coefficient descended-cubic table for the genuine Schur twist (`Q_SCHUR_EXACT_FRAME_INDEPENDENT_REPLAY_OK`); infrastructure only. → [E27](#e27) |
-| `Q_SCHUR_FOUR_KUMMER_PARENT_INTEGRATION_20260801_B91C` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Reconstructs the five Reynolds/Hilbert-90 frame columns for the four-Kummer trace decision; nonterminal. → [E27](#e27) |
-| `Q_SCHUR_INDEX_ONE_STAGE_20260801_INTEGRATE2`, `Q_SCHUR_INDEX_ONE_STAGE_20260801_ROOT` (`goals_2026-08-01/`) | `Q-UNDECIDED` | Duplicate isolated packets for the Goal Q2 index-one decision stage (same content, collision-driven copies). → [E27](#e27) |
-| `R_RATIONAL_CURVES_CODEX`, `R_RATIONAL_CURVES_ROOT_20260801A`, `R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO` (`goals_2026-08-01/`) | `R-HILBERT-COMPONENT-STRUCTURAL` | Rational-curve Hilbert-component structural closures (degrees 2–3, then through degree 5 with an all-degree secant bridge); no point on the genuine twist produced — predecessor worker roots for [E28](#e28). |
-| `S19_SCHUR_CURVE_CODEX_ROOT_20260801_7B4E` (`goals_2026-08-01/`) | `S19-NO-CURVE-SCOPED` | Proves the *literal* S19 target curve empty in both live Rao branches (containment-in-`X_F` plus proper finite intersection is jointly impossible); the corrected ambient-curve problem is untouched. → [E30](#e30) |
-| `T_TARGET_BRANCH_INDEX3`, `T_TARGET_BRANCH_INDEX3_ROOT_019FBE13`, `T_TARGET_BRANCH_INDEX3_codex_root` (`goals_2026-08-01/`) | checklist stage / `T-ROUTE-REFUTED` (`T-BRIDGE-BLOCKED`) | Worker roots for the T0 target-branch audit; two independently reach `T-ROUTE-REFUTED` — the target branch controls only the auxiliary fixed-frame plane cubic, not the genuine twist — consistent with [E32](#e32)'s recorded auxiliary/suspended status. |
-| `V_VALUATION_TROPICAL_CODEX_ROOT_20260801` (`goals_2026-08-01/`) | `V-UNDECIDED` | Valuation/tropical route does not prove a pointless completion of the genuine twist; the permitted undecided exit. → [E33](#e33) |
-| `COV_M1_DEG31_35_WORK`, `COV_STRUCTURED_SEARCH`, `COV_STRUCTURED_SEARCH_ROOT` (`goals_2026-08-01/`) | `COV-UNDECIDED`, `COV-NEW-ANSATZ-STRUCTURAL`, `COV-STRUCTURED-DEGREES-EMPTY-SCOPED` | Degree-31/35 `m=1` module and structured-search worker roots. The third exit label, `COV-STRUCTURED-DEGREES-EMPTY-SCOPED`, was **flagged as invalid** by an independent faithfulness audit (`mathematical-equivariance-query-6a70557e.md`, § External sessions) — recorded here, not promoted. → [E09](#e09) |
-| `H3_A5_CANONICAL_MODEL_INVARIANT_20260801`, `point_attack_degree11_20260801`, `source_audit_canonical` (`goals_after_35fa8f/`) | `H-A5-CLASS1/2-RATIONAL-POINT`; independent audit PASS | The canonical-model payload, modular point-attack scripts, and independent `EXACT_DEGREE11_AUDIT.md` re-verification underlying the exact A5-twist rational points recorded at [E11](#e11) (different path names from the entry's cited provenance). |
-| `A5Q_QUARTIC_RESCUE_WORK` (`goals_after_bd610a/`) | (no terminal exit; `SUBGROUP_DESCENT.md`) | Exact subgroup-to-full-twist descent theory underlying [E04](#e04)'s A5 index-11 quartic-rescue transfer. |
-| `P25_COV_SUPPORT` (`goals_after_bd610a/`) | `PC-UNDECIDED` | P25/COV finite-support packet; closes sub-gate PC.0 over `F_89` but does not decide the mission. → [E25](#e25)/[E09](#e09) |
-| `scratch_t3` (`goals_after_bd610a/`) | none (raw scratch) | Discriminant/eliminant probe scripts for the T3 normalization stage; no synthesized status document. → [E32](#e32) |
+| `goals_after_35fa8f/H3_A5_CANONICAL_MODEL_INVARIANT_20260801` | PROMOTED | H_A5_TWISTS ([E11](#e11)) |
+| `goals_after_35fa8f/point_attack_degree11_20260801` | PROMOTED | H_A5_TWISTS ([E11](#e11)) |
+| `goals_after_35fa8f/source_audit_canonical` | SCRATCH | audit supporting [E11](#e11) |
+| `goals_after_bd610a/A5Q_QUARTIC_RESCUE_WORK` | UNPROMOTED | [E04](#e04) — `COMMON_CYCLE_VARIANT.md` rank witness |
+| `goals_after_bd610a/P25_COV_SUPPORT` | UNPROMOTED | [E09](#e09)/[E25](#e25) — exact ranks nowhere else |
+| `goals_after_bd610a/scratch_t3` | UNPROMOTED | [E32](#e32) — executed T3 discriminant computation |
+| `goals_2026-08-01/COV_M1_DEG31_35_WORK` | PROMOTED | COV_M1_DEG31_35 ([E09](#e09)) |
+| `goals_2026-08-01/COV_STRUCTURED_SEARCH` | PROMOTED | A0-canonical for COV ([E02](#e02)/[E09](#e09)) |
+| `goals_2026-08-01/COV_STRUCTURED_SEARCH_ROOT` | PROMOTED (label repaired by A0) | [E09](#e09) — see COV caveat below |
+| `goals_2026-08-01/C_PFAFFIAN_FANO` | SCRATCH | historical, superseded |
+| `goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT` | PROMOTED | A0-canonical for C ([E07](#e07)/[E08](#e08)) |
+| `goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3` | UNPROMOTED | [E07](#e07)/[E08](#e08) — "research only" idempotent |
+| `goals_2026-08-01/D_EQUIVARIANT_MOTIVE` | PROMOTED | [E10](#e10) |
+| `goals_2026-08-01/F_CONIC_ALGEBRA` | PROMOTED | [E13](#e13) |
+| `goals_2026-08-01/G_ALL_DEGREE_ROOT_20260801` | UNPROMOTED | [E16](#e16) — unmerged 8-point delta |
+| `goals_2026-08-01/H_SUBGROUP_TWISTS_CODEX_ROOT_20260801` | UNPROMOTED | [E11](#e11) — CTZ-5.1 completeness claim |
+| `goals_2026-08-01/H_SUBGROUP_TWISTS_ROOT_019FBE10` | PROMOTED | [E11](#e11) |
+| `goals_2026-08-01/M2_EQUIVARIANT_SARKISOV_CODEX_ROOT_20260801` | PROMOTED | M_SARKISOV ([E24](#e24)) |
+| `goals_2026-08-01/M_SARKISOV_CODEX_ROOT_20260801` | PROMOTED | M_SARKISOV ([E24](#e24)) |
+| `goals_2026-08-01/Q_11_5_FIVE_KUMMER_CODEX_ROOT_20260801_5FIVE` | SCRATCH | unexecuted script |
+| `goals_2026-08-01/Q_11_5_FOUR_KUMMER_CODEX_ROOT_20260801_B91C` | PROMOTED | Q_SCHUR_INDEX_ONE/h_trace_four_kummer_laurent ([E27](#e27)) |
+| `goals_2026-08-01/Q_11_5_TRACE_BINOMIAL_CODEX_ROOT_20260801_C71A` | SCRATCH | unexecuted script |
+| `goals_2026-08-01/Q_11_5_TRACE_FACTOR_CODEX_ROOT_20260801_6D4E` | PROMOTED | h_trace_fourier_pair_k + h_trace_three_kummer_laurent ([E27](#e27)) |
+| `goals_2026-08-01/Q_A5_VALUATION_REPLAY_20260801_D2B9` | SCRATCH | replay of [E11](#e11) result |
+| `goals_2026-08-01/Q_SCHUR_A5_PARENT_INTEGRATION_20260801_EA52` | SCRATCH | staging snapshot |
+| `goals_2026-08-01/Q_SCHUR_A5_VALUATION_ELIMINATION_CODEX_ROOT_20260801_EA52` | PROMOTED | a5_valuation_elimination ([E27](#e27)) |
+| `goals_2026-08-01/Q_SCHUR_DEGREE6_11_5_20260801_2A6C` | PROMOTED | Q_SCHUR_INDEX_ONE_DEGREE6_11_5 ([E27](#e27)) |
+| `goals_2026-08-01/Q_SCHUR_DESCENT` | PROMOTED | A0-canonical for Q ([E27](#e27)) |
+| `goals_2026-08-01/Q_SCHUR_DESCENT_CODEX_ROOT_20260801_5F31` | PROMOTED | Q_SCHUR_DESCENT ([E27](#e27)) |
+| `goals_2026-08-01/Q_SCHUR_EXACT_FRAME_PARENT_INTEGRATION_20260801_8F3D` | SCRATCH | staging snapshot |
+| `goals_2026-08-01/Q_SCHUR_EXPLICIT_FRAME_CODEX_ROOT_20260801_8F3D` | PROMOTED | Q_SCHUR_INDEX_ONE_EXACT_FRAME ([E27](#e27)) |
+| `goals_2026-08-01/Q_SCHUR_FOUR_KUMMER_PARENT_INTEGRATION_20260801_B91C` | SCRATCH | staging snapshot |
+| `goals_2026-08-01/Q_SCHUR_H4_DEG6_CODEX_ROOT_20260801_2A6C` | PROMOTED | Q_SCHUR_INDEX_ONE_DEGREE6_11_5 ([E27](#e27)) |
+| `goals_2026-08-01/Q_SCHUR_INDEX_ONE_STAGE_20260801_INTEGRATE2` | SCRATCH | staging snapshot |
+| `goals_2026-08-01/Q_SCHUR_INDEX_ONE_STAGE_20260801_ROOT` | SCRATCH | staging snapshot |
+| `goals_2026-08-01/R_RATIONAL_CURVES_CODEX` | PROMOTED | A0-canonical for R ([E28](#e28)) |
+| `goals_2026-08-01/R_RATIONAL_CURVES_ROOT_20260801A` | SCRATCH | subsumed (low confidence) |
+| `goals_2026-08-01/R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO` | UNPROMOTED | [E28](#e28) — all-degree secant bridge |
+| `goals_2026-08-01/S19_SCHUR_CURVE_CODEX_ROOT_20260801_7B4E` | PROMOTED | S19_MARKED_CURVE/CODEX_ROOT ([E30](#e30)) |
+| `goals_2026-08-01/T_TARGET_BRANCH_INDEX3` | SCRATCH | unexecuted checklist |
+| `goals_2026-08-01/T_TARGET_BRANCH_INDEX3_ROOT_019FBE13` | PROMOTED | A0-canonical for T ([E32](#e32)) |
+| `goals_2026-08-01/T_TARGET_BRANCH_INDEX3_codex_root` | SCRATCH | duplicate parallel run |
+| `goals_2026-08-01/V_VALUATION_TROPICAL_CODEX_ROOT_20260801` | PROMOTED | [E33](#e33) |
 
-All 43 are worker-root scratch, none headline-changing; no Index or manifest
-changes follow from this appendix beyond the coverage-by-mention citations
-above.
+### Unpromoted results (verify-and-promote-or-retire pending)
+
+The 7 UNPROMOTED-RESULT worker roots each carry a specific, executed claim
+that is not recorded in any packet or entry. None has been independently
+re-derived or sealed; each is worker-root evidence only (Binding rule 4).
+Compact pointers to these same claims are also placed inline at their
+owning entries, tagged "worker-root, unpromoted/unverified".
+
+- **`goals_after_bd610a/A5Q_QUARTIC_RESCUE_WORK`** ([E04](#e04)) —
+  `COMMON_CYCLE_VARIANT.md`: per class the 11×15 quadratic-evaluation
+  matrix has rank 11; stacking both classes gives a 22×15 matrix of rank
+  15 with a nonzero combined-submatrix determinant. Absent from the sealed
+  A5Q packet.
+- **`goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3`**
+  ([E07](#e07)/[E08](#e08)) — "research only" per A0: a degree-12
+  full-wedge covariant with nonzero symplectic contraction, an idempotent
+  of reduced rank two, and Morita corner ranks 4/12/5.
+- **`goals_after_bd610a/P25_COV_SUPPORT`** ([E09](#e09)/[E25](#e25)) —
+  exact `F_89` ranks 690/56/746; multiplication rank 27583; kernel dim
+  19; a coupled degree-4 relation space of rank 29880; a 25200-state
+  transition-stable border hull; all 7770 three-coordinate q-planes have
+  contraction rank 75/75. None of these figures appear in any packet.
+- **`goals_2026-08-01/H_SUBGROUP_TWISTS_CODEX_ROOT_20260801`**
+  ([E11](#e11)) — claims a COMPLETE proper-subgroup decision boundary
+  ("every proper subgroup of an A5 or 11:5 not already displayed is
+  outside the possible exceptions of CTZ Theorem 5.1") — stronger than
+  the canonical packet; if verified this upgrades [E11](#e11)'s scope
+  from finite sample to complete boundary.
+- **`goals_2026-08-01/G_ALL_DEGREE_ROOT_20260801`** ([E16](#e16)) —
+  self-acknowledged isolated delta (concurrent-worker collision) with 8
+  unmerged structural results, e.g. an eight-chart scheme audit proving
+  the split-67 line-degree-four scheme equals the inherited `D_L`
+  multiple scheme scheme-theoretically.
+- **`goals_2026-08-01/R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO`**
+  ([E28](#e28)) — extends the canonical degree-2/3 closure: every
+  geometrically integral K-curve on the twist with genus-zero
+  normalization forces a K-point (degree-two anticanonical divisor spans
+  a K-secant line), plus claimed irreducibility/dimensions 8 and 10 for
+  rational quartic/quintic loci with dominant Abel–Jacobi maps. Absent
+  from [E28](#e28)'s canonical packet.
+- **`goals_after_bd610a/scratch_t3`** ([E32](#e32)) — contains an
+  actually-executed T3 fixed-frame computation: an exact discriminant
+  constructed and factored, with the plane boundary `A=15, Y=12`
+  certified to have contact order two and one generic ordinary node
+  (`Δ_cub` irreducible of degree 15 over `Q(ζ₁₁)`, 719 terms), markers
+  `T3_FIXED_FRAME_DISCRIMINANT_DISCOVERY_DONE` and
+  `T3_DISC_PLANE_GENERIC_ONE_ORDINARY_NODE`. This corrects the prior
+  notebook record that T3 was never executed (Verification debt item
+  14): no *promoted* T3 packet exists, but an executed worker-root
+  computation exists unpromoted in `scratch_t3`.
+
+**COV caveat ([E09](#e09)).** A0's `CANONICAL_STATE.md` downgraded the
+worker-root label `COV-STRUCTURED-DEGREES-EMPTY-SCOPED` to
+`COV-HIGHER-ORDER-BRANCHES-EMPTY-SCOPED` (line 42, "Root label
+`COV-STRUCTURED-DEGREES-EMPTY-SCOPED` repaired to higher-order-branch
+emptiness only"). This is the A0 repair referenced by
+`goals_2026-08-01/COV_STRUCTURED_SEARCH_ROOT`'s PROMOTED-with-repaired-
+label disposition above. Verification debt item 13's "retire or correct
+the invalid exit label" action is therefore **done** — retired by A0's
+repair, not left open.
 
 ---
 
@@ -2167,6 +2286,23 @@ the new `## Goal-wave worker roots` appendix.
 
 Session count updated from 19 to 20 (`## External sessions`).
 
+**Round 5 addendum (2026-08-03, post-return).** (a) Once the expanded
+checker's coverage sweep's 43 flagged worker roots were individually
+dispositioned, the sweep found **7 UNPROMOTED-RESULT** among them — worker
+roots whose executed computation carries a claim absent from every packet
+and every entry — including an actually-executed T3 fixed-frame
+discriminant computation (`goals_after_bd610a/scratch_t3`) that
+contradicts the notebook's prior "T3 never executed" record (now
+corrected — see [E32](#e32) and Verification debt item 14). Full
+disposition table in `## Goal-wave worker roots`; outstanding
+verify-and-promote-or-retire debt tracked as Verification debt item 20.
+(b) A user probe caught this round's own "three genuine attack thrusts"
+summary as a false taxonomy: it folded the dP/Fermat intrinsic-geometry
+obstruction program ([E14](#e14)–[E34](#e34)) into the landing-covariant
+thrust, even though it is mechanism-distinct — no covariant computation,
+no twist arithmetic. The Strategic dashboard now states **four** programs,
+not three.
+
 ---
 
 ## Verification debt
@@ -2276,14 +2412,39 @@ claim; 9+ are ordered by route.
 - **Why load-bearing:** the degree ladder of [E16](#e16) and the "degree 25 is first open" framing rest on them, as does the reduction of degrees 25/31/35 to the `m=1` case.
 - **Where:** `tmp/degree22_compression`, `degree23_common_line_landing`, `degree24_landing` (all untracked local scratch, Binding rule 5); `goal_runs_after_35fa/A0_CANONICAL_AUDIT`; `goal_runs_after_35fa/COV_M1_DEG31_35`.
 - **4140/315 sub-claim — RESOLVED 2026-08-03.** A0 **does** recompute these independently, contrary to the external session's self-flag and to a later review's proposal to downgrade A0 to packet-consistency-only. `verify_p25_bulk_projection.c` rebuilds `π(G)` and all 4140+315 test vectors from sealed, hash-cross-checked binary inputs and recomputes membership by random sparse projection + FLINT RREF over `F_89`; `verify_p25_bulk_projection_result.json` records `reads_4140_from_json: false`, and the expected values are hardcoded pass literals compared against runtime-computed figures. The real defect — the stock `verify_p25v0.py` asserting JSON fields only — was found and repaired **by A0 itself** (`VERIFIER_REPLAY.md`:33–35). See [E02](#e02).
-- **Verification (remaining):** re-run the chart computations for 22–24; re-derive the three zero-module claims. Also retire or correct the invalid exit label `COV-STRUCTURED-DEGREES-EMPTY-SCOPED`.
+- **Verification (remaining):** re-run the chart computations for 22–24; re-derive the three zero-module claims. The invalid exit label `COV-STRUCTURED-DEGREES-EMPTY-SCOPED` has been **retired** — `goal_runs_after_35fa/A0_CANONICAL_AUDIT/CANONICAL_STATE.md`:42 repairs it to `COV-HIGHER-ORDER-BRANCHES-EMPTY-SCOPED` (higher-order-branch emptiness only); see [E09](#e09) and Goal-wave worker roots, COV caveat. This item is done, not open.
 
 ### 14. Was T3.0–T3.5 ever executed?
 
-- **Claim:** none — `t3-normalization-push-6a70553b.md` landed planning documents only.
-- **Why load-bearing:** "T3" must not be treated as touched in any substantive way; and after `B-BRIDGE-REFUTED` a successful T3 would prove only the fixed-frame index-three theorem, not the headline.
-- **Where:** `goals_after_5899d0/T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER/`; commit `b49fc81`.
-- **Verification:** check whether any later run directory carries a T3 exit label; confirm no T3 workflow exists on `main`.
+- **Claim (as landed by `t3-normalization-push-6a70553b.md`):** none there — that
+  session's `T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER` push was planning documents
+  only, and the session's own text states no T3 workflow existed on `main` at
+  that time.
+- **Correction (2026-08-03 goal-wave sweep):** read as a global statement —
+  "T3 was never executed" — this is **false**. `goals_after_bd610a/scratch_t3`,
+  a separate worker root unrelated to the `t3-normalization-push` session,
+  contains an actually-executed T3 fixed-frame computation: an exact
+  discriminant constructed and factored, with the plane boundary `A=15, Y=12`
+  certified to have contact order two and one generic ordinary node (`Δ_cub`
+  irreducible of degree 15 over `Q(ζ₁₁)`, 719 terms), markers
+  `T3_FIXED_FRAME_DISCRIMINANT_DISCOVERY_DONE` and
+  `T3_DISC_PLANE_GENERIC_ONE_ORDINARY_NODE`. The correct statement is: **no
+  promoted T3 packet exists** — no synthesized `STATUS.md`/verifier packet
+  carries this result forward into [E32](#e32)'s canonical record — but an
+  executed worker-root computation exists **unpromoted** in `scratch_t3`.
+- **Why load-bearing:** "T3" must not be treated as touched in any substantive
+  way *without this qualification*; and after `B-BRIDGE-REFUTED` a successful
+  T3 would prove only the fixed-frame index-three theorem, not the headline —
+  the `scratch_t3` result, if verified and promoted, would still only bear on
+  that non-headline theorem.
+- **Where:** `goals_after_5899d0/T3_NORMALIZATION_CLPIC3_LOCAL_RUNNER/`
+  (planning-only push; commit `b49fc81`); `goals_after_bd610a/scratch_t3/`
+  (executed, unpromoted computation — see [E32](#e32) and Goal-wave worker
+  roots).
+- **Verification:** re-derive the `scratch_t3` discriminant computation and
+  its node/contact-order claim independently; check whether any later run
+  directory carries a T3 exit label built on it; then promote into a portable
+  packet or retire (Verification debt item 20).
 
 ### 15. Off-problem theorems asserted by planning sessions
 
@@ -2362,6 +2523,31 @@ determines which route owns the certificate.)
   then, treat these attempts' evidence as local-only and unauditable from the
   pushed repository.
 
+### 20. The 7 UNPROMOTED-RESULT worker roots need verify-and-promote-or-retire
+
+- **Claim under test:** the 2026-08-03 goal-wave disposition sweep
+  (`## Goal-wave worker roots`) found 7 of the 43 flagged worker roots
+  contain an executed computation with a specific claim absent from every
+  packet and every entry: `goals_after_bd610a/A5Q_QUARTIC_RESCUE_WORK`
+  ([E04](#e04)); `goals_2026-08-01/C_PFAFFIAN_FANO_CODEX_ROOT_20260801_A7C3`
+  ([E07](#e07)/[E08](#e08)); `goals_after_bd610a/P25_COV_SUPPORT`
+  ([E09](#e09)/[E25](#e25)); `goals_2026-08-01/H_SUBGROUP_TWISTS_CODEX_ROOT_20260801`
+  ([E11](#e11)); `goals_2026-08-01/G_ALL_DEGREE_ROOT_20260801` ([E16](#e16));
+  `goals_2026-08-01/R_RATIONAL_CURVES_ROOT_JACOBIAN_ZERO` ([E28](#e28));
+  `goals_after_bd610a/scratch_t3` ([E32](#e32)).
+- **Why load-bearing:** each of these is worker-root evidence only (Binding
+  rule 4) — none has a synthesized `STATUS.md`, verifier, or seal, and none
+  has been independently re-derived. Several would strengthen an existing
+  entry's scope if verified (e.g. [E11](#e11)'s completeness claim), and
+  `scratch_t3` corrects a standing notebook error (Verification debt item
+  14) about T3 execution status.
+- **What resolution looks like:** for each of the 7, either (a) re-derive the
+  claim independently and promote it into a portable packet under
+  `certificates/` or `goal_runs_*/` with a checked-in verifier, folding the
+  result into its owning entry above, or (b) retire it — record why the
+  claim does not hold or is out of scope. Until one or the other happens,
+  none of these 7 claims may move any entry's headline-relevant status.
+
 ---
 
 ## Open conflicts and identity questions
@@ -2405,7 +2591,7 @@ determines which route owns the certificate.)
 | [E06](#e06) B ↔ [E32](#e32) T, via `certificates/target_branch_*` | CERT assigns `target_branch_{global,mod3,t10}` to "B"; both work the same fixed-frame/target-branch geometry | `target_branch_t10/exit_t10.json` matches GIT's T10 work order (`1d3fe3b`); HAND `R11`/`R12` place "target branch" inside Path T | **KEPT SEPARATE**, certificates listed under both |
 | [E05](#e05) Attempt1 ↔ [E26](#e26) Pfaffian | GIT `1c07871` and WORK share the verbatim `FAIL-SCOPE` exit and bridge language; `certificates/pfaffian_point/{BRIDGE_AUDIT.md, CFOSS_W1_INPUT.md}` matches WORK's Attempt-1 gate 1B | none | **MERGED** — Attempt 1 = the Pfaffian–Morita idempotent gate |
 | [E10](#e10) D/D2 ↔ [E19](#e19) Hodge-center | WORK presents them as one entry (D1 = "repair split-injection proof", D2 = "geometric channel screen"); both conclude the unrestricted invariant is too flexible | DIR/GIT/HAND/RES/STAT treat the Hodge-center theorem as standalone with its own certificate dir | **KEPT SEPARATE** — Hodge-center is a theorem inside the broader D route |
-| [E21](#e21) J: WORK-description ↔ DIR-run | same letter; both are "invariant that survives every compression" arguments; both terminate without an obstruction | WORK's version is explicitly never executed; DIR's has an exit label | **PROVISIONALLY MERGED**, discrepancy kept as conflict 11 |
+| [E21](#e21) J: WORK-description ↔ DIR-run | same letter; both are "invariant that survives every compression" arguments; both terminate without an obstruction | WORK's version is explicitly never executed; DIR's has an exit label | **ADJUDICATED-SPLIT** (E21a/E21b; conflict 11) |
 | [E23](#e23) L1 ↔ WP-L1 | both are "universal polar expansion / full polar range" over the Path G lifting tower | WORK never uses the code `L1`; DIR never uses `WP-L1` | **KEPT SEPARATE** (single entry, alias flagged, medium confidence) |
 | [E28](#e28) R/R2 ↔ `certificates/elliptic_lifting` / WP-E1 | both concern an elliptic Picard/`Pic⁰` obstruction | WP-E1 sits inside Path G's lifting blockers; R/R2 is an Aug-1 goal run | **UNRESOLVED** (conflict 12) |
 | [E13](#e13) F ↔ [E14](#e14) F-IMPORT ↔ [E15](#e15) Fable | all three are addressed by the single ledger token "F" | contents unrelated (fixed-frame genus-one torsor vs Problem-F involution import vs A4 trisection) | **KEPT SEPARATE**; ledger token ambiguous (conflict 4) |
