@@ -70,42 +70,48 @@ structure constants / word-basis determinants / minimal polynomials
 recomputed and compared, not read), `fixed_frame_arithmetic`
 (`existence_verify.py` recomputes the degree-6 line eliminant and its S6
 Galois group via sympy; `conic_algebra_verify.py` recomputes the five-form
-rank and fixed-direction residual identities), `lifting` (`verify_polar_expansion.py`
-re-derives the polarization identity and universal order equations by
-independent triple enumeration; `families/verify.py` rebuilds free-module
-ranks and generic-rank samples via `common_tower`), `restricted_e3` (an
-independent Julia/Hecke replay refactors and factors the quartic/octic
-resolvents at a fresh specialization, alongside structural field checks),
-`strata` (`verify.py`/`verify_normal_characters.py`/`verify_marked_s3.py`
-rebuild the 660-element group from `exact_weil_check.py`, recompute all
-subgroup-class counts and joint-character dimensions, and independently
-recompute `j(E_t)=8192/11` via PARI/GP at two primes), `transitions`
-(sampled `v4_fixed_line`/`c3_lines`: exact Hilbert-coefficient tables and
-V4/C3 character-projector dimensions recomputed via modular linear algebra,
-not read from JSON).
+rank and fixed-direction residual identities), `global_transition`
+(recomputes `dim_plane`, `dim_v4_line`, `dim_d12_ordinary`, `dim_d12_twisted`
+and the endpoint-ledger classification independently across the full sampled
+range via `common_global.py` closed forms, and cross-checks cell-by-cell
+against the sealed tables — not read from JSON), `lifting`
+(`verify_polar_expansion.py` re-derives the polarization identity and
+universal order equations by independent triple enumeration;
+`families/verify.py` rebuilds free-module ranks and generic-rank samples via
+`common_tower`), `strata` (`verify.py`/`verify_normal_characters.py`/
+`verify_marked_s3.py` rebuild the 660-element group from
+`exact_weil_check.py`, recompute all subgroup-class counts and
+joint-character dimensions, and independently recompute `j(E_t)=8192/11` via
+PARI/GP at two primes), `transitions` (sampled `v4_fixed_line`/`c3_lines`:
+exact Hilbert-coefficient tables and V4/C3 character-projector dimensions
+recomputed via modular linear algebra, not read from JSON).
 
-PARTIAL-RECOMPUTE: 1 — `global_transition` (recomputes `dim_plane`,
-`dim_v4_line`, `dim_d12_ordinary`, `n_triv` and the endpoint-ledger
-classification independently across the full sampled range and cross-checks
-cell-by-cell against the sealed tables; but the necessity-theorem `PROVED`
-status and the Level-2 growth witnesses are read/marker-checked, not
-re-derived).
+PARTIAL-RECOMPUTE: 1 — `restricted_e3` (an independent Julia/Hecke replay
+refactors and factors the quartic/octic resolvents at one fresh
+specialization `(1,2,3,4)` — a genuine independent recompute of the decisive
+degree-8 field claim — but the packet's structural fields (`R_over_F` rank,
+`K_proj` degree, the CFOSS Lemma 3.1/Cor 3.12 pins) are asserted via JSON
+field/hash reads, and the binary `res(xi)` decision itself is explicitly not
+run).
 
-CONSISTENCY-ONLY: 2 — `global_lifting` (self-hash checks, JSON field/marker
+CONSISTENCY-ONLY: 3 — `global_lifting` (self-hash checks, JSON field/marker
 checks, and a cross-check of two closed-form shape formulas against sealed
 free-module stages; no rank/determinant/identity is independently computed),
 `transition_repair` (an independent re-classification function re-derives
 legacy arrow-type labels and runs adversarial forbidden-identification
 predicate checks, but there is no numerical/algebraic recomputation — no
-rank, determinant, or polynomial identity anywhere in the script).
+rank, determinant, or polynomial identity anywhere in the script),
+`headline_cas_order` (no verify script of its own, but `BASELINE.json` is
+itself a hash/marker-check ledger: per-file sha256 for 161 pinned inputs, an
+`h_factor_sha256sums_crosscheck` hash cross-check, and a `verifier_replay`
+record of exit codes / marker checks / stdout hashes for the 13 accepted
+verifiers — consistency-checking content, just recorded as a JSON audit
+artifact rather than an executable script).
 
-NO-VERIFIER: 3 — `audit_a1` (`no_computation_performed: true`; a
+NO-VERIFIER: 2 — `audit_a1` (`no_computation_performed: true`; a
 claims-about-claims audit of other packets' markers, no verify script),
 `fold_normalization_t3` (empty stub directory — two empty subdirectories,
-no files, no git history for the path at all; never populated),
-`headline_cas_order` (a CAS toolchain-version baseline freeze: `SEAL.json`/
-`BASELINE.json`/`SHA256SUMS` only, no verify script and no mathematical
-claim to check).
+no files, no git history for the path at all; never populated).
 
 Branch-only (not on `main`, read via `git show`/`git ls-tree` without
 checkout):
