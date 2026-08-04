@@ -253,7 +253,7 @@ def main() -> int:
 
     # --- Check 8: entry-id validity and duplicate paths --------------------
     bad_ids = [r["path"] for r in records
-               if not re.fullmatch(r"E(0[1-9]|[1-4][0-9]|5[0-5])[ab]?", str(r.get("entry", "")))]
+               if not re.fullmatch(r"E(0[1-9]|[1-4][0-9]|5[0-6])[ab]?", str(r.get("entry", "")))]
     seen: dict[str, int] = {}
     for r in records:
         seen[r["path"]] = seen.get(r["path"], 0) + 1

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `4c757af` (2026-08-03; the
+Snapshot metadata — notebook parent head: `2c2bd90` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -171,7 +171,9 @@ parallel alternatives:
    is the only currently articulated **geometry-first** route to a
    search-free all-degree negative that avoids the covariant/PDE module
    problem; families 2's theoretical arguments target the same exit
-   module-theoretically.
+   module-theoretically. **Now under head-on attack as the FIX program
+   ([E56](#e56), opened 2026-08-04): Note I defines the b-complex and its
+   functoriality; foundation packets FIX-A0/A1 in flight.**
 
 Method-discovery proposals sit outside the four families: the
 equivalent-object dP-replay ([E52](#e52)) and the hidden-intermediate-variety
@@ -419,7 +421,7 @@ Chronology and hash anchors from `notebook_build/lens_gitlog.md`.
 
 ## Index
 
-55 canonical **records** (56 index rows after the E21a/E21b split — [E21](#e21)
+56 canonical **records** (57 index rows after the E21a/E21b split — [E21](#e21)
 is one record presented as two clearly-labeled sub-records under a shared
 entry and anchor, per Round 5 below). They are not all "attempts" in the
 sense of tried-and-failed routes: the set spans construction, obstruction,
@@ -489,6 +491,7 @@ Each entry carries a `Thread:` line locating it in the Research threads map abov
 | [E53](#e53) | UNKNOWN-EX — hidden intermediate-variety search | positive (proposed) | analytic | PROPOSED-UNRUN | none |
 | [E54](#e54) | CTR-TWIST — counterexample twist target | negative (target) | analytic | OPEN-TARGET | negative |
 | [E55](#e55) | REPAIR — 2026-07-31 theorem-boundary audit | infrastructure | analytic | APPLIED | none |
+| [E56](#e56) | FIX — equivariant fixed-locus b-complex program | dual (reduction + obstruction) | analytic + CAS | ACTIVE — Note I drafted; FIX-A0/A1 dispatched | both |
 
 ## Attempts
 
@@ -1979,6 +1982,65 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 - **Provenance:** `REPAIR.md` §§0–17; mandated file edits (`certificates/hodge_centers/HODGE_CENTER_NECESSITY.md`, `certificates/schur_krylov/*`, `certificates/fold_normalization*`). No external session; note that the offline 08-02 ledger post-dates this repair and conflicts with it in several places (see Open conflicts).
 - **Pointers:** `REPAIR.md`; `HANDOFF.md` "2026-07-31 theorem-boundary repair"; `RESOLUTION.md`/`SPEC.md` repair tables; `CURRENT_PATHS.md` lines 19–90
 - *Lenses 4/7 (GIT, HAND, RES, STAT); confidence certain.*
+
+---
+
+<a id="e56"></a>
+### E56 — FIX — Equivariant fixed-locus b-complex program
+
+- **Target:** dual — build the general abstract structure whose shadows
+  closed the dP and Fermat cases: the decorated fixed-locus b-complex
+  `𝔽_b(X)` (fixed strata across all `G`-models with normal-representation,
+  residual-action, and birational-class decorations), its blowup calculus,
+  and its functoriality under equivariant dominant rational maps; then
+  compute the induced constraint-satisfaction problem for
+  `P(W) ⇢ X_Klein` (obstruction exit) while exposing any forced structure
+  usable constructively (reduction exit).
+- **Justification:** the dP/OD16/Fermat closures all used fragments of this
+  structure; the head-on general theory is the only geometry-first route to
+  a search-free all-degree answer and subsumes E14/E15/E34/E33's shadows.
+- **Method:** analytic (director notes) + CAS (foundation and instantiation
+  packets).
+- **Record type:** reduction / obstruction (dual)
+- **Thread:** T3 — mechanism transfer, now head-on (method family 4)
+- **Verification class:** ANALYTIC-PROOF-REVIEW (notes) + per-packet classes
+  as they land
+- **Status:** ACTIVE (opened 2026-08-04). Note I
+  (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
+  Def 1.1), blowup calculus (Thm 2.1, checked against the classical
+  dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
+  weak factorization as the computability bridge (Prop 3.3),
+  graph-is-a-model functoriality (Obs 4.0, Thm 4.1) with endomorphism
+  stability by construction, rational-chain going-down proved (Lemma 4.2 —
+  retiring the session-asserted principle), RCC propagation (Lemma 4.3),
+  and the linear-source funnel (Cor 4.4: for `X = P(W)` every fixed stratum
+  of every model is RCC, so all genus-≥1 target strata receive only
+  points — conditional on FIX-A0, the whole source complex funnels into the
+  55-line arrangement, Cor 5.2). Acceptance gate T1–T5 (§6): derive the
+  surface chains-to-chains picture unprompted; re-derive the Problem-F dP,
+  OD16, and Fermat-cubic closures; certify non-overreach against the V4
+  trisection family. **Nothing here is consumable for headline routing
+  until the gate passes.**
+- **What was actually established:** definitional so far: Thm 2.1, Thm 4.1,
+  Lemmas 4.2/4.3, Cor 4.4 proved at the stated level in Note I
+  (draft-for-derivation discipline; independent review pending). NOT
+  established: any headline consequence; Cor 5.2 is conditional on
+  FIX-A0/A1.
+- **Aliases:** FIX; "fixed-locus calculus"; the program-4 head-on attack
+- **Provenance:** `theory/FIX_I_bcomplex.md` (Note I). Foundation packets:
+  FIX-A0 (involution/55-arrangement exact verification: `(3,2)` split from
+  `χ_W(2A)=1`, `X^σ = E_t ⊔ L_t`, `j(E_t)`, normal types `(−1)^{⊕2}`,
+  `C_G(σ) ≅ D12` with residual `S3`) and FIX-A1
+  (`W|_{V4} = triv² ⊕ χ₁ ⊕ χ₂ ⊕ χ₃` ground truth; each involution line =
+  span of the other two isolated V4-points; type-I/type-II incidence
+  repair) dispatched 2026-08-04 to CAS workers; packets to land under
+  `goal_runs_after_*` with ALGEBRAIC-RECOMPUTE verifiers.
+- **Pointers:** `theory/FIX_I_bcomplex.md`; [E14](#e14), [E15](#e15),
+  [E33](#e33), [E34](#e34) (the shadows); Verification debt (the
+  session-claimed OD16/Fermat proofs — to be retired by tests T3/T4).
+- *Opened by the director 2026-08-04; the collaborator's surface
+  observation is deliberately not ingested — test T1 must reproduce it
+  independently.*
 
 ---
 
