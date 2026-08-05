@@ -1,0 +1,42 @@
+[    0.2s] m1_lam0_C: ring dim_QQ R = 8
+[    7.4s] m1_lam0_C: SEED  F(T) = 0   r = 7   ord_P = (1, 1, 1)   (ord T+, ord T-) = (2, 1)
+[   34.5s] m1_lam0_C: level 1  dim V_8 = 18  target orbit-rows = 23  (modular rank guess 15)
+[   61.4s] m1_lam0_C: level 2  dim V_9 = 20  target orbit-rows = 21  (modular rank guess 15)
+[   99.7s] m1_lam0_C: level 3  dim V_10 = 27  target orbit-rows = 28  (modular rank guess 20)
+[  134.1s] m1_lam0_C: LEVEL 1 exact:  rank 15 / 18 cols,  dim ker = 3,  dim coker = 8 (of 23 orbit-rows)
+[  134.6s] m1_lam0_C: LEVEL 1 kernel: 3-dimensional; trivial (reparametrisation / invariant-multiple) part 1-dimensional [V=y*z]; ESSENTIAL directions 2
+[  216.3s] m1_lam0_C: LEVEL 2 exact:  rank 15 / 20 cols,  dim ker = 5,  dim coker = 6 (of 21 orbit-rows, 0 outside the operator support)
+[  216.3s] m1_lam0_C:   Ob_2 coefficient of t0 t0 : ZERO
+[  216.3s] m1_lam0_C:   Ob_2 coefficient of t0 t1 : ZERO
+[  216.3s] m1_lam0_C:   Ob_2 coefficient of t0 t2 : ZERO
+[  216.3s] m1_lam0_C:   Ob_2 coefficient of t1 t1 : ZERO
+[  216.3s] m1_lam0_C:   Ob_2 coefficient of t1 t2 : ZERO
+[  216.3s] m1_lam0_C:   Ob_2 coefficient of t2 t2 : ZERO
+[  216.3s] m1_lam0_C: level 2 is UNOBSTRUCTED for every e_1 in ker D
+[ 1189.2s] m1_lam0_C: LEVEL 3 exact:  rank 20 / 27 cols,  dim ker = 7,  dim coker = 8 (of 28 orbit-rows, 0 outside the operator support)
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s0*t0        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s0*t1        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s0*t2        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s1*t0        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s1*t1        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s1*t2        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s2*t0        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s2*t1        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s2*t2        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s3*t0        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s3*t1        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s3*t2        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s4*t0        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s4*t1        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of s4*t2        : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of t0*t0*t0     : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of t0*t0*t1     : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of t0*t0*t2     : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of t0*t1*t1     : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of t0*t1*t2     : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of t0*t2*t2     : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of t1*t1*t1     : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of t1*t1*t2     : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of t1*t2*t2     : ZERO
+[ 1189.2s] m1_lam0_C:   Ob_3 coefficient of t2*t2*t2     : ZERO
+[ 1189.2s] m1_lam0_C: level 3 is UNOBSTRUCTED for every (e_1, e_2)

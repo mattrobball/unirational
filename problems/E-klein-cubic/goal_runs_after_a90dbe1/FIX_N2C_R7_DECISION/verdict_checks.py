@@ -22,6 +22,12 @@ def run(check):
     import witness
     witness.run(check)
 
+    import witness_om
+    witness_om.run(check)
+
+    import witness_om2
+    witness_om2.run(check)
+
     import numeric_check
     numeric_check.run(check)
 

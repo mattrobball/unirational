@@ -1,0 +1,13 @@
+block-symmetry probe: level-1 and level-2 ranks of D_{p0} at every point
+  j=0 part A : lvl1 dimV=18 rows=23 ranks=[14] | lvl2 dimV=20 rows=21 ranks=[14]
+  j=0 part B : lvl1 dimV=18 rows=23 ranks=[15] | lvl2 dimV=20 rows=21 ranks=[15]
+  j=0 part C : lvl1 dimV=18 rows=23 ranks=[15] | lvl2 dimV=20 rows=21 ranks=[15]
+  j=0 part D : lvl1 dimV=18 rows=23 ranks=[15] | lvl2 dimV=20 rows=21 ranks=[14, 15]
+  j=1 part A : lvl1 dimV=18 rows=23 ranks=[14] | lvl2 dimV=21 rows=21 ranks=[14]
+  j=1 part B : lvl1 dimV=18 rows=23 ranks=[15] | lvl2 dimV=21 rows=21 ranks=[15]
+  j=1 part C : lvl1 dimV=18 rows=23 ranks=[15] | lvl2 dimV=21 rows=21 ranks=[15]
+  j=1 part D : lvl1 dimV=18 rows=23 ranks=[15] | lvl2 dimV=21 rows=21 ranks=[14, 15]
+  j=2 part A : lvl1 dimV=18 rows=23 ranks=[14] | lvl2 dimV=21 rows=21 ranks=[14]
+  j=2 part B : lvl1 dimV=18 rows=23 ranks=[15] | lvl2 dimV=21 rows=21 ranks=[15]
+  j=2 part C : lvl1 dimV=18 rows=23 ranks=[15] | lvl2 dimV=21 rows=21 ranks=[15]
+  j=2 part D : lvl1 dimV=18 rows=23 ranks=[15] | lvl2 dimV=21 rows=21 ranks=[14, 15]

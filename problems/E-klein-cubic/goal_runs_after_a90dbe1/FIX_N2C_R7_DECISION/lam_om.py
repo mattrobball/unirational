@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""FIX-N2C: the same treatment for the lam = om eigenblock at r = 7.
+"""FIX-N2C: the same treatment for the lam = om (or om^2) eigenblock at r = 7.
+
+usage:  lam_om.py [om|om2]   (default: om)
 
 The nine F_100057 points of `msolve/C2_ff100057_om_B5.out` again span only a
 3-dimensional affine subspace.  Here the nine relation coefficients are
@@ -98,13 +100,15 @@ def kelt(ab):
 
 
 def main():
+    tag = sys.argv[1] if len(sys.argv) > 1 else 'om'
+    stem = {'om': 'C2_ff100057_om_B5', 'om2': 'C3_ff100057_om2_B5'}[tag]
     names, rels, err = relations(
-        os.path.join(HERE, 'msolve', 'C2_ff100057_om_B5.out'),
-        os.path.join(HERE, 'msolve', 'C2_ff100057_om_B5.ms'))
+        os.path.join(HERE, 'msolve', stem + '.out'),
+        os.path.join(HERE, 'msolve', stem + '.ms'))
     if err:
         print('RECONSTRUCTION FAILED:', err)
         return 1
-    print('nine exactly reconstructed relations (lam = om), a+b*om notation:')
+    print('nine exactly reconstructed relations (lam = %s), a+b*om notation:' % tag)
     free_vars = []
     subst = {}
     for rr in rels:
@@ -116,7 +120,7 @@ def main():
         subst[target] = expr
         print('   %-3s = %s' % (target, ' + '.join(
             '(%d%+d om)*%s' % (-a, -b, k) for k, (a, b) in expr.items())))
-    b, gens = S.system(7, OM, orbit_reduce=False)
+    b, gens = S.system(7, S.LAMS[tag], orbit_reduce=False)
     idx = {nm: i for i, nm in enumerate(b.names)}
     n = len(b.names)
 
@@ -165,9 +169,10 @@ def main():
            'stdio << "DIM " << dim I << " DEGREE " << degree I << endl;',
            'scan(G, g -> stdio << "GBELT " << toString g << endl);',
            'stdio << "M2-DONE" << endl;', 'exit 0']
-    open(os.path.join(HERE, 'm2', 'RED_nf_om_P0eq1.m2'), 'w').write(
-        '\n'.join(src)+'\n')
-    print('wrote m2/RED_nf_om_P0eq1.m2  (vars %s, %d eqs)' % (nm2, len(dh)))
+    dst = os.path.join(HERE, 'm2', 'RED_nf_%s_P0eq1.m2' % tag)
+    src.insert(-3, 'stdio << "B5-NONZERO " << ((1_R % (I + ideal(B5)))==0) << endl;')
+    open(dst, 'w').write('\n'.join(src)+'\n')
+    print('wrote %s  (vars %s, %d eqs)' % (dst, nm2, len(dh)))
     return 0
 
 

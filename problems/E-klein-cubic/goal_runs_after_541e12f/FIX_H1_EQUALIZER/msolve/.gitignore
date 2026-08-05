@@ -1,0 +1,12 @@
+# Director disposition (2026-08-05): the msolve bulk (~13k files, 545M) is
+# derived, regenerable data — every .ms input is emitted deterministically by
+# holes_certify2.py / holes_task5.py and every .out is an msolve run product.
+# The verdict evidence lives in logs/ (per-leaf engine-agreement lines) and
+# payloads/; the verifier (verify_h1.py) recomputes independently of this
+# directory. Precedent packets track only curated msolve files; tracking 545M
+# of regenerable solver I/O would bloat the repo for no evidentiary gain.
+# The six adopted live runs (hard (1,8) leaves + (1,6) n=6) write here; their
+# verdicts integrate via logs/ in a follow-up amendment commit.
+*.ms
+*.out
+!.gitignore

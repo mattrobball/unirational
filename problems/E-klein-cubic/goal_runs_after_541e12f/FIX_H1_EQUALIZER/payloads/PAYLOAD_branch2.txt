@@ -1,0 +1,60 @@
+# FIX-H1 producer C -- branch (ii), the (1,7) Chebyshev branch
+# order-0 equalizer:  Lambda_yy = Lambda_zz   (Part B, C2)
+
+--- eigenblock lam=1 ---
+  witness rebuilt : F(T) = 0 on all 52 coefficient equations, 0 nonzero
+  Lambda_yy = [x^6 y] u1' = (P1*c - 2*om - 2)/2
+  Lambda_yz = [x^6 z] u1' = 0
+  Lambda_zy = [x^6 y] u2' = 0
+  Lambda_zz = [x^6 z] u2' = om*(P1*c + 2)/2
+  Lambda is DIAGONAL (the tau-condition, automatic) : YES
+  structural check  [x^6y]u1' = lam^-1 B8 : OK
+  structural check  [x^6z]u2' = lam^-2 B5 : OK
+  order-0 equalizer residual  Lambda_yy - Lambda_zz = -(P1*c*om - P1*c + 4*om + 2)/2
+  equivalently (x lam)  B8 - lam B5 ... i.e.  B5 = lam * B8
+  D reduces to 0 modulo the block ideal : NO
+  Nullstellensatz certificate: D * h = 1 modulo the block ideal : FOUND
+  h = (8*P1**2*c**2*kp*om + 16*P1**2*c**2*kp - 29*P1**2*c**2*om - 58*P1**2*c**2 + 48*P1*c**2*om - 48*P1*c**2 + 16*P1*c*kp*om - 16*P1*c*kp - 58*P1*c*om + 58*P1*c - 192*c*om - 96*c - 64*kp*om - 32*kp + 232*om + 116)/540
+
+--- eigenblock lam=om ---
+  witness rebuilt : F(T) = 0 on all 52 coefficient equations, 0 nonzero
+  Lambda_yy = [x^6 y] u1' = (B2*P1*om - B2*P1 + 6*om)/6
+  Lambda_yz = [x^6 z] u1' = 0
+  Lambda_zy = [x^6 y] u2' = 0
+  Lambda_zz = [x^6 z] u2' = (B2*P1*om - B2*P1 - 6*om - 6)/6
+  Lambda is DIAGONAL (the tau-condition, automatic) : YES
+  structural check  [x^6y]u1' = lam^-1 B8 : OK
+  structural check  [x^6z]u2' = lam^-2 B5 : OK
+  order-0 equalizer residual  Lambda_yy - Lambda_zz = 2*om + 1
+  equivalently (x lam)  B8 - lam B5 ... i.e.  B5 = lam * B8
+  D reduces to 0 modulo the block ideal : NO
+  Nullstellensatz certificate: D * h = 1 modulo the block ideal : FOUND
+  h = -(2*om + 1)/3
+
+--- eigenblock lam=om^2 ---
+  witness rebuilt : F(T) = 0 on all 52 coefficient equations, 0 nonzero
+  Lambda_yy = [x^6 y] u1' = (B2*P1*om + 2*B2*P1 + 6)/6
+  Lambda_yz = [x^6 z] u1' = 0
+  Lambda_zy = [x^6 y] u2' = 0
+  Lambda_zz = [x^6 z] u2' = -(2*B2*P1*om + B2*P1 - 6)/6
+  Lambda is DIAGONAL (the tau-condition, automatic) : YES
+  structural check  [x^6y]u1' = lam^-1 B8 : OK
+  structural check  [x^6z]u2' = lam^-2 B5 : OK
+  order-0 equalizer residual  Lambda_yy - Lambda_zz = B2*P1*(om + 1)/2
+  equivalently (x lam)  B8 - lam B5 ... i.e.  B5 = lam * B8
+  D reduces to 0 modulo the block ideal : NO
+  Nullstellensatz certificate: D * h = 1 modulo the block ideal : FOUND
+  h = P1*(B2**2*om + 2*B2**2 - 18*om - 9)*(120*P1*kp - 291*P1 - 128*kp + 464)/5184
+
+  ==> the order-0 equalizer holds at NONE of the 27 points
+
+--- closed form (lam = 1) ---
+  B5 - B8 = (P1*c*om - P1*c + 4*om + 2)/2
+  B5 = B8  <==>  P1*c = [2*(-2*om - 1)/(om - 1)]
+  substituting P1 = 2om/c into 27P1^3-24 om kap P1^2+32 kap and clearing:
+     4*c**3*kp + 8*c**3 - 12*c*kp - 24*c + 27
+  modulo c^3 = 3c + kap this becomes:  45*(kp + 2)/2
+  i.e. 4 kap^2 + 27 = 0, whereas kap = kp+2 is REAL ( = 3.8896054962... ):
+  4 kap^2 + 27 = 45*kp/2 + 45   (reduced modulo 8kp^2-13kp-4)
+  numerically = 87.516123665082  != 0    ==>  EMPTY
+elapsed 77.4 s

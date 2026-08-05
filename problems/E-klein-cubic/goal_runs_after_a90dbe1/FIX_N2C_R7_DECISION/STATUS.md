@@ -86,6 +86,27 @@ By FIX-N2B's own Lemma 2.3 / §2.7, a `C_3`-equivariant pointwise tuple with
 > `0`-dimensional scheme of **degree 9** over `K`, cut out — after the nine
 > linear relations of §3 — by the two Chebyshev cubics above.
 
+> **Theorem N2C-1'** (all three eigenblocks, uniformly).  The same holds for
+> `lam = om` and `lam = om^2`, with the *same shape*.  Writing `lam = om^j`
+> (`j = 0, 1, 2`), the exact ideal of the plane-order-1 locus in the
+> normalisation `P0 = 1` is, in every case,
+> ```
+> B2^3 + 9 om^j B2 + 3 dl kap  = 0
+> P1^3 - (8/9) om^(j+1) kap P1^2 + (32/27) kap = 0
+> B5   = om + ((om+2)/6) B2 P1
+> ```
+> — two cubics in separate variables plus one linear equation, hence exactly
+> `3 x 3 = 9` points in each block.  Macaulay2 over `K` gives `1 % I != 0`,
+> `dim 0`, `degree 9` for all three, and `1 % (I + (B5)) = 0`, so `B5 != 0` at
+> every one of the 27 points — plane order exactly `1` throughout.  Setting
+> `B2 = dl om^(-j) c` turns the first cubic into the same Chebyshev equation
+> `c^3 - 3c = kap` in every block.  The witnesses are built and verified exactly
+> by `witness.py`, `witness_om.py`, `witness_om2.py`: `F(T) = 0` on all 52
+> equations, `psi(T) = lam g(T)`, `r = 7`,
+> `(ord_{P_1},ord_{P_2},ord_{P_3}) = (1,1,1)`, `a', b' != 0`.  So FIX-N2B's
+> `lam = 1` and `lam = om` alarms were both real, and `lam = om^2` — which
+> FIX-N2B never reached — is populated as well.
+
 > **Corollary N2C-2.**  `q := x^2+y^2+z^2` is `A_4`-invariant with
 > `ord_{P_i} q = 0` for all `i`, so `q^k T` is again an `A_4`-equivariant
 > landing family with `m = 1` and `r = 7 + 2k`.  **`(1, r)` is POPULATED for
@@ -216,14 +237,16 @@ a local statement).
 
 ## 6. Not decided here
 
-* The `lam = om` and `lam = om^2` eigenblocks at `r = 7`.  FIX-N2B reported
-  `CAN-BE-NONZERO` for `lam = om`, `B5` (895 s, genuine) and for `lam = om`,
-  `B8` (64 s — **that one is spurious**: `msolve/po1d_r7_om_ff_B8.out` is a
-  **0-byte file**, and `produce_gb.is_unit_ideal('')` returns `False`, so an
-  empty/aborted run is reported as `CAN-BE-NONZERO`).  The `lam = om` char-0
-  question is left open; it is not needed for the verdict, since `lam = 1`
-  already populates the cell.  A run reproducing the `lam = om` points
-  (`C2_ff100057_om_B5`) was still going when this packet closed.
+* The naive Galois transport `om -> om^2` of the `lam = om` witness does **not**
+  land in the `lam = om^2` block (46/52 equations survive in the best of four
+  variants, `logs/TRY_OM2.log`); each block needed its own run of the §2
+  pipeline.  All three are now done.
+* A bookkeeping bug in the predecessor, found while reproducing: FIX-N2B's
+  `lam = om`, `B8` verdict `CAN-BE-NONZERO (64 s)` is **spurious** —
+  `msolve/po1d_r7_om_ff_B8.out` is a **0-byte file**, and
+  `produce_gb.is_unit_ideal('')` returns `False`, so an empty or aborted msolve
+  run is silently reported as `CAN-BE-NONZERO`.  (Its `lam = om`, `B5` verdict
+  at 895 s is genuine, and is now confirmed in characteristic zero.)
 * `(1,6)` at line degree `>= 3`, and `(1,8)`.
 * Whether the nine points form one Galois orbit, and the geometry of the
   corresponding `A_4`-equivariant map `P^2 --> S`.

@@ -1,0 +1,59 @@
+{
+ "tag": "m1_lam0_C",
+ "lam": "1",
+ "m": 1,
+ "r": 7,
+ "ring_dim": 8,
+ "levels": [
+  {
+   "level": 1,
+   "n": 8,
+   "dimV": 18,
+   "target_rows": 23,
+   "rank": 15,
+   "ker": 3,
+   "coker": 8,
+   "trivial_ker": 1,
+   "essential_ker": 2,
+   "rhs": "R_1 = 0 (the seed solves F = 0 exactly)",
+   "solvable": true
+  },
+  {
+   "level": 2,
+   "n": 9,
+   "dimV": 20,
+   "target_rows": 21,
+   "rank": 15,
+   "ker": 5,
+   "coker": 6,
+   "rhs": "R_2 = 3 Phi(p0,e_1,e_1),  e_1 in ker D (dim 3)",
+   "obstruction": [],
+   "solvable": true
+  },
+  {
+   "level": 3,
+   "n": 10,
+   "dimV": 27,
+   "target_rows": 28,
+   "rank": 20,
+   "ker": 7,
+   "coker": 8,
+   "rhs": "R_3 = 6 Phi(p0,e_1,e_2) + Phi(e_1,e_1,e_1)",
+   "obstruction": [],
+   "solvable": true
+  }
+ ],
+ "seed": {
+  "F": 0,
+  "r": 7,
+  "ordP": [
+   1,
+   1,
+   1
+  ],
+  "ordTplus": 2,
+  "ordTminus": 1
+ },
+ "verdict": "EXTENDS-THROUGH-3",
+ "part": "C"
+}

@@ -60,7 +60,9 @@ It checks, in order:
 | `reduce_linear.py` | substitutes the nine linear relations into the exact system: 52 equations -> 10 cubics in `(B5,P0,P1,B2)` |
 | `make_m2.py` | Macaulay2 input for the un-reduced systems (`nf` = exact number field, `qq`) |
 | `exact_point.py` | the first exact point, via the degree-9 minimal polynomial of `P0` over `K` |
-| **`witness.py`** | **the witness in closed form and its exact verification** |
+| **`witness.py`** | **the `lam = 1` witness in closed form and its exact verification** |
+| **`witness_om.py`**, **`witness_om2.py`** | **the `lam = om` and `lam = om^2` witnesses, ditto** |
+| `lam_om.py` | (arg `om` / `om2`) reconstructs the nine linear relations EXACTLY (small `a+b om`, verified mod `p`) and emits the reduced Macaulay2 input |
 | `point_tools.py` | generic exact checker for a candidate cone point |
 | `numeric_check.py` | 40-digit numerical confirmation |
 | `control_27.py` | positive control on FIX-N2B's `(2,7)` family |
@@ -89,6 +91,14 @@ M2 --script m2/RED_P0eq1_B2.m2
 #     against the ORIGINAL 52 equations                            (~2 min)
 python3 -u witness.py
 python3 -u numeric_check.py
+
+# (e) the same for the lam = om and lam = om^2 blocks
+python3 -u run_one.py C2_ff100057_om_B5  om  B5 ff:100057 --noelim -P 1
+python3 -u run_one.py C3_ff100057_om2_B5 om2 B5 ff:100057 --noelim -P 1
+python3 -u lam_om.py om ; python3 -u lam_om.py om2   # exact relations + M2 input
+M2 --script m2/RED_nf_om_P0eq1_P1.m2                 # dim 0, degree 9, B5 != 0
+M2 --script m2/RED_nf_om2_P0eq1_P1.m2                # dim 0, degree 9, B5 != 0
+python3 -u witness_om.py ; python3 -u witness_om2.py
 ```
 
 `m2/RED_P0eq1_P1.m2` prints the whole ideal in the `P0 = 1` chart:

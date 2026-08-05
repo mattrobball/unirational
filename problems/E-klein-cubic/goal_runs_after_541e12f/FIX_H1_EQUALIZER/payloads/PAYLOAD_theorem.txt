@@ -1,0 +1,357 @@
+FIX-H1  PAYLOAD 0 -- the equalizer criterion, derived
+=====================================================================
+
+Setting.  G = PSL(2,11), W the 5-dim Weil representation, X = V(F) the Klein
+cubic, f : P(W) --> X a G-equivariant dominant rational map given by a tuple T
+of W-valued forms of degree d with gcd 1 and T(gv) = rho(g)T(v), F(T) = 0.
+
+Fix an involution sigma.  W = W^+ (+) W^-, dim 3 + 2; P_sigma = P(W^+),
+L_sigma = P(W^-); C_G(sigma) = D12; the residual S3 = C_G(sigma)/<sigma> acts
+on W^+ as triv (+) std and on W^- as std (twisted by sigma's sign; sigma acts
+by -1 on W^-).  c_sigma = P(W^{D12}) is the unique S3-fixed point of P_sigma,
+F(c_sigma) != 0.  The three V4's K_1,K_2,K_3 containing sigma give the three
+triple lines ell_{V,i} = P(W^{K_i}) inside P_sigma; they are CONCURRENT at
+c_sigma and are the three mirror lines of the standard S3-plane; the residual
+image of K_i in S3 is the transposition tau_i fixing ell_{V,i} pointwise.
+(All of this is recomputed exactly in produce_h1_frame.py, part A1/A4.)
+
+Global invariants (Note II sec.1): the multi-order of the germ at a V4 triple
+line is (r; m,m,m), one G-invariant pair (m,r) for the whole map.  Theorem H0-1:
+m is ODD and ord_{P_sigma} T^- = m < ord_{P_sigma} T^+.
+
+
+1. THE LEADING PACKAGE AND ITS TWO VANISHING ORDERS
+---------------------------------------------------
+
+Write v = w + y, w in W^+, y in W^-.  The leading minus-term is
+
+    T^-  =  sum_{|alpha| = m} c_alpha(w) y^alpha  +  (higher order in y),
+
+i.e. an element
+
+    Phi  in  H^0(P_sigma, O(d-m)) (x) V ,     V := Hom(Sym^m W^-, W^-),
+
+not identically zero.  sigma acts on V by (-1)^m . (-1) = +1 (m odd), and
+trivially on P_sigma, so C_G(sigma)-equivariance of T makes Phi
+**S3-equivariant**.
+
+Let e' := ord_{ell_V}(Phi)  (the vanishing order of Phi along one -- hence, by
+C_G(sigma)-conjugacy, along EVERY -- mirror line).  In the K_1-frame
+(a,b | x,y,z) of the V4 packet's normal form (1.1), ell_V = {x=y=z=0},
+P_sigma = {y=z=0} = the (a,b,x)-plane, and c_alpha = sum_k c_{alpha,k}(a,b) x^k
+with c_{alpha,k} coming from the (x,y,z)-degree (m+k) graded piece T_{m+k}.
+Hence
+
+        e' = min{ j : the minus half of T_j has (y,z)-degree m } - m  >=  r - m,
+
+with EQUALITY iff the leading graded piece T_r (the Note-II cell datum)
+has plane order exactly m -- which is the case for every classified branch
+witness.  Write e := r - m and use e' = e below.
+
+Define the LEADING LINE DATUM
+
+    Lambda  :=  (the (y,z)-degree-m part of T^-) / x^e
+             in  H^0(ell_V, O(d-r)) (x) V ,     Lambda != 0 .
+
+For a cell datum T_r this is literally the leading (m,r)-datum of the Note-II
+cell element, and its "line degree" is d - r.
+
+
+2. THE FACTORISATION Phi = D^e Psi
+----------------------------------
+
+Because ord_{ell_{V,i}} T = r for ALL THREE V4's through sigma (the multi-order
+is a G-invariant and the 55 V4's are one G-class), Phi vanishes to order >= e
+along each of the three mirror lines.  The three lines are distinct, so the
+three linear forms N_1, N_2, N_3 cutting them are pairwise coprime and
+
+        Phi  =  D^e . Psi ,     D := N_1 N_2 N_3  in  Sym^3(W^+)^* .
+
+D is the unique (up to scalar) cubic form vanishing on the three mirror lines;
+S3 permutes the lines, so D is semi-invariant, and its character is SGN
+(the 3-cycle rho permutes the lines cyclically and fixes D; a transposition
+fixes one line and swaps the other two, and reverses the sign of the fixed
+line's form: D -> -D).  In the (p; xi, eta) std-coordinates D = xi^3 - eta^3.
+[Verified exactly in verify_h1.py, check V3, from the frame's exact
+rho|_{W^+}, tau|_{W^+}.]
+
+Since Phi is S3-invariant and D^e carries sgn^e,
+
+        g . Psi  =  sgn(g)^e . Psi     for all g in S3.                (2.1)
+
+
+3. THE ORDER-0 EQUALIZER
+------------------------
+
+c_sigma is S3-fixed and spans W^{D12}, so D12 acts TRIVIALLY on the fibre of
+O(k) at c_sigma.  Evaluating (2.1) at c_sigma:
+
+    Psi(c_sigma)  in  V[sgn^e] := { L in V : rho.L = L, tau.L = sgn(tau)^e L }.
+
+Restricting Phi = D^e Psi to ell_{V,1} and taking the coefficient of
+N_1^e = (const . x)^e gives, on ell_V,
+
+    Lambda  =  const . (N_2 N_3)^e |_{ell_V} . Psi|_{ell_V} ,
+
+and (N_2 N_3)|_{ell_V} vanishes to order exactly 2 at c_sigma (the other two
+lines meet ell_{V,1} only there, transversally).  Therefore:
+
+>>> THEOREM H1-1 (the S3-equalizer at c_sigma).
+>>>   (a)  Lambda vanishes to order >= 2e at c_sigma -- hence, by the residual
+>>>        C3 = A4/K_1 which permutes the three D12-points of ell_V, at ALL
+>>>        THREE D12-points.  In particular the line degree obeys
+>>>              d - r  >=  6e = 6(r-m) ,   i.e.   d  >=  7r - 6m .
+>>>   (b)  The order-2e Taylor coefficient lambda_{2e} of Lambda at c_sigma
+>>>        satisfies
+>>>              lambda_{2e}  in  V[sgn^e] ,
+>>>        a ONE-dimensional subspace of V (computed exactly below).
+>>>   (c)  The order-k conditions (k >= 1) read
+>>>              lambda_{2e+k}  in  Im( ev_{v0} :
+>>>                     (Sym^k(std^*) (x) V (x) sgn^e)^{S3} -> V ) ,
+>>>        v0 = the tau-fixed direction of std = T_{c_sigma}P_sigma.
+
+Two immediate structural consequences.
+
+* The tau-part of (b) is AUTOMATIC.  tau is the residual image of an
+  involution of K_1 itself, and the cell germ is A_4-equivariant, hence
+  K_1-equivariant; so tau.Lambda = sgn(tau)^e Lambda holds identically.
+  (Machine-verified for every branch member: producers B5 / D.)
+  The genuine content of the equalizer is the RHO-part: the residual 3-cycle
+  of C_G(sigma) is in NO N_G(V4), so no cell computation sees it.
+
+* No line-degree-0 cell element can be the leading datum of a global map:
+  Lambda would be constant and (a) forces it to vanish.  Positive line degree
+  is mandatory, and at least 6e.
+
+Order-by-order codimension count (exact, produce_h1_equalizer.py):
+
+    branch (i)  m=3 e=3 :  dim V = 8, dim V^{tau,sgn^e} = 4;
+        k = 0 : 3 conditions   k = 1 : 1 condition   k >= 2 : 0 conditions
+    branch (ii) m=1 e=6 :  dim V = 4, dim V^{tau,sgn^e} = 2;
+        k = 0 : 1 condition    k = 1 : 1 condition   k >= 2 : 0 conditions
+
+So the equalizer is DISCRIMINATING exactly at orders 0 and 1 and becomes
+vacuous from order 2 on; the computation below is carried to order 4, i.e.
+four orders past the first nontrivial order.
+
+
+4. THE EXACT DATA AT c_sigma
+----------------------------
+
+In the frame produced by produce_h1_frame.py (F is exactly the normal form
+(1.1) with kp = (13+3 sqrt 33)/16):
+
+    rho|_{W^-} = [ [ -1/2 , (1-nu)/4 ] , [ (-1-nu)/4 , -1/2 ] ] ,  nu = sqrt(-11)
+    tau|_{W^-} = diag(1, -1)
+    trace = -1, det = 1, off-diagonal entries NONZERO (W^- is D12-irreducible).
+
+The D12-point on the triple line, in the (a:b) coordinates of ell_V = P(A):
+
+    c_sigma = [1 : beta] ,     beta^3 + 3 beta^2 + kp = 0 ,
+    equivalently  beta = -(1+c)  with  c^3 - 3c = kp + 2 .
+
+>>> FINDING H1-D12.  The D12-point of ell_V IS the Chebyshev point of the
+>>> trace curve: its (b/a)-coordinate is -(1+c) where c is exactly the
+>>> uniformiser c = B + B^-1, kap = B^3 + B^-3 = kp+2, of FIX-H0's finding
+>>> D-1.  The three D12-points of ell_V are the three roots (one free
+>>> C3-orbit), so ONE computation serves all three.
+
+
+5. BRANCH (i): THE D_B FAMILY,  m = 3, e = 3
+--------------------------------------------
+
+V = Hom(Sym^3 W^-, W^-) is 8-dimensional; e = 3 is odd, so the twist is sgn,
+and dim V[sgn] = 1, spanned (exactly, over QQ(om,nu)) by
+
+    z^3 E_y  +  (-5+nu)/6 . y^2z E_y  +  (5-nu)/6 . yz^2 E_z
+             +  (-7+5nu)/18 . y^3 E_z .
+
+Leading datum of D_B(yz) (the T5 witness, lam = om^2):
+
+    Lambda_0 = om (z^3 + B y^2 z) E_y  +  om^2 (y^3 + B^-1 y z^2) E_z .
+
+At line degree 3.mu the (3,6) D_B family is D_B(f . yz) (Thm N2B-2; the only
+degree-2 chi_x form is yz, so X = f . yz is FORCED), and
+
+    Lambda(s,t) = om g1^3 (z^3 + Beff y^2 z) E_y
+                + om^2 g2^3 (y^3 + Beff^-1 y z^2) E_z ,
+    g1 = Theta f , g2 = Theta^2 f , Beff = B (g2/g1)^2 .
+
+Hence every possible lambda_{2e} lies in the Zariski closure
+
+    S_DB = { (c1 z^3 + d1 y^2z) E_y + (c2 y^3 + d2 yz^2) E_z : d1 d2 = c1 c2 },
+
+a quadric cone in a 4-dimensional coordinate subspace of V.  Machine result:
+the equalizer line LIES INSIDE span(S_DB) and ON the quadric, so the order-0
+condition does not fail for shape reasons; it pins the shape parameters:
+
+    Beff = (-5+nu)/6 ,     c2/c1 = (-7+5nu)/18  ( = -Beff^2 ).
+
+Eliminating t = g2/g1 from  c2/c1 = om t^3 ,  t^2 = Beff/B  gives the exact
+branch constraint  (c2/c1)^2 B^3 = om^2 Beff^3, i.e. B^3 is FORCED:
+
+    B^3 = om^2 (-5-nu)/6 ,     B^3 + B^-3  =  (5 - sqrt 33)/6  =  -0.124093774...
+
+whereas the trace curve demands  B^3 + B^-3 = kp + 2 = (45 + 3 sqrt 33)/16
+= 3.889605496...  (and the conjugate root gives km + 2 = 1.735394503...).
+NO MATCH -- and none of the four Galois twists (om <-> om^2, nu <-> -nu)
+matches either.  The degenerate limits ord(g1) != ord(g2) give
+lambda_{2e} = om g1^3 z^3 E_y or om^2 g2^3 y^3 E_z, which are not on the
+equalizer line because its generator has BOTH c1 != 0 and c2 != 0.
+
+>>> FIX-H1-EQ-M3-EMPTY.  No member of the (3,6) D_B branch -- any B on the
+>>> trace curve, any line degree, any f, plus all degenerations -- satisfies
+>>> the order-0 equalizer.  The same computation run on every other classified
+>>> odd-m D_B member of the FIX-H0 branch table gives EMPTY as well:
+>>>     (3,6) D_B(yz) , (3,8) q.D_B(yz) , (3,9) D_B(xy^2) , (3,9) D_B(xz^2) ,
+>>>     (7,12) (xyz)^2 D_B(yz)     -- all EMPTY (line degree 0 for the last
+>>>     four; the (3,6) case is EMPTY at every line degree).
+>>> Positive control: D_B(x^3) has (m,r) = (0,9) with the PLUS half leading,
+>>> i.e. it is already excluded by Theorem H0-1.
+
+
+6. BRANCH (ii): THE PRIMITIVE CHEBYSHEV BRANCH,  m = 1, e = 6
+-------------------------------------------------------------
+
+V = End(W^-) is 4-dimensional; e = 6 is even, so the twist is trivial and
+V[triv] = the scalars (Schur; W^- is S3-irreducible), 1-dimensional.
+tau|_{W^-} = diag(1,-1) forces Lambda DIAGONAL (automatic), and rho|_{W^-} has
+nonzero off-diagonal entries, so a diagonal Lambda commutes with rho iff its
+two diagonal entries are equal:
+
+        ORDER-0 EQUALIZER (branch ii):    Lambda_yy  =  Lambda_zz ,
+        Lambda_yy = [x^6 y] u1' ,  Lambda_zz = [x^6 z] u2' .
+
+The residual-C3 relation psi(T) = lam g(T) gives u1' = lam^-1 u0' o S and
+u2' = lam^-2 u0' o S^2 with S : (x,y,z) -> (y,z,x), hence
+
+        Lambda_yy = lam^-1 B8 ,   Lambda_zz = lam^-2 B5 ,
+        so the condition is exactly     B5 = lam . B8 .
+
+(B5 = [x y^6] u0', B8 = [x z^6] u0' are FIX-N2C's two plane-order-1
+parameters.)  Both readings -- structural and literal expansion of the three
+exact witnesses -- agree (producer C).
+
+Exact residuals, reduced modulo each block's ideal:
+
+    lam = 1     :  Lambda_yy - Lambda_zz = -(P1 c om - P1 c + 4 om + 2)/2
+    lam = om    :  Lambda_yy - Lambda_zz = 2 om + 1  = dl  (a NONZERO CONSTANT)
+    lam = om^2  :  Lambda_yy - Lambda_zz = (om+1) B2 P1 / 2
+
+None reduces to 0 modulo its block ideal, and each is INVERTIBLE modulo it
+(explicit Nullstellensatz certificates h with D h = 1 mod I, producer C), so
+D vanishes at NONE of the 9 points of any block: 0 of 27.
+
+Closed form for lam = 1:
+
+    B5 = B8  <==>  P1 . c = 2 om
+              ==>  (substituting P1 = 2om/c into 27P1^3-24 om kap P1^2+32kap
+                    and reducing modulo c^3 = 3c + kap)
+                   4 kap^2 + 27 = 0 ,   kap = kp+2 ,
+              <==> kap^2 = -27/4 .
+
+That is exactly the degeneration of the SECOND Chebyshev cubic
+v^3 - 3v = -27/(4 kap) of FIX-H0's finding D-2; it fails because kap = kp+2 is
+real ( = 3.8896054962...).  Reduced modulo 8kp^2-13kp-4 one gets
+4 kap^2 + 27 = 45(kp+2)/2 = 87.516123665... != 0.
+
+>>> FIX-H1-EQ-M1-EMPTY.  None of the 27 classified (1,7) Chebyshev witnesses
+>>> (nor any q^k-translate, which has the SAME leading datum) satisfies the
+>>> order-0 equalizer.  Scope: this is the classified branch, i.e. line degree
+>>> 0 and its q^k-translates.  Positive-line-degree members of the (1, odd r)
+>>> cell are not classified anywhere in the FIX chain, so -- exactly as for
+>>> the two odd-row holes -- they are carried as an explicit unknown.
+>>> Note however that Theorem H1-1(a) alone excludes line degree 0 outright.
+
+
+7. MIXED ASSIGNMENTS AND THE REMAINING PARAMETER FREEDOM
+--------------------------------------------------------
+
+* The 55 V4's form ONE G-class and the 55 involutions form ONE G-class, so
+  (m,r) is a single global invariant (FIX-H0 sharpening 1) and there is one
+  orbit of V4-lines in A/G.
+* A G-equivariant section is a Stab-fixed stalk element at one representative,
+  Stab_G(ell_V) = N_G(K_1) = A_4; the cell datum is A_4-equivariant BY
+  DEFINITION of the Note-II cell (residual scalar lam), so a cell point IS an
+  A_4-fixed stalk element.  The other 54 lines carry the G-translates.
+  => NO per-V4 freedom: the branch parameter is GLOBAL.  Mixed assignments
+  (different B, or different Chebyshev points, at different V4's) are
+  impossible.
+* Residual freedom after this: the eigenblock lam in mu_3 (3 choices), the
+  branch parameter (B among the 6 roots of B^6-(kp+2)B^3+1 = 0 for the D_B
+  branch; one of the 9 points per block for the Chebyshev branch), and the
+  line-degree datum f (resp. the unclassified positive-line-degree cell).
+  All of these are quotiented by the residual A_4/K_1 = C3 action on the
+  parameter space, which is the lam = om^2-mechanics: Theta multiplies the
+  D_B tuple by om^2 and rotates (x,y,z), sending B -> B and permuting the
+  three planes; the three D12-points of ell_V are permuted simultaneously.
+  Hence one computation at ONE D12-point of ONE V4 decides all 55 x 3 sites.
+* At c_sigma the three mirror lines carry the SAME branch germ, twisted by the
+  three transpositions -- and the twist is automatic (sec. 3).  The only
+  cross-V4 content is the residual 3-cycle rho, which is exactly the
+  order-0 equalizer computed above.
+
+
+8. WHAT REMAINS OPEN, STATED PRECISELY
+--------------------------------------
+
+The two verdicts above are decisions about the CLASSIFIED branches.  The one
+gap, common to both and identical in kind to the two odd-row holes, is:
+
+    the (m,r) cells at POSITIVE line degree are not classified anywhere in the
+    FIX chain.
+
+For branch (i) this gap is CLOSED for the briefed cell (3,6): the only degree-2
+chi_x form is yz, so Theorem N2B-2's X is forced to be f.yz and the leading
+datum is pinned to the quadric S_DB at every line degree.  (A hypothetical
+(3,6) family at positive line degree that is NOT of D_B type would be a NEW,
+unclassified branch, not a gap in this computation.)
+
+For branch (ii) the gap is open, and here is exactly what it asks.  Exact
+equivariance of the family T(om s, om^2 t; y,z,x) = g(T(s,t;x,y,z)) gives
+
+    u(s,t) := [x^6 y] u1'(s,t)  =  B8(om s, om^2 t) ,
+    v(s,t) := [x^6 z] u2'(s,t)  =  B5(om^2 s, om t) ,
+
+where B5(s,t) = [x y^6] u0'(s,t) and B8(s,t) = [x z^6] u0'(s,t) are the two
+plane-order-1 coefficients of the cell as binary forms on ell_V.  Since
+(om alpha : om^2 beta) and (om^2 alpha : om beta) are the OTHER TWO D12-points
+of ell_V, the order-0 equalizer reads
+
+>>> the leading Taylor coefficient of B8 at the D12-point c_2 equals the
+>>> leading Taylor coefficient of B5 at the D12-point c_3
+>>> (both after the forced order-12 vanishing of Theorem H1-1(a)).
+
+At line degree 0 (where B5, B8 are constants) this is B5 = lam B8, decided
+EMPTY above; at positive line degree it is a condition on the unclassified
+(1,7) cell.  Closing it needs exactly the same instrument as the two odd-row
+holes: a classification of the (1, odd r) cell at line degree >= 36
+(Theorem H1-1(a) forces d - r >= 36 there, i.e. d >= 43).
+
+
+9. THE ORDER-1 CONDITION, EXPLICITLY
+------------------------------------
+
+Computed exactly (produce_h1_equalizer.py, final block).
+
+branch (ii), m = 1, e = 6.  V^{tau} = the diagonal matrices (2-dimensional).
+    order 0 :  Im(ev_{v0}) = < id >           -- lambda_{12} must be SCALAR
+    order 1 :  Im(ev_{v0}) = < diag(1,-1) >   -- lambda_{13} must be TRACELESS
+    order >= 2 : Im(ev_{v0}) = all of V^{tau} -- no condition.
+
+So for the (still unclassified) positive-line-degree (1,7) cell the FULL
+equalizer at c_sigma is the pair of scalar conditions
+
+        u_{12} = v_{12}        and        u_{13} + v_{13} = 0 ,
+
+where Lambda(s,t) = diag(u(s,t), v(s,t)) and u_k, v_k are the Taylor
+coefficients at c_sigma (both u and v vanish to order >= 12 there by
+Theorem H1-1(a)).  Two conditions, then nothing.
+
+branch (i), m = 3, e = 3.  V^{tau,sgn} is 4-dimensional.
+    order 0 :  Im(ev_{v0}) = the 1-dimensional equalizer line   -- 3 conditions
+    order 1 :  Im(ev_{v0}) = the 3-dimensional span of
+                 z^3E_y + ((7-5nu)/18) y^3E_z ,
+                 y^2zE_y + ((-5+nu)/18) y^3E_z ,
+                 yz^2E_z + ((5-nu)/18) y^3E_z                   -- 1 condition
+    order >= 2 : no condition.

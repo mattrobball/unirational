@@ -4,7 +4,7 @@
   "manual_frontier_audited_at": "4c757af",
   "note": "the notebook's own parent head lives only in NOTEBOOK.md and is checked by scripts/check_manifest_parity.py"
  },
- "generated": "2026-08-03",
+ "generated": "2026-08-05",
  "headline": "OPEN",
  "records": [
   {
@@ -1349,7 +1349,7 @@
    "superseded_by": null,
    "char0_scope": "mixed",
    "tracked": "main",
-   "notes": "director-replayed 2026-08-05 (25 checks); m=2 row fully decided (Thm N2B-3: (2,r) populated all r>=6); (1,6) classified char-0 with no PO-1 cone point, open above line degree 2; Specialisation Lemma provably cannot decide (1,>=7); FIX-N2B-STABILISATION conjecture (would empty the m=1 row); ALARM: modular-only PO-1 points suggested in the (1,7) cone at p=100057 \u2014 NOT promoted (ledger rule), decider FIX-N2c dispatched"
+   "notes": "director-replayed 2026-08-05 (25 checks); m=2 row fully decided (Thm N2B-3: (2,r) populated all r>=6); (1,6) classified char-0 with no PO-1 cone point, open above line degree 2; Specialisation Lemma provably cannot decide (1,>=7); FIX-N2B-STABILISATION conjecture (would empty the m=1 row); ALARM: modular-only PO-1 points suggested in the (1,7) cone at p=100057 — NOT promoted (ledger rule), decider FIX-N2c dispatched"
   },
   {
    "path": "goal_runs_after_a90dbe1/FIX_N2C_R7_DECISION",
@@ -1360,7 +1360,7 @@
    "superseded_by": null,
    "char0_scope": "char0",
    "tracked": "main",
-   "notes": "director-replayed 2026-08-05; (1,7) POPULATED char-0 in ALL THREE eigenblocks (Thm N2C-1': 9 witnesses per lambda-block, 27 total; per-block ideals B2^3+9om^j B2+3dl kap = 0, P1^3-(8/9)om^(j+1) kap P1^2+(32/27)kap = 0); primitive m=1; odd r>=7 all populated; UNIFORMIZATION: c = B+B^-1, kap = B^3+B^-3 \u2014 same B-parameter as the D_B families; FIX-N2B-STABILISATION refuted; MSOLVE_PARSER.md landmine documented"
+   "notes": "director-replayed 2026-08-05; (1,7) POPULATED char-0 in ALL THREE eigenblocks (Thm N2C-1': 9 witnesses per lambda-block, 27 total; per-block ideals B2^3+9om^j B2+3dl kap = 0, P1^3-(8/9)om^(j+1) kap P1^2+(32/27)kap = 0); primitive m=1; odd r>=7 all populated; UNIFORMIZATION: c = B+B^-1, kap = B^3+B^-3 — same B-parameter as the D_B families; FIX-N2B-STABILISATION refuted; MSOLVE_PARSER.md landmine documented"
   },
   {
    "path": "goal_runs_after_6519c0b/FIX_H0_GLOBAL_SECTIONS",
@@ -1371,7 +1371,29 @@
    "superseded_by": null,
    "char0_scope": "char0",
    "tracked": "main",
-   "notes": "director-replayed 2026-08-05 (27 checks); Theorems H0-1 (m odd \u2014 every even-m branch globally excluded, unconditional) and H0-2 (pt-sections impossible; D_sigma surjects L_sigma \u2014 forced line sweeps); Note III sec4b corrected (missing plus-plane constraint class; within-triangle gluing discharged; real coupling = cross-V4 through sigma, three transpositions generating S3, ell_V disjoint from L_sigma); uniformization fully confirmed (cubic isogeny tau -> tau^3; (kappa_+ +2)(kappa_- +2) = 27/4; m=1 stalk = 3x3 fibre product); surviving branches: odd rows only"
+   "notes": "director-replayed 2026-08-05 (27 checks); Theorems H0-1 (m odd — every even-m branch globally excluded, unconditional) and H0-2 (pt-sections impossible; D_sigma surjects L_sigma — forced line sweeps); Note III sec4b corrected (missing plus-plane constraint class; within-triangle gluing discharged; real coupling = cross-V4 through sigma, three transpositions generating S3, ell_V disjoint from L_sigma); uniformization fully confirmed (cubic isogeny tau -> tau^3; (kappa_+ +2)(kappa_- +2) = 27/4; m=1 stalk = 3x3 fibre product); surviving branches: odd rows only"
+  },
+  {
+   "path": "goal_runs_after_541e12f/FIX_H1_EQUALIZER",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-H1-PARTIAL",
+   "superseded_by": null,
+   "char0_scope": "char0 for the equalizer verdicts and the 282/288 (1,8) leaves; the (1,6) n=3,4,5 secondary results are mod-p FINDINGS only",
+   "tracked": "main",
+   "notes": "director-replayed 2026-08-05 (43 checks, FIX_H1_VERIFY_OK; both closed forms re-derived by hand). Theorem H1-1: S3-equalizer at c_sigma, conditions at orders 2e,2e+1 only; corollaries d >= 7r-6m and no line-degree-0 germ. Scoped exits: FIX-H1-EQ-M3-EMPTY (D_B branch, order 0 -- DIRECTOR CORRECTION H1-C, Note H1 sec7: every line degree EXCEPT the n3-divisible sub-family, which evades the leading layer vacuously and stays undecided), FIX-H1-EQ-M1-EMPTY (all 27 Chebyshev witnesses; B5 = lam.B8 blocked by the Klein identity), FIX-H1-HOLE-1EVEN-PARTIAL (282/288 char-0; both-B6-B9-nonzero partial theorem; 6 hard leaves adopted live), FIX-H1-HOLE-16-PARTIAL (n=3,4,5 mod-p findings; n=6 live; no stabilisation), FIX-H1-LOCALIZATION-THEOREM, FIX-H1-D12-IS-THE-CHEBYSHEV-POINT. HOLES_REPORT.md sec3 superseded internally by STATUS.md sec6a. msolve -g header landmine recorded (MSOLVE_PARSER.md addendum). Headline OPEN. Disposition: the msolve/ bulk (~13k regenerable .ms/.out, 545M) is untracked by design (in-packet .gitignore with rationale); evidence layer = logs/ + payloads/ + scripts, all tracked."
+  },
+  {
+   "path": "goal_runs_after_541e12f/FIX_C1_CHEBYSHEV_LADDER",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-C1-LADDER-M1-EXTENDS-THROUGH-3",
+   "superseded_by": null,
+   "char0_scope": "char0 (exact over K = QQ(om,kp) and the branch rings; modular scans are cross-checks only)",
+   "tracked": "main",
+   "notes": "director-replayed 2026-08-05 (48 checks, FIX_C1_VERIFY_OK; c0 = (4kp-1)/3 Chebyshev-root identity re-derived by hand). The constructive experiment. Theorem C1-1: nine-point scheme reducible over K; witnesses split 1+2+2+4 (parts A-D), part A = the untwisted Chebyshev root where the m=1 branch meets the D_B parameter. Theorem C1-2 / FIX-C1-OB2-NONZERO-AT-K-RATIONAL-POINT: rank drop 15->14 at part A, Ob2 = l0 (x) L nonzero (M2 exact dim 3 deg 4, all three blocks), obstruction propagates to every line degree in the h.T0 ansatz. Parts B,C extend through level 3 exactly (part D level 3 unfinished). FIX-C1-CONTROL-CALIBRATION-WEAK: the (3,6) D_B control is unobstructed at every level though Fable killed that branch -- single-stratum extends-verdicts are weak evidence; only obstructions are information. Headline OPEN."
   }
  ],
  "known_branches": [

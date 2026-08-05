@@ -1,0 +1,42 @@
+[    0.0s] control_m3r6: ring dim_QQ R = 24
+[    0.2s] control_m3r6: SEED  F(T) = 0   r = 6   ord_P = (3, 3, 3)   (ord T+, ord T-) = (4, 3)
+[    1.2s] control_m3r6: level 1  dim V_7 = 7  target orbit-rows = 5  (modular rank guess 4)
+[    2.3s] control_m3r6: level 2  dim V_8 = 11  target orbit-rows = 7  (modular rank guess 6)
+[    3.6s] control_m3r6: level 3  dim V_9 = 15  target orbit-rows = 9  (modular rank guess 8)
+[   13.5s] control_m3r6: LEVEL 1 exact:  rank 4 / 7 cols,  dim ker = 3,  dim coker = 1 (of 5 orbit-rows)
+[   13.6s] control_m3r6: LEVEL 1 kernel: 3-dimensional; trivial (reparametrisation / invariant-multiple) part 1-dimensional [V=y*z]; ESSENTIAL directions 2
+[   47.2s] control_m3r6: LEVEL 2 exact:  rank 6 / 11 cols,  dim ker = 5,  dim coker = 1 (of 7 orbit-rows, 0 outside the operator support)
+[   47.2s] control_m3r6:   Ob_2 coefficient of t0 t0 : ZERO
+[   47.2s] control_m3r6:   Ob_2 coefficient of t0 t1 : ZERO
+[   47.2s] control_m3r6:   Ob_2 coefficient of t0 t2 : ZERO
+[   47.2s] control_m3r6:   Ob_2 coefficient of t1 t1 : ZERO
+[   47.2s] control_m3r6:   Ob_2 coefficient of t1 t2 : ZERO
+[   47.2s] control_m3r6:   Ob_2 coefficient of t2 t2 : ZERO
+[   47.2s] control_m3r6: level 2 is UNOBSTRUCTED for every e_1 in ker D
+[  579.7s] control_m3r6: LEVEL 3 exact:  rank 8 / 15 cols,  dim ker = 7,  dim coker = 1 (of 9 orbit-rows, 0 outside the operator support)
+[  579.7s] control_m3r6:   Ob_3 coefficient of s0*t0        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s0*t1        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s0*t2        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s1*t0        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s1*t1        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s1*t2        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s2*t0        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s2*t1        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s2*t2        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s3*t0        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s3*t1        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s3*t2        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s4*t0        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s4*t1        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of s4*t2        : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of t0*t0*t0     : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of t0*t0*t1     : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of t0*t0*t2     : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of t0*t1*t1     : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of t0*t1*t2     : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of t0*t2*t2     : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of t1*t1*t1     : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of t1*t1*t2     : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of t1*t2*t2     : ZERO
+[  579.7s] control_m3r6:   Ob_3 coefficient of t2*t2*t2     : ZERO
+[  579.7s] control_m3r6: level 3 is UNOBSTRUCTED for every (e_1, e_2)

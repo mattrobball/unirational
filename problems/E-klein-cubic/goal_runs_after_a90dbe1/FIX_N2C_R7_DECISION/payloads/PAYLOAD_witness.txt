@@ -56,3 +56,32 @@ PROPERTIES (all verified exactly in characteristic zero, witness.py):
      a' != 0  and  b' != 0           (outside the D_B class and its mirror)
      gcd(a',b',u0',u1',u2') = 1       (primitive)
      line degree 0                   (pointwise tuple)
+
+================================================================================
+ALL THREE RESIDUAL-C3 EIGENBLOCKS, UNIFORMLY.
+
+For lam = om^j (j = 0,1,2) the exact ideal of the plane-order-1 locus of the
+r = 7 cone, in the normalisation P0 = 1, is
+
+     B2^3 + 9 om^j B2 + 3 dl kap          = 0
+     P1^3 - (8/9) om^(j+1) kap P1^2 + (32/27) kap = 0
+     B5   = om + ((om+2)/6) B2 P1
+
+(two cubics in SEPARATE variables plus one linear equation, so exactly 3 x 3 = 9
+points per block; Macaulay2 over K: 1 % I != 0, dim 0, degree 9, and
+1 % (I + (B5)) = 0, i.e. B5 != 0 at all 27 points).  Substituting
+B2 = dl om^(-j) c turns the first cubic into the same Chebyshev equation
+c^3 - 3c = kap in every block.
+
+The nine linear relations expressing the remaining coordinates differ per block;
+they are reconstructed exactly (small a+b*om, verified mod p) by lam_om.py and
+are printed by witness.py / witness_om.py / witness_om2.py, each of which then
+verifies its witness against all 52 coefficient equations exactly.
+
+     lam = 1      B1 = -B5        B4 = -B2        B8 = -B0
+     lam = om     B1 = -om^2 B5   B4 = -om^2 B2
+     lam = om^2   B1 = -om B5     B4 = -om B2
+
+CONSEQUENCE.  q = x^2+y^2+z^2 is A_4-invariant with ord_{P_i} q = 0, so q^k T is
+again an A_4-equivariant landing family with m = 1 and r = 7 + 2k:
+(1, r) is POPULATED for every odd r >= 7.

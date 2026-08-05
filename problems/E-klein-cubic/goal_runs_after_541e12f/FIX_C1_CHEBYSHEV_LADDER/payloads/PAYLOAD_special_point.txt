@@ -1,0 +1,47 @@
+FIX-C1  PAYLOAD 1 -- the split of the Chebyshev parameter scheme, and the
+                     distinguished K-rational point
+================================================================================
+
+Ground field  K = QQ(om, kp),  om^2+om+1 = 0,  8 kp^2 - 13 kp - 4 = 0,
+kap := kp + 2 = B^3 + B^-3,  dl := 2om+1.
+
+FIX-N2C, Thm N2C-1': the plane-order-1 locus of the (m,r) = (1,7), lam = om^j
+cone is the nine-point scheme (normalisation P0 = 1)
+
+        c^3 - 3 c - kap = 0                                   (B2 = dl om^{-j} c)
+        P1^3 - (8/9) om^{j+1} kap P1^2 + (32/27) kap = 0
+        B5   = om + ((om+2)/6) B2 P1 .
+
+FINDING (FIX-C1, exact, char 0).  BOTH cubics are REDUCIBLE over K.  Each has
+exactly one K-rational root:
+
+        c_0  = (4 kp - 1)/3
+        P1_0 = (4/3) om^{j+1} c_0 = (4/9) om^{j+1} (4 kp - 1)
+
+(equivalently 4 c_0^4 - 21 c_0^2 + 9 = 0; with kp = kp_+ = (13+3 sqrt 33)/16
+one has c_0 = (3 + sqrt 33)/4, so c_0 = B + B^-1 -- the UNTWISTED Chebyshev
+root, the one the primitive m = 1 branch shares with the D_B families
+[FIX-H0 task D, "one reciprocal B-cover"]).  Consequently
+
+        c^3 - 3c - kap                             = (c - c_0)  g_c(c),
+        g_c(c) = c^2 + c_0 c + (c_0^2 - 3)
+
+        P1^3 + A P1^2 + (32/27) kap                = (P1 - P1_0) g_P(P1),
+        A = -(8/9) om^{j+1} kap,
+        g_P(t) = t^2 + (A + P1_0) t + (P1_0^2 + A P1_0)
+
+and the nine points of every eigenblock split, Galois-stably, into
+
+        part  A :  1 point   (c_0 , P1_0)          -- K-RATIONAL
+        part  B :  2 points  (c_0 , g_P = 0)
+        part  C :  2 points  (g_c = 0 , P1_0)
+        part  D :  4 points  (g_c = 0 , g_P = 0)
+
+so the 27 primitive (1,7) witnesses of FIX-N2C split 3 + 6 + 6 + 12.
+
+All of the above is verified exactly (`verify_c1.py`, checks "split: ...").
+
+WHY IT MATTERS.  The ladder differential D_{p0} : e |-> 3 Phi(p0,p0,e) has
+rank 15 on V_8 at the 24 points of B, C, D, and rank 14 -- one lower -- at the
+3 points of part A.  The extra level-1 direction that exists only at the
+K-rational point is exactly the direction that is obstructed at level 2.

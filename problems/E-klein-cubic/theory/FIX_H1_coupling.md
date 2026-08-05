@@ -97,7 +97,7 @@ If both branches die: combined with H0-1/H0-2 this closes every
 *classified* stalk component, and the negative headline follows **modulo
 the two remaining odd-row holes** — see the correction below.
 
-## 5. Correction to the FIX-H0 integration (director, 2026-08-06)
+## 5. Correction to the FIX-H0 integration (director, 2026-08-05)
 
 The 08-05 notebook line "the `m = 1` classification holes cease to gate
 anything" **overclaimed**. Correct statement: H0-1 excludes the *even-`m`*
@@ -110,3 +110,73 @@ therefore requires: equalizer death of both known branches **plus**
 closure of these two cells (assigned to the FIX-H1 packet as a secondary
 task, attackable with the FIX-N2c machinery now that the msolve landmine
 is documented).
+
+## 6. Results (packet FIX-H1, landed 2026-08-05; director-replayed, 43/43)
+
+Packet `goal_runs_after_541e12f/FIX_H1_EQUALIZER/`, primary exit
+`FIX-H1-PARTIAL`. The equalizer of §3 was derived to full rigor as
+**Theorem H1-1** (`payloads/PAYLOAD_theorem.txt`): with `e := r − m` and
+`V := Hom(Sym^m W⁻, W⁻)`, the leading line datum
+`Λ ∈ H⁰(ℓ_V, O(d−r)) ⊗ V` of any equivariant dominant map (a) vanishes to
+order `≥ 2e` at each of the three D12-points (via `Φ = (N₁N₂N₃)^e·Ψ`, the
+mirror cubic carrying `sgn`), whence the **unconditional degree bound
+`d ≥ 7r − 6m`** and *no line-degree-0 cell element is the leading datum of
+any global map*; (b) `λ_{2e} ∈ V[sgn^e]`, one-dimensional; (c) order-`k`
+conditions only at `k = 0, 1` — the equalizer is vacuous from order 2 on.
+The transposition part is automatic (`K₁`-equivariance); the whole content
+is the residual 3-cycle `ρ` — the piece no `N_G(V4)`-computation sees.
+
+- `FIX-H1-EQ-M3-EMPTY` — the `D_B` branch fails order 0: the equalizer
+  line pins `B_eff = (−5+ν)/6`, `c₂/c₁ = −B_eff²`, forcing
+  `B³+B⁻³ = (5−√33)/6` against the trace curve's `κ₊+2` (both roots, all
+  four Galois twists; exact). **Scope-corrected by §7 below.**
+- `FIX-H1-EQ-M1-EMPTY` — the primitive Chebyshev branch as classified
+  fails order 0: `τ` forces `Λ` diagonal, `ρ`-commutation forces
+  `Λ_yy = Λ_zz ⟺ B5 = λ·B8`, which fails at all 27 witnesses
+  (Nullstellensatz certificates; M2 unit ideal in all three blocks;
+  closed form `B5 = B8 ⟺ 4(κ₊+2)²+27 = 0`, blocked by the Klein identity
+  `(κ₊+2)(κ₋+2) = 27/4` — the equalizer is the collision of the two
+  character surfaces and the identity itself prevents it).
+- **No per-V4 freedom**: one `G`-class ⇒ one `A₄`-fixed stalk element
+  propagates to all 55 lines; the residual `C₃` permutes the three
+  D12-points; mixed assignments impossible.
+- `FIX-H1-D12-IS-THE-CHEBYSHEV-POINT` — `c_σ = [1:β]`,
+  `β³+3β²+κ₊ = 0`, `β = −(1+c)`: the concurrency point *is* the Chebyshev
+  point of the trace curve.
+- Holes (secondary task): `FIX-H1-HOLE-1EVEN-PARTIAL` — `(1,8)` at line
+  degree 0 is 282/288 leaves char-0 EMPTY (three engines, zero
+  disagreements); sharp partial theorem: **any plane-order-1 point of the
+  `r = 8` cone needs both `B6, B9 ≠ 0`**; six hard 11-var/22-gen leaves
+  undecided (runs adopted live). `FIX-H1-HOLE-16-PARTIAL` — `(1,6)` line
+  degrees 3, 4, 5 forced-zero **mod `p = 100057` only** (8640 runs, zero
+  `CAN-BE-NONZERO`; mod-`p` emptiness does not lift; char-0 upgrade
+  specified in packet §6b); `n = 6` live; `≥ 7` untouched; stabilisation
+  in `n` not proved.
+
+## 7. Director correction H1-C (scope of the M3 kill), 2026-08-05
+
+Conditions (b)/(c) of Theorem H1-1 constrain the jets `λ_{2e}, λ_{2e+1}`
+**inclusively of zero**. For the `(3,6)` family `D_B(f·yz)` the order-0
+jet at the D12-point `p_i` is built from `f(p_{i−1})³, f(p_{i+1})³`; the
+packet handled the pure-term degenerations (one value zero — off the
+line, dead) but **not the all-three-points case**: if `n₃ | f`
+(`n₃` = the binary cubic cutting the D12-orbit, the `β`-cubic of §6),
+then `λ_{2e} = λ_{2e+1} = 0` at every D12-point and the leading-layer
+equalizer is satisfied vacuously. Corrected verdict:
+
+> the `(3,6)` `D_B` family fails the leading-layer equalizer at every
+> line degree **except the `n₃`-divisible sub-family**
+> `{f ∈ n₃·H⁰(O(3μ−3))}` (forced `d − r ≥ 6e + 9` there), which this
+> packet does **not** decide; it joins the positive-line-degree unknowns
+> and awaits the deeper-layer equalizer (the same §3 localization applied
+> to the higher `(y,z)`-order layers of the germ prescription).
+
+The `m = 1` scoping needs no such correction (packet §4/§7 already state
+the inclusive constraints `u_{2e} = v_{2e}`, `u_{2e+1}+v_{2e+1} = 0`).
+The classified-data kills (line degree 0 and `q^k`-translates) are
+unaffected — those are doubly dead via H1-1(a). The degree bound
+`d ≥ 7r−6m` is a `≥` and unaffected. General moral, recorded for every
+future branch test: **the leading-layer equalizer punishes only
+non-degenerate jets; high vanishing at the D12-orbit is a universal
+evasion channel, at a degree cost, and closing it needs the layer-`k`
+equalizers.**

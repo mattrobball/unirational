@@ -1,0 +1,32 @@
+# FIX-H1 producer A -- the exact sigma-frame at the D12-point
+A1  |G| = 660, 55 involutions
+A1  sigma = g[1];  dim W^+ = 3, dim W^- = 2;  |C_G(sigma)| = 12;
+A1  dim W^{D12} = 1  ->  c_sigma ;  F(c_sigma) != 0  (off X)
+A1  sigma lies in exactly 3 V4s [(1, 385, 454), (1, 416, 436), (1, 430, 431)];  their triple lines lie in P_sigma
+A1  and are CONCURRENT at c_sigma  (each contains c_sigma)
+A1  ell_V carries exactly 3 D12-points, one per involution of K_1
+A2  labeling: a = om-eigenvector of psi, (y,z) orientation = psi^2
+A2  F in the raw A_4-frame has 9 monomials; support = normal-form support
+A2  om-pattern verified: a-row (1,om,om^2), b-row (1,om^2,om)
+A2  kp = c_a3 c_xyz^2 / c_ax2^3 , km = c_b3 c_xyz^2 / c_bx2^3
+A2  kp + km = 13/8 and kp*km = -1/2  (so 8k^2-13k-4 = 0)  VERIFIED
+A2  numerically kp = 1.889605496226-0.000000000000i , km = -0.264605496226+0.000000000000i
+A2  (13+3*sqrt33)/16 = 1.889605496226 , (13-3*sqrt33)/16 = -0.264605496226
+A3  c_sigma = [a:b] = [1 : ((-3+1*z^1+1*z^3+1*z^4+1*z^5+1*z^9)/2) + ((1+2*z^1+2*z^3+2*z^4+2*z^5+2*z^9)/2)*w]
+A3  (b/a)^3 at c_sigma = ((-107+45*z^1+45*z^3+45*z^4+45*z^5+45*z^9)/8) + ((45+90*z^1+90*z^3+90*z^4+90*z^5+90*z^9)/8)*w   (numerically (-32.3440824433882+3.552713678800501e-15j))
+A3  the three D12-points on ell_V: b/a = ((-3+1*z^1+1*z^3+1*z^4+1*z^5+1*z^9)/2) + ((1+2*z^1+2*z^3+2*z^4+2*z^5+2*z^9)/2)*w, ((4+1*z^1+1*z^3+1*z^4+1*z^5+1*z^9)/2) + ((3-1*z^1-1*z^3-1*z^4-1*z^5-1*z^9)/2)*w, ((-1-2*z^1-2*z^3-2*z^4-2*z^5-2*z^9)/2) + ((-4-1*z^1-1*z^3-1*z^4-1*z^5-1*z^9)/2)*w
+A3  they form ONE free C3-orbit (same (b/a)^3)  -> one computation serves all three
+A4  sigma = diag(1,1,1,-1,-1) in the frame  ->  W^- = <E_y,E_z>
+A4  rho|_{W^-} = [((-1)/2) + (0)*w, ((-1*z^1-1*z^3-1*z^4-1*z^5-1*z^9)/2) + (0)*w; ((-1-1*z^1-1*z^3-1*z^4-1*z^5-1*z^9)/2) + (0)*w, ((-1)/2) + (0)*w]
+A4  tau|_{W^-} = [(1) + (0)*w, (0) + (0)*w; (0) + (0)*w, (-1) + (0)*w]
+A4  rho|_{W^+} = [((2+1*z^1+1*z^3+1*z^4+1*z^5+1*z^9)/6) + ((1+2*z^1+2*z^3+2*z^4+2*z^5+2*z^9)/6)*w, ((-4-2*z^1-3*z^2-2*z^3-5*z^4-5*z^5-3*z^6-6*z^7-2*z^9)/6) + ((-2+2*z^1+2*z^3-4*z^4-1*z^5-3*z^6-3*z^7-1*z^9)/6)*w, ((4-1*z^1-12*z^2+19*z^3+9*z^4-13*z^5-20*z^6+52*z^7+8*z^8-29*z^9)/138) + ((-13-14*z^1-30*z^2-10*z^3-12*z^4-44*z^5-4*z^6+38*z^7-26*z^8+8*z^9)/138)*w; ((-2-4*z^1-3*z^2-4*z^3-1*z^4-4*z^5-3*z^7-1*z^9)/6) + ((2-2*z^1-2*z^3+4*z^4+1*z^5+3*z^6+3*z^7+1*z^9)/6)*w, ((1-1*z^1-1*z^3-1*z^4-1*z^5-1*z^9)/6) + ((-1-2*z^1-2*z^3-2*z^4-2*z^5-2*z^9)/6)*w, ((17+13*z^1+18*z^2+29*z^3+21*z^4+31*z^5-16*z^6+14*z^7+34*z^8-37*z^9)/138) + ((13+14*z^1+30*z^2+10*z^3+12*z^4+44*z^5+4*z^6-38*z^7+26*z^8-8*z^9)/138)*w; ((1*z^1+1*z^2+1*z^3+1*z^5+1*z^7)/2) + ((-1-1*z^5-1*z^6-1*z^7-1*z^9)/2)*w, ((1+1*z^1+1*z^2+1*z^3+2*z^5+1*z^6+2*z^7+1*z^9)/2) + ((1+1*z^5+1*z^6+1*z^7+1*z^9)/2)*w, ((-1)/2) + (0)*w]
+A4  tau|_{W^+} = [(1) + (0)*w, (0) + (0)*w, (0) + (0)*w; (0) + (0)*w, (1) + (0)*w, (0) + (0)*w; (0) + (0)*w, (0) + (0)*w, (-1) + (0)*w]
+A4  tau|_{W^-} is diagonal  (tau = image of an involution of K_1)
+A4  trace(rho|_{W^-}) = -1, det = 1  ->  W^- = std as an S3-rep
+A4  rho|_{W^-} has NONZERO off-diagonal entries (W^- is D12-irreducible)
+A4  CLOSED FORM   rho|_{W^-} = [[-1/2, (1-nu)/4], [(-1-nu)/4, -1/2]],  nu = sqrt(-11)
+A4  CLOSED FORM   tau|_{W^-} = diag(1,-1)
+A3  CLOSED FORM   beta^3 + 3 beta^2 + kp = 0   at the D12-point,
+A3  i.e. beta = -(1+c) with c^3 - 3c = kp+2 : the D12-point is the
+A3  Chebyshev point of the trace curve  (numerically c = 2.186140661635)
+elapsed 1.8 s

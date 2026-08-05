@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `33d8e19` (2026-08-04; the
+Snapshot metadata — notebook parent head: `541e12f` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -144,7 +144,7 @@ genuine generic twist pointless.
    keyed to a bare token (e.g. "F terminal") is unresolvable without the
    glossary and must not be consumed as a status.
 
-## Strategic dashboard (as of 2026-08-03)
+## Strategic dashboard (as of 2026-08-05)
 
 The one-page map. Everything below this section is ledger, provenance, and
 appendix; this is the current mathematical position. **Headline: OPEN.**
@@ -196,7 +196,22 @@ parallel alternatives:
    (`11:5`, both `A5`, `G`); the 60 `C11`-points are poset-isolated; a
    distinguished 55-point `D12`-orbit sits on 7 plus-planes and 3 `ℓ_V`
    each; two `S3` classes (outer-fused); Cor 4.4's hypothesis now verified
-   as fact (every `H ≠ 1` stratum is a linear `P^d`, `d ≤ 2`).**
+   as fact (every `H ≠ 1` stratum is a linear `P^d`, `d ≤ 2`). Full arc
+   through 2026-08-05: Notes II/III + the cell classification (N2/N2b/N2c —
+   including the primitive 27-witness Chebyshev branch), FIX-H0's two
+   unconditional global theorems (`m` odd; forced line sweeps), and
+   **FIX-H1's localization**: the cross-V4 coupling is a finite
+   `S3`-equalizer at the 55 D12-points, and **both classified branches fail
+   it at order 0, unconditionally in `d`** (`D_B` scope-corrected by H1-C:
+   the `n₃`-divisible evasion sub-family survives undecided) — plus the
+   unconditional degree bound `d ≥ 7r−6m` and "line-degree-0 data are never
+   map germs". FIX-C1 (the constructive experiment): the seed scheme is
+   reducible over `K`, with distinguished `K`-rational witnesses where the
+   first genuine ladder obstruction `Ob₂ = ℓ₀⊗L` sits (dead at all line
+   degrees); its control calibration shows single-stratum "extends" verdicts
+   are weak. Negative endgame gated by the positive-line-degree unclassified
+   space (three tracked `m = 1` components + the beyond-classified odd-`m`
+   class); headline OPEN.**
 
 Method-discovery proposals sit outside the four families: the
 equivalent-object dP-replay ([E52](#e52)) and the hidden-intermediate-variety
@@ -2171,7 +2186,7 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   (`FIX-H0-H0-PARTIAL`, director-replayed): **the program's first two
   unconditional global theorems** — H0-1 (plus-plane parity: for ANY
   equivariant dominant map, `m` is odd at every involution ⇒ the entire
-  even-`m` stalk row is globally excluded; **correction 2026-08-06**: the
+  even-`m` stalk row is globally excluded; **correction 2026-08-05**: the
   odd-row holes — `(1,6)` above line degree 2 and `(1, even r ≥ 8)` —
   still gate a final negative verdict, since `m = 1` is odd; the H0
   theorems themselves are unconditional) and H0-2 (point-sections
@@ -2194,7 +2209,74 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   sealed `verify_kappa_genus2.py` is replay-brittle on sympy 1.14
   (structural equality vs a sign-flipped `factor` form; identity
   re-derived by hand and semantically — `V4-TRISECTION-GENUS2-QUOTIENT-
-  PASS` stands; packet untouched).** Note I
+  PASS` stands; packet untouched).** **FIX-H1 landed 2026-08-05
+  (`FIX-H1-PARTIAL`, director-replayed, 43/43 + by-hand re-derivation of
+  both closed forms): Theorem H1-1 — the equalizer criterion derived to
+  full rigor (`Φ = (N₁N₂N₃)^e·Ψ`, the mirror cubic carrying `sgn`;
+  conditions only at orders `2e, 2e+1`; the transposition part automatic,
+  the whole content the residual 3-cycle no `N_G(V4)`-computation sees),
+  with the unconditional corollaries **`d ≥ 7r − 6m`** and **no
+  line-degree-0 cell element is ever the leading datum of a global map**.
+  Both classified branches FAIL the order-0 equalizer, unconditionally
+  in `d`: `FIX-H1-EQ-M3-EMPTY` (the equalizer line pins
+  `B_eff = (−5+ν)/6` and forces `B³+B⁻³ = (5−√33)/6` against the trace
+  curve — both `κ`-roots, all four Galois twists) and `FIX-H1-EQ-M1-EMPTY`
+  (`τ` forces `Λ` diagonal, `ρ` forces `B5 = λ·B8`, dead at all 27
+  witnesses; closed form `4(κ₊+2)²+27 = 0` — **the equalizer is exactly
+  the collision of the two character surfaces and the Klein identity
+  `(κ₊+2)(κ₋+2) = 27/4` prevents it**). No per-V4 freedom (one `G`-class,
+  one `A₄`-fixed stalk element, `C₃` permutes the three D12-points): one
+  computation decides all 55×3 sites. Finding
+  `FIX-H1-D12-IS-THE-CHEBYSHEV-POINT`: `β = −(1+c)`, `β³+3β²+κ₊ = 0` —
+  the concurrency point IS the Chebyshev point. **Director correction
+  H1-C (Note H1 §7)**: the equalizer conditions are inclusive of zero, so
+  the `n₃`-divisible sub-family (`f` vanishing at all three D12-points,
+  `d−r ≥ 6e+9`) evades the leading layer vacuously — the M3 kill's "every
+  line degree" is corrected to "every line degree except `n₃ | f`, which
+  joins the positive-line-degree unknowns"; the packet's pure-term
+  degeneration handling and everything else stands. Secondary task, holes
+  NOT closed: `FIX-H1-HOLE-1EVEN-PARTIAL` — `(1,8)` line degree 0 is
+  282/288 leaves char-0 EMPTY with the sharp partial theorem (both
+  plane-order-1 coefficients `B6, B9` must be nonzero); six hard leaves
+  live (adopted). `FIX-H1-HOLE-16-PARTIAL` — `(1,6)` `n = 3,4,5`
+  forced-zero mod `p = 100057` ONLY (finding; does not lift); `n = 6`
+  live; `≥ 7` untouched; stabilisation in `n` unproved. Toolchain
+  landmine #2 recorded (msolve `-g` `#`-header ⇒ `startswith('[1]')` is a
+  false-NONEMPTY factory; MSOLVE_PARSER.md addendum + memory). FIX-C1
+  landed 2026-08-05 (`FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` mixed +
+  `FIX-C1-OB2-NONZERO-AT-K-RATIONAL-POINT`, director-replayed, 48/48;
+  dispatched as the direct answer to the constructive-use question):
+  **Theorem C1-1** — the nine-point scheme's cubics are REDUCIBLE over
+  `K`: `c₀ = (4κ₊−1)/3` (director-verified by hand: `c₀² = 2κ₊+1`,
+  `c₀³ = 5κ₊+1`, so `c₀³−3c₀ = κ₊+2` exactly), `P1₀ = (4/3)ω^{j+1}c₀`;
+  witnesses split Galois-stably `1+2+2+4` per block (parts A–D), part A
+  the untwisted Chebyshev root — exactly where the `m = 1` branch meets
+  the `D_B` parameter. **Theorem C1-2** — the ladder differential jumps
+  at part A (rank 15 → 14, kernel 3 → 4) and the quadratic Kuranishi
+  map is NONZERO there: `Ob₂ = ℓ₀ ⊗ L`, zero locus one hyperplane of
+  the kernel (M2 exact, `dim 3, deg 4`, all three blocks; `ℓ₀` closed-form
+  for `λ = 1`); the extra deformation direction existing only at the
+  `K`-rational point is precisely the obstructed one. Obstructed-at-`n=0`
+  propagates to EVERY line degree in the `h·T₀` ansatz — the three part-A
+  witnesses are dead as leading data at all `d`. Parts B, C extend
+  exactly through level 3 (`Ob₂ ≡ Ob₃ ≡ 0`; part D's level 3 unfinished)
+  — but `FIX-C1-CONTROL-CALIBRATION-WEAK`: the same ladder on the `(3,6)`
+  `D_B` seed (boundary data of the branch Fable killed at
+  `I^{(11)}/I^{(13)}`, [E15](#e15)) is unobstructed at every level
+  computed, so single-stratum "extends" verdicts carry little weight;
+  only obstructions are information. Combined position after both
+  packets: the classified branch data are dead (equalizer + H1-1(a) +
+  part-A obstruction); the negative endgame is gated by the
+  positive-line-degree unclassified space — the three tracked `m = 1`
+  components (`(1,6)` `n ≥ 3`, map-relevant `n ≥ 30`; `(1, even r ≥ 8)`;
+  `(1, odd r ≥ 7)` positive-`n` with the explicit two-scalar residual
+  constraint), the H1-C `n₃`-divisible `D_B` sub-family, and the
+  never-classified odd-`m ≥ 3` beyond-`D_B` class
+  (`FIX-H0-PURE-ODDM-UNDECIDED`). Amendment recorded: FIX-N2C's
+  ω/ω²-completion flush tail (Thm N2C-1′ text, `witness_om2.py`,
+  corrected §6) landed after commit `8de0a37` — the worker-return write
+  race again; witness replays + `verdict_checks.py` re-run green,
+  committed with this update.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
@@ -2973,6 +3055,37 @@ determines which route owns the certificate.)
   result into its owning entry above, or (b) retire it — record why the
   claim does not hold or is out of scope. Until one or the other happens,
   none of these 7 claims may move any entry's headline-relevant status.
+
+### 20. FIX-H1/FIX-C1 open residue (2026-08-05) — adopted live runs and unrun upgrades
+
+- **Adopted live computations** (worker-detached processes running inside
+  the sealed FIX-H1 packet's `msolve/`, `m2/`, `logs/` at integration time;
+  director monitors, integrates on completion as amendments): the six hard
+  `(1,8)` line-degree-0 leaves (`pl_r8_{one,om,om2}_{B_43,D_41}_qq` — the
+  only gap between `FIX-H1-HOLE-1EVEN-PARTIAL` and a full `(1,8)`-`n=0`
+  verdict — plus one mod-`p` retry `hardp_r8_one_D`), and the `(1,6)`
+  line-degree-6 modular run (`ld_n6_om_1_T3_C2_0`). The packet's `msolve/`
+  bulk (~13k regenerable `.ms`/`.out`, 545M) is untracked by design
+  (in-packet `.gitignore` with rationale); the evidence layer — `logs/`,
+  `payloads/`, scripts, verifier — is fully tracked.
+- **Specified but unrun:** the char-0 upgrade of the `(1,6)` `n = 3,4,5`
+  mod-`p` findings (4 runs per `(n,λ)` over `QQ` with minimal polynomials
+  adjoined — H1 packet §6b); `(1, r=10)` four-strata completion; the
+  stabilisation-in-`n` theorem for `(1,6)` (structural leads recorded in
+  `HOLES_REPORT.md` §5.4); the deeper-layer equalizer for the H1-C
+  `n₃`-divisible sub-family; C1's part-D level 3, levels ≥ 4, part-A level 3
+  on `{ℓ₀ = 0}`, and the exact `ℓ₀` for the `λ = ω, ω²` blocks
+  (structure exact via M2; two-prime reconstruction did not stabilise).
+- **Internal supersession inside the sealed H1 packet:** `HOLES_REPORT.md`
+  §3 (written during an interim clean-EMPTY reading of `(1,8)`) is
+  superseded by `STATUS.md` §6a (282/288 + six undecided); the packet
+  records this itself; `logs/M2PASS_R8.log` ends in a `BrokenPipeError`
+  (driver crash, not mathematical) so only 40 of the 288 leaves carry an
+  M2 verdict on top of the msolve/QQ + sympy pair — zero disagreements
+  anywhere.
+- **Why load-bearing:** these are exactly the items separating the current
+  `PARTIAL` verdicts from decided ones; Binding rule 1 (a hole is a hole)
+  applies until each lands with a replayed verifier.
 
 ---
 

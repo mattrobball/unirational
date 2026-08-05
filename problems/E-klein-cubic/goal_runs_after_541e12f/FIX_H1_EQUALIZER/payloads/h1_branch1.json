@@ -1,0 +1,76 @@
+[
+ {
+  "name": "D_B(yz)   (3,6)  the T5 witness",
+  "m": 3,
+  "r": 6,
+  "e": 3,
+  "neqs": 8,
+  "gcd": "(1)*B^0",
+  "solvable": false,
+  "verdict": "EMPTY"
+ },
+ {
+  "name": "q.D_B(yz) (3,8)",
+  "m": 3,
+  "r": 8,
+  "e": 5,
+  "neqs": 8,
+  "gcd": "(1)*B^0",
+  "solvable": false,
+  "verdict": "EMPTY"
+ },
+ {
+  "name": "D_B(xy^2) (3,9)  primitive",
+  "m": 3,
+  "r": 9,
+  "e": 6,
+  "neqs": 8,
+  "gcd": "(1)*B^0",
+  "solvable": false,
+  "verdict": "EMPTY"
+ },
+ {
+  "name": "D_B(x^3)  (m,r) control",
+  "m": 0,
+  "r": 9,
+  "e": 9,
+  "excluded_by": "H0-1"
+ },
+ {
+  "name": "D_B(xz^2)",
+  "m": 3,
+  "r": 9,
+  "e": 6,
+  "neqs": 8,
+  "gcd": "(1)*B^0",
+  "solvable": false,
+  "verdict": "EMPTY"
+ },
+ {
+  "name": "(xyz)^2 D_B(yz) (7,12)",
+  "m": 7,
+  "r": 12,
+  "e": 5,
+  "verdict": "EMPTY"
+ },
+ {
+  "name": "D_B(yz) with om -> om^2 (convention twist)",
+  "m": 3,
+  "r": 6,
+  "e": 3,
+  "neqs": 8,
+  "gcd": "(1)*B^0",
+  "solvable": false,
+  "verdict": "EMPTY"
+ },
+ {
+  "name": "D_B(yz) with rho -> rho^2",
+  "m": 3,
+  "r": 6,
+  "e": 3,
+  "neqs": 8,
+  "gcd": "(1)*B^0",
+  "solvable": false,
+  "verdict": "EMPTY"
+ }
+]

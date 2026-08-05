@@ -63,3 +63,18 @@ What *is* safe: plain integer and rational coefficients (`13/8*x-1`,
 ## Detection recipe for future packets
 
 Before trusting any msolve run, assert `'(' not in source`.
+
+## Addendum (FIX-H1, 2026-08-05): the `-g` header landmine
+
+msolve's `-g` (Gröbner basis) output begins with a `#` comment header.
+A naive unit-ideal test `output.startswith('[1]')` therefore reports
+**every** run as non-unit — the inverse failure mode of the 0-byte bug
+above (a false-NONEMPTY factory instead of a false-EMPTY one). It was
+live for one round inside FIX-H1 and produced a spurious "the `r = 8`
+cone has plane-order-1 points" reading before being caught. Correct
+test: strip lines starting with `#`, then compare the body against
+`('1', '-1')` — matched to FIX-N2B's parser and self-tested against
+unit and non-unit controls (`FIX_H1_EQUALIZER/holes_certify2.py`).
+Detection recipe: any msolve-based unit/non-unit verdict must ship with
+a positive control (a known unit ideal) and a negative control run
+through the same parser.

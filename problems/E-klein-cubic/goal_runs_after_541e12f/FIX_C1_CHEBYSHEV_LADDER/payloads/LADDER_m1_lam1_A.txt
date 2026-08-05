@@ -1,0 +1,19 @@
+[    0.2s] m1_lam1_A: ring dim_QQ R = 4
+[    2.3s] m1_lam1_A: SEED  F(T) = 0   r = 7   ord_P = (1, 1, 1)   (ord T+, ord T-) = (2, 1)
+[   14.5s] m1_lam1_A: level 1  dim V_8 = 18  target orbit-rows = 23  (modular rank guess 14)
+[   27.7s] m1_lam1_A: level 2  dim V_9 = 21  target orbit-rows = 21  (modular rank guess 14)
+[   46.4s] m1_lam1_A: level 3  dim V_10 = 27  target orbit-rows = 28  (modular rank guess 19)
+[   65.4s] m1_lam1_A: LEVEL 1 exact:  rank 14 / 18 cols,  dim ker = 4,  dim coker = 9 (of 23 orbit-rows)
+[   66.0s] m1_lam1_A: LEVEL 1 kernel: 4-dimensional; trivial (reparametrisation / invariant-multiple) part 1-dimensional [V=y*z]; ESSENTIAL directions 3
+[  142.6s] m1_lam1_A: LEVEL 2 exact:  rank 14 / 21 cols,  dim ker = 7,  dim coker = 7 (of 21 orbit-rows, 0 outside the operator support)
+[  142.6s] m1_lam1_A:   Ob_2 coefficient of t0 t0 : 5 NONZERO residual coordinate(s)
+[  142.6s] m1_lam1_A:   Ob_2 coefficient of t0 t1 : 5 NONZERO residual coordinate(s)
+[  142.6s] m1_lam1_A:   Ob_2 coefficient of t0 t2 : 5 NONZERO residual coordinate(s)
+[  142.6s] m1_lam1_A:   Ob_2 coefficient of t0 t3 : 5 NONZERO residual coordinate(s)
+[  142.6s] m1_lam1_A:   Ob_2 coefficient of t1 t1 : 5 NONZERO residual coordinate(s)
+[  142.6s] m1_lam1_A:   Ob_2 coefficient of t1 t2 : 5 NONZERO residual coordinate(s)
+[  142.6s] m1_lam1_A:   Ob_2 coefficient of t1 t3 : 5 NONZERO residual coordinate(s)
+[  142.6s] m1_lam1_A:   Ob_2 coefficient of t2 t2 : 5 NONZERO residual coordinate(s)
+[  142.6s] m1_lam1_A:   Ob_2 coefficient of t2 t3 : 5 NONZERO residual coordinate(s)
+[  142.6s] m1_lam1_A:   Ob_2 coefficient of t3 t3 : 5 NONZERO residual coordinate(s)
+[  142.6s] m1_lam1_A: FIRST OBSTRUCTION AT LEVEL 2 -- Ob_2 is not identically zero

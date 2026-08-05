@@ -1,0 +1,26 @@
+{
+ "lam=1": {
+  "diag": true,
+  "D": "-(P1*c*om - P1*c + 4*om + 2)/2",
+  "zero": false,
+  "invertible": true
+ },
+ "lam=om": {
+  "diag": true,
+  "D": "2*om + 1",
+  "zero": false,
+  "invertible": true
+ },
+ "lam=om^2": {
+  "diag": true,
+  "D": "B2*P1*(om + 1)/2",
+  "zero": false,
+  "invertible": true
+ },
+ "closed_form": {
+  "condition": "P1*c = 2*om",
+  "consequence": "4*kap^2 + 27 = 0",
+  "value": "45*kp/2 + 45",
+  "numeric": 87.5161236650823
+ }
+}
