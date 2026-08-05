@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `fa02f05` (2026-08-04; the
+Snapshot metadata — notebook parent head: `ab7bf9d` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2114,10 +2114,18 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   type-I points of each `E_σ` lie on the `S3`-invariant std-line;
   type-II points generate degree-3 extensions of `Q(ζ₁₁)`
   (Galois-closure degree flagged open, unneeded). **The Note III site 𝒜
-  is now fully finite and closed.** Remaining before the `H⁰`
-  computation: FIX-N2b (the `m = 1` row, in flight) and the full Note
-  III assembly (CSP on `𝒜/G`, proceeding with the `m = 1, r ≥ 6` cells
-  carried as an explicit unknown flag).
+  is now fully finite and closed.** The CSP is now ASSEMBLED
+  (`FIX_III_cosheaf.md` §4b, 2026-08-05): three variety-valued
+  orbit-variables (`x_L` on the line stalk, `x_I` at the type-I vertex,
+  `x_{II}` at the type-II relay) and six finite constraint families
+  (line self-consistency with `S3`-equivariance; two-line vertex gluing
+  via chain adjacency + ladder jet matching; `C₃` triangle rotation with
+  the pinned `λ = ω²` scalars; three-elliptic type-II relay; dominance;
+  cone/parity admissibility). `H⁰` = a constructible set computable by
+  exact elimination starting from `x_L`. Remaining before the run:
+  FIX-N2b's `m = 1` answer (changes the stalk component list, not the
+  shape), the section-from-map write-up, and fixing the decisive working
+  order (finite, from the [II] table).
   Note III (compatibility cosheaf / global CSP on the verified
   arrangement), FIX-B (Burnside shadow). Director finding en route: the
   sealed `verify_kappa_genus2.py` is replay-brittle on sympy 1.14

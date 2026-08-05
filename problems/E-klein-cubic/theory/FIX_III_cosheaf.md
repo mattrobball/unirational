@@ -76,6 +76,69 @@ are varieties (the genus-2-cover parameter of the populated cell), so
 compatibility conditions: `H⁰` is a constructible set, computable by exact
 elimination.
 
+## 4b. The assembled CSP (structure fixed 2026-08-05; stalk populations
+plug in from FIX-N2/N2b)
+
+The site is now closed (FIX-A3): `𝒜` = 55 lines ∪ 165 type-I ∪ 165
+type-II, nothing else; `𝒜/G` has **three strata classes** plus the
+elliptic class acting purely as a relay (its only sites are the type-I/II
+points already listed). The orbit-variables of the CSP:
+
+- `x_L` — the germ class along the representative line `L_σ`: an element
+  of the stalk variety `𝒮_L` = (the populated cells of the [II] table,
+  fibered over their parameters: the odd-`m` branches over the genus-2
+  reciprocal cover; the even-`m` `(2k, 3δ+3k)` branches; the `m = 1,
+  r ≥ 6` cells as the FIX-N2b flag) **∪ {pt}** (the constant/point-image
+  option), all with the residual `S3`-equivariance for the standard
+  action imposed;
+- `x_I` — the germ class at the representative type-I vertex: point-landing
+  data at a vertex lying on two lines and one elliptic, constrained by
+  first-order character containment ([I, Lem 4.5]) for the `V₄`-normal
+  data (FIX-A0 claim 4: both receptors have normal type `(−1)^{⊕2}` in
+  `X`);
+- `x_{II}` — the germ class at the representative type-II point (on three
+  elliptics, off every line; stabilizer `V₄`);
+- implicit relay conditions on each `E_σ`: any elliptic-valued datum is a
+  point among its 12 sites — no free variable.
+
+The constraint equations (all finite, all exact):
+
+1. **(Line self-consistency)** `x_L ∈ 𝒮_L` with `S3`-equivariance — the
+   packet-verified standard action; nonconstant options exist iff the
+   corresponding cell is populated ([II] table).
+2. **(Vertex gluing, ×2)** at the type-I vertex, the two incident lines'
+   germs and the vertex datum agree to the working order: the T2-chain
+   adjacency ([T], T1.2(2)) plus the jet matching of the ladder gradings
+   ([II, §2]) in the `V₄`-normal coordinates.
+3. **(Triangle rotation)** the `C₃ = A₄/V₄` action permutes the three
+   incident line-germs at a triangle compatibly (the `λ = ω²` residual
+   scalar mechanics pinned by FIX-N2's re-verification).
+4. **(Type-II relay)** `x_{II}` is consistent as a point-image on all
+   three elliptics simultaneously (three character-containment conditions
+   at one point; fields of definition per FIX-A3 — degree-3 over
+   `Q(ζ₁₁)`).
+5. **(Dominance)** the generic-stratum datum is a dominant-map germ; the
+   all-points section is excluded.
+6. **(Cone/parity admissibility)** every germ obeys [II, Lemmas 2.1–2.2]
+   — built into `𝒮_L` by construction.
+
+`H⁰(𝒜, 𝒯^land)` = the constructible set of solutions
+`(x_L, x_I, x_{II})` — **three variety-valued variables and six finite
+constraint families**. Computation: exact elimination, stratum class by
+stratum class, starting from `x_L` (the only positive-dimensional
+receptor). Two exits, both live: empty ⇒ negative headline; nonempty ⇒
+the solution set is the moduli of candidate global landing data, handed
+to method families 1/3.
+
+**What remains before the computation runs:** (i) FIX-N2b's answer on the
+`m = 1` row (changes `𝒮_L`'s component list, not the CSP shape); (ii) the
+section-from-map theorem written to Note-I rigor (the easy direction —
+every `f` induces a solution; the machinery is all in [I]/[T], the
+writing is bookkeeping); (iii) the working order for constraint 2 fixed
+high enough to be decisive — the ladder gradings tell us the first order
+at which the vertex data distinguishes branches; take the maximum over
+the populated cells' leading orders, finite by the [II] table.
+
 ## 5. Dependencies and plan
 
 1. **FIX-N2** (in flight): the stalk classification at the line/V4 level —
