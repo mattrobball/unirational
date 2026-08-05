@@ -231,7 +231,7 @@ def main() -> int:
     try:
         out = subprocess.run(
             ["git", "-C", str(PROBLEM_ROOT), "log", "-1", "--format=%H",
-             "--", "problems/E-klein-cubic/NOTEBOOK.md"],
+             "--", "NOTEBOOK.md"],
             capture_output=True, text=True, check=True)
         last_touch = out.stdout.strip() or None
     except subprocess.CalledProcessError:
