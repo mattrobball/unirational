@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `541e12f` (2026-08-05; the
+Snapshot metadata — notebook parent head: `bb23f24` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3066,8 +3066,10 @@ determines which route owns the certificate.)
   verdict — plus one mod-`p` retry `hardp_r8_one_D`), and the `(1,6)`
   line-degree-6 modular run (`ld_n6_om_1_T3_C2_0`). The packet's `msolve/`
   bulk (~13k regenerable `.ms`/`.out`, 545M) is untracked by design
-  (in-packet `.gitignore` with rationale); the evidence layer — `logs/`,
-  `payloads/`, scripts, verifier — is fully tracked.
+  (in-packet `.gitignore` with rationale); `logs/` are untracked by the
+  repo-wide `*.log` convention (regenerable by replay, like every packet);
+  the tracked evidence layer is `payloads/` (incl. `HOLES_REPORT.md` and
+  the per-part transcripts), scripts, verifier, `STATUS.md`/`REPLAY.md`.
 - **Specified but unrun:** the char-0 upgrade of the `(1,6)` `n = 3,4,5`
   mod-`p` findings (4 runs per `(n,λ)` over `QQ` with minimal polynomials
   adjoined — H1 packet §6b); `(1, r=10)` four-strata completion; the
