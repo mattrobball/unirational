@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `bc93561` (2026-08-04; the
+Snapshot metadata — notebook parent head: `96745a9` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2060,7 +2060,18 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   decoration, residual equivariance), with no finite constancy state
   space (genus-2 reciprocal cover) — the formalism provably cannot close
   Klein on local data. **GATE CLOSED: T1–T5 all passed (2026-08-04).**
-  FIX results now consumable; cleared program: Note II (jet ladder),
+  FIX results now consumable. Note II landed 2026-08-05
+  (`theory/FIX_II_jets.md`): the jet ladder — multi-order cone filtration
+  at incidence flags (Lemma 2.1 derives the `(3m+1)/2` bound as pure
+  incidence combinatorics; Lemma 2.2's parity table derives the
+  `(3m+3)/2` "type-II delay"), the ladder differential `e ↦ 3Φ(p₀,p₀,e)`
+  identifying Fable's correction operator and making "changed boundary
+  data" an enumerable choice of bottom-cell solution, both validation
+  instances passed (order bounds; packet Thm 2.12 as the `(1,3)`-cell
+  obstruction computation), and the local cell classification table with
+  the open cells assigned to packet FIX-N2 (principal target: `m = 1`,
+  triple order ≥ 4, all line degrees). Cleared program continues: Note II
+  (done),
   Note III (compatibility cosheaf / global CSP on the verified
   arrangement), FIX-B (Burnside shadow). Director finding en route: the
   sealed `verify_kappa_genus2.py` is replay-brittle on sympy 1.14
