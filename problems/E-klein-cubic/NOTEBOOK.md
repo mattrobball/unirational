@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `fc5e2d3` (2026-08-04; the
+Snapshot metadata — notebook parent head: `684f27e` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2077,11 +2077,23 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   negative headline, `H⁰ ≠ ∅` yields candidate global landing data — and
   the **quotient reduction**: `G`-equivariance computes `H⁰` on `𝒜/G`,
   a CSP in a handful of variety-valued orbit-variables, solvable by exact
-  elimination). Packets in flight: FIX-N2 (cell classification; principal
-  target `m = 1, r ≥ 4` all line degrees) and FIX-B (corrected scope:
-  `[P(W)]` symbol list + removability core via in-repo calculus only —
-  the unrelativized Burnside class is provably map-blind; the cosheaf is
-  the correct relativization). Next after landings: FIX-A3 (elliptic
+  elimination). FIX-B landed 2026-08-05
+  (`FIX-B-SYMBOLS-PASS`, director-replayed; FIX-A2 cross-validated a
+  third time by a from-scratch verifier): the 20-symbol table of
+  `[P(W)]`; removability audit over all 1023 admissible centers —
+  **9-symbol non-removable core, with the plus-planes unconditionally
+  rigid** (no smooth `G`-stable center of any kind can contain one, since
+  three planes pass through each `ℓ_V`) and minus-lines/`C3`-lines/`ℓ_V`
+  rigid-in-class: the cosheaf's stalk supports cannot be blown away, as
+  Note III needs. Findings: the 60 poset-isolated `C11`-points are
+  **surgically removable** (the level-11 stratum is NOT in the core —
+  the modular-symbol resonance is a model-choice artifact, margin note
+  deflated accordingly); `C5/χ` and `C5/χ²` are distinct orbits with the
+  identical symbol; the `D12`-point blowup destroys 5 and creates 9
+  stratum orbits (symbol multiplicities non-monotone); 45/54 exceptional
+  weight-patterns hit would-be KT vanishing configurations — recorded
+  LITERATURE-DEPENDENT, not applied. Still in flight: FIX-N2 (cell
+  classification; principal target `m = 1, r ≥ 4` all line degrees). Next after landings: FIX-A3 (elliptic
   site inventory) and the `H⁰` computation itself.
   Note III (compatibility cosheaf / global CSP on the verified
   arrangement), FIX-B (Burnside shadow). Director finding en route: the

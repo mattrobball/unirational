@@ -1306,6 +1306,17 @@
    "char0_scope": "char0",
    "tracked": "main",
    "notes": "director-replayed 2026-08-05 (44 checks, 0 failures); complete source complex: 16 subgroup classes, 1502 strata / 20 G-orbits / 5197 poset edges; source poset = character-restriction poset; cross-check vs FIX-A1 8/8"
+  },
+  {
+   "path": "goal_runs_after_fc5e2d3/FIX_B_BURNSIDE_SYMBOLS",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-B-SYMBOLS-PASS",
+   "superseded_by": null,
+   "char0_scope": "char0",
+   "tracked": "main",
+   "notes": "director-replayed 2026-08-05 (20 checks, 0 failures); [P(W)] 20-symbol table; removability core 9/20 (plus-planes unconditionally rigid; C11 stratum surgically removable); FIX-A2 cross-validated a third time; KT vanishing configurations recorded LITERATURE-DEPENDENT, not applied"
   }
  ],
  "known_branches": [
