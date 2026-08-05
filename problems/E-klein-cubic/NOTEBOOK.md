@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `9b67076` (2026-08-04; the
+Snapshot metadata — notebook parent head: `bc93561` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -187,7 +187,16 @@ parallel alternatives:
    `FIX-A1-V4-REPAIR-PASS` landed 2026-08-04, director-replayed — the funnel
    target is now the verified arrangement; **acceptance gate T1–T5 CLOSED
    2026-08-04** — FIX cleared for headline-facing work (Note II jets,
-   Note III cosheaf/global CSP, FIX-B).**
+   Note III cosheaf/global CSP, FIX-B). Source complex landed 2026-08-05
+   (`FIX-A2-SOURCE-COMPLEX-PASS`, director-replayed): 16 subgroup classes,
+   1502 strata / 20 `G`-orbits / 5197 poset edges, all decorations exact;
+   the source poset is precisely the character-restriction poset
+   (`(H,χ) ≤ (H',χ') ⟺ H ⊇ H'` and `χ|_{H'} = χ'`), so the CSP's source
+   side is purely combinatorial; deep strata empty ⟺ `W|_H` irreducible
+   (`11:5`, both `A5`, `G`); the 60 `C11`-points are poset-isolated; a
+   distinguished 55-point `D12`-orbit sits on 7 plus-planes and 3 `ℓ_V`
+   each; two `S3` classes (outer-fused); Cor 4.4's hypothesis now verified
+   as fact (every `H ≠ 1` stratum is a linear `P^d`, `d ≤ 2`).**
 
 Method-discovery proposals sit outside the four families: the
 equivalent-object dP-replay ([E52](#e52)) and the hidden-intermediate-variety

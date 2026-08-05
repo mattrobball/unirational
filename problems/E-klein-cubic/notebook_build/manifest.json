@@ -1295,6 +1295,17 @@
    "char0_scope": "char0",
    "tracked": "main",
    "notes": "director-replayed 2026-08-04 (VERIFY_AMBIENT/T3/T4 all PASS); closes gate T3/T4 with class-named corrected instantiations; retires the OD16/Fermat session-claim debt as RETIRED-WITH-CORRECTIONS"
+  },
+  {
+   "path": "goal_runs_after_bc93561/FIX_A2_SOURCE_COMPLEX",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-A2-SOURCE-COMPLEX-PASS",
+   "superseded_by": null,
+   "char0_scope": "char0",
+   "tracked": "main",
+   "notes": "director-replayed 2026-08-05 (44 checks, 0 failures); complete source complex: 16 subgroup classes, 1502 strata / 20 G-orbits / 5197 poset edges; source poset = character-restriction poset; cross-check vs FIX-A1 8/8"
   }
  ],
  "known_branches": [
