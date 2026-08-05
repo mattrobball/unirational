@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `8de0a37` (2026-08-04; the
+Snapshot metadata — notebook parent head: `33d8e19` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2171,8 +2171,10 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   (`FIX-H0-H0-PARTIAL`, director-replayed): **the program's first two
   unconditional global theorems** — H0-1 (plus-plane parity: for ANY
   equivariant dominant map, `m` is odd at every involution ⇒ the entire
-  even-`m` stalk row is globally excluded, and the `m = 1`
-  classification holes stop gating anything) and H0-2 (point-sections
+  even-`m` stalk row is globally excluded; **correction 2026-08-06**: the
+  odd-row holes — `(1,6)` above line degree 2 and `(1, even r ≥ 8)` —
+  still gate a final negative verdict, since `m = 1` is odd; the H0
+  theorems themselves are unconditional) and H0-2 (point-sections
   impossible: the σ-exceptional divisor `D_σ` maps ONTO `L_σ` — every
   hypothetical map is FORCED to sweep every line; direct input to the
   common-line program). Note III §4b corrected (a missing constraint
