@@ -279,10 +279,96 @@ forced values meeting at a vertex) is precisely the kind of local
 consistency the trisection family must — and, by [E33], does — survive,
 which is T5's business.
 
-## T5 (pending)
+## T5. Non-overreach: the trisection family solves every local constraint
 
-- **T5** — non-overreach: recast the V4 trisection family
-  (`goal_runs_after_f1f0be/.../THEOREM.md`) as a solution of every local
-  constraint of `𝒞(P(U), X)` at its stratum — in particular of the T2-style
-  chain constraints exported above — certifying the formalism cannot close
-  the Klein case on local data. Director work; next.
+Witness: the exact positive-line-degree family of
+`goal_runs_after_f1f0be/V4_SIMULTANEOUS_ODD_NORMALS_20260802/THEOREM.md` §4.
+Setting (packet §1, matching FIX-A1 exactly): at a representative
+`K ≅ V₄` with `N_G(K) ≅ A₄`, `W|_K = A ⊕ B ⊕ C ⊕ D` with `A = W^K`
+2-dimensional — so the "triple line" `T = P(A)` **is** FIX-A1's `ℓ_V` —
+the three plus-planes through `T` cut the ideals `(y,z), (x,z), (x,y)`,
+and the Klein cubic takes the normal form (1.1) with the two `A₄`-stable
+smooth cubic surfaces on the character hyperplanes, smooth iff
+`κ_± ∉ {0, −4}`.
+
+The witness family: with `κ = (B³−1)²/B³` and the trisection
+`Q_B: w = −XYZ, uᵢ = (cyclic)`, satisfying the landing identity
+`κw³ + w(u₀²+u₁²+u₂²) + u₀u₁u₂ = 0` symbolically (packet (4.1)–(4.2));
+precomposed diagonally with the coprime, residually-`C₃`-permuted binary
+forms `ℓᵢ = s − ωⁱt` on `T` to give
+`Q_{B,ℓ} = Q_B(ℓ₀x, ℓ₁y, ℓ₂z)` — a **primitive, projective-character
+`A₄`-equivariant simultaneous landing family of line degree six** along
+the triple line (packet (4.3)–(4.4)), extended to every odd plane order
+`m = 2r+1 ≥ 3` by `(xyz)^{r−1}`-multiplication.
+
+**Claim (T5): `Q_{B,ℓ}` satisfies every local constraint of
+`𝒞(P(W), X)` at this stratum — every layer the formalism has fielded to
+date.** Layer by layer:
+
+1. *Funnel/RCC (A2):* the family lands in `X` (identity (4.2)) and its
+   involution-fixed source strata map into `E_t ⊔ L_t` as required; the
+   elliptic components receive only points (e.g. the `t_B`-fixed plane
+   maps to the single fixed point `[0:1:0:0]` of its surface), while the
+   nonconstant rational images sweep line/trisection loci — legal
+   precisely because the `L_t` are rational. The escape is not
+   hypothetical: this family *uses* it.
+2. *Chain constraints (T2 export):* over the type-I vertices the T2.2
+   chains conclude only "each member lands in `E_{t_C} ⊔ L_{t_C}`"; the
+   family, being an honest symbolically-verified local map, induces
+   consistent chain data — and packet §5 states the exact point: it
+   "supplies the missing rational bridges explicitly," so the Problem-F
+   endpoint contradiction (`a_q = b_s` vs distinct projections) cannot
+   arise — the analogous endpoint values here live on rational receptors
+   and need not be constant at all.
+3. *Decoration/parity layer:* the packet's own classification is the
+   decoration computation at this stratum, and it is exactly calibrated:
+   Theorem 2.12 (`m = 1`, exact triple-line order 3) shows the layer is
+   nonvacuous at Klein — it kills an entire branch, all line degrees —
+   while §4 populates the adjacent branch (order-3 plane / odd `m ≥ 3`,
+   line degree 6) with this witness. No decoration constraint the
+   formalism currently states excludes it.
+4. *Residual equivariance:* `Q_{B,ℓ}` is `A₄`-equivariant by construction
+   (the `ℓᵢ` are `C₃`-permuted up to one common scalar) — the constraint
+   layer strictly above RCC is satisfied, not vacuously but by design of
+   the witness.
+5. *No finite constancy propagation:* packet §3: the local state space is
+   the reciprocal cover `τ + τ⁻¹ = 2 + (κ₊p³+κ₋q³)/(p³+q³)` — a
+   positive-dimensional (genus-2-quotient) family, "not a finite state
+   space." In cosheaf language: the stalks of the compatibility cosheaf at
+   this stratum have positive-dimensional sections; a Problem-F-style
+   finite endpoint bookkeeping cannot even be formulated here.
+
+**Gate verdict T5: PASSED.** The local layer of `𝒞(P(W), X)` at the
+representative `V₄`-stratum is solvable, with an explicit, primitive,
+residually-equivariant witness. The formalism therefore does not overreach:
+it cannot close Problem E on local data — exactly as the boundary
+conditions of [I, §5] demanded — and any FIX-side closure must come from
+the global layer (Note III's `H⁰` over the whole arrangement) or from
+strata the witness does not populate (packet §6: `m = 1` with triple-line
+order ≥ 4; odd `m ≥ 3` above `(xyz)^{r−1}(J₃)₆`; changed boundary data;
+mechanisms invisible to the plus-plane arrangement).
+
+**Director verification note.** Packet replay: `verify.py` →
+`V4_SIMULTANEOUS_ODD_NORMALS_VERIFY_OK` (clean). `verify_kappa_genus2.py`
+fails on current sympy 1.14 with an `AssertionError` — diagnosed: the
+sealed verifier compares `sp.factor(resultant)` **structurally** against
+`64(κ₊−κ₋)³`, and this sympy factors to `−64(κ₋−κ₊)³`; the difference
+simplifies to 0 and the identity is independently provable by hand
+(`Res(at³+b, ct³+d) = (ad−bc)³`, `ad−bc = 4(κ₊−κ₋)`). The exit
+`V4-TRISECTION-GENUS2-QUOTIENT-PASS` is mathematically sound; its
+verifier is replay-brittle (structural equality instead of semantic).
+Sealed packet left untouched; finding recorded in the notebook.
+
+---
+
+## Gate closed
+
+**T1 ✓ T2 ✓ T3 ✓ T4 ✓ T5 ✓** (2026-08-04). Per the discipline set in [I]:
+FIX results are now consumable for headline-facing work. The cleared
+program, in order: **Note II** (the jet ladder along strata — must
+reproduce the `ord ≥ (3m+1)/2` V4-line bounds and the packet's Theorem
+2.12 as instances, and extend the decoration layer past the strata the
+T5 witness populates); **Note III** (the compatibility cosheaf on the
+verified 55-line arrangement and the global constraint-satisfaction
+computation — where a Klein conclusion, positive or negative, would
+actually live); **FIX-B** (the Burnside `H⁰`-shadow, cheap first).

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `9b01ff9` (2026-08-04; the
+Snapshot metadata — notebook parent head: `9b67076` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -185,7 +185,9 @@ parallel alternatives:
    ([E56](#e56), opened 2026-08-04): Note I defines the b-complex and its
    functoriality; foundation packets `FIX-A0-ARRANGEMENT-PASS` and
    `FIX-A1-V4-REPAIR-PASS` landed 2026-08-04, director-replayed — the funnel
-   target is now the verified arrangement; acceptance gate T1–T5 next.**
+   target is now the verified arrangement; **acceptance gate T1–T5 CLOSED
+   2026-08-04** — FIX cleared for headline-facing work (Note II jets,
+   Note III cosheaf/global CSP, FIX-B).**
 
 Method-discovery proposals sit outside the four families: the
 equivalent-object dP-replay ([E52](#e52)) and the hidden-intermediate-variety
@@ -505,7 +507,7 @@ Each entry carries a `Thread:` line locating it in the Research threads map abov
 | [E53](#e53) | UNKNOWN-EX — hidden intermediate-variety search | positive (proposed) | analytic | PROPOSED-UNRUN | none |
 | [E54](#e54) | CTR-TWIST — counterexample twist target | negative (target) | analytic | OPEN-TARGET | negative |
 | [E55](#e55) | REPAIR — 2026-07-31 theorem-boundary audit | infrastructure | analytic | APPLIED | none |
-| [E56](#e56) | FIX — equivariant fixed-locus b-complex program | dual (reduction + obstruction) | analytic + CAS | ACTIVE — Note I + Burnside §7; A0/A1 PASS; gate T1–T5 next | both |
+| [E56](#e56) | FIX — equivariant fixed-locus b-complex program | dual (reduction + obstruction) | analytic + CAS | ACTIVE — GATE T1–T5 CLOSED; Note II/III + FIX-B cleared | both |
 
 ## Attempts
 
@@ -2042,8 +2044,20 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   decoration and incidence layers** — parity forcing on `L_s`, forced
   basepoints at quadruple points, member-wise involutions along the
   exceptional tree; Klein export recorded: over the 165 vertices the same
-  chains yield constrained path maps, not contradictions); T5 (trisection
-  non-overreach) pending, director work.** Note I
+  chains yield constrained path maps, not contradictions); T5 CLOSED —
+  the exact line-degree-6 `A₄`-equivariant trisection family
+  (`goal_runs_after_f1f0be` packet §4, along `ℓ_V` itself) verified as a
+  solution of every fielded local constraint layer (funnel, T2-chains,
+  decoration, residual equivariance), with no finite constancy state
+  space (genus-2 reciprocal cover) — the formalism provably cannot close
+  Klein on local data. **GATE CLOSED: T1–T5 all passed (2026-08-04).**
+  FIX results now consumable; cleared program: Note II (jet ladder),
+  Note III (compatibility cosheaf / global CSP on the verified
+  arrangement), FIX-B (Burnside shadow). Director finding en route: the
+  sealed `verify_kappa_genus2.py` is replay-brittle on sympy 1.14
+  (structural equality vs a sign-flipped `factor` form; identity
+  re-derived by hand and semantically — `V4-TRISECTION-GENUS2-QUOTIENT-
+  PASS` stands; packet untouched).** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
