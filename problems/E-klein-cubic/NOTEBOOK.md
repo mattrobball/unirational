@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `e29698c` (2026-08-04; the
+Snapshot metadata — notebook parent head: `a7a68d8` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2029,7 +2029,14 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   V4`, and those points lie on `E_σ`) and `FIX-A1-V4-REPAIR-PASS` (V4 ground
   truth on all 55; type-I/type-II inconsistency adjudicated — see [E34](#e34);
   `X^{A4} = ∅`; `F|_{ℓ_V} = αU³+βV³`). Cor 5.2's FIX-A0/A1 conditionality is
-  discharged: the funnel target is now the verified arrangement.** Note I
+  discharged: the funnel target is now the verified arrangement. Gate
+  progress (`theory/FIX_T_gate.md`): T1 derived — Thm T1.2, chains map to
+  chains on the resolved graph in dim 2, reproducing the collaborator's
+  observation from the general definitions (flagged for their review);
+  T3/T4 reduced to the central-obstruction Cor T3.1 (proved from Note I)
+  plus finite hypothesis checks — packet FIX-T34 dispatched; T2
+  (Problem-F chain re-derivation) and T5 (trisection non-overreach)
+  pending, director work.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
