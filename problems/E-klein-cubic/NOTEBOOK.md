@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `4234393` (2026-08-04; the
+Snapshot metadata — notebook parent head: `fa02f05` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2106,8 +2106,18 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   question. OPEN: `m = 1, r = 6` at positive line degree and `r ≥ 7`
   (per-`r` decidable; dispatched as FIX-N2b). Convention dictionary
   packet-vs-Note-II recorded; §4 family's residual scalar `λ = ω²`
-  exhibited (previously asserted without scalars). Next after landings: FIX-A3 (elliptic
-  site inventory) and the `H⁰` computation itself.
+  exhibited (previously asserted without scalars). FIX-A3 landed 2026-08-05
+  (`FIX-A3-SITES-PASS`, director-replayed): the elliptic landing-site
+  inventory is **COMPLETE with zero new sites** — 12 per `E_σ` (3 type-I
+  + 9 type-II), 330 points in exactly the two known `G`-orbits;
+  `C3`/`S3`-fixed candidates all off `X`; new structural fact: the 3
+  type-I points of each `E_σ` lie on the `S3`-invariant std-line;
+  type-II points generate degree-3 extensions of `Q(ζ₁₁)`
+  (Galois-closure degree flagged open, unneeded). **The Note III site 𝒜
+  is now fully finite and closed.** Remaining before the `H⁰`
+  computation: FIX-N2b (the `m = 1` row, in flight) and the full Note
+  III assembly (CSP on `𝒜/G`, proceeding with the `m = 1, r ≥ 6` cells
+  carried as an explicit unknown flag).
   Note III (compatibility cosheaf / global CSP on the verified
   arrangement), FIX-B (Burnside shadow). Director finding en route: the
   sealed `verify_kappa_genus2.py` is replay-brittle on sympy 1.14
