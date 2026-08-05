@@ -141,10 +141,36 @@ verifies, adjusts, or refutes):
   composed with scalars; verify exponent 9 and centrality of `a³`),
   verify (a) exactly, verify (b) by the full 27-element scan.
 
-If FIX-T34 passes, gate items T3, T4 close and the standing debt item
-("OD16/Fermat session theorems never machine-checked") retires — with the
-theorems now *stronger* than the sessions': proved via T3.1 from [I], not
-via the unwritten sketches.
+**FIX-T34 verdict (landed and director-replayed 2026-08-04):**
+`FIX-T34-CENTRAL-HYPOTHESES-PASS` — gate items **T3 and T4 close**, with the
+session claims corrected in substance, not merely verified:
+
+- **T3 verified instantiation** (one of 13 passing classes out of 17
+  order-16 classes in `Aut(S)`, `|Aut(S)| = 192` proved): class T3-C05
+  (`D₈×C₂`), `z = diag(1,1,−1)`, `S^z` = smooth genus-1 curve
+  `{w² = x₁⁴+x₂⁴}` ⊔ 2 points, `S^G = ∅`. Corrections: the deck
+  involution's curve has genus **3** (not 1); the "genus-1 central curve"
+  property holds in *all 17* classes and selects nothing — `S^G = ∅` is
+  the discriminating hypothesis; indeed no automorphism of `S` has a
+  rational curve in its fixed locus, so (a) is vacuous here.
+- **T4 verified instantiation** (2 of 3 `C₉⋊C₃`-classes pass in
+  `Aut(X)`, `|Aut(X)| = 9720` proved): class T4-C01,
+  `a: e₁↦e₂, e₂↦e₃, e₃↦ζ₃e₁, e₅↦ζ₃e₅`, `b = diag(1,ζ₃,ζ₃²,1,1)`,
+  `z = a³ = diag(ζ₃,ζ₃,ζ₃,1,1)`, `X^z` = genus-1 plane cubic ⊔ 3 points
+  (on the fixed *line* `⟨e₄,e₅⟩` — `Fix(z,P⁴) = P²⊔P¹`, never `P²⊔pt⊔pt`),
+  `X^G = ∅`. **Correction with teeth: the naive/pinned generator
+  `a = diag(ζ,1,1,1,1)∘(x₁x₂x₃)` lies in class T4-C03, where
+  `X^G` = 3 points and hypothesis (b) FAILS** — the obstruction does not
+  hold for that action. Repair: twist the fifth coordinate.
+- **Moral (recorded for all downstream citation):** both obstructions are
+  properties of the **conjugacy class of the action**, not of the abstract
+  group; citations must name the class. The standing debt item ("OD16 /
+  Fermat-cubic session theorems never machine-checked") retires as
+  RETIRED-WITH-CORRECTIONS: the results are now corollaries of T3.1 with
+  exact, class-named, machine-verified hypotheses — and the sessions'
+  displayed descriptions were wrong in three particulars (genus of the
+  deck curve; the shape of `Fix(z)`; and, for the natural T4 generator
+  choice, the truth of the theorem itself).
 
 ## T2, T5 (pending)
 

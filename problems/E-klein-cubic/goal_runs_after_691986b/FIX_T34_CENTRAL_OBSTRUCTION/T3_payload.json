@@ -1,0 +1,6954 @@
+{
+ "surface": "S : w^2 = x1^4+x2^4+x3^4 in P(1,1,1,2) (degree-2 del Pezzo)",
+ "aut_order": 192,
+ "center_of_Aut": [
+  "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+  "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1"
+ ],
+ "center_of_Aut_order": 2,
+ "deck_is_central": true,
+ "num_index2_subgroups": 3,
+ "num_order96_complements_to_deck": 2,
+ "Aut_is_C2_times_96": true,
+ "derived_subgroup_order": 48,
+ "element_order_profile": {
+  "1": 1,
+  "2": 31,
+  "3": 32,
+  "4": 48,
+  "6": 32,
+  "8": 48
+ },
+ "element_fixed_loci": [
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      3,
+      "the branch quartic B = {w=0}"
+     ]
+    ],
+    "isolated_points": 0
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 0
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 6
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 0
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 6
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^0)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 0
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^0)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 6
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^1)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 6
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^1)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 0
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^2)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^2)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^3)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^3)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^0)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 0
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^0)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 6
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^1)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^1)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^2)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^2)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^3)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 6
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^3)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 0
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^0), e3->2(i^0)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^0), e3->2(i^0)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^0), e3->2(i^1)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^0), e3->2(i^1)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^0), e3->2(i^2)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^0), e3->2(i^2)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^0), e3->2(i^3)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^0), e3->2(i^3)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^1), e3->2(i^0)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^1), e3->2(i^0)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^1), e3->2(i^1)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^1), e3->2(i^1)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^1), e3->2(i^2)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^1), e3->2(i^2)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^1), e3->2(i^3)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^1), e3->2(i^3)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^2), e3->2(i^0)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^2), e3->2(i^0)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^2), e3->2(i^1)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^2), e3->2(i^1)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^2), e3->2(i^2)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^2), e3->2(i^2)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^2), e3->2(i^3)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^2), e3->2(i^3)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^3), e3->2(i^0)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^3), e3->2(i^0)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^3), e3->2(i^1)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^3), e3->2(i^1)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^3), e3->2(i^2)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^3), e3->2(i^2)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^3), e3->2(i^3)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->1(i^0), e2->3(i^3), e3->2(i^3)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^1)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^1)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^2)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^2)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^3)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^3)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^1)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^1)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^2)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^2)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^3)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^3)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^2), e3->3(i^0)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^2), e3->3(i^0)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^2), e3->3(i^1)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^2), e3->3(i^1)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^2), e3->3(i^2)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^2), e3->3(i^2)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^2), e3->3(i^3)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^2), e3->3(i^3)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^3), e3->3(i^0)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^3), e3->3(i^0)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^3), e3->3(i^1)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^3), e3->3(i^1)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^3), e3->3(i^2)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^3), e3->3(i^2)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^3), e3->3(i^3)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->1(i^3), e3->3(i^3)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^0), e3->1(i^0)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^0), e3->1(i^0)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^0), e3->1(i^1)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^0), e3->1(i^1)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^0), e3->1(i^2)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^0), e3->1(i^2)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^0), e3->1(i^3)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^0), e3->1(i^3)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^1), e3->1(i^0)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^1), e3->1(i^0)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^1), e3->1(i^1)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^1), e3->1(i^1)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^1), e3->1(i^2)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^1), e3->1(i^2)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^1), e3->1(i^3)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^1), e3->1(i^3)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^2), e3->1(i^0)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^2), e3->1(i^0)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^2), e3->1(i^1)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^2), e3->1(i^1)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^2), e3->1(i^2)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^2), e3->1(i^2)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^2), e3->1(i^3)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^2), e3->1(i^3)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^3), e3->1(i^0)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^3), e3->1(i^0)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^3), e3->1(i^1)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^3), e3->1(i^1)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^3), e3->1(i^2)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^3), e3->1(i^2)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^3), e3->1(i^3)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->2(i^0), e2->3(i^3), e3->1(i^3)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^0), e3->2(i^0)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^0), e3->2(i^0)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^0), e3->2(i^1)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^0), e3->2(i^1)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^0), e3->2(i^2)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^0), e3->2(i^2)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^0), e3->2(i^3)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^0), e3->2(i^3)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^1), e3->2(i^0)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^1), e3->2(i^0)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^1), e3->2(i^1)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^1), e3->2(i^1)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^1), e3->2(i^2)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^1), e3->2(i^2)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^1), e3->2(i^3)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^1), e3->2(i^3)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^2), e3->2(i^0)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^2), e3->2(i^0)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^2), e3->2(i^1)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^2), e3->2(i^1)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^2), e3->2(i^2)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^2), e3->2(i^2)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^2), e3->2(i^3)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^2), e3->2(i^3)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^3), e3->2(i^0)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^3), e3->2(i^0)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^3), e3->2(i^1)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^3), e3->2(i^1)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^3), e3->2(i^2)], nu=1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^3), e3->2(i^2)], nu=-1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^3), e3->2(i^3)], nu=1",
+   "order": 3,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->1(i^3), e3->2(i^3)], nu=-1",
+   "order": 6,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^0), e3->1(i^0)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^0), e3->1(i^0)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^0), e3->1(i^1)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^0), e3->1(i^1)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^0), e3->1(i^2)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^0), e3->1(i^2)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^0), e3->1(i^3)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^0), e3->1(i^3)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^1), e3->1(i^0)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^1), e3->1(i^0)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^1), e3->1(i^1)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^1), e3->1(i^1)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^1), e3->1(i^2)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^1), e3->1(i^2)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^1), e3->1(i^3)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^1), e3->1(i^3)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^2), e3->1(i^0)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^2), e3->1(i^0)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^2), e3->1(i^1)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^2), e3->1(i^1)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^2), e3->1(i^2)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^2), e3->1(i^2)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^2), e3->1(i^3)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^2), e3->1(i^3)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^3), e3->1(i^0)], nu=1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^3), e3->1(i^0)], nu=-1",
+   "order": 4,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^3), e3->1(i^1)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^3), e3->1(i^1)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^3), e3->1(i^2)], nu=1",
+   "order": 2,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^3), e3->1(i^2)], nu=-1",
+   "order": 2,
+   "summary": {
+    "curves": [
+     [
+      1,
+      "pi^{-1}(L), L = P(E_lam) a line"
+     ]
+    ],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^3), e3->1(i^3)], nu=1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 2
+   },
+   "hyp_a": true
+  },
+  {
+   "element": "A=[e1->3(i^0), e2->2(i^3), e3->1(i^3)], nu=-1",
+   "order": 8,
+   "summary": {
+    "curves": [],
+    "isolated_points": 4
+   },
+   "hyp_a": true
+  }
+ ],
+ "elements_failing_hyp_a": [],
+ "num_subgroups_order16": 67,
+ "num_subgroups_order8": 115,
+ "num_subgroups_order4": 67,
+ "num_subgroups_order2": 31,
+ "num_conjugacy_classes_order16": 17,
+ "order16_classes": [
+  {
+   "class_id": "T3-C01",
+   "iso_type": "C4xC2xC2",
+   "class_size": 3,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": true,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      4,
+      8
+     ]
+    ],
+    16,
+    1,
+    [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ]
+   ],
+   "center_order": 16,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+     "z_order": 2,
+     "is_deck": true,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "the branch quartic B = {w=0}",
+       "irreducible": true,
+       "genus": 3
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        3,
+        "the branch quartic B = {w=0}"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=-1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 12,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=-1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=-1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C02",
+   "iso_type": "C4xC2xC2",
+   "class_size": 6,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": true,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      4,
+      8
+     ]
+    ],
+    16,
+    1,
+    [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ]
+   ],
+   "center_order": 16,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 12,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+     "z_order": 2,
+     "is_deck": true,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "the branch quartic B = {w=0}",
+       "irreducible": true,
+       "genus": 3
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        3,
+        "the branch quartic B = {w=0}"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=-1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^2)], nu=-1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^0), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C03",
+   "iso_type": "C8xC2",
+   "class_size": 6,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     1,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": true,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      8,
+      8
+     ]
+    ],
+    16,
+    1,
+    [
+     1,
+     2,
+     2,
+     2,
+     4,
+     4,
+     4,
+     4,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8
+    ]
+   ],
+   "center_order": 16,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^1)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^1)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^2)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^2)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^3)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^3)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+     "z_order": 2,
+     "is_deck": true,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "the branch quartic B = {w=0}",
+       "irreducible": true,
+       "genus": 3
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        3,
+        "the branch quartic B = {w=0}"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=1",
+     "z_order": 8,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 3,
+       "count": 1,
+       "on_branch": true
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 15,
+       "count": 1,
+       "on_branch": true
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=-1",
+     "z_order": 8,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 3,
+       "count": 1,
+       "on_branch": true
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 15,
+       "count": 1,
+       "on_branch": true
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^1)], nu=1",
+     "z_order": 8,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 3,
+       "count": 1,
+       "on_branch": true
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 15,
+       "count": 1,
+       "on_branch": true
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^1)], nu=-1",
+     "z_order": 8,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 3,
+       "count": 1,
+       "on_branch": true
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 15,
+       "count": 1,
+       "on_branch": true
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^2)], nu=1",
+     "z_order": 8,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 3,
+       "count": 1,
+       "on_branch": true
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 15,
+       "count": 1,
+       "on_branch": true
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^2)], nu=-1",
+     "z_order": 8,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 3,
+       "count": 1,
+       "on_branch": true
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 15,
+       "count": 1,
+       "on_branch": true
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^3)], nu=1",
+     "z_order": 8,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 3,
+       "count": 1,
+       "on_branch": true
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 15,
+       "count": 1,
+       "on_branch": true
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->2(i^0), e2->1(i^1), e3->3(i^3)], nu=-1",
+     "z_order": 8,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 3,
+       "count": 1,
+       "on_branch": true
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 15,
+       "count": 1,
+       "on_branch": true
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [
+    {
+     "kind": "w = 0",
+     "dimW": 1,
+     "note": "the fixed point of P^2 lies on B"
+    },
+    {
+     "kind": "w = 0",
+     "dimW": 1,
+     "note": "the fixed point of P^2 lies on B"
+    }
+   ],
+   "hyp_b": false,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^1)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^1)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^2)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^2)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^3)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^3)], nu=-1"
+   ],
+   "corollary_applies": false,
+   "matches_sessions_typeII": false
+  },
+  {
+   "class_id": "T3-C04",
+   "iso_type": "D8xC2",
+   "class_size": 6,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->3(i^0), e3->2(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     2,
+     0
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     0,
+     0
+    ],
+    [
+     0,
+     2,
+     1,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": true,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      11
+     ],
+     [
+      4,
+      4
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+     "z_order": 2,
+     "is_deck": true,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "the branch quartic B = {w=0}",
+       "irreducible": true,
+       "genus": 3
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        3,
+        "the branch quartic B = {w=0}"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 12,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=-1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=-1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C05",
+   "iso_type": "D8xC2",
+   "class_size": 3,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     2,
+     0
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     1,
+     0
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": true,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      11
+     ],
+     [
+      4,
+      4
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+     "z_order": 2,
+     "is_deck": true,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "the branch quartic B = {w=0}",
+       "irreducible": true,
+       "genus": 3
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        3,
+        "the branch quartic B = {w=0}"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C06",
+   "iso_type": "Q8xC2",
+   "class_size": 3,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^1)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     2,
+     0
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     1,
+     0
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     0,
+     1,
+     0
+    ]
+   ],
+   "contains_deck": true,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      12
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+     "z_order": 2,
+     "is_deck": true,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "the branch quartic B = {w=0}",
+       "irreducible": true,
+       "genus": 3
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        3,
+        "the branch quartic B = {w=0}"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=-1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C07",
+   "iso_type": "C4xC4",
+   "class_size": 3,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     1,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": false,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      12
+     ]
+    ],
+    16,
+    1,
+    [
+     1,
+     2,
+     2,
+     2,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ]
+   ],
+   "center_order": 16,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^3)], nu=1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^0)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^2)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 12,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^0)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^2)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 4
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [
+    {
+     "kind": "w != 0",
+     "dimW": 1,
+     "note": "two points over one fixed point of P^2"
+    }
+   ],
+   "hyp_b": false,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^3)], nu=1"
+   ],
+   "corollary_applies": false,
+   "matches_sessions_typeII": false
+  },
+  {
+   "class_id": "T3-C08",
+   "iso_type": "D8oC4",
+   "class_size": 6,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": false,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      4,
+      8
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C09",
+   "iso_type": "D8oC4",
+   "class_size": 3,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     0,
+     1
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": false,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      4,
+      8
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C10",
+   "iso_type": "D8oC4",
+   "class_size": 3,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=-1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     0,
+     1
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     0,
+     0,
+     1
+    ]
+   ],
+   "contains_deck": false,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      4,
+      8
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 0
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C11",
+   "iso_type": "C4xC4",
+   "class_size": 1,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^0)], nu=-1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     1,
+     0,
+     1
+    ]
+   ],
+   "contains_deck": false,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      12
+     ]
+    ],
+    16,
+    1,
+    [
+     1,
+     2,
+     2,
+     2,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ]
+   ],
+   "center_order": 16,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^3)], nu=1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^0)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^2)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^1), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 12,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^0)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^1)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^2)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^3), e3->3(i^3)], nu=1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 2,
+       "on_branch": false
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^1), e3->3(i^3)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^3)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^0)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^1)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^2)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^3), e3->3(i^3)], nu=1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C12",
+   "iso_type": "D8oC4",
+   "class_size": 3,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": false,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      4,
+      8
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [
+    {
+     "kind": "w != 0",
+     "dimW": 1,
+     "note": "two points over one fixed point of P^2"
+    }
+   ],
+   "hyp_b": false,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "corollary_applies": false,
+   "matches_sessions_typeII": false
+  },
+  {
+   "class_id": "T3-C13",
+   "iso_type": "D8oC4",
+   "class_size": 3,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=-1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     0,
+     0,
+     1
+    ]
+   ],
+   "contains_deck": false,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      4,
+      8
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C14",
+   "iso_type": "M16",
+   "class_size": 3,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     1,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": false,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      8,
+      8
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     4,
+     4,
+     4,
+     4
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [
+    {
+     "kind": "w != 0",
+     "dimW": 1,
+     "note": "two points over one fixed point of P^2"
+    }
+   ],
+   "hyp_b": false,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "corollary_applies": false,
+   "matches_sessions_typeII": false
+  },
+  {
+   "class_id": "T3-C15",
+   "iso_type": "M16",
+   "class_size": 3,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=-1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     1,
+     0,
+     1
+    ]
+   ],
+   "contains_deck": false,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      8,
+      8
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     4,
+     4,
+     4,
+     4
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C16",
+   "iso_type": "D8oC4",
+   "class_size": 6,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^0), e3->3(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     0,
+     1
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": false,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      4,
+      8
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  },
+  {
+   "class_id": "T3-C17",
+   "iso_type": "M16",
+   "class_size": 6,
+   "generators": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^2), e3->3(i^0)], nu=-1",
+    "A=[e1->2(i^0), e2->1(i^1), e3->3(i^0)], nu=1"
+   ],
+   "generators_raw": [
+    [
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2,
+     0,
+     2,
+     0,
+     1
+    ],
+    [
+     1,
+     0,
+     2,
+     0,
+     1,
+     0,
+     0
+    ]
+   ],
+   "contains_deck": false,
+   "fingerprint": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      8,
+      8
+     ]
+    ],
+    4,
+    2,
+    [
+     1,
+     2,
+     2,
+     2,
+     4,
+     4,
+     4,
+     4
+    ]
+   ],
+   "center_order": 4,
+   "center_elements": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^0)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "central_elements": [
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 6,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+     "z_order": 2,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "curve",
+       "dim": 1,
+       "lam": 0,
+       "description": "pi^{-1}(L), L = P(E_lam) a line",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "irreducible": true,
+       "genus": 1
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 12,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [
+       [
+        1,
+        "pi^{-1}(L), L = P(E_lam) a line"
+       ]
+      ],
+      "isolated_points": 2
+     },
+     "hyp_a": true
+    },
+    {
+     "z": "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1",
+     "z_order": 4,
+     "is_deck": false,
+     "fixed_locus": [
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 0,
+       "count": 4,
+       "on_branch": true,
+       "description": "the points of L cap B (w=0)",
+       "branch_pattern": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "type": "point",
+       "dim": 0,
+       "lam": 18,
+       "count": 2,
+       "on_branch": false
+      }
+     ],
+     "summary": {
+      "curves": [],
+      "isolated_points": 6
+     },
+     "hyp_a": true
+    }
+   ],
+   "S_G_fixed_points": [],
+   "hyp_b": true,
+   "hyp_a_witnesses": [
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^1)], nu=-1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^2)], nu=1",
+    "A=[e1->1(i^0), e2->2(i^0), e3->3(i^3)], nu=-1"
+   ],
+   "corollary_applies": true,
+   "matches_sessions_typeII": true
+  }
+ ],
+ "classes_satisfying_a_and_b": [
+  "T3-C01",
+  "T3-C02",
+  "T3-C04",
+  "T3-C05",
+  "T3-C06",
+  "T3-C08",
+  "T3-C09",
+  "T3-C10",
+  "T3-C11",
+  "T3-C13",
+  "T3-C15",
+  "T3-C16",
+  "T3-C17"
+ ],
+ "classes_matching_sessions_typeII": [
+  "T3-C01",
+  "T3-C02",
+  "T3-C04",
+  "T3-C05",
+  "T3-C06",
+  "T3-C08",
+  "T3-C09",
+  "T3-C10",
+  "T3-C11",
+  "T3-C13",
+  "T3-C15",
+  "T3-C16",
+  "T3-C17"
+ ]
+}

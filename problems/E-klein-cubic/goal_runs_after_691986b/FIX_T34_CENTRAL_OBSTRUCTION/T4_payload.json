@@ -1,0 +1,462 @@
+{
+ "variety": "X : x1^3+x2^3+x3^3+x4^3+x5^3 = 0 in P^4 (Fermat cubic threefold)",
+ "aut_order": 9720,
+ "pinned_candidates": {
+  "naive": {
+   "a": "diag(z3^0,z3^2,z3^2,z3^2,z3^2) o perm(2,3,1,4,5)",
+   "b": "diag(z3^0,z3^1,z3^2,z3^0,z3^0) o perm(1,2,3,4,5)",
+   "order_a": 9,
+   "order_b": 3,
+   "|G|": 27,
+   "is_M27": true,
+   "exponent": 9,
+   "centre": [
+    "diag(z3^0,z3^0,z3^0,z3^0,z3^0) o perm(1,2,3,4,5)",
+    "diag(z3^0,z3^0,z3^0,z3^1,z3^1) o perm(1,2,3,4,5)",
+    "diag(z3^0,z3^0,z3^0,z3^2,z3^2) o perm(1,2,3,4,5)"
+   ],
+   "centre_order": 3,
+   "z = a^3": "diag(z3^0,z3^0,z3^0,z3^2,z3^2) o perm(1,2,3,4,5)",
+   "order_z": 3,
+   "b a b^-1": "diag(z3^0,z3^2,z3^2,z3^1,z3^1) o perm(2,3,1,4,5)",
+   "a^4": "diag(z3^0,z3^2,z3^2,z3^1,z3^1) o perm(2,3,1,4,5)",
+   "b a b^-1 == a^4": true,
+   "Z(G) == <a^3>": true,
+   "X^z": [
+    {
+     "eigenvalue": "zeta_3^0",
+     "linear_space": "P^2 spanned by coordinates [1, 2, 3]",
+     "dim_linear": 2,
+     "X_cap": "Fermat cubic x_1^3 + x_2^3 + x_3^3 = 0 in P^2",
+     "dim": 1,
+     "genus": 1,
+     "smooth": true
+    },
+    {
+     "eigenvalue": "zeta_3^2",
+     "linear_space": "P^1 spanned by coordinates [4, 5]",
+     "dim_linear": 1,
+     "X_cap": "x_4^3 + x_5^3 = 0 : 3 distinct points",
+     "dim": 0,
+     "npoints": 3
+    }
+   ],
+   "hyp_a": true,
+   "X^G": [
+    {
+     "dimW": 2,
+     "note": "P(W) has dimension >= 1 and therefore meets the cubic X",
+     "W_basis": [
+      "(0,0,0,z9^0,0)",
+      "(0,0,0,0,z9^0)"
+     ],
+     "cubic_on_line": [
+      "(z9^0)",
+      "(0)",
+      "(0)",
+      "(z9^0)"
+     ],
+     "some_points_of_X_cap_P(W)": [
+      "[s:t] = [1:-z9^0]",
+      "[s:t] = [1:-z9^3]",
+      "[s:t] = [1:-z9^6]"
+     ]
+    }
+   ],
+   "hyp_b": false,
+   "conjugacy_class": "T4-C03"
+  },
+  "separated": {
+   "a": "diag(z3^0,z3^2,z3^2,z3^2,z3^0) o perm(2,3,1,4,5)",
+   "b": "diag(z3^0,z3^1,z3^2,z3^0,z3^0) o perm(1,2,3,4,5)",
+   "order_a": 9,
+   "order_b": 3,
+   "|G|": 27,
+   "is_M27": true,
+   "exponent": 9,
+   "centre": [
+    "diag(z3^0,z3^0,z3^0,z3^0,z3^0) o perm(1,2,3,4,5)",
+    "diag(z3^0,z3^0,z3^0,z3^1,z3^1) o perm(1,2,3,4,5)",
+    "diag(z3^0,z3^0,z3^0,z3^2,z3^2) o perm(1,2,3,4,5)"
+   ],
+   "centre_order": 3,
+   "z = a^3": "diag(z3^0,z3^0,z3^0,z3^2,z3^2) o perm(1,2,3,4,5)",
+   "order_z": 3,
+   "b a b^-1": "diag(z3^0,z3^2,z3^2,z3^1,z3^2) o perm(2,3,1,4,5)",
+   "a^4": "diag(z3^0,z3^2,z3^2,z3^1,z3^2) o perm(2,3,1,4,5)",
+   "b a b^-1 == a^4": true,
+   "Z(G) == <a^3>": true,
+   "X^z": [
+    {
+     "eigenvalue": "zeta_3^0",
+     "linear_space": "P^2 spanned by coordinates [1, 2, 3]",
+     "dim_linear": 2,
+     "X_cap": "Fermat cubic x_1^3 + x_2^3 + x_3^3 = 0 in P^2",
+     "dim": 1,
+     "genus": 1,
+     "smooth": true
+    },
+    {
+     "eigenvalue": "zeta_3^2",
+     "linear_space": "P^1 spanned by coordinates [4, 5]",
+     "dim_linear": 1,
+     "X_cap": "x_4^3 + x_5^3 = 0 : 3 distinct points",
+     "dim": 0,
+     "npoints": 3
+    }
+   ],
+   "hyp_a": true,
+   "X^G": [],
+   "hyp_b": true,
+   "conjugacy_class": "T4-C01"
+  }
+ },
+ "num_order9_elements": 1080,
+ "order9_classes": [
+  {
+   "rep": "diag(z3^0,z3^0,z3^0,z3^0,z3^1) o perm(1,2,4,5,3)",
+   "class_size": 180
+  },
+  {
+   "rep": "diag(z3^0,z3^0,z3^0,z3^0,z3^2) o perm(1,2,4,5,3)",
+   "class_size": 180
+  },
+  {
+   "rep": "diag(z3^0,z3^0,z3^0,z3^1,z3^1) o perm(1,3,4,2,5)",
+   "class_size": 360
+  },
+  {
+   "rep": "diag(z3^0,z3^0,z3^0,z3^1,z3^2) o perm(1,3,5,4,2)",
+   "class_size": 360
+  }
+ ],
+ "num_M27_containing_a_representative": 12,
+ "num_M27_subgroups_total": 180,
+ "num_M27_classes": 3,
+ "M27_classes": [
+  {
+   "class_id": "T4-C01",
+   "class_size": 40,
+   "generators": [
+    "diag(z3^0,z3^0,z3^0,z3^1,z3^2) o perm(1,3,5,4,2)",
+    "diag(z3^0,z3^0,z3^0,z3^2,z3^1) o perm(1,5,2,4,3)"
+   ],
+   "generators_raw": [
+    [
+     [
+      0,
+      0,
+      0,
+      1,
+      2
+     ],
+     [
+      0,
+      2,
+      4,
+      3,
+      1
+     ]
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      2,
+      1
+     ],
+     [
+      0,
+      4,
+      1,
+      3,
+      2
+     ]
+    ]
+   ],
+   "order": 27,
+   "exponent": 9,
+   "centre_order": 3,
+   "is_M27": true,
+   "central_elements": [
+    {
+     "z": "diag(z3^0,z3^1,z3^1,z3^0,z3^1) o perm(1,2,3,4,5)",
+     "order": 3,
+     "X^z": [
+      {
+       "eigenvalue": "zeta_3^0",
+       "linear_space": "P^1 spanned by coordinates [1, 4]",
+       "dim_linear": 1,
+       "X_cap": "x_1^3 + x_4^3 = 0 : 3 distinct points",
+       "dim": 0,
+       "npoints": 3
+      },
+      {
+       "eigenvalue": "zeta_3^1",
+       "linear_space": "P^2 spanned by coordinates [2, 3, 5]",
+       "dim_linear": 2,
+       "X_cap": "Fermat cubic x_2^3 + x_3^3 + x_5^3 = 0 in P^2",
+       "dim": 1,
+       "genus": 1,
+       "smooth": true
+      }
+     ],
+     "hyp_a": true
+    },
+    {
+     "z": "diag(z3^0,z3^2,z3^2,z3^0,z3^2) o perm(1,2,3,4,5)",
+     "order": 3,
+     "X^z": [
+      {
+       "eigenvalue": "zeta_3^0",
+       "linear_space": "P^1 spanned by coordinates [1, 4]",
+       "dim_linear": 1,
+       "X_cap": "x_1^3 + x_4^3 = 0 : 3 distinct points",
+       "dim": 0,
+       "npoints": 3
+      },
+      {
+       "eigenvalue": "zeta_3^2",
+       "linear_space": "P^2 spanned by coordinates [2, 3, 5]",
+       "dim_linear": 2,
+       "X_cap": "Fermat cubic x_2^3 + x_3^3 + x_5^3 = 0 in P^2",
+       "dim": 1,
+       "genus": 1,
+       "smooth": true
+      }
+     ],
+     "hyp_a": true
+    }
+   ],
+   "hyp_a": true,
+   "X^G": [],
+   "hyp_b": true,
+   "corollary_applies": true
+  },
+  {
+   "class_id": "T4-C02",
+   "class_size": 120,
+   "generators": [
+    "diag(z3^0,z3^0,z3^0,z3^0,z3^1) o perm(1,2,4,5,3)",
+    "diag(z3^0,z3^1,z3^0,z3^1,z3^1) o perm(1,2,5,3,4)"
+   ],
+   "generators_raw": [
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      1
+     ],
+     [
+      0,
+      1,
+      3,
+      4,
+      2
+     ]
+    ],
+    [
+     [
+      0,
+      1,
+      0,
+      1,
+      1
+     ],
+     [
+      0,
+      1,
+      4,
+      2,
+      3
+     ]
+    ]
+   ],
+   "order": 27,
+   "exponent": 9,
+   "centre_order": 3,
+   "is_M27": true,
+   "central_elements": [
+    {
+     "z": "diag(z3^0,z3^0,z3^1,z3^1,z3^1) o perm(1,2,3,4,5)",
+     "order": 3,
+     "X^z": [
+      {
+       "eigenvalue": "zeta_3^0",
+       "linear_space": "P^1 spanned by coordinates [1, 2]",
+       "dim_linear": 1,
+       "X_cap": "x_1^3 + x_2^3 = 0 : 3 distinct points",
+       "dim": 0,
+       "npoints": 3
+      },
+      {
+       "eigenvalue": "zeta_3^1",
+       "linear_space": "P^2 spanned by coordinates [3, 4, 5]",
+       "dim_linear": 2,
+       "X_cap": "Fermat cubic x_3^3 + x_4^3 + x_5^3 = 0 in P^2",
+       "dim": 1,
+       "genus": 1,
+       "smooth": true
+      }
+     ],
+     "hyp_a": true
+    },
+    {
+     "z": "diag(z3^0,z3^0,z3^2,z3^2,z3^2) o perm(1,2,3,4,5)",
+     "order": 3,
+     "X^z": [
+      {
+       "eigenvalue": "zeta_3^0",
+       "linear_space": "P^1 spanned by coordinates [1, 2]",
+       "dim_linear": 1,
+       "X_cap": "x_1^3 + x_2^3 = 0 : 3 distinct points",
+       "dim": 0,
+       "npoints": 3
+      },
+      {
+       "eigenvalue": "zeta_3^2",
+       "linear_space": "P^2 spanned by coordinates [3, 4, 5]",
+       "dim_linear": 2,
+       "X_cap": "Fermat cubic x_3^3 + x_4^3 + x_5^3 = 0 in P^2",
+       "dim": 1,
+       "genus": 1,
+       "smooth": true
+      }
+     ],
+     "hyp_a": true
+    }
+   ],
+   "hyp_a": true,
+   "X^G": [],
+   "hyp_b": true,
+   "corollary_applies": true
+  },
+  {
+   "class_id": "T4-C03",
+   "class_size": 20,
+   "generators": [
+    "diag(z3^0,z3^0,z3^0,z3^0,z3^1) o perm(1,2,4,5,3)",
+    "diag(z3^0,z3^0,z3^0,z3^0,z3^2) o perm(1,2,5,3,4)"
+   ],
+   "generators_raw": [
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      1
+     ],
+     [
+      0,
+      1,
+      3,
+      4,
+      2
+     ]
+    ],
+    [
+     [
+      0,
+      0,
+      0,
+      0,
+      2
+     ],
+     [
+      0,
+      1,
+      4,
+      2,
+      3
+     ]
+    ]
+   ],
+   "order": 27,
+   "exponent": 9,
+   "centre_order": 3,
+   "is_M27": true,
+   "central_elements": [
+    {
+     "z": "diag(z3^0,z3^0,z3^1,z3^1,z3^1) o perm(1,2,3,4,5)",
+     "order": 3,
+     "X^z": [
+      {
+       "eigenvalue": "zeta_3^0",
+       "linear_space": "P^1 spanned by coordinates [1, 2]",
+       "dim_linear": 1,
+       "X_cap": "x_1^3 + x_2^3 = 0 : 3 distinct points",
+       "dim": 0,
+       "npoints": 3
+      },
+      {
+       "eigenvalue": "zeta_3^1",
+       "linear_space": "P^2 spanned by coordinates [3, 4, 5]",
+       "dim_linear": 2,
+       "X_cap": "Fermat cubic x_3^3 + x_4^3 + x_5^3 = 0 in P^2",
+       "dim": 1,
+       "genus": 1,
+       "smooth": true
+      }
+     ],
+     "hyp_a": true
+    },
+    {
+     "z": "diag(z3^0,z3^0,z3^2,z3^2,z3^2) o perm(1,2,3,4,5)",
+     "order": 3,
+     "X^z": [
+      {
+       "eigenvalue": "zeta_3^0",
+       "linear_space": "P^1 spanned by coordinates [1, 2]",
+       "dim_linear": 1,
+       "X_cap": "x_1^3 + x_2^3 = 0 : 3 distinct points",
+       "dim": 0,
+       "npoints": 3
+      },
+      {
+       "eigenvalue": "zeta_3^2",
+       "linear_space": "P^2 spanned by coordinates [3, 4, 5]",
+       "dim_linear": 2,
+       "X_cap": "Fermat cubic x_3^3 + x_4^3 + x_5^3 = 0 in P^2",
+       "dim": 1,
+       "genus": 1,
+       "smooth": true
+      }
+     ],
+     "hyp_a": true
+    }
+   ],
+   "hyp_a": true,
+   "X^G": [
+    {
+     "dimW": 2,
+     "note": "P(W) has dimension >= 1 and therefore meets the cubic X",
+     "W_basis": [
+      "(z9^0,0,0,0,0)",
+      "(0,z9^0,0,0,0)"
+     ],
+     "cubic_on_line": [
+      "(z9^0)",
+      "(0)",
+      "(0)",
+      "(z9^0)"
+     ],
+     "some_points_of_X_cap_P(W)": [
+      "[s:t] = [1:-z9^0]",
+      "[s:t] = [1:-z9^3]",
+      "[s:t] = [1:-z9^6]"
+     ]
+    }
+   ],
+   "hyp_b": false,
+   "corollary_applies": false
+  }
+ ],
+ "classes_satisfying_a_and_b": [
+  "T4-C01",
+  "T4-C02"
+ ]
+}

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `a7a68d8` (2026-08-04; the
+Snapshot metadata — notebook parent head: `691986b` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -385,7 +385,7 @@ tokens.**
 |---|---|
 | `F` | [E13](#e13) Path F fixed-frame genus-one torsor; [E14](#e14) Problem-F technique import / F-engine; [E15](#e15) Fable trisection; Problem F itself (the solved dP example, external to E); `F_{14,T}` the twisted Fano ([E07](#e07)/[E26](#e26)); `f3,f5,f6,f8,f11` the primary invariants; `F` the Klein form. Ledger rows saying "F terminal" are ambiguous (conflict 4). |
 | `dP` / del Pezzo | Problem F's dP (the solved obstruction example, T3); [E24](#e24)'s degree-3 dP *fibration* (Sarkisov target, T5); [E52](#e52) DP-REPLAY (equivalent-object proposal, T3); the OD16 Fermat *quartic* dP2 (session-only claim, unverified). |
-| Fermat cubic | The session-claimed `C9⋊C3` non-unirationality of the Fermat cubic *threefold* — an example **outside Problem E**, never machine-checked, internally disputed in its own session. Not the Klein cubic. |
+| Fermat cubic | The `C9⋊C3` non-unirationality of the Fermat cubic *threefold* — an example **outside Problem E**, since 2026-08-04 a machine-verified corollary of the central obstruction (`FIX-T34`, [E56](#e56)) holding for 2 of the 3 conjugacy classes of `C₉⋊C₃`-actions (the naive generator class fails). Not the Klein cubic. |
 | `G4` | Path G4/G4.1 symbolic free-fibre recurrence ([E16](#e16)); the A5 index-11 transfer run `G4_A5_INDEX11_TRANSFER` + `G4A` projectors (grouped under [E04](#e04)). Conflict 6. |
 | `G7` | Path-G degree-7 exit label `G7-OBSTRUCTION` ([E16](#e16); the REPAIR sample-residual downgrade is documented only for G13/G19); the double-A5 biplane program `G7A/B/C` ([E17](#e17)), whose `G7B` induced-cycle claim was refuted and quarantined. Conflict 7. |
 | `V2` | The "V2 Track" work-order wave labels (process; surfaces in [E07](#e07), [E25](#e25), [E32](#e32); collision explained at [E33](#e33), conflict 8); the exit `V2-FIXED-FRAME-PLACE-NONTRANSFERABLE` ([E33](#e33)). Conflict 8. |
@@ -2033,10 +2033,11 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   progress (`theory/FIX_T_gate.md`): T1 derived — Thm T1.2, chains map to
   chains on the resolved graph in dim 2, reproducing the collaborator's
   observation from the general definitions (flagged for their review);
-  T3/T4 reduced to the central-obstruction Cor T3.1 (proved from Note I)
-  plus finite hypothesis checks — packet FIX-T34 dispatched; T2
-  (Problem-F chain re-derivation) and T5 (trisection non-overreach)
-  pending, director work.** Note I
+  T3/T4 CLOSED via central-obstruction Cor T3.1 +
+  `FIX-T34-CENTRAL-HYPOTHESES-PASS` (director-replayed; class-named
+  instantiations, session descriptions corrected — see the gate note and
+  debt item 15); T2 (Problem-F chain re-derivation) and T5 (trisection
+  non-overreach) pending, director work.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
@@ -2719,7 +2720,7 @@ claim; 9+ are ordered by route.
 - **Claims:** OD16 Type-II on the Fermat degree-2 del Pezzo and C9⋊C3 on the Fermat cubic threefold are not weakly versal / not unirational; the "rational-chain going-down principle"; the assertion that the repo's PSL(2,7) result is "the all-degree V4-exceptional-path obstruction"; the assertion that the Klein involution fixed locus contains **both** a rational line and an elliptic curve.
 - **Why load-bearing:** the last of these is the stated reason the cheap fixed-divisor test fails for Problem E and therefore why the full stratification machinery ([E34](#e34)) is required. The OD16/C9⋊C3 "theorems" were never machine-checked (Priority-0 checkers unimplemented) and one session's own text is internally inconsistent about whether C9⋊C3 is closed.
 - **Where:** sessions `klein-cubic-threefold-psl-6a6b6514.md`, `g-equivariant-rational-maps-6a70559f.md`, `mathematical-machine-implementation-6a7055b7.md` — **none pushed anything to the repo**.
-- **Verification:** check the Klein involution fixed-locus claim against the repo's actual involution data; if the OD16/C9⋊C3 results are ever imported, build and run the exact-arithmetic checkers first; resolve the closed-vs-still-listed inconsistency against the actual CTZ paper state.
+- **RETIRED-WITH-CORRECTIONS (2026-08-04, [E56](#e56)):** all four claims are now settled in-repo. The Klein involution fixed-locus claim: VERIFIED exactly (`FIX-A0-ARRANGEMENT-PASS` — `X^σ = E_σ ⊔ L_σ`). The going-down principle: PROVED (`theory/FIX_I_bcomplex.md` Lem 4.2). The OD16/C9⋊C3 theorems: now corollaries of the central obstruction (`theory/FIX_T_gate.md` Cor T3.1) with hypotheses machine-verified by `FIX-T34-CENTRAL-HYPOTHESES-PASS` — **but corrected**: they hold for named conjugacy classes only (13/17 order-16 classes on the dP2; 2/3 `C₉⋊C₃`-classes on the Fermat cubic), the deck-curve genus is 3 not 1, `Fix(z,P⁴) = P²⊔P¹` not `P²⊔pt⊔pt`, and the naive `C₉⋊C₃` generator (class T4-C03) actually FAILS `X^G = ∅` — the sessions' displayed instantiation was false as stated. The PSL(2,7)-characterization assertion remains open pending gate item T2 (the in-formalism re-derivation from `F-dp2-psl27/RESOLUTION.md`).
 
 ### 16. Ledger-vs-artifact conflicts inherited from the canonical ledger
 

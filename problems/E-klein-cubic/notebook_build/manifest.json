@@ -1284,6 +1284,17 @@
    "char0_scope": "char0",
    "tracked": "main",
    "notes": "director-replayed 2026-08-04: 60-check verifier OK; supersedes strata.md type-II 'only' sentence; repairs marked_s3 regression primes to 397/419"
+  },
+  {
+   "path": "goal_runs_after_691986b/FIX_T34_CENTRAL_OBSTRUCTION",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-T34-CENTRAL-HYPOTHESES-PASS",
+   "superseded_by": null,
+   "char0_scope": "char0",
+   "tracked": "main",
+   "notes": "director-replayed 2026-08-04 (VERIFY_AMBIENT/T3/T4 all PASS); closes gate T3/T4 with class-named corrected instantiations; retires the OD16/Fermat session-claim debt as RETIRED-WITH-CORRECTIONS"
   }
  ],
  "known_branches": [
