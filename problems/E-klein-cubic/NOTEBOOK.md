@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `b423d1a` (2026-08-04; the
+Snapshot metadata — notebook parent head: `a90dbe1` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2139,8 +2139,13 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   lift attempt over `Q(ω, κ₊)`, and char-0 saturation of the
   plane-order-1 locus. Two negative structural results recorded to
   prevent re-attempts (the false `(1,6)` ladder step; the `J₅ = J₆`
-  parity vacuity). Remaining before the `H⁰` run: FIX-N2c's verdict,
-  the section-from-map write-up, the decisive working order.
+  parity vacuity). Section-from-map
+  theorem written to full rigor same day (`FIX_III_cosheaf.md` §4c, Thm
+  5.1: every `f` induces a CSP solution, constraint by constraint;
+  `H⁰ = ∅ ⇒` negative headline via [E37]/[E16]; converse not claimed) and
+  the working-order recipe fixed (finite, from the cell table once
+  FIX-N2c lands). Remaining before the `H⁰` run: FIX-N2c's verdict
+  only.
   Note III (compatibility cosheaf / global CSP on the verified
   arrangement), FIX-B (Burnside shadow). Director finding en route: the
   sealed `verify_kappa_genus2.py` is replay-brittle on sympy 1.14

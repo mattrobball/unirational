@@ -139,6 +139,58 @@ high enough to be decisive — the ladder gradings tell us the first order
 at which the vertex data distinguishes branches; take the maximum over
 the populated cells' leading orders, finite by the [II] table.
 
+## 4c. The section-from-map theorem (the easy direction, at full rigor)
+
+**Theorem 5.1.** Every `G`-equivariant dominant rational map
+`f: P(W) ⇢ X` induces a solution `(x_L, x_I, x_{II})` of the CSP of §4b.
+
+*Proof.* Resolve the graph ([I, Obs 4.0]): `q̃: Γ̃ → X` honest equivariant,
+`Γ̃ ∈ Mod_G(P(W))`. Assignments:
+
+- `x_L`: fix the representative involution `σ` and consider the strata of
+  `Γ̃^σ` whose `q̃`-image meets `L_σ` in a dense subset of its image. If
+  none exists, set `x_L = pt` with value the (finitely many,
+  residually-pinned) image points — a legal stalk element by the funnel.
+  If one exists, restrict `q̃` to the formal neighborhood of that stratum:
+  by definition this is an equivariant landing family along the source
+  stratum with values in `X` near `L_σ`, i.e. an element of a cell of the
+  [II] ladder — the stalk `𝒮_L` was *defined* as the union of these cell
+  varieties, so the restriction is a point of `𝒮_L`. Residual
+  `S3`-equivariance: `C_G(σ)` stabilizes both the stratum orbit and
+  `L_σ`, and `q̃` is `C_G(σ)`-equivariant, so the germ is `S3`-equivariant
+  for the standard action (FIX-A0 claim 5). Constraint 1 holds; constraint
+  6 holds because the germ of an actual map satisfies the cone/parity
+  bounds ([II, Lemmas 2.1–2.2] are theorems about any equivariant family,
+  in particular this one).
+- `x_I`: the value and jet of `q̃` at the strata over the representative
+  type-I vertex. Constraint 2: the two incident lines' germs and the
+  vertex jet all arise from the *same* map `q̃`, so they agree wherever
+  they overlap — adjacency ([T, T1.2(2)]) and jet matching are literal
+  restrictions of one function. Constraint 3: the `A₄`-equivariance of
+  `q̃` conjugates the three edge germs by the `C₃`-rotation with the
+  scalar mechanics forced by the character bookkeeping (the `λ`-scalars
+  are determined by equivariance, as FIX-N2's re-verification exhibited).
+- `x_{II}`: the value of `q̃` on the strata funneled to the representative
+  type-II point; constraint 4's three character-containment conditions
+  are [I, Lem 4.5] applied to `dq̃` at that point, which holds for any
+  honest equivariant map.
+- Constraint 5: `f` dominant ⇒ the generic-stratum germ of `q̃` is a
+  dominant-map germ; the section is not the all-points section. ∎
+
+Hence `H⁰ = ∅ ⇒` no `f` exists `⇒` (by [E37]/[E16]) the negative
+headline. The converse direction — from a section to a map — is NOT
+claimed; a nonempty `H⁰` yields candidate data only.
+
+**Working order (constraint 2), fixed.** The vertex gluing must be imposed
+to the first order at which the populated cells' germs differ at a vertex:
+by the [II] table the populated branches have leading orders in
+`{(2k, 3δ+3k)} ∪ {(m₀+2k, ·) : m₀ ≥ 3}` (and the `m = 1, r ≥ 6` flag);
+the discriminating order is the maximum of the finitely many leading
+`r`-values that occur at or below the working cells, plus one — finite,
+and computable from the table once FIX-N2c lands. The elimination will be
+run at that order, with the order recorded in the packet so the
+computation is replayable.
+
 ## 5. Dependencies and plan
 
 1. **FIX-N2** (in flight): the stalk classification at the line/V4 level —
