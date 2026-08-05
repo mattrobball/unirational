@@ -1,0 +1,517 @@
+{
+ "A4_fixed_points": {
+  "X_to_the_A4_is_empty": true,
+  "argument": "[A4,A4] = V4, so every 1-dimensional A4-subrepresentation of W is trivial on V4, i.e. lies in A = W^{V4}; rho|A has the two distinct eigenvalues w, w^2, so P^4 has exactly two A4-fixed points and both lie on l_V",
+  "both_off_X": true,
+  "count_in_P4_per_A4": 2,
+  "derived_subgroup_of_N_G(V4)_is_V4": true,
+  "relevance": "certifies the hypothesis of WORKORDER_STRATA_MACHINE.md WP-4C item 1"
+ },
+ "arithmetic": {
+  "consequence": "a modular fixed-point search at p = 67 or p = 331 sees ZERO type-II points; p = 397 sees all three. Absence at 67/331 is a rationality artifact, not a geometric fact.",
+  "field_of_definition": "the three points are conjugate over Q(zeta_11): F|_A is either totally split or irreducible over any field over which rho is defined, because rho permutes the three roots simply transitively",
+  "irreducibility_certificate": "at p = 67 (p = 1 mod 11, unramified) the reduction of the integral model of F|_A has unit leading coefficient and no root in F_p for all 55 lines; a cubic with a root in Q(zeta_11) would have a root mod every such prime",
+  "irreducible_over_Q_zeta11": true,
+  "modular_visibility": [
+   {
+    "leading_coeff_is_unit": true,
+    "p": 23,
+    "root_count_histogram_over_55_lines": {
+     "0": 55
+    },
+    "zeta11_image": 4
+   },
+   {
+    "leading_coeff_is_unit": true,
+    "p": 67,
+    "root_count_histogram_over_55_lines": {
+     "0": 55
+    },
+    "zeta11_image": 64
+   },
+   {
+    "leading_coeff_is_unit": true,
+    "p": 89,
+    "root_count_histogram_over_55_lines": {
+     "0": 55
+    },
+    "zeta11_image": 78
+   },
+   {
+    "leading_coeff_is_unit": true,
+    "p": 331,
+    "root_count_histogram_over_55_lines": {
+     "0": 55
+    },
+    "zeta11_image": 270
+   },
+   {
+    "leading_coeff_is_unit": true,
+    "p": 353,
+    "root_count_histogram_over_55_lines": {
+     "0": 55
+    },
+    "zeta11_image": 58
+   },
+   {
+    "leading_coeff_is_unit": true,
+    "p": 397,
+    "root_count_histogram_over_55_lines": {
+     "3": 55
+    },
+    "zeta11_image": 290
+   },
+   {
+    "leading_coeff_is_unit": true,
+    "p": 419,
+    "root_count_histogram_over_55_lines": {
+     "3": 55
+    },
+    "zeta11_image": 334
+   }
+  ]
+ },
+ "meta": {
+  "cubic": "F = x0^2 x1 + x1^2 x2 + x2^2 x3 + x3^2 x4 + x4^2 x0",
+  "field": "Q(zeta_11); residual C3 eigenbasis in Q(zeta_33)=Q(zeta_11)[w]/(w^2+w+1)",
+  "headline": "Problem E headline: OPEN",
+  "packet": "FIX_A1_V4_INCIDENCE_REPAIR",
+  "program": "FIX (E56)",
+  "representation_source": "certificates/exact_weil_check.py S,T generators, rebuilt in-file",
+  "seal_note": "the three sealed JSON payloads are byte-reproducible: no timestamp and no timing field appears in them (run metadata goes to run_metadata.json). This follows the recommendation recorded in certificates/STRATA_EXACT.md section 5 caveat 1.",
+  "theorem_boundary": "This packet certifies the V4 fixed-locus ground truth in P^4 and on X and the corrected type-I/type-II incidence table. It asserts nothing about existence or nonexistence of a landing covariant or about unirationality.",
+  "toolchain": "python3 exact integer/cyclotomic arithmetic; M2 only for the auxiliary plus-plane smoothness script"
+ },
+ "position_on_the_line": {
+  "deeper_strata_on_l_V": [
+   {
+    "form": [
+     {
+      "d": 1,
+      "n": [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     {
+      "d": 1,
+      "n": [
+       1,
+       -1,
+       1,
+       -1,
+       1,
+       -1,
+       1,
+       0,
+       1,
+       1
+      ]
+     },
+     {
+      "d": 1,
+      "n": [
+       -1,
+       -1,
+       0,
+       -1,
+       1,
+       -2,
+       0,
+       -2,
+       1,
+       -1
+      ]
+     }
+    ],
+    "form_degree": 2,
+    "full_stabiliser_order": 12,
+    "orders": {
+     "3": 8
+    },
+    "stabilising_elements": 8
+   },
+   {
+    "form": [
+     {
+      "d": 1,
+      "n": [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     {
+      "d": 1,
+      "n": [
+       1,
+       0,
+       1,
+       1,
+       1,
+       0,
+       0,
+       1,
+       1,
+       1
+      ]
+     }
+    ],
+    "form_degree": 1,
+    "full_stabiliser_order": 12,
+    "orders": {
+     "2": 4,
+     "3": 2,
+     "6": 2
+    },
+    "stabilising_elements": 8
+   },
+   {
+    "form": [
+     {
+      "d": 1,
+      "n": [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     {
+      "d": 1,
+      "n": [
+       1,
+       0,
+       1,
+       1,
+       1,
+       0,
+       1,
+       0,
+       1,
+       1
+      ]
+     }
+    ],
+    "form_degree": 1,
+    "full_stabiliser_order": 12,
+    "orders": {
+     "2": 4,
+     "3": 2,
+     "6": 2
+    },
+    "stabilising_elements": 8
+   },
+   {
+    "form": [
+     {
+      "d": 1,
+      "n": [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     {
+      "d": 1,
+      "n": [
+       -1,
+       -1,
+       0,
+       0,
+       0,
+       -1,
+       0,
+       -1,
+       0,
+       0
+      ]
+     }
+    ],
+    "form_degree": 1,
+    "full_stabiliser_order": 12,
+    "orders": {
+     "2": 4,
+     "3": 2,
+     "6": 2
+    },
+    "stabilising_elements": 8
+   }
+  ],
+  "disjoint_from_triangle": "l_V = P(A) meets none of the three minus-lines P(chi_j+chi_k) and contains none of the three vertices [chi_i]",
+  "reading": "l_V carries exactly five points with stabiliser strictly larger than V4: three D12-points (each the fixed point of C_G(sigma_i), full stabiliser of order 12 with order profile 1+7*2+2*3+2*6 = D12) and the two A4-points (one Galois-conjugate pair, stabilised by the 8 order-three elements of A4). All five are off X. R is disjoint from all of them, and from the triangle."
+ },
+ "residual_C3": {
+  "alpha": {
+   "1": {
+    "d": 1,
+    "n": [
+     -46,
+     19,
+     0,
+     29,
+     -20,
+     -22,
+     -12,
+     1,
+     35,
+     -17
+    ]
+   },
+   "w": {
+    "d": 1,
+    "n": [
+     -27,
+     -27,
+     0,
+     12,
+     15,
+     -21,
+     -24,
+     -21,
+     15,
+     12
+    ]
+   }
+  },
+  "alpha_nonzero": true,
+  "beta": {
+   "1": {
+    "d": 1,
+    "n": [
+     -19,
+     46,
+     0,
+     17,
+     -35,
+     -1,
+     12,
+     22,
+     20,
+     -29
+    ]
+   },
+   "w": {
+    "d": 1,
+    "n": [
+     27,
+     27,
+     0,
+     -12,
+     -15,
+     21,
+     24,
+     21,
+     -15,
+     -12
+    ]
+   }
+  },
+  "beta_nonzero": true,
+  "consequence": "the two C3-fixed points of l_V are the two A4-fixed points of P^4 on that line and both are OFF X (alpha, beta nonzero); the three points of R form a single free C3-orbit",
+  "det": 1,
+  "eigenvalues": "w, w^2 (primitive cube roots of unity)",
+  "group": "A4/V4 = N_G(V4)/V4 = C3",
+  "matrix_on_A_representative": [
+   [
+    {
+     "d": 11,
+     "n": [
+      -6,
+      -1,
+      4,
+      -2,
+      3,
+      -3,
+      2,
+      -4,
+      1,
+      -5
+     ]
+    },
+    {
+     "d": 11,
+     "n": [
+      -9,
+      4,
+      -5,
+      -3,
+      -1,
+      -10,
+      3,
+      -6,
+      7,
+      -13
+     ]
+    }
+   ],
+   [
+    {
+     "d": 11,
+     "n": [
+      4,
+      8,
+      1,
+      5,
+      -2,
+      2,
+      6,
+      -1,
+      3,
+      7
+     ]
+    },
+    {
+     "d": 11,
+     "n": [
+      -5,
+      1,
+      -4,
+      2,
+      -3,
+      3,
+      -2,
+      4,
+      -1,
+      5
+     ]
+    }
+   ]
+  ],
+  "normal_form": "F|_A = alpha U^3 + beta V^3 in the rho-eigenbasis (U,V) of A",
+  "normal_form_holds_for_all_55": true,
+  "trace": -1
+ },
+ "scheme": {
+  "binary_cubic_coefficients_representative": [
+   {
+    "d": 1,
+    "n": [
+     -2,
+     -2,
+     -1,
+     -1,
+     -2,
+     -2,
+     0,
+     -2,
+     3,
+     -2
+    ]
+   },
+   {
+    "d": 1,
+    "n": [
+     -8,
+     0,
+     -17,
+     -8,
+     -12,
+     -3,
+     -3,
+     -12,
+     -8,
+     -17
+    ]
+   },
+   {
+    "d": 1,
+    "n": [
+     -16,
+     -1,
+     -5,
+     19,
+     -5,
+     -1,
+     -16,
+     0,
+     7,
+     7
+    ]
+   },
+   {
+    "d": 1,
+    "n": [
+     9,
+     9,
+     0,
+     -4,
+     -5,
+     7,
+     8,
+     7,
+     -5,
+     -4
+    ]
+   }
+  ],
+  "coefficient_convention": "a x^3 + b x^2 y + c x y^2 + d y^3 in the basis (A0, A1)",
+  "definition": "R = X n l_V where l_V = P(A) = P(W^{V4}) is the pointwise V4-fixed line",
+  "degree": 3,
+  "discriminant": {
+   "d": 1,
+   "n": [
+    2112,
+    2112,
+    0,
+    13200,
+    -2816,
+    11968,
+    -10208,
+    11968,
+    -2816,
+    13200
+   ]
+  },
+  "discriminant_nonzero": true,
+  "points": 3,
+  "reduced": true,
+  "reduced_for_all_55_lines": true
+ },
+ "tangent_data": {
+  "at_a_general_point_of_l_V": {
+   "N_{l_V/P4}": "chi_1 + chi_2 + chi_3",
+   "T_P4": "triv + chi_1 + chi_2 + chi_3",
+   "no_trivial_summand_in_normal_bundle": true
+  },
+  "at_a_type_II_point": {
+   "T_X": "chi_1 + chi_2 + chi_3",
+   "isolated_in_X^{V4}": true,
+   "proof": "dF along l_V annihilates B, C, D identically (verified as an identity of binary quadratics), so dF_y lies in A^* and its kernel is <y> + B + C + D exactly when y is a simple root of F|_A, which disc != 0 gives"
+  },
+  "at_a_type_I_vertex": {
+   "T_P4": "chi_i + chi_i + chi_j + chi_k (= chi_i^{(2)} + chi_j + chi_k)",
+   "T_X": "chi_1 + chi_2 + chi_3",
+   "isolated_in_X^{V4}": true,
+   "proof": "dF at [B] annihilates B, C, D and is nonzero on A (verified exactly), so ker dF_B = (1-dim in A) + B + C + D and T_[B]X = chi_z tensor (triv + chi_s + chi_r)"
+  }
+ }
+}

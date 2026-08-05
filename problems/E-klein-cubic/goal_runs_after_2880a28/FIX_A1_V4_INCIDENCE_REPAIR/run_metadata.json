@@ -1,0 +1,6 @@
+{
+ "note": "not part of the sealed payload; the three JSON payloads are byte-reproducible without it",
+ "produced_utc": "2026-08-05T00:32:09Z",
+ "python": "3.14.6",
+ "wall_time_sec": 132.5
+}

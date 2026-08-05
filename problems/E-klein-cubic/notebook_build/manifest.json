@@ -1262,6 +1262,28 @@
    "tracked": "branch-only",
    "branch": "agent/m3-sarkisov-section-residual",
    "branch_head_sha": "6fdac74fc2c850dd062288691bf6daba5ec0228d"
+  },
+  {
+   "path": "goal_runs_after_2880a28/FIX_A0_INVOLUTION_ARRANGEMENT",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-A0-ARRANGEMENT-PASS",
+   "superseded_by": null,
+   "char0_scope": "char0",
+   "tracked": "main",
+   "notes": "director-replayed 2026-08-04: verify_fix_a0 PASS, j-formulas 17/17, modular cross-check p=23/67/89"
+  },
+  {
+   "path": "goal_runs_after_2880a28/FIX_A1_V4_INCIDENCE_REPAIR",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-A1-V4-REPAIR-PASS",
+   "superseded_by": null,
+   "char0_scope": "char0",
+   "tracked": "main",
+   "notes": "director-replayed 2026-08-04: 60-check verifier OK; supersedes strata.md type-II 'only' sentence; repairs marked_s3 regression primes to 397/419"
   }
  ],
  "known_branches": [

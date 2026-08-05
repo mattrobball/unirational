@@ -1,0 +1,8053 @@
+{
+ "character_decomposition": {
+  "all_involution_traces_are_one": true,
+  "derivation": "every involution has trace 1 on W; with W|_V4 = a0 triv + sum a_i chi_i, a0+a1+a2+a3=5 and a0+a_i-a_j-a_k=1 for i=1,2,3 force a_i=3-a0 and then a0=2, a1=a2=a3=1 uniquely",
+  "statement": "W|_V4 = triv^2 + chi_1 + chi_2 + chi_3, each nontrivial character once",
+  "verified_for_all_55_V4s": true
+ },
+ "deeper_locus_on_representative_V4_line": [
+  {
+   "form": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -1,
+      -1,
+      0,
+      -1,
+      1,
+      -2,
+      0,
+      -2,
+      1,
+      -1
+     ]
+    }
+   ],
+   "form_degree": 2,
+   "full_stabiliser_order": 12,
+   "orders": {
+    "3": 8
+   },
+   "stabilising_elements": 8
+  },
+  {
+   "form": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "form_degree": 1,
+   "full_stabiliser_order": 12,
+   "orders": {
+    "2": 4,
+    "3": 2,
+    "6": 2
+   },
+   "stabilising_elements": 8
+  },
+  {
+   "form": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1
+     ]
+    }
+   ],
+   "form_degree": 1,
+   "full_stabiliser_order": 12,
+   "orders": {
+    "2": 4,
+    "3": 2,
+    "6": 2
+   },
+   "stabilising_elements": 8
+  },
+  {
+   "form": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      0
+     ]
+    }
+   ],
+   "form_degree": 1,
+   "full_stabiliser_order": 12,
+   "orders": {
+    "2": 4,
+    "3": 2,
+    "6": 2
+   },
+   "stabilising_elements": 8
+  }
+ ],
+ "group_layer": {
+  "V4_count": 55,
+  "V4_single_conjugacy_class_size": 55,
+  "V4s_through_each_involution": {
+   "3": 55
+  },
+  "element_order_profile": {
+   "1": 1,
+   "2": 55,
+   "3": 110,
+   "5": 264,
+   "6": 110,
+   "11": 120
+  },
+  "elements_of_order_4": 0,
+  "involutions": 55,
+  "normalizer_is_A4": true,
+  "normalizer_order": 12,
+  "normalizer_order_profile": {
+   "1": 1,
+   "2": 3,
+   "3": 8
+  },
+  "order": 660,
+  "sylow_2_order": 4
+ },
+ "meta": {
+  "cubic": "F = x0^2 x1 + x1^2 x2 + x2^2 x3 + x3^2 x4 + x4^2 x0",
+  "field": "Q(zeta_11); residual C3 eigenbasis in Q(zeta_33)=Q(zeta_11)[w]/(w^2+w+1)",
+  "headline": "Problem E headline: OPEN",
+  "packet": "FIX_A1_V4_INCIDENCE_REPAIR",
+  "program": "FIX (E56)",
+  "representation_source": "certificates/exact_weil_check.py S,T generators, rebuilt in-file",
+  "seal_note": "the three sealed JSON payloads are byte-reproducible: no timestamp and no timing field appears in them (run metadata goes to run_metadata.json). This follows the recommendation recorded in certificates/STRATA_EXACT.md section 5 caveat 1.",
+  "theorem_boundary": "This packet certifies the V4 fixed-locus ground truth in P^4 and on X and the corrected type-I/type-II incidence table. It asserts nothing about existence or nonexistence of a landing covariant or about unirationality.",
+  "toolchain": "python3 exact integer/cyclotomic arithmetic; M2 only for the auxiliary plus-plane smoothness script"
+ },
+ "per_V4": [
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -2,
+      -2,
+      -1,
+      -1,
+      -2,
+      -2,
+      0,
+      -2,
+      3,
+      -2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      0,
+      -17,
+      -8,
+      -12,
+      -3,
+      -3,
+      -12,
+      -8,
+      -17
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -16,
+      -1,
+      -5,
+      19,
+      -5,
+      -1,
+      -16,
+      0,
+      7,
+      7
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      9,
+      0,
+      -4,
+      -5,
+      7,
+      8,
+      7,
+      -5,
+      -4
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 0,
+   "involution_hashes": [
+    "2dba55e18cad044c",
+    "14f241f714a9f14f",
+    "0e00718ea6bc93fc"
+   ],
+   "involutions": [
+    1,
+    385,
+    454
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      5,
+      0,
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      4,
+      12,
+      9,
+      -5,
+      -5,
+      9,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      19,
+      0,
+      -16,
+      -5,
+      7,
+      -1,
+      -1,
+      7,
+      -5,
+      -16
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      8,
+      0,
+      -4,
+      7,
+      9,
+      -5,
+      -5,
+      9,
+      7,
+      -4
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 1,
+   "involution_hashes": [
+    "2dba55e18cad044c",
+    "5b19a63ca018e432",
+    "758573b82f9feb88"
+   ],
+   "involutions": [
+    1,
+    416,
+    436
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      2,
+      0,
+      5,
+      0,
+      2,
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      0,
+      -17,
+      -8,
+      -12,
+      -3,
+      -3,
+      -12,
+      -8,
+      -17
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -15,
+      1,
+      8,
+      8,
+      1,
+      -15,
+      0,
+      -4,
+      20,
+      -4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      -9,
+      -13,
+      -14,
+      -2,
+      -1,
+      -2,
+      -14,
+      -13,
+      -9
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 2,
+   "involution_hashes": [
+    "2dba55e18cad044c",
+    "1edbfbafa7069598",
+    "965fef804baa85fb"
+   ],
+   "involutions": [
+    1,
+    430,
+    431
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -2,
+      3,
+      -2,
+      0,
+      -2,
+      -2,
+      -1,
+      -1,
+      -2,
+      -2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      0,
+      -17,
+      -8,
+      -12,
+      -3,
+      -3,
+      -12,
+      -8,
+      -17
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -24,
+      -20,
+      -35,
+      -19,
+      -12,
+      -12,
+      -19,
+      -35,
+      -20,
+      -24
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -12,
+      -11,
+      -7,
+      2,
+      2,
+      -7,
+      -11,
+      -12,
+      0,
+      1
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 3,
+   "involution_hashes": [
+    "cafeff3c900bc3f9",
+    "069058271a67b673",
+    "21d9a7292b26face"
+   ],
+   "involutions": [
+    20,
+    149,
+    421
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      1,
+      0,
+      0,
+      2,
+      0,
+      5,
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      0,
+      -17,
+      -8,
+      -12,
+      -3,
+      -3,
+      -12,
+      -8,
+      -17
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      -7,
+      -23,
+      -8,
+      -12,
+      12,
+      -12,
+      -8,
+      -23,
+      -7
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -1,
+      -13,
+      -12,
+      -8,
+      1,
+      1,
+      -8,
+      -12,
+      -13,
+      -1
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 4,
+   "involution_hashes": [
+    "cafeff3c900bc3f9",
+    "f3e297772c581c83",
+    "6ac91e907ef0df46"
+   ],
+   "involutions": [
+    20,
+    354,
+    452
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      0,
+      0,
+      0,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      4,
+      12,
+      9,
+      -5,
+      -5,
+      9,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -11,
+      5,
+      24,
+      5,
+      -11,
+      0,
+      12,
+      4,
+      4,
+      12
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      14,
+      12,
+      1,
+      5,
+      13,
+      5,
+      1,
+      12,
+      14,
+      0
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 5,
+   "involution_hashes": [
+    "cafeff3c900bc3f9",
+    "04b4a6f09a695004",
+    "a5d2b6eeb4d9acc7"
+   ],
+   "involutions": [
+    20,
+    399,
+    427
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      0,
+      2,
+      5,
+      2,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      0,
+      5,
+      14,
+      9,
+      17,
+      17,
+      9,
+      14,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      7,
+      -16,
+      -5,
+      -5,
+      -16,
+      7,
+      0,
+      -1,
+      19,
+      -1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      -11,
+      2,
+      -7,
+      -12,
+      1,
+      -12,
+      -7,
+      2,
+      -11
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 6,
+   "involution_hashes": [
+    "7088abd45dff366f",
+    "fa68d7f264fb00fa",
+    "4afaa98d65c545be"
+   ],
+   "involutions": [
+    21,
+    133,
+    388
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+      5,
+      2,
+      0,
+      1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      0,
+      5,
+      14,
+      9,
+      17,
+      17,
+      9,
+      14,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      -11,
+      12,
+      5,
+      4,
+      24,
+      4,
+      5,
+      12,
+      -11
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -13,
+      -8,
+      1,
+      -12,
+      -1,
+      -1,
+      -12,
+      1,
+      -8,
+      -13
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 7,
+   "involution_hashes": [
+    "7088abd45dff366f",
+    "f8a0294963e953dd",
+    "f3a7b854cf4d87d2"
+   ],
+   "involutions": [
+    21,
+    376,
+    464
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -5,
+      -4,
+      -3,
+      -5,
+      -5,
+      -5,
+      -5,
+      -3,
+      -4,
+      -5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      -9,
+      8,
+      -4,
+      -4,
+      8,
+      -9,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -23,
+      12,
+      -23,
+      0,
+      -8,
+      -12,
+      -7,
+      -7,
+      -12,
+      -8
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      14,
+      1,
+      13,
+      1,
+      14,
+      0,
+      12,
+      5,
+      5,
+      12
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 8,
+   "involution_hashes": [
+    "7088abd45dff366f",
+    "710c4ebebd207775",
+    "1a6b24aaf7a8eece"
+   ],
+   "involutions": [
+    21,
+    545,
+    553
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+      5,
+      2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      0,
+      5,
+      14,
+      9,
+      17,
+      17,
+      9,
+      14,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      23,
+      16,
+      15,
+      35,
+      15,
+      16,
+      23,
+      0,
+      11,
+      11
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      11,
+      11,
+      0,
+      13,
+      4,
+      -1,
+      12,
+      -1,
+      4,
+      13
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 9,
+   "involution_hashes": [
+    "b6dcabdcfa56ad9b",
+    "f18a512c26de93f5",
+    "c67e097ec50844bd"
+   ],
+   "involutions": [
+    24,
+    122,
+    400
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      5,
+      2,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      0,
+      5,
+      14,
+      9,
+      17,
+      17,
+      9,
+      14,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      11,
+      11,
+      0,
+      23,
+      16,
+      15,
+      35,
+      15,
+      16,
+      23
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      8,
+      -5,
+      0,
+      9,
+      -4,
+      7,
+      7,
+      -4,
+      9
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 10,
+   "involution_hashes": [
+    "b6dcabdcfa56ad9b",
+    "23ec79e516d760d3",
+    "7c59b98dc0dc40cc"
+   ],
+   "involutions": [
+    24,
+    411,
+    529
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -1,
+      4,
+      -1,
+      0,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      -9,
+      8,
+      -4,
+      -4,
+      8,
+      -9,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -35,
+      -12,
+      -20,
+      -24,
+      -19,
+      -19,
+      -24,
+      -20,
+      -12,
+      -35
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      13,
+      -1,
+      11,
+      4,
+      4,
+      11,
+      -1,
+      13,
+      0,
+      12
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 11,
+   "involution_hashes": [
+    "b6dcabdcfa56ad9b",
+    "1a6b24aaf7a8eece",
+    "3202f14408c1a212"
+   ],
+   "involutions": [
+    24,
+    553,
+    560
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -5,
+      -3,
+      -5,
+      -5,
+      -4,
+      -4,
+      -5,
+      -5,
+      -3,
+      -5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      0,
+      -17,
+      -8,
+      -12,
+      -3,
+      -3,
+      -12,
+      -8,
+      -17
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -4,
+      20,
+      -4,
+      0,
+      -15,
+      1,
+      8,
+      8,
+      1,
+      -15
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -1,
+      11,
+      12,
+      11,
+      -1,
+      0,
+      4,
+      13,
+      13,
+      4
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 12,
+   "involution_hashes": [
+    "dda03cc200b42e66",
+    "b23135c7f77bff5c",
+    "838a216e422a1dde"
+   ],
+   "involutions": [
+    26,
+    111,
+    407
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      1,
+      2,
+      2,
+      1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      4,
+      12,
+      9,
+      -5,
+      -5,
+      9,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -16,
+      -5,
+      7,
+      -1,
+      -1,
+      7,
+      -5,
+      -16,
+      0,
+      19
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      2,
+      -12,
+      -12,
+      2,
+      0,
+      -11,
+      -7,
+      1,
+      -7,
+      -11
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 13,
+   "involution_hashes": [
+    "dda03cc200b42e66",
+    "a5d2b6eeb4d9acc7",
+    "7e170c80578ce6fd"
+   ],
+   "involutions": [
+    26,
+    427,
+    443
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      -1,
+      -1,
+      1,
+      -1,
+      4,
+      -1,
+      1,
+      -1,
+      -1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      0,
+      -17,
+      -8,
+      -12,
+      -3,
+      -3,
+      -12,
+      -8,
+      -17
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      7,
+      7,
+      0,
+      -16,
+      -1,
+      -5,
+      19,
+      -5,
+      -1,
+      -16
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      12,
+      13,
+      12,
+      0,
+      1,
+      5,
+      14,
+      14,
+      5,
+      1
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 14,
+   "involution_hashes": [
+    "dda03cc200b42e66",
+    "cda7df8f18f2c5c0",
+    "77e0c058698b2949"
+   ],
+   "involutions": [
+    26,
+    438,
+    439
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      2,
+      2,
+      1,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      4,
+      12,
+      9,
+      -5,
+      -5,
+      9,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      8,
+      -4,
+      -15,
+      1,
+      20,
+      1,
+      -15,
+      -4,
+      8,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      11,
+      13,
+      -1,
+      -1,
+      13,
+      11,
+      0,
+      4,
+      12,
+      4
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 15,
+   "involution_hashes": [
+    "b23135c7f77bff5c",
+    "b97d4424cf82dc67",
+    "5b19a63ca018e432"
+   ],
+   "involutions": [
+    111,
+    374,
+    416
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -1,
+      -1,
+      1,
+      -1,
+      4,
+      -1,
+      1,
+      -1,
+      -1,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      0,
+      -17,
+      -8,
+      -12,
+      -3,
+      -3,
+      -12,
+      -8,
+      -17
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      16,
+      23,
+      23,
+      16,
+      0,
+      15,
+      11,
+      35,
+      11,
+      15
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -4,
+      -5,
+      7,
+      8,
+      7,
+      -5,
+      -4,
+      0,
+      9,
+      9
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 16,
+   "involution_hashes": [
+    "b23135c7f77bff5c",
+    "4f1711c313665564",
+    "caa5731828a58d67"
+   ],
+   "involutions": [
+    111,
+    450,
+    566
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      2,
+      5,
+      2,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      0,
+      5,
+      14,
+      9,
+      17,
+      17,
+      9,
+      14,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -20,
+      -19,
+      -12,
+      -35,
+      -24,
+      -24,
+      -35,
+      -12,
+      -19,
+      -20
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      5,
+      14,
+      1,
+      12,
+      12,
+      1,
+      14,
+      5,
+      0,
+      13
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 17,
+   "involution_hashes": [
+    "1a5c81bb186222b1",
+    "1f0ddd7a5dfd3175",
+    "4528e0fe4cb91850"
+   ],
+   "involutions": [
+    113,
+    119,
+    358
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      1,
+      0,
+      2,
+      5,
+      2,
+      0,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      0,
+      5,
+      14,
+      9,
+      17,
+      17,
+      9,
+      14,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -23,
+      -12,
+      -12,
+      -23,
+      0,
+      -7,
+      -8,
+      12,
+      -8,
+      -7
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      13,
+      4,
+      -1,
+      12,
+      -1,
+      4,
+      13,
+      0,
+      11,
+      11
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 18,
+   "involution_hashes": [
+    "1a5c81bb186222b1",
+    "534efeb85b7fd41e",
+    "d637e722aee21e19"
+   ],
+   "involutions": [
+    113,
+    437,
+    587
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      0,
+      -1,
+      4,
+      -1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      -9,
+      8,
+      -4,
+      -4,
+      8,
+      -9,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      12,
+      -11,
+      24,
+      -11,
+      12,
+      4,
+      0,
+      5,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -7,
+      -7,
+      0,
+      -12,
+      2,
+      -11,
+      1,
+      -11,
+      2,
+      -12
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 19,
+   "involution_hashes": [
+    "1a5c81bb186222b1",
+    "67d2ce3c20532048",
+    "710c4ebebd207775"
+   ],
+   "involutions": [
+    113,
+    533,
+    545
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      5,
+      1,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      0,
+      3,
+      -9,
+      -14,
+      -5,
+      -5,
+      -14,
+      -9,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      15,
+      16,
+      11,
+      23,
+      35,
+      23,
+      11,
+      16,
+      15,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -7,
+      -12,
+      -11,
+      -11,
+      -12,
+      -7,
+      0,
+      2,
+      1,
+      2
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 20,
+   "involution_hashes": [
+    "1f0ddd7a5dfd3175",
+    "04b4a6f09a695004",
+    "e12d6f5a0a6cfe76"
+   ],
+   "involutions": [
+    119,
+    399,
+    429
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -2,
+      -2,
+      0,
+      -2,
+      -2,
+      -1,
+      3,
+      -1,
+      -2,
+      -2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      0,
+      3,
+      -9,
+      -14,
+      -5,
+      -5,
+      -14,
+      -9,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      15,
+      16,
+      11,
+      23,
+      35,
+      23,
+      11,
+      16,
+      15
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      1,
+      -1,
+      -8,
+      -13,
+      -12,
+      -12,
+      -13,
+      -8,
+      -1,
+      1
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 21,
+   "involution_hashes": [
+    "1f0ddd7a5dfd3175",
+    "35d39565a3989c46",
+    "11d33a9586cf5d78"
+   ],
+   "involutions": [
+    119,
+    419,
+    449
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      1,
+      5,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      0,
+      3,
+      -9,
+      -14,
+      -5,
+      -5,
+      -14,
+      -9,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -12,
+      -7,
+      -8,
+      -23,
+      -23,
+      -8,
+      -7,
+      -12,
+      0,
+      12
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      -4,
+      -4,
+      -5,
+      0,
+      7,
+      9,
+      8,
+      9,
+      7
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 22,
+   "involution_hashes": [
+    "f18a512c26de93f5",
+    "158c163f02567e2e",
+    "758573b82f9feb88"
+   ],
+   "involutions": [
+    122,
+    382,
+    436
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -2,
+      -2,
+      -1,
+      3,
+      -1,
+      -2,
+      -2,
+      0,
+      -2,
+      -2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      0,
+      3,
+      -9,
+      -14,
+      -5,
+      -5,
+      -14,
+      -9,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      5,
+      4,
+      -11,
+      -11,
+      4,
+      5,
+      0,
+      12,
+      24,
+      12
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      -1,
+      4,
+      11,
+      13,
+      12,
+      13,
+      11,
+      4,
+      -1
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 23,
+   "involution_hashes": [
+    "f18a512c26de93f5",
+    "4b055ae8a17c7ce2",
+    "08cc902278faa00b"
+   ],
+   "involutions": [
+    122,
+    403,
+    519
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      0,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      0,
+      3,
+      -9,
+      -14,
+      -5,
+      -5,
+      -14,
+      -9,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      7,
+      19,
+      7,
+      -5,
+      0,
+      -1,
+      -16,
+      -16,
+      -1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -1,
+      4,
+      11,
+      13,
+      12,
+      13,
+      11,
+      4,
+      -1,
+      0
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 24,
+   "involution_hashes": [
+    "fa68d7f264fb00fa",
+    "5b19a63ca018e432",
+    "534efeb85b7fd41e"
+   ],
+   "involutions": [
+    133,
+    416,
+    437
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      5,
+      1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      0,
+      3,
+      -9,
+      -14,
+      -5,
+      -5,
+      -14,
+      -9,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      1,
+      -4,
+      8,
+      20,
+      8,
+      -4,
+      1,
+      0,
+      -15,
+      -15
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      1,
+      1,
+      0,
+      5,
+      12,
+      14,
+      13,
+      14,
+      12,
+      5
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 25,
+   "involution_hashes": [
+    "fa68d7f264fb00fa",
+    "e12d6f5a0a6cfe76",
+    "f16871467df14767"
+   ],
+   "involutions": [
+    133,
+    429,
+    542
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -3,
+      -5,
+      -4,
+      -5,
+      -5,
+      -5,
+      -5,
+      -4,
+      -5,
+      -3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      0,
+      5,
+      14,
+      9,
+      17,
+      17,
+      9,
+      14,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -1,
+      19,
+      -1,
+      0,
+      7,
+      -16,
+      -5,
+      -5,
+      -16,
+      7
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -9,
+      -14,
+      -1,
+      -14,
+      -9,
+      0,
+      -13,
+      -2,
+      -2,
+      -13
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 26,
+   "involution_hashes": [
+    "4c9b10d2f7b1c438",
+    "32e130c785ddbbd8",
+    "943d7130f0692621"
+   ],
+   "involutions": [
+    135,
+    144,
+    417
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      2,
+      0,
+      0,
+      1,
+      5,
+      1,
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      0,
+      3,
+      -9,
+      -14,
+      -5,
+      -5,
+      -14,
+      -9,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -15,
+      -15,
+      0,
+      1,
+      -4,
+      8,
+      20,
+      8,
+      -4,
+      1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      2,
+      1,
+      2,
+      0,
+      -7,
+      -12,
+      -11,
+      -11,
+      -12,
+      -7
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 27,
+   "involution_hashes": [
+    "4c9b10d2f7b1c438",
+    "b97d4424cf82dc67",
+    "35d39565a3989c46"
+   ],
+   "involutions": [
+    135,
+    374,
+    419
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      2,
+      0,
+      0,
+      1,
+      5,
+      1,
+      0,
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      0,
+      3,
+      -9,
+      -14,
+      -5,
+      -5,
+      -14,
+      -9,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -1,
+      -16,
+      -16,
+      -1,
+      0,
+      -5,
+      7,
+      19,
+      7,
+      -5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      5,
+      12,
+      14,
+      13,
+      14,
+      12,
+      5,
+      0,
+      1,
+      1
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 28,
+   "involution_hashes": [
+    "4c9b10d2f7b1c438",
+    "4b055ae8a17c7ce2",
+    "7e170c80578ce6fd"
+   ],
+   "involutions": [
+    135,
+    403,
+    443
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      1,
+      4,
+      1,
+      -1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      0,
+      5,
+      14,
+      9,
+      17,
+      17,
+      9,
+      14,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -11,
+      12,
+      5,
+      4,
+      24,
+      4,
+      5,
+      12,
+      -11,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      -4,
+      7,
+      7,
+      -4,
+      9,
+      0,
+      -5,
+      8,
+      -5
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 29,
+   "involution_hashes": [
+    "32e130c785ddbbd8",
+    "158c163f02567e2e",
+    "d637e722aee21e19"
+   ],
+   "involutions": [
+    144,
+    382,
+    587
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      2,
+      1,
+      0,
+      5,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      -9,
+      8,
+      -4,
+      -4,
+      8,
+      -9,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      -12,
+      -7,
+      -7,
+      -12,
+      -8,
+      0,
+      -23,
+      12,
+      -23
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      7,
+      -5,
+      9,
+      -4,
+      8,
+      -4,
+      9,
+      -5,
+      7
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 30,
+   "involution_hashes": [
+    "32e130c785ddbbd8",
+    "3202f14408c1a212",
+    "caa5731828a58d67"
+   ],
+   "involutions": [
+    144,
+    560,
+    566
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -1,
+      -2,
+      -2,
+      -2,
+      3,
+      -2,
+      -2,
+      -2,
+      -1,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      4,
+      12,
+      9,
+      -5,
+      -5,
+      9,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      12,
+      4,
+      4,
+      12,
+      0,
+      -11,
+      5,
+      24,
+      5,
+      -11
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -2,
+      -13,
+      -9,
+      -1,
+      -9,
+      -13,
+      -2,
+      0,
+      -14,
+      -14
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 31,
+   "involution_hashes": [
+    "069058271a67b673",
+    "758573b82f9feb88",
+    "11d33a9586cf5d78"
+   ],
+   "involutions": [
+    149,
+    436,
+    449
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      2,
+      0,
+      5,
+      0,
+      2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      0,
+      -17,
+      -8,
+      -12,
+      -3,
+      -3,
+      -12,
+      -8,
+      -17
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -7,
+      -23,
+      -8,
+      -12,
+      12,
+      -12,
+      -8,
+      -23,
+      -7,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      1,
+      5,
+      14,
+      14,
+      5,
+      1,
+      0,
+      12,
+      13,
+      12
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 32,
+   "involution_hashes": [
+    "069058271a67b673",
+    "c8767af42e73b9ba",
+    "67d2ce3c20532048"
+   ],
+   "involutions": [
+    149,
+    445,
+    533
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      2,
+      1,
+      0,
+      5,
+      0,
+      1,
+      2,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      -9,
+      8,
+      -4,
+      -4,
+      8,
+      -9,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      5,
+      5,
+      0,
+      4,
+      12,
+      -11,
+      24,
+      -11,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -13,
+      -1,
+      -13,
+      0,
+      -14,
+      -2,
+      -9,
+      -9,
+      -2,
+      -14
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 33,
+   "involution_hashes": [
+    "f3e297772c581c83",
+    "4528e0fe4cb91850",
+    "caa5731828a58d67"
+   ],
+   "involutions": [
+    354,
+    358,
+    566
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -2,
+      -2,
+      -2,
+      -2,
+      0,
+      -1,
+      -2,
+      3,
+      -2,
+      -1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      -9,
+      8,
+      -4,
+      -4,
+      8,
+      -9,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      -1,
+      7,
+      -16,
+      19,
+      -16,
+      7,
+      -1,
+      -5,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -14,
+      -2,
+      -9,
+      -9,
+      -2,
+      -14,
+      0,
+      -13,
+      -1,
+      -13
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 34,
+   "involution_hashes": [
+    "f3e297772c581c83",
+    "14f241f714a9f14f",
+    "4afaa98d65c545be"
+   ],
+   "involutions": [
+    354,
+    385,
+    388
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -2,
+      -1,
+      -2,
+      -2,
+      -2,
+      -2,
+      -1,
+      -2,
+      0,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      0,
+      5,
+      14,
+      9,
+      17,
+      17,
+      9,
+      14,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -7,
+      -8,
+      12,
+      -8,
+      -7,
+      0,
+      -23,
+      -12,
+      -12,
+      -23
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -11,
+      2,
+      -7,
+      -12,
+      1,
+      -12,
+      -7,
+      2,
+      -11,
+      0
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 35,
+   "involution_hashes": [
+    "4528e0fe4cb91850",
+    "f8a0294963e953dd",
+    "4b055ae8a17c7ce2"
+   ],
+   "involutions": [
+    358,
+    376,
+    403
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -1,
+      -1,
+      -1,
+      4,
+      -1,
+      -1,
+      -1,
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      4,
+      12,
+      9,
+      -5,
+      -5,
+      9,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      11,
+      23,
+      15,
+      15,
+      23,
+      11,
+      0,
+      16,
+      35,
+      16
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      14,
+      12,
+      1,
+      5,
+      13,
+      5,
+      1,
+      12,
+      14
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 36,
+   "involution_hashes": [
+    "b97d4424cf82dc67",
+    "6ac91e907ef0df46",
+    "f76591239e37bb6e"
+   ],
+   "involutions": [
+    374,
+    452,
+    491
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -1,
+      -2,
+      3,
+      -2,
+      -1,
+      0,
+      -2,
+      -2,
+      -2,
+      -2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      -9,
+      8,
+      -4,
+      -4,
+      8,
+      -9,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      23,
+      15,
+      11,
+      16,
+      16,
+      11,
+      15,
+      23,
+      0,
+      35
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      12,
+      5,
+      5,
+      12,
+      0,
+      14,
+      1,
+      13,
+      1,
+      14
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 37,
+   "involution_hashes": [
+    "f8a0294963e953dd",
+    "21d9a7292b26face",
+    "965fef804baa85fb"
+   ],
+   "involutions": [
+    376,
+    421,
+    431
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      5,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      0,
+      3,
+      -9,
+      -14,
+      -5,
+      -5,
+      -14,
+      -9,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -12,
+      -24,
+      -19,
+      -20,
+      -35,
+      -35,
+      -20,
+      -19,
+      -24,
+      -12
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -2,
+      -9,
+      -14,
+      -13,
+      -13,
+      -14,
+      -9,
+      -2,
+      0,
+      -1
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 38,
+   "involution_hashes": [
+    "158c163f02567e2e",
+    "f3a7b854cf4d87d2",
+    "f76591239e37bb6e"
+   ],
+   "involutions": [
+    382,
+    464,
+    491
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      2,
+      0,
+      0,
+      0,
+      0,
+      2,
+      1,
+      0,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      -9,
+      8,
+      -4,
+      -4,
+      8,
+      -9,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      8,
+      -15,
+      20,
+      -15,
+      8,
+      0,
+      -4,
+      1,
+      1,
+      -4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      7,
+      -5,
+      9,
+      -4,
+      8,
+      -4,
+      9,
+      -5,
+      7,
+      0
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 39,
+   "involution_hashes": [
+    "14f241f714a9f14f",
+    "838a216e422a1dde",
+    "23ec79e516d760d3"
+   ],
+   "involutions": [
+    385,
+    407,
+    411
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      3,
+      0,
+      -2,
+      -1,
+      -2,
+      -2,
+      -2,
+      -2,
+      -1,
+      -2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      0,
+      5,
+      14,
+      9,
+      17,
+      17,
+      9,
+      14,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      20,
+      0,
+      1,
+      8,
+      -15,
+      -4,
+      -4,
+      -15,
+      8,
+      1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      13,
+      0,
+      5,
+      14,
+      1,
+      12,
+      12,
+      1,
+      14,
+      5
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 40,
+   "involution_hashes": [
+    "4afaa98d65c545be",
+    "c67e097ec50844bd",
+    "35d39565a3989c46"
+   ],
+   "involutions": [
+    388,
+    400,
+    419
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      -1,
+      -2,
+      -2,
+      -2,
+      3,
+      -2,
+      -2,
+      -2,
+      -1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      4,
+      12,
+      9,
+      -5,
+      -5,
+      9,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      -8,
+      0,
+      -12,
+      -23,
+      -7,
+      12,
+      -7,
+      -23,
+      -12
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      12,
+      4,
+      0,
+      11,
+      13,
+      -1,
+      -1,
+      13,
+      11
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 41,
+   "involution_hashes": [
+    "04b4a6f09a695004",
+    "0e00718ea6bc93fc",
+    "08cc902278faa00b"
+   ],
+   "involutions": [
+    399,
+    454,
+    519
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      2,
+      1,
+      0,
+      5,
+      0,
+      1,
+      2,
+      0,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      -9,
+      8,
+      -4,
+      -4,
+      8,
+      -9,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -4,
+      1,
+      1,
+      -4,
+      0,
+      8,
+      -15,
+      20,
+      -15,
+      8
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -12,
+      2,
+      -11,
+      1,
+      -11,
+      2,
+      -12,
+      0,
+      -7,
+      -7
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 42,
+   "involution_hashes": [
+    "c67e097ec50844bd",
+    "965fef804baa85fb",
+    "77e0c058698b2949"
+   ],
+   "involutions": [
+    400,
+    431,
+    439
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      5,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0,
+      2,
+      1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      -9,
+      8,
+      -4,
+      -4,
+      8,
+      -9,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      35,
+      0,
+      23,
+      15,
+      11,
+      16,
+      16,
+      11,
+      15,
+      23
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      12,
+      0,
+      13,
+      -1,
+      11,
+      4,
+      4,
+      11,
+      -1,
+      13
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 43,
+   "involution_hashes": [
+    "838a216e422a1dde",
+    "21d9a7292b26face",
+    "d637e722aee21e19"
+   ],
+   "involutions": [
+    407,
+    421,
+    587
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -1,
+      1,
+      4,
+      1,
+      -1,
+      0,
+      -1,
+      -1,
+      -1,
+      -1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      9,
+      0,
+      5,
+      14,
+      9,
+      17,
+      17,
+      9,
+      14,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      1,
+      8,
+      -15,
+      -4,
+      -4,
+      -15,
+      8,
+      1,
+      0,
+      20
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -13,
+      -2,
+      -2,
+      -13,
+      0,
+      -9,
+      -14,
+      -1,
+      -14,
+      -9
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 44,
+   "involution_hashes": [
+    "23ec79e516d760d3",
+    "943d7130f0692621",
+    "e12d6f5a0a6cfe76"
+   ],
+   "involutions": [
+    411,
+    417,
+    429
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      0,
+      2,
+      1,
+      0,
+      5,
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      0,
+      5,
+      -9,
+      8,
+      -4,
+      -4,
+      8,
+      -9,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      -5,
+      -1,
+      7,
+      -16,
+      19,
+      -16,
+      7,
+      -1,
+      -5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -12,
+      1,
+      -13,
+      -1,
+      -8,
+      -8,
+      -1,
+      -13,
+      1,
+      -12
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 45,
+   "involution_hashes": [
+    "943d7130f0692621",
+    "77e0c058698b2949",
+    "67d2ce3c20532048"
+   ],
+   "involutions": [
+    417,
+    439,
+    533
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      0,
+      3,
+      -9,
+      -14,
+      -5,
+      -5,
+      -14,
+      -9,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      12,
+      0,
+      -12,
+      -7,
+      -8,
+      -23,
+      -23,
+      -8,
+      -7,
+      -12
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -1,
+      0,
+      -2,
+      -9,
+      -14,
+      -13,
+      -13,
+      -14,
+      -9,
+      -2
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 46,
+   "involution_hashes": [
+    "a5d2b6eeb4d9acc7",
+    "f3a7b854cf4d87d2",
+    "7c59b98dc0dc40cc"
+   ],
+   "involutions": [
+    427,
+    464,
+    529
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      1,
+      1,
+      0,
+      -1,
+      -1,
+      -1,
+      4,
+      -1,
+      -1,
+      -1
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      4,
+      12,
+      9,
+      -5,
+      -5,
+      9,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      0,
+      8,
+      -4,
+      -15,
+      1,
+      20,
+      1,
+      -15,
+      -4,
+      8
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      -12,
+      -1,
+      1,
+      -13,
+      -13,
+      1,
+      -1,
+      -12,
+      -8
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 47,
+   "involution_hashes": [
+    "1edbfbafa7069598",
+    "7e170c80578ce6fd",
+    "f16871467df14767"
+   ],
+   "involutions": [
+    430,
+    443,
+    542
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      2,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      2,
+      0,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      0,
+      -17,
+      -8,
+      -12,
+      -3,
+      -3,
+      -12,
+      -8,
+      -17
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      15,
+      11,
+      35,
+      11,
+      15,
+      0,
+      16,
+      23,
+      23,
+      16
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -9,
+      -13,
+      -14,
+      -2,
+      -1,
+      -2,
+      -14,
+      -13,
+      -9,
+      0
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 48,
+   "involution_hashes": [
+    "1edbfbafa7069598",
+    "4f1711c313665564",
+    "710c4ebebd207775"
+   ],
+   "involutions": [
+    430,
+    450,
+    545
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -4,
+      -5,
+      -5,
+      -3,
+      -5,
+      -5,
+      -3,
+      -5,
+      -5,
+      -4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -5,
+      0,
+      3,
+      -9,
+      -14,
+      -5,
+      -5,
+      -14,
+      -9,
+      3
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      12,
+      24,
+      12,
+      0,
+      5,
+      4,
+      -11,
+      -11,
+      4,
+      5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      7,
+      9,
+      8,
+      9,
+      7,
+      0,
+      -5,
+      -4,
+      -4,
+      -5
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 49,
+   "involution_hashes": [
+    "534efeb85b7fd41e",
+    "7c59b98dc0dc40cc",
+    "86690cc606ba3d38"
+   ],
+   "involutions": [
+    437,
+    529,
+    550
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      0,
+      0,
+      0,
+      5,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      4,
+      12,
+      9,
+      -5,
+      -5,
+      9,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -12,
+      -23,
+      -7,
+      12,
+      -7,
+      -23,
+      -12,
+      0,
+      -8,
+      -8
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -14,
+      -14,
+      0,
+      -2,
+      -13,
+      -9,
+      -1,
+      -9,
+      -13,
+      -2
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 50,
+   "involution_hashes": [
+    "cda7df8f18f2c5c0",
+    "11d33a9586cf5d78",
+    "86690cc606ba3d38"
+   ],
+   "involutions": [
+    438,
+    449,
+    550
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      5,
+      0,
+      2,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      0,
+      -17,
+      -8,
+      -12,
+      -3,
+      -3,
+      -12,
+      -8,
+      -17
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      24,
+      0,
+      4,
+      -11,
+      5,
+      12,
+      12,
+      5,
+      -11,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      1,
+      0,
+      -12,
+      -11,
+      -7,
+      2,
+      2,
+      -7,
+      -11,
+      -12
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 51,
+   "involution_hashes": [
+    "cda7df8f18f2c5c0",
+    "6ac91e907ef0df46",
+    "1a6b24aaf7a8eece"
+   ],
+   "involutions": [
+    438,
+    452,
+    553
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      2,
+      0,
+      5,
+      0,
+      2,
+      0,
+      0,
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -8,
+      0,
+      -17,
+      -8,
+      -12,
+      -3,
+      -3,
+      -12,
+      -8,
+      -17
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      -11,
+      5,
+      12,
+      12,
+      5,
+      -11,
+      4,
+      0,
+      24
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      13,
+      13,
+      4,
+      0,
+      -1,
+      11,
+      12,
+      11,
+      -1
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 52,
+   "involution_hashes": [
+    "c8767af42e73b9ba",
+    "0e00718ea6bc93fc",
+    "3202f14408c1a212"
+   ],
+   "involutions": [
+    445,
+    454,
+    560
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      -5,
+      -5,
+      -5,
+      -4,
+      -3,
+      -3,
+      -4,
+      -5,
+      -5,
+      -5
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      4,
+      12,
+      9,
+      -5,
+      -5,
+      9,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      16,
+      35,
+      16,
+      0,
+      11,
+      23,
+      15,
+      15,
+      23,
+      11
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -11,
+      -7,
+      1,
+      -7,
+      -11,
+      0,
+      2,
+      -12,
+      -12,
+      2
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 53,
+   "involution_hashes": [
+    "c8767af42e73b9ba",
+    "f76591239e37bb6e",
+    "f16871467df14767"
+   ],
+   "involutions": [
+    445,
+    491,
+    542
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  },
+  {
+   "A4_points_off_X": true,
+   "F_A_normal_form_alpha_U3_beta_V3": true,
+   "F_restricted_to_A": [
+    {
+     "d": 1,
+     "n": [
+      0,
+      5,
+      0,
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      0
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      4,
+      0,
+      4,
+      12,
+      9,
+      -5,
+      -5,
+      9,
+      12,
+      4
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -19,
+      -35,
+      -24,
+      -12,
+      -20,
+      -20,
+      -12,
+      -24,
+      -35,
+      -19
+     ]
+    },
+    {
+     "d": 1,
+     "n": [
+      -4,
+      7,
+      9,
+      -5,
+      -5,
+      9,
+      7,
+      -4,
+      0,
+      8
+     ]
+    }
+   ],
+   "dF_along_line_kills_nontrivial_chars": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true
+   },
+   "dF_at_vertex_B": {
+    "kills_B": true,
+    "kills_C": true,
+    "kills_D": true,
+    "nonzero_on_A": true
+   },
+   "derived_subgroup_of_N_is_V4": true,
+   "disc_F_A_nonzero": true,
+   "index": 54,
+   "involution_hashes": [
+    "4f1711c313665564",
+    "08cc902278faa00b",
+    "86690cc606ba3d38"
+   ],
+   "involutions": [
+    450,
+    519,
+    550
+   ],
+   "joint_dims": {
+    "chi_r": 1,
+    "chi_s": 1,
+    "chi_z": 1,
+    "triv": 2
+   },
+   "line_disjoint_from_edges": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "line_in_plus_planes": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "minus_lines_in_X": {
+    "r": true,
+    "s": true,
+    "z": true
+   },
+   "normalizer_order": 12,
+   "normalizer_order_profile": {
+    "1": 1,
+    "2": 3,
+    "3": 8
+   },
+   "rho_on_A_det_is_one": true,
+   "rho_on_A_trace_is_minus_one": true,
+   "rho_permutes_involutions_3cycle": true,
+   "traces_on_W": [
+    true,
+    true,
+    true
+   ],
+   "triangle": {
+    "L_s+L_r": true,
+    "L_z+L_r": true,
+    "L_z+L_s": true,
+    "not_concurrent": true
+   },
+   "vertex_exact_stabilisers_are_V4": [
+    true,
+    true,
+    true
+   ],
+   "vertices_on_X": {
+    "B": true,
+    "C": true,
+    "D": true
+   }
+  }
+ ],
+ "per_involution_counts": {
+  "V4s_through_t": 3,
+  "type_II_on_E_t": 9,
+  "type_II_on_L_t": 0,
+  "type_I_on_E_t": 3,
+  "type_I_on_L_t": 6
+ },
+ "stabiliser_scan": {
+  "elements_fixing_a_type_II_point_per_V4": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "method": "gcd(F|A, all 2x2 minors of [g.a | a]) = 1 over Q(zeta_11), affine chart y=1",
+  "statement": "for every V4 and every g in G outside V4, no point of X n P(A) is fixed by g; hence every type-II point has exact stabiliser V4"
+ }
+}

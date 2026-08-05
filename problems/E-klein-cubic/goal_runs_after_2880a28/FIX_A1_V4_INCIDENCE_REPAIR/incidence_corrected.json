@@ -1,0 +1,154 @@
+{
+ "consequences_for_the_b_complex": {
+  "funnel": "any equivariant dominant P(W) --> X must send the V4-line stratum of any model into X^{V4}, i.e. to one of these six points, or into a larger stratum; the three type-II points are permuted freely by the residual C3, so a C3-equivariant image of a C3-fixed point cannot be a single type-II point.",
+  "on_X": "X^{V4} is six reduced points, each with T_pX = chi_1+chi_2+chi_3 (no trivial summand), so all six are isolated; l_V is NOT a stratum of F(X).",
+  "strata": "(V4, l_V) is a 1-dimensional stratum of F(P^4) with normal type chi_1+chi_2+chi_3 and residual group A4/V4 = C3 acting on l_V = P^1 with two fixed points (the A4-points, off X); (V4, [chi_i]) are 0-dimensional strata."
+ },
+ "global_counts": {
+  "(type_I, minus-line) flags": {
+   "agree": true,
+   "from_V4s": "55 x 3 x 2 = 330",
+   "from_points": "165 x 2 = 330"
+  },
+  "(type_II, plus-plane cubic) flags": {
+   "agree": true,
+   "from_V4s": "55 x 9 = 495",
+   "from_points": "165 x 3 = 495"
+  },
+  "V4_subgroups": 55,
+  "type_II_points": {
+   "exact_stabiliser": "V4",
+   "orbit_stabiliser": "660/4 = 165",
+   "per_V4": 3,
+   "single_G_orbit": true,
+   "total": 165
+  },
+  "type_I_points": {
+   "exact_stabiliser": "V4",
+   "orbit_stabiliser": "660/4 = 165",
+   "per_V4": 3,
+   "single_G_orbit": true,
+   "total": 165
+  }
+ },
+ "local_picture_one_V4": {
+  "Fix(V4,P^4)": "l_V = P(A) (pointwise fixed line)  disjoint-union  {[B],[C],[D]}",
+  "W_as_V4_module": "A + B + C + D = triv^2 + chi_z + chi_s + chi_r, dims (2,1,1,1)",
+  "X^{V4}": "six isolated points: three type-I vertices + three type-II points of R",
+  "flags": {
+   "type_I": {
+    "[B]": {
+     "on_V4_line": false,
+     "on_X": true,
+     "on_minus_line_L": [
+      "r",
+      "s"
+     ],
+     "on_plus_plane_cubic_E": [
+      "z"
+     ]
+    },
+    "[C]": {
+     "on_V4_line": false,
+     "on_X": true,
+     "on_minus_line_L": [
+      "r",
+      "z"
+     ],
+     "on_plus_plane_cubic_E": [
+      "s"
+     ]
+    },
+    "[D]": {
+     "on_V4_line": false,
+     "on_X": true,
+     "on_minus_line_L": [
+      "s",
+      "z"
+     ],
+     "on_plus_plane_cubic_E": [
+      "r"
+     ]
+    }
+   },
+   "type_II": {
+    "on_V4_line": true,
+    "on_X": true,
+    "on_minus_line_L": [],
+    "on_plus_plane_cubic_E": [
+     "r",
+     "s",
+     "z"
+    ],
+    "support": "X n P(A) = X n l_V"
+   }
+  },
+  "minus_lines": {
+   "L_r": "P(B+C)",
+   "L_s": "P(B+D)",
+   "L_z": "P(C+D)",
+   "all_contained_in_X": true,
+   "triangle": "pairwise meeting in one point, spanning P^3, not concurrent",
+   "vertices": {
+    "L_s n L_r": "[B]",
+    "L_z n L_r": "[C]",
+    "L_z n L_s": "[D]"
+   }
+  },
+  "plus_planes": {
+   "P_r": "P(A+D)",
+   "P_s": "P(A+C)",
+   "P_z": "P(A+B)",
+   "each_contains_l_V": true,
+   "plane_cubics": "E_sigma = X n P(A + chi_sigma), smooth (M2 auxiliary check)"
+  }
+ },
+ "meta": {
+  "cubic": "F = x0^2 x1 + x1^2 x2 + x2^2 x3 + x3^2 x4 + x4^2 x0",
+  "field": "Q(zeta_11); residual C3 eigenbasis in Q(zeta_33)=Q(zeta_11)[w]/(w^2+w+1)",
+  "headline": "Problem E headline: OPEN",
+  "packet": "FIX_A1_V4_INCIDENCE_REPAIR",
+  "program": "FIX (E56)",
+  "representation_source": "certificates/exact_weil_check.py S,T generators, rebuilt in-file",
+  "seal_note": "the three sealed JSON payloads are byte-reproducible: no timestamp and no timing field appears in them (run metadata goes to run_metadata.json). This follows the recommendation recorded in certificates/STRATA_EXACT.md section 5 caveat 1.",
+  "theorem_boundary": "This packet certifies the V4 fixed-locus ground truth in P^4 and on X and the corrected type-I/type-II incidence table. It asserts nothing about existence or nonexistence of a landing covariant or about unirationality.",
+  "toolchain": "python3 exact integer/cyclotomic arithmetic; M2 only for the auxiliary plus-plane smoothness script"
+ },
+ "per_involution_picture": {
+  "V4s_through_t": 3,
+  "X^t": "E_t (plane cubic in P(W^{t,+})) disjoint-union L_t = P(W^{t,-}) subset X",
+  "note": "each V4 through t contributes ONE vertex to E_t (the eigenline in W^{t,+}) and TWO vertices to L_t (the two eigenlines in W^{t,-}). The \"3 type-I per E_t\" of MARKED_S3 section 3 and the \"6 type-I\" of MARKED_S3 section 2 are therefore both correct and refer to different loci; they are not a contradiction.",
+  "type_II_points_on_E_t": 9,
+  "type_II_points_on_L_t": 0,
+  "type_I_points_on_E_t": 3,
+  "type_I_points_on_L_t": 6
+ },
+ "supersedes": [
+  {
+   "source": "WORKORDER_STRATA_MACHINE.md, \"Mandatory input reconciliation\" (candidate strata.md, LOCAL-MISSING)",
+   "verbatim_claim_1": "its incidence table says that every type-II `V4` point lies on three fixed elliptic curves",
+   "verbatim_claim_2": "its final sentence says that two positive-dimensional fixed-locus closures can meet only at type-I points",
+   "verbatim_flag": "These statements cannot both be correct. No later work package may silently choose one."
+  },
+  {
+   "source": "NOTEBOOK.md E34 status line",
+   "verbatim_claim": "type-I/type-II `V4` incidence inconsistency in the supplied `strata.md` flagged **unresolved** [WORK]"
+  },
+  {
+   "relation": "CONFIRMED and extended: that verdict was computed on one representative V4 and extended by conjugacy (its own caveat 2); this packet verifies it independently on all 55 V4s, adds exact stabilisers, the deeper-stratum avoidance and the arithmetic of R, and corrects the incomplete reading of \"meet only at type-I\".",
+   "source": "certificates/STRATA_EXACT.md section 4 + certificates/strata/incidence_exact.json",
+   "verbatim_claim": "CLAIM_1_SURVIVES_CLAIM_2_REFUTED"
+  },
+  {
+   "relation": "CORRECTED: the geometric count 9 is right, the modular observation 0 is also right, and they are compatible only because the type-II points are irrational; the packet recorded them as a consistency check (\"Gate1_consistency\") that it had not in fact observed.",
+   "source": "certificates/MARKED_S3_GEOMETRY.md section 3 + certificates/strata/marked_s3_geometry.json",
+   "verbatim_claim": "\"typeII_count_per_Et\": 9 together with \"observed_typeII_at_67\": 0, \"observed_typeII_at_331\": 0, \"typeII_S3_orbit_sizes_67\": []"
+  }
+ ],
+ "verdict": {
+  "claim_1_every_type_II_point_lies_on_three_fixed_elliptic_curves": "TRUE",
+  "claim_2_positive_dimensional_fixed_closures_meet_only_at_type_I_points": "FALSE",
+  "code": "CLAIM_1_TRUE_CLAIM_2_FALSE",
+  "corrected_statement": "Positive-dimensional fixed-locus closures meet at BOTH types of V4 point, in two structurally different patterns. Type-I (the three triangle vertices [chi_i]) is the meeting point of the two minus-lines L_{sigma_j}, L_{sigma_k} (both contained in X) and lies on exactly one of the three plus-plane cubics, namely E_{sigma_i}. Type-II (the three points of R = X n l_V) lies on all three plus-plane cubics E_{sigma_1}, E_{sigma_2}, E_{sigma_3} and on none of the three minus-lines; it also lies on the V4-fixed line l_V, which is a positive-dimensional component of Fix(V4, P^4) but is NOT contained in X."
+ }
+}

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `2c2bd90` (2026-08-04; the
+Snapshot metadata — notebook parent head: `a426488` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -1533,7 +1533,7 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 - **Status:** INFRASTRUCTURE-PARTIAL — the stratification, local transition modules, global transition diagram, and border/Fitting integration are built and checked in; WP-6 exited STOP with a formulation; the machine produced no all-degree obstruction.
   - "Problem E remains open" (file-wide) [WORK, `WORKORDER_STRATA_MACHINE.md`]
   - Environment addendum: GAP / SageMath / Singular / PARI / Julia "NOT INSTALLED", blocking WP-1/WP-3 as literally specified [WORK]
-  - type-I/type-II `V4` incidence inconsistency in the supplied `strata.md` flagged **unresolved** [WORK]
+  - type-I/type-II `V4` incidence inconsistency in the supplied `strata.md` flagged unresolved [WORK] — **ADJUDICATED 2026-08-04 by `goal_runs_after_2880a28/FIX_A1_V4_INCIDENCE_REPAIR` (`FIX-A1-V4-REPAIR-PASS`, all 55 V4s):** `strata.md` claim 1 ("every type-II point lies on three fixed elliptic curves") is TRUE (`ℓ_V ⊂ P_σᵢ` for all three `i`); claim 2's "**only** type-I points" is FALSE — both types are meetings of positive-dimensional fixed closures, in two patterns: type-I (165 triangle vertices) = one plane cubic ∩ two minus-lines; type-II (3 per V4) = three plane cubics ∩ `ℓ_V` (with `ℓ_V ⊄ X`). Confirms and de-caveats the single-representative in-repo verdict `CLAIM_1_SURVIVES_CLAIM_2_REFUTED`. Bonus certifications: `X^{A4} = ∅` (the standing WP-4C hypothesis), `F|_{ℓ_V} = αU³+βV³` normal form, `marked_s3_geometry.json`'s unflagged 9-vs-0 regression mismatch caused by inert-prime choice (repaired primes: 397/419).
   - `d9cadc3` "WP-Z director gate report — ranking 4"; `ced3153` "WP-6 STOP with formulation"; `db25516` "WP-H1 Hodge-center screen" [GIT]
   - CERT: `transition_repair/CATEGORY_AUDIT.md`, `category_repaired.json` (WP-R0 category repair); `transitions/{c3_lines, d12_binary_line, involution_plane, point_links, v4_fixed_line}`; `lifting/OBSTRUCTION_TOWER.md`, `lifting/families/{based_minus_lines_odd_m, residual_e1_swap_both, residual_e_ge7_generic_swap_both}`; `border_support/`
 - **What was actually established:** the machine's components exist and are checked in. NOT established: any all-degree obstruction; WP-1/WP-3 are blocked by missing CAS; a `V4` incidence inconsistency in the input stratification is unresolved.
@@ -2005,7 +2005,16 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 - **Thread:** T3 — mechanism transfer, now head-on (method family 4)
 - **Verification class:** ANALYTIC-PROOF-REVIEW (notes) + per-packet classes
   as they land
-- **Status:** ACTIVE (opened 2026-08-04). Note I
+- **Status:** ACTIVE (opened 2026-08-04). **Foundation packets landed and
+  director-replayed same day: `FIX-A0-ARRANGEMENT-PASS` (all six predictions
+  exact: `(3,2)` splits, `L_σ ⊂ X`, `j(E_σ) = 8192/11` by two independent
+  char-0 routes ⇒ non-CM proved, normal types `(−1)^{⊕2}`, `D12`/residual-S3
+  via the standard 2-dim irrep, full 55-arrangement tables; finding: no line
+  lies in another involution's plane — `L_τ ∩ P_σ` is a point iff `⟨σ,τ⟩ ≅
+  V4`, and those points lie on `E_σ`) and `FIX-A1-V4-REPAIR-PASS` (V4 ground
+  truth on all 55; type-I/type-II inconsistency adjudicated — see [E34](#e34);
+  `X^{A4} = ∅`; `F|_{ℓ_V} = αU³+βV³`). Cor 5.2's FIX-A0/A1 conditionality is
+  discharged: the funnel target is now the verified arrangement.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

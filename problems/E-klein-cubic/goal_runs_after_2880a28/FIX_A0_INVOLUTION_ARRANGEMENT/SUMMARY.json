@@ -1,0 +1,10 @@
+{
+ "claim1_involutions_trace_and_split": true,
+ "claim2_line_in_X": true,
+ "claim3_smooth_cubic_and_j": true,
+ "claim3_j": "8192/11",
+ "claim4_normal_types": true,
+ "claim5_centralizer_D12_residual_S3": true,
+ "claim6_arrangement": true,
+ "elapsed_seconds": 65.8
+}
