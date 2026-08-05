@@ -1,0 +1,43 @@
+FIX-H0 producer, Parts C and D
+--- Part C: the branch table (leading plane orders at sigma_1)
+    D_B seed  X = x                cell (0,3)    m=0 r= 3   ord(T+)=0 ord(T-)=1  leading PLUS   -> EXCLUDED
+    xyz * D_B(x)   [Cor E']        cell (2,6)    m=2 r= 6   ord(T+)=2 ord(T-)=3  leading PLUS   -> EXCLUDED
+    e2 * D_B(x)    [Thm N2B-3]     cell (2,7)    m=2 r= 7   ord(T+)=2 ord(T-)=3  leading PLUS   -> EXCLUDED
+    D_B(yz)   first layer / T5     cell (3,6)    m=3 r= 6   ord(T+)=4 ord(T-)=3  leading MINUS  -> survives
+    q * D_B(yz)                    cell (3,8)    m=3 r= 8   ord(T+)=4 ord(T-)=3  leading MINUS  -> survives
+    D_B(x y^2) primitive           cell (3,9)    m=3 r= 9   ord(T+)=4 ord(T-)=3  leading MINUS  -> survives
+    D_B(x^2 y z)                   cell (6,12)   m=6 r=12   ord(T+)=6 ord(T-)=7  leading PLUS   -> EXCLUDED
+    (xyz)^2 * D_B(yz)              cell (7,12)   m=7 r=12   ord(T+)=8 ord(T-)=7  leading MINUS  -> survives
+    FIX-N2C Chebyshev (1,7)        cell (1,7)    m=1 r= 7   ord(T+)=2 ord(T-)=1  leading MINUS  -> survives
+        leading coefficient a'  [x^5 y z]    nonzero in K : True
+        leading coefficient b'  [x^5 y z]    nonzero in K : True
+        leading coefficient u0' [x^5 y^2]    nonzero in K : True
+        leading coefficient u0' [x^5 z^2]    nonzero in K : True
+        leading coefficient u1' [x^6 y]      nonzero in K : True
+        leading coefficient u2' [x^6 z]      nonzero in K : True
+    ord_{P_1}(q) = 0, so every q^k-translate of the (1,7) witness
+      (the whole populated m=1 row, odd r >= 7) has the same
+      (ord(T+), ord(T-)) = (2, 1): MINUS-leading, survives.
+--- Part D: uniformisation check
+    (B^3-1)^2/B^3 = B^3 + B^-3 - 2  identically : True
+    hence  D_B parameter:  B^3 + B^-3 = kap = kp + 2
+    (z+1/z)^3 - 3(z+1/z) = z^3 + z^-3  identically : True
+    roots of c^3-3c = B^3+B^-3  are  c = om^k B + om^-k B^-1  (k=0,1,2) : True
+    genus-2 reciprocal cover  tau + 1/tau = 2 + (kp p^3 + km q^3)/(p^3+q^3)
+      at the character point [p:q] = [1:0] :  tau + 1/tau = 3*sqrt(33)/16 + 45/16 = kap : True
+      so tau = B^{+-3}, while the m=1 Chebyshev parameter is
+      c = tau_1 + 1/tau_1 with tau_1^3 = tau : the SAME reciprocal
+      cover, the m=1 point lying over the odd-m point under the
+      cubic isogeny  tau_1 |-> tau_1^3.
+    KLEIN IDENTITY  (kp+2)(km+2) = 27/4 = 27/4 : True
+    hence  -27/(4 kap) = -(km + 2)  exactly : True
+    so the SECOND Chebyshev cubic  v^3 - 3v = -27/(4 kap)  is
+      (-v)^3 - 3(-v) = km + 2 : the trace-cubic of the OTHER
+      character surface S_{km}.  The m=1 witness therefore carries
+      BOTH character-surface reciprocal parameters, one per surface,
+      while the odd-m>=3 D_B branch carries only the S_{kp} one.
+    second Chebyshev cubic  v^3 - 3v = -27/(4 kap) = -45/16 + 3*sqrt(33)/16
+      the cover takes that value at  t^3 = -1 + sqrt(33)/15
+      y^2 there = 7139/9600 - 99*sqrt(33)/640
+      (numerically -0.144966201053017974987308128157)
+    numeric: B = 1.5344349738426551843, c = B+1/B = 2.1861406616345071650, c^3-3c-kap = 2.808741173e-40

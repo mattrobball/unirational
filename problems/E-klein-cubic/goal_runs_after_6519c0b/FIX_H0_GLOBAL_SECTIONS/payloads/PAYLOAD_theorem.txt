@@ -1,0 +1,143 @@
+FIX-H0  PAYLOAD -- the two global theorems, with the machine certificates
+=========================================================================
+
+SETTING.  G = PSL(2,11), W the 5-dim Weil representation, X = V(F) subset
+P(W) the Klein cubic.  f : P(W) --> X is G-equivariant and dominant.  G is
+perfect, so the twisting character is trivial and f is given by a tuple T of
+W-valued forms of degree d with gcd 1 and
+
+        T(g v) = rho(g) T(v)   (all g in G),        F(T) = 0 .
+
+For an involution sigma:  W = W+ (+) W-, dim 3 and 2;  P_sigma = P(W+)
+(a plane in the SOURCE),  L_sigma = P(W-) subset X,  E_sigma = X cap P_sigma.
+Write v = w + y  (w in W+, y in W-)  and  T = T+ + T-  accordingly.
+ord_{P_sigma} = the (y)-adic order.
+
+
+THEOREM H0-1  (plus-plane parity).
+        ord_{P_sigma}(T-)  <  ord_{P_sigma}(T+)   for every involution sigma;
+        hence  m := ord_{P_sigma}(T)  is ODD, and in particular m >= 1
+        (every one of the 55 plus-planes is in the base locus of f).
+
+PROOF.
+
+(i)  sigma acts as +1 on W+ and -1 on W-               [certificate A1]
+     => T+(w,-y) = T+(w,y)  and  T-(w,-y) = -T-(w,y),
+     so T+ is EVEN and T- is ODD in y;  a := ord T+ is even, b := ord T- is
+     odd, and a != b.                                   [certificate B]
+
+(ii) T- == 0 would put the image of f inside X cap P(W+) = E_sigma, and
+     T+ == 0 would put it inside L_sigma; both contradict dominance.
+     So a, b < infinity.
+
+(iii) Suppose a < b.  Blow up the smooth, C_G(sigma)-stable, codimension-2
+     centre P_sigma.  Since N_{P_sigma/P^4} = O(1) (x) W-,
+
+          D_sigma = P(N) = P_sigma x P(W-)  ~  P^2 x P^1  ,
+
+     which is RATIONAL.  The induced rational map on D_sigma is given by the
+     y-degree-a leading form, which is (T+_a , 0) because T- starts only at
+     y-degree b > a.  So
+
+          phi : D_sigma --> P(W+),   phi = [ T+_a(w;y) ] ,
+
+     nonzero on a dense open set; its image lies in X (the graph closure of f
+     lies in P^4 x X), hence in X cap P(W+) = E_sigma.
+
+     E_sigma is a SMOOTH plane cubic                    [certificate A6]
+     => genus 1 => no rational curves => phi is CONSTANT (Note I, Lem 4.2),
+     say with value e in E_sigma.
+
+     D_sigma is C_G(sigma)-stable and phi is C_G(sigma)-equivariant, so e is a
+     C_G(sigma)-fixed point of P(W+).  But P(W+) has EXACTLY ONE such point,
+     the D12-point z_sigma = [triv], and F(z_sigma) != 0, i.e. z_sigma is OFF
+     X.                                                 [certificate A4]
+     Contradiction.
+
+(iv) Hence b < a and m = min(a,b) = b is odd.  Taking a = 0 in (iii) gives
+     m >= 1.                                                            QED
+
+
+THEOREM H0-2  (the point option is impossible).
+        With m odd, the induced map on D_sigma is
+            psi = [ 0 : T-_m(w;y) ] : D_sigma --> P(W-) = L_sigma ,
+        and psi is NON-CONSTANT, hence DOMINANT onto L_sigma.
+
+PROOF.  T-_m != 0, so psi is defined on a dense open set and is
+C_G(sigma)-equivariant.  A constant value would be a C_G(sigma)-fixed point
+of P(W-); there is NONE -- W- is an irreducible C_G(sigma)-module (Burnside:
+the generated algebra is all of M_2, dimension 4; equivalently every linear
+character of C_G(sigma) has multiplicity 0 in W-).      [certificate A5]
+So psi is non-constant, and its image is an irreducible curve inside the
+curve L_sigma, i.e. all of L_sigma.                                     QED
+
+
+CONSEQUENCES FOR THE COSHEAF STALK  S_L  OF NOTE III sec.4b
+
+  *  the component {pt} carries NO section                (Thm H0-2)
+  *  every EVEN-m component is globally EMPTY             (Thm H0-1)
+         killed: m = 0 (the D_B seed row), the whole m = 2 row -- Cor. E'
+         (2,6) and Thm N2B-3 (2,7) -- every (2k, 3delta+3k), and (6,12).
+  *  the surviving components are exactly the ODD-m ones:
+         m = 1  : the FIX-N2C primitive Chebyshev branch, r = 7 and every
+                  odd r >= 9 (its q^k-translates)
+         m >= 3 odd : the D_B branches (3,6) [= the T5 witness], (3,8),
+                  (3,9), (7,12), ...
+
+
+REMARK (why the verdict is robust to new witnesses).  ord(T+) is ALWAYS even
+and ord(T-) ALWAYS odd, so  m = min  is odd  <=>  the minus half leads.
+Theorem H0-1 is therefore literally the single sentence "m is odd", and any
+stalk component -- including ones not yet discovered -- is excluded exactly
+when its m is even.  E.g. FIX-N2C's Theorem N2C-1' (all three lam-eigenblocks
+at (1,7) populated, 27 points, each with plane orders (1,1,1)) adds 18 further
+m=1 points; all have m odd, so all survive.
+
+
+BRANCH TABLE  (T+ = (a',b',u0'), T- = (u1',u2'), at sigma_1 with P_1 = (y,z))
+
+  witness                       cell     ord(T+)  ord(T-)  leading  verdict
+  ---------------------------------------------------------------------------
+  D_B seed  X = x               (0,3)       0        1      PLUS    EXCLUDED
+  xyz * D_B(x)     [Cor E']     (2,6)       2        3      PLUS    EXCLUDED
+  e2  * D_B(x)     [Thm N2B-3]  (2,7)       2        3      PLUS    EXCLUDED
+  D_B(x^2 y z)                  (6,12)      6        7      PLUS    EXCLUDED
+  D_B(yz)          [T5 witness] (3,6)       4        3      MINUS   survives
+  q * D_B(yz)                   (3,8)       4        3      MINUS   survives
+  D_B(x y^2)                    (3,9)       4        3      MINUS   survives
+  (xyz)^2 * D_B(yz)             (7,12)      8        7      MINUS   survives
+  FIX-N2C Chebyshev             (1,7)       2        1      MINUS   survives
+  q^k * (Chebyshev), odd r>=9   (1,r)       2        1      MINUS   survives
+
+Computed twice: sympy over QQ(om,B) and over the degree-36 field
+K = QQ(om, kp, c, P1) for the Chebyshev witness (Groebner reduction modulo
+{om^2+om+1, 8kp^2-13kp-4, c^3-3c-(kp+2), 27P1^3-24 om (kp+2) P1^2+32(kp+2)},
+pairwise-coprime leading monomials, so K is a field); and independently by a
+dict-based expansion in QQ(om)[B,1/B][x,y,z] plus 40-digit numerics at all
+nine (c,P1) points.
+
+
+CERTIFICATE INVENTORY  (exact, characteristic 0, ALL 55 involutions)
+
+  A1  sigma = diag(1,1,1,-1,-1) in the adapted basis          55/55
+  A2  F restricted to W-  ==  0                               55/55
+  A3  F(w+y) has y-degrees in {0,2} only                      55/55
+  A4  exactly ONE C_G(sigma)-invariant line in W+; the
+      corresponding point z_sigma satisfies F(z_sigma) != 0;
+      algebra generated on W+ has dimension 5 (triv (+) std)  55/55
+  A5  NO C_G(sigma)-invariant line in W-;  Burnside algebra
+      dimension on W- is 4 (irreducible)                      55/55
+  A6  E_sigma = X cap P(W+) is a SMOOTH plane cubic           55/55  (M2)
+  --  the 55 involutions form a single G-conjugacy class      yes
+  B   the sigma-equivariance system, SOLVED as exact linear
+      algebra on all degree-d tuples, d = 1,2,3, has
+      W+-block support with y-degrees {0,2} and W--block
+      support with y-degrees {1,3}                     2 sigmas x 3 degrees
+  E1  Stab_G(L_sigma) = C_G(sigma), order 12                  55/55
+  E2  sigma lies in exactly 3 V4s; C_G(sigma) cap N_G(V4)=V4;
+      the 3 images in the residual S3 are 3 distinct order-2
+      subgroups and GENERATE S3                               55/55
+  E3  ell_V cap L_sigma = empty                            55 x 55 pairs
+  E4  the 3 isolated V4-points are ON X; the 2 A4-fixed
+      points of ell_V are OFF X (X^{A4} = empty, and the 3
+      type-II points are a FREE C3-orbit)                     55/55

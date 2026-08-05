@@ -1,0 +1,1690 @@
+{
+ "partA": {
+  "invs": [
+   1,
+   20,
+   21,
+   24,
+   26,
+   111,
+   113,
+   119,
+   122,
+   133,
+   135,
+   144,
+   149,
+   354,
+   358,
+   374,
+   376,
+   382,
+   385,
+   388,
+   399,
+   400,
+   403,
+   407,
+   411,
+   416,
+   417,
+   419,
+   421,
+   427,
+   429,
+   430,
+   431,
+   436,
+   437,
+   438,
+   439,
+   443,
+   445,
+   449,
+   450,
+   452,
+   454,
+   464,
+   491,
+   519,
+   529,
+   533,
+   542,
+   545,
+   550,
+   553,
+   560,
+   566,
+   587
+  ],
+  "per_sigma": [
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 1,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 20,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 21,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 24,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 26,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 111,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 113,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 119,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 122,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 133,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 135,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 144,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 149,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 354,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 358,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 374,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 376,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 382,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 385,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 388,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 399,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 400,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 403,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 407,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 411,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 416,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 417,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 419,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 421,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 427,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 429,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 430,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 431,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 436,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 437,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 438,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 439,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 443,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 445,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 449,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 450,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 452,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 454,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 464,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 491,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 519,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 529,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 533,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 542,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 545,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 550,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 553,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 560,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 566,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   },
+   {
+    "A1": true,
+    "A2": true,
+    "A3_ydegs": [
+     0,
+     2
+    ],
+    "A4": true,
+    "A4_alg_dim_Wplus": 5,
+    "A4_z_off_X": true,
+    "A5_alg_dim_Wminus": 4,
+    "A5_n_lines_Wminus": 0,
+    "g": 587,
+    "image_group_order_Wminus": 12,
+    "image_group_order_Wplus": 6,
+    "isotypic_dims_Wminus": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "isotypic_dims_Wplus": [
+     1,
+     0
+    ],
+    "n_linear_chars_Wminus": 4,
+    "n_linear_chars_Wplus": 2
+   }
+  ],
+  "single_class": true
+ },
+ "partB": [
+  {
+   "d": 1,
+   "dim_equivariant_space": 13,
+   "minus_ydegs": [
+    1
+   ],
+   "mode": "original-coordinates",
+   "parity_ok": true,
+   "plus_ydegs": [
+    0
+   ],
+   "sigma": 1
+  },
+  {
+   "d": 2,
+   "dim_equivariant_space": 39,
+   "minus_ydegs": [
+    1
+   ],
+   "mode": "original-coordinates",
+   "parity_ok": true,
+   "plus_ydegs": [
+    0,
+    2
+   ],
+   "sigma": 1
+  },
+  {
+   "d": 3,
+   "dim_equivariant_space": 89,
+   "minus_ydegs": [
+    1,
+    3
+   ],
+   "mode": "original-coordinates",
+   "parity_ok": true,
+   "plus_ydegs": [
+    0,
+    2
+   ],
+   "sigma": 1
+  },
+  {
+   "d": 1,
+   "dim_equivariant_space": 13,
+   "minus_ydegs": [
+    1
+   ],
+   "mode": "original-coordinates",
+   "parity_ok": true,
+   "plus_ydegs": [
+    0
+   ],
+   "sigma": 407
+  },
+  {
+   "d": 2,
+   "dim_equivariant_space": 39,
+   "minus_ydegs": [
+    1
+   ],
+   "mode": "original-coordinates",
+   "parity_ok": true,
+   "plus_ydegs": [
+    0,
+    2
+   ],
+   "sigma": 407
+  },
+  {
+   "d": 3,
+   "dim_equivariant_space": 89,
+   "minus_ydegs": [
+    1,
+    3
+   ],
+   "mode": "original-coordinates",
+   "parity_ok": true,
+   "plus_ydegs": [
+    0,
+    2
+   ],
+   "sigma": 407
+  }
+ ]
+}

@@ -1361,6 +1361,17 @@
    "char0_scope": "char0",
    "tracked": "main",
    "notes": "director-replayed 2026-08-05; (1,7) POPULATED char-0 in ALL THREE eigenblocks (Thm N2C-1': 9 witnesses per lambda-block, 27 total; per-block ideals B2^3+9om^j B2+3dl kap = 0, P1^3-(8/9)om^(j+1) kap P1^2+(32/27)kap = 0); primitive m=1; odd r>=7 all populated; UNIFORMIZATION: c = B+B^-1, kap = B^3+B^-3 \u2014 same B-parameter as the D_B families; FIX-N2B-STABILISATION refuted; MSOLVE_PARSER.md landmine documented"
+  },
+  {
+   "path": "goal_runs_after_6519c0b/FIX_H0_GLOBAL_SECTIONS",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-H0-H0-PARTIAL",
+   "superseded_by": null,
+   "char0_scope": "char0",
+   "tracked": "main",
+   "notes": "director-replayed 2026-08-05 (27 checks); Theorems H0-1 (m odd \u2014 every even-m branch globally excluded, unconditional) and H0-2 (pt-sections impossible; D_sigma surjects L_sigma \u2014 forced line sweeps); Note III sec4b corrected (missing plus-plane constraint class; within-triangle gluing discharged; real coupling = cross-V4 through sigma, three transpositions generating S3, ell_V disjoint from L_sigma); uniformization fully confirmed (cubic isogeny tau -> tau^3; (kappa_+ +2)(kappa_- +2) = 27/4; m=1 stalk = 3x3 fibre product); surviving branches: odd rows only"
   }
  ],
  "known_branches": [

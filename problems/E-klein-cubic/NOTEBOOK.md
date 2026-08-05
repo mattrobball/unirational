@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `6519c0b` (2026-08-04; the
+Snapshot metadata — notebook parent head: `8de0a37` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2167,8 +2167,26 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   GB, can report unit ideal for a consistent system — a false-EMPTY
   factory), and 0-byte outputs were being read as non-unit; one FIX-N2b
   sub-result (`λ=ω, B8`) is spurious for that reason (no verdict rested
-  on it). The `H⁰` elimination (FIX-H0) is now dispatchable with the
-  populated stalk list and the holes carried as explicit gates.
+  on it). FIX-H0 landed 2026-08-05
+  (`FIX-H0-H0-PARTIAL`, director-replayed): **the program's first two
+  unconditional global theorems** — H0-1 (plus-plane parity: for ANY
+  equivariant dominant map, `m` is odd at every involution ⇒ the entire
+  even-`m` stalk row is globally excluded, and the `m = 1`
+  classification holes stop gating anything) and H0-2 (point-sections
+  impossible: the σ-exceptional divisor `D_σ` maps ONTO `L_σ` — every
+  hypothetical map is FORCED to sweep every line; direct input to the
+  common-line program). Note III §4b corrected (a missing constraint
+  class — the plus-plane leading half, the only one that removed
+  components; within-triangle gluing already discharged by cell
+  equivariance; the genuine remaining coupling is cross-V4 through each
+  σ — three transpositions generating `S3`, with `ℓ_V ∩ L_σ = ∅`
+  certified on all 55×55). Uniformization fully confirmed: one trace
+  geometry, the `m = 1` branch over the odd-`m` branch under the cubic
+  isogeny `τ ↦ τ³`, with the exact identity `(κ₊+2)(κ₋+2) = 27/4`
+  making the `m = 1` stalk the `3×3` fibre product of the two character
+  surfaces' trace covers. **`H⁰` now reduces to the cross-V4 coupling
+  for exactly two surviving branches** (the `(3,·)` `D_B` family and the
+  `(1, odd r ≥ 7)` primitive Chebyshev branch) — packet FIX-H1.
   Note III (compatibility cosheaf / global CSP on the verified
   arrangement), FIX-B (Burnside shadow). Director finding en route: the
   sealed `verify_kappa_genus2.py` is replay-brittle on sympy 1.14

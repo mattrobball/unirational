@@ -191,6 +191,62 @@ and computable from the table once FIX-N2c lands. The elimination will be
 run at that order, with the order recorded in the packet so the
 computation is replayable.
 
+## 6. Corrections and upgrades after FIX-H0 (2026-08-05)
+
+The FIX-H0 packet (director-replayed) corrected §4b in three places and
+proved the program's first unconditional global theorems:
+
+**Theorem 6.1 (= H0-1, plus-plane parity).** For any equivariant dominant
+`f: P(W) ⇢ X` and every involution `σ`: writing `T⁺ = (a′,b′,u₀′)`,
+`T⁻ = (u₁′,u₂′)` for the halves of the germ along the plus-plane,
+`ord_{P_σ}(T⁻) < ord_{P_σ}(T⁺)`; hence the common plane order `m` is
+**odd**. (σ-parity gives the two halves opposite parities; if the plus
+half led, the exceptional `D_σ ≅ P² × P¹` over the blown-up plus-plane
+would map into `E_σ` — rational into genus 1 forces a constant, which
+must be a `C_G(σ)`-fixed point of `E_σ`, and `Fix(S3, P(W⁺_σ)) = {[triv]}`
+is off `X`.) **Consequence: every even-`m` stalk branch is globally
+excluded, unconditionally** — including the entire `(2, r)` row and the
+`(0,3)` seed. The `m = 1` classification holes (even `r`, `(1,6)` above
+degree 2) cease to gate anything: oddness is robust to undiscovered
+witnesses.
+
+**Theorem 6.2 (= H0-2, forced line surjection).** `x_L = pt` is
+impossible: `D_σ` maps **onto** `L_σ` (a constant image would be a
+`C_G(σ)`-fixed point of `P(W⁻_σ)`, and `W⁻_σ` is `C_G(σ)`-irreducible).
+Every hypothetical map *must* sweep every line — the funnel's rational
+receptors are mandatory, not optional. (Direct input for the common-line
+program: forced line-surjections from the σ-exceptional divisors.)
+
+**Corrections to §4b.** (i) The drafted constraints 1, 3, 6 and the
+within-triangle vertex gluing are already discharged by any populated
+Note-II cell — the cell germ lives at `ℓ_V`, which lies in all three
+plus-planes and is `A₄`-equivariant by construction; the drafted order-8
+within-triangle elimination has no residual content. (ii) The §4b list
+was **missing a constraint class** — the plus-plane leading-half
+constraint of Theorem 6.1, the only constraint that removed stalk
+components; the elliptics are not mere relays. (iii) The genuine
+remaining coupling is **across the three V4's through one σ**: certified
+exactly that `C_G(σ) ∩ N_G(V4) = V4` with the three residual images
+being three distinct transpositions generating `S3`, and that
+`ℓ_V ∩ L_σ = ∅` — so the binding constraint transports the three
+`ℓ_V`-germs into the `σ`-frame along disjoint strata. This is the
+remaining computation (FIX-H1); it was not run in FIX-H0 (no degree
+bound was available).
+
+**Uniformization (task D), fully confirmed.** One trace geometry:
+`(B³−1)²/B³ = B³ + B⁻³ − 2`, the `m = 1` Chebyshev root is
+`c = ω^k B + ω^{−k}B⁻¹`, and the genus-2 reciprocal cover at
+`[p:q] = [1:0]` gives `τ = B^{±3}` — the `m = 1` point sits over the
+odd-`m` point **under the cubic isogeny `τ ↦ τ³`**. The exact Klein
+identity `(κ₊+2)(κ₋+2) = 27/4` makes the second Chebyshev cubic the
+trace-cubic of the *other* character surface; the `m = 1` stalk is the
+fibre product of the two cube-root covers (degree `3×3 = 9`, matching).
+
+**State after FIX-H0.** Surviving stalk branches: the odd rows only —
+the `(3, ·)` `D_B`-family branch (T5 witness and relatives) and the
+`(1, odd r ≥ 7)` primitive Chebyshev branch. `H⁰` reduces to the
+cross-V4 coupling of §(iii) for these two branches.
+
 ## 5. Dependencies and plan
 
 1. **FIX-N2** (in flight): the stalk classification at the line/V4 level —

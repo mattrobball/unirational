@@ -1,0 +1,17 @@
+FIX-H0 producer, Parts A and B
+    group rebuilt from S,T: 660 elements
+--- Part A: exact geometric certificates, all 55 involutions
+    A1  sigma = diag(1,1,1,-1,-1) in the adapted basis   : 55/55
+    A2  F|_{W-} == 0                                     : 55/55
+    A3  F(w+y) has y-degrees in {0,2} only               : 55/55
+    A4  exactly ONE C_G(sigma)-invariant line in W+,
+        and its point z_sigma is OFF X                   : 55/55
+    A5  NO C_G(sigma)-invariant line in W- (two proofs)   : 55/55
+    A6  the 55 involutions form ONE G-conjugacy class     : True
+--- Part B: the parity lemma for sigma-equivariant tuples
+    sigma=  1  d=1 : dim Equiv = 13, y-degrees on the W+-block [0], on the W--block [1]  -> parity OK
+    sigma=  1  d=2 : dim Equiv = 39, y-degrees on the W+-block [0, 2], on the W--block [1]  -> parity OK
+    sigma=  1  d=3 : dim Equiv = 89, y-degrees on the W+-block [0, 2], on the W--block [1, 3]  -> parity OK
+    sigma=407  d=1 : dim Equiv = 13, y-degrees on the W+-block [0], on the W--block [1]  -> parity OK
+    sigma=407  d=2 : dim Equiv = 39, y-degrees on the W+-block [0, 2], on the W--block [1]  -> parity OK
+    sigma=407  d=3 : dim Equiv = 89, y-degrees on the W+-block [0, 2], on the W--block [1, 3]  -> parity OK

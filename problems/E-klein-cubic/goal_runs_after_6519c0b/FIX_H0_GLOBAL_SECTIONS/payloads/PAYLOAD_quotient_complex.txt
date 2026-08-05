@@ -1,0 +1,10 @@
+FIX-H0 producer, Part E: quotient-complex bookkeeping
+    E1  Stab_G(L_sigma) = C_G(sigma), |.| = 12 : 55/55
+    E2  number of V4 subgroups : 55
+    E2  C_G(sigma) cap N_G(V4) = V4 for each of the 3 V4s through
+        sigma; their 3 images are distinct order-2 subgroups of the
+        residual S3 and GENERATE it : 55/55
+    E3  ell_V cap L_sigma = empty for all 55x55 pairs : True
+    E4  the 3 isolated V4-points lie ON X (type-I vertices) and the
+        2 A4-fixed points of ell_V lie OFF X (so X^{A4} = empty and
+        the 3 type-II points form a FREE C3-orbit) : 55/55
