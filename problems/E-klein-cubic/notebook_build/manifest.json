@@ -1360,7 +1360,7 @@
    "superseded_by": null,
    "char0_scope": "char0",
    "tracked": "main",
-   "notes": "director-replayed 2026-08-05; (1,7) POPULATED char-0: primitive m=1 witness, Chebyshev-cut parameter locus deg 9 over Q(om,kappa+); odd r>=7 all populated; FIX-N2B-STABILISATION refuted; MSOLVE_PARSER.md landmine documented (qq-mode parenthesised coefficients silently mis-parsed; 0-byte outputs must error)"
+   "notes": "director-replayed 2026-08-05; (1,7) POPULATED char-0 in ALL THREE eigenblocks (Thm N2C-1': 9 witnesses per lambda-block, 27 total; per-block ideals B2^3+9om^j B2+3dl kap = 0, P1^3-(8/9)om^(j+1) kap P1^2+(32/27)kap = 0); primitive m=1; odd r>=7 all populated; UNIFORMIZATION: c = B+B^-1, kap = B^3+B^-3 \u2014 same B-parameter as the D_B families; FIX-N2B-STABILISATION refuted; MSOLVE_PARSER.md landmine documented"
   }
  ],
  "known_branches": [

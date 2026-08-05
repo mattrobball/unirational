@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `5d3af6c` (2026-08-04; the
+Snapshot metadata — notebook parent head: `6519c0b` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2149,9 +2149,15 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   cone contains plane-order-1 points in characteristic zero — an explicit
   closed-form primitive `m = 1` family whose parameter locus is cut by
   the Chebyshev cubics `c³−3c = κ₊+2`, `v³−3v = −27/(4(κ₊+2))`
-  (`dim 0, deg 9` over `Q(ω, κ₊)`), corroborated by three split primes,
-  msolve-over-QQ, numerics, and a from-scratch engine rebuild; invariant
-  `q`-multiplication populates every odd `r ≥ 7`. `FIX-N2B-STABILISATION`
+  (`dim 0, deg 9` over `Q(ω, κ₊)` — refined by the packet's Thm N2C-1′:
+  populated in ALL THREE eigenblocks, 9 witnesses per `λ`-block, 27
+  total, with clean per-block Chebyshev ideals), corroborated by three
+  split primes, msolve-over-QQ, numerics, and a from-scratch engine
+  rebuild; invariant `q`-multiplication populates every odd `r ≥ 7`.
+  **Uniformization fact for the CSP:** `c = B + B⁻¹`, `κ = B³ + B⁻³` —
+  the primitive branch shares the `D_B` families' `B`-parameter: all
+  stalk branches live on one reciprocal `B`-cover (FIX-H0 task D
+  half-answered at the parameter level). `FIX-N2B-STABILISATION`
   is FALSE; packet-§6 exclusion (i) does NOT close; the cosheaf gains a
   primitive `m = 1` stalk branch no construction predicted. Remaining
   holes ((1,6) above line degree 2; even `r ≥ 8`) only ADD components:
