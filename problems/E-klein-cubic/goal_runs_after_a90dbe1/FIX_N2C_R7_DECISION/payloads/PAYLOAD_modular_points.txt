@@ -1,0 +1,43 @@
+FIX-N2C  PAYLOAD 2 -- reproduction of the FIX-N2B r=7 alarm: the nine
+explicit plane-order-1 points of the lam = 1 block over F_100057 (om=1140, kp=74361),
+in the chart B5 = 1.  Each row satisfies all 18 orbit-reduced cubics (re-checked
+by direct substitution, decode_param.py).
+
+  P0       P1       R0       R1       B0       B1       B2       B3       B4       B6       B7       B8       B5     
+  60963    85016    20308    36993    81272    100056   72819    37572    27238    59319    3166     18785    1      
+  79535    27233    98933    72107    78412    100056   39383    43292    60674    79128    77694    21645    1      
+  60609    71741    16622    61886    77232    100056   92641    45652    7416     43661    10744    22825    1      
+  52460    91739    23914    77162    76375    100056   81778    47366    18279    7530     45161    23682    1      
+  33348    50031    29548    97207    62897    100056   38611    74322    61446    15715    10020    37160    1      
+  37887    25907    5583     82892    43471    100056   56585    13117    43472    34728    52212    56586    1      
+  11498    66443    12891    98186    24390    100056   48426    51279    51631    59874    88961    75667    1      
+  58010    61769    52873    23468    10827    100056   44323    78405    55734    25646    96063    89230    1      
+  51437    28050    57355    41240    8736     100056   1936     82587    98121    39502    78025    91321    1      
+
+The nine points span only a 3-dimensional affine subspace; the nine exact
+linear relations (verified in char 0 by producing the witness) are
+
+   R0 =  om B5 - om^2 P0        B1 = -B5
+   R1 = -om P1                  B3 = -2 om B5 - (2om+4) P0   ( = 2(B5+B8) )
+   B0 = -om^2 B5 - (om^2-1) P0  B4 = -B2
+   B6 =  om B5 - (om^2-1)P0 - (om^2+2)P1
+   B7 =  om B5 - (om^2-1)P0 - (om-1) P1
+   B8 =  om^2 B5 + (om^2-1) P0  ( = -B0 )
+
+MULTI-PRIME CONSISTENCY (msolve -g 1 on the B5 = 1 system, lam = 1).
+All three split primes give the IDENTICAL 20-element leading ideal,
+dimension 0, degree 10:
+
+   p = 100057    (FIX-N2B's prime)   659 s  [FIX-N2B] / re-run here
+   p = 100153                       1458 s
+   p = 1048609                      1489 s
+
+   staircase:  B3, B2, B1, B0, R1, R0, P1, P0,
+               B6*B8, B6*B7, B4*B7, B6^2, B4*B6,
+               B8^3, B7*B8^2, B4*B8^2, B7^2*B8, B4^2*B8, B7^3, B4^3
+
+The eight degree-one leading monomials are what revealed the linear structure:
+grevlex is a graded order, so a degree-one leading monomial in a REDUCED
+Groebner basis forces the whole basis element to be affine-linear.  Degree 10
+here versus degree 9 for the reduced locus: the msolve parametrization's
+eliminant has degree 9 (nine distinct points); the tenth is multiplicity.

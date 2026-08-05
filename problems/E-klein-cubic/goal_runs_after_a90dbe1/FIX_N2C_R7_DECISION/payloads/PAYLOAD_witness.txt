@@ -1,0 +1,58 @@
+FIX-N2C  PAYLOAD 1 -- the exact (m,r) = (1,7) plane-order-1 witness
+==========================================================================
+
+Ground field  K = QQ(om, kp),  om^2 + om + 1 = 0,  8 kp^2 - 13 kp - 4 = 0,
+kp = kp+ = (13 + 3 sqrt 33)/16  (packet sign convention).
+Abbreviations   kap := kp + 2   ( = B^3 + B^-3 , (B^3-1)^2/B^3 = kp )
+                dl  := 2 om + 1 = om - om^2 ,  dl^2 = -3 .
+
+Adjoin two elements, each of degree 3 over K:
+
+     c^3 - 3 c - kap = 0                             (so c = z + 1/z, z^3 = B^3;
+                                                      c in { B+1/B, omB+om^2/B, om^2B+om/B })
+     27 P1^3 - 24 om kap P1^2 + 32 kap = 0           (equivalently v^3-3v = -27/(4 kap),
+                                                      P1 = 2 om / v)
+
+There are 3 x 3 = 9 such pairs (c, P1); each gives a witness.
+
+BLOCK COORDINATES  (residual-C3 scalar lam = 1, normalisation P0 = 1):
+
+     P0  = 1
+     P1  = P1
+     R0  = -P1*c*(om + 1)/2
+     R1  = -P1*om
+     B0  = -(P1*c - 2*om - 2)/2
+     B1  = -om*(P1*c + 2)/2
+     B2  = c*(2*om + 1)
+     B3  = P1*c*om + P1*c - 2
+     B4  = -c*(2*om + 1)
+     B5  = om*(P1*c + 2)/2
+     B6  = -(P1*c*om + P1*c - 2*P1*om + 2*P1 - 2)/2
+     B7  = -(P1*c*om + P1*c + 2*P1*om - 2*P1 - 2)/2
+     B8  = (P1*c - 2*om - 2)/2
+
+THE TUPLE  T = (a', b', u0', u1', u2')  as polynomials in x,y,z:
+
+     a' =
+        x*y*z*(P1*om*x**2*z**2 - P1*om*y**2*z**2 + P1*x**2*y**2 - P1*y**2*z**2 - om*y**4 + om*z**4 + x**4 - y**4)
+
+     b' =
+        -P1*x*y*z*(c*om*x**4 - c*om*z**4 + c*x**4 - c*y**4 + 2*om*x**2*y**2 - 2*om*y**2*z**2 + 2*x**2*z**2 - 2*y**2*z**2)/2
+
+     u0' =
+        -x*(P1*c*om*x**4*z**2 - 2*P1*c*om*x**2*y**2*z**2 - P1*c*om*y**6 + P1*c*om*y**4*z**2 + P1*c*om*y**2*z**4 + P1*c*x**4*y**2 - 2*P1*c*x**2*y**2*z**2 + P1*c*y**4*z**2 + P1*c*y**2*z**4 - P1*c*z**6 - 2*P1*om*y**4*z**2 + 2*P1*om*y**2*z**4 + 2*P1*y**4*z**2 - 2*P1*y**2*z**4 - 4*c*om*x**2*y**4 + 4*c*om*x**2*z**4 - 2*c*x**2*y**4 + 2*c*x**2*z**4 - 2*om*x**4*y**2 + 2*om*x**4*z**2 - 2*om*y**6 + 2*om*z**6 - 2*x**4*y**2 + 4*x**2*y**2*z**2 - 2*y**4*z**2 - 2*y**2*z**4 + 2*z**6)/2
+
+     u1' =
+        y*(-P1*c*om*x**4*z**2 - P1*c*om*x**2*y**4 + 2*P1*c*om*x**2*y**2*z**2 - P1*c*om*x**2*z**4 + P1*c*om*z**6 + P1*c*x**6 - P1*c*x**4*z**2 + 2*P1*c*x**2*y**2*z**2 - P1*c*x**2*z**4 - P1*c*y**4*z**2 - 2*P1*om*x**4*z**2 + 2*P1*om*x**2*z**4 + 2*P1*x**4*z**2 - 2*P1*x**2*z**4 - 4*c*om*x**4*y**2 + 4*c*om*y**2*z**4 - 2*c*x**4*y**2 + 2*c*y**2*z**4 - 2*om*x**6 - 2*om*x**2*y**4 + 2*om*y**4*z**2 + 2*om*z**6 - 2*x**6 + 2*x**4*z**2 - 4*x**2*y**2*z**2 + 2*x**2*z**4 + 2*y**4*z**2)/2
+
+     u2' =
+        z*(P1*c*om*x**6 - P1*c*om*x**4*y**2 - P1*c*om*x**2*y**4 + 2*P1*c*om*x**2*y**2*z**2 - P1*c*om*y**2*z**4 - P1*c*x**4*y**2 - P1*c*x**2*y**4 + 2*P1*c*x**2*y**2*z**2 - P1*c*x**2*z**4 + P1*c*y**6 + 2*P1*om*x**4*y**2 - 2*P1*om*x**2*y**4 - 2*P1*x**4*y**2 + 2*P1*x**2*y**4 + 4*c*om*x**4*z**2 - 4*c*om*y**4*z**2 + 2*c*x**4*z**2 - 2*c*y**4*z**2 + 2*om*x**6 + 2*om*x**2*z**4 - 2*om*y**6 - 2*om*y**2*z**4 + 2*x**4*y**2 + 2*x**2*y**4 - 4*x**2*y**2*z**2 + 2*x**2*z**4 - 2*y**6)/2
+
+PROPERTIES (all verified exactly in characteristic zero, witness.py):
+     F(T) = 0                        (raw Klein normal form, all 52 coefficient equations)
+     psi(T) = g(T)                   (residual C3, lam = 1)
+     ord_R(T) = 7                    (triple-line order exactly 7)
+     (ord_P1, ord_P2, ord_P3) = (1,1,1)   ==>  m = 1 exactly
+     a' != 0  and  b' != 0           (outside the D_B class and its mirror)
+     gcd(a',b',u0',u1',u2') = 1       (primitive)
+     line degree 0                   (pointwise tuple)

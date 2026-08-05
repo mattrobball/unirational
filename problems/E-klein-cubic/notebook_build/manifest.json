@@ -1350,6 +1350,17 @@
    "char0_scope": "mixed",
    "tracked": "main",
    "notes": "director-replayed 2026-08-05 (25 checks); m=2 row fully decided (Thm N2B-3: (2,r) populated all r>=6); (1,6) classified char-0 with no PO-1 cone point, open above line degree 2; Specialisation Lemma provably cannot decide (1,>=7); FIX-N2B-STABILISATION conjecture (would empty the m=1 row); ALARM: modular-only PO-1 points suggested in the (1,7) cone at p=100057 \u2014 NOT promoted (ledger rule), decider FIX-N2c dispatched"
+  },
+  {
+   "path": "goal_runs_after_a90dbe1/FIX_N2C_R7_DECISION",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-N2C-M1-R7-POPULATED",
+   "superseded_by": null,
+   "char0_scope": "char0",
+   "tracked": "main",
+   "notes": "director-replayed 2026-08-05; (1,7) POPULATED char-0: primitive m=1 witness, Chebyshev-cut parameter locus deg 9 over Q(om,kappa+); odd r>=7 all populated; FIX-N2B-STABILISATION refuted; MSOLVE_PARSER.md landmine documented (qq-mode parenthesised coefficients silently mis-parsed; 0-byte outputs must error)"
   }
  ],
  "known_branches": [

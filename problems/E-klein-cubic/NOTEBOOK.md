@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `a90dbe1` (2026-08-04; the
+Snapshot metadata — notebook parent head: `5d3af6c` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2144,8 +2144,25 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   5.1: every `f` induces a CSP solution, constraint by constraint;
   `H⁰ = ∅ ⇒` negative headline via [E37]/[E16]; converse not claimed) and
   the working-order recipe fixed (finite, from the cell table once
-  FIX-N2c lands). Remaining before the `H⁰` run: FIX-N2c's verdict
-  only.
+  FIX-N2c lands). **FIX-N2c landed 2026-08-05: THE ALARM
+  WAS REAL** (`FIX-N2C-M1-R7-POPULATED`, director-replayed): the `(1,7)`
+  cone contains plane-order-1 points in characteristic zero — an explicit
+  closed-form primitive `m = 1` family whose parameter locus is cut by
+  the Chebyshev cubics `c³−3c = κ₊+2`, `v³−3v = −27/(4(κ₊+2))`
+  (`dim 0, deg 9` over `Q(ω, κ₊)`), corroborated by three split primes,
+  msolve-over-QQ, numerics, and a from-scratch engine rebuild; invariant
+  `q`-multiplication populates every odd `r ≥ 7`. `FIX-N2B-STABILISATION`
+  is FALSE; packet-§6 exclusion (i) does NOT close; the cosheaf gains a
+  primitive `m = 1` stalk branch no construction predicted. Remaining
+  holes ((1,6) above line degree 2; even `r ≥ 8`) only ADD components:
+  they gate a negative `H⁰` verdict, not a positive one. **Toolchain
+  landmine (repo-wide, memory + MSOLVE_PARSER.md):** msolve 0.10.1
+  silently mis-parses parenthesised qq-mode coefficients (exit 0, wrong
+  GB, can report unit ideal for a consistent system — a false-EMPTY
+  factory), and 0-byte outputs were being read as non-unit; one FIX-N2b
+  sub-result (`λ=ω, B8`) is spurious for that reason (no verdict rested
+  on it). The `H⁰` elimination (FIX-H0) is now dispatchable with the
+  populated stalk list and the holes carried as explicit gates.
   Note III (compatibility cosheaf / global CSP on the verified
   arrangement), FIX-B (Burnside shadow). Director finding en route: the
   sealed `verify_kappa_genus2.py` is replay-brittle on sympy 1.14
