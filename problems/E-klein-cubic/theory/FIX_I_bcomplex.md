@@ -210,18 +210,50 @@ every stratum of `𝔽(X)` on one model is RCC, then every stratum of `𝔽_b(X)
 on every model is RCC.**
 
 **Corollary 4.4 (linear sources funnel into the rational part of the
-target).** Let `X = P(W)` with a linear `G`-action. Every stratum of
-`𝔽(P(W))` is a linear subspace `P(W^χ-part)`, hence RCC; by Lemma 4.3 so is
-every stratum on every model. Therefore, for **any** equivariant dominant
-`f: P(W) ⇢ Y` and every `H ≠ 1` and every component `F` of every model's
-`H`-fixed locus:
+target) — SCOPE-CORRECTED 2026-08-05, see the correction block below.**
+Let `X = P(W)` with a linear `G`-action. Every stratum of `𝔽(P(W))` is a
+linear subspace `P(W^χ-part)`, hence RCC; by Lemma 4.3 so is every stratum
+on every **stabilizer-stratified model** (see below). Therefore, for
+**any** equivariant dominant `f: P(W) ⇢ Y`, every `H ≠ 1`, and every
+component `F` of the `H`-fixed locus of any stabilizer-stratified model:
 
 ```
 q̃(F) is a point of Y^H, or an RCC subvariety of a rational-curve-containing
 component of Y^H.
 ```
 
-In particular, all genus-≥ 1 components of all `Y^H` are hit only in points.
+In particular, all genus-≥ 1 components of all `Y^H` are hit only in
+points **by such strata**.
+
+> **Correction I-C (director, 2026-08-05; prompted by A. Duncan's notes
+> "Obstructions to equivariant rational maps",
+> `external_docs/duncan_higher_obstruction_20260805.tex`).** Lemma 4.3's
+> boxed consequence — and hence the original "every model" quantifier of
+> Cor 4.4 and Cor 5.2 — is FALSE for arbitrary equivariant models. The
+> per-blowup statement of Lemma 4.3 is correct as written (`P(N^χ)` is a
+> bundle over `F_Z`, RCC **whenever `F_Z` is**), but the induction only
+> closes when each center's fixed part `F_Z` is itself RCC — automatic
+> when centers are (unions of components of) strata of the running model
+> (**stabilizer-stratified towers**, = Duncan Def. 6.3, whose Lemma 6.4
+> is the same propagation), and false in general. Two counterexamples:
+> (i) Duncan's (remark after his Prop. 3.12): an involution with isolated
+> `(−1,−1,−1)` point; blow up the point, then a smooth plane quartic in
+> the exceptional `P²` — a genus-3 fixed component appears in one fibre.
+> (ii) In-house, sharper: on `P(W)` itself blow up the `G`-orbit of a
+> generic quartic curve `C ⊂ P_σ` (55 disjoint smooth quartics, a legal
+> smooth `G`-stable center); over `C` the exceptional `P(N)` has σ-fixed
+> part `{point} ⊔ P¹` fibrewise, whose point-part is a **section
+> isomorphic to `C`** — a genus-3 stratum of `𝔽_b(P(W))` on a legitimate
+> model. Consequences audited 2026-08-05: Thm 2.1, Thm 4.1, Lem 4.2,
+> the per-blowup half of Lem 4.3, the gate T1–T5, FIX-H0/N2/H1 (all
+> jet-theoretic, resolution-free) are untouched; Cor 4.4/5.2 hold on the
+> stabilizer-stratified cofinal class (which suffices for every use made
+> of them in T1/T2, whose towers blow up orbit-strata only); Note III §1's
+> site justification is re-based on H0-2 (see the correction there). The
+> fibre-based repair for arbitrary models is exactly Duncan's machinery
+> (his Thm 3.10 + Prop 3.24 need no stratum-global RCC — only tree fibres
+> over codim-2 strata, fabulousness, and rationality of the base stratum
+> on one good resolution); import registered in the notebook.
 
 **First-order decoration constraint (the door to Note II).**
 

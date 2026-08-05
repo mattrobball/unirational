@@ -1,0 +1,1552 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amssymb,amsmath,amsthm} % standard AMS headers
+\usepackage{stmaryrd} % some handy math symbols
+
+\usepackage{enumitem} % ability to reference enumerations
+\setenumerate{label=(\alph*), font=\normalfont}
+\usepackage[all]{xy} % xy-pic
+
+\usepackage{multirow} % makes tables better
+\usepackage{tabu}
+\tabulinesep=1.2mm
+
+
+
+% theorem styles (I like everything to have the same counter)
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{note}[theorem]{Note}
+\newtheorem{case}[theorem]{Case}
+
+% some numbering settings
+\numberwithin{equation}{section}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\title{Obstructions to equivariant rational maps}
+
+\author{Alexander Duncan}
+\author{Various AI Assistants}
+
+\maketitle
+
+\section{Conventions}
+
+Throughout $G$ is a finite groups.  All varieties are considered over
+$\mathbb{C}$.  If $X$ is a $G$-variety, then $X_{nt}$ is the closed
+subvariety whose points have non-trivial stabilizers.
+
+\section{Toroidal forms and resolutions}
+
+Suppose $X$ is smooth projective variety with a faithful action
+of a finite group $G$. 
+
+If $W \subseteq X$ is an irreducible closed subvariety, we write
+\[
+G_W := \{ g \in G \mid W \subseteq X^g \}
+\]
+for the \emph{generic stabilizer} of $W$.  Since $W$ is irreducible and
+$G$ is finite, $G_W$ is the stabilizer of a general point of $W$; indeed
+$W = \cup_{g} (W \cap X^g)$ is a finite union of closed subsets, so a
+general point of $W$ lies in $X^g$ only for those $g$ with $W \subseteq X^g$.
+
+\begin{definition} \label{def:toroidal}
+Let $X$ be a smooth projective variety with a faithful action of $G$ and let
+$D = D_1 \cup \cdots \cup D_n$ be a $G$-stable divisor with distinct
+irreducible components $D_i$.  We say $X$ is in \emph{toroidal form} with
+respect to $D$ if
+\begin{enumerate}
+\item for every $I \subseteq \{1,\ldots,n\}$ the intersection
+$D_I := \cap_{i \in I} D_i$ is either empty or a smooth irreducible
+subvariety of codimension exactly $|I|$; in particular $D$ has simple normal
+crossings;
+\item $X_{nt} \subseteq D$; and
+\item for every $x \in X$, writing $I(x) := \{ i \mid x \in D_i \}$, the
+stabilizer $G_x$ preserves each $D_i$ with $i \in I(x)$, and the resulting
+representation of $G_x$ on $\oplus_{i \in I(x)} (T_xX/T_xD_i)$ is faithful.
+\end{enumerate}
+\end{definition}
+
+Condition (c) says that $G_x$ is abelian of rank at most $|I(x)|$, and that
+in suitable local analytic coordinates at $x$ the group $G_x$ acts
+diagonally, with the branches of $D$ through $x$ being coordinate
+hyperplanes.  Since we work over $\mathbb{C}$, the finite abelian group $G_x$
+is diagonalizable, and condition (c) says precisely that $G_x$ acts
+toroidally on the local model at $x$ in the sense of
+\cite{AbramovichTemkin}; note that $G$ itself need not be diagonalizable, so
+the results of \emph{loc.\ cit.} do not apply to the $G$-action directly.
+
+\begin{theorem} \label{thm:toroidal_resolution}
+If $X$ is a smooth projective variety with a faithful action of $G$, then
+there is an equivariant proper birational morphism $\pi : Z \to X$, obtained
+by a sequence of equivariant blowups at smooth centers, and a divisor
+$D \subseteq Z$ containing $\pi^{-1}(X_{nt})$, such that $Z$ is in toroidal
+form with respect to $D$.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1: divisorialification.}
+Let $\mathcal{X} := [X/G]$.  Since $G$ is finite and we are in characteristic
+zero, $\mathcal{X}$ is a smooth separated Deligne--Mumford stack with finite
+inertia and tame stabilizers, so $(\mathcal{X},\emptyset)$ is a standard pair
+over $\mathrm{Spec}\, \mathbb{C}$ in the sense of
+\cite[Definition~3.5]{BerghRydh}.  Apply
+\cite[Theorem~A]{BerghRydh} to it: there is a smooth \emph{ordinary} blow-up
+sequence
+\[
+\Pi : (\mathcal{Y},\mathcal{E}) \to (\mathcal{X},\emptyset)
+\]
+such that $\mathcal{Y}$ admits a rigidification $r : \mathcal{Y} \to
+\mathcal{Y}_{\mathrm{rig}}$ whose geometric stabilizers are diagonalizable and
+trivial outside $r(\mathcal{E})$.  Because $G$ acts faithfully, $\mathcal{X}$
+is generically an algebraic space and the rigidification is trivial,
+$\mathcal{Y}_{\mathrm{rig}} = \mathcal{Y}$.
+
+Blowups are representable, so this sequence is nothing other than a sequence
+of $G$-equivariant blowups at smooth $G$-invariant centers
+$\pi_1 : X_1 \to X$ with $\mathcal{Y} = [X_1/G]$, and $\mathcal{E}$ is the
+exceptional divisor of $\Pi$; let $D \subseteq X_1$ be its preimage in $X_1$,
+a $G$-stable simple normal crossing divisor each of whose irreducible
+components is smooth.  The conclusion of \cite[Theorem~A]{BerghRydh} says
+that every stabilizer $G_x$, $x \in X_1$, is diagonalizable --- hence abelian,
+as $G$ is finite --- and is trivial for $x \notin D$.  This is condition (b).
+
+Moreover $D \supseteq \pi_1^{-1}(X_{nt})$.  Indeed, every irreducible
+component of $\pi_1^{-1}(X_{nt})$ is either a component of the exceptional
+divisor, and so lies in $D$, or the strict transform $W'$ of a component $W$
+of $X_{nt}$; in the latter case the generic stabilizer of $W'$ contains that
+of $W$ and is therefore nontrivial, so $W' \subseteq D$ by (b).
+
+\emph{Step 2: local structure.}
+By Step 1 the complement $\mathcal{Y} \setminus \mathcal{E}$ is an algebraic
+space, so \cite[Theorem~C]{BerghRydh} applies to the standard pair
+$(\mathcal{Y},\mathcal{E})$: the stabilizer of a geometric point $x$ of
+$|\mathcal{E}|$ is $U \rtimes \Delta$ with $U$ unipotent and $\Delta$
+diagonalizable, and if $n$ components of $\mathcal{E}$ pass through $x$ then
+the induced representation $\Delta \to \mathbb{G}_m^n$ is faithful.  As $G$ is
+finite, $U = 1$ and $G_x = \Delta$.  Each component of $\mathcal{E}$ pulls
+back to a smooth $G$-invariant divisor on $X_1$, which therefore has a single
+branch through $x$; so $n = |I(x)|$, the components $D_i$ with $i \in I(x)$
+are $G_x$-stable, and $\mathbb{G}_m^n$ is the product of the actions on the
+normal lines $T_xX_1/T_xD_i$.  This is condition (c).
+
+(Alternatively, Steps 1 and 2 may be replaced by
+\cite[Corollary~3.6]{ReichsteinYoussin}, which puts $X_1$ in standard form
+with respect to a normal crossing divisor $D \supseteq \pi_1^{-1}(X_{nt})$,
+together with \cite[Theorem~4.1 and Remark~4.4]{ReichsteinYoussin}, of which
+\cite[Theorem~C]{BerghRydh} is a generalization.  That route is more
+elementary but uses canonical resolution of singularities
+\cite{BierstoneMilman, Wlodarczyk, Kollar}, whereas
+\cite[Theorem~A]{BerghRydh} does not, and is functorial and valid over an
+arbitrary base.  For abelianness of the stabilizers alone one may also invoke
+\cite{BorisovGunnells}.)
+
+Linearizing the $G_x$-action at $x$, we may choose local analytic coordinates
+$u_1, \ldots, u_d$ at $x$ in which $G_x$ acts diagonally and the branches of
+$D$ through $x$ are the hyperplanes $\{u_i = 0\}$, $i \in I(x)$.  We record
+the following consequence: \emph{if $C \subseteq X_1$ is a smooth
+$G$-invariant closed subvariety which is, locally at each of its points, an
+intersection of branches of $D$, then the blowup of $X_1$ along $C$, with $D$
+replaced by the total transform, again satisfies (b) and (c).}  Indeed the
+blowup is toric in the above coordinates, so on each chart the group $G_x$
+again acts diagonally with the branches of the new divisor as coordinate
+hyperplanes; if $y$ lies over $x$ then $G_y$ is the subgroup of $G_x$ acting
+trivially on those coordinates that do not vanish at $y$, and $G_y$ acts
+faithfully on the remaining ones because $G_x$ acts faithfully on
+$T_xX_1$.  Condition (b) persists because
+$(X_1')_{nt} \subseteq \sigma^{-1}((X_1)_{nt})$ for any equivariant
+$\sigma : X_1' \to X_1$.
+
+\emph{Step 3: irreducible strata.}
+It remains to arrange (a).  Call a nonempty intersection $D_I$ \emph{bad} if
+it is not irreducible of codimension $|I|$.  Since $D$ has normal crossings,
+each $D_I$ is smooth, so its irreducible components are exactly its connected
+components, and they are pairwise disjoint.  Let $W$ be a connected component
+of a bad $D_I$ of minimal dimension and let $C$ be the union of the
+$G$-translates of $W$; as distinct connected components of $D_I$ are
+disjoint, $C$ is a smooth closed $G$-invariant subvariety which locally is an
+intersection of branches of $D$.  Blow up $C$ and replace $D$ by the total
+transform.  By Step 2 the properties (b) and (c) persist.  The strict
+transforms of the $D_i$ with $i \in I$ are disjoint over $C$, so the
+components of $C$ no longer occur in the corresponding intersections; the
+remaining strata are blowups of the old strata along smooth centers, hence
+have the same number of components; and every new stratum contained in the
+exceptional divisor is a projective subbundle of $\mathbb{P}(N_{C})$ over a
+component of $C$, hence irreducible of the expected codimension.  Thus the
+number of bad strata drops, and iterating we reach a divisor satisfying (a).
+(This is the wonderful blowup of the arrangement of strata of $D$ in the
+sense of \cite{DeConciniProcesi, MacPhersonProcesi, LiLi}, performed one
+$G$-orbit at a time.)
+
+Finally, all of the above blowups have smooth $G$-invariant centers, and $X$
+is projective, so their composition $\pi : Z \to X$ is projective and
+birational.
+\end{proof}
+
+A morphism $\pi : Z \to X$ as in Theorem~\ref{thm:toroidal_resolution}
+is called a \emph{toroidal resolution}.
+
+\begin{corollary} \label{cor:cofinal}
+The collection of toroidal resolutions of $X$ is cofinal in the category
+of all equivariant proper birational morphisms $\rho : Z \to X$.
+\end{corollary}
+
+\begin{proof}
+Let $\rho : Z \to X$ be an equivariant proper birational morphism; we must
+produce a toroidal resolution $\pi : W \to X$ factoring through $\rho$.
+
+First we reduce to the case where $\rho$ is projective.  By the equivariant
+form of Chow's lemma there is an equivariant projective birational
+$Z' \to Z$ with $Z' \to X$ projective (one may take the $G$-orbit of a
+Chow lemma modification, using \cite{Sumihiro} to linearize); replacing $Z$
+by $Z'$ only makes the factorization harder.
+
+So assume $\rho$ is projective and birational.  Then $Z$ is the blowup of $X$
+along a coherent sheaf of ideals $\mathcal{I}$
+\cite[Theorem~II.7.17]{Hartshorne}, and since the construction of
+$\mathcal{I}$ from $\rho$ is canonical, $\mathcal{I}$ is $G$-invariant.  By
+canonical principalization \cite[Theorem~1.10]{BierstoneMilman} (see also
+\cite{Wlodarczyk} and \cite[Theorem~3.26]{Kollar}) there is a sequence of
+blowups $\sigma : X' \to X$ with smooth centers such that
+$\mathcal{I} \cdot \mathcal{O}_{X'}$ is invertible; canonicity makes the
+centers $G$-invariant, so $\sigma$ is equivariant.  By the universal
+property of blowing up, $\sigma$ factors as $X' \to Z \to X$.
+
+Now apply Theorem~\ref{thm:toroidal_resolution} to $X'$ to obtain a sequence
+of equivariant blowups at smooth centers $\tau : W \to X'$ with $W$ in
+toroidal form.  The composition $\pi = \sigma \circ \tau : W \to X$ is again
+a sequence of equivariant blowups at smooth centers, hence a toroidal
+resolution of $X$, and it factors through $\rho$ by construction.
+\end{proof}
+
+\section{Fabulous intersections}
+
+Throughout this section $X$ is a smooth projective variety in toroidal
+form with respect to a $G$-stable divisor $D = D_1 \cup \cdots \cup D_n$,
+and we assume in addition that
+\[
+G_{D_i} \neq 1 \quad \text{for every } i ,
+\]
+that is, we discard from the list those components of $D$ with trivial
+generic stabilizer.  For $I \subseteq \{1,\ldots,n\}$ we continue to write
+$D_I = \cap_{i \in I} D_i$; by Definition~\ref{def:toroidal}(a) this is
+either empty or smooth and irreducible of codimension $|I|$.  Only
+condition (a) of Definition~\ref{def:toroidal} is used in the main theorem;
+the toroidal form enters through Corollary~\ref{cor:cofinal} and in the
+examples.
+
+If $\pi : W \to X$ is a proper birational morphism and $V \subseteq X$ is
+an irreducible closed subvariety not contained in the locus over which
+$\pi$ fails to be an isomorphism, we write $\widetilde{V} \subseteq W$ for
+its \emph{strict transform}, that is, the closure of $\pi^{-1}(V \cap U)$
+where $U$ is the largest open set over which $\pi$ is an isomorphism.
+Since $X$ is smooth, $\pi$ is an isomorphism outside a closed subset of
+codimension at least $2$, so $\widetilde{D_i}$ is defined for every $i$.
+
+\begin{lemma} \label{lem:fabulous_basics}
+Let $\pi : W \to X$ be an equivariant proper birational morphism.
+\begin{enumerate}
+\item If $\varphi : W \to Y$ is any $G$-equivariant morphism of
+$G$-varieties then $\varphi(W_{nt}) \subseteq Y_{nt}$.
+\item $\widetilde{D_i} \subseteq W_{nt}$ for every $i$.
+\item For every $x \in D_i$ the intersection $\widetilde{D_i} \cap
+\pi^{-1}(x)$ is non-empty and connected, and $\pi^{-1}(x)$ is connected.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) If $w \in W_{nt}$ and $1 \neq g \in G_w$ then $g$ fixes $\varphi(w)$,
+so $\varphi(w) \in Y_{nt}$.
+
+(b) The subgroup $G_{D_i}$ acts trivially on $D_i$, hence trivially on the
+open subset of $\widetilde{D_i}$ on which $\pi$ is an isomorphism onto its
+image.  As $\widetilde{D_i}$ is a reduced separated scheme and this open set
+is dense, $G_{D_i}$ acts trivially on all of $\widetilde{D_i}$.  Since
+$G_{D_i} \neq 1$ by assumption, $\widetilde{D_i} \subseteq W_{nt}$.
+
+(c) The morphisms $\pi : W \to X$ and $\pi|_{\widetilde{D_i}} :
+\widetilde{D_i} \to D_i$ are proper and birational with irreducible source
+and normal target, so in both cases the pushforward of the structure sheaf
+is the structure sheaf of the target; Zariski's main theorem gives
+surjectivity and connectedness of the fibres.
+\end{proof}
+
+\begin{definition} \label{def:fabulous}
+Let $I \subseteq \{1,\ldots,n\}$ be non-empty with $D_I \neq \emptyset$.
+We say that $D_I$ is \emph{fabulous} if for every equivariant proper
+birational morphism $\pi : W \to X$ from a variety $W$ there is a dense
+open subset $U \subseteq D_I$ such that, for every $x \in U$, the fibre
+\[
+\pi^{-1}(x) \cap W_{nt}
+\]
+has a connected component containing $\widetilde{D_i} \cap \pi^{-1}(x)$
+for every $i \in I$.
+\end{definition}
+
+Note that the open set $U$ is allowed to depend on $\pi$; the condition is
+one about a \emph{general} point of $D_I$, not about all of
+$\pi^{-1}(D_I)$.  This is essential: the total space $\pi^{-1}(D_I) \cap
+W_{nt}$ always has a component meeting $\widetilde{D_i}$ as soon as
+$D_I \cap X_{nt} \neq \emptyset$, so the corresponding condition on
+$\pi^{-1}(D_I)$ carries no information.
+
+\begin{remark} \label{rem:meet_vs_contain}
+By Lemma~\ref{lem:fabulous_basics}(c) the set $\widetilde{D_i} \cap
+\pi^{-1}(x)$ is connected and, by (b), contained in $W_{nt}$.  Hence a
+connected component of $\pi^{-1}(x) \cap W_{nt}$ contains
+$\widetilde{D_i} \cap \pi^{-1}(x)$ as soon as it meets it, and
+Definition~\ref{def:fabulous} may equivalently be phrased with
+``meeting'' in place of ``containing''.
+\end{remark}
+
+\begin{remark} \label{rem:fabulous_divisor}
+A single divisor is always fabulous: if $I = \{i\}$ then, $X$ being smooth,
+$\pi$ is an isomorphism over a dense open subset of the divisor $D_i$, so
+$\pi^{-1}(x)$ is a single point of $\widetilde{D_i} \subseteq W_{nt}$ for
+general $x \in D_i$.  With the convention $G_{D_i} \neq 1$ dropped, the
+same computation shows that $D_i$ is fabulous if and only if
+$G_{D_i} \neq 1$; this is the reason for the convention.
+\end{remark}
+
+The next two lemmas make the condition checkable.
+
+\begin{lemma} \label{lem:fabulous_cofinal}
+Let $\mu : W' \to W$ be an equivariant proper birational morphism over $X$,
+and let $\pi : W \to X$, $\pi' = \pi \circ \mu$.  If the condition of
+Definition~\ref{def:fabulous} holds for $\pi'$ at $x$, then it holds for
+$\pi$ at $x$.  Consequently it suffices to verify
+Definition~\ref{def:fabulous} for $\pi$ ranging over any cofinal family of
+equivariant proper birational morphisms to $X$; by
+Corollary~\ref{cor:cofinal} one may take the family of toroidal
+resolutions.
+\end{lemma}
+
+\begin{proof}
+Let $Z'$ be a connected component of $\pi'^{-1}(x) \cap W'_{nt}$ containing
+$\widetilde{D_i} \cap \pi'^{-1}(x)$ for all $i \in I$, where here
+$\widetilde{D_i}$ denotes the strict transform in $W'$.  Then $\mu(Z')$ is
+connected and contained in $\pi^{-1}(x) \cap W_{nt}$ by
+Lemma~\ref{lem:fabulous_basics}(a).  The strict transform of $D_i$ in $W'$
+maps onto the strict transform of $D_i$ in $W$, and $\mu$ is proper, so
+\[
+\mu \left( \widetilde{D_i}^{W'} \cap \pi'^{-1}(x) \right)
+= \widetilde{D_i}^{W} \cap \pi^{-1}(x) .
+\]
+Thus the connected component of $\pi^{-1}(x) \cap W_{nt}$ containing
+$\mu(Z')$ contains $\widetilde{D_i} \cap \pi^{-1}(x)$ for every $i \in I$.
+\end{proof}
+
+\begin{lemma} \label{lem:fibre_dimension}
+Let $\pi : W \to X$ be a proper birational morphism and let
+$I \subseteq \{1,\ldots,n\}$ with $D_I \neq \emptyset$.  Then
+$\dim \pi^{-1}(x) \leq |I| - 1$ for general $x \in D_I$.
+\end{lemma}
+
+\begin{proof}
+Since $\pi$ is surjective and $D_I \neq X$, the closed subset
+$\pi^{-1}(D_I)$ is a proper closed subset of the irreducible variety $W$,
+so every one of its components has dimension at most $\dim X - 1$.  The
+dimension of the general fibre of $\pi^{-1}(D_I) \to D_I$ is the maximum of
+$\dim V - \dim D_I$ over the components $V$ of $\pi^{-1}(D_I)$ dominating
+$D_I$, hence at most
+$(\dim X - 1) - (\dim X - |I|) = |I| - 1$.
+\end{proof}
+
+\subsection*{Iterated restrictions}
+
+Let $f : X \dasharrow Y$ be an equivariant rational map to a proper
+$G$-variety and let $I = \{i_1,\ldots,i_r\}$, written as an ordered
+sequence $\sigma = (i_1,\ldots,i_r)$.  Since $X$ is normal and $Y$ is
+proper, $f$ is defined outside a closed subset of codimension at least $2$,
+so it is defined at the generic point of the divisor $D_{i_1}$ and the
+restriction
+\[
+f_{i_1} := f|_{D_{i_1}} : D_{i_1} \dasharrow Y
+\]
+is a well-defined rational map.  Now $D_{i_1 i_2}$ is a divisor in the
+smooth variety $D_{i_1}$, so the same argument applies again and yields
+$f_{i_1 i_2} := f_{i_1}|_{D_{i_1 i_2}}$.  Iterating, we obtain for each
+ordering $\sigma$ of $I$ a rational map
+\[
+f_\sigma : D_I \dasharrow Y
+\]
+whose image has closure $F_\sigma$, an irreducible closed subvariety of
+$Y$.  Different orderings genuinely give different maps: already for a
+pair of curves meeting at a point on a surface, blowing up the point
+separates the two limits.
+
+\begin{lemma} \label{lem:flag}
+Let $\pi : W \to X$ be an equivariant proper birational morphism such that
+$f$ lifts to a morphism $g : W \to Y$.  For every ordering
+$\sigma = (i_1,\ldots,i_r)$ of $I$ there is an irreducible closed subset
+\[
+A_\sigma \subseteq \widetilde{D_{i_1}} \cap \pi^{-1}(D_I)
+\]
+dominating $D_I$ with $F_\sigma = \overline{g(A_\sigma)}$.
+\end{lemma}
+
+\begin{proof}
+Write $E_k := D_{i_1 \cdots i_k}$ and $f_k := f_{i_1 \cdots i_k}$, so
+$E_r = D_I$.  We construct irreducible closed subsets
+$A_1 \supseteq A_2 \supseteq \cdots \supseteq A_r$ of $W$ such that
+$\rho_k := \pi|_{A_k} : A_k \to E_k$ is proper and surjective and such that
+\begin{equation} \label{eq:flag}
+g = f_k \circ \rho_k \quad \text{on } \rho_k^{-1}(V_k)
+\end{equation}
+for some dense open $V_k \subseteq E_k$ on which $f_k$ is a morphism.
+
+For $k = 1$ take $A_1 := \widetilde{D_{i_1}}$.  On the open set $U$ over
+which $\pi$ is an isomorphism we have $f = g \circ \pi^{-1}$, and
+$D_{i_1} \cap U$ is dense in $D_{i_1}$; so \eqref{eq:flag} holds with
+$V_1$ any dense open subset of $D_{i_1} \cap U$ on which $f_1$ is a
+morphism.
+
+Assume $A_k$ and \eqref{eq:flag} are given.  As noted above, $f_k$ is
+defined at the generic point of the divisor $E_{k+1} \subseteq E_k$; let
+$V \subseteq E_k$ be a dense open set containing that generic point on
+which $f_k$ is a morphism.  The two morphisms $g$ and $f_k \circ \rho_k$
+from $\rho_k^{-1}(V)$ to $Y$ agree on the dense open subset
+$\rho_k^{-1}(V \cap V_k)$; since $A_k$ is irreducible and reduced and $Y$
+is separated, they agree on all of $\rho_k^{-1}(V)$.  In particular $g$ is
+constant on the fibres of $\rho_k$ over $V$.  Now $\rho_k^{-1}(E_{k+1}) \to
+E_{k+1}$ is surjective because $\rho_k$ is; choose an irreducible component
+$A_{k+1}$ of $\rho_k^{-1}(E_{k+1})$ dominating $E_{k+1}$.  Then $\rho_{k+1}$
+is proper and surjective onto $E_{k+1}$ and
+$g = f_k|_{E_{k+1}} \circ \rho_{k+1} = f_{k+1} \circ \rho_{k+1}$ on
+$\rho_{k+1}^{-1}(V \cap E_{k+1})$, which is \eqref{eq:flag} for $k+1$.
+
+Finally $A_\sigma := A_r$ is contained in $A_1 = \widetilde{D_{i_1}}$ and in
+$\pi^{-1}(E_r) = \pi^{-1}(D_I)$, dominates $D_I$, and \eqref{eq:flag}
+gives $\overline{g(A_r)} = \overline{f_r(V_r)} = F_\sigma$.
+\end{proof}
+
+Observe that only the \emph{first} index $i_1$ of $\sigma$ leaves a trace:
+$A_\sigma$ lies in $\widetilde{D_{i_1}}$, and everything else happens inside
+$\pi^{-1}(D_I)$.  This is exactly the shape of information that
+Definition~\ref{def:fabulous} controls.
+
+\subsection*{The main theorem}
+
+\begin{theorem} \label{thm:fabulous}
+Let $f : X \dasharrow Y$ be a $G$-equivariant rational map to a proper
+$G$-variety and suppose $D_I$ is fabulous.  Then there exist a variety
+$Z_I$, a surjective morphism $p : Z_I \to D_I$ and a morphism
+$q : Z_I \to Y$ such that
+\begin{enumerate}
+\item $q(Z_I) \subseteq Y_{nt}$;
+\item $p^{-1}(x)$ is connected for all $x$ in a dense open subset of
+$D_I$; and
+\item $F_\sigma \subseteq T_I := q(Z_I)$ for every ordering $\sigma$ of
+$I$.
+\end{enumerate}
+In particular $T_I$ is a connected closed subvariety of $Y_{nt}$
+containing $F_\sigma$ for every $\sigma$, and for general $x \in D_I$ all
+the points $f_\sigma(x)$ lie in the single connected set
+$q(p^{-1}(x)) \subseteq Y_{nt}$.
+\end{theorem}
+
+\begin{proof}
+By equivariant resolution of indeterminacy
+\cite{ReichsteinYoussinIndeterminacy} there is an equivariant proper
+birational morphism $\pi : W \to X$ with $W$ smooth such that $f$ lifts to
+a morphism $g : W \to Y$.
+
+Put $N := \pi^{-1}(D_I) \cap W_{nt}$, a closed $G$-stable subset of $W$,
+and let $p_N : N \to D_I$ be the restriction of $\pi$; it is proper, and it
+is surjective because $\widetilde{D_i} \subseteq N$ surjects onto $D_i
+\supseteq D_I$ for $i \in I$ (Lemma~\ref{lem:fabulous_basics}).  Let
+\[
+N \xrightarrow{\ \nu\ } S \xrightarrow{\ h\ } D_I
+\]
+be the Stein factorization of $p_N$, so $\nu$ is proper with connected
+fibres and $h$ is finite.  For $x \in D_I$ the connected components of
+$p_N^{-1}(x)$ are exactly the fibres of $\nu$ over the points of
+$h^{-1}(x)$.
+
+Fix $i_0 \in I$ and set $B := \widetilde{D_{i_0}} \cap \pi^{-1}(D_I)$,
+a closed subset of $N$ by Lemma~\ref{lem:fabulous_basics}(b).  Let
+$U \subseteq D_I$ be a dense open set as in
+Definition~\ref{def:fabulous}.  For $x \in U$ the set $\widetilde{D_{i_0}}
+\cap \pi^{-1}(x)$ lies in a single connected component of $p_N^{-1}(x)$,
+so $\nu(B) \cap h^{-1}(x)$ is a single point.  Hence the closed set
+$\nu(B) \subseteq S$ has a unique irreducible component $S_0$ dominating
+$D_I$, and $h|_{S_0} : S_0 \to D_I$ is finite and birational; as $D_I$ is
+smooth, $h|_{S_0}$ is an isomorphism over a dense open subset $U_0
+\subseteq U$.
+
+Let $Z_I := \nu^{-1}(S_0)$ with $p := p_N|_{Z_I}$ and $q := g|_{Z_I}$.
+Then $p$ is proper and surjective, and for $x \in U_0$ the fibre
+$p^{-1}(x)$ is a single fibre of $\nu$, that is, precisely the connected
+component of $\pi^{-1}(x) \cap W_{nt}$ singled out by
+Definition~\ref{def:fabulous}.  This gives (b), and (a) is
+Lemma~\ref{lem:fabulous_basics}(a) applied to $g$, since $Z_I \subseteq
+W_{nt}$.  Moreover $Z_I$ is connected: $S_0$ is irreducible and $\nu$ is
+proper surjective onto $S$ with connected fibres, so the preimage of $S_0$
+is connected.  Hence $T_I = q(Z_I)$ is connected, and it is closed because
+$Z_I$ is proper over the proper variety $D_I$, hence proper, and $Y$ is
+separated.
+
+It remains to prove (c).  Let $\sigma = (i_1,\ldots,i_r)$ and let
+$A_\sigma \subseteq \widetilde{D_{i_1}} \cap \pi^{-1}(D_I)$ be as in
+Lemma~\ref{lem:flag}.  For $x \in U_0$ we have
+\[
+A_\sigma \cap \pi^{-1}(x)
+\ \subseteq\ \widetilde{D_{i_1}} \cap \pi^{-1}(x)
+\ \subseteq\ p^{-1}(x) ,
+\]
+the second inclusion by Definition~\ref{def:fabulous} and the choice of
+$S_0$ --- note that the component of $\pi^{-1}(x) \cap W_{nt}$ prescribed
+by the definition contains $\widetilde{D_i} \cap \pi^{-1}(x)$ for
+\emph{every} $i \in I$, in particular for $i_0$ and $i_1$ at once, so it is
+the fibre $p^{-1}(x)$.  Since $A_\sigma$ dominates $D_I$, the union of the
+sets $A_\sigma \cap \pi^{-1}(x)$ over $x \in U_0$ is dense in $A_\sigma$,
+whence
+\[
+F_\sigma = \overline{g(A_\sigma)} \subseteq \overline{q(Z_I)} = T_I . \qedhere
+\]
+\end{proof}
+
+The point of the theorem is the conclusion $T_I \subseteq Y_{nt}$: the
+various limits $F_\sigma$ of $f$ along $D_I$ are not merely connected to
+one another inside $Y$, they are connected to one another inside the locus
+of points with non-trivial stabilizer.
+
+\subsection*{Chains of rational curves}
+
+For $|I| = 2$ the connectedness in Theorem~\ref{thm:fabulous} can be
+upgraded to rational chain connectedness.  Recall that a proper variety is
+\emph{rationally chain connected} (RCC) if any two of its closed points are
+joined by a connected chain of rational curves.
+
+\begin{proposition} \label{prop:rcc}
+In the situation of Theorem~\ref{thm:fabulous}, suppose $|I| = 2$.  Then
+$p^{-1}(x)$ is rationally chain connected for general $x \in D_I$, and
+hence so is $q(p^{-1}(x)) \subseteq Y_{nt}$.
+\end{proposition}
+
+\begin{proof}
+Keep the notation of the proof of Theorem~\ref{thm:fabulous}, and let $x
+\in U_0$ be general, $\Phi := \pi^{-1}(x)$.  By
+Lemma~\ref{lem:fibre_dimension}, $\dim \Phi \leq 1$, and $\Phi$ is
+connected by Lemma~\ref{lem:fabulous_basics}(c).  Since $W$ is smooth and
+$X$ is smooth, hence klt, the fibre $\Phi$ is rationally chain connected
+\cite{HaconMcKernan}.
+
+We claim every irreducible component $B$ of $\Phi$ of dimension $1$ is a
+rational curve.  The union $B'$ of the components of $\Phi$ other than $B$
+meets $B$ in finitely many points.  If $B$ were not rational, no rational
+curve would dominate $B$, so every rational curve contained in $\Phi$ would
+meet $B$ in finitely many points, and a chain of rational curves joining
+two general points of $B$ would meet $B$ in a finite set --- impossible
+since such a chain is connected and contains both points.  Hence $B$ is
+rational.
+
+Now $p^{-1}(x)$ is a connected closed subset of $\Phi$, hence is either a
+single point or a connected union of some of the rational curves $B$; in
+either case it is rationally chain connected.  Finally, the image of an RCC
+variety under a morphism is RCC.
+\end{proof}
+
+\begin{corollary}
+Let $X$ be a smooth projective $G$-surface in toroidal form with respect to
+$D_1 \cup \cdots \cup D_n$, let $D_{ij} = D_i \cap D_j$ be a fabulous
+intersection point, and let $f : X \dasharrow Y$ be an equivariant rational
+map to a proper $G$-variety.  Then the two limits $F_{(i,j)}$ and
+$F_{(j,i)}$ of $f$ at $D_{ij}$ are joined by a connected chain of rational
+curves contained in $Y_{nt}$.
+\end{corollary}
+
+\begin{remark}
+For $|I| \geq 3$ the connected components of $\pi^{-1}(x) \cap W_{nt}$ need
+not be rationally chain connected, so the argument above does not extend
+naively.  For instance, let $g$ be an involution of a smooth projective
+threefold $V$ with an isolated fixed point $v$ at which the tangent weights
+are $(-1,-1,-1)$.  Blowing up $v$ produces an exceptional
+$E \cong \mathbb{P}^2$ fixed pointwise by $g$, with $g$ acting by $-1$ on
+the normal bundle of $E$.  Blowing up a smooth plane quartic $C \subseteq E$
+then produces an exceptional divisor whose $g$-fixed locus is a pair of
+disjoint sections over $C$, one of which is disjoint from the strict
+transform of $E$ and is therefore a connected component of $W_{nt}$ of
+genus $3$ lying inside a single fibre of $\pi$.  We do not know whether the
+distinguished component of Definition~\ref{def:fabulous} can be made
+non-RCC in this way.
+\end{remark}
+
+\subsection*{A local criterion, and a warning}
+
+Fabulousness can be computed in the toric local model, at least for
+toroidal $\pi$.  Let $D_I \neq \emptyset$ and let $x \in D_I$ be a general
+point, so that $H := G_x = G_{D_I}$.  Linearizing as in the proof of
+Theorem~\ref{thm:toroidal_resolution}, choose local analytic coordinates in
+which $H$ acts diagonally on the normal coordinates $u_i$, $i \in I$, by
+characters $\chi_i$, and trivially along $D_I$; condition (c) of
+Definition~\ref{def:toroidal} says that the $\chi_i$ generate the character
+group of $H$.  Toric modifications of the local model $\mathbb{A}^I$
+correspond to fans $\Sigma$ subdividing the cone $\mathbb{R}^I_{\geq 0}$, in
+the lattice $N = \mathbb{Z}^I$ with dual $M$; write
+$\chi^m := \prod_i \chi_i^{m_i}$ for $m \in M$.  The stabilizer of a point
+of the orbit $O_\tau$ attached to a cone $\tau \in \Sigma$ is
+\[
+H_\tau := \bigcap_{m \in \tau^\perp \cap M} \ker \chi^m ,
+\]
+which grows as $\tau$ grows, and the fibre over $x$ is the union of the
+$O_\tau$ with $\tau \not\subseteq \partial \mathbb{R}^I_{\geq 0}$
+\cite{Fulton}.  In particular every maximal cone $\sigma$ has
+$\sigma^\perp = 0$ and hence $H_\sigma = H \neq 1$: the torus-fixed points
+of the fibre always lie in $W_{nt}$.  Since $\{\tau : H_\tau \neq 1\}$ is
+closed upwards, the union of the corresponding orbits is closed, and one
+obtains:
+
+\begin{remark} \label{rem:toric_criterion}
+$D_I$ satisfies the condition of Definition~\ref{def:fabulous} for all
+toric modifications of the local model at $x$ if and only if, for every
+simplicial subdivision $\Sigma$ of $\mathbb{R}^I_{\geq 0}$, the graph whose
+vertices are the maximal cones of $\Sigma$ and whose edges are the walls
+$\tau \not\subseteq \partial \mathbb{R}^I_{\geq 0}$ with $H_\tau \neq 1$ is
+connected.  For a wall $\tau$ the lattice $\tau^\perp \cap M$ has rank $1$,
+say with generator $m_\tau$, so that $H_\tau = \ker \chi^{m_\tau}$.  Two
+consequences:
+\begin{enumerate}
+\item if $H$ is not cyclic then every wall has $H_\tau \neq 1$, the whole
+$1$-skeleton of every fibre lies in $W_{nt}$, and the criterion is
+satisfied;
+\item for $|I| = 2$ the walls are the interior rays $v = (a,b)$ with
+$a,b > 0$ coprime, and $H_v = \ker(\chi_1^{b}\chi_2^{-a})$; so the
+criterion fails as soon as some $\chi_1^b \chi_2^{-a}$ is injective on
+$H = G_{D_{ij}}$.
+\end{enumerate}
+\end{remark}
+
+One might hope that the fabulous subsets $I$ form an abstract simplicial
+complex, that is, that a subset of a fabulous set is fabulous.  They do
+not.  The reason is visible in the criterion above: fabulousness of $I$
+concerns the stabilizers $H_\tau$ computed in $G_{D_I}$ over a general
+point of $D_I$, whereas fabulousness of a face $J \subsetneq I$ concerns
+the smaller group $G_{D_J}$ over a general point of the larger variety
+$D_J$; a stratum can be fixed by an element of $G_{D_I}$ without being
+fixed by any element of $G_{D_J}$.
+
+\begin{example} \label{ex:not_a_complex}
+Let $G = \mathbb{Z}/6 \times \mathbb{Z}/2$ act on $X = \mathbb{P}^3$ by
+\[
+(a,b) \cdot [x_0 : x_1 : x_2 : x_3]
+= [x_0 : \zeta^{2a} x_1 : \zeta^{3a} x_2 : (-1)^b x_3] ,
+\]
+where $\zeta$ is a primitive sixth root of unity; write $\chi_1, \chi_2,
+\chi_3$ for the three characters occurring.  The action is faithful and
+$X_{nt}$ is contained in the union $D$ of the four coordinate hyperplanes,
+which puts $X$ in toroidal form with respect to $D$.  Writing
+$D_i = \{x_i = 0\}$ we have
+\[
+G_{D_0} = 1, \quad
+G_{D_1} \cong \mathbb{Z}/3, \quad
+G_{D_2} \cong \mathbb{Z}/2, \quad
+G_{D_3} \cong \mathbb{Z}/2 ,
+\]
+so $D_0$ is discarded and we consider $I \subseteq \{1,2,3\}$.
+
+The set $I = \{1,2\}$ is \emph{not} fabulous.  Indeed $D_{12}$ is the line
+$\{x_1 = x_2 = 0\}$, with $G_{D_{12}} = \ker \chi_3 \cong \mathbb{Z}/6$
+acting on the normal bundle by the characters $\chi_1, \chi_2$, which
+restrict to the weights $2$ and $3$ on $\mathbb{Z}/6$.  Let $\pi : W \to X$
+be the blowup of $X$ along $D_{12}$.  For $x \in D_{12}$ the fibre
+$\pi^{-1}(x)$ is the projective line $\mathbb{P}(N_x)$, on which
+$G_{D_{12}}$ acts through the character $\chi_1 \chi_2^{-1}$, of weight
+$2 - 3 = -1$: this character is injective, so the only points of
+$\pi^{-1}(x)$ with non-trivial stabilizer are the two fixed points, which
+are the intersections with $\widetilde{D_1}$ and $\widetilde{D_2}$.  Thus
+$\pi^{-1}(x) \cap W_{nt}$ consists of two points lying in different
+connected components, one on each strict transform.  (This is the
+$\mathbb{Z}/6$ instance of Remark~\ref{rem:toric_criterion}(b), with
+$(a,b) = (1,1)$.)
+
+On the other hand $I = \{1,2,3\}$ satisfies the condition for every
+toroidal $\pi$.  Here $D_{123}$ is the point $[1:0:0:0]$ and
+$G_{D_{123}} = G$, which is not cyclic, so
+Remark~\ref{rem:toric_criterion}(a) applies: for every toric modification
+of the local model the entire $1$-skeleton of the fibre lies in $W_{nt}$,
+and in particular the fibre meets $W_{nt}$ in a connected set containing
+$\widetilde{D_i} \cap \pi^{-1}(x)$ for $i = 1,2,3$.  We emphasize that this
+is only a verification for toroidal modifications; a complete verification
+would have to control arbitrary $\pi$, for which the reduction of
+Lemma~\ref{lem:fabulous_cofinal} does not suffice, since a toroidal
+resolution $W$ need not be toroidal \emph{over} $(X,D)$.
+
+For the record, the failure of $\{1,2\}$ is not caused by some degeneracy of
+$D_{12}$: all three of $D_{12}, D_{13}, D_{23}$ have non-trivial generic
+stabilizer, namely $\ker\chi_3, \ker\chi_2, \ker\chi_1$ respectively.
+\end{example}
+
+Because of Example~\ref{ex:not_a_complex} we do not attempt to organize the
+fabulous sets into a simplicial complex; Theorem~\ref{thm:fabulous} is
+applied to one fabulous $I$ at a time.
+
+\section{Fabulous pairs of divisors}
+
+For a pair of divisors the condition of Definition~\ref{def:fabulous} has a
+completely explicit answer: it depends only on the isomorphism class of the
+generic stabilizer.
+
+We keep the conventions of the previous section: $X$ is in toroidal form
+with respect to $D_1 \cup \cdots \cup D_n$ and $G_{D_k} \neq 1$ for every
+$k$.  Fix $i \neq j$ with $D_{ij} \neq \emptyset$ and put
+\[
+H := G_{D_{ij}} .
+\]
+Let $x \in D_{ij}$ be a general point, so that $G_x = H$ and
+$I(x) = \{i,j\}$.  By Definition~\ref{def:toroidal}(c) the group $H$
+preserves $D_i$ and $D_j$ --- it does not interchange them --- and acts
+faithfully on the two normal lines
+\[
+T_xX/T_xD_i , \qquad T_xX/T_xD_j
+\]
+by characters which we call $\chi_1$ and $\chi_2$; faithfulness says that
+$\chi_1$ and $\chi_2$ generate the character group $\widehat{H}$.  In local
+analytic coordinates $u_1, u_2, \ldots$ at $x$ as in Step~2 of the proof of
+Theorem~\ref{thm:toroidal_resolution} we have $D_i = \{u_1 = 0\}$ and
+$D_j = \{u_2 = 0\}$, the group $H$ acts on $u_1, u_2$ by $\chi_1, \chi_2$
+and trivially on the remaining coordinates, and
+\[
+G_{D_i} = \ker \chi_2 , \qquad G_{D_j} = \ker \chi_1 ,
+\]
+both non-trivial by our convention.
+
+\begin{theorem} \label{thm:pairs}
+$D_{ij}$ is fabulous if and only if $H = G_{D_{ij}}$ is not cyclic.
+\end{theorem}
+
+The two implications are proved in
+Propositions~\ref{prop:noncyclic_fabulous} and
+\ref{prop:cyclic_not_fabulous} below.  We first record the structure of a
+general fibre.
+
+\begin{lemma} \label{lem:tree}
+Let $\pi : W \to X$ be a proper birational morphism with $W$ smooth and let
+$x \in D_{ij}$ be general.  Then $\Phi := \pi^{-1}(x)$ is either a single
+point or a connected curve whose reduction is a tree of smooth rational
+curves meeting pairwise transversally.
+\end{lemma}
+
+\begin{proof}
+$\Phi$ is connected by Lemma~\ref{lem:fabulous_basics}(c) and has dimension
+at most $1$ by Lemma~\ref{lem:fibre_dimension}.  Since $X$ is smooth it has
+rational singularities, so $R^1\pi_*\mathcal{O}_W = 0$; by the theorem on
+formal functions \cite[Theorem~III.11.1]{Hartshorne} the inverse limit of
+the groups $H^1(\Phi_m, \mathcal{O}_{\Phi_m})$ over the infinitesimal
+neighbourhoods $\Phi_m$ of $\Phi$ vanishes, and each transition map is
+surjective, so $H^1(\Phi_m,\mathcal{O}_{\Phi_m}) = 0$ for every $m$.  As
+$\mathcal{O}_{\Phi_m}$ surjects onto $\mathcal{O}_{\Phi_{red}}$ with kernel
+supported in dimension $\leq 1$, we get
+$H^1(\Phi_{red}, \mathcal{O}_{\Phi_{red}}) = 0$, that is
+$p_a(\Phi_{red}) = 0$.  A connected reduced curve of arithmetic genus $0$
+is a tree of smooth rational curves meeting pairwise transversally in
+single points.
+\end{proof}
+
+\begin{proposition} \label{prop:noncyclic_fabulous}
+If $H$ is not cyclic then $D_{ij}$ is fabulous.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:fabulous_cofinal} it is enough to treat morphisms
+$\pi : W \to X$ with $W$ smooth.  Let $x \in D_{ij}$ be general and
+$\Phi := \pi^{-1}(x)$.  If $\Phi$ is a single point $w$ then
+$G_w = G_x = H \neq 1$ and there is nothing to prove, so assume $\Phi$ is a
+curve and let $\Phi = B_1 \cup \cdots \cup B_N$ be its irreducible
+components, a tree of smooth rational curves by Lemma~\ref{lem:tree}.
+
+Set $A_i := \widetilde{D_i} \cap \Phi$ and $A_j := \widetilde{D_j} \cap
+\Phi$.  By Lemma~\ref{lem:fabulous_basics} these are non-empty, connected
+and contained in $W_{nt}$, and they are $H$-stable because $H$ preserves
+$D_i$ and $D_j$.  Each of $A_i, A_j$ is therefore either a point of $\Phi$
+or a connected union of components of $\Phi$.
+
+Let $\Gamma$ be the smallest connected closed subset of $\Phi$ containing
+$A_i \cup A_j$; because $\Phi$ is a tree, $\Gamma$ is unique, and it is the
+union of $A_i$, $A_j$ and the components $B_{l_1}, \ldots, B_{l_s}$ of the
+unique path in the tree joining $A_i$ to $A_j$ (possibly $s = 0$, in which
+case $A_i \cap A_j \neq \emptyset$ and $\Gamma = A_i \cup A_j$ is already
+contained in $W_{nt}$, and we are done).  Uniqueness makes $\Gamma$
+$H$-stable, and, since $H$ preserves $A_i$ and $A_j$ separately, $H$
+preserves the linear order of the path; hence
+\[
+\text{each } B_{l_1}, \ldots, B_{l_s} \text{ is } H\text{-stable.}
+\]
+
+Fix one of them, say $B = B_{l_t}$, and let $\Lambda$ be its neighbour along
+the path: the component $B_{l_{t-1}}$ if $t > 1$, and $A_i$ if $t = 1$.  By
+minimality of $\Gamma$ the curve $B$ is not a component of $A_i \cup A_j$,
+so $B \neq \Lambda$; since $\Phi$ is a tree whose components meet
+transversally in single points, $B$ meets the connected set $\Lambda$ in
+exactly one point $q$.  Both $B$ and $\Lambda$ are $H$-stable, so $Hq = q$.
+
+Now $H$ acts on $B \cong \mathbb{P}^1$ fixing $q$.  A finite abelian
+subgroup of $\mathrm{Aut}(\mathbb{P}^1) = \mathrm{PGL}_2$ fixing a point
+lies in a Borel subgroup, and in characteristic zero a finite subgroup of a
+Borel subgroup contains no unipotent elements, hence lies in a maximal
+torus.  Therefore the image of $H \to \mathrm{Aut}(B)$ is the image of a
+character $\psi_B : H \to \mathbb{G}_m$, and the subgroup of $H$ acting
+trivially on $B$ is $\ker \psi_B$.  Since $H$ is not cyclic, no character of
+$H$ is injective, so $\ker\psi_B \neq 1$ and $B \subseteq W_{nt}$.
+
+Thus $\Gamma \subseteq W_{nt}$.  It is connected and contains $A_i$ and
+$A_j$, so the connected component of $\Phi \cap W_{nt}$ containing $\Gamma$
+contains $\widetilde{D_i} \cap \pi^{-1}(x)$ and $\widetilde{D_j} \cap
+\pi^{-1}(x)$.  As $x$ was a general point of $D_{ij}$, this is
+Definition~\ref{def:fabulous}.
+\end{proof}
+
+For the converse we need an elementary lemma.
+
+\begin{lemma} \label{lem:number_theory}
+Let $H$ be a finite cyclic group and let $\chi_1, \chi_2$ be characters
+generating $\widehat{H}$.  Then there are coprime integers $a, b > 0$ such
+that $\chi_1^{b}\chi_2^{-a}$ is injective.
+\end{lemma}
+
+\begin{proof}
+Identify $\widehat{H}$ with $\mathbb{Z}/m$ and write $\chi_1 = c_1$,
+$\chi_2 = c_2$; the hypothesis is that $c_1, c_2$ generate $\mathbb{Z}/m$,
+and $\chi_1^b \chi_2^{-a}$ is injective if and only if $bc_1 - ac_2$
+generates $\mathbb{Z}/m$, that is, is prime to $m$.  Choose $s,t$ with
+$sc_1 + tc_2 \equiv 1 \pmod m$; then any $a \equiv -t$, $b \equiv s
+\pmod m$ satisfies $bc_1 - ac_2 \equiv 1$.  Note that $\gcd(s,t,m) = 1$,
+since a common prime divisor would divide $1$.
+
+Pick any $a > 0$ with $a \equiv -t \pmod m$, and use the Chinese remainder
+theorem to pick $b > 0$ with $b \equiv s \pmod m$ and $b \equiv 1 \pmod q$
+for every prime $q \mid a$ with $q \nmid m$.  If a prime $q$ divided both
+$a$ and $b$ then $q \nmid m$ is impossible by the second congruence, while
+$q \mid m$ forces $q \mid t$ and $q \mid s$, contradicting
+$\gcd(s,t,m) = 1$.  So $a, b$ are coprime.
+\end{proof}
+
+\begin{proposition} \label{prop:cyclic_not_fabulous}
+If $H$ is cyclic then $D_{ij}$ is not fabulous.
+\end{proposition}
+
+\begin{proof}
+Choose coprime $a, b > 0$ with $\chi_1^b \chi_2^{-a}$ injective
+(Lemma~\ref{lem:number_theory}) and let
+\[
+\mathcal{J} := \prod_{g \in G}
+\left( \mathcal{I}_{g D_i}^{\,b} + \mathcal{I}_{g D_j}^{\,a} \right)
+\subseteq \mathcal{O}_X ,
+\]
+a non-zero $G$-invariant ideal sheaf.  Let $\pi : W \to X$ be the
+normalisation of the blowup of $X$ along $\mathcal{J}$; it is proper,
+birational and, both operations being canonical, $G$-equivariant.
+
+Let $x \in D_{ij}$ be general and work in the local analytic coordinates
+above.  For $g \in G$ the factor indexed by $g$ is the unit ideal at $x$
+unless $x \in gD_i \cap gD_j$, which forces $\{gD_i, gD_j\} = \{D_i,D_j\}$
+because $I(x) = \{i,j\}$.  Hence near $x$
+\[
+\mathcal{J} = \left( u_1^b, u_2^a \right)^{e}
+\quad \text{or} \quad
+\left( u_1^b, u_2^a \right)^{e}\left( u_2^b, u_1^a \right)^{e}
+\]
+for some $e \geq 1$, a monomial ideal in $u_1, u_2$ alone.  Consequently,
+near $\pi^{-1}(x)$, $\pi$ is the product of a toric modification of the
+$(u_1,u_2)$-plane with the germ of $D_{ij}$, namely the toric modification
+whose fan is the normal fan of the Newton polyhedron of the ideal; the
+Newton polyhedron of $(u_1^b, u_2^a)$ has an edge with inner normal
+$v := (a,b)$, and passing to a product of ideals replaces Newton
+polyhedra by their Minkowski sum and normal fans by their common
+refinement, so this fan contains the ray spanned by $v$
+\cite{Fulton}.
+
+Therefore $\Phi := \pi^{-1}(x)$ is a chain of rational curves
+$E_{v_1}, \ldots, E_{v_s}$, indexed by the rays $v_1, \ldots, v_s$ of the
+fan strictly inside $\mathbb{R}^2_{\geq 0}$ and ordered by slope, with
+$\widetilde{D_i} \cap \Phi$ the single point $E_{v_1} \cap$ (the $e_1$
+stratum) and $\widetilde{D_j} \cap \Phi$ the single point of $E_{v_s}$ on
+the other end.  By Remark~\ref{rem:toric_criterion} the subgroup of $H$
+acting trivially on $E_{v_l}$, $v_l = (a_l, b_l)$, is
+$\ker(\chi_1^{b_l}\chi_2^{-a_l})$, and a point of $E_{v_l}$ off the two
+nodes has exactly this stabilizer.  One of the $v_l$ is our $v = (a,b)$, for
+which this group is trivial; so the points of $E_{v}$ other than its two
+nodes do not lie in $W_{nt}$, and $\Phi \cap W_{nt}$ is disconnected by the
+removal of $E_v$: the two ends of the chain, and with them
+$\widetilde{D_i} \cap \Phi$ and $\widetilde{D_j} \cap \Phi$, lie in
+different connected components.  Since this happens for every general $x$,
+$D_{ij}$ is not fabulous.
+\end{proof}
+
+\begin{corollary}
+Let $X$ be a smooth projective $G$-surface in toroidal form with respect to
+$D_1 \cup \cdots \cup D_n$, and let $x$ be a point of $D_i \cap D_j$.  Then
+$D_i \cap D_j$ is fabulous if and only if $G_x$ is not cyclic; in that case,
+for every equivariant rational map $f : X \dasharrow Y$ to a proper
+$G$-variety, the two limits $F_{(i,j)}$ and $F_{(j,i)}$ are joined by a
+connected chain of rational curves inside $Y_{nt}$.
+\end{corollary}
+
+\begin{proof}
+Combine Theorem~\ref{thm:pairs} with Theorem~\ref{thm:fabulous} and
+Proposition~\ref{prop:rcc}; on a surface $D_{ij}$ is the single point $x$,
+so $G_{D_{ij}} = G_x$.
+\end{proof}
+
+\begin{remark}
+The mechanism behind Proposition~\ref{prop:cyclic_not_fabulous} is the same
+continued-fraction game as in Lemma~\ref{lem:game}: for cyclic $H$ one can
+always find a weighted blowup whose exceptional curve is acted on faithfully
+by $H$, and such a curve is free apart from its two torus-fixed points.  For
+non-cyclic $H$ this is impossible, because a non-cyclic abelian group has no
+faithful character, and that single fact is what
+Proposition~\ref{prop:noncyclic_fabulous} exploits.  In particular
+Example~\ref{ex:not_a_complex} needs no computation: there
+$G_{D_{12}} \cong \mathbb{Z}/6$ is cyclic, hence $D_{12}$ is not fabulous,
+while $G_{D_{123}} = \mathbb{Z}/6 \times \mathbb{Z}/2$ is not.
+\end{remark}
+
+\subsection*{The converse of the main theorem}
+
+Theorem~\ref{thm:pairs} lets us settle a natural question: is the
+conclusion of Theorem~\ref{thm:fabulous} equivalent to fabulousness?  That
+is, if for every equivariant rational map $f : X \dasharrow Y$ to a proper
+$G$-variety all the limits $F_\sigma$, $\sigma$ an ordering of $I$, lie in
+one connected component of $Y_{nt}$, must $D_I$ be fabulous?
+
+The answer is no.  The conclusion of Theorem~\ref{thm:fabulous} is a
+\emph{global} statement about $Y_{nt}$, whereas
+Definition~\ref{def:fabulous} is a statement about a single general fibre;
+the connectedness may be supplied by parts of $X_{nt}$ having nothing to do
+with $D_I$.  Already in Example~\ref{ex:not_a_complex} this is visible for
+one $\pi$: there $\widetilde{D_1} \cap \pi^{-1}(x)$ and $\widetilde{D_2}
+\cap \pi^{-1}(x)$ lie in different components of $\pi^{-1}(x) \cap W_{nt}$,
+yet $\widetilde{D_1}$ and $\widetilde{D_2}$ are joined inside $W_{nt}$
+through $\widetilde{D_3}$.  With a little care this can be arranged for
+every $Y$ at once.
+
+\begin{example} \label{ex:no_converse}
+Let $G = (\mathbb{Z}/2)^2 \times (\mathbb{Z}/3)^2$, whose elements we write
+as $(\epsilon_1,\epsilon_2,\eta_1,\eta_2)$ with $\epsilon_k^2 =
+\eta_k^3 = 1$, act on $X = \mathbb{P}^3$ by
+\[
+(\epsilon,\eta) \cdot [x_0 : x_1 : x_2 : x_3]
+= [x_0 : \eta_2 x_1 : \epsilon_2 x_2 : \epsilon_1\eta_1 x_3] ,
+\]
+so that the characters occurring are $\chi_1 = \eta_2$, $\chi_2 =
+\epsilon_2$ and $\chi_3 = \epsilon_1\eta_1$.  The action is faithful, and
+$G$ lies in the torus of $\mathbb{P}^3$ with $D$ the toric boundary, so $X$
+is in toroidal form with respect to $D = D_0 \cup \cdots \cup D_3$, where
+$D_i = \{x_i = 0\}$.  One computes
+\[
+G_{D_0} = 1 , \quad
+G_{D_1} \cong \mathbb{Z}/3 , \quad
+G_{D_2} \cong \mathbb{Z}/2 , \quad
+G_{D_3} \cong \mathbb{Z}/6 ,
+\]
+so $D_0$ is discarded and $I \subseteq \{1,2,3\}$.  Since $D_{ij}$ is the
+line joining the $k$-th and $0$-th coordinate points, $G_{D_{ij}} =
+\ker\chi_k$ for $\{i,j,k\} = \{1,2,3\}$, and
+\[
+G_{D_{12}} = \ker\chi_3 \cong \mathbb{Z}/6 , \qquad
+G_{D_{13}} = \ker\chi_2 \cong \mathbb{Z}/2 \times (\mathbb{Z}/3)^2 ,
+\]
+\[
+G_{D_{23}} = \ker\chi_1 \cong (\mathbb{Z}/2)^2 \times \mathbb{Z}/3 .
+\]
+By Theorem~\ref{thm:pairs}, $D_{13}$ and $D_{23}$ are fabulous and
+$D_{12}$ is \emph{not}.
+
+Nevertheless the conclusion of Theorem~\ref{thm:fabulous} holds for
+$I = \{1,2\}$ and every equivariant rational map $f : X \dasharrow Y$ to a
+proper $G$-variety.  Indeed, put $P_k := \overline{f(D_k)}$; each $P_k$ is
+irreducible, hence connected, and $P_k \subseteq Y_{nt}$ by
+Lemma~\ref{lem:fabulous_basics}(a),(b) applied to a resolution of
+indeterminacy of $f$.  Restriction only shrinks images, so
+\[
+F_{(1,2)}, F_{(1,3)} \subseteq P_1 , \qquad
+F_{(2,1)}, F_{(2,3)} \subseteq P_2 , \qquad
+F_{(3,1)}, F_{(3,2)} \subseteq P_3 .
+\]
+Applying Theorem~\ref{thm:fabulous} to the fabulous set $\{1,3\}$ produces
+a connected $T_{13} \subseteq Y_{nt}$ containing $F_{(1,3)}$ and
+$F_{(3,1)}$, hence meeting both $P_1$ and $P_3$; likewise $T_{23}$ meets
+$P_2$ and $P_3$.  Therefore
+\[
+P_1 \cup T_{13} \cup P_3 \cup T_{23} \cup P_2
+\]
+is a connected subset of $Y_{nt}$ containing $F_{(1,2)}$ and $F_{(2,1)}$.
+The two limits are always joined inside $Y_{nt}$, but only by a detour
+through $f(D_3)$, which is invisible over a general point of $D_{12}$.
+\end{example}
+
+What is lost in passing from Definition~\ref{def:fabulous} to
+Theorem~\ref{thm:fabulous} is thus exactly the fibre.  If it is put back,
+one does get an equivalence, and it is essentially formal.
+
+\begin{proposition} \label{prop:converse}
+Let $I \subseteq \{1,\ldots,n\}$ with $D_I \neq \emptyset$.  The following
+are equivalent.
+\begin{enumerate}
+\item $D_I$ is fabulous.
+\item For every equivariant proper birational morphism $\pi : W \to X$ with
+$W$ proper, and for general $x \in D_I$, the sets $F_\sigma \cap
+\pi^{-1}(x)$, as $\sigma$ ranges over the orderings of $I$, all lie in a
+single connected component of $\pi^{-1}(x) \cap W_{nt}$; here $F_\sigma$ is
+formed with respect to the equivariant rational map
+$f = \pi^{-1} : X \dasharrow W$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+For $f = \pi^{-1}$ the identity of $W$ is a lift of $f$, so
+Lemma~\ref{lem:flag} applies with $g = \mathrm{id}$ and gives, for each
+ordering $\sigma$ of $I$ with first index $i_1$, an irreducible closed
+subset $A_\sigma \subseteq \widetilde{D_{i_1}} \cap \pi^{-1}(D_I)$
+dominating $D_I$ with $F_\sigma = A_\sigma$.  In particular, for general
+$x \in D_I$,
+\[
+\emptyset \neq F_\sigma \cap \pi^{-1}(x)
+\subseteq \widetilde{D_{i_1}} \cap \pi^{-1}(x) .
+\]
+
+(a) $\Rightarrow$ (b).  The component of $\pi^{-1}(x) \cap W_{nt}$ provided
+by Definition~\ref{def:fabulous} contains $\widetilde{D_i} \cap
+\pi^{-1}(x)$ for every $i \in I$, hence contains every $F_\sigma \cap
+\pi^{-1}(x)$.
+
+(b) $\Rightarrow$ (a).  By Lemma~\ref{lem:fabulous_cofinal} it suffices to
+verify Definition~\ref{def:fabulous} for the $\pi$ in (b), since these are
+cofinal by Corollary~\ref{cor:cofinal}.  Let $Z$ be the common connected
+component.  For $i \in I$ choose an ordering $\sigma$ beginning with $i$;
+then $Z$ meets $F_\sigma \cap \pi^{-1}(x) \subseteq \widetilde{D_i} \cap
+\pi^{-1}(x)$, and by Remark~\ref{rem:meet_vs_contain} it therefore contains
+$\widetilde{D_i} \cap \pi^{-1}(x)$.  As this holds for every $i \in I$ and
+for general $x$, $D_I$ is fabulous.
+\end{proof}
+
+\subsection*{Strata in projective space}
+
+When $X$ is a projective space the strata $D_I$ are linear, and this makes
+the subvariety $T_I$ of Theorem~\ref{thm:fabulous} as good as its fibres.
+
+\begin{lemma} \label{lem:linear_strata}
+Suppose $X = \mathbb{P}^N$ is in toroidal form with respect to
+$D_1 \cup \cdots \cup D_n$ and $G_{D_k} \neq 1$ for every $k$.  Then every
+$D_k$ is a hyperplane and every non-empty $D_I$ is a linear subspace of
+dimension $N - |I|$; in particular $D_I$ is rational.
+\end{lemma}
+
+\begin{proof}
+Every automorphism of $\mathbb{P}^N$ is linear, so a non-trivial
+$g \in G_{D_k}$ lifts to a diagonalizable element of $\mathrm{GL}_{N+1}$
+and $X^g$ is the disjoint union of the projectivized eigenspaces of that
+lift, a finite union of linear subspaces.  Since $D_k$ is irreducible of
+dimension $N-1$ and contained in $X^g$, it is a hyperplane.  By
+Definition~\ref{def:toroidal}(a) a non-empty $D_I$ has codimension $|I|$,
+so it is the transverse intersection of $|I|$ hyperplanes.
+\end{proof}
+
+\begin{proposition} \label{prop:rcc_total}
+Let $|I| = 2$ and suppose $D_I$ is rational --- for instance
+$X = \mathbb{P}^N$, by Lemma~\ref{lem:linear_strata}.  Let
+$f : X \dasharrow Y$ be an equivariant rational map to a proper
+$G$-variety, and let $p : Z_I \to D_I$, $q : Z_I \to Y$ and
+$T_I = q(Z_I)$ be as in Theorem~\ref{thm:fabulous}.  Let $Z_I^\dagger$ be
+the union of the irreducible components of $Z_I$ dominating $D_I$ and
+$T_I^\dagger := q(Z_I^\dagger)$.  Then $T_I^\dagger$ is a closed subvariety
+of $Y_{nt}$ containing $F_\sigma$ for every ordering $\sigma$ of $I$, and
+$T_I^\dagger$ is rationally chain connected.
+\end{proposition}
+
+\begin{proof}
+That $T_I^\dagger \subseteq Y_{nt}$ is closed follows as in
+Theorem~\ref{thm:fabulous}.  In the notation of that proof, $A_\sigma$
+dominates $D_I$ and $A_\sigma \cap \pi^{-1}(x) \subseteq p^{-1}(x)$ for all
+$x$ in the dense open set $U_0$, so $A_\sigma \subseteq Z_I^\dagger$ and
+$F_\sigma \subseteq T_I^\dagger$.  Since the image of a rationally chain
+connected variety is rationally chain connected, it suffices to prove the
+last assertion for $Z_I^\dagger$.
+
+For general $x \in D_I$ the fibre $p^{-1}(x)$ is a connected component of
+$\pi^{-1}(x) \cap W_{nt}$, hence a connected closed subcurve of the tree of
+smooth rational curves $\pi^{-1}(x)$ of Lemma~\ref{lem:tree}; so it is
+either a point or a tree of smooth rational curves.  If $p^{-1}(x)$ is a
+point for general $x$ then $p$ is birational onto the rational variety
+$D_I$ and we are done, so assume otherwise.
+
+Let $z_1, z_2 \in Z_I^\dagger$ be general points and $b_1 := p(z_1)$,
+$b_2 := p(z_2)$; every component of $Z_I^\dagger$ dominates $D_I$, so
+$b_1$ and $b_2$ are general points of $D_I$.  As $D_I$ is rational there is
+an irreducible rational curve $C \subseteq D_I$ through $b_1$ and $b_2$
+meeting the dense open set over which the fibres of $p$ are as above: take
+the image of a general line through two general preimages under a
+birational parametrization $\mathbb{P}^{\dim D_I} \dasharrow D_I$.  Let
+$\nu : \mathbb{P}^1 \to C$ be the normalisation, let
+$Z_C := Z_I^\dagger \times_{D_I} \mathbb{P}^1$ and let $K :=
+\mathbb{C}(\mathbb{P}^1)$.
+
+The geometric generic fibre of $Z_C \to \mathbb{P}^1$ is a tree of smooth
+rational curves, and $\mathrm{Gal}(\overline{K}/K)$ acts on its dual tree
+through a finite quotient.  A finite group acting on a finite tree fixes a
+vertex or an edge \cite{SerreTrees}.  In the second case the corresponding
+node is a $\overline{K}$-point stable under the Galois action, hence a
+$K$-point of $Z_C$.  In the first case the corresponding component is a
+geometrically integral curve over $K$ which becomes $\mathbb{P}^1$ over
+$\overline{K}$, that is, a Severi--Brauer curve; as $K$ is the function
+field of a curve over $\mathbb{C}$, Tsen's theorem gives
+$\mathrm{Br}(K) = 0$ and again a $K$-point.  Either way $Z_C \to
+\mathbb{P}^1$ has a rational section, which extends to a morphism
+$\mathbb{P}^1 \to Z_C$ by the valuative criterion of properness.  Its image
+in $Z_I^\dagger$ is a rational curve $\Sigma$ meeting $p^{-1}(b_1)$ and
+$p^{-1}(b_2)$.
+
+Now $z_1$ is joined to $\Sigma \cap p^{-1}(b_1)$ by a chain of rational
+curves inside the tree $p^{-1}(b_1)$, and similarly for $z_2$; inserting
+$\Sigma$ gives a connected chain of rational curves in $Z_I^\dagger$
+joining $z_1$ to $z_2$.  Thus two general points of $Z_I^\dagger$ are
+rationally chain connected, and since $Z_I^\dagger$ is proper and rational
+chain equivalence classes are closed, the same holds for any two closed
+points \cite{KollarRationalCurves}.
+\end{proof}
+
+\begin{corollary} \label{cor:union_of_rc}
+With the hypotheses of Proposition~\ref{prop:rcc_total}, the limits
+$F_{(i,j)}$ and $F_{(j,i)}$ lie in a connected closed subset of $Y_{nt}$
+which is a union of rationally connected subvarieties of $Y_{nt}$, namely
+a union of rational curves.
+\end{corollary}
+
+\begin{proof}
+Take $T_I^\dagger$.  It is connected, being the image of a rationally chain
+connected variety, and every one of its points lies on a rational curve
+contained in it, namely a link of a chain joining it to another point (if
+$\dim T_I^\dagger = 0$ there is nothing to prove).
+\end{proof}
+
+\begin{remark}
+One cannot ask for $T_I^\dagger$ itself to be rationally connected.
+Rational chain connectedness and rational connectedness agree for smooth
+proper varieties, but $T_I^\dagger$ is typically singular, and for singular
+varieties the two notions differ --- the cone over an elliptic curve is
+rationally chain connected but no irreducible rational curve joins two
+general points of it.  For $|I| \geq 3$ even
+Proposition~\ref{prop:rcc_total} is out of reach: the general fibre of $p$
+need not be a chain of rational curves at all, by the remark following
+Proposition~\ref{prop:rcc}, and the argument above uses the tree structure
+of Lemma~\ref{lem:tree}, which is special to $\dim \pi^{-1}(x) \leq 1$.
+Rationality of $D_I$ is used only to produce the rational curve $C$; the
+proposition holds verbatim whenever $D_I$ is rationally connected.
+\end{remark}
+
+\subsection*{Toroidal resolutions of projective space}
+
+A projective space need not be in toroidal form --- indeed
+Example~\ref{ex:mu5} shows that it need not be put in toroidal form with
+$D = X_{nt}$ --- and then one applies
+Theorem~\ref{thm:toroidal_resolution} first.  The strata of the resulting
+$X'$ are no longer linear, so Lemma~\ref{lem:linear_strata} does not apply
+and Proposition~\ref{prop:rcc_total} is not immediately available.  It is,
+however, available for any resolution whose centers are supplied by the
+stabilizer stratification, which is the case for the resolutions of
+Theorem~\ref{thm:toroidal_resolution}.  We isolate what is needed.
+
+\begin{definition} \label{def:stratified_tower}
+Let $X$ be a smooth $G$-variety.  A composite of equivariant blowups
+\[
+X' = X_m \to \cdots \to X_1 \to X_0 = X , \qquad
+X_{k+1} = \mathrm{Bl}_{C_k} X_k ,
+\]
+is \emph{stabilizer-stratified} if each center $C_k$ is smooth and is a
+union of connected components of subvarieties of the form
+\[
+X_k^{H} \cap D^{(k)}_J , \qquad H \leq G ,
+\]
+where $D^{(k)}$ is the accumulated exceptional divisor of $X_k \to X$ and
+$D^{(k)}_J$ one of its strata (with $D^{(k)}_\emptyset = X_k$).
+\end{definition}
+
+The wonderful blowups of Step~3 of the proof of
+Theorem~\ref{thm:toroidal_resolution} are of this shape, with $H = 1$: the
+centers there are $G$-orbits of connected components of strata.  The
+centers of the divisorialification of Step~1 are defined functorially by
+the stabilizer stratification, and for a finite group acting on a smooth
+variety in characteristic zero they are again of this shape; the same is
+true of the standard-form algorithm of \cite{ReichsteinYoussin}, whose
+centers are components of fixed loci.
+
+\begin{lemma} \label{lem:rational_strata_propagate}
+Let $X$ be a smooth projective $G$-variety such that every connected
+component of $X^H$ is rational for every subgroup $H \leq G$, and let
+$\rho : X' \to X$ be stabilizer-stratified.  Then every connected component
+of $X'^{H} \cap D'_J$ is rational, for every $H \leq G$ and every stratum
+$D'_J$ of the exceptional divisor $D'$ of $\rho$.  In particular every
+stratum $D'_J$ is rational.
+\end{lemma}
+
+\begin{proof}
+Write $\mathcal{R}_k$ for the set of connected components of the
+subvarieties $X_k^H \cap D^{(k)}_J$, $H \leq G$; the case $H = 1$ shows
+that $\mathcal{R}_k$ contains the connected components of all strata.  We
+show by induction on $k$ that every member of $\mathcal{R}_k$ is rational.
+For $k = 0$ we have $D^{(0)} = \emptyset$, so $\mathcal{R}_0$ consists of
+the components of the $X^H$, rational by hypothesis.
+
+Suppose the claim holds for $X_k$ and blow up $C := C_k$, a union of
+members of $\mathcal{R}_k$, with exceptional divisor $E = \mathbb{P}(N_C)$.
+Fix $H \leq G$ and a stratum $D^{(k+1)}_J$ of $X_{k+1}$, and let $V$ be a
+connected component of $X_{k+1}^H \cap D_J^{(k+1)}$.  Since $C$ is smooth
+and $H$-invariant, $X_{k+1}^H$ is the union of the strict transform of
+$X_k^H$ --- which is the blowup of $X_k^H$ along the smooth subvariety
+$X_k^H \cap C$ --- with the components of $E^H$ lying over $C^H$.  There
+are two cases.
+
+If $E \not\subseteq D^{(k+1)}_J$, then $D^{(k+1)}_J$ is the strict
+transform of a stratum $D^{(k)}_{J'}$, and $V$ is either a component of the
+blowup of a member of $\mathcal{R}_k$ along a smooth centre, hence rational
+by induction because a blowup of a rational variety is rational, or a
+component of the second case below.
+
+If $E \subseteq D^{(k+1)}_J$, then $V$ lies in $E$ and maps to
+$C^H \cap D^{(k)}_{J'}$ for the corresponding stratum $D^{(k)}_{J'}$
+downstairs.  Now $C^H \cap D^{(k)}_{J'}$ is a union of members of
+$\mathcal{R}_k$, since $C$ is such a union and $C^H = C \cap X_k^H$ meets
+each in a locus of the same shape for a larger subgroup.  Over each such
+component the group $H$ acts on $N_C$, which therefore decomposes into
+character subbundles, and $V$ is the projectivization of one of them,
+intersected with the projective subbundles cut out by the strict transforms
+of the remaining $D^{(k)}_i$ with $i \in J$.  Thus $V$ is a projective
+subbundle over a rational base, hence rational.
+
+In both cases $V$ is rational, completing the induction.
+\end{proof}
+
+\begin{corollary} \label{cor:pn_resolved}
+Let $G$ act faithfully on $X = \mathbb{P}^N$ and let $\rho : X' \to X$ be a
+stabilizer-stratified toroidal resolution as in
+Theorem~\ref{thm:toroidal_resolution}, with divisor $D = D_1 \cup \cdots
+\cup D_n$ and $G_{D_k} \neq 1$ for all $k$.  Let $I = \{i,j\}$ with
+$D_I \neq \emptyset$ and $G_{D_I}$ not cyclic.  Then for every equivariant
+rational map $f : \mathbb{P}^N \dasharrow Y$ to a proper $G$-variety, the
+two limits $F_{(i,j)}$ and $F_{(j,i)}$ of $f$ along $D_I$ lie in a
+connected, rationally chain connected closed subvariety of $Y_{nt}$, which
+is in particular a union of rational curves.
+\end{corollary}
+
+\begin{proof}
+Every component of $X^H$ is a linear subspace, as in the proof of
+Lemma~\ref{lem:linear_strata}, hence rational; so $D_I$ is rational by
+Lemma~\ref{lem:rational_strata_propagate}.  As $G_{D_I}$ is not cyclic,
+$D_I$ is fabulous by Theorem~\ref{thm:pairs}, and $f$ is equally an
+equivariant rational map from $X'$, so
+Proposition~\ref{prop:rcc_total} and Corollary~\ref{cor:union_of_rc}
+apply.
+\end{proof}
+
+\begin{remark}
+The hypothesis on the centers cannot be dropped.  For an arbitrary
+equivariant resolution the strata need not be rationally connected: blowing
+up a smooth plane quartic as in the remark following
+Proposition~\ref{prop:rcc} produces an exceptional divisor ruled over a
+curve of genus $3$, and a stratum of that kind carries no rational curve
+through two general points, so the argument of
+Proposition~\ref{prop:rcc_total} breaks down at its first step.  What
+Lemma~\ref{lem:rational_strata_propagate} says is that this cannot happen
+if one only ever blows up loci that the group action itself produces.
+\end{remark}
+
+\subsection*{An application}
+
+We use the machinery to rule out an equivariant rational map.  The point of
+the example is that the obstruction is invisible on $\mathbb{P}^2$ itself
+--- it appears only after a toroidal resolution, at a crossing which is
+fabulous by Theorem~\ref{thm:pairs} --- and that the target is ruled out
+not by a lack of rational curves but by a lack of rational curves
+\emph{inside $Y_{nt}$}.
+
+\begin{theorem} \label{thm:no_map_to_dp2}
+Let $G \cong S_4$ be the octahedral group, acting on $X = \mathbb{P}^2$ as
+the subgroup of $\mathrm{SL}_3$ generated by the permutation matrices of
+determinant $1$ and the diagonal matrices $\mathrm{diag}(\pm1,\pm1,\pm1)$
+of determinant $1$, and let
+\[
+S := \{ w^2 = x^4 + y^4 + z^4 \} \subseteq \mathbb{P}(1,1,1,2)
+\]
+be the del Pezzo surface of degree two obtained as the double cover
+$\phi : S \to \mathbb{P}^2$ branched along the Fermat quartic, with the
+$G$-action inherited from $(x,y,z)$ and $w$ fixed.  Then there is no
+$G$-equivariant rational map $X \dasharrow S$.
+\end{theorem}
+
+\begin{proof}
+Write
+\[
+s_1 = \mathrm{diag}(1,-1,-1), \quad
+s_2 = \mathrm{diag}(-1,1,-1), \quad
+s_3 = \mathrm{diag}(-1,-1,1)
+\]
+for the Klein four-group $V \trianglelefteq G$, and
+$r : (x,y,z) \mapsto (x,z,-y)$ for the rotation of order four about the
+$x$-axis, so $r^2 = s_1$.
+
+\emph{Step 1: the non-free locus of $S$ contains no rational curve.}
+Every non-trivial element of $G \subseteq \mathrm{SO}_3$ is a rotation.  A
+rotation of order $3$ or $4$ has three distinct eigenvalues, so its fixed
+locus in $\mathbb{P}^2$ is three points; an involution has eigenvalues
+$1,-1,-1$, so its fixed locus is a line together with the corresponding
+pole.  There are nine involutions, and the nine lines are
+\[
+\{x = 0\},\ \{y=0\},\ \{z=0\},\ \{x \pm y = 0\},\ \{y \pm z = 0\},\
+\{x \pm z = 0\} .
+\]
+Since $g \in G$ acts on $S$ by $(x,y,z,w) \mapsto (g(x,y,z), w)$, a point of
+$S$ over a $g$-fixed point of $\mathbb{P}^2$ with eigenvalue $\lambda$ is
+$g$-fixed if and only if $\lambda^2 = 1$.  For an involution $g$ with fixed
+line $\ell$ we have $\lambda = -1$ along $\ell$, so
+\[
+S^g \supseteq \phi^{-1}(\ell) ,
+\]
+and $\phi^{-1}(\ell)$ is the double cover of $\ell \cong \mathbb{P}^1$
+branched along the four distinct points $\ell \cap \{x^4+y^4+z^4 = 0\}$:
+for instance $\phi^{-1}(\{z=0\}) = \{w^2 = x^4 + y^4\}$.  Thus
+$\phi^{-1}(\ell)$ is an irreducible curve of genus $1$.  Every other fixed
+locus is finite, so the one-dimensional part of $S_{nt}$ consists of nine
+elliptic curves and
+\[
+S_{nt} \text{ contains no rational curve.}
+\]
+
+\emph{Step 2: a fabulous crossing after one blowup.}  The arrangement of
+the nine lines is not a normal crossing divisor: four of them pass through
+$[1:0:0]$, whose stabilizer is the non-abelian group
+$\langle r, s_3 \rangle$ of order $8$.  Let $\rho : X' \to X$ be a toroidal
+resolution as in Theorem~\ref{thm:toroidal_resolution} whose first step is
+the blowup of the orbit $\{[1:0:0],[0:1:0],[0:0:1]\}$; we check below that
+$X'$ may be taken to be an isomorphism near the point $q$ constructed next,
+so that all further blowups are irrelevant to us.  Let $E$ be the
+exceptional curve over $[1:0:0]$, let $L$ be the strict transform of
+$\{z = 0\}$ and let $q := E \cap L$.
+
+In the affine chart $[1:y:z]$ the three involutions act by
+\[
+s_1 : (y,z) \mapsto (-y,-z), \qquad
+s_2 : (y,z) \mapsto (-y,z), \qquad
+s_3 : (y,z) \mapsto (y,-z) ,
+\]
+and in the chart $(y,m)$ of the blowup, where $z = my$, we get
+\[
+s_1 : (y,m) \mapsto (-y,m), \quad
+s_2 : (y,m) \mapsto (-y,-m), \quad
+s_3 : (y,m) \mapsto (y,-m) ,
+\]
+with $E = \{y = 0\}$, $L = \{m=0\}$ and $q$ the origin.  Hence $s_1$ fixes
+$E$ pointwise and $s_3$ fixes $L$ pointwise, so
+\[
+G_E = \langle s_1 \rangle \neq 1 , \qquad
+G_L = \langle s_3 \rangle \neq 1 ,
+\]
+while $G_q = V$ acts diagonally on $(y,m)$ by the characters $\chi_E$ with
+$\chi_E(s_1) = -1$, $\chi_E(s_3) = 1$ and $\chi_L$ with $\chi_L(s_1) = 1$,
+$\chi_L(s_3) = -1$.  These generate $\widehat{V}$, so $X'$ is in toroidal
+form near $q$ with the two branches $E$ and $L$; moreover every point near
+$q$ with non-trivial stabilizer lies on $E \cup L$, since $s_2$ fixes only
+$q$ itself.  Therefore the toroidal resolution may indeed be taken to be an
+isomorphism near the orbit of $q$.  Finally
+\[
+G_{E \cap L} = V \cong (\mathbb{Z}/2)^2
+\]
+is not cyclic, so $E \cap L$ is \emph{fabulous} by
+Theorem~\ref{thm:pairs}.
+
+\emph{Step 3: both curves are contracted.}  Suppose $f : X \dasharrow S$ is
+a $G$-equivariant rational map; it is equally a $G$-equivariant rational
+map $X' \dasharrow S$.  Let $D$ be either $E$ or $L$.  Then $D \cong
+\mathbb{P}^1$ and $G_D \neq 1$, so $\overline{f(D)} \subseteq S^{g}$ for the
+involution $g$ generating $G_D$, by Lemma~\ref{lem:fabulous_basics}.  Now
+$\overline{f(D)}$ is irreducible and $S^g$ is the disjoint union of an
+elliptic curve and finitely many points, so $\overline{f(D)}$ is either
+that elliptic curve or a point; the former is impossible, as $\mathbb{P}^1$
+admits no dominant map to a curve of genus $1$.  Hence
+\[
+\overline{f(E)} = \{P_E\}, \qquad \overline{f(L)} = \{P_L\} .
+\]
+In particular the two iterated restrictions at the point $E \cap L$ are
+$F_{(E,L)} = P_E$ and $F_{(L,E)} = P_L$.
+
+\emph{Step 4: the two points coincide, and this is absurd.}  By Step 2 and
+Theorem~\ref{thm:fabulous} there is a connected subvariety $T \subseteq
+S_{nt}$ containing $P_E$ and $P_L$ which, by
+Proposition~\ref{prop:rcc}, is rationally chain connected.  If $\dim T > 0$
+then $T$ contains a rational curve, contradicting Step 1; so $T$ is a
+single point and
+\[
+P := P_E = P_L .
+\]
+Since $f$ is equivariant and $E$ and $L$ are contracted to $P_E$ and $P_L$,
+the point $P$ is fixed by $\mathrm{Stab}_G(E)$ and by $\mathrm{Stab}_G(L)$.
+The first is the stabilizer of $[1:0:0]$, namely $\langle r, s_3\rangle$;
+the second is the stabilizer of the line $\{z=0\}$, namely the centralizer
+of $s_3$, which contains the rotation of order four about the $z$-axis.
+Both have order $8$, and they are distinct, since $r$ does not preserve
+$\{z=0\}$: it maps $[a:b:0]$ to $[a:0:-b]$.  Two distinct Sylow
+$2$-subgroups of $S_4$ generate a subgroup of order divisible by $8$ and
+greater than $8$; as $A_4$ has no subgroup of order $8$, they generate all
+of $G$.  Hence $P \in S^G$.
+
+But $G$ acts irreducibly on $\mathbb{C}^3$, so $(\mathbb{P}^2)^G =
+\emptyset$, and $\phi$ is equivariant, so $S^G = \emptyset$.  This
+contradiction shows that no such $f$ exists.
+\end{proof}
+
+\begin{remark}
+Only the last two paragraphs use anything about $S$ beyond Step~1.  The
+same argument proves: if $Y$ is a proper $G$-variety with $Y^G = \emptyset$
+whose non-free locus $Y_{nt}$ contains no rational curve, then there is no
+$G$-equivariant rational map $\mathbb{P}^2 \dasharrow Y$.  Note also where
+the hypotheses bite.  The crossing $E \cap L$ does not exist on
+$\mathbb{P}^2$; it is produced by the resolution, and its stabilizer $V$ is
+non-cyclic precisely because the stabilizer of $[1:0:0]$ is the non-abelian
+group of order $8$, which the resolution is forced to break up.  By
+contrast, at the crossings of the original arrangement lying over
+$[1:1:0]$ --- the only points of the arrangement where two lines meet
+transversally --- the stabilizer is also $(\mathbb{Z}/2)^2$, so these are
+fabulous as well, and they too force identifications; but the crossing over
+$[1:1:0]$ only identifies the images of $\{z=0\}$, $\{x-y=0\}$ and
+$\{x+y=0\}$, whose stabilizers all lie in the single Sylow $2$-subgroup
+$C_G(s_3)$, and $S^{C_G(s_3)}$ is non-empty --- it consists of the two
+points of $\phi^{-1}([0:0:1])$.  No contradiction arises without the
+exceptional curve.
+\end{remark}
+
+\section{Naive ideas}
+
+Here we recall some stuff that refutes naive ideas I had.
+
+Note that $D_\emptyset = X$, so the condition on stabilizers applied to
+$I = \emptyset$ forces $G_{D_j} \neq 1$ for every $j$; conversely this is
+automatic, since $D_j$ is irreducible and contained in
+$X_{nt} = \cup_{g \neq 1} X^g$, so that $D_j \subseteq X^g$ for some
+$g \neq 1$.  In fact the whole condition on stabilizers is automatic.
+
+\begin{lemma} \label{lem:strict}
+Let $X$ be a smooth irreducible $G$-variety with a faithful $G$-action and
+suppose $X_{nt} = D_1 \cup \cdots \cup D_n$ where the $D_i$ are distinct,
+smooth and irreducible, and every nonempty $D_I$ is smooth of codimension
+$|I|$.  Then $G_{D_I} \subsetneq G_{D_J}$ whenever
+$I \subsetneq J$ and $D_J \neq \emptyset$.
+\end{lemma}
+
+\begin{proof}
+If $I \subseteq J$ then $D_J \subseteq D_I$, so any $g$ with
+$D_I \subseteq X^g$ satisfies $D_J \subseteq X^g$; thus
+$G_{D_I} \subseteq G_{D_J}$.
+
+For strictness, choose $j \in J \setminus I$.  Since $D_J \subseteq D_j$ we
+have $G_{D_j} \subseteq G_{D_J}$, and $G_{D_j} \neq 1$ by the remark above,
+so it suffices to show $G_{D_j} \cap G_{D_I} = 1$.
+Let $h$ lie in the intersection and let $p$ be a point of
+$D_J \subseteq D_{I \cup \{j\}}$.  Then $X^h$ contains $D_I \cup D_j$, and
+$X^h$ is smooth with $T_p(X^h) = (T_pX)^h$ (see, for
+example, \cite[Lemma~4.2]{ReichsteinYoussin}).  As
+$D_I \cap D_j = D_{I \cup \{j\}}$ has codimension $|I| + 1$, the
+intersection $T_p D_I \cap T_p D_j$ has codimension $|I| + 1$ as well, and
+therefore
+\[
+\dim (T_p D_I + T_p D_j)
+= (\dim X - |I|) + (\dim X - 1) - (\dim X - |I| - 1)
+= \dim X .
+\]
+Thus $(T_pX)^h = T_pX$.  A finite order automorphism of a smooth
+irreducible variety fixing a point and acting trivially on its tangent
+space is the identity, so $h = 1$.
+\end{proof}
+
+\subsection*{The obstruction to a divisorial fixed locus}
+
+The following local computation is the classical ``continued fraction''
+analysis of cyclic quotient singularities of surfaces, run backwards.
+
+\begin{lemma} \label{lem:game}
+Let $p \geq 5$ be a prime and let $H \cong \mathbb{Z}/p$ act faithfully on a
+smooth surface $S$, fixing a point $s$ at which the tangent weights are
+$(\alpha,\beta)$ with $\alpha, \beta \not\equiv 0 \pmod p$ and
+$\alpha \not\equiv \beta \pmod p$.  Then for every $H$-equivariant morphism
+$\rho : T \to S$ obtained by a sequence of blowups at smooth $H$-invariant
+centers, some point of $\rho^{-1}(s)$ is an isolated point of $T_{nt}$.
+\end{lemma}
+
+\begin{proof}
+Call an $H$-fixed point $t$ of a smooth $H$-surface \emph{bad} if its
+tangent weights $(\alpha,\beta)$ satisfy
+$\alpha, \beta \not\equiv 0$ and $\alpha \not\equiv \beta \pmod p$.  Since
+$H$ has prime order, a point has nontrivial stabilizer if and only if it
+is fixed, and the condition $\alpha, \beta \not\equiv 0$ says exactly that
+no $H$-fixed curve passes through $t$; hence a bad point is an isolated
+point of the non-free locus.  Attach to a bad point the invariant
+\[
+r(t) := \beta/\alpha \in \mathbb{F}_p^\times \setminus \{1\},
+\]
+which is independent of the choice of generator of $H$ (replacing the
+generator scales $\alpha$ and $\beta$ simultaneously).
+
+We induct on the number of blowups in the tower $\rho$.  If $\rho$ is an
+isomorphism over a neighbourhood of $s$ we are done, since $s$ is bad.
+Otherwise, let $C$ be the first center in the tower meeting the preimage of
+$s$.  As no $H$-fixed curve passes through $s$ and $C$ is $H$-invariant and
+smooth, $C$ contains $s$ as an isolated point; that is, $\rho$ factors
+through the blowup $S' \to S$ at $s$.  In local coordinates $(x,y)$
+diagonalizing the action, the exceptional curve $E \subseteq S'$ carries the
+weight $\beta - \alpha \not\equiv 0$, so $E \not\subseteq S'_{nt}$, and the
+two fixed points of $E$ are
+\[
+s_1 = [1:0], \text{ with weights } (\alpha, \beta - \alpha),
+\qquad
+s_2 = [0:1], \text{ with weights } (\alpha - \beta, \beta) ,
+\]
+read off from the charts $(x, y/x)$ and $(x/y, y)$.  Their invariants are
+\[
+r(s_1) = r - 1 , \qquad r(s_2) = \frac{r}{1-r} ,
+\]
+where $r = r(s)$; both are nonzero because $r \neq 1$ and $r \neq 0$.  Hence
+$s_1$ and $s_2$ are bad unless the corresponding invariant equals $1$.  Now
+$r(s_1) = 1$ and $r(s_2) = 1$ would force $r = 2$ and $r = 1/2$
+simultaneously, hence $4 \equiv 1 \pmod p$, which is impossible for
+$p \geq 5$.  So at least one of $s_1, s_2$ is bad, and the induced tower over
+that point involves strictly fewer blowups.  The induction hypothesis
+finishes the proof.
+\end{proof}
+
+The following shows that we cannot ask for our toroidal divisor $D$ to
+be equal to $X_{nt}$.
+
+\begin{example} \label{ex:mu5}
+Let $G = \mathbb{Z}/5$ act on $X = \mathbb{P}^2$ by
+\[
+\zeta \cdot [x_0 : x_1 : x_2] = [x_0 : \zeta x_1 : \zeta^2 x_2] ,
+\]
+where $\zeta$ is a primitive fifth root of unity.  The action is faithful and
+$X_{nt}$ consists of the three coordinate points, with tangent weights
+$(1,2)$, $(-1,1)$ and $(-2,-1)$ respectively; the corresponding invariants
+$r$ are $2$, $4$ and $3$, none of which is $1$.  By Lemma~\ref{lem:game},
+for every equivariant $\pi : Z \to X$ obtained by blowing up smooth centers,
+$Z_{nt}$ has an isolated point, that is, an irreducible component of
+codimension~$2$.
+\end{example}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{alpha}
+\bibliography{citations}
+
+\end{document}
+
+

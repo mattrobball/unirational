@@ -8,9 +8,21 @@ logical strength of `H⁰`.
 
 ## 1. The site: where images can land
 
-By the funnel ([I, Cor 4.4] + FIX-A0): every fixed stratum of every model
-of `P(W)` maps into the target arrangement, with genus-1 components
-receiving points only. The landing **site** `𝒜` is the incidence complex:
+By the funnel ([I, Cor 4.4] + FIX-A0) — **scope-corrected 2026-08-05
+([I], Correction I-C): the funnel statement holds for strata of
+stabilizer-stratified models, not all models** — every fixed stratum of
+every such model maps into the target arrangement, with genus-1
+components receiving points only. The operative justification of the
+site is however independent of the funnel and unconditional: **H0-2
+forces every hypothetical map to sweep every line `L_σ`** (the
+σ-exceptional datum surjects), so the line sites carry nonempty germ
+data for *every* map, and the section-from-map theorem (§4c, Thm 5.1)
+reads its CSP section off the map's jets along the arrangement directly
+— no resolution, no funnel. A hypothetical non-RCC stratum on an
+adversarial model (Correction I-C's counterexamples) could a priori map
+onto an elliptic `E_σ`, but such curve-images interact with no CSP
+constraint: the negative gate `H⁰ = ∅ ⇒ no map` runs entirely through
+the forced line data. The landing **site** `𝒜` is the incidence complex:
 
 - the 55 lines `L_σ` (positive-dimensional receptors);
 - the 165 type-I vertices (`L_σ ∩ L_τ`, on `X`);

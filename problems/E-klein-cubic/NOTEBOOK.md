@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `bb23f24` (2026-08-05; the
+Snapshot metadata — notebook parent head: `cbdff0a` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2276,7 +2276,46 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   ω/ω²-completion flush tail (Thm N2C-1′ text, `witness_om2.py`,
   corrected §6) landed after commit `8de0a37` — the worker-return write
   race again; witness replays + `verdict_checks.py` re-run green,
-  committed with this update.** Note I
+  committed with this update.** **External event 2026-08-05: the
+  collaborator's notes received** ("Obstructions to equivariant rational
+  maps", A. Duncan + AI assistants;
+  `external_docs/duncan_higher_obstruction_20260805.tex`) — the
+  independent formalization of the surface observation the T1 gate was
+  built to reproduce. Full comparison in the director's reply of
+  2026-08-05; summary: same trunk in two vocabularies (their {toroidal
+  form via Bergh–Rydh destackification, `W_nt`-fibre connectivity
+  ("fabulous" strata), iterated flag restrictions `F_σ`, RCC chains} ≅
+  Note I's {b-complex minus decorations, funnel, chains, RCC
+  propagation}); three independent convergences — their §6 application
+  (S4 on `P²` vs the Fermat-quartic dP2: contraction forced, images
+  identified through a fabulous V4-crossing born from breaking a
+  non-abelian stabilizer, two Sylow-2s generate, `S^G = ∅`) is the T2/T3
+  closing mechanism re-derived; their Thm 4.2 (pairs: fabulous ⟺
+  `G_{D_ij}` NON-CYCLIC, with an explicit weighted-blowup severing ideal
+  for the cyclic case) is the abstract iff behind our scalar-birth/V4-chain
+  lemmas AND retroactively explains FIX-B's `C11`-points-surgically-
+  removable verdict (cyclic ⟺ severable); their Lemma 6.4 = our Lemma 4.3
+  mechanism. **Their genus-3 remark exposed Correction I-C** (Note I §4):
+  Lemma 4.3's boxed consequence quantified over ALL models but its
+  induction closes only for stabilizer-stratified towers; in-house sharper
+  counterexample constructed (blow up the `G`-orbit of a generic quartic
+  in `P_σ` — a genus-3 σ-fixed section on a legal model of `P(W)`).
+  Audit: Thm 2.1/4.1, Lem 4.2, gate T1–T5, H0/N2/H1 untouched
+  (jet-theoretic, resolution-free); Note III §1 re-based on H0-2 (the
+  line sites carry every map via the forced sweeps — the funnel demoted
+  from premise to motivation). Imports registered as candidates: the
+  pairs-iff + severing ideal (would upgrade several chain arguments to
+  iff-grade and gives a NEW test on the Klein source complex's cyclic
+  crossings), the total-RCC theorem (Galois-on-trees + Tsen; the
+  fibre-based repair of the funnel for arbitrary models), Bergh–Rydh
+  foundations (no resolution of singularities), and the toric wall-graph
+  fabulousness criterion. Their qualitative engine applied directly to
+  the Klein headline hits exactly the E14 wall (X_nt of the Klein cubic
+  CONTAINS the 55 rational lines, so "no rational curve in `Y_nt`" fails
+  and their Thm 3.10 chains land legally in the arrangement) — FIX's
+  decorated/jet layer (Notes II–III, H0/H1) is precisely the
+  continuation past that wall; no contradiction between the frameworks
+  anywhere.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
@@ -2285,9 +2324,12 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   stability by construction, rational-chain going-down proved (Lemma 4.2 —
   retiring the session-asserted principle), RCC propagation (Lemma 4.3),
   and the linear-source funnel (Cor 4.4: for `X = P(W)` every fixed stratum
-  of every model is RCC, so all genus-≥1 target strata receive only
-  points — conditional on FIX-A0, the whole source complex funnels into the
-  55-line arrangement, Cor 5.2). Acceptance gate T1–T5 (§6): derive the
+  of every **stabilizer-stratified** model is RCC, so all genus-≥1 target
+  strata receive only points from such strata — conditional on FIX-A0, the
+  whole source complex funnels into the 55-line arrangement, Cor 5.2;
+  **scope-corrected 2026-08-05 by Correction I-C** — the original "every
+  model" quantifier is false, see the E56 status entry for the Duncan-notes
+  event that exposed it). Acceptance gate T1–T5 (§6): derive the
   surface chains-to-chains picture unprompted; re-derive the Problem-F dP,
   OD16, and Fermat-cubic closures; certify non-overreach against the V4
   trisection family. **Nothing here is consumable for headline routing
@@ -2316,6 +2358,17 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 ---
 
 ## External sessions
+
+**External documents.** `external_docs/duncan_higher_obstruction_20260805.tex`
+— the collaborator's notes "Obstructions to equivariant rational maps"
+(A. Duncan + AI assistants), received 2026-08-05; toroidal forms via
+Bergh–Rydh, fabulous intersections (pairs iff: non-cyclic ⟺ fabulous),
+iterated flag limits, RCC chains, the S4-on-`P²` vs dP2 application, and
+counterexample suite. Ingested and compared in [E56](#e56) (status entry,
+2026-08-05); exposed Correction I-C to Note I §4. Verification class:
+EXTERNAL-UNVERIFIED as a document (its results re-derived or checked
+piecewise where used; the pairs-iff and total-RCC theorems are import
+candidates pending our own proof review).
 
 21 offline ChatGPT sessions: 15 are summarized in
 `notebook_build/sessions_batch{1,2,3,4}.md`; six direct review sessions
