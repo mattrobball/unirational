@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `684f27e` (2026-08-04; the
+Snapshot metadata — notebook parent head: `4234393` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2092,8 +2092,21 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   identical symbol; the `D12`-point blowup destroys 5 and creates 9
   stratum orbits (symbol multiplicities non-monotone); 45/54 exceptional
   weight-patterns hit would-be KT vanishing configurations — recorded
-  LITERATURE-DEPENDENT, not applied. Still in flight: FIX-N2 (cell
-  classification; principal target `m = 1, r ≥ 4` all line degrees). Next after landings: FIX-A3 (elliptic
+  LITERATURE-DEPENDENT, not applied. FIX-N2 landed 2026-08-05
+  (`FIX-N2-CELLS-PARTIAL`, director-replayed): the `m = 1` row is EMPTY
+  through `r = 5` (r = 4, 5 are new all-line-degree theorems, decided by
+  the new Specialisation Lemma — adopted as Note II Lemma 2.3 — via three
+  independent engines); **the cell `(2,6)` is POPULATED** (new explicit
+  family, generalizing to `(2k, 3δ+3k)`) so even `m` is not uniformly
+  empty; even-`m` bottom cells all empty; type-II-delay cell `(3,5)`
+  empty; above-first-layer odd cells populated (`(3,8)`, `(3,9)`
+  witnesses); structural finding: invariant multiplication reaches
+  `{2k} ∪ {m₀+2k, m₀ ≥ 3}` but **never `m = 1`** — an `m = 1` family must
+  be genuinely primitive, making the `m = 1` row the decisive local
+  question. OPEN: `m = 1, r = 6` at positive line degree and `r ≥ 7`
+  (per-`r` decidable; dispatched as FIX-N2b). Convention dictionary
+  packet-vs-Note-II recorded; §4 family's residual scalar `λ = ω²`
+  exhibited (previously asserted without scalars). Next after landings: FIX-A3 (elliptic
   site inventory) and the `H⁰` computation itself.
   Note III (compatibility cosheaf / global CSP on the verified
   arrangement), FIX-B (Burnside shadow). Director finding en route: the

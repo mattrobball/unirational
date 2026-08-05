@@ -128,21 +128,52 @@ The ladder organizes the local question into cells `(m, r)` (common plane
 order, triple-line order), each with a solution variety (per line degree,
 per boundary datum). Current status, consolidating everything known:
 
+**Lemma 2.3 (specialisation lemma — FIX-N2's instrument, adopted).** The
+`t`-adic graded pieces of an `A₄`-equivariant family at a `C₃`-fixed point
+of the triple line are `C₃`-equivariant *pointwise* tuples, and the bottom
+piece is nonzero and satisfies `F = 0`. Hence all-line-degree emptiness at
+a fixed `(m, r)` is a finite computation on a space of roughly a third the
+cell dimension. (The packet's `[p:q]`-constancy argument is the `r = 3`
+case and does not generalize; this does.)
+
+**Lemma 2.4 (propagation).** If cell `(m, r)` is empty with `r ≤ 2m`, then
+`(m+2, r+3)` is empty (multiply by `xyz`: plane orders `+2`, line order
+`+3`; the cone bound keeps the hypothesis meaningful).
+
+**Cell table — status after FIX-N2 (2026-08-05, director-replayed):**
+
 | cell | status | source |
 |---|---|---|
-| `m = 1`, `r ≤ 2` | forbidden by the cone (Lemma 2.1: `r ≥ 2`) + parity (Lemma 2.2) — only `r = 2` all-even patterns survive the cone; character table kills the required tuple: **to be pinned exactly** | FIX-N2 item 1 |
-| `m = 1`, `r = 3` exact | **EMPTY, all line degrees** | V4 packet Thm 2.12 |
-| `m = 1`, `r ≥ 4` | **OPEN — the principal target** | FIX-N2 item 2 |
-| odd `m ≥ 3`, first layer `(xyz)^{r−1}(J₃)₆` | **POPULATED** (line degree 6, `A₄`-equivariant) | V4 packet §4 = T5 witness |
-| odd `m ≥ 3`, above the first layer | OPEN | FIX-N2 item 3 |
-| even `m` | outside the packet's odd-normal scope; parity table (Lemma 2.2) heavily constrains — **to be classified** | FIX-N2 item 4 |
+| `m = 1`, `r ≤ 1` | forbidden by the cone | Lemma 2.1 |
+| `m = 1`, `r = 2` | **EMPTY, all line degrees** (shape `(0,0,Ayz,Bzx,Cxy)`; landing = `ABC = 0`; residual `C₃` kills it) | FIX-N2 |
+| `m = 1`, `r = 3` | **EMPTY, all line degrees** (re-proved; strengthened to the whole `m ≥ 1` stratum) | V4 packet Thm 2.12 + FIX-N2 |
+| `m = 1`, `r = 4, 5` | **EMPTY, all line degrees** — new theorems | FIX-N2 (three independent engines) |
+| `m = 1`, `r = 6` | not populated at line degree 0; positive line degree **OPEN** | FIX-N2b |
+| `m = 1`, `r ≥ 7` | **OPEN** (per-`r` decidable via Lemma 2.3; `r = 7` did not terminate) | FIX-N2b |
+| `m = 2`, `r = 3, 4, 5` | **EMPTY, all line degrees** | FIX-N2 |
+| `m = 2`, `r = 6` | **POPULATED** — new: `a' = −(xyz)²`, `u₀' = x²yz(B²y²+Bx²+z²)/B` (cyclic), `κ₊ = (B³−1)²/B³`; generalizes to `(2k, 3δ+3k)`, `δ` odd | FIX-N2 finding |
+| even `m`, bottom cell `(m, 3m/2)` | **EMPTY, all line degrees, every even `m`** | FIX-N2 |
+| `m = 3`, `r = 5` (type-II delay) | **EMPTY, all line degrees** | FIX-N2 |
+| `m = 3`, `r = 6` (first layer) | POPULATED | V4 packet §4 (re-verified; residual scalar `λ = ω²` now exhibited) |
+| odd `m ≥ 3`, above first layer | **POPULATED** — witnesses `(3,8)` imprimitive, `(3,9)` primitive | FIX-N2 finding |
 
-If FIX-N2 closes `m = 1, r ≥ 4` (an all-line-degree emptiness in the style
-of 2.12) and settles the even-`m` and above-first-layer questions, the
-stalk of the compatibility cosheaf at the V4-stratum becomes a **known
-object**: every local landing family lives in the populated branch, whose
-solution variety §3 of the packet already fibers over the genus-2
-reciprocal cover. That is the input Note III needs.
+**Structural finding (why `m = 1` is the hard row).** The generalized §4
+construction (any character-`χ₁` form `X` of degree `δ` with
+`Y = ψX, Z = ψ²X`) yields `A₄`-equivariant families of order `3δ` at line
+degree 0, and invariant multiplication moves `m` by even steps: reachable
+plane orders are `{2k} ∪ {m₀ + 2k : m₀ ≥ 3}` — **never `m = 1`** (invariants
+have even `ord_{P_i}`, Lemma 2.2). An `m = 1` family must therefore be
+genuinely primitive, unreachable from seeds by invariant multiplication.
+The `m = 1` row is empty through `r = 5`; whether it is empty for all `r`
+is the remaining local question (FIX-N2b). Either answer shapes Note III's
+stalks: total emptiness closes packet-§6 exclusion (i) outright; a
+populated cell adds a genuinely primitive branch to the stalk variety.
+
+Even with the `m = 1` row open above `r = 5`, the stalk picture is already
+substantially known: the populated branches at even `m` (new) and odd
+`m ≥ 3` (first layer and above) fiber over explicit parameter varieties;
+Note III can proceed with the `m = 1, r ≥ 6` cells carried as an explicit
+unknown flag.
 
 ## 5. What the ladder does *not* claim
 

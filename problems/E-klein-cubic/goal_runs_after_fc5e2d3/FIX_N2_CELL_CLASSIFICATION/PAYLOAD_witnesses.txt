@@ -1,0 +1,59 @@
+# FIX-N2 payload: explicit POPULATED witnesses (Theorem D).
+# a' = -XYZ, b' = 0, u0' = X(X^2+B Y^2+B^-1 Z^2),
+# u1' = om Y(...), u2' = om^2 Z(...), Y = psi X, Z = psi^2 X,
+# kp = (B^3-1)^2/B^3.  Residual C3 scalar lam = om^2.
+
+--- X = x   the seed: m = 0
+    lands (F = 0 with kp = (B^3-1)^2/B^3): True
+    (m,r) = (0,3)
+    a'   = -x*y*z
+    b'   = 0
+    u0'  = x*(B**2*y**2 + B*x**2 + z**2)/B
+    u1'  = om*y*(B**2*z**2 + B*y**2 + x**2)/B
+    u2'  = om**2*z*(B**2*x**2 + B*z**2 + y**2)/B
+
+--- X = y z   base packet section 4
+    lands (F = 0 with kp = (B^3-1)^2/B^3): True
+    (m,r) = (3,6)
+    a'   = -x**2*y**2*z**2
+    b'   = 0
+    u0'  = y*z*(B**2*x**2*z**2 + B*y**2*z**2 + x**2*y**2)/B
+    u1'  = om*x*z*(B**2*x**2*y**2 + B*x**2*z**2 + y**2*z**2)/B
+    u2'  = om**2*x*y*(B**2*y**2*z**2 + B*x**2*y**2 + x**2*z**2)/B
+
+--- X = x y^2   NEW primitive witness above the first m=3 layer
+    lands (F = 0 with kp = (B^3-1)^2/B^3): True
+    (m,r) = (3,9)
+    a'   = -x**3*y**3*z**3
+    b'   = 0
+    u0'  = x*y**2*(B**2*y**2*z**4 + B*x**2*y**4 + x**4*z**2)/B
+    u1'  = om*y*z**2*(B**2*x**4*z**2 + B*y**2*z**4 + x**2*y**4)/B
+    u2'  = om**2*x**2*z*(B**2*x**2*y**4 + B*x**4*z**2 + y**2*z**4)/B
+
+--- X = x^2 y z   
+    lands (F = 0 with kp = (B^3-1)^2/B^3): True
+    (m,r) = (6,12)
+    a'   = -x**4*y**4*z**4
+    b'   = 0
+    u0'  = x**4*y**3*z**3*(B**2*y**2 + B*x**2 + z**2)/B
+    u1'  = om*x**3*y**4*z**3*(B**2*z**2 + B*y**2 + x**2)/B
+    u2'  = om**2*x**3*y**3*z**4*(B**2*x**2 + B*z**2 + y**2)/B
+
+--- xyz * (X = x)   NEW: the cell (2,6) is POPULATED - an even-m cell
+    lands (F = 0 with kp = (B^3-1)^2/B^3): True
+    (m,r) = (2,6)
+    a'   = -x**2*y**2*z**2
+    b'   = 0
+    u0'  = x**2*y*z*(B**2*y**2 + B*x**2 + z**2)/B
+    u1'  = om*x*y**2*z*(B**2*z**2 + B*y**2 + x**2)/B
+    u2'  = om**2*x*y*z**2*(B**2*x**2 + B*z**2 + y**2)/B
+
+--- (x^2+y^2+z^2) * (X = y z)   NEW imprimitive witness above the first m=3 layer
+    lands (F = 0 with kp = (B^3-1)^2/B^3): True
+    (m,r) = (3,8)
+    a'   = -x**2*y**2*z**2*(x**2 + y**2 + z**2)
+    b'   = 0
+    u0'  = y*z*(x**2 + y**2 + z**2)*(B**2*x**2*z**2 + B*y**2*z**2 + x**2*y**2)/B
+    u1'  = om*x*z*(x**2 + y**2 + z**2)*(B**2*x**2*y**2 + B*x**2*z**2 + y**2*z**2)/B
+    u2'  = om**2*x*y*(x**2 + y**2 + z**2)*(B**2*y**2*z**2 + B*x**2*y**2 + x**2*z**2)/B
+

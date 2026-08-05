@@ -1,0 +1,14 @@
+# FIX-N2 payload: dimensions of the three C3-eigen-blocks of the
+# cell (their sum is the full cell dimension - arithmetic check).
+
+m=1 r=2    cell dim = 3    C3 blocks (lam=1,om,om^2) = (1,1,1)  sum = 3  OK
+m=1 r=3    cell dim = 8    C3 blocks (lam=1,om,om^2) = (2,3,3)  sum = 8  OK
+m=1 r=4    cell dim = 15   C3 blocks (lam=1,om,om^2) = (5,5,5)  sum = 15  OK
+m=1 r=5    cell dim = 21   C3 blocks (lam=1,om,om^2) = (7,7,7)  sum = 21  OK
+m=1 r=6    cell dim = 32   C3 blocks (lam=1,om,om^2) = (10,11,11)  sum = 32  OK
+m=1 r=7    cell dim = 39   C3 blocks (lam=1,om,om^2) = (13,13,13)  sum = 39  OK
+m=1 r=8    cell dim = 54   C3 blocks (lam=1,om,om^2) = (18,18,18)  sum = 54  OK
+m=1 r=9    cell dim = 62   C3 blocks (lam=1,om,om^2) = (20,21,21)  sum = 62  OK
+m=1 r=10   cell dim = 81   C3 blocks (lam=1,om,om^2) = (27,27,27)  sum = 81  OK
+m=1 r=11   cell dim = 90   C3 blocks (lam=1,om,om^2) = (30,30,30)  sum = 90  OK
+m=1 r=12   cell dim = 113  C3 blocks (lam=1,om,om^2) = (37,38,38)  sum = 113  OK

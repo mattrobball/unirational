@@ -1,0 +1,13 @@
+kkbase = toField(QQ[om,kp]/ideal(om^2+om+1, 8*kp^2-13*kp-4));
+kmv = 13/8 - kp; kpv = kp; omv = om;
+R = kkbase[v0,v1,w];
+om = omv; kp = kpv; km = kmv;
+I = ideal(v0^2*v1,v0*v1^2,v0*v1^2,v0^3 + v1^3,v0^2*v1,v0^2*v1,v0*v1^2);
+print("PARAM v0 : " | (if (I + ideal(1-w*(v0))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("PARAM v1 : " | (if (I + ideal(1-w*(v1))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 2 COEF 0 : " | (if (I + ideal(1-w*(v0))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 2 COEF 1 : " | (if (I + ideal(1-w*(v1))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 2 COEF 2 : " | (if (I + ideal(1-w*(v1))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 2 COEF 3 : " | (if (I + ideal(1-w*(v0))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 2 COEF 4 : " | (if (I + ideal(1-w*(v0))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 2 COEF 5 : " | (if (I + ideal(1-w*(v1))) == ideal(1_R) then "forced zero" else "can be nonzero"));

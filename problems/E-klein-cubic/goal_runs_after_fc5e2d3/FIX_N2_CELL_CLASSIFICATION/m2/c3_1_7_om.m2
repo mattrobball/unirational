@@ -1,0 +1,13 @@
+kkbase = toField(QQ[om,kp]/ideal(om^2+om+1, 8*kp^2-13*kp-4));
+kmv = 13/8 - kp; kpv = kp; omv = om;
+R = kkbase[b_1_1_5,b_1_3_3,w];
+om = omv; kp = kpv; km = kmv;
+I = ideal(b_1_1_5^3*km,3*b_1_1_5^2*b_1_3_3*km,3*b_1_1_5^2*b_1_3_3*km,3*b_1_1_5^3*km + 3*b_1_1_5*b_1_3_3^2*km,3*b_1_1_5^2*b_1_3_3*km + 6*b_1_1_5*b_1_3_3^2*km,3*b_1_1_5^3*km + 3*b_1_1_5*b_1_3_3^2*km,6*b_1_1_5^2*b_1_3_3*km + b_1_3_3^3*km,6*b_1_1_5^2*b_1_3_3*km + 6*b_1_1_5*b_1_3_3^2*km + 3*b_1_3_3^3*km,6*b_1_1_5^2*b_1_3_3*km + 6*b_1_1_5*b_1_3_3^2*km + 3*b_1_3_3^3*km,6*b_1_1_5^2*b_1_3_3*km + b_1_3_3^3*km,3*b_1_1_5^3*km + 3*b_1_1_5*b_1_3_3^2*km,6*b_1_1_5^2*b_1_3_3*km + 6*b_1_1_5*b_1_3_3^2*km + 3*b_1_3_3^3*km,6*b_1_1_5^3*km + 9*b_1_1_5*b_1_3_3^2*km + 6*b_1_3_3^3*km,6*b_1_1_5^2*b_1_3_3*km + 6*b_1_1_5*b_1_3_3^2*km + 3*b_1_3_3^3*km,3*b_1_1_5^3*km + 3*b_1_1_5*b_1_3_3^2*km,3*b_1_1_5^2*b_1_3_3*km,3*b_1_1_5^2*b_1_3_3*km + 6*b_1_1_5*b_1_3_3^2*km,6*b_1_1_5^2*b_1_3_3*km + 6*b_1_1_5*b_1_3_3^2*km + 3*b_1_3_3^3*km,6*b_1_1_5^2*b_1_3_3*km + 6*b_1_1_5*b_1_3_3^2*km + 3*b_1_3_3^3*km,3*b_1_1_5^2*b_1_3_3*km + 6*b_1_1_5*b_1_3_3^2*km,3*b_1_1_5^2*b_1_3_3*km,b_1_1_5^3*km,3*b_1_1_5^2*b_1_3_3*km,3*b_1_1_5^3*km + 3*b_1_1_5*b_1_3_3^2*km,6*b_1_1_5^2*b_1_3_3*km + b_1_3_3^3*km,3*b_1_1_5^3*km + 3*b_1_1_5*b_1_3_3^2*km,3*b_1_1_5^2*b_1_3_3*km,b_1_1_5^3*km);
+print("PARAM b_1_1_5 : " | (if (I + ideal(1-w*(b_1_1_5))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("PARAM b_1_3_3 : " | (if (I + ideal(1-w*(b_1_3_3))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 5 COEF 0 : " | (if (I + ideal(1-w*(b_1_1_5))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 5 COEF 1 : " | (if (I + ideal(1-w*(b_1_1_5))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 5 COEF 2 : " | (if (I + ideal(1-w*(b_1_1_5))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 3 COEF 0 : " | (if (I + ideal(1-w*(b_1_3_3))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 3 COEF 1 : " | (if (I + ideal(1-w*(b_1_3_3))) == ideal(1_R) then "forced zero" else "can be nonzero"));
+print("MAXEXP 3 COEF 2 : " | (if (I + ideal(1-w*(b_1_3_3))) == ideal(1_R) then "forced zero" else "can be nonzero"));

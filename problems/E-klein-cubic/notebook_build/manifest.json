@@ -1317,6 +1317,17 @@
    "char0_scope": "char0",
    "tracked": "main",
    "notes": "director-replayed 2026-08-05 (20 checks, 0 failures); [P(W)] 20-symbol table; removability core 9/20 (plus-planes unconditionally rigid; C11 stratum surgically removable); FIX-A2 cross-validated a third time; KT vanishing configurations recorded LITERATURE-DEPENDENT, not applied"
+  },
+  {
+   "path": "goal_runs_after_fc5e2d3/FIX_N2_CELL_CLASSIFICATION",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-N2-CELLS-PARTIAL",
+   "superseded_by": null,
+   "char0_scope": "char0",
+   "tracked": "main",
+   "notes": "director-replayed 2026-08-05; m=1 row EMPTY through r=5 (r=4,5 new, three independent engines); (2,6) POPULATED (new family, generalizes to (2k,3delta+3k)); even-m bottom cells empty; propagation lemma; Specialisation Lemma adopted as Note II Lemma 2.3; convention dictionary recorded; open: m=1 r=6 positive degree, r>=7 (FIX-N2b)"
   }
  ],
  "known_branches": [

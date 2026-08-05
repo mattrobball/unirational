@@ -1,0 +1,13 @@
+kkbase = ZZ/100057;
+omv = 1140_kkbase; kpv = 74361_kkbase; kmv = 63219_kkbase;
+R = kkbase[c0,c1,c2,w];
+om = omv; kp = kpv; km = kmv;
+I = ideal(c0*c1*c2);
+print("CELL m=3 r=5 nvars=3 neqs=1");
+print("dimI=" | toString dim I);
+J = I + ideal(1 - w*c0);
+print("EXACT-m coeff c0 -> " | (if J == ideal(1_R) then "cannot be nonzero (EMPTY)" else ("CAN be nonzero: dim=" | toString dim J)));
+J = I + ideal(1 - w*c1);
+print("EXACT-m coeff c1 -> " | (if J == ideal(1_R) then "cannot be nonzero (EMPTY)" else ("CAN be nonzero: dim=" | toString dim J)));
+J = I + ideal(1 - w*c2);
+print("EXACT-m coeff c2 -> " | (if J == ideal(1_R) then "cannot be nonzero (EMPTY)" else ("CAN be nonzero: dim=" | toString dim J)));

@@ -1,0 +1,48 @@
+# FIX-N2 payload: the C3-equivariant pointwise solution cones in J_1.
+#
+# By the Specialisation Lemma (CELL_TABLE.md section 2), "cone = {0}" at
+# triple-line order r means: NO A4-equivariant simultaneous landing family with
+# common plane order >= 1 and triple-line order r exists, in ANY line degree.
+#
+# Engines
+#   [M2] Macaulay2 dim I over ZZ/100057 (om=1140, kp=74361, km=63219)
+#        produce_c3_solve.py            -> c3_ff_m1.log
+#   [MR] from-scratch Macaulay rank certificate in one degree, same field
+#        verify_cells.py                -> verify_run.log
+#        (full rank mod p => full rank in char 0 => cone = {0} in char 0)
+#   [MS] msolve, coordinate saturation I + (v_i - 1) for every coordinate
+#        produce_msolve.py              -> msolve_ff_m1.log
+#   [PR] msolve probe of a single plane-order coefficient
+#        probe_order1_r6.py             -> probe_r6.log
+#   [W]  explicit symbolic witness verified in characteristic zero
+#        verify_cells.py / PAYLOAD_witnesses.txt
+
+r   lam      free  verdict                                        engines
+--------------------------------------------------------------------------------
+2   1          1   cone = {0}                                     M2, MR, MS
+2   om         1   cone = {0}                                     M2, MR, MS
+2   om^2       1   cone = {0}                                     M2, MR, MS
+3   1          2   cone = {0}                                     M2, MR, MS
+3   om         3   cone = {0}                                     M2, MR, MS
+3   om^2       3   cone = {0}                                     M2, MR, MS
+4   1          5   cone = {0}                                     M2, MR, MS
+4   om         5   cone = {0}                                     M2, MR, MS
+4   om^2       5   cone = {0}                                     M2, MR, MS
+5   1          7   cone = {0}                                     M2, MR, MS
+5   om         7   cone = {0}                                     M2, MR, MS
+5   om^2       7   cone = {0}                                     M2, MR, MS
+6   1         10   cone = {0}                                     M2, MS
+6   om        11   NONTRIVIAL; no plane-order-1 point;            PR, W
+                   plane-order-2 points exist (= xyz * seed)
+6   om^2      11   NONTRIVIAL; no plane-order-1 point;            PR, W
+                   plane-order-2 points exist (= xyz * seed)
+7   all       13   NOT DECIDED (no engine terminated)             -
+8   om^2      18   NONTRIVIAL (witness (3,8) = (x^2+y^2+z^2)*S4)  W
+9   om^2      21   NONTRIVIAL (witness (3,9), X = x y^2)          W
+
+Consequences (Theorem A of CELL_TABLE.md):
+  r = 2,3,4,5 : the ENTIRE m >= 1 stratum at that triple-line order is empty,
+                for all line degrees.  This covers the cells
+                (1,2) (1,3) (1,4) (1,5) (2,3) (2,4) (2,5) (3,5).
+  r = 6       : (1,6) is not populated at line degree 0; (2,6) IS populated;
+                (3,6) is populated (base packet section 4).
