@@ -314,6 +314,26 @@ def main() -> int:
     else:
         print(f"OK   coverage_by_mention: {len(mention_targets)} manually-indexed items all mentioned in NOTEBOOK.md")
 
+    # --- Check 9b: packet exits must surface in the notebook ---------------
+    # Every goal_run record with a genuine primary exit (not a role value)
+    # must have that exit mentioned verbatim in NOTEBOOK.md — this is the
+    # staleness guard that forces per-packet notebook propagation.
+    ROLE_VALUES = {"SUBRUN-ONLY", "EVIDENCE-FOR-PARENT", "NO-INDEPENDENT-EXIT",
+                   "SUPERSEDED", "PROPOSAL-UNRUN", "UNDECIDED"}
+    unsurfaced = [(r["path"], r["primary_exit"]) for r in records
+                  if r.get("kind") == "goal_run"
+                  and r.get("primary_exit") not in ROLE_VALUES
+                  and str(r.get("primary_exit")) not in notebook_text]
+    if unsurfaced:
+        failures += 1
+        print(f"FAIL exits_surfaced_in_notebook: {len(unsurfaced)} packet exit(s) not mentioned in NOTEBOOK.md:")
+        for p, e in unsurfaced:
+            print(f"    {e}  ({p})")
+    else:
+        n_exits = sum(1 for r in records if r.get("kind") == "goal_run"
+                      and r.get("primary_exit") not in ROLE_VALUES)
+        print(f"OK   exits_surfaced_in_notebook: {n_exits} genuine packet exits, all mentioned in NOTEBOOK.md")
+
     # --- Check 10: no unknown remote branches ------------------------------
     known = set(manifest.get("known_branches", []))
     if known:

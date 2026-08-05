@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `a426488` (2026-08-04; the
+Snapshot metadata — notebook parent head: `e29698c` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -126,7 +126,17 @@ genuine generic twist pointless.
    portable provenance is `goal_runs_*/`, `certificates/`, and the committed
    documents. Where an entry's only provenance is `tmp/`, its evidence is
    **local-only** and cannot be checked by anyone working from the pushed repo.
-6. **Nomenclature.** Bare route letters are ambiguous historical tokens — `F`
+6. **Maintenance protocol (live-program discipline).** Every commit that
+   lands a packet, theory note, or route-status change must, in the *same*
+   commit: update the owning entry's Status and (if changed) the Index row
+   and dashboard; add the manifest record; add a Supersession-map row when
+   anything is superseded; adjust Verification debt (retire or add); bump
+   the parent head. Enforcement: `scripts/check_manifest_parity.py` fails on
+   unmapped run dirs, stale parent heads, unaccounted `tmp/` or documents,
+   and — as of 2026-08-04 — on any packet exit not surfaced verbatim in this
+   notebook (`exits_surfaced_in_notebook`). Run the checker before every
+   commit; a red checker is a stop.
+7. **Nomenclature.** Bare route letters are ambiguous historical tokens — `F`
    alone names three unrelated programs, `dP` four. The canonical citation
    form is the **E-number** (optionally plus a run directory). The
    Nomenclature glossary below is the disambiguation authority; new documents
@@ -173,7 +183,9 @@ parallel alternatives:
    problem; families 2's theoretical arguments target the same exit
    module-theoretically. **Now under head-on attack as the FIX program
    ([E56](#e56), opened 2026-08-04): Note I defines the b-complex and its
-   functoriality; foundation packets FIX-A0/A1 in flight.**
+   functoriality; foundation packets `FIX-A0-ARRANGEMENT-PASS` and
+   `FIX-A1-V4-REPAIR-PASS` landed 2026-08-04, director-replayed — the funnel
+   target is now the verified arrangement; acceptance gate T1–T5 next.**
 
 Method-discovery proposals sit outside the four families: the
 equivalent-object dP-replay ([E52](#e52)) and the hidden-intermediate-variety
@@ -270,6 +282,7 @@ supersessions are listed. Each also appears in the affected entries.
 | C6 corrected Plücker/alternating model (08-02) | C5's inconsistent idempotent encoding `e·S_0·e = 0` | E08 |
 | later landings L1, G3A, G3P, G4, G7A, G5, H6, G7B-fix (08-02) | `R0-CANONICAL-REFRESH-PASS` (stale on arrival) | E29 |
 | `NOTEBOOK.md` (08-03) | `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02.md`, `GOALS_NEXT_10_ROUTES_2026-08-02.md` as tracking documents | — |
+| FIX-A0/A1 packets (08-04, `goal_runs_after_2880a28/`) | `strata.md`'s "only type-I" sentence (claim 2 — refuted for all 55 V4s); the strata sign-convention hedge on `C2_line.tangent_T_yY_generic` (settled: `(+1)¹⊕(−1)³`); `marked_s3_geometry.json`'s inert regression primes 67/331 (repaired: 397/419); the single-representative caveat of `CLAIM_1_SURVIVES_CLAIM_2_REFUTED` | E34, E17, E56 |
 
 ## Research threads
 
@@ -388,6 +401,7 @@ tokens.**
 | `V` | The valuation/residue program `V/V2/V3/V4` ([E33](#e33)); `V₄` the Klein four-group (group theory, everywhere); `V(Φ)` the universal cubic ([E16](#e16)); `V_6` the Schur representation ([E26](#e26)/[E31](#e31)); `V_Z` the Path A interface object ([E01](#e01)). |
 | `M` | M/M3 Sarkisov section program ([E24](#e24)); `M̄` the G3H frame matrix ([E17](#e17)); `m` the plane-order parameter ([E09](#e09)/[E25](#e25)); `M_d` the covariant module ([E16](#e16)). |
 | `Attempt1–5` | The 2026-07-30 dispatch wave ([E05](#e05)): Attempt1 = Pfaffian idempotent (→ [E26](#e26)), Attempt2 = fold/T (→ [E32](#e32)), Attempt3 = S19 (→ [E30](#e30)), Attempt4 = KLS (→ [E22](#e22)), Attempt5 = Path G (→ [E16](#e16)). |
+| type-I / type-II | The two `V4`-point patterns in the arrangement, precisely defined since the FIX-A1 adjudication ([E34](#e34), [E56](#e56)): **type-I** = the 165 triangle vertices (one plane cubic ∩ two minus-lines; 3 per `E_σ`, 6 per `L_σ`); **type-II** = the 3-per-V4 points of `X ∩ ℓ_V` (three plane cubics ∩ the V4-fixed line, `ℓ_V ⊄ X`; none on any minus-line). Pre-adjudication uses of these terms in strata documents are unreliable without this row. |
 | `A0` | Path A Gate A0 (route intro/objective, [E01](#e01)); `A0-CANONICAL-AUDIT-PASS` canonical audit / CAS baseline ([E02](#e02)). |
 | `C2` | Route C Fano stage C2 (rank-one/Plücker, two-generator descent, [E07](#e07)); the cyclic-order-2 stabilizer stratum `C2` in the WP-strata classification ([E34](#e34)). |
 | `J` | Elo Path J — unexecuted candidate-invariant survey (exits `N-J`/`J-CANDIDATE`/`J-STOP`, "theory watch", [E21](#e21)); Goal J / `J_BASELOCUS_PRYM` — executed fixed-centre Albanese–Prym obstruction (exit `J2-UNRESTRICTED-COUNTERMODEL-EXTENDS`, [E21](#e21)). Two distinct programs sharing a letter — see E21 and conflict 11. |
@@ -491,7 +505,7 @@ Each entry carries a `Thread:` line locating it in the Research threads map abov
 | [E53](#e53) | UNKNOWN-EX — hidden intermediate-variety search | positive (proposed) | analytic | PROPOSED-UNRUN | none |
 | [E54](#e54) | CTR-TWIST — counterexample twist target | negative (target) | analytic | OPEN-TARGET | negative |
 | [E55](#e55) | REPAIR — 2026-07-31 theorem-boundary audit | infrastructure | analytic | APPLIED | none |
-| [E56](#e56) | FIX — equivariant fixed-locus b-complex program | dual (reduction + obstruction) | analytic + CAS | ACTIVE — Note I drafted; FIX-A0/A1 dispatched | both |
+| [E56](#e56) | FIX — equivariant fixed-locus b-complex program | dual (reduction + obstruction) | analytic + CAS | ACTIVE — Note I + Burnside §7; A0/A1 PASS; gate T1–T5 next | both |
 
 ## Attempts
 
@@ -959,7 +973,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 | G3H | A5 quadratic-Springer semilinear lift | `G3H-SEMILINEAR-G3-FRAME-PASS` (demoted); `G3H-QUADRATIC-INTERFACE-NO-GO-SCOPED` | interface installed only — no executable field point materialized or verified | `goal_runs_after_eb21458/G3H_A5_SEMILINEAR_SPRINGER/phase4_g3_frame/G3_FRAME.md` |
 | G3P | tautological-polar / odd-degree descent | `G3P-POLAR-SYSTEM-PASS` (main); branch-only `G3P-UNDECIDED` | PASS on main; branch packet's canonical-polar route misses, archived snapshot | `goal_runs_after_0aecc89/G3P_POLAR_ODD_DEGREE_DESCENT/STATUS.md`; branch `agent/g3p-a5-semilinear-20260802` at `external_packets/g3p-a5-semilinear-20260802_G3P_A5_SEMILINEAR_QUADRATIC/` |
 | G3S | structured direct arithmetic (execution order) | none recorded | dispatched | commit `7da4fdf` "Add G3S structured direct arithmetic execution order" |
-| G7A/B/C | double-A5 biplane (induced cycles / projective scaling / cross-class projector) | `G7-PROJECTIVE-SCALING-PASS` (re-derived) | re-derived pass; induced-cycle claim `G7B-INDUCED-CYCLE-REFUTED` and quarantined | `goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/cycles/STATUS.md` (`4a5beac`) |
+| G7A/B/C | double-A5 biplane (induced cycles / projective scaling / cross-class projector) | `G7-PROJECTIVE-SCALING-PASS` (re-derived); geometry subpacket `G7-RESIDUAL-GEOMETRY-PASS` (polarization, third-intersection formula, residual census) | re-derived pass; induced-cycle claim `G7B-INDUCED-CYCLE-REFUTED` and quarantined | `goal_runs_after_0aecc89/G7_DOUBLE_A5_BIPLANE/{cycles,geometry}/STATUS.md` (`4a5beac`) |
 
 - **Verification class:** mixed — G3A/G3B/G3C/G3P/G3D (+`line27_exact`) and the G3H phase-5 subpackets ALGEBRAIC-RECOMPUTE; `G3H_A5_SEMILINEAR_SPRINGER` **top level PARTIAL-RECOMPUTE** (phase 2 rebuilds the covariant `Y`; phases 1/4/5 are hash/flag checks, and phase 4 is the `INTERFACE_INSTALLED` frame).
 - **Status:** OPEN — highest-priority live route as of 2026-08-02; dominance and polar-system sub-gates PASS, the A5 semilinear G3 frame is **interface-installed only** (demoted 2026-08-03), the A5 semilinear quadratic interface is a scoped NO-GO, and the point decision itself is undecided.
@@ -998,6 +1012,7 @@ docs, **WORK** workorders. "08-02 ledger" = `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02
 - **Verification class:** ALGEBRAIC-RECOMPUTE (`H_11_5`, all three H5 runs, `H6` +phase, `H6A`).
 - **Status:** OPEN — norm model and `μ₁₁`-torsor class installed and PASSING; the arithmetic binary is unresolved; ranked second-strongest negative route.
   - `H-11_5-NORM-MODEL-PASS` [DIR, `goal_runs_after_35fa/H_11_5_TWIST/STATUS.md`; WORK]
+  - `H6-PROJECTIVE-11-ISOGENY-PASS` — exact isogeny model for `H_tr` and its dual multiplicative resolvent installed [DIR, `goal_runs_after_141f60/H6A_PROJECTIVE_11_ISOGENY/STATUS.md`]
   - `H5-UNDECIDED` [DIR, `goal_runs_after_bd610a/H5_11_5_TRACE_CUBIC/STATUS.md`]; "no K-point; binary open" [WORK]
   - `H6-TORSOR-CLASS-PASS` [DIR, `goal_runs_after_141f60/H6_TRACE_CUBIC_DECISION/STATUS.md`]
   - "the exact trace model is now sufficiently small to attack, but no pointlessness theorem is present"; "Rank 2 — the smallest exact genuine twist left" [WORK, `DIRECTOR_REVIEW_AFTER_BD610A.md` §2.5, §4]
