@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `96745a9` (2026-08-04; the
+Snapshot metadata — notebook parent head: `fc5e2d3` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2071,7 +2071,18 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   obstruction computation), and the local cell classification table with
   the open cells assigned to packet FIX-N2 (principal target: `m = 1`,
   triple order ≥ 4, all line degrees). Cleared program continues: Note II
-  (done),
+  (done), Note III skeleton landed same day (`theory/FIX_III_cosheaf.md`:
+  the landing site 𝒜 with residually-pinned elliptic point-sites, stalks
+  from the [II] cells, the honest logical strength — `H⁰ = ∅` is the
+  negative headline, `H⁰ ≠ ∅` yields candidate global landing data — and
+  the **quotient reduction**: `G`-equivariance computes `H⁰` on `𝒜/G`,
+  a CSP in a handful of variety-valued orbit-variables, solvable by exact
+  elimination). Packets in flight: FIX-N2 (cell classification; principal
+  target `m = 1, r ≥ 4` all line degrees) and FIX-B (corrected scope:
+  `[P(W)]` symbol list + removability core via in-repo calculus only —
+  the unrelativized Burnside class is provably map-blind; the cosheaf is
+  the correct relativization). Next after landings: FIX-A3 (elliptic
+  site inventory) and the `H⁰` computation itself.
   Note III (compatibility cosheaf / global CSP on the verified
   arrangement), FIX-B (Burnside shadow). Director finding en route: the
   sealed `verify_kappa_genus2.py` is replay-brittle on sympy 1.14
