@@ -303,7 +303,45 @@ program to the common-line geometry of method family 3 from a new direction.
   formalism does not prove false theorems, and localizing exactly which
   global constraint the family does or does not satisfy.
 
-## 7. Immediate program
+## 7. Comparison: equivariant Burnside groups (Kontsevich–Pestun–Tschinkel,
+Kresch–Tschinkel)
+
+Same substrate (strata, residual actions, normal weights) and the same
+blowup calculus — used oppositely: `Burn_n(G)` linearizes and **quotients by
+the calculus** (symbols modulo conjugation/vanishing/blowup relations),
+producing a `G`-birational-type invariant computable on one model; `𝔽_b`
+**keeps the calculus as structure**. Canonical relationship: the symbol sum
+gives a map from the complex coequalizing the calculus — Burn is the
+universal linearized calculus-invariant receiving `𝔽_b`; `𝔽_b` is its
+categorification, Burn its `π₀`-shadow. Decisive divergence — variance:
+Burn has no functoriality under dominant non-birational maps (a fortiori
+none in relative dimension ≥ 1), so it addresses linearizability/type
+questions, not `G`-unirationality; this note's Thm 4.1 exists precisely to
+supply the map-variance the quotient cannot have (consistent with the E44
+shelf audit). Further contrasts: Burn abelianizes stabilizers via standard
+form (destroying the nonabelian incidence depth — `D12` on `E_t ⊔ L_t`,
+`A4` on the triangle — that `δ_res` and the poset retain); Burn is
+first-order (weights only) vs Note II's jet ladder; Burn's symbols retain
+full residual function fields — richer than `δ_bir`'s MRC-coarsening, noted
+for possible un-coarsening.
+
+**Imports adopted:** (i) standard-form models as a preferred cofinal class
+for Note III's computation; (ii) the vanishing relations as a first-order
+classification of *removable* configurations — pruning the CSP to the
+non-removable core of `𝔽_b`; (iii) incompressibility coefficients
+(Reichstein–Youssin and Burnside refinements) as source-side constraints.
+**Registered side-goal FIX-B (after the T1–T5 gate):** the relative
+Burnside shadow — `[Γ̃] = [P(W)] ∈ Burn_4(G)` is explicitly computable, and
+Thm 4.1 fibers `Γ̃`'s strata over the target arrangement, so "the fixed
+class decomposes compatibly with the arrangement" is a finite
+linear-algebra necessary condition: the abelianized `H⁰` of the cosheaf.
+Expected weak (linearization loses the content — E44 caution transfers) but
+cheap and diagnostic. **Margin note:** KPT's `B_2(C_N)` is governed by
+level-`N` modular symbols; our `C_11`-strata live on a level-11 modular
+threefold (Gross–Popescu) — two level-11 structures meeting at the same
+strata; unexploited.
+
+## 8. Immediate program
 
 1. **FIX-A0** (CAS, dispatched): exact verification of the involution
    split `(3,2)`, `X^σ = E_t ⊔ L_t`, `j(E_t)`, normal types `(−1)^{⊕2}`,
