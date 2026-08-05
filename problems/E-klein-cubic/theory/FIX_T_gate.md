@@ -267,6 +267,79 @@ assertion "the repo's PSL(2,7) result is the all-degree
 `V₄`-exceptional-path obstruction" is hereby VERIFIED against the source
 (retiring the last clause of debt item 15 except T5).
 
+## T2′. The Duncan instance (S4 on the Fermat dP2), closed in the calculus
+
+Added 2026-08-05, on request, after ingesting
+`external_docs/duncan_higher_obstruction_20260805.tex` (their Thm 6.2):
+a THIRD sibling of the T2/T3 family — same Fermat-quartic dP2 target as
+T3's OD16 claim, group `G = S4` (octahedral, in `SO(3)`), source `P²`.
+Machine-checked group facts (scratch, 2026-08-05): `|G| = 24`, 9
+involutions, `Stab[1:0:0] ≅ D8` (4 lines through it), `Stab[1:1:0] ≅ V4`
+(2 lines), `Stab[1:1:1] ≅ S3`, two distinct Sylow-2s generate `G`,
+`Σ|χ|² = 24` (irreducible ⇒ `(P²)^G = ∅ ⇒ S^G = ∅`).
+
+**Theorem T2′.1.** There is no `S4`-equivariant rational map
+`P² ⇢ S = {w² = x⁴+y⁴+z⁴}` (dominance not needed).
+
+*Proof in the calculus, step-named.*
+1. *(Source complex.)* Strata of `𝔽(P²)`: the 9 involution lines (`C2`),
+   3 quadruple points (`D8`, nonabelian), 6 double points (`V4`), 4
+   triple points (`S3`), plus cyclic-stabilizer imaginary points
+   (severable — Duncan Thm 4.2 = the FIX-B removability boundary; they
+   carry no needed constraint).
+2. *(Target complex, decorated.)* For each involution `g`:
+   `S^g = E_g ⊔ {2 pts}`, `E_g` = the genus-ONE double cover of `ℓ_g`
+   branched at the 4 points `ℓ_g ∩ {Fermat}` (transversality checked:
+   `x⁴+y⁴ = 0` and `2x⁴+z⁴ = 0` have 4 distinct roots). Decoration
+   `δ_bir(E_g) = elliptic`: **the 1-dimensional part of `S_nt` contains
+   no rational curve** — the exact OPPOSITE of the Klein target.
+   `S^{S4} = ∅` (irreducibility, hypothesis checked in the T34
+   discipline — by the generated group, not by assumption).
+3. *(Scalar birth, T2.1.)* `v = [1:0:0]` has `G_v = D8` nonabelian with
+   `T_v` its faithful 2-dim irrep; `Z(D8) = ⟨s₁⟩` acts on `T_v` by `−1`,
+   so blowing up the orbit of `v` births `E_v = P(T_v)` with
+   `G_{E_v} = ⟨s₁⟩ = C2` — a NEW divisorial `C2`-stratum invisible on
+   `P²`. Crossing `q = E_v ∩ L̃_{z=0}`: `G_q = ⟨s₁,s₃⟩ ≅ V4`, branch
+   characters generating `V4^` — a T2.2 chain node.
+4. *(Everything contracts — Lem 4.2 + Cor 4.4, dim-2 scope.)* On any
+   resolution `W → P²` of any equivariant `f` (surface: point blowups
+   only, so every fixed stratum is a point, an exceptional `P¹`, or a
+   rational strict transform — Correction I-C is VACUOUS in dim 2), each
+   1-dim fixed stratum has rational RCC image inside some
+   `S^g = E_g ⊔ pts` ⇒ image is a POINT. By the decorated pushforward
+   (Thm 4.1) the image point of a contracted stratum is fixed by the
+   stratum's full stabilizer: `q̃(Ẽ_v) = P_E ∈ S^{D8}`
+   (`Stab(E_v) = G_v`), `q̃(L̃) = P_L ∈ S^{D8'}` (`Stab(line z=0) =
+   C_G(s₃)`, the OTHER Sylow-2).
+5. *(V4-chain, T1.2 + T2.2.)* Over the crossing `q`, on any further
+   model the endpoint path of the fibre tree from the `Ẽ_v`-trace to the
+   `L̃`-trace is member-wise stabilized by involutions of `V4` (`V4` has
+   no faithful character — the member-wise involution mechanism, =
+   Duncan Prop 4.3 specialized). Pushing forward: a connected chain of
+   points/rational curves inside `∪_h(E_h ⊔ pts)`; every rational link
+   in an elliptic-or-points target is a point ⇒ the chain is one point ⇒
+   `P_E = P_L =: P`.
+6. *(Central obstruction, Cor T3.1 pattern.)* `P ∈ S^{D8} ∩ S^{D8'}
+   ⊆ S^{⟨D8,D8'⟩} = S^{S4} = ∅` (two distinct Sylow-2s generate `S4`:
+   order `> 8`, divisible by 8, and `A4` has no order-8 subgroup;
+   machine-checked). Contradiction. ∎
+
+**Localization remark (the CSP view, matching Duncan's closing remark).**
+The constraint system restricted to the ORIGINAL arrangement is
+satisfiable: the `[1:1:0]`-type `V4`-chains only force
+`P_{z=0} = P_{x+y=0} = …` into `S^{D8'}` — nonempty (the two points of
+`φ⁻¹([0:0:1])`). The unsatisfiable constraint is exactly the one carried
+by the scalar-birth stratum `E_v` — the obstruction is invisible on `P²`
+and lives on the exceptional tree, which is T2.3's moral verbatim.
+
+**Gate significance.** T2′ is a fresh instance neither T2 (PSL(2,7),
+Klein quartic) nor T3 (order-16 claim, same target) covered verbatim;
+the calculus closes it with no new lemmas — every step instantiates
+T2.1/T2.2/T1.2/Lem 4.2/Cor 4.4/Cor T3.1. Independent confirmation:
+Duncan's Thm 6.2 proves the same statement through fabulousness
+(his Thm 4.2 + Thm 3.10 + Prop 3.12); the two proofs are
+mechanism-isomorphic, as expected from the [E56] comparison.
+
 **What T2 exports to Klein (recorded for Note III).** The same T2.2 chains
 exist over the 165 V4-vertices of the Klein arrangement — but there the
 member-wise conclusion is not constancy: `X^{t_C} = E_{t_C} ⊔ L_{t_C}`

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `cbdff0a` (2026-08-05; the
+Snapshot metadata — notebook parent head: `baee010` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2315,7 +2315,17 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   and their Thm 3.10 chains land legally in the arrangement) — FIX's
   decorated/jet layer (Notes II–III, H0/H1) is precisely the
   continuation past that wall; no contradiction between the frameworks
-  anywhere.** Note I
+  anywhere. Follow-up 2026-08-05, on request: **Theorem T2′.1**
+  (`theory/FIX_T_gate.md` §T2′) — Duncan's §6 application (S4 on the
+  Fermat dP2) re-derived entirely in the calculus, step-named
+  (scalar-birth T2.1 at the nonabelian `D8` quadruple point → V4-chain
+  T2.2 at the born crossing → contraction via Lem 4.2/Cor 4.4 (dim-2
+  scope, I-C vacuous on surfaces) → central obstruction Cor T3.1, two
+  Sylow-2s generate, `S^{S4} = ∅`); group facts machine-checked; a fresh
+  third sibling of T2/T3 closed with zero new lemmas, plus the CSP
+  localization remark (only the exceptional-tree constraint is
+  unsatisfiable — the original-arrangement system is solvable,
+  matching Duncan's closing remark).** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
