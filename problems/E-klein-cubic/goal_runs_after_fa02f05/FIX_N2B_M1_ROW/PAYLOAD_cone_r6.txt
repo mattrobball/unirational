@@ -1,0 +1,46 @@
+# FIX-N2B: the C3-equivariant pointwise landing cone at r = 6, classified.
+#
+# Engine 1  msolve Groebner + coordinate saturation over F_100057
+# Engine 2  exact symbolic classification of the reduced system in char 0
+#           (verify_n2b.check_r6_reduced_system)
+#
+# lam = 1     : cone = {0}                                  (CONE-DIM 0)
+# lam = om    : CONE-DIM 1 ; forced zero: P0,P1,R0,R1,B3,B5
+# lam = om^2  : CONE-DIM 1 ; forced zero: P0,P1,R0,R1,B3,B5
+#   (B3, B5 are THE two plane-order-1 parameters -> no plane-order-1 point)
+#
+# Reduced system, lam = om^2, with a' = p UVW, b' = 0,
+#   B_0 = c0 U^2 + c1 UV + c2 UW + c4 VW  (B_1 = om sigma B_0, B_2 = om^2 sigma^2 B_0):
+#
+#   E1  c0 c2 c4
+#   E2  c0 (c4^2 + c1 c2 + p c0)
+#   E3  c0 c1 c4
+#   E4  c4 (c1 c2 + c0^2 + p c4)
+#   E5  (c4^2 - c1 c2)(c2^2 + c1 c4)          [after p = -c1c2/c4, times c4]
+#   E7  c4^3+c2^3+3c1c2c4+c1^3+3c0c1c2+c0^3+6p c1c2+6p c0c4+kp p^3
+#
+# Solutions (kp != 0,-4 from smoothness (1.2)):
+#
+#   branch A   c0 = 0, c1 c2 = c4^2, p = -c4,  c1^3 + c2^3 = (2+kp) c4^3
+#              == the section-4 family  D_B(yz),  B = c2/c4,  plane order 3
+#   branch B   c4 = 0, c1 c2 = c0^2, p = -c0,  c1^3 + c2^3 = (2+kp) c0^3
+#              == xyz * D_B(x),                                plane order 2
+#   (c0 != 0 != c4 forces c1 = c2 = 0, c0^3 = c4^3 and kp = -4: EXCLUDED)
+#
+# Six values of B in each branch  ->  12 lines per block; the lam = om block is
+# the a' <-> b' mirror with kp replaced by km.
+#
+# CONSEQUENCE: every point of the r = 6 cone has plane order 2 or 3, never 1.
+
+# ---------------------------------------------------------------------------
+# ALARM at r = 7 (see STATUS.md section 2.7).  In the DEHOMOGENISED formulation
+# (set a plane-order-1 parameter to 1; the cone is homogeneous) msolve reports
+#
+#   r=7 lam=1   B5 : CAN-BE-NONZERO      r=7 lam=om  B5 : CAN-BE-NONZERO
+#   r=7 lam=1   B8 : CAN-BE-NONZERO      r=7 lam=om  B8 : CAN-BE-NONZERO
+#   r=7 lam=1   B5=1, B8=0 : INCONSISTENT  (so both must be nonzero)
+#
+# over F_100057.  If this survives to characteristic zero then the r=7 cone HAS
+# plane-order-1 points, i.e. (1,7) is POPULATED already at line degree 0 and the
+# m = 1 row is NOT empty.  NOT CONFIRMED -- a non-unit ideal mod p is exactly
+# the direction that does not lift automatically.

@@ -1339,6 +1339,17 @@
    "char0_scope": "char0",
    "tracked": "main",
    "notes": "director-replayed 2026-08-05; elliptic landing-site inventory COMPLETE: 12 sites per E_sigma (3 type-I + 9 type-II), 330 points in the two known G-orbits, zero new sites; C3/S3-fixed candidates off X; all 3 type-I points lie on the S3-invariant std-line; type-II field-of-definition degree-3 over Q(zeta11), Galois-closure question flagged open (unneeded)"
+  },
+  {
+   "path": "goal_runs_after_fa02f05/FIX_N2B_M1_ROW",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-N2B-M1-ROW-PARTIAL",
+   "superseded_by": null,
+   "char0_scope": "mixed",
+   "tracked": "main",
+   "notes": "director-replayed 2026-08-05 (25 checks); m=2 row fully decided (Thm N2B-3: (2,r) populated all r>=6); (1,6) classified char-0 with no PO-1 cone point, open above line degree 2; Specialisation Lemma provably cannot decide (1,>=7); FIX-N2B-STABILISATION conjecture (would empty the m=1 row); ALARM: modular-only PO-1 points suggested in the (1,7) cone at p=100057 \u2014 NOT promoted (ledger rule), decider FIX-N2c dispatched"
   }
  ],
  "known_branches": [

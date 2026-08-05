@@ -148,10 +148,9 @@ case and does not generalize; this does.)
 | `m = 1`, `r = 2` | **EMPTY, all line degrees** (shape `(0,0,Ayz,Bzx,Cxy)`; landing = `ABC = 0`; residual `C₃` kills it) | FIX-N2 |
 | `m = 1`, `r = 3` | **EMPTY, all line degrees** (re-proved; strengthened to the whole `m ≥ 1` stratum) | V4 packet Thm 2.12 + FIX-N2 |
 | `m = 1`, `r = 4, 5` | **EMPTY, all line degrees** — new theorems | FIX-N2 (three independent engines) |
-| `m = 1`, `r = 6` | not populated at line degree 0; positive line degree **OPEN** | FIX-N2b |
-| `m = 1`, `r ≥ 7` | **OPEN** (per-`r` decidable via Lemma 2.3; `r = 7` did not terminate) | FIX-N2b |
-| `m = 2`, `r = 3, 4, 5` | **EMPTY, all line degrees** | FIX-N2 |
-| `m = 2`, `r = 6` | **POPULATED** — new: `a' = −(xyz)²`, `u₀' = x²yz(B²y²+Bx²+z²)/B` (cyclic), `κ₊ = (B³−1)²/B³`; generalizes to `(2k, 3δ+3k)`, `δ` odd | FIX-N2 finding |
+| `m = 1`, `r = 6` | no plane-order-1 cone point (`r = 6` cone classified exactly in char 0: the `D_B(yz)`- and `xyz·D_B(x)`-line branches, `λ = 1` dead by `κ ≠ −4`); line degrees 0, 1, 2 excluded; **OPEN above line degree 2** | FIX-N2b |
+| `m = 1`, `r = 7, 8, 9` | **OPEN — and Lemma 2.3 provably cannot decide them** (the cones are nontrivial); `(1,7)` carries the **ALARM**: modular-only evidence of plane-order-1 cone points at `p = 100057`, unconfirmed, promotion forbidden by the ledger rule — decider FIX-N2c | FIX-N2b / FIX-N2c |
+| **`m = 2`, whole row** | **DECIDED**: `(2, 3..5)` empty; **`(2, r)` populated for every `r ≥ 6`** (Thm N2B-3; new families `e₂·D_B(x)`, `Δ·D_B(x)`, …) | FIX-N2 + FIX-N2b |
 | even `m`, bottom cell `(m, 3m/2)` | **EMPTY, all line degrees, every even `m`** | FIX-N2 |
 | `m = 3`, `r = 5` (type-II delay) | **EMPTY, all line degrees** | FIX-N2 |
 | `m = 3`, `r = 6` (first layer) | POPULATED | V4 packet §4 (re-verified; residual scalar `λ = ω²` now exhibited) |
@@ -164,10 +163,24 @@ degree 0, and invariant multiplication moves `m` by even steps: reachable
 plane orders are `{2k} ∪ {m₀ + 2k : m₀ ≥ 3}` — **never `m = 1`** (invariants
 have even `ord_{P_i}`, Lemma 2.2). An `m = 1` family must therefore be
 genuinely primitive, unreachable from seeds by invariant multiplication.
-The `m = 1` row is empty through `r = 5`; whether it is empty for all `r`
-is the remaining local question (FIX-N2b). Either answer shapes Note III's
-stalks: total emptiness closes packet-§6 exclusion (i) outright; a
-populated cell adds a genuinely primitive branch to the stalk variety.
+The `m = 1` row is empty through `r = 5` and pinned at `r = 6` through
+line degree 2; whether it is empty for all `r` is the remaining local
+question. FIX-N2b crystallized it as the **stabilization conjecture
+`FIX-N2B-STABILISATION`**: every `A₄`-equivariant landing family is
+`G·D_B(X)` (or its mirror) with `G` an `A₄`-invariant and `X` of character
+`χ₁` — Theorem N2B-2 (char-0) shows this construction reaches all line
+degrees, and since `ord_{P_i}(G)` is even and `m(D_B(X)) ∈ {0} ∪ [3, ∞)`,
+the conjecture implies the entire `m = 1` row is EMPTY. Evidence: exact
+match at `r ≤ 6`; predicted members verified at `r = 7, 8, 9`. Standing
+against it: the `(1,7)` modular alarm (above). Negative results recorded
+so they are not re-attempted: FIX-N2's proposed `(1,6)` ladder step is
+false (the kernel meets every eigenblock in plane-order-1 vectors); the
+corrected uniform criterion is vacuous at plane order 2 for even `r`
+(parity: every `U,V,W`-monomial of `F(T)` has even plane order, so
+`J₅ = J₆`). Either answer shapes Note III's stalks: conjecture proved ⇒
+packet-§6 exclusion (i) closes outright; alarm confirmed ⇒ a genuinely
+primitive `m = 1` branch exists that no invariant-multiplication
+construction predicts.
 
 Even with the `m = 1` row open above `r = 5`, the stalk picture is already
 substantially known: the populated branches at even `m` (new) and odd

@@ -1,0 +1,34 @@
+# FIX-N2B: explicit A4-equivariant landing tuples  G * D_B(X).
+#
+# D_B(X):  Y = psi X (or Theta X at positive line degree), Z = psi^2 X,
+#          a' = -XYZ,  b' = 0,
+#          u_0' = X(X^2 + B Y^2 + B^-1 Z^2),
+#          u_1' = om   Y(Y^2 + B Z^2 + B^-1 X^2),
+#          u_2' = om^2 Z(Z^2 + B X^2 + B^-1 Y^2),      kp = (B^3-1)^2/B^3 .
+# Residual C3 scalar lam = om^2 (mirror: a'=0, km, lam = om).
+# G runs over the A4-invariants  q = x^2+y^2+z^2 (m=0), xyz (m=2),
+#   e_2 = x^2y^2+y^2z^2+z^2x^2 (m=2), Delta = (x^2-y^2)(y^2-z^2)(z^2-x^2) (m=2).
+# All entries verified in CHARACTERISTIC ZERO (verify_n2b.check_witnesses):
+# landing identity, residual C3 equivariance with lam = om^2, and (m,r).
+#
+#   G                 X        (m,r)   note
+    1                 x        (0,3)   the seed
+    1                 yz       (3,6)   V4 packet section 4
+    xyz               x        (2,6)   FIX-N2 Corollary E'
+    e_2               x        (2,7)   *** NEW *** -- (2,7) is POPULATED
+    q*xyz             x        (2,8)
+    q                 yz       (3,8)   FIX-N2
+    1                 xy^2     (3,9)   FIX-N2 (primitive)
+    Delta             x        (2,9)   *** NEW ***
+    (xyz)^2           x        (4,9)
+    xyz               yz       (5,9)
+    q^2*xyz           x        (2,10)  *** NEW ***
+#
+# THEOREM N2B-3.  (2,r) is POPULATED for every r >= 6:
+#   d = r-3 odd  ->  G = q^{(d-3)/2} xyz ;  d even -> G = q^{(d-4)/2} e_2 ;
+#   both have ord_{P_i} G = 2 and m(D_B(x)) = 0.
+# With FIX-N2's (2,3),(2,4),(2,5) EMPTY this DECIDES THE WHOLE m = 2 ROW.
+#
+# THEOREM N2B-2.  The same construction works with X having BINARY COEFFICIENTS
+# on the triple line (Y = Theta X, Z = Theta^2 X), giving A4-equivariant
+# families of every line degree.  Verified for line degrees 1,2,3.

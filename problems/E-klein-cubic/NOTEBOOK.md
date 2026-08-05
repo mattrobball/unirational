@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `ab7bf9d` (2026-08-04; the
+Snapshot metadata — notebook parent head: `b423d1a` (2026-08-04; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2122,10 +2122,25 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   via chain adjacency + ladder jet matching; `C₃` triangle rotation with
   the pinned `λ = ω²` scalars; three-elliptic type-II relay; dominance;
   cone/parity admissibility). `H⁰` = a constructible set computable by
-  exact elimination starting from `x_L`. Remaining before the run:
-  FIX-N2b's `m = 1` answer (changes the stalk component list, not the
-  shape), the section-from-map write-up, and fixing the decisive working
-  order (finite, from the [II] table).
+  exact elimination starting from `x_L`. FIX-N2b landed 2026-08-05
+  (`FIX-N2B-M1-ROW-PARTIAL`, director-replayed, 25 checks): the **`m = 2`
+  row is fully decided** (Thm N2B-3: `(2,r)` populated for every
+  `r ≥ 6`, with `(2,3..5)` empty — new families `e₂·D_B(x)`,
+  `Δ·D_B(x)`); `(1,6)` has no plane-order-1 cone point (char-0 exact
+  classification) and is excluded through line degree 2; the
+  Specialisation Lemma provably cannot decide `(1, ≥7)`; the
+  **stabilization conjecture** `FIX-N2B-STABILISATION` (every family is
+  `G·D_B(X)` or mirror) would empty the whole `m = 1` row, with exact
+  evidence at `r ≤ 6` and verified predictions at `r = 7,8,9`. **ALARM
+  (not promoted, ledger rule):** modular-only evidence at `p = 100057`
+  of plane-order-1 points in the `(1,7)` cone — if it lifts, the
+  conjecture is false and a genuinely primitive `m = 1` branch exists.
+  Decider packet FIX-N2c dispatched: multi-prime testing, rational
+  lift attempt over `Q(ω, κ₊)`, and char-0 saturation of the
+  plane-order-1 locus. Two negative structural results recorded to
+  prevent re-attempts (the false `(1,6)` ladder step; the `J₅ = J₆`
+  parity vacuity). Remaining before the `H⁰` run: FIX-N2c's verdict,
+  the section-from-map write-up, the decisive working order.
   Note III (compatibility cosheaf / global CSP on the verified
   arrangement), FIX-B (Burnside shadow). Director finding en route: the
   sealed `verify_kappa_genus2.py` is replay-brittle on sympy 1.14
