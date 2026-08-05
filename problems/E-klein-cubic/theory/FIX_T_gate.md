@@ -172,12 +172,117 @@ session claims corrected in substance, not merely verified:
   deck curve; the shape of `Fix(z)`; and, for the natural T4 generator
   choice, the truth of the theorem itself).
 
-## T2, T5 (pending)
+## T2. Problem F re-derived in the calculus
 
-- **T2** — Problem F re-derivation: ingest `F-dp2-psl27/RESOLUTION.md`'s
-  `V₄`-exceptional-path argument, recast as a chain-level unsolvability
-  proof in the sense of Remark T1.4. Director work; next.
+Source ingested: `F-dp2-psl27/certificates/WP3_ALL_DEGREE_PATH_OBSTRUCTION.md`
+(+ the odd-degree structural bound it cites); the source's exact checker
+replays clean (`WP3_ALL_DEGREE_PATH_OBSTRUCTION_OK`, director-replayed
+2026-08-04). Setting: `G = PSL(2,7)`, `V` the 3-dimensional representation,
+`S → P(V)` the anticanonical double cover branched over the Klein quartic
+(the degree-2 del Pezzo), and — their generic-torsor reduction, the
+E16-analogue — `G`-unirationality ⟺ an equivariant dominant
+`P(V) ⇢ S`, WLOG primitive homogeneous `[p : h]`, `F(p) = h²`, with odd
+degree separately excluded.
+
+**The two new general lemmas the argument runs on** (both instances of
+[I, Thm 2.1], now stated as calculus lemmas):
+
+**Lemma T2.1 (scalar-birth lemma).** If a `K`-fixed point `x` of a surface
+has scalar tangent action for some `k ∈ K` (`χ₁(k) = χ₂(k)`), the
+exceptional curve of the blowup at `x` is **pointwise** `k`-fixed, and stays
+so on strict transforms. (The `χ₁ = χ₂` case of [I, Thm 2.1(ii)] plus its
+strict-transform clause.)
+
+**Lemma T2.2 (`V₄`-chain lemma).** Let `K ≅ V₄` act on a smooth surface
+germ fixing a point, and let `X → ⋯ →` (germ) be any finite `K`-equivariant
+tower of point blowups. Then every `K`-stable exceptional curve is
+pointwise fixed by some involution `t_C ∈ K`; and if two `K`-stable curves
+are connected through the exceptional locus, every member of the unique
+dual-tree path between them is `K`-stable, hence carries such a `t_C`.
+*Proof.* Birth of a `K`-stable curve: final `K`-stability descends through
+equivariant blowdowns to the birth exceptional curve and its center `x`
+(the contracted image of a stable curve is a stable point). At `x`,
+`T_x = χ₁ ⊕ χ₂` for characters of the abelian 2-torsion `K`; the action on
+`P(T_x)` factors through `χ₁χ₂⁻¹`, a character to `{±1}` whose kernel
+contains a nontrivial involution `t_C` (all of `K` if `χ₁ = χ₂`), which
+acts scalarly on `T_x`, hence trivially on the exceptional `P¹` — pointwise
+fixation persists on strict transforms (T2.1). Path stability: the dual
+graph of the reduced local total transform over a point is a tree (one
+edge initially; blowing a smooth point adds a leaf, a node subdivides an
+edge), and a tree automorphism fixing both endpoints of a path fixes the
+path vertex-wise. ∎
+
+**Theorem T2.3 (Problem F, in the formalism).** No equivariant dominant
+`P(V) ⇢ S` exists. *Proof, with each step tagged by the layer it spends:*
+
+1. *(Target funnel data — CAS input, their checker.)* For every involution
+   `t` (one class, 21 elements): `S^t` = smooth genus-1 curve
+   `π⁻¹P(E₋(t))` ⊔ two points over `[e_t] = P(E₊(t))`. **No rational
+   member.** Eigensplit convention here: `dim E₊ = 1, dim E₋ = 2` — the
+   fixed *line* of the source is `L_t = P(E₋(t))`, and `S^t`'s curve lies
+   over that same line.
+2. *(Endpoint value on the source line — decoration layer, first spend.)*
+   Even degree `d` plus equivariance gives, for `v ∈ E₋(s)`:
+   `s·p(v) = p(sv) = p(−v) = p(v)`, so `p(v) ∈ E₊(s)` — the image of `L_s`
+   lies in the **finite** fiber `π⁻¹([e_s])`, hence is a single constant
+   `b_s` with `π(b_s) = [e_s]`. This is parity forcing: a constraint on the
+   `⟨s⟩`-equivariant structure of the map along the stratum, invisible to
+   RCC. (Margin note: the source's display `(h/a_s²)² = F(e_s)` is off by a
+   factor of `a_s` as written; immaterial — constancy already follows from
+   finiteness of the fiber.)
+3. *(Forced basepoints — incidence layer.)* At each of the 21 quadruple
+   points `q` of the 21-line arrangement (`Stab_G(q) ≅ D₈`, central
+   involution `z`, `q = P(E₊(z))`): four incident lines carry four distinct
+   constants `b_s` (distinct `[e_s]`), so no regular extension exists at
+   `q` — the incidence structure of the source complex forces `q` into the
+   base locus of **every** model on which it would otherwise be regular.
+4. *(The calculus inserts a chain end — scalar case.)* `z` has scalar
+   differential `−1` at `q` (`T_q = Hom(E₊(z), E₋(z))`, `z = (+1)⁻¹(−1)`),
+   so by T2.1 the exceptional `A_q = P(T_q)` is pointwise `z`-fixed on
+   every subsequent model.
+5. *(Going-down + residual stability.)* `A_q ≅ P¹ → S^z` is constant by
+   step 1 (RCC layer); `A_q` is `D₈`-stable, so the constant `a_q` is
+   `D₈`-fixed; its projection is a `D₈`-invariant line in `V`, and
+   `[D₈, D₈] = {1, z}` with `z = −1` on `E₋(z)` rules out any such line in
+   `E₋(z)`: so `π(a_q) = q`. (The same "stability promotes the point" move
+   as Cor T3.1, with the local stabilizer replacing the center.)
+6. *(The chain closes the trap — T1.2 + T2.2.)* Fix incident `(q, L_s)`,
+   `K = ⟨z, s⟩ ≅ V₄`. On the final model the strict transforms of `A_q`
+   and `L_s` are joined through the exceptional tree over their meeting
+   point; by T2.2 every member of the endpoint path is `K`-stable and
+   pointwise fixed by some involution `t_C ∈ K`; by step 1 each `S^{t_C}`
+   has no rational member, so **every member of the path maps to a point**
+   (going-down member-wise); adjacency propagates equality of the
+   constants along the path (T1.2(2)): `a_q = b_s`. But
+   `π(a_q) = q ∈ P(E₋(s))` and `π(b_s) = [e_s] ∈ P(E₊(s))` are distinct.
+   Contradiction. With the odd-degree theorem, all degrees are excluded. ∎
+
+**Gate verdict T2: PASSED.** The proof is exactly a chain-level
+unsolvability argument in the sense of Remark T1.4, and — the calibration
+point of the whole exercise — it is the first theorem in this series that
+**cannot** be proved from the RCC layer alone: steps 2 (parity/decoration)
+and 3 (incidence) are essential, and step 6 needs the member-wise
+involution structure of T2.2, not just connectedness. The session
+assertion "the repo's PSL(2,7) result is the all-degree
+`V₄`-exceptional-path obstruction" is hereby VERIFIED against the source
+(retiring the last clause of debt item 15 except T5).
+
+**What T2 exports to Klein (recorded for Note III).** The same T2.2 chains
+exist over the 165 V4-vertices of the Klein arrangement — but there the
+member-wise conclusion is not constancy: `X^{t_C} = E_{t_C} ⊔ L_{t_C}`
+*has* a rational member, so propagation yields a **constrained path
+map** — each member lands in `E_{t_C} ⊔ L_{t_C}`, elliptic components
+receiving only points — rather than a contradiction. The Klein analogue of
+parity forcing on `L_σ` (step 2) with the residual `S3`-equivariance is an
+open computation for Note II; the Klein analogue of step 3 (four distinct
+forced values meeting at a vertex) is precisely the kind of local
+consistency the trisection family must — and, by [E33], does — survive,
+which is T5's business.
+
+## T5 (pending)
+
 - **T5** — non-overreach: recast the V4 trisection family
   (`goal_runs_after_f1f0be/.../THEOREM.md`) as a solution of every local
-  constraint of `𝒞(P(U), X)` at its stratum, certifying the formalism
-  cannot close the Klein case on local data. Rides with T2.
+  constraint of `𝒞(P(U), X)` at its stratum — in particular of the T2-style
+  chain constraints exported above — certifying the formalism cannot close
+  the Klein case on local data. Director work; next.
