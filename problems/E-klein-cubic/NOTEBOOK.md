@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `248cb53` (2026-08-05; the
+Snapshot metadata — notebook parent head: `063da5a` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2781,7 +2781,34 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   corrected budget/moduli question, unbanked and hard) or
   beyond-FIX machinery. The jet-solvable locus is recorded as
   potential positive-side evidence per the standing directive
-  (stated, not pursued). Problem E headline: OPEN.**** Same-day
+  (stated, not pursued). Problem E headline: OPEN. **GOAL PIVOT
+  (user directive, 2026-08-06, superseding the 08-05 negative-only
+  rule): "This clearly puts constraints on the possible rational maps
+  giving unirationality. Use this info as a guide to produce an
+  explicit such map." THE CONSTRUCTION PROGRAM opens — Note V
+  (`theory/FIX_V_construction.md`): the entire negative campaign
+  converts into the sieve and ansatz. The forced profile of any map
+  (sealed): multi-order/parity/base-locus/sweep/degree bound
+  `d ≥ 7r−6m`/H1-1 jets, with the classified shapes dead and exactly
+  two survivor channels (the `w = 0` evasion; FIX-D2's `w ≠ 0`
+  jet-solvable locus). Window arithmetic: at `d = 25` (the ladder's
+  minimal open degree, ≤ 24 sealed closed) the ONLY admissible
+  profile is `(3,6)` with `n = 19` in the evasion channel — whether
+  `n = 19` passes the line-degree dictionary is the sieve's first
+  question (a NO closes `d = 25` by pure profile arithmetic, a new
+  ladder-closure theorem). First `(1,7)` window: `d = 43` (where the
+  FIX-D2 solvable jets live). Route 1: the guided degree-25 transfer
+  (E25's parked `F_67` branches, now SLICED by the FIX ansatz) —
+  **FIX-P1 dispatched** (in flight,
+  `goal_runs_after_063da5a/FIX_P1_DEGREE25_GUIDED`): Stage 1 the
+  sieve, Stage 2 the guided search; candidate ⟹ the director's
+  E17-dominance verification chain; emptiness ⟹ the sieve advances.
+  Route 2 (queued): prolongation from the FIX-D2 solvable jets
+  toward `d = 43` with the corrected γ-dictionary. Cautions carried:
+  jet-solvability ≠ algebraization (T5/C1); every candidate gets the
+  full two-engine seal; all six Note-IV corrections were
+  support-class errors — every ansatz dimension count
+  machine-verified before consumption.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

@@ -1449,6 +1449,17 @@
    "char0_scope": "char0 exact; verifier fully independent (own field model, frame derived from rho|W- alone); 68 checks + 29 producer + 11 controls, 0 failures",
    "tracked": "main",
    "notes": "landed 2026-08-06, director-replayed 68/68. THE TERMINAL VERDICT: the w != 0 branch of [U1] is NOT killed by the c_sigma-localized machinery — jet-level candidates exist with growing residual Theta-freedom (1,2,4,7 at m=1; 1,4,7 at m=3): the I-ladder can never exhaust the Theta-jet space. CORRECTION IV-f (worker-caught, double-refuted, sixth of the session): Thm 5.25-A (Brutality) is FALSE — Theta^(0) carries y-arguments, so I_0 kills only the diagonal contraction (rank 5/9 at m=1, 7/15 at m=3), consistent with FIX-L1's banked ranks (reproduced). Withdrawn in cascade: 5.25-A, the sec5.27 plus-deep reduction and departure recursion, the E15-I^(4) budget framing (corrected condition = rank-4 subbundle on order-2 jets; NO global h0(I^(k)(d)) tables exist — the I^(11)/I^(13) numbers are LOCAL D12 data). Confirmed: 5.26-A (rank 7, ker 5+3), 5.26-B (one level earlier), Q-isomorphy, order-accounting unambiguous. (C2'): m=1 rungs independent; m=3 dependent (V3[twist] = quadratic x V1[twist] — the H1-forced m=3 datum is degenerate). (D3): FIX-D3-NOT-KILLED. (C7): NOT-DECIDED (timeout; premise withdrawn). Consequence: Thm 3.1 remains CONDITIONAL; [U1] genuinely open; remaining negative options are global (corrected budget/moduli question, unbanked) or beyond-FIX machinery; the jet-solvable locus recorded as potential positive-side evidence per the effort directive. Headline OPEN."
+  },
+  {
+   "path": "goal_runs_after_063da5a/FIX_P1_DEGREE25_GUIDED",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "PROPOSAL-UNRUN",
+   "primary_exit": "UNDECIDED",
+   "superseded_by": null,
+   "char0_scope": "in flight",
+   "tracked": "main",
+   "notes": "IN-FLIGHT (2026-08-06, opus): FIX-P1 — first packet of the CONSTRUCTION program (user goal directive, Note V): Stage 1 = the d=25 profile sieve ((3,6) is the only admissible profile; line-degree dictionary + n=19 admissibility — closure-by-arithmetic if inadmissible); Stage 2 = the guided search in the minimal open window (E25 F_67-branch transfer sliced by the FIX profile ansatz). Candidate => director verification chain via E17; emptiness => the sieve advances."
   }
  ],
  "known_branches": [
