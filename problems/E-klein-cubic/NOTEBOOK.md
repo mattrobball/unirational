@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `0d477b1` (2026-08-05; the
+Snapshot metadata — notebook parent head: `a2c80d2` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -152,9 +152,12 @@ appendix; this is the current mathematical position. **Headline: OPEN.**
 The logical decision is single (the tree below): the positive exit is a
 generic-twist point ⟺ a primitive landing covariant; the negative exit is
 their universal nonexistence, witnessed either arithmetically (a pointless
-genuine twist) or by an all-degree theorem. The *work* divides into four
-method families — different ways of forcing that one decision, not four
-parallel alternatives:
+genuine twist) or by an all-degree theorem. **Standing effort directive
+(user, 2026-08-05): all effort goes to the chosen non-unirationality
+strategy — the FIX negative endgame (family 4). The positive routes below
+remain mapped but are UNSTAFFED until further notice.** The *work*
+divides into four method families — different ways of forcing that one
+decision, not four parallel alternatives:
 
 1. **Arithmetic of twists** — solve `V(Φ)` directly (G3); decide the `11:5`
    trace cubic and the full-`G` residue twists at `f5=0`/`f6=0` (negative
