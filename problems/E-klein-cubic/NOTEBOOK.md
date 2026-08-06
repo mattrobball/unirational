@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `f6aabf6` (2026-08-05; the
+Snapshot metadata — notebook parent head: `52c6b5e` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2852,7 +2852,31 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   (the gateway window; integrate on return). Director probe
   artifacts preserved in `director_probes_20260806/`. Next per the
   user: the split-discriminant Prym investigation (Note V's
-  option-2 think; `Δ₅ = E_σ ∪ K_c`).**** Same-day
+  option-2 think; `Δ₅ = E_σ ∪ K_c`). **TWENTIETH WAVE — FIX-P2
+  LANDED (2026-08-06, director-replayed 48/48) with
+  `FIX-P2-H11A-SCOPE-QUERY`, adjudicated as **CORRECTION H1-D (the
+  seventh, and the first inside a sealed packet's prose)**: H1-1(a)'s
+  "at ALL THREE D12-points" clause is FALSE — `θ` transports the
+  datum together with the point (one statement, not three); measured
+  on the real `(1,6)` slice at two primes: own-point order exactly
+  `2e`, foreign points order ~1. **Corrected bound: `d ≥ 3r − 2m`.**
+  Withdrawn: P1-A, P1's `d ≤ 35` sweep and window-36 exit, Note II's
+  `n ≥ 30` figures, Note V §2's arithmetic, H1-C's `6e+9` (to be
+  re-derived). Survives and machine-confirmed on a real slice
+  (`FIX-P2-H11-LOCAL-CONFIRMED`): H1-1's own-point content, (b),
+  (c), the M3/M1 equalizer kills, no-line-degree-0, E25's
+  independent `≤ 24` cutoff. **Corrected state: unconditional cutoff
+  `d ≤ 30` (all 107 corrected-list profiles at 25–30 slice-zero);
+  31–33 near-complete, every computed row zero; first
+  possibly-nonzero window `d = 34` via `(1,6)` at `n = 28`, slice
+  ≤ 16.** Banked: Theorem P2-A's machinery (`L₀ ∩ L₁ = 0` in 69/69
+  profiles, exact); unconditional `(1,6)` structural facts
+  (anti-diagonal leading datum, own-point order exactly `2e`,
+  `L₀/L₁` landings). `(1,6)` `n = 4` remains NOT-DECIDED (9
+  timeouts, one run live). HANDOFF_2026-08-06.md corrected in place
+  (cutoff paragraph + a sharpened trust rule: sealed packets' PROSE
+  clauses are draft-grade until machine-exercised). Trust lesson
+  recorded. Headline: OPEN.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

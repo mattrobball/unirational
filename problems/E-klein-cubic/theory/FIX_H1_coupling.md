@@ -173,6 +173,29 @@ equalizer is satisfied vacuously. Corrected verdict:
 
 The `m = 1` scoping needs no such correction (packet §4/§7 already state
 the inclusive constraints `u_{2e} = v_{2e}`, `u_{2e+1}+v_{2e+1} = 0`).
+
+## 8. Correction H1-D (2026-08-06, FIX-P2; director-adjudicated): the "at ALL THREE D12-points" clause of H1-1(a) is FALSE
+
+The packet payload's clause *"hence, by the residual C3 … at ALL THREE
+D12-points"* conflates transport of the statement with extra vanishing
+of one datum: `θ` permutes the D12-points AND the three involutions'
+leading data `Λ^{(i)}` by the same 3-cycle, so transport yields
+`Λ^{(2)}` vanishing at `c₂` — not `Λ^{(1)}` vanishing at `c₂`. Measured
+on FIX-P2's real `(1,6)` slice at two primes: `Λ^{(i)}` has order
+exactly `2e` at its OWN D12-point and order ~1 at the foreign points.
+**Corrected H1-1(a): own-point vanishing only; the degree bound is
+`n ≥ 2e`, i.e. `d ≥ 3r − 2m` (plus the small measured foreign-point
+vanishing), NOT `d ≥ 7r − 6m`.** This clause was prose, never
+exercised by the packet verifier — the verifier-tested content
+(own-point orders, (b), (c), the M3/M1 equalizer kills, "no
+line-degree-0 germ") all SURVIVES; P2 independently machine-confirmed
+the own-point local content on the slice. Downstream casualties
+recorded in the notebook: P1's Theorem P1-A and its sweep list
+(superseded by P2's corrected 357-row sweep: unconditional cutoff
+`d ≤ 30`, first possibly-nonzero window `d = 34` via `(1,6)`),
+Note II's map-relevant-`n` figures, Note V §2's window arithmetic,
+and Correction H1-C's `6e+9` evasion bound (needs re-derivation
+against own-point-only vanishing).
 The classified-data kills (line degree 0 and `q^k`-translates) are
 unaffected — those are doubly dead via H1-1(a). The degree bound
 `d ≥ 7r−6m` is a `≥` and unaffected. General moral, recorded for every

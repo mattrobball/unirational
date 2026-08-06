@@ -1,0 +1,162 @@
+# FIX-P2 Engine 1 -- the tight-window S3-equalizer, exact over K0 = QQ(om,nu)
+# kp = 13/16 + -3/16*nu + -3/8*om*nu  (numerically (1.8896054962258804-2.220446049250313e-16j))
+# frame self-tests: R^3 = 1:OK, R^2 != 1:OK, TAU^2 = 1:OK, (R TAU)^2 = 1:OK, TAU R TAU = R^{-1}:OK, det R = 1:OK, tr R = -1:OK, R off-diagonal nonzero:OK
+# D12-point cubic n3 = beta^3+3beta^2+kp :
+#    P(0)  = kp                   13/16 + -3/16*nu + -3/8*om*nu
+#    P(-2) = 4+kp                 77/16 + -3/16*nu + -3/8*om*nu
+#    P(-1) = 2+kp                 45/16 + -3/16*nu + -3/8*om*nu
+#    disc(n3)                     -17523/128 + 3645/128*nu + 3645/64*om*nu
+#    disc_nonzero                 True
+#    h'(c_sigma) = -3c, c != 0 since kp != -2 True
+
+===== THE GATEWAY WINDOW d = 36 :  (m,r) = (1,6) , e = 5 , d = 36 , n = d-r = 30 =====
+  H1-1(a) degree bound n >= 6e = 30 :  n = 30  ->  TIGHT (equality)
+  L0 = V[sgn^e] (order-0 equalizer, dim 1) = < (1) z E_y + (5/6 + -1/6*nu) y E_z >
+  dim V^{tau,sgn^e} = 2 ;  dim (Sym^1(std*) ox V ox sgn^e)^{S3} = 1
+  L1 = Im(ev_v0) at order 1 (dim 1) = < (1) z E_y + (-5/6 + 1/6*nu) y E_z >
+  L0 == L1 ?  NO
+     L0 as a matrix on W^-: [[0, 1], [5/6 + -1/6*nu, 0]]
+     L1 as a matrix on W^-: [[0, 1], [-5/6 + 1/6*nu, 0]]
+  ==> at the TIGHT window Lambda = c.n3^{2e} (x) v0 with v0 constant, so
+      lambda_{2e} and lambda_{2e+1} are BOTH nonzero scalar multiples of v0 ;
+      (b) puts v0 on L0, (c) puts v0 on L1, and L0 cap L1 = {0}:
+      v0 = 0, i.e. Lambda = 0 -- contradicting H0-2 (Lambda != 0).
+  VERDICT: WINDOW-EMPTY-BY-EQUALIZER
+
+===== CONTROLS =====
+
+===== CONTROL: FIX-H1 branch (ii), (1,7), e = 6 :  (m,r) = (1,7) , e = 6 , d = 43 , n = d-r = 36 =====
+  H1-1(a) degree bound n >= 6e = 36 :  n = 36  ->  TIGHT (equality)
+  L0 = V[sgn^e] (order-0 equalizer, dim 1) = < (1) y E_y + (1) z E_z >
+  dim V^{tau,sgn^e} = 2 ;  dim (Sym^1(std*) ox V ox sgn^e)^{S3} = 1
+  L1 = Im(ev_v0) at order 1 (dim 1) = < (1) y E_y + (-1) z E_z >
+  L0 == L1 ?  NO
+     L0 as a matrix on W^-: [[1, 0], [0, 1]]
+     L1 as a matrix on W^-: [[1, 0], [0, -1]]
+  ==> at the TIGHT window Lambda = c.n3^{2e} (x) v0 with v0 constant, so
+      lambda_{2e} and lambda_{2e+1} are BOTH nonzero scalar multiples of v0 ;
+      (b) puts v0 on L0, (c) puts v0 on L1, and L0 cap L1 = {0}:
+      v0 = 0, i.e. Lambda = 0 -- contradicting H0-2 (Lambda != 0).
+  VERDICT: WINDOW-EMPTY-BY-EQUALIZER
+
+===== CONTROL: FIX-H1 branch (i), (3,6), e = 3 :  (m,r) = (3,6) , e = 3 , d = 39 , n = d-r = 33 =====
+  H1-1(a) degree bound n >= 6e = 18 :  n = 33  ->  slack 15
+  L0 = V[sgn^e] (order-0 equalizer, dim 1) = < (1) z^3 E_y + (-5/6 + 1/6*nu) y^2z E_y + (5/6 + -1/6*nu) yz^2 E_z + (-7/18 + 5/18*nu) y^3 E_z >
+  dim V^{tau,sgn^e} = 4 ;  dim (Sym^1(std*) ox V ox sgn^e)^{S3} = 3
+  L1 = Im(ev_v0) at order 1 (dim 3) = < (1) z^3 E_y + (7/18 + -5/18*nu) y^3 E_z > , < (1) y^2z E_y + (-5/18 + 1/18*nu) y^3 E_z > , < (1) yz^2 E_z + (5/18 + -1/18*nu) y^3 E_z >
+  VERDICT: L1 not a line (dim 3)
+
+===== (1,6) at d = 37 :  (m,r) = (1,6) , e = 5 , d = 37 , n = d-r = 31 =====
+  H1-1(a) degree bound n >= 6e = 30 :  n = 31  ->  slack 1
+  L0 = V[sgn^e] (order-0 equalizer, dim 1) = < (1) z E_y + (5/6 + -1/6*nu) y E_z >
+  dim V^{tau,sgn^e} = 2 ;  dim (Sym^1(std*) ox V ox sgn^e)^{S3} = 1
+  L1 = Im(ev_v0) at order 1 (dim 1) = < (1) z E_y + (-5/6 + 1/6*nu) y E_z >
+  L0 == L1 ?  NO
+     L0 as a matrix on W^-: [[0, 1], [5/6 + -1/6*nu, 0]]
+     L1 as a matrix on W^-: [[0, 1], [-5/6 + 1/6*nu, 0]]
+  VERDICT: NOT-TIGHT: no rigidity, equalizer inconclusive
+
+===== (1,6) at d = 38 :  (m,r) = (1,6) , e = 5 , d = 38 , n = d-r = 32 =====
+  H1-1(a) degree bound n >= 6e = 30 :  n = 32  ->  slack 2
+  L0 = V[sgn^e] (order-0 equalizer, dim 1) = < (1) z E_y + (5/6 + -1/6*nu) y E_z >
+  dim V^{tau,sgn^e} = 2 ;  dim (Sym^1(std*) ox V ox sgn^e)^{S3} = 1
+  L1 = Im(ev_v0) at order 1 (dim 1) = < (1) z E_y + (-5/6 + 1/6*nu) y E_z >
+  L0 == L1 ?  NO
+     L0 as a matrix on W^-: [[0, 1], [5/6 + -1/6*nu, 0]]
+     L1 as a matrix on W^-: [[0, 1], [-5/6 + 1/6*nu, 0]]
+  VERDICT: NOT-TIGHT: no rigidity, equalizer inconclusive
+
+===== (1,6) at d = 39 :  (m,r) = (1,6) , e = 5 , d = 39 , n = d-r = 33 =====
+  H1-1(a) degree bound n >= 6e = 30 :  n = 33  ->  slack 3
+  L0 = V[sgn^e] (order-0 equalizer, dim 1) = < (1) z E_y + (5/6 + -1/6*nu) y E_z >
+  dim V^{tau,sgn^e} = 2 ;  dim (Sym^1(std*) ox V ox sgn^e)^{S3} = 1
+  L1 = Im(ev_v0) at order 1 (dim 1) = < (1) z E_y + (-5/6 + 1/6*nu) y E_z >
+  L0 == L1 ?  NO
+     L0 as a matrix on W^-: [[0, 1], [5/6 + -1/6*nu, 0]]
+     L1 as a matrix on W^-: [[0, 1], [-5/6 + 1/6*nu, 0]]
+  VERDICT: NOT-TIGHT: no rigidity, equalizer inconclusive
+
+===== (1,6) at d = 40 :  (m,r) = (1,6) , e = 5 , d = 40 , n = d-r = 34 =====
+  H1-1(a) degree bound n >= 6e = 30 :  n = 34  ->  slack 4
+  L0 = V[sgn^e] (order-0 equalizer, dim 1) = < (1) z E_y + (5/6 + -1/6*nu) y E_z >
+  dim V^{tau,sgn^e} = 2 ;  dim (Sym^1(std*) ox V ox sgn^e)^{S3} = 1
+  L1 = Im(ev_v0) at order 1 (dim 1) = < (1) z E_y + (-5/6 + 1/6*nu) y E_z >
+  L0 == L1 ?  NO
+     L0 as a matrix on W^-: [[0, 1], [5/6 + -1/6*nu, 0]]
+     L1 as a matrix on W^-: [[0, 1], [-5/6 + 1/6*nu, 0]]
+  VERDICT: NOT-TIGHT: no rigidity, equalizer inconclusive
+
+===== TIGHT-WINDOW SCAN: is d = 7r-6m empty for each profile? =====
+  m   r    e   d=7r-6m   dim V  dim L0  dim L1  dim(L0 cap L1)   tight window
+  1   2    1   8         4      1       1       0               EMPTY
+  1   3    2   15        4      1       1       0               EMPTY
+  1   4    3   22        4      1       1       0               EMPTY
+  1   5    4   29        4      1       1       0               EMPTY
+  1   6    5   36        4      1       1       0               EMPTY
+  1   7    6   43        4      1       1       0               EMPTY
+  1   8    7   50        4      1       1       0               EMPTY
+  1   9    8   57        4      1       1       0               EMPTY
+  1   10   9   64        4      1       1       0               EMPTY
+  1   11   10  71        4      1       1       0               EMPTY
+  1   12   11  78        4      1       1       0               EMPTY
+  1   13   12  85        4      1       1       0               EMPTY
+  1   14   13  92        4      1       1       0               EMPTY
+  1   15   14  99        4      1       1       0               EMPTY
+  1   16   15  106       4      1       1       0               EMPTY
+  1   17   16  113       4      1       1       0               EMPTY
+  1   18   17  120       4      1       1       0               EMPTY
+  1   19   18  127       4      1       1       0               EMPTY
+  1   20   19  134       4      1       1       0               EMPTY
+  3   5    2   17        8      1       3       0               EMPTY
+  3   6    3   24        8      1       3       0               EMPTY
+  3   7    4   31        8      1       3       0               EMPTY
+  3   8    5   38        8      1       3       0               EMPTY
+  3   9    6   45        8      1       3       0               EMPTY
+  3   10   7   52        8      1       3       0               EMPTY
+  3   11   8   59        8      1       3       0               EMPTY
+  3   12   9   66        8      1       3       0               EMPTY
+  3   13   10  73        8      1       3       0               EMPTY
+  3   14   11  80        8      1       3       0               EMPTY
+  3   15   12  87        8      1       3       0               EMPTY
+  3   16   13  94        8      1       3       0               EMPTY
+  3   17   14  101       8      1       3       0               EMPTY
+  3   18   15  108       8      1       3       0               EMPTY
+  3   19   16  115       8      1       3       0               EMPTY
+  3   20   17  122       8      1       3       0               EMPTY
+  5   8    3   26        12     2       4       0               EMPTY
+  5   9    4   33        12     2       4       0               EMPTY
+  5   10   5   40        12     2       4       0               EMPTY
+  5   11   6   47        12     2       4       0               EMPTY
+  5   12   7   54        12     2       4       0               EMPTY
+  5   13   8   61        12     2       4       0               EMPTY
+  5   14   9   68        12     2       4       0               EMPTY
+  5   15   10  75        12     2       4       0               EMPTY
+  5   16   11  82        12     2       4       0               EMPTY
+  5   17   12  89        12     2       4       0               EMPTY
+  5   18   13  96        12     2       4       0               EMPTY
+  5   19   14  103       12     2       4       0               EMPTY
+  5   20   15  110       12     2       4       0               EMPTY
+  7   11   4   35        16     3       5       0               EMPTY
+  7   12   5   42        16     3       5       0               EMPTY
+  7   13   6   49        16     3       5       0               EMPTY
+  7   14   7   56        16     3       5       0               EMPTY
+  7   15   8   63        16     3       5       0               EMPTY
+  7   16   9   70        16     3       5       0               EMPTY
+  7   17   10  77        16     3       5       0               EMPTY
+  7   18   11  84        16     3       5       0               EMPTY
+  7   19   12  91        16     3       5       0               EMPTY
+  7   20   13  98        16     3       5       0               EMPTY
+  9   14   5   44        20     3       7       0               EMPTY
+  9   15   6   51        20     3       7       0               EMPTY
+  9   16   7   58        20     3       7       0               EMPTY
+  9   17   8   65        20     3       7       0               EMPTY
+  9   18   9   72        20     3       7       0               EMPTY
+  9   19   10  79        20     3       7       0               EMPTY
+  9   20   11  86        20     3       7       0               EMPTY
+  11  17   6   53        24     4       8       0               EMPTY
+  11  18   7   60        24     4       8       0               EMPTY
+  11  19   8   67        24     4       8       0               EMPTY
+  11  20   9   74        24     4       8       0               EMPTY
+  --> 69 of 69 profiles have EMPTY tight window
+
+elapsed 16.96 s
