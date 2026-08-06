@@ -130,6 +130,20 @@ Consequences and placement of our result:
    since `V(Φ)` is given as a hypersurface), and `h²` makes
    `3·[T₁] = 0` for the BW degree-1 torsor, so any torsor-side
    obstruction to POINTS is 3-primary and finer than the classical
-   layer — parked pending Note VII's development. Whether any such invariant can obstruct POINTS (not
-   just rationality) over `K_proj` is the open question this
-   investigation exists to answer.
+   layer.
+
+   **Closure determination (2026-08-06, second pass).** The
+   Benoist–Wittenberg machinery obstructs RATIONALITY, not points;
+   a K-point does not obviously trivialize `[T₁]` (the canonical
+   K-rational curve classes reachable from a point — the plane
+   section, the sum of the six lines through it, the ramification
+   curve of the double projection — have degrees 3, 6, 6, all
+   ≡ 0 mod 3), and NO points-obstruction theorem for cubic
+   threefolds exists to instantiate: whether index 1 forces a
+   point is precisely the open Cassels–Swinnerton-Dyer-type
+   problem. So the torsor angle is PARKED OPEN-EXTERNAL: the
+   CM-explicit `J_tw` (Weil fivefold, `Z[ν][G]`-lattice) makes
+   any future such theorem immediately computable in this
+   problem, but deriving one is its own research program, out of
+   scope here. The investigation's unconditional yield is Note
+   VII, where the work now continues.

@@ -283,10 +283,35 @@ Two structural readouts:
    GATEWAY. The positive ansatz "profile `(1,6)` at `d = 34` +
    Hessian curve in the base locus" is dimensionally viable, and
    supply exists from `d = 6` onward.
-2. **The bound has slack at special small degrees**: at `d = 4`
-   the gradient tuple `∇(Hess F)` vanishes on `C₂₀` by definition
-   yet the bound reads 0 — restriction to `H⁰(L⁴)` is not
-   surjective there. Ideal-parts are lower bounds, never counts.
+2. **[Corrected — see Correction VII-a] Two covariant types, two
+   ladders.** Maps `P(W) → P(W)` are `Hom_G(W*, S^dW*)`
+   (`mult_{W̄}`, the table above); maps `P(W) → P(W̄)` (polar-type,
+   to the DUAL space) are `Hom_G(W, S^dW*)` (`mult_W`), a
+   different ladder: `∇F` is its `d = 2` generator and `∇H` its
+   `d = 4` generator — and `∇H` vanishes on `C₂₀` with the W-type
+   exactness `1 − 0 = 1` on the nose. Machine table
+   (`dual_dims.py`): the two ladders differ in low degrees
+   (`(S⁴): 2 vs 1`, on-curve `2 vs 0`) and converge by `d ≈ 25`
+   (both `≥ 570` at the gateway). Compositions through the dual
+   (`P(W) → P(W̄) → P(W)`) enlarge the constructive calculus; the
+   `W̄`-covariants from the dual side pull back along `∇F`/`∇H`.
+
+**Correction VII-a (2026-08-06, same day).** The first committed
+version of readout 2 claimed the `d = 4` `W̄`-bound has slack
+because "`∇H` vanishes on `C₂₀` yet the bound reads 0", with
+restriction "not surjective". WRONG TYPE ATTRIBUTION: `span(∂H) ⊂
+S⁴W*` is the unique `W`-copy (hand-verified `mult_W(S⁴W*) = 1`),
+not a `W̄`-copy; `∇H` is a polar-type covariant (target `P(W̄)`),
+so it lives in the OTHER ladder, where exactness holds. At `d = 4`
+the restriction `S⁴W* → H⁰(L⁴)` is in fact SURJECTIVE (Hilbert
+function 55 = `h⁰(L⁴)`, machine: `conx.m2`), and the `W̄`-type
+ideal-part really is 0. The same support/argument-slot error class
+as Corrections IV-a…IV-f, H1-D; caught in-turn by the Hilbert
+function contradiction. The left-exactness inequality itself
+(ideal ≥ supply − on-curve) remains valid and is EXACT whenever
+restriction surjects (all `d ≥ 4` by Castelnuovo–Mumford
+considerations to be checked per-degree; `d = 4, 5, 6` verified
+surjective via HF `{35, 55, 75, 95}`).
 
 CAVEAT (scope): the table counts SUPPLY of carrier-compatible
 covariant tuples. It does not produce maps: landing in `X`,

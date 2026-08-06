@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `63b2c33` (2026-08-05; the
+Snapshot metadata — notebook parent head: `a6ea865` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3006,7 +3006,30 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   lower bounds only (at d=4 the gradient `∇Hess` vanishes on C
   while the bound reads 0 — restriction not surjective). Note
   VII §5 obligations 1–3 all closed (OSCAR table, triples,
-  Hessian degree/genus).**** Same-day
+  Hessian degree/genus). **Correction VII-a (same day, caught
+  in-turn by a Hilbert-function contradiction, `conx.m2`):
+  readout (2) as just stated was WRONG — the same
+  support/argument-slot class as IV-a…f, H1-D. `span(∂H) ⊂ S⁴W*`
+  is the unique W-copy (hand-verified Molien `mult_W(S⁴) = 1`),
+  so `∇H` is a POLAR-type covariant `P(W) → P(W̄)` in the OTHER
+  ladder (where exactness `1 − 0 = 1` holds on the nose);
+  restriction at d = 3,4,5,6 is in fact SURJECTIVE (HF
+  {35,55,75,95} = h⁰(L^d)), and the W̄-type d=4 ideal-part really
+  is 0. Both type-ladders now machine-tabulated
+  (`dual_dims.py`): they differ in low degree, converge by d≈25,
+  both ≥ 570 at the gateway; compositions through the dual
+  (∇F at d=2, ∇H at d=4 are the polar generators) enlarge the
+  constructive calculus. Also machine-read: F ∉ I_C (the Hessian
+  curve is NOT on X); invariant ladder mult_triv(S^d) starts
+  3 (F), 5 (H), 6, 7 (new fundamentals beyond products at 5, 6,
+  7); on-curve invariants grow at rate 1/33 (first 2-dim at
+  d=33 — X(11)/G = P¹ consistency). **Note VI §3 torsor angle
+  CLOSED as PARKED OPEN-EXTERNAL** (second pass): BW obstructs
+  rationality, not points; a K-point yields only degree ≡ 0 mod 3
+  canonical curve classes (3, 6, 6); no points-obstruction
+  theorem exists to instantiate (the open CSD-type index-1
+  question); the CM-explicit `J_tw` stands ready if one appears.
+  Investigation's unconditional yield = Note VII.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
