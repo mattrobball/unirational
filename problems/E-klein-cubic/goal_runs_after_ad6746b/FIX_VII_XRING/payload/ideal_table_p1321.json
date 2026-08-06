@@ -1,0 +1,198 @@
+{
+ "p": 1321,
+ "HF_C": {
+  "0": 1,
+  "1": 5,
+  "2": 15,
+  "3": 35,
+  "4": 55,
+  "5": 75,
+  "6": 95,
+  "7": 115,
+  "8": 135,
+  "9": 155,
+  "10": 175,
+  "11": 195,
+  "12": 215,
+  "13": 235,
+  "14": 255
+ },
+ "table": {
+  "map": [
+   {
+    "d": 1,
+    "dim": 1,
+    "rank": 1,
+    "ideal_mult": 0
+   },
+   {
+    "d": 2,
+    "dim": 0,
+    "rank": 0,
+    "ideal_mult": 0
+   },
+   {
+    "d": 3,
+    "dim": 0,
+    "rank": 0,
+    "ideal_mult": 0
+   },
+   {
+    "d": 4,
+    "dim": 2,
+    "rank": 2,
+    "ideal_mult": 0
+   },
+   {
+    "d": 5,
+    "dim": 1,
+    "rank": 1,
+    "ideal_mult": 0
+   },
+   {
+    "d": 6,
+    "dim": 2,
+    "rank": 0,
+    "ideal_mult": 2
+   },
+   {
+    "d": 7,
+    "dim": 4,
+    "rank": 2,
+    "ideal_mult": 2
+   },
+   {
+    "d": 8,
+    "dim": 5,
+    "rank": 1,
+    "ideal_mult": 4
+   },
+   {
+    "d": 9,
+    "dim": 6,
+    "rank": 1,
+    "ideal_mult": 5
+   },
+   {
+    "d": 10,
+    "dim": 10,
+    "rank": 2,
+    "ideal_mult": 8
+   },
+   {
+    "d": 11,
+    "dim": 12,
+    "rank": 1,
+    "ideal_mult": 11
+   },
+   {
+    "d": 12,
+    "dim": 16,
+    "rank": 2,
+    "ideal_mult": 14
+   }
+  ],
+  "polar": [
+   {
+    "d": 1,
+    "dim": 0,
+    "rank": 0,
+    "ideal_mult": 0
+   },
+   {
+    "d": 2,
+    "dim": 1,
+    "rank": 1,
+    "ideal_mult": 0
+   },
+   {
+    "d": 3,
+    "dim": 0,
+    "rank": 0,
+    "ideal_mult": 0
+   },
+   {
+    "d": 4,
+    "dim": 1,
+    "rank": 0,
+    "ideal_mult": 1
+   },
+   {
+    "d": 5,
+    "dim": 2,
+    "rank": 1,
+    "ideal_mult": 1
+   },
+   {
+    "d": 6,
+    "dim": 2,
+    "rank": 1,
+    "ideal_mult": 1
+   },
+   {
+    "d": 7,
+    "dim": 4,
+    "rank": 1,
+    "ideal_mult": 3
+   },
+   {
+    "d": 8,
+    "dim": 5,
+    "rank": 2,
+    "ideal_mult": 3
+   },
+   {
+    "d": 9,
+    "dim": 6,
+    "rank": 1,
+    "ideal_mult": 5
+   },
+   {
+    "d": 10,
+    "dim": 10,
+    "rank": 2,
+    "ideal_mult": 8
+   },
+   {
+    "d": 11,
+    "dim": 12,
+    "rank": 2,
+    "ideal_mult": 10
+   },
+   {
+    "d": 12,
+    "dim": 15,
+    "rank": 1,
+    "ideal_mult": 14
+   }
+  ]
+ },
+ "bound_map": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  2,
+  2,
+  4,
+  5,
+  8,
+  11,
+  14
+ ],
+ "bound_polar": [
+  0,
+  0,
+  0,
+  1,
+  1,
+  1,
+  3,
+  3,
+  5,
+  8,
+  10,
+  14
+ ]
+}

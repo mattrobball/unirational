@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `3164cbe` (2026-08-05; the
+Snapshot metadata — notebook parent head: `ac61998` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3064,7 +3064,39 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   condition systems interact ONLY at the 330 sextet points — the
   d=34 assembly decomposes as profile + carrier + a finite
   gluing block on the sextets; computing the gluing block's rank
-  at the `(1,6)` window is the step after XRING lands.**** Same-day
+  at the `(1,6)` window is the step after XRING lands. **Wave 23
+  packet LANDED: `FIX-VII-XRING-ALLGREEN`**
+  (`goal_runs_after_ad6746b/FIX_VII_XRING`; 71/71 at p=397 AND
+  p2=1321; director-replayed verifier exit 0 — multiplication
+  table closure, Molien-projector dims, pointwise equivariance of
+  the d6 pair over all 660 elements, unsaturated-ideal
+  membership). Protocol correction (worker-caught, brief error):
+  the working Weil-S labeling is the square-root one
+  `b = (1,3,2,5,4)`, signs `(1,1,−1,1,1)` — the brief's labeling
+  family has NO solution (exhaustive search); exactly the 5
+  u-orbit labelings work. Results: linear AND projective closure
+  both exactly 660; ladder dims d ≤ 12 both types = banked
+  EXACTLY; TRUE ideal mults = the left-exactness bounds AT EVERY
+  d (restriction surjective on equivariant parts throughout —
+  stronger than the HF argument); `F̌` same pentagonal shape; NEW
+  explicit invariant `J₆` (±1 coefficients); identities
+  `HessF·(∇F̌∘∇F) = 10·F·∇F + 2·∇J₆`,
+  `adj(HessF)·∇F = ½·H·x`; the map-type d=6 ideal pair is
+  `⟨H·x, F̌″(∇F,∇H)⟩`, both structurally vanishing on `C₂₀`;
+  identity coefficients identical over Q at both primes; manifest
+  upgraded. **Wave 24 dispatch:** packet
+  `goal_runs_after_ac61998/FIX_VII_GATE` (IN-FLIGHT,
+  PROPOSAL-UNRUN): the d=34 gateway decision — span `M₃₄`
+  self-certified to rank 576 (invariant×generator products, XRING
+  recipes at the P2 primes 67/199), impose the (1,6) profile at
+  one orbit representative (plane containment + line multi-orders
+  translated from the P2 sieve; NO c_σ conditions per
+  `FIX-P2-H11-LOCAL-CONFIRMED`), MANDATORY cross-check `n1` =
+  sealed P2 slice dim, then the carrier cut (NF mod `I_C` at
+  degree 34, target dim 655). Exits:
+  `FIX-VII-GATE-CANDIDATES-EXIST` (explicit basis dumped) /
+  `FIX-VII-GATE-HESSIAN-ANSATZ-EMPTY` /
+  `FIX-VII-GATE-DEVIATION`.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

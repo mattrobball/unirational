@@ -1,0 +1,25 @@
+RANK map 1 1 1
+RANK map 2 0 0
+RANK map 3 0 0
+RANK map 4 2 2
+RANK map 5 1 1
+RANK map 6 2 0
+RANK map 7 4 2
+RANK map 8 5 1
+RANK map 9 6 1
+RANK map 10 10 2
+RANK map 11 12 1
+RANK map 12 16 2
+RANK polar 1 0 0
+RANK polar 2 1 1
+RANK polar 3 0 0
+RANK polar 4 1 0
+RANK polar 5 2 1
+RANK polar 6 2 1
+RANK polar 7 4 1
+RANK polar 8 5 2
+RANK polar 9 6 1
+RANK polar 10 10 2
+RANK polar 11 12 2
+RANK polar 12 15 1
+END

@@ -1,0 +1,411 @@
+{
+ "primes": [
+  397,
+  1321
+ ],
+ "group": {
+  "order": 660,
+  "projective_order": 660,
+  "order_profile": {
+   "1": 1,
+   "11": 120,
+   "5": 264,
+   "2": 55,
+   "6": 110,
+   "3": 110
+  },
+  "S_recipe": {
+   "b": [
+    1,
+    3,
+    2,
+    5,
+    4
+   ],
+   "t": 1,
+   "signs": [
+    1,
+    1,
+    -1,
+    1,
+    1
+   ],
+   "scalar_c": 329,
+   "M2_scalar": 386,
+   "sqrt": 66,
+   "negated": true
+  },
+  "S_recipe_note": "M_{jk} = s_j s_k (zeta^{t b_j b_k} - zeta^{-t b_j b_k}) with b_i^2 = e_i mod 11 (Weil odd-function basis), then rescaled to S^2 = I, det S = 1",
+  "S_family_analysis": {
+   "working_b": [
+    [
+     1,
+     3,
+     2,
+     5,
+     4
+    ],
+    [
+     2,
+     5,
+     4,
+     1,
+     3
+    ],
+    [
+     3,
+     2,
+     5,
+     4,
+     1
+    ],
+    [
+     4,
+     1,
+     3,
+     2,
+     5
+    ],
+    [
+     5,
+     4,
+     1,
+     3,
+     2
+    ]
+   ],
+   "brief_family": [
+    [
+     1,
+     2,
+     4,
+     3,
+     5
+    ],
+    [
+     2,
+     4,
+     3,
+     5,
+     1
+    ],
+    [
+     3,
+     5,
+     1,
+     2,
+     4
+    ],
+    [
+     4,
+     3,
+     5,
+     1,
+     2
+    ],
+    [
+     5,
+     1,
+     2,
+     4,
+     3
+    ]
+   ],
+   "intersection": [],
+   "sqrt_labeling": [
+    1,
+    3,
+    2,
+    5,
+    4
+   ],
+   "n_hits": 50
+  }
+ },
+ "cov_dims": {
+  "map": [
+   1,
+   0,
+   0,
+   2,
+   1,
+   2,
+   4,
+   5,
+   6,
+   10,
+   12,
+   16
+  ],
+  "polar": [
+   0,
+   1,
+   0,
+   1,
+   2,
+   2,
+   4,
+   5,
+   6,
+   10,
+   12,
+   15
+  ],
+  "triv": {
+   "3": 1,
+   "4": 0,
+   "5": 1,
+   "6": 2,
+   "7": 1
+  }
+ },
+ "hessian_curve": {
+  "H": "32*x0^3*x2^2+365*x0^3*x3*x4+32*x0^2*x3^3+365*x0*x1^3*x4+365*x0*x1*x2^3+96*x0*x1*x2*x3*x4+32*x1^3*x3^2+32*x1^2*x4^3+365*x1*x2*x3^3+32*x2^3*x4^2+365*x2*x3*x4^3",
+  "degree": 20,
+  "genus_pa": 26,
+  "HP": "20i-25",
+  "HF": {
+   "0": 1,
+   "1": 5,
+   "2": 15,
+   "3": 35,
+   "4": 55,
+   "5": 75,
+   "6": 95,
+   "7": 115,
+   "8": 135,
+   "9": 155,
+   "10": 175,
+   "11": 195,
+   "12": 215,
+   "13": 235,
+   "14": 255
+  },
+  "min_gens": "15 quartics"
+ },
+ "ideal_table": {
+  "map": [
+   {
+    "d": 1,
+    "dim": 1,
+    "rank": 1,
+    "ideal_mult": 0
+   },
+   {
+    "d": 2,
+    "dim": 0,
+    "rank": 0,
+    "ideal_mult": 0
+   },
+   {
+    "d": 3,
+    "dim": 0,
+    "rank": 0,
+    "ideal_mult": 0
+   },
+   {
+    "d": 4,
+    "dim": 2,
+    "rank": 2,
+    "ideal_mult": 0
+   },
+   {
+    "d": 5,
+    "dim": 1,
+    "rank": 1,
+    "ideal_mult": 0
+   },
+   {
+    "d": 6,
+    "dim": 2,
+    "rank": 0,
+    "ideal_mult": 2
+   },
+   {
+    "d": 7,
+    "dim": 4,
+    "rank": 2,
+    "ideal_mult": 2
+   },
+   {
+    "d": 8,
+    "dim": 5,
+    "rank": 1,
+    "ideal_mult": 4
+   },
+   {
+    "d": 9,
+    "dim": 6,
+    "rank": 1,
+    "ideal_mult": 5
+   },
+   {
+    "d": 10,
+    "dim": 10,
+    "rank": 2,
+    "ideal_mult": 8
+   },
+   {
+    "d": 11,
+    "dim": 12,
+    "rank": 1,
+    "ideal_mult": 11
+   },
+   {
+    "d": 12,
+    "dim": 16,
+    "rank": 2,
+    "ideal_mult": 14
+   }
+  ],
+  "polar": [
+   {
+    "d": 1,
+    "dim": 0,
+    "rank": 0,
+    "ideal_mult": 0
+   },
+   {
+    "d": 2,
+    "dim": 1,
+    "rank": 1,
+    "ideal_mult": 0
+   },
+   {
+    "d": 3,
+    "dim": 0,
+    "rank": 0,
+    "ideal_mult": 0
+   },
+   {
+    "d": 4,
+    "dim": 1,
+    "rank": 0,
+    "ideal_mult": 1
+   },
+   {
+    "d": 5,
+    "dim": 2,
+    "rank": 1,
+    "ideal_mult": 1
+   },
+   {
+    "d": 6,
+    "dim": 2,
+    "rank": 1,
+    "ideal_mult": 1
+   },
+   {
+    "d": 7,
+    "dim": 4,
+    "rank": 1,
+    "ideal_mult": 3
+   },
+   {
+    "d": 8,
+    "dim": 5,
+    "rank": 2,
+    "ideal_mult": 3
+   },
+   {
+    "d": 9,
+    "dim": 6,
+    "rank": 1,
+    "ideal_mult": 5
+   },
+   {
+    "d": 10,
+    "dim": 10,
+    "rank": 2,
+    "ideal_mult": 8
+   },
+   {
+    "d": 11,
+    "dim": 12,
+    "rank": 2,
+    "ideal_mult": 10
+   },
+   {
+    "d": 12,
+    "dim": 15,
+    "rank": 1,
+    "ideal_mult": 14
+   }
+  ]
+ },
+ "banked_bounds": {
+  "map": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2,
+   4,
+   5,
+   8,
+   11,
+   14
+  ],
+  "polar": [
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   3,
+   3,
+   5,
+   8,
+   10,
+   14
+  ]
+ },
+ "bounds_are_tight_at_every_degree": true,
+ "generators": {
+  "invariants": {
+   "F(deg 3)": "x0^2x1+x1^2x2+x2^2x3+x3^2x4+x4^2x0",
+   "H(deg 5)": "32*x0^3*x2^2+365*x0^3*x3*x4+32*x0^2*x3^3+365*x0*x1^3*x4+365*x0*x1*x2^3+96*x0*x1*x2*x3*x4+32*x1^3*x3^2+32*x1^2*x4^3+365*x1*x2*x3^3+32*x2^3*x4^2+365*x2*x3*x4^3",
+   "J6(deg 6)": "1*x0^4*x2*x3+1*x0^3*x1*x4^2+1*x0^2*x1^3*x2+396*x0^2*x1*x2^2*x3+396*x0^2*x1*x3^2*x4+396*x0*x1^2*x2*x4^2+1*x0*x1*x3^4+1*x0*x2^4*x4+396*x0*x2^2*x3*x4^2+1*x0*x3^2*x4^3+1*x1^4*x3*x4+1*x1^2*x2^3*x3+396*x1^2*x2*x3^2*x4+1*x1*x2*x4^4+1*x2^2*x3^3*x4",
+   "Fdual(deg 3 on W-bar)": "1*y0^2*y1+1*y0*y4^2+1*y1^2*y2+1*y2^2*y3+1*y3^2*y4"
+  },
+  "polar": {
+   "d=2": "gradF (spans)",
+   "d=4": "gradH (spans)",
+   "d=5": "{F*gradF, gradJ6} (spans; coords [2, 0] / [0, 4])"
+  },
+  "map": {
+   "d=1": "x (identity)",
+   "d=4": "{F*x, gradFdual o gradF} (spans; coords [1, 1] / [4, 6])",
+   "d=6": "{H*x, Fdual''(gradF,gradH)} (spans; both in I_C)"
+  },
+  "non_covariants_tested": [
+   "HessF*gradH",
+   "HessH*gradF"
+  ]
+ },
+ "identities": [
+  "(-10)*[F*gradF] + (-2)*[gradJ6] + (1)*[HessF*(gradFdual o gradF)] = 0",
+  "(-1/2)*[H*x] + (1)*[adj(HessF)*gradF] = 0",
+  "e0 = (5/64)*[H*x] + (-1/64)*[Fdual''(gradF,gradH)]",
+  "e1 = (3/64)*[H*x] + (-1/64)*[Fdual''(gradF,gradH)]"
+ ],
+ "files": [
+  "G660_p1321.json",
+  "G660_p397.json",
+  "S_family_analysis.json",
+  "cov_bases_p1321.npz",
+  "cov_bases_p397.npz",
+  "cov_dims_p1321.json",
+  "cov_dims_p397.json",
+  "ideal_table_p1321.json",
+  "ideal_table_p397.json",
+  "pair_d6.json",
+  "pair_d6_p1321.json",
+  "pair_d6_p397.json",
+  "stage4_p1321.json",
+  "stage4_p397.json"
+ ]
+}

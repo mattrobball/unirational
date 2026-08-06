@@ -1,0 +1,96 @@
+{
+ "p": 1321,
+ "H": "32*x0^3*x2^2+1289*x0^3*x3*x4+32*x0^2*x3^3+1289*x0*x1^3*x4+1289*x0*x1*x2^3+96*x0*x1*x2*x3*x4+32*x1^3*x3^2+32*x1^2*x4^3+1289*x1*x2*x3^3+32*x2^3*x4^2+1289*x2*x3*x4^3",
+ "J6": "1*x0^4*x2*x3+1*x0^3*x1*x4^2+1*x0^2*x1^3*x2+1320*x0^2*x1*x2^2*x3+1320*x0^2*x1*x3^2*x4+1320*x0*x1^2*x2*x4^2+1*x0*x1*x3^4+1*x0*x2^4*x4+1320*x0*x2^2*x3*x4^2+1*x0*x3^2*x4^3+1*x1^4*x3*x4+1*x1^2*x2^3*x3+1320*x1^2*x2*x3^2*x4+1*x1*x2*x4^4+1*x2^2*x3^3*x4",
+ "Fdual": "1*y0^2*y1+1*y0*y4^2+1*y1^2*y2+1*y2^2*y3+1*y3^2*y4",
+ "map4": {
+  "gradFdual_o_gradF": [
+   4,
+   6
+  ],
+  "F_times_x": [
+   1,
+   1
+  ]
+ },
+ "polar5": {
+  "F*gradF": [
+   2,
+   0
+  ],
+  "gradJ6": [
+   0,
+   4
+  ],
+  "HessF*gradH": null,
+  "HessH*gradF": null,
+  "HessF*(gradFdual o gradF)": [
+   20,
+   8
+  ]
+ },
+ "polar5_relations": [
+  {
+   "members": [
+    "F*gradF",
+    "gradJ6",
+    "HessF*(gradFdual o gradF)"
+   ],
+   "coeffs": [
+    1311,
+    1319,
+    1
+   ],
+   "balanced": "(-10)*[F*gradF] + (-2)*[gradJ6] + (1)*[HessF*(gradFdual o gradF)] = 0"
+  }
+ ],
+ "map6": {
+  "H*x": [
+   32,
+   1289
+  ],
+  "adj(HessF)*gradF": [
+   16,
+   1305
+  ],
+  "Fdual''(gradF,gradH)": [
+   96,
+   1161
+  ]
+ },
+ "map6_relations": [
+  {
+   "members": [
+    "H*x",
+    "adj(HessF)*gradF",
+    "Fdual''(gradF,gradH)"
+   ],
+   "coeffs": [
+    660,
+    1,
+    0
+   ],
+   "balanced": "(-1/2)*[H*x] + (1)*[adj(HessF)*gradF] = 0"
+  }
+ ],
+ "pair_in_terms_of_candidates": {
+  "candidates": [
+   "H*x",
+   "Fdual''(gradF,gradH)"
+  ],
+  "matrix_cand_to_echelon_balanced": [
+   [
+    32,
+    -32
+   ],
+   [
+    96,
+    -160
+   ]
+  ],
+  "readable": [
+   "e0 = (5/64)*[H*x] + (-1/64)*[Fdual''(gradF,gradH)]",
+   "e1 = (3/64)*[H*x] + (-1/64)*[Fdual''(gradF,gradH)]"
+  ]
+ }
+}
