@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `52c6b5e` (2026-08-05; the
+Snapshot metadata — notebook parent head: `f760a87` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2876,7 +2876,23 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   timeouts, one run live). HANDOFF_2026-08-06.md corrected in place
   (cutoff paragraph + a sharpened trust rule: sealed packets' PROSE
   clauses are draft-grade until machine-exercised). Trust lesson
-  recorded. Headline: OPEN.**** Same-day
+  recorded. Headline: OPEN. **Item-2 investigation opened (Note VI,
+  `theory/FIX_VI_prym.md`, DRAFT-FOR-DERIVATION): the
+  split-discriminant Prym.** Hand-derived with all consistency checks
+  passing: for each of the 55 involutions, the admissible-cover Prym
+  of `Δ₅ = E_σ ∪ K_c` gives `J(X) ~ Prym(Ẽ/E_σ) × J(K̃_σ)` — a
+  (3-dim) × (2-dim) isogeny splitting, with `Ẽ → E_σ` branched at
+  the six intersection points (`g = 4`) and `K̃ → K_c ≅ P¹` branched
+  at the six `F₀`-points (`g = 2`; both branch parities are exactly
+  the (D1) residue computations); the dual-graph norm is toric-an
+  isogeny, and `p_a` arithmetic checks (`6 → 11 = 2·6−1`; Prym dim
+  5 ✓). No splitting is `G`-stable (`H³ = W ⊕ W̄` irreducible
+  pieces); `G` permutes the 55 — a joint rigidity on `J(X)`'s
+  isogeny type. Next: pin the two curves exactly (small, frame data
+  banked; does `J(K̃)` split under the D12-symmetry?),
+  machine-verify the genus/branch arithmetic, then the
+  twisted-torsor question over `K_proj`. NOT to be consumed until
+  machine-checked (per the H1-D trust rule).**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
