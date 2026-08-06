@@ -1,0 +1,5 @@
+CHECK genus_Esigma PASS   | Jacobian ideal has no projective zero; S = -3/8, T = -13/256, S^3-27T^2 = -8019/65536 != 0, j(E_sigma) = 8192/11
+CHECK j_Esigma_numeric PASS   | lambda-route j(E_sigma) matches 8192/11, abs err = 3.69e-58
+CHECK six_intersection_points PASS   | Res_x = ((kp+4)+(km+4)b^3)^2 (exact); rho = -(kp+4)/(km+4) != 0, != -1; disc(P6) != 0 and gcd(P6,P6') = 1; the 2 points of K_c off the chart are not on E_sigma -> exactly 6 distinct points
+CHECK rh_arithmetic PASS   | g(E~) = 4 (double cover of genus-1 branched at 6): ok; g(K~) = 2 (double cover of P^1 branched at 6): ok; p_a(Delta_5) = 1+0+6-1 = 6: ok; p_a(Delta_5) = plane quintic (5-1)(5-2)/2 = 6: ok; Bezout 3*2 = 6 nodes: ok; p_a(Delta~_5) = 4+2+6-1 = 11: ok; 11 = 2*p_a(Delta_5) - 1 = 2*6-1: ok; Prym dim = 11 - 6 = 5: ok
+[section C] 4/4 pass, 0.1s

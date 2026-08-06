@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `a836891` (2026-08-05; the
+Snapshot metadata — notebook parent head: `66f88ef` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2956,7 +2956,29 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   uniform win would be the missing effective degree bound
   (Wall #1) modulo the tower-carrier branch. Note VI §3 updated
   (trdeg slip fixed: `K_proj` is C₄ not C₃; elementary obstruction
-  vanishes; `3[T₁] = 0`).**** Same-day
+  vanishes; `3[T₁] = 0`). **Wave 22 same-hour corrections and
+  probes (Note VII §§3–6 revised in place):** (i) the "race"
+  framing was OVERSTATED and is superseded in §4 — Lemma 3 (new):
+  free-orbit centers satisfy the representation condition with any
+  genus ≥ 1 center (`Ind` from trivial stabilizer contains
+  everything), so the carrier condition's negative force on big
+  orbits is Hodge-local, not representation-theoretic; the honest
+  negative-side statement is the per-window trichotomy
+  (arrangement-supported / new positive-degree orbit /
+  irregularity-forcing free singularity), branch (c) being a
+  FIX-D2-class wall. Representation rigidity bites exactly on the
+  small orbits. (ii) Probes (committed in
+  `director_probes_20260806/`): `hess_probe.m2` — `Sing(Hess F)`
+  is dim 1, degree 20, Hilbert poly `20i−25`, `p_a = 26` — the
+  X(11) model confirmed by direct computation (identification
+  literature-anchored: Klein, Adler–Ramanan LNM 1644,
+  arXiv:2409.02589); `triples_probe.py` — generating tuples
+  (2,3,11) in G, (3,3,5) in A5, (5,5,5)/(5,5,11) in F55 all
+  EXIST (obligations 2, 3 of Note VII §5 closed). (iii) §6 opened:
+  next derivation = the HESSIAN WINDOW (equivariant character of
+  `H⁰(I_{C₂₀}(d))` via Chevalley–Weil on X(11); first `d`
+  admitting a landing covariant vanishing on the Hessian
+  curve).**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

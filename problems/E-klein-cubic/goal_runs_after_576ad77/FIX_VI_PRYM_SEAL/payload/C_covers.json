@@ -1,0 +1,15 @@
+{
+ "j_E_sigma": "8192/11",
+ "S_quartic": "-3/8",
+ "T_quartic": "-13/256",
+ "disc_quartic": "-8019/65536",
+ "E_sigma_smooth": true,
+ "resultant_x": "-231*sqrt(33)*b**6/128 + 3113*b**6/128 + 44*b**3 + 231*sqrt(33)/128 + 3113/128",
+ "rho": "-(283 + 21*sqrt(33))/256",
+ "intersection_points": 6,
+ "genus_E_tilde": 4,
+ "genus_K_tilde": 2,
+ "pa_Delta5": 6,
+ "pa_Delta5_tilde": 11,
+ "prym_dimension": 5
+}

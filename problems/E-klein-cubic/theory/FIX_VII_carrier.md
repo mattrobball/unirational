@@ -99,11 +99,16 @@ C2 * C3 ↠ G` with `xy` of order 11). Next: `(2,5,11)` g = 70,
 `(2,6,11)` g = 81, `(3,3,5)` g = 45, `(2,2,3,11)` g = 136(+).
 So an irreducible carrier has genus ≥ 26 among 3-point covers
 (4-point data only grows; positive-genus base only grows).
-TO-VERIFY (literature): the classical model of `X(11)` inside
-`P(W)` itself — recalled as `Sing(Hess F)`, degree 20, genus 26
-(Klein; Adler–Ramanan LNM 1644). If confirmed, `P(W)` CONTAINS a
-canonical minimal carrier, and every construction ansatz should
-put it in the base locus.
+VERIFIED (machine + literature): `Sing(Hess F)` is a curve of
+degree 20 with Hilbert polynomial `20i − 25`, hence `p_a = 26`
+(direct M2 computation mod 32003, `director_probes_20260806/
+hess_probe.m2`), and its identification with the modular curve
+`X(11)` is Klein's classical construction, treated rigorously by
+Adler–Ramanan (LNM 1644) — modern account in arXiv:2409.02589. So
+`P(W)` CONTAINS a canonical minimal carrier: the Hessian curve.
+Generating-tuple existence for the ledger entries is
+machine-checked (`triples_probe.py`: (2,3,11) in G, (3,3,5) in A5,
+(5,5,5) and (5,5,11) in F55 — all TRUE).
 
 **Induced carriers** (orbit of `[G:H]` curves, stabilizer `H`,
 condition `Res_H W ⊂ H¹(C₀)`):
@@ -131,6 +136,21 @@ condition `Res_H W ⊂ H¹(C₀)`):
   the exceptional geometry over the point (starts in `P³ = P(T_p)`
   with the `H`-representation structure) — finite list, unexplored.
 
+**Lemma 3 (free orbits are representation-theoretically free).**
+For a center orbit with TRIVIAL stabilizer (e.g. over a 660-point
+orbit), `mult_{W_Q}(Ind_1^G H¹(C₀)) = 10·g(C₀)`, so ANY center of
+genus ≥ 1 carries `W_Q`. On free orbits the carrier condition has
+no representation-theoretic content; its content there is purely
+Hodge-local — the singularity of the map at such a point must be
+bad enough to force an irregular center in its resolution tower
+(elliptic-cone-type or worse). The representation theory bites
+exactly on the SMALL orbits (the arrangement), where stabilizers
+are large: over D12-points a carrier needs a genus ≥ 3 cover with
+`W₊ ⊕ W₋`, over the arrangement lines/planes similar induced
+conditions. This inversion — rigid where the profile theory
+already lives, soft on free orbits — is structural, not an
+artifact.
+
 ## 4. What this changes
 
 **Positive program.** Any ansatz must include a carrier in its base
@@ -141,32 +161,66 @@ A5-curves, etc.). This is the sharpest structural guide the
 construction program has: the (3,6)-dictionary windows should be
 re-run relative to a system containing a carrier.
 
-**Negative program.** A new global necessary condition, orthogonal
-to the D12-localization (Wall: FIX-D2). The concrete question — THE
-RACE: for each `(profile, carrier)` pair, compare the linear cost
-of containing the carrier in the degree-`d` system (for a
-positive-degree carrier of degree `δ`, genus `g`: about
-`5(δd + 1 − g)` conditions, LINEAR in `d` with slope `5δ`) against
-the profile-theory slice dimensions at degree `d`. If for all
-profiles the cost outruns the budget uniformly, this is the
-effective degree obstruction Wall #1 said was missing — EXCEPT
-that tower carriers (projective degree 0) evade degree counting
-and must be excluded by the stabilizer/exceptional-geometry
-analysis instead (§3 last item; note the FIX-D2 jet machinery
-already probes exactly those local towers). Next derivation: make
-the cost function exact (vanishing on a curve is not exactly
-`h⁰`-many independent conditions; use the sealed slice machinery),
-and settle the `d = 34` window `(1,6)` first.
+**Negative program — honest assessment (superseding the first
+draft's "race" framing, which was overstated).** A dimension-count
+"cost of containing a carrier" argument only makes sense for
+carriers at SPECIFIED loci: for those, vanishing on the carrier is
+a condition system whose codimension one can try to lower-bound
+within a profile slice. But the condition is existential — the
+solution's base locus, wherever it happens to fall, must contain a
+W-tower — and by Lemma 3 free-orbit towers satisfy the
+representation condition with any irregular center. So there is no
+cheap uniform dimension race. What the condition honestly gives
+the negative side is a per-window trichotomy: at a fixed window
+(e.g. `d = 34`, `(1,6)`, slice ≤ 16) every hypothetical solution
+must have (a) an arrangement-supported carrier — where the induced
+representation conditions are strong and the FIX-D2 jet towers
+already measure the local freedom, or (b) a new positive-degree
+carrier orbit — bounded degree bookkeeping within the window, or
+(c) an irregularity-forcing isolated singularity on a big orbit —
+a local mixed-Hodge condition on the germ, not excluded by any
+current machinery. Branch (c) is why this note does NOT claim a
+route to the effective degree bound; it is the same class of
+"local freedom outruns local constraints" wall as FIX-D2, now with
+a Hodge-theoretic name.
+
+**Where the condition has unconditional teeth: minimal-degree
+windows of the covariant ladder.** For the SMALL sealed regime
+(the ≤ 24 ladder cutoff of E25 and the ≤ 30 slice cutoff), all
+candidate systems are explicitly enumerable; a solution at such
+degrees would need its base locus to hide a genus ≥ 3-per-orbit
+tower inside slices of dimension ≤ 16 with the arrangement already
+consuming the multiplicity budget — the condition can be checked
+mechanically against any explicit candidate, and gives a fast
+disqualification test for any future claimed construction.
 
 ## 5. Verification obligations
 
 1. Character/fixed-dim table against a machine character table of
    `PSL(2,11)` (quick CAS check — fold into the next packet).
-2. Generating-tuple existence claims ((2,3,11) for G; (3,3,5) for
-   A5; (5,5,5) for F55) — finite checks, CAS-able.
-3. The `X(11) = Sing(Hess F)` model claim (literature: Adler–
-   Ramanan LNM 1644; Klein) — degree 20, genus 26, and
-   G-equivariance.
+2. ~~Generating-tuple existence~~ DONE (probe `triples_probe.py`,
+   2026-08-06: all four TRUE).
+3. ~~`Sing(Hess F)` degree/genus~~ DONE (probe `hess_probe.m2`:
+   dim 1, deg 20, Hilbert poly `20i − 25`, `p_a = 26`);
+   identification with `X(11)` is literature-anchored (Klein;
+   Adler–Ramanan LNM 1644; arXiv:2409.02589). Smoothness of the
+   modular-prime model not checked (irrelevant for the anchor).
 4. Lemma 1's Schur-index-1 input — literature-anchored (Roulleau's
    lattice) — no further check needed.
 5. Blowup-formula bookkeeping (Thm 2) is classical; no check.
+
+## 6. Next derivation: the Hessian window
+
+The positive-side ansatz is now concrete: covariant systems whose
+base locus contains the Hessian curve `C₂₀ = Sing(Hess F)`. The
+right first computation is EQUIVARIANT: the `G`-character of
+`H⁰(P⁴, I_{C₂₀}(d))` equals `char H⁰(O(d)) − char H⁰(C₂₀,
+O(d)|)` for `d` beyond regularity, and the character of
+`H⁰(X(11), O(1)|^{⊗d})` is computable in closed form by
+equivariant Riemann–Roch / the Chevalley–Weil-type formula for the
+`(2,3,11)`-cover with the local rotation data of the line bundle.
+Then `mult` of the landing-covariant type in the `I_{C₂₀}`-graded
+piece, degree by degree, gives THE HESSIAN WINDOW: the first `d`
+at which a map-type covariant vanishing on the Hessian curve can
+exist. Compare against the sealed cutoffs (≤ 30 empty; first
+window 34 via `(1,6)`).

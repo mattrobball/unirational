@@ -1,0 +1,14 @@
+Res_x( F0|a=1 , (x^2-4(1-b+b^2)) )  =  -231*sqrt(33)*b**6/128 + 3113*b**6/128 + 44*b**3 + 231*sqrt(33)/128 + 3113/128
+claimed closed form ((kp+4)+(km+4)b^3)^2 : residual = 0
+  (Res of two quadratics in x; the square reflects the tau-pairing x -> -x,
+   so the 6 points sit over 3 distinct b-values.)
+
+rho = -(kp+4)/(km+4) = -283/256 - 21*sqrt(33)/256 = -(283+21*sqrt(33))/256  (residual 0)
+rho numerically = -1.576702404598822663503370472
+b^3 = rho has 3 distinct roots (rho != 0); for each, x^2 = 4(1-b+b^2) has 2 distinct
+roots because x = 0 would force b^2-b+1 = 0, hence b^3 = -1, but rho != -1 (kp != km).
+=> |E_sigma ∩ K_c| = 6, transverse.  Bezout: deg 3 * deg 2 = 6 confirms the count.
+
+parameter-side confirmation: disc(P6) = (39701059705739346444288) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+gcd(P6, P6') has degree 0 (0 = squarefree)
+K_c points off the a=1 chart: F0(0,1,2) = 77/16 - 3*sqrt(33)/16, F0(0,1,-2) = 77/16 - 3*sqrt(33)/16 (both nonzero)

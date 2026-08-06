@@ -1,0 +1,17 @@
+F0 = a**3*(13/16 + 3*sqrt(33)/16) + b**3*(13/16 - 3*sqrt(33)/16) + x**2*(a + b)
+partials: dF/da = 39*a**2/16 + 9*sqrt(33)*a**2/16 + x**2
+          dF/db = -9*sqrt(33)*b**2/16 + 39*b**2/16 + x**2
+          dF/dx = 2*a*x + 2*b*x
+dF/dx = 2(a+b)x = 0 splits into x = 0 and a = -b:
+  x = 0  branch -> 3*kp*a^2 = 3*km*b^2 = 0 -> a = b = 0 (not a projective point). nontrivial solutions: []
+  a = -b branch -> 3(kp-km)a^2 = 0 -> a = 0 -> x = 0 (not a point). nontrivial solutions: []
+=> E_sigma is a SMOOTH plane cubic.
+
+quartic model (chart a=1, X = x(1+b)):  X^2 = -13*b**4/16 + 3*sqrt(33)*b**4/16 - 13*b**3/16 + 3*sqrt(33)*b**3/16 - 3*sqrt(33)*b/16 - 13*b/16 - 3*sqrt(33)/16 - 13/16
+  = -(1+b)(kp + km b^3), roots b = -1 and the three cube roots of -kp/km (all distinct)
+binary-quartic invariants: S = -3/8   T = -13/256
+  (both RATIONAL: S = (3/4)*kp*km, T = kp*km*(kp+km)/16 -- j depends only on the
+   trace relations kp+km = 13/8, kp*km = -1/2)
+S^3 - 27T^2 = -8019/65536 = -729*11/65536   <- the 11 enters here
+j(E_sigma) = 1728 S^3/(S^3-27T^2) = 8192/11
+numeric lambda-route: j = (744.727272727272727272727272727272727272727273 + 3.33281198210073041054894598446118139284626204e-58j), err vs 8192/11 = 3.69399e-58

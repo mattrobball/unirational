@@ -1,0 +1,23 @@
+== trace relations ==
+kp+km-13/8      = 0
+kp*km+1/2       = 0
+(kp+4)(km+4)-22 = 0
+== (1) smoothness of E_sigma ==
+saturated Jacobian ideal == unit ideal : true
+dim Proj of Jacobian (expect -1/empty) : -1
+== conic smoothness ==
+conic saturated Jacobian == unit ideal  : true
+== (2) E_sigma ∩ K_c ==
+dim (affine cone, expect 1)            : 1
+degree (expect 6)                      : 6
+non-transverse locus empty             : true
+  => 6 distinct transverse points      : true
+== (3) restriction identity mod the conic ==
+F0 - ((kp+4)a^3+(km+4)b^3) mod conic   : 0
+== (4) eliminate x: expect ((kp+4)+(km+4)b^3)^2 up to a unit ==
+elimination ideal generator            : | bb^3+21/256y+283/256 |
+                                             3    77   3    3    77
+claimed factor ((kp+4)+(km+4)bb^3)     : (- --y + --)bb  + --y + --
+                                            16    16       16    16
+generator divisible by claimed cube-form: true
+M2_DONE

@@ -1,0 +1,15 @@
+Riemann-Hurwitz for a double cover:  2*g~ - 2 = 2*(2g - 2) + r
+  base E_sigma, g = 1, r = 6  ->  g(E~) = 4
+  base K_c = P^1, g = 0, r = 6 ->  g(K~) = 2
+
+arithmetic genus of a nodal union: p_a = g1 + g2 + #nodes - 1
+  p_a(Delta_5 = E_sigma ∪ K_c) = 1 + 0 + 6 - 1 = 6
+  cross-check, Delta_5 is a plane quintic: (5-1)(5-2)/2 = 6
+  cross-check, #nodes by Bezout: deg(E_sigma)*deg(K_c) = 3*2 = 6
+  p_a(Delta~_5) = 4 + 2 + 6 - 1 = 11
+  consistency: 2*p_a(Delta_5) - 1 = 11 = 11
+  Prym dimension = p_a(Delta~_5) - p_a(Delta_5) = 11 - 6 = 5
+
+NOTE: this is the arithmetic only.  The Prym isogeny decomposition itself
+(Beauville admissible-cover theory), Kollar's theorem and Roulleau Thm 2 are
+cited anchors, NOT verified here.

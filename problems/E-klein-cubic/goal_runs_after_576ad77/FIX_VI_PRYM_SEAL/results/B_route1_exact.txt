@@ -1,0 +1,35 @@
+tau fixed points: t1 = -1 + sqrt(-3), t2 = -1 - sqrt(-3)
+s = (t-t1)/(t-t2),  t(s) = (t2 s - t1)/(s-1),  Q(s) = P6(t(s))*(s-1)^6
+
+Q(s) coefficients (ascending s^0..s^6), exact over K:
+  [s^0] (0) + (0)*sqrt(33) + (0)*sqrt(-3) + (-72)*sqrt(33)*sqrt(-3)
+  [s^1] (0) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  [s^2] (-4158) + (-162)*sqrt(33) + (-4158)*sqrt(-3) + (54)*sqrt(33)*sqrt(-3)
+  [s^3] (0) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  [s^4] (-4158) + (-162)*sqrt(33) + (4158)*sqrt(-3) + (-54)*sqrt(33)*sqrt(-3)
+  [s^5] (0) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  [s^6] (0) + (0)*sqrt(33) + (0)*sqrt(-3) + (72)*sqrt(33)*sqrt(-3)
+
+c(u) = Q even part, u = s^2 (ascending c0..c3):
+  [u^0] (0) + (0)*sqrt(33) + (0)*sqrt(-3) + (-72)*sqrt(33)*sqrt(-3)
+  [u^1] (-4158) + (-162)*sqrt(33) + (-4158)*sqrt(-3) + (54)*sqrt(33)*sqrt(-3)
+  [u^2] (-4158) + (-162)*sqrt(33) + (4158)*sqrt(-3) + (-54)*sqrt(33)*sqrt(-3)
+  [u^3] (0) + (0)*sqrt(33) + (0)*sqrt(-3) + (72)*sqrt(33)*sqrt(-3)
+
+monic c~(u) = c(u)/c3 (ascending):
+  [u^0] (-1) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  [u^1] (3/4) + (-7/4)*sqrt(33) + (3/4)*sqrt(-3) + (7/12)*sqrt(33)*sqrt(-3)
+  [u^2] (-3/4) + (7/4)*sqrt(33) + (3/4)*sqrt(-3) + (7/12)*sqrt(33)*sqrt(-3)
+  [u^3] (1) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+
+disc(c) = (4315392616955904) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+
+E+ : v^2 = c(u)
+  g2 = (-43794432) + (0)*sqrt(33) + (-43794432)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  g3 = (-161864220672) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  j = (-32768) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+
+E- : v^2 = u*c(u)
+  S = (-2737152) + (0)*sqrt(33) + (2737152)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  T = (-2529128448) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  j = (-32768) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
