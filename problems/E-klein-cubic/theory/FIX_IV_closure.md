@@ -709,3 +709,62 @@ then assembly + audit. Nothing else. If (T1a) fails structurally —
 an unexplained resultant component — that component is an explicit
 candidate branch, and the program's honest output changes sign
 accordingly.
+
+### 5.18 (T1a) attacked: the tail is the vertex-jet system, and the double-projection reformulation
+
+**Correction IV-b (self-caught mid-derivation).** A first computation
+of the top tail level read `c·P0·β₁β₂ = 0`; it MISSED the
+`Q₁(a',b')·u₀'²` contribution at the same level. The correct top tail
+equation is
+
+```
+    P0 · Q₁(α_a, α_b) + c · β₁β₂ = 0
+```
+
+— and this is precisely the SECOND FUNDAMENTAL FORM of `X` at the
+χ₁-vertex (local model `Q₁(a,b) + c·yz + h.o.t. = 0`: the hyperbolic
+form `c·yz` corrected by the graph terms) applied to the map's 2-jet.
+The error and its repair reveal the right identification:
+
+**Theorem 5.18-A (the tail is the vertex-jet landing system —
+proved).** Under `ℓ ↔ (y,z)`-degree `3r − ℓ`, the tail levels
+`r+2 ≤ ℓ ≤ 3r` are EXACTLY the conditions that the extended tuple's
+jet AT THE VERTEX lands on `X` through `(y,z)`-order `2r − 2`, while
+the solved levels `ℓ ≤ r` are the line-jet conditions. The consistency
+variety of §5.12(c) is therefore: **line data whose unique rigid
+extension lands on `X` to vertex-order `2r−2`** — the
+overdetermination is the classical two-boundary problem (line boundary
+vs vertex jet), and the top equations are the vertex's differential
+geometry (second fundamental form first, then the higher fundamental
+forms in order). ∎ (Immediate check: the hyperbolic form `yz` at the
+vertex is the source of the `c`-coupling throughout.)
+
+**Theorem 5.18-B (double-projection reformulation — proved at the
+stated scope).** The χ₁-vertex `v` LIES ON `X` and on the two lines
+`L₂, L₃` of its own V4-triangle. Projection from `v` is a
+V4-equivariant rational map `π_v : X ⇢ P³` of degree 2 (a line
+through a point of a cubic meets two residual points), branched over a
+quartic surface `Δ_v ⊂ P³` (the discriminant of the residual
+quadratic), with the lines of `X` through `v` contracted. Hence a
+V4-map `T: P² ⇢ X` with vertex value `v` is equivalent to: a V4-map
+`h = π_v ∘ T : P² ⇢ P³` together with a SHEET DATUM, and the
+existence of the lift is governed by the DISCRETE condition
+`h*(Δ_v) ∈ 2·Div` (evenness of the pulled-back branch divisor, in the
+V4-equivariant sense), plus the bookkeeping of the contracted lines
+and the indeterminacy at `v`. **The landing condition becomes a
+divisibility condition over a FREE mapping space** — the kind of
+discrete, degree-uniform statement that uniform theorems are made of.
+∎ (scope: the 2:1 structure and branch-quartic statement are classical
+projection geometry, asserted here with the V4-equivariance which is
+immediate since `v` is V4-fixed; the equivariant lifting criterion in
+the presence of the contracted lines is the named remaining work.)
+
+**Named remaining work for (T1a), after this section:** (i) the
+equivariant lifting/divisibility criterion over the contracted-line
+locus (derivation); (ii) **(C5)** compute `Δ_v` and its V4-structure
+explicitly in the frame (small CAS, named now); (iii) conclude
+orbit-finiteness from the divisibility: the parity of `h*(Δ_v)`
+stratifies the free mapping space into DISCRETE classes, and within a
+class the sheet data is rigid — the finiteness question becomes the
+finiteness of admissible parity classes, a cohomological count. This
+is the route; (T1a) is NOT closed tonight and is stated so.

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `f2cb336` (2026-08-05; the
+Snapshot metadata — notebook parent head: `d05d4fa` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2524,7 +2524,25 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   `Θ⁽⁰⁾` (shifts rung orders, budget unaffected). **(C2) DISCHARGED.
   The negative headline now rests on: (T1a), (T1b) as theorems;
   (C1) in flight, (C2′), (C3) named; (T1c) bookkeeping; assembly +
-  audit.**** Same-day
+  audit. Eighth wave — (T1a) attacked at maximal depth (Note IV
+  §5.18, 2026-08-06): **Correction IV-b, self-caught** (the first
+  top-tail computation missed the `Q₁·u₀'²` term; corrected equation
+  `P0·Q₁(α) + c·β₁β₂ = 0` = the SECOND FUNDAMENTAL FORM of `X` at the
+  χ-vertex applied to the map's 2-jet); **Theorem 5.18-A** — the tail
+  IS the vertex-jet landing system (levels ↔ vertex jets to order
+  `2r−2`; the consistency variety = the two-boundary problem
+  line-boundary vs vertex-jet, with the higher fundamental forms as
+  the successive equations); **Theorem 5.18-B** — the
+  double-projection reformulation: the χ-vertex lies on `X` (and on
+  `L₂, L₃`), projection from it is V4-equivariant 2:1 onto `P³`
+  branched over a quartic `Δ_v`, so V4-maps into `X` = V4-maps into
+  `P³` + a sheet datum with the DISCRETE divisibility condition
+  `h*(Δ_v)` even — the landing condition becomes degree-uniform
+  parity over a free mapping space. Named: the equivariant lifting
+  criterion over the contracted lines (derivation), **(C5)** compute
+  `Δ_v` + V4-structure (small CAS), then orbit-finiteness as a
+  parity-class count. **(T1a) NOT closed tonight — stated plainly;
+  the double projection is the weapon it will be closed with.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
