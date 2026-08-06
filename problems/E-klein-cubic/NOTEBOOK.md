@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `88f0967` (2026-08-05; the
+Snapshot metadata — notebook parent head: `fa30a6c` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3196,7 +3196,28 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   (sampled cubics + msolve, landmine rules), first-hit
   extraction with full-identity verification at both primes and
   image-dimension measurement. Exits A5LADDER-HIT-d<k> /
-  A5LADDER-EMPTY-THROUGH-<cap> / DEVIATION.**** Same-day
+  A5LADDER-EMPTY-THROUGH-<cap> / DEVIATION. **Wave 26 audit
+  (user-prompted): the STOP-RULE, and stopping the (1,6)-uniform
+  sweep.** Adopted discipline, recorded as binding: every CAS run
+  must be attached to a NAMED FINITE QUESTION whose both outcomes
+  redirect the program; no unbounded degree/parameter sweeps. By
+  this rule the inherited (1,6) n=4/5 modular sweep (H2 packet,
+  Task-B: an unbounded family n = 4,5,6,… with no convergence
+  theorem, running since before the pivot; 4.4 CPU-days on the
+  Singular long-runner alone) NO LONGER EARNS ITS COMPUTE: the
+  descent program does not route through it, and the d=34
+  canonical gateway is closed by FIX-VII-LAND regardless of its
+  outcome. STOPPED 2026-08-06 (driver + msolve leaf + Singular;
+  317 completed leaf outputs preserved on disk in the packet;
+  status remains NOT-DECIDED at n=4/5, finding-grade, honestly
+  recorded as stopped-not-finished). The A5LADDER run is bounded
+  (d ≤ 12, each degree a decidable cone) and gated: it will NOT
+  be extended past 12 without a structural justification (the
+  finite RY-style fixed-point-matching analysis for A5-maps —
+  which could kill the whole A5-route with a theorem — is the
+  named gate). The linear-system face (d=43 etc.) is DEQUEUED:
+  it runs only if the descent face stalls AND a structural
+  argument distinguishes the window beyond "next number".**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
