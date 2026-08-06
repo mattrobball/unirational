@@ -79,8 +79,8 @@
   {
    "j": 0,
    "part": "A",
-   "npts": 1,
    "dimK": 4,
+   "npts": 1,
    "on_cone": true,
    "po1_ok": true,
    "rank": 31,
@@ -98,13 +98,16 @@
      10,
      3
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 7.976224899291992
   },
   {
    "j": 0,
    "part": "B",
-   "npts": 2,
    "dimK": 8,
+   "npts": 2,
    "on_cone": true,
    "po1_ok": true,
    "rank": 34,
@@ -122,13 +125,16 @@
      11,
      2
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 40.19411516189575
   },
   {
    "j": 0,
    "part": "C",
-   "npts": 2,
    "dimK": 8,
+   "npts": 2,
    "on_cone": true,
    "po1_ok": true,
    "rank": 34,
@@ -146,13 +152,16 @@
      11,
      2
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 25.13390588760376
   },
   {
    "j": 0,
    "part": "D",
-   "npts": 4,
    "dimK": 16,
+   "npts": 4,
    "on_cone": true,
    "po1_ok": true,
    "rank": 34,
@@ -170,13 +179,16 @@
      11,
      2
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 135.1904239654541
   },
   {
    "j": 1,
    "part": "A",
-   "npts": 1,
    "dimK": 4,
+   "npts": 1,
    "on_cone": true,
    "po1_ok": true,
    "rank": 31,
@@ -194,13 +206,16 @@
      10,
      3
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 2.9579172134399414
   },
   {
    "j": 1,
    "part": "B",
-   "npts": 2,
    "dimK": 8,
+   "npts": 2,
    "on_cone": true,
    "po1_ok": true,
    "rank": 34,
@@ -218,13 +233,16 @@
      11,
      2
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 22.339640140533447
   },
   {
    "j": 1,
    "part": "C",
-   "npts": 2,
    "dimK": 8,
+   "npts": 2,
    "on_cone": true,
    "po1_ok": true,
    "rank": 34,
@@ -242,13 +260,16 @@
      11,
      2
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 25.100887775421143
   },
   {
    "j": 1,
    "part": "D",
-   "npts": 4,
    "dimK": 16,
+   "npts": 4,
    "on_cone": true,
    "po1_ok": true,
    "rank": 34,
@@ -266,13 +287,16 @@
      11,
      2
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 134.7191789150238
   },
   {
    "j": 2,
    "part": "A",
-   "npts": 1,
    "dimK": 4,
+   "npts": 1,
    "on_cone": true,
    "po1_ok": true,
    "rank": 31,
@@ -290,13 +314,16 @@
      11,
      2
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 2.8804519176483154
   },
   {
    "j": 2,
    "part": "B",
-   "npts": 2,
    "dimK": 8,
+   "npts": 2,
    "on_cone": true,
    "po1_ok": true,
    "rank": 34,
@@ -314,13 +341,16 @@
      12,
      1
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 21.113858699798584
   },
   {
    "j": 2,
    "part": "C",
-   "npts": 2,
    "dimK": 8,
+   "npts": 2,
    "on_cone": true,
    "po1_ok": true,
    "rank": 34,
@@ -338,13 +368,16 @@
      12,
      1
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 23.407991886138916
   },
   {
    "j": 2,
    "part": "D",
-   "npts": 4,
    "dimK": 16,
+   "npts": 4,
    "on_cone": true,
    "po1_ok": true,
    "rank": 34,
@@ -362,7 +395,10 @@
      12,
      1
     ]
-   }
+   },
+   "torus_dim": 3,
+   "torus_in_ker": true,
+   "secs": 124.67854714393616
   }
  ],
  "ob2": [
@@ -417,6 +453,46 @@
   [
    1,
    "C",
+   5,
+   18,
+   true,
+   true
+  ],
+  [
+   1,
+   "D",
+   5,
+   18,
+   true,
+   true
+  ],
+  [
+   2,
+   "A",
+   8,
+   21,
+   false,
+   true
+  ],
+  [
+   2,
+   "B",
+   5,
+   18,
+   true,
+   true
+  ],
+  [
+   2,
+   "C",
+   5,
+   18,
+   true,
+   true
+  ],
+  [
+   2,
+   "D",
    5,
    18,
    true,
@@ -531,6 +607,5 @@
    true,
    true
   ]
- ],
- "note": "sections 6 and 7 re-derived by make_payloads.py / verify_fin7.py; ob2 list may be partial if the producer was still running section 5 (all 27 points are covered modularly by arc_scan.py)"
+ ]
 }

@@ -885,3 +885,130 @@ and stated so. Everything upstream of it is proved or named-finite;
 classical tool now identified and the object (the elliptic
 discriminant component) already sitting inside the verified
 arrangement.
+
+### 5.21 (D1) CLOSED: the Brauer-parity criterion (proved)
+
+**The class.** Diagonalizing the residual conic
+`⟨F₀⟩ ⊕ [[Q₂, cx/2],[cx/2, Q₃]]` and discarding split factors
+`(u, −u)`:
+
+```
+    β  =  ( −F₀·Q₂ ,  Δ_c )  ∈  Br(k(a,b,x))[2] ,
+    Δ_c := 4Q₂Q₃ − c²x² .
+```
+
+Tame-symbol residues: along `E = {F₀ = 0}` the residue is
+`[Δ_c|_E] ∈ k(E)*/2` — the class of the double cover `Ẽ → E`
+branched on `E ∩ K_c`; along `K_c = {Δ_c = 0}` it is `[F₀·Q₂|_{K_c}]`;
+along `{Q₂ = 0}` the potential residue is `Δ_c|_{Q₂=0} = −(cx)²` —
+a square over `C` — so `{Q₂ = 0}` carries NO ramification (as it
+must: it is not in `Δ₅`). Moreover on the conic side,
+`K_c ∩ {Q₂ = 0}` is the single point `{Q₂ = 0, x = 0}` with EVEN
+multiplicity (`Δ_c|_{Q₂=0} = −c²x²` vanishes doubly), so the
+`Q₂`-factor contributes evenly and **both residue classes are
+controlled by the same six-point divisor `E ∩ K_c`** (`Ẽ`'s branch
+points; and `F₀|_{K_c}`'s odd part). Whether those six points are
+distinct or collapse into tangencies is exactly the singular-locus
+geometry (C5) is computing — either answer feeds the criterion, and
+neither changes its shape.
+
+**Well-definedness across the source lines (proved).** For our maps,
+`φ = (A : B : u₀′) = (xyzÃ : xyzB̃ : xγ̃) = (yzÃ : yzB̃ : γ̃)`:
+the common `x` cancels, so `φ` EXTENDS across the source lines
+(generically) — the feared indeterminacy bookkeeping over the
+boundary largely evaporates, and `φ(source line)` is an honest curve
+in the base.
+
+**Theorem 5.21 ((D1), proved).** Let `φ : P² ⇢ P²` be any rational
+map (in particular our V4-maps). Then the pulled-back class
+`φ*β ∈ Br(k(P²))[2]` vanishes if and only if, on a resolution of
+`φ`, for every irreducible curve `D`:
+
+1. `D` dominating a component of `φ⁻¹(E)`: the induced `D → E` lifts
+   to the double cover `Ẽ → E` (equivalently
+   `(φ|_D)*[Δ_c|_E] = 1 ∈ k(D)*/2`);
+2. `D` dominating a component of `φ⁻¹(K_c)`: `(φ|_D)*[F₀·Q₂|_{K_c}]
+   = 1` — for RATIONAL `D` this is pure intersection parity: every
+   point of `D` meets the pulled-back six-point divisor with EVEN
+   multiplicity (over `C`, a function on `P¹` is a square iff its
+   divisor is even);
+3. all other curves (including exceptional ones): no condition, by
+   the residue computations above and `(u, −u) = 1`.
+
+*Proof.* Over `C`, `Br` of a rational surface is trivial and the
+Faddeev residue sequence is exact: a 2-torsion class over `k(P²)`
+vanishes iff all its tame residues vanish. The residues of
+`(φ*(−F₀Q₂), φ*Δ_c)` along any `D` are the pullbacks of `β`'s
+residues when `D` dominates a discriminant preimage, and otherwise
+involve only the split corner classes computed above (the `−(cx)²`
+square; components inside intersections are handled on the
+resolution by the same two computations, since every branch through
+a corner carries one of the two residue classes composed with a
+square). Conditions 1–2 are exactly residue-vanishing; 3 is their
+absence. ∎
+
+**What (D1) delivers to the program.** Admissibility of `φ` — the
+existence of ANY function-field section — is now a finite list of
+DISCRETE conditions: lifting to one fixed elliptic double cover along
+the `E`-components, and even tangency against one fixed six-point
+divisor along the `K_c`-components. Both are degree-uniform (they are
+per-component conditions of bounded type, not per-degree systems).
+The stratification of the free mapping space that (D2)'s height
+argument runs on is therefore PROVED discrete and finite-type.
+Remaining inside (T1a): only (D2). The six-point geometry
+(distinct vs tangent; the 2-torsion datum if tangent) rides in with
+(C5).
+
+### 5.22 FIN(7) integrated: Correction IV-c, the death of the constancy route, and the surviving structure
+
+**FIN(7) verdict (director-replayed, 104/104):**
+`FIX-U1-FIN7-NOT-FINITE-MOD-TORUS-DIM-GE-15`. `PO₁(7)` contains three
+LINEAR components of projective dimension exactly 17 (≥ 15 mod torus)
+— the maps whose image lies in one of the three V4-stable lines
+`L_σ ⊂ X` (plus-part ≡ 0; landing automatic since `L ⊂ X`). At the 27
+Chebyshev witnesses: essential tangent dimension 2 at parts B/C/D
+(corank 5 − 3 torus/scalar), bracket `[0,2]` certified with `= 2`
+evidenced (`Ob₂ ≡ 0` exactly, `Ob₃ ≡ 0` symbolically, random rays
+lift to order 10–26); at part A essential ≤ 2 after the Kuranishi
+cut. `u₀ + v₀ ≠ 0` at all 27 points (exact, Nullstellensatz) — the
+§5.3 parameter check DISCHARGED; `u₀ − v₀ ≠ 0` reconfirms
+`FIX-H1-EQ-M1-EMPTY` independently.
+
+**Consequences, honestly drawn:**
+- **The constancy route (Prop 5.3) is DEAD at `r = 7`** — the locus
+  is nowhere near orbit-finite. [U1] for the row goes through the
+  conic-bundle/Brauer machinery of §§5.20–5.21 (unaffected by this
+  verdict: the linear components are the `φ`-degenerate stratum,
+  where `φ ≡ (0:0:0)` fails to be defined — they need their own
+  DIRECT jet analysis, which is LINEAR and exact; named **(D3)**,
+  small: the equalizer/H1-1 analysis of image-in-line leading data,
+  a finite computation on a linear family).
+- **Correction IV-c (the recurring error class, third instance).**
+  §5.9(b) is WRONG for `m ≥ 1`: `x^r` in any slot has `(y,z)`-order
+  0 < m, so the source vertices are BASE POINTS of the map, not
+  points mapping to χ-vertices (the χ-vertex-anchor story transfers
+  to the exceptional data of the vertex blowup). Same mistake-class
+  as the `r = 8` type-II anchor and the torus omission: SUPPORT
+  BOUNDS FROM PLANE ORDER, forgotten at the moment of geometric
+  interpretation. §5.9(a)/(c) hold verbatim (worker-verified).
+  Downstream: §5.18's DISPLAYED top-tail equations assumed
+  `P0 = u₀'_{x^r} ≠ 0` and are m-naive; for `m = 1` the top tail
+  levels are vacuous by support and the first live tail level sits
+  lower — the STRUCTURAL theorem 5.18-A (tail = vertex-jet/base-point
+  conditions) survives, its explicit equations to be re-derived with
+  corrected supports (owed).
+- **N2C refinement:** the nine-point scheme is SINGULAR at part A
+  (own-block corank 2); its `dim 0, degree 9` was a linear-slice
+  statement — consistent with C1's kernel jump, now sharper.
+- **Banked for [U2]:** the worker's exact identity `F(T) = xyz·G`,
+  `G = U₀U₁U₂ + r₀XU₀² + r₁YU₁² + r₂ZU₂² + cXYZ` in
+  `(X,Y,Z) = (x²,y²,z²)`, and the completing-the-square normal form
+  `4r₀X·G = W² − Δ` — converging with §5.19's presentation and
+  putting the non-degenerate stratum in the form "an explicit
+  degree-14 form is a perfect square in 30 unknowns" at `r = 7`
+  (the concrete (C3)-object).
+- **Honest gap:** no upper bound on `dim PO₁(7)` was certified
+  (slice computations timed out) — components through neither the
+  witnesses nor the linear families are not excluded; they are,
+  however, subject to the same §5.21 criterion, which is
+  component-agnostic.

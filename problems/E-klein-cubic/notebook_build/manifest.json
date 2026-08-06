@@ -1410,12 +1410,12 @@
    "path": "goal_runs_after_9094303/FIX_U1_FIN7",
    "entry": "E56",
    "kind": "goal_run",
-   "verification_class": "PROPOSAL-UNRUN",
-   "primary_exit": "UNDECIDED",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-U1-FIN7-NOT-FINITE-MOD-TORUS-DIM-GE-15",
    "superseded_by": null,
-   "char0_scope": "in flight",
+   "char0_scope": "char0 exact (number-field linear algebra + M2 toField + 3-prime modular cross-checks); essential = 2 evidenced not certified; no upper dim bound (timeouts, not verdicts)",
    "tracked": "main",
-   "notes": "IN-FLIGHT (2026-08-06, opus): FIN(7) — the first computation NAMED by a Note IV proof (Prop 5.3): finiteness/dimension of the pointwise non-equivariant PO-1 locus of the r=7 cone, tangent data at the 27 Chebyshev points, u0+v0 check. Either verdict is a base clause: FINITE activates Prop 5.3 (kills [U1] for the (1,7) row); INFINITE routes [U1] to shape-pinning with the component data as input."
+   "notes": "landed 2026-08-06, director-replayed (104/104, FIX_U1_FIN7_VERIFY_OK, 7 must-fail controls). PO1(7) NOT finite mod torus: three linear components (image-in-line maps) of projective dim exactly 17; at the 27 Chebyshev witnesses rank J = 34 (B/C/D, corank 5) resp. 31 (part A, corank 8), torus orbit 3-dim affine, essential tangent 2 resp. <= 2 after Kuranishi; Ob2 = 0 exactly at B/C/D, Ob3 = 0 symbolically, rays lift to order 10-26 (essential = 2 evidenced, bracket [0,2] certified). u0+v0 != 0 at all 27 (Prop 5.3 parameter check discharged); u0-v0 != 0 reconfirms FIX-H1-EQ-M1-EMPTY. Corrections owed and applied (Note IV sec5.22): IV-c — sec5.9(b) vertices are BASE POINTS for m >= 1 (third instance of the support-bounds-from-plane-order error class); 5.18 displayed equations m-naive (structure survives); N2C nine-point scheme singular at part A (linear-slice refinement). Banked: F(T) = xyz.G identity + completing-the-square degree-14 perfect-square form (30 unknowns) for [U2]/(C3). Constancy route (Prop 5.3) DEAD at r=7; [U1] via sec5.20-5.21 Brauer machinery + (D3) linear analysis of the image-in-line components. Honest gap: no upper bound on dim PO1(7)."
   },
   {
    "path": "goal_runs_after_9094303/FIX_L1_FRAME_CONSTANTS",

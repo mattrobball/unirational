@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `822d6ff` (2026-08-05; the
+Snapshot metadata — notebook parent head: `f1d1ebb` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2578,7 +2578,36 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   named (D2), the last substantive analytic step). **(T1a) NOT closed
   at max effort — split, with (D1) bookkeeping and (D2) the final
   boss, now carrying a classical finiteness theorem instead of a
-  counting heuristic.**** Same-day
+  counting heuristic. Eleventh wave (Note IV §§5.21–5.22,
+  2026-08-06): **(D1) CLOSED — Theorem 5.21 (proved)**: the Brauer
+  class is `β = (−F₀Q₂, Δ_c)`; residues live only on the two
+  discriminant components (the `{Q₂=0}` corner is `−(cx)²`, a square,
+  and its conic intersection is even — both residue classes hang on
+  the SAME six-point divisor `E ∩ K_c`); `φ` extends across the
+  source lines (the common `x` cancels — the boundary indeterminacy
+  evaporates); and `φ*β = 0 ⟺` per-component lifting to the ONE
+  elliptic double cover `Ẽ → E` plus even tangency against the
+  six-point divisor on the `K_c`-side (pure intersection parity for
+  rational components). Admissibility is thereby DISCRETE and
+  degree-uniform: the stratification (D2) runs on is proved
+  finite-type. **FIN(7) landed and integrated
+  (`FIX-U1-FIN7-NOT-FINITE-MOD-TORUS-DIM-GE-15`, replayed 104/104)**:
+  three linear 17-dim components (image-in-line maps) kill the
+  constancy route at `r = 7` — Prop 5.3 is DEAD as the [U1]
+  mechanism; essential tangent = 2 evidenced (bracket `[0,2]`
+  certified) at the B/C/D witnesses; `u₀+v₀ ≠ 0` at all 27
+  (the §5.3 check discharged); `u₀−v₀ ≠ 0` independently reconfirms
+  the H1 kill. **Correction IV-c (third instance of the
+  support-bounds error class)**: §5.9(b) vertices are BASE POINTS for
+  `m ≥ 1`; §5.18's displayed equations m-naive (structure survives,
+  re-derivation owed); N2C's nine-point scheme singular at part A
+  (linear-slice refinement). Banked: `F(T) = xyz·G` + the degree-14
+  perfect-square normal form (30 unknowns) — the concrete
+  (C3)-object. New small item **(D3)**: exact linear jet/equalizer
+  analysis of the image-in-line components. **Remaining for the
+  negative headline: (D2) height finiteness (Lang–Néron route), (D3)
+  linear, (T1b) conic floor, (C2′), (C3), (C5) in flight, (T1c)
+  bookkeeping, assembly + audit.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

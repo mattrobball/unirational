@@ -8,6 +8,14 @@ Answered in the **corrected** form of Note IV §5.9(d): not "is `PO₁(7)` finit
 (it trivially is not — the diagonal torus), but **"is `PO₁(7)` a finite union of
 torus orbits?"** The answer is **no**, and the mod-torus dimension is `≥ 15`.
 
+*Name map for the ledger:* in the original brief's naming this verdict is
+`FIN7-INFINITE-DIM-17` (`dim PO₁(7) ≥ 17`, three components of dimension
+exactly 17, no certified upper bound); in the corrected naming it is
+`FIN7-NOT-FINITE-MOD-TORUS-DIM-GE-15`. Both refer to the same computation.
+
+Producer terminal line `FIX_U1_FIN7_PRODUCE_OK` (0 failed checks, 3839 s);
+verifier terminal line `FIX_U1_FIN7_VERIFY_OK` (104 checks, 0 failed, 215 s).
+
 | scoped exit | content |
 |---|---|
 | `FIX-U1-FIN7-NOT-FINITE-MOD-TORUS` | **theorem, exact char 0** — `PO₁(7)` contains **three explicit projective linear components of dimension exactly 17**, i.e. **15 modulo the 2-torus**. They are `{a′ = b′ = u_i′ = 0}`, `i = 0,1,2` — precisely the maps whose whole image lies in one of the three target lines `L_σ ⊂ X` of Theorem 5.9(a). So the corrected Prop 5.3 hypothesis **fails on `PO₁(7)`** and can only be asked on a non-degenerate stratum. |
@@ -401,7 +409,19 @@ exception.
    found its obstruction at the same three points. Any shape-pinning argument
    must treat these three points separately; conversely, they are the natural
    place to look for the pinning to bite.
-5. **Nothing here bears on the Problem E headline, which stays OPEN.**
+5. **Correction owed to Note IV §5.9(b).** At `m ≥ 1` the source vertices are
+   **base points** of the map, not points mapping to the χ-vertices: the only
+   monomial that could survive at `[1:0:0]` is `x^r ∈ u₀′`, and `x^r` is
+   exactly what `ord_{P₁} ≥ 1` forbids. (a) and (c) hold verbatim (§5.1).
+   The elliptic-funnel reading of (b) therefore lives on the `m = 0` cell.
+6. **Input for [U2] in its §5.9 shape.** The `(X,Y,Z)` reformulation of §1.1
+   is the `P² ⇢ X` picture in closed form for odd `r` (`a′ = xyz·A` etc., one
+   degree-`3(r−1)/2` identity `(★)`), and §1.2's completing-the-square puts the
+   non-degenerate stratum in the form "an explicit degree-`(2r)`-form is a
+   perfect square". Both are exact identities in all 39 parameters and are
+   `r`-uniform in shape — the natural starting point for the structure theorem
+   that §5.9 asks for.
+7. **Nothing here bears on the Problem E headline, which stays OPEN.**
 
 ---
 
