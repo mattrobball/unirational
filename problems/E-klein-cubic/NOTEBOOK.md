@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `956a025` (2026-08-05; the
+Snapshot metadata — notebook parent head: `b918298` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3263,7 +3263,32 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   under the D-R conjecture**. The problem is pinched between the
   D-R p-group detection conjecture (positive) and the CSD
   descent gap (negative). Immediate read: D-R §10 exact
-  statements.**** Same-day
+  statements. **Wave 27 (D-R §10 read in full; Note VIII §8;
+  PDF archived):** D-R Conjecture 10.4 IS Cassels–Swinnerton-
+  Dyer; Theorem 10.5 (2011, unconditional): for smooth invariant
+  cubic hypersurfaces very versal ⟺ versal ⟺ weakly versal (our
+  Lemma 4 = an instance; novelty re-corrected), and under CSD
+  further ⟺ 3-Sylow versality. **Proposition 10.8: the headline
+  separates named conjectures** — Duncan's Sylow conjecture ⟹
+  ed(PSL₂(F₁₁)) = 3 (YES); CSD ⟹ 3 (YES, via Beauville's Sylow
+  fixed points arXiv:1101.1372 + Cor 10.6); Dolgachev's
+  ed ≥ Crdim ⟹ 4 (NO, via Prokhorov Crdim ≥ 4). D-R: "10.4 and
+  10.7 are incompatible; they cannot both be true; same for 8.8
+  and 10.7" — EITHER resolution of the headline refutes a named
+  conjecture, and settles the last case of Beauville's
+  classification of finite simple groups of essential dimension
+  3 (Remark 10.9). **Remark 10.10 opens the V₁₄ TWIN AVENUE:**
+  exactly two equivariant birational classes of RC
+  PSL₂(F₁₁)-threefolds (Prokhorov) — Klein cubic and the genus-8
+  Fano V₁₄ — so ed = 3 ⟺ Klein-G-unirational OR
+  V₁₄-G-unirational; the V₁₄ face (twists, index over K_proj,
+  hyperplane degree 14 ≡ 2 mod 3 cycle arithmetic) is unexamined
+  and named as the next derivation. Program placement final:
+  positive face = CSD-instances on the two twins; negative face
+  = Dolgachev's instance ed = 4. A5LADDER interim (in-flight):
+  cones EMPTY through d = 7; surviving branches from d = 8
+  (dims 1, 12, 19, 45, 60 at d = 8..12); worker mid-verification
+  of a candidate ("cplus") — report pending.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

@@ -264,3 +264,62 @@ Consequences for this program:
    IMMEDIATE READ: D-R §10 (Conjecture 10.4's exact statement,
    what Thm 10.5 proves unconditionally, and whether the Klein
    instance falls in any proven subcase).
+
+## 8. The Duncan–Reichstein trichotomy: the headline's exact place (2026-08-06)
+
+D-R arXiv:1109.6093 §10 (PDF archived in `external_docs/`), read in
+full. The load-bearing facts:
+
+**Theorem 10.5 (unconditional part).** For a smooth G-invariant
+CUBIC hypersurface `X ⊂ P(V)`, `dim V ≥ 4`: very versal ⟺ versal
+⟺ weakly versal. (So "some twist-point ⟹ dominant equivariant map
+from a representation" is THEIRS, 2011 — our Lemma 4 is an
+explicit instance of this mechanism, novelty re-corrected.)
+Conditional part: under Conjecture 10.4, these are further
+equivalent to 3-versality and to versality of the 3-Sylow action.
+
+**Conjecture 10.4 IS Cassels–Swinnerton-Dyer** (their attribution;
+known only for plane cubics, where index 1 forces a point by
+Riemann–Roch on genus-1 curves).
+
+**Proposition 10.8 — the headline as a conjecture-separator:**
+(a) Duncan's Sylow conjecture (8.8: `G_p`-versal ∀p ⟹ G-versal)
+    implies `ed(PSL₂(F₁₁)) = 3` (= headline YES);
+(b) CSD implies `ed(PSL₂(F₁₁)) = 3` (headline YES) — via
+    Beauville's Sylow fixed points on the Klein cubic
+    (arXiv:1101.1372: our vertex/eigenpoint checks reproduce
+    this) and their Corollary 10.6;
+(c) Dolgachev's conjecture (`ed ≥ Crdim`) implies
+    `ed(PSL₂(F₁₁)) = 4` (headline NO) — via Prokhorov: no
+    faithful `PSL₂(F₁₁)` on a rational threefold, so
+    `Crdim ≥ 4`.
+**"Conjectures 10.4 and 10.7 are incompatible; they cannot both
+be true. Same for 8.8 and 10.7."** The headline decides between
+Cassels–Swinnerton-Dyer/Duncan and Dolgachev — EITHER outcome
+refutes a named conjecture. And Remark 10.9: settling it
+completes Beauville's classification of finite simple groups of
+essential dimension 3.
+
+**Remark 10.10 — the V₁₄ twin (new avenue).** Prokhorov: there
+are exactly TWO equivariant birational classes of rationally
+connected `PSL₂(F₁₁)`-threefolds — the Klein cubic and a genus-8
+Fano threefold `V₁₄` (non-equivariantly birational to it, by the
+classical Fano correspondence). Any 3-dimensional versal
+G-variety must be one of the two classes, so:
+`ed = 3 ⟺ (Klein cubic is G-unirational) OR (V₁₄ is
+G-unirational)`. The `V₁₄` face of the problem — its twisted
+forms, its index over `K_proj`, its own projection/descent
+geometry — has never been examined by this program. Its cycle
+arithmetic differs (hyperplane degree 14 ≡ 2 mod 3, lines and
+conics on `V₁₄` give small-degree cycles), so the descent
+combinatorics could be MORE favorable there. Named next
+derivation: the V₁₄ dictionary (equivariant model, the
+Fano-correspondence's equivariance, index computation).
+
+**Program placement, final form.** Positive face = attacking
+CSD-instances on the two twins (A5-ladder = a named CTZ open
+case; the degree-7 question; V₁₄ arithmetic). Negative face =
+attacking Dolgachev's instance (`ed = 4`): the FIX-walls are
+consistent with it, and any genuinely global obstruction now has
+a name to aim at. The program is no longer open-ended: it is the
+resolution of Proposition 10.8's trichotomy.
