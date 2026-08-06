@@ -158,3 +158,95 @@ into four named statements. Their current status, hardest first:
    closes, [U3] reduces to [U1]/[U2] at `m ∈ {1,3}`.
 
 No computation fires until one of these proofs names its base clauses.
+
+## 5. Derivation log (director)
+
+### 5.1 The equalizer multiplicity formula, and a strategy correction for [U3]
+
+**Lemma 5.1 (proved by hand, character arithmetic).** For `V_m =
+Hom(Sym^m std, std)` over `S3`:
+```
+  dim V_m[triv] = dim V_m[sgn] = ( (m+1) − χ_{Sym^m std}(ρ) ) / 3 ,
+  χ_{Sym^m std}(ρ) = 1, −1, 0   for m ≡ 0, 1, 2 (mod 3).
+```
+*Proof.* `χ_{V_m}(τ) = χ_{Sym^m}(τ)·χ_{std}(τ) = 0` since
+`χ_{std}(τ) = 0`, so the τ-term drops from both inner products and
+`⟨χ_{V_m}, triv⟩ = ⟨χ_{V_m}, sgn⟩ = (1/6)[2(m+1) + 2·(−χ_{Sym^m}(ρ))]`;
+the 3-cycle values of `Sym^m std` (eigenvalues `ω, ω²`) have period 3 as
+stated. ∎ Checks: `m = 1`: dim 1 (H1's `V[triv]` = scalars ✓);
+`m = 3`: dim 1 (H1's `V[sgn]` line ✓); `m = 5`: dim 2; `m = 7`: 3.
+
+**Consequence (strategy correction).** The equalizer target space GROWS
+linearly in `m`: the 1-dimensionality that made the `m ∈ {1,3}` kills
+rigid is special to small `m`. Therefore [U3] cannot be proved by
+equalizer-pinning at large `m`; it must go through the DIVISIBILITY
+route — every `m ≥ 5` germ is an invariant multiple of lower-`m` data
+along its leading layer (invariant-multiplication structure run in
+reverse), folding [U3] into [U1]/[U2] at `m ∈ {1,3}`. The note's §4
+queue is corrected accordingly.
+
+### 5.2 The family structure of a positive-`n` leading datum
+
+Fix `(1, r)`, `r` odd. The leading datum is a `V_1`-valued binary form,
+equivalently a morphism `Λ: ℓ_V ≅ P¹ → (cone space)`; A₄-equivariance
+makes it `C₃`-equivariant for the `C₃`-action on `ℓ_V` (D12-points = one
+free orbit; exactly TWO `C₃`-fixed points).
+
+**Lemma 5.2.** (i) At each of the two `C₃`-fixed points of `ℓ_V`, the
+fiber of any landing family lies in the CLASSIFIED equivariant pointwise
+locus (Specialisation Lemma [II, 2.3]): for `r = 7`, in the 27-point
+Chebyshev set ∪ its degenerations ∪ {0}, eigenblock by eigenblock.
+(ii) At every other point the fiber lies in the NON-equivariant
+pointwise `r`-cone's plane-order-`≥1` locus. (iii) The three D12-jets
+are `ρ`-translates of one another; the equalizer is the condition of
+§H1 at any one of them. *Proof.* (i) is [II, 2.3] verbatim; (ii) is
+specialisation without the eigenblock structure; (iii) is H1 §5. ∎
+
+### 5.3 A constancy criterion reducing [U1] per row to a named computation
+
+**Proposition 5.3.** Fix `(1, r)`. Suppose the pointwise
+(non-equivariant) plane-order-exactly-1 locus of the projectivized
+`r`-cone — call it `PO₁(r)` — is FINITE. Then every landing family's
+leading datum is constant as a map to the projectivized cone, hence has
+line degree 0 up to a scalar binary form `h`; its D12-jets are
+`h`-multiples of a classified pointwise datum, and (P4) + the classified
+kills (P7) force the jets to vanish: [U1] holds for the `(1, r)` row.
+*Proof.* A morphism `P¹ → PO₁(r) ∪ (higher-order locus)` with finite
+`PO₁(r)`: the preimage of the higher-order locus is closed and proper
+(else plane order jumps globally, changing `m`), so `Λ` maps a dense
+open into a finite set, hence is constant into it; `Λ = h·Λ₀` follows,
+and the jet computation is H1 §4's (`u = h u₀, v = h v₀` with
+`u₀ ≠ v₀` off the equalizer: order-`2e` condition forces `h_{2e} = 0`,
+order-`2e+1` forces `h_{2e+1}(u₀+v₀) = 0`; if also `u₀ + v₀ ≠ 0` the
+jets vanish; the locus `u₀ + v₀ = 0` is finitely many parameter points
+to be checked as part of the named computation). ∎
+
+**Named computation FIN(r)** (the first base clause named by a proof,
+eligible to run under the reorder): decide whether `PO₁(7)` is finite;
+if not, compute its dimension, its `C₃`-sweep structure, and whether a
+rational curve inside it can pass through the classified equivariant
+points compatibly (the actual obstruction to constancy). `FIN(9)` etc.
+follow the same pipeline; their `r`-uniformity is [U2]'s business via
+Lemma 2.1's monotonicity.
+
+*Honest caveat.* `PO₁(6)`'s full-space analogue is KNOWN nonempty and
+positive-dimensional in spirit (H1 §6b's remark), so `FIN(7)` may well
+return "infinite" — in which case Prop 5.3 does not apply and [U1] for
+the row needs the `D_B`-style shape-pinning on the reachable-jet
+description instead. Either outcome of `FIN(7)` directs the proof; that
+is what makes it a legitimate downstream computation.
+
+### 5.4 Groundwork correction for [L]
+
+The naive layer tower (the `(y,z)`-degree-`(m+2k)` packages `Φ_k`) has
+divisorial vanishing only `e − 2k` along the mirror lines: the
+kinematic (equivariance-only) equalizer conditions THIN OUT and vanish
+for `k ≥ e/2`. So [L] cannot be pure kinematics like (P4); the layer
+conditions must come from the LANDING COUPLING (the [II] ladder
+differential linking `Φ_k` to `Φ_{<k}` through `F`). The correct [L]
+statement to prove: *given layers `< k` vanishing at the D12-orbit to
+their tested orders, the level-`k` landing equations localize a
+condition on `Φ_k` at `c_σ`* — an equalizer-of-the-ladder, not of the
+representation. This is the same mechanism as Fable's `I^{(m)}`
+correction tower, localized at the D12-points; deriving it is the next
+item after `FIN(7)` returns.

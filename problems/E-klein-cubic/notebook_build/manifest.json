@@ -1405,6 +1405,17 @@
    "char0_scope": "char0 (all verdicts exact over QQ with minimal polynomials adjoined; Galois transitivity)",
    "tracked": "main",
    "notes": "landed 2026-08-05; director replay of verify_h2.py (53 checks) gating the commit. Scoped exits: FIX-H2-HOLE-16-N3-EMPTY ((1,6) line degree 3, both eigenblocks, char-0 — SUPERSEDES FIX-H1's mod-p finding at n=3); FIX-H2-HOLE-1EVEN-N0-MSOLVE-EMPTY (all six residual (1,8) leaves unit ideal over QQ in 1-10 s on low-degree presentations; msolve side complete and each run is a complete char-0 proof; exit UPGRADED to FIX-H2-HOLE-1EVEN-N0-EMPTY by the director amendment of 2026-08-05: OSCAR groebner_basis_f4 under the official Julia build independently confirms ALL SIX cases unit (OSCAR-ALL-UNIT true; parser/encoding-path independent of the worker's text-mode msolve route — the failure mode the two-engine rule guards; kernel-overlap caveat and the full engine table in director_amendment_20260805/README.md; M2/Singular partials agree, no engine contradicts). Mechanism: the certified-strata licence (adjoin Y1 = 0 to the whole B6-chart; 6 leaves -> 3 questions), the closed U-exponent-0 face (Y0 = 0 forces X1 = X2 = Y2 = 0; CASE Z / CASE N dichotomy), and the cube-root cover t^3 = B9 splitting the real degree-3 obstruction X1^3 = -Y0^3 B9^2 (irreducible over K(Y0,B9) — why H1's cascade stalled). Director-hint audit: the type-II anchor cubic kp A^3 + km B^3 confirmed as the pure-x^{3r} coefficient and irreducible over K, but VACUOUS on the (1,r) cell (cell support bans x^r from every slot; verifier V1) — the director's NONEMPTY-60/40 prediction for the six leaves is GRADED WRONG; the (1,6)-EMPTY-90/10 prediction GRADED RIGHT. Task B: n=3 closed; n=4,5 systems built+validated, stopped for CPU; the pipeline takes r as an argument (r=10 = same command). Strata A,C re-certified (3 engines, zero disagreements). Driver cover-vs-whole semantics bug caught mid-run (would have manufactured a false EMPTY on CASE N) — fixed and recorded. Two M2 landmines recorded (underscore variables parsed as indexed subscripts; saturate(I,{f,g}) is successive saturation) -> memory + notebook debt. Headline OPEN."
+  },
+  {
+   "path": "goal_runs_after_9094303/FIX_U1_FIN7",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "PROPOSAL-UNRUN",
+   "primary_exit": "UNDECIDED",
+   "superseded_by": null,
+   "char0_scope": "in flight",
+   "tracked": "main",
+   "notes": "IN-FLIGHT (2026-08-06, opus): FIN(7) — the first computation NAMED by a Note IV proof (Prop 5.3): finiteness/dimension of the pointwise non-equivariant PO-1 locus of the r=7 cone, tangent data at the 27 Chebyshev points, u0+v0 check. Either verdict is a base clause: FINITE activates Prop 5.3 (kills [U1] for the (1,7) row); INFINITE routes [U1] to shape-pinning with the component data as input."
   }
  ],
  "known_branches": [

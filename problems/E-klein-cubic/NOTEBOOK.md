@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `085f0a0` (2026-08-05; the
+Snapshot metadata — notebook parent head: `9094303` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2390,7 +2390,21 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   class of `r` and the Chebyshev tower's jets are constant in `r` —
   the opening move of [U2]. Compute is now strictly downstream: a run
   fires only when a hypothesis proof names its verdict as a base
-  clause.** Same-day amendment: FIX-C1's detached part-D
+  clause. Derivation log opened (Note IV §5, 2026-08-06): **Lemma 5.1**
+  (hand-proved multiplicity formula: `dim V_m[triv] = dim V_m[sgn] =
+  ((m+1) − χ_{Sym^m}(ρ))/3` — the equalizer space GROWS with `m`, so
+  [U3] must go through divisibility, not pinning: strategy corrected);
+  **Lemma 5.2** (family structure: a positive-`n` leading datum is a
+  `C₃`-equivariant morphism `ℓ_V → cone` with fibers at the TWO
+  `C₃`-fixed points pinned to the classified equivariant locus);
+  **Prop 5.3** (constancy criterion: if the pointwise non-equivariant
+  `PO₁(r)` locus is finite, [U1] holds for the `(1,r)` row modulo a
+  finite `u₀+v₀` check); **§5.4** ([L] groundwork correction: the naive
+  layer tower's kinematic conditions thin out — [L] must be an
+  equalizer OF THE LADDER, coupled through `F`, not of the
+  representation). First proof-named computation dispatched:
+  `FIN(7)` (packet `goal_runs_after_9094303/FIX_U1_FIN7`, in flight) —
+  either verdict directs the [U1] proof.** Same-day amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
   EXACT on all 24 non-rational witnesses (C1 §7 item 1 closed); the H1
