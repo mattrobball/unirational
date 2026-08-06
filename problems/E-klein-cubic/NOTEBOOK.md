@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `b97d2f5` (2026-08-05; the
+Snapshot metadata — notebook parent head: `ad9ad2a` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2457,7 +2457,25 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   orbits of the known shapes, one argument for all odd `r`), and the
   redirected FIN(7) computation measures exactly this system's kernel
   at the 27 witnesses: derivation and computation converged on the
-  same object.** Same-day amendment: FIX-C1's detached part-D
+  same object. Fifth derivation wave (Note IV §5.11, 2026-08-06):
+  **Theorem 5.11, three parts, all by hand** — (i) strict parity
+  alternation at odd `r` (minus slots even in `x`, plus slots odd: the
+  normal ladder alternates strictly); (ii) **level 2 is VACUOUS**
+  (`d²F` on plus⊗plus vanishes along the line, `dF` kills minus, and
+  level-2 data is pure minus: the `x²`-identity is `0 + 0`) — an entire
+  ladder level collapses, the first genuine consistency conditions on
+  the line map live at level ≥ 3; (iii) **rigidity**:
+  `det M(P,Q) ≠ 0` whenever `gcd(P,Q) = 1`, `u ∤ Q`, `v ∤ P` — a clean
+  divisibility proof, uniform in `r`: on the nondegenerate stratum the
+  first plus-layer is uniquely determined by the line map; (iv) the
+  three degeneration strata are geometric — base points on the line
+  (DEGREE DROP: downward induction in `s`) and vertex base points
+  (partially forbidden outright by plane-order-1). The `(1, odd r)`
+  row now splits into a rigid stratum (consistency analysis at levels
+  ≥ 3 on `(P,Q)` alone) plus inductively-descending degenerations —
+  the structure [U2]'s uniformity needed. Next: compute the crossing
+  level `ℓ*(s)` and the leading consistency resultant.** Same-day
+  amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
   EXACT on all 24 non-rational witnesses (C1 §7 item 1 closed); the H1

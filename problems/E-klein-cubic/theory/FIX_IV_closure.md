@@ -440,3 +440,61 @@ theorem now has a concrete proof shape: show the consistency locus in
 shapes, by analyzing the universal resultants — one argument for all
 odd `r`. The same construction at even `r` (type-II vertex anchors,
 per §5.9(b)'s parity flip) is the even-row analogue.
+
+### 5.11 The rigidity theorem for the source ladder (proved)
+
+**Theorem 5.11.** Fix `r = 2s+1` odd and a pointwise `(1, r)` element,
+restricted to a source line as in §5.10. Then:
+
+**(i) (Strict parity alternation.)** At odd `r`, the minus slots
+`u₁', u₂'` contain ONLY even `x`-degrees and the plus slots
+`a', b', u₀'` ONLY odd `x`-degrees (per slot, one V4-parity class is
+empty because `i + j + k = r` fixes the total parity). The normal
+expansion along a source line therefore alternates strictly:
+level 0 minus (the line map), level 1 plus, level 2 minus, level 3
+plus, ….
+
+**(ii) (Level 2 is vacuous.)** On the line, ALL second derivatives of
+`F` in plus⊗plus directions vanish (`C` is cubic in `(a,b)` and
+`a = b = 0` there; `∂²F/∂x² = 2Q₁(0,0) = 0`; mixed `a,x` terms carry a
+factor `x`), and `dF` annihilates minus-vectors (the line lies on `X`).
+Since level-2 data is pure minus by (i), the `x²`-identity reads
+`dF·T₂ + ½d²F(T₁,T₁) = 0 + 0`: **automatically satisfied**. The
+level-2 minus data `(R, S)` is locally free; the first genuine
+consistency conditions on the line map live at level `≥ 3`.
+
+**(iii) (Rigidity off the degeneration strata.)** After the invertible
+change of unknowns by the constant matrix
+`𝔔 = [[Q₂ₐ, Q₃ₐ], [Q₂ᵦ, Q₃ᵦ]]` (nondegeneracy `det 𝔔 ≠ 0` and
+`c ≠ 0` are frame facts, FIX-L1-adjacent), the level-1 system is
+`Ã·uP² + B̃·vQ² + U·PQ ≡ 0`. **If `gcd(P,Q) = 1`, `u ∤ Q`, and
+`v ∤ P`, the only solution in the critical degrees is zero** — i.e.
+`det M(P,Q) ≠ 0` and the first plus-layer is UNIQUELY determined by
+the line map, for every odd `r` at once. *Proof.* `Q | Ã·u·P²` with
+`gcd(Q, P) = 1` gives `Q | Ãu`; `u` is prime in `k[u,v]` and `u ∤ Q`,
+so `Q | Ã`; `deg Ã = s−1 < s = deg Q` forces `Ã = 0`. Then
+`B̃vQ = −UP`, so `P | B̃v`, `v ∤ P` gives `P | B̃`, degree forces
+`B̃ = 0`, then `U = 0` (`c ≠ 0`). ∎
+
+**(iv) (The degeneration strata are geometric, and inductive.)** The
+three excluded loci are exactly: `gcd(P, Q) ≠ 1` — base points of the
+line map on the source line, i.e. DEGREE DROP (the reduced map has
+smaller `s`: downward induction available); `u | Q` and `v | P` —
+base-point degenerations AT THE VERTICES, which the plane-order-1
+nondegeneracy partially forbids outright (the vertex conditions force
+the complementary slot values nonzero). So the entire `(1, odd r)` row
+splits into: the RIGID stratum (layer 1 determined; consistency
+analysis at levels `≥ 3` on `(P,Q)` alone), and degeneration strata
+handled by induction on `s` — the descending structure [U2]'s
+uniformity argument wanted.
+
+**Where the consistency begins.** By (i)+(ii) the ladder's unknowns
+arrive: level 1 plus (`3s+1`, exactly consumed by the square system on
+the rigid stratum), level 2 minus (`2s`, free at level 2), level 3
+plus (`3s−2`), … while each level-`ℓ` identity has `~3s+1−ℓ`
+coefficients; cumulative equations overtake cumulative unknowns at a
+computable level `ℓ*(s)` — the first level at which polynomial
+conditions fall on `(P, Q)` themselves. Computing `ℓ*` and the leading
+consistency resultant is the next derivation step; its vanishing locus
+(within the rigid stratum, mod torus) is precisely where any
+non-classified branch must live.
