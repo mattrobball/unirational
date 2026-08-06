@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `a6ea865` (2026-08-05; the
+Snapshot metadata — notebook parent head: `ad6746b` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3029,7 +3029,20 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   canonical curve classes (3, 6, 6); no points-obstruction
   theorem exists to instantiate (the open CSD-type index-1
   question); the CM-explicit `J_tw` stands ready if one appears.
-  Investigation's unconditional yield = Note VII.**** Same-day
+  Investigation's unconditional yield = Note VII. **Wave 23
+  dispatch:** packet `goal_runs_after_ad6746b/FIX_VII_XRING`
+  (IN-FLIGHT, PROPOSAL-UNRUN): explicit `G` as 660 matrices mod
+  397/1321 (Weil S-matrix construction protocol), covariant
+  spaces BOTH types `d ≤ 12` via generator-equivariance
+  null-spaces (dims must reproduce the banked AB/Molien tables),
+  TRUE ideal-type multiplicities (restriction ranks mod `I_C`),
+  canonical generators (`∇F`, `∇H`, the d=6 map-type pair, the
+  `∇F̌∘∇F` dual-polar composition, identities in the 2-dim
+  polar-5 space `{F·∇F, ∇J₆, HessF·∇H, HessH·∇F}`), invariant
+  ladder extraction (H, F², J₆, J₇), control prime. Exits
+  `FIX-VII-XRING-ALLGREEN` / `FIX-VII-XRING-DEVIATION`. This is
+  the foundation layer for the gateway assembly (d=34,
+  `(1,6)`-profile + Hessian base).**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

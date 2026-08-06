@@ -1482,6 +1482,17 @@
    "char0_scope": "char0 exact (sympy tower Q(sqrt33,sqrt-3); independent numeric 60-digit route)",
    "tracked": "main",
    "notes": "landed 2026-08-06, director-replayed verifier 24/24 PASS (exit 0). Main run 24/24: exact field K=Q(sqrt33,sqrt-3) modeled dim-4 componentwise (no simplify heuristics); j(E+)=j(E-)=-32768 exact, numeric route >=66 digits; j(E_sigma)=8192/11 exact (S=-3/8, T=-13/256, S^3-27T^2=-729*11/65536); E cap K_c = cube roots of -(283+21sqrt33)/256, M2 elimination independent; cm_minus_11 via Hilbert class poly X+32768; RH/admissible arithmetic pass. Verifier fully independent: different base point/involution/fixed points, x-resultant restriction, Aronhold I,J, Eisenstein E4/E6 route. Deviations: none mathematical (normalisation 16x/8x on sextic recorded; M2 radical unavailable over toField \u2014 replaced by squarefree/transversality checks). Seals Note VI sec2+2.5 computational claims per the H1-D trust rule."
+  },
+  {
+   "path": "goal_runs_after_ad6746b/FIX_VII_XRING",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "PROPOSAL-UNRUN",
+   "primary_exit": "UNDECIDED",
+   "superseded_by": null,
+   "char0_scope": "mod-p explicit (p=397 primary, p2=1321 control); dimension tables cross-checked against char-0 Atiyah-Bott/Molien banked values",
+   "tracked": "main",
+   "notes": "IN-FLIGHT (dispatched 2026-08-06): explicit G=PSL(2,11) as 660 matrices mod p (Weil S-matrix protocol), covariant spaces both types d<=12 by generator-equivariance null-spaces (dims must match banked AB/Molien), TRUE ideal-type multiplicities via restriction ranks mod I_C, canonical generator identification (gradF, gradH polar; d6 map-type pair; dual-polar composition at d4; identities in the 2-dim polar-5 space), invariant ladder d5-7 (H, F^2+J6, J7), control prime. Foundation for the gateway (d=34, (1,6)+Hessian) assembly calculus."
   }
  ],
  "known_branches": [
