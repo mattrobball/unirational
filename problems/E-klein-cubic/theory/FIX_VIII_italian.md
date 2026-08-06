@@ -109,3 +109,37 @@ canonical cycle of degree ≡ 1 mod 3 descending toward 1.
   landing cone is a cubic cone in P¹² — computation FIX-VII-LAND,
   queued); the Italian face works with nonlinear geometric moves
   where degrees stay tiny. Either face closing = the headline.
+
+## 5. First sweep results and Correction VIII-a (FIX-VIII-MOVES, 2026-08-06)
+
+**Correction VIII-a.** §3 item 1 claimed a 110-element pair-orbit;
+FALSE (worker-caught): the order-3-product pairs number 330 in two
+165-orbits, and ALL six pair-orbits have size ≡ 0 mod 3
+((2,165),(3,165),(3,165),(5,330),(5,330),(6,330), director-
+replayed). No first-layer cross-V4 chord cycle moves the residue.
+
+**The census (the sweep's structural yield).** The G-action on the
+55 involutions is PRIMITIVE — no equivariant merging rule exists;
+the 55-cycle is combinatorially irreducible. Reachable canonical
+degrees from the full chord/axis catalog: {11, 55, 66, 110, 165,
+330}, of which only 55 is ≡ 1 mod 3. Transitive G-sets of size
+≡ 1 mod 3 are exactly 1, 55, 220; the composite 22 = 11 + 11
+(both A5-classes) is the unique sub-55 target, and it requires a
+canonical point per A5 — constant versions are dead (`W^{A5} = 0`,
+and the 55 D12-fixed points miss X). Axes: full Plücker rank at
+every special source; the Hessian curve is the unique
+DEGENERATION-FREE source locus found (F4). The naive move layer
+is CLOSED BY MEASUREMENT.
+
+**The two doors, sharpened.**
+1. **A5-equivariant constructions** (subsumes the 11-block door):
+   ANY A5-equivariant rational map `P(W) ⇢ X` — any degree, any
+   image — is a point of `X_tw` over the degree-11 field
+   `L₁₁ = C(P(W))^{A5}`, making `X_tw` L₁₁-unirational (Kollár)
+   and collapsing the descent gap from 55 to 11. The sealed
+   G-ladder emptiness (≤ 24) says NOTHING about A5-covariants,
+   whose map-type supply starts at degree 2 (dim 2 at d = 2, 3 at
+   d = 3, …). The A5 landing ladder is a small LAND-type
+   computation per degree: packet FIX-VIII-A5LADDER.
+2. **C-sourced constructions**: the Hessian curve as source locus
+   (degeneration-free, and where Note VI's CM geometry sits).

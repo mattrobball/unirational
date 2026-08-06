@@ -1,0 +1,241 @@
+{
+ "index_set_blocks": [
+  {
+   "set": "involutions_55",
+   "size": 55,
+   "block_sizes": [],
+   "quotient_sizes": [],
+   "quotients_mod3": []
+  },
+  {
+   "set": "V4_triangles_55",
+   "size": 55,
+   "block_sizes": [
+    5
+   ],
+   "quotient_sizes": [
+    11
+   ],
+   "quotients_mod3": [
+    2
+   ]
+  },
+  {
+   "set": "pairorbit0_ord2_size165",
+   "size": 165,
+   "block_sizes": [
+    3,
+    15
+   ],
+   "quotient_sizes": [
+    55,
+    11
+   ],
+   "quotients_mod3": [
+    1,
+    2
+   ]
+  },
+  {
+   "set": "pairorbit1_ord3_size165",
+   "size": 165,
+   "block_sizes": [
+    3,
+    15
+   ],
+   "quotient_sizes": [
+    55,
+    11
+   ],
+   "quotients_mod3": [
+    1,
+    2
+   ]
+  },
+  {
+   "set": "pairorbit2_ord3_size165",
+   "size": 165,
+   "block_sizes": [
+    3,
+    15
+   ],
+   "quotient_sizes": [
+    55,
+    11
+   ],
+   "quotients_mod3": [
+    1,
+    2
+   ]
+  },
+  {
+   "set": "pairorbit3_ord5_size330",
+   "size": 330,
+   "block_sizes": [
+    2,
+    3,
+    5,
+    6,
+    30
+   ],
+   "quotient_sizes": [
+    165,
+    110,
+    66,
+    55,
+    11
+   ],
+   "quotients_mod3": [
+    0,
+    2,
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "set": "pairorbit4_ord5_size330",
+   "size": 330,
+   "block_sizes": [
+    2,
+    3,
+    5,
+    6,
+    30
+   ],
+   "quotient_sizes": [
+    165,
+    110,
+    66,
+    55,
+    11
+   ],
+   "quotients_mod3": [
+    0,
+    2,
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "set": "pairorbit5_ord6_size330",
+   "size": 330,
+   "block_sizes": [
+    2,
+    3,
+    5,
+    6,
+    30
+   ],
+   "quotient_sizes": [
+    165,
+    110,
+    66,
+    55,
+    11
+   ],
+   "quotients_mod3": [
+    0,
+    2,
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "set": "vertices_165",
+   "size": 165,
+   "block_sizes": [
+    3,
+    15
+   ],
+   "quotient_sizes": [
+    55,
+    11
+   ],
+   "quotients_mod3": [
+    1,
+    2
+   ]
+  }
+ ],
+ "reachable_quotients": [
+  11,
+  55,
+  66,
+  110,
+  165
+ ],
+ "D12_fixed": {
+  "onX": 0,
+  "onL": 0,
+  "onP": 55,
+  "onH": 0,
+  "onC": 0,
+  "vertices": 0
+ },
+ "hessian_source_degenerations": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "seconds": 0.7
+}

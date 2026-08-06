@@ -1,0 +1,599 @@
+{
+ "second_layer": [
+  {
+   "orbit": 0,
+   "size": 165,
+   "n_pairings": 0,
+   "n_triple_systems": 4,
+   "has_pairing": false,
+   "has_triple_system": true,
+   "triple_systems": [
+    {
+     "system": 0,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 2,
+     "spanning_a_plane": 194,
+     "tested": 196
+    },
+    {
+     "system": 1,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 212,
+     "spanning_a_plane": 0,
+     "tested": 212
+    },
+    {
+     "system": 2,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 186,
+     "spanning_a_plane": 0,
+     "tested": 196
+    },
+    {
+     "system": 3,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 1,
+     "spanning_a_plane": 195,
+     "tested": 196
+    }
+   ],
+   "triple_system": {
+    "system": 1,
+    "nblocks": 55,
+    "quotient": 55,
+    "collinear": 212,
+    "spanning_a_plane": 0,
+    "tested": 212
+   }
+  },
+  {
+   "orbit": 1,
+   "size": 165,
+   "n_pairings": 0,
+   "n_triple_systems": 4,
+   "has_pairing": false,
+   "has_triple_system": true,
+   "triple_systems": [
+    {
+     "system": 0,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 11,
+     "spanning_a_plane": 209,
+     "tested": 220
+    },
+    {
+     "system": 1,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 0,
+     "spanning_a_plane": 220,
+     "tested": 220
+    },
+    {
+     "system": 2,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 0,
+     "spanning_a_plane": 220,
+     "tested": 220
+    },
+    {
+     "system": 3,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 0,
+     "spanning_a_plane": 220,
+     "tested": 220
+    }
+   ],
+   "triple_system": {
+    "system": 0,
+    "nblocks": 55,
+    "quotient": 55,
+    "collinear": 11,
+    "spanning_a_plane": 209,
+    "tested": 220
+   }
+  },
+  {
+   "orbit": 2,
+   "size": 165,
+   "n_pairings": 0,
+   "n_triple_systems": 4,
+   "has_pairing": false,
+   "has_triple_system": true,
+   "triple_systems": [
+    {
+     "system": 0,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 10,
+     "spanning_a_plane": 210,
+     "tested": 220
+    },
+    {
+     "system": 1,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 0,
+     "spanning_a_plane": 220,
+     "tested": 220
+    },
+    {
+     "system": 2,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 0,
+     "spanning_a_plane": 220,
+     "tested": 220
+    },
+    {
+     "system": 3,
+     "nblocks": 55,
+     "quotient": 55,
+     "collinear": 0,
+     "spanning_a_plane": 220,
+     "tested": 220
+    }
+   ],
+   "triple_system": {
+    "system": 0,
+    "nblocks": 55,
+    "quotient": 55,
+    "collinear": 10,
+    "spanning_a_plane": 210,
+    "tested": 220
+   }
+  },
+  {
+   "orbit": 3,
+   "size": 330,
+   "n_pairings": 3,
+   "n_triple_systems": 7,
+   "has_pairing": true,
+   "has_triple_system": true,
+   "pairing_reduction": {
+    "new_degree": 165,
+    "new_degree_mod3": 0,
+    "rows": [
+     {
+      "label": "orbit3_pairing_165",
+      "ntotal": 165,
+      "ndefined": 163,
+      "ndistinct": 163,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 1,
+       "triplane": 1,
+       "vertex": 0,
+       "plusplane": 4,
+       "H": 9,
+       "C": 0
+      },
+      "meets_base_cycle": 0
+     },
+     {
+      "label": "orbit3_pairing_165",
+      "ntotal": 165,
+      "ndefined": 165,
+      "ndistinct": 165,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 0,
+       "triplane": 0,
+       "vertex": 0,
+       "plusplane": 3,
+       "H": 8,
+       "C": 0
+      },
+      "meets_base_cycle": 0
+     },
+     {
+      "label": "orbit3_pairing_165",
+      "ntotal": 165,
+      "ndefined": 164,
+      "ndistinct": 164,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 1,
+       "triplane": 1,
+       "vertex": 0,
+       "plusplane": 2,
+       "H": 7,
+       "C": 0
+      },
+      "meets_base_cycle": 0
+     },
+     {
+      "label": "orbit3_pairing_165",
+      "ntotal": 165,
+      "ndefined": 165,
+      "ndistinct": 165,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 4,
+       "triplane": 4,
+       "vertex": 0,
+       "plusplane": 2,
+       "H": 5,
+       "C": 0
+      },
+      "meets_base_cycle": 0
+     }
+    ]
+   },
+   "triple_systems": [
+    {
+     "system": 0,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 12,
+     "spanning_a_plane": 426,
+     "tested": 438
+    },
+    {
+     "system": 1,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 10,
+     "spanning_a_plane": 428,
+     "tested": 438
+    },
+    {
+     "system": 2,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 438,
+     "tested": 438
+    },
+    {
+     "system": 3,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 438,
+     "tested": 438
+    },
+    {
+     "system": 4,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 438,
+     "tested": 438
+    },
+    {
+     "system": 5,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 438,
+     "tested": 438
+    },
+    {
+     "system": 6,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 438,
+     "tested": 438
+    }
+   ],
+   "triple_system": {
+    "system": 0,
+    "nblocks": 110,
+    "quotient": 110,
+    "collinear": 12,
+    "spanning_a_plane": 426,
+    "tested": 438
+   }
+  },
+  {
+   "orbit": 4,
+   "size": 330,
+   "n_pairings": 3,
+   "n_triple_systems": 7,
+   "has_pairing": true,
+   "has_triple_system": true,
+   "pairing_reduction": {
+    "new_degree": 165,
+    "new_degree_mod3": 0,
+    "rows": [
+     {
+      "label": "orbit4_pairing_165",
+      "ntotal": 165,
+      "ndefined": 165,
+      "ndistinct": 165,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 4,
+       "triplane": 4,
+       "vertex": 0,
+       "plusplane": 1,
+       "H": 9,
+       "C": 0
+      },
+      "meets_base_cycle": 0
+     },
+     {
+      "label": "orbit4_pairing_165",
+      "ntotal": 165,
+      "ndefined": 165,
+      "ndistinct": 165,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 3,
+       "triplane": 3,
+       "vertex": 0,
+       "plusplane": 3,
+       "H": 4,
+       "C": 0
+      },
+      "meets_base_cycle": 0
+     },
+     {
+      "label": "orbit4_pairing_165",
+      "ntotal": 165,
+      "ndefined": 165,
+      "ndistinct": 165,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 2,
+       "triplane": 2,
+       "vertex": 0,
+       "plusplane": 2,
+       "H": 4,
+       "C": 0
+      },
+      "meets_base_cycle": 1
+     },
+     {
+      "label": "orbit4_pairing_165",
+      "ntotal": 165,
+      "ndefined": 165,
+      "ndistinct": 165,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 3,
+       "triplane": 3,
+       "vertex": 0,
+       "plusplane": 2,
+       "H": 12,
+       "C": 0
+      },
+      "meets_base_cycle": 0
+     }
+    ]
+   },
+   "triple_systems": [
+    {
+     "system": 0,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 7,
+     "spanning_a_plane": 433,
+     "tested": 440
+    },
+    {
+     "system": 1,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 11,
+     "spanning_a_plane": 429,
+     "tested": 440
+    },
+    {
+     "system": 2,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 440,
+     "tested": 440
+    },
+    {
+     "system": 3,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 440,
+     "tested": 440
+    },
+    {
+     "system": 4,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 440,
+     "tested": 440
+    },
+    {
+     "system": 5,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 440,
+     "tested": 440
+    },
+    {
+     "system": 6,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 440,
+     "tested": 440
+    }
+   ],
+   "triple_system": {
+    "system": 1,
+    "nblocks": 110,
+    "quotient": 110,
+    "collinear": 11,
+    "spanning_a_plane": 429,
+    "tested": 440
+   }
+  },
+  {
+   "orbit": 5,
+   "size": 330,
+   "n_pairings": 3,
+   "n_triple_systems": 7,
+   "has_pairing": true,
+   "has_triple_system": true,
+   "pairing_reduction": {
+    "new_degree": 165,
+    "new_degree_mod3": 0,
+    "rows": [
+     {
+      "label": "orbit5_pairing_165",
+      "ntotal": 165,
+      "ndefined": 165,
+      "ndistinct": 164,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 15,
+       "triplane": 15,
+       "vertex": 0,
+       "plusplane": 1,
+       "H": 18,
+       "C": 0
+      },
+      "meets_base_cycle": 6
+     },
+     {
+      "label": "orbit5_pairing_165",
+      "ntotal": 165,
+      "ndefined": 165,
+      "ndistinct": 165,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 20,
+       "triplane": 20,
+       "vertex": 2,
+       "plusplane": 2,
+       "H": 23,
+       "C": 0
+      },
+      "meets_base_cycle": 6
+     },
+     {
+      "label": "orbit5_pairing_165",
+      "ntotal": 165,
+      "ndefined": 165,
+      "ndistinct": 165,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 8,
+       "triplane": 8,
+       "vertex": 0,
+       "plusplane": 1,
+       "H": 10,
+       "C": 0
+      },
+      "meets_base_cycle": 0
+     },
+     {
+      "label": "orbit5_pairing_165",
+      "ntotal": 165,
+      "ndefined": 165,
+      "ndistinct": 165,
+      "all_on_X": true,
+      "span_rank": 5,
+      "incidence": {
+       "line": 15,
+       "triplane": 15,
+       "vertex": 1,
+       "plusplane": 3,
+       "H": 17,
+       "C": 0
+      },
+      "meets_base_cycle": 3
+     }
+    ]
+   },
+   "triple_systems": [
+    {
+     "system": 0,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 1,
+     "spanning_a_plane": 439,
+     "tested": 440
+    },
+    {
+     "system": 1,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 440,
+     "tested": 440
+    },
+    {
+     "system": 2,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 440,
+     "tested": 440
+    },
+    {
+     "system": 3,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 440,
+     "tested": 440
+    },
+    {
+     "system": 4,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 440,
+     "tested": 440
+    },
+    {
+     "system": 5,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 6,
+     "spanning_a_plane": 434,
+     "tested": 440
+    },
+    {
+     "system": 6,
+     "nblocks": 110,
+     "quotient": 110,
+     "collinear": 0,
+     "spanning_a_plane": 440,
+     "tested": 440
+    }
+   ],
+   "triple_system": {
+    "system": 5,
+    "nblocks": 110,
+    "quotient": 110,
+    "collinear": 6,
+    "spanning_a_plane": 434,
+    "tested": 440
+   }
+  }
+ ],
+ "seconds": 58.0
+}

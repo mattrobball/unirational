@@ -1509,12 +1509,12 @@
    "path": "goal_runs_after_aa68551/FIX_VIII_MOVES",
    "entry": "E56",
    "kind": "goal_run",
-   "verification_class": "PROPOSAL-UNRUN",
-   "primary_exit": "UNDECIDED",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-VIII-MOVES-NO-COLLAPSE",
    "superseded_by": null,
    "char0_scope": "mod-p exploratory (p=67); findings to be re-verified before any consumption",
    "tracked": "main",
-   "notes": "IN-FLIGHT (dispatched 2026-08-06): Note VIII sec3 cross-V4 experiments \u2014 noncommuting chord-cycle sweep per pair-orbit (degrees, collapses, canonical-locus incidences, G-orbit structure), Menelaus axes at special source loci (rank drops/incidences), second-layer canonical pairings and reachable degrees mod 3. Exits COLLAPSE-FOUND / NO-COLLAPSE / DEVIATION."
+   "notes": "landed 2026-08-06, 60/60 checks; director spot-replayed the load-bearing census (pair counts 165/330/660/330 by product order; conjugation orbits (2,165),(3,165),(3,165),(5,330),(5,330),(6,330); A5 extraction order 60 with 15 involutions) \u2014 exact match. Findings: F1 theory correction (Note VIII sec3 item 1's 110-orbit does NOT exist; all six pair-orbits are 0 mod 3 \u2014 no first-layer chord cycle moves the residue); F2 the G-action on the 55 involutions is PRIMITIVE (55-cycle combinatorially irreducible); F3 the only sub-55 combinatorial door is the 11-block system on triangles (5 V4s per A5), linear+quadric versions dead (W^D12 constant points miss X; W^A5 = 0); F4 the Hessian curve is a degeneration-free source locus (0 degenerations at all 60 F_p-points vs 1-5 generic); F5 no rank drops/collapses anywhere; Menelaus cycle = 165 pts pinned 3-per-line. Census: reachable canonical degrees {11,55,66,110,165,330}, only 55 is 1 mod 3; transitive G-sets of size 1 mod 3 are only 1, 55, 220; 22 = 11+11 needs canonical A5-points. Assessment adopted: chord/pair catalog CLOSED by measurement; next = A5-equivariant constructions (subsumes the 11-block door) and C-sourced constructions."
   },
   {
    "path": "goal_runs_after_10804b2/FIX_VII_LAND",
@@ -1526,6 +1526,17 @@
    "char0_scope": "mod-p two primes (67, 199), GB certificate at 67 (sampled ideal = irrelevant ideal); char-0 emptiness is evidence-grade, not sealed (13-space itself is mod-p)",
    "tracked": "main",
    "notes": "Director-executed 2026-08-06. The landing cone on GATE's 13-dim (1,6)+Hessian space at d=34 is EMPTY: msolve solve-mode returns only the origin at both primes; reduced GB at p=67 is {c0..c12} exactly. Independent verifier (different seed, 80 points, fresh msolve, landmine-safe parsing) 3/3 PASS, director-run. Consequence: no degree-34 equivariant dominant map has a resolution center dominating the Hessian curve; the canonical-carrier ansatz at the gateway is closed-negative; d=34 remains open only via moduli-carrier families or tower carriers. Next linear-system target: the d=43/(1,7) analogue."
+  },
+  {
+   "path": "goal_runs_after_88f0967/FIX_VIII_A5LADDER",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "PROPOSAL-UNRUN",
+   "primary_exit": "UNDECIDED",
+   "superseded_by": null,
+   "char0_scope": "mod-p (67 primary, 199 on hits); LAND-method semantics (sampled cone contains true cone; EMPTY decisive mod p, hits verified by full identity)",
+   "tracked": "main",
+   "notes": "IN-FLIGHT (dispatched 2026-08-06): the A5 landing ladder d = 2..12 \u2014 A5-covariant map-type spaces (dims vs A5-Molien), landing cone per degree by the LAND method, full-identity verification and Jacobian-rank on hits, second prime, rational reconstruction attempt. ANY hit = a point of X_tw over the degree-11 field = L11-unirationality (Kollar), descent gap 55 -> 11. Exits HIT-D<d> / EMPTY-THROUGH-12 / DEVIATION."
   }
  ],
  "known_branches": [

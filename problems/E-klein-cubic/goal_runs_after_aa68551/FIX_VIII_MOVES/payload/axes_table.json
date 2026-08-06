@@ -1,0 +1,382 @@
+{
+ "p": 67,
+ "rows": [
+  {
+   "label": "generic",
+   "v": [
+    31,
+    52,
+    57,
+    44,
+    6
+   ],
+   "proj_undefined": 0,
+   "chord_undefined": 4,
+   "axes_ok": 51,
+   "rank2": 51,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 51,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 1,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    153,
+    153
+   ],
+   "axis_points_that_are_vertices": 15
+  },
+  {
+   "label": "generic",
+   "v": [
+    15,
+    47,
+    12,
+    56,
+    23
+   ],
+   "proj_undefined": 0,
+   "chord_undefined": 1,
+   "axes_ok": 54,
+   "rank2": 54,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 54,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 6,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    162,
+    162
+   ],
+   "axis_points_that_are_vertices": 4
+  },
+  {
+   "label": "generic",
+   "v": [
+    1,
+    10,
+    8,
+    20,
+    63
+   ],
+   "proj_undefined": 0,
+   "chord_undefined": 1,
+   "axes_ok": 54,
+   "rank2": 54,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 54,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 3,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    162,
+    162
+   ],
+   "axis_points_that_are_vertices": 4
+  },
+  {
+   "label": "on_X",
+   "v": [
+    13,
+    49,
+    8,
+    32,
+    22
+   ],
+   "proj_undefined": 0,
+   "chord_undefined": 4,
+   "axes_ok": 51,
+   "rank2": 51,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 51,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 15,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    153,
+    153
+   ],
+   "axis_points_that_are_vertices": 15
+  },
+  {
+   "label": "on_X",
+   "v": [
+    23,
+    60,
+    20,
+    38,
+    9
+   ],
+   "proj_undefined": 0,
+   "chord_undefined": 2,
+   "axes_ok": 53,
+   "rank2": 53,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 53,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 4,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    159,
+    159
+   ],
+   "axis_points_that_are_vertices": 8
+  },
+  {
+   "label": "on_VH_offX",
+   "v": [
+    11,
+    42,
+    2,
+    10,
+    32
+   ],
+   "proj_undefined": 0,
+   "chord_undefined": 5,
+   "axes_ok": 50,
+   "rank2": 50,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 50,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 1,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    150,
+    150
+   ],
+   "axis_points_that_are_vertices": 20
+  },
+  {
+   "label": "on_VH_offX",
+   "v": [
+    25,
+    49,
+    31,
+    26,
+    19
+   ],
+   "proj_undefined": 0,
+   "chord_undefined": 2,
+   "axes_ok": 53,
+   "rank2": 53,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 53,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 6,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    159,
+    159
+   ],
+   "axis_points_that_are_vertices": 8
+  },
+  {
+   "label": "in_plusplane_10",
+   "v": [
+    20,
+    61,
+    39,
+    39,
+    53
+   ],
+   "proj_undefined": 3,
+   "chord_undefined": 4,
+   "axes_ok": 48,
+   "rank2": 48,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 48,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 6,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    144,
+    144
+   ],
+   "axis_points_that_are_vertices": 28
+  },
+  {
+   "label": "in_plusplane_39",
+   "v": [
+    42,
+    18,
+    9,
+    26,
+    48
+   ],
+   "proj_undefined": 3,
+   "chord_undefined": 2,
+   "axes_ok": 50,
+   "rank2": 50,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 50,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 12,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    150,
+    150
+   ],
+   "axis_points_that_are_vertices": 20
+  },
+  {
+   "label": "on_line_18",
+   "v": [
+    56,
+    22,
+    42,
+    54,
+    44
+   ],
+   "proj_undefined": 0,
+   "chord_undefined": 3,
+   "axes_ok": 52,
+   "rank2": 52,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 52,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 0,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    156,
+    156
+   ],
+   "axis_points_that_are_vertices": 12
+  },
+  {
+   "label": "on_line_54",
+   "v": [
+    27,
+    15,
+    1,
+    28,
+    2
+   ],
+   "proj_undefined": 0,
+   "chord_undefined": 3,
+   "axes_ok": 52,
+   "rank2": 52,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 52,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 14,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    156,
+    156
+   ],
+   "axis_points_that_are_vertices": 12
+  },
+  {
+   "label": "vertex",
+   "v": [
+    1,
+    64,
+    37,
+    29,
+    42
+   ],
+   "proj_undefined": 3,
+   "chord_undefined": 12,
+   "axes_ok": 40,
+   "rank2": 40,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 40,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 12,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    120,
+    120
+   ],
+   "axis_points_that_are_vertices": 56
+  },
+  {
+   "label": "vertex",
+   "v": [
+    1,
+    52,
+    64,
+    22,
+    56
+   ],
+   "proj_undefined": 3,
+   "chord_undefined": 12,
+   "axes_ok": 40,
+   "rank2": 40,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 40,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 12,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    120,
+    120
+   ],
+   "axis_points_that_are_vertices": 56
+  },
+  {
+   "label": "Hcurve",
+   "v": [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "proj_undefined": 0,
+   "chord_undefined": 0,
+   "axes_ok": 55,
+   "rank2": 55,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 55,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 0,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    165,
+    165
+   ],
+   "axis_points_that_are_vertices": 0
+  },
+  {
+   "label": "Hcurve",
+   "v": [
+    1,
+    23,
+    3,
+    34,
+    32
+   ],
+   "proj_undefined": 0,
+   "chord_undefined": 0,
+   "axes_ok": 55,
+   "rank2": 55,
+   "rank1_collapsed": 0,
+   "rank3_noncollinear": 0,
+   "distinct_axes": 55,
+   "plucker_rank": 10,
+   "meeting_axis_pairs": 0,
+   "axes_in_a_plusplane": 0,
+   "axis_points_on_lines": [
+    165,
+    165
+   ],
+   "axis_points_that_are_vertices": 0
+  }
+ ],
+ "sextet_points_Fp": 0,
+ "seconds": 1.0
+}

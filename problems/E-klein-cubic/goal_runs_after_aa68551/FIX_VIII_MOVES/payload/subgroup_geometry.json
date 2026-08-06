@@ -1,0 +1,76 @@
+{
+ "table": [
+  {
+   "orbit": 0,
+   "prod_order": 2,
+   "orbit_size": 165,
+   "nsubgroups": 55,
+   "sub_order": 4,
+   "ninvolutions": 3,
+   "line_span_rank": 3,
+   "concurrency_dim": 0,
+   "pairwise_meeting_line_pairs": 3,
+   "npairs_per_subgroup": 3
+  },
+  {
+   "orbit": 1,
+   "prod_order": 3,
+   "orbit_size": 165,
+   "nsubgroups": 55,
+   "sub_order": 6,
+   "ninvolutions": 3,
+   "line_span_rank": 4,
+   "concurrency_dim": 0,
+   "pairwise_meeting_line_pairs": 0,
+   "npairs_per_subgroup": 3
+  },
+  {
+   "orbit": 2,
+   "prod_order": 3,
+   "orbit_size": 165,
+   "nsubgroups": 55,
+   "sub_order": 6,
+   "ninvolutions": 3,
+   "line_span_rank": 4,
+   "concurrency_dim": 0,
+   "pairwise_meeting_line_pairs": 0,
+   "npairs_per_subgroup": 3
+  },
+  {
+   "orbit": 3,
+   "prod_order": 5,
+   "orbit_size": 330,
+   "nsubgroups": 66,
+   "sub_order": 10,
+   "ninvolutions": 5,
+   "line_span_rank": 4,
+   "concurrency_dim": 0,
+   "pairwise_meeting_line_pairs": 0,
+   "npairs_per_subgroup": 5
+  },
+  {
+   "orbit": 4,
+   "prod_order": 5,
+   "orbit_size": 330,
+   "nsubgroups": 66,
+   "sub_order": 10,
+   "ninvolutions": 5,
+   "line_span_rank": 4,
+   "concurrency_dim": 0,
+   "pairwise_meeting_line_pairs": 0,
+   "npairs_per_subgroup": 5
+  },
+  {
+   "orbit": 5,
+   "prod_order": 6,
+   "orbit_size": 330,
+   "nsubgroups": 55,
+   "sub_order": 12,
+   "ninvolutions": 7,
+   "line_span_rank": 4,
+   "concurrency_dim": 0,
+   "pairwise_meeting_line_pairs": 9,
+   "npairs_per_subgroup": 6
+  }
+ ]
+}

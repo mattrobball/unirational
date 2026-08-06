@@ -1,0 +1,233 @@
+{
+ "rows": [
+  {
+   "system": 0,
+   "v": 0,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 0,
+   "v": 1,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 0,
+   "v": 2,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 0,
+   "v": 3,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    14,
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 0,
+   "v": 4,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 0,
+   "v": 5,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 0,
+   "v": 6,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 0,
+   "v": 7,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    14,
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 1,
+   "v": 0,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 1,
+   "v": 1,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 1,
+   "v": 2,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 1,
+   "v": 3,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 1,
+   "v": 4,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    14,
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 1,
+   "v": 5,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 1,
+   "v": 6,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  },
+  {
+   "system": 1,
+   "v": 7,
+   "linear_ranks": [
+    5
+   ],
+   "veronese2_ranks": [
+    15
+   ],
+   "axis_span_ranks": [
+    5
+   ],
+   "meeting_axis_pairs_in_block": 0
+  }
+ ],
+ "n_block_systems": 2,
+ "seconds": 0.5
+}

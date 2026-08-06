@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `10804b2` (2026-08-05; the
+Snapshot metadata — notebook parent head: `88f0967` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3172,7 +3172,31 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   CLOSED-NEGATIVE; d=34 survives only via moduli-carrier
   families or tower carriers; next linear-system target = the
   d=43/(1,7) analogue. The Italian face (Note VIII, MOVES
-  in-flight) is untouched.**** Same-day
+  in-flight) is untouched. **Wave 25 packet LANDED:
+  `FIX-VIII-MOVES-NO-COLLAPSE`** (60/60; director-replayed census
+  exact). Correction VIII-a (worker-caught): no 110-pair-orbit;
+  all six pair-orbits ≡ 0 mod 3 — no first-layer chord cycle
+  moves the residue. Census: G on the 55 involutions is
+  PRIMITIVE; reachable canonical degrees {11,55,66,110,165,330},
+  only 55 ≡ 1 mod 3; transitive G-sets ≡ 1 mod 3 = {1, 55, 220};
+  the unique sub-55 composite is 22 = 11+11 needing canonical
+  A5-points (constant versions dead: `W^{A5} = 0`; the 55
+  D12-fixed points miss X). Axes: no rank drop at any special
+  source; the Hessian curve is the unique degeneration-free
+  source locus. Naive move layer CLOSED BY MEASUREMENT; Note VIII
+  §5 records the two doors: A5-equivariant constructions (ANY
+  A5-map to X = a point over the degree-11 field ⟹
+  L₁₁-unirationality, descent gap 55 → 11; G-ladder emptiness
+  says nothing about A5-covariants, supply from d=2) and
+  C-sourced constructions. **Wave 26 dispatch:** packet
+  `goal_runs_after_88f0967/FIX_VIII_A5LADDER` (IN-FLIGHT,
+  PROPOSAL-UNRUN): the A5 landing ladder — A5-covariant map-type
+  spaces d = 1..12 (null-spaces from an extracted A5 ⊂ G660,
+  dims vs A5-Molien), landing cone per degree by the LAND method
+  (sampled cubics + msolve, landmine rules), first-hit
+  extraction with full-identity verification at both primes and
+  image-dimension measurement. Exits A5LADDER-HIT-d<k> /
+  A5LADDER-EMPTY-THROUGH-<cap> / DEVIATION.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
